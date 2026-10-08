@@ -23,21 +23,29 @@
     * **RA6-CEe)** Se han transferido ficheros mediante canales seguros (SFTP / SCP).
     * **RA6-CEf)** Se han auditado accesos e interconexiones cruzadas entre sistemas heterogéneos.
 
-    **Plan de entregas y evidencias en Aules:**
+    **Sistema de evaluación y entregas en Aules (1 Cuestionario + 1 Único Documento PDF):**
 
-    | Tarea | Criterio | Título de la Práctica | Fichero a entregar en Aules |
+    En esta unidad **NO se entregan PDFs sueltos por cada apartado**. Deberás crear desde el primer día un **único documento en Word** estructurado por apartados (del `Apartado 6` al `Apartado 15`), ir insertando en él las **29 evidencias numeradas (`Evidencia 1` a `Evidencia 29`)** conforme avances en las prácticas y, al finalizar la unidad, exportarlo a un **único fichero PDF** para subirlo a Aules:
+
+    | Actividad en Aules | Criterios evaluados | Descripción y contenido | Entrega en Aules |
     |---|:---:|---|---|
-    | **Tarea 5** | RA3-CEa | Cuestionario teórico de protocolos de transferencia | *Realización en línea en Aules (Sin entrega de archivo)* |
-    | **Tarea 6** | RA3-CEbcd-1 | **[Windows Server]** Instalación y configuración de IIS FTP y OpenSSH en AWS | `RA3-CEbcd-1-NombreApellidos.pdf` |
-    | **Tarea 7** | RA3-CEe-1 | **[Windows Server]** Transferencia de ficheros con FileZilla y diagnóstico de modo pasivo | `RA3-CEe-1-NombreApellidos.pdf` |
-    | **Tarea 8** | RA3-CEd-1 | **[Windows Server]** Aislamiento de usuarios (`LocalUser`), acceso anónimo y permisos NTFS | `RA3-CEd-1-NombreApellidos.pdf` |
-    | **Tarea 9** | RA3-CEf-1 | **[Windows Server]** Seguridad y cifrado con FTPS (Certificado SSL/TLS en IIS) | `RA3-CEf-1-NombreApellidos.pdf` |
-    | **Tarea 10** | RA6-CEbcd-1 | **[Windows Server]** Administración remota y bastionado de SSH con PuTTY y PuTTYgen | `RA6-CEbcd-1-NombreApellidos.pdf` |
-    | **Tarea 11** | RA6-CEe-1 | **[Windows Server]** Transferencia segura SFTP/SCP y auditoría de Logs IIS y Wireshark | `RA6-CEe-1-NombreApellidos.pdf` |
-    | **Tarea 12** | RA3-CEbcd-2 | **[Ubuntu Server]** Instalación de `vsftpd`, modo pasivo, jaula `chroot` y pruebas en FileZilla | `RA3-CEbcd-2-NombreApellidos.pdf` |
-    | **Tarea 13** | RA3-CEg / RA6-CEf | **[Ubuntu Server]** Seguridad FTPS con OpenSSL, claves SSH y auditoría de logs en Linux | `RA3-CEg-RA6-CEf-NombreApellidos.pdf` |
-    | **Tarea 14** | RA3-CEf-2 | **[Inter-Servidores]** Pruebas cruzadas bidireccionales Windows ↔ Ubuntu en AWS Cloud | `RA3-CEf-2-NombreApellidos.pdf` |
-    | **Tarea 15** | RA3-CEh | **[Proyecto Final]** Infraestructura corporativa (*TechCatadau S.L.*) y cierre de costes en AWS | `RA3-CEh-NombreApellidos.pdf` |
+    | **1. Cuestionario Teórico** | `RA3-CEa` / `RA6-CEa` | Comprensión teórica de protocolos FTP, FTPS, SFTP, SSH y modos Activo/Pasivo (Apartados 1 a 5). | *Cuestionario online en Aules (Sin subir archivo)* |
+    | **2. Memoria Práctica Completa de la Unidad** | `RA3-CEb..h` / `RA6-CEb..f` | Documento único con todos los apartados prácticos (**Bloque Windows Server**, **Bloque Ubuntu Server** y **Bloque Inter-Servidores + Proyecto Final**) incluyendo las **Evidencias 1 a 29**. | **1 único archivo PDF:** `RA3-RA6-FTP-SSH-NombreApellidos.pdf` |
+
+    **Guía de apartados que debe tener tu documento Word y qué evidencias incluye cada uno:**
+
+    | Apartado en tu Word | Bloque | Criterios | Evidencias obligatorias del apartado |
+    |---|:---:|:---:|---|
+    | **Apartado 6:** Instalación de IIS FTP y OpenSSH en Windows Server | Windows Server | `RA3-CEb,c,d` | **Evidencias 1 a 7** (Instancia EC2, Security Group, RDP, usuario `alumne_redes`, modo pasivo IIS, sitio `FTP-AULA` y Firewall) |
+    | **Apartado 7:** Transferencia con FileZilla hacia Windows Server | Windows Server | `RA3-CEe` | **Evidencia 8** (Conexión pasiva en FileZilla y subida de `Prova_ftp.txt`) |
+    | **Apartado 8:** Aislamiento de usuarios (`LocalUser`) y acceso anónimo | Windows Server | `RA3-CEd` | **Evidencias 9 y 10** (Carpetas en `LocalUser`, vista aislada de `usuari_ventas` y error `550` en `anonymous`) |
+    | **Apartado 9:** Seguridad y cifrado FTPS (TLS/SSL) en Windows Server | Windows Server | `RA3-CEf` | **Evidencias 11 y 12** (Certificado autofirmado en IIS, huella SHA-256 en FileZilla y candado FTPS) |
+    | **Apartado 10:** Administración remota SSH con PuTTY y PuTTYgen | Windows Server | `RA6-CEb,c,d` | **Evidencias 13 y 14** (Generación de clave en PuTTYgen, login sin contraseña y rechazo tras bastionado) |
+    | **Apartado 11:** SFTP, SCP y Auditoría de Logs IIS y Wireshark | Windows Server | `RA6-CEe` / `RA3-CEg` | **Evidencias 15 a 18** (SFTP puerto 22 en FileZilla, `scp` en PowerShell, log W3C en Notepad y captura en Wireshark) |
+    | **Apartado 12:** Instalación de `vsftpd`, modo pasivo y `chroot` en Ubuntu | Ubuntu Server | `RA3-CEb,c,d,e` | **Evidencias 19 a 22** (Instancia `Ubuntu_FTPSSH`, `/etc/vsftpd.conf`, `systemctl status vsftpd` y FileZilla enjaulado) |
+    | **Apartado 13:** Seguridad FTPS (OpenSSL), SSH y Logs en Ubuntu | Ubuntu Server | `RA3-CEf,g` / `RA6-CEf` | **Evidencias 23 y 24** (Certificado OpenSSL + FTPS en FileZilla, y logs `/var/log/vsftpd.log` y `auth.log`) |
+    | **Apartado 14:** Pruebas cruzadas Inter-Servidores en AWS | Inter-Servidores | `RA3-CEf` / `RA6-CEf` | **Evidencias 25 y 26** (Transferencia `curl` y `ssh` desde Ubuntu a Windows, y desde Windows a Ubuntu) |
+    | **Apartado 15:** Proyecto Final (*TechCatadau S.L.*) y control de costes | Proyecto Final | `RA3-CEh` | **Evidencias 27 a 29** (4 departamentos en FileZilla, script `backup_techcatadau.ps1` por SCP e instancias en estado `Stopped`) |
 
 ---
 
@@ -133,7 +141,7 @@ La forma en que se establece el canal de datos determina el modo de funcionamien
 
 ---
 
-## 6 Tarea RA3-CEbcd-1 - Instalación y configuración de IIS FTP en Windows Server en AWS
+## 6 - [Windows Server] Instalación y configuración de IIS FTP y OpenSSH en AWS (RA3-CEb,c,d)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -156,7 +164,7 @@ La forma en que se establece el canal de datos determina el modo de funcionamien
 
 3. Descargar desde la página de **AWS Academy** (botón **AWS Details** -> **Download PEM**) el archivo `labsuser.pem` (o `vockey.pem`), necesario para descifrar la contraseña del usuario `Administrator`.
 
-> 📷 **Realizar captura de pantalla** del resumen de creación de la instancia `Servidor_FTPSSH` en AWS EC2 mostrando su estado `Running`, el tipo de instancia y su dirección IPv4 pública.
+> 📷 **Evidencia 1 (insertar en tu documento Word) — Realizar captura de pantalla** del resumen de creación de la instancia `Servidor_FTPSSH` en AWS EC2 mostrando su estado `Running`, el tipo de instancia y su dirección IPv4 pública.
 
 ---
 
@@ -198,7 +206,7 @@ Añadir las 5 reglas requeridas:
    * **FTP Pasivo (Windows):** Rango de puertos `50000-50100` TCP.
    * **FTP Pasivo (Ubuntu):** Rango de puertos `40000-40100` TCP.
 
-> 📷 **Realizar captura de pantalla** de la tabla de reglas de entrada del Security Group donde se vean los puertos 21, 22, 3389, 50000-50100 y 40000-40100.
+> 📷 **Evidencia 2 (insertar en tu documento Word) — Realizar captura de pantalla** de la tabla de reglas de entrada del Security Group donde se vean los puertos 21, 22, 3389, 50000-50100 y 40000-40100.
 
 ![Tabla de reglas de entrada del Security Group completada](imagenes/06_tabla_reglas_entrada.png)
 *Figura 5: Definición completa de las 5 reglas de entrada (RDP, SSH, FTP 21 y rangos pasivos).*
@@ -239,7 +247,7 @@ Añadir las 5 reglas requeridas:
 !!! warning "Solo para usuarios con nombre de equipo vinculado a un dominio o SICE"
     Ir a *More choices* -> *Use a different account* e introducir `.\Administrator` en vez de solamente `Administrator`.
 
-> 📷 **Realizar captura de pantalla** del escritorio de Windows Server recién conectado mostrando el Administrador del Servidor (*Server Manager*).
+> 📷 **Evidencia 3 (insertar en tu documento Word) — Realizar captura de pantalla** del escritorio de Windows Server recién conectado mostrando el Administrador del Servidor (*Server Manager*).
 
 ---
 
@@ -331,7 +339,7 @@ En las imágenes oficiales de Windows Server proporcionadas por Amazon Web Servi
 ![Pertenencia de alumne_redes a los grupos Administrators, Remote Desktop Users y Users](imagenes/17b_alumne_redes_member_of.png)
 *Figura 16b: Pestaña Member Of mostrando al usuario alumne_redes dentro de Administrators, Remote Desktop Users y Users.*
 
-> 📷 **Realizar captura de pantalla** de la ventana de propiedades (*Properties* -> *Member Of*) del usuario `alumne_redes` mostrando su pertenencia a los grupos `Administrators`, `Remote Desktop Users` y `Users`.
+> 📷 **Evidencia 4 (insertar en tu documento Word) — Realizar captura de pantalla** de la ventana de propiedades (*Properties* -> *Member Of*) del usuario `alumne_redes` mostrando su pertenencia a los grupos `Administrators`, `Remote Desktop Users` y `Users`.
 
 ---
 
@@ -365,7 +373,7 @@ En las imágenes oficiales de Windows Server proporcionadas por Amazon Web Servi
 !!! warning "¡No olvides poner la IPv4 Pública de AWS!"
     En Amazon Web Services la máquina virtual solo conoce su IP privada interna (`172.31.x.x`). Si dejas en blanco el campo **External IP Address of Firewall**, el servidor FTP responderá a los clientes externos con su IP privada y **FileZilla fallará al listar los directorios** en modo pasivo. Además, recuerda que si detienes y vuelves a iniciar la instancia en otro día de clase, deberás actualizar aquí la nueva IP pública.
 
-> 📷 **Realizar captura de pantalla** del panel FTP Firewall Support con el rango de puertos 50000-50100 y la IP pública de AWS introducidos.
+> 📷 **Evidencia 5 (insertar en tu documento Word) — Realizar captura de pantalla** del panel FTP Firewall Support con el rango de puertos 50000-50100 y la IP pública de AWS introducidos.
 
 ---
 
@@ -403,7 +411,7 @@ En las imágenes oficiales de Windows Server proporcionadas por Amazon Web Servi
 ![Sitio FTP-AULA creado e iniciado en IIS Manager](imagenes/24_iis_sitio_ftp_creado.png)
 *Figura 24: Sitio FTP-AULA activo y en estado iniciado (Started) en el Administrador de IIS.*
 
-> 📷 **Realizar captura de pantalla** de IIS Manager mostrando el sitio `FTP-AULA` creado y en estado iniciado (*Started*).
+> 📷 **Evidencia 6 (insertar en tu documento Word) — Realizar captura de pantalla** de IIS Manager mostrando el sitio `FTP-AULA` creado y en estado iniciado (*Started*).
 
 ---
 
@@ -483,17 +491,22 @@ Por defecto, Windows Server concede únicamente permisos de **lectura** al grupo
 ![Reinicio gráfico del servicio Microsoft FTP Service](imagenes/31_reiniciar_servicio_ftp.png)
 *Figura 31: Reinicio del servicio Microsoft FTP Service desde la consola gráfica de Servicios.*
 
-> 📷 **Realizar captura de pantalla** de la regla `FTP Pasivo Datos (50000-50100)` creada en el Firewall de Windows y del servicio `Microsoft FTP Service` en ejecución.
+> 📷 **Evidencia 7 (insertar en tu documento Word) — Realizar captura de pantalla** de la regla `FTP Pasivo Datos (50000-50100)` creada en el Firewall de Windows y del servicio `Microsoft FTP Service` en ejecución.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con todas las evidencias de esta práctica (reglas de Security Group en AWS, conexión RDP, instalación de roles IIS FTP y OpenSSH Server, creación del usuario local `alumne_redes`, configuración de firewall de FTP y modo pasivo en IIS, y regla del Firewall de Windows Defender).
-
-    * **Nombre del fichero:** `RA3-CEbcd-1-NombreApellidos.pdf` (ejemplo: `RA3-CEbcd-1-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 6"
+    En el **Apartado 6** de tu documento Word de la unidad, asegúrate de haber insertado y explicado brevemente las **Evidencias 1 a 7**:
+    
+    * **Evidencia 1:** Instancia `Servidor_FTPSSH` en estado `Running` en AWS EC2.
+    * **Evidencia 2:** Tabla de reglas de entrada del Security Group `grup-servidors-ftp-ssh` (puertos `21`, `22`, `3389`, `50000-50100` y `40000-40100`).
+    * **Evidencia 3:** Escritorio de Windows Server conectado por RDP mostrando *Server Manager*.
+    * **Evidencia 4:** Propiedades del usuario `alumne_redes` (*Member Of*: `Administrators`, `Remote Desktop Users`, `Users`).
+    * **Evidencia 5:** Configuración de `FTP Firewall Support` en IIS con el rango `50000-50100` y la IP pública de AWS.
+    * **Evidencia 6:** Sitio `FTP-AULA` creado y en estado `Started` en IIS Manager.
+    * **Evidencia 7:** Regla `FTP Pasivo Datos (50000-50100)` en el Firewall de Windows y servicio `Microsoft FTP Service` en ejecución.
 
 ---
 
-## 7 Tarea RA3-CEe-1 - [Windows Server] Transferencia de ficheros con FileZilla y diagnóstico de modo pasivo
+## 7 - [Windows Server] Transferencia de ficheros con FileZilla y diagnóstico de modo pasivo (RA3-CEe)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -522,7 +535,7 @@ Una vez instalado y configurado el servidor FTP en **Windows Server (`Servidor_F
 ![Transferencia de archivo completada con éxito hacia Windows Server en FileZilla](imagenes/33_filezilla_transferencia_ftp_ok.png)
 *Figura 33: Directorio raíz listado en modo pasivo y archivo Prova_ftp.txt transferido con éxito al servidor Windows Server.*
 
-> 📷 **Realizar captura de pantalla** de FileZilla mostrando la conexión exitosa en modo pasivo y el archivo subido al servidor Windows Server.
+> 📷 **Evidencia 8 (insertar en tu documento Word) — Realizar captura de pantalla** de FileZilla mostrando la conexión exitosa en modo pasivo y el archivo subido al servidor Windows Server.
 
 ---
 
@@ -534,15 +547,14 @@ Una vez instalado y configurado el servidor FTP en **Windows Server (`Servidor_F
   1. Verificar en el log superior de FileZilla que el servidor responde al comando `PASV` con la IP pública correcta y un puerto del rango `50000-50100`.
   2. Verificar en Windows Server que la regla `FTP Pasivo Datos (50000-50100)` está activa en `wf.msc`.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con las capturas de pantalla de la conexión realizada con FileZilla Client hacia Windows Server, mostrando el aviso inicial de protocolo sin cifrar, el listado correcto del directorio en modo pasivo y la transferencia del fichero (`Prova_ftp.txt`) completada con éxito.
-
-    * **Nombre del fichero:** `RA3-CEe-1-NombreApellidos.pdf` (ejemplo: `RA3-CEe-1-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 7"
+    En el **Apartado 7** de tu documento Word, incluye:
+    
+    * **Evidencia 8:** Captura de FileZilla mostrando la conexión exitosa en modo pasivo hacia Windows Server y el archivo `Prova_ftp.txt` transferido en la pestaña de *Transferencias satisfactorias*.
 
 ---
 
-## 8 Tarea RA3-CEd-1 - [Windows Server] Aislamiento de usuarios (User Isolation), carpeta pública y permisos NTFS
+## 8 - [Windows Server] Aislamiento de usuarios (User Isolation), carpeta pública y permisos NTFS (RA3-CEd)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -576,7 +588,7 @@ En un entorno empresarial real, cada departamento o usuario debe disponer de un 
 ![Estructura de carpetas dentro de C:\inetpub\ftproot\LocalUser](imagenes/33b_ftproot_localuser_carpetas.png)
 *Figura 33b: Estructura física de carpetas en C:\inetpub\ftproot\LocalUser para usuarios locales aislados y carpeta Public para acceso anónimo.*
 
-> 📷 **Realizar captura de pantalla** de File Explorer en Windows Server mostrando la estructura de carpetas dentro de `C:\inetpub\ftproot\LocalUser`.
+> 📷 **Evidencia 9 (insertar en tu documento Word) — Realizar captura de pantalla** de File Explorer en Windows Server mostrando la estructura de carpetas dentro de `C:\inetpub\ftproot\LocalUser`.
 
 ---
 
@@ -626,7 +638,7 @@ En un entorno empresarial real, cada departamento o usuario debe disponer de un 
 ![Conexión anónima en FileZilla mostrando el archivo público y el error 550 Access is denied al intentar borrarlo](imagenes/33f_filezilla_anonymous_550_denied.png)
 *Figura 33f: Acceso anónimo de solo lectura a la carpeta Public con denegación de borrado/escritura (550 Access is denied).*
 
-> 📷 **Realizar captura de pantalla** de FileZilla mostrando la vista privada de `usuari_ventas` y otra captura mostrando el error `550 Access is denied` al intentar subir o borrar un fichero como usuario `anonymous`.
+> 📷 **Evidencia 10 (insertar en tu documento Word) — Realizar captura de pantalla** de FileZilla mostrando la vista privada de `usuari_ventas` y otra captura mostrando el error `550 Access is denied` al intentar subir o borrar un fichero como usuario `anonymous`.
 
 ---
 
@@ -636,15 +648,15 @@ En un entorno empresarial real, cada departamento o usuario debe disponer de un 
 * **Causa técnica:** Aunque en IIS Manager las *FTP Authorization Rules* permitan escribir (`Read, Write`), los permisos de seguridad del sistema de ficheros de Windows (**NTFS**) de la carpeta física `C:\inetpub\ftproot\LocalUser\usuari_ventas` no conceden permiso de modificación (`Modify`) al usuario local.
 * **Resolución:** Hacer clic derecho sobre la carpeta del usuario -> **Properties** -> pestaña **Security** -> **Edit...** -> **Add...** -> añadir al usuario y marcar **Modify** y **Write**.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con las evidencias del aislamiento y permisos en Windows Server: estructura de carpetas en `C:\inetpub\ftproot\LocalUser` y `Public`, configuración de `FTP User Isolation` y `FTP Authorization Rules` en IIS, y comprobación en FileZilla con el usuario privado `usuari_ventas` y el usuario `anonymous` (mostrando el error de solo lectura `550 Access is denied`).
-
-    * **Nombre del fichero:** `RA3-CEd-1-NombreApellidos.pdf` (ejemplo: `RA3-CEd-1-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 8"
+    En el **Apartado 8** de tu documento Word, incluye las **Evidencias 9 y 10**:
+    
+    * **Evidencia 9:** Estructura de carpetas dentro de `C:\inetpub\ftproot\LocalUser` en el Explorador de archivos de Windows Server.
+    * **Evidencia 10:** Capturas en FileZilla mostrando la vista privada aislada de `usuari_ventas` (`informe_ventas_privado.txt`) y el error `550 Access is denied` al intentar borrar o subir archivos como usuario `anonymous`.
 
 ---
 
-## 9 Tarea RA3-CEf-1 - [Windows Server] Seguridad y cifrado con FTPS (FTP sobre TLS/SSL)
+## 9 - [Windows Server] Seguridad y cifrado con FTPS (FTP sobre TLS/SSL) (RA3-CEf)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -680,7 +692,7 @@ El protocolo FTP tradicional transmite contraseñas y datos en texto claro sin c
 ![Certificado autofirmado Certificado-FTPs-Aula creado y listado en IIS](imagenes/39_iis_certificado_creado.png)
 *Figura 39: Certificado digital Certificado-FTPs-Aula generado en el servidor.*
 
-> 📷 **Realizar captura de pantalla** del panel Server Certificates mostrando el nuevo certificado creado con su fecha de caducidad y emisor.
+> 📷 **Evidencia 11 (insertar en tu documento Word) — Realizar captura de pantalla** del panel Server Certificates mostrando el nuevo certificado creado con su fecha de caducidad y emisor.
 
 ---
 
@@ -723,17 +735,17 @@ El protocolo FTP tradicional transmite contraseñas y datos en texto claro sin c
 ![FileZilla conectado por FTPS mostrando los comandos PBSZ/PROT P y el candado de cifrado](imagenes/43_filezilla_ftps_conectado_candado.png)
 *Figura 43: Conexión FTPS establecida en el puerto 21 con cifrado del canal de datos (PROT P) y candado de seguridad activo.*
 
-> 📷 **Realizar captura de pantalla** de la ventana del certificado en FileZilla mostrando la huella digital SHA-256 y de FileZilla conectado con el candado de conexión segura activo.
+> 📷 **Evidencia 12 (insertar en tu documento Word) — Realizar captura de pantalla** de la ventana del certificado en FileZilla mostrando la huella digital SHA-256 y de FileZilla conectado con el candado de conexión segura activo.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con las evidencias de la creación del certificado digital autofirmado `Certificado-FTPs-Aula` en IIS, la configuración de la directiva `Require SSL connections` en el sitio FTP, y las capturas en FileZilla con la validación de la huella digital SHA-256 y el icono del candado de conexión segura.
-
-    * **Nombre del fichero:** `RA3-CEf-1-NombreApellidos.pdf` (ejemplo: `RA3-CEf-1-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 9"
+    En el **Apartado 9** de tu documento Word, incluye las **Evidencias 11 y 12**:
+    
+    * **Evidencia 11:** Panel *Server Certificates* de IIS mostrando el certificado `Certificado-FTPs-Aula` creado.
+    * **Evidencia 12:** Ventana de validación del certificado TLS (huella SHA-256) en FileZilla y sesión FTPS conectada mostrando los comandos `PBSZ 0` / `PROT P` y el candado de seguridad activo.
 
 ---
 
-## 10 Tarea RA6-CEbcd-1 - [Windows Server] Administración remota y bastionado de SSH con PuTTY y PuTTYgen
+## 10 - [Windows Server] Administración remota y bastionado de SSH con PuTTY y PuTTYgen (RA6-CEb,c,d)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -766,7 +778,7 @@ El acceso por contraseña convencional está expuesto a ataques de fuerza bruta.
 ![Generación del par de claves SSH](imagenes/46_powershell_ssh_keygen.png)
 *Figura 46: Generación del par de claves asimétricas y visualización de la clave pública.*
 
-> 📷 **Realizar captura de pantalla** de la ventana de PuTTYgen mostrando la clave generada y el comentario `alumne_redes@ies-mre`.
+> 📷 **Evidencia 13 (insertar en tu documento Word) — Realizar captura de pantalla** de la ventana de PuTTYgen mostrando la clave generada y el comentario `alumne_redes@ies-mre`.
 
 ---
 
@@ -820,17 +832,17 @@ El acceso por contraseña convencional está expuesto a ataques de fuerza bruta.
 ![Acceso directo sin contraseña mediante clave privada y rechazo tras el bastionado SSH](imagenes/47_powershell_ssh_clave_publica_login.png)
 *Figura 47: Inicio de sesión automático mediante clave privada y denegación de acceso por contraseña tras el bastionado.*
 
-> 📷 **Realizar captura de pantalla** de PuTTY entrando sin contraseña con la clave pública (`Authenticating with public key`) y otra captura mostrando el bloqueo `No supported authentication methods available (server sent: publickey)` al intentar conectar sin clave.
+> 📷 **Evidencia 14 (insertar en tu documento Word) — Realizar captura de pantalla** de PuTTY entrando sin contraseña con la clave pública (`Authenticating with public key`) y otra captura mostrando el bloqueo `No supported authentication methods available (server sent: publickey)` al intentar conectar sin clave.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con las evidencias en Windows Server de la conexión SSH inicial con PuTTY, la generación del par de claves en PuTTYgen, la instalación de la clave pública en `authorized_keys`, el inicio de sesión automático sin contraseña y el rechazo de conexión por contraseña tras el bastionado.
-
-    * **Nombre del fichero:** `RA6-CEbcd-1-NombreApellidos.pdf` (ejemplo: `RA6-CEbcd-1-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 10"
+    En el **Apartado 10** de tu documento Word, incluye las **Evidencias 13 y 14**:
+    
+    * **Evidencia 13:** Generación del par de claves asimétricas en PuTTYgen con el comentario `alumne_redes@ies-mre`.
+    * **Evidencia 14:** Sesión de PuTTY entrando automáticamente sin contraseña mediante clave pública y captura del rechazo (`No supported authentication methods available`) al intentar acceder sin clave privada.
 
 ---
 
-## 11 Tarea RA6-CEe-1 - [Windows Server] Transferencia segura con SFTP/SCP y auditoría de Logs y Wireshark
+## 11 - [Windows Server] Transferencia segura con SFTP/SCP y auditoría de Logs y Wireshark (RA6-CEe / RA3-CEg)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -855,7 +867,7 @@ Para completar todo el bloque práctico sobre **Windows Server (`Servidor_FTPSSH
 
 5. Subir un archivo de prueba (`fichero_sftp.txt`) y verificar que la transferencia cifrada concluye con éxito.
 
-> 📷 **Realizar captura de pantalla** de FileZilla conectado por el protocolo SFTP al puerto 22 de Windows Server mostrando la transferencia completada y el icono del candado inferior.
+> 📷 **Evidencia 15 (insertar en tu documento Word) — Realizar captura de pantalla** de FileZilla conectado por el protocolo SFTP al puerto 22 de Windows Server mostrando la transferencia completada y el icono del candado inferior.
 
 ---
 
@@ -876,7 +888,7 @@ Para completar todo el bloque práctico sobre **Windows Server (`Servidor_FTPSSH
 ![Transferencia de subida y descarga mediante SCP en Windows PowerShell](imagenes/48_powershell_scp_transferencia.png)
 *Figura 48: Subida y descarga segura de archivos hacia Windows Server por línea de comandos mediante SCP sobre el puerto 22.*
 
-> 📷 **Realizar captura de pantalla** de PowerShell ejecutando los comandos `scp` de subida y descarga mostrando la transferencia completada al `100%`.
+> 📷 **Evidencia 16 (insertar en tu documento Word) — Realizar captura de pantalla** de PowerShell ejecutando los comandos `scp` de subida y descarga mostrando la transferencia completada al `100%`.
 
 ---
 
@@ -898,7 +910,7 @@ Para completar todo el bloque práctico sobre **Windows Server (`Servidor_FTPSSH
    * `226`: Transferencia de archivo completada (`STOR Prova_ftp.txt`).
    * `550`: Permiso denegado (cuando el usuario `anonymous` intentó borrar el catálogo).
 
-> 📷 **Realizar captura de pantalla** del fichero de log de IIS en Notepad destacando una línea con un comando de subida exitoso (`STOR` con código `226`) y la negociación FTPS (`AUTH TLS` con código `234`).
+> 📷 **Evidencia 17 (insertar en tu documento Word) — Realizar captura de pantalla** del fichero de log de IIS en Notepad destacando una línea con un comando de subida exitoso (`STOR` con código `226`) y la negociación FTPS (`AUTH TLS` con código `234`).
 
 ---
 
@@ -913,17 +925,19 @@ Para comprobar empíricamente por qué nunca debe utilizarse FTP sin cifrar, cap
 ![Comparativa de paquetes en Wireshark entre FTP en texto claro y FTPS/SFTP cifrados](imagenes/44b_wireshark_ftp_texto_claro_vs_cifrado.png)
 *Figura 44b: Auditoría en Wireshark contrastando la exposición de credenciales en FTP plano (Request: PASS Smx2026..@) frente al tráfico cifrado en FTPS (TLSv1.2 Application Data) y SFTP (SSHv2 Encrypted packet).*
 
-> 📷 **Realizar captura de pantalla** de Wireshark mostrando los paquetes cifrados `TLSv1.2 Application Data` (FTPS) y `SSHv2 Encrypted packet` (SFTP).
+> 📷 **Evidencia 18 (insertar en tu documento Word) — Realizar captura de pantalla** de Wireshark mostrando los paquetes cifrados `TLSv1.2 Application Data` (FTPS) y `SSHv2 Encrypted packet` (SFTP).
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con las evidencias en Windows Server de: transferencia gráfica SFTP en FileZilla (puerto 22), transferencia por línea de comandos con `scp`, auditoría del fichero de log de IIS (`u_exAAMMDD.log`) en Notepad y captura de tráfico en Wireshark.
-
-    * **Nombre del fichero:** `RA6-CEe-1-NombreApellidos.pdf` (ejemplo: `RA6-CEe-1-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 11 (Fin del Bloque Windows Server)"
+    En el **Apartado 11** de tu documento Word, incluye las **Evidencias 15 a 18**:
+    
+    * **Evidencia 15:** FileZilla conectado por SFTP (puerto `22`) a Windows Server con el candado activo.
+    * **Evidencia 16:** Consola de PowerShell ejecutando la subida y descarga con `scp` al `100%`.
+    * **Evidencia 17:** Fichero de log de IIS (`u_exAAMMDD.log`) en Notepad destacando las líneas `STOR` (`226`) y `AUTH TLS` (`234`).
+    * **Evidencia 18:** Captura de paquetes en Wireshark comparando FTP plano frente a `TLSv1.2 Application Data` (FTPS) y `SSHv2 Encrypted packet` (SFTP).
 
 ---
 
-## 12 Tarea RA3-CEbcd-2 - [Ubuntu Server] Instalación de vsftpd, modo pasivo, jaula chroot y pruebas en FileZilla
+## 12 - [Ubuntu Server] Instalación de vsftpd, modo pasivo, jaula chroot y pruebas en FileZilla (RA3-CEb,c,d,e)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -947,7 +961,7 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
 
 2. Esperar a que la instancia pase a estado `Running` y anotar su **Dirección IPv4 pública**.
 
-> 📷 **Realizar captura de pantalla** del panel de instancias de AWS EC2 mostrando la instancia `Ubuntu_FTPSSH` en ejecución (`Running`) con el grupo de seguridad `grup-servidors-ftp-ssh` asignado.
+> 📷 **Evidencia 19 (insertar en tu documento Word) — Realizar captura de pantalla** del panel de instancias de AWS EC2 mostrando la instancia `Ubuntu_FTPSSH` en ejecución (`Running`) con el grupo de seguridad `grup-servidors-ftp-ssh` asignado.
 
 ---
 
@@ -995,7 +1009,7 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
    pasv_address=<TU_IP_PUBLICA_UBUNTU>
    ```
 
-> 📷 **Realizar captura de pantalla** del fichero `/etc/vsftpd.conf` editado donde se aprecien las directivas `chroot_local_user=YES`, `pasv_enable=YES`, `pasv_address` y el rango `40000-40100`.
+> 📷 **Evidencia 20 (insertar en tu documento Word) — Realizar captura de pantalla** del fichero `/etc/vsftpd.conf` editado donde se aprecien las directivas `chroot_local_user=YES`, `pasv_enable=YES`, `pasv_address` y el rango `40000-40100`.
 
 ---
 
@@ -1014,7 +1028,7 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
    sudo systemctl status vsftpd
    ```
 
-> 📷 **Realizar captura de pantalla** de la terminal de Ubuntu mostrando el estado `active (running)` del servicio `vsftpd`.
+> 📷 **Evidencia 21 (insertar en tu documento Word) — Realizar captura de pantalla** de la terminal de Ubuntu mostrando el estado `active (running)` del servicio `vsftpd`.
 
 ---
 
@@ -1028,17 +1042,19 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
 2. Subir un archivo llamado `prueba_ubuntu.txt` y comprobar que la transferencia en modo pasivo (`40000-40100`) se completa con éxito.
 3. Verificar que gracias a la directiva `chroot_local_user=YES`, el usuario aparece enjaulado en `/` (que corresponde físicamente a `/home/usuari_ventas`), impidiendo que pueda subir de nivel hacia `/home` o `/etc`.
 
-> 📷 **Realizar captura de pantalla** de FileZilla conectado a Ubuntu Server mostrando la subida de `prueba_ubuntu.txt` y el enjaulado del usuario en su directorio raíz `/`.
+> 📷 **Evidencia 22 (insertar en tu documento Word) — Realizar captura de pantalla** de FileZilla conectado a Ubuntu Server mostrando la subida de `prueba_ubuntu.txt` y el enjaulado del usuario en su directorio raíz `/`.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con las evidencias del despliegue en Ubuntu Server: instancia `Ubuntu_FTPSSH` en ejecución en AWS, fichero `/etc/vsftpd.conf` configurado con modo pasivo y `chroot`, estado `active (running)` del servicio `vsftpd` y capturas en FileZilla subiendo `prueba_ubuntu.txt` con el usuario enjaulado.
-
-    * **Nombre del fichero:** `RA3-CEbcd-2-NombreApellidos.pdf` (ejemplo: `RA3-CEbcd-2-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 12"
+    En el **Apartado 12** de tu documento Word, incluye las **Evidencias 19 a 22**:
+    
+    * **Evidencia 19:** Instancia `Ubuntu_FTPSSH` en ejecución (`Running`) en AWS EC2.
+    * **Evidencia 20:** Fichero `/etc/vsftpd.conf` con las directivas `chroot_local_user=YES`, `pasv_enable=YES`, `pasv_address` y puertos `40000-40100`.
+    * **Evidencia 21:** Salida de `sudo systemctl status vsftpd` mostrando `active (running)`.
+    * **Evidencia 22:** FileZilla conectado a Ubuntu Server mostrando la subida de `prueba_ubuntu.txt` y el enjaulado del usuario en `/`.
 
 ---
 
-## 13 Tarea RA3-CEg / RA6-CEf - [Ubuntu Server] Seguridad FTPS con OpenSSL, claves SSH y auditoría de logs en Linux
+## 13 - [Ubuntu Server] Seguridad FTPS con OpenSSL, claves SSH y auditoría de logs en Linux (RA3-CEf,g / RA6-CEf)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -1087,7 +1103,7 @@ En esta tarea aseguraremos nuestro servidor **Ubuntu Server (`Ubuntu_FTPSSH`)** 
 
 5. Reiniciar `vsftpd` (`sudo systemctl restart vsftpd`) y conectar desde **FileZilla Client** hacia la IP pública de Ubuntu en el puerto `21`: comprobar que aparece la ventana **Certificado desconocido** con los datos de `IES Mestre Ramon Esteve (Catadau)` y que al aceptarlo se activa el candado de seguridad.
 
-> 📷 **Realizar captura de pantalla** de la generación del certificado con `openssl` en Ubuntu y de la ventana del certificado en FileZilla al conectar por FTPS a Ubuntu Server.
+> 📷 **Evidencia 23 (insertar en tu documento Word) — Realizar captura de pantalla** de la generación del certificado con `openssl` en Ubuntu y de la ventana del certificado en FileZilla al conectar por FTPS a Ubuntu Server.
 
 ---
 
@@ -1122,17 +1138,17 @@ En esta tarea aseguraremos nuestro servidor **Ubuntu Server (`Ubuntu_FTPSSH`)** 
    ```
 3. Identificar en la salida la dirección IP pública del cliente y el método de autenticación empleado (`publickey` o `password`).
 
-> 📷 **Realizar captura de pantalla** de la terminal de Ubuntu mostrando las últimas líneas del registro `/var/log/vsftpd.log` y de `/var/log/auth.log`.
+> 📷 **Evidencia 24 (insertar en tu documento Word) — Realizar captura de pantalla** de la terminal de Ubuntu mostrando las últimas líneas del registro `/var/log/vsftpd.log` y de `/var/log/auth.log`.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un informe técnico con las evidencias en Ubuntu Server de: la generación del certificado OpenSSL y conexión FTPS en FileZilla, la autenticación por clave pública SSH en Ubuntu y la auditoría de los ficheros `/var/log/vsftpd.log` y `/var/log/auth.log`.
-
-    * **Nombre del fichero:** `RA3-CEg-RA6-CEf-NombreApellidos.pdf` (ejemplo: `RA3-CEg-RA6-CEf-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 13 (Fin del Bloque Ubuntu Server)"
+    En el **Apartado 13** de tu documento Word, incluye las **Evidencias 23 y 24**:
+    
+    * **Evidencia 23:** Generación del certificado X.509 con `openssl` en Ubuntu Server y validación del certificado en FileZilla al conectar por FTPS.
+    * **Evidencia 24:** Terminal de Ubuntu mostrando las últimas líneas de auditoría en `/var/log/vsftpd.log` y `/var/log/auth.log`.
 
 ---
 
-## 14 Tarea RA3-CEf-2 - Pruebas cruzadas inter-servidores en AWS Cloud
+## 14 - [Inter-Servidores] Pruebas cruzadas bidireccionales en AWS Cloud (RA3-CEf / RA6-CEf)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -1154,7 +1170,7 @@ En esta tarea comprobaremos la interoperabilidad bidireccional conectando los do
    ssh alumne_redes@<IP_PUBLICA_WINDOWS>
    ```
 
-> 📷 **Realizar captura de pantalla** de la consola de Ubuntu mostrando la subida del fichero por FTP/FTPS y la apertura de sesión SSH en Windows.
+> 📷 **Evidencia 25 (insertar en tu documento Word) — Realizar captura de pantalla** de la consola de Ubuntu mostrando la subida del fichero por FTP/FTPS y la apertura de sesión SSH en Windows.
 
 ---
 
@@ -1163,17 +1179,17 @@ En esta tarea comprobaremos la interoperabilidad bidireccional conectando los do
 1. Dentro de vuestro escritorio remoto de **Windows Server**, abrir PuTTY (o PowerShell) hacia la **IP pública de Ubuntu Server** en el puerto `22` con `alumne_redes`.
 2. Probar la subida o descarga de un fichero hacia Ubuntu Server mediante `curl` o `scp`.
 
-> 📷 **Realizar captura de pantalla** de la conexión realizada desde dentro de Windows Server hacia Ubuntu Server.
+> 📷 **Evidencia 26 (insertar en tu documento Word) — Realizar captura de pantalla** de la conexión realizada desde dentro de Windows Server hacia Ubuntu Server.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento con las evidencias de las conexiones cruzadas inter-servidores en AWS: transferencia FTPS mediante `curl` y sesión SSH remota desde Ubuntu hacia Windows Server, y conexión remota desde Windows Server hacia Ubuntu Server.
-
-    * **Nombre del fichero:** `RA3-CEf-2-NombreApellidos.pdf` (ejemplo: `RA3-CEf-2-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+!!! info "Qué debes añadir a tu documento Word al terminar el Apartado 14"
+    En el **Apartado 14** de tu documento Word, incluye las **Evidencias 25 y 26**:
+    
+    * **Evidencia 25:** Consola de Ubuntu Server subiendo `saludo_linux.txt` por FTPS con `curl` y abriendo sesión SSH hacia Windows Server.
+    * **Evidencia 26:** Conexión SSH/SCP realizada desde dentro de Windows Server hacia Ubuntu Server.
 
 ---
 
-## 15 Tarea RA3-CEh - Proyecto Integrador Final: Infraestructura corporativa de TechCatadau S.L. en AWS y control de costes
+## 15 - [Proyecto Final] Infraestructura corporativa de TechCatadau S.L. en AWS y control de costes (RA3-CEh)
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
@@ -1210,7 +1226,7 @@ La dirección técnica de **TechCatadau S.L.** solicita configurar un entorno co
    * Configurar los **permisos NTFS** (`Modify` para cada usuario exclusivamente en su carpeta departamental) y las **FTP Authorization Rules** en IIS (Lectura/Escritura para los 4 departamentos; **Solo Lectura** para `Anonymous Users`).
    * Verificar que el sitio opera exclusivamente bajo **FTPS (`Require SSL connections`)**.
 
-> 📷 **Realizar captura de pantalla** de FileZilla validando el acceso aislado de `usuari_direccion` y `usuari_soporte` bajo conexión cifrada FTPS (con el candado activo).
+> 📷 **Evidencia 27 (insertar en tu documento Word) — Realizar captura de pantalla** de FileZilla validando el acceso aislado de `usuari_direccion` y `usuari_soporte` bajo conexión cifrada FTPS (con el candado activo).
 
 ---
 
@@ -1235,7 +1251,7 @@ Para garantizar la continuidad de negocio ante fallos, el departamento de Soport
    ```
 2. En **Ubuntu Server**, crear la carpeta destino `mkdir -p ~/backups_windows`, ejecutar el script desde PowerShell y comprobar con `ls -lh ~/backups_windows` en Ubuntu que el archivo `.zip` se ha recibido íntegramente al `100%`.
 
-> 📷 **Realizar captura de pantalla** de la ejecución del script `backup_techcatadau.ps1` transfiriendo el archivo `.zip` por SCP al `100%` y su comprobación en el directorio `~/backups_windows` de Ubuntu Server.
+> 📷 **Evidencia 28 (insertar en tu documento Word) — Realizar captura de pantalla** de la ejecución del script `backup_techcatadau.ps1` transfiriendo el archivo `.zip` por SCP al `100%` y su comprobación en el directorio `~/backups_windows` de Ubuntu Server.
 
 ---
 
@@ -1266,17 +1282,53 @@ Antes de proceder al apagado definitivo del laboratorio, verificad que vuestra i
    * Hacer clic en **Instance state** -> **Stop instance** (*Detener la instancia*).
    * Esperar hasta que en la columna de estado aparezca claramente **Stopped** (*Detenido*) en ambas instancias.
 
-> 📷 **Realizar captura de pantalla** del panel de instancias de EC2 mostrando ambas máquinas (`Servidor_FTPSSH` y `Ubuntu_FTPSSH`) en estado `Stopped` (*Detenido*).
+> 📷 **Evidencia 29 (insertar en tu documento Word) — Realizar captura de pantalla** del panel de instancias de EC2 mostrando ambas máquinas (`Servidor_FTPSSH` y `Ubuntu_FTPSSH`) en estado `Stopped` (*Detenido*).
 
 3. **Cerrar el laboratorio:** Volver a la pestaña de **AWS Academy** (Vocareum) y pulsar en el botón rojo superior **`End Lab`**.
 
-!!! warning "Entrega de la tarea"
-    Elaborar un documento final que incluya:
-    1. Las evidencias del despliegue departamental de **TechCatadau S.L.** (`usuari_direccion`, `usuari_ventas`, `usuari_compras`, `usuari_soporte` y carpeta `Public`).
-    2. La ejecución del script automatizado `backup_techcatadau.ps1` enviando la copia de seguridad `.zip` por SCP hacia Ubuntu Server.
-    3. La captura de la consola de instancias de AWS EC2 mostrando todas las máquinas virtuales en estado **`Stopped`** (*Detenido*), demostrando la aplicación de buenas prácticas de ahorro y gestión de recursos en la nube.
+---
 
-    * **Nombre del fichero:** `RA3-CEh-NombreApellidos.pdf` (ejemplo: `RA3-CEh-JoanPerez.pdf`).
-    * **Entrega:** Subir el archivo en formato PDF a la tarea correspondiente de **Aules** antes de la fecha límite.
+### 15.5 Entrega única de la Memoria Práctica en Aules (Checklist final de las 29 Evidencias)
+
+!!! warning "Entrega única en Aules: Memoria Práctica Completa (RA3 y RA6)"
+    Una vez completados todos los apartados en tu documento de Word, verifica que incluye las **29 evidencias numeradas** organizadas por apartados, expórtalo a un **único archivo PDF** y súbelo a la tarea de **Aules**:
+
+    **Bloque I — Windows Server (`Servidor_FTPSSH`):**
+    1. **Evidencia 1 (Ap. 6.0):** Instancia `Servidor_FTPSSH` creada y en estado `Running` en AWS EC2.
+    2. **Evidencia 2 (Ap. 6.1):** Tabla de las 5 reglas de entrada del Security Group `grup-servidors-ftp-ssh`.
+    3. **Evidencia 3 (Ap. 6.2):** Conexión por Escritorio Remoto (RDP) a Windows Server mostrando *Server Manager*.
+    4. **Evidencia 4 (Ap. 6.4):** Usuario `alumne_redes` miembro de `Administrators`, `Remote Desktop Users` y `Users`.
+    5. **Evidencia 5 (Ap. 6.5):** Panel `FTP Firewall Support` en IIS con rango `50000-50100` e IP pública de AWS.
+    6. **Evidencia 6 (Ap. 6.6):** Sitio `FTP-AULA` creado y en estado `Started` en IIS Manager.
+    7. **Evidencia 7 (Ap. 6.7):** Regla `FTP Pasivo Datos (50000-50100)` (y puerto `22`) en el Firewall de Windows y servicio `Microsoft FTP Service` activo.
+    8. **Evidencia 8 (Ap. 7.1):** Conexión en modo pasivo desde FileZilla y subida de `Prova_ftp.txt` a Windows Server.
+    9. **Evidencia 9 (Ap. 8.1):** Estructura de carpetas departamentales dentro de `C:\inetpub\ftproot\LocalUser`.
+    10. **Evidencia 10 (Ap. 8.4):** FileZilla conectado como `usuari_ventas` (aislado) y como `anonymous` recibiendo `550 Access is denied` al intentar borrar/subir.
+    11. **Evidencia 11 (Ap. 9.1):** Certificado autofirmado `Certificado-FTPs-Aula` en *Server Certificates* de IIS.
+    12. **Evidencia 12 (Ap. 9.3):** Validación del certificado TLS (huella SHA-256) y conexión FTPS con candado en FileZilla.
+    13. **Evidencia 13 (Ap. 10.2):** Par de claves generado en PuTTYgen con comentario `alumne_redes@ies-mre`.
+    14. **Evidencia 14 (Ap. 10.5):** Acceso automático sin contraseña en PuTTY y rechazo tras el bastionado (`PasswordAuthentication no`).
+    15. **Evidencia 15 (Ap. 11.1):** Transferencia por SFTP (puerto `22`) en FileZilla con el candado dorado activo.
+    16. **Evidencia 16 (Ap. 11.2):** Subida y descarga por línea de comandos con `scp` en PowerShell al `100%`.
+    17. **Evidencia 17 (Ap. 11.3):** Auditoría del log W3C (`u_exAAMMDD.log`) en Notepad mostrando los códigos `230`, `234`, `226` y `550`.
+    18. **Evidencia 18 (Ap. 11.4):** Captura de tráfico en Wireshark comparando FTP plano frente a FTPS (`TLSv1.2`) y SFTP (`SSHv2`).
+
+    **Bloque II — Ubuntu Server (`Ubuntu_FTPSSH`):**
+    19. **Evidencia 19 (Ap. 12.0):** Instancia `Ubuntu_FTPSSH` en ejecución (`Running`) en AWS EC2.
+    20. **Evidencia 20 (Ap. 12.3):** Fichero `/etc/vsftpd.conf` configurado con modo pasivo (`40000-40100`), `pasv_address` y `chroot_local_user=YES`.
+    21. **Evidencia 21 (Ap. 12.4):** Estado `active (running)` del servicio `vsftpd` en la terminal de Ubuntu.
+    22. **Evidencia 22 (Ap. 12.5):** FileZilla conectado a Ubuntu Server subiendo `prueba_ubuntu.txt` con el usuario enjaulado en `/`.
+    23. **Evidencia 23 (Ap. 13.1):** Generación del certificado X.509 con `openssl` en Ubuntu y conexión FTPS en FileZilla.
+    24. **Evidencia 24 (Ap. 13.3):** Auditoría de registros en `/var/log/vsftpd.log` y `/var/log/auth.log` en Ubuntu Server.
+
+    **Bloque III — Pruebas Cruzadas, Proyecto Final (*TechCatadau S.L.*) y Cierre AWS:**
+    25. **Evidencia 25 (Ap. 14.1):** Subida FTPS con `curl` y conexión SSH desde Ubuntu Server hacia Windows Server.
+    26. **Evidencia 26 (Ap. 14.2):** Conexión SSH/SCP desde Windows Server hacia Ubuntu Server.
+    27. **Evidencia 27 (Ap. 15.1):** Validación en FileZilla de los departamentos de *TechCatadau S.L.* (`usuari_direccion` y `usuari_soporte`) bajo FTPS.
+    28. **Evidencia 28 (Ap. 15.2):** Ejecución del script `backup_techcatadau.ps1` enviando el `.zip` por SCP y su recepción en `~/backups_windows` de Ubuntu.
+    29. **Evidencia 29 (Ap. 15.4):** Panel de instancias de AWS EC2 mostrando ambas máquinas (`Servidor_FTPSSH` y `Ubuntu_FTPSSH`) en estado **`Stopped`** (*Detenido*).
+
+    * **Nombre del único fichero a entregar:** `RA3-RA6-FTP-SSH-NombreApellidos.pdf` (ejemplo: `RA3-RA6-FTP-SSH-JoanPerez.pdf`).
+    * **Entrega:** Subir el archivo en formato PDF a la tarea de entrega única de la unidad en **Aules** antes de la fecha límite.
 
 
