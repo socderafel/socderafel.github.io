@@ -1,0 +1,1602 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Actividades prácticas UT7 — Programació (1r DAW)</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
+  <style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.4rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.6rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    /* Admonitions Material */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+      cursor: pointer;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning, details.admonition.warning {
+      border-left-color: #ff9100;
+      background-color: #fffbf0;
+    }
+    .admonition.warning .admonition-title, details.admonition.warning > summary {
+      color: #b75e00;
+      background-color: #fff3d6;
+    }
+    .admonition.tip, .admonition.ayuda, details.admonition.tip, details.admonition.ayuda {
+      border-left-color: #00bfa5;
+      background-color: #f0faf8;
+    }
+    .admonition.tip .admonition-title, .admonition.ayuda .admonition-title,
+    details.admonition.tip > summary, details.admonition.ayuda > summary {
+      color: #004d40;
+      background-color: #e0f5f2;
+    }
+    .admonition.exercise, .admonition.question, .admonition.solución,
+    details.admonition.exercise, details.admonition.question, details.admonition.solución {
+      border-left-color: #00c853;
+      background-color: #f2faf4;
+    }
+    .admonition.exercise .admonition-title, .admonition.question .admonition-title, .admonition.solución .admonition-title,
+    details.admonition.exercise > summary, details.admonition.question > summary, details.admonition.solución > summary {
+      color: #1b5e20;
+      background-color: #e2f7e7;
+    }
+    .admonition.danger, details.admonition.danger {
+      border-left-color: #ff1744;
+      background-color: #fff5f7;
+    }
+    .admonition.danger .admonition-title, details.admonition.danger > summary {
+      color: #b71c1c;
+      background-color: #ffe0e6;
+    }
+    [data-theme="dark"] .admonition.warning, [data-theme="dark"] details.admonition.warning,
+    [data-theme="dark"] .admonition.tip, [data-theme="dark"] details.admonition.tip,
+    [data-theme="dark"] .admonition.exercise, [data-theme="dark"] details.admonition.exercise,
+    [data-theme="dark"] .admonition.question, [data-theme="dark"] details.admonition.question,
+    [data-theme="dark"] .admonition.solución, [data-theme="dark"] details.admonition.solución,
+    [data-theme="dark"] .admonition.danger, [data-theme="dark"] details.admonition.danger {
+      background-color: #0f172a;
+    }
+    [data-theme="dark"] .admonition.warning .admonition-title, [data-theme="dark"] details.admonition.warning > summary,
+    [data-theme="dark"] .admonition.tip .admonition-title, [data-theme="dark"] details.admonition.tip > summary,
+    [data-theme="dark"] .admonition.exercise .admonition-title, [data-theme="dark"] details.admonition.exercise > summary,
+    [data-theme="dark"] .admonition.question .admonition-title, [data-theme="dark"] details.admonition.question > summary,
+    [data-theme="dark"] .admonition.solución .admonition-title, [data-theme="dark"] details.admonition.solución > summary,
+    [data-theme="dark"] .admonition.danger .admonition-title, [data-theme="dark"] details.admonition.danger > summary {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    /* Bloques de código tipo Terminal elegante (Formato Pepe) */
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 65px;
+    }
+    .terminal-dots .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+    .terminal-box code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+    .tok-cmd { color: #89b4fa; font-weight: 600; }
+    .tok-string { color: #a6e3a1; }
+    .tok-comment { color: #6c7086; font-style: italic; }
+    .tok-key { color: #cba6f7; font-weight: 600; }
+    .tok-bool { color: #fab387; font-weight: 600; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    img {
+      border: 2px dashed #94a3b8;
+      background-color: #f8fafc;
+      padding: 8px;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <span>☕ Programació — 1r DAW (IES Mestre Ramón Esteve)</span>
+      <a href="../../">⬅️ Tornar a l'Índex Markdown</a>
+      <a href="../../../">🏠 Portal Docent</a>
+    </div>
+    <div class="actions">
+      <a href="../../ut07/ut07actividades.md" class="btn-toggle">📄 Versió Markdown</a>
+      <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="🔍 Filtrar apartats..." oninput="filterSidebar(this)">
+<ul><li><a href="../index.html">🏠 <strong>Inici Guia Interactiva</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Prerrequisitos y Configuración</summary>
+<ul>
+<li><a href="../ut00/index.html" class="unit-full-link">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducción</a></li>
+<li><a href="../ut00/ut0002.html">0.2 GitHub</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Git</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Visual Studio Code</a></li>
+<li><a href="../ut00/ut0005.html">0.5 GitHub Desktop</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Estructura de programas informáticos</summary>
+<ul>
+<li><a href="../ut01/index.html" class="unit-full-link">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01ras.html">1.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Piensa como un programador y diseña algoritmos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Herramientas útiles y E/S por consola</a></li>
+<li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
+<li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
+<li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
+<li><a href="../ut01/ut01trazas.html">Trazas de ejecución UT1</a></li>
+<li><a href="../ut01/ut01pi.html">Proyecto Intermodular UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Estructuras de control</summary>
+<ul>
+<li><a href="../ut02/index.html" class="unit-full-link">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02ras.html">2.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Introducción a las estructuras de control</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Sentencias y bloques</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Estructuras de selección (if-else, switch)</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Sentencias de salto (break, continue, return)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Control y manejo de excepciones (try-catch)</a></li>
+<li><a href="../ut02/ut0207.html">Ejemplos guiados UT2</a></li>
+<li><a href="../ut02/ut02actividades.html">Actividades prácticas UT2</a></li>
+<li><a href="../ut02/ut02retos.html">Retos de programación UT2</a></li>
+<li><a href="../ut02/ut02trazas.html">Trazas de ejecución UT2</a></li>
+<li><a href="../ut02/ut02pi.html">Proyecto Intermodular UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Tipos avanzados de datos</summary>
+<ul>
+<li><a href="../ut03/index.html" class="unit-full-link">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03ras.html">3.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut03/ut0306.html">3.1 Introducción a las estructuras de datos</a></li>
+<li><a href="../ut03/ut0301.html">3.2.1 Uso de arrays unidimensionales</a></li>
+<li><a href="../ut03/ut0303.html">3.2.2 Recorrido, búsqueda y ordenación en arrays</a></li>
+<li><a href="../ut03/ut0304.html">3.2.3 Arrays bidimensionales y multidimensionales (Matrices)</a></li>
+<li><a href="../ut03/ut0302.html">3.2.4 La clase java.util.Arrays</a></li>
+<li><a href="../ut03/ut0307.html">3.2.5 Colecciones dinámicas: ArrayList</a></li>
+<li><a href="../ut03/ut0308.html">3.3 Diccionarios y Mapas (HashMap)</a></li>
+<li><a href="../ut03/ut0305.html">3.4 Algoritmos recursivos (Recursividad)</a></li>
+<li><a href="../ut03/ut03actividades.html">Actividades prácticas UT3</a></li>
+<li><a href="../ut03/ut03retos.html">Retos de programación UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Programación Orientada a Objetos (POO)</summary>
+<ul>
+<li><a href="../ut04/index.html" class="unit-full-link">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut04ras.html">4.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Introducción al paradigma orientado a objetos</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Principios fundamentales de la POO</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Objetos y clases</a></li>
+<li><a href="../ut04/ut0404.html">4.4.1 Estructura y miembros de una clase</a></li>
+<li><a href="../ut04/ut0405.html">4.4.2 Atributos y constantes</a></li>
+<li><a href="../ut04/ut0406.html">4.4.3 Métodos, parámetros y sobrecarga</a></li>
+<li><a href="../ut04/ut0407.html">4.4.4 Constructores y palabra clave this</a></li>
+<li><a href="../ut04/ut0408.html">4.4.5 Encapsulación y modificadores de visibilidad</a></li>
+<li><a href="../ut04/ut0409.html">4.5 Instanciación y ciclo de vida de los objetos</a></li>
+<li><a href="../ut04/ut0410.html">4.6 Empaquetado de clases y librerías (packages)</a></li>
+<li><a href="../ut04/ut04actividades.html">Actividades prácticas UT4</a></li>
+<li><a href="../ut04/ut04retos.html">Retos de programación UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Composición, Herencia y Polimorfismo</summary>
+<ul>
+<li><a href="../ut05/index.html" class="unit-full-link">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05ras.html">5.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Relaciones entre clases (Asociación, Agregación, Herencia)</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Composición de clases</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Herencia y jerarquías de clases (extends, super)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Clases y métodos abstractos (abstract)</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Interfaces (interface, implements)</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Polimorfismo y ligadura dinámica</a></li>
+<li><a href="../ut05/ut05actividades.html">Actividades prácticas UT5</a></li>
+<li><a href="../ut05/ut05retos.html">Retos de programación UT5</a></li>
+<li><a href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5</a></li>
+<li><a href="../ut05/ut05pi.html">Proyecto Intermodular UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Lectura y escritura de información</summary>
+<ul>
+<li><a href="../ut06/index.html" class="unit-full-link">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut06ras.html">6.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Streams (Flujos de entrada y salida)</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Lectura y escritura de ficheros</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Serialización de objetos</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Comunicación por red: Sockets</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Manejo del sistema de ficheros y carpetas (File / NIO)</a></li>
+<li><a href="../ut06/ut06actividades.html">Actividades prácticas UT6</a></li>
+<li><a href="../ut06/ut06retos.html">Retos de programación UT6</a></li>
+<li><a href="../ut06/ut06pi.html">Proyecto Intermodular UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit" open>
+<summary>UT7 — Acceso a bases de datos</summary>
+<ul>
+<li><a href="../ut07/index.html" class="unit-full-link">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut07ras.html">7.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Introducción a la persistencia en bases de datos</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Arquitectura y conectores JDBC</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Conexión a bases de datos desde Java</a></li>
+<li><a href="../ut07/ut0704.html">7.4 ResultSet: Navegabilidad y concurrencia</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Consultas de selección (SELECT / executeQuery)</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Modificación de registros (UPDATE)</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Inserción de registros (INSERT)</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Borrado de registros (DELETE)</a></li>
+<li><a href="../ut07/ut0709.html">7.9 Sentencias precompiladas (PreparedStatement)</a></li>
+<li><a href="../ut07/ut0710.html">7.10 Trabajar con SQLite en Java</a></li>
+<li><a href="../ut07/ut0711.html">7.11 Patrón de diseño DAO (Data Access Object)</a></li>
+<li><a href="../ut07/ut0712.html">7.12 Repaso global de acceso a datos</a></li>
+<li><a href="../ut07/ut07actividades.html" class="active">Actividades prácticas UT7</a></li>
+<li><a href="../ut07/ut07retos.html">Retos de programación UT7</a></li>
+<li><a href="../ut07/ut07pi.html">Proyecto Intermodular UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📚 Fuentes de información</a></li></ul>
+    </aside>
+
+    <main class="content">
+      <span class="up-badge">3a Avaluació · RA8 i RA9 · JDBC, Consultes SQL, PreparedStatement i DAO</span>
+      <h1 id="actividades-ut07">Actividades UT07</h1>
+<h2 id="bloque-70">Bloque 7.0</h2>
+<div class="admonition vscode">
+<p class="admonition-title">Empaquetar actividades</p>
+<p>Empaqueta las actividades, dentro de la carpeta <strong><code>ut07</code></strong>, en la carpeta <strong><code>/bloqueX</code></strong>.</p>
+</div>
+<h3 id="actividad-01">Actividad 01</h3>
+<p>Package: <code>A01_pedidos</code></p>
+<p>Desarrolla una clase <strong><code>Pedido</code></strong> que permita la gestión de pedidos en una base de datos orientada a objetos. </p>
+<p>La tabla <code>pedidos</code> tiene las columnas <code>id</code>, <code>cliente</code>, <code>producto</code>, <code>cantidad</code>, <code>fecha</code>. </p>
+<p>Implementa los métodos necesarios para:</p>
+<ul>
+<li>Crear un nuevo pedido para un cliente.</li>
+<li>Mostrar todos los pedidos de un cliente específico.</li>
+<li>Eliminar todos los pedidos de un cliente específico.</li>
+</ul>
+<hr />
+<h2 id="bloque-71">Bloque 7.1</h2>
+<h3 id="actividad-02">Actividad 02</h3>
+<p>Package: <code>A02_posts</code></p>
+<p>Desarrolla una aplicación que permita gestionar los pedidos de una tienda. </p>
+<p>La tabla <code>posts</code> tiene las columnas <code>id</code>, <code>usuario_id</code>, <code>titulo</code>, <code>contenido</code>, <code>fecha_publicacion</code>.</p>
+<p>Implementa los métodos necesarios para:</p>
+<ul>
+<li>Registrar un nuevo posts.</li>
+<li>Mostrar los posts de un usuario específico.</li>
+<li>Eliminar todos los posts de un usuario específico.</li>
+<li>Cambiar la fecha de un post <em>(filtra por id)</em>.</li>
+<li>Mostrar todos los posts de la BBDD.</li>
+</ul>
+<p>En el <code>main</code> de la clase <code>Test</code>, implementa un menú para que el usuario pueda ejecutar todas las funcionalidades anteriores. </p>
+<details class="admonition java">
+<summary>Ayuda menú</summary>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+<span class="tok-key">int</span> opcion = <span class="tok-bool">0</span>;
+PostsRepository postsDAO = <span class="tok-key">new</span> PostsRepository();
+
+<span class="tok-key">try</span> (<span class="tok-key">Connection</span> con = DbConnect.getInstance().getConnection()) {
+    <span class="tok-key">do</span> {
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\n MENÚ: &quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;1. Nuevo post&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;2. Mostrar posts de usuario&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;3. Eliminar posts usuario&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;4. Cambiar la fecha de un post&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;4. Mostrar todos los posts&quot;</span>);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;0. Salir&quot;</span>);
+        <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Selecciona una opción: &quot;</span>);
+
+        opcion = sc.nextInt();
+        sc.nextLine(); <span class="tok-comment">// Limpiar buffer</span>
+
+        <span class="tok-key">switch</span> (opcion) {
+            <span class="tok-key">case</span> <span class="tok-bool">1</span>:
+                <span class="tok-comment">//Realizar acciones necesarias </span>
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">2</span>:
+                <span class="tok-comment">//Realizar acciones necesarias</span>
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Introduce el id de usuario:&quot;</span>);
+                <span class="tok-key">int</span> uid2 = sc.nextInt();
+
+                postsDAO.listarPostsUsuario(uid2);
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">3</span>:
+                <span class="tok-comment">//Realizar acciones necesarias</span>
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">4</span>:
+                <span class="tok-comment">//Realizar acciones necesarias </span>
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">5</span>:
+                <span class="tok-comment">//Realizar acciones necesarias </span>
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">0</span>:
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Saliendo del sistema...&quot;</span>);
+                <span class="tok-key">break</span>;
+            <span class="tok-key">default</span>:
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Opción inválida. Intenta de nuevo.&quot;</span>);
+        }
+    } <span class="tok-key">while</span> (opcion != <span class="tok-bool">0</span>);
+} <span class="tok-key">catch</span> (<span class="tok-key">SQLException</span> ex) {
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;ERROR al conectar: &quot;</span> + ex.getMessage());
+}</code></pre>
+</div>
+</details>
+<hr />
+<h2 id="bloque-72">Bloque 7.2</h2>
+<h3 id="actividad-03">Actividad 03</h3>
+<p><strong>Análisis de índices en una tabla</strong>: Crea una aplicación que permita analizar los índices de una tabla en una base de datos relacional. Conéctate a la base de datos utilizando JDBC y muestra los índices asociados a la tabla <code>clientes</code>.</p>
+<p>Operaciones:</p>
+<ul>
+<li>Mostrar los índices de la tabla.</li>
+<li>Comprobar si hay claves primarias o foráneas asociadas.</li>
+</ul>
+<h3 id="actividad-04">Actividad 04</h3>
+<p><strong><code>_04_GestionProductos</code></strong>: Supongamos que tienes una base de datos que almacena información sobre productos. La tabla <code>productos</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: Identificador único del producto (entero).</li>
+<li><code>nombre</code>: Nombre del producto (cadena de texto).</li>
+<li><code>precio</code>: Precio del producto (decimal).</li>
+</ul>
+<p>Tu tarea es escribir un programa Java <code>_02_GestionProductos</code> que realice las siguientes operaciones utilizando los métodos proporcionados:</p>
+<ol>
+<li><strong><code>mostrarProductosPorPagina()</code></strong>: mostrar una página de productos cada vez que el usuario lo solicite. Cada página debe contener 5 productos. Implementa las funciones para mover el cursor a la primera página, página siguiente, página anterior, última página y una página específica utilizando el método <code>absolute(int row)</code>.</li>
+<li><strong><code>buscarProductoPorNombre(String nombre)</code></strong>: permitir al usuario buscar un producto por su nombre. Utiliza el método <code>relative(int registros)</code> para desplazar el cursor hacia adelante o hacia atrás según la coincidencia del nombre.</li>
+</ol>
+<hr />
+<h2 id="bloque-73">Bloque 7.3</h2>
+<h3 id="actividad-05">Actividad 05</h3>
+<p><strong><code>_05_GestionEmpleados</code></strong>: Tenemos nuestra base de datos <strong><code>pr_tuNombre</code></strong> que almacena información sobre <em>empleados</em>. La tabla <code>empleados</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: identificador único del empleado (entero).</li>
+<li><code>nombre</code>: nombre del empleado (cadena de texto).</li>
+<li><code>salario</code>: salario del empleado (decimal).</li>
+</ul>
+<p>Es escribir un programa Java <code>_01_GestionEmpleados</code> que realice las siguientes operaciones utilizando diferentes tipos de resultado y opciones de concurrencia:</p>
+<ol>
+<li><strong><code>listarEmpleados</code></strong>: mostrar en la consola todos los empleados y sus salarios.</li>
+<li><strong><code>incrementoSalarioAnual</code></strong>: incrementar el salario de todos los empleados en un 10%.</li>
+<li><strong><code>eliminarEmpleadosSalario</code></strong>: eliminar todos los empleados cuyo salario sea menor que 3000€.</li>
+<li><strong><code>actualizarSalarioEmpleado</code></strong>: actualiza el salario de un empleado filtrado por <em>nombre</em>.</li>
+<li><strong><code>eliminarEmpleadoId</code></strong>: eliminar un empleado filtrado por <em>id</em>.</li>
+</ol>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<h3 id="actividad-06">Actividad 06</h3>
+<p><strong><code>_06_GestionVentas</code></strong>: Supongamos que tienes una base de datos que almacena información sobre ventas. La tabla <code>ventas</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: Identificador único de la venta (entero).</li>
+<li><code>producto</code>: Nombre del producto vendido (cadena de texto).</li>
+<li><code>cantidad</code>: Cantidad de productos vendidos (entero).</li>
+<li><code>total</code>: Total de la venta (decimal).</li>
+</ul>
+<p>Tu tarea es escribir un programa Java <code>_05_GestionVentas</code> que realice las siguientes operaciones utilizando los métodos proporcionados:</p>
+<ol>
+<li><strong>Calcular el total de ventas</strong>: Muestra al usuario la suma del precio total de las ventas almacenadas en el sistema.</li>
+<li><strong>Buscar ventas por producto</strong>: Permite al usuario ingresar el nombre de un producto y devuelve las ventas de ese producto.</li>
+<li><strong>Calcular el total de € ganados con un producto</strong>: Permite al usuario ingresar el nombre de un producto y devuelve el precio total de las ventas de dicho producto.</li>
+</ol>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<h3 id="actividad-07">Actividad 07</h3>
+<p><strong><code>_07_GestionLibros</code></strong>: Supongamos que tienes una base de datos que almacena información sobre libros. La tabla <code>libros</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: Identificador único del libro (entero).</li>
+<li><code>titulo</code>: Título del libro (cadena de texto).</li>
+<li><code>autor</code>: Nombre del autor del libro (cadena de texto).</li>
+<li><code>anio_publicacion</code>: Año de publicación del libro (entero).</li>
+</ul>
+<p>Tu tarea es escribir un programa Java que realice las siguientes operaciones utilizando los métodos proporcionados:</p>
+<ul>
+<li>
+<p><strong><code>buscarLibroPorAutor(String autor)</code></strong>: permite al usuario ingresar el nombre de un autor y muestra todos los libros escritos por ese autor.</p>
+</li>
+<li>
+<p><strong><code>mostrarLibrosPorDecada(int decada)</code></strong>: permite al usuario ingresar una década y mostrar todos los libros publicados en esa década. </p>
+</li>
+</ul>
+<details class="admonition warning" open="open">
+<summary>Ayuda</summary>
+<p>Sugerencia:</p>
+<ul>
+<li>Utiliza el método <code>preparedStatement(sql)</code> con una consulta en la que se listen los libros comprendidos en una década y ordenados de forma descendente por el <code>anio_publiacion</code>.</li>
+<li>Si el usuario me introduce la decada <em>1990</em>, la consulta SQL será: <code>SELECT * FROM libros WHERE anio_publicacion BETWEEN 1990 AND 1999 ORDER BY anio_publicacion DESC;</code></li>
+</ul>
+</details>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<hr />
+<h2 id="bloque-74">Bloque 7.4</h2>
+<h3 id="actividad-08">Actividad 08</h3>
+<p><strong><code>_08_GestionLibros</code></strong>: Supongamos que tienes una base de datos que almacena información sobre libros. La tabla <code>libros</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: Identificador único del libro (entero).</li>
+<li><code>titulo</code>: Título del libro (cadena de texto).</li>
+<li><code>autor</code>: Nombre del autor del libro (cadena de texto).</li>
+<li><code>anio_publicacion</code>: Año de publicación del libro (entero).</li>
+</ul>
+<p>Tu tarea es escribir un programa Java que realice las siguientes operaciones utilizando los métodos proporcionados:</p>
+<ul>
+<li>
+<p><strong><code>buscarLibroPorAutor(String autor)</code></strong>: permite al usuario ingresar el nombre de un autor y muestra todos los libros escritos por ese autor.</p>
+</li>
+<li>
+<p><strong><code>mostrarLibrosPorDecada(int decada)</code></strong>: permite al usuario ingresar una década y mostrar todos los libros publicados en esa década. </p>
+</li>
+</ul>
+<details class="admonition warning" open="open">
+<summary>Ayuda</summary>
+<p>Sugerencia:</p>
+<ul>
+<li>Utiliza el método <code>preparedStatement(sql)</code> con una consulta en la que se listen los libros comprendidos en una década y ordenados de forma descendente por el <code>anio_publiacion</code>.</li>
+<li>Si el usuario me introduce la decada <em>1990</em>, la consulta SQL será: <code>SELECT * FROM libros WHERE anio_publicacion BETWEEN 1990 AND 1999 ORDER BY anio_publicacion DESC;</code></li>
+</ul>
+</details>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<h3 id="actividad-09">Actividad 09</h3>
+<p><strong><code>_09_GestionEmpleados</code> (continuación)</strong>: Continuando con el ejercicio de gestión de empleados, copia el programa <code>GestionEmpleados</code>, cambia el nombre a <code>_09_gestionEmpleados</code> y agrega algunas funcionalidades adicionales:</p>
+<ol>
+<li><strong>Mostrar información del empleado por ID</strong>: Permite al usuario ingresar el ID de un empleado y muestra toda la información relacionada con ese empleado. Utiliza el método <code>absolute(int row)</code> para posicionarte en el registro del empleado especificado.</li>
+<li><strong>Buscar empleados por salario</strong>: Permite al usuario ingresar un rango de salarios y mostrar todos los empleados cuyo salario esté dentro de ese rango. Utiliza el método <code>next()</code> para recorrer todas las filas y filtrar los empleados según el criterio de salario.</li>
+</ol>
+<h3 id="actividad-10">Actividad 10</h3>
+<p><strong><code>_10_GestionEstudiantes</code></strong>: Supongamos que tienes una base de datos que almacena información sobre estudiantes. La tabla <code>estudiantes</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: Identificador único del estudiante (entero).</li>
+<li><code>nombre</code>: Nombre del estudiante (cadena de texto).</li>
+<li><code>edad</code>: Edad del estudiante (entero).</li>
+<li><code>promedio</code>: Promedio de calificaciones del estudiante (decimal).</li>
+</ul>
+<p>Tu tarea es escribir un programa Java que realice las siguientes operaciones utilizando los métodos proporcionados:</p>
+<ol>
+<li><strong>Mostrar la posición actual del estudiante</strong>: Muestra la posición del estudiante actual en el conjunto de resultados. Utiliza el método <code>getRow()</code> para obtener el número de registro actual.</li>
+<li><strong>Validar la posición del cursor</strong>: Verifica si el cursor está antes del primer registro, en el primer registro, en el último registro o después del último registro. Utiliza los métodos <code>isBeforeFirst()</code>, <code>isFirst()</code>, <code>isLast()</code> e <code>isAfterLast()</code> para realizar estas verificaciones.</li>
+</ol>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<h3 id="actividad-11">Actividad 11</h3>
+<p><strong><code>_11_GestionProductos</code> (continuación)</strong>: Continuando con el ejercicio de gestión de productos, copia el programa <code>GestionProductos</code>, cambia el nombre a <code>_11_gestionProductos</code> y y agrega algunas funcionalidades adicionales:</p>
+<ol>
+<li><strong>Mostrar el número total de productos</strong>: Muestra el número total de productos en la base de datos. Utiliza el método <code>getRow()</code> para obtener el número de registro actual y <code>last()</code> para mover el cursor a la última fila.</li>
+<li><strong>Verificar si hay productos disponibles</strong>: Verifica si hay algún producto disponible en la base de datos. Utiliza los métodos <code>isBeforeFirst()</code> e <code>isAfterLast()</code> para determinar si el cursor está antes del primer registro o después del último registro, respectivamente.</li>
+</ol>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<hr />
+<h2 id="bloque-75">Bloque 7.5</h2>
+<h3 id="actividad-12">Actividad 12</h3>
+<p><code>A12_GestionPosts</code> : Crea una aplicación que permita gestionar los posts y comentarios almacenados en una base de datos.</p>
+<p>El usuario podrá:</p>
+<ul>
+<li>Modificar el título de un post. 
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>UPDATE posts SET titulo = ? WHERE id = ?</code></pre>
+</div></li>
+<li>Eliminar los posts obsoletos (aquellos con más de un año desde su publicación).
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>DELETE FROM posts WHERE fecha_publicacion &lt; &#x27;<span class="tok-bool">2024</span>-<span class="tok-bool">01</span>-<span class="tok-bool">01</span>&#x27;</code></pre>
+</div></li>
+<li>Añadir un comentario a un post.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>INSERT INTO comentarios(usuario_id, post_id, contenido, fecha_comentario) VALUES (?, ?, ?, ?)</code></pre>
+</div></li>
+<li>Eliminar todos los comentarios de un post.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>DELETE FROM comentarios WHERE post_id = ?</code></pre>
+</div></li>
+<li>Consultar los comentarios de un post <strong>(Se debe mostrar el título del post y el nombre del usuario, no su id)</strong>.</li>
+</ul>
+<details class="admonition warning" open="open">
+<summary>Ayuda</summary>
+<p>Para este caso necesitaremos tres métodos:</p>
+<ul>
+<li>El primero sacará toda la información de la tabla comentarios filtrando por el id del post buscado. Su SQL será:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>SELECT * FROM comentarios WHERE post_id=?</code></pre>
+</div></li>
+<li>Una vez tengamos esta información, le pasaremos el id del usuario obtenido a otro método que nos devolverá su nombre:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">String</span> nombreUsuario(<span class="tok-key">int</span> idUsuario) <span class="tok-key">throws</span> <span class="tok-key">SQLException</span>{
+    <span class="tok-comment">//...RELLENAR...</span>
+}</code></pre>
+</div>
+Su SQL será:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>SELECT nombre FROM usuarios WHERE id = ?</code></pre>
+</div></li>
+<li>Igual que lo hemos hecho para el usuario, necesitaremos un método que nos permita conocer el nombre de un post a partir de su id. <strong>Basandote en el ejemplo anterior, ¿cómo lo harías?</strong></li>
+</ul>
+</details>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<h3 id="actividad-13">Actividad 13</h3>
+<p><code>A13_ActualizaciónProductos</code> : Desarrolla una aplicación que permita actualizar los precios de los productos en la tabla <code>productos</code>. </p>
+<p>Implementa:</p>
+<ul>
+<li>Método <code>actualizarPrecios()</code> que aplique un incremento del 10% a todos los productos cuyo precio sea inferior a 20 euros.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>UPDATE productos SET precio = precio*<span class="tok-bool">1</span>.<span class="tok-bool">10</span> WHERE precio &lt; <span class="tok-bool">20</span></code></pre>
+</div></li>
+<li>Método <code>actualizarPrecioID(double precio)</code> que actualice el precio de un producto determinado.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>UPDATE productos SET precio = ? WHERE id = ?</code></pre>
+</div></li>
+</ul>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<hr />
+<h2 id="bloque-76">Bloque 7.6</h2>
+<div class="admonition warning">
+<p class="admonition-title">Archivos sql</p>
+<p>Para realizar las actividades de este bloque deberás importar el archivo <a href="../../others/code/ut07/ventasYbanco.sql" target="_blank"><strong>ventasYbanco.sql</strong></a> en tu base de datos.</p>
+</div>
+<h3 id="actividad-14">Actividad 14</h3>
+<p><strong><code>_14_ProductosObsoletos</code></strong>: Desarrolla una aplicación que permita gestionar los productos obsoletos de una tienda. </p>
+<p>La tabla <code>orders</code> contiene los productos de la tabla <code>products</code> vendidos, con la cantidad y la fecha de cada compra. </p>
+<p>Haz métodos para: </p>
+<ul>
+<li>Mostrar todos los pedidos realizados <strong>Mostrando el nombre del producto <em>(tabla products)</em>, NO su id</strong>. </li>
+<li>Mostrar los pedidos de un producto <strong>(filtrado por nombre)</strong>.</li>
+<li><strong>EXTRA:</strong> Eliminar los productos obsoletos (hace más de un año que no se han vendido).</li>
+</ul>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<!--
+???java "Solución"
+    === "DbConnect.java"
+        <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.sql.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> DbConnect {
+    <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">String</span> JDBC_URL = &quot;jdbc:mysql:<span class="tok-comment">//localhost:3306/pr_ana&quot;;</span>
+    <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">String</span> USUARIO = <span class="tok-string">&quot;pr_ana&quot;</span>;
+    <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">String</span> PASSWORD = <span class="tok-string">&quot;1234&quot;</span>;
+
+    <span class="tok-key">private</span> <span class="tok-key">static</span> DbConnect dbInstance; <span class="tok-comment">// Variable para almacenar la única instancia de la clase</span>
+    <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">Connection</span> con;
+
+    <span class="tok-comment">// Constructor vacío privado para evitar la instanciación directa</span>
+    <span class="tok-key">private</span> DbConnect() {
+    }
+
+    <span class="tok-comment">// Método estático para obtener la instancia única (Singleton)</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> DbConnect getInstance() {
+        <span class="tok-key">if</span> (dbInstance == <span class="tok-bool">null</span>) {
+            dbInstance = <span class="tok-key">new</span> DbConnect();
+        }
+        <span class="tok-key">return</span> dbInstance;
+    }
+
+    <span class="tok-comment">// Método estático para obtener la conexión a la base de datos</span>
+    <span class="tok-key">public</span> <span class="tok-key">Connection</span> getConnection() <span class="tok-key">throws</span> <span class="tok-key">SQLException</span> {
+        <span class="tok-key">if</span> (con == <span class="tok-bool">null</span> || con.isClosed()) {
+            con = <span class="tok-key">DriverManager</span>.getConnection(JDBC_URL, USUARIO, PASSWORD);
+        }
+        <span class="tok-key">return</span> con;
+    }
+}</code></pre>
+</div>
+
+    === "OrdersRepository.java"
+        <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.sql.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> OrdersRepository {
+    <span class="tok-key">public</span> <span class="tok-key">void</span> pedidosRealizados() <span class="tok-key">throws</span> <span class="tok-key">SQLException</span> {
+
+        <span class="tok-key">String</span> sql = <span class="tok-string">&quot;SELECT * FROM orders&quot;</span>;
+        <span class="tok-key">Connection</span> con = DbConnect.getInstance().getConnection();
+
+        ProductsRepository productsDAO = <span class="tok-key">new</span> ProductsRepository();
+
+        <span class="tok-key">try</span> (<span class="tok-key">Statement</span> st = con.createStatement()) {
+
+            <span class="tok-key">ResultSet</span> rs = st.executeQuery(sql);
+
+            <span class="tok-key">while</span> (rs.next()) {
+                <span class="tok-key">int</span> id = rs.getInt(<span class="tok-string">&quot;id&quot;</span>);
+                <span class="tok-key">String</span> fecha = rs.getString(<span class="tok-string">&quot;fecha&quot;</span>);
+                <span class="tok-key">int</span> cantidad = rs.getInt(<span class="tok-string">&quot;cantidad&quot;</span>);
+                <span class="tok-key">int</span> id_prod = rs.getInt(<span class="tok-string">&quot;id_producto&quot;</span>);
+                <span class="tok-key">String</span> nom = productsDAO.nombreProducto(id_prod);
+
+                <span class="tok-key">System</span>.out.println(id + <span class="tok-string">&quot;. Producto: &quot;</span>+nom+<span class="tok-string">&quot;, cantidad: &quot;</span> + cantidad + <span class="tok-string">&quot;, fecha:  &quot;</span> + fecha);
+            }
+
+        }
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">void</span> pedidosProducto(<span class="tok-key">String</span> prod) <span class="tok-key">throws</span> <span class="tok-key">SQLException</span> {
+
+        <span class="tok-key">String</span> sql = <span class="tok-string">&quot;SELECT * FROM orders WHERE id_producto = ?&quot;</span>;
+        <span class="tok-key">Connection</span> con = DbConnect.getInstance().getConnection();
+
+        ProductsRepository productsDAO = <span class="tok-key">new</span> ProductsRepository();
+        <span class="tok-key">int</span> id_prod= productsDAO.idProducto(prod);
+
+        <span class="tok-key">try</span> (<span class="tok-key">PreparedStatement</span> pst = con.prepareStatement(sql)) {
+
+            pst.setInt(<span class="tok-bool">1</span>, id_prod);
+
+            <span class="tok-key">ResultSet</span> rs = pst.executeQuery();
+
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Pedidos del producto: &quot;</span> + prod + <span class="tok-string">&quot;(&quot;</span>+id_prod+<span class="tok-string">&quot;)&quot;</span>);
+            <span class="tok-key">while</span> (rs.next()) {
+                <span class="tok-key">int</span> id = rs.getInt(<span class="tok-string">&quot;id&quot;</span>);
+                <span class="tok-key">String</span> fecha = rs.getString(<span class="tok-string">&quot;fecha&quot;</span>);
+                <span class="tok-key">int</span> cantidad = rs.getInt(<span class="tok-string">&quot;cantidad&quot;</span>);
+
+                <span class="tok-key">System</span>.out.println(id + <span class="tok-string">&quot;. Cantidad: &quot;</span> + cantidad + <span class="tok-string">&quot;, fecha:  &quot;</span> + fecha);
+            }
+        }
+    }
+}</code></pre>
+</div>
+
+    === "ProductsRepository.java"
+        <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.sql.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> ProductsRepository {
+    <span class="tok-key">public</span> <span class="tok-key">String</span> nombreProducto(<span class="tok-key">int</span> id) <span class="tok-key">throws</span> <span class="tok-key">SQLException</span> {
+
+        <span class="tok-key">String</span> sql = <span class="tok-string">&quot;SELECT nombre FROM products WHERE id = ?&quot;</span>;
+        <span class="tok-key">Connection</span> con = DbConnect.getInstance().getConnection();
+
+        <span class="tok-key">String</span> nom=<span class="tok-string">&quot;&quot;</span>;
+
+        <span class="tok-key">try</span> (<span class="tok-key">PreparedStatement</span> pst = con.prepareStatement(sql)) {
+
+            pst.setInt(<span class="tok-bool">1</span>, id);
+
+            <span class="tok-key">ResultSet</span> rs = pst.executeQuery();
+
+            <span class="tok-key">if</span> (rs.next()) {
+                nom = rs.getString(<span class="tok-string">&quot;nombre&quot;</span>);
+            }
+        }
+
+        <span class="tok-key">return</span> nom;
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">int</span> idProducto(<span class="tok-key">String</span> nombre) <span class="tok-key">throws</span> <span class="tok-key">SQLException</span> {
+
+        <span class="tok-key">String</span> sql = <span class="tok-string">&quot;SELECT id FROM products WHERE nombre = ?&quot;</span>;
+        <span class="tok-key">Connection</span> con = DbConnect.getInstance().getConnection();
+
+        <span class="tok-key">int</span> id=<span class="tok-bool">0</span>;
+
+        <span class="tok-key">try</span> (<span class="tok-key">PreparedStatement</span> pst = con.prepareStatement(sql)) {
+
+            pst.setString(<span class="tok-bool">1</span>, nombre);
+
+            <span class="tok-key">ResultSet</span> rs = pst.executeQuery();
+
+            <span class="tok-key">if</span> (rs.next()) {
+                id = rs.getInt(<span class="tok-string">&quot;id&quot;</span>);
+            }
+        }
+
+        <span class="tok-key">return</span> id;
+    }
+}</code></pre>
+</div>
+
+    === "Test.java"
+        <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> Test {
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-key">Scanner</span> sc = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+        <span class="tok-key">int</span> opcion = <span class="tok-bool">0</span>;
+        OrdersRepository ordersDAO = <span class="tok-key">new</span> OrdersRepository();
+
+        <span class="tok-key">try</span> (<span class="tok-key">Connection</span> con = DbConnect.getInstance().getConnection()) {
+            <span class="tok-key">do</span> {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\n MENÚ: &quot;</span>);
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;1. Mostrar todos los pedidos&quot;</span>);
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;2. Mostrar los pedidos de un producto (filtrado por nombre)&quot;</span>);
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;0. Salir&quot;</span>);
+                <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Selecciona una opción: &quot;</span>);
+
+                opcion = sc.nextInt();
+                sc.nextLine(); <span class="tok-comment">// Limpiar buffer</span>
+
+                <span class="tok-key">switch</span> (opcion) {
+                    <span class="tok-key">case</span> <span class="tok-bool">1</span>:
+                        <span class="tok-comment">//Realizar acciones necesarias </span>
+                        ordersDAO.pedidosRealizados();
+                        <span class="tok-key">break</span>;
+                    <span class="tok-key">case</span> <span class="tok-bool">2</span>:
+                        <span class="tok-comment">//Realizar acciones necesarias</span>
+                        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Introduce el nombre del producto:&quot;</span>);
+                        <span class="tok-key">String</span> nombre = sc.nextLine();
+
+                        ordersDAO.pedidosProducto(nombre);
+                        <span class="tok-key">break</span>;
+                    <span class="tok-key">case</span> <span class="tok-bool">0</span>:
+                        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Saliendo del sistema...&quot;</span>);
+                        <span class="tok-key">break</span>;
+                    <span class="tok-key">default</span>:
+                        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Opción inválida. Intenta de nuevo.&quot;</span>);
+                }
+            } <span class="tok-key">while</span> (opcion != <span class="tok-bool">0</span>);
+        } <span class="tok-key">catch</span> (<span class="tok-key">SQLException</span> ex) {
+                <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;ERROR al conectar: &quot;</span> + ex.getMessage());
+        }
+    }
+}</code></pre>
+</div>
+-->
+
+<h3 id="actividad-15">Actividad 15</h3>
+<p><strong><code>_15_GestionClientesBanco</code></strong>: Supongamos que tienes una base de datos que almacena información sobre los clientes de un banco <em>(clients)</em> y sus cuentas bancarias <em>(accounts)</em>.</p>
+<p>Tu tarea es escribir un programa Java que realice las siguientes operaciones:</p>
+<ol>
+<li>Mostrar el nombre de todos los clientes junto con sus cuentas. 
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>SELECT * FROM accounts;
+SELECT nombre FROM clients WHERE id = ?;</code></pre>
+</div></li>
+<li>Actualizar el teléfono de un cliente.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>UPDATE clients SET telefono = ? WHERE id = ?;</code></pre>
+</div></li>
+<li>Actualizar la dirección de un cliente.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>UPDATE clients SET direccion = ? WHERE id = ?;</code></pre>
+</div></li>
+<li>Mostrar el total de dinero almacenado en el banco. 
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>SELECT saldo FROM accounts;</code></pre>
+</div></li>
+<li>Insertar un nuevo cliente. 
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>INSERT INTO clients(nombre, direccion, telefono) VALUES (?, ?, ?);</code></pre>
+</div></li>
+<li>Insertar una nueva cuenta (asociada a un cliente).
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>INSERT INTO accounts(saldo, id_cliente) VALUES (?, ?);</code></pre>
+</div></li>
+<li>Mostrar el cliente propietario de la cuenta con más dinero.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>SELECT * FROM accounts ORDER BY saldo DESC LIMIT <span class="tok-bool">1</span>;
+SELECT nombre FROM clients WHERE id = ?;</code></pre>
+</div></li>
+<li>Actualizar el dinero de una cuenta.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>UPDATE accounts SET saldo = ? WHERE id = ?;</code></pre>
+</div></li>
+<li>Eliminar una cuenta.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>DELETE FROM accounts WHERE id = ?;</code></pre>
+</div></li>
+<li>Eliminar un cliente y todas sus cuentas.
+    <div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>DELETE FROM accounts WHERE id_cliente = ?;
+DELETE FROM clients WHERE id = ?;</code></pre>
+</div></li>
+</ol>
+<blockquote>
+<p>En el <code>main</code> crea un menú que permita al usuario acceder a las diferentes funcionalidades.</p>
+</blockquote>
+<h3 id="actividad-16">Actividad 16</h3>
+<p><strong><code>_16_GestionPedidos</code></strong>: Supongamos que tienes una base de datos que almacena información sobre pedidos. La tabla <code>pedidos</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: Identificador único del pedido (entero).</li>
+<li><code>cliente</code>: Nombre del cliente que realizó el pedido (cadena de texto).</li>
+<li><code>producto</code>: Nombre del producto pedido (cadena de texto).</li>
+<li><code>cantidad</code>: Cantidad del producto solicitada en el pedido (entero).</li>
+<li><code>fecha</code>: Fecha en que se realizó el pedido (fecha).</li>
+</ul>
+<p>Tu tarea es escribir un programa Java <code>_06_GestionPedidos</code> que realice las siguientes operaciones utilizando los métodos proporcionados:</p>
+<ol>
+<li><strong>Listar pedidos por cliente</strong>: Permite al usuario ingresar el nombre de un cliente y mostrar todos los pedidos realizados por ese cliente. Utiliza el método <code>relative(int registros)</code> para desplazarte a través de los registros según las coincidencias del cliente.</li>
+<li><strong>Buscar pedidos por fecha</strong>: Permite al usuario ingresar una fecha y mostrar todos los pedidos realizados en esa fecha. Utiliza el método <code>afterLast()</code> y <code>previous()</code> para mover el cursor al final y luego retroceder, así puedes comenzar desde la última fila.</li>
+</ol>
+<h3 id="actividad-17">Actividad 17</h3>
+<p><strong><code>_17_GestionEmpleados</code> (continuación)</strong>: Continuando con el ejercicio de gestión de empleados del séptimo ejercicio, copia el programa <code>_10_GestionEmpleados</code> y agrega algunas funcionalidades adicionales:</p>
+<ol>
+<li><strong>Verificar si hay empleados en la base de datos</strong>: Verifica si hay algún empleado registrado en la base de datos. Utiliza los métodos <code>isBeforeFirst()</code> e <code>isAfterLast()</code> para determinar si el cursor está antes del primer registro o después del último registro, respectivamente.</li>
+<li><strong>Mostrar el primer empleado</strong>: Muestra la información del primer empleado en la base de datos. Utiliza el método <code>first()</code> para mover el cursor al primer registro y luego muestra la información del empleado.</li>
+</ol>
+<h3 id="actividad-18">Actividad 18</h3>
+<p><strong><code>_18_GestionClientes</code></strong>: Imagina que tienes una base de datos que almacena información sobre clientes. La tabla <code>clientes</code> tiene las siguientes columnas:</p>
+<ul>
+<li><code>id</code>: Identificador único del cliente (entero).</li>
+<li><code>nombre</code>: Nombre del cliente (cadena de texto).</li>
+<li><code>correo</code>: Correo electrónico del cliente (cadena de texto).</li>
+<li><code>telefono</code>: Número de teléfono del cliente (cadena de texto).</li>
+</ul>
+<p>Tu tarea es escribir un programa Java <code>_11_GestionClientes</code> que realice las siguientes operaciones utilizando los métodos proporcionados:</p>
+<ol>
+<li><strong>Mostrar la posición actual del cliente</strong>: Muestra la posición actual del cliente en el conjunto de resultados. Utiliza el método <code>getRow()</code> para obtener el número de registro actual.</li>
+<li><strong>Mostrar información del último cliente</strong>: Muestra la información del último cliente en la base de datos. Utiliza el método <code>last()</code> para mover el cursor al último registro y luego muestra la información del cliente.</li>
+</ol>
+<hr />
+<h2 id="bloque-77">Bloque 7.7</h2>
+<div class="admonition vscode">
+<p class="admonition-title">Empaquetar actividades</p>
+<p>Empaqueta las actividades, dentro de la carpeta <strong><code>ut07</code></strong>, en la carpeta <strong><code>/bloque7</code></strong>.</p>
+</div>
+<h2 id="actividad-19">Actividad 19</h2>
+<p>Empaqueta toda esta actividad en: <code>ut07/actividades/ce6acdef/</code><mark>redes</mark></p>
+<p>Crea una aplicación que nos permita gestionar la base de datos <a href="../../others/code/ut07/redes.sql" target="_blank"><strong>redes.sql</strong></a>. </p>
+<div style="text-align: center;"><img src="../../img/ut07/er.png" alt="1558290448718" style="zoom:100%;" /></div>
+
+<p>Debe tener un menú desde el que se puedan gestionar (<em>Create</em>, <em>Read</em>, <em>Update</em>, <em>Delete</em>) usuarios, posts y comentarios.</p>
+<details class="admonition java">
+<summary>Ayuda SQL</summary>
+<ul>
+<li>SELECT: 
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>SELECT * FROM comments;</code></pre>
+</div></li>
+<li>INSERT: 
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consulta SQL</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">SQL</span>
+    </div>
+  </div>
+  <pre><code>INSERT INTO comments(texto, fecha, userId, postId) VALUES(?, ?, ?, ?);</code></pre>
+</div></li>
+<li>UPDATE: 
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>UPDATE comments SET texto = ? WHERE id = ?;</code></pre>
+</div></li>
+<li>DELETE: 
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>DELETE FROM comments WHERE id = ?;</code></pre>
+</div></li>
+</ul>
+</details>
+      <div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut07/ut0712.html">⬅️ 7.12 Repaso global de acceso a datos</a>
+<a class="page-nav-btn" href="../ut07/ut07retos.html">Retos de programación UT7 ➡️</a>
+</div>
+    </main>
+  </div>
+  
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiado';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-[⬅️ Tornar a l'índex de Programació](./) | [🏠 Portal Principal](../)
+[⬅️ Tornar a l'índex de Programació](./) | [🏠 Portal Principal](../) | [📘 UT1 Completa](./ut1-estructura-programes.md) | [🎨 **Obrir Guia Interactiva Material**](./guia-completa/ut01/)
 
 # UT1 - Introducció a Java i Format d'Eixida
 

@@ -1,0 +1,1000 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Actividades prácticas UT6 — Programació (1r DAW)</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
+  <style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.4rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.6rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    /* Admonitions Material */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+      cursor: pointer;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning, details.admonition.warning {
+      border-left-color: #ff9100;
+      background-color: #fffbf0;
+    }
+    .admonition.warning .admonition-title, details.admonition.warning > summary {
+      color: #b75e00;
+      background-color: #fff3d6;
+    }
+    .admonition.tip, .admonition.ayuda, details.admonition.tip, details.admonition.ayuda {
+      border-left-color: #00bfa5;
+      background-color: #f0faf8;
+    }
+    .admonition.tip .admonition-title, .admonition.ayuda .admonition-title,
+    details.admonition.tip > summary, details.admonition.ayuda > summary {
+      color: #004d40;
+      background-color: #e0f5f2;
+    }
+    .admonition.exercise, .admonition.question, .admonition.solución,
+    details.admonition.exercise, details.admonition.question, details.admonition.solución {
+      border-left-color: #00c853;
+      background-color: #f2faf4;
+    }
+    .admonition.exercise .admonition-title, .admonition.question .admonition-title, .admonition.solución .admonition-title,
+    details.admonition.exercise > summary, details.admonition.question > summary, details.admonition.solución > summary {
+      color: #1b5e20;
+      background-color: #e2f7e7;
+    }
+    .admonition.danger, details.admonition.danger {
+      border-left-color: #ff1744;
+      background-color: #fff5f7;
+    }
+    .admonition.danger .admonition-title, details.admonition.danger > summary {
+      color: #b71c1c;
+      background-color: #ffe0e6;
+    }
+    [data-theme="dark"] .admonition.warning, [data-theme="dark"] details.admonition.warning,
+    [data-theme="dark"] .admonition.tip, [data-theme="dark"] details.admonition.tip,
+    [data-theme="dark"] .admonition.exercise, [data-theme="dark"] details.admonition.exercise,
+    [data-theme="dark"] .admonition.question, [data-theme="dark"] details.admonition.question,
+    [data-theme="dark"] .admonition.solución, [data-theme="dark"] details.admonition.solución,
+    [data-theme="dark"] .admonition.danger, [data-theme="dark"] details.admonition.danger {
+      background-color: #0f172a;
+    }
+    [data-theme="dark"] .admonition.warning .admonition-title, [data-theme="dark"] details.admonition.warning > summary,
+    [data-theme="dark"] .admonition.tip .admonition-title, [data-theme="dark"] details.admonition.tip > summary,
+    [data-theme="dark"] .admonition.exercise .admonition-title, [data-theme="dark"] details.admonition.exercise > summary,
+    [data-theme="dark"] .admonition.question .admonition-title, [data-theme="dark"] details.admonition.question > summary,
+    [data-theme="dark"] .admonition.solución .admonition-title, [data-theme="dark"] details.admonition.solución > summary,
+    [data-theme="dark"] .admonition.danger .admonition-title, [data-theme="dark"] details.admonition.danger > summary {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    /* Bloques de código tipo Terminal elegante (Formato Pepe) */
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 65px;
+    }
+    .terminal-dots .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+    .terminal-box code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+    .tok-cmd { color: #89b4fa; font-weight: 600; }
+    .tok-string { color: #a6e3a1; }
+    .tok-comment { color: #6c7086; font-style: italic; }
+    .tok-key { color: #cba6f7; font-weight: 600; }
+    .tok-bool { color: #fab387; font-weight: 600; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    img {
+      border: 2px dashed #94a3b8;
+      background-color: #f8fafc;
+      padding: 8px;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <span>☕ Programació — 1r DAW (IES Mestre Ramón Esteve)</span>
+      <a href="../../">⬅️ Tornar a l'Índex Markdown</a>
+      <a href="../../../">🏠 Portal Docent</a>
+    </div>
+    <div class="actions">
+      <a href="../../ut06/ut06actividades.md" class="btn-toggle">📄 Versió Markdown</a>
+      <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="🔍 Filtrar apartats..." oninput="filterSidebar(this)">
+<ul><li><a href="../index.html">🏠 <strong>Inici Guia Interactiva</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Prerrequisitos y Configuración</summary>
+<ul>
+<li><a href="../ut00/index.html" class="unit-full-link">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducción</a></li>
+<li><a href="../ut00/ut0002.html">0.2 GitHub</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Git</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Visual Studio Code</a></li>
+<li><a href="../ut00/ut0005.html">0.5 GitHub Desktop</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Estructura de programas informáticos</summary>
+<ul>
+<li><a href="../ut01/index.html" class="unit-full-link">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01ras.html">1.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Piensa como un programador y diseña algoritmos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Herramientas útiles y E/S por consola</a></li>
+<li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
+<li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
+<li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
+<li><a href="../ut01/ut01trazas.html">Trazas de ejecución UT1</a></li>
+<li><a href="../ut01/ut01pi.html">Proyecto Intermodular UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Estructuras de control</summary>
+<ul>
+<li><a href="../ut02/index.html" class="unit-full-link">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02ras.html">2.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Introducción a las estructuras de control</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Sentencias y bloques</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Estructuras de selección (if-else, switch)</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Sentencias de salto (break, continue, return)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Control y manejo de excepciones (try-catch)</a></li>
+<li><a href="../ut02/ut0207.html">Ejemplos guiados UT2</a></li>
+<li><a href="../ut02/ut02actividades.html">Actividades prácticas UT2</a></li>
+<li><a href="../ut02/ut02retos.html">Retos de programación UT2</a></li>
+<li><a href="../ut02/ut02trazas.html">Trazas de ejecución UT2</a></li>
+<li><a href="../ut02/ut02pi.html">Proyecto Intermodular UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Tipos avanzados de datos</summary>
+<ul>
+<li><a href="../ut03/index.html" class="unit-full-link">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03ras.html">3.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut03/ut0306.html">3.1 Introducción a las estructuras de datos</a></li>
+<li><a href="../ut03/ut0301.html">3.2.1 Uso de arrays unidimensionales</a></li>
+<li><a href="../ut03/ut0303.html">3.2.2 Recorrido, búsqueda y ordenación en arrays</a></li>
+<li><a href="../ut03/ut0304.html">3.2.3 Arrays bidimensionales y multidimensionales (Matrices)</a></li>
+<li><a href="../ut03/ut0302.html">3.2.4 La clase java.util.Arrays</a></li>
+<li><a href="../ut03/ut0307.html">3.2.5 Colecciones dinámicas: ArrayList</a></li>
+<li><a href="../ut03/ut0308.html">3.3 Diccionarios y Mapas (HashMap)</a></li>
+<li><a href="../ut03/ut0305.html">3.4 Algoritmos recursivos (Recursividad)</a></li>
+<li><a href="../ut03/ut03actividades.html">Actividades prácticas UT3</a></li>
+<li><a href="../ut03/ut03retos.html">Retos de programación UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Programación Orientada a Objetos (POO)</summary>
+<ul>
+<li><a href="../ut04/index.html" class="unit-full-link">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut04ras.html">4.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Introducción al paradigma orientado a objetos</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Principios fundamentales de la POO</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Objetos y clases</a></li>
+<li><a href="../ut04/ut0404.html">4.4.1 Estructura y miembros de una clase</a></li>
+<li><a href="../ut04/ut0405.html">4.4.2 Atributos y constantes</a></li>
+<li><a href="../ut04/ut0406.html">4.4.3 Métodos, parámetros y sobrecarga</a></li>
+<li><a href="../ut04/ut0407.html">4.4.4 Constructores y palabra clave this</a></li>
+<li><a href="../ut04/ut0408.html">4.4.5 Encapsulación y modificadores de visibilidad</a></li>
+<li><a href="../ut04/ut0409.html">4.5 Instanciación y ciclo de vida de los objetos</a></li>
+<li><a href="../ut04/ut0410.html">4.6 Empaquetado de clases y librerías (packages)</a></li>
+<li><a href="../ut04/ut04actividades.html">Actividades prácticas UT4</a></li>
+<li><a href="../ut04/ut04retos.html">Retos de programación UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Composición, Herencia y Polimorfismo</summary>
+<ul>
+<li><a href="../ut05/index.html" class="unit-full-link">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05ras.html">5.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Relaciones entre clases (Asociación, Agregación, Herencia)</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Composición de clases</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Herencia y jerarquías de clases (extends, super)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Clases y métodos abstractos (abstract)</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Interfaces (interface, implements)</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Polimorfismo y ligadura dinámica</a></li>
+<li><a href="../ut05/ut05actividades.html">Actividades prácticas UT5</a></li>
+<li><a href="../ut05/ut05retos.html">Retos de programación UT5</a></li>
+<li><a href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5</a></li>
+<li><a href="../ut05/ut05pi.html">Proyecto Intermodular UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit" open>
+<summary>UT6 — Lectura y escritura de información</summary>
+<ul>
+<li><a href="../ut06/index.html" class="unit-full-link">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut06ras.html">6.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Streams (Flujos de entrada y salida)</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Lectura y escritura de ficheros</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Serialización de objetos</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Comunicación por red: Sockets</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Manejo del sistema de ficheros y carpetas (File / NIO)</a></li>
+<li><a href="../ut06/ut06actividades.html" class="active">Actividades prácticas UT6</a></li>
+<li><a href="../ut06/ut06retos.html">Retos de programación UT6</a></li>
+<li><a href="../ut06/ut06pi.html">Proyecto Intermodular UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Acceso a bases de datos</summary>
+<ul>
+<li><a href="../ut07/index.html" class="unit-full-link">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut07ras.html">7.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Introducción a la persistencia en bases de datos</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Arquitectura y conectores JDBC</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Conexión a bases de datos desde Java</a></li>
+<li><a href="../ut07/ut0704.html">7.4 ResultSet: Navegabilidad y concurrencia</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Consultas de selección (SELECT / executeQuery)</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Modificación de registros (UPDATE)</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Inserción de registros (INSERT)</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Borrado de registros (DELETE)</a></li>
+<li><a href="../ut07/ut0709.html">7.9 Sentencias precompiladas (PreparedStatement)</a></li>
+<li><a href="../ut07/ut0710.html">7.10 Trabajar con SQLite en Java</a></li>
+<li><a href="../ut07/ut0711.html">7.11 Patrón de diseño DAO (Data Access Object)</a></li>
+<li><a href="../ut07/ut0712.html">7.12 Repaso global de acceso a datos</a></li>
+<li><a href="../ut07/ut07actividades.html">Actividades prácticas UT7</a></li>
+<li><a href="../ut07/ut07retos.html">Retos de programación UT7</a></li>
+<li><a href="../ut07/ut07pi.html">Proyecto Intermodular UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📚 Fuentes de información</a></li></ul>
+    </aside>
+
+    <main class="content">
+      <span class="up-badge">3a Avaluació · RA5 · Fluxos E/S, Fitxers de Text/Binaris i Serialització</span>
+      <h1 id="actividades-ut06">Actividades UT06</h1>
+<div class="admonition vscode">
+<p class="admonition-title">Empaquetar actividades</p>
+<p>Empaqueta las actividades, dentro de la carpeta <strong><code>ut06/bloqueX</code></strong></p>
+</div>
+<hr />
+<h2 id="bloque-60">Bloque 6.0</h2>
+<h3 id="actividad-01">Actividad 01</h3>
+<p>Actividad <strong><code>A01_leeEdad</code></strong></p>
+<p>Escribir un programa que solicite al usuario su edad y, utilizando directamente <code>Scanner</code>, la lea de teclado y muestre por pantalla un mensaje del estilo "Su edad es 32 años".</p>
+<h3 id="actividad-02">Actividad 02</h3>
+<p>Actividad <strong><code>A02_leeEdad</code></strong></p>
+<p>Repite la <em>Actividad 01</em> utilizando un <code>BufferedWriter</code> para escribirlo en un archivo llamado <em>edad.txt</em>.</p>
+<h3 id="actividad-03">Actividad 03</h3>
+<p>Actividad <strong><code>A03_notas</code></strong></p>
+<p>Escribir un programa que almacene en un fichero las notas de (máximo) 20 alumnos. El programa tendrá el siguiente funcionamiento:</p>
+<ul>
+<li>En el fichero se guardarán como máximo 20 notas, pero se pueden guardar menos. El proceso de introducción de notas (y en consecuencia, el programa) finalizará cuando el usuario introduzca una nota no válida (menor que cero o mayor que 10).</li>
+<li>Al incio de la ejecución se pedirá al usuario el nombre que desea que tenga el archivo. </li>
+<li>Al finalizar la entrada de notas, se mostraran todas las introducidas por pantalla (leyendolas del mismo archivo). </li>
+</ul>
+<h3 id="actividad-04">Actividad 04</h3>
+<p>Actividad <strong><code>A04_informacionFicheros</code></strong></p>
+<p>Implementa un programa que pida al usuario introducir por teclado una ruta del sistema de archivos (por ejemplo, <code>C:/Windows</code> o <code>Documentos</code>) y muestre información sobre dicha ruta (ver función más abajo). El proceso se repetirá una y otra vez hasta que el usuario introduzca una ruta vacía (tecla <em>intro</em>). Deberá manejar las posibles excepciones.</p>
+<p>Necesitarás crear la función <code>void muestraInfoRuta(File ruta)</code> que dada una ruta de tipo <code>File</code> haga lo siguiente:</p>
+<ul>
+<li>Si es un archivo, mostrará por pantalla el nombre del archivo.</li>
+<li>Si es un directorio, mostrará por pantalla la lista de directorios y archivos que contiene (sus nombres).</li>
+<li>Si el path no existe lanzará un <code>FileNotFoundException</code>.</li>
+</ul>
+<h3 id="actividad-05">Actividad 05</h3>
+<p>Actividad <strong><code>A05_informacionFicheros2</code></strong></p>
+<p>Partiendo de una copia del programa anterior, modifica la función <code>muestraInfoRuta</code>:</p>
+<ul>
+<li>En el caso de un directorio, mostrará la lista de directorios y archivos en orden alfabético. Es decir, primero los directorios en orden alfabético y luego los archivos en orden alfabético. Te será útil <code>Arrays.sort()</code>.</li>
+<li>Añade un segundo argumento <code>boolean info</code> que cuando sea <code>true</code> mostrará, junto a la información de cada directorio o archivo, su tamaño en bytes y la fecha de la última modificación. Cuando <code>info</code> sea <code>false</code> mostrará la información como en el Actividad anterior.</li>
+</ul>
+<h3 id="actividad-06">Actividad 06</h3>
+<p>Actividad <strong><code>A06_escribirFichero2</code></strong></p>
+<p>Empaqueta toda esta actividad en: <strong><code>ut06/actividades/ce5d/</code></strong><mark><strong>gestionaLibros</strong></mark></p>
+<ul>
+<li>(<code>Autor</code>) Crea la clase autor, con los atributos <em>nombre</em>, <em>año de nacimiento</em> y <em>nacionalidad</em>. Incorpora un constructor que reciba todos los datos y el método <code>toString()</code>.</li>
+<li>(<code>Libro</code>) Crea la clase Libro, con los atributos <em>titulo</em>, <em>año de edición</em> y <em>autor</em> (Objeto de la clase autor). Incorpora un constructor que reciba todos los datos y el método <code>toString()</code>.</li>
+<li>Escribe un programa (<code>GuardaLibros</code>) que cree tres libros y los almacene en el fichero <code>biblioteca.obj</code>.</li>
+</ul>
+<blockquote>
+<p><strong>Nota</strong>: Las clases deberán implementar el interfaz <code>Serializable</code>.</p>
+</blockquote>
+<h3 id="actividad-07">Actividad 07</h3>
+<p>Escribe un programa de nombre <code>LeeLibros</code>que lea los objetos del fichero <code>biblioteca.obj</code> y los muestre por pantalla.</p>
+<h3 id="actividad-08">Actividad 08</h3>
+<p>Escribe un programa que, usando las clases <code>FileReader</code> y <code>FileWriter</code>:</p>
+<ul>
+<li>Escriba los caracteres de tu nombre en un fichero ( <strong>nombre.txt</strong> ).</li>
+<li>Lea el fichero creado y lo muestre por pantalla.</li>
+<li>Si abrimos el fichero creado con un editor de textos, ¿su contenido es legible?</li>
+</ul>
+<h3 id="actividad-09">Actividad 09</h3>
+<p>Escribe un programa que, usando las clases <code>FileOutputStream</code> y <code>FileInputStream</code>, </p>
+<ul>
+<li>Escriba los caracteres de tu nombre en un fichero y los vaya añadiendo (<code>nombres.log</code>).</li>
+<li>Lea el fichero creado y lo muestre por pantalla.</li>
+<li>Si abrimos el fichero creado con un editor de textos, ¿su contenido es legible?</li>
+</ul>
+<h3 id="actividad-10">Actividad 10</h3>
+<p>Escribe un programa que, utilizando entre otras la clase <code>DataOutputStream</code>, almacene en un fichero llamado <code>personas.dat</code> la información relativa a una serie de personas que va introduciendo el usuario desde teclado:</p>
+<ul>
+<li><code>Nombre</code> (String)</li>
+<li><code>Edad</code> (entero)</li>
+<li><code>Peso</code> (double)</li>
+<li><code>Estatura</code> (double)</li>
+</ul>
+<p>La entrada del usuario terminará cuando se introduzca un nombre vacío.</p>
+<blockquote>
+<p><strong>Nota</strong>: Utiliza la clase <code>Scanner</code> para leer desde teclado y los métodos <code>writeDouble</code>, <code>writeInt</code> y <code>writeUTF</code> de la clase <code>DataOutputStream</code> para escribir en el fichero.</p>
+</blockquote>
+<p>Al finalizar el programa, abre el fichero resultante con un editor de texto ¿La información que contiene es legible?</p>
+<h3 id="actividad-11">Actividad 11</h3>
+<p>Realizar un programa que lea la información del fichero <code>personas.dat</code> y la muestre por pantalla. Para determinar que no quedan más datos en el fichero podemos capturar la excepción <code>EOFException</code> .</p>
+<h3 id="actividad-12">Actividad 12</h3>
+<p>Modifica el programa anterior para que el usuario, al comienzo del programa, pueda elegir si quiere añadir datos al fichero o sobre escribir la información que contiene.</p>
+<h3 id="actividad-13">Actividad 13</h3>
+<blockquote>
+<p>Para esta actividad utilizaremos el fichero de texto <mark><strong><a href="../docsActividades/productos.txt" target="_blank">productos.txt</a></strong></mark>. Descárgalo en la carpeta <code>src/test</code>.</p>
+</blockquote>
+<p>Se desea simular el funcionamiento de una máquina expendedora. Se trata de una expendedora sencilla que, por el momento, será capaz de dispensar únicamente un producto.</p>
+<p>Su funcionamiento, a grandes rasgos, es el siguiente:</p>
+<ol>
+<li>El cliente introduce dinero en la máquina. Al dinero introducido lo llamaremos <code>credito</code>.</li>
+<li>Selecciona el producto que quiere comprar (ya hemos comentado que por el momento habrá un solo producto).</li>
+<li>Si hay stock del producto seleccionado, la máquina dispensa el artículo elegido y devuelve el importe sobrante (diferencia entre el crédito introducido y el precio del producto).</li>
+</ol>
+<p>Durante el proceso se pueden producir diversas incidencias, como por ejemplo, que el cliente no haya introducido suficiente crédito para comprar el producto, que no quede producto o que no haya cambio suficiente para la devolución. La máquina también da la posibilidad de solicitar la devolución del crédito sin realizar la compra.</p>
+<p><strong>A</strong>) Diseñar la <strong>clase <code>Expendedora</code></strong> con los atributos y métodos que se describen a continuación.</p>
+<ul>
+<li>
+<p>Atributos (privados):</p>
+</li>
+<li>
+<p><code>credito</code>: Cantidad de dinero (en euros) introducida por el cliente.</p>
+</li>
+<li><code>stock</code>: Número de unidades que quedan en la máquina disponibles para la venta. Se reducirá con cada nueva venta.</li>
+<li><code>precio</code>: Precio del único artículo que dispensa la máquina (en euros).</li>
+<li><code>cambio</code>: Cambio del que dispone la máquina. El cambio disponible se reduce cada vez que se devuelve al cliente la diferencia entre el crédito introducido y el precio del producto comprado. El cambio nunca se ve incrementado por las compras de los clientes.</li>
+<li>
+<p><code>recaudación</code>: Representa la suma de las ventas realizadas por la máquina (en euros). Se ve incrementada con cada nueva compra.</p>
+</li>
+<li>
+<p>Métodos:</p>
+</li>
+<li>
+<p>Constructor: <strong><code>public Expendedora (double cambio, int stock, double precio)</code></strong>: Crea la expendedora inicializando los atributos cambio, stock y precio con los valores indicados en los parámetros). El crédito y la recaudación serán cero.</p>
+</li>
+<li>
+<p>Consultores:</p>
+<ul>
+<li><strong>Métodos consultores</strong> para los atributos crédito, cambio, y recaudación.<blockquote>
+<p><strong>Los consultores para el stock y el precio</strong> los haremos previendo que en el futuro la máquina pueda expender más de un tipo de producto. Para consultar el stock y el precio se indicará como parámetro el número de producto que se quiere consultar aunque, por el momento se ignorará el valor de dicho atributo.
+  - <strong><code>public int getStock (int producto)</code></strong>: Devuelve el stock disponible del producto indicado. En esta versión simplificada se devolverá el valor del atributo stock, sea cual sea el valor de producto (no hacer caso, por ahora, del argumento <code>producto</code>).
+  - <strong><code>public double getPrecio (int producto)</code></strong>: Devuelve el precio del producto indicado. En esta versión simplificada se devolverá el valor del atributo precio , sea cual sea el valor de producto (no hacer caso, por ahora, del argumento <code>producto</code>).</p>
+</blockquote>
+</li>
+<li>Modificadores: Para simplificar, consideramos que los atributos de la máquina solo van a cambiar por operaciones derivadas de su funcionamiento, por lo que <strong>no proporcionamos modificadores públicos</strong>.</li>
+<li>Otros métodos:</li>
+<li>
+<p><strong><code>public String toString()</code></strong>: Devuelve un <code>String</code> de la forma:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>  Crédito: <span class="tok-bool">3</span>.<span class="tok-bool">0</span> euros
+  Cambio: <span class="tok-bool">12</span>.<span class="tok-bool">73</span> euros
+  Stock: <span class="tok-bool">12</span> unidades
+  Recaudación: <span class="tok-bool">127</span>.<span class="tok-bool">87</span> euros</code></pre>
+</div></p>
+</li>
+<li>
+<p><strong><code>public void introducirDinero(double importe)</code></strong>: Representa la operación mediante la cual el cliente añade dinero (crédito) a la máquina. Esta operación incrementa el crédito introducido por el cliente en el importe indicado como parámetro.</p>
+</li>
+<li><strong><code>public double solicitarDevolucion()</code></strong>: Representa la operación mediante la cual el cliente solicita la devolución del crédito introducido sin realizar la compra. El método devuelve la cantidad de dinero que se devuelve al cliente.</li>
+<li><strong><code>public double comprarProducto(int producto) throws NoHayCambioException, NoHayProductoException, CreditoInsuficienteException</code></strong>: Representa la operación mediante la cual el cliente selecciona un producto para su compra. El método devuelve la cantidad de dinero que se devuelve al cliente.
+  Si no se produce ninguna situación inesperada, se reduce el stock del producto, se devuelve el cambio, se pone el crédito a cero y se incrementa la recaudación.
+  Si la venta no es posible se lanzará la excepción correspondiente a la situación que impide completar la venta.</li>
+</ul>
+</li>
+</ul>
+<p><strong>B</strong>) La <strong>clase <code>Producto</code></strong> permite representar uno de los artículos de los que vende una máquina expendedora. Para ello utilizaremos tres atributos privados <code>nombre</code> (<code>String</code>), <code>precio</code> (<code>double</code>) y <code>stock</code> (<code>int</code>), y los siguientes métodos:</p>
+<ul>
+<li><strong><code>public Producto(String nombre, double precio, int stock)</code></strong> Constructor que inicializa el producto con los parámetros indicados.</li>
+<li>Consultores de los tres atributos: <strong><code>getNombre</code></strong>, <strong><code>getPrecio</code></strong> y <strong><code>getStock</code></strong>.</li>
+<li><strong><code>public int decrementarStock()</code></strong>: decrementa en 1 el stock del producto y devuelve el stock resultante.</li>
+</ul>
+<p><strong>C</strong>) La <strong>clase <code>TestExpendedora</code></strong> sirve para provar los métodos desarrollados en las clases <code>Expendedora</code> y <code>Producto</code>.</p>
+<ul>
+<li>(punto 1) Crea un Objeto de tipo <code>Expendedora</code> e inicializalo con: 12 unidades de stock, 5 euros de cambio y un precio de 3.75 euros. Muestra por pantalla su estado actual.</li>
+<li>(punto 2) Simula la introducción por parte del cliente de un billete de 5 euros y muestra el estado de la máquina <code>Expendedora</code>.</li>
+<li>(punto 3) Simula la compra de un <code>producto</code> y muestra la cantidad devuelta.</li>
+<li>(punto 4) Simula la introducción de una moneda de 2 euros y solicita la devolución sin realizar ninguna compra y muestra la cantidad devuelta.</li>
+<li>(punto 5) Intenta realizar una compra sin tener suficiente crédito y gestiona la excepción.</li>
+<li>(punto 6) Crea otro objeto de tipo <code>Expendedora</code> que inicialmente tenga 0 unidades de stock (el resto de valores a tu gusto), simula la compra de un producto teniendo suficiente crédito y cambio. Gestiona la excepción.</li>
+<li>(punto 7) Crea un último objeto de tipo <code>Expendedora</code> que inicialmente tenga 0 euros de cambio (el resto de valores a tu gusto), simula la compra de un producto para el que la máquina tenga que devolver algún importe, gestiona la excepción.</li>
+<li>(punto 8) Muestra las recaudaciones para las 3 máquinas expendedoras.</li>
+</ul>
+<p><strong>D</strong>) La <strong>clase <code>Surtido</code></strong> representa una colección de productos. Para ello se usará un atributo <code>listaProductos</code>, array de <code>Productos</code>. El array se rellenará con los datos de productos extraídos de un fichero de texto y, una vez creado el surtido no será posible añadir o quitar productos. Así, el array de productos estará siempre completo y no es necesario ningún atributo que indique cuántos productos existen en el array.</p>
+<p>Se implementarán los siguientes métodos:</p>
+<ul>
+<li><strong><code>public Surtido() throws FileNotFoundException</code></strong>: crea el surtido con los datos de los productos que se encuentran en el fichero <mark><strong><a href="../docsActividades/productos.txt" target="_blank">productos.txt</a></strong></mark>. El fichero tiene el siguiente formato:</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>&lt;nº de productos&gt;
+&lt;nombre de producto&gt; &lt;precio&gt; &lt;stock&gt;
+&lt;nombre de producto&gt; &lt;precio&gt; &lt;stock&gt;
+&lt;nombre de producto&gt; &lt;precio&gt; &lt;stock&gt;
+...</code></pre>
+</div>
+<p>Como vemos, la primera línea del fichero indica el número de productos que contiene el surtido. Este dato lo usaremos para dar al array de productos el tamaño adecuado.</p>
+<ul>
+<li>
+<p><strong><code>public int numProductos()</code></strong>: devuelve el número de productos que componen el surtido.</p>
+</li>
+<li>
+<p><strong><code>public Producto getProducto(int numProducto)</code></strong>: devuelve el producto que ocupa la posición <code>numProducto</code> del surtido. La primera posición válida es la <code>1</code>. La posición <code>0</code> no se utiliza.</p>
+</li>
+<li><strong><code>public String[] getNombresProductos()</code></strong>: devuelve un array con los nombres de los productos. La posición <code>0</code> del array no se utilizará (será <code>null</code>).</li>
+</ul>
+<p><strong>E</strong>) Crea una copia de la <strong>clase</strong> <code>Expendedora</code> y llámala <strong><code>ExpendedoraSurtido</code></strong>. Añadir los atributos y hacer los cambios necesarios en la clase para que sea capaz de dispensar varios productos usando la nueva clase <code>Surtido</code>. Por ejemplo, ya no tienen sentido los atributos stock y precio ya que pertenecen al <code>Surtido</code>.</p>
+<p>Añade también el método <code>public String toStringSurtido()</code>, que muestre por pantalla el listado de productos con su nombre, precio y stock para mostrar al cliente que productos puede elegir. El código del producto coincidirá con su posición al leer el surtido.</p>
+<p><strong>F</strong>) Crea una copia de la <strong>clase</strong> <code>TestExpendedora</code> y renómbrala como <strong><code>TestExpendedora2</code></strong> para adaptarla a los cambios hechos en la clase <code>Expendedora</code> y usando la nueva posibilidad de comprar diferentes productos y usando solamente un único objeto <code>Expendedora</code>. Al final en lugar de mostrar la recaudación de las 3 máquinas expendedoras, muestra solo la de la única que hay y muestra el surtido.</p>
+<h3 id="actividad-14">Actividad 14</h3>
+<blockquote>
+<p>Para esta actividad utilizaremos el fichero de texto <mark><strong><a href="../docsActividades/AirVostrum.txt" target="_blank">AirVostrum.txt</a></strong></mark>. Descárgalo en la carpeta <code>src/test</code>.</p>
+</blockquote>
+<p>Se desea realizar una aplicación <code>GestorVuelos</code> para gestionar la reserva y cancelación de vuelos en una agencia de viajes. Dicha agencia trabaja únicamente con la compañía aérea <em>AirVostrum</em>, que ofrece vuelos desde/hacia varias ciudades de Europa. Se deben definir las clases que siguen, teniendo en cuenta que sus atributos serán privados y sus métodos sólo los que se indican en cada clase.</p>
+<p><strong>A)</strong> Implementación de la <strong>clase <code>Vuelo</code></strong>, que permite representar un vuelo mediante los atributos:  </p>
+<ul>
+<li><code>identificador</code> (<code>String</code>)</li>
+<li><code>origen</code> (<code>String</code>)</li>
+<li><code>destino</code> (<code>String</code>)</li>
+<li><code>hSalida</code> (un tipo que te permita controlar la hora, no es un <code>String</code> ni un <code>int</code>, etc.)</li>
+<li><code>hLlegada</code> (un tipo que te permita controlar la hora, no es un <code>String</code> ni un <code>int</code>, etc.)</li>
+<li>Además, cada vuelo dispone de 50 asientos, es decir, pueden viajar, como mucho, 50 pasajeros en cada vuelo. Para representarlos, se hará uso de <code>asiento</code>, un array de <code>String</code> (nombres de los pasajeros) junto con un atributo <code>numP</code> que indique el número actual de asientos reservados. Si el asiento <code>i</code> está reservado, <code>asiento[i]</code> contendrá el nombre del pasajero que lo ha reservado. Si no lo está, <code>asiento[i]</code> será <code>null</code>. En el array <code>asiento</code>, las posiciones impares pertenecen a asientos de ventanilla y las posiciones pares, a asientos de pasillo (la posición 0 no se utilizará).</li>
+</ul>
+<p>En esta clase, se deben implementar los siguientes métodos:</p>
+<ul>
+<li>
+<p><strong><code>public Vuelo(String id, String orig, String dest, LocalTime hsal, LocalTime hlleg)</code></strong>: Constructor que crea un vuelo con identificador, ciudad de origen, ciudad de destino, hora de salida y hora de llegada indicados en los respectivos parámetros, y sin pasajeros.</p>
+</li>
+<li>
+<p><strong><code>public String getIdentificador()</code></strong>: Devuelve el <code>identificador</code></p>
+</li>
+<li>
+<p><strong><code>public String getOrigen()</code></strong>: Devuelve <code>origen</code>.</p>
+</li>
+<li>
+<p><strong><code>public String getDestino()</code></strong>: Devuelve <code>destino</code>.</p>
+</li>
+<li>
+<p><strong><code>public boolean hayLibres()</code></strong>: Devuelve <code>true</code> si quedan asientos libres y <code>false</code> si no quedan.</p>
+</li>
+<li>
+<p><strong><code>public boolean equals(Object o)</code></strong>: Dos vuelos son iguales si tienen el mismo identificador.</p>
+</li>
+<li>
+<p><strong><code>public int reservarAsiento(String pas, char pref) throws VueloCompletoException</code></strong>: Si el vuelo ya está completo se lanza una excepción. Si no está completo, se reserva al pasajero <code>pas</code> el primer asiento libre en <code>pref</code>. El carácter <code>pref</code> será '<code>V</code>' o '<code>P</code>' en función de que el pasajero desee un asiento de ventanilla o de pasillo. En caso de que no quede ningún asiento libre en la preferencia indicada (<code>pref</code>), se reservará el primer asiento libre de la otra preferencia. El método devolverá el número de asiento que se le ha reservado. Este método hace uso del método privado <code>asientoLibre</code>, que se explica a continuación.</p>
+</li>
+<li>
+<p><strong><code>private int asientoLibre(char pref)</code></strong>: Dado un tipo de asiento <code>pref</code> (pasillo '<code>P</code>' o ventanilla '<code>V</code>'), devuelve el primer asiento libre (el de menor numero) que encuentre de ese tipo. O devuelve <code>0</code> si no quedan asientos libres de tipo <code>pref</code>.</p>
+</li>
+<li>
+<p><strong><code>public void cancelarReserva(int numAsiento)</code></strong>: Se cancela la reserva del asiento <code>numasiento</code>.</p>
+</li>
+<li>
+<p><strong><code>public String toString()</code></strong>: Devuelve una <code>String</code> con los datos del vuelo y los nombres de los pasajeros, con el siguiente formato:</p>
+</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Vuelo:
+  AV101 Valencia París <span class="tok-bool">19</span>:<span class="tok-bool">05</span>:<span class="tok-bool">00</span> <span class="tok-bool">21</span>:<span class="tok-bool">00</span>:<span class="tok-bool">00</span>
+Pasajeros (<span class="tok-bool">23</span>):
+  Asiento <span class="tok-bool">1</span>: Sonia Dominguez
+  …
+  Asiento <span class="tok-bool">23</span>: Fernando Romero</code></pre>
+</div>
+<p><strong>B)</strong> Diseñar e implementar una <strong>clase <code>TestVuelo</code></strong> que permita probar la clase <code>Vuelo</code> y sus métodos. Para ello se desarrollará el método <code>main</code> en el que:</p>
+<ul>
+<li>Se cree el vuelo IB101 de Valencia a París, que sale a las 19:05 y llega a las 21:00</li>
+<li>Reservar:</li>
+<li>Un asiento de ventanilla a "Miguel Fernández"</li>
+<li>Un asiento de ventanilla a "Ana Folgado"</li>
+<li>Un asiento de pasillo a "David Más"</li>
+<li>Mostrar el vuelo por pantalla.</li>
+<li>Cancelar la reserva del asiento que indique el usuario.</li>
+</ul>
+<p><strong>C)</strong> Implementación de la <strong>clase <code>Compañía</code></strong> para representar todos los vuelos de una compañía aérea. Una Compañía tiene un nombre y puede ofrecer, como mucho, 10 vuelos distintos. Para representarlos se utilizará <code>listaVuelos</code>, un array de objetos <code>Vuelo</code> junto con un atributo <code>numVuelos</code> que indique el número de vuelos que la compañía ofrece en un momento dado. Las operaciones de esta clase son:</p>
+<ul>
+<li>
+<p><strong><code>public Compania(String n) throws FileNotFoundException</code></strong>: Constructor de una compañía de nombre <code>n</code>. Cuando se crea una compañía, se invoca al método privado <code>leeVuelos()</code> para cargar la información de vuelos desde un fichero. Si el fichero no existe, se propaga la excepción <code>FileNotFoundException</code></p>
+</li>
+<li>
+<p><strong><code>private void leeVuelos() throws FileNotFoundException</code></strong>: Lee desde un fichero toda la información de los vuelos que ofrece la compañía y los va almacenando en el array de vuelos <code>listaVuelos</code>. El nombre del fichero coincide con el nombre de la compañía y tiene extensión <code>.txt</code>. La información de cada vuelo se estructura en el fichero como sigue:</p>
+</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>&lt;Identificador&gt;
+&lt;Origen&gt;
+&lt;Destino&gt;
+&lt;Hora de salida&gt;
+&lt;Minuto de salida&gt;
+&lt;Hora de llegada&gt;
+&lt;Minuto de llegada&gt;
+...
+...</code></pre>
+</div>
+<p>Si el fichero no existe, se propaga la excepción <code>FileNotFoundException</code>.</p>
+<ul>
+<li>
+<p><strong><code>public Vuelo buscarVuelo(String id) throws ElementoNoEncontradoException</code></strong>: Dado un identificador de vuelo <code>id</code>, busca dicho vuelo en el array de vuelos <code>listaVuelos</code>. Si lo encuentra, lo devuelve. Si no, lanza <code>ElementoNoEncontradoException</code>.</p>
+</li>
+<li>
+<p><strong><code>public void mostrarVuelosIncompletos(String o, String d)</code></strong>: Muestra por pantalla los vuelos con origen <code>o</code> y destino <code>d</code>, y que tengan asientos libres. Por ejemplo, vuelos con asientos libres de la compañía AirVostrum con origen Milán y destino Valencia:</p>
+</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>AirVostrum - Vuelo AV201 - Milán València - <span class="tok-bool">14</span>:<span class="tok-bool">25</span>:<span class="tok-bool">00</span> <span class="tok-bool">16</span>:<span class="tok-bool">20</span>:<span class="tok-bool">00</span>
+AirVostrum - Vuelo AV202 - Mílán València - <span class="tok-bool">21</span>:<span class="tok-bool">40</span>:<span class="tok-bool">00</span> <span class="tok-bool">23</span>:<span class="tok-bool">35</span>:<span class="tok-bool">00</span></code></pre>
+</div>
+<p><strong>D)</strong> En la <strong>clase <code>GestorVuelos</code></strong> se probará el comportamiento de las clases anteriores. En esta clase se debe implementar el método <code>main</code> en el que, por simplificar, se pide únicamente:</p>
+<ul>
+<li>La creación de la compañía aérea <code>AirVostrum</code>. Se dispone de un fichero de texto <mark><strong><a href="../docsActividades/AirVostrum.txt" target="_blank">AirVostrum.txt</a></strong></mark>, con la información de los vuelos que ofrece.</li>
+<li>Reserva de un asiento de ventanilla en un vuelo de <em>València</em> a <em>Milán</em> por parte de <em>Manuel</em> <em>Soler Roca</em>. Para ello:</li>
+<li>Mostraremos vuelos con origen <em>València</em> y destino <em>Milán</em>, que no estén completos.</li>
+<li>Pediremos al usuario el identificador del vuelo en que quiere hacer la reserva.</li>
+<li>Buscaremos el vuelo que tiene el identificador indicado. Si existe realizaremos la reserva y mostraremos un mensaje por pantalla. En caso contrario mostraremos un mensaje de error por pantalla.</li>
+</ul>
+      <div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut06/ut0605.html">⬅️ 6.5 Manejo del sistema de ficheros y carpetas (File / NIO)</a>
+<a class="page-nav-btn" href="../ut06/ut06retos.html">Retos de programación UT6 ➡️</a>
+</div>
+    </main>
+  </div>
+  
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiado';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

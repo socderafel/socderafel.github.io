@@ -1,0 +1,1392 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>2.3 Estructuras de selección (if-else, switch) — Programació (1r DAW)</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
+  <style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.4rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.6rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    /* Admonitions Material */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+      cursor: pointer;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning, details.admonition.warning {
+      border-left-color: #ff9100;
+      background-color: #fffbf0;
+    }
+    .admonition.warning .admonition-title, details.admonition.warning > summary {
+      color: #b75e00;
+      background-color: #fff3d6;
+    }
+    .admonition.tip, .admonition.ayuda, details.admonition.tip, details.admonition.ayuda {
+      border-left-color: #00bfa5;
+      background-color: #f0faf8;
+    }
+    .admonition.tip .admonition-title, .admonition.ayuda .admonition-title,
+    details.admonition.tip > summary, details.admonition.ayuda > summary {
+      color: #004d40;
+      background-color: #e0f5f2;
+    }
+    .admonition.exercise, .admonition.question, .admonition.solución,
+    details.admonition.exercise, details.admonition.question, details.admonition.solución {
+      border-left-color: #00c853;
+      background-color: #f2faf4;
+    }
+    .admonition.exercise .admonition-title, .admonition.question .admonition-title, .admonition.solución .admonition-title,
+    details.admonition.exercise > summary, details.admonition.question > summary, details.admonition.solución > summary {
+      color: #1b5e20;
+      background-color: #e2f7e7;
+    }
+    .admonition.danger, details.admonition.danger {
+      border-left-color: #ff1744;
+      background-color: #fff5f7;
+    }
+    .admonition.danger .admonition-title, details.admonition.danger > summary {
+      color: #b71c1c;
+      background-color: #ffe0e6;
+    }
+    [data-theme="dark"] .admonition.warning, [data-theme="dark"] details.admonition.warning,
+    [data-theme="dark"] .admonition.tip, [data-theme="dark"] details.admonition.tip,
+    [data-theme="dark"] .admonition.exercise, [data-theme="dark"] details.admonition.exercise,
+    [data-theme="dark"] .admonition.question, [data-theme="dark"] details.admonition.question,
+    [data-theme="dark"] .admonition.solución, [data-theme="dark"] details.admonition.solución,
+    [data-theme="dark"] .admonition.danger, [data-theme="dark"] details.admonition.danger {
+      background-color: #0f172a;
+    }
+    [data-theme="dark"] .admonition.warning .admonition-title, [data-theme="dark"] details.admonition.warning > summary,
+    [data-theme="dark"] .admonition.tip .admonition-title, [data-theme="dark"] details.admonition.tip > summary,
+    [data-theme="dark"] .admonition.exercise .admonition-title, [data-theme="dark"] details.admonition.exercise > summary,
+    [data-theme="dark"] .admonition.question .admonition-title, [data-theme="dark"] details.admonition.question > summary,
+    [data-theme="dark"] .admonition.solución .admonition-title, [data-theme="dark"] details.admonition.solución > summary,
+    [data-theme="dark"] .admonition.danger .admonition-title, [data-theme="dark"] details.admonition.danger > summary {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    /* Bloques de código tipo Terminal elegante (Formato Pepe) */
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 65px;
+    }
+    .terminal-dots .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+    .terminal-box code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+    .tok-cmd { color: #89b4fa; font-weight: 600; }
+    .tok-string { color: #a6e3a1; }
+    .tok-comment { color: #6c7086; font-style: italic; }
+    .tok-key { color: #cba6f7; font-weight: 600; }
+    .tok-bool { color: #fab387; font-weight: 600; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    img {
+      border: 2px dashed #94a3b8;
+      background-color: #f8fafc;
+      padding: 8px;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <span>☕ Programació — 1r DAW (IES Mestre Ramón Esteve)</span>
+      <a href="../../">⬅️ Tornar a l'Índex Markdown</a>
+      <a href="../../../">🏠 Portal Docent</a>
+    </div>
+    <div class="actions">
+      <a href="../../ut02/ut0203.md" class="btn-toggle">📄 Versió Markdown</a>
+      <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="🔍 Filtrar apartats..." oninput="filterSidebar(this)">
+<ul><li><a href="../index.html">🏠 <strong>Inici Guia Interactiva</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Prerrequisitos y Configuración</summary>
+<ul>
+<li><a href="../ut00/index.html" class="unit-full-link">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducción</a></li>
+<li><a href="../ut00/ut0002.html">0.2 GitHub</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Git</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Visual Studio Code</a></li>
+<li><a href="../ut00/ut0005.html">0.5 GitHub Desktop</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Estructura de programas informáticos</summary>
+<ul>
+<li><a href="../ut01/index.html" class="unit-full-link">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01ras.html">1.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Piensa como un programador y diseña algoritmos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Herramientas útiles y E/S por consola</a></li>
+<li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
+<li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
+<li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
+<li><a href="../ut01/ut01trazas.html">Trazas de ejecución UT1</a></li>
+<li><a href="../ut01/ut01pi.html">Proyecto Intermodular UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open>
+<summary>UT2 — Estructuras de control</summary>
+<ul>
+<li><a href="../ut02/index.html" class="unit-full-link">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02ras.html">2.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Introducción a las estructuras de control</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Sentencias y bloques</a></li>
+<li><a href="../ut02/ut0203.html" class="active">2.3 Estructuras de selección (if-else, switch)</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Sentencias de salto (break, continue, return)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Control y manejo de excepciones (try-catch)</a></li>
+<li><a href="../ut02/ut0207.html">Ejemplos guiados UT2</a></li>
+<li><a href="../ut02/ut02actividades.html">Actividades prácticas UT2</a></li>
+<li><a href="../ut02/ut02retos.html">Retos de programación UT2</a></li>
+<li><a href="../ut02/ut02trazas.html">Trazas de ejecución UT2</a></li>
+<li><a href="../ut02/ut02pi.html">Proyecto Intermodular UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Tipos avanzados de datos</summary>
+<ul>
+<li><a href="../ut03/index.html" class="unit-full-link">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03ras.html">3.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut03/ut0306.html">3.1 Introducción a las estructuras de datos</a></li>
+<li><a href="../ut03/ut0301.html">3.2.1 Uso de arrays unidimensionales</a></li>
+<li><a href="../ut03/ut0303.html">3.2.2 Recorrido, búsqueda y ordenación en arrays</a></li>
+<li><a href="../ut03/ut0304.html">3.2.3 Arrays bidimensionales y multidimensionales (Matrices)</a></li>
+<li><a href="../ut03/ut0302.html">3.2.4 La clase java.util.Arrays</a></li>
+<li><a href="../ut03/ut0307.html">3.2.5 Colecciones dinámicas: ArrayList</a></li>
+<li><a href="../ut03/ut0308.html">3.3 Diccionarios y Mapas (HashMap)</a></li>
+<li><a href="../ut03/ut0305.html">3.4 Algoritmos recursivos (Recursividad)</a></li>
+<li><a href="../ut03/ut03actividades.html">Actividades prácticas UT3</a></li>
+<li><a href="../ut03/ut03retos.html">Retos de programación UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Programación Orientada a Objetos (POO)</summary>
+<ul>
+<li><a href="../ut04/index.html" class="unit-full-link">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut04ras.html">4.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Introducción al paradigma orientado a objetos</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Principios fundamentales de la POO</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Objetos y clases</a></li>
+<li><a href="../ut04/ut0404.html">4.4.1 Estructura y miembros de una clase</a></li>
+<li><a href="../ut04/ut0405.html">4.4.2 Atributos y constantes</a></li>
+<li><a href="../ut04/ut0406.html">4.4.3 Métodos, parámetros y sobrecarga</a></li>
+<li><a href="../ut04/ut0407.html">4.4.4 Constructores y palabra clave this</a></li>
+<li><a href="../ut04/ut0408.html">4.4.5 Encapsulación y modificadores de visibilidad</a></li>
+<li><a href="../ut04/ut0409.html">4.5 Instanciación y ciclo de vida de los objetos</a></li>
+<li><a href="../ut04/ut0410.html">4.6 Empaquetado de clases y librerías (packages)</a></li>
+<li><a href="../ut04/ut04actividades.html">Actividades prácticas UT4</a></li>
+<li><a href="../ut04/ut04retos.html">Retos de programación UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Composición, Herencia y Polimorfismo</summary>
+<ul>
+<li><a href="../ut05/index.html" class="unit-full-link">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05ras.html">5.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Relaciones entre clases (Asociación, Agregación, Herencia)</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Composición de clases</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Herencia y jerarquías de clases (extends, super)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Clases y métodos abstractos (abstract)</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Interfaces (interface, implements)</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Polimorfismo y ligadura dinámica</a></li>
+<li><a href="../ut05/ut05actividades.html">Actividades prácticas UT5</a></li>
+<li><a href="../ut05/ut05retos.html">Retos de programación UT5</a></li>
+<li><a href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5</a></li>
+<li><a href="../ut05/ut05pi.html">Proyecto Intermodular UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Lectura y escritura de información</summary>
+<ul>
+<li><a href="../ut06/index.html" class="unit-full-link">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut06ras.html">6.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Streams (Flujos de entrada y salida)</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Lectura y escritura de ficheros</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Serialización de objetos</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Comunicación por red: Sockets</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Manejo del sistema de ficheros y carpetas (File / NIO)</a></li>
+<li><a href="../ut06/ut06actividades.html">Actividades prácticas UT6</a></li>
+<li><a href="../ut06/ut06retos.html">Retos de programación UT6</a></li>
+<li><a href="../ut06/ut06pi.html">Proyecto Intermodular UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Acceso a bases de datos</summary>
+<ul>
+<li><a href="../ut07/index.html" class="unit-full-link">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut07ras.html">7.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Introducción a la persistencia en bases de datos</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Arquitectura y conectores JDBC</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Conexión a bases de datos desde Java</a></li>
+<li><a href="../ut07/ut0704.html">7.4 ResultSet: Navegabilidad y concurrencia</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Consultas de selección (SELECT / executeQuery)</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Modificación de registros (UPDATE)</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Inserción de registros (INSERT)</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Borrado de registros (DELETE)</a></li>
+<li><a href="../ut07/ut0709.html">7.9 Sentencias precompiladas (PreparedStatement)</a></li>
+<li><a href="../ut07/ut0710.html">7.10 Trabajar con SQLite en Java</a></li>
+<li><a href="../ut07/ut0711.html">7.11 Patrón de diseño DAO (Data Access Object)</a></li>
+<li><a href="../ut07/ut0712.html">7.12 Repaso global de acceso a datos</a></li>
+<li><a href="../ut07/ut07actividades.html">Actividades prácticas UT7</a></li>
+<li><a href="../ut07/ut07retos.html">Retos de programación UT7</a></li>
+<li><a href="../ut07/ut07pi.html">Proyecto Intermodular UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📚 Fuentes de información</a></li></ul>
+    </aside>
+
+    <main class="content">
+      <span class="up-badge">1a Avaluació · RA3 (a-i) · Condicionals, Bucles i Excepcions</span>
+      <h1>2.3 Estructuras de selección</h1>
+
+<p>¿Cómo conseguimos que nuestros programas puedan tomar decisiones? Para comenzar, lo haremos a través de las estructuras de selección. Estas estructuras constan de una sentencia especial de decisión y de un conjunto de secuencias de instrucciones.</p>
+<p>El funcionamiento es sencillo, la sentencia de decisión será evaluada y ésta devolverá un valor (verdadero o falso), en función del valor devuelto se ejecutará una secuencia de instrucciones u otra.</p>
+<div class="admonition java">
+<p class="admonition-title">Ejemplo</p>
+<p>Por ejemplo, si el valor de una variable es mayor o igual que 5 se imprime por pantalla la palabra APROBADO y si es menor, se imprime SUSPENSO. Para este ejemplo, la comprobación del valor de la variable será la sentencia especial de decisión. La impresión de la palabra APROBADO será una secuencia de instrucciones y la impresión de la palabra SUSPENSO será otra. Cada secuencia estará asociada a cada uno de los resultados que puede arrojar la evaluación de la sentencia especial de decisión.</p>
+</div>
+<p>Las estructuras de selección se dividen en:</p>
+<ul>
+<li>
+<p>Estructuras de selección simples o estructura <strong>if</strong>.</p>
+</li>
+<li>
+<p>Estructuras de selección compuesta o estructura <strong>if­else</strong>.</p>
+</li>
+<li>
+<p>Estructuras de selección basadas en el <strong>operador condicional</strong>.</p>
+</li>
+<li>
+<p>Estructuras de selección múltiples o estructura <strong>switch</strong>.</p>
+</li>
+</ul>
+<p>A continuación, detallaremos las características y funcionamiento de cada una de ellas. Es importante que a través de los ejemplos que vamos a ver, puedas determinar en qué circunstancias utilizar cada una de estas estructuras. Aunque un mismo problema puede ser resuelto con diferentes estructuras e incluso, con diferentes combinaciones de éstas.</p>
+<h2 id="1-estructura-if-if-else-if-else-if">1. Estructura <code>if</code>, <code>if ­else</code>, <code>if else if</code></h2>
+<p>La estructura <code>if</code> es una estructura de selección o estructura condicional, en la que se evalúa una expresión lógica o sentencia de decisión y en función del resultado, se ejecuta una sentencia o un bloque de éstas.
+La estructura <code>if</code> puede presentarse de las siguientes formas:</p>
+<h3 id="11-estructura-if-simple">1.1 Estructura <code>if</code> simple</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (expresión-lógica)
+    sentencia1;</code></pre>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (expresión-lógica)
+{
+    sentencia1;
+    sentencia2;
+    ...;
+    sentenciaN;
+}</code></pre>
+</div>
+<p>Si la evaluación de la expresión‐lógica ofrece un resultado verdadero, se ejecuta la sentencia1 o bien el bloque de sentencias asociado. Si el resultado de dicha evaluación es falso, no se ejecutará ninguna instrucción asociada a la estructura condicional.</p>
+<details class="admonition java" open="open">
+<summary>Ejemplo <code>if</code></summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Java</label><label for="__tabbed_1_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> edad = <span class="tok-bool">22</span>;
+<span class="tok-key">if</span> (edad &gt; <span class="tok-bool">18</span>) {
+    <span class="tok-key">System</span>.out.printf(<span class="tok-string">&quot;%d es mayor que 18\n&quot;</span>, edad);
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div style="text-align: left;"><img src="../../img/ut02/tabs_004.png" alt="ejemplo" style="zoom:90%; border: 2px solid #fff2c9;" /></div></p>
+</div>
+</div>
+</div>
+</details>
+<h3 id="12-estructura-if-de-doble-alternativa">1.2 Estructura <code>if</code> de doble alternativa</h3>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (expresión-lógica)
+    sentencia1;
+<span class="tok-key">else</span>
+    sentencia2;</code></pre>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (expresión-lógica){
+    sentencia1;
+    ...;
+    sentenciaN;
+} <span class="tok-key">else</span> {
+    sentencia1;
+    ...;
+    sentenciaN;
+}</code></pre>
+</div>
+<p>Si la evaluación de la expresión‐lógica ofrece un resultado verdadero, se ejecutará la primera sentencia o el primer bloque de sentencias. Si, por el contrario, la evaluación de la expresión‐lógica ofrece un resultado falso, no se ejecutará la primera sentencia o el primer bloque y sí se ejecutará la segunda sentencia o el segundo bloque.</p>
+<div class="admonition note">
+<p class="admonition-title">Funcionamiento de un <code>if</code></p>
+<p>Haciendo una interpretación cercana al pseudocódigo tendríamos que si se cumple la condición (expresión lógica), se ejecutará un conjunto de instrucciones y si no se cumple, se ejecutará otro conjunto de instrucciones. </p>
+</div>
+<details class="admonition java" open="open">
+<summary>Ejemplo <code>if-else</code></summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Java</label><label for="__tabbed_2_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> temperatura = <span class="tok-bool">22</span>;
+<span class="tok-key">if</span> (temperatura &gt; <span class="tok-bool">25</span>) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Debemos abrigarnos!&quot;</span>);
+} <span class="tok-key">else</span> {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Voy a ponerme pantalón corto.&quot;</span>);
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div style="text-align: left;"><img src="../../img/ut02/tabs_005.png" alt="ejemplo" style="zoom:90%; border: 2px solid #cccccc;" /></div></p>
+</div>
+</div>
+</div>
+</details>
+<p>Hay que tener en cuenta que la cláusula <code>else</code> de la sentencia <code>if</code> no es obligatoria. En algunos casos no necesitaremos utilizarla, pero sí se recomienda cuando es necesario llevar a cabo alguna acción en el caso de que la expresión lógica no se cumpla.</p>
+<p>En aquellos casos en los que no existe cláusula <code>else</code>, si la expresión lógica es falsa, simplemente se continuarán ejecutando las siguientes sentencias que aparezcan bajo la estructura condicional <code>if</code>.</p>
+<p>Los condicionales <code>if</code> e <code>if-else</code> pueden anidarse, de tal forma que dentro de un bloque de sentencias puede incluirse otro <code>if</code> o <code>if-else</code>. El nivel de anidamiento queda a criterio del programador, pero si éste es demasiado profundo podría provocar problemas de eficiencia y legibilidad en el código. En otras ocasiones, un nivel de anidamiento excesivo puede denotar la necesidad de utilización de otras estructuras de selección más adecuadas.</p>
+<p>Cuando se utiliza anidamiento de este tipo de estructuras, es necesario poner especial atención en saber a qué <code>if</code> está asociada una cláusula <code>else</code>. Normalmente, un <code>else</code> estará asociado con el <code>if</code> inmediatamente superior o más cercano que exista dentro del mismo bloque y que no se encuentre ya asociado a otro <code>else</code>.</p>
+<p><strong>Estructura <code>if else if</code>.</strong></p>
+<p>Esta estructura es una alternativa a la anidación de sentencias <code>if else</code> funciona de modo que si se cumple una condición ejecuta unas sentencias y el caso contrario comprueba otra condición ejecutando unas sentencias si se cumple y así sucesivamente. Veamos un ejemplo con <code>if</code> anidados:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (condicion1) {
+    sentencias1;
+} <span class="tok-key">else</span> {
+    <span class="tok-key">if</span> (condicion2) {
+        sentencias2;
+    } <span class="tok-key">else</span> {
+        <span class="tok-key">if</span> (condicion3) {
+            sentencias3;
+        } <span class="tok-key">else</span> {
+            sentencias4;
+        }
+    }
+}</code></pre>
+</div>
+<p>El mismo ejemplo usando <code>if else if</code> quedaría de este modo:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (condicion1) {
+    sentencias1;
+} <span class="tok-key">else</span> <span class="tok-key">if</span> (condicion2) {
+    sentencias2;
+} <span class="tok-key">else</span> <span class="tok-key">if</span> (condicion3) {
+    sentencias3;
+} <span class="tok-key">else</span> {
+    sentencias4;
+}</code></pre>
+</div>
+<details class="admonition java" open="open">
+<summary>Ejemplo <code>if-else-if</code></summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Java</label><label for="__tabbed_3_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> temperatura = <span class="tok-bool">3</span>;
+<span class="tok-key">boolean</span> nevando = <span class="tok-bool">true</span>;
+
+<span class="tok-key">if</span> (temperatura &gt; <span class="tok-bool">25</span>) {
+    <span class="tok-comment">// Si la temperatura es mayor que 25 ...</span>
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;A la playa!!!&quot;</span>);
+
+} <span class="tok-key">else</span> <span class="tok-key">if</span> (temperatura &gt; <span class="tok-bool">15</span>) {
+    <span class="tok-comment">// si es mayor que 15 y no es mayor que 25 ..</span>
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;A la montaña!!!&quot;</span>);
+
+} <span class="tok-key">else</span> <span class="tok-key">if</span> (temperatura &lt; <span class="tok-bool">5</span> &amp;&amp; nevando) {
+    <span class="tok-comment">// si es menor que 5 y esta nevando y no es mayor que 15 ni mayor que 25</span>
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;A esquiar!!!&quot;</span>);
+
+} <span class="tok-key">else</span> {
+    <span class="tok-comment">// si la tempera  no es mayor que 25 ni que 15 ni menor que 5 si esta nevando</span>
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;A descansar... zZz&quot;</span>);
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div style="text-align: left;"><img src="../../img/ut02/tabs_006.png" alt="ejemplo" style="zoom:90%; border: 2px solid #cccccc;" /></div></p>
+</div>
+</div>
+</div>
+</details>
+<details class="admonition java" open="open">
+<summary>Ejemplo completo <code>if</code> e <code>if-else</code></summary>
+<p>Para completar la información que debes saber sobre las estructuras <code>if</code> e <code>if‐else</code>, observa el siguiente código. En él podrás analizar el programa que realiza el cálculo de la nota de un examen de tipo test. Además de calcular el valor de la nota, se ofrece como salida la calificación no numérica de dicho examen. Para obtenerla, se combinarán las diferentes estructuras condicionales aprendidas hasta ahora.
+Presta especial atención a los comentarios incorporados en el código fuente, así como a la forma de combinar las estructuras condicionales y a las expresiones lógicas utilizadas en ellas.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Java</label><label for="__tabbed_4_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> Sentencias_Condicionales {
+    <span class="tok-comment">/* Realizar el cálculo de la nota de un examen de tipo test.</span>
+<span class="tok-comment">     * Para ello, tendremos en cuenta el númerototal de pregunta, </span>
+<span class="tok-comment">     * los aciertos y los errores. Dos errores anulan una respuesta correcta.</span>
+<span class="tok-comment">     * Finalmente, se muestra por pantalla la nota obtenida, así</span>
+<span class="tok-comment">     * como su calificación no numérica.</span>
+<span class="tok-comment">     *</span>
+<span class="tok-comment">     * La obtención de la calificación no numérica se ha realizado</span>
+<span class="tok-comment">     * combinando varias estructuras condicionales, mostrando expresiones</span>
+<span class="tok-comment">     * lógicas compuestas, así como anidamiento.</span>
+<span class="tok-comment">     */</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// Declaración e inicialización de variables</span>
+        <span class="tok-key">int</span> num_aciertos = <span class="tok-bool">12</span>;
+        <span class="tok-key">int</span> num_errores = <span class="tok-bool">3</span>;
+        <span class="tok-key">int</span> num_preguntas = <span class="tok-bool">20</span>;
+        <span class="tok-key">float</span> nota = <span class="tok-bool">0</span>;
+        <span class="tok-key">String</span> calificacion = <span class="tok-string">&quot;&quot;</span>;
+
+        <span class="tok-comment">//Procesamiento de datos</span>
+        nota = ((num_aciertos - (num_errores / <span class="tok-bool">2</span>)) * <span class="tok-bool">10</span>) / num_preguntas;
+
+        <span class="tok-key">if</span> (nota &lt; <span class="tok-bool">5</span>) {
+            calificacion = <span class="tok-string">&quot;INSUFICIENTE&quot;</span>;
+        } <span class="tok-key">else</span> {
+            <span class="tok-comment">/* Cada expresión lógica de estos if está compuesta por dos</span>
+<span class="tok-comment">             * expresiones lógicas combinadas a través del operador Y o AND</span>
+<span class="tok-comment">             * que se representa con el símbolo &amp;&amp;. De tal manera, que para</span>
+<span class="tok-comment">             * que la expresión lógica se cumpla (sea verdadera) la variable</span>
+<span class="tok-comment">             * nota debe satisfacer ambas condiciones simultáneamente</span>
+<span class="tok-comment">             */</span>
+            <span class="tok-key">if</span> (nota &gt;= <span class="tok-bool">5</span> &amp;&amp; nota &lt; <span class="tok-bool">6</span>) {
+                calificacion = <span class="tok-string">&quot;SUFICIENTE&quot;</span>;
+            }
+            <span class="tok-key">if</span> (nota &gt;= <span class="tok-bool">6</span> &amp;&amp; nota &lt; <span class="tok-bool">7</span>) {
+                calificacion = <span class="tok-string">&quot;BIEN&quot;</span>;
+            }
+            <span class="tok-key">if</span> (nota &gt;= <span class="tok-bool">7</span> &amp;&amp; nota &lt; <span class="tok-bool">9</span>) {
+                calificacion = <span class="tok-string">&quot;NOTABLE&quot;</span>;
+            }
+            <span class="tok-key">if</span> (nota &gt;= <span class="tok-bool">9</span> &amp;&amp; nota &lt;= <span class="tok-bool">10</span>) {
+                calificacion = <span class="tok-string">&quot;SOBRESALIENTE&quot;</span>;
+            }
+        }
+
+        <span class="tok-comment">//Salida de información</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;La nota obtenida es: &quot;</span> + nota);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;y la calificación obtenida es: &quot;</span> + calificacion);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div style="text-align: left;"><img src="../../img/ut02/tabs_007.png" alt="ejemplo" style="zoom:90%; border: 2px solid #cccccc;" /></div></p>
+</div>
+</div>
+</div>
+</details>
+<h2 id="2-operador-ternario">2. Operador ternario <code>(?:)</code></h2>
+<p>El <strong>operador condicional (<code>? :</code>)</strong> evalúa una condición booleana y devuelve un valor si se cumple (<code>true</code>) u otro si no se cumple (<code>false</code>), todo en una única expresión:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>resultado = (condicion) ? valorSiVerdadero : valorSiFalso;</code></pre>
+</div>
+<p><strong>Condiciones:</strong></p>
+<ul>
+<li>
+<p>La condición debe ser una expresión booleana, es decir, que se evalúe como <code>true</code> o <code>false</code>.</p>
+</li>
+<li>
+<p>Si la condición se cumple (true), el operador devuelve el valor indicado después del signo de interrogación <code>?</code>.</p>
+</li>
+<li>
+<p>Si la condición no se cumple (false), devuelve el valor indicado después de los dos puntos <code>:</code>.</p>
+</li>
+<li>
+<p>El operador condicional puede utilizarse tanto para asignar valores a variables como dentro de expresiones más complejas.</p>
+</li>
+<li>
+<p>Los valores devueltos en ambas ramas (verdadero y falso) deben ser del mismo tipo o de tipos compatibles.</p>
+</li>
+</ul>
+<details class="admonition java" open="open">
+<summary>Ejemplo operador condicional <code>(?:)</code></summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Java</label><label for="__tabbed_5_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">int</span> numero = <span class="tok-bool">8</span>;
+    <span class="tok-key">String</span> resultado = (numero % <span class="tok-bool">2</span> == <span class="tok-bool">0</span>) ? <span class="tok-string">&quot;par&quot;</span> : <span class="tok-string">&quot;impar&quot;</span>;
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El número es &quot;</span> + resultado);</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div style="text-align: left;">El número es par</div></p>
+</div>
+</div>
+</div>
+</details>
+<h3 id="21-ternarios-anidados-e-indentacion-clean-code">2.1 Ternarios anidados e indentación (<em>Clean Code</em>)</h3>
+<p>Cuando necesitamos elegir entre <strong>tres o más opciones</strong>, podemos encadenar otro operador ternario después de los dos puntos (<code>:</code>). </p>
+<p>Para que el código sea legible y fácil de mantener, <strong>nunca lo escribas en una sola línea larga</strong>; indéntalo en varias líneas alineando los signos <code>?</code> y <code>:</code> como una escalera de decisión:</p>
+<details class="admonition java">
+<summary>Ejemplo: Indentación de ternarios anidados</summary>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> numero = <span class="tok-bool">0</span>;
+
+<span class="tok-comment">// ❌ Mal: difícil de leer en una sola línea</span>
+<span class="tok-comment">// String signo = (numero &gt; 0) ? &quot;Positivo&quot; : (numero &lt; 0) ? &quot;Negativo&quot; : &quot;Cero&quot;;</span>
+
+<span class="tok-comment">// ✅ Bien: indentado por niveles de decisión</span>
+<span class="tok-key">String</span> signo = (numero &gt; <span class="tok-bool">0</span>) ? <span class="tok-string">&quot;Positivo&quot;</span>
+             : (numero &lt; <span class="tok-bool">0</span>) ? <span class="tok-string">&quot;Negativo&quot;</span>
+             : <span class="tok-string">&quot;Cero&quot;</span>;
+
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El número es: &quot;</span> + signo);</code></pre>
+</div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Actividad <code>ClasificadorNotas</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Enunciado</label><label for="__tabbed_6_2">Ejemplo de ejecución</label><label for="__tabbed_6_3">Pista</label><label for="__tabbed_6_4">Entrega</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Escribe un programa en Java llamado <code>ClasificadorNotas.java</code> que pida al usuario una nota entera entre <code>0</code> y <code>10</code> por teclado (<code>Scanner</code>) y, <strong>utilizando únicamente el operador ternario (<code>? :</code>)</strong> (sin usar sentencias <code>if</code>), muestre por pantalla:</p>
+<ol>
+<li><strong>Ternario simple:</strong> Una variable <code>estado</code> que almacene <code>"Aprobado"</code> si la nota es mayor o igual a 5, o <code>"Suspendido"</code> en caso contrario.</li>
+<li><strong>Ternario anidado (indentado en varias líneas):</strong> Una variable <code>calificacion</code> que almacene:</li>
+<li><code>"Insuficiente"</code> si la nota es menor que 5.</li>
+<li><code>"Suficiente"</code> si es menor que 6.</li>
+<li><code>"Bien"</code> si es menor que 7.</li>
+<li><code>"Notable"</code> si es menor que 9.</li>
+<li><code>"Sobresaliente"</code> en caso contrario.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Introduce tu nota (<span class="tok-bool">0</span>-<span class="tok-bool">10</span>): <span class="tok-bool">7</span>
+Estado: Aprobado
+Calificación: Notable</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p>Si en el primer nivel ya has comprobado <code>nota &lt; 5</code>, en el siguiente escalón (<code>:</code>) ya sabes que la nota es como mínimo 5, por lo que basta con evaluar <code>nota &lt; 6</code>.</p>
+</div>
+<div class="tabbed-block">
+<p>Revisa que los nombres de clase y variables cumplan las convenciones de Java (<code>UpperCamelCase</code> y <code>lowerCamelCase</code>), comprueba la indentación en VSCode y <strong>sube el archivo <code>ClasificadorNotas.java</code> a la tarea correspondiente en Aules</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="3-estructura-switch">3. Estructura <code>switch</code></h2>
+<p>¿Qué podemos hacer cuando nuestro programa debe elegir entre más de dos alternativas? Una posible solución podría ser emplear estructuras if anidadas, aunque no siempre esta solución es la más eficiente. Cuando estamos ante estas situaciones podemos utilizar la estructura de selección múltiple <code>switch</code>. En la siguiente tabla se muestra tanto la sintaxis, como el funcionamiento de esta estructura.</p>
+<p><strong>Sintaxis:</strong></p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">switch</span> (expresion) {
+    <span class="tok-key">case</span> valor1:
+        sentencia1_1;
+        sentencia1_2;
+        ....
+        <span class="tok-key">break</span>;
+    <span class="tok-key">case</span> valor2:
+    ....
+        <span class="tok-key">case</span> valorN:
+        sentenciaN_1;
+        sentenciaN_2;
+        ....
+        <span class="tok-key">break</span>;
+    <span class="tok-key">default</span>:
+        sentencias-<span class="tok-key">default</span>;
+}</code></pre>
+</div>
+<p><strong>Condiciones:</strong></p>
+<ul>
+<li>Donde <em>expresión</em> debe ser del tipo <code>char</code>, <code>byte</code>, <code>short</code> o <code>int</code>, y las <em>constantes</em> de cada <code>case</code> deben ser de este tipo o de un tipo compatible.</li>
+<li>La <code>expresion</code> debe ir entre paréntesis.</li>
+<li>Cada <code>case</code> llevará asociado un <code>valor</code> y se finalizará con dos puntos (<code>:</code>).</li>
+<li>El bloque de sentencias asociado a la cláusula <code>default</code> puede finalizar con una sentencia de ruptura <code>break</code> o no.</li>
+</ul>
+<p><strong>Funcionamiento:</strong></p>
+<ul>
+<li>Las diferentes alternativas de esta estructura estarán precedidas de la cláusula <em>case</em> que se ejecutará cuando el valor asociado al case coincida con el valor obtenido al evaluar la expresión del switch.</li>
+<li>En las cláusulas <em>case</em>, no pueden indicarse expresiones condicionales, rangos de valores o listas de valores (otros lenguajes de programación sí lo permiten). Habrá que asociar una cláusula <em>case</em> a cada uno de los valores que deban ser tenidos en cuenta.</li>
+<li>La cláusula <em>default</em> será utilizada para indicar un caso por defecto, las sentencias asociadas a la cláusula <em>default</em> se ejecutarán si ninguno de los valores indicados en las cláusulas <em>case</em> coincide con el resultado de la evaluación de la expresión de la estructura switch.</li>
+<li>La cláusula <em>default</em> puede no existir, y por tanto, si ningún case ha sido activado finalizaría el switch.</li>
+<li>Cada cláusula <em>case</em> puede llevar asociadas una o varias sentencias, sin necesidad de delimitar dichos bloques por medio de llaves.</li>
+<li>En el momento en el que el resultado de la evaluación de la expresión coincide con alguno de los valores asociados a las cláusulas <em>case</em>, se ejecutarán todas las instrucciones asociadas hasta la aparición de una sentencia break de ruptura (la sentencia break se analizará en epígrafes posteriores).</li>
+</ul>
+<h3 id="31-expresiones-switch-mejoradas">3.1. Expresiones switch mejoradas</h3>
+<p>En las <a href="https://picodotdev.github.io/blog-bitix/2019/03/novedades-de-java-12/" target="_blank">novedades de Java 12</a> se añadió la posibilidad de los switch fueran expresiones que retornan un valor en vez de sentencias y se evita el uso de la palabra reservada break.</p>
+<details class="admonition java" open="open">
+<summary>Ejemplo <code>switch</code> mejorada</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Java</label><label for="__tabbed_7_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> entero = <span class="tok-bool">5</span>;
+
+<span class="tok-key">String</span> numericString = <span class="tok-key">switch</span> (entero) {
+    <span class="tok-key">case</span> <span class="tok-bool">0</span> -&gt; <span class="tok-string">&quot;cero&quot;</span>;
+    <span class="tok-key">case</span> <span class="tok-bool">1</span>, <span class="tok-bool">3</span>, <span class="tok-bool">5</span>, <span class="tok-bool">7</span>, <span class="tok-bool">9</span> -&gt; <span class="tok-string">&quot;impar&quot;</span>;
+    <span class="tok-key">case</span> <span class="tok-bool">2</span>, <span class="tok-bool">4</span>, <span class="tok-bool">6</span>, <span class="tok-bool">8</span>, <span class="tok-bool">10</span> -&gt; <span class="tok-string">&quot;par&quot;</span>;
+    <span class="tok-key">default</span> -&gt; <span class="tok-string">&quot;error&quot;</span>;
+};
+<span class="tok-key">System</span>.out.println(numericString); <span class="tok-comment">//impar</span></code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div style="text-align: left;"><img src="../../img/ut02/tabs_010.png" alt="ejemplo" style="zoom:90%; border: 2px solid #cccccc;" /></div></p>
+</div>
+</div>
+</div>
+</details>
+<p>En Java 13 en vez de únicamente el valor a retornar se permite crear bloques de sentencias para cada rama <code>case</code> y retornar el valor con la palabra reservada <code>yield</code>. En los bloques de sentencias puede haber algún cálculo más complejo que directamente retornar el valor deseado.</p>
+<details class="admonition java" open="open">
+<summary>Ejemplo <code>switch</code> con <code>yield</code></summary>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> entero2 = <span class="tok-bool">4</span>;
+
+<span class="tok-key">String</span> numericString2 = <span class="tok-key">switch</span> (entero2) {
+    <span class="tok-key">case</span> <span class="tok-bool">0</span> -&gt; {
+        <span class="tok-key">String</span> value = calculaCero();
+        yield value;
+    }
+    <span class="tok-key">case</span> <span class="tok-bool">1</span>, <span class="tok-bool">3</span>, <span class="tok-bool">5</span>, <span class="tok-bool">7</span>, <span class="tok-bool">9</span> -&gt; {
+        <span class="tok-key">String</span> value = calculaImpar();
+        yield value;
+    }
+
+    <span class="tok-key">case</span> <span class="tok-bool">2</span>, <span class="tok-bool">4</span>, <span class="tok-bool">6</span>, <span class="tok-bool">8</span>, <span class="tok-bool">10</span> -&gt; {
+        <span class="tok-key">String</span> value = calculaPar();
+        yield value;
+    }
+
+    <span class="tok-key">default</span> -&gt; {
+        <span class="tok-key">String</span> value = calculaDefecto();
+        yield value;
+    }
+};
+<span class="tok-key">System</span>.out.println(numericString); <span class="tok-comment">//calculaPar()</span></code></pre>
+</div>
+</details>
+<p>En resumen, se ha de comparar el valor de una expresión con un conjunto de constantes, si el valor de la expresión coincide con algún valor de dichas constantes, se ejecutarán los bloques de instrucciones asociados a cada una de ellas. Si no existiese coincidencia, se ejecutarían una serie de instrucciones por defecto.</p>
+<details class="admonition java" open="open">
+<summary>Ejemplo completo <code>switch</code></summary>
+<p>Comprueba el siguiente fragmento de código en el que se resuelve el cálculo de un examen de tipo test, utilizando la estructura <code>switch</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Java</label><label for="__tabbed_8_2">Resultado</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> P3_2_condicional_switch {
+
+    <span class="tok-comment">/*</span>
+<span class="tok-comment">     * Realizar el cálculo de la nota de un examen de tipo test. </span>
+<span class="tok-comment">     * Para ello, tendremos en cuenta el número total de preguntas, los aciertos y</span>
+<span class="tok-comment">     * los errores. Dos errores anulan una respuesta correcta.</span>
+<span class="tok-comment">     *</span>
+<span class="tok-comment">     * La nota que vamos a obtener será un número entero.</span>
+<span class="tok-comment">     *</span>
+<span class="tok-comment">     * Finalmente, se muestra por pantalla la nota obtenida, así como su</span>
+<span class="tok-comment">     * calificación no numérica.</span>
+<span class="tok-comment">     *</span>
+<span class="tok-comment">     * La obtención de la calificación no numérica se ha realizado utilizando la</span>
+<span class="tok-comment">     * estructura condicional múltiple o switch.</span>
+<span class="tok-comment">     *</span>
+<span class="tok-comment">     */</span>
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">// Declaración e inicialización de variables</span>
+        <span class="tok-key">int</span> num_aciertos = <span class="tok-bool">17</span>;
+        <span class="tok-key">int</span> num_errores = <span class="tok-bool">3</span>;
+        <span class="tok-key">int</span> num_preguntas = <span class="tok-bool">20</span>;
+        <span class="tok-key">int</span> nota = <span class="tok-bool">0</span>;
+        <span class="tok-key">String</span> calificacion = <span class="tok-string">&quot;&quot;</span>;
+        <span class="tok-comment">//Procesamiento de datos</span>
+        nota = ((num_aciertos - (num_errores / <span class="tok-bool">2</span>)) * <span class="tok-bool">10</span>) / num_preguntas;
+        <span class="tok-key">switch</span> (nota) {
+            <span class="tok-key">case</span> <span class="tok-bool">5</span>:
+                calificacion = <span class="tok-string">&quot;SUFICIENTE&quot;</span>;
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">6</span>:
+                calificacion = <span class="tok-string">&quot;BIEN&quot;</span>;
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">7</span>:
+                calificacion = <span class="tok-string">&quot;NOTABLE&quot;</span>;
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">8</span>:
+                calificacion = <span class="tok-string">&quot;NOTABLE&quot;</span>;
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">9</span>:
+                calificacion = <span class="tok-string">&quot;SOBRESALIENTE&quot;</span>;
+                <span class="tok-key">break</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">10</span>:
+                calificacion = <span class="tok-string">&quot;SOBRESALIENTE&quot;</span>;
+                <span class="tok-key">break</span>;
+            <span class="tok-key">default</span>:
+                calificacion = <span class="tok-string">&quot;INSUFICIENTE&quot;</span>;
+        }
+        <span class="tok-comment">//Salida de información</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;La nota obtenida es: &quot;</span> + nota);
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;y la calificación obtenida es: &quot;</span> + calificacion);
+
+        <span class="tok-comment">//Expresiones switch mejoradas JAVA 12</span>
+        <span class="tok-key">int</span> entero = <span class="tok-bool">5</span>;
+
+        <span class="tok-key">String</span> numericString = <span class="tok-key">switch</span> (entero) {
+            <span class="tok-key">case</span> <span class="tok-bool">0</span> -&gt; <span class="tok-string">&quot;cero&quot;</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">1</span>, <span class="tok-bool">3</span>, <span class="tok-bool">5</span>, <span class="tok-bool">7</span>, <span class="tok-bool">9</span> -&gt; <span class="tok-string">&quot;impar&quot;</span>;
+            <span class="tok-key">case</span> <span class="tok-bool">2</span>, <span class="tok-bool">4</span>, <span class="tok-bool">6</span>, <span class="tok-bool">8</span>, <span class="tok-bool">10</span> -&gt; <span class="tok-string">&quot;par&quot;</span>;
+            <span class="tok-key">default</span> -&gt; <span class="tok-string">&quot;error&quot;</span>;
+        };
+        <span class="tok-key">System</span>.out.println(numericString); <span class="tok-comment">//impar</span>
+
+        <span class="tok-comment">//Expresiones switch mejoradas JAVA 13</span>
+
+        <span class="tok-key">int</span> entero2 = <span class="tok-bool">4</span>;
+
+        <span class="tok-key">String</span> numericString2 = <span class="tok-key">switch</span> (entero2) {
+            <span class="tok-key">case</span> <span class="tok-bool">0</span> -&gt; {
+                <span class="tok-key">String</span> value = calculaCero();
+                yield value;
+            }
+            <span class="tok-key">case</span> <span class="tok-bool">1</span>, <span class="tok-bool">3</span>, <span class="tok-bool">5</span>, <span class="tok-bool">7</span>, <span class="tok-bool">9</span> -&gt; {
+                <span class="tok-key">String</span> value = calculaImpar();
+                yield value;
+            }
+
+            <span class="tok-key">case</span> <span class="tok-bool">2</span>, <span class="tok-bool">4</span>, <span class="tok-bool">6</span>, <span class="tok-bool">8</span>, <span class="tok-bool">10</span> -&gt; {
+                <span class="tok-key">String</span> value = calculaPar();
+                yield value;
+            }
+
+            <span class="tok-key">default</span> -&gt; {
+                <span class="tok-key">String</span> value = calculaDefecto();
+                yield value;
+            }
+        };
+        <span class="tok-key">System</span>.out.println(numericString); <span class="tok-comment">//calculaPar()</span>
+    }
+    <span class="tok-key">static</span> <span class="tok-key">String</span> calculaCero() {<span class="tok-key">return</span> <span class="tok-string">&quot;&quot;</span>;};
+    <span class="tok-key">static</span> <span class="tok-key">String</span> calculaImpar() {<span class="tok-key">return</span> <span class="tok-string">&quot;&quot;</span>;};
+    <span class="tok-key">static</span> <span class="tok-key">String</span> calculaPar() {<span class="tok-key">return</span> <span class="tok-string">&quot;&quot;</span>;};
+    <span class="tok-key">static</span> <span class="tok-key">String</span> calculaDefecto() {<span class="tok-key">return</span> <span class="tok-string">&quot;&quot;</span>;};
+}</code></pre>
+</div>
+</div>
+<div class="tabbed-block">
+<p><div style="text-align: left;"><img src="../../img/ut02/tabs_009.png" alt="ejemplo" style="zoom:90%; border: 2px solid #cccccc;" /></div></p>
+</div>
+</div>
+</div>
+</details>
+      <div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0202.html">⬅️ 2.2 Sentencias y bloques</a>
+<a class="page-nav-btn" href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for) ➡️</a>
+</div>
+    </main>
+  </div>
+  
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiado';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

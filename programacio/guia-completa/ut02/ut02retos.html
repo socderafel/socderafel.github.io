@@ -1,0 +1,2256 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Retos de programación UT2 — Programació (1r DAW)</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
+  <style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.4rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.6rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    /* Admonitions Material */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+      cursor: pointer;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning, details.admonition.warning {
+      border-left-color: #ff9100;
+      background-color: #fffbf0;
+    }
+    .admonition.warning .admonition-title, details.admonition.warning > summary {
+      color: #b75e00;
+      background-color: #fff3d6;
+    }
+    .admonition.tip, .admonition.ayuda, details.admonition.tip, details.admonition.ayuda {
+      border-left-color: #00bfa5;
+      background-color: #f0faf8;
+    }
+    .admonition.tip .admonition-title, .admonition.ayuda .admonition-title,
+    details.admonition.tip > summary, details.admonition.ayuda > summary {
+      color: #004d40;
+      background-color: #e0f5f2;
+    }
+    .admonition.exercise, .admonition.question, .admonition.solución,
+    details.admonition.exercise, details.admonition.question, details.admonition.solución {
+      border-left-color: #00c853;
+      background-color: #f2faf4;
+    }
+    .admonition.exercise .admonition-title, .admonition.question .admonition-title, .admonition.solución .admonition-title,
+    details.admonition.exercise > summary, details.admonition.question > summary, details.admonition.solución > summary {
+      color: #1b5e20;
+      background-color: #e2f7e7;
+    }
+    .admonition.danger, details.admonition.danger {
+      border-left-color: #ff1744;
+      background-color: #fff5f7;
+    }
+    .admonition.danger .admonition-title, details.admonition.danger > summary {
+      color: #b71c1c;
+      background-color: #ffe0e6;
+    }
+    [data-theme="dark"] .admonition.warning, [data-theme="dark"] details.admonition.warning,
+    [data-theme="dark"] .admonition.tip, [data-theme="dark"] details.admonition.tip,
+    [data-theme="dark"] .admonition.exercise, [data-theme="dark"] details.admonition.exercise,
+    [data-theme="dark"] .admonition.question, [data-theme="dark"] details.admonition.question,
+    [data-theme="dark"] .admonition.solución, [data-theme="dark"] details.admonition.solución,
+    [data-theme="dark"] .admonition.danger, [data-theme="dark"] details.admonition.danger {
+      background-color: #0f172a;
+    }
+    [data-theme="dark"] .admonition.warning .admonition-title, [data-theme="dark"] details.admonition.warning > summary,
+    [data-theme="dark"] .admonition.tip .admonition-title, [data-theme="dark"] details.admonition.tip > summary,
+    [data-theme="dark"] .admonition.exercise .admonition-title, [data-theme="dark"] details.admonition.exercise > summary,
+    [data-theme="dark"] .admonition.question .admonition-title, [data-theme="dark"] details.admonition.question > summary,
+    [data-theme="dark"] .admonition.solución .admonition-title, [data-theme="dark"] details.admonition.solución > summary,
+    [data-theme="dark"] .admonition.danger .admonition-title, [data-theme="dark"] details.admonition.danger > summary {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    /* Bloques de código tipo Terminal elegante (Formato Pepe) */
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 65px;
+    }
+    .terminal-dots .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+    .terminal-box code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+    .tok-cmd { color: #89b4fa; font-weight: 600; }
+    .tok-string { color: #a6e3a1; }
+    .tok-comment { color: #6c7086; font-style: italic; }
+    .tok-key { color: #cba6f7; font-weight: 600; }
+    .tok-bool { color: #fab387; font-weight: 600; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    img {
+      border: 2px dashed #94a3b8;
+      background-color: #f8fafc;
+      padding: 8px;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <span>☕ Programació — 1r DAW (IES Mestre Ramón Esteve)</span>
+      <a href="../../">⬅️ Tornar a l'Índex Markdown</a>
+      <a href="../../../">🏠 Portal Docent</a>
+    </div>
+    <div class="actions">
+      <a href="../../ut02/ut02retos.md" class="btn-toggle">📄 Versió Markdown</a>
+      <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="🔍 Filtrar apartats..." oninput="filterSidebar(this)">
+<ul><li><a href="../index.html">🏠 <strong>Inici Guia Interactiva</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Prerrequisitos y Configuración</summary>
+<ul>
+<li><a href="../ut00/index.html" class="unit-full-link">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducción</a></li>
+<li><a href="../ut00/ut0002.html">0.2 GitHub</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Git</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Visual Studio Code</a></li>
+<li><a href="../ut00/ut0005.html">0.5 GitHub Desktop</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Estructura de programas informáticos</summary>
+<ul>
+<li><a href="../ut01/index.html" class="unit-full-link">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01ras.html">1.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Piensa como un programador y diseña algoritmos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Herramientas útiles y E/S por consola</a></li>
+<li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
+<li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
+<li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
+<li><a href="../ut01/ut01trazas.html">Trazas de ejecución UT1</a></li>
+<li><a href="../ut01/ut01pi.html">Proyecto Intermodular UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open>
+<summary>UT2 — Estructuras de control</summary>
+<ul>
+<li><a href="../ut02/index.html" class="unit-full-link">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02ras.html">2.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Introducción a las estructuras de control</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Sentencias y bloques</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Estructuras de selección (if-else, switch)</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Sentencias de salto (break, continue, return)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Control y manejo de excepciones (try-catch)</a></li>
+<li><a href="../ut02/ut0207.html">Ejemplos guiados UT2</a></li>
+<li><a href="../ut02/ut02actividades.html">Actividades prácticas UT2</a></li>
+<li><a href="../ut02/ut02retos.html" class="active">Retos de programación UT2</a></li>
+<li><a href="../ut02/ut02trazas.html">Trazas de ejecución UT2</a></li>
+<li><a href="../ut02/ut02pi.html">Proyecto Intermodular UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Tipos avanzados de datos</summary>
+<ul>
+<li><a href="../ut03/index.html" class="unit-full-link">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03ras.html">3.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut03/ut0306.html">3.1 Introducción a las estructuras de datos</a></li>
+<li><a href="../ut03/ut0301.html">3.2.1 Uso de arrays unidimensionales</a></li>
+<li><a href="../ut03/ut0303.html">3.2.2 Recorrido, búsqueda y ordenación en arrays</a></li>
+<li><a href="../ut03/ut0304.html">3.2.3 Arrays bidimensionales y multidimensionales (Matrices)</a></li>
+<li><a href="../ut03/ut0302.html">3.2.4 La clase java.util.Arrays</a></li>
+<li><a href="../ut03/ut0307.html">3.2.5 Colecciones dinámicas: ArrayList</a></li>
+<li><a href="../ut03/ut0308.html">3.3 Diccionarios y Mapas (HashMap)</a></li>
+<li><a href="../ut03/ut0305.html">3.4 Algoritmos recursivos (Recursividad)</a></li>
+<li><a href="../ut03/ut03actividades.html">Actividades prácticas UT3</a></li>
+<li><a href="../ut03/ut03retos.html">Retos de programación UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Programación Orientada a Objetos (POO)</summary>
+<ul>
+<li><a href="../ut04/index.html" class="unit-full-link">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut04ras.html">4.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Introducción al paradigma orientado a objetos</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Principios fundamentales de la POO</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Objetos y clases</a></li>
+<li><a href="../ut04/ut0404.html">4.4.1 Estructura y miembros de una clase</a></li>
+<li><a href="../ut04/ut0405.html">4.4.2 Atributos y constantes</a></li>
+<li><a href="../ut04/ut0406.html">4.4.3 Métodos, parámetros y sobrecarga</a></li>
+<li><a href="../ut04/ut0407.html">4.4.4 Constructores y palabra clave this</a></li>
+<li><a href="../ut04/ut0408.html">4.4.5 Encapsulación y modificadores de visibilidad</a></li>
+<li><a href="../ut04/ut0409.html">4.5 Instanciación y ciclo de vida de los objetos</a></li>
+<li><a href="../ut04/ut0410.html">4.6 Empaquetado de clases y librerías (packages)</a></li>
+<li><a href="../ut04/ut04actividades.html">Actividades prácticas UT4</a></li>
+<li><a href="../ut04/ut04retos.html">Retos de programación UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Composición, Herencia y Polimorfismo</summary>
+<ul>
+<li><a href="../ut05/index.html" class="unit-full-link">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05ras.html">5.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Relaciones entre clases (Asociación, Agregación, Herencia)</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Composición de clases</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Herencia y jerarquías de clases (extends, super)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Clases y métodos abstractos (abstract)</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Interfaces (interface, implements)</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Polimorfismo y ligadura dinámica</a></li>
+<li><a href="../ut05/ut05actividades.html">Actividades prácticas UT5</a></li>
+<li><a href="../ut05/ut05retos.html">Retos de programación UT5</a></li>
+<li><a href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5</a></li>
+<li><a href="../ut05/ut05pi.html">Proyecto Intermodular UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Lectura y escritura de información</summary>
+<ul>
+<li><a href="../ut06/index.html" class="unit-full-link">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut06ras.html">6.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Streams (Flujos de entrada y salida)</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Lectura y escritura de ficheros</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Serialización de objetos</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Comunicación por red: Sockets</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Manejo del sistema de ficheros y carpetas (File / NIO)</a></li>
+<li><a href="../ut06/ut06actividades.html">Actividades prácticas UT6</a></li>
+<li><a href="../ut06/ut06retos.html">Retos de programación UT6</a></li>
+<li><a href="../ut06/ut06pi.html">Proyecto Intermodular UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Acceso a bases de datos</summary>
+<ul>
+<li><a href="../ut07/index.html" class="unit-full-link">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut07ras.html">7.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Introducción a la persistencia en bases de datos</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Arquitectura y conectores JDBC</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Conexión a bases de datos desde Java</a></li>
+<li><a href="../ut07/ut0704.html">7.4 ResultSet: Navegabilidad y concurrencia</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Consultas de selección (SELECT / executeQuery)</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Modificación de registros (UPDATE)</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Inserción de registros (INSERT)</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Borrado de registros (DELETE)</a></li>
+<li><a href="../ut07/ut0709.html">7.9 Sentencias precompiladas (PreparedStatement)</a></li>
+<li><a href="../ut07/ut0710.html">7.10 Trabajar con SQLite en Java</a></li>
+<li><a href="../ut07/ut0711.html">7.11 Patrón de diseño DAO (Data Access Object)</a></li>
+<li><a href="../ut07/ut0712.html">7.12 Repaso global de acceso a datos</a></li>
+<li><a href="../ut07/ut07actividades.html">Actividades prácticas UT7</a></li>
+<li><a href="../ut07/ut07retos.html">Retos de programación UT7</a></li>
+<li><a href="../ut07/ut07pi.html">Proyecto Intermodular UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📚 Fuentes de información</a></li></ul>
+    </aside>
+
+    <main class="content">
+      <span class="up-badge">1a Avaluació · RA3 (a-i) · Condicionals, Bucles i Excepcions</span>
+      <h1 id="retos">Retos</h1>
+<div class="admonition vscode">
+<p class="admonition-title">Empaquetar retos</p>
+<p>Empaqueta las actividades, dentro de la carpeta <strong><code>ut02</code></strong>, en la carpeta <strong><code>retos</code></strong>.</p>
+<p>Las actividades programadas en esta sección <strong>Retos</strong> no son obligatorias.</p>
+</div>
+<h3 id="reto-01">Reto 01</h3>
+<p>Modifica el programa para que, en lugar de hacer un descuento del <em>8%</em> si la compra es de <em>100 €</em> o más, aplique una penalización de <em>2 €</em> si el precio es inferior a <em>30 €</em>.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+<span class="tok-comment">//Un programa que calcula descuento.</span>
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> Descuento {
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">float</span> DESCOMPTE = <span class="tok-bool">8</span>;
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">float</span> COMPRA_MIN = <span class="tok-bool">100</span>;
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-key">Scanner</span> lector = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+    <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Cuál es el precio del producto, en euros? &quot;</span>);
+    <span class="tok-key">float</span> preu = lector.nextFloat();
+    lector.nextLine();
+    <span class="tok-key">if</span> (preu &gt;= COMPRA_MIN) {
+      <span class="tok-key">float</span> descompteFet = preu * DESCOMPTE / <span class="tok-bool">100</span>;
+      preu = preu - descompteFet;
+      }
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El precio final para pagar es de &quot;</span> + preu + <span class="tok-string">&quot; euros.&quot;</span>);
+  }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-02">Reto 02</h3>
+<p>Modifica el programa <code>Adivina</code> para que, en lugar de un único valor secreto, haya dos. Para ganar, solo hay que acertar uno de los dos. </p>
+<p>La condición lógica que os hará falta ya no se puede resolver con una expresión compuesta por una única comparación. Será más compleja.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> Adivina {
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">int</span> VALOR_SECRET = <span class="tok-bool">4</span>;
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-key">Scanner</span> lector = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Comencemos el juego.&quot;</span>);
+    <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Adivina el valor entero, entre 0 y 10: &quot;</span>);
+    <span class="tok-key">int</span> valorUsuari = lector.nextInt();
+    lector.nextLine();
+    <span class="tok-key">if</span> (VALOR_SECRET == valorUsuari) {
+      <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Exacto! Era &quot;</span> + VALOR_SECRET + <span class="tok-string">&quot;.&quot;</span>);
+    } <span class="tok-key">else</span> {
+      <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Te has equivocado!&quot;</span>);
+    }
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Hemos terminado el juego.&quot;</span>);
+  }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-03">Reto 03</h3>
+<p>Modifica el ejemplo anterior (<code>Adivina</code>) para que  compruebe que el valor que ha introducido el usuario se encuentra dentro del rango de valores correcto (entre <em>0</em> y <em>10</em>).</p>
+<hr>
+
+<h3 id="reto-04">Reto 04</h3>
+<p>Aplica el mismo tipo de control sobre los datos de la entrada del ejemplo siguiente al ejercicio del reto 01.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> AdivinaControlErrorsEntrada {
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">int</span> VALOR_SECRET = <span class="tok-bool">4</span>;
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-key">Scanner</span> lector = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Comencemos el juego.&quot;</span>);
+    <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Adivina el valor entero, entre 0 y 10: &quot;</span>);
+    <span class="tok-key">boolean</span> tipusCorrecte = lector.hasNextInt();
+    <span class="tok-key">if</span> (tipusCorrecte) {
+       <span class="tok-comment">//Se ha escrito un entero correctamente. Ya se puede leer.</span>
+       <span class="tok-key">int</span> valorUsuari = lector.nextInt();
+       lector.nextLine();
+       <span class="tok-key">if</span> (VALOR_SECRET == valorUsuari) {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Exacto! Era &quot;</span> + VALOR_SECRET + <span class="tok-string">&quot;.&quot;</span>);
+       } <span class="tok-key">else</span> {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Te has equivocado!&quot;</span>);
+       }
+       <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Hemos terminado el juego.&quot;</span>);
+    } <span class="tok-key">else</span> {
+       <span class="tok-comment">//No se ha escrito un entero.</span>
+       <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El valor introducido no es un entero.&quot;</span>);
+    }
+  }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-05">Reto 05</h3>
+<p>Modifica el ejemplo para que primero pregunte al usuario cuántos caracteres "<em>-</em>" quieres escribir por pantalla, y entonces los escriba. </p>
+<p>Cuando pruebes el programa, no introduzcas un número muy alto!</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">//Un programa que escribe una línea con 100 caracteres ’ − ’.</span>
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> Linea {
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-comment">//Inicializamos un contador</span>
+    <span class="tok-key">int</span> i = <span class="tok-bool">0</span>;
+    <span class="tok-comment">//Ja hemos hecho esto 100 veces</span>
+    <span class="tok-key">while</span> (i &lt; <span class="tok-bool">100</span>) {
+      <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;−&quot;</span>);
+      <span class="tok-comment">//Lo hemos hecho una vez, sumamos 1 al contador</span>
+      i = i + <span class="tok-bool">1</span>;
+    }
+    <span class="tok-comment">//Forzamos un salto de línea</span>
+    <span class="tok-key">System</span>.out.println();
+  }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-06">Reto 06</h3>
+<p>Un contador tanto puede empezar a contar desde <em>0</em> e ir subiendo, como desde el final e ir disminuyendo como una cuenta atrás. </p>
+<p>Modifica este programa para que la tabla de multiplicar empiece mostrando el valor para <em>10</em> y vaya bajando hasta el <em>1</em>.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+<span class="tok-key">public</span> <span class="tok-key">class</span> TablaMultiplicar {
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-key">Scanner</span> lector = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+    <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Qué tabla de multiplicar quieres? &quot;</span>);
+    <span class="tok-key">int</span> taula = lector.nextInt();
+    lector.nextLine();
+    <span class="tok-key">int</span> i = <span class="tok-bool">1</span>;
+    <span class="tok-key">while</span> (i &lt;= <span class="tok-bool">10</span>) {
+       <span class="tok-key">int</span> resultat = taula * i;
+       <span class="tok-key">System</span>.out.println(taula + <span class="tok-string">&quot; * &quot;</span> + i + <span class="tok-string">&quot; = &quot;</span> + resultat);
+       i = i + <span class="tok-bool">1</span>;
+    }
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Esta ha estado la tabla del &quot;</span> + taula);
+  }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-07">Reto 07</h3>
+<p>El uso de contadores y acumuladores no es excluyente, sino que puede ser complementario. </p>
+<p>Piensa cómo se podrías modificar el programa para calcular el resultado del módulo y la división entera a la vez. </p>
+<p>Recuerda que la división entera simplemente sería contar cuántas veces se ha podido restar el divisor.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.util.<span class="tok-key">Scanner</span>;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> Modulo {
+
+  <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+     <span class="tok-key">Scanner</span> lector = <span class="tok-key">new</span> <span class="tok-key">Scanner</span>(<span class="tok-key">System</span>.in);
+     <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Cuál es el dividendo? &quot;</span>);
+     <span class="tok-key">int</span> dividend = lector.nextInt();
+     lector.nextLine();
+     <span class="tok-key">System</span>.out.print(<span class="tok-string">&quot;Cual es el divisor? &quot;</span>);
+     <span class="tok-key">int</span> divisor = lector.nextInt();
+     lector.nextLine();
+     <span class="tok-key">while</span> (dividend &gt;= divisor) {
+        dividend = dividend - divisor;
+         <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Bucle: por ahora el dividendo vale &quot;</span> + dividend + <span class="tok-string">&quot;.&quot;</span>);
+     }
+     <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El resultado final es &quot;</span> + dividend + <span class="tok-string">&quot;.&quot;</span>);
+  }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-08">Reto 08</h3>
+<p>Realiza un programa que vaya pidiendo números hasta que se introduzca un numero negativo y nos diga cuantos números se han introducido, la media de los impares y el mayor de los pares. </p>
+<p>El número negativo sólo se utiliza para indicar el final de la introducción de datos pero no se incluye en el cómputo.</p>
+<hr>
+
+<h3 id="reto-09-tablamult">Reto 09 <code>TablaMult</code></h3>
+<p>Escribe un programa que permita al usuario introducir un número <code>n</code> e imprima la tabla de multiplicar (del <em>0</em> al <em>10</em>) de todos los números entre <em>1</em> y <code>n</code>. </p>
+<p>Ejemplo: Si el usuario introduce en número <em>5</em>, el programa imprimiría:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Tabla del <span class="tok-bool">1</span>:
+<span class="tok-bool">1</span> por <span class="tok-bool">0</span>, <span class="tok-bool">0</span>
+<span class="tok-bool">1</span> por <span class="tok-bool">1</span>, <span class="tok-bool">1</span>
+<span class="tok-bool">1</span> por <span class="tok-bool">2</span>, <span class="tok-bool">2</span>
+...
+<span class="tok-bool">1</span> por <span class="tok-bool">10</span>, <span class="tok-bool">10</span>
+
+Tabla del <span class="tok-bool">2</span>:
+<span class="tok-bool">2</span> por <span class="tok-bool">0</span>, <span class="tok-bool">0</span>
+<span class="tok-bool">2</span> por <span class="tok-bool">1</span>, <span class="tok-bool">2</span>
+....
+<span class="tok-bool">2</span> por <span class="tok-bool">10</span>, <span class="tok-bool">20</span>
+
+Tabla del <span class="tok-bool">3</span>:
+...
+
+Tabla del <span class="tok-bool">5</span>:
+...
+<span class="tok-bool">5</span> por <span class="tok-bool">10</span>, <span class="tok-bool">50</span></code></pre>
+</div>
+<hr>
+
+<h3 id="reto-10-raiz">Reto 10 <code>Raiz</code></h3>
+<p>Se desea calcular la raíz cuadrada real de un número real cualquiera pedido inicialmente al usuario. Como dicha operación no está definida para los números negativos es necesario tratar, de algún modo, dicho posible error sin que el programa detenga su ejecución.</p>
+<hr>
+
+<h3 id="reto-11-intermediodetres">Reto 11 <code>IntermedioDeTres</code></h3>
+<p>Escribir un programa que muestre el intermedio de tres números introducidos por teclado.</p>
+<hr>
+
+<h3 id="reto-12-hora12">Reto 12 <code>Hora12</code></h3>
+<p>Escribir un programa que lea la hora de un dia en notación de 24 horas y la exprese en notación de 12 horas. Por ejemplo, si la entrada es 13 horas 45 minutos, la salida será 1:45 PM. La hora y los minutos se leerán de teclado de forma separada, primero la hora y luego los minutos.</p>
+<hr>
+
+<h3 id="reto-13-fechas">Reto 13 <code>Fechas</code></h3>
+<p>Escribir un programa que pida al usuario dos fechas (dia, mes y año), que se suponen correctas, y le muestre la menor de ellas. La fecha se mostrará en formato dd/mm/año. Utiliza un método mostrarFecha, para mostrar la fecha por pantalla. La fecha se mostrará siempre con dos dígitos para el dia, dos para el mes y cuatro para el año.</p>
+<hr>
+
+<h3 id="reto-14-diasdelmes">Reto 14 <code>DiasDelMes</code></h3>
+<p>Escribir un programa que lea de teclado el número de un mes (1 a 12) y visualice el número de días que tiene el mes. Hacerlo utilizando sentencias <code>if else</code>. Para hacer el programa, implementa un método en la clase que reciba un número de mes y devuelva el número de días que tiene el mes</p>
+<hr>
+
+<h3 id="reto-15-nombredelmes">Reto 15 <code>NombreDelMes</code></h3>
+<p>Escribir un programa que lea de teclado el número de un mes (1 a 12) y visualice el nombre del més (enero, febrero, etc). Hacerlo utilizando sentencias <code>if else</code>. Para hacer un programa, implementa un método en la clase que reciba un número de mes y devuelva el nombre del mes</p>
+<hr>
+
+<h3 id="reto-16-salario">Reto 16 <code>Salario</code></h3>
+<p>Escribir un programa que lea de teclado las horas trabajadas por un empleado en una semana y calcule su salario neto semanal, sabiendo que:</p>
+<ul>
+<li>
+<p>Las horas ordinarias se pagan a 6 €.</p>
+</li>
+<li>
+<p>Las horas extraordinarias se pagan a 10 €.</p>
+</li>
+<li>
+<p>Los impuestos a deducir son:<br/>
+     &nbsp;&nbsp;&nbsp; _ Un 2 % si el salario bruto semanal es menor o igual a 350 €<br/>
+     &nbsp;&nbsp;&nbsp; _ Un 10 % si el salario bruto semanal es superior a 350 €</p>
+</li>
+<li>
+<p>La jornada semanal ordinaria son 40 horas. El resto de horas trabajadas se considerarán horas extra.</p>
+</li>
+</ul>
+<hr>
+
+<h3 id="reto-17-signo">Reto 17 <code>Signo</code></h3>
+<p>Dados dos números enteros, num1 y num2, realizar un programa que escriba uno de los dos mensajes:</p>
+<ul>
+<li>"el producto de los dos números es positivo o nulo" o bien</li>
+<li>"el producto de los dos números es negativo".</li>
+</ul>
+<p>Resolverlo sin calcular el producto, sino teniendo en cuenta únicamente el signo de los números a multiplicar.</p>
+<hr>
+
+<h3 id="reto-18-comercio">Reto 18 <code>Comercio</code></h3>
+<p>Un comercio aplica un descuento del 8% por compras superiores a 40 euros. El descuento máximo será de 12 euros. Escribir un programa que solicite al usuario el importe de la compra y muestre un mensaje similar al siguiente:</p>
+<ul>
+<li>Importe de la compra 100 €</li>
+<li>Porcentaje de descuento aplicado: 8%</li>
+<li>Descuento aplicado: 8 €</li>
+<li>Cantidad a pagar: 92 €</li>
+</ul>
+<hr>
+
+<h3 id="reto-19-editorial">Reto 19 <code>Editorial</code></h3>
+<p>Una compañía editorial dispone de 2 tipos de publicaciones: libros y revistas. El precio de cada pedido depende del número de elementos solicitados al cual se le aplica un determinado descuento, que es diferente para libros y para revistas. La siguiente tabla muestra los descuentos a aplicar en función del número de unidades y del tipo de producto:</p>
+<table>
+<thead>
+<tr>
+<th>Cantidad pedida</th>
+<th>Libros</th>
+<th>Revistas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hasta 5 unidades</td>
+<td>0 % de descuento</td>
+<td>0 % de descuento</td>
+</tr>
+<tr>
+<td>De 6 a 10 unidades</td>
+<td>10 % de descuento</td>
+<td>15 % de descuento</td>
+</tr>
+<tr>
+<td>De 11 a 20 unidades</td>
+<td>15 % de descuento</td>
+<td>20 % de descuento</td>
+</tr>
+<tr>
+<td>A partir de 20 unidades</td>
+<td>20 % de descuento</td>
+<td>25 % de descuento</td>
+</tr>
+</tbody>
+</table>
+<p>Escribe un método <code>calcularCoste</code> que, recibiendo el tipo de publicación (<code>String</code>), que puede ser "libro" o "revista", el precio individual (<code>double</code>) y el número de unidades solicitado (<code>int</code>), devuelva el coste del pedido (aplicando el descuento correspondiente).
+Escribe un programa en el que el usuario indique cantidad y precio de revistas y cantidad y precio de libros que incluye un pedido, y muestre el coste del pedido</p>
+<hr>
+
+<h3 id="reto-20-taxi">Reto 20 <code>Taxi</code></h3>
+<p>Se desea calcular el coste del trayecto realizado en taxi en función de los kilómetros recorridos en las carreras metropolitanas de Valencia. Según las tarifas vigentes para el 2012, el coste se calcula de la siguiente manera:</p>
+<ul>
+<li>Días laborables en horario diurno (de 6:00 a 22:00h): 0.73 €/km.</li>
+<li>Días laborables en horario nocturno: 0.84 €/km.</li>
+<li>Sábados y domingos: 0.93 €/km.</li>
+<li>Además, la tarifa mínima diurna es de 2.95€ y la mínima nocturna de 4€.</li>
+</ul>
+<p>Escribir un programa que solicite al usuario:</p>
+<ul>
+<li>La hora (hora y minutos) en que se realizó el trayecto.</li>
+<li>El día de la semana (se supone que el usuario introduce un valor entre 1 para lunes y 7 para domingo)</li>
+<li>Los quilómetros recorridos.</li>
+</ul>
+<p>Y muestre el coste del trayecto.</p>
+<hr>
+
+<h3 id="reto-21-nombre">Reto 21 <code>Nombre</code></h3>
+<p>Escribir un programa en el que el usuario pueda escribir su nombre. El programa le dirá si la primera y la última letra del nombre coinciden o no. Pruébalo con "Ana", "ana", "Angel", "Amanda" y "David"</p>
+<hr>
+
+<h3 id="reto-22-validar">Reto 22 <code>Validar</code></h3>
+<p>Se desea implementar un programa que determine si dos datos <code>x</code> e <code>y</code> de entrada son válidos. Un par de datos es válido si es uno de los que aparecen en la siguiente tabla:</p>
+<table>
+<thead>
+<tr>
+<th>x :</th>
+<th>a</th>
+<th>a</th>
+<th>a</th>
+<th>a</th>
+<th>a</th>
+<th>b</th>
+<th>b</th>
+<th>b</th>
+<th>b</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y :</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>Se pide implementar un programa que lea de teclado el valor de <code>x</code> y el valor de <code>y</code>, e indique por pantalla "VALIDOS" o "NO VALIDOS". Se pide hacerlo de forma que no se utilice ninguna estructura condicional (if, switch,...), es decir, se calculará una expresión booleana que determine si x e y son válidos. Se procurará que la expresión booleana propuesta sea breve y concisa.</p>
+<hr>
+
+<h3 id="reto-23-potenciasde2">Reto 23 <code>PotenciasDe2</code></h3>
+<p>Dado un entero <code>n</code> introducido por el usuario<em>,</em> mostrar las <code>n</code> primeras potencias de 2. Es decir, 2<sup>0</sup>, 2<sup>1</sup>, 2<sup>2</sup>, 2<sup>3</sup>, …, 2<sup>n</sup>. </p>
+<p>Soluciona el ejercicio sin utilizar <code>Math.pow</code>. </p>
+<p>Ten en cuenta que, por ejemplo: <em>2<sup>3</sup> = 1 * 2 * 2 * 2</em>;  o que <em>2<sup>4</sup> = 1 * 2 * 2 * 2 * 2</em>.</p>
+<hr>
+
+<h3 id="reto-24-etapas">Reto 24 <code>Etapas</code></h3>
+<p>El ser humano pasa por una serie de etapas en su vida que, con carácter general se asocian a las edades que aparecen en la tabla siguiente.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Infancia</th>
+<th>Hasta los 10 años</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Pubertad</td>
+<td>De 11 a 14 años</td>
+</tr>
+<tr>
+<td style="text-align: left;">Adolescencia</td>
+<td>De 15 a 21 años</td>
+</tr>
+<tr>
+<td style="text-align: left;">Adultez</td>
+<td>De 22 a 55 años</td>
+</tr>
+<tr>
+<td style="text-align: left;">Vejez</td>
+<td>De 55 a 70 años</td>
+</tr>
+<tr>
+<td style="text-align: left;">Ancianidad</td>
+<td>A partir de los 71 años</td>
+</tr>
+</tbody>
+</table>
+<p>Escribe un programa en el que el usuario introduzca las edades de una serie de personas y calcule y muestre que porcentaje de personas que se encuentran en cada etapa. En primer lugar el programa pedirá el número de personas que participan en la muestra y a continuación solicitará la edad de cada una de ellas. </p>
+<p>El resultado será similar al siguiente:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Infancia: <span class="tok-bool">5</span>.<span class="tok-bool">3</span> %
+Pubertad: <span class="tok-bool">10</span>.<span class="tok-bool">7</span> %
+Adolescencia: <span class="tok-bool">21</span>.<span class="tok-bool">2</span> %
+...</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-25-primos">Reto 25 <code>Primos</code></h3>
+<p>Escribir un programa en el que el usuario escriba un número entero y se le diga todos los números primos entre 1 y el número introducido.</p>
+<hr>
+
+<h3 id="reto-26-esprimomejorada">Reto 26 <code>esPrimoMejorada</code></h3>
+<p>Haz una nueva versión del programa del ejercicio anterior teniendo en cuenta lo siguiente:  </p>
+<ul>
+<li>El único número par que es primo es el 2.</li>
+<li>Un número <em>n</em> no puede tener divisores mayores que n/2</li>
+</ul>
+<hr>
+
+<h3 id="reto-27-divisores">Reto 27 <code>Divisores</code></h3>
+<p>Escribir un programa que muestre los tres primeros divisores de un número n introducido por el usuario. Por ejemplo, si el usuario introduce el número 45, el programa mostrará los divisores 1, 3 y 5. Ten en cuenta que la posibilidad de que el número n tenga menos de 3 divisores. Prueba qué pasa si el usuario pide, por ejemplo, los tres primeros divisores de 7.  </p>
+<hr>
+
+<h3 id="reto-28-sumaserie">Reto 28 <code>SumaSerie</code></h3>
+<p>Dado un número <code>n</code>, introducido por el usuario, calcula y muestra por pantalla la siguiente suma 1/1+1/2+1/3+ ··· + 1/<code>n</code> </p>
+<hr>
+
+<h3 id="reto-29-numerocifras">Reto 29 <code>numeroCifras</code></h3>
+<p>Escribir un programa en el que el usuario introduzca un número entero cualquiera (positivo, negativo o cero) y se le diga cuantas cifras tiene. <br />
+Pistas: ¿Cuantas cifras tiene el nº 25688? ¿Cuántas veces podemos dividir el nº 25688 por 10 hasta que se hace cero? Cuidado, el nº 0 tiene una cifra.</p>
+<hr>
+
+<h3 id="reto-30-notasextremas">Reto 30 <code>NotasExtremas</code></h3>
+<p>Modificar el ejercicio anterior para que además calcule la nota máxima y la nota mínima.</p>
+<hr>
+
+<h3 id="reto-31-edades">Reto 31 <code>Edades</code></h3>
+<p>Programa que pida al usuario la edad de cinco personas. Si la suma de las edades es inferior a 200, el programa volverá a solicitar las 5 edades.</p>
+<hr>
+
+<h3 id="reto-32-notasporalumno">Reto 32 <code>NotasPorAlumno</code></h3>
+<p>Programa que pida al usuario las notas de <code>A</code> alumnos en <code>S</code> asignaturas, alumno por alumno. <code>A</code> y <code>S</code> se definirán en el programa como <code>CONSTANTES</code>.</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Alumno <span class="tok-bool">1</span>
+Introduce nota de asignatura <span class="tok-bool">1</span>: <span class="tok-bool">8</span>
+Introduce nota de asignatura <span class="tok-bool">2</span>:
+...
+Alumno <span class="tok-bool">2</span>
+Introduce nota de asignatura <span class="tok-bool">1</span>:
+...</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-33-notasporasignatura">Reto 33 <code>NotasPorAsignatura</code></h3>
+<p>Programa que pida al usuario las notas de <code>A</code> alumnos en <code>S</code> asignaturas, asignatura por asignatura. <code>A</code> y <code>S</code> se definirán en el programa como <code>CONSTANTES</code>. </p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Asignatura <span class="tok-bool">1</span>
+Introduce nota del alumno <span class="tok-bool">1</span>: 
+Introduce nota del alumno <span class="tok-bool">2</span>:
+...
+Asignatura <span class="tok-bool">2</span>
+Introduce nota del alumno <span class="tok-bool">1</span>:
+...</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-34-mediasporasignatura">Reto 34 <code>MediasPorAsignatura</code></h3>
+<p>Repite el ejercicio anterior haciendo que se muestre la media de cada asignatura</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Asignatura <span class="tok-bool">1</span>
+Introduce nota del alumno <span class="tok-bool">1</span>: 
+Introduce nota del alumno <span class="tok-bool">2</span>:
+...
+Media asignatura <span class="tok-bool">1</span>: <span class="tok-bool">8</span>.<span class="tok-bool">5</span> puntos
+
+Asignatura <span class="tok-bool">2</span>
+Introduce nota del alumno <span class="tok-bool">1</span>:
+...
+Media asignatura <span class="tok-bool">2</span>: <span class="tok-bool">6</span>.<span class="tok-bool">5</span> puntos
+...</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-35-primoshastan">Reto 35 <code>PrimosHastaN</code></h3>
+<p>Programa que solicite al usuario un numero <code>n</code> y muestre todos los números primos menores o iguales que <code>n</code>.</p>
+<hr>
+
+<h3 id="reto-36-combinarletras2">Reto 36 <code>CombinarLetras2</code></h3>
+<p>Escribir un programa que muestre todas las palabras de dos letras que se pueden formar con los cuatro primeros caracteres del alfabeto en minúsculas ('a', 'b', 'c', 'd'):</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>aa
+ab
+ac
+ad
+ba
+bb
+bc
+bd
+...
+da
+db
+dc
+dd</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-37-combinarletras3">Reto 37 <code>CombinarLetras3</code></h3>
+<p>Repite el ejercicio anterior mostrando palabras de tres letras</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>aaa
+aab
+...
+ddc
+ddd</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-38-letraaletra">Reto 38 <code>LetraALetra</code></h3>
+<p>Escribe un programa en el que se solicite al usuario un texto de forma repetida hasta que el usuario introduzca la cadena vacía. Con cada texto que introduzca el usuario se le mostrará carácter a carácter, cada carácter en una línea</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Introduce texto: Hola
+H
+o
+l
+a
+Introduce texto: Casa
+C
+a
+s
+a
+Introduce texto: 
+Fin del programa</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-39-dibujarfiguras1">Reto 39 <code>DibujarFiguras1</code></h3>
+<p>Escribe una clase que contenga los métodos que se indican a continuación. En el método main solicita al usuario las dimensiones de las figuras necesarias en cada caso y llama al método correspondiente para que se muestre por pantalla</p>
+<ol>
+<li>(<code>void dibRecAsteriscos (int ancho, int alto)</code> dibuja un rectángulo utilizando asteriscos, como el siguiente. En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>* * * * * * *
+* * * * * * *
+* * * * * * *</code></pre>
+</div>
+<ol>
+<li>(<code>void dibRecNumeros1 (int ancho, int alto)</code> dibuja un rectángulo utilizando números, como el siguiente. En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-bool">1</span> <span class="tok-bool">2</span> <span class="tok-bool">3</span> <span class="tok-bool">4</span> <span class="tok-bool">5</span> <span class="tok-bool">6</span> <span class="tok-bool">7</span>
+<span class="tok-bool">1</span> <span class="tok-bool">2</span> <span class="tok-bool">3</span> <span class="tok-bool">4</span> <span class="tok-bool">5</span> <span class="tok-bool">6</span> <span class="tok-bool">7</span>
+<span class="tok-bool">1</span> <span class="tok-bool">2</span> <span class="tok-bool">3</span> <span class="tok-bool">4</span> <span class="tok-bool">5</span> <span class="tok-bool">6</span> <span class="tok-bool">7</span></code></pre>
+</div>
+<ol>
+<li>(<code>void dibRecNumeros2 (int ancho, int alto)</code> dibuja un rectángulo utilizando números, como el siguiente. En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-bool">7</span> <span class="tok-bool">6</span> <span class="tok-bool">5</span> <span class="tok-bool">4</span> <span class="tok-bool">3</span> <span class="tok-bool">2</span> <span class="tok-bool">1</span>
+<span class="tok-bool">7</span> <span class="tok-bool">6</span> <span class="tok-bool">5</span> <span class="tok-bool">4</span> <span class="tok-bool">3</span> <span class="tok-bool">2</span> <span class="tok-bool">1</span>
+<span class="tok-bool">7</span> <span class="tok-bool">6</span> <span class="tok-bool">5</span> <span class="tok-bool">4</span> <span class="tok-bool">3</span> <span class="tok-bool">2</span> <span class="tok-bool">1</span></code></pre>
+</div>
+<ol>
+<li>(<code>void dibRecNumeros3 (int ancho, int alto)</code> dibuja un rectángulo utilizando números, como el siguiente. En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-bool">01</span> <span class="tok-bool">02</span> <span class="tok-bool">03</span> <span class="tok-bool">04</span> <span class="tok-bool">05</span> <span class="tok-bool">06</span> <span class="tok-bool">07</span>
+<span class="tok-bool">08</span> <span class="tok-bool">09</span> <span class="tok-bool">19</span> <span class="tok-bool">11</span> <span class="tok-bool">12</span> <span class="tok-bool">13</span> <span class="tok-bool">14</span>
+<span class="tok-bool">15</span> <span class="tok-bool">16</span> <span class="tok-bool">17</span> <span class="tok-bool">18</span> <span class="tok-bool">19</span> <span class="tok-bool">20</span> <span class="tok-bool">21</span></code></pre>
+</div>
+<ol>
+<li>(<code>void dibDiagonal (int ancho, int alto)</code> dibuja un rectángulo con ceros y unos. Los 1 están en las posiciones en las que fila y columna coinciden. En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-bool">1</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span>
+<span class="tok-bool">0</span> <span class="tok-bool">1</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span>
+<span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">1</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span> <span class="tok-bool">0</span></code></pre>
+</div>
+<ol>
+<li>(<code>void dibRecLetras (int ancho, int alto)</code> dibuja un rectángulo letras sucesivas comenzando por la "a". En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>a a a a a a a
+b b b b b b b
+c c c c c c c</code></pre>
+</div>
+<ol>
+<li>(<code>void dibRecLetras2 (int ancho, int alto)</code> dibuja un rectángulo letras sucesivas terminando por la "a". En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>c c c c c c c
+b b b b b b b
+a a a a a a a</code></pre>
+</div>
+<ol>
+<li>(<code>void dibRecLetras3 (int ancho, int alto)</code> dibuja un rectángulo letras sucesivas comenzando por la "a". En el ejemplo ancho es 7 y alto es 3</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>a b c d e f g
+h i j k l m n
+o p q r s t u</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-40-nombredelmes2">Reto 40 <code>NombreDelMes2</code></h3>
+<p>Escribir un programa que lea de teclado el número de un mes (1 a 12) y visualice el nombre del més (enero, febrero, etc). Resolver utilizando la sentencias switch.</p>
+<hr>
+
+<h3 id="reto-41-calculadora2">Reto 41 <code>Calculadora2</code></h3>
+<p>Escribir un programa para simular una calculadora. Considera que los cálculos posibles son del tipo num1 operado num2, donde num1 y num2 son dos números reales cualesquiera y operador es una de entre: +, -, * y /. El programa pedirá al usuario en primer lugar el valor num1, a continuación el operador y finalmente el valor num2. Resolver utilizando la sentencias switch.</p>
+<hr>
+
+<h2 id="en-papel">En Papel ...</h2>
+<h3 id="reto-42-pregunta32">Reto 42 <code>Pregunta32</code></h3>
+<p>Qué valor se asignará a consumo en la sentencia <code>if</code> siguiente si velocidad es 120?</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (velocidad &gt; <span class="tok-bool">80</span>)
+    consumo = <span class="tok-bool">10</span>;
+<span class="tok-key">else</span> <span class="tok-key">if</span> (velocidad &gt; <span class="tok-bool">100</span>)
+    consumo = <span class="tok-bool">12</span>;
+<span class="tok-key">else</span> <span class="tok-key">if</span> (velocidad &gt; <span class="tok-bool">120</span>)
+    consumo = <span class="tok-bool">15</span>;</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-43-pregunta33">Reto 43 <code>Pregunta33</code></h3>
+<p>Encuentra y corrige los errores de los siguientes fragmentos de programa .</p>
+<ul>
+<li>fragmento a</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> x &gt; <span class="tok-bool">25</span>
+  y = x
+<span class="tok-key">else</span>
+  y = z;</code></pre>
+</div>
+<ul>
+<li>fragmento b</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (x&lt;<span class="tok-bool">0</span>)
+  <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El valor de x es&quot;</span> +x);
+  <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;x es negativo&quot;</span>);
+<span class="tok-key">else</span>
+  <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;El valor de x es&quot;</span>+x);
+  <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;x es positivo&quot;</span>);</code></pre>
+</div>
+<ul>
+<li>fragmento c</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">if</span> (x = <span class="tok-bool">0</span>) <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;x igual a cero&quot;</span>);
+<span class="tok-key">else</span> <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;x distinto de cero&quot;</span>);</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-44-pregunta34">Reto 44 <code>Pregunta34</code></h3>
+<p>Cuál es la salida exacta por pantalla del siguiente fragmento de programa</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">int</span> x = <span class="tok-bool">20</span>;
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Comenzamos&quot;</span>);
+<span class="tok-key">if</span> (x&gt;= <span class="tok-bool">20</span>)
+    <span class="tok-key">if</span> (x&gt;<span class="tok-bool">50</span>) <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Muy grande&quot;</span>);
+    <span class="tok-key">else</span> {
+        <span class="tok-key">if</span> (x%<span class="tok-bool">2</span> != <span class="tok-bool">0</span>) <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Impar&quot;</span>);
+    }
+<span class="tok-key">else</span> <span class="tok-key">if</span> (x&lt;=<span class="tok-bool">20</span>) <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Pequeño&quot;</span>);
+<span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Terminamos&quot;</span>);</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-45-pregunta35">Reto 45 <code>Pregunta35</code></h3>
+<p>En una tienda, por liquidación, se aplican distintos descuentos en función del total de las compras realizadas:</p>
+<ul>
+<li>Si total &lt; 500 €, no se aplica descuento.</li>
+<li>Si 500 € &lt;= total &lt;= 2000 €, se aplica un descuento del 30 %.</li>
+<li>Si total &gt; 2000e, entonces se aplica un descuento del 50 %</li>
+</ul>
+<p>¿Cual de los siguientes fragmentos de programa asigna a la variable desc el descuento correcto? Indica "Si" o "NO" al lado de cada fragmento</p>
+<ul>
+<li>fragmento a</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">double</span> desc = <span class="tok-bool">0</span>.<span class="tok-bool">0</span>;
+<span class="tok-key">if</span> (total &lt;= <span class="tok-bool">500</span>)
+  <span class="tok-key">if</span> (total &gt;= <span class="tok-bool">2000</span>) desc = <span class="tok-bool">30</span>.<span class="tok-bool">0</span>;
+  <span class="tok-key">else</span> desc = <span class="tok-bool">50</span>.<span class="tok-bool">0</span>;
+total = total * desc / <span class="tok-bool">100</span>.<span class="tok-bool">0</span>;</code></pre>
+</div>
+<ul>
+<li>fragmento b</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">double</span> desc = <span class="tok-bool">0</span>.<span class="tok-bool">0</span>;
+<span class="tok-key">if</span> (total &gt;= <span class="tok-bool">500</span>)
+  <span class="tok-key">if</span> (total &lt;= <span class="tok-bool">2000</span>) desc = <span class="tok-bool">30</span>.<span class="tok-bool">0</span>;
+  <span class="tok-key">else</span> desc = <span class="tok-bool">50</span>.<span class="tok-bool">0</span>;
+total = total * desc / <span class="tok-bool">100</span>.<span class="tok-bool">0</span>;</code></pre>
+</div>
+<ul>
+<li>fragmento c</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">double</span> desc = <span class="tok-bool">0</span>.<span class="tok-bool">0</span>;
+<span class="tok-key">if</span> (total &lt;= <span class="tok-bool">2000</span>){
+  <span class="tok-key">if</span> (total &gt;= <span class="tok-bool">500</span>) desc = <span class="tok-bool">30</span>.<span class="tok-bool">0</span>;
+  } <span class="tok-key">else</span> desc = <span class="tok-bool">50</span>.<span class="tok-bool">0</span>;
+total = total * desc / <span class="tok-bool">100</span>.<span class="tok-bool">0</span>;</code></pre>
+</div>
+<ul>
+<li>fragmento d</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">double</span> desc = <span class="tok-bool">0</span>.<span class="tok-bool">0</span>;
+<span class="tok-key">if</span> (total &gt; <span class="tok-bool">500</span>)
+  <span class="tok-key">if</span> (total &lt; <span class="tok-bool">2000</span>) desc = <span class="tok-bool">30</span>.<span class="tok-bool">0</span>;
+  <span class="tok-key">else</span> desc = <span class="tok-bool">50</span>.<span class="tok-bool">0</span>;
+total = total * desc /<span class="tok-bool">100</span>.<span class="tok-bool">0</span>;</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-46-pregunta36">Reto 46 <code>Pregunta36</code></h3>
+<p>¿Qué salida producirá el siguiente fragmento de programa si la variable entera platos vale 1? ¿Y si  vale 3? ¿Y si vale 0?</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">switch</span> (platos ) {
+    <span class="tok-key">case</span> <span class="tok-bool">1</span>: <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\nPrimer plato&quot;</span>);
+    <span class="tok-key">case</span> <span class="tok-bool">2</span>: <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;\nSegundo plato&quot;</span>);
+    <span class="tok-key">case</span> <span class="tok-bool">3</span>: <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;\nBebida&quot;</span>);
+            <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;\nPostre&quot;</span>);
+            <span class="tok-key">break</span>;
+    <span class="tok-key">default</span>: <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;\nCafé&quot;</span>);
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-47-pregunta37">Reto 47 <code>Pregunta37</code></h3>
+<p>Dados tres enteros a, b y c, y un booleano p, el siguiente análisis por casos establece el valor de p en función de los valores de a, b y c:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>si a &gt; b entonces p = cierto;
+si a &lt; b entonces p = falso;
+si a = b entonces 
+    si a &gt; c entonces p = cierto;
+    si a &lt; c entonces p = falso;
+    si a = c entonces p = falso;</code></pre>
+</div>
+<p>Se pide la traducción de dicho análisis por casos a Java mediante:</p>
+<ul>
+<li>Una única instrucción if sin anidamientos.</li>
+<li>Una única instrucción, de la forma p = ... , sin sentencias if ni utilizar el operador ternario.</li>
+<li>Una única instrucción, de la forma p = ..., que utilice el operador ternario.</li>
+</ul>
+<h2 id="excepciones">Excepciones</h2>
+<h3 id="reto-48-edades">Reto 48 <code>Edades</code></h3>
+<p>Escribe un programa que solicite al usuario la edad de cinco personas y calcule la media. La edad  de una persona debe ser un valor entero comprendido en el rango [0,110]. Realiza tres versiones:</p>
+<ol>
+<li>Si se introduce mal la edad de una persona se vuelve a pedir la edad de esa persona.</li>
+<li>Si se introduce mal la edad de una persona, el programa muestra un mensaje de error, no calcula la media y termina.</li>
+<li>Si se introduce mal la edad de una persona, el programa vuelve a solicitar la edad de las cinco personas (comienza el proceso).</li>
+</ol>
+<hr>
+
+<h3 id="reto-49-dividir2">Reto 49 <code>Dividir2</code></h3>
+<p>Repite el ejercicio anterior utilizando métodos y llamándolos desde el método <code>main</code>:</p>
+<p>Un método <code>dividir</code> que devuelva el cociente de dos números que recibe como parámetro.</p>
+<p>Ejecuta los programas provocando errores (como en el ejercicio anterior) y observa los mensajes que se generan.</p>
+<hr>
+
+<h3 id="reto-50-posicion2">Reto 50 <code>Posicion2</code></h3>
+<p>Un método <code>letraNombre</code> que, dados un String <code>nombre</code> y un entero <code>pos</code>, devuelva el carácter del nombre que ocupa la posición indicada.</p>
+<p>Ejecuta los programas provocando errores (como en el ejercicio anterior) y observa los mensajes que se generan.</p>
+<hr>
+
+<h3 id="reto-51-pregunta42">Reto 51 <code>Pregunta42</code></h3>
+<p>Justifica por qué se produce error en el siguiente fragmento de código</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">try</span> {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Introduce edad: &quot;</span>);
+    <span class="tok-key">int</span> edad = tec.nextInt();
+    <span class="tok-key">if</span> (edad &gt;= <span class="tok-bool">18</span>) {
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Mayor edad&quot;</span>);
+    } <span class="tok-key">else</span> {
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Menor edad&quot;</span>);
+    }
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Introduce nif&quot;</span>);
+    <span class="tok-key">String</span> nif = tec.next();
+    <span class="tok-key">int</span> numero = <span class="tok-key">Integer</span>.parseInt(nif.substring(<span class="tok-bool">0</span>, nif.length() - <span class="tok-bool">1</span>));
+    <span class="tok-key">char</span> letra = nif.charAt(nif.length() - <span class="tok-bool">1</span>);
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Numero: &quot;</span> + numero);
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Letra: &quot;</span> + letra);
+} <span class="tok-key">catch</span> (<span class="tok-key">Exception</span> e){  
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Debías introducir un número&quot;</span>);
+} <span class="tok-key">catch</span> (NumberFormatException e) {
+    <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;El nif es incorrecto&quot;</span>);
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-52-pregunta43">Reto 52 <code>Pregunta43</code></h3>
+<p>Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> Dos {
+    <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">int</span> metodo()  {
+        <span class="tok-key">int</span> valor=<span class="tok-bool">0</span>;
+        <span class="tok-key">try</span> {
+            valor = valor+<span class="tok-bool">1</span>;
+            valor = valor + <span class="tok-key">Integer</span>.parseInt(<span class="tok-string">&quot;W&quot;</span>);
+            valor = valor + <span class="tok-bool">1</span>;
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final del try: &quot;</span> + valor);
+        } <span class="tok-key">catch</span>(NumberFormatException e) {
+            valor = valor + <span class="tok-key">Integer</span>.parseInt(<span class="tok-string">&quot;42&quot;</span>);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final del catch: &quot;</span> + valor) ;
+        } <span class="tok-key">finally</span> {
+            valor = valor + <span class="tok-bool">1</span>;
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final de finally: &quot;</span> + valor) ;
+        }
+        valor = valor + <span class="tok-bool">1</span>;
+        <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;Valor antes del return: &quot;</span> + valor) ;
+        <span class="tok-key">return</span> valor ;
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main (<span class="tok-key">String</span>[] args)  {
+        <span class="tok-key">try</span> {
+            <span class="tok-key">System</span> .out.println(metodo());
+        } <span class="tok-key">catch</span> (<span class="tok-key">Exception</span> e) {
+            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;Excepcion en metodo() &quot;</span>);
+            e.printStackTrace();
+        }
+   }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-53-pregunta44">Reto 53 <code>Pregunta44</code></h3>
+<p>Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> Tres {
+    <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">int</span> metodo()  {
+        <span class="tok-key">int</span> valor = <span class="tok-bool">0</span>;
+        <span class="tok-key">try</span> {
+             valor = valor +<span class="tok-bool">1</span>;
+             valor = valor + <span class="tok-key">Integer</span>.parseInt(<span class="tok-string">&quot;W&quot;</span>);
+             valor = valor + <span class="tok-bool">1</span>;
+             <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final del try : &quot;</span> + valor);
+        } <span class="tok-key">catch</span> (NumberFormatException e) {
+             valor = valor + <span class="tok-key">Integer</span>.parseInt(<span class="tok-string">&quot;W&quot;</span>);
+             <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final del catch : &quot;</span> + valor);
+        } <span class="tok-key">finally</span> {
+             valor = valor + <span class="tok-bool">1</span>;
+             <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final de finally: &quot;</span> + valor);
+        }
+        valor = valor + <span class="tok-bool">1</span>;
+        <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;Valor antes del return: &quot;</span> + valor);
+        <span class="tok-key">return</span> valor ;
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main (<span class="tok-key">String</span>[ ] args)
+    {
+        <span class="tok-key">try</span> {
+            <span class="tok-key">System</span>.out.println(metodo ());
+        } <span class="tok-key">catch</span> (<span class="tok-key">Exception</span> e) {
+            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;Excepcion en metodo()&quot;</span>) ;
+            e.printStackTrace();
+        }
+   }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-54-pregunta45">Reto 54 <code>Pregunta45</code></h3>
+<p>Indica qué se mostrará por pantalla cuando se ejecute esta clase y por qué:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">import</span> <span class="tok-cmd">java</span>.io.*;
+
+<span class="tok-key">public</span> <span class="tok-key">class</span> Cuatro
+{
+    <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">int</span> metodo()  {
+        <span class="tok-key">int</span> valor = <span class="tok-bool">0</span>;
+        <span class="tok-key">try</span> {
+            valor = valor+<span class="tok-bool">1</span>;
+            valor = valor + <span class="tok-key">Integer</span>.parseInt(<span class="tok-string">&quot;W&quot;</span>);
+            valor = valor + <span class="tok-bool">1</span>;
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final del try : &quot;</span> + valor) ;
+            <span class="tok-key">throw</span> <span class="tok-key">new</span> <span class="tok-key">IOException</span>();
+        } <span class="tok-key">catch</span> (<span class="tok-key">IOException</span> e)  {
+            valor = valor + <span class="tok-key">Integer</span>.parseInt(<span class="tok-string">&quot;42&quot;</span>);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final del catch : &quot;</span> + valor);
+        } <span class="tok-key">finally</span> {
+            valor = valor + <span class="tok-bool">1</span>;
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Valor al final de finally: &quot;</span> + valor);
+        }
+        valor = valor + <span class="tok-bool">1</span>;
+        <span class="tok-key">System</span>.out.println (<span class="tok-string">&quot;Valor antes del return: &quot;</span> + valor) ;
+        <span class="tok-key">return</span> valor ;
+   }
+
+   <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args)  {
+        <span class="tok-key">try</span> {
+            <span class="tok-key">System</span>.out.println(metodo());
+        } <span class="tok-key">catch</span> (<span class="tok-key">Exception</span> e) {
+            <span class="tok-key">System</span>.err.println(<span class="tok-string">&quot;Excepcion en metodo()&quot;</span>);
+            e.printStackTrace();
+        }
+   }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-55-pregunta46">Reto 55 <code>Pregunta46</code></h3>
+<p>Indica qué se mostrará por pantalla cuando se ejecute esta clase:</p>
+<ol>
+<li>Si se ejecuta con java Cinco casa</li>
+<li>Si se ejecuta con java Cinco 0</li>
+<li>Si se ejecuta con java Cinco 7</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> Cinco {
+   <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span> args[])  {
+      <span class="tok-key">try</span>  {
+            <span class="tok-key">int</span> a = <span class="tok-key">Integer</span>.parseInt(args[<span class="tok-bool">0</span>]);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;a = &quot;</span> + a);
+            <span class="tok-key">int</span> b=<span class="tok-bool">42</span>/a;
+            <span class="tok-key">String</span> c = <span class="tok-string">&quot;hola&quot;</span>;
+            <span class="tok-key">char</span> d = c.charAt(<span class="tok-bool">50</span>);
+      }  <span class="tok-key">catch</span> (ArithmeticException e) {
+         <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;div por 0: &quot;</span> + e);
+      }  <span class="tok-key">catch</span> (IndexOutOfBoundsException e) {
+         <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Índice del String fuera de límites: &quot;</span> + e);
+      }  <span class="tok-key">finally</span> {
+          <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Ejecución de finally&quot;</span>);
+      }
+   }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-56-pregunta47">Reto 56 <code>Pregunta47</code></h3>
+<p>Indica cuál será la salida del siguiente programa y por qué</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> Seis {
+   <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> procA()  {
+       <span class="tok-key">try</span> {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;dentro del procA&quot;</span>); <span class="tok-bool">2</span>
+           <span class="tok-key">throw</span> <span class="tok-key">new</span> RuntimeException(<span class="tok-string">&quot;demo&quot;</span>); <span class="tok-bool">3</span>
+       } <span class="tok-key">finally</span> {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Finally del procA&quot;</span>); <span class="tok-bool">4</span>
+       }
+    }
+
+   <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> procB() {
+       <span class="tok-key">try</span>  {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;dentro del procB&quot;</span>); <span class="tok-bool">6</span>
+           <span class="tok-key">return</span>; <span class="tok-bool">7</span>
+       } <span class="tok-key">finally</span> {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;finally del procB&quot;</span>); <span class="tok-bool">8</span>
+       }
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span> args[])  {
+        <span class="tok-key">try</span>  {
+            procA(); <span class="tok-bool">1</span>
+        } <span class="tok-key">catch</span>(<span class="tok-key">Exception</span> e) {
+            procB(); <span class="tok-bool">5</span>
+        }
+     }
+}</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-57-pregunta71">Reto 57 <code>Pregunta71</code></h3>
+<p>Indica cuál será la salida del siguiente programa y por qué</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> Siete {
+   <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> metodo() {
+       <span class="tok-key">try</span>  {
+           <span class="tok-key">throw</span> <span class="tok-key">new</span> NullPointerException(<span class="tok-string">&quot;demo&quot;</span>); <span class="tok-bool">2</span>
+       } <span class="tok-key">catch</span> (NullPointerException e) {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;capturada en método&quot;</span>); <span class="tok-bool">3</span>
+           <span class="tok-key">throw</span> e; <span class="tok-bool">4</span>
+       }
+    }
+
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main (<span class="tok-key">String</span> args[])  {
+        <span class="tok-key">try</span>   {
+            metodo(); <span class="tok-bool">1</span>
+        }  <span class="tok-key">catch</span>(NullPointerException e)  {
+           <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;capturada en main &quot;</span> + e); <span class="tok-bool">5</span>
+        }
+    }
+}</code></pre>
+</div>
+<h3 id="reto-58">Reto 58</h3>
+<p>Programa que muestre por pantalla del número 200 al 300.</p>
+<hr>
+
+<h3 id="reto-59">Reto 59</h3>
+<p>Programa que muestre en pantalla la tabla de multiplicar del 1 al 10 con el formato:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>...
+Tabla del <span class="tok-bool">2</span>
+***********
+<span class="tok-bool">2</span> x <span class="tok-bool">1</span> = <span class="tok-bool">2</span>
+<span class="tok-bool">2</span> x <span class="tok-bool">2</span> = <span class="tok-bool">4</span>
+...
+<span class="tok-bool">2</span> x <span class="tok-bool">10</span> = <span class="tok-bool">20</span>
+...
+Tabla del <span class="tok-bool">3</span>
+***********
+...</code></pre>
+</div>
+<hr>
+
+<h3 id="reto-60">Reto 60</h3>
+<p>Leer un número y mostrar su cuadrado, repetir el proceso hasta que se introduzca un número negativo.</p>
+<hr>
+
+<h3 id="reto-61">Reto 61</h3>
+<p>Leer números hasta que se introduzca un 0. Para cada uno indicar si es par o impar.</p>
+<hr>
+
+<h3 id="reto-62">Reto 62</h3>
+<p>Pedir números hasta que se teclee uno negativo, y mostrar cuántos números se han introducido.</p>
+<hr>
+
+<h3 id="reto-63">Reto 63</h3>
+<p>Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos.</p>
+<hr>
+
+<h3 id="reto-64">Reto 64</h3>
+<p>Pedir números hasta que se introduzca uno negativo, y calcular la media.</p>
+<hr>
+
+<h3 id="reto-65">Reto 65</h3>
+<p>Pedir un número <code>N</code>, y mostrar todos los números del 1 al <code>N</code>.</p>
+<hr>
+
+<h3 id="reto-66">Reto 66</h3>
+<p>Escribir todos los números del 100 al 0 de 7 en 7. </p>
+<hr>
+
+<h3 id="reto-67">Reto 67</h3>
+<p>Pedir 15 números y escribir la suma total.</p>
+<hr>
+
+<h3 id="reto-68">Reto 68</h3>
+<p>Diseñar un programa que muestre el producto de los 10 primeros números impares.</p>
+<hr>
+
+<h3 id="reto-69">Reto 69</h3>
+<p>Pedir un número y calcular su factorial (el factorial se representa con el simbolo  <code>!</code>).</p>
+<p>​       Aquí tienes el factorial de los 5 primeros números enteros:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-bool">1</span>! = <span class="tok-bool">1</span>
+<span class="tok-bool">2</span>! = <span class="tok-bool">2</span> * <span class="tok-bool">1</span> = <span class="tok-bool">2</span>
+<span class="tok-bool">3</span>! = <span class="tok-bool">3</span> * <span class="tok-bool">2</span> * <span class="tok-bool">1</span> = <span class="tok-bool">6</span>
+<span class="tok-bool">4</span>! = <span class="tok-bool">4</span> * <span class="tok-bool">3</span> * <span class="tok-bool">2</span> * <span class="tok-bool">1</span> = <span class="tok-bool">24</span>
+<span class="tok-bool">5</span>! = <span class="tok-bool">5</span> * <span class="tok-bool">4</span> * <span class="tok-bool">3</span> * <span class="tok-bool">2</span> * <span class="tok-bool">1</span> = <span class="tok-bool">120</span></code></pre>
+</div>
+<hr>
+
+<h3 id="reto-70">Reto 70</h3>
+<p>Pedir 10 números. Mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.</p>
+<hr>
+
+<h3 id="reto-71">Reto 71</h3>
+<p>Pedir 10 sueldos. Mostrar su suma y cuantos hay mayores de 1000€.</p>
+<hr>
+
+<h3 id="reto-72">Reto 72</h3>
+<p>Dadas las edades y alturas de 5 alumnos, mostrar la edad y la estatura media, la cantidad de alumnos mayores de 18 años, y la cantidad de alumnos que miden más de 1.75.</p>
+<hr>
+
+<h3 id="reto-73">Reto 73</h3>
+<p>Escribe un programa que nos diga el horóscopo a partir del día y el mes de nacimiento.</p>
+<hr>
+
+<h3 id="reto-74">Reto 74</h3>
+<p>Realiza un minicuestionario con 4 preguntas tipo test sobre las asignaturas que se imparten en el curso. Cada pregunta acertada sumará un punto. El programa mostrará al final la calificación obtenida.</p>
+<hr>
+
+<h3 id="reto-75">Reto 75</h3>
+<p>Escribe un programa que calcule el precio final de un producto según su base imponible (precio antes de impuestos), el tipo de IVA aplicado (general, reducido o superreducido) y el código promocional. Los tipos de IVA general, reducido y superreducido son del 21%, 10% y 4% respectivamente. Los códigos promocionales pueden ser nopro, mitad, meno5 o 5porc que significan respectivamente que no se aplica promoción, el precio se reduce a la mitad, se descuentan 5 euros o se descuenta el 5%.</p>
+<p>Ejemplo:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>Introduzca la base imponible: <span class="tok-bool">25</span>
+Introduzca el tipo de IVA (general, reducido o superreducido): reducido
+Introduzca el código promocional (nopro, mitad, meno5 o 5porc): mitad
+Base imponible <span class="tok-bool">25</span>.<span class="tok-bool">00</span>
+Cód. promo. (mitad): -<span class="tok-bool">12</span>.<span class="tok-bool">50</span>
+IVA (<span class="tok-bool">10</span>%) <span class="tok-bool">1</span>.<span class="tok-bool">25</span>
+Precio con IVA <span class="tok-bool">13</span>.<span class="tok-bool">75</span>
+TOTAL <span class="tok-bool">13</span>.<span class="tok-bool">75</span></code></pre>
+</div>
+      <div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut02actividades.html">⬅️ Actividades prácticas UT2</a>
+<a class="page-nav-btn" href="../ut02/ut02trazas.html">Trazas de ejecución UT2 ➡️</a>
+</div>
+    </main>
+  </div>
+  
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiado';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
