@@ -1,0 +1,1745 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Retos de programación UT4 — Programació (1r DAW)</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
+  <style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.4rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.6rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    /* Admonitions Material */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+      cursor: pointer;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning, details.admonition.warning {
+      border-left-color: #ff9100;
+      background-color: #fffbf0;
+    }
+    .admonition.warning .admonition-title, details.admonition.warning > summary {
+      color: #b75e00;
+      background-color: #fff3d6;
+    }
+    .admonition.tip, .admonition.ayuda, details.admonition.tip, details.admonition.ayuda {
+      border-left-color: #00bfa5;
+      background-color: #f0faf8;
+    }
+    .admonition.tip .admonition-title, .admonition.ayuda .admonition-title,
+    details.admonition.tip > summary, details.admonition.ayuda > summary {
+      color: #004d40;
+      background-color: #e0f5f2;
+    }
+    .admonition.exercise, .admonition.question, .admonition.solución,
+    details.admonition.exercise, details.admonition.question, details.admonition.solución {
+      border-left-color: #00c853;
+      background-color: #f2faf4;
+    }
+    .admonition.exercise .admonition-title, .admonition.question .admonition-title, .admonition.solución .admonition-title,
+    details.admonition.exercise > summary, details.admonition.question > summary, details.admonition.solución > summary {
+      color: #1b5e20;
+      background-color: #e2f7e7;
+    }
+    .admonition.danger, details.admonition.danger {
+      border-left-color: #ff1744;
+      background-color: #fff5f7;
+    }
+    .admonition.danger .admonition-title, details.admonition.danger > summary {
+      color: #b71c1c;
+      background-color: #ffe0e6;
+    }
+    [data-theme="dark"] .admonition.warning, [data-theme="dark"] details.admonition.warning,
+    [data-theme="dark"] .admonition.tip, [data-theme="dark"] details.admonition.tip,
+    [data-theme="dark"] .admonition.exercise, [data-theme="dark"] details.admonition.exercise,
+    [data-theme="dark"] .admonition.question, [data-theme="dark"] details.admonition.question,
+    [data-theme="dark"] .admonition.solución, [data-theme="dark"] details.admonition.solución,
+    [data-theme="dark"] .admonition.danger, [data-theme="dark"] details.admonition.danger {
+      background-color: #0f172a;
+    }
+    [data-theme="dark"] .admonition.warning .admonition-title, [data-theme="dark"] details.admonition.warning > summary,
+    [data-theme="dark"] .admonition.tip .admonition-title, [data-theme="dark"] details.admonition.tip > summary,
+    [data-theme="dark"] .admonition.exercise .admonition-title, [data-theme="dark"] details.admonition.exercise > summary,
+    [data-theme="dark"] .admonition.question .admonition-title, [data-theme="dark"] details.admonition.question > summary,
+    [data-theme="dark"] .admonition.solución .admonition-title, [data-theme="dark"] details.admonition.solución > summary,
+    [data-theme="dark"] .admonition.danger .admonition-title, [data-theme="dark"] details.admonition.danger > summary {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    /* Bloques de código tipo Terminal elegante (Formato Pepe) */
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 65px;
+    }
+    .terminal-dots .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+    .terminal-box code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+    .tok-cmd { color: #89b4fa; font-weight: 600; }
+    .tok-string { color: #a6e3a1; }
+    .tok-comment { color: #6c7086; font-style: italic; }
+    .tok-key { color: #cba6f7; font-weight: 600; }
+    .tok-bool { color: #fab387; font-weight: 600; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    img {
+      border: 2px dashed #94a3b8;
+      background-color: #f8fafc;
+      padding: 8px;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <span>☕ Programació — 1r DAW (IES Mestre Ramón Esteve)</span>
+      <a href="../index.html">📚 Índex Programació</a>
+      <a href="../../">🏠 Portal Docent</a>
+    </div>
+    <div class="actions">
+      <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="🔍 Filtrar apartats..." oninput="filterSidebar(this)">
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació (Java)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Prerrequisitos y Configuración</summary>
+<ul>
+<li><a href="../ut00/index.html" class="unit-full-link">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducción</a></li>
+<li><a href="../ut00/ut0002.html">0.2 GitHub</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Git</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Visual Studio Code</a></li>
+<li><a href="../ut00/ut0005.html">0.5 GitHub Desktop</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Estructura de programas informáticos</summary>
+<ul>
+<li><a href="../ut01/index.html" class="unit-full-link">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01ras.html">1.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Piensa como un programador y diseña algoritmos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 El lenguaje Java</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Variables, identificadores y convenciones (Clean Code)</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Tipos de datos primitivos</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Operadores y expresiones (incl. Operador Ternario ? :)</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Conversiones de tipo (Casting)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Comentarios y documentación</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Herramientas útiles y E/S por consola</a></li>
+<li><a href="../ut01/ut01ejemplos.html">Ejemplos guiados UT1</a></li>
+<li><a href="../ut01/ut01actividades.html">Actividades prácticas UT1</a></li>
+<li><a href="../ut01/ut01retos.html">Retos de programación UT1</a></li>
+<li><a href="../ut01/ut01trazas.html">Trazas de ejecución UT1</a></li>
+<li><a href="../ut01/ut01pi.html">Proyecto Intermodular UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Estructuras de control</summary>
+<ul>
+<li><a href="../ut02/index.html" class="unit-full-link">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02ras.html">2.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Introducción a las estructuras de control</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Sentencias y bloques</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Estructuras de selección (if-else, switch)</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Estructuras de repetición (while, do-while, for)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Sentencias de salto (break, continue, return)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Control y manejo de excepciones (try-catch)</a></li>
+<li><a href="../ut02/ut0207.html">Ejemplos guiados UT2</a></li>
+<li><a href="../ut02/ut02actividades.html">Actividades prácticas UT2</a></li>
+<li><a href="../ut02/ut02retos.html">Retos de programación UT2</a></li>
+<li><a href="../ut02/ut02trazas.html">Trazas de ejecución UT2</a></li>
+<li><a href="../ut02/ut02pi.html">Proyecto Intermodular UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Tipos avanzados de datos</summary>
+<ul>
+<li><a href="../ut03/index.html" class="unit-full-link">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03ras.html">3.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut03/ut0306.html">3.1 Introducción a las estructuras de datos</a></li>
+<li><a href="../ut03/ut0301.html">3.2.1 Uso de arrays unidimensionales</a></li>
+<li><a href="../ut03/ut0303.html">3.2.2 Recorrido, búsqueda y ordenación en arrays</a></li>
+<li><a href="../ut03/ut0304.html">3.2.3 Arrays bidimensionales y multidimensionales (Matrices)</a></li>
+<li><a href="../ut03/ut0302.html">3.2.4 La clase java.util.Arrays</a></li>
+<li><a href="../ut03/ut0307.html">3.2.5 Colecciones dinámicas: ArrayList</a></li>
+<li><a href="../ut03/ut0308.html">3.3 Diccionarios y Mapas (HashMap)</a></li>
+<li><a href="../ut03/ut0305.html">3.4 Algoritmos recursivos (Recursividad)</a></li>
+<li><a href="../ut03/ut03actividades.html">Actividades prácticas UT3</a></li>
+<li><a href="../ut03/ut03retos.html">Retos de programación UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open>
+<summary>UT4 — Programación Orientada a Objetos (POO)</summary>
+<ul>
+<li><a href="../ut04/index.html" class="unit-full-link">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut04ras.html">4.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Introducción al paradigma orientado a objetos</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Principios fundamentales de la POO</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Objetos y clases</a></li>
+<li><a href="../ut04/ut0404.html">4.4.1 Estructura y miembros de una clase</a></li>
+<li><a href="../ut04/ut0405.html">4.4.2 Atributos y constantes</a></li>
+<li><a href="../ut04/ut0406.html">4.4.3 Métodos, parámetros y sobrecarga</a></li>
+<li><a href="../ut04/ut0407.html">4.4.4 Constructores y palabra clave this</a></li>
+<li><a href="../ut04/ut0408.html">4.4.5 Encapsulación y modificadores de visibilidad</a></li>
+<li><a href="../ut04/ut0409.html">4.5 Instanciación y ciclo de vida de los objetos</a></li>
+<li><a href="../ut04/ut0410.html">4.6 Empaquetado de clases y librerías (packages)</a></li>
+<li><a href="../ut04/ut04actividades.html">Actividades prácticas UT4</a></li>
+<li><a href="../ut04/ut04retos.html" class="active">Retos de programación UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Composición, Herencia y Polimorfismo</summary>
+<ul>
+<li><a href="../ut05/index.html" class="unit-full-link">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05ras.html">5.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Relaciones entre clases (Asociación, Agregación, Herencia)</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Composición de clases</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Herencia y jerarquías de clases (extends, super)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Clases y métodos abstractos (abstract)</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Interfaces (interface, implements)</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Polimorfismo y ligadura dinámica</a></li>
+<li><a href="../ut05/ut05actividades.html">Actividades prácticas UT5</a></li>
+<li><a href="../ut05/ut05retos.html">Retos de programación UT5</a></li>
+<li><a href="../ut05/ut05acSimulacro.html">Simulacro práctico UT5</a></li>
+<li><a href="../ut05/ut05pi.html">Proyecto Intermodular UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Lectura y escritura de información</summary>
+<ul>
+<li><a href="../ut06/index.html" class="unit-full-link">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut06ras.html">6.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Streams (Flujos de entrada y salida)</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Lectura y escritura de ficheros</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Serialización de objetos</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Comunicación por red: Sockets</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Manejo del sistema de ficheros y carpetas (File / NIO)</a></li>
+<li><a href="../ut06/ut06actividades.html">Actividades prácticas UT6</a></li>
+<li><a href="../ut06/ut06retos.html">Retos de programación UT6</a></li>
+<li><a href="../ut06/ut06pi.html">Proyecto Intermodular UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Acceso a bases de datos</summary>
+<ul>
+<li><a href="../ut07/index.html" class="unit-full-link">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut07ras.html">7.0 RA y Criterios de Evaluación</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Introducción a la persistencia en bases de datos</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Arquitectura y conectores JDBC</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Conexión a bases de datos desde Java</a></li>
+<li><a href="../ut07/ut0704.html">7.4 ResultSet: Navegabilidad y concurrencia</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Consultas de selección (SELECT / executeQuery)</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Modificación de registros (UPDATE)</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Inserción de registros (INSERT)</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Borrado de registros (DELETE)</a></li>
+<li><a href="../ut07/ut0709.html">7.9 Sentencias precompiladas (PreparedStatement)</a></li>
+<li><a href="../ut07/ut0710.html">7.10 Trabajar con SQLite en Java</a></li>
+<li><a href="../ut07/ut0711.html">7.11 Patrón de diseño DAO (Data Access Object)</a></li>
+<li><a href="../ut07/ut0712.html">7.12 Repaso global de acceso a datos</a></li>
+<li><a href="../ut07/ut07actividades.html">Actividades prácticas UT7</a></li>
+<li><a href="../ut07/ut07retos.html">Retos de programación UT7</a></li>
+<li><a href="../ut07/ut07pi.html">Proyecto Intermodular UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📚 Fuentes de información</a></li></ul>
+    </aside>
+
+    <main class="content">
+      <span class="up-badge">2a Avaluació · RA2 i RA4 · Classes, Objectes, Constructors i Encapsulació</span>
+      <h1 id="retos">Retos</h1>
+<div class="admonition vscode">
+<p class="admonition-title">Empaquetar retos</p>
+<p>Empaqueta las actividades, dentro de la carpeta <strong><code>ut04</code></strong>, en la carpeta <strong><code>retos</code></strong>.</p>
+<p>Las actividades programadas en esta sección <strong>Retos</strong> no son obligatorias.</p>
+</div>
+<h3 id="reto-01">Reto 01</h3>
+<p>Crea la clase <strong><code>Peso</code></strong>, la cual tendrá las siguientes características:</p>
+<ul>
+<li>Deberá tener un atributo donde se almacene el peso de un objeto en kilogramos.</li>
+<li>En el constructor se le pasará el <em>peso</em> y la <em>medida</em> en la que se ha tomado ("<em>Lb</em>" para libras, "<em>Li</em>" para lingotes, "<em>Oz</em>" para onzas, "<em>P</em>" para peniques, "<em>K</em>" para kilos, "<em>G</em>" para gramos y "<em>Q</em>" para quintales).</li>
+<li>Deberá de tener los siguientes métodos:<ul>
+<li><code>getLibras</code>. Devuelve el peso en libras.</li>
+<li><code>getLingotes</code>. Devuelve el peso en lingotes.</li>
+<li><code>getPeso</code>. Devuelve el peso en la medida que se pase como parámetro ("<em>Lb</em>" para libras, "<em>Li</em>" para lingotes, "<em>Oz</em>" para onzas, "<em>P</em>" para peniques, "<em>K</em>" para kilos, "<em>G</em>" para gramos y "<em>Q</em>" para quintales).</li>
+</ul>
+</li>
+<li>Para la realización del ejercicio toma como referencia los siguientes datos:<ul>
+<li><em>1 Libra = 16 onzas = 453 gramos.</em></li>
+<li><em>1 Lingote = 32,17 libras = 14,59 kg.</em></li>
+<li><em>1 Onza = 0,0625 libras = 28,35 gramos.</em></li>
+<li><em>1 Penique = 0,05 onzas = 1,55 gramos.</em>`</li>
+<li><em>1 Quintal = 100 libras = 43,3 kg.</em>`</li>
+</ul>
+</li>
+<li>Crea además una clase <strong><code>TestPeso</code></strong> para testear y verificar los métodos de esta clase.</li>
+</ul>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>La solución a este reto contiene dos clases:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> Peso {
+        <span class="tok-comment">//Atributos</span>
+        <span class="tok-key">private</span> <span class="tok-key">double</span> kilos;
+
+        <span class="tok-comment">//Constructor</span>
+        <span class="tok-key">public</span> Peso(<span class="tok-key">double</span> kilos, <span class="tok-key">String</span> medida){
+            <span class="tok-key">this</span>.kilos = kilos;
+
+            <span class="tok-comment">//Transformar el dato a kilos, según la medida en la que se pasen.</span>
+            <span class="tok-key">if</span> (medida.equals(<span class="tok-string">&quot;Lb&quot;</span>)) {
+                <span class="tok-key">this</span>.kilos = kilos * <span class="tok-bool">0</span>.<span class="tok-bool">453</span>;
+            }<span class="tok-key">else</span> <span class="tok-key">if</span> (medida.equals(<span class="tok-string">&quot;Li&quot;</span>)) { <span class="tok-comment">// Lingotes</span>
+                <span class="tok-key">this</span>.kilos = kilos * <span class="tok-bool">14</span>.<span class="tok-bool">59</span>;
+            } <span class="tok-key">else</span> <span class="tok-key">if</span> (medida.equals(<span class="tok-string">&quot;Oz&quot;</span>)) { <span class="tok-comment">// Onzas</span>
+                <span class="tok-key">this</span>.kilos = kilos * <span class="tok-bool">0</span>.<span class="tok-bool">02835</span>;
+            } <span class="tok-key">else</span> <span class="tok-key">if</span> (medida.equals(<span class="tok-string">&quot;P&quot;</span>)) { <span class="tok-comment">// Peniques</span>
+                <span class="tok-key">this</span>.kilos = kilos * <span class="tok-bool">0</span>.<span class="tok-bool">00155</span>;
+            } <span class="tok-key">else</span> <span class="tok-key">if</span> (medida.equals(<span class="tok-string">&quot;G&quot;</span>)) { <span class="tok-comment">// Gramos</span>
+                <span class="tok-key">this</span>.kilos = kilos / <span class="tok-bool">1000</span>;
+            } <span class="tok-key">else</span> <span class="tok-key">if</span> (medida.equals(<span class="tok-string">&quot;Q&quot;</span>)) { <span class="tok-comment">// Quintales</span>
+                <span class="tok-key">this</span>.kilos = kilos * <span class="tok-bool">43</span>.<span class="tok-bool">3</span>;
+            } <span class="tok-key">else</span>{
+                <span class="tok-key">this</span>.kilos = kilos;
+            }
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * getLibras. Devuelve el peso en libras.</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">double</span> getLibras() {
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.kilos / <span class="tok-bool">0</span>.<span class="tok-bool">453</span>;
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * getLingotes. Devuelve el peso en lingotes.</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">double</span> getLingotes() {
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.kilos / <span class="tok-bool">14</span>.<span class="tok-bool">59</span>;
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * getPeso. Devuelve el peso en la medida que se pase como parámetro </span>
+<span class="tok-comment">        * (&quot;Lb&quot; para libras, &quot;Li&quot; para lingotes, &quot;Oz&quot; para onzas, &quot;P&quot; para peniques, &quot;K&quot; para kilos, &quot;G&quot; para gramos y &quot;Q&quot; para quintales).</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">double</span> getPeso(<span class="tok-key">String</span> medida) {
+            <span class="tok-comment">//Aunque está solución lo hace con un &#x27;switch&#x27;, también es válido con if...else if ... else</span>
+            <span class="tok-key">switch</span> (medida) {
+                <span class="tok-key">case</span> <span class="tok-string">&quot;Lb&quot;</span>:
+                    <span class="tok-key">return</span> <span class="tok-key">this</span>.getLibras();
+                <span class="tok-key">case</span> <span class="tok-string">&quot;Li&quot;</span>:
+                    <span class="tok-key">return</span> <span class="tok-key">this</span>.getLingotes();
+                <span class="tok-key">case</span> <span class="tok-string">&quot;Oz&quot;</span>:
+                    <span class="tok-key">return</span> <span class="tok-key">this</span>.kilos / <span class="tok-bool">0</span>.<span class="tok-bool">02835</span>;
+                <span class="tok-key">case</span> <span class="tok-string">&quot;P&quot;</span>:
+                    <span class="tok-key">return</span> <span class="tok-key">this</span>.kilos / <span class="tok-bool">0</span>.<span class="tok-bool">00155</span>;
+                <span class="tok-key">case</span> <span class="tok-string">&quot;G&quot;</span>:
+                    <span class="tok-key">return</span> <span class="tok-key">this</span>.kilos * <span class="tok-bool">1000</span>;
+                <span class="tok-key">case</span> <span class="tok-string">&quot;Q&quot;</span>:
+                    <span class="tok-key">return</span> <span class="tok-key">this</span>.kilos / <span class="tok-bool">43</span>.<span class="tok-bool">3</span>;
+                <span class="tok-key">default</span>:
+                    <span class="tok-key">return</span> <span class="tok-key">this</span>.kilos;
+            }
+        }
+
+    }</code></pre>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> TestPeso {
+        <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+            <span class="tok-comment">//Dentro del main podeis crear tantas instancias como querais para ir probando diferentes situaciones.</span>
+            Peso p1 = <span class="tok-key">new</span> Peso(<span class="tok-bool">84</span>.<span class="tok-bool">5</span>, <span class="tok-string">&quot;Lb&quot;</span>);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Peso en kg: &quot;</span> + p1.getPeso(<span class="tok-string">&quot;K&quot;</span>));
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Peso en libras: &quot;</span> + p1.getLibras());
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Peso en lingotes: &quot;</span> + p1.getLingotes());
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Peso en gramos: &quot;</span> + p1.getPeso(<span class="tok-string">&quot;G&quot;</span>));
+        }
+    }</code></pre>
+</div></p>
+</blockquote>
+</details>
+<hr>
+
+<h3 id="reto-02">Reto 02</h3>
+<p>Crea una clase <strong><code>ConversorMillas</code></strong> con un método estático <code>millasAMetros()</code> que toma como parámetro de entrada un valor en millas marinas y las convierte a metros. Una vez tengas este método escribe otro (también estático) <code>millasAKilometros()</code> que realice la misma conversión, pero esta vez exprese el resultado en kilómetros. Crea la función main que pruebe las dos anteriores.</p>
+<p><em>Nota: 1 milla marina equivale a 1852 metros.</em></p>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>La solución a este reto es:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> ConversorMillas {
+        <span class="tok-comment">//Constante para la conversión</span>
+        <span class="tok-key">private</span> <span class="tok-key">static</span> <span class="tok-key">final</span> <span class="tok-key">double</span> METROS_MILLA = <span class="tok-bool">1852</span>;
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * método millasAMetros() que toma como parámetro de entrada un valor en millas marinas y las convierte a metros.</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> millasAMetros(<span class="tok-key">double</span> millas){
+            <span class="tok-key">return</span> millas*METROS_MILLA;
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * millasAKilometros() que realice la misma conversión, pero esta vez exprese el resultado en kilómetros.</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">double</span> millasAKilometros(<span class="tok-key">double</span> millas){
+            <span class="tok-comment">//return millas*METROS_MILLA/1000;</span>
+
+            <span class="tok-comment">//ALTERNATIVA reutilizando el método anterior:</span>
+            <span class="tok-key">return</span> millasAMetros(millas) / <span class="tok-bool">1000</span>;
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * Crea la función main que pruebe las dos anteriores</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+            <span class="tok-key">double</span> millas = <span class="tok-bool">50</span>;
+
+            <span class="tok-key">System</span>.out.println(millas + <span class="tok-string">&quot;millas son &quot;</span> + ConversorMillas.millasAMetros(millas) + <span class="tok-string">&quot; metros&quot;</span>);
+            <span class="tok-key">System</span>.out.println(millas + <span class="tok-string">&quot;millas son &quot;</span> + ConversorMillas.millasAKilometros(millas) + <span class="tok-string">&quot; kilometros&quot;</span>);
+        }
+    }</code></pre>
+</div></p>
+</blockquote>
+</details>
+<hr>
+
+<h3 id="reto-03">Reto 03</h3>
+<p><strong><code>Restaurante03</code></strong> : Un restaurante cuya especialidad son las patatas con carne nos pide diseñar un método con el que se pueda saber cuántos clientes pueden atender con la materia prima que tienen en el almacén. El método recibe la cantidad de patatas y carne en kilos y devuelve el número de clientes que puede atender el restaurante.</p>
+<p><em>Nota: Ten en cuenta que por cada 3 personas, se utilizan 2 kilos de patatas y 1 kilo de carne</em></p>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>La solución a este reto es:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> Restaurante03 {
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * método con el que se pueda saber cuántos clientes pueden atender con la materia prima que tienen en el almacén. </span>
+<span class="tok-comment">        *El método recibe la cantidad de patatas y carne en kilos y devuelve el número de clientes que puede atender el restaurante.</span>
+<span class="tok-comment">        * Nota: Ten en cuenta que por cada 3 personas, se utilizan 2 kilos de patatas y 1 kilo de carn</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">int</span> cantidadComensales(<span class="tok-key">int</span> patatas, <span class="tok-key">int</span> carne){
+            <span class="tok-comment">//Calcular el nº de comensales según las patatas disponibles, teniendo en cuenta que 1 comensar = 2/3 de kg de patata</span>
+            <span class="tok-key">double</span> patatasPersona = <span class="tok-bool">2</span>.<span class="tok-bool">0</span>/<span class="tok-bool">3</span>.<span class="tok-bool">0</span>;
+            <span class="tok-key">int</span> cPatata = (<span class="tok-key">int</span>)(patatas / patatasPersona);
+
+            <span class="tok-comment">//Calcular el nº de comensales según la carne disponible, teniendo en cuenta que 1 comensar = 1/3 de kg de carne</span>
+            <span class="tok-key">double</span> carnePersona = <span class="tok-bool">1</span>.<span class="tok-bool">0</span>/<span class="tok-bool">3</span>.<span class="tok-bool">0</span>;
+            <span class="tok-key">int</span> cCarne = (<span class="tok-key">int</span>) (carne / carnePersona);
+
+            <span class="tok-comment">//Devolvemsos el minimo de los dos resultados, ya que no podemos atender a un comensal si solo tenemos 1 de los ingredientes.</span>
+            <span class="tok-key">return</span> <span class="tok-key">Math</span>.min(cPatata, cCarne);
+        }
+    }</code></pre>
+</div></p>
+</blockquote>
+</details>
+<hr>
+
+<h3 id="reto-04">Reto 04</h3>
+<p>Modifica el programa anterior (<strong><code>Restaurante</code></strong>) creando una clase que permita almacenar los kilos de patatas y carne del restaurante. Implementa los siguientes métodos:</p>
+<ul>
+<li><code>public void Restaurante(int carne, int patatas)</code>. Constructor con los parámetros carne y patatas.</li>
+<li><code>public void addCarne(int x)</code>. Añade x kilos de carne a los ya existentes.</li>
+<li><code>public void addPatatas(int x)</code>. Añade x kilos de patatas a los ya existentes.</li>
+<li><code>public int getComensales()</code>. Devuelve el número de clientes que puede atender el restaurante (este es el método del ejercicio anterior).</li>
+<li><code>public double getCarne()</code>. Devuelve los kilos de carne que hay en el almacén.</li>
+<li><code>public double getPatatas()</code>. Devuelve los kilos de patatas que hay en el almacén.</li>
+</ul>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>La solución a este reto es:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> Restaurante04 {
+        <span class="tok-comment">//Atributos</span>
+        <span class="tok-key">int</span> carne, patatas;
+
+        <span class="tok-comment">//Constructor con los parámetros carne y patatas.</span>
+        <span class="tok-key">public</span> Restaurante04(<span class="tok-key">int</span> carne, <span class="tok-key">int</span> patatas){
+            <span class="tok-key">this</span>.carne = carne;
+            <span class="tok-key">this</span>.patatas = patatas;
+        }
+
+        <span class="tok-comment">//Añade x kilos de carne a los ya existentes.</span>
+        <span class="tok-key">public</span> <span class="tok-key">void</span> addCarne(<span class="tok-key">int</span> x){
+            <span class="tok-key">this</span>.carne+=x;
+        }
+
+        <span class="tok-comment">//Añade x kilos de patatas a los ya existentes.</span>
+        <span class="tok-key">public</span> <span class="tok-key">void</span> addPatatas(<span class="tok-key">int</span> x){
+            <span class="tok-key">this</span>.patatas+=x;
+        }
+
+        <span class="tok-comment">//Devuelve el número de clientes que puede atender el restaurante (este es el método del ejercicio anterior).</span>
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getComensales(){
+            <span class="tok-comment">//Calcular el nº de comensales según las patatas disponibles, teniendo en cuenta que 1 comensar = 2/3 de kg de patata</span>
+            <span class="tok-key">double</span> patatasPersona = <span class="tok-bool">2</span>.<span class="tok-bool">0</span>/<span class="tok-bool">3</span>.<span class="tok-bool">0</span>;
+            <span class="tok-key">int</span> cPatata = (<span class="tok-key">int</span>)(<span class="tok-key">this</span>.patatas / patatasPersona);
+
+            <span class="tok-comment">//Calcular el nº de comensales según la carne disponible, teniendo en cuenta que 1 comensar = 1/3 de kg de carne</span>
+            <span class="tok-key">double</span> carnePersona = <span class="tok-bool">1</span>.<span class="tok-bool">0</span>/<span class="tok-bool">3</span>.<span class="tok-bool">0</span>;
+            <span class="tok-key">int</span> cCarne = (<span class="tok-key">int</span>) (<span class="tok-key">this</span>.carne / carnePersona);
+
+            <span class="tok-comment">//Devolvemsos el minimo de los dos resultados, ya que no podemos atender a un comensal si solo tenemos 1 de los ingredientes.</span>
+            <span class="tok-key">return</span> <span class="tok-key">Math</span>.min(cPatata, cCarne);
+        }
+
+        <span class="tok-comment">//Devuelve los kilos de carne que hay en el almacén.</span>
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getCarne(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.carne;
+        }
+
+        <span class="tok-comment">// Devuelve los kilos de patatas que hay en el almacén.</span>
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getPatatas(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.patatas;
+        }
+
+        <span class="tok-comment">//Método main para probar la clase</span>
+        <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+            Restaurante04 res = <span class="tok-key">new</span> Restaurante04(<span class="tok-bool">46</span>, <span class="tok-bool">15</span>);
+
+            res.addCarne(<span class="tok-bool">4</span>);
+            res.addPatatas(<span class="tok-bool">5</span>);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Con &quot;</span> +res.getCarne()+ <span class="tok-string">&quot;kg de carne y &quot;</span> + res.getPatatas()+<span class="tok-string">&quot;kg de patatas, puedo atender a &quot;</span> + res.getComensales() + <span class="tok-string">&quot; comensales.&quot;</span>);
+        }
+    }</code></pre>
+</div></p>
+</blockquote>
+</details>
+<hr>
+
+<h3 id="reto-05">Reto 05</h3>
+<p>Crear un clase llamada <strong><code>Proveedor</code></strong> con las siguientes propiedades:</p>
+<ul>
+<li><code>cif</code></li>
+<li><code>nombreEmpresa</code></li>
+<li><code>descripcion</code></li>
+<li><code>sector</code></li>
+<li><code>direccion</code></li>
+<li><code>telefono</code></li>
+<li><code>poblacion</code></li>
+<li><code>codPostal</code></li>
+<li><code>correo</code></li>
+</ul>
+<p>Crear para la clase <strong><code>Proveedor</code></strong> los métodos:</p>
+<ul>
+<li>Constructor por defecto que inicialice los atributos.</li>
+<li>Constructor que permite crear una instancia con los datos de un proveedor.</li>
+<li>Métodos get (<em>getters</em>).</li>
+<li>Métodos set (<em>setters</em>).</li>
+<li>Método <code>verificaCorreo</code> que devuelve true si la dirección de correo contiene <code>@</code>. <em>AYUDA: busca entre los métodos de la clase String</em></li>
+<li>Método que muestre todos los datos del proveedor por pantalla.</li>
+</ul>
+<p>Crear en esta clase un método <strong><code>TestProveedor</code></strong> ejecutable que:</p>
+<ul>
+<li>Cree una instancia del objeto <code>Proveedor</code> llamado <code>proveedor</code>.</li>
+<li>Cambie el sector del <code>proveedor</code>.</li>
+<li>Muestre el sector del <code>proveedor</code>.</li>
+<li>Verifique si el correo es válido.</li>
+<li>Muestre todos los datos del <code>proveedor</code>.</li>
+</ul>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>La solución a este reto contiene dos clases:
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> Proveedor {
+        <span class="tok-comment">//Atributos</span>
+        <span class="tok-key">String</span> cif, nombreEmpresa, descripcion, sector, direccion, poblacion, correo;
+        <span class="tok-key">long</span> telefono;
+        <span class="tok-key">int</span> codPostal;
+
+        <span class="tok-comment">//Constructor por defecto</span>
+        <span class="tok-key">public</span> Proveedor(){
+            <span class="tok-key">this</span>.cif=<span class="tok-string">&quot;&quot;</span>;
+            <span class="tok-key">this</span>.nombreEmpresa=<span class="tok-string">&quot;&quot;</span>;
+            <span class="tok-key">this</span>.descripcion=<span class="tok-string">&quot;&quot;</span>;
+            <span class="tok-key">this</span>.sector=<span class="tok-string">&quot;&quot;</span>;
+            <span class="tok-key">this</span>.direccion=<span class="tok-string">&quot;&quot;</span>;
+            <span class="tok-key">this</span>.telefono=<span class="tok-bool">0</span>;
+            <span class="tok-key">this</span>.poblacion=<span class="tok-string">&quot;&quot;</span>;
+            <span class="tok-key">this</span>.codPostal=<span class="tok-bool">0</span>;
+            <span class="tok-key">this</span>.correo=<span class="tok-string">&quot;&quot;</span>;
+        }
+
+        <span class="tok-comment">//Constructor que permite crear una instancia con los datos de un proveedor.</span>
+        <span class="tok-key">public</span> Proveedor(<span class="tok-key">String</span> cif, <span class="tok-key">String</span> nombreEmpresa, <span class="tok-key">String</span> descripcion, <span class="tok-key">String</span> sector, <span class="tok-key">String</span> direccion, <span class="tok-key">long</span> telefono, <span class="tok-key">String</span> poblacion, <span class="tok-key">int</span> codPostal, <span class="tok-key">String</span> correo){
+            <span class="tok-key">this</span>.cif=cif;
+            <span class="tok-key">this</span>.nombreEmpresa=nombreEmpresa;
+            <span class="tok-key">this</span>.descripcion=descripcion;
+            <span class="tok-key">this</span>.sector=sector;
+            <span class="tok-key">this</span>.direccion=direccion;
+            <span class="tok-key">this</span>.telefono=telefono;
+            <span class="tok-key">this</span>.poblacion=poblacion;
+            <span class="tok-key">this</span>.codPostal=codPostal;
+            <span class="tok-key">this</span>.correo=correo;
+        }
+
+        <span class="tok-comment">//Métodos get (getters).</span>
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getCif(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.cif;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getNombreEmpresa(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.nombreEmpresa;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getSector(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.sector;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getDireccion(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.direccion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">long</span> getTelefono(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.telefono;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getPoblacion(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.poblacion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getCodPostal(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.codPostal;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getCorreo(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.correo;
+        }
+
+        <span class="tok-comment">//Métodos set (setters).</span>
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setCif(<span class="tok-key">String</span> cif){
+            <span class="tok-key">this</span>.cif = cif;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setNombreEmpresa(<span class="tok-key">String</span> nombreEmpresa){
+            <span class="tok-key">this</span>.nombreEmpresa = nombreEmpresa;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setDescripcion(<span class="tok-key">String</span> descripcion){
+            <span class="tok-key">this</span>.descripcion = descripcion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setSector(<span class="tok-key">String</span> sector){
+            <span class="tok-key">this</span>.sector = sector;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setDireccion(<span class="tok-key">String</span> direccion){
+            <span class="tok-key">this</span>.direccion = direccion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setTelefono(<span class="tok-key">int</span> telefono){
+            <span class="tok-key">this</span>.telefono = telefono;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setPoblacion(<span class="tok-key">String</span> poblacion){
+            <span class="tok-key">this</span>.poblacion = poblacion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setCodPostal(<span class="tok-key">int</span> codPostal){
+            <span class="tok-key">this</span>.codPostal = codPostal;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setCorreo(<span class="tok-key">String</span> correo){
+            <span class="tok-key">this</span>.correo = correo;
+        }
+
+        <span class="tok-comment">//Método verificaCorreo que devuelve true si la dirección de correo contiene @. AYUDA: busca entre los métodos de la clase String</span>
+        <span class="tok-key">public</span> <span class="tok-key">boolean</span> verificaCorreo(){
+            <span class="tok-key">if</span> (<span class="tok-key">this</span>.correo.contains(<span class="tok-string">&quot;@&quot;</span>)) {
+                <span class="tok-key">return</span> <span class="tok-bool">true</span>;
+            }<span class="tok-key">else</span>{
+                <span class="tok-key">return</span> <span class="tok-bool">false</span>;
+            }
+
+            <span class="tok-comment">//ALTERNATIVA óptima: </span>
+                <span class="tok-comment">//return this.correo.contains(&quot;@&quot;);</span>
+        }
+
+        <span class="tok-comment">//Método que muestre todos los datos del proveedor por pantalla.</span>
+        <span class="tok-key">public</span> <span class="tok-key">void</span> mostrarDatos(){
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;CIF: &quot;</span>+<span class="tok-key">this</span>.cif);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Nombre empresa: &quot;</span>+<span class="tok-key">this</span>.nombreEmpresa);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Descripción: &quot;</span>+<span class="tok-key">this</span>.descripcion);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Sector: &quot;</span>+<span class="tok-key">this</span>.sector);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Dirección: &quot;</span>+<span class="tok-key">this</span>.direccion);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Teléfono: &quot;</span>+<span class="tok-key">this</span>.telefono);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Población: &quot;</span>+<span class="tok-key">this</span>.poblacion);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Código postal: &quot;</span>+<span class="tok-key">this</span>.codPostal);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Correo: &quot;</span>+<span class="tok-key">this</span>.correo);
+        }
+    }</code></pre>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> TestProveedor {
+        <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+            <span class="tok-comment">//Cree una instancia del objeto Proveedor llamado proveedor.</span>
+            Proveedor proveedor = <span class="tok-key">new</span> Proveedor(<span class="tok-string">&quot;123456789X&quot;</span>, <span class="tok-string">&quot;Empresa 1&quot;</span>, <span class="tok-string">&quot;descripcion&quot;</span>, <span class="tok-string">&quot;informática&quot;</span>, <span class="tok-string">&quot;C/Calvari, s/n&quot;</span>, <span class="tok-bool">964532121</span>, <span class="tok-string">&quot;Catadau&quot;</span>, <span class="tok-bool">44566</span>, <span class="tok-string">&quot;empresa@empresa.com&quot;</span>);
+
+            <span class="tok-comment">//Cambie el sector del proveedor.</span>
+            proveedor.setSector(<span class="tok-string">&quot;Diseño gráfico&quot;</span>);
+            <span class="tok-comment">//Muestre el sector del proveedor.</span>
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Sector del proveedor: &quot;</span> +proveedor.getSector());
+            <span class="tok-comment">//Verifique si el correo es válido.</span>
+            proveedor.verificaCorreo();
+            <span class="tok-comment">//Muestre todos los datos del proveedor.</span>
+            proveedor.mostrarDatos();
+        }
+    }</code></pre>
+</div></p>
+</blockquote>
+</details>
+<hr>
+
+<h3 id="reto-06">Reto 06</h3>
+<p>Crear una clase llamada <strong><code>Hospital</code></strong> con las siguientes propiedades y métodos:</p>
+<p>Propiedades:</p>
+<ul>
+<li><code>codHospital</code></li>
+<li><code>nombreHospital</code></li>
+<li><code>direccion</code></li>
+<li><code>telefono</code></li>
+<li><code>poblacion</code></li>
+<li><code>codPostal</code></li>
+<li><code>habitacionesTotales</code></li>
+<li><code>habitacionesOcupadas</code></li>
+</ul>
+<p>Métodos:</p>
+<ul>
+<li><code>Hospital</code>: permite crear una instancia con los datos de un hospital.</li>
+<li>Métodos <em>get</em>.</li>
+<li>Métodos <em>set</em>.</li>
+<li>Método <code>ingreso</code> que incrementa las habitaciones ocupadas. No puede realizarse el ingreso si las habitaciones ocupadas son iguales a las habitaciones totales del hospital. Devuelve <code>true</code> si se ha podido realizar el ingreso.</li>
+<li>Método <code>alta</code> que decrementa las habitaciones ocupadas. No puede realizarse el alta las habitaciones ocupadas son 0. Devuelve <code>true</code> si se ha podido realizar el alta.</li>
+<li>Método que muestre todos los datos del hospital.</li>
+</ul>
+<p>Crear una clase principal <strong><code>TestHospital</code></strong> ejecutable que:</p>
+<ul>
+<li>Cree una instancia de la clase <code>Hospital</code> llamada <code>hospitalRibera</code>.</li>
+<li>Cambie el número de habitaciones de la instancia <code>hospitalRibera</code>.</li>
+<li>Realiza un ingreso de la instancia <code>hospitalRibera</code>.</li>
+<li>Muestra las habitaciones ocupadas de la instancia <code>hospitalRibera</code>.</li>
+<li>Realiza un alta de la instancia <code>hospitalRibera</code>.</li>
+<li>Muestra las habitaciones ocupadas de la instancia <code>hospitalRibera</code>.</li>
+<li>Muestre todos los datos de la instancia <code>hospitalRibera</code>.</li>
+</ul>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>La solución a este reto contiene dos clases:</p>
+</blockquote>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> Hospital{
+        <span class="tok-comment">//Atributos</span>
+        <span class="tok-key">long</span> codHospital, telefono;
+        <span class="tok-key">String</span> nombreHospital, direccion, poblacion;
+        <span class="tok-key">int</span> codPostal, habitacionesTotales, habitacionesOcupadas;
+
+        <span class="tok-comment">//Constructor</span>
+        <span class="tok-key">public</span> Hospital(<span class="tok-key">long</span> codHospital, <span class="tok-key">long</span> telefono, <span class="tok-key">String</span> nombreHospital, <span class="tok-key">String</span> direccion, <span class="tok-key">String</span> poblacion, <span class="tok-key">int</span> codPostal, <span class="tok-key">int</span> habitacionesTotales, <span class="tok-key">int</span> habitacionesOcupadas){
+            <span class="tok-key">this</span>.codHospital = codHospital;
+            <span class="tok-key">this</span>.telefono = telefono;
+            <span class="tok-key">this</span>.nombreHospital = nombreHospital;
+            <span class="tok-key">this</span>.direccion = direccion;
+            <span class="tok-key">this</span>.poblacion = poblacion;
+            <span class="tok-key">this</span>.codPostal = codPostal;
+            <span class="tok-key">this</span>.habitacionesTotales = habitacionesTotales;
+            <span class="tok-key">this</span>.habitacionesOcupadas = habitacionesOcupadas;
+        }
+
+        <span class="tok-comment">//Getters</span>
+        <span class="tok-key">public</span> <span class="tok-key">long</span> getCodHospital(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.codHospital;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">long</span> getTelefono(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.telefono;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getNombreHospital(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.nombreHospital;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getDireccion(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.direccion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getPoblacion(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.poblacion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getCodPostal(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.codPostal;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getHabitacionesTotales(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.habitacionesTotales;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getHabitacionOcupadas(){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.habitacionesOcupadas;
+        }
+
+        <span class="tok-comment">//Setters</span>
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setCodHospital(<span class="tok-key">long</span> codHospital){
+            <span class="tok-key">this</span>.codHospital = codHospital;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setTelefono(<span class="tok-key">long</span> telefono){
+            <span class="tok-key">this</span>.telefono = telefono;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setNombreHospital(<span class="tok-key">String</span> nombreHospital){
+            <span class="tok-key">this</span>.nombreHospital = nombreHospital;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setDireccion(<span class="tok-key">String</span> direccion){
+            <span class="tok-key">this</span>.direccion = direccion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setPoblacion(<span class="tok-key">String</span> poblacion){
+            <span class="tok-key">this</span>.poblacion = poblacion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setCodPostal(<span class="tok-key">int</span> codPostal){
+            <span class="tok-key">this</span>.codPostal = codPostal;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setHabitacionesTotales(<span class="tok-key">int</span> habitacionesTotales){
+            <span class="tok-key">this</span>.habitacionesTotales = habitacionesTotales;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setHabitacionesOcupadas(<span class="tok-key">int</span> habitacionesOcupadas){
+            <span class="tok-key">this</span>.habitacionesOcupadas = habitacionesOcupadas;
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * Método ingreso que incrementa las habitaciones ocupadas.</span>
+<span class="tok-comment">        * No puede realizarse el ingreso si las habitaciones ocupadas son iguales a las habitaciones totales del hospital.</span>
+<span class="tok-comment">        * Devuelve true si se ha podido realizar el ingreso.</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">boolean</span> ingreso(){
+            <span class="tok-key">if</span> (<span class="tok-key">this</span>.habitacionesOcupadas &gt;= <span class="tok-key">this</span>.habitacionesTotales) {
+                <span class="tok-key">return</span> <span class="tok-bool">false</span>;
+            }<span class="tok-key">else</span>{
+                <span class="tok-key">this</span>.habitacionesOcupadas++;
+                <span class="tok-key">return</span> <span class="tok-bool">true</span>;
+            }
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * Método alta que decrementa las habitaciones ocupadas.</span>
+<span class="tok-comment">        * No puede realizarse el alta las habitaciones ocupadas son 0.</span>
+<span class="tok-comment">        * Devuelve true si se ha podido realizar el alta.</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">boolean</span> alta(){
+            <span class="tok-key">if</span>(habitacionesOcupadas == <span class="tok-bool">0</span>){
+                <span class="tok-key">return</span> <span class="tok-bool">false</span>;
+            }<span class="tok-key">else</span>{
+                habitacionesOcupadas--;
+                <span class="tok-key">return</span> <span class="tok-bool">true</span>;
+            }
+        }
+
+        <span class="tok-comment">/*</span>
+<span class="tok-comment">        * Método que muestre todos los datos del hospital.</span>
+<span class="tok-comment">        */</span>
+        <span class="tok-key">public</span> <span class="tok-key">void</span> mostrarDatos(){
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Código: &quot;</span>+<span class="tok-key">this</span>.codHospital);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Nombre: &quot;</span>+<span class="tok-key">this</span>.nombreHospital);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Dirección: &quot;</span>+<span class="tok-key">this</span>.direccion);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Télefono: &quot;</span>+<span class="tok-key">this</span>.telefono);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Población: &quot;</span>+<span class="tok-key">this</span>.poblacion);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Código postal: &quot;</span>+<span class="tok-key">this</span>.codPostal);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Habitaciones totales: &quot;</span>+<span class="tok-key">this</span>.habitacionesTotales);
+            <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Habitaciones ocupadas: &quot;</span>+<span class="tok-key">this</span>.habitacionesOcupadas);
+        }
+    }</code></pre>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-key">public</span> <span class="tok-key">class</span> TestHospital{
+    <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">//Cree una instancia de la clase Hospital llamada hospitalRibera.</span>
+        Hospital hospitalRibera = <span class="tok-key">new</span> Hospital(<span class="tok-bool">786</span>, <span class="tok-bool">978765423</span>, <span class="tok-string">&quot;Hospital sanidad&quot;</span>, <span class="tok-string">&quot;C/hospital, sn&quot;</span>, <span class="tok-string">&quot;Catadau&quot;</span>, <span class="tok-bool">46776</span>, <span class="tok-bool">380</span>, <span class="tok-bool">238</span>);
+
+        <span class="tok-comment">//Cambie el número de habitaciones de la instancia hospitalRibera.</span>
+        hospitalRibera.setHabitacionesTotales(<span class="tok-bool">400</span>);
+
+        <span class="tok-comment">//Realiza un ingreso de la instancia hospitalRibera.</span>
+        hospitalRibera.ingreso();
+
+        <span class="tok-comment">//Muestra las habitaciones ocupadas de la instancia hospitalRibera.</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Habitaciones ocupadas: &quot;</span> + hospitalRibera.getHabitacionOcupadas());
+
+        <span class="tok-comment">//Realiza un alta de la instancia hospitalRibera.</span>
+        hospitalRibera.alta();
+
+        <span class="tok-comment">//Muestra las habitaciones ocupadas de la instancia hospitalRibera.</span>
+        <span class="tok-key">System</span>.out.println(<span class="tok-string">&quot;Habitaciones ocupadas: &quot;</span> + hospitalRibera.getHabitacionOcupadas());
+
+        <span class="tok-comment">//Muestre todos los datos de la instancia hospitalRibera.</span>
+        hospitalRibera.mostrarDatos();
+    }
+}</code></pre>
+</div>
+</details>
+<hr>
+
+<h3 id="reto-07">Reto 07</h3>
+<p>Crear un clase llamada <strong><code>Medico</code></strong> con las siguientes propiedades y métodos:</p>
+<p>Propiedades:</p>
+<ul>
+<li><code>codMedico</code></li>
+<li><code>nombre</code></li>
+<li><code>apellidos</code></li>
+<li><code>dni</code></li>
+<li><code>direccion</code></li>
+<li><code>telefono</code></li>
+<li><code>poblacion</code></li>
+<li><code>codPostal</code></li>
+<li><code>fechaNacimiento</code></li>
+<li><code>especialidad</code></li>
+<li><code>sueldo</code></li>
+</ul>
+<p>Métodos:</p>
+<ul>
+<li><code>Medico</code>: Permite crear una instancia con los datos de un médico.</li>
+<li>Métodos <em>get</em>: Recuperan datos de la instancia del objeto.</li>
+<li>Métodos <em>set</em>: Asignan datos a la instancia del objeto.</li>
+<li><code>retencionMedico</code>: Permite calcular la retención aplicada al sueldo del médico. Se le pasa el dato del porcentaje de retención.</li>
+<li><code>mostrarDatos</code>: Muestra los datos del médico.</li>
+</ul>
+<p>Crear una clase principal <strong><code>TestMedico</code></strong> ejecutable que:<code>&lt;br/&gt;</code></p>
+<ul>
+<li>Crear dos instancias de la clase <code>Medico</code> llamados <code>mDigestivo</code> y <code>mTraumatologo</code>.</li>
+<li>Cambia el sueldo del <code>medicoTraumatologo</code>.</li>
+<li>Muestra el sueldo del <code>medicoTraumatologo</code>.</li>
+<li>Cambia el dni del <code>medicoDigestivo</code>.</li>
+<li>Muestra el dni del <code>medicoDigestivo</code>.</li>
+<li>Calcula la retención de las dos instancias de la clase <code>Medico</code> que hemos creado.</li>
+<li>Mostrar los datos de las dos instancias de la clase <code>Medico</code> que hemos creado, así como las retenciones y los sueldos finales de cada una.</li>
+</ul>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>La solución a este reto contiene dos clases:</p>
+</blockquote>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> Medico{
+    <span class="tok-comment">// atributos</span>
+        <span class="tok-key">private</span> <span class="tok-key">int</span> codMedico;
+        <span class="tok-key">private</span> <span class="tok-key">String</span> nombre;
+        <span class="tok-key">private</span> <span class="tok-key">String</span> apellidos;
+        <span class="tok-key">private</span> <span class="tok-key">String</span> dni;
+        <span class="tok-key">private</span> <span class="tok-key">String</span> direccion;
+        <span class="tok-key">private</span> <span class="tok-key">String</span> telefono;
+        <span class="tok-key">private</span> <span class="tok-key">String</span> poblacion;
+        <span class="tok-key">private</span> <span class="tok-key">int</span> codPostal;
+        <span class="tok-comment">//private Date fechaNacimiento;</span>
+        <span class="tok-key">private</span> <span class="tok-key">String</span> especialidad;
+        <span class="tok-key">private</span> <span class="tok-key">double</span> sueldo;
+
+        <span class="tok-comment">// constructor</span>
+        <span class="tok-key">public</span> Medico(<span class="tok-key">int</span> codMedico, <span class="tok-key">String</span> nombre, <span class="tok-key">String</span> apellidos, <span class="tok-key">String</span> dni, <span class="tok-key">String</span> direccion, <span class="tok-key">String</span> telefono,
+                <span class="tok-key">String</span> poblacion, <span class="tok-key">int</span> codPostal, <span class="tok-key">String</span> especialidad, <span class="tok-key">double</span> sueldo) {
+            <span class="tok-key">this</span>.codMedico = codMedico;
+            <span class="tok-key">this</span>.nombre = nombre;
+            <span class="tok-key">this</span>.apellidos = apellidos;
+            <span class="tok-key">this</span>.dni = dni;
+            <span class="tok-key">this</span>.direccion = direccion;
+            <span class="tok-key">this</span>.telefono = telefono;
+            <span class="tok-key">this</span>.poblacion = poblacion;
+            <span class="tok-key">this</span>.codPostal = codPostal;
+            <span class="tok-comment">//this.fechaNacimiento = fechaNacimiento;</span>
+            <span class="tok-key">this</span>.especialidad = especialidad;
+            <span class="tok-key">this</span>.sueldo = sueldo;
+        }
+            <span class="tok-comment">// getters</span>
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getCodMedico() {
+            <span class="tok-key">return</span> codMedico;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getNombre() {
+            <span class="tok-key">return</span> nombre;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getApellidos() {
+            <span class="tok-key">return</span> apellidos;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getDni() {
+            <span class="tok-key">return</span> dni;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getDireccion() {
+            <span class="tok-key">return</span> direccion;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getTelefono() {
+            <span class="tok-key">return</span> telefono;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getPoblacion() {
+            <span class="tok-key">return</span> poblacion;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">int</span> getCodPostal() {
+            <span class="tok-key">return</span> codPostal;
+        }
+        <span class="tok-comment">// public Date getFechaNacimiento() {</span>
+        <span class="tok-comment">//     return fechaNacimiento;</span>
+        <span class="tok-comment">// }</span>
+        <span class="tok-key">public</span> <span class="tok-key">String</span> getEspecialidad() {
+            <span class="tok-key">return</span> especialidad;
+        }
+        <span class="tok-key">public</span> <span class="tok-key">double</span> getSueldo() {
+            <span class="tok-key">return</span> sueldo;
+        }
+
+        <span class="tok-comment">// setters</span>
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setCodMedico(<span class="tok-key">int</span> codMedico) {
+            <span class="tok-key">this</span>.codMedico = codMedico;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setNombre(<span class="tok-key">String</span> nombre) {
+            <span class="tok-key">this</span>.nombre = nombre;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setApellidos(<span class="tok-key">String</span> apellidos) {
+            <span class="tok-key">this</span>.apellidos = apellidos;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setDni(<span class="tok-key">String</span> dni) {
+            <span class="tok-key">this</span>.dni = dni;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setDireccion(<span class="tok-key">String</span> direccion) {
+            <span class="tok-key">this</span>.direccion = direccion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setTelefono(<span class="tok-key">String</span> telefono) {
+            <span class="tok-key">this</span>.telefono = telefono;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setPoblacion(<span class="tok-key">String</span> poblacion) {
+            <span class="tok-key">this</span>.poblacion = poblacion;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setCodPostal(<span class="tok-key">int</span> codPostal) {
+            <span class="tok-key">this</span>.codPostal = codPostal;
+        }
+
+        <span class="tok-comment">// public void setFechaNacimiento(Date fechaNacimiento) {</span>
+        <span class="tok-comment">//     this.fechaNacimiento = fechaNacimiento;</span>
+        <span class="tok-comment">// }</span>
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setEspecialidad(<span class="tok-key">String</span> especialidad) {
+            <span class="tok-key">this</span>.especialidad = especialidad;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> setSueldo(<span class="tok-key">double</span> sueldo) {
+            <span class="tok-key">this</span>.sueldo = sueldo;
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">double</span> retencionMedico (<span class="tok-key">double</span> porcentaje){
+            <span class="tok-key">return</span> <span class="tok-key">this</span>.sueldo * (<span class="tok-bool">1</span> - porcentaje/<span class="tok-bool">100</span>);
+        }
+
+        <span class="tok-key">public</span> <span class="tok-key">void</span> mostrarDatos(){
+            <span class="tok-key">String</span> respuesta = <span class="tok-string">&quot;Médico: &quot;</span> +
+                            <span class="tok-string">&quot;\nNombre: &quot;</span> + <span class="tok-key">this</span>.nombre +
+                            <span class="tok-string">&quot;\nSueldo: &quot;</span> + <span class="tok-key">this</span>.sueldo;
+            <span class="tok-key">System</span>.out.println(respuesta);
+        }
+    }</code></pre>
+</div>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code>    <span class="tok-key">public</span> <span class="tok-key">class</span> TestMedico{          
+        <span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {             
+            Medico m1 = <span class="tok-key">new</span> Medico(<span class="tok-bool">123456</span>, <span class="tok-string">&quot;Ana&quot;</span>, <span class="tok-string">&quot;Asins&quot;</span>,<span class="tok-string">&quot;12345678X&quot;</span>, <span class="tok-string">&quot;c/ nosequé, s/n&quot;</span>,                        <span class="tok-string">&quot;123456789&quot;</span>, <span class="tok-string">&quot;Almussafes&quot;</span>, <span class="tok-bool">46195</span>,<span class="tok-string">&quot;otorrino&quot;</span>, <span class="tok-bool">8001</span>);             
+            m1.mostrarDatos();            
+            <span class="tok-comment">//m1.retencionMedico(50);             </span>
+            <span class="tok-key">System</span>.out.println(m1.retencionMedico(<span class="tok-bool">50</span>));         
+        }     
+    }     </code></pre>
+</div>
+</details>
+<hr>
+<h3 id="reto-08">Reto 08</h3>
+<p><strong><code>LlenarConCirculo</code></strong> : Crear una pizarra cuadrada y dibujar en ella un círculo que la ocupe por completo.<br/></p>
+<details class="admonition java">
+<summary>Solución</summary>
+<blockquote>
+<p>Este reto utiliza la interfaz gráfica a la que dedicaremos más tiempo hacia finales de curso. De momento con entender algunos conceptos muy básicos de cómo dibujar elementos gráficos en una ventana podemos intentar resolverlos usando los conceptos de objetos, clases, herencia, métodos, etcétera que hemos visto en teoría.</p>
+</blockquote>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">//importaciones necesarias para los ejercicios, no necesitas más.</span>
+<span class="tok-key">import</span> javax.swing.JFrame;
+<span class="tok-key">import</span> javax.swing.JPanel;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.awt.Color;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.awt.Graphics;
+
+<span class="tok-comment">/*</span>
+<span class="tok-comment"> * Necesitamos que nuestra clase LlenarConCirculo herede</span>
+<span class="tok-comment"> * de JPanel para poder pintar en su interior.</span>
+<span class="tok-comment"> */</span>
+<span class="tok-key">public</span> <span class="tok-key">class</span> LlenarConCirculo <span class="tok-key">extends</span> JPanel {
+
+@<span class="tok-key">Override</span>
+    <span class="tok-key">public</span> <span class="tok-key">void</span> paint(Graphics g) {
+        <span class="tok-comment">//Fijamos el color que tendrá la figura</span>
+        g.setColor(Color.RED);
+
+<span class="tok-comment">/*</span>
+<span class="tok-comment">         * Dibujamos un ovalo relleno fijando las 4 esquinas que lo delimitan:</span>
+<span class="tok-comment">         * - x1, y1, x2, y2</span>
+<span class="tok-comment">         * En nuestro caso además hacemos uso de la función reflexiva</span>
+<span class="tok-comment">         * this.getWidth() y this.getHeight() para conocer la anchura y altura</span>
+<span class="tok-comment">         * (respectivamente) de nuestra ventana.</span>
+<span class="tok-comment">         */</span>
+g.fillOval(<span class="tok-bool">0</span>, <span class="tok-bool">0</span>, <span class="tok-key">this</span>.getWidth(), <span class="tok-key">this</span>.getHeight());
+
+<span class="tok-comment">/*</span>
+<span class="tok-comment">         * Otras funciones disponibles para dibujar son:</span>
+<span class="tok-comment">         * - fill3DRect(int x, int y, int width, int height, boolean raised)</span>
+<span class="tok-comment">         * Paints a 3-D highlighted rectangle filled with the current color.</span>
+<span class="tok-comment">         * - fillArc(int x, int y, int width, int height, int startAngle, int arcAngle)</span>
+<span class="tok-comment">         * Fills a circular or elliptical arc covering the specified rectangle.</span>
+<span class="tok-comment">         * - fillOval(int x, int y, int width, int height)</span>
+<span class="tok-comment">         * Fills an oval bounded by the specified rectangle with the current color.</span>
+<span class="tok-comment">         * - fillPolygon(int[] xPoints, int[] yPoints, int nPoints)</span>
+<span class="tok-comment">         * Fills a closed polygon defined by arrays of x and y coordinates.</span>
+<span class="tok-comment">         * - fillPolygon(Polygon p)</span>
+<span class="tok-comment">         * Fills the polygon defined by the specified Polygon object with the graphics</span>
+<span class="tok-comment">         * context&#x27;s current color.</span>
+<span class="tok-comment">         * - fillRect(int x, int y, int width, int height)</span>
+<span class="tok-comment">         * Fills the specified rectangle.</span>
+<span class="tok-comment">         * - fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)</span>
+<span class="tok-comment">         * Fills the specified rounded corner rectangle with the current color.</span>
+<span class="tok-comment">* - fill3DRect(int x, int y, int width, int height, boolean raised)</span>
+<span class="tok-comment">         * Paints a 3-D highlighted rectangle filled with the current color.</span>
+<span class="tok-comment">         * - fillArc(int x, int y, int width, int height, int startAngle, int arcAngle)</span>
+<span class="tok-comment">         * Fills a circular or elliptical arc covering the specified rectangle.</span>
+<span class="tok-comment">         * - fillOval(int x, int y, int width, int height)</span>
+<span class="tok-comment">         * Fills an oval bounded by the specified rectangle with the current color.</span>
+<span class="tok-comment">         * - fillPolygon(int[] xPoints, int[] yPoints, int nPoints)</span>
+<span class="tok-comment">         * Fills a closed polygon defined by arrays of x and y coordinates.</span>
+<span class="tok-comment">         * - fillPolygon(Polygon p)</span>
+<span class="tok-comment">         * Fills the polygon defined by the specified Polygon object with the graphics</span>
+<span class="tok-comment">         * context&#x27;s current color.</span>
+<span class="tok-comment">         * - fillRect(int x, int y, int width, int height)</span>
+<span class="tok-comment">         * Fills the specified rectangle.</span>
+<span class="tok-comment">         * - fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)</span>
+<span class="tok-comment">         * Fills the specified rounded corner rectangle with the current color.</span>
+<span class="tok-comment">*/</span>
+    }
+
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+        <span class="tok-comment">//Creamos una nueva ventana</span>
+        JFrame MainFrame = <span class="tok-key">new</span> JFrame();
+
+<span class="tok-comment">//Fijamos su tamaño en 300px de ancho por 300px de alto</span>
+        MainFrame.setSize(<span class="tok-bool">300</span>, <span class="tok-bool">300</span>);
+
+<span class="tok-comment">//Creamos el objeto que vamos a dibujar con el método paint()</span>
+        LlenarConCirculo circlePanel = <span class="tok-key">new</span> LlenarConCirculo();
+
+<span class="tok-comment">//Añadimos el objeto recien creado a la ventana</span>
+        MainFrame.add(circlePanel);
+
+<span class="tok-comment">//Hacemos visible la ventana (con el dibujo)</span>
+        MainFrame.setVisible(<span class="tok-bool">true</span>);
+    }
+}</code></pre>
+</div>
+<p>Este es el esquema básico que necesitas para resolver todos los ejercicios planteados:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Código Java</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)" title="Copiar código">📋 Copiar</button>
+      <span class="terminal-lang">JAVA</span>
+    </div>
+  </div>
+  <pre><code><span class="tok-comment">//importaciones necesarias para los ejercicios, no necesitas más.</span>
+<span class="tok-key">import</span> javax.swing.JFrame;
+<span class="tok-key">import</span> javax.swing.JPanel;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.awt.Color;
+<span class="tok-key">import</span> <span class="tok-cmd">java</span>.awt.Graphics;
+
+<span class="tok-comment">/*</span>
+<span class="tok-comment">  Necesitamos que nuestra clase herede de JPanel para poder</span>
+<span class="tok-comment">  pintar en su interior.</span>
+<span class="tok-comment">*/</span>
+<span class="tok-key">public</span> <span class="tok-key">class</span> TuClaseEjercicio <span class="tok-key">extends</span> JPanel {
+
+@<span class="tok-key">Override</span>
+  <span class="tok-key">public</span> <span class="tok-key">void</span> paint(Graphics g) {
+    <span class="tok-comment">// INSERTA TU CÓDIGO AQUÍ!!! &lt;&lt;--</span>
+    <span class="tok-comment">//Fijamos el color que tendrá la figura</span>
+    <span class="tok-comment">//Dibuja la/s figura/s que te pide el ejercicio</span>
+  }
+
+<span class="tok-key">public</span> <span class="tok-key">static</span> <span class="tok-key">void</span> main(<span class="tok-key">String</span>[] args) {
+    <span class="tok-comment">//Creamos una nueva ventana</span>
+    JFrame MainFrame = <span class="tok-key">new</span> JFrame();
+
+<span class="tok-comment">//Fijamos su tamaño en 300px de ancho por 300px de alto</span>
+    MainFrame.setSize(<span class="tok-bool">300</span>, <span class="tok-bool">300</span>);
+
+<span class="tok-comment">//Creamos el objeto que vamos a dibujar con el método paint()</span>
+    LlenarConCirculo tuDibujo = <span class="tok-key">new</span> LlenarConCirculo();
+
+<span class="tok-comment">//Añadimos el objeto recien creado a la ventana</span>
+    MainFrame.add(tuDibujo);
+
+<span class="tok-comment">//Hacemos visible la ventana (con el dibujo)</span>
+    MainFrame.setVisible(<span class="tok-bool">true</span>);
+  }
+}</code></pre>
+</div>
+</details>
+      <div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/ut04actividades.html">⬅️ Actividades prácticas UT4</a>
+<a class="page-nav-btn" href="../ut05/ut05ras.html">5.0 RA y Criterios de Evaluación ➡️</a>
+</div>
+    </main>
+  </div>
+  
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiado';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
