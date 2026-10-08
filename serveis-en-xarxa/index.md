@@ -16,6 +16,8 @@ Documentació tècnica, guies de configuració de servidors i laboratoris pràct
    * Zones directes i inverses, registres (`A`, `CNAME`, `MX`, `PTR`) i configuració amb BIND9.
 4. **UT4 - Servei Web (HTTP/HTTPS)** *(Pròximament)*
    * Hostatges virtuals (*VirtualHosts*), Apache / Nginx i certificats SSL/TLS.
+5. **[UT7 - Serveis de Transferència de Fitxers (FTP/FTPS) i Accés Remot (SSH/SFTP)](./07_Transferencia_Ficheros_FTP_SSH/)** | *([Versió Markdown](./ut7-transferencia-fitxers-ftp-ssh.md))*
+   * Desplegament d'IIS FTP i OpenSSH en Windows Server 2022 i `vsftpd` en Ubuntu Server 24.04 sobre AWS Cloud, mode passiu, aïllament d'usuaris, xifrat FTPS (TLS), claus SSH amb PuTTY/PuTTYgen, SFTP/SCP i auditoria amb Wireshark.
 
 ---
 
