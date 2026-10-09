@@ -1,26 +1,26 @@
 ---
 layout: default
-title: "UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil · Unitat Completa"
+title: "UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil · Temari Complet"
 course_root: ".."
 badge: "CE IA i Big Data · UT6 Completa"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut06/ut0601.html"
-next_label: "6.1 UT 1. Caracterització de IA forta I dèbil usos i ➡️"
+next_label: "1.1 Caracterització de IA forta I dèbil usos i ➡️"
 ---
 
 # 📘 UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**6.1 UT 1. Caracterització de IA forta I dèbil usos i**](./ut0601.md)
+- [**1.1 Caracterització de IA forta I dèbil usos i**](./ut0601.md)
 
 ---
 
-# 6.1 UT 1. Caracterització de IA forta I dèbil usos i
+# 1.1 Caracterització de IA forta I dèbil usos i
 
 ---
 

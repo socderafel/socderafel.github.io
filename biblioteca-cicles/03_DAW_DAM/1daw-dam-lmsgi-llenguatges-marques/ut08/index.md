@@ -1,27 +1,26 @@
 ---
 layout: default
-title: "UD1 — Introducció als Llenguatges de Marques · Unitat Completa"
+title: "UD1 — Introducció als Llenguatges de Marques · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT8 Completa"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut08/ut0801.html"
-next_label: "8.1 UD1 Introducción a los Lenguajes de Marcas ➡️"
+next_label: "1.1 UD1 Introducción a los Lenguajes de Marcas ➡️"
 ---
 
 # 📘 UD1 — Introducció als Llenguatges de Marques (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**8.1 UD1 Introducción a los Lenguajes de Marcas**](./ut0801.md)
-- [**✍️ Activitats pràctiques UT8**](./ut08actividades.md)
+- [**1.1 UD1 Introducción a los Lenguajes de Marcas**](./ut0801.md)
 
 ---
 
-# 8.1 UD1 Introducción a los Lenguajes de Marcas
+# 1.1 UD1 Introducción a los Lenguajes de Marcas
 
 Lenguajes de Marcas
 
@@ -187,30 +186,5 @@ Pluma, etc).
 Lenguajes de Marcas
 
 7.- Ejercicio
-
----
-
-# ✍️ Activitats pràctiques UT8
-
-> **✍️ Activitat Pràctica 8.1 — Ejercicios unidad 1**
-> Ejercicios teóricos sobre los Lenguajes de Marcas. Fecha máxima de entrega viernes 15 de octubre del 2021.
->
-> Lenguajes de Marcas y Sistemas de Gestión de Información
->
-> Ejercicios tema 1
->
-> Nombre y apellidos del Alumno:¿ASIX o DAW?
->
-> Ejercicio1 1¿Qué es el Lenguaje de Marcas?
->
-> Ejercicio2¿Qué quieren decir las siglas SGML? Y ¿Qué nos permite?
->
-> Ejercicio3
->
-> ¿Qué tiene que tener un documento SGML?
->
-> Ejercicio4 ¿Qué características tienen los Lenguajes de Marcas?
->
-> Ejercicio5¿Son lo mismo un Lenguaje de Marcas y un Lenguaje de Programación? Justifica tu respuesta.¿Se pueden combinar?, si se pueden combinar, ¿Puedes decir algunos ejemplos? Para este último ejercicio se puede consultar en internet
 
 ---

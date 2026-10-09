@@ -1,26 +1,26 @@
 ---
 layout: default
-title: "UD10 — Legislació i Normativa en Ciberseguretat · Unitat Completa"
+title: "UD10 — Legislació i Normativa en Ciberseguretat · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT11 Completa"
-prev_url: "../ut10/ut10actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT10"
+prev_url: "../ut10/ut1001.html"
+prev_label: "⬅️ 9.1 Esciptoris_remots(kali)"
 next_url: "../ut11/ut1101.html"
-next_label: "11.1 Legislació en Ciberseguretat ➡️"
+next_label: "10.1 Legislació en Ciberseguretat ➡️"
 ---
 
 # 📘 UD10 — Legislació i Normativa en Ciberseguretat (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**11.1 Legislació en Ciberseguretat**](./ut1101.md)
+- [**10.1 Legislació en Ciberseguretat**](./ut1101.md)
 
 ---
 
-# 11.1 Legislació en Ciberseguretat
+# 10.1 Legislació en Ciberseguretat
 
 LEGISLACIÓ i NORMATIVA CIBERSEGURETAT
 

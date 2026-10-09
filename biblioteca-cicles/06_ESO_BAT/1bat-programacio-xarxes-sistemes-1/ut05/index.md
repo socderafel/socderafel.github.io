@@ -1,25 +1,28 @@
 ---
 layout: default
-title: "UT5 — Sistemes de fitxers Linux — Programació, Xarxes i Sistemes Informàtics I | Portal Docent Pepe Cuenca"
+title: "UD3 — Sistemes de fitxers Linux · Temari Complet"
 course_root: ".."
 badge: "1r Batxillerat · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut03/ut0303.html"
+prev_label: "⬅️ 2.3 Maquinari"
 next_url: "../ut05/ut0501.html"
-next_label: "5.1 Sistema d'arxius ➡️"
+next_label: "3.1 Sistema d'arxius ➡️"
 ---
 
-# 📘 UT5 — Sistemes de fitxers Linux (Unitat Completa)
+# 📘 UD3 — Sistemes de fitxers Linux (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 Sistema d'arxius**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**5.2 Gestió de Fitxers**](#ut0502) (o [obrir en pàgina individual ➡️](./ut0502.md) )
-> - [**5.3 Permisos**](#ut0503) (o [obrir en pàgina individual ➡️](./ut0503.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 Sistema d'arxius**](./ut0501.md)
+- [**3.2 Gestió de Fitxers**](./ut0502.md)
+- [**3.3 Permisos**](./ut0503.md)
 
 ---
 
-## 5.1 Sistema d'arxius
+# 3.1 Sistema d'arxius
 
 Classe 1: Estructura del sistema d’arxius en Linux Objectiu Comprendre l’organització del sistema d’arxius en Linux, identificar els princi- pals directoris i entendre el concepte de rutes absolutes i relatives. Teoria El sistema d’arxius de Linux s’organitza en forma d’arbre jeràrquic que comença en el directori arrel, representat per /. Tots els fitxers i directoris del sistema pengen d’aquest punt únic.
 
@@ -92,7 +95,7 @@ zip -r projecte_linux_nom_cognom.zip docs Pujar a AULES el fitxer projecte_linux
 
 ---
 
-## 5.2 Gestió de Fitxers
+# 3.2 Gestió de Fitxers
 
 Classe 2: Gestió de fitxers i directoris Objectiu Dominar les ordres fonamentals per crear, copiar, moure, visualitzar i eliminar fitxers i directoris. Teoria En Linux, la major part d’operacions es poden fer des de la línia d’ordres, la qual cosa permet automatitzar tasques i treballar de manera eficient.
 
@@ -177,7 +180,7 @@ Pujar a AULES el fitxer gestio_fitxers_nom_cognom.zip, que ha de contin- dre: - 
 
 ---
 
-## 5.3 Permisos
+# 3.3 Permisos
 
 Classe 3: Permisos i propietaris Objectiu Comprendre el sistema de permisos i propietats dels fitxers i directoris en Linux i aprendre a modificar-los. Teoria Cada fitxer o directori té associats
 
@@ -302,14 +305,3 @@ chmod (mode numèric). - Un exemple addicional inventat, per exemple chmod
 Durada de la classe: 50 minuts Material necessari: Terminal de LliureX, editor de text (nano o similar)
 
 ---
-
-## ✍️ Activitats pràctiques UT5
-
-> **✍️ Activitat Pràctica 5.1 — Tasca Sistema d'arxius**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 5.2 — Tasca Gestió de Fitxers**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 5.3 — Tasca Permisos**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.

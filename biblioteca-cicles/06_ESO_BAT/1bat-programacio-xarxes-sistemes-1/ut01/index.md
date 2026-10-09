@@ -1,26 +1,29 @@
 ---
 layout: default
-title: "UT1 — Programació — Programació, Xarxes i Sistemes Informàtics I | Portal Docent Pepe Cuenca"
+title: "UD1 — Programació · Temari Complet"
 course_root: ".."
 badge: "1r Batxillerat · UT1 Completa"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
-next_label: "1.1 01_Conceptos básicos ➡️"
+next_label: "1.1 Conceptos básicos ➡️"
 ---
 
-# 📘 UT1 — Programació (Unitat Completa)
+# 📘 UD1 — Programació (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**1.1 01_Conceptos básicos**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
-> - [**1.2 02_Condicionales**](#ut0102) (o [obrir en pàgina individual ➡️](./ut0102.md) )
-> - [**1.3 03_Listas y tuplas**](#ut0103) (o [obrir en pàgina individual ➡️](./ut0103.md) )
-> - [**1.4 04_Bucles**](#ut0104) (o [obrir en pàgina individual ➡️](./ut0104.md) )
-> - [**✍️ Activitats pràctiques UT1**](#ut01actividades) (o [obrir en pàgina individual ➡️](./ut01actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 Conceptos básicos**](./ut0101.md)
+- [**1.2 Condicionales**](./ut0102.md)
+- [**1.3 Listas y tuplas**](./ut0103.md)
+- [**1.4 Bucles**](./ut0104.md)
 
 ---
 
-## 1.1 01_Conceptos básicos
+# 1.1 Conceptos básicos
 
 PROGRAMACIÓN
 
@@ -182,7 +185,7 @@ y que muestre por pantalla: El precio final del artículo es de [precio_final]. 
 
 ---
 
-## 1.2 02_Condicionales
+# 1.2 Condicionales
 
 PROGRAMACIÓN
 
@@ -291,7 +294,7 @@ Python: 2. Condicionales
 
 ---
 
-## 1.3 03_Listas y tuplas
+# 1.3 Listas y tuplas
 
 PROGRAMACIÓN
 
@@ -445,7 +448,7 @@ Python: 3. Listas y tuplas
 
 ---
 
-## 1.4 04_Bucles
+# 1.4 Bucles
 
 PROGRAMACIÓN
 
@@ -554,72 +557,3 @@ Ejercicios Enviar cada programa en un archivo (3 archivos) 1. Calculadora. Modif
 4. EJERCICIO VOLUNTARIO: Crea una lista numérica que calcule los números primos entre 1-20 Python: 4. Bucles for y while
 
 ---
-
-## ✍️ Activitats pràctiques UT1
-
-> **✍️ Activitat Pràctica 1.1 — Activitat 1**
-> Resol els exercicis de la pàgina 4.
-
-> **✍️ Activitat Pràctica 1.2 — Activitat2_Formato_Concatenación**
-> Ejercicis diapositives pag 7 i 8
-
-> **✍️ Activitat Pràctica 1.3 — ActFinal_Problemes Introducció**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 1.4 — Act4_If i operadors**
-> **Objetivo:** Practicar operadores relacionales (`<`, `==`, `>`)
->
-> Enunciado: Pide al usuario su edad y muestra los siguientes mensajes según corresponda
->
-> - Si tiene menos de 18 años → *“No puedes votar todavía.”*
-> - Si tiene exactamente 18 años → *“¡Acabas de cumplir la edad para votar!”*
-> - Si tiene más de 18 años → *“Ya puedes votar.”*
-
-> **✍️ Activitat Pràctica 1.5 — Act5_if i operadors**
-> **Objetivo:** Practicar operadores lógicos (`and`, `or`, `not`)
->
-> **Enunciado:**
-> Pide al usuario su **nombre de usuario** y **contraseña**.
-> Solo podrá acceder si el usuario es `"admin"` **y** la contraseña es `"1234"`.
-> Si alguna de las condiciones no se cumple, muestra un mensaje de error.
-
-> **✍️ Activitat Pràctica 1.6 — Act6_If/elif/else i operador**
-> **Objetivo:** Practicar operadores relacionales (`<`, `==`, `>`)
->
-> Enunciado: Pide al usuario su edad y muestra los siguientes mensajes según corresponda
->
-> - Si tiene menos de 18 años → *“No puedes votar todavía.”*
-> - Si tiene exactamente 18 años → *“¡Acabas de cumplir la edad para votar!”*
-> - Si tiene más de 18 años → *“Ya puedes votar.”*
-
-> **✍️ Activitat Pràctica 1.7 — ActFinal_Condicionals**
-> Fer les últimes activitats del document "Condicionals"
-
-> **✍️ Activitat Pràctica 1.8 — Act8_Listas**
-> pàgina 3 i 4
-
-> **✍️ Activitat Pràctica 1.9 — Act9_append i insert**
-> pàgina 5 i 6.
-
-> **✍️ Activitat Pràctica 1.10 — Act10_eliminar elementos**
-> Usar funciones POP, del y remove.
->
-> página 7 y 8.
-
-> **✍️ Activitat Pràctica 1.11 — Act11_organizar listas**
-> página 9, 10 y 11
-
-> **✍️ Activitat Pràctica 1.12 — Act12_ListasFinal**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 1.13 — Figuras_Bucles**
-> El programa debe pedir por pantalla.
->
-> - Para el cuadrado: el **LADO** .
-> - para el rectángulo: **BASE** y **ALTURA** .
-> - para el triangulo: **ALTURA** (será un triangulo rectángulo).
->
-> Dependiendo de estas variables el programa dibujará las figuras.
-
-> **✍️ Activitat Pràctica 1.14 — TascaFinal_Bucles**
-> 4 últimes activitats del tema

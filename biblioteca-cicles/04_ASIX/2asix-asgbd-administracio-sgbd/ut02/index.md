@@ -1,27 +1,29 @@
 ---
 layout: default
-title: "UT2 — Configuració d'un SGBD — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca"
+title: "UD2 — Configuració d'un SGBD · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut01/ut0105.html"
+prev_label: "⬅️ 1.5 Arquitectura BBDD's en Oracle"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 Configuració d'un SGBD ➡️"
 ---
 
-# 📘 UT2 — Configuració d'un SGBD (Unitat Completa)
+# 📘 UD2 — Configuració d'un SGBD (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**2.1 Configuració d'un SGBD**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
-> - [**2.2 Tablespaces i datafiles**](#ut0202) (o [obrir en pàgina individual ➡️](./ut0202.md) )
-> - [**2.3 Us d'SQL*Plus**](#ut0203) (o [obrir en pàgina individual ➡️](./ut0203.md) )
-> - [**2.4 Solucions errors de connexió amb SQLDeveloper**](#ut0204) (o [obrir en pàgina individual ➡️](./ut0204.md) )
-> - [**2.5 primers pasos - sol**](#ut0205) (o [obrir en pàgina individual ➡️](./ut0205.md) )
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 Configuració d'un SGBD**](./ut0201.md)
+- [**2.2 Tablespaces i datafiles**](./ut0202.md)
+- [**2.3 Us d'SQL*Plus**](./ut0203.md)
+- [**2.4 Solucions errors de connexió amb SQLDeveloper**](./ut0204.md)
 
 ---
 
-## 2.1 Configuració d'un SGBD
+# 2.1 Configuració d'un SGBD
 
 ### UNITAT 02 Configuració d’un SGBD
 
@@ -496,7 +498,7 @@ $ psql -h postgresql13.guebs.net -U nom_usuari -d nom_base_de_dades
 
 ---
 
-## 2.2 Tablespaces i datafiles
+# 2.2 Tablespaces i datafiles
 
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD TABLESPACES i DATAFILES en ORACLE Un tablespace és un magatzem lògic dels objectes de la base de dades tablespace es un concepte, conté datafiles ( u o més) datafiles Fitxers físics, formen part dels tablespaces, pertanyen a un tablespace ( només un ) i a una instància Quan es creen, ocupen tot l'espai assignat ( si no hi ha suficient espai, no es creen) Quan es creen, estan buits, però ocupen espai.
 
@@ -522,7 +524,7 @@ CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒD
 
 ---
 
-## 2.3 Us d'SQL*Plus
+# 2.3 Us d'SQL*Plus
 
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Ús d’sql*plus connexió sqlplus / as sysdba o sqlplus usuari/contrasenya sentències PL/SQL acabades amb ; una sentència pot ocupar varies línies SQL> SELECT 2 EMPNO, ENAME, JOB, SAL 3 FROM EMP 4 WHERE SAL < 1500; You can end a SQL command in one of three ways
 
@@ -564,7 +566,7 @@ SQL> COLUMN SAL FORMAT $99,999 HEADING SALARY Partir comandos SQL*Plus amb el gu
 
 ---
 
-## 2.4 Solucions errors de connexió amb SQLDeveloper
+# 2.4 Solucions errors de connexió amb SQLDeveloper
 
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Possibles Fallades (i solucions) quan es crea una connexió en sqlDeveloper fallo de la prueba error de e/s. the network adapter could not establish the connection possibles causes ...
 
@@ -585,97 +587,3 @@ També es pot connectar polsant (ALT-F10) o sobre la icona
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Més informació en https://aflorestorres.com//20/the-network-adapter-could-not-establish-the-connection- el-adaptador-de-red-no-pudo-establecer-la-conexion/ http://www.rebellionrider.com/sql-developer-error-the-network-adapter-could-not-establish-the- connection/ https://soyundba.com//23/estado-fallofallo-de-la-prueba-error-de-e-s-the-network- adapter-could-not-establish-the-connection/ https://kb.tableau.com/articles/issue/error-io-error-the-network-adapter-could-not-establish-the- connection-occurs-when-connecting-to-oracle-using-net-service-name-tnsnames-ora?lang=es-es https://support.quest.com/es-es/kb/4286571/io-error-the-network-adapter-could-not-establish- the-connection https://forums.oracle.com/ords/apexds/post/the-network-adapter-could-not-establish-the- connexion-9129 https://www.dba-oracle.com/t_network_adapter_could_not_establish_connection.htm https://www.dba-oracle.com/t_troubleshooting_sql_net_connectivity_errors.htm https://www.dba-oracle.com/art_builder_tns.htm
 
 ---
-
-## 2.5 primers pasos - sol
-
-CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Primers passos en l'administració d’Oracle Des del servidor d’Oracle Localitza el valor de les variables ORACLE_SID i ORACLE_HOME en regedit Localitza els fitxers listener.ora, sqlnet.ora i tnsnames.ora Localitza el fitxer SPFILE Igual que els anteriors Utilitzem SQL Developer Realitza connexió amb el servidor oracle19c amb l’usuari administador d’Oracle (sys) Crea un nou tablespace simple T1 de 10 Mbytes
-
-```sql
-create tablespace T1 datafile ‘t1.dbf’ size 10M;
-```
-
-Crea un nou tablespace T2 autoextensible de 20 Mbytes
-
-```sql
-create tablespace T2 datafile ‘t2.dbf’ size 20M autoextend on 10M ;
-```
-
-Afegix un datafile al tablespace T1
-
-```sql
-alter tablespace T2 add datafile ‘t22.dbf’ size 20M ;
-```
-
-Crea un nou tablespace temporal T3_temp de 30 Mbytes create temporary tablespace T3 datafile ‘t3.dbf’ size 30M; Localitza el fitchers startup.log i listener.log igual que dalt Para la bbdd de manera «immediata» shutdown immediate Arranca la bbdd en l’estat NOMOUNT STARTUP NOMOUNT Passa a l’estat OPEN alter database open; Eixim de SQL Developer.
-
-Utilitzem ara SQL*Plus Connecta com a sys i esbrina el nom de la CDB$ROOT i de la primera PDB show con_name;
-
-```sql
-select name from v$database;
-```
-
-show pdbs; Connecta com a sys a la primera PDB Crear taula/es (DDL) baix tens dos exemples. Crea quatre taules en total. Ens dona un error- la bbdd no està oberta alter pluggable database open;
-
-```sql
-create table ( .........
-```
-
-CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Explorar les taules creades al DD amb les eines (DML)
-
-```sql
-select table_name from user_tables;
-select table_name from user_tables order by table_name;
-select * from user_tables order by table_name;
-```
-
-Descriu les vistes del DD utilitzades describe user_tables Documentar el procés. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF Codi creació de taules
-
-```sql
-CREATE TABLE alumnes(
-```
-
-alumn_id NUMBER(9), nom VARCHAR2(100) NOT NULL, localitat VARCHAR2(300) NOT NULL, telefon NUMBER(11) UNIQUE, email VARCHAR2(50) UNIQUE, data_creacio DATE DEFAULT SYSDATE, CONSTRAINT alumnes1 PRIMARY KEY(alumn_id)
-
-```sql
-);
-CREATE TABLE modul(
-```
-
-modul_id NUMBER(9), nom_modul VARCHAR2(100) NOT NULL, codi_modul NUMBER(5) NOT NULL, cicle VARCHAR(10) NOT NULL, curs NUMBER(1) NOT NULL, hores NUMBER(3), CONSTRAINT modul PRIMARY KEY(modul_id)
-
-```sql
-);
-```
-
----
-
-## ✍️ Activitats pràctiques UT2
-
-> **✍️ Activitat Pràctica 2.1 — (ASGBD) Primers pasos en DBA**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Primers passos en l'administració d’Oracle Utilitzem primer SQL Developer Localitza el valor de les variables ORACLE_SID i ORACLE_HOME Localitza els fitxers listener.ora, sqlnet.ora i tnsnames.ora Localitza el fitxer SPFILE Realitza connexió amb el servidor oracle19c amb l’usuari administador d’Oracle (sys) Crea un nou tablespace simple T1 de 10 Mbytes Crea un nou tablespace T2 autoextensible de 20 Mbytes Afegix un datafile al tablespace T1 Crea un nou tablespace temporal T3_temp de 30 Mbytes Localitza el fitchers startup.log i listener.log Para la bbdd de manera «immediata» Arranca la bbdd en l’estat NOMOUNT Passa a l’estat OPEN Eixim de SQL Developer.
->
-> Utilitzem ara SQL*Plus Connecta com a sys i esbrina el nom de la CDB$ROOT i de la primera PDB Connecta com a sys a la primera PDB Crear taula/es (DDL) baix tens dos exemples. Crea quatre taules en total. Explorar les taules creades al DD amb les eines (DML) Descriu les vistes del DD utilitzades Documentar el procés. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF Codi creació de taules
->
-> ```sql
-> CREATE TABLE alumnes(
-> ```
->
-> alumn_id NUMBER(9), nom VARCHAR2(100) NOT NULL, localitat VARCHAR2(300) NOT NULL, telefon NUMBER(11) UNIQUE, email VARCHAR2(50) UNIQUE, data_creacio DATE DEFAULT SYSDATE, CONSTRAINT alumnes1 PRIMARY KEY(alumn_id)
->
-> ```sql
-> );
-> CREATE TABLE modul(
-> ```
->
-> modul_id NUMBER(9), nom_modul VARCHAR2(100) NOT NULL, codi_modul NUMBER(5) NOT NULL, cicle VARCHAR(10) NOT NULL, curs NUMBER(1) NOT NULL, hores NUMBER(3), CONSTRAINT modul PRIMARY KEY(modul_id)
->
-> ```sql
-> );
-> ```
-
-> **✍️ 📋 Exercici / Qüestionari 2.2 — Activitat - Investiga un SGBD**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Investigació d’un SGBD En esta pràctica, se facilitarà una màquina virtual amb un SGBD instal·lat Es demana Restaura/Importa la OVA Configura la xarxa en Red Nat Arranca la màquina i entra en l’usuari ORACLE/oracle Contesta 1 Quantes BBDD hi ha instal·lades ?
->
-> 2 De quin tipus son ? ( tradicionals / multitenant ) 3 Quin nom tenen les BBDD instal·lades ? 4 En cas de les bbdd multitenant, nom del CDB i de les PDB’s 5 En quin estat estan ? ( parades, muntades, obertes .... ) 6 Obri les que estiguen parades. 7 Configura per a que s'òbriguen automàticament la pròxima arrancada de l’SGBD 8 Hi ha algun Tablespace apart dels Tablespaces del sistema ?
->
-> 9 Quin nom tenen ? X Quins ‘datafiles’ tenen associats cadascun ? ============================== Documentar el procés. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF

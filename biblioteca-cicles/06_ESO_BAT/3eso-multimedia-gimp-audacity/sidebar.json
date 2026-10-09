@@ -6,64 +6,33 @@
   },
   "units": [
     {
-      "summary": "UT1 — GIMP",
+      "summary": "UD1 — GIMP",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "1.1 Modos de color",
           "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Dosier de actividades",
-          "href": "ut01/ut0102.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
     {
-      "summary": "UT2 — Herramientas Microsoft",
+      "summary": "UD2 — Audacity",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT3 — Audacity",
-      "items": [
-        {
-          "label": "📘 UT3 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Continguts i Recursos",
+          "label": "2.1 Continguts i Recursos",
           "href": "ut03/ut0301.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

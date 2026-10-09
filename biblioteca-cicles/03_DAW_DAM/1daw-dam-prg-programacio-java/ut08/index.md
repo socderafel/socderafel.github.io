@@ -1,26 +1,27 @@
 ---
 layout: default
-title: "UT8 — Programación Estructurada y Modular — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
+title: "UD4 — Programación Estructurada y Modular · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT8 Completa"
-prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_url: "../ut07/ut0701.html"
+prev_label: "⬅️ 3.1 Uso de estructuras de control"
 next_url: "../ut08/ut0801.html"
-next_label: "8.1 04a - Programación estructurada y modular ➡️"
+next_label: "4.1 Programación estructurada y modular ➡️"
 ---
 
-# 📘 UT8 — Programación Estructurada y Modular (Unitat Completa)
+# 📘 UD4 — Programación Estructurada y Modular (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**8.1 04a - Programación estructurada y modular**](#ut0801) (o [obrir en pàgina individual ➡️](./ut0801.md) )
-> - [**8.2 04b - Programación estructurada y modular**](#ut0802) (o [obrir en pàgina individual ➡️](./ut0802.md) )
-> - [**8.3 04a - Ejercicios**](#ut0803) (o [obrir en pàgina individual ➡️](./ut0803.md) )
-> - [**8.4 04b - Ejercicios**](#ut0804) (o [obrir en pàgina individual ➡️](./ut0804.md) )
-> - [**8.5 Ejercicios - Diagrama de flujo a Java (para algo**](#ut0805) (o [obrir en pàgina individual ➡️](./ut0805.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 Programación estructurada y modular**](./ut0801.md)
+- [**4.2 Programación estructurada y modular**](./ut0802.md)
 
 ---
 
-## 8.1 04a - Programación estructurada y modular
+# 4.1 Programación estructurada y modular
 
 > **📌 🏷️ Apunt de la Unitat**
 > # BLOQUE 2: Programación básica en Java
@@ -294,7 +295,7 @@ Nota También podríamos pensar que el caso base es 0, ya que el el factorial de
 
 ---
 
-## 8.2 04b - Programación estructurada y modular
+# 4.2 Programación estructurada y modular
 
 Programación
 
@@ -571,276 +572,3 @@ Bibliografía ✓ Aprende JAVA con ejercicios. Edición 2018. Luis José Sánche
 UD6: Programación estructurada y modular
 
 ---
-
-## 8.3 04a - Ejercicios
-
-J.R. Simó
-
-v3.30.10.23
-
-MODULAR Profesor: José Ramón Simó Martínez Ejercicios: Funciones Nota Los ejercicios están ordenados de menor a mayor dificultad en cada apartado. FUNCIONES SIN DATOS DE ENTRADA NI SALIDA (4.1) En Linux existe el comando “clear” que nos permite “limpiar” la consola cuando tenemos mucho texto que ya no es útil. Su equivalente en Windows es “cls”. Realmente lo que hace este comando es insertar muchas líneas en blanco de manera que parece que desaparecen el texto que había anteriormente.
-
-Vamos a simular este comportamiento escribiendo un programa que borre la pantalla dibujando 25 líneas en blanco. Implementa y utiliza la función: void borrarPantalla() (4.2) Escribe un programa que dibuje un cuadrado formado por 3 filas y 3 columnas de asteriscos. Implementa y utiliza la función
-
-void dibujarCuadrado3x3() FUNCIONES CON DATOS DE ENTRADA (4.3) Modifica el programa 5.2 de manera que ahora podamos dibujar un rectángulo. Implementa y utiliza la función: void dibujarRectangulo(int ancho, int alto) (4.4) Escribe un programa donde el usuario introduce una letra y un número, y el programa debe mostrar esa letra tantas veces como indique ese número (en la misma línea). Implementa y utiliza la función
-
-void escribirRepetido(char letra, int nrepeticiones)
-
-```java
-Ayuda: utiliza la función charAt(0) para obtener el carácter introducido por el usuario (ej. sc.next().charAt(0));
-```
-
-(4.5) Escribe una nueva versión de la función dibujarRectangulo del ejercicio 5.3, que se apoye en la función escribirRepetido del ejercicio 5.4
-
-J.R. Simó
-
-v3.30.10.23 FUNCIONES CON DATOS DE ENTRADA Y SALIDA (4.6) Escribe un programa que calcule el cubo de un número real (float) introducido por el usuario. El resultado debe ser otro número real. Implementa y utiliza la función: float cubo(float num) (4.7) Escribe un programa indique si un estudiante está aprobado a partir de la nota que ha sacado en la evaluación y la nota mínima para aprobar. El programa pedirá la nota mínima para aprobar, luego irá pidiendo notas de cada estudiante y según el resultado de la función que se utilizará mostrará si está aprobado o no. El programa finaliza cuando se introduce de nota un -1. Implementa y utiliza la función
-
-boolean estaAprobado(int nota, int notaMinima) PARÁMETROS DE ENTRADA AL PROGRAMA (LÍNEA DE COMANDOS) (4.8) Escribe un programa llamado Calculadora que haga las siguientes operaciones aritméticas: suma(s), resta(r), multiplicación(m) y división (d). Al programa se le pasará por línea de comandos tres parámetros: dos números enteros y la operación a realizar. Por ejemplo, si ejecutamos “Calculadora 1 2 s”, hará la operación 1 + 2, si ejecutamos “Calculadora 3 5 m” hará la operación 3 * 5, etc. El programa mostrará el resultado de cada una de estas operaciones.
-
-Ayuda: FUNCIONES RECURSIVAS VS ITERATIVAS (4.9) Suma recursiva Escribe un programa que pida un número natural N (los números positivos) y de como resultado la suma de todos los números naturales hasta N. Implementa y utiliza la función iterativa y recursiva: int suma(int n) // implementa versión iterativa int sumaRec(int n) // implementa versión recursiva (4.10) Potencia de un número Escribe un programa que calcule el valor de elevar un número entero a otro número entero. Por ejemplo, 3 elevado a 4 = 34 = 3 x 3 x 3 x 3 = 81. Luego se mostrará el resultado devuelto por la función. Implementa y utiliza la función iterativa y la recursiva
-
-int potencia(int base, int exponente) // implementa versión iterativa. int potenciaRec(int base, int exponente) // implementa versión recursiva.
-
----
-
-## 8.4 04b - Ejercicios
-
-Programación
-
-### UD 4: Programación estructurada
-
-y modular
-
-- Ejercicios
-
-Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
-
-EJERCICIOS Programación estructurada y modular Programación
-
-UD6: Programación estructurada y modular
-
-Ejercicio 1 Programación
-
-UD6: Programación estructurada y modular ¿Qué escribe en la salida estándar la ejecución del programa?
-
-```java
-public class Ejemplo {
-public static void cambio(int j, int k) {
-int aux = j;
-j = k;
-k = aux;
-System.out.println("Dentro: " + j + " " + k);
-}
-public static void inc(int j, int k) {
-```
-
-j++; k++;
-
-```java
-System.out.println("Dentro: " + j + " " + k);
-}
-public static void main(String[] args) {
-int j = 1335;
-int k = 3672;
-System.out.println("Antes: " + j + " " + k);
-cambio(j,k);
-inc(k,j);
-System.out.println("Después: " + j + " " + k);
-}
-}
-```
-
-Ejercicio 2 Programación
-
-UD6: Programación estructurada y modular Partiendo del algoritmo en Java, programado por vosotros, que determina si un número N introducido por teclado es o no primo, (recuerda que un número primo es aquél que sólo es divisible por sí mismo y por 1) realizar una función que dado un número N devuelva si es primo o no (true o false).
-
-```java
-public static boolean esPrimo(int n);
-```
-
-Utilizando la función anterior, realizar un algoritmo para averiguar todos los números primos que existen entre 2 y 1000. Mostrar el resultado en 4 columnas. NOTA: Puedes utilizar el algoritmo del ejercicio de paso de Diagrama de Flujo a Java de la UD04
-
-Ejercicio 3 Hacer una función que dado un String, imprima dicha cadena en una Caja de caracteres.
-
-```java
-public static void imprimeCajaTexto(String s);
-```
-
-Programación
-
-UD6: Programación estructurada y modular
-
-Ejercicio 4 Crea una función con la siguiente cabecera
-
-```java
-public static String convierteEnPalotes(int n) { ... }
-```
-
-Esta función convierte el número n al sistema de palotes y lo devuelve en una cadena de caracteres. Por ejemplo, el 470213 en decimal es el | | | | - | | | | | | | - - | | - | - | | | en el sistema de palotes. Utiliza esta función en un programa para comprobar que funciona bien.
-
-Desde la función no se debe mostrar nada por pantalla, solo se debe usar println desde el programa principal. Programación
-
-UD6: Programación estructurada y modular
-
-Ejercicio 5 Crea una función con la siguiente cabecera
-
-```java
-public String convierteEnPalabras(int n) { ... }
-```
-
-Esta función convierte los dígitos del número n en las correspondientes palabras y lo devuelve todo en una cadena de caracteres. Por ejemplo, el 470213 convertido a palabras sería: cuatro, siete, cero, dos, uno, tres Utiliza esta función en un programa para comprobar que funciona bien.
-
-Desde la función no se debe mostrar nada por pantalla, solo se debe usar println desde el programa principal. Fíjate que hay una coma detrás de cada palabra salvo al final. Programación
-
-UD6: Programación estructurada y modular
-
-Ejercicio 6 Página 113
-
-Ejercicios 1-17 Página 114
-
-Ejercicios 18-19 Página 115
-
-Ejercicios 35 Página 116
-
-Ejercicios 37 Página 117
-
-Ejercicios 39 Programación
-
-UD6: Programación estructurada y modular
-
-EJERCICIOS Sobrecarga de funciones Programación
-
-UD6: Programación estructurada y modular
-
-Ejercicio 1 Escriba un programa que defina las siguientes funciones sobrecargadas
-
-```java
-public static void imprimir ( double n );
-```
-
-```java
-public static void imprimir ( int n, String s );
-```
-
-Pruebe el programa llamando a la función imprimir combinando las siguientes variables
-
-```java
-int i = 2;
-```
-
-```java
-double d = 3.5;
-```
-
-```java
-String s = "hola";
-```
-
-En concreto, pruebe las siguientes llamadas
-
-```java
-imprimir( i );
-```
-
-```java
-imprimir( d );
-```
-
-```java
-imprimir( s );
-```
-
-```java
-imprimir( i , s );
-```
-
-```java
-imprimir( d, s );
-```
-
-Programación
-
-UD6: Programación estructurada y modular
-
-Ejercicio 2 Realiza tres funciones para calcular que valor entero es el mayor de los pasados como parámetros.
-
-```java
-public static int mayor(int a, int b);
-public static int mayor(int a, int b, int c);
-public static int mayor(int a, int b, int c, int d);
-```
-
-//Programar la función como el compareTo de la clase String
-
-```java
-public static int mayor(String a, String b);
-```
-
-Programación
-
-UD6: Programación estructurada y modular
-
-Ejercicio 3 Escriba un programa que calcule el área de distintas figuras geométricas (triángulo, cuadrado, rectángulo, círculo, trapecio, etc.) sobrecargando la función área con el número y tipo de argumentos necesarios para cada tipo de figura. Programación
-
-UD6: Programación estructurada y modular
-
----
-
-## 8.5 Ejercicios - Diagrama de flujo a Java (para algo
-
-Programación
-
-### UD 4: Uso de estructuras de control
-
-- Ejercicios
-
-Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
-
-EJERCICIOS Diagrama de flujo a Java Programación
-
-Crear un Paquete Nuevo (new Package) en el Proyecto “IntroduccionJava” que se llame “diagramas”. Crear una clase nueva para cada uno de los 6 algoritmos siguientes, representados en Diagramas de Flujo. Programar en Java cada uno de los 6 algoritmos. Realizar todas las pruebas necesarias para garantizar el funcionamiento del algoritmo en Java.
-
-Programación
-
-Ejercicios
-
-Ejercicio 1 Calcular la potencia Entrada
-
-número real b
-
-número entero positivo n Salida
-
-la n-ésima potencia de b Programación
-
-Ejercicio 2 Ecuación de 2ndo grado Entrada
-
-números enteros a, b y c Salida
-
-0, 1 ó 2 soluciones Programación
-
-Ejercicio 3 ¿Es número primo? Entrada
-
-número entero n Salida
-
-es primo
-
-No es primo Programación
-
-Ejercicio 4 Raíz cuadrada Entrada
-
-número entero n Salida
-
-raíz cuadrada de n Programación
-
-https://tutospoo.jimdo.com/fundamentos/diagramas-de-flujo/
-
-Ejercicio 5 Factorial de n Entrada
-
-número entero n Salida
-
-factorial de n Programación
-
-Ejercicio 6 Número perfecto Un número perfecto es la suma de todos los números antecesores de ese número que divididos entre el número original su residuo sea 0 y la suma de dichos números sea igual a el número original. Por ejemplo, el número 6 es un número perfecto porque sus divisores con residuo 0 son 1, 2 y 3; y 6 = 1 + 2 + 3.
-
-Los siguientes números perfectos son 28, 496 y 8128. Programación

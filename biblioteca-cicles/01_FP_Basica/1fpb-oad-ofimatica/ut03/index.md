@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT3 — CALC BÀSIC — Ofimàtica i Arxiu de Documents | Portal Docent Pepe Cuenca"
+title: "UD3 — CALC BÀSIC · Temari Complet"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UT3 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut02/ut0201.html"
+prev_label: "⬅️ 2.1 Temari"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 Continguts i Recursos ➡️"
 ---
 
-# 📘 UT3 — CALC BÀSIC (Unitat Completa)
+# 📘 UD3 — CALC BÀSIC (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 Continguts i Recursos**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 Continguts i Recursos**](./ut0301.md)
 
 ---
 
-## 3.1 Continguts i Recursos
+# 3.1 Continguts i Recursos
 
 > **📌 Introducció de la Unitat**
 > **Formació CALC**
@@ -91,35 +94,3 @@ next_label: "3.1 Continguts i Recursos ➡️"
 > Calc: Examen. Helados caseros
 
 ---
-
-## ✍️ Activitats pràctiques UT3
-
-> **✍️ Activitat Pràctica 3.1 — Puja l'arxiu inicial**
-> Sube el archivo inicial
-
-> **✍️ Activitat Pràctica 3.2 — Puja els arxius gastos y cursos**
-> Sube los archivos gastos y cursos
-
-> **✍️ Activitat Pràctica 3.3 — Puja els arxius fotocopias y concesionario**
-> Sube los archivos fotocopias y concesionario
-
-> **✍️ Activitat Pràctica 3.4 — Puja l'arxiu series**
-> Sube el archivo series
-
-> **✍️ Activitat Pràctica 3.5 — Puja els arxius referencias y libreria**
-> Sube los archivos referencias y libreria
-
-> **✍️ Activitat Pràctica 3.6 — Puja els arxius comisiones y muebles**
-> Sube los archivos comisiones y muebles
-
-> **✍️ Activitat Pràctica 3.7 — Puja el fitxer taller**
-> Sube el archivo taller
-
-> **✍️ Activitat Pràctica 3.8 — Puja l'arxiu fratelf**
-> Sube el archivo fratelf
-
-> **✍️ Activitat Pràctica 3.9 — Puja el fitxer expapeleria**
-> Sube el archivo expapeleria
-
-> **✍️ Activitat Pràctica 3.10 — Puja el fitxer exhelados**
-> Sube el archivo exhelados

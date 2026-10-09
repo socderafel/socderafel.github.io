@@ -6,10 +6,10 @@
   },
   "units": [
     {
-      "summary": "UT1 — Conceptes bàsics",
+      "summary": "UD1 — Conceptes bàsics",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
@@ -24,46 +24,37 @@
         {
           "label": "1.3 Internet 2_ Com fer cerques",
           "href": "ut01/ut0103.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
     {
-      "summary": "UT2 — Writer",
+      "summary": "UD2 — Writer",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "✍️ Activitats pràctiques UT2",
+          "label": "2.1 Continguts i Casos Guiats",
           "href": "ut02/ut02actividades.html"
         }
       ]
     },
     {
-      "summary": "UT3 — Calc",
+      "summary": "UD3 — Calc",
       "items": [
         {
-          "label": "📘 UT3 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "✍️ Activitats pràctiques UT3",
+          "label": "3.1 Continguts i Casos Guiats",
           "href": "ut03/ut03actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

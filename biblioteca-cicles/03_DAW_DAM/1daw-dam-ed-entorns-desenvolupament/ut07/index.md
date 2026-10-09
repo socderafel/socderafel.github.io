@@ -1,25 +1,28 @@
 ---
 layout: default
-title: "UT7 — Metodologías ágiles — Entorns de Desenvolupament | Portal Docent Pepe Cuenca"
+title: "UD8 — Metodologías ágiles · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut06/ut0602.html"
+prev_label: "⬅️ 7.2 Documentación"
 next_url: "../ut07/ut0701.html"
-next_label: "7.1 U8. Metodologías ágiles ➡️"
+next_label: "8.1 Metodologías ágiles ➡️"
 ---
 
-# 📘 UT7 — Metodologías ágiles (Unitat Completa)
+# 📘 UD8 — Metodologías ágiles (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**7.1 U8. Metodologías ágiles**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
-> - [**7.2 U8.1 - Planificación de proyectos**](#ut0702) (o [obrir en pàgina individual ➡️](./ut0702.md) )
-> - [**7.3 Poker planning**](#ut0703) (o [obrir en pàgina individual ➡️](./ut0703.md) )
-> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 Metodologías ágiles**](./ut0701.md)
+- [**8.2 Planificación de proyectos**](./ut0702.md)
+- [**8.3 Poker planning**](./ut0703.md)
 
 ---
 
-## 7.1 U8. Metodologías ágiles
+# 8.1 Metodologías ágiles
 
 ---
 
@@ -162,7 +165,7 @@ Revisión del sprint: analisis e inspeccion del ≪incremento≫ generado, y ada
 
 ---
 
-## 7.2 U8.1 - Planificación de proyectos
+# 8.2 Planificación de proyectos
 
 U8.1 - Gestión de proyectos 1º DAW
 
@@ -249,7 +252,7 @@ progreso y los cambios.
 
 ---
 
-## 7.3 Poker planning
+# 8.3 Poker planning
 
 Metodologias ágiles ESTIMACIONES
 
@@ -301,51 +304,3 @@ Se define cuál va a ser el criterio de priorización general para el Backlog, s
 También se hace uso del póker para estimar el tiempo o esfuerzo que se invierte en llevar a cabo una historia en concreto (planning poker).
 
 ---
-
-## ✍️ Activitats pràctiques UT7
-
-> **✍️ 📋 Exercici / Qüestionari 7.1 — Tarea Poker planning**
-> Unidad 8
->
-> U8 – Actividad en grupo - Estimaciones
->
-> El equipo debe desarrollar una aplicación de escritorio para una biblioteca local que permita a los usuarios buscar libros, hacer reservas y consultar los eventos de la biblioteca.
->
-> Para ello, se ha decidido utilizar la técnica del Poker Planning tanto para estimar prioridades como tiempos.
->
-> Las tareas que se deben estimar son las siguientes (no están en orden, el orden lo decidirá la planificación).
->
-> Integración de sistema de notificaciones para alertar a los usuarios sobre disponibilidad de libros y eventos. - Creación de una base de datos para gestionar los usuarios y los libros. - Diseño de la interfaz de usuario. - Implementación de sistema de reservas. - Desarrollo de una función de recomendación de libros basada en el historial de lectura del usuario.
-
-> **✍️ Activitat Pràctica 7.2 — U8A1**
-> Unidad 8
->
-> U8.2 – Planificación de proyectos - Gantt
->
-> Imagina que eres el líder de un equipo de desarrollo encargado de crear un sitio web de comercio electrónico para una nueva marca de moda. El proyecto debe estar listo para su lanzamiento en seis meses y contará con características como catálogo de productos, carrito de compras, gestión de usuarios y un sistema de pago seguro.
->
-> Tareas a realizar y tiempo estimado (puedes cambiarlo)
->
-> 1. Diseño de la interfaz de usuario (UI) y experiencia de usuario (UX): Esta tarea implica la creación de los diseños visuales y la experiencia de usuario. Estimación: 80 horas.
->
-> 2. Desarrollo del frontend: En esta etapa, se implementará la parte visible del sitio web utilizando tecnologías como HTML, CSS y JavaScript. Estimación: 160 horas.
->
-> 3. Implementación del backend: Aquí se desarrollará la lógica del sitio web, incluyendo la gestión de usuarios, el catálogo de productos y el carrito de compras. Estimación: 240 horas.
->
-> 4. Integración de la pasarela de pago: Esta tarea implica conectar el sistema de pago seguro al sitio web. Estimación: 40 horas.
->
-> 5. Pruebas de funcionalidad y seguridad: Se deben realizar pruebas exhaustivas para garantizar que todas las funciones del sitio web funcionen correctamente y sean seguras. Estimación: 120 horas.
->
-> 6. Despliegue y lanzamiento del sitio web: Preparar el sitio web para su lanzamiento y asegurarse de que esté listo para su uso. Estimación: 40 horas.
->
-> Unidad 8
->
-> Recursos/Desarrolladores: • Ana: Diseñadora UI/UX. • Carlos: Desarrollador Frontend. • María: Desarrolladora Backend. • Jorge: Especialista en Seguridad IT. • Luis: Ingeniero de Pruebas.
->
-> Hitos Importantes: • Finalización del diseño UI/UX • Primera versión del frontend • Backend funcional con base de datos • Integración completa del sistema de pago • Pruebas completadas y sitio web listo para lanzamiento
->
-> Dependencias: • El desarrollo del frontend depende del diseño UI/UX. • La integración de la pasarela de pago depende del desarrollo del backend. • Las pruebas de funcionalidad dependen de la finalización del frontend y backend.
->
-> En el diagrama de Gantt, asignarás a cada desarrollador a sus respectivas tareas y establecerás plazos para cada una de ellas. Por ejemplo, Ana podría trabajar en el diseño UI/UX desde la semana 1 hasta la semana 4, mientras que Carlos y María comenzarían el desarrollo del frontend y backend en la semana 5.
->
-> Al finalizar, entrega una captura del diagrama de Gantt realizado así como el fichero que lo contiene.

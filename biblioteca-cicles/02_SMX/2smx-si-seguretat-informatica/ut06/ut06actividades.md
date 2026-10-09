@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT6 — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "6.1 Continguts i Casos Guiats · 🛡️ Seguretat Informàtica — 2n SMX · Grau Mitjà"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT6 — Seguretat activa: Accés a xarxes"
+badge: "2n SMX · Grau Mitjà · UD6 — Seguretat activa: Accés a xarxes"
 prev_url: "../ut06/index.html"
-prev_label: "⬅️ 📘 UT6 Completa (1 pàgina)"
+prev_label: "⬅️ 📘 UD6 Completa (1 pàgina)"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa (1 pàgina) ➡️"
+next_label: "📘 UD7 Completa (1 pàgina) ➡️"
 ---
 
-# ✍️ Activitats pràctiques UT6
+# 6.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 6.1 — 06.01 VPN: Hamachi**
 > Utilitza el software de Hamachi per construir una VPN entre dos equips. (CP8 Pàgina 162)

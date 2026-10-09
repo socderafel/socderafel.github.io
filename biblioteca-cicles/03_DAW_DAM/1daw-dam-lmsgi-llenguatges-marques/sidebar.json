@@ -14,12 +14,8 @@
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 UD1 Introducción a los Lenguajes de Marcas",
+          "label": "1.1 UD1 Introducción a los Lenguajes de Marcas",
           "href": "ut08/ut0801.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT8",
-          "href": "ut08/ut08actividades.html"
         }
       ]
     },
@@ -32,20 +28,12 @@
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 UD 2 - XML",
+          "label": "2.1 XML",
           "href": "ut07/ut0701.html"
         },
         {
-          "label": "7.2 Ejemplos en XML",
+          "label": "2.2 Ejemplos en XML",
           "href": "ut07/ut0702.html"
-        },
-        {
-          "label": "7.3 Soluciones ejercicios Tema 2",
-          "href": "ut07/ut0703.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT7",
-          "href": "ut07/ut07actividades.html"
         }
       ]
     },
@@ -58,16 +46,8 @@
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 UD3-DTD (Document Type Definition)",
+          "label": "3.1 DTD (Document Type Definition)",
           "href": "ut06/ut0601.html"
-        },
-        {
-          "label": "6.2 Soluciones Ejercicios Tema 3",
-          "href": "ut06/ut0602.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT6",
-          "href": "ut06/ut06actividades.html"
         }
       ]
     },
@@ -80,16 +60,8 @@
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 UD4-XSD (XML Schema Definition)",
+          "label": "4.1 XSD (XML Schema Definition)",
           "href": "ut05/ut0501.html"
-        },
-        {
-          "label": "5.2 Ejercicios resueltos XML Schema",
-          "href": "ut05/ut0502.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     },
@@ -102,12 +74,8 @@
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 U5-HTML5",
+          "label": "5.1 HTML5",
           "href": "ut04/ut0401.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     },
@@ -120,12 +88,8 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Continguts i Recursos",
+          "label": "6.1 Continguts i Recursos",
           "href": "ut03/ut0301.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
@@ -138,12 +102,8 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 Ejercicios JavaScript Solucionados",
+          "label": "7.1 Ejercicios JavaScript Solucionados",
           "href": "ut02/ut0201.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     },
@@ -156,24 +116,11 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 UD 8 - Sistemas empresariales de gestión de info",
+          "label": "8.1 Sistemas empresariales de gestión de info",
           "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 UD 8 - Sistemas empresariales de gestión de info",
-          "href": "ut01/ut0102.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

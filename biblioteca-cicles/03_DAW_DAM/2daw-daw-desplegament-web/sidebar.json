@@ -14,15 +14,15 @@
           "class": "unit-full-link"
         },
         {
-          "label": "11.1 UT 1.3 Preparación del servidor de directorios L",
+          "label": "1.1 3 Preparación del servidor de directorios L",
           "href": "ut11/ut1101.html"
         },
         {
-          "label": "11.2 UT 1.2 Servicio de directorios LDAP",
+          "label": "1.2 2 Servicio de directorios LDAP",
           "href": "ut11/ut1102.html"
         },
         {
-          "label": "11.3 UT 1.1 Servicios de Red",
+          "label": "1.3 1 Servicios de Red",
           "href": "ut11/ut1103.html"
         }
       ]
@@ -36,16 +36,12 @@
           "class": "unit-full-link"
         },
         {
-          "label": "10.1 UT 2.2 Introducció - Creació servidor FTP amb SF",
+          "label": "2.1 2 Introducció - Creació servidor FTP amb SF",
           "href": "ut10/ut1001.html"
         },
         {
-          "label": "10.2 UT 2.1 Introducció - Creació servidor FTP amb VS",
+          "label": "2.2 1 Introducció - Creació servidor FTP amb VS",
           "href": "ut10/ut1002.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT10",
-          "href": "ut10/ut10actividades.html"
         }
       ]
     },
@@ -58,24 +54,20 @@
           "class": "unit-full-link"
         },
         {
-          "label": "9.1 UT 3.4 Arquitectures web",
+          "label": "3.1 4 Arquitectures web",
           "href": "ut09/ut0901.html"
         },
         {
-          "label": "9.2 UT 3.3 Arquitectures web",
+          "label": "3.2 3 Arquitectures web",
           "href": "ut09/ut0902.html"
         },
         {
-          "label": "9.3 UT 3.2 Arquitectures web",
+          "label": "3.3 2 Arquitectures web",
           "href": "ut09/ut0903.html"
         },
         {
-          "label": "9.4 UT 3.1 Arquitectures web",
+          "label": "3.4 1 Arquitectures web",
           "href": "ut09/ut0904.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT9",
-          "href": "ut09/ut09actividades.html"
         }
       ]
     },
@@ -88,16 +80,12 @@
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 UT 4.2 Administració de servidors web - Seguritz",
+          "label": "4.1 2 Administració de servidors web - Seguritz",
           "href": "ut08/ut0801.html"
         },
         {
-          "label": "8.2 UT 4.1 Administració de servidors web - Instal·l",
+          "label": "4.2 1 Administració de servidors web - Instal·l",
           "href": "ut08/ut0802.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT8",
-          "href": "ut08/ut08actividades.html"
         }
       ]
     },
@@ -110,32 +98,23 @@
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 UT 5.4 Documentació i control de versions - GitH",
+          "label": "5.1 4 Documentació i control de versions - GitH",
           "href": "ut07/ut0701.html"
         },
         {
-          "label": "7.2 UT 5.3 Documentació i control de versions - Git",
+          "label": "5.2 3 Documentació i control de versions - Git",
           "href": "ut07/ut0702.html"
         },
         {
-          "label": "7.3 UT 5.2 Documentació i control de versions - phpD",
+          "label": "5.3 2 Documentació i control de versions - phpD",
           "href": "ut07/ut0703.html"
         },
         {
-          "label": "7.4 UT 5.1 Documentació i control de versions - Java",
+          "label": "5.4 1 Documentació i control de versions - Java",
           "href": "ut07/ut0704.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT7",
-          "href": "ut07/ut07actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

@@ -1,26 +1,28 @@
 ---
 layout: default
-title: "UT6 — Entrada y salida de información — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
+title: "UD2 — Entrada y salida de información · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT6 Completa"
 prev_url: "../ut05/ut0509.html"
-prev_label: "⬅️ 5.9 01d - Estilo de codificacion"
+prev_label: "⬅️ 1.4 Estilo de codificacion"
 next_url: "../ut06/ut0601.html"
-next_label: "6.1 Entrada y salida de información ➡️"
+next_label: "2.1 Entrada y salida de información ➡️"
 ---
 
-# 📘 UT6 — Entrada y salida de información (Unitat Completa)
+# 📘 UD2 — Entrada y salida de información (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**6.1 Entrada y salida de información**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
-> - [**6.2 Colores**](#ut0602) (o [obrir en pàgina individual ➡️](./ut0602.md) )
-> - [**6.3 ClasePrintf**](#ut0603) (o [obrir en pàgina individual ➡️](./ut0603.md) )
-> - [**6.4 Ejercicios**](#ut0604) (o [obrir en pàgina individual ➡️](./ut0604.md) )
-> - [**6.5 Ejercicios - AyR**](#ut0605) (o [obrir en pàgina individual ➡️](./ut0605.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 Entrada y salida de información**](./ut0601.md)
+- [**2.2 Colores**](./ut0602.md)
+- [**2.3 ClasePrintf**](./ut0603.md)
 
 ---
 
-## 6.1 Entrada y salida de información
+# 2.1 Entrada y salida de información
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Contenido de la unidad
@@ -516,7 +518,7 @@ Bibliografía ✓ Aprende JAVA con ejercicios. Edición 2018. Luis José Sánche
 
 ---
 
-## 6.2 Colores
+# 2.2 Colores
 
 ```java
 import java.util.Scanner;
@@ -595,7 +597,7 @@ public class Colores {
 
 ---
 
-## 6.3 ClasePrintf
+# 2.3 ClasePrintf
 
 ```java
 package clasesEjemplo;
@@ -703,151 +705,3 @@ public class ClasePrintf {
 ```
 
 ---
-
-## 6.4 Ejercicios
-
-Programación
-
-- Ejercicios
-
-Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
-
-EJERCICIOS E n t ra d a y s a l i d a d e i n fo r m a c i ó n Programación
-
-Ejercicio 1 Escribe un programa que muestre por pantalla 10 palabras en inglés junto a su correspondiente traducción al castellano. Las palabras deben estar distribuidas en dos columnas y alineadas a la izquierda. Pista: Se puede insertar un tabulador mediante \t. Programación
-
-Ejercicio 2 Escribe un programa que ejecute las siguientes líneas de código
-
-```java
-double cantidad = 71283.567811;
-System.out.println();
-System.out.println("Ejemplo para mostrar un mismo valor con varios formatos");
-```
-
-// El simbolo %n es un salto de linea // Formato normal double y float
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %f", cantidad);
-```
-
-// Formato notación científica
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %e", cantidad);
-```
-
-// Formato con 2 decimales
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %.2f", cantidad);
-```
-
-// Formato con 6 decimales
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %.6f", cantidad);
-```
-
-// Formato con simbolo + y 2 decimales
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %+.2f", cantidad);
-```
-
-// Formato con espacios en blanco (suman 11 todas las cifras) con 2 decimales
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %11.2f", cantidad);
-```
-
-// Formato con espacios en blanco (suman 11 todas las cifras) con símbolo + y 2 decimales
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %+11.2f", cantidad);
-```
-
-// Formato con ceros delante (suman 11 todas las cifras) con 2 decimales
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %011.2f", cantidad);
-```
-
-// Formato con ceros delante (suman 11 todas las cifras) con símbolo + y 2 decimales
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %+011.2f", cantidad);
-```
-
-// Formato separando los miles (71,283.567811 en lugar de 71283.567811)
-
-```java
-System.out.printf("%nEl valor de la variable cantidad es %,f", cantidad);
-```
-
-Programación
-
-Ejercicio 3 Escribe un programa que muestre la división de dos variables enteras cuyo valor son 8 y 3, respectivamente. Mostrar el resultado de las siguientes formas: 2.6666666666666667
-
-2,67 x2,67
-
-donde cada x es un espacio en blanco xx2,667
-
-donde cada x es un espacio en blanco 002,667 xxxx2,6667
-
-donde cada x es un espacio en blanco 2,667 xxx2,66667
-
-donde cada x es un espacio en blanco 0000000003 Programación
-
-Ejercicio 4 Dado un valor en MB, mostrar su equivalencia en bytes, KB, GB y TB. Mostrar la información en 5 columnas. Programación
-
-Ejercicio 5 Escribe un programa que sume, reste, multiplique y divida dos números introducidos por teclado. Mostrar la información de la siguiente forma: Programación
-
-Ejercicio 6 Escribe un programa que dado el número de clase del alumno, el nombre completo y las notas de 3 exámenes, calcule la nota media. Mostrar la información de la siguiente forma: Programación
-
-Ejercicio 7 (1) Escribir un programa en Java que se encargue de leer una serie de datos de la entrada estándar, cuya descripción se muestra a continuación, y los muestre por la salida estándar en el formato que se detalla. Los datos de entrada consistirán en los siguientes
-
-✓ Fecha de nacimiento: tres números enteros. ✓ NIF. ✓ Nombre. ✓ Dirección: calle y numero. ✓ Código postal y población. ✓ Teléfono fijo. ✓ Teléfono móvil. ✓ Salario bruto: un número real con dos decimales. ✓ Retención: un número entero.
-
-continúa…. Programación
-
-El programa los pedirá al usuario de esta forma: Los datos de salida se mostrarán en el formato que sigue
-
-continúa…. Ejercicio 7 (2) Programación
-
-Ejercicio 7 (3) Es posible que los datos no siempre estén separados unos de otros por el mismo número de blancos. También puede haber blancos después del último dato en cada línea. Es por ello que se aconseja el uso de la función trim() de la clase String. Para mostrar los datos de salida es suficiente la función println(), excepto para mostrar la fecha con dos dígitos cuando el día o el mes son de una cifra.
-
-Para este caso se debe de utilizar printf(). El salario neto se calculará a partir del salario bruto y la retención como salario bruto - (salario bruto * retención)/100 y se mostrará con dos cifras decimales usando el punto como separador decimal. Programación
-
----
-
-## 6.5 Ejercicios - AyR
-
-Programación
-
-- Ampliación y Refuerzo
-
-Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web Jose Chamorro Molina Actualizado por: José Ramón Simó
-
-EJERCICIOS Ampliación Programación
-
-### UD 3: Entrada y salida de información
-
-Ejercicio 1 Escribe un programa que imprima por pantalla diferentes textos y simular una animación. Puedes utilizar las siguientes aplicaciones online para crear textos sorprendentes en ASCII
-
-Text to AXCII Art Generator
-
-http://www.patorjk.com/software/taag/
-
-Messletters
-
-https://www.messletters.com/es/big-text/ Programación
-
-EJERCICIOS Refuerzo Programación
-
-Ejercicio 2 Programación
-
-Escribe un programa que muestre tu horario de clase. Nota: puedes consultar el cuadro del horario en Aules en el apartado de Presentación del módulo.
-
-Ejercicio 3 Programación
-
-Modifica el programa anterior añadiendo colores. Puedes mostrar cada asignatura de un color diferente.

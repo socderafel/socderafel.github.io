@@ -1,25 +1,28 @@
 ---
 layout: default
-title: "UT3 — Unitat Didàctica 3 — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD3 — Unitat Didàctica 3 · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT3 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut02/ut0201.html"
+prev_label: "⬅️ 2.1 tema2"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 Auditories ➡️"
 ---
 
-# 📘 UT3 — Unitat Didàctica 3 (Unitat Completa)
+# 📘 UD3 — Unitat Didàctica 3 (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 Auditories**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
-> - [**3.2 Material adicional**](#ut0302) (o [obrir en pàgina individual ➡️](./ut0302.md) )
-> - [**3.3 Material adicional 2**](#ut0303) (o [obrir en pàgina individual ➡️](./ut0303.md) )
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 Auditories**](./ut0301.md)
+- [**3.2 Material adicional**](./ut0302.md)
+- [**3.3 Material adicional 2**](./ut0303.md)
 
 ---
 
-## 3.1 Auditories
+# 3.1 Auditories
 
 Tema 3. Metodologia en el procés d’auditoria. Hacking ètic (HE) 1r CIBER Alicia Ferrando Tamarit
 
@@ -107,7 +110,7 @@ executiu i tècnic.
 
 ---
 
-## 3.2 Material adicional
+# 3.2 Material adicional
 
 Flu Project 2011 La Biblia del Footprinting Juan Antonio Calles García Pablo González Pérez
 
@@ -347,7 +350,7 @@ REFLEXIONES FINALES Con este libro habréis podido analizar algunas técnicas co
 
 ---
 
-## 3.3 Material adicional 2
+# 3.3 Material adicional 2
 
 OSINT
 
@@ -396,10 +399,3 @@ SOFTWARE Foca OSINT Framework https://reaper.social/ Maltego
 https://ardilla.ai/ Información del operador https://sync.me/ Buscador de número www.imei.info/ Información IMEI www.truecaller.com Buscdor de números TELÉFONOS
 
 ---
-
-## ✍️ Activitats pràctiques UT3
-
-> **✍️ Activitat Pràctica 3.1 — exercici auditories**
-> Busca y explica casos de auditorias internas, externas y de caja blanca
->
-> Explica las diferencias que hay entre los distintos tipos de auditorias

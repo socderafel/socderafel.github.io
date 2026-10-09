@@ -4,94 +4,91 @@ title: "Índex — Seguretat Informàtica — Seguretat Informàtica | Portal Do
 course_root: "."
 badge: "2n SMX · Grau Mitjà · FP Grau Mitjà — SMX (Sistemes Microinformàtics i Xarxes)"
 next_url: "./ut01/index.html"
-next_label: "📘 UT1 Completa (1 pàgina) ➡️"
+next_label: "📘 UD1 Completa (1 pàgina) ➡️"
 ---
 
 # 🛡️ Seguretat Informàtica
 
-Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Seguretat Informàtica** (2n SMX · Grau Mitjà).
+Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Seguretat Informàtica** (2n SMX · Grau Mitjà).
 
-> **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> **🛠️ Metodologia i Navegació del Temari**
+> - **Temari Complet Integrat:** Cada unitat didàctica (`UD`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball
+## 📊 Estructura d'Unitats Didàctiques (UD1 a UD8)
 
-| Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
+| Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
-| **UT1** | **Conceptes sobre seguretat informàtica** | 2 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **Criptografia** | 2 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **Seguretat passiva: Equips** | 2 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **Seguretat passiva: Emmagatzemament** | 1 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut04actividades.md) |
-| **UT5** | **Seguretat activa: sistema operatiu i aplicacions** | 1 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut05actividades.md) |
-| **UT6** | **Seguretat activa: Accés a xarxes** | 1 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut06actividades.md) |
-| **UT7** | **Seguretat activa: Control de xarxes** | 1 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut07actividades.md) |
-| **UT8** | **Atacs i contramesures** | 1 apartats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut08actividades.md) |
+| **UD1** | **Conceptes sobre seguretat informàtica** | 1 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UD2** | **Criptografia** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UD3** | **Seguretat passiva: Equips** | 1 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UD4** | **Seguretat passiva: Emmagatzemament** | 1 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut04actividades.md) |
+| **UD5** | **Seguretat activa: sistema operatiu i aplicacions** | 1 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut05actividades.md) |
+| **UD6** | **Seguretat activa: Accés a xarxes** | 1 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut06actividades.md) |
+| **UD7** | **Seguretat activa: Control de xarxes** | 1 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut07actividades.md) |
+| **UD8** | **Atacs i contramesures** | 1 apartats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut08actividades.md) |
 
-## UT1 — Conceptes sobre seguretat informàtica
+## UD1 — Conceptes sobre seguretat informàtica
 
-`2n SMX · Grau Mitjà · UT1 · 2 apartats`
+`2n SMX · Grau Mitjà · UD1 · 1 apartats`
 
-[**📘 Obrir UT1 Completa en una sola pàgina**](./ut01/index.md)
+[**📘 Obrir UD1 Completa en una sola pàgina**](./ut01/index.md)
 
 - [**1.1 Continguts i Recursos**](./ut01/ut0101.md)
-- [**✍️ Activitats pràctiques UT1**](./ut01/ut01actividades.md)
 
-## UT2 — Criptografia
+## UD2 — Criptografia
 
-`2n SMX · Grau Mitjà · UT2 · 2 apartats`
+`2n SMX · Grau Mitjà · UD2 · 1 apartats`
 
-[**📘 Obrir UT2 Completa en una sola pàgina**](./ut02/index.md)
+[**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
 - [**2.1 Continguts i Recursos**](./ut02/ut0201.md)
-- [**✍️ Activitats pràctiques UT2**](./ut02/ut02actividades.md)
 
-## UT3 — Seguretat passiva: Equips
+## UD3 — Seguretat passiva: Equips
 
-`2n SMX · Grau Mitjà · UT3 · 2 apartats`
+`2n SMX · Grau Mitjà · UD3 · 1 apartats`
 
-[**📘 Obrir UT3 Completa en una sola pàgina**](./ut03/index.md)
+[**📘 Obrir UD3 Completa en una sola pàgina**](./ut03/index.md)
 
 - [**3.1 PDF: Consum i sel·lecció de SAI**](./ut03/ut0301.md)
-- [**✍️ Activitats pràctiques UT3**](./ut03/ut03actividades.md)
 
-## UT4 — Seguretat passiva: Emmagatzemament
+## UD4 — Seguretat passiva: Emmagatzemament
 
-`2n SMX · Grau Mitjà · UT4 · 1 apartats`
+`2n SMX · Grau Mitjà · UD4 · 1 apartats`
 
-[**📘 Obrir UT4 Completa en una sola pàgina**](./ut04/index.md)
+[**📘 Obrir UD4 Completa en una sola pàgina**](./ut04/index.md)
 
-- [**✍️ Activitats pràctiques UT4**](./ut04/ut04actividades.md)
+- [**4.1 Continguts i Casos Guiats**](./ut04/ut04actividades.md)
 
-## UT5 — Seguretat activa: sistema operatiu i aplicacions
+## UD5 — Seguretat activa: sistema operatiu i aplicacions
 
-`2n SMX · Grau Mitjà · UT5 · 1 apartats`
+`2n SMX · Grau Mitjà · UD5 · 1 apartats`
 
-[**📘 Obrir UT5 Completa en una sola pàgina**](./ut05/index.md)
+[**📘 Obrir UD5 Completa en una sola pàgina**](./ut05/index.md)
 
-- [**✍️ Activitats pràctiques UT5**](./ut05/ut05actividades.md)
+- [**5.1 Continguts i Casos Guiats**](./ut05/ut05actividades.md)
 
-## UT6 — Seguretat activa: Accés a xarxes
+## UD6 — Seguretat activa: Accés a xarxes
 
-`2n SMX · Grau Mitjà · UT6 · 1 apartats`
+`2n SMX · Grau Mitjà · UD6 · 1 apartats`
 
-[**📘 Obrir UT6 Completa en una sola pàgina**](./ut06/index.md)
+[**📘 Obrir UD6 Completa en una sola pàgina**](./ut06/index.md)
 
-- [**✍️ Activitats pràctiques UT6**](./ut06/ut06actividades.md)
+- [**6.1 Continguts i Casos Guiats**](./ut06/ut06actividades.md)
 
-## UT7 — Seguretat activa: Control de xarxes
+## UD7 — Seguretat activa: Control de xarxes
 
-`2n SMX · Grau Mitjà · UT7 · 1 apartats`
+`2n SMX · Grau Mitjà · UD7 · 1 apartats`
 
-[**📘 Obrir UT7 Completa en una sola pàgina**](./ut07/index.md)
+[**📘 Obrir UD7 Completa en una sola pàgina**](./ut07/index.md)
 
-- [**✍️ Activitats pràctiques UT7**](./ut07/ut07actividades.md)
+- [**7.1 Continguts i Casos Guiats**](./ut07/ut07actividades.md)
 
-## UT8 — Atacs i contramesures
+## UD8 — Atacs i contramesures
 
-`2n SMX · Grau Mitjà · UT8 · 1 apartats`
+`2n SMX · Grau Mitjà · UD8 · 1 apartats`
 
-[**📘 Obrir UT8 Completa en una sola pàgina**](./ut08/index.md)
+[**📘 Obrir UD8 Completa en una sola pàgina**](./ut08/index.md)
 
-- [**✍️ Activitats pràctiques UT8**](./ut08/ut08actividades.md)
+- [**8.1 Continguts i Casos Guiats**](./ut08/ut08actividades.md)

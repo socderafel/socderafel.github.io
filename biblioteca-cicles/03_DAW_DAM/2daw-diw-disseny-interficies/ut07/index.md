@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT7 — USABILIDAD — Disseny d'Interfícies Web | Portal Docent Pepe Cuenca"
+title: "UD6 — USABILIDAD · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut06/ut0603.html"
+prev_label: "⬅️ 5.3 SECCIÓN 2: SONIDO Y VÍDEO"
 next_url: "../ut07/ut0701.html"
-next_label: "7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD ➡️"
+next_label: "6.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD ➡️"
 ---
 
-# 📘 UT7 — USABILIDAD (Unitat Completa)
+# 📘 UD6 — USABILIDAD (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
-> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD**](./ut0701.md)
 
 ---
 
-## 7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD
+# 6.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD
 
 ### UNIDAD 6: USABILIDAD EN LA WEB
 
@@ -242,44 +245,3 @@ todo el contenido de una página web en la ventana del navegador.
 - Herramientas para medir y analizar la velocidad de carga de una página web
 
 ---
-
-## ✍️ Activitats pràctiques UT7
-
-> **✍️ Activitat Pràctica 7.1 — ACTIVITAT 1 UD6: USABILIDAD**
-> UNIDAD 6: USABILIDAD
->
-> ACTIVIDAD 1
->
-> CUESTIONARIO DE PREGUNTAS Y RESOLUCIÓN DE EJERCICIOS
->
-> Objetivos
->
-> - Trabajar y asentar los conceptos abordados en esta unidad 6 referentes a la usabilidad en los diseños WEB.
->
-> Temporalización
->
-> La duración de esta actividad está prevista en 30 minutos.
->
-> Ejercicio 1
->
-> Responde a las siguientes preguntas.
->
-> - ¿Qué es la usabilidad?
->
-> Indica si son correctos o falsos los siguientes enunciados.
->
-> - Uno de los tres factores que mide la usabilidad es la efectividad.
->
-> - El rebote en una página web consiste en buscar muchas páginas de una misma temática.
->
-> - Una página web con escasa escaneabilidad es aquella que tiene el texto enrevesado y difícil de comprender.
->
-> - Una página web que tarda 4 segundos está bien optimizada.
->
-> - El cifrado, la autenticación y la integridad de los datos garantizan establecer una buena comunicación entre el navegador y el servidor web.
->
-> - La “responsividad” va ligada con la usabilidad. Es decir, más “responsive”, más usable.
->
-> - Una buena ortografía y expresiones correctas facilitan la usabilidad de una web.
->
-> - El certificado para conseguir un sitio web seguro lo emite una autoridad certificadora (CA) que verifica que la dirección web pertenece a una determinada organización.

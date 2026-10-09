@@ -1,28 +1,28 @@
 ---
 layout: default
-title: "UD2 — Sistemes, Algorismes i Eines d'Aprenentatge Automàtic · Unitat Completa"
+title: "UD2 — Sistemes, Algorismes i Eines d'Aprenentatge Automàtic · Temari Complet"
 course_root: ".."
 badge: "CE IA i Big Data · UT5 Completa"
 prev_url: "../ut06/ut0601.html"
-prev_label: "⬅️ 6.1 UT 1. Caracterització de IA forta I dèbil usos i"
+prev_label: "⬅️ 1.1 Caracterització de IA forta I dèbil usos i"
 next_url: "../ut05/ut0501.html"
-next_label: "5.1 UT 4 . Eines d'aprenentatge automàtic ➡️"
+next_label: "2.1 Eines d'aprenentatge automàtic ➡️"
 ---
 
 # 📘 UD2 — Sistemes, Algorismes i Eines d'Aprenentatge Automàtic (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**5.1 UT 4 . Eines d'aprenentatge automàtic**](./ut0501.md)
-- [**5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto**](./ut0502.md)
-- [**5.3 UT 2 . Caracterització de sistemes d'aprenentatg**](./ut0503.md)
+- [**2.1 Eines d'aprenentatge automàtic**](./ut0501.md)
+- [**2.2 Algorismes aplicats a l'aprenentatge auto**](./ut0502.md)
+- [**2.3 Caracterització de sistemes d'aprenentatg**](./ut0503.md)
 
 ---
 
-# 5.1 UT 4 . Eines d'aprenentatge automàtic
+# 2.1 Eines d'aprenentatge automàtic
 
 ---
 
@@ -128,7 +128,7 @@ Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Apre
 
 ---
 
-# 5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto
+# 2.2 Algorismes aplicats a l'aprenentatge auto
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT3. Algoritmos aplicados al aprendizaje automático. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -465,7 +465,7 @@ https://ml-playground.com/ https://mlplaygrounds.com/ https://playground.tensorf
 
 ---
 
-# 5.3 UT 2 . Caracterització de sistemes d'aprenentatg
+# 2.3 Caracterització de sistemes d'aprenentatg
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT2. Caracterización de sistemas de aprendizaje automático. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 

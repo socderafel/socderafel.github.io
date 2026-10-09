@@ -1,24 +1,26 @@
 ---
 layout: default
-title: "UT7 — Unit 7 - Audio and Video — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca"
+title: "UD7 — Audio and Video · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut06/ut0601.html"
+prev_label: "⬅️ 6.1 U6 Email"
 next_url: "../ut07/ut0701.html"
 next_label: "7.1 U7 Audio and Video ➡️"
 ---
 
-# 📘 UT7 — Unit 7 - Audio and Video (Unitat Completa)
+# 📘 UD7 — Audio and Video (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**7.1 U7 Audio and Video**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
-> - [**7.2 U7 P1**](#ut0702) (o [obrir en pàgina individual ➡️](./ut0702.md) )
-> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**7.1 U7 Audio and Video**](./ut0701.md)
 
 ---
 
-## 7.1 U7 Audio and Video
+# 7.1 U7 Audio and Video
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### **Resources**
@@ -245,58 +247,3 @@ and reliable.
 2 ASIX - SXI Questions?
 
 ---
-
-## 7.2 U7 P1
-
-Unit 6 – Mail
-
-U7 – P1
-
-For both practices you are going to need your research skills and the self-learning you have used this year, so both practices are not guided. You may use as many resources on the Internet to accomplish them (tutorials, youtube, etc).
-
-Only one is mandatory and the other one is optional. You can choose the one you prefer. The optional (if OK) will add 0,5 additional points to the final activities mark.
-
-Good luck.
-
-Install and configure a VoIP service
-
-You will need an Ubuntu server with Asterisk and an Ubuntu 2 clients with the application MicroSIP (It’s recommended to use more than one computer).
-
-At the end of the practice, you have to be able of making a phone call from a client to another.
-
-Install and configure a videoconference service.
-
-You will need to install and configure in a Windows Server the application TrueConf in its free version. This will work as a videoconference server and from the client (Windows) you’ll need to follow the steps for connecting to the videoconference.
-
-At the end of the practice, at least two clients must connect to the videoconference at the same time.
-
----
-
-## ✍️ Activitats pràctiques UT7
-
-> **✍️ Activitat Pràctica 7.1 — U7 A1**
-> Unit 7 – Audio and Video services
->
-> U7 – A1
->
-> Instructions
->
-> - Remember to copy both, questions and answers.
-> - Deliver the document in .pdf
-> - Send the document through the task in Aules.
->
-> ### 1. After watching the video about RSTP from the UPV, answer the following
->
-> questions.
->
-> - What’s the protocol used to control the data flow as a remote
->
-> controller in the network?
->
-> - What’s the protocol used for transporting this data?
-> - What are the ports by default for RSTP?
->
-> - Search information about podcast and answer the following questions.
-> - What is a podcast?
-> - Explain what is a subscription.
-> - What are the most popular podcast platforms?

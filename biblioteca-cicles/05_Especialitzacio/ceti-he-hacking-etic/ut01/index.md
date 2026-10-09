@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT1 — Elementos esenciales del HE — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD1 — Elementos esenciales del HE · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT1 Completa"
 prev_url: "../index.html"
@@ -9,17 +9,19 @@ next_url: "../ut01/ut0101.html"
 next_label: "1.1 HE 1 ➡️"
 ---
 
-# 📘 UT1 — Elementos esenciales del HE (Unitat Completa)
+# 📘 UD1 — Elementos esenciales del HE (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**1.1 HE 1**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
-> - [**1.2 Prácticas tema 1**](#ut0102) (o [obrir en pàgina individual ➡️](./ut0102.md) )
-> - [**1.3 tema1**](#ut0103) (o [obrir en pàgina individual ➡️](./ut0103.md) )
-> - [**✍️ Activitats pràctiques UT1**](#ut01actividades) (o [obrir en pàgina individual ➡️](./ut01actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 HE 1**](./ut0101.md)
+- [**1.2 tema1**](./ut0103.md)
 
 ---
 
-## 1.1 HE 1
+# 1.1 HE 1
 
 ### Determinación de las herramientas de monitorización para detectar vulnerabilidades
 
@@ -131,33 +133,7 @@ Por ejemplo, atacar o alterar sitios web por razones políticas, atacar la empre
 
 ---
 
-## 1.2 Prácticas tema 1
-
-Lee las preguntas y contesta
-
-PRÀCTICA TEMA 1 - HÀCKING ÈTIC.
-
-CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ.
-
-NOM
-
-1. Com el mòdul tracta sobre el 'Hacking', concretament ètic, què penses de la definició que dóna la RAE (Reial Acadèmia Espanyola) sobre el terme de “hacker”? http://dle.rae.es/?id=JxlUKkm
-
-Estàs d'acord? Justifica la teua resposta.
-
-Quina definició de les que apareix penses que és la més adequada?
-
-2. Comenta què entens sobre el cartell d’avís i precaució sobre la pràctica i mal ús de conceptes relacionats amb la ciberseguretat (cartell de la porta).
-
-3. Per què penses que cada vegada està més demandada la figura de l’especialista en ciberseguretat?
-
-4. Què opines de la Llei del Hacking?
-
-5. Comenta breument què esperes aprendre amb la realització del Curs d'Especialització en Ciberseguretat en Entorns de les Tecnologies de la Informació.
-
----
-
-## 1.3 tema1
+# 1.2 tema1
 
 Tema 1 Introducció: Conceptes bàsics. Hacking ètic (HE) 1r CIBER
 
@@ -274,40 +250,3 @@ Hacking ètic 1r CIBER
 Els empleats dedicats a la seguretat informàtica han de conèixer esta Llei. El Codi Penal situa en el mateix escalafó a un investigador de seguretat que a un delinqüent. Hacking ètic 1r CIBER
 
 ---
-
-## ✍️ Activitats pràctiques UT1
-
-> **✍️ Activitat Pràctica 1.1 — Pregunta 1**
-> Com el mòdul tracta sobre el
-> 'Hacking', concretament ètic, què penses de la definició que dóna
-> la RAE (Reial Acadèmia Espanyola) sobre el terme de “hacker”?
-> [http://dle.rae.es/?id=JxlUKkm](http://dle.rae.es/?id=JxlUKkm)
->
-> Estàs
-> d'acord? Justifica la teua resposta.
->
-> Quina
-> definició de les que apareix penses que és la més adequada?
-
-> **✍️ Activitat Pràctica 1.2 — Pregunta 2**
-> Comenta què entens sobre el
-> cartell d’avís i precaució sobre la pràctica i mal ús de
-> conceptes relacionats amb la ciberseguretat (cartell de la porta).
-
-> **✍️ Activitat Pràctica 1.3 — Pregunta 3**
-> Per què penses que cada
-> vegada està més demandada la figura de l’especialista en
-> ciberseguretat?
-
-> **✍️ Activitat Pràctica 1.4 — Pregunta 4**
-> Comenta breument què esperes
-> aprendre amb la realització del Curs d'Especialització en
-> Ciberseguretat en Entorns de les Tecnologies de la Informació.
-
-> **✍️ Activitat Pràctica 1.5 — Pregunta 5**
-> Busca y envia
->
-> Cual es el emblema que se utiliza para simbolizar el hacking
-
-> **✍️ Activitat Pràctica 1.6 — Pregunta 6**
-> Ordena de mayor a menor los roles según consideres su peligrosidad.

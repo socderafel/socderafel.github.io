@@ -1,27 +1,26 @@
 ---
 layout: default
-title: "U3 — Sistema de Noms de Domini (DNS) · Unitat Completa"
+title: "UD4 — Sistema de Noms de Domini (DNS) · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT5 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut06/ut0604.html"
+prev_label: "⬅️ 3.4 Servidor DHCP"
 next_url: "../ut05/ut0501.html"
-next_label: "5.1 UD3 Servidor de Nombres de Dominio SMX ➡️"
+next_label: "4.1 UD3 Servidor de Nombres de Dominio SMX ➡️"
 ---
 
-# 📘 U3 — Sistema de Noms de Domini (DNS) (Unitat Completa)
+# 📘 UD4 — Sistema de Noms de Domini (DNS) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**5.1 UD3 Servidor de Nombres de Dominio SMX**](./ut0501.md)
-- [**✍️ Activitats pràctiques UT5**](./ut05actividades.md)
+- [**4.1 UD3 Servidor de Nombres de Dominio SMX**](./ut0501.md)
 
 ---
 
-# 5.1 UD3 Servidor de Nombres de Dominio SMX
+# 4.1 UD3 Servidor de Nombres de Dominio SMX
 
 > **📌 Introducció de la Unitat**
 > **Guia d'estudi**
@@ -307,23 +306,5 @@ Servidor DNS designado por otros servidores DNS para ser invocado en consultas d
 - Referencias.
 
 Basado en los apuntes de: http://vgg.uma.es/redes/servicio.html https://jesusg289.files.wordpress.com http://smr.iesharia.org/wiki/doku.php/src:inicio http://www.portaleso.com/usuarios/Toni/web_redes/unidad_redes_infor- maticas_indice.html#protocolo http://es.ccm.net/contents/262-dns-sistema-de-nombre-de-dominio https://es.wikipedia.org/wiki/Dominio_de_nivel_superior
-
----
-
-# ✍️ Activitats pràctiques UT5
-
-> **✍️ Activitat Pràctica 5.1 — Entrega Acta Inicial**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 5.2 — Entrega Acta Final**
-> Entrega Acta Final
-
-> **✍️ 📋 Exercici / Qüestionari 5.3 — Qüestionari d'avaluació U3**
-> Qüestionari d'avaluació U3
->
-> [plantilla UD_3](https://drive.google.com/file/d/1Sxd1t-cJFtxp0TcQKT1b4m5jtUa1D5Z5/view?usp=sharing)
-
-> **✍️ Activitat Pràctica 5.4 — Entrega Memoria**
-> Entrega Memoria
 
 ---

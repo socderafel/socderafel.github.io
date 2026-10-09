@@ -1,32 +1,29 @@
 ---
 layout: default
-title: "U2 — Assignació Dinàmica d'Adreces (DHCP) · Unitat Completa"
+title: "UD3 — Assignació Dinàmica d'Adreces (DHCP) · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT6 Completa"
 prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_label: "⬅️ 2.1 Continguts i Casos Guiats"
 next_url: "../ut06/ut0601.html"
-next_label: "6.1 presentació DHCP ➡️"
+next_label: "3.1 presentació DHCP ➡️"
 ---
 
-# 📘 U2 — Assignació Dinàmica d'Adreces (DHCP) (Unitat Completa)
+# 📘 UD3 — Assignació Dinàmica d'Adreces (DHCP) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**6.1 presentació DHCP**](./ut0601.md)
-- [**6.2 Presentació DHCP. Visió general**](./ut0602.md)
-- [**6.3 Servei DHCP**](./ut0603.md)
-- [**6.4 Servidor DHCP**](./ut0604.md)
-- [**6.5 Presentació SX20-U1-E3 "Bronx"**](./ut0605.md)
-- [**6.6 Qüestionari DHCP**](./ut0606.md)
-- [**✍️ Activitats pràctiques UT6**](./ut06actividades.md)
+- [**3.1 presentació DHCP**](./ut0601.md)
+- [**3.2 Presentació DHCP. Visió general**](./ut0602.md)
+- [**3.3 Servei DHCP**](./ut0603.md)
+- [**3.4 Servidor DHCP**](./ut0604.md)
 
 ---
 
-# 6.1 presentació DHCP
+# 3.1 presentació DHCP
 
 > **📌 Introducció de la Unitat**
 > ### **U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)**
@@ -190,7 +187,7 @@ SERVIDOR DHCP Definición: proporciona un mecanismo rápido de configuración
 
 ---
 
-# 6.2 Presentació DHCP. Visió general
+# 3.2 Presentació DHCP. Visió general
 
 De Cristian i Robert
 
@@ -218,7 +215,7 @@ Conﬁguración del Servidor DHCP
 
 ---
 
-# 6.3 Servei DHCP
+# 3.3 Servei DHCP
 
 SINTESIS DHCP 2º SMR SERVICIOS EN RED Tema 3: Servicio DHCP
 
@@ -303,7 +300,7 @@ SERVIDOR DHCP Definición: proporciona un mecanismo rápido de configuración
 
 ---
 
-# 6.4 Servidor DHCP
+# 3.4 Servidor DHCP
 
 Instalación del servidor DHCP ●Podemos hacerlo desde la línea de comandos con derechos de administrador: # apt­get install dhcp3­server ●o bien desde Synaptic buscando dhcp3­server
 
@@ -348,168 +345,5 @@ Reiniciar el servidor DHCP
 ```bash
 sudo /etc/init.d/dhcp­server restart
 ```
-
----
-
-# 6.5 Presentació SX20-U1-E3 "Bronx"
-
-Presentació SX20-U1-E3 "Bronx"
-
-Exposició Pràctiques I,II,III Raúl,Pau,René,Víctor “El Bronx”
-
-Pràctica I
-
-Active Directory per a conﬁgurar el DHCP
-
-Conﬁgurar Bosc Active Directory
-
-Conﬁgurar Nom de Domini
-
-Conﬁguració del DHCP (I)
-
-Conﬁguració del DHCP (II)
-
-Conﬁguració del DHCP (III)
-
-Conﬁguració del DHCP (IV)
-
-Conﬁguració del DHCP (V)
-
-DHCP Conﬁgurat i Actiu
-
-Pràctica II
-
-Conﬁguració de la Interﬁcie del Servidor
-
-Ifconﬁg -a al Servidor
-
-```bash
-Sudo APT Update
-```
-
-Instalación del DHCP
-
-Comando para acceder a la conﬁguración del DHCP
-
-Selecció de la Interﬁcie
-
-Subnet i Rango de IP’s
-
-DHCP en marxa
-
-Rango de IP’s disponibles per al DHCP i DNS Primari i Secundari
-
-Pràctica III
-
-Conﬁguració del Relay
-
-Conﬁguració del Relay
-
-Preguntes
-
-Fin
-
----
-
-# 6.6 Qüestionari DHCP
-
-Qüestionari DHCP
-
-QÜESTIONARI (DHCP)
-
-- Quins avantatges i inconvenients presenta la instal·lació d'un servei de DHCP en una organització?
-
-### 2. Què ports manegen client i servidor per comunicar-se?
-
-- Com s'organitza el funcionament del client / servidor?Què seqüència de passos de sol·licitud / resposta es donen?
-
-- Què dades específiques de xarxa ha de passar d'un servidor a un client (Volem que el client puga accedir a Internet)?
-
-- Què penses que passaria si en una organització coexisteixen dos servidors de DHCP en un mateix segment físic de xarxa?
-
-- En un servidor amb dos targetes de xarxa com el fet a les pràctiques.
-
-No podem configurar DCHP en un servidor amb dos tarjetes de xarxa
-
-És necessari indicar la interficie que anem a utilitzar per a donar el servei de DHCP i es fa en un arxiu diferent al de configuració de l’àmbit
-
-És necessari indicar la interficie que anem a utilitzar per a donar el servei de DHCP i es fa en el mateix arxiu de configuració de l’àmbit
-
-No podem configurar DCHP en un servidor amb dos tarjetes de xarxa amb Ubuntu Server 18
-
-- En el servidor isc-dhcp-server, ¿és possible crear la reserva d'una IP per a un determinat host?
-
-Si, per a això cal indicar com a mínim la seua adreça MAC i la IP que se li vol associar.
-
-No, els servidors DHCP poden accedir a l'adreça física dels equips de la xarxa però no poden donar IPs.
-
-No, per a això cal la instal·lació d'un servidor de noms(DNS) com bind i l'adreça MAC de l'host a reservar
-
-Si, a més és aconsellable realitzar-lo per a tots els Hosts
-
-### 8. Mira aquesta configuració
-
-És una configuració vàlida per a un servidor DHCP
-
-És una configuració vàlida per a un client DHCP
-
-No és una configuració vàlida per a un servidor per que no porta porta d’enllaḉ
-
-No és una configuració vàlida per a un client. Un dels adaptadors hauria de ser NAT
-
-### 9. Mira aquesta configuració. El server DHCP té les següents característiques
-
-Rang de IP = 192.168.254.[ 10 - 50 ] i server DNS 192.168.254.8
-
-Rang de IP = 192.168.254.[ 10 - 50 ] i router del aula 192.168.254.8
-
-Rang de IP = 192.168.254.[ 10 - 50 ] i router de internet 192.168.254.8
-
-Rang de IP = 192.168.254.[ 10 - 50 ] i Porta de enllaç 192.168.254.8
-
-- Per a un escenari com el de la pràctica 3 del curs. Indica com configuraries les interfícies (Anfitrio, NAT, pont, Xarxa Interna, etc) per al servidor i per a 2 clientes.
-
----
-
-# ✍️ Activitats pràctiques UT6
-
-> **✍️ Activitat Pràctica 6.1 — Entrega Acta Inicial**
-> Entrega Acta Inicial
-
-> **✍️ Activitat Pràctica 6.2 — Pràctica 1**
-> El secretari ha de entregar el PDF amb la memòria de la pràctica anomenada SX21 - U1 - P1 -Ex.pdf (on x és el número del teu equip) Recordeu que ha de tindre almenys un índex i
->
-> - Breu descripció tècnica del problema inicial.
-> - Passos en la implementació.
-> - Problemes detectats al costat de la seua solució.
-> - Bibliografia web
-
-> **✍️ Activitat Pràctica 6.3 — Pràctica 2**
-> El secretari ha de entregar el PDF amb la memòria de la pràctica anomenada SX21 - U1 - P2 -Ex.pdf (on x és el número del teu equip) Recordeu que ha de tindre almenys un índex i
->
-> - Breu descripció tècnica del problema inicial.
-> - Passos en la implementació.
-> - Problemes detectats al costat de la seua solució.
-> - Bibliografia web
-
-> **✍️ Activitat Pràctica 6.4 — Pràctica 3**
-> El secretari ha de entregar el PDF amb la memòria de la pràctica anomenada SX21 - U1 - P3 -Ex.pdf (on x és el número del teu equip) Recordeu que ha de tindre almenys un índex i
->
-> - Breu descripció tècnica del problema inicial.
-> - Passos en la implementació.
-> - Problemes detectats al costat de la seua solució.
-> - Bibliografia web
-
-> **✍️ Activitat Pràctica 6.5 — U2_Presentacions**
-> U2_Presentacions
-
-> **✍️ Activitat Pràctica 6.6 — Entrega Acta Final**
-> Entrega Acta Final
-
-> **✍️ Activitat Pràctica 6.7 — Qüestionari UD2**
-> Qüestionari UD2
-
-> **✍️ Activitat Pràctica 6.8 — Nota UD2**
-> Nota UD2
 
 ---

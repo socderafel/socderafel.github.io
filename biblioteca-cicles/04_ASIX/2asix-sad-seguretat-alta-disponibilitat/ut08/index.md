@@ -1,29 +1,28 @@
 ---
 layout: default
-title: "UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN · Unitat Completa"
+title: "UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT8 Completa"
-prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_url: "../ut07/ut0703.html"
+prev_label: "⬅️ 6.2 2 Programari anti malware"
 next_url: "../ut08/ut0801.html"
-next_label: "8.1 Segurertat en xarxes corporatives ➡️"
+next_label: "7.1 Segurertat en xarxes corporatives ➡️"
 ---
 
 # 📘 UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**8.1 Segurertat en xarxes corporatives**](./ut0801.md)
-- [**8.2 Seguretat en xarxes sense fil**](./ut0802.md)
-- [**8.3 VPN**](./ut0803.md)
-- [**✍️ Activitats pràctiques UT8**](./ut08actividades.md)
+- [**7.1 Segurertat en xarxes corporatives**](./ut0801.md)
+- [**7.2 Seguretat en xarxes sense fil**](./ut0802.md)
+- [**7.3 VPN**](./ut0803.md)
 
 ---
 
-# 8.1 Segurertat en xarxes corporatives
+# 7.1 Segurertat en xarxes corporatives
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### UD 6 Accés remot
@@ -134,7 +133,7 @@ Consells finals Protegir la xarxa. STP, Link Aggregation, Port Security, VLAN
 
 ---
 
-# 8.2 Seguretat en xarxes sense fil
+# 7.2 Seguretat en xarxes sense fil
 
 XARXES SENSE FIL
 
@@ -468,7 +467,7 @@ Analitzar periòdicament els clients connectats per a comprovar que estan
 
 ---
 
-# 8.3 VPN
+# 7.3 VPN
 
 XARXES PRIVADES VIRTUALS
 
@@ -819,24 +818,5 @@ Private Tunnel
 Software de servidors i clients de VPN Arquitectures: Client a Servidor Router a Router Firewall a Firewall ● Servidor VPN – OpenVPN – FreeLan ● Client VPN – Configura Windows – Configura Linux – Configura MAC – Configura Android – Configura iOS punt a punt router a router
 
 Software per implementar Roadwarrior ● LogMeIn Hamachi ● Radmin VPN ● SoftEher VPN és un programari gratuït de codi obert, multiplataforma, client VPN i servidor VPN multiprotocol ● NetOverNet ● ZeroTier ● GameRanger ● Wippien (P2P VPN) https://vpn.net/
-
----
-
-# ✍️ Activitats pràctiques UT8
-
-> **✍️ Activitat Pràctica 8.1 — (SAD) Descobreix xarxes amb nmap**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: nmap Nmap és un dels millors escàners de ports que podem trobar en la xarxa, des de la seua primera versió ha sabut madurar i mantindre's, convertint- se en una eina imprescindible per a un administrador de xarxa o un auditor de seguretat.
->
-> Aquesta és la pàgina oficial de l'eina: https://nmap.org/ Podem instal·lar-la en Windows, per a Mac OS, i per a Linux. En Ubuntu, des de apt-get, o baixant el paquet rpm per a distribucions basades en Red Hat, SUSE o Fedora. També podem utilitzar una distribució de linux que la tinga instal·lada i configurada, com la distribució Kali Linux. <== Utilitzarem esta En aquesta activitat practicarem.
->
-> Descobriment d'equips “vius” en una xarxa. Descobriment de ports oberts (serveis actius ) Descobriment de sistema operatiu remot Descobriment de vulnerabilitats en equip remot Preparació: En la màquina Kali, comprova ( xarxa en Adaptador pont ) Arranca la màquina. Tasques
->
-> Esbrina la ip de la teua màquina Cerca informació sobre aquesta eina. Cerca manuals, pàgines amb instruccions, etc.... Practica amb les següents tasques senzilles Descobriment d'equips “vius” en la nostra xarxa. Comenta els resultats !
->
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Descobriment de ports oberts ( serveis actius ) Comenta els resultats ! Descobriment de Sistema Operatiu. Comenta els resultats ! Que altres opcions de nmap et resulten interessants ?
->
-> Detectar vulnerabilitats. Per a realitzar aquest apartat, necessitarem una màquina amb alguna vulnerabilitat que puga ser detectada. Per a això utilitzarem una màquina metasploitable . La baixem de : https://sourceforge.net/projects/metasploitable/ La importem i posem la xarxa en adaptador pont.
->
-> Arranquem la màquina metasploitable. Utilitzant nmap: Descobreix que màquina de la xarxa és metasploitable (la seua ip) Descobreix que Sistema operatiu és i que versió Descobreix que ports té oberts Descobreix que vulnerabilitats té Comenta els resultats ! Documentar tot el procés en un document. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada. Entregar el document en format PDF. Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”
 
 ---

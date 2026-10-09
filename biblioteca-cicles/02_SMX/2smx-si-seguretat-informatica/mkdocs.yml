@@ -4,31 +4,27 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT1 — Conceptes sobre seguretat informàtica":
-      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+  - "UD1 — Conceptes sobre seguretat informàtica":
+      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
       - "1.1 Continguts i Recursos": ut01/ut0101.md
-      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
-  - "UT2 — Criptografia":
-      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+  - "UD2 — Criptografia":
+      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
       - "2.1 Continguts i Recursos": ut02/ut0201.md
-      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — Seguretat passiva: Equips":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+  - "UD3 — Seguretat passiva: Equips":
+      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
       - "3.1 PDF: Consum i sel·lecció de SAI": ut03/ut0301.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "UT4 — Seguretat passiva: Emmagatzemament":
-      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
-      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
-  - "UT5 — Seguretat activa: sistema operatiu i aplicacions":
-      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
-      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "UT6 — Seguretat activa: Accés a xarxes":
-      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
-      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
-  - "UT7 — Seguretat activa: Control de xarxes":
-      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
-      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
-  - "UT8 — Atacs i contramesures":
-      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
-      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
-  - "📂 Índex de Documents i Recursos": references.md
+  - "UD4 — Seguretat passiva: Emmagatzemament":
+      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 Continguts i Casos Guiats": ut04/ut04actividades.md
+  - "UD5 — Seguretat activa: sistema operatiu i aplicacions":
+      - "📘 UD5 Completa (1 pàgina)": ut05/index.md
+      - "5.1 Continguts i Casos Guiats": ut05/ut05actividades.md
+  - "UD6 — Seguretat activa: Accés a xarxes":
+      - "📘 UD6 Completa (1 pàgina)": ut06/index.md
+      - "6.1 Continguts i Casos Guiats": ut06/ut06actividades.md
+  - "UD7 — Seguretat activa: Control de xarxes":
+      - "📘 UD7 Completa (1 pàgina)": ut07/index.md
+      - "7.1 Continguts i Casos Guiats": ut07/ut07actividades.md
+  - "UD8 — Atacs i contramesures":
+      - "📘 UD8 Completa (1 pàgina)": ut08/index.md
+      - "8.1 Continguts i Casos Guiats": ut08/ut08actividades.md

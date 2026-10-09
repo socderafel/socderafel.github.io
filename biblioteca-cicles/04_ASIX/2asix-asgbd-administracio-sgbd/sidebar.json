@@ -6,10 +6,10 @@
   },
   "units": [
     {
-      "summary": "UT1 — Instal·lació d'un SGBD",
+      "summary": "UD1 — Instal·lació d'un SGBD",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
@@ -32,18 +32,14 @@
         {
           "label": "1.5 Arquitectura BBDD's en Oracle",
           "href": "ut01/ut0105.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
     {
-      "summary": "UT2 — Configuració d'un SGBD",
+      "summary": "UD2 — Configuració d'un SGBD",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
@@ -62,22 +58,14 @@
         {
           "label": "2.4 Solucions errors de connexió amb SQLDeveloper",
           "href": "ut02/ut0204.html"
-        },
-        {
-          "label": "2.5 primers pasos - sol",
-          "href": "ut02/ut0205.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     },
     {
-      "summary": "UT3 — Usuaris i permisos. Seguretat",
+      "summary": "UD3 — Usuaris i permisos. Seguretat",
       "items": [
         {
-          "label": "📘 UT3 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
@@ -100,92 +88,59 @@
         {
           "label": "3.5 Seguretat en un SGBD",
           "href": "ut03/ut0305.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
     {
-      "summary": "UT5 — Automatització de tasques",
+      "summary": "UD4 — Automatització de tasques",
       "items": [
         {
-          "label": "📘 UT5 Completa (1 pàgina)",
+          "label": "📘 UD4 Completa (1 pàgina)",
           "href": "ut05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "5.2 Repàs: PL/SQL",
+          "label": "4.1 Repàs: PL/SQL",
           "href": "ut05/ut0502.html"
         },
         {
-          "label": "5.3 Repàs: PL/SQL (II)",
+          "label": "4.2 Repàs: PL/SQL (II)",
           "href": "ut05/ut0503.html"
         },
         {
-          "label": "5.4 Repàs: PL/SQL (II) _ SOLUCIONS",
-          "href": "ut05/ut0504.html"
-        },
-        {
-          "label": "5.5 Automatització de tasques",
+          "label": "4.3 Automatització de tasques",
           "href": "ut05/ut0505.html"
-        },
-        {
-          "label": "5.6 Butlletí procediments i funcions",
-          "href": "ut05/ut0506.html"
-        },
-        {
-          "label": "5.7 Butlletí triggers",
-          "href": "ut05/ut0507.html"
-        },
-        {
-          "label": "5.8 Solucions a pl/sql",
-          "href": "ut05/ut0508.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     },
     {
-      "summary": "UT6 — Optimització de l'SGBD",
+      "summary": "UD5 — Optimització de l'SGBD",
       "items": [
         {
-          "label": "📘 UT6 Completa (1 pàgina)",
+          "label": "📘 UD5 Completa (1 pàgina)",
           "href": "ut06/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 Optimització de l'SGBD",
+          "label": "5.1 Optimització de l'SGBD",
           "href": "ut06/ut0601.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT6",
-          "href": "ut06/ut06actividades.html"
         }
       ]
     },
     {
-      "summary": "UT7 — Disponibilitat d'un SGBD",
+      "summary": "UD6 — Disponibilitat d'un SGBD",
       "items": [
         {
-          "label": "📘 UT7 Completa (1 pàgina)",
+          "label": "📘 UD6 Completa (1 pàgina)",
           "href": "ut07/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 Disponibilitat d'un SGBD",
+          "label": "6.1 Disponibilitat d'un SGBD",
           "href": "ut07/ut0701.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

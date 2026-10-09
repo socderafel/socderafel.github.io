@@ -1,24 +1,23 @@
 ---
 layout: default
-title: "UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia · Unitat Completa"
+title: "UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut03/ut0302.html"
+prev_label: "⬅️ 3.2 Anàlisi Forense"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 Clau simètrica i Hash ➡️"
 ---
 
 # 📘 UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**4.1 Clau simètrica i Hash**](./ut0401.md)
 - [**4.2 Esteganografia**](./ut0402.md)
-- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
 
 ---
 
@@ -182,21 +181,5 @@ Tècniques mes utilitzades en esteganografia. • En documents • En imatges �
 
 > **✍️ Activitat: ESTEGANO-3 En una mv Windows 10 , baixa la utilitat Fi**
 > Activitat: ESTEGANO-3 En una mv Windows 10 , baixa la utilitat FileFriend d' http://www.filefriend.net/ Utilitza l'opció d'amagar un fitxer dins d'un altre Activitat: ESTEGANO-4 Instal·la la utilitat exiftool i explora el fitxer del enllaç . Busca la «password» 2 de 2
-
----
-
-# ✍️ Activitats pràctiques UT4
-
-> **✍️ Activitat Pràctica 4.1 — (SAD) Activitat HASH**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: hash En aquesta activitat es practica amb els algorismes de hash Hash des de Windows Programes : HashGenerator, CriptoRes (espanyol), QuickHash, MD5 & SHA Checksum Utility, HashMyFiles, HashTab Hash des de Linux Des de terminal: sha256sum nomfitxer md5sum , sha1sum , sha512sum Des d'entorn gràfic: GtkHash Exercici 1. Comprovar que amb diferents programes (utilitzant la mateixa funció hash), s'obté el mateix (codi)hash per a un mateix fitxer. Prova amb fitxers xicotets, amb una sola lletra. Prova amb fitxers grans.
->
-> ** Prova 2 programes de Windows i 2 programes de Linux (kali) Exercici 2. Comprovar com canvia el hash canviant només un “bit” d'un fitxer de diversos centenars de Mbytes (512Mbytes = 4.096.000.000 bits)
->
-> - Necessitarem una eina de calcule de hash. Tria una.
-> - Necessitarem un editor hexadecimal per a fer el canvi d'un sol bit. Tria un.
->
-> Prenem un fitxer gran. Fem una còpia, li canviem el nom. Comprovem el hash dels dos fitxers. (ha de coincidir) Prenem el segon fitxer i amb un editor hexadecimal li canviem un sol bit. Comprovem ara els hash. Observar com ha canviat el hash. Exemple editor per a windows: Editors per a linux: Ghex, wxHexEditor ...
->
-> Des de línia de comandos, hexedit, Hexyl, xxd, Hexcurse, Hexer Documenta tot el procés i lliura un document en format PDF. Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”
 
 ---

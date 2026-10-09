@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT7 — Seguretat activa: Control de xarxes — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "UD7 — Seguretat activa: Control de xarxes · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT7 Completa"
 prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_label: "⬅️ 6.1 Continguts i Casos Guiats"
 next_url: "../ut07/ut07actividades.html"
-next_label: "✍️ Activitats pràctiques UT7 ➡️"
+next_label: "7.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT7 — Seguretat activa: Control de xarxes (Unitat Completa)
+# 📘 UD7 — Seguretat activa: Control de xarxes (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**7.1 Continguts i Casos Guiats**](./ut07actividades.md)
 
 ---
 
-## ✍️ Activitats pràctiques UT7
+# 7.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 7.1 — 07.01 Monitoritzar la xarxa: ntop**
 > Utilitza la ferramenta ntop per monitoritzar la xarxa de l'aula.
@@ -36,3 +40,5 @@ next_label: "✍️ Activitats pràctiques UT7 ➡️"
 
 > **✍️ Activitat Pràctica 7.5 — 07.05 Activitats de Repàs**
 > Agrupeu-se per parelles i realitzeu el test de repàs de la unitat justificant les respostes i les activitats per comprovar l'aprenentatge fent un resum dels conceptes i mesures més importants que es comenten (Pàgines 205 i 206)
+
+---

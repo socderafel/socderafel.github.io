@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT5 — BASE — Ofimàtica i Arxiu de Documents | Portal Docent Pepe Cuenca"
+title: "UD5 — BASE · Temari Complet"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut04/ut0401.html"
+prev_label: "⬅️ 4.1 Continguts i Recursos"
 next_url: "../ut05/ut0501.html"
 next_label: "5.1 Continguts i Recursos ➡️"
 ---
 
-# 📘 UT5 — BASE (Unitat Completa)
+# 📘 UD5 — BASE (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 Continguts i Recursos**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 Continguts i Recursos**](./ut0501.md)
 
 ---
 
-## 5.1 Continguts i Recursos
+# 5.1 Continguts i Recursos
 
 > **🔗 Recurs Web: 1. Bases de datos: Conceptos, elementos y usos. Base: Entorno de trabajo**
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/01conceptos_usos_base.php) ↗️**](http://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/01conceptos_usos_base.php)
@@ -73,29 +76,3 @@ next_label: "5.1 Continguts i Recursos ➡️"
 > Base: Examen. Tienda Friki
 
 ---
-
-## ✍️ Activitats pràctiques UT5
-
-> **✍️ 📋 Exercici / Qüestionari 5.1 — Cuestionario de conceptos básicos**
-> Bases de datos: Conceptos, elementos y usos
-
-> **✍️ 📋 Exercici / Qüestionari 5.2 — Cuestionario de tablas**
-> Base: Tablas
-
-> **✍️ Activitat Pràctica 5.3 — Sube los archivos "orden.png", "filtroautom.png", "filtest1.png", "filtest2.png" y "busqueda.png"**
-> Sube los archivos "orden.png", "filtroautom.png", "filtest1.png", "filtest2.png" y "busqueda.png"
-
-> **✍️ 📋 Exercici / Qüestionari 5.4 — Cuestionario de clave primaria**
-> Cuestionario de clave primaria
-
-> **✍️ 📋 Exercici / Qüestionari 5.5 — Cuestionario de relaciones entre tablas**
-> Cuestionario de relaciones entre tablas
-
-> **✍️ Activitat Pràctica 5.6 — Sube el archivo biblioteca.odb**
-> Sube el archivo biblioteca.odb
-
-> **✍️ Activitat Pràctica 5.7 — Sube el archivo gimnasio.odb**
-> Sube el archivo gimnasio.odb
-
-> **✍️ Activitat Pràctica 5.8 — Sube el archivo extiendafriki.odb**
-> Sube el archivo extiendafriki.odb

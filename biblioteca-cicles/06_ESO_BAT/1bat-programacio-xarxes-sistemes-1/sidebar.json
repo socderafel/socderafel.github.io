@@ -6,124 +6,75 @@
   },
   "units": [
     {
-      "summary": "UT1 — Programació",
+      "summary": "UD1 — Programació",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 01_Conceptos básicos",
+          "label": "1.1 Conceptos básicos",
           "href": "ut01/ut0101.html"
         },
         {
-          "label": "1.2 02_Condicionales",
+          "label": "1.2 Condicionales",
           "href": "ut01/ut0102.html"
         },
         {
-          "label": "1.3 03_Listas y tuplas",
+          "label": "1.3 Listas y tuplas",
           "href": "ut01/ut0103.html"
         },
         {
-          "label": "1.4 04_Bucles",
+          "label": "1.4 Bucles",
           "href": "ut01/ut0104.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
     {
-      "summary": "UT2 — Tasca Projecte hardware amb Word",
+      "summary": "UD2 — Xarxes",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT3 — Xarxes",
-      "items": [
-        {
-          "label": "📘 UT3 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Introducció",
+          "label": "2.1 Introducció",
           "href": "ut03/ut0301.html"
         },
         {
-          "label": "3.2 TCP-IP",
+          "label": "2.2 TCP-IP",
           "href": "ut03/ut0302.html"
         },
         {
-          "label": "3.3 Maquinari",
+          "label": "2.3 Maquinari",
           "href": "ut03/ut0303.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
     {
-      "summary": "UT4 — Projecte hardware Excel",
+      "summary": "UD3 — Sistemes de fitxers Linux",
       "items": [
         {
-          "label": "📘 UT4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "4.1 Guía projecte pressupost",
-          "href": "ut04/ut0401.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT5 — Sistemes de fitxers Linux",
-      "items": [
-        {
-          "label": "📘 UT5 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 Sistema d'arxius",
+          "label": "3.1 Sistema d'arxius",
           "href": "ut05/ut0501.html"
         },
         {
-          "label": "5.2 Gestió de Fitxers",
+          "label": "3.2 Gestió de Fitxers",
           "href": "ut05/ut0502.html"
         },
         {
-          "label": "5.3 Permisos",
+          "label": "3.3 Permisos",
           "href": "ut05/ut0503.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

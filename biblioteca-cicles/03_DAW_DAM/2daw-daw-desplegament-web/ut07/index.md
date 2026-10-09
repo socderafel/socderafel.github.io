@@ -1,30 +1,29 @@
 ---
 layout: default
-title: "UD5 — Documentació i Control de Versions (Git, GitHub, Javadoc, phpDocumentor) · Unitat Completa"
+title: "UD5 — Documentació i Control de Versions (Git, GitHub, Javadoc, phpDocumentor) · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT7 Completa"
-prev_url: "../ut08/ut08actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
+prev_url: "../ut08/ut0802.html"
+prev_label: "⬅️ 4.2 1 Administració de servidors web - Instal·l"
 next_url: "../ut07/ut0701.html"
-next_label: "7.1 UT 5.4 Documentació i control de versions - GitH ➡️"
+next_label: "5.1 4 Documentació i control de versions - GitH ➡️"
 ---
 
 # 📘 UD5 — Documentació i Control de Versions (Git, GitHub, Javadoc, phpDocumentor) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**7.1 UT 5.4 Documentació i control de versions - GitH**](./ut0701.md)
-- [**7.2 UT 5.3 Documentació i control de versions - Git**](./ut0702.md)
-- [**7.3 UT 5.2 Documentació i control de versions - phpD**](./ut0703.md)
-- [**7.4 UT 5.1 Documentació i control de versions - Java**](./ut0704.md)
-- [**✍️ Activitats pràctiques UT7**](./ut07actividades.md)
+- [**5.1 4 Documentació i control de versions - GitH**](./ut0701.md)
+- [**5.2 3 Documentació i control de versions - Git**](./ut0702.md)
+- [**5.3 2 Documentació i control de versions - phpD**](./ut0703.md)
+- [**5.4 1 Documentació i control de versions - Java**](./ut0704.md)
 
 ---
 
-# 7.1 UT 5.4 Documentació i control de versions - GitH
+# 5.1 4 Documentació i control de versions - GitH
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Quinzena del 22/01/24 al 2/2/24
@@ -121,7 +120,7 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 
 ---
 
-# 7.2 UT 5.3 Documentació i control de versions - Git
+# 5.2 3 Documentació i control de versions - Git
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web
 
@@ -392,7 +391,7 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 
 ---
 
-# 7.3 UT 5.2 Documentació i control de versions - phpD
+# 5.3 2 Documentació i control de versions - phpD
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web
 
@@ -446,7 +445,7 @@ S’obrirà el navegador de internet i podrem navegar dins de la documentació d
 
 ---
 
-# 7.4 UT 5.1 Documentació i control de versions - Java
+# 5.4 1 Documentació i control de versions - Java
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web
 
@@ -530,18 +529,5 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web Finalment premem «yes to all» 2.1.5. Consultar la documentació generada amb JavaDoc. Anem al lloc on s’ha guardat la documentació.
 
 Per a consultar la documentació, fem doble click sobre la icona índex. Amb els botons de navegació, podem veure tota la documentació generada (en aquest cas la informació al voltant de la clase UDPMultiChat). 9 / 9
-
----
-
-# ✍️ Activitats pràctiques UT7
-
-> **✍️ Activitat Pràctica 7.1 — Tasca 3 UT3 (còpia) (còpia)**
-> ##### Data de venciment : 17/11/23
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web TASCA 3 UT 3. Arquitectura web. Implantació i administració de servidors web Instal·lació d’un servidor web amb Tomcat Desplagament d’Aplicacions Web CFGS DAW Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web Servidor web Tomcat Activitat Instal·lar, configurar i utilitzar un servidor web amb Tomcat. Pots utilitzar un servidor virtualitzat en la teua màquina. Si estàs en cloud, obri els ports necessaris en la infraestructura cloud i en la màquina servidor (firewall).
->
-> Entrega de la tasca Tot el procés s’ha de documentar amb un processador de text i entregar en format PDF. 2 / 2
 
 ---

@@ -1,27 +1,26 @@
 ---
 layout: default
-title: "UD5 — Desenvolupament Web amb HTML5 i CSS · Unitat Completa"
+title: "UD5 — Desenvolupament Web amb HTML5 i CSS · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT4 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut05/ut0501.html"
+prev_label: "⬅️ 4.1 XSD (XML Schema Definition)"
 next_url: "../ut04/ut0401.html"
-next_label: "4.1 U5-HTML5 ➡️"
+next_label: "5.1 HTML5 ➡️"
 ---
 
 # 📘 UD5 — Desenvolupament Web amb HTML5 i CSS (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 U5-HTML5**](./ut0401.md)
-- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
+- [**5.1 HTML5**](./ut0401.md)
 
 ---
 
-# 4.1 U5-HTML5
+# 5.1 HTML5
 
 Introducción al HTML.
 El contenido lo he sacado de la web https://www.w3schools.com/html/, en esta web podéis probar todo lo que hay en las diapositivas con el editor que hay online para cada ejemplo. 
@@ -131,53 +130,5 @@ Ciclo Formativo de Grado Superior Valores de color Hexadecimal
 Ciclo Formativo de Grado Superior Tablas Las tablas HTML permiten a los desarrolladores web organizar los datos en filas y columnas. Ejemplo de una tabla básica Para no hacer un numero infinito de diapositivas, mirar también los apartados de la tabla en HTML de la web W3CSchool (recordar que la se puede traducir la página).
 
 Ciclo Formativo de Grado Superior Webgrafía https://www.w3schools.com/html/
-
----
-
-# ✍️ Activitats pràctiques UT4
-
-> **✍️ Activitat Pràctica 4.1 — Ejercicio HTML**
-> Crear una página web básica
->
-> Debe tener un índice y este enlace a los htmls con fondos rojo, verde y azul la imagen del IES San Vicent Ferrer Algemesi
->
-> Contenido del HTML fondo Rojo
->
-> Título se llamará "Ejercicio tema 5"
->
-> Encabezado se llamará "Fondo Rojo y tabla"
->
-> Una tabla (Inventada o se puede coger como ejemplo la del vídeo)
->
-> Enlaces al resto de htmls (índice, azul y verde)
->
-> Contenido del HTML fondo Verde
->
-> Título se llamará "Ejercicio tema 5"
->
-> Encabezado se llamará "Fondo Verde-Foto IES"
->
-> Una imagen del Instituto con su tooltip que ponga "Algemesi"
->
-> Un HyperEnlace que te lleve a la web del Instituto " https://portal.edu.gva.es/iessantvicent/"
->
-> Enlaces al resto de htmls (índice, azul y Rojo)
->
-> Contenido del HTML fondo Azul
->
-> Título se llamará "Ejercicio tema 5"
->
-> Encabezado se llamará "Fondo Azul"
->
-> Enlaces al resto de htmls (índice, verde y Rojo)
->
-> He creado un vídeo como guía de como podría ser la web.
->
-> Hacer una web básica como la del vídeo se optara como máximo a un 7, para optar a más nota se tendrá que investigar un poco (en W3CSchool por ejemplo) y hacer una web más "rica".¿A que me refiero con una web más rica?, utilizar la web del vídeo como base y por ejemplo que la tabla esté centrada, que la cabecera tenga otro formato, etc. Dejar salir vuestro informático artístico que lleváis dentro.
->
-> **Me tenéis que subir una carpeta comprimida con los archivos html. 
-> Fecha de entrega 14-02-2022 a las 00 horas.**
->
-> Saludos.
 
 ---

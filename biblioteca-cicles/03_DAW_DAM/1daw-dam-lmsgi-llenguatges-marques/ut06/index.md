@@ -1,28 +1,26 @@
 ---
 layout: default
-title: "UD3 — Validació amb DTD (Document Type Definition) · Unitat Completa"
+title: "UD3 — Validació amb DTD (Document Type Definition) · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT6 Completa"
-prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_url: "../ut07/ut0702.html"
+prev_label: "⬅️ 2.2 Ejemplos en XML"
 next_url: "../ut06/ut0601.html"
-next_label: "6.1 UD3-DTD (Document Type Definition) ➡️"
+next_label: "3.1 DTD (Document Type Definition) ➡️"
 ---
 
 # 📘 UD3 — Validació amb DTD (Document Type Definition) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**6.1 UD3-DTD (Document Type Definition)**](./ut0601.md)
-- [**6.2 Soluciones Ejercicios Tema 3**](./ut0602.md)
-- [**✍️ Activitats pràctiques UT6**](./ut06actividades.md)
+- [**3.1 DTD (Document Type Definition)**](./ut0601.md)
 
 ---
 
-# 6.1 UD3-DTD (Document Type Definition)
+# 3.1 DTD (Document Type Definition)
 
 > **🔗 Recurs Web: Document Type Definition (DTD) (parte 1)**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=jlls7U3Jn04) ↗️**](https://www.youtube.com/watch?v=jlls7U3Jn04)
@@ -153,76 +151,5 @@ Como distinguir entre usar elementos o atributos Usar los atributos lo menos 
 Las entidades son variables utilizadas para definir accesos directos a texto o caracteres especiales. Aunque existen algunas entidades predefinidas podemos crear nuestras propias entidades. <!ENTITY entidad valor> Entidades Se referencia como: &entidad; Ejemplo: <!ENTITY escritor "Donald Duck."> <!ENTITY copyright "Copyright W3Schools."> <autor>&escritor;&copyright;</autor> <!ENTITY escritor SYSTEM "http://www.w3schools.com/entities.dtd"> <autor>&escritor;&copyright;</autor> Lenguajes de Marcas
 
 Ejemplo 3.4 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE fecha [ <!ENTITY copy "&#169;"> <!ELEMENT fecha (hora,minuto,segundo,formato,copyright)> <!ATTLIST fecha zona CDATA #REQUIRED> <!ELEMENT hora (#PCDATA)> <!ELEMENT minuto (#PCDATA)> <!ELEMENT segundo (#PCDATA)> <!ELEMENT fo mato (#PCDATA)> Ejercicios <!ELEMENT formato (#PCDATA)> <!ELEMENT copyright (#PCDATA)> ]> <fecha zona="PST"> <hora>15</hora> <minuto>45</minuto> <segundo>78</segundo> <formato>HH:MM:SS</formato> <copyright>&copy; Patxi &amp; Cia</copyright> </fecha> Lenguajes de Marcas
-
----
-
-# 6.2 Soluciones Ejercicios Tema 3
-
-Aquí tenéis un pdf con las soluciones de los ejercicios del tema 3.
-
-LMSGI Ejercicios tema 3 XML DTD Nombre y apellidos del Alumno: Especialidad (ASIX o DAW)
-
-Ejercicio1 Escribir la DTD que permita validar el documento XML que se muestra a continuación. Hacer dos versiones en cada caso: DTD externa e interna. DOCUMENTO 1: <?xml version="1.0" encoding="ISO-8859-1"?> <!DOCTYPE nota SYSTEM "nota.dtd"> <nota> <para>Pedro</para> <de>Laura</de> <titulo>Recordatorio</titulo> <contenido>A las 7:00 en la puerta del teatro</contenido> </nota> Solución interna
-
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE nota [ <!ELEMENT nota (para*, de, titulo, contenido)> <!ELEMENT para (#PCDATA)> <!ELEMENT de (#PCDATA)> <!ELEMENT titulo (#PCDATA)> <!ELEMENT contenido (#PCDATA)> ]> <nota> <para>Pedro</para> <de>Laura</de> <titulo>Recordatorio</titulo> <contenido>A las 7:00 en la puerta del teatro</contenido> </nota> Solución externa
-
-Hay dos documentos un .dtd ("DTDbasico_11_mensajeDTD.dtd") y un .xml (“DTDbasico_11_mensajeXML.xml”) DTDbasico_11_mensajeDTD.dtd: <!ELEMENT nota (para*, de, titulo, contenido)> <!ELEMENT para (#PCDATA)> <!ELEMENT de (#PCDATA)> <!ELEMENT titulo (#PCDATA)> <!ELEMENT contenido (#PCDATA)> DTDbasico_11_mensajeXML.xml
-
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE nota SYSTEM "DTDbasico_11_mensajeDTD.dtd"> <nota>
-
-<para>Pedro</para> <de>Laura</de> <titulo>Recordatorio</titulo> <contenido>A las 7:00 en la puerta del teatro</contenido> </nota> Ejercicio2 a)Los siguientes documentos no son válidos porque contienen uno o dos errores (los errores no están en la DTD interna). Corrija los errores.
-
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE persona [ <!ELEMENT persona EMPTY> <!ATTLIST persona nombre CDATA #IMPLIED> ]> <persona dni="03141592E" /> Solución: <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE persona [ <!ELEMENT persona EMPTY> <!ATTLIST persona nombre CDATA #IMPLIED> ]> <persona nombre="03141592E" /> b)Los errores están en la DTD interna <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE inventores [ <!ELEMENT inventores> <!ELEMENT inventor EMPTY> <!ATTLIST inventor invento CDATA #REQUIRED> <!ATTLIST inventor nombre ID #REQUIRED> ]> <inventores> <inventor nombre="Robert Adler" invento="Mando a distancia" /> <inventor nombre="Laszlo Josef Biro" invento="Bolígrafo" /> <inventor nombre="Josephine Garis Cochran" invento="Lavaplatos" /> <inventor invento="Fuego" /> </inventores> Solución
-
-<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE inventores [ <!ELEMENT inventores (inventor)* >
-
-<!ELEMENT inventor EMPTY> <!ATTLIST inventor invento CDATA #REQUIRED> <!ATTLIST inventor nombre CDATA #IMPLIED> ]> <inventores> <inventor nombre="Robert Adler" invento="Mando a distancia" /> <inventor nombre="Laszlo Josef Biro" invento="Bolígrafo" /> <inventor nombre="Josephine Garis Cochran" invento="Lavaplatos" /> <inventor invento="Fuego" /> </inventores> Ejercicio3 Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es
-
-El nombre del equipo local El nombre del equipo visitante Los goles marcados por el equipo local Los goles marcados por el equipo visitante Escribe tres documentos que incluyan los siguientes resultados: Nottingham Presa: 0 - Inter de Mitente: 1 Vodka Juniors: 3 - Sparta da Risa: 3 Water de Munich: 4 - Esteaua es del grifo: 2 Cada documento incluirá un DTD diferente para representar ese lenguaje de marcas
-
-a)Una DTD en la que no haya atributos, si no únicamente etiquetas. b)Una DTD en la que los goles sean atributos. c)Una DTD en la toda la información se guarde en forma de atributos. Solución
-
-- <?xml version="1.0" encoding="UTF-8"?>
-
-<!DOCTYPE partidos [ <!ELEMENT partidos (partido*)> <!ELEMENT partido (eqLocal,eqVisitante)> <!ELEMENT eqLocal (nombre,goles)> <!ELEMENT eqVisitante (nombre,goles)> <!ELEMENT nombre (#PCDATA)> <!ELEMENT goles (#PCDATA)> ]> <partidos> <partido> <eqLocal> <nombre>Nottingham Presa</nombre>
-
-<goles>0</goles> </eqLocal> <eqVisitante> <nombre>Inter de Mitente</nombre> <goles>1</goles> </eqVisitante> </partido> <partido> <eqLocal> <nombre>Vodka Juniors</nombre> <goles>3</goles> </eqLocal> <eqVisitante> <nombre>Sparta da Risa</nombre> <goles>3</goles> </eqVisitante> </partido> <partido> <eqLocal> <nombre>Water de Munich</nombre> <goles>4</goles> </eqLocal> <eqVisitante> <nombre>Esteaua es del grifo</nombre> <goles>2</goles> </eqVisitante> </partido> </partidos> b)<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE partidos [ <!ELEMENT partidos (partido*)> <!ELEMENT partido (eqLocal,eqVisitante)> <!ELEMENT eqLocal (#PCDATA)> <!ATTLIST eqLocal goles CDATA #REQUIRED> <!ELEMENT eqVisitante (#PCDATA)> <!ATTLIST eqVisitante goles CDATA #REQUIRED> ]> <partidos> <partido> <eqLocal goles="0">Nottingham Presa</eqLocal> <eqVisitante goles="1">Inter de Mitente</eqVisitante> </partido> <partido> <eqLocal goles="3">Vodka Juniors</eqLocal> <eqVisitante goles="3">Sparta da Risa</eqVisitante> </partido> <partido> <eqLocal goles="4">Water de Munich</eqLocal>
-
-<eqVisitante goles="2">Esteaua es del grifo</eqVisitante> </partido> </partidos> c)<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE partidos [ <!ELEMENT partidos (partido*)> <!ELEMENT partido (equipo,equipo)> <!ELEMENT equipo EMPTY> <!ATTLIST equipo tipo (local|visitante) #REQUIRED> <!ATTLIST equipo nombre CDATA #REQUIRED> <!ATTLIST equipo goles CDATA #REQUIRED> ]> <partidos> <partido> <equipo tipo="local" nombre="Nottingham Presa" goles="0" /> <equipo tipo="visitante" nombre="Inter de Mitente" goles="1" /> </partido> <partido> <equipo tipo="local" nombre="Vodka Juniors" goles="3" /> <equipo tipo="visitante" nombre="Sparta da Risa" goles="3" /> </partido> <partido> <equipo tipo="local" nombre="Water de Munich" goles="4" /> <equipo tipo="visitante" nombre="Esteaua es del grifo" goles="2" /> </partido> </partidos>
-
----
-
-# ✍️ Activitats pràctiques UT6
-
-> **✍️ Activitat Pràctica 6.1 — Ejercicios XML DTD**
-> Fecha de entrega el 19 de Noviembre a las 00 horas.
->
-> LMSGI Ejercicios Tema 3 XML DTD Nombre y apellidos del Alumno: Especialidad (ASIX o DAW)
->
-> Ejercicio1 Escribir la DTD que permita validar el documento XML que se muestra a continuación. Hacer dos versiones en cada caso: DTD externa e interna. DOCUMENTO 1: <?xml version="1.0" encoding="ISO-8859-1"?> <!DOCTYPE nota SYSTEM "nota.dtd"> <nota> <para>Pedro</para> <de>Laura</de> <titulo>Recordatorio</titulo> <contenido>A las 7:00 en la puerta del teatro</contenido> </nota> Ejercicio2 a)El siguiente documento no es válido porque contienen uno o dos errores (los errores no están en la DTD interna). Corrija los errores (Marcando en rojo).
->
-> <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE persona [ <!ELEMENT persona EMPTY> <!ATTLIST persona nombre CDATA #IMPLIED> ]> <persona dni="03141592E" /> b)Los errores están en la DTD interna. Corrija los errores (Marcando en rojo). <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE inventores [
->
-> <!ELEMENT inventores>
->
-> <!ELEMENT inventor EMPTY>
->
-> <!ATTLIST inventor invento CDATA #REQUIRED>
->
-> <!ATTLIST inventor nombre ID #REQUIRED> ]> <inventores>
->
-> <inventor nombre="Robert Adler" invento="Mando a distancia" />
->
-> <inventor nombre="Laszlo Josef Biro" invento="Bolígrafo" />
->
-> <inventor nombre="Josephine Garis Cochran" invento="Lavaplatos" />
->
-> <inventor invento="Fuego" /> </inventores>
->
-> Ejercicio3 Se quiere definir un lenguaje de marcas para representar los resultados de una liga de fútbol. La información que se quiere almacenar de cada partido es: El nombre del equipo local El nombre del equipo visitante Los goles marcados por el equipo local Los goles marcados por el equipo visitante Escribe tres documentos que incluyan los siguientes resultados
->
-> Nottingham Presa: 0 - Inter de Mitente: 1 Vodka Juniors: 3 - Sparta da Risa: 3 Water de Munich: 4 - Esteaua es del grifo: 2 Cada documento incluirá un DTD diferente para representar ese lenguaje de marcas: a)Una DTD en la que no haya atributos, si no únicamente etiquetas.
->
-> b)Una DTD en la que los goles sean atributos. c)Una DTD en la toda la información se guarde en forma de atributos.
 
 ---

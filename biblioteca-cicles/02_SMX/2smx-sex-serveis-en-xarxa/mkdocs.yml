@@ -4,43 +4,30 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "U0 — Virtualització i Repàs de Conceptes Previs":
-      - "📘 U0 Completa (1 pàgina)": ut08/index.md
-      - "8.1 Repàs Interconnexió de Xarxes": ut08/ut0801.md
-      - "8.2 Plantilla qüestionai d'avaluació": ut08/ut0802.md
-      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
-  - "U1 — Accés Remot Segur (SSH)":
-      - "📘 U1 Completa (1 pàgina)": ut07/index.md
-      - "7.1 Plantilla qüestionari d'avaluació": ut07/ut0701.md
-      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
-  - "U2 — Assignació Dinàmica d'Adreces (DHCP)":
-      - "📘 U2 Completa (1 pàgina)": ut06/index.md
-      - "6.1 presentació DHCP": ut06/ut0601.md
-      - "6.2 Presentació DHCP. Visió general": ut06/ut0602.md
-      - "6.3 Servei DHCP": ut06/ut0603.md
-      - "6.4 Servidor DHCP": ut06/ut0604.md
-      - "6.5 Presentació SX20-U1-E3 'Bronx'": ut06/ut0605.md
-      - "6.6 Qüestionari DHCP": ut06/ut0606.md
-      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
-  - "U3 — Sistema de Noms de Domini (DNS)":
-      - "📘 U3 Completa (1 pàgina)": ut05/index.md
-      - "5.1 UD3 Servidor de Nombres de Dominio SMX": ut05/ut0501.md
-      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "U4 — Servidor Web (HTTP / Virtual Hosting)":
-      - "📘 U4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 Recursos Escenario U3": ut04/ut0401.md
-      - "4.2 Introducción virtual hosting": ut04/ut0402.md
-      - "4.3 Configuración Virtual hosting": ut04/ut0403.md
-      - "4.4 Ips clients": ut04/ut0404.md
-      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
-  - "U5 — Servei de Correu Electrònic":
-      - "📘 U5 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Presentació": ut03/ut0301.md
-      - "3.2 El correu electrònic": ut03/ut0302.md
-      - "3.3 Les Guest additions": ut03/ut0303.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "U6 — Servei de Transferència de Fitxers (FTP)":
-      - "📘 U6 Completa (1 pàgina)": ut02/index.md
-      - "2.1 FTP": ut02/ut0201.md
-      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "📂 Índex de Documents i Recursos": references.md
+  - "UD1 — Virtualització i Repàs de Conceptes Previs":
+      - "📘 UD1 Completa (1 pàgina)": ut08/index.md
+      - "1.1 Repàs Interconnexió de Xarxes": ut08/ut0801.md
+  - "UD2 — Accés Remot Segur (SSH)":
+      - "📘 UD2 Completa (1 pàgina)": ut07/index.md
+      - "2.1 Continguts i Casos Guiats": ut07/ut07actividades.md
+  - "UD3 — Assignació Dinàmica d'Adreces (DHCP)":
+      - "📘 UD3 Completa (1 pàgina)": ut06/index.md
+      - "3.1 presentació DHCP": ut06/ut0601.md
+      - "3.2 Presentació DHCP. Visió general": ut06/ut0602.md
+      - "3.3 Servei DHCP": ut06/ut0603.md
+      - "3.4 Servidor DHCP": ut06/ut0604.md
+  - "UD4 — Sistema de Noms de Domini (DNS)":
+      - "📘 UD4 Completa (1 pàgina)": ut05/index.md
+      - "4.1 UD3 Servidor de Nombres de Dominio SMX": ut05/ut0501.md
+  - "UD5 — Servidor Web (HTTP / Virtual Hosting)":
+      - "📘 UD5 Completa (1 pàgina)": ut04/index.md
+      - "5.1 Introducción virtual hosting": ut04/ut0402.md
+      - "5.2 Configuración Virtual hosting": ut04/ut0403.md
+  - "UD6 — Servei de Correu Electrònic":
+      - "📘 UD6 Completa (1 pàgina)": ut03/index.md
+      - "6.1 Presentació": ut03/ut0301.md
+      - "6.2 El correu electrònic": ut03/ut0302.md
+      - "6.3 Les Guest additions": ut03/ut0303.md
+  - "UD7 — Servei de Transferència de Fitxers (FTP)":
+      - "📘 UD7 Completa (1 pàgina)": ut02/index.md
+      - "7.1 FTP": ut02/ut0201.md

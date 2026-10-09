@@ -6,180 +6,127 @@
   },
   "units": [
     {
-      "summary": "U0 — Virtualització i Repàs de Conceptes Previs",
+      "summary": "UD1 — Virtualització i Repàs de Conceptes Previs",
       "items": [
         {
-          "label": "📘 U0 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut08/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 Repàs Interconnexió de Xarxes",
+          "label": "1.1 Repàs Interconnexió de Xarxes",
           "href": "ut08/ut0801.html"
-        },
-        {
-          "label": "8.2 Plantilla qüestionai d'avaluació",
-          "href": "ut08/ut0802.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT8",
-          "href": "ut08/ut08actividades.html"
         }
       ]
     },
     {
-      "summary": "U1 — Accés Remot Segur (SSH)",
+      "summary": "UD2 — Accés Remot Segur (SSH)",
       "items": [
         {
-          "label": "📘 U1 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut07/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 Plantilla qüestionari d'avaluació",
-          "href": "ut07/ut0701.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT7",
+          "label": "2.1 Continguts i Casos Guiats",
           "href": "ut07/ut07actividades.html"
         }
       ]
     },
     {
-      "summary": "U2 — Assignació Dinàmica d'Adreces (DHCP)",
+      "summary": "UD3 — Assignació Dinàmica d'Adreces (DHCP)",
       "items": [
         {
-          "label": "📘 U2 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut06/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 presentació DHCP",
+          "label": "3.1 presentació DHCP",
           "href": "ut06/ut0601.html"
         },
         {
-          "label": "6.2 Presentació DHCP. Visió general",
+          "label": "3.2 Presentació DHCP. Visió general",
           "href": "ut06/ut0602.html"
         },
         {
-          "label": "6.3 Servei DHCP",
+          "label": "3.3 Servei DHCP",
           "href": "ut06/ut0603.html"
         },
         {
-          "label": "6.4 Servidor DHCP",
+          "label": "3.4 Servidor DHCP",
           "href": "ut06/ut0604.html"
-        },
-        {
-          "label": "6.5 Presentació SX20-U1-E3 \"Bronx\"",
-          "href": "ut06/ut0605.html"
-        },
-        {
-          "label": "6.6 Qüestionari DHCP",
-          "href": "ut06/ut0606.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT6",
-          "href": "ut06/ut06actividades.html"
         }
       ]
     },
     {
-      "summary": "U3 — Sistema de Noms de Domini (DNS)",
+      "summary": "UD4 — Sistema de Noms de Domini (DNS)",
       "items": [
         {
-          "label": "📘 U3 Completa (1 pàgina)",
+          "label": "📘 UD4 Completa (1 pàgina)",
           "href": "ut05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 UD3 Servidor de Nombres de Dominio SMX",
+          "label": "4.1 UD3 Servidor de Nombres de Dominio SMX",
           "href": "ut05/ut0501.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     },
     {
-      "summary": "U4 — Servidor Web (HTTP / Virtual Hosting)",
+      "summary": "UD5 — Servidor Web (HTTP / Virtual Hosting)",
       "items": [
         {
-          "label": "📘 U4 Completa (1 pàgina)",
+          "label": "📘 UD5 Completa (1 pàgina)",
           "href": "ut04/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 Recursos Escenario U3",
-          "href": "ut04/ut0401.html"
-        },
-        {
-          "label": "4.2 Introducción virtual hosting",
+          "label": "5.1 Introducción virtual hosting",
           "href": "ut04/ut0402.html"
         },
         {
-          "label": "4.3 Configuración Virtual hosting",
+          "label": "5.2 Configuración Virtual hosting",
           "href": "ut04/ut0403.html"
-        },
-        {
-          "label": "4.4 Ips clients",
-          "href": "ut04/ut0404.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     },
     {
-      "summary": "U5 — Servei de Correu Electrònic",
+      "summary": "UD6 — Servei de Correu Electrònic",
       "items": [
         {
-          "label": "📘 U5 Completa (1 pàgina)",
+          "label": "📘 UD6 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Presentació",
+          "label": "6.1 Presentació",
           "href": "ut03/ut0301.html"
         },
         {
-          "label": "3.2 El correu electrònic",
+          "label": "6.2 El correu electrònic",
           "href": "ut03/ut0302.html"
         },
         {
-          "label": "3.3 Les Guest additions",
+          "label": "6.3 Les Guest additions",
           "href": "ut03/ut0303.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
     {
-      "summary": "U6 — Servei de Transferència de Fitxers (FTP)",
+      "summary": "UD7 — Servei de Transferència de Fitxers (FTP)",
       "items": [
         {
-          "label": "📘 U6 Completa (1 pàgina)",
+          "label": "📘 UD7 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 FTP",
+          "label": "7.1 FTP",
           "href": "ut02/ut0201.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

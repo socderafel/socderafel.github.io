@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT6 — Optimització de l'SGBD — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca"
+title: "UD5 — Optimització de l'SGBD · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT6 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut05/ut0505.html"
+prev_label: "⬅️ 4.3 Automatització de tasques"
 next_url: "../ut06/ut0601.html"
-next_label: "6.1 Optimització de l'SGBD ➡️"
+next_label: "5.1 Optimització de l'SGBD ➡️"
 ---
 
-# 📘 UT6 — Optimització de l'SGBD (Unitat Completa)
+# 📘 UD5 — Optimització de l'SGBD (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**6.1 Optimització de l'SGBD**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
-> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 Optimització de l'SGBD**](./ut0601.md)
 
 ---
 
-## 6.1 Optimització de l'SGBD
+# 5.1 Optimització de l'SGBD
 
 ### UNITAT 05 Optimització del SGBD
 
@@ -390,27 +393,3 @@ Nologging alter table t1 nologging; Truncate table truncate table t1 ; Intercanv
 Els hints s'incorporen a una sentència DML en forma de comentari i han d'anar just darrere del comando principal. Per exemple, si es tractara d'una sentència SELECT el format seria el següent: SELECT /*+ COMANDO-HINT */ ...
 
 ---
-
-## ✍️ Activitats pràctiques UT6
-
-> **✍️ Activitat Pràctica 6.1 — (ASGBD) Particionament**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Particionar taula en Oracle Per realitzar esta pràctica, utilitzarem la mv Windows 10 amb Oracle SQLDeveloper Amb usuari system en pdb1: Crear usuari usuari5 (donar-li contrasenya i permisos de crear taules) Assignar quota 100MB en el tablespace per defecte de l’usuari Amb usuari5 en pdb1
->
-> Crear taula particionada p_1 Alumnes amb data d’alta < 01/06/2018 p_2 Alumnes amb data d’alta < 01/06/2019 p_3 Alumnes amb data d’alta < 01/06/2020 p_4 Alumnes amb data d’alta < 01/06/2021 p_5 Alumnes amb data d’alta < 01/06/2022 p_resta la resta d’alumnes Crear trigger que no deixe inserir un alumne que no tinga adreça ni telèfon ni e-mail. Ha de tindre almenys un contacte.
->
-> Poblar la taula amb files de diferents valors en la data d’alta , i provoca una execució del trigger. Observa els missatges. Provoca un error de clau primaria i observa i compara els missatges.
->
-> Documentar el procés Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF ---------------------------------------- Taula Alumnes
->
-> ```sql
-> CREATE TABLE alumnes(
-> ```
->
-> nie NUMBER(6) PRIMARY KEY, nom VARCHAR2(50) NOT NULL, d_alta DATE NOT NULL, adreça VARCHAR2(50) , telefon VARCHAR2(12), email VARCHAR2(35)
->
-> ```sql
-> );
-> ```
-
-> **✍️ 📋 Exercici / Qüestionari 6.2 — Qüestionari Repàs de classe (UD5)**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.

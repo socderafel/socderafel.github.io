@@ -1,25 +1,26 @@
 ---
 layout: default
-title: "UT2 — Unit 2 - Basic PHP — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca"
+title: "UD2 — Basic PHP · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut01/ut0103.html"
+prev_label: "⬅️ 1.3 Git Cheat Sheet"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 U2 Basic PHP ➡️"
 ---
 
-# 📘 UT2 — Unit 2 - Basic PHP (Unitat Completa)
+# 📘 UD2 — Basic PHP (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**2.1 U2 Basic PHP**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
-> - [**2.2 U2 Class exercises**](#ut0202) (o [obrir en pàgina individual ➡️](./ut0202.md) )
-> - [**2.3 Images exercise 2**](#ut0203) (o [obrir en pàgina individual ➡️](./ut0203.md) )
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 U2 Basic PHP**](./ut0201.md)
 
 ---
 
-## 2.1 U2 Basic PHP
+# 2.1 U2 Basic PHP
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Resources
@@ -408,107 +409,3 @@ arguments.
 2 DAW - DWES Questions?
 
 ---
-
-## 2.2 U2 Class exercises
-
-1. Write a program that stores in a variable your name and show it in a <h1>.
-2. Write a program that shows 16 "cards" using the design written in the whiteboard. Odds and even cards have to have different background colors.
-3. Write a program that calculates the factorial of a number. Remember!! Factorial it's only for integer numbers >=0.
-4. Write a program that checks if a word is a palindrome.
-5. Write a program that writes a triangle with a given number. i.e. Number 5. Codi / Terminal 📋 Copiar PHP `x x x x x x x x x x x x x x x`
-6. Write an associative array named *users* where the key is the username and the value is the password. Add at least 5 users to the array and show the users information using a foreach loop. Add two new users at the end of the array and show again the information.
-7. Create an array with 10 random numbers. Then using a for loop, sum up all the numbers, find the max, min and show all the results in a <p> label. Besides, create a new array with all the numbers that are even and show the result with a print_r.
-8. Create a multidimensional array for representing students mark. First column will be the name of the student and three exam marks the next columns. Using a foreach loop, show in a table the name of the students and the three marks. Calculate the average for each student and show it at the end of each row. Calculate the average for all students and show it at the end of the table. Table has to be centered in the webpage.
-9. Create a bidimensional array of 6 rows and 9 columns with random numbers between 100 and 999 (both included). Numbers can not be repeated. After that, print the content of the array in a table with the following criteria: - Column of the maximum has to have blue background. - Row of the minimum has to have green background.
-10. Create a file named sumaresta.php that includes a function named "suma" that receives two numbers and returns the result of the sum and a function named "resta" that receives two numbers and returns the result of the substract. Then, from a file named result.php include the file sumaresta.php and use the functions created.
-11. Create the following functions: - Function that receives a number and returns y the number is even or not. - Function that receives an array of numbers passed by reference and return the quantity of even numbers on it.
-12. Create a function that counts how many vocals there are in a word.
-13. Create a function that converts any phare into "cani" language: oF cOuRsE yEs My FrIeNd
-14. Create a file named utils.php with a function named fileExtension that receives a filename (i.e. myFile.pdf) and returns the extension of it. After that, creates a webpage with a form where you can fill the filename and send it to the server. The file in the server will be named check.php and using the function fileExtension of the file utils.php will show the user the extension of the file.
-15. [endif]Create a class called “Student” with these properties: • Name • License Number • An Array with 3 positions containing 3 marks (1 per trimester) The properties must be private, so you will need to provide set and get methods and the following functions • Function with 2 parameters (mark and trimester). The method will save the mark in the required position. • Function with 1 parameter (trimester). The method will return the mark pertaining to the required trimester. • Function to return the average score. Use the class “Student” to create a couple of objects, and fill them using a form. List the students with their names, trimester marks and average score
-16. Create a class “Person” with a property “Name” and its get and set methods. Modify the previous exercise so that Student is a child class of Person.
-
----
-
-## 2.3 Images exercise 2
-
-> **💡 📦 Contingut del paquet comprimit (images_exercise.zip)**
-> - `__MACOSX/._img0.png`
-> - `__MACOSX/._img1.png`
-> - `__MACOSX/._img10.png`
-> - `__MACOSX/._img11.png`
-> - `__MACOSX/._img12.png`
-> - `__MACOSX/._img13.png`
-> - `__MACOSX/._img14.png`
-> - `__MACOSX/._img15.png`
-> - `__MACOSX/._img16.png`
-> - `__MACOSX/._img17.png`
-> - `__MACOSX/._img18.png`
-> - `__MACOSX/._img19.png`
-> - `__MACOSX/._img2.png`
-> - `__MACOSX/._img20.png`
-> - `__MACOSX/._img3.png`
-> - `__MACOSX/._img4.png`
-> - `__MACOSX/._img5.png`
-> - `__MACOSX/._img6.png`
-> - `__MACOSX/._img7.png`
-> - `__MACOSX/._img8.png`
-> - `__MACOSX/._img9.png`
-> - `img0.png`
-> - `img1.png`
-> - `img10.png`
-> - `img11.png`
-> - `img12.png`
-> - `img13.png`
-> - `img14.png`
-> - `img15.png`
-> - `img16.png`
-
----
-
-## ✍️ Activitats pràctiques UT2
-
-> **✍️ Activitat Pràctica 2.1 — Task 1 - Basic PHP**
-> DWES – U2A1
->
-> Unit 2 – Task 1 Basic PHP
->
-> Objectives
->
-> - Learn basics of PHP.
->
-> Instructions
->
-> - Once finished, upload to Aules a single compressed file that includes
->
-> all the files of the task.
->
-> Classes
->
-> ### 1. Create the following class’s structure (using English words). Take the
->
-> following considerations and additions: 1.1. Person
->
-> #### 1.1.1. Is an abstract class
->
-> #### 1.1.2. Add attribute age
->
-> #### 1.1.3. Add getters and setters for every attribute
->
-> #### 1.1.4. Add public method getWholeName:string
->
-> #### 1.1.5. Add an abstract method named toHTML(Person $p):string. . This
->
-> method will return an html string with all data of the employee. Phones must be listed ordered in a table.
->
-> 1.2. Employee: 1.2.1. maxSalary is a constant 1.2.2. mustPayTaxes method. Taxes are paid when the salary> maxSalary and age > 21. 1.2.3. listPhones returns the phones separated by comas.
->
-> ### 2. Create a new class named Company that has as attributes name, address
->
-> and an array of Employees. 2.1. Encapsulate attributes 2.2. Add methods for adding/deleting/listing employees. 2.3. Add a method getTotalPayroll():float that calculate the total amount of money to pay of payrolls.
->
-> ### 3. Create webpage with a form for adding a new Employee and a button for
->
-> showing data of all Employees. Data must be shown in a fancy way (not a table).
->
-> DWES – U2A1

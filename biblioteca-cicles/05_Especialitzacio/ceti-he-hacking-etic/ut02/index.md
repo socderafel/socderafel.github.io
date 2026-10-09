@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT2 — Unitat Didàctica 2 — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD2 — Unitat Didàctica 2 · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut01/ut0103.html"
+prev_label: "⬅️ 1.2 tema1"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 tema2 ➡️"
 ---
 
-# 📘 UT2 — Unitat Didàctica 2 (Unitat Completa)
+# 📘 UD2 — Unitat Didàctica 2 (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**2.1 tema2**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 tema2**](./ut0201.md)
 
 ---
 
-## 2.1 tema2
+# 2.1 tema2
 
 > **📌 Introducció de la Unitat**
 > Donats els següents conceptes
@@ -155,8 +158,3 @@ Les proves de penetració automatitzades són ràpides, exhaustives i rendibles.
 Hacktivisme Podem considerar-lo com hacking per una causa, però hem de recordar que hi ha accions que es consideren un delicte, tinguen o no una justificació política i/o ideològica És el compromís polític o social del hacking Per exemple, atacar o alterar llocs web per raons polítiques, atacar lllocs web del govern o de grups contraris a la seua ideologia
 
 ---
-
-## ✍️ Activitats pràctiques UT2
-
-> **✍️ Activitat Pràctica 2.1 — tema2**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.

@@ -1,28 +1,26 @@
 ---
 layout: default
-title: "UD4 — Validació amb XSD (XML Schema Definition) · Unitat Completa"
+title: "UD4 — Validació amb XSD (XML Schema Definition) · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT5 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut06/ut0601.html"
+prev_label: "⬅️ 3.1 DTD (Document Type Definition)"
 next_url: "../ut05/ut0501.html"
-next_label: "5.1 UD4-XSD (XML Schema Definition) ➡️"
+next_label: "4.1 XSD (XML Schema Definition) ➡️"
 ---
 
 # 📘 UD4 — Validació amb XSD (XML Schema Definition) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**5.1 UD4-XSD (XML Schema Definition)**](./ut0501.md)
-- [**5.2 Ejercicios resueltos XML Schema**](./ut0502.md)
-- [**✍️ Activitats pràctiques UT5**](./ut05actividades.md)
+- [**4.1 XSD (XML Schema Definition)**](./ut0501.md)
 
 ---
 
-# 5.1 UD4-XSD (XML Schema Definition)
+# 4.1 XSD (XML Schema Definition)
 
 > **🔗 Recurs Web: XML Schema: Introducción**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=O28ZrZTCAA4) ↗️**](https://www.youtube.com/watch?v=O28ZrZTCAA4)
@@ -128,70 +126,5 @@ Ejemplo 4.16 (cont) <xs:element name="alumno" > <xs:complexType> <xs:sequence> <
 Permite añadir elementos sin especificar. Ejemplo 4.18 <xs:element name="persona"> <xs:complexType> <xs:sequence> <xs:element name="nombre" type="xs:string"/> < l t " llid " t " t i "/> XSD: Modelo de contenido (any) <xs:element name="apellido" type="xs:string"/> <xs:any minOccurs="0"/> </xs:sequence> </xs:complexType> </xs:element> <persona> <nombre>Yolanda<nombre> <apellido>Martos<apellido> <ciudad>Badajoz<ciudad> </persona> Permite añadir un nuevo elemento detrás del apellido Lenguajes de Marcas
 
 Permite añadir atributos no declarados. Ejemplo 4.19 <xs:element name="persona"> <xs:complexType> < tt ib t " b " t " t i "/> XSD: Modelo de contenido (anyAttributes) <xs:attribute name="nombre" type="xs:string"/> <xs:anyAttribute minOccurs="0"/> </xs:complexType> </xs:element> <persona nombre="Yolanda" apellido="Martos" ciudad="Badajoz" /> Permite añadir más atributos Lenguajes de Marcas
-
----
-
-# 5.2 Ejercicios resueltos XML Schema
-
-El ultimo ejercicio el de complejo1, es un enunciado muy abierto y se podía interpretar de muchas maneras. A la hora de corregir lo tuve en cuenta.
-
-Ejercicio simple1 Crear un documento simple1.xml que contenga los datos personales de un alumno: <?xml version="1.0" encoding="UTF-8"?> <alumno xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance xsi:noNamespaceSchemaLocation="simple1.xsd"> <nombre>Roberto</nombre> <dni>28542345</dni> <direccion>San José 2</direccion> <edad>22</edad> <telefono>9659434523</telefono> </alumno> Crear el documento simple1.xsd para validar simple1.xml.
-
-Solución: simple1.xsd <?xml version="1.0"?> <schema xmlns="http://www.w3.org/2001/XMLSchema"> <element name="alumno"> <complexType> <sequence> <element name="nombre" type="string" /> <element name="dni" type="string" /> <element name="direccion" type="string" /> <element name="edad" type="integer" /> <element name="telefono" type="string" /> </sequence> </complexType> </element> </schema>
-
-Ejercicio simple2 Crear el documento simple2.xsd para validar el documento siguiente, simple2.xml. <?xml version="1.0" encoding="UTF-8"?> <Libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="simple2.xsd"> <Titulo>Programming Bye</Titulo> <Autor>John C. Smith</Autor> <Fecha>2014</Fecha> <ISBN>84-202-77678-3</ISBN> <Editorial>Mc Graw Hill</Editorial> </Libro> Solución simple2.xsd <?xml version="1.0"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <xs:element name="Libro"> <xs:complexType> <xs:sequence> <xs:element name="Titulo" type="xs:string"/> <xs:element name="Autor" type="xs:string"/> <xs:element name="Fecha" type="xs:short"/> <xs:element name="ISBN" type="xs:token"/> <xs:element name="Editorial"type="xs:string"/> </xs:sequence> </xs:complexType> </xs:element> </xs:schema>
-
-Ejercicio restricciones1 Modificar simple1.xml escribiendo como contenido de edad 20 y guardarlo como restricción1.xml. Solución restricción1.xml. <?xml version="1.0" encoding="UTF-8"?> <alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="restriccion1.xsd">
-
-<nombre>juan</nombre> <dni>28542345</dni> <direccion>San José 2</direccion> <edad>20</edad> <telefono>965943452</telefono> </alumno> Guardar simple1.xsd como restriccion1.xsd y modificarlo aplicando una restricción sobre el valor numérico de la edad (por ejemplo, debe estar comprendida entre 16 y 25).
-
-Solución restriccion1.xsd <?xml version="1.0"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <xs:element name="alumno"> <xs:complexType> <xs:sequence> <xs:element name="nombre" type="xs:string" /> <xs:element name="dni" type="xs:string" /> <xs:element name="direccion" type="xs:string" /> <xs:element name="edad"> <xs:simpleType> <xs:restriction base="xs:integer"> <xs:minInclusive value="16" /> <xs:maxInclusive value="25" />
-
-</xs:restriction> </xs:simpleType> </xs:element> <xs:element name="telefono" type="xs:string" /> </xs:sequence> </xs:complexType> </xs:element> </xs:schema> Ejercicio restricciones2 Modificar restriccion1.xml añadiendo el elemento sexo con el contenido M y guardarlo como restriccion2.xml.
-
-Solución restriccion2.xml <?xml version="1.0" encoding="UTF-8"?> <alumno xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="restriccion2.xsd"> <nombre>juan</nombre> <dni>28542345</dni> <direccion>San José 2</direccion> <edad>20</edad> <sexo>M</sexo> <telefono>965943452</telefono> </alumno> Modificar restriccion1.xsd aplicando una restricción sobre un conjunto de valores. El campo sexo será M o H. Guardarlo como restriccion2.xsd.
-
-Modificar restriccion2.xsd creando el tipo personalizado tipoSexo , es decir que el elemento debe aparecer en la secuencia como <xs:element name="sexo" type="tipoSexo"/>
-
-Solución: restriccion2.xsd <?xml version="1.0"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <xs:simpleType name="tipoSexo"> <xs:restriction base="xs:string"> <xs:enumeration value="M"/> <xs:enumeration value="F"/> </xs:restriction> </xs:simpleType> <xs:element name="alumno"> <xs:complexType> <xs:sequence> <xs:element name="nombre" type="xs:string" /> <xs:element name="dni" type="xs:string" /> <xs:element name="direccion" type="xs:string" /> <xs:element name="edad"> <xs:simpleType> <xs:restriction base="xs:integer"> <xs:minInclusive value="16"/> <xs:maxInclusive value="25"/> </xs:restriction> </xs:simpleType> </xs:element> <xs:element name="sexo" type="tipoSexo"/>
-
-<xs:element name="telefono" type="xs:string" /> </xs:sequence> </xs:complexType> </xs:element> </xs:schema>
-
-Ejercicio restricciones3 Modificar restriccion2.xsd aplicando una restricción sobre series de valores y guardarlo como restriccion3.xsd . Por ejemplo, vamos a obligar a que el formato del dni sean números y una letra y el teléfono esté formado por números. Validar el documento xml escribiendo números incorrectos y que no se adapten al patrón.
-
-Solución restriccion3.xsd <?xml version="1.0"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <xs:simpleType name="tipoSexo"> <xs:restriction base="xs:string"> <xs:enumeration value="M"/> <xs:enumeration value="F"/> </xs:restriction> </xs:simpleType> <xs:element name="alumno"> <xs:complexType> <xs:sequence> <xs:element name="nombre" type="xs:string" /> <xs:element name="dni" > <xs:simpleType> <xs:restriction base="xs:string"> <xs:pattern value="[0-9]{8}[A-Z]"/> </xs:restriction> </xs:simpleType> </xs:element> <xs:element name="direccion" type="xs:string" /> <xs:element name="edad"> <xs:simpleType> <xs:restriction base="xs:integer"> <xs:minInclusive value="16"/> <xs:maxInclusive value="25"/>
-
-</xs:restriction> </xs:simpleType> </xs:element> <xs:element name="sexo" type="tipoSexo"/> <xs:element name="telefono" > <xs:simpleType> <xs:restriction base="xs:string"> <xs:pattern value="[0-9]+"/> </xs:restriction> </xs:simpleType> </xs:element> </xs:sequence> </xs:complexType> </xs:element> </xs:schema> Ejercicio restricciones4 Modificar restriccion3.xsd aplicando restricciones sobre la longitud de los elementos. Lo guardamos como restriccion4.xsd. Por ejemplo el DNI estará formado por un máximo de 8 dígitos y una letra y el teléfono lo escribiremos con mayor y menor longitud Validar el documento xml escribiendo números de DNI o el teléfono.
-
-Solución: restriccion4.xsd <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <xs:simpleType name="tipoSexo"> <xs:restriction base="xs:string"> <xs:enumeration value="M"/> <xs:enumeration value="F"/> </xs:restriction> </xs:simpleType> <xs:element name="alumno"> <xs:complexType> <xs:sequence>
-
-<xs:element name="nombre" type="xs:string" /> <xs:element name="dni" > <xs:simpleType> <xs:restriction base="xs:string"> <xs:pattern value="[0-9]+[A-Z]"/> <xs:maxLength value="9"/> </xs:restriction> </xs:simpleType> </xs:element> <xs:element name="direccion" type="xs:string" /> <xs:element name="edad"> <xs:simpleType> <xs:restriction base="xs:integer"> <xs:minInclusive value="16"/> <xs:maxInclusive value="25"/> </xs:restriction> </xs:simpleType> </xs:element> <xs:element name="sexo" type="tipoSexo"/> <xs:element name="telefono" > <xs:simpleType> <xs:restriction base="xs:string"> <xs:pattern value="[0-9]+"/> <xs:minLength value="6"/> <xs:maxLength value="9"/> </xs:restriction> </xs:simpleType> </xs:element> </xs:sequence> </xs:complexType> </xs:element> </xs:schema>
-
-Ejercicio complejo1 Crear el documento complejo.xsd para validar el siguiente documento .xml <?xml version="1.0" encoding="UTF-8"?> <alumno dni="11111111" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="complejo1.xsd"> <nombre>Lorenzo Pérez</nombre> <direccion> <calle>Banderas</calle> <numero>7</numero> <ciudad>Alfafar</ciudad> <cp>46910</cp> <provincia>Valencia</provincia> </direccion> <telefono>961555555</telefono> </alumno> Solución complejo.xsd <?xml version="1.0" encoding="UTF-8"?> <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> <xs:element name="alumno"> <xs:complexType> <xs:sequence> <xs:element name="nombre" type="xs:string" /> <xs:element name="direccion"> <xs:complexType> <xs:sequence> <xs:element name="calle" type="xs:string" /> <xs:element name="numero" type="xs:integer" /> <xs:element name="ciudad" type="xs:string" /> <xs:element name="cp"> <xs:simpleType>
-
-<xs:restriction base="xs:integer"> <xs:minInclusive value="46000" /> <xs:maxInclusive value="46999" /> </xs:restriction> </xs:simpleType> </xs:element> <xs:element name="provincia" type="xs:string" /> </xs:sequence> </xs:complexType> </xs:element> <xs:element name="telefono" type="xs:string" /> </xs:sequence> <xs:attribute name="dni" type="xs:string" use="required" /> </xs:complexType> </xs:element> </xs:schema>
-
----
-
-# ✍️ Activitats pràctiques UT5
-
-> **✍️ Activitat Pràctica 5.1 — Ejercicios XML Schema**
-> Las respuestas de los ejercicios tanto los XML como los XSDs tienen que estar en un documento pdf en el mismo orden que las preguntas.
->
-> La fecha de entrega es 17-1-2022 a las 0 horas.
->
-> Ejercicio simple1 Crear un documento simple1.xml que contenga los datos personales de un alumno: <?xml version="1.0" encoding="UTF-8"?> <alumno xmlns:xsi=http://www.w3.org/2001/XMLSchema-instance xsi:noNamespaceSchemaLocation="simple1.xsd"> <nombre>Roberto</nombre> <dni>28542345</dni> <direccion>San José 2</direccion> <edad>22</edad> <telefono>9659434523</telefono> </alumno> Crear el documento simple1.xsd para validar simple1.xml, Ejercicio simple2 Crear el documento simple2.xsd para validar el documento siguiente, simple2.xml.
->
-> <?xml version="1.0" encoding="UTF-8"?> <Libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="simple2.xsd"> <Titulo>Programming Bye</Titulo> <Autor>John C. Smith</Autor> <Fecha>2014</Fecha> <ISBN>84-202-77678-3</ISBN> <Editorial>Mc Graw Hill</Editorial> </Libro> Ejercicio restricciones1 Modificar simple1.xml escribiendo como contenido de edad 20 y guardarlo como restricción1.xml.
->
-> Guardar simple1.xsd como restriccion1.xsd y modificarlo aplicando una restricción sobre el valor numérico de la edad (por ejemplo, debe estar comprendida entre 16 y 25).
->
-> Ejercicio restricciones2 Modificar restriccion1.xml añadiendo el elemento sexo con el contenido M y guardarlo como restriccion2.xml. Modificar restriccion1.xsd aplicando una restricción sobre un conjunto de valores. El campo sexo será M o H. Guardarlo como restriccion2.xsd.
->
-> Modificar restriccion2.xsd creando el tipo personalizado tipoSexo , es decir que el elemento debe aparecer en la secuencia como <xs:element name="sexo" type="tipoSexo"/> Ejercicio restricciones3 Modificar restriccion2.xsd aplicando una restricción sobre series de valores y guardarlo como restriccion3.xsd . Por ejemplo, vamos a obligar a que el formato del dni sean números y una letra y el telefono esté formado por numeros.
->
-> Validar el documento xml escribiendo números incorrectos y que no se adapten al patrón. Ejercicio restricciones4 Modificar restriccion3.xsd aplicando restricciones sobre la longitud de los elementos. Lo guardamos como restriccion4.xsd. Por ejemplo el DNI estará formado por un máximo de 8 dígitos y una letra y el teléfono lo escribiremos con mayor y menor longitud Validar el documento xml escribiendo números de DNI o el teléfono.
->
-> Ejercicio complejo1 Crear el documento complejo.xsd para validar el siguiente documento .xml <?xml version="1.0" encoding="UTF-8"?> <alumno dni="11111111" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xsi:noNamespaceSchemaLocation="complejo1.xsd"> <nombre>Lorenzo Pérez</nombre> <direccion> <calle>Banderas</calle> <numero>7</numero> <ciudad>Alfafar</ciudad> <cp>46910</cp> <provincia>Valencia</provincia> </direccion> <telefono>961555555</telefono> </alumno>
 
 ---

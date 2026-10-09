@@ -14,16 +14,12 @@
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 Instalación entorno de trabajo.",
+          "label": "1.1 Instalación entorno de trabajo.",
           "href": "ut05/ut0501.html"
         },
         {
-          "label": "5.2 SO LINUX MINT MATE",
+          "label": "1.2 SO LINUX MINT MATE",
           "href": "ut05/ut0502.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     },
@@ -36,20 +32,12 @@
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 Python apuntes de clase",
+          "label": "2.1 Python apuntes de clase",
           "href": "ut04/ut0401.html"
         },
         {
-          "label": "4.2 Python para todos (libro).",
+          "label": "2.2 Python para todos (libro).",
           "href": "ut04/ut0402.html"
-        },
-        {
-          "label": "4.3 Ejercicios",
-          "href": "ut04/ut0403.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     },
@@ -62,40 +50,32 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de",
+          "label": "3.1 6 Biblioteca scikit learn - Preprocesado de",
           "href": "ut03/ut0301.html"
         },
         {
-          "label": "3.2 UT 3.5 Biblioteca plotly",
+          "label": "3.2 5 Biblioteca plotly",
           "href": "ut03/ut0302.html"
         },
         {
-          "label": "3.3 UT 3.4 Biblioteca seaborn",
+          "label": "3.3 4 Biblioteca seaborn",
           "href": "ut03/ut0303.html"
         },
         {
-          "label": "3.4 UT 3.3 Biblioteca matplotlib",
+          "label": "3.4 3 Biblioteca matplotlib",
           "href": "ut03/ut0304.html"
         },
         {
-          "label": "3.5 UT 3.2 Biblioteca Pandas",
+          "label": "3.5 2 Biblioteca Pandas",
           "href": "ut03/ut0305.html"
         },
         {
-          "label": "3.6 UT 3.1 Biblioteca Numpy",
+          "label": "3.6 1 Biblioteca Numpy",
           "href": "ut03/ut0306.html"
         },
         {
-          "label": "3.7 UT 3.0 Presentació unitat",
+          "label": "3.7 0 Presentació unitat",
           "href": "ut03/ut0307.html"
-        },
-        {
-          "label": "3.8 Housing",
-          "href": "ut03/ut0308.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
@@ -108,20 +88,11 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 Continguts i Recursos",
+          "label": "4.1 Continguts i Recursos",
           "href": "ut02/ut0201.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

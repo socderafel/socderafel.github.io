@@ -1,25 +1,27 @@
 ---
 layout: default
-title: "UT6 — Redes — Digitalització | Portal Docent Pepe Cuenca"
+title: "UD6 — Redes · Temari Complet"
 course_root: ".."
 badge: "4t ESO · UT6 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut05/ut0501.html"
+prev_label: "⬅️ 5.1 BBDD"
 next_url: "../ut06/ut0601.html"
 next_label: "6.1 Redes Informáticas (PPT) ➡️"
 ---
 
-# 📘 UT6 — Redes (Unitat Completa)
+# 📘 UD6 — Redes (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**6.1 Redes Informáticas (PPT)**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
-> - [**6.2 Redes Informáticas**](#ut0602) (o [obrir en pàgina individual ➡️](./ut0602.md) )
-> - [**6.3 Criteris Avaluació Presentació Redes**](#ut0603) (o [obrir en pàgina individual ➡️](./ut0603.md) )
-> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 Redes Informáticas (PPT)**](./ut0601.md)
+- [**6.2 Redes Informáticas**](./ut0602.md)
 
 ---
 
-## 6.1 Redes Informáticas (PPT)
+# 6.1 Redes Informáticas (PPT)
 
 > **🔗 Recurs Web: Cómo funciona internet: los cables submarinos (7m)**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=u1xxZ8r2rRc) ↗️**](https://www.youtube.com/watch?v=u1xxZ8r2rRc)
@@ -202,7 +204,7 @@ Fichero para el profesor
 
 ---
 
-## 6.2 Redes Informáticas
+# 6.2 Redes Informáticas
 
 Contiene la presentación que se usará para la explicación del tema
 
@@ -285,75 +287,3 @@ EL CABLE DE PARES TRENZADOS
 ▪216.58.209.68 à http://www.google.es ▪31.13.83.36 à http://www.facebook.es SERVIDOR DNS
 
 ---
-
-## 6.3 Criteris Avaluació Presentació Redes
-
-Puntuació sobre l’exposició de CANVA
-
-Exposició Oral (5 punts)
-
-Estudi i no mirar els apunts: 2 punts.
-
-Parlar bé i mirar al davant de la classe: 1 punt.
-
-Temps correcte: 1 punt.
-
-Escoltar als altres companys: 1 punt.
-
-CANVA (5 punts)
-
-Contingut: 1 punt.
-
-Presentació (Índex, transicions, imatges...): 1 punt.
-
-Codi QR: 1 punt.
-
-Treball en classe: 1 punt.
-
-Treball en equip: 1 punt.
-
----
-
-## ✍️ Activitats pràctiques UT6
-
-> **✍️ Activitat Pràctica 6.1 — Presentació REDES**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 6.2 — Extra 4.1 - Tests sobre seguretat en Internet**
-> Realiza los siguientes 3 tests y sube una captura de pantalla con el resultado (3 capturas).
-> Tienes que obtener más de un 50% de aciertos en cada test para superar la actividad:
-> Conocimientos generales
->
-> https://www.osi.es/es/test-evaluacion/conocimientos-generales
->
-> Ponte a prueba I: ¿cuánto sabes sobre ciberseguridad?
->
-> https://www.osi.es/es/test-evaluacion/ponte-prueba-cuanto-sabes-sobre-ciberseguridad
->
-> Ponte a prueba II: ¿cuánto sabes sobre ciberseguridad?: https://www.osi.es/es/test-evaluacion/ponte-prueba-ii-cuanto-sabes-sobre-ciberseguridad
-
-> **✍️ 📋 Exercici / Qüestionari 6.3 — Cuestionario Redes**
-> CARACTERÍSTICAS DEL CUESTIONARIO
->
-> - Solo disponéis de una oportunidad para responder todo el cuestionario
-> - Las preguntas se presentarán de una en una
-> - Podéis moveros libremente por las diferentes preguntas
-> - Si una pregunta os cuesta más, pasad a la siguiente y luego ya volveréis a esa
-> - Todas la preguntas valen lo mismo
-> - NO SE PUEDE NAVEGAR POR INTERNET NI CONSULTAR LOS APUNTES
-> - Solamente podéis tener abierto el cuestionario, ninguna otra ventana en el ordenador
-> - Cuando finalizáis el cuestionario, se os mostrará la solución a las preguntas y la nota obtenida
-> - Cuando acabéis, apagad el monitor (no el ordenador) y esperad instrucciones del profesor
-
-> **✍️ 📋 Exercici / Qüestionari 6.4 — Recuperación Cuestionario Redes**
-> CARACTERÍSTICAS DEL CUESTIONARIO
->
-> - Solo disponéis de una oportunidad para responder todo el cuestionario
-> - Las preguntas se presentarán de una en una
-> - Podéis moveros libremente por las diferentes preguntas
-> - Si una pregunta os cuesta más, pasad a la siguiente y luego ya volveréis a esa
-> - Todas la preguntas valen lo mismo
-> - NO SE PUEDE NAVEGAR POR INTERNET NI CONSULTAR LOS APUNTES
-> - Solamente podéis tener abierto el cuestionario, ninguna otra ventana en el ordenador
-> - Cuando finalizáis el cuestionario, se os mostrará la solución a las preguntas y la nota obtenida
-> - Cuando acabéis, apagad el monitor (no el ordenador) y esperad instrucciones del profesor

@@ -1,27 +1,29 @@
 ---
 layout: default
-title: "UT15 — BDA. Base de Datos. TAULES — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca"
+title: "UD8 — BDA. Base de Datos. TAULES · Temari Complet"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT15 Completa"
-prev_url: "../ut14/ut1403.html"
-prev_label: "⬅️ 14.3 B2-EXERCICIS Model Relacional"
+prev_url: "../ut14/ut1401.html"
+prev_label: "⬅️ 7.1 Tema 2. Model Relacional (2ª part)"
 next_url: "../ut15/ut1501.html"
-next_label: "15.1 Tema 3. TAULES ACCESS ➡️"
+next_label: "8.1 Tema 3. TAULES ACCESS ➡️"
 ---
 
-# 📘 UT15 — BDA. Base de Datos. TAULES (Unitat Completa)
+# 📘 UD8 — BDA. Base de Datos. TAULES (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**15.1 Tema 3. TAULES ACCESS**](#ut1501) (o [obrir en pàgina individual ➡️](./ut1501.md) )
-> - [**15.2 Tema 3. Integridad Referencial**](#ut1502) (o [obrir en pàgina individual ➡️](./ut1502.md) )
-> - [**15.3 DEFINICION Mascara entrada_Regla validación**](#ut1503) (o [obrir en pàgina individual ➡️](./ut1503.md) )
-> - [**15.4 Ejemplos reglas de validación**](#ut1504) (o [obrir en pàgina individual ➡️](./ut1504.md) )
-> - [**15.5 B1-EXERCICIS BDA-Creació de Taules**](#ut1505) (o [obrir en pàgina individual ➡️](./ut1505.md) )
-> - [**15.6 B2-EXERCICIS BDA-Creació de Taules**](#ut1506) (o [obrir en pàgina individual ➡️](./ut1506.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 Tema 3. TAULES ACCESS**](./ut1501.md)
+- [**8.2 Tema 3. Integridad Referencial**](./ut1502.md)
+- [**8.3 DEFINICION Mascara entrada_Regla validación**](./ut1503.md)
+- [**8.4 Ejemplos reglas de validación**](./ut1504.md)
 
 ---
 
-## 15.1 Tema 3. TAULES ACCESS
+# 8.1 Tema 3. TAULES ACCESS
 
 > **📌 🏷️ Apunt de la Unitat**
 > Després de vore com a partir d'un enunciat, fem el
@@ -803,7 +805,7 @@ Desaparecerán todas las tablas y todas las relaciones de la ventana Relaciones.
 
 ---
 
-## 15.2 Tema 3. Integridad Referencial
+# 8.2 Tema 3. Integridad Referencial
 
 Integridad Referencial
 
@@ -835,7 +837,7 @@ Cuando la casilla de verificación Actualizar en cascada los campos relacionados
 
 ---
 
-## 15.3 DEFINICION Mascara entrada_Regla validación
+# 8.3 DEFINICION Mascara entrada_Regla validación
 
 Una máscara de entrada es una cadena de caracteres que define el formato de los valores de entrada válidos. Se pueden usar en campos de tabla o de consulta y en controles de formulario o de informe. Las máscaras de entrada se almacenan como una propiedad de objeto.
 
@@ -843,406 +845,10 @@ Una regla de validación es una forma de limitar la información que se escribe 
 
 ---
 
-## 15.4 Ejemplos reglas de validación
+# 8.4 Ejemplos reglas de validación
 
 Ejemplos de validación de datos Regla de validación Descripción <100 Debe ser inferior a 100. <= 100 Debe ser menor o igual a 100. Entre 1 y 10 Debe estar entre 1 y 10. 0 0 No debe ser igual a 0. <1/1/95 Debe ser una fecha anterior al 1/1/95. > = Fecha () Debe ser la fecha de hoy o más tarde.
 
 <= Fecha () Debe ser la fecha de hoy o antes. “Negocio” o “placer” u “otro” Debe ser “Negocios” o “Placer” u “Otro”. Me gusta “??” Debe tener dos personajes. Me gusta “####” Debe tener cuatro números.
 
 ---
-
-## 15.5 B1-EXERCICIS BDA-Creació de Taules
-
-Editorial PARANINFO
-
-Tema 3
-
-EJERCICIOS
-
-BDA RELACIONALES . TABLAS
-
-1 parte: Editorial Paraninfo
-
-Aplicaciones Ofimáticas Base de Datos Tema 03. EJERCICIOS. Base de datos relacionales. TABLAS (B1)
-
-ACTIVIDADES
-
-> **✍️ Actividad 3.1.**
-> Actividad 3.1.
-
-### 1. Abrir la base de datos VENTAS que se encuentra en la carpeta de
-
-trabajo, o en la web del libro, y crear las relaciones entre las tablas CLIENTES, PRODUCTOS y VENTAS. Un cliente tiene varias ventas, y un producto es vendido a los clientes en varias ventas.
-
-### 2. Abrir la tabla CLIENTES y borrar un cliente que tenga ventas y estudiar
-
-qué ocurre.
-
-### 3. Abrir la tabla PRODUCTOS y borrar uno que tenga ventas y estudiar qué
-
-ocurre.
-
-### 4. Insertar alguna venta con productos y clientes que no existen en las
-
-tablas correspondientes y estudiar qué ocurre.
-
-> **✍️ Actividad 3.2.**
-> Actividad 3.2.
-
-Utilizando la BD LIBROS, que se puede descargar de la web del libro, crear los siguientes filtros utilizando las opciones Filtro por formulario, y Filtro u orden avanzado para obtener
-
-### 1. Seleccionar los registros cuya editorial sea McGRAW-HILL, y el tema
-
-ACCESS.
-
-### 2. Seleccionar los registros de la tabla libros cuyo proveedor sea
-
-DIÓGENES y el tema ARQUITECTURA.
-
-Aplicaciones Ofimáticas Base de Datos Tema 03. EJERCICIOS. Base de datos relacionales. TABLAS (B1)
-
-EJERCICIOS PROPUESTOS
-
-#### 3.1. Cuando se crean tablas que hay que tener en cuenta a la hora de elegir el
-
-tipo de dato de cada campo.
-
-3.2. Cuál es el objetivo de establecer relaciones entre tablas.
-
-3.3. Explica el significado de Integridad referencial.
-
-#### 3.4. Crear la base de datos PROYECTOS que cuenta con las siguientes
-
-tablas
-
-- Tabla CLIENTE: (COD_CLI, DOMICILIO, TLF, RAZON_SOCIAL)
-
-- Tabla PROYECTOS: (COD_PROYECTO, DESCRIPCION, CUANTIA,
-
-FECHA_INICIO, FECHA_FIN, COD_CLI (Fk))
-
-- Tabla COLABORADORES: (COD_COLAB, NOMBRE, POBLACION,
-
-DIRECCION, TLF, NIF, RETENCION, BANCO, N_CUENTA)
-
-- Tabla PARTICIPAN: (COD_PROYECTO(Fk), COD_COLAB(Fk)), ambos
-
-campos son claves ajenas a sus correspondientes tablas.
-
-- Tabla TIPO_PAGO: (COD_PAGO, DESCRIPCION)
-
-- Tabla
-
-PAGOS: (NUM_PAGO, CONCEPTO, CANTIDAD, IVA, FECHA_PAGO, COD_PAGO(Fk), COD_COLAB(Fk))
-
-TABLA CAMPOS TIPO TAMAÑO FORMATO RESTRICCIONES CLIENTE COD_CLI Número Entero Largo Núm. General Campo Clave(Primaria) DOMICILIO Texto caracteres
-
-TLF Número Entero Largo Núm. General Obligatorio RAZON_SOCIAL Texto caracteres Mayúsculas: >?????????????????? Obligatorio PROYECTO COD_PROYECTO Número Byte Núm. General Campo Clave(Primaria) DESCRIPCION Texto caracteres
-
-Obligatorio CUANTIA Número Simple Núm. General con dos decimales Valor >0 Obligatorio FECHA_INICIO Fecha/Hora
-
-Fecha Corta 00/00/0000
-
-FECHA_FIN Fecha/Hora
-
-Fecha Corta 00/00/0000
-
-COD_CLI Número Entero Largo Núm. General Clave Ajena
-
-Aplicaciones Ofimáticas Base de Datos Tema 03. EJERCICIOS. Base de datos relacionales. TABLAS (B1)
-
-COLABORADORES COD_COLAB Número Entero Largo Núm. General Campo Clave(Primaria) NOMBRE Texto caracteres
-
-Obligatorio POBLACIÓN Texto caracteres
-
-DIRECCION Texto caracteres
-
-TLF Número Entero largo Máscara de entrada (000) 000 000
-
-NIF Texto máscara de entrada 000000000-L
-
-RETENCION Número Entero Largo Núm. General Máscara de entrada
-
-BANCO Número Entero Largo Núm. General Máscara de entrada 0000
-
-N_CUENTA Número Entero Largo Núm. General Máscara de entrada 0000000000
-
-PARTICIPAN COD_PROYECTO Número Byte Núm. General Campo Clave(Primaria) Clave ajena COD_COLAB Número Entero Largo Núm. General Campo Clave(Primaria) Clave ajena TIPO_PAGO COD_PAGO Número Entero Largo Núm. General Campo Clave(Primaria) DESCRIPCION Texto caracteres
-
-Obligatorio PAGOS NUM_PAGO Número Entero Largo Núm. General Campo Clave(Primaria) Clave Ajena CONCEPTO Texto caracteres
-
-Valores posibles: NÓMINA, SERVICIO, P ROVISIÓN y TRABAJO CANTIDAD Número Simple Núm. General con dos decimales Valor >0 Obligatorio IVA Número Entero Porcentaje
-
-FECHA_PAGO Fecha/Hora
-
-Fecha Corta 00/00/0000
-
-COD_PAGO(FK), Número Entero Largo Núm. General Clave Ajena COD_COLAB(FK)) Número Entero Largo Núm. General Clave Ajena
-
-Aplicaciones Ofimáticas Base de Datos Tema 03. EJERCICIOS. Base de datos relacionales. TABLAS (B1)
-
-#### 3.5. Utilizando la base de datos VENTAS que se encuentra en la web del libro,
-
-crear los siguientes filtros
-
-- Seleccionar los clientes de la población Toledo.
-
-- Seleccionar los productos con Unidades Almacén mayores de 100.
-
-### 3. Seleccionar las ventas de los productos con código de producto = 4 y
-
-unidades vendidas > 2.
-
-#### 3.6. Insertar el campo NOTA dentro de la tabla CURSA de la base de datos
-
-ALUMNOS. Tipo de dato Número, tamaño Simple y formato Número general con dos decimales.
-
----
-
-## 15.6 B2-EXERCICIS BDA-Creació de Taules
-
-Tema 3
-
-EJERCICIOS
-
-BDA Relacionales. TABLAS
-
-2 parte (B2)
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 2
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-IMPORTANTE: Los nombres de los campos NO tienen que tener espacios en blanco. En caso de querer separar las palabras, utiliza el guión bajo ( _ ). También os aconsejo que no utilicéis acentos en los nombres de los campos.
-
-Crea una base de datos en Access con el nombre de Biblioteca.mdb. Guarda el documento Access en tu directorio de trabajo.
-
-Crea en ella la siguiente tabla con el nombre USUARIOS. La CLAVE PRINCIPAL debe ser el campo numero_usuario
-
-CAMPO TIPO DE CAMPO TAMAÑO Numero_usuario Autonumérico Nombre Texto Apellidos Texto Dirección Texto Población Texto Código postal Texto Teléfono Texto Fecha de nacimiento Fecha/Hora Sancionado Si/No
-
-Crea una nueva tabla con el nombre AUTORES con la siguiente estructura. La CLAVE PRICIPAL debe ser el campo codigo de autor.
-
-CAMPO TIPO DE CAMPO TAMAÑO Codigo_de_Autor Autonumérico Nombre Texto Apellidos Texto Nacionalidad Texto EJERCICIO 1
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 3
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Crea una nueva tabla con el nombre LIBROS con la siguiente estructura. La CLAVE PRINCIPAL debe ser el campo Signatura.
-
-CAMPO TIPO DE CAMPO TAMAÑO Signatura Texto ISBN Texto Genero literario Texto Título Texto Editorial Texto Idioma Texto Código autor Numérico Nº páginas Numérico Comentarios Memo
-
-Crearemos una nueva tabla llamada PRÉSTAMOS que deberá tener la siguiente estructura. La CLAVE PRINCIPAL deben ser los campos Signatura y Usuario (LOS DOS CAMPOS).
-
-CAMPO TIPO DE CAMPO TAMAÑO Signatura Texto Usuario Numérico Fecha préstamo Fecha/Hora Fecha corta Fecha devolución Fecha/Hora Fecha corta
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 4
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-EJERCICIO 2
-
-Continuamos con la base de datos Biblioteca.
-
-Modificar la estructura de la tabla USUARIOS siguiendo los datos de los campos siguientes
-
-CAMPO Propiedades Nombre Requerido: Sí Apellidos Requerido: Sí Población Valor predeterminado: Murcia. Valores posibles: “Murcia”, “Madrid”, “Valencia”, “Alicante”. Código postal Máscara de entrada: 00000 Teléfono Máscara de entrada: (000) 00 00 00 F e c h a d e nacimiento Formato: Fecha corta
-
-Abre a continuación la tabla USUARIOS para introducir datos. Observa que el campo “Población” viene ya con el valor predeterminado “Murcia”. Si no saliera es que has puesto incorrectamente el valor predeterminado. Modifícalo en caso de que así sea.
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 5
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Modificar la estructura de la tabla LIBROS con los datos siguientes
-
-CAMPO Propiedades ISBN Máscara de entrada: 00­000­0000­0 Idioma Valor predeterminado: Español. Valores posibles: “Español”, “Inglés”, “Francés” e “Italiano”
-
-e
-
-Vamos a comprobar a continuación que hemos puesto correctamente la regla de validación. Vamos a introducir un libro en la tabla LIBROS cuyo número de páginas sea, por ejemplo, 200000.
-
-Si hemos puesto correctamente la regla de validación, al introducir este libro en la base de datos nos saldrá la siguiente ventana indicándonos que el valor que hemos introducido para el número de páginas es incorrecto.
-
-Nº páginas Regla de validación: El número de páginas debe estar comprendido entre 1 y 10000. En caso de que no se cumpla la regla se debe mostrar el mensaj “Número de páginas incorrecto. Introduzca un número de páginas entre 1 y 10000”.
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 6
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-EJERCICIO 3
-
-Continuamos en la base de datos biblioteca, abrir en “Vista Diseño” la tabla USUARIOS y crear un cuadro de lista sobre el campo población con los siguientes valores: “MURCIA”, “MADRID”, “ALICANTE”, “VALENCIA”.
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 7
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Abre la base de datos Biblioteca.mdb y crea las siguientes relaciones, marcando las opciones de
-
-- Exigir integridad referencial
-- Actualizar registros en cascada
-- Eliminar en cascada los registros relacionados.
-
-Las relaciones las debes crear desde la pestaña de Relaciones
-
-(pulsando la opción de RELACIONES de la cinta de opciones)
-
-Introduce 5 registros en cada una de las tablas EJERCICIO 4
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 8
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Crear una NUEVA base de datos llamada CURSOMA.MDB. En esa base de datos crear una TABLA NUEVA para registrar la información de fichas de CLIENTES. Llamarla CLIENTES. Compuesta por los siguientes campos
-
-CAMPO TIPO DE CAMPO TAMAÑO OTRAS CÓDIGO_CLIENTE Numérico E n t e r o largo NOMBRE Texto DIRECCIÓN Texto POBLACIÓN Texto TELÉFONO Texto FAX Texto DESCUENTO Numérico ZONA_VENTAS Numérico Entero Requerido La clave principal será el código_cliente. El descuento debe ser siempre mayor que 0.
-
-En caso de que se introduzca un descuento que sea menor que 0 se debe mostrar en pantalla el mensaje “ATENCION!. El descuento debe ser mayor que 0”. El valor predeterminado del campo población será “Murcia”.
-
-Crear una TABLA NUEVA para registrar la información de fichas de ARTICULOS. Llamarla ARTICULOS. Compuesta por los siguientes campos
-
-CAMPO TIPO DE CAMPO TAMAÑO OTRAS CÓDIGO_ARTÍCULO umérico Entero largo DESCRIPCIÓN Texto PVP Moneda Con el símbolo del euro y dos p o s i c i o n e s decimales.
-
-Asignar como CLAVE PRINCIPAL el campo CODIGO_ARTICULO.
-
-EJERCICIO 5
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 9
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Crear una TABLA NUEVA para registrar la información de PEDIDOS. Llamarla PEDIDOS. Compuesta por los siguientes campos
-
-CAMPO TIPO DE CAMPO TAMAÑO OTRAS NÚMERO_PEDIDO Numérico Entero largo CÓDIGO_PEDIDO_CLIE NTE Numérico Entero largo CÓDIGO_PEDIDO_ARTÍ CULO Numérico Entero largo UNIDADES Numérico Simple F o r m a t o Estándar FECHA_PEDIDO Fecha Formato F. Corta
-
-Asignar como CLAVE PRINCIPAL el campo NUMERO_PEDIDO.
-
-Como regla de integridad deberá ponerse que el número de unidades debe estar entre 0 y 1000.
-
-Crear una TABLA NUEVA para registrar la información de las zonas de Ventas. Llamarla ZONAS DE VENTAS. Compuesta por los siguientes campos
-
-CAMPO TIPO DE CAMPO TAMAÑO OTRAS ZONA_VENTAS Numérico Entero NOMBRE_ZONA Texto
-
-Asignar como CLAVE PRINCIPAL el campo ZONA_VENTAS.
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 10
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Abre la base de datos CURSOMA.MDB y crea las siguientes relaciones, marcando las opciones de
-
-- Exigir integridad referencial
-- Actualizar registros en cascada
-- Eliminar en cascada los registros relacionados.
-
-Las relaciones las debes crear desde la pestaña de Relaciones
-
-(pulsando la opción de RELACIONES de la cinta de opciones)
-
-Introduce 5 registros en cada una de las tablas. EJERCICIO 6
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 11
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Se dispone de las siguientes tablas con las relaciones que se indican
-
-Al establecer las relaciones se han marcado las casillas de
-
-- Exigir integridad referencial
-- Actualizar registros en cascada
-- Eliminar en cascada los registros relacionados.
-
-Contesta las siguientes preguntas en un documento de texto
-
-Pregunta 1: Imagina que la base de datos la tienes inicialmente vacía, es decir, sin registros en cada una de las dos tablas. ¿Podrías introducir registros en la tabla de EMPLEADOS sin haber introducido previamente registros en la tabla de DEPARTAMENOS? ¿Por qué?
-
-Pregunta 2: Imagina ahora que tienes los siguientes datos en la tabla departamentos
-
-EJERCICIO 7
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 12
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-2.1:¿Podrías introducir un empleado en la tabla de EMPLEADOS que perteneciera al departamento número 50? ¿Por qué?
-
-2.2: Si no se hubiera marcado la casilla de Exigir integridad referencial al establecer la relación, ¿podrías introducir ese registro en la tabla de empleados?
-
-Pregunta 3: En la tabla de EMPLEADOS se dispone de los siguientes datos.
-
-Y en la tabla DEPATAMENTOS la siguiente (original)
-
-3.1: ¿Qué ocurriría si cambio, en la tabla DEPARTAMENTOS el código del departamento 10 por el 50? ¿Cambiaría el código de departamento, en la tabla empleados, de los empleados que pertenecen al departamento número 10?
-
-3.2: Partiendo de las tablas originales... Si al establecer la relación entre las dos tablas no se hubiera marcado la casilla de Actualizar en cascada los registros relacionado,s ¿cambiaría el código de departamento, en la tabla empleados, de los empleados que pertenecen al departamento número 10, si cambio en la tabla DEPARTAMENTOS el códido de departamento 10 por el 50?
-
-3.1: Partiendo de las tablas originales... Ahora eliminamos el departamento número 10 de la tabla departament,o ¿ cuántos registros en total se eliminarían de la tabla empleados? ¿Y si no se hubiera marcado la opción de Actualizar en cascada los registros relacionados?
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 13
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Se dispone de una base de datos con las siguientes tablas y relaciones.
-
-Al establecer las relaciones se han marcado las casillas de
-
-- Exigir integridad referencial
-- Actualizar registros en cascada
-- Eliminar en cascada los registros relacionados.
-
-Contesta las siguientes preguntas en un documento de texto: EJERCICIO 8
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 14
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Pregunta 1: La base de datos inicialmente no contiene datos. ¿Sería posible introducir datos en la tabla de COMPRAS sin haber introducido antes datos en la tabla de CLIENTES Y ARTICULOS ?
-
-Pregunta 2: Se han introducido datos en cada una de las tablas quedando de la siguiente manera.
-
-Indica cual de los siguientes registros sería imposible de introducir en la tabla de COMPRAS, indicando porqué.
-
-Dni cliente Código artículo Fecha de compra 111222333 20/06/2006 777888999 10/06/2006 333222111 20/06/2006 888999111 17/06/2006 333222111 25/06/2006
-
-Ejercicios de diseño de tablas y relaciones en Access. Pág. 15
-
-Aplicaciones Ofimáticas Base de datos
-
-Tema 03: Base de Datos RELACIONALES. TABLAS (B2)
-
-Partiendo de la tabla de COMPRAS original siguiente
-
-Pregunta 3: ¿Cuántos registros se eliminarían de la tabla COMPRAS si eliminamos el cliente con DNI 111222333 en la tabla de CLIENTES?
-
-Pregunta 4:¿Cuántos registros cambiarían en la tabla COMPRAS si cambio el código de artículo 1 por el 5 en la tabla de ARTICULOS? (partiendo de la tabla original, sin aplicar el resultado de la pregunta 3)
-
-Pregunta 5: Queremos cambiar el código de artículo 3 por el 5 en la tabla de COMPRAS. ¿Podría hacerlo? ¿Por qué? (partiendo de la tabla original, sin aplicar el resultado de la pregunta 3)

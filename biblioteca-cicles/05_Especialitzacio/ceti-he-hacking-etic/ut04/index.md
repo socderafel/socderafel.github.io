@@ -1,26 +1,29 @@
 ---
 layout: default
-title: "UT4 — Footprinting — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD4 — Footprinting · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut03/ut0303.html"
+prev_label: "⬅️ 3.3 Material adicional 2"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 Footprinting con Google ➡️"
 ---
 
-# 📘 UT4 — Footprinting (Unitat Completa)
+# 📘 UD4 — Footprinting (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 Footprinting con Google**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**4.2 Footprinting con Bing**](#ut0402) (o [obrir en pàgina individual ➡️](./ut0402.md) )
-> - [**4.3 Footprinting con Shodan**](#ut0403) (o [obrir en pàgina individual ➡️](./ut0403.md) )
-> - [**4.4 Footprint**](#ut0404) (o [obrir en pàgina individual ➡️](./ut0404.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 Footprinting con Google**](./ut0401.md)
+- [**4.2 Footprinting con Bing**](./ut0402.md)
+- [**4.3 Footprinting con Shodan**](./ut0403.md)
+- [**4.4 Footprint**](./ut0404.md)
 
 ---
 
-## 4.1 Footprinting con Google
+# 4.1 Footprinting con Google
 
 📎 **Material de laboratori (Resumen de operadores en buscadores):** `operadores_buscadores.xlsx`
 
@@ -174,7 +177,7 @@ Hacking ètic 1r CIBER GOOGLE HACKING ABAST DE GOOGLE HACKING
 
 ---
 
-## 4.2 Footprinting con Bing
+# 4.2 Footprinting con Bing
 
 Tema 4.2. Auditoria de seguretat: Footprint amb Bing. Hacking ètic (HE) 1r CIBER Alicia Ferrando Tamarit
 
@@ -265,7 +268,7 @@ Hacking ètic 1r CIBER ALTRES BUSCADORS COMERCIALS
 
 ---
 
-## 4.3 Footprinting con Shodan
+# 4.3 Footprinting con Shodan
 
 Tema 4.4. Auditoria de seguretat: Footprint mitjançant Shodan. Hacking ètic (HE) 1r CIBER Alícia Ferrando Tamarit
 
@@ -533,7 +536,7 @@ Tot i que Shodan treballa amb continguts de la Deep Web, SHODAN NO FA RES IL·LE
 
 ---
 
-## 4.4 Footprint
+# 4.4 Footprint
 
 Hacking Ético 23AI32CF016 Raúl Fuentes Ferrer
 
@@ -683,86 +686,3 @@ TheHarvester AUDITORÍA DE SEGURIDAD Detectar Hosts, IP, Mails Diversos mo
 OSINT AUDITORÍA DE SEGURIDAD Múltiples herramientas https://osintframework.com/ https://phonexicum.github.io/infosec/osint.html https://inteltechniques.com/ https://www.osinttechniques.com/ https://intelx.io/ https://medium.com/the-first-digit/osint-how-to-find-information-on-anyone-5029a3c7fd56
 
 ---
-
-## ✍️ Activitats pràctiques UT4
-
-> **✍️ Activitat Pràctica 4.1 — Ejercicio 2**
-> PRÀCTICA TEMA 4.2 - HÀCKING ÈTIC.
->
-> CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ.
->
-> NOM
->
-> L’empresa Biocombustibles QUICOM S.A. ens ha contractat per a realitzar un procés de Footprinting, ja que es troben un poc preocupats per haver pogut deixar exposada, públicament a Bing, part de la seua informació privada, relacionada amb la seua empresa, el personal que treballa allí, els clients per als quals treballen i altres dades confidencials.
->
-> Volen que comprovem la següent informació
->
-> Informació general actualitzada de l’empresa.
->
-> Informació personal (nom i cognoms, edat, direcció, telèfon i població) dels seus empleats i clients.
->
-> Informació d’alguna de les seues bases de dades Oracle.
->
-> Llocs web de l’empresa que es troben a la IP 192.168.0.140.
->
-> Arxius temporals i còpies de seguretat de l’empresa.
->
-> Arxius PDF que contenen factures.
->
-> Arxius de text que contenen usuaris i contrasenyes.
->
-> Informació de l’empresa actualitzada buscada des d’una IP americana.
->
-> Formularis d’accés (login).
->
-> Càmeres online que treballen a la seua sede.
->
-> Enumera i explica quina instrucció o conjunt d’instruccions utilitzaries per a realitzar cada búsqueda.
->
-> Aclariment: Com aquesta empresa no existeix, no vas a poder provar la teua búsqueda utilitzant la instrucció exacta que et demane.
->
-> El que hauràs de fer serà provar les teues instruccions a Bing sense afegir la instrucció “site:BiocombustiblesQUICOM.com”, amb la finalitat de comprovar la veracitat de la teua resposta, encara que després si que tindràs que afegir l’ordre “site” a la resposta final de la pràctica.
-
-> **✍️ Activitat Pràctica 4.2 — Ejercicio 4**
-> PRÀCTICA TEMA 4.4 - HÀCKING ÈTIC - SHODAN.
->
-> CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ.
->
-> En aquesta pràctica 4.4, heu de realitzar búsquedes, mitjançant Kali Linux i la ferramenta Shodan, amb la finalitat de trobar dispositius connectats a Internet que siguen del nostre interés.
->
-> Les búsquedes que heu de completar són les següents
->
-> Mostrar el nombre de resultats dels dispositius alemanys connectats a Internet amb sistema operatiu Android.
->
-> Mostrar el nombre de resultats dels dispositius espanyols connectats a Internet amb sistema operatiu Linux i un Internet Information Server de 2.0.
->
-> Realitzar una descàrrega que continga informació sobre els servidors del videojoc Counter-Strike. L’arxiu rebrà el nom “counter-game-server” i estarà en format JSON. Explica breument el contingut de l’arxiu descarregat.
->
-> Nota: No podreu descarregar totes les dades obtingudes, ja que la búsqueda troba molts servidors.
->
-> Realitzar una descàrrega que continga informació sobre la base de dades Cassandra. L’arxiu rebrà el nom “cassandra-database” i estarà en format JSON. Explica breument el contingut de l’arxiu descarregat.
->
-> Nota: No podreu descarregar totes les dades obtingudes, ja que la búsqueda troba moltes bases de dades.
->
-> Mostrar la informació sobre un host europeu que tinga un sistema operatiu Windows XP, explicant les vulnerabilitats que té i la descripció de cada port obert que té.
->
-> Mostrar la informació sobre un host asiàtic que tinga un sistema operatiu iOS, explicant les vulnerabilitats que té i la descripció de cada port obert que té.
->
-> Mostrar la informació sobre la teua direcció IP d’accés a Internet.
->
-> Analitzar l’arxiu counter-game-server.json.gz (generat a l’apartat 3), mostrant per pantalla l'adreça IP, el port, el sistema operatiu, la contrasenya, la ciutat i l'organització en format CSV.
->
-> Analitzar l’arxiu cassandra-database.json.gz (generat a l’apartat 4), mostrant per pantalla l'adreça IP, el domini, el port, la versió de la base de dades, el proveedor de servicis d’Internet, la ciutat, el país i l’organització en format CSV.
->
-> Descarregar i analitzar un arxiu que vos cride l’atenció. Expliqueu breument per on podrieu començar a atacar-lo.
->
-> Cada búsqueda de la llista anterior haurà de contindre
->
-> La instrucció utilitzada per a complir els requisits de la búsqueda.
->
-> Una explicació breu de cada instrucció utilitzada (expliqueu sols una vegada cada instrucció).
->
-> Una captura de pantalla dels resultats obtinguts.
-
-> **✍️ Activitat Pràctica 4.3 — Prácticas**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.

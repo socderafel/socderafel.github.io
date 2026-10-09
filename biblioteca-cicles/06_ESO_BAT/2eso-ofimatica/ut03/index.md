@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT3 — Calc — Taller d'Ofimàtica: Writer, Calc i Scratch | Portal Docent Pepe Cuenca"
+title: "UD3 — Calc · Temari Complet"
 course_root: ".."
 badge: "2n ESO · UT3 Completa"
 prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_label: "⬅️ 2.1 Continguts i Casos Guiats"
 next_url: "../ut03/ut03actividades.html"
-next_label: "✍️ Activitats pràctiques UT3 ➡️"
+next_label: "3.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT3 — Calc (Unitat Completa)
+# 📘 UD3 — Calc (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 Continguts i Casos Guiats**](./ut03actividades.md)
 
 ---
 
-## ✍️ Activitats pràctiques UT3
+# 3.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 3.1 — Tasca1_Calc**
 > Nom de l'arxiu: Calc1_elteunom.ods
@@ -161,3 +165,5 @@ next_label: "✍️ Activitats pràctiques UT3 ➡️"
 > Ejercicio
 >
 > Ve a la celda C6. Cambia el formato numérico a tipo Moneda con 2 decimales. Selecciona las celdas C7, C8, C9 y C10. Cambia el formato numérico a tipo Moneda con 2 decimales. El resultado puede ser como el que se muestra a continuación: Guarda los cambios.
+
+---

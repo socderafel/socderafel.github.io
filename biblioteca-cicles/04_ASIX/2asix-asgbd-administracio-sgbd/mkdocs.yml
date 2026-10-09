@@ -4,45 +4,34 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT1 — Instal·lació d'un SGBD":
-      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+  - "UD1 — Instal·lació d'un SGBD":
+      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
       - "1.1 Preparació de l'entorn": ut01/ut0101.md
       - "1.2 Instal·lació d'un SGBD": ut01/ut0102.md
       - "1.3 Videos d'instal·lació": ut01/ut0103.md
       - "1.4 Primers passos. Ordres bàsiques": ut01/ut0104.md
       - "1.5 Arquitectura BBDD's en Oracle": ut01/ut0105.md
-      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
-  - "UT2 — Configuració d'un SGBD":
-      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+  - "UD2 — Configuració d'un SGBD":
+      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
       - "2.1 Configuració d'un SGBD": ut02/ut0201.md
       - "2.2 Tablespaces i datafiles": ut02/ut0202.md
       - "2.3 Us d'SQL*Plus": ut02/ut0203.md
       - "2.4 Solucions errors de connexió amb SQLDeveloper": ut02/ut0204.md
-      - "2.5 primers pasos - sol": ut02/ut0205.md
-      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — Usuaris i permisos. Seguretat":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+  - "UD3 — Usuaris i permisos. Seguretat":
+      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
       - "3.1 Usuaris i permisos": ut03/ut0301.md
       - "3.2 Connectar a SGBD Oracle des d'altra màquina": ut03/ut0302.md
       - "3.3 Usuaris NO admin en Windows": ut03/ut0303.md
       - "3.4 Permisos d'Update i Delete + Select": ut03/ut0304.md
       - "3.5 Seguretat en un SGBD": ut03/ut0305.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "UT5 — Automatització de tasques":
-      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
-      - "5.2 Repàs: PL/SQL": ut05/ut0502.md
-      - "5.3 Repàs: PL/SQL (II)": ut05/ut0503.md
-      - "5.4 Repàs: PL/SQL (II) _ SOLUCIONS": ut05/ut0504.md
-      - "5.5 Automatització de tasques": ut05/ut0505.md
-      - "5.6 Butlletí procediments i funcions": ut05/ut0506.md
-      - "5.7 Butlletí triggers": ut05/ut0507.md
-      - "5.8 Solucions a pl/sql": ut05/ut0508.md
-      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "UT6 — Optimització de l'SGBD":
-      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Optimització de l'SGBD": ut06/ut0601.md
-      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
-  - "UT7 — Disponibilitat d'un SGBD":
-      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
-      - "7.1 Disponibilitat d'un SGBD": ut07/ut0701.md
-  - "📂 Índex de Documents i Recursos": references.md
+  - "UD4 — Automatització de tasques":
+      - "📘 UD4 Completa (1 pàgina)": ut05/index.md
+      - "4.1 Repàs: PL/SQL": ut05/ut0502.md
+      - "4.2 Repàs: PL/SQL (II)": ut05/ut0503.md
+      - "4.3 Automatització de tasques": ut05/ut0505.md
+  - "UD5 — Optimització de l'SGBD":
+      - "📘 UD5 Completa (1 pàgina)": ut06/index.md
+      - "5.1 Optimització de l'SGBD": ut06/ut0601.md
+  - "UD6 — Disponibilitat d'un SGBD":
+      - "📘 UD6 Completa (1 pàgina)": ut07/index.md
+      - "6.1 Disponibilitat d'un SGBD": ut07/ut0701.md

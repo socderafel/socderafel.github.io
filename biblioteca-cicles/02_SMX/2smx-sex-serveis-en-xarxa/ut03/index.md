@@ -1,29 +1,28 @@
 ---
 layout: default
-title: "U5 — Servei de Correu Electrònic · Unitat Completa"
+title: "UD6 — Servei de Correu Electrònic · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT3 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut04/ut0403.html"
+prev_label: "⬅️ 5.2 Configuración Virtual hosting"
 next_url: "../ut03/ut0301.html"
-next_label: "3.1 Presentació ➡️"
+next_label: "6.1 Presentació ➡️"
 ---
 
-# 📘 U5 — Servei de Correu Electrònic (Unitat Completa)
+# 📘 UD6 — Servei de Correu Electrònic (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**3.1 Presentació**](./ut0301.md)
-- [**3.2 El correu electrònic**](./ut0302.md)
-- [**3.3 Les Guest additions**](./ut0303.md)
-- [**✍️ Activitats pràctiques UT3**](./ut03actividades.md)
+- [**6.1 Presentació**](./ut0301.md)
+- [**6.2 El correu electrònic**](./ut0302.md)
+- [**6.3 Les Guest additions**](./ut0303.md)
 
 ---
 
-# 3.1 Presentació
+# 6.1 Presentació
 
 > **📌 Introducció de la Unitat**
 > ### **U5: Servici de Correu**
@@ -65,7 +64,7 @@ https://www.rincondelemail.es/pop-imap-smtp/
 
 ---
 
-# 3.2 El correu electrònic
+# 6.2 El correu electrònic
 
 El correu elctrònic
 
@@ -199,20 +198,10 @@ https://www.youtube.com/watch?v=kWNyiZfTp4E
 
 ---
 
-# 3.3 Les Guest additions
+# 6.3 Les Guest additions
 
 les Guest additions de virtualbox no s'instal·len correctament a les màquines Linux.
 Per tant, es necessari instal·lar a la màquina **sudo apt install build-essential linux-headers-$(uname -r)**
 d'aquesta manera al reinstal·lar les Guest additions ja no donarà l'error de que no les compila adequadament.
-
----
-
-# ✍️ Activitats pràctiques UT3
-
-> **✍️ Activitat Pràctica 3.1 — tasca postfix i dovecot**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 3.2 — Prova de validació**
-> Prova de validació
 
 ---

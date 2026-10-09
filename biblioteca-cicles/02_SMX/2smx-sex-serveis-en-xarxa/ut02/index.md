@@ -1,27 +1,26 @@
 ---
 layout: default
-title: "U6 — Servei de Transferència de Fitxers (FTP) · Unitat Completa"
+title: "UD7 — Servei de Transferència de Fitxers (FTP) · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT2 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut03/ut0303.html"
+prev_label: "⬅️ 6.3 Les Guest additions"
 next_url: "../ut02/ut0201.html"
-next_label: "2.1 FTP ➡️"
+next_label: "7.1 FTP ➡️"
 ---
 
-# 📘 U6 — Servei de Transferència de Fitxers (FTP) (Unitat Completa)
+# 📘 UD7 — Servei de Transferència de Fitxers (FTP) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 FTP**](./ut0201.md)
-- [**✍️ Activitats pràctiques UT2**](./ut02actividades.md)
+- [**7.1 FTP**](./ut0201.md)
 
 ---
 
-# 2.1 FTP
+# 7.1 FTP
 
 > **📌 🏷️ Apunt de la Unitat**
 > ### **U6: Servicio de Transferencia de ficheros (FTP)**
@@ -158,18 +157,5 @@ Puedes limitar el uso de disco basándote en el espacio en disco (cuotas de bloq
 Tema 6: Servicio FTP Límites suaves (soft): Pueden excederse por un período de tiempo llamado periodo de gracia, que por defecto es una semana. Si un usuario sobrepasa su período de gracia, el límite suave se convertirá en un límite duro y no se permitirán usos de disco adicionales. Cuando el usuario devuelve su cuota de uso de recursos a un punto por debajo de su límite suave, el período de gracia se reinicia al valor por defecto del sistema. Este tiempo de gracia se puede ajustar para cada usuario individual o para todos los usuarios globalmente Un límite duro (hard) especifica el límite absoluto, que no puede ser excedido nunca. Una vez que un usuario alcanza su límite duro no puede realizar más ubicaciones en el sistema de ficheros en cuestión. Por ejemplo, si el usuario tiene un límite duro de 500 kb y está utilizando 490 kb, el usuario solo puede ocupar otros 10 kb. Un intento de ocupar 11 kb más fallará.
 
 7.- Cuotas de Usuario
-
----
-
-# ✍️ Activitats pràctiques UT2
-
-> **✍️ Activitat Pràctica 2.1 — Prova Validació FTP**
-> Prova Validació FTP
-
-> **✍️ Activitat Pràctica 2.2 — Presentació FTP**
-> Presentació PDF
-
-> **✍️ Activitat Pràctica 2.3 — Memoria FTP**
-> Memoria FTP en PDF
 
 ---

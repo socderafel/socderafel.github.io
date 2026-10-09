@@ -1,34 +1,32 @@
 ---
 layout: default
-title: "UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn · Unitat Completa"
+title: "UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn · Temari Complet"
 course_root: ".."
 badge: "CE IA i Big Data · UT3 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut04/ut0402.html"
+prev_label: "⬅️ 2.2 Python para todos (libro)."
 next_url: "../ut03/ut0301.html"
-next_label: "3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de ➡️"
+next_label: "3.1 6 Biblioteca scikit learn - Preprocesado de ➡️"
 ---
 
 # 📘 UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de**](./ut0301.md)
-- [**3.2 UT 3.5 Biblioteca plotly**](./ut0302.md)
-- [**3.3 UT 3.4 Biblioteca seaborn**](./ut0303.md)
-- [**3.4 UT 3.3 Biblioteca matplotlib**](./ut0304.md)
-- [**3.5 UT 3.2 Biblioteca Pandas**](./ut0305.md)
-- [**3.6 UT 3.1 Biblioteca Numpy**](./ut0306.md)
-- [**3.7 UT 3.0 Presentació unitat**](./ut0307.md)
-- [**3.8 Housing**](./ut0308.md)
-- [**✍️ Activitats pràctiques UT3**](./ut03actividades.md)
+- [**3.1 6 Biblioteca scikit learn - Preprocesado de**](./ut0301.md)
+- [**3.2 5 Biblioteca plotly**](./ut0302.md)
+- [**3.3 4 Biblioteca seaborn**](./ut0303.md)
+- [**3.4 3 Biblioteca matplotlib**](./ut0304.md)
+- [**3.5 2 Biblioteca Pandas**](./ut0305.md)
+- [**3.6 1 Biblioteca Numpy**](./ut0306.md)
+- [**3.7 0 Presentació unitat**](./ut0307.md)
 
 ---
 
-# 3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de
+# 3.1 6 Biblioteca scikit learn - Preprocesado de
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Materiales.
@@ -487,7 +485,7 @@ datos antes de aplicar la división. Pasar un valor para obtener resultados repr
 
 ---
 
-# 3.2 UT 3.5 Biblioteca plotly
+# 3.2 5 Biblioteca plotly
 
 ### 📄 IA BD PIA UT 3.5 Biblioteca Plotly.pdf
 
@@ -632,7 +630,7 @@ fig.show()
 
 ---
 
-# 3.3 UT 3.4 Biblioteca seaborn
+# 3.3 4 Biblioteca seaborn
 
 ### 📄 IA BD PIA UT 3.4 Biblioteca Seaborn.pdf
 
@@ -884,7 +882,7 @@ plt.show()
 
 ---
 
-# 3.4 UT 3.3 Biblioteca matplotlib
+# 3.4 3 Biblioteca matplotlib
 
 ### 📄 IA BD PIA UT 3.3 Biblioteca Matplotlib.pdf
 
@@ -1650,7 +1648,7 @@ fig.tight_layout(pad=1)  # sólo para que no se solapen los títulos
 
 ---
 
-# 3.5 UT 3.2 Biblioteca Pandas
+# 3.5 2 Biblioteca Pandas
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT 3.2 Programación de ML en Python. Biblioteca Pandas Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -1825,7 +1823,7 @@ Tiempos de acceso a los archivos. 32 / 32
 
 ---
 
-# 3.6 UT 3.1 Biblioteca Numpy
+# 3.6 1 Biblioteca Numpy
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT 3.1 Programación de ML en Python. Biblioteca Numpy Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -1991,7 +1989,7 @@ Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Apre
 
 ---
 
-# 3.7 UT 3.0 Presentació unitat
+# 3.7 0 Presentació unitat
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT3. Programación de ML en Python. Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -2124,421 +2122,5 @@ https://www.tensorflow.org/?hl=es-419 https://anaconda.org/conda-forge/tensorflo
 #### 7.3. Instalación
 
 Para instalar SciPy en anaconda: cconda install -c conda-forge tensorflow conda install -c "conda-forge/label/broken" tensorflow conda install -c "conda-forge/label/cf201901" tensorflow conda install -c "conda-forge/label/cf202003" tensorflow 9 / 9
-
----
-
-# 3.8 Housing
-
-longitude,latitude,housing_median_age,total_rooms,total_bedrooms,population,households,median_income,ocean_proximity,median_house_value -122.23,37.88,41,880,129,322,126,8.3252,NEAR BAY,452600 -122.22,37.86,21,7099,1106,2401,1138,8.3014,NEAR BAY,358500 -122.24,37.85,52,1467,190,496,177,7.2574,NEAR BAY,352100 -122.25,37.85,52,1274,235,558,219,5.6431,NEAR BAY,341300 -122.25,37.85,52,1627,280,565,259,3.8462,NEAR BAY,342200 -122.25,37.85,52,919,213,413,193,4.0368,NEAR BAY,269700 -122.25,37.84,52,2535,489,1094,514,3.6591,NEAR BAY,299200 -122.25,37.84,52,3104,687,1157,647,3.12,NEAR BAY,241400 -122.26,37.84,42,2555,665,1206,595,2.0804,NEAR BAY,226700 -122.25,37.84,52,3549,707,1551,714,3.6912,NEAR BAY,261100 -122.26,37.85,52,2202,434,910,402,3.2031,NEAR BAY,281500 -122.26,37.85,52,3503,752,1504,734,3.2705,NEAR BAY,241800 -122.26,37.85,52,2491,474,1098,468,3.075,NEAR BAY,213500 -122.26,37.84,52,696,191,345,174,2.6736,NEAR BAY,191300 -122.26,37.85,52,2643,626,1212,620,1.9167,NEAR BAY,159200 -122.26,37.85,50,1120,283,697,264,2.125,NEAR BAY,140000 -122.27,37.85,52,1966,347,793,331,2.775,NEAR BAY,152500 -122.27,37.85,52,1228,293,648,303,2.1202,NEAR BAY,155500 -122.26,37.84,50,2239,455,990,419,1.9911,NEAR BAY,158700 -122.27,37.84,52,1503,298,690,275,2.6033,NEAR BAY,162900 -122.27,37.85,40,751,184,409,166,1.3578,NEAR BAY,147500 -122.27,37.85,42,1639,367,929,366,1.7135,NEAR BAY,159800 -122.27,37.84,52,2436,541,1015,478,1.725,NEAR BAY,113900 -122.27,37.84,52,1688,337,853,325,2.1806,NEAR BAY,99700 -122.27,37.84,52,2224,437,1006,422,2.6,NEAR BAY,132600 -122.28,37.85,41,535,123,317,119,2.4038,NEAR BAY,107500 -122.28,37.85,49,1130,244,607,239,2.4597,NEAR BAY,93800 -122.28,37.85,52,1898,421,1102,397,1.808,NEAR BAY,105500 -122.28,37.84,50,2082,492,1131,473,1.6424,NEAR BAY,108900 -122.28,37.84,52,729,160,395,155,1.6875,NEAR BAY,132000 -122.28,37.84,49,1916,447,863,378,1.9274,NEAR BAY,122300 -122.28,37.84,52,2153,481,1168,441,1.9615,NEAR BAY,115200 -122.27,37.84,48,1922,409,1026,335,1.7969,NEAR BAY,110400 -122.27,37.83,49,1655,366,754,329,1.375,NEAR BAY,104900 -122.27,37.83,51,2665,574,1258,536,2.7303,NEAR BAY,109700 -122.27,37.83,49,1215,282,570,264,1.4861,NEAR BAY,97200 -122.27,37.83,48,1798,432,987,374,1.0972,NEAR BAY,104500 -122.28,37.83,52,1511,390,901,403,1.4103,NEAR BAY,103900 -122.26,37.83,52,1470,330,689,309,3.48,NEAR BAY,191400 -122.26,37.83,52,2432,715,1377,696,2.5898,NEAR BAY,176000 -122.26,37.83,52,1665,419,946,395,2.0978,NEAR BAY,155400 -122.26,37.83,51,936,311,517,249,1.2852,NEAR BAY,150000 -122.26,37.84,49,713,202,462,189,1.025,NEAR BAY,118800 -122.26,37.84,52,950,202,467,198,3.9643,NEAR BAY,188800 -122.26,37.83,52,1443,311,660,292,3.0125,NEAR BAY,184400 -122.26,37.83,52,1656,420,718,382,2.6768,NEAR BAY,182300 -122.26,37.83,50,1125,322,616,304,2.026,NEAR BAY,142500 -122.27,37.82,43,1007,312,558,253,1.7348,NEAR BAY,137500 -122.26,37.82,40,624,195,423,160,0.9506,NEAR BAY,187500 -122.27,37.82,40,946,375,700,352,1.775,NEAR BAY,112500 -122.27,37.82,21,896,453,735,438,0.9218,NEAR BAY,171900 -122.27,37.82,43,1868,456,1061,407,1.5045,NEAR BAY,93800 -122.27,37.82,41,3221,853,1959,720,1.1108,NEAR BAY,97500 -122.27,37.82,52,1630,456,1162,400,1.2475,NEAR BAY,104200 -122.28,37.82,52,1170,235,701,233,1.6098,NEAR BAY,87500 -122.28,37.82,52,945,243,576,220,1.4113,NEAR BAY,83100 -122.28,37.82,52,1238,288,622,259,1.5057,NEAR BAY,87500 -122.28,37.82,52,1489,335,728,244,0.8172,NEAR BAY,85300 -122.28,37.82,52,1387,341,1074,304,1.2171,NEAR BAY,80300 -122.29,37.82,2,158,43,94,57,2.5625,NEAR BAY,60000 -122.29,37.83,52,1121,211,554,187,3.3929,NEAR BAY,75700 -122.29,37.82,49,135,29,86,23,6.1183,NEAR BAY,75000 -122.29,37.81,50,760,190,377,122,0.9011,NEAR BAY,86100 -122.3,37.81,52,1224,237,521,159,1.191,NEAR BAY,76100 -122.3,37.81,48,828,182,392,133,2.5938,NEAR BAY,73500 -122.3,37.81,52,1010,209,604,187,1.1667,NEAR BAY,78400 -122.3,37.81,48,1455,354,788,332,0.8056,NEAR BAY,84400 -122.29,37.8,52,1027,244,492,147,2.6094,NEAR BAY,81300 -122.3,37.81,52,572,109,274,82,1.8516,NEAR BAY,85000 -122.29,37.81,46,2801,644,1823,611,0.9802,NEAR BAY,129200 -122.29,37.81,26,768,152,392,127,1.7719,NEAR BAY,82500 -122.29,37.81,46,935,297,582,277,0.7286,NEAR BAY,95200 -122.29,37.81,49,844,204,560,152,1.75,NEAR BAY,75000 -122.29,37.81,46,12,4,18,7,0.4999,NEAR BAY,67500 -122.29,37.81,20,835,161,290,133,2.483,NEAR BAY,137500 -122.28,37.81,17,1237,462,762,439,0.9241,NEAR BAY,177500 -122.28,37.81,36,2914,562,1236,509,2.4464,NEAR BAY,102100 -122.28,37.81,19,1207,243,721,207,1.1111,NEAR BAY,108300 -122.29,37.81,23,1745,374,1054,325,0.8026,NEAR BAY,112500 -122.28,37.8,38,684,176,344,155,2.0114,NEAR BAY,131300 -122.28,37.81,17,924,289,609,289,1.5,NEAR BAY,162500 -122.27,37.81,52,210,56,183,56,1.1667,NEAR BAY,112500 -122.28,37.81,52,340,97,200,87,1.5208,NEAR BAY,112500 -122.28,37.81,52,386,164,346,155,0.8075,NEAR BAY,137500 -122.28,37.81,35,948,184,467,169,1.8088,NEAR BAY,118800 -122.28,37.81,52,773,143,377,115,2.4083,NEAR BAY,98200 -122.27,37.81,40,880,451,582,380,0.977,NEAR BAY,118800 -122.27,37.81,10,875,348,546,330,0.76,NEAR BAY,162500 -122.27,37.8,10,105,42,125,39,0.9722,NEAR BAY,137500 -122.27,37.8,52,249,78,396,85,1.2434,NEAR BAY,500001 -122.27,37.8,16,994,392,800,362,2.0938,NEAR BAY,162500 -122.28,37.8,52,215,87,904,88,0.8668,NEAR BAY,137500 -122.28,37.8,52,96,31,191,34,0.75,NEAR BAY,162500 -122.27,37.79,27,1055,347,718,302,2.6354,NEAR BAY,187500 -122.27,37.8,39,1715,623,1327,467,1.8477,NEAR BAY,179200 -122.26,37.8,36,5329,2477,3469,2323,2.0096,NEAR BAY,130000 -122.26,37.82,31,4596,1331,2048,1180,2.8345,NEAR BAY,183800 -122.26,37.81,29,335,107,202,91,2.0062,NEAR BAY,125000 -122.26,37.82,22,3682,1270,2024,1250,1.2185,NEAR BAY,170000 -122.26,37.82,37,3633,1085,1838,980,2.6104,NEAR BAY,193100 -122.25,37.81,29,4656,1414,2304,1250,2.4912,NEAR BAY,257800 -122.25,37.81,28,5806,1603,2563,1497,3.2177,NEAR BAY,273400 -122.25,37.81,39,854,242,389,228,3.125,NEAR BAY,237500 -122.25,37.81,52,2155,701,895,613,2.5795,NEAR BAY,350000 -122.26,37.81,34,5871,1914,2689,1789,2.8406,NEAR BAY,335700 -122.24,37.82,52,1509,225,674,244,4.9306,NEAR BAY,313400 -122.24,37.81,52,2026,482,709,456,3.2727,NEAR BAY,268500 -122.25,37.81,52,1758,460,686,422,3.1691,NEAR BAY,259400 -122.24,37.82,52,3481,751,1444,718,3.9,NEAR BAY,275700 -122.25,37.82,28,3337,855,1520,802,3.9063,NEAR BAY,225000 -122.25,37.82,52,1424,289,550,253,5.0917,NEAR BAY,262500 -122.25,37.82,32,3809,1098,1806,1022,2.6429,NEAR BAY,218500 -122.25,37.82,26,3959,1196,1749,1217,3.0233,NEAR BAY,255000 -122.25,37.83,52,2376,559,939,519,3.1484,NEAR BAY,224100 -122.25,37.83,35,1613,428,675,422,3.4722,NEAR BAY,243100 -122.25,37.83,52,1279,287,534,291,3.1429,NEAR BAY,231600 -122.25,37.83,28,5022,1750,2558,1661,2.4234,NEAR BAY,218500 -122.25,37.83,52,4190,1105,1786,1037,3.0897,NEAR BAY,234100 -122.23,37.84,50,2515,399,970,373,5.8596,NEAR BAY,327600 -122.23,37.84,47,3175,454,1098,485,5.2868,NEAR BAY,347600 -122.24,37.83,41,2576,406,794,376,5.956,NEAR BAY,366100 -122.24,37.85,37,334,54,98,47,4.9643,NEAR BAY,335000 -122.23,37.85,52,2800,411,1061,403,6.3434,NEAR BAY,373600 -122.24,37.84,52,3529,574,1177,555,5.1773,NEAR BAY,389500 -122.24,37.85,52,2612,365,901,367,7.2354,NEAR BAY,391100 -122.22,37.85,28,5287,1048,2031,956,5.457,NEAR BAY,337300 -122.22,37.84,50,2935,473,1031,479,7.5,NEAR BAY,295200 -122.21,37.84,44,3424,597,1358,597,6.0194,NEAR BAY,292300 -122.21,37.83,40,4991,674,1616,654,7.5544,NEAR BAY,411500 -122.2,37.84,30,2211,346,844,343,6.0666,NEAR BAY,311500 -122.21,37.84,34,3038,490,1140,496,7.0548,NEAR BAY,325900 -122.19,37.84,18,1617,210,533,194,11.6017,NEAR BAY,392600 -122.2,37.84,35,2865,460,1072,443,7.4882,NEAR BAY,319300 -122.21,37.83,34,5065,788,1627,766,6.8976,NEAR BAY,333300 -122.19,37.83,28,1326,184,463,190,8.2049,NEAR BAY,335200 -122.2,37.83,26,1589,223,542,211,8.401,NEAR BAY,351200 -122.19,37.83,29,1791,271,661,269,6.8538,NEAR BAY,368900 -122.19,37.82,32,1835,264,635,263,8.317,NEAR BAY,365900 -122.2,37.82,37,1229,181,420,176,7.0175,NEAR BAY,366700 -122.2,37.82,39,3770,534,1265,500,6.3302,NEAR BAY,362800 -122.18,37.81,30,292,38,126,52,6.3624,NEAR BAY,483300 -122.21,37.82,52,2375,333,813,350,7.0549,NEAR BAY,331400 -122.2,37.81,45,2964,436,1067,426,6.7851,NEAR BAY,323500 -122.21,37.8,50,2833,605,1260,552,2.8929,NEAR BAY,216700 -122.21,37.8,38,2254,535,951,487,3.0812,NEAR BAY,233100 -122.21,37.81,52,1389,212,510,224,5.2402,NEAR BAY,296400 -122.22,37.81,52,1971,335,765,308,6.5217,NEAR BAY,273700 -122.22,37.8,52,2183,465,1129,460,3.2632,NEAR BAY,227700 -122.22,37.8,52,2286,464,1073,441,3.0298,NEAR BAY,199600 -122.22,37.8,52,2721,541,1185,515,4.5428,NEAR BAY,239800 -122.22,37.81,52,2024,339,756,340,4.072,NEAR BAY,270100 -122.22,37.81,52,2944,536,1034,521,5.3509,NEAR BAY,302100 -122.23,37.8,52,2033,486,787,459,3.1603,NEAR BAY,269500 -122.23,37.81,52,1433,229,612,213,4.7708,NEAR BAY,314700 -122.22,37.81,52,2927,402,1021,380,8.1564,NEAR BAY,390100 -122.23,37.81,52,2315,292,861,258,8.8793,NEAR BAY,410300 -122.24,37.81,52,2485,313,953,327,6.8591,NEAR BAY,352400 -122.24,37.81,52,1490,238,634,256,6.0302,NEAR BAY,287300 -122.23,37.81,52,2814,365,878,352,7.508,NEAR BAY,348700 -122.24,37.81,52,2093,550,918,483,2.7477,NEAR BAY,243800 -122.24,37.8,52,888,168,360,175,2.1944,NEAR BAY,211500 -122.25,37.8,52,2087,510,1197,488,3.0149,NEAR BAY,218400 -122.24,37.81,52,2513,502,1048,518,3.675,NEAR BAY,269900 -122.25,37.81,46,3232,835,1373,747,3.225,NEAR BAY,218800 -122.25,37.8,42,4120,1065,1715,1015,2.9345,NEAR BAY,225000 -122.25,37.8,43,2364,792,1359,722,2.1429,NEAR BAY,250000 -122.25,37.8,41,1471,469,1062,413,1.6121,NEAR BAY,171400 -122.25,37.8,29,2468,864,1335,773,1.3929,NEAR BAY,193800 -122.24,37.79,27,1632,492,1171,429,2.3173,NEAR BAY,125000 -122.25,37.79,45,1786,526,1475,460,1.7772,NEAR BAY,97500 -122.25,37.79,50,629,188,742,196,2.6458,NEAR BAY,125000 -122.25,37.79,52,1339,391,1086,363,2.181,NEAR BAY,138800 -122.25,37.8,36,1678,606,1645,543,2.2303,NEAR BAY,116700 -122.25,37.8,43,2344,647,1710,644,1.6504,NEAR BAY,151800 -122.24,37.8,52,996,228,731,228,2.2697,NEAR BAY,127000 -122.24,37.8,52,1591,373,1118,347,2.1563,NEAR BAY,128600 -122.24,37.8,52,1586,398,1006,335,2.1348,NEAR BAY,140600 -122.24,37.8,47,2046,588,1213,554,2.6292,NEAR BAY,182700 -122.23,37.8,52,1192,289,772,257,2.3833,NEAR BAY,146900 -122.24,37.8,52,1803,420,1321,401,2.957,NEAR BAY,122800 -122.24,37.8,49,2838,749,1487,677,2.5238,NEAR BAY,169300 -122.23,37.8,52,783,184,488,186,1.9375,NEAR BAY,126600 -122.23,37.8,51,1590,414,949,392,1.9028,NEAR BAY,127900 -122.23,37.8,50,1746,480,1149,415,2.25,NEAR BAY,123500 -122.23,37.8,52,1252,299,844,280,2.3929,NEAR BAY,111900 -122.23,37.79,43,5963,1344,4367,1231,2.1917,NEAR BAY,112800 -122.23,37.79,52,1783,395,1659,412,2.9357,NEAR BAY,107900 -122.23,37.79,30,999,264,1011,263,1.8854,NEAR BAY,137500 -122.24,37.79,39,1469,431,1464,389,2.1638,NEAR BAY,105500 -122.24,37.79,47,1372,395,1237,303,2.125,NEAR BAY,95500 -122.24,37.79,52,674,180,647,168,3.375,NEAR BAY,116100 -122.24,37.79,43,1626,376,1284,357,2.2542,NEAR BAY,112200 -122.25,37.79,51,175,43,228,55,2.1,NEAR BAY,75000 -122.25,37.79,39,461,129,381,123,1.6,NEAR BAY,112500 -122.25,37.79,52,902,237,846,227,3.625,NEAR BAY,125000 -122.26,37.8,20,2373,779,1659,676,1.6929,NEAR BAY,115000 -122.22,37.77,52,391,128,520,138,1.6471,NEAR BAY,95000 -122.22,37.77,52,1137,301,866,259,2.59,NEAR BAY,96400 -122.23,37.77,52,769,206,612,183,2.57,NEAR BAY,72000 -122.23,37.78,52,472,146,415,126,2.6429,NEAR BAY,71300 -122.23,37.78,52,862,215,994,213,3.0257,NEAR BAY,80800 -122.22,37.78,50,1920,530,1525,477,1.4886,NEAR BAY,128800 -122.23,37.78,43,1420,472,1506,438,1.9338,NEAR BAY,112500 -122.23,37.78,52,986,258,1008,255,1.4844,NEAR BAY,119400 -122.23,37.78,44,2340,825,2813,751,1.6009,NEAR BAY,118100 -122.23,37.79,48,1696,396,1481,343,2.0375,NEAR BAY,122500 -122.23,37.79,49,1175,217,859,219,2.293,NEAR BAY,106300 -122.22,37.79,37,2343,574,1608,523,2.1494,NEAR BAY,132500 -122.23,37.79,30,610,145,425,140,1.6198,NEAR BAY,122700 -122.23,37.79,40,930,199,564,184,1.3281,NEAR BAY,113300 -122.22,37.79,44,1487,314,961,272,3.5156,NEAR BAY,109500 -122.22,37.79,52,3424,690,2273,685,3.9048,NEAR BAY,164700 -122.21,37.79,52,762,190,600,195,3.0893,NEAR BAY,125000 -122.22,37.79,46,2366,575,1647,527,2.6042,NEAR BAY,124700 -122.22,37.79,49,1826,450,1201,424,2.5,NEAR BAY,136700 -122.22,37.79,38,3049,711,2167,659,2.7969,NEAR BAY,141700 -122.2,37.79,29,1640,376,939,340,2.8321,NEAR BAY,150000 -122.21,37.79,47,1543,307,859,292,2.9583,NEAR BAY,138800 -122.21,37.79,34,2364,557,1517,516,2.8365,NEAR BAY,139200 -122.21,37.79,35,1745,409,1143,386,2.875,NEAR BAY,143800 -122.21,37.8,39,2003,500,1109,464,3.0682,NEAR BAY,156500 -122.21,37.8,39,2018,447,1221,446,3.0757,NEAR BAY,151000 -122.2,37.8,43,3045,499,1115,455,4.9559,NEAR BAY,273000 -122.2,37.8,52,1547,293,706,268,4.7721,NEAR BAY,217100 -122.21,37.8,52,3519,711,1883,706,3.4861,NEAR BAY,187100 -122.2,37.8,41,2070,354,804,340,5.1184,NEAR BAY,239600 -122.21,37.8,48,1321,263,506,252,4.0977,NEAR BAY,229700 -122.19,37.8,48,1694,259,610,238,4.744,NEAR BAY,257300 -122.19,37.8,46,1938,341,768,332,4.2727,NEAR BAY,246900 -122.19,37.79,50,968,195,462,184,2.9844,NEAR BAY,179900 -122.2,37.79,40,1060,256,667,235,4.1739,NEAR BAY,169600 -122.2,37.8,46,2041,405,1059,399,3.8487,NEAR BAY,203300 -122.19,37.8,52,1813,271,637,277,4.0114,NEAR BAY,263400 -122.19,37.79,45,2718,451,1106,454,4.6563,NEAR BAY,231800 -122.19,37.79,28,3144,761,1737,669,2.9297,NEAR BAY,140500 -122.2,37.79,35,1802,459,1009,390,2.3036,NEAR BAY,126000 -122.2,37.79,49,882,195,737,210,2.6667,NEAR BAY,122000 -122.2,37.79,44,1621,452,1354,491,2.619,NEAR BAY,134700 -122.21,37.79,45,2115,533,1530,474,2.4167,NEAR BAY,139400 -122.2,37.79,45,2021,528,1410,480,2.7788,NEAR BAY,115400 -122.21,37.78,46,2239,508,1390,569,2.7352,NEAR BAY,137300 -122.21,37.78,52,1477,300,1065,269,1.8472,NEAR BAY,137000 -122.21,37.78,52,1056,224,792,245,2.6583,NEAR BAY,142600 -122.21,37.78,49,898,244,779,245,3.0536,NEAR BAY,137500 -122.22,37.78,44,2968,710,2269,610,2.3906,NEAR BAY,111700 -122.21,37.78,43,1702,460,1227,407,1.7188,NEAR BAY,126800 -122.21,37.78,47,881,248,753,241,2.625,NEAR BAY,111300 -122.22,37.77,40,494,114,547,135,2.8015,NEAR BAY,114800 -122.22,37.78,50,1776,473,1807,440,1.7276,NEAR BAY,102300 -122.22,37.78,44,1678,514,1700,495,2.0801,NEAR BAY,131900 -122.22,37.78,51,1637,463,1543,393,2.489,NEAR BAY,119100 -122.21,37.76,52,1420,314,1085,300,1.7546,NEAR BAY,80600 -122.21,37.77,52,591,173,353,137,4.0904,NEAR BAY,80600 -122.21,37.77,52,745,153,473,149,2.6765,NEAR BAY,88800 -122.2,37.77,49,2272,498,1621,483,2.4338,NEAR BAY,102400 -122.21,37.77,46,1234,375,1183,354,2.3309,NEAR BAY,98700 -122.21,37.77,43,1017,328,836,277,2.2604,NEAR BAY,100000 -122.19,37.77,42,932,254,900,263,1.8039,NEAR BAY,92300 -122.2,37.77,39,2689,597,1888,537,2.2562,NEAR BAY,94800 -122.2,37.77,41,1547,415,1024,341,2.0562,NEAR BAY,102000 -122.2,37.78,52,2300,443,1225,423,3.5398,NEAR BAY,158400 -122.2,37.78,39,1752,399,1071,376,3.1167,NEAR BAY,121600 -122.2,37.78,50,1867,403,1128,378,2.5401,NEAR BAY,129100 -122.2,37.77,43,2430,502,1537,484,2.898,NEAR BAY,121400 -122.21,37.78,44,1729,414,1240,393,2.3125,NEAR BAY,102800 -122.19,37.78,52,1026,180,469,168,2.875,NEAR BAY,160000 -122.19,37.77,52,2170,428,1086,425,3.3715,NEAR BAY,143900 -122.19,37.77,52,2329,445,1144,417,3.5114,NEAR BAY,151200 -122.19,37.78,52,2492,415,1109,375,4.3125,NEAR BAY,164400 -122.19,37.78,52,2198,397,984,369,3.22,NEAR BAY,156500 -122.18,37.78,33,142,31,575,47,3.875,NEAR BAY,225000 -122.19,37.78,49,1183,205,496,209,5.2328,NEAR BAY,174200 -122.19,37.78,52,1070,193,555,190,3.7262,NEAR BAY,166900 -122.2,37.78,45,1766,332,869,327,4.5893,NEAR BAY,163500 -122.18,37.79,39,617,95,236,106,5.2578,NEAR BAY,253000 -122.18,37.79,41,1411,233,626,214,7.0875,NEAR BAY,240700 -122.18,37.79,46,2109,387,922,329,3.9712,NEAR BAY,208100 -122.19,37.79,47,1229,243,582,256,2.9514,NEAR BAY,198100 -122.19,37.79,50,954,217,546,201,2.6667,NEAR BAY,172800 -122.18,37.81,37,1643,262,620,266,5.4446,NEAR BAY,336700 -122.18,37.8,34,1355,195,442,195,6.2838,NEAR BAY,318200 -122.18,37.8,23,2317,336,955,328,6.7527,NEAR BAY,285800 -122.13,37.77,24,2459,317,916,324,7.0712,NEAR BAY,293000 -122.16,37.79,22,12842,2048,4985,1967,5.9849,NEAR BAY,371000 -122.17,37.78,42,1524,260,651,267,3.6875,NEAR BAY,157300 -122.17,37.77,30,3326,746,1704,703,2.875,NEAR BAY,135300 -122.18,37.78,43,1985,440,1085,407,3.4205,NEAR BAY,136700 -122.18,37.78,50,1642,322,713,284,3.2984,NEAR BAY,160700 -122.17,37.78,49,893,177,468,181,3.875,NEAR BAY,140600 -122.17,37.78,52,653,128,296,121,4.175,NEAR BAY,144000 -122.16,37.77,47,1256,,570,218,4.375,NEAR BAY,161900 -122.16,37.77,48,977,194,446,180,4.7708,NEAR BAY,156300 -122.16,37.77,45,2324,397,968,384,3.5739,NEAR BAY,176000 -122.16,37.77,39,1583,349,857,316,3.0958,NEAR BAY,145800 -122.17,37.77,39,1612,342,912,322,3.3958,NEAR BAY,141900 -122.17,37.77,31,2424,533,1360,452,1.871,NEAR BAY,90700 -122.17,37.76,41,1594,367,1074,355,1.9356,NEAR BAY,90600 -122.17,37.76,47,2118,413,965,382,2.1842,NEAR BAY,107900 -122.18,37.76,37,1575,358,933,320,2.2917,NEAR BAY,107000 -122.17,37.76,38,1764,397,987,354,2.4333,NEAR BAY,98200 -122.18,37.76,50,1187,261,907,246,1.9479,NEAR BAY,89500 -122.18,37.76,52,754,175,447,165,3.9063,NEAR BAY,93800 -122.18,37.76,49,2308,452,1299,451,1.8407,NEAR BAY,96700 -122.18,37.77,27,909,236,396,157,2.0786,NEAR BAY,97500 -122.18,37.77,42,1180,257,877,268,2.8125,NEAR BAY,97300 -122.18,37.76,43,2018,408,1111,367,1.8913,NEAR BAY,91200 -122.19,37.76,49,1368,282,790,269,1.7056,NEAR BAY,91400 -122.18,37.77,52,2744,547,1479,554,2.2768,NEAR BAY,96200 -122.18,37.77,51,2107,471,1173,438,3.2552,NEAR BAY,120100 -122.18,37.77,52,1748,362,1029,366,2.0556,NEAR BAY,100000 -122.19,37.76,52,2024,391,1030,350,2.4659,NEAR BAY,94700 -122.2,37.76,47,1116,259,826,279,1.75,NEAR BAY,85700 -122.19,37.77,41,2036,510,1412,454,2.0469,NEAR BAY,89300 -122.19,37.77,45,1852,393,1132,349,2.7159,NEAR BAY,101400 -122.19,37.76,41,921,207,522,159,1.2083,NEAR BAY,72500 -122.19,37.76,45,995,238,630,237,1.925,NEAR BAY,74100 -122.2,37.75,36,606,132,531,133,1.5809,NEAR BAY,70000 -122.2,37.76,37,2680,736,1925,667,1.4097,NEAR BAY,84600 -122.19,37.76,38,1493,370,1144,351,0.7683,NEAR BAY,81800 -122.19,37.75,19,2207,565,1481,520,1.3194,NEAR BAY,81400 -122.19,37.75,28,856,189,435,162,0.8012,NEAR BAY,81800 -122.19,37.76,26,1293,297,984,303,1.9479,NEAR BAY,85800 -122.19,37.74,36,847,212,567,159,1.1765,NEAR BAY,87100 -122.18,37.74,42,541,154,380,123,2.3456,NEAR BAY,83500 -122.19,37.73,44,1066,253,825,244,2.1538,NEAR BAY,79700 -122.19,37.74,43,707,147,417,155,2.5139,NEAR BAY,83400 -122.19,37.73,45,1528,291,801,287,1.2625,NEAR BAY,84700 -122.18,37.73,42,909,215,646,198,2.9063,NEAR BAY,80000 -122.18,37.73,43,1391,293,855,285,2.5192,NEAR BAY,76400 -122.18,37.73,44,548,119,435,136,2.1111,NEAR BAY,79700 -122.18,37.73,42,4074,874,2736,780,2.455,NEAR BAY,82400 -122.17,37.74,41,1613,445,1481,414,2.4028,NEAR BAY,97700 -122.17,37.74,47,463,134,327,137,2.15,NEAR BAY,97200 -122.17,37.74,43,818,193,494,179,2.4776,NEAR BAY,101600 -122.17,37.73,43,1473,371,1231,341,2.1587,NEAR BAY,86500 -122.18,37.74,35,504,126,323,109,1.8438,NEAR BAY,90500 -122.17,37.74,46,1026,226,749,225,3.0298,NEAR BAY,107600 -122.17,37.74,46,769,183,693,178,2.25,NEAR BAY,84200 -122.18,37.74,46,2103,391,1339,354,2.2467,NEAR BAY,88900 -122.18,37.75,45,330,76,282,80,4.0469,NEAR BAY,80700 -122.18,37.75,46,941,218,621,195,1.325,NEAR BAY,87100 -122.17,37.75,38,992,,732,259,1.6196,NEAR BAY,85100 -122.18,37.75,45,990,261,901,260,2.1731,NEAR BAY,82000 -122.19,37.75,36,1126,263,482,150,1.9167,NEAR BAY,82800 -122.18,37.75,43,1036,233,652,213,2.069,NEAR BAY,84600 -122.18,37.75,36,1047,214,651,166,1.712,NEAR BAY,82100 -122.17,37.76,33,1280,307,999,286,2.5625,NEAR BAY,89300 -122.17,37.75,43,1587,320,907,306,1.9821,NEAR BAY,98300 -122.17,37.75,41,1257,271,828,230,2.5043,NEAR BAY,92300 -122.17,37.75,44,1218,248,763,254,2.3281,NEAR BAY,88800 -122.17,37.75,48,1751,390,935,349,1.4375,NEAR BAY,90000 -122.16,37.76,45,2299,514,1437,484,2.5122,NEAR BAY,95500 -122.16,37.75,38,245
-
----
-
-# ✍️ Activitats pràctiques UT3
-
-> **✍️ Activitat Pràctica 3.1 — Tarea 10 - Modelos de clasificación**
-> Subir el notebook IA_BD_PIA_UT_3.8_SVM.ipynb completado.
-
-> **✍️ Activitat Pràctica 3.2 — Tarea 9 - Datos duplicados y normalización**
-> ### 📄 IA BD PIA UT 3.6 Tarea 9 duplicados i norm.ipynb
->
-> ```python
-> # <center> Ejercicios sobre missing data, dupicates y normalización.</center><img src="https://github.com/brohrer-ms/public-hosting/raw/master/missing_values/missing_values_data.png"  width=45% />
-> ```
->
-> ```python
-> # Descargar el siguiente dataset:
-> ```
->
-> **Bengaluru.csv**
->
-> ```python
-> # Cargar las bibliotecas necesarias para:
-> ```
->
-> - Cargar el dataset.
-> - Poder trabajr con el dataset.
->
-> ```python
-> # Cargar y visualizar el archivo
-> ```
->
-> ```python
-> # Visualizar la información de los datos faltantes
-> ```
->
-> ```python
-> # Visualizar cuantos valores = NaN tenemos.
-> ```
->
-> ```python
-> # Visualizar cuantos valores = 0 tenemos.
-> ```
->
-> Realizar un bucle que mira los valores=0 de las columnas ¿Qué conclusión sacamos?
->
-> ```python
-> # Crear un dataset en el que se reemplaza los datos faltantes por 0
-> ```
->
-> ```python
-> # Listar los tipos de las columnas
-> ```
->
-> ¿Qué conclusiones podemos sacar?
->
-> ```python
-> # Sobre el dataset original
-> ```
->
-> - Pasar a fillna() el argumento method = "bfill" o "ffill"
-> - Repetir en paso anterior pasando también el argumento axis= 0 o 1
->
-> ```python
-> # Sobre el dataset original
-> ```
->
-> - Con replace() cambiar todos los "Ready To Move" con la fecha de hoy
->
-> > **⚠️ Nota: Para obtener la fecha (de hoy), importar la clase...**
-> > Nota: Para obtener la fecha (de hoy), importar la clase date de la biblioteca datetime **[más información](https://docs.python.org/es/3/library/datetime.html#)**
->
-> ```python
-> # Sobre el dataset original
-> ```
->
-> - Con replace() cambiar todos los "Shncyes" y "Chikka Tirupathi" con "Renegociar"
->
-> ```python
-> # Sobre el dataset original
-> ```
->
-> - Con where() cambiar todos los "total_sqft" > 1500 con "Gran lujo"
->
-> ```python
-> # Sobre el dataset original
-> ```
->
-> - Reemplazar los valores de la columna "bath" por NaN con la condicion "indice de la linea" es impar
->
-> > **⚠️ nota: usar loc[condicion, columna]...**
-> > nota: usar loc[condicion, columna]
->
-> ```python
-> # Sobre el dataset original
-> ```
->
-> - Reemplazar los valores de la columna "price" con NaN por un valor interpolado con el metodo interpolate()
->
-> ```python
-> # Descargar el siguiente dataset:
-> ```
->
-> **car.scv**
->
-> - Cargar el dataset.
-> - Comprobar si hay duplicados.
-> - visualizar la cantidad de duplicados.
->
-> - Ver si hay duplicados
-> - Sacar la cantidad de duplicados
->
-> - Eliminar los duplicados
-> - Comprobar si hay duplicados
->
-> ```python
-> # Normalización de los datos
-> ```
->
-> ```python
-> # Cargar el dataset valores.csv
-> ```
->
-> - Ver el tipado de las columnas
-> - Eliminar los duplicados
->
-> - Aplicar la función MinMaxScaler de la clase preprocessing al dataset valores.csv despues de quitar los duplicados
->
-> - Aplicar la función standard scaler al dataset valores.csv despues de quitar los duplicados
->
-> - Aplicar la función standard scaler al dataset valores.csv despues de quitar los duplicados
-> - Sumar los valores de las columnas y comprobar resultados.
-> - calcular la desviación estándar del resultado.
->
-> ### 📄 Bengaluru.csv
->
-> area_type,availability,location,size,society,total_sqft,bath,balcony,price ,19-Dec,Electronic City Phase II,2 BHK,0,1056,2.0,1.0,39.07 Plot Area,,Chikka Tirupathi,4 Bedroom,Theanmp,0,5.0,3.0,120.0 Built-up Area,Ready To Move,,3 BHK,,1440,0.0,3.0,62.0 Super built-up Area,Ready To Move,Lingadheeranahalli,,Soiewre,1521,3.0,0.0,95.0 Super built-up Area,Ready To Move,Kothanur,2 BHK,,1200,2.0,1.0,0.0 Super built-up Area,Ready To Move,Whitefield,2 BHK,DuenaTa,,2.0,1.0,38.0 ,18-May,Old Airport Road,4 BHK,Jaades ,2732,,,204.0 Super built-up Area,,Rajaji Nagar,4 BHK,Brway G,3300,4.0,,600.0 Super built-up Area,Ready To Move,,3 BHK,,1310,3.0,1.0, Plot Area,Ready To Move,Gandhi Bazar,,,1020,6.0,,370.0 Super built-up Area,18-Feb,Whitefield,3 BHK,,1800,2.0,2.0,70.0 0,Ready To Move,Whitefield,4 Bedroom,Prrry M,,5.0,3.0,295.0 Super built-up Area,0,7th Phase JP Nagar,2 BHK,Shncyes,1000,,1.0,38.0 Built-up Area,Ready To Move,0,2 BHK,,1100,2.0,,40.0 Plot Area,Ready To Move,Sarjapur,0,Skityer,2250,3.0,2.0,
->
-> ### 📄 valores.csv
->
-> A,B,C,D,E 84,32,21,87,46 51,71,59,93,52 52,39,18,84,3 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 71,94,25,94,91 44,67,4,36,55 77,62,19,91,40 39,95,5,70,1 25,77,2,60,86 23,42,45,21,50 84,59,40,46,45 95,70,14,38,53 88,74,6,99,13 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 69,29,8,70,9 44,37,19,35,66 87,62,52,27,41 5,25,11,77,46 12,53,24,8,68 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 30,29,87,40,96 8,67,40,97,47 38,85,87,40,25 56,84,46,6,40 58,53,42,95,1 26,16,82,7,92 89,17,14,6,60 85,43,45,71,61 56,61,46,26,74 87,28,14,74,63 15,26,63,8,33 43,99,58,75,25 55,79,45,49,47 23,33,81,13,34 66,97,11,43,98 39,8,52,8,69 74,16,8,98,30 54,65,85,48,24 79,84,31,71,73 44,93,75,17,20 87,5,1,77,90 80,3,52,74,97 23,26,93,84,78 9,26,61,35,77 76,91,42,58,71 21,79,63,27,54 21,45,37,41,16 32,98,15,53,8 38,35,70,58,38 74,55,60,90,30 10,86,40,11,98 20,30,79,71,97 80,90,8,49,76 31,92,14,92,75 87,43,33,92,66 32,71,32,74,53 27,41,65,94,84 41,46,7,56,26 44,50,34,11,36 21,44,34,68,66 4,63,72,6,48 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 8,65,59,4,21 92,96,25,19,60 28,78,48,24,96 14,8,17,43,11 23,25,93,83,26 58,53,42,95,1 26,16,82,7,92 89,17,14,6,60 85,43,45,71,61 56,61,46,26,74 87,28,14,74,63 57,24,87,69,93 18,43,9,34,21 23,26,93,84,78 9,26,61,35,77 76,91,42,58,71 21,79,63,27,54 21,45,37,41,16 87,62,52,27,41 5,25,11,77,46 12,53,24,8,68 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 69,29,8,70,9 44,37,19,35,66 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 64,32,30,56,63 44,67,4,36,55 77,62,19,91,40 59,30,1,5,35 4,17,64,58,41 30,29,87,40,96 8,67,40,97,47 38,85,87,40,25 56,84,46,6,40 8,81,39,18,22 69,98,44,57,13 47,81,61,13,43 83,88,54,48,65 25,22,1,5,56 78,78,11,71,25 44,34,31,38,74 78,8,54,48,71 12,3,10,95,10 78,36,52,21,58 72,87,68,99,29 50,47,62,70,92 92,96,25,19,60 28,78,48,24,96 14,8,17,43,11 23,25,93,83,26 57,24,87,69,93 34,6,39,82,39 80,26,40,70,23 74,44,66,19,84 68,54,11,22,6 64,32,30,56,63 44,67,4,36,55 77,62,19,91,40 39,95,5,70,1 25,77,2,60,86 23,42,45,21,50 84,59,40,46,45 66,26,29,70,22 11,66,44,22,80 44,67,4,36,55 77,62,19,91,40 11,66,44,22,80
-
-> **✍️ Activitat Pràctica 3.3 — Tarea 8 - Trabajando con scikit learm - Aconseguir dades**
-> ```python
-> # Recuperar desde el repositorio el dataset Wine recognition¶
-> ```
->
-> ### Listar encabezados de los datos
->
-> ### Listar encabezados de los targets
->
-> ### Recuperar la cantidad de elementos de cada clase.
->
-> ```python
-> # Recuperar desde el repositorio el dataset California Housing¶
-> ```
->
-> ### Realizar un histograma que muestre la edad media de las viviendas
->
-> ```python
-> # Generar un dataset con make_swiss_roll y representarlo en 3D
-> ```
-
-> **✍️ Activitat Pràctica 3.4 — Tarea 7 - Trabajando con la biblioteca Matplotlib**
-> ```python
-> # <center> Ejercicios de matplotlib</center>
-> ```
->
-> <img align="center" src="https://interactivechaos.com/sites/default/files/inline-images/tutorial_matplotlib.png" width=25% />
->
-> ```python
-> # Importar las librerias necesarias a la realización de los ejercicios.
-> ```
->
-> ```python
-> # Ejercicio 1
-> ```
->
-> - Escribir un programa que calcule las funciones polinomial siguiente: y = x*2 + 3, z = x**2 + 1
-> - Los valores de x iran desde -50 hasta +50 en pasos de 1
->
-> ```python
-> # Ejercicio 2
-> ```
->
-> **Realizar lo siguiente:**
->
-> - Crea una figura que visualice las curvas y(x) y z(x).
->
-> ```python
-> # Ejercicio 3
-> ```
->
-> **Como puedes ver, visualmente una curva domina sobre la otra.**
->
-> - Realizar las modificaciones oportunas al código para que las 2 curvas tengan la misma importante dentro del marco.
->
-> ```python
-> # Ejercicio 4
-> ```
->
-> - Añadir el nombre de los ejes.
-> - Añadir un título a la gráfica.
-> - Añadir una leyenda a las gráficas.
->
-> ```python
-> # Ejercicio 5
-> ```
->
-> - ir a https://claudiovz.github.io/scipy-lecture-notes-ES/intro/matplotlib/matplotlib.html
-> - Realizar una anotación en el punto de coordenadas x=20, y=f(x).
->
-> ```python
-> # Ejercicio 6
-> ```
->
-> **vamos a poner una grafica dentro de otra gráfica.** Para ello usaremos el método add.axes al que pasaremos una lista de la siguiente manera.
->
-> - fig = plt.figure()
-> - ax1 = fig.add_axes([0,0,1,1])
-> - ax2 = fig.add_axes([0.2,0.5,.2,.2])
->
-> **Mirar el resultado e entender los argumentos que se han pasado a add_axex([]).**
->
-> ## Ejercicio 7
->
-> - Representa los valores de y en el marco encapsulado.
-> - Representa los valores de z en el marco principal.
->
-> ## Ejercicio 8
->
-> - Vamos a representar la misma gráfica pero cambiando las escalas de x.
-> - De esa manera emularemos un "zoom".
-> - Para limitar los valores de "x" en el marco encapsulado usar ax().set_xlim(xx,yy) / ax().set_ylim(zz,ww)
->
-> ## Ejercicio 9
->
-> **Crear dos arcos para insertar 2 gráficos.**
->
-> ## Ejercicio 10
-
-> **✍️ Activitat Pràctica 3.5 — Tarea 6 - Trabajando con la biblioteca Pandas**
-> ```python
-> # <center> Ejercicios de Pandas
-> ```
->
-> <img align="center" src="https://habrastorage.org/files/10c/15f/f3d/10c15ff3dcb14abdbabdac53fed6d825.jpg" width=50% />
->
-> ## Utilizando la biblioteca Pandas **[Pandas](http://pandas.pydata.org)**
->
-> Las principales estructuras de datos en `Pandas` se implementan con las clases **Series** y **DataFrame**. La primera estructura es un tablero **indexado unidimensional** llamado **serie**. La segunda es un tablero **indexado bidimensional** llamado **dataframe**.
->
-> ```python
-> import numpy as np
-> import pandas as pd
-> pd.set_option("display.precision", 4) # representación de los datos con 4 digitos
-> ```
->
-> ### Ejercicio 1 Crear una serie que contenga los siguientes elementos: 1, 3, 5, NaN, 6, 8.
->
-> ### Ejercicio 2 Crear una serie que contenga los siguientes elementos: 1, 3, 5, 7, 9, 11, 13, NaN.
->
-> ### Ejercicio 3 Cambiar el indice de la serie a A, B ,C ,D, E, F, G, H.
->
-> ### Ejercicio 4 Acceder al valor del indice "F".
->
-> ### Ejercicio 5 Crear un serie temporal que empiece:&emsp;- Ahora, $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$- Tenga 10 periodos. $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$- Una base de tiempo en segundos.
->
-> ### Ejercicio 6 Crear un dataframe de 10 x 4 de la siguiente manera
->
-> - El contenido del dataframe serán numeros flotantes que se representaran con 2 decimales.
-> - En indice será numerico y empezará en 1.
-> - El nombre de las columnas será A, B, C, D.
->
-> ### Ejercicio 7 Abrir el archivo `housing.csv` y visualizar las 5 primeras lineas.
->
-> ### Ejercicio 8 Visualizar la información siguiente.
->
-> - Talla del dataframe.
-> - nombre de las columnas.
-> - Tipo de datos.
-> - Cantidad total de datos.
->
-> ### Ejercicio 9 Abrir el archivo `taxisNY.parquet` y visualizar las 10 primeras lineas. (datos sacados de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
->
-> ### Ejercicio 10
->
-> Del archivo parquet `taxisNY.parquet` sacar el tipo de datos.
->
-> ### Ejercicio 11 Indexación y recuperación de datos
->
-> Del dataframe anterior, recuperar la columna de las propinas y calcular la media de esa columna.
->
-> - De esa misma columna sacar la suma total de las propinas dadas.
-> - Sacar el valor medio de las propinas.
-> - Sacar las veces que se ha dado propina y las que no.
->
-> ### Ejercicio 12 Indexación y recuperación de datos
->
-> De la columna correspondiente al precio cobrado por la carrera recuperar el valor minimo y el máximo.
-
-> **✍️ Activitat Pràctica 3.6 — Tarea 5 - Trabajando con la biblioteca NumPy**
-> ```python
-> # Trabajando con la biblioteca NumPy
-> ```
->
-> ```python
-> import numpy as np
-> ```
->
-> ```python
-> # Ejercicio 1
-> ```
->
-> - Crear 2 arrays que contengan los valores 5 y 6 y sumarlos.
-> - Mostrar el resultado.
->
-> ```python
-> # Ejercicio 2
-> ```
->
-> - Crear 3 arrays con los siguientes valores : [1,2,3], [3,2,1] et [0,1,-1].
-> - Sumarlos y mostrar el resultado.
-> - Mostrar el tamaño resultante del array.
->
-> ```python
-> # Ejercicio 3
-> ```
->
-> ```python
-> # Ejercicio 4
-> ```
->
-> - Crear un array de 2 filas y 3 columnas con los valores 1, 2, 3, 4, 5, 6.
-> - Imprimir el resultado.
-> - Mostar la dimension del array.
->
-> ```python
-> # Ejercicio 5
-> ```
->
-> - Crear 2 arrays de 4 filas y 2 columnas.
->
-> El primer array tendrá los valores 1, 2, 3, 4, 5, 6, 7, 8. El segundo los valores 8, 7, 6, 5, 4, 3, 2, 1.
->
-> - multiplicarlos y mostrar el resultado.
-> - Mostar la dimension del array resultante.
->
-> ```python
-> # Ejercicio 6
-> ```
->
-> - Crea 2 arrays con los valores [4,7], [3,6]
-> - Crea 3 arrays con los valores (2), (3), (1.5)
-> - Realiza las operaciones siguientes
->
-> > Multiplica A1 por A3 -> Multiplica A2 por A4 por A5 -> Suma A1 por A2 -> Multiplica A1 por A2
->
-> ```python
-> # Ejercicio 7
-> ```
->
-> - Crea un array con 10 ceros
-> - Crea un array con 10 unos
-> - Crea un array de 10 cincos
->
-> ```python
-> # Ejercicio 8
-> ```
->
-> - Crea un array de enteros que empiece en 10 y acabe en 50
-> - Crea un array de enteros pares que empiece en 10 y acabe en 50
-> - Crea una matriz 3x3 con los valores desde el 0 hasta el 8
->
-> ```python
-> # Ejercicio 9
-> ```
->
-> - Genera un array que contenfo un (1) número aleatorio
-> - Genera un array de 24 números aleatorios entre 1 y 50.
-> - A partir del array anterior crear una matriz (3,2,2)
->
-> ```python
-> # Ejercicio 10
-> ```
->
-> - Crea el siguiente array
->
-> [[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1 ], [0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2 ], [0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.29, 0.3 ], [0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.39, 0.4 ], [0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47, 0.48, 0.49, 0.5 ], [0.51, 0.52, 0.53, 0.54, 0.55, 0.56, 0.57, 0.58, 0.59, 0.6 ], [0.61, 0.62, 0.63, 0.64, 0.65, 0.66, 0.67, 0.68, 0.69, 0.7 ], [0.71, 0.72, 0.73, 0.74, 0.75, 0.76, 0.77, 0.78, 0.79, 0.8 ], [0.81, 0.82, 0.83, 0.84, 0.85, 0.86, 0.87, 0.88, 0.89, 0.9 ], [0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1. ]])
->
-> ```python
-> # Ejercicio 11
-> ```
->
-> - Crea un programa que genere un array de 5,5 con numeros aleatorios entre 0 y 9.
-> - Crea una rutina o busca una instruccion que permita cambiar los valores 5 por 10.
->
-> ```python
-> # Ejercicio 12
-> ```
->
-> - Crea un programa que genere un array de con 20 numeros aleatorios entre 0 y 9.
-> - Crea una rutina que permita contar cuantas veces aparece el valor 5 en el array.
->
-> ```python
-> # Ejercicio 13
-> ```
->
-> - Crea un programa que genere un array de (5,5) con numeros aleatorios entre 0 y 9.
-> - Crea una rutina que permita contar cuantas veces aparece el valor 5 en el array.
 
 ---

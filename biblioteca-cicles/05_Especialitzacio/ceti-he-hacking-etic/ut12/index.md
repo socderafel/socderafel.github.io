@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT12 — Explotación de vulnerabilidades — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD11 — Explotación de vulnerabilidades · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT12 Completa"
-prev_url: "../ut11/ut11actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT11"
+prev_url: "../ut11/ut1101.html"
+prev_label: "⬅️ 10.1 Ingenieria social"
 next_url: "../ut12/ut1201.html"
-next_label: "12.1 Introducción ➡️"
+next_label: "11.1 Introducción ➡️"
 ---
 
-# 📘 UT12 — Explotación de vulnerabilidades (Unitat Completa)
+# 📘 UD11 — Explotación de vulnerabilidades (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**12.1 Introducción**](#ut1201) (o [obrir en pàgina individual ➡️](./ut1201.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**11.1 Introducción**](./ut1201.md)
 
 ---
 
-## 12.1 Introducción
+# 11.1 Introducción
 
 Tema 7. Auditoria de seguretat: Explotació de vulnerabilitats. Hacking ètic (HE) 1r CIBER Alicia Ferrando
 
@@ -172,3 +176,5 @@ EXPLOTACIÓ DE VULNERABILITATS PAYLOAD ● Mentre que amb l'exploit s'explota un
 EXPLOTACIÓ DE VULNERABILITATS FERRAMENTES ● Metasploit Framework: Permet l'explotació de vulnerabilitats a diferents sistemes operatius i facilita l'execució d'exploits aprofitant vulnerabilitats conegudes. Compta amb una gran comunitat donant suport. ● Cobalt Strike: Producte de proves de penetració, de pagament, que permet a un atacant desplegar un agent anomenat "Beacon", que té una gran quantitat de funcionalitats per a l'atacant: execució d'ordres, registre de claus, transferència de fitxers, escalada de privilegis, exploració de ports, moviment lateral, etc.
 
 ● Pupy Rat: Aplicació per crear portes traseres, realitzar accions per connectar-se a sistemes remots, realitzar exploits per recollir dades, augmentar els privilegis de descarregar i carregar fitxers, capturar la pantalla o pulsacions de tecles, etc.
+
+---

@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT7 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+title: "2.1 Continguts i Casos Guiats · 🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · U1 — Accés Remot Segur (SSH)"
-prev_url: "../ut07/ut0701.html"
-prev_label: "⬅️ 7.1 Plantilla qüestionari d'avaluació"
+badge: "2n SMX · Grau Mitjà · UD2 — Accés Remot Segur (SSH)"
+prev_url: "../ut07/index.html"
+prev_label: "⬅️ 📘 UD2 Completa (1 pàgina)"
 next_url: "../ut06/index.html"
-next_label: "📘 U2 Completa (1 pàgina) ➡️"
+next_label: "📘 UD3 Completa (1 pàgina) ➡️"
 ---
 
-# ✍️ Activitats pràctiques UT7
+# 2.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 7.1 — Entrega Acta Inicial**
 > Entrega Acta Inicial

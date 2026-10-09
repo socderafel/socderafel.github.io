@@ -4,36 +4,27 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — U1. Introducció a la informática":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Teoria sobre maquinari (hardware)": ut00/ut0001.md
-      - "0.2 Apuntes de sistemas de numeración": ut00/ut0002.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
-  - "UT1 — Canva":
-      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Tutorial Canva": ut01/ut0101.md
-      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
-  - "UT3 — Procesadores de Texto":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+  - "UD1 — U1. Introducció a la informática":
+      - "📘 UD1 Completa (1 pàgina)": ut00/index.md
+      - "1.1 Teoria sobre maquinari (hardware)": ut00/ut0001.md
+      - "1.2 Apuntes de sistemas de numeración": ut00/ut0002.md
+  - "UD2 — Canva":
+      - "📘 UD2 Completa (1 pàgina)": ut01/index.md
+      - "2.1 Tutorial Canva": ut01/ut0101.md
+  - "UD3 — Procesadores de Texto":
+      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
       - "3.1 Continguts i Recursos": ut03/ut0301.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "UT4 — Hojas de cálculo":
-      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+  - "UD4 — Hojas de cálculo":
+      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
       - "4.1 Continguts i Recursos": ut04/ut0401.md
-      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
-  - "UT5 — Bases de Datos":
-      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+  - "UD5 — Bases de Datos":
+      - "📘 UD5 Completa (1 pàgina)": ut05/index.md
       - "5.1 BBDD": ut05/ut0501.md
-      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "UT6 — Redes":
-      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
+  - "UD6 — Redes":
+      - "📘 UD6 Completa (1 pàgina)": ut06/index.md
       - "6.1 Redes Informáticas (PPT)": ut06/ut0601.md
       - "6.2 Redes Informáticas": ut06/ut0602.md
-      - "6.3 Criteris Avaluació Presentació Redes": ut06/ut0603.md
-      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
-  - "UT7 — Páginas Web":
-      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+  - "UD7 — Páginas Web":
+      - "📘 UD7 Completa (1 pàgina)": ut07/index.md
       - "7.1 HTML5": ut07/ut0701.md
       - "7.2 CSS3": ut07/ut0702.md
-      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
-  - "📂 Índex de Documents i Recursos": references.md

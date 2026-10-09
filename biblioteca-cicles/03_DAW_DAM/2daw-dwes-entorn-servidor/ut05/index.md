@@ -1,25 +1,27 @@
 ---
 layout: default
-title: "UT5 — Unit 5 - Introduction to frameworks. Laravel I — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca"
+title: "UD5 — Introduction to frameworks. Laravel I · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut04/ut0401.html"
+prev_label: "⬅️ 4.1 U4 Data Access"
 next_url: "../ut05/ut0501.html"
-next_label: "5.1 U5 - Frameworks. Laravel I ➡️"
+next_label: "5.1 Frameworks. Laravel I ➡️"
 ---
 
-# 📘 UT5 — Unit 5 - Introduction to frameworks. Laravel I (Unitat Completa)
+# 📘 UD5 — Introduction to frameworks. Laravel I (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 U5 - Frameworks. Laravel I**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**5.2 How to install npm (node) into our existing cont**](#ut0502) (o [obrir en pàgina individual ➡️](./ut0502.md) )
-> - [**5.3 U5 Class exercises**](#ut0503) (o [obrir en pàgina individual ➡️](./ut0503.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 Frameworks. Laravel I**](./ut0501.md)
+- [**5.2 How to install npm (node) into our existing cont**](./ut0502.md)
 
 ---
 
-## 5.1 U5 - Frameworks. Laravel I
+# 5.1 Frameworks. Laravel I
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Resources
@@ -470,7 +472,7 @@ value attribute of the input element the following
 
 ---
 
-## 5.2 How to install npm (node) into our existing cont
+# 5.2 How to install npm (node) into our existing cont
 
 **Extracted from the official node webpage: https://github.com/nodesource/distributions#installation-instructions**
 
@@ -491,80 +493,3 @@ apt-get update
 apt-get install nodejs -y
 
 ---
-
-## 5.3 U5 Class exercises
-
-1. Create a Laravel project with the following: - Home: Home page with a text saying "Welcome to my photo blog" and some more content. - About Us: A list of people (using an array) and a description. - Photos: A section where there is a text saying: "You are watching the photo with id: X", where X is a parameters that depends on the route you have introduced. Be default, if no parameter is introduced, the id 1 will be taken into account. - As static elements of the webpages we have: - Image with a logo as header of the webpage - Title near the logo - Navigation menu for moving between sections. - Laravel includes bootstrap. Use bootstrap elements in the webpage
-2. Create a webpage with header-body-footer. The body will contain a contact form (name, email, subject, message). Same route has to be used when accessing to the form than when all data is correct. When data is correct show a webpage similar to the contact with all the data in a table.
-3. Investigate and apply some Laravel predefined validations. https://laravel.com/docs/10.x/validation#available-validation-rules
-4. Add two new elements to the example created in class with a form. These elements have to be a password and confirm password. Passwords needs: minimum 8, upper and lower case, letters, numbers, symbols and it has not have to appear in a data known data breach (its not compromised). Besides, investigate how to validate automatically that "confirm password" is the same than "password".
-
----
-
-## ✍️ Activitats pràctiques UT5
-
-> **✍️ Activitat Pràctica 5.1 — Task 1.1 - MVC with Laravel**
-> DWES – U5A1
->
-> U
->
-> Unit 5 – Task 1.1 Dawstragram
->
-> Objectives
->
-> - Create a Laravel project
-> - Create Laravel routes
-> - Create Laravel controllers
-> - Create Laravel views using Blade.
->
-> Instructions
->
-> - Once finished, upload to Aules a single compressed file that includes
->
-> the project.
->
-> We are going to create a social network similar to Instagram. The main appearance will be as follows
->
-> - Create a Laravel project named dawstagram.
->
-> ### 2. Routes
->
-> - Create routes for
-> - / -> home page
->
-> ii. /login -> login page iii. /register -> signup page
->
-> ### 3. Views
->
-> - Every webpage will have the structure as you can see above.
->
-> Remember
->
-> - Use a template.
->
-> ii. Use Laravel directives.
->
-> - Create three views (home, login, register).
-> - Investigate how to include css files, images and statis resources
->
-> into the views. Explain it with your words (little tutorial) and apply it to your view. (TIP: assets)
->
-> DWES – U5A1
->
-> - You can also use the framework for CSS you want.
->
-> Tailwind is the most famous CSS framework for Laravel.
->
-> - Register view will have this content
->
-> - Login view it’s on your own.
->
-> ### 4. Controller
->
-> - Create a controller (RegisterController) with two methods, one for
->
-> register and one for login.
->
-> - Both have to dump into a view (different than the form) the values
->
-> sent by the form.

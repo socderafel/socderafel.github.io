@@ -14,20 +14,16 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.3 Document: Aforismes en SI",
+          "label": "1.1 Document: Aforismes en SI",
           "href": "ut01/ut0103.html"
         },
         {
-          "label": "1.4 Document: Introducció. Conceptes inicials",
+          "label": "1.2 Document: Introducció. Conceptes inicials",
           "href": "ut01/ut0104.html"
         },
         {
-          "label": "1.5 Elements vulnerables",
+          "label": "1.3 Elements vulnerables",
           "href": "ut01/ut0105.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
@@ -50,10 +46,6 @@
         {
           "label": "2.3 Preparació Màquines Virtuals per a pràctiques po",
           "href": "ut02/ut0203.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     },
@@ -72,10 +64,6 @@
         {
           "label": "3.2 Anàlisi Forense",
           "href": "ut03/ut0302.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
@@ -94,10 +82,6 @@
         {
           "label": "4.2 Esteganografia",
           "href": "ut04/ut0402.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     },
@@ -112,10 +96,6 @@
         {
           "label": "5.1 Criptografia de clau pública",
           "href": "ut05/ut0501.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     },
@@ -128,16 +108,12 @@
           "class": "unit-full-link"
         },
         {
-          "label": "7.2 UD5-1 Tipus de malware",
+          "label": "6.1 1 Tipus de malware",
           "href": "ut07/ut0702.html"
         },
         {
-          "label": "7.3 UD5-2 Programari anti malware",
+          "label": "6.2 2 Programari anti malware",
           "href": "ut07/ut0703.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT7",
-          "href": "ut07/ut07actividades.html"
         }
       ]
     },
@@ -150,20 +126,16 @@
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 Segurertat en xarxes corporatives",
+          "label": "7.1 Segurertat en xarxes corporatives",
           "href": "ut08/ut0801.html"
         },
         {
-          "label": "8.2 Seguretat en xarxes sense fil",
+          "label": "7.2 Seguretat en xarxes sense fil",
           "href": "ut08/ut0802.html"
         },
         {
-          "label": "8.3 VPN",
+          "label": "7.3 VPN",
           "href": "ut08/ut0803.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT8",
-          "href": "ut08/ut08actividades.html"
         }
       ]
     },
@@ -176,16 +148,12 @@
           "class": "unit-full-link"
         },
         {
-          "label": "9.1 Firewall_i_Proxy",
+          "label": "8.1 Firewall_i_Proxy",
           "href": "ut09/ut0901.html"
         },
         {
-          "label": "9.2 HA - Alta_Disponibilitat",
+          "label": "8.2 HA - Alta_Disponibilitat",
           "href": "ut09/ut0902.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT9",
-          "href": "ut09/ut09actividades.html"
         }
       ]
     },
@@ -198,12 +166,8 @@
           "class": "unit-full-link"
         },
         {
-          "label": "10.1 Esciptoris_remots(kali)",
+          "label": "9.1 Esciptoris_remots(kali)",
           "href": "ut10/ut1001.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT10",
-          "href": "ut10/ut10actividades.html"
         }
       ]
     },
@@ -216,16 +180,11 @@
           "class": "unit-full-link"
         },
         {
-          "label": "11.1 Legislació en Ciberseguretat",
+          "label": "10.1 Legislació en Ciberseguretat",
           "href": "ut11/ut1101.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT1 — Unit 1: Technologies for Web Development — Aplicacions Web | Portal Docent Pepe Cuenca"
+title: "UD1 — Technologies for Web Development · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT1 Completa"
 prev_url: "../index.html"
@@ -9,21 +9,24 @@ next_url: "../ut01/ut0101.html"
 next_label: "1.1 Resources: Example of HTML+CSS ➡️"
 ---
 
-# 📘 UT1 — Unit 1: Technologies for Web Development (Unitat Completa)
+# 📘 UD1 — Technologies for Web Development (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**1.1 Resources: Example of HTML+CSS**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
-> - [**1.2 Resources: CSS Template Collection**](#ut0102) (o [obrir en pàgina individual ➡️](./ut0102.md) )
-> - [**1.3 Resources: Reference Links**](#ut0103) (o [obrir en pàgina individual ➡️](./ut0103.md) )
-> - [**1.4 HTML Example**](#ut0104) (o [obrir en pàgina individual ➡️](./ut0104.md) )
-> - [**1.5 HTML Example**](#ut0105) (o [obrir en pàgina individual ➡️](./ut0105.md) )
-> - [**1.6 Cheatsheet HTML (Manz)**](#ut0106) (o [obrir en pàgina individual ➡️](./ut0106.md) )
-> - [**1.7 Cheatsheet CSS (Manz)**](#ut0107) (o [obrir en pàgina individual ➡️](./ut0107.md) )
-> - [**✍️ Activitats pràctiques UT1**](#ut01actividades) (o [obrir en pàgina individual ➡️](./ut01actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 Resources: Example of HTML+CSS**](./ut0101.md)
+- [**1.2 Resources: CSS Template Collection**](./ut0102.md)
+- [**1.3 Resources: Reference Links**](./ut0103.md)
+- [**1.4 HTML Example**](./ut0104.md)
+- [**1.5 HTML Example**](./ut0105.md)
+- [**1.6 Cheatsheet HTML (Manz)**](./ut0106.md)
+- [**1.7 Cheatsheet CSS (Manz)**](./ut0107.md)
 
 ---
 
-## 1.1 Resources: Example of HTML+CSS
+# 1.1 Resources: Example of HTML+CSS
 
 > **🔗 Recurs Web: W3Schools Bootstrap**
 > [**🌐 Obrir recurs extern (https://www.w3schools.com/bootstrap5/) ↗️**](https://www.w3schools.com/bootstrap5/)
@@ -332,7 +335,7 @@ Creative Commons may be contacted at http://creativecommons.org/ <http://creativ
 
 ---
 
-## 1.2 Resources: CSS Template Collection
+# 1.2 Resources: CSS Template Collection
 
 01 - Recursos: Colección de plantillas CSS
 
@@ -349,7 +352,7 @@ Creative Commons may be contacted at http://creativecommons.org/ <http://creativ
 
 ---
 
-## 1.3 Resources: Reference Links
+# 1.3 Resources: Reference Links
 
 01 - Referencias
 
@@ -379,7 +382,7 @@ Gestor de MySQL phpMyAdmin - [http://www.phpmyadmin.net](http://www.phpmyadmin.n
 
 ---
 
-## 1.4 HTML Example
+# 1.4 HTML Example
 
 #### 📦 1.html
 
@@ -469,7 +472,7 @@ Aquest és el primer text de Html
 
 ---
 
-## 1.5 HTML Example
+# 1.5 HTML Example
 
 #### 📦 primer.html
 
@@ -526,7 +529,7 @@ Text
 
 ---
 
-## 1.6 Cheatsheet HTML (Manz)
+# 1.6 Cheatsheet HTML (Manz)
 
 [https://www.emezeta.com/articulos/html5-cheatsheet-chuleta-html](https://www.emezeta.com/articulos/html5-cheatsheet-chuleta-html)
 
@@ -567,71 +570,10 @@ IdiomaU-ISOíCV9(8 IdiomaU-ISOíCV9(8 formatoUdeUarchivo formatoUdeUarchivo mét
 
 ---
 
-## 1.7 Cheatsheet CSS (Manz)
+# 1.7 Cheatsheet CSS (Manz)
 
 Columnas columnDwidth0y[size]; columnDcount0k[number]; columns0k width count auto Posicionamiento absolute position0k top.right.bottom.left0k[size]y clipDpath0kurl6shape0svg9y overflow0k auto auto fixed relative static visible hidden scroll auto Tablas borderDcollapse0 borderDspacing0ky[size]; captionDside0k emptyDcells0 tableDlayout0k separate collapse top bottom show hide auto fixed 1mm 1in 1cm 1pc 1pt 25.4mm 10mm 4.23mm 0.35mm Márgeneskykespaciados margin.padding0k margin.padding0k margin.padding0k margin.padding0k top right bottom left top rightyleft bottom topybottom leftyright topyrightybottomyleft Listas listDstyleDimage0kurl6image0png9;y listDstyleDposition0 listDstyleDtype0kdisc circle none inside outside square none decimal decimal,leading,zero lower,alpha upper,alpha lower,roman upper,roman listDstyle0k type position image backgroundDcolor0y[color]; backgroundDimage0kurl6image0jpg9; backgroundDrepeat0k backgroundDattachment0k backgroundDposition0k[pos,x]y[pos,y]; background0k repeat none repeat,x repeat,y no,repeat scroll fixed color image repeat attachment position color0y[color]; Coloreskykfondos Bordes borderDcolor0y[color]; borderDwidth0k[size]; borderDstyle0k[style];y thin medium thick border0k width style color Colores Keywords0yRoyalBlue; Hexadecimal0yR%SC/ES;yyyyyR%CE; RGBkmodel0yRGB6C85SH85LL89; HSLkmodel0kHSL6LL85AS#533#9; currentColor transparent withkalphakchannel RGBA6C85SH85LL85yH089; HSLA6LL85AS#533#5yH089; solid dotted dashed double groove ridge inset outset Estilos FuenteskEvariacionesF fontDvariant0k textDdecoration0 textDtransform0k normal none none small,caps underline overline line,through capitalize uppercase lowercase Fuentes fontDfamily0y[fontS]5y[fontL]5y[font7]5y000y; fontDsize0k[size]yyyyyyyyyyyyyyyyyyy fontDstyle0k fontDweight0k[SHH,/HH]y serif sans,serif cursive fantasy monospace xx,small x,small small medium large x,large xx,large smaller larger normal italic oblique normal bold lighter bolder font0k style variant weight size2height family Perfiles outlineDcolor0y[color]; outlineDstyle0k[style]; outlineDwidth0k[size]; outline0 thin medium thick width style color invert Tiposkdekelementos display0k list,item table table,cell table,row inline block inline,block none visibility0kvisible hidden collapse FuentekEalineacioneskykespaciadoF Desplazamiento float0k clear0 left none right left none right both 15 5 -5 zDindex0 SintaxiskCSS selectorkkHidkk#classkk0pseudoclasskk00pseudoelementkk[attr]kk letterDspacing0y[size]; lineDheight0k[size];yyyyyyyyyyyyyyyyyy textDindent0k[size]; wordDspacing0k[size]; whiteDspace0k tabDsize0y[size]; textDalign0 verticalDalign0k[size] normal normal normal normal no,wrap pre pre,line pre,wrap left center right justify baseline sub super top middle bottom text,top text,bottom borderDtopD( borderDrightD( borderDbottomD( borderDleftD( Separadorkdekcolumnas columnDruleDwidth0k[size]; columnDruleDstyle0k[style]; columnDruleDcolor0k[color];y columnDrule0kwidth style color columnDgap0y[size]; columnDspan0k[number]; columnDfill0kbalance auto normal all http://www.emezeta.com/ Creadospors@Manzs(shttp://twitter.com/Manzs)s DISEÑO WEB CSS3 CHEAT SHEET propertykk0kkvaluekkA } { (Dtop (Dleft (Dright (Dbottom A A A 2em normal 1em 0.5em 1ex 2ex 4ex Cursoreskdelkratón none cursor0yurl6image0png9 default crosshair help move pointer progress text wait context,menu cell vertical,text alias copy no,drop not,allowed all,scroll col,resize row,resize ,resize s se sw n w e ne nw border padding margin top-left top-right bottom-right bottom-left top bottom left right Ubicaciones Dimensiones maxDwidth0y[size]; minDwidth0k[size]; width0k[size] auto none none (Dheight ]#k*#kk[]#k[*# a#kb#kkkkkA#kB# i#kii#kkkkkkkkI#kII# shape
 
 Fotogramas EkeyframesGnameanimationG{ GGGG6pG{Gpropiedad:OvalorO}G GGGG222 GGGG566pG{Gpropiedad:OvalorO} } 6pGAGfrom 566pGAGto http://www.emezeta.com/ Creado por @Manz ( http://twitter.com/Manz ) DISEÑO WEB CSS3 CHEAT SHEET 8webkit8 8moz8 8ms8 8o8 background8imageMG OOOOOOlinear8gradientk[dir]4O[col1]4O[col2]XXXx; OOOOOOradial8gradientk[shape]O[size]OatO[pos]4O[col1]4O[col2]4OXXXx;O OOOOOOrepeating8linear8gradientkXXXx; OOOOOOrepeating8radial8gradientkXXXx; Gradientes DirecciónGenGgradienteGlineal line8through OpcionesGdelGgradienteGradial TipografíasGCSSú Efont8faceG{ GGGfont8familyMGbOpenOSansb; GGGfont8weightMO3__;O GGGsrcMOlocalkbOpenOSansbx4 GGGurlkfileXttfxOformatkbtruetypebx4 GGGurlkfileXwoffxOformatkbwoffbx;O} j6deg 5v6deg 4á6deg úB6deg ú*deg 5x*deg 45*deg ú4*deg toGtop toGtopGright toGright toGbottomGright toGbottom toGtopGleft toGleft toGbottomGleft ellipse circle shapeMG sizeMG[size] O posM farthest8corner closest8corner farthest8side closest8side center top left right bottom topOleft topOright bottomOleft bottomOright FondosGoGsombrasGmúltiples background8imageMOurlkback1Xpngx4Ourlkback2Xpngx4OXXX; background8repeatMGno8repeat4Orepeat8x4OXXX; Sombras text8shadowMG[pos8x]O[pos8y]O[blur]O[color]; box8shadowMO[pos8x]O[pos8y]O[blur]O[size]O[color];O none none inset Fondos backgroundMGcolor position size background8clipMG background8originMG background8sizeMG[size8w]O[size8h]; border8box padding8box content8box padding8box content8box border8box cover contain auto repeat origin clip att img border8top8left83 border8top8right83 border8bottom8left83 border8bottom8right83 border8radiusMG border8radiusMG border8radiusMGG top right bottom left topObottom leftOright topOrightObottomOleft BordesGredondeados border8image8outsetMG[size]O border8image8repeatMG border8image8sliceMG border8image8sourceMGurlkimageXpngx border8image8widthMG[size] BordesGconGimágenes border8imageMG source slice width outset repeat stretch repeat round space top right bottom left http://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400 FuentesGCSSú font8stretchMG G text8overflowMG[text]; text8justifyMG font8size8adjustMG[number] ultra8condensed clip ellipsis normal extra8condensed condensed semi8condensed semi8expanded expanded extra8expanded ultra8expanded auto inter8word distribute none none Medios EmediaGprintG{ OOOOpropiedadO:Ovalor; } EmediaGscreenG{ OOOOpropiedadO:Ovalor; } EmediaGscreenGand Cmax8widthMGBx6pxS { OOOOpropiedadO:Ovalor; } Z X Y TransformacionesGúD transformMGtranslate3dkx4Oy4Ozx; transformMGtranslateZkzx; transformMGscale3dkx4Oy4Ozx; transformMGscaleZkzx; transformMGrotate3dkx4y4z4degx; transformMGrotateZkdegx; transformMGperspectiveknx; transformMGmatrix3dkn4n4n4XXXx transform8originMG[pos8x]O[pos8y]O[pos8z]; transform8styleMG Transformaciones flat preserve83d Animaciones animationMG name duration timing8func animation8nameMG[name]; animation8durationMG[time];O animation8timing8functionM animation8delayMG[time]; animation8iteration8countMG[number]; animation8directionMG animation8fill8modeMG animation8play8stateMG none infinite normal reverse alternate alternate8reverse none forwards backwards both running paused delay i8c dir f8m p8s FiltrosGCSS filterMG[filter]knx Transiciones transitionMG property duration transition8propertyMG[css8property]; transition8durationMG[time]; transition8timing8functionMG[timing8function] transition8delayMG[time]; none all t8function delay ease linear ease8in ease8out ease8in8out cubic8bezierkx k_X254O_X14O_X254O1x k_X__4O_X_4O1X__4O1x k_X424O_X_4O1X__4O1x k_X__4O_X_4O_X584O1x k_X424O_X_4O_X584O1x timing8function EpageG{ OOOOsize:O[width]O[height]; OOOOmargin:O[XXX] OOOOorphans:O[number]; OOOOwidows:O[number];O} auto landscape portrait Paginación transformMGscalekx4Oyx; transformMGskewkdeg4Odegx; transformMGrotatekdegx; transformMGtranslateXkxx; transformMGtranslateYkyx; TranslaciónG4D transformMGrotateXkdeg_xx; transformMGrotateYkdeg_yx; RotaciónG4D transformMGscaleXkxx; transformMGscaleYkyx; EscaladoG4D transformMGskewXkdeg_xx; transformMGskewYkdeg_yx; DeformaciónG4D transformMGtranslatekx4Oyx; E8vendor8keyframes 5v6 j6 4á6 deg grayscaleMG[_XXX1] blurMG[size]O sepiaMG[_XXX1] saturateMG[_XXX1] opacityMG[_XXX1] brightnessMG[_XXX1]O contrastMG[_XXX1] hue8rotateMG[deg] invertMG[_XXX1] knx filter8func filterMGf5CnSGf4CnSG222
 
 ---
-
-## ✍️ Activitats pràctiques UT1
-
-> **✍️ Activitat Pràctica 1.1 — 01.01 - Activity: Initial Concepts**
-> Una empresa ha contactado con un técnico en Sistemas Microinformáticos y Redes para que realice el diseño de su página web. El técnico conoce la disciplina de posicionamiento SEO (Search Engine Optimization) y utilizará páginas web correctamente estructuradas que respeten los estándares del W3C (World Wide Web Consortium) junto con etiquetas META informativas que facilitarán a los buscadores la indexación de los contenidos de las páginas generadas. Para la creación de la web, el técnico opta por un sencillo diseño con el lenguaje de marcas HTML y CSS sin utilizar Javascript, de manera que obtendremos una web estática.
->
-> 1. ¿Qué son los estándares? ¿Merece la pena hacer caso de las recomendaciones de los estándares abiertos para facilitar el recorrido a los buscadores?
-> 2. ¿Qué es el posicionamiento? ¿Cómo posicionar mejor las páginas? ¿Qué es SEO, para qué sirve?
-> 3. ¿Qué es un lenguaje de marcas? ¿Qué es HTML? ¿Qué interesa más: páginas estáticas o dinámicas?
-> 4. ¿Qué es una hoja de estilos? ¿Facilita el recorrido a los buscadores?
-> 5. ¿Para qué sirve un script? ¿Qué es JavaScript?
-> 6. ¿Qué herramientas son necesarias para diseñar páginas web?
-
-> **✍️ Activitat Pràctica 1.2 — 01.02 - Activity: Glossary**
-> Realiza un pequeño glosario con los conceptos más importantes de la unidad dónde se ofrezca una definición corta de los términos utilizados: W3C, RFC, HTTP, URL, HTML, Protocolo, Puerto, estándar, CSS, Javascript, PHP, SQL, Interfaz de usuario, browser, HTTPS, Mozilla, Motor de renderizado, Guerra de navegadores, WYSIWYG, Etiqueta HTML, Lenguaje de marcas, Indentación, AcidTest, Selector CSS, Propiedad CSS, AJAX, Lenguaje de script de navegador, Lenguaje de script de servidor, SGBD, phpMyAdmin.
-
-> **✍️ Activitat Pràctica 1.3 — 01.03 - Activity: Review Content**
-> 1. Define "Aplicación Web" y resalta las diferencias con una aplicación convencional.
-> 2. Realiza un dibujo esquemático en el que se muestre el funcionamiento de un servicio web indicando los elementos, lenguajes y tecnologías más importantes implicadas en el proceso. Comenta el proceso completo que desencadena una petición de un cliente a un servidor web y las tareas que realiza el cliente, el servidor y el servidor de base de datos.
-> 3. Enumera diferentes navegadores web indicando el motor de renderizado que utilizan, su versión más actual, la disponibilidad en diferentes sistemas operativos y la licencia que presentan (libre o propietaria)
-> 4. Enuncia 5 etiquetas HTML indicando su utilidad y realizando un ejemplo práctico de uso.
-> 5. Enuncia 5 etiquetas CSS indicando su utilidad y realizando un ejemplo práctico de uso.
-> 6. Explica en qué consiste las labores SEO y las principales recomendaciones que debería seguir un buen administrador web para optimizar sus beneficios.
-> 7. Infórmate de la sintaxis necesaria para integrar un código script de navegador en un fichero HTML que muestre una alerta con un texto determinado.
-> 8. Infórmate de la sintaxis necesaria para integrar un código script de servidor en un fichero HTML que muestre un texto determinado junto con el día y hora del servidor.
-> 9. Enumera los principales Sistemas Gestores de Bases de Datos utilizados por aplicaciones web indicando el tipo de licencia de que disponen (libre o propietaria)
-
-> **✍️ Activitat Pràctica 1.4 — 01.04 - Activity: Press Article**
-> ## Los magos del posicionamiento en buscadores
->
-> Publicado el 10-07-09, por M. Prieto
->
-> http://www.expansion.com//09/empresas/tecnologia/1247172930.html
->
-> Aparecer en los primeros puestos de Google es vital para incrementar el tráfico de un sitio web. Éstos son algunos de los expertos españoles que han desentrañado las claves para estar lo más arriba posible en el universo de Internet. Conocen las tripas de los buscadores. Se pasan horas al día desentrañando cómo conseguir que un sitio web sea más relevante que su competidor cuando las arañas, sobre todo la de Google, buscan en Internet. Son los magos de los buscadores.
-> En sus manos está que cuando alguien pone «hotel Madrid» en Google, el primer enlace sea el de su agencia de viajes. Gracias a ellos, se consigue más tráfico y más ventas. Y sin necesidad de pagar por un enlace patrocinado. En España, hay grandes expertos en posicionamiento, lo que en inglés se conoce como SEO (Search Engine Optimization), que no tienen nada que desmerecer a los gurús del sector como Rand Fishkin o Danny Sullivan, profesionales con un perfil técnico o de márketing que acumulan años de experiencia en Internet. Que se enfrentan a los buscadores como si de un reto intelectual se tratara, intentando descifrar el acertijo de por qué una web le gusta más que otra a Google.
-> [...]
-> La demanda de estos servicios se está incrementando en los últimos tiempos. «Con la crisis, las empresas miran más hacia estrategias SEO porque es la primera fuente de tráfico en Internet, una manera barata de conseguir visitas», explica El-Qudsi. Sin embargo, no estamos al nivel de otros países. «Hay un retraso en España respecto a otros países debido a la menor inversión en Internet y al desconocimiento sobre el posicionamiento en buscadores, algo que vale tanto para una pyme como para una gran empresa», opina Miguel Orense, director SEO y socio fundador de Kanvas Media, y coautor, junto a Octavio Rojas, del libro SEO, cómo triunfar en buscadores.
-> [...]
->
-> **1. ¿Crees que es importante estar bien posicionado en los buscadores?**
-> **2. ¿Qué ideas se te ocurren para mejorar el posicionamiento en los buscadores?**
-> **3. Busca información sobre los expertos en SEO.**
-
-> **✍️ Activitat Pràctica 1.5 — 01.05 - Practice: HTML Tutorial**
-> Realiza las actividades guiadas correspondientes a los 6 primeros temas del tutorial sobre HTML de Aulaclic: Crear una página básica, Insertar texto con diferentes propiedades, Insertar un hiperenlace, Insertar una imagen, Trabajar con tablas. Siguiendo las indicaciones y realizando en un editor de texto enriquecido las diferentes actividades propuestas aprenderás a utilizar las principales etiquetas HTML. Documenta mediante capturas de pantalla y breves explicaciones de los progresos que realizas en el tutorial.
->
-> - [http://www.aulaclic.es/html/index.htm](http://www.aulaclic.es/html/index.htm)
-
-> **✍️ Activitat Pràctica 1.6 — 01.06 - Practice: HTML Profile *****
-> Fes una plana simple HTML per reflectir el teu perfil personal. Gasta les etiquetes més habituals (h, p, b, i, u, ul, ol, table, a, img...)
-
-> **✍️ Activitat Pràctica 1.7 — 01.07 - Practice: Bootstrap Web HTML + CSS *****
-> Configura una página web completa en HTML sobre Bootstrap que refleje los principales requerimientos de una empresa (por ejemplo: dedicada a la venta y reparación de equipos informáticos). En este punto, se deben reflejar en un menú las diferentes secciones (p.e. actualidad, contacto, formación, harware y software). Para ello debes seguir las siguientes indicaciones
->
-> 1. Genera ficheros HTML con estructuras correctamente formateadas.
-> 2. Genera las etiquetas META adecuadas para informar en cada fichero HTML del Título, Palabras clave, Autor y Descripción.
-> 3. Genera una estructura de carpetas que separe ficheros CSS, HTML e Imágenes.
-
-> **✍️ Activitat Pràctica 1.8 — AWS Lab 2 VPC + Web Server *****
-> Captura de pantalla amb la màquina activa mostrant les propietats de xarxa (IP pública assignada)

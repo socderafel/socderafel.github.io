@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT3 — Audacity — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity | Portal Docent Pepe Cuenca"
+title: "UD2 — Audacity · Temari Complet"
 course_root: ".."
 badge: "3r ESO · UT3 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut01/ut0101.html"
+prev_label: "⬅️ 1.1 Modos de color"
 next_url: "../ut03/ut0301.html"
-next_label: "3.1 Continguts i Recursos ➡️"
+next_label: "2.1 Continguts i Recursos ➡️"
 ---
 
-# 📘 UT3 — Audacity (Unitat Completa)
+# 📘 UD2 — Audacity (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 Continguts i Recursos**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 Continguts i Recursos**](./ut0301.md)
 
 ---
 
-## 3.1 Continguts i Recursos
+# 2.1 Continguts i Recursos
 
 > **🔗 Recurs Web: 1. Audio digital: Sonido, formatos, editores y reproductores**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/sonido/audacitybasico_v21es/01audio_formatos.php) ↗️**](https://www.tuinstitutoonline.com/cursos/sonido/audacitybasico_v21es/01audio_formatos.php)
@@ -101,47 +104,3 @@ next_label: "3.1 Continguts i Recursos ➡️"
 > Audio: Configurar sonido de entrada y salida
 
 ---
-
-## ✍️ Activitats pràctiques UT3
-
-> **✍️ 📋 Exercici / Qüestionari 3.1 — Cuestionario: Audio digital. Sonido, formatos, editores y reproductores**
-> Cuestionario: Audio digital. Sonido, formatos, editores y reproductores
-
-> **✍️ Activitat Pràctica 3.2 — Sube los archivos tocataestandar y tocatacalidad**
-> Sube los archivos tocataestandar y tocatacalidad
-
-> **✍️ Activitat Pràctica 3.3 — Sube los archivos tutequedascosas, haciendocosas y tutequedas**
-> Sube los archivos tutequedascosas, haciendocosas y tutequedas
-
-> **✍️ 📋 Exercici / Qüestionari 3.4 — Cuestionario: Preferencias. Grabación de sonido**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 3.5 — Sube los archivos seleccion.png, corte.png, pegado.png y apruebo**
-> Sube los archivos seleccion.png, corte.png, pegado.png y apruebo
-
-> **✍️ Activitat Pràctica 3.6 — Sube los archivos efectosbas1 y efectosbas2**
-> Sube los archivos efectosbas1 y efectosbas2
-
-> **✍️ Activitat Pràctica 3.7 — Sube los archivos estacion y tren**
-> Sube los archivos estacion y tren
-
-> **✍️ Activitat Pràctica 3.8 — Sube los archivos combinacion1 y combinacion2**
-> Sube los archivos combinacion1 y combinacion2
-
-> **✍️ Activitat Pràctica 3.9 — Sube los archivos imagen.png y etiquetas**
-> Sube los archivos imagen.png y etiquetas
-
-> **✍️ Activitat Pràctica 3.10 — Sube los archivos marcado, sirena y ruido**
-> Sube los archivos marcado, sirena y ruido
-
-> **✍️ Activitat Pràctica 3.11 — Sube el archivo centralita**
-> Sube el archivo centralita
-
-> **✍️ Activitat Pràctica 3.12 — Sube los archivos sinvoz y karaoke**
-> Sube los archivos sinvoz y karaoke
-
-> **✍️ Activitat Pràctica 3.13 — Sube los archivos textoanuncio y publicidad**
-> Sube los archivos textoanuncio y publicidad
-
-> **✍️ Activitat Pràctica 3.14 — Sube los archivos textoentrevista y exentrevista**
-> Sube los archivos textoentrevista y exentrevista

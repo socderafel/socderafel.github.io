@@ -4,16 +4,9 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT1 — GIMP":
-      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+  - "UD1 — GIMP":
+      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
       - "1.1 Modos de color": ut01/ut0101.md
-      - "1.2 Dosier de actividades": ut01/ut0102.md
-      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
-  - "UT2 — Herramientas Microsoft":
-      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
-      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — Audacity":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Continguts i Recursos": ut03/ut0301.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "📂 Índex de Documents i Recursos": references.md
+  - "UD2 — Audacity":
+      - "📘 UD2 Completa (1 pàgina)": ut03/index.md
+      - "2.1 Continguts i Recursos": ut03/ut0301.md

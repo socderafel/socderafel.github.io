@@ -1,30 +1,29 @@
 ---
 layout: default
-title: "UD3 — Arquitectures Web i Servidors d'Aplicacions · Unitat Completa"
+title: "UD3 — Arquitectures Web i Servidors d'Aplicacions · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT9 Completa"
-prev_url: "../ut10/ut10actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT10"
+prev_url: "../ut10/ut1002.html"
+prev_label: "⬅️ 2.2 1 Introducció - Creació servidor FTP amb VS"
 next_url: "../ut09/ut0901.html"
-next_label: "9.1 UT 3.4 Arquitectures web ➡️"
+next_label: "3.1 4 Arquitectures web ➡️"
 ---
 
 # 📘 UD3 — Arquitectures Web i Servidors d'Aplicacions (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**9.1 UT 3.4 Arquitectures web**](./ut0901.md)
-- [**9.2 UT 3.3 Arquitectures web**](./ut0902.md)
-- [**9.3 UT 3.2 Arquitectures web**](./ut0903.md)
-- [**9.4 UT 3.1 Arquitectures web**](./ut0904.md)
-- [**✍️ Activitats pràctiques UT9**](./ut09actividades.md)
+- [**3.1 4 Arquitectures web**](./ut0901.md)
+- [**3.2 3 Arquitectures web**](./ut0902.md)
+- [**3.3 2 Arquitectures web**](./ut0903.md)
+- [**3.4 1 Arquitectures web**](./ut0904.md)
 
 ---
 
-# 9.1 UT 3.4 Arquitectures web
+# 3.1 4 Arquitectures web
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Quinzena del 8/1/24 al 19/1/24
@@ -104,7 +103,7 @@ A continuació crearem un arxiu xxx.war que podrem utilitzar per a desplegar l'a
 
 ---
 
-# 9.2 UT 3.3 Arquitectures web
+# 3.2 3 Arquitectures web
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web
 
@@ -180,7 +179,7 @@ Acceptem les advertències i continuem. Després ja podrem accedir al nostre llo
 
 ---
 
-# 9.3 UT 3.2 Arquitectures web
+# 3.3 2 Arquitectures web
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web UT 3.2 Arquitectura web. Desplegament d’una aplicació web sobre Tomcat. Desplagament d’Aplicacions Web CFGS DAW Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -374,7 +373,7 @@ En aquest cas copiar i apegar la carpeta dins del directori ../webapps. L’acc�
 
 ---
 
-# 9.4 UT 3.1 Arquitectures web
+# 3.4 1 Arquitectures web
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web UT 3.1 Arquitectura web. Implantació i administració de servidors web. Desplagament d’Aplicacions Web CFGS DAW Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -674,18 +673,5 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web ➢Reiniciem el tomcat. 5.12. Comprovem que tenim accés remot (quasi) total al servidor web. En cas de trobar-se de nou amb un error 403 Access denied (sobretot en els enllaços d'accés a la documentació), seguir les instruccions, accedir a l'arxiu context.xml de cada aplicació i comentar les restriccions d'accés a usuari local.
 
 17 / 17
-
----
-
-# ✍️ Activitats pràctiques UT9
-
-> **✍️ Activitat Pràctica 9.1 — Tasca 3 UT3**
-> ##### Data de venciment : 17/11/23
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web TASCA 3 UT 3. Arquitectura web. Implantació i administració de servidors web Instal·lació d’un servidor web amb Tomcat Desplagament d’Aplicacions Web CFGS DAW Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web Servidor web Tomcat Activitat Instal·lar, configurar i utilitzar un servidor web amb Tomcat. Pots utilitzar un servidor virtualitzat en la teua màquina. Si estàs en cloud, obri els ports necessaris en la infraestructura cloud i en la màquina servidor (firewall).
->
-> Entrega de la tasca Tot el procés s’ha de documentar amb un processador de text i entregar en format PDF. 2 / 2
 
 ---

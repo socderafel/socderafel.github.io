@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT5 — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "5.1 Continguts i Casos Guiats · 🛡️ Seguretat Informàtica — 2n SMX · Grau Mitjà"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT5 — Seguretat activa: sistema operatiu i aplicacions"
+badge: "2n SMX · Grau Mitjà · UD5 — Seguretat activa: sistema operatiu i aplicacions"
 prev_url: "../ut05/index.html"
-prev_label: "⬅️ 📘 UT5 Completa (1 pàgina)"
+prev_label: "⬅️ 📘 UD5 Completa (1 pàgina)"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa (1 pàgina) ➡️"
+next_label: "📘 UD6 Completa (1 pàgina) ➡️"
 ---
 
-# ✍️ Activitats pràctiques UT5
+# 5.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 5.1 — 05.01 Contrasenyes BIOS i GRUB**
 > ## Contraseñas en la BIOS y en el GRUB

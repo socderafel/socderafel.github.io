@@ -1,28 +1,28 @@
 ---
 layout: default
-title: "UD1 — Serveis de Xarxa Implicats en el Desplegament (DNS i LDAP) · Unitat Completa"
+title: "UD1 — Serveis de Xarxa Implicats en el Desplegament (DNS i LDAP) · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT11 Completa"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut11/ut1101.html"
-next_label: "11.1 UT 1.3 Preparación del servidor de directorios L ➡️"
+next_label: "1.1 3 Preparación del servidor de directorios L ➡️"
 ---
 
 # 📘 UD1 — Serveis de Xarxa Implicats en el Desplegament (DNS i LDAP) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**11.1 UT 1.3 Preparación del servidor de directorios L**](./ut1101.md)
-- [**11.2 UT 1.2 Servicio de directorios LDAP**](./ut1102.md)
-- [**11.3 UT 1.1 Servicios de Red**](./ut1103.md)
+- [**1.1 3 Preparación del servidor de directorios L**](./ut1101.md)
+- [**1.2 2 Servicio de directorios LDAP**](./ut1102.md)
+- [**1.3 1 Servicios de Red**](./ut1103.md)
 
 ---
 
-# 11.1 UT 1.3 Preparación del servidor de directorios L
+# 1.1 3 Preparación del servidor de directorios L
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Quinzena del 25/09/23 al 08/10/23
@@ -122,7 +122,7 @@ DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web  Com
 
 ---
 
-# 11.2 UT 1.2 Servicio de directorios LDAP
+# 1.2 2 Servicio de directorios LDAP
 
 DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
 
@@ -245,7 +245,7 @@ Ya tenemos instalado el servicio de directorio LDAP. Para iniciarlo o pararlo, e
 
 ---
 
-# 11.3 UT 1.1 Servicios de Red
+# 1.3 1 Servicios de Red
 
 DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
 

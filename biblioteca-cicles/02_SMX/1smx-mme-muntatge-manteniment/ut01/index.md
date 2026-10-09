@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT1 — Unitat Didàctica 1 — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca"
+title: "UD1 — Unitat Didàctica 1 · Temari Complet"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT1 Completa"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
-next_label: "1.1 U1 - P1 | P2 | P3 - CONTINGUTS ➡️"
+next_label: "1.1 P1 | P2 | P3 - CONTINGUTS ➡️"
 ---
 
-# 📘 UT1 — Unitat Didàctica 1 (Unitat Completa)
+# 📘 UD1 — Unitat Didàctica 1 (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**1.1 U1 - P1 | P2 | P3 - CONTINGUTS**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 P1 | P2 | P3 - CONTINGUTS**](./ut0101.md)
 
 ---
 
-## 1.1 U1 - P1 | P2 | P3 - CONTINGUTS
+# 1.1 P1 | P2 | P3 - CONTINGUTS
 
 Components d’un equip microinformatic Joan Alfred Noll Obiol Muntatge i manteniment d’equips
 
@@ -1683,3 +1687,5 @@ repinta la pantalla. Són valors habituals 60 Hz, 75 Hz i 100 Hz. Com més freq�
 
 > **💡 📚 Document extens (90 pàgines)**
 > S'han mostrat les primeres 80 pàgines completes del manual.
+
+---

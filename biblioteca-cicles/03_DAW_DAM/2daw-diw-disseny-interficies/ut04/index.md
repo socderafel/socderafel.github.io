@@ -1,24 +1,27 @@
 ---
 layout: default
-title: "UT4 — ACCESIBILIDAD — Disseny d'Interfícies Web | Portal Docent Pepe Cuenca"
+title: "UD3 — ACCESIBILIDAD · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT4 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut02/ut0206.html"
+prev_label: "⬅️ 2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI"
 next_url: "../ut04/ut0401.html"
-next_label: "4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1 ➡️"
+next_label: "3.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1 ➡️"
 ---
 
-# 📘 UT4 — ACCESIBILIDAD (Unitat Completa)
+# 📘 UD3 — ACCESIBILIDAD (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**4.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2**](#ut0402) (o [obrir en pàgina individual ➡️](./ut0402.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1**](./ut0401.md)
+- [**3.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2**](./ut0402.md)
 
 ---
 
-## 4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1
+# 3.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### **SECCIÓN 1: ACCESIBILIDAD EN LA WEB**
@@ -199,7 +202,7 @@ Elementos de interacción Creando elementos de interacción lo suficientemente g
 
 ---
 
-## 4.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2
+# 3.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2
 
 BLOQUE 3: ACCESIBILIDAD SECCIÓN 1: ACCESIBILIDAD EN LA WEB SECCIÓN 2: EL CONSORCIO WORLD WIDE WEB (W3C) Docente: Marc Salom Chico
 
@@ -524,61 +527,3 @@ Color Contrast Checker http://webaim.org/resources/contrastchecker/ Herramienta 
 La herramienta muestra el ratio de contraste de color de los colores elegidos. S2. EL CONSORCIO WORLD WIDE WEB (W3C)
 
 ---
-
-## ✍️ Activitats pràctiques UT4
-
-> **✍️ Activitat Pràctica 4.1 — DIW ACTIVIDAD 1 UD 3 SECCIÓN 1**
-> UNIDAD 3: ACCESIBILIDAD
->
-> SECCIÓN 1: ACCESIBILIDAD EN LA WEB
->
-> Actividad 1: En los ejercicios propuestos investigaremos sobre la accesibilidad a la tecnología, centrándonos en el acceso a las páginas web y a su diseño.
->
-> Objetivos
->
-> Conocer la actualidad de la accesibilidad en varios medios y encontrar herramientas que puedan ayudar a crear páginas que cumplan los requisitos de adaptabilidad.
->
-> Temporalización
->
-> La duración de esta actividad está prevista en 1 hora.
->
-> Ejercicio 1. Video: Conocimiento accesible para todos
->
-> Mira atentamente este vídeo
->
-> http://www.rtve.es/alacarta/videos/redes/redes-conocimiento-accesible-para-todos/1427212/
->
-> Después de ver el contenido del video.
->
-> ¿Qué dispositivos aparecen en el vídeo que pueden facilitar el acceso a contenidos digitales?
->
-> ¿De qué modo podemos conseguir que los diseños web sean más accesibles para la gente con discapacidad visual?
->
-> Ejercicio 2. Busca mínimo dos ejemplos en Internet de tecnología para personas con discapacidad visual y realiza una breve descripción de ellas.
->
-> Ejercicio 3. Busca mínimo un par ejemplos de herramientas de accesibilidad integradas en los sistemas operativos y realiza una breve descripción de ellas.
-
-> **✍️ Activitat Pràctica 4.2 — DIW ACTIVIDAD 1 UD 3 SECCIÓN 2**
-> UNIDAD 3: ACCESIBILIDAD
->
-> SECCIÓN 2: EL CONSORCIO WORLD WIDE WEB (W3C)
->
-> Actividad 1
->
-> Objetivos
->
-> Conocer los diferentes elementos que nos permiten identificar y valorar un sitio web en torno a la accesibilidad.
->
-> Temporalización
->
-> La duración de esta actividad está prevista en 1 hora.
->
-> Ejercicio 1: En las diapositivas de esta sección se han visto los principios, pautas, criterios y niveles de conformidad establecidos por WCAG 2.0.
->
-> Puedes enumerar y describir los nuevos criterios de las Pautas de accesibilidad para el Contenido Web WCAG 2.1.
->
-> (PODEIS HACER UNA TABLA SI OS VIENE MEJOR TRABAJAR DE ESTA MANERA)
->
-> OS INDICO UN ENLACE QUE OS PUEDE SER MUY ÚTIL
->
-> https://intopia.digital/articles/intopia-launches-wcag-2-1-map/

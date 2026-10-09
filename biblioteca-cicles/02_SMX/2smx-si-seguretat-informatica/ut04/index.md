@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT4 — Seguretat passiva: Emmagatzemament — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "UD4 — Seguretat passiva: Emmagatzemament · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut03/ut0301.html"
+prev_label: "⬅️ 3.1 PDF: Consum i sel·lecció de SAI"
 next_url: "../ut04/ut04actividades.html"
-next_label: "✍️ Activitats pràctiques UT4 ➡️"
+next_label: "4.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT4 — Seguretat passiva: Emmagatzemament (Unitat Completa)
+# 📘 UD4 — Seguretat passiva: Emmagatzemament (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 Continguts i Casos Guiats**](./ut04actividades.md)
 
 ---
 
-## ✍️ Activitats pràctiques UT4
+# 4.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 4.1 — 04.01 Congelació de Sistema**
 > De vegades, us interessarà emprar aplicacions per congelar el sistema. Aquestes aplicacions fan que l'ordinador torni a la configuració que tenia en l'últim reinici, rebutjant els canvis que s'hagin pogut realitzar durant la sessió.
@@ -189,3 +193,5 @@ next_label: "✍️ Activitats pràctiques UT4 ➡️"
 
 > **✍️ Activitat Pràctica 4.7 — Examen UD3-UD4**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+---

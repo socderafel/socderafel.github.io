@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT8 — Unit 8 - Hybrid Applications — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca"
+title: "UD8 — Hybrid Applications · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT8 Completa"
-prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_url: "../ut07/ut0701.html"
+prev_label: "⬅️ 7.1 Web Services"
 next_url: "../ut08/ut0801.html"
-next_label: "8.1 U8 - Hybrid applications ➡️"
+next_label: "8.1 Hybrid applications ➡️"
 ---
 
-# 📘 UT8 — Unit 8 - Hybrid Applications (Unitat Completa)
+# 📘 UD8 — Hybrid Applications (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**8.1 U8 - Hybrid applications**](#ut0801) (o [obrir en pàgina individual ➡️](./ut0801.md) )
-> - [**✍️ Activitats pràctiques UT8**](#ut08actividades) (o [obrir en pàgina individual ➡️](./ut08actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 Hybrid applications**](./ut0801.md)
 
 ---
 
-## 8.1 U8 - Hybrid applications
+# 8.1 Hybrid applications
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Resources
@@ -75,36 +78,3 @@ other developers have already done for us.
 2 DAW - DWES Questions?
 
 ---
-
-## ✍️ Activitats pràctiques UT8
-
-> **✍️ Activitat Pràctica 8.1 — Task 1 - Hybrid Apps**
-> DWES – U7A3
->
-> Unit 8 – Task 1 Hybrid applications
->
-> Objectives
->
-> - Integrate Third-Party Apps into our application
->
-> Instructions
->
-> - Once finished, upload to Aules a single compressed file that includes
->
-> the project.
->
-> - The task will be “defended” onsite.
->
-> ### 1. Investigate how to integrate third party logins in Laravel applications and
->
-> integrate at least two login-signup systems (Google, Facebook, Github, Apple, etc) in one of your webpages (bandaw, dawstagram, nba…). TIP: Socialite
->
-> ### 2. Investigate how to integrate at least one more application and create a
->
-> good example in one of your webpages to check the functionality
->
-> - Dropbox-Google Drive-One Drive: check files and navigate
-> - Paypal-Stripe: Perform a payment
-> - You can look for your own integration but it’s mandatory to ask the
->
-> teacher before implement one.

@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT7 — Disponibilitat d'un SGBD — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca"
+title: "UD6 — Disponibilitat d'un SGBD · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut06/ut0601.html"
+prev_label: "⬅️ 5.1 Optimització de l'SGBD"
 next_url: "../ut07/ut0701.html"
-next_label: "7.1 Disponibilitat d'un SGBD ➡️"
+next_label: "6.1 Disponibilitat d'un SGBD ➡️"
 ---
 
-# 📘 UT7 — Disponibilitat d'un SGBD (Unitat Completa)
+# 📘 UD6 — Disponibilitat d'un SGBD (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**7.1 Disponibilitat d'un SGBD**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 Disponibilitat d'un SGBD**](./ut0701.md)
 
 ---
 
-## 7.1 Disponibilitat d'un SGBD
+# 6.1 Disponibilitat d'un SGBD
 
 ### UNITAT 06 Disponibilitat del SGBD
 
@@ -105,3 +109,5 @@ Tecnologia RAC ( Real Application Clusters) Arquitectura en 3 capes
 Tots els elements estan connectats amb xarxes d’alta capacitat L’emmagatzenament compartit necessita un sistema d’arxius especial No pot utilitzar un sistema d’arxuis normal d’un SO com Linux o Windows Son sistemes d’arxius de clúster Oracle disposa d’un propi: ASM ( Automatic Storage Manager) Oracle RAC comprova automaticament errors en els RAID i utilitza discs sense errors.
 
 “ ” Activitat Investiga quins SGBD poden donar suport a BDD
+
+---

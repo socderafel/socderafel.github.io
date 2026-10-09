@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT2 — REPROGRAFIA i ENQUADERNACIÓ — Ofimàtica i Arxiu de Documents | Portal Docent Pepe Cuenca"
+title: "UD2 — REPROGRAFIA i ENQUADERNACIÓ · Temari Complet"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut01/ut0101.html"
+prev_label: "⬅️ 1.1 Comunicacions internes i externes"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 Temari ➡️"
 ---
 
-# 📘 UT2 — REPROGRAFIA i ENQUADERNACIÓ (Unitat Completa)
+# 📘 UD2 — REPROGRAFIA i ENQUADERNACIÓ (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**2.1 Temari**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 Temari**](./ut0201.md)
 
 ---
 
-## 2.1 Temari
+# 2.1 Temari
 
 ) ) ) ) ) ) ) ) ) Enquadernació Enquadernació funcional funcional Enquadernació funcional 1r FP Bàsica ) ) ) ) ) ) ) ) )
 
@@ -220,8 +223,3 @@ Fotocopiar a doble cara o reduir i comprimir per estalviar paper. Aplicar el pap
 Prestar atenció als olis a través de tècniques de prevenció-minimització: ampliar la vida dels olis i utilitzar olis sintètics. )
 
 ---
-
-## ✍️ Activitats pràctiques UT2
-
-> **✍️ 📋 Exercici / Qüestionari 2.1 — Qüestionari Enquadernació**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.

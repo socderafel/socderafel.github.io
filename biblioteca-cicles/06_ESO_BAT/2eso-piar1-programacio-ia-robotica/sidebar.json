@@ -6,46 +6,33 @@
   },
   "units": [
     {
-      "summary": "UT1 — Scratch",
+      "summary": "UD1 — Scratch",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "1.1 Continguts i Recursos",
           "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
     {
-      "summary": "UT2 — Robòtica",
+      "summary": "UD2 — Robòtica",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "2.1 Continguts i Recursos",
           "href": "ut02/ut0201.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

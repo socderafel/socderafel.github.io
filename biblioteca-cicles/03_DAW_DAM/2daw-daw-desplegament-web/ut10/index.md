@@ -1,28 +1,27 @@
 ---
 layout: default
-title: "UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP) · Unitat Completa"
+title: "UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP) · Temari Complet"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT10 Completa"
 prev_url: "../ut11/ut1103.html"
-prev_label: "⬅️ 11.3 UT 1.1 Servicios de Red"
+prev_label: "⬅️ 1.3 1 Servicios de Red"
 next_url: "../ut10/ut1001.html"
-next_label: "10.1 UT 2.2 Introducció - Creació servidor FTP amb SF ➡️"
+next_label: "2.1 2 Introducció - Creació servidor FTP amb SF ➡️"
 ---
 
 # 📘 UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**10.1 UT 2.2 Introducció - Creació servidor FTP amb SF**](./ut1001.md)
-- [**10.2 UT 2.1 Introducció - Creació servidor FTP amb VS**](./ut1002.md)
-- [**✍️ Activitats pràctiques UT10**](./ut10actividades.md)
+- [**2.1 2 Introducció - Creació servidor FTP amb SF**](./ut1001.md)
+- [**2.2 1 Introducció - Creació servidor FTP amb VS**](./ut1002.md)
 
 ---
 
-# 10.1 UT 2.2 Introducció - Creació servidor FTP amb SF
+# 2.1 2 Introducció - Creació servidor FTP amb SF
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Quinzena del 09/10/23 al 21/10/23
@@ -91,7 +90,7 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 
 ---
 
-# 10.2 UT 2.1 Introducció - Creació servidor FTP amb VS
+# 2.2 1 Introducció - Creació servidor FTP amb VS
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web
 
@@ -217,39 +216,5 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 ➔Reiniciem el servei per a carregar la nova configuració. ➔Ens connectem amb filezilla i comprovem que l’usuari «sandra» només pot veure el seu directori. 18 / 19
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web L’usuari pot crear nous directoris, copiar /apegar / canviar el nom / transferir / etc. sense cap problema. 19 / 19
-
----
-
-# ✍️ Activitats pràctiques UT10
-
-> **✍️ Activitat Pràctica 10.1 — Tasca 1 UT2**
-> ##### Data de venciment : 16/10/23
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web TASCA Desplagament d’Aplicacions Web CFGS DAW Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web Connexió ftp amb un client gràfic Activitat Instal·lar, configurar i utilitzar un servei de transferència de fitxers amb un client gràfic ftp (Filezilla). Part servidor: Instal·la i configura el servidor ftp amb vsftpd. Pots utilitzar un servidor virtualitzat en la teua màquina.
->
-> Configura, si cal, per permetre l’accés als fitxers del servidor web. Si estàs en cloud, obri els ports necessaris en la infraestructura cloud i en la màquina servidor (firewall). Part client Busca, baixa i instal·la el Client d’ftp Filezilla (en una màquina Linux o Windows).
->
-> Configura el client per a connectar amb la màquina del núvol (o una en local, si així ho has decidit). Connecta i edita el fitxer de la pàgina principal del nostre servidor web. Prova a baixar el fitxer, editar en local i tornar a pujar (comprova els canvis). Prova a editar-lo directament amb l’opció del client Filezilla (comprova els canvis).
->
-> Entrega de la tasca Tot el procés s’ha de documentar amb un processador de text i entregar en format PDF. 2 / 2
-
-> **✍️ Activitat Pràctica 10.2 — Tasca 2 UT2**
-> ##### Data de venciment : 31/10/23
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web TASCA 1
->
-> ### UT 2. Administració de servidors d’arxius
->
-> Instal·lació d’un servidor d’arxius amb SFTP Desplagament d’Aplicacions Web CFGS DAW Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
->
-> DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web Connexió ftp amb un client gràfic Activitat Instal·lar, configurar i utilitzar un servei de transferència de fitxers amb un client gràfic ftp (Filezilla). Part servidor: Instal·la i configura el servidor ftp amb SFTP. Pots utilitzar un servidor virtualitzat en la teua màquina.
->
-> Configura, si cal, per permetre l’accés als fitxers del servidor web. Si estàs en cloud, obri els ports necessaris en la infraestructura cloud i en la màquina servidor (firewall). Part client Busca, baixa i instal·la el Client d’ftp Filezilla (en una màquina Linux o Windows).
->
-> Configura el client per a connectar amb la màquina del núvol (o una en local, si així ho has decidit). Connecta i edita el fitxer de la pàgina principal del nostre servidor web. Prova a baixar el fitxer, editar en local i tornar a pujar (comprova els canvis). Prova a editar-lo directament amb l’opció del client Filezilla (comprova els canvis).
->
-> Entrega de la tasca Tot el procés s’ha de documentar amb un processador de text i entregar en format PDF. 2 / 2
 
 ---

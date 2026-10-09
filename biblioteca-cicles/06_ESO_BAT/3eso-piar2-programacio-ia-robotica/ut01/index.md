@@ -1,81 +1,26 @@
 ---
 layout: default
-title: "UT1 — App Inventor — Programació, IA i Robòtica II: App Inventor i Robòtica | Portal Docent Pepe Cuenca"
+title: "UD1 — App Inventor · Temari Complet"
 course_root: ".."
 badge: "3r ESO · UT1 Completa"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
-next_url: "../ut01/ut0101.html"
-next_label: "1.1 Projecte final 2a Avaluació ➡️"
+next_url: "../ut01/ut01actividades.html"
+next_label: "1.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT1 — App Inventor (Unitat Completa)
+# 📘 UD1 — App Inventor (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**1.1 Projecte final 2a Avaluació**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
-> - [**✍️ Activitats pràctiques UT1**](#ut01actividades) (o [obrir en pàgina individual ➡️](./ut01actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
----
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-## 1.1 Projecte final 2a Avaluació
-
-📎 **Material de laboratori (Blocs):** `blocs.png`
+- [**1.1 Continguts i Casos Guiats**](./ut01actividades.md)
 
 ---
 
-Projecte de Final de Trimestre: Crea la teua pròpia App amb App Inventor! Objectiu del Projecte Aquest trimestre desenvoluparem una aplicació mòbil amb App Inventor. L’objectiu és que cadascun de vosaltres cree una app sobre si mateix. Aprendreu a dissenyar pantalles, utilitzar botons per navegar entre elles i mostrar informació d’una manera interactiva.
-
-Requisits de l’App La teua aplicació ha de tindre almenys quatre pantalles
-
-### 1. Pantalla d’inici
-
-• Ha de mostrar el teu nom i una foto o avatar, ademés d’una descripció teua. • Ha d’incloure botons per a navegar a les altres seccions de l’app. • Ha d’incloure botons per a accedir a les teves xarxes socials (o unes inventades).
-
-### 2. Pantalla d’aficions
-
-• Explica quines coses t’agrada fer en el teu temps lliure. • Pots utilitzar imatges, textos o fins i tot sons.
-
-### 3. Pantalla de música favorita
-
-• Comparteix els teus artistes o gèneres favorits. • Pots incloure enllaços a cançons o vídeos.
-
-### 4. Pantalla d’esport favorit
-
-• Indica quin és el teu esport preferit i per què. • Afig imatges o dades interessants sobre aquest esport. Metodologia L’aplicació es desenvoluparà de forma INDIVIDUAL. No hi ha cap problema si es comenten coses entre els companys, idees o solucions, però intentarem no fer aplicacions que siguen iguals.
-
-Es valorarà també la capacitat de recerca a la web per a possibles dubtes amb el funcionament o millores funcionals o de disseny. Es podrà accedir a les pràctiques realitzades amb anterioritat per a poder fer-les servir de referència.
-
-Criteris d’Avaluació El teu projecte serà avaluat segons els següents aspectes
-
-✅Disseny i organització: Les pantalles han d’estar ben estructurades i visualment atractives.
-
-✅Funcionament: Els botons han de portar correctament a cada secció.
-
-✅Creativitat: Es valorarà l’originalitat en la presentació de la informació.
-
-✅Complexitat tècnica: Pots afegir sons, imatges animades o efectes extra per a millorar la teua app. Documentació del Projecte Per a completar el lliurament del projecte, cada alumne haurà de preparar una breu documentació en la qual s’explique
-
-### 1. Descripció de l’app
-
-• Nom de l’app i objectiu principal. • Explicació de cada pantalla i la seua funció.
-
-### 2. Disseny i funcionalitat
-
-• Descripció de com s’han organitzat els elements dins de cada pantalla. • Explicació dels botons i la seua funcionalitat. • Explicació d’elements addicionals afegits (sons, animacions, etc.).
-
-### 3. Processos i dificultats
-
-• Explicació de com s’ha desenvolupat l’app. • Dificultats trobades i com s’han resolt.
-
-### 4. Conclusió i millores futures
-
-• Reflexió sobre el treball fet. • Possibles millores que es podrien afegir en el futur. La documentació es podrà lliurar en format PDF o com a text dins de la mateixa App Inventor. Terminis i Lliurament Tindreu fins a Divendres 7 de Març per a completar i presentar la vostra aplicació. Durant les pròximes classes, treballarem junts en el desenvolupament i resolució de dubtes.
-
-💡Consell: No tingues por d’experimentar amb App Inventor. Com més proves, més aprens. Diverteix-te creant la teua app!
-
----
-
-## ✍️ Activitats pràctiques UT1
+# 1.1 Continguts i Casos Guiats
 
 > **✍️ 📋 Exercici / Qüestionari 1.1 — Pràctica 4**
 > > **✍️ EJERCICIO 4: GOLPEA AL TOPO EJERCICIO 4: GOLPEA AL TOPO Descripci**
@@ -185,3 +130,5 @@ Criteris d’Avaluació El teu projecte serà avaluat segons els següents aspec
 
 > **✍️ Activitat Pràctica 1.5 — Puja la documentació**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+---

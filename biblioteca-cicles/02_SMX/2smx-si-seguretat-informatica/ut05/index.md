@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT5 — Seguretat activa: sistema operatiu i aplicacions — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "UD5 — Seguretat activa: sistema operatiu i aplicacions · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT5 Completa"
 prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_label: "⬅️ 4.1 Continguts i Casos Guiats"
 next_url: "../ut05/ut05actividades.html"
-next_label: "✍️ Activitats pràctiques UT5 ➡️"
+next_label: "5.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT5 — Seguretat activa: sistema operatiu i aplicacions (Unitat Completa)
+# 📘 UD5 — Seguretat activa: sistema operatiu i aplicacions (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 Continguts i Casos Guiats**](./ut05actividades.md)
 
 ---
 
-## ✍️ Activitats pràctiques UT5
+# 5.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 5.1 — 05.01 Contrasenyes BIOS i GRUB**
 > ## Contraseñas en la BIOS y en el GRUB
@@ -44,3 +48,5 @@ next_label: "✍️ Activitats pràctiques UT5 ➡️"
 
 > **✍️ Activitat Pràctica 5.3 — 05.03 Activitats de Repàs**
 > Agrupeu-se per parelles i realitzeu el test de repàs de la unitat justificant les respostes i les activitats per comprovar l'aprenentatge fent un resum dels conceptes i mesures més importants que es comenten (Pàgines 141i 142)
+
+---

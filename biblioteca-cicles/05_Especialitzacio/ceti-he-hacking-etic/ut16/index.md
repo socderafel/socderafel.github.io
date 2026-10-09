@@ -1,23 +1,27 @@
 ---
 layout: default
-title: "UT16 — Explotación de vulnerabilidades — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD14 — Explotación de vulnerabilidades · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT16 Completa"
-prev_url: "../ut15/ut15actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT15"
+prev_url: "../ut14/ut1401.html"
+prev_label: "⬅️ 13.1 Continguts i Recursos"
 next_url: "../ut16/ut1601.html"
-next_label: "16.1 Explotación ➡️"
+next_label: "14.1 Explotación ➡️"
 ---
 
-# 📘 UT16 — Explotación de vulnerabilidades (Unitat Completa)
+# 📘 UD14 — Explotación de vulnerabilidades (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**16.1 Explotación**](#ut1601) (o [obrir en pàgina individual ➡️](./ut1601.md) )
-> - [**16.2 Metasploit**](#ut1602) (o [obrir en pàgina individual ➡️](./ut1602.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**14.1 Explotación**](./ut1601.md)
+- [**14.2 Metasploit**](./ut1602.md)
 
 ---
 
-## 16.1 Explotación
+# 14.1 Explotación
 
 TEMA 7. AUDITORIA DE SEGURETAT: EXPLOTACIÓ DE VULNERABILITATS. HACKING ÈTIC (HE) 1R CIBER
 
@@ -338,7 +342,7 @@ EXPLOTACIÓ DE VULNERABILITATS FERRAMENTES • METASPLOIT FRAMEWORK: PERMET L'EX
 
 ---
 
-## 16.2 Metasploit
+# 14.2 Metasploit
 
 Hacking Ético 23AI32CF016 Raúl Fuentes Ferrer
 
@@ -962,3 +966,5 @@ Pérez
 - 50 blogs en castellano de seguridad informática,
 
 http://blogs.protegerse.com/laboratorio//25/50-blogs-en-castellano-que-deberias-leer-by- kinomakino/
+
+---

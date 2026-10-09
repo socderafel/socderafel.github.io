@@ -6,48 +6,40 @@
   },
   "units": [
     {
-      "summary": "UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS",
+      "summary": "UD1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 DIAPOSITIVAS SECCIÓN 1: ELEMENTOS DEL DISEÑO",
-          "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Enlaces interesantes UD1 Sección 1",
+          "label": "1.1 Enlaces interesantes UD1 Sección 1",
           "href": "ut01/ut0102.html"
         },
         {
-          "label": "1.3 !! ACTUALIZACIÓN!! DIAPOSITIVAS SECCIÓN 1: ELEME",
+          "label": "1.2 DIAPOSITIVAS SECCIÓN 1: ELEME",
           "href": "ut01/ut0103.html"
         },
         {
-          "label": "1.4 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB",
+          "label": "1.3 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB",
           "href": "ut01/ut0104.html"
         },
         {
-          "label": "1.5 DIAPOSITIVAS UD 1 SECCIÓN 3",
+          "label": "1.4 DIAPOSITIVAS UD 1 SECCIÓN 3",
           "href": "ut01/ut0105.html"
         },
         {
-          "label": "1.6 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4",
+          "label": "1.5 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4",
           "href": "ut01/ut0106.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
     {
-      "summary": "UT2 — USO DE ESTILOS",
+      "summary": "UD2 — USO DE ESTILOS",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
@@ -56,132 +48,95 @@
           "href": "ut02/ut0201.html"
         },
         {
-          "label": "2.2 DIW: SOLUCIONES EJERCICIOS PLANTEADOS EN LAS DIA",
-          "href": "ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 TEORÍA CSS PROPIEDAD DISPLAY",
+          "label": "2.2 TEORÍA CSS PROPIEDAD DISPLAY",
           "href": "ut02/ut0203.html"
         },
         {
-          "label": "2.4 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE",
+          "label": "2.3 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE",
           "href": "ut02/ut0204.html"
         },
         {
-          "label": "2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO",
+          "label": "2.4 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO",
           "href": "ut02/ut0205.html"
         },
         {
-          "label": "2.6 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI",
+          "label": "2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI",
           "href": "ut02/ut0206.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     },
     {
-      "summary": "UT4 — ACCESIBILIDAD",
+      "summary": "UD3 — ACCESIBILIDAD",
       "items": [
         {
-          "label": "📘 UT4 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut04/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1",
+          "label": "3.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1",
           "href": "ut04/ut0401.html"
         },
         {
-          "label": "4.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2",
+          "label": "3.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2",
           "href": "ut04/ut0402.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     },
     {
-      "summary": "UT5 — BOOTSTRAP",
+      "summary": "UD4 — BOOTSTRAP",
       "items": [
         {
-          "label": "📘 UT5 Completa (1 pàgina)",
+          "label": "📘 UD4 Completa (1 pàgina)",
           "href": "ut05/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 DIW INTRODUCCIÓN A BOOTSTRAP5",
+          "label": "4.1 DIW INTRODUCCIÓN A BOOTSTRAP5",
           "href": "ut05/ut0501.html"
         },
         {
-          "label": "5.2 PROPIEDAD FLEX DE BOOTSTRAP5",
+          "label": "4.2 PROPIEDAD FLEX DE BOOTSTRAP5",
           "href": "ut05/ut0502.html"
-        },
-        {
-          "label": "5.3 FICHERO INDEX_EJ6",
-          "href": "ut05/ut0503.html"
-        },
-        {
-          "label": "5.4 FICHERO BASE DISEÑO TARJETAS BOOTSTRAP5",
-          "href": "ut05/ut0504.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     },
     {
-      "summary": "UT6 — IMPLANTACIÓN DE CONTENIDO MULTIMEDIA",
+      "summary": "UD5 — IMPLANTACIÓN DE CONTENIDO MULTIMEDIA",
       "items": [
         {
-          "label": "📘 UT6 Completa (1 pàgina)",
+          "label": "📘 UD5 Completa (1 pàgina)",
           "href": "ut06/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 SECCIÓN 1: IMÁGENES Y LA LEY DE PROPIEDAD INTELE",
+          "label": "5.1 SECCIÓN 1: IMÁGENES Y LA LEY DE PROPIEDAD INTELE",
           "href": "ut06/ut0601.html"
         },
         {
-          "label": "6.2 DIW: Conceptos básicos de fotografía digital",
+          "label": "5.2 DIW: Conceptos básicos de fotografía digital",
           "href": "ut06/ut0602.html"
         },
         {
-          "label": "6.3 SECCIÓN 2: SONIDO Y VÍDEO",
+          "label": "5.3 SECCIÓN 2: SONIDO Y VÍDEO",
           "href": "ut06/ut0603.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT6",
-          "href": "ut06/ut06actividades.html"
         }
       ]
     },
     {
-      "summary": "UT7 — USABILIDAD",
+      "summary": "UD6 — USABILIDAD",
       "items": [
         {
-          "label": "📘 UT7 Completa (1 pàgina)",
+          "label": "📘 UD6 Completa (1 pàgina)",
           "href": "ut07/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD",
+          "label": "6.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD",
           "href": "ut07/ut0701.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT7",
-          "href": "ut07/ut07actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

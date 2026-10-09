@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT2 — Taller d'Ofimàtica: Writer, Calc i Scratch | Portal Docent Pepe Cuenca"
+title: "2.1 Continguts i Casos Guiats · 📝 Taller d'Ofimàtica: Writer, Calc i Scratch — 2n ESO"
 course_root: ".."
-badge: "2n ESO · UT2 — Writer"
+badge: "2n ESO · UD2 — Writer"
 prev_url: "../ut02/index.html"
-prev_label: "⬅️ 📘 UT2 Completa (1 pàgina)"
+prev_label: "⬅️ 📘 UD2 Completa (1 pàgina)"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa (1 pàgina) ➡️"
+next_label: "📘 UD3 Completa (1 pàgina) ➡️"
 ---
 
-# ✍️ Activitats pràctiques UT2
+# 2.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 2.1 — Tasca1_Writer**
 > Recorda de pujar l'arxiu amb el nom "Writer1_elteunom".

@@ -1,25 +1,26 @@
 ---
 layout: default
-title: "UT18 — BDA. Base de Datos. INFORMES — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca"
+title: "UD11 — BDA. Base de Datos. INFORMES · Temari Complet"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT18 Completa"
-prev_url: "../ut17/ut1705.html"
-prev_label: "⬅️ 17.5 B2-BDA concesionario"
+prev_url: "../ut17/ut1701.html"
+prev_label: "⬅️ 10.1 Tema 5. FORMULARIS"
 next_url: "../ut18/ut1801.html"
-next_label: "18.1 Tema 6. INFORMES ➡️"
+next_label: "11.1 Tema 6. INFORMES ➡️"
 ---
 
-# 📘 UT18 — BDA. Base de Datos. INFORMES (Unitat Completa)
+# 📘 UD11 — BDA. Base de Datos. INFORMES (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**18.1 Tema 6. INFORMES**](#ut1801) (o [obrir en pàgina individual ➡️](./ut1801.md) )
-> - [**18.2 B1-EXERCICIS BDA-INFORMES**](#ut1802) (o [obrir en pàgina individual ➡️](./ut1802.md) )
-> - [**18.3 B2-EXERCICIS BDA-INFORMES**](#ut1803) (o [obrir en pàgina individual ➡️](./ut1803.md) )
-> - [**18.4 B2-BDA per a exercicis de INFORMES**](#ut1804) (o [obrir en pàgina individual ➡️](./ut1804.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**11.1 Tema 6. INFORMES**](./ut1801.md)
 
 ---
 
-## 18.1 Tema 6. INFORMES
+# 11.1 Tema 6. INFORMES
 
 > **📌 🏷️ Apunt de la Unitat**
 > **TEMA 6. INFORMES**
@@ -734,130 +735,3 @@ Si habías trabajado con versiones anteriores de Access, es posible que utilizar
 En caso de que no aparezca, asegúrate de que hay suficiente espacio junto a la caja de texto para que se visualice correctamente y de que la propiedad Mostrar el selector de fecha del control se encuentra establecido como Para fechas.
 
 ---
-
-## 18.2 B1-EXERCICIS BDA-INFORMES
-
-Tema 6
-
-EJERCICIOS
-
-BDA RELACIONALES . INFORMES
-
-1 parte: Editorial Paraninfo
-
-Aplicaciones Ofimáticas Base de Datos Tema 06. EJERCICIOS. Base de datos relacionales. INFORMES (B1)
-
-ACTIVIDADES
-
-> **✍️ Actividad 6.1.**
-> Actividad 6.1.
-
-- Utilizando la BD VENTAS crear unas etiquetas con los datos nombre,
-
-población y dirección de la tabla Clientes.
-
-- Con la misma BD, crear un informe en blanco que presente los siguientes
-
-datos: código de pedido, nombre de cliente, nombre de producto, fecha de venta y unidades vendidas.
-
-> **✍️ Actividad 6.2.**
-> Actividad 6.2.
-
-Utilizando el asistente crea un listado que agrupe por curso, y dentro de curso por población, y obtenga la nota media por población y por curso. Es necesario crear una consulta en la que obtengamos la nota media de cada alumno.
-
-> **✍️ Actividad 6.3.**
-> Actividad 6.3.
-
-Utilizando la base de datos ALUMNOS, realizar un informe para listar la nota media de cada alumno, el listado que se presente agrupado por la primera inicial del nombre del alumno. Se creará la consulta NotaMedia para asociarla al formulario que contendrá el nombre de alumno y su nota media. Se utilizará la función (1;[Nombre!NotaMedia])$Izq==Izq$([NotaMedia!Nombre];1) para que se visualice la primera inicial del nombre. En el pie de página añadir el número de páginas del informe, con el botón Insertar número de página . Añadir la media global al pie del informe, y la media de cada grupo. En las figuras 6.23, y 6.24 se muestran el diseño del informe y la presentación preliminar del mismo.
-
-Fig 6.23.Diseño del informe de la actividad 3.
-
-Fig 6.24. Vista preliminar del informe de la actividad 3. Actividad 6.4.
-
-Aplicaciones Ofimáticas Base de Datos Tema 06. EJERCICIOS. Base de datos relacionales. INFORMES (B1)
-
-Utilizando la BD VENTAS, obtener un informe de las unidades vendidas de cada producto ordenado por mes de venta. Se desea que los nombres de productos aparezcan en mayúsculas. Crear una consulta para obtener el mes de venta (utilizar la función Mes), el nombre de producto y las unidades vendidas. Agruparla por Mes y que sume las unidades de cada producto. En las figuras 6.26, y 6.27 se muestran el diseño del informe y la presentación preliminar del mismo.
-
-Fig 6.26.Diseño del informe de la actividad 4.
-
-Fig 6.27. Vista preliminar del informe de la actividad 4.
-
-Aplicaciones Ofimáticas Base de Datos Tema 06. EJERCICIOS. Base de datos relacionales. INFORMES (B1)
-
-EJERCICIOS PROPUESTOS
-
-#### 6.1. Utilizando la BD LIBROS obtener un listado agrupado por tema, que
-
-muestre el título, el autor y la editorial, y por cada tema el total de libros.
-
-#### 6.2. Utilizando la BD EMPLEADOS obtener un listado agrupado por
-
-departamento, que muestre por cada departamento, el nombre del departamento, los nombres de empleados y su salario, la media de salario y el total salario. Y en el pie del informe la suma total de salario y la media total. La vista preliminar se muestra en la figura 6.28.
-
-Fig 6.28. Vista preliminar del informe del ejercicio
-
-#### 6.3. Utilizando la BD VENTAS,
-
-Obtener un informe con los datos de los clientes agrupados por la primera inicial del nombre, los datos a mostrar son el nombre, la dirección y la población. Que aparezcan todos en mayúscula. - Obtener un informe con los datos de las ventas realizadas a los clientes, agrupados por nombre de mes, deben aparecer los datos: nombre del cliente, nombre del producto y unidades vendidas. Los nombres deben aparecer en mayúscula. Y un total de unidades por cada mes.
-
----
-
-## 18.3 B2-EXERCICIS BDA-INFORMES
-
-Tema 6
-
-EJERCICIOS
-
-BDA-Relacionales. INFORMES (completo)
-
-2 parte (B2)
-
-Ejercicios de diseño de informes en Access. Pág. 2
-
-Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)
-
-EJERCICIO 1 EJERCICIO 2 Nota: En cada uno de los ejercicios cambia el estilo del informe en vista de diseño. Se valorará la apariencia del informe, imágenes de fondo, colorido, etc.
-
-A partir de la base de datos Tecnología.mdb realizar un informe que muestre la categoría, nombre, situación y unidades de todos los elementos de la tabla Inventario agrupados por categoría y ordenados por nombre. El informe debe mostrar también la suma de los elementos de cada categoría.
-
-A partir de la base de datos Tecnología.mdb realizar un informe que muestre la categoría, nombre, situación y unidades de todos los elementos de la tabla Inventario agrupados por situación y ordenados por nombre. El informe debe mostrar también la suma de los elementos que hay en cada situación.
-
-Ejercicios de diseño de informes en Access. Pág. 3
-
-Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)
-
-A partir de la base de datos Tecnología.mdb realizar un informe que muestra la categoría, nombre, situación y unidades de todos aquellos elementos de la tabla Inventario adquiridos a lo largo del año 2001. Dicho informe irá agrupado por fecha y ordenado por nombre. El aspecto del informe será como el que se muestra a continuación. Para realizar este ejercicio debes realizar antes una consulta para obtener los objetos adquiridos a lo largo del año 2001 y después realizar el informe a partir de esa consulta. La distribución a utilizar será por bloques.
-
-EJERCICIO 3
-
-Ejercicios de diseño de informes en Access. Pág. 4
-
-Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)
-
-EJERCICIO 5 EJERCICIO 6
-
-Realizar, a partir de la base de datos zoo.mdb, un informe que muestre el nombre, salario, fecha de alta de cada cuidador y los nombres de los animales a los que cuida este cuidador.
-
-A partir de la base de datos mundo.mdb realizar un informe que muestre el nombre del país, continente, religión, lengua, superficie y capital de cada uno de los países, agrupado por continentes y después por religión, en orden ascendente de nombre de país.
-
-Realizar un informe (a partir de la base de datos mundo.mdb) que muestre el nombre del país, capital, población y lengua de los países del continente de Europa, agrupados por lengua y en orden ascendente de nombre de país. Mostrar en dicho informe el promedio de la población para cada lengua.
-
-EJERCICIO 4
-
-Ejercicios de diseño de informes en Access. Pág. 5
-
-Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)
-
-EJERCICIO 8
-
-A partir de la base de datos zoo.mdb realizar un informe de los animales, agrupados por tipo de alimentación y después por medio, en orden ascendente de nombre. Partiendo de la base de datos animales.mdb crear un informe para la tabla ANIMALES con los campos nombre, clase, medio, patas, ojos y alas que agrupe los registros por Clase y por Medio. Incluye totalizadores paraPatas, Ojos y Alas.
-
-EJERCICIO 7
-
----
-
-## 18.4 B2-BDA per a exercicis de INFORMES
-
-> **💡 📦 Contingut del paquet comprimit (BDA_per_a_exercicis.zip)**
-> - `tecnologia.mdb`
-> - `zoo.mdb`

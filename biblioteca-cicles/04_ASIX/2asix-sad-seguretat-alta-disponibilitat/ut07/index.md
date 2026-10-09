@@ -1,28 +1,27 @@
 ---
 layout: default
-title: "UD6 — Tipus de Malware i Programari Antimalware · Unitat Completa"
+title: "UD6 — Tipus de Malware i Programari Antimalware · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT7 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut05/ut0501.html"
+prev_label: "⬅️ 5.1 Criptografia de clau pública"
 next_url: "../ut07/ut0702.html"
-next_label: "7.2 UD5-1 Tipus de malware ➡️"
+next_label: "6.1 1 Tipus de malware ➡️"
 ---
 
 # 📘 UD6 — Tipus de Malware i Programari Antimalware (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**7.2 UD5-1 Tipus de malware**](./ut0702.md)
-- [**7.3 UD5-2 Programari anti malware**](./ut0703.md)
-- [**✍️ Activitats pràctiques UT7**](./ut07actividades.md)
+- [**6.1 1 Tipus de malware**](./ut0702.md)
+- [**6.2 2 Programari anti malware**](./ut0703.md)
 
 ---
 
-# 7.2 UD5-1 Tipus de malware
+# 6.1 1 Tipus de malware
 
 TIPUS DE MALWARE
 
@@ -94,7 +93,7 @@ Com es pot eliminar la INFECCIÓ ✔ Us de programes antivirus / antimalware d'e
 
 ---
 
-# 7.3 UD5-2 Programari anti malware
+# 6.2 2 Programari anti malware
 
 PROGRAMARI ANTIMALWARE
 
@@ -189,24 +188,5 @@ APT (Advanced Persistent Threat)
 ```
 
 ➔Advanced Threat Protection ➔ Consisteix en una mena d'atac informàtic que es caracteritza per realitzar-se amb sigil, romanent actiu i ocult durant molt de temps, utilitzant diferents formes d'atac LA MILLOR EINA ANTIMALWARE
-
----
-
-# ✍️ Activitats pràctiques UT7
-
-> **✍️ Activitat Pràctica 7.1 — (SAD) Antivirus Live**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: Antivirus Live També coneguts com antivirus usb, o antivirus portable
->
-> ### 1. Cerca d'informació sobre que és un Antivirus Live, com s'utilitza i quins
->
-> podem trobar disponibles per al seu ús gratuït Confecciona una llista d’almenys 6
->
-> ### 2. Tria un d'ells
->
-> - Realitza el procés d'instal·lació i prova de l'antivirus triat.
->
-> Necessitarem arrancar un ordinador des d’un USB Les captures de la pràctica en este moment podem fer-les amb fotos de la càmera del mòbil. Documentar tot el procés Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF.
->
-> Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”
 
 ---

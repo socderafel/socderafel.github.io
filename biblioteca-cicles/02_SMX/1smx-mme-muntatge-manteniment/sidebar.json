@@ -6,126 +6,109 @@
   },
   "units": [
     {
-      "summary": "UT1 — Unitat Didàctica 1",
+      "summary": "UD1 — Unitat Didàctica 1",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 U1 - P1 | P2 | P3 - CONTINGUTS",
+          "label": "1.1 P1 | P2 | P3 - CONTINGUTS",
           "href": "ut01/ut0101.html"
         }
       ]
     },
     {
-      "summary": "UT2 — Unitat Didàctica 2",
+      "summary": "UD2 — Unitat Didàctica 2",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS",
+          "label": "2.1 P1 | P2 | P3 - TEXT CONTINGUTS",
           "href": "ut02/ut0201.html"
         },
         {
-          "label": "2.2 U2 - P2 - PROCESADOR Y MEMORIA",
+          "label": "2.2 P2 - PROCESADOR Y MEMORIA",
           "href": "ut02/ut0202.html"
         },
         {
-          "label": "2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS",
+          "label": "2.3 P2 - CONT3 - AMD NOMENCLATURA PROCESADORS",
           "href": "ut02/ut0203.html"
         },
         {
-          "label": "2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS",
+          "label": "2.4 P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS",
           "href": "ut02/ut0204.html"
         },
         {
-          "label": "2.5 U2 - P3 - Perifèrics i Communications",
+          "label": "2.5 P3 - Perifèrics i Communications",
           "href": "ut02/ut0205.html"
         },
         {
-          "label": "2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE",
+          "label": "2.6 P3 - UNITATS D'EMMAGATZENATGE",
           "href": "ut02/ut0206.html"
         },
         {
           "label": "2.7 DISCOS DUROS CHS ECHS LBA",
           "href": "ut02/ut0207.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     },
     {
-      "summary": "UT3 — Unitat Didàctica 5",
+      "summary": "UD3 — Unitat Didàctica 3",
       "items": [
         {
-          "label": "📘 UT3 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 U5 - P1 P2 P3 - PDF CONTINGUTS",
+          "label": "3.1 P1 P2 P3 - PDF CONTINGUTS",
           "href": "ut03/ut0301.html"
         },
         {
-          "label": "3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE",
+          "label": "3.2 P1 P2 P3 - PRESENTACIÓ CLASSE",
           "href": "ut03/ut0302.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
     {
-      "summary": "UT4 — Unitat Didàctica 6",
+      "summary": "UD4 — Unitat Didàctica 4",
       "items": [
         {
-          "label": "📘 UT4 Completa (1 pàgina)",
+          "label": "📘 UD4 Completa (1 pàgina)",
           "href": "ut04/index.html",
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 U6 - RGPD - CONTINGUTS",
+          "label": "4.1 RGPD - CONTINGUTS",
           "href": "ut04/ut0401.html"
         },
         {
-          "label": "4.2 U6 - COPIAS DE SEGURIDAD - CONTINGUTS",
+          "label": "4.2 COPIAS DE SEGURIDAD - CONTINGUTS",
           "href": "ut04/ut0402.html"
         },
         {
-          "label": "4.3 U6 - CLASIF INFORMACION - CONTINGUTS",
+          "label": "4.3 CLASIF INFORMACION - CONTINGUTS",
           "href": "ut04/ut0403.html"
         },
         {
-          "label": "4.4 U6 - P1 P2 P3 PRESENTACIÓ CONTINGUTS",
+          "label": "4.4 P1 P2 P3 PRESENTACIÓ CONTINGUTS",
           "href": "ut04/ut0404.html"
         },
         {
-          "label": "4.5 U6 - P1 P2 P3 - CONTINGUTS",
+          "label": "4.5 P1 P2 P3 - CONTINGUTS",
           "href": "ut04/ut0405.html"
         },
         {
-          "label": "4.6 U6 - P1 P2 P3 - PRESENTACIÓ",
+          "label": "4.6 P1 P2 P3 - PRESENTACIÓ",
           "href": "ut04/ut0406.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

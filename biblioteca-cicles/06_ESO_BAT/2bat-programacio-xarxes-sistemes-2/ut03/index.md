@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT3 — Seguridad — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca"
+title: "UD4 — Seguridad · Temari Complet"
 course_root: ".."
 badge: "2n Batxillerat · UT3 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut02/ut0202.html"
+prev_label: "⬅️ 3.2 CheatSheet CSS3"
 next_url: "../ut03/ut0301.html"
-next_label: "3.1 Continguts i Recursos ➡️"
+next_label: "4.1 Continguts i Recursos ➡️"
 ---
 
-# 📘 UT3 — Seguridad (Unitat Completa)
+# 📘 UD4 — Seguridad (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 Continguts i Recursos**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 Continguts i Recursos**](./ut0301.md)
 
 ---
 
-## 3.1 Continguts i Recursos
+# 4.1 Continguts i Recursos
 
 > **📌 Introducció de la Unitat**
 > Enlaces:
@@ -41,3 +45,5 @@ next_label: "3.1 Continguts i Recursos ➡️"
 > [https://es.slideshare.net/GaneshSh/seguridad-informatica-pdf-2-bachillerato](https://es.slideshare.net/GaneshSh/seguridad-informatica-pdf-2-bachillerato)
 > | [![Imatge](https://cdn.slidesharecdn.com/ss_thumbnails/zjdh1rivr92de6suaraa-signature-d67e46e5902435fadb01c28e7f2d7526269d03e618054f0a636ec85fa4a7dfe9-poli-160217095454-thumbnail.jpg?width=640&height=640&fit=bounds)](https://es.slideshare.net/GaneshSh/seguridad-informatica-pdf-2-bachillerato) | [Seguridad informatica PDF 2º Bachillerato](https://es.slideshare.net/GaneshSh/seguridad-informatica-pdf-2-bachillerato)Seguridad informatica PDF 2º Bachillerato - Descargar como PDF o ver en línea de forma gratuitaes.slideshare.net |
 > | --- | --- |
+
+---

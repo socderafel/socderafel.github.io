@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT2 — Writer — Taller d'Ofimàtica: Writer, Calc i Scratch | Portal Docent Pepe Cuenca"
+title: "UD2 — Writer · Temari Complet"
 course_root: ".."
 badge: "2n ESO · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut01/ut0103.html"
+prev_label: "⬅️ 1.3 Internet 2_ Com fer cerques"
 next_url: "../ut02/ut02actividades.html"
-next_label: "✍️ Activitats pràctiques UT2 ➡️"
+next_label: "2.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT2 — Writer (Unitat Completa)
+# 📘 UD2 — Writer (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 Continguts i Casos Guiats**](./ut02actividades.md)
 
 ---
 
-## ✍️ Activitats pràctiques UT2
+# 2.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 2.1 — Tasca1_Writer**
 > Recorda de pujar l'arxiu amb el nom "Writer1_elteunom".
@@ -210,3 +214,5 @@ next_label: "✍️ Activitats pràctiques UT2 ➡️"
 >
 > > **✍️ Exercici**
 > > Exercici
+
+---

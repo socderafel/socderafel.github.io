@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT6 — Seguretat activa: Accés a xarxes — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "UD6 — Seguretat activa: Accés a xarxes · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT6 Completa"
 prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_label: "⬅️ 5.1 Continguts i Casos Guiats"
 next_url: "../ut06/ut06actividades.html"
-next_label: "✍️ Activitats pràctiques UT6 ➡️"
+next_label: "6.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT6 — Seguretat activa: Accés a xarxes (Unitat Completa)
+# 📘 UD6 — Seguretat activa: Accés a xarxes (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 Continguts i Casos Guiats**](./ut06actividades.md)
 
 ---
 
-## ✍️ Activitats pràctiques UT6
+# 6.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 6.1 — 06.01 VPN: Hamachi**
 > Utilitza el software de Hamachi per construir una VPN entre dos equips. (CP8 Pàgina 162)
@@ -34,3 +38,5 @@ next_label: "✍️ Activitats pràctiques UT6 ➡️"
 
 > **✍️ Activitat Pràctica 6.5 — Examen UD5-UD6**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+---

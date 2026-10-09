@@ -1,28 +1,27 @@
 ---
 layout: default
-title: "UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA) · Unitat Completa"
+title: "UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA) · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT9 Completa"
-prev_url: "../ut08/ut08actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
+prev_url: "../ut08/ut0803.html"
+prev_label: "⬅️ 7.3 VPN"
 next_url: "../ut09/ut0901.html"
-next_label: "9.1 Firewall_i_Proxy ➡️"
+next_label: "8.1 Firewall_i_Proxy ➡️"
 ---
 
 # 📘 UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**9.1 Firewall_i_Proxy**](./ut0901.md)
-- [**9.2 HA - Alta_Disponibilitat**](./ut0902.md)
-- [**✍️ Activitats pràctiques UT9**](./ut09actividades.md)
+- [**8.1 Firewall_i_Proxy**](./ut0901.md)
+- [**8.2 HA - Alta_Disponibilitat**](./ut0902.md)
 
 ---
 
-# 9.1 Firewall_i_Proxy
+# 8.1 Firewall_i_Proxy
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### UD 7 Firewall i Proxy
@@ -87,7 +86,7 @@ Consells finals Protegir la xarxa. STP, Link Aggregation, Port Security, VLAN
 
 ---
 
-# 9.2 HA - Alta_Disponibilitat
+# 8.2 HA - Alta_Disponibilitat
 
 ALTA DISPONIBILITAT
 
@@ -252,24 +251,5 @@ amplada de banda
 On trobem ALTA DISPONIBILITAT FD : Failure Domain CPD - Cloud
 
 On trobem ALTA DISPONIBILITAT
-
----
-
-# ✍️ Activitats pràctiques UT9
-
-> **✍️ Activitat Pràctica 9.1 — (SAD) Activitat: IPFIRE**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat IPFIRE IPFire és una distribució de Linux, de codi obert reforçada que funciona principalment com un encaminador i un tallafocs. Un sistema de firewall independent amb una consola d'administració basada en web per a la configuració.
->
-> Per a producció, cal instal·lar en una màquina física, on es troben les xarxes connectades que es volen protegir. Per a la nostra pràctica, ho instal·larem en una m.v. en virtualbox. El SO serà el propi firewall. S’ha de configurar més d’una interfície de xarxa. En este cas tres.
->
-> No instal·lar encara....... Requisits: 1 cpu, 2 GB ram, 8 GB disc dur, 3 targetes xarxa. Pega una ullada al esquema de xarxa de la següent pàgina. Activitat Revisa el manual de https://wiki.ipfire.org/installation/virtual-box Busca els conceptes de green interface , red interface, orange interface en el manual de ipfire abans d’instal·lar.
->
-> En el moment de crear al mv, activa 3 adaptadors de xarxa. El primer adaptador, en adaptador pont El segon en xarxa interna (intnet1) El tercer en xarxa interna (intnet2) Activa i Configura els adaptadors de xarxa de la mv abans d’instal·lar. Abans de començar la instal·lació, llegeix les preguntes !!
->
-> Instal·la el IPFIRE Marca DHCP en WAN i assigna IP a les altres, assigna la IP més alta possible de cada xarxa Utilitza dos màquines addicionals (per exemple, ubuntu) per connectar-es a les xarxes DMZ i local.
->
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Contesta a les preguntes: -Des d’on se configura el ipfire per primera vegada ? -Quin sistema d’arxius recomana el manual ? -Quina adreça d’accés indica l’instal·lador abans del primer re-inici?
->
-> Quin adaptador s’usa per defecte per accedir a l’administració web ? -Quantes contrasenyes ens demana que registrem per primera vegada, i per a que serviran? -Com podem identificar les targetes de xarxa de la màquina en el moment d’assignar-es a les interfícies? Esquema de xarxa Documentar tot el procés en un document. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada. Entregar el document en format PDF. Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”
 
 ---

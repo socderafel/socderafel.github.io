@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT4 — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "4.1 Continguts i Casos Guiats · 🛡️ Seguretat Informàtica — 2n SMX · Grau Mitjà"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT4 — Seguretat passiva: Emmagatzemament"
+badge: "2n SMX · Grau Mitjà · UD4 — Seguretat passiva: Emmagatzemament"
 prev_url: "../ut04/index.html"
-prev_label: "⬅️ 📘 UT4 Completa (1 pàgina)"
+prev_label: "⬅️ 📘 UD4 Completa (1 pàgina)"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa (1 pàgina) ➡️"
+next_label: "📘 UD5 Completa (1 pàgina) ➡️"
 ---
 
-# ✍️ Activitats pràctiques UT4
+# 4.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 4.1 — 04.01 Congelació de Sistema**
 > De vegades, us interessarà emprar aplicacions per congelar el sistema. Aquestes aplicacions fan que l'ordinador torni a la configuració que tenia en l'últim reinici, rebutjant els canvis que s'hagin pogut realitzar durant la sessió.

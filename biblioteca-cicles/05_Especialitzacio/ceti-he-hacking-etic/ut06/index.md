@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT6 — Auditorias de seguridad con Wireshark — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD6 — Auditorias de seguridad con Wireshark · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT6 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut05/ut0506.html"
+prev_label: "⬅️ 5.6 Scripts amb nmap"
 next_url: "../ut06/ut0601.html"
 next_label: "6.1 Wireshark ➡️"
 ---
 
-# 📘 UT6 — Auditorias de seguridad con Wireshark (Unitat Completa)
+# 📘 UD6 — Auditorias de seguridad con Wireshark (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**6.1 Wireshark**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
-> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 Wireshark**](./ut0601.md)
 
 ---
 
-## 6.1 Wireshark
+# 6.1 Wireshark
 
 Auditoria de seguridad mediante el uso de Wireshark.
 
@@ -197,44 +200,3 @@ WIRESHARK UTILITZACIÓ: ESTADÍSTIQUES ⇒GRÀFIC DE FLUX Hacking ètic 1r CIBER
 Everything Wireshark ● Com a documentació extra Wireshark, vos adjunte una extensa guía d’usuari, per a poder trobar informació relacionada amb funcions bàsiques i avançades Wireshark User's Guide.pdf WIRESHARK INFORMACIÓ ADDICIONAL Hacking ètic 1r CIBER
 
 ---
-
-## ✍️ Activitats pràctiques UT6
-
-> **✍️ Activitat Pràctica 6.1 — Ejercicio**
-> PRÀCTICA TEMA 5.3 PART 1 - HACKING ÈTIC - WIRESHARK.
->
-> CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ.
->
-> En aquesta pràctica 5.3, heu de realitzar uns exercicis, mitjançant Kali Linux i la ferramenta Wireshark, amb la finalitat de realitzar análisis amb les captures de tràfic de la xarxa ethernet.
->
-> Abans de començar amb els exercicis, heu d’iniciar una captura de paquets a través de la xarxa ethernet (eth0), mentre obriu el navegador, entreu a les pàgines web google.com, wireshark.org i incibe.es, i tanqueu el navegador.
->
-> El nom i el tipus de columnes que contindrà cada resposta de l’exercici seran les següents, ordenades amb el mateix ordre que vos indique: No. (Number), Time (Time, format as specified), Absolute Time (Absolute Time), Source (Source Address), Source Port (Source Port), Destination (Destination Address), Destination Port (Destination Port), Protocol (Protocol), Length (Packet length, bytes), Cumulative Bytes (Cumulative Bytes), Info (Information).
->
-> A partir d’ací, heu d’aplicar els filtres corresponents a les especificacions de l’exercici i realitzar un anàlisi del resultat obtingut.
->
-> Filtrar els paquets obtinguts per protocol UDP.
->
-> Filtrar els paquets obtinguts per protocol UDP i port d’origen DNS.
->
-> Filtrar els paquets obtinguts per protocol TCP i port de destí HTTP.
->
-> Filtrar els paquets obtinguts per protocol TCP, ignorant els ports de HTTP i HTTPS, enviats pel port d’origen i destí.
->
-> Filtrar els paquets obtinguts per protocol JSON.
->
-> Filtrar els paquets obtinguts per TCP amb un nombre de seqüència de 20938814. Si no s’obté cap resultat, proveu amb un altre nombre de seqüència.
->
-> Filtrar els paquets obtinguts per una longitud de trama de 54 bytes.
->
-> Filtrar els paquets obtinguts per un nombre de respostes del paquet igual a 2 (Answer RRs = 2), tenint en compte únicament els paquets que han utilitzat el protocol DNS.
->
-> Les respostes hauran de contenir
->
-> La instrucció completa del filtre que s’ha utilitzat a Wireshark per a complir els requisits de la búsqueda.
->
-> Una descripció de cada instrucció utilitzada (no repetir explicació).
->
-> Una o varies captures de pantalla dels resultats obtinguts.
->
-> Un anàlisi dels resultats obtinguts.

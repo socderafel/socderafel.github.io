@@ -1,23 +1,26 @@
 ---
 layout: default
-title: "UT11 — Ingenieria social — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD10 — Ingenieria social · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT11 Completa"
-prev_url: "../ut10/ut10actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT10"
+prev_url: "../ut09/ut0902.html"
+prev_label: "⬅️ 9.2 Nessus"
 next_url: "../ut11/ut1101.html"
-next_label: "11.1 Ingenieria social ➡️"
+next_label: "10.1 Ingenieria social ➡️"
 ---
 
-# 📘 UT11 — Ingenieria social (Unitat Completa)
+# 📘 UD10 — Ingenieria social (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**11.1 Ingenieria social**](#ut1101) (o [obrir en pàgina individual ➡️](./ut1101.md) )
-> - [**✍️ Activitats pràctiques UT11**](#ut11actividades) (o [obrir en pàgina individual ➡️](./ut11actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**10.1 Ingenieria social**](./ut1101.md)
 
 ---
 
-## 11.1 Ingenieria social
+# 10.1 Ingenieria social
 
 Introducción Podemos considerar phishing como un tipo de ataque de ingeniería social donde se engaña a la víctima para conseguir algún objetivo concreto. Objetivos
 
@@ -46,8 +49,3 @@ Al pulsar Ctrl + C en la consola se visualizarán las credenciales obtenidas
 Shellphish Integra ngrok dentro de su script Posee un rango más grande de páginas
 
 ---
-
-## ✍️ Activitats pràctiques UT11
-
-> **✍️ Activitat Pràctica 11.1 — Ejercicios de ingenieria social**
-> Realiza distintos ataques de ingenieria social para familiarizarte con la herramienta

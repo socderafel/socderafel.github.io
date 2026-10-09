@@ -1,24 +1,26 @@
 ---
 layout: default
-title: "UT15 — Interacción con bases de datos — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
+title: "UD11 — Interacción con bases de datos · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT15 Completa"
-prev_url: "../ut14/ut1409.html"
-prev_label: "⬅️ 14.9 Ejercicios - AyR"
+prev_url: "../ut14/ut1401.html"
+prev_label: "⬅️ 10.1 Lectura y escritura de información en ficheros"
 next_url: "../ut15/ut1501.html"
-next_label: "15.1 Interacción con bases de datos ➡️"
+next_label: "11.1 Interacción con bases de datos ➡️"
 ---
 
-# 📘 UT15 — Interacción con bases de datos (Unitat Completa)
+# 📘 UD11 — Interacción con bases de datos (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**15.1 Interacción con bases de datos**](#ut1501) (o [obrir en pàgina individual ➡️](./ut1501.md) )
-> - [**15.2 bdpersonas**](#ut1502) (o [obrir en pàgina individual ➡️](./ut1502.md) )
-> - [**15.3 mysql-connector-java-8.0.19**](#ut1503) (o [obrir en pàgina individual ➡️](./ut1503.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**11.1 Interacción con bases de datos**](./ut1501.md)
 
 ---
 
-## 15.1 Interacción con bases de datos
+# 11.1 Interacción con bases de datos
 
 En esta unidad encontraréis 8 ejercicios (del 11.1 al 11.8) para practicar.
 
@@ -588,43 +590,3 @@ V1.02.05.23 A partir del ejercicio 11.4 realiza los siguientes ejercicios: Nota 
 Basado en los apuntes de Espe Micó y Joan Gerard Camarena (IES Jaume II el Just, Tavernes de la Valldigna) https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/
 
 ---
-
-## 15.2 bdpersonas
-
-Script SQL para crear una base de datos de prueba en phpMyAdmin. Puede que la necesites para poder probar algunos ejercicios de los apuntes.
-
-Para importar un Script en phpMyAdmin, debes ir a "Importar" -> "Importar archivo..." -> Seleccionar el script descargado -> En la parte inferior de la página clic en "Importar".
-
-```sql
--- Crear la base de datos
-
-CREATE DATABASE pruebabd;
-
--- Seleccionar la base de datos
-
-USE pruebabd;
-
--- Crear la tabla personas
-
-CREATE TABLE personas (
-
-  dni VARCHAR(9) NOT NULL PRIMARY KEY,
-
-  nombre VARCHAR(50) NOT NULL,
-
-  edad INT NOT NULL
-
-);
-
--- Insertar una persona en la tabla
-
-INSERT INTO personas (dni, nombre, edad)
-
-VALUES ('11110000', 'Aitor Tilla', 20);
-```
-
----
-
-## 15.3 mysql-connector-java-8.0.19
-
-Driver

@@ -1,28 +1,31 @@
 ---
 layout: default
-title: "UT5 — Fingerprint — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD5 — Fingerprint · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut04/ut0404.html"
+prev_label: "⬅️ 4.4 Footprint"
 next_url: "../ut05/ut0501.html"
 next_label: "5.1 Introducción al Fingerprinting ➡️"
 ---
 
-# 📘 UT5 — Fingerprint (Unitat Completa)
+# 📘 UD5 — Fingerprint (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 Introducción al Fingerprinting**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**5.2 Nmap**](#ut0502) (o [obrir en pàgina individual ➡️](./ut0502.md) )
-> - [**5.3 Fingerprinting**](#ut0503) (o [obrir en pàgina individual ➡️](./ut0503.md) )
-> - [**5.4 Presentación fingerprint**](#ut0504) (o [obrir en pàgina individual ➡️](./ut0504.md) )
-> - [**5.5 Enumeración con nmap**](#ut0505) (o [obrir en pàgina individual ➡️](./ut0505.md) )
-> - [**5.6 Scripts amb nmap**](#ut0506) (o [obrir en pàgina individual ➡️](./ut0506.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 Introducción al Fingerprinting**](./ut0501.md)
+- [**5.2 Nmap**](./ut0502.md)
+- [**5.3 Fingerprinting**](./ut0503.md)
+- [**5.4 Presentación fingerprint**](./ut0504.md)
+- [**5.5 Enumeración con nmap**](./ut0505.md)
+- [**5.6 Scripts amb nmap**](./ut0506.md)
 
 ---
 
-## 5.1 Introducción al Fingerprinting
+# 5.1 Introducción al Fingerprinting
 
 > **🔗 Recurs Web: Scripts amb nmap**
 > [**🌐 Obrir recurs extern (https://nmap.org/book/nse-usage.html) ↗️**](https://nmap.org/book/nse-usage.html)
@@ -138,7 +141,7 @@ Hacking ètic 1r CIBER FINGERPRINT FERRAMENTES PASSIVES: FERRAMENTES Com a exemp
 
 ---
 
-## 5.2 Nmap
+# 5.2 Nmap
 
 Tema 5.1. Auditoria de seguretat: Fingerprint actiu mitjançant Nmap Hacking ètic (HE) 1r CIBER
 
@@ -250,7 +253,7 @@ Hacking ètic 1r CIBER NMAP TIPUS D’ESCANEIG: TCP IDLE ( -sI )
 
 ---
 
-## 5.3 Fingerprinting
+# 5.3 Fingerprinting
 
 Material curs conselleria
 
@@ -423,7 +426,7 @@ Imagen 31 Wireshark - Imágen obtenida de la comunicación
 
 ---
 
-## 5.4 Presentación fingerprint
+# 5.4 Presentación fingerprint
 
 Material curs conselleria
 
@@ -470,7 +473,7 @@ Nmap: Comandos y parámetros Parámetro Descripción y Ejemplo -A Este parámetr
 
 ---
 
-## 5.5 Enumeración con nmap
+# 5.5 Enumeración con nmap
 
 ENUMERACIÓN INTRODUCCIÓN ................................................................................................................................... 2 OBJETIVOS ........................................................................................................................................... 2 DESCUBRIMIENTO DE RED ................................................................................................................... 3 TRAZADO DE RUTAS ................................................................................................................................ 3 BARRIDO DE RED (NETWOORK SWEEP) ........................................................................................................ 4
 
@@ -819,7 +822,7 @@ Enumeración de servicios Una vez iden@ﬁcados los servicios que se ejecutan en
 
 ---
 
-## 5.6 Scripts amb nmap
+# 5.6 Scripts amb nmap
 
 ESCANEIG NMAP AMB SCRIPTS CET HE
 
@@ -876,54 +879,3 @@ molt útil: -A
 Actualment permet: 1.Detecció del S.O. 2.L’escaneig de versions (-sV) Escaneig amb el paràmetre -A
 
 ---
-
-## ✍️ Activitats pràctiques UT5
-
-> **✍️ Activitat Pràctica 5.1 — exercici de nmap1**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 5.2 — exercici nmap 2**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
-
-> **✍️ Activitat Pràctica 5.3 — Scripts amb nmap**
-> Vamos a hacer un estudio de los scripts más utilizados.
->
-> Estudia la utilidad de cada script y propon un ejemplo de cada caso.
->
-> Veamos una serie de scripts que nos permiten escanear la red en busca de vulnerabilidades
->
-> - Auth ejecuta todos los scripts disponibles para la autentificación. Con esta herramienta se detectan los usuarios ya sean anónimos (no se requiere usuario y contraseña para entrar al sistema o con permisos de superusuario.
->
-> Ejemplo
->
-> ```bash
-> # sudo nmap -f-sS -SV-Pn --script auth ip
-> ```
->
-> - Default ejecuta los scripts por defecto de la herramienta
->
-> Ejemplo
->
-> ```bash
-> # sudo nmap -f-sS -SV-Pn --script default ip
-> ```
->
-> Discovery: recupera información del target o víctima
->
-> External: script para utilizar recursos externos
->
-> Intrusive: utiliza scripts que son considerados intrusivos para la víctima
->
-> Indicios de la presencia de malware: revisa si hay conexiones abiertas por códigos maliciosos o backdoors
->
-> Safe: ejecuta scripts que no son intrusivos
->
-> Vuln: descubre las vulnerabilidades más conocidas
->
-> Ejemplo
->
-> ```bash
-> # sudo nmap -f --script vuln ip
-> ```
->
-> All: ejecuta absolutamente todos los scripts con extensión NSE disponibles

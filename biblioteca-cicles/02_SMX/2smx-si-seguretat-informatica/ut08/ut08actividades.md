@@ -1,15 +1,13 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT8 — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "8.1 Continguts i Casos Guiats · 🛡️ Seguretat Informàtica — 2n SMX · Grau Mitjà"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT8 — Atacs i contramesures"
+badge: "2n SMX · Grau Mitjà · UD8 — Atacs i contramesures"
 prev_url: "../ut08/index.html"
-prev_label: "⬅️ 📘 UT8 Completa (1 pàgina)"
-next_url: "../references.html"
-next_label: "📂 Índex de Documents i Recursos ➡️"
+prev_label: "⬅️ 📘 UD8 Completa (1 pàgina)"
 ---
 
-# ✍️ Activitats pràctiques UT8
+# 8.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 8.1 — 08.01 Ultrasurf**
 > Prova el servei d'Ultrasurf i comenta les seves utilitats més interessants.

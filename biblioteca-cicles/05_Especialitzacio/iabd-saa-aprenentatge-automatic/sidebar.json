@@ -14,7 +14,7 @@
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 UT 1. Caracterització de IA forta I dèbil usos i",
+          "label": "1.1 Caracterització de IA forta I dèbil usos i",
           "href": "ut06/ut0601.html"
         }
       ]
@@ -28,15 +28,15 @@
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 UT 4 . Eines d'aprenentatge automàtic",
+          "label": "2.1 Eines d'aprenentatge automàtic",
           "href": "ut05/ut0501.html"
         },
         {
-          "label": "5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto",
+          "label": "2.2 Algorismes aplicats a l'aprenentatge auto",
           "href": "ut05/ut0502.html"
         },
         {
-          "label": "5.3 UT 2 . Caracterització de sistemes d'aprenentatg",
+          "label": "2.3 Caracterització de sistemes d'aprenentatg",
           "href": "ut05/ut0503.html"
         }
       ]
@@ -50,28 +50,24 @@
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 UT 5.4. Aprenentatge supervisat. Tractament de d",
+          "label": "3.1 Aprenentatge supervisat. Tractament de d",
           "href": "ut04/ut0401.html"
         },
         {
-          "label": "4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r",
+          "label": "3.2 Aprenentatge supervisat. Algorismes de r",
           "href": "ut04/ut0402.html"
         },
         {
-          "label": "4.3 UT 5.2. Aprenentatge supervisat. Models de regre",
+          "label": "3.3 Aprenentatge supervisat. Models de regre",
           "href": "ut04/ut0403.html"
         },
         {
-          "label": "4.4 UT 5.1. Aprenentatge supervisat. Models de regre",
+          "label": "3.4 Aprenentatge supervisat. Models de regre",
           "href": "ut04/ut0404.html"
         },
         {
-          "label": "4.5 UT 5. Aprenentatge supervisat. Introducció.",
+          "label": "3.5 Aprenentatge supervisat. Introducció.",
           "href": "ut04/ut0405.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     },
@@ -84,7 +80,7 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Continguts i Recursos",
+          "label": "4.1 Continguts i Recursos",
           "href": "ut03/ut0301.html"
         }
       ]
@@ -98,20 +94,11 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 Continguts i Recursos",
+          "label": "5.1 Continguts i Recursos",
           "href": "ut02/ut0201.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

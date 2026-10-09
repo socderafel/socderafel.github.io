@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT1 — Programació, IA i Robòtica II: App Inventor i Robòtica | Portal Docent Pepe Cuenca"
+title: "1.1 Continguts i Casos Guiats · 📲 Programació, IA i Robòtica II: App Inventor i Robòtica — 3r ESO"
 course_root: ".."
-badge: "3r ESO · UT1 — App Inventor"
-prev_url: "../ut01/ut0101.html"
-prev_label: "⬅️ 1.1 Projecte final 2a Avaluació"
+badge: "3r ESO · UD1 — App Inventor"
+prev_url: "../ut01/index.html"
+prev_label: "⬅️ 📘 UD1 Completa (1 pàgina)"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa (1 pàgina) ➡️"
+next_label: "📘 UD2 Completa (1 pàgina) ➡️"
 ---
 
-# ✍️ Activitats pràctiques UT1
+# 1.1 Continguts i Casos Guiats
 
 > **✍️ 📋 Exercici / Qüestionari 1.1 — Pràctica 4**
 > > **✍️ EJERCICIO 4: GOLPEA AL TOPO EJERCICIO 4: GOLPEA AL TOPO Descripci**

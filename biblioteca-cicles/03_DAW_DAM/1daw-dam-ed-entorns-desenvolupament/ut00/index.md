@@ -1,25 +1,28 @@
 ---
 layout: default
-title: "UT0 — Introducción al desarrollo de software — Entorns de Desenvolupament | Portal Docent Pepe Cuenca"
+title: "UD1 — Introducción al desarrollo de software · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT0 Completa"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut00/ut0001.html"
-next_label: "0.1 U1 - Intr. al desarrollo de SW ➡️"
+next_label: "1.1 Intr. al desarrollo de SW ➡️"
 ---
 
-# 📘 UT0 — Introducción al desarrollo de software (Unitat Completa)
+# 📘 UD1 — Introducción al desarrollo de software (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**0.1 U1 - Intr. al desarrollo de SW**](#ut0001) (o [obrir en pàgina individual ➡️](./ut0001.md) )
-> - [**0.2 Especificaciones requisitos IEEE380_ejemplo**](#ut0002) (o [obrir en pàgina individual ➡️](./ut0002.md) )
-> - [**0.3 Especificaciones requisitos software_ejemplo**](#ut0003) (o [obrir en pàgina individual ➡️](./ut0003.md) )
-> - [**✍️ Activitats pràctiques UT0**](#ut00actividades) (o [obrir en pàgina individual ➡️](./ut00actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 Intr. al desarrollo de SW**](./ut0001.md)
+- [**1.2 Especificaciones requisitos IEEE380_ejemplo**](./ut0002.md)
+- [**1.3 Especificaciones requisitos software_ejemplo**](./ut0003.md)
 
 ---
 
-## 0.1 U1 - Intr. al desarrollo de SW
+# 1.1 Intr. al desarrollo de SW
 
 ---
 
@@ -290,7 +293,7 @@ Dubtes?
 
 ---
 
-## 0.2 Especificaciones requisitos IEEE380_ejemplo
+# 1.2 Especificaciones requisitos IEEE380_ejemplo
 
 Especiﬁcaci´on de Requisitos seg´un el est´andar de IEEE 830 IEEE Std. 830-1998 22 de Octubre de 2008 Resumen Este documento presenta, en castellano, el formato de Especiﬁca- ci´on de Requisitos Software (ERS) seg´un la ´ultima versi´on del est´andar IEEE 830. Seg´un IEEE, un buen Documento de Requisitos, pese a no ser obligatorio que siga estrictamente la organizaci´on y el formato da- dos en el est´andar 830, s´ı deber´a incluir, de una forma o de otra, toda la informaci´on presentada en dicho est´andar. El est´andar de IEEE 830 no est´a libre de defectos ni de prejuicios, y por ello ha sido jus- tamente criticado por m´ultiples autores y desde m´ultiples puntos de vista, lleg´andose a cuestionar incluso si es realmente un est´andar en el sentido habitual que tiene el t´ermino en otras ingenier´ıas. El presente documento no pretende pronunciarse ni a favor ni en contra de unos u otros: tan s´olo reproduce, con prop´ositos fundamentalmente docentes, c´omo se organizar´ıa un Documento de Requisitos seg´un el est´andar IEEE 830.
 
@@ -418,7 +421,7 @@ Tambi´en, si es necesario, se especiﬁcar´an lo requisitos de datos, es decir
 
 ---
 
-## 0.3 Especificaciones requisitos software_ejemplo
+# 1.3 Especificaciones requisitos software_ejemplo
 
 SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 1
 
@@ -651,54 +654,3 @@ SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 17
 3.4 Otros requisitos PROPIEDAD INTELECTUAL El costo de licencia de producto será valorado por el número de usuarios que se conecten. 4 Apéndices
 
 ---
-
-## ✍️ Activitats pràctiques UT0
-
-> **✍️ Activitat Pràctica 0.1 — U1 A1**
-> Unitat 1 – Introducció al desenvolupament de SW
->
-> U1 – A1
->
-> En aquest exercici realitzaràs una línia temporal online, de forma que podràs inserta tant fotografies com vídeos relacionats amb l’evolució del software des dels seus inicis fins a l’actualitat.
->
-> Per a la línia temporal, pots fer ús de qualsevol de les ferramentes que trobaràs en aquesta Web o bé qualsevol altra (Word, Canva, Powerpoint, etc).
->
-> https://www.educaciontrespuntocero.com/recursos/herramientas-crear- lineas-tiempo/
->
-> La línia temporal no té un mínim ni un màxim d’esdeveniments. La recomanació es llegir tot i indicar els que et pareguen més importants.
->
-> Com a tip, la línia de temps deuria incloure noms com Alan Turing, Ada Lovelace o John W. Tukey.
-
-> **✍️ Activitat Pràctica 0.2 — U1 A2**
-> Unitat 1 – Introducció al desenvolupament de SW
->
-> U1 – A2
->
-> Instruccions
->
-> - Recorda copiar tant enunciats com les respostes.
-> - Entrega el document en format PDF a la tasca d’aules creada per a tal
->
-> fi.
->
-> - No còpies i pegues. Gasta les teues paraules.
-> - Les activitats del 1 a la 4 tenen un pes del 50%.
-> - L’activitat 5 té un pes del 50%
->
-> ### 1. Què és el desenvolupament de software?
->
-> ### 2. Quines etapes formen el cicle de vida del software de forma genèrica?
->
-> Existeixen altres etapes?
->
-> ### 3. En què consisteix l’etapa d’anàlisi? Creus que el desarrollador final deu
->
-> estar present? Per què?
->
-> ### 4. Què es el quadern de càrrega? Busca informació a Internet i explica-ho
->
-> breument amb les teues paraules.
->
-> ### 5. Busca 5 cicles de software actuals i fes una breu explicació de cadascun
->
-> d’ells.

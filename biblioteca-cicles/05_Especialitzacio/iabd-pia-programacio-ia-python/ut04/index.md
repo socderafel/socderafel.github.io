@@ -1,29 +1,27 @@
 ---
 layout: default
-title: "UD2 — Fonaments de Programació en Python · Unitat Completa"
+title: "UD2 — Fonaments de Programació en Python · Temari Complet"
 course_root: ".."
 badge: "CE IA i Big Data · UT4 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut05/ut0502.html"
+prev_label: "⬅️ 1.2 SO LINUX MINT MATE"
 next_url: "../ut04/ut0401.html"
-next_label: "4.1 Python apuntes de clase ➡️"
+next_label: "2.1 Python apuntes de clase ➡️"
 ---
 
 # 📘 UD2 — Fonaments de Programació en Python (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 Python apuntes de clase**](./ut0401.md)
-- [**4.2 Python para todos (libro).**](./ut0402.md)
-- [**4.3 Ejercicios**](./ut0403.md)
-- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
+- [**2.1 Python apuntes de clase**](./ut0401.md)
+- [**2.2 Python para todos (libro).**](./ut0402.md)
 
 ---
 
-# 4.1 Python apuntes de clase
+# 2.1 Python apuntes de clase
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Materiales.
@@ -595,7 +593,7 @@ Curso de especialización en Inteligencia Artificial y Big Data Programación de
 
 ---
 
-# 4.2 Python para todos (libro).
+# 2.2 Python para todos (libro).
 
 Python PARA TODOS Raúl González Duque
 
@@ -1831,149 +1829,5 @@ En la segunda línea, vemos cómo se puede pasar más de un valor a sustituir, p
 
 > **💡 📚 Document extens (160 pàgines)**
 > S'han mostrat les primeres 80 pàgines completes del manual.
-
----
-
-# 4.3 Ejercicios
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejercicios de la UT 2 Programación en Python. Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Taula de continguts
-
-- Introducción..........................................................................................................................................3
-
-1.1. Instalación de Python.....................................................................................................................3 1.2. Entorno de desarrollo de Python (IDE)..........................................................................................3
-
-- Programación en Python.......................................................................................................................5
-
-2.1. Elementos de un programa de Python (1/2)...................................................................................5 2.1.1. Lineas y espacios....................................................................................................................5 2.1.2. Delimitadores..........................................................................................................................6 2.1.3. Palabras reservadas.................................................................................................................9 2.1.4. Variables................................................................................................................................10 2.1.5. Operadores aritméticos.........................................................................................................13 2.1.6. Operadores relacionales (o de comparación)........................................................................15 2.1.7. Operadores lógicos...............................................................................................................16 2.1.8. Resumen de operadores........................................................................................................17 2.2. Estructuras de control...................................................................................................................17 2.2.1. Bucle condicional if-elif-else................................................................................................18 2.2.2. Bucle de repetición for..........................................................................................................19 2.2.3. Bucle de repetición while.....................................................................................................21 2.2.4. Elementos adicionales a las estructuras de control...............................................................21 2.3. Funciones de entrada y salida.......................................................................................................25 2.3.1. Print(): Función de salida de datos por consola....................................................................25 2.3.2. Input(): Función de entrada de datos por consola.................................................................32 2.4. Refundición de variables (casting)...............................................................................................34 2.4.1. Conversión implícita.............................................................................................................34 2.4.2. Conversión explícita.............................................................................................................35 2.5. Elementos de un programa en Python (2/2).................................................................................36 2.5.1. Listas.....................................................................................................................................36 2.5.2. Manipulación de listas..........................................................................................................37 2.5.3. Tuplas....................................................................................................................................45 2.5.4. Diccionarios..........................................................................................................................46 2.5.5. Operaciones sobre diccionarios............................................................................................48 2 / 9
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.
-
-- EJERCICIO 1.
-
-Escribir un programa que pregunte el nombre del usuario de la siguiente manera: ¿Cual es tu nombre de usuario? Después de introducir el nombre, el nombre se visualizará por pantalla de la siguiente manera: El nombre del usuario es: nombre introducido. Es decir texto + nombre del usuario.
-
-> **💡 Apunt Tècnic**
-> Ejemplo
-
-### 2. EJERCICIO 2
-
-Escribir un programa que pida el valor de 2 variables. El programa sumará el valor de las 2 variables y devolverá el resultado por pantalla. Ejemplo: 3 / 9
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.
-
-### 3. EJERCICIO 3
-
-Escribir un programa que pida el peso (en kilogramos) y la altura (en metros) de una persona. El programa calculará luego el indice de masa corporal (imc). Después, el imc se visualizará por pantalla de la siguiente manera: El indice de masa corporal es: imc_calculado Para el calculo del imc se usará la formula: imc = peso (kg) / [estatura (m)]2.
-
-> **💡 Apunt Tècnic**
-> Ejemplo
-
-### 4. EJERCICIO 4
-
-Escribir un programa que pida introducir una palabra. Luego el programa devolverá la palabra pero escrita al revés es decir, si ingresamos calcular, el programa devolverá raluclac. Ejemplo: 4 / 9
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.
-
-### 5. EJERCICIO 5
-
-Escribir un programa que muestre por pantalla todas las fichas de un juego de dominó es decir que escriba las fichas una a una de la siguiente manera: 5 / 9
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.
-
-### 6. EJERCICIO 6
-
-Escribir un programa que genere un número aleatorio entre 1 y 100. El programa pedirá al usuario que introduzca un número entre 1 y 100. Si el número introducido es inferior al número aleatorio generado el programa escribirá por pantalla “El numero introducido es inferior al número aleatorio”. Si es superior “El numero introducido es superior al número aleatorio”.
-
-Luego volverá a pedir al usuario introducir otro número. Si el número introducido es igual al número aleatorio el texto será “¡Enhorabuena, has acertado!” y el programa terminará. Ejemplo: 6 / 9
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.
-
-### 7. EJERCICIO 7
-
-Escribir un programa que pida introducir 3 valores. Luego el programa determinará qué valor introducido es el más grande. Ejemplo
-
-### 8. EJERCICIO 8
-
-Escribir un programa que pida introducir una frase. Luego el programa contará cuantas veces aparece la letra “e” en esa frase. Ejemplo: 7 / 9
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.
-
-### 9. EJERCICIO 9
-
-Crea un programa que devuelva la letra “o” por pantalla con las siguientes condiciones. El programa preguntara por una cifra “n”. Luego el programa pintará en pantalla una primera linea con ‘n’ veces la letra “o”. Luego n-2 lineas con el primer y el carácter con “o” y espacios en blanco entre las 2 “o”.
-
-Para terminar la última linea también contendrá ‘n’ veces la letra “o”. Ejemplo: n=9 8 / 9
-
-Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 10. EJERCICIO 10 Realizar un programa que pregunte el saldo inicial y calcule el saldo al año, a los 2 años y a los 3 años si suponemos que la cuenta tiene un interés del 4%.
-
-Escribir el programa para que comience preguntando por la cantidad de dinero depositada en la cuenta de ahorros. Después el programa calculará y mostrará por pantalla la cantidad de ahorros tras el primer, segundo y tercer años. El programa preguntará al principio si el usuario desea continuar y después del calcula si quiere repetir el cálculo con otra cantidad.
-
-Si queréis, podéis redondear la cifras a 2 decimales. Ejemplo: 9 / 9
-
----
-
-# ✍️ Activitats pràctiques UT4
-
-> **✍️ Activitat Pràctica 4.1 — Tarea 4 - Trabajando con clases y ficheros**
-> Escribir un programa que permita crear y (re)leer un archivo de texto. El programa pedirá al usuario que ingrese el nombre del archivo. Luego propondrá la opción de grabar nuevas líneas de texto o mostrar el contenido del archivo. El usuario podrá ingresar líneas sucesivas de texto simplemente usando la tecla <Enter>.
->
-> Si la tecla <Enter> se pulsa sobre una linea vacía la introduccion de texto habrá finalizado y se guardará el archivo La visualización del contenido del archivo deberá mostrar las líneas del archivo sin códigos al final de la línea).
->
-> Escribir un programa con una clase que realice lo siguiente. Inicialice los frutos del diccionario usando el método __init__() de la siguiente manera. -> Manzana = Roja, Naranja = Naranja, Melon: Verde, Plátano: Amarillo La clase contendrá una función que elijirá al azar un item del diccionario con random.choice(list(self.frutas.items())).
->
-> Almacenará la clave en "fruta" y el valor en "color". El programa luego preguntará al usuario por el color de la fruta elegida al azar. Si es correcto, imprimir respuesta correcta; si no respuesta incorrecta. Despues de dar la respuesta el programa preguntará si el jugador quiere seguir.
-
-> **✍️ Activitat Pràctica 4.2 — Tarea 3 - Trabajando con funciones**
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Tarea 3 - Funciones UT 2 Programación en Python. Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
->
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Taula de continguts Ejercicio 1..................................................................................................................................................3 Ejercicio 2..................................................................................................................................................3 Ejercicio 3..................................................................................................................................................3 Ejercicio 4..................................................................................................................................................3 Ejercicio 5..................................................................................................................................................4 Ejercicio 6..................................................................................................................................................4 Ejercicio 7..................................................................................................................................................4 Ejercicio 8..................................................................................................................................................4 2 / 4
->
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejercicio 1 Función centrar: Recibe una cadena y la imprime centrada en la pantalla. La pantalla tiene 80 caracteres de ancho. Para centrar usaremos la fórmula (80 – Longitud(cad)) / 2 Parámetros de entrada: Preguntar la cadena a imprimir centrada.
->
-> > **⚠️ Nota: print(“ “ * 40) = 40 veces “ “ Ejercicio 2 Funció...**
-> > Nota: print(“ “ * 40) = 40 veces “ “ Ejercicio 2 Función EsMultiplo: Recibe dos números e indica si el primero es múltiplo del segundo. Para ello calcula el resto de la división. Si es 0 es múltiplo. Parámetros de entrada: Preguntar dos números. Dato devuelto por terminal: Múltiplo si el primero es múltiplo del segundo y falso en caso contrario.
->
-> Ejercicio 3 Función calcularTemperaturaMedia: Recibe dos números reales que representan dos temperaturas y devuelve la temperatura media. Parámetros de entrada: Preguntar dos temperaturas (real) Dato a devolver por terminal: La temperatura media (real) Ejercicio 4 Función CalcularMaxMin: Recibe una lista de enteros y devuelve el máximo y el mínimo de los números guardados en el vector.
->
-> Parámetros de entrada: Lista de enteros. Valores de salida: valor máximo y mínimo.
->
-> > **⚠️ Nota: Para llenar la lista se puede usar un bucle o usa...**
-> > Nota: Para llenar la lista se puede usar un bucle o usar la biblioteca random y el método randint(min, max-1) para llenar la lista con un número predefinido de elementos. 3 / 4
->
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejercicio 5 Función CalcularAreaPerimetro: recibe el radio de una circunferencia y devuelve el área y el perímetro. Parámetros de entrada: radio (real) Valores de salida: área y perímetro (real) Ejercicio 6 Función Login: Recibe un nombre de usuario y una contraseña, y devuelve un valor lógico: verdadero si se ha introducido el nombre y la contraseña adecuadas.
->
-> Además devuelve el número de intentos Parámetros de entrada: nombre y contraseña, y el número de intentos actual Datos devueltos: Valor lógico indicando si ha hecho login, e intentos. Ejercicio 7 Función Intercambiar: Recibe dos números como parámetros de entrada y devuelve los números ordenados de mayor a menor Parámetros de entrada: dos números Datos de salida: dos números.
->
-> Ejercicio 8 Escribe un programa principal con un menú donde se pueda elegir la opción de convertir a segundos, convertir a horas, minutos y segundos o salir del programa. El programa tendrá: Función Convertir_A_Segundos: Recibe una cantidad de horas, minutos y segundos y calcula a cuantos segundos corresponde.
->
-> Función Convertir_A_HMS: Recibe una cantidad de segundos y calcula a cuantas horas minutos y segundos corresponde. Parámetros de entrada: hora, minutos y segundos. Dato devuelto: Segundos totales. 4 / 4
-
-> **✍️ Activitat Pràctica 4.3 — Tarea 2 - Trabajando con listas, tuplas y diccionarios**
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Tarea 2 UT 2 Programación en Python. Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
->
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Taula de continguts Ejercicio 1..................................................................................................................................................3 Ejercicio 2..................................................................................................................................................3 Ejercicio 3..................................................................................................................................................3 Ejercicio 4..................................................................................................................................................4 2 / 4
->
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejercicio 1 Escribe un programa que pida un número por teclado y que cree un diccionario cuyas claves sean desde el número 0 hasta el número indicado, y los valores sean los cuadrados de las claves.
->
-> Ejercicio 2 Escribe un programa que lea una cadena y devuelva un diccionario con la cantidad de apariciones de cada carácter en la cadena. Ejercicio 3 Crear un programa de la siguiente forma: Declarar un diccionario donde se almacenen los precios de distintas frutas por ejemplo
->
-> "manzana": 2, "naranja": 3, "platano": 5, "pera": 4 El programa pedirá el nombre de la fruta y la cantidad que se ha vendido. El programa mostrará el precio total de la venta. Si la fruta no existe nos dará un error. Tras cada consulta el programa preguntará si deseamos continuar.
->
-> 3 / 4
->
-> Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejercicio 4 Crear un programa que guarde los nombres de los alumnos de una clase y las notas que han obtenido. Cada alumno puede tener distinta cantidad de notas.
->
-> Guardar la información en un diccionario. Las claves serán los nombres de los alumnos y los valores serán las listas con las notas de cada alumno. El programa pedirá
->
-> - El número de alumnos
-> - El nombre de los alumnos (si se introduce el nombre de un alumno que ya existe
->
-> el programa nos dará un error).
->
-> - Sus notas. Para finalizar de introducir las notas si introducirá un número
->
-> negativo. Después de introducir los alumnos y las notas, el programa mostrará la lista de alumnos y la nota media obtenida por cada uno de ellos. 4 / 4
 
 ---

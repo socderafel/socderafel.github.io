@@ -1,25 +1,24 @@
 ---
 layout: default
-title: "UD2 — Biometria, Seguretat Física i Còpies de Seguretat · Unitat Completa"
+title: "UD2 — Biometria, Seguretat Física i Còpies de Seguretat · Temari Complet"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut01/ut0105.html"
+prev_label: "⬅️ 1.3 Elements vulnerables"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 Biometria - Seguretat Física - Còpies de Seguret ➡️"
 ---
 
 # 📘 UD2 — Biometria, Seguretat Física i Còpies de Seguretat (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**2.1 Biometria - Seguretat Física - Còpies de Seguret**](./ut0201.md)
 - [**2.2 Concienciació en ciberseguretat**](./ut0202.md)
 - [**2.3 Preparació Màquines Virtuals per a pràctiques po**](./ut0203.md)
-- [**✍️ Activitats pràctiques UT2**](./ut02actividades.md)
 
 ---
 
@@ -244,14 +243,5 @@ falta activar-ho ja que ho utilitzarem per fer proves)
 - Realitzar snapshots de les màquines.
 
 Posteriorment, en començar una pràctica, tornarem a l'estat inicial, amb la màquina recentment instal·lada i actualitzada. • Tornant enrere a una snapshot “estable” • Restaurant la OVA
-
----
-
-# ✍️ Activitats pràctiques UT2
-
-> **✍️ Activitat Pràctica 2.1 — Calculadora CVSS del Nist**
-> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: Calculadora CVSS del NIST Busca la pàgina del projecte CVSS del NIST ¿Que es el NIST? ¿Que es CVSS? ¿Que son les versions del CVSS? ¿Quants grups de mètriques existeixen?
->
-> ¿Que mesura la següent mètrica? Calcula les Mètriques de Base per a un atac Ransomware. Documenta tot el procés en un pdf Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”
 
 ---

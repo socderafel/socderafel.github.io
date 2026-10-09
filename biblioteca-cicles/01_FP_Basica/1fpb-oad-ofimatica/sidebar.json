@@ -6,122 +6,89 @@
   },
   "units": [
     {
-      "summary": "UT1 — COMUNICACIONS INTERNES I EXTERNES",
+      "summary": "UD1 — COMUNICACIONS INTERNES I EXTERNES",
       "items": [
         {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "1.1 Comunicacions internes i externes",
           "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Guia estudi",
-          "href": "ut01/ut0102.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT1",
-          "href": "ut01/ut01actividades.html"
         }
       ]
     },
     {
-      "summary": "UT2 — REPROGRAFIA i ENQUADERNACIÓ",
+      "summary": "UD2 — REPROGRAFIA i ENQUADERNACIÓ",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "2.1 Temari",
           "href": "ut02/ut0201.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT2",
-          "href": "ut02/ut02actividades.html"
         }
       ]
     },
     {
-      "summary": "UT3 — CALC BÀSIC",
+      "summary": "UD3 — CALC BÀSIC",
       "items": [
         {
-          "label": "📘 UT3 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "3.1 Continguts i Recursos",
           "href": "ut03/ut0301.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },
     {
-      "summary": "UT4 — CALC MITJÀ",
+      "summary": "UD4 — CALC MITJÀ",
       "items": [
         {
-          "label": "📘 UT4 Completa (1 pàgina)",
+          "label": "📘 UD4 Completa (1 pàgina)",
           "href": "ut04/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "4.1 Continguts i Recursos",
           "href": "ut04/ut0401.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT4",
-          "href": "ut04/ut04actividades.html"
         }
       ]
     },
     {
-      "summary": "UT5 — BASE",
+      "summary": "UD5 — BASE",
       "items": [
         {
-          "label": "📘 UT5 Completa (1 pàgina)",
+          "label": "📘 UD5 Completa (1 pàgina)",
           "href": "ut05/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "5.1 Continguts i Recursos",
           "href": "ut05/ut0501.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
         }
       ]
     },
     {
-      "summary": "UT6 — GIMP",
+      "summary": "UD6 — GIMP",
       "items": [
         {
-          "label": "📘 UT6 Completa (1 pàgina)",
+          "label": "📘 UD6 Completa (1 pàgina)",
           "href": "ut06/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "6.1 Continguts i Recursos",
           "href": "ut06/ut0601.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT6",
-          "href": "ut06/ut06actividades.html"
         }
       ]
     }
   ],
-  "footer": [
-    {
-      "label": "📂 Índex de Documents i Recursos",
-      "href": "references.html"
-    }
-  ]
+  "footer": []
 }

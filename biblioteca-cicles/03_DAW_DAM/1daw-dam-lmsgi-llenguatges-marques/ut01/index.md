@@ -1,28 +1,26 @@
 ---
 layout: default
-title: "UD8 — Sistemes Empresarials de Gestió d'Informació (ERP) · Unitat Completa"
+title: "UD8 — Sistemes Empresarials de Gestió d'Informació (ERP) · Temari Complet"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT1 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut02/ut0201.html"
+prev_label: "⬅️ 7.1 Ejercicios JavaScript Solucionados"
 next_url: "../ut01/ut0101.html"
-next_label: "1.1 UD 8 - Sistemas empresariales de gestión de info ➡️"
+next_label: "8.1 Sistemas empresariales de gestión de info ➡️"
 ---
 
 # 📘 UD8 — Sistemes Empresarials de Gestió d'Informació (ERP) (Unitat Completa)
 
-> **💡 Vista unificada de la unitat**
-> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**1.1 UD 8 - Sistemas empresariales de gestión de info**](./ut0101.md)
-- [**1.2 UD 8 - Sistemas empresariales de gestión de info**](./ut0102.md)
-- [**✍️ Activitats pràctiques UT1**](./ut01actividades.md)
+- [**8.1 Sistemas empresariales de gestión de info**](./ut0101.md)
 
 ---
 
-# 1.1 UD 8 - Sistemas empresariales de gestión de info
+# 8.1 Sistemas empresariales de gestión de info
 
 Este tema es muy diferente a lo que hemos dado durante el curso, es un tema teórico, he dividido en dos el pdf porque quedaba muy largo. La Unidad 8 constara de dos partes, que contara como un tema cada parte.
 
@@ -149,171 +147,5 @@ Tampoco han quedado ajenos a la explosión de éxito que ha sido Internet
 comienzan a ofrecer integración con redes sociales o correo electrónico.
 
 Ciclo Formativo de Grado Superior ERP (continuación) Comunicaciones entre procesos con un ERP
-
----
-
-# 1.2 UD 8 - Sistemas empresariales de gestión de info
-
-Vicent Gómez Gimeno Ciclo Formativo de Grado Superior Tema 8: Sistemas empresariales de gestión de información Parte 2
-
-Ciclo Formativo de Grado Superior Sistemas empresariales de gestión de la información Índice Sistemas empresariales de gestión de la información Objetivos básicos Toma de decisiones Facilitar las tareas Proceso de transición de una empresa Software empresarial Aplicaciones genéricas Software personalizado Software estándar ERP Características de un ERP Bases de datos centralizada Módulos Inconvenientes de los ERP Tipos de ERP Principales programas de ERP Ranking de los 10 mejores ERP en el Mercado (2017) Código Abierto Los mejores OpenERPs del 2022 Informática en la nube.
-
-Fuentes
-
-Ciclo Formativo de Grado Superior Características de un ERP Simplificando mucho podemos decir que un ERP está formado por dos componentes básicos
-
-- Una base de datos centralizada.
-- Un grupo de módulos o aplicaciones.
-
-Esquema básico de un ERP
-
-Ciclo Formativo de Grado Superior Bases de datos centralizada Los ERP funcionan con una base de datos centralizada en la que interactúan todos los programas de manera que los datos solo se almacenan una sola vez y nunca hay datos disgregados. Este repositorio central de datos garantiza que, como la información es solo un punto, en cualquier momento se pueda obtener una imagen del estado en que se encuentra la empresa. Esto elimina la posibilidad de creación de "islas informáticas".
-
-También se minimiza el intercambio de información entre departamentos y la posibilidad de que alguien trabaje con datos desactualizados ya que la información es la misma para todos.
-
-Ciclo Formativo de Grado Superior Módulos Los módulos son un conjunto de aplicaciones que se pueden integrar para formar el sistema de software. Es bastante habitual que cada uno de estos módulos coincida con las unidades funcionales de la empresa (compras, ventas, inventario, finanzas...).
-
-Por lo tanto, una de las grandes ventajas de los ERP con respecto a los otros sistemas es que con un solo programa se integra toda la gestión de la empresa. Esto trae ventajas asociados
-
-- El tiempo de aprendizaje se reduce ya que no hay que aprender cómo
-
-funcionan diferentes entornos, porque es lo mismo en todos los programas.
-
-- El sistema se puede adaptar a las necesidades de cada momento de la
-
-empresa, añadiendo nuevos módulos para hacer nuevas tareas o cambiando la manera en que funcionan los módulos instalados.
-
-Ciclo Formativo de Grado Superior Inconvenientes de los ERP No todo son ventajas en los ERP; también tienen algunos inconvenientes, como
-
-- La implantación suele ser compleja ya que es necesario que intervenga y se
-
-implique toda la empresa. Hay numerosos ejemplos de implantaciones de ERP que han fallado porque no se ha implicado toda la empresa en la implantación o por resistencias al cambio de algunos departamentos.
-
-- Es bastante habitual que la implantación del ERP comporte que se tenga que
-
-cambiar la manera de funcionar de algún proceso de la empresa para adaptar a la manera de hacerlo del ERP, o bien que se tenga que reprogramar algún módulo para adaptarse al funcionamiento de la empresa. Todo esto hace que las fases de desarrollo y prueba de los cambios que se han llevado a cabo sean más importantes, y que por tanto el tiempo de implantación todavía sea largo.
-
-Normalmente el tiempo de implantación de un ERP en una empresa supera el año.
-
-Ciclo Formativo de Grado Superior Tipos de ERP Mientras inicialmente los ERP estaban pensados para funcionar en cualquier empresa, independientemente del sector en el que trabajaban, actualmente se concentran más adaptarse para cubrir las necesidades de las pequeñas y medianas empresas. De esta de esta manera han ido apareciendo ERP destinados específicamente a determinados sectores empresariales.
-
-Se podría hacer una clasificación de los ERP desde un punto de vista de las empresas a que van dirigidos en
-
-- ERP horizontales: aplicaciones pensadas para poder funcionar en cualquier
-
-empresa.
-
-- ERP verticales: aplicaciones pensadas para trabajar en una actividad concreta
-
-Ciclo Formativo de Grado Superior Tipos de ERP (continuación) Un ERP vertical es una solución con todas las funcionalidades estándar como control almacén, compras, ventas o finanzas, pero además se añaden las necesidades concretas de un sector determinado y se adaptan a él.
-
-Uno de los motivos por los que los ERP horizontales tienen un tiempo de implantación grande es porque resuelven muy bien todo lo que es generalista pero no suelen resolver muy bien aquellas partes que son más específicas de un sector industrial en concreto. Es en este punto que los ERP verticales toman fuerza ya que, al ser adaptados para desarrolladores con conocimientos sobre el entorno y el negocio, el tiempo la implantación se reduce considerablemente.
-
-Ciclo Formativo de Grado Superior Tipos de ERP (continuación) En el caso de los ERP horizontales, es corriente que el coste de adaptación del programa sea incluso superior al coste de las licencias, ya que hacen falta muchas horas de adaptación para conseguir la integración con la empresa. En cambio, en el caso de los verticales, la adaptación requiere pocos cambios y por lo tanto el resultado final también tiene un coste inferior.
-
-Sin embargo, los ERP verticales tienen más tendencia que los horizontales a hacer que sea la empresa la que deba adaptarse al ERP y no al revés; esto acostumbra a que se debe a que hace las cosas de una manera diferente de cómo se hacen en la empresa, y llevar a cabo un cambio en el ámbito de desarrollo eliminaría la ventaja de tener un ERP vertical.
-
-Ciclo Formativo de Grado Superior Principales programas de ERP No hay ningún ERP perfecto y todos tienen puntos fuertes y puntos débiles, y por lo tanto uno de los aspectos fundamentales para que la implantación de un ERP tenga éxito en una empresa es elegirlo adecuadamente.
-
-Existen varios productos ERP disponibles en el mercado, entre los que destacan los ofrecidos por las tres grandes empresas desarrolladoras de ERP: SAP AG, Oracle y Microsoft.
-
-Ciclo Formativo de Grado Superior Ranking de los 10 mejores ERP en el Mercado (2017) Ranking Empresa Desarrollos SAP SAP ha contratado a más de 6.900 clientes para su suite ERP de última generación S / 4 HANA a partir de octubre de 2017 FIS Global La integración de SunGard Financials en FIS Global estaba en implementación en 2017.
-
-ORACLE Oracle ERP Cloud R13 ofrece localización adicional y capacidades específicas de la industria. Fiserv La banca central, las ventas de comercio electrónico siguen siendo su enfoque clave. Intuit Inc. ntuit ha agudizado su enfoque en QuickBooks después de desinvertir productos no esenciales.
-
-Cerner Corporation En 2017, Cerner se tomó un respiro después de comprar Siemens Health en 2015. Microsoft Microsoft Dynamics 365 ahora cubre tanto la funcionalidad de CRM como la de ERP. Infor Durante el año pasado, Infor ha invertido mucho en análisis al comprar Birst, proveedor de Cloud BI, por $ 105 millones luego de gastar $ 126 millones en Predictx para análisis de ventas minoristas.
-
-SS&C Technologies Las últimas mejoras de SS & C Advent se centraron en la mejora de la eficiencia operativa y la racionalización de los informes financieros para los requisitos de cumplimiento locales y globales. Ericsson En medio de un cambio de tendencia, Ericsson se está preparando para el próximo ciclo de actualización de BSS y OSS de sus clientes de telecomunicaciones.
-
-Ciclo Formativo de Grado Superior Código abierto También en el mundo del software libre se puede encontrar software ERP, los fabricantes del que a menudo consiguen los ingresos por medio de la oferta de servicios a los clientes. El código abierto ofrece unas características extras que siempre se deben tener en cuenta a la hora de valorar si es necesario implantar estas soluciones o no
-
-- La ventaja más clara es el precio. Los ERP de código abierto se pueden conseguir sin
-
-ningún tipo de coste y por lo tanto se reducen los costes implementación y las licencias de usuario.
-
-- No crea ninguna dependencia de un proveedor informático ya que el software pasa a
-
-ser controlado por la empresa y se puede utilizar para crear un ERP propio con muchos menos recursos de los necesarios en un sistema de pago.
-
-- Al ser el código las posibilidades de adaptación del programa a las necesidades de la
-
-empresa son máximas. Las soluciones de pago generalmente permiten personalizar los módulos pero siempre dentro de unos límites. En el caso de los sistemas de código abierto estos límites no existen.
-
-Ciclo Formativo de Grado Superior Los mejores OpenERPs del 2022 Nota: Odoo es el antiguo OpenERP
-
-Ciclo Formativo de Grado Superior Código libre(continuación) Pero el software libre no está exento de problemas, lo que hace que muchas empresas no se atrevan a utilizarlos
-
-- No siempre hay suficiente documentación del funcionamiento de los
-
-programas. Esto puede incrementar el tiempo de aprendizaje.
-
-- Las actualizaciones del software suelen ser imprevisibles y no siempre se
-
-documentan los cambios que se hacen.
-
-- Los proyectos a veces desaparecen. La desaparición de un proyecto
-
-normalmente acaba obligando a cambiar de producto.
-
-- A pesar de que casi todos ofrecen el producto libre pero con una versión de
-
-pago donde se incluye soporte, en algunos casos el soporte no suele ser tan importante como el que se ofrece en el caso del software propietario.
-
-Ciclo Formativo de Grado Superior Informática en la nube La mayoría de estos ERP se están adaptando o ya se han adaptado para poder funcionar en lo que se conoce como informática en nube o más concretamente como SaaS (software as a service). La idea es no tener que hacer ningún tipo de instalación de software en los servidores de sino acceder al programa por Internet, normalmente con un navegador web. Esto permite que las tareas de instalación y mantenimiento se externalicen, que es el proveedor el que se encargará de ello.
-
-ERP en la nube
-
-Ciclo Formativo de Grado Superior Informática en la nube (continuación) Esta característica permite
-
-- Utilizar el programa sin tener que instalar ningún software, ya que este
-
-software está instalado en los servidores del vendedor.
-
-- Que no sea necesario para la empresa hacer ningún tipo de gasto en
-
-infraestructura de hardware (no hay que comprar un servidor, implementar mecanismos de copia de seguridad...) ni en personal informático cualificado. Basta un ordenador y una conexión a Internet para poder trabajar. con el ERP. Generalmente el coste de este tipo de servicios se paga vía suscripción, la cual lo que implica un precio muy inferior al que se pide para comprar el paquete de software y el alquiler de los técnicos responsables de la instalación.
-
-Ciclo Formativo de Grado Superior Informática en la nube (continuación) Pero siempre hay que tener en cuenta que trabajar de esta manera implica unos riesgos
-
-- Requiere que haya una conexión permanente a Internet y por lo tanto
-
-hace más dependiente la empresa de la compañía de telefonía.
-
-- Un fallo en los servidores de la empresa alojadora puede provocar que
-
-se detenga completamente el funcionamiento de la empresa ya que no se puede acceder al programa que lo gestiona todo.
-
-- Como los datos están almacenados en un lugar remoto, en caso de
-
-problemas no es posible recuperarlas.
-
-Ciclo Formativo de Grado Superior Fuentes https://ioc.xtec.cat/educacio/ https://www.tecnologias-informacion.com/erp/mejores-erp.html https://dynamics.folio3.com/blog/open-source-enterprise-resource- planning-software/
-
----
-
-# ✍️ Activitats pràctiques UT1
-
-> **✍️ 📋 Exercici / Qüestionari 1.1 — Ejercicio Parte 1**
-> El cuestionario consiste en 10 preguntas sencillas, recordar que solo se tiene una oportunidad para realizarlo.
->
-> La fecha limite es el 27 de abril a las 00 horas.
-
-> **✍️ Activitat Pràctica 1.2 — Ejercicio - Manual Odoo 15**
-> La tarea consiste en crear un manual del aplicativo Odoo 15.
-> Se tiene que descargar de la [web](https://www.odoo.com/es_ES/page/download), y la versión "Odoo Community".
->
-> **Se recomienda usar una maquina virtual.**
->
-> El manual tiene que ser de contenido informático y no administrativo, me refiero a que no hace falta saber como se genera una factura.
-> Como contenido Informático me refiero a:
-> -Descarga del aplicativo.
->
-> Instalación (Odoo Server y PostgresSQL)
->
-> Explicar un poco el entorno de Odoo
->
-> Alta de usuarios.
->
-> Instalación de módulos (Un mínimo de 3, a elegir ). El manual sera en formato pdf, con portada, indice y sus respectivas capturas con sus explicaciones. La fecha para entregar el ejercicio sera el miércoles 1 de Junio a las 00 horas. PD: No perdáis el tiempo configurando el correo, no es complicado, pero es un proceso largo en Youtube hay un vídeo que explica como hacerlo con una cuenta gmail. Se llama "✅ 🔥 (GMAIL cambiÓ 2021) Configurar Correo Entrada Salida Odoo 14 15"
 
 ---

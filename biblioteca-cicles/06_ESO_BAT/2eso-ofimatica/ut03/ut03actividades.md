@@ -1,15 +1,13 @@
 ---
 layout: default
-title: "✍️ Activitats pràctiques UT3 — Taller d'Ofimàtica: Writer, Calc i Scratch | Portal Docent Pepe Cuenca"
+title: "3.1 Continguts i Casos Guiats · 📝 Taller d'Ofimàtica: Writer, Calc i Scratch — 2n ESO"
 course_root: ".."
-badge: "2n ESO · UT3 — Calc"
+badge: "2n ESO · UD3 — Calc"
 prev_url: "../ut03/index.html"
-prev_label: "⬅️ 📘 UT3 Completa (1 pàgina)"
-next_url: "../references.html"
-next_label: "📂 Índex de Documents i Recursos ➡️"
+prev_label: "⬅️ 📘 UD3 Completa (1 pàgina)"
 ---
 
-# ✍️ Activitats pràctiques UT3
+# 3.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 3.1 — Tasca1_Calc**
 > Nom de l'arxiu: Calc1_elteunom.ods

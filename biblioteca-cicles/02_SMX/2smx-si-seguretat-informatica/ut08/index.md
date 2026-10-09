@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT8 — Atacs i contramesures — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+title: "UD8 — Atacs i contramesures · Temari Complet"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT8 Completa"
 prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_label: "⬅️ 7.1 Continguts i Casos Guiats"
 next_url: "../ut08/ut08actividades.html"
-next_label: "✍️ Activitats pràctiques UT8 ➡️"
+next_label: "8.1 Continguts i Casos Guiats ➡️"
 ---
 
-# 📘 UT8 — Atacs i contramesures (Unitat Completa)
+# 📘 UD8 — Atacs i contramesures (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**✍️ Activitats pràctiques UT8**](#ut08actividades) (o [obrir en pàgina individual ➡️](./ut08actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 Continguts i Casos Guiats**](./ut08actividades.md)
 
 ---
 
-## ✍️ Activitats pràctiques UT8
+# 8.1 Continguts i Casos Guiats
 
 > **✍️ Activitat Pràctica 8.1 — 08.01 Ultrasurf**
 > Prova el servei d'Ultrasurf i comenta les seves utilitats més interessants.
@@ -892,3 +896,5 @@ next_label: "✍️ Activitats pràctiques UT8 ➡️"
 >
 > > **💡 📚 Document extens (98 pàgines)**
 > > S'han mostrat les primeres 80 pàgines completes del manual.
+
+---

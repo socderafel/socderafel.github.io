@@ -1,25 +1,27 @@
 ---
 layout: default
-title: "UT9 — Fase de análisis — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "UD9 — Fase de análisis · Temari Complet"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT9 Completa"
-prev_url: "../ut08/ut08actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
+prev_url: "../ut08/ut0801.html"
+prev_label: "⬅️ 8.1 Creación de contratos"
 next_url: "../ut09/ut0901.html"
 next_label: "9.1 analisi ➡️"
 ---
 
-# 📘 UT9 — Fase de análisis (Unitat Completa)
+# 📘 UD9 — Fase de análisis (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**9.1 analisi**](#ut0901) (o [obrir en pàgina individual ➡️](./ut0901.md) )
-> - [**9.2 Nessus**](#ut0902) (o [obrir en pàgina individual ➡️](./ut0902.md) )
-> - [**9.3 practiques**](#ut0903) (o [obrir en pàgina individual ➡️](./ut0903.md) )
-> - [**✍️ Activitats pràctiques UT9**](#ut09actividades) (o [obrir en pàgina individual ➡️](./ut09actividades.md) )
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**9.1 analisi**](./ut0901.md)
+- [**9.2 Nessus**](./ut0902.md)
 
 ---
 
-## 9.1 analisi
+# 9.1 analisi
 
 Hacking Ético 23AI32CF016 Raúl Fuentes Ferrer
 
@@ -83,7 +85,7 @@ a) Metodología utilizada b) Tabla con el listado de pruebas realizadas, marcand
 
 ---
 
-## 9.2 Nessus
+# 9.2 Nessus
 
 Tema 6.1. Auditoria de seguretat: Anàlisi de vulnerabilitats mitjançant Nessus. Hacking ètic (HE) 1r CIBER
 
@@ -240,26 +242,3 @@ NESSUS INFORMACIÓ ADDICIONAL Hacking ètic 1r CIBER ● Si necessiteu més info
 Welcome to the Tenable Community
 
 ---
-
-## 9.3 practiques
-
-23AI32CF016 - Hacking Ético Prácticas Análisis de Vulnerabilidades
-
-Prácticas Análisis de Vulnerabilidades
-
-Realizar los ejercicios siguientes. Podéis utilizar vuestra propia web (siempre y cuándo tengáis permiso firmado) para realizar los ejercicios o utilizar los que os propongo. Debéis de subir los pasos realizados acompañándolos con pantallazos de los resultados. Ejercicio 1 Realizar un escaneo con MBSA (Microsoft Baseline Security Analyzer) a un equipo Windows (8 o anterior) de tu red y analiza las actualizaciones y fallos de seguridad que dispone.
-
-https://docs.microsoft.com/es-es/windows/security/threat-protection/mbsa- removal-and-guidance Como vemos MSBA ya está retirado de la página oficial de Microsoft por lo que ahora lo que funciona sería una serie de scripts relacionados. Realizar las indicaciones para ejecutar el código ya sea en vbs o ps1 y lanzar el script. Además del script, es posible que si no tenéis instalado previamente WSUS (Windows Server Update Services) lo tengáis que descargar de http://download.windowsupdate.com/microsoftupdate/v6/wsusscan/wsusscn2.cab Podéis utilizar como alternativa también CLARA, herramienta para analizar las características de seguridad técnicas definidas a través del Real Decreto 3/2010 por el que se regula el Esquema Nacional de Seguridad en el ámbito de la Administración
-
-Electrónica en entornos Microsoft Windows y Linux https://www.ccn- cert.cni.es/soluciones-seguridad/clara.html Mostrar el resultado obtenido. Ejercicio 2 Realizar un análisis de vulnerabilidades con Nessus de la url testphp.vulnweb.com y obtener un informe detallado de las vulnerabilidades encontradas. ¿Hay alguna vulnerabilidad crítica?
-
-Para ello descargar Nessus desde la web oficial, registrarse y obtener un código temporal de 7 días o la versión de Educación. Acceder a la URL desde el navegador, introducir las credenciales y crear un nuevo escaneo. Indicarle la url a escanear y un escaneo de tipo “Web Application Tests”. Al cabo de un tiempo se obtendrán las vulnerabilidades obtenidas. Reportar el informe creado.
-
-Ejercicio 3 Realizar la búsqueda de vulnerabilidades web con OWASP ZAP a la web scanme.nmap.org y almacenar el reporte de las vulnerabilidades encontradas. Desde Kali Linux accedemos a OWASP ZAP. Antes de ello, recordar configurar el proxy en el navegador para que todo el tráfico del navegador pase por el proxy. Una vez realizado, desde ZAP introducimos la URL a atacar y comenzamos el escaneo. Al cabo de un tiempo irán apareciendo las posibles vulnerabilidades que se encuentren. Para general el informe en HTML seleccionar la opción Reporte – Generar informe HTML.
-
----
-
-## ✍️ Activitats pràctiques UT9
-
-> **✍️ Activitat Pràctica 9.1 — Realiza la práctica 2 sobre Nessus**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
