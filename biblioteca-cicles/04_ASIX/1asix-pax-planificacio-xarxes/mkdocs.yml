@@ -5,45 +5,42 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Caracterització de les xarxes":
-      - "📘 UD1 Completa (1 pàgina)": ut02/index.md
-      - "1.1 Caracterització de les xarxes": ut02/ut0201.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Caracterització de les xarxes": ./ut01/ut0101.md
   - "UD2 — Arquitectura de xarxa":
-      - "📘 UD2 Completa (1 pàgina)": ut03/index.md
-      - "2.1 U2 Arquitectura de xarxa": ut03/ut0301.md
-      - "2.2 1 IPs": ut03/ut0302.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 U2 Arquitectura de xarxa": ./ut02/ut0201.md
+      - "2.2 1 IPs": ./ut02/ut0202.md
   - "UD3 — Xarxes d'àrea local":
-      - "📘 UD3 Completa (1 pàgina)": ut04/index.md
-      - "3.1 U3 Xarxes àrea local": ut04/ut0401.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 U3 Xarxes àrea local": ./ut03/ut0301.md
   - "UD4 — Nivell físic":
-      - "📘 UD4 Completa (1 pàgina)": ut05/index.md
-      - "4.1 U4 Nivell físic": ut05/ut0501.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 U4 Nivell físic": ./ut04/ut0401.md
   - "UD5 — Cablejat estructurat":
-      - "📘 UD5 Completa (1 pàgina)": ut06/index.md
-      - "5.1 U5 Cablejat Estructurat": ut06/ut0601.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 U5 Cablejat Estructurat": ./ut05/ut0501.md
   - "UD6 — Nivell d'enllaç":
-      - "📘 UD6 Completa (1 pàgina)": ut07/index.md
-      - "6.1 Nivell d'enllaç": ut07/ut0701.md
-      - "6.2 Trama PPP": ut07/ut0702.md
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 Nivell d'enllaç": ./ut06/ut0601.md
   - "UD7 — El switch":
-      - "📘 UD7 Completa (1 pàgina)": ut08/index.md
-      - "7.1 U7 El switch": ut08/ut0801.md
-      - "7.2 Cisco IOS": ut08/ut0802.md
+      - "📘 UD7 Completa (1 pàgina)": ./ut07/index.md
+      - "7.1 U7 El switch": ./ut07/ut0701.md
+      - "7.2 Cisco IOS": ./ut07/ut0702.md
   - "UD8 — VLAN":
-      - "📘 UD8 Completa (1 pàgina)": ut09/index.md
-      - "8.1 U8 VLAN": ut09/ut0901.md
-      - "8.2 Comandos Cisco VLAN": ut09/ut0902.md
-      - "8.3 VTP, DTP i Capa 3": ut09/ut0905.md
-      - "8.4 Colisió i difusió": ut09/ut0906.md
+      - "📘 UD8 Completa (1 pàgina)": ./ut08/index.md
+      - "8.1 U8 VLAN": ./ut08/ut0801.md
+      - "8.2 Comandos Cisco VLAN": ./ut08/ut0802.md
+      - "8.3 VTP, DTP i Capa 3": ./ut08/ut0803.md
   - "UD9 — Nivell de xarxa. El router":
-      - "📘 UD9 Completa (1 pàgina)": ut10/index.md
-      - "9.1 U9 Nivell de xarxa. El Router": ut10/ut1001.md
+      - "📘 UD9 Completa (1 pàgina)": ./ut09/index.md
+      - "9.1 U9 Nivell de xarxa. El Router": ./ut09/ut0901.md
   - "UD10 — Adreçament IP":
-      - "📘 UD10 Completa (1 pàgina)": ut11/index.md
-      - "10.1 U10 Adreçament IP": ut11/ut1101.md
+      - "📘 UD10 Completa (1 pàgina)": ./ut10/index.md
+      - "10.1 U10 Adreçament IP": ./ut10/ut1001.md
   - "UD11 — Encaminament":
-      - "📘 UD11 Completa (1 pàgina)": ut12/index.md
-      - "11.1 U11 Enrutament": ut12/ut1201.md
-      - "11.2 Exemple Enrutament Estàtic": ut12/ut1202.md
+      - "📘 UD11 Completa (1 pàgina)": ./ut11/index.md
+      - "11.1 U11 Enrutament": ./ut11/ut1101.md
   - "UD12 — Capa de transport i aplicació":
-      - "📘 UD12 Completa (1 pàgina)": ut13/index.md
-      - "12.1 U12 Nivell de Transport i Aplicació": ut13/ut1301.md
+      - "📘 UD12 Completa (1 pàgina)": ./ut12/index.md
+      - "12.1 U12 Nivell de Transport i Aplicació": ./ut12/ut1201.md

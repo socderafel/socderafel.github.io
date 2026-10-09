@@ -10,36 +10,31 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Resources: Example of HTML+CSS",
-          "href": "ut01/ut0101.html"
+          "href": "./ut01/ut0101.html"
         },
         {
-          "label": "1.2 Resources: CSS Template Collection",
-          "href": "ut01/ut0102.html"
+          "label": "1.2 Resources: Reference Links",
+          "href": "./ut01/ut0102.html"
         },
         {
-          "label": "1.3 Resources: Reference Links",
-          "href": "ut01/ut0103.html"
+          "label": "1.3 HTML Example",
+          "href": "./ut01/ut0103.html"
         },
         {
           "label": "1.4 HTML Example",
-          "href": "ut01/ut0104.html"
+          "href": "./ut01/ut0104.html"
         },
         {
-          "label": "1.5 HTML Example",
-          "href": "ut01/ut0105.html"
+          "label": "1.5 Cheatsheet HTML (Manz)",
+          "href": "./ut01/ut0105.html"
         },
         {
-          "label": "1.6 Cheatsheet HTML (Manz)",
-          "href": "ut01/ut0106.html"
-        },
-        {
-          "label": "1.7 Cheatsheet CSS (Manz)",
-          "href": "ut01/ut0107.html"
+          "label": "1.6 Cheatsheet CSS (Manz)",
+          "href": "./ut01/ut0106.html"
         }
       ]
     },
@@ -48,16 +43,15 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 Resources: Reference Links",
-          "href": "ut02/ut0201.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 EN Article: How Web Operating Systems Work",
-          "href": "ut02/ut0202.html"
+          "href": "./ut02/ut0202.html"
         }
       ]
     },
@@ -66,16 +60,15 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 Resources: Reference Links",
-          "href": "ut03/ut0301.html"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 Taller AWS-AWS",
-          "href": "ut03/ut0302.html"
+          "href": "./ut03/ut0302.html"
         }
       ]
     },
@@ -84,12 +77,11 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 Resources: Reference Links",
-          "href": "ut04/ut0401.html"
+          "href": "./ut04/ut0401.html"
         }
       ]
     },
@@ -98,16 +90,15 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 Resources: Reference Links",
-          "href": "ut05/ut0501.html"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 EN Article: Battle of the Clouds",
-          "href": "ut05/ut0502.html"
+          "href": "./ut05/ut0502.html"
         }
       ]
     },
@@ -116,26 +107,11 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 Resources: Reference Links",
-          "href": "ut06/ut0601.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD7 — JS Programming Introduction",
-      "items": [
-        {
-          "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "7.1 Plantilla: Joc JS amb processing.js",
-          "href": "ut07/ut0701.html"
+          "href": "./ut06/ut0601.html"
         }
       ]
     }

@@ -10,24 +10,23 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Introducción a la Programacion",
-          "href": "ut05/ut0501.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Algoritmos",
-          "href": "ut05/ut0502.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Introduccion a Java",
-          "href": "ut05/ut0503.html"
+          "href": "./ut01/ut0103.html"
         },
         {
           "label": "1.4 Estilo de codificacion",
-          "href": "ut05/ut0509.html"
+          "href": "./ut01/ut0104.html"
         }
       ]
     },
@@ -36,20 +35,19 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 Entrada y salida de información",
-          "href": "ut06/ut0601.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 Colores",
-          "href": "ut06/ut0602.html"
+          "href": "./ut02/ut0202.html"
         },
         {
           "label": "2.3 ClasePrintf",
-          "href": "ut06/ut0603.html"
+          "href": "./ut02/ut0203.html"
         }
       ]
     },
@@ -58,12 +56,11 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 Uso de estructuras de control",
-          "href": "ut07/ut0701.html"
+          "href": "./ut03/ut0301.html"
         }
       ]
     },
@@ -72,16 +69,15 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 Programación estructurada y modular",
-          "href": "ut08/ut0801.html"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 Programación estructurada y modular",
-          "href": "ut08/ut0802.html"
+          "href": "./ut04/ut0402.html"
         }
       ]
     },
@@ -90,16 +86,15 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut09/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 Estructuras de datos estáticas",
-          "href": "ut09/ut0901.html"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 Estructuras de datos estaticas",
-          "href": "ut09/ut0902.html"
+          "href": "./ut05/ut0502.html"
         }
       ]
     },
@@ -108,20 +103,19 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut10/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 Estructuras de datos dinámicas",
-          "href": "ut10/ut1001.html"
+          "href": "./ut06/ut0601.html"
         },
         {
           "label": "6.2 Estructuras de datos dinamicas",
-          "href": "ut10/ut1002.html"
+          "href": "./ut06/ut0602.html"
         },
         {
           "label": "6.3 Recursividad",
-          "href": "ut10/ut1009.html"
+          "href": "./ut06/ut0603.html"
         }
       ]
     },
@@ -130,20 +124,19 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut11/index.html",
-          "class": "unit-full-link"
+          "href": "./ut07/index.html"
         },
         {
           "label": "7.1 Programación Orientada a Objetos",
-          "href": "ut11/ut1101.html"
+          "href": "./ut07/ut0701.html"
         },
         {
           "label": "7.2 EstructuraClase",
-          "href": "ut11/ut1102.html"
+          "href": "./ut07/ut0702.html"
         },
         {
           "label": "7.3 Programación orientada a objetos (versión extend",
-          "href": "ut11/ut1121.html"
+          "href": "./ut07/ut0703.html"
         }
       ]
     },
@@ -152,16 +145,15 @@
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "ut12/index.html",
-          "class": "unit-full-link"
+          "href": "./ut08/index.html"
         },
         {
           "label": "8.1 Utilizacion avanzada de clases",
-          "href": "ut12/ut1201.html"
+          "href": "./ut08/ut0801.html"
         },
         {
           "label": "8.2 Utilización avanzada de clases (Versión ex",
-          "href": "ut12/ut1206.html"
+          "href": "./ut08/ut0802.html"
         }
       ]
     },
@@ -170,12 +162,11 @@
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "ut13/index.html",
-          "class": "unit-full-link"
+          "href": "./ut09/index.html"
         },
         {
           "label": "9.1 Gestión de excepciones",
-          "href": "ut13/ut1301.html"
+          "href": "./ut09/ut0901.html"
         }
       ]
     },
@@ -184,12 +175,11 @@
       "items": [
         {
           "label": "📘 UD10 Completa (1 pàgina)",
-          "href": "ut14/index.html",
-          "class": "unit-full-link"
+          "href": "./ut10/index.html"
         },
         {
           "label": "10.1 Lectura y escritura de información en ficheros",
-          "href": "ut14/ut1401.html"
+          "href": "./ut10/ut1001.html"
         }
       ]
     },
@@ -198,12 +188,11 @@
       "items": [
         {
           "label": "📘 UD11 Completa (1 pàgina)",
-          "href": "ut15/index.html",
-          "class": "unit-full-link"
+          "href": "./ut11/index.html"
         },
         {
           "label": "11.1 Interacción con bases de datos",
-          "href": "ut15/ut1501.html"
+          "href": "./ut11/ut1101.html"
         }
       ]
     },
@@ -212,16 +201,15 @@
       "items": [
         {
           "label": "📘 UD12 Completa (1 pàgina)",
-          "href": "ut16/index.html",
-          "class": "unit-full-link"
+          "href": "./ut12/index.html"
         },
         {
           "label": "12.1 JavaFX",
-          "href": "ut16/ut1602.html"
+          "href": "./ut12/ut1201.html"
         },
         {
           "label": "12.2 JavaFX",
-          "href": "ut16/ut1603.html"
+          "href": "./ut12/ut1202.html"
         }
       ]
     }

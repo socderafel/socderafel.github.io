@@ -5,59 +5,58 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Processador de text (I)":
-      - "📘 UD1 Completa (1 pàgina)": ut02/index.md
-      - "1.1 Tema 0. Suites Ofimàtiques": ut02/ut0201.md
-      - "1.2 Tema 0. Writer": ut02/ut0202.md
-      - "1.3 Mapa conceptual WRITER": ut02/ut0203.md
-      - "1.4 Tema 2. Taules": ut02/ut0208.md
-      - "1.5 Tema 3. IMATGES": ut02/ut0210.md
-      - "1.6 Exemple Numeració i Vinyetes": ut02/ut0217.md
-      - "1.7 curiosidades en Writer": ut02/ut0218.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Tema 0. Suites Ofimàtiques": ./ut01/ut0101.md
+      - "1.2 Tema 0. Writer": ./ut01/ut0102.md
+      - "1.3 Tema 2. Taules": ./ut01/ut0103.md
+      - "1.4 Tema 3. IMATGES": ./ut01/ut0104.md
+      - "1.5 Exemple Numeració i Vinyetes": ./ut01/ut0105.md
+      - "1.6 curiosidades en Writer": ./ut01/ut0106.md
   - "UD2 — Processador de text (II)":
-      - "📘 UD2 Completa (1 pàgina)": ut03/index.md
-      - "2.1 Tema 7. COMBINAR CORRESPONDENCIA": ut03/ut0303.md
-      - "2.2 Exemple Combinar correspondència": ut03/ut0304.md
-      - "2.3 Tema 9. PLANTILLES": ut03/ut0309.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Tema 7. COMBINAR CORRESPONDENCIA": ./ut02/ut0201.md
+      - "2.2 Exemple Combinar correspondència": ./ut02/ut0202.md
+      - "2.3 Tema 9. PLANTILLES": ./ut02/ut0203.md
   - "UD3 — Processador de text (III)":
-      - "📘 UD3 Completa (1 pàgina)": ut04/index.md
-      - "3.1 Tema 11. Index de continguts, figures i alfabèti": ut04/ut0402.md
-      - "3.2 Tema 13. Treballar amb documents llargs": ut04/ut0407.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Tema 11. Index de continguts, figures i alfabèti": ./ut03/ut0301.md
+      - "3.2 Tema 13. Treballar amb documents llargs": ./ut03/ut0302.md
   - "UD4 — Calc Mòdul 1 (I)":
-      - "📘 UD4 Completa (1 pàgina)": ut06/index.md
-      - "4.1 Manual bàsic CALC": ut06/ut0601.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Manual bàsic CALC": ./ut04/ut0401.md
   - "UD5 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)":
-      - "📘 UD5 Completa (1 pàgina)": ut12/index.md
-      - "5.1 Tema 0. Introducció a les base de dades.": ut12/ut1201.md
-      - "5.2 Tema 1. Sistemas Gestores de Base de Datos (vers": ut12/ut1202.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Tema 0. Introducció a les base de dades.": ./ut05/ut0501.md
+      - "5.2 Tema 1. Sistemas Gestores de Base de Datos (vers": ./ut05/ut0502.md
   - "UD6 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)":
-      - "📘 UD6 Completa (1 pàgina)": ut13/index.md
-      - "6.1 Exemple_inicial_Classe_ER": ut13/ut1301.md
-      - "6.2 Tema 2. Model Entitat-Relació (COMPLET)": ut13/ut1302.md
-      - "6.3 Tema 2. Model Entitat-Relació (RESUMEN)": ut13/ut1303.md
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 Exemple_inicial_Classe_ER": ./ut06/ut0601.md
+      - "6.2 Tema 2. Model Entitat-Relació (COMPLET)": ./ut06/ut0602.md
+      - "6.3 Tema 2. Model Entitat-Relació (RESUMEN)": ./ut06/ut0603.md
   - "UD7 — BDA. Model RELACIONAL (Segona part)":
-      - "📘 UD7 Completa (1 pàgina)": ut14/index.md
-      - "7.1 Tema 2. Model Relacional (2ª part)": ut14/ut1401.md
+      - "📘 UD7 Completa (1 pàgina)": ./ut07/index.md
+      - "7.1 Tema 2. Model Relacional (2ª part)": ./ut07/ut0701.md
   - "UD8 — BDA. Base de Datos. TAULES":
-      - "📘 UD8 Completa (1 pàgina)": ut15/index.md
-      - "8.1 Tema 3. TAULES ACCESS": ut15/ut1501.md
-      - "8.2 Tema 3. Integridad Referencial": ut15/ut1502.md
-      - "8.3 DEFINICION Mascara entrada_Regla validación": ut15/ut1503.md
-      - "8.4 Ejemplos reglas de validación": ut15/ut1504.md
+      - "📘 UD8 Completa (1 pàgina)": ./ut08/index.md
+      - "8.1 Tema 3. TAULES ACCESS": ./ut08/ut0801.md
+      - "8.2 Tema 3. Integridad Referencial": ./ut08/ut0802.md
+      - "8.3 DEFINICION Mascara entrada_Regla validación": ./ut08/ut0803.md
+      - "8.4 Ejemplos reglas de validación": ./ut08/ut0804.md
   - "UD9 — BDA. Base de Datos. CONSULTES":
-      - "📘 UD9 Completa (1 pàgina)": ut16/index.md
-      - "9.1 Tema 4. CONSULTES": ut16/ut1601.md
-      - "9.2 RESUMEN CONSULTES": ut16/ut1602.md
+      - "📘 UD9 Completa (1 pàgina)": ./ut09/index.md
+      - "9.1 Tema 4. CONSULTES": ./ut09/ut0901.md
+      - "9.2 RESUMEN CONSULTES": ./ut09/ut0902.md
   - "UD10 — BDA. Base de Datos. FORMULARIS":
-      - "📘 UD10 Completa (1 pàgina)": ut17/index.md
-      - "10.1 Tema 5. FORMULARIS": ut17/ut1701.md
+      - "📘 UD10 Completa (1 pàgina)": ./ut10/index.md
+      - "10.1 Tema 5. FORMULARIS": ./ut10/ut1001.md
   - "UD11 — BDA. Base de Datos. INFORMES":
-      - "📘 UD11 Completa (1 pàgina)": ut18/index.md
-      - "11.1 Tema 6. INFORMES": ut18/ut1801.md
+      - "📘 UD11 Completa (1 pàgina)": ./ut11/index.md
+      - "11.1 Tema 6. INFORMES": ./ut11/ut1101.md
   - "UD12 — BDA. Base de Datos. MACROS":
-      - "📘 UD12 Completa (1 pàgina)": ut19/index.md
-      - "12.1 Tema 7. MACROS": ut19/ut1901.md
-      - "12.2 Abrir Form sin Abrir Access": ut19/ut1902.md
+      - "📘 UD12 Completa (1 pàgina)": ./ut12/index.md
+      - "12.1 Tema 7. MACROS": ./ut12/ut1201.md
+      - "12.2 Abrir Form sin Abrir Access": ./ut12/ut1202.md
   - "UD13 — GIMP":
-      - "📘 UD13 Completa (1 pàgina)": ut22/index.md
-      - "13.1 Tema 1: Imatge Digital": ut22/ut2201.md
-      - "13.2 Tema 2. Imatge vectorial (Inkscape)": ut22/ut2202.md
+      - "📘 UD13 Completa (1 pàgina)": ./ut13/index.md
+      - "13.1 Tema 1: Imatge Digital": ./ut13/ut1301.md
+      - "13.2 Tema 2. Imatge vectorial (Inkscape)": ./ut13/ut1302.md

@@ -2,7 +2,7 @@
 layout: default
 title: "UD4 — FTP · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT4 Completa"
+badge: "2n ASIX · Grau Superior · UD4 — FTP"
 prev_url: "../ut03/ut0301.html"
 prev_label: "⬅️ 3.1 U3 HTTP"
 next_url: "../ut04/ut0401.html"
@@ -21,15 +21,6 @@ next_label: "4.1 U4 FTP ➡️"
 ---
 
 # 4.1 U4 FTP
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Resources**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Tasks**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Practices**
 
 ---
 

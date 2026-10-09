@@ -5,23 +5,23 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil":
-      - "📘 UD1 Completa (1 pàgina)": ut06/index.md
-      - "1.1 Caracterització de IA forta I dèbil usos i": ut06/ut0601.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Caracterització de IA forta I dèbil usos i": ./ut01/ut0101.md
   - "UD2 — Sistemes, Algorismes i Eines d'Aprenentatge Automàtic":
-      - "📘 UD2 Completa (1 pàgina)": ut05/index.md
-      - "2.1 Eines d'aprenentatge automàtic": ut05/ut0501.md
-      - "2.2 Algorismes aplicats a l'aprenentatge auto": ut05/ut0502.md
-      - "2.3 Caracterització de sistemes d'aprenentatg": ut05/ut0503.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Eines d'aprenentatge automàtic": ./ut02/ut0201.md
+      - "2.2 Algorismes aplicats a l'aprenentatge auto": ./ut02/ut0202.md
+      - "2.3 Caracterització de sistemes d'aprenentatg": ./ut02/ut0203.md
   - "UD3 — Aprenentatge Supervisat: Regressió, Classificació i Preprocessament":
-      - "📘 UD3 Completa (1 pàgina)": ut04/index.md
-      - "3.1 Aprenentatge supervisat. Tractament de d": ut04/ut0401.md
-      - "3.2 Aprenentatge supervisat. Algorismes de r": ut04/ut0402.md
-      - "3.3 Aprenentatge supervisat. Models de regre": ut04/ut0403.md
-      - "3.4 Aprenentatge supervisat. Models de regre": ut04/ut0404.md
-      - "3.5 Aprenentatge supervisat. Introducció.": ut04/ut0405.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Aprenentatge supervisat. Tractament de d": ./ut03/ut0301.md
+      - "3.2 Aprenentatge supervisat. Algorismes de r": ./ut03/ut0302.md
+      - "3.3 Aprenentatge supervisat. Models de regre": ./ut03/ut0303.md
+      - "3.4 Aprenentatge supervisat. Models de regre": ./ut03/ut0304.md
+      - "3.5 Aprenentatge supervisat. Introducció.": ./ut03/ut0305.md
   - "UD4 — Sistemes d'Aprenentatge No Supervisat":
-      - "📘 UD4 Completa (1 pàgina)": ut03/index.md
-      - "4.1 Continguts i Recursos": ut03/ut0301.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Continguts Teòrics i Recursos": ./ut04/ut0401.md
   - "UD5 — Xarxes Neuronals Artificials":
-      - "📘 UD5 Completa (1 pàgina)": ut02/index.md
-      - "5.1 Continguts i Recursos": ut02/ut0201.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Continguts Teòrics i Recursos": ./ut05/ut0501.md

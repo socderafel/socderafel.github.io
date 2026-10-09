@@ -1,382 +1,378 @@
 ---
 layout: default
-title: "UD4 — Nivell físic · Temari Complet"
+title: "UD5 — Cablejat estructurat · Temari Complet"
 course_root: ".."
-badge: "1r ASIX · Grau Superior · UT5 Completa"
+badge: "1r ASIX · Grau Superior · UD5 — Cablejat estructurat"
 prev_url: "../ut04/ut0401.html"
-prev_label: "⬅️ 3.1 U3 Xarxes àrea local"
+prev_label: "⬅️ 4.1 U4 Nivell físic"
 next_url: "../ut05/ut0501.html"
-next_label: "4.1 U4 Nivell físic ➡️"
+next_label: "5.1 U5 Cablejat Estructurat ➡️"
 ---
 
-# 📘 UD4 — Nivell físic (Unitat Completa)
+# 📘 UD5 — Cablejat estructurat (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 U4 Nivell físic**](./ut0501.md)
+- [**5.1 U5 Cablejat Estructurat**](./ut0501.md)
 
 ---
 
-# 4.1 U4 Nivell físic
+# 5.1 U5 Cablejat Estructurat
 
 ---
 
-PAX - U4 – Nivell físic 1er ASIX
+PAX - U5 – Cablejat estructurat 1er ASIX
 
-1 ASIX - PAX Introducció a la capa física
+1 ASIX - PAX Mapa físic
 
-- Abans que es produeixen
+- Mapa físic és la ubicació real dels cables, els equips i altres dispositius.
+- En una xarxa connectada per cables, el mapa físic cal incloure l’armari (o
 
-comunicacions de xarxa cal establir una connexió física a una xarxa local.
+rack) i el cablejat per a les estacions individuals.
 
-- Una connexió física pot ser
+- És conveniente realitzar el mapa físic sobre un plànol físic reial de l’edifici o
 
-una connexió per cable o una connexió inalàmbrica.
+la sala.
 
-- Es fa mitjançant NIC, bé de
+- Cal incloure la tipologia del cablejat, així com els noms dels equips i els
 
-cable o inalàmbriques.
+dispositius de xarxa.
 
-1 ASIX - PAX Propòsit de la capa física
+1 ASIX - PAX Mapa físic
 
-- Proporciona el medi per transportar els bits que componen un marc
+1 ASIX - PAX Mapa físic
 
-de la capa d’enllaç a través dels medis de xarxa.
+1 ASIX - PAX Mapa físic
 
-- Accepta un marc complet d’enllaç de dades, el codifica com a
+1 ASIX - PAX Mapa físic
 
-seqüencia de senyals que es transmet pels medis locals.
+1 ASIX - PAX Mapa lògic
 
-- Un dispositiu final (o intermediari) rep els bits codificats que
+- El mapa lògic documenta la ruta que prenen les dades a través de la
 
-composen la trama.
+xarxa i la ubicació on tenen lloc les funcions de xarxa, com l’enrutament.
 
-1 ASIX - PAX Propòsit de la capa física
+- Cal incloure denominació i direccionalment lògic de les estacions
 
-1 ASIX - PAX Medis de la capa física
+finals així com de la subxarxa.
 
-- El medi de transmissió és el suport físic mitjançant el qual l’emissor i
+- No importa la situació física del host sinó la seua funció lògica a la
 
-el receptor poden realitzar una comunicació en un sistema de transmissió de dades.
+xarxa.
 
-1 ASIX - PAX Medis de la capa física
+1 ASIX - PAX Mapa lògic
 
-- Tres formats bàsics de medis de xarxa
-- Senyals elèctriques per cable de coure
-- Puls de llum del cable de fibra òptica
-- Senyals de microones de la tecnologia inalàmbrica
+1 ASIX - PAX Mapa lògic
 
-1 ASIX - PAX Tipus de transmissions
+1 ASIX - PAX Mapa lògic
 
-- En un ordinador la informació es transmet digitalment. Els dígits
+1 ASIX - PAX Principis cablejat estructurat
 
-binaris es converteixen en senyals elèctriques convenientment codificades
+- El cablejat estructurat utilitza al seu disseny un model en estrela
 
-- A cada dígit binari (0,1) se li associa un nivell de tensió o voltatge
+jeràrquic en el que el cablejat s’estén en configuracions d’un a molts.
 
-diferent.
+1 ASIX - PAX Principis cablejat estructurat
 
-1 ASIX - PAX Tipus de transmissions
+- 3 trams
+- Campus backbone
+- Building backbone
+- Horizontal cabling
 
-- Normalment es considera que la transmissió que va pels cables és
+1 ASIX - PAX Principis cablejat estructurat
 
-perfecta però no és així degut a la tecnologia.
+1 ASIX - PAX Principis cablejat estructurat
 
-1 ASIX - PAX Tipus de transmissions
+1 ASIX - PAX Principis cablejat estructurat
 
-- Una senyal analògica és una onda continua, que canvia suaument
+1 ASIX - PAX Principis cablejat estructurat
 
-amb el temps i agafa un nombre infints de valors dins del rang que li permet el medi de transmissió.
+- Cablejat vertical i horitzontal
 
-1 ASIX - PAX Tipus de transmissions
+1 ASIX - PAX Principis cablejat estructurat
 
-- Una senyal digital es discreta, es a dir, sols pot agafar un nombre finits
+- Cablejat horitzontal
 
-de valors, normalment entre 0 i 1. La transició entre valors es instantània.
+1 ASIX - PAX Principis cablejat estructurat
 
-1 ASIX - PAX Estàndards de la capa física
+- Cablejat horitzontal amb cross connect
 
-- En capa física els estàndards son Hardware i venen determinats per
+1 ASIX - PAX Principis cablejat estructurat
 
-diferents organismes entre els que es troben els següents
+- Des d’octubre de 2004 està vigent la revisió B coneguda com
 
-- ISO (Org. Internacional para la Estandarización)
-- TIA i EIA (Asociación de Industrias de Telecos y Electrónicas)
-- ITU (Unión Internacional de Telecos)
-- ANSI (Instituto Nacional Estadounidense de Estándares)
-- IEEE (Instituto de Ingenieros Eléctricos y Electrónicos)
+ANSI/TIA/EIA 569-B que estandarditza la estructuració del cablejat i té en compte 3 conceptes fonamentals
 
-1 ASIX - PAX Característiques de la capa física
+- Durant l’existència d’un edifici, les remodelacions son comunes i cal tindre-les
 
-- Codificació -> Mètode que s’utilitza per convertir una transmissió de
+en compte des del moment del disseny.
 
-bits de dades en un “codi” predefinit.
+- Durant l’existència d’un edifici, les tecnologies i equips de telecomunicacions
 
-- Mètode de senyalització -> Els estàndars de la capa física deuen
+poden canviar.
 
-definir quin tipus de senyal representa un “1” i quin un “0”. Sol fer-se per voltatge però també es pot fer depenent de la durada de la pulsació.
+- El concepte de telecomunicacions incorpora tots els sistemes que transporten
 
-1 ASIX - PAX Característiques de la capa física
+informació als edificis tals com: control ambiental, seguretat, audio, tv, etc.
 
-- El ample de banda és la capacitat d’un medi per transportar dades.
-- El ample de banda digital medix la quantitat de dades que poden fluir
+1 ASIX - PAX Projecte d'instal·lació
 
-des d’un lloc fins altre en un període de temps determinat.
+1 ASIX - PAX Projecte d'instal·lació
 
-- En ocasions, l’ample de banda es pensa com la velocitat a la que
+- Preses de corrent -> Hi ha suficients?
+- Instal·lació de canalitzacions -> Quin tipus utilitze?
+- Instal·lació de rosetes -> Quin tipus utilitze?
+- Estesa de cables -> Recorregut, mesurar distàncies, etc.
+- Connectar cables a les rosetes -> Existeix normativa?
+- Instal·lació de l’armari -> Quin tipus i tamany?
+- Instal·lació i connexió del patch pannel -> Quin tipus utilitze?
+- Prova dels cables -> Com?
+- Etiquetat i documentació dels cables -> Normativa?
 
-viatgen els bits però no és així. En Ethernet, els bits s’envien a la velocitat de l’electricitat i l’ample de banda medix el número de bits per segon.
+1 ASIX - PAX Projecte d'instal·lació
 
-1 ASIX - PAX Característiques de la capa física
+- En un projecte de instal·lació bàsic es segueix l'estàndard
 
-- Rendiment -> Mesura de transferència de bits pels
+ANSI/TIA/EIA-568 de cablejat comercial per a productes i serveis de telecomunicacions.
 
-medis durant un període determinat.
+- Fou desarrollat per més de 60 organitzacions, incloent empreses,
 
-- En general, no coincideix amb l’ample de banda
+usuaris finals i consultores.
 
-especificat degut a
+- 1991: Versió inicial (ja obsoleta)
+- 1995: Revisió A
+- 2001: Revisió B
+- 2014: Revisió C
 
-- Quantitat de tràfic
-- Tipus de tràfic
-- Latència entre dispositius d’oritge i destí
-- El rendiment real representa el rendiment sense
+1 ASIX - PAX Sales de comunicacions
 
-aquests factors.
+- Sala de comunicacions és l’àrea o sala d’un edifici utilitzada per a l’ús
 
-1 ASIX - PAX Característiques de la capa física
+exclusiu de l’equip associat al sistema de cablejat de comunicacions.
 
-- En la figura podem vore diferents interfícies i ports disponibles a un
+- En xarxes xicotetes, es limita a un rack principal on conflueix el
 
-router Cisco 1941
+cablejat principal de l’edifici.
 
-1 ASIX - PAX Cablejat de coure
+1 ASIX - PAX Sales de comunicacions
 
-- Es transmet la informació com impulsos elèctrics.
-- Atenuació: Quan més lluny viatja la senyal, més es deteriora
-- Existeixen interferències tant electromagnètiques com de radiofreqüència
+- Serveix com a punt de terminació del cablejat horitzontal i backbone
 
-que distorsionen i danyen la senyal.
+en el hardware de connexió
 
-- Es pot reforçar el cable amb blindatge metàl·lic
-- També existeixen interferències d’altres cables que estiguen prop (es diu
+- No deu ser compartit amb instal·lacions elèctriques que no siguen de
 
-comunicació).
+comunicacions.
 
-1 ASIX - PAX Cablejat de coure
+- Quan es dissenya, cal tindre en compte factors com tamany de
 
-1 ASIX - PAX Cablejat de coure
+l’edifici, requeriments, aire condicionat, flexibilitat a futurs canvis, capacitat de càrrega del piso, etc.
 
-- Es transmet la informació com impulsos elèctrics.
-- Atenuació: Quan més lluny viatja la senyal, més es deteriora
-- Existeixen interferències tant electromagnètiques (EMI) com de
+1 ASIX - PAX Sales de comunicacions
 
-radiofreqüència (RFI) que distorsionen i danyen la senyal.
+1 ASIX - PAX Sales de comunicacions
 
-- Es pot reforçar el cable amb blindatge metàl·lic
-- També existeixen interferències d’altres cables que estiguen prop (es diu
+- La sala deu estar en la part central de la planta a utilitzar i es recomana que
 
-comunicació).
+hi haja una per planta.
 
-1 ASIX - PAX Cablejat de coure
+- Si la superfície de la planta és gran (més de 1000m2 o longitud del cable
 
-- Tres tipus de medis de
+major a 90m) es recomana la instal·lació de sales addicionals per planta.
 
-coure a les xarxes
+- La temperatura serà de entre 18 i 24 graus.
+- Els racks deuen tindre al menys 82cm d’espai davant i darrere per a ventilar
 
-1 ASIX - PAX Cablejat de coure: UTP
+bé.
 
-- El UTP és el més utilitzat a les xarxes
-- Acaba amb connectors RJ-45
-- Utilitzar per interconnectar hosts de xarxa amb dispositius de xarxa (com
+1 ASIX - PAX Armaris de comunicacions
 
-switches, hubs, routers, etc)
+- També anomenats Racks. Suport metàl·lic destinat a allotjar
 
-- Consta de 4 parells de fils codificats per colors que estan trenats entre si per
+equipament electrònic, informàtic i de comunicacions.
 
-ajudar a protegir contra les interferències de senyals amb altres fils.
+1 ASIX - PAX Armaris de comunicacions
 
-- Els colors ens ajuden a fer el cable
+- Les mesures dels racks estan normalitzades.
+- L’ample habitual son 19 polsades, podent trobar alguns de 10
 
-1 ASIX - PAX Cablejat de coure: UTP
+polsades.
 
-1 ASIX - PAX Cablejat de coure: STP
+1 ASIX - PAX Armaris de comunicacions
 
-- Proporciona millor protecció contra interferències que UTP
-- Més costós i difícil de instal·lar
-- Utilitza connector RJ45
-- Utilitza 4 parells de fils, cadascun empaquetat amb blindatge metàl·lic
+- L’altura dels racks es mesura en unitats (units).
+- Una unitat és un grup de tres forats del rail de muntatge lateral.
+- Trobem racks desde 4U fins 46U d’altura.
 
-i després tots amb una fulla metàl·lica.
+1 ASIX - PAX Armaris de comunicacions
 
-1 ASIX - PAX Cablejat de coure: STP
+- Segons el lloc d’instal·lació, tenim
+- Armaris murals: Penjats a la paret.
+- Armaris de sòl: Descansen al sòl.
 
-1 ASIX - PAX Cablejat de coure: Coaxial
+1 ASIX - PAX Armaris de comunicacions
 
-- Consta de
-- Conductor de coure
-- Aïllament de plàstic que protegeix el
+- Els caragols per a realitzar el muntatge de dispositius en el rack estan
 
-cable
+normalitzats també i es coneixen com caragols M6 per a rack.
 
-- Malla de blindatge similar a la de STP
-- Embolcall de plàstic
-- Ha estat reemplaçat per UTP en quasi
+1 ASIX - PAX Armaris de comunicacions
 
-tots els aspectes.
+- Dins d’un rack normalitzat podem instal·lar els següents elements
+- Patch pannel
+- Switches o hub
+- Routers
+- Firewalls
+- Servidors
+- Safates per a teclat
+- Safates fixes
+- Organitzadores de cables
+- Regletes
+- Ventiladors
 
-1 ASIX - PAX Cablejat de coure: Seguretat
+1 ASIX - PAX Armaris de comunicacions
 
-- Vulnerables a perills elèctrics
+- Patch pannel
+- Switches, hubs, routers i firewalls
 
-i incendis
+1 ASIX - PAX Armaris de comunicacions
 
-1 ASIX - PAX Cablejat UTP
+- Servidor
+- Safates fixes i mòbils
 
-1 ASIX - PAX Cablejat UTP: Estàndards
+1 ASIX - PAX Patch pannel
 
-- Tot el cablejat UTP cumplix amb els estàndards
+- Dins l’armari, el patch panel (panel de parcheo) és el punt de
 
-establerts per la TIA/EIA.
+terminació de tots el cablejat d’una xarxa mitjançant l’agrupació de rosetes.
 
-- TIA/EIA-568 estableix els estàndards per al cablejat
+1 ASIX - PAX Patch pannel
 
-d’instal·lacions LAN.
+- La seua funció és permetre canvis ràpids i fàcils de les connexions
 
-- Cable UTP de categoria 3.
-- S’utilitza per a comunicacions de veu.
-- Línies telefòniques.
+manipulant sols els cables en la part frontal.
 
-1 ASIX - PAX Cablejat UTP: Connectors
+1 ASIX - PAX Patch pannel
 
-- Els cables UTP acaben amb connector RJ-45
-- L’estàndard TIA/EIA-568 descriu les assignacions de la codificació de
+- A la part frontal té sockets RJ-45 numerades amb un espai per anotar
 
-colors dels cables als pins (distribució de terminals) per als cables Ethernet.
+un identificador.
 
-- Es fonamental que totes les terminacions dels medis de coure siguen
+1 ASIX - PAX Patch pannel
 
-de qualitat per garantir un rendiment òptim amb la tecnologia.
+- A la part posterior sol portar conductors IDC-110, encara que podem
 
-1 ASIX - PAX Cablejat UTP: Connectors
+trobar diferents solucions.
 
-- Els connector RJ-45 és el
+1 ASIX - PAX Patch pannel
 
-component mascle enganxat a l’extrem del cable.
+- El connector IDC-110 sol incloure el codi de colors per a realitzar la
 
-- El socket és el component
+connexió del cable utilitzant norma T568A i T568B.
 
-femella que es troba bé al dispositiu de xarxa, a la pared o a un panell de connexions.
+1 ASIX - PAX Rosetes o sockets RJ-45
 
-1 ASIX - PAX Cablejat UTP: Tipus
+- Sol incloure de nou tots els colors dels cables amb les normes T568A i
 
-1 ASIX - PAX Cablejat UTP: Prova
+T568B.
 
-- Mapa de cablejat
-- Llargària del cable
-- Pèrdua de senyal degut a atenuació
-- Crosstalk (diafonia)
+1 ASIX - PAX Rosetes o sockets RJ-45
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Propietats
+- Per connectar els cables utilitzarem la ferramenta de inserció
 
-- Es gasta en 4 tipus d’industries
-- Xarxes empresarials
-- Fiber-to-the-home (FTTH)
-- Xarxes de llarg radi
-- Xarxes per cable submarines
-- Transmet dades a través de distàncies més extenses i a amples de banda majors.
-- Transmet senyals amb menys atenuació i és totalment immune a EMI i RFI
-- Fil no molt més gros que un pèl humà, semiflexible.
-- Els bits es codifiquen com polsades de llum
+1 ASIX - PAX Canalitzacions
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Disseny
+- El cablejat deu anar dins d’una canalització (pathway) i en el seu
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Disseny
+muntatge cal tindre en compte els següents aspectes principals
 
-- Embolcall: Protegeix la fibra contra abrasió, humitat, etc.
-- Material de reforç: Evita que el cable de fibra s’estira quan es tira d’ell.
-- Búfer: S’utilitza per protegir el nucli i revestiment
-- Coberta: Actua com un espill que reflexa la llum cap al nucli de la
+- El seu ample ha de poder albergar el cablejat actual i futur pel que cal
 
-fibra.
+mesurar almenys el doble del que necessitem actualment.
 
-- Nucli. Element de transmissió de llum en el centre de la fibra òptica.
+- El nombre de corbes serà el mínim possible
+- No ha de passar per zones ambientalment adverses (temp, humitat, etc)
+- Si es creua amb cable elèctric, sempre de forma perpendicular
 
-Normalment fet de silici o vidre.
+1 ASIX - PAX Canalitzacions
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Tipus
+- Canaleta
+- Safates portacables
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Connectors
+1 ASIX - PAX Canalitzacions
 
-- Per a realitzar operacions dúplex calen 2 fibres ja que la llum sols pot
+- Tub corrugat
+- Canaleta sòl
 
-viatjar en una direcció a través de la fibra òptica.
+1 ASIX - PAX Canalitzacions
 
-- Connectors de punta directa (ST)
-- Un dels primers
-- Bloqueja amb una tapa a rosca
+- Sostre tècnic: proporciona neteja, estètica i facilitat de instal·lació de
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Connectors
+conduccions.
 
-- Connectors subscriptor (SC)
-- Connector estàndard
-- Utilitzat en multimode i monomode
-- Mecanisme de vaivé per la inserció
-- Connector Lucent (LC) símplex o dúplex
-- Versió més xicoteta que SC.
-- Símplex es més popular
+1 ASIX - PAX Canalitzacions
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Connectors
+- Sòl tècnic: proporciona neteja, estètica i facilitat de instal·lació de
 
-- Els colors ens indiquen si són monomode o multimode.
-- Els cables deuen estar protegits amb un caputxó quan on es gasten.
+conduccions. Més car que el sostre.
 
-1 ASIX - PAX Cablejat de Fibra Òptica: Prova
+1 ASIX - PAX Etiquetat del cablejat
 
-- La terminació i empalme del cablejat de fibra requereixen
+- 1.- Etiquetat dels racks en sales de comunicacions
+- Assignem un codi a cadascun dels racks.
+- Per exemple: 1A -> Rack A de la primera planta
 
-d’equipament i capacitació especials.
+• 3B -> Rack B se la tercera planta
 
-- Els problemes solen estar en la terminació.
-- Es por realitzar una prova de camp que consisteix en il·luminar un
+- 2.- Etiquetat dels patch panels
+- Assignem una lletra a cadascun dels patch panel dels racks
+- A -> Primer patch panel
+- B -> Segon patch panel
 
-extrem de la fibra amb una forta llanterna mentre s’observa l’altre extrem.
+1 ASIX - PAX Etiquetat del cablejat
 
-- Reflectòmetre és la ferramenta més adequada.
+1 ASIX - PAX Etiquetat del cablejat
 
-1 ASIX - PAX Comparativa UTP vs Fibra
+- 3.- Etiquetat del cablejat vertical
+- S’assigna una etiqueta amb el format: fs1/fs2-n
+- fs1: Rack inici del cable
+- fs2: Rack final del cable
+- n: Numeració del cable entre racks. Si sols hi ha un, es pot omitir.
+- 1A/1B -> Cable únic que va del rack 1A al rack 1B
+- 1A/3A-1 -> Primer cable que va del rack 1A al rack 3A
+- 1A/3A-2 -> Segon cable que va del rack 1A al rack 3A
 
-1 ASIX - PAX Medis inalàmbrics (sense fil)
+1 ASIX - PAX Etiquetat del cablejat
 
-- Wi-Fi: estàndard IEEE 802.11
-- Accés múltiple amb prevenció de col·lisions (CSMA/CA)
-- Targeta NIC sense fil espera fins que canal estiga lliure.
-- Bluetooth: estàndard IEEE 802.15
-- PAN
-- Emparellament de dispositius en distàncies curtes
-- WiMAX: Estàndard IEEE 802.16
-- Interoperabilitat mundial
-- Accés per banda ampla inalàmbrica
+1 ASIX - PAX Etiquetat del cablejat
 
-1 ASIX - PAX Medis inalàmbrics (sense fil)
+1 ASIX - PAX Etiquetat del cablejat
 
-- Una LAN sense fil requereix els següents dispositius de xarxa
-- Punt d’accés inalàmbric (AP): concentra senyals inalàmbriques dels usuaris i
+- 4.- Etiquetat del cablejat horitzontal
+- S’assigna una etiqueta amb el format: fs-an
+- fs: Rack al que està connectat el cable
+- a: Identificació del patch panel
+- n: Numeració del port del patch panel.
+- 1A-B01 -> Port 01 del patch panel B en el rack 1A
+- 3B-A23 -> Port 23 del patch panel A en el rack 3B
 
-es connecta a una infraestructura de xarxa existent basada en coure com pot ser Ethernet.
+1 ASIX - PAX Etiquetat del cablejat
 
-- Adaptadors NIC inalàmbrics: proporcionen capacitat de comunicació
+1 ASIX - PAX PoE
 
-inalàmbrica a cada host de la xarxa.
+- Power Over Ethernet. Alimentació a través del cable Ethernet.
+- Elimina la necessitat de utilitzar tomes de corrent elèctrica en
 
-- Els routers inalàmbrics solen integrar diferents funcions: router, switch i punt
+dispositius que permeten aquesta tecnologia.
 
-d’accés en un sol dispositiu.
+- No tenen grans necessitats d’alimentació. Assegurem el funcionament
 
-1 ASIX - PAX Medis inalàmbrics (sense fil)
+24/7.
+
+- Es gasta per punts d’accés, telèfons IP, càmeres IP, etc.
 
 1 ASIX - PAX Dubtes?
 

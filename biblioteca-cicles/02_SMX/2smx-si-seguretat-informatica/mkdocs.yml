@@ -4,27 +4,29 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UD1 — Conceptes sobre seguretat informàtica":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Continguts i Recursos": ut01/ut0101.md
+  - "UD1 — Conceptes sobre Seguretat Informàtica":
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Principis de seguretat, amenaces, vulnerabilitats i anàlisi de riscos": ./ut01/ut0101.md
   - "UD2 — Criptografia":
-      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Continguts i Recursos": ut02/ut0201.md
-  - "UD3 — Seguretat passiva: Equips":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 PDF: Consum i sel·lecció de SAI": ut03/ut0301.md
-  - "UD4 — Seguretat passiva: Emmagatzemament":
-      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 Continguts i Casos Guiats": ut04/ut04actividades.md
-  - "UD5 — Seguretat activa: sistema operatiu i aplicacions":
-      - "📘 UD5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 Continguts i Casos Guiats": ut05/ut05actividades.md
-  - "UD6 — Seguretat activa: Accés a xarxes":
-      - "📘 UD6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Continguts i Casos Guiats": ut06/ut06actividades.md
-  - "UD7 — Seguretat activa: Control de xarxes":
-      - "📘 UD7 Completa (1 pàgina)": ut07/index.md
-      - "7.1 Continguts i Casos Guiats": ut07/ut07actividades.md
-  - "UD8 — Atacs i contramesures":
-      - "📘 UD8 Completa (1 pàgina)": ut08/index.md
-      - "8.1 Continguts i Casos Guiats": ut08/ut08actividades.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Criptografia simètrica, asimètrica, funcions hash i certificats digitals": ./ut02/ut0201.md
+  - "UD3 — Seguretat Passiva: Equips i CPD":
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Seguretat física, Centre de Processament de Dades (CPD) i protecció elèctrica": ./ut03/ut0301.md
+      - "3.2 Especificació de potència, consum i selecció d'un SAI": ./ut03/ut0302.md
+  - "UD4 — Seguretat Passiva: Emmagatzematge i Còpies de Seguretat":
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Estratègies d'emmagatzematge, redundància RAID, NAS/SAN i polítiques de backup": ./ut04/ut0401.md
+  - "UD5 — Seguretat Activa: Sistema Operatiu i Aplicacions":
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Control d'accés, autenticació, permisos, quotes i auditoria del sistema": ./ut05/ut0501.md
+  - "UD6 — Seguretat Activa: Accés a Xarxes":
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 Seguretat en xarxes cablejades, xarxes sense fil (Wi-Fi) i xarxes privades virtuals (VPN)": ./ut06/ut0601.md
+  - "UD7 — Seguretat Activa: Control de Xarxes i Tallafocs":
+      - "📘 UD7 Completa (1 pàgina)": ./ut07/index.md
+      - "7.1 Monitoratge de xarxa, arquitectura de tallafocs (Firewalls), IPTables i servidors Proxy": ./ut07/ut0701.md
+  - "UD8 — Atacs i Contramesures":
+      - "📘 UD8 Completa (1 pàgina)": ./ut08/index.md
+      - "8.1 Atacs TCP/IP (MITM), auditoria Wi-Fi (Aircrack-ng) i seguretat web (WebGoat)": ./ut08/ut0801.md
+      - "8.2 Metodologia de Pentesting i Kali Linux": ./ut08/ut0802.md

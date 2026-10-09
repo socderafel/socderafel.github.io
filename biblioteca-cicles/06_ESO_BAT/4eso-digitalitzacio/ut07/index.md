@@ -2,7 +2,7 @@
 layout: default
 title: "UD7 — Páginas Web · Temari Complet"
 course_root: ".."
-badge: "4t ESO · UT7 Completa"
+badge: "4t ESO · UD7 — Páginas Web"
 prev_url: "../ut06/ut0602.html"
 prev_label: "⬅️ 6.2 Redes Informáticas"
 next_url: "../ut07/ut0701.html"

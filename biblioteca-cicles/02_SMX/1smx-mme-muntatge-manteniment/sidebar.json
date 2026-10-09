@@ -6,106 +6,94 @@
   },
   "units": [
     {
-      "summary": "UD1 — Unitat Didàctica 1",
+      "summary": "UD1 — Components d'un Equip Microinformàtic",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 P1 | P2 | P3 - CONTINGUTS",
-          "href": "ut01/ut0101.html"
+          "href": "./ut01/ut0101.html"
         }
       ]
     },
     {
-      "summary": "UD2 — Unitat Didàctica 2",
+      "summary": "UD2 — Muntatge d'Equips, Processadors i Emmagatzematge",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 P1 | P2 | P3 - TEXT CONTINGUTS",
-          "href": "ut02/ut0201.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 P2 - PROCESADOR Y MEMORIA",
-          "href": "ut02/ut0202.html"
+          "href": "./ut02/ut0202.html"
         },
         {
           "label": "2.3 P2 - CONT3 - AMD NOMENCLATURA PROCESADORS",
-          "href": "ut02/ut0203.html"
+          "href": "./ut02/ut0203.html"
         },
         {
           "label": "2.4 P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS",
-          "href": "ut02/ut0204.html"
+          "href": "./ut02/ut0204.html"
         },
         {
-          "label": "2.5 P3 - Perifèrics i Communications",
-          "href": "ut02/ut0205.html"
+          "label": "2.5 P3 - UNITATS D'EMMAGATZENATGE",
+          "href": "./ut02/ut0205.html"
         },
         {
-          "label": "2.6 P3 - UNITATS D'EMMAGATZENATGE",
-          "href": "ut02/ut0206.html"
-        },
-        {
-          "label": "2.7 DISCOS DUROS CHS ECHS LBA",
-          "href": "ut02/ut0207.html"
+          "label": "2.6 DISCOS DUROS CHS ECHS LBA",
+          "href": "./ut02/ut0206.html"
         }
       ]
     },
     {
-      "summary": "UD3 — Unitat Didàctica 3",
+      "summary": "UD3 — Manteniment, Diagnosi i Perifèrics",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 P1 P2 P3 - PDF CONTINGUTS",
-          "href": "ut03/ut0301.html"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 P1 P2 P3 - PRESENTACIÓ CLASSE",
-          "href": "ut03/ut0302.html"
+          "href": "./ut03/ut0302.html"
         }
       ]
     },
     {
-      "summary": "UD4 — Unitat Didàctica 4",
+      "summary": "UD4 — Seguretat, Còpies de Seguretat i Implantació de Programari",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 RGPD - CONTINGUTS",
-          "href": "ut04/ut0401.html"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 COPIAS DE SEGURIDAD - CONTINGUTS",
-          "href": "ut04/ut0402.html"
+          "href": "./ut04/ut0402.html"
         },
         {
           "label": "4.3 CLASIF INFORMACION - CONTINGUTS",
-          "href": "ut04/ut0403.html"
+          "href": "./ut04/ut0403.html"
         },
         {
           "label": "4.4 P1 P2 P3 PRESENTACIÓ CONTINGUTS",
-          "href": "ut04/ut0404.html"
+          "href": "./ut04/ut0404.html"
         },
         {
           "label": "4.5 P1 P2 P3 - CONTINGUTS",
-          "href": "ut04/ut0405.html"
-        },
-        {
-          "label": "4.6 P1 P2 P3 - PRESENTACIÓ",
-          "href": "ut04/ut0406.html"
+          "href": "./ut04/ut0405.html"
         }
       ]
     }

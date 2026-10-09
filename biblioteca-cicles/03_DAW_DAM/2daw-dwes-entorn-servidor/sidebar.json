@@ -10,20 +10,19 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 U1 Server-Side Development",
-          "href": "ut01/ut0101.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Git Recap",
-          "href": "ut01/ut0102.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Git Cheat Sheet",
-          "href": "ut01/ut0103.html"
+          "href": "./ut01/ut0103.html"
         }
       ]
     },
@@ -32,12 +31,11 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 U2 Basic PHP",
-          "href": "ut02/ut0201.html"
+          "href": "./ut02/ut0201.html"
         }
       ]
     },
@@ -46,12 +44,11 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 U3 Advanced PHP",
-          "href": "ut03/ut0301.html"
+          "href": "./ut03/ut0301.html"
         }
       ]
     },
@@ -60,12 +57,11 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 U4 Data Access",
-          "href": "ut04/ut0401.html"
+          "href": "./ut04/ut0401.html"
         }
       ]
     },
@@ -74,16 +70,15 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 Frameworks. Laravel I",
-          "href": "ut05/ut0501.html"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 How to install npm (node) into our existing cont",
-          "href": "ut05/ut0502.html"
+          "href": "./ut05/ut0502.html"
         }
       ]
     },
@@ -92,20 +87,19 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 Frameworks. Laravel II",
-          "href": "ut06/ut0601.html"
+          "href": "./ut06/ut0601.html"
         },
         {
           "label": "6.2 How to use Tailwind CSS into a Laravel project",
-          "href": "ut06/ut0602.html"
+          "href": "./ut06/ut0602.html"
         },
         {
           "label": "6.3 How to clone a Laravel project from Github",
-          "href": "ut06/ut0603.html"
+          "href": "./ut06/ut0603.html"
         }
       ]
     },
@@ -114,12 +108,11 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut07/index.html"
         },
         {
           "label": "7.1 Web Services",
-          "href": "ut07/ut0701.html"
+          "href": "./ut07/ut0701.html"
         }
       ]
     },
@@ -128,12 +121,11 @@
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
+          "href": "./ut08/index.html"
         },
         {
           "label": "8.1 Hybrid applications",
-          "href": "ut08/ut0801.html"
+          "href": "./ut08/ut0801.html"
         }
       ]
     }

@@ -1,411 +1,1126 @@
 ---
 layout: default
-title: "UD4 — Debugging y testing · Temari Complet"
+title: "UD3 — Control de versiones · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT3 Completa"
-prev_url: "../ut02/ut0203.html"
-prev_label: "⬅️ 3.3 Crear alias para log con ramas"
+badge: "1r DAW / DAM · Grau Superior · UD3 — Control de versiones"
+prev_url: "../ut02/ut0201.html"
+prev_label: "⬅️ 2.1 IDEs. Estilos de programación"
 next_url: "../ut03/ut0301.html"
-next_label: "4.1 Debugging y testing ➡️"
+next_label: "3.1 Control de versiones ➡️"
 ---
 
-# 📘 UD4 — Debugging y testing (Unitat Completa)
+# 📘 UD3 — Control de versiones (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 Debugging y testing**](./ut0301.md)
+- [**3.1 Control de versiones**](./ut0301.md)
+- [**3.2 Git Cheat Sheet**](./ut0302.md)
+- [**3.3 Crear alias para log con ramas**](./ut0303.md)
 
 ---
 
-# 4.1 Debugging y testing
+# 3.1 Control de versiones
+
+> **🔗 Recurs Web: Git download**
+> [**🌐 Obrir recurs extern (https://git-scm.com/downloads) ↗️**](https://git-scm.com/downloads)
+
+> **🔗 Recurs Web: Oh my Git!**
+> [**🌐 Obrir recurs extern (https://ohmygit.org/) ↗️**](https://ohmygit.org/)
+
+> **🔗 Recurs Web: Web structure generator (initializr.com)**
+> [**🌐 Obrir recurs extern (http://www.initializr.com/) ↗️**](http://www.initializr.com/)
 
 ---
 
-U4 - Debugging y testing 1º DAW
+U3 - Control de versiones. Git. 1º DAW - Entornos de Desarrollo
 
-Introducción
+1DAW - ED ¿Qué es un control de versiones?
 
-- La prueba del software es un elemento crítico para la garantía de la calidad
+- Herramienta de ayuda al desarrollo de código que almacena la
 
-del software y representa una revisión final de las especificaciones, del diseño y de la codificación.
+situación del código fuente en momentos determinados.
 
-- La prueba de software es un elemento que a menudo se le conoce como
+- Por analogía, se puede ver como ”una foto” del código en un
 
-verificación y validación (V & V).
+momento determinado.
 
-- Bohem lo define
-- Verificación: ¿Estamos construyendo el software correctamente?
-- Validación: ¿Estamos construyendo el producto correcto?
+1DAW - ED ¿Qué es un control de versiones?
 
-Objetivos de la prueba
+- Cuando yo era joven…
 
-- La prueba es un proceso de ejecución de un programa con la intención de
+1DAW - ED ¿Qué es un control de versiones?
 
-descubrir un error.
+- Con la forma de trabajar anterior, si un desarrollador sube un fichero
 
-- Buen caso de prueba: aquel que tiene una alta probabilidad de mostrar un
+al servidor o al repositorio donde se almacena el código mientras otro desarrollador está trabajando en alguna funcionalidad del mismo fichero en su ordenador, cuando éste vaya a dejar su versión, se eliminará la del desarrollador anterior, y con él todo el trabajo realizado.
 
-error no descubierto hasta entonces.
+1DAW - ED ¿Qué es un control de versiones?
 
-- Éxito de una prueba: si descubre un error no detectado hasta entonces.
+- Con un sistema de control de
 
-“La prueba no puede asegurar la ausencia de defectos, sólo puede demostrar que existen defectos en el software”.
+versiones, esto no hubiese ocurrido ya que ambas versiones se hubiesen “mergeado” previamente, eliminando así posibles conflictos y los cambios de todos los desarrolladores, hubiesen quedado en el fichero.
 
-Principios de la prueba
+1DAW - ED ¿Qué es un control de versiones?
 
-- Las pruebas deberán planificarse mucho antes de que empiecen para
+- Además, cuando utilizamos un
 
-garantizar la calidad de acuerdo a lo establecido en el ciclo de vida.
+control de versiones nuestro equipo se convierte en una especie de máquina del tiempo en la que podemos volver al punto de la historia del fichero que deseemos
 
-- Las pruebas deberán empezar por lo pequeño y progresar hacia lo grande.
-- No son posibles las pruebas exhaustivas.
-- Para ser más efectivas, las pruebas deberán ser conducidas por un equipo
+1DAW - ED ¿Qué es un control de versiones? Equipo Proyecto The Boss Equipo!! Necesito que cambiéis el diseño del proyecto ¿Sabéis qué? Vamos a dejar la versión anterior que quedaba mejor. ¿La fuente era esa? Quedaría más modernita con Arial Uy no no, mejor la que teníamos antes.
 
-independiente.
+¿PERO QUE HABÉIS HECHO? TODO HA DEJADO DE FUNCIONAR CON TANTO CAMBIO
 
-Pruebas de caja blanca
+1DAW - ED ¿Qué es un control de versiones?
 
-- Se comprueban los caminos lógicos del software proponiendo casos de prueba que
+- Trabajando con control de versiones estos cambios que se van
 
-ejerciten conjuntos específicos de condiciones y/o bucles.
+introduciendo y estas “vueltas a versiones anteriores” es algo tan fácil como restaurar una versión determinada.
 
-- Se puede examinar el estado del programa en varios puntos para determinar si el estado
+- Sin GIT, tendríamos que ir con mucho cuidado con las modificaciones
 
-real coincide con el esperado.
+sobre un fichero ya que sino, las versiones anteriores se perderían.
 
-- Mediante los métodos de prueba de caja blanca, el ingeniero del software puede
+1DAW - ED ¿Qué es un control de versiones?
 
-obtener casos de prueba que: 1. Garanticen que se ejercita por lo menos una vez todos los caminos independientes de cada módulo. 2. Ejerciten todas las decisiones lógicas en sus vertientes verdadera y falsa. 3. Ejecuten todos los bucles en sus límites y con sus límites operacionales.
+1DAW - ED ¿Qué es un control de versiones?
 
-4. Ejerciten las estructuras internas de datos para asegurar su validez.
+- El control de versiones no sólo sirve para desarrolladores y código
 
-Pruebas de caja blanca
+fuente.
 
-- La prueba de caja blanca denominada a veces prueba de caja de cristal se
+- Podemos versionar cualquier fichero (documentos de texto, hojas de
 
-examina de forma detallada la arquitectura de la aplicación.
+cálculo, documentos de imagen, de vídeo…).
 
-- Emplean análisis del código fuente.
-- Suelen requerir herramientas especializadas para realizar la prueba.
+- Mejor mantenimiento, más seguridad…
 
-Pruebas de caja negra
+1DAW - ED ¿Qué es git?
 
-- También se le conoce como prueba de comportamiento.
-- Se realiza sobre la interfaz sin necesidad de conocer la estructura
+- Git es un sistema de control de versiones distribuido.
+- Distribuido significa que tenemos un repositorio central y copias localmente de éste.
+- Repositorio se define como espacio donde se almacena, organiza y mantiene
 
-interna del programa ni cómo está implementado.
+información digital.
 
-- Se busca conocer si las funciones del software son operativas (las que
+- Es el más utilizado en la actualidad.
+- Es de código abierto, multiplataforma y gratuito.
+- Fue creado por Linux Torvalds para un mejor mantenimiento y
 
-se esperan).
+colaboración en el código fuente de Linux.
 
-Pruebas de caja negra
+- Actualmente, el código de Linux se puede encontrar en GitHub.
 
-- Se buscan errores de interfaz, en el acceso a los datos, por ejemeplo.
-- Funcionalidades erróneas en el inicio o la finalización del programa.
-- Algunas de las técnicas más utilizadas para este tipo de pruebas son
+1DAW - ED ¿Qué es git?
 
-clases de equivalencia, análisis de valores límites, pruebas de comparación, etc.
+- Git viene preinstalado en muchas distribuciones Linux y en los MAC.
+- En Windows, sin embargo, es necesario instalarlo.
+- https://git-scm.com/downloads
+- Las instrucciones también son multiplataforma, es decir, son las mismas
 
-Tipos de pruebas
+independientemente del SO en el que se ejecuten.
 
-- En los módulos, Pruebas de unidad o unitarias.
-- En la unión de los módulos, Pruebas de integración.
-- Cuando tenemos todos unidos, Prueba de validación.
-- Cuando el sistema está funcionando, Prueba de sistema.
+- Una vez instalado, estará disponible en nuestro ordenador. Podemos comprobar
 
-Tipos de pruebas
+que está correctamente instalado ejecutando en consola la siguiente instrucción
 
-Pruebas de unidad o unitarias
+```java
+git --version
+```
 
-- Se suelen realizar durante las fases de desarrollo.
-- La prueba de unidad centra el proceso de verificación en la menor unidad
+1DAW - ED Repositorio central
 
-del diseño del software: “el módulo”.
+- Esta forma de trabajar ha quedado
 
-- Se pueden paralelizar varias pruebas unitarias.
-- Algunas herramientas para realizar estas pruebas son Junit, PHPUnit, etc.
+anticuada.
 
-Pruebas de integración
+- Todo el equipo trabaja sobre el
 
-- Se comprobará la interacción de los distintos módulos del programa.
-- La integración puede ser
-- Súbita: Se comprueban los módulos de forma separada y después se prueba
+mismo repositorio.
 
-de forma conjunta. Puede dar lugar a muchos errores difíciles de corregir.
+- Backups, accesibilidad, etc.
 
-- Incremental: Se va creando e integrando poco a poco. Puede ser de dos
+1DAW - ED Repositorio distribuido
 
-formas
+- Forma de trabajo de git.
+- Todo el equipo trabaja tiene una
 
-- Ascendente: Se empieza por los módulos más pequeños hasta integrarse con el más
+copia (repositorio local) del repositorio principal (repositorio remoto)
 
-grande.
+- Mejor seguridad, escalabilidad,
 
-- Descendente: Desde el más grande, se van integrando los módulos más pequeños.
+accesibilidad…
 
-Pruebas de validación
+1DAW - ED ¿Y qué papel tiene Github en todo esto?
 
-- La prueba de validación se lleva a cabo para verificar que el programa
+- Github es una página web que permite
 
-funciona de acuerdo a las expectativas y requisitos del cliente.
+almacenar los repositorios remotos, de forma que aunque los desarrolladores no estén en la misma localización, puedan todos acceder al mismo repositorio remoto para así hacer una copia de su repositorio local.
 
-- Estas pruebas pueden ser de dos formas
-- Alfa: realizada por el cliente o usuario en el lugar de desarrollo, de forma
+- Se estudiará más adelante.
 
-controlada, anotando todas las acciones realizadas por éste.
+Repositorio remoto (Github) Repositorio local (Cada PC de cada desarrollador)
 
-- Beta: se reparte una versión del programa a los usuarios finales con la
+1DAW - ED Comandos importantes
 
-finalidad que las prueben y informen de los errores.
+- git --version
+- Utilizado para conocer la versión de git que se está utilizando.
+- git help
+- Se puede ver qué instrucciones hay disponibles (las más importantes)
+- Si se utiliza seguido de la instrucción, muestra qué realiza ésta así como los
 
-Pruebas de sistema
+argumentos que espera.
 
-- Pruebas para ver cuan estable es nuestro programa respecto a su
+- git help commit
 
-ejecución en diferentes sistemas.
+1DAW - ED Comandos importantes
 
-- Se realizan pruebas de diferentes tipos
-- Recuperación: se fuerza fallo de software y se comprueba como se recupera
+- Comandos de configuración necesarios para el correcto
 
-de éste
+funcionamiento de git
 
-- Seguridad: se comprueba que está protegido frente acciones ilegales.
-- Resistencia: Se realizan acciones que requieran de una gran cantidad de
+- git config --global user.name “Juanra”
+- Indica cual es el nombre del usuario que va a utilizar git.
+- git global --global user.email “”
+- Lo mismo pero per indicar el correo eléctronico
+- git config --global -e
+- Accedemos a ver el fichero de configuración de git.
 
-recursos.
+1DAW - ED Inicializando repositorio local
 
-Prueba del camino básico
+- Llamaremos repositorio a la carpeta
 
-- La prueba del camino básico es una técnica de prueba de caja blanca
+de contiene los ficheros y carpetas que queremos versionar.
 
-propuesta inicialmente por Tom McCabe.
+- Como ya hemos estudiado,
 
-- Esta técnica permite al diseñador de casos de prueba obtener una
+dispondremos de un repositorio local (en nuestro ordenador), y uno remoto (en GitHub).
 
-medida de la complejidad de nuestro sistema.
+- Es necesario tener primero el local
 
-- Para obtener esta medida de complejidad, utilizaremos la técnica de
+para trabajar con el remoto. Al revés es imposible.
 
-representación de grafo de flujo.
+1DAW - ED Inicializando repositorio local
 
-Prueba del camino básico
+- Para inicializar un repositorio, es necesario situarse mediante la
 
-- Notación del grafo de flujo
-- Cada círculo denominado nodo del grafo de flujo, representa una o más sentencias procedimentales.
-- Un solo nodo puede corresponder a una secuencia de cuadros de proceso y a un rombo de decisión.
-- Las flechas del grafo denominadas aristas o enlaces, representan flujo de control. Una arista
+terminal en la carpeta que se desee.
 
-debe terminar en un nodo, incluso aunque el nodo no represente ninguna sentencia procedimental.
+- git init
+- Crea/inicializa un nuevo repositorio en la carpeta en la que se encuentra.
+- git status
+- Ver el estado de los ficheros
 
-- Las áreas delimitadas por aristas y nodos de denominan regiones. Cuando contabilizamos las
+1DAW - ED Inicializando repositorio local
 
-regiones incluimos el área exterior del grafo, contando como otra región más.
+- Para ello, mediante la terminal, se ejecutan las instrucciones
 
-- El nodo que contiene una condición se llama nodo predicado y se caracteriza porque de él
+necesarias para llegar ala carpeta que se desea versionar (la que contiene todos los ficheros)
 
-salen dos o más aristas.
+1DAW - ED Inicializando repositorio local
 
-Pruebas de caja blanca: Prueba del camino básico
+- Inicializar el repositorio
 
-Prueba del camino básico: Complejidad ciclomática (VG)
+1DAW - ED Inicializando repositorio local
 
-- Define el número de caminos independientes del conjunto básico de un programa y nos da un límite inferior para el
+- Como se puede observar, al inicializar el repositorio se crea una
 
-número de pruebas que se deben realizar para asegurar que se ejecuta cada sentencia al menos una vez.
+carpeta oculta llamada .git
 
-- Un camino independiente es cualquier camino del programa que introduce por lo menos un nuevo conjunto de
+- Si en algún momento se necesita “desversionar” el proyecto, solo solo
 
-sentencias de procesamiento o una nueva condición. En términos del grafo de flujo, un camino independiente se debe mover por lo menos por una arista que no haya sido recorrida anteriormente a la definición de un camino.
+haría falta borrar la carpeta .git
 
-- La complejidad ciclomática V(G) se puede calcular de tres formas
-- 1. El número de regiones del grafo de flujo coincide con la complejidad ciclomática.
-- 2. Aristas - Nodos + 2, es decir V (G) = A – N + 2.
-- 3. Nodos Predicado + 1 (un nodo predicado es el que representa una condicional if o case, es decir, que de él salen
+1DAW - ED
 
-varios caminos).
+```java
+git status
+```
 
-- Por tanto se deben preparar los casos de prueba que forzarán la ejecución de cada camino del conjunto básico.
+- Se ejecuta git status para que sea git quién cuente cual es el estado
 
-Prueba del camino básico
+actual del repositorio
 
-Prueba del camino básico
+1DAW - ED
 
-Prueba del camino básico
+```java
+git status
+```
 
-- Diseñar el conjunto de casos de prueba mediante el método de la
+- Vayamos por partes…
+- ”En la rama master”
+- El concepto de rama se introduce más adelante en el tema. De momento
 
-complejidad ciclomática para el siguiente código
+destacar que un repositorio puede tener varias ramas y a la principal se le llama rama master.
 
-Prueba del camino básico
+- Por tanto, esta información indica en qué rama se está trabajando
 
-- 1. Conversión al grafo
+actualmente.
 
-Prueba del camino básico
+1DAW - ED
 
-- 2. Cálculo de la complejidad ciclomática
-- V(G) = 3 regiones = 3
-- V(G) = 7A – 6N + 2 = 3
-- V(G) = 2NP + 1 = 3
+```java
+git status
+```
 
-Prueba del camino básico
+- “No hay commits todavía”
+- El concepto de commit se introducirá más adelante. Es el proceso mediante el
 
-- 3. Conjunto de caminos básicos (pruebas básicas)
+cual los ficheros/carpetas se “compromete” al repositorio local. Sería algo parecido a “confirmar la subida” de estos ficheros al repositorio local.
 
-JUnit
+- De momento, indica que no existe nada pendiente de “commitear” ni se
 
-- Junit es una herramienta para realizar pruebas unitarias
+conoce ningún commit realizado.
 
-automatizadas.
+1DAW - ED
 
-- Está integrada en la gran mayoría de ED (eclipse incluido).
+```java
+git status
+```
 
-JUnit
+- ”Archivos sin seguimiento”
+- Como se puede observar, se indica que los ficheros/carpetas están sin
 
-- Las pruebas unitarias se realizan sobre una clase para probar su
+seguimiento. Esto significa que están dentro de la carpeta en la que se encuentra el repositorio pero no están siendo “seguidos” todavía por éste. En inglés serían untracked.
 
-comportamiento de modo aislado independientemente del resto de clases de la aplicación.
+- Además, se indica la instrucción que se debería ejecutar para que estos
 
-- Ejercicio: Crea una clase llamada Calculadora cuyo constructor reciba
+ficheros dejen de estar sin seguimiento.
 
-los dos números a utilizar y que tenga 4 métodos, suma(), resta(), multiplica() y divide() que devuelvan el resultado de aplicar la operación sobre los números pasados en el constructor.
+- Aparecen en rojo en el terminal
 
-JUnit
+1DAW - ED
 
-- Para crear la clase de prueba sobre esta clase, seleccionamos con el
+```java
+git status
+```
 
-botón derecho la clase a probar (en este caso Calculadora) y pulsamos en New->Junit Test Case y le llamaremos CalculadoraTest.
+1DAW - ED Estados de los ficheros
 
-- Seleccionamos los métodos que queremos probar y y finalizamos.
-- La clase de prueba se generará con los métodos dentro. Cada método
+- Como se ha estudiado visto, al inicializar el repositorio, los ficheros y
 
-tendrá el mismo nombre que el método original precedido de la palabra test.
+carpetas se encuentran untracked.
 
-JUnit
+- Una vez pasan a tener seguimiento (tracked) pasan por diferentes
 
-- Además, como cabecera del método aparecerá la palabra @Test que
+estados antes de estar “commiteados” en nuestro repositorio local.
 
-indica al compilador que es un método de prueba.
+- Mediante diferentes comandos, irán pasándol de un estado a otro
 
-- Cada método de prueba tiene una llamada al método fail para forzar
+hasta el final.
 
-que la prueba falle con el mensaje que no está implementado todavía
+1DAW - ED Estados de los ficheros
 
-JUnit
+1DAW - ED Working directory (WD)
 
-- Ahora es momento de preparar cada uno de los test.
-- Para ello hay que indicar que es lo que esperamos de la ejecución de
+- Estado donde se encuentran los ficheros que no tienen seguimiento
 
-una serie de instrucciones (valor esperado del caso de prueba).
+todavía o aquellas ya tienen seguimiento (previamente han sido “committeados”) pero han sido modificados, y por tanto, es necesario volver a ”commitearlos”.
 
-- Los métodos que podemos utilizar son los que se encuentran en la
+- Para pasar del working directory al repositorio (“commiteado”), es
 
-infografía de la siguiente diapositiva
+necesario pasar previamente por el estado ”staged”.
 
-JUnit Método Descripción assertTrue([mensaje], condición booleana) Comprueba que la condición sea verdadera. assertFalse([mensaje], condición booleana) Comprueba que la condición sea falsa. assertEquals([mensaje], valor esperado, valor actual) Comprueba que dos valores sean iguales. Nota: en arrays comprueba su referencia, no el contenido!) assertSame([mensaje], valor esperado, valor actual) Comprueba que ambos parámetros sean el mismo objeto.
+1DAW - ED Working directory (WD)
 
-assertNotSame([mensaje], valor esperado, valor actual) Comprueba que ambos parámetros no sean el mismo objeto. assertNull([mensaje], objeto) Comprueba que el objeto sea nulo. assertNotNull([mensaje], objeto) Comprueba que el objeto no sea nulo. fail([mensaje]) Hace que el método falle. Debería ser utilizado solo para comprobar que una parte del código de test no se ejecute o para hacer fallar un test no implementado.
+- Para pasar ficheros del working directory a stage se utilizará el
 
-JUnit
+comando git add
 
-- Si queremos definir un test unitario para el método suma, deberemos
+- git add rutaFichero
+- Después de ejecutar el comando, se puede decir que los ficheros
 
-llamar al método, recoger su resultado y comprobar mediante un “assert” que el valor esperado es correcto.
+están en stage.
 
-JUnit
+1DAW - ED Working directory (WD)
 
-- Podemos ejecutar la clase de prueba o bien mediante la opción “Run
+- Existen diferentes comodines para añadir ficheros sin ir fichero a
 
-as Junit Test”.
+fichero
 
-- Se abrirá una pestaña con los resultados de las pruebas.
-- Se puede forzar la prueba de los errores mediante fail, por ejemplo,
+- git add .
+- Más utilizado. Añade todo el contenido de la carpeta actual
+- git add *.png
+- git add pdf/*.pdf
+- git add index.html
+- Para más información sobre el comando: git help add
 
-muy utilizado para testear las excepciones
+1DAW - ED Working directory (WD)
 
-Debuggeando código
+1DAW - ED Staging Area
 
-- El debugging de código en Java es el proceso de encontrar y corregir
+- Fase donde nuestros ficheros y carpetas se encuentran “preparados”
 
-errores en un programa Java usando una herramienta llamada depurador.
+para ser “committeados” al repositorio local.
 
-- Un depurador te permite ejecutar tu programa paso a paso, ver el valor de
+- Desde aquí podríamos tanto pasarlos al repositorio como devolver el
 
-las variables, establecer puntos de interrupción y evaluar expresiones.
+fichero al working directory en caso que así lo decidamos.
 
-- El debugging te ayuda a entender mejor el flujo de tu programa y a
+- Para pasar los ficheros del stage al repositorio local, es necesario
 
-resolver los problemas que puedan surgir.
+ejecutar la orden git commit
 
-Testing vs Debugging
+1DAW - ED Staging area
 
-- El testing consiste en verificar y validar que un software o aplicación
+- El commit siempre se realiza acompañado del argumento “-m”, seguido del
 
-funciona correctamente, cumple los requisitos técnicos y satisface las necesidades de los usuarios.
+comentario del desarrollador que indique qué es lo que se va a “commitear” al repositorio local.
 
-- El debugging consiste en encontrar y corregir los defectos o errores
+- En caso de no indicarse, la propia consola ejecutará un proceso interactivo
 
-que se detectan en el testing, con el objetivo de eliminar los problemas y asegurar el buen funcionamiento del software.
+para que indiquemos un comentario.
 
-Debuggeando código
+- Es muy importante el mensaje ya que es necesario por si en algún
 
-- Punto de interrupción: Mediante doble click en la parte izquierda de
+momento deseamos volver a un punto determinado o saber en qué fecha se realizó alguna tarea.
 
-la línea añadiremos lo que se llama breakpoint o punto de ruptura que sirve para indicarle al debugguer que cuando se ejecute, tiene que detener ahí la ejecución para poder “observar” los diferentes valores
+1DAW - ED Staging area
 
-Debuggeando código
+1DAW - ED Repositorio o Comiteado
 
-- Para lanzar la ejecución del programa en modo debug pulsaremos el
+- Una vez los ficheros se encuentran en el repositorio local correctamente
 
-botón a la izquierda del ejecutar con un símbolo de un bicho.
+”commiteados”, el git status indica que no hay nada pendiente ni en working directory ni en stage.
 
-- Tras pulsar en este botón, el programa se ejecutará con normalidad
+- El flujo continuariía en el repositorio remoto (GitHub). Se estudiará más
 
-hasta que encuentre el punto de ruptura o interrupción, donde se parará.
+adelante.
 
-Debuggeando código
+1DAW - ED Log
 
-Debuggeando código
+- Para poder ver un registro de todos los commits que se han realizado
 
-- Al abrir la perspectiva “Debug” podemos observar los valores de las
+en el repositorio se utilizara el comando git log.
 
-variables de nuestro programa en ese momento en el que se ha “pausado” la ejecución del programa.
+- En éste, además, se podrán visualizar las diferentes ramas existentes y
 
-Debuggeando código
+entender de una forma más visual los diferentes estados por los que ha pasado el repositorio.
 
-- Estos valores se pueden modificar en tiempo de ejecución para poder
+- git log --oneline
 
-realizar pruebas con los valores que nosotros deseemos sin tener que estar modificando el código
+1DAW - ED Log
 
-Debuggeando código
+- Por defecto, el log se muestra en terminal de una forma muy sencilla
 
-- Una vez inspeccionado todo lo que necesitamos en nuestro
+pero esta puede ser modificada para que tenga una apariencia más visual y entendible.
 
-breakpoint podemos navegar a la siguiente instrucción en una ejecución paso a paso o bien decirle que siga sin parar otra vez (salgo que tenga otro breakpoint).
+1DAW - ED Deshaciendo cambios - Reset
 
-- Para ello, utilizaremos los botones de navegación de debug.
+- La orden reset es la que utilizaremos para recuperar versiones
 
-Debuggeando código
+anteriores.
 
-- También se pueden incluir puntos de ruptura condicionales. Es decir,
+- Es decir, nos permitirá viajar en el tiempo para volver a código ya
 
-la ejecución parará en el punto de interrupción si una condición dada se cumple.
+commiteado con anterioridad.
 
-- Para ello, desde la pestaña de breakpoints se seleccionará el
+1DAW - ED Deshaciendo cambios - Reset
 
-breakpoint al cual queremos incluir la condición y se indica como si fuera parte de un if normal.
+- Imaginemos un proyecto con los commits tal y como se ven en la siguiente
 
-Debuggeando código
+imagen
 
-Debuggeando código
+- El código que aparece a la izquierda del log, es el código que identifica cada
 
-- Por último, se puede añadir una vista más llamada expresiones donde
+uno de los commits.
 
-se puede evaluar (ejecutar) en tiempo de ejecución expresiones como añadir un nuevo valor a un array o pasar a string un objeto.
+1DAW - ED Deshaciendo cambios - Reset
 
-¿Dudas?
+- git reset -- soft HEAD^ (o el hash)
+- Es el menos destructivo de todos. Va a quitar el fichero del commit pero va a
+
+dejar los ficheros con las modificaciones en el área de stage.
+
+- git reset --mixed 860c6c2
+- Es lo que se hace por defecto. si solo hacemos un reset.
+- Se lleva tanto del commit como del área de stage pero se mantienen las
+
+modificaciones al "working directory", es decir, a nuestros ficheros.
+
+- git reset --hard 850c22
+- Para ir a un punto determinado, destruye todo lo que tenía después.
+
+1DAW - ED Deshaciendo cambios - Stage
+
+- En el caso que se quiera descartar un fichero que ya tenemos en stage
+
+(es decir, hemos hecho previamente un add), la operativa sería igual que en el caso anterior
+
+- git reset --hard
+
+1DAW - ED Deshaciendo cambios - WD
+
+- En el caso que se modifique algún fichero de forma local (Working
+
+directory) y, tras arrepentirse, se desee volver a la versión que existe en la rama (la comiteada), se puede utilizar el comando git checkout.
+
+- git checkout -- index.html
+- Este comando eliminará los cambios que se hayan realizado en el WD dejando
+
+la última versión que existía en la rama.
+
+1DAW - ED Eliminar fichero
+
+- Cuando eliminamos un fichero, éste se queda con una marca D
+
+(deleted).
+
+- La instrucción que usaremos para añadir al stage todas las
+
+actualizaciones hechas en nuestro WD será
+
+- git add -u
+
+1DAW - ED Renombrar fichero
+
+- ¿Qué ocurre si renombramos un fichero que ya tenemos
+
+committeado?
+
+- Para GIT, es como haber borrado un fichero y haber creado uno
+
+nuevo por tanto será necesario comunicarle el borrado y la nueva inserción
+
+- git add -u
+- git add . (también se puede utilizar git add -A que solo añade lo nuevo)
+- Ya solo faltaría realizar un commit normal.
+
+1DAW - ED Ignorando fichero que no queremos
+
+- En ocasiones, existen ficheros en la carpeta donde se encuentra el
+
+repositorio que no queremos que sean “versionados”.
+
+- logs
+- ficheros temporales
+- ficheros que incluyen contraseñas
+- carpetas con datos de librerías
+- etc
+- Podemos indicarle a git que los ignore creando en la raíz de nuestro
+
+repositorio un fichero llamado .gitignore
+
+1DAW - ED .gitignore
+
+- Cada una de las líneas que existe en este fichero es un patrón del
+
+fichero que ha de ser excluido.
+
+- Se puede indicar directamente el fichero o carpeta que deseamos
+
+excluir o bien utilizar patrones. Aquí algunos ejemplos
+
+- herois.txt
+- node_modules/
+- *.log
+- tmp_*
+
+1DAW - ED Ramas
+
+- Las ramas son líneas temporales alternativas (con sus commits) a la
+
+rama principal las cuales se pueden modificar sin afectar a la rama principal.
+
+- Se utiliza para mantener diferentes versiones del mismo producto.
+- Las ramas pueden cruzarse y juntarse en un momento determinado.
+
+1DAW - ED Ramas Rama Master Commit inicial Readme Otro commit Rama per a una nova funcionalitat
+
+1DAW - ED Ramas
+
+- En muchos proyectos, por cada funcionalidad nueva se crea una
+
+nueva rama.
+
+- Una vez se da por finalizada la funcionalidad, se integra con la rama
+
+master.
+
+- Con esto evitamos que los cambios que puedan realizarse en la rama
+
+de la nueva funcionalidad durante su desarrollo afecten a la rama principal y a su funcionamiento normal.
+
+1DAW - ED Ramas
+
+- También se utiliza para tener diferentes versiones del mismo
+
+producto en funcionamiento.
+
+- Rama 2.0, Rama 3.0, etc.
+
+1DAW - ED Ramas
+
+- Para ver qué ramas existentes en nuestro repositorio local
+
+ejecutaremos la siguiente instrucción
+
+- git branch
+- En verde aparece la rama sobre la que estamos trabajando
+
+actualmente. Esto es muy importante comprobarlo cuando tengamos varias
+
+1DAW - ED Creación de ramas
+
+- Para crear una rama nueva en nuestro repositorio local utilizaremos la
+
+instrucción
+
+- git branch nombreRamaNueva
+
+1DAW - ED Creación de ramas
+
+- La nueva rama siempre se creará a partir de la última versión que
+
+tiene en el repositorio local (último commit).
+
+- Al último commit, recordemos, también se le llama el HEAD de la
+
+rama.
+
+- Si deseáramos crear la rama desde otro commit habría que indicarle
+
+el código del commit.
+
+- git branch nombreRamaNueva versionCommit
+- git branch responsive 0b7u1su2i
+
+1DAW - ED Moverse entre ramas
+
+- Ahora que ya sabemos crear ramas, vamos a movernos entre ellas.
+- Para movernos de una rama a otra utilizaremos la instrucción git
+
+checkout
+
+- git checkout nombrerama
+- No hay que confundirlo con git checkout
+- Cuando nos movemos de rama, los commits que realizamos pasan de
+
+ir al final de la rama master a ir al final de la rama que nos hemos movido.
+
+1DAW - ED Eliminar ramas
+
+- Para eliminar una rama existente
+- git branch -d nombreRama
+- Cuando borramos una rama hemos de asegurarnos que
+- No estamos situados en la rama que queremos borrar
+- Nos podemos mover mediante git checkout nombreOtraRama
+- No existen commits pendientes de realizar en la rama que deseamos borrar.
+
+Tenemos dos opciones.
+
+- Hacemos los commits y borramos
+- Utilizamos la orden que fuerza la eliminación git branch -D nombreRama
+
+1DAW - ED Unir ramas
+
+- Llegará un momento que la rama que hemos creado puede que
+
+queramos volver a unirla con la rama master.
+
+- Porque hemos finalizado de arreglar un error.
+- Hemos finalizado de desarrollar una funcionalidad nueva.
+- Etc.
+
+1DAW - ED Unir ramas
+
+- Cuando trabajamos con ramas, lo lógico es ir “cerrando” ramas. Para ello
+
+hemos de unir la rama creada con la principal (master).
+
+- Para ver las diferencias entre una rama y otra ejecutaremos la siguiente instrucción.
+- git diff ramaNueva master
+- A estas uniones se les llama comúnmente merge ya que todas se ejecutan
+
+mediante esta instrucción.
+
+- git merge rama
+- Los merges siempre se realizan desde la rama a la cual queremos unir los
+
+cambios.
+
+1DAW - ED Unir ramas
+
+- Escenario: Tenemos la rama fixError y la rama master. Hemos finalizado con la
+
+rama fixError y queremos unirla a la rama master.
+
+- Hemos de situarnos en la rama master.
+- git checkout master
+- Desde la rama master ejecutaremos la instrucción para unir ambas ramas
+- git merge fixError
+- Una vez unida, podemos borrarla ya que los cambios de ésta ya están en la master.
+
+•
+
+```java
+git branch -d fixError
+```
+
+- Existen tres mecanismos para realizar los merges
+- Fast-Forward
+- Unión automática
+- Unión manual
+
+1DAW - ED Fast-Forward
+
+- Se realiza este tipo de merge cuando no hay ningún cambio en la
+
+rama a la que queremos unirnos y los cambios pueden ser reintegrados de forma transparente.
+
+- Cada uno de los cambios realizados en la rama que hemos unido,
+
+formará parte de la rama a la que nos hemos unido como si nunca se hubiesen separado.
+
+1DAW - ED Unión automática
+
+- Git detecta que en la rama principal hay algún cambio que la rama
+
+secundaria no tiene pero aún así realiza el merge sin conflictos.
+
+- Esto se debe a que los cambios en la rama principal y la rama
+
+secundaria no son sobre los mismos ficheros/líneas.
+
+1DAW - ED Unión manual
+
+- La unión manual se realiza cuando existen conflictos al intentar unir
+
+las dos ramas y git no puede resolverlo de forma automática.
+
+- Esto ocurre cuando modificamos las mismas líneas de los mismos
+
+ficheros, por ejemplo. Git no es capaz (y hace bien) de decidir qué versión es la correcta.
+
+1DAW - ED Unión manual
+
+- En este caso nos mostrará un error por consola.
+- Tendremos que ir a los ficheros que han dado el error y solucionar los
+
+conflictos que ha encontrado.
+
+- Una vez solucionado, se subirían los ficheros a la rama principal y el
+
+merge habría finalizado.
+
+1DAW - ED Repositorio remoto
+
+1DAW - ED Repositorio remoto
+
+- Hasta el momento, hemos estado trabajando solos y sobre un mismo
+
+PC.
+
+- Git, como ya hemos estudiado, está diseñado para trabajar de forma
+
+colaborativa con equipos de personas deslocalizadas.
+
+- También, hemos estudiado que GIT es un repositorio distribuido, y de
+
+momento solo hemos trabajado sobre un PC. Esto cambia ahora.
+
+1DAW - ED Repositorio remoto
+
+- Github es una plataforma de desarrollo colaborativo de software que
+
+permite alojar nuestros repositorios.
+
+- Usada por Apple, Google, la Nasa, Linux, Microsoft, Python, etc.
+- Gratuita con ciertas limitaciones.
+- Permite además acceder a estadísticas, wikis, etc.
+
+1DAW - ED Repositorio remoto
+
+- De forma general, tendremos un repositorio remoto por proyecto.
+- Este repositorio remoto será creado solo una vez en Github y cada
+
+uno de los desarrolladores clonará el repositorio remoto en su repositorio local (clone).
+
+- Para crear el proyecto en Github seguiremos los siguientes pasos (con
+
+la sesión ya iniciada en Github).
+
+1DAW - ED Repositorio remoto
+
+- De forma general, tendremos
+
+que buscar la opción para crear un nuevo repositorio.
+
+- Podemos definir si queremos que
+
+nuestro repositorio remoto sea público o privado.
+
+1DAW - ED Repositorio remoto
+
+- Una vez lo creamos, nos redirige a una vista donde nos ofrece
+
+información muy útil sobre como enlazar el repositorio remoto que acabamos de crear en Github. URL del repositorio remoto
+
+1DAW - ED Enlazar repositorio remoto a local
+
+- Como vemos en la captura anterior, una de las opciones más comunes es
+
+enlazar un repositorio ya existente de forma local con el repositorio remoto recién creado.
+
+- git remote add aliasRepositorioRemoto urlRepositorioRemoto
+- git remote add origin https://github.com/JuanraCollado/mirepositorioed.git
+- Hemos añadido a nuestro repositorio local el repositorio remoto recién
+
+creado. A partir de ahora, para hacer referencia a él, se hará mediante el alias asignado origin. Se usa origin al primer repositorio remoto enlazado por convención.
+
+1DAW - ED Enlazar repositorio remoto a local
+
+- Para ver los repositorios remotos enlazados a un repositorio local, hay
+
+que ejecutar la instrucción
+
+- git remote
+
+1DAW - ED Trabajando con el repositorio remoto
+
+- Con el repositorio remoto correctamente enlazado al repositorio local
+
+podemos empezar a trabajar de forma distribuida.
+
+- Para ello, vamos a ver 2 operaciones básicas
+- Pull
+- Push
+
+1DAW - ED
+
+```java
+git push
+```
+
+- Sube todos los cambios del proyecto que tenemos en nuestro
+
+repositorio local (nuestro ordenador) al repositorio remoto (Github).
+
+- git push aliasRepositorioRemoto ramaorigen:ramadestino
+- En el caso que la rama origen y destino sean las mismas, se puede omitir uno
+
+de los dos parámetros
+
+- git push origin master
+
+1DAW - ED
+
+```java
+git pull
+```
+
+- Descarga la última versión que hay del proyecto del repositorio
+
+remoto (Github) al repositorio local (nuestro ordenador).
+
+- Cuando trabajamos con repositorios remotos y de forma distribuido,
+
+es una buena práctica siempre realizar un pull antes de realizar un push.
+
+- git pull
+
+1DAW - ED Autenticar en Github por terminal
+
+- Github desactivó la autenticación por usuario y contraseña “normal”
+
+hace unos años para mejorar su seguridad.
+
+- Como consecuencia de ello, aunque estemos autorizados a hacer
+
+push y pull sobre el repositorio remoto, la seguridad del sistema nos lo impide
+
+1DAW - ED Autenticar en Github por terminal
+
+- Para solucionarlo, desde Github accederemos a la opción Settings del
+
+menú de usuario (sobre la imagen de perfil).
+
+- Posteriormente, seleccionaremos en el menú la opción Developer
+
+settings.
+
+- Finalmente, seleccionamos
+
+Personal Access Tokens -> Tokens (classic)
+
+1DAW - ED Autenticar en Github por terminal
+
+- Tan solo falta generar un nuevo token pulsando Generate new token
+
+(classic).
+
+- Marcaremos la fecha de expiración del token.
+- El token generado será nuestra contraseña para loguearse por
+
+terminal y no debemos perderla sino perderemos el acceso con ese token y será necesario generar uno nuevo.
+
+1DAW - ED Autenticar en Github por terminal
+
+- Y seleccionaremos para qué
+
+queremos que nos sirva el token (lo marcamos todo).
+
+- Y pulsamos en generar nuevo token.
+
+1DAW - ED Autenticar en Github por terminal
+
+- Copiamos el token y nos aseguramos de almacenarlo en algún lugar
+
+seguro y que no se pierda.
+
+- NO PUEDE SER CONSULTADO EN LA WEB DE GITHUB.
+- Ya podemos acceder por terminal.
+
+---
+
+# 3.2 Git Cheat Sheet
+
+```java
+GIT CHEAT SHEET
+```
+
+STAGE & SNAPSHOT Working with snapshots and the Git staging area
+
+```java
+git status
+```
+
+show modiﬁed ﬁles in working directory, staged for your next commit
+
+```java
+git add [file]
+```
+
+add a ﬁle as it looks now to your next commit (stage)
+
+```java
+git reset [file]
+```
+
+unstage a ﬁle while retaining the changes in working directory
+
+```java
+git diff
+```
+
+diﬀ of what is changed but not staged
+
+```java
+git diff --staged
+```
+
+diﬀ of what is staged but not yet committed
+
+```java
+git commit -m “[descriptive message]”
+```
+
+commit your staged content as a new commit snapshot SETUP Conﬁguring user information used across all local repositories
+
+```java
+git config --global user.name “[firstname lastname]”
+```
+
+set a name that is identiﬁable for credit when review version history
+
+```java
+git config --global user.email “[valid-email]”
+```
+
+set an email address that will be associated with each history marker
+
+```java
+git config --global color.ui auto
+```
+
+set automatic command line coloring for Git for easy reviewing SETUP & INIT Conﬁguring user information, initializing and cloning repositories
+
+```java
+git init
+```
+
+initialize an existing directory as a Git repository
+
+```java
+git clone [url]
+```
+
+retrieve an entire repository from a hosted location via URL BRANCH & MERGE Isolating work in branches, changing context, and integrating changes
+
+```java
+git branch
+```
+
+list your branches. a * will appear next to the currently active branch
+
+```java
+git branch [branch-name]
+```
+
+create a new branch at the current commit
+
+```java
+git checkout
+```
+
+switch to another branch and check it out into your working directory
+
+```java
+git merge [branch]
+```
+
+merge the speciﬁed branch’s history into the current one
+
+```java
+git log
+```
+
+show all commits in the current branch’s history
+
+```java
+Git is the free and open source distributed version control system that's responsible for everything GitHub
+```
+
+related that happens locally on your computer. This cheat sheet features the most important and commonly used Git commands for easy reference. INSTALLATION & GUIS With platform speciﬁc installers for Git, GitHub also provides the ease of staying up-to-date with the latest releases of the command line tool while providing a graphical user interface for day-to-day interaction, review, and repository synchronization.
+
+GitHub for Windows https://windows.github.com GitHub for Mac https://mac.github.com For Linux and Solaris platforms, the latest release is available on the oﬃcial Git web site.
+
+```java
+Git for All Platforms
+```
+
+http://git-scm.com
+
+education@github.com education.github.com Education Teach and learn better, together. GitHub is free for students and teach- ers. Discounts available for other educational uses. SHARE & UPDATE Retrieving updates from another repository and updating local repos
+
+```java
+git remote add [alias] [url]
+```
+
+add a git URL as an alias
+
+```java
+git fetch [alias]
+```
+
+fetch down all the branches from that Git remote
+
+```java
+git merge [alias]/[branch]
+```
+
+merge a remote branch into your current branch to bring it up to date
+
+```java
+git push [alias] [branch]
+```
+
+Transmit local branch commits to the remote repository branch
+
+```java
+git pull
+```
+
+fetch and merge any commits from the tracking remote branch TRACKING PATH CHANGES Versioning ﬁle removes and path changes
+
+```java
+git rm [file]
+```
+
+delete the ﬁle from project and stage the removal for commit
+
+```java
+git mv [existing-path] [new-path]
+```
+
+change an existing ﬁle path and stage the move
+
+```java
+git log --stat -M
+```
+
+show all commit logs with indication of any paths that moved TEMPORARY COMMITS Temporarily store modiﬁed, tracked ﬁles in order to change branches
+
+```java
+git stash
+```
+
+Save modiﬁed and staged changes
+
+```java
+git stash list
+```
+
+list stack-order of stashed ﬁle changes
+
+```java
+git stash pop
+```
+
+write working from top of stash stack
+
+```java
+git stash drop
+```
+
+discard the changes from top of stash stack REWRITE HISTORY Rewriting branches, updating commits and clearing history
+
+```java
+git rebase [branch]
+```
+
+apply any commits of current branch ahead of speciﬁed one
+
+```java
+git reset --hard [commit]
+```
+
+clear staging area, rewrite working tree from speciﬁed commit INSPECT & COMPARE Examining logs, diﬀs and object information
+
+```java
+git log
+```
+
+show the commit history for the currently active branch
+
+```java
+git log branchB..branchA
+```
+
+show the commits on branchA that are not on branchB
+
+```java
+git log --follow [file]
+```
+
+show the commits that changed ﬁle, even across renames
+
+```java
+git diff branchB...branchA
+```
+
+show the diﬀ of what is in branchA that is not in branchB
+
+```java
+git show [SHA]
+```
+
+show any object in Git in human-readable format IGNORING PATTERNS Preventing unintentional staging or commiting of ﬁles
+
+```java
+git config --global core.excludesfile [file]
+```
+
+system wide ignore pattern for all local repositories logs/ *.notes pattern*/ Save a ﬁle with desired patterns as .gitignore with either direct string matches or wildcard globs.
+
+---
+
+# 3.3 Crear alias para log con ramas
+
+```java
+git config --global alias.lgb "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches" git lgb
+```
 
 ---

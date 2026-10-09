@@ -1,858 +1,1048 @@
 ---
 layout: default
-title: "UD2 — Processador de text (II) · Temari Complet"
+title: "UD3 — Processador de text (III) · Temari Complet"
 course_root: ".."
-badge: "1r SMX · Grau Mitjà · UT3 Completa"
-prev_url: "../ut02/ut0218.html"
-prev_label: "⬅️ 1.7 curiosidades en Writer"
-next_url: "../ut03/ut0303.html"
-next_label: "2.1 Tema 7. COMBINAR CORRESPONDENCIA ➡️"
+badge: "1r SMX · Grau Mitjà · UD3 — Processador de text (III)"
+prev_url: "../ut02/ut0203.html"
+prev_label: "⬅️ 2.3 Tema 9. PLANTILLES"
+next_url: "../ut03/ut0301.html"
+next_label: "3.1 Tema 11. Index de continguts, figures i alfabèti ➡️"
 ---
 
-# 📘 UD2 — Processador de text (II) (Unitat Completa)
+# 📘 UD3 — Processador de text (III) (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 Tema 7. COMBINAR CORRESPONDENCIA**](./ut0303.md)
-- [**2.2 Exemple Combinar correspondència**](./ut0304.md)
-- [**2.3 Tema 9. PLANTILLES**](./ut0309.md)
+- [**3.1 Tema 11. Index de continguts, figures i alfabèti**](./ut0301.md)
+- [**3.2 Tema 13. Treballar amb documents llargs**](./ut0302.md)
 
 ---
 
-# 2.1 Tema 7. COMBINAR CORRESPONDENCIA
+# 3.1 Tema 11. Index de continguts, figures i alfabèti
 
-Tema 07. Combinar Correspondencia.
+### 📄 Tema11(1)_como-crear-modificar-y-actualizar-un-indice-automaticamente-en-writer-.pdf
 
-Cómo combinar correspondencia en Writer de LibreOffice
+Tema 11 (1). Como crear un índice automático en Writer Cómo crear un índice automáticamente en Writer de LibreOffice
 
-Índice
+Tema 11 (1). Como crear un índice automático en Writer Índice Creación del índice. PASOS
 
-- Abrimos Writer y redactamos la carta que enviaremos a nuestros destinatarios.
+- Creamos un nuevo estilo de párrafo para los Títulos que vamos a incluir en el índice.
 
-#### 2) Seleccionamos la base de datos de nuestros destinatarios
+#### 2) Lo registramos como “Nuevo estilo de párrafo”
 
-#### 3) Insertaremos los campos de nuestra tabla de datos (Calc) en nuestra carta
+- Creamos un nuevo estilo de párrafo para los Subtítulos que vamos a incluir en el índice
 
-#### 4) Combinamos todo y lo guardamos en un archivo (después podremos imprimirlo)
+#### 4) Lo registramos como “Nuevo estilo de párrafo”
 
-Tema 07. Combinar Correspondencia.
+- Vamos a ir asignando a los Títulos de nuestro documento el nuevo estilo de párrafo “Título 1”
 
-Cómo combinar correspondencia en Writer de LibreOffice
+creado
 
-A continuación vamos a combinar correspondencia en Writer en 4 sencillos pasos
+- Repetiremos el anterior proceso para los Subtítulos de nuestro documento, a cada Subtítulo le
 
-### 1. Abrimos Writer y redactamos la carta que
+asignaremos el nuevo estilo de párrafo “Subtítulo 1” creado
 
-enviaremos a nuestros destinatarios.
+#### 7) Insertamos el índice en nuestro documento
 
-Debemos dejar espacio para los campos de la base de datos.
+#### 8) Vamos a definir el nivel para cada estilo de párrafo creado
 
-### 2. Seleccionamos la base de datos de
+Modificación del contenido del índice Actualización del contenido del índice Modificación y actualización de los estilos de los Títulos y Subtítulos Modificación del formato del índice
 
-nuestros destinatarios. Clic sobre el menú Insertar → Campos → Otros
+Tema 11 (1). Como crear un índice automático en Writer A continuación veremos cómo crear un índice automáticamente en Writer de LibreOffice. Seguiremos estos pasos
 
-Tema 07. Combinar Correspondencia.
+#### 1) Creamos un nuevo estilo de párrafo para los Títulos que vamos a incluir en el
 
-A continuación seleccionamos la ficha “Base de datos” y después un clic sobre el botón “Examinar”.
+índice. Seleccionamos el Título “1.Introducción”. Establecemos su formato, en este ejemplo: Bookman Old Style, 14 puntos, negrita, color azul4.
 
-En el siguiente cuadro contextual seleccionamos el archivo de Calc donde tenemos la información de los destinatarios y después clic sobre el botón “Abrir”.
+- Lo guardamos como “Nuevo estilo de párrafo”.
 
-Seguidamente haremos un clic sobre los símbolos “+” destacados.
+Primero desplegamos, en la parte superior, el botón de "estilo" de la barra de herramientas de formato y haremos un clic sobre el último apartado de "Más". A continuación, en la parte superior derecha emergerá un cuadro contextual. Desplegaremos el botón situado en la esquina superior derecha, después otro clic en el apartado "Estilo nuevo a partir de selección". Partiendo del Estilo predeterminado.
 
-Tema 07. Combinar Correspondencia.
+Tema 11 (1). Como crear un índice automático en Writer En el siguiente cuadro contextual que emerge asignaremos un nombre al nuevo estilo de párrafo creado, en este caso "Título1" (sin espacios), después clic sobre el botón "Aceptar". Observaremos que dicho estilo se incorporó al final de nuestra lista.
 
-### 3. Insertaremos los campos de nuestra tabla
+#### 3) Creamos un nuevo estilo de párrafo para los Subtítulos que vamos a incluir en el
 
-de datos (Calc) en nuestra carta. Primero seleccionamos la ubicación del campo en la carta, en este ejemplo seleccionamos donde irá el “Nombre” del alumno.
+índice. Nos situamos en la segunda página y seleccionamos el primer Subtítulo "1.1 Interpretación de los resultados". Establecemos su formato, en este ejemplo: Arial, 14 puntos, negrita, color rojo.
 
-Y después insertamos el campo de la hoja Calc, mediante doble clic izquierdo sobre el apartado correspondiente.
+- Lo guardamos como “Nuevo estilo de párrafo”.
 
-Repetimos la anterior operación para todos los campos…
+Utilizaremos el cuadro contextual del panel derecho. Desplegaremos el botón situado en la esquina superior derecha, después otro clic en el apartado "Estilo nuevo a partir de selección".
 
-Una vez que tengamos todos los campos insertados.
+Tema 11 (1). Como crear un índice automático en Writer En el siguiente cuadro contextual que emerge asignaremos un nombre al nuevo estilo de párrafo creado, en este caso "Subtítulo1" (sin espacios), después clic sobre el botón "Aceptar". Ya tenemos registrados los nuevos estilos de párrafo para los Títulos y Subtítulos.
 
-Tema 07. Combinar Correspondencia.
+#### 5) Vamos a ir asignando a los Títulos de nuestro documento el nuevo estilo de
 
-Cerraremos el cuadro contextual mediante un clic izquierdo sobre el aspa destacada.
+párrafo “Título 1” creado. Seleccionamos el siguiente Título del documento (2.Material y métodos). Después desplegamos en el botón de "Estilos" y le asignamos el "Título1". Haremos lo mismo para todos los Títulos del documento (son los que llevan delante un número)
 
-### 4. Combinamos todo y lo guardamos en un
+### 2. Material y métodos
 
-archivo (después podremos imprimirlo)
+### 3. Resultados
 
-Clic en Archivo → Imprimir.
+### 4. Análisis de las dimensiones
 
-En el siguiente cuadro contextual haremos un clic sobre el botón “Sí”
+- Reconocimiento profesional….
 
-Tema 07. Combinar Correspondencia.
+Tema 11 (1). Como crear un índice automático en Writer
 
-En el siguiente cuadro contextual seleccionaremos la opción de “Archivo”, después lo guardaremos todo en un documento “Guardar como un documento” y para finalizar clic sobre el botón “Aceptar”.
+#### 6) Repetiremos el anterior proceso para los Subtítulos de nuestro documento, a
 
-Después le damos un nombre al archivo y clic sobre el botón “Guardar”.
+cada Subtítulo le asignaremos el nuevo estilo de párrafo “Subtítulo 1” creado. A continuación seleccionamos el siguiente Subtítulo del documento (4.1 La organización) Después desplegamos en el botón de "Estilos" y le asignamos el "Subtítulo1". Haremos lo mismo para todos los Subtítulos del documento (son los que llevan delante dos números)
+
+Tema 11 (1). Como crear un índice automático en Writer
+
+- Insertamos el índice en nuestro documento.
+
+Primero haremos un clic en la primera línea de la página 1. Seguidamente clic sobre el menú "Insertar" y después escogemos "Índices y tablas-> Índices" A continuación haremos lo siguiente: 1º) Clic en la casilla de "Estilos adicionales". 2º) Otro clic en el botón "..."
+
+Tema 11 (1). Como crear un índice automático en Writer
+
+- Vamos a definir el nivel para cada estilo de párrafo creado.
+
+El nivel determinará la posición en el índice de los Títulos y Subtítulos. A mayor nivel mayor será la sangría (distancia desde el margen) En este ejemplo asignaremos el nivel 1 al Título 1 y el nivel 2 al Subtítulo 1. En la zona inferior del siguiente cuadro contextual
+
+1º) Clic sobre "Título1" y después 2º) Otro clic sobre el botón ">I" De esta manera establecemos la posición del "Título 1" en el nivel 1 del índice. En este caso comprobaremos que el "Título 1" se encuentra en la vertical del "Nivel 1".
+
+Tema 11 (1). Como crear un índice automático en Writer Continuamos y en la zona inferior del cuadro contextual: 1º) Clic sobre "Subtítulo 1" y después 2º) Dos clics sobre el botón ">I" La asignación de niveles quedará de esta manera, para finalizar clic sobre el botón "Aceptar" En el siguiente cuadro contextual haremos clic en el botón "Aceptar".
+
+Tema 11 (1). Como crear un índice automático en Writer Aquí tenemos el índice: Modificación del contenido del índice El índice, por defecto, está protegido contra modificaciones manuales. Por lo tanto, si quisiéramos modificar su texto haremos lo siguiente: 1º) Clic derecho sobre el índice, después clic izquierdo sobre el apartado "Editar índice/tabla".
+
+2º) Clic sobre la casilla de "Protegido contra cambios manuales". Finalmente clic sobre el botón "Aceptar".
+
+Tema 11 (1). Como crear un índice automático en Writer Ahora ya podremos hacer cambios sobre el texto del índice. Actualización del contenido del índice Si hubiéramos modificado el texto o posición de los Títulos o Subtítulos de nuestro documento podríamos incorporar, posteriormente, dichos cambios sobre el índice automáticamente.
+
+Para actualizar dichos cambios, simplemente haremos un clic derecho sobre el índice. A continuación, clic izquierdo sobre el apartado "Actualizar índice/tabla". Observaremos que todos los cambios se incorporarán al índice automáticamente. Modificación y actualización de los estilos de los Títulos y Subtítulos Podremos modificar el formato de los estilos de párrafo que hemos creado y asignar, automáticamente, dicha modificación a todos los Títulos y Subtítulos de nuestro documento.
+
+1º) Seleccionamos un Título cualquiera de nuestro documento y hacemos sobre el mismo las modificaciones oportunas. En este caso, modificamos el tipo de letra (Times New Roman), tamaño (16 ptos), color (verde),etc. → 2º) Desplegaremos el botón situado en la esquina superior derecha del cuadro de "Estilos y formato", después otro clic en el apartado "Actualizar estilo".
+
+Comprobaremos que todos los Títulos se modificaron con el nuevo estilo.
+
+Tema 11 (1). Como crear un índice automático en Writer Modificación del formato del índice Cada nivel del índice que hemos insertado tiene un formato predeterminado, debido a que tiene asignado un estilo de párrafo. En este ejemplo, el Nivel 1 tiene el estilo de párrafo “Índice 1”, el Nivel 2 el “Índice 2” y el encabezado del índice “Encabezado del índice”.
+
+Por lo tanto, dichos estilos de párrafo también son modificables y seguiremos, para ello, estos pasos: Clic derecho sobre el Título (1.Introducción) del índice, que tiene un Nivel 1 y un estilo de párrafo “Índice 1”, después sobre el cuadro contextual que emerge, clic izquierdo sobre el apartado de “Editar estilo de párrafo”.
+
+A continuación, observaremos que en el apartado “Contiene” de la ficha “Organizador” se muestra una descripción del formato del estilo de párrafo. En este ejemplo, el tabulador está colocado a 17 centímetros y la sangría derecha e izquierda es de 0 cm. Antes de empezar a realizar los cambios haremos un clic sobre la casilla de verificación de “Actualizar cambios”. Después podríamos ir modificando todas las características del estilo de párrafo: sangrías y espaciado, alineación, flujo del texto, etc.
+
+Tema 11 (1). Como crear un índice automático en Writer Para finalizar, un clic sobre “Aplicar” y otro sobre “Aceptar”, en la parte inferior del cuadro contextual. Aquí tenemos las modificaciones realizadas sobre el estilo de párrafo de “Índice 1”. Para asignar otros estilos de párrafo sobre los niveles del índice haríamos lo siguiente
+
+Clic derecho sobre el índice, después sobre el cuadro contextual que emerge, clic izquierdo en el apartado de “Editar índice/tabla”. A continuación, seleccionamos la ficha “Estilos” y observamos los estilos de párrafos asignados a los niveles del índice y a su encabezado.
+
+Tema 11 (1). Como crear un índice automático en Writer Para cambiar los estilos de párrafos asignados a los niveles del índice, seguiremos estos pasos: 1º) Seleccionamos un estilo de párrafo. 2º) Escogemos el nivel al que se lo asignaremos. 3º) Clic sobre la flecha.
+
+En la siguiente página, observamos que el estilo de párrafo “Título 1” aparece junto al “Nivel 1” y el cuadro de la izquierda nos previsualiza el resultado final. Para finalizar clic sobre el botón “Aceptar” Aquí tenemos el cambio de estilo para el Nivel1
+
+### 📄 Tema11(2)_como-crear-un-indice-de-todas-las-tablas-e-imagenes-del-documento-en-writer.pdf
+
+Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. Cómo crear un índice de las tablas e imágenes de nuestro documento en Writer
+
+Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. Índice
+
+- Vamos a automatizar la inserción de la etiqueta sobre todas las tablas, imágenes de archivo que
+
+vayamos insertando
+
+- Insertamos sobre nuestro documento las tablas, imágenes de archivo o de la galería de Writer
+
+#### 3) Insertamos el índice en nuestro documento
+
+Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. A continuación veremos cómo crear un índice de las tablas e imágenes de nuestro documento en Writer. Lo haremos en 3 sencillos pasos
+
+#### 1) Vamos a automatizar la inserción de la etiqueta sobre todas las tablas,
+
+imágenes de archivo que vayamos insertando. Seguiremos este procedimiento
+
+- Insertamos una imagen y después la seleccionamos.
+
+### 2. Insertamos la etiqueta, podemos hacerlo de varias formas
+
+ Ejecutamos el menú “Insertar -> Leyenda”  Mediante un clic derecho sobre el objeto y después un clic izquierdo sobre el apartado “Pie” ó “Insertar Leyenda”.
+
+### 3. Una vez que estamos en el cuadro de diálogo “Insertar Leyenda”, haremos un clic
+
+sobre el botón “Auto…” ó “Automatico”.
+
+Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento.
+
+### 4. En el siguiente cuadro contextual haremos lo siguiente
+
+1.- un clic sobre la casilla “Imagen de LibreOffice Writer” y otro sobre “Tabla de LibreOffice Writer”. 2.- podríamos cambiar el orden del pie (numeración delante de la categoría). 3.- Finalmente, clic sobre el botón “Aceptar”.
+
+Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento.
+
+#### 2) Insertamos sobre nuestro documento las tablas, imágenes de archivo o de la
+
+galería de Writer A partir de ese momento, cuando insertemos una ilustración o una tabla aparecerá la etiqueta correspondiente debajo (con la numeración consecutiva).
+
+Primero nos situamos en la primera página en blanco de nuestro documento (es donde se ubicará normalmente el índice personalizado). Seguidamente clic sobre el menú "Insertar" y después escogemos "Índices y tablas -> Índices…"
+
+> **⚠️ Nota: en el apartado título podremos modificar el títul...**
+> Nota: en el apartado título podremos modificar el título del índice, en este caso “Indice de tablas e imágenes” Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. En la parte derecha del siguiente cuadro contextual haremos lo siguiente
+
+1. Clic sobre la pestaña “Indice/tabla” 2. En el desplegable “Tipo” seleccionaremos “Definido por el usuario”. 3. Clic sobre las casillas de “Tablas” e “Imagen”. 4. Finalmente, clic sobre el botón “Aceptar”. Aquí tenemos el índice de las tablas e imágenes de nuestro documento
 
 ---
 
-# 2.2 Exemple Combinar correspondència
+# 3.2 Tema 13. Treballar amb documents llargs
 
-### 📄 Carta_Notes_1.odt
+### 📄 Writer-trabajo-documentos-largos.pdf
 
-CERTIFICAT DE NOTES
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-A l’atenció de <Nombre padre/madre>,
+Trabajar con documentos largos en LibreOffice Writer
 
-pare de l’alumne <ALUMNO>
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-<Dirección>
+Trabajo con documentos largos en LibreOffice Writer
 
-<CP>- <Poblacion>
+Cuando elaboramos largos informes o memorias, nuestros documentos deben dotarse de una estructura que haga cómodo su seguimiento. Ya sabemos que podemos -y debemos- utilizar estilos de Título para ello. Pero además, Writer nos proporciona un conjunto de herramientas que nos facilitarán esta tarea. Gracias a estas herramientas podremos alterar con mucha facilidad el esquema de nuestros documentos, los títulos podrán ser numerados y crearemos sumarios y tablas de toda clase de contenido. A su dominio dedicamos la presente unidad didáctica.
 
-L’alumne <ALUMNO>, té les següents notes
+Uso del Navegador
 
-APLICACIONS OFIMÀTIQUES:<Aplicaciones Ofimácas>
+El Navegador es una herramienta exclusiva de LibreOffice que nos permitirá acceder a los diferentes elementos incluidos en un documento, así como navegar por él con toda comodidad. El Navegador permitirá modificar el esquema del documento, acceder a títulos de cualquier nivel, seleccionar imágenes, objetos incrustados o hiperenlaces entre otros muchos elementos. Su uso en documentos largos y estructurados resultará insustituible.
 
-REDES<Redes>
+Podemos iniciar el Navegador de diferentes maneras
 
-TALLER<Taller>
+- Desde el menú Ver > Navegador .
+- Con la tecla de función F5 .
+- Desde el botón Navegador de la barra de herramientas Estándar.
+- Desde el botón Navegador de la barra de herramientas lateral.
 
-SOM<SOM>
+En el último caso, el Navegador se abrirá en el panel lateral. En todos los demás se abrirá en forma de ventana flotante sobre el documento, que puede ser acoplada a cualquier lado.
 
-FOL<FOL>
+La ventana del Navegador
 
-### 📄 Carta_Notes.odt
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-CERTIFICAT DE NOTES
+El Navegador está formado por una barra de herramientas propia y una lista donde aparecen las siguientes categorías de objetos contenidos en los documentos
 
-A l’atenció de NOM PARE/MARE,
+- Títulos. Los diferentes títulos del documento, agrupados y sangrados según su nivel, dicho de otra manera, el
 
-pare de l’alumne NOM ALUMNE
+esquema del documento.
 
-DIRECCIÓ
+- Tablas. Las tablas son estructuras de texto organizadas en filas y columnas.
+- Marcos de texto. Cuadros con texto en su interior que pueden ser tratados como un objeto gráfico.
+- Imágenes. Imágenes insertadas en el documento.
+- Objetos OLE. Elementos como hojas de cálculo, fórmulas, y, en general, objetos de cualquier programa que admita
 
-CP- POBLACIÓ
+la tecnología OLE (Object Linking and Embedding - Objetos vinculados e incrustados)
 
-L’alumne NOM ALUMNE, té les següents notes
+- Marcadores. Puntos del texto con un nombre que se crean para ser referenciados desde otro lugar del documento.
+- Secciones. Divisiones estructurales del documento que permiten aplicar determinados atributos a partes del
 
-APLICACIONS OFIMÀTIQUES:NOTA_OFI
+documento, como la organización en columnas periodísticas o protección, entre otros. Hiperenlaces. Vínculos a sitios web, otros documentos, títulos o marcadores.
 
-REDESNOTA_REDES
+- Referencias. Textos del documento que apuntan a algún Marcador.
+- Índices. Tablas de contenído que pueden ser de tipos muy variados: sumarios, alfabéticos o de ilustraciones entre
 
-TALLERNOTA_TALLER
+otros.
 
-SOMNOTA_SOM
+- Comentarios. Anotaciones creadas para revisiones del documento o establecer recordatorios.
+- Objetos de dibujo. Elementos de dibujo insertados en el documento.
 
-FOLNOTA_FOL
+Para explorar el contenido de una categoría, delante del nombre de la misma hay un símbolo que alterna entre + (más) para expandir el contenido y - (menos) para contraerlo. Los títulos de diferentes niveles también muestran los mismos símbolos para expandir o contraer los títulos de nivel inferior.
 
-### 📄 Carta_Notes.pdf
+Tanto las categorías como las entradas de cada categoría poseen un menú contextual que podemos activar haciendo clic con el botón secundario del ratón. Al situar el ratón sobre una categoría, una etiqueta emergente muestra el número de elementos que contiene. El desplegable de la parte inferior de la ventana permite alternar entre los diferentes documentos abiertos.
 
-CERTIFICAT DE NOTES
+Para desplazarse por el documento usando el Navegador
 
-A l’atenció de NOM PARE/MARE, pare de l’alumne NOM ALUMNE
+- Para acceder a un elemento de una categoría, haremos doble clic sobre su nombre.
+- Para acceder a un número de página escribiremos el número en el cuadro de la barra superior y pulsaremos INTRO
+- Los botones de incremento y decremento del cuadro con el número de página permitirán avanzar y retroceder
 
-DIRECCIÓ CP- POBLACIÓ
+páginas.
 
-L’alumne NOM ALUMNE, té les següents notes
+- También podamos activar la barra de herramientas de Navegación.
 
-APLICACIONS OFIMÀTIQUES: NOTA_OFI
+La barra de herramientas de Navegación se activa pulsando el botón Navegación, el primer botón que se muestra en la barra del Navegador.
 
-REDES
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-NOTA_REDES
+La barra de herramientas de Navegación
 
-TALLER
+La barra de herramientas Navegación permite seleccionar entre diferentes tipos de elementos, de tal manera que pulsando luego los botones Anterior o Siguiente, de la propia barra o del Navegador se recorrerán las diferentes apariciones de este tipo de elemento dentro del documento. De forma predeterminada, está activado Página.
 
-NOTA_TALLER
+En el próximo apartado comprobamos como se puede usar el navegador para modificar el esquema del documento.
 
-SOM
+Editar el esquema del documento
 
-NOTA_SOM
+El Navegador permite reorganizar fácilmente la estructura jerárquica de los capítulos y apartados del documento.
 
-FOL
+Para ello hace uso de cuatro botones situados en la barra de herramientas superior de la ventana. En el momento de redactar estos contenidos, el programa adolece de un defecto de traducción que hace que sus nombres se muestren en inglés.
 
-NOTA_FOL
+Botones para reorganizar esquema del documento
 
-### 📄 Carta_Notes_Combinada.pdf
+Recuerda que los iconos mostrados pueden mostrar una apariencia diferente según el conjunto de iconos que hayas establecido desde Herramientas > Opciones > LibreOffice > Ver . Para que se muestren habilitados, es necesario tener seleccionado en el Navegador un título determinado del esquema.
 
-CERTIFICAT DE NOTES A l’atenció de Maria, pare de l’alumne CASTILLO SÁEZ, JUAN RAMÓN c/alicante n 10
+Entonces su comportamiento es como sigue
 
-#### 46789- POBLACION 1
+- Promete chapter (promover capítulo; subir capítulo). Asciende una posición el título seleccionado en el navegador,
 
-L’alumne CASTILLO SÁEZ, JUAN RAMÓN, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+junto con todos sus subniveles.
 
-CERTIFICAT DE NOTES A l’atenció de Luis, pare de l’alumne LÓPEZ VERA, JOSE c/madrid n23 3 piso
+- Demote chapter (degradar capítulo; bajar capítulo) . Desciende una posición el título seleccionado en el navegador,
 
-#### 46789- POBLACION 2
+junto con todos sus subniveles.
 
-L’alumne LÓPEZ VERA, JOSE, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+- Promete level (promover nivel; subir nivel) . Asciende el nivel dentro del esquema del título seleccionado junto con
 
-CERTIFICAT DE NOTES A l’atenció de Alejando, pare de l’alumne DOMEC SÁNCHEZ, JAIME c/la vall n 41
+todos sus subniveles. Automáticamente, se aplicará a todos los títulos el estilo de título adecuado. Por ejemplo, al aplicarlo sobre un Título 2, del cual depende un Título 3, el Título 2 pasará a ser un Título 1 y el Título 3 pasará a ser un Título 2.
 
-#### 46552- POBLACION 3
+- Demote level (degradar nivel; bajar nivel) . Degrada el nivel dentro del esquema del título seleccionado junto con
 
-L’alumne DOMEC SÁNCHEZ, JAIME, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+todos sus subniveles.
 
-CERTIFICAT DE NOTES A l’atenció de Antonio, pare de l’alumne FERNÁNDEZ RUIZ, PEDRO c/valencia n21
+Si el título que deseas promover no tiene subtítulos, basta con cambiar el estilo de título al nivel deseado. Hacerlo con el Navegador resulta notablemente más productivo cuando el título tiene uno o más subtítulos, es decir, si tienes un Título 2 del cual dependen varios Título
 
-#### 46521- POBLACION 4
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-L’alumne FERNÁNDEZ RUIZ, PEDRO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+Numeración de capítulos
 
-CERTIFICAT DE NOTES A l’atenció de Ramon, pare de l’alumne GÓMEZ BLAZQUEZ, ANTONIO parque salvador s 56
+En informes y memorias es habitual numerar los diferentes apartados que los componen. Para ello quizás tengamos la tentación de hacerlo desde las opciones de numeración y viñetas, pero éstas están orientadas a numerar listas de párrafos consecutivos, e intentar aplicarlas a los títulos y encabezados del contenido puede ser un quebradero de cabeza.
 
-#### 46852- POBLACION 5
+La forma adecuada de resolver esta necesidad es mediante el diálogo de Numeración de capítulos que se abre desde Herramientas > Numeración de capítulos. Este diálogo nos permitirá asignar numeraciones a los distintos niveles de título del documento.
 
-L’alumne GÓMEZ BLAZQUEZ, ANTONIO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+Haciéndolo así nos podremos despreocupar de mantener la numeración pues el propio Writer se ocupará de hacerlo automáticamente a medida que añadimos o eliminamos encabezados en nuestro documento.
 
-CERTIFICAT DE NOTES A l’atenció de Patricia, pare de l’alumne JIMÉNEZ MENDEZ, EVA c/alicante n 10
+Cuadro de diálogo Numeración de capítulos
 
-#### 46855- POBLACION 6
+La pestaña Numeración del diálogo de Numeración de capítulos muestra una lista de los niveles del esquema, una serie de propiedades para cada uno de ellos y una vista previa del resultado que se obtendrá.
 
-L’alumne JIMÉNEZ MENDEZ, EVA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+Mediante este diálogo podemos asignar a cada nivel del esquema de documento un estilo de párrafo (por defecto, Encabezado 1 a Encabezado 10 (ó Titulo 1 a Titulo 10), aunque podemos elegir cualquier otro). Para cada nivel, asignaremos una serie de propiedades que nos permitirá personalizar la forma en que se mostrará este encabezado.
 
-CERTIFICAT DE NOTES A l’atenció de Eva, pare de l’alumne LIS SANZ, BLANCA c/vega n67
+Tras seleccionar el nivel desado en la lista Nivel, las diferentes propiedades que podemos asignar son
 
-#### 46856- POBLACION 7
+- Estilo de párrafo: Seleccionaremos el estilo de párrafo asignado al nivel, por defecto Título 1 para el Nivel 1, Título
 
-L’alumne LIS SANZ, BLANCA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+2 para el Nivel 2, y así sucesivamente.
 
-CERTIFICAT DE NOTES A l’atenció de Luis, pare de l’alumne JUÁREZ GIL, PATRICIA c/roble n 44
+- Número: Escogeremos el estilo de numeración deseado: números árabes, romanos, letras o Ninguna si no
 
-#### 46740- POBLACION 8
+deseamos que se muestre ninguna numeración. Aquí no hay disponibles viñetas, tan sólo estilos de numeración.
 
-L’alumne JUÁREZ GIL, PATRICIA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+- Estilo de carácter: Por defecto, la numeración se muestra con el formato de texto correspondiente al estilo del
 
-CERTIFICAT DE NOTES A l’atenció de Alejandro, pare de l’alumne LAX HERMIDA, CARLOS c/velazquez n77
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-#### 46899- POBLACION 9
+párrafo seleccionado. Si deseamos que el número se muestre con una tipografía, tamaño, color o efecto diferente, necesitaremos asignar un estilo de carácter configurado con estas características.
 
-L’alumne LAX HERMIDA, CARLOS, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+- Mostrar subniveles: Para niveles posteriores al primero, podemos escoger cuántos subniveles se mostrarán en el
 
-CERTIFICAT DE NOTES A l’atenció de Jorge, pare de l’alumne LUCAS SEGURA, JORGE c/goya n 11
+número. Por ejemplo, si en el nivel 3 asignamos 3 subniveles, se mostrará el número de cada encabezado como 1.1.1., 2.1.2, etc.
 
-#### 46988- POBLACION 10
+- Separador: Opcionalmente se puede añadir un separador Antes y Después del número, esto nos permitirá que la
 
-L’alumne LUCAS SEGURA, JORGE, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+numeración aparezca como (1), -1-, #1 o el estilo deseado.
 
-CERTIFICAT DE NOTES A l’atenció de Carlos, pare de l’alumne LLUC CABALLERO, PABLO c/picaso n88
+- Iniciar en: El número desde el cual se comenzará a numerar. Si la numeración está establecida como números
 
-#### 46855- POBLACION 11
+arábicos, se puede comenzar a numerar desde el 0, en cualquier otro caso, desde el 1. • Si deseamos asignar las mismas propiedades a todos los niveles en la lista Nivel podemos seleccionar 1- 10.
 
-L’alumne LLUC CABALLERO, PABLO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+Ejemplo numeración de capítulos
 
-CERTIFICAT DE NOTES A l’atenció de Pedro, pare de l’alumne PARDO SANZ, ANTONIO c/calvario n 21
+En el ejemplo que se muestra se ha configurado la numeración con las siguientes propiedades
 
-#### 46899- POBLACION 12
+Nivel 1
 
-L’alumne PARDO SANZ, ANTONIO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+Número: 1, 2, 3...
 
-CERTIFICAT DE NOTES A l’atenció de Maria, pare de l’alumne RODRÍGUEZ SÁEZ, GLORIA c/murillo n 77
+Separador Después: punto
 
-#### 46001- POBLACION 13
+Iniciar en: 0
 
-L’alumne RODRÍGUEZ SÁEZ, GLORIA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
+Nivel 2
 
-### 📄 Carta_Notes_Combinada.odt
+Número: 1, 2, 3...
 
-CERTIFICAT DE NOTES
+Mostrar subniveles: 2
 
-A l’atenció de Maria,
+Separador Despés: punto Mediante la pestaña Posición del diálogo, podemos personalizar diferentes propiedades de espaciado y ubicación de los números de página asignados.
 
-pare de l’alumne CASTILLO SÁEZ, JUAN RAMÓN
+Creación de índices y tablas de contenido
 
-c/alicante n 10
+Es habitual vernos en la necesidad de elaborar documentos largos y estructurados con diferentes capítulos y apartados como memorias, informes o propuestas de proyectos. En esos casos, resulta casi imprescindible crear un índice que nos indique en qué pagina encontraremos cada uno de los apartados del documento.
 
-L’alumne CASTILLO SÁEZ, JUAN RAMÓN, té les següents notes
+Writer incorpora potentes herramientas para insertar Índices y sumarios (tablas de contenido) en nuestros documentos.
 
-APLICACIONS OFIMÀTIQUES:7
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-REDES7
+Para poder utilizar estas herramientas y crear los índices es necesario crear el documento utilizando estilos, y para las distintas tablas de contenido, agregar títulos a las tablas o a las imágenes, o insertar citas bibliográficas, o insertar manualmente entradas al índice.
 
-TALLER5
+Si se prepara el documento adecuadamente, insertar índices o tablas de contenidos serán sólo unos pocos clics.
 
-SOM4
+Para poder insertar índices de contenido debemos estructurar previamente los capítulos y apartados del documento aplicando donde corresponda los estilos de párrafo predefinidos y denominados Título 1 al Título 10.
 
-FOL8
+¿Qué significa estructurar previamente los capítulos y apartados? Significa que el documento al que queremos agregar un índice de contenido debe está organizado con cierta jerarquía (sección, tema, capítulo, apartado, etc), y que los títulos de éstos elementos (título del capítulo, título del apartado) deben tener asignado un estilo de párrafo, que puede ser, o bien uno entre los denominados Título 1 al Título 10.
 
-CERTIFICAT DE NOTES
+Insertar sumarios y tablas de contenido
 
-A l’atenció de Luis,
+Los índices y tablas de contenido se pueden insertar en cualquier momento en el documento. Generalmente se insertar al principio o final del documento, aunque también se pueden situar en cualquier otro lugar. Writer permite, además, insertar índices y tablas de contenido específicas para cada capítulo.
 
-pare de l’alumne LÓPEZ VERA, JOSE
+El procedimiento es sencillo. Situados en la página en donde queremos insertar el índice o la tabla de contenido, abrimos el menú Insertar > Sumario e Índice > Sumario, índice o bibliografía (en versiones anteriores estas opciones del menú Insertar pueden denominarse Índices y tablas > Índices ).
 
-c/madrid n23 3 piso
+El diálogo presentado es el siguiente
 
-L’alumne LÓPEZ VERA, JOSE, té les següents notes
+Cuadro de diálogo Sumario, índice o bibliografía
 
-APLICACIONS OFIMÀTIQUES:7
+Podremos observar a la izquierda del diálogo una miniatura representativa en tiempo real del tipo de índice seleccionado y de las opciones aplicadas. Si no se muestra, activa la casilla Previsualización que aparece a la derecha del botón Ayuda.
 
-REDES3
+A la derecha del diálogo se presenta un selector de pestañas, en el que se encuentran todas las opciones que podremos aplicar a nuestros índices y tablas de contenido. Estas opciones cambiarán según el tipo de índice que deseamos crear, indicado en el desplegable Tipo de la pestaña Índice.
 
-TALLER9
+Mostraremos como podemos utilizar las opciones de esta pestaña.
 
-SOM8
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-FOL7
+10/22
 
-CERTIFICAT DE NOTES
+Propiedades de sumarios o tablas de contenido
 
-A l’atenció de Alejando,
+Describimos aquellas propiedades específicas que podemos definir en el cuadro de diálogo Sumario, índice o bibliografía para insertar un Índice de contenido. En Writer, todos los índices y tablas de contenido tienen en común las siguientes propiedades, que podemos definir antes de insertarlos en el documento
 
-pare de l’alumne DOMEC SÁNCHEZ, JAIME
+- Desde el cuadro Título establecemos el índice o tabla de contenido que estamos creando.
+- Desde el desplegable Tipo seleccionaremos entre los diferentes tipos de índices que podemos crear. El más habitual
 
-c/la vall n 41
+es el Sumario (en otras versiones también denominado Índice de contenido o Tabla de contenido), pero también podemos crear índices alfabéticos , de figuras (ilustraciones) y de tablas, entre otros. En función del tipo seleccionado, podremos completar diferentes opciones para obtener el índice o tabla de contenido deseado.
 
-L’alumne DOMEC SÁNCHEZ, JAIME, té les següents notes
+- Activando Protegido contra cambios manuales evitaremos que se cambie el contenido del índice de forma manual.
 
-APLICACIONS OFIMÀTIQUES:8
+En cualquier caso, los cambios manuales efectuados se pierden si decidimos actualizarlo.
 
-REDES8
+- Todos los tipos de índice (con la única excepción del tipo Bibliografía) podemos insertarlos como índice para todo el
 
-TALLER8
+documento o como índice para cada capítulo del mismo. En el área Crear un índice o un sumario podemos definir uno u otro seleccionando la opción adecuada en el desplegable Para.
 
-SOM8
+- Una característica que sólo se aplica al Sumario es la de definir el número máximo de niveles que lo formarán. Si
 
-FOL6
+sólo queremos incluir en el índice los niveles 1 y 2 (aquellos títulos marcados con el estilo Título 1 o Título 2, o según la jerarquía de nuestros propios estilos) desde Evaluar hasta el nivel seleccionaremos el límite de niveles a incluir.
 
-CERTIFICAT DE NOTES
+- En el área Crear a partir de podemos definir de qué estilos se leerá la información para crear el índice.
 
-A l’atenció de Antonio,
+• Si seleccionamos Esquema se añaden al índice los estilos de Título predefinidos (Título 1- 10), o los que se hayan establecido en la Numeración de capítulos. • Si marcamos Estilos adicionales, pulsando sobre el botón Asignar estilos a su derecha se presentará el diálogo Asignar estilos que permitirá seleccionar un estilo y con los botones que apuntan a la izquierda o a la derecha integrarlos en el índice seleccionando su jerarquía.
 
-pare de l’alumne FERNÁNDEZ RUIZ, PEDRO
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-c/valencia n21
+14/22
 
-L’alumne FERNÁNDEZ RUIZ, PEDRO, té les següents notes
+Cuadro de diálogo Asignar estilos
 
-APLICACIONS OFIMÀTIQUES:9
+- Activando Marcas de índice se incluirán en éste las entradas que que se hayan insertado manualmente desde el
 
-REDES4
+menú Insertar > Sumario e índice > Entrada de índice . Pulsando sobre el botón Aceptar, el índice de contenido será insertado inmediatamente en el documento. Más adelante comprobaremos otras opciones avanzadas para personalizar su diseño.
 
-TALLER6
+Actualizar índices
 
-SOM6
+Es muy habitual que después de haber insertado un índice, diferentes modificaciones en el documento añadan nuevos capítulos, o que éstos cambien de página. En esas circunstancias se hace necesario actualizar el índice.
 
-FOL6
+Para ello basta con activar el menú contextual del índice y seleccionar la opción Actualizar índice. Todas las modificaciones realizadas sobre el documento y que afecten al índice serán actualizadas y reflejadas inmediatamente.
 
-CERTIFICAT DE NOTES
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-A l’atenció de Ramon,
+15/22
 
-pare de l’alumne GÓMEZ BLAZQUEZ, ANTONIO
+Actualizar, editar o eliminar índices desde el menú contextual
 
-parque salvador s 56
+Si lo prefieres, también puedes activar esta opción desde el menú Herramientas > Actualizar > Índice actual. El índice sobre el que previamente hiciste clic se actualizará inmediatamente. Si has agregado varios índices a tu documento, puedes actualizarlos todos con una sola orden. La encontrarás en el menú Herramientas > Actualizar > Índices y sumarios , en cuyo caso actualizará todos los índices del documento, o Herramientas > Actualizar > Índice actual .
 
-L’alumne GÓMEZ BLAZQUEZ, ANTONIO, té les següents notes
+Editar las propiedades de un índice
 
-APLICACIONS OFIMÀTIQUES:4
+Una vez insertado el índice, podemos de nuevo editar sus propiedades y de esta forma modificar su formato o comportamiento. Desde el menú contextual del índice seleccionaremos Editar índice.
 
-REDES6
+Se mostrará nuevamente el cuadro de diálogo Sumario, índice o bibliografía y podremos cambiar los valores que anteriormente definimos.
 
-TALLER9
+Eliminar un índice o tabla de contenido
 
-SOM6
+debemos poner el máximo interés en que los mismos sean accesibles para cualquier persona, independientemente de su capacidad visual. La creación de sumarios de contenido del documento hará nuestros documentos más accesibles y permitirá facilitar la navegación para los lectores de pantalla usados por personas con discapacidad visual.
 
-FOL9
+¡RECUERDA! Crea siempre un sumario o índice de contenido para que tus documentos sean accesibles.
 
-CERTIFICAT DE NOTES
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-A l’atenció de Patricia,
+16/22
 
-pare de l’alumne JIMÉNEZ MENDEZ, EVA
+Y para poder crear un sumario, es imprescindible el correcto uso de estilos de título. Te recordamos los criterios a seguir en la aplicación de estilos de título. Dada la facilidad de caer en cierta confusión en relación a su uso aclaramos el sentido de algunos de estos estilos
 
-c/alicante n 10
+- Título: Es el "padre" de todos los estilos de título. Está basado en el Estilo predeterminado, pero generalmente
 
-L’alumne JIMÉNEZ MENDEZ, EVA, té les següents notes
+con un tipo de letra y espaciado diferente. Si queremos modificar algún atributo para todos los títulos, será más práctico modificar este estilo. Los diferentes estilos de título heredarán los cambios.
 
-APLICACIONS OFIMÀTIQUES:8
+- Titular: Sería aplicable para el título general del documento. Aplicable para un encabezamiento o portada del
 
-REDES6
+documento. Por defecto define un tipo de letra especialmente grande.
 
-TALLER9
+- Subtítulo: Se define por su propio nombre, sería el subtítulo que acompaña y refuerza el título de algunos escritos.
+- Título 1 a Título 10: Son los estilos aplicables a los apartados, capítulos o temas del documento. Con ellos se puede
 
-SOM7
+construir el sumario o índice de contenido. Es importante su correcta estructuración. Por ejemplo no usar un estilo Título 3, si previamente no hay aplicado unos estilos Título 1 y Título 2. Una vez más, insistimos en que la apariencia no es lo importante, sino la estructura. La apariencia la podemos modificar a nuestro gusto modificando la definición de los estilos.
 
-FOL7
+Quizás estos conceptos resulten más claros con un ejemplo
 
-CERTIFICAT DE NOTES
+- Títular: Proyecto de migración a un escritorio libre
+- Subtítulo: Una guía para afrontar con éxito migraciones de software desde aplicaciones privativas a aplicaciones
 
-A l’atenció de Eva,
+libres en entornos corporativos
 
-pare de l’alumne LIS SANZ, BLANCA
+- Título 1: Objetivos
+- Título 1: Definir la estrategia de migración
+- Título 2: Formación de usuarios
+- Título 2: Pasos para migrar las máquinas
+- Título 1: Aplicaciones usuales
 
-c/vega n67
+• Título 2: Suite ofimática LibreOffice • Título 2: Bases de datos MySQL • Título 2: Tratamiento de imágenes En este ejemplo hemos sangrado los textos de estilo Título 2 para expresar con más claridad la relación jerárquica en los diferentes niveles de título.
 
-L’alumne LIS SANZ, BLANCA, té les següents notes
+Personalización de índices y tablas de contenido
 
-APLICACIONS OFIMÀTIQUES:7
+Writer nos permite personalizar el formato de los índices que agregados al documento. Dependiendo del tipo de índice insertado podemos asignar los estilos de párrafo de nuestra preferencia a cada uno de los distintos niveles del índice, o asignar hiperenlaces a las entradas, cambiar su diseño o incluso aplicar un color o una imagen de fondo.
 
-REDES5
+Para poder definir todas estas características haremos uso de las restantes pestañas que se muestran en el diálogo Sumario, índice o bibliografía que hasta ahora no hemos mencionado.
 
-TALLER7
+Aplicar estilos de párrafo personalizados a los niveles de índice
 
-SOM4
+Por defecto, en Writer los índices se crean utilizando los estilos de párrafo predeterminados por la plantilla con la que se creó el documento.
 
-FOL5
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-CERTIFICAT DE NOTES
+17/22
 
-A l’atenció de Luis,
+Podemos ver estos estilos en la pestaña Estilos del cuadro de diálogo Sumario, índice o bibliografía .
 
-pare de l’alumne JUÁREZ GIL, PATRICIA
+En el caso de sumarios, estos estilos son Sumario n (donde n es del 1 al 10) para cada uno de los niveles del índice y Titulo del sumario para el encabezado del mismo. Otros tipos de índices tienen también sus propios estilos definidos.
 
-c/roble n 44
+Podemos asignar otros estilos en esta pestaña, aunque es más recomendable limitarnos a modificar su apariencia.
 
-L’alumne JUÁREZ GIL, PATRICIA, té les següents notes
+Asignación de estilos a los niveles del índice
 
-APLICACIONS OFIMÀTIQUES:7
+Para modificar los estilos de sumario o de índice, seguiremos los siguientes pasos
 
-REDES4
+- En la lista Niveles, seleccionamos el nivel al que deseamos aplicar un estilo de párrafo diferente.
+- A continuación, seleccionamos de la lista Estilos de párrafo el estilo a aplicar.
+- Finalmente haremos clic sobre el botón en forma de flecha apuntando a la izquierda entre ambas listas para asignar
 
-TALLER7
+al nivel el estilo de párrafo seleccionado.
 
-SOM8
+- Repetiremos el procedimiento para el resto de niveles cuyo estilo deseemos modificar. Para restaurar al estilo
 
-FOL6
+predeterminado, basta con seleccionar de la lista Niveles el nivel a restaurar y pulsar sobre el botón Predeterminado.
 
-CERTIFICAT DE NOTES
+- Si deseamos modificar la definición de un estilo, lo podemos hacer, seleccionando el estilo en la lista de Estilos de
 
-A l’atenció de Alejandro,
+párrafo y pulsando el botón Editar. Se abrirá el diálogo de Estilo de párrafo. Naturalmente, también podríamos personalizar los estilos de párrafo desde el panel lateral de Estilos y formato, o con el menú contextual sobre la entrada de índice y seleccionando Modificar estilo.
 
-pare de l’alumne LAX HERMIDA, CARLOS
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-c/velazquez n77
+18/22
 
-L’alumne LAX HERMIDA, CARLOS, té les següents notes
+Mostrar el índice en dos o más columnas
 
-APLICACIONS OFIMÀTIQUES:2
+Desde la pestaña Columnas del diálogo Sumario, índice o bibliografía podemos definir el columnado con el que se presentará el índice editado.
 
-REDES2
+Pestaña Columnas del diálogo Sumario, índice o bibliografía
 
-TALLER8
+En la sección Configuración de esta pestaña determinamos el número de columnas con que se presentará el índice. También podemos seleccionarlas rápidamente pulsando sobre las miniaturas con diferentes esquemas predeterminados y en la pequeña vista previa de la derecha previsualizaremos la disposición de las columnas según la configuración actual.
 
-SOM7
+Ejemplo de sumario en dos columnas
 
-FOL5
+En el apartado Anchura y espaciado podemos establecer el espaciado entre columnas, y en caso de desactivar la casilla Anchura automática podremos establecer anchos de columna desiguales para cada columna.
 
-CERTIFICAT DE NOTES
+En la sección Línea de separación podemos activar una línea de separación entre columnas, seleccionando un Estilo, Anchura, Altura y Color para la misma.
 
-A l’atenció de Jorge,
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-pare de l’alumne LUCAS SEGURA, JORGE
+19/22
 
-c/goya n 11
+Establecer un color o una imagen de fondo para el índice en OpenOffice Writer Desde la pestaña Fondo del diálogo Insertar índice o tabla podemos definir un color o una imagen de fondo para el índice editado. Su funcionalidad es parecida a la del Fondo para el estilo de página o el formato de párrafo, pero referido exclusivamente al área cubierta por el índice.
 
-L’alumne LUCAS SEGURA, JORGE, té les següents notes
+Pestaña Fondo del diálogo Sumario, índice o bibliografía
 
-APLICACIONS OFIMÀTIQUES:4
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-REDES5
+20/22
 
-TALLER7
+Asignar hipervínculos y modificar la estructura de las entradas de un índice Una de las características más interesantes de los índices creados en Writer es la posibilidad de que las entradas del índice sean hipervínculos al apartado correspondiente del documento.
 
-SOM4
+Hiperenlace en índice
 
-FOL6
+Esta funcionalidad, así como otros cambios en la estructura de las entradas del índice, la estableceremos desde la pestaña Entradas del diálogo Sumario, índice o bibliografía . De esta forma, apuntando a una entrada del índice, bastará hacer un simple clic mientras pulsamos la tecla lugar exacto donde se encuentra el texto, gráfico, tabla, o apartado referenciado.
 
-CERTIFICAT DE NOTES
+Personalizar entradas del índice
 
-A l’atenció de Carlos,
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-pare de l’alumne LLUC CABALLERO, PABLO
+21/22
 
-c/picaso n88
+Desde la versión 4.2 de Writer está habilitado este efecto de forma predeterminada. En versiones anteriores del programa es posible que se deba establecer manualmente. Para modificar la estructura de la entrada disponemos de varios botones que simbolizan un elemento de la entrada, separados por pequeños cuadros vacíos y unos botones que permiten añadir nuevos elementos. Esta estructura puede ser diferente para cada uno de los niveles del índice.
 
-L’alumne LLUC CABALLERO, PABLO, té les següents notes
+La interpretación de estos símbolos y su correspondencia con los botones para añadir elementos es la siguiente
 
-APLICACIONS OFIMÀTIQUES:4
+- Nº de capítulo (E#) . Número del capítulo correspondiente al encabezado, si está definido en
 
-REDES6
+Herramientas > Numeración de capítulos .
 
-TALLER7
+- Texto de entrada (E) . Texto del párrafo de encabezado que aparecerá en el índice.
+- Tabulación (T) . Salto de tabulación.
+- Nº de página (#) . El número de página del documento donde se ubica el párrafo.
+- Hiperenlace (LS) (en versiones anteriores HI). Inicio del hipervínculo
+- Hiperenlace (LE) (en versiones anteriores HF). Final del hipervínculo..
 
-SOM8
+Pulsando sobre los símbolos en la estructura se muestran opciones disponibles para ese elemento. Por ejemplo, pulsando sobre el símbolo T se puede cambiar el relleno de puntos de la tabulación por otro tipo de relleno o ninguno. Si deseamos eliminar algún elemento de la estructura, basta con seleccionarlo y pulsar la tecla Supr .
 
-FOL1
+Para añadir elementos a la estructura, hacer clic en los cuadritos vacíos entre los símbolos y pulsar el botón correspondiente al elemento que deseas. La primera vez que se pulsa el botón Hiperenlace se mostrará el símbolo LS, la siguiente vez que se pulse aparecerá el símbolo LE; todos los elementos comprendidos entre uno y otro serán los enlaces donde se podrá hacer clic con la tecla CONTROL pulsada para navegar al apartado correspondiente.
 
-CERTIFICAT DE NOTES
+Ubicando los símbolos HI y HF en los lugares apropiados podemos hacer que el enlace sea toda la línea, sólo el texto o sólo el número de página. La estructura definida se aplicará exclusivamente al Nivel seleccionado en la lista. Haciendo clic sobre el botón Todo a la derecha de Estructura se aplicará la nueva definición a todos los niveles del índice.
 
-A l’atenció de Pedro,
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-pare de l’alumne PARDO SANZ, ANTONIO
+22/22
 
-c/calvario n 21
+Cuando modifiques los estilos con que se muestra el índice de contenido, recuerda que debes seguir los criterios recomendados para mantener los documentos lo más accesibles posible
 
-L’alumne PARDO SANZ, ANTONIO, té les següents notes
+- Los colores de texto y fondo deben estar suficientemente contrastados.
+- El tamaño mínimo recomendable para la tipografía debe ser de 12 puntos. Nunca usar tipografías de tamaño
 
-APLICACIONS OFIMÀTIQUES:7
+inferior a 10 puntos.
 
-REDES5
+- Uso de tipografías sans serif (sin remate) habituales. Arial o Verdana son muy buenas elecciones.
+- Evitar el uso de variantes thin, light o narrow de las tipografías (variantes más estrechas de los tipos de letra)
+- Precaución con el uso de las negritas, cursivas o subrayados. Evitar el uso de efectos de contorno o intermitencias.
+- Evitar el uso de características incompatibles con otros formatos de documento (suprarayados, por ejemplo)
+- El interlineado simple no facilita la lectura; casi siempre será más apropiado un interlineado proporcional del 120%
 
-TALLER6
+como mínimo.
 
-SOM4
+- Establece un espaciado anterior y posterior al párrafo.
+- Evitar el uso de características incompatibles con otros formatos de documento (rellenos degradados o
 
-FOL1
+de imagen, por ejemplo)
 
-CERTIFICAT DE NOTES
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-A l’atenció de Maria,
+23/22
 
-pare de l’alumne RODRÍGUEZ SÁEZ, GLORIA
+PRÁCTICA 1
 
-c/murillo n 77
+Para la realización de este ejercicio necesitarás descargar los documentos mitos.odt y hermes.odt. Sigue los siguientes pasos
 
-L’alumne RODRÍGUEZ SÁEZ, GLORIA, té les següents notes
+- Abre el archivo mitos.odt y guárdalo con el nombre mitos-indice.odt.
+- Aplica estilo Título 1 a los títulos de las divinidades: ADONIS, AFRODITA y AGÓN.
 
-APLICACIONS OFIMÀTIQUES:4
+Pista: con una selección múltiple (con Ctrl ) lo podrás hacer en un sólo paso.
 
-REDES3
+- Inserta un salto de página al principio del documento.
 
-TALLER5
+Pista: método rápido con Ctrl + Intro .
 
-SOM7
+- En el principio del documento inserta un sumario con todas las opciones por defecto.
 
-FOL6
+### 5. Guarda los cambios. En este momento la apariencia del índice debería ser como
 
-### 📄 Carta_Notes_1.pdf
+se muestra en la imagen.
 
-CERTIFICAT DE NOTES A l’atenció de <Nombre padre/madre>, pare de l’alumne <ALUMNO> <Dirección> <CP>- <Poblacion> L’alumne <ALUMNO>, té les següents notes: APLICACIONS OFIMÀTIQUES: <Aplicaciones Ofimácas> REDES <Redes> TALLER <Taller> SOM <SOM> FOL <FOL>
+Apariencia del documento de práctica
 
----
+### 6. Añade al final del documento dos saltos de párrafo
 
-# 2.3 Tema 9. PLANTILLES
+### 7. Agrega al final del documento el contenido del archivo hermes.odt
 
-Tema 09. Plantillas.
+Pista: en vez de copiar y pegar el texto, puede ser mucho más cómodo y rápido hacerlo desde Insertar > Documento (en versiones anteriores puede ser Insertar > Archivo ).
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+- Asigna estilo de Título 1 al título HERMES del texto recién insertado.
 
-Dónde se almacenan las plantillas en OpenOffice Writer Las plantillas se almacenan en las carpetas donde se instala la suite o en el perfil del usuario. Todas estas carpetas o bien son del sistema o bien están ocultas, por lo que no es sencillo acceder a ellas. Si están en carpetas poco accesibles es por un motivo. Así que no conviene hurgar en ellas, salvo que sepas muy bien lo que haces.
+### 9. Actualiza el índice del documento. Tras la actualización, el índice tendrá la si
 
-Más adelante te mostramos como crear tu propia carpeta de plantillas personalizada, para que te sea más sencillo gestionar tus plantillas. Plantillas entregadas con la instalación Tras instalar Apache OpenOffice disponemos de un número reducido de plantillas que se almacenan en la carpeta del programa.
+guiente apariencia
 
-En entornos Windows, la carpeta donde se encuentran las plantillas es
+Apariencia del índice tras la actualización
 
-- OpenOffice 4.0
+### 10. Modifica el estilo Título 1 para que se inserte automáticamente un salto de página an
 
-C:\Archivos de programa\OpenOffice 4\share\template\
+tes de cada título. Pista: pestaña Flujo de texto > Salto > Insertar
 
-- Versiones anteriores 3.x
+- Elimina la página vacía que aparece después de la página del índice.
 
-C:\Archivos de programa\OpenOffice.org 3\share\template\ En esta carpeta encontraremos las plantillas distribuidas por varias subcarpetas, y también hallarás las plantillas utilizadas por los asistentes (en las subcarpetas llamadas wizard). Plantillas personales Además, se habilita en la carpeta perfil del usuario de OpenOffice una carpeta para almacenar las plantillas personales.
+### 12. Añade un encabezado de página que muestre a la derecha el texto Página X de Y (siendo
 
-carpeta perfil del usuario\user\template Plantillas de extensiones Si has instalado extensiones que incorporan plantillas (como por ejemplo Professional Template Pack II - Spanish) las plantillas se almacenan también en el perfil del usuario, pero en la subcarpeta donde se instala la extensión. Estas subcarpetas (a las que se les asigna un nombre completamente aleatorio) se encuentran en la ruta
+X el número de la página actual e Y el total de páginas del documento).
 
-carpeta perfil del usuario\uno_packages\cache\uno_packages
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-Tema 09. Plantillas.
+24/22
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Actualiza el índice nuevamente. La apariencia del índice y encabezado del documento debería ser como en la imagen.
 
-Para acceder a la carpeta perfil del usuario en OpenOffice (carpeta oculta), puedes utilizar este sencillo truco: La carpeta de usuario se encuentra (según versión) en: C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice.org\3
+Apariencia del índice renumerado
 
-C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice\4 Para llegar fácilmente a ella
+### 14. Modifica el título del índice para que figure Índice de fichas mitológicas en vez del
 
-- Desde el botón Inicio de Windows haz clic sobre Buscar
+título automático (Sumario o Índice de contenido según la versión del programa).
 
-programas y archivos
+- Modifica el índice del documento aplicándole un fondo de color Cian.
 
-- Teclea %AppData% y pulsa Intro
+### 16. Modifica el índice del documento para que se muestre en dos columnas, con un espa
 
-Ya estás dentro de la carpeta oculta AppData y ahora puedes seguir navegando sin problemas hasta la carpeta de usuario.
+ciado entre ellas de 0,80 cm. y una línea de separación continua, de 1,50 pt, color Rojo 5,
 
-Tema 09. Plantillas.
+### 17. Modifica el estilo de párrafo Sumario 1 (o Índice 1, según la versión del programa)
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+para que tenga un espaciado bajo el párrafo de 0,50 cm.
 
-Configurar el acceso a las plantillas en OpenOffice Writer OpenOffice te permite definir la localización de las distintas carpetas en donde se almacenen las plantillas desde el menú Herramientas > Opciones > OpenOffice > Rutas.
+### 18. Modifica el estilo de párrafo Título del sumario (o Encabezado del Índice , según
 
-El acceso a las carpetas donde se encuentran plantillas no resulta sencillo, como vimos en el apartado anterior; quizás te resulte más interesante crear una carpeta personal en donde almacenar las plantillas que vayas creando o que te descargues de la Web. Al editar la ruta Plantillas se muestra un diálogo como este
+la versión del programa) para que se muestre con alineación centrada.
 
-Consideramos que una carpeta en Mis Documentos llamada Plantillas Personales siempre resultará mucho más accesible para cualquier usuario. En el siguiente tema te mostramos cómo crearla y configurarla en OpenOffice.
+### 19. Modifica la estructura del índice para que el relleno de puntos sea sustituido por un
 
-Tema 09. Plantillas.
+relleno de guiones bajos ( _ ) y antes del número de página se muestre el término Pág. La apariencia final del índice debería ser como en la imagen.
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Apariencia del índice tras personalizarlo
 
-Crear mi carpeta de plantillas personal en OpenOffice Writer Crea una carpeta llamada Plantillas Personales dentro de la carpeta Mis Documentos. A su vez, crear dentro una estructura de carpetas para organizarlas por categorías (personales, oficina, calendarios, tarjetas...) o por aplicación (Writer, Calc, Draw, Impress), como tu prefieras.
+### 20. Modifica el esquema de la numeración de capítulos para que el nivel 1 se muestre
 
-Tras agregar la nueva carpeta en la configuración de las rutar de plantillas, todas las subcarpetas que contiene se agregarán también de forma automática. Para agregar la nueva carpeta y sus subcarpetas selecciona desde el menú Herramientas > Opciones > OpenOffice > Rutas.
+con las siguientes características: Número: 1, 2, 3... Separador después: un cierre de paréntesis seguido de un espacio.
 
-En la lista Rutas que utiliza OpenOffice selecciona Plantillas, y haz clic en el botón Editar. En el diálogo Editar rutas: Plantillas, haz clic en el botón Añadir....
+- Actualiza el índice. Debería quedar con un aspecto como en la imagen.
 
-En el diálogo Seleccionar ruta haz clic sobre la carpeta Plantillas Personales creada dentro de la carpeta Mis Documentos y luego haz clic sobre el botón Aceptar.
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-Tema 09. Plantillas.
+25/22
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Apariencia final del índice
 
-Si deseas que la nueva carpeta sea considerada por OpenOffice la predeterminada para las nuevas plantillas, activa el botón que precede a su ruta como ves en la imagen.
+Guarda los cambios en mitos-indice.odt y cierra el documento.
 
-La nueva ruta se agregará a las rutas de plantillas disponibles para todas las aplicaciones de OpenOffice y por lo tanto para Writer.
+PRÁCTICA 2
 
-Tema 09. Plantillas.
+Para la realización de esta práctica, descarga el archivo proyecto-escritorio-libre.odt
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Realiza los pasos siguientes
 
-Crear nuevo documento desde plantilla en OpenOffice Writer En OpenOffice Writer puedes crear nuevos documentos a partir de las plantillas existentes desde el menú Archivo > Nuevo > Plantillas y documentos.
+- Abre el artchivo proyecto-escritorio-libre.odt. Se trata de un informe debidamente forma
 
-El diálogo Plantillas y documentos – Plantillas te presentará todas las carpetas en donde existen plantillas, según la configuración de rutas para plantillas definida que vimos en Configurar el acceso a las plantillas y en Crear mi carpeta de plantillas personal.
+teado con estilos de encabezado para identificar sus apartados.
 
-En la imagen presentada más arriba hemos añadio unas flechas que apuntan a las distintas carpetas
+- Guárdalo con el nombre proyecto-escritorio-libre-indice-y-portada.odt.
 
-- Las flechas verdes apuntan a la carpeta de plantillas almacenadas en el perfil de usuario
+### 3. Establece el esquema de numeración de capítulos con las siguientes características
 
-de OpenOffice, que se presenta como Mis plantillas. Cualquier carpeta contenida en ella se mostrará también aquí, como es el caso de la carpeta Otras, que hemos creado para ilustrar el ejemplo.
+Nivel 1: Numeración: 1, 2, 3... Separador después: un punto seguido de un espacio. Nivel 2: Numeración: a, b, c... Mostrar subniveles: 2 Separador después: un paréntesis de cierre seguido de un espacio
 
-- Las flechas rojas apuntan a las carpetas creadas dentro de Plantillas Personales creada
+- Inserta una nueva página de título con estilo de página Primera página con las siguientes
 
-en el apartado Crear mi carpeta de plantillas personal y que también hemos creado para ilustrar el ejemplo.
+características: Márgenes de página: 3,00 cm a cada uno de los cuatro lados. Fondo de página: color Amarillo Bordes de página: cuatro lados, color Naranja, espaciado al contenido 2 cm, sincronizado, sombra abajo a la derecha
 
-- Las flechas azules apuntan a dos carpetas propias de OpenOffice, que contienen
+### 5. Escribe en la primera página el texto Proyecto de Creación de un Escritorio Libre
 
-plantillas de presentaciones y de fondos de presentación para Impress. Haz doble clic en la carpeta donde tengas almacenada la plantilla que deseas utilizar para abrir esa carpeta. Utiliza los botones situados justo encima para volver atrás o volver al inicio. Al abrir una carpeta se mostrarán las plantillas que contiene. Haciendo un clic sobre la plantilla elegida puedes ver información o una previsualización de la misma en el panel situado a la derecha de la lista de plantillas.
+para Clientes Corporativos. y aplica al texto el estilo de párrafo Titular.
 
-Tema 09. Plantillas.
+Trabajo con documentos largos en Writer, esquemas y sumarios
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+26/22
 
-Haciendo clic sobre el botón puedes ver información sobre la plantilla seleccionada.
+### 6. Modifica el estilo de párrafo Títular con las siguientes propieda
 
-Haciendo clic sobre el botón puedes ver una previsualización de la plantilla seleccionada. Si no tienes plantillas instaladas, puedes consultar el punto Agregar nuevas plantillas desde la Web. Una vez seleccionada la plantilla, haz doble clic sobre su nombre, o clic en el botón Abrir. OpenOffice Writer creará un nuevo documento copia de la plantilla.
+des. Efecto de fuente: Versalitas. Alineación: derecha. Color: Rojo 5
 
-Este nuevo documento será creado con un nombre neutro (del tipo Sin título X, donde X es un número). Puedes modificar el nuevo documento a tu gusto, y asignarle un nombre cuando lo guardes.
+### 7. Al principio de la segunda página inserta un sumario o índice de contenido con
 
-La plantilla permanecerá intacta para que crees nuevos documentos cuando tú quieras, cuantas veces quieras.
+los siguientes atributos: Dos columnas con 0,80 cm de espaciado entre ellas y línea de separación continua de 1,5 pt y color Rojo 5.
 
-Tema 09. Plantillas.
+### 8. Modifica los siguientes estilos de párrafo de índices y observa los cambios en el
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+mismo: Estilo Sumario 1 (o Índice 1, según versión del programa) en negrita. Estilo Sumario 2 (o Índice 2, según versión del programa) en cursiva.
 
-Crear una nueva plantilla en OpenOffice Writer En realidad una plantilla es un documento normal que ha sido guardado no como un documento, sino como una plantilla. Por lo tanto, para crear una plantilla debemos seguir exactamente el mismo procedimiento que con cualquier documento, salvo a la hora de guardarlo.
+Guarda los cambios en proyecto-escritorio-libre-indice-y-portada.odt. En la previsualización de impresión, las dos primeras páginas del documento deberían mostrar una apariencia como la siguiente
 
-Por ese mismo motivo, cualquier documento de los que ya tienes creado en OpenOffice Writer puedes convertirlo fácilmente en plantilla. La idea, lo importante, es que la plantilla creada sea como el esqueleto que conformará tus nuevos documentos. Esos nuevos documentos creados tomando como modelo la plantilla son los que posteriormente completarás con nuevos textos, imágenes y contenidos.
+Apariencia final del ejercicio
 
-A la hora de crear una nueva plantilla, sencillamente crea un nuevo documento.
+### 📄 hermes.odt
 
-Pero también puedes utilizar un documento ya creado. En este caso, crea primero una copia del documento, y luego, elimina todo el contenido que no sea necesario, dejando sólo la estructura que consideres oportuna Si en tu trabajo o en el hogar utilizas Writer para escribir cartas, informes, memorandums, y ya los tienes creados, puedes crear fácilmente una plantilla con ellos.
+HERMES
 
-- Crea primero una copia del documento.
-- Edita la copia, y elimina aquellos elementos que no sean comunes en los diferentes
+Dios olímpico mensajero, de las fronteras y los viajeros que las cruzan, de los pastores, de los oradores, el ingenio y del comercio en general, de la astucia de los ladrones y los mentirosos. El himno homérico a Hermes lo invoca como el «de multiforme ingenio (polytropos), de astutos pensamientos, ladrón, cuatrero de bueyes, jefe de los sueños, espía nocturno, guardián de las puertas, que muy pronto habría de hacer alarde de gloriosas hazañas ante los inmortales dioses». Hermes también es protagonista de muchos mitos, como, por ejemplo, el de Filemón y Baucis.
 
-documentos que vas crear a partir de la nueva plantilla.
+### 📄 proyecto-escritorio-libre.odt
 
-- Permanecerán por tanto los elementos comunes, como el encabezado de página, el pie
+Objetivo
 
-de página, la firma, el fondo de la página, el saludo inicial, un modelo de las tablas que incorporas, los estilos creados, etc.
+Crear una estación de trabajo enteramente configurada con Software libre y ponerle nombre y apellidos a las aplicaciones necesarias.
 
-- Avanzado: Puedes incorporar campos especiales para que automáticamente muestren
+Definir la estrategia de migración
 
-la fecha, o la carpeta donde se almacena el documento, el autor, etc.
+En la migración, hay que considerar el perfil de los usuarios que la vivirán para definir una estrategia en cuanto a método y plazos. Como recomendación general, y aprovechando la gran disponibilidad de software libre multiplataforma
 
-- Avanzado: Puedes editar el estilo Predeterminado para cambiar el formato por defecto
+Migrar las aplicaciones (dentro de Windows)
 
-del texto, el idioma, etc., y personalizar los distintos estilos utilizados en el documento.
+Navegación, correo electrónico
 
-- Avanzado: Puedes modificar el estilo de la página para cambiar los márgenes, la
+Suite ofimática y otras
 
-orientación de página, los encabezados, pies, etc.
+Migrar el sistema operativo
 
-- Finalmente, tan sólo quedará guardar el documento como plantilla.
+La explicación es bien razonable: una migración del sistema completa puede desconcertar bastante a los usuarios y darles la impresión de que todo es más complicado de lo que resulta realmente. Si cuando se les cambia el sistema operativo, ya están acostumbrados al uso de las aplicaciones con que se encontarán, el cambio se vive de forma natural y suave.
 
-Para guardar el documento como plantilla, sigue los pasos indicados en el punto Cómo y dónde guardar las plantillas.
+Formación de usuarios
 
-Tema 09. Plantillas.
+En cualquier caso, siempre hay que considerar la formación de los usuarios para evitar efectos de rebote que pueden sabotear el proceso.
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+En nuestra experiencia con migraciones a OpenOffice.org nos hemos encontrado con usuarios a los que se les había instalado el programa, sin darles la formación imprescindible para realizar aquellas tareas que no se realizan exactamente igual que en Microsoft Office. Y su percepción era que “OpenOffice.org no sirve”.
 
-Cómo y dónde guardar las plantillas en OpenOffice Writer OpenOffice Writer permite que las plantillas se almacenen en una o varias carpetas (configurable desde Herramientas > Opciones > OpenOffice > Rutas). Las carpetas por defecto no son fácilmente accesibles por el usuario, ya que están situadas en la carpeta que contiene su perfil 2.
+Tras una adecuada formación, esta percepción desaparece, pero mucho mejor si se imparte previa o simultáneamente a la migración, pues evitaremos desajustes psicológicos. ;-)
 
-El usuario también puede añadir o modificar la ruta de las plantillas a otros en lugares más accesibles , lo que hemos venido a llamar en este manual carpeta personal de plantillas. En cualquier caso podemos almacenar las plantillas en sus carpetas por dos métodos: utilizando el administrador de plantillas, o simplemente, arrastrándolas al interior de las carpetas correspondientes.
+Pasos para migrar las máquinas
 
-Guardar con el administrador de plantillas Para guardar el documento que has creado o modificado en OpenOffice Writer como una plantilla tan sólo tienes que seguir los siguientes pasos
+Tras la oportuna planificación
 
-- Selecciona desde el menú Archivo > Plantilla > Guardar...
-- En el diálogo Plantilla de documento selecciona la carpeta donde quieres almacenar la
+Copiar todos los documentos de trabajo “Mis documentos” a una ubicación de red
 
-plantilla desde la lista Categorías 1.
+Copiar todos los datos de programa (bookmarks, correos, etc...) a una ubicación de red
 
-- Escribe el nombre de tu nueva plantilla en el cuadro Nueva plantilla
-- Haz clic en Aceptar
+Instalar Linux en la máquina y las aplicaciones que sean necesarias
 
-Guardar en nuestra carpeta personal de plantillas Alternativamente, puedes guardar la plantilla en la carpeta personal de plantillas que creamos en el apartado Crear mi carpeta de plantillas personal mediante este procedimiento
+Restaurar los datos de programa al nuevo sistema
 
-- Si...
-- ... creaste un documento nuevo para la plantilla, clic en Archivo > Guardar.
-- ... estás modificando un documento existente para crear la plantilla, clic en Archivo >
+Según se haya planificado, los documentos de trabajo pueden quedar en la red (recomendado) o restaurarse al nuevo sistema.
 
-Guardar como....
+Aplicaciones
 
-- Escribe el nombre de la plantilla
+En la siguiente enumeración de apliaciones, se han privilegiado las que disponen de equivalente en Windows para poder aplicar la estrategia sugerida anteriormente (primero migrar aplicaciones y luego sistema operativo).
 
-Tema 09. Plantillas.
+Suite Ofimática: OpenOffice.org
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Indudablemente, OpenOffice.org será el programa adecuado para dar soporte a los usuarios habituales de Microsoft Office.
 
-- En Tipo, selecciona Plantilla de documento de texto ODF (.ott)
-- Navega hasta la carpeta Mis documentos/Plantillas personales
-- Haz clic en Guardar
+Entre sus ventajas
 
-Como ves, salvo seleccionar en Tipo guardar como plantilla, el procedimiento es el mismo que Guardar o Guardar como... para un documento. Notas 1 ↑ En versiones anteriores a la 4.0 la lista Categorías se mostraba como Área. 2 ↑
+Compatibilidad de formatos con los de Word, Excel y PowerPoint
 
-Para acceder a la carpeta perfil del usuario en OpenOffice (carpeta oculta), puedes utilizar este sencillo truco: Windows Vista y Windows 7 La carpeta de usuario se encuentra (según versión) en: C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice.org\3 C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice\4 Para llegar fácilmente a ella
+Un excelente soporte técnico de la comunidad
 
-- Desde el botón Inicio de Windows haz clic sobre Buscar
+Generación directa de documentos PDF
 
-programas y archivos
+Inconvenientes principales
 
-- Teclea %AppData% y pulsa Intro
+Incompatibilidad con las macros de Word y Excel
 
-Ya estás dentro de la carpeta oculta AppData y ahora puedes seguir navegando sin problemas hasta la carpeta de usuario.
+El componente Base (gestor de bases de datos) no es comparable a Microsoft Access
 
-Tema 09. Plantillas.
+Necesidad de formación para que los usuarios conozcan las técnicas de uso diferentes de Word y Excel
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Referencias:http://es.openoffice.org
 
-Modificar una plantilla existente en OpenOffice Writer El método más sencillo para modificar una plantilla existente es
+Bases de datos: MySQL + Kexi
 
-- Crear un nuevo documento a partir de la plantilla
-- Modificar el documento
-- Guardar el documento como plantilla de nuevo, sustituyendo a la anterior
+Si en la organización se utilizan bases de datos de Access, es fácil usar sus datos (e incluso migrarlos) desde OpenOffice, con el cual podemos crear formularios e informes y definir consultas de selección. Pero no hay tantas facilidades en cuanto a consultas de acción, y la funcionalidad de formularios e informes es limitada si no se hace uso de programación.
 
-Modificar una plantilla desde el Administrador de plantillas Puedes modificar la plantilla abriéndola desde el Administrador de plantillas.
+Una alternativa para resolver esta limitación puede estar en el uso de una base de datos MySQL, administrada con Kexi, una aplicación informática integrada para el manejo de datos que permite diseñar e implementar bases de datos, insertar y procesar datos y hacer consultas sobre los mismos. También se puede utilizar Kexi con su propia base de datos embebida SQLite.
 
-- Abre el Administrador de plantillas desde el menú Archivo > Plantilla... > Administrar...
-- Recorre las carpertas mostradas en el panel de la izquierda hasta encontra la plantilla
+Referencias:http://kexi-project.org/http://www.mysql.com/
 
-a editar.
+Tratamiento de imágenes: El Gimp
 
-- Selecciona la plantilla
-- Selecciona desde su menú contextual Editar
+El programa Gimp resolverá más que satisfactoriamente cualquier necesidad que se presente en cuanto a tratamiento de imágenes de bits, disponiendo de funcionalidades que lo hacen comparable al popular Photoshop.
 
-- O desde el botón Comandos... selecciona la opción Editar
+Gimp incluye permite la automatización de muchos procesos mediante macros o secuencias de comandos, para lo cual incluye un lenguaje específico.
 
-Tema 09. Plantillas.
+Pero si necesitamos efectuar un tratamiento masivo de imágenes y no deseamos aprender el Scheme (el lenguaje de programación que incorpora Photoshop), el kit de herramientas ImageMagick resolverá perfectamente nuestra necesidad.
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Referencias:http://www.gimp.org.es/
 
-Modificar una plantilla almacenada en nuestra carpeta personal de plantillas Alternativamente, si la plantilla está almacenada en la carpeta personal de plantillas que creamos en el apartado Crear mi carpeta de plantillas personal puedes editarla mediante este procedimiento
+Compresión/descompresión de archivos
 
-- Selecciona Archivo > Plantilla > Editar
-- Navega hasta la carpeta Mis documentos/Plantillas personales
-- Selecciona la plantilla y haz clic en Abrir
+La compresión y descompresión de archivos forma parte natural de cualquier sistema GNU/Linux, que de serie incorpora gzip/gunzip para ejecutar en consola. Todos los sistemas de escritorio de Ubuntu GNU/Linux incorporan su propia interfaz gráfica para comprimir y descomprimir archivos, admitiendo diversos formatos.
 
-Guardar la plantilla modificada Guarda como cualquier otro documento, por ejemplo, haciendo clic sobre el botón Guardar. Guardar una copia u otra versión de la plantilla Para guardar una copia u otra versión de la plantilla, deberás asignarle otro nombre al guardarla siguiendo el procedimiento que vimos en Cómo y dónde guardar las plantillas.
+Navegadores: Firefox
 
-Para guardar la plantilla modificada, tan sólo deberás hacer clic en el botón Guardar
+Para un proceso de migración, Firefox, de la familia Mozilla, heredero del mítico Netscape, es el navegador por excelencia, pues se puede utilizar tanto en Windows como en GNU/Linux.
 
-Puedes guardar una copia u otra versión con otro nombre siguiendo los pasos indicados en el punto Cómo y dónde guardar las plantillas
+Una vez migrados a Linux, los usuarios que usen un escritorio KDE quizás se enamoren de Konqueror, un navegador y gestor de archivos con múltiples funcionalidades.
 
-Tema 09. Plantillas.
+Referencias:http://www.mozilla-europe.org/es/firefox/
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Clientes de correo: Thunderbird
 
-Cambiar la plantilla predeterminada en OpenOffice Writer Cuando en OpenOffice Writer creas un nuevo documento desde el menú Archivo > Nuevo > Documento de texto o haciendo clic sobre el botón Nuevo se crea un nuevo documento vacío basado en la plantilla predeterminada de Writer (plantilla por defecto para documentos nuevos).
+Al igual que Firefox, el cliente de correo Thunderbird, de la familia Mozilla, permitirá una migración muy cómoda de Windows a GNU/Linux.
 
-Pero quizás desees que utilizar otra plantilla para crear tus nuevos documentos; por ejemplo, con estilos, encabezado y pie de página personalizados. Si deseas utilizar otra plantilla como la plantilla predeterminada deberás seguir los siguientes pasos
+Los usuarios avanzados de Outlook, quizás añoren la integración entre correo, calendario y agenda que les proporciona el programa de Microsoft. Para ellos puede estar especialmente indicado Evolution, que incluso dispone de un conector para servidores Exchange.
 
-- 1 Selecciona el menú Archivo > Plantillas > Administrar
-- 2 En la lista de la izquierda selecciona la plantilla que deseas configurar como
+Referenciashttp://www.mozilla-europe.org/es/products/thunderbird/http://www.gnome.org/projects/evolution/http://www.dipconsultants.com/evolution/
 
-predeterminada (en nuestro ejemplo, vamos a utilizar una plantilla que hemos guardado como Mi plantilla Normal en la carpeta Writer, dentro de nuestra carpeta de Plantillas Personal) y …
+Gestión de proyectos: Planner
 
-- Haz clic sobre su nombre con el botón secundario del ratón para abrir su menú
+Planner es un gestor de proyectos que soporta gráficos Gantt, asignación de recursos e integración con otras aplicaciones GNOME. Sería un equivalente (limitado) a MS-Project.
 
-contextual
+Si las necesidades de gestión de proyectos, responden a un entorno de trabajo colaborativo, donde diversas personas colaboran en el control del proyecto, también podríamos utilizar algún entorno de groupware accesible vía web que incorpore gestión de proyectos.
 
-o …
+Algunas referencias bastante amplias: http://www.navegapolis.net/content/view/56/49/http://blogdejuls.blogspot.com//software-libre-para-gestion-de.htmlhttp://www.cdlibre.org/consultar/catalogo/Ofimatica_Gestion-de-proyectos.html
 
-- Despliega el submenú del botón Comandos
+Agendas y calendarios
 
-- 3 Selecciona la opción Definir como plantilla predeterminada.
+Siguiendo con la familia Mozilla, está disponible Sunbird, que permite establecer citas y tareas, pero no se integra con el servicio de correo electrónico.
 
-La próxima y sucesivas veces que crees un nuevo documento de texto, Writer utilizará la nueva plantilla predeterminada.
+Actualización: la extensión Lightning para Thunderbird soluciona esta integración:http://www.mozilla.org/projects/calendar/lightning/
 
-Tema 09. Plantillas.
+Una solución interesante es Evolution, que como cometamos en el apartado de clientes de correo, además de estar muy integrado, dispone de conectividad con servidores Exchange y sincroniza con dispositivos Palm y con móviles con sistema Symbian (verificar).
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Existe una versión de Evolution para Windows.
 
-Restablecer la plantilla predeterminada en OpenOffice Writer Si quieres restablecer la plantilla predeterminada de OpenOffice Writer a la plantilla predeterminada original
+Referencias:http://www.mozilla.org/projects/calendar/sunbird/http://www.gnome.org/projects/evolution/http://www.dipconsultants.com/evolution/
 
-- Selecciona el comando Archivo > Plantillas > Administrar.
-- Selecciona desde el botón Comandos la opción Restaurar plantilla predeterminada >
+Mensajería instantánea: Pidgin
 
-Documento de texto
+Pidgin (antes denominado Gaim) es un cliente de mensajería electrónica multiprotocolo, mediante el cual se puede conectar con redes Jabber, MSN, Yahoo, IRC y otras.
 
-- O haz clic secundario sobre cualquier elemento de la lista de la izquierda y selecciona
+Si la mensajería instantánea es un factor estratégico para la organización, incluso se puede instalar un servidor Jabber en un entorno de intranet, que permitirá la comunicación permanente entre los miembros de la organización.
 
-la opción Restaurar plantilla predeterminada > Documento de texto
+Referencias:http://www.pidgin.im/
 
-La próxima vez que crees un nuevo documento de texto, volverá a utilizarse la plantilla predeterminada original de OpenOffice.org para documentos de texto.
+Antivirus y seguridad
 
-Tema 09. Plantillas.
+No hay ninguna necesidad de usar antivirus en GNU/Linux. Para que un virus dañase al sistema GNU/Linux haría falta
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Recibir el virus (por disquete, correo electrónico, etc)
 
-Agregar nuevas plantillas desde la Web en OpenOffice Writer En la instalación por defecto de Apache OpenOffice hay muy pocas plantillas, y las pocas que hay son todas para Impress. Pero dispones de miles de plantillas que puedes descargar desde la Web. A continuación relacionamos algunos sitios desde los que puedes descargar plantillas en español
+Por sí solo el virus no sería autoejecutable, así que le deberíamos dar permisos de ejecución a propósito.
 
-- Web oficial de OpenOffice para plantillas en español
-- Professional Template Pack II - Spanish
-- Professional Template Pack I - Spanish
-- Plantilla de factura para Writer
-- Calendario 2012 para Writer
+En este caso, y de tener efectos destructivos, dada la naturaleza de los permisos en Linux, tan sólo podría dañar el área del usuario, siendo imposible dañar al sistema.
 
-Otros sitios desde donde descargar más plantillas (no necesariamente en español)
+Entonces, ¿por qué existen antivirus para Linux? Pues porque muchos sistemas GNU/Linux ofrecen servicios a clientes Windows. Por ejemplo, servidores de correo o servidores de archivos; en ese caso puede ser conveniente un antivirus para que no permita que se infiltren virus que pueden ir a parar a los usuarios con Windows.
 
-- Plantillas para etiquetas adhesivas
-- OO Extras
-- OxygenOffice Profesional
+Si se desea cifrar discos o carpetas, TrueCrypt, funciona tanto en Windows como en GNU/Linux.
 
-En algunos casos las plantillas se agregarán como una extensión (ver Administrar extensiones en Writer) y, probablemente, creará su propia estructura de carpetas. En otras ocasiones, se tratará sencillamente de descargar y guardar un archivo que podrás almacenar en tu propia carpeta de plantillas. Puedes consultar este minitutorial de nuestro blog si no sabes como hacerlo: Cómo copiar las plantillas descargadas al almacén de plantillas de OpenOffice.
+Referèncias:http://www.kriptopolis.org/antivirus-para-linuxhttp://www.truecrypt.org/
 
-Tema 09. Plantillas.
+Sistema operativo
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Existen diferentes sistemas operativos libres (GNU/Linux, OpenSolaris, FreeBSD, OpenBSD, etc). Todos ellos derivan de UNIX System V y cumplen el estándar POSIX, así que no hay grandes diferencias entre ellos.
 
-El administrador de plantillas de OpenOffice Writer En este manual te hemos sugerido una forma alternativa de administrar tus plantillas para Writer, consistente en crear una carpeta llamada Plantillas Personales en tu carpeta Mis Documentos. Posteriormente te hemos explicado como agregar esa carpeta en la ruta de plantillas de OpenOffice.
+Dentro de los sistemas GNU/Linux existen diferentes distribuciones cuyas diferencias pueden consistir en
 
-Te hemos sugerido también que las diferentes categorías de plantillas las organices dentro de esa carpeta, en forma de subcarpetas. Consideramos que es un sistema cómodo, fácil y al alcance de cualquier usuario. El motivo es por que consideramos que el sistema de administrar plantillas de OpenOffice Writer es un poco confuso para usuarios noveles. Pero no es más que una opinión.
+cantidad de paquetes (programas) suministrados en la distribución
 
-OpenOffice dispone de su propio sistema de gestión de plantillas. Para activarlo, selecciona desde el menú Archivo > Plantilla > Administrar.
+sistema de distribución de paquetes (RPM, DEB u otros)
 
-El administrador muestra dos listas y una serie de botones. Las listas pueden presentar bien la estructura de plantillas, o documentos que previamente deben de ser seleccionados mediante el botón Archivo..., que se activa si haces clic en la lista Documentos. El botón Comandos te presentará una serie de opciones en función del elemento que tengas seleccionado.
+jerarquía del sistema de archivos (como mucho, pequeñas variaciones)
 
-Si seleccionas una categoría (carpeta) de las plantillas de usuario podrás
+mayor o menor facilidad de uso para usuarios no informáticos
 
-- Agregar una nueva categoría seleccionando
+localizaciones (idiomas) disponibles
 
-Nuevo
+disponibilidad de programas de administración adicionales u orientados a necesidades empresariales específicas (no siempre libres)
 
-- Eliminar una categoría
-- Importar una plantilla a la categoría
-- Invocar la Configuración de la impresora
-- Refrescar la lista seleccionando Actualizar
+El criterio para escoger un sistema, podría ser facilidad de uso, la disponibilidad en determinado idioma, etc.
 
-Tema 09. Plantillas.
+A estos efectos, seria tan válido Ubuntu como SuSE, Fedora (RedHat), Mandriva o la propia Debian (en la que se basa Ubuntu)
 
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+Nuestra recomendación se decantaría por Ubuntu especialmente por
 
-Si seleccionas una plantilla podrás
+Facilidad de instalación, configuración, actualización y uso (como casi todas las distribuciones citadas).
 
-- Editar la plantilla
-- Eliminar la plantilla
-- Importar una plantilla
-- Exportar la plantilla
-- Invocar la Configuración de la impresora
-- Refrescar la lista seleccionando Actualizar
-- Definir como plantilla predeterminada la
+Excelente localización en español y catalán (la última vez que probamos SuSE, adolecía de limitaciones en este sentido, por ejemplo, no disponía de la versión en catalán de OpenOffice.org).
 
-plantilla seleccionada
+Disponibilidad de controladores propietarios privativos que pueden ser precisos para algunos dispositivos de hardware.
 
-Si no existe ningún elemento seleccionado podrás
+Inmensa cantidad de programas instalables directamente desde sus repositorios (posiblemente todos los programas que necesitemos)
 
-- Invocar la Configuración de la impresora
-- Refrescar la lista seleccionando Actualizar
+Disponibilidad de versiones específicamente orientadas a tareas de servidor y para instalaciones personalizadas.
 
-Finalmente, el botón Libreta de direcciones... te permite establecer un vínculo entre una fuente de datos (por ejemplo, la libreta de direcciones de tu sistema operativo ( la libreta de direcciones de Windows o la de MS Outlook para usuarios de Windows) y la base de datos que automáticamente creará OpenOffice y que te permitirá disponer de los campos de tu libreta de direcciones para agregarlos con facilidad a tus documentos y plantillas.
+Factor subjetivo: nos ha hecho sentido muy cómodos desde que la probamos.
+
+Entorno de escritorio
+
+A diferencia de Windows, en los sistemas GNU/Linux existe la posibilidad de escoger distintos entornos de escritorio; entre los más populares encontramos
+
+GNOME (basado en la biblioteca de controles gráficos GTK, diseñados originalmente para el programa Gimp)
+
+KDE (basado en la biblioteca de controles gráficos QT, que en un principio no eran del todo libres)
+
+XFCE (basado en GTK pero especialmente ligero, adaptado para máquinas con escasos recursos.
+
+Cada uno de ellos dispone de determinados programas (navegadores, editores, consolas, etc.) orientados a una integración perfecta en el propio sistema de escritorios.
+
+Pero esto no es ningún obstáculo, pues hoy día se integran con facilidad unos y otros. Por ejemplo, en nuestro escritorio GNOME, podemos usar a perfección el grabador de CD/DVD K3B, diseñado inicialmente para KDE. El único coste es en términos de recursos, pues el uso en un escritorio de un programa diseñado otro, exige la carga en memoria de ambos conjuntos de bibliotecas.
+
+Si nuestro parque de ordenadores tiene máquinas con escasos recursos de memoria o procesador, para ellas resultará ideal el uso de XFCE, por su poco peso y optimizado uso de recursos.
+
+Ubuntu, por defecto se instala con GNOME, pero se puede instalar cualquier otro escritorio desde sus repositorios de programas.
+
+En términos generales, para usuarios provinientes de Windows, se puede recomendar KDE, pues su apariencia les resultará más familiar.
+
+No obstante, se pueden dejar instalados ambos escritorios, y el usuario puede escoger inciar sesión con uno u otro.
+
+Instalación desatendida
+
+Si nuestro parque de ordenadores es muy extenso, uno de los problemas con que podemos encontrarnos es que la instalación puede consumir mucho tiempo de técnico de sistemas, al tener que ir máquina por máquina para perfilar detalles de la instalación.
+
+Mediante el uso de la Server Edition de Ubuntu, se pueden disponer de diferentes beneficios, entre los cuales se cuenta la instalación desatendida. Al final de este apartado se relacionan diferentes recursos de ayuda sobre esta cuestión.
+
+Entorno de red
+
+En un entorno corporativo, dispondremos de uno o más servidores que proporcionarán diferentes servicios. GNU/Linux nos proporcionará solución a cualquier necesidad
+
+Autenticación centralizada de usuarios
+
+NIS permite replicar los datos de acceso de usuarios y grupos a lo largo de la red, que también proveerá la información de grupos de usuarios o nombres de nodo.
+
+LDAP es otra alternativa más avanzada para resolver esta misma cuestión, pues además puede contener datos de contacto del usuario, ubicación de diversos recursos de la red, permisos o certificados; una de las implementaciones más populares de LDAP es el conocido Active Directory de Microsoft.
+
+Compartición de archivos
+
+NFS es el sistema de red más popular para compartir archivos en sistemas GNU/Linux y permite montar directorios ubicados en dispositivos remotos en el propio sistema de archivos. Los puestos de trabajo Windows pueden acceder a sistemas NFS mediante el uso de Windows Services for UNIX.
+
+SAMBA es una implementación libre del protocolo de archivos compartidos de Microsoft Windows. Nos permitirá acceder desde equipos GNU/Linux a archivos compartidos en sistemas Windows, así como acceder desde equipos Windows a servidores de archivos GNU/Linux.
+
+En función del número de puestos de trabajo a migrar y de la estructura actual de recursos compartidos, puede ser conveniente decantarse por unos u otros sistemas. Si no hay unos requerimientos específicos que aconsejen otra cosa, y considerando que estaremos ante un entorno de trabajo mixto Windows / GNU/Linux recomendaríamos LDAP y SAMBA.
+
+Referencias y enlaces
+
+Guía oficial de la Server Edition:https://help.ubuntu.com/8.04/serverguide/C/index.html
+
+Recomendaciones específicas para migración de Windows a Ubuntu Linux:https://help.ubuntu.com/community/SwitchingToUbuntu/FromWindowshttp://doc.ubuntu.com/ubuntu/switching/
+
+Recomendaciones específicas para configuración en un entorno corporativo:https://help.ubuntu.com/community/CorporateUbuntu
+
+Notas para una instalación vía red local:https://help.ubuntu.com/community/Installation/Netboot
+
+Múltiples instalaciones por red local:http://www.debuntu.org/how-to-unattended-ubuntu-network-installhttp://www.informatik.uni-koeln.de/fai/
+
+Una web que ayuda a crear un perfil de configuración para instalaciones automatizadas:http://www.instalinux.com/
+
+Soluciones para programas only-Windows
+
+Hay programas que deben usarse sí o sí, y que tan sólo están disponibles para Windows.
+
+Posibles soluciones
+
+Wine
+
+Wine es un emulador de las bibliotecas de Windows, que permite que los programas corran tal cual en un sistema GNU/Linux sin tener Windows instalado. Algunos programas funcionan a la primera, pero en muchos casos necesitan un poco de tuneo o copiar bibliotecas DLL. Existe una versión derivada comercial, CrossOver Office, con varios parches añadidos, y herramientas de configuración más fáciles de usar, especialmente adaptada para correr Microsoft Office.
+
+Referencias:http://www.winehq.org/http://www.codeweavers.com/
+
+PC virtual
+
+VirtualBox o VMWare son emuladores de PC virtual, que permiten instalar en ellos un sistema operativo completo. Son una solución perfecta para correr programas para Windows, pero exigen disponer de una licencia del sistema operativo invitado.
+
+Referencias:http://www.virtualbox.org/http://www.vmware.com/
+
+Remote Desktop (Terminal Server)
+
+Para optimizar el coste de licencias de Windows necesarias, también puede resultar interesante instalar un servidor Windows con los programas imprescindibles y acceder a él vía Remote Desktop o VNC.
+
+Referencias:http://www.tightvnc.com/http://www.realvnc.com/
+
+### 📄 mitos.odt
+
+ADONIS
+
+Adolescente de maravillosa belleza que fue amado por Afrodita. Muerto por un jabalí, la diosa convirtió su sangre en flores. Al ver la desolación de ella, Júpiter concedió a Adonis el privilegio de permanecer cada año seis meses sobre la Tierra. El mito es de origen semita y alude a los ciclos de la muerte y renacimiento de las fuerzas de la naturaleza.
+
+AFRODITA
+
+Diosa resplandeciente de la belleza, encarnación del amor carnal y la más popular de todas las divinidades de la mitología griega. Según Homero, fue hija de Zeus y de Dione mientras que para Hesíodo la diosa nació en el mar, cuando Cronos mutiló a su padre Urano.
+
+Los despojos de la virilidad de este último flotaron largo tiempo sobre las aguas produciendo una espuma de la cual nació una virgen: Afrodita Anadiomena. De la espuma, pues, brotó una doncella que llegó primero a la isla Vitera y luego a Chipre rodeada de olas; allí saltó a tierra la veneranda y bella diosa y bajo sus menudos pies florecía la mullida hierba.
+
+AGÓN
+
+Personificación simbólica de las luchas atléticas y de los concursos de todo género. Era representado de diversas formas, pero una de las más conocidas se refería a un joven dios atleta desnudo, con un gallo en las manos.
 
 ---

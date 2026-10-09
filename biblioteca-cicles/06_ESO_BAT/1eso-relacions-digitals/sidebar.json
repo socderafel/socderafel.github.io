@@ -10,20 +10,19 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 L'ordinador i els seus components",
-          "href": "ut01/ut0101.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Comportament i bon ús de les tecnologies",
-          "href": "ut01/ut0102.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Sistemes operatius",
-          "href": "ut01/ut0103.html"
+          "href": "./ut01/ut0103.html"
         }
       ]
     },
@@ -32,12 +31,11 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
-          "label": "2.1 Continguts i Recursos",
-          "href": "ut02/ut0201.html"
+          "label": "2.1 Continguts Teòrics i Recursos",
+          "href": "./ut02/ut0201.html"
         }
       ]
     },
@@ -46,12 +44,11 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
-          "label": "3.1 Continguts i Recursos",
-          "href": "ut03/ut0301.html"
+          "label": "3.1 Continguts Teòrics i Recursos",
+          "href": "./ut03/ut0301.html"
         }
       ]
     },
@@ -60,40 +57,24 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
-          "label": "4.1 Continguts i Recursos",
-          "href": "ut04/ut0401.html"
+          "label": "4.1 Continguts Teòrics i Recursos",
+          "href": "./ut04/ut0401.html"
         }
       ]
     },
     {
-      "summary": "UD5 — Programació Visual amb Scratch",
+      "summary": "UD5 — SCRATCH BÁSICO",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
-          "label": "5.1 Continguts i Recursos",
-          "href": "ut05/ut0501.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD6 — SCRATCH BÁSICO",
-      "items": [
-        {
-          "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "6.1 Continguts i Recursos",
-          "href": "ut07/ut0701.html"
+          "label": "5.1 Continguts Teòrics i Recursos",
+          "href": "./ut05/ut0501.html"
         }
       ]
     }

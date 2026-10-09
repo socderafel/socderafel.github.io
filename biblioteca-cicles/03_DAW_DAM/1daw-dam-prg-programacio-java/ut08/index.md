@@ -1,574 +1,1990 @@
 ---
 layout: default
-title: "UD4 — Programación Estructurada y Modular · Temari Complet"
+title: "UD8 — Utilización avanzada de clases · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT8 Completa"
-prev_url: "../ut07/ut0701.html"
-prev_label: "⬅️ 3.1 Uso de estructuras de control"
+badge: "1r DAW / DAM · Grau Superior · UD8 — Utilización avanzada de clases"
+prev_url: "../ut07/ut0703.html"
+prev_label: "⬅️ 7.3 Programación orientada a objetos (versión extend"
 next_url: "../ut08/ut0801.html"
-next_label: "4.1 Programación estructurada y modular ➡️"
+next_label: "8.1 Utilizacion avanzada de clases ➡️"
 ---
 
-# 📘 UD4 — Programación Estructurada y Modular (Unitat Completa)
+# 📘 UD8 — Utilización avanzada de clases (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 Programación estructurada y modular**](./ut0801.md)
-- [**4.2 Programación estructurada y modular**](./ut0802.md)
+- [**8.1 Utilizacion avanzada de clases**](./ut0801.md)
+- [**8.2 Utilización avanzada de clases (Versión ex**](./ut0802.md)
 
 ---
 
-# 4.1 Programación estructurada y modular
+# 8.1 Utilizacion avanzada de clases
 
-> **📌 🏷️ Apunt de la Unitat**
-> # BLOQUE 2: Programación básica en Java
+> **🔗 Recurs Web: Enumerados**
+> [**🌐 Obrir recurs extern (https://jarroba.com/enum-enumerados-en-java-con-ejemplos/) ↗️**](https://jarroba.com/enum-enumerados-en-java-con-ejemplos/)
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Contenido de la unidad
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Prácticas de aula
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Ampliación y refuerzo
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Otros Recursos
+> **🔗 Recurs Web: Uso de instanceof**
+> [**🌐 Obrir recurs extern (https://ifgeekthen.nttdata.com/es/que-es-y-como-utilizar-instanceof-en-java) ↗️**](https://ifgeekthen.nttdata.com/es/que-es-y-como-utilizar-instanceof-en-java)
 
 ---
-
-### UNIDAD 4: PROGRAMACIÓN ESTRUCTURADA Y MODULAR
-
-J.R. Simó
-
-v3.30.10.23
-
-### UNIDAD 4: PROGRAMACIÓN ESTRUCTURADA Y
-
-MODULAR Profesor: José Ramón Simó Martínez Contenido 4.1 Introducción .................................................................................................................................................. 2 4.2 Concepto de función ..................................................................................................................................... 2 4.3 Definición de una función.............................................................................................................................. 3 4.4 Llamada a una función................................................................................................................................... 5 4.5 Paso de parámetros ....................................................................................................................................... 6 4.6 Retorno de un valor ....................................................................................................................................... 8 4.7 Ámbito de variables ....................................................................................................................................... 9 4.8 La función main ........................................................................................................................................... 12 4.9 Recursividad ................................................................................................................................................ 15
-
-J.R. Simó
-
-v3.30.10.23 4.1 Introducción Hasta ahora hemos escrito todo el código de nuestros programas dentro de un bloque único conocido como bloque principal o main
-
-```java
-public static void main(String[] args)
-```
-
-{ // Nuestro código… } Sin embargo, estas son alguna de las consecuencias cuando aumenta la complejidad de nuestro programa: • Código redundante: bloques de código repetidos. • Algoritmos extensos: solo hay un algoritmo que puede ser difícil de entender por su extensión.
-
-• Conflicto entre variables: puede haber un gran número de variables que no tienen relación entre ellas y podemos confundir la finalidad de unas con otras. En esta unidad aprenderemos, en primer lugar, a crear y utilizar nuestras propias funciones. En segundo lugar, estudiaremos las funciones recursivas, las cuales nos permitirán escribir versiones más sencillas de algoritmos complejos. Finalmente, veremos las ventajas de la programación modular y el diseño descendente.
-
-4.2 Concepto de función En programación, una función es un bloque de código destinado a realizar una función específica dentro de nuestro programa. Una forma de ver una función es como si fuera una caja negra. Esta caja realiza una única tarea a partir de unos datos de entrada y, como resultado de procesar esos datos, puede devolver o no datos de salida.
-
-El concepto de caja negra viene porque no nos importa como la función haga su tarea. Sólo nos importa que hace y qué necesita para hacerlo. Por ejemplo, necesitamos una función que sume dos números x e y. Esta función se puede representar matemáticamente como: sumar(x, y) = x + y. Sin embargo, al usuario sólo debe preocuparle los datos que se piden de entrada, x e y, y no cómo hace la operación.
-
-En formato de caja negra, la función sumar se representaría así
-
-FUNCIÓN Datos entrada Datos de salida
-
-J.R. Simó
-
-v3.30.10.23
-
-Las ventajas del uso de funciones es nuestros programas serían las siguientes: • Evitar repeticiones de código. • Incrementar la legibilidad de nuestro programa. • Dividir un problema complejo en otros más simples. • Reducir la probabilidad de cometer errores. • Facilidad en la modificación de nuestro programa.
-
-En Java a las funciones se las llama métodos debido a que están asociada un objeto. Por tanto, el término “método” está asociado al paradigma de programación orientada a objetos que estudiaremos en las siguientes unidades. 4.3 Definición de una función Al definir una función estamos construyendo un bloque de código que posteriormente podremos utilizar. La definición de una función tiene la siguiente sintaxis
-
-modificador tipoDatoDevuelto nombreDeFuncion (lista de parámetros de entrada) { // Cuerpo de la función
-
-```java
-return datoDevuelto;
-}
-```
-
-Veamos cada componente de la función: • modificador: define ciertas características de la función. Por ahora escribiremos delante de cada función el modificador public static. • tipoDatoDevuelto: el dato de salida de la función. Puede ser de tipo primitivo (int, float, etc) u objeto.
-
-• nombreDeFunción: es el nombre identificador que utilizaremos para que la función se ejecute. SUMAR (X,Y)
-
-J.R. Simó
-
-v3.30.10.23 • lista de parámetros de entrada: es el conjunto de datos de entrada que tendrá la función. Los parámetros se definen con tipo de variable e identificador y separados por comas. Sin embargo, puede haber funciones donde no tengan parámetros de entrada. • return datoDevuelto: la palabra reservada return indica que la variable o valor que se pone a continuación (datoDevuelto) es la salida de la función.
-
-Veamos el siguiente ejemplo donde definimos una función que simplemente muestra un mensaje por pantalla
-
-```java
-public static void saludar()
-```
-
-{
-
-```java
-System.out.println(“¿Quién es Niklaus Wirth?”);
-}
-```
-
-Podemos apreciar dos detalles característicos de esta función: • La lista de parámetros está vacía. • El tipo de dato se llama void. • No utilizamos la palabra reservada return. En primer lugar, al definir esta función sin parámetros estamos diciendo que no recibe datos de entrada.
-
-En segundo lugar, el tipo de dato void es no lo hemos visto hasta ahora. Se utiliza en la gran mayoría de veces en la definición de las funciones. Sirve para indicar que la función no devuelve ningún resultado después de realizar terminar el bloque de instrucciones que contiene. En programación, a este tipo de funciones que no devuelven ningún dato de salida se les conoce como subprogramas.
-
-Por último, al definir esta función como subprograma, no utilizaremos por tanto la palabra reservada return. Otro ejemplo más completo sería definir una función que recibe dos números enteros, hace el algoritmo que calcula el cuál es mayor y por último devuelve el número mayor.
-
-```java
-public static int mayor(int a, int b)
-```
-
-{ if(a >= b)
-
-```java
-mayor = a;
-    else
-        mayor = b;
-```
-
-```java
-return mayor;
-}
-```
-
-Iremos viendo con más detalle los conceptos que hemos visto hasta ahora. En el siguiente apartado aprenderemos a acceder al código fuente que se encuentra en el bloque de la función que hayamos creado.
-
-J.R. Simó
-
-v3.30.10.23 4.4 Llamada a una función Cuando definimos una función podemos entender que estamos etiquetando un bloque de código al cuál podremos acceder en cualquier momento para que se ejecute. Para llamar a una función podemos hacerlo de dos formas: • Si la función no devuelve ningún dato se ejecuta como una instrucción sin tener que almacenar el resultado de salida en ninguna variable, por ejemplo
-
-```java
-saludar();
-```
-
-• Si la función devuelve un dato, por ejemplo
-
-```java
-int resultado = mayor (3,4);
-```
-
-Observa que podemos hacer lo siguiente
-
-```java
-mayor(3, 4);
-```
-
-Esto lo que haría es llamar a la función, pero no guardaría en ningún sitio el resultado de vuelta. Hay veces que nos interesa recoger lo que devuelve la función y otras no, dependerá de la lógica del programa. Por otra parte, también podemos mostrar directamente el valor devuelto por la función
-
-```java
-System.out.println(mayor(3, 4));
-```
-
-¿Y desde dónde se puede llamar a las funciones? Desde cualquier otra función de nuestro programa. Por ahora, haremos las llamadas desde la función que más conocemos: el main. ¿Cómo se comporta nuestro programa cuando se hace una llamada a una función? Cuando estamos ejecutando una serie de instrucciones en la función F1 y hacemos una llamada a la función F2, nuestro programa pasa a ejecutar el código que está en el cuerpo de F2. Al finalizar el bloque de código que contiene F2, el programa devuelve el control a F1 en el mismo punto donde se hizo la llamada a F2.
-
-El siguiente esquema ilustra los descrito anteriormente e indicando el orden de ejecución de cada instrucción
-
-```java
-F1(){
-```
-
-Instrucción1; Instrucción2; F2(); // Punto de llamada y regreso. Instrucción5; }
-
-```java
-F2(){
-```
-
-Instrucción3; Instrucción4; } Un ejemplo completo donde podemos ejecutar la función saludar y mayor que hemos definido sería
-
-J.R. Simó
-
-v3.30.10.23
-
-4.5 Paso de parámetros Ya hemos visto que a las funciones le podemos pasar una serie de parámetros que serán los datos de entrada a la función. Sin embargo, tenemos que tener presente que existen técnicamente dos formas de pasar parámetros: • Paso por valor • Paso por referencia Es importante entender bien en qué se diferencia y por tanto vamos a verlo en detalle.
-
-4.5.1 Por valor La función hace una copia de los parámetros que le pasamos, es decir, no modifica los valores de las variables desde donde se llama a la función.
-
-J.R. Simó
-
-v3.30.10.23 En el siguiente ejemplo podemos ver que a la función incrementar le pasamos un parámetro de tipo entero, pero los cambios realizados a ese parámetro dentro de la función incrementar no afectan a su valor en la función main. El ejemplo, además, ilustra el comportamiento de la llamada a una función
-
-Salida
-
-Para obtener los cambios realizados en la función incrementar deberemos definirla para que devuelva un entero y recogeremos ese valor devuelto en la función main
-
-J.R. Simó
-
-v3.30.10.23
-
-Salida
-
-4.5.2 Por referencia Estudiaremos esta técnica en las unidad de estructuras estáticas (arrays). 4.6 Retorno de un valor Como hemos visto hasta ahora, siempre que queramos devolver un dato desde una función utilizaremos la palabra reservada return.
-
-J.R. Simó
-
-v3.30.10.23 Normalmente situaremos el return al final del bloque de la función, como hemos hecho en los ejemplos anteriores. Sin embargo, hay soluciones en las se puede utilizar el return en diversas partes del código para simplificar o por otros motivos. Por ejemplo
-
-Hay que tener en cuenta que cuando la función termina cuando ejecuta una sentencia return. En el anterior ejemplo si a es mayor que b, se ejecutará return a y terminará el bloque de la función mayor. Por tanto, no se ejecutará return b. 4.7 Ámbito de variables Hay dos tipos de ámbitos de variables
-
-• Global: se declara fuera de cualquier función. El tiempo de vida de la variable afecta a todo el bloque de la clase, es decir, la variable puede ser usada en todas las funciones y bloques. La variable deja de existir al terminar el programa. • Local: se define dentro de una función. El tiempo de vida de la variable afecta al bloque de la función.
-
-La variable deja de existir al terminar la función. 4.7.1 Ámbito global Observemos el siguiente ejemplo donde hacemos uso de una variable global
-
-J.R. Simó
-
-v3.30.10.23
-
-Salida: Podemos observar, por tanto, que la variable x siendo global se puede utilizar y modificar en cualquier función que esté dentro de la clase. ¡Atención! El uso de variables globales tipo static debe evitarse todo lo posible. Su uso debe estar restringido para programadores expertos en casos totalmente controlados. Estudiaremos mejor el modificador static en las unidades de programación orientada a objetos.
-
-4.7.2 Ámbito local En el siguiente ejemplo podemos observar que la variable x se declara de forma local dentro del bloque de la función incrementar y de la función main
-
-J.R. Simó
-
-v3.30.10.23
-
-Salida: Valor de x en incrementar: 6 Valor de x en main: 3 Asimismo, podemos declarar el mismo nombre de variable en distintas funciones ya que Java trata estas variables como locales y por tanto no tienen relación entre sí. 4.7.3 Conflicto entre variables Podríamos pensar que si declaramos una variable global ya no podremos declarar una variable local con el mismo nombre identificador. Sin embargo, esto se puede hacer y en Java la variable local tiene prioridad sobre la global. Esto es, si en una función declaramos una variable local con el mismo nombre que la global, entonces la variable global ya no tiene validez dentro de esa función.
-
-Veamos el siguiente ejemplo para entenderlo mejor
-
-J.R. Simó
-
-v3.30.10.23
-
-Salida: Valor de x en test1: 3 Valor de x en test2: 5 Valor de x en main: 7 En test1() al declarar int x = 3 la variable x ya no hará referencia a la global (x = 5) sino a la local (x = 3). Lo mismo para la función main. En cambio, en test2() hace uso de la variable global al no declararse una variable con el mismo nombre que esta.
-
-4.8 La función main Ya sabemos que la función main (o método main en Java) es la función principal o punto de entrada de nuestro programa. Es decir, todo programa empezará en la función main. En este apartado vamos a analizar otros aspectos importantes de esta función, como el paso de parámetros por consola.
-
-La función main siempre se declara con este encabezado
-
-```java
-public static void main (String[] args)
-```
-
-Nota Ahora ya sabes que la función main no devuelve nada. En otros lenguajes, como C o C++, la función main sí que devuelve un entero.
-
-J.R. Simó
-
-v3.30.10.23 4.8.1 Parámetros de entrada a la función main Nota En este apartado hacemos una breve aproximación al concepto de array. Por tanto, no hace falta entender completamente el concepto de array, simplemente seguir los pasos que se indican en este apartado para obtener parámetros de entrada a la función main.
-
-Analizando el encabezado de la función main, también podemos entender ahora que tiene un parámetro de entrada: String[] args También sabemos que este parámetro es un array de tipo String, es decir, que en cada elemento del array almacenará una cadena de texto de tipo String.
-
-Sin embargo, ¿para qué sirve este parámetro? Vamos a verlo. Es muy frecuente que un programa llamado desde la línea de comandos (la consola de Windows o Linux) tenga ciertas opciones que le indicamos como argumentos. Por ejemplo, bajo Linux podemos ver la lista detallada de ficheros que terminan en .java haciendo
-
-```java
-ls -l *.java
-```
-
-En este caso, la orden sería ls y las dos opciones (o parámetros) que le indicamos son -l y *.java La orden equivalente en la consola de comandos de Windows sería: dir *.java Pues bien, estas opciones que se les pasa al programa en línea de comandos se pueden leer desde Java. Hay que tener en cuenta que dir o ls sería el programa propiamente.
-
-Ahora ya podemos imaginar que la utilidad del parámetro String[] args será almacenar estas opciones que se les pasa al programa ya que son cadenas de texto. Veamos un ejemplo práctico de cómo funciona.
-
-Si ejecutamos el programa LineaComandos desde consola y queremos pasar dos parámetros, por ejemplo, “uno” y “dos”, sería así
-
-J.R. Simó
-
-v3.30.10.23 java LineaComandos uno dos Si lo queremos pasar los parámetros desde un IDE, como por ejemplo Eclipse, deberemos hacer click derecho sobre el fichero .java que queramos ejecutar → Run as → Run Configurations → Pestaña “(x)=Arguments” → Escribir los parámentros, separados por espacions, en el campo de texto “Program arguments”. Por ejemplo, si le quiero pasar los valores 15 y 30 a “EjercicioPrueba.java”, quedaría así en el Run Configurations
-
-Salida: Parámetro 1: uno Parámetro 2: dos
-
-J.R. Simó
-
-v3.30.10.23 4.9 Recursividad La recursividad es una técnica que permite solucionar un problema a partir de casos más simples del mismo problema. ¿Cómo se aplica esta técnica a las funciones? Llamando una función a sí misma
-
-```java
-public static void funcion1()
-```
-
-{ // Instrucciones...
-
-```java
-funcion1();
-    // Instrucciones....
-}
-```
-
-En el anterior ejemplo podemos ver, en forma de código, que una de las instrucciones que tiene la funcion1() es llamarse a sí misma. Ahora nos podemos preguntar que si una función se llama a sí misma, ¿cuándo va a parar? En este punto debemos tener en cuenta dos conceptos importantes de la recursión
-
-• Caso recursivo: es una versión más sencilla (o subproblema) que la del problema original. También se conoce como la llamada recursiva. • Caso base: es el caso más simple del problema original. También se conoce como Condición de Parada. Nota Para afrontar una solución recursiva siempre debemos pensar en la versión recursiva del problema y cuál es su caso base. Además, debemos tener en cuenta que en cada llamada recursiva el problema se vuelve más simple, hasta llegar a la versión más simple de todas que es el caso base.
-
-4.9.1 Ejemplo del factorial de un número En matemáticas, un problema típico que se puede afrontar recursivamente es el factorial de un número. Por ejemplo, el factorial del número 4 sería: 4! = 4 𝑥 3 𝑥 2 𝑥 1 = 24 Por tanto, podemos definir el factorial de un número es el resultado de multiplicar ese número por los que le siguen hasta llegar a 1.
-
-El problema original sería calcular el factorial de cualquier número, que llamamos n: 𝑛! = 𝑛 𝑥 (𝑛 – 1) 𝑥 (𝑛 – 2) 𝑥 . . . 𝑥 3 𝑥 2 𝑥 1 Ahora podemos pensar en una versión más simple de 𝑛!, que sería (𝑛 – 1)! (𝑛 – 1)! = (𝑛 – 1) 𝑥 (𝑛 – 2) 𝑥 . . . 𝑥 3 𝑥 2 𝑥 1
-
-J.R. Simó
-
-v3.30.10.23 Finalmente, debemos encontrar el caso más simple. Este caso puede ser cuando n = 1, ya que por definición el factorial de 1 es 1: 1! = 1 Por tanto, ya tenemos los dos componentes esenciales para afrontar recursivamente el factorial de un número: • Caso recursivo: 𝑛! = 𝑛 𝑥 (𝑛 – 1)! para n > 1 • Caso base: 1!
-
-Nota También podríamos pensar que el caso base es 0, ya que el el factorial de 0! = 1 Ahora ya podemos programar el caso factorial con una función recursiva de la siguiente forma
-
----
-
-# 4.2 Programación estructurada y modular
 
 Programación
 
-### UD 4: Programación estructurada y modular
+### UD 8: Utilización avanzada de clases
 
 Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
 
-Programación estructurada y modular ORDEN 60/2012, de 25 de septiembre, de la Conselleria de Educación, Formación y Empleo por la que se establece para la Comunitat Valenciana el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web. [2012/9149] Contenidos
+Programación
 
-2.8.− Codificación de métodos estáticos. 2.9.− Utilización de métodos estáticos. 2.10.− Parámetros y valores devueltos. 2.11.− Librerías de objetos. Real Decreto 686/2010, de 20 de mayo, por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web y se fijan sus enseñanzas mínimas.
+Utilización avanzada de clases 1.− Relación entre clases 2.− Composición 3.− Herencia. Superclases y subclases 4.− Clases y métodos abstractos y finales 5.− Constructores y herencia. Sobreescritura 6.− Interfaces 7.− Polimorfismo 8.- Terminología
 
-Resultados de aprendizaje
+1.- Relación entre clases Programación
 
-- Escribe y prueba programas sencillos, reconociendo y aplicando los fundamentos de la programación orientada a
+### UD 11: Utilización avanzada de clases
 
-objetos. Criterios de evaluación
+1.- Relación entre clases Se pueden distinguir diversos tipos de relaciones entre clases: Clientela: Cuando una clase utiliza objetos de otra clase (por ejemplo al pasarlos como parámetros a través de un método). Composición: Cuando alguno de los atributos de una clase es un objeto de otra clase.
 
-- b) Se han escrito programas simples.
+Anidamiento: Cuando se definen clases en el interior de otra clase. Herencia: Cuando una clase comparte determinadas características con otra (clase base), añadiéndole alguna funcionalidad específica (especialización). Programación
 
-2.e) Se han escrito llamadas a métodos estáticos. 2.f) Se han utilizado parámetros en la llamada a métodos. Competencias profesionales, personales y sociales
+1.- Relación entre clases ¿Herencia o composición? Cuando escribas tus propias clases, debes intentar tener claro en qué casos utilizar la composición y cuándo la herencia: Composición: cuando una clase está formada por objetos de otras clases. En estos casos se incluyen objetos de esas clases, pero no necesariamente se comparten características con ellos (no se heredan características de esos objetos, sino que directamente se utilizarán sus atributos y sus métodos).
 
-- Desarrollar servicios para integrar sus funciones en otras aplicaciones web, asegurando su funcionalidad.
+Esos objetos incluidos no son más que atributos miembros de la clase que se está definiendo. Herencia: cuando una clase cumple todas las características de otra. En estos casos la clase derivada es una especialización (o particularización, extensión o restricción) de la clase base. Desde otro punto de vista se diría que la clase base es una generalización de las clases derivadas.
 
 Programación
 
-UD6: Programación estructurada y modular
+2.- Composición Programación
+
+2.- Composición Sintaxis de la composición en Java class <NombreClase> { [modificadores] <NombreClase1> nombreAtributo1; [modificadores] <NombreClase2> nombreAtributo2; } Programación
+
+3.- Herencia Programación
+
+Proceso mediante el cual una clase adquiere las propiedades de otra clase Permite definir una nueva clase o subclase a partir de otra clase o superclase. Una subclase incluye todo el comportamiento y especificación de sus antecesores. Las subclases redefinen la estructura y el comportamiento de sus superclases.
+
+La herencia permite reutilizar código 3.- Herencia Programación
+
+3.- Herencia Uno de los objetivos fundamentales de la POO es la de facilitar la reutilización del código. Ello permite volver a emplear elementos que al haber sido ya realizados son bien conocidos y están, posiblemente, exhaustivamente probados. En particular, en los lenguajes de programación orientados a objetos el mecanismo básico para la reutilización del código es la herencia.
+
+Mediante ella es posible definir nuevas clases extendiendo o restringiendo las funcionalidades de otras clases ya existentes. La herencia es un mecanismo que permite modelar relaciones jerárquicas entre elementos, del tipo is a (es un(a)), por ejemplo, esta es la relación que se da entre una máquina y un ordenador, en la que un ordenador es una máquina. En una relación así un elemento, el heredero, tiene las características de otro elemento pero, tal vez, refinándolas para definirlo como un caso especial del primero.
+
+Nótese que, para el ejemplo anterior, si un Ordenador es una Maquina, también un PCCompatible es un Ordenador, así como miPC es, a su vez, un PCCompatible. Naturalmente, desde la POO Maquina, Ordenador y PCCompatible son todos ellos clases, que forman una jerarquía, siendo una instancia de todos ellos (un objeto) miPC.
 
 Programación
 
-UD6: Programación estructurada y modular Programación estructurada y modular 1.- ¿Qué es la programación estructurada y modular? 2.- Ventajas 3.- Descomposición modular. Técnicas 4.- Funciones.
+Animal Mamífero Canino Doméstico Collie Reptil ... Felino ... Salvaje Lobo Pastor alemán 3.- Herencia Programación
 
-Declaración, Invocación e Implementación 5.- Paso de parámetros 6.- Sobrecarga de funciones 7.- Reutilización de código
+3.- Herencia Acceso a miembros heredados Programación
 
-1.- ¿Qué es la programación estructurada? ¿Qué es la programación modular? Programación
+Cuadro de accesibilidad a los atributos y métodos de una clase Misma clase Subclase Mismo paquete Otro paquete Sin modificador (paquete) X X X public X X X X private X protected X X X
 
-UD6: Programación estructurada y modular
+3.- Herencia Diseño de las clases base y derivadas: extends, protected y super [modificador] class ClasePadre { // Cuerpo de la clase … } [modificador] class ClaseHija extends ClasePadre { // Cuerpo de la clase … } NOTA: Si queremos prohibir que una clase pueda ser extendida (sellar la clase), deberemos añadir el modificador final en la declaración de la clase. De este modo, no se podrá crear una clase que herede de ésta.
 
-1.- ¿Qué es la programación estructurada? “La programación estructurada es un paradigma de programación orientado a mejorar la claridad, calidad y tiempo de desarrollo de un programa de computadora recurriendo únicamente a subrutinas y tres estructuras básicas
+[modificador] final class ClaseFinal { // Cuerpo de la clase … } Programación
 
-secuencia,
+4.- Clases y métodos abstractos y finales Programación
 
-selección (if y switch) e
+4.- Clases y métodos abstractos y finales Clase abstracta Una clase abstracta es aquella que no va a tener instancias (objetos) de forma directa, aunque sí habrá instancias de las subclases (siempre que esas subclases no sean también abstractas). Por ejemplo, si se define la clase Animal como abstracta, no se podrán crear objetos de la clase Animal, es decir, no se podrá hacer Animal mascota = new Animal(), pero sí se podrán crear instancias de la clase Gato, Ave o Delfín que son subclases de Animal.
+
+La idea es permitir que otras clases deriven de ella, proporcionando un modelo genérico y algunos métodos de utilidad general. Programación
+
+4.- Clases y métodos abstractos y finales Clase abstracta La posibilidad de declarar clases abstractas es una de las características más útiles de los lenguajes orientados a objetos, pues permiten dar unas líneas generales de cómo es una clase sin tener que implementar todos sus métodos o implementando solamente algunos de ellos.
+
+Esto resulta especialmente útil cuando las distintas clases derivadas deban proporcionar los mismos métodos indicados en la clase base abstracta, pero su implementación sea específica para cada subclase. Programación
+
+4.- Clases y métodos abstractos y finales Método abstracto Un método abstracto es un método declarado en una clase para el cual esa clase no proporciona la implementación. Si una clase dispone de al menos un método abstracto se dice que es una clase abstracta. Toda clase que herede (sea subclase) de una clase abstracta debe implementar todos los métodos abstractos de su superclase o bien volverlos a declarar como abstractos (y por tanto también sería abstracta). Para declarar un método abstracto en Java se utiliza el modificador abstract.
+
+Un método abstracto es un método cuya implementación no se define, sino que se declara únicamente su interfaz (cabecera) para que su cuerpo sea implementado más adelante en una clase derivada. Un método se declara como abstracto mediante el uso del modificador abstract (como en las clases abstractas)
 
 ```java
-iteración (bucles for y while);
-```
-
-asimismo, se considera innecesario y contraproducente el uso de la instrucción de transferencia incondicional (GOTO), que podría conducir a código espagueti, mucho más difícil de seguir y de mantener, y fuente de numerosos errores de programación.” Programación
-
-UD6: Programación estructurada y modular
-
-1.- ¿Qué es la programación modular? “La programación modular es un paradigma de programación que consiste en dividir un programa en módulos o subprogramas con el fin de hacerlo más legible y manejable. Se presenta históricamente como una evolución de la programación estructurada para solucionar problemas de programación más grandes y complejos de lo que esta puede resolver.
-
-Al aplicar la programación modular, un problema complejo debe ser dividido en varios subproblemas más simples, y estos a su vez en otros subproblemas más simples. Esto debe hacerse hasta obtener subproblemas lo suficientemente simples como para poder ser resueltos fácilmente con algún lenguaje de programación. Esta técnica se llama refinamiento sucesivo, divide y vencerás o análisis descendente (Top-Down).” Programación
-
-UD6: Programación estructurada y modular
-
-2.- Ventajas Programación
-
-UD6: Programación estructurada y modular
-
-2.- Ventajas - Programación Estructurada - ✓ Los programas son más fáciles de entender, pueden ser leídos de forma secuencial y no hay necesidad de tener que rastrear saltos de líneas (GOTO) dentro de los bloques de código para intentar entender la lógica interna. ✓ La estructura de los programas es clara, puesto que las instrucciones están más ligadas o relacionadas entre sí.
-
-✓ Se optimiza el esfuerzo en las fases de pruebas y depuración. El seguimiento de los fallos o errores del programa (debugging), y con él su detección y corrección, se facilita enormemente. ✓ Se reducen los costos de mantenimiento. Análogamente a la depuración, durante la fase de mantenimiento, modificar o extender los programas resulta más fácil.
-
-✓ Los programas son más sencillos y más rápidos de confeccionar. ✓ Se incrementa el rendimiento de los programadores. Programación
-
-UD6: Programación estructurada y modular
-
-2.- Ventajas - Programación Modular - ✓ Facilita la comprensión del problema y su resolución escalonada. ✓ Aumenta la claridad y legibilidad de los programas. ✓ Permite que varios programadores trabajen en el mismo problema a la vez, puesto que cada uno puede trabajar en uno o varios módulos de manera bastante independiente.
-
-✓ Reduce el tiempo de desarrollo, reutilizando módulos previamente desarrollados. ✓ Mejora la fiabilidad de los programas, porque es más sencillo diseñar y depurar módulos pequeños que programas enormes. ✓ Facilita el mantenimiento de los programas. ✓ Se consigue la reutilización de código. En lugar de escribir el mismo código repetido cuando se necesite, se hace una llamada al método que lo realiza.
-
-Programación
-
-UD6: Programación estructurada y modular
-
-3.- Descomposición modular. Técnicas Programación
-
-UD6: Programación estructurada y modular
-
-3.- Descomposición modular. Técnicas Es necesario un compromiso entre el tamaño de los módulos y la complejidad de la aplicación. ✓ Si un programa se descompone en demasiadas unidades, decrece la efectividad. ✓ Cuando el número de módulos se incrementa, decrece el esfuerzo para realizarlos, pero aumenta el esfuerzo de integración y la carga en memoria.
-
-Algunos criterios de descomposición (no válidos). ✓ Descomposición por tamaño (50 líneas por módulo) Descomposición por tamaño (50 líneas por módulo). ✓ Complejidad del módulo: niveles de anidamiento (menos de 7 niveles). Programación
-
-UD6: Programación estructurada y modular
-
-3.- Descomposición modular. Técnicas ‰ Independencia funcional Un módulo debe realizar una única tarea y comunicarse lo menos posible con el resto de módulos. ‰ Un módulo se debe dividir hasta que se consiga un nivel mínimo aceptable de independencia funcional. La independencia funcional se puede medir según dos criterios
-
-Cohesión
-
-Mide la relación entre las partes internas de un módulo.
-
-Todas deben estar encaminadas a realizar una única función. Acoplamiento
-
-Mide la relación del módulo con el resto de los módulos.
-
-Debe comunicarse lo menos posible.
-
-Pocas veces se conseguirá un acoplamiento nulo. ✓ Un módulo debe tener mucha cohesión y poco acoplamiento. Programación
-
-UD6: Programación estructurada y modular
-
-4.- Funciones (métodos) Programación
-
-UD6: Programación estructurada y modular
-
-4.- Funciones Algoritmo principal y subalgoritmos En general, el problema principal se resuelve en un algoritmo que denominaremos algoritmo o módulo principal, mientras que los subproblemas sencillos se resolverán en subalgoritmos, también llamados módulos a secas. Los subalgoritmos están subordinados al algoritmo principal, de manera que éste es el que decide cuándo debe ejecutarse cada subalgoritmo y con qué conjunto de datos.
-
-El algoritmo principal realiza llamadas o invocaciones a los subalgoritmos, mientras que éstos devuelven resultados a aquél. Así, el algoritmo principal va recogiendo todos los resultados y puede generar la solución al problema global. Programación
-
-UD6: Programación estructurada y modular
-
-4.- Funciones Cuando el algoritmo principal hace una llamada al subalgoritmo (es decir, lo invoca), se empiezan a ejecutar las instrucciones del subalgoritmo. Cuando éste termina, devuelve los datos de salida al algoritmo principal, y la ejecución continúa por la instrucción siguiente a la de invocación.
-
-También se dice que el subalgoritmo devuelve el control al algoritmo principal, ya que éste toma de nuevo el control del flujo de instrucciones después de habérselo cedido temporalmente al subalgoritmo. Programación
-
-UD6: Programación estructurada y modular
-
-4.- Funciones El programa principal puede invocar a cada subalgoritmo el número de veces que sea necesario. A su vez, cada subalgoritmo puede invocar a otros subalgoritmos, y éstos a otros, etc. Cada subalgoritmo devolverá los datos y el control al algoritmo que lo invocó.
-
-Programación
-
-UD6: Programación estructurada y modular
-
-4.- Funciones Ejemplo: Algoritmo que pide el radio de una circunferencia al usuario y devuelve su área y perímetro. Programación
-
-UD6: Programación estructurada y modular
-
-4.- Funciones La estructura general de una función Java es la siguiente: [acceso] [modificador] tipoDevuelto nombreMetodo([lista parámetros]) [throws listaExcepciones] {
-
-/*
-
-- Bloque de instrucciones
-
-*/
-
-[return valor;] } Los elementos que aparecen entre corchetes son opcionales. acceso (opcional): determinan el tipo de acceso al método. Se verán en detalle más adelante. modificador (opcional) : puede ser final a static. Se verán en detalle más adelante. tipoDevuelto: indica el tipo del valor que devuelve el método. En Java es imprescindible que en la declaración de un método, se indique el tipo de dato que ha de devolver. El dato se devuelve mediante la instrucción return. Si el método no devuelve ningún valor este tipo será void (procedimiento).
-
-nombreMetodo: es el nombre que se le da al método. Para crearlo hay que seguir las mismas normas que para crear nombres de variables. Programación
-
-UD6: Programación estructurada y modular
-
-4.- Funciones lista de parámetros (opcional): después del nombre del método y siempre entre paréntesis puede aparecer una lista de parámetros (también llamados argumentos) separados por comas. Estos parámetros son los datos de entrada que recibe el método para operar con ellos. Un método puede recibir cero o más argumentos. Se debe especificar para cada argumento su tipo. Los paréntesis son obligatorios aunque estén vacíos. Se denominan parámetros formales.
-
-throws listaExcepciones (opcional): indica las excepciones que puede generar y manipular el método. return: se utiliza para devolver un valor. La palabra clave return va seguida de una expresión que será evaluada para saber el valor de retorno. Esta expresión puede ser compleja o puede ser simplemente el nombre de un objeto, una variable de tipo primitivo o una constante.
-
-El tipo del valor de retorno debe coincidir con el tipoDevuelto que se ha indicado en la declaración del método. Si el método no devuelve nada (tipoDevuelto = void) la instrucción return no se indica. Un método puede devolver un tipo primitivo, un array, un String o un objeto.
-
-La instrucción return puede aparecer en cualquier lugar dentro del método, no tiene que estar necesariamente al final. Programación
-
-UD6: Programación estructurada y modular
-
-5.- Paso de parámetros Programación
-
-UD6: Programación estructurada y modular
-
-5.- Paso de parámetros A los parámetros que aparecen en la cabecera de las funciones se les denomina parámetros formales del método, mientras que los valores que se pasan como argumentos en la llamada al método se denominan los parámetros reales de la llamada. El paso de parámetros en Java siempre se hace por el método de paso de parámetros por valor (o por copia). En Java no existe el paso por referencia.
-
-//a y b son parámetros formales
-
-```java
-public static void intercambio(double a, double b) {
-```
-
-…
-
-}
-
-//x e y son parámetros reales
-
-```java
-intercambio(x, y);
+[modificador_acceso] abstract <tipo> <nombreMetodo> ([parámetros]) [excepciones];
 ```
 
 Programación
 
-UD6: Programación estructurada y modular
+4.- Clases y métodos abstractos y finales Método abstracto Estos métodos tendrán que ser obligatoriamente redefinidos (en realidad “definidos”, pues aún no tienen contenido) en las clases derivadas. Si en una clase derivada se deja algún método abstracto sin implementar, esa clase derivada será también una clase abstracta.
 
-5.- Paso de parámetros Ejemplo: Supóngase el siguiente método que pretende intercambiar el valor de dos variables reales
+Cuando una clase contiene un método abstracto tiene que declararse como abstracta obligatoriamente. Cuando trabajes con clases abstractas debes tener en cuenta: Una clase abstracta sólo puede usarse para crear nuevas clases derivadas. No se puede hacer un new de una clase abstracta. Se produciría un error de compilación.
+
+Una clase abstracta puede contener métodos totalmente definidos (no abstractos) y métodos sin definir (métodos abstractos). Programación
+
+4.- Clases y métodos abstractos y finales Clases y métodos finales El modificador final, sólo lo has utilizado por ahora para atributos y variables (por ejemplo para declarar atributos constantes, que una vez que toman un valor ya no pueden ser modificados). Pero este modificador también puede ser utilizado con clases y con métodos (con un comportamiento que no es exactamente igual, aunque puede encontrarse cierta analogía: no se permite heredar o no se permite redefinir).
+
+Una clase final no puede ser heredada, es decir, no puede tener clases derivadas. La jerarquía de clases a la que pertenece acaba en ella (no tendrá clases hijas) Un método final no podrá ser redefinido en una clase derivada. Si intentas redefinir un método final en una subclase se producirá un error de compilación.
+
+Programación
+
+5.- Constructores y herencia Programación
+
+5.- Constructores y herencia. Sobreescritura Recuerda que un constructor de una clase puede llamar a otro constructor de la misma clase, previamente definido, a través de la referencia this. En estos casos, la utilización de this sólo podía hacerse en la primera línea de código del constructor.
+
+Un constructor de una clase derivada puede hacer algo parecido para llamar al constructor de su clase base mediante el uso de a palabra super. De esta manera, el constructor de una clase derivada puede llamar primero al constructor de su superclase para que inicialice los atributos heredados y posteriormente se inicializarán los atributos específicos de la clase: los no heredados.
+
+Nuevamente, esta llamada también debe ser la primera sentencia de un constructor (con la única excepción de que exista una llamada a otro constructor de la clase mediante this). Programación
+
+5.- Constructores y herencia. Sobreescritura Si no se incluye una llamada a super() dentro del constructor, el compilador incluye automáticamente una llamada al constructor por defecto de clase base (llamada a super()). Esto da lugar a una llamada en cadena de constructores de superclase hasta llegar a la clase más alta de la jerarquía (que en Java es la clase Object).
+
+En el caso del constructor por defecto (el que crea el compilador si el programador no ha escrito ninguno), el compilador añade lo primero de todo, antes de la inicialización de los atributos a sus valores por defecto, una llamada al constructor de la clase base mediante la referencia super.
+
+Programación
+
+5.- Constructores y herencia. Sobreescritura Ejemplo: Si la clase Persona tuviera un constructor de este tipo
 
 ```java
-public static void intercambio(double a, double b) {
-double aux = a;
-a = b;
-b = aux;
+public Persona (String nombre, String apellidos, GregorianCalendar fechaNacim) {
+this.nombe= nombre;
+this.apellidos= apellidos;
+this.fechaNacim= new GregorianCalendar (fechaNacim);
 }
 ```
 
-y una llamada al método desde la clase en la que está implementado
+Podrías llamarlo desde un constructor de una clase derivada (por ejemplo Alumno) de la siguiente forma: public Alumno (String nombre, String apellidos, GregorianCalendar fechaNacim,
 
 ```java
-double x = 5.0, y = 7.0;
+String grupo, double notaMedia) {
+super (nombre, apellidos, fechaNacim);
+this.grupo= grupo;
+this.notaMedia= notaMedia;
+}
 ```
 
-intercambio(x, y); // después de la llamada: x = 5 e y = 7 Con esta invocación, los argumentos a y b se inicializan a los valores 5.0 y 7.0, respectivamente. Tras la ejecución de las instrucciones del cuerpo del método, a y b intercambian sus valores, pero las variables x e y no sufren ningún cambio.
+En realidad se trata de otro recurso más para optimizar la reutilización de código, en este caso el del constructor, que aunque no es heredado, sí puedes invocarlo para no tener que rescribirlo. Programación
+
+6.- Interfaces Programación
+
+6.- Interfaces Hemos visto cómo la herencia permite definir especializaciones (o extensiones) de una clase base que ya existe sin tener que volver a repetir de todo el código de ésta. Este mecanismo da la oportunidad de que la nueva clase especializada (o extendida) disponga de toda la interfaz que tiene su clase base.
+
+También hemos estudiado cómo los métodos abstractos permiten establecer una interfaz para marcar las líneas generales de un comportamiento común de superclase que deberían compartir de todas las subclases. Si llevamos al límite esta idea de interfaz, podrías llegar a tener una clase abstracta donde todos sus métodos fueran abstractos. De este modo estarías dando únicamente el marco de comportamiento, sin ningún método implementado, de las posibles subclases que heredarán de esa clase abstracta.
+
+La idea de una interfaz (o interface) es precisamente ésa: disponer de un mecanismo que permita especificar cuál debe ser el comportamiento que deben tener todos los objetos que formen arte de una determinada clasificación (no necesariamente jerárquica). Programación
+
+6.- Interfaces Una interfaz en Java consiste esencialmente en una lista de declaraciones de métodos sin implementar, junto con un conjunto de constantes. Estos métodos sin implementar indican un comportamiento, un tipo de conducta, aunque no especifican cómo será ese comportamiento (implementación), pues eso dependerá de las características específicas de cada clase que decida implementar esa interfaz.
+
+Podría decirse que una interfaz se encarga de establecer qué comportamientos hay que tener (qué métodos), pero no dice nada de cómo deben llevarse a cabo esos comportamientos (implementación). Se indica sólo la forma, no la implementación. En cierto modo podrías imaginar el concepto de interfaz como un guión que dice: "éste es el protocolo de comunicación que deben presentar todas las clases que implementen esta interfaz".
+
+Se proporciona una lista de métodos públicos y, si quieres dotar a tu clase de esa interfaz, tendrás que definir todos y cada uno de esos métodos públicos. Programación
+
+6.- Interfaces En conclusión: una interfaz se encarga de establecer unas líneas generales sobre los comportamientos (métodos) que deberían tener los objetos de toda clase que implemente esa interfaz, es decir, que no indican lo que el objeto es (de eso se encarga la clase y sus superclases), sino acciones (capacidades) que el objeto debería ser capaz de realizar.
+
+Es por esto que el nombre de muchas interfaces en Java termina con sufijos del tipo "‐able", "‐or", "‐ente" y cosas del estilo, que significan algo así como capacidad o habilidad para hacer o ser receptores de algo (configurable, serializable, modificable, clonable, ejecutable, administrador, servidor, buscador, etc.), dando así la idea de que se tiene la capacidad de llevar a cabo el conjuntode acciones especificadas en la interfaz.
 
 Programación
 
-UD6: Programación estructurada y modular
+6.- Interfaces Definición de interfaces La declaración de una interfaz en Java es similar a la declaración de una clase, aunque con algunas variaciones: Se utiliza la palabra reservada interface en lugar de class. Puede utilizarse el modificador public. Si incluye este modificador la interfaz debe tener el mismo nombre que el archivo .java en el que se encuentra (exactamente igual que sucedía con las clases). Si no se indica el modificador public, el acceso será por omisión o "de paquete" (como sucedía con las clases).
 
-5.- Paso de parámetros Dirás pero yo cuando paso un array por parámetros y lo modifico desde el método al que se lo paso, este cambia, no estoy pasando una copia del array. Parece ser que mi argumento falla, pero te explico: Lo que tú almacenas en una variable no primitiva no es el objeto en sí sino una dirección o identificador del objeto en el espacio dinámico de memoria.
+Todos los miembros de la interfaz (atributos y métodos) son public de manera implícita. No es necesario indicar el modificador public, aunque puede hacerse. Todos los atributos son de tipo final y public (tampoco es necesario especificarlo), es decir, constantes y públicos. Hay que darles un valor inicial.
 
-Cuando pasas por parámetros la variable, estás pasando una copia de dicha dirección. Si modificas el objeto dentro de la función, después de devolver el flujo de ejecución, tu objeto habrá cambiado. Programación
+Todos los métodos son abstractos también de manera implícita (tampoco hay que indicarlo). No tienen cuerpo, tan solo la cabecera. Programación
 
-UD6: Programación estructurada y modular
-
-6.- Sobrecarga de funciones Programación
-
-UD6: Programación estructurada y modular
-
-6.- Sobrecarga de funciones En java, una clase puede contener dos métodos con el mismo nombre si: ✓ Tienen diferente número de argumentos. ✓ Si el tipo de los argumentos es distinto, aunque tenga el mismo número de ellos. Programación
-
-UD6: Programación estructurada y modular
-
-6.- Sobrecarga de funciones Para entender esta sencilla propiedad de java, lo mejor es contemplar el siguiente ejemplo de dos métodos sobrecargados.
+6.- Interfaces Como puedes observar, una interfaz consiste esencialmente en una lista de… atributos finales (constantes) y métodos abstractos (sin implementar). Su sintaxis, en Java, quedaría entonces: [public] interface <NombreInterfaz> {
 
 ```java
-public void unMetodo() {
+[public] [final] <tipo1> <atributo1>= <valor1>;
+[public] [final] <tipo2> <atributo2>= <valor2>;
 ```
 
-//Código del método }
+...
 
 ```java
-public void unMetodo(int numero) {
+[public] [abstract] <tipo_devuelto1> <nombreMetodo1> ([lista_parámetros]);
+[public] [abstract] <tipo_devuelto2> <nombreMetodo2> ([lista_parámetros]);
 ```
 
-//Código del método } En este ejemplo, ambos métodos tienen el mismo nombre y número distinto de argumentos. Cuando se llame al método unMetodo(), se ejecutará el primero, y cuando se llame de esta manera unMetodo(5), se ejecutará el segundo. Programación
+... } Programación
 
-UD6: Programación estructurada y modular
-
-6.- Sobrecarga de funciones Veamos otro ejemplo
-
-```java
-public void otroMetodo(int numeroEntero) {
-```
-
-//Código del método }
-
-```java
-public void otroMetodo(float numeroReal) {
-```
-
-//Código del método } Como vemos, ambos métodos tienen el mismo nombre y el mismo número de argumentos, en cambio el argumento que reciben es de distinto tipo de modo que cuando se llame al método otroMetodo(15), se ejecutará el primero, y cuando se llame de esta manera otroMetodo(15.5), se ejecutará el segundo.
+6.- Interfaces Clases abstractas Vs Interfaces Similaridades  No pueden ser instanciadas.  No pueden ser selladas (final). Diferencias  Las Interfaces no pueden contener ninguna implementación.  Las Interfaces no pueden declarar miembros no públicos.  Las Interfaces no pueden extender clases.
 
 Programación
 
-UD6: Programación estructurada y modular
+7.- Polimorfismo Programación
 
-7.- Reutilización de código Programación
+7.- Polimorfismo El polimorfismo se refiere al hecho de que una misma función adopte múltiples formas. Esto se consigue por medio de la sobrecarga: Sobrecarga de funciones: un mismo nombre de función para distintas funciones.
 
-UD6: Programación estructurada y modular
+```java
+a = sumar(c, d);
+a = sumar(c, d, 5);
+```
 
-7.- Reutilización de código A menudo hay que realizar una misma operación en varios programas o en distintas partes del mismo programa. Programación
+Sobrecarga de operadores: un mismo operador con distintas funcionalidades.
 
-UD6: Programación estructurada y modular Podemos copiar el código varias veces y manipular las entradas para que funcione en otro programa. No obstante, ¿qué pasa si hay que modificar ese código? Habrá que cambiarlo en todos los lugares donde se encuentra. Por esto es mejor tener una única vez el código y poder llamarlo desde donde haga falta.
-
-7.- Reutilización de código Métodos para reutilizar código: ✓ Extraer funciones ✓ Programación Orientada a Objetos ✓ API o librerías. En cualquier clase se pueden definir métodos para agrupar e identificar una secuencia de acciones con el fin de poder ser utilizadas una o más veces a lo largo de la clase.
-
-Es lo que se conoce como subprogramación o encapsulamiento del código. En Programación Orientada a Objetos veremos los mecanismos básicos para la reutilización de código son la composición y herencia. Mediante la herencia es posible definir nuevas clases extendiendo o restringiendo las funcionalidades de otras clases ya existentes.
-
-La interfaz de programación de aplicaciones, conocida también por la sigla API del inglés application programming interface, es un conjunto de subrutinas, funciones y procedimientos (o métodos, en la programación orientada a objetos) que ofrece cierta biblioteca para ser utilizado por otro software como una capa de abstracción.
+```java
+entero1 = entero2 + 5;
+cadena1 = cadena2 + cadena3;
+```
 
 Programación
 
-UD6: Programación estructurada y modular
+7.- Polimorfismo En la sobrecarga de funciones se desarrollan distintas funciones con un mismo nombre pero distinto código. Las funciones que comparten un mismo nombre deben tener una relación en cuanto a su funcionalidad. Aunque comparten el mismo nombre, deben tener distintos parámetros.
+
+Éstos pueden diferir en
+
+- El número
+- El tipo
+- El orden
+
+El tipo del valor de retorno de una función no es válido como distinción. Programación
+
+8.- Terminología Programación
+
+Clase Objeto Atributos Métodos Instancia Abstracción Encapsulamiento Modularidad Jerarquía Generalización Herencia Asociación Agregación Polimorfismo Constructor Destructor Miembro Público Miembro Privado Miembro Protegido 8.- Terminología Programación
+
+Abstracción: La abstracción es la capacidad que permite representar las características esenciales de un objeto sin preocuparse de las restantes características (no esenciales). Encapsulamiento: Es la propiedad que permite asegurar que los aspectos externos de un objeto se diferencie de sus detalles internos.
+
+Modularidad: La modularidad es la propiedad que permite dividir una aplicación en partes más pequeñas ( llamadas módulos ), cada una de las cuales debe ser tan independiente como sea posible de la aplicación en si y de las restantes partes. Jerarquía: Es una clasificación u ordenación de las abstracciones.
+
+8.- Terminología Programación
+
+Generalización: Una clase que comparte atributos y métodos similares con otras clases se le llama superclase o clase padre. Cuando definimos una clase padre estamos generalizando. Herencia: Del mismo modo, cuando definimos una clase a partir de una clase padre estamos creando una subclase. La definición de una subclase se le denomina herencia.
+
+Asociación: Una asociación es una relación semántica entre objetos. Cuando un objeto accede a los atributos y métodos de otro objeto estamos definiendo una asociación entre ellos. Agregación: La agregación es una relación que define que un objeto es parte de otro objeto. Cuando definimos que un objeto tiene como atributo otro objeto decimos que es una agregación. A través de la agregación se definen objetos compuestos.
+
+8.- Terminología Programación
+
+Polimorfismo: Es el mecanismo de definir un mismo método en varios objetos de diferentes clases pero con distintas formas de implementación. Constructor: Es un método que se invoca cuando un objeto es construido Destructor: Es un método que se invoca cuando un objeto es destruido.
+
+Miembro Público: Atributo o método de una clase que puede ser accedido desde cualquier parte del programa. Miembro Privado: Atributo o método de una clase que puede ser accedido solo dentro de esa clase. Miembro Protegido: Atributo o método de una clase que puede ser accedido desde esa clase y sus clases heredadas.
+
+8.- Terminología Programación
 
 Bibliografía Programación
 
-UD6: Programación estructurada y modular
+Bibliografía Programación
 
-Bibliografía ✓ Aprende JAVA con ejercicios. Edición 2018. Luis José Sánchez. ✓ Empezar a programar usando Java. 2ª edición. Universitat Politècnica de València ✓ https://github.com/statickidz/TemarioDAW ✓ https://es.stackoverflow.com Programación estructurada ✓https://es.wikipedia.org/wiki/Programación_estructurada Programación modular ✓https://es.wikipedia.org/wiki/Programación_modular Programación
+Aprende JAVA con ejercicios. Edición 2018. Luis José Sánchez. Empezar a programar usando Java. 2ª edición. UniversitatPolitècnica de València https://github.com/statickidz/TemarioDAW https://es.stackoverflow.com
 
-UD6: Programación estructurada y modular
+---
+
+# 8.2 Utilización avanzada de clases (Versión ex
+
+### UNIDAD 8: UTILIZACIÓN AVANZADA DE CLASES
+
+V1.07.02.23
+
+Profesor: José Ramón Simó Martínez Contenido
+
+- Introducción ............................................................................................................................ 2
+- Relaciones entre clases ............................................................................................................ 3
+
+2.1. Asociación con Java .................................................................................................................................. 3 2.2. Agregación con Java ................................................................................................................................. 5 2.3. Composición con Java ............................................................................................................................... 5
+
+- Herencia ................................................................................................................................. 7
+
+3.1. Herencia simple entre clases .................................................................................................................... 7 3.2. Llamada a constructores en la herencia ................................................................................................... 9 3.3. Acceso a métodos y constructores de la superclase: uso de super ....................................................... 10 3.4. Sobrecarga de métodos de la superclase ............................................................................................... 11 3.5. Clases y métodos abstractos .................................................................................................................. 12 3.6. Clases y métodos finales: uso de final .................................................................................................... 15
+
+- Interfaces ............................................................................................................................... 16
+
+4.1. Concepto de interfaz .............................................................................................................................. 16 4.2. Definición de interfaces en Java ............................................................................................................. 16 4.3. Clases abstractas vs interfaces ............................................................................................................... 17 4.4. Ejemplo de creación y uso de una interfaz............................................................................................. 17 4.5. Herencia múltiple ................................................................................................................................... 19 4.6. Métodos default y static ......................................................................................................................... 21
+
+- Polimorfismo ......................................................................................................................... 23
+
+5.1. Concepto de polimorfismo ..................................................................................................................... 23 5.2. Ejemplo de polimorfismo ....................................................................................................................... 23
+
+- Jerarquía de la API de Java ..................................................................................................... 25
+
+6.1. La clase Object ........................................................................................................................................ 25 6.2. La interfaz Comparable<T> ..................................................................................................................... 28
+
+- Terminología .......................................................................................................................... 31
+- Bibliografía ............................................................................................................................. 32
+
+V1.07.02.23
+
+### 1. Introducción
+
+En la anterior unidad introducimos los elementos que componen la Programación Orientada a Objetos (POO). Sin embargo, dejamos para la presente los que marcan la importancia de la POO: la Herencia y el Polimorfismo. En esta unidad estudiaremos todos los aspectos de implementación de la herencia y el polimorfismo en la POO en el lenguaje Java. Empezaremos con una aproximación a las relaciones que se pueden establecer entre las clases. A continuación, profundizaremos en aquellas que establecen relaciones jerárquicas con la herencia simple, el uso de clases abstractas y finales. También introduciremos el concepto de interfaz como solución a la herencia múltiple en Java. Continuaremos con la técnica del polimorfismo y su importancia en la POO.
+
+Finalizaremos presentando la jerarquía de la API de Java y el uso de alguna de sus clases e interfaces más comunes. Al terminar esta unidad deberás ser capaz de: • Escribir programas estableciendo relaciones de asociación entre clases. • Escribir programas estableciendo relaciones de herencia entre clases.
+
+• Comprender y aplicar el concepto de herencia y polimorfismo. • Crear clases abstractas e interfaces y conocer las ventajas de su uso. • Sobrecargar y sobrescribir métodos de la superclase. • Conocer la jerarquía de la API de Java. • Comparar y ordenar objetos de nuestra propia clase.
+
+• Desarrollar programas en Java aplicando técnicas avanzadas del paradigma orientado a objetos.
+
+V1.07.02.23
+
+### 2. Relaciones entre clases
+
+Las relaciones entre clases son cruciales en la programación orientada a objetos. Así como los conceptos como clases y objetos en la programación orientada a objetos se crean para modelar entidades del mundo real, las relaciones entre clases en la programación orientada a objetos se crean para modelar las relaciones entre entidades del mundo real que representan estas clases.
+
+En nuestro primer contacto con la POO hemos comprendido la importancia del concepto de clase para modelar los objetos (y conceptos) del mundo real. Sin embargo, los objetos no están aislados unos de otros, sino que mantienen, de una forma u otra, relaciones entre ellos.
+
+En Java se pueden modelar principalmente dos tipos de relaciones entre clases: • Asociación: una clase contiene o usa objetos de otra clase. Se conoce como relación HAS-A (en inglés). Se conocen dos tipos de asociación: o Agregación: una clase puede existir independientemente de la otra. Se conoce como relaciones débiles.
+
+o Composición: una la existencia de una clase depende de la existencia de la otra. Se conoce como relaciones fuertes. • Herencia: una clase es una subcategoría de otra clase. Se conoce como relación IS-A (en inglés) En este apartado estudiaremos cómo se representan en Java las relaciones de asociación y en otros apartados entraremos en profundidad con la relación de herencia entre clases.
+
+Nota En el módulo de Entornos de Desarrollo (ED) se estudia con más detalle los conceptos teórico-prácticos del paradigma orientado a objeto, como por ejemplo los diagramas UML. En esta unidad se dará por entendido que el estudiante ha adquirido dichos conocimientos del módulo de ED.
+
+#### 2.1. Asociación con Java
+
+La relación más simple es la de asociación. En el caso de que una clase haga uso o contenga a otra decimos que tiene una relación de asociación. En Java podemos representar este tipo de relación según sea: • Unidireccional: una clase usa o contiene a otra, pero no a la inversa. También se dice que una clase puede ver a otra.
+
+• Bidireccional: ambas clases hacen referencia una a otra. Es decir, ambas se ven. En el siguiente ejemplo podemos ver tanto la representación UML como el código correspondiente en Java de una relación unidireccional
+
+V1.07.02.23 // Fichero B.java
+
+```java
+public class B {
+```
+
+```java
+private int atributoB;
+```
+
+```java
+public B(){
+```
+
+```java
+this.atributoB = 0;
+```
+
+} } // Fichero A.java
+
+```java
+public class A {
+```
+
+```java
+private int atributoA;
+```
+
+```java
+private B b1; // La clase A tiene una referencia a la clase B.
+```
+
+```java
+public A(){
+```
+
+```java
+this.atributoA = 0;
+```
+
+}
+
+} Podemos ver en el código que para representar que la clase A puede ver a la clase B, añadimos a la clase A un atributo de tipo B. En el anterior ejemplo la cardinalidad la relación es uno. Si quisiéramos representar una cardinalidad de uno a muchos simplemente declararíamos una lista de objetos de la clase relacionada
+
+// Fichero B.java
+
+```java
+public class B {
+```
+
+```java
+private int atributoB;
+```
+
+```java
+public B(){
+```
+
+```java
+this.atributoB = 0;
+```
+
+} }
+
+// Fichero A.java
+
+```java
+public class A {
+```
+
+```java
+private int atributoA;
+```
+
+// La clase A tiene uno o más objetos de B
+
+```java
+private ArrayList<B> b1;
+```
+
+```java
+public B(){
+```
+
+```java
+this.atributoA = 0;
+```
+
+}
+
+}
+
+V1.07.02.23 En la representación bidireccional debemos añadir una referencia del objeto referenciado a cada clase: // Fichero B.java
+
+```java
+public class B {
+```
+
+```java
+private int atributoB;
+```
+
+// Referencia a la clase A
+
+```java
+private A a1;
+```
+
+```java
+public B(){
+```
+
+```java
+this.atributoB = 0;
+```
+
+} } // Fichero A.java
+
+```java
+public class A {
+```
+
+```java
+private int atributoA;
+```
+
+// Referencia a la clase B
+
+```java
+private B b1;
+```
+
+```java
+public A(){
+```
+
+```java
+this.atributoA = 0;
+```
+
+}
+
+}
+
+#### 2.2. Agregación con Java
+
+Una agregación es una asociación (pero no viceversa) entre dos clases de manera que una clase contiene uno o más elementos de la otra con la que está relacionada. Sin embargo, en Java la implementación de una agregación es la misma que una asociación. Para la siguiente representación en UML se aplica el mismo ejemplo de código Java que hemos visto en la asociación unidireccional
+
+#### 2.3. Composición con Java
+
+Una composición es una asociación (pero no viceversa) entre dos clases de manera que una clase contiene un o más elementos de la otra con la que está relacionada. Se considera que se establece una relación de tipo fuerte, ya que la existencia de un objeto de una clase depende de la existencia del objeto de la otra clase que lo contiene.
+
+V1.07.02.23 En Java podemos representar la composición del modelo UML como se indica en el siguiente ejemplo: // Fichero B.java
+
+```java
+public class B {
+```
+
+```java
+private int atributoB;
+```
+
+```java
+public B(){
+```
+
+```java
+this.atributoB = 0;
+```
+
+} }
+
+// Fichero A.java
+
+```java
+public class A {
+```
+
+```java
+private int atributoA;
+```
+
+```java
+private B b1; // Referencia a la clase B
+```
+
+```java
+public A(){
+```
+
+```java
+this.atributoA = 0;
+```
+
+// Se instancia el objeto de B en el constructor de la clase A
+
+```java
+this.b1 = new B();
+```
+
+}
+
+} Para reflejar una composición en Java tenemos que indicar que el objeto de la clase a la que se hace referencia se instancia en el constructor. En el ejemplo, cuando instanciemos la clase A a su vez se instanciará un objeto de la clase B. De esta forma cuando un objeto de la clase A deje de existir a su vez dejará de existir el objeto de la clase B con el que estaba relacionado.
+
+En resumen: • Tanto la agregación como la composición son asociaciones, pero no a la inversa. • Tanto la agregación como la composición son unidireccionales, mientras que la asociación puede ser bidireccional. • La implementación en Java es la misma para representar tanto una asociación como una agregación.
+
+La diferencia es a nivel lógico y de modelado. • Una composición es una agregación, pero no a la inversa.
+
+V1.07.02.23
+
+### 3. Herencia
+
+Definición: La herencia en la POO es un mecanismo que permite adquirir las características de otras clases, esto es, sus atributos y métodos. En consecuencia, podemos establecer relaciones jerárquicas entre las clases de nuestro proyecto. Esto supone muchas ventajas para nuestro proyecto software, entre las cuales están las siguientes
+
+• Reutilización del código. • Extender los requisitos funcionales de manera relativamente sencilla. • Reducir los costes de desarrollo y mantenimiento. • Facilitar las pruebas y la documentación. • Seguridad de los datos. A continuación, vamos a estudiar cómo el lenguaje Java permite implementar este mecanismo.
+
+#### 3.1. Herencia simple entre clases
+
+En Java se utiliza la palabra reservada extends para indicar que una clase hereda de otra
+
+// Fichero A.java
+
+```java
+public class A {
+```
+
+```java
+private int atributoA;
+```
+
+```java
+public A(){}
+```
+
+```java
+public void metodoA() {}
+}
+```
+
+// Fichero B.java
+
+```java
+public class B extends A {
+```
+
+```java
+private int atributoB;
+```
+
+```java
+public B(){}
+```
+
+```java
+public void metodoB() {}
+}
+```
+
+En el anterior ejemplo decimos que la clase B extiende a la clase A. Dicho de otra forma, la clase B hereda los atributos y métodos de la clase A. No obstante, cabe tener en cuenta los modificadores de acceso que permiten mantener el encapsulamiento de las clases tal y como estudiamos en la unidad anterior. En el ejemplo anterior la clase B hereda los métodos públicos de A, pero no sus atributos ya que estos son privados.
+
+V1.07.02.23 Recordemos la tabla resumen sobre los modificadores de acceso que vimos en la unidad anterior: Modificador Clase Clase o subclase del mismo Paquete Subclase (de otro paquete) Otros public Sí Sí Sí Sí protected Sí Sí Sí No (default) Sí Sí No No private Sí No No No
+
+Como podemos ver en esta tabla, una solución al ejemplo anterior para que clase B pueda heredar de la clase A sería declarar los atributos de B como public, aunque como ya dijimos esto no es para nada una buena práctica. Por tanto, nos queda utilizar el modificador protected
+
+// Fichero A.java
+
+```java
+public class A {
+```
+
+```java
+protected int atributoA;
+```
+
+```java
+public A(){}
+```
+
+```java
+public void metodoA() {}
+}
+```
+
+Ahora la clase B sí que podrá heredar el atributoA de la clase A. De todas formas, no es necesario que una clase herede todos los componentes de otra. Podemos elegir, por tanto, qué atributos y métodos hereda (o no) una clase de otra indicando los modificadores de acceso adecuados
+
+// Fichero A.java
+
+```java
+public class A {
+```
+
+```java
+protected int atributoA; // se hereda
+```
+
+```java
+private String otroAtributoA; // no se hereda
+```
+
+```java
+public A(){}
+```
+
+```java
+public void metodoA() {} // se hereda
+```
+
+```java
+private void otroMetodoA() {} // no se hereda
+}
+```
+
+Vamos a tener en cuenta las siguientes consideraciones con el uso de los modificadores de acceso en general y en la herencia en particular: • En general: o Declarar los atributos como private y los métodos como public. o Crear los getters y setters necesarios (ambos siempre public) para acceder a los atributos de la clase.
+
+V1.07.02.23 o Si queremos que un atributo sea de solo de lectura, crear solo su getter. o Si queremos que un atributo sea de solo de escritura, crear solo su setter. o Lo métodos que no pertenezcan a la API de nuestra clase, declararlos como private. o Al declarar métodos public o protected nos comprometemos a mantenerlos durante el tiempo de mantenimiento de nuestra clase (o librería).
+
+• En la herencia: o El modificador protected usarlo en caso de que queramos publicar nuestro método solo para las clases que heredan y no sea usado como parte de la API de nuestra librería. o El modificador protected limitarlo para los métodos y no para atributos, que deberían ser aconsejablemente private; accederemos a los atributos de la clase heredada a través de sus getters y setters.
+
+#### 3.2. Llamada a constructores en la herencia
+
+Cuando instanciamos un objeto de una subclase a través de su constructor, Java primero llama al constructor de su superclase: // Fichero UnaSuperClase.java
+
+```java
+public class UnaSuperClase {
+```
+
+// Constructor por defecto de la superclase
+
+```java
+public UnaSuperClase() {
+```
+
+```java
+System.out.println(“Constructor de la super clase…”);
+```
+
+} } // Fichero UnaSubClase.java
+
+```java
+public class UnaSubClase extends UnaSuperClase{
+```
+
+// Constructor por defecto de la subclase
+
+```java
+public UnaSubClase() {
+```
+
+```java
+System.out.println(“Constructor de la subclase…”);
+```
+
+} } // Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+UnaSubClase subclase = new UnaSubClase();
+```
+
+} } Salida por pantalla: Constructor de la super clase… Constructor de la subclase…
+
+V1.07.02.23
+
+#### 3.3. Acceso a métodos y constructores de la superclase: uso de super
+
+Una subclase puede acceder a los métodos de su superclase a través de la palabra reservada super. // Fichero UnaSuperClase.java
+
+```java
+public class UnaSuperClase {
+```
+
+// Método de la superclase
+
+```java
+public void metodoSuperClase() {
+```
+
+```java
+System.out.println(“Método de la superclase…”);
+```
+
+} }
+
+// Fichero UnaSubClase.java
+
+```java
+public class UnaSubClase extends UnaSuperClase{
+```
+
+// Método de la subclase
+
+```java
+public metodoSuclase() {
+```
+
+super.metodoSuperClase(); // llamada al método de la superclase
+
+```java
+System.out.println(“Método de la subclase…”);
+```
+
+} }
+
+// Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+UnaSubClase subclase = new UnaSubClase();
+```
+
+```java
+suclase.metodoSubclase();
+```
+
+} } Salida por pantalla: Método de la superclase… Método de la subclase… Otro uso destacado de la palabra reservada super es para llamar a constructores con argumentos de la superclase: // Fichero UnaSuperClase.java
+
+```java
+public class UnaSuperClase {
+```
+
+```java
+private String s;
+```
+
+```java
+private int a;
+```
+
+// Constructor con parámetros de la superclase
+
+```java
+public UnaSuperClase(String s, int a) {
+```
+
+```java
+this.s = s;
+```
+
+```java
+this.a = a;
+```
+
+} }
+
+// Fichero UnaSubClase.java
+
+V1.07.02.23
+
+```java
+public class UnaSubClase extends UnaSuperClase{
+```
+
+```java
+private int b;
+```
+
+// Constructor por defecto de la subclase
+
+```java
+public UnaSubClase(String s, int a, int b) {
+```
+
+super(s, a); // Llamada al constructor de la superclase
+
+```java
+this.b = b;
+```
+
+} } Nota En caso querer acceder al constructor de la superclase, super(…) debe ir siempre como primera instrucción dentro del constructor. // super debería ir siempre como primera instrucción
+
+```java
+public UnaSubClase(String s, int a, int b) {
+```
+
+```java
+this.b = b;
+```
+
+super(s, a); // Error }
+
+#### 3.4. Sobrecarga de métodos de la superclase
+
+En la unidad anterior ya estudiamos la sobrecarga de métodos de una clase. Recordemos que una clase puede redefinir un método de manteniendo el mismo nombre, pero distinta lista de argumentos (y el tipo de retorno da igual si cambia o no). En la sobrecarga de métodos de la superclase la idea es la misma: una subclase puede redefinir un método o métodos de la superclase manteniendo el mismo nombre, pero distinta lista de argumentos (y el tipo de retorno da igual si cambia o no).
+
+Veamos un ejemplo: // Fichero UnaSuperClase.java
+
+```java
+public class UnaSuperClase {
+```
+
+```java
+public void saludar(String nombre){
+```
+
+```java
+System.out.println(“Hola” + nombre);
+```
+
+} }
+
+// Fichero UnaSubClase.java
+
+```java
+public class UnaSubClase extends UnaSuperClase{
+```
+
+// Sobrecarga el método de la clase padre
+
+```java
+public void saludar(String nombre, int nVeces){
+```
+
+```java
+for(int i = 0; i < nVeces; i++) {
+```
+
+```java
+System.out.println(“Hola” + nombre);
+```
+
+}
+
+}
+
+V1.07.02.23 }
+
+// Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+UnaSubClase subclase = new UnaSubClase();
+```
+
+subclase.saludar(“Ana”); // usa saludar de la clase padre
+
+subclase.saludar(“Pepe”, 3); // usa saludar de su propia clase
+
+} }
+
+#### 3.5. Clases y métodos abstractos
+
+Veamos el siguiente ejemplo de jerarquía de clases en UML
+
+Ahora ya sabemos que en este ejemplo se representa que tanto la clase Circulo como la clase Rectangulo heredan de una clase llamada Figura. También conocemos los mecanismos para representar dicho ejemplo en Java. En este punto debemos hacernos la siguiente pregunta, ¿tiene sentido que podamos instanciar un objeto de la clase Figura? En principio, no parece que tenga mucho sentido ya que no sabríamos, por ejemplo, cómo representar gráficamente una figura en general. Tal y como ocurre en la vida real diremos que una figura general es un objeto abstracto.
+
+Nota En el ejemplo anterior decimos que Figura es una clase abstracta, mientras que Circulo y Rectangulo son clases concretas. Java tiene un mecanismo para crear clases abstractas, es decir, clases de las cuales no podremos instanciar objetos. Para ello, usaremos la palabra reservada abstract.
+
+V1.07.02.23 Una clase abstracta la implementaremos de la siguiente manera: // Fichero Figura.java public abstract class Figura {
+
+// Atributos
+
+// Constructores
+
+// Métodos (concretos o abstractos) } Una clase abstracta puede contener dos tipos de métodos: • Concretos: los que ya conocemos de las clases concretas y que necesitan contener la implementación de lo que hacen. • Abstractos: métodos propios de una clase abstracta. Estos métodos no deben contener ninguna implementación, solo la definición del método. Su implementación, por tanto, deberá ser a cargo de las clases que heredan los métodos de la clase abstracta. Al igual que la clase abstracta, estos métodos también utilizan la palabra clave abstract.
+
+Un método abstracto se declara de la siguiente manera
+
+```java
+modificador abstract tipoDeVariable metodo1(parámetros);
+```
+
+Un ejemplo de implementación de la clase Figura sería el siguiente: // Fichero Figura.java public abstract class Figura {
+
+```java
+private String nombre;
+```
+
+// Constructor
+
+```java
+public Figura() {
+```
+
+```java
+this.nombre = “Figura desconocida”;
+```
+
+}
+
+// Métodos concretos
+
+```java
+public Figura(String nombre) {
+```
+
+```java
+this.nombre = nombre;
+```
+
+```java
+public String getNombre() {
+```
+
+```java
+return this.nombre;
+```
+
+}
+
+```java
+public void setNombre(String nombre) {
+```
+
+```java
+this.nombre = nombre;
+```
+
+}
+
+// Métodos abstractos
+
+```java
+public abstract double getArea();
+```
+
+```java
+public abstract double getPerimetro();
+}
+```
+
+V1.07.02.23 En el anterior ejemplo vemos como se implementan los métodos concretos, pero no los abstractos. Estos se deberán implementar en las clases que heredan de la clase Figura. Por ejemplo, veamos la cómo se implementa la clase Cuadrado que hereda de la clase Figura
+
+// Fichero Figura.java
+
+```java
+public class Rectangulo extends Figura {
+```
+
+```java
+private double ancho;
+```
+
+```java
+private double alto;
+```
+
+// Constructor
+
+```java
+public Rectangulo(double ancho, double alto) {
+```
+
+```java
+super(“Rectángulo”);
+```
+
+```java
+this.ancho = ancho;
+```
+
+```java
+this.alto = alto;
+```
+
+}
+
+```java
+@Override
+```
+
+```java
+public double getArea() {
+```
+
+```java
+return this.ancho * this.alto;
+```
+
+}
+
+```java
+@Override
+```
+
+```java
+public double getPerimetro() {
+```
+
+```java
+return 2.0 * (this.ancho + this.alto);
+```
+
+} } Nota Cuando la subclase implementa los métodos heredados de la clase abstracta se dice que los está sobrescribiendo. El concepto de sobrescritura de métodos es de vital importancia para el polimorfismo, concepto que trataremos en siguientes apartados.
+
+```java
+@Override es una etiqueta informativa para el compilador de Java.  En este caso, indica indica al
+```
+
+compilador que estamos sobrescribiendo los métodos de la interfaz. Esto nos ayudará a evitar errores en la denominación de los métodos sobrescritos. En el ejemplo de la clase Rectangulo podemos observar que implementamos los métodos abstractos que heredamos de la clase Figura. Atención, en este caso ya son métodos concretos y por tanto no debemos usar la palabra clave abstract.
+
+Ahora, implementamos la clase Circulo: // Fichero Circulo.java
+
+```java
+public class Circulo extends Figura {
+```
+
+```java
+private double radio;
+```
+
+// Constructor
+
+```java
+public Circulo(double radio) {
+```
+
+V1.07.02.23
+
+```java
+super(“Círculo”);
+```
+
+this.radio
+
+}
+
+```java
+@Override
+```
+
+```java
+public double getArea() {
+```
+
+```java
+return Math.PI * radio * radio;
+```
+
+}
+
+```java
+@Override
+```
+
+```java
+public double getPerimetro() {
+```
+
+```java
+return 2.0 * Math.PI * radio;
+```
+
+} } Veamos cómo probar estas clases que hemos creado: // Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+Rectangulo r = new Rectangulo(10.0, 2.0);
+```
+
+```java
+Circulo c = new Circulo(2.0);
+```
+
+```java
+double areaCuadrado = r.getArea();
+```
+
+```java
+double areaCirculo = c.getArea();
+```
+
+```java
+System.out.println(“Área cuadrado: “ + areaCuadrado);
+```
+
+```java
+System.out.println(“Área círculo: “ + areaCirculo);
+}
+```
+
+#### 3.6. Clases y métodos finales: uso de final
+
+Hay casos en nuestro diseño por el que deseamos que nuestra clase no se pueda heredar. Para ello Java proporciona la palabra clave final. Por tanto, podemos restringir el uso de la herencia utilizado las conocidas como clases finales. Su sintaxis es la siguiente: public final class UnaClase { } Si intentamos hacer esto nos dará error
+
+```java
+public class OtraClase extends UnaClase {
+}
+```
+
+También podemos declarar dentro de una superclase no final un método final. El objetivo es que dicho método no se pueda sobrescribir en las subclases que hereden de dicha superclase. La sintaxis es la siguiente
+
+```java
+public final void unMetodoFinal() { }
+```
+
+V1.07.02.23
+
+### 4. Interfaces
+
+Hemos visto cómo la herencia permite definir especializaciones (o extensiones) de una clase base que ya existe sin tener que repetir el código de ésta. Este mecanismo da la oportunidad de que la nueva clase especializada (o extendida) disponga de toda la interfaz que tiene su clase base.
+
+También hemos estudiado cómo los métodos abstractos permiten establecer una interfaz para marcar las líneas generales de un comportamiento común de superclase que deberían compartir de todas las subclases. Si llevamos al límite esta idea de interfaz, podrías llegar a tener una clase abstracta donde todos sus métodos fueran abstractos. De este modo estarías dando únicamente el marco de comportamiento, sin ningún método implementado, de las posibles subclases que heredarán de esa clase abstracta.
+
+La idea de una interfaz (o interface) es precisamente ésa: disponer de un mecanismo que permita especificar cuál debe ser el comportamiento que deben tener todos los objetos que formen parte de una determinada clasificación (no necesariamente jerárquica).
+
+#### 4.1. Concepto de interfaz
+
+Una interfaz en Java consiste esencialmente en una lista de declaraciones de métodos sin implementar, junto con un conjunto de constantes. Estos métodos sin implementar indican un comportamiento, un tipo de conducta, aunque no especifican cómo será ese comportamiento (implementación), pues eso dependerá de las características específicas de cada clase que decida implementar esa interfaz.
+
+En resumen: • Una interfaz se encarga de establecer qué comportamientos hay que tener (qué métodos), pero no dice nada de cómo deben llevarse a cabo esos comportamientos (implementación). • En una interfaz solo se indica sólo la forma, no la implementación. • En cierto modo podrías imaginar el concepto de interfaz como un guion que dice: "éste es el protocolo de comunicación que deben presentar todas las clases que implementen esta interfaz".
+
+• Se proporciona una lista de métodos públicos y, si quieres dotar a tu clase de esa interfaz, tendrás que definir todos y cada uno de esos métodos públicos. • Los nombre de las interfaces en Java terminan con sufijos del tipo "‐able", "‐or", "‐ente" y cosas del estilo, que significan algo así como capacidad o habilidad para hacer o ser receptores de algo (configurable, serializable, modificable, clonable, ejecutable, etc).
+
+#### 4.2. Definición de interfaces en Java
+
+La declaración de una interfaz en Java es similar a la declaración de una clase, aunque con algunas variaciones: • Se utiliza la palabra reservada interface en lugar de class.
+
+V1.07.02.23 • Puede utilizarse el modificador public. Si incluye este modificador la interfaz debe tener el mismo nombre que el archivo .java en el que se encuentra (exactamente igual que sucedía con las clases). Si no se indica el modificador public, el acceso será por omisión o "de paquete" (como sucedía con las clases).
+
+• Todos los miembros de la interfaz (atributos y métodos) son public de manera implícita. No es necesario indicar el modificador public, aunque puede hacerse. • Todos los atributos son de tipo final y public (tampoco es necesario especificarlo), es decir, constantes y públicos. Hay que darles un valor inicial.
+
+• Todos los métodos son abstractos también de manera implícita (tampoco hay que indicarlo). No tienen cuerpo, tan solo la cabecera. Como puedes observar, una interfaz consiste esencialmente en una lista de… • Atributos finales (constantes) y • Métodos abstractos (sin implementar).
+
+Su sintaxis, en Java, quedaría entonces: [public] interface <NombreInterfaz> {
+
+```java
+[public] [final] <tipo1> <atributo1>= <valor1>;
+```
+
+```java
+[public] [final] <tipo2> <atributo2>= <valor2>;
+```
+
+...
+
+```java
+[public] [abstract] <tipo_devuelto1> <nombreMetodo1> ([lista_parámetros]);
+```
+
+```java
+[public] [abstract] <tipo_devuelto2> <nombreMetodo2> ([lista_parámetros]);
+```
+
+... }
+
+#### 4.3. Clases abstractas vs interfaces
+
+En este punto puedes pensar que la idea de clase abstracta e interfaz es la misma. Ciertamente podría ser así, pero veamos a continuación las similitudes y diferencias que existen entre estos dos conceptos: SIMILITUDES DIFERENCIAS No pueden ser instanciadas. Las Interfaces no pueden contener ninguna implementación.
+
+No pueden ser selladas (final). Las Interfaces no pueden declarar miembros no públicos.
+
+Las Interfaces no pueden extender clases.
+
+#### 4.4. Ejemplo de creación y uso de una interfaz
+
+Vamos a escribir una interfaz que declare el comportamiento que debe tener todo objeto multimedia que pueda ser reproducido (discos, películas, etc)
+
+V1.07.02.23 // Fichero Reproducible.java interface Reproducible {
+
+```java
+void reproducir();
+```
+
+```java
+void parar();
+```
+
+```java
+void pausar();
+}
+```
+
+Para utilizar esta interfaz crearemos, por ejemplo, una clase ReproductorMusica
+
+```java
+public class ReproductorMusica implements Reproducible {
+    private boolean estaReproduciendo;
+    @Override
+    public void reproducir() {
+        if (!estaReproduciendo) {
+            System.out.println("Reproduciendo la música…");
+            estaReproduciendo = true;
+        }
+    }
+    @Override
+    public void pausar() {
+        if (estaReproduciendo) {
+            System.out.println("Pausando la música…");
+            estaReproduciendo = false;
+        }
+    }
+    @Override
+    public void parar() {
+        if (estaReproduciendo) {
+            System.out.println("Parando la música…");
+            estaReproduciendo = false;
+        }
+    }
+}
+```
+
+Nota Atención al uso de la etiqueta @Override para indicar al compilador que estamos sobrescribiendo los métodos de la interfaz. Esto nos ayudará a evitar errores en la denominación de los métodos sobrescritos.
+
+V1.07.02.23
+
+#### 4.5. Herencia múltiple
+
+Hasta ahora hemos visto los casos de herencia simple. Recordemos el ejemplo de las figuras
+
+Se puede dar el caso de que en nuestro programa tengamos figuras que se puedan dibujar y otras no. En este ejemplo, queremos indicar que los objetos de la clase Circulo se pueden dibujar mientras que de la clase Rectangulo no
+
+Este diagrama refleja lo que se conoce como herencia múltiple. El concepto de herencia múltiple existe a nivel conceptual, pero no a nivel de implementación en Java de forma directa: no podemos hacer que una clase herede de dos clases diferentes directamente a través de la palabra reservada extends
+
+```java
+public class Circulo extends Figura, Dibujable {…}
+```
+
+Esto se debe a razones de conflictos de nombre de métodos o atributos derivados. Si la clase Figura y Dibujable tienen un método llamado mostrar(), no hay manera de indicarle a la clase Figura si utiliza el método mostrar() de Dibujable o de Figura, ya que lo ha heredado de ambas.
+
+Para solucionar este diseño Java hace uso de las interfaces que estamos tratando en este apartado.
+
+V1.07.02.23 Por tanto, siguiendo el anterior ejemplo, Dibujable dejará de ser una clase y pasará a ser una interfaz: // Dibujable.java interfaz Dibujable {
+
+```java
+void dibujar();
+}
+```
+
+```java
+public class Circulo extends Figura implements Dibujable {
+```
+
+```java
+@Override
+```
+
+```java
+public double getArea() {
+```
+
+```java
+return this.ancho * this.alto;
+```
+
+}
+
+```java
+@Override
+```
+
+```java
+public double getPerimetro() {
+```
+
+```java
+return 2.0 * (this.ancho + this.alto);
+```
+
+}
+
+```java
+@Override
+```
+
+```java
+public void dibujar() {
+```
+
+```java
+System.out.println(“Dibujando círculo…”);
+```
+
+} }
+
+```java
+public class Rectangulo extends Figura {
+```
+
+```java
+@Override
+```
+
+```java
+public double getArea() {
+```
+
+```java
+return this.ancho * this.alto;
+```
+
+}
+
+```java
+@Override
+```
+
+```java
+public double getPerimetro() {
+```
+
+```java
+return 2.0 * (this.ancho + this.alto);
+```
+
+} } Consideraciones para tener en cuenta sobre la herencia múltiple: • Una clase solo puede heredar como máxima de una clase. • Una clase puede implementar múltiples interfaces. Por ejemplo
+
+```java
+public class A implements interfaceB, interfaceC {…}
+```
+
+• Una interfaz puede heredar de varias interfaces y permitir diseños más jerárquicos. Por ejemplo: interface A {…}
+
+interface B {…}
+
+interface C extends A, B {…} // Hereda los métodos de A y B
+
+V1.07.02.23
+
+#### 4.6. Métodos default y static
+
+A partir de Java 8 se pueden definir dos tipos de métodos dentro de la interfaz: default y static.
+
+#### 4.6.1. Método default
+
+Los métodos definidos como default se implementan en la misma interfaz y, por tanto, todas las clases que implementen la interfaz heredarán este método y su comportamiento. No obstante, también podemos sobrescribir el método para afinar el comportamiento. La sintaxis es la siguiente
+
+```java
+public interface MiInterfaz {
+```
+
+// Métodos regulares de la interfaz
+
+// Métodos default
+
+```java
+default void metodoPorDefecto() {
+```
+
+// Aquí implementación del método
+
+} } El objetivo de los métodos default es evitar que cuando una interfaz añada métodos nuevos, haya que actualizar todas las clases que implementen dicha interfaz implementando dichos métodos. Veamos un ejemplo. Tenemos una interfaz definida de la siguiente manera
+
+```java
+public interface Dibujable {
+```
+
+```java
+public void dibujar2D();
+}
+```
+
+Todos las clases que incluyan la interfaz Dibujable deben implementar el método dibujar2D().
+
+```java
+public class Rectangulo implements Dibujable {
+```
+
+```java
+public void dibujar2D() { // Implementación…};
+}
+```
+
+```java
+public class Ciruclo implements Dibujable {
+```
+
+```java
+public void dibujar2D() { // Implementación…};
+}
+```
+
+```java
+public class Triangulo implements Dibujable {
+```
+
+```java
+public void dibujar2D() { // Implementación…};
+}
+```
+
+// … y muchas más clases
+
+V1.07.02.23 Después de un tiempo queremos actualizar dicha interfaz de manera que también se pueda dibujar en 3D
+
+```java
+public interface Dibujable {
+```
+
+```java
+void dibujar2D();
+```
+
+```java
+void dibujar3D();
+}
+```
+
+Como consecuencia, todas las clases que hayan implementado dicha interfaz quedan inutilizadas ya que necesitan actualizarse al nuevo método de la interfaz. Para solucionar este problema, en parte, sería declarar el nuevo método dibujar3D() como default e implementarle, por ejemplo, un algoritmo básico para dibujar en 3D
+
+```java
+public interface Dibujable {
+```
+
+```java
+void dibujar2D();
+```
+
+```java
+default void dibujar3D() {
+```
+
+// Aquí implementar algoritmo básico para dibujar en 3D… } }
+
+#### 4.6.2. Método static
+
+Por otro lado, los métodos static se definen para indicar que el método es propio de la interfaz y no pertenecerá a la API de las clases que implementan dicha interfaz. Para acceder a este método deberemos indicar el nombre de la interfaz y el nombre del método. La sintaxis es la siguiente
+
+```java
+public interface MiInterfaz {
+```
+
+// Métodos regulares de la interfaz
+
+// Métodos default
+
+```java
+static void metodoPorDefecto() {
+```
+
+// Aquí implementación del método
+
+} } Utilizaríamos dicho método en las clases que implementan la interfaz de esta manera
+
+```java
+MiInterfaz.metodoPorDefecto();
+```
+
+La idea detrás de los métodos static en una interfaz es la de proporcionar un mecanismo simple que permita agrupar en un mismo lugar métodos relacionados sin tener que crear un objeto nuevo para ser usados. Nota La misma idea se puede aplicar con el uso de clases abstractas. No obstante, se debe tener en cuenta las ventajas y desventajas de usar clases e interfaces.
+
+V1.07.02.23
+
+### 5. Polimorfismo
+
+#### 5.1. Concepto de polimorfismo
+
+El diccionario define polimorfismo en el ámbito de la biología como: “Propiedad de las especies de seres vivos cuyos individuos pueden presentar diferentes formas o aspectos…” Este principio se puede aplicar al ámbito de la POO y en lenguajes de programación como Java. La idea parte del concepto de herencia donde una superclase se puede comportar o tomar la forma de las subclases que heredan de ella.
+
+Recordemos que hemos hablado del concepto de sobrescritura de métodos (y el uso de la etiqueta @Override) en anteriores apartados: • Las subclases opcionalmente sobrescriben métodos de superclases concretas • Las subclases obligatoriamente sobrescriben los métodos abstractos de la superclase abstracta.
+
+En este caso, hablamos del conocido técnicamente como polimorfismo de inclusión o herencia. Nota Existen otros tipos de polimorfismos que se pueden aplicar en Java. No obstante, en esta unidad nos centramos en el polimorfismo aplicado a la herencia.
+
+#### 5.2. Ejemplo de polimorfismo
+
+A partir del ejemplo del apartado 3.3 de la jerarquía de clases sobre figuras geométricas, veamos cómo funciona el polimorfismo en una clase de prueba
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+Figura f1 = new Rectangulo(2.0, 5.0); // polimorfismo de herencia
+
+```java
+Figura f2 = new Circulo(2.0);
+```
+
+double area1 = f1.getArea(); // área del rectángulo!!
+
+double area2 = f2.getArea(); // ahora área del círculo!!
+
+} } Vemos que podemos declarar un objeto Figura asignándole una instancia de un objeto Rectangulo o Circulo. Esto es puro polimorfismo: la clase Figura puede tomar la forma de un Rectangulo o Circulo.
+
+V1.07.02.23 Otra manera de aprovechar el polimorfismo es a través de los parámetros pasados a una función
+
+```java
+public class Test {
+```
+
+```java
+public void mostrarInformacion (Figura f) {
+```
+
+```java
+System.out.println("Área: “ + f.getArea());
+```
+
+```java
+System.out.println("Perímetro: “ + f.getPerímetro());
+```
+
+}
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+Rectangulo r = new Rectangulo(2.0, 5.0);
+```
+
+```java
+Ciruclo c = new Circulo(2.0);
+```
+
+```java
+mostrarInformacion(r);
+```
+
+```java
+mostrarInformacion(c);
+```
+
+} } En este caso pasamos como parámetro un objeto de tipo Rectangulo o Circulo a una función que recibe objetos de tipo Figura como parámetro. Continuamos con más ejemplos para desplegar la potencia del polimorfismo, esta vez haremos uso de los arrays
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+ArrayList<Figura> figuras = new ArrayList<Figura>();
+```
+
+```java
+Rectangulo r1 = new Rectangulo(2.0, 5.0);
+```
+
+```java
+Circulo c1 = new Circulo(2.0);
+```
+
+```java
+figuras.add(r1);
+```
+
+```java
+figuras.add(c1);
+```
+
+// Atención a este fragmento
+
+```java
+for(Figura f : figuras) {
+```
+
+```java
+System.out.println("Área: “ + f.getArea());
+```
+
+```java
+System.out.println("Perímetro: “ + f.getPerímetro());
+```
+
+}
+
+} } En el ejemplo declaramos un ArrayList donde almacenaremos objetos de tipo Figura. Como Rectangulo y Circulo son Figura podemos añadirlos a este array. Luego, la gracia está en f.getArea() dentro del bucle: si sacamos un objeto de tipo Rectangulo llamará al getArea() de Rectangulo, y si el objetos es Circulo llamará al getArea() de la clase Circulo.
+
+V1.07.02.23
+
+### 6. Jerarquía de la API de Java
+
+En la jerarquía de Java existen: clases e interfaces. En el siguiente enlace se presenta el esquema de la jerarquía oficial de la API de Java 8: https://docs.oracle.com/javase/8/docs/api/java/lang/package-tree.html Nota Aunque estemos usando el compilador JDK 17 es perfectamente válido para nuestro propósito educativo.
+
+En este apartado vamos a estudiar el objecto Object y algunos de sus métodos de uso común. También veremos la interfaz Comparable<T>, la cual nos resultará de bastante utilidad a la hora de comparar nuestras propias clases. Ambos elementos pertenecen al paquete java.lang (recuerda que este paquete se añade por defecto a nuestras aplicaciones).
+
+#### 6.1. La clase Object
+
+En la jerarquía de la API de Java todas sus clases son realmente subclases, excepto una: la clase Object. Sin embargo, cuando definimos una clase en Java de manera implícita hereda de la clase Object (no hace falta poner un extend). La clase Object está definida en el paquete java.lang, que a estas alturas del curso podrás adivinar que se importa automáticamente cada vez que escribimos un program. En otras palabras, las dos siguientes declaraciones son lo mismo
+
+```java
+public class Circulo {
+}
+public class Circulo extends Object {
+}
+```
+
+Por otra parte, la clase Object incluye métodos que las subclases pueden usar, sobrecargar o sobrescribir. En el siguiente enlace se describen los métodos de la clase Object: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html La mayoría de estos métodos se aplican en conceptos avanzados de programación en Java y que en principio no se tratarán en este curso. No obstante, entraremos en detalle con dos métodos que sí se utilizan habitualmente: toString() y equals().
+
+#### 6.1.1. Sobrescribir el método toString
+
+Este método de la clase Object convierte un objeto en una cadena de texto (objeto String) que contiene información sobre dicho objeto. Veamos un ejemplo
+
+V1.07.02.23 // Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+Rectangulo r = new Rectangulo(2.0, 5.0);
+```
+
+```java
+System.out.println(r.toString());
+}
+```
+
+Salida por pantalla: Rectangulo@6d06d69c Este código un valor que muestra el identificador único que Java asigna a un objeto, y podemos deducir que dicho valor no muestra información útil al usuario. Si añadimos método toString() a nuestra clase estaremos sobrescribiendo el método de la clase Object; de esta manera, podemos adaptar la información que queremos mostrar sobre nuestro objeto en concreto
+
+// Fichero Rectangulo.java
+
+```java
+public class Rectangulo extends Figura {
+```
+
+// Añadimos el método toString
+
+```java
+@Override
+```
+
+```java
+public String toString() {
+```
+
+```java
+System.out.println(“Area del rectángulo: “ + getArea());
+```
+
+```java
+System.out.println(“Perímetro del rectangulo: “ + getPerimetro());
+}
+}
+```
+
+Ahora, la salida por pantalla de Test.java sería: Área del rectángulo: 10.0 Perímetro del rectángulo: 14.0 Una de las ventajas de sobrescribir el método toString() es que es el método por defecto que utiliza Java para formatear la información de un objeto a String. En el ejemplo Test.java podemos obviar la referencia al método toString() y funcionaría de la misma manera
+
+```java
+System.out.println(r);
+```
+
+#### 6.1.2. Sobrescribir el método equals
+
+La clase Object también contiene un método equals() con la siguiente cabecera
+
+```java
+public boolean equals(Object obj)
+```
+
+El método toma un parámetro de tipo Object, esto es, que podemos incluir cualquier tipo de objeto de Java o que hayamos creado nosotros. Este método ya lo hemos utilizado a lo largo del curso para la comparación de cadenas con la clase String. Por ejemplo
+
+V1.07.02.23
+
+```java
+String s1 = “cadena”;
+String s2 = “cadena”;
+String s3 = new String(“cadena”);
+if (s1.equals(s2) {
+    System.out.println(“Son iguales”);
+```
+
+El objetivo de equals() es comparar si los datos que contiene el objeto son iguales, y no tanto si ambos objetos son iguales a nivel de referencia en memoria. Nota Recordemos que en el caso de los String si comparamos con == no funcionaba correctamente, porque en el ejemplo s1 y s2 son el mismo objeto (s3 sería un objeto diferente). Por tanto, la clase String tiene sobrescrito el método equals() que compara las cadenas de texto de sus objetos (que es el contenido) y por eso funciona.
+
+Vamos a aprender cómo sobrescribir el método equals() de la clase Object para poder comparar adecuadamente objetos de nuestra propia clase. Tomemos como ejemplo la clase Rectangulo
+
+```java
+public class Rectangulo extends Figura {
+```
+
+// Añadimos el método equals()
+
+```java
+@Override
+```
+
+```java
+public boolean equals(Object obj) {
+```
+
+```java
+Rectangulo r = (Rectangulo) obj;
+```
+
+```java
+return this.getArea() == r.getArea();
+```
+
+} } Esta es la forma más simple de sobrescribir el método equals() en nuestra clase. En caso de utilizarlo para programas sencillos podría valer perfectamente. No obstante, cuando empecemos a utilizar técnicas de Java más avanzadas podremos encontrarnos con ciertos errores al usar esta versión.
+
+Estas son las recomendaciones que dan los creadores de Java sobre la implementación más adecuada del método equals(): • Determinar si el parámetro Object es el mismo objeto que el objeto que llama al método. Para ello hacemos la comparación obj == this, devolviendo true en ese caso.
+
+• Devolver false el parámetro Object es null. • Devolver false si el parámetro Object y el objeto que llama al método no son la misma clase. • Hacer casting del parámetro Object al mismo tipo que el objeto que llama al método, solo si ambos son de la misma clase. Veamos el ejemplo anterior ampliado para seguir estas recomendaciones
+
+```java
+public class Rectangulo extends Figura {
+```
+
+// Atributos y métodos ya implementados en anteriores ejemplos
+
+// Añadimos el método equals()
+
+```java
+@Override
+```
+
+V1.07.02.23
+
+```java
+public boolean equals(Object obj) {
+```
+
+if(obj == this)
+
+```java
+return true;
+```
+
+else
+
+if(obj == null)
+
+```java
+return false;
+```
+
+else
+
+if(obj.getClass() != this.getClass())
+
+```java
+return = false;
+```
+
+```java
+Rectangulo r = (Rectangulo) obj;
+```
+
+```java
+return this.getArea() == r.getArea();
+```
+
+} } Ahora hagamos una prueba: // Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+Rectangulo r1 = new Rectangulo(2.0, 5.0);
+```
+
+```java
+Rectangulo r2 = new Rectangulo(2.0, 5.0);
+```
+
+```java
+Rectangulo r3 = new Rectangulo(10.0, 5.0);
+```
+
+```java
+System.out.println(r1.equals(r2));
+```
+
+```java
+System.out.println(r1.equals(r3));
+```
+
+} }
+
+Salida por pantalla: true false
+
+#### 6.2. La interfaz Comparable<T>
+
+Otra forma de poder comparar dos objetos es haciendo uso del método compareTo de la interfaz Comparable<T>. Esta interfaz se define de la siguiente manera
+
+```java
+public interface Comparable<T> {
+```
+
+```java
+public int compareTo(T obj);
+}
+```
+
+Nota El <T> hace referencia al concepto de programación genérica, que básicamente indica que podemos sustitur la T por cualquier objeto sobre el que queramos implementar la comparación.
+
+V1.07.02.23 El método compareTo(), a diferencia del método equals(), devuelve un entero. Normalmente según su valor indicará: • Devuelve 1: el objeto que llama al método es mayor que el objeto del parámetro. • Devuelve -1: el objeto que llama al método es menor que el objeto del parámetro.
+
+• Devuelve 0 (cero): ambos objetos son iguales. Vamos un ejemplo implementando la interfaz en el ejemplo de la clase Rectangulo
+
+```java
+public class Rectangulo extends Figura implements Comparable<Rectangulo> {
+```
+
+// Atributos y métodos ya implementados en anteriores ejemplos
+
+// Añadimos el método compareTo()
+
+```java
+@Override
+```
+
+```java
+public int compareTo(Rectangulo r) {
+```
+
+if(this.getArea() > r.getArea())
+
+```java
+return 1;
+```
+
+else if(this.getArea() < r.getArea())
+
+```java
+return -1;
+```
+
+else
+
+```java
+return 0;
+}
+}
+```
+
+Ahora hagamos una prueba: // Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+Rectangulo r1 = new Rectangulo(2.0, 5.0);
+```
+
+```java
+Rectangulo r2 = new Rectangulo(2.0, 5.0);
+```
+
+```java
+Rectangulo r3 = new Rectangulo(10.0, 5.0);
+```
+
+if(r1.compareTo(r2) > 0)
+
+```java
+System.out.println(“Es mayor”);
+```
+
+else if(r1.comparteTo(r2) < 0)
+
+```java
+System.out.println(“Es menor”);
+```
+
+else
+
+```java
+System.out.println(“Son iguales”);
+```
+
+} } Por otra parte, el uso de la interfaz Comparable<T> es de gran utilidad cuando queremos ordenar objetos dentro de una lista. En el caso de listas estáticas utilizaremos el método sort() de la clase Arrays: // Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+Rectangulo rectangulos = new Rectangulo[3];
+```
+
+```java
+rectangulos[0] = new Rectangulo(2.0, 5.0);
+```
+
+```java
+rectangulos[1] = new Rectangulo(2.0, 5.0);
+```
+
+V1.07.02.23
+
+```java
+rectangulos[2] = new Rectangulo(10.0, 5.0);
+```
+
+```java
+Arrays.sort(rectangulos);
+```
+
+} }
+
+En el caso de de listas dinámicas, utilizaremos el método el método sort() de la clase Collections: // Fichero Test.java
+
+```java
+public class Test {
+```
+
+```java
+public static void main(String[] args) {
+```
+
+```java
+ArrayList<Rectangulo> rectangulos = new ArrayList<Rectangulo>();
+```
+
+```java
+rectangulos.add(new Rectangulo(2.0, 5.0));
+```
+
+```java
+rectangulos.add(new Rectangulo(2.0, 5.0));
+```
+
+```java
+rectangulos.add(new Rectangulo(10.0, 5.0));
+```
+
+```java
+Collections.sort(rectangulos);
+```
+
+} } En ambos casos, el resultado es la ordenación de la lista que hayamos pasado al método sort(). Nota Es fundamental que para que Arrays.sort() y Collections.sort() puedan ordenar los objetos, la clase del objeto a ordenar tenga implementado el método compareTo() de la interfaz Comparable.
+
+Por último, debemos tener en cuenta la relación entre el método compareTo() y equals(): • En caso de tener intención de comparar objetos de la clase, es recomendable implementar ambos métodos para que haya consistencia en la comparación de los objetos de dicha clase.
+
+V1.07.02.23
+
+### 7. Terminología
+
+agregación, api de java, asociación, clases abstractas, clases finales, comparación de objectos, composición, herencia, herencia múltiple, interfaces, interfaz Comparable, jerarquía, métodos abstractos, métodos finales, objeto object, interfaz comparable, polimorfismo, sobrecarga, sobrescritura, subclase, super, superclase, this.
+
+V1.07.02.23
+
+### 8. Bibliografía
+
+Libro “Java Programming 9th Edition” de Joyce Farrell Apuntes de José Chamorro del CFGS DAW del . https://docs.oracle.com/
 
 ---

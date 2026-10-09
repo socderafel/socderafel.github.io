@@ -3,7 +3,7 @@ layout: default
 title: "Índex — Digitalització — Digitalització | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "4t ESO · Secundària (ESO) i Batxillerat"
-next_url: "./ut00/index.html"
+next_url: "./ut01/index.html"
 next_label: "📘 UD1 Completa (1 pàgina) ➡️"
 ---
 
@@ -20,30 +20,30 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Digital
 
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
-| **UD1** | **U1. Introducció a la informática** | 2 apartats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UD2** | **Canva** | 1 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UD1** | **Introducció a la informática** | 2 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UD2** | **Canva** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
 | **UD3** | **Procesadores de Texto** | 1 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
 | **UD4** | **Hojas de cálculo** | 1 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
 | **UD5** | **Bases de Datos** | 1 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
 | **UD6** | **Redes** | 2 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
 | **UD7** | **Páginas Web** | 2 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
 
-## UD1 — U1. Introducció a la informática
+## UD1 — Introducció a la informática
 
 `4t ESO · UD1 · 2 apartats`
 
-[**📘 Obrir UD1 Completa en una sola pàgina**](./ut00/index.md)
+[**📘 Obrir UD1 Completa en una sola pàgina**](./ut01/index.md)
 
-- [**1.1 Teoria sobre maquinari (hardware)**](./ut00/ut0001.md)
-- [**1.2 Apuntes de sistemas de numeración**](./ut00/ut0002.md)
+- [**1.1 Teoria sobre maquinari (hardware)**](./ut01/ut0101.md)
+- [**1.2 Apuntes de sistemas de numeración**](./ut01/ut0102.md)
 
 ## UD2 — Canva
 
 `4t ESO · UD2 · 1 apartats`
 
-[**📘 Obrir UD2 Completa en una sola pàgina**](./ut01/index.md)
+[**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Tutorial Canva**](./ut01/ut0101.md)
+- [**2.1 Tutorial Canva**](./ut02/ut0201.md)
 
 ## UD3 — Procesadores de Texto
 
@@ -51,7 +51,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Digital
 
 [**📘 Obrir UD3 Completa en una sola pàgina**](./ut03/index.md)
 
-- [**3.1 Continguts i Recursos**](./ut03/ut0301.md)
+- [**3.1 Continguts Teòrics i Recursos**](./ut03/ut0301.md)
 
 ## UD4 — Hojas de cálculo
 
@@ -59,7 +59,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Digital
 
 [**📘 Obrir UD4 Completa en una sola pàgina**](./ut04/index.md)
 
-- [**4.1 Continguts i Recursos**](./ut04/ut0401.md)
+- [**4.1 Continguts Teòrics i Recursos**](./ut04/ut0401.md)
 
 ## UD5 — Bases de Datos
 

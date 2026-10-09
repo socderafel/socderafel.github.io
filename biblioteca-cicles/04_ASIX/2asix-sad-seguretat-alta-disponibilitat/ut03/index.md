@@ -2,9 +2,9 @@
 layout: default
 title: "UD3 — Gestió de Contrasenyes i Anàlisi Forense · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT3 Completa"
-prev_url: "../ut02/ut0203.html"
-prev_label: "⬅️ 2.3 Preparació Màquines Virtuals per a pràctiques po"
+badge: "2n ASIX · Grau Superior · UD3 — Gestió de Contrasenyes i Anàlisi Forense"
+prev_url: "../ut02/ut0202.html"
+prev_label: "⬅️ 2.2 Concienciació en ciberseguretat"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 Contrasenyes ➡️"
 ---
@@ -22,9 +22,6 @@ next_label: "3.1 Contrasenyes ➡️"
 ---
 
 # 3.1 Contrasenyes
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### UD 2 Mecanismes de seguretat
 
 ---
 
@@ -46,15 +43,9 @@ POLÍTIQUES DE CONTRASENYES Recomanacions per a contrasenyes segures: ➔Establi
 
 Més recomanacions: ➔No incloure seqüències ni caràcters repetits ➔No utilitzar el nom de l'inici de sessió ➔No utilitzar paraules del diccionari ➔Utilitzar diverses contrasenyes en diferents entorns ➔Evitar l'opció de contrasenya en blanc ➔No revelar la contrasenya a ningú ➔Canviar les contrasenyes amb regularitat POLÍTIQUES DE CONTRASENYES
 
-> **✍️ Pràctica: Vegem quant es tarda en trencar una contrasenya ‘feble’**
-> Pràctica: Vegem quant es tarda en trencar una contrasenya ‘feble’ en un equip amb poques prestacions !!!!!! En W10: Donar d’alta 8 usuaris amb contrasenyes febles (longitud <7)
-
 (5 minúscules, 5 min-maj 5 min-maj-dig 5 min-maj-dig-simb
 
 6 minúscules, 6 min-maj 6 min-maj-dig 6 min-maj-dig-simb ) Utilitzar el programa Hash Suite per a trencar per força bruta les contrasenyes https://hashsuite.openwall.net/ Observar el temps utilitzat i el conjunt de claus utilitzat Importar usuaris Configurar paràmetres d'atac Trencar contrasenyes Exportar dades Executa un Benchmark POLÍTIQUES DE CONTRASENYES
-
-> **✍️ Pràctica: En W10: Donar d’alta 4 usuaris amb contrasenyes febles**
-> Pràctica: En W10: Donar d’alta 4 usuaris amb contrasenyes febles (longitud <7) Utilitzar el programa John the Ripper per a trencar per força bruta les contrasenyes https://www.openwall.com/john/ Observar el temps utilitzat i el conjunt de claus utilitzat Pàgina exemple.
 
 https://www.top-password.com/blog/crack-windows-password-with-john-the-rippe r/ Interfície gràfica per a John  Johnny https://openwall.info/wiki/john/johnny https://esgeeks.com/como-usar-johnny-la-gui-john-the-ripper/ POLÍTIQUES DE CONTRASENYES
 

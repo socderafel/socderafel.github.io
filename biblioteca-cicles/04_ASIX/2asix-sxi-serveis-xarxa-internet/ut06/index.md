@@ -2,7 +2,7 @@
 layout: default
 title: "UD6 — Email · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT6 Completa"
+badge: "2n ASIX · Grau Superior · UD6 — Email"
 prev_url: "../ut05/ut0501.html"
 prev_label: "⬅️ 5.1 U5 SSH"
 next_url: "../ut06/ut0601.html"
@@ -21,17 +21,6 @@ next_label: "6.1 U6 Email ➡️"
 ---
 
 # 6.1 U6 Email
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Resources**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Tasks**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Practices**
-
-📎 **Material de laboratori (U6P1):** `U6P1.png`
 
 ---
 

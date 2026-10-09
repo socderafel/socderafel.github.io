@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "UD1 — Elementos esenciales del HE · Temari Complet"
+title: "UD1 — Elements Essencials del Hacking Ètic · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT1 Completa"
+badge: "CE Ciberseguretat (CETI) · UD1 — Elements Essencials del Hacking Ètic"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 HE 1 ➡️"
 ---
 
-# 📘 UD1 — Elementos esenciales del HE (Unitat Completa)
+# 📘 UD1 — Elements Essencials del Hacking Ètic (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
@@ -17,7 +17,7 @@ next_label: "1.1 HE 1 ➡️"
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**1.1 HE 1**](./ut0101.md)
-- [**1.2 tema1**](./ut0103.md)
+- [**1.2 tema1**](./ut0102.md)
 
 ---
 

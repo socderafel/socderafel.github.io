@@ -2,7 +2,7 @@
 layout: default
 title: "UD4 — Unit 4 Content Management Systems · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT4 Completa"
+badge: "2n SMX · Grau Mitjà · UD4 — Unit 4 Content Management Systems"
 prev_url: "../ut03/ut0302.html"
 prev_label: "⬅️ 3.2 Taller AWS-AWS"
 next_url: "../ut04/ut0401.html"

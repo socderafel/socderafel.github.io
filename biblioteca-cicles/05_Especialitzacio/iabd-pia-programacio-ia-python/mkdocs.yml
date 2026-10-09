@@ -5,22 +5,22 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python)":
-      - "📘 UD1 Completa (1 pàgina)": ut05/index.md
-      - "1.1 Instalación entorno de trabajo.": ut05/ut0501.md
-      - "1.2 SO LINUX MINT MATE": ut05/ut0502.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Instalación entorno de trabajo.": ./ut01/ut0101.md
+      - "1.2 SO LINUX MINT MATE": ./ut01/ut0102.md
   - "UD2 — Fonaments de Programació en Python":
-      - "📘 UD2 Completa (1 pàgina)": ut04/index.md
-      - "2.1 Python apuntes de clase": ut04/ut0401.md
-      - "2.2 Python para todos (libro).": ut04/ut0402.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Python apuntes de clase": ./ut02/ut0201.md
+      - "2.2 Python para todos (libro).": ./ut02/ut0202.md
   - "UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 6 Biblioteca scikit learn - Preprocesado de": ut03/ut0301.md
-      - "3.2 5 Biblioteca plotly": ut03/ut0302.md
-      - "3.3 4 Biblioteca seaborn": ut03/ut0303.md
-      - "3.4 3 Biblioteca matplotlib": ut03/ut0304.md
-      - "3.5 2 Biblioteca Pandas": ut03/ut0305.md
-      - "3.6 1 Biblioteca Numpy": ut03/ut0306.md
-      - "3.7 0 Presentació unitat": ut03/ut0307.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 6 Biblioteca scikit learn - Preprocesado de": ./ut03/ut0301.md
+      - "3.2 5 Biblioteca plotly": ./ut03/ut0302.md
+      - "3.3 4 Biblioteca seaborn": ./ut03/ut0303.md
+      - "3.4 3 Biblioteca matplotlib": ./ut03/ut0304.md
+      - "3.5 2 Biblioteca Pandas": ./ut03/ut0305.md
+      - "3.6 1 Biblioteca Numpy": ./ut03/ut0306.md
+      - "3.7 0 Presentació unitat": ./ut03/ut0307.md
   - "UD4 — Xarxes Neuronals i Deep Learning":
-      - "📘 UD4 Completa (1 pàgina)": ut02/index.md
-      - "4.1 Continguts i Recursos": ut02/ut0201.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Continguts Teòrics i Recursos": ./ut04/ut0401.md

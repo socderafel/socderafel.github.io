@@ -2,7 +2,7 @@
 layout: default
 title: "UD3 — HTTP · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT3 Completa"
+badge: "2n ASIX · Grau Superior · UD3 — HTTP"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 U2 DNS"
 next_url: "../ut03/ut0301.html"
@@ -21,15 +21,6 @@ next_label: "3.1 U3 HTTP ➡️"
 ---
 
 # 3.1 U3 HTTP
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Resources**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Tasks**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Practices**
 
 ---
 

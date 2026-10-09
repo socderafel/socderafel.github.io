@@ -2,7 +2,7 @@
 layout: default
 title: "UD6 — Laravel II · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT6 Completa"
+badge: "2n DAW · Grau Superior · UD6 — Laravel II"
 prev_url: "../ut05/ut0502.html"
 prev_label: "⬅️ 5.2 How to install npm (node) into our existing cont"
 next_url: "../ut06/ut0601.html"
@@ -24,11 +24,6 @@ next_label: "6.1 Frameworks. Laravel II ➡️"
 
 # 6.1 Frameworks. Laravel II
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Resources
-
-📎 **Material de laboratori (Docker Laravel + Node):** `Archivo.zip`
-
 > **🔗 Recurs Web: Laravel migrations (DB)**
 > [**🌐 Obrir recurs extern (https://laravel.com/docs/10.x/migrations) ↗️**](https://laravel.com/docs/10.x/migrations)
 
@@ -37,9 +32,6 @@ next_label: "6.1 Frameworks. Laravel II ➡️"
 
 > **🔗 Recurs Web: Images manipulation library (Laravel)**
 > [**🌐 Obrir recurs extern (https://intervention.io/) ↗️**](https://intervention.io/)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Tasks
 
 ---
 

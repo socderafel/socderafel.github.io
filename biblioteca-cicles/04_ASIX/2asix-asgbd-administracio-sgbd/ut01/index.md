@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — Instal·lació d'un SGBD · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT1 Completa"
+badge: "2n ASIX · Grau Superior · UD1 — Instal·lació d'un SGBD"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"

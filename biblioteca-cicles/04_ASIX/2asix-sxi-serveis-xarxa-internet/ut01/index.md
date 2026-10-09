@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — DHCP · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT1 Completa"
+badge: "2n ASIX · Grau Superior · UD1 — DHCP"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
@@ -21,15 +21,6 @@ next_label: "1.1 U1 DHCP ➡️"
 ---
 
 # 1.1 U1 DHCP
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Resources**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Tasks**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Practices**
 
 ---
 

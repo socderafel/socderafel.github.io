@@ -5,29 +5,26 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Virtualització i Repàs de Conceptes Previs":
-      - "📘 UD1 Completa (1 pàgina)": ut08/index.md
-      - "1.1 Repàs Interconnexió de Xarxes": ut08/ut0801.md
-  - "UD2 — Accés Remot Segur (SSH)":
-      - "📘 UD2 Completa (1 pàgina)": ut07/index.md
-      - "2.1 Continguts i Casos Guiats": ut07/ut07actividades.md
-  - "UD3 — Assignació Dinàmica d'Adreces (DHCP)":
-      - "📘 UD3 Completa (1 pàgina)": ut06/index.md
-      - "3.1 presentació DHCP": ut06/ut0601.md
-      - "3.2 Presentació DHCP. Visió general": ut06/ut0602.md
-      - "3.3 Servei DHCP": ut06/ut0603.md
-      - "3.4 Servidor DHCP": ut06/ut0604.md
-  - "UD4 — Sistema de Noms de Domini (DNS)":
-      - "📘 UD4 Completa (1 pàgina)": ut05/index.md
-      - "4.1 UD3 Servidor de Nombres de Dominio SMX": ut05/ut0501.md
-  - "UD5 — Servidor Web (HTTP / Virtual Hosting)":
-      - "📘 UD5 Completa (1 pàgina)": ut04/index.md
-      - "5.1 Introducción virtual hosting": ut04/ut0402.md
-      - "5.2 Configuración Virtual hosting": ut04/ut0403.md
-  - "UD6 — Servei de Correu Electrònic":
-      - "📘 UD6 Completa (1 pàgina)": ut03/index.md
-      - "6.1 Presentació": ut03/ut0301.md
-      - "6.2 El correu electrònic": ut03/ut0302.md
-      - "6.3 Les Guest additions": ut03/ut0303.md
-  - "UD7 — Servei de Transferència de Fitxers (FTP)":
-      - "📘 UD7 Completa (1 pàgina)": ut02/index.md
-      - "7.1 FTP": ut02/ut0201.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Repàs Interconnexió de Xarxes": ./ut01/ut0101.md
+  - "UD2 — Assignació Dinàmica d'Adreces (DHCP)":
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 presentació DHCP": ./ut02/ut0201.md
+      - "2.2 Presentació DHCP. Visió general": ./ut02/ut0202.md
+      - "2.3 Servei DHCP": ./ut02/ut0203.md
+      - "2.4 Servidor DHCP": ./ut02/ut0204.md
+  - "UD3 — Sistema de Noms de Domini (DNS)":
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 UD3 Servidor de Nombres de Dominio SMX": ./ut03/ut0301.md
+  - "UD4 — Servidor Web (HTTP / Virtual Hosting)":
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Introducción virtual hosting": ./ut04/ut0401.md
+      - "4.2 Configuración Virtual hosting": ./ut04/ut0402.md
+  - "UD5 — Servei de Correu Electrònic":
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Presentació": ./ut05/ut0501.md
+      - "5.2 El correu electrònic": ./ut05/ut0502.md
+      - "5.3 Les Guest additions": ./ut05/ut0503.md
+  - "UD6 — Servei de Transferència de Fitxers (FTP)":
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 FTP": ./ut06/ut0601.md

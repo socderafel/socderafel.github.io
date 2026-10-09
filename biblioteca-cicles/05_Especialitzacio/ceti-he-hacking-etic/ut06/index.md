@@ -2,7 +2,7 @@
 layout: default
 title: "UD6 — Auditorias de seguridad con Wireshark · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT6 Completa"
+badge: "CE Ciberseguretat (CETI) · UD6 — Auditorias de seguridad con Wireshark"
 prev_url: "../ut05/ut0506.html"
 prev_label: "⬅️ 5.6 Scripts amb nmap"
 next_url: "../ut06/ut0601.html"

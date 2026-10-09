@@ -2,7 +2,7 @@
 layout: default
 title: "UD7 — Auditorias de seguridad utilizando hping · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT7 Completa"
+badge: "CE Ciberseguretat (CETI) · UD7 — Auditorias de seguridad utilizando hping"
 prev_url: "../ut06/ut0601.html"
 prev_label: "⬅️ 6.1 Wireshark"
 next_url: "../ut07/ut0701.html"

@@ -1,166 +1,356 @@
 ---
 layout: default
-title: "UD6 — Diagramas de comportamiento · Temari Complet"
+title: "UD5 — Diagramas de clase · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT5 Completa"
+badge: "1r DAW / DAM · Grau Superior · UD5 — Diagramas de clase"
 prev_url: "../ut04/ut0401.html"
-prev_label: "⬅️ 5.1 Diagramas de clase"
+prev_label: "⬅️ 4.1 Debugging y testing"
 next_url: "../ut05/ut0501.html"
-next_label: "6.1 Diagramas de casos de uso ➡️"
+next_label: "5.1 Diagramas de clase ➡️"
 ---
 
-# 📘 UD6 — Diagramas de comportamiento (Unitat Completa)
+# 📘 UD5 — Diagramas de clase (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**6.1 Diagramas de casos de uso**](./ut0501.md)
-- [**6.2 Diagramas de estado**](./ut0502.md)
+- [**5.1 Diagramas de clase**](./ut0501.md)
 
 ---
 
-# 6.1 Diagramas de casos de uso
-
-📎 **Material de laboratori (Ejemplo caso de uso 1):** `Captura de pantalla-22 a las 17.20.59.png`
-
-📎 **Material de laboratori (Ejemplo caso de uso 2):** `Captura de pantalla-22 a las 17.58.01.png`
-
-📎 **Material de laboratori (Diagrama de actividades - Compra producto):** `Diagrama de actividades.png`
+# 5.1 Diagramas de clase
 
 ---
 
-DIAGRAMAS EN UML Use Case Diagrams Use Case Diagrams Diagramas de Casos de Uso Scenario Diagrams Scenario Diagrams Diagramas de Colaboración State Diagrams State Diagrams Diagramas de Componentes Component Diagrams Component Diagrams Diagramas de Distribución State Diagrams State Diagrams Diagramas de Objetos Scenario Diagrams Scenario Diagrams Diagramas de Estados Use Case Diagrams Use Case Diagrams Diagramas de Secuencia State Diagrams State Diagrams Diagramas de Clases Diagramas de Actividad UML
+Diagrama de Clases
 
-CASOS DE USO
+ÍNDICE 1. Qué es UML 2. Diagramas de Clases 3. Clases 4. Atributos 5. Métodos 6. Relaciones
 
-- Para poder dibujar un diagrama de casos de
+### 1. Asociación. El concepto de Navegabilidad
 
-uso utilizando la notación UML es preciso que entendamos conceptualmente lo que vamos a representar con iconos UML.
+### 2. Clase Asociación
 
-- Los casos de uso están íntimamente
+### 3. Herencia
 
-relacionados con los requisitos funcionales del sistema.
+### 4. Composición
 
-- Los casos de uso se extraen del documento de
+### 5. Agregación
 
-requisitos del sistema.
+### 6. Realización
 
-CASOS DE USO
+### 7. Dependencia
 
-- En el diagrama de casos de uso no hay que
+UML
 
-describir el funcionamiento interno del sistema. Ejemplo Caso de uso: Registrar Venta No hay que describir
+- UML (Unified Modeling Languaje) [Lenguaje de Modelado Unificado]
+- Lenguaje de modelado basado en diagramas que sirve para expresar
 
-- El sistema escribe la venta en un BBDD…
+modelos en Diseño Orientado a Objetos.
 
-- El sistema genera una sentencia insert…
+- Un modelo es una representación de la realidad donde se ignoran
 
-CASOS DE USO ELEMENTOS Ahora que ya conocemos conceptualmente lo que tenemos que dibujar en el diagrama de casos de uso, veamos los iconos que los representan
+detalles de menor importancia
 
-- Actor
-- Caso de Uso
-- Relaciones entre casos de uso
+- Se ha convertido en el estándar de facto de la mayor parte de las
 
-Extiende (extend) – Usa (include)
+metodologías de desarrollo oo de la actualidad.
 
-CASOS DE USO
+- UML define 9 tipos de diagramas
+- Cada uno representa el sistema desde un punto de vista
+- Los más usados son
+- Diagrama de Casos de Uso: usado durante la recopilación de requisitos
+- Diagrama de Clases: es un diagrama estático que muestra las distintas clases
 
-CASOS DE USO Actores Los actores se representan con el icono de estereotipo estándar para casos de uso (el “stick man” o monigote) con el nombre del actor al pie de la figura. Los nombres de los actores suelen empezar por mayúscula. Actores: – Principales: el objetivo del caso de uso es esencial – Secundarios: interactúan con el caso de uso, pero el objetivo no es esencial.
+que conforman un sistema y cómo se relacionan entre ellas. Se parece mucho al diagrama ER que dibujamos en BBDD
 
-CASOS DE USO Actores § El actor suele ser una persona, pero se diferencia de un usuario. Ahora vemos cómo… § Un actor representa un cierto papel que distintos usuarios pueden jugar. § El actor sería la clase y el usuario una instancia de la clase..
+Diagramas de UML 1.5 •(1)Diagrama de Casos de Uso
 
-CASOS DE USO Casos de uso Los casos de uso se representan por una elipse y un nombre, que puede ir dentro o debajo de la elipse. Los casos de uso describen en forma de acciones el comportamiento del sistema, estudiado desde el punto de vista del usuario. Un escenario es una instancia de un caso de uso.
+- (2) Diagrama de Clases
 
-CASOS DE USO Ejemplo Consideremos como sistema un criadero de caballos. La compra de un caballo por parte de un cliente constituye un caso de uso. El comprador del caballo es el actor primario. El actor que registra el certificado de venta es un actor secundario. La compra del caballo Jorgelina constituye un ejemplo de escenario del caso de uso compra de un caballo.
+•(3) Diagrama de Objetos Diagramas de Comportamiento
 
-CASOS DE USO
+- (4) Diagrama de Estados
+- (5) Diagrama de Actividad
 
-CASOS DE USO § UML define cuatro tipos de relación en los Diagramas de Casos de Uso: – Comunicación: La relación que vincula a un actor con un caso de uso se denomina relación de comunicación. Actor C aso de U so
+Diagramas de Interacción
 
-CASOS DE USO
+- (6) Diagrama de Secuencia
+- (7) Diagrama de Colaboración
 
-- Inclusión: Cuando decimos que un caso de uso incluye
+Diagramas de implementación
 
-a otro indicamos que siempre lo necesita. El usuario puede comprar Un billete de avión Y el usuario puede entrar Al sistema e identificarse Pero no puede terminar La compra sin identificarse
+- (8) Diagrama de Componentes
+- (9) Diagrama de Despliegue
 
-CASOS DE USO
+DIAGRAMA DE CLASES
 
-- Extensión: Cuando decimos que un caso de uso extiende
+- Compuesto por
+- Clases: atributos, métodos y la visibilidad de estos.
+- Atributos: variables.
+- Métodos: operaciones. Cómo interactúa el objeto con su entorno.
+- Relaciones: asociación (relación), herencia, agregación, composición,
 
-a otro indicamos que opcionalmente lo necesita. Se utiliza cuando se quiere reflejar el comportamiento opcional de un caso de uso. A la hora de adquirir un caballo, el comprador puede examinar su pelaje. Por lo tanto, el caso de uso compra de un caballo puede extenderse con esa verificación.
+realización y dependencia
 
-CASOS DE USO
+CLASE
 
-- Herencia
+- Unidad básica que encapsula la i de un Objeto.
+- Un objeto es una instancia de una clase.
+- A través de ella podemos modelar el entorno de estudio (un
 
-Es posible especializar un caso de uso en otro. El subcaso hereda las relaciones de comunicación, inclusión y extensión del supercaso de uso. En el diagrama de los casos de uso, la relación de especialización se representa mediante una flecha de especialización idéntica a la que une las subclases con las superclases.
+empleado, un departamento, una cc, un artículo,…)
 
-CASOS DE USO
+- En UML una clase se representa así
+- Podemos omitir atributos y métodos al representar una clase.
 
-- Ejemplo
+ATRIBUTO
 
-El caso de uso compra de un caballo se especializa en dos subcasos: la compra de una yegua o la compra de un semental. La relación de comunicación que existe entre el caso de uso de compra del caballo y el Comprador se hereda en los dos subcasos de uso.
+- Representa una propiedad de la Clase que se encuentra en todas las instancias de
 
-CASOS DE USO
+la clase.
 
-CASOS DE USO
+- Se representa mostrando su nombre y si quieres también su tipo y valor por
 
----
+defecto.
 
-# 6.2 Diagramas de estado
+- Los tipos básicos en UML son: Integer, String y Boolean.
+- Al crear el atributo indicarás su visibilidad en el entorno.
+- Su visibilidad es
+- Public: se representa con el símbolo “+”. Visible desde todas partes del programa
+- Private: “-”. Visible solo desde dentro de la Clase, es decir, que solo sus Métodos pueden
 
-U6.2 - Diagrama de estados 1º DAW
+acceder al Atributo. Los atributos de una clase por defecto son Private
 
-Introducción
+- Protected: “#”. NO accesible desde fuera de la Clase.
 
-- Muestra los estados por los que pasa un objeto durante el transcurso
+SÍ accesible por los Métodos de la propia Clase y de las subclases que de él deriven.
 
-del tiempo.
+- Pakage: “~”. Visible a las clases del mismo paquete
 
-Introducción
+MÉTODO
 
-- Los objetos o entidades que involucradas en el proceso de desarrollo
+- Implementa un servicio de la clase que muestra un comportamiento
 
-pueden modificar sus estados como respuesta a la ejecución de una acción o evento.
+común a todos los objetos.
 
-- El diagrama de estados de UML es quien captura cada uno de los
+- Define la forma de cómo la clase interactúa con su entorno.
+- Visibilidad
+- Public: “+”. Método visible desde todas partes del programa.
 
-estados de los objetos.
+Los métodos de una clase por defecto son Public
 
-Introducción
+- Private: “-”. Accesible solo por los Métodos de la Clase.
+- Protected: “#”. Accesible por los Métodos de la propia Clase y por Métodos de las
 
-Introducción
+subclases que de él deriven.
 
-- Un diagrama de estados captura los cambios de un UN solo objeto.
-- Si tenemos varios objetos, necesitamos varios diagramas.
-- Uno por objeto.
+- Pakage: “~”. Visible a las Clases del mismo paquete
 
-Introducción
+RELACIONES (también llamadas ASOCIACIONES)
 
-- El diagrama de estado empieza por un círculo relleno inicial y termina
+- Las relaciones tienen un NOMBRE
+- MULTIPLICIDAD: Es como la CARDINALIDAD del modelo ER que
 
-con un círculo doble que denota el estado final
+usábamos en BD y se lee en el mismo sentido. Es el número de instancias de una clase que se representan con otra clase. Indicamos la multiplicidad mínima y la máxima
 
-¿Qué necesito?
+- Ejemplo de 2 asociaciones con sus multiplicidades
+- Dependiendo de la herramienta de modelado que usemos, las multiplicidades destino >1 se
 
-- Para realizar el diagrama de estados es necesario saber todo el flujo
+implementan con un atributo del tipo array, colección o set.
 
-de datos del programa.
+- Tipos de Relaciones
 
-- Diagrama de actividades
+### 1. Asociación
 
-Elementos de un diagrama de estados
+### 3. Herencia (Generalización y Especialización)
 
-Elaboración de diagramas de estado
+1-ASOCIACIÓN
 
-- 1. Identificar los objetos de nuestra aplicación.
-- 2. Recordar que se realiza un diagrama por cada objeto.
-- 3. Para cada uno de los objetos.
-- 3.1. Identificar los estados por los que puede pasar el objeto
-- Compra - Registrada, Pendiente de Envío, Enviada, En Camino, Entregada, No_Entregada
+- Puede ser bidireccional o unidireccional, dependiendo de si ambas
 
-Elaboración de diagramas de estado
+conocen de la existencia de la otra o no.
+
+- Cada Clase juega un rol que se indica en la flecha.
+- Además, la asociación también tiene nombre
+
+MULTIPLICIDAD
+
+JAVA
+
+- Si conviertes a Java 2 clases unidas por una asociación…
+- Bidireccional
+- Cada clase tendrá un objeto (1) o un set de objetos (*), dependiendo de la multiplicidad
+
+entre ellas.
+
+- Unidireccional
+- La clase destino no sabrá de la existencia de la clase origen.
+
+En el ejemplo: Zonas no sabe nada de la clase Almacén.
+
+- La clase origen contendrá un objeto (1) o set de objetos (*) de la clase destino.
+
+NAVEGABILIDAD entre clases
+
+- Muestra que es posible pasar de un objeto de la clase origen a uno o
+
+más objetos de la clase destino, dependiendo de la Multiplicidad.
+
+- Unidireccional: la navegabilidad va en un solo sentido, de origen a destino.
+
+El destino no es navegable al origen.
+
+- Ambas clases son navegables
+- La asociación es unidireccional
+
+solo la clase origen Almacén conoce la existencia de la clase destino Zonas. Almacen a Zonas es navegable pero no al contrario.
+
+NOTA
+
+- NO todas las herramientas usan la misma notación para expresar la
+
+Navegabilidad.
+
+- En UML2 existen varias notaciones para expresar la navegabilidad, en
+
+la práctica más estándar se usa esta notación
+
+ASOCIACIONES REFLEXIVAS
+
+- Una clase puede asociarse consigo misma creando una asociación
+
+reflexiva como ocurría en el Diagram ER que vimos en BD.
+
+- Ejemplo1: un alumno es delegado de muchos alumnos
+- Ejmeplo2: un empleado-jefe es jefe de muchos empleados.
+
+2-CLASE ASOCIACION
+
+- Una asociación entre dos clases puede llevar información necesaria
+
+para esta asociación. A eso se le llama Clase Asociación.
+
+- Es como cuando surgían atributos en una relación N:M en el ER.
+- La nueva clase asociación…
+- Recibe el estatus de Clase
+- Sus instancias son elementos de la asociación.
+- Pueden estar dotadas de Atributos y Operaciones
+- Pueden estar vinculadas a otras Clases a través de ASOCIACIONES.
+
+EJEMPLO CLASE ASOCIACION
+
+- Un cliente compra muchos artículos
+- Un artículo es comprado por muchos clientes
+- De la relación compra se necesita saber la fecha en que de produjo y
+
+las unidades adquiridas.
+
+- Fíjate que la relación ya no tiene nombre, se lo ha quedado la propia Clase
+
+Asociación.
+
+3-HERENCIA /GENERALIZACIÓN /ESPECIALIZACIÓN (las 3 son lo mismo)
+
+- La clase hija hereda los atributos y métodos de la padre.
+- Se representa mediante una flecha de este tipo
+
+donde la punta de la flecha apunta a la superclase o clase padre.
+
+- Ejemplo: todas estas clases
+
+comparten los atributos de la clase Persona
+
+- El código JAVA generado para estas clases sería el siguiente
+
+4-COMPOSICIÓN
+
+- Representa un objeto compuesto por otros objetos.
+- Asocia un objeto complejo con los objetos que lo constituyen, sus
+
+componentes.
+
+- Hay 2 formas de composición
+- Fuerte: composición (es la que explicamos ahora)
+- Débil: agregación (es el tipo de Asociación del punto 5-AGREGACION)
+
+- Los componentes constituyen una parte del objeto compuesto y estos
+
+no pueden ser compartidos por varios objetos compuestos.
+
+- Por tanto, la cardinalidad máxima es 1
+- La supresión del objeto compuesto, comporta la supresión de los
+
+componentes
+
+- Se representa con una línea con un
+
+rombo relleno
+
+- Ejemplo: el PC se compone de una
+
+Placa Base, Una o varias Memorias, un Teclado y uno o varios HD.
+
+- Código JAVA generado para la clase Ordenador
+
+5-AGREGACIÓN
+
+- Es la composición débil, como hemos dicho antes.
+- Los componentes pueden ser compartidos por varios compuestos
+- La destrucción del compuesto no implica la destrucción de los
+
+componentes
+
+- Se da con más frecuencia que la COMPOSICIÓN en las primeras fases
+
+del modelado. Es posible usar solo la agregación y determinar más adelante qué Asociaciones son Compomposiciones.
+
+- Se representa con un rombo vacío
+- Ejemplo: un equipo está compuesto por jugadores, pero el jugador
+
+puede jugar a su vez en otros equipos. Si desaparece el Equipo, el Jugador no desaparece.
+
+DIFERENCIAS ENTRE AGREGRACIÓN Y COMPOSICIÓN
+
+6-REALIZACIÓN
+
+- Relación de herencia que existe entre una Clase Interfaz y la Subclase
+
+que implementa esta interfaz.
+
+- Una Interfaz es una Clase totalmente Abstracta, es decir, que no tiene
+
+Atributos y todos sus Métodos son Abstractos y Públicos, sin desarrollar. Estas Clases no desarrollan ningún Método. Gráficamente se representan como una Clase con el estereotipo <<interface>>.
+
+- Se representa así
+
+- EJEMPLO: Esta imagen muestra una Asociación de Realización entre
+
+una Clase Interfaz Animal y las Clases Perro, Gallina y Calamar. SE considera que cualquier animal come, se comunica y se reproduce, sin embargo cada tipo de animal lo hace de diferente manera. Cada Subclase implementará los métodos de la interfaz.
+
+- Código JAVA generado
+
+7-DEPENDENCIA
+
+- Relación que se establece entre dos clases cuando una clase usa la
+
+otra, es decir, que la necesita para su cometido. Las instancias de la Clase se crean y se emplean cuando se necesitan.
+
+- Se representa: - - - - - - - ->
+
+desde la Clase utilizadora a la utilizada.
+
+- Un cambio en la Clase Utilizada puede afectar al funcionamiento de la
+
+Clase Utilizadora, pero no al contrario.
+
+- Ejemplo1: Clase Impresora y Clase Documento. La impresora imprime
+
+documentos, por tanto necesita el documento para imprimirlo.
+
+- Ejemplo2: El viajero necesita su equipaje para viajar. El viajero
+
+depende de la Clase Equipaje porque la necesita.
 
 ---

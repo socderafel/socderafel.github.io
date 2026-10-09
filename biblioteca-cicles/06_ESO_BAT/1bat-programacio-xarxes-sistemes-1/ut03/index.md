@@ -1,261 +1,153 @@
 ---
 layout: default
-title: "UD2 — Xarxes · Temari Complet"
+title: "UD3 — Sistemes de fitxers Linux · Temari Complet"
 course_root: ".."
-badge: "1r Batxillerat · UT3 Completa"
-prev_url: "../ut01/ut0104.html"
-prev_label: "⬅️ 1.4 Bucles"
+badge: "1r Batxillerat · UD3 — Sistemes de fitxers Linux"
+prev_url: "../ut02/ut0203.html"
+prev_label: "⬅️ 2.3 Maquinari"
 next_url: "../ut03/ut0301.html"
-next_label: "2.1 Introducció ➡️"
+next_label: "3.1 Sistema d'arxius ➡️"
 ---
 
-# 📘 UD2 — Xarxes (Unitat Completa)
+# 📘 UD3 — Sistemes de fitxers Linux (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 Introducció**](./ut0301.md)
-- [**2.2 TCP-IP**](./ut0302.md)
-- [**2.3 Maquinari**](./ut0303.md)
+- [**3.1 Sistema d'arxius**](./ut0301.md)
+- [**3.2 Gestió de Fitxers**](./ut0302.md)
+- [**3.3 Permisos**](./ut0303.md)
 
 ---
 
-# 2.1 Introducció
+# 3.1 Sistema d'arxius
 
-📎 **Material de laboratori (Tasca1):** `RedDHCP.fls`
+Classe 1: Estructura del sistema d’arxius en Linux Objectiu Comprendre l’organització del sistema d’arxius en Linux, identificar els princi- pals directoris i entendre el concepte de rutes absolutes i relatives. Teoria El sistema d’arxius de Linux s’organitza en forma d’arbre jeràrquic que comença en el directori arrel, representat per /. Tots els fitxers i directoris del sistema pengen d’aquest punt únic.
 
-📎 **Material de laboratori (Tasca2):** `2Subredes.fls`
+A diferència d’altres sistemes operatius, Linux integra tots els dispositius (discos durs, USB, etc.) dins d’aquest arbre, mitjançant punts de muntatge, que són directoris on es connecten aquests dispositius. Principals directoris del sistema (segons l’estàndard FHS)
 
-📎 **Material de laboratori (tasca3):** `2SubredesConRouter.fls`
+- / – Arrel del sistema.
+- /home – Directoris personals dels usuaris.
+- /bin – Programes i ordres bàsiques accessibles a tots els usuaris.
+- /sbin – Ordres d’administració del sistema.
+- /etc – Fitxers de configuració del sistema.
+- /usr – Programes, llibreries i documentació addicional.
+- /lib – Llibreries essencials pel sistema i programes.
+- /var – Dades variables: registres (logs), cues d’impressió, etc.
+- /tmp – Fitxers temporals.
+- /root – Directori personal de l’usuari administrador (root).
+- /media i /mnt – Punts de muntatge per a dispositius externs.
 
----
+Rutes en Linux Ruta absoluta: comença sempre per / i indica el camí complet fins al fitxer o directori. Exemple: /home/alumne/Documents/text.txt. Ruta relativa: indica el camí respecte del directori actual. Exemples: - . és el directori actual. - .. és el directori pare. - ~/Documents fa referència al directori Documents de l’usuari actual.
 
-Xarxes “Les xarxes no estan fetes de circuits impresos, sinó de persones...” Cliff Stoll - Astrònom, administrador de sistemes, I escriptor.
+Ordres bàsiques de navegació
 
-Continguts
+- pwd – mostra el directori actual.
+- ls – llista el contingut.
 
-### 1. Conceptes bàsics
-
-### 2. Protocol TCP/IP
-
-### 3. Maquinari d’una xarxa
-
-### 4. Programari d’una xarxa
-
-### 5. Gestió d’usuaris, recursos i permisos
-
-### 6. Seguretat i privacitat en les xarxes
-
-### 7. Formats estàndard d’intercanvi de dades
-
-### 8. La xarxa Internet
-
-### 9. Comerç electrònic
-
-Conceptes bàsics
-
-Antecedents ◼Els ordinadors, disposen de programes emmagatzemats al seu disc dur. ◼El SO els carrega a la memòria principal per a que puguen ser executats. ◼Les dades, també són carregades a la memòria per a ser tractades. ◼Tot s’executa en un entorn delimitat, la frontera és la carcassa de l’ordinador.
-
-Necessitat de processament remot ◼Què passa si les dades és troben a un altre ordinador que està a un metre de distància? Podríem emprar un dispositiu d’emmagatzemament extern. ◼I si eixe ordinador està a 20 quilòmetres? ◼Eixa necessitat d’accedir a dades remotes impulsà la creació les xarxes.
-
-◼La teleinformàtica o telemàtica és la disciplina que s’encarrega del tractament automàtic de informació de forma remota.
-
-Què es una xarxa? ◼Una xarxa és un conjunt d’ordinadors connectats entre sí. ◼Els ordinadors comparteixen Dades (imatges, documents, etc..) Recursos ◼impressores ◼disc dur ◼connexió amb internet
-
-Què es una xarxa? ◼Pot ser tan senzilla com la formada per un parell d’ordinadors o tan complexa com és la xarxa Internet.
-
-Què és una xarxa?
-
-Classificació de les xarxes I ◼Atenent al seu tamany o a l’àrea de cobertura Xarxes d’àrea local (XAL ó LAN).   Extensió limitada (un edifici, un campus….). Pertanyen a una sola organització, que és la mateixa que l’explota. Velocitats de 10 Mbps a 1Gbps WLAN.  
-
-Classificació de les xarxes I ◼Atenent al seu tamany o a l’àrea de cobertura Xarxes d’àrea metropolitana (MAN). ▪ Extensió d’uns 50km. Cobreix una extensió d’una gran ciutat, o diversos pobles. ▪ Formada per LANs interconectades. ▪ S’empra la fibra òptica per donar conexión.
-
-Classificació de les xarxes I ◼Atenent al seu tamany o a l’àrea de cobertura ❑Xarxes d’àrea extensa (WAN). ▪ Interconnecten equips i xarxes geogràficament dispersos (un ciutat, un país, etc.). ▪ Empren l’infrastructura de tercers. (Operadors de telecomunicacions) ▪ La velocitat depen del mode de conexió entre xarxes.
-
-Classificació de les xarxes I ◼Atenent al seu tamany o a l’àrea de cobertura
-
-Classificació de les xarxes II ◼Atenent al nivell d’accés i privacitat. D’accés públic. Internet ◼Xarxa de xarxes. ◼Permet compartir informació i servicis a nivell mundial. ◼Es d’accés públic.
-
-Classificació de les xarxes II ◼Atenent al nivell d’accés i privacitat. Intranet ▪ Empra ferramentes de internet, dintre de l’entorn d’una LAN. ▪ L’accés sols es permet als empleats de l’organització. ❑Extranet ▪ Una intranet accessible des de fora de l’àmbit de la LAN.
-
-▪ Es pot accedir des de qualsevol lloc mitjançat autentificació. ❑VPN ▪ Red privada que crea una conexión segura y cifrada sobre una menys segura, com pot ser l’Internet.
-
-Tipus d’equips a les xarxes ◼Servidors Oferixen serveis i recursos als usuaris. Web, impressió, correu electrònic. ◼Clients Consumixen serveis i recursos d’un servidor. Relació client-servidor
-
-Tipus d’equips a les xarxes Relació P2P o peer-to-peer: ◼No existeix una jerarquía entre les màquines conectades a la red. ◼Els ordinadors es comporten indistintament com a clients i com a servidors.
-
-Tipus d’equips a les xarxes
-
-Comunicació ◼Procés en el que un emissor envia un missatge a un receptor a través d’un canal. ◼Els ordinadors actuen d’emissor i receptor. ◼El canal és el medi pel que viatja la informació.
-
-Protocols ◼L’emissor i el receptor s’han d’entendre, es a dir, han de parlar el mateix llenguatge (Protocol). ◼Els protocols estableixen un conjunt de normes que especifiquen com es durà a terme la comunicació. ◼Exemples: TCP/IP, NetBios
-
-Avantatges de les xarxes ◼Redueixen costos. Al poder compartir recursos, com una impressora. ◼Augmenten la eficàcia i la productivitat. Les dades, al estar centralitzades, estan disponibles de forma immediata a tots els usuaris. ◼Permeten la col·laboració entre les persones.
-
-Ferramentes com Microsoft Outlook o la missatgeria instantània faciliten la col·laboració entre persones.
-
-Desavantatges ◼Risc de atacs a la seguretat Accés a informació confidencial. Atacs des de l’exterior. Infeccions víriques poden propagar-se ràpidament.
+- cd – canvia de directori.
+- tree – mostra l’estructura jeràrquica d’un directori.
 
 ---
 
-# 2.2 TCP-IP
+# 3.2 Gestió de Fitxers
 
-Els protocols TCP/IP
+Classe 2: Gestió de fitxers i directoris Objectiu Dominar les ordres fonamentals per crear, copiar, moure, visualitzar i eliminar fitxers i directoris. Teoria En Linux, la major part d’operacions es poden fer des de la línia d’ordres, la qual cosa permet automatitzar tasques i treballar de manera eficient.
 
-Continguts        Introducció. Origen de TCP/IP. Ús d’Internet a nivell mundial. Adreces IP. Màscares de Xarxa. Noms de domini. DNS (Domain Name System). DHCP (Dynamic Host Configuration Protocol). Porta d’enllaç (Gateway).
+Ordres principals de gestió
 
-Introducció ◼La família de protocols TCP/IP està formada per diversos protocols amb diferents característiques i funcions. ◼Els més importants son: TCP (Transmission Control Protocol). Controla errors i s’assegura de la correcta arribada dels missatges. IP (Internet Protocol). Dirigeix els missatges per la xarxa.
+- mkdir nom – crea un directori.
+- rmdir nom – elimina un directori buit.
+- cp origen destí – copia fitxers o directoris.
+- mv origen destí – mou o canvia el nom.
+- rm fitxer – elimina fitxers.
+- rm -r directori – elimina directoris i el seu contingut (ús amb precau
 
-◼TCP i IP són la base d’Internet.
+ció).
 
-Origen de TCP/IP ◼En 1969, a petició del govern dels EEUU, un grup de científics van desenvolupar la xarxa ARPANET. Amb 2 característiques claus: Devia de seguir funcionant encara que part de la xarxa es trencara. No devia existir cap ordenador “central” que controlar la xarxa.
+- touch fitxer – crea un fitxer buit o actualitza la marca de temps.
+- cat fitxer – mostra el contingut complet del fitxer.
+- more / less – mostren el contingut de manera paginada.
+- man ordre – mostra el manual d’una ordre.
 
-◼ARPANET va créixer ràpidament connectat un centenar de xarxes universitàries i militars arreu del món.
+Comodins (metacaràcters)
 
-Origen de TCP/IP ◼Dintre del projecte Internetting es crearen els protocols TCP i IP (1981). ◼L’objectiu del projecte era interconnectar xarxes de tot tipus, independentment de la tecnologia que empraren. ◼En 1990 ARPAnet va ser dissolta, però la seua tecnologia havia engendrat Internet.
+- * – qualsevol seqüència de caràcters.
 
-◼En 1991 es va crear la Word Wide Web (www).
+> **💡 Apunt Tècnic**
+> Exemple: rm *.txt elimina tots els .txt del directori actual.
 
-Com funciona? ❑Els protocols TCP (Transmission Control Protocol) i IP (Internet Protocol) treballen junts per a garantir una comunicació eficaç i fiable a través d'Internet i altres xarxes. ❑Funcionament del Protocol IP (Internet Protocol)
+- ? – exactament un caràcter.
 
-### 1. Adreçament: Cada dispositiu connectat a la xarxa té una adreça IP
+> **💡 Apunt Tècnic**
+> Exemple: cp foto?.jpg /backup copia foto1.jpg, foto2.jpg, etc. Opcions d’ordres Moltes ordres permeten opcions per modificar el seu comportament
 
-única. Aquesta adreça identifica tant l'host (dispositiu final) com la xarxa a la qual pertany.
-
-### 2. Encaminament de Paquets: Quan les dades són enviades, l'IP les
-
-divideix en paquets més petits. Cada paquet conté l'adreça IP d'origen i de destí, així com una part de la informació original.
-
-### 3. Transmissió a través de Xarxes: Els paquets són enviats a través
-
-de diferents xarxes i dispositius intermediaris (com ara routers) fins arribar a la seva destinació. Els routers utilitzen les adreces IP per a determinar la millor ruta per a cada paquet.
-
-Com funciona? ❑Funcionament del Protocol TCP (Transmission Control Protocol)
-
-### 1. Establiment de Connexió: Abans de la transmissió de dades, TCP
-
-estableix una connexió segura i fiable entre l'enviant i el receptor. Això es fa mitjançant un procés anomenat "handshake" (encaixada de mans) de tres passos.
-
-### 2. Segmentació de Dades: TCP divideix les dades en segments més
-
-manejables que són enviats sobre la xarxa.
-
-### 3. Fiabilitat i Control d'Errors: TCP s'encarrega de la verificació de la
-
-integritat de les dades. Si un segment es perd o s'envia amb errors, TCP demana la seva retransmissió.
-
-### 4. Control de Flux: Aquest protocol també gestiona la velocitat
-
-d'enviament de dades per evitar la sobrecàrrega de la xarxa i assegurar que el receptor pugui processar la informació a una velocitat adequada.
-
-Adreces IP Els ordinadors han d’estar identificats per a poder comunicar-se. Actualment tenim dos versions de IP: ◼IP v4: ◼4 números separats per punts. ◼Els números van de 0 a 255 (byte). ◼Per exemple: 192.168.1.6 ◼IP v6: ◼8 grups en hexadecimal ◼Exemple: 2000:13FA:1111:4E21:0200:D044:0000.0000
-
-Adreces IP ◼Cada adreça IP ha de ser única en Internet. ◼No podem assignar a un ordenador una IP qualsevol.
-
-Adreces IP Classificació
-
-### 1. Accesibilitat
-
-Pública: connexió a internet Privada: connexió a una xarxa local.
-
-### 2. Perdurabilitat
-
-Estàtica: adreça fixada manualment, no varia Dinàmica: es assignada per el router (privada) o per el ISP (pública).
-
-Adreces IP
-
-### 3. Classes de IP
-
-Classe Rang de IP públiques Número de Hosts Ús A 1.0.0.0 - 126.255.255.255 16.777.214 B 128.0.0.0 - 191.255.255.255 65.534 C 192.0.0.0 - 223.255.255.255 D 224.0.0.0 - 239.255.255.255 No aplica Utilitzat per a multicast. E 240.0.0.0 - 255.255.255.255 No aplica Reservat per a ús futur i experimentació
-
-Adreces IP Classes de IP per a xarxes privades: Classe ús Rang de IP Privades A Grans empreses 10.0.0.0 - 10.255.255.255 B Pymes 172.16.0.0 - 172.31.255.255 C Domèstic 192.168.0.0 - 192.168.255.255 ◼ IPs reservades: IP de xarxa (IP de red). Xarxa on es connecten tots els hosts (és la primera IP). Exemple: 192.168.1.0 IP de difusión (IP de broadcast). IP que s'utilitza per a enviar missatges a tots els hosts (última IP) Exemple: 192.168.1.255 IP de loopback o localhost: 127.0.0.1 (és la pròpia máquina)
-
-Màscara de xarxa ◼Número amb el mateix format que l’adreça IP. ◼Especifica quina part de l’adreça identifica la xarxa i quina al host. ◼Permet determinar si dos equips estan a la mateixa xarxa. ◼Per exemple: 255.255.255.0 255.255.0.0
-
-Subnetting El "subnetting" o subdivisió de xarxes és una pràctica utilitzada en la gestió de xarxes que implica dividir una xarxa més gran en xarxes més xicotetes, o subxarxes. Aquesta tècnica es realitza típicament amb adreces IP i serveix per a diversos propòsits, incloent la millora de l'eficiència de la xarxa, la seguretat, i la gestió de tràfic.
-
-• Les xarxes de tipus A tenen una màscara per defecte de 255.0.0.0: 8 bits de xarxa i 24 bits d'host. • Les xarxes de tipus B tenen una màscara per defecte de 255.255.0.0: 16 bits de xarxa i 16 bits d'host. • Les xarxes de tipus C tenen una màscara per defecte de 255.255.255.0
-
-24 bits de xarxa i 8 bits d'host.
-
-Subnetting Per a poder dividir una xarxa en diverses subxarxes: traure bits a l'apartat dels hosts, que permeten identificar les subxarxes. Per a planificar la segmentació d'una xarxa, cal considerar: 1.El nombre d'usuaris per xarxa i el nombre de xarxes necessàries →a més usuaris per xarxa menys xarxes i a més xarxes menys usuaris per xarxa.
-
-2.Per cada xarxa creada, es perden 2 IPs: una per a la direcció de broadcast i una altra per a la direcció de xarxa. Fórmules per al càlcul de subxarxes: núm. de bits per núm. d'hosts d'una subxarxa →2^núm. de bits >= núm. d'hosts + 2
-
-Sistema de noms de domini. DNS. ◼Es difícil recordar les adreces IP. ◼Es va crear un sistema per a associar noms i adreces IP. (Sistema de noms de domini). ◼Aquest sistema organitza jeràrquicament els noms de domini de forma que es facilita la seva traducció.
-
-Sistema de noms de domini. DNS. ◼Un nom de domini usualment consisteix en dos o més parts, separats per punts quan s’escriuen forma de text. ◼Per exemple: www.gva.es www.google.com
-
-Sistema de noms de domini. DNS. DOMINI ÚS .COM COMERCIAL .NET XARXA .ORG ORGANITZACIÓ SENSE ÀNIM DE LUCRE .MIL MILITAR (RESTRINGIT USA) .GOV ESTATAL (RESTRINGIT USA) .BIZ NEGOCIS .INFO INFORMACIÓ .NAME PARTICULAR .COOP COOPERATIVA .MUSEUM MUSEU .PRO PROFESSIONAL .AERO AERONÀUTIC Dominis d’alt nivell
-
-Porta d’enllaç. Gateway. ◼Host (dispositiu u ordinador) que interconnecta diferents xarxes. ◼Quan el destinatari d’un missatge no està en la nostra xarxa s’envia cap a la porta d’enllaç. ◼La porta d’enllaç s’encarrega d’enviar-la per on corresponga.
-
-DHCP. Protocol de configuració dinàmica de hosts. ◼Assigna automàticament la configuració IP als hosts que ho sol·liciten. ◼Facilita la tasca de manteniment Els canvis estan centralitzats. Evita duplicitats. ◼En l’actualitat, els ISP l’utilitzen per a l'assignació de IPs dinàmiques.
-
-En resum... ◼Per a connectar un equip a una xarxa basada en TCP/IP necessitarem: Direcció IP Màscara de xarxa Servidors DNS Porta d’enllaç ◼...o disposar d’un servidor DHCP.
+- ls -l – llistat llarg amb permisos i propietaris.
+- cp -r dir1 dir2 – còpia recursiva de directoris.
+- rm -i fitxer – demana confirmació abans d’esborrar.
 
 ---
 
-# 2.3 Maquinari
+# 3.3 Permisos
 
-Maquinari de les xarxes
+Classe 3: Permisos i propietaris Objectiu Comprendre el sistema de permisos i propietats dels fitxers i directoris en Linux i aprendre a modificar-los. Teoria Cada fitxer o directori té associats
 
-Classificació ◼Segons el mitjà d’interconnexió podem diferenciar dos grans categories de xarxes Mitjans guiats. Direm que són aquells en el que els dipositius es connecten per enllaços d’un medi físic. Mitjans no guiats. Són aquells en que la connexió és sense fil.
+- Un usuari propietari.
+- Un grup de pertinença.
+- Tres conjunts de permisos (usuari, grup, altres).
 
-Classificació. Elements Mitjans guiats o xarxes cablejades    Targetes de xarxa Cablejat Switch Mitjans no guiats o xarxes sense fils     WiFi Bluetooth Infrarojos WiMax Connexió a xarxes externes. Internet     Línia telefònica Cable Via satèl·lit Mòbil Xarxes Locals
+Permisos possibles
 
-Mitjans guiats
+- r (read) – lectura del fitxer o llistat del directori.
+- w (write) – escriptura/modificació del fitxer o del contingut del directori.
+- x (execute) – execució d’un fitxer o accés al directori.
 
-Targeta de xarxa ◼Targeta de xarxa Dispositiu electrònic que permet a un ordinador accedir a una xarxa. ◼Tipus d’adaptadors Ethernet (amb connector RJ45 és el tipus d’adaptador més comú) ◼MAC Cada targeta de xarxa té un número identificatiu de 48 bits anomenat MAC A l’adreça MAC també s’anomena adreça física.
+Visualització de permisos Quan es mostra un llistat detallat amb ls -l, apareix una línia similar a: -rwxr-xr-- Interpretació
 
-Cablejat ◼En els medis guiats, és necessari unir els diferents dispositius connectats a la xarxa amb cables.
+- El primer caràcter indica el tipus
 
-Cablejat coaxial ◼Cable format per dos conductors concèntrics Conductor central format per un fil de coure. Conductor exterior en forma de tub format per una malla trenada de coure o alumini Entre els dos conductors hi ha una capa aïllant (dielèctric) Tot el conjunt està recobert per una coberta aïllant.
+fitxer normal. – d directori. – l enllaç simbòlic.
 
-Cablejat parell trenat ◼Tipus de cablejat en el que dos conductors es trenen per evitar interferències electromagnètiques. ◼Connector en els extrems RJ-45
+- Els següents tres caràcters (rwx) són els permisos de l’usuari propietari.
+- Els següents tres (r-x) són els permisos del grup.
+- Els últims tres (r--) són els permisos per a la resta d’usuaris.
 
-Cablejat fibra òptica ◼La fibra òptica és una guia per la que es pot transportar potència òptica en forma de llum. ◼Avantatges Grans velocitats Immunitat a les interferències ◼Desavantatges Els empalmes entre fibres són difícils Transmissors i receptors cars
+Permisos en mode numèric Cada permís té un valor
 
-Cablejat Velocitat Distància Ús Cable Coaxial Baixa a moderada (fins centenars de Mbps) Mitjana (hasta centenars de metres) Transmissió de TV, internet (limitat), xarxes d'empresa antigues Par Trenat Moderada a alta (hasta 10 Gbps) Curta a mitjana (fins a 100 metres per Ethernet) Xarxes LAN d'oficina, connectivitat domèstica, telecomunicacions Fibra Òptica Molt alta (hasta centenars de Gbps) Llarga (decenes o centenars de quilòmetres) Telecomunicacions a gran escala, xarxes de dades d'alta velocitat, aplicacions mèdiques i industrials
+- r = 4
+- w = 2
+- x = 1
 
-Switch ◼També anomenat Commutador. ◼Dispositiu electrònic d’interconnexió de xarxes d’ordinadors. Interconnecten segments de xarxa. ◼Encaminen els paquets de dades pel port on es troba el destinatari. Coneix on es troba el destinatari i no reenvia per tots els ports.
+La suma defineix els permisos per a cada rol
 
-Milloren el rendiment i seguretat de les LANs.
+- 7 = 4+2+1 = rwx
+- 6 = 4+2 = rw
 
-Mitjans no guiats
+- 5 = 4+1 = r-x
+- 4 = 4 = r
 
-WiFi ◼Conjunt d’estàndards per a xarxes inalàmbriques. ◼No requereix visibilitat directa dels dispositius i dona cobertura a uns 200m sense obstacles. ◼La seguretat és un gran problema en estes xarxes Mecanismes de xifrat: WEP, WPA, WPA2
+> **💡 Apunt Tècnic**
+> Exemple
 
-Bluetooth ◼Estàndard de comunicació inalàmbrica que possibilita la transmissió de veu i dades entre equips gràcies a un enllaç per radiofreqüència. ◼Bases: Suport a veu i dades Baix consum d’energia (equips mòbils) Baix cost Interconnectar dispositius molt diversos sense fils
+```bash
+chmod 755 fitxer
+```
 
-Infrarojos ◼IrDA (Infrared Data Association) Es possible transmetre i rebre informació amb rajos infrarojos (comunicació òptica no guiada). IrDA és un estàndard que defineix una forma d’implementar la tecnologia infraroja pels fabricants.
+- Usuari: 7 →rwx
+- Grup: 5 →r-x
+- Altres: 5 →r-x
 
-Infrarojos ◼Avantatges De difícil interceptació no desitjada Baix cost Protocol simple Baix consum energètic ◼Inconvenients Visibilitat directa dels dispositius Distàncies curtes Velocitats baixes (entre 9600 bps i 4 Mbps) Connexions punt a punt
+Ordres principals de permisos
 
-WiMax ◼Interoperabilitat Mundial per a l’Accés per Microones (Worldwide Interoperability for Microwave Access) ◼Estàndard de transmissió inalàmbrica de dades. ◼El funcionament és molt semblant a la WiFi, té algunes millores: Major velocitat de tranferència, 124 Mbps.
+- ls -l – mostra permisos, propietari i grup.
+- chmod – modifica permisos.
+- chown – canvia el propietari.
+- chgrp – canvia el grup.
 
-Pot donar cobertura a distàncies majors, fins a 70Km.
+Exemples d’ús de chmod Mode simbòlic: - chmod u+x script.sh – afegeix execució a l’usuari. - chmod g-w document.txt – lleva escriptura al grup. - chmod o-r fitxer.txt – lleva lectura als altres. Mode numèric: - chmod 600 fitxer.txt – només l’usuari pot llegir i escriure.
 
-WiMAX
-
-Connexió a xarxes externes. Internet
-
-Connexió a xarxes externes ◼Introducció ◼Connexions A través de línia telefònica Router Mòbil
-
-Introducció ◼Per connectar-nos a una xarxa externa ja no disposem d’elements com el cablejat que puga unir els ordinadors com en el cas d’una xarxa local. ◼Calen doncs altres formes d’accés per realitzar la connexió.
-
-Línia telefònica ◼Mòdem. Dispositiu que usa la línia telefònica per enviar i rebre dades. El funcionament: ◼Converteix els senyals digitals de l’ordinador a analògics per poder enviar-ho per la línia telefònica. ◼Els senyals analògics rebuts són convertits a digitals.
-
-Velocitat: 56 Kbps
-
-Router ◼O enrutador. Dispositiu per unir xarxes d’ordinadors. Busca el camí per posar en contacte màquines encara que es troben en distintes xarxes. El seu treball consisteix en encaminar cap a la xarxa adequada els paquets que li arriben.
-
-Router
-
-Sistema de telefonia mòbil universal (LTE) ◼Estàndard de comunicació sense fil global de quarta generació, anomenat també 4G. ◼La velocitat màxima es de 1Gbps. ◼En continua evolució (5G).
-
-Altres Cable Satèl·lit Ones radioelèctriques
+- chmod 644 fitxer.txt – l’usuari pot llegir i escriure, la resta només llegir.
 
 ---

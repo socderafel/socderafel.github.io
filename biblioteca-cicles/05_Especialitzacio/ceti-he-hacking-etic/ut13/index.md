@@ -1,65 +1,31 @@
 ---
 layout: default
-title: "UD12 — Pentesting web · Temari Complet"
+title: "UD13 — Robots de Búsquedas · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT13 Completa"
+badge: "CE Ciberseguretat (CETI) · UD13 — Robots de Búsquedas"
 prev_url: "../ut12/ut1201.html"
-prev_label: "⬅️ 11.1 Introducción"
+prev_label: "⬅️ 12.1 Pentesting web"
 next_url: "../ut13/ut1301.html"
-next_label: "12.1 Pentesting web ➡️"
+next_label: "13.1 Continguts Teòrics i Recursos ➡️"
 ---
 
-# 📘 UD12 — Pentesting web (Unitat Completa)
+# 📘 UD13 — Robots de Búsquedas (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**12.1 Pentesting web**](./ut1301.md)
+- [**13.1 Continguts Teòrics i Recursos**](./ut1301.md)
 
 ---
 
-# 12.1 Pentesting web
+# 13.1 Continguts Teòrics i Recursos
 
-ENUMERACIÓN WEB Pentesting web
+Los sitios web utilizan el archivo robots.txt para condicionar el comportamiento de los robots.
 
-Actualmente la mayor parte de las organizaciones emplean mecanismos de seguridad perimetral, controlan y limitan los puertos que exponen en Internet, por lo que no siempre será fácil encontrar servicios vulnerables expuestos. Sin embargo, en Internet resultará habitual encontrar servidores web con aplicaciones web potencialmente vulnerables. De este modo, una aplicación web puede servir como punto de entrada inicial de un ataque y así comprometer toda la red de la organización, haciendo totalmente inefectivas las medidas de protección perimetrales implementadas.
+En el caso de que exista este archivo se puede conocer las tecnologias utilizadas.
 
-Este tipo de test de penetración se centra en evaluar la seguridad de una aplicación web. Al igual que las aplicaciones de escritorio, las aplicaciones web son programas que proporcionan una funcionalidad concreta a los usuarios que se conectan. En una aplicación web intervienen los siguientes elementos
-
-- Un servidor web donde se aloja el código de una o varias páginas web
-- Un protocolo (HTTP o HTTPS) que permita el acceso a los recursos alojados en el
-
-servidor.
-
-- Un cliente que acceda a la página o a los servicios. Puede ser un navegador web
-
-o un cliente especializado
-
-- La aplicación web propiamente dicha en la que se alojan las páginas y donde se
-
-ejecuta el código.
-
-- La base de datos
-- Otros servidores
-
-Los ataques web se basan en encontrar vulnerabilidades en alguno de los elementos anteriores o en las interacciones de los mismos, aunque podemos excluir al servidor web propiamente dicho, que entraría en el ámbito del pentesting de red.
-
-Pentesting web
-
-Un pentesting web, al igual que un pentesting de red, se puede realizar de manera "manual" o utilizando herramientas automáticas. Pentesting web manual Si se realiza de forma manual y con el fin de encontrar potenciales vulnerabilidades se debe
-
-- analizar el comportamiento de la aplicación
-- analizar la respuesta de la aplicación ante diferentes peticiones HTTP,
-- analizar el código HTML,
-- buscar archivos que puedan revelar información
-- buscar páginas en la aplicación que no deberían estar accesibles.
-
-Todos estos análisis se suelen realizar con ayuda de plugins de navegador o ciertas aplicaciones. Pentesting web manual El pentesting automático se lleva a cabo con un software que lanza contra un servidor una batería de pruebas basadas en unas métricas previamente definidas.
-
-Estas pruebas sirven para detectar potenciales vulnerabilidades en la aplicación web y en el servidor, pero al igual que sucede con todas las herramientas automáticas, es necesario verificar de manera manual las vulnerabilidades identificadas para descartar los falsos positivos.
-
-Es necesario extremar las precauciones cuando se ejecutan las herramientas automáticas en un entorno en producción, pues se pueden causar daños no intencionados en los sistemas. La elección entre una u otra forma de llevar a cabo el test de penetración vendrá determinada por el tiempo disponible y los requisitos del pentesting, pero será habitual emplear una combinación de ambas.
+Se pide estudiar el contenido de http://www.robotstxt.org para conocer directivas, archivos que no se pueden indexar, directorios, páginas, etc
 
 ---

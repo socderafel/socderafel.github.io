@@ -1,1048 +1,894 @@
 ---
 layout: default
-title: "UD3 — Processador de text (III) · Temari Complet"
+title: "UD4 — Calc Mòdul 1 (I) · Temari Complet"
 course_root: ".."
-badge: "1r SMX · Grau Mitjà · UT4 Completa"
-prev_url: "../ut03/ut0309.html"
-prev_label: "⬅️ 2.3 Tema 9. PLANTILLES"
-next_url: "../ut04/ut0402.html"
-next_label: "3.1 Tema 11. Index de continguts, figures i alfabèti ➡️"
+badge: "1r SMX · Grau Mitjà · UD4 — Calc Mòdul 1 (I)"
+prev_url: "../ut03/ut0302.html"
+prev_label: "⬅️ 3.2 Tema 13. Treballar amb documents llargs"
+next_url: "../ut04/ut0401.html"
+next_label: "4.1 Manual bàsic CALC ➡️"
 ---
 
-# 📘 UD3 — Processador de text (III) (Unitat Completa)
+# 📘 UD4 — Calc Mòdul 1 (I) (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**3.1 Tema 11. Index de continguts, figures i alfabèti**](./ut0402.md)
-- [**3.2 Tema 13. Treballar amb documents llargs**](./ut0407.md)
+- [**4.1 Manual bàsic CALC**](./ut0401.md)
 
 ---
 
-# 3.1 Tema 11. Index de continguts, figures i alfabèti
+# 4.1 Manual bàsic CALC
 
-### 📄 Tema11(1)_como-crear-modificar-y-actualizar-un-indice-automaticamente-en-writer-.pdf
+LIBREOFFICE
 
-Tema 11 (1). Como crear un índice automático en Writer Cómo crear un índice automáticamente en Writer de LibreOffice
+Primeros pasos con CALC
 
-Tema 11 (1). Como crear un índice automático en Writer Índice Creación del índice. PASOS
+Manual de Usuario LibreOffice - CALC Pag. 2 de 40
 
-- Creamos un nuevo estilo de párrafo para los Títulos que vamos a incluir en el índice.
+INDICE
 
-#### 2) Lo registramos como “Nuevo estilo de párrafo”
+- ¿Qué es Calc? ............................................................................................................... 7
+- Hojas de cálculo, hojas y celdas ................................................................................. 7
+- Partes de la ventana principal de Calc ....................................................................... 7
 
-- Creamos un nuevo estilo de párrafo para los Subtítulos que vamos a incluir en el índice
+3.1. Barra de títulos y barra de menús ........................................................................................... 7 3.2. Barra de herramientas .................................................................................................................. 7 3.3.
 
-#### 4) Lo registramos como “Nuevo estilo de párrafo”
+Barra de fórmulas .......................................................................................................................... 6 3.4. Celdas individuales ........................................................................................................................ 8 3.5.
 
-- Vamos a ir asignando a los Títulos de nuestro documento el nuevo estilo de párrafo “Título 1”
+Fichas de hoja ................................................................................................................................ 8 3.6. Barra de estado ....................................................................................................................... 8
 
-creado
+- Abrir una hoja de cálculo nueva ................................................................................ 11
+- Abrir una hoja de cálculo existente .......................................................................... 12
+- Guardar una hoja de cálculo ..................................................................................... 13
+- Navegar en las hojas de cálculo ................................................................................ 14
 
-- Repetiremos el anterior proceso para los Subtítulos de nuestro documento, a cada Subtítulo le
+7.1. Ir a una celda en particular ..........................................................................................................14 7.1.1. Con el ratón ............................................................................................................... 14 7.1.2. Con una referencia de celda ..................................................................................... 14 7.1.3. Con el Navegador ...................................................................................................... 14 7.2.
 
-asignaremos el nuevo estilo de párrafo “Subtítulo 1” creado
+Navegar de celda a celda ...................................................................................................... 14 7.2.1. Con el ratón ............................................................................................................... 15 7.2.2. Con las teclas Tabulación y Enter ......................................................................... 15 7.2.3. Personalizar la tecla Entrar ........................................................................................ 15 7.2.4. Con las teclas de desplazamiento ............................................................................ 15 7.2.5. Con las teclas Inicio, Fin, Av Pág y Re Pág ........................................................... 15 7.3.
 
-#### 7) Insertamos el índice en nuestro documento
+Moverse de una hoja a otra ................................................................................................... 16 7.3.1. Con el teclado ............................................................................................................ 16 7.3.2. Con el ratón ............................................................................................................... 16
 
-#### 8) Vamos a definir el nivel para cada estilo de párrafo creado
+Manual de Usuario LibreOffice - CALC Pag. 3 de 40
 
-Modificación del contenido del índice Actualización del contenido del índice Modificación y actualización de los estilos de los Títulos y Subtítulos Modificación del formato del índice
+- Seleccionar elementos de una hoja u hoja de cálculo ............................................ 17
 
-Tema 11 (1). Como crear un índice automático en Writer A continuación veremos cómo crear un índice automáticamente en Writer de LibreOffice. Seguiremos estos pasos
+8.1. Seleccionar celdas ................................................................................................................. 17 8.1.1. Celda individual .............................................................................................................. 17 8.1.2. Rango de celdas contiguas .......................................................................................... 17 8.1.3. Rango de celdas no contiguas ......................................................................................18 8.2.
 
-#### 1) Creamos un nuevo estilo de párrafo para los Títulos que vamos a incluir en el
+Seleccionar columnas y filas .................................................................................................. 18 8.2.1. Columna o fila individual .................................................................................................18 8.2.2. Columnas o filas múltiples .............................................................................................18 8.2.3. Hoja entera................................................................................................................. 19 8.3.
 
-índice. Seleccionamos el Título “1.Introducción”. Establecemos su formato, en este ejemplo: Bookman Old Style, 14 puntos, negrita, color azul4.
+Seleccionar hojas ........................................................................................................................ 19 8.3.1. Hoja única .................................................................................................................. 19 8.3.2. Hojas múltiples contiguas .............................................................................................. 19 8.3.3. Hojas múltiples no contiguas ........................................................................................ 19 8.3.4. Todas las hojas ............................................................................................................... 20
 
-- Lo guardamos como “Nuevo estilo de párrafo”.
+- Trabajar con Columnas y Filas .................................................................................. 21
 
-Primero desplegamos, en la parte superior, el botón de "estilo" de la barra de herramientas de formato y haremos un clic sobre el último apartado de "Más". A continuación, en la parte superior derecha emergerá un cuadro contextual. Desplegaremos el botón situado en la esquina superior derecha, después otro clic en el apartado "Estilo nuevo a partir de selección". Partiendo del Estilo predeterminado.
+9.1. Insertar columnas y filas ........................................................................................................ 21 9.1.1. Una única columna o fila ........................................................................................... 21 9.1.2. Columnas o filas múltiples ............................................................................................. 21 9.2.
 
-Tema 11 (1). Como crear un índice automático en Writer En el siguiente cuadro contextual que emerge asignaremos un nombre al nuevo estilo de párrafo creado, en este caso "Título1" (sin espacios), después clic sobre el botón "Aceptar". Observaremos que dicho estilo se incorporó al final de nuestra lista.
+Eliminar columnas y filas ........................................................................................................ 21 9.2.1. Una única columna o fila ........................................................................................... 22 9.2.2. Columnas o filas múltiples ............................................................................................ 22
 
-#### 3) Creamos un nuevo estilo de párrafo para los Subtítulos que vamos a incluir en el
+- Trabajar con hojas ..................................................................................................... 22
 
-índice. Nos situamos en la segunda página y seleccionamos el primer Subtítulo "1.1 Interpretación de los resultados". Establecemos su formato, en este ejemplo: Arial, 14 puntos, negrita, color rojo.
+10.1. Insertar hojas nuevas .................................................................................................................. 22 10.2. Eliminar hojas ............................................................................................................................... 23 10.2.1. Hoja única .................................................................................................................. 23 10.2.2. Hojas múltiples ................................................................................................................ 23 10.3.
 
-- Lo guardamos como “Nuevo estilo de párrafo”.
+Cambiar el nombre de la hoja ..................................................................................................... 23 10.4. Modificar el aspecto de una hoja de Calc .......................................................................... 23 10.4.1. Usar la escala ....................................................................................................... 23 10.4.2. Fijar filas o columnas ...................................................................................................... 24 10.4.3. Desactivar la función fijar ........................................................................................... 24
 
-Utilizaremos el cuadro contextual del panel derecho. Desplegaremos el botón situado en la esquina superior derecha, después otro clic en el apartado "Estilo nuevo a partir de selección".
+Manual de Usuario LibreOffice - CALC Pag. 4 de 40
 
-Tema 11 (1). Como crear un índice automático en Writer En el siguiente cuadro contextual que emerge asignaremos un nombre al nuevo estilo de párrafo creado, en este caso "Subtítulo1" (sin espacios), después clic sobre el botón "Aceptar". Ya tenemos registrados los nuevos estilos de párrafo para los Títulos y Subtítulos.
+10.4.4. Dividir la pantalla ............................................................................................................ 24 10.4.5. Dividir la ventana horizontalmente ................................................................................ 25 10.4.6. Dividir la ventana verticalmente .................................................................................... 26
 
-#### 5) Vamos a ir asignando a los Títulos de nuestro documento el nuevo estilo de
+- Introducir datos mediante el teclado ....................................................................... 27
 
-párrafo “Título 1” creado. Seleccionamos el siguiente Título del documento (2.Material y métodos). Después desplegamos en el botón de "Estilos" y le asignamos el "Título1". Haremos lo mismo para todos los Títulos del documento (son los que llevan delante un número)
+11.1. Introducir números ...................................................................................................................... 27 11.2. Introducir texto ........................................................................................................................ 27 11.3.
 
-### 2. Material y métodos
+Introducir números como texto............................................................................................... 27 11.4. Introducir fechas y horas ........................................................................................................ 28
 
-### 3. Resultados
+- Acelerar la entrada de datos .................................................................................... 29
 
-### 4. Análisis de las dimensiones
+12.1. Usar la herramienta Rellenar ................................................................................................. 29 12.1.1. Rellenar con una serie ............................................................................................... 29 12.1.2. Definir una serie para rellenar ........................................................................................ 30 12.2.
 
-- Reconocimiento profesional….
+Usar listas de selección ......................................................................................................... 30 12.3. Compartir contenido entre hojas................................................................................................. 30
 
-Tema 11 (1). Como crear un índice automático en Writer
+- Editar datos ................................................................................................................ 31
 
-#### 6) Repetiremos el anterior proceso para los Subtítulos de nuestro documento, a
+13.1. Eliminar o Sustituir datos de una celda ................................................................................. 31 13.1.1. Sustituir todos los datos de una celda....................................................................... 31 13.1.2. Cambiar parte de los datos de una celda ................................................................. 31 13.2.
 
-cada Subtítulo le asignaremos el nuevo estilo de párrafo “Subtítulo 1” creado. A continuación seleccionamos el siguiente Subtítulo del documento (4.1 La organización) Después desplegamos en el botón de "Estilos" y le asignamos el "Subtítulo1". Haremos lo mismo para todos los Subtítulos del documento (son los que llevan delante dos números)
+Dar formato a los datos .......................................................................................................... 32 13.2.1. Editar Texto .................................................................................................................... 32 Dar formato a varias líneas de texto ........................................................................... 32 Ajustar texto automáticamente ....................................................................................... 32 Saltar de línea manualmente .......................................................................................... 32 Reducir texto para adaptarlo al tamaño de celda ....................................................... 32 13.2.2. Dar formato a números .................................................................................................. 33 13.2.3. Dar formato a la fuente .............................................................................................. 33 13.2.4. Dar formato a los bordes de celda ............................................................................ 34 13.2.5. Dar formato de fondo a la celda ................................................................................ 34 Formato predeterminado de celdas y hojas ................................................................... 34 13.2.6. Definir un nuevo formato automático ............................................................................ 35
 
-Tema 11 (1). Como crear un índice automático en Writer
+Manual de Usuario LibreOffice - CALC Pag. 5 de 40
 
-- Insertamos el índice en nuestro documento.
+- Ocultar y mostrar datos ............................................................................................ 36
 
-Primero haremos un clic en la primera línea de la página 1. Seguidamente clic sobre el menú "Insertar" y después escogemos "Índices y tablas-> Índices" A continuación haremos lo siguiente: 1º) Clic en la casilla de "Estilos adicionales". 2º) Otro clic en el botón "..."
+14.1. Agrupar y esquema ............................................................................................................... 36 14.2. Filtrar celdas ........................................................................................................................... 37
 
-Tema 11 (1). Como crear un índice automático en Writer
+- Ordenar registros ...................................................................................................... 38
 
-- Vamos a definir el nivel para cada estilo de párrafo creado.
+Mayúsculas/minúsculas............................................................................................... 38 El intervalo contiene encabezados de columnas ........................................................... 38 Incluir formatos ............................................................................................................. 38 Copiar resultado de clasificación en ........................................................................ 38 Orden de clasificación definido por el usuario ............................................................. 38 Dirección ...................................................................................................................... 38
 
-El nivel determinará la posición en el índice de los Títulos y Subtítulos. A mayor nivel mayor será la sangría (distancia desde el margen) En este ejemplo asignaremos el nivel 1 al Título 1 y el nivel 2 al Subtítulo 1. En la zona inferior del siguiente cuadro contextual
+- Imprimir ......................................................................................................................39
 
-1º) Clic sobre "Título1" y después 2º) Otro clic sobre el botón ">I" De esta manera establecemos la posición del "Título 1" en el nivel 1 del índice. En este caso comprobaremos que el "Título 1" se encuentra en la vertical del "Nivel 1".
+16.1. Seleccionar las hojas a imprimir ................................................................................................ 39 16.2. Seleccionar el orden de páginas, los detalles y la escala .................................................. 40 16.2.1. Orden de páginas ........................................................................................................... 40 16.2.2. Imprimir detalles .............................................................................................................. 40 16.2.3. Escala ................................................................................................................... 40 16.3.
 
-Tema 11 (1). Como crear un índice automático en Writer Continuamos y en la zona inferior del cuadro contextual: 1º) Clic sobre "Subtítulo 1" y después 2º) Dos clics sobre el botón ">I" La asignación de niveles quedará de esta manera, para finalizar clic sobre el botón "Aceptar" En el siguiente cuadro contextual haremos clic en el botón "Aceptar".
+Usar imprimir rangos ................................................................................................................... 41 16.3.1. Definir un rango de impresión ........................................................................................ 41 16.3.2. Quitar un rango de impresión ........................................................................................ 41 16.3.3. Imprimir filas y columnas en todas las páginas ............................................................ 41 16.3.4. Saltos de página ............................................................................................................. 42 Insertar un salto de página ............................................................................................... 42 Salto de fila .................................................................................................................. 42 Salto de columna .............................................................................................................. 42 Eliminar un salto de página .............................................................................................. 42 16.3.5. Encabezamiento y pie de página .................................................................................. 43 Margen ................................................................................................................... 43 Espacio ................................................................................................................... 43 Altura ...................................................................................................................... 43 16.3.6. Contenido del encabezamiento o pie de página ..........................................................44
 
-Tema 11 (1). Como crear un índice automático en Writer Aquí tenemos el índice: Modificación del contenido del índice El índice, por defecto, está protegido contra modificaciones manuales. Por lo tanto, si quisiéramos modificar su texto haremos lo siguiente: 1º) Clic derecho sobre el índice, después clic izquierdo sobre el apartado "Editar índice/tabla".
+Manual de Usuario LibreOffice - CALC Pag. 6 de 40
 
-2º) Clic sobre la casilla de "Protegido contra cambios manuales". Finalmente clic sobre el botón "Aceptar".
+Áreas ...................................................................................................................... 44 Encabezamiento .......................................................................................................... 44 Encabezado personalizado ......................................................................................... 44
 
-Tema 11 (1). Como crear un índice automático en Writer Ahora ya podremos hacer cambios sobre el texto del índice. Actualización del contenido del índice Si hubiéramos modificado el texto o posición de los Títulos o Subtítulos de nuestro documento podríamos incorporar, posteriormente, dichos cambios sobre el índice automáticamente.
+Manual de Usuario LibreOffice - CALC Pag. 7 de 40
 
-Para actualizar dichos cambios, simplemente haremos un clic derecho sobre el índice. A continuación, clic izquierdo sobre el apartado "Actualizar índice/tabla". Observaremos que todos los cambios se incorporarán al índice automáticamente. Modificación y actualización de los estilos de los Títulos y Subtítulos Podremos modificar el formato de los estilos de párrafo que hemos creado y asignar, automáticamente, dicha modificación a todos los Títulos y Subtítulos de nuestro documento.
+- ¿Qué es Calc?
 
-1º) Seleccionamos un Título cualquiera de nuestro documento y hacemos sobre el mismo las modificaciones oportunas. En este caso, modificamos el tipo de letra (Times New Roman), tamaño (16 ptos), color (verde),etc. → 2º) Desplegaremos el botón situado en la esquina superior derecha del cuadro de "Estilos y formato", después otro clic en el apartado "Actualizar estilo".
+Calc es la hoja de cálculo de LibreOffice.org (LibreOffice). Una hoja de cálculo simula una hoja de trabajo en el ordenador: puede rellenar la hoja con datos —generalmente numéricos— y luego manejar los datos para producir determinados resultados, organizar los datos, o mostrar los datos en gráficos.
 
-Comprobaremos que todos los Títulos se modificaron con el nuevo estilo.
+Como alternativa, puede introducir los datos y luego usar Calc de modo « ¿Qué pasaría si...?» cambiando algunos datos y observando el resultado sin necesidad de volver a escribir todo el documento o la hoja.
 
-Tema 11 (1). Como crear un índice automático en Writer Modificación del formato del índice Cada nivel del índice que hemos insertado tiene un formato predeterminado, debido a que tiene asignado un estilo de párrafo. En este ejemplo, el Nivel 1 tiene el estilo de párrafo “Índice 1”, el Nivel 2 el “Índice 2” y el encabezado del índice “Encabezado del índice”.
+### 2. Hojas de cálculo, hojas y celdas
 
-Por lo tanto, dichos estilos de párrafo también son modificables y seguiremos, para ello, estos pasos: Clic derecho sobre el Título (1.Introducción) del índice, que tiene un Nivel 1 y un estilo de párrafo “Índice 1”, después sobre el cuadro contextual que emerge, clic izquierdo sobre el apartado de “Editar estilo de párrafo”.
+Calc funciona con elementos llamados hojas de cálculo. Las hojas de cálculo constan de un número de hojas individuales, cada una de las cuales contiene un bloque de celdas organizado en filas y columnas. Estas celdas contienen elementos individuales —texto, valores, fórmulas, etc. — que conforman los datos a mostrar y manejar.
 
-A continuación, observaremos que en el apartado “Contiene” de la ficha “Organizador” se muestra una descripción del formato del estilo de párrafo. En este ejemplo, el tabulador está colocado a 17 centímetros y la sangría derecha e izquierda es de 0 cm. Antes de empezar a realizar los cambios haremos un clic sobre la casilla de verificación de “Actualizar cambios”. Después podríamos ir modificando todas las características del estilo de párrafo: sangrías y espaciado, alineación, flujo del texto, etc.
+Cada hoja de cálculo puede tener muchas hojas y cada hoja puede tener muchas celdas individuales. En la versión 3.0 de LibreOffice, cada hoja puede tener un máximo de 65.536 filas y 1.024 columnas.
 
-Tema 11 (1). Como crear un índice automático en Writer Para finalizar, un clic sobre “Aplicar” y otro sobre “Aceptar”, en la parte inferior del cuadro contextual. Aquí tenemos las modificaciones realizadas sobre el estilo de párrafo de “Índice 1”. Para asignar otros estilos de párrafo sobre los niveles del índice haríamos lo siguiente
+### 3. Partes de la ventana principal de Calc
 
-Clic derecho sobre el índice, después sobre el cuadro contextual que emerge, clic izquierdo en el apartado de “Editar índice/tabla”. A continuación, seleccionamos la ficha “Estilos” y observamos los estilos de párrafos asignados a los niveles del índice y a su encabezado.
+#### 3.1. Barra de títulos y barra de menús
 
-Tema 11 (1). Como crear un índice automático en Writer Para cambiar los estilos de párrafos asignados a los niveles del índice, seguiremos estos pasos: 1º) Seleccionamos un estilo de párrafo. 2º) Escogemos el nivel al que se lo asignaremos. 3º) Clic sobre la flecha.
+La Barra de títulos, en la parte superior, muestra el nombre de la hoja de cálculo actual. Al abrir una hoja de cálculo nueva, esta se llama Sin título X, siendo X un número. Al guardar una hoja de cálculo por primera vez se le pedirá que le asigne un nombre. Bajo la Barra de títulos está la Barra de menús. Si selecciona uno de los menús, aparece un submenú con más opciones.
 
-En la siguiente página, observamos que el estilo de párrafo “Título 1” aparece junto al “Nivel 1” y el cuadro de la izquierda nos previsualiza el resultado final. Para finalizar clic sobre el botón “Aceptar” Aquí tenemos el cambio de estilo para el Nivel1
+#### 3.2. Barra de herramientas
 
-### 📄 Tema11(2)_como-crear-un-indice-de-todas-las-tablas-e-imagenes-del-documento-en-writer.pdf
+Debajo de la Barra de menús hay tres barras de herramientas predeterminadas: la barra de herramientas Estándar, la barra de herramientas Formato y la Barra de fórmulas.
 
-Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. Cómo crear un índice de las tablas e imágenes de nuestro documento en Writer
+Los iconos de estas barras proporcionan una amplia gama de comandos y funciones habituales.
 
-Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. Índice
+Manual de Usuario LibreOffice - CALC Pag. 8 de 40
 
-- Vamos a automatizar la inserción de la etiqueta sobre todas las tablas, imágenes de archivo que
+Si coloca el puntero del ratón sobre cualquiera de los iconos se muestra un recuadro llamado Ayudas emergentes (Tooltip) que proporciona una breve explicación de la función del icono. Para ampliar la información, seleccione Ayuda > ¿Qué es esto? y pase el puntero del ratón por encima del icono. Las ayudas emergentes (cortas) y las ayudas activas (información ampliada) pueden activarse y desactivarse en Herramientas > Opciones > LibreOffice.org > General.
 
-vayamos insertando
+En la barra de herramientas Formato, las dos áreas rectangulares de la izquierda son los menús Nombre de fuente y Tamaño de fuente (ver figura 2). Estos cuadros muestran la configuración actual del área seleccionada.
 
-- Insertamos sobre nuestro documento las tablas, imágenes de archivo o de la galería de Writer
+Haga clic sobre el botón con un triángulo invertido, a la derecha del cuadro, para abrir un menú. Desde los menús Nombre de fuente y Tamaño de fuente puede cambiar la fuente y su tamaño para las celdas seleccionadas.
 
-#### 3) Insertamos el índice en nuestro documento
+#### 3.3. Barra de fórmulas
 
-Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. A continuación veremos cómo crear un índice de las tablas e imágenes de nuestro documento en Writer. Lo haremos en 3 sencillos pasos
+A la izquierda de la Barra de fórmulas (ver figura 3) hay una pequeño cuadro de texto llamado cuadro de nombre que contiene una combinación de letras y números, por ejemplo D7. Esta combinación se llama referencia de celda, y se corresponde con la letra de columna y el número de fila de la celda actual.
 
-#### 1) Vamos a automatizar la inserción de la etiqueta sobre todas las tablas,
+A la derecha del cuadro de nombre están los botones Asistente: Funciones, Suma y Función. Al hacer clic sobre el botón Asistente: Funciones se abre un cuadro de diálogo en el que puede buscar una función de una lista de funciones disponibles, ver qué variables implica cada función y ver el resultado de la función según las entradas introducidas.
 
-imágenes de archivo que vayamos insertando. Seguiremos este procedimiento
+El botón Suma inserta en la celda actual una fórmula que suma los valores de las celdas por encima de ella, o de las de la izquierda si no hay valores numéricos encima. El botón Función inserta un signo igual en la celda seleccionada y en la Línea de entrada, configurando así la celda para aceptar una fórmula.
 
-- Insertamos una imagen y después la seleccionamos.
+Al introducir nuevos datos en una celda, los botones Suma y Función se transforman en los botones Rechazar y Aplicar .
 
-### 2. Insertamos la etiqueta, podemos hacerlo de varias formas
+Manual de Usuario LibreOffice - CALC Pag. 9 de 40
 
- Ejecutamos el menú “Insertar -> Leyenda”  Mediante un clic derecho sobre el objeto y después un clic izquierdo sobre el apartado “Pie” ó “Insertar Leyenda”.
+El contenido de la celda actual (datos, fórmulas o funciones) se muestra en la Línea de entrada, que ocupa el resto de la Barra de fórmulas. Puede editar el contenido de la celda allí, o puede hacerlo en la celda actual. Para editar el contenido en la Línea de entrada, haga clic en el lugar adecuado del área de la Línea de entrada e introduzca los datos con el teclado. Para editar dentro de la celda actual, haga doble clic en la celda.
 
-### 3. Una vez que estamos en el cuadro de diálogo “Insertar Leyenda”, haremos un clic
+#### 3.4. Celdas individuales
 
-sobre el botón “Auto…” ó “Automatico”.
+La sección principal de la pantalla muestra las celdas individuales en forma de cuadrícula, estando cada celda en la intersección de una columna y una fila concretas. Encima de la columna y en el extremo izquierdo de las filas hay una serie de cuadros grises con letras y números respectivamente. Estos son los títulos de columna y fila.
 
-Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento.
+Las columnas comienzan en A y continúan hacia la derecha, y las filas comienzan en 1 y continúan hacia abajo. Estos títulos de columna y fila forman las referencias de celda que aparecen en el Cuadro de nombre de la Barra de fórmulas (figura 3). Estos títulos pueden ocultarse seleccionando Ver > Títulos de filas/columnas.
 
-### 4. En el siguiente cuadro contextual haremos lo siguiente
+#### 3.5. Fichas de hoja
 
-1.- un clic sobre la casilla “Imagen de LibreOffice Writer” y otro sobre “Tabla de LibreOffice Writer”. 2.- podríamos cambiar el orden del pie (numeración delante de la categoría). 3.- Finalmente, clic sobre el botón “Aceptar”.
+En la parte inferior de la cuadrícula de celdas están las fichas de hoja (ver figura 4). Estas fichas permiten tener acceso a cada hoja individual. La ficha de la hoja actual, o activa, se marca en blanco. Al hacer clic sobre otra ficha de hoja, se muestra esa hoja y la ficha se vuelve blanca.
 
-Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento.
+También puede realizar una selección múltiple de fichas de hoja manteniendo pulsada la tecla Control mientras hace clic sobre los nombres de hoja.
 
-#### 2) Insertamos sobre nuestro documento las tablas, imágenes de archivo o de la
+#### 3.6. Barra de estado
 
-galería de Writer A partir de ese momento, cuando insertemos una ilustración o una tabla aparecerá la etiqueta correspondiente debajo (con la numeración consecutiva).
+La Barra de estado se encuentra en el extremo inferior de la ventana de Calc (figura 5), y proporciona información rápida sobre la hoja de cálculo actual.
 
-Primero nos situamos en la primera página en blanco de nuestro documento (es donde se ubicará normalmente el índice personalizado). Seguidamente clic sobre el menú "Insertar" y después escogemos "Índices y tablas -> Índices…"
+Manual de Usuario LibreOffice - CALC Pag. 10 de 40
 
-> **⚠️ Nota: en el apartado título podremos modificar el títul...**
-> Nota: en el apartado título podremos modificar el título del índice, en este caso “Indice de tablas e imágenes” Tema 11 (2). Como crear un índice de las tablas e imágenes de nuestro documento. En la parte derecha del siguiente cuadro contextual haremos lo siguiente
+De izquierda a derecha, la barra de estado muestra: La hoja actual y el número total de hojas de la hoja de cálculo. El estilo de hoja utilizado en la hoja actual. Haga doble clic para abrir el cuadro de diálogo y modificar el estilo de hoja. El nivel de zoom o escala. Haga doble clic para modificar la escala Modo de selección. Haga clic para cambiar entre el modo predeterminado o estándar (STD), el modo extendido (EXT) y el modo agregar (AGR).
 
-1. Clic sobre la pestaña “Indice/tabla” 2. En el desplegable “Tipo” seleccionaremos “Definido por el usuario”. 3. Clic sobre las casillas de “Tablas” e “Imagen”. 4. Finalmente, clic sobre el botón “Aceptar”. Aquí tenemos el índice de las tablas e imágenes de nuestro documento
+Indicación de modificación. Cuando se ha modificado un documento, en este campo de la Barra de estado aparece un asterisco. Firma digital. Si ha añadido una firma digital a la hoja de cálculo, en este campo aparece un icono en forma de candado. Haga doble clic para firmar digitalmente la hoja de cálculo.
 
----
+Funciones de las celdas seleccionadas. De forma predeterminada, esta área muestra la suma de los valores contenidos en las celdas seleccionadas. No obstante, puede cambiar la función en uso haciendo clic con el botón secundario sobre esta área. Las funciones disponibles son
 
-# 3.2 Tema 13. Treballar amb documents llargs
+o Promedio (media de los valores de la selección) o Cantidad2 (cuenta las celdas no vacías de la selección) o Cantidad (cuenta las celdas con valores numéricos de la selección) o Máximo (muestra el valor máximo de la selección) o Mínimo (muestra el valor mínimo de la selección) o Suma (la suma de los valores de la selección) o Ninguno
 
-### 📄 Writer-trabajo-documentos-largos.pdf
+Manual de Usuario LibreOffice - CALC Pag. 11 de 40
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+### 4. Abrir una hoja de cálculo nueva
 
-Trabajar con documentos largos en LibreOffice Writer
+Puede abrir una hoja de cálculo nueva desde cualquier componente de LibreOffice, por ejemplo, desde Writer (Documento de texto) o Draw (Dibujo).
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+Desde la barra de menús Haga clic en Archivo, y luego seleccione Nuevo > Hoja de cálculo.
 
-Trabajo con documentos largos en LibreOffice Writer
+Desde la Barra de herramientas Use el botón Nuevo de la barra de herramientas Estándar (Este botón siempre representa el icono del componente LibreOffice actual con una flecha negra a la derecha.) Haga clic sobre la flecha de menú desplegable para seleccionar el tipo de documento que desea abrir (documento de texto, hoja de cálculo, etc.).
 
-Cuando elaboramos largos informes o memorias, nuestros documentos deben dotarse de una estructura que haga cómodo su seguimiento. Ya sabemos que podemos -y debemos- utilizar estilos de Título para ello. Pero además, Writer nos proporciona un conjunto de herramientas que nos facilitarán esta tarea. Gracias a estas herramientas podremos alterar con mucha facilidad el esquema de nuestros documentos, los títulos podrán ser numerados y crearemos sumarios y tablas de toda clase de contenido. A su dominio dedicamos la presente unidad didáctica.
+Haga clic sobre el propio botón para crear un documento nuevo del componente actualmente abierto (si se ha abierto una hoja de cálculo, hacer clic sobre el botón abrirá una hoja de cálculo nueva).
 
-Uso del Navegador
+Desde el teclado Si ya tiene abierta una hoja de cálculo, puede pulsar las teclas Control+N para abrir una nueva hoja de cálculo.
 
-El Navegador es una herramienta exclusiva de LibreOffice que nos permitirá acceder a los diferentes elementos incluidos en un documento, así como navegar por él con toda comodidad. El Navegador permitirá modificar el esquema del documento, acceder a títulos de cualquier nivel, seleccionar imágenes, objetos incrustados o hiperenlaces entre otros muchos elementos. Su uso en documentos largos y estructurados resultará insustituible.
+Desde una plantilla Los documentos Calc también se pueden crear desde una plantilla, si dispone de alguna plantilla de hoja de cálculo. Siga los procedimientos ya explicados arriba, pero en lugar de seleccionar Hoja de cálculo en el menú Archivo, seleccione Plantillas y documentos. En la ventana Plantillas y documentos, navegue hasta la carpeta apropiada y haga doble clic sobre la plantilla deseada. Se abrirá una hoja de cálculo nueva, basada en la plantilla seleccionada.
 
-Podemos iniciar el Navegador de diferentes maneras
+Manual de Usuario LibreOffice - CALC Pag. 12 de 40
 
-- Desde el menú Ver > Navegador .
-- Con la tecla de función F5 .
-- Desde el botón Navegador de la barra de herramientas Estándar.
-- Desde el botón Navegador de la barra de herramientas lateral.
+### 5. Abrir una hoja de cálculo existente
 
-En el último caso, el Navegador se abrirá en el panel lateral. En todos los demás se abrirá en forma de ventana flotante sobre el documento, que puede ser acoplada a cualquier lado.
+También puede abrir una hoja de cálculo ya existente desde cualquier componente de LibreOffice.
 
-La ventana del Navegador
+Desde la barra de menú Haga clic en Archivo, y luego seleccione Abrir.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+Desde la barra de herramientas Haga clic sobre el botón Abrir de la barra
 
-El Navegador está formado por una barra de herramientas propia y una lista donde aparecen las siguientes categorías de objetos contenidos en los documentos
+de herramientas Estándar.
 
-- Títulos. Los diferentes títulos del documento, agrupados y sangrados según su nivel, dicho de otra manera, el
+Desde el teclado Use la combinación de teclas Control+O. Cada una de estas opciones muestra el cuadro de diálogo Abrir, en el que podrá localizar y seleccionar la hoja de cálculo que desea abrir.
 
-esquema del documento.
+CONSEJO También puede abrir una hoja de cálculo con la que haya trabajado recientemente usando la lista de Documentos recientes. Puede acceder a esta lista desde el menú Archivo, justo debajo de Abrir. La lista muestra los últimos 10 archivos abiertos con cualquiera de los componentes de LibreOffice.
 
-- Tablas. Las tablas son estructuras de texto organizadas en filas y columnas.
-- Marcos de texto. Cuadros con texto en su interior que pueden ser tratados como un objeto gráfico.
-- Imágenes. Imágenes insertadas en el documento.
-- Objetos OLE. Elementos como hojas de cálculo, fórmulas, y, en general, objetos de cualquier programa que admita
+Manual de Usuario LibreOffice - CALC Pag. 13 de 40
 
-la tecnología OLE (Object Linking and Embedding - Objetos vinculados e incrustados)
+### 6. Guardar una hoja de cálculo
 
-- Marcadores. Puntos del texto con un nombre que se crean para ser referenciados desde otro lugar del documento.
-- Secciones. Divisiones estructurales del documento que permiten aplicar determinados atributos a partes del
+Las hojas de cálculo pueden guardarse de tres formas. Desde la barra de menús Haga clic en Archivo y luego seleccione Guardar.
 
-documento, como la organización en columnas periodísticas o protección, entre otros. Hiperenlaces. Vínculos a sitios web, otros documentos, títulos o marcadores.
+Desde la barra de herramientas Haga clic en el botón Guardar de la barra de herramientas Estándar. Si ya se ha guardado el archivo y no se han realizado modificaciones posteriores, este botón permanece gris y no se puede seleccionar.
 
-- Referencias. Textos del documento que apuntan a algún Marcador.
-- Índices. Tablas de contenído que pueden ser de tipos muy variados: sumarios, alfabéticos o de ilustraciones entre
+Desde el teclado Use la combinación de teclas Control+S. Si la hoja de cálculo no se ha guardado con anterioridad, al pulsar el botón Guardar se abrirá el cuadro de diálogo Guardar como. En él podrá especificar el nombre de la hoja de cálculo y la ubicación en la que desea guardarlo.
 
-otros.
+NOTA Si la hoja de cálculo se había guardado con anterioridad, la acción guardar sobrescribirá la copia existente sin abrir el cuadro de diálogo Guardar como. Si desea guardar la hoja de cálculo en una ubicación distinta o con un nombre distinto, seleccione Archivo > Guardar como
 
-- Comentarios. Anotaciones creadas para revisiones del documento o establecer recordatorios.
-- Objetos de dibujo. Elementos de dibujo insertados en el documento.
+Manual de Usuario LibreOffice - CALC Pag. 14 de 40
 
-Para explorar el contenido de una categoría, delante del nombre de la misma hay un símbolo que alterna entre + (más) para expandir el contenido y - (menos) para contraerlo. Los títulos de diferentes niveles también muestran los mismos símbolos para expandir o contraer los títulos de nivel inferior.
+### 7. Navegar en las hojas de cálculo
 
-Tanto las categorías como las entradas de cada categoría poseen un menú contextual que podemos activar haciendo clic con el botón secundario del ratón. Al situar el ratón sobre una categoría, una etiqueta emergente muestra el número de elementos que contiene. El desplegable de la parte inferior de la ventana permite alternar entre los diferentes documentos abiertos.
+#### 7.1. Ir a una celda en particular
 
-Para desplazarse por el documento usando el Navegador
+7.1.1. Con el ratón Coloque el puntero del ratón sobre la celda elegida y haga clic.
 
-- Para acceder a un elemento de una categoría, haremos doble clic sobre su nombre.
-- Para acceder a un número de página escribiremos el número en el cuadro de la barra superior y pulsaremos INTRO
-- Los botones de incremento y decremento del cuadro con el número de página permitirán avanzar y retroceder
+7.1.2. Con una referencia de celda Haga clic en el pequeño triángulo negro invertido que está justo a la derecha del Cuadro de nombre (figura 3). Se resaltará la referencia de celda. Escriba la referencia de la celda a la que desea ir y pulse Entrar, o simplemente haga clic sobre el Cuadro de nombre, borre el contenido con la tecla de retroceso y escriba la referencia de la celda.
 
-páginas.
+7.1.3. Con el Navegador Haga clic sobre el botón navegador de la barra de herramientas Estándar (o pulse F5) para mostrar el navegador. Escriba la referencia de celda en los campos Columna y Fila de la parte superior y pulse la tecla Entrar. En la figura 6, el navegador seleccionaría la celda C7 .
 
-- También podamos activar la barra de herramientas de Navegación.
+#### 7.2. Navegar de celda a celda
 
-La barra de herramientas de Navegación se activa pulsando el botón Navegación, el primer botón que se muestra en la barra del Navegador.
+Generalmente, en la hoja de cálculo una celda, o un grupo de celdas, tienen un borde negro más oscuro. Este borde indica la selección realizada dentro del documento (ver figura 7).
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+Figura 1. Navegador Calc
 
-La barra de herramientas de Navegación
+Manual de Usuario LibreOffice - CALC Pag. 15 de 40
 
-La barra de herramientas Navegación permite seleccionar entre diferentes tipos de elementos, de tal manera que pulsando luego los botones Anterior o Siguiente, de la propia barra o del Navegador se recorrerán las diferentes apariciones de este tipo de elemento dentro del documento. De forma predeterminada, está activado Página.
+7.2.1. Con el ratón Para cambiar la selección, sencillamente mueva el cursor del ratón a la celda a la que desea ir y haga clic con el botón primario (generalmente el botón izquierdo) del ratón. Se resaltará la nueva celda seleccionada. Este método resulta especialmente útil cuando las celdas se hallan muy separadas.
 
-En el próximo apartado comprobamos como se puede usar el navegador para modificar el esquema del documento.
+7.2.2. Con las teclas Tabulación y Enter Pulsando Entrar o Mayús+Entrar podrá desplazarse hacia abajo o hacia arriba respectivamente. Pulsando Tab o Mayús+Tab podrá desplazarse hacia derecha o izquierda respectivamente.
 
-Editar el esquema del documento
+7.2.3. Personalizar la tecla Entrar Puede personalizar la dirección de movimiento de la tecla Entrar seleccionando Herramientas > Opciones > LibreOffice.org Calc > General. A la derecha de la figura 8 se muestran las cuatro opciones de dirección de la tecla Entrar. Las distintas opciones pueden resultar más o menos útiles en función del archivo en uso y del tipo de datos que se está introduciendo.
 
-El Navegador permite reorganizar fácilmente la estructura jerárquica de los capítulos y apartados del documento.
+La tecla Entrar también se puede usar para entrar o salir del modo Editar. Use las opciones de Configuración de entradas de la figura 8 para cambiar la configuración de la tecla Enter.
 
-Para ello hace uso de cuatro botones situados en la barra de herramientas superior de la ventana. En el momento de redactar estos contenidos, el programa adolece de un defecto de traducción que hace que sus nombres se muestren en inglés.
+7.2.4. Con las teclas de desplazamiento Puede pulsar las teclas de desplazamiento para moverse en la dirección de las flechas.
 
-Botones para reorganizar esquema del documento
+7.2.5. Con las teclas Inicio, Fin, Av Pág y Re Pág Inicio desplaza la selección hasta la primera celda de una fila. Fin le llevará a la última columna a la derecha que contenga datos. Av Pág le desplaza una pantalla completa hacia abajo, y Re Pág una pantalla completa hacia arriba.
 
-Recuerda que los iconos mostrados pueden mostrar una apariencia diferente según el conjunto de iconos que hayas establecido desde Herramientas > Opciones > LibreOffice > Ver . Para que se muestren habilitados, es necesario tener seleccionado en el Navegador un título determinado del esquema.
+Las distintas combinaciones de teclas Control y Alt con Inicio, Fin, Av Pág y Re Pág producen distintos tipos de desplazamiento.
 
-Entonces su comportamiento es como sigue
+CONSEJO La combinación de teclas Alt+Teclas de desplazamiento redimensiona una celda.
 
-- Promete chapter (promover capítulo; subir capítulo). Asciende una posición el título seleccionado en el navegador,
+Manual de Usuario LibreOffice - CALC Pag. 16 de 40
 
-junto con todos sus subniveles.
+#### 7.3. Moverse de una hoja a otra
 
-- Demote chapter (degradar capítulo; bajar capítulo) . Desciende una posición el título seleccionado en el navegador,
+Cada hoja de una hoja de cálculo es independiente de las otras, aunque pueden estar vinculadas entre ellas mediante referencias. Hay dos modos de navegar entre las distintas hojas de una hoja de cálculo.
 
-junto con todos sus subniveles.
+7.3.1. Con el teclado Para ir una hoja a la derecha pulse Control+Av Pág, y para moverse una hoja hacia la izquierda, pulse Control+Re Pág.
 
-- Promete level (promover nivel; subir nivel) . Asciende el nivel dentro del esquema del título seleccionado junto con
+7.3.2. Con el ratón Haga clic sobre la ficha Hoja de la hoja a la que desea ir. Si tiene muchas hojas, algunas fichas pueden permanecer ocultas tras la barra de desplazamiento horizontal, en el extremo inferior de la pantalla. En ese caso, utilice los cuatro botones a la izquierda de las fichas de las hojas para visualizarlas todas.
 
-todos sus subniveles. Automáticamente, se aplicará a todos los títulos el estilo de título adecuado. Por ejemplo, al aplicarlo sobre un Título 2, del cual depende un Título 3, el Título 2 pasará a ser un Título 1 y el Título 3 pasará a ser un Título 2.
+Como puede observar, las hojas no están ordenadas por número. La numeración de las hojas es arbitraria, y puede asignar cualquier nombre a una hoja.
 
-- Demote level (degradar nivel; bajar nivel) . Degrada el nivel dentro del esquema del título seleccionado junto con
+NOTA Las flechas de desplazamiento de las fichas hoja que aparecen en la figura 9 sólo están presentes si t iene fichas de hoja ocultas. En caso contrario, aparecen atenuadas como en la figura 4.
 
-todos sus subniveles.
+Manual de Usuario LibreOffice - CALC Pag. 17 de 40
 
-Si el título que deseas promover no tiene subtítulos, basta con cambiar el estilo de título al nivel deseado. Hacerlo con el Navegador resulta notablemente más productivo cuando el título tiene uno o más subtítulos, es decir, si tienes un Título 2 del cual dependen varios Título
+### 8. Seleccionar elementos de una hoja u hoja de cálculo
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+#### 8.1. Seleccionar celdas
 
-Numeración de capítulos
+Las celdas pueden seleccionarse en distintas combinaciones y cantidades
 
-En informes y memorias es habitual numerar los diferentes apartados que los componen. Para ello quizás tengamos la tentación de hacerlo desde las opciones de numeración y viñetas, pero éstas están orientadas a numerar listas de párrafos consecutivos, e intentar aplicarlas a los títulos y encabezados del contenido puede ser un quebradero de cabeza.
+8.1.1. Celda individual Haga clic con el botón primario en la celda. El resultado será semejante a la imagen de la izquierda de la figura 7. Puede comprobar su selección en el Cuadro de nombre.
 
-La forma adecuada de resolver esta necesidad es mediante el diálogo de Numeración de capítulos que se abre desde Herramientas > Numeración de capítulos. Este diálogo nos permitirá asignar numeraciones a los distintos niveles de título del documento.
+8.1.2. Rango de celdas contiguas
 
-Haciéndolo así nos podremos despreocupar de mantener la numeración pues el propio Writer se ocupará de hacerlo automáticamente a medida que añadimos o eliminamos encabezados en nuestro documento.
+Puede seleccionar un rango de celdas usando el teclado o el ratón. Para seleccionar un rango de celdas arrastrando el ratón
 
-Cuadro de diálogo Numeración de capítulos
+- Haga clic en una celda.
+- Mantenga pulsado el botón primario del ratón.
+- Desplace el ratón por la pantalla.
 
-La pestaña Numeración del diálogo de Numeración de capítulos muestra una lista de los niveles del esquema, una serie de propiedades para cada uno de ellos y una vista previa del resultado que se obtendrá.
+### 4. Una vez resaltado el bloque de celdas deseado, suelte el botón primario del
 
-Mediante este diálogo podemos asignar a cada nivel del esquema de documento un estilo de párrafo (por defecto, Encabezado 1 a Encabezado 10 (ó Titulo 1 a Titulo 10), aunque podemos elegir cualquier otro). Para cada nivel, asignaremos una serie de propiedades que nos permitirá personalizar la forma en que se mostrará este encabezado.
+ratón. Para seleccionar un rango de celdas sin arrastrar el ratón
 
-Tras seleccionar el nivel desado en la lista Nivel, las diferentes propiedades que podemos asignar son
+- Haga clic en la celda que conformará una de las esquinas del rango de celdas.
+- Mueva el ratón hasta la esquina opuesta del rango de celdas.
+- Mantenga pulsada la tecla Mayúsc y haga clic.
 
-- Estilo de párrafo: Seleccionaremos el estilo de párrafo asignado al nivel, por defecto Título 1 para el Nivel 1, Título
+Para seleccionar un rango de celdas sin usar el ratón
 
-2 para el Nivel 2, y así sucesivamente.
+- Seleccione la celda que conformará una de las esquinas del rango de celdas.
 
-- Número: Escogeremos el estilo de numeración deseado: números árabes, romanos, letras o Ninguna si no
+### 2. Mantenga pulsada la tecla Mayúsc y use las teclas de desplazamiento (flechas)
 
-deseamos que se muestre ninguna numeración. Aquí no hay disponibles viñetas, tan sólo estilos de numeración.
+para seleccionar el resto del rango. El resultado de cualquiera de estos métodos es similar a la imagen derecha de la figura 7.
 
-- Estilo de carácter: Por defecto, la numeración se muestra con el formato de texto correspondiente al estilo del
+Manual de Usuario LibreOffice - CALC Pag. 18 de 40
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+CONSEJO También puede seleccionar directamente un rango de celdas en el Cuadro de nombre. Haga clic en el Cuadro de nombre tal como se describe en “¡Error! No se encuentra el origen de la referencia.” en a página ¡Error! Marcador no definido.. Para seleccionar un rango de celdas, introduzca la referencia de celda de la celda de la esquina superior izquierda, seguida de dos puntos (:), y luego la referencia de celda de la esquina inferior derecha. Por ejemplo, para seleccionar un rango que abarcara de A3 a C6, deberá introducir A3:C6.
 
-párrafo seleccionado. Si deseamos que el número se muestre con una tipografía, tamaño, color o efecto diferente, necesitaremos asignar un estilo de carácter configurado con estas características.
+8.1.3. Rango de celdas no contiguas Seleccione la celda o rango de celdas usando uno de los métodos explicados arriba. Mueva el puntero del ratón hasta el principio del siguiente rango o de la siguiente celda individual. Mantenga pulsada la tecla Control y haga clic, o clic y arrastrar para seleccionar un rango.
 
-- Mostrar subniveles: Para niveles posteriores al primero, podemos escoger cuántos subniveles se mostrarán en el
+Repita el proceso según sus necesidades.
 
-número. Por ejemplo, si en el nivel 3 asignamos 3 subniveles, se mostrará el número de cada encabezado como 1.1.1., 2.1.2, etc.
+#### 8.2. Seleccionar columnas y filas
 
-- Separador: Opcionalmente se puede añadir un separador Antes y Después del número, esto nos permitirá que la
+En LibreOffice pueden seleccionarse columnas y filas con gran rapidez.
 
-numeración aparezca como (1), -1-, #1 o el estilo deseado.
+8.2.1. Columna o fila individual Para seleccionar una única columna, haga clic sobre su letra de referencia (ver fig. 1). Para seleccionar una única fila, haga clic sobre su número de referencia. 8.2.2. Columnas o filas múltiples Para seleccionar columnas o filas múltiples contiguas
 
-- Iniciar en: El número desde el cual se comenzará a numerar. Si la numeración está establecida como números
+Haga clic en la primera columna o fila del grupo. Mantenga pulsada la tecla Mayúsc. Haga clic en la última columna o fila del grupo.
 
-arábicos, se puede comenzar a numerar desde el 0, en cualquier otro caso, desde el 1. • Si deseamos asignar las mismas propiedades a todos los niveles en la lista Nivel podemos seleccionar 1- 10.
+Para seleccionar columnas o filas múltiples no contiguas
 
-Ejemplo numeración de capítulos
+Manual de Usuario LibreOffice - CALC Pag. 19 de 40
 
-En el ejemplo que se muestra se ha configurado la numeración con las siguientes propiedades
+Haga clic en la primera columna o fila del grupo. Mantenga pulsada la tecla Control. Haga clic sobre las columnas o filas deseadas manteniendo pulsada la tecla Control.
 
-Nivel 1
+#### 8.2.3. Hoja entera
 
-Número: 1, 2, 3...
+Para seleccionar una hoja completa, haga clic en el pequeño recuadro que está entre el título de la columna A y el título de la fila 1.
 
-Separador Después: punto
+También puede usar el teclado para seleccionar toda la hoja. Para ello, pulse Control+A.
 
-Iniciar en: 0
+8.3. Seleccionar hojas Puede seleccionar tanto una como múltiples hojas. Cuando desee realizar cambios a más de una hoja a la vez, puede resultar ventajoso realizar una selección múltiple de hojas.
 
-Nivel 2
+8.3.1. Hoja única Haga clic sobre la ficha de la hoja que desea seleccionar. La hoja activa se vuelve blanca (ver figura 4).
 
-Número: 1, 2, 3...
+8.3.2. Hojas múltiples contiguas Para seleccionar hojas múltiples contiguas
 
-Mostrar subniveles: 2
+Haga clic sobre la ficha de la primera hoja a seleccionar. Desplace el puntero del ratón sobre hasta la última ficha de hoja. Mantenga presionada la tecla Mayúsc y haga clic sobre la ficha de la última hoja. Todas las fichas entre esas dos hojas ser volverán blancas. Cualquier acción que lleve a cabo ahora afectará a todas las hojas resaltadas.
 
-Separador Despés: punto Mediante la pestaña Posición del diálogo, podemos personalizar diferentes propiedades de espaciado y ubicación de los números de página asignados.
+8.3.3. Hojas múltiples no contiguas Para seleccionar hojas múltiples no contiguas
 
-Creación de índices y tablas de contenido
+Haga clic sobre la ficha de la primera hoja a seleccionar.
 
-Es habitual vernos en la necesidad de elaborar documentos largos y estructurados con diferentes capítulos y apartados como memorias, informes o propuestas de proyectos. En esos casos, resulta casi imprescindible crear un índice que nos indique en qué pagina encontraremos cada uno de los apartados del documento.
+Manual de Usuario LibreOffice - CALC Pag. 20 de 40
 
-Writer incorpora potentes herramientas para insertar Índices y sumarios (tablas de contenido) en nuestros documentos.
+Desplace el puntero del ratón hasta la segunda ficha de hoja a seleccionar. Mantenga presionada la tecla Control y haga clic sobre la ficha de la hoja. Repita el proceso según sus necesidades. Las fichas seleccionadas se volverán blancas. Cualquier acción que lleve a cabo ahora afectará a todas las hojas resaltadas.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+8.3.4. Todas las hojas Haga clic con el botón secundario sobre cualquiera de las fichas de hoja y seleccione Seleccionar todas en el menú emergente.
 
-Para poder utilizar estas herramientas y crear los índices es necesario crear el documento utilizando estilos, y para las distintas tablas de contenido, agregar títulos a las tablas o a las imágenes, o insertar citas bibliográficas, o insertar manualmente entradas al índice.
+Manual de Usuario LibreOffice - CALC Pag. 21 de 40
 
-Si se prepara el documento adecuadamente, insertar índices o tablas de contenidos serán sólo unos pocos clics.
+### 9. Trabajar con Columnas y Filas
 
-Para poder insertar índices de contenido debemos estructurar previamente los capítulos y apartados del documento aplicando donde corresponda los estilos de párrafo predefinidos y denominados Título 1 al Título 10.
+#### 9.1. Insertar columnas y filas
 
-¿Qué significa estructurar previamente los capítulos y apartados? Significa que el documento al que queremos agregar un índice de contenido debe está organizado con cierta jerarquía (sección, tema, capítulo, apartado, etc), y que los títulos de éstos elementos (título del capítulo, título del apartado) deben tener asignado un estilo de párrafo, que puede ser, o bien uno entre los denominados Título 1 al Título 10.
+Pueden insertarse distintas cantidades de columnas y filas de varias maneras.
 
-Insertar sumarios y tablas de contenido
+9.1.1. Una única columna o fila Puede añadirse una única columna o fila usando el menú Insertar: Seleccione la columna o fila donde desea insertar la nueva columna o fila. Seleccione Insertar > Columnas o Insertar > Filas.
 
-Los índices y tablas de contenido se pueden insertar en cualquier momento en el documento. Generalmente se insertar al principio o final del documento, aunque también se pueden situar en cualquier otro lugar. Writer permite, además, insertar índices y tablas de contenido específicas para cada capítulo.
+NOTA Cuando inserta una única columna nueva, esta se inserta a la izquierda de la columna resaltada. Cuando inserta una única fila, esta se inserta sobre la fila resaltada.
 
-El procedimiento es sencillo. Situados en la página en donde queremos insertar el índice o la tabla de contenido, abrimos el menú Insertar > Sumario e Índice > Sumario, índice o bibliografía (en versiones anteriores estas opciones del menú Insertar pueden denominarse Índices y tablas > Índices ).
+También puede añadirse una única columna o fila con el ratón: Seleccione la columna o fila donde desea insertar la nueva columna o fila. Haga clic con el botón secundario sobre el título: Seleccione Insertar filas o Insertar columnas.
 
-El diálogo presentado es el siguiente
+9.1.2. Columnas o filas múltiples Si tiene que insertar varias columnas o filas, es mejor hacerlo de una sola vez. Resalte el número de columnas o filas necesarias manteniendo pulsado el botón primario del ratón sobre la primera y luego arrastrando sobre el número de identificadores necesarios.
 
-Cuadro de diálogo Sumario, índice o bibliografía
+Proceda como para insertar una única columna o fila.
 
-Podremos observar a la izquierda del diálogo una miniatura representativa en tiempo real del tipo de índice seleccionado y de las opciones aplicadas. Si no se muestra, activa la casilla Previsualización que aparece a la derecha del botón Ayuda.
+#### 9.2. Eliminar columnas y filas
 
-A la derecha del diálogo se presenta un selector de pestañas, en el que se encuentran todas las opciones que podremos aplicar a nuestros índices y tablas de contenido. Estas opciones cambiarán según el tipo de índice que deseamos crear, indicado en el desplegable Tipo de la pestaña Índice.
+Las columnas y filas se pueden eliminar individualmente o por grupos.
 
-Mostraremos como podemos utilizar las opciones de esta pestaña.
+Manual de Usuario LibreOffice - CALC Pag. 22 de 40
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+9.2.1. Una única columna o fila Una única columna o fila sólo se puede eliminar con el ratón
 
-10/22
+Seleccione la columna o fila a eliminar. Haga clic con el botón primario sobre el título de columna o fila. Seleccione Eliminar columnas o Eliminar filas en el menú emergente.
 
-Propiedades de sumarios o tablas de contenido
+9.2.2. Columnas o filas múltiples Si tiene que eliminar varias columnas o filas, es mejor hacerlo de una sola vez. Resalte el número de columnas o filas necesarias manteniendo pulsado el botón primario del ratón sobre la primera y luego arrastrando sobre el número de identificadores necesarios.
 
-Describimos aquellas propiedades específicas que podemos definir en el cuadro de diálogo Sumario, índice o bibliografía para insertar un Índice de contenido. En Writer, todos los índices y tablas de contenido tienen en común las siguientes propiedades, que podemos definir antes de insertarlos en el documento
+Proceda como para eliminar una única columna o fila.
 
-- Desde el cuadro Título establecemos el índice o tabla de contenido que estamos creando.
-- Desde el desplegable Tipo seleccionaremos entre los diferentes tipos de índices que podemos crear. El más habitual
+### 10. Trabajar con hojas
 
-es el Sumario (en otras versiones también denominado Índice de contenido o Tabla de contenido), pero también podemos crear índices alfabéticos , de figuras (ilustraciones) y de tablas, entre otros. En función del tipo seleccionado, podremos completar diferentes opciones para obtener el índice o tabla de contenido deseado.
+Como cualquier otro elemento de Calc, las hojas se pueden insertar, eliminar y renombrar.
 
-- Activando Protegido contra cambios manuales evitaremos que se cambie el contenido del índice de forma manual.
+#### 10.1. Insertar hojas nuevas
 
-En cualquier caso, los cambios manuales efectuados se pierden si decidimos actualizarlo.
+Existen muchos modos de insertar una hoja nueva. El primer paso para todos los métodos es seleccionar la hoja junto a la que se insertará la hoja nueva. Entonces podrá usar cualquiera de las siguientes opciones: Haga clic en el menú Insertar y seleccione Hoja, o Haga clic con el botón secundario sobre la ficha y seleccione Insertar hoja, o Haga clic en el espacio en blanco situado tras la última ficha de hoja (ver figura 11).
 
-- Todos los tipos de índice (con la única excepción del tipo Bibliografía) podemos insertarlos como índice para todo el
+Todos los métodos abrirán el cuadro de diálogo Insertar hoja (figura 12). Seleccione aquí si la nueva hoja debe ir delante o detrás de la hoja seleccionada, y cuantas hojas desea insertar. Si sólo inserta una hoja, también podrá darle nombre.
 
-documento o como índice para cada capítulo del mismo. En el área Crear un índice o un sumario podemos definir uno u otro seleccionando la opción adecuada en el desplegable Para.
+Manual de Usuario LibreOffice - CALC Pag. 23 de 40
 
-- Una característica que sólo se aplica al Sumario es la de definir el número máximo de niveles que lo formarán. Si
+#### 10.2. Eliminar hojas
 
-sólo queremos incluir en el índice los niveles 1 y 2 (aquellos títulos marcados con el estilo Título 1 o Título 2, o según la jerarquía de nuestros propios estilos) desde Evaluar hasta el nivel seleccionaremos el límite de niveles a incluir.
+Las hojas pueden eliminarse individualmente o por grupos.
 
-- En el área Crear a partir de podemos definir de qué estilos se leerá la información para crear el índice.
+10.2.1. Hoja única Haga clic con el botón primario en la ficha de la hoja que desea eliminar y seleccione Eliminar hoja en el menú emergente, o haga clic en Editar > Hoja > Borrar.
 
-• Si seleccionamos Esquema se añaden al índice los estilos de Título predefinidos (Título 1- 10), o los que se hayan establecido en la Numeración de capítulos. • Si marcamos Estilos adicionales, pulsando sobre el botón Asignar estilos a su derecha se presentará el diálogo Asignar estilos que permitirá seleccionar un estilo y con los botones que apuntan a la izquierda o a la derecha integrarlos en el índice seleccionando su jerarquía.
+10.2.2. Hojas múltiples Para eliminar varias hojas, selecciónelas como hemos descrito anteriormente, luego haga clic con el botón secundario sobre una de las fichas y seleccione Eliminar hoja en el menú emergente o, en la barra de menús, haga clic en Editar > Hoja > Borrar.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+#### 10.3. Cambiar el nombre de la hoja
 
-14/22
+El nombre predeterminado de una hoja nueva es HojaX, siendo X un número. Este sistema no presenta problemas en una hoja de cálculo pequeña, pero se complica mucho cuando hay muchas hojas. Para dar un nombre más intuitivo a la hoja, puede: Introducir un nombre en el cuadro de diálogo al crear la hoja, o
 
-Cuadro de diálogo Asignar estilos
+Hacer clic con el botón secundario sobre la ficha de la hoja y seleccionar Cambiar nombre a la hoja en el menú emergente. Luego sustituya el nombre actual por uno más adecuado.
 
-- Activando Marcas de índice se incluirán en éste las entradas que que se hayan insertado manualmente desde el
+NOTA Los nombres de hoja pueden contener casi todos caracteres excepto aquellos no permitidos en MS Excel. Esta restricción se ha creado artificialmente por razones de compatibilidad. Si intenta renombrar una hoja con un nombre no válido se producirá un mensaje de error.
 
-menú Insertar > Sumario e índice > Entrada de índice . Pulsando sobre el botón Aceptar, el índice de contenido será insertado inmediatamente en el documento. Más adelante comprobaremos otras opciones avanzadas para personalizar su diseño.
+#### 10.4. Modificar el aspecto de una hoja de Calc
 
-Actualizar índices
+10.4.1. Usar la escala Use la función escala para cambiar la vista y mostrar más o menos celdas en la ventana. Para más información sobre la escala, consultar el Capítulo 1 (Introducción a LibreOffice).
 
-Es muy habitual que después de haber insertado un índice, diferentes modificaciones en el documento añadan nuevos capítulos, o que éstos cambien de página. En esas circunstancias se hace necesario actualizar el índice.
+Manual de Usuario LibreOffice - CALC Pag. 24 de 40
 
-Para ello basta con activar el menú contextual del índice y seleccionar la opción Actualizar índice. Todas las modificaciones realizadas sobre el documento y que afecten al índice serán actualizadas y reflejadas inmediatamente.
+10.4.2. Fijar filas o columnas La función fijar bloquea un número de filas en la parte superior de la hoja, un número de columnas en el extremo izquierdo de la hoja, o ambas cosas. De ese modo, cuando se desplace hacia abajo o a la derecha de la hoja, las columnas y filas fijadas permanecerán a la vista.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+La figura 13 muestra algunas filas y columnas fijadas. La línea horizontal más gruesa entre las filas 3 y 14, así como la línea vertical más gruesa entre las columnas C y H demarcan las áreas fijas. Las filas 4 a 13 y las columnas D a G se han desplazado fuera de la vista de pantalla. Dado que las primeras tres filas y columnas están fijas, siguen a la vista.
 
-15/22
+Puede establecer el punto de fijación en una fila, una columna, o en ambas, como en la figura 13.
 
-Actualizar, editar o eliminar índices desde el menú contextual
+### 1. Fijar sólo filas o sólo columnas
 
-Si lo prefieres, también puedes activar esta opción desde el menú Herramientas > Actualizar > Índice actual. El índice sobre el que previamente hiciste clic se actualizará inmediatamente. Si has agregado varios índices a tu documento, puedes actualizarlos todos con una sola orden. La encontrarás en el menú Herramientas > Actualizar > Índices y sumarios , en cuyo caso actualizará todos los índices del documento, o Herramientas > Actualizar > Índice actual .
+Haga clic sobre el título de la fila inferior a la que desea fijar, o en el título de la columna a la derecha de la que desea fijar. Seleccione Ventana > Fijar. Aparece una línea oscura que indica hasta dónde está fija la pantalla.
 
-Editar las propiedades de un índice
+### 2. Fijar una fila y una columna
 
-Una vez insertado el índice, podemos de nuevo editar sus propiedades y de esta forma modificar su formato o comportamiento. Desde el menú contextual del índice seleccionaremos Editar índice.
+Haga clic sobre aquella celda inmediatamente inferior a la fila a fijar y justo a la derecha de la columna a fijar. Seleccion Ventana > Fijar. Aparecen dos líneas en la pantalla, una horizontal sobre la celda seleccionada y otra vertical a la izquierda de dicha celda. Ahora, al desplazarse por la pantalla, todo lo que esté por encima y a la izquierda de esas líneas permanecerá siempre visible.
 
-Se mostrará nuevamente el cuadro de diálogo Sumario, índice o bibliografía y podremos cambiar los valores que anteriormente definimos.
+10.4.3. Desactivar la función fijar Para desactivar la función fijar de filas y columnas, seleccione Ventana > Fijar. Desaparecerá la marca de verificación de Fijar.
 
-Eliminar un índice o tabla de contenido
+10.4.4. Dividir la pantalla Otro forma de cambiar el aspecto de la pantalla es dividir la ventana, también conocida como dividir la pantalla. La ventana puede dividirse en horizontal, en vertical, o ambos. Esto le permite tener hasta cuatro porciones de la hoja de cálculo siempre visibles.
 
-debemos poner el máximo interés en que los mismos sean accesibles para cualquier persona, independientemente de su capacidad visual. La creación de sumarios de contenido del documento hará nuestros documentos más accesibles y permitirá facilitar la navegación para los lectores de pantalla usados por personas con discapacidad visual.
+¿Para qué sirve esta función? Imagine que tiene una hoja de cálculo de grandes dimensiones, y una de su celdas contiene un número utilizado por tres fórmulas de otras celdas. La función dividir pantalla le permite ubicar la celda que contiene el número en una de las secciones y cada una de las celdas con las fórmulas en las otras tres secciones. Entonces podrá cambiar el valor de la celda numérica (la primera) y observar el efecto de esos cambios en cada fórmula.
 
-¡RECUERDA! Crea siempre un sumario o índice de contenido para que tus documentos sean accesibles.
+Manual de Usuario LibreOffice - CALC Pag. 25 de 40
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+10.4.5. Dividir la ventana horizontalmente Para dividir la ventana horizontalmente: Lleve el puntero hasta la barra de desplazamiento vertical, a la derecha de la pantalla, hasta el botón superior que muestra un triángulo negro. Justo encima de este botón encontrará una gruesa línea negra (figura 15).
 
-16/22
+Mueva el puntero del ratón por esta línea hasta que se transforme en una línea con dos flechas (figura 16). Mantenga pulsado el botón principal del ratón y arrastre la línea hacia abajo. Aparecerá una línea negra que se moverá con el ratón, dividiendo el documento.
 
-Y para poder crear un sumario, es imprescindible el correcto uso de estilos de título. Te recordamos los criterios a seguir en la aplicación de estilos de título. Dada la facilidad de caer en cierta confusión en relación a su uso aclaramos el sentido de algunos de estos estilos
+Suelte el botón del ratón y la pantalla se dividirá en dos vistas, cada una con su propia barra de desplazamiento vertical. En la figura 14, los valores Beta y A0 están en el panel superior de la ventana, mientras que el panel inferior presenta otros cálculos. Puede desplazar las áreas superior e inferior de manera independiente, lo que le permite realizar cambios en los valores Beta y A0 y observar cómo afectan esos cambios a los cálculos de la mitad inferior de la ventana.
 
-- Título: Es el "padre" de todos los estilos de título. Está basado en el Estilo predeterminado, pero generalmente
+También puede dividir la ventana verticalmente, tal como se describe debajo, para obtener idénticos resultados: poder desplazar ambas partes de la ventana de forma independiente. Si aplica una división horizontal y vertical, dispondrá de cuatro ventanas independientes.
 
-con un tipo de letra y espaciado diferente. Si queremos modificar algún atributo para todos los títulos, será más práctico modificar este estilo. Los diferentes estilos de título heredarán los cambios.
+10.4.6. Dividir la ventana verticalmente Para dividir la ventana verticalmente
 
-- Titular: Sería aplicable para el título general del documento. Aplicable para un encabezamiento o portada del
+### 1. Lleve el puntero del ratón hasta la barra de desplazamiento horizontal, en la
 
-documento. Por defecto define un tipo de letra especialmente grande.
+parte inferior de la pantalla, hasta el pequeño botón con un triángulo negro, a la derecha.
 
-- Subtítulo: Se define por su propio nombre, sería el subtítulo que acompaña y refuerza el título de algunos escritos.
-- Título 1 a Título 10: Son los estilos aplicables a los apartados, capítulos o temas del documento. Con ellos se puede
+### 2. Justo a la derecha de este botón podrá observar una gruesa línea negra (figura
 
-construir el sumario o índice de contenido. Es importante su correcta estructuración. Por ejemplo no usar un estilo Título 3, si previamente no hay aplicado unos estilos Título 1 y Título 2. Una vez más, insistimos en que la apariencia no es lo importante, sino la estructura. La apariencia la podemos modificar a nuestro gusto modificando la definición de los estilos.
+17). Mueva el puntero del ratón por esta línea hasta que se transforme en una línea con dos flechas.
 
-Quizás estos conceptos resulten más claros con un ejemplo
+### 3. Mantenga pulsado el botón principal del ratón y arrastre la línea hacia la
 
-- Títular: Proyecto de migración a un escritorio libre
-- Subtítulo: Una guía para afrontar con éxito migraciones de software desde aplicaciones privativas a aplicaciones
+izquierda. Aparecerá una línea negra que se moverá con el ratón, dividiendo la pantalla.
 
-libres en entornos corporativos
+### 4. Suelte el botón del ratón y la pantalla se dividirá en dos vistas, cada una con su
 
-- Título 1: Objetivos
-- Título 1: Definir la estrategia de migración
-- Título 2: Formación de usuarios
-- Título 2: Pasos para migrar las máquinas
-- Título 1: Aplicaciones usuales
+propia barra de desplazamiento horizontal.
 
-• Título 2: Suite ofimática LibreOffice • Título 2: Bases de datos MySQL • Título 2: Tratamiento de imágenes En este ejemplo hemos sangrado los textos de estilo Título 2 para expresar con más claridad la relación jerárquica en los diferentes niveles de título.
+NOTA Dividir la ventana horizontal y verticalmente al mismo tiempo le proporcionará cuatro vistas, cada una con sus barras de desplazamiento horizontal y vertical.
 
-Personalización de índices y tablas de contenido
+### 1. Desactivar la división de ventana
 
-Writer nos permite personalizar el formato de los índices que agregados al documento. Dependiendo del tipo de índice insertado podemos asignar los estilos de párrafo de nuestra preferencia a cada uno de los distintos niveles del índice, o asignar hiperenlaces a las entradas, cambiar su diseño o incluso aplicar un color o una imagen de fondo.
+### 2. Para desactivar esta función, siga una de las siguientes opciones
 
-Para poder definir todas estas características haremos uso de las restantes pestañas que se muestran en el diálogo Sumario, índice o bibliografía que hasta ahora no hemos mencionado.
+- Haga doble clic sobre cada una de las líneas de división.
 
-Aplicar estilos de párrafo personalizados a los niveles de índice
+### 4. Haga clic en cada una de las líneas y vuelva a arrastrarlas hasta el extremo de
 
-Por defecto, en Writer los índices se crean utilizando los estilos de párrafo predeterminados por la plantilla con la que se creó el documento.
+la barra de desplazamiento.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+- Seleccione Ventana > Dividir para eliminar ambas divisiones.
 
-17/22
+Manual de Usuario LibreOffice - CALC Pag. 26 de 40
 
-Podemos ver estos estilos en la pestaña Estilos del cuadro de diálogo Sumario, índice o bibliografía .
+CONSEJO También puede dividir la pantalla usando un comando de menú. Haga clic en la celda inmediatamente debajo y a la derecha del punto en que desea dividir la ventana, y seleccione Ventana > Dividir.
 
-En el caso de sumarios, estos estilos son Sumario n (donde n es del 1 al 10) para cada uno de los niveles del índice y Titulo del sumario para el encabezado del mismo. Otros tipos de índices tienen también sus propios estilos definidos.
+Manual de Usuario LibreOffice - CALC Pag. 27 de 40
 
-Podemos asignar otros estilos en esta pestaña, aunque es más recomendable limitarnos a modificar su apariencia.
+### 11. Introducir datos mediante el teclado
 
-Asignación de estilos a los niveles del índice
+En Calc, la mayor parte de las entradas de datos puede realizarse mediante el teclado.
 
-Para modificar los estilos de sumario o de índice, seguiremos los siguientes pasos
+#### 11.1. Introducir números
 
-- En la lista Niveles, seleccionamos el nivel al que deseamos aplicar un estilo de párrafo diferente.
-- A continuación, seleccionamos de la lista Estilos de párrafo el estilo a aplicar.
-- Finalmente haremos clic sobre el botón en forma de flecha apuntando a la izquierda entre ambas listas para asignar
+Haga clic en la celda y escriba los números usando las teclas numéricas del teclado principal o del teclado numérico. Para introducir un número negativo, escriba un signo menos (-) delante del número o enciérrelo entre paréntesis, de este modo: (1234). De forma predeterminada, los números se alinean a la derecha y los números negativos aparecen precedidos del símbolo negativo.
 
-al nivel el estilo de párrafo seleccionado.
+#### 11.2. Introducir texto
 
-- Repetiremos el procedimiento para el resto de niveles cuyo estilo deseemos modificar. Para restaurar al estilo
+Haga clic en la celda y escriba el texto. De forma predeterminada, el texto se alinea a la izquierda.
 
-predeterminado, basta con seleccionar de la lista Niveles el nivel a restaurar y pulsar sobre el botón Predeterminado.
+#### 11.3. Introducir números como texto
 
-- Si deseamos modificar la definición de un estilo, lo podemos hacer, seleccionando el estilo en la lista de Estilos de
+Si se introduce un número con formato 01481, Calc desechará el 0 inicial. (Excepción: ver el Consejo de debajo.) Para conservar el 0 inicial, por ejemplo para prefijos telefónicos, escriba un apóstrofe antes del número, así: ‘01481. Ahora Calc considera los datos como texto. Las fórmulas y funciones tratarán esta entrada como cualquier otra entrada de texto, dando como resultado un cero en las fórmulas y siendo ignorado en una función.
 
-párrafo y pulsando el botón Editar. Se abrirá el diálogo de Estilo de párrafo. Naturalmente, también podríamos personalizar los estilos de párrafo desde el panel lateral de Estilos y formato, o con el menú contextual sobre la entrada de índice y seleccionando Modificar estilo.
+CONSEJO Los números pueden comenzar por cero y ser considerados como números (al contrario que el texto) si la celda tiene el formato adecuado. Haga clic con el botón secundario y seleccione Formatear celdas > Números. Establezca el número de ceros que desea añadir a la izquierda del número.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+NOTA Cuando se usa un apóstrofe (y no un comilla sencilla) para permitir que se muestre el 0 inicial, el apóstrofe desaparece una vez pulsada la tecla Enter. Si se seleccionan comillas tipográficas como apóstrofes, éstos permanecerán visibles. Para seleccionar el tipo de apóstrofe, vaya a Herramientas > Corrección automática > Comillas tipográficas. La selección que realice para el apóstrofe afectará tanto a Calc como a Writer.
 
-18/22
+Manual de Usuario LibreOffice - CALC Pag. 28 de 40
 
-Mostrar el índice en dos o más columnas
+PRECAUCIÓN
 
-Desde la pestaña Columnas del diálogo Sumario, índice o bibliografía podemos definir el columnado con el que se presentará el índice editado.
+Para dar formato de texto a un número, compruebe que la celda que contiene el número no se usa en ninguna fórmula, ya que Calc ignoraría el valor.
 
-Pestaña Columnas del diálogo Sumario, índice o bibliografía
+#### 11.4. Introducir fechas y horas
 
-En la sección Configuración de esta pestaña determinamos el número de columnas con que se presentará el índice. También podemos seleccionarlas rápidamente pulsando sobre las miniaturas con diferentes esquemas predeterminados y en la pequeña vista previa de la derecha previsualizaremos la disposición de las columnas según la configuración actual.
+Seleccione la celda y escriba la fecha u hora. Puede separar los elementos de fecha mediante una barra (/) o un guión (–), o usar texto del tipo 10 oct 03. Calc reconoce gran variedad de formatos de fecha. Puede separar los elementos de la hora con dos puntos, por ejemplo 10:43:45.
 
-Ejemplo de sumario en dos columnas
+Manual de Usuario LibreOffice - CALC Pag. 29 de 40
 
-En el apartado Anchura y espaciado podemos establecer el espaciado entre columnas, y en caso de desactivar la casilla Anchura automática podremos establecer anchos de columna desiguales para cada columna.
+### 12. Acelerar la entrada de datos
 
-En la sección Línea de separación podemos activar una línea de separación entre columnas, seleccionando un Estilo, Anchura, Altura y Color para la misma.
+Introducir datos en una hoja de cálculo puede ser muy laborioso, pero Calc le proporciona distintas herramientas para facilitar parte de la pesada tarea. La más básica de las funciones es pinchar y arrastrar el contenido de una celda a otra con el ratón. No obstante, Calc también incluye muchas otras herramientas para automatizar la entrada, especialmente de material repetitivo. Entre ellas están la herramienta Rellenar, Listas de selección, y la posibilidad de introducir información en múltiples hojas del mismo documento.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+#### 12.1. Usar la herramienta Rellenar
 
-19/22
+Lo más sencillo es usar la herramienta Rellenar para duplicar un contenido existente. Empiece seleccionando la celda a copiar, luego arrastre el ratón en cualquier dirección (o mantenga pulsada la tecla Mayúsc y haga clic en la última celda a rellenar), y seleccione Editar > Rellenar y la dirección hacia la que desea copiar: arriba, abajo, izquierda o derecha.
 
-Establecer un color o una imagen de fondo para el índice en OpenOffice Writer Desde la pestaña Fondo del diálogo Insertar índice o tabla podemos definir un color o una imagen de fondo para el índice editado. Su funcionalidad es parecida a la del Fondo para el estilo de página o el formato de párrafo, pero referido exclusivamente al área cubierta por el índice.
+CONSEJO Una forma rápida de rellenar celdas es arrastrar la agarradera o manilla de relleno de la esquina inferior derecha de la celda en la dirección en que desea rellenar.
 
-Pestaña Fondo del diálogo Sumario, índice o bibliografía
+También puede usar la herramienta seleccionar usando series de datos existentes que desee ampliar. Si el intervalo entre los valores seleccionados de las celdas es constante, Calc intentará calcular y rellenar la selección con los valores que continúan esa secuencia. Por ejemplo, si selecciona tres celdas con los valores 1, 2 y 3 y rellena la celda siguiente, Calc insertará el valor 4.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+12.1.1. Rellenar con una serie Un uso más complejo de la herramienta Rellenar incluye usar series definidas. Existen listas predeterminadas con los días de la semana y los meses del año, tanto abreviados como completos, pero también puede crear sus propias listas. Para rellenar con una serie, seleccione las celdas a rellenar y vaya a Editar > Rellenar > Series. En el cuadro de diálogo Rellenar series, seleccione Rellenar automáticamente en Tipo, y escriba como Valor inicial un elemento de cualquiera de las series definidas. Las celdas seleccionadas se rellenarán con los elementos de la lista, por orden, repitiéndose desde el principio cuando la lista llega a su fin.
 
-20/22
+Manual de Usuario LibreOffice - CALC Pag. 30 de 40
 
-Asignar hipervínculos y modificar la estructura de las entradas de un índice Una de las características más interesantes de los índices creados en Writer es la posibilidad de que las entradas del índice sean hipervínculos al apartado correspondiente del documento.
+También puede usar Editar > Rellenar > Series para crear una serie numérica de un único uso introduciendo los valores inicial y final, así como el incremento. Por ejemplo, si introduce 1 y 7 como valores inicial y final, y establece un incremento de 2, obtendrá la secuencia 1, 3, 5, 7.
 
-Hiperenlace en índice
+En todos los casos, la herramienta Rellenar crea una conexión momentánea entre las celdas. Una vez rellenadas, las celdas dejan de tener conexión unas con otras.
 
-Esta funcionalidad, así como otros cambios en la estructura de las entradas del índice, la estableceremos desde la pestaña Entradas del diálogo Sumario, índice o bibliografía . De esta forma, apuntando a una entrada del índice, bastará hacer un simple clic mientras pulsamos la tecla lugar exacto donde se encuentra el texto, gráfico, tabla, o apartado referenciado.
+12.1.2. Definir una serie para rellenar Para definir una serie, vaya a Herramientas > Opciones > LibreOffice.org Calc > Ordenar listas. Este cuadro de diálogo muestra las series ya definidas en el cuadro Listas de la izquierda, y el contenido de la lista resaltada en el cuadro Entradas.
 
-Personalizar entradas del índice
+Haga clic en Nuevo. Se vacía el cuadro Entradas. Escriba la serie de la nueva lista en el cuadro Entradas (una entrada por línea), y haga clic en Añadir.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+#### 12.2. Usar listas de selección
 
-21/22
+La lista de selección sólo está disponible para texto, y ofrece únicamente la posibilidad de usar texto escrito con anterioridad en la misma columna. Para usar una lista de selección, seleccione una celda en blanco y pulse las teclas Ctrl+D. Aparecerá una lista desplegable con el contenido de todas aquellas celdas de la misma columna que contengan al menos un caracter de texto o que presenten un formato de texto. Haga clic sobre la entrada deseada.
 
-Desde la versión 4.2 de Writer está habilitado este efecto de forma predeterminada. En versiones anteriores del programa es posible que se deba establecer manualmente. Para modificar la estructura de la entrada disponemos de varios botones que simbolizan un elemento de la entrada, separados por pequeños cuadros vacíos y unos botones que permiten añadir nuevos elementos. Esta estructura puede ser diferente para cada uno de los niveles del índice.
+#### 12.3. Compartir contenido entre hojas
 
-La interpretación de estos símbolos y su correspondencia con los botones para añadir elementos es la siguiente
+Puede desear introducir la misma información en la misma celda de distintas hojas para, por ejemplo, establecer listas estándar para un grupo de personas u organizaciones. En lugar de introducir la lista en cada hoja por separado, puede introducirla en todas las hojas a la vez. Para ello, seleccione todas las hojas, luego introduzca la información en la hoja actual.
 
-- Nº de capítulo (E#) . Número del capítulo correspondiente al encabezado, si está definido en
+PRECAUCIÓN
 
-Herramientas > Numeración de capítulos .
+Esta técnica sobrescribe sin previo aviso cualquier información ya presente en las celdas de las otras hojas. Por esta razón, al terminar deberá garantizar que quita la selección múltiple para poder editar una hoja sin afectar a las demás.
 
-- Texto de entrada (E) . Texto del párrafo de encabezado que aparecerá en el índice.
-- Tabulación (T) . Salto de tabulación.
-- Nº de página (#) . El número de página del documento donde se ubica el párrafo.
-- Hiperenlace (LS) (en versiones anteriores HI). Inicio del hipervínculo
-- Hiperenlace (LE) (en versiones anteriores HF). Final del hipervínculo..
+Manual de Usuario LibreOffice - CALC Pag. 31 de 40
 
-Pulsando sobre los símbolos en la estructura se muestran opciones disponibles para ese elemento. Por ejemplo, pulsando sobre el símbolo T se puede cambiar el relleno de puntos de la tabulación por otro tipo de relleno o ninguno. Si deseamos eliminar algún elemento de la estructura, basta con seleccionarlo y pulsar la tecla Supr .
+### 13. Editar datos
 
-Para añadir elementos a la estructura, hacer clic en los cuadritos vacíos entre los símbolos y pulsar el botón correspondiente al elemento que deseas. La primera vez que se pulsa el botón Hiperenlace se mostrará el símbolo LS, la siguiente vez que se pulse aparecerá el símbolo LE; todos los elementos comprendidos entre uno y otro serán los enlaces donde se podrá hacer clic con la tecla CONTROL pulsada para navegar al apartado correspondiente.
+Los datos se editan e introducen de modo muy similar. El primer paso es seleccionar la celda que contiene los datos a editar.
 
-Ubicando los símbolos HI y HF en los lugares apropiados podemos hacer que el enlace sea toda la línea, sólo el texto o sólo el número de página. La estructura definida se aplicará exclusivamente al Nivel seleccionado en la lista. Haciendo clic sobre el botón Todo a la derecha de Estructura se aplicará la nueva definición a todos los niveles del índice.
+#### 13.1. Eliminar o Sustituir datos de una celda
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+Los datos pueden eliminarse (borrarse) de una celda de distintas maneras. ELIMINAR SÓLO DATOS Puede eliminar sólo los datos, respetando cualquier formato aplicado a la celda. Haga clic en la celda para seleccionarla y luego pulse la tecla Retroceso. ELIMINAR DATOS Y FORMATO Puede eliminar los datos y el formato de celda a la vez. Pulse la tecla Supr (o haga clic con el botón secundario y seleccione Eliminar contenidos, o use Editar > Eliminar contenidos) para abrir el cuadro de diálogo Eliminar contenidos (figura 23). En este cuadro de diálogo pueden eliminarse los distintos aspectos de una celda. Para borrar todo lo que contenga una celda (contenidos y formato), active la casilla de verificación Eliminar todo.
 
-22/22
+13.1.1. Sustituir todos los datos de una celda Para eliminar los datos e insertar datos nuevos, simplemente escriba sobre los datos antiguos. Los nuevos datos mantendrán el formato original.
 
-Cuando modifiques los estilos con que se muestra el índice de contenido, recuerda que debes seguir los criterios recomendados para mantener los documentos lo más accesibles posible
+13.1.2. Cambiar parte de los datos de una celda A veces es necesario modificar el contenido de una celda sin eliminar todo el contenido anterior. Por ejemplo, una celda contiene la frase Ver resultados de Juan y necesita cambiarla por Ver resultados anuales de Juan. A menudo es útil realizar esta acción sin borrar el contenido antiguo de la celda.
 
-- Los colores de texto y fondo deben estar suficientemente contrastados.
-- El tamaño mínimo recomendable para la tipografía debe ser de 12 puntos. Nunca usar tipografías de tamaño
+Este proceso es similar al descrito arriba, pero necesitará colocar el cursor dentro de la celda. Hay dos modos de hacerlo. Mediante el teclado Tras seleccionar la celda apropiada, pulse la tecla F2. El cursor se colocará al final de la celda. Después use las teclas de desplazamiento del teclado para mover el cursor por el texto de la celda.
 
-inferior a 10 puntos.
+Usando el ratón Con el ratón, haga doble clic en la celda apropiada (para seleccionarla y colocar el cursor en su interior), o haga un único clic para seleccionar la celda, luego mueva el puntero del ratón hasta el lugar donde quiere insertar el ratón y haga clic de nuevo.
 
-- Uso de tipografías sans serif (sin remate) habituales. Arial o Verdana son muy buenas elecciones.
-- Evitar el uso de variantes thin, light o narrow de las tipografías (variantes más estrechas de los tipos de letra)
-- Precaución con el uso de las negritas, cursivas o subrayados. Evitar el uso de efectos de contorno o intermitencias.
-- Evitar el uso de características incompatibles con otros formatos de documento (suprarayados, por ejemplo)
-- El interlineado simple no facilita la lectura; casi siempre será más apropiado un interlineado proporcional del 120%
+Manual de Usuario LibreOffice - CALC Pag. 32 de 40
 
-como mínimo.
+#### 13.2. Dar formato a los datos
 
-- Establece un espaciado anterior y posterior al párrafo.
-- Evitar el uso de características incompatibles con otros formatos de documento (rellenos degradados o
+Puede dar formato a los datos de Calc de distintas maneras. El formato puede editarse como parte de un estilo de celda, de modo que se aplica automáticamente, o puede aplicarse manualmente a la celda. Algunas características de formato pueden aplicarse usando los iconos de la barra de herramientas. Para un control mayor y opciones adicionales, seleccione la celda o celdas apropiadas, haga clic sobre ellas con el botón secundario del ratón y seleccione Formatear celdas. Más abajo se abordan todas las opciones de formato.
 
-de imagen, por ejemplo)
+NOTA La configuración abordada en esta sección también puede establecerse como parte del estilo usando la ventana Estilo y formato.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+13.2.1. Editar Texto
 
-23/22
+Dar formato a varias líneas de texto Puede escribirse más de una línea de texto por celda usando la opción Ajustar texto automáticamente o introduciendo los saltos de línea manualmente. Ambos métodos son útiles en distintas situaciones. Ajustar texto automáticamente Para establecer que el texto se ajuste al ancho de celda, haga clic en el botón secundario sobre la celda y seleccione Formatear celdas (o seleccione Formato > Celda en la barra de menú, o pulse Ctrl+1). En la ficha Alineación (figura 24), en Propiedades, seleccione Ajustar texto automáticamente. Puede observar el resultado en la figura 25.
 
-PRÁCTICA 1
+Saltar de línea manualmente Para insertar un salto de línea manual mientras escribe en una celda pulse Ctrl+Enter. Este método no funciona si está escribiendo en la línea de entrada. Al editar texto, primero haga doble clic en la celda, luego un único clic en la posición en la que desea insertar el salto de línea.
 
-Para la realización de este ejercicio necesitarás descargar los documentos mitos.odt y hermes.odt. Sigue los siguientes pasos
+Al introducir un salto de línea manual, el ancho de la celda no cambia. La figura 26 muestra el resultado de introducir dos saltos de línea manuales tras la primera línea de texto. Reducir texto para adaptarlo al tamaño de celda Se puede ajustar automáticamente el tamaño de fuente de una celda para ajustarlo al ancho de una celda. Para ello, seleccione la opción Reducir para adaptar a tamaño de celda en el cuadro de diálogo Formatear celdas (figura 24). La figura 27 muestra el resultado.
 
-- Abre el archivo mitos.odt y guárdalo con el nombre mitos-indice.odt.
-- Aplica estilo Título 1 a los títulos de las divinidades: ADONIS, AFRODITA y AGÓN.
+Manual de Usuario LibreOffice - CALC Pag. 33 de 40
 
-Pista: con una selección múltiple (con Ctrl ) lo podrás hacer en un sólo paso.
+13.2.2. Dar formato a números Con los iconos de la barra de herramientas Formato puede aplicar distintos formatos de número a la celda. Seleccione la celda, luego haga clic sobre el icono pertinente.
 
-- Inserta un salto de página al principio del documento.
+Para un mayor control, o para seleccionar otros formatos de número, use la ficha Números (figura 29).¡Error! Marcador no definido. Aplique a los datos cualquiera de los formatos de la lista Categoría. Seleccione el número de decimales y los ceros iniciales. Introduzca un código de formato personalizado.
 
-Pista: método rápido con Ctrl + Intro .
+El ajuste Idioma controla la configuración local de distintos formatos, como el orden de la fecha o el indicador de tipo de moneda.
 
-- En el principio del documento inserta un sumario con todas las opciones por defecto.
+13.2.3. Dar formato a la fuente Para seleccionar una fuente con rapidez, seleccione la celda, haga clic en la flecha junto al cuadro Nombre de fuente de la barra de herramientas Formato y seleccione una fuente de la lista.
 
-### 5. Guarda los cambios. En este momento la apariencia del índice debería ser como
+CONSEJO Para seleccionar si desea mostrar los nombres de fuente en su propia fuente o en texto plano, vaya a Herramientas > Opciones > LibreOffice.org > Ver y active o desactive la opción Mostrar vista previa de tipos de letra.
 
-se muestra en la imagen.
+Para seleccionar el tamaño de la fuente, haga clic en la flecha junto al cuadro Tamaño de fuente. Puede personalizar aún más el formato con los iconos Negrita, Cursiva, o Subrayado. Para seleccionar un color de fuente, haga clic sobre la flecha junto al icono Color de fuente. Aparece la paleta de colores.
 
-Apariencia del documento de práctica
+Haga clic sobre el color deseado. (Para definir colores personalizados vaya a Herramientas > Opciones > LibreOffice.org > Colores. Véase el Apéndice D para más información.) Para especificar el idioma de la celda (útil porque permite que coexistan distintos idiomas en un mismo documento y que, aún así, el corrector ortográfico funcione correctamente), use la ficha Fuente del cuadro de diálogo Formato de celdas. Use la ficha Efectos de fuente para configurar otras características de la fuente.
 
-### 6. Añade al final del documento dos saltos de párrafo
+Manual de Usuario LibreOffice - CALC Pag. 34 de 40
 
-### 7. Agrega al final del documento el contenido del archivo hermes.odt
+13.2.4. Dar formato a los bordes de celda Para seleccionar con rapidez un estilo de línea y un color para los bordes de la celda, haga clic en las pequeñas flechas adyacentes a los iconos Estilo de línea y Color líneas del marco. En ambos casos se muestra una paleta de opciones.
 
-Pista: en vez de copiar y pegar el texto, puede ser mucho más cómodo y rápido hacerlo desde Insertar > Documento (en versiones anteriores puede ser Insertar > Archivo ).
+Para un mayor control, incluyendo el espaciado entre los bordes de la celda y el texto, use la ficha Borde del cuadro de diálogo Formato de celdas. Aquí también podrá definir una sombra.
 
-- Asigna estilo de Título 1 al título HERMES del texto recién insertado.
+NOTA Las propiedades del borde se aplican a una celda, y sólo podrá cambiarlas si está editando esa celda. Por ejemplo, si la celda C3 tiene un borde superior (que visualmente también podría ser el borde inferior de la celda C2), ese borde sólo puede eliminarse con C3 seleccionada. No puede eliminarse desde C2.
 
-### 9. Actualiza el índice del documento. Tras la actualización, el índice tendrá la si
+13.2.5. Dar formato de fondo a la celda Para aplicar con rapidez un color de fondo para la celda, haga clic en la pequeña flecha junto al icono Color de fondo. Aparece una paleta de colores. (Para definir colores personalizados vaya a Herramientas > Opciones > LibreOffice.org > Colores. Para más información, consulte el Apéndice D.) También puede usar la ficha Fondo del cuadro de diálogo Formato de celdas.
 
-guiente apariencia
+Formato predeterminado de celdas y hojas
 
-Apariencia del índice tras la actualización
+Puede usar la característica Formateado automático para aplicar un conjunto de formatos a una hoja o a un rango de celdas específico.
 
-### 10. Modifica el estilo Título 1 para que se inserte automáticamente un salto de página an
+### 1. Seleccione las celdas, incluyendo los encabezados de columna y fila, a las que
 
-tes de cada título. Pista: pestaña Flujo de texto > Salto > Insertar
+desea dar formato.
 
-- Elimina la página vacía que aparece después de la página del índice.
+- SELECCIONE FORMATO > FORMATEADO AUTOMÁTICO.
 
-### 12. Añade un encabezado de página que muestre a la derecha el texto Página X de Y (siendo
+### 3. Para seleccionar las propiedades (formato de número, fuente, alineación,
 
-X el número de la página actual e Y el total de páginas del documento).
+bordes, modelo, ajuste de ancho y alto) a incluir en un formato automático , haga clic en Opciones/Más. Active o desactive las opciones deseadas.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+- Haga clic en Aceptar.
 
-24/22
+Si no observa ningún cambio de color en el contenido de las celdas, seleccione VER > DESTACAR VALORES.
 
-Actualiza el índice nuevamente. La apariencia del índice y encabezado del documento debería ser como en la imagen.
+Manual de Usuario LibreOffice - CALC Pag. 35 de 40
 
-Apariencia del índice renumerado
+13.2.6. Definir un nuevo formato automático Puede definir un formato automático personalizado para utilizarlo en todas las hojas de cálculo.
 
-### 14. Modifica el título del índice para que figure Índice de fichas mitológicas en vez del
+- Dé formato a una hoja.
+- Seleccione Editar > Seleccionar todo.
 
-título automático (Sumario o Índice de contenido según la versión del programa).
+### 3. Seleccione Formato > Formateado automático. Ahora está activo el botón
 
-- Modifica el índice del documento aplicándole un fondo de color Cian.
+AÑADIR.
 
-### 16. Modifica el índice del documento para que se muestre en dos columnas, con un espa
+- Haga clic sobre Añadir.
 
-ciado entre ellas de 0,80 cm. y una línea de separación continua, de 1,50 pt, color Rojo 5,
+### 5. Escriba un nombre intuitivo para el nuevo formato en el campo Nombre del
 
-### 17. Modifica el estilo de párrafo Sumario 1 (o Índice 1, según la versión del programa)
+cuadro de diálogo Añadir formateado automático.
 
-para que tenga un espaciado bajo el párrafo de 0,50 cm.
+### 6. Haga clic en Aceptar para guardarlo. El nuevo formato ya está disponible en la
 
-### 18. Modifica el estilo de párrafo Título del sumario (o Encabezado del Índice , según
+lista Formato del cuadro de diálogo Formateado automático.
 
-la versión del programa) para que se muestre con alineación centrada.
+### 7. Usar temas para dar formato a una hoja
 
-### 19. Modifica la estructura del índice para que el relleno de puntos sea sustituido por un
+Calc tiene un conjunto de temas de formato predefinido que puede aplicar a sus hojas de cálculo. No es posible añadir temas a Calc, ni tampoco realizar modificaciones a los existentes. No obstante, puede aplicar cambios a sus estilos una vez aplicados a una hoja de cálculo.
 
-relleno de guiones bajos ( _ ) y antes del número de página se muestre el término Pág. La apariencia final del índice debería ser como en la imagen.
+Para aplicar un tema a una hoja de cálculo
 
-Apariencia del índice tras personalizarlo
+### 1. Haga clic en el icono Selección de temas de la barra de herramientas
 
-### 20. Modifica el esquema de la numeración de capítulos para que el nivel 1 se muestre
+Herramientas. Si la barra de herramientas no está visible, puede mostrarla usando Ver > Barras de herramientas > Herramientas.
 
-con las siguientes características: Número: 1, 2, 3... Separador después: un cierre de paréntesis seguido de un espacio.
+### 2. Aparece el cuadro de diálogo Selección de temas. Este cuadro de diálogo
 
-- Actualiza el índice. Debería quedar con un aspecto como en la imagen.
+muestra los temas disponibles para toda la hoja de cálculo, y la ventana Estilo y formato lista los estilos personalizados para celdas específicas.
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+### 3. En el cuadro de diálogo Selección de temas, seleccione el tema que desea
 
-25/22
+aplicar a la hoja de cálculo.
 
-Apariencia final del índice
+### 4. En cuanto seleccione un tema, algunas de las propiedades de los estilos
 
-Guarda los cambios en mitos-indice.odt y cierra el documento.
+personalizados se aplican a la hoja de cálculo abierta y se muestran de inmediato.
 
-PRÁCTICA 2
+- Haga clic en Aceptar.
 
-Para la realización de esta práctica, descarga el archivo proyecto-escritorio-libre.odt
+Manual de Usuario LibreOffice - CALC Pag. 36 de 40
 
-Realiza los pasos siguientes
+### 14. Ocultar y mostrar datos
 
-- Abre el artchivo proyecto-escritorio-libre.odt. Se trata de un informe debidamente forma
+Cuando hay elementos ocultos, éstos no pueden verse ni imprimirse, pero aún pueden copiarse seleccionando los elementos que los rodean. Por ejemplo, si la columna B está oculta, se copia igualmente al seleccionar las columnas A y C. Cuando vuelva a necesitar los datos ocultos, puede invertir el proceso y mostrar el elemento.
 
-teado con estilos de encabezado para identificar sus apartados.
+Para ocultar o mostrar hojas, filas o columnas, use la opciones del menú Formato o el menú contextual que aparece al hacer clic con el botón secundario del ratón. Por ejemplo, para ocultar una línea, primero seleccione la línea y luego seleccione Formato > Fila > Ocultar (o botón secundario y seleccione Ocultar).
 
-- Guárdalo con el nombre proyecto-escritorio-libre-indice-y-portada.odt.
+Para ocultar o mostrar celdas seleccionadas, seleccione Formato > Celda en la barra de menús (o haga clic con el botón secundario y seleccione Formatear celdas). En el cuadro de diálogo Formato de celdas, vaya a la ficha Protección de celda.
 
-### 3. Establece el esquema de numeración de capítulos con las siguientes características
+#### 14.1. Agrupar y esquema
 
-Nivel 1: Numeración: 1, 2, 3... Separador después: un punto seguido de un espacio. Nivel 2: Numeración: a, b, c... Mostrar subniveles: 2 Separador después: un paréntesis de cierre seguido de un espacio
+Si está continuamente ocultando y mostrando las mismas celdas, puede simplificar el proceso mediante Agrupar y esquema, función que agrega un botón para ocultar y mostrar las celdas rápidamente, y que está siempre visible. Si el contenido de las celdas adopta un patrón regular, como cuatro celdas seguidas por un total, entonces puede usar Datos > Agrupar y esquema > Esquema automático.
 
-- Inserta una nueva página de título con estilo de página Primera página con las siguientes
+De otro modo, puede establecer los grupos manualmente seleccionando las celdas a agrupar y luego seleccionando Datos > Agrupar y esquema > Agrupar. En el cuadro de diálogo Agrupar, puede seleccionar si agrupar las celdas seleccionadas por filas o por columnas. Cuando cierra el cuadro de diálogo, entre los títulos de fila y columna y los límites de la ventana de edición aparecen los controles para agrupar/desagrupar. La apariencia de los controles recuerda a la estructura en árbol del gestor de archivos, y el contenido de esas celdas puede ocultarse en Datos > Agrupar y esquema > Ocultar detalles.
 
-características: Márgenes de página: 3,00 cm a cada uno de los cuatro lados. Fondo de página: color Amarillo Bordes de página: cuatro lados, color Naranja, espaciado al contenido 2 cm, sincronizado, sombra abajo a la derecha
+Estos botones o controles sólo se ven en pantalla, no se imprimen. Los controles agrupar básicos tienen signos más o menos al inicio del grupo para mostrar u ocultar las celdas del grupo. No obstante, si ha anidado uno o más grupos entre sí, los controles también tendrán botones numerados para ocultar los distintos niveles de grupo.
 
-### 5. Escribe en la primera página el texto Proyecto de Creación de un Escritorio Libre
+Si ya no necesita un grupo, seleccione cualquiera de las celdas de ese grupo y seleccione Datos > Agrupar y esquema > Desagrupar. Para quitar todos los grupos de una hoja, seleccione Datos > Agrupar y esquema > Eliminar.
 
-para Clientes Corporativos. y aplica al texto el estilo de párrafo Titular.
+Manual de Usuario LibreOffice - CALC Pag. 37 de 40
 
-Trabajo con documentos largos en Writer, esquemas y sumarios
+#### 14.2. Filtrar celdas
 
-26/22
+Un filtro es una lista de condiciones que cada entrada debe cumplir para aparecer en pantalla. Puede establecer tres tipos de filtros en el submenú Datos > Filtro. El Filtro automático agrega una lista desplegabe de los filtros más usados a la fila superior de una columna. Son cómodos y rápidos, y, dado que la condición incluye todas las entradas únicas de las celdas seleccionadas, son casi tan útiles para texto como para números.
 
-### 6. Modifica el estilo de párrafo Títular con las siguientes propieda
+Además de incluir todas las entradas únicas, los filtros automáticos incluyen opciones para mostrar todos los valores, los diez valores numéricos más altos o las celdas vacías o no vacías, así como un filtro predeterminado. El inconveniente es que están un poco limitados. En particular, no permiten Expresiones corrientes, así que no podrá mostrar contenidos similares, pero no idénticos, mediante los filtros automáticos.
 
-des. Efecto de fuente: Versalitas. Alineación: derecha. Color: Rojo 5
+El Filtro predeterminado es más complejo que el filtro automático. Puede establecer manualmente tres condiciones como filtro, combinándolas mediante los vínculos (operadores) O e Y. Los filtros predeterminados son más útiles para números, aunque algunos de los operadores, como = y < >, pueden ser útiles para texto.
 
-### 7. Al principio de la segunda página inserta un sumario o índice de contenido con
+Otros operadores de comparación para filtros predeterminados incluyen opciones para mostrar los valores mayores o menores, o un porcentaje de ellos. Útiles en sí mismos, los filtros predeterminados toman un valor añadido cuando se usan para depurar los filtros automáticos.
 
-los siguientes atributos: Dos columnas con 0,80 cm de espaciado entre ellas y línea de separación continua de 1,5 pt y color Rojo 5.
+El Filtro especial tiene una estructura similar al filtro predeterminado. La diferencia es que los filtros especiales no están limitados a tres condiciones y sus criterios no se introducen en un cuadro de diálogo. En su lugar, los filtros especiales se introducen en una celda de un área vacía de la hoja. Luego se inserta la referencia de esa celda en la herramienta filtro especial para aplicarlos.
 
-### 8. Modifica los siguientes estilos de párrafo de índices y observa los cambios en el
+Manual de Usuario LibreOffice - CALC Pag. 38 de 40
 
-mismo: Estilo Sumario 1 (o Índice 1, según versión del programa) en negrita. Estilo Sumario 2 (o Índice 2, según versión del programa) en cursiva.
+### 15. Ordenar registros
 
-Guarda los cambios en proyecto-escritorio-libre-indice-y-portada.odt. En la previsualización de impresión, las dos primeras páginas del documento deberían mostrar una apariencia como la siguiente
+Ordenar ordena las celdas visibles de la hoja. En Calc puede ordenar según tres criterios, aplicándose estos según el orden de prioridad. Esta función es útil cuando está buscando un elemento en particular, y se vuelve aún más potente tras filtrar los datos. Además, Ordenar suele ser muy útil al añadir información nueva. Si una lista es larga, generalmente es más fácil agregar información al final de la hoja que insertar filas en los lugares adecuados. Una vez agregada la información, puede ordenarla para actualizar la hoja.
 
-Apariencia final del ejercicio
+Puede ordenar seleccionando las celdas a ordenar y luego seleccionando Datos > Ordenar. Las celdas seleccionadas pueden ordenarse según la información de hasta tres columnas o filas, tanto en orden ascendente (A-Z, 1-9) como descendente (Z-A, 9- 1). En la ficha Opciones del cuadro de diálogo Ordenar, puede seleccionar las siguientes opciones
 
-### 📄 hermes.odt
+Mayúsculas/minúsculas Si lo único que distingue dos entradas son las mayúsculas o minúsculas, la entrada que contenga mayúsculas irá antes. El intervalo contiene encabezados de columnas No se incluye el encabezado de columna al ordenar. Incluir formatos El formato de la celda se mueve junto con su contenido. Use esta opción si el formato se utiliza para distinguir distintos tipos de celdas.
 
-HERMES
+Copiar resultado de clasificación en Establece una dirección de hoja de cálculo en la que copiar los resultados de la clasificación. Si se especifica un rango que no contiene el número de celdas necesario, éstas se insertarán. Si el rango contiene celdas no vacías, la función ordenar no funciona.
 
-Dios olímpico mensajero, de las fronteras y los viajeros que las cruzan, de los pastores, de los oradores, el ingenio y del comercio en general, de la astucia de los ladrones y los mentirosos. El himno homérico a Hermes lo invoca como el «de multiforme ingenio (polytropos), de astutos pensamientos, ladrón, cuatrero de bueyes, jefe de los sueños, espía nocturno, guardián de las puertas, que muy pronto habría de hacer alarde de gloriosas hazañas ante los inmortales dioses». Hermes también es protagonista de muchos mitos, como, por ejemplo, el de Filemón y Baucis.
+Orden de clasificación definido por el usuario Active la casilla de verificación, luego elija una de las opciones definidas en HERRAMIENTAS > OPCIONES > LIBREOFFICE.ORG CALC > ORDENAR LISTAS. Dirección Establece si se ordenará por filas o por columnas. De forma predeterminada, se ordenará por columnas salvo que las celdas seleccionadas se encuentren en una única columna.
 
-### 📄 proyecto-escritorio-libre.odt
+Manual de Usuario LibreOffice - CALC Pag. 39 de 40
 
-Objetivo
+### 16. Imprimir
 
-Crear una estación de trabajo enteramente configurada con Software libre y ponerle nombre y apellidos a las aplicaciones necesarias.
+En Calc se imprime prácticamente igual que en cualquier otro componente LibreOffice , aunque algunos detalles son distintos, especialmente en la preparación para la impresión. El cuadro de diálogo Imprimir (figura 33), al que se accede a través de Archivo > Imprimir, tiene algunas opciones específicas de Calc: qué hojas imprimir.
 
-Definir la estrategia de migración
+El cuadro de diálogo Opciones de impresión (al que se accede pulsando el botón Opciones de la esquina inferior izquierda del cuadro de diálogo Imprimir) ofrece dos posibilidades, tal como se muestra en la figura 34: No imprimir páginas vacías e Imprimir sólo hojas seleccionadas.
 
-En la migración, hay que considerar el perfil de los usuarios que la vivirán para definir una estrategia en cuanto a método y plazos. Como recomendación general, y aprovechando la gran disponibilidad de software libre multiplataforma
+#### 16.1. Seleccionar las hojas a imprimir
 
-Migrar las aplicaciones (dentro de Windows)
+Puede seleccionar una o más hojas para que se impriman. Esto puede resultar útil si tiene una hoja de cálculo con muchas hojas y sólo desea imprimir algunas. Como ejemplo tomaremos un registro contable de costos, de larga duración, con una hoja específica para cada mes. Para imprimir las hojas Noviembre y Diciembre, siga este procedimiento
 
-Navegación, correo electrónico
+### 1. Primero seleccione la hoja Noviembre. Luego, con la tecla Control pulsada, haga
 
-Suite ofimática y otras
+clic sobre la ficha de la hoja Diciembre.
 
-Migrar el sistema operativo
+- Para imprimir ambas hojas vaya a Archivo > Imprimir y seleccione Opciones.
 
-La explicación es bien razonable: una migración del sistema completa puede desconcertar bastante a los usuarios y darles la impresión de que todo es más complicado de lo que resulta realmente. Si cuando se les cambia el sistema operativo, ya están acostumbrados al uso de las aplicaciones con que se encontarán, el cambio se vive de forma natural y suave.
+NOTA El botón Opciones es distinto del botón Propiedades. En Propiedades puede establecer la configuración de la impresora, mientras que en Opciones puede establecer la configuración de LibreOffice.
 
-Formación de usuarios
+### 3. Seleccione Imprimir sólo hojas seleccionadas. Esta opción afecta a la vista
 
-En cualquier caso, siempre hay que considerar la formación de los usuarios para evitar efectos de rebote que pueden sabotear el proceso.
+preliminar, la exportación y la impresión de su hoja de cálculo. Haga clic en Aceptar.
 
-En nuestra experiencia con migraciones a OpenOffice.org nos hemos encontrado con usuarios a los que se les había instalado el programa, sin darles la formación imprescindible para realizar aquellas tareas que no se realizan exactamente igual que en Microsoft Office. Y su percepción era que “OpenOffice.org no sirve”.
+PRECAUCIÓN
 
-Tras una adecuada formación, esta percepción desaparece, pero mucho mejor si se imparte previa o simultáneamente a la migración, pues evitaremos desajustes psicológicos. ;-)
+Si deja seleccionadas las hojas, al introducir datos en una de ellas los aplicará a todas las hojas al mismo tiempo. Puede que no sea esto lo que desea hacer.
 
-Pasos para migrar las máquinas
+Manual de Usuario LibreOffice - CALC Pag. 40 de 40
 
-Tras la oportuna planificación
+#### 16.2. Seleccionar el orden de páginas, los detalles y la escala
 
-Copiar todos los documentos de trabajo “Mis documentos” a una ubicación de red
+Para seleccionar el orden de páginas, los detalles a imprimir y la escala
 
-Copiar todos los datos de programa (bookmarks, correos, etc...) a una ubicación de red
+- Seleccione Formato > Página en la barra de menús.
+- Seleccione la ficha Hoja (figura 35).
+- Establezca sus preferencias y luego haga clic en Aceptar.
 
-Instalar Linux en la máquina y las aplicaciones que sean necesarias
+16.2.1. Orden de páginas Puede establecer el orden de impresión de las páginas. Esto resulta especialmente útil en hojas muy grandes. Por ejemplo, controlar el orden de impresión puede ahorrarle tiempo si tiene que cotejar el documento de una forma concreta. Si una hoja se imprime en más de una página, puede imprimirse por columnas (se imprimen primero las páginas de las primeras columnas y luego las siguientes columnas completas) o por filas, tal como se muestra en el gráfico de la parte superior derecha del cuadro de diálogo Orden de páginas, figura 35.
 
-Restaurar los datos de programa al nuevo sistema
+16.2.2. Imprimir detalles Puede especificar qué detalles que desea imprimir. Esos detalles incluyen
 
-Según se haya planificado, los documentos de trabajo pueden quedar en la red (recomendado) o restaurarse al nuevo sistema.
+### 1. Títulos de filas y columnas
 
-Aplicaciones
+### 2. Cuadrícula: imprime los bordes de celda como una cuadrícula
 
-En la siguiente enumeración de apliaciones, se han privilegiado las que disponen de equivalente en Windows para poder aplicar la estrategia sugerida anteriormente (primero migrar aplicaciones y luego sistema operativo).
+### 3. Notas: imprime las notas definidas en la hoja de cálculo, junto con las
 
-Suite Ofimática: OpenOffice.org
+referencias de celda correspondientes, en una página independiente
 
-Indudablemente, OpenOffice.org será el programa adecuado para dar soporte a los usuarios habituales de Microsoft Office.
+### 4. Objetos/imágenes
 
-Entre sus ventajas
+### 5. Gráficos
 
-Compatibilidad de formatos con los de Word, Excel y PowerPoint
+### 6. Objetos de dibujo
 
-Un excelente soporte técnico de la comunidad
+### 7. Fórmulas: imprime las fórmulas contenidas en las celdas en lugar de los
 
-Generación directa de documentos PDF
+resultados
 
-Inconvenientes principales
+### 8. Valores cero: imprime las celdas con un valor cero
 
-Incompatibilidad con las macros de Word y Excel
+NOTA Recuerde que como los detalles de impresión son parte de las propiedades de página, también forman parte de las propiedades de estilo y formato de página. Por tanto, pueden configurarse distintos estilos de hoja para cambiar rápidamente las propiedades de impresión de las hojas de una hoja de cálculo.
 
-El componente Base (gestor de bases de datos) no es comparable a Microsoft Access
+16.2.3. Escala Use las características de la escala para controlar el número de páginas que ocupará la impresión. Esto puede ser útil si necesita imprimir gran cantidad de datos de una forma más compacta, o, si el lector no tiene buena vista, para agrandar el texto al imprimirlo.
 
-Necesidad de formación para que los usuarios conozcan las técnicas de uso diferentes de Word y Excel
+Reducir/Ampliar impresión: amplia o reduce el tamaño de los datos en la impresión. Por ejemplo, si una hoja normalmente ocuparía cuatro páginas al
 
-Referencias:http://es.openoffice.org
+Manual de Usuario LibreOffice - CALC Pag. 41 de 40
 
-Bases de datos: MySQL + Kexi
+imprimirse (dos de alto y dos de ancho), una escala del 50% imprimiría la hoja en una página (tanto el ancho como el alto se dividen a la mitad). Ajustar intervalos de impresión a lo ancho/alto: define exactamente cuantas páginas ocupará la impresión. Esta opción sólo reduce la impresión, no la amplia. Para ampliar una impresión, tiene que usar la opción Reducir/Ampliar impresión.
 
-Si en la organización se utilizan bases de datos de Access, es fácil usar sus datos (e incluso migrarlos) desde OpenOffice, con el cual podemos crear formularios e informes y definir consultas de selección. Pero no hay tantas facilidades en cuanto a consultas de acción, y la funcionalidad de formularios e informes es limitada si no se hace uso de programación.
+Ajustar intervalos de impresión en números de páginas: define el alto y ancho de la impresión, en páginas.
 
-Una alternativa para resolver esta limitación puede estar en el uso de una base de datos MySQL, administrada con Kexi, una aplicación informática integrada para el manejo de datos que permite diseñar e implementar bases de datos, insertar y procesar datos y hacer consultas sobre los mismos. También se puede utilizar Kexi con su propia base de datos embebida SQLite.
+#### 16.3. Usar imprimir rangos
 
-Referencias:http://kexi-project.org/http://www.mysql.com/
+Imprimir rangos tiene varios usos, incluyendo imprimir sólo una parte específica de los datos o imprimir filas y columnas seleccionadas en todas las páginas.
 
-Tratamiento de imágenes: El Gimp
+16.3.1. Definir un rango de impresión Para definir un nuevo rango de impresión o modificar un rango existente
 
-El programa Gimp resolverá más que satisfactoriamente cualquier necesidad que se presente en cuanto a tratamiento de imágenes de bits, disponiendo de funcionalidades que lo hacen comparable al popular Photoshop.
+- Seleccione el rango de celdas que compone el rango de impresión.
+- Seleccione Formato > Imprimir rangos > Definir.
 
-Gimp incluye permite la automatización de muchos procesos mediante macros o secuencias de comandos, para lo cual incluye un lenguaje específico.
+En la pantalla se muestran las líneas de salto de página.
 
-Pero si necesitamos efectuar un tratamiento masivo de imágenes y no deseamos aprender el Scheme (el lenguaje de programación que incorpora Photoshop), el kit de herramientas ImageMagick resolverá perfectamente nuestra necesidad.
+CONSEJO Puede comprobar el rango de impresión usando Archivo > Vista preliminar. LibreOffice sólo mostrará las celdas del rango de impresión.
 
-Referencias:http://www.gimp.org.es/
+16.3.2. Quitar un rango de impresión Puede ser necesario quitar un rango de impresión ya definido, por ejemplo, si más tarde necesita imprimir la hoja completa. Seleccione Formato > Imprimir rangos > Quitar. Esto elimina todos los rangos de impresión definidos en la hoja. Tras quitar un rango de impresión, en la pantalla vuelven a aparecer las líneas de salto de página predeterminadas.
 
-Compresión/descompresión de archivos
+16.3.3. Imprimir filas y columnas en todas las páginas Si una hoja se imprime en varias páginas, puede establecer que ciertas filas o columnas se repitan en cada página impresa. Por ejemplo, si necesita imprimir las dos primeras filas de una hoja y la columna A en todas las páginas, haga lo siguiente
 
-La compresión y descompresión de archivos forma parte natural de cualquier sistema GNU/Linux, que de serie incorpora gzip/gunzip para ejecutar en consola. Todos los sistemas de escritorio de Ubuntu GNU/Linux incorporan su propia interfaz gráfica para comprimir y descomprimir archivos, admitiendo diversos formatos.
+Manual de Usuario LibreOffice - CALC Pag. 42 de 40
 
-Navegadores: Firefox
+### 1. Seleccione Formato > Imprimir rangos > Editar. En el cuadro de diálogo Editar
 
-Para un proceso de migración, Firefox, de la familia Mozilla, heredero del mítico Netscape, es el navegador por excelencia, pues se puede utilizar tanto en Windows como en GNU/Linux.
+áreas de impresión, escriba las filas en el cuadro de entrada de texto que está debajo de Filas que repetir. Por ejemplo, para repetir las filas 1 y 2, escriba $1:$2. En la lista Filas que repetir, - ninguno – cambia a – definido por el usuario
 
-Una vez migrados a Linux, los usuarios que usen un escritorio KDE quizás se enamoren de Konqueror, un navegador y gestor de archivos con múltiples funcionalidades.
+### 2. También pueden repetirse columnas. Escriba las columnas a repetir en el
 
-Referencias:http://www.mozilla-europe.org/es/firefox/
+cuadro de entrada de texto que está en Columnas a repetir. Por ejemplo, para repetir la columna A, escriba $A. En la lista Columnas a repetir, - ninguno – cambia a – definido por el usuario –.
 
-Clientes de correo: Thunderbird
+- Haga clic en Aceptar.
 
-Al igual que Firefox, el cliente de correo Thunderbird, de la familia Mozilla, permitirá una migración muy cómoda de Windows a GNU/Linux.
+NOTA No es necesario seleccionar todo el rango de filas a repetir, también funciona seleccionar sólo una celda en cada fila.
 
-Los usuarios avanzados de Outlook, quizás añoren la integración entre correo, calendario y agenda que les proporciona el programa de Microsoft. Para ellos puede estar especialmente indicado Evolution, que incluso dispone de un conector para servidores Exchange.
+16.3.4. Saltos de página Si bien definir un rango de impresión es muy útil, a veces puede ser necesario establecer manualmente los saltos de página para la impresión de la hoja Calc. Para ello, puede utilizar un salto manual. Un salto manual le ayuda a garantizar que sus datos se imprimen adecuadamente. Puede insertar un salto de página horizontal encima de la celda activa, o un salto de página vertical a la izquierda de la misma.
 
-Referenciashttp://www.mozilla-europe.org/es/products/thunderbird/http://www.gnome.org/projects/evolution/http://www.dipconsultants.com/evolution/
+Insertar un salto de página Para insertar un salto de página
 
-Gestión de proyectos: Planner
+- Navegue hasta la celda en la que comenzará la nueva página.
+- Seleccione Insertar > Salto manual.
+- Seleccione Salto de fila o Salto de columna según sus necesidades.
 
-Planner es un gestor de proyectos que soporta gráficos Gantt, asignación de recursos e integración con otras aplicaciones GNOME. Sería un equivalente (limitado) a MS-Project.
+Ya ha establecido el salto. Salto de fila Si selecciona Salto de fila, se crea una salto de página sobre la celda seleccionada. Por ejemplo, si la celda activa es H15, entonces el salto de página se crea entre las filas 14 y 15.
 
-Si las necesidades de gestión de proyectos, responden a un entorno de trabajo colaborativo, donde diversas personas colaboran en el control del proyecto, también podríamos utilizar algún entorno de groupware accesible vía web que incorpore gestión de proyectos.
+Salto de columna Si selecciona Salto de columna se crea una salto de página a la izquierda de la celda seleccionada. Por ejemplo, si la celda activa es H15, entonces el salto de página se crea entre las columnas G y H.
 
-Algunas referencias bastante amplias: http://www.navegapolis.net/content/view/56/49/http://blogdejuls.blogspot.com//software-libre-para-gestion-de.htmlhttp://www.cdlibre.org/consultar/catalogo/Ofimatica_Gestion-de-proyectos.html
+Manual de Usuario LibreOffice - CALC Pag. 43 de 40
 
-Agendas y calendarios
+CONSEJO Puede cambiar el color de las líneas de salto de página para verlas con más claridad en pantalla. Seleccione Herramientas > Opciones > LibreOffice.org > Representación y desplácese hacia abajo hasta la sección Hoja de cálculo.
 
-Siguiendo con la familia Mozilla, está disponible Sunbird, que permite establecer citas y tareas, pero no se integra con el servicio de correo electrónico.
+Eliminar un salto de página Para eliminar un salto de página
 
-Actualización: la extensión Lightning para Thunderbird soluciona esta integración:http://www.mozilla.org/projects/calendar/lightning/
+- Navegue hasta la celda siguiente al salto que desea eliminar.
+- Seleccione Editar > Eliminar salto manual.
+- Seleccione Salto de fila o Salto de columna según sus necesidades.
 
-Una solución interesante es Evolution, que como cometamos en el apartado de clientes de correo, además de estar muy integrado, dispone de conectividad con servidores Exchange y sincroniza con dispositivos Palm y con móviles con sistema Symbian (verificar).
+Ya ha eliminado el salto NOTA En una misma hoja pueden insertarse varios saltos de fila y columna. Si desea quitarlos todos, deberá eliminarlos uno por uno. Este procedimiento puede resultar confuso porque, aunque haya un salto de columna en la hoja, al ir a Editar > Salto manual, la opción Salto de columna puede estar desactivada. Para poder eliminar un salto, tiene que seleccionar la celda siguiente al salto. Así, por ejemplo, si insertó un salto de columna estando en la celda H15, no puede borrarlo desde la celda D15. No obstante, puede eliminarlos desde cualquier celda de la columna H
 
-Existe una versión de Evolution para Windows.
+16.3.5. Encabezamiento y pie de página Los encabezados y pies de página son textos predefinidos que se imprimen en la parte superior o inferior de la página, fuera del área de la hoja. Es establecen del mismo modo. Los encabezamientos y pies se asignan a un estilo de página. Puede definir más de un estilo de hoja para una hoja de cálculo, y asignar distintos estilos de páginas a distintas hojas.
 
-Referencias:http://www.mozilla.org/projects/calendar/sunbird/http://www.gnome.org/projects/evolution/http://www.dipconsultants.com/evolution/
+Para establecer un encabezamiento o pie de página: Navegue hasta la hoja en la que desea establecer el encabezamiento o pie. Seleccione FORMATO > PÁGINA. Seleccione la ficha Encabezamiento (o Pie de página). Consulte la figura 37. Seleccione la opción Activar encabezamiento.
 
-Mensajería instantánea: Pidgin
+Aquí también puede establecer los márgenes, el espacio y la altura del encabezamiento o pie de página. Puede activar la casilla de verificación Ajuste dinámico de la altura para que la altura del encabezamiento o pie de página se ajuste automáticamente.
 
-Pidgin (antes denominado Gaim) es un cliente de mensajería electrónica multiprotocolo, mediante el cual se puede conectar con redes Jabber, MSN, Yahoo, IRC y otras.
+Manual de Usuario LibreOffice - CALC Pag. 44 de 40
 
-Si la mensajería instantánea es un factor estratégico para la organización, incluso se puede instalar un servidor Jabber en un entorno de intranet, que permitirá la comunicación permanente entre los miembros de la organización.
+Margen Puede cambiar el tamaño del margen izquierdo o derecho para ajustar a qué distancia del borde de página deberá empezar el encabezamiento o pie de página.
 
-Referencias:http://www.pidgin.im/
+Espacio El espacio afecta a la distancia entre el borde superior o inferior de la hoja y el encabezamiento o pie de página respectivamente. Así, si ajusta un espacio de 1,00 cm, entonces habrá 1 centímetro de distancia entre el encabezamiento o el pie y el borde de la hoja.
 
-Antivirus y seguridad
+Altura La altura afecta al espacio vertical que ocupará el encabezamiento o pie de página. Aspecto del encabezamiento o del pie de página Para cambiar el aspecto del encabezamiento o del pie de página, haga clic en OPCIONES. En este cuadro de diálogo (figura 38) puede establecer el fondo y el borde del encabezamiento o pie de página.
 
-No hay ninguna necesidad de usar antivirus en GNU/Linux. Para que un virus dañase al sistema GNU/Linux haría falta
+16.3.6. Contenido del encabezamiento o pie de página El encabezamiento o pie de página de una hoja de cálculo Calc tiene tres columnas para texto. Cada columna puede tener contenidos distintos. Para establecer esos contenidos, haga clic en el botón Editar del cuadro de diálogo de la figura 36 para mostrar el cuadro de diálogo de la figura 34.
 
-Recibir el virus (por disquete, correo electrónico, etc)
+Áreas Cada área es independiente y puede contener una información distinta.
 
-Por sí solo el virus no sería autoejecutable, así que le deberíamos dar permisos de ejecución a propósito.
+Encabezamiento Puede elegir entre varias opciones predefinidas en la lista desplegable Encabezado, o especificar un encabezado personalizado usando los botones de debajo. (Si está aplicando formato a un pie de página, las opciones son las mismas.)
 
-En este caso, y de tener efectos destructivos, dada la naturaleza de los permisos en Linux, tan sólo podría dañar el área del usuario, siendo imposible dañar al sistema.
+Encabezado personalizado Haga clic en el área (izquierda, central, derecha) que desea personalizar, luego use los botones para agregar elementos o cambiar atributos de texto.
 
-Entonces, ¿por qué existen antivirus para Linux? Pues porque muchos sistemas GNU/Linux ofrecen servicios a clientes Windows. Por ejemplo, servidores de correo o servidores de archivos; en ese caso puede ser conveniente un antivirus para que no permita que se infiltren virus que pueden ir a parar a los usuarios con Windows.
+Manual de Usuario LibreOffice - CALC Pag. 45 de 40
 
-Si se desea cifrar discos o carpetas, TrueCrypt, funciona tanto en Windows como en GNU/Linux.
-
-Referèncias:http://www.kriptopolis.org/antivirus-para-linuxhttp://www.truecrypt.org/
-
-Sistema operativo
-
-Existen diferentes sistemas operativos libres (GNU/Linux, OpenSolaris, FreeBSD, OpenBSD, etc). Todos ellos derivan de UNIX System V y cumplen el estándar POSIX, así que no hay grandes diferencias entre ellos.
-
-Dentro de los sistemas GNU/Linux existen diferentes distribuciones cuyas diferencias pueden consistir en
-
-cantidad de paquetes (programas) suministrados en la distribución
-
-sistema de distribución de paquetes (RPM, DEB u otros)
-
-jerarquía del sistema de archivos (como mucho, pequeñas variaciones)
-
-mayor o menor facilidad de uso para usuarios no informáticos
-
-localizaciones (idiomas) disponibles
-
-disponibilidad de programas de administración adicionales u orientados a necesidades empresariales específicas (no siempre libres)
-
-El criterio para escoger un sistema, podría ser facilidad de uso, la disponibilidad en determinado idioma, etc.
-
-A estos efectos, seria tan válido Ubuntu como SuSE, Fedora (RedHat), Mandriva o la propia Debian (en la que se basa Ubuntu)
-
-Nuestra recomendación se decantaría por Ubuntu especialmente por
-
-Facilidad de instalación, configuración, actualización y uso (como casi todas las distribuciones citadas).
-
-Excelente localización en español y catalán (la última vez que probamos SuSE, adolecía de limitaciones en este sentido, por ejemplo, no disponía de la versión en catalán de OpenOffice.org).
-
-Disponibilidad de controladores propietarios privativos que pueden ser precisos para algunos dispositivos de hardware.
-
-Inmensa cantidad de programas instalables directamente desde sus repositorios (posiblemente todos los programas que necesitemos)
-
-Disponibilidad de versiones específicamente orientadas a tareas de servidor y para instalaciones personalizadas.
-
-Factor subjetivo: nos ha hecho sentido muy cómodos desde que la probamos.
-
-Entorno de escritorio
-
-A diferencia de Windows, en los sistemas GNU/Linux existe la posibilidad de escoger distintos entornos de escritorio; entre los más populares encontramos
-
-GNOME (basado en la biblioteca de controles gráficos GTK, diseñados originalmente para el programa Gimp)
-
-KDE (basado en la biblioteca de controles gráficos QT, que en un principio no eran del todo libres)
-
-XFCE (basado en GTK pero especialmente ligero, adaptado para máquinas con escasos recursos.
-
-Cada uno de ellos dispone de determinados programas (navegadores, editores, consolas, etc.) orientados a una integración perfecta en el propio sistema de escritorios.
-
-Pero esto no es ningún obstáculo, pues hoy día se integran con facilidad unos y otros. Por ejemplo, en nuestro escritorio GNOME, podemos usar a perfección el grabador de CD/DVD K3B, diseñado inicialmente para KDE. El único coste es en términos de recursos, pues el uso en un escritorio de un programa diseñado otro, exige la carga en memoria de ambos conjuntos de bibliotecas.
-
-Si nuestro parque de ordenadores tiene máquinas con escasos recursos de memoria o procesador, para ellas resultará ideal el uso de XFCE, por su poco peso y optimizado uso de recursos.
-
-Ubuntu, por defecto se instala con GNOME, pero se puede instalar cualquier otro escritorio desde sus repositorios de programas.
-
-En términos generales, para usuarios provinientes de Windows, se puede recomendar KDE, pues su apariencia les resultará más familiar.
-
-No obstante, se pueden dejar instalados ambos escritorios, y el usuario puede escoger inciar sesión con uno u otro.
-
-Instalación desatendida
-
-Si nuestro parque de ordenadores es muy extenso, uno de los problemas con que podemos encontrarnos es que la instalación puede consumir mucho tiempo de técnico de sistemas, al tener que ir máquina por máquina para perfilar detalles de la instalación.
-
-Mediante el uso de la Server Edition de Ubuntu, se pueden disponer de diferentes beneficios, entre los cuales se cuenta la instalación desatendida. Al final de este apartado se relacionan diferentes recursos de ayuda sobre esta cuestión.
-
-Entorno de red
-
-En un entorno corporativo, dispondremos de uno o más servidores que proporcionarán diferentes servicios. GNU/Linux nos proporcionará solución a cualquier necesidad
-
-Autenticación centralizada de usuarios
-
-NIS permite replicar los datos de acceso de usuarios y grupos a lo largo de la red, que también proveerá la información de grupos de usuarios o nombres de nodo.
-
-LDAP es otra alternativa más avanzada para resolver esta misma cuestión, pues además puede contener datos de contacto del usuario, ubicación de diversos recursos de la red, permisos o certificados; una de las implementaciones más populares de LDAP es el conocido Active Directory de Microsoft.
-
-Compartición de archivos
-
-NFS es el sistema de red más popular para compartir archivos en sistemas GNU/Linux y permite montar directorios ubicados en dispositivos remotos en el propio sistema de archivos. Los puestos de trabajo Windows pueden acceder a sistemas NFS mediante el uso de Windows Services for UNIX.
-
-SAMBA es una implementación libre del protocolo de archivos compartidos de Microsoft Windows. Nos permitirá acceder desde equipos GNU/Linux a archivos compartidos en sistemas Windows, así como acceder desde equipos Windows a servidores de archivos GNU/Linux.
-
-En función del número de puestos de trabajo a migrar y de la estructura actual de recursos compartidos, puede ser conveniente decantarse por unos u otros sistemas. Si no hay unos requerimientos específicos que aconsejen otra cosa, y considerando que estaremos ante un entorno de trabajo mixto Windows / GNU/Linux recomendaríamos LDAP y SAMBA.
-
-Referencias y enlaces
-
-Guía oficial de la Server Edition:https://help.ubuntu.com/8.04/serverguide/C/index.html
-
-Recomendaciones específicas para migración de Windows a Ubuntu Linux:https://help.ubuntu.com/community/SwitchingToUbuntu/FromWindowshttp://doc.ubuntu.com/ubuntu/switching/
-
-Recomendaciones específicas para configuración en un entorno corporativo:https://help.ubuntu.com/community/CorporateUbuntu
-
-Notas para una instalación vía red local:https://help.ubuntu.com/community/Installation/Netboot
-
-Múltiples instalaciones por red local:http://www.debuntu.org/how-to-unattended-ubuntu-network-installhttp://www.informatik.uni-koeln.de/fai/
-
-Una web que ayuda a crear un perfil de configuración para instalaciones automatizadas:http://www.instalinux.com/
-
-Soluciones para programas only-Windows
-
-Hay programas que deben usarse sí o sí, y que tan sólo están disponibles para Windows.
-
-Posibles soluciones
-
-Wine
-
-Wine es un emulador de las bibliotecas de Windows, que permite que los programas corran tal cual en un sistema GNU/Linux sin tener Windows instalado. Algunos programas funcionan a la primera, pero en muchos casos necesitan un poco de tuneo o copiar bibliotecas DLL. Existe una versión derivada comercial, CrossOver Office, con varios parches añadidos, y herramientas de configuración más fáciles de usar, especialmente adaptada para correr Microsoft Office.
-
-Referencias:http://www.winehq.org/http://www.codeweavers.com/
-
-PC virtual
-
-VirtualBox o VMWare son emuladores de PC virtual, que permiten instalar en ellos un sistema operativo completo. Son una solución perfecta para correr programas para Windows, pero exigen disponer de una licencia del sistema operativo invitado.
-
-Referencias:http://www.virtualbox.org/http://www.vmware.com/
-
-Remote Desktop (Terminal Server)
-
-Para optimizar el coste de licencias de Windows necesarias, también puede resultar interesante instalar un servidor Windows con los programas imprescindibles y acceder a él vía Remote Desktop o VNC.
-
-Referencias:http://www.tightvnc.com/http://www.realvnc.com/
-
-### 📄 mitos.odt
-
-ADONIS
-
-Adolescente de maravillosa belleza que fue amado por Afrodita. Muerto por un jabalí, la diosa convirtió su sangre en flores. Al ver la desolación de ella, Júpiter concedió a Adonis el privilegio de permanecer cada año seis meses sobre la Tierra. El mito es de origen semita y alude a los ciclos de la muerte y renacimiento de las fuerzas de la naturaleza.
-
-AFRODITA
-
-Diosa resplandeciente de la belleza, encarnación del amor carnal y la más popular de todas las divinidades de la mitología griega. Según Homero, fue hija de Zeus y de Dione mientras que para Hesíodo la diosa nació en el mar, cuando Cronos mutiló a su padre Urano.
-
-Los despojos de la virilidad de este último flotaron largo tiempo sobre las aguas produciendo una espuma de la cual nació una virgen: Afrodita Anadiomena. De la espuma, pues, brotó una doncella que llegó primero a la isla Vitera y luego a Chipre rodeada de olas; allí saltó a tierra la veneranda y bella diosa y bajo sus menudos pies florecía la mullida hierba.
-
-AGÓN
-
-Personificación simbólica de las luchas atléticas y de los concursos de todo género. Era representado de diversas formas, pero una de las más conocidas se refería a un joven dios atleta desnudo, con un gallo en las manos.
+Abre el cuadro de diálogo Atributos de texto. Inserta el número total de páginas. Inserta el campo Nombre de archivo. Inserta el campo Fecha. Inserta el campo Nombre de hoja. Inserta el campo Hora. Inserta el número actual de página.
 
 ---

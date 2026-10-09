@@ -2,7 +2,7 @@
 layout: default
 title: "UD6 — Redes · Temari Complet"
 course_root: ".."
-badge: "4t ESO · UT6 Completa"
+badge: "4t ESO · UD6 — Redes"
 prev_url: "../ut05/ut0501.html"
 prev_label: "⬅️ 5.1 BBDD"
 next_url: "../ut06/ut0601.html"
@@ -31,18 +31,6 @@ next_label: "6.1 Redes Informáticas (PPT) ➡️"
 
 > **🔗 Recurs Web: Cómo funciona internet (10m)**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=rw41W8crZ_Y) ↗️**](https://www.youtube.com/watch?v=rw41W8crZ_Y)
-
-> **🔗 Recurs Web: Tabla temas y grupos**
-> [**🌐 Obrir recurs extern (https://docs.google.com/spreadsheets/d/1mEfwl5Ilgpd3ccwsAjsSwsd2sKe2SdYPfXpjw9aKZT0/edit#gid=0) ↗️**](https://docs.google.com/spreadsheets/d/1mEfwl5Ilgpd3ccwsAjsSwsd2sKe2SdYPfXpjw9aKZT0/edit#gid=0)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Presentación
-
-> **🔗 Recurs Web: Actividad 4.1 CALIFICABLE - Presentación "REDES"**
-> [**🌐 Obrir recurs extern (https://docs.google.com/document/d/e/2PACX-1vTOpT0VAc_z2zdZsEssJ6izFXLT02TNlTxDdc_bj3-FiXsX5pvaTAojvvcZv48KX54JMD-B2Wuv9Uty/pub) ↗️**](https://docs.google.com/document/d/e/2PACX-1vTOpT0VAc_z2zdZsEssJ6izFXLT02TNlTxDdc_bj3-FiXsX5pvaTAojvvcZv48KX54JMD-B2Wuv9Uty/pub)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Examen sobre las presentaciones
 
 ---
 

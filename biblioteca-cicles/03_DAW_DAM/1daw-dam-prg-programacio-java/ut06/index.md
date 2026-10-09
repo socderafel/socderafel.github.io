@@ -1,707 +1,824 @@
 ---
 layout: default
-title: "UD2 — Entrada y salida de información · Temari Complet"
+title: "UD6 — Estructuras de datos dinámicas · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT6 Completa"
-prev_url: "../ut05/ut0509.html"
-prev_label: "⬅️ 1.4 Estilo de codificacion"
+badge: "1r DAW / DAM · Grau Superior · UD6 — Estructuras de datos dinámicas"
+prev_url: "../ut05/ut0502.html"
+prev_label: "⬅️ 5.2 Estructuras de datos estaticas"
 next_url: "../ut06/ut0601.html"
-next_label: "2.1 Entrada y salida de información ➡️"
+next_label: "6.1 Estructuras de datos dinámicas ➡️"
 ---
 
-# 📘 UD2 — Entrada y salida de información (Unitat Completa)
+# 📘 UD6 — Estructuras de datos dinámicas (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 Entrada y salida de información**](./ut0601.md)
-- [**2.2 Colores**](./ut0602.md)
-- [**2.3 ClasePrintf**](./ut0603.md)
+- [**6.1 Estructuras de datos dinámicas**](./ut0601.md)
+- [**6.2 Estructuras de datos dinamicas**](./ut0602.md)
+- [**6.3 Recursividad**](./ut0603.md)
 
 ---
 
-# 2.1 Entrada y salida de información
+# 6.1 Estructuras de datos dinámicas
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Contenido de la unidad
-
-> **🔗 Recurs Web: Tabla código ASCII**
-> [**🌐 Obrir recurs extern (https://concepto.de/ascii/) ↗️**](https://concepto.de/ascii/)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Prácticas de aula
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Ampliación y refuerzo
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Otros Recursos
-
-> **🔗 Recurs Web: Web Baeldung: Uso de printf (Inglés)**
-> [**🌐 Obrir recurs extern (https://www.baeldung.com/java-printstream-printf) ↗️**](https://www.baeldung.com/java-printstream-printf)
-
-> **🔗 Recurs Web: UC3M: Uso de printf (Castellano)**
-> [**🌐 Obrir recurs extern (https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html) ↗️**](https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html)
-
-> **🔗 Recurs Web: Caracteres UNICODE: Box Drawing (para crear tablas)**
-> [**🌐 Obrir recurs extern (https://en.wikipedia.org/wiki/Box_Drawing) ↗️**](https://en.wikipedia.org/wiki/Box_Drawing)
+> **🔗 Recurs Web: [Vídeo] La MAGIA de la RECURSIVIDAD**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=yX5kR63Dpdw) ↗️**](https://www.youtube.com/watch?v=yX5kR63Dpdw)
 
 ---
 
-Programación
+### UNIDAD 6: ESTRUCTURAS DE DATOS DINÁMICAS
 
-### UD 2: Entrada y salida de información
+V2.04.12.23
 
-Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web Jose Chamorro Molina Actualizado por: José Ramón Simó
+Profesor: José Ramón Simó Martínez Contenido
 
-Programación
+- Introducción ............................................................................................................................ 2
+- Estructuras de datos dinámicas ............................................................................................... 3
 
-ORDEN 60/2012, de 25 de septiembre, de la Conselleria de Educación, Formación y Empleo por la que se establece para la Comunitat Valenciana el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web. [2012/9149] Contenidos
+2.1. Listas ............................................................................................................................................. 4 2.2. Pilas .............................................................................................................................................. 7 2.3. Colas ............................................................................................................................................. 9 2.4. Conjuntos .................................................................................................................................... 11 2.5. Diccionarios ................................................................................................................................. 13
 
-5.- Lectura y escritura de información: 5.1.− Programación de la consola: entrada y salida de información. 5.2.− Concepto de flujo. 5.3.− Tipos de flujos. Flujos de bytes y de caracteres. 5.4.− Flujos predefinidos. 5.5.− Clases relativas a flujos. 5.6.− Utilización de flujos.
+- La clase Collections ................................................................................................................. 16
 
-5.7.− Entrada desde teclado. 5.8.− Salida a pantalla. Real Decreto 686/2010, de 20 de mayo, por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web y se fijan sus enseñanzas mínimas. Resultados de aprendizaje
+3.1. Uso de la clase Collections ........................................................................................................... 17
 
-- Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.
+- Diagrama de decisión para el uso de Colecciones de Java ........................................................ 18
+- Bibliografía ............................................................................................................................. 18
 
-Criterios de evaluación: 5.a) Se ha utilizado la consola para realizar operaciones de entrada y salida de información. 5.b) Se han aplicado formatos en la visualización de la información. 5.c) Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.
+V2.04.12.23
 
-Competencias profesionales, personales y sociales
+### 1. Introducción
 
-- Adaptarse a las nuevas situaciones laborales, manteniendo actualizados los conocimientos científicos, técnicos y tecnológicos relativos a
+Empecemos recordando que un dato de tipo simple no está compuesto de otras estructuras que no sean los bits, y que por tanto su representación sobre el ordenador es directa, sin embargo, existen unas operaciones propias de cada tipo, que en cierta manera los caracterizan.
 
-su entorno profesional, gestionando su formación y los recursos existentes en el aprendizaje a lo largo de la vida y utilizando las tecnologías de la información y la comunicación. Entrada y salida de información
+Una estructura de datos es, a grandes rasgos, una colección de datos (normalmente de tipo simple) que se caracterizan por su organización y las operaciones que se definen en ellos. Llamaremos dato de tipo estructurado a una entidad, con un solo identificador, constituida por datos de otro tipo, de acuerdo con las reglas que definen cada una de las estructuras de datos.
 
-Programación
+Los datos estructurados se pueden clasificar según la variabilidad de su tamaño durante la ejecución del programa en: • Estructuras de datos estáticas: Las estructuras estáticas son aquellas en las que el tamaño ocupado en memoria se define con anterioridad a la ejecución del programa que los usa, de forma que su dimensión no puede modificarse durante la misma (p.e., un vector o una matriz) aunque no necesariamente se tenga que utilizar toda la memoria reservada al inicio (en todos los lenguajes de programación las estructuras estáticas se representan en memoria de forma contigua).
 
-Entrada y salida de información 1.− Programación de la consola: entrada y salida de información 2.− Concepto de flujo 3.− Tipos de flujos. Flujos de bytes y de caracteres 4.− Flujos predefinidos 5.− Clases relativas a flujos 6.− Utilización de flujos 7.− Entrada desde teclado 8.− Salida a pantalla
+• Estructuras de datos dinámicas: Por el contrario, ciertas estructuras de datos pueden crecer o decrecer en tamaño, durante la ejecución, dependiendo de las necesidades de la aplicación, sin que el programador pueda o deba determinarlo previamente: son las llamadas estructuras dinámicas. Las estructuras dinámicas no tienen teóricamente limitaciones en su tamaño, salvo la única restricción de la memoria disponible en el computador.
 
-1.− Programación de la consola Programación
+Las estructuras estáticas las estudiamos en anteriores unidades. En esta unidad introduciremos las estructuras dinámicas más utilizadas en Java: • ArrayList (interfaz List) • Stack • Queue • HashMap • HashSet A estas estructuras también las conocemos en Java como Colecciones.
 
-1.− Programación de la consola Una aplicación de consola es un programa informático diseñado para ser utilizado a través de una interfaz de solo texto, como un terminal de texto, la interfaz de línea de comando de algunos sistemas operativos (Unix, DOS, etc.), o la consola Win32 en Microsoft Windows y la terminal en MacOS.
+Nota En este tema aparecerán conceptos de programación orientada a objetos que se estudiará en unidades posteriores. Al igual que hemos hecho con otros objetos de Java presentados hasta el momento (String, Arrays, Date, etc), nos centraremos en el uso de estos objetos.
 
-Un usuario generalmente interactúa con una aplicación de consola usando solo un teclado y una pantalla, a diferencia de las aplicaciones de IGU, que normalmente requieren el uso de un mouse u otro dispositivo señalador. Muchas aplicaciones de consola, como los intérpretes de línea de comandos, son herramientas de línea de comandos, pero también existen numerosos programas de interfaz de usuario basada en texto.
+V2.04.12.23
 
-Programación
+### 2. Estructuras de datos dinámicas
 
-1.− Programación de la consola A medida que la velocidad y la facilidad de uso de las aplicaciones de IGU han mejorado con el tiempo, el uso de las aplicaciones de consola ha disminuido en gran medida, pero no ha desaparecido. Algunos usuarios simplemente prefieren las aplicaciones basadas en consola, mientras que algunas organizaciones aún dependen de las aplicaciones de consola existentes para manejar las tareas clave de procesamiento de datos.
+A continuación, se presenta un esquema resumen de los tipos de datos estáticos y dinámicos disponibles en el lenguaje Java
 
-Programación
+Las estructuras de datos dinámicas son conceptos abstractos conocidos como Tipos Abstractos de Datos (TAD). No definen cómo se guardan los datos sino como estos se comportan a la hora, principalmente, de: • Crear • Leer o recuperar datos • Escribir o actualizar datos • Eliminar datos Estas acciones también son conocidas como CRUD (Create, Read, Update, Delete).
 
-1.− Programación de la consola La capacidad de crear aplicaciones de consola se mantiene como una característica de los entornos de programación modernos porque simplifica enormemente el proceso de aprendizaje de un nuevo lenguaje de programación al eliminar la complejidad de una interfaz gráfica de usuario.
+A continuación, se hará una breve definición de cada uno de los TAD principales.
 
-Para tareas de procesamiento de datos y administración de computadoras, es posible que no haya necesidad de una interfaz de usuario bastante gráfica, dejando la aplicación más ágil, más rápida y más fácil de mantener. Coloreado de texto El texto que se muestra por pantalla se puede colorear (únicamente en un terminal de Linux), para ello es necesario insertar unas secuencias de caracteres - que indican el color con el que se quiere escribir – justo antes del propio texto.
+Estructuras de Datos Estáticas Simples boolean char int Compuestas vectores matrices strings archivos Dinámicas Listas Pilas Colas Diccionarios
+
+V2.04.12.23
+
+#### 2.1. Listas
+
+Una lista es un TAD que representa un número de valores ordenados, donde el mismo valor puede aparecer más de una vez. Las operaciones que se pueden hacer sobre una lista son muy variadas, pero principalmente son las siguientes: • Crear: crear una lista vacía. • Insertar: añadir elementos a la lista.
+
+• Eliminar: eliminar elementos de la lista. • Consultar: consultar un elemento de la lista. • Vacía: consultar si la lista está vacía. La inserción/eliminación/consulta de una lista se podrá hacer sobre cualquier posición del elemento en la lista. Como analogía, tenemos los siguientes ejemplos de pilas en el mundo real
+
+• Lista de la compra: creamos una lista de la compra con diferentes productos que vamos consultando y/o eliminando de la lista conforme compramos. • Lista de tareas. • Etc. Actualmente las principales clases que utilizan la interfaz List1 para implementar una lista son
+
+• ArrayList • LinkedList • Vector (se utiliza ArrayList en vez de esta) • Stack En esta unidad nos centraremos en el uso de la clase ArrayList. Decir que la clase LinkedList también se usa para la creación de listas, sin embargo en este tema sólo la veremos para su uso en la creación Colas.
+
+Nota (1) El concepto de interfaz se estudiará en unidades posteriores. Por ahora, entenderemos interfaz algo que define el comportamiento de una clase, pero no podemos usar directamente. Por ejemplo, la clase ArrayList define el comportamiento de la interfaz List.
+
+Recordad que en unidades anteriores hemos utilizado clases de Java como String, Random, etc.
+
+V2.04.12.23
+
+#### 2.1.1. Uso del TAD Lista: la clase ArrayList
+
+La clase ArrayList es un tipo de Lista e implementa la interfaz List. Destacar que ArrayList será una de las clases más utilizadas para la creación de listas en Java. A continuación, un ejemplo de uso de la clase ArrayList en Java
+
+Para crear una lista debemos decir qué tipo de datos1 va a contener dicha lista. En el ejemplo anterior se puede ver que el ArrayList sólo va a contener datos de tipo String. La sintaxis es la siguiente
 
 ```java
-String rojo    = "\033[31m";
-String verde   = "\033[32m";
-String naranja = "\033[33m";
-String azul    = "\033[34m";
-System.out.print(rojo + " rojo " + verde + " verde");
-System.out.print(naranja + " naranja " + azul + " azul");
+TipoDatoDinamico<Objeto> nombreVariable = new TipoDatoDinamico<Objeto>();
 ```
 
-Programación
+Esta sintaxis se puede aplicar al resto de tipos de datos dinámicos que estudiaremos en esta unidad.
 
-2.− Concepto de flujo Programación
+V2.04.12.23 Para recorrer una lista también podemos hacer uso de la variante for (conocida como foreach) que estudiamos en la unidad anterior. Por ejemplo, podríamos recorrer el ArrayList del ejemplo así
 
-2.− Concepto de flujo ✓ En Java se define la abstracción de stream (flujo) para tratar la comunicación de información entre el programa y el exterior.
+Por otra parte, observa que necesitamos importar la clase ArrayList del paquete java.util. La clase ArrayList utiliza varios métodos para su uso. Los principales son: • add(elemento): añade un elemento al final de la lista. • add(X, elemento): añade un elemento en la posición X.
 
-- Entre una fuente y un destino fluye una secuencia de datos .
+• get(X): consulta un elemento de la posición X. • remove(X): elimina un elemento de la posición X. • size(): devuelve el número de elemento que tiene la lista. • isEmpty(): devuelve verdadero si la lista está vacía, en caso contrario falso. • clear(): elimina todos los elementos pero no borra la lista.
 
-✓ Los flujos actúan como interfaz con el dispositivo o clase asociada.
+• indexOf(elemento): devuelve la posición de la primera ocurrencia del elemento que se indica entre paréntesis. • contains(elemento): devuelve true si el elemento se encuentra en la lista y false en caso contrario. • addAll(nuevaLista): añade todos los elementos de nuevaLista al final de la lista.
 
-- Operación independiente del tipo de datos y del dispositivo.
+Nota Hay que tener en cuenta que la clase ArrayList sólo admite tipos de datos objeto como elementos de la lista. Dicho de otra manera, no podemos crear listas directamente con tipos de datos primitivos como int, float, double, etc. Para ello, deberíamos usar las clases envoltorio estudiadas en unidades anteriores (Integer, Double, Float, etc).
 
-- Mayor flexibilidad (p.e. redirección, combinación).
+Más información de la interfaz List y sus clases que la implementan: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html A continuación, estudiaremos dos casos especiales de listas: Pilas y Colas. Estos TAD definirán el comportamiento que deberá tener la lista.
 
-- Diversidad de dispositivos (fichero, pantalla, teclado, red, ...).
+V2.04.12.23
 
-- Diversidad de formas de comunicación
+#### 2.2. Pilas
 
-- Modo de acceso: secuencial, aleatorio
+Es una colección de elementos sobre los que se tiene dos principales operaciones: • Apilar: añades un elemento en la cima de la colección (o array). • Desapilar: elimina un elemento de la cima de la colección (o array). El comportamiento de la pila se conoce como LIFO (Last In, First Out), es decir, el último elemento que se añade será el primero en eliminarse/consultarse. Esta forma de actuar gráficamente se vería así
 
-- Información intercambiada: binaria, caracteres, líneas
+Otro ejemplo gráfico de su funcionamiento se vería así (push es apilar, pop es desapilar)
 
-Programación
+Puedes pensar que la colección de elementos del anterior ejemplo es un array. Como analogía, tenemos los siguientes ejemplos de pilas en el mundo real: • Pila de platos: en una pila de platos, vamos desapilando para lavar cada plato y por otro lado vamos apilándolos cuando ya están secos.
 
-2.− Concepto de flujo Programación
+• Deshacer/Rehacer: en software, se van Apilando las acciones que se realizan en un programa. Por otro lado, cuando hacemos click en Deshacer lo que estamos es desapilando la última acción, o en Rehacer estamos apilando otra vez la última acción.
 
-3.− Tipos de flujos: Flujos de bytes y de caracteres. Programación
+V2.04.12.23
 
-3.− Tipos de flujos java.io Flujos de bytes
+#### 2.2.1. Uso del TAD Pila en Java: la clase Stack
 
-clases InputStream y OutputStream Flujos de caracteres
+En Java tenemos la clase Stack para hacer implementa el TAD pila. Esta clase también implementa la interfaz List. En el siguiente código podemos ver su uso
 
-clases Reader y Writer Se puede pasar de un flujo de bytes a uno de caracteres con InputStreamReader y OutputStreamWriter Programación
+Observa que necesitamos importar la clase Stack del paquete java.util. La clase Stack utiliza varios métodos para su uso. Los principales son: • push(elemento): para añadir un elemento a la pila. • peek(): para mostrar el elemento que está en la cima de la pila (no lo elimina).
 
-4.− Flujos predefinidos Programación
+• pop(): elimina el elemento de la cima de la pila. • size(): devuelve el números de elementos que contiene la pila. • clear(): vacía los elementos que contiene la pila. • isEmpty(): comprueba que la pila está vacía. Se puede implementar el concepto de Pila con estructuras estáticas en Java, como los arrays. Sin embargo, está fuera de este curso presentar el estudio de su implementación (se deja como ampliación).
 
-4.− Flujos predefinidos System.in Instancia de la clase InputStream: flujo de bytes de entrada Métodos
+Más información de la clase Stack: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Stack.html
 
-- read() permite leer un byte de la entrada como entero
+V2.04.12.23
 
-- skip(n ) ignora n bytes de la entrada
+#### 2.3. Colas
 
-- available() número de bytes disponibles para leer en la entrada
+Es una colección de elementos sobre los que se tiene dos principales operaciones: • Encolar: añades un elemento a la cola de la colección (o array). • Desencolar: elimina un elemento de la cola de la colección (o array). El comportamiento de la pila se conoce como FIFO (First In, First Out), es decir, el primer elemento que se añade será el primero en eliminarse/consultarse. Esta forma de actuar gráficamente se vería así
 
-System.out Instancia de la clase PrintStream: flujo de bytes de salida Métodos para impresión de datos
+Otro ejemplo gráfico sería el siguiente
 
-- print(), println(), printf()
+### 1. Tenemos originalmente este contenido dentro de una Cola
 
-- flush() vacía el buffer de salida escribiendo su contenido
+### 2. Añadimos el elemento 8 a la cola y este se añade en la cabeza de la cola
 
-System.err Funcionamiento similar a System.out Se utiliza para enviar mensajes de error (por ejemplo a un fichero de log o a la consola) Programación
+### 3. Si ahora eliminamos un elemento de la cola
 
-5.− Clases relativas a flujos Programación
+Como analogía, tenemos los siguientes ejemplos de pilas en el mundo real: • Cola del cine, discoteca, teatro, etc. • Cola de procesos en una CPU: el primer proceso en llegar será el primero en ejecutarse.
 
-5.− Clases relativas a flujos Las clases del paquete java.io relativas a flujos: BufferedInputStream: permite leer datos a través de un flujo con un buffer intermedio. BufferedOutputStream: implementa los métodos para escribir en un flujo a través de un buffer. FileInputStream: permite leer bytes de un fichero.
+V2.04.12.23
 
-FileOutputStream: permite escribir bytes en un fichero o descriptor. StreamTokenizer: esta clase recibe un flujo de entrada, lo analiza (parse) y divide en diversos pedazos (tokens), permitiendo leer uno en cada momento. StringReader: es un flujo de caracteres cuya fuente es una cadena de caracteres o string.
+#### 2.3.1. Uso del TAD Cola: la clase LinkedList
 
-StringWriter: es un flujo de caracteres cuya salida es un buffer de cadena de caracteres, que puede utilizarse para construir un string. Programación
+En Java tenemos la interfaz (que NO clase) Queue para hacer uso del TAD Cola. Esto significa que no podemos instanciar (hacer un new) de una clase Queue, pero si que podremos usar en este caso la clase LinkedList (tipo de lista) que implementa a la interfaz Queue.
 
-5.− Clases relativas a flujos Flujos de bytes Programación
+En este punto del curso insisto en que no importa tanto que no sepas la diferencia entre la clase y la interfaz, sino en la creación y uso de TADs en Java. Fíjate en el siguiente código de ejemplo para saber cómo se hace
 
-5.− Clases relativas a flujos Flujos de caracteres Programación
+Observa que en la creación de la Cola participan tanto la interfaz Queue, que define lo que podemos hacer con la cola, y la clase LinkedList para instanciar (crear) la cola. Por otra parte, necesitamos importar tanto Queue como LinkedList del paquete java.util. La interfaz Queue utiliza varios métodos para su uso. Los principales son
 
-6.− Utilización de flujos Programación
+• add(elemento): para añadir un elemento a la cola de la cola. • peek(): mostrar primer elemento que llegó a la cola (la cabeza de la cola). • remove(): elimina el primer elemento que llegó a la cola (la cabeza de la cola). • clear(): elimina todos los elementos de la cola.
 
-6.− Utilización de flujos Lectura
+• isEmpty(): comprueba que la cola está vacía.
 
-### 1. Abrir un flujo a una fuente de datos (creación del objeto stream)
+V2.04.12.23 También observamos que hacemos uso de la clase LinkedList. Esto es necesario para poder implementar la interfaz Queue. Otra opción es usar, en vez de LinkedList, la clase PriorityQueue. Se deja como ejercicio de ampliación al estudiante. Más información de la interfaz Queue
 
-- Teclado
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Queue.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/PriorityBlockingQueue.
 
-- Fichero
+html
 
-- Socket remoto
+#### 2.4. Conjuntos
 
-### 2. Mientras existan datos disponibles
+Matemáticamente un conjunto es una colección no ordenada de elementos no repetidos. Por una parte, es no ordenada porque no podemos acceder a los elementos a través de un índice. Y por otra, no repetidos porque cada elemento de del conjunto es único. Por tanto, en este punto cabe recalcar la diferencia entre
 
-- Leer datos
+• Lista: colección de elementos ordenados y pueden estar repetidos. Se accede a los elementos a través de un índice. • Conjunto: colección de elementos no ordenados y no duplicados. No se puede acceder a través de un índice. Principales operaciones: • Añadir: añades un elemento al conjunto SI este no existe ya en dicho conjunto.
 
-### 3. Cerrar el flujo (método close)
+• Consultar: consulta si un elemento concreto está en el conjunto. • Eliminar: elimina un elemento del conjunto SI este existe en dicho conjunto. A diferencia de las Listas, Pilas y Colas, los conjuntos no tienen comportamiento LIFO o FIFO. ¡Es decir, no nos importa cómo ni dónde se añaden los elementos en el conjunto… porque es un conjunto!
 
-Escritura
+Por tanto, gráficamente podemos ver un Conjunto como un “saco” de elementos: los conjuntos matemáticos de toda la vida
 
-- Pantalla
+Gala Melis Ramon Reme Colección de enteros Colección de nombres
 
-- Fichero
+V2.04.12.23 Como analogía, tenemos los siguientes ejemplos de pilas en el mundo real: • Conjunto de números enteros, reales, etc. • Conjunto de todos los DNI de España. • Conjunto de todas las matrículas de coche. • Etc.
 
-- Socket local
+#### 2.4.1. Uso del TAD Conjunto: la clase HashSet
 
-- Escribir datos
+En Java tenemos la interfaz (que NO clase) Set para hacer uso del TAD Conjunto. En este caso, Java implementa la interfaz Set en las siguientes clases: • HashSet • TreeSet • LinkedHashSet En esta unidad estudiaremos el uso de la clase HashSet para el uso de conjuntos en Java. A continuación, un ejemplo de código para crear conjuntos de elementos con la clase HashSet
 
-> **⚠️ Nota: para los flujos estándar ya se encarga el sistema...**
-> Nota: para los flujos estándar ya se encarga el sistema de abrirlos y cerrarlos Programación
+V2.04.12.23 Salida por pantalla
 
-6.− Utilización de flujos Ejemplo: try {
+Observa que necesitamos importar las clase HashSet del paquete java.util. La clase HashSet utiliza varios métodos para su uso. Los principales son: • add(elemento): añade un elemento al conjunto, si este no existe todavía. • contains(elemento): nos dice si un elemento en concreto existe en el conjunto.
+
+• remove(elemento): elimina el elemento del conjunto si este existe en dicho conjunto. • clear(): elimina todos los elementos del conjunto. • size(): devuelve el número de elementos que contiene el conjunto. • isEmpty(): comprueba que no hay elementos en el conjunto. Más información de la interfaz Set y la clase HashSet
+
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Set.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashSet.html
+
+#### 2.5. Diccionarios
+
+Hasta ahora hemos estudiado dos tipos de datos dinámicos: listas y conjuntos. En las listas cada elemento esta indexado y podemos acceder a este indicando un número entero como índice. Los Diccionarios, al igual que las listas, los datos están indexados. Sin embargo, sus índices (claves) pueden ser cualquier tipo de valor. Por tanto, a los Diccionarios se les conoce como dato dinámico de tipo CLAVE-VALOR.
+
+Ejemplos de su uso pueden ser: • Almacenar nombres de capitales (VALOR) y acceder a ellas mediante el nombre de su país (CLAVE).
+
+• En un juego de Star Wars, para cada personaje (CLAVE) se puede almacenar su fuerza (VALOR).
+
+1000.0 500.0 500.0 5000.0 Anakin Luke Leia Yoda 0.0 C3PO Londres Madrid Berlín Lisboa UK ES DE PT
+
+V2.04.12.23 Como podrás intuir, no puede haber claves duplicadas en el diccionario (pero sí valores).
+
+#### 2.5.1. Uso del TAD Diccionario: la clase HashMap
+
+En Java los diccionarios se implementan a partir de la interfaz Map. Y recuerdo que no importa tanto ahora que sepamos que es la interfaz. Lo importante es que sepamos que existen las siguientes tres clases para usar Diccionarios: • HashMap • TreeMap • LinkedHashMap En esta unidad sólo estudiaremos el uso de la clase HashMap para la creación de diccionarios. A continuación, un ejemplo de código para crear conjuntos de elementos con la clase HashMap
+
+V2.04.12.23 Salida por pantalla
+
+Antes que nada, observa que necesitamos importar las clase HashMap del paquete java.util. La clase HashMap utiliza varios métodos para su uso. Los principales son: • put: añade un elemento al diccionario. Necesita la clave y el valor. • get: devuelve un elemento del diccionario a partir de su clave.
+
+• remove: elimina un elemento del diccionario a partir de su clave. • replace: actualiza un elemento del diccionario a partir de su clave y el nuevo valor • keySet: devuelve un Set, que será el conjunto de claves de nuestro HashMap. • values(): devuelve una colección con todos los valores (los valores pueden estar duplicados a diferencia de las claves).
+
+• entrySet(): devuelve un Set con todos los pares CLAVE-VALOR. • containsKey(clave): devuelve true si el diccionario contiene la clave indicada y false en caso contrario. • size(): devuelve el número de elementos que hay en el HashMap. • clear(): elimina todos los elementos del HashMap.
+
+• isEmpty(): comprueba si el HashMap ya no contiene elementos CLAVE-VALOR. Ahora estudiaremos dos peculiaridades del HashMap: creación y recorrido. Creación de HashMap Para empezar, en la creación de Diccionarios hay una diferencia a destacar respeto a las Listas o Conjuntos.
+
+Los diccionarios necesitan dos tipos de datos para poder crearse: la clave y el valor. Además, estos deben ser de tipo objeto (no datos primitivos int, float,etc). La sintaxis para crear HashMap será
 
 ```java
-BufferedReader reader = new BufferedReader(new FileReader("nombrefichero"));
-String linea = reader.readLine();
+HashMap<Objeto1, Objeto2> nombreVariable = new HashMap<Objeto1, Objeto2>();
 ```
 
+En el ejemplo anterior se puede ver que el HashMap tendrá como clave un String y como valor un Double.
+
+V2.04.12.23 Recorrer el HashMap Por otra parte, hay que destacar la manera de recorrer los datos del HashMap. Para ello, como se puede observar, utilizaremos una variante del bucle for (conocida en otros lenguajes como foreach) que permite recorrer de forma óptima el HashMap.
+
+Para ello usamos el método keySet() que devuelve el conjunto de CLAVES de nuestro HashMap en forma de tipo de dato Set. Luego ya podemos acceder al VALOR de cada uno de nuestros datos en el HashMap a partir de su CLAVE. Más información de la interfaz Map y sus clases
+
+https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Map.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/HashMap.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/TreeMap.html https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedHashMap.html
+
+### 3. La clase Collections
+
+Una vez estudiados los principales TAD y las estructuras dinámicas (Colecciones) que ofrece Java para su uso, es conveniente presentar una clase que resultará bastante útil para manipular dichas estructuras. Esta clase se conoce como Collections. La clase Collections está formada por un conjunto de métodos (recuerda, funciones en Java) que son estáticos (al igual por ejemplo que la clase Math). Por tanto, al ser estáticos no hace falta instanciar (crear con new) la clase Collections.
+
+Los métodos más destacados de la clase Collections son: • sort(): recibe como parámetro un objeto de tipo List (ArrayList por ejemplo) y ordena sus elementos. • reverse(): recibe como parámetro un objeto de tipo List (ArrayList por ejemplo) e invierte el orden de sus elementos.
+
+• shuffle(): recibe como parámetro un objeto de tipo List (ArrayList por ejemplo) y mezcla aleatoriamente sus elementos, es decir, como en una baraja de cartas. • max(): recibe como parámetro cualquier objeto de tipo Collection (cualquiera de los que hemos estudiado) y devuelve el máximo del orden natural de los valores que contiene dicha colección.
+
+• min(): recibe como parámetro cualquier objeto de tipo Collection (cualquiera de los que hemos estudiado) y devuelve el mínimo del orden natural de los valores que contiene dicha colección.
+
+V2.04.12.23 Nota No confundir la clase Collections con Collection.
+
+#### 3.1. Uso de la clase Collections
+
+A continuación, un ejemplo de uso de la clase Collections
+
+Observa que necesitamos importar las clase Collections del paquete java.util. Por otra parte, fíjate que en el caso del método sort no hace falta guardar la lista ordenada en otra lista, es decir, la lista que recibe como parámetro la modifica directamente. Sin embargo, el método max sí que devuelve un objeto: en este caso como tenemos tipos de datos Integer dentro de la lista, debemos guardar el valor devuelto en una variable de tipo Integer.
+
+De todas formas, habrá que leer la documentación oficial para consultar los parámetros que recibe y lo que devuelve cada método. Más información de la clase Collections y sus métodos: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Collections.html
+
+V2.04.12.23
+
+### 4. Diagrama de decisión para el uso de Colecciones de Java
+
+Diagrama de decisión para uso de Colecciones en Java
+
+### 5. Bibliografía
+
+Documentación oficial: https://docs.oracle.com/en/java/javase/17/docs/api/index.html Web w3schools.com Librerías de clases útiles: Apuntes de José Chamorro del CFGS DAW del .
+
+---
+
+# 6.2 Estructuras de datos dinamicas
+
+Programación
+
+### UD 6: Estructuras de datos dinámicas
+
+Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
+
+Programación
+
+### UD 7: Estructuras de datos dinámicas
+
+Estructuras de datos dinámicas 1.- Estructuras de datos dinámicas 2.- ¿Qué son las colecciones? 3.- Tipos de colecciones Java 3.1.- Set 3.2.- List 3.3.- Map 3.4.- Queue 3.5.- Stack
+
+1.- Estructuras de datos dinámicas Programación
+
+1.- Estructuras de datos dinámicas Empecemos recordando que un dato de tipo simple, no esta compuesto de otras estructuras, que no sean los bits, y que por tanto su representación sobre el ordenador es directa, sin embargo existen unas operaciones propias de cada tipo, que en cierta manera los caracterizan.
+
+Una estructura de datos es, a grandes rasgos, una colección de datos (normalmente de tipo simple) que se caracterizan por su organización y las operaciones que se definen en ellos. Llamaremos dato de tipo estructurado a una entidad, con un solo identificador, constituida por datos de otro tipo, de acuerdo con las reglas que definen cada una de las estructuras de datos.
+
+Los datos estructurados se pueden clasificar según la variabilidad de su tamaño durante la ejecución del programa en: estáticos y dinámicos. Programación
+
+1.- Estructuras de datos dinámicas Estructuras de datos estáticas Las estructuras estáticas son aquellas en las que el tamaño ocupado en memoria se define con anterioridad a la ejecución del programa que los usa, de forma que su dimensión no puede modificarse durante la misma (p.e., un vector o una matriz) aunque no necesariamente se tenga que utilizar toda la memoria reservada al inicio (en todos los lenguajes de programación las estructuras estáticas se representan en memoria de forma contigua).
+
+> **⚠️ NOTA: Las estructuras de datos estáticas se estudian en...**
+> NOTA: Las estructuras de datos estáticas se estudian en la UD5 Estructuras de datos dinámicas Por el contrario, ciertas estructuras de datos pueden crecer o decrecer en tamaño, durante la ejecución, dependiendo de las necesidades de la aplicación, sin que el programador pueda o deba determinarlo previamente: son las llamadas estructuras dinámicas. Las estructuras dinámicas no tienen teóricamente limitaciones en su tamaño, salvo la única restricción de la memoria disponible en el computador.
+
+Programación
+
+1.- Estructuras de datos dinámicas Programación
+
+Estructuras de Datos Estáticas Simples boolean char int Compuestas vectores matrices strings archivos Dinámicas pilas colas listas árboles
+
+2.- ¿Qué son las colecciones? Programación
+
+2.- ¿Qué son las colecciones? Una colección representa un grupo de objetos. Estos objetos son conocidos como elementos. Cuando queremos trabajar con un conjunto de elementos, necesitamos un almacén donde poder guardarlos. En Java, se emplea la interfaz genérica Collection para este propósito.
+
+Programación
+
+2.- ¿Qué son las colecciones? Gracias a la interfaz Collection, podemos almacenar cualquier tipo de objeto y podemos usar una serie de métodos comunes, como pueden ser: Añadir Eliminar Obtener el tamaño de la colección etc. Partiendo de la interfaz genérica Collection extienden otra serie de interfaces genéricas.
+
+Estas subinterfaces aportan distintas funcionalidades sobre la interfaz anterior. Programación
+
+3.- Tipos de colecciones Programación
+
+3.- Tipos de colecciones Tipos de colecciones en Java: Set HashSet TreeSet LinkedHashSet List ArrayList Vector LinkedList Map HashMap TreeMap LinkedHashMap Queue PriorityQueue Stack Programación
+
+3.- Tipos de colecciones Diagrama de Clases e Interfaces completa del lenguaje de programación Java. Programación
+
+3.- Tipos de colecciones 3.1.- Set: La interfaz Set define una colección que no puede contener elementos duplicados. Esta interfaz contiene, únicamente, los métodos heredados de Collection añadiendo la restricción de que los elementos duplicados están prohibidos. Para comprobar si los elementos son elementos duplicados o no lo son, es necesario que dichos elementos tengan implementada, de forma correcta, los métodos equals y hashCode.
+
+Para comprobar si dos Set son iguales, se comprobarán si todos los elementos que los componen son iguales sin importar el orden que ocupen dichos elementos. Dentro de la interfaz Set existen los siguientes tipos de implementaciones realizadas dentro de la plataforma Java
+
+HashSet TreeSet LinkedHashSet Programación
+
+3.- Tipos de colecciones HashSet: Esta implementación almacena los elementos en una tabla hash. Es la implementación con mejor rendimiento de todas pero no garantiza ningún orden a la hora de realizar iteraciones. Es la más empleada debido a su rendimiento y a que, generalmente, no nos importa el orden que ocupen los elementos.
+
+Proporciona tiempos constantes en las operaciones básicas siempre y cuando la función hash disperse de forma correcta los elementos dentro de la tabla hash. Es importante definir el tamaño inicial de la tabla ya que este tamaño marcará el rendimiento de esta implementación.
+
+Programación
+
+3.- Tipos de colecciones TreeSet: Esta implementación almacena los elementos ordenados en función de sus valores. Es bastante más lento que HashSet. Los elementos almacenados deben implementar la interfaz Comparable. Esta implementación garantiza, siempre, un rendimiento de log(N) en las operaciones básicas, debido a la estructura de árbol empleada para almacenar los elementos.
+
+Programación
+
+3.- Tipos de colecciones LinkedHashSet: Esta implementación almacena los elementos en función del orden de inserción. Es, simplemente, un poco más costosa que HashSet.
+
 ```java
-while(linea != null) {
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+public class LinkedHashSet_Ejemplo {
+public static void main(String[] args) {
+LinkedHashSet<String> set = new LinkedHashSet();
+set.add("Uno");
+set.add("Dos");
+set.add("Tres");
+set.add("Uno");
+set.add("Cuatro");
+Iterator<String> i=set.iterator();
 ```
 
-// procesar el texto de la línea
+while (i.hasNext()) {
 
 ```java
-linea = reader.readLine();
+System.out.println(i.next());
 }
-reader.close();
 }
-catch(FileNotFoundException e) {
-```
-
-// no se encontró el fichero }
-
-```java
-catch(IOException e) {
-```
-
-// algo fue mal al leer o cerrar el fichero } *Este punto se verá de manera más detallada en la UD10 - Lectura y escritura de información Programación
-
-7.− Entrada desde teclado Programación
-
-7.− Entrada desde teclado La clase Scanner de Java provee métodos para leer valores de entrada de varios tipos y está localizada en el paquete java.util. Los valores de entrada pueden venir de varias fuentes, incluyendo valores que se entren por el teclado o datos almacenados en un archivo.
-
-Tenemos que crear un objeto de la clase Scanner asociado al dispositivo de entrada. Si el dispositivo de entrada es el teclado escribiremos
-
-```java
-Scanner teclado = new Scanner(System.in);
-```
-
-Se ha creado el objeto teclado asociado al teclado representado por System.in Una vez hecho esto podemos leer datos por teclado. Programación
-
-7.− Entrada desde teclado Programación
-
-Principales constructores y métodos de la clase Scanner public Scanner (InputStream source) Crea un nuevo Scanner a partir de un flujo de entrada de datos como es el caso de System.in (para poder leer desde teclado).
-
-```java
-public String next ()
-public String next (String pattern)
-```
-
-Obtiene el siguiente elemento leído del teclado como un String (si coincide con el patrón especificado). Lanza NoSuchElementException si no quedan más elementos por leer.
-
-```java
-public String nextLine ()
-```
-
-Se lee el resto de línea completa, descartando el salto de línea. Devuelve el resultado como un String. Lanza NoSuchElementException si no quedan más elementos por leer.
-
-```java
-public int nextInt ()
-```
-
-public long nextLong () public short nextShort () public byte nextByte () public float nextFloat () public double nextDouble ()
-
-```java
-public boolean nextBoolean ()
-```
-
-Devuelve el siguiente elemento como un int siempre que se trate de un int. Ídem para long, short, byte, float, double y boolean. Lanza InputMismatchException en caso de no poder obtener un valor del tipo apropiado. Lanza NoSuchElementException si no quedan más elementos por leer.
-
-```java
-public boolean hasNext ()
-```
-
-Devuelve true si queda algún elemento por leer.
-
-```java
-public boolean hasNextLine ()
-```
-
-Devuelve true si queda alguna línea por leer.
-
-```java
-public boolean hasNextInt ()
-public boolean hasNextLong ()
-public boolean hasNextShort ()
-public boolean hasNextByte ()
-public boolean hasNextFloat ()
-public boolean hasNextDouble ()
-public boolean hasNextBoolean ()
-```
-
-Devuelve true si el siguiente elemento a obtener se puede interpretar como un int. Ídem para long, short, byte, float, double y boolean. public Scanner useLocale (Locale l) Establece la configuración local del Scanner a la configuración especificada por el Locale l.
-
-7.− Entrada desde teclado Ejemplo
-
-```java
-Scanner sc = new Scanner(System.in);
-int numClase;
-String nombre;
-```
-
-double nota;
-
-```java
-System.out.println("Introduce el número de clase:");
-numClase = sc.nextInt();
-```
-
-//NOTA: esta línea es para capturar el retorno de carro
-
-```java
-sc.nextLine();
-System.out.println("Introduce el nombre del alumno:");
-nombre = sc.nextLine();
-System.out.println("Introduce la nota del exámen:");
-nota = sc.nextDouble();
+}
 ```
 
 Programación
 
-8.− Salida a pantalla Programación
-
-8.− Salida a pantalla Salida por pantalla
+3.- Tipos de colecciones Comparación Colecciones Set
 
 ```java
-System.out.println
+final Set<Integer> hashSet = new HashSet<Integer>(1_000_000);
+final Long startHashSetTime = System.currentTimeMillis();
+for (int i = 0; i < 1_000_000; i++) {
+hashSet.add(i);
+}
+final Long endHashSetTime = System.currentTimeMillis();
+System.out.println("Time spent by HashSet: " + (endHashSetTime - startHashSetTime));
+final Set<Integer> treeSet = new TreeSet<Integer>();
+final Long startTreeSetTime = System.currentTimeMillis();
+for (int i = 0; i < 1_000_000; i++) {
+treeSet.add(i);
+}
+final Long endTreeSetTime = System.currentTimeMillis();
+System.out.println(“Time spent by TreeSet: ” + (endTreeSetTime - startTreeSetTime));
+final Set<Integer> linkedHashSet = new LinkedHashSet<Integer>(1_000_000);
+final Long startLinkedHashSetTime = System.currentTimeMillis();
+for (int i = 0; i < 1_000_000; i++) {
+linkedHashSet.add(i);
+}
+final Long endLinkedHashSetTime = System.currentTimeMillis();
+System.out.println("Time spent by LinkedHashSet: " + (endLinkedHashSetTime - startLinkedHashSetTime));
 ```
 
-```java
-System.out.print
-```
+Se deja al alumno la tarea de ejecutar este código e interpretar los resultados. Programación
 
-Salida por pantalla formateada
+3.- Tipos de colecciones 3.2.- List: La interfaz List define una sucesión de elementos. A diferencia de la interfaz Set, la interfaz List sí admite elementos duplicados. A parte de los métodos heredados de Collection, añade métodos que permiten mejorar los siguientes puntos
 
-```java
-System.out.printf
-```
+- Acceso posicional a elementos: manipula elementos en función de su posición en la
+
+lista.
+
+- Búsqueda de elementos: busca un elemento concreto de la lista y devuelve su
+
+posición.
+
+- Iteración sobre elementos: mejora el Iterator por defecto.
+- Rango de operación: permite realizar ciertas operaciones sobre rangos de elementos
+
+dentro de la propia lista. Dentro de la interfaz List existen los siguientes tipos de implementaciones realizadas dentro de la plataforma Java: ArrayList Vector LinkedList Programación
+
+3.- Tipos de colecciones ArrayList: Esta es la implementación típica. Se basa en un array redimensionable que aumenta su tamaño según crece la colección de elementos. Es la que mejor rendimiento tiene sobre la mayoría de situaciones. Vector: Vector implementa la interfaz List.
+
+Al igual que ArrayList, también mantiene el orden de inserción. Programación
+
+3.- Tipos de colecciones ArrayList (métodos más utilizados): Programación
+
+MÉTODO DESCRIPCIÓN size() Devuelve el número de elementos (int) add(X) Añade el objeto X al final. Devuelve true. add(posición, X) Inserta el objeto X en la posición indicada. get(posicion) Devuelve el elemento que está en la posición indicada. remove(posicion) Elimina el elemento que se encuentra en la posición indicada. Devuelve el elemento eliminado.
+
+remove(X) Elimina la primera ocurrencia del objeto X. Devuelve true si el elemento está en la lista. clear() Elimina todos los elementos. set(posición, X) Sustituye el elemento que se encuentra en la posición indicada por el objeto X. Devuelve el elemento sustituido.
+
+contains(X) Comprueba si la colección contiene al objeto X. Devuelve true o false. indexOf(X) Devuelve la posición del objeto X. Si no existe devuelve -1 Los puedes consultar todos en: https://docs.oracle.com/javase/9/docs/api/java/util/ArrayList.html
+
+3.- Tipos de colecciones LinkedList: Esta implementación permite que mejore el rendimiento en ciertas ocasiones. Esta implementación se basa en una lista doblemente enlazada de los elementos, teniendo cada uno de los elementos un puntero al anterior y al siguiente elemento.
 
 Programación
 
-8.− Salida a pantalla Imprimir números enteros con System.out.printf
+3.- Tipos de colecciones 3.3.- Map: La interfaz Map asocia pares de claves y valores. Esta interfaz no puede contener claves duplicadas y; cada una de dichas claves, sólo puede tener asociado un valor como máximo. Dentro de la interfaz Map existen los siguientes tipos de implementaciones realizadas dentro de la plataforma Java
 
-…
+HashMap TreeMap LinkedHashMap Programación
 
-//Declaración de variables
+3.- Tipos de colecciones HashMap: Esta implementación almacena las claves en una tabla hash. Es la implementación con mejor rendimiento de todas pero no garantiza ningún orden a la hora de realizar iteraciones. Proporciona tiempos constantes en las operaciones básicas siempre y cuando la función hash disperse de forma correcta los elementos dentro de la tabla hash.
 
-```java
-int a = 8;
-int b = 3;
-int resultado = 0;
-```
+Es importante definir el tamaño inicial de la tabla ya que este tamaño marcará el rendimiento de esta implementación. Programación
 
-//%d se sustituye por la variable entera, resultado //%n indica un salto de línea
+3.- Tipos de colecciones TreeMap: Esta implementación almacena las claves ordenadas en función de sus valores. Es bastante más lento que HashMap. Las claves almacenadas deben implementar la interfaz Comparable. Esta implementación garantiza, siempre, un rendimiento de log(N) en las operaciones básicas, debido a la estructura de árbol empleada para almacenar los elementos.
 
-```java
-resultado = (a + b);
-System.out.printf(“La suma es: %d %n”, resultado);
-resultado = (a - b);
-System.out.printf("La resta es: %d %n", resultado);
-```
+Programación
 
-… Programación
+3.- Tipos de colecciones LinkedHashMap: Esta implementación almacena las claves en función del orden de inserción. Es, simplemente, un poco más costosa que HashMap. Se deja al alumno la tarea realizar una prueba de inserción en las tres implementaciones Map e interpretar los resultados.
 
-8.− Salida a pantalla Imprimir números decimales con System.out.printf
+Programación
 
-…
+3.- Tipos de colecciones 3.4.- Queue (Cola): Una cola es una estructura de datos First In First Out (FIFO). Simula una cola en la vida real. Sí, la que podrías haber visto frente a un cine, un centro comercial, un metro o un autobús. Al igual que las colas en la vida real, los elementos nuevos en una estructura de datos de cola se agregan en la parte posterior y se eliminan de la parte frontal. Una cola se puede visualizar como se muestra en la figura a continuación.
 
-//%f se sustituye por la variable decimal, res //2.6666666666666667
+Programación
 
-```java
-res = (double) a / b;
-System.out.printf("La división es: %f\n", res);
-```
+3.- Tipos de colecciones PriorityQueue: Una cola de prioridad en Java es un tipo especial de cola en el que todos los elementos se ordenan según su orden natural o se basan en un comparador personalizado suministrado en el momento de la creación. La parte frontal de la cola de prioridad contiene el menor elemento de acuerdo con el orden especificado, y la parte posterior de la cola de prioridad contiene el mayor elemento.
 
-//Se pueden imprimir diferentes variables en una misma instrucción
+Programación
 
-```java
-System.out.printf("La división entre %d y %d es igual a %f \n", a, b, res);
-```
+3.- Tipos de colecciones Queue (métodos): Programación
 
-//2,67
+MÉTODO DESCRIPCIÓN offer() Inserta un elemento al final de la cola. remove() Elimina, y devuelve, la cabeza de la cola. element() Devuelve, pero no elimina, la cabeza de la cola. add() Inserta un elemento al final de la cola. Devuelve true. pool() Elimina, y devuelve, la cabeza de la cola. Si la cola está vacía devuelve null.
 
-```java
-System.out.printf("%.2f %n",  res);
-```
+peek() Devuelve, pero no elimina, la cabeza de la cola. Si la cola está vacía devuelve null. Además de todos los métodos heredados de la clase Collection: clear, contains, isEmpty, size, … Los puedes consultar todos en: https://docs.oracle.com/javase/9/docs/api/java/util/Queue.html
 
-// 2,67
+3.- Tipos de colecciones 3.5.- Stack (Pila): Una pila es una estructura de datos Last In First Out (LIFO). Soporta dos operaciones básicas llamadas push y pop. La operación de inserción agrega un elemento en la parte superior de la pila, y la operación de apertura elimina un elemento de la parte superior de la pila.
+
+Programación
+
+3.- Tipos de colecciones Stack (métodos): Programación
+
+MÉTODO DESCRIPCIÓN empty() Devuelve True si la pila está vacía. False, en caso contrario. peek() Devuelve el elemento de la cima de la pila sin eliminarlo. pop() Elimina el elemento de la cima de la pila y lo devuelve. push() Inserta un elemento en la cima de la pila. search() Devuelve la posición del elemento en la pila.
+
+Además de todos los métodos heredados de la clase Vector: clear, contains, isEmpty, size, … Los puedes consultar todos en: https://docs.oracle.com/javase/9/docs/api/java/util/Stack.html
+
+3.- Tipos de colecciones Diagrama de decisión para uso de colecciones Java: Programación
+
+3.- Tipos de colecciones Stream API: Gracias a la llegada de Java 8, las colecciones han aumentado su funcionalidad con la llegada de los streams. Los streams permiten realizar operaciones funcionales sobre los elementos de las colecciones. A continuación, mostramos un ejemplo de las bondades de los streams donde, a partir de una lista de personas (donde cada una de ellas tiene un nombre), obtenemos una lista con todos los nombres
 
 ```java
-System.out.printf("%5.2f %n", res);
+List<Person> people = new ArrayList<Person>();
 ```
 
-// 2,667
+List<String> names
 
 ```java
-System.out.printf("%7.3f %n", res);
+= people.stream().map(Person::getName).collect(Collectors.toList());
 ```
 
-//002,667
-
-```java
-System.out.printf("%07.3f %n", res);
-```
-
-// 2,6667
-
-```java
-System.out.printf("%10.4f %n", res);
-```
-
-//2,667
-
-```java
-System.out.printf ("%5.3f %n", res);
-```
-
-// 2,66667
-
-```java
-System.out.printf ("%10.5f %n", res);
-```
-
-//0000000003
-
-```java
-System.out.printf("%010.0f %n", res);
-```
-
-… Programación
-
-8.− Salida a pantalla Imprimir texto con System.out.printf
-
-…
-
-//%s se sustituye por la variable de texto, imprime en minúsculas //%S se sustituye por la variable de texto, imprime en mayúsculas //El salto de línea se puede indicar con \n o %n
-
-```java
-String texto = "Mayor";
-```
-
-//Imprime: El resultado es Mayor
-
-```java
-System.out.printf("El resultado es: %s \n", texto);
-```
-
-//Imprime: El resultado es MAYOR
-
-```java
-System.out.printf("El resultado es: %S %n", texto);
-```
-
-… Programación
-
-8.− Salida a pantalla Uso de la clase DecimalFormat
-
-…
-
-```java
-DecimalFormat formateador = new DecimalFormat("####.####");
-```
-
-//Imprime el número pasado como parámetro con cuatro decimales, es decir: 7,1234
-
-```java
-System.out.println(formateador.format(7.12342383));
-formateador = new DecimalFormat("0000.0000");
-```
-
-//Imprime con 4 cifras enteras y 4 decimales: 0001,8200
-
-```java
-System.out.println(formateador.format (1.82));
-```
-
-//Redondeo
-
-```java
-double aa = 1.2345;
-double bb = 1.2356;
-formateador = new DecimalFormat(“#.##”);
-System.out.println(formateador.format( aa ));   // La salida es 1,23
-System.out.println(formateador.format( bb ));   // La salida es 1,24
-```
-
-//Porcentajes
-
-```java
-formateador = new DecimalFormat(“###.##%”);
-```
-
-// Imprime: 68,44%
-
-```java
-System.out.println (formateador.format(0.6844));
-```
-
-//Simbolos
-
-```java
-DecimalFormatSymbols simbolos = new DecimalFormatSymbols();
-simbolos.setDecimalSeparator(‘.’);
-formateador = new DecimalFormat(“####.####”, simbolos);
-```
-
-// Imprime: 3.4324
-
-```java
-System.out.println (formateador.format (3.43242383));
-```
-
-… Programación
+Programación
 
 Bibliografía Programación
 
-Bibliografía ✓ Aprende JAVA con ejercicios. Edición 2018. Luis José Sánchez. ✓ Empezar a programar usando Java. 2ª edición. Universitat Politècnica de València ✓ Apuntes de la asignatura Ingeniería del Software de la Universitat Politècnica de València. ✓ https://github.com/statickidz/TemarioDAW ✓ https://es.stackoverflow.com ✓ https://en.wikipedia.org/wiki/Console_application Programación
+Bibliografía Aprende JAVA con ejercicios. Edición 2018. Luis José Sánchez. Empezar a programar usando Java. 2ª edición. Universitat Politècnica de València https://github.com/statickidz/TemarioDAW https://es.stackoverflow.com Colecciones https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html https://www.callicoder.com/ Programación
 
 ---
 
-# 2.2 Colores
+# 6.3 Recursividad
+
+Programación
+
+### UD 6b: Programación estructurada
+
+- Recursividad
+
+Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
+
+Programación
+
+UD6: Programación estructurada - Recursividad Recursividad 1.- Introducción 2.- Definición de un método recursivo 3.- Resolver un problema recursivo 4.- Tipos de recursión 5.- Recursión Vs Iteración 6.- Recursividad & Vectores
+
+1.- Introducción Programación
+
+UD6: Programación estructurada - Recursividad
+
+1.- Introducción Una función recursiva es aquella que se llama a sí misma. La recursividad es una alternativa a la repetición o iteración. En tiempo de computadora y ocupación de memoria, la solución recursiva es menos eficiente que la iterativa, existen situaciones en las que la recursividad es una solución simple y natural a un problema que en otro caso será difícil de resolver.
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+2.- Definición de un método recursivo Programación
+
+UD6: Programación estructurada - Recursividad
+
+2.- Definición de un método recursivo La característica principal de la recursividad es que siempre existe un medio de salir de la definición (caso base o salida), y la segunda condición (caso recursivo) es propiamente donde se llama a sí misma. Una función recursiva simple en Java es
 
 ```java
-import java.util.Scanner;
+public void infinito()
+```
 
-public class Colores {
+{
 
-	static final int ROJO     = 1;
-	static final int VERDE    = 2;
-	static final int AMARILLO = 3;
-	static final int AZUL     = 4;
-	static final int MORADO   = 5;
-	static final int TURQUESA = 6;
-	static final int BLANCO   = 7;
-	
-	public static void main(String[] args) {
-
-		Scanner sc = new Scanner(System.in);
-		
-		boolean continuar = true;
-		int color;
-		String texto;
-		
-		while (continuar) {
-			
-			imprimirMenu();
-		
-			color = sc.nextInt(); sc.nextLine();
-		
-			if (color == 0) {
-				continuar = false;
-				System.out.println("Hasta pronto!");
-			}
-			else {
-				System.out.println("Dime el texto que quieres mostrar:");
-				
-				texto = sc.nextLine();
-				
-				System.out.println(color(color) + texto + color(BLANCO));	
-				
-				//NOTA: ver la diferncia entre la línea anterior y la comentada
-				//      comentad la linea 36 y descomentar la linea 40 para ver la diferencia
-				//System.out.println(color(color) + texto );
-			}			
-		}
-	}
-
-	public static String color(int c) {
-		
-		String color = "";
-		switch (c) {
-		case ROJO:     color = "\033[31m"; break;
-		case VERDE:    color = "\033[32m"; break;
-		case AMARILLO: color = "\033[33m"; break;
-		case AZUL:     color = "\033[34m"; break;
-		case MORADO:   color = "\033[35m"; break;
-		case TURQUESA: color = "\033[36m"; break;
-		case BLANCO:   color = "\033[37m"; break;		
-		}		
-		return color;
-	}
-	
-	public static void imprimirMenu() {
-				
-		System.out.println("Dime en que color quieres mostrar el texto:");
-		System.out.println("1.- Rojo");
-		System.out.println("2.- Verde");
-		System.out.println("3.- Amarillo");
-		System.out.println("4.- Azul");
-		System.out.println("5.- Morado");
-		System.out.println("6.- Turquesa");
-		System.out.println("0.- FIN DE PROGRAMA");
-	}
-	
+```java
+infinito();
 }
 ```
 
----
+Programación
 
-# 2.3 ClasePrintf
+UD6: Programación estructurada - Recursividad
+
+2.- Definición de un método recursivo De manera más formal, una función recursiva es invocada para solucionar un problema y dicha función sabe cómo resolver los casos más sencillo (casos bases). Donde si la función es llamada desde un caso base, ésta simplemente devuelve el resultado.
+
+Si es llamada mediante un problema más complejo, la función lo divide en dos partes conceptuales: una parte de dicha función sabe resolver y otra que no sabe resolver. Además esta segunda parte debe parecerse al problema en sí; para tener la recursividad; pero debe ser más simple.
+
+Debido a que se parece a la original la función lanza una copia de ella misma, que se encargará del problema más sencillo (llamado recursivo o paso de recursión). En esta parte se tendrá la devolución de un valor que era desconocido inicialmente. Programación
+
+UD6: Programación estructurada - Recursividad
+
+3.- Resolver un problema recursivo Programación
+
+UD6: Programación estructurada - Recursividad
+
+3.- Resolver un problema recursivo Caso base Es el caso más simple de una función recursiva, y simplemente devuelve un resultado (el caso base se puede considerar como una salida no recursiva). Caso general Relaciona el resultado del algoritmo con resultados de casos más simples. Dado que cada caso de problema aparenta o se ve similar al problema original, la función llama una copia nueva de si misma, para que empiece a trabajar sobre el problema más pequeño y esto se conoce como una llamada recursiva y también se llama el paso de recursión.
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+3.- Resolver un problema recursivo 1. Obtener una definición exacta del problema a resolver. (Esto, por supuesto, es el primer paso en la resolución de cualquier problema de programación). 2. A continuación, determinar el tamaño del problema completo que hay que resolver. Este tamaño determinará los valores de los parámetros en la llamada inicial a la función.
+
+3. Resolver el caso base en el que el problema puede expresarse no recursivamente. Por último, resolver el caso general correctamente en términos de un caso más pequeño del mismo problema, una llamada recursiva. Programación
+
+UD6: Programación estructurada - Recursividad
+
+3.- Resolver un problema recursivo Factorial de un número El factorial de un entero no negativo n, esta definido como: n! = n * (n-1) * (n-2) * … *2 *1 Donde 1! es igual a 1 y 0! se define como 1. El factorial de un entero k puede calcularse de manera iterativa como sigue
 
 ```java
-package clasesEjemplo;
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
+fact  = 1;
+```
 
-public class ClasePrintf {
+for (int i = k; i>=1; i--)
 
-	public static void main(String[] args) {
+```java
+fact *= i;
+```
 
-		//Declaración de variables
-		int a = 8;
-		int b = 3;
-		int resultado = 0;
-		double res = 0.0;		
-		
-		//1.- Imprimir números enteros
-		
-		//%d se sustituye por la variable entera, resultado
-		//%n indica un salto de línea
-		resultado = (a + b);
-		System.out.printf("La suma es: %d %n", resultado);
-		
-		System.out.printf("La suma de %d más %d es %d %n", a, b, resultado);
-		System.out.println("La suma de " + a + " más " + b + " es " + resultado);		
-		
-		resultado = (a - b);
-		System.out.printf("La resta es: %d %n", resultado);
-		resultado = (a * b);
-		System.out.printf("La multiplicación es: %d %n", resultado);
-		
-		//2.- Imprimir números decimales
+Programación
 
-		//%f se sustituye por la variable decimal, res
-		//2.6666666666666667
-		res = (double) a / b;
-		System.out.printf("La división es: %f\n", res);
+UD6: Programación estructurada - Recursividad
 
-		//Se pueden imprimir diferentes variables en una misma instrucción
-		System.out.printf("La división entre %d y %d es igual a %f \n", a, b, res);
+3.- Resolver un problema recursivo Factorial de un número Ahora de manera recursiva se puede definir el factorial como: Donde el caso base es: 1 Si n = 0. El caso general es: n * (n-1)! Si n > 0. Por ejemplo si se quiere calcular el factorial de 5, se tendría: 5! = 5*4*3*2*1 5! = 5*(4*3*2*1) 5! = 5*4!
 
-		//3.- Imprimir texto
+Programación
 
-		//%s se sustituye por la variable de texto, para que imprima en minúsculas
-		//%S se sustituye por la variable de texto, para que imprima en mayúsculas
-		//El salto de línea se puede indicar con \n o %n
-		String texto = "Mayor";		
-		System.out.printf("El resultado es: %s \n", texto);
-		System.out.printf("El resultado es: %S %n", texto);	
-		 
-		//4.- Más formatos para imprimir números decimales
-		
-		//2,67
-		System.out.printf("%.2f %n", res);		
-		// 2,67
-		System.out.printf("%10.2f %n", res);		
-		//  2,667 
-		System.out.printf("%7.3f %n", res);
-		//002,667 
-		System.out.printf("%07.3f %n", res);
-		//    2,6667 
-		System.out.printf("%10.4f %n", res);
-		//2,667 
-		System.out.printf ("%5.3f %n", res);
-		//   2,66667 
-		System.out.printf ("%10.5f %n", res);
-		//0002,66667 
-		System.out.printf ("%010.0f %n", res);
+UD6: Programación estructurada - Recursividad
 
-		System.out.println ("-------------------------------------------------");
-		
-		//5.- Uso de la clase Decimal Format
+3.- Resolver un problema recursivo Factorial de un número Programación
 
-		DecimalFormat formateador = new DecimalFormat("####.####");
-		//Imprime esto con cuatro decimales, es decir: 7,1234
-		System.out.println(formateador.format(7.12342383));
-		
-		formateador = new DecimalFormat("0000.0000");
-		//Imprime con 4 cifras enteras y 4 decimales: 0001,8200
-		System.out.println(formateador.format (1.82));
+UD6: Programación estructurada - Recursividad
 
-		//Redondeo
-		double aa = 1.2345;
-		double bb = 1.2356;
+4.- Tipos de recursión Programación
 
-		formateador = new DecimalFormat("#.##");
+UD6: Programación estructurada - Recursividad
 
-		System.out.println(formateador.format( aa ));   // La salida es 1,23
-		System.out.println(formateador.format( bb ));   // La salida es 1,24
+4.- Tipos de recursión ✓ Recursividad simple ✓ Recursividad múltiple ✓ Recursividad anidada ✓ Recursividad cruzada o indirecta Programación
 
-		//Porcentajes
-		formateador = new DecimalFormat("###.##%");
-		// Imprime: 68,44%
-		System.out.println (formateador.format(0.6844));
-				
-		//Simbolos
-		DecimalFormatSymbols simbolos = new DecimalFormatSymbols();
-		simbolos.setDecimalSeparator('.');
-		formateador = new DecimalFormat("####.####", simbolos);
-		// Imprime: 3.4324
-		System.out.println (formateador.format (3.43242383));		
+UD6: Programación estructurada - Recursividad
 
-	}
+4.- Tipos de recursión Recursividad simple Aquella en cuya definición sólo aparece una llamada recursiva. Se puede transformar con facilidad en algoritmos iterativos. Ejemplo: Factorial //Si n = 0 entonces // 0! = 1 //si n > 0 entonces // n! = n * (n-1)! = n * (n-1) * (n-2) * ... * 3 * 2 * 1
+
+```java
+private static int factorial(int n){
+if (n == 0){
+return 1;
 }
 ```
+
+else{
+
+```java
+return n * factorial(n - 1);
+}
+}
+```
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+4.- Tipos de recursión Recursividad múltiple Se da cuando hay más de una llamada a sí misma dentro del cuerpo de la función, resultando más difícil de hacer de forma iterativa. Ejemplo: Fibonacci
+
+```java
+private static int fibonacci(int n) {
+```
+
+```java
+if (n <= 1){
+```
+
+```java
+return n;
+```
+
+}
+
+else{
+
+```java
+return fibonacci(n-1) + fibonacci(n-2);
+```
+
+} } Programación
+
+UD6: Programación estructurada - Recursividad
+
+4.- Tipos de recursión Recursividad anidada En algunos de los argumentos de la llamada recursiva hay una nueva llamada a sí misma. Ejemplo: Ackerman
+
+```java
+private long ackermann(long m, long n){
+if (m == 0){
+return (n + 1);
+}else if (m > 0 && n == 0){
+return ackermann(m - 1, 1);
+```
+
+}else{
+
+```java
+return ackermann(m - 1, ackermann(m, n - 1));
+}
+}
+```
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+4.- Tipos de recursión Recursividad cruzada o indirecta Son algoritmos donde una función provoca una llamada a sí misma de forma indirecta, a través de otras funciones. Es decir es aquella en la que una función es llamada a otra función y esta a su vez llama a la función que la llamó.
+
+> **💡 Apunt Tècnic**
+> Ejemplo: Par / Impar
+
+```java
+private int par(int nump) {
+```
+
+if (nump == 0)
+
+```java
+return (1);
+return( impar(nump-1) );
+}
+private int impar (int numi) {
+```
+
+if (numi == 0)
+
+```java
+return (0);
+return( par(numi-1) );
+}
+```
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+5.- Recursión Vs Iteración Programación
+
+UD6: Programación estructurada - Recursividad
+
+5.- Recursión Vs Iteración Las principales cuestiones son la claridad y la eficiencia de la solución. En general: Una solución no recursiva es más eficiente en términos de tiempo y espacio de computadora. La solución recursiva puede requerir gastos considerables, y deben guardarse copias de variables locales y temporales.
+
+Aunque el gasto de una llamada a una función recursiva no es peor, esta llamada original puede ocultar muchas capas de llamadas recursivas internas. El sistema puede no tener suficiente espacio para ejecutar una solución recursiva de algunos problemas. Programación
+
+UD6: Programación estructurada - Recursividad
+
+5.- Recursión Vs Iteración Una solución recursiva particular puede tener una ineficiencia inherente. Tal ineficiencia no es debida a la elección de la implementación del algoritmo; más bien, es un defecto del algoritmo en si mismo. Un problema inherente es que algunos valores son calculados una y otra vez causando que la capacidad de la computadora se exceda antes de obtener una respuesta.
+
+La cuestión de la claridad en la solución es, no obstante, un factor importante. En algunos casos una solución recursiva es más simple y más natural de escribir. Programación
+
+UD6: Programación estructurada - Recursividad
+
+6.- Recursividad & Vectores Programación
+
+UD6: Programación estructurada - Recursividad
+
+6.- Recursividad & Vectores Esquemas recursivos de RECORRIDO En base a la definición de recorrido de un array a y la descomposición recursiva ascendente de a, el esquema recursivo de recorrido ascendente del array a desde una posición izq hasta una posición der, 0≤izq≤der<a.length, es el siguiente
+
+/** 0<=inicio<=der+1 y fin=der */
+
+```java
+public static void recorrerAscendente(tipoBase[] a, int inicio, int fin) {
+if (inicio>fin){
+tratarVacio();
+}
+```
+
+else {
+
+```java
+tratar(a[inicio]);
+recorrerAscendente(a, inicio+1, fin);
+}
+}
+```
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+6.- Recursividad & Vectores Esquemas recursivos de RECORRIDO donde tratarVacio() indica la operación a realizar para un (sub)array sin elementos y tratar(a[inicio]) indica la operación a realizar con el elemento que ocupa la posición inicio del array; siendo la primera llamada o llamada inicial recorrer(a, izq, der), esto es, inicialmente inicio = izq y fin = der.
+
+Nótese que si se trata de un recorrido de todos los elementos del array a, en la llamada inicial inicio = 0 y fin = a.length-1, es decir, la talla iniciales t = a.length. En este caso, es habitual deﬁnir un método público homónimo, denominado guía o lanzadera, que realiza la llamada inicial, con el ﬁn de ocultar la estructura recursiva del array a que muestran los parámetros inicio y fin de la cabecera del método recursivo recorrer anterior que ahora se deﬁne privado.
+
+```java
+public static void recorrerAscendente(tipoBase[] a) {
+```
+
+```java
+recorrerAscendente(a, 0, a.length-1);
+```
+
+} Programación
+
+UD6: Programación estructurada - Recursividad
+
+6.- Recursividad & Vectores Esquemas recursivos de RECORRIDO El esquema recursivo de recorrido descendente es el siguiente: /* inicio=izq y izq-1<=fin<a.length */
+
+```java
+public static void recorrer(tipoBase[] a, int inicio, int fin) {
+if (fin<inicio){
+tratarVacio();
+}
+```
+
+else {
+
+```java
+tratar(a[fin]);
+recorrer(a, inicio, fin-1);
+}
+}
+```
+
+donde tratarVacio() indica la operación a realizar para un (sub)array sin elementos y tratar(a[fin]) indica la operación a realizar con el elemento que ocupa la posición fin del array; siendo la llamada inicial recorrer(a,izq,der), esto es, inicialmente inicio = izq y fin = der.
+
+Nótese que, al igual que en el recorrido ascendente, si se trata de un recorrido de todos los elementos del array a, en la llamada inicial inicio = 0 y fin = a.length-1, es decir, la talla inicial es t = a.length; pudiéndose deﬁnir también, en este caso, un método guía idéntico al del esquema ascendente.
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+6.- Recursividad & Vectores Esquemas recursivos de BÚSQUEDA /* 0<=inicio<=der+1 y fin=der*/
+
+```java
+public static int buscar(tipoBase[] a, int inicio, int fin) {
+int resMetodo = -1;
+if (inicio<=fin) {  //No hacer nada  }
+```
+
+else{
+
+```java
+if (propiedad(a[inicio])){
+```
+
+```java
+resMetodo = inicio;
+```
+
+}
+
+else{
+
+```java
+resMetodo = buscar(a, inicio+1, fin);
+```
+
+} }
+
+```java
+return resMetodo;
+}
+```
+
+Programación
+
+UD6: Programación estructurada - Recursividad
+
+Bibliografía Programación
+
+UD6: Programación estructurada - Recursividad
+
+Bibliografía Programación
+
+UD6: Programación estructurada - Recursividad ✓ Aprende JAVA con ejercicios. Edición 2018. Luis José Sánchez. ✓ Empezar a programar usando Java. 2ª edición. Universitat Politècnica de València ✓ https://github.com/statickidz/TemarioDAW ✓ https://es.stackoverflow.com Recursividad https://es.wikipedia.org/wiki/Recursión Función de Ackerman https://es.wikipedia.org/wiki/Función_de_Ackermann
 
 ---

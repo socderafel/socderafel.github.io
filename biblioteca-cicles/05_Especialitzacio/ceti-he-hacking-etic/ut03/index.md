@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "UD3 — Unitat Didàctica 3 · Temari Complet"
+title: "UD3 — Auditories de Seguretat i Reconeixement Passiu · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT3 Completa"
+badge: "CE Ciberseguretat (CETI) · UD3 — Auditories de Seguretat i Reconeixement Passiu"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 tema2"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 Auditories ➡️"
 ---
 
-# 📘 UD3 — Unitat Didàctica 3 (Unitat Completa)
+# 📘 UD3 — Auditories de Seguretat i Reconeixement Passiu (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.

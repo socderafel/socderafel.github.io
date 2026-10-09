@@ -16,7 +16,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats Didàctiques (UD1 a UD6)
+## 📊 Estructura d'Unitats Didàctiques (UD1 a UD5)
 
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
@@ -24,8 +24,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 | **UD2** | **WRITER** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
 | **UD3** | **DRAW** | 1 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
 | **UD4** | **INTERNET** | 1 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UD5** | **Programació Visual amb Scratch** | 1 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UD6** | **SCRATCH BÁSICO** | 1 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
+| **UD5** | **SCRATCH BÁSICO** | 1 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
 
 ## UD1 — L'ordinador i els seus components i els sistemes operatius
 
@@ -43,7 +42,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 
 [**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Continguts i Recursos**](./ut02/ut0201.md)
+- [**2.1 Continguts Teòrics i Recursos**](./ut02/ut0201.md)
 
 ## UD3 — DRAW
 
@@ -51,7 +50,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 
 [**📘 Obrir UD3 Completa en una sola pàgina**](./ut03/index.md)
 
-- [**3.1 Continguts i Recursos**](./ut03/ut0301.md)
+- [**3.1 Continguts Teòrics i Recursos**](./ut03/ut0301.md)
 
 ## UD4 — INTERNET
 
@@ -59,20 +58,12 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 
 [**📘 Obrir UD4 Completa en una sola pàgina**](./ut04/index.md)
 
-- [**4.1 Continguts i Recursos**](./ut04/ut0401.md)
+- [**4.1 Continguts Teòrics i Recursos**](./ut04/ut0401.md)
 
-## UD5 — Programació Visual amb Scratch
+## UD5 — SCRATCH BÁSICO
 
 `1r ESO · UD5 · 1 apartats`
 
 [**📘 Obrir UD5 Completa en una sola pàgina**](./ut05/index.md)
 
-- [**5.1 Continguts i Recursos**](./ut05/ut0501.md)
-
-## UD6 — SCRATCH BÁSICO
-
-`1r ESO · UD6 · 1 apartats`
-
-[**📘 Obrir UD6 Completa en una sola pàgina**](./ut07/index.md)
-
-- [**6.1 Continguts i Recursos**](./ut07/ut0701.md)
+- [**5.1 Continguts Teòrics i Recursos**](./ut05/ut0501.md)

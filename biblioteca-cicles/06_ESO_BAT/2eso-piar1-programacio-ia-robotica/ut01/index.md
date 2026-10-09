@@ -2,11 +2,11 @@
 layout: default
 title: "UD1 — Scratch · Temari Complet"
 course_root: ".."
-badge: "2n ESO · UT1 Completa"
+badge: "2n ESO · UD1 — Scratch"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
-next_label: "1.1 Continguts i Recursos ➡️"
+next_label: "1.1 Continguts Teòrics i Recursos ➡️"
 ---
 
 # 📘 UD1 — Scratch (Unitat Completa)
@@ -16,11 +16,11 @@ next_label: "1.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**1.1 Continguts i Recursos**](./ut0101.md)
+- [**1.1 Continguts Teòrics i Recursos**](./ut0101.md)
 
 ---
 
-# 1.1 Continguts i Recursos
+# 1.1 Continguts Teòrics i Recursos
 
 > **🔗 Recurs Web: 1. Scratch: Conceptos básicos. Interfaz de usuario**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/progvisual/scratchbasico_v20es/01concepbas_interfaz.php) ↗️**](https://www.tuinstitutoonline.com/cursos/progvisual/scratchbasico_v20es/01concepbas_interfaz.php)
@@ -86,13 +86,5 @@ next_label: "1.1 Continguts i Recursos ➡️"
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/progvisual/scratchbasico_v20es/13miscelanea.php) ↗️**](http://www.tuinstitutoonline.com/cursos/progvisual/scratchbasico_v20es/13miscelanea.php)
 >
 > 13. Scratch: Miscelánea
-
-> **📌 🏷️ Apunt de la Unitat**
-> **EXAMEN**
-
-> **🔗 Recurs Web: 1. Scratch: Examen. Saltador. Números en movimiento**
-> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/progvisual/scratchbasico_v20es/ex01saltadornumeros.php) ↗️**](http://www.tuinstitutoonline.com/cursos/progvisual/scratchbasico_v20es/ex01saltadornumeros.php)
->
-> 1. Scratch: Examen. Saltador. Números en movimiento
 
 ---

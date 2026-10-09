@@ -2,7 +2,7 @@
 layout: default
 title: "UD3 — Advanced PHP · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT3 Completa"
+badge: "2n DAW · Grau Superior · UD3 — Advanced PHP"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 U2 Basic PHP"
 next_url: "../ut03/ut0301.html"
@@ -22,17 +22,11 @@ next_label: "3.1 U3 Advanced PHP ➡️"
 
 # 3.1 U3 Advanced PHP
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Resources
-
 > **🔗 Recurs Web: Libraries 1**
 > [**🌐 Obrir recurs extern (https://www.cloudways.com/blog/php-libraries/) ↗️**](https://www.cloudways.com/blog/php-libraries/)
 
 > **🔗 Recurs Web: Libraries 2**
 > [**🌐 Obrir recurs extern (https://www.imaginacolombia.com/articulos/7-librerias-de-php-que-todo-desarrollador-web-deberia-conocer) ↗️**](https://www.imaginacolombia.com/articulos/7-librerias-de-php-que-todo-desarrollador-web-deberia-conocer)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Tasks
 
 ---
 

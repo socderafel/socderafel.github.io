@@ -1,192 +1,819 @@
 ---
 layout: default
-title: "UD6 — Tipus de Malware i Programari Antimalware · Temari Complet"
+title: "UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT7 Completa"
-prev_url: "../ut05/ut0501.html"
-prev_label: "⬅️ 5.1 Criptografia de clau pública"
-next_url: "../ut07/ut0702.html"
-next_label: "6.1 1 Tipus de malware ➡️"
+badge: "2n ASIX · Grau Superior · UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN"
+prev_url: "../ut06/ut0602.html"
+prev_label: "⬅️ 6.2 2 Programari anti malware"
+next_url: "../ut07/ut0701.html"
+next_label: "7.1 Segurertat en xarxes corporatives ➡️"
 ---
 
-# 📘 UD6 — Tipus de Malware i Programari Antimalware (Unitat Completa)
+# 📘 UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**6.1 1 Tipus de malware**](./ut0702.md)
-- [**6.2 2 Programari anti malware**](./ut0703.md)
+- [**7.1 Segurertat en xarxes corporatives**](./ut0701.md)
+- [**7.2 Seguretat en xarxes sense fil**](./ut0702.md)
+- [**7.3 VPN**](./ut0703.md)
 
 ---
 
-# 6.1 1 Tipus de malware
-
-TIPUS DE MALWARE
-
-MALWARE Definició: Un programa maliciós (de l'anglés malware), també conegut com a programa maligne, programa malèvol, programa malintencionat o codi maligne, és qualsevol tipus de programari que realitza accions nocives en un sistema informàtic de manera intencionada i sense el coneixement ni el permís de l'usuari.
-
-Abans que el terme malware fora encunyat,​ el programari maligne s'agrupava sota el terme «virus informàtic» (un virus és en realitat un tipus de programa maliciós).
-
-Virus de Boot Virus del sector d’arrancada Un dels primers tipus de virus conegut, el virus de boot infecta la partició d'inicialització del sistema operatiu. El virus s'activa quan la computadora és encesa i el sistema operatiu es carrega. Exemples: Form, Disk killer, Michelangelo (esborra els primers 100 sectors del disc)
-
-Time Bomb Els virus del tipus «bomba de temps» són programats perquè s'activen en determinats moments, definit pel seu creador. Una vegada infectat un determinat sistema, el virus solament s'activarà i causarà algun tipus de mal el dia o l'instant prèviament definit. Alguns virus es van fer famosos, com el «Viernes 13» i el «Michelangelo (6 de març) ». Viernes 13 destrueix els arxius .com .exe i .sys
-
-Cuc informátic / Worm En atacar la computadora, no sols es replica, sinó que també es propaga per internet enviant-se als e-mail que estan registrats en el client d'e-mail , infectant les computadores que òbriguen aquell e- mail, reiniciant el cicle. A diferència dels virus, els cucs no infecten arxius. Exemples són: “El cuc de morris” anys 80’s , “IloveYou” (destrueix fitxers de diverses extensions ,es porpaga per IRC i Outlook), Confiker (ataca SO Windows) Responsable de la creació del primer CERT
-
-Troians Uns certs virus porten en el seu interior un codi a part, que li permet a una persona accedir a la computadora infectada o recol·lectar dades i enviar-los per Internet a un desconegut, sense que l'usuari s’adone d'això. Actualment, els cavalls de Troia ja no arriben exclusivament transportats per virus, ara són instal·lats quan l'usuari baixa un arxiu d'Internet i l'executa (phishing).
-
-Exemples: Back orifice, Sub7, MEMZ,.. Hi ha molts tipus de troians !!
-
-Hijackers Els hijackers són programes o scripts que «segresten» navegadors d'Internet, principalment a Internet Explorer. Quan això passa, el hijacker altera la pàgina inicial del navegador i impedeix a l'usuari canviar-la, mostra publicitat en pop-ups o finestres noves, instal·la barres d'eines en el navegador i poden impedir l'accés a determinades webs (com a webs de programari antivirus, per exemple).
-
-Hi ha variants. IP Hijacking, Page Hijacking, Domain Hijacking, Session Hijacking,..
-
-Backdoors La paraula significa, literalment, «porta posterior» i es refereix a programes similars al cavall de Troia. Com el nom suggereix, obrin una porta de comunicació amagada en el sistema. Aquesta porta serveix com un canal entre la màquina afectada i l'intrús, que pot, així, introduir arxius malèfics en el sistema o robar informació privada dels usuaris.
-
-Exemples: Sticky Attacks, DoublePulsar, ..
-
-Virus de Macro Els virus de macro vinculen les seues accions a models de documents i a altres arxius de manera que, quan una aplicació carrega l'arxiu i executa les instruccions contingudes en l'arxiu, les primeres instruccions executades seran les del virus. Exemples: Concept, Melissa, Chanitor,..
-
-Keylogger L'Enregistrador de teclat és una de les espècies de virus existents, el significat dels termes en anglés que més s'adapta al context seria: Capturador de tecles. Quan són executats, normalment, els enregistradors de teclat queden amagats en el sistema operatiu, de manera que la víctima no té com saber que està sent monitorada.
-
-Exemples: KidLogger, BlackBox, Revealer,..
-
-Virus de Pendrive En connectar una memòria USB infectada a un equip, el malware s'executa automàticament usant la manera Auto-run que per defecte se li assigna als dispositius USB en els sistemes Windows. No intenta reproduir- se sinó més aviat es manté discretament en el dispositiu esperant que l'atacant el recupere i extraga la informació robada.
-
-Exemples: Ramnit, Conficker, ..
-
-Zombi L'estat zombi en una computadora ocorre quan és infectada i està sent controlada per tercers. Poden usar-ho per a disseminar virus , enregistradors de teclat, i procediments invasius en general. Es poden crear “exèrcits” de bots, per a després llançar atacs conjunts “DdoS”.
-
-Exemples: Metulji, Kelihos, Mariposa, Waledac, ..
-
-Virus de Ransomware El ransomware és un programa de programari maliciós que infecta la teua computadora i mostra missatges que exigeixen el pagament de diners per a restablir el funcionament del sistema. Aquest tipus de malware és un sistema criminal per a guanyar diners que es pot instal·lar a través d'enllaços enganyosos inclosos en un missatge de correu electrònic, missatge instantani o lloc web. El ransomware té la capacitat de xifrar arxius importants predeterminats amb una contrasenya.
-
-Exemples. Gameover Zeus + Cryptolocker ,WannaCry, Ryuk, Petya, Jigsaw
-
-APT Són les sigles del terme anglés Advanced Persistent Threat (Amenaça Avançada Persistent). La seua fi és comprometre un equip en concret, el qual conté informació de valor. Una APT utilitza tècniques de hacking contínues, clandestines i avançades per a accedir a un sistema i romandre allí durant un temps prolongat, amb conseqüències potencialment destructives. Exemple. Stuxnet, (que ataca a equips SCADA i PLC), Duqu, Flame, Red October
-
-RootKit Un rootkit es defineix com un conjunt de programari que permet a l'usuari un accés de "privilegi" a un ordinador, però manté la seua presència inicialment oculta al control dels administradors. Usualment, un atacant instal·la un rootkit en una computadora després de primer haver obtingut drets d'escriptura en qualsevol part de la jerarquia del sistema de fitxers (hackeig, enginyeria social,...). Exemples son TDSS, ZeroAccess, Alureon, ..
-
-Criptominat maliciós Cryptojacking: És un tipus de programa maliciós que s'oculta en un ordinador i s'executa sense consentiment utilitzant els recursos de la màquina (CPU, memòria, amplada de banda, ...) per a la mineria de criptomonedes i així obtindre beneficis econòmics. Aquest tipus de programa es pot executar directament sobre el sistema operatiu de la màquina o des de plataforma d'execució com el navegador
-
-Malware de Robatori de Criptomonedes És un programa maliciós especialment dissenyat per al robatori de criptomonedes. Per a aquesta comesa és habitual l'ús de Clipper ''malware'', (control del portaretalls i quan detecta una direcció de criptomonedes, automàticament la reemplaça per la de l'atacant. D'aquesta manera, si volem realitzar una transferència a la direcció que creiem que tenim en el portaretalls, en aquest cas, aniria a la direcció de l'atacant.42​ Altres malware, com HackBoss, se centren en robar claus de carteres de criptomonedes
-
-Rogueware És un fals programa de seguretat que no és el que diu ser, sinó que és un malware. Per exemple, falsos antivirus, antiespia, tallafocs o similar. Aquests programes solen promocionar la seua instal·lació usant tècniques de scareware, és a dir, recorrent a amenaces inexistents com, per exemple, alertant que un virus ha infectat el dispositiu. A vegades també són promocionats com a antivirus reals sense recórrer a les amenaces en la computadora.
-
-Una vegada instal·lats en la computadora, és freqüent que simulen ser la solució de seguretat indicada, mostrant que han trobat amenaces i que, si l'usuari vol eliminar-les, és necessari la versió de completa, la qual és de pagament Exemples: WinWebSec, Chameleon, FakeScanti,..
-
-DeepfakeMalware És una forma de programari maliciós que aprofita la tecnologia d'Intel·ligència Artificial per a manipular imatges i vídeos i així produir representacions molt convincents però falses de persones, situacions o esdeveniments amb una fi maliciosa com el de difondre desinformació, cometre fraus financers o realitzar ciberespionatge Tipus: Deepvoice i Deepface
-
-INDICIS D’EXISTÈNCIA DE MALWARE
-
-SOSPITA DE INFECCIÓ ✔ Equip lent, amb erros o es bloqueja, sobrecalfament, esgotament de bateria ✔ Pantalla blava «de la mort» ✔ Programes que s’obrin i tanquen automàticament ✔ Falta d’espai d’emmagatzemament ✔ Finestres emergents, barres de ferramentes i programes no desitjats ✔ Correus electrònics i missatges que s’envien sense el teu consentiment ✔ Esborrat de documents sense el teu consentiment ✔ Redirecció del navegador a pàgines desconegudes ✔ Canvi de nom de documents ( xifratge: ransomware en procés ) ✔ Processos del sistema que acaparen massa recursos (administrador de tasques)
-
-Com pot entrar la INFECCIÓ ✔ Navegació per llocs web «modificats» ✔ Fer clic en anuncis maliciosos ✔ Descarregar un arxiu infectat ✔ Instal·lar aplicacions d’un proveïdor desconegut ✔ Facilitar dades en llocs web poc fiables ( als que t’ha dirigit un enllaç sospitos )
-
-Com es pot evitar la INFECCIÓ ✔ No cliques en publicitat emergent ✔ No òbrigues documents adjunts de correu no desitjat o sospitós ✔ Manté sempre actualitzat el sistema operatiu i els navegadors (i altres programes) ✔ Presta atenció a les terminacions dels dominis (.com .es .org etc...), no habituals ✔ Descarrega i instal·la aplicacions de proveïdors coneguts (informa’t abans) ✔ No faces clic en enllaços sospitosos ✔ Utilitza dos comptes per usar el sistema ( amb privilegis i sense) ✔ Utilitza contrasenyes fortes ✔ Fes-te en un bon antivirus i fes còpies de seguretat regularment ✔ Forma’t en ciberseguretat
-
-Com es pot propagar la INFECCIÓ ✔ Correus electrònics ✔ Suports físics ✔ Alertes emergents ✔ Vulnerabilitats ✔ Portes posteriors (backdoors) ✔ Descarregues ocultes ✔ Escalada de privilegis ✔ Amenaces combinades
-
-Com es pot eliminar la INFECCIÓ ✔ Us de programes antivirus / antimalware d'escriptori ✔ Us de ferramentes especialitzades ✔ Us d’antivirus Online ✔ Us d’antimalware de rescate o Antivirus Live (arrancable des de USB / CD ) ✔ Reinstal·lant i restaurant l’última còpia de seguretat ✔ Ací radica la importància de fer còpies de seguretat !!
+# 7.1 Segurertat en xarxes corporatives
 
 ---
 
-# 6.2 2 Programari anti malware
+SEGURETAT EN XARXES CORPORATIVES
 
-PROGRAMARI ANTIMALWARE
+Amenaces i atacs a la xarxa corporativa Tipus d’atacs
 
-PROGRAMARI MALICIÓS MALWARE = MALicius softWARE Virus, cucs, troians i en general tots els tipus de programes per accedir a ordinadors sense autorització i produir efectes no desitjats. EVOLUCIÓ HISTÒRICA ➔Començaments: ◆Motivació principal dels creadors de virus: reconeixement públic ◆Quanta + rellevància tinguera el virus + reconeixement ◆Les accions a realitzar per el virus devien ser visibles per l’usuari i suficientment nociu (eg: formatar HD, eliminar fitxers …) ➔Actualment
+➔Interrupció: Integra els que produeix una falta de disponibilitat. Pot provocar que un objecte del sistema es perda, quede no utilitzable no disponible Exemples: Destrucció del maquinari, Esborrat de programes, dades, Fallades en el sistema operatiu, DoS, DDoS
 
-◆Malware com un negoci creatiu ◆Els creadors de virus han passat a tindre una motivació econòmica
+Amenaces i atacs a la xarxa corporativa
 
-PROGRAMARI MALICIÓS EVOLUCIÓ HISTÒRICA ➔1987-1999: Virus clàssics, els creadors no tenien ànim de lucre, motivació intel·lectual i protagonisme ➔ : explosió dels cucs en Internet, propagació de correu electrònic, aparició de les botnets ➔: clar ànim de lucre, professionalització del malware, explosió de troians bancaris i programes espies ➔2010… : casos avançats d’atacs dirigits, espionatge industrial i governamental, atac a infraestructures crítiques, proliferació d’infeccions en dispositius mòbils Historia del Malware Video: Malware mes devastador 1971:Creeper
+➔Interceptació: Atac contra la confidencialitat d'un sistema a través del que un programa, procés o usuari aconsegueix accedir a recursos per als quals no té autorització. És l'incident més difícil de detectar, ja que, no produeix una alteració en el sistema. Exemples: sniffing
 
-PROGRAMARI MALICIÓS ¿Cóm obtindre un benefici? ➔Robar informació sensible de l’ordinador infectat: dades personals, contrasenyes, credencials d’accés a diferents entitats, mail, banca online etc ➔Crear una xarxa d’ordinadors infectats (botnet o red zombi) L’atacant pot manipular-los tots simultàniament i vendre servicis: enviament d’spam, missatges phishing, accedir a comptes bancaris, realitzar DoS etc ➔Vendre falses solucions de seguretat (rogueware, fakeAv) Exemple: Falsos antivirus que mostren missatges amb publicitat informant que l’ordinador està infectat la infecció es el fals virus ➔Xifrar el contingut dels fitxers de l’ordinador i sol·licitar un rescat econòmic per a recuperar la informació (criptovirus o ransomware)
+Amenaces i atacs a la xarxa corporativa
 
-CLASSIFICACIÓ DEL MALWARE Clasificació clásica
+➔Fabricació o suplantació: Atac contra l'autenticitat mitjançant el qual un atacant inserida objectes falsificats en el sistema. (adreça IP, adreça web, correu electrònic) Exemples: spoofing (suplantar la identitat) Amenaces i atacs a la xarxa corporativa
 
-Els 6 tipus de malwares que existeixen ➔Virus ◆Infecten altres arxius (com els virus reals) ◆Només poden existir dins d'un fitxer ,generalment executables (.exe, .bat...) ◆Infecten a un sistema quan s'executa el fitxer infectat ➔Cucs ◆Característica principal: realitzar el màxim núm. de còpies possibles de si mateix per a facilitar la seva propagació. No infecta altres programes.
+➔Modificació: Atac contra la integritat d'un sistema a través del qual es manipula. Aquests atacs solen ser els més nocius, ja que pot eliminar part de la informació, deixar alguns dispositius inutilitzables, alterar els programes perquè funcionin de manera diferent..
 
-◆Mètodes de propagació: correu electrònic, arxius falsos descarregats P2P, missatgeria instantània etc ➔Troia ◆Codi amb capacitat de crear una porta posterior (backdoor) que permet l'administració remota d'un usuari no autoritzat ◆Formes d'infecció: en visitar una web maliciosa, descarregat per un altre malware, dins de programes que simula ser inofensiu etc
+Exemples: pharming (redirigir a atre domini de forma fraudulenta)
 
-CLASSIFICACIÓ DEL MALWARE ➔spyware ◆S'instal·la per si sol o mitjançant la interacció d'un altre programa. Solen treballar d'amagat. ◆Finalitat: monitoren i recopilen informació de les accions d'usuari, el contingut del disc dur, les aplicacions instal·lades ➔adware ◆No danya els ordenadors ◆Finalitat: mostrar anuncis mentre es navega per Internet o s'executen aplicacions ◆Alguns poden enviar dades personals (spyware) ➔ransomware ◆Segresta les dades d'un ordinador per a demanar un rescat ◆Xifren les dades i demanen un rescat per la clau per a desxifrar-los ◆Entra en l'ordinador a través d'una altra mena de malware Activitat :busca un exemple de cadascun dels tipus de virus
+Amenaces i atacs a la xarxa corporativa
 
-CLASSIFICACIÓ DEL MALWARE Classificacions genèriques que engloben diversos tipus de malware ➔Lladres d’informació (infostealers) ◆Roben informació de l’equip infectat ◆Capturadors de pulsacions de teclat (keyloggers), espia d’hàbits d’ús d’informació (spyware) i lladres de contrasenyes (PWstealer) ➔Códi delictiu (crimeware) ◆Realitzen una acció delictiva amb fins lucratius ◆Lladres de contrasenyes bancaries(phishing) propagats por spam amb clickers a falses pàgines bancaries, estafes electròniques (scam), venda de falses eines de seguretat (rogueware), portes de darrere (backdoor) o xarxes zombies (botnets) ➔Greyware (o grayware) ◆Inofensiu. Realitzen alguna acció que no es nociva, sols molesta o no desitjable ◆Visualització de publicitat no desitjada (adware), espies (spyware) que roben informació de costums d’usuari per a publicitat (págines per les que naveguen,temps que naveguen…) bromes(joke) y bulos (hoax)
+Vulnerabilitats TCP/IP (Nivells 1 y 2 de OSI) ➔El primer nivell de vulnerabilitats és l'accés físic a la cambra de telecomunicacions, cablejat físic o els equips que intervenen en la comunicació ➔Problemes: disponibilitat, confidencialitat i control d'accés ➔Exemples. Bucle físic, desconnexió de dispositius, desbordament taula CAM en switch Mesures de seguretat ➔Fortificar accés a cambra de comunicacions ➔Activar STP ➔Link aggregation (bond) entre switch, o entre servidors i switch ➔Crear VLANS, Vlan d'administració.
 
-CLASSIFICACIÓ DEL MALWARE ●BotNets: Botnet és el nom genèric que denomina a qualsevol grup d'ordinadors infectats i controlats per un atacant de manera remota ●Ordenadors Zombis vore video ●/servicio-antibotnet ●https://youtu.be/S-8tfS0uK98
+➔Activar i configurar Seguretat de ports en switch
 
-CLASSIFICACIÓ DEL MALWARE 2016: Distribució de malware sobre el S.O. Windows.
+Vulnerabilitats TCP/IP (Nivell 3 OSI) ➔El principal problema és l'escolta de paquets no autoritzats de paquets IP ➔El segon problema és el de la suplantació d'adreces IP ➔Un tercer atac és l'enverinament de les taules d’ARP , que permet la suplantació de les adreces MAC Mesures de seguretat ➔Utilitzar protocols segurs (ssh) ➔Deshabilitar / impedir protocols insegurs ( telnet) ➔Monitorar trànsit arp. Arpwatch
 
-CLASSIFICACIÓ DEL MALWARE ENISA Threat Landscape 2023
+Vulnerabilitats TCP/IP (Nivell 4 OSI) ➔Els principals problemes s'associen amb la intercepció dels ports UDP i TCP ➔L'obertura de ports indiscriminada o la seva falta de protecció mitjançant tallafocs pot donar lloc a l'exposició pública de serveis que poden ser atacats mitjançant força bruta ➔La cerca de ports oberts sol fer-se mitjançant utilitats d'escaneig de xarxa
 
-CLASSIFICACIÓ DEL MALWARE Windows és el sistema operatiu més atacat no perquè siga el més senzill de vulnerar, sinó perquè és el més usat, per la qual cosa hi ha més probabilitats d'èxit per als cibercriminals 2021: https://www.unocero.com/software/sistemas-operativos-mas-atacados-por-ransomware-2021/
+Vulnerabilitats TCP/IP (Nivells 5 a 7 OSI) ➔Presenta problemes associats als serveis de xarxa i a l'autenticació de les dades ➔Problemes més comuns: ◆Enverinament de les caus DNS ◆Suplantació del servidor DNS ◆Inseguretat de protocols no xifratges que transporten contrasenyes com ftp ◆Vulnerabilitats específiques del protocol *htttp associades a la construcció d'URL’s per exemple la injecció de codi Mesures de seguretat ➔Utilitzar contrasenyes fortes ➔Mantenir equips actualitzats ( firmware encaminadors ) ➔Configurar opcions de seguretat en els encaminadors i APs
 
-CLASSIFICACIÓ DEL MALWARE
+Exemples d’atacs a xarxes TCP/IP Email extractor Eina que permet obtenir les adreces d’email d'un lloc web ( informació pública !) ● Descarrega el executable de https://emailextractorpro.com/ ● Comprova quants emails estan disponibles en el lloc gva.es ● Comprova quants emails estan disponibles www.mujerhoy.com ● Comprova quants emails estan disponibles marca.com
 
-CLASSIFICACIÓ DEL MALWARE
+WireShark Eina que permet obtenir els paquets que circulen per la xarxa. ● Descarrega el executable de https://www.wireshark.org/ ● Comprova com pots llegir els paquets que circulen por la xarxa ● Comprova com pots llegir una contrasenya introduïda en una pàgina http Nota: El Wireshark té mòduls per a escoltar en xarxes WiFi , GSM, o Radiofreqüència Exemples d’atacs a xarxes TCP/IP Compte amb la segmentació del switch !!
 
-CLASSIFICACIÓ DEL MALWARE
+Arp poisoning ARP (Address Resolution Protocol) En les xarxes broadcast tots els dispositius llancen peticions arp de broadcast per a trobar les direccions MAC de xarxa. El funcionament ARP és: ◆Quan una màquina necessita comunicar amb una altra mira en la seva taula ARP ◆Si no està llança una petició ARP_request a la xarxa ◆Totes les màquines comparen amb la seva IP ◆Si la IP coincideix respon al ARP_request amb la seva IP i la seva MAC ◆La màquina que llança la petició guarda el parell IP i l'adreça MAC en la seva taula Exemples d’atacs a xarxes TCP/IP
 
-MÈTODES D’INFECCIÓ Com arriba a l'ordinador el malware i com prevenir-los? ➔Explotant una vulnerabilitat software Desenvolupadors de malware aprofiten vulnerabilitats de versions de SOTA o programes per a prendre el control. Solució: Actualitzar versions periòdicament ➔Enginyeria social Tècniques d'abús de confiança per a fer que l'usuari realitzi una determinada acció, generalment busca el benefici econòmic. Solució: Preparar a les persones per evitar estes tècniques.
+Arp poisoning Un ARP Spoofing és un atac en el qual un atacant envia missatges falsificats ARP (Address Resolution Protocol) a una LAN. Com a resultat, l'atacant vincula la seva adreça MAC amb l'adreça IP d'un equip legítim (o servidor) en la xarxa Si l'atacant va aconseguir vincular la seva adreça MAC a una adreça IP autèntica, començarà a rebre qualsevol dada que es pot accedir mitjançant l'adreça IP.
 
-➔Per un arxiu maliciós Arxius adjunts en spam, execució d'aplicacions web, arxius de descàrrega P2P, generadors de claus i cracks de SW pirata etc
+Sol ser una fase de l’atac MitM Exemples d’atacs a xarxes TCP/IP
 
-Solució: Preparar a les persones per evitar detectar-los
+MitM (Man -in -the -Middle) L'atacant crea una connexió entre les víctimes i controlant la comunicació. Les víctimes creuen que es comuniquen entre elles ¿Qué es DNS poisoning? Exemples d’atacs a xarxes TCP/IP
 
-+ Instal·lació de programari antimalware p.e. RDP p.e. Phishing p.e. Adjunt
+El ataque de denegació de servei DoS (Denial of Service) L'objectiu principal és impedir l'ús legítim del sistema atacat per part d'usuaris no autoritzats. Sol produir-se perquè l'atacant provoca un excessiu consum de recursos del servidor La defensa es realitza bloquejant l’adreça IP de l’atacant Exemples d’atacs a xarxes TCP/IP
 
-MÈTODES D’INFECCIÓ Com arriba a l'ordinador el malware i com prevenir-los? ➔Dispositius extraïbles Molts cucs deixen còpies en dispositius extraïbles, que mitjançant l'execució automàtica quan el dispositiu es connecta a un ordinador, poden executar-se i infectar el nou equip i a nous dispositius que es connectin ➔Cookies malicioses Petits fitxers de text en carpetes temporals del navegador en visitar pàgines web que emmagatzemen informació facilitant la navegació de l'usuari. Les cookies malicioses monitoren i registren les activitats en Internet amb finalitats maliciosos (capturar dades de l'usuari, contrasenyes d'accés a determinades webs, vendre els hàbits de navegació a empreses de publicitat etc) Prevenir la infecció resulta relativament fàcil coneixent-les
+DDoS (Distributed Denial of Service) Quan l'atacant s'amaga darrere de tota una xarxa d'atacants (xarxa de zombis o xarxa zombi) composta per sistemes infectats amb troians Exemples d’atacs a xarxes TCP/IP
 
-KEYLOGGER Revealer keylogger Programa de recuperació de pulsacions de teclat que s'executa a l'inici i es troba ocult, podent enviar notificacions remotament per FTP o email Prement CTRL+ALT+F9 es pot mostrar l'estat del registre podent veure que s'ha teclejat Recomanació: Realitzar escanejos periòdics antimalware amb una o diverses eines actualitzades, controlar els accessos físics i limitar els privilegis dels comptes d'usuaris per a evitar instal·lacions no desitjades
+Exemples d’atacs a xarxes TCP/IP Tipus d’atacs DDoS ➔Net Flood: S'organitzen atacs massius des de diferents punts de la xarxa mitjançant zombis. Amb la tecnologia actual, contra aquest atac es pot fer poc. ➔Connection flood:Tots els serveis orientats a connexió suporten un nombre de connexions simultànies L'atacant intenta esgotar amb connexions il·legítimes. En la connexions TCP/IP es pot conèixer la IP de l'atacant indicant al tallafocs que la bloquegi ➔Syn Flood: Es tracta d'esgotar els recursos del sistema atacat mitjançant connexions semiobertes. Es pot evitar mantenint el sistema actualitzat ➔Atac Smurf i atac Fraggle ➔Atac teardrop Com fer un atac DDoS? (2)
 
-KEYLOGGER Activitat: ● Instal·lar la extensió de navegador Revealer keylogger i comprovar que i com funciona ● Revisar les opcions de configuració i seguretat ● Busca i instal·la un antimalware que detecte el keylogger ● Desinstal·la el keylogger Activitat: ● Busca en internet el preu de un USB-Keylogger
+Exemples d’atacs a xarxes TCP/IP
 
-KEYLOGGER Activitat: Provar eina SpyShelter https://www.spyshelter.com/
+Exemples d’atacs a xarxes mòbils Atac d’estació base falsa ➔Milions de subscriptors en el món continuen fent ús de GSM cada dia i la pràctica totalitat dels terminals mòbils 3G són compatibles amb 2G. GSM és molt feble en qüestió de seguretat ➔Atac ‘IMSI catcher’ ➔Atac: localització geogràfica ➔Atac: denegació de servei ➔Atac: «Downgrade selectiu» . Obliga a utilitzar 2G ➔Atac: SIM Swaping
 
-CLASSIFICACIÓ DEL PROGRAMARI ANTIMALWARE ➔Les eines antimalware es troben més desenvolupades per a entorns més utilitzats per usuaris no experimentats i, per tant més vulnerables (p.e. entorns Windows ➔Cada vegada és major el nombre d'infeccions en arxius allotjats en servidors GNU/Linux i aplicacions cada vegada més usades, per exemple el navegador Mozilla Firefox
+Exemples d’atacs a xarxes Bluetooth Atac a Bluetooth ➔Atac: BIAS ➔Atac: BLESA ➔Atac: KNOB ➔Atac: BLURtooth ➔Bluejacking ➔Bluedebugging ➔Bluesnarfing
 
-PROTECCIÓ I DESINFECCIÓ
+Amenaces internes i externes Les amenaces de seguretat causades per intrusos en xarxes corporatives o privades d'una organització, poden originar-se tant de manera interna com externa: Amenaça externa o d’accés remot: ➔Són atacants externs a la xarxa privada o interna de l'organització. Es introdueixen des de xarxes públiques.
 
-PROTECCIÓ I DESINFECCIÓ Recomanacions de seguretat ➔Mantín-te informat sobre les novetats i les alertes de seguretat. ➔Mantingues actualitzat el teu equip, sistema operatiu i aplicacions. ➔Fes còpies de seguretat amb una certa freqüència, guarda-les en un lloc i suport segur ➔Utilitza programari legal, que sol oferir major garantia i suport.
+➔Els objectius d'atacs són servidors i encaminadors accessibles des de l'exterior, i que serveixen de passarel·la d'accés a la xarxa corporativa. ➔La protecció d'aquesta mena d'amenaces es veurà en una altra unitat: Seguretat perimetral.
 
-➔Utilitza contrasenyes fortes en tots els serveis ➔Crea diferents usuaris en el teu sistema, cada un d'ells amb els permisos mínims necessaris per a poder realitzar operacions permeses ➔Utilitza eines de seguretat antimalware actualitzades periòdicament ➔Analitza el sistema de fitxers amb diverses eines antimalware per a contrastar ➔Realitzar periòdicament escaneig de ports, test de velocitat de les connexions de xarxa per a analitzar si les aplicacions que els empren són autoritzades ➔No fiar-se de totes les eines antimalware, Ull amb el rogueware ➔Accedir a serveis d'Internet que ofereixin seguretat (HTTPS) i comprova el certificat
+Amenaça interna o corporativa: ➔Els atacants pertanyen a la xarxa privada de l'organització o han aconseguit accés a ella. ➔Poden comprometre la seguretat i sobretot la informació i serveis de l'organització. Insiders Exfiltracions Amenaces internes i externes
 
-CONTRASENYES FORTES ●Visita la pàgina https://password.kaspersky.com/es/ i comprova la rapidesa amb la que pot ser trencada una contrasenya de longitud 4,6,8,10. ●Busca altres pàgines web que realitzen la mateixa funció ●Reflexiona: Estan gravant contrasenyes per a afegir-les a llistes de cerca?
+Elements bàsics de seguretat perimetral Perímetre de xarxa: és el límit entre la xarxa interna segura d'una organització i Internet, o qualsevol altra xarxa externa no controlada. El perímetre de la xarxa és el límit del que una organització controla. Encaminador/Router de frontera: dispositius situats entre la xarxa interna i les xarxes d'altres proveïdors que intercanvien el trànsit amb nosaltres DMZ: és una subxarxa d'àrea local (LAN) situada entre la xarxa privada d'una organització i la xarxa externa, normalment Internet.
 
-Antivirus ➔Programa informàtic dissenyat per a detectar, bloquejar i eliminar codis maliciosos ➔Els fabricants solen tenir diferents versions perquè es puguin provar els seus productes de manera gratuïta i a vegades per a poder desinfectar serà necessari comprar llicencies ➔Variants
+Bastió: Sistema que actua com a intermediari entre els usuaris de la xarxa interna d'una organització amb una altra mena de xarxes. Aquesta màquina ha d'estar especialment assegurada, però en principi és vulnerable a atacs per estar oberta a Internet, generalment proveeix un sol servei (com per exemple un servidor proxy)
 
- Antivirus d'escriptori: instal·lat com una aplicació permet el control en temps real  Antivirus en línia: aplicació web que permet mitjançant la instal·lació de *plugins en el navegador, analitzar el sistema d'arxius complet  Anàlisis de fitxers en línia: servei gratuït de fitxers sospitosos mitjançant l'ús de múltiples motors antivirus  Antivirus portable: no requereix instal·lació en el nostre sistema consumeix una petita quantitat de recursos  Antivirus Live: Permet arrencar des d'una unitat USB, CD o DVD analitzant el disc dur en cas de no poder arrencar el SOTA a causa del sistema d'arrencada estigui infectat Tasca: Busca un exemple de cada variant (gratis o de pagament) CLASSIFICACIÓ DEL PROGRAMARI ANTIMALWARE
+Encaminador de frontera L'encaminador de frontera és l'encaminador que s'instal·la en la part més externa de la xarxa corporativa, s'encarrega de comprovacions de seguretat en el trànsit d'entrada i eixida de la xarxa, una espècie de policia de trànsit entrant i sortint.
 
-Altres eines específiques: ➔Antispyware ◆Spyware = Programa espia, són aplicacions que recopilen informació del sistema per a enviar-la a través d'Internet, generalment a empreses de publicitat ◆Antispyware = Eina d'escriptori i en línia, que analitzen les nostres connexions de xarxa a la recerca de connexions no autoritzades ➔Ferramentes de bloqueig web ◆Informen de la perillositat dels llocs web que visitem ◆Diversos tipus: els que realitzen una anàlisi en línia, els que es descarrega com a extensió / plugin de la barra del navegador t els que s'instal·len com una eina d'escriptori Busca un exemple de cada ferramenta CLASSIFICACIÓ DEL PROGRAMARI ANTIMALWARE
+Bastió Històricament, se'n deia bastions a les altes parts fortificades dels castells medievals; punts que cobrien àrees crítiques de defensa en cas d'invasió, usualment tenint muralles molt fortificades, sales per a allotjar tropes, i armes d'atac a curta distància com a olles d'oli bullent per a allunyar als invasors quan ja estaven per penetrar al castell També s’anomena Dual-Homed Host
 
-Altres ferramentes específiques: ➔Ransomware ◆ransomware = el terme “ransom”, és una paraula anglesa que significa “rescat”. El ransomware és un programari d’extorsió: la seva finalitat és impedir-te usar el teu dispositiu fins que hagis pagat un rescat ◆Desxifradors de Ransomware = Eines per a recuperar arxius xifrats / segrestats per un malware de tipus ransomware Visita : https://noransom.kaspersky.com/es/ CLASSIFICACIÓ DEL PROGRAMARI ANTIMALWARE
+Firewall i DMZ Configuracions típiques d’una DMZ ARQUITECTURA FEBLE DE SUBXARXA PROTEGIDA ARQUITECTURA FORTA DE SUBXARXA PROTEGIDA
 
-ANTIVIRUS GNU/LINUX ClamAV és un antivirus que detecta troians, virus, malware i altres amenaces ➔http://www.clamav.net/ ➔Instal·lar clamAV : sudo apt install clamav ➔Actualitzar la base de dades ◆Parar el servei: sudo systemctl stop clamav-freshclam ◆Actualitzar la base de dades: $ sudo freshclam ◆Iniciar el servei: $ sudo systemctl start clamav-freshclam ➔Ejecutar l’ scan: $ clamscan -i -r /home ¿Qué signifiquen -i -r?
+DMZ TI i DMZ TO DMZ TI - Tecnologies de la Informació. Sistemes informàtics ●El servidor proxy pel qual es realitzaria la navegació a Internet. ●El servidor de correu corporatiu. ●El servidor web de la companyia. ●Honeypots DMZ TO - Tecnologies de la operació. Sistemes industrials ●Servidor de pegats ●Màquina de salt ●Historiador ●Servidor d'autenticació
 
-¿Qué es clamdtop? ¿Qué es freshclam? Scan Kali For Viruses With ClamAV
+Sistemes de detecció d’intrusos ⇒ IDS Un IDS és una eina de seguretat la funció de la qual és la de detectar o monitorar els esdeveniments ocorreguts en un sistema informàtic amb la intenció de trobar intents de comprometre la seguretat. Els IDS busquen patrons prèviament definits. Aquests patrons impliquen una activitat sospitosa sobre la xarxa o equip.
 
-ANÀLISI ANTIMALWARE LIVE Antivirus LIVE CD són un conjunt independent d'eines que es poden iniciar des d'un CD o un disc flaix USB. ➔Pot utilitzar-se per a recuperar equips que no permeten el reinici o que estiguin infectats i no puguin funcionar amb normalitat ➔GNU/Linux i eina antivirus preinstal·lada
+Gràcies a aquests patrons s'intenta dotar a la seguretat d'una capacitat de prevenció i alerta anticipada. Els IDS no estan dissenyats per a detenir els atacs sobre el Sistema informàtic
 
-LIVE CD/USB Activitat: ● Instal·lar un antivirus LIVE CD ● Tria una distribució, instal·la i prova com funciona ● https://www.lifewire.com/free-bootable-antivirus-tools-2625785
+Els IDS s'encarreguen de: ➔Vigilar el trànsit de la xarxa. ➔Examinar els paquets a la recerca de dades sospitoses. ➔Detectar les primeres fases d'una atac: ➔Anàlisi de la xarxa. ➔Escombratge de ports. Sistemes de detecció d’intrusos ⇒ IDS
 
-LA MILLOR EINA ANTIMALWARE ➔A vegades, les eines antimalware no suposen una solució a una infecció: Detecten possibles amenaces però no corregeixen el problema ◆En aquests casos, és més efectiu fer tasques de monitoratge i control a fons dels processos d'arrencada, els que es troben en execució i els arxius que facin ús de les connexions de xarxa.
+Sistemes de Prevenció d’Intrusos ⇒ IDS => IPS L’operació d’un IPS té quatre fases
 
-WINDOWS ➔Control de processos d’arrancada automàtica en l’inici: msconfig ➔Suite de ferramentes de microsoft tasques de manteniment, monitoratge i per a resoldre alguns problemes que podem trobar-nos amb Windows : sysinternals página oficial sysinternals ➔Control de connexions de xarxa amb netstat
+### 1. Identificació de l'atac
 
-¿Qué ferramenta s’ajusta millor a les meues necessitats? ➔Empreses desenvolupadores d’antimalware mostren estudis en els seus web demostrant que són millors que la seva competència ➔Usuaris que poden realitzar estudis, però la mostra de virus sol ser petita o poden malinterpretar els resultats ➔La tasa de detecció pot variar de mes a mes per el gran nombre de malware que se crea.
+### 2. Registre d'esdeveniments
 
-Cap antivirus és perfecte (no existeix el 100% de detecció) Els estudis amb més validesa, fets per empreses o laboratoris independents: ➔AV Comparatives ➔AV-Test.org ➔Virus Bulletin Els estudis perden validesa LA MILLOR EINA ANTIMALWARE
+### 3. Bloqueig de l'atac
 
-EDR o ED&R ➔Un sistema EDR, acrònim en anglès de Endpoint Detection & Response, és un sistema de protecció dels equips i infraestructures de l'empresa. Combina l'antivirus tradicional juntament amb eines de monitoratge i intel·ligència artificial per a oferir una resposta ràpida i eficient davant els riscos i les amenaces més complexes.
+### 4. Reporti als administradors i personal de seguretat
 
-ED&R - INCIBE LA MILLOR EINA ANTIMALWARE
+Sistemes de detecció d’intrusos ⇒ IDS Hi ha dos tipus d’ IDS: HIDS (Host IDS) Aquests IDS protegeixen un únic equip en la xarxa que pot ser un servidor o un equip normal. Monitoren una gran quantitat d'esdeveniments i activitats amb una gran precisió. Determinen quins processos i usuaris s'involucren en una determinada acció.
+
+Recapten informació del sistema com a fitxers, logs, recursos… per a la seva posterior anàlisi. Pràctica IDS: Instal·lar “Comodo Firewall” en Windows (HIPS)
+
+Sistemes de detecció d’intrusos ⇒ IDS NIDS (Net IDS) Protegeixen un sistema informàtic basat en xarxa. Actuen sobre la xarxa capturant i analitzant paquets de xarxa, són com sniffers connectats a la xarxa. Després analitzen els paquets capturats buscant patrons que suposin algun tipus d'atacs. Actuen mitjançant la utilització d'un dispositiu de xarxa configurat en manera promíscua (analitzen en temps real tots els paquets que circulen per la xarxa encara que no vagin dirigits a aquest determinat dispositiu).
+
+Compte amb els switch !!
+
+Sistemes de detecció d’intrusos ⇒ IDS L’arquitectura d’un IDS està formada per: ➔Font de recollida de dades: pot ser un log, un dispositiu de xarxa o el propi sistema en un HIDS. ➔Regles i filtres: s'apliquen sobre les dades per a detectar anomalies. ➔Dispositiu generador d'informes i alarmes: en alguns casos són capaços d'enviar alertes per mail o SMS.
+
+Sistemes de Detecció d’Intrusos distribuïts DIDS El servei IDS Distribuït recull totes les dades dels IDS, analitza i correlaciona tots els esdeveniments produïts en la xarxa avaluant de manera global el que ocorre en la xarxa a cada moment
+
+Consells finals Protegir la xarxa. STP, Link Aggregation, Port Security, VLAN, ... Instal·lar i configurar tallafocs. Fer un bon disseny perimetral. Activar comunicacions xifrades sempre que es puga (https, sftp, ssh, etc..) Tancar ports (serveis) no utilitzats Instal·lar un IDS Configurar ACL’s en Encaminadors i Seguretat de ports en Switch Actualitzar microprogramari (firmware) dels equips de xarxa Utilitzar eines de detecció de bootnets (OSI) Davant un incident -> CERT
+
+---
+
+# 7.2 Seguretat en xarxes sense fil
+
+XARXES SENSE FIL
+
+Introducció 1999
+
+,
+
+,
+
+En diverses empreses entre elles Com i Nokia es van unir per a crear
+
+. un mecanisme que permetera la connexió sense fil entre diferents dispositius (
+
+- ).
+
+aliança Wi Fi
+
+. Aquests dispositius no havien de ser del mateix fabricant 2000
+
+802.11
+
+L'any segons la norma IEEE b se certifica
+
+. la interoperabilitat de dispositius
+
+La família d'estàndards 802.11
+
+ha crescut des de
+
+llavors adaptant se a les necessitats de
+
+. velocitat i seguretat entre altres
+
+Estàndards 802.11
+
+Estàndards 802.11
+
+Estàndards 802.11
+
+La freqüència 2,4
+
+. GHz també la utilitzen altres tecnologies
+
+. Pot haver interferències entre aquestes tecnologies
+
+1.2
+
+Bluetooth en la seua versió es va actualitzar per a evitar aquestes . interferències
+
+802.11
+
+Amb l'estàndard ac es va optar per la freqüència GHz perquè cap
+
+. altra tecnologia la utilitza
+
+5 *
+
+10%
+
+Amb la banda GHz es perd un d'abast respecte a 2,4 . GHz
+
+Risc i limitacions ➔Utilitzen rangs de freqüència (RF) sense costos de llicència,
+
+són
+
+,
+
+,
+
+. rangs d'ús públic estan saturats i els senyals interfereixen entre si ➔La seguretat,
+
+qualsevol equip amb targeta WiFi pot interceptar els senyals ●
+
+,
+
+Utilitzant aplicacions de captura i anàlisi de transit com per exemple Wireshark ➔
+
+Per a solucionar els problemes de seguretat s'usen les següents : tècniques ➔Encriptació. ➔Autenticació.
+
+Sistemes de seguretat en WLAN Open System (Sistema obert) ➔
+
+. No existeix autenticació ➔
+
+’
+
+’ . El control d accés el realitza el punt d accés ➔
+
+. No existeix xifrat entre les comunicacions Perquè és perillós connectar-se a Wifis públiques qué fer per a protegir-te
+
+Sistemes de seguretat en WLAN WEP - W
+
+ired E
+
+quivalent Privacy ➔Encriptació
+
+de missatges amb claus de longitud 64 bits → + 24 ’ clau vector d inicialització 128 bits → 104 + 24 256 bits → 232 + 24 ➔Autenticació ◆Open System
+
+. els clients no s'identifiquen
+
+Després d'autenticar se i associar se a la xarxa es
+
+. necessita la clau WEP correcta ◆Pre-Shared Keys (PSK)
+
+la mateixa clau WEP
+
+. s'usa per a autenticar i realitzar el control d'accés
+
+Sistemes de seguretat en WLAN WEP - W
+
+ired E
+
+quivalent Privacy
+
+,
+
+. Encara que pot semblar que usar PSK és més segur no és així
+
+Per a realitzar l'autenticació mitjançant PSK se segueixen quatre passos ●
+
+( ). Client envia petició al punt d'accés PA ●
+
+. El PA envia un text model com a resposta ●
+
+. El client xifra el text amb la clau WEP i l'envia al PA ●
+
+. El PA desxifra el text i el compara i s'envia confirmació o denegació
+
+Capturant aquests quatre paquets la clau WEP
+
+. es desxifra directament
+
+Sistemes de seguretat en WLAN WPA - W - i Fi P
+
+rotected Access
+
+. Creat per a esmenar les deficiències del xifratge previ
+
+Es van publicar dues versions temporals de WPA (
+
+). solucions intermèdies
+
+Finalment es va publicar la versió definitiva WPA2,
+
+sota l'estàndard 802.11i.
+
+Sistemes de seguretat en WLAN WPA - W - i Fi P
+
+rotected Access
+
+Disposa de dues solucions segons el seu àmbit d'aplicació ➔WPA Personal
+
+. L'autenticació es realitza amb una clau precompartida
+
+. És el sistema usat habitualment en xarxes xicotetes ➔WPA Enterprise
+
+L'autenticació es realitza mitjançant les credencials
+
+de cada usuari utilitzant un servidor RADIUS.
+
+És el sistema usat habitualment en xarxes
+
+corporatives en les quals els usuaris disposen
+
+. de credencials per a utilitzar els equips
+
+Sistemes de seguretat en WLAN
+
+2. En els últims mesos s'ha descobert una fallada en el protocol WPA
+
+Les empreses de l'aliança Wi-Fi
+
+van llançar el nou protocol WPA durant 2018. l'any
+
+3
+
+Arriba el nou WIFI WAP Com funciona i per a que serveix 
+
+(
+
+) Xifratge de bits en comptes de bits 
+
+Mecanisme anti atacs de força bruta 
+
+(* * ) Configuració senzilla amb un altre dispositiu Easy Connect
+
+WPS W - i Fi P
+
+rotected Setup
+
+WPS defineix els mecanismes per a connectar se a una xarxa WPA
+
+(
+
+minimitzant la intervenció dels usuaris generalment prement únicament un ). botó
+
+,
+
+Mitjançant aquests mecanismes els dispositius obtenen les credencials tant el
+
+. SSID com la PSK
+
+No és un sistema de seguretat i la seua feble implementació el converteixen
+
+. en una de les majors vulnerabilitats en les xarxes WLAN
+
+WPS Atac a xarxa amb WPS ➔
+
+Es poden utilitzar mètodes
+
+de força bruta ➔
+
+Reaver WPS programa per
+
+a obtindre la clau Solució ➔
+
+Desactivar el WPS Qué és WPS Pin i perquè deus desactivar-lo
+
+Auditories wireless
+
+Realitzar auditories wireless per a mesurar el nivell de seguretat de les
+
+.
+
+nostres xarxes sense fils és essencial Existeixen multitud d'aplicacions que
+
+( permeten monitorar i recuperar contrasenyes de xarxes sense fils airodump aircarck )
+
+( etc i distribucions live backtrack, wifiway, wifislax…) Pràctica: Comprovar les vulnerabilitats de les claus WEP ● ’
+
+Configurar l acces point modificant la xarxa per defecte el SSID i les
+
+claus wep ●
+
+( ) Configurar la targeta wifi i comprovar l'accés al Acces Point AP ●
+
+Obtindre la contrasenya d'accés a la xarxa wifi utilitzant wifislax .
+
+WiFiSlax El Tutorial definitivo
+
+,
+
+Com s'ha pogut comprovar les xarxes WLAN ofereixen molts avantatges
+
+. però estan molt lluny de ser completament segures
+
+Tant pels errors d'implementació dels estàndards com per la facilitat d'accedir
+
+, . al mitjà de transmissió utilitzat l'aire
+
+,
+
+Encara així les xarxes WLAN s'utilitzen i es continuaran utilitzant per la gran
+
+. escalabilitat i connectivitat que ofereixen
+
+Per això caldrà tindre en compte una sèrie de recomanacions per a evitar
+
+. intrusions en la mesura que siga possible Recomanacions de seguretat
+
+➔
+
+( )
+
+Assegurar l'administració del Punt d'Accés AP ja que és un punt crític
+
+. de la xarxa ➔
+
+, , . Establir una contrasenya d'accés a la xarxa complexa llarga i única (
+
+) Només s'haurà d'introduir una vegada ➔
+
+,
+
+Actualitzar el microprogramari dels encaminadors dispositius AP i clients
+
+. per a evitar vulnerabilitats i afegir noves funcions ➔
+
+Usar sempre la major versió del protocol de seguretat WPA o servidor . RADIUS ➔
+
+. Desactivar el protocol WPS ➔
+
+. Desconnectar l'AP quan no s'use ➔
+
+(
+
+) Limitar la potència del senyal evitar que isca fora ➔
+
+Aïllar la xarxa de convidats Recomanacions de seguretat
+
+➔
+
+. Canviar el SSID per defecte i periòdicament ➔
+
+Tria un nom per a la xarxa que no siga obvi ni fàcil d'endevinar ➔
+
+. Ocultar la difusió del SSID
+
+D'aquesta manera els intrusos hauran de conéixer ho prèviament
+
+. per a poder realitza atacs
+
+Això complica una mica l'administració de la xarxa ja que els
+
+clients també hauran de conéixer per endavant el SSID i
+
+. introduir ho a l'hora de connectar se per primera vegada Recomanacions de seguretat
+
+Recomanacions de seguretat ➔
+
+Desactivar el servidor DHCP i assignar les adreces IP de manera manual
+
+. o mitjançant reserva amb l'adreça MAC ➔
+
+’ ’ ( )
+
+(
+
+) Canviar la contrasenya d accés a l aparell AP per defecte de fàbrica ➔
+
+( ). Canviar les IP per defecte del punt d'accés AP ➔
+
+. Canviar el rang d'IP per defecte ➔
+
+. Activar el filtrat MAC ➔
+
+Analitzar periòdicament els clients connectats per a comprovar que estan
+
+. entre els equips autoritzats ➔
+
+. Establir un nombre màxim de clients en l'AP misconfiguration
+
+---
+
+# 7.3 VPN
+
+XARXES PRIVADES VIRTUALS
+
+Caracterització d’una VPN Amb una arquitectura VPN el client utilitzarà Internet, però establirà un canal xifrat per a connectar-se a un servidor VPN que traspassarà tot el trànsit, una vegada desxifrat, per la xarxa interna segura al servidor. Com la connexió per la xarxa pública està xifrada, el seu contingut queda protegit
+
+Caracterització d’una VPN
+
+Caracterització d’una VPN
+
+Tipus de VPN segons la seua funció ●VPN d'accés anònim ●VPN d'accés remot o Roadwarrior ●VPN punt a punt,lloc a lloc o site-to-site ●VPN over LAN
+
+VPN d’accés anònim
+
+L'usuari es connecta a internet a través d'un servidor VPN aconseguint anonimat i deslocalització
+
+VPN d’accés remot o roadwarrior
+
+Consisteix en el fet que un usuari es connecta amb el lloc remot utilitzant Internet
+
+,
+
+com a xarxa d'accés de manera que s'estableix un túnel entre el sistema de l'usuari i
+
+el servidor de VPN remot que li proporciona l'accés a una xarxa local
+
+L'usuari s'autentica en el
+
+.
+
+servidor remot Només els
+
+usuaris amb permís podran
+
+establir el túnel
+
+VPN punt a punt,lloc a lloc o site-to-site
+
+El túnel s'estableix entre dues xarxes locals pel que cada xarxa local ha de tindre el
+
+seu propi servidor VPN
+
+VPN over LAN
+
+.
+
+El túnel s'estableix entre equips dins d'un xarxa local Serveix per a aïllar zones i serveis de la
+
+.
+
+xarxa interna Aquesta capacitat ho fa molt convenient per a millorar les prestacions de seguretat
+
+,
+
+de les xarxes sense fils i per a accessos a servidors amb informació sensible com per exemples . nòmines Activitat : ¿Qué és VPN sobre LAN? Dibuixa un esquema
+
+Arquitectures bàsiques de VPN
+
+La tècnica de tunelització consisteix a encapsular un protocol de xarxa sobre un altre (
+
+)
+
+protocol de xarxa encapsulador creant un túnel dins d'una xarxa d'ordinadors
+
+Es tracta d'encapsular el paquet origen dins d'un altre en el qual afegim tres : capçaleres ➔Camp PPP,
+
+que porta el control d'autenticació i xifratge propi del protocol PPP (
+
+). Point to Point Protocol ➔Camp GRE,
+
+. que porta informació sobre el túnel que estableix PPTP ➔ Camp IP,
+
+que especifica les adreces IP de tot el paquet complet en la xarxa de
+
+. trànsit segons les especificacions de PPTP Arquitectures bàsiques de VPN
+
+Nivells de seguretat en una connexió de xarxa
+
+Una connexió de xarxa es pot assegurar en un d'aquests tres nivells funcionals de
+
+/ : l'arquitectura TCP IP ➔Seguretat en el nivell d’enllaç
+
+Un exemple de protocol de seguretat en este
+
+nivell és L2TP, PPTP, PPPoE ➔Seguretat en el nivell de xarxa
+
+Este és el tipus de seguretat que ’
+
+s aconsegueix amb IPsec.
+
+Per a que una aplicació puga assegurar les seues
+
+connexions deurà encapsular les dades a enviar en paquets IP que seran
+
+assegurats mitjantsant IPsec ➔Seguretat en el nivel d’aplicació
+
+En este cas es tracta de sustituir el
+
+protocol insegur per altre més segur però funcionalment equivalent SSL, SSH, https, ftps, .. Las xarxes privades virtuals utilitzen majoritàriament tècniques de seguretat propies del nivel d’enllaç i del nivel de xarxa
+
+Implantació d’una VPN
+
+Par establir una VPN són necessaris al menys dos requisits bàsics ➔Una connexió a Internet o a la xarxa de trànsit que suporta el túnel (
+
+’
+
+),
+
+en el cas d una VPN sobre LAN seria una xarxa local que fa la funció de xarxa
+
+. de transport ➔Dos adreces IP, una per a cada extrem del túnel,
+
+de manera que els
+
+encaminadors puguen discriminar quin paquet ha d'anar a quina seu de .
+
+l'organització En les xarxes locals dels extrems del túnel seran els encaminadors
+
+.
+
+els encarregats d'introduir els paquets en el túnel Si la xarxa de trànsit és ,
+
+. Internet les dues adreces IP hauran de ser públiques .
+
+.
+
+El protocol estàndard més utilitzat és Ipsec Les solucions
+
+. VPN es poden implementar per maquinari o per programari
+
+Les de maquinari tenen major rendiment i són més fàcils de ,
+
+,
+
+configurar no obstant això tenen menys flexibilitat que les
+
+de programari
+
+Protocols VPN PPPoE (PPP over Ethernet)
+
+(
+
+És l'estàndard per a connectar estacions utilitzant PPP sobre una xarxa Ethernet en
+
+)
+
+comptes d'una línia serie És l'estàndard utilitzat per a connectar se a un ISP a través
+
+.
+
+,
+
+de DSL o cable mòdem En la creació de túnels PPP se sol utilitzar juntament amb
+
+un protocol de tunelització denominat GRE,
+
+però també pot tunelitzar se amb L2TP.
+
+Protocols VPN PPTP (Point-to-Point Tunneling Protocol)
+
+És un protocol desenvolupat per Microsoft que expandeix les característiques de PPP
+
+que li encapsula perquè qualsevol tipus de dades PPP puguen travessar Internet com
+
+.
+
+,
+
+una transmissió IP habitual Suporta encriptació autenticació i serveis d'accés
+
+(
+
+).
+
+mitjançant RRAS Routing and remalnom Access Server Actualment es troba obsolet i
+
+. ha sigut reemplaçat per altres protocols mes avançats
+
+Protocols VPN L2TP (Layer 2 Tunneling Protocol)
+
+Està desenvolupat per Cisco
+
+i estandarditzat per la IETF
+
+com a hereu de PPTP i L2F (
+
+).
+
+,
+
+de Cisco Encapsula dades com a PPP però a diferència d'ell està acceptat per
+
+.
+
+, multitud de fabricants PPTP i L TP no sols s'utilitzen en la creació de túnels VPN
+
+sinó que també són utilitzats en les xarxes per les seues capacitats d'encriptació de . 2
+
+.25,
+
+dades L TP pot funcionar sobre X FrameRelay i ATM
+
+Protoclos VPN IPsec ( Internet Protocol security)
+
+. És una extensió del protocol IP que permeten assegurar les comunicacions sobre IP ,
+
+,
+
+. autenticant i si es desitja xifrant els paquets IP d'una comunicació
+
+IPsec treballa en la capa de xarxa i per això pot ser utilitzat per qualsevol aplicació
+
+. sense necessitat de realitzar cap modificació en la configuració d'aquesta
+
+, IPsec consta de tres protocols ➔ Authentication Header (AH)
+
+,
+
+Proporciona integritat autenticació i no repudi
+
+,
+
+. de tot el paquet enviat incloent hi la capçalera IP ➔ Encapsulating Security Payload (ESP)
+
+Afig a l'anterior el xifratge de tota
+
+,
+
+la informació que s'envia però no inclou en els seus càlculs les dades de la capçalera ➔Internet key exchange (IKE)
+
+Empra un intercanvi secret de claus
+
+. de tipus Diffie Hellman per a establir el secret compartit de la sessió
+
+. Se solen usar sistemes de Criptografia de clau pública o clau pre compartida
+
+Protocols d’autenticació en la xarxa
+
+Un protocol d'autenticació és un protocol que permet verificar la identitat de la
+
+.
+
+persona o servei que desitja accedir a un recurs de la xarxa Constitueixen el primer
+
+. passe a donar en tot procés segur
+
+Els protocols més utilitzats ➔PAP (Password Authentication Protocol)
+
+Protocol d'autenticació de .
+
+,
+
+contrasenya En PAP les credencials de l'usuari representades pel nom d'usuari i
+
+,
+
+la seua contrasenya s'envien per la xarxa
+
+sense xifrar,
+
+per la qual cosa és un
+
+.
+
+mètode d'autenticació insegur Una captura de la trama PPP permetria un examen
+
+. lliure de la contrasenya ➔CHAP (Challenge Handshake Authentication Protocol)
+
+.
+
+protocol d'autenticació per desafiament mutu En CHAP el
+
+client envia una petició d'accés amb un hash
+
+de la (
+
+,
+
+). contrasenya no la contrasenya que mai viatja per la xarxa
+
+Protocols d’autenticació en la xarxa ➔EAP (Extensible Authentication Protocol)
+
+Protocol d'autenticació .
+
+.
+
+extensible EAP admet diverses maneres d'autenticació És més una arquitectura
+
+.
+
+que un únic protocol Pot utilitzar tant certificats digitals com tokens i fins i tot
+
+/
+
+parelles usuari contrasenya És molt utilitzat en l'autenticació sobre xarxes sense fils
+
+. i connexions punt a punt ➔EAP-TLS (EAP Transport Layer Security).
+
+És una extensió de EAP que
+
+permet que EAP interaccione amb un servidor RADIUS que proporciona
+
+l'autenticació de credencials i les claus de xifratge fent de EAP un dels protocols
+
+.
+
+més segurs i molt habitual en dispositius sense fils corporatius També admet la
+
+. gestió del xifratge i autenticació mitjançant certificació digital
+
+Protocols d’autenticació en la xarxa Kerberos.
+
+Creat pel MIT (
+
+)
+
+Institut Tecnològic de Massachusetts i estandarditzat en la RFC 4120.
+
+.
+
+( 3962). Client i servidor s'autentiquen recíprocament Utilitza xifrat AES RFC
+
+,
+
+Cada servidor usuari o servei disposa d'una clau que es registra en una base de
+
+.
+
+dades unificada en el servidor Kerberos Client i servidor confien en el servidor ,
+
+Kerberos qui els proporciona tiquets de sessió que posteriorment seran utilitzats
+
+.
+
+per a autenticar se enfront dels serveis de xarxa Tant els sistemes Windows com
+
+/
+
+. els GNU Linux poden usar Kerberos
+
+Proveïdors (de VPN d’accés anònim) ● Ciberghost ● TunnelBear (gratuito) ● HotSpot Shield ●
 
 ```bash
-APT (Advanced Persistent Threat)
+Private Tunnel
 ```
 
-➔Advanced Threat Protection ➔ Consisteix en una mena d'atac informàtic que es caracteritza per realitzar-se amb sigil, romanent actiu i ocult durant molt de temps, utilitzant diferents formes d'atac LA MILLOR EINA ANTIMALWARE
+● Etc…. Altres proveïdors…. ●Opera VPN (free) ●Google ●Mozilla ●Avira ●NordVPN ●….. Extensió de navegador
+
+Software de servidors i clients de VPN Arquitectures: Client a Servidor Router a Router Firewall a Firewall ● Servidor VPN – OpenVPN – FreeLan ● Client VPN – Configura Windows – Configura Linux – Configura MAC – Configura Android – Configura iOS punt a punt router a router
+
+Software per implementar Roadwarrior ● LogMeIn Hamachi ● Radmin VPN ● SoftEher VPN és un programari gratuït de codi obert, multiplataforma, client VPN i servidor VPN multiprotocol ● NetOverNet ● ZeroTier ● GameRanger ● Wippien (P2P VPN) https://vpn.net/
 
 ---

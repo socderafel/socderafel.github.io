@@ -10,20 +10,19 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Document: Aforismes en SI",
-          "href": "ut01/ut0103.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Document: Introducció. Conceptes inicials",
-          "href": "ut01/ut0104.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Elements vulnerables",
-          "href": "ut01/ut0105.html"
+          "href": "./ut01/ut0103.html"
         }
       ]
     },
@@ -32,20 +31,15 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 Biometria - Seguretat Física - Còpies de Seguret",
-          "href": "ut02/ut0201.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 Concienciació en ciberseguretat",
-          "href": "ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 Preparació Màquines Virtuals per a pràctiques po",
-          "href": "ut02/ut0203.html"
+          "href": "./ut02/ut0202.html"
         }
       ]
     },
@@ -54,16 +48,15 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 Contrasenyes",
-          "href": "ut03/ut0301.html"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 Anàlisi Forense",
-          "href": "ut03/ut0302.html"
+          "href": "./ut03/ut0302.html"
         }
       ]
     },
@@ -72,16 +65,15 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 Clau simètrica i Hash",
-          "href": "ut04/ut0401.html"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 Esteganografia",
-          "href": "ut04/ut0402.html"
+          "href": "./ut04/ut0402.html"
         }
       ]
     },
@@ -90,12 +82,11 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 Criptografia de clau pública",
-          "href": "ut05/ut0501.html"
+          "href": "./ut05/ut0501.html"
         }
       ]
     },
@@ -104,16 +95,15 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 1 Tipus de malware",
-          "href": "ut07/ut0702.html"
+          "href": "./ut06/ut0601.html"
         },
         {
           "label": "6.2 2 Programari anti malware",
-          "href": "ut07/ut0703.html"
+          "href": "./ut06/ut0602.html"
         }
       ]
     },
@@ -122,20 +112,19 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
+          "href": "./ut07/index.html"
         },
         {
           "label": "7.1 Segurertat en xarxes corporatives",
-          "href": "ut08/ut0801.html"
+          "href": "./ut07/ut0701.html"
         },
         {
           "label": "7.2 Seguretat en xarxes sense fil",
-          "href": "ut08/ut0802.html"
+          "href": "./ut07/ut0702.html"
         },
         {
           "label": "7.3 VPN",
-          "href": "ut08/ut0803.html"
+          "href": "./ut07/ut0703.html"
         }
       ]
     },
@@ -144,16 +133,15 @@
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "ut09/index.html",
-          "class": "unit-full-link"
+          "href": "./ut08/index.html"
         },
         {
           "label": "8.1 Firewall_i_Proxy",
-          "href": "ut09/ut0901.html"
+          "href": "./ut08/ut0801.html"
         },
         {
           "label": "8.2 HA - Alta_Disponibilitat",
-          "href": "ut09/ut0902.html"
+          "href": "./ut08/ut0802.html"
         }
       ]
     },
@@ -162,12 +150,11 @@
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "ut10/index.html",
-          "class": "unit-full-link"
+          "href": "./ut09/index.html"
         },
         {
           "label": "9.1 Esciptoris_remots(kali)",
-          "href": "ut10/ut1001.html"
+          "href": "./ut09/ut0901.html"
         }
       ]
     },
@@ -176,12 +163,11 @@
       "items": [
         {
           "label": "📘 UD10 Completa (1 pàgina)",
-          "href": "ut11/index.html",
-          "class": "unit-full-link"
+          "href": "./ut10/index.html"
         },
         {
           "label": "10.1 Legislació en Ciberseguretat",
-          "href": "ut11/ut1101.html"
+          "href": "./ut10/ut1001.html"
         }
       ]
     }

@@ -1,26 +1,56 @@
 ---
 layout: default
-title: "UD3 — Seguretat passiva: Equips · Temari Complet"
+title: "UD3 — Seguretat Passiva: Equips i CPD · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT3 Completa"
+badge: "2n SMX · Grau Mitjà · UD3 — Seguretat Passiva: Equips i CPD"
 prev_url: "../ut02/ut0201.html"
-prev_label: "⬅️ 2.1 Continguts i Recursos"
+prev_label: "⬅️ 2.1 Criptografia simètrica, asimètrica, funcions hash i certificats digitals"
 next_url: "../ut03/ut0301.html"
-next_label: "3.1 PDF: Consum i sel·lecció de SAI ➡️"
+next_label: "3.1 Seguretat física, Centre de Processament de Dades (CPD) i protecció elèctrica ➡️"
 ---
 
-# 📘 UD3 — Seguretat passiva: Equips (Unitat Completa)
+# 📘 UD3 — Seguretat Passiva: Equips i CPD (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**3.1 PDF: Consum i sel·lecció de SAI**](./ut0301.md)
+- [**3.1 Seguretat física, Centre de Processament de Dades (CPD) i protecció elèctrica**](./ut0301.md)
+- [**3.2 Especificació de potència, consum i selecció d'un SAI**](./ut0302.md)
 
 ---
 
-# 3.1 PDF: Consum i sel·lecció de SAI
+# 3.1 Seguretat física, Centre de Processament de Dades (CPD) i protecció elèctrica
+
+### Seguretat Informàtica
+
+- 03 – Seguretat Passiva: Equips
+
+### Continguts
+
+- 14
+- hores
+- Unitat 3
+- Seguretat Passiva: Equips
+
+### CPD I
+
+- Pla de recuperació front desastres
+- Actualitzat!
+- Avantatges de Centralitzar
+
+### CPD II
+
+### Ubicació del CPD
+
+### Centre de Backup
+
+### SAI/UPS
+
+---
+
+# 3.2 Especificació de potència, consum i selecció d'un SAI
 
 > **🔗 Recurs Web: VIDEO: Inside a Google data center**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=XZmGGAbHqa0) ↗️**](https://www.youtube.com/watch?v=XZmGGAbHqa0)

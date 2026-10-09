@@ -2,8 +2,8 @@
 layout: default
 title: "UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn · Temari Complet"
 course_root: ".."
-badge: "CE IA i Big Data · UT3 Completa"
-prev_url: "../ut04/ut0402.html"
+badge: "CE IA i Big Data · UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn"
+prev_url: "../ut02/ut0202.html"
 prev_label: "⬅️ 2.2 Python para todos (libro)."
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 6 Biblioteca scikit learn - Preprocesado de ➡️"
@@ -28,19 +28,8 @@ next_label: "3.1 6 Biblioteca scikit learn - Preprocesado de ➡️"
 
 # 3.1 6 Biblioteca scikit learn - Preprocesado de
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Materiales.
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Aprendizaje no supervisado**
-
 > **🔗 Recurs Web: UT 3.9 Notebooks y datasets**
 > [**🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1cdyRwi7MSKs0xknXFjISTlSW4yQEDDev?usp=sharing) ↗️**](https://drive.google.com/drive/folders/1cdyRwi7MSKs0xknXFjISTlSW4yQEDDev?usp=sharing)
-
-> **📌 🏷️ Apunt de la Unitat**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Modelos de clasificación**
 
 > **🔗 Recurs Web: UT 3.8 Apuntes de clase**
 > [**🌐 Obrir recurs extern (https://drive.google.com/file/d/1eR1ag-uPXl_bHXGMImE3ZiVwW2pxFgmJ/view?usp=drive_link) ↗️**](https://drive.google.com/file/d/1eR1ag-uPXl_bHXGMImE3ZiVwW2pxFgmJ/view?usp=drive_link)
@@ -48,27 +37,11 @@ next_label: "3.1 6 Biblioteca scikit learn - Preprocesado de ➡️"
 > **🔗 Recurs Web: UT 3.8 Notebooks y datasets**
 > [**🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1jVmXA8QIXbdoGOSH62bWZXwBC9ZAuDTS?usp=sharing) ↗️**](https://drive.google.com/drive/folders/1jVmXA8QIXbdoGOSH62bWZXwBC9ZAuDTS?usp=sharing)
 
-> **📌 🏷️ Apunt de la Unitat**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Modelos de regresión**
-
 > **🔗 Recurs Web: UT 3.7 Apuntes de clase**
 > [**🌐 Obrir recurs extern (https://drive.google.com/file/d/1N2AYYHkQ9vvCQS-7sWs_yyxl7PMDycH3/view?usp=drive_link) ↗️**](https://drive.google.com/file/d/1N2AYYHkQ9vvCQS-7sWs_yyxl7PMDycH3/view?usp=drive_link)
 
 > **🔗 Recurs Web: UT 3.7 Notebooks y datasets**
 > [**🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1TF-G82dDxs_K69927HPlm3PXN42xZnZj?usp=drive_link) ↗️**](https://drive.google.com/drive/folders/1TF-G82dDxs_K69927HPlm3PXN42xZnZj?usp=drive_link)
-
-> **📌 🏷️ Apunt de la Unitat**
-
-> **📌 🏷️ Apunt de la Unitat**
-
-> **📌 🏷️ Apunt de la Unitat**
-
-> **📌 🏷️ Apunt de la Unitat**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### ARCHIVOS PARA PRUEBAS
 
 ---
 

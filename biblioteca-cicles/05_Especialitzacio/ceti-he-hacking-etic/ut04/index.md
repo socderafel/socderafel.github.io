@@ -2,7 +2,7 @@
 layout: default
 title: "UD4 — Footprinting · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT4 Completa"
+badge: "CE Ciberseguretat (CETI) · UD4 — Footprinting"
 prev_url: "../ut03/ut0303.html"
 prev_label: "⬅️ 3.3 Material adicional 2"
 next_url: "../ut04/ut0401.html"
@@ -24,8 +24,6 @@ next_label: "4.1 Footprinting con Google ➡️"
 ---
 
 # 4.1 Footprinting con Google
-
-📎 **Material de laboratori (Resumen de operadores en buscadores):** `operadores_buscadores.xlsx`
 
 ---
 

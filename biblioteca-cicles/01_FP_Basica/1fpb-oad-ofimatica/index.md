@@ -49,7 +49,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Ofimàt
 
 [**📘 Obrir UD3 Completa en una sola pàgina**](./ut03/index.md)
 
-- [**3.1 Continguts i Recursos**](./ut03/ut0301.md)
+- [**3.1 Continguts Teòrics i Recursos**](./ut03/ut0301.md)
 
 ## UD4 — CALC MITJÀ
 
@@ -57,7 +57,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Ofimàt
 
 [**📘 Obrir UD4 Completa en una sola pàgina**](./ut04/index.md)
 
-- [**4.1 Continguts i Recursos**](./ut04/ut0401.md)
+- [**4.1 Continguts Teòrics i Recursos**](./ut04/ut0401.md)
 
 ## UD5 — BASE
 
@@ -65,7 +65,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Ofimàt
 
 [**📘 Obrir UD5 Completa en una sola pàgina**](./ut05/index.md)
 
-- [**5.1 Continguts i Recursos**](./ut05/ut0501.md)
+- [**5.1 Continguts Teòrics i Recursos**](./ut05/ut0501.md)
 
 ## UD6 — GIMP
 
@@ -73,4 +73,4 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Ofimàt
 
 [**📘 Obrir UD6 Completa en una sola pàgina**](./ut06/index.md)
 
-- [**6.1 Continguts i Recursos**](./ut06/ut0601.md)
+- [**6.1 Continguts Teòrics i Recursos**](./ut06/ut0601.md)

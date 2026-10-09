@@ -2,11 +2,11 @@
 layout: default
 title: "UD4 — INTERNET · Temari Complet"
 course_root: ".."
-badge: "1r ESO · UT4 Completa"
+badge: "1r ESO · UD4 — INTERNET"
 prev_url: "../ut03/ut0301.html"
-prev_label: "⬅️ 3.1 Continguts i Recursos"
+prev_label: "⬅️ 3.1 Continguts Teòrics i Recursos"
 next_url: "../ut04/ut0401.html"
-next_label: "4.1 Continguts i Recursos ➡️"
+next_label: "4.1 Continguts Teòrics i Recursos ➡️"
 ---
 
 # 📘 UD4 — INTERNET (Unitat Completa)
@@ -16,24 +16,11 @@ next_label: "4.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 Continguts i Recursos**](./ut0401.md)
+- [**4.1 Continguts Teòrics i Recursos**](./ut0401.md)
 
 ---
 
-# 4.1 Continguts i Recursos
-
-> **📌 Introducció de la Unitat**
-> **Internet 1º ESO LOMCE** ![Imatge](http://www.tuinstitutoonline.com/img/logointernet.png)
->
-> Este material es el nivel de 1º de ESO LOMCE de Internet (v.16)
-
-> **📌 🏷️ Apunt de la Unitat**
-> [![Imatge](http://www.tuinstitutoonline.es/img/presentacion32.png)La informática como elemento de innovación](http://www.slideshare.net/slideshow/embed_code/26231730)
->
-> | **La informática como elemento de innovación** |  |  |
-> | --- | --- | --- |
-> |  |  |  |
-> |  |  |  |
+# 4.1 Continguts Teòrics i Recursos
 
 > **🔗 Recurs Web: Internet: Redes. Estructura física. Servicios**
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/internet1_v1606/01red_internet.php) ↗️**](http://www.tuinstitutoonline.com/cursos/internet1_v1606/01red_internet.php)
@@ -105,8 +92,5 @@ next_label: "4.1 Continguts i Recursos ➡️"
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/internet1_v1606/13actitudes.php) ↗️**](http://www.tuinstitutoonline.com/cursos/internet1_v1606/13actitudes.php)
 >
 > Internet: Actitudes. Netiqueta
-
-> **📌 🏷️ Apunt de la Unitat**
-> **Control Tema 3. Internet (5-02-2020). Qüestionari**
 
 ---

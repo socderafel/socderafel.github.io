@@ -2,7 +2,7 @@
 layout: default
 title: "UD5 — Criptografia de Clau Pública i Certificats Digitals · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT5 Completa"
+badge: "2n ASIX · Grau Superior · UD5 — Criptografia de Clau Pública i Certificats Digitals"
 prev_url: "../ut04/ut0402.html"
 prev_label: "⬅️ 4.2 Esteganografia"
 next_url: "../ut05/ut0501.html"
@@ -21,9 +21,6 @@ next_label: "5.1 Criptografia de clau pública ➡️"
 ---
 
 # 5.1 Criptografia de clau pública
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### UD 4 Criptografia. Clau asimètrica. Clau pública
 
 ---
 

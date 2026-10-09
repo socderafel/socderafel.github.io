@@ -2,8 +2,8 @@
 layout: default
 title: "UD2 — Biometria, Seguretat Física i Còpies de Seguretat · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT2 Completa"
-prev_url: "../ut01/ut0105.html"
+badge: "2n ASIX · Grau Superior · UD2 — Biometria, Seguretat Física i Còpies de Seguretat"
+prev_url: "../ut01/ut0103.html"
 prev_label: "⬅️ 1.3 Elements vulnerables"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 Biometria - Seguretat Física - Còpies de Seguret ➡️"
@@ -18,7 +18,6 @@ next_label: "2.1 Biometria - Seguretat Física - Còpies de Seguret ➡️"
 
 - [**2.1 Biometria - Seguretat Física - Còpies de Seguret**](./ut0201.md)
 - [**2.2 Concienciació en ciberseguretat**](./ut0202.md)
-- [**2.3 Preparació Màquines Virtuals per a pràctiques po**](./ut0203.md)
 
 ---
 
@@ -215,33 +214,5 @@ Compliance La reforma del nostre Codi Penal de 2010, en la qual es va introduir 
 Consells finals ●Formarse ●Desconfiar ●Previndre ●No dir / donar «mai» claus ni dades ●Ser assertiu
 
 creative commons MOLTES GRÀCIES PER LA VOSTRA ATENCIÓ Presentació elaborada per Enrique Iborra Llicència Creative Commons Imatges amb llicència d’ús gratuïta Reconeixement-CompartirIgual 4.0 Internacional
-
----
-
-# 2.3 Preparació Màquines Virtuals per a pràctiques po
-
-En esta activitat no cal entregar document, però servirà de preparació per a futurs treballs
-
-CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: Preparar MV’s per a pràctiques Aquesta activitat consta de la instal·lació de Màquines Virtuals preparades per a ser utilitzades en les pràctiques del curs.
-
-¡¡ ATENCIÓ !! NO REUTILITZAR MÀQUINES D'ALTRES MÒDULS
-
-### 1. Instal·lació d’ Hipervisor VirtualBox (si no la teniu ja)
-
-### 2. Instal·lació d'extensions del VirtualBox (si no la teniu ja)
-
-### 3. Instal·lació d'una Màquina Virtual amb Kali Linux 64 bits (des d’imatge .iso)
-
-### 4. Instal·lació d'una Màquina Virtual amb Windows 10 Professional 64bits. (No farà
-
-falta activar-ho ja que ho utilitzarem per fer proves)
-
-### 5. Actualitzar els Sistemes Operatius de les Màquines Instal·lades
-
-### 6. Realitzar OVAs, (exportar màquines)
-
-- Realitzar snapshots de les màquines.
-
-Posteriorment, en començar una pràctica, tornarem a l'estat inicial, amb la màquina recentment instal·lada i actualitzada. • Tornant enrere a una snapshot “estable” • Restaurant la OVA
 
 ---

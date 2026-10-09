@@ -2,7 +2,7 @@
 layout: default
 title: "UD8 — Hybrid Applications · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT8 Completa"
+badge: "2n DAW · Grau Superior · UD8 — Hybrid Applications"
 prev_url: "../ut07/ut0701.html"
 prev_label: "⬅️ 7.1 Web Services"
 next_url: "../ut08/ut0801.html"
@@ -21,12 +21,6 @@ next_label: "8.1 Hybrid applications ➡️"
 ---
 
 # 8.1 Hybrid applications
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Resources
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Tasks
 
 ---
 

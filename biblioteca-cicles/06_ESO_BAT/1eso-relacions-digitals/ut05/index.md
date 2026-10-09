@@ -1,35 +1,93 @@
 ---
 layout: default
-title: "UD5 — Programació Visual amb Scratch · Temari Complet"
+title: "UD5 — SCRATCH BÁSICO · Temari Complet"
 course_root: ".."
-badge: "1r ESO · UT5 Completa"
+badge: "1r ESO · UD5 — SCRATCH BÁSICO"
 prev_url: "../ut04/ut0401.html"
-prev_label: "⬅️ 4.1 Continguts i Recursos"
+prev_label: "⬅️ 4.1 Continguts Teòrics i Recursos"
 next_url: "../ut05/ut0501.html"
-next_label: "5.1 Continguts i Recursos ➡️"
+next_label: "5.1 Continguts Teòrics i Recursos ➡️"
 ---
 
-# 📘 UD5 — Programació Visual amb Scratch (Unitat Completa)
+# 📘 UD5 — SCRATCH BÁSICO (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**5.1 Continguts i Recursos**](./ut0501.md)
+- [**5.1 Continguts Teòrics i Recursos**](./ut0501.md)
 
 ---
 
-# 5.1 Continguts i Recursos
+# 5.1 Continguts Teòrics i Recursos
 
-> **📌 Introducció de la Unitat**
-> **🖼️ [Imatge / Esquema: Scratch walking cat]SCRATCH 3**
+> **🔗 Recurs Web: Scratch: Conceptos básicos**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/01conceptosbasicos.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/01conceptosbasicos.php)
 >
-> Este material es el **nivel BÁSICO** de Scratch (v20es)
+> Scratch: Conceptos básicos
+
+> **🔗 Recurs Web: Scratch: Mi primer programa**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/02miprimerprograma.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/02miprimerprograma.php)
 >
-> ![Imatge](http://www.tuinstitutoonline.com/img/logoscratch3.png)
+> Scratch: Mi primer programa
+
+> **🔗 Recurs Web: Scratch: Disfraces**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/03disfraces.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/03disfraces.php)
 >
-> https://scratch.mit.edu/
-> https://en.scratch-wiki.info/
+> Scratch: Disfraces
+
+> **🔗 Recurs Web: Scratch: Fondos y objetos**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/04fondos.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/04fondos.php)
+>
+> Scratch: Fondos y objetos
+
+> **🔗 Recurs Web: Scratch: Sonidos**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/05sonidos.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/05sonidos.php)
+>
+> Scratch: Sonidos
+
+> **🔗 Recurs Web: Scratch: Dibujar con lápiz**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/06dibujarlapiz.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/06dibujarlapiz.php)
+>
+> Scratch: Dibujar con lápiz
+
+> **🔗 Recurs Web: Scratch: Control. Repeticiones**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/07bucles.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/07bucles.php)
+>
+> Scratch: Control. Repeticiones
+
+> **🔗 Recurs Web: Scratch: Eventos**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/08eventos.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/08eventos.php)
+>
+> Scratch: Eventos
+
+> **🔗 Recurs Web: Scratch: Introducción de datos. Condiciones**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/09intdatos_condiciones.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/09intdatos_condiciones.php)
+>
+> Scratch: Introducción de datos. Condiciones
+
+> **🔗 Recurs Web: Scratch: Variables. Operadores aritméticos y lógicos**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/10variables_operadores.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/10variables_operadores.php)
+>
+> Scratch: Variables. Operadores aritméticos y lógicos
+
+> **🔗 Recurs Web: Scratch: Eventos. Mensajes**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/11mensajes.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/11mensajes.php)
+>
+> Scratch: Eventos. Mensajes
+
+> **🔗 Recurs Web: Scratch: Miscelánea**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/12miscelanea.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/12miscelanea.php)
+>
+> Scratch: Miscelánea
+
+> **🔗 Recurs Web: Scratch: Laberinto**
+> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/13laberinto.php) ↗️**](http://www.tuinstitutoonline.com/cursos/scratchbasico_v1506/13laberinto.php)
+>
+> Scratch: Laberinto
+
+> **🔗 Recurs Web: Juego con clones Scratch**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=yISEiLVa5oY) ↗️**](https://www.youtube.com/watch?v=yISEiLVa5oY)
 
 ---

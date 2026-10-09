@@ -2,11 +2,11 @@
 layout: default
 title: "UD1 — App Inventor · Temari Complet"
 course_root: ".."
-badge: "3r ESO · UT1 Completa"
+badge: "3r ESO · UD1 — App Inventor"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
-next_url: "../ut01/ut01actividades.html"
-next_label: "1.1 Continguts i Casos Guiats ➡️"
+next_url: "../ut01/ut0101.html"
+next_label: "1.1 Disseny d'interfície, components i programació per blocs ➡️"
 ---
 
 # 📘 UD1 — App Inventor (Unitat Completa)
@@ -16,119 +16,49 @@ next_label: "1.1 Continguts i Casos Guiats ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**1.1 Continguts i Casos Guiats**](./ut01actividades.md)
+- [**1.1 Disseny d'interfície, components i programació per blocs**](./ut0101.md)
 
 ---
 
-# 1.1 Continguts i Casos Guiats
+# 1.1 Disseny d'interfície, components i programació per blocs
 
-> **✍️ 📋 Exercici / Qüestionari 1.1 — Pràctica 4**
-> > **✍️ EJERCICIO 4: GOLPEA AL TOPO EJERCICIO 4: GOLPEA AL TOPO Descripci**
-> > EJERCICIO 4: GOLPEA AL TOPO EJERCICIO 4: GOLPEA AL TOPO Descripción de la aplicación Vamos a desarrollar el juego llamado Golpea al Topo. En este juego se mostrará un topo que se moverá aleatoriamente por la pantalla y durante 10 segundos deberemos “golpearlo” el máximos número de veces.
->
-> Visualizaremos el número de aciertos (números de veces que golpeamos al topo) y el número de errores (número de veces que fallamos), así como una cuenta atrás de 10 segundos. Finalizados los 10 segundos, se mostrará un botón “restablecer” que permitirá comenzar de nuevo el juego.
->
-> Pasos a seguir: Antes de comenzar descárgate los archivos de la tarea de Teams Ejercicio 4: Golpea el Topo.
->
-> - Comenzamos un nuevo proyecto que llamamos GolpeaTopo.
->
-> ### 2. Modificamos en “Propiedades del Proyecto”
->
-> • NombreApp: Golpea el Topo • Icono: topo2.png
->
-> ### 3. Modificar las propiedades de la ventana “Screen1” siguientes
->
-> • Título: “Golpea el Topo” • Color de fondo: color verde personalizado #91ce1aff • Disposición horizontal: centro • Marcar opción “Desplazable” por si los distintos iconos no se muestran en el móvil
->
-> ### 4. Insertar un Lienzo (dentro de la sección Dibujo y animación de la Paleta)
->
-> • Color de fondo: color verde personalizado #008000ff • Alto: 500 píxels • Ancho: ajustar al contenedor
->
-> ### 5. Insertar un SipriteImagen dentro del Lienzo anterior (este elemento se localiza
->
-> también en la sección de Dibujo y animación de la Paleta): • Alto: 40 píxels • Ancho: 35 píxels • Foto: topo2 • Nombre: Topo
->
-> ### 6. Insertar una disposición Horizontal
->
-> • Disposición Horizontal: Centro • Disposición vertical: Arriba • Alto: Automático • Ancho: Ajustar al contenedor
->
-> ### 7. Insertar una Etiqueta dentro de la disposición horizontal anterior
->
-> • Marcar la opción Negrita • Tamaño de la letra: 20 • Texto: ACIERTOS • Color de texto: azul • Nombre: EtqAciertos
->
-> ### 8. Insertar una segunda disposición horizontal bajo la ya insertada
->
-> ### 1. Disposición Horizontal: Centro
->
-> ### 2. Disposición vertical: Arriba
->
-> ### 3. Alto: Automático
->
-> ### 4. Ancho: Ajustar al contenedor
->
-> ### 9. Insertar una Etiqueta dentro de la disposición horizontal anterior
->
-> • Marcar la opción Negrita • Tamaño de la letra: 20 • Texto: ERRORES • Color de texto: rojo • Nombre: EtqErrores 10.Insertar una segunda Etiqueta a la derecha de la anterior, dentro de la segunda disposición horizontal
->
-> • Marcar la opción Negrita • Tamaño de la letra: 20 • Texto: 0 • Color de texto: Rojo • Nombre: EtqNumErrores 11.Insertar una tercera disposición horizontal bajo las ya insertadas: • Disposición Horizontal: Centro • Disposición Vertical: Arriba • Alto: Automático • Ancho: Ajustar al contenedor 12.Insertar una Etiqueta dentro de la disposición horizontal anterior
->
-> • Marcar la opción Negrita y Cursiva • Tamaño de la letra: 22 • Texto: 10 • Color de texto: Negro • Nombre: EtqTiempo 13.Insertar un botón bajo la tercera disposición horizontal: • Color de fondo: Naranja • Marcar las opciones Negrita y Cursiva • Tamaño de la letra: 20 • Forma: oval • Texto: Restablecer • Nombre: BtnRestablecer 14.Insertar el elemento Reloj, localizado en la sección Sensores, dejando los valores que aparecen por defecto.
->
-> 15.Insertar el elemento Sonido, localizado en la sección Medios, dejando los valores que aparecen por defecto.
+### 1. Arquitectura d'una aplicació en MIT App Inventor
 
-> **✍️ 📋 Exercici / Qüestionari 1.2 — Pràctica 4 - 2**
-> > **✍️ EJERCICIO 4: GOLPEA AL TOPO 2ª Parte: Los Bloques EJERCICIO 4: G**
-> > EJERCICIO 4: GOLPEA AL TOPO 2ª Parte: Los Bloques EJERCICIO 4: GOLPEA AL TOPO 2ª Parte: Los Bloques Descripción de la aplicación Vamos a desarrollar el juego llamado Golpea al Topo. En este juego se mostrará un topo que se moverá aleatoriamente por la pantalla y durante 10 segundos deberemos “golpearlo” el máximos número de veces.
->
-> Visualizaremos el número de aciertos (números de veces que golpeamos al topo) y el número de errores (número de veces que fallamos), así como una cuenta atrás de 10 segundos. Finalizados los 10 segundos, se mostrará un botón “restablecer” que permitirá comenzar de nuevo el juego.
->
-> Pasos a seguir
->
-> - Accedemos a la sección de bloques para implementar el código.
->
-> ### 2. Crear una función llamada “MoverTopo” que hará que la imagen del topo se
->
-> mueva de forma aleatoria tomando como valores para la X e Y números aleatorios entre 1 y la dimensión del lienzo. Nótese que el ancho y el alto del lienzo se le resta el ancho y el alto de la dimensión de la imagen del topo, para que dicha imagen no salga del lienzo
->
-> • Como MoverTopo Ejecutar llamar Topo.MoverA X entero aleatorio entre 1 y (Lienzo1.Ancho – Topo.Ancho) Y entero aleatorio entre 1 y (Lienzo1.Alto – Topo.Alto)
->
-> ### 3. Crear una función llamada “Comenzar”. Esta función se ejecutará en cuanto se
->
-> entre en la aplicación y cuando se pulse el botón restablecer y llamará a la función
->
-> ```python
-> “MoverTopo”; mostrará el topo (ya que éste se oculta al finalizar los 10 segundos);
-> ```
->
-> inicializará las etiquetas de Tiempo, aciertos y errores; y por último, ocultará el botón restablecer (que se hará de nuevo visible al finalizar los 10 segundos) • Como comenzar Ejecutar llamar MoverTopo Poner Topo.Visible como verdadero Poner EtqTiempo.Texto como 10 Poner EtqNumAciertos.Texto como 0 Poner EtqNumErrores.Texto como 0 Poner BtnRestablecer.Visible como falso
->
-> ### 4. Llamamos a la función Comenzar desde el momento que se abre la pantalla inicial
->
-> “Screen1”: • Cuando Screen1.Inicializar Ejecutar Llamar Comenzar
->
-> ### 5. Cada segundo, y siempre que el valor de tiempo no sea 0, se moverá el Topo y el
->
-> tiempo se reducirá en un segundo. En caso de que el tiempo sea 0, se ocultará el topo y se mostrará el botón restablecer, por si se quiere comenzar otra partida. • Cuando Reloj1.Temporizador Ejecutar si EtqTiempo.Texto es distinto de 0 entonces Llamar MoverTopo Poner EtqTiempo.Texto como EtqTiempo.Texto – 1 sino Poner Topo.Visible como falso Poner BtnRestablecer.Visible como verdadero
->
-> ### 6. Al tocar el lienzo, si pulsamos sobre el topo, deberemos incrementar en 1 el
->
-> número de aciertos, por otro lado, si pulsamos fuera (y siempre que no haya finalizado el tiempo), el número de errores será el que se deba incrementar. • Cuando Lienzo1.Tocar Ejecutar si se toca cualquier elemento dentro del lienzo Entonces poner EtqNumAciertos.Texto como EtqNumAciertos.Texto+1 si no, si etqTiempo.Texto es distinto de 0 Entonces poner EtqNumErrores.Texto como EtqNumErrores.texto+1
->
-> ### 7. Al pulsar sobre el botón restablecer se comenzará otra partida. Se llamará a la
->
-> función Comenzar: • Cuando BtnRestablecer.Clic Ejecutar llamar Comenzar
->
-> ### 8. Cuando se pulse sobre el topo, el móvil va a emitir una pequeña vibración
->
-> • Cuando Topo.Tocar Ejecutar llamar Sonido1.Vibrar Milisegundos 100
+**MIT App Inventor** és un entorn de desenvolupament visual basat en blocs per crear aplicacions per a dispositius mòbils Android. L'entorn es divideix en dues vistes principals:
 
-> **✍️ Activitat Pràctica 1.3 — Puja el fitxer**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+1. **Dissenyador (Designer):** permet seleccionar els components de la interfície d'usuari i configurar-ne les propietats.
+2. **Editor de Blocs (Blocks):** permet programar el comportament de l'aplicació assemblant blocs lògics orientats a esdeveniments.
 
-> **✍️ Activitat Pràctica 1.4 — Puja la teva APP**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+---
 
-> **✍️ Activitat Pràctica 1.5 — Puja la documentació**
-> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+### 2. Components de la interfície i propietats principals
+
+- **Finestra principal (`Screen1`):** permet definir el `Títol` de la pantalla, el `Color de fons`, la `Disposició horitzontal` (esquerra, centre, dreta), la icona de l'aplicació i l'opció `Desplaçable` (*Scrollable*).
+- **Disposició (`Disposició Horitzontal` / `Vertical`):** contenidors que organitzen els elements visuals alineats al centre, a dalt o ajustats a l'amplària del contenidor.
+- **Dibuix i animació (`Llenç` i `SpriteImatge`):**
+  - El **Llenç (`Canvas`)** és un panell sensible al tacte amb coordenades $(X, Y)$ on es poden dibuixar elements o moure objectes.
+  - L'**SpriteImatge (`ImageSprite`)** és un objecte gràfic mòbil dins d'un llenç que respon a esdeveniments de toc (` en Tocar`), arrossegament i col·lisió, i pot desplaçar-se amb el mètode `MoverA(X, Y)`.
+- **Interfície d'usuari (`Etiqueta` i `Botó`):**
+  - Les **Etiquetes (`Label`)** mostren text informatiu o comptadors dinàmics (puntuació, encerts, errors, temps restant).
+  - Els **Botons (`Button`)** detecten l'esdeveniment `.Clic` per iniciar o reiniciar accions.
+- **Sensors i Mitjans (`Rellotge` i `So`):**
+  - El **Rellotge (`Clock`)** és un component no visible que dispara l'esdeveniment `Temporitzador` a intervals regulars (per exemple, cada $1000\text{ ms} = 1\text{ s}$).
+  - El component **So (`Sound`)** permet reproduir efectes d'àudio o activar la vibració del dispositiu (`Vibrar(mil·lisegons)`).
+
+---
+
+### 3. Programació orientada a esdeveniments amb Blocs
+
+En App Inventor, la lògica d'una aplicació s'estructura combinant **procediments** (funcions reutilitzables) i **controladors d'esdeveniments**:
+
+- **Procediments (`Com mostrar / moure / començar`):**
+  - Per situar un `SpriteImatge` en una posició aleatòria sense que isca dels límits del llenç, calculem:
+    - $X \in [1,\; \text{Llenç.Amplària} - \text{Sprite.Amplària}]$
+    - $Y \in [1,\; \text{Llenç.Alçària} - \text{Sprite.Alçària}]$
+  - Un procediment d'inicialització (`Començar`) reinicia els comptadors a `0`, estableix el temps inicial, fa visible l'sprite i amaga el botó de reinici (`Visible = fals`).
+- **Esdeveniments principals:**
+  - `Quan Screen1.Inicialitzar`: crida al procediment d'inici només obrir l'aplicació.
+  - `Quan Rellotge1.Temporitzador`: comprova amb un bloc condicional (`si ... llavors ... si no`) si el temps restant és major que `0`. Si ho és, actualitza la posició de l'sprite i resta `1` segon al comptador; quan arriba a `0`, amaga l'sprite i mostra el botó de reinici.
+  - `Quan Llenç1.Tocar` / `Quan Sprite.Tocar`: incrementa el comptador d'encerts quan l'usuari prem sobre l'sprite (i activa `So1.Vibrar(100)`) o el comptador d'errors si toca fora.
 
 ---

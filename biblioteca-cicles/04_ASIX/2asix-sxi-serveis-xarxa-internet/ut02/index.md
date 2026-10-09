@@ -2,7 +2,7 @@
 layout: default
 title: "UD2 — DNS · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT2 Completa"
+badge: "2n ASIX · Grau Superior · UD2 — DNS"
 prev_url: "../ut01/ut0101.html"
 prev_label: "⬅️ 1.1 U1 DHCP"
 next_url: "../ut02/ut0201.html"
@@ -21,15 +21,6 @@ next_label: "2.1 U2 DNS ➡️"
 ---
 
 # 2.1 U2 DNS
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Resources**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Tasks**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Practices**
 
 ---
 

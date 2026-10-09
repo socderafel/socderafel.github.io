@@ -1,27 +1,27 @@
 ---
 layout: default
-title: "UD5 — Servidor Web (HTTP / Virtual Hosting) · Temari Complet"
+title: "UD4 — Servidor Web (HTTP / Virtual Hosting) · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT4 Completa"
-prev_url: "../ut05/ut0501.html"
-prev_label: "⬅️ 4.1 UD3 Servidor de Nombres de Dominio SMX"
-next_url: "../ut04/ut0402.html"
-next_label: "5.1 Introducción virtual hosting ➡️"
+badge: "2n SMX · Grau Mitjà · UD4 — Servidor Web (HTTP / Virtual Hosting)"
+prev_url: "../ut03/ut0301.html"
+prev_label: "⬅️ 3.1 UD3 Servidor de Nombres de Dominio SMX"
+next_url: "../ut04/ut0401.html"
+next_label: "4.1 Introducción virtual hosting ➡️"
 ---
 
-# 📘 UD5 — Servidor Web (HTTP / Virtual Hosting) (Unitat Completa)
+# 📘 UD4 — Servidor Web (HTTP / Virtual Hosting) (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**5.1 Introducción virtual hosting**](./ut0402.md)
-- [**5.2 Configuración Virtual hosting**](./ut0403.md)
+- [**4.1 Introducción virtual hosting**](./ut0401.md)
+- [**4.2 Configuración Virtual hosting**](./ut0402.md)
 
 ---
 
-# 5.1 Introducción virtual hosting
+# 4.1 Introducción virtual hosting
 
 Introducción virtual hosting
 
@@ -33,7 +33,7 @@ APACHE 2.4 Virtual Hosting
 
 ---
 
-# 5.2 Configuración Virtual hosting
+# 4.2 Configuración Virtual hosting
 
 Configuración Virtual hosting
 

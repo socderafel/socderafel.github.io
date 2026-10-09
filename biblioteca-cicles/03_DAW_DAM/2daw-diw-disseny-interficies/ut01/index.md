@@ -2,10 +2,10 @@
 layout: default
 title: "UD1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT1 Completa"
+badge: "2n DAW · Grau Superior · UD1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
-next_url: "../ut01/ut0102.html"
+next_url: "../ut01/ut0101.html"
 next_label: "1.1 Enlaces interesantes UD1 Sección 1 ➡️"
 ---
 
@@ -16,11 +16,11 @@ next_label: "1.1 Enlaces interesantes UD1 Sección 1 ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**1.1 Enlaces interesantes UD1 Sección 1**](./ut0102.md)
-- [**1.2 DIAPOSITIVAS SECCIÓN 1: ELEME**](./ut0103.md)
-- [**1.3 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB**](./ut0104.md)
-- [**1.4 DIAPOSITIVAS UD 1 SECCIÓN 3**](./ut0105.md)
-- [**1.5 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4**](./ut0106.md)
+- [**1.1 Enlaces interesantes UD1 Sección 1**](./ut0101.md)
+- [**1.2 DIAPOSITIVAS SECCIÓN 1: ELEME**](./ut0102.md)
+- [**1.3 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB**](./ut0103.md)
+- [**1.4 DIAPOSITIVAS UD 1 SECCIÓN 3**](./ut0104.md)
+- [**1.5 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4**](./ut0105.md)
 
 ---
 

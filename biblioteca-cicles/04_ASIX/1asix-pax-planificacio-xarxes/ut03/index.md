@@ -1,401 +1,212 @@
 ---
 layout: default
-title: "UD2 — Arquitectura de xarxa · Temari Complet"
+title: "UD3 — Xarxes d'àrea local · Temari Complet"
 course_root: ".."
-badge: "1r ASIX · Grau Superior · UT3 Completa"
-prev_url: "../ut02/ut0201.html"
-prev_label: "⬅️ 1.1 Caracterització de les xarxes"
+badge: "1r ASIX · Grau Superior · UD3 — Xarxes d'àrea local"
+prev_url: "../ut02/ut0202.html"
+prev_label: "⬅️ 2.2 1 IPs"
 next_url: "../ut03/ut0301.html"
-next_label: "2.1 U2 Arquitectura de xarxa ➡️"
+next_label: "3.1 U3 Xarxes àrea local ➡️"
 ---
 
-# 📘 UD2 — Arquitectura de xarxa (Unitat Completa)
+# 📘 UD3 — Xarxes d'àrea local (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 U2 Arquitectura de xarxa**](./ut0301.md)
-- [**2.2 1 IPs**](./ut0302.md)
+- [**3.1 U3 Xarxes àrea local**](./ut0301.md)
 
 ---
 
-# 2.1 U2 Arquitectura de xarxa
-
-📎 **Material de laboratori (U2 P1 Fitxer PT):** `2.1 Packet Tracer - Investigating the TCP-IP and OSI Models in Action.pka`
+# 3.1 U3 Xarxes àrea local
 
 ---
 
-PAX - U2 – Arquitectura de xarxa 1er ASIX
-
-1 ASIX - PAX Arquitectura de xarxa
-
-- Conjunt de protocols organitzats per nivells, que treballen de forma
-
-conjunta per a la transferència de dades i per oferir serveis de forma segura i fiable.
-
-- Característiques
-- Tolerància a fallades
-- Escalabilitat
-- QoS
-- Seguretat
-
-1 ASIX - PAX Disseny
-
-- S’organitza en capes o nivells per reduir la complexitat del seu disseny.
-- Cada capa proporciona serveis a la capa immediatament superior.
-- El nivell n de la màquina es comunica de forma indirecta amb el nivell n homònim de l’altra màquina.
-
-1 ASIX - PAX Disseny
-
-1 ASIX - PAX Disseny: Problemes a abordar
-
-- Accés al medi: Equips comparteixen medi. Cal regular ordre per evitar
-
-col·lisió.
-
-- Saturació del receptor: receptor avisa quan està preparat per rebre.
-- Adreçament: Especificar a qui va el missatge.
-- Encaminament: Definir ruta a seguir.
-- Fragmentació: Al dividir missatge, cal reconstruir després.
-- Control d’errors: Mecanismes per solucionar-ho.
-- Multiplexació: Diferents tipus de connexions en mateix medi.
-
-1 ASIX - PAX Disseny: Problemes a abordar
-
-- Accés al medi: Equips comparteixen medi. Cal regular ordre per evitar
-
-col·lisió.
-
-- Saturació del receptor: receptor avisa quan està preparat per rebre.
-- Adreçament: Especificar a qui va el missatge.
-- Encaminament: Definir ruta a seguir.
-- Fragmentació: Al dividir missatge, cal reconstruir després.
-- Control d’errors: Mecanismes per solucionar-ho.
-- Multiplexació: Diferents tipus de connexions en mateix medi.
-
-1 ASIX - PAX Funcionament
-
-- En una màquina
-- Cada nivell utilitza servicis del nivell inferior.
-- En l’emissor la informació viatja cap avall i cada nivell
-
-afegeix informació (encapsulament).
-
-- En el receptor la informació viatja cap amunt i cada
-
-nivell extrau la informació que li correspon i entrega la resta al nivell superior.
-
-1 ASIX - PAX Disseny: Problemes a abordar
-
-- Entre màquines diferents
-- El nivell n de una màquina es comunica amb el nivell n de altra mitjançant un
-
-protocol.
-
-- Els protocols regulen el format de comunicació.
-
-1 ASIX - PAX El model OSI
-
-- Open Systems Interconnection.
-- ISO va desarrollar a 1983 un estàndar per a tractar de unificar els
-
-diferents criteris.
-
-- És el més important hui en dia.
-
-1 ASIX - PAX El model OSI
-
-- Model teòric (no implementat).
-- No estableix protocols concrets, sinó que separa les funcions i els servicis
-
-en capes.
-
-- Útil per a explicar el funcionament d’una xarxa.
-- Ha sigut, i és, la base a partir de la que han creat diferents arquitectures de
-
-xarxa com TCP/IP.
-
-1 ASIX - PAX El model OSI
-
-- Redueix la complexitat de la xarxa
-- Estandarditza interfícies
-- Facilita disseny modular
-- Assegura interoperabilitat de la tecnologia
-
-1 ASIX - PAX Capes del model OSI
-
-- 7 capes.
-
-1 ASIX - PAX Capes del model OSI
-
-1 ASIX - PAX Nivell físic
-
-- Transmisión binaria a través del medio físico (cable o aire)
-
-1 ASIX - PAX Nivell d’enllaç de dades
-
-- Detectar i corregir errors que es produeixen en la línia de
-
-comunicació.
-
-- La unitat mínima que transfereix se li diu trama.
-
-1 ASIX - PAX Nivell de xarxa
-
-- Determina quina és la millor ruta per la que enviar la informació.
-- La unitat mínima que transfereix se li diu paquet.
-
-1 ASIX - PAX Nivell de transport
-
-- Nivell intermig independent del tipus de xarxa. A
-- Agafa dades de sessió i els passa a la capa de xarxa assegurant que
-
-apleguen correctament al nivell de sessió de l’altre extrem.
-
-- Nivell de xarxa envia paquets solts i i este els reuneix.
-- Unitat transferida es diu segment
-
-1 ASIX - PAX Nivell de sessió
-
-- S’estableixen sessions (connexions) de comunicació entre dos extrem
-
-per al transport ordinari de dades.
-
-1 ASIX - PAX Nivell de presentació
-
-- Prepara la informació (format, estructura, etc) per a que siga
-
-“entenible”.
-
-1 ASIX - PAX Nivell d’aplicació
-
-- Contacte directe amb els programes. Permet a l’usuari accedir a la
-
-xarxa a través de servicis, etc.
-
-1 ASIX - PAX Comunicació en OSI
-
-1 ASIX - PAX Arquitectura TCP/IP
-
-- Finals d’anys 60 es crea ARPANET.
-- Molts errors, força a crear protocols.
-- TCP/IP anys 70.
-- Aplicacions independents dels dispositius.
-
-1 ASIX - PAX Arquitectura TCP/IP
-
-- Permet connectar xarxes de tipus diferents (LAN, WAN, ATM, etc)
-- Tolerant a errades.
-- No orientat a connexió. Cada paquet d’informació pot viatjar per
-
-camins diferents per evitar saturació o si hem perdut algun node.
-
-- Gran estàndard de comunicacions hui en dia. Estàndard de facto.
-
-1 ASIX - PAX Arquitectura TCP/IP
-
-1 ASIX - PAX Arquitectura TCP/IP
-
-- Accés a la xarxa: El model dona poca informació sobre esta capa. Sols
-
-indica que deu existir algun protocol per a connectar amb la xarxa. Els més conegut és Ethernet.
-
-- Internet o interred: Capa més important de l’arquitectura. Permet
-
-enviar paquets per camins independents. El protocol més important de la capa es el protocol IP.
-
-1 ASIX - PAX Arquitectura TCP/IP
-
-- Transport: S’encarrega de la segmentació de les dades en l'origen, de
-
-l’ordenació de paquets en destí i del control d’errors extrem-extrem. Protocols TCP i UDP.
-
-- TCP: orientat a la connexió. Segur i més lent. Grans capçaleres.
-- UDP: no orientat a la connexió. Insegur i més ràpid.
-- Aplicació: Interfícia amb l’usuari i protocols d’alt nivell. HTTP, SMTP,
-
-etc.
-
-1 ASIX - PAX OSI VS TCP/IP
-
-1 ASIX - PAX OSI VS TCP/IP: Similituds
-
-- Es divideixen en capes
-- Tenen capa d’aplicació, amb servicis diferents
-- Tenen capa de transport i xarxa molt similars.
-- Els dos tenen que ser estudiats per professionals de les xarxes.
-- Ambdós commuten paquets. Cada paquet agafa diferent ruta per
-
-aplegar a mateix destí. Xarxes commutades per circuit, totes van per la mateixa ruta
-
-1 ASIX - PAX OSI VS TCP/IP: Diferències
-
-- TCP/IP combina funcions de presentació i sessió en la capa d’aplicació.
-- TCP/IP combina enllaç de dades i la capa física del model OSI en la
-
-capa d’accés a xarxa.
-
-- TCP/IP pareix ser més simple al tindre menys capes.
-- Els protocols de TCP/IP son els estàndards a partir del qual es va
-
-desarrollar internet. TCP/IP especifica protocols mentre que OSI no especifica protocols, és model teòric.
-
-1 ASIX - PAX Encapsulament TCP/IP
-
-- En cada nivell s’afegeix una capçalera a les dades.
-
-1 ASIX - PAX Encapsulament TCP/IP
-
-1 ASIX - PAX Encapsulament OSI
-
-1 ASIX - PAX OSI VS TCP/IP: Diferències
-
-- TCP/IP combina funcions de presentació i sessió en la capa d’aplicació.
-- TCP/IP combina enllaç de dades i la capa física del model OSI en la
-
-capa d’accés a xarxa.
-
-- TCP/IP pareix ser més simple al tindre menys capes.
-- Els protocols de TCP/IP son els estàndards a partir del qual es va
-
-desarrollar internet. TCP/IP especifica protocols mentre que OSI no especifica protocols, és model teòric.
-
-1 ASIX - PAX Components d’una xarxa
-
-- En detall quan estudiem cadascuna de les capes.
-- El símbol del núvol es gasta per fer referència a altra xarxa, per
-
-exemple, Internet.
-
-- Dispositius host: Es conecten directament a una de les capes. No
-
-pertanyen a cap capa i pertanyen a totes.
-
-1 ASIX - PAX Components d’una xarxa
-
-- Dispositius intermedis
-
-1 ASIX - PAX Components d’una xarxa
-
-- Repetidor: Funciona a nivell 1. La seua tasca és principalment regenerar i
-
-repetir la senyal.
-
-- Hub: Mateixa funcionalitat que el repetidor però amb ports.
-- Switch: Capa 2. Paregut al hub però amb capacitat de dirigir el tràfic
-
-basant-se en una taula amb associacions MAC-IP.
-
-- Router: Capa 3. Pren decisions basant-se en direccions IP i estat de la xarxa.
-
-Decideix el camí que seguiran les dades.
-
-1 ASIX - PAX Dubtes?
-
----
-
-# 2.2 1 IPs
-
-PAX - U2.1 – IP’s 1er ASIX
-
-1 ASIX - PAX Què és una direcció IP?
-
-- Número que identifica una interfície de xarxa dins d’una xarxa.
-- Un equip pot tindre varies interfície de xarxa.
-- Identifica no sols l’equip, sinó també la xarxa.
-- Símil amb nombre de telèfon amb el prefixe.
-- IPv4 i IPv6
+PAX - U3 – Xarxes d’àrea local 1er ASIX
 
 1 ASIX - PAX Característiques
 
-- Número de 32 bits. (2^32 direccions disponibles).
-- Identifica de forma única la xarxa i el número de l’equip dins de eixa
+- Operen dins d’un àrea geogràfica limitada. Màxim 4 km, sempre que
+
+el cable no supere els 100m aprox.
+
+- Permet multiaccés a medis amb gran ampli de banda
+- Controla la xarxa de forma privada amb administració local
+- Titularitat privada
+
+1 ASIX - PAX Característiques
+
+- Baixa tassa d’error
+- Topologia física: bus, anell, estrella(més habitual), arbre
+- Estàndards: Ethernet, WIFI, etc.
+
+1 ASIX - PAX Avantatges
+
+- Compartir recursos
+- Perifèrics, app’s, dades, càlcul, etc.
+- Fiabilitat
+- Gestió centralitzada, seguretat, etc.
+- Eficiència
+- Gestió d’usuaris, grups, permisos, directives, etc.
+- Flexibilitat
+- Canvis en situació física dels equips no afecten
+
+1 ASIX - PAX Inconvenients
+
+- Seguretat i privacitat
+- Manteniment
+- Limitació de distància
+- Si tenim servidor i cau, cau la xarxa.
+
+1 ASIX - PAX Projecte IEEE 802
+
+- Publicat en 1985 per IEEE amb l’objectiu de comunicar equips de
+
+diferents fabricants.
+
+- Cobreix els dos primers nivells del model OSI i part del tercer nivell.
+- La segona capa la divideix en 2 subnivells
+
+1 ASIX - PAX Projecte IEEE 802
+
+- Subnivell LLC – 802.2 – És el mateix per a totes les xarxes
+- Subnivell MAC - 802.3-802-22 – Conté mòduls diferents per cada
 
 xarxa.
 
-- Número de bits per identificar la xarxa és variable i el número de bits
+1 ASIX - PAX Projecte IEEE 802
 
-per identificar el host també és variable.
+- El projecte IEEE 802 conté molts estàndards: 802.1 fins 802.22
+- Corresponen a les LAN
+- Ethernet 802.3
+- Token Bus 802.4
+- Token Ring 802.5
+- FDDI 802.8
+- WLAN 802.11
 
-1 ASIX - PAX Característiques
+1 ASIX - PAX Projecte IEEE 802
 
-- S’expressa utilitzant la notació decimal puntejada.
-- 176.12.255.7
-- 10110000.00001100.11111111.00000111
-- No es gasten totes, sols les que comencen per 0, 10 i 110. (A, B i C).
-- Entre la 0.0.0.0 i la 223.255.255.255
+1 ASIX - PAX Ethernet - IEEE 802.3
 
-1 ASIX - PAX Màscara de xarxa
+- Tecnologia LAN més utilitzada hui en dia
+- Funciona en la capa d’enllaç i en la capa física
+- Depén de les dos subcapes de la capa d’enllaç per a funcionar (LLC i
 
-- Formalment màscara de subxarxa.
-- Indica els números de la direcció IP que corresponen a la part utilitzada per
+MAC)
 
-a identificar la xarxa.
+1 ASIX - PAX Ethernet - IEEE 802.3
 
-- 255.255.255.0 per a la 192.168.1.1
-- 11111111.11111111.11111111.00000000
-- Primers 24 bits identifiquen a la xarxa
-- Bits restants per al host dins de la xarxa
-- També es pot gastar la notació CIDR
-- 192.168.1.1/24
+- Subcapa LLC. Control enllaç lògic. Maneja la comunicació entre capes
 
-1 ASIX - PAX Configuració en Windows
+superiors i inferiors. Se implementa via software (SW) i és completament independent del hardware (HW).
 
-1 ASIX - PAX Configuració en Windows
+- Subcapa MAC. Control accés al medi. És la subcapa inferior i
 
-1 ASIX - PAX Configuració en Windows
+s’implementa mitjançant HW, generalment, en la NIC (Network Interface Card) de la computadora.
 
-1 ASIX - PAX Configuració en Windows
+1 ASIX - PAX Ethernet - IEEE 802.3 - Característiques
 
-1 ASIX - PAX Configuració en Windows
+- Usa senyals digitals
+- Full Duplex
+- Un únic canal de dades (no multiplexació)
+- Gasta repetidors, hubs i switchs
 
-- Per revisar la configuració de IP’s des de terminal.
-- ipconfig
-- Per comprovar connectivitat amb altre host o a internet
-- ping direccióIP/web
-- ping 192.168.1.10
-- ping www.google.es
+1 ASIX - PAX Ethernet - IEEE 802.3 - Característiques
 
-1 ASIX - PAX Configuració en Linux
+- Topologia estrella
+- Mètode accés al medi: CSMA/CSD
+- Varis usuaris comparteixen mateix medi, perill que envien senyals a la vegada i col·lisione. Cal un
 
-- Modificant un fitxer de configuració
-- Mitjançant interfície gràfica.
-- Realment modifica internament el mateix fitxer de configuració.
+mecanisme per a regular l’enviament.
 
-1 ASIX - PAX Configuració en Linux
+- Adreçament físic: MAC
+- Cada estació de la xarxa ethernet té una targeta de xarxa (NIC), que proporciona una interfície
 
-- Des de terminal
+física única en format de 12 dígits hexadecimals. 00-1F-D0-94-AE-CC
 
-1 ASIX - PAX Configuració en Linux
+- Per conèixer la direcció física del teu equip, des de terminal executem
+- Windows: ipconfig /all
+- Linux: ip a s
 
-- Des de terminal
+1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
 
-1 ASIX - PAX Configuració en Linux
+- Es tracta de les versions d’Ethernet que existeixen.
+- Cada implementació es representa per un codi.
+- Tassa de transferència (Mbps)
+- Tipo de transmissió (Base/Broad)
+- Màxima longitud sense degradació de senyal (en hectòmetres) o tipus de cable.
 
-- Des de terminal
+1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
 
-1 ASIX - PAX Configuració en Linux
+- Ethernet – IEEE 802.3 - 10 Mbps
 
-- Des de terminal
+1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
 
-1 ASIX - PAX Configuració en Linux
+- Fast Ethernet – IEEE 802.3u - 100 Mbps
 
-- Des de Interfície gràfica
+1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
 
-1 ASIX - PAX Configuració en Linux
+- Gigabit Ethernet – IEEE 802.3ab - 1 Gbps
 
-- Des de Interfície gràfica
+1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
 
-1 ASIX - PAX Configuració en Linux
+- 10 Gigabit Ethernet – IEEE 802.3ae - 100 Mbps
 
-- Per vore la configuració gastarem
-- ip a
-- Per comprovar connectivitat amb altre host o a internet
-- ping direccióIP/web
-- ping 192.168.1.10
-- ping www.google.es
+1 ASIX - PAX Token Bus - IEE 802.4
+
+- LAN amb topologia física en bus i amb organització lògica en anell.
+
+1 ASIX - PAX Token Bus - IEE 802.4
+
+- Els nodes es connecten amb cable coaxial (com el de l’antena de TV)
+- Sempre hi ha un token el qual les estacions de xarxa es van passant
+
+segons l’ordre en el que estan connectades. Sols pot transmetre un node i serà el que tinga el token.
+
+- Si no té cap data a transmetre, passa el token al veí.
+
+1 ASIX - PAX Token Ring - IEE 802.5
+
+- Igual que el token bus però es connecten amb topologia en anell.
+
+1 ASIX - PAX FDDI - IEE 802.8
+
+- Fiber Distributed Data Interface. Interfície de dades distribuïda per fibra.
+- Estàndard per a la transmissió de dades en xarxes locals (i WAN) sobre fibra
+
+òptica.
+
+- El mètode d’accés es mitjançant token.
+- S’implementa com un anell doble.
+
+1 ASIX - PAX FDDI - IEE 802.8
+
+- Primer anell per a la transmissió i el segon de suport.
+- Comunicació dúplex i fins un radi de 200 km.
+
+1 ASIX - PAX WLAN - IEE 802.11
+
+- WLAN o WiFi es una xarxa de xarxa sense fil que utilitza ondes de
+
+radio.
+
+- Complementen les LAN per cable.
+- Instal·lació fàcil, econòmica, aplega on el cable no pot aplegar.
+- Important en portàtils i dispositius mòbils
+
+1 ASIX - PAX WLAN - IEE 802.11
+
+- La velocitat depén de la versió utilitzada
+
+1 ASIX - PAX WLAN - IEE 802.11
+
+- Necessita que els “clients” tinguen interfície inalàmbrica. Poden ser
+
+interns o externs.
+
+- Ad-Hoc o xarxa de infraestructura
 
 1 ASIX - PAX Dubtes?
 

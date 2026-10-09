@@ -4,27 +4,27 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UD1 — U1. Introducció a la informática":
-      - "📘 UD1 Completa (1 pàgina)": ut00/index.md
-      - "1.1 Teoria sobre maquinari (hardware)": ut00/ut0001.md
-      - "1.2 Apuntes de sistemas de numeración": ut00/ut0002.md
+  - "UD1 — Introducció a la informática":
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Teoria sobre maquinari (hardware)": ./ut01/ut0101.md
+      - "1.2 Apuntes de sistemas de numeración": ./ut01/ut0102.md
   - "UD2 — Canva":
-      - "📘 UD2 Completa (1 pàgina)": ut01/index.md
-      - "2.1 Tutorial Canva": ut01/ut0101.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Tutorial Canva": ./ut02/ut0201.md
   - "UD3 — Procesadores de Texto":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Continguts i Recursos": ut03/ut0301.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Continguts Teòrics i Recursos": ./ut03/ut0301.md
   - "UD4 — Hojas de cálculo":
-      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 Continguts i Recursos": ut04/ut0401.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Continguts Teòrics i Recursos": ./ut04/ut0401.md
   - "UD5 — Bases de Datos":
-      - "📘 UD5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 BBDD": ut05/ut0501.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 BBDD": ./ut05/ut0501.md
   - "UD6 — Redes":
-      - "📘 UD6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Redes Informáticas (PPT)": ut06/ut0601.md
-      - "6.2 Redes Informáticas": ut06/ut0602.md
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 Redes Informáticas (PPT)": ./ut06/ut0601.md
+      - "6.2 Redes Informáticas": ./ut06/ut0602.md
   - "UD7 — Páginas Web":
-      - "📘 UD7 Completa (1 pàgina)": ut07/index.md
-      - "7.1 HTML5": ut07/ut0701.md
-      - "7.2 CSS3": ut07/ut0702.md
+      - "📘 UD7 Completa (1 pàgina)": ./ut07/index.md
+      - "7.1 HTML5": ./ut07/ut0701.md
+      - "7.2 CSS3": ./ut07/ut0702.md

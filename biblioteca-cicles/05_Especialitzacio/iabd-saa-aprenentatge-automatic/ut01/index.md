@@ -1,0 +1,171 @@
+---
+layout: default
+title: "UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil · Temari Complet"
+course_root: ".."
+badge: "CE IA i Big Data · UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
+next_url: "../ut01/ut0101.html"
+next_label: "1.1 Caracterització de IA forta I dèbil usos i ➡️"
+---
+
+# 📘 UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil (Unitat Completa)
+
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 Caracterització de IA forta I dèbil usos i**](./ut0101.md)
+
+---
+
+# 1.1 Caracterització de IA forta I dèbil usos i
+
+---
+
+Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT1. Caracterización de la inteligencia artificial fuerte y débil. Usos y posibilidades. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Taula de continguts
+
+- introducción...........................................................................................................................................3
+
+1.1. Definiciones...................................................................................................................................3
+
+- Aprendizaje automático, machine learning...........................................................................................7
+
+2.1. Definiciones...................................................................................................................................7 2.2. Aprendizaje automático.................................................................................................................7 2.3. Algoritmos de aprendizaje automático..........................................................................................8 2.4. Aplicaciones de aprendizaje automático.......................................................................................9
+
+- Inteligencia artificial...........................................................................................................................12
+- Deep learning......................................................................................................................................12
+
+2 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+- INTRODUCCIÓN.
+
+1.1. Definiciones. ➢Inteligencia artificial débil. Es aquella que está programada únicamente para la realización de una tarea específica, siendo incapaz de realizar cualquier otra tarea. También denominada inteligencia artificial estrecha con referencia a que solo puede realizar tareas estrechas.
+
+> **💡 Apunt Tècnic**
+> Ejemplo: Siri es un ejemplo de inteligencia débil. Siri opera dentro de un rango limitado previamente definido. ➢Inteligencia artificial fuerte. La Inteligencia artificial fuerte o IAF, es la inteligencia artificial que iguala o excede la inteligencia humana promedia, es decir, la inteligencia de una máquina que puede realizar con éxito cualquier tarea intelectual de cualquier ser humano.
+
+En una situación de inteligencia artificial fuerte, debe considerarse que la máquina no se limita únicamente a seguir unas instrucciones, sino que realmente comprende lo que está haciendo Nota: Se considera que en la práctica la inteligencia artificial fuerte no ha sido alcanzada.
+
+➢Inteligencia artificial. Disciplina que se dedica a crear máquinas que son capaces de realizar tareas que, cuando las hacen los humanos, implican el uso de su inteligencia. Así, se puede hablar de inteligencia computa- cional como el campo dentro de la inteligencia artificial que se dedica al estudio y diseño de agentes inteligentes.
+
+➢Red neuronal. Una red neuronal es un método de la inteligencia artificial que enseña a las computadoras a procesar datos de una manera que está inspirada en la forma en que lo hace el cerebro humano. Se trata de un tipo de proceso de machine learning llamado aprendizaje profundo, que utiliza los nodos o las neuronas interconectados en una estructura de capas que se parece al cerebro humano.
+
+3 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Crea un sistema adaptable que las computadoras utilizan para aprender de sus errores y mejorar continuamente.
+
+➢Big Data Big Data es un término que describe el gran volumen de datos, tanto estructurados como no estructurados. Es un conjuntos de datos (o combinaciones de conjuntos de datos) cuyo tamaño (volumen), complejidad (variabilidad) y velocidad de crecimiento (velocidad) dificultan su captura, gestión, procesamiento o análisis mediante tecnologías y herramientas convencionales (bases de datos, estadísticas, representación visual), dentro del tiempo necesario para que sean útiles.
+
+➢Datos estructurados Son datos que están en un formato estandarizado, tienen una estructura bien definida, cumplen con un modelo de datos, siguen un orden persistente y son de fácil acceso para humanos y programas. 4 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢Minería de datos Es un campo de la estadística y de las ciencias de la computación intenta descubrir patrones en grandes volúmenes de conjuntos de datos. En otras palabras es la ciencia que trata de sacar conocimiento de los datos.
+
+Ejemplos simples de minería de datos: Conocimiento: ¿Debo conceder una hipoteca a un determinado cliente? Nota: En este ejemplo el dato de salida es SI o NO. 5 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Conocimiento: ¿Gestionar artículos de un supermercado? Nota: En este ejemplo, no hay datos de salida. ➢Vista minable. Se refiere al conjunto de datos que según su relevancia son los más importantes dentro del contenedor de datos (Big Data).
+
+La vista minable es la agrupación de estos datos de una forma que se puedan procesar con más facilidad y extraer el conocimiento. 6 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+- APRENDIZAJE AUTOMÁTICO, MACHINE LEARNING.
+
+2.1. Definiciones. La minería de datos y el aprendizaje automático son conceptos relacionados en el campo de la ciencia de datos. Ambos se caracterizan por extraer conocimiento (información valiosa) de los datos. La minería de datos es un proceso que consiste en recopilar y analizar una gran cantidad de datos y (buscar) encontrar patrones en ellos. Al detectar relaciones y patrones en los datos, ayudan a las empresas a resolver problemas de negocio, predecir tendencias y tomar decisiones calculadas.
+
+El aprendizaje automático (machine learning ML) es una tecnología que intenta dar un semblante de humanidad a los ordenadores. Permite a los ordenadores aprender de datos anteriores, volviéndose más precisos con el paso del tiempo y cuya finalidad es la de tomar decisiones similares a las humanas. Ese aprendizaje se traduce en una menor interferencia humana en las operaciones de la empresa, liberándola de tareas rutinarias (manuales y/o repetitivas) lo que permite dedicar los recursos en tareas donde el ML no es aplicable.
+
+2.2. Aprendizaje automático. El ML se refina y automatiza en función de las experiencias de aprendizaje de las máquinas durante el proceso. Los ordenadores reciben datos de alta calidad y utilizan diversas técnicas para desarrollar modelos de aprendizaje automático con el fin de entrenar a las máquinas basándose en los datos.
+
+El algoritmo utilizado en el modelo ML depende del tipo de datos y de la acción automatizada. Las empresas utilizan este método para automatizar varios procesos empresariales y llevar a cabo un desarrollo rápido. El ML ayuda a desarrollar y diseñar algoritmos o programas complejos para grandes conjuntos de datos con el fin de proporcionar mejores resultados y eficiencias a los usuarios y predecir tendencias futuras. Estos programas pueden aprender de conjuntos de datos y experiencias específicas para mejorar los resultados.
+
+7 / 13 Figura 1: Etapas de elaboración de ML
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Con datos de entrenamiento frecuentes como entrada, los algoritmos pueden ser mejorados por los propios modelos de aprendizaje automático. El ML usa de muchos algoritmos para extraer el conocimiento
+
+➢La regresión lineal. ➢Regresión logística. ➢Árbol de decisión. ➢Algoritmo SVM, algoritmo Naive Bayes, algoritmo KNN, K-means, algoritmo Random forest, etc. 2.3. Algoritmos de aprendizaje automático. Los algoritmos ML se clasifican en: ➢Aprendizaje supervisado: Estos algoritmos cuentan con un aprendizaje previo basado en un sistema de etiquetas asociadas a unos datos que les permiten tomar decisiones o hacer predicciones.
+
+➢Aprendizaje no supervisado: Aprende los datos. El aprendizaje no supervisado tiene datos sin etiquetar que el algoritmo tiene que intentar entender por sí mismo. estos algoritmos no cuentan con un conocimiento previo. Se enfrentan al caos de datos con el objetivo de encontrar patrones que permitan organizarlos de alguna manera.
+
+➢Aprendizaje por refuerzo: Utiliza un algoritmo basado en ensayo y error para mejorarse a sí mismo y aprender de lo nuevo. 8 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Notas: El etiquetado de datos (o anotación de datos), forma parte de la fase de preprocesamiento en el desarrollo de un modelo de machine learning (ML). Requiere identificar los datos sin procesar (es decir, imágenes, archivos de texto, vídeos) y luego añadirles una o más etiquetas para especificar su contexto para los modelos, lo que permite que el modelo de machine learning realice predicciones precisas.
+
+La predicción en el contexto científico es una declaración anticipa lo que ocurrirá en determinadas condiciones especificadas.
+
+#### 2.4. Aplicaciones de aprendizaje automático
+
+Hoy en día, muchas personas se benefician del aprendizaje automático sin siquiera darse cuenta por ejemplo cuando usa Google Maps o Alexa de Amazon. Hay una variedad de formas de aplicar el aprendizaje automático. A continuación comentaremos una cuantas. Aplicaciones del aprendizaje supervisado.
+
+➢Reconocimiento de voz. Aplicaciones como Siri de Apple, Google Assistant y Amazon Alexa utilizan el aprendizaje supervisado para convertir el habla del usuario en texto y comprender los comandos de voz. ➢Filtrado de correo no deseado y malware. Los filtros de correo no deseado en servicios como Gmail y Outlook emplean algoritmos de aprendizaje supervisado para identificar y mover mensajes no deseados a la carpeta de spam, basándose en ejemplos previamente etiquetados como spam o no spam.
+
+➢Reconocimiento de caracteres escritos a mano. Se utilizan para digitalizar documentos o capturar firmas electrónicas. Identifican y convierten caracteres escritos a mano en texto legible. ➢Diagnóstico médico. Para la detección temprana de enfermedades a través de imágenes médicas (radiografías o imágenes de resonancia magnética). Se entrenan modelos para identificar patrones y anomalías en los datos médicos.
+
+➢Recomendación de películas y productos. Netflix y Amazon utilizan el aprendizaje supervisado para analizar el historial de visualización y las preferencias del usuario para luego recomendar películas. Aplicaciones del aprendizaje no supervisado ➢Agrupación de datos (Clustering)
+
+9 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Se utiliza para agrupar datos similares en conjuntos discretos. Esto es útil en aplicaciones como la segmentación de clientes en marketing, donde se agrupan a los clientes en categorías basadas en sus patrones de compra o preferencias sin necesidad de etiquetas preexistentes.
+
+➢Detección de anomalías: En esta aplicación, el aprendizaje no supervisado se utiliza para identificar patrones inusuales o anomalías en los datos. Esto es importante en campos como la ciberseguridad, donde se pueden detectar comportamientos anómalos en la red o el tráfico de datos.
+
+➢Recomendación de contenido: Los sistemas de recomendación utilizan técnicas de aprendizaje no supervisado para agrupar usuarios o elementos similares y, a partir de ello, recomendar productos, películas, música u otros contenidos que puedan ser de interés para los usuarios.
+
+➢Reducción de la dimensionalidad : Se utiliza en aplicaciones donde los datos son de alta dimensionalidad, como el procesamiento de imágenes o texto, el aprendizaje no supervisado para reducir la cantidad de dimensiones mientras se retiene la información importante. Esto puede ayudar en la visualización de datos o en la extracción de características relevantes.
+
+➢Segmentación de imágenes y procesamiento de señales: Se utiliza para segmentar objetos en una imagen, separar señales de ruido o extraer características significativas de datos. Aplicaciones del aprendizaje por refuerzo: ➢Juegos y video juegos: Desde juegos de mesa como ajedrez y Go hasta juegos de video modernos mejoran la jugabilidad y el entretenimiento de los mismos.
+
+➢Robótica: Se utiliza para entrenar robots para llevar a cabo tareas físicas complejas como la manipulación de objetos o la navegación autónoma. Los robots pueden aprender a través de ensayo y error, optimizando su comportamiento para lograr objetivos específicos. ➢Publicidad en línea
+
+Se utilizan para optimizar la selección de anuncios y el contenido para los usuarios. Los sistemas pueden aprender a mostrar anuncios que maximicen las tasas de clics o las conversiones a lo largo del tiempo. ➢Control de recursos energéticos: Ayuda a la gestión de la energía en centrales eléctricas o la optimización del consumo de energía en edificios maximizando la eficiencia y minimizando los costos.
+
+10 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢Asistencia médica y tratamientos: Se aplica para personalizar los tratamientos médicos, la selección de terapias y la administración de medicamentos. 11 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+### 3. INTELIGENCIA ARTIFICIAL
+
+La inteligencia artificial (IA) es un campo más amplio que engloba el aprendizaje automático. La IA es la capacidad de las máquinas para realizar tareas que normalmente requerirían inteligencia humana. El aprendizaje automático es un subconjunto de la IA que implica el uso de algoritmos para analizar datos, aprender de ellos y tomar decisiones basadas en ese aprendizaje.
+
+### 4. DEEP LEARNING
+
+Deep learning es un subconjunto del machine learning. Es básicamente una red neuronal con tres o más capas. Estas redes neuronales aprenden a partir de grandes cantidades de datos. Una red neuronal con una sola capa ya puede realizar predicciones aproximadas, las capas ocultas adicionales ayudan a optimizar y refinar la precisión.
+
+La tecnología de deep learning reside detrás de muchos productos y servicios de uso cotidiano (como los asistentes digitales, los controles de TV habilitados por voz y la detección de fraudes con tarjeta de crédito), así como de tecnologías emergentes (automóviles autónomos).
+
+Deep learning se distingue del machine learning (clásico) por el tipo de datos con los que trabaja y los métodos mediante los cuales aprende. Los algoritmos de machine learning aprovechan los datos estructurados y etiquetados para realizar predicciones (aunque también puede utilizar datos no estructurados, pero necesita de algún procesamiento previo para organizarlos y estructurarlos).
+
+Deep learning elimina parte del procesamiento previo de datos. Los algoritmos de deep learning pueden ingerir y procesar datos no estructurados, como texto e imágenes y automatizar la extracción de características. 12 / 13
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web A plicaciones del deep learning
+
+➢Detección de fraude. ➢Servicios financieros. ➢Servicio al cliente. ➢Asistencia sanitaria. Requisitos de hardware de
+
+deep learning
+
+Deep learning requiere granes cantidades de potencia computacional. Las unidades de procesamiento gráfico (GPU) son ideales porque manejan un gran volumen de cálculos en varios núcleos. Como es evidente disponer de miles de GPUs en local genera unos gastos importantes no necesariamente al alcance de todos.
+
+A raíz de esa necesidad de desarrollar algoritmos de deep learning con redes neuronales a precios asequibles, numerosas empresas han empezado a ofrecer servicios de computación en la nube. A continuación citamos unas cuantas
+
+- Linode
+- Latitud.sh
+- Paperspace CORE
+- GPU de Google Cloud
+- Servicio GPU elástico
+- Serie Azure N
+- Nube de IBM
+- AWS y NVIDIA
+- OVHcloud
+- GPU Lambda
+- Nube Génesis
+
+13 / 13
+
+---

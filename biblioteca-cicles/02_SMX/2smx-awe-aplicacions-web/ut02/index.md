@@ -2,9 +2,9 @@
 layout: default
 title: "UD2 — Desktop Web Applications · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT2 Completa"
-prev_url: "../ut01/ut0107.html"
-prev_label: "⬅️ 1.7 Cheatsheet CSS (Manz)"
+badge: "2n SMX · Grau Mitjà · UD2 — Desktop Web Applications"
+prev_url: "../ut01/ut0106.html"
+prev_label: "⬅️ 1.6 Cheatsheet CSS (Manz)"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 Resources: Reference Links ➡️"
 ---
@@ -37,23 +37,6 @@ next_label: "2.1 Resources: Reference Links ➡️"
 
 > **🔗 Recurs Web: EN Video - Upload Files with cPanel File Manager | GoDaddy**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=9oblyizmLxE) ↗️**](https://www.youtube.com/watch?v=9oblyizmLxE)
-
-> **📌 🏷️ Apunt de la Unitat**
-> **Classe online AWE 18/11/24 11:15**
->
-> **Continguts de la sessió**Repàs de continguts
-> --- On estàvem i què necessitem saber
-> Estat actual del temari i següents passos 
-> --- Centrar en U4 Wordpress 
-> --- Eliminar U7 Javascript
-> Replanificació de les proves programades 
-> --- Setmana 25/11/24 - XAMPP 27/11/24
-> --- Setmana 25/11/24 - Teoria U1-U2 28/11/24
-> **Enllaç per unir-se a la sessió online**
->
-> [https://teams.microsoft.com/l/meetup-join/19%3ameeting_Yzk2NjVmZDEtZTA1Mi00MTMwLTk2Y2YtYmUxOTE5YzdmZTQy%40thread.v2/0?context=%7b%22Tid%22%3a%2273dd1114-ef7d-40c7-8669-569d32e7e29b%22%2c%22Oid%22%3a%22bc5bedd7-1e41-45be-8e4f-3d7914d8bb41%22%7d](https://teams.microsoft.com/l/meetup-join/19%3ameeting_Yzk2NjVmZDEtZTA1Mi00MTMwLTk2Y2YtYmUxOTE5YzdmZTQy%40thread.v2/0?context=%7b%22Tid%22%3a%2273dd1114-ef7d-40c7-8669-569d32e7e29b%22%2c%22Oid%22%3a%22bc5bedd7-1e41-45be-8e4f-3d7914d8bb41%22%7d)
-> ID de la reunió: 321 493 547 129
-> Clau d'accés: Tq9as2vm
 
 ---
 

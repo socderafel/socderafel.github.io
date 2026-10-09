@@ -5,51 +5,51 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Introducción a la programación con Java":
-      - "📘 UD1 Completa (1 pàgina)": ut05/index.md
-      - "1.1 Introducción a la Programacion": ut05/ut0501.md
-      - "1.2 Algoritmos": ut05/ut0502.md
-      - "1.3 Introduccion a Java": ut05/ut0503.md
-      - "1.4 Estilo de codificacion": ut05/ut0509.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Introducción a la Programacion": ./ut01/ut0101.md
+      - "1.2 Algoritmos": ./ut01/ut0102.md
+      - "1.3 Introduccion a Java": ./ut01/ut0103.md
+      - "1.4 Estilo de codificacion": ./ut01/ut0104.md
   - "UD2 — Entrada y salida de información":
-      - "📘 UD2 Completa (1 pàgina)": ut06/index.md
-      - "2.1 Entrada y salida de información": ut06/ut0601.md
-      - "2.2 Colores": ut06/ut0602.md
-      - "2.3 ClasePrintf": ut06/ut0603.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Entrada y salida de información": ./ut02/ut0201.md
+      - "2.2 Colores": ./ut02/ut0202.md
+      - "2.3 ClasePrintf": ./ut02/ut0203.md
   - "UD3 — Estructuras de control":
-      - "📘 UD3 Completa (1 pàgina)": ut07/index.md
-      - "3.1 Uso de estructuras de control": ut07/ut0701.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Uso de estructuras de control": ./ut03/ut0301.md
   - "UD4 — Programación Estructurada y Modular":
-      - "📘 UD4 Completa (1 pàgina)": ut08/index.md
-      - "4.1 Programación estructurada y modular": ut08/ut0801.md
-      - "4.2 Programación estructurada y modular": ut08/ut0802.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Programación estructurada y modular": ./ut04/ut0401.md
+      - "4.2 Programación estructurada y modular": ./ut04/ut0402.md
   - "UD5 — Estructuras datos estáticas":
-      - "📘 UD5 Completa (1 pàgina)": ut09/index.md
-      - "5.1 Estructuras de datos estáticas": ut09/ut0901.md
-      - "5.2 Estructuras de datos estaticas": ut09/ut0902.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Estructuras de datos estáticas": ./ut05/ut0501.md
+      - "5.2 Estructuras de datos estaticas": ./ut05/ut0502.md
   - "UD6 — Estructuras de datos dinámicas":
-      - "📘 UD6 Completa (1 pàgina)": ut10/index.md
-      - "6.1 Estructuras de datos dinámicas": ut10/ut1001.md
-      - "6.2 Estructuras de datos dinamicas": ut10/ut1002.md
-      - "6.3 Recursividad": ut10/ut1009.md
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 Estructuras de datos dinámicas": ./ut06/ut0601.md
+      - "6.2 Estructuras de datos dinamicas": ./ut06/ut0602.md
+      - "6.3 Recursividad": ./ut06/ut0603.md
   - "UD7 — Programación orientada a objetos":
-      - "📘 UD7 Completa (1 pàgina)": ut11/index.md
-      - "7.1 Programación Orientada a Objetos": ut11/ut1101.md
-      - "7.2 EstructuraClase": ut11/ut1102.md
-      - "7.3 Programación orientada a objetos (versión extend": ut11/ut1121.md
+      - "📘 UD7 Completa (1 pàgina)": ./ut07/index.md
+      - "7.1 Programación Orientada a Objetos": ./ut07/ut0701.md
+      - "7.2 EstructuraClase": ./ut07/ut0702.md
+      - "7.3 Programación orientada a objetos (versión extend": ./ut07/ut0703.md
   - "UD8 — Utilización avanzada de clases":
-      - "📘 UD8 Completa (1 pàgina)": ut12/index.md
-      - "8.1 Utilizacion avanzada de clases": ut12/ut1201.md
-      - "8.2 Utilización avanzada de clases (Versión ex": ut12/ut1206.md
+      - "📘 UD8 Completa (1 pàgina)": ./ut08/index.md
+      - "8.1 Utilizacion avanzada de clases": ./ut08/ut0801.md
+      - "8.2 Utilización avanzada de clases (Versión ex": ./ut08/ut0802.md
   - "UD9 — Gestión de excepciones":
-      - "📘 UD9 Completa (1 pàgina)": ut13/index.md
-      - "9.1 Gestión de excepciones": ut13/ut1301.md
+      - "📘 UD9 Completa (1 pàgina)": ./ut09/index.md
+      - "9.1 Gestión de excepciones": ./ut09/ut0901.md
   - "UD10 — Lectura y escritura de ficheros":
-      - "📘 UD10 Completa (1 pàgina)": ut14/index.md
-      - "10.1 Lectura y escritura de información en ficheros": ut14/ut1401.md
+      - "📘 UD10 Completa (1 pàgina)": ./ut10/index.md
+      - "10.1 Lectura y escritura de información en ficheros": ./ut10/ut1001.md
   - "UD11 — Interacción con bases de datos":
-      - "📘 UD11 Completa (1 pàgina)": ut15/index.md
-      - "11.1 Interacción con bases de datos": ut15/ut1501.md
+      - "📘 UD11 Completa (1 pàgina)": ./ut11/index.md
+      - "11.1 Interacción con bases de datos": ./ut11/ut1101.md
   - "UD12 — Interfaces gráficas de usuario":
-      - "📘 UD12 Completa (1 pàgina)": ut16/index.md
-      - "12.1 JavaFX": ut16/ut1602.md
-      - "12.2 JavaFX": ut16/ut1603.md
+      - "📘 UD12 Completa (1 pàgina)": ./ut12/index.md
+      - "12.1 JavaFX": ./ut12/ut1201.md
+      - "12.2 JavaFX": ./ut12/ut1202.md

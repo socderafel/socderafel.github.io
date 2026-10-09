@@ -29,7 +29,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 [**📘 Obrir UD1 Completa en una sola pàgina**](./ut01/index.md)
 
-- [**1.1 Continguts i Recursos**](./ut01/ut0101.md)
+- [**1.1 Continguts Teòrics i Recursos**](./ut01/ut0101.md)
 
 ## UD2 — Robòtica
 
@@ -37,4 +37,4 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 [**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Continguts i Recursos**](./ut02/ut0201.md)
+- [**2.1 Continguts Teòrics i Recursos**](./ut02/ut0201.md)

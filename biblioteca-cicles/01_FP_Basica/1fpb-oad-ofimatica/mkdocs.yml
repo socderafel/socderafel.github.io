@@ -5,20 +5,20 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — COMUNICACIONS INTERNES I EXTERNES":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Comunicacions internes i externes": ut01/ut0101.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Comunicacions internes i externes": ./ut01/ut0101.md
   - "UD2 — REPROGRAFIA i ENQUADERNACIÓ":
-      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Temari": ut02/ut0201.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Temari": ./ut02/ut0201.md
   - "UD3 — CALC BÀSIC":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Continguts i Recursos": ut03/ut0301.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Continguts Teòrics i Recursos": ./ut03/ut0301.md
   - "UD4 — CALC MITJÀ":
-      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 Continguts i Recursos": ut04/ut0401.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Continguts Teòrics i Recursos": ./ut04/ut0401.md
   - "UD5 — BASE":
-      - "📘 UD5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 Continguts i Recursos": ut05/ut0501.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Continguts Teòrics i Recursos": ./ut05/ut0501.md
   - "UD6 — GIMP":
-      - "📘 UD6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Continguts i Recursos": ut06/ut0601.md
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 Continguts Teòrics i Recursos": ./ut06/ut0601.md

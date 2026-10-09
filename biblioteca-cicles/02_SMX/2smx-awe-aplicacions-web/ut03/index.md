@@ -2,7 +2,7 @@
 layout: default
 title: "UD3 — Deploying a web server · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT3 Completa"
+badge: "2n SMX · Grau Mitjà · UD3 — Deploying a web server"
 prev_url: "../ut02/ut0202.html"
 prev_label: "⬅️ 2.2 EN Article: How Web Operating Systems Work"
 next_url: "../ut03/ut0301.html"

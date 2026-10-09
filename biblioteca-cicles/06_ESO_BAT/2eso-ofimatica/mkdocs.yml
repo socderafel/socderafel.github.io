@@ -5,13 +5,13 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Conceptes bàsics":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Gestió d'arxius": ut01/ut0101.md
-      - "1.2 Teoria Internet1": ut01/ut0102.md
-      - "1.3 Internet 2_ Com fer cerques": ut01/ut0103.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Gestió d'arxius": ./ut01/ut0101.md
+      - "1.2 Teoria Internet1": ./ut01/ut0102.md
+      - "1.3 Internet 2_ Com fer cerques": ./ut01/ut0103.md
   - "UD2 — Writer":
-      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Continguts i Casos Guiats": ut02/ut02actividades.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Format de text, llistes i taules en Writer": ./ut02/ut0201.md
   - "UD3 — Calc":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Continguts i Casos Guiats": ut03/ut03actividades.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Format de cel·les, fórmules i gràfics en Calc": ./ut03/ut0301.md

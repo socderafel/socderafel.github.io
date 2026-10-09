@@ -5,23 +5,23 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — DHCP":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 U1 DHCP": ut01/ut0101.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 U1 DHCP": ./ut01/ut0101.md
   - "UD2 — DNS":
-      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 U2 DNS": ut02/ut0201.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 U2 DNS": ./ut02/ut0201.md
   - "UD3 — HTTP":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 U3 HTTP": ut03/ut0301.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 U3 HTTP": ./ut03/ut0301.md
   - "UD4 — FTP":
-      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 U4 FTP": ut04/ut0401.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 U4 FTP": ./ut04/ut0401.md
   - "UD5 — SSH":
-      - "📘 UD5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 U5 SSH": ut05/ut0501.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 U5 SSH": ./ut05/ut0501.md
   - "UD6 — Email":
-      - "📘 UD6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 U6 Email": ut06/ut0601.md
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 U6 Email": ./ut06/ut0601.md
   - "UD7 — Audio and Video":
-      - "📘 UD7 Completa (1 pàgina)": ut07/index.md
-      - "7.1 U7 Audio and Video": ut07/ut0701.md
+      - "📘 UD7 Completa (1 pàgina)": ./ut07/index.md
+      - "7.1 U7 Audio and Video": ./ut07/ut0701.md

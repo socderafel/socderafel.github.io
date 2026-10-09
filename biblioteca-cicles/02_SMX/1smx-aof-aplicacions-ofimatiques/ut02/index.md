@@ -1,2974 +1,858 @@
 ---
 layout: default
-title: "UD1 — Processador de text (I) · Temari Complet"
+title: "UD2 — Processador de text (II) · Temari Complet"
 course_root: ".."
-badge: "1r SMX · Grau Mitjà · UT2 Completa"
-prev_url: "../index.html"
-prev_label: "⬅️ 🏠 Inici del Mòdul"
+badge: "1r SMX · Grau Mitjà · UD2 — Processador de text (II)"
+prev_url: "../ut01/ut0106.html"
+prev_label: "⬅️ 1.6 curiosidades en Writer"
 next_url: "../ut02/ut0201.html"
-next_label: "1.1 Tema 0. Suites Ofimàtiques ➡️"
+next_label: "2.1 Tema 7. COMBINAR CORRESPONDENCIA ➡️"
 ---
 
-# 📘 UD1 — Processador de text (I) (Unitat Completa)
+# 📘 UD2 — Processador de text (II) (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**1.1 Tema 0. Suites Ofimàtiques**](./ut0201.md)
-- [**1.2 Tema 0. Writer**](./ut0202.md)
-- [**1.3 Mapa conceptual WRITER**](./ut0203.md)
-- [**1.4 Tema 2. Taules**](./ut0208.md)
-- [**1.5 Tema 3. IMATGES**](./ut0210.md)
-- [**1.6 Exemple Numeració i Vinyetes**](./ut0217.md)
-- [**1.7 curiosidades en Writer**](./ut0218.md)
+- [**2.1 Tema 7. COMBINAR CORRESPONDENCIA**](./ut0201.md)
+- [**2.2 Exemple Combinar correspondència**](./ut0202.md)
+- [**2.3 Tema 9. PLANTILLES**](./ut0203.md)
 
 ---
 
-# 1.1 Tema 0. Suites Ofimàtiques
+# 2.1 Tema 7. COMBINAR CORRESPONDENCIA
 
-> **📌 🏷️ Apunt de la Unitat**
-> **Tema 0: INTRODUCCIÓ SUITES OFIMÀTIQUES**
+Tema 07. Combinar Correspondencia.
 
-> **📌 🏷️ Apunt de la Unitat**
-> **Pràctiques tema 1: FORMAT**
-
-> **📌 🏷️ Apunt de la Unitat**
-> **Pràctiques tema 2: TAULES**
-
-> **📌 🏷️ Apunt de la Unitat**
-> **Pràctiques tema 3: IMATGES**
-
-> **📌 🏷️ Apunt de la Unitat**
-> **Pràctiques tema 4: COLUMNES I TABULACIONS**
-
-> **📌 🏷️ Apunt de la Unitat**
-> **Pràctiques tema 5: NUMERACIÓ I VINYETES**
-
-> **📌 🏷️ Apunt de la Unitat**
-> ##### **Curiosidades Writer**
-
----
-
-Contenidos SMR_AO01_Implantación de Suites Ofimáticas Caso práctico Isftic. Uso educativo-nc procedencia Juan y Alicia decidieron hace unos meses montar una Agencia De Viajes. Después de conseguir las licencias necesarias, encontrar el local apropiado y reformarlo a su gusto, hoy están a pocos días de la inauguración.
-
-Todavía les quedan algunas cosas que terminar y que decidir. Ahora Juan está en la oficina y acaba de desembalar el nuevo equipo informático. Juan:- Voy a llamar a Alicia para contarla que ya ha llegado el ordenador. Riiing-Riiiing Alicia:- ¡Hola Juan! ¿Alguna novedad?
-
-Juan:- Pues si , he desembalado el ordenador y voy a ver si lo monto. ¿ en qué mesa lo vamos a poner? Alicia:- Lo mejor es que hasta que no llegue el resto será ponerle en el mostrador de recepción, así estará más a mano. Juan:- Vale, me pongo manos a la obra, y ya sabes vete pensando que programas vamos a necesitar.
-
-Alicia:-Si estoy en ello. Hasta Luego.
-
-1.-Introducción mecasoftPRO procedencia La implantación de una aplicación es todo aquel conjunto de tareas que se llevan a cabo desde la instalación del software hasta el mantenimiento del mismo. Incluye las tareas de configuración y procedimientos de prueba y puesta a punto.
-
-El proceso de implantación consta de las siguientes fases
-
-- Compatibilidad: evaluación del estado del sistema y de las aplicaciones existentes
-
-antes de la implantación
-
-- Utilidad: aquí debemos analizar si la nueva aplicación se adapta a las necesidades
-
-existentes y a los requerimientos de la empresa. También debemos estudiar un plan de migración y adaptación de los datos antiguos al nuevo formato.
-
-- Instalación y configuración de la aplicación, según las necesidades de la empresa
-- Formación a los usuarios para adquirir los conocimientos suficientes para su
-
-explotación
-
-- Simulación final de la herramienta implantada y valoración de las dificultades
-
-detectadas.
-
-- Migración de los datos para su compatibilidad con la nueva herramienta
-- Mantenimiento de la aplicación
-- Políticas de copia y restauración de datos
-- Ubicaciones o reubicaciones de los ficheros generados
-- Políticas de seguridad de los datos
-- Planes de privacidad y confidencialidad de las
-
-informaciones
-
-1.1.-Informática y la empresa Isftic. Uso educativo-nc procedencia La informática consiste básicamente en el tratamiento automático de la información. Si la empresa tiene como una de sus actividades principales la generación, manejo y análisis de cierta información parece lógico pensar que la informática va a jugar un papel importante en la gestión empresarial.
-
-En un sistema de información como es una organización empresarial, las actividades que se realizan con la información son
-
-- Recogida.
-- Almacenamiento.
-- Procesamiento.
-- Distribución y presentación.
-- Protección.
-
-Todas estas funciones están relacionadas con los datos. Su manejo es fundamental y es aquí donde entra la informática como herramienta para el tratamiento los mismos de manera razonablemente automática, que es más fiable y menos costosa que la manera manual. Para realizar estas operaciones el sistema informático dispone de ciertos componentes. Son los siguientes
-
-- Equipos físicos: Que en su conjunto se denominan Hardware. Son los
-
-componentes físicos: (impresoras, scanner) realizan la mayoría de las funciones anteriores.
-
-- Equipamiento lógico:Software. Es el conjunto de programas que dispone el sistema
-
-informático para que el usuario pueda interactuar con los componentes físicos y pedirles que realicen las tareas que la actividad empresarial demanda.
-
-- Soportes físicos: Son la parte del equipamiento físico que se utilizan para
-
-almacenar la información y los programas.
-
-- Usuarios: Esta parte tiene que ver con la protección de los datos.
-
-1.2.-Programas de uso común en la empresa Uso Educativo no comercial. Elaboración Propia. Con la aparición de la informática la actividad empresarial como otras muchas se ve enormemente beneficiada. Por una parte empiezan desarrollarse programas que resuelven aspectos concretos del funcionamiento de la empresa: contabilidad, facturación etc. A estos programas se los denomina corporativos o de uso empresarial.
-
-Por otro lado la evolución de la informática ha llevado a la extensión de su uso a todos los ámbitos de la sociedad. Aparecen así los llamados programas ofimáticos. Estos programas resuelven necesidades generales relacionadas con el trabajo en la oficina (escribir texto, manipularlo etc.)
-
-2.-Tipos de Software y Licencias Caso práctico Isftic. Uso educativo-nc Procedencia Cuando llegó Alicia a la agencia , Juan ya tenía el ordenador en marcha. Alicia:¿Qué tal? Juan:- Muy bien, va perfectamente, pero ahora nos tenemos que decidir a ver cuales son los programas que necesitamos.
-
-Alicia: ¡Vale, vale!. A ver, necesitamos escribir cartas, hacer folletos, tener toda la información de los viajes, calcular precios, calcular itinerarios... Juan:- Espera, de momento si encontrásemos un buen paquete ofimático nos solucionaría todo esto. Alicia:- Tendríamos que mirar entre los que existen, y a ser posible que fuera gratis, no estamos para gastar, ya lo sabes!
-
-Juan:- Voy a llamar a Alberto que de programas entiende mucho. En este apartado vamos a ver la clasificación del software de aplicaciones según diferentes criterios: Uso educativo no comercial-Elaboración propia
-
-Uso educativo no comercial-Elaboración propia
-
-2.1-Clasificación en función del tipo de software En función del tipo de software las aplicaciones se pueden dividir en tres grandes grupos
-
-- Aplicaciones Gratuitas (Freeware) y Aplicaciones comerciales: Esta
-
-clasificación se basa en el coste de distribución. Las primeras son gratis de libre distribución. Esta distribución se puede hacer de varias formas: por medio de Internet, en centros educativos, mano a mano... Se pueden utilizar para cualquier actividad personal o profesional.
-
-Las aplicaciones comerciales en cambio necesitan de un pago para su uso.
-
-- Software Libre y Software propietario
-
-Las licencias del software libre se basan en la distribución del código fuente junto con el programa, así como en
-
-- La libertad de usar el programa con cualquier propósito.
-- La libertad de estudiar el funcionamiento del programa y adaptarlo a las
-
-necesidades.
-
-- La libertad de distribuir copias.
-- La libertad de mejorar el programa y hacer públicas las mejoras, de
-
-modo que la comunidad se beneficie. Hay que dejar claro que el que un determinado programa sea libre no implica que sea o deba ser gratuito (freeware). Puede tratarse de un software libre y a su vez sea un software comercial, en el que se pida un pago por licencia.
-
-Las licencias de software propietario, son aquellas en las que los usuarios tienen limitadas las posibilidades de usarlo, modificarlo o redistribuirlo. El código fuente es cerrado al usuario.
-
-- Aplicaciones Opensource o privativas, en las primeras el código es abierto al
-
-usuario mientras que en las privativas el código fuente no está disponible o el acceso a él se encuentra restringido. La repercusión en la fase de implantación es importante, ya que una aplicación OpenSource permite un afinamiento más adaptado, barato y simple que una privativa, aunque debido a contingencias en la compatibilidad e interconexión de aplicaciones es necesario habitualmente instalar en determinadas ocasiones software privativo.
-
-Para saber más
-
-Solución
-
-### 1. Incorrecto
-
-### 2. Opción correcta
-
-### 3. Incorrecto
-
-http://es.wikipedia.org/wiki/Software_libre http://es.wikipedia.org/wiki/Software_propietario Autoevaluación Indica que afirmación es falsa: Las licencias de software libre se basan en la distribución del código fuente junto con el programa. El que un determinado programa sea libre implica que sea gratuito.
-
-Un software privativo es aquel cuyo código fuente no está disponible o el acceso a él se encuentra restringido. Las licencias de software propietario son aquellas en las que los usuarios tienen limitadas las posibilidades de usarlo, modificarlo o redistribuirlo (con o sin modificaciones).
-
-La respuesta correcta es la b. Puede tratarse de un software libre y a su vez sea un software comercial, en el que se pida un pago por licencia. Respuesta correcta!!! La respuesta correcta es la b. Puede tratarse de un software libre y a su vez sea un software comercial, en el que se pida un pago por licencia.
-
-La respuesta correcta es la b. Puede tratarse de un software libre y a su vez sea un software comercial, en el que se pida un pago por licencia.
-
-### 4. Incorrecto
-
-2.2.-Clasificación en función del tipo de licencias de distribución En función de las licencias de distribución, el software comercial se puede dividir en
-
-- OEM. Este tipo de licencia afecta sobre todo a sistemas operativos y su venta está
-
-siempre sujeta a que forme parte de un equipo nuevo, está prohibido venderlos si no es bajo esa condición. El software que se compra bajo este tipo de licencia implica la propiedad por parte del usuario, pero los fabricantes puede poner ciertas limitaciones para su uso, como por ejemplo el número máximo de veces que se puede reinstalar.
-
-Los programas adquiridos con esta licencia no permiten vender ni ceder a terceros, salvo como parte de un equipo.
-
-- Retail. En este caso el programa es de entera propiedad del usuario, pudiendo
-
-cederlo a terceros o venderlo.
-
-- Licencias por volumen. Este tipo de licencia de software está destinado a grandes
-
-empresas (muchos usuarios). Las condiciones son parecidas a las licencias OEM, pero no están supeditadas a equipos nuevos. Básicamente se trata de estipular un determinado número de equipos que puedan utilizar el mismo código de licencia, el fabricante queda autorizado a hacer las comprobaciones oportunas para ver que las licencias que se están usando son las adquiridas.
-
-Normalmente se venden por paquetes de X número de licencias. (Por ejemplo: paquetes de 25 licencias como mínimo). Este tipo de licencia no se puede ceder a terceros. Autoevaluación Indique que afirmación es falsa: Una licencia por volumen es un tipo de licencia de software destinado a grandes usuarios(empresas), normalmente bajo unas condiciones similares a las de las licencias OEM, aunque sin estar supeditadas a equipos nuevos.
-
-Una licencia por volumen se puede ceder a terceros total o parcialmente. En un software opensource el código está abierto para que el usuario lo pueda ver. Un tipo de licencia OEM es un tipo de licencia que supedita su venta a que forme parte de un equipo nuevo.
-
-Solución
-
-La respuesta correcta es la b. Las condiciones son parecidas a las licencias OEM, (está prohibido venderlos) RESPUESTA CORRECTA!!! La respuesta correcta es la b. Las condiciones son parecidas a las licencias OEM, (está prohibido venderlos) La respuesta correcta es la b.
-
-Las condiciones son parecidas a las licencias OEM, (está prohibido venderlos)
-
-2.3.-Aplicaciones Ofimáticas Elaboración Propia Uso Educativo no comercial La palabra ofimática se ha ido extendiendo hasta hacer referencia a prácticamente cualquier programa informático de utilidad más o menos general. Una suite ofimática o suite de oficina es una recopilación de programas, los cuales son utilizados para manejar la información y los documentos utilizados en diferentes sectores empresariales, disponiendo de una gran variedad de funciones como crear, modificar, organizar, escanear, imprimir, etc. sobre archivos y documentos. Son ampliamente utilizados, y es más asequible adquirir una suite ofimática que programas independientes; además de por su coste, por la facilidad para interactuar entre los mismos, ya que disponen de características comunes.
-
-A la hora de elegir la suite ofimática debemos de considerar los siguientes aspectos y analizar que es lo más conveniente en función de las características de nuestra empresa y el uso para el que vaya a ser destinado este software
-
-- ¿La suite es Multiplataforma o no?
-- ¿Dicha aplicación ofimática es Opensource o Privativa?
-- ¿La aplicación es gratuita o no?
-
-Existen en el mercado una gran variedad de suites ofimáticas, atendiendo a los anteriores criterios podemos enumerar algunas de ellas
-
-- OpenOffice: suite multiplataforma, libre y gratuita,
-
-utiliza el estándar OpenDocument, que es un formato estándar para el almacenamiento de ficheros. Esta formada por los programas Write, Calc, Impress, Draw y Base.
-
-- Gnome Office: suite multiplataforma, libre y gratuita del proyecto Gnome
-
-(Conformada por Abiword, Gnumeric, GNOME-DB y GIMP).
-
-- StarOffice: Suite multiplataforma y libre (hasta la versión 5.2) de Sun basada en
-
-OpenOffice.org, con algunos añadidos propietarios.
-
-- Lotus: Lotus SmartSuite (Word Pro, Lotus 1-2-3, Lotus Organizer, Lotus Word Pro,
-
-Lotus Approach y Freelance Graphics). Multiplataforma.
-
-- Microsoft Office: privativa, propietaria, comercial y creada para plataformas
-
-Windows. Su uso está muy extendido, dispone de varias versiones y ediciones para cada versión. Contiene los siguientes programas: Word, Excel, PowerPoint, Access, Publisher, etc. Todas las suites ofimáticas disponen por lo menos de un procesador de texto y una hoja de cálculo aunque la mayoría ofrecen las siguientes aplicaciones
-
-- Procesadores de textos
-- Hojas de cálculo
-- Gestores de presentaciones
-- Gestores de datos
-
-- Gestores de correo electrónico
-- Gestores de proyecto
-- Programas de diseño grafico
-- Agendas electrónicas
-
-2.3.1.-Procesadores de Texto Uso Educativo no comercial. Elaboración Propia Son programas de edición de texto que permiten insertar, borrar o modificar según se va escribiendo. Permiten intercalar párrafos, en algunos casos se puede cambiar el tipo y tamaño de la letra e imprimir y/o guardar el documento en diferentes formatos.
-
-En el campo de la edición de texto se ha avanzado mucho y los editores de texto han pasado a ser procesadores de texto. Son más avanzados, incorporan nuevas herramientas, por ejemplo los correctores ortográficos y de errores gramaticales, diferentes formatos de párrafos, letras, colores, tablas y efectos especiales.
-
-Los más conocidos
-
-- Word (Microsoft)
-- Works (Microsoft)
-- WordPerfect (Corel)
-- WordStar (Softkey)
-- Amipro3 (Lotus)
-- Writer (Sun)
-
-2.3.2.-Hojas de Cálculo Uso Educativo no comercial. Elaboración Propia Son programas que permiten la posibilidad de realizar desde cálculos sencillos hasta operaciones muy complejas, haciendo uso de las funciones propias del programa o de otras creadas por el usuario, los tipos de datos que maneja normalmente son de tipo numérico o tipo texto, pero también hay otros formatos: alfanumérico, moneda, fecha.
-
-Los datos en las hojas de calculo se presentan en un formato que el usuario puede manipular directamente para obtener el resultado mas óptimo, también dispone de herramientas para la creación de gráficos y la distribución de los resultados. Los más conocidos
-
-- Excel (Microsoft)
-- Lotus123 (IBM)
-- Quattro Pro (Corel)
-- Calc (Sun)
-
-2.3.3.-Gestores de Presentaciones Uso Educativo no Comercial. Elaboración Propia Son programas que permiten desarrollar presentaciones visuales. Al principio estos gestores consistían únicamente en permitir desarrollar diapositivas, pero han avanzado tanto que ahora ofrecen múltiples posibilidades como: animaciones, transiciones entre diapositivas, inserción de sonidos y video.
-
-Los más conocidos
-
-- Power Point (Microsoft)
-- Presentations(Corel)
-- Impress(Sun)
-
-2.3.4.-Gestores de Datos Uso Educativo no comercial. Elaboración Propia Conocidos como gestores de bases de datos. La información que maneja una empresa se almacena en ficheros organizados independientemente de su utilización, es lo que se conoce como bases de datos; la información suele estar gestionada por un programa gestor que permite el almacenamiento, la recuperación en diferentes formatos, la ordenación, la búsqueda bajo diversos criterios, la relación entre los datos, la actualización, distribución en forma de informes, etc.
-
-Hay diferentes programas para la gestión de esta información, algunos muy complejos y otros más sencillos, pero en todos es necesario conocer los fundamentos de la gestión de base de datos y comprender conceptos como relaciones, registros, integridad, campos, claves.
-
-Los más conocidos
-
-- Access (Microsoft)
-- Oracle (Oracle)
-- Progress (Progress)
-- Paradox (Corel)
-- Dbase (Dbase)
-- Lotus Aproachment/Notes (IBM)
-
-2.3.5.-Gestores de Correo Electrónico Uso Educativo no comercial Elaboración Propia Con la llegada de Internet los clientes de correo electrónico han aumentado mucho. Un cliente de correo electrónico es un programa instalado en nuestro ordenador que nos permite enviar y recibir mensajes vía Internet. Los primeros gestores permitían enviar solamente mensajes de tipo texto. Actualmente se pueden adjuntar ficheros de todo tipo y cada vez de mayor tamaño. También estos gestores ofrecen un gestor de contactos, direcciones y de mensajes recibidos y enviados. No hay que confundir los clientes de correo con páginas Web que ofrecen los servicios de correo. La diferencia es que el cliente de correo no hay que estar conectado constantemente a una página Web para saber si tenemos o no correo.
-
-Los más conocidos
-
-- Outlook/Outlook Express (Microsoft).
-- Eudora (Qual Comm).
-- Mozilla Mail.
-- Evolution.
-
-Autoevaluación Indique que afirmación es falsa: Microsoft Office 2007 es un software privativo, propietario, comercial y creado solo para plataformas Windows. OpenOffice.org es un software multiplataforma, libre y gratuito. Start Office es de Sun Microsystems, opensource y basada en Microsoft Office.
-
-La respuesta correcta es la c. Esta basada en OpenOffice.org, con algunos añadidos propietarios. La respuesta correcta es la c. Esta basada en OpenOffice.org, con algunos añadidos propietarios. RESPUESTA CORRECTA!!!!
-
-Solución
-
-### 2. Incorrecto
-
-### 3. Opción correcta
-
-2.4.-OpenOffice.org El desarrollo de esta suite comenzó en 1994 y desde ese momento ha sufrido una gran evolución hasta llegar a ser el programa que conocemos actualmente. Este programa permite importar y exportar documentos en diferentes formatos de archivo. Además de producir sus propios archivos, es capaz de leer y grabar formatos de archivo para Microsoft Office. La suite tiene la capacidad de guardar documentos en diferentes formatos, tales como el formato RTF, TXT, Microsoft Office XML y OpenOffice.org XML, y formatos Wiki para incluirse en documentos como wikipedia.
-
-Adicionalmente puede exportar documentos directamente al formato PDF y exportar presentaciones al formato Adobe Flash (SWF). OpenOffice.org también cuenta con la capacidad de importar documentos en modo de «sólo lectura» en los formatos Unified Office Format, Data Interchange Format y los formatos propios de Microsoft Works, WordPerfect, Lotus 1-2-3, entre otros.
-
-Este software es posible instalarlo en diferentes plataformas como Windows, Linux, Mac, etc. Otra de las grandes ventajas es que permite descarga diccionarios adicionales para muchos idiomas, permitiendo la corrección ortográfica y búsqueda de sinónimos. OpenOffice.org ofrece las siguientes ventajas
-
-- Es libre, se puede descargar gratuitamente de internet, copiar y redistribuir, todo
-
-esto de forma completamente legal.
-
-- Con el tiempo todos los programas caducan, se quedan obsoletos; con
-
-OpenOffice.org, no sucede, siempre puedes ir a su página web y descargarte gratuitamente la última versión actualizada y mejorada.
-
-- Con OpenOffice.org tienes completa libertad para elegir el sistema operativo que
-
-desees, desde las diferentes versiones de Windows, Linux, Mac, etc., descargas la versión correspondiente de OpenOffice.org de su página oficial y ya puedes instalarlo.
-
-- Si tienes necesidad de editar tus documentos en un ordenador que funciona con un
-
-sistema operativo distinto del tuyo. Puedes abrir los documentos creados desde diferentes entornos y plataformas.
-
-- Es muy compatible con Microsoft Office: los documentos de texto, hojas de cálculo
-
-y presentaciones de MS Office se pueden abrir, editar y guardar satisfactoriamente con OpenOffice.org. Como hemos dicho anteriormente openOffice.org es una suite por lo tanto está compuesta por diferentes aplicaciones, en el cuadro siguiente se muestra de forma resumida una explicación de cada una de ellas.
-
-Elaboración Propia-Uso Educativo No comercial Autoevaluación Indique que afirmación es falsa: Writer es la aplicación de edicción o procesamientos de textos del OpenOffice. Impress es la aplicación que facilita la exposición y presentación de documentos multimedia de OpenOffice.
-
-Base ayuda en la gestión de bases de datos e informaciones de OpenOffice. Excel es la hoja de cálculo de OpenOffice. La respuesta correcta es la d. Excel es la hoja de cálculo de Microsoft Office. La respuesta correcta es la d. Excel es la hoja de cálculo de Microsoft Office.
-
-La respuesta correcta es la d. Excel es la hoja de cálculo de Microsoft Office.
-
-Solución
-
-### 4. Opción correcta
-
-RESPUESTA CORRECTA!!!!
-
-3.- Implantación de OpenOffice.org bajo Windows Caso práctico Gnu Free Documentation License, Procendencia Alicia y Juan después de consultar con Alberto, analizaron los pros y los contras de las diferentes suites ofimáticas y se decantaron por la suite OpenOffice.org, se descargaba gratuitamente de Internet, tenía todos los programas que necesitaban, no tenían que pagar nada y podían usar todas sus funciones..
-
-Alicia:- Voy a descargar el software de Internet y después lo instalaré. Juan:-¿Necesitas ayuda? Alicia: No creo, en el manual viene todo y no son muchos pasos. La descarga. Instalación y configuración no dieron ningún problema a Alicia que ya estaba deseando empezar a practicar con cada uno de los programas.
-
-Alicia:- Como todavía nos quedan unos días para abrir practicaré un poco. Juan:-Bueno!! Ahora a esperar al gran día… Ja, ja ,ja. Después de haber analizado las consideraciones anteriores en cuanto a la clasificación del software y los diferentes tipos, la suite ofimática que vamos a implantar y sobre la que vamos a desarrollar los contenidos es OpenOffice.org En este apartado vamos a configurar e implantar la suite ofimática OpenOffice, ante todo vamos a explicar lo que se entiende por configuración e implantación.
-
-En Informática se entiende por configuración elegir entre distintas opciones con el fin de obtener un programa o sistema informático personalizado o para poder ejecutar dicho programa correctamente. La configuración de cualquier programa suele poder cambiarse desde Setup, Opciones, o Configuración.
-
-La implantación es simplemente poner en marcha un sistema informático, programa etc.
-
-Vistos estos conceptos podemos empezar con el proceso que en este caso constará de Descarga, Configuración e Implantación.
-
-3.1.-Requisitos de Hardware Y Software Uso Educativo No comercial. Procedencia 3.1. Requisitos de software y hardware. La suite ofimática OpenOffice 3.2.0 para Windows exige unos recursos de sistema relativamente elevados, aunque desde luego menores que los necesarios para ejecutar otros programas semejantes. Los requisitos mínimos descritos por el fabricante son los siguientes
-
-Requisitos del sistema
-
-- Sistemas operativos compatibles
-
-Windows Vista; Windows XP Service Pack 2
-
-- Procesador de 800 MHz como mínimo.
-- 128 MB de RAM como mínimo (se
-
-recomiendan 256 MB o más).
-
-- Hasta 50 MB de espacio en disco duro
-
-para la instalación y 15 MB para ejecutar el programa.
-
-- Navegador para Internet
-- La funcionalidad de Internet requiere
-
-acceso a Internet mediante una conexión de acceso telefónico o banda ancha.
-
-- Resolución de Pantalla. de 800 x 600 como mínimo (se recomienda 1024 x 768 o
-
-superior).
-
-3.2.-Descarga de Archivos Antes de proceder a instalar y ejecutar el programa, es necesario descargar el archivo de instalación desde la web de OpenOffice, cuya dirección es http://es.openoffice.org /programa/index.html. Para ello pondremos la dirección en nuestro navegador, como en el ejemplo de la figura
-
-Uso Educativo no comercial. Elaboración propia. Nos aparecerá la siguiente pantalla. La descarga debe hacerse desde una conexión a Internet de Banda Ancha , pues el ejecutable tiene un tamaño de unos 75,6 megabytes. Uso Educativo no comercial. Elaboración propia. Debes conocer A continuación se detallan todos los pasos de la descarga en este archivo pdf
-
-Pasos de la descarga de OpenOffice.org
-
-3.3.-Instalación del Programa 3.3 Instalación del programa Antes de comenzar la instalación os conviene saber que si ya tenéis instalada una versión anterior lo mejor es desinstalarla. Después reiniciar el ordenador. Una vez descargado, hay que ejecutar el archivo de instalación que estará en la carpeta donde lo habéis descargado
-
-Uso Educativo no comercial. Elaboración propia. Para ello hay que hacer doble clic sobre él, con lo que se abrirá el siguiente cuadro de diálogo en el que pulsaremos la opción de Ejecutar: Uso Educativo no comercial. Elaboración propia. Al ejecutar se abre el módulo de preparación para la instalación , en el siguiente enlace tenéis el tutorial completo con todas las pantallas y consejos para una correcta instalación
-
-Debes conocer TUTORIAL
-
-DETALLADO
-
-SOBRE
-
-LA
-
-INSTALACIÓN
-
-DE
-
-OPENOFFICE.ORG 3.2 Una vez hechos todos estos pasos ya estamos listos para poder aprender a utilizar el OpenOffice.
-
----
-
-# 1.2 Tema 0. Writer
-
-Procesador de textos openoffice writer. Caso práctico Juan y Alicia van a comenzar la actividad en su nuevo negocio, ya han elegido el paquete ofimático y han aprendido a utilizar el programa Impress perteneciente a este mismo paquete. ALICIA: Como pronto vamos a abrir nuestro nuevo negocio, tenemos que enviar unas cartas a todos nuestros conocidos para invitarles a la inauguración.
-
-JUAN: ¡Sí, es muy buena idea! Pero tenemos un problema, no disponemos de partida económica para este apartado. ALICIA: ¡Ya…! nosotros podemos hacer las cartas. Pero para ello tenemos que dedicar algún tiempo en aprender a manejar el procesador de textos del paquete ofimático que hemos elegido.
-
-JUAN: Muy bien, dedicaremos cada día un tiempo para su aprendizaje, pues todavía nos faltan algunos trámites hasta su apertura, así es que disponemos de tiempo. ALICIA: Además, si aprendemos a manejar el programa, podremos hacer carteles publicitarios, folletos, tarjetas, hojas de tarifas, etc.
-
-JUAN: Es una buena idea aprender nosotros el manejo del programa, porque además de ahorrarnos un dinerillo que nos vendrá bien para otras cosas, podemos hacer documentos a nuestro gusto y modificarlos en cualquier momento. Materiales formativos de FP Online propiedad del Ministerio de Educación, Cultura y Deporte.
-
-Aviso Legal
-
-Introducción a Open Office Writer. Caso práctico Como en cualquier programa informático, lo primero que hay que hacer es familiarizarse con el entorno de trabajo y conocer las herramientas básicas. JUAN: Alicia, vamos a comenzar a manejar el programa, para ello vamos a conocer todos los elementos que contiene la ventana de trabajo.
-
-ALICIA: Sí, y después vamos a crear un documento con un pequeño texto y guardarlo en nuestra carpeta de trabajo. JUAN: Bien, después lo volveremos a abrir y añadiremos más texto. ALICIA: Bueno, vamos a ponernos a trabajar rápidamente, que tengo muchas ganas de aprender el funcionamiento.
-
-Introducción. Caso práctico ¿Conoces writer? Writer es un potente procesador de texto, totalmente compatible con Microsoft Word. Un procesador de textos es una aplicación ofimática que nos permite crear documentos (artículos, textos, informes, etc.). El entorno de trabajo es sencillo e intuitivo, presenta una gran cantidad de posibilidades, permitiendo la personalización de los documentos según las necesidades y los gustos de cada momento. Es posible, además de crear sencillos documentos, insertar imágenes, tablas, presentar textos y números alineados atendiendo a diferentes criterios, enviar cartas personalizadas, automatizar tareas, personalizar el entorno de trabajo y otras funcionalidades que iremos viendo a lo largo de este tema. Para ejecutar la mayoría de las operaciones que nos presenta el programa podemos acceder a través de diferentes opciones, que realizan la misma acción.
-
-Abrir OpenOffice Writer. Probemos desde el sistema operativo Windows. Esta aplicación se puede abrir desde el menú INICIO/PROGRAMAS/OPENOFFICE/WRITER También es posible arrancar el programa desde el icono que se encuentra en el escritorio , entonces se nos despliega una ventana con todas las aplicaciones del paquete ofimático y pulsamos en el icono correspondiente a la aplicación Writer en ese momento se nos abre el programa y nos presenta la ventana de trabajo con un documento en blanco.
-
-Entorno de Trabajo. El entorno de Writer presenta básicamente los siguientes elementos
-
-- Barra de título.
-- Barra de Menú.
-- Barra de Herramientas.
-- Regla Horizontal.
-- Regla Vertical.
-- Barra de Estado.
-- Área de trabajo.
-
-Barra de Título tenemos el nombre del archivo actual de trabajo y el nombre de la aplicación con la que estamos trabajando, en nuestro caso Writer. Además aparecen los controles para manejar la aplicación (minimizar, maximizar y cerrar). En la Barra de Menú encontraremos todas las opciones del Writer, al pinchar en cada una de ellas se nos despliega una lista con todas las subopciones de cada menú.
-
-A continuación se explican las operaciones más importantes de cada opción
-
-- La opción Archivo del Menú permite crear, abrir, guardar, cerrar y exportar
-
-documentos.
-
-- La opción Editar permite utilizar las opciones de copiar, cortar y pegar texto;
-
-también podremos buscar y reemplazar texto dentro del documento de trabajo.
-
-- La opción Ver nos permite mostrar las barras de herramientas, la barra de estado,
-
-las reglas, los caracteres no imprimibles y escalar para definir el zoom del documento.
-
-- La opción Insertar nos permitirá introducir saltos manuales, símbolos, campos,
-
-hiperenlaces, notas al pie, encabezados, tablas, marcos, objetos, video y sonido, archivos, etc.
-
-- La opción Formato permite dar formato a los caracteres y párrafos del texto,
-
-insertar numeraciones y viñetas, convertir de mayúsculas a minúsculas y viceversa, columnas y opciones para la autocorrección del texto.
-
-- La opción Tabla nos permite crear, modificar y personalizar tablas, aplicar
-
-operaciones matemáticas con los datos numéricos de las celdas, etc.
-
-- La opción Herramientas muestra opciones para comprobar ortografía y gramática,
-
-contar palabras, cambiar el idioma y una opción muy importante que nos permite establecer la configuración de nuestro programa.
-
-- La opción Ventana permite cambiar entre los diversos documentos que estén
-
-abiertos..
-
-- La opción Ayuda permite buscar ayuda sobre el programa y ver la versión del
-
-programa. En la Barra de Herramientas se presentan por defecto las barras de herramientas de estándar y formato, ofreciendo las funciones más utilizadas. Además, es posible modificarlas y añadir otras barras de herramientas dependiendo de las operaciones más utilizadas en nuestros documentos. Se pueden añadir otras barras de herramientas para ello pulsamos en el menú Editar/Ver barra de herramientas y seleccionamos la que necesitemos. También se pueden localizar en otra zona de la ventana de trabajo pinchando en la línea punteada de la izquierda y arrastrándolas a la zona deseada.
-
-Las Regla horizontal y Vertical permiten, tanto ver como establecer los márgenes y tabulaciones. La Barra de Estado nos proporciona información sobre las características del texto actual, la página donde nos encontramos y si estamos en modo de Inserción o Reemplazo. Además muestra la forma de ver nuestro documento, una o dos páginas por pantalla y también se puede establecer el zoom del documento.
-
-El Área de Trabajo es el espacio que utilizamos para escribir nuestros textos, puede contener texto, imágenes, gráficos, tablas, etc.
-
-Crear un Documento Nuevo. Para crear un documento nuevo disponemos de varias opciones
-
-- Pulsando en el icono de la barra de herramientas.
-- Pulsando la combinación de teclas CTRL+N.
-- Haciendo clic en el menú Archivo/Nuevo
-
-/Documento de texto. Una vez creado nuestro nuevo documento ya podemos comenzar a introducir el texto, el formato por defecto está definido en la de documentos, en los siguientes apartados se muestra como modificar el formato e insertar diferentes objetos con el fin de enriquecer nuestros documentos.
-
-plantilla
-
-Abrir un Documento. Para abrir un documento almacenado en un disco podemos acceder desde las siguientes opciones
-
-- Hacemos clic en el Botón en la barra de herramientas
-- Pulsando la combinación de teclas Control+A
-- Haciendo clic en la opción del menú Archivo/Abrir.
-
-Se nos presenta el siguiente cuadro de diálogo similar al explorador de archivos de Windows, se puede navegar por las diferentes unidades de disco y carpetas hasta alcanzar la ubicación deseada y seleccionamos el archivo. El programa permite abrir archivos guardados en diferentes formatos (odt, txt, rtf, doc, HTML, etc.)
-
-- Para abrir un documento que se ha trabajado recientemente con él, pulsamos
-
-Archivo/Documentos Recientes.
-
-Guardar un Documento. Una vez finalizado de editar el documento o en el caso de no haber terminado y seguir editando en otro momento, debemos guardar el archivo en un dispositivo de almacenamiento, se procede del siguiente modo
-
-- Hacemos clic en el botón de la barra de Menús
-- Pulsando la combinación de teclas CTRL+G
-- Haciendo clic en la opción del menú Archivo/Guardar.
-
-Se nos presenta el siguiente cuadro de diálogo, similar al que se nos muestra cuando queremos abrir. Si guardamos por primera vez un archivo tenemos que indicar la ubicación en el disco, el nombre, el tipo de archivo (si no queremos guardar el tipo que presenta por defecto), la próxima vez que le damos guardar nos lo almacena sin necesidad de indicar nada, pues el programa supone que queremos guardarlo con el mismo nombre y la misma ubicación; en el caso de que queramos cambiar alguno de estos aspecto debemos de pulsar Archivo/Guardar Como y nos presentará un cuadro de diálogo similar al de guardar, para indicar los cambios. Por defecto los documentos creados con Writer se guardan con la extensión ODT
-
-Cerrar un Documento. Si deseamos finalizar el trabajo con el documento actual y continuar trabajando en Writer, pulsamos Archivo/Cerrar y nos preguntará si deseemos guardarlo, rechazar su almacenamiento o cancelar (si nos arrepentimos de la operación).
-
-Salir de OpenOffice. Solución
-
-### 1. Opción correcta
-
-### 2. Incorrecto
-
-### 3. Incorrecto
-
-Es posible abandonar la aplicación de los siguientes modos
-
-- Pulsando el botón
-
-del cuadro de controles
-
-- Pulsando la combinación de tecla CTL+G
-- Seleccionamos la opción Archivo/Cerrar
-
-Si no hubiéramos almacenado nuestro documento el programa nos preguntará si deseamos hacerlo en ese momento. Autoevaluación Señala cómo podemos crear un documento Nuevo: Haciendo clic en el menú Archivo/Nuevo/Documento de texto. Pulsando Archivo/Abrir. Pulsando la combinación de teclas CTRL+C.
-
-¡Bien, eso es un buen comienzo! No, así abrimos en modo edición un archivo que ya está guardado. No, ya sé que es difícil recordar las combinaciones de teclas, pero no es esta. Autoevaluación
-
-Mostrar retroalimentación Solución
-
-### 1. Incorrecto
-
-### 2. Correcto
-
-### 3. Correcto
-
-De entre las siguientes opciones cuáles me permiten guardar un documento Pulsando la combinación de teclas CTRL+A. Pulsando la combinación de teclas CTRL+G. Haciendo clic en el menú Archivo/Guardar.
-
-Ayuda. En cualquier momento podemos solicitar al programa Ayuda sobre cómo realizar cualquier operación, pulsando la opción de la barra de Menú Ayuda, se nos presentan dos opciones Ayuda de y ¿Qué es esto?
-
-- Ayuda de : se puede activar como hemos dicho desde el Menú de opciones o
-
-pulsando la tecla F1, nos muestra el siguiente cuadro de diálogo: La ventana nos presenta varias posibilidades de búsqueda, dependiendo de la pestaña que pinchemos
-
-- Contenidos: muestra la información de ayuda
-
-agrupada por temas
-
-- Índice: la ayuda se muestra alfabéticamente, pero también podemos escribir la
-
-referencia a buscar en el cuadro de texto y nos ofrecerá todas las entradas relacionadas con esa búsqueda.
-
-- Buscar: presenta una búsqueda más avanzada, permitiendo localizar palabras o
-
-frases que se encuentren contenidos en todos los textos de la ayuda.
-
-- Marcadores: nos permite ir haciendo una lista de los temas que consideremos más
-
-importantes, para acceder directamente. Para ello primero debemos buscar los temas que nos interesen y pulsar en el botón de la barra de navegación para añadir a la lista de temas.
-
-- ¿Qué es esto? Esta opción de búsqueda nos proporciona una ayuda emergente
-
-sobre los iconos de las barras de herramientas, para obtenerlo pulsamos en esta opción y situamos el signo de interrogación sobre cualquier botón de las barras de herramientas, ofrece una pequeña ayuda emergente sobre el mismo. Reflexiona Observa las diferentes posibilidades que muestra la Ayuda, prueba a buscar información sobre algún tema de OpenOffice Writer utilizando las diferentes posibilidades que ofrece el programa, analiza cómo vas a hacer uso la ayuda para profundizar en el conocimiento de OpenOffice Writer.
-
-Opciones de visualización. OpenOffice Writer dispone de diversas opciones de visualización para adaptarse a las necesidades del usuario, desde la opción del Menú de opciones Ver accedemos a las diferentes propuestas
-
-- Seleccionando “configuración de impresión”, visualizamos el
-
-documento tal como se imprimirá, mostrando márgenes, encabezados, pies de página, etc.
-
-- Desde “Pantalla completa” se muestra el documento en toda la
-
-pantalla, para restaurar la ventana pulsamos la tecla ESC.
-
-- La opción “Escala” permite establecer el zoom del documento,
-
-esta posibilidad también puede aplicarse arrastrando el controlador de zoom de la barra de estado o pulsando el icono de la barra de herramientas . Si pulsamos la opción del Menú Ver/Escala, en el cuadro de diálogo que ofrece, seleccionamos cómo deseamos ver el documento, si deseamos mostrarlo en un tamaño diferente a todos los mostrados, sobre la opción variable, introducimos un valor manualmente.
-
-Podemos mostrar/Ocultar los códigos o caracteres no imprimibles que se insertan en la edición del documento: separación de palabras, salto de párrafo, salto de páginas, etc. Para activar/desactivar pulsamos en el icono
-
-Personalización del entorno de OpenOffice. Desde la opción del Menú Herramientas/Opciones es posible configurar el entorno de trabajo, ajustándolo a los gustos y necesidades del usuario. Desde esta ventana podemos indicar la carpeta donde se guardarán por defecto nuestros documentos, donde se ubican por defecto las imágenes, opciones de seguridad, zoom del documento, combinación de colores etc.
-
-La siguiente imagen nos muestra la ventana de configuración tanto para OpenOffice.org como para las diferentes aplicaciones de la suite: Descripción de las pantallas de Herramientas/Opciones para Writer. (0.44 MB)
-
-Edición de Texto. Caso práctico Juan y Alicia ya se han familiarizado con el entorno y han aprendido a crear y guardar documentos. JUAN: ¡Alicia, cuánto hemos aprendido del programa!, y con interés es fácil su aprendizaje. ALICIA: Ya lo creo!, pero ahora tenemos que ponernos a practicar escribiendo algún texto, y aplicando las operaciones más básicas.
-
-JUAN: Mañana nos ponemos a ello, a ver si podemos crear uno sencillo.
-
-Insertar texto en un documento. Nada más abrir la aplicación se crea un documento nuevo para comenzar a introducir información, nuestro texto queda delimitado por un recuadro que nos indica los márgenes de página y el área imprimible. Pero debemos de tener en cuenta algunas reglas básicas
-
-- El texto se escribe todo seguido, el programa se ocupa de
-
-cambiar de línea y ajustarlo al ancho de la página. Solamente cuando deseemos insertar un punto y aparte pulsaremos la tecla Intro o cuando queramos forzar un salto de página manual pulsamos CTRL+INTRO.
-
-- Existen dos modos de escritura de texto, modo insertar (es el
-
-más habitual), y modo sobrescribir (los caracteres escritos son sustituidos por los nuevos introducidos). Para cambiar de un modo a otro pulsamos en la palabra “insertar” de la barra de estado o en la tecla correspondiente.
-
-- Para borrar texto se pulsa la tecla retroceder ← (borra el carácter anterior al
-
-cursor) y pulsar la tecla Supr (para borrar el carácter sobre el que se encuentra el cursor).
-
-- Para escribir caracteres en mayúsculas se pulsa la tecla ↑+carácter
-- Para escribir vocales acentuadas se pulsa la tecla del acento y después la letra
-
-deseada.
-
-- Para escribir el carácter superior de una tecla pulsamos la tecla ↑+carácter.
-- Las teclas que disponen de tres caracteres, para escribir el carácter superior
-
-derecho, se pulsa la tecla AltGr+carácter. Durante la edición de un texto se aplican diferentes operaciones, las funciones disponibles en cada momento se pueden seleccionar desde las opciones del Menú principal, los iconos de la barra de herramientas o haciendo clic con el botón derecho del ratón presentando un menú contextual. Las opciones no disponibles se presentan en color gris. Por ejemplo, si estamos trabajando con una tabla, en el menú contextual se muestran únicamente las operaciones aplicables a tablas.
-
-Desplazarse por el documento. OpenOffice Writer dispone de varias posibilidades para desplazarse por un documento
-
-- Desplazando el puntero del ratón hasta el lugar deseado o con la rueda para
-
-desplazarnos por páginas.
-
-- Con las barras de desplazamiento de la ventana de trabajo.
-- Utilizando las siguientes combinaciones de teclas, se realizan diferentes
-
-desplazamientos en los textos. Las operaciones más habituales (cortar, copiar, eliminar, deshacer, etc.) es interesante realizarlas con combinaciones de teclas porque agilizan el trabajo. Ver tablas de combinaciones de teclas. (0.08 MB)
-
-Seleccionar texto. Para realizar esta operación podemos proceder de diferentes modos dependiendo de las necesidades de cada momento
-
-- Arrastrando el ratón por el texto a seleccionar
-- Para seleccionar diferentes partes del texto
-
-◦ Seleccionar una palabra pulsar clic. ◦ Seleccionar una línea doble clic. ◦ Seleccionar un párrafo tres clic.
-
-- Para seleccionar partes no consecutivas pulsamos la tecla CTRL+los textos a
-
-seleccionar.
-
-- Para seleccionar todo el documento pulsamos la opción del Menú
-
-Editar/Seleccionar Todo.
-
-- Pulsando la tecla ↑ + las teclas de las flechas de desplazamiento.
-
-Copiar/Cortar/Mover texto. Estas dos opciones trabajan con texto seleccionado, al pulsar la opción deseada el texto seleccionado se almacena en el de Windows, para utilizarse posteriormente.
-
-- Un texto que hemos seleccionado con el ratón se puede
-
-copiar en otro lugar del documento, duplicando su contenido. Para ello una vez seleccionado el texto, pulsamos CTRL+C o desde el Menú Editar/Copiar o pulsando el icono .
-
-- Con el texto seleccionado es posible utilizar la opción de
-
-cortar, el texto seleccionado desaparece de su ubicación y se almacena en el portapapeles. Para efectuarlo una vez seleccionado el texto pulsamos CTRL+X, o desde el Menú Editar/Cortar o pulsando el icono .
-
-- Un texto seleccionado se puede mover a otra ubicación, una vez seleccionado lo
-
-pinchamos con el ratón y lo arrastramos a su nueva ubicación (es lo mismo que utilizar la función de cortar y pegar). portapapeles
-
-Pegar texto. Como hemos dicho en el apartado anterior el texto seleccionado se guarda en el portapapeles y después se puede colocar donde deseemos, para ellos pulsamos Editar/Pegar, CTRL+V o pulsando el icono . Para poder pegar el texto con otros formatos utilizamos pegado especial, para ello pulsamos Editar/Pegado Especial.
-
-Deshacer texto. Solución
-
-### 3. Opción correcta
-
-### 4. Incorrecto
-
-Cuando deseamos deshacer las operaciones realizadas sobre un texto debemos realizar la operación deshacer, cada vez que la ejecutamos se deshace una acción. Se puede proceder pulsando desde el Menú Editar/Deshacer, las teclas CTRL+Z o pinchando el icono . Si pulsamos sobre la flecha azul se deshace una vez, si pulsamos sobre el triángulo negro podemos elegir el punto al que queramos deshacer.
-
-Si nos arrepentimos de la última operación de deshacer pulsamos la opción del menú Editar/Restaurar. Autoevaluación Indica cómo se puede Pegar un texto: Dar clic en el botón Copiar o CTRL+C. Haciendo clic en el lugar de la copia. Dando a la opción de Pegar después de haberlo copiado.
-
-Seleccionando el texto. No, así se copia en el portapapeles. No, debes de utilizar alguna de las opciones de los menús. Bien, ¡vas por muy buen camino! No, no tienes muy claro el copiar y pegar.
-
-Buscar y reemplazar texto. En cualquier documento es posible buscar y/o reemplazar palabras, frases o formatos de texto. La búsqueda de texto se puede realizar pulsando desde el Menú Editar/Buscar y Reemplazar o pinchando el icono y se muestra el siguiente cuadro de diálogo Podemos activar/desactivar las opciones de Coincidencia exacta para que busque la palabra tal y como esté escrita o sólo palabras completas para desechar las palabras que no contengan la secuencia de caracteres buscados.
-
-Si deseamos que la palabra buscada se reemplace por otra, introducimos la nueva palabra en esa ventana. También podemos buscar/reemplazar las palabras de una en una o buscar/reemplazar todas las ocurrencias de esa palabra que aparezcan en el texto. Si pulsamos en la ventana más opciones se nos presenta una búsqueda avanzada, pudiendo buscar textos con determinados formatos y atributos del texto.
-
-Reflexiona Selecciona más opciones de la ventana buscar/reemplazar, y observa las posibilidades que ofrece buscar texto con formato, sin formato y atributos. Piensa en qué casos sería muy interesante su utilización y nos facilitaría mucho el trabajo con los documentos.
-
-Autoevaluación Señala como se puede reemplazar un texto por otro en el mismo documento. Eligiendo la opción del Menú Editar/Buscar y Reemplazar. Escribiendo la palabra que se desea buscar en el cuadro de texto que
-
-Solución
-
-se muestra en Editar/Buscar y Reemplazar. Escribir la palabra a buscar en el cuadro de texto Buscar, escribir la palabra por la cual va a reemplazarla en el cuadro de Reemplazar con: Dar clic en Reemplazar o Reemplazar Todos. Casi, pero además debes de escribir la palabra a buscar y por la que reemplazar.
-
-No, tienes que fijarte más, también hay que introducir por la que queremos reemplazar. Está bien, te has fijado muy bien en todos los pasos. No, repasa los contenidos.
-
-Copiar y pegar formato. El botón de la barra de herramientas Pincel de Formato permite copiar textos con un determinado formato y aplicarlo a otras partes del documento. Marcamos el texto cuyo formato queremos copiar, y hacemos doble clic en el icono de la brocha (si se va a aplicar el formato en varios lugares) o un solo clic (si se va a aplicar una vez). El cursor se cambia en forma de cubo de pintura, y se arrastra sobre el texto destino al que deseemos aplicar el formato.
-
-La modalidad de copiar formato se deshabilitará automáticamente con la primera copia si se ha activado con un solo clic. Si la hemos habilitado con doble clic, una vez aplicado formato, será necesario desactivarla pulsando la tecla ESC o de nuevo el pincel de formato.
-
-Esta operación es muy útil para crear diferentes textos con las mismas características, se da el formato a un texto, se copia el formato y se pega a todas las partes del documento que deseemos que tengan el mismo estilo.
-
-Herramientas de ayuda a la escritura: ortografía y gramática, sinónimos y separación silábica. OpenOffice Writer nos ofrece la posibilidad de comprobar la ortografía del documento mientras se escribe, muestra (subrayados en rojo) los errores que vamos cometiendo. Se activa/desactiva con el icono . Si el corrector está desactivado una vez finalizado nuestro texto pasamos el corrector ortográfico. Cuando una palabra está escrita incorrectamente, si está activado el autocorrector, nos corregirá automáticamente.
-
-Todas las herramientas ortográficas se basan en el diccionario de un idioma elegido, que al verificar la ortografía, compara cada palabra del texto con las almacenadas en el diccionario. Si no encuentra alguna palabra, se detiene para indicarlo. En este caso pueden darse dos opciones: que la palabra esté mal escrita o que, aun siendo correcta, no se encuentre entre las que componen el diccionario. En el primer caso puede sugerirnos palabras correctas para cambiarlas en el texto, en el segundo caso, si es un término habitual en nuestros documentos, podemos añadirlo al diccionario.
-
-Para acceder a esta función accedemos desde Herramientas/Ortografía, a través del icono o pulsando la tecla F7 y presenta la siguiente ventana, pudiendo elegir entre diferentes posibilidades
-
-- Botón Agregar: añade palabras nuevas al diccionario.
-- Botón Ignorar una vez: Hace caso omiso de la palabra desconocida y prosigue la
-
-revisión ortográfica.
-
-- Botón Ignorar todo: Hace caso omiso de todas las apariciones de la palabra
-
-desconocida en el documento y prosigue la revisión ortográfica.
-
-- Botón Cambiar: cambia la palabra desconocida por la sugerencia actual o con la
-
-palabra introducida en el cuadro de texto.
-
-- Botón Cambiartodo: cambia todas las ocurrencias de la palabra desconocida con
-
-la sugerencia actual o con la palabra introducida en el cuadro de texto.
-
-- Botón Deshacer: deshace el último paso de la revisión ortográfica.
-- Si pulsamos en el botón opciones nos presenta la siguiente ventana para
-
-establecer las diferentes opciones de revisión ortográfica, los diccionarios utilizados y si queremos incorporar otros diccionarios instalados en nuestro disco.
-
-Cuando estamos escribiendo un texto y OpenOffice Writer desconoce alguna palabra, nos la presenta subrayada en rojo. Si pulsamos con el botón derecho del ratón sobre ella nos ofrece las posibilidades que contiene el diccionario para su modificación. Como se ha explicado al principio de este la apartado, la función del autocorrector es corregir automáticamente las palabras incorrectas. Para ello, OpenOffice Writer tiene almacenada la palabra escrita incorrectamente y su correspondencia correctamente, de esta manera cuando se encuentra con el error la corrige automáticamente, por ejemplo si escribimos “msimo” nos lo reemplaza por “mismo” o escribimos “(c)” y nos lo cambia por “©”. Ofrece la posibilidad de incluir nosotros palabras nuevas, pulsando el botón de nuevo y escribiendo la palabra incorrecta o una abreviatura y la palabra correcta o completa.
-
-Para activarlo vamos al Menú Herramientas/Opciones de Autocorrección. Si pulsamos la pestaña de Opciones de la ventana de autocorrección podemos indicar los casos en los que deseamos que se aplique la autocorrección, por ejemplo cuando comenzamos a escribir un texto o después de un punto que escriba siempre mayúsculas, etc.
-
-Sinónimos. Su función es ayudar en la escritura de documentos evitando la repetición de palabras, creando documentos con un vocabulario más rico. La forma más rápida de buscar sinónimos para una palabra, es situar el puntero sobre
-
-la
-
-palabra
-
-y
-
-luego
-
-seleccionar Herramientas/Idioma/Sinónimos... El programa nos ofrece la lista de palabras relacionadas para seleccionar la más adecuada para nuestro contexto. Por defecto OpenOffice.org no instala las herramientas de sinónimos y habría que descargarlo, en el apartado “Saber más se ofrecen los enlaces para su descarga”.
-
-Separación silábica. Al aplicar la opción de justificación, el texto se ajusta al ancho de página, y se insertan espacios en blanco; dependiendo del tamaño de las palabras se insertan demasiados espacios en blanco, para impedirlo podemos utilizar la herramienta de separación silábica, cuya función es ofrecer al usuario el lugar donde se situará un guión para respetar la separación en sílabas, determinada por las reglas del idioma.
-
-Para activarlo, seleccionamos desde el Menú Herramientas/Idioma/Separación Silábica y nos va ofreciendo las diferentes posibilidades de separación silábica para cada palabra. Para saber más La instalación de OpenOffice.org no incorpora diferentes diccionarios, herramientas para sinónimos y separación silábica, para ello pincha en los siguientes enlaces si deseas utilizar estas funcionalidades en tu programa.
-
-Descargar diccionario castellano, separador silábico y sinónimos. Instalar diccionarios en diferentes idiomas.
-
-Insertar marcos. En algunas ocasiones es necesario incluir textos e imágenes en nuestros documentos y que actúen como si fueran objetos independientes, para ello Writer ofrece los marcos. Se incorporan desde Insertar/Marco, y en la ventana mostrada especificamos las características, una vez elegidas pulsamos el botón aceptar. Para modificar sus características una vez insertado, pulsamos con el botón derecho del ratón y muestra el menú contextual o haciendo doble clic sobre él.
-
-En este enlace se muestra un documento explicativo del contenido de las pestañas más importantes de los marcos. Para ver todas las opciones de las pestañas de marcos (0.34 MB)
-
-Formato del documento. Caso práctico Juan y Alicia ya se han familiarizado con el entorno de trabajo y han aprendido a crear y guardar documentos, se saben desplazar por el documento y trabajar con el texto. Hasta ahora sólo han utilizado las opciones predeterminadas para dar formato al documento y ha llegado el momento de aprender a PERSONALIZAR los documentos pues la apariencia externa del mismo es un factor importante. En este apartado vamos a aprender a escoger una familia de letras, el estilo, su tamaño y el color del carácter.
-
-ALICIA: ¡Oye Juan!, todo lo que he aprendido está muy bien, pero ¿no te parece que podemos hacer documentos más a nuestro gusto? A mí me gustaría poner distinto tipos de letras, colores, hacer documentos más personales. ¿Tú crees que se podrá? JUAN: Estoy seguro de que es posible. Yo he visto documentos con distintos tipos de letras, tamaños…….. Está claro que el Writer debe darnos la opción de personalizar nuestros documentos.
-
-ALICIA: Pues ahora mismo voy a empezar y te va a sorprender el resultado. Te voy a presentar mi primer documento personalizado y ya me darás tu opinión.
-
-Formato de carácter. Ahora viene la parte bonita del procesador de textos: mejorar el aspecto del texto actuando sobre sus atributos. Para dar formato más cómodamente trabajaremos con la barra de herramientas Formato, ya que desde aquí seleccionaremos los atributos más usuales y es más cómoda de utilizar que los cuadros de diálogo de los comandos de los distintos menús.
-
-Esto es lo que vamos a aprender ahora, a modificar las características de un texto ya escrito. Cuando entendamos y dominemos esto, podremos fijar sus atributos antes de comenzar a escribir, de manera que, a medida que tecleamos el texto ya aparecerá con el formato que deseamos.
-
-Si no vemos esta barra de herramientas, es muy fácil incorporarla. Ejecutamos la opción Barras de Herramientas del menú Ver. Desde aquí podremos seleccionar cualquiera de las que Writer pone a nuestra disposición.
-
-Tipo de letra. Cualquier procesador de textos tiene la posibilidad de utilizar distintos tipos de letras, lo que técnicamente se conoce como fuentes. Mirando a la barra de objetos. Descubriremos que hay un cuadro con el texto Times New Roman en su interior. Este cuadro es el llamado cuadro de fuentes y te nos está indicando qué tipo de letra está seleccionada o vamos a utilizar.
-
-Si hacemos clic en el cuadro de lista (la flecha invertida) veremos un montón de nombres extraños. Son los distintos tipos de fuentes que podemos utilizar en nuestro documento, y además, escritos en su misma fuente, para que nos hagamos una idea de cómo aparecerán en el texto. La opción resaltada en azul es el tipo de fuente que actualmente estamos usando.
-
-Debes conocer No todas las fuentes se emplean para todos los casos, y, en general, hay que huir de las que son excesivamente llamativas. Hay que recordar que lo principal de un documento es su contenido y una fuente llamativa puede distraer la atención del lector. Además, no es habitual utilizar muchas fuentes distintas. Si utilizamos muchas fuentes en un mismo documento no parecerá un documento profesional. Procuremos usar dos o tres: una para los títulos, otra para las notas al pie o realces y otra para el resto del documento.
-
-También podemos emplear
-
-el cuadro
-
-de diálogo Caracteres que aparece
-
-al seleccionar
-
-el menú Formato/Carácter. En el cuadro de lista Fuente tenemos las mismas fuentes que aparecían al seleccionar la lista de fuentes de la barra de objetos. La forma de seleccionarlas es igual: localizamos la fuente mediante la barra de desplazamiento vertical, hacemos clic sobre ella y finalmente sobre el botón Aceptar.
-
-La gran ventaja de usar este cuadro de diálogo es que en la parte inferior, si tenemos un texto seleccionado, podemos verlo con la fuente que elijamos, por lo que la elección no
-
-Solución
-
-### 2. Opción correcta
-
-nos llevará a engaños. Pero seguramente nos resultará más fácil elegir directamente la fuente haciendo clic con el botón derecho del ratón sobre un texto seleccionado, desde la opción Tipo de letra del menú contextual que aparece. Autoevaluación Selecciona la respuesta correcta
-
-La fuente, estilo y tamaño se pueden cambiar sólo desde la barra de formato. La fuente, estilo y tamaño se pueden cambiar desde la barra de formato y desde el menú Formato/Fuente. La fuente, estilo y tamaño se pueden cambiar sólo desde el menú Formato/Fuente. No, dispone de diferentes posibilidades investiga en el programa.
-
-¡Sí! Veo que te fijas bien en las explicaciones. No, vuelve a leer el apartado dedicado a las fuentes.
-
-Estilo. Además de decidir la fuente que deseamos utilizar, se pueden realizar cambios en el estilo para conseguir que cierto texto resalte de una forma determinada. Los distintos estilos de fuentes los podemos observar en el cuadro de diálogo Caracteres, en su lista Tipo de letra: Normal, Cursiva, Negrita y Negrita cursiva.
-
-Dependiendo del tipo de fuente, algunos de estos estilos puede que no existan, normalmente porque se ha visto que un texto con esos atributos no quedaría muy bien.
-
-- De manera más rápida, en la barra de objetos podemos seleccionar los
-
-estilos haciendo clic en los botones Negrita y Cursiva.
-
-- Si queremos subrayar el texto, bastaría con seleccionarlo y usar el botón de
-
-subrayado. Haciendo clic con el botón derecho sobre el documento y seleccionando la opción Estilo podemos ver más estilos. Autoevaluación Selecciona la respuesta correcta: Se puede poner parpadeo rápido o lento, cambiar el color y la anchura entre los caracteres.
-
-Solución
-
-Solución Se puede tachar, poner sombra, cambiar el color, el espacio entre los caracteres y la anchura de los caracteres. Se puede tachar, poner sombra, cambiar el color, el espacio entre los caracteres y el grosor de los caracteres. No, comprueba con el programa. Sí, seguro que has hecho alguna prueba.
-
-No, comprueba con el programa. Siempre de hacemos clic en Ponemos en cursiva el texto del documento. Ponemos en negrita el texto. Insertamos el símbolo de la letra “C”. Ponemos el texto en negrita y cursiva. Sí, es importante asociar el icono con la función. No tienes muy claro la función de cada icono, debes de hacer pruebas para retenerlo.
-
-Tienes que fijarte bien en la pregunta. No tienes muy claro la función de cada icono, debes de hacer pruebas para retenerlo.
-
-Solución
-
-El botón se utiliza para: Cambiar el color del texto en color negro. Poner el texto en negrita. Poner el texto en negrita y mayúscula. Insertar el símbolo de la letra “N”. No, el color no se cambia con este icono. Sí, seguro que lo has utilizado muchas veces. No, tienes que leer los apuntes detenidamente y practicar.
-
-No, tienes que leer los apuntes detenidamente y practicar.
-
-Tamaño. El tamaño de la fuente nos permite especificar el tamaño del texto seleccionado (o que vamos a escribir). Hay que ten en cuenta que los tamaños dependen del tipo de fuente que decidas usar. La unidad de medida que se utiliza para los caracteres son los puntos. Lo normal es usar un tamaño de 10 a 12 puntos para el texto del documento.
-
-Los títulos suelen aumentarse un mínimo de 2 puntos. A modo de ejemplo, en el documento que estamos leyendo, el texto general tiene el tamaño de 10 puntos, los títulos de los capítulos presentan el tamaño de 16 puntos y los apartados principales muestran un tamaño de 14 puntos.
-
-A la derecha del cuadro de Fuentes de la barra de objetos aparece otro cuadro de lista desplegable llamado Tamaño de fuente. Si hacemos clic en la flecha invertida que se encuentra a su derecha, podremos ver los tamaños que podemos usar. También podemos poner el valor que queramos, si no aparece en el cuadro de lista del tamaño.
-
-Admite valores desde 2 hasta 999 puntos (aunque éstos extremos son valores poco aconsejables). Autoevaluación Selecciona la respuesta correcta: La fuente, estilo y tamaño se pueden cambiar sólo desde la barra de formato. La fuente, estilo y tamaño se pueden cambiar desde la barra de formato y desde el menú Formato-Fuente.
-
-La fuente, estilo y tamaño se pueden cambiar sólo desde el menú Formato/Fuente. No, tienes que leer los apuntes detenidamente y practicar. Sí, ya veo que practicamos con el programa. No, para avanzar con los contenidos debes de fijarte bien en la
-
-Solución
-
-Solución
-
-respuesta. Selecciona la respuesta correcta: En un documento es posible que los caracteres tengan distinto tipo de letra. No podemos utilizar diferentes tipos de letras. Si comenzamos con un tipo de letra debemos de continuar con él. Todas las respuestas son verdaderas.
-
-Sí, cada párrafo, cada palabra o incluso cada letra de un documento pueden ser de diferente tipo de fuente. No, haz la prueba. No, haz la prueba. No, debes de fijarte en las respuestas.
-
-Color. Pasamos a descubrir el color. Accedemos a esta opción a través del Botón A (Color de carácter) de la barra de formato que nos abre una paleta de colores. Para activar un color tan sólo debemos hacer clic sobre la muestra y el color seleccionado aparecerá reflejado en el subrayado del Botón A (Color de carácter) y su nombre aparece en la parte inferior de la ventana emergente.
-
-Tendremos cuidado con el uso y abuso del color. Los colores no siempre son cómodos para la vista y pueden evitar que nos centremos en el texto. Además, si no tenemos una impresora en color, al imprimir en blanco y negro y dado que la impresora intenta sustituir los colores por niveles de gris, es probable que algunas tonalidades no puedan discernirse con claridad en el documento impreso.
-
-Formato de párrafo. Caso práctico Alicia ya ha realizado un documento completo dando un formato personalizado a los caracteres, manipulando las fuentes, tamaños, estilos y el color. Muy satisfecha se lo muestra a Juan. ALICIA: ¿Qué te parece este documento? ¿Ves cómo ha mejorado su aspecto? He usado diferentes fuentes y colores.
-
-JUAN: Realmente es mucho más personal, pero me parece que el aspecto final de tu documento todavía es muy mejorable. Creo que se podría establecer una separación entre párrafos para que sea más fácil de leer. También deberías hacer que el tamaño del papel se ajuste al documento y sobre todo esos números que has querido escribir uno debajo de otro no están muy centrados.
-
-ALICIA: Bueno, de acuerdo. Pero esta vez lo haremos los dos y compararemos los resultados. JUAN: ¡De acuerdo! Manos a la obra. En este apartado vamos a ver la forma de modificar el espacio que hay entre los párrafos (espaciado de párrafos ), el que tienen sus líneas (espaciado de líneas) y otros aspectos que afectan a su presentación: alineaciones, sangrías y tabulaciones. Y es que, si ya es importante la posibilidad de borrar y modificar el texto, no lo es menos el hecho de que podamos cambiar estos nuevos atributos, ya que afectan extraordinariamente al aspecto visual final del documento.
-
-Para empezar hemos de tener claro a qué nos referimos cuando hablamos de conceptos tales como , sangrado, alineado, etcétera. Como ya sabemos, un párrafo está integrado por los caracteres y los espacios que hay entre dos retornos. En este apartado podremos ver los efectos que se producen según varían los criterios y los modelos de párrafo, nos estamos refiriendo a los formatos de párrafo. Ya que de la misma manera que un carácter puede tener un tamaño y un estilo propios, un párrafo también podría tener una sangría (o sangrado) especial en la primera línea, una alineación con respecto a los márgenes, un espaciado entre sus líneas, etcétera.
-
-Observamos la figura y nos familiarizamos con ellos. En este capítulo trabajaremos algunos. márgenes
-
-Las distintas opciones de configuración de los párrafos están disponibles en el Cuadro de diálogo Párrafo. Podemos llegar a él desde: El comando Párrafo... en el menú Formato De manera más rápida, desde el menú contextual que aparece si hacemos clic con el botón derecho del ratón en cualquier parte del área de trabajo.
-
-En ambos casos nos encontraremos con la siguiente pantalla Debes conocer Es importante saber seleccionar los párrafos, porque los atributos pertenecen sólo al párrafo donde se aplican, de forma que para llevar a cabo alguna acción sobre cualquiera de ellos, lo primero siempre será seleccionarlo y luego actuar. Esta filosofía del programa nos permitirá aplicar efectos distintos a cada párrafo, si fuera preciso.
-
-Para seleccionar un párrafo no es necesario seleccionarlo por entero para aplicarle o modificar alguna de sus características. Como norma, un párrafo está seleccionado siempre que haya algún carácter de dicho párrafo seleccionado o simplemente el punto de intersección está situado en el párrafo a formatear. Pero tenemos que tener cuidado, hemos de saber que cada vez que pulsamos Intro para comenzar un nuevo párrafo, si no decimos lo contrario, el nuevo párrafo heredará todos los atributos del anterior.
-
-Alineación. La alineación es un rasgo del párrafo aplicable tanto a los Títulos como al texto. Se considera habitual alinear horizontalmente el texto por la línea de base. Ahora bien, la alineación vertical de las líneas al comienzo y al final, está determinada por las características del párrafo.
-
-En un mismo documento pueden convivir párrafos que tienen alineaciones diferentes. Podemos hacerlo desde la pestaña Alineación del cuadro de diálogo Párrafo, pero es más rápido y cómodo utilizar los botones de la barra de herramientas Formato. Pasamos a practicar la Alineación mediante los Botones de la Barra de herramienta formato.
-
-### 1. Comprobamos como está el alineado para todo el documento. Esta alineación
-
-recibe el nombre de alineación justificada (alineación izquierda y derecha simultáneamente).
-
-### 2. Ahora centraremos el primer párrafo del documento: el título. Poniendo el punto de
-
-inserción en cualquier parte de la línea (recordar que no es necesario seleccionarla) y hacemos clic sobre el botón Centrado de la barra Formato En la figura vamos a ver unas líneas laterales de color rojo (colocadas expresamente para que comprobemos la alineación del primer párrafo (Centrado) y otras azules del resto de los párrafos (alineación Justificado).
-
-Autoevaluación
-
-Solución
-
-Selecciona la respuesta correcta: La alineación justificada hace que queden alineados los bordes derecho e izquierdo del párrafo. La alineación justificada hace que el borde del texto quede alineado con el margen superior e inferior. La alineación justificada hace que quede alineado el texto con el borde de la página.
-
-Sí, normalmente los textos comerciales, periódicos, etc. presentan esos formatos. No, Tienes que leer atentamente las explicaciones y practicar. No, Tienes que leer atentamente las explicaciones y practicar.
-
-Interlineado. El interlineado es la distancia que hay entre dos líneas escritas de un mismo párrafo, se mide, normalmente, en líneas. Por defecto, el texto normal arranca siempre con un interlineado sencillo de una línea, pero es posible escoger entre varias opciones.
-
-Recordar que, como siempre, esta característica afecta solamente al párrafo que tenga el foco y que, a medida que escribamos un documento, los nuevos párrafos irán asumiendo los atributos del párrafo anterior. Debes conocer Un buen interlineado hace las composiciones más claras, ya que un texto compacto o con un interlineado excesivo siempre es más difícil de leer.
-
-- Podemos acceder al interlineado mediante la pestaña Sangrías y espacios del
-
-cuadro de diálogo Párrafo, a través del menú desplegable Interlineado y se puede escoger entre varias posibilidades, proporcionarles un tamaño de texto o dejarlas fijas El interlineado sencillo es el que adopta el texto por defecto. Se adapta según la fuente de mayor tamaño de cada línea, más una pequeña cantidad de espacio adicional que garantiza una separación razonable entre las líneas.
-
-El interlineado 1,5 líneas equivale a 1,5 veces el del interlineado sencillo. El interlineado Doble equivale al doble del interlineado sencillo. El Proporcional es un interlineado aumentado o disminuido en el porcentaje que especifiques. Puede oscilar entre el 50 % y el 200 %, teniendo en cuenta que el 100 % equivale al interlineado sencillo.
-
-El interlineado mínimo indica la cantidad que, como mínimo, debe separar las líneas, pero si es necesario, Writer agregará espaciado extra para que quepan los tamaños de fuente más grande o los gráficos que, de otro modo, no cabrían en el espaciado especificado. Con un interlineado Regleta podremos establecer, a nuestro gusto, la altura vertical de separación entre líneas. También acomoda las alturas si los caracteres no caben.
-
-El interlineado fijo hace que la separación entre las líneas coincida exactamente con el
-
-valor introducido en el cuadro, independientemente de la altura de los caracteres, así que hay que manejarlo con precaución. Nos fijamos en cómo quedaría este párrafo si le aplicáramos un interlineado fijo de 0,30 cm.
-
-Separación anterior y posterior. Desde que hemos empezado a trabajar en nuestro documento, siempre que necesitamos establecer una separación entre los párrafos acudíamos al recurso de pulsar Intro, bien al final del primero o bien al principio del segundo párrafo a separar. Con esto incluíamos una línea en blanco entre los mismos obteniendo el efecto visual pretendido, pero ya hemos comprobado que esta acción realmente introducía un nuevo párrafo (cosa que comprobábamos fácilmente al descubrir los caracteres ocultos y ver la marca de fin de párrafo ¶).
-
-Sin embargo, este modo de actuar no es el adecuado si queremos que al copiar, mover o eliminar un párrafo se conserve también la separación con respecto a los adyacentes. De ahí que Writer nos permita definir un nuevo atributo de párrafo: el espaciado, es decir la distancia que hay delante y detrás de cada párrafo.
-
-De esta manera no se precisa aumentar innecesariamente el número de párrafos de un documento. Autoevaluación Cuál de las siguientes afirmaciones es la más completa, respecto a las marcas de fin de párrafo: Permiten separar un párrafo de otro. Permiten separar un párrafo de otro y se introducen al pulsar la tecla INTRO.
-
-Permiten separar un párrafo de otro, dar diferentes formatos a los párrafos y se introducen al pulsar la tecla INTRO. No, es correcta completamente. No, es correcta del todo. Sí, eso es una buena explicación.
-
-Solución
-
-Sangría. Se entiende por Sangría el espacio que se antepone o pospone automáticamente a los lados de un párrafo, permitiendo que dicho párrafo este más o menos separado del de la página que los demás párrafos. La sangría afecta al párrafo completo pero puede darse un tratamiento especial a la primera línea del párrafo estableciendo para ella una sangría propia.
-
-Para establecer Sangría al párrafo debemos seleccionarlo y aplicar el tipo de sangría deseado. margen Para saber más ¿Quieres ver la repercusión que tiene en un documento la aplicación de diferentes SANGRIAS? Aquí tenemos algunos ejemplos de SANGRIAS DIFERENTES. Pinchamos en el enlace y observamos las diferencias entre los párrafos ¿Quieres aprender a poner SANGRIAS de una manera muy sencilla? Con tres clics de ratón se consigue. SEGUIREMOS PASO A PASO UNA PRÁCTICA GUIADA y utilizaremos un documento ya elaborado para no tener que escribir mucho texto.
-
-Para descargar el documento pinchamos en el siguiente enlace Descargar documento AOF03_642.odt Para descargar la práctica guiada pinchamos en Practica guiada AOF03_643.pdf (0.10 MB)
-
-Tabulaciones. Los (o marcas de tabulación) representan posiciones a partir de las cuales se puede escribir texto. Las tabulaciones nos permiten prefijar un espacio determinado y a partir de ahí presionando la tecla Tab (tecla con una doble flecha horizontal sobre la tecla de Bloqueo de mayúsculas), para posicionarnos a partir de la misma.
-
-Son muy útiles cuando tenemos que escribir en columnas y necesitamos que estén perfectamente alineadas. El uso de tabuladores garantiza que al copiar bloques de texto, cambiar márgenes, sangrías, dimensiones del documento, tamaño o tipo de fuente, no se verá alterada la forma de visualizar los textos porque seguirán en la posición que se fijó en el tabulador Podemos fijar una tabulación de dos formas distintas
-
-Haciendo clic en la regla horizontal ubicada en la parte superior de la pantalla y pulsando con el botón izquierdo del ratón fijamos la marca de la tabulación. Hacemos clic en el menú Formato y luego en la opción Párrafo y luego en la pestaña Tabulaciones donde nos encontramos con el siguiente cuadro de diálogo
-
-Writer dispone de hasta cuatro tipos de tabuladores Por omisión, los tabuladores que pone Writer son izquierdos, pero si vamos a definir los nuestros no debemos olvidar que
-
-- Si usamos un tabulador izquierdo, el texto que tecleamos tras pulsar la tecla Tab se
-
-situará a continuación de dicho tabulador. Es el ideal para texto.
-
-- Si usamos un tabulador derecho, el texto que tecleamos tras pulsar la tecla Tab se
-
-situará delante de la posición del tabulador. Es el apropiado para números que no tienen decimales.
-
-- Si usamos un tabulador centrado, el texto que tecleamos tras pulsar la tecla Tab se
-
-centrará con respecto a la posición de la marca de tabulación. Adecuado para tabuladores
-
-texto.
-
-- Si usamos el tabulador decimal, el texto que tecleamos tras pulsar la tecla Tab se
-
-situará delante de la posición del tabulador (como un tabulador derecho) hasta que pulsemos una coma decimal. En ese momento se transforma y el resto del texto se sitúa a continuación del tabulador. Si tenemos que alinear cifras con decimales, éste es nuestro tabulador Para saber más ¿Aprendemos a elaborar un documento con diferentes tipos de tabuladores, siguiendo una práctica guiada?.
-
-Pincha en este enlace para ver el resultado de la práctica. (0.14 MB)
-
-Numeración y viñetas. Solución En determinadas ocasiones necesitamos escribir textos en los que cada párrafo o líneas se muestren con una viñeta o numeración al principio del mismo. Es muy sencillo de utilizar porque el propio programa en cuanto insertamos la primera, cada vez que pulsemos “Intro” y comencemos un nuevo párrafo insertará una nueva viñeta o número de nivel.
-
-Podemos crear un texto con viñetas o numeración, si una vez escrito el texto pulsamos uno de estos iconos dependiendo de cómo deseemos organizar la información o seleccionando Formato/Numeración y viñetas. A continuación nos presenta esta barra de herramientas, para aumentar o disminuir niveles, o para cambiar el estilo de la numeración o de la viñeta, no sólo podemos utilizar las presentadas por el programa sino que es posible diseñar un formato nuevo, e incluso crear viñetas con nuestras propias imágenes. También podemos indicar la sangría que dejaremos entre la viñeta y el texto.
-
-Autoevaluación Para cambiar los márgenes de un documento hacemos: Clic en el Menú Archivo y elegir la opción Propiedades. Clic en la Menú Formato, elegir opción Página. No, aquí se muestras propiedades generales del documento, como tipo, fecha de creación,… ¡Muy bien!
-
-Solución
-
-Solución El interlineado es una propiedad de formato de: Carácter. Párrafo. Página. Al carácter no se le puede aplicar interlineado. BIEN, es una propiedad del párrafo. Un interlineado aplicado a un párrafo es heredado por el siguiente. El interlineado no es aplicable a la página completa de un documento.
-
-Este botón sirve para... ...aumentar la separación de los caracteres dentro de un texto. ...centrar el texto dentro de la línea. ...subrayar el texto de una celda. No, tienes que fijarte mejor en el icono. Ya veo que te has aprendido muy la funcionalidad de cada icono.
-
-No, tienes que fijarte mejor en el icono.
-
-Solución
-
-Si tenemos varios documentos abiertos, para cambiar de un documento a otro procedemos: Clic en el Menú Ventana y dando clic sobre el documento. Presionando la tecla Control + E. Presionando la tecla Control +W. Sí, esta opción presenta diferentes opciones, y una de ellas es ventana que permite ir cambiando de documento.
-
-Control+E permite selecciona todo el texto del documento activo. Control + W cierra el documento activo. Determinar que respuesta es la correcta: El Tabulador Izquierdo, el Derecho y el Centrado se utilizan para caracteres alfabéticos. El Tabulador Derecho, el Centrado y el Decimal se utilizan para números decimales.
-
-El Tabulador Derecho y el Decimal se utilizan para números. Uno de los tabuladores nombrados normalmente se utiliza para números sin decimales. Uno de los tabuladores nombrados normalmente se utiliza para caracteres alfabéticos. Bien, El Tabulador Derecho es usado normalmente para alinear por la derecha números sin decimales y el decimal para números decimales pues los alinea por el carácter separador.
-
-Solución
-
-Formato de página. Caso práctico Alicia y Juan han realizado un documento completo, lo han personalizado pero se dan cuenta que aún no es lo suficientemente “profesional”. JUAN: Oye Alicia, cuál es tu opinión sobre este documento que he elaborado?, como ves lo he personalizado.
-
-ALICIA: Bueno, no está mal, pero me gustaría que tuviera un aspecto más profesional. Con el logotipo de nuestra empresa en la cabecera del mismo, con las páginas numeradas,…, tenemos que ser profesionales. JUAN: Tienes razón, todavía tenemos que seguir aprendiendo, pero resulta entretenido.
-
-Hasta ahora hemos descubierto los aspectos más importantes referentes al formato de los caracteres y los párrafos. Hemos visto y comprobado que los caracteres y párrafos admitían modificaciones personalizadas que les afectaban de manera individual, pero hay otros aspectos de configuración en las páginas que, por defecto, suelen influir en todo el documento (diseño y formato de la página, por ejemplo). Además, las páginas admiten también una serie de elementos de apoyo y refuerzo expresivo muy útiles (Encabezados y Pies, Paginación, Secciones, Columnas...) que conviene que conozcamos.
-
-Estilo de página. Writer, por defecto, utilizará hojas tamaño A4 (de 21 cm. x 29,7 cm.), y con una orientación vertical del papel. No obstante, dispone de una amplia variedad de formatos de papel estándar e incluso de la posibilidad de que tú mismo puedas definirlos.
-
-Para ello te proporciona el comando Página… en el menú Formato. Hacemos clic sobre la pestaña y nos familiarizamos con las opciones que nos ofrece: Formato de papel. Observamos el grupo de parámetros. Son muy intuitivos. Cualquier acción sobre ellos será simulada en el panel derecho de vista previa, pero hasta que no hagamos clic sobre el botón “Aceptar” no tendrán efecto sobre el documento. Siempre podemos arrepentirnos con “Cancelar”, pedir ayuda con “Ayuda” o volver a dejar las cosas con sus valores originales usando “Restablecer”.
-
-Configuración de márgenes. Activar límites del texto. Márgenes vistos en la regla. El no es más que el espacio que hay desde el límite de la hoja de papel hasta donde comienza el texto. Así pues, te encontrarás siempre con cuatro márgenes: superior, inferior, izquierdo y derecho.
-
-Podemos hacernos una idea gráfica de cómo están configurados los márgenes de nuestro documento si usamos el comando Límites del texto que encontramos en el menú Ver. Al activarlo aparecerá un marco delimitando el texto. Si tenemos activada la regla también vemos en ella los márgenes.
-
-En el manejo y configuración de los márgenes tendremos en cuenta que
-
-- En los márgenes laterales no se tienen en cuenta
-
-las sangrías negativas, tanto por la izquierda como por la derecha.
-
-- Las distancias de los márgenes superior e inferior
-
-no incluyen el espacio destinado al encabezado y al pie de página. Los márgenes ya vienen establecidos por defecto a los valores que aparecen en el grupo Márgenes, pero si queremos modificarlos sólo tenemos que indicar los nuevos valores en las casillas correspondientes del cuadro o arrastrar los bordes de las barras indicadoras situadas en las reglas horizontal y vertical.
-
-margen
-
-Secciones. Si realizamos cualquier cambio en los valores de los márgenes o en cualquier otra acción del formato de página, observaremos que afectará, por defecto a todo el documento. Pero hay ocasiones en las que en un mismo documento, incluso en una misma página, se precisa disponer de distintos márgenes, o de distinto encolumnado (número de columnas) sin afectar al resto.
-
-Writer tiene solución a este problema. Nos permite dividir el documento en cuantas partes queramos, como si fueran documentos independientes entre sí. A estas partes Writer las llaman secciones.
-
-Crear una sección. Para crear una sección en un lugar de un documento, debemos empezar por colocar allí el punto de inserción o seleccionar el texto que deseamos convertir en una sección, teniendo en cuenta que si seleccionamos un texto que aparece dentro de un párrafo, se convertirá automáticamente en un nuevo párrafo.
-
-Reflexiona Para apreciar la utilidad de esta nueva unidad de texto, vamos a realizar un pequeño ejercicio. Para descargar el documento.
-
-- Abrimos el documento.
-- Seleccionamos el párrafo que te indicamos en la figura.
-
-En la barra de menús elige Insertar/Sección... Se abrirá el cuadro
-
-- Si lo deseas, en el marco puedes darle un nombre.
-- Y sin necesidad de configurar ninguna cosa más, pulsa el botón “Insertar”.
-
-◦ El resultado es que el texto seleccionado quedará incluido dentro de un pequeño rectángulo (que sólo será visible en la pantalla de nuestro ordenador, pero no en la impresión sobre el papel). ◦ Si el documento fuera de más páginas, podríamos seguir creando nuevas secciones en cualquier otra parte, incluso anidar una nueva dentro de otra ya existente y cuando el punto de inserción estuviera dentro de ellas, en la barra
-
-de estado, Writer nos irá indicando en cuál nos encontramos en cada momento. Probamos a poner el punto de inserción dentro y fuera de la sección que acabamos de crear. Mirando el indicador de la barra de estado nos aseguramos que estamos en la sección, movemos los márgenes izquierdo y derecho arrastrando los bordes en la regla horizontal y observamos como el cambio sólo afecta a la sección actual.
-
-Borrar una sección. Aquí es necesario diferenciar dos cosas: si lo que queremos es borrar texto de la sección o sólo eliminarla, sin afectar al texto que contiene.
-
-- En el primer caso, el texto se elimina como cualquier texto normal: se selecciona y
-
-se usan las teclas Supr o Del.
-
-- En el segundo caso, para eliminar sólo el marco de la sección, sin afectar al texto
-
-interior, no hay más que colocar el punto de inserción justo encima de la sección y pulsar la tecla Supr o acudir a Formato/Secciones... y, tras elegir la sección a eliminar, pulsar los botones “Quitar” y “Aceptar”. Si borramos una sección, el texto que contiene se convierte en parte del párrafo anterior.
-
-Encabezado y pie de página. En la mayoría de los libros que leemos, existen líneas de texto, y hasta pequeños gráficos, que se repiten en los márgenes superior e inferior de sus páginas: el título del documento o del capítulo, el número de la página, la fecha de creación, un logotipo, etcétera.
-
-Para hacer visible en la pantalla el encabezado y pie de página debemos activarlo desde Menú Formato, seleccionamos opción Página. En Estilo de Página seleccionamos la pestaña Encabezamiento activando el encabezamiento y de forma similar activamos el pie de página en la pestaña Pie de página.
-
-Se denomina Encabezamiento o Encabezado de página, si se ubica en el margen superior y Pie de página si la encuentras en el margen inferior. Que estas líneas de texto aparezcan en todas las páginas no implica que tengamos que escribirlos en cada una de ellas, Writer se encargará de hacerlo por nosotros. Sólo tendremos que escribirlos una sola vez.
-
-Vamos a colocar estos elementos en nuestro documento. Comenzaremos por el encabezado de página: Reflexiona Pinchamos en este enlace y descargamos el documento sobre los encabezados (0.01 MB)
-
-- Seleccionar el comando Encabezamiento/Predeterminado en el menú Insertar.
-
-Writer colocará el punto de inserción en la parte superior de la página, es la zona destinada a escribir el encabezado. Si queremos verla perfectamente delimitada activar Ver/Límites del texto.
-
-### 2. Ahora introduciremos el texto para el encabezado (si el documento tienes muchas
-
-páginas se colocaría automáticamente en todas las demás páginas del mismo). Hay que tener en cuenta que en los encabezados y pies de página el texto se escribe y se le aplica formato de la misma manera que se haría con cualquier texto en el resto del documento. Podemos modificar su justificación, fuente, tamaño, etcétera.
-
-Ahora vamos a descubrir una curiosidad de estos elementos.
-
-### 3. Seleccionar un tipo de letra Arial, con un tamaño de 10 puntos, en negrita y
-
-escribe la palabra ‘PROCESADOR’ (sin las comillas). Debería aparecer en el lado izquierdo del encabezado
-
-### 4. Ahora pulsar una sola vez la tecla de tabulación. El punto de inserción saltará hasta
-
-la mitad de la línea debido a que en la regla horizontal ya existe una marca de tabulación centrada. Escribir la palabra ‘DE’.
-
-### 5. De nuevo otra pulsación en la tecla de tabulación para que el punto de inserción
-
-salte hasta la siguiente marca, situada al final de la línea: un tabulador derecho. Aquí escribir la palabra ‘TEXTOS’
-
-### 6. Esto es así porque tanto el encabezado como el pie de página se comportan, a
-
-todos los efectos, como áreas autónomas dentro del documento. De ahí que admitan cualquier configuración y atributos de manera independiente Ahora pondremos el pie de página y aprenderemos nuevos y útiles elementos.
-
-- Seleccionar el comando Pie de página/Predeterminado en el menú Insertar.
-
-Writer colocará el punto de inserción en la parte inferior de la página; es la zona destinada a escribir el pie de página.
-
-### 2. De nuevo seleccionar el tipo de letra Arial, con un tamaño de 10 puntos, en negrita
-
-y escribir las iniciales de tu nombre y apellidos, que aparecerán alineadas a la izquierda.
-
-### 3. Ahora pulsar la tecla de tabulado para que el punto de inserción salte hasta la
-
-siguiente marca de tabulación, situada en el centro de la línea.
-
-### 4. Aquí no escribiremos nada, pues haremos que sea Writer quien escriba, de manera
-
-automática, la fecha del día de hoy. Para ello recurriremos a los llamados campos del documento.
-
-### 5. Ejecutar el comando Campos – Fecha del menú Insertar. Se incorporará la fecha
-
-en el lugar donde estaba el punto de Los campos del documento los utilizaremos para insertar contenidos que se refieran directamente al documento actual. Junto a otras características específicas del documento, como número de páginas, título y algún que otro dato estadístico, disponemos también de los datos del autor del mismo, de la fecha y hora de creación, etcétera.
-
-### 6. Ahora pulsar de nuevo la tecla de tabulación para llevar el punto de inserción al
-
-final de la línea y escribir el texto ‘Página’ (no olvidar del espacio del final), luego
-
-insertar el campo , el texto ‘de’ (de nuevo respetar los espacios) y, finalmente, el campo . La ventaja de utilizar campos del documento está en que sus valores se actualizan de manera automática. Reflexiona En este enlace vemos resuelto el ejercicio.
-
-Los saltos de página. Writer va distribuyendo el texto que escribimos, a lo largo de distintas páginas que se van formando de manera automática, pues al llegar al límite de texto que una página puede contener, el programa da un ‘salto’ y comienza una nueva (por supuesto, con los mismos atributos que tenía la anterior). La longitud de estas páginas y, por tanto, el texto que cabe en cada una de ellas, dependerá de los valores que hayamos configurado.
-
-Si en cualquier momento se nos ocurriera cambiar el formato de la página, Writer recalcularía automáticamente la cantidad de texto de cada página y lo ajustaría al nuevo espacio. Sin embargo, a veces nos interesa forzar que una página termine en una posición particular de un documento y a partir de ahí, comience la siguiente. Suele ser útil cuando el último párrafo de una página invade la siguiente y no nos interesa que se ‘rompa’; o deseamos separar distintos apartados de un documento, etcétera.
-
-El secreto está en colocar en el lugar adecuado el salto de página (que es un carácter oculto). Seguimos los siguientes pasos
-
-### 1. Colocar el punto de inserción en el lugar donde queremos provocar el salto; en este
-
-caso, bien al final del penúltimo párrafo o bien al principio del siguiente.
-
-### 2. Ejecutar el comando Salto manual… del menú Insertar. Se abrirá la ventana
-
-Insertar salto, y seleccionamos la opción y hacemos clic en Aceptar. Eso es todo, tendremos dos páginas en las que te invitamos a que compruebes si el encabezado y pie de página que creamos antes están de igual forma en las dos páginas, y si el número de página se ha incrementado automáticamente en la segunda hoja.
-
-Y ahora un pequeño truco: un modo mucho más rápido de insertar un salto de página consiste en, una vez situado el punto de inserción en el lugar adecuado, pulsar la combinación de teclas Ctrl + Intro. Y si queremos eliminar un salto de página para que todo vuelva a la normalidad, lo hacemos de la misma forma que cualquier otro carácter de texto (a fin de cuentas no es más que un carácter oculto): mostrar los caracteres ocultos, situarnos delante y pulsar la tecla Supr (o situarnos detrás y pulsa Retroceso).
-
-Bordes de página. Un párrafo puede mejorar su aspecto si se le agregan diferentes diseños de Bordes y Fondo. Antes de aplicar estos formatos tenemos que determinar la cantidad de texto sobre la que vamos a actuar, teniendo en cuenta que
-
-- Si el formato lo vamos a aplicar a un sólo párrafo, basta con
-
-colocar el punto de inserción en cualquier parte de ese párrafo.
-
-- Si el formato va a afectar sobre varios párrafos , tendremos
-
-que seleccionarlos a todos ellos previamente. La forma más completa de agregar bordes y fondos a nuestro documento es acudiendo de nuevo al menú Formato/Párrafo…, utilizaremos dos nuevas pestañas de opciones: Borde y Fondo. Son muy intuitivas y su utilización es muy sencilla.
-
-Reflexiona Realmente los documentos cambian mucho su apariencia si utilizamos todas las opciones que nos ofrece el Procesador de texto. Pinchamos en este enlace para descargar el documento. (0.05 MB) Solución de la práctica. (0.09 MB)
-
-Letras iniciales. Hay ocasiones en las que aumentar el tamaño de la primera letra de un párrafo podemos hacer que el texto gane muchos enteros entre los lectores. Esto es recomendable, por ejemplo, si el título no se encuentra justo al principio del texto, sino junto a una imagen, o si nuestro interés está en desviar la atención del lector a una parte del texto en concreto.
-
-Para esto tenemos las letras iniciales. Pudiéramos caer en la tentación de hacer una letra inicial cogiendo la inicial de la primera palabra del párrafo y aumentándola de tamaño. Grave error: El resultado sería algo tan insensato como este párrafo que estamos leyendo. Es el resultado de combinar una letra de tamaño 36 puntos con el resto del párrafo que está a 10 puntos. Sin haberlo deseado, hemos provocado una separación entre párrafos e interlineado poco acertados.
-
-Y es que una auténtica inicial que se precie, nunca sobresale del texto, sino que se integrará en las propias líneas del párrafo sin afectar al resto de sus atributos. Y este mismo párrafo es el mejor ejemplo que te podemos enseñar. Para colocar una inicial en un documento.
-
-Seguiremos los pasos siguientes
-
-### 1. Colocamos el punto de inserción en el párrafo que
-
-desees que contenga la letra inicial.
-
-- Ahora abrimos el cuadro de diálogo “Párrafo”.
-
-Podemos acceder a él desde el menú Formato/Párrafo…, pero es más rápido desde el menú contextual que aparece al hacer clic con el botón derecho sobre el propio párrafo.
-
-### 3. Una vez abierto, seleccionamos la pestaña “Iniciales” y marcamos la opción
-
-“Mostrar iniciales”. En la ventana de vista preliminar ya podremos ver el resultado de nuestra acción.
-
-- Finalmente haremos clic en el botón “Aceptar”.
-
-Pueden modificarse también otros parámetros, como el “Número de caracteres” que queremos utilizar como iniciales, cuántas “Líneas” del texto deseamos que ocupe la inicial (la altura de una letra inicial no se indica aquí en puntos, sino en número de líneas de texto) o la “Distancia hasta el texto” para señalar la separación con el resto de las líneas del párrafo.
-
-Estéticamente es recomendable un valor entre dos y cuatro filas para la altura y la distancia hasta el texto dependerá de las letras correspondientes y de la frase escrita. No es lo mismo una ‘I’ que una ‘M’, o si es una letra que forma parte o no de una palabra; así que es mejor realizar varias pruebas hasta que encontrar un aspecto óptimo que nos satisfaga.
-
-Trabajar con varios documentos. Si acudimos al menú Ventana se nos presenta la lista de documentos abiertos desde donde podemos acceder rápidamente a cualquiera de ellos con sólo hacer clic sobre su nombre. Desde este menú descubriremos otra manera de cerrar la ventana del documento, pero sin cerrar Writer: sólo tenemos que seleccionar la opción Cerrar ventana o pulsar la combinación de teclas Ctrl + W; se cerrará el documento que tengamos activo.
-
-Imprimir el documento. Ni que decir tiene que para llevar a buen término este apartado tenemos que tener instalada una impresora y, además, que esté configurada adecuadamente para tu versión de Windows.
-
-Impresión rápida. La forma más rápida de obtener una copia impresa de todo el documento sobre el que estemos trabajando, es hacer clic en el icono de la barra de herramientas Estándar.
-
-Impresión controlada. Pero desde el icono no tenemos ningún control sobre la impresión del documento. Da más juego el comando Imprimir…, del menú Archivo, y las opciones que nos permiten utilizar con el cuadro de diálogo que aparece al seleccionarlo. No veremos todas sus opciones, pues algunas se explican por sí mismas, pero mencionaremos aquellas que pueden resultar más interesantes y útiles.
-
-Si tenemos varias impresoras disponibles en nuestro sistema, desde la lista desplegable “Nombre” podemos seleccionar la que deseamos usar para imprimir el documento. Nunca está de más que antes de empezar a gastar papel echar un vistazo con el comando Archivo/Vista preliminar.
-
-Área de impresión. En el grupo de opciones “Área de impresión” podemos decidir cuánto texto queremos imprimir. Normalmente será “Todo” el documento, pero podrían interesarnos sólo algunas “Páginas” individuales o una “Selección” de texto que hayamos hecho en el documento ¿Cómo hacer estas cosas? Si queremos imprimir unas páginas específicas, seleccionar la opción “Páginas” e introducir sus números separados por comas o guiones, en el cuadro de texto asociado. En este ejemplo le decimos a Writer que imprima las páginas 1y 5; el rango de la 9 a la 12, ambas inclusive; la página 23 y finalmente el rango de la páginas 45 hasta la última del documento, ambas inclusive.
-
-Pero si lo que queremos es imprimir un texto seleccionado hay que
-
-- Primero seleccionar, en el documento, el texto a imprimir.
-- Ejecutar el comando Archivo/Imprimir….
-
-### 3. En el cuadro de diálogo
-
-marcar la opción . Ahora Writer tiene claro que nuestra intención es imprimir solamente el texto que hemos seleccionado.
-
-### 4. En cualquiera de los casos, pulsar el botón “Aceptar”y la impresora se pondrá en
-
-marcha. Podemos imprimir varias copias del mismo documento especificando el número en el cuadro.
-
-Insertar imágenes y gráficos. Caso práctico Juan y Alicia ya se han dado cuenta que el procesador de texto es una buena herramienta para la confección de documentos pero……. ALICIA: Juan, ¿los procesadores de texto no tiene opciones para trabajar con imágenes?, me gustaría introducir en algunos documento fotografías, así serían más impactantes.
-
-JUAN: Estoy convencido que el Writer posee esas herramientas. Tenemos que seguir profundizando en su aprendizaje. En este apartado vamos a conocer aspectos relacionados con el trabajo con imágenes. Empezaremos por lo más elemental, como es la Inserción y la modificación, para continuar con las diferentes opciones que nos ofrece el procesador para manejar y modificar las imágenes.
-
-Insertar una imagen. Para el caso de las imágenes, Writer proporciona un submenú dentro del menú Insertar/Imagen con dos opciones la primera a , para usar imágenes que ya tienes que tener grabadas en algún sitio, y “Escanear”, que nos permite escanear en el momento cualquier fotografía o documento.
-
-El proceso de inserción es muy sencillo. Sólo debemos establecer el sitio donde vamos a ubicarla, colocar allí el punto de inserción, elegir la imagen y encajarla en ese espacio, para ello accedemos a mediante el cuadro de diálogo del menú “Insertar”. La imagen aparecerá en la hoja, seguramente con un tamaño y/o ubicación inicial que no resulten de nuestro agrado, pues Writer se limita a colocar la imagen tal y como se la ha encontrado, es decir con su tamaño original sin preocuparle otros aspectos tales como su ajuste en el texto del documento o si necesita borde, etcétera.
-
-Modificar el tamaño de una imagen. Siempre que coloquemos una imagen en un documento aparecerá junto con ocho puntos de control en forma de pequeños cuadraditos verdes, son los llamados selectores de tamaño o estiradores. Si posicionamos el puntero del ratón sobre cualquiera de ellos, vemos que cambia a una doble flecha.
-
-- Haciendo clic y arrastrando sobre la pantalla hacia el centro de la imagen,
-
-conseguiremos reducir su tamaño.
-
-- Si lo arrastramos hacia el exterior de la imagen, aumentará el tamaño de la misma.
-- Si empleamos los selectores centrales, modificaremos sólo el alto o el ancho de la
-
-imagen.
-
-- Si arrastramos cualquier selector de las esquinas, se modificará tanto el ancho
-
-como el alto y se mantendrá la relación de aspecto (o sea, que no se deformará la imagen). Suele ser la mejor opción.
-
-Mover la imagen. La modificación del tamaño no afecta a la ubicación de la imagen en el documento. Si queremos moverla para un sitio u otro de la hoja basta con poner el puntero del ratón sobre cualquier parte del interior de la imagen hasta que veamos que se transforma en una doble flecha cruzada.
-
-y desplazarla al lugar deseado.
-
-Configuración y modificación de imágenes o gráficos. Haciendo doble clic en la imagen se abre el cuadro de diálogo “Imagen”. Desde aquí tenemos acceso a la mayor parte de posibilidades de configuración y modificación de cualquier imagen o gráfico que estemos manejando.
-
-El Área de Previsualización nos permitirá ver las modificaciones que vamos estableciendo antes de confirmarlas con “Aceptar”.
-
-- Pestaña “Tipo”: Nos permite modificar el tamaño, el anclaje de la imagen, su
-
-posición.
-
-- Pestaña “Ajuste”: A través de ella podemos elegir cómo es la integración de la
-
-imagen o gráfico en el texto del documento.
-
-- Pestaña “Imagen”: permite reflejar la imagen.
-- Pestaña “Borde”, como su nombre indica nos permitirá poner bordes
-
-personalizados y sombras a la imagen. Una manera fácil de ver todas las opciones que tenemos para trabajar con imágenes es activar la opción “Imagen” en la Barra de Herramientas a través del Menú Ver. De esta manera cuando pinchamos en una imagen de un documento en la barra de herramientas se activarán
-
-El Writer permite de una forma limitada modificar la imagen, aplicando diferentes filtros, transparencias, cambio de brillo, contraste, etcétera. Probamos a aplicamos las diferentes opciones sobre una imagen para conocer su efecto.
-
-> **💡 📚 Document extens (128 pàgines)**
-> S'han mostrat les primeres 80 pàgines completes del manual.
-
----
-
-# 1.3 Mapa conceptual WRITER
-
-Mapa conceptual WRITER
-
----
-
-# 1.4 Tema 2. Taules
-
-Tema 2. Tablas
-
-Creación de tablas Para insertar una tabla en LibreOffice Writer disponemos de varias opciones: • Desde el menú Tabla > Insertar tabla. • Pulsando la combinación de teclas Ctrl+F12. • Haciendo clic sobre el icono Insertar tabla de la barra de herramientas Estándar.
-
-Botón Insertar tabla en la barra de herramientas Estándar En este caso se muestra un pequeño cuadro con el que podremos definir las filas y columnas de la tabla a insertar.
-
-Botón Insertar tabla desplegado Pulsando el botón Más Opciones, o utilizando los otros dos métodos, se presentará el cuadro de diálogo Insertar tabla.
-
-Diálogo Insertar tabla • Nombre permite definir un nombre identificativo para la tabla. • Columnas y Filas permite definir el número de columnas y filas que conforman la tabla. • En la sección Opciones podemos activar la opción Título. ¡Imprescindible para mantener la accesibilidad! En este caso la primera fila toma el estilo Encabezado de tabla (alineación centrado, fuente negrita), mientras que el resto de filas toman el estilo Contenido de la tabla (alineación izquierda).
-
-• Si la tabla ocupa más de una página el título se repetirá automáticamente en cada página en la parte superior de la tabla activando Repetir filas de título en página nuevas. ¡Imprescindible para mantener la accesibilidad! • Podemos definir el número de filas que se repetirán como título en Filas de título • Activando No dividir la tabla en varias páginas evitamos que la tabla se divida por un salto de página o columna.
-
-• Si activamos la opción Borde, la tabla se dibujará con un borde de línea fina alrededor de todas las celdas. • Desde el botón Formato automático activamos el cuadro de diálogo Formato automático, en el que podremos seleccionar entre varios diseños de tabla predefinidos.
-
-Tema 2. Tablas
-
-Barra de herramientas Tabla Cuando hacemos clic sobre cualquier celda de una tabla se muestra la barra de herramientas Tabla, por defecto, anclada en el área inferior de la ventana.
-
-Barra de herramientas Tabla
-
-Seleccionar celdas, filas, columnas y tablas
-
-Seleccionar varias celdas • haremos clic en la primera de ellas y arrastraremos hasta seleccionar la última. • nos situaremos en la primera de ellas, y manteniendo pulsada la tecla Mayúsc, nos desplazamos con las flechas del cursor. Seleccionar una celda • Para seleccionar una celda, haremos clic sobre ella y seleccionaremos desde el menú Tabla > Seleccionar > Celda.
-
-• También podemos utilizar el botón Celda de la barra de herramientas Tabla. Seleccionar una o varias filas Para seleccionar una sola fila podemos hacer clic sobre una celda cualquiera de la misma y... • Desde el menú Tabla > Seleccionar > Fila, o • Desde la barra de herramientas tabla utilizando el botón Seleccionar la fila (botón no visible por defecto), o...
-
-• Situando el ratón a la izquierda de la fila, en la posición en que toma la forma de una gruesa flecha negra. Haremos clic para seleccionar la fila, o clic y arrastrar para seleccionar varias.
-
-Seleccionar fila de tabla Seleccionar una o varias columnas Para seleccionar una sola columna podemos hacer clic sobre una celda cualquiera de la columna y... • Desde el menú Tabla > Seleccionar > Columna, o... • Desde la barra de herramientas tabla utilizando el botón Seleccionar la columna (botón no visible por defecto), o...
-
-• Situando el ratón encima de la columna, en la posición en que toma la forma de una gruesa flecha negra. Haremos clic para seleccionar la columna, o clic y arrastrar para seleccionar varias.
-
-Seleccionar columna de tabla
-
-Tema 2. Tablas
-
-Seleccionar la tabla • Desde el menú Tabla > Seleccionar > Tabla, o... • Desde la barra de herramientas tabla utilizando el botón Tabla, o... • Situando el justo en la esquina superior izquierda de la tabla, en la posición en que toma la forma de una gruesa flecha negra inclinada hacia el vértice de la tabla. Haremos clic para seleccionar la tabla.
-
-Seleccionar tabla completa
-
-¡NO LO OLVIDES! Sugerencias de accesibilidad En relación a la creación de documentos con tablas debemos respetar las siguientes consideraciones en el momento de considerar su accesibilidad: • Las tablas tendrán un nombre significativo. • Jamás se anidará tablas (una tabla insertada en una celda de otra tabla).
-
-• Se evitarán las celdas combinadas. • Si una tabla tiene una estructura especialmente compleja, mejor subdividirla en diferentes tablas. • Se aplicarán correctamente los estilos Título de tabla y Contenido de tabla. • Se activará siempre la repetición de filas de título, aunque ningún salto de página corte la tabla.
-
-• No se deben dividir las filas por saltos de página. Otras recomendaciones generales de accesibilidad incluyen: • Cuando el color sea significativo, el propio texto deberá ser explicativo o se establecerá algún tipo de marca especial interpretable con dispositivos lectores. Por ejemplo, "las respuestas correctas tienen un asterisco a la izquierda" (además de estar en color verde).
-
-• Los colores de texto y fondo deben estar suficientemente contrastados. • El tamaño mínimo recomendable para la tipografía debe ser de 12 puntos. Nunca usar tipografías de tamaño inferior a 10 puntos. • Uso de tipografías sans serif (sin remate) habituales. Arial o Verdana son muy buenas elecciones.
-
-• Evitar el uso de variantes thin, light o narrow de las tipografías (variantes más estrechas de los tipos de letra) • Precaución con el uso de las negritas, cursivas o subrayados. • Evitar el uso de efectos de contorno o intermitencias. • Evitar el uso de características incompatibles con otros formatos de documento (suprarayados, por ejemplo) • No usar párrafos vacíos para crear las separaciones entre párrafos. Para eso usaremos el espaciado encima y debajo del párrafo.
-
-• El interlineado simple no facilita la lectura; casi siempre será más apropiado un interlineado proporcional del 120% como mínimo. • Evitar el uso de características incompatibles con otros formatos de documento (rellenos degradados o de imagen, por ejemplo)
-
-Tema 2. Tablas
-
-Formato básico de tablas LibreOffice Writer presenta múltiples opciones para formatear una tabla. Algunas de las modificaciones se pueden realizar directamente con el ratón. En otras ocasiones, deberemos utilizar el menú Tabla, la barra de herramientas Tabla o el menú contextual de la tabla.
-
-El menú Tabla Al desplegar el menú Tabla de LibreOffice Writer disponemos diferentes opciones
-
-La barra de herramientas tabla En LibreOffice Writer, si hacemos clic sobre cualquier celda de la tabla, o seleccionamos una fila, una columna o la tabla, inmediatamente aparecerá en escena la barra de herramientas Tabla, por defecto anclada en la zona inferior al área de trabajo.
-
-Barra de herramientas Tabla El menú contextual Tabla Al hacer clic con el botón secundario del ratón sobre cualquier zona de la tabla invocamos el menú contextual Tabla, que si se encuentra seleccionada al menos una celda, fila o columna muestra además la opción Combinar celdas.
-
-Menú contextual de tabla con selección de al menos una celda Veamos como podemos insertar y eliminar filas, columnas e incluso tablas en una tabla de LibreOffice Writer.
-
-Insertar filas
-
-Insertar una nueva fila Para insertar una nueva fila, nos situamos con un clic en la celda sobre o tras la cual queremos insertar la nueva fila, o seleccionamos una fila sobre o tras la cual queremos insertar la nueva fila y... • Hacemos clic en el icono Filas encima o Filas debajo de la barra de herramientas Tabla.
-
-• Seleccionamos la opción desde el menú Tabla > Insertar > Filas encima o Filas debajo. • Seleccionamos la opción desde el menú contextual Tabla > Insertar > Filas encima o Filas debajo.
-
-Tema 2. Tablas
-
-Insertar varias filas Para insertar más de una fila, seleccionamos el mismo número de celdas en fila • Hacemos clic en el icono Filas encima o Filas debajo de la barra de herramientas Tabla. • Seleccionamos la opción desde el menú Tabla > Insertar > Filas encima o Filas debajo.
-
-• Seleccionamos la opción desde el menú contextual Tabla > Insertar > Filas encima o Filas debajo.
-
-Insertar columnas en una tabla Insertar una nueva columna • Hacemos clic en el icono Columnas a la izquierda o Columnas a la derecha de la barra de herramientas Tabla, o... • Seleccionamos la opción desde el menú Tabla > Insertar > Columnas a la izquierda oColumnas a la derecha o...
-
-• Seleccionamos la opción desde el menú contextual Tabla > Insertar > Columnas a la izquierda oColumnas a la derecha. Insertar varias columnas Para insertar más de una columna, seleccionamos el mismo número de celdas en columna • Hacemos clic en el icono Columnas a la izquierda o Columnas a la derecha de la barra de herramientas Tabla, o...
-
-• Seleccionamos la opción desde el menú Tabla > Insertar > Columnas a la izquierda oColumnas a la derecha o... • Seleccionamos la opción desde el menú contextual Tabla > Insertar > Columnas a la izquierda o Columnas a la derecha.
-
-Insertar tablas en una tabla Podemos insertar una tabla en el interior de la celda de otra tabla. Es lo que se conoce como anidar tablas. • Utilizaremos el botón Tabla de la barra de herramientas Estándar • Utilizaremos la opción desde el menú Tabla > Insertar tabla.
-
-• Utilizaremos la combinación de teclas Ctrl+F12 Ejemplo de tabla anidada
-
-Tabla anidada Eliminar filas en una tabla • Hacemos clic sobre el botón Filas de la barra de herramientas Tabla. • Desde el menú Tabla > Eliminar > Filas. • Desde el menú contextual Tabla seleccionando Eliminar > Filas.
-
-Tema 2. Tablas
-
-Eliminar columnas en una tabla • Hacemos clic sobre el botón Columnas de la barra de herramientas Tabla. • Desde el menú Tabla > Eliminar > Columnas. • Desde el menú contextual Tabla seleccionando Eliminar > Columnas. Eliminar una tabla • Hacemos clic sobre el botón Tabla de la barra de herramientas Tabla.
-
-• Activamos desde el menú Tabla > Eliminar > Tabla. • Desde el menú contextual Tabla seleccionando Eliminar > Tabla. También podemos seleccionar toda la tabla y luego hacer clic en los botones Filas o
-
-Columnas de la barra de herramientas Tabla.
-
-Modificar la anchura de columna y la altura de fila Con el ratón • Para modificar el ancho de una columna con el ratón • Para modificar el alto de una fila con el ratón
-
-Con el teclado • Para modificar el ancho de una columna con el teclado, nos situamos en una celda cualquiera de la misma y pulsaremos la combinación Alt + → o Alt + ← • Para modificar el alto de una fila con el teclado 2 , nos situamos en una celda cualquiera de la misma y pulsaremos la combinación Alt+ ↑ o Alt + ↓
-
-Desde los menús • El menú Tabla > Tamaño > Anchura de columna. • El menú contextual Tamaño > Anchura de columna. Diálogo Anchura de columna • Desde el menú Tabla > Tamaño > Altura de fila. • Desde el menú contextual Tamaño > Altura de fila. Diálogo Altura de fila
-
-Ajuste dinámico de la altura de fila El Ajuste dinámico realiza un ajuste automático de la altura de las filas para ajustarlas automaticamente a su contenido. Si está activado podemos definir una altura mayor que la precisada por la fila, pero no menor que el alto mínimo necesario para garantizar que todo el contenido se muestre.
-
-El alto mínimo de una fila viene definido por el mayor de los siguientes factores: • el mayor de los tamaños de fuente de sus celdas (si están vacías) • el mayor de los tamaños del contenido de sus celdas, sea texto o gráficos Desactivaremos Alto dinámico si queremos forzar un alto menor de fila que el alto mínimo necesario, si bien en este caso no se mostrará todo el contenido.
-
-El ajuste dinámico también se puede activar desde el menú contextual Tamaño > Altura óptima de filas, o desde el menú Tabla > Tamaño > Altura óptima de filas, que sólo se muestra si la altura de la fila ha sido cambiada.
-
-Tema 2. Tablas
-
-Altura óptima de filas También desde el botón Optimizar tamaño > Altura óptima de filas de la barra de herramientas Tabla.
-
-Botón Optimizar tamaño > Altura óptima de filas
-
-Ajuste asistido del alto de filas o del ancho de columnas
-
-LibreOffice Writer pone a nuestra disposición dos métodos para hacernos más fácil la tarea de ajustar el alto de filas y el ancho de columnas. Podemos hacer que dos o más filas (incluso todas) se distribuyan equitativamente en relación a la altura total que ocupan.
-
-Para ello seleccionamos las filas o seleccionamos al menos una celda de cada una de las filas y: • Seleccionamos desde el menú Tabla > Tamaño > Distribuir filas uniformemente. • Desde el menú contextual Tamaño > Distribuir filas uniformemente. • Desde la barra de herramientas Tabla, clic en el botón Optimizar tamaño > Distribuir filas uniformemente.
-
-Botón Optimizar tamaño > Distribuir filas uniformemente
-
-De la misma forma, podemos hacer que dos o más columnas (incluso todas) se distribuyan equitativamente en relación al ancho total que ocupan. Para ello seleccionamos las columnas o seleccionamos al menos una celda de cada una de las columnas y: • Seleccionamos desde el menú Tabla > Tamaño > Distribuir columnas uniformemente.
-
-• Desde el menú contextual Tamaño > Distribuir columnas uniformemente. • Desde la barra de herramientas Tabla, clic en el botón Optimizar tamaño > Distribuir columnas uniformemente.
-
-Botón Optimizar tamaño > Distribuir columnas uniformemente
-
-Tema 2. Tablas
-
-Otras propiedades de tablas
-
-• Desde el menú Tabla > Propiedades. • Desde el menú contextual Tabla > Propiedades de tabla. • Desde el botón Propiedades de la tabla de la barra de herramientas Tabla.
-
-Diálogo Formato de tabla La pestaña Tabla La imagen anterior corresponde a la pestaña Tabla del diálogo Formato de tabla de Writer. Desde la sección Propiedades podemos definir el Nombre de la tabla, que nos permite encontrarla rápidamente en la ventana Navegador. También se utilizará si creamos un índice de tablas.
-
-Si la tabla no ocupa todo el espacio entre el margen izquierdo y el derecho de la página o de la columna donde está insertada, podremos definir su Anchura. Si queremos indicar el ancho como un porcentaje del espacio disponible, debemos activar la opción Relativo.
-
-Si la tabla ya ocupa el espacio máximo entre márgenes no estarán activadas las opciones Anchura y Relativo. Si cambiamos la opción Alineación a cualquiera distinta de Automática se activarán estas propiedades y podremos modificarlas. Desde ésta sección Alineación podemos definir la posición y el comportamiento de la tabla con respecto a los márgenes de la página
-
-• Seleccionamos Automática para que la la tabla crezca o decrezca horizontalmente respecto a los márgenes izquierdo y derecho de la página. Esta configuración se recomienda en las tablas de los documentos que queremos crear o exportar en HTML. De esta forma, si el documento HTML se muestras en distintos dispositivos, la tabla se adaptará al ancho disponible.
-
-o En la sección Espacio se activan sólo las opciones Hacia arriba y Abajo, que permiten definir un espaciado por encima y/o por debajo de la tabla.
-
-Tabla sin espaciado
-
-Tema 2. Tablas
-
-Tabla con espaciado Hacia arriba y abajo • Seleccionamos Izquierda para que la tabla quede alineada al margen izquierdo de la página. o En la sección Espacio se activan la opción Derecha, que permite definir la distancia de la tabla al margen derecho.
-
-Tabla con alineación izquierda y espaciado por la derecha • Si seleccionamos De izquierda podremos definir el espacio entre el lado izquierdo de la tabla respecto al margen izquierdo de la página, sin ajustar el lado derecho de la tabla al margen derecho (el ancho no se reduce automáticamente al aumentar el margen izquierdo), que es posible que lo sobrepase.
-
-o En la sección Espacio se activa la opción Izquierda, que permite definir la distancia de la tabla al margen izquierdo.
-
-Tabla alineada de izquierda con espaciado por la izquierda • Selecciona Derecha para alinear el borde derecho de la tabla con el margen derecho de la página. o En la sección Espacio se activa la opción Izquierda, que permite definir la distancia de la tabla al margen izquierdo.
-
-Tabla alineada a la derecha con espaciado por la izquierda
-
-Tema 2. Tablas
-
-• Seleccionando Centro la tabla se centrará horizontalmente en la página, de forma equidistante a los márgenes. o En la sección Espacio se activa la opción Izquierda, que permite definir a un tiempo la distancia de la tabla al margen izquierdo y al derecho, que cambian en igual magnitud.
-
-• Al seleccionar Manual se alineará horizontalmente la tabla según los valores que indiquemos en los cuadros Izquierda y Derecha de la sección Espacio. Writer ajusta automáticamente el ancho de la tabla.
-
-La pestaña Borde Si deseamos aplicar alguna característica a una sola celda, debemos seleccionarla. No basta con hacer clic sobre ella
-
-Pestaña Borde del diálogo Formato de tabla
-
-Al activar Fusionar los estilos de línea adyacentes cuando dos celdas tengan distinto estilo de línea se muestra sóla la línea de la celda predominante. En caso contrario, cada celda muestra sus propias líneas.
-
-Fusionar los estilos de línea adyacentes activado
-
-Fusionar los estilos de línea adyacentes desactivado En caso de fusión, la regla es: el valor mayor predomina. Si una celda tiene borde de 1 punto y la adyacente de 2 puntos, la que predomina es la de 2 puntos. A igualdad de valores, excepto color, el borde común toma el color de la celda situada encima o a la derecha, excepto en los vértices de la celda.
-
-Tema 2. Tablas
-
-La pestaña Fondo Desde la pestaña Fondo del diálogo Formato de tabla podemos personalizar el fondo de celdas, filas o de toda la tabla. Al ser una propiedad de celda, deberemos seleccionar previamente aquellas a las que queramos aplicar la propiedad. Si sólo hicimos clic dentro de la tabla, se aplica a toda la tabla.
-
-Si deseamos aplicar alguna característica a una sola celda, debemos seleccionarla. No basta con hacer clic sobre ella.
-
-Permite aplicar tanto un efecto de color como una imagen de fondo. En caso de que apliquemos estos efectos tanto a celdas como a filas y/o tabla, el efecto se visualizará en ese orden. Prevalece el asignado a la celda sobre la fila, y éstos prevalecen sobre el que apliquemos a la tabla.
-
-Para aplicar un fondo seleccionamos en el desplegable Como el estilo de fondo a aplicar: Color o Imagen. Seleccionaremos después en Para a qué elementos aplicaremos el efecto: a las celdas seleccionadas, a las filas seleccionadas, o a toda la tabla.
-
-Pestaña Fondo como Color del diálogo Formato de tabla Desde Color de fondo seleccionaremos el color deseado. Sin relleno eliminará el color de fondo o imagen previamente aplicados. Si seleccionamos Imagen se presentan las siguientes opciones en el diálogo
-
-Pestaña Fondo como Imagen del diálogo Formato de tabla
-
-Haciendo clic en el botón Examinar podremos elegir la imagen a aplicar al fondo. Marcando la opción Enlazar la imagen no se inserta en el documento, sino que queda vinculada. Desde la sección Tipo podemos elegir: • Posición: inserta la imagen y la alinea en la posición que marcaremos en la ventana a su derecha.
-
-La imagen debe ser menor que la celda/fila/tabla que la contiene para poder apreciar el efecto.
-
-Tema 2. Tablas
-
-• Área: la imagen se extiende por toda la zona a afectar. • Mosaico:para que la imagen se repita ocupando toda la zona a afectar. La imagen debe ser menor que la celda/fila/tabla que la contiene para poder apreciar el efecto.
-
-Es recomendable ajustar previamente el tamaño de la imagen según el diseño que deseamos obtener, así como ajustar su nivel de transparencia o aplicar un filtro de “marca de agua” para conseguir un efecto óptimo. Mostramos a continuación una imagen como fondo de una celda o de una tabla
-
-Tabla con imagen de fondo en una celda
-
-Ejemplo de tabla con imagen de fondo
-
-Mostrar u ocultar los límites de la tabla Tras insertar una tabla en el documento, es bastante probable que de forma predeterminada se hayan dibujado los bordes de la misma. Quizás no deseamos que estos bordes se muestren impresos, pero necesitamos una guía visual para ubicar correctamente las filas, columnas y celdas de la tabla. Por tanto, necesitamos visualizar los límites de la tabla.
-
-Activando o desactivando la opción del menú Ver > Límites de la tabla haremos que Writer muestre o no unas finas líneas de color gris que nos permiten mostrar los límites de las celdas de las tablas en el caso de que éstas carezcan de bordes. En la siguiente imagen vemos una tabla que tiene los bordes dibujados parcialmente, y el aspecto que presenta en la pantalla con esta opción desactivada (arriba) o activada (abajo).
-
-Tabla con límites ocultos
-
-Tabla con límites visibles
-
-Tema 2. Tablas
-
-La pestaña Flujo de texto Desde la pestaña Flujo del texto del diálogo Formato de tabla podemos definir el comportamiento de la tabla con respecto al texto que la rodea, y cómo debe reaccionar si se encuentra con un salto de página o columna.
-
-Pestaña Flujo de texto en el formato de tabla • Activando Quebrar definimos el tipo de salto que deseamos asociar con la tabla. o Activando Página insertamos un salto de página Delante o Detrás de la tabla. o Activando Columna insertamos un salto de columna Delante o Detrás de la tabla.
-
-o Activando Con estilo de página seleccionamos el estilo que se aplicará a la primera página que sigue al salto. Desde Nº de página definiremos la numeración de la página a partir de ese salto. • Para definir el comportamiento de la tabla si se encuentra con un salto de página o columna podemos activar o desactivar Permitir división de tabla en páginas y columnas. Activándolo permitimos que la parte de la tabla que supera la capacidad de la página o columna actual se separe y pase a la página o columna siguiente, manteniendo las filas completas. Desactivando esta opción, la tabla no podrá repartirse entre las páginas o columnas. Pasará completa a la página o columna siguiente. Esta opción también la podemos encontrar en el menú Tabla > Dividir entre páginas.
-
-• Si activamos Permitir división de fila entre páginas y columnas Writer podrá ejecutar el salto de página o de columna dentro de una fila de la tabla. Por accesibilidad, EVITAR el uso de esta opción. • Si deseamos que la tabla y el párrafo que la sigue se mantengan juntos cuando se encuentren con un salto de página o columna, debemos activar Mantener párrafos juntos.
-
-• En caso de permitir la división de la tabla en páginas y columnas, podemos activar Repetir título. ¡Imprescindible para mantener la accesibilidad! De esta forma, en la parte de la tabla que pase a la página o columna siguiente se repetirán automáticamente la fila o filas que forman los títulos de la misma. Si está formado por varias filas, lo indicaremos desde Las primeras N filas.
-
-Ésta opción también se encuentra en el menú Tabla > Repetir filas de cabecera. ¡Imprescindible para mantener la accesibilidad! Para utilizar esta opción desde el menú debemos seleccionar previamente las filas que forman el título. • Podemos especificar la Orientación del texto dentro de la tabla, si bien al ser una característica de celda, debemos seleccionar previamente toda la tabla o las celdas a las que queremos afectar.
-
-Las opciones posibles son
-
-Tema 2. Tablas
-
-o Horizontal: es la forma habitual o Vertical: el texto aparece escrito en ángulo de 90º. Si se elije la forma vertical, la barra de herramientas Formato cambia la orientación de los botones de Alineación, Numeración, Viñetas y de Sangrías.
-
-Celdas con orientación vertical o Utilizar la configuración del objeto superior. Es la opción por defecto. Sigue automáticamente la dirección del texto que le precede. • Podemos definir la Alineación vertical de los objetos contenidos en las celdas, eligiendo entre Arriba, Centrado o Abajo. Ésta propiedad también es una característica de celda, por lo que debemos seleccionar previamente toda la tabla o las celdas a las que queremos afectar.
-
-Alineación vertical de celdas La Alineación vertical de celdas también se puede definir desde la barra de herramientas Tabla seleccionando los botones Arriba, Centrado o Abajo.
-
-Tema 2. Tablas
-
-Ordenar los datos en las tablas
-
-Ordenar los datos de las tablas • En primer lugar, hay que seleccionar sólo las celdas con datos (no los encabezados de los mismos), pues la ordenación afectará sólo a las celdas seleccionadas y a todas ellas. Consecuentemente, si seleccionásemos también los títulos o encabezados de filas o de las columnas, serían tratadas como un dato más.
-
-• Desde el menú Tabla > Ordenar o desde el botón Ordenar de la barra de herramientas Tabla activaremos el diálogo Ordenar.
-
-Dialogo Ordenar Este diálogo nos permitirá activar hasta tres criterios de ordenación (Clave1, Clave2 y Clave3), especificando el número de Columna que deseamos ordenar, si la ordenación es Alfanumérica o Numérica y si el orden es Ascendente o Descendente.
-
-Desde el diálogo Ordenar no tan sólo se pueden ordenar datos en tablas. Si seleccionamos párrafos de texto, también tendremos la posibilidad de ordenarlos alfabéticamente. Asimismo si tenemos texto separado por tabuladores u otro carácter.
-
-Algunas opciones especiales que nos ofrece el diálogo Ordenar: • Dirección nos permite ordenar por columnas en lugar de por filas, es decir, no tan sólo podemos ordenar de arriba a abajo, sino también de izquierda a derecha. • Separador permite especificar el carácter que identificará la separación entre columnas si estamos ordenando párrafos de texto en lugar de datos de tabla.
-
-• Idioma permite seleccionar el idioma, dado que los criterios de ordenación pueden variar en función de éste. • Distinguir mayúsculas y minúsculas permite refinar la ordenación en función de la capitalización de los textos; a igualdad de términos, la ordenación ascendente pone en primer lugar los escritos en minúsculas.
-
-Unir y dividir celdas y tablas Es posible que necesitemos que dos o más celdas contiguas se unan formando una sola celda. Para conseguirlo, seleccionaremos las celdas contiguas que deseamos unir, y procederemos de alguna de las siguientes maneras
-
-Tema 2. Tablas
-
-• Seleccionaremos desde el menú Tabla > Combinar celdas. • Seleccionaremos desde el menú contextual de tabla, la opción Combinar celdas. • Desde la barra de herramientas Tabla haremos clic en el botón Combinar celdas. En el siguiente ejemplo, combinamos las cuatro celdas centrales en una sola.
-
-Celdas seleccionadas antes de unirlas
-
-Después de unir celdas
-
-Si deseamos separar celdas que unimos previamente, o queremos subdividir una celda en dos o más celdas, podemos conseguirlo seleccionando la celda y: • Seleccionamos desde el menú Tabla > Dividir Celdas. • En la barra de herramientas Tabla haremos clic sobre el botón Dividir Celdas.
-
-Se muestra el diálogo Dividir celdas
-
-Diálogo Dividir celdas • En Dividir la celda en podemos obtener el número de divisiones que deseamos obtener • En la sección Dirección, indicamos si deseamos dividirla Horizontalmente o Verticalmente. • Sólo para la división horizontal, activaremos A proporciones iguales si queremos que la división reparta de forma equitativa el espacio de celda entre las subdivisiones.
-
-La celda resultante de la unión anterior, ahora la hemos dividido en 5 celdas verticales
-
-Celda antes de ser dividida
-
-Celda después de dividirla
-
-Tema 2. Tablas
-
-Dividir una tabla Al igual que hicimos con las celdas, las tablas se pueden dividir o unir fácilmente en Writer. En ambos casos, la acción se realiza por filas, y no por columnas. Podemos dividir una tabla en dos tablas separadas, tras seleccionar la fila o hacer clic en una celda cualquiera de la misma fila, de las siguientes maneras
-
-• Seleccionamos desde el menú Tabla > Dividir tabla. • Desde la barra de herramientas Tabla hacemos clic sobre el botón Dividir tabla En ambos casos se muestra el diálogo Dividir tabla
-
-Diálogo Dividir tabla • Copiar título copiará el título de la tabla original como encabezado de la segunda tabla. • Título personalizado (aplicar estilo) insertará en la segunda tabla una primera fila, en blanco, pero con los estilos de la primera fila de la tabla original.
-
-• Título personalizado simplemente agrega una nueva fila en blanco a la segunda tabla. • Sin título divide las tablas y no agrega encabezado a la segunda tabla.
-
-Unir dos tablas en una sola Para unir dos tablas en una sola necesitamos previamente quitar todas las líneas que existan entre ellas. Cuando las tablas se muestren juntas, haremos clic en una de ellas y: • Seleccionamos desde el menú Tabla > Unir Tabla
-
-Formatos numéricos y calculos en tablas De forma predeterminada, cuando introducimos fechas, horas, números o monedas en las tablas, Writer formatea automáticamente las celdas de acuerdo con la configuración regional definida en el sistema operativo. Éste comportamiento se puede activar o desactivar a voluntad mediante uno de estos dos procedimientos
-
-• Desde el menú Tabla > Reconocimiento de número. • Desde la configuración de opciones en Herramientas > Opciones > LibreOffice Writer > Tabla. En la sección Entrada en tablas, activamos o desactivamos Reconocer los números. También podemos activar la opción Reconocer los formatos numéricos y que asigne automáticamente la Alineación.
-
-Tema 2. Tablas
-
-Configuración de opciones de reconocimiento de números
-
-Aplicar formato de número en las celdas Como si de una hoja de cálculo se tratase, Writer permite aplicar formatos numéricos a celdas con valores. Estos formatos son Moneda, Fecha, Hora, Ciencia, Fracción, Valor lógico y Texto. Para aplicar alguno de estos formatos, tras seleccionar el rango de celdas, efectuaremos alguna de las siguientes operaciones
-
-• Seleccionamos desde el menú Tabla > Formato numérico. • Hacemos clic desde la barra de herramientas Tabla sobre el botón Formato numérico. • Desde el menú contextual de la tabla la opción Formato numérico. Se presenta el diálogo Formato de números.
-
-Diálogo Formato de números Seleccionaremos primero la Categoría deseada. En la lista Formato, seleccionamos la opción que más se adecue a nuestras necesidades, e indicamos el Idioma a atribuir al texto formateado (importante si queremos mostrar fechas con nombres de mes o de días de la semana).
-
-Desde Opciones se muestran diferentes opciones según la categoría elegida para que personalicemos más el formato numérico. Y para usuarios avanzados, desde el cuadro Código del formato se pueden personalizar y almacenar formatos propios para posteriores usos.
-
-Tema 2. Tablas
-
-Insertar fórmulas en celdas Writer puede mostrar capacidades similares a las de una hoja de cálculo, ya que permite insertar fórmulas que operen con las celdas de las tablas. Para insertar una fórmula en una celda, nos situamos en la celda y: • Pulsamos la tecla tecla de función F2.
-
-• Pulsamos la tecla =. • Desde el menú Tabla seleccionamos la opción Fórmula. • Desde la barra de herramientas Tabla hacemos clic sobre el botón Fórmula. • Activamos la opción desde el menú Ver > Barras de herramientas > Fórmula. Tras activar la opción Fórmula por cualquiera de estos métodos se muestra la barra de Fórmulas
-
-Barra de fórmulas Aprendamos a utilizar esta herramienta con uno de los casos más habituales: queremos sumar de forma automática todos los valores que aparecen en las celdas de una columna, o en una fila. Las tablas, por similitud con las hojas de cálculo, están formadas por celdas que tienen un nombre. El nombre de la celda también se llama referencia.
-
-Al igual que el juego de los barcos, las celdas se llaman A1, B18, J7, etcétera. La letra se corresponde con la columna, y el número, con la fila. La primera celda de una tabla (situada en el extremo superior izquierdo) siempre será la celda A1. A la hora de operar con esas celdas (sumarlas o restarlas, entre otras operaciones) debemos introducir en la fórmula su referencia.
-
-De todas formas, las celdas se pueden introducir en los cálculos haciendo clic en ellas y Writer se ocupará de escribir la referencia correcta por nosotros.
-
-Cálculos en tablas
-
-Introducir una fórmula que opere con celdas Supongamos que en la tabla de la figura superior, en su última fila, queremos sumar la columna de números bajo el título Cantidad Los pasos a seguir son: • Nos situamos en la celda donde deseamos efectuar el cálculo (C7). • Pulsamos la tecla F2 (o utilizamos cualquiera de los métodos alternativos para mostrar la barra de fórmulas).
-
-• Hacemos clic sobre la primera celda a sumar (C2) y escribimos el operador +. • Repetimos el proceso con el resto de las celdas hasta obtener la fórmula =<C2>+<C3>+<C4>+<C5>+<C6>.
-
-Tema 2. Tablas
-
-• Validamos la fórmula pulsando Intro o haciendo clic sobre el botón Aplicar. La celda mostrará el resultado de sumar las celdas situadas por debajo de la etiqueta Cantidad.
-
-Introducir una función en la fórmula El editor de fórmulas nos permite insertar funciones que facilitan la definición de los cálculos. Un método alternativo para resolver este ejemplo sería utilizar la función Suma en la fórmula. En ese caso los pasos a seguir habrían sido
-
-• Nos situamos en la celda donde deseamos efectuar el cálculo (C7). • Pulsamos la tecla F2 (o utilizamos cualquiera de los métodos alternativos para mostrar la barra de fórmulas). • Desplegamos la lista de funciones disponibles desde la barra de formulas, pulsando sobre el botón Funciones.
-
-• Seleccionamos la función SUMA (en la fórmula se mostrará =sum ). Insertando la función suma en la fórmula • Seguidamente seleccionamos las celdas a sumar bajo la etiqueta Cantidad (en la fórmula se mostrará =sum <C2:C6> ). • Validamos la fórmula pulsando Intro o haciendo clic sobre el botón Aplicar.
-
-La celda mostrará el resultado de sumar las celdas situadas por debajo de la etiqueta Cantidad.
-
-Tabla con cálculos Al situar el puntero del ratón sobre una celda que contiene una fórmula, ésta se muestra en una etiqueta emergente.
-
-Tema 2. Tablas
-
-Operar con celdas de otras tablas
-
-Writer permite efectuar cálculos sobre valores que hay en celdas de otras tablas. Siguiendo con el ejemplo anterior imaginemos que, en otra tabla, hemos de calcular el importe de un impuesto para incrementarlo al total.
-
-Calculando con celdas de otras tablas Seguiremos los siguientes pasos: • Nos situamos en la celda de la segunda tabla donde deseamos efectuar el cálculo (C1). • Pulsamos la tecla F2 (o utilizamos cualquiera de los métodos alternativos para mostrar la barra de fórmulas).
-
-o haremos clic en la celda B1 de la segunda tabla, tecleamos el operador * y hacemos clic sobre el importe Total de la tabla anterior. o La barra de fórmulas mostrará =<B1>*<Tabla1.E7> (donde Tabla1 es el nombre de la tabla referida). o Validamos la fórmula pulsando Intro o haciendo clic sobre el botón Aplicar.
-
-El resultado final será como sigue
-
-Calculando con celdas de otras tablas Si modificamos cualquiera de los valores de las celdas que intervienen en las fórmulas, se recalcularán las celdas con fórmulas y se mostrarán los valores actualizados.
-
-Tema 2. Tablas
-
-Protección de celdas Cuando tenemos fórmulas en las celdas de una tabla, puede resultar muy recomendable proteger las celdas para evitar modificaciones indeseadas. Tras seleccionar las celdas a proteger, lo podemos efectuar de dos maneras: • Activamos la opción desde el menú Tabla > Proteger celda.
-
-• Hacemos clic desde la barra de herramientas Tabla sobre el botón Proteger celda. Las celdas quedarán protegidas y cualquier intento de escribir en ellas mostrará un mensaje de protección.
-
-Alerta celda protegida Hay que tener presente que esta protección está orientada tan sólo a evitar modificaciones por error, pues no se puede aplicar ninguna contraseña y, consecuentemente, cualquiera con acceso al documento puede desproteger las celdas. Para desproteger celdas protegidas, tras seleccionarlas, bastará con desactivar la opción desde el menú Tabla > Desproteger, o haciendo clic desde la barra de herramientas Tabla sobre el botón
-
-Desproteger.
-
-Operaciones soportadas por el editor de Fórmulas Las operaciones soportadas son: • Operador + para realizar la operación Suma. Ejemplo: =100+<B2> • Operador - para realizar la operación Resta. Ejemplo: =100-<B2> • Operador * para realizar la operación Multiplicación. Ejemplo: =100*<B2> • Operador / para realizar la operación División. Ejemplo: =100/<B2> • Operador ^ para realizar la operación Potenciación. Ejemplo: =<B2>^3 • Operador SQRT para calcular la operación Raíz cuadrada. Ejemplo: =<B2>*SQRT 12 • Paréntesis ( ) Establecen la prioridad de las operaciones. Ejemplo: =(100-<B2>)*(100+<B2>) • Operador % Divide por 100 el número que le precede. Ejemplo: =<B2>*21% Prioridad de los operadores Los operadores realizan cálculos con la siguiente prioridad, de mayor a menor
-
-- ( ) Resuelve los paréntesis
-- ^ Potenciación
-- % Porcentaje
-- / División
-- * Multiplicación
-- Restar
-- + Sumar
-
-Tema 2. Tablas
-
-Funciones y expresiones soportadas por el editor de Fórmulas de Writer Funciones matemáticas • SUM() Suma el rango de celdas SUM(<A1:B15>) o SUM <A1:B15> o SUM(<A1> | <A3> | <B15>) • ROUND() Calcula el redondeo hasta el número especificado de decimales <B15> ROUND 2 Funciones estadísticas • SUM() Suma el rango de celdas SUM(<A1:B15>) o SUM <A1:B15> o SUM(<A1> | <A3> | <B15>) • MEAN() Calcula el promedio del rango de celdas MEAN(<A1:B15>) • MIN() Valor mínimo del rango de celdas MIN(<A1:B15>) • MAX() Valor máximo del rango de celdas MAX(<A1:B15>) Operadores • AND Comprueba el Y lógico.
-
-• OR Comprueba el O lógico • NOT Comprueba el No lógico • | Separador de lista: separa los valores de una lista • == Verifica si los valores son iguales • != Verifica si los valores no son iguales • <, <=, >=, > Menor, menor o igual, mayor, mayor o igual Valores • PI El número Pi 3,1415...
-
-• E Número de Euler 2,71828... • TRUE Verdadero • FALSE Falso Funciones trigonometricas • SIN Calcula el seno en radianes • COS Calcula el coseno en radianes • TAN Calcula la tangente en radianes • ASIN Calcula el arcoseno en radianes • ACOS Calcula el arcocoseno en radianes • ATAN Calcula la arcotangente en radianes
-
-Tema 2. Tablas
-
-Convertir texto en tabla y tabla en texto
-
-Convertir tabla en texto Writer permite convertir tanto una tabla a texto como un texto a tabla. Es más, podemos indicar qué carácter se emplea para separar los campos (celdas), e incluso que carácter se emplea para delimitar los registros (filas). Tras seleccionar una tabla, podemos convertir una tabla en texto desde el menú Tabla > Convertir > Tabla en texto.
-
-Se presentará el siguiente diálogo: Diálogo Convertir tabla en texto • Indicaremos que tipo de carácter separador para los campos deseamos utilizar. Podemos seleccionar Tabulador, Punto y coma, marca de Párrafo o, marcando Otros, especificar el carácter que precisemos.
-
-• Tras pulsar sobre el botón Aceptar, la tabla se convertirá en texto. En la siguiente imagen mostramos una tabla y su conversión a texto delimitado por tabuladores
-
-Antes de convertir a texto
-
-Después de convertir a texto Obsérvese que: • Se ha activado Mostrar caracteres no imprimibles para mostrar los tabuladores que separan el texto • La conversión respeta los atributos de carácter del texto: negritas, color de letra, etc.
-
-Tema 2. Tablas
-
-• Las celdas combinadas (fila de total) se mantienen combinadas al convertir, por eso el importe total se muestra encolumnado bajo las ciudades. Bastará con limpiar el formato y personaliar las posiciones de tabulación para que el resultado luzca mejor aspecto
-
-Tabla convertida a texto formateada Convertir un texto en tabla Para convertir un texto delimitado a tabla, el proceso es igual de sencillo. Tras seleccionar el texto que deseamos convertir, activamos el menú Tabla > Convertir > Texto en tabla. Se mostrará entonces el siguiente cuadro de diálogo
-
-Diálogo Convertir texto en tabla • Deberemos especificar el carácter que se ha utilizado como Separador en el texto de campos. • Si el carácter de separación es el tabulador, podremos desmarcar Misma anchura para todas las columnas si así interesa. En cualquier otro caso, Writer distribuye el espacio disponible para la tabla entre las columnas que se precisen crear.
-
-• Desde la sección Opciones podremos definir si la primera línea del texto formará el Título de la tabla, si deseamos activar Repetir título en caso de salto de páginas o columnas, y el número de filas que lo conforman desde El primero X filas. • Podremos definir también si permitimos o No dividir la tabla en caso de salto de páginas o columnas, así como si deseamos que se le asigne un Borde simple.
-
-• Finalmente, desde el botón Formato automático... podremos seleccionar uno de los formatos automáticos de tabla disponibles para que se aplique a la nueva tabla. Mostramos el resultado de convertir a tabla el texto del ejemplo anterior, separado por tabuladores. Se ha utilizado un Formato automático personalizado que definimos en un apartado anterior.
-
-Tema 2. Tablas
-
-Texto con tabuladores convertido a tabla nuevamente Obsérvese que al crear la tabla, se ha extendido la anchura de la última columna hasta completar la totalidad del ancho de la página.
-
-Formato automático de tablas Writer posee una herramienta muy potente para aplicar formatos muy vistosos y elaborados a las tablas en pocos clics. Ésta herramienta es el Formato automático de tablas. Para activarla, haremos clic sobre la tabla a la que deseamos aplicar el formato y...
-
-• Seleccionamos desde el menú Tabla > Estilos de formato automático..., o... • Haremos clic en el botón Estilos de formato Automático... de la barra de herramientas Tabla La aplicación mostrará el diálogo Formato automático.
-
-Diálogo Formato automático de tabla
-
-• Desde la lista de Formato permite seleccionar uno entre los diferentes diseños disponibles. • Las casillas de verificación en el área Formato permiten seleccionar las diferentes opciones que se aplicarán a la tabla. En este contexto, Patrón se refiere a los fondos de color de las celdas.
-
-• La vista previa muestra como va a quedar formateada la tabla. Para finalizar, pulsaremos sobre Aceptar.
-
-Tema 2. Tablas
-
-Crear un formato automático de tabla personalizado La herramienta permite definir nuestros propios diseños de formato de tabla y añadirlos a la galería de Writer. Si en nuestro entorno corporativo disponemos de una guía de estilo que define la forma en que debemos aplicar tipografías, colores y bordes a nuestros documentos. Eso puede ser de aplicación también a las tablas que utilicemos en los mismos. Y será estupendo poder usar la herramienta Formato automático para dar formato rápidamente a nuestras tablas.
-
-Para crear un Formato automático personalizado: • Seleccionamos la tabla (debe tener un tamaño mínimo de 4 filas por 4 columnas) cuyo formato queremos guardar en la galería de Formatos automáticos. • Activamos el diálogo Formato automático. • Hacemos clic sobre el botón Añadir.
-
-• Asignamos un nombre al nuevo estilo y hacemos clic sobre Aceptar.
-
-Creando un formato automático personalizado
-
-A patir de este momento el formato automático personalizado ya está disponible para ser aplicado a cualquier otra tabla.
-
-Tema 2. Tablas
-
-Formato personalizado en la galería de Formatos automáticos
-
-Se almacenarán las definiciones de borde, fondo, tipo y estilo de letras, alineaciones y también los formatos numéricos que se hayan aplicado a las celdas.
-
-Tabla antes de aplicar el estilo Mi Formato automático
-
-Tabla después de aplicar el estilo Mi Formato automático
-
----
-
-# 1.5 Tema 3. IMATGES
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Insertando una imagen desde un archivo Para insertar una imagen desde un archivo debes situar el punto de inserción donde deseas insertarla. A continuación, selecciona la opción desde el menú Insertar > Imagen > A partir de archivo.... También se puede acceder desde el botón A partir de archivo de la barra de herramientas de dibujo. OpenOffice Writer presenta el cuadro de diálogo Insertar imagen.
-
-Al pie de la ventana de dialogo se muestran dos opciones interesantes
-
-Previsualizar: Nos permite examinar a la derecha en un tamaño mayor la imagen que deseamos insertar en el documento
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Vincular: No inserta la imagen, sino un vínculo a ésta. Si se produce una modificación en el archivo de origen, dicha modificación se vera reflejada en el documento. Si deseas introducir una imagen mediante el escáner selecciona la opción Insertar > Imagen > Escanear. Utiliza la opción Seleccionar fuente para seleccionar de qué escáner procederá la imagen.
-
-Utiliza la opción Solicitar... para acceder a la ventana de escaneo.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Insertar una imagen prediseñada en OpenOffice Writer Las imágenes prediseñadas son una colección de imágenes y sonidos que se pueden utilizar como fondos de página, viñetas, límites, etc., y que se instalan con el paquete OpenOffice quedando disponibles para el usuario, y que se pueden ampliar mediante la instalación de extensiones.
-
-Para insertar las imagenes prediseñadas disponibles en la Galería de OpenOffice debes activar previamente ésta herramienta: • Con el botón Galería de la Barra de Herramientas Estándar • Desde el menú Herramientas > Galería • Desde el panel lateral, activando la ficha Galería Tras activar una de las dos primeras opciones se mostrará la ventana de OpenOffice Writer dividida en dos zonas. En la parte superior podrás ver la ventana de la galería, con un aspecto similar al que aquí te presento
-
-Si desde el panel lateral activas la ficha Galería dispondrás de los mismos recursos que en los casos anteriores, pero dentro del panel lateral, lo que te permite tener una zona mayor de tu documento practicable.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Activa de entre los temas disponibles aquel que consideres más adecuado, y luego navega buscando la imagen más adecuada. • Haz un doble clic sobre la imagen para previsualizarla a mayor tamaño. • Haz un clic con el botón secundario del ratón sobre la imagen deseada para presentar su menú contextual. Selecciona Añadir > Copia o Añadir > Vínculo 1 para insertar la imagen en el documento. Selecciona Añadir > Fondo > Párrafo o Añadir > Fondo > Página para insertar la imagen como fondo del párrafo o de la página, respectivamente.
-
-• O simplemente, arrastra la imagen sobre el lugar donde deseas insertarla en tu documento. Para cerrar la galería de imágenes, vuelve a hacer clic sobre el icono Galería . En el panel de herramientas lateral no es necesario cerrarla, pero puedes activar otra ficha cualquiera.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Modificación de las propiedades de la imagen en OpenOffice Writer Al insertar una imagen podemos notar que aparece junto a ella un icono con un ancla, que identifica la forma en que nuestra imagen se encuentra insertada dentro del texto. Si deseas modificar las propiedades de imágenes tienes varias opciones
-
-• Desde el menú Formato > Imagen • Haciendo doble clic sobre la imagen • Haciendo clic con el botón secundario del ratón y seleccionando Imagen del menú contextual En cualquier caso OpenOffice Writer presenta el cuadro de dialogo de Imagen. Veamos las propiedades más interesantes que puedes modificar
-
-• La pestaña Tipo • La pestaña Opciones • La pestaña Ajuste • La pestaña Hiperenlace • La pestaña Imagen • La pestaña Recortar • La pestaña Borde • La pestaña Fondo
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de la imagen - La pestaña Tipo Desde la pestaña Tipo del diálogo Imagen de OpenOffice Writer podemos modificar el tamaño en ancho y alto de la imagen, así como su posición y el modo de anclaje al texto. En este diálogo se muestra una previsualización a la derecha de la ventana, donde el rectángulo verde refleja en miniatura los cambios introducidos.
-
-Redimensionar la imagen Si activas la opción Relativo podrás especificar el tamaño como un porcentaje del área de texto de la página (por ejemplo, 50% significa 8cm si el espacio disponible entre márgenes es de 16cm.). Marcando Mantener proporciones, cualquier cambio del tamaño se realizará manteniendo la relación (proporción) entre alto y ancho de la imagen.
-
-Tamaño original restablece el tamaño de la imagen. Modificar el anclaje El anclaje define el modo en que la imagen se une a un elemento de tu documento, de forma que si este elemento se mueve porque añadimos o eliminamos texto situado entre éste y el principio del documento, la imagen se moverá con él.
-
-El anclaje puede ser: • A la página: la imagen se mantiene unida a la página actual. Si la página cambia de posición (por que se agregan o quitan páginas anteriores), la imagen se mueve con la página. • Al Párrafo: la imagen se mantiene unida al párrafo actual. Si el párrafo cambia de posición, la imagen se moverá con el párrafo.
-
-• Al carácter: la imagen se mantiene unida al carácter actual. Si éste cambia de posición, la imagen se moverá con el carácter. • Como carácter: aquí la imagen se comporta como un carácter más de la línea de texto en el que se inserta. La altura de ésta se ajustará al tamaño de la imagen.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-El anclaje también puede ser modificado desde el menú Formato > Ancla, desde la Barra de herramientas formato utilizando el icono o desde el menú contextual de la imagen, opción Anclaje. Modificar la posición En función del anclaje seleccionado, Writer asigna unas referencias que permiten posicionar la imagen en el documento. Desde estas opciones puedes modificar tanto las referencias como los valores numéricos que definen la posición.
-
-Por ejemplo, podrás fácilmente situar una imagen en el mismo centro del área de un párrafo, bien en la horizontal o en la vertical, si la imagen ha sido anclada a uno. Si ha sido anclada a la página, también podrás situarla fácilmente en el centro horizontal o vertical de la misma fácilmente, o definir su posición desde los bordes de la página, etc...
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de imagen - La pestaña Opciones Desde la pestaña Opciones del diálogo Imagen de OpenOffice Writer podemos asignar varias propiedades muy importantes
-
-Nombres Al asignar un Nombre a la imagen podremos: • Hacer referencia a ella de un modo más humano en los índices y tablas de contenido • Encontrarla fácilmente en documentos largos al utilizar el Navegador • Compondrá el nombre de la imagen si exportamos el documento en formato HTML para la Web o la intranet.
-
-Desde la opción Alternativo (solo texto) podremos indicar el texto que se mostrará en el explorador mientras carga la imagen o para ayudar a personas discapacitadas. Esto es aplicable para el caso de exportar el documento en formato HTML u otros formatos para la Web.
-
-Proteger Desde Proteger podremos activar las siguientes opciones de seguridad: • Contenido: no se podrá cambiar la imagen • Posición: impide que se cambie la posición de la imagen. Evita también posteriores cambios involuntarios. • Tamaño: impide que se cambie el tamaño de la imagen. Evita también posteriores cambios involuntarios.
-
-Imprimir Si desactivamos la opción Imprimir, la imagen no será incluida al imprimir el documento, ni tampoco al exportarlo en formato PDF.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de imagen - La pestaña Ajuste Desde la pestaña Ajuste del diálogo Imagen de OpenOffice Writer podemos modificar la posición de la imagen respecto al texto del documento.
-
-Predeterminaciones Puedes elegir entre varios ajustes predeterminados, que son: Ninguno
-
-El texto fluye por arriba y por debajo de la imagen Antes
-
-El texto fluye por encima, por el lado izquierdo y por debajo de la imagen. Podemos definir las opciones Primer párrafo y Contorno.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Después
-
-El texto fluye por encima, por el lado derecho y por debajo de la imagen. Podemos definir las opciones Primer párrafo y Contorno. Paralelo
-
-El texto fluye rodeando por todos los lados la imagen. Podemos definir las opciones Primer párrafo y Contorno. Continuo
-
-Se coloca la imagen delante del texto. Podemos definir las opciones Primer párrafo y en el fondo para que se coloque por detrás del texto. Dinámico
-
-Se ajusta el texto automática-mente a la imagen siempre que la distancia entre ésta y el margen de la página sea de al menos de 2 cm. Podemos definir las opciones Primer párrafo y Contorno.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Espacios Desde estos controles puedes definir también el espacio (margen) que deseas guarde el texto respecto de la imagen por sus cuatro lados de forma independiente. Opciones Veamos el significado del bloque Opciones: • Primer Párrafo: inicia un nuevo párrafo debajo de la imagen tras pulsar la tecla Intro . El espacio entre los párrafos lo determina el tamaño de la imagen.
-
-• En el fondo, mueve el objeto seleccionado al fondo. • Contorno: ajusta el texto siguiendo la forma externa de la imagen, si tiene definidas áreas en blanco o transparentes. • Sólo en el exterior: ajusta el texto sólo alrededor de contorno de la imagen y no en zonas vacías o abiertas dentro del objeto. Se activa tras seleccionar Contorno.
-
-Paralelo
-
-Con la opción Contorno activada. Continuo
-
-Con la opción En el fondo activada.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Editar Contorno
-
-Con la opción Contorno activada y Sólo en el exterior desactivado. Estas opciones pueden ser modificadas desde el menú Formato > Ajuste o desde el menú contextual de imagen con la opción Ajuste, si bien en este caso disponemos de algunas opciones nuevas.
-
-Las correspondencias son: Menú Cuadro de dialogo Sin ajuste Ninguna Ajuste de página Paralelo Ajuste de página dinámico Dinámico Continuo Continuo En el fondo Continuo en el fondo Contorno Activada sólo si Editar contorno... se utilizó Editar contorno... Nueva opción Primer párrafo Cualquiera + Primer párrafo La opción “extra” que aparece cuando aplicamos el ajuste con el menú contextual o desde el menú Formato > Ajuste nos permite definir las áreas de la imagen en donde el texto será aceptado o repelido. Combinando con la opción Contorno activada y la opción Sólo en el exterior podemos conseguir efectos como el representado más arriba con el nombre Editar Contorno.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de imagen - La pestaña Hiperenlace Desde la pestaña Hiperenlace del diálogo Imagen de OpenOffice Writer' podemos asignar propiedades de Hiperenlace a la imagen, de forma que al hacer clic sobre ella podamos saltar a la página web o al archivo o documento que indiquemos como dirección URL.
-
-Escribe en URL: • la ruta completa del archivo, documento o carpeta que deseas abrir; la ruta debe estar en formato URL, válido para cualquier sistema operativo. • la dirección Web a la que enlaza la imagen (anteponiendo en este caso http:// para páginas Web, o ftp:// para lugares Ftp, etc.).
-
-En Nombre indica el nombre que deseas asignar al hipervínculo. En Marco indica el marco de destino donde quieres que se abra el hipervínculo. Se aplica si se exporta el documento en formato HTML para la Web. Déjalo en blanco, o utiliza una de las siguientes opciones
-
-• _self: Al hacer clic sobre la imagen, se abrirá el hiperenlace sustituyendo la página actual. • _blank: Al hacer clic sobre la imagen, se abrirá el hiperenlace en una nueva página. • _parent: Al hacer clic sobre la imagen, se abrirá el hiperenlace sustituyendo a la página desde la que se invocó a la imagen. De no existir tal página, se abre sustituyendo a la actual.
-
-• _top: Al hacer clic sobre la imagen, se abrirá el hiperenlace en la ventana de mayor jerarquía.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de imagen - La pestaña Imagen Desde la pestaña Imagen del diálogo Imagen de OpenOffice Writer podemos reflejar la imagen en la vertical o en la horizontal.
-
-Si has insertado la imagen en un encabezado o pié de la página de tu documento, o la pegas en varias páginas, podrás aprovechar este efecto para hacer que se refleje horizontalmente y de forma automática en todas las páginas o sólo en las pares o impares.
-
-Lo más importante de esta pestaña es la sección Vínculo, donde se define el vínculo de la imagen con el archivo origen correspondiente. Haciendo clic en el botón , puedes cambiar la imagen modificando el vínculo.
-
-Las imagenes vinculadas no se incluyen en el documento; si tienes que enviar el documento por correo, o copiarlo a un pen, o grabarlo en un CD, necesitarás adjuntar las imágenes junto al documento, ! y con la misma estructura de subdirectorios ! Eliminando el texto del vínculo fuerzas a que la imagen quede embebida en el documento (se inserte una copia de la imagen en el documento)
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de imagen - La pestaña Recortar Desde la pestaña Recortar del diálogo Imagen de OpenOffice Writer puedes recortar o escalar la imagen seleccionada, o agregar espacio en blanco alrededor de ella.
-
-Recortar
-
-Comentemos las opciones con un ejemplo. La primera imagen a la izquierda de estas líneas es la imagen original, a la que recortaremos 2 cm por cada lado utilizando los dos métodos posibles (En ambos casos deberás utilizar los valores de Izquierda, Arriba, Derecha o Abajo con números positivos para indicar las dimensiones a recortar, o con números negativos para agregar espacio en blanco a la imagen)
-
-• Método 1: Si activas Mantener la escala fuerzas a que se conserve la escala de la imagen al ser recortada, de forma que se modificará el tamaño de la misma. El equivalente "físico" es recortar con las tijeras los lados de una foto. La imagen resultante mantiene la escala, pero es más pequeña, pues le hemos cortado trozos a la foto. Éste es el método normal de recortar una imagen, y se corresponde con la segunda imagen a la izquierda.
-
-• Método 2: Si activas Mantener el tamaño, fuerzas a que se conserve el tamaño de la imagen al ser recortada, de forma que se modificará la escala de la misma. El equivalente "físico" es recortar con las tijeras los lados de una foto, y luego, estirar la imagen resultante para que siga ocupando el mismo espacio.
-
-La imagen resultante aumenta la escala, manteniendo el tamaño. En nuestro ejemplo se corresponde con la tercera imagen a la izquierda.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Escala y Tamaño de la imagen Utiliza las secciones Escala o Tamaño para modificar estas sin recortar la imagen. A diferencia de la propiedad Relativo de la pestaña Tipo de este mismo diálogo, Escala ser refiere al porcentaje con respecto al tamaño original de la imagen. Así, si una imagen tiene un tamano de 8x15 cm, al 50% se mostrará a 4x7,5 cm.
-
-El botón Tamaño original elimina todas las modificaciones realizadas en los controles Escala y Tamaño, restableciendo el tamaño de la imagen, pero no afecta a las opciones de Recortar.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de imagen - La pestaña Borde Desde la pestaña Borde del diálogo Imagen de OpenOffice Writer puedes agregar a la imagen bordes de diferentes estilos y colores, indicando incluso la distancia del borde al margen de la imagen.
-
-Puedes utilizar los estilos Predeterminados o bien seleccionar en el control Definido por el usuario a qué bordes deseas aplicar los estilos y colores con tan sólo hacer un clic en la línea que deseas activar o desactivar.
-
-Activa Sincronizar para modificar todos los controles de Distancia al contenido a la vez.
-
-También puedes añadir una Sombra a la imagen, definir su distancia y el color de la misma.
-
-Al aplicar el efecto sombra, la imagen se reduce para representar este efecto
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Propiedades de imagen - La pestaña Fondo Desde la pestaña Fondo del diálogo Imagen de OpenOffice Writer podemos asignar un color de fondo a una imagen. Ésto quizás te parezca extraño, así que mejor, lo explicamos con un ejemplo.
-
-Algunas imágenes con fondo blanco o transparente permiten que cambies este color de fondo por otro, el que tú quieras. Selecciona Sin relleno para hacer que el fondo sea transparente y se muestre lo que hay debajo de la imagen.
-
-La misma imagen, que hemos situado sobre un rectángulo rojo oscuro; una sin relleno (se ve el rectángulo situado debajo), y la otra con fondo verde (oculta lo que haya debajo).
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Modificación de atributos avanzados de imagen en Writer Cuando en OpenOffice Writer seleccionamos una imagen se activa la Barra de Herramientas Imagen, a la que podremos acceder también desde el menú Ver > Barra de Herramientas > Imagen. Desde esta barra de herramientas dispones de botones para modificar propiedades de la imagen, como brillo, contraste, nitidez, transparencia, color (ajustando la gama o los porcentajes de color rojo, verde y azul), o reflejar la imagen en vertical u horizontal.
-
-• Filtros de imagen • Modo gráfico • Control de color • Control de transparencia • Otros controles
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Atributos de imagen - Filtros de imagen
-
-Haciendo clic sobre el botón Filtro de la barra de herramientas Imagen de OpenOffice Writer se desplegará el recuadro mostrado a la derecha de estas líneas con los filtros que detallamos a continuación : Original Invertir
-
-Los diferentes filtros se verán aplicados sobre esta Imagen de referencia. Los efectos sólo se han aplicado una vez en cada imagen.
-
-Invierte los valores de color de una imagen en color o los valores de brillo de una imagen en escala de grises Suavizar Aumentar nitidez
-
-Suaviza el contraste de una imagen aplicando un filtro de baja frecuencia, efecto conocido también como desenfocar.
-
-Aumenta la nitidez de una imagen aplicando un filtro de alta frecuencia, efecto conocido también como enfocar.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Eliminar interferencias Solarización
-
-Borra pixels individuales de una imagen, efecto conocido también como quitar ruido
-
-Efecto que imita lo que puede suceder si durante el revelado de una fotografía la luz es excesiva. Mediante un cuadro de diálogo define el grado porcentual de brillo por encima del cuál se deben solarizar los pixels. Selecciona Invertir para especificar si los pixels que se deben solarizar también han de invertirse
-
-Envejecer Póster
-
-Todos los pixels se establecen en sus valores grises, entonces los canales de color verde y azul se reducen en la cantidad especificada. El canal de color rojo no se cambia. Abre un diálogo para indicar el porcentaje de envejecimiento.
-
-Abre un cuadro de diálogo para determinar el número de colores del póster. Este efecto se basa en la reducción del número de colores. Hace que las fotos tengan aspecto de cuadros. Especifica el número de colores a los que se reducirá la imagen
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Pop-art Dibujo al carboncillo
-
-Convierte una imagen en formato pop-art. Mediante la aplicación de alineación de colores, la imagen adquiere un carácter completamente nuevo. Esta función se puede aplicar a la imagen entera o a partes de ella
-
-Muestra la imagen como si fuese un dibujo al carboncillo. Los contornos de la imagen se dibujan en color negro y los colores originales se suprimen. Esta función se puede aplicar a la imagen entera o a partes de ella Relieve Mosaico
-
-Muestra un cuadro de diálogo para la creación de relieves. Se puede elegir la posición de la fuente de luz imaginaria que determina el tipo de sombra creado y el aspecto de la imagen en relieve Fuente de luz: Especifica la posición de la fuente de luz.
-
-Combina grupos pequeños de pixels en áreas rectangulares del mismo color. Cuanto mayores sean los rectángulos individuales, menor es el detalle de la imagen
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Atributos de imagen - Modo gráfico Podemos cambiar el modo de gráficos utilizando el selector Modo gráfico de la barra de herramientas Imagen de OpenOffice Writer. Con este selector podemos convertir la imagen a escala de grises, blanco y negro o filigrana. Predeterminado Escala de grises
-
-La visualización del objeto gráfico no se modifica. Utiliza este modo para restaurar la imagen.
-
-Imagen en Escala de grises. Puedes utilizar los deslizadores de color para aplicar un color uniforme a la imagen.
-
-Blanco y Negro Filigrana
-
-Los valores de brillo inferiores al 50% se mostrarán en negro y los superiores al 50%, en blanco.
-
-Más conocida como Marca de agua. Se aumenta el brillo y se reduce el contraste del objeto gráfico, a fin de poder usarlo en el fondo.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Atributos de imagen - Control de color
-
-El botón Color de la barra de herramientas Imagen de OpenOffice Writer permite cambiar los atributos de color, brillo, contraste y gamma de una imagen. Haciendo clic sobre él, se desplegará un cuadro como el que vemos a la derecha de estas líneas. • Podemos definir la proporción del componente de cada uno de los colores para el modelo RGB (Rojo, verde y azul), con valores desde -100% (ausencia) hasta el 100% (saturado).
-
-• El nivel de Brillo puede ser variado desde -100% (sólo negro) hasta el 100% (sólo blanco) • El nivel de Contraste puede variar desde -100% (sin contraste) hasta el 100% (contraste total) • El control de Gamma establece el valor para ver el objeto seleccionado, el cual afecta los valores del brillo del medio tono. Son posibles valores desde 0.10 (Gamma mínima) hasta 10 (Gamma máxima).
-
-•
-
-Original Rojo al 50%
-
-Los cambios se verán aplicados sobre esta Imagen de referencia. Se han aplicado una vez en cada imagen.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Verde al 50% Azul al 50%
-
-Brillo al 20%
-
-Contraste al 20%
-
-Brillo al -20%
-
-Contraste al -20%
-
-Gamma al 1,20 Gamma al 0,80
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Atributos de imagen - Control de transparencia Desde la barra de herramientas Imagen de OpenOffice Writer contamos con el botón Transparencia desde el que puedes aplicar un porcentaje de transparencia a la imagen. Son posibles valores desde 0% (completamente opaco) hasta +100% (completamente transparente).
-
-En el siguiente ejemplo podrás ver el efecto aplicando 0%, 20%, 40% y 60% de porcentaje de transparencia a la misma imagen, con un rectángulo rojo al fondo.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Atributos de imagen - Otros controles En la barra de herramientas Imagen de OpenOffice Writer disponemos de botones que permiten reflejar la imagen tanto horizontalmente como verticalmente , y también editar las propiedades del marco en caso de tenerlo.
-
-Imagen original Reflejar Horizontalmente
-
-Reflejar Verticalmente
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Eliminar una imagen En OpenOffice Writer, puedes eliminar una imagen seleccionándola y presionando a continuación: la tecla o la tecla retroceso
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-El editor de contornos en OpenOffice Writer El editor de contornos de OpenOffice Writer permite modificar el contorno utilizado para determinar las opciones de ajuste de texto de la imagen seleccionada (ver [Ajuste de contorno de texto]). Cuando aplicamos la opción Ajuste a una imagen y posteriormente activamos la propiedad Contorno, podemos personalizar el contorno de ésta desde el menú contextual de la imagen, seleccionando la opción Ajuste > Editar contorno.... Writer presenta una ventana como la siguiente
-
-Inicialmente se presenta la imagen con los contornos que automáticamente ha detectado el editor. El contorno lo forman las líneas finas que ves en la imagen, y queda delimitado por los manejadores de color verde. Estos contornos pueden ser modificados para adaptar el ajuste del texto a nuestras necesidades.
-
-Veamos como podemos conseguir esto. Para este ejemplo consideremos que deseamos ajustar el texto alrededor de la imagen, ajustada a su contorno, pero también por su interior, en las zonas en blanco. Guardaremos una distancia prudencial de las líneas negras. Observa la barra de herramientas del editor de contornos. Vamos a ver como utilizarla.
-
-Borrar el contorno actual Para ello pulsaremos la tecla suprimir con el contorno seleccionado. Si no lo estuviera, podemos seleccionarlo utilizando el botón con Selección
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Definir el Área de trabajo: para ello utilizaremos el botón , dibujando una zona rectangular que defina el área donde vamos a dibujar el contorno. La zona excluida de la imagen quedará marcada en rojo. Presta atención al botón Área de trabajo . Éste permite crear una nueva área de trabajo borrando el contorno que estés creando. Así que cuidado con él.
-
-En esta imagen se ha dejado más zona roja de la que debemos. Ajusta el Área de trabajo al máximo a la imagen, pues las zonas rojas no se visualizarán después.
-
-Definir las áreas internas que contendrán texto: Para conseguir esto dibujaremos siempre de dentro hacia fuera, definiendo las zonas internas primero y luego las zonas externas.
-
-Puedes utilizar la herramienta polígono , elipse o rectángulo
-
-Empecemos por la zona interior de la cabeza.
-
-Para dibujar un polígono, haz clic en el punto de inicio y arrastra dibujando una línea, que finalizas con un clic. Ahora, sigue marcando puntos del polígono haciendo nuevos clics. Para finalizar el polígono, haz un doble clic en el último punto.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Dibujamos otra zona interna: el interior del cuerpo. Puedes utilizar la herramienta polígono . Si quieres afinar el diseño puedes editar las áreas creadas activando la herramienta modificar puntos . Ahora puedes mover , agregar o quitar puntos.
-
-Para dibujar un cuadrado o un círculo, mantén pulsada la tecla mayúsculas al arrastrar. Cuando dibujes polígonos, puedes forzar ángulos múltiplos de 45º manteniendo pulsada la tecla mayúsculas al hacer clic. Dibujamos la última zona, la más externa. Por motivos didácticos no me he ajustado mucho a las líneas del dibujo, pero por supuesto que tu puedes afinar mucho más en la composición de tu diseño.
-
-Finalmente, haremos clic en el botón cerrar de la ventana del editor de contornos. Responde Si para guardar tu nuevo diseño.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Y éste es el resultado.
-
-Ten cuidado, pues puedes eliminar el diseño del contorno con cualquier cambio en las propiedades de ajuste de texto.
-
-Otras herramientas disponibles en el editor de contornos son: Contorno automático
-
-crea automáticamente un contorno nuevo. Pipeta
-
-selecciona un color para la creación del nuevo contorno. Tolerancia de color permite aumentar el área de colores que la pipeta selecciona. Aplicar el contorno
-
-a la imagen sin salir del editor de contornos. Utilizalo para hacer una vista previa. Deshacer / Restaurar
-
-deshace o restaura las últimas acciones ejecutadas.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-La Galería en OpenOffice Writer La Galería es una colección de imágenes y sonidos que el usuario puede insertar en sus documentos de OpenOffice, tanto en Writer como en las otras aplicaciones de la suite. Pero realmente la Galería es algo más. Es un completo contenedor-organizador de recursos multimedia para insertar en tus documentos.
-
-Mostrar la Galería Puedes activar la galería: • Desde el botón de la Barra de Herramientas Estándar • Seleccionando el menú Herramientas > Galería Tras activar alguna de estas dos opciones la ventana de Writer se muestra dividida en dos zonas. En la parte superior podrás ver la ventana de la galería, con un aspecto similar al que aquí te presento
-
-La ventana galería aparece a su vez dividida en dos zonas. La de la izquierda contiene el selector de temas. A la derecha, podemos visualizar las miniaturas de las imagenes contenidas en el tema seleccionado.
-
-Puedes cambiar el espacio dedicado a cada zona situando el cursor del ratón sobre la barra que divide a ambas. Verás que el cursor cambia de forma, tal y como muestra la imagen a la derecha. Haz clic y arrastra hasta configurar la división según tus necesidades. Desde la versión 4.0 tampien podemos acceder a la Galería desde el panel lateral, haciendo clic sobre la ficha Galería
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Previsualizar una imagen o archivo multimedia Puedes previsualizar una imagen haciendo doble clic sobre ella. Si es un elemento multimedia, se mostrará una ventana y se reproducirá el elemento, siempre que tu equipo disponga de los codecs adecuados para la reproducción.
-
-Al previsualizar un elemento multimedia se queda abierto el reproductor de medios. Para cerrarlo, haz clic sobre la opción Herramientas > Reproductor de medios. Si ocultaste el reproductor, es posible que no puedas previsualizar otros elementos ya que quedó oculto pero activado. Ciérralo haciendo clic sobre la opción Herramientas > Reproductor de medios y ya podrás previsualizar nuevos elementos.
-
-Insertar una imagen o archivo multimedia en el documento Si deseas insertar una imagen o elemento multimedia al texto desde la galería, sitúa previamente el punto de inserción en el lugar del texto donde quieres insertarlo. Después activa el menú contextual de la miniatura haciendo clic secundario sobre ella y selecciona Añadir > Copia o Añadir > Vínculo.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-También puedes hacer clic y arrastrar sobre la miniatura hasta la posición que deseas ocupe en el texto. Si se trata de una imagen puedes insertarla también como un fondo de página o de párrafo. En este caso, desde le menú contextual de la miniatura selecciona Añadir > Fondo > Párrafo o Añadir > Fondo > Página.
-
-Modificar título - Eliminar elemento Desde el menú contextual del archivo podrás también agregar o modificar su Título, así como Eliminar el elemento del tema al que pertenece. Eliminar un elemento, o modificar su título, sólo afecta a la galería. El archivo original permanecerá sin modificaciones en su lugar original.
-
-Opciones de vista de la Galería Los botones que se presentan en la zona superior de la ventana galería sirven para gestionar el contenido de la misma, y el modo en que se presentan los archivos en la zona derecha. • El botón muestra los archivos como vistas en miniatura.
-
-• El botón muestra los archivos en modo lista, con una miniatura más pequeña a su izquierda. Crear nuevos temas (clip-art) Si deseas crear tu propio tema (clip-art) puedes utilizar el botón Nuevo tema.... Writer presentará el diálogo Propiedades de Nuevo tema
-
-Desde la pestaña General podrás definir el Nombre que deseas aplicar al nuevo tema. Puedes observar en Ubicación donde van a almacenarse los archivos que agregues a este tema de la Galería. Agregar nuevas imágenes o archivos multimedia a un tema • Si creaste un nuevo tema, tras definir el Nombre, haz clic sobre la pestaña Archivos.
-
-• Si el tema fué creado previamente, haz clic secundario sobre el mismo, y selecciona la opción Propiedades. Haz clic sobre la pestaña Archivos.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Desde esta pestaña podremos hacer clic en el botón Buscar archivos... que presentará un diálogo desde el que podremos seleccionar la carpeta en la que se encuentran los nuevos archivos a agregar. Los archivos encontrados se mostrarán en la lista de la izquierda.
-
-Desde el desplegable Tipo de archivo podemos filtrar los archivos presentados en la lista por su extensión (tipo). Puedes seleccionar un archivo, y activando la casilla Previsualización obtener una vista preliminar en el espacio que hay justo debajo. Puedes hacer clic sobre el botón Añadir todos para cargar los archivos en la galería, o clic en Añadir para cargar sólo los seleccionados. Para seleccionar los archivos puedes utilizar las teclas Mayúsc para seleccionar varios archivos contiguos, o la tecla Ctrl para seleccionar varios archivos no contiguos.
-
-Finalizada la importación de archivos podremos hacer clic sobre el botón Aceptar .
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Si creaste un nuevo tema se agregará a la galería y mostrará los nuevos elementos; si agregaste nuevos elementos a un tema existente, se mostrará actualizado. Agregar tus propias creaciones a un tema en la Galería Si has creado tus propios diseños desde Draw, puedes incorporarlos fácilmente a un tema de la Galería.
-
-Es recomendable que previamente agrupes los distintos elementos que forman la imagen. Agregarla a un tema es tan sencillo como seleccionar la imagen con un clic largo y arrastrarla dentro del tema. Transcurridos unos segundos, se habrá incorporado al tema. Recuerda que los temas creados en el momento de la instalación no pueden ser modificados, pero todos los demás, sí.
-
-Crear temas personalizados con elementos de otros temas Crear tus temas personalizados utilizando elementos de otros temas no es difícil. Tan sólo necesitas crear tu nuevo tema, y arrastrar uno a uno los elementos desde el tema origen al tema destino. En la versión 4.0 es muy fácil. Abre la Galería desde el botón de la barra de herramientas, y activa la Galería en el panel. Selecciona el tema origen en una de ellas, y el tema destino en la otra. Ahora ya puedes arrastrar los elementos de una a la otra.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-En versiones anteriores no es más complicado. Debes abrir dos documentos (en blanco también sirve), mostrar ambos en tu pantalla utilizando las utilidades de tu sistema operativo 1, y activar en ambos la Galería. Selecciona el tema origen en una de ellas, y el tema destino en la otra. Ahora ya puedes arrastrar los elementos de una a la otra.
-
-Recuerda que los temas creados en el momento de la instalación no pueden ser modificados, pero todos los demás, sí. Cerrar la Galería Para cerrar la Galería, vuelve a hacer clic sobre el icono . Si estás utilizando el panel lateral, no es necesario que cierres la Galería, pero puedes hacer clic sobre otra ficha para que no se muestre (por ejemplo, sobre la ficha Propiedades).
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Tipos de archivos multimedia soportados Estos son los formatos de archivo multimedia soportados por la Galería de OpenOffice. Puedes insertar todos estos tipos de archivo en tus documentos Writer, Calc, Draw e Impress. Tipo Descripción Extensión Imagen Windows bitmap bmp AutoCad interchange format dxf Enhanced metafile emf Encapsulated postscript eps Graphics interchange format gif Joint photographic experts group jpeg OS/2 metafile met Portable bitmap pbm Kodak photo CD 768x512 pcd Mac pict pict Zsoft paintbrush pcx Portable graymap pgm Portable network graphic png Portable pixelmap ppm Adobe photoshop psd Sun raster image ras StarWriter graphics format sgf StarDraw 2.0 sqv StarView metafile svm Truevision targa tga Tagged image file format tif, tiff Windows metafile wmf X bitmap xbm X pixMap xpm
-
-Tipo Descripción Extensión
-
-Audio Audio AIF aif, aiff
-
-Audio AU au
-
-```bash
-CD Audio
-```
-
-cda
-
-MIDI Audio mid, midi
-
-MPEG Audio mp2, mp3, mpa,
-
-Ogg bitstream ogg
-
-Wave Audio wav
-
-Video AVI avi
-
-MPEG Video mpg, mpeg, mpv, mp4
-
-Quicktime Video mov
-
-Vivo video viv
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Insertar vídeos y sonidos
-
-Desde la Galería podrás insertar vídeos y sonidos 1 previamente cargados en ella. Además, Writer permite insertar vídeos y sonidos en nuestros documentos desde el menú Insertar > Vídeo y sonido. También puedes hacerlo desde el menú Insertar > Objeto > Vídeo o Insertar > Objeto > Sonido, si bien es posible que estas opciones las tengas permanentemente desactivadas.
-
-Una tercera forma es desde la barra de herramientas Reproducción de medios, haciendo clic en el botón Vídeo y sonido . En los tres últimos casos presentará un cuadro de diálogo desde donde podrás seleccionar el archivo a insertar. Haciendo clic en tipo podrás ver los tipos de archivo soportados.
-
-El archivo se insertará en la posición que ocupe el punto de inserción dentro del documento. Una vez insertado, si es un sonido, se representa por una imagen como la que ves sobre estas líneas. Si es un vídeo, se mostrará el primer cuadro del archivo. En éste caso, si sólo es soportado el códec de audio, se mostrará la misma imagen que para un archivo de audio.
-
-Para seleccionar el archivo podrás utilizar la combinación Ctrl + Clic. Para deseleccionar el archivo podrás hacer clic en cualquier zona del texto. Otra forma de seleccionar el archivo es con el botón Seleccionar de la barra de herramientas Dibujo. Tendrás que trazar un rectángulo que abarque la imagen del archivo para seleccionarlo. Para deseleccionar, haz clic de nuevo sobre el botón y un clic sobre cualquier zona del texto.
-
-Cuando el archivo está seleccionado se muestra la barra de herramientas Reproducción de medios.
-
-Tema 03. Gráficos. Autoformas. WordArt.
-
-Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
-
-Los botones que presenta esta barra tienen la siguientes funciones: Botón Acción Botón Acción
-
-Insertar archivo de vídeo o sonido en el documento
-
-Control deslizante de la posición actual de la reproducción
-
-Iniciar reproducción
-
-Contador tiempo actual / tiempo total de la reproducción
-
-Pausar reproducción
-
-Silenciar
-
-Detener reproducción
-
-Control deslizante de volumen
-
-Repetir reproducción (bucle)
-
-Si es un vídeo, selector del nivel de zoom
-
-Si el archivo está seleccionado puedes activar su menú contextual, desde el cual podrás definir: Seleccionando Posición y tamaño... el anclaje, posición y tamaño de la imagen que representa el archivo. Desde la opción Descripción...: • Título: nombre corto visible como una etiqueta alternativa en formato HTML. Las herramientas de accesibilidad pueden leer este texto.
-
-• Descripción: La descripción extendida se puede introducir para describir objetos o grupos de objetos para usuarios con un software de lectura de pantallas (screen readers). La descripción es visible como una etiqueta alternativa por sus herramientas de accesibilidad.
-
-Desde la opción Nombre... un nombre visible desde el navegador de Writer. Para reproducir el archivo multimedia deberás seleccionarlo previamente y utilizar la barra de herramientas Reproducción de medios.
-
----
-
-# 1.6 Exemple Numeració i Vinyetes
-
-VIÑETAS
-
-NUMERACION
-
-ESQUEMA NUMERADO
-
-### 1. ZZZZZZZZZZZZ
-
-1.1.- ZZZZZZZZZZZZ 1.1.1.- ZZZZZZZZZZZZ 1.1.2.- ZZZZZZZZZZZZ 1.1.3.- ZZZZZZZZZZZZ 1.1.4.- ZZZZZZZZZZZZ 1.1.4.a. ZZZZZZZZZZZZ 1.1.4.b. ZZZZZZZZZZZZ 1.2.- ZZZZZZZZZZZZ 1.3.- ZZZZZZZZZZZZ 1.3.1.- ZZZZZZZZZZZZ 1.3.2.- ZZZZZZZZZZZZ 1.3.3.- ZZZZZZZZZZZZ 1.3.4.- ZZZZZZZZZZZZ 1.3.4.a. ZZZZZZZZZZZZ 1.3.4.b.
-
-ZZZZZZZZZZZZ 1.4.- ZZZZZZZZZZZZ 1.5.- ZZZZZZZZZZZZ 1.5.1.- ZZZZZZZZZZZZ 1.5.2.- ZZZZZZZZZZZZ 1.5.2.a. ZZZZZZZZZZZZ 1.5.2.b. ZZZZZZZZZZZZ
-
-### 2. ZZZZZZZZZZZZ
-
-2.1.- ZZZZZZZZZZZZ 2.2.- ZZZZZZZZZZZZ 2.2.1.- ZZZZZZZZZZZZ 2.2.2.- ZZZZZZZZZZZZ 2.2.3.- ZZZZZZZZZZZZ 2.2.3.a. ZZZZZZZZZZZZ 2.2.3.b. ZZZZZZZZZZZZ 2.3.- ZZZZZZZZZZZZ
-
-### 3. ZZZZZZZZZZZZ
-
-### 4. ZZZZZZZZZZZZ
-
-4.1.- ZZZZZZZZZZZZ 4.2.- ZZZZZZZZZZZZ 4.3.- ZZZZZZZZZZZZ
-
-### 5. ZZZZZZZZZZZZ
-
-5.1.- ZZZZZZZZZZZZ 5.2.- ZZZZZZZZZZZZ 5.2.1.- ZZZZZZZZZZZZ 5.2.1.a. ZZZZZZZZZZZZ
-
----
-
-# 1.7 curiosidades en Writer
-
-### 📄 10_writer_crearuncolorenlibreoffice.pdf
-
-Crear un nuevo color en LibreOffice 7 de noviembre de 2020 AUTOR: LUIS ALEJANDRO BERNAL ROMERO Esta guía te explica como crear un nuevo color en LibreOffice para que lo puedas aplicar a las fuentes, fondos, bordes, etc. LibreOffice tiene un conjunto de colores predeterminado y si quieres, por ejemplo, poner una fuente con un color que no esté en ese conjunto, pues aparentemente no se puede. La solución está en agregar un nuevo color a ese conjunto y, ahora si, aplicarlo a lo que quieras.
-
-Palabras clave: color, nuevo, color, color de fuente, nuevo color de fuente, color de fondo, nuevo color de fondo, color de borde, nuevo color de borde, LibreOffice, OpenOffice Esta obra está licenciada bajo la Licencia Creative Commons Atribución-CompartirIgual 3.0 Unported.
-
-Para ver una copia de esta licencia, visita http://creativecommons.org/licenses/by-sa/3.0/.
-
-Convenciones Las convenciones usadas en este documento son: Convención Significado Botón Se refiere a un botón de la interfaz gráfica. Nombre de campo Es el nombre de un campo en un formulario web o ventana de dialogo. Valor campo El valor que se debe poner en un campo de un formulario web o ventana de dialogo.
-
-Código Código como comandos o salida de comandos de consola. Tecla Tecla o combinación de teclas. Opción lista desplegable Una opción de una lista desplegable de la interfaz gráfica. Opción menú Una opción de un menú. Título ventana Titulo de una ventana. Pestaña Una pestaña de una interfaz gráfica Nombre icono El nombre del icono, normalmente aparece cuando se pone el cursor en sima.
-
-Enlace de internet Un enlace a una dirección en Internet. Nombre archivo El nombre de un archivo. Crear un nuevo color en LibreOffice
-
-Creando El Nuevo Color Si quieres tener un nuevo color para aplicarlo a las fuentes, los fondos, los bordes etc. debes añadir uno nuevo. Para ello los siguientes pasos: Clic en la opción Herramientas del menú. Clic en Opciones. Crear un nuevo color en LibreOffice
-
-Debe salir algo como lo siguiente: Crear un nuevo color en LibreOffice
-
-Clic en el triángulo que está al lado de la opción LibreOffice. Ahora clic en la opción Colores. Crear un nuevo color en LibreOffice
-
-En el campo Nombre escribe el nombre del nuevo color, por ejemplo Azul Aztlek. En los campos R (rojo), G (verde), B (azul) escribe valores de 0 a 255, por ejemplo: R 24, G 52, B 135. Crear un nuevo color en LibreOffice
-
-Clic en el botón Agregar. Crear un nuevo color en LibreOffice
-
-Y finalmente clic en el botón Aceptar. Ahora puedes aplicar el nuevo color a todo lo que quieras. Crear un nuevo color en LibreOffice
-
-### 📄 03_como-eliminar-automaticamente-todas-las-lineas-en-blanco-o-parrafos-vacios-en-writer.pdf
-
-Curiosidad 03. Como eliminar automáticamente todas las lineas en blanco ó párrafos vacios.
-
-Cómo eliminar automáticamente todas las líneas en blanco o párrafos vacíos en Writer
-
-Curiosidad 03. Como eliminar automáticamente todas las lineas en blanco ó párrafos vacios.
+Cómo combinar correspondencia en Writer de LibreOffice
 
 Índice
 
-#### 1) Eliminamos los párrafos vacíos o líneas en blanco
+- Abrimos Writer y redactamos la carta que enviaremos a nuestros destinatarios.
 
-- Establecemos la misma distancia entre párrafos.
+#### 2) Seleccionamos la base de datos de nuestros destinatarios
 
-Curiosidad 03. Como eliminar automáticamente todas las lineas en blanco ó párrafos vacios.
+#### 3) Insertaremos los campos de nuestra tabla de datos (Calc) en nuestra carta
 
-Queremos que en nuestro documento los párrafos guarden la misma distancia. Observamos que en algunos casos la distancia entre párrafos es excesiva.
+#### 4) Combinamos todo y lo guardamos en un archivo (después podremos imprimirlo)
 
-> **⚠️ Nota: para apreciar los formatos ocultos haremos clic s...**
-> Nota: para apreciar los formatos ocultos haremos clic sobre el botón “caracteres no imprimibles” de la barra de herramientas “Estándar”
+Tema 07. Combinar Correspondencia.
 
-> este símbolo representa una marca de párrafo, aparece cada vez que presionamos la tecla “Intro”.
+Cómo combinar correspondencia en Writer de LibreOffice
 
-Vamos a eliminar todos estos espacios y después ajustaremos la distancia entre párrafos a 0,4 cm para que nuestro documento tenga un aspecto homogéneo.
+A continuación vamos a combinar correspondencia en Writer en 4 sencillos pasos
 
-Lo haremos en 2 sencillos pasos
+### 1. Abrimos Writer y redactamos la carta que
 
-- Eliminamos los párrafos vacíos o líneas en blanco.
+enviaremos a nuestros destinatarios.
 
-Primero clic sobre el menú “Editar->Buscar y reemplazar…”
+Debemos dejar espacio para los campos de la base de datos.
 
-Curiosidad 03. Como eliminar automáticamente todas las lineas en blanco ó párrafos vacios.
+### 2. Seleccionamos la base de datos de
 
-A continuación, clic sobre el apartado “Buscar” e insertamos esta expresión ^$
+nuestros destinatarios. Clic sobre el menú Insertar → Campos → Otros
 
-Para obtener el símbolo del acento circunflejo ^ mantenemos presionada la tecla mayúsculas y después presionamos dos veces seguidas la tecla destacada
+Tema 07. Combinar Correspondencia.
 
-Seguidamente haremos un clic sobre el botón “+” de “Otras opciones”.
+A continuación seleccionamos la ficha “Base de datos” y después un clic sobre el botón “Examinar”.
 
-Después clic sobre la casilla de “Expresiones regulares”
+En el siguiente cuadro contextual seleccionamos el archivo de Calc donde tenemos la información de los destinatarios y después clic sobre el botón “Abrir”.
 
-Finalmente haremos clic sobre el botón “Reemplazar todo”.
+Seguidamente haremos un clic sobre los símbolos “+” destacados.
 
-Curiosidad 03. Como eliminar automáticamente todas las lineas en blanco ó párrafos vacios.
+Tema 07. Combinar Correspondencia.
 
-Nos emergerá un cuadro contextual indicando el número de líneas en blanco eliminadas, clic sobre el botón “Aceptar”.
+### 3. Insertaremos los campos de nuestra tabla
 
-Observamos que hemos eliminado todas las líneas en blanco o párrafos vacíos.
+de datos (Calc) en nuestra carta. Primero seleccionamos la ubicación del campo en la carta, en este ejemplo seleccionamos donde irá el “Nombre” del alumno.
 
-A continuación vamos a darle una distancia entre párrafos de 0,4 cm.
+Y después insertamos el campo de la hoja Calc, mediante doble clic izquierdo sobre el apartado correspondiente.
 
-Curiosidad 03. Como eliminar automáticamente todas las lineas en blanco ó párrafos vacios.
+Repetimos la anterior operación para todos los campos…
 
-2º) Establecemos la misma distancia entre párrafos. Primero seleccionamos todo el texto, clic sobre el menú “Editar->Seleccionar todo”
+Una vez que tengamos todos los campos insertados.
 
-Después clic derecho sobre el texto y en el cuadro contextual que emerge seleccionamos el apartado de “Párrafo”.
+Tema 07. Combinar Correspondencia.
 
-Para finalizar, seleccionamos la ficha “Sangría y espaciado”. Después establecemos 0,4 cm de distancia entre párrafos (sobre y bajo), interlineado sencillo y clic sobre el botón “Aceptar”.
+Cerraremos el cuadro contextual mediante un clic izquierdo sobre el aspa destacada.
 
-Curiosidad 03. Como eliminar automáticamente todas las lineas en blanco ó párrafos vacios.
+### 4. Combinamos todo y lo guardamos en un
 
-En la siguiente imagen observamos que el documento tiene un aspecto homogéneo.
+archivo (después podremos imprimirlo)
 
-### 📄 02_como-crear-una-marca-de-agua-en-writer.pdf
+Clic en Archivo → Imprimir.
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+En el siguiente cuadro contextual haremos un clic sobre el botón “Sí”
 
-Cómo crear una marca de agua en Writer de LibreOffice
+Tema 07. Combinar Correspondencia.
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+En el siguiente cuadro contextual seleccionaremos la opción de “Archivo”, después lo guardaremos todo en un documento “Guardar como un documento” y para finalizar clic sobre el botón “Aceptar”.
 
-Índice
+Después le damos un nombre al archivo y clic sobre el botón “Guardar”.
 
-1º) Abrimos un archivo 2º) Activamos la barra de herramientas de dibujo 3º) Insertamos texto del tipo “Fontwork” y modificamos su formato 4º) Insertamos el texto del tipo “Fontwork” dentro del encabezado del documento
+---
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+# 2.2 Exemple Combinar correspondència
 
-1º) Abrimos un archivo
+### 📄 Carta_Notes_1.odt
 
-Clic sobre el menú “Archivo->Abrir”.
+CERTIFICAT DE NOTES
 
-A continuación clic sobre el archivo y después sobre el botón “Abrir”
+A l’atenció de <Nombre padre/madre>,
 
-Como queremos visualizar varias páginas simultáneamente haremos clic sobre el botón correspondiente de la barra de la esquina inferior derecha.
+pare de l’alumne <ALUMNO>
 
-Además reduciremos el zoom (al 56 %), arrastraremos el círculo hasta la posición indicada.
+<Dirección>
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+<CP>- <Poblacion>
 
-2º) Activamos la barra de herramientas de dibujo
+L’alumne <ALUMNO>, té les següents notes
 
-3º) Insertamos texto del tipo “Fontwork” y modificamos su formato
+APLICACIONS OFIMÀTIQUES:<Aplicaciones Ofimácas>
 
-Haremos un clic sobre el botón “Fontwork” en la barra de herramientas de “Dibujo”, situado en la zona inferior de la ventana principal.
+REDES<Redes>
 
-En el siguiente cuadro contextual, un clic sobre el estilo de “Fontwork” y después otro clic sobre el botón “Aceptar”.
+TALLER<Taller>
 
-Para cambiar el texto del estilo “Fontwork” haremos doble clic izquierdo sobre el mismo. Observaremos que aparece en el centro un texto de color negro. Debemos seleccionarlo y escribir por encima el que nosotros queremos.
+SOM<SOM>
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+FOL<FOL>
 
-En este ejemplo escribimos el texto “Borrador” y después haremos un clic izquierdo fuera.
+### 📄 Carta_Notes.odt
 
-A continuación modificaremos su formato para que parezca una marca de agua. Seguiremos estos pasos
+CERTIFICAT DE NOTES
 
-- Eliminamos la línea del contorno
+A l’atenció de NOM PARE/MARE,
 
-Ponemos el puntero encima del texto “Fontwork” y cuando adopte la forma de cuatro flechas haremos un clic derecho.
+pare de l’alumne NOM ALUMNE
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+DIRECCIÓ
 
-Después un clic izquierdo sobre el apartado de “Línea”
+CP- POBLACIÓ
 
-En el siguiente cuadro contextual, en la ficha “Línea”, desplegamos en “Estilo” y seleccionamos “ninguno”, para finalizar un clic sobre el botón “Aceptar”.
+L’alumne NOM ALUMNE, té les següents notes
 
-- Modificamos su color de relleno y le damos transparencia.
+APLICACIONS OFIMÀTIQUES:NOTA_OFI
 
-Haremos un clic derecho sobre el texto “Fontwork” y después un clic izquierdo sobre la opción “Área” del desplegable.
+REDESNOTA_REDES
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+TALLERNOTA_TALLER
 
-En el siguiente cuadro contextual, nos encontramos en la ficha “Área” y seleccionamos el color, en este caso un clic sobre “Gris 4”.
+SOMNOTA_SOM
 
-A continuación, clic sobre la ficha “Transparencia”, después seleccionamos el círculo de “Transparencia” y finalmente le damos un 57%.
+FOLNOTA_FOL
 
-Salimos del cuadro contextual con un clic sobre el botón “Aceptar” en la parte inferior.
+### 📄 Carta_Notes.pdf
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+CERTIFICAT DE NOTES
 
-- Expandimos su tamaño con los controladores de tamaño.
+A l’atenció de NOM PARE/MARE, pare de l’alumne NOM ALUMNE
 
-Pondremos el puntero sobre uno de los controladores de tamaño, cuando el puntero adopte la forma de doble flecha, clic izquierdo, mantenemos presionado y arrastramos. Finalmente soltamos el clic izquierdo.
+DIRECCIÓ CP- POBLACIÓ
 
-Este podría ser el formato final.
+L’alumne NOM ALUMNE, té les següents notes
 
-Curiosidad 02. Como crear una marca de agua en Writer.
+APLICACIONS OFIMÀTIQUES: NOTA_OFI
 
-4º) Insertamos el texto del tipo “Fontwork” dentro del encabezado del documento.
+REDES
 
-Lo primero que haremos es copiar el texto del tipo “Fontwork”, nos aseguramos que está seleccionado (tiene los controladores de tamaño activados) y presionaremos las teclas “Control+ C”.
+NOTA_REDES
 
-Después lo borramos, presionamos la tecla “Supr”.
+TALLER
 
-A continuación, un clic izquierdo sobre la zona libre del encabezado del documento y después un clic sobre el botón “+” situado a la derecha de “Encabezamiento (Estilo predeterminado)”.
+NOTA_TALLER
 
-Después lo pegamos, presionaremos las teclas “Control+ V”, aparecerá en todas las páginas. Ahora podremos moverlo con los cursores del teclado para ajustar su posición. Un clic izquierdo sobre una parte en blanco del documento y listo.
+SOM
 
-### 📄 01_como-crear-una-imagen-transparente-en-writer.pdf
+NOTA_SOM
 
-Curiosidad 01. Crear una imagen transparente en Writer
+FOL
 
-Cómo crear una imagen transparente en Writer de LibreOffice
+NOTA_FOL
 
-Curiosidad 01. Crear una imagen transparente en Writer
+### 📄 Carta_Notes_Combinada.pdf
 
-Índice
+CERTIFICAT DE NOTES A l’atenció de Maria, pare de l’alumne CASTILLO SÁEZ, JUAN RAMÓN c/alicante n 10
 
-1º) Insertamos una imagen de fondo 2º) Insertamos otra imagen y le damos transparencia Imagen con el fondo recortado
+#### 46789- POBLACION 1
 
-Curiosidad 01. Crear una imagen transparente en Writer
+L’alumne CASTILLO SÁEZ, JUAN RAMÓN, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-1º) Insertamos una imagen de fondo
+CERTIFICAT DE NOTES A l’atenció de Luis, pare de l’alumne LÓPEZ VERA, JOSE c/madrid n23 3 piso
 
-Primero insertaremos una imagen que ocupe toda la página. Seguiremos estos pasos
+#### 46789- POBLACION 2
 
-- Clic sobre el menú "Insertar-> Imagen -> A partir de archivo..."
+L’alumne LÓPEZ VERA, JOSE, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Seleccionamos la imagen y luego otro clic sobre el botón "Abrir".
+CERTIFICAT DE NOTES A l’atenció de Alejando, pare de l’alumne DOMEC SÁNCHEZ, JAIME c/la vall n 41
 
-Queremos que la imagen ocupe todo la página, tenemos varias opciones: -Insertar un marco y poner la imagen como relleno (se distorsionaría la imagen). -Recortar la imagen, adaptándola a la proporción de ancho y alto de la página (el ancho de la imagen debe ser un 70,8 % del alto).
+#### 46552- POBLACION 3
 
-Curiosidad 01. Crear una imagen transparente en Writer
+L’alumne DOMEC SÁNCHEZ, JAIME, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Vamos a recortar la imagen. Seguiremos estos pasos
+CERTIFICAT DE NOTES A l’atenció de Antonio, pare de l’alumne FERNÁNDEZ RUIZ, PEDRO c/valencia n21
 
-- Pondremos el puntero sobre la imagen y clic derecho.
+#### 46521- POBLACION 4
 
-- Después clic izquierdo sobre “Imagen…”.
+L’alumne FERNÁNDEZ RUIZ, PEDRO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Curiosidad 01. Crear una imagen transparente en Writer
+CERTIFICAT DE NOTES A l’atenció de Ramon, pare de l’alumne GÓMEZ BLAZQUEZ, ANTONIO parque salvador s 56
 
-- Ahora vamos a recortar la imagen, clic sobre la ficha “Recortar”.
+#### 46852- POBLACION 5
 
-- Marcamos la opción de “Mantener la escala”, después vamos recortando por la derecha hasta
+L’alumne GÓMEZ BLAZQUEZ, ANTONIO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-que el ancho de la imagen sea el 70,8% del alto. Para finalizar clic sobre “Aceptar”
+CERTIFICAT DE NOTES A l’atenció de Patricia, pare de l’alumne JIMÉNEZ MENDEZ, EVA c/alicante n 10
 
-Curiosidad 01. Crear una imagen transparente en Writer
+#### 46855- POBLACION 6
 
-- Movemos la imagen hacia una esquina. Ponemos el puntero sobre la imagen, cuando adopte la
+L’alumne JIMÉNEZ MENDEZ, EVA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-forma de cuatro flechas, clic izquierdo mantenemos presionado y arrastramos.
+CERTIFICAT DE NOTES A l’atenció de Eva, pare de l’alumne LIS SANZ, BLANCA c/vega n67
 
-- Expandimos la imagen. Pondremos el puntero sobre el controlador de tamaño, cuando adopte
+#### 46856- POBLACION 7
 
-la forma de doble flecha mantendremos presionado y arrastramos en diagonal.
+L’alumne LIS SANZ, BLANCA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Curiosidad 01. Crear una imagen transparente en Writer
+CERTIFICAT DE NOTES A l’atenció de Luis, pare de l’alumne JUÁREZ GIL, PATRICIA c/roble n 44
 
-2º) Insertamos otra imagen y le damos transparencia.
+#### 46740- POBLACION 8
 
-Insertamos otra imagen, igual que hemos visto antes, clic sobre el menú "Insertar-> Imagen -> A partir de archivo”.
+L’alumne JUÁREZ GIL, PATRICIA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Es conveniente utilizar una imagen a la que se le haya eliminado el fondo (o con fondo transparente). Con Writer no podemos recortar el fondo de la imagen.
+CERTIFICAT DE NOTES A l’atenció de Alejandro, pare de l’alumne LAX HERMIDA, CARLOS c/velazquez n77
 
-Podremos conseguir la imagen con el fondo recortado de varias formas
+#### 46899- POBLACION 9
 
-1º) Desde un buscador debemos escribir el nombre de lo que buscamos (si ponemos el término en inglés obtendremos más imágenes) seguido de su formato “png”
+L’alumne LAX HERMIDA, CARLOS, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-2º) Desde una página con fotos libre de derechos de autor y que tengan el fondo recortado: http://pngimg.com/
+CERTIFICAT DE NOTES A l’atenció de Jorge, pare de l’alumne LUCAS SEGURA, JORGE c/goya n 11
 
-3º) Recortando la imagen con algún programa, por ejemplo Gimp (disponemos de tutoriales que explican cómo hacerlo) A continuación activamos la barra de herramientas de las imágenes, clic sobre el menú "Ver->Barras de herramientas ->Imagen"
+#### 46988- POBLACION 10
 
-Curiosidad 01. Crear una imagen transparente en Writer
+L’alumne LUCAS SEGURA, JORGE, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Por último, en la zona inferior de la ventana principal, en el recuadro de transparencia escribiremos "35" y presionaremos la tecla "Intro".
+CERTIFICAT DE NOTES A l’atenció de Carlos, pare de l’alumne LLUC CABALLERO, PABLO c/picaso n88
 
-En la siguiente página vemos el resultado final
+#### 46855- POBLACION 11
 
-### 📄 09_como-crear-y-ejecutar-macros-en-writer.pdf
+L’alumne LLUC CABALLERO, PABLO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+CERTIFICAT DE NOTES A l’atenció de Pedro, pare de l’alumne PARDO SANZ, ANTONIO c/calvario n 21
 
-Cómo crear y ejecutar macros en Writer
+#### 46899- POBLACION 12
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+L’alumne PARDO SANZ, ANTONIO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-Índice
+CERTIFICAT DE NOTES A l’atenció de Maria, pare de l’alumne RODRÍGUEZ SÁEZ, GLORIA c/murillo n 77
 
-¿Qué son las macros en Writer? Cómo grabar macros en Writer Asignamos una combinación de teclas para ejecutar la macro Reglas para el nombre de la macro Acciones que podrían no ser reconocidas por la grabadora de macros Cómo ejecutar macros en Writer
+#### 46001- POBLACION 13
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+L’alumne RODRÍGUEZ SÁEZ, GLORIA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL
 
-A continuación veremos cómo crear una macro en Writer
+### 📄 Carta_Notes_Combinada.odt
 
-¿Qué son las macros en Writer? Las macros podría definirse como una secuencia de órdenes almacenadas en el sistema, de forma que, posteriormente, se puedan reproducir múltiples veces a petición del usuario. El objetivo es no tener que repetir todas esas instrucciones manualmente, sino que, a través de una combinación de teclas o botón asignado se ejecuten todas ellas secuencialmente y de forma automática.
+CERTIFICAT DE NOTES
 
-Cómo grabar macros en Writer
+A l’atenció de Maria,
 
-El método más sencillo para crear una macro en Writer es utilizando la grabadora de macros incluida en dicha aplicación. Nuestro objetivo es que ciertas tareas, cotidianas y repetitivas, podamos grabarlas para posteriormente reproducirlas de forma automática, cuando más nos convenga. A continuación veremos un sencillo ejemplo.
+pare de l’alumne CASTILLO SÁEZ, JUAN RAMÓN
 
-Ejemplo de cómo crear una macro mediante la grabadora
+c/alicante n 10
 
-Supongamos que últimamente estamos abriendo archivos en los que nos estamos encontrando con números que están tabulados y queremos transformarlos en una tabla con un formato de moneda de euro.
+L’alumne CASTILLO SÁEZ, JUAN RAMÓN, té les següents notes
 
-A continuación veremos los pasos a seguir para crear una macro que ejecute todas las órdenes para siempre transformar dichos números en una tabla
+APLICACIONS OFIMÀTIQUES:7
 
-1º) Activamos la grabadora en Writer.
+REDES7
 
-Haremos un clic sobre el menú “Herramientas->Opciones”
+TALLER5
 
-En el siguiente cuadro contextual haremos un clic sobre el apartado “Avanzado” del panel izquierdo y después un clic sobre las casillas de verificación de “Activar las características experimentales” y “Activar grabación de macros (limitada)”. Finalmente, clic sobre el botón “Aceptar”.
+SOM4
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+FOL8
 
-2º) En este ejemplo, abrimos el archivo con los datos (separado mediante tabuladores) que deseamos transformar en una tabla.
+CERTIFICAT DE NOTES
 
-3º) Iniciamos la grabación de la macro, haremos un clic sobre el menú “Herramientas->Macro- >Grabar macro” (al final del menú de “Herramientas”).
+A l’atenció de Luis,
 
-4º) Una vez iniciada la grabación de la macro, únicamente tendremos que repetir los pasos que seguimos para ejecutar una determinada tarea, en este ejemplo, transformamos el texto tabulado en una tabla. Es conveniente realizar las acciones utilizando el teclado (de esta forma evitaremos errores)
+pare de l’alumne LÓPEZ VERA, JOSE
 
-Seleccionamos el texto tabulado, presionamos las teclas “Control” + “E” Después ejecutamos el menú “Tabla->Convertir->Texto en tabla…” (al final del menú de “Tabla”). Para acceder al menú Tabla presionamos las teclas “Alt+T (la letra subrayada)”
+c/madrid n23 3 piso
 
-Después nos desplazaremos con lo cursores hasta el apartado “Convertir” presionaremos la tecla “Intro” y después otra vez la tecla “Intro” en el apartado “Texto en tabla…”
+L’alumne LÓPEZ VERA, JOSE, té les següents notes
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+APLICACIONS OFIMÀTIQUES:7
 
-En el siguiente cuadro contextual, después de configurar las opciones para la separación del texto mediante tabuladores haremos un clic sobre el botón “Autoformato…”. Utilizaremos la tecla “Tabulador” para movernos hasta este botón y, una vez sobre el mismo, presionamos la tecla “Intro”.
+REDES3
 
-A continuación seleccionamos el formato de la tabla, en este caso “Gris” y finalmente, seleccionamos el botón “Aceptar”.
+TALLER9
 
-> **⚠️ Nota: dentro del cuadro contextual nos movemos utilizan...**
-> Nota: dentro del cuadro contextual nos movemos utilizando la tecla “Tabulador” y presionamos la tecla “Intro” para seleccionar un opción en concreto.
+SOM8
 
-Volvemos nuevamente al cuadro contextual de “Convertir texto en tabla” y seleccionamos el botón “Aceptar”.
+FOL7
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+CERTIFICAT DE NOTES
 
-Aquí tenemos el resultado final.
+A l’atenció de Alejando,
 
-5º) Paramos la grabación de la macro, haremos un clic sobre el botón “Finalizar grabación” del cuadro contextual flotante “Grabar macro”.
+pare de l’alumne DOMEC SÁNCHEZ, JAIME
 
-En el siguiente cuadro contextual debemos guardar la macro y tenemos dos opciones: guardarla en mis macros o dentro del archivo en el que estamos trabajando, ejecutaremos la primera opción.
+c/la vall n 41
 
-- La guardamos en el apartado “Mis macros”, dentro de la sección “Standard->Module1” del panel
+L’alumne DOMEC SÁNCHEZ, JAIME, té les següents notes
 
-izquierdo.
+APLICACIONS OFIMÀTIQUES:8
 
-A continuación le damos un nombre a la macro “Macrotabla” (por ejemplo) y clic sobre el botón “Guardar”.
+REDES8
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+TALLER8
 
-Importante: la gran ventaja de guardarla dentro de “Mis macros” es que estará disponible para todos nuestros archivos, ya que se ha guardado dentro de nuestras macros de LibreOffice. Por otra parte, no es recomendable grabar o modificar macros en el contenedor de “Macros de LibreOffice”, ya que podría afectar al correcto funcionamiento de los programas.
+SOM8
 
-Como se puede observar en el anterior cuadro contextual, “Mis macros” contiene una librería llamada “Standard” y esta, a su vez, un módulo llamado “Module1”(esta es la estructura de almacenamiento de las macros)
+FOL6
 
-Asignamos una combinación de teclas para ejecutar la macro.
+CERTIFICAT DE NOTES
 
-Haremos un clic sobre el menú “Herramientas->Personalizar…”
+A l’atenció de Antonio,
 
-A continuación, en la parte superior del cuadro contextual “Personalizar” seleccionaremos la pestaña “Teclado”
+pare de l’alumne FERNÁNDEZ RUIZ, PEDRO
 
-En la parte inferior del anterior cuadro contextual hacemos un clic sobre el apartado “+” de Macros de LibreOffice y después desplegaremos: user, Standard, Module. Finalmente seleccionamos la macro “Macrotabla”.
+c/valencia n21
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+L’alumne FERNÁNDEZ RUIZ, PEDRO, té les següents notes
 
-Volvemos a la parte superior del cuadro contextual y seleccionamos una combinación de teclas que no tenga ninguna función asignada (en este ejemplo “Alt+r”, presionamos la tecla “Modificar”).
+APLICACIONS OFIMÀTIQUES:9
 
-Finalmente, clic sobre el botón “Aceptar” de la parte inferior del anterior cuadro contextual.
+REDES4
 
-Reglas para el nombre de la macro Aunque pueda parecer un tema menor, lo cierto es que debemos seguir una serie de pautas cuando vayamos a darle el nombre a nuestra macro
+TALLER6
 
-− Debe empezar por una letra, de la A-Z. Writer no distinguirá entre letras mayúsculas o minúsculas. − Puede contener números 0-9 e incluso el carácter guión bajo _ − El nombre no podrá contener espacios ni letras acentuadas, ni caracteres como la ñ o la ç.
+SOM6
 
-Acciones que podrían no ser reconocidas por la grabadora de macros
+FOL6
 
-La grabación de macros presenta una serie de limitaciones que no cabe desconocer, las siguientes acciones podrían no ser grabadas correctamente
+CERTIFICAT DE NOTES
 
-- La apertura de ventanas o cambiar de ventanas.
-- Acciones realizada en otra ventana distinta desde la que iniciamos la grabación de macros.
-- Acciones que no están relacionadas con el contenido del documento. Por ejemplo, cambios
+A l’atenció de Ramon,
 
-realizados en el cuadro de diálogo de “Opciones”, personalizar las acciones o formatos, etc.
+pare de l’alumne GÓMEZ BLAZQUEZ, ANTONIO
 
-- Seleccionar texto, objetos, celdas de tablas, etc. Para que se graben correctamente se recomienda
+parque salvador s 56
 
-que las acciones se realicen a través del teclado, no debemos seleccionar los objetos mediante el ratón.
+L’alumne GÓMEZ BLAZQUEZ, ANTONIO, té les següents notes
 
-Cómo ejecutar macros en Writer Una vez que hemos grabado esa secuencia de operaciones rutinarias es momento de volver a ejecutarlas, Tenemos dos opciones
+APLICACIONS OFIMÀTIQUES:4
 
-1º) Utilizar el atajo de teclado que hemos definido anteriormente, en este ejemplo “Alt” + “r” 2º) Ejecutar la macro desde el menú, seguiremos estos pasos
+REDES6
 
-Curiosidad 09. Como crear y ejecutar macros en Writer
+TALLER9
 
-- Abrimos el archivo con los datos preparados para ejecutar la macro, en este caso son datos
+SOM6
 
-tabulados que serán transformados en una tabla.
+FOL9
 
-- Ejecutamos la macro desde el menú “Herramientas->Macro->Ejecutar macro…” (al final del menú
+CERTIFICAT DE NOTES
 
-de “Herramientas”).
+A l’atenció de Patricia,
 
-- En el siguiente cuadro contextual seleccionaremos la macro correspondiente
+pare de l’alumne JIMÉNEZ MENDEZ, EVA
 
-Iremos desplegando los apartados destacados y por este orden: “Mis macros”, “Standard” y doble clic sobre “Module1”. Finalmente un clic sobre “Macrotabla” y después clic sobre el botón “Ejecutar”.
+c/alicante n 10
 
-Aquí tenemos el resultado final.
+L’alumne JIMÉNEZ MENDEZ, EVA, té les següents notes
 
-### 📄 08_transformar-documento-writer-una-presentacion-impress.pdf
+APLICACIONS OFIMÀTIQUES:8
 
-Curiosidad 08. Como pasar de Writer a Impress
+REDES6
 
-Cómo pasar de Writer a Impress en 1 minuto
+TALLER9
 
-Curiosidad 08. Como pasar de Writer a Impress
+SOM7
 
-Índice
+FOL7
 
-#### 1) Establecemos el inicio y fin de cada diapositiva en nuestro documento de Writer
+CERTIFICAT DE NOTES
 
-#### 2) Podemos agregar más texto al subtítulo de cada diapositiva
+A l’atenció de Eva,
 
-#### 3) Enviamos el documento a Impress
+pare de l’alumne LIS SANZ, BLANCA
 
-#### 4) Modificamos el formato de todas las diapositivas rápidamente
+c/vega n67
 
-Curiosidad 08. Como pasar de Writer a Impress
+L’alumne LIS SANZ, BLANCA, té les següents notes
 
-Normalmente elaboramos una presentación a modo de resumen de uno o varios documentos más extensos. Por lo tanto, a continuación veremos cómo pasar rápidamente la información desde Writer a Impress, conseguiremos ahorrar mucho tiempo y esfuerzo. Seguiremos 4 sencillos pasos
+APLICACIONS OFIMÀTIQUES:7
 
-#### 1) Establecemos el inicio y fin de cada diapositiva en nuestro documento de
+REDES5
 
-Writer. Para ello asignaremos el texto que integrará el título de cada diapositiva. Primero seleccionamos el texto en nuestro documento, en este caso el título de la diapositiva 1.
+TALLER7
 
-A continuación activamos la barra lateral, clic sobre el menú “Ver->Barra lateral”
+SOM4
 
-A continuación haremos un clic sobre el botón de “Estilos y formato” de la barra lateral.
+FOL5
 
-Curiosidad 08. Como pasar de Writer a Impress
+CERTIFICAT DE NOTES
 
-Seguidamente seleccionamos los estilos de párrafo del tipo “Automático” en el desplegable inferior de la barra lateral.
+A l’atenció de Luis,
 
-Una vez que ya tenemos los estilos de párrafo filtrados, doble clic izquierdo sobre el estilo de párrafo “Encabezado 1”.
+pare de l’alumne JUÁREZ GIL, PATRICIA
 
-Ya hemos creado el título de la diapositiva 1.
+c/roble n 44
 
-Importante: es conveniente guardar el archivo con el formato nativo de Writer, es decir “odt”.
+L’alumne JUÁREZ GIL, PATRICIA, té les següents notes
 
-Curiosidad 08. Como pasar de Writer a Impress
+APLICACIONS OFIMÀTIQUES:7
 
-Si quisiéramos agregar más texto para el subtítulo de la diapositiva 1 haremos lo siguiente, seleccionamos el texto.
+REDES4
 
-A continuación doble clic izquierdo sobre el estilo de párrafo “Encabezado 2”.
+TALLER7
 
-Ya hemos creado el subtítulo de la diapositiva 1.
+SOM8
 
-Si quisiéramos agregar más texto para los distintos niveles del cuadro de texto del subtítulo de la diapositiva utilizaremos el resto de estilos de párrafo del tipo “Encabezado”, por ejemplo para el
+FOL6
 
-Curiosidad 08. Como pasar de Writer a Impress
+CERTIFICAT DE NOTES
 
-Importante: debemos presionar la tecla “Intro” para separar el texto asignado con los distintos tipos de estilos de párrafo.
+A l’atenció de Alejandro,
 
-siguiente nivel, seleccionamos más texto.
+pare de l’alumne LAX HERMIDA, CARLOS
 
-A continuación doble clic izquierdo sobre el estilo de párrafo “Encabezado 3”.
+c/velazquez n77
 
-Ya hemos creado el texto del nivel 2 del subtítulo de la diapositiva 1.
+L’alumne LAX HERMIDA, CARLOS, té les següents notes
 
-Curiosidad 08. Como pasar de Writer a Impress
+APLICACIONS OFIMÀTIQUES:2
 
-Para que nos hagamos una idea, la primera diapositiva quedaría así (después veremos cómo modificar su formato rápidamente)
+REDES2
 
-Importante: podríamos modificar el formato de los estilos de párrafo con un clic derecho sobre cualquiera de ellos (Encabezado 1, Encabezado 2, etc) y después otro clic sobre el apartado “Modificar”.
+TALLER8
 
-Repetimos el anterior proceso y vamos delimitando el inicio y final de cada diapositiva en nuestro documento. Una vez que hayamos acabado vamos al siguiente paso.
+SOM7
 
-Haremos un clic sobre la pestaña “Archivo” y después, en la parte inferior del menú desplegable, clic sobre “Enviar”->”Esquema a presentación”.
+FOL5
 
-Curiosidad 08. Como pasar de Writer a Impress
+CERTIFICAT DE NOTES
 
-Se abrirá Impress y exportará el texto al que le hemos asignado estilos de párrafo “Encabezado 1, Encabezado 2, Encabezado 3” a cada una de las diapositivas. En este ejemplo tenemos 5 diapositivas.
+A l’atenció de Jorge,
 
-#### 4) Modificamos el formato de todas las diapositivas
+pare de l’alumne LUCAS SEGURA, JORGE
 
-rápidamente
+c/goya n 11
 
-Para modificar el formato de todas las diapositivas le aplicaremos un patrón de Impress. Clic sobre el botón de “Estilos y formato” de la barra lateral y después doble clic izquierdo sobre el patrón que nos interese.
+L’alumne LUCAS SEGURA, JORGE, té les següents notes
 
-De esta forma todas las diapositivas modificarán su aspecto rápidamente.
+APLICACIONS OFIMÀTIQUES:4
 
-Curiosidad 08. Como pasar de Writer a Impress
+REDES5
 
-Por último, si queremos cambiar la posición del texto del título y subtítulo, clic sobre el botón “patrón de diapositivas” de la barra de herramientas “Estándar”.
+TALLER7
 
-A continuación, seleccionamos el patrón de diapositivas en el lateral izquierdo que estamos utilizando en nuestras diapositivas (en este caso “lyt-bluecorn”).
+SOM4
 
-Si quisiéramos modificar la posición del Título o Subtítulo simplemente moveremos los cuadros de texto correspondientes.
+FOL6
 
-Curiosidad 08. Como pasar de Writer a Impress
+CERTIFICAT DE NOTES
 
-Podremos modificar el formato del título o subtítulo seleccionándolos y después podremos cambiar su formato con el grupo de botones de la barra de herramientas “Formato”.
+A l’atenció de Carlos,
 
-En este ejemplo hemos modificado el formato del texto del título de las diapositivas.
+pare de l’alumne LLUC CABALLERO, PABLO
 
-Finalmente salimos del Patrón de diapositivas, clic sobre el botón “Cerrar vista patrón”.
+c/picaso n88
 
-### 📄 07_como-poner-en-sentido-horizontal-una-o-varias-paginas-en-writer.pdf
+L’alumne LLUC CABALLERO, PABLO, té les següents notes
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+APLICACIONS OFIMÀTIQUES:4
 
-Cómo poner una o varias páginas en sentido horizontal en Writer de LibreOffice
+REDES6
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+TALLER7
 
-Índice
+SOM8
 
-Una página en sentido horizontal
+FOL1
 
-- Insertamos un salto de página en la página inmediatamente anterior a la que deseamos poner en
-- Insertamos un salto de página en la última página que deseamos poner en horizontal.
+CERTIFICAT DE NOTES
 
-Varias páginas en sentido horizontal
+A l’atenció de Pedro,
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+pare de l’alumne PARDO SANZ, ANTONIO
 
-A continuación veremos cómo insertar una o varias páginas en sentido horizontal en nuestro documento de Writer
+c/calvario n 21
 
-Antes de empezar, vamos a configurar la visualización simultánea de varias páginas y el zoom. Haremos un clic izquierdo en el icono destacado de la esquina inferior derecha.
+L’alumne PARDO SANZ, ANTONIO, té les següents notes
 
-Después reduciremos el zoom al 44%, clic izquierdo sobre la zona destacada.
+APLICACIONS OFIMÀTIQUES:7
 
-Una página en sentido horizontal
+REDES5
 
-#### 1) Insertamos un salto de página en la página inmediatamente
+TALLER6
 
-anterior a la que deseamos poner en horizontal. En este caso queremos poner en sentido horizontal solo la segunda página
+SOM4
 
-Por lo tanto, insertaremos el salto de página en la página 1.
+FOL1
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+CERTIFICAT DE NOTES
 
-Nos situamos al final de la última línea de la página 1 con un clic izquierdo en la zona destacada.
+A l’atenció de Maria,
 
-Después clic sobre el menú “Insertar->Salto manual…”
+pare de l’alumne RODRÍGUEZ SÁEZ, GLORIA
 
-En el siguiente cuadro contextual que emerge seleccionamos “Salto de página” y en Estilo de página “Horizontal”. Finalmente clic sobre el botón “Aceptar”.
+c/murillo n 77
 
-Ahora todas las páginas, después de la 1ª, están en sentido horizontal.
+L’alumne RODRÍGUEZ SÁEZ, GLORIA, té les següents notes
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+APLICACIONS OFIMÀTIQUES:4
 
-#### 2) Insertamos un salto de página en la última página que
+REDES3
 
-deseamos poner en horizontal.
+TALLER5
 
-En este ejemplo solo queremos poner la 2ª página en sentido horizontal, por lo tanto insertaremos un salto de página al final de la misma.
+SOM7
 
-Nos situamos al final de la última línea de la página 2 con un clic izquierdo en la zona destacada.
+FOL6
 
-Después volvemos a insertar un salto de página, clic sobre el menú “Insertar->Salto manual…”
+### 📄 Carta_Notes_1.pdf
 
-En el siguiente cuadro contextual que emerge seleccionamos “Salto de página” y en Estilo de página “Predeterminado”, ya que en dicho estilo las páginas tienen orientación vertical. Finalmente clic sobre el botón “Aceptar”.
+CERTIFICAT DE NOTES A l’atenció de <Nombre padre/madre>, pare de l’alumne <ALUMNO> <Dirección> <CP>- <Poblacion> L’alumne <ALUMNO>, té les següents notes: APLICACIONS OFIMÀTIQUES: <Aplicaciones Ofimácas> REDES <Redes> TALLER <Taller> SOM <SOM> FOL <FOL>
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+---
 
-De esta forma, después de la página 2 todas tendrán orientación vertical.
+# 2.3 Tema 9. PLANTILLES
 
-Varias páginas en sentido horizontal Supongamos que cambiamos de opinión y queremos poner en sentido horizontal las páginas 2 y 3.
+Tema 09. Plantillas.
 
-Primero borramos el último salto de página. Situamos el puntero sobre el último salto de página, en la parte superior de la página 2. Si esperamos unos segundos emergerá un pequeño rectángulo, haremos clic sobre la flecha negra.
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+Dónde se almacenan las plantillas en OpenOffice Writer Las plantillas se almacenan en las carpetas donde se instala la suite o en el perfil del usuario. Todas estas carpetas o bien son del sistema o bien están ocultas, por lo que no es sencillo acceder a ellas. Si están en carpetas poco accesibles es por un motivo. Así que no conviene hurgar en ellas, salvo que sepas muy bien lo que haces.
 
-Emergerá un cuadro contextual con dos opciones, clic sobre “Eliminar el salto de página”
+Más adelante te mostramos como crear tu propia carpeta de plantillas personalizada, para que te sea más sencillo gestionar tus plantillas. Plantillas entregadas con la instalación Tras instalar Apache OpenOffice disponemos de un número reducido de plantillas que se almacenan en la carpeta del programa.
 
-Ahora insertamos el salto de página en la última que deseamos poner en sentido horizontal, en este caso la página 3.
+En entornos Windows, la carpeta donde se encuentran las plantillas es
 
-Nos situamos al final de la última línea de la página 3 con un clic izquierdo en la zona destacada.
+- OpenOffice 4.0
 
-Después volvemos a insertar un salto de página, clic sobre el menú “Insertar->Salto manual…”
+C:\Archivos de programa\OpenOffice 4\share\template\
 
-En el siguiente cuadro contextual que emerge seleccionamos “Salto de página” y en Estilo de página “Predeterminado”, ya que en dicho estilo las páginas tienen orientación vertical. Finalmente clic sobre el botón “Aceptar”.
+- Versiones anteriores 3.x
 
-Curiosidad 07. Como poner una o varias páginas en sentido horizontal
+C:\Archivos de programa\OpenOffice.org 3\share\template\ En esta carpeta encontraremos las plantillas distribuidas por varias subcarpetas, y también hallarás las plantillas utilizadas por los asistentes (en las subcarpetas llamadas wizard). Plantillas personales Además, se habilita en la carpeta perfil del usuario de OpenOffice una carpeta para almacenar las plantillas personales.
 
-De esta forma después de la página 3 todas tendrán orientación vertical.
+carpeta perfil del usuario\user\template Plantillas de extensiones Si has instalado extensiones que incorporan plantillas (como por ejemplo Professional Template Pack II - Spanish) las plantillas se almacenan también en el perfil del usuario, pero en la subcarpeta donde se instala la extensión. Estas subcarpetas (a las que se les asigna un nombre completamente aleatorio) se encuentran en la ruta
 
-### 📄 06_como-navegar-por-nuestro-documento-en-writer.pdf
+carpeta perfil del usuario\uno_packages\cache\uno_packages
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+Tema 09. Plantillas.
 
-Cómo navegar por los elementos de nuestro documento en Writer
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+Para acceder a la carpeta perfil del usuario en OpenOffice (carpeta oculta), puedes utilizar este sencillo truco: La carpeta de usuario se encuentra (según versión) en: C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice.org\3
 
-Índice
+C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice\4 Para llegar fácilmente a ella
 
-Cómo activar el Navegador 1º) Navegar directamente desde la ventana principal 2º) Con el selector de elementos y los botones de “Siguiente” y “Anterior” Diferencias entre los dos métodos de navegación
+- Desde el botón Inicio de Windows haz clic sobre Buscar
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+programas y archivos
 
-Cómo activar el Navegador Lo primero que debemos hacer es activar el Navegador, esto podremos hacerlo de distintas formas
+- Teclea %AppData% y pulsa Intro
 
-- Presionando la tecla “F5”
-- Mediante un clic sobre el icono
+Ya estás dentro de la carpeta oculta AppData y ahora puedes seguir navegando sin problemas hasta la carpeta de usuario.
 
-de la barra de herramientas “Estándar” (este botón tiene un aspecto distinto en posteriores versiones de Writer).
+Tema 09. Plantillas.
 
-- Haciendo doble clic izquierdo sobre el apartado que indica el número de página de la
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-barra de estado. En estos tres primeros casos emergerá el navegador en un cuadro flotante sobre nuestro documento.
+Configurar el acceso a las plantillas en OpenOffice Writer OpenOffice te permite definir la localización de las distintas carpetas en donde se almacenen las plantillas desde el menú Herramientas > Opciones > OpenOffice > Rutas.
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+El acceso a las carpetas donde se encuentran plantillas no resulta sencillo, como vimos en el apartado anterior; quizás te resulte más interesante crear una carpeta personal en donde almacenar las plantillas que vayas creando o que te descargues de la Web. Al editar la ruta Plantillas se muestra un diálogo como este
 
-Por último, también podremos acceder al Navegador mediante un clic sobre el último icono de la barra lateral de Writer. Primero haremos un clic sobre el menú “Ver->Barra lateral”
+Consideramos que una carpeta en Mis Documentos llamada Plantillas Personales siempre resultará mucho más accesible para cualquier usuario. En el siguiente tema te mostramos cómo crearla y configurarla en OpenOffice.
 
-Si ya tuviéramos activada la barra lateral tendríamos que desplegarla mediante un clic sobre la barra vertical de puntos de la parte derecha de nuestra ventana principal.
+Tema 09. Plantillas.
 
-Y para acceder al Navegador haríamos otro clic sobre el icono destacado de la barra lateral.
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+Crear mi carpeta de plantillas personal en OpenOffice Writer Crea una carpeta llamada Plantillas Personales dentro de la carpeta Mis Documentos. A su vez, crear dentro una estructura de carpetas para organizarlas por categorías (personales, oficina, calendarios, tarjetas...) o por aplicación (Writer, Calc, Draw, Impress), como tu prefieras.
 
-Una vez activado el navegador, podremos acceder a los elementos de nuestro documento de 2 formas distintas
+Tras agregar la nueva carpeta en la configuración de las rutar de plantillas, todas las subcarpetas que contiene se agregarán también de forma automática. Para agregar la nueva carpeta y sus subcarpetas selecciona desde el menú Herramientas > Opciones > OpenOffice > Rutas.
 
-1º) Navegar directamente desde la ventana principal En el panel del navegador se muestran todos los objetos que contiene nuestro documento y clasificados por categorías. Por lo tanto, podremos navegar hacia cualquiera de ellos mediante un clic izquierdo sobre el elemento correspondiente.
+En la lista Rutas que utiliza OpenOffice selecciona Plantillas, y haz clic en el botón Editar. En el diálogo Editar rutas: Plantillas, haz clic en el botón Añadir....
 
-A continuación vamos a navegar por las “Tablas” de nuestro documento. Lo primero que haremos es un clic sobre el botón “+” de la categoría “Tablas” para desplegar todas las que contiene.
+En el diálogo Seleccionar ruta haz clic sobre la carpeta Plantillas Personales creada dentro de la carpeta Mis Documentos y luego haz clic sobre el botón Aceptar.
 
-Después haremos doble clic izquierdo sobre el que deseemos visualizar, por ejemplo, doble clic izquierdo sobre “Tabla1”.
+Tema 09. Plantillas.
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Podremos navegar directamente a cualquier elemento de nuestro documento desde el panel del “Navegador” de Writer haciendo doble clic izquierdo sobre el elemento en cuestión (una imagen, una tabla, un encabezado, etc).
+Si deseas que la nueva carpeta sea considerada por OpenOffice la predeterminada para las nuevas plantillas, activa el botón que precede a su ruta como ves en la imagen.
 
-En ese momento visualizaremos en la ventana principal de Writer la “Tabla1”
+La nueva ruta se agregará a las rutas de plantillas disponibles para todas las aplicaciones de OpenOffice y por lo tanto para Writer.
 
-2º) Con el selector de elementos y los botones de “Siguiente” y “Anterior” También podremos navegar por los distintos elementos de nuestro documento utilizando el “Selector de elementos” y los botones anexos de “Siguiente” y “Anterior”. Para ello seguiremos estos pasos
+Tema 09. Plantillas.
 
-Primero haremos un clic sobre el icono de “Navegación” de la barra de herramientas del panel del Navegador.
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+Crear nuevo documento desde plantilla en OpenOffice Writer En OpenOffice Writer puedes crear nuevos documentos a partir de las plantillas existentes desde el menú Archivo > Nuevo > Plantillas y documentos.
 
-También activaremos el selector mediante un clic sobre el icono situado debajo de la barra de desplazamiento vertical.
+El diálogo Plantillas y documentos – Plantillas te presentará todas las carpetas en donde existen plantillas, según la configuración de rutas para plantillas definida que vimos en Configurar el acceso a las plantillas y en Crear mi carpeta de plantillas personal.
 
-A continuación emergerá un panel flotante y haremos un clic sobre el tipo de elemento sobre el que vamos a navegar, en este caso las “imágenes”.
+En la imagen presentada más arriba hemos añadio unas flechas que apuntan a las distintas carpetas
 
-Observaremos que el tipo de elemento queda seleccionado y cerramos el panel mediante un clic sobre el aspa de la esquina superior derecha.
+- Las flechas verdes apuntan a la carpeta de plantillas almacenadas en el perfil de usuario
 
-Después navegaremos por todas las imágenes de nuestro documento utilizando los botones “Siguiente” y “Anterior”. En este ejemplo estamos en la primera página del documento, por lo tanto, haremos un clic sobre el botón “Siguiente”.
+de OpenOffice, que se presenta como Mis plantillas. Cualquier carpeta contenida en ella se mostrará también aquí, como es el caso de la carpeta Otras, que hemos creado para ilustrar el ejemplo.
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+- Las flechas rojas apuntan a las carpetas creadas dentro de Plantillas Personales creada
 
-Observaremos que aparece seleccionada la primera imagen de nuestro documento en la ventana principal de Writer.
+en el apartado Crear mi carpeta de plantillas personal y que también hemos creado para ilustrar el ejemplo.
 
-A partir de este momento nos moveremos a través de las imágenes de nuestro documento mediante un clic sobre los botones destacados.
+- Las flechas azules apuntan a dos carpetas propias de OpenOffice, que contienen
 
-Además, también podremos utilizar los botones situados debajo de la barra vertical de navegación, en la parter inferior derecha de la ventana principal de Writer.
+plantillas de presentaciones y de fondos de presentación para Impress. Haz doble clic en la carpeta donde tengas almacenada la plantilla que deseas utilizar para abrir esa carpeta. Utiliza los botones situados justo encima para volver atrás o volver al inicio. Al abrir una carpeta se mostrarán las plantillas que contiene. Haciendo un clic sobre la plantilla elegida puedes ver información o una previsualización de la misma en el panel situado a la derecha de la lista de plantillas.
 
-Observaremos estos últimos botones de color negro cuando hemos seleccionado el elemento “Páginas” del selector de navegación (es el color, por defecto). Y se volverán de color azul cuando hayamos seleccionado cualquier otro tipo de elemento (imágenes, tablas, etc).
+Tema 09. Plantillas.
 
-Curiosidad 06. Cómo navegar por los elementos de nuestro documento.
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Cuadro de texto Fórmulas erróneas Nota al pie de tabla Entrada al índice Fórmulas de tabla Página Campo de control
+Haciendo clic sobre el botón puedes ver información sobre la plantilla seleccionada.
 
-Diferencias entre los dos métodos de navegación Si utilizamos el selector de navegación tendremos que pasar, uno a uno, utilizando los botones de “Siguiente” o “Anterior”, por todos los elementos si queremos llegar al último. Es decir, por ejemplo, no podemos ver directamente la última imagen del documento.
+Haciendo clic sobre el botón puedes ver una previsualización de la plantilla seleccionada. Si no tienes plantillas instaladas, puedes consultar el punto Agregar nuevas plantillas desde la Web. Una vez seleccionada la plantilla, haz doble clic sobre su nombre, o clic en el botón Abrir. OpenOffice Writer creará un nuevo documento copia de la plantilla.
 
-En cambio, desde el panel del navegador podremos acceder a cualquier elemento mediante un doble clic sobre el mismo, sin necesidad de visualizar antes los anteriores.
+Este nuevo documento será creado con un nombre neutro (del tipo Sin título X, donde X es un número). Puedes modificar el nuevo documento a tu gusto, y asignarle un nombre cuando lo guardes.
 
-Además, en el panel emergente del selector de navegación contamos con algunas categorías de objetos que no se encuentran en el panel central del navegador. Debemos recordar que, como hemos visto, debemos seleccionarlas previamente si queremos navegar a través de las mismas.
+La plantilla permanecerá intacta para que crees nuevos documentos cuando tú quieras, cuantas veces quieras.
 
-### 📄 05_mover-partes-documento-solo-clic-writer.pdf
+Tema 09. Plantillas.
 
-Curiosidad 05. Como mover bloques de nuestro documento con un solo clic
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Cómo mover bloques de nuestro documento (párrafos, imágenes, tablas) con un solo clic en Writer
+Crear una nueva plantilla en OpenOffice Writer En realidad una plantilla es un documento normal que ha sido guardado no como un documento, sino como una plantilla. Por lo tanto, para crear una plantilla debemos seguir exactamente el mismo procedimiento que con cualquier documento, salvo a la hora de guardarlo.
 
-Curiosidad 05. Como mover bloques de nuestro documento con un solo clic
+Por ese mismo motivo, cualquier documento de los que ya tienes creado en OpenOffice Writer puedes convertirlo fácilmente en plantilla. La idea, lo importante, es que la plantilla creada sea como el esqueleto que conformará tus nuevos documentos. Esos nuevos documentos creados tomando como modelo la plantilla son los que posteriormente completarás con nuevos textos, imágenes y contenidos.
 
-Indice
+A la hora de crear una nueva plantilla, sencillamente crea un nuevo documento.
 
-#### 1) Asignamos el estilo de párrafo “Encabezado1” a los títulos del documento
+Pero también puedes utilizar un documento ya creado. En este caso, crea primero una copia del documento, y luego, elimina todo el contenido que no sea necesario, dejando sólo la estructura que consideres oportuna Si en tu trabajo o en el hogar utilizas Writer para escribir cartas, informes, memorandums, y ya los tienes creados, puedes crear fácilmente una plantilla con ellos.
 
-#### 2) Activamos la función “Navegador” de Writer
+- Crea primero una copia del documento.
+- Edita la copia, y elimina aquellos elementos que no sean comunes en los diferentes
 
-#### 3) Movemos bloques de nuestro documento con un solo clic
+documentos que vas crear a partir de la nueva plantilla.
 
-Curiosidad 05. Como mover bloques de nuestro documento con un solo clic
+- Permanecerán por tanto los elementos comunes, como el encabezado de página, el pie
 
-#### 1) Asignamos el estilo de párrafo “Encabezado1” a los títulos
+de página, la firma, el fondo de la página, el saludo inicial, un modelo de las tablas que incorporas, los estilos creados, etc.
 
-del documento Seleccionamos el texto de un título.
+- Avanzado: Puedes incorporar campos especiales para que automáticamente muestren
 
-A continuación le asignamos el estilo de párrafo “Encabezado1”, para ello haremos lo siguiente: Primero activamos la barra lateral, clic sobre el menú “Ver->Barra lateral”
+la fecha, o la carpeta donde se almacena el documento, el autor, etc.
 
-Después haremos un clic sobre el botón de “Estilos y formato” de la barra lateral.
+- Avanzado: Puedes editar el estilo Predeterminado para cambiar el formato por defecto
 
-Seguidamente seleccionamos los estilos de párrafo del tipo “Automático” en el desplegable inferior de la barra lateral.
+del texto, el idioma, etc., y personalizar los distintos estilos utilizados en el documento.
 
-Curiosidad 05. Como mover bloques de nuestro documento con un solo clic
+- Avanzado: Puedes modificar el estilo de la página para cambiar los márgenes, la
 
-Una vez que ya tenemos los estilos de párrafo filtrados, doble clic izquierdo sobre el estilo de párrafo “Encabezado 1”.
+orientación de página, los encabezados, pies, etc.
 
-Aquí tenemos el estilo de párrafo “Encabezado1” asignado...
+- Finalmente, tan sólo quedará guardar el documento como plantilla.
 
-Repetimos la anterior operación con todos los títulos de nuestro documento.
+Para guardar el documento como plantilla, sigue los pasos indicados en el punto Cómo y dónde guardar las plantillas.
 
-Importante: también podríamos haber utilizado otro estilo de párrafo de los de “Encabezado” (Encabezado2, Encabezado3, etc)
+Tema 09. Plantillas.
 
-Como ya tenemos activada la barra lateral haremos un clic sobre el botón “Navegador” del lateral derecho.
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Curiosidad 05. Como mover bloques de nuestro documento con un solo clic
+Cómo y dónde guardar las plantillas en OpenOffice Writer OpenOffice Writer permite que las plantillas se almacenen en una o varias carpetas (configurable desde Herramientas > Opciones > OpenOffice > Rutas). Las carpetas por defecto no son fácilmente accesibles por el usuario, ya que están situadas en la carpeta que contiene su perfil 2.
 
-A continuación clic izquierdo sobre el botón “+” del apartado “Encabezados” y se desplegarán los títulos marcados con el estilo de párrafo “Encabezado1”.
+El usuario también puede añadir o modificar la ruta de las plantillas a otros en lugares más accesibles , lo que hemos venido a llamar en este manual carpeta personal de plantillas. En cualquier caso podemos almacenar las plantillas en sus carpetas por dos métodos: utilizando el administrador de plantillas, o simplemente, arrastrándolas al interior de las carpetas correspondientes.
 
-A partir de este momento, todo lo que se encuentre entre cada título (texto, imágenes, tablas, etc) podremos moverlo con un solo clic.
+Guardar con el administrador de plantillas Para guardar el documento que has creado o modificado en OpenOffice Writer como una plantilla tan sólo tienes que seguir los siguientes pasos
 
-Por ejemplo, vamos a mover el primer bloque de “Nueva York” para el final de nuestro documento.
+- Selecciona desde el menú Archivo > Plantilla > Guardar...
+- En el diálogo Plantilla de documento selecciona la carpeta donde quieres almacenar la
 
-Curiosidad 05. Como mover bloques de nuestro documento con un solo clic
+plantilla desde la lista Categorías 1.
 
-Primero seleccionamos el título que vamos a mover con un clic izquierdo (“Nueva York”, en este ejemplo)
+- Escribe el nombre de tu nueva plantilla en el cuadro Nueva plantilla
+- Haz clic en Aceptar
 
-Después, haremos clic izquierdo sobre el botón de “Bajar capítulo un nivel” sucesivas veces hasta ubicar el título donde nos interese, en este caso al final.
+Guardar en nuestra carpeta personal de plantillas Alternativamente, puedes guardar la plantilla en la carpeta personal de plantillas que creamos en el apartado Crear mi carpeta de plantillas personal mediante este procedimiento
 
-En la siguiente imagen observaremos que hemos movido al final de nuestro documento todo el texto, imágenes, tablas, etc, incluidos en el título “Nueva York”.
+- Si...
+- ... creaste un documento nuevo para la plantilla, clic en Archivo > Guardar.
+- ... estás modificando un documento existente para crear la plantilla, clic en Archivo >
 
-Curiosidad 05. Como mover bloques de nuestro documento con un solo clic
+Guardar como....
 
-### 📄 04_como-eliminar-automaticamente-todos-los-saltos-de-linea-y-de-parrafo-en-writer.pdf
+- Escribe el nombre de la plantilla
 
-Curiosidad 04. Como eliminar automáticamente todos los saltos de linea y de párrafo
+Tema 09. Plantillas.
 
-Cómo eliminar automáticamente todos los saltos de línea y de párrafo en Writer
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Curiosidad 04. Como eliminar automáticamente todos los saltos de linea y de párrafo
+- En Tipo, selecciona Plantilla de documento de texto ODF (.ott)
+- Navega hasta la carpeta Mis documentos/Plantillas personales
+- Haz clic en Guardar
 
-Indice
+Como ves, salvo seleccionar en Tipo guardar como plantilla, el procedimiento es el mismo que Guardar o Guardar como... para un documento. Notas 1 ↑ En versiones anteriores a la 4.0 la lista Categorías se mostraba como Área. 2 ↑
 
-#### 1) Supongamos que pegamos texto de otros documentos (PDF) o de Internet
+Para acceder a la carpeta perfil del usuario en OpenOffice (carpeta oculta), puedes utilizar este sencillo truco: Windows Vista y Windows 7 La carpeta de usuario se encuentra (según versión) en: C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice.org\3 C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice\4 Para llegar fácilmente a ella
 
-#### 2) Seleccionamos el texto
+- Desde el botón Inicio de Windows haz clic sobre Buscar
 
-#### 3) Eliminamos los saltos
+programas y archivos
 
-Curiosidad 04. Como eliminar automáticamente todos los saltos de linea y de párrafo
+- Teclea %AppData% y pulsa Intro
 
-#### 1) Supongamos que pegamos texto de otros documentos (PDF) o
+Ya estás dentro de la carpeta oculta AppData y ahora puedes seguir navegando sin problemas hasta la carpeta de usuario.
 
-de Internet
+Tema 09. Plantillas.
 
-En este ejemplo hemos copiado el texto seleccionado (presionamos simultáneamente las teclas “Control+C”) de un documento PDF
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Una vez pegado el texto (presionamos simultáneamente las teclas “Control+V”) comprobamos que aparecen muchos saltos de párrafo (Intros o retornos de carro)
+Modificar una plantilla existente en OpenOffice Writer El método más sencillo para modificar una plantilla existente es
 
-Curiosidad 04. Como eliminar automáticamente todos los saltos de linea y de párrafo
+- Crear un nuevo documento a partir de la plantilla
+- Modificar el documento
+- Guardar el documento como plantilla de nuevo, sustituyendo a la anterior
 
-Para visualizar estos saltos haremos un clic sobre el botón “Caracteres no imprimibles”
+Modificar una plantilla desde el Administrador de plantillas Puedes modificar la plantilla abriéndola desde el Administrador de plantillas.
 
-Aquí los tenemos
+- Abre el Administrador de plantillas desde el menú Archivo > Plantilla... > Administrar...
+- Recorre las carpertas mostradas en el panel de la izquierda hasta encontra la plantilla
 
-Curiosidad 04. Como eliminar automáticamente todos los saltos de linea y de párrafo
+a editar.
 
-2)Seleccionamos el texto
+- Selecciona la plantilla
+- Selecciona desde su menú contextual Editar
 
-Clic sobre el menú “Editar-> Buscar y reemplazar”
+- O desde el botón Comandos... selecciona la opción Editar
 
-En el siguiente cuadro contextual hacemos un clic sobre el botón “Otras opciones”
+Tema 09. Plantillas.
 
-A continuación, clic sobre la casilla “Expresiones regulares”.
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Curiosidad 04. Como eliminar automáticamente todos los saltos de linea y de párrafo
+Modificar una plantilla almacenada en nuestra carpeta personal de plantillas Alternativamente, si la plantilla está almacenada en la carpeta personal de plantillas que creamos en el apartado Crear mi carpeta de plantillas personal puedes editarla mediante este procedimiento
 
-Seguidamente pondremos el símbolo $ en el campo “Buscar” y después clic sobre el botón “Reemplazar todo”
+- Selecciona Archivo > Plantilla > Editar
+- Navega hasta la carpeta Mis documentos/Plantillas personales
+- Selecciona la plantilla y haz clic en Abrir
 
-Aquí lo tenemos, se han eliminado esos saltos de párrafo (Intros o retornos de carro)
+Guardar la plantilla modificada Guarda como cualquier otro documento, por ejemplo, haciendo clic sobre el botón Guardar. Guardar una copia u otra versión de la plantilla Para guardar una copia u otra versión de la plantilla, deberás asignarle otro nombre al guardarla siguiendo el procedimiento que vimos en Cómo y dónde guardar las plantillas.
 
-Importante: realmente los saltos de línea se representan por el siguiente símbolo
+Para guardar la plantilla modificada, tan sólo deberás hacer clic en el botón Guardar
 
-Curiosidad 04. Como eliminar automáticamente todos los saltos de linea y de párrafo
+Puedes guardar una copia u otra versión con otro nombre siguiendo los pasos indicados en el punto Cómo y dónde guardar las plantillas
 
-> **⚠️ Nota: los saltos de línea se crean presionando “mayúscu...**
-> Nota: los saltos de línea se crean presionando “mayúsculas+Intro”
+Tema 09. Plantillas.
 
-Para eliminarlos pondremos el símbolo \n en el campo “Buscar” y después clic sobre el botón “Reemplazar todo”
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
 
-Aquí lo tenemos
+Cambiar la plantilla predeterminada en OpenOffice Writer Cuando en OpenOffice Writer creas un nuevo documento desde el menú Archivo > Nuevo > Documento de texto o haciendo clic sobre el botón Nuevo se crea un nuevo documento vacío basado en la plantilla predeterminada de Writer (plantilla por defecto para documentos nuevos).
+
+Pero quizás desees que utilizar otra plantilla para crear tus nuevos documentos; por ejemplo, con estilos, encabezado y pie de página personalizados. Si deseas utilizar otra plantilla como la plantilla predeterminada deberás seguir los siguientes pasos
+
+- 1 Selecciona el menú Archivo > Plantillas > Administrar
+- 2 En la lista de la izquierda selecciona la plantilla que deseas configurar como
+
+predeterminada (en nuestro ejemplo, vamos a utilizar una plantilla que hemos guardado como Mi plantilla Normal en la carpeta Writer, dentro de nuestra carpeta de Plantillas Personal) y …
+
+- Haz clic sobre su nombre con el botón secundario del ratón para abrir su menú
+
+contextual
+
+o …
+
+- Despliega el submenú del botón Comandos
+
+- 3 Selecciona la opción Definir como plantilla predeterminada.
+
+La próxima y sucesivas veces que crees un nuevo documento de texto, Writer utilizará la nueva plantilla predeterminada.
+
+Tema 09. Plantillas.
+
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+
+Restablecer la plantilla predeterminada en OpenOffice Writer Si quieres restablecer la plantilla predeterminada de OpenOffice Writer a la plantilla predeterminada original
+
+- Selecciona el comando Archivo > Plantillas > Administrar.
+- Selecciona desde el botón Comandos la opción Restaurar plantilla predeterminada >
+
+Documento de texto
+
+- O haz clic secundario sobre cualquier elemento de la lista de la izquierda y selecciona
+
+la opción Restaurar plantilla predeterminada > Documento de texto
+
+La próxima vez que crees un nuevo documento de texto, volverá a utilizarse la plantilla predeterminada original de OpenOffice.org para documentos de texto.
+
+Tema 09. Plantillas.
+
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+
+Agregar nuevas plantillas desde la Web en OpenOffice Writer En la instalación por defecto de Apache OpenOffice hay muy pocas plantillas, y las pocas que hay son todas para Impress. Pero dispones de miles de plantillas que puedes descargar desde la Web. A continuación relacionamos algunos sitios desde los que puedes descargar plantillas en español
+
+- Web oficial de OpenOffice para plantillas en español
+- Professional Template Pack II - Spanish
+- Professional Template Pack I - Spanish
+- Plantilla de factura para Writer
+- Calendario 2012 para Writer
+
+Otros sitios desde donde descargar más plantillas (no necesariamente en español)
+
+- Plantillas para etiquetas adhesivas
+- OO Extras
+- OxygenOffice Profesional
+
+En algunos casos las plantillas se agregarán como una extensión (ver Administrar extensiones en Writer) y, probablemente, creará su propia estructura de carpetas. En otras ocasiones, se tratará sencillamente de descargar y guardar un archivo que podrás almacenar en tu propia carpeta de plantillas. Puedes consultar este minitutorial de nuestro blog si no sabes como hacerlo: Cómo copiar las plantillas descargadas al almacén de plantillas de OpenOffice.
+
+Tema 09. Plantillas.
+
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+
+El administrador de plantillas de OpenOffice Writer En este manual te hemos sugerido una forma alternativa de administrar tus plantillas para Writer, consistente en crear una carpeta llamada Plantillas Personales en tu carpeta Mis Documentos. Posteriormente te hemos explicado como agregar esa carpeta en la ruta de plantillas de OpenOffice.
+
+Te hemos sugerido también que las diferentes categorías de plantillas las organices dentro de esa carpeta, en forma de subcarpetas. Consideramos que es un sistema cómodo, fácil y al alcance de cualquier usuario. El motivo es por que consideramos que el sistema de administrar plantillas de OpenOffice Writer es un poco confuso para usuarios noveles. Pero no es más que una opinión.
+
+OpenOffice dispone de su propio sistema de gestión de plantillas. Para activarlo, selecciona desde el menú Archivo > Plantilla > Administrar.
+
+El administrador muestra dos listas y una serie de botones. Las listas pueden presentar bien la estructura de plantillas, o documentos que previamente deben de ser seleccionados mediante el botón Archivo..., que se activa si haces clic en la lista Documentos. El botón Comandos te presentará una serie de opciones en función del elemento que tengas seleccionado.
+
+Si seleccionas una categoría (carpeta) de las plantillas de usuario podrás
+
+- Agregar una nueva categoría seleccionando
+
+Nuevo
+
+- Eliminar una categoría
+- Importar una plantilla a la categoría
+- Invocar la Configuración de la impresora
+- Refrescar la lista seleccionando Actualizar
+
+Tema 09. Plantillas.
+
+Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer
+
+Si seleccionas una plantilla podrás
+
+- Editar la plantilla
+- Eliminar la plantilla
+- Importar una plantilla
+- Exportar la plantilla
+- Invocar la Configuración de la impresora
+- Refrescar la lista seleccionando Actualizar
+- Definir como plantilla predeterminada la
+
+plantilla seleccionada
+
+Si no existe ningún elemento seleccionado podrás
+
+- Invocar la Configuración de la impresora
+- Refrescar la lista seleccionando Actualizar
+
+Finalmente, el botón Libreta de direcciones... te permite establecer un vínculo entre una fuente de datos (por ejemplo, la libreta de direcciones de tu sistema operativo ( la libreta de direcciones de Windows o la de MS Outlook para usuarios de Windows) y la base de datos que automáticamente creará OpenOffice y que te permitirá disponer de los campos de tu libreta de direcciones para agregarlos con facilidad a tus documentos y plantillas.
 
 ---

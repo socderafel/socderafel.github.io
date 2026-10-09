@@ -21,8 +21,8 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
 | **UD1** | **Programació** | 4 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UD2** | **Xarxes** | 3 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UD3** | **Sistemes de fitxers Linux** | 3 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UD2** | **Xarxes** | 3 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UD3** | **Sistemes de fitxers Linux** | 3 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
 
 ## UD1 — Programació
 
@@ -39,18 +39,18 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 `1r Batxillerat · UD2 · 3 apartats`
 
-[**📘 Obrir UD2 Completa en una sola pàgina**](./ut03/index.md)
+[**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Introducció**](./ut03/ut0301.md)
-- [**2.2 TCP-IP**](./ut03/ut0302.md)
-- [**2.3 Maquinari**](./ut03/ut0303.md)
+- [**2.1 Introducció**](./ut02/ut0201.md)
+- [**2.2 TCP-IP**](./ut02/ut0202.md)
+- [**2.3 Maquinari**](./ut02/ut0203.md)
 
 ## UD3 — Sistemes de fitxers Linux
 
 `1r Batxillerat · UD3 · 3 apartats`
 
-[**📘 Obrir UD3 Completa en una sola pàgina**](./ut05/index.md)
+[**📘 Obrir UD3 Completa en una sola pàgina**](./ut03/index.md)
 
-- [**3.1 Sistema d'arxius**](./ut05/ut0501.md)
-- [**3.2 Gestió de Fitxers**](./ut05/ut0502.md)
-- [**3.3 Permisos**](./ut05/ut0503.md)
+- [**3.1 Sistema d'arxius**](./ut03/ut0301.md)
+- [**3.2 Gestió de Fitxers**](./ut03/ut0302.md)
+- [**3.3 Permisos**](./ut03/ut0303.md)

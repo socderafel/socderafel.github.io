@@ -10,12 +10,11 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
-          "label": "1.1 Continguts i Recursos",
-          "href": "ut01/ut0101.html"
+          "label": "1.1 Continguts Teòrics i Recursos",
+          "href": "./ut01/ut0101.html"
         }
       ]
     },
@@ -24,12 +23,11 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
-          "label": "2.1 Continguts i Recursos",
-          "href": "ut02/ut0201.html"
+          "label": "2.1 Continguts Teòrics i Recursos",
+          "href": "./ut02/ut0201.html"
         }
       ]
     }

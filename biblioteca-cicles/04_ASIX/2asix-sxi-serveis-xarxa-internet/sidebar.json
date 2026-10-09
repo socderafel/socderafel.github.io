@@ -10,12 +10,11 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 U1 DHCP",
-          "href": "ut01/ut0101.html"
+          "href": "./ut01/ut0101.html"
         }
       ]
     },
@@ -24,12 +23,11 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 U2 DNS",
-          "href": "ut02/ut0201.html"
+          "href": "./ut02/ut0201.html"
         }
       ]
     },
@@ -38,12 +36,11 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 U3 HTTP",
-          "href": "ut03/ut0301.html"
+          "href": "./ut03/ut0301.html"
         }
       ]
     },
@@ -52,12 +49,11 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 U4 FTP",
-          "href": "ut04/ut0401.html"
+          "href": "./ut04/ut0401.html"
         }
       ]
     },
@@ -66,12 +62,11 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 U5 SSH",
-          "href": "ut05/ut0501.html"
+          "href": "./ut05/ut0501.html"
         }
       ]
     },
@@ -80,12 +75,11 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 U6 Email",
-          "href": "ut06/ut0601.html"
+          "href": "./ut06/ut0601.html"
         }
       ]
     },
@@ -94,12 +88,11 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut07/index.html"
         },
         {
           "label": "7.1 U7 Audio and Video",
-          "href": "ut07/ut0701.html"
+          "href": "./ut07/ut0701.html"
         }
       ]
     }

@@ -21,7 +21,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Multim�
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
 | **UD1** | **GIMP** | 1 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UD2** | **Audacity** | 1 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UD2** | **Audacity** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
 
 ## UD1 — GIMP
 
@@ -35,6 +35,6 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Multim�
 
 `3r ESO · UD2 · 1 apartats`
 
-[**📘 Obrir UD2 Completa en una sola pàgina**](./ut03/index.md)
+[**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Continguts i Recursos**](./ut03/ut0301.md)
+- [**2.1 Continguts Teòrics i Recursos**](./ut02/ut0201.md)

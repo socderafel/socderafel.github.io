@@ -4,12 +4,18 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UD1 — Unitat Didàctica 1":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Continguts i Recursos": ut01/ut0101.md
-  - "UD2 — Unitat Didàctica 2":
-      - "📘 UD2 Completa (1 pàgina)": ut04/index.md
-      - "2.1 Continguts i Recursos": ut04/ut0401.md
-  - "UD3 — i 6":
-      - "📘 UD3 Completa (1 pàgina)": ut05/index.md
-      - "3.1 Continguts i Recursos": ut05/ut0501.md
+  - "UD1 — Teoria i Arquitectura de Xarxes":
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Sistemes de comunicació, arquitectures i topologia de xarxes": ./ut01/ut0101.md
+  - "UD2 — Muntatge de Xarxes Locals":
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Mitjans de transmissió, cablejat estructurat i connectorització": ./ut02/ut0201.md
+  - "UD3 — Interconnexió d'Equips en Xarxa":
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Adreçament físic (MAC), lògic (IPv4/IPv6) i protocols IEEE 802": ./ut03/ut0301.md
+  - "UD4 — Configuració de Dispositius de Xarxa":
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Commutadors (Switches), VLANs, Spanning Tree, Encaminadors i Wi-Fi": ./ut04/ut0401.md
+  - "UD5 — Monitoratge, Diagnosi i Resolució d'Incidències":
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Verificació, manteniment i diagnosi d'incidències en xarxes locals": ./ut05/ut0501.md

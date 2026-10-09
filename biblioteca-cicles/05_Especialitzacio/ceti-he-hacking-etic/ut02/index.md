@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "UD2 — Unitat Didàctica 2 · Temari Complet"
+title: "UD2 — Proves de Penetració i Metodologies d'Auditoria · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT2 Completa"
-prev_url: "../ut01/ut0103.html"
+badge: "CE Ciberseguretat (CETI) · UD2 — Proves de Penetració i Metodologies d'Auditoria"
+prev_url: "../ut01/ut0102.html"
 prev_label: "⬅️ 1.2 tema1"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 tema2 ➡️"
 ---
 
-# 📘 UD2 — Unitat Didàctica 2 (Unitat Completa)
+# 📘 UD2 — Proves de Penetració i Metodologies d'Auditoria (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
@@ -21,19 +21,6 @@ next_label: "2.1 tema2 ➡️"
 ---
 
 # 2.1 tema2
-
-> **📌 Introducció de la Unitat**
-> Donats els següents conceptes
->
-> 1. Hacking
-> 2. Hacker ètic
-> 3. Pentesting
-> 4. Hacktivisme
->
-> Realitza les següents activitats:
-> 1. Defineix els termes
-> 2. Quina diferència hi ha entre els diferents termes
-> 3. Creus que tots els termes anteriors estan relacionats amb la informàtica o la cibertecnologia?
 
 ---
 

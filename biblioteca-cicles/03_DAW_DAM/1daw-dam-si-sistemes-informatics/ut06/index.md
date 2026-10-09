@@ -1,229 +1,285 @@
 ---
 layout: default
-title: "UD7 — SEGURETAT, RENDIMENT I RECURSOS · Temari Complet"
+title: "UD6 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT6 Completa"
-prev_url: "../ut05/ut0503.html"
-prev_label: "⬅️ 6.3 TEORIA UNITAT 6 PART 3"
+badge: "1r DAW / DAM · Grau Superior · UD6 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI"
+prev_url: "../ut05/ut0508.html"
+prev_label: "⬅️ 5.8 TEORIA UNITAT 5 PART 7"
 next_url: "../ut06/ut0601.html"
-next_label: "7.1 TEORIA UNITAT 7 PART1 ➡️"
+next_label: "6.1 TEORIA UNITAT 6 PART 1 ➡️"
 ---
 
-# 📘 UD7 — SEGURETAT, RENDIMENT I RECURSOS (Unitat Completa)
+# 📘 UD6 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**7.1 TEORIA UNITAT 7 PART1**](./ut0601.md)
-- [**7.2 TEORIA UNITAT 7 PART 2**](./ut0602.md)
-- [**7.3 TEORIA UNITAT 7 PART 3**](./ut0603.md)
+- [**6.1 TEORIA UNITAT 6 PART 1**](./ut0601.md)
+- [**6.2 TEORIA UNITAT 6 PART 2**](./ut0602.md)
+- [**6.3 TEORIA UNITAT 6 PART 3**](./ut0603.md)
 
 ---
 
-# 7.1 TEORIA UNITAT 7 PART1
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### APUNTS I FÒRUM
-
-> **📌 🏷️ Apunt de la Unitat**
-> ##### ACTIVITATS EVALUABLES
-
-> **📌 🏷️ Apunt de la Unitat**
-> ##### ACTIVITATS NO EVALUABLES
+# 6.1 TEORIA UNITAT 6 PART 1
 
 ---
 
-Unidad 7: Seguridad, rendimiento y recursos
-
-Índice de la unidad 1ª Parte
-
-- Aseguramiento de la información.
-
-1.1 Asociación de discos. Volúmenes distribuidos: Windows(RAID), LVM (Linux).
-
-- Tolerancia a fallos.
-- Clusterización.
+Unidad 6: Administración del acceso al dominio
 
 Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-### 1. Aseguramiento de la información
+- Términos de Active Directory que se deben de entender para una correcta administración de un dominio.
 
-• Cada vez más, la seguridad y la fiabilidad son un aspecto más importante en la administración de un sistema informático. • Un administrador de sistemas se enfrenta a
+• Active Directory (AD): Es un servicio de directorio que gestiona una base de datos organizada de modo jerárquico con el objetivo de administrar de una manera sencilla los recursos de una red, almacenando información de cada elemento de la red de manera estructurada, lo que permite facilitar el proceso de búsqueda de los recursos y de autenticación dentro de la red.
 
-- Pérdida de datos: por incendios, inundaciones, averías, errores humanos, borrado accidental o deliberado.
-- Perdida de disponibilidad: interrupción o degradación del servicio.
-- Intrusiones: pasivas que se utilizan para recoger datos y espionaje o ataques con afectación de datos y de servicio.
+• Objetos del Directorio Activo: El Directorio Activo es una implementación concreta del protocolo LDAP. Este protocolo trata los elementos de la red como objetos. Los tipos de objetos básicos que existen en el Directorio Activo son: Usuarios, Grupos, Equipos, Impresoras, Unidades Organizativas.
 
-• El concepto disponibilidad está relacionado con la continuidad operacional de un sistema a lo largo de un periodo determinado. Se acostumbra a expresar como un porcentaje. Ejemplo: un 99% de disponibilidad significa que solo está parado 54 minutos al año. • Cuando hablamos de asegurar la información nos referimos a evitar la perdida y mantener el servicio teniendo en cuenta estos 3 principios
+• LDAP: Son las siglas de Protocolo Ligero de Acceso a Directorio. Se trata de un conjunto de protocolos de licencia abierta que son utilizados para acceder a la información que está almacenada de forma centralizada en una red. Se usa junto con AD. • En resumen : LDAP es un protocolo de acceso a la información, permitiendo autenticar y autorizar el acceso granular a los recursos de TI, mientras que Active Directory es una base de datos de información de usuarios y grupos.
 
-• Prevención de fallos: Trabajar para evitar y prevenir errores con medidas proactivas. ejemplos: usar hw y sw bien diseñado y probado, usar herramientas de comprobación de memoria, integridad de los sistemas de archivos. • Enmascaramiento de los fallos: conseguir que cuando se produzca un fallo, no se convierta en fallo de sistema.(IP-> CRC) • Tolerancia a los fallos: se basa en la redundancia , tanto de hardware (clustering de servidores, líneas de comunicación, etc) como de datos(RAID).
+• Un esquema de Active Directory sería como se muestra a continuación: Todas las relaciones que se establecen entre el AD y los objetos que forman parte de AD se basan en LDAP.
 
-• Copias de seguridad: copiar íntegramente la información fuera del sistema de explotación habitual. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Dominio de Windows: un Dominio Windows es una forma de administración centralizada de los distintos recursos disponibles en una red (usuarios, equipos, servidores, impresoras, etc.).
 
-1.1 Asociación de discos • El disco duro(HDD), discos SSD son elementos delicados de un sistema informático y deben de usarse técnicas que garanticen la recuperación de esta en caso de errores o fallos en el sistema. • Para ello, existen los volúmenes distribuidos, que ya los vimos en la unidad anterior, y permiten redistribuir y aprovechar espacios libres de otros sistemas para aumentar la fiabilidad y la tolerancia a errores.
+• Controlador de dominio: Un controlador de dominio es un ordenador (Equipo o PC) que tiene instalado un S.O. Windows Server, que cuenta con la función de servidor de dominio instalada. Cada controlador de dominio almacena una copia de la base de datos de Active Directory, que contiene información sobre todos los objetos dentro del mismo dominio, por tanto es el equipo que tiene instalado el servicio de directorio activo.
 
-• Tenemos dos técnicas para manejar volúmenes distribuidos: • Gestor de discos de Windows: permite hacer RAID0, RAID 1 y RAID 5 (ya visto en el curso!!). • Gestor LVM (Logical Volume Manager) de Linux: usa volúmenes físicos que pueden ser discos enteros o particiones que gestiona en fragmentos denominados extensiones físicas (PE, physical extents). Un conjunto de estos fragmentos constituye un volumen lógico que se puede hacer servir para montar un sistema de archivos o una partición de intercambio (swap).
+• Nombre Dominio: es lo que permite identificar y agrupar todos los recursos de una red Windows. • Servicio DNS: es un servicio de Internet y de red local Windows que traduce los nombres de los dominios en direcciones IP. • Árbol de dominios: Es una agrupación lógica de un conjunto de dominios. Por ejemplo: Dominio Principal instituto.ies, subdominios secretaria.instituto.ies y departamentos.instituto.ies • Bosque de dominios: Es una agrupación lógica de árboles de dominios. A lo anterior se le añade un nuevo árbol de dominio. Por ejemplo: extensión.ies y clases.extension.ies.
 
-LVM (Logical Volume Manager) • LVM es una capa de software que nos permite generar volúmenes lógicos y poderlos administrar. Estos volúmenes se pueden organizar para montar un sistema de fichero de Linux o para montar una partición swap, etc. • LVM nos permite hacer movimientos “en caliente”, sin tener que apagar el equipo, sobre los volúmenes lógicos pudiendo
+• Nombre NetBios: El nombre NetBIOS es un valor único dado al equipo o computadora. El nombre de dominio NetBIOS es el subdominio del nombre de dominio DNS. Por ejemplo en el dominio instituto.ies, el nombre netbios es instituto. • Usuarios locales: Son los que forman parte de los equipos de forma independiente y se usan para administrar y proteger estos equipos, no forman parte del dominio, suelen estar en los equipos clientes.
 
-• Incrementar el tamaño. • Añadir un disco físico a un volumen. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
-
-• LVM se divide en 3 capas principales: Physical Volume (PV), Volume Group(VG) y Logical Volume (LV). Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW Le decimos a un disco o a una partición que va a formar parte de un LVM y se va a convertir en un “physical volumen PV”. En este caso el PV se llama sda2.
-
-El PV se va a dividir en pequeños bloques llamados Physical Extend (PE). Generamos un grupo, en este caso se llama, vg_datos, y le vamos a asociar el PV sda2. . Uniendo los PE generaremos los volúmenes lógicos (LV). En este caso creamos dos, uno para los datos de usuario (/home) y otro para el directorio raíz (donde tenemos el Sistema operativo).
-
-• Supongamos que nos quedamos con poco espacio en el directorio raíz /. ¿Debemos de volver a reinstalar el SO y volver a crear otro disco mayor? No hace falta. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW Crearemos un nuevo PV. En este caso el PV se llama sdb1.
-
-Asociaremos el nuevo PV sdb1 a vg_datos. . Ampliaremos el LV_root con más PE para dotarlo de mayor tamaño.
-
-• Pero también podríamos tener un servidor web , y querer tener los datos del servicio web separados de lo que es el sistema operativo. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW Crearemos un nuevo PV. En este caso el PV se llama sdb1.
-
-Asociaremos el nuevo PV sdb1 a un nuevo VG, vg_web. Como dato negativo, indicar que no se puede usar espacio del vg_web, para aumentar el tamaño del lv_root, por lo que se podría no estar usando eficientemente el espacio. Generaríamos un nuevo LV, llamado Lv_web separado de los dos LV anteriores.
-
-• Aquí podemos ver las 3 capas que conforman LVM y sus comandos: • Esto se obtiene de realizar una instalación en Ubuntu usando LVM. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW Tenemos un PV, /dev/sda5. Tenemos 1 VG llamado vgubuntu.
-
-Tenemos dos volúmenes lógicos: root y swap_1.
-
-2 Tolerancia a fallos • La tolerancia a fallos de un SI es la característica que determina la capacidad del sistema a continuar funcionando cuando se ha producido un fallo. • Pueden producirse a nivel HW o SW. • La tolerancia a fallos se define en 3 niveles: • Tolerancia completa: el sistema continua funcionando, si no por poco tiempo, sin perder funcionalidad ni prestaciones.
-
-• Degradación aceptable: el sistema continua funcionando con una pérdida parcial de funcionalidades y prestaciones hasta que se soluciona la incidencia. • Parada segura: el sistema se para de manera ordenada para asegurar el entorno y los datos hasta que se resuelve la incidencia.
-
-• Si nos centramos en los fallos de HW, los fallos de disco son los más comunes y críticos, ya que suelen comportar pérdidas de datos. Por eso, que se utilicen diferentes soluciones ya vistos en este curso como la tecnología RAID o la tecnología que vamos a ver a continuación llamada CLUSTERIZACIÓN.
-
-Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
-
-3 Clusterización • La clusterización es una asociación de ordenadores interconectados con conexiones de alta velocidad i baja latencia para realizar un procesamiento en paralelo y de modo distribuido i así, conseguir mejorar en rendimiento, distribución de cargas, escalabilidad y alta disponibilidad.
-
-• Con estas características los clústeres dan soporte a aplicaciones que van desde la supercomputación hasta aplicaciones críticas, aplicaciones web, comercio electrónico, bases de datos de alto rendimiento, etc, ofreciendo un servicio de manera ininterrumpida, fundamental en muchos servicios como pueden ser: servicios médicos en hospitales, banca, finanzas, etc.
-
-Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
-
-• Las aplicaciones principales de los clústeres se pueden clasificar como: • Alto rendimiento: sistemas con gran capacidad de procesamiento y cálculo (científicas, criptografía,etc). • Balanceo de carga: los ordenadores del clúster se reparten la carga de trabajo y el tránsito de los clientes.
-
-• Alta disponibilidad: la redundancia de servidores permite la alta disponibilidad, ya que al trabajar en paralelo y con redundancia pueden asumir los fallos de algunos de estos equipos. Los nodos saben cuando falla un equipo y se reparten la carga que no puede manejar el equipo que falla.
-
-• Algunas ventajas que presentan los sistemas en clúster: • Facilidad de administración: se administra desde un único punto central, en local o en remoto. • Escalabilidad: es fácil de ampliar ya que solamente hace falta añadir nuevo nodos. • Según la característica de HW y SW, los clústeres se pueden clasificar en
-
-• Clusters homogéneos: misma configuración de HW y SW. Los programas se pueden ejecutar en cualquier equipo. • Clústers semihomogeneos: Configuración similar en cuanto a SW, pero con HW diferente. • Clusters heterogéneos: configuración de HW y SW diferente. • En cuanto a las estrategias para responder a la caída de un nodo • Activo-pasivo: hay nodos activos que ejecutan aplicaciones, y otros pasivos que están pendientes de que no fallen los activos.
-
-• Activo-activo: todos los nodos activos y ejecutando aplicaciones. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
-
----
-
-# 7.2 TEORIA UNITAT 7 PART 2
-
-Unidad 7: Seguridad, rendimiento y recursos
-
-Índice de la unidad 1ª Parte
-
-- Aseguramiento de la información.
-
-1.1 Asociación de discos. Volúmenes distribuidos: Windows(RAID), LVM (Linux).
-
-- Tolerancia a fallos.
-- Clusterización.
-
-2ª Parte
-
-- Copias de seguridad.
-- Planes y programaciones de copias de seguridad.
-- Utilidades y programas para realizar copias de seguridad.
+• Usuarios del dominio: Son los usuarios creados en el servidor en el directorio activo, registran toda la información necesaria para la definición de los datos propios incluyendo su nombre de usuario y contraseña.
 
 Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-### 4. Copias de seguridad
+- Añadir máquinas cliente al dominio.
 
-• Como administradores se pueden optimizar las condiciones de trabajo del sistema informático y minimizar los fallos de disco. • Cuando un disco se estropea, se pierde la información que contiene almacenada. • La única manera para recuperarla es tenerla almacenada en otro sitio.
+• Para incluir en el dominio los equipos que actuarán como cliente hay que configurar las propiedades de TCP/IP de cada una de las máquinas que vamos a unir al dominio, teniendo en cuenta que: • La dirección del controlador de dominio (que implementa funciones de DNS) es la del servidor de dominio.
 
-• Un backup o copia de seguridad es la copia y almacenamiento de los datos en un soporte diferente, de modo que, en caso de fallo del medio o soporte original, permite recuperar la información del sistema informático. • Los datos que se deben de guardar pueden ser datos como programas o archivos clave del sistema operativo.
+• Una vez te logas con un usuario configurado en AD ya te aparecerá en los equipos del dominio. • Para poder conectar un equipo al dominio, te debe contestar el ping al dominio creado en el controlador de dominio. • Si responde al ping, ya podremos unir el la máquina al dominio usando la cuenta de Administrador del AD o bien, un usuario configurado en el dominio.
 
-• En cuanto a los tipos o niveles de las copias de seguridad tenemos: • Nivel 0: copia total. Periódicamente, se hace una copia completa de todos los datos que se deben de guardar. • Nivel 1: copia diferencial. Es una copia parcial de los datos que han cambiado respecto a la última copia de nivel 0. Por tanto, hace falta tanto un copia actual como la copia total.
+• En las propiedades del equipo podremos comprobar que estamos adheridos al dominio.
 
-• Nivel 2: copia incremental. Es una copia parcial de los datos que han cambiado a la ultima copia de cualquier nivel. Las copias son más rápidas, y el volumen almacenado es inferior Ejemplo de políticas de seguridad • Un ejemplo de políticas de copias de seguridad podría ser una empresa que hace copias de nivel 0 (totales) el primer lunes de cada mes, copias de nivel 1 (diferenciales) los otros lunes del mes y copias incrementales el resto de días.
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • También, desde el servidor, si accedemos a : Servidor –Herramientas – Usuarios y equipos de AD
 
-• Un ejemplo: ¿Si se produce una avería el jueves de la segunda semana, que copias de seguridad haría falta recuperar? Respuesta: La copia total del primer lunes + la copia diferencial del segundo lunes + las copias incrementales de martes y miércoles de la segunda semana Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Accediendo al dominio y a “Computers”, aparecerá el equipo.
 
-Planes y programaciones de copias de seguridad • Las decisiones en el diseño o políticas de copias de seguridad se basan en un compromiso entre el coste que implica efectuarlas (tiempo, coste de dispositivos y soporte de datos, dedicación del administrador, interrupciones del servicio, etc.) y el coste que comportaría la pérdida de estos datos en caso de avería.
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-• Por tanto, para comenzar el diseño de un plan de copias de seguridad tenemos que analizar algunas características propias de los datos y responder a las siguientes preguntas: • ¿De que datos hacemos copias? Los responsables, no los administradores, deciden. • ¿Con que frecuencia haremos las copias de seguridad? Muy importante la periodicidad.
+- Eliminar clientes de un dominio.
 
-• ¿Cuándo programamos las copias? Las copias se deben de hacer cuando el sistema esté inactivo. • ¿Qué dispositivos utilizaremos? Factores a tener en cuenta: velocidad, capacidad, coste, discos duros externos, memoria flash USB, dispositivos Cloud , etc. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+• Desde el equipo que estamos conectados al dominio, entramos con la cuenta de administrador del dominio, y encontraremos la opción de “Desconectar del dominio”.
 
-Utilidades y programas para realizar copias de seguridad • El claro ejemplo de este tipo de copia sería la que se hace en Windows 10 – Copias de seguridad y restauración • Por defecto, guarda información en el escritorio, carpetas predeterminadas de Windows que incluye AppData, descargas, contactos, preferidos, etc.
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-• Si la unidad de destino es NTFS y tiene espacio: imagen del Sistema con los controladores y opciones de configuración del Registro. • En Sistemas Linux: orden Tar, rsync. • Ejemplo 1: tar –cvf Copia_etc.tar /etc -> crea copia con archivo tar del directorio /etc. • Ejemplo 2: tar –cvzf Copia_home.tgz /home -> copia los directorios de /home y comprímelos(formato tgz) Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+### 4. Crear y configurar usuarios por la interfaz gráfica
+
+• Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Crear usuarios
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Eliminar/Deshabilitar cuentas de usuario: cada cuenta de usuario asocia un SID (identificador de seguridad). Si eliminamos la cuenta, y después volvemos a crearla, el identificador SID será diferente. Por ello, no se podrán recuperar los permisos y privilegios de la cuenta eliminada.
+
+• Si creemos que volveremos a necesitar la cuenta, es mejor deshabilitarla. Si no la volveremos a usar, mejor eliminarla. • Se puede visualizar en la propia herramienta, con el símbolo de usuario con una flecha hacia abajo, si está deshabilitado.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Configurar la cuenta de usuarios: las propiedades más importantes a tener en cuenta son • General: Se puede modificar el Nombre, Apellido, etc. y además modificar información administrativa como la descripción, oficina, teléfono, email y página web.
+
+• Cuenta: Se puede configurar algunas características de la contraseña de usuario, las horas de inicio de sesión, la caducidad de la cuenta, desbloquear cuenta, etc. • Perfil: En esta ficha se pueden editar aspectos importantes como son la ubicación física del perfil del usuario y el fichero de comandos de inicio de sesión.
+
+• Miembro de: Se muestra el listado de grupos a los que el usuario pertenece.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 5. Crear y configurar grupos por la interfaz gráfica
+
+• Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Grupos en AD. • Los grupos son un tipo de contenedor que permiten definir conjuntos de usuarios y definir permisos basándonos en esa pertenencia al grupo, en lugar de hacerlo de modo individual, usuario por usuario, facilitando la administración.
+
+• Existen dos grandes tipos de grupos en el Directorio Activo de Windows: • Grupos de seguridad: este tipo de grupos permite definir permisos para recursos del dominio. Son los utilizados en las listas de control de accesos (ACLs) . Este tipo de grupos son los que se utilizarán en la administración de la red.
+
+• Grupos de distribución: no poseen características de seguridad, únicamente son un listado de usuarios para mensajería. • Dentro de los grupos de seguridad existen: • Grupo Universal: es un grupo cuyos permisos se extienden a diversos dominios. Además este tipo de grupos puede estar formado por usuarios o grupos de usuarios de diferentes dominios.
+
+• Grupo Global: es muy similar a los grupos universales, es decir pueden permitir el acceso a recursos de cualquiera de los dominios del árbol del Directorio Activo, pero con la salvedad de que todos los miembros del grupo deben pertenecer al mismo dominio. • Grupo Local del Dominio: es un grupo creado en un dominio con miembros que pueden provenir de otros dominios y que únicamente puede tener acceso a recursos dentro de su dominio.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Grupos predefinidos: • Los grupos predefinidos son grupos que ya están generados previamente por el sistema y no por los administradores y disponen de unos permisos acordes a las funciones asignadas.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Crear grupos usando la interfaz gráfica. • Por defecto, globales y de seguridad. • Se pueden añadir usuarios a los grupos, añadiéndoles como miembros del grupo.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 6. Crear y configurar unidades organizativas
+
+• Una unidad organizativa es un contenedor de objetos(usuarios, grupos, equipos, etc) pertenecientes a un mismo dominio. • Son útiles para reproducir la estructura de la empresa donde se halle el dominio. Si por ejemplo, tenemos 3 departamentos en una empresa, es útil, crear una unidad por departamento.
+
+• Se usa para dos aspectos fundamentales: • Para establecer directivas de seguridad. • Dentro de una unidad organizativa, se pueden incluir otras unidades organizativas. Y sin hacer falta crear más dominios o subdominios. • Se crea una unidad organizativa: • Se pueden añadir elementos como usuarios y grupos, simplemente, arrastrando los elementos a la unidad organizativa.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Para eliminar unidades organizativas, habrá que ir a Ver -> características avanzadas. • Y desmarcar la opción “Proteger objecto contra eliminación accidental”
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 7. Búsquedas y consultas de objetos en Windows Server
+
+• Permite buscar todo tipo de objeto: cuentas de usuario, impresoras, equipos, incluso carpetas compartidas.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Búsquedas mediante consultas comunes: • Las opciones avanzadas de las consultas comunes te abren un abanico de posibilidades buscando por usuario, grupo o contacto.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Uso de consultas guardadas: • Usuarios y equipos de Active Directory cuenta con una carpeta Consultas guardadas en la que puede crear, editar, guardar y organizar consultas guardadas.
+
+• Las consultas guardadas utilizan cadenas LDAP predefinidas para buscar sólo en las particiones de dominio especificadas
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 8. Permisos en Windows Server
+
+• Los sistemas operativos de la familia Windows poseen dos niveles de permisos para los recursos compartidos. • Permisos para carpetas compartidas: se aplican cada vez que un usuario quiere acceder a un archivo o carpeta de la red. • Permisos para archivos y carpetas (NTFS): se aplican sobre dispositivos con formato NTFS parar definir en mayor detalle las acciones permitidas.
+
+• De este modo, cuando accedemos en modo local a los archivos o carpetas sólo intervienen los permisos asociados al sistema de ficheros, en este caso NTFS. • Si se accede a través de la red se aplican los dos niveles de permiso. • En caso de conflicto o que hayan inconsistencias entre los permisos de cada tipo, se aplicarán los más restrictivos.
+
+• ¿Qué pasaría si el volumen estuviera formateado en FAT? Solo se aplican los permisos definidos para las carpetas compartidas en caso de que fuera compartido en red. Si hubiese que acceder en local, no habría ninguna restric- ción. Es decir, no se podría permitir o denegar el acceso.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 9. Permisos de recursos compartidos
+
+• En Windows server 2019, disponemos de la consola de administración del servidor, donde podemos encontrar el acceso a los recursos compartidos. • Para visualizar los permisos de cada recurso compartido, se debe hacer clic con el botón secundario del ratón y seleccionando propiedades.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Si pulsamos sobre “Personalizar permisos” accedemos permisos tanto NTFS (locales) como permisos de compartir.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • En la segunda pestaña se encuentran los permisos de “Recursos compartidos” y los asignados. • Si pulsamos sobre el botón “Editar” veremos que pueden “Permitir” o “Denegar” con el siguiente detalle: Control Total(cambiar, leer, modificar permisos sobre el recurso compartido), cambiar(crear carpetas y archivos además de modificar y borrar los archivos y directorios existentes), leer (lectura de archivos y la ejecución de archivos ejecutables que se hallen dentro del recurso compartido).
+
+• Los permisos de recursos compartidos solamente se pueden aplicar sobre carpetas, no sobre ficheros.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 10. Permisos NTFS
+
+• Los permisos NTFS complementan y amplían los permisos de recursos compartidos, siendo efectivo el más restrictivo. • Todos los archivos y carpetas de un volumen NTFS tienen asociada una ACL o lista de control de acceso que fija el nivel de acceso de un usuario o grupo que pretenda acceder al recurso.
+
+• Los permisos NTFS pueden ser aplicados a nivel de archivo, a diferencia de los permisos de recursos compartidos, los cuales únicamente pueden aplicarse a nivel de carpeta. • Al aplicar los permisos NTFS aparece un concepto: la herencia, la cual determina los permisos que se reciben sobre un determinado recurso provenientes de un nivel superior.
+
+• Se gestionan seleccionando el archivo o carpeta, y botón derecho, Propiedades, y seleccionando la pestaña “Seguridad”. • Los permisos que se pueden aplicar son: • Control total. • Cambiar. • Leer y ejecutar. • Mostrar el contenido de la carpeta. • Leer. • Escribir. • Lo que significa cada permiso queda más detallado en la siguiente imagen.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Los permisos específicos que aparecen en la primera columna, pueden editarse/consultarse individualmente. • Es importante entender que los permisos predeterminados, en realidad corresponden a unas combinaciones de permisos específicos, siendo estos últimos con lo que se trabaja, cuando se gestionan listas de control de acceso por línea de comandos.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Asignación de permisos NTFS • Al definir un permiso este puede ser permitido o denegado. • ¿Qué significa que los permisos son ACUMULATIVOS? Se evalúan los permisos otorgados al usuario y los otorgados a los grupos a los que pertenece el usuario. Si hay alguna incompatibilidad, prevalecerá la opción más restrictiva: Denegar (si está definido expli- citamente).
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Después tenemos que darle a la opción “Editar” y pestaña “Seguridad” del recurso compartido.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Permisos explícitos e implícitos ¿Qué es un permiso explícito? En la imagen siguiente, el grupo Ventas no tiene definidos permisos de escritura. A eso se denomina que el permiso de escritura está denegado implícitamente.
+
+El error que aparecería si un usuario del grupo Ventas quisiera crear un archivo en la carpeta
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Sin embargo, si añadimos un un usuario en la ficha permisos y le otorgamos el permiso explícito de escritura veremos que efectivamente puede escribir en el recurso , ya que la definición explícita del permiso para escribir prevalece sobre la denegación implícita del permiso escribir.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Si explicitamos la denegación del permiso de escritura para el usuario, podremos comprobar que efectivamente no puede escribir en la carpeta. • Se recomienda evitar el uso explícito de la denegación de permisos salvo que se considere que no existe otro modo para obtener un nivel específico de permiso para un determinado grupo.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 11. Herencia
+
+• Al crear un archivo o carpeta en un volumen NTFS ese objeto hereda automáticamente los permisos de su carpeta contenedora, y a la inversa: cuando asignamos permisos a una carpeta contenedora, los permisos se propagan automáticamente hacia los archivos y subcarpetas contenidas en el recurso.
+
+• La utilidad de la herencia de permisos radica en: • el administrador no tiene que asignar manualmente los permisos a los archivos y subcarpetas que haya contenidas dentro del recurso principal, y que fácilmente pueden ser miles. • el aumento de la seguridad al descartar posibles errores de asignación de permisos realizados manualmente.
+
+• Ejemplo de cambio de permisos de un objeto hijo: • En primer lugar vamos a modificar los permisos de seguridad de la carpeta “compartir” asignándole al grupo alumnos específicamente el permiso de modificar.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • A continuación, creamos una subcarpeta en “Compartir” • Si observamos los permisos de un objeto que está heredando permisos, veremos que las casillas de verificación están (completa o parcialmente) inaccesibles. En este caso la subcarpeta que hereda los permisos, hereda también los permisos del grupo alumnos
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Como primer método para deshabilitar la herencia, se puede denegar explícitamente los permisos. Si el permiso heredado es de concesión, la denegación está habilitada. Para este caso, podemos denegar el permiso heredado de escritura.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Como segundo método, se puede eliminar la herencia del recurso del nivel superior. • En este caso, vemos que la carpeta C:\compartir hereda los permiso de C:\. • Para eliminar la herencia, debemos hacer clic en “Deshabilitar herencia” y nos aparecerá un diálogo para dejar los permisos explícitos o bien para eliminar todos los permisos.
+
+• Como norma general, elegiremos la primera opción: convertirlos en permisos explícitos.
 
 ---
 
-# 7.3 TEORIA UNITAT 7 PART 3
+# 6.2 TEORIA UNITAT 6 PART 2
 
-Unidad 7: Seguridad, rendimiento y recursos
+Unidad 6: Administración del acceso al dominio
 
-Índice de la unidad 1ª Parte
+Índice de la unidad 1ª Parte 1. Términos de AD que se deben entender para una buena administración. 2. Añadir máquinas cliente al dominio. 3. Eliminar clientes de un dominio. 4. Crear y configurara usuarios por la interfaz gráfica. 5. Crear y configurar grupos por la interfaz gráfica.
 
-- Aseguramiento de la información.
+6. Crear y configurar unidades organizativas. 7. Búsquedas y consultas de objetos en Active Directory. 8. Permisos en Windows Server. 9. Permisos de recursos compartidos.
 
-1.1 Asociación de discos. Volúmenes distribuidos: Windows(RAID), LVM (Linux).
-
-- Tolerancia a fallos.
-- Clusterización.
+- Permisos NTFS.
+- Herencia.
 
 2ª Parte
 
-- Copias de seguridad.
-- Planes y programaciones de copias de seguridad.
-- Utilidades y programas para realizar copias de seguridad.
+- Directivas de grupo.
+
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+### 11. Directivas de grupo
+
+• Las directivas de grupo (Group Policy Object) son una serie de configuraciones creadas por el administrador que se aplican a objetos del dominio. • El administrador controla los entornos de trabajo de los usuarios del dominio, los equipos y el comportamiento de distintos objetos.
+
+• Son un conjunto de reglas que facilitan las labores de administración de los usuarios y equipos. • Algunos de los aspectos más útiles que se pueden definir por parte del administrador mediante las directivas son: • Los comandos de inicio de sesión. • Características de las directivas de seguridad de las cuentas de usuario.
+
+• Configuración de la apariencia de la sesión de usuario. • Redirección del acceso a ciertas carpetas o archivos centralizados • Distribución de software a los equipos clientes. • Permisos otorgados a las cuentas de usuarios y grupos, etc. • Cuando se pone en marcha un dominio, se crean dos directivas de grupo llamadas
+
+• Default Domain Controllers: referenciada a la unidad organizativa Domain Controllers. • Default Domain Policy:referenciada al dominio. Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+• Si elegimos la Directiva “Default Domain Policy” y damos al botón derecho “Editar”, nos saldrá una serie de opciones pudiendo llegar hasta: Configuracion de Equipo – Configuración de Windows – Configuración de Seguridad – Directivas Locales – Asignación de derechos de usuario.
+
+• Aquí se nos presentan muchas opciones. Supongamos, que queramos cambiar la directiva para apagar el equipo. • Cuando la seleccionamos, no está habilitada. Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+• Si por ejemplo, asignamos solamente permisos a los administradores del dominio, comprobaremos que solamente la pueden apagar los administradores. • Escribiendo en la consola CMD: gpupdate /force se aplican las directivas. • Hay infinidad de configuraciones diferentes a implementar.
+
+• También se pueden implementar directivas de grupo directamente sobre unidades organizativas. Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
+
+---
+
+# 6.3 TEORIA UNITAT 6 PART 3
+
+Unidad 6: Administración del acceso al dominio
+
+Índice de la unidad 1ª Parte 1. Términos de AD que se deben entender para una buena administración. 2. Añadir máquinas cliente al dominio. 3. Eliminar clientes de un dominio. 4. Crear y configurara usuarios por la interfaz gráfica. 5. Crear y configurar grupos por la interfaz gráfica.
+
+6. Crear y configurar unidades organizativas. 7. Búsquedas y consultas de objetos en Active Directory. 8. Permisos en Windows Server. 9. Permisos de recursos compartidos.
+
+- Permisos NTFS.
+- Herencia.
+
+2ª Parte
+
+- Directivas de grupo.
 
 3ª Parte
 
-- Recuperación en caso de fallo del sistema.
-- Puntos de restauración.
-- Copias de seguridad del sistema.
-- Opciones de arranque avanzadas.
-- Discos de arranque y de recuperación.
+### 13. Perfiles de usuario
 
 Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-### 5. Recuperación en caso de fallo del sistema
+• Podemos definir un perfil como aquellos aspectos de configuración del equipo y del entorno de trabajo propios del usuario y que además, son exportables a otras máquinas de manera transparente al mismo. • Conseguimos que el usuario, independientemente del equipo en el que se inicie la sesión, disponga de un entorno de trabajo similar.
 
-• Ya hemos comentado, que por mucha prevención y tolerancia a fallos que tengamos, siempre puede producirse una averia, un ataque o un conjunto de circunstancias que afecten a la disponibilidad del sistema. • El objeto pues es, reducir el tiempo de recuperación del sistema y que vuelva a estar operativo lo antes posible.
+• Existen 3 tipos de perfiles: • Perfiles locales: se almacenan en el equipo y configura el entorno de trabajo de cada usuario. No se tratan en esta unidad ya que no se tratan a nivel de dominio. • Perfil móvil: el usuario configura el entorno de trabajo a su gusto en un equipo y al iniciar sesión en cualquier otra estación de trabajo, la configuración se importa y aplica en ese nuevo equipo.
 
-• ¿De qué técnicas, herramientas disponemos para poder recuperar un sistema con la mayor premura posible?
+• Perfil obligatorio: un usuario con permisos de administración define la configuración del entorno de trabajo, y se aplica a los usuarios del dominio. Los usuarios pueden modificarla durante la sesión, pero al iniciar otra sesión, se vuelve a cargar la configuración del perfil obligatorio.
 
-- Puntos de restauración
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-• A veces, debido a instalar mál algún controlador o se ha realizado una instalación defectuosa, el sistema se queda inestable. • En este caso, es interesante poder realizar una “restauración” a un punto anterior del sistema. • El punto de restauración es la representación del estado de los archivos del sistema del equipo en un momento dado.
+Perfiles móviles • Consiste en una serie de ficheros de configuración del entorno de trabajo, que se aplican a todos los equipos de la red desde donde pueda comenzar sesión el usuario. • Estos ficheros de configuración, deben almacenarse en una ubicación accesible por los equipos clientes, como por ejemplo, en el controlador de dominio.
 
-• Es una especie de fotografía del estado de la base de datos del sistema • Aparte de utilizarlo en Windows, también se usa por ejemplo en Oracle VM VirtualBox, con las instantáneas. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+• Vamos a ver un ejemplo sobre como configurarlo. • Crearemos una carpeta, por ejemplo, en C:\ , donde se almacenen los perfiles. La carpeta se llama “perfiles”. • Le asignaremos permisos para compartir con control total a Todos o permisos para Cambiar y Leer. • También asignaremos al grupo Usuarios del dominio permisos NTFS para permitir el Control Total.
 
-- Copias de seguridad del sistema
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-• Una copia de seguridad del sistema es una imagen exacta de la unidad o partición que incluye el sistema operativo, su configuración y los programas y archivos instalados. • La restauración de una imagen del sistema no permite recuperar archivos individuales, así que se recomienda hacer copias de seguridad normales de archivos personales si se quiere tener la posibilidad de restaurar un archivo o archivos concretos.
+Perfiles móviles • Una vez creada la carpeta donde se almacenan los perfiles, en los usuarios que queramos crear perfiles: • Hay que crear en la pestaña Perfiles, la ruta de acceso al perfil. Se debe especificar la ruta añadiendo la variable %username% que permitirá configurar un perfil para cada usuario creado.
 
-• Herramientas de pago como Ghost o Acronis , como algunas de código libre como Clonezilla, permiten crear y restaurar imágenes de unidades enteras y de particiones de discos duros. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+• Al configurar el anterior paso, creará una carpeta llamada “nombre del usuario.V6”, con todo el perfil configurado. Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-- Opciones de recuperación avanzadas
+Perfiles móviles • Para comprobar que efectivamente, funciona, puedes entrar en un equipo del dominio y configurar un acceso directo en el escritorio, y después, cerrar la sesión. • Si posteriormente al paso anterior, inicias sesión en otro equipo del dominio, te debería aparecer el acceso directo configurado en el escritorio.
 
-• Las opciones de arranque avanzadas consisten en un menú de texto que ofrecen herramientas y opciones que permiten iniciar el sistema con un número mínimo de controladores de dispositivos y de servicios. • Se usa cuando el sistema no funciona correctamente. • Se accede pulsando la tecla SHIFT + Reiniciar.
+Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-• Al elegir Solucionar Problemas accedemos a la imagen de la derecha: Este video es muy interesante: https://www.youtube.com/watch?v=x7uyH3oWqYU Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+Perfiles obligatorios • Un perfil obligatorio se configura del mismo modo que un Perfil Movil. • Una vez configurado el perfil obligatorio, debemos acceder a él, y modificar el archivo NTUSER.DAT a NTUSER.MAN. • Si no te da permisos para modificar el nombre del fichero en el paso anterior, asigna permisos NTFS al fichero para el grupo Administradores y ya podrás modificar la extensión del archivo.
 
-• Si elegimos Restablecer este equipo aparecen: • En la opción Mantener mis archivos te mantendría los archivos propios del usuario (Documentos, aplicaciones, etc) y reinstalaría el SO en sí. • En la opción Quitar todo, lo formatea y lo reinstala todo. Este video es muy interesante: https://www.youtube.com/watch?v=x7uyH3oWqYU Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+• Una vez cambiado el nombre, ya sabe el sistema, que no debe almacenar los cambios realizados en el perfil. Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-• Si elegimos Opciones avanzadas aparecen: • La opción “Recuperación de imagen del sistema” nos permitiría usar una imagen del sistema concreta que tengamos guardada. En esta unidad hemos visto como hacerlas. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+Carpetas personales • Tanto en los perfiles móviles como en los obligatorios, es muy usual configurar carpetas personales a las que únicamente tiene el usuario acceso. • Para configurarlo, basta crear una carpeta a la que se tenga acceso desde la red. Un sitio interesante para configurarlo en una empresa, sería configurándola en un NAS, un dispositivo de almacenamiento que se puede acceder desde cualquier equipo conectado a la red.
 
-- Discos de arranque y de recuperación
+• Para no tener que añadir manualmente la carpeta personal usuario por usuario, se puede usar la variable %username%, como ya hemos visto anteriormente. Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
-• En caso de que nuestro equipo no pueda arrancar ni con las Opciones Avanzadas habrá que usar un CD, DVD o USB para acceder al entorno de recuperación del sistema. • Una vez iniciado el proceso de instalación, nos ofrece la posibilidad de recuperar el equipo, como vemos en la siguiente imagen.
-
-Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
-
-• Tras darle la opción “Reparar equipo”, ya nos aparecerá la siguiente pantalla. • Y al seleccionar la opción “Solucionar problemas”, ya vamos a la siguiente imagen. Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
-
-• La opción Restablecer este Equipo no aparece si inicias las opciones de recuperación desde un medio externo como en este caso. • Sólo aparece esa opción si accedes desde el propio sistema, en el supuesto que puedas arrancarlo. • Te permite otras opciones como Restaurar sistema a un punto anterior, reparar los archivos de inicio, recuperar desde una imagen del sistema, o utilizar las configuraciones de inicio seguro.
-
-Unidad 7: Seguridad, rendimiento y recursos Sistemes Informàtics: 1er DAW
+• Se configuraría con la ruta generada en la pestaña “Compartir” y se añadiría %username%. ejemplo: \\DC01\carpetapersonal\%username% Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW
 
 ---

@@ -3,7 +3,7 @@ layout: default
 title: "Índex — Programació d'Intel·ligència Artificial amb Python — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "CE IA i Big Data · Cursos d'Especialització (IA & Big Data / Ciberseguretat)"
-next_url: "./ut05/index.html"
+next_url: "./ut01/index.html"
 next_label: "📘 UD1 Completa (1 pàgina) ➡️"
 ---
 
@@ -20,28 +20,28 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
-| **UD1** | **Creació i Configuració de l'Entorn de Treball (Linux i Python)** | 2 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UD2** | **Fonaments de Programació en Python** | 2 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UD1** | **Creació i Configuració de l'Entorn de Treball (Linux i Python)** | 2 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UD2** | **Fonaments de Programació en Python** | 2 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
 | **UD3** | **Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn** | 7 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UD4** | **Xarxes Neuronals i Deep Learning** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UD4** | **Xarxes Neuronals i Deep Learning** | 1 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
 
 ## UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python)
 
 `CE IA i Big Data · UD1 · 2 apartats`
 
-[**📘 Obrir UD1 Completa en una sola pàgina**](./ut05/index.md)
+[**📘 Obrir UD1 Completa en una sola pàgina**](./ut01/index.md)
 
-- [**1.1 Instalación entorno de trabajo.**](./ut05/ut0501.md)
-- [**1.2 SO LINUX MINT MATE**](./ut05/ut0502.md)
+- [**1.1 Instalación entorno de trabajo.**](./ut01/ut0101.md)
+- [**1.2 SO LINUX MINT MATE**](./ut01/ut0102.md)
 
 ## UD2 — Fonaments de Programació en Python
 
 `CE IA i Big Data · UD2 · 2 apartats`
 
-[**📘 Obrir UD2 Completa en una sola pàgina**](./ut04/index.md)
+[**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Python apuntes de clase**](./ut04/ut0401.md)
-- [**2.2 Python para todos (libro).**](./ut04/ut0402.md)
+- [**2.1 Python apuntes de clase**](./ut02/ut0201.md)
+- [**2.2 Python para todos (libro).**](./ut02/ut0202.md)
 
 ## UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn
 
@@ -61,6 +61,6 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 `CE IA i Big Data · UD4 · 1 apartats`
 
-[**📘 Obrir UD4 Completa en una sola pàgina**](./ut02/index.md)
+[**📘 Obrir UD4 Completa en una sola pàgina**](./ut04/index.md)
 
-- [**4.1 Continguts i Recursos**](./ut02/ut0201.md)
+- [**4.1 Continguts Teòrics i Recursos**](./ut04/ut0401.md)

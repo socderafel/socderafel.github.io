@@ -1,310 +1,198 @@
 ---
 layout: default
-title: "UD4 — Sistema de Noms de Domini (DNS) · Temari Complet"
+title: "UD5 — Servei de Correu Electrònic · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT5 Completa"
-prev_url: "../ut06/ut0604.html"
-prev_label: "⬅️ 3.4 Servidor DHCP"
+badge: "2n SMX · Grau Mitjà · UD5 — Servei de Correu Electrònic"
+prev_url: "../ut04/ut0402.html"
+prev_label: "⬅️ 4.2 Configuración Virtual hosting"
 next_url: "../ut05/ut0501.html"
-next_label: "4.1 UD3 Servidor de Nombres de Dominio SMX ➡️"
+next_label: "5.1 Presentació ➡️"
 ---
 
-# 📘 UD4 — Sistema de Noms de Domini (DNS) (Unitat Completa)
+# 📘 UD5 — Servei de Correu Electrònic (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 UD3 Servidor de Nombres de Dominio SMX**](./ut0501.md)
+- [**5.1 Presentació**](./ut0501.md)
+- [**5.2 El correu electrònic**](./ut0502.md)
+- [**5.3 Les Guest additions**](./ut0503.md)
 
 ---
 
-# 4.1 UD3 Servidor de Nombres de Dominio SMX
+# 5.1 Presentació
 
-> **📌 Introducció de la Unitat**
-> **Guia d'estudi**
->
-> :
->
-> **El servei de 'Resolució de noms” (DNS) s'ha de conèixer del curs passat al haver abordat el mòdul de “Xarxes d'Àrea Local” (XAL). En aquesta unitat didàctica anem a profunditzar en les peculiaritats de la seua configuració i funcionament, principalment en sistemes oberts basats en GNU/Linux, però també privatius com Windows.**
->
-> **Organització las sessions (cada grup les adaptarà al seu ritme):**
->
-> **Sessió Contingut
-> Estudi enunciat de l'escenari + Organització grupal
-> Treball individual i amb l'equip
->
-> ****Treball individual i amb l'equip****
->
-> Treball individual i amb l'equipReunió grupal de seguiment + Entrega acta
-> Trabajo individual
-> Trabajo individual
-> Reunión grupal de seguimiento + Entrega actaTrabajo individual
-> Trabajo individual**Preparación en equipo de la presentación**
->
-> Trabajo individualCorrección cuestionario por paresEvaluación compañerosAutoevaluación final
->
-> Objetivos:
-> ****conocer los fundamentos y peculiaridades generales asociadas al funcionamiento del servicio DNS.
->
-> aprender a instalar y configurar el servicio DNS tanto sistemas libres como en propietarios.
->
-> desarrollar habilidades de búsqueda y obtención de información específica para su posterior aplicación a situaciones diversas.
->
-> participar en la resolución de problemas técnicos.
-> **desarrollar destrezas de exposición pública de ideas y conceptos.**
-> **desarrollar habilidades de responsabilidad hacia el trabajo y coordinación de tareas en grupo.********
-
-> **📌 🏷️ Apunt de la Unitat**
-> Videotutorial que dóna una "Explicació sobre els Nivells principals de Domini, en anglès TLD (Top Level Domain), els seus tipus i usos"
->
-> https://youtu.be/9Li57mp7tr4
-
-> **🔗 Recurs Web: Enunciado Caso Práctico**
-> [**🌐 Obrir recurs extern (https://drive.google.com/file/d/0B-luGGz2bmtdakxINUc1bGpPVzhuNVZBR3VSOEw1a2ZVdmRN/view?usp=sharing) ↗️**](https://drive.google.com/file/d/0B-luGGz2bmtdakxINUc1bGpPVzhuNVZBR3VSOEw1a2ZVdmRN/view?usp=sharing)
-
-> **📌 🏷️ Apunt de la Unitat**
-> Ajuda [dig](https://www.hostinger.es/tutoriales/comando-dig-linux/)
+> **🔗 Recurs Web: INSTALAR y Configurar Postfix🐭 (Dovecot+⚡Thunderbird+Gmail)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=kWNyiZfTp4E) ↗️**](https://www.youtube.com/watch?v=kWNyiZfTp4E)
 
 ---
 
-UD3 Servidor de Nombres de Dominio SMX
+Presentació
 
-Sistemas microinformáticos y redes Servicios en Red U2. Servidores de Nombre de Dominio. U2. Servidores de Nombre de Dominio.
+El correu electrònic
 
-........................................................................................................
+Ray Tomlinson, el pare del correu electrònic - 1971 - (@)
 
-1.
+Funcionament del servei
 
-Introducción
+Els comptes de correu electrònic El concepte correu electrònic (E-mail, Electronic mail) fa referència al sistema que permet redactar, enviar i rebre missatges mitjançant sistemes de comunicació electrònica.
 
-.....................................................................................................................................
+Instal·lació d'un servei de correu electrònic alumne@cicles.edu representa l'adreça electrònica d'un usuari alumne que es connecta a una màquina el domini de la qual és cicles.edu i es valida com a alumne en cicles.edu.
 
-2.
+#### 3.2. Protocols de correu
 
-Sistemas de nombres planos y jerárquicos
+https://www.rincondelemail.es/pop-imap-smtp/
 
-......................................................................................
+4 Seguretat i vulnerabilitats
 
-3.
+### 1. Correu brossa
 
-Espacio de nombres de dominio DNS
+### 2. Phishing
 
-.............................................................................................
+### 3. Bulos (Hoax) i cadenes
 
-4.
+---
 
-Resolución de un nombre de dominio
+# 5.2 El correu electrònic
 
-.............................................................................................
+El correu elctrònic
 
-5.
+Document resum de l’obra original de https://corriol.github.io/sxe/UD08/index.html Llicenciat sota la​ ​Llicència Creative Commons Reconeixement CompartirIgual 4.0
 
-Transferencias de Zona
+### 1. Un poc d'història
 
-..................................................................................................................
+Fou durant una profunda reforma del servei de correus britànic encetada per James Chalmers i Rowland Hill, a mitjan segle XIX, quan es va emetre el primer segell postal. De fet, fins al moment de l’emissió dels segells era el destinatari qui pagava l’enviament en funció dels quilòmetres recorreguts en detriment del pes. De fet, va ser Hill qui va proposar que el pagament es realitzés en funció del pes.
 
-6.
+Si bé, la implantació dels segells va tenir lloc a mitjan segle XIX, es considera que el format carta va sorgir amb la invenció de l’escriptura. De fet, la carta més antiga que es coneix és un papir escrit l’any 2200 a. C. per part del Faraó Pepi II. Ara bé, és inevitable afirmar que la utilització de la carta i els segells, a títol privat, va quedar desbancada progressivament amb l’aparició del correu electrònic i, posteriorment, els servidors web de correu electrònic gratuïts davant de la facilitat i la immediatesa a l’hora d’enviar i rebre les missives.
 
-Registros de recursos DNS
+Pedestal de Pepi II
 
-.............................................................................................................
+Iry-Hor​.​ ​Pedestal de Pepi II​ (By Iry-Hor (Own work) [CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons)
 
-7.
+En l'actualitat, moltes són les empreses de serveis que, sota la justificació de protegir el medi ambient, opten per l'enviament de documents de caràcter oficial (factures, informes, avisos, etc.) per correu electrònic en lloc de fer-ho mitjançant el correu ordinari.
 
-Reenviadores.
+### 2. El correu electrònic
 
-................................................................................................................................
+A grans trets, és inevitable destacar que el sorgiment dels servidors web de correu electrònic gratuïts (​webmail​) va comportar facilitar l’accés als comptes de correu electrònic i les comunicacions per Internet. Ara bé, l’element fonamental d’aquestes comunicacions per la xarxa és el correu electrònic, que va sorgir com a eina de comunicació interna entre diferents organismes oficials nord-americans.
 
-8.
+De fet, fou l'any 1971 quan l'enginyer elèctric Ray Tomlinson va realitzar el primer intercanvi de correus electrònics entre dos ordinadors mitjançant dos programes (de transmissió i recepció) que havia creat uns anys enrere. Val a dir que Tomlinson formava part de l’empresa Bolt Beranek and Newman, que havia estat contractada pel Departament de Defensa dels Estats Units per a la creació d'una xarxa de comunicació entre ordinadors per l'Agència d’Investigació de Projectes Avançats (ARPA, ​Advanced Research Projects Agency​). La xarxa de comunicació entre ordinadors es va anomenar ARPANET i és considerada per molts com l'origen de l'actual xarxa d'Internet.
 
-Referencias.
+Ray Tomlinson, el pare del correu electrònic
 
-...................................................................................................................................
+Ray Tomlinson La intenció de Tomlinson era facilitar la comunicació entre dos ordinadors connectats a la xarxa ARPANET, ja que, fins al moment, aquesta comunicació entre usuaris es basava a col·locar en un directori predeterminat l'arxiu que contenia el missatge que es volia transmetre.
 
-Sistemas microinformáticos y redes Servicios en Red
+Posteriorment, quan l'usuari volia conèixer si tenia correu, accedia a aquest directori i en mirava el contingut. Per tant, la creació de Tomlinson no sols va facilitar la comunicació entre dos ordinadors, sinó que va provocar que aflorés una nova qüestió consistent en la necessitat d'identificar les màquines emissores i receptores.
 
-### 1. Introducción
+En conseqüència, amb la intenció de definir la separació entre el nom de l'usuari i la màquina des d'on s'enviava o rebia el correu electrònic, Tomlinson va optar pel símbol arrova (@), això és, un caràcter que, per exemple, no aparegués en els noms propis de les persones.
 
-El Servicio de Nombres de Dominio (DNS) es una forma sencilla de localizar un ordenador en Internet. Todo ordenador conectado a Internet se identifica por su dirección IP: una serie de cuatro números de hasta tres cifras separa- das por puntos. Sin embargo, como a las personas les resulta más fácil acor- darse de nombres que de números, se inventó un sistema (DNS - Domain Name Server) capaz de convertir esos largos y complicados números, difíciles de recordar, en un sencillo nombre.
+L'esquema de les adreces de correu electrònic és usuari@servidor, per exemple, serveisenxarxa@gmail.com. Anys després, es va crear el protocol simple de transferència de correu (SMTP, ​simple mail transfer protocol​), això és, un protocol estàndard que s'utilitzava per intercanviar missatges entre servidors mitjançant connexions de punt a punt. De fet, aquells usuaris que volien consultar el correu electrònic havien d'accedir mitjançant el seu ordinador a un servidor al qual sol·licitaven la descàrrega dels missatges que haguessin rebut.
 
-En realidad el servicio de nombres de dominio tiene más usos y mucho más importantes que el anterior. Por ejemplo, este servicio es fundamental para que el servicio de correo electrónico funcione. Un Servidor de Nombres de Dominio es una máquina cuyo cometido es buscar a partir del nombre de un ordenador la dirección IP de ese ordenador; y viceversa, encontrar su nombre a partir de la dirección IP
+Posteriorment, fou durant els anys 80 del segle XX quan, davant del notable augment d'usuaris que disposaven d'accés a la xarxa d'Internet, va sorgir la necessitat de crear un protocol que facilités l'accés a Internet i, alhora, a serveis bàsics com el correu electrònic. De fet, fou així com va néixer el protocol de l'oficina de correus (POP, ​Post Office Protocol​) adreçat a la gestió dels correus electrònics (E-mail, ​Electronic Mail​).
 
-### 2. Sistemas de nombres planos y jerárquicos
+Val a dir que aquest protocol va anar evolucionant fins al sorgiment de versions avançades i millorades com, per exemple, el POP2 i el POP3, que oferien una millor gestió dels missatges de correu electrònic. Va ser així com, mitjançant els protocols SMTP i POP, va quedar resolta la transmissió de correus electrònics mitjançant la xarxa d'Internet, tot i que, amb aquests protocols només es podien enviar missatges en format de text ASCII. Val a dir que durant un temps es van utilitzar programes que facilitaven tant la codificació com la descodificació fins que, a principis dels anys 90, van sorgir les extensions de correu d'Internet de multipropòsit (MIME, ​Multipurpose Internet Mail Extensions​).
 
-En un sistema de nombres planos, todos los nombres deben ser absoluta- mente únicos: no puede haber 2 máquinas con el mismo nombre. Para organi- zaciones grandes, esto no sirve, pues podría haber conflictos de nombres, to- dos los Administradores tendrían que conocer todos los nombres usados en toda la red.
+Per últim, és important destacar que, a mitjan anys 90 va sorgir el protocol d'accés als missatges d’Internet (IMAP, ​Internet Message Access Protocol​), que oferia moltes més funcionalitats que el protocol POP i, a més, permetia integrar el correu electrònic a un navegador web.
 
-En un sistema de nombres jerárquicos existe una jerarquía de nombres que establece la manera de construir el nombre de un host. El propio nombre aporta información de la pertenencia del host a determinada categoría El sistema de nombres DNS es un sistema jerárquico, es decir, tiene estructura de árbol de forma que cada nodo del árbol tiene un significado.
+Actualment, el protocol simple de transferència de correu (SMTP, ​Simple Mail Transfer Protocol​) s'utilitza per l'enviament dels correus electrònics i, d'altra banda, el protocol de l'oficina de correus (POP, ​Post Office Protocol​) en la seva tercera versió (POP3) s'utilitza per a la recepció dels correus.
 
-### 3. Espacio de nombres de dominio DNS
+### 2. Funcionament del servei
 
-El espacio de nombres de dominio DNS, como se muestra en la ilustración si- guiente, se basa en el concepto de un árbol de dominios con nombre. Cada ni- vel del árbol puede representar una rama o una hoja del mismo. Una rama es un nivel donde se utiliza más de un nombre para identificar un grupo de re- cursos con nombre. Una hoja representa un nombre único que se utiliza una vez en ese nivel para indicar un recurso específico.
+L'enviament i la recepció de correus electrònics comporta la intervenció de més d'un protocol d'aplicació i, en conseqüència, de més d'un tipus de servidor. Aquesta separació en funció de diferents protocols es basa en el fet que la comunicació via correu electrònic entre dos usuaris no és un procés client-servidor síncron. És a dir, quan un usuari envia un correu electrònic no té
 
-Sistemas microinformáticos y redes Servicios en Red Cualquier nombre de dominio DNS que se utiliza en el árbol es, técnicamente, un dominio. Sin embargo, la mayor parte de las explicaciones de DNS identifi- ca los nombres de una de las cinco formas posibles, según el nivel y la forma en que se utiliza normalmente un nombre. Por ejemplo, el nombre de dominio DNS registrado para Microsoft (microsoft.com.) se conoce como un dominio de segundo nivel. Esto se debe a que el nombre tiene dos partes (llamadas eti- quetas) que indican que se encuentra dos niveles por debajo de la raíz o la parte superior del árbol. La mayor parte de los nombres de dominio DNS tie- nen dos etiquetas o más, cada una de las cuales indica un nuevo nivel en el ár- bol. En los nombres se utilizan puntos para separar las etiquetas.
+la certesa que el destinatari estigui connectat i, en conseqüència, el missatge haurà de ser emmagatzemat per poder ser llegit més endavant. Dins d'aquesta comunicació asíncrona intervenen algunes funcionalitats ben diferenciades com són l'agent de transferència de correu (MTA,​ Mail Transfer Agent​), l'agent de lliurament de correu (MDA, ​Mail Delivery Agent​) i l'agent d'usuari de correu (MUA, ​Mail User Agent​).
 
-Además de los dominios de segundo nivel, en la siguiente tabla se describen otros términos que se utilizan para describir los nombres de dominio DNS se- gún su función en el espacio de nombres.
+Els ​agents de transferència de correu​ (MTA, ​Mail transfer Agent​) utilitzen el protocol simple de transferència de fitxers (SMTP, ​Simple Mail transfer Protocol​) per comunicar-se amb altres agents de transferència de correu i amb els clients de correu electrònic. Val a dir que els agents de transferència de correu s'anomenen “servidors de correu”, atès que s'encarreguen de rebre el correu i lliurar-lo on correspongui.
 
-Sistemas microinformáticos y redes Servicios en Red Tipo de nom- bre Descripción Ejemplo Dominio raíz Parte superior del árbol que representa un ni- vel sin nombre; a veces, se muestra como dos comillas vacías (""), que indican un valor nulo. Cuando se utiliza en un nombre de do- minio DNS, empieza con un punto (.) para de- signar que el nombre se encuentra en la raíz o en el nivel más alto de la jerarquía del do- minio. En este caso, el nombre de dominio DNS se considera completo e indica una ubi- cación exacta en el árbol de nombres. Los nombres indicados de esta forma se llaman nombres de dominio completos (FQDN, Fully Qualified Domain Names).
+D'altra banda, els​ agents de lliurament de correu​ són els “servidors de recollida de correu”, és a dir, la seva missió és copiar els missatges del servidor de correu a la bústia de correu de l'usuari. Considerant que aquests agents permetran als clients de correu la recol·lecció dels missatges emmagatzemats en bústies remotes, és possible afirmar que els protocols POP i IMAP són agents MDA (mail Delivered Agent).
 
-Un sólo punto (.) o un punto usado al final del nombre, como "ejemplo.microsoft.- com.". Dominio de ni- vel superior Nombre de dos o tres letras que se utiliza para indicar un país, una región o el tipo de organización que usa un nombre. Para obte- ner más información. ".com", que indica un nombre registrado para usos comerciales o empresariales en Internet.
+Per últim, els ​agents d'usuari de correu​ són programes que executen l'usuari per la lectura del correu entrant, o bé, enviar missatges de correu electrònic. Els agents d'usuari de correu (MUA, mail user agent) es comuniquen amb els agents de transferència de correu (MTA) mitjançant el protocol simple de transferència de correu. Aquests programes són els anomenats clients de correu i posseeixen una interfície que faciliten a l'usuari l'edició, recepció i enviament de correus electrònics. A mode d'exemple, podríem destacar clients de correu com l'Outlook, Thunderbird, etc.
 
-Dominio de segundo nivel Nombres de longitud variable registrados que un individuo u organización utiliza en Internet. Estos nombres siempre se basan en un dominio de nivel superior apropiado, según el tipo de organización o ubicación geográfica donde se utiliza el nombre.
+Tal com mostra la figura següent tots aquests elements tenen força rellevància dins del procés bàsic d'enviament d'un correu electrònic. Esquema del procés de transmissió de correu electrònic
 
-"microsoft.com.", que es el nombre de dominio de segundo nivel registrado para Microsoft por el registrador de nombres de dominio DNS de Internet. Subdominio Nombres adicionales que puede crear una organización derivados del nombre de dominio registrado de segundo nivel. Incluyen los nombres agregados para desarrollar el árbol de nombres de DNS en una organización y que la dividen en departamentos o ubicaciones geográficas.
+​Esquema del procés de transmissió de correu electrònic​ (​CC BY-SA​) En aquest cas, l'usuari bernat@tardor vol enviar un correu electrònic a l'usuari mar@estiu. Per fer-ho, l'usuari redacta un missatge amb el seu agent d'usuari de correu (MUA) i l'envia. Un cop l'agent de transferència de correu (MTA) de tardor rep el missatge, determina el punt d'entrega. Com que no es tracta d'un compte d'un usuari local (tenen dominis diferents), certifica que bernat@tardor té permís per utilitzar aquest agent de transferència de correu (MTA) per enviar correus a d'altres servidors -això és rellevant, per exemple, per evitar que s'utilitzi un agent de transferència de correu (MTA) de forma indiscriminada per enviar correu com si es tractés de correu brossa.
 
-"ejemplo.microsoft.c om.", que es un subdominio ficticio asignado por Microsoft para utilizarlo en nombres de ejemplo de documentación. Nombre de recurso o de host Nombres que representan una hoja en el árbol DNS de nombres e identifican un recurso específico. Normalmente, la etiqueta situada más a la izquierda de un nombre de dominio DNS identifica un equipo específico en la red. Por ejemplo, si un nombre de este nivel se utiliza en un RR de host (A), éste se utiliza para buscar la dirección IP del equipo según su nombre de host.
+Definitivament, el correu anirà adreçat a un altre servidor i, a més, el client que l'envia té permís per utilitzar l'agent de transferència de correu (MTA). Per tant, el servidor de tardor utilitza el protocol SMTP per entregar el correu a l'agent de transferència de correu (MTA) d'estiu. Quan el servidor d'estiu hagi rebut el missatge, determinarà el punt d'entrega que, en aquest cas, és en un compte local. Per tant, s'adreçarà a la bústia corresponent i finalitzarà l'entrega deixant-hi el correu.
 
-"host- a.ejemplo.microsoft.c om.", donde la primera etiqueta ("host-a") es el nombre de host DNS de un equipo específico en la red.
+Per últim, en un altre extrem de la xarxa, l'usuari mar@estiu utilitza el seu agent d'usuari de correu (MUA) per comprovar si té algun correu nou. En aquest cas utilitzarà el protocol POP3 de recollida de correu. Val a dir que el servidor POP3 d'estiu comprova que l'usuari sí que tingui correu (el que li va enviar bernat@tardor) i l'entrega al seu agent d'usuari de correu (MUA). És, arribats en aquest punt, quan finalitza la recollida.
 
-Sistemas microinformáticos y redes Servicios en Red Dominio Raíz (Root Name Servers, RNS) Los RNS saben que servidores de nombres tienen autoridad para los dominios superiores. Si se les hace una pregunta acerca de un subdominio, los servido- res raíz maestros pueden al menos proveer los nombres y direcciones de los servidores de nombres con autoridad para el segundo nivel de dominios a los cuales un dominio pertenece. Cada servidor interrogado da, al que pregunta, información de cómo “estar más cerca” de la respuesta que está buscando o provee él mismo una respuesta. Lo que hacen los RNS es proveer punteros desde los dominios superiores a los servidores de nombres de los dominios inferiores. Por ejemplo para conseguir el servidor de nombres del dominio ve.
+Els comptes de correu electrònic El concepte correu electrònic (E-mail, ​Electronic mail​) fa referència al sistema que permet redactar, enviar i rebre missatges mitjançant sistemes de comunicació electrònica. En conseqüència, considerant que la xarxa d'Internet és la xarxa de comunicacions universal arreu del món, és lògic que els sistemes de correu electrònic utilitzin Internet. És més, el correu electrònic ha esdevingut tant un element imprescindible en el nostre dia a dia com un dels elements més rellevants de l'evolució tecnològica recent.
 
-se debe interrogar a los servidores raíz. Los RNS (http://root-servers.org/ http://public-root.com ), así como los NS normales, son muy importantes en la resolución de un nombre dentro de un dominio particular. Debido a que son tan importantes, DNS provee me- canismos para asegurar siempre el servicio utilizando redundancia (servi- dores secundarios) o aliviando la carga de los servidores primarios y root (usando caching). Sin embargo, en ausencia de mecanismos como el caching, la resolución debe empezar en los servidores de raíz maestros.
+La majoria dels correus electrònics es transmeten mitjançant servidors que treballen amb el protocol simple de transferència de correus (SMTP,​Simple Mail Transfer Protocol​) i tant pot ser de caràcter privat, empresarial o institucional. De fet, els comptes de correu electrònic més populars pertanyen a llocs web de caràcter privat (pertanyen a empreses) que ofereixen un espai en el seus servidors perquè qualsevol qui ho desitgi pugui accedir-hi, crear un compte de correu electrònic i deixar-hi els missatges rebuts.
 
-Dominio de Nivel Superior Un dominio de nivel superior o TLD (del inglés top-level domain) es la más alta categoría de las FQDN que es traducida a direcciones IP por los DNS oficiales de Internet. La ICANN clasifica los dominios de nivel superior en tres tipos
+Aquestes companyies (Microsoft, Google, Yahoo) que ofereixen capacitat de disc dels seus servidors i, alhora, gestionen l'enviament i la recepció dels correus electrònics sense cap despesa per part de l'usuari amortitzen la despesa provocada per proporcionar aquest servei mitjançant la incorporació de publicitat.
 
-### 1. Dominios de nivel superior geográficos
+De fet, són molts els comptes de correu electrònic que, en funció del títol (o assumpte) del correu electrònic rebut, els apareix publicitat relacionada. Per exemple, si estem intercanviant-nos correus electrònics per parlar d'una acampada que realitzarem a finals d'any, la publicitat que sorgirà dins del compte de correu electrònic estarà relacionada, per exemple, amb materials per fer muntanya, tendes de campanya, fogonets, etc.
 
-(ccTLD): Usados por un país o un territorio dependiente. Tienen dos letras de largo, por ejemplo es para España, mx para México , gt para Guatemala, sv para El Sal- vador o ar para Argentina.
+Aquestes accions publicitàries de les companyies que ofereixen comptes de correu electrònic (i la seva gestió) busquen fidelitzar possibles empreses interessades a incorporar publicitat en aquell lloc web (dins dels diferents comptes) davant d'una concreció dels usuaris a qui s'adreci mitjançant l'anàlisi de l'assumpte del correu electrònic enviat o rebut.
 
-### 2. Dominios de nivel superior genéricos
+Instal·lació d'un servei de correu electrònic L'estructura d'un compte de correu electrònic és determinada per una adreça composta per dues parts fonamentals, això és, l'usuari i el domini amb el símbol arrova entremig. Per tant, l'adreça de correu electrònic té la forma usuari@domini.exemple. La part corresponent a l'usuari correspon al nom d'usuari que s'utilitzarà per validar-se en una màquina remota. D'altra banda, el domini correspon a l'adreça electrònica de l'ordinador o conjunt d'ordinadors que s'encarregaran de distribuir el correu als usuaris. Per exemple, l'adreça alumne@cicles.cat representa l'adreça electrònica d'un usuari alumne que es connecta a una màquina el domini de la qual és cicles.cat i es llegeix com a alumne en cicles.cat.
 
-(gTLD): Usado (al menos en teoría) por una clase particular de organizaciones (por ejemplo, com para organizaciones comerciales). Tiene tres o más letras de largo. La mayoría de los gTLDs están disponibles para el uso mundial, pero por razones históricas mil (militares) y gov (gubernamental) están restringidos para el uso por las respectivas autoridades estadouni- denses. Los gTLDs se clasifican, a su vez en
+A títol pràctic, quan un usuari envia un missatge de correu electrònic, aquest queda emmagatzemat en el servidor de correu de la bústia del destinatari. Per tant, quan el destinatari
 
-- Dominios de nivel superior patrocinados
+vulgui consultar el seu correu electrònic es connectarà al seu servidor de correu i podrà consultar els missatges mitjançant web o baixar-los a la seva màquina mitjançant un programa de correu. Òbviament, en un servei de correu no és necessari que l'emissor i el receptor coincideixin ni en l'espai ni en el temps.
 
-(sTLD): Ej. .aero, .coop, .cat y .museum
+Arribats en aquest punt, ja podem començar a treballar amb servidor de correu electrònic, és a dir, un sistema de correu que, principalment, gestionarà els protocols d'oficina de correus (POP, Post Office Protocol​) i el protocol simple de transferència de correus (SMTP, ​Simple Mail Transfer Protocol​).
 
-- Dominios de nivel superior no patrocinados
+### 3. Protocols en la gestió de correu
 
-(uTLD): Ej. .biz, .info, .name y .pro.
+electrònic A grans trets, per poder enviar o rebre un correu electrònic necessitem disposar d’un compte de correu en una màquina anomenada servidor de correu (MTA,​Mail Transfer Agent​). En conseqüència, és lògic que, amb la finalitat de realitzar aquesta acció, els usuaris han d'estar connectats a la xarxa de Internet.
 
-Sistemas microinformáticos y redes Servicios en Red
+Client de correu electrònic Són aplicacions que permeten relacionar els usuaris amb les seves bústies corresponents i els permet realitzar la descàrrega i gestió de missatges de correu utilitzant uns determinats protocols (POP3 i IMAP). Considerant que el correu electrònic es basa en l’arquitectura client-servidor on el servidor ofereix un recurs de qualsevol tipus a l’altre (el client) perquè aquest pugui obtenir un profit o avantatge, podem afirmar que és en l’equip servidor on s’allotjaran els diferents comptes d’usuari i mitjançant els clients de correu es gestionarà la descàrrega dels missatges.
 
-### 3. Dominios de nivel superior de infraestructura: El dominio de nivel
+Arribats en aquest punt, és essencial destacar que tant el compte de correu electrònic com el mètode definit per l’establiment de les comunicacions entre l’emissor i el receptor de correu electrònic (E-mail, Electronic Mail) han de seguir unes normes específiques que es regeixen per unes normes anomenades protocols d’Internet.
 
-superior arpa es el único confirmado. Los pseudodominios de nivel superior son términos usados para identificar redes de computadores que no participan en el sistema oficial del sistema de nombres de dominio (DNS) pero que usan una jerarquía de nombres si- milar. Ejemplos .bitnet, .onion, .garlic y .uucp.
+Protocols d'Internet Conjunt de regles de comunicació de xarxa en la qual es basa Internet i que permeten la transmissió de dades entre ordinadors connectats en xarxa, així permeten la comunicació i transmissió de correu electrònic entre usuaris independentment del sistema operatiu i del client de correu que utilitzin.
 
-### 4. Resolución de un nombre de dominio
+#### 3.1. Protocol d'enviament de correu
 
-El mecanismo que consiste en encontrar la dirección IP relacionada al nombre de un ordenador se conoce como "resolución del nombre de dominio". La aplicación que permite realizar esta operación (por lo general, integrada en el sistema operativo se llama "resolución".
+#### 3.1.1. Protocol simple de transferència de correu (SMTP, ​Simple Mail Transfer Protocol​)
 
-El resolver o cliente DNS es la parte del sistema operativo encargada de resol- ver nombres de dominio cuando otros clientes (clientes web, clientes de co- rreo, herramientas de red, etc.) así se lo solicitan. La resolución de un nombre de dominio es la traducción de un FQDN a su co- rrespondiente dirección IP.
+Es tracta de l'estàndard d'Internet adreçat a l'intercanvi de correus electrònics. La seva funció és la transmissió del correu electrònic que surt de la màquina de l'usuari remetent fins al servidor que emmagatzema els missatges dels usuaris destinataris. Tècnicament, quan l'usuari remetent envia un missatge, aquest és adreçat al seu servidor de correu. A continuació, des del servidor s'enviarà el missatge al servidor de correu de l'usuari destinatari. I, finalment, l'usuari destinatari descarregarà el correu a la seva bústia a la màquina local. Val a dir que és important que aquest protocol estigui dotat de certes eines d'autenticació per estalviar l'enviament i recepció de correu no desitjat o correu brossa (​spam​).
 
-El proceso de resolución sería el siguiente
+#### 3.2. Protocols descàrrega de correu
 
-### 1. En un programa del equipo local el usuario utiliza un nombre de dominio
+#### 3.2.1. Protocol d'oficina de correus (POP, ​Post Office Protocol​)
 
-totalmente cualificado (FQDN).
+Aquest tipus de protocol fa referència al tipus de servidor que s'utilitzarà per rebre els correus electrònics. De fet, el protocol d'oficina de correus permet la gestió, accés i transferència de missatges de correu electrònic entre el servidor i el client de correus electrònics. De fet, a diferència del protocol simple de transferència de correu (SMTP, ​Simple Mail Transfer Protocol​), el protocol d'oficina de correus (POP, ​Post Office Protocol​) s'utilitza per a la descàrrega de correus electrònics. L'origen del protocol d'oficina de correus (POP, Post Office Protocol) és determinat per la necessitat de molts usuaris de consultar els seus correus electrònics mitjançant la connexió puntual a Internet per, en conseqüència, connectar amb el seu servidor de correu i descarregar els missatges. Un cop descarregat els missatges, el protocol d'oficina de correus (POP, ​Post Office Protocol​) també facilita la desconnexió amb el servidor.
 
-- A continuación, el programa solicita al resolver la resolución de ese nombre.
+3.2.2.Protocol d'accés a missatges d'Internet (IMAP, ​Internet Message Access Protocol​) És mitjançant aquest protocol que els clients de correu electrònic poden accedir als missatges emmagatzemats en els servidors de correu des de qualsevol màquina amb accés a Internet.
 
-Su modo de actuación depende del sistema operativo: GNU/Linux
+Normalment, el protocol d'accés a missatges d’Internet (IMAP, ​Internet Message Access Protocol​) és utilitzat pels servidors i pels clients de correu electrònic via web. Aquests tipus de servidors i clients faciliten als usuaris la gestió de les seves bústies de correu electrònic des de qualsevol ordinador amb accés a Internet.
 
-### 1. El resolver compara el nombre solicitado con el del propio host. Si es
+Val a dir que el protocol d'accés a missatges d’Internet (IMAP, ​Internet Message Access Protocol​) es diferencia del protocol d’oficina de correus (POP, ​Post Office Protocol​) en el fet que els correus electrònics estan emmagatzemats en el servidor i es queden allí fins i tot si es descarreguen el cas més típic són els servidors de correu electrònic via web. Per contra, en el protocol d’oficina de correus (POP, Post Office Protocol) comporta que els correus electrònics
 
-el mismo, el nombre queda resuelto a la IP local. Para ello utiliza la in- formación que encuentra en el archivo /etc/hostname (que le informa del nombre de máquina local) y la concatena con la indicada en la direc- tiva domain del archivo /etc/resolv.conf si la hubiera.
+es descarreguin en l’ordinador del client directament i no quedin emmagatzemats en el servidor. En conseqüència, a l’hora de configurar l’aplicació o el gestor de correu electrònic, haurem d’especificar tant el servidor SMTP com el servidor POP. 4 Seguretat i vulnerabilitats En el procés de transmissió de correu electrònic entre els usuaris no hi ha cap garantia que aquest es realitze amb èxit, ja que pot ocórrer que el destinatari no siga el que preteníem, que abans d'arribar al destí sigui llegit per altres usuaris, que durant el procés de transmissió viatgi també algun tipus de virus, etc.
 
-### 2. En caso de no haber resuelto el nombre, el resolver consulta los da
+Arran d'aquestes necessitats, han sorgit sistemes que permeten xifrar, desxifrar, crear signatures digitals, etc. de forma ràpida, senzilla i segura. Un d'aquests sistemes és PGP (​Pretty Good Privacy​), que permet la confidencialitat, autenticació i integració del correu electrònic. És un programa gratuït independent del client de correu que s'utilitzi i compta amb versions per a Windows, Linux i Mac Os.
 
-tos del archivo /etc/hosts. Se trata de un archivo de texto que contiene por cada línea una dirección IP y su correspondiente nombre de domi
+### 1. Correu brossa
 
-Sistemas microinformáticos y redes Servicios en Red nio separados por un espacio o más (las líneas que empiezan con el ca- rácter 'almohadilla' son comentarios y no son tenidas en cuenta). Si el resolver encuentra aquí la respuesta a su consulta detiene el proceso.
+Uns altres dels problemes que ens trobem en l'ús diari del correu electrònic és el correu brossa (​spam​), que és aquell correu electrònic normalment de publicitat, que arriba al nostre correu sense haver-lo sol·licitat. Per tant, a l'hora d'escollir un client de correu o un altre ens haurem d'assabentar quins tipus de filtre contra el correu brossa posseeixen, quin grau de confidencialitat, etc. Avui dia, la majoria de clients de correu tenen con aquestes opcions per garantir la seguretat i confidencialitat del correu electrònic dels seus usuaris.
 
-### 3. En caso contrario, el resolver comprueba que en la caché del resolver
+### 2. Phishing
 
-no está la respuesta a la consulta en cuestión. Si está presente en ella, el resolver ofrece este dato a la aplicación que lo solicitó y termina el proceso.
+Phishing​, conegut com suplantació d'identitat o simplement suplantador, és un terme informàtic que denomina un model d'abús informàtic i que es comet mitjançant l'ús d'un tipus d'enginyeria social, caracteritzat per intentar adquirir informació confidencial de forma fraudulenta (com pot ser una contrasenya, informació detallada sobre targetes de crèdit o una altra informació bancària). El cibercriminal, conegut com ​phisher​, es fa passar per una persona o empresa de confiança en una aparent comunicació oficial electrònica, comunament un correu electrònic, o algun sistema de missatgeria instantània o fins i tot utilitzant també cridades telefòniques.
 
-### 4. Finalmente, si aún no se ha resuelto el nombre, el resolver procede a
+### 3. Bulos (Hoax) i cadenes
 
-consultar al primer servidor DNS que figure en el archivo /etc/resolv.- conf. Windows
+És un missatge de correu electrònic amb contingut fals o enganyós i atraient. Normalment és distribuït en cadena pels seus successius receptors a causa del seu contingut impactant que sembla provenir d'una font seriosa i fiable, o perquè el mateix missatge demana ser reenviat.
 
-el mismo, el nombre queda resuelto a la IP local.
+Les persones que creen falses notícies solen tenir com a objectiu captar indirectament adreces de correu electrònic (per enviar correu massiu, virus, missatges amb suplantació d'identitat, o més rumors a gran escala), o també enganyar al destinatari perquè reveli la seva contrasenya o accepti un arxiu de ​malware​, o també d'alguna manera confondre o manipular a l'opinió pública de la societat.
 
-### 2. Se carga en la caché del resolver el contenido del archivo hosts. Este
+Bàsicament, els rumors poden ser alertes sobre virus incurables, fal·làcies sobre persones, institucions o empreses, missatges de temàtica religiosa; cadenes de solidaritat, cadenes de la sort; mètodes per fer-se milionari, regals de grans companyies, llegendes urbanes; i altres cadenas.
 
-archivo de Windows es un archivo de texto idéntico al utilizado por GNU/Linux.
+Recursos https://www.youtube.com/watch?v=gbeRTESNsXo
 
-### 3. Se intenta resolver el nombre utilizando la caché del resolver (que,
+https://www.youtube.com/watch?v=kWNyiZfTp4E
 
-aparte del contenido del archivo host, incluirá también las respuestas a consultas DNS realizadas anteriormente). Si la consulta no coincide con una entrada de la caché, el proceso de resolución continúa.
+---
 
-### 4. El resolver consultará al servidor DNS preferido (establecido de ma
+# 5.3 Les Guest additions
 
-nera gráfica por el usuario) tal y como se especifica a continuación.
-
-### 3. Cuando el servidor DNS recibe la consulta del resolver, primero comprueba
-
-su archivo de zona (en caso de que lo tenga). Si el nombre consultado coincide con algún registro de su archivo de zona, el servidor DNS responde al resolver con autoridad.
-
-### 4. Si no existe ninguna información en la zona para el nombre consultado, a
-
-continuación el servidor comprueba si puede resolver el nombre mediante la información almacenada en su caché local (que contendrá resultados de con- sultas anteriores). Si aquí se encuentra una coincidencia, el servidor responde con esta información. Si aun no se ha conseguido una respuesta a la consulta, lo más normal es que el servidor DNS siga intentando por todos los medios re- solverla, bien preguntando a otros servidores DNS que tenga configurados (denominados forwarders) o bien preguntando directamente a los servidores raiz.
-
-Sistemas microinformáticos y redes Servicios en Red
-
-### 5. Finalmente, cuando el servidor DNS obtiene por uno de los dos medios la
-
-respuesta la envía al resolver. La respuesta se almacena tanto en la caché del servidor DNS consultado como en la caché local del resolver.
-
-### 5. Transferencias de Zona
-
-Una transferencia de zona es el término utilizado para hacer referencia al proceso mediante el que el contenido de un archivo de zona DNS se copia desde un servidor DNS principal a un servidor DNS secundario. Se produci- rá una transferencia de zona durante cualquiera de los siguientes escena- rios
-
- Al iniciar el servicio DNS en el servidor DNS secundario.  Cuando caduca el tiempo de actualización.  Cuando se guardan los cambios en el archivo de zona principal y hay una notificación lista. Transferencias de zona siempre se inician por el servidor DNS secundario.
-
-El servidor DNS principal simplemente responderá a la petición para una transferencia de zona. Debido al importante papel que desempeñan las zonas en DNS, se preten- de que éstas estén disponibles desde varios servidores DNS en la red para proporcionar disponibilidad y tolerancia a errores al resolver consultas de nombres.
-
-### 6. Registros de recursos DNS
-
-Cada servidor DNS primario mantiene un archivo de zona para resolución directa (de un nombre de dominio se obtiene la IP asociada) de la zona so
-
-Sistemas microinformáticos y redes Servicios en Red bre la que tiene autoridad y, en algunos casos, otro archivo de zona inver- so para la resolución inversa. Ambos archivos son siempre archivos de texto plano, tanto si el servidor DNS corre en GNU/Linux o en Windows.
-
-Cada archivo de zona contiene lo que ya conocemos como registros de re- cursos Los principales tipos de registros de recursos son los siguientes. $TTL La primera línea que hemos de indicar en un archivo de zona debe estable- cer el valor Time to Live (TTL) (Tiempo de vida). Su sintaxis es
-
-$TTL tiempo donde tiempo es el tiempo que cualquier registro de recurso de este archi- vo puede permanecer en la caché de otro servidor DNS. Si un registro de recurso especifica su propio valor TTL, esta directiva se ig- nora para dicho recurso. Si solo aparece un número (por ejemplo, $TTL 3600), se interpreta como segundos, pero para dar mayor claridad, se pueden usar semanas ($TTL 1w), días ($TTL 7d), horas ($TTL 168h) o minutos ($TTL 10080m).
-
-SOA El registro SOA (Start of Authority) es el segundo registro que nos en- contramos en un archivo de zona. Debe haber uno (y solo uno) por cada ar- chivo de zona directo o inverso que creemos. Su sintaxis es: zona IN SOA nombreDNSprimario emailAdministrador ( numeroSerie actualizacion reintento
-
-Sistemas microinformáticos y redes Servicios en Red caducidad TTLminimo ) donde:  zona es o bien el nombre de la zona (¡terminado en punto!) o bien la letra @.  nombreDNSprimario indica el FQDN del servidor donde esta almace- nado el archivo de zona (¡terminado en un punto!).
-
- emailAdministrador es la dirección de email de la persona responsa- ble de este dominio (la arroba se remplaza con un punto y la direc- ción entera también termina con un punto).  numeroSerie indica el número de version del archivo de zona. Sirve de referencia a los servidores DNS secundarios para saber cuando deben hacer una transferencia de zona. Si el numero de serie del er- vidor secundario es menor que el número de serie del primario sig- nifica que este ha cambiado su información. Este número debe ser incrementado de forma manual por el administrador de red cada vez que realiza un cambio en el archivo de zona. Una costumbre es la de escribir los número de serie como AAAAMMDDNN, es decir 4 ci- fras para el año, 2 para el mes, 2 para el día y una o dos para el nu- mero de revisión dentro de ese día (01, 02, etc.).
-
- actualizacion es el intervalo, en segundos, tras el cual los servidores secundarios deben comprobar el registro SOA del servidor primario, con el fin de verificar si la información del dominio ha cambiado. El valor típico es de una hora (3600).  reintento especifica el tiempo que el servidor secundario espera an- tes de volver a intentar una transferencia de zona que haya fallado.
-
- caducidad es el tiempo en segundos tras el cual un servidor DNS se- cundario que no haya podido realizar transferencias de zona en todo ese tiempo descartará los datos que posee. El valor típico es de 42 días, o sea 3600000.  TTLminimo antiguamente (en versiones 8.3 de BIND y anteriores) es- tablecía el tiempo de validez en segundos para permanecer en ca- chés de otros servidores o de resolvers. En la actualidad esto se con- sigue con la directiva $TTL, por lo que el valor indicado en este cam- po se ignora. Los números especificados en este registro indican se- gundos.
-
-NS
-
-Sistemas microinformáticos y redes Servicios en Red Este tipo de registro representa o indica quienes son los servidores DNS con autoridad sobre esa zona, tanto maestros como secundarios. Por tan- to, cada archivo de zona debe contener, como mínimo, un registro NS.
-
-Su sintaxis es: dominio IN NS FQDNservidorDNS donde:  dominio es el nombre de dominio completamente cualificado de la zona sobra la que tiene autoridad el servidor DNS que estemos espe- cificando. Si esta zona coincide con la zona que se está definiendo en el archivo de zona, puede dejarse en blanco o escribir una @.
-
- FQDNservidorDNS es el nombre de dominio completamente cualifi- cado del servidor DNS que estamos especificando. A El registro A establece una correspondencia entre un nombre de dominio completamente cualificado y una dirección IP. Su sintaxis es: nombreHost IN A IPcompleta donde
-
- nombreHost es únicamente el nombre de un host de nuestro domi- nio.  IPcompleta es la dirección IP de ese host. nombreHost puede ser omitido en el registro A para indicar que estamos asociando una IP al nombre de la zona. Así, si consideramos un archivo de zona de ejemplo para la zona example.local que contenga
-
-IN A 10.0.1.3 server1 IN A 10.0.1.5 Las peticiones de resolución para example.local son resueltas a la 10.0.1.3, mientras que las solicitudes para server1.example.local son resueltas a la 10.0.1.5.
-
-Sistemas microinformáticos y redes Servicios en Red Es recomendable que exista sólo un registro IN A por cada dirección IP. CNAME El registro CNAME (Canonical NAME) crea un alias (un sinónimo) para el nombre de dominio especificado. Su sintaxis es: alias IN CNAME nombreHost donde
-
- alias es únicamente un nombre de host.  nombreHost es únicamente el nombre de host indicado anterior- mente en un registro A. En el ejemplo siguiente, un registro A vincula un nombre de host a una di- rección IP, mientras que un registro CNAME apunta al nombre host co- múnmente usado www para este.
-
-server1 IN A 10.0.1.5 www IN CNAME server1 PTR El registro de recursos PTR (PoinTeR) o puntero, realiza la acción contraria al registro de tipo A, es decir, asigna un nombre de dominio completamen- te cualificado a una dirección IP. Este tipo de recursos se utiliza únicamente para resolución inversa.
-
-Su sintaxis es: IPsinParteDeRed IN PTR FQDNhost donde:  IPsinParteDeRed es la parte de host de la dirección IP de la máquina escrita al reves.  FQDNhost es el nombre de dominio totalmente cualificado del host (¡terminado en punto!). MX
-
-Sistemas microinformáticos y redes Servicios en Red Este registro permite indicar cuáles son los servidores de correo de nues- tro dominio. Además permite, en caso de tener varios servidores, estable- cer el orden de consulta o de preferencia. Este orden establece que los va- lores menores tienen más prioridad.
-
-Su sintaxis es: dominio IN MX prioridad FQDNhost donde:  dominio puede dejarse en blanco o usar la letra @.  prioridad es un numero entero que puede omitirse.  FQDN-host es el nombre completamente cualificado del host que hara las funciones de servidor de correo para la zona que estamos definiendo.
-
-- Reenviadores.
-
-Servidor DNS designado por otros servidores DNS para ser invocado en consultas de resolución de recursos que se encuentran ubicados en domi- nios que no son gestionados por el DNS local.
-
-- Referencias.
-
-Basado en los apuntes de: http://vgg.uma.es/redes/servicio.html https://jesusg289.files.wordpress.com http://smr.iesharia.org/wiki/doku.php/src:inicio http://www.portaleso.com/usuarios/Toni/web_redes/unidad_redes_infor- maticas_indice.html#protocolo http://es.ccm.net/contents/262-dns-sistema-de-nombre-de-dominio https://es.wikipedia.org/wiki/Dominio_de_nivel_superior
+les Guest additions de virtualbox no s'instal·len correctament a les màquines Linux.
+Per tant, es necessari instal·lar a la màquina **sudo apt install build-essential linux-headers-$(uname -r)**
+d'aquesta manera al reinstal·lar les Guest additions ja no donarà l'error de que no les compila adequadament.
 
 ---

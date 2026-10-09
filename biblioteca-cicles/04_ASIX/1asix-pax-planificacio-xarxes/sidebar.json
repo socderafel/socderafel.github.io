@@ -10,12 +10,11 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Caracterització de les xarxes",
-          "href": "ut02/ut0201.html"
+          "href": "./ut01/ut0101.html"
         }
       ]
     },
@@ -24,16 +23,15 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 U2 Arquitectura de xarxa",
-          "href": "ut03/ut0301.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 1 IPs",
-          "href": "ut03/ut0302.html"
+          "href": "./ut02/ut0202.html"
         }
       ]
     },
@@ -42,12 +40,11 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 U3 Xarxes àrea local",
-          "href": "ut04/ut0401.html"
+          "href": "./ut03/ut0301.html"
         }
       ]
     },
@@ -56,12 +53,11 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 U4 Nivell físic",
-          "href": "ut05/ut0501.html"
+          "href": "./ut04/ut0401.html"
         }
       ]
     },
@@ -70,12 +66,11 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 U5 Cablejat Estructurat",
-          "href": "ut06/ut0601.html"
+          "href": "./ut05/ut0501.html"
         }
       ]
     },
@@ -84,16 +79,11 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 Nivell d'enllaç",
-          "href": "ut07/ut0701.html"
-        },
-        {
-          "label": "6.2 Trama PPP",
-          "href": "ut07/ut0702.html"
+          "href": "./ut06/ut0601.html"
         }
       ]
     },
@@ -102,16 +92,15 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
+          "href": "./ut07/index.html"
         },
         {
           "label": "7.1 U7 El switch",
-          "href": "ut08/ut0801.html"
+          "href": "./ut07/ut0701.html"
         },
         {
           "label": "7.2 Cisco IOS",
-          "href": "ut08/ut0802.html"
+          "href": "./ut07/ut0702.html"
         }
       ]
     },
@@ -120,24 +109,19 @@
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "ut09/index.html",
-          "class": "unit-full-link"
+          "href": "./ut08/index.html"
         },
         {
           "label": "8.1 U8 VLAN",
-          "href": "ut09/ut0901.html"
+          "href": "./ut08/ut0801.html"
         },
         {
           "label": "8.2 Comandos Cisco VLAN",
-          "href": "ut09/ut0902.html"
+          "href": "./ut08/ut0802.html"
         },
         {
           "label": "8.3 VTP, DTP i Capa 3",
-          "href": "ut09/ut0905.html"
-        },
-        {
-          "label": "8.4 Colisió i difusió",
-          "href": "ut09/ut0906.html"
+          "href": "./ut08/ut0803.html"
         }
       ]
     },
@@ -146,12 +130,11 @@
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "ut10/index.html",
-          "class": "unit-full-link"
+          "href": "./ut09/index.html"
         },
         {
           "label": "9.1 U9 Nivell de xarxa. El Router",
-          "href": "ut10/ut1001.html"
+          "href": "./ut09/ut0901.html"
         }
       ]
     },
@@ -160,12 +143,11 @@
       "items": [
         {
           "label": "📘 UD10 Completa (1 pàgina)",
-          "href": "ut11/index.html",
-          "class": "unit-full-link"
+          "href": "./ut10/index.html"
         },
         {
           "label": "10.1 U10 Adreçament IP",
-          "href": "ut11/ut1101.html"
+          "href": "./ut10/ut1001.html"
         }
       ]
     },
@@ -174,16 +156,11 @@
       "items": [
         {
           "label": "📘 UD11 Completa (1 pàgina)",
-          "href": "ut12/index.html",
-          "class": "unit-full-link"
+          "href": "./ut11/index.html"
         },
         {
           "label": "11.1 U11 Enrutament",
-          "href": "ut12/ut1201.html"
-        },
-        {
-          "label": "11.2 Exemple Enrutament Estàtic",
-          "href": "ut12/ut1202.html"
+          "href": "./ut11/ut1101.html"
         }
       ]
     },
@@ -192,12 +169,11 @@
       "items": [
         {
           "label": "📘 UD12 Completa (1 pàgina)",
-          "href": "ut13/index.html",
-          "class": "unit-full-link"
+          "href": "./ut12/index.html"
         },
         {
           "label": "12.1 U12 Nivell de Transport i Aplicació",
-          "href": "ut13/ut1301.html"
+          "href": "./ut12/ut1201.html"
         }
       ]
     }

@@ -2,7 +2,7 @@
 layout: default
 title: "UD2 — REPROGRAFIA i ENQUADERNACIÓ · Temari Complet"
 course_root: ".."
-badge: "1r FPB · Grau Bàsic · UT2 Completa"
+badge: "1r FPB · Grau Bàsic · UD2 — REPROGRAFIA i ENQUADERNACIÓ"
 prev_url: "../ut01/ut0101.html"
 prev_label: "⬅️ 1.1 Comunicacions internes i externes"
 next_url: "../ut02/ut0201.html"

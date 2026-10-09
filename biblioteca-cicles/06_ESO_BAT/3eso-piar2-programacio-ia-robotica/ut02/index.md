@@ -2,11 +2,11 @@
 layout: default
 title: "UD2 — Robòtica · Temari Complet"
 course_root: ".."
-badge: "3r ESO · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ 1.1 Continguts i Casos Guiats"
+badge: "3r ESO · UD2 — Robòtica"
+prev_url: "../ut01/ut0101.html"
+prev_label: "⬅️ 1.1 Disseny d'interfície, components i programació per blocs"
 next_url: "../ut02/ut0201.html"
-next_label: "2.1 Continguts i Recursos ➡️"
+next_label: "2.1 Continguts Teòrics i Recursos ➡️"
 ---
 
 # 📘 UD2 — Robòtica (Unitat Completa)
@@ -16,16 +16,16 @@ next_label: "2.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 Continguts i Recursos**](./ut0201.md)
+- [**2.1 Continguts Teòrics i Recursos**](./ut0201.md)
 
 ---
 
-# 2.1 Continguts i Recursos
+# 2.1 Continguts Teòrics i Recursos
 
-> **🔗 Recurs Web: Video IA/Robòtica**
+> **🔗 Recurs Web: Vídeo — Introducció a la IA i la Robòtica**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=VQ7CRtbmcCM) ↗️**](https://www.youtube.com/watch?v=VQ7CRtbmcCM)
 
-> **🔗 Recurs Web: Temari**
+> **🔗 Recurs Web: Temari de Robòtica Educativa**
 > [**🌐 Obrir recurs extern (https://sites.google.com/view/robotica-eso/rob%C3%B3tica) ↗️**](https://sites.google.com/view/robotica-eso/rob%C3%B3tica)
 
 ---

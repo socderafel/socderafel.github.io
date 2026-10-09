@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — GIMP · Temari Complet"
 course_root: ".."
-badge: "3r ESO · UT1 Completa"
+badge: "3r ESO · UD1 — GIMP"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"

@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "UD1 — Unitat Didàctica 1 · Temari Complet"
+title: "UD1 — Components d'un Equip Microinformàtic · Temari Complet"
 course_root: ".."
-badge: "1r SMX · Grau Mitjà · UT1 Completa"
+badge: "1r SMX · Grau Mitjà · UD1 — Components d'un Equip Microinformàtic"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 P1 | P2 | P3 - CONTINGUTS ➡️"
 ---
 
-# 📘 UD1 — Unitat Didàctica 1 (Unitat Completa)
+# 📘 UD1 — Components d'un Equip Microinformàtic (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
@@ -1684,8 +1684,5 @@ per a representar un píxel condiciona el nombre total de colors disponibles per
 - Freqüència de refresc. Nombre de vegades per segon que s’actualitza o
 
 repinta la pantalla. Són valors habituals 60 Hz, 75 Hz i 100 Hz. Com més freqüència de refresc, menys parpelleig en la pantalla. 3.5.2 Components de la targeta gràﬁca Una targeta gràﬁca integra diverses parts, cadascuna amb la seva funció especíﬁca
-
-> **💡 📚 Document extens (90 pàgines)**
-> S'han mostrat les primeres 80 pàgines completes del manual.
 
 ---

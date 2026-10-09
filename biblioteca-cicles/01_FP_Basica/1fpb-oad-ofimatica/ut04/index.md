@@ -2,11 +2,11 @@
 layout: default
 title: "UD4 — CALC MITJÀ · Temari Complet"
 course_root: ".."
-badge: "1r FPB · Grau Bàsic · UT4 Completa"
+badge: "1r FPB · Grau Bàsic · UD4 — CALC MITJÀ"
 prev_url: "../ut03/ut0301.html"
-prev_label: "⬅️ 3.1 Continguts i Recursos"
+prev_label: "⬅️ 3.1 Continguts Teòrics i Recursos"
 next_url: "../ut04/ut0401.html"
-next_label: "4.1 Continguts i Recursos ➡️"
+next_label: "4.1 Continguts Teòrics i Recursos ➡️"
 ---
 
 # 📘 UD4 — CALC MITJÀ (Unitat Completa)
@@ -16,14 +16,11 @@ next_label: "4.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 Continguts i Recursos**](./ut0401.md)
+- [**4.1 Continguts Teòrics i Recursos**](./ut0401.md)
 
 ---
 
-# 4.1 Continguts i Recursos
-
-> **📌 Introducció de la Unitat**
-> **Formació CALC**
+# 4.1 Continguts Teòrics i Recursos
 
 > **🔗 Recurs Web: Calc: Mensajes de error más frecuentes**
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/calcavanzado1_v17es/00mensajes_error.php) ↗️**](http://www.tuinstitutoonline.com/cursos/calcavanzado1_v17es/00mensajes_error.php)
@@ -84,15 +81,5 @@ next_label: "4.1 Continguts i Recursos ➡️"
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/calcmedio2_v17es/11hiperenlaces.php) ↗️**](http://www.tuinstitutoonline.com/cursos/calcmedio2_v17es/11hiperenlaces.php)
 >
 > Calc: Hiperenlaces o hipervínculos
-
-> **📌 🏷️ Apunt de la Unitat**
-> **EXAMEN**
-
-> **🔗 Recurs Web: Calc: Examen. Corrupoly**
-> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/calcmedio2_v17es/ex01corrupoly.php) ↗️**](http://www.tuinstitutoonline.com/cursos/calcmedio2_v17es/ex01corrupoly.php)
->
-> Calc: Examen. Corrupoly
-
-📎 **Material de laboratori (Fulla Base):** `Examen_Calc_Dades.ods`
 
 ---

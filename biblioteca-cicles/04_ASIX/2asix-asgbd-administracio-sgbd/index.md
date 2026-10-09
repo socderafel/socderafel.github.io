@@ -23,9 +23,9 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Adminis
 | **UD1** | **Instal·lació d'un SGBD** | 5 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
 | **UD2** | **Configuració d'un SGBD** | 4 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
 | **UD3** | **Usuaris i permisos. Seguretat** | 5 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UD4** | **Automatització de tasques** | 3 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0502.md) |
-| **UD5** | **Optimització de l'SGBD** | 1 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UD6** | **Disponibilitat d'un SGBD** | 1 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
+| **UD4** | **Automatització de tasques** | 1 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UD5** | **Optimització de l'SGBD** | 1 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UD6** | **Disponibilitat d'un SGBD** | 1 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
 
 ## UD1 — Instal·lació d'un SGBD
 
@@ -64,26 +64,24 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Adminis
 
 ## UD4 — Automatització de tasques
 
-`2n ASIX · Grau Superior · UD4 · 3 apartats`
+`2n ASIX · Grau Superior · UD4 · 1 apartats`
 
-[**📘 Obrir UD4 Completa en una sola pàgina**](./ut05/index.md)
+[**📘 Obrir UD4 Completa en una sola pàgina**](./ut04/index.md)
 
-- [**4.1 Repàs: PL/SQL**](./ut05/ut0502.md)
-- [**4.2 Repàs: PL/SQL (II)**](./ut05/ut0503.md)
-- [**4.3 Automatització de tasques**](./ut05/ut0505.md)
+- [**4.1 Automatització de tasques**](./ut04/ut0401.md)
 
 ## UD5 — Optimització de l'SGBD
 
 `2n ASIX · Grau Superior · UD5 · 1 apartats`
 
-[**📘 Obrir UD5 Completa en una sola pàgina**](./ut06/index.md)
+[**📘 Obrir UD5 Completa en una sola pàgina**](./ut05/index.md)
 
-- [**5.1 Optimització de l'SGBD**](./ut06/ut0601.md)
+- [**5.1 Optimització de l'SGBD**](./ut05/ut0501.md)
 
 ## UD6 — Disponibilitat d'un SGBD
 
 `2n ASIX · Grau Superior · UD6 · 1 apartats`
 
-[**📘 Obrir UD6 Completa en una sola pàgina**](./ut07/index.md)
+[**📘 Obrir UD6 Completa en una sola pàgina**](./ut06/index.md)
 
-- [**6.1 Disponibilitat d'un SGBD**](./ut07/ut0701.md)
+- [**6.1 Disponibilitat d'un SGBD**](./ut06/ut0601.md)

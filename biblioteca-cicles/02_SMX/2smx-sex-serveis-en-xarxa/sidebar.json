@@ -10,120 +10,100 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Repàs Interconnexió de Xarxes",
-          "href": "ut08/ut0801.html"
+          "href": "./ut01/ut0101.html"
         }
       ]
     },
     {
-      "summary": "UD2 — Accés Remot Segur (SSH)",
+      "summary": "UD2 — Assignació Dinàmica d'Adreces (DHCP)",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
-          "label": "2.1 Continguts i Casos Guiats",
-          "href": "ut07/ut07actividades.html"
+          "label": "2.1 presentació DHCP",
+          "href": "./ut02/ut0201.html"
+        },
+        {
+          "label": "2.2 Presentació DHCP. Visió general",
+          "href": "./ut02/ut0202.html"
+        },
+        {
+          "label": "2.3 Servei DHCP",
+          "href": "./ut02/ut0203.html"
+        },
+        {
+          "label": "2.4 Servidor DHCP",
+          "href": "./ut02/ut0204.html"
         }
       ]
     },
     {
-      "summary": "UD3 — Assignació Dinàmica d'Adreces (DHCP)",
+      "summary": "UD3 — Sistema de Noms de Domini (DNS)",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
-          "label": "3.1 presentació DHCP",
-          "href": "ut06/ut0601.html"
-        },
-        {
-          "label": "3.2 Presentació DHCP. Visió general",
-          "href": "ut06/ut0602.html"
-        },
-        {
-          "label": "3.3 Servei DHCP",
-          "href": "ut06/ut0603.html"
-        },
-        {
-          "label": "3.4 Servidor DHCP",
-          "href": "ut06/ut0604.html"
+          "label": "3.1 UD3 Servidor de Nombres de Dominio SMX",
+          "href": "./ut03/ut0301.html"
         }
       ]
     },
     {
-      "summary": "UD4 — Sistema de Noms de Domini (DNS)",
+      "summary": "UD4 — Servidor Web (HTTP / Virtual Hosting)",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
-          "label": "4.1 UD3 Servidor de Nombres de Dominio SMX",
-          "href": "ut05/ut0501.html"
+          "label": "4.1 Introducción virtual hosting",
+          "href": "./ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Configuración Virtual hosting",
+          "href": "./ut04/ut0402.html"
         }
       ]
     },
     {
-      "summary": "UD5 — Servidor Web (HTTP / Virtual Hosting)",
+      "summary": "UD5 — Servei de Correu Electrònic",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
-          "label": "5.1 Introducción virtual hosting",
-          "href": "ut04/ut0402.html"
+          "label": "5.1 Presentació",
+          "href": "./ut05/ut0501.html"
         },
         {
-          "label": "5.2 Configuración Virtual hosting",
-          "href": "ut04/ut0403.html"
+          "label": "5.2 El correu electrònic",
+          "href": "./ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Les Guest additions",
+          "href": "./ut05/ut0503.html"
         }
       ]
     },
     {
-      "summary": "UD6 — Servei de Correu Electrònic",
+      "summary": "UD6 — Servei de Transferència de Fitxers (FTP)",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
-          "label": "6.1 Presentació",
-          "href": "ut03/ut0301.html"
-        },
-        {
-          "label": "6.2 El correu electrònic",
-          "href": "ut03/ut0302.html"
-        },
-        {
-          "label": "6.3 Les Guest additions",
-          "href": "ut03/ut0303.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD7 — Servei de Transferència de Fitxers (FTP)",
-      "items": [
-        {
-          "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "7.1 FTP",
-          "href": "ut02/ut0201.html"
+          "label": "6.1 FTP",
+          "href": "./ut06/ut0601.html"
         }
       ]
     }

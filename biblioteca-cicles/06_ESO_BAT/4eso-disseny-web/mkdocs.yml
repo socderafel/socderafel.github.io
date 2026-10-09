@@ -5,15 +5,15 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — HTML":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Introducción": ut01/ut0102.md
-      - "1.2 Estructura básica": ut01/ut0104.md
-      - "1.3 Etiquetas para estructurar el texto": ut01/ut0106.md
-      - "1.4 Etiquetas básicas de marcado": ut01/ut0108.md
-      - "1.5 listas": ut01/ut0110.md
-      - "1.6 enlaces": ut01/ut0111.md
-      - "1.7 Tablas": ut01/ut0112.md
-      - "1.8 Formularios": ut01/ut0113.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Introducción": ./ut01/ut0101.md
+      - "1.2 Estructura básica": ./ut01/ut0102.md
+      - "1.3 Etiquetas para estructurar el texto": ./ut01/ut0103.md
+      - "1.4 Etiquetas básicas de marcado": ./ut01/ut0104.md
+      - "1.5 listas": ./ut01/ut0105.md
+      - "1.6 enlaces": ./ut01/ut0106.md
+      - "1.7 Tablas": ./ut01/ut0107.md
+      - "1.8 Formularios": ./ut01/ut0108.md
   - "UD2 — WORDPRESS":
-      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Continguts i Recursos": ut02/ut0201.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Continguts Teòrics i Recursos": ./ut02/ut0201.md

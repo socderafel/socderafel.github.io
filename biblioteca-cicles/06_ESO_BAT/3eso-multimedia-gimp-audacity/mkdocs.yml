@@ -5,8 +5,8 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — GIMP":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Modos de color": ut01/ut0101.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Modos de color": ./ut01/ut0101.md
   - "UD2 — Audacity":
-      - "📘 UD2 Completa (1 pàgina)": ut03/index.md
-      - "2.1 Continguts i Recursos": ut03/ut0301.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Continguts Teòrics i Recursos": ./ut02/ut0201.md

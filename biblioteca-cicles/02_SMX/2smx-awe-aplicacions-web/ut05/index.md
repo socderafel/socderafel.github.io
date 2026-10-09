@@ -2,7 +2,7 @@
 layout: default
 title: "UD5 — Unit 5 Web File Management and Web Office · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT5 Completa"
+badge: "2n SMX · Grau Mitjà · UD5 — Unit 5 Web File Management and Web Office"
 prev_url: "../ut04/ut0401.html"
 prev_label: "⬅️ 4.1 Resources: Reference Links"
 next_url: "../ut05/ut0501.html"

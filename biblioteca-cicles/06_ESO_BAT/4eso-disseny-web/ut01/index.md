@@ -2,10 +2,10 @@
 layout: default
 title: "UD1 — HTML · Temari Complet"
 course_root: ".."
-badge: "4t ESO · UT1 Completa"
+badge: "4t ESO · UD1 — HTML"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
-next_url: "../ut01/ut0102.html"
+next_url: "../ut01/ut0101.html"
 next_label: "1.1 Introducción ➡️"
 ---
 
@@ -16,14 +16,14 @@ next_label: "1.1 Introducción ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**1.1 Introducción**](./ut0102.md)
-- [**1.2 Estructura básica**](./ut0104.md)
-- [**1.3 Etiquetas para estructurar el texto**](./ut0106.md)
-- [**1.4 Etiquetas básicas de marcado**](./ut0108.md)
-- [**1.5 listas**](./ut0110.md)
-- [**1.6 enlaces**](./ut0111.md)
-- [**1.7 Tablas**](./ut0112.md)
-- [**1.8 Formularios**](./ut0113.md)
+- [**1.1 Introducción**](./ut0101.md)
+- [**1.2 Estructura básica**](./ut0102.md)
+- [**1.3 Etiquetas para estructurar el texto**](./ut0103.md)
+- [**1.4 Etiquetas básicas de marcado**](./ut0104.md)
+- [**1.5 listas**](./ut0105.md)
+- [**1.6 enlaces**](./ut0106.md)
+- [**1.7 Tablas**](./ut0107.md)
+- [**1.8 Formularios**](./ut0108.md)
 
 ---
 
@@ -65,22 +65,6 @@ Cuando escribes una dirección en el navegador
 Para empezar solo necesitas: • Un editor de texto (Bloc de notas, TextEdit, KWrite, Visual Studio Code…). • Un navegador para abrir tu página y ver cómo queda. Más adelante podrás usar: • Editores avanzados (VS Code, Sublime Text…). • Programas de diseño de imágenes (GIMP, Photoshop).
 
 • Aplicaciones para subir archivos a Internet (FileZilla).
-
-> **✍️ EJERCICIO: Tu primer documento HTML5 A continuación, escribe el s**
-> EJERCICIO: Tu primer documento HTML5 A continuación, escribe el siguiente código en tu editor de texto y guárdalo como Act1_tusiniciales_miprimerdocumento.html
-
-Pasos
-
-- Abre tu editor de texto.
-- Escribe el código tal como aparece arriba.
-
-### 3. Guarda
-
-el archivo con el nombre Act1_tusiniciales_miprimerdocumento.html (asegúrate de que no termine en .txt).
-
-- Haz doble clic para abrirlo en tu navegador.
-
-Si aparece el mensaje ¡Hola, mundo!, ¡lo has hecho genial! Consejo: Guarda todos tus trabajos en una carpeta llamada PracticasHTML.
 
 ---
 
@@ -185,27 +169,6 @@ Dentro de <head> colocamos información que no se muestra directamente, pero inf
 
 Ejemplo de etiquetas <meta> recomendadas: <meta charset="UTF-8"> <meta name="author" content="Tu nombre"> <meta name="description" content="Practicando con las etiquetas HTML"> <meta name="keywords" content="HTML, aprendizaje, web">
 
-📝 Ejercicio
-
-Recuerda: parte del trabajo lo aprendiste con el ejercicio anterior (“¡Hola, mundo!”). Ahora añadiremos más contenido.
-
-- Abre tu editor de texto.
-- Crea un archivo llamado Act2_tusiniciales_estructuras.html.
-
-### 3. Escribe este código
-
-- Guarda el archivo y ábrelo en tu navegador.
-
-### 5. Comprueba que aparece el texto en pantalla y que el título coincide con lo
-
-que escribiste en <title>. Pregunta: ¿Qué hace la etiqueta <hr>? ¿Has probado a quitarla? Conclusión • HTML5 usa etiquetas para definir el contenido y su estructura. • Siempre hay que empezar con <!DOCTYPE html> y respetar las partes
-
-```html
-<html>, <head> y <body>.
-```
-
-• Con un simple editor de texto y tu navegador puedes empezar a crear tus propias páginas web.
-
 ---
 
 # 1.3 Etiquetas para estructurar el texto
@@ -260,33 +223,6 @@ o Es la parte visible de la página. o Contiene todo lo que el usuario ve: texto
 <h1> la de mayor importancia y <h6> la de menor.
 
 - La etiqueta <br /> ayuda a dejar espacios entre líneas.
-
-> **✍️ Ejercicio: Mediante el editor online Phoenix Code, crea una págin**
-> Ejercicio: Mediante el editor online Phoenix Code, crea una página web que contenga
-
-### 1. En la cabecera de la web
-
-- El título de la web debe ser “El blog de [tu nombre]”
-- Recuerda incluir el <meta> de “autor” y “UTF-8” (Revisa los
-
-apuntes si fuera necesario).
-
-### 2. En el cuerpo
-
-- El titulo1 de la web debe ser “Mi página personal”.
-- Escribe dos subtítulos “Mis hobbies” y “Series o juegos favoritos”
-
-(puedes elegir).
-
-- Un último título de menor importancia que los anteriores con
-
-“Próximos retos”
-
-- Recuerda incluir debajo de cada título un párrafo donde
-
-expliques un poco las cosas que te gustan (Relacionadas con el título correspondiente…) Una vez terminado puedes descargar el archivo desde la misma pestaña “Archivo” →Descargar proyecto y subirlo a Aules. Nombre del archivo: Act3_TusIniciales.html
-
-Ejemplo visual
 
 ---
 
@@ -351,41 +287,6 @@ Código creado.
 
 Ejemplo visual.
 
-### 3. Ejercicio
-
-Objetivo general Crear una página web sencilla en HTML con la estructura básica y aplicar etiquetas de formato de texto para dar estilo y significado al contenido.
-
-### 4. Instrucciones para el alumnado
-
-- Abre tu editor de HTML Phoenix Code Online.
-
-### 2. Crea un nuevo archivo y guárdalo como Act4_TusIniciales.html
-
-### 3. Escribe la estructura básica de una página HTML5
-
-o <!DOCTYPE html> o <html lang="es"> o <head> con <meta charset="UTF-8">, <meta name="author" content="Tu nombre"> y <title> o <body> para el contenido.
-
-### 4. Elige UNO de los siguientes temas para tu página
-
-o Películas y series o Música y artistas o Videojuegos
-
-### 5. Dentro del <body>, escribe tres apartados con títulos y párrafos
-
-o Introducción: presenta el tema elegido. o Tu opinión personal: explica por qué te gusta o qué te llama la atención. o Recomendaciones: di cuál recomendarías y por qué.
-
-### 6. En los párrafos, usa al menos 6 de las etiquetas aprendidas,
-
-combinándolas libremente: o <strong> para algo importante o <b> para destacar visualmente o <em> o <i> para títulos o palabras con énfasis o <u> para subrayar o <mark> para resaltar o <del> y <ins> para cambios de gusto
-
-o <sup> o <sub> si lo necesitas o <br> para saltos de línea o <small> para una nota final o <hr> para separar secciones
-
-### 7. Al final de la página, añade una nota pequeña con tu nombre y la fecha
-
-usando <small>.
-
-- Guarda el archivo y ábrelo en el navegador para ver el resultado.
-- Subelo a Aules.
-
 ---
 
 # 1.5 listas
@@ -407,14 +308,6 @@ Se usan cuando el orden sí importa, por ejemplo para pasos o instrucciones. Tam
 ### 4. Listas de definición
 
 Se usan para mostrar términos y sus definiciones. Utilizan las etiquetas (término) y (definición). <dl> <dt>HTML</dt> <dd>Lenguaje para estructurar el contenido de una página web.</dd> </dl>
-
-### 5. Ejercicio práctico: Crea tu propia receta
-
-Crea una página web llamada mi_receta.html que contenga una receta de cocina completa. Sigue las siguientes instrucciones
-
-• Incluye un título con el nombre de tu receta. • Escribe una breve descripción del plato. • Crea una lista desordenada () con los ingredientes. • Crea una lista ordenada () con los pasos de preparación. • Crea una lista de definición () con al menos dos términos culinarios y su significado.
-
-• Cuida la estructura y el cierre correcto de las etiquetas HTML. I Consejo: Puedes combinar listas dentro de otras (listas anidadas) si quieres detallar pasos o sublistas. Con este ejercicio podrás practicar el uso de los tres tipos de listas en una página real.
 
 ---
 

@@ -1,464 +1,470 @@
 ---
 layout: default
-title: "UD4 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI · Temari Complet"
+title: "UD3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT3 Completa"
-prev_url: "../ut02/ut0203.html"
-prev_label: "⬅️ 3.3 ENLLAÇOS DURS I SIMBÓLICS"
+badge: "1r DAW / DAM · Grau Superior · UD3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE"
+prev_url: "../ut02/ut0201.html"
+prev_label: "⬅️ 2.1 Continguts Teòrics i Recursos"
 next_url: "../ut03/ut0301.html"
-next_label: "4.1 TEORIA XARXES ➡️"
+next_label: "3.1 LA SHELL DE LINUX ➡️"
 ---
 
-# 📘 UD4 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI (Unitat Completa)
+# 📘 UD3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 TEORIA XARXES**](./ut0301.md)
-- [**4.2 TEORIA SUBNETTING**](./ut0302.md)
+- [**3.1 LA SHELL DE LINUX**](./ut0301.md)
+- [**3.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D**](./ut0302.md)
+- [**3.3 ENLLAÇOS DURS I SIMBÓLICS**](./ut0303.md)
 
 ---
 
-# 4.1 TEORIA XARXES
+# 3.1 LA SHELL DE LINUX
 
-> **🔗 Recurs Web: Conceptos básicos de una estructura de directorio activo**
-> [**🌐 Obrir recurs extern (http://somebooks.es/3-2-conceptos-basicos-en-una-estructura-de-directorio-activo/) ↗️**](http://somebooks.es/3-2-conceptos-basicos-en-una-estructura-de-directorio-activo/)
->
-> En este enlace de somebooks.es, se detallan con buen acierto los elementos que participan en Active Directory. Estudiadlo con atención.
+La Shell de Unix y de Linux La shell de Unix es el término usado en informática para referirse al intérprete de comandos de los sistemas operativos basados en Unix y similares, como GNU/Linux, y que es su interfaz de usuario tradicional. Mediante las instrucciones que aporta el intérprete, el usuario puede comunicarse con el núcleo y por extensión, ejecutar dichas órdenes, así como herramientas que le permiten controlar el funcionamiento de la computadora. Por ello, en inglés se le denominó así, shell, que puede ser traducido como «cáscara», porque es la envoltura visible del sistema informático.
 
-> **🔗 Recurs Web: Tipos de grupos en Active Directory**
-> [**🌐 Obrir recurs extern (https://adicciontecno.com/tipos-de-grupos-del-directorio-activo/) ↗️**](https://adicciontecno.com/tipos-de-grupos-del-directorio-activo/)
->
-> En la actividad 4 de esta unidad, os puse unas definiciones de grupos de Active Directory que no me parecieron muy acertadas. Por ello, os remito este enlace donde se clarifican los conceptos abordados sobre grupos de Active Directory.
+Los comandos que aportan los intérpretes, pueden usarse a modo de guion si se escriben en ficheros ejecutables denominados shell-scripts, de este modo, cuando el usuario necesita hacer uso de varios comandos o combinados de comandos con herramientas, escribe en un fichero de texto, marcado como ejecutable, las operaciones que posteriormente, línea por línea, el intérprete traducirá al núcleo para que las realice. Sin ser un shell estrictamente un lenguaje de programación, al proceso de crear scripts de shell se le denomina programación shell o en inglés, shell programming o shell scripting.
 
-> **🔗 Recurs Web: GRUPOS Y ÁMBITOS DE GRUPO DE ACTIVE DIRECTORY, GPO**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=OQMKOm7Ut3Y) ↗️**](https://www.youtube.com/watch?v=OQMKOm7Ut3Y)
+Los usuarios de Unix y similares, pueden elegir entre distintos shells (programa que se debería ejecutar cuando inician la sesión, véase bash, ash, csh, Zsh, ksh, tcsh). Las interfaces de usuario gráficas para Unix, como son GNOME, KDE y Xfce pueden ser llamadas shells visuales o shells gráficas. Por sí mismo, el término shell es asociado usualmente con la línea de comandos. En Unix, cualquier programa puede ser un shell de usuario. Los usuarios que desean utilizar una sintaxis diferente para redactar comandos, pueden especificar un intérprete diferente como su shell de usuario.
+
+El sistema de ficheros ext4 es la última versión de la familia de sistemas de ficheros ext y son los más utilizados por las distribuciones Linux. Sus principales ventajas radican en su eficiencia (menor uso de CPU, mejoras en la velocidad de lectura y escritura) y en la ampliación de los límites de tamaño de los ficheros, ahora de hasta 16TB.
+
+Cuando instalamos un sistema operativo Linux, se establecen los siguientes directorios
+
+Vamos a ver ahora como nos podemos mover por la Shell de Linux usando diferentes comandos: Cuando arrancas la consola en tu ordenador con tu distribución de Linux, siempre aparece del siguiente modo
+
+[usuario@linuxbox ~ ]$
+
+- usuario: hace mención al usuario logado y linuxbox especifica el nombre de la máquina.
+- Cuando indica (~) quiere decir que el usuario ahora mismo se encuentra en su directorio
+
+/home/usuario.
+
+- Cabe tener en cuenta que el signo dólar ($) cambia a # cuando nos logamos con permisos de
+
+administrador. Para ello, se puede usar su -, o sudo -s o sudo su –.
+
+### 1. Listar, visualizar y desplazarte por las diferentes carpetas o directorios
+
+Para obtener un listado completo de los directorios que cuelgan de raíz puedes usar el comando cd para situarte en el directorio raíz y con ls podrás visualizar todos los archivos y carpetas contenidos en él.
+
+```bash
+$ cd /
+$ ls
+```
+
+También puedes jugar un poco con el comando ls, añadiendo ciertos parámetros para obtener listados más detallados. Una opción muy útil, por ejemplo, es ls -l, con la que obtendrás los diferentes directorios en forma de lista, junto con los permisos de lectura, escritura y ejecución asociados a cada una de ellos.
+
+El comando pwd te indica la ruta completa del directorio de trabajo en el que se encuentra tu usuario. Su función es meramente informativa, peor muy útil en ciertas ocasiones, como, por ejemplo, conocer el nombre del directorio de trabajo actual.
+
+```bash
+$ pwd
+```
+
+El comando cd te permite cambiar de directorio de trabajo. Sería el equivalente a ingresar o entrar en la carpeta, pero desde la consola. Básicamente requiere indicar el nombre del directorio en el que deseas moverte. Acepta rutas absolutas y relativas.
+
+```bash
+$ cd /home/usuario/Documentos
+```
+
+El comando de arriba te llevará al directorio Documentos dentro de la carpeta personal del usuario llamado usuario. En este caso he utilizado una ruta absoluta, empezando por el directorio raíz /, e indicando el camino completo hasta situarme a Documentos. La instrucción cd la puedes utilizar siempre que quieras volver a situarte al directorio principal de usuario, que en este caso sería en /home/usuario. Muy interesante siempre que queramos volver al punto de partida (ojo, no confundir eso con ir al directorio raíz, que sería el directorio /)
+
+```bash
+$ cd
+```
+
+Situados ahora en /home/usuario, si queremos ir al directorio Documentos, usando la ruta relativa sería
+
+```bash
+$ cd Documentos
+```
+
+Cuando se dice relativa significa que se indica la ruta relativa a la posición en la que me encuentro en ese momento. (/home/usuario) Siguiendo con esta nueva instrucción
+
+```bash
+$ cd ..
+```
+
+Con esta instrucción subes un directorio. Si te encontrabas en /home/usuario/Documentos, ahora te encuentras en /home/usuario. Y con esta instrucción
+
+```bash
+$ cd ../..
+```
+
+Saltas dos directorios hacia arriba, situándote en el directorio raíz. Hasta aquí, tienes algunos usos simples para moverte a través de las diferentes carpetas. A continuación, y teniendo claro lo anterior, podemos pasar a aprender a listar archivos y directorios.
+
+podrás listar los diferentes archivos y directorios de la carpeta de trabajo en la que te encuentres. El comando acepta multitud de opciones, algunas de las cuales te mostraré a continuación.
+
+### 2. Listar directorios
+
+El comando ls es el uso más simple del comando ls. Si no le indicas ninguna opción, te enumerará todos los archivos y directorios que se encuentran en la carpeta de trabajo actual, sin tener en cuenta archivos ocultos.
+
+```bash
+$ ls -a
+```
+
+Con esta opción, el comando te mostrará, en forma de lista, todo el contenido que se encuentre dentro del directorio de trabajo, incluyendo, además, archivos y carpetas ocultos.
+
+```bash
+$ ls -l
+```
+
+Esta opción es similar al primer caso, pero muestra el contenido en forma de lista e incluye información referente a cada elemento. Se usa muchísimo y es especialmente útil a la hora de conocer el propietario y los permisos de cada fichero. Estas son sólo algunas de las muchísimas posibilidades de las que disponemos para nombrar o listar el contenido de un directorio, desde la terminal de Linux. Existen muchas opciones más, las cuales puedes explorar en todo momento haciendo uso del comando man ls.
+
+El comando find es muy similar en su función básica a ls, ya que de entrada sirve para listar todo el contenido de un directorio. La diferencia es que, aplicando filtros, te puede servir para buscar archivos de forma más precisa.
+
+```bash
+$ find
+```
+
+La sentencia más básica te listará todo el contenido del directorio de trabajo actual de forma recursiva. La diferencia respecto a ls es justamente que find no se limita a mostrar los archivos y directorios de primer nivel, sino que también te mostrará el contenido de estos, y así recursivamente hasta recorrer todos los niveles hacía abajo.
+
+```bash
+$ find ./Documentos
+```
+
+Con esta opción, find te listará todo el contenido del directorio Documentos (dentro del directorio de trabajo actual) también de forma recursiva, recorriendo todos los niveles hacía abajo.
+
+```bash
+$ find ./Documentos -name archivo.txt
+```
+
+Si quieres empezar a establecer filtros por nombre, puedes añadir el parámetro -name. En este ejemplo, estamos intentando localizar un archivo concreto dentro de Documentos que su nombre corresponda a archivo.txt.
+
+```bash
+$ find ./Documentos -name *.pdf
+```
+
+Incluso puedes hacer filtros más concretos gracias al uso de comodines. En el caso de arriba, por ejemplo, estamos buscando en la carpeta Documentos todos los archivos que con la extensión .pdf, al igual que puedes hacerlo con cualquier otro tipo de extensión. El comando locate es una alternativa útil a find la hora de localizar archivos o directorios que no recuerdas donde tienes. Aquí tiene algunos ejemplos que te pueden ser de gran utilidad
+
+```bash
+$ locate archivo1.txt
+```
+
+En este caso tienes un claro ejemplo de cómo realizar una búsqueda simple del archivo archivo1.txt directamente por su nombre. Es útil solo si sabes el nombre exacto del elemento que estás buscando.
+
+### 3. Crear, borrar, copiar y mover archivos y directorios
+
+En esta parte conocerás algunos comandos necesarios a la hora de realizar acciones tales como: crear un nuevo directorio, copiar un archivo y pegarlo en otra ubicación, mover ficheros de una ubicación en otra, etc. El comando mkdir te permitirá crear un directorio con el nombre y la ruta que especifiques. Si no le indicas ninguna ruta, por defecto, te creará la carpeta dentro del directorio de trabajo en el que te encuentres. A continuación, tienes algunos ejemplos sencillos.
+
+```bash
+$ mkdir /home/usuario1/directorio1
+```
+
+En el caso de arria, mkdir te creará el directorio de nombre directorio1, en la ruta que le hayas especificado, en este caso dentro de la carpeta principal de usuario.
+
+```bash
+$ mkdir directorio2
+```
+
+Con esta sintaxis, el comando te creará una carpeta de nombre directorio2 dentro del directorio de trabajo en la que te encuentres (recuerda utilizar pwd para saber dónde estás).
+
+Estos son las dos principales maneras de crear carpetas en Linux desde la consola. Asimismo, si quieres profundizar más en el uso de este comando, puedas explorar otras muchas opciones a través del comando man mkdir. El comando rmdir te permite eliminar el directorio que le especifiques. Para poder utilizar este comando, el directorio a borrar debe estar vacío. A continuación, tienes un par de ejemplos.
+
+```bash
+$ rmdir /home/usuario1/directorio1
+```
+
+En este caso, rmdir borrará el directorio de nombre directorio1, que se encuentra en la ruta especificada, en este caso dentro de la carpeta de usuario.
+
+```bash
+$ rmdir directorio2
+```
+
+En este otro ejemplo, el rmdir eliminará el directorio de nombre directorio2, el cual debe encontrarse dentro de la carpeta en el que te encuentres. De lo contrario, indicará que el directorio no existe. Se está utilizando una ruta relativa. El comando rm te permite eliminar archivos sueltos y directorios que no se encuentren vacíos.
+
+A continuación, tienes algunos de los usos principales del comando.
+
+```bash
+$ rm /home/usuario1/archivo1.txt
+```
+
+En este caso, rm te borrará el archivo de texto archivo1.txt, que se encuentra en la ruta especificada, para este caso dentro de la carpeta de usuario. Aquí se está utilizando una ruta absoluta.
+
+```bash
+$ rm -r /home/usuario1/directorio1
+```
+
+Con esta opción, rm borrará el directorio directorio1 de forma recursiva. Esto significa, incluyendo todos los archivos y subdirectorios que se encuentren dentro de él (pidiéndote, eso si, confirmación para cada archivo). rm -rf /home/usuario1/directorio1 Si te quieres saltar el paso de tener que confirmar archivo por archivo que realmente deseas borrarlo, con este comando borrarás todo el contenido del directorio sin advertencias.
+
+Eso si, hay que tener cuidado con rm, puesto que dependiendo de cómo lo uses, puede dar cabida a situaciones como esta. Se trata de ser consciente de cómo funciona y de los parámetros que estas introduciendo en cada momento. Usando el comando cp, serás capaz de copiar archivos y directorios, así como ubicarlos en otras rutas. A continuación, tienes un par de ejemplos de cómo se puede utilizar.
+
+```bash
+$ cp archivo1.txt archivo2.txt
+```
+
+Este es posiblemente el uso más simple de cp. Con esta forma, crearás una copia del archivo archivo1.txt la cual se guardará con el nombre archivo2.txt. En este caso, el archivo de partida debe encontrarse dentro del directorio de trabajo en el que estés.
+
+```bash
+$ cp /home/usuario1/archivo1.txt /tmp/archivo2.txt
+```
+
+Como en todos los casos, puedes explorar muchas más opciones tecleando man cp en la consola. El comando mv te servirá para mover archivos desde la consola. Sería lo equivalente a arrastrar un archivo desde una ubicación a otra. La sintaxis es muy sencilla, solamente debes especificar la ubicación de inicio, incluyendo el nombre del archivo, y la ubicación de destino. También puedes modificar el nombre del archivo en su ubicación de destino.
+
+mv /home/usuario1/Descargas/archivo1.txt /home/usuario1/Documentos/archivo1.txt En este ejemplo de arriba estamos moviendo el archivo de nombre archivo1.txt desde la carpeta Descargas hacía la carpeta Documentos. Para ello hemos utilizado rutas absolutas. mv Descargas/archivo1.txt Documentos/archivo1.txt En este otro ejemplo he hecho exactamente lo mismo, pero utilizando una ruta relativa, suponiendo que nos encontramos en la carpeta de usuario dentro de la Home.
 
 ---
 
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+# 3.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D
 
-ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO
+UD3: ADMINISTRACIÓ DE PROGRAMARI LLIURE Netplan: Configurar la red en Ubuntu 20.04
 
-▪ Administración de usuarios i grupos ▪ Usuarios del Windows ▪ Tipos de cuentas de usuario. Gestión de contraseñas. ▪ Modificación de las contraseñas. ▪ Perfiles de usuarios locales y grupos de usuarios ▪ Dominios y grupos de trabajo. ▪ Navegación ▪ Controlador de dominio. ▪ Dominio Active Directory.
+### 1. Introducción
 
-▪ Configuración del protocolo de red ▪ Protocolos ▪ Modelo TCP/IP ▪ Proceso de comunicación ▪ Direccionamiento de red ▪ Protocolos de capa 2 de TCP/IP ▪ Direccionamiento y clases IPv4 ▪ Direccionamiento estático o dinámico para dispositivos de usuario final ▪ Desfragmentar el disco duro ▪ Limpiar el disco duro
+En las últimas versiones de Ubuntu, a partir de Ubuntu17, la configuración de red se trabaja con la herramienta Netplan. Netplan es una nueva utilidad de configuración de red, de línea de comandos, que se introdujo por primera vez en Ubuntu 17.10, para administrar y configurar los ajustes de red, de forma fácil. Permite configurar al usuario una interfaz de red utilizando el formato YAML. Funciona junto a los daemon de red como NetworkManager y systemd-networkd, como interfaces para el kernel.
 
-Introducció a les Xarxes
+Netplan se encarga de leer la configuración indicada en los ficheros de la carpeta /etc/netplan/*.yaml y puede almacenar las configuraciones para todas las interfaces de red en estos archivos.
 
-- A l’any 1833 va aparèixer el telègraf (Samuel Morse).
-- La evolució que han patit les xarxes ha estat molt gran.
+### 2. Conocer la ip actual en Ubuntu 20.04, desactivar interfaces
 
-En primer lloc xarxes telegràfiques. Posteriorment xarxes telefòniques.
+Se puede visualizar la ip mediante el comando
 
-Aquest panorama va canviar amb l’aparició de l’ordinador (1940)
+```bash
+$ ip addr
+$ ip address show
+$ ip address list
+```
 
-Definició de xarxa Una xarxa informàtica és un grup d’ordinadors interconnectats amb la finalitat d’intercanviar dades o compartir recursos. Tipus de xarxes Segons l’abast
+El comando ifconfig ya se ha quedado obsoleto, aunque todavía se puede utilizar, pero el comando ip, que pertenece a la iproute2 suit, parece ser el sustituto de ifconfig. Si queremos visualizar información de red, pero de capa 2
 
-- PAN, xarxa d'àrea personal
-- LAN, xarxa d’àrea local
-- MAN, xarxa d’àrea metropolitana
-- WAN, xarxa d’àrea estesa
+```bash
+$ ip link show
+```
 
-Segons el mètode de connexió
+Para desactivar interfaces o activarlos, se puede usar
 
-- Xarxes guiades. El medi físic és el cable.
+```bash
+$ ip link set nombre_interfaz down
+$ ip link set nombre_interfaz up
+```
 
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+Para configurar una ip para una interfaz
 
-- Xarxes no guiades. El medi físic és el buit.
+```bash
+$ ip addr add ip/mascara broadcast ip_broadcast dev interfaz
+```
 
-Tipus de xarxes Segons la funcionalitat
+Y para eliminarla
 
-- Client-Servidor.
+```bash
+$ ip addr del ip/mascara broadcast ip_broadcast dev interfaz
+```
 
-En informàtica s’anomena arquitectura de xarxa client-servidor la relació que s’estableix entre dos ordinadors, en la qual el servidor ofereix un recurs de qualsevol tipus a l’altre, el client, perquè en traga algun profit o avantatge. Generalment, d’un servidor se’n beneficien diversos o molts clients.
+### 3. Configurar una ip estática
 
-- Igual a Igual.
+A partir de esta versión se utiliza la herramienta de administración de red llamada Netplan y es muy útil en casos donde no queremos dejar configurada una ip dinámica y vemos necesaria ajutstar una ip estática a la máquina. Su archivo de configuración se encuentra en el
 
-Les xarxes d’igual a igual defineixen un sistema de comunicació que no té clients ni servidors fixos, sinó una sèrie de màquines que es comporten alhora com a clients i com a servidors de les altres màquines de la xarxa. Em aquest sistema les dades es transmeten per mitjà d’una xarxa dinàmica.
+directocio /etc/netplan. Si queremos saber cómo se llama el fichero de configuración de nuestro equipo para empezar a trabajar, solo hemos de lanzar un ls al directorio /etc/netplan.
 
-Segons la topologia
+```bash
+$ ls /etc/netplan
+```
 
-- Xarxa en anell
-- Xarxa en estrella
-- Xarxa en bus
-- Xarxa en arbre
-- Xarxa en malla
+01-network-manager-all.yaml Primero, antes de modificar nada y como medida de seguriada, habrá que guardar este fichero haciendo un backup por si al realizar cualquier modificación, necesitamos hacer una marcha atrás y poder restituir el fichero como estaba. $sudo cp /etc/netplan/01-network-manager-all.yaml /etc/netplan/01-network-manager- all.yaml.original Una vez ya tenemos el backup del fichero, procedemos a modificarlo. Aquí os muestro una configuración estándar y debemos de ser conscientes de que debemos de tener una ip estática, conocer la ip del Gateway o pasarela y conocer algún servidor dns si necesitamos cambiarlo.
 
-Segons la direccionalitat de les dades
+Guardamos el fichero y después ejecutamos el fichero con los siguientes comandos para comprobar que está bien editado (try) y que se puede aplicar: $sudo netplan try $sudo netplan apply (HAY QUE TENER CUIDADO A LA HORA DE EDITAR EL FICHERO. NO TECLEAR LA TECLA PARA TABULAR PORQUE APARECERÁN ERRORES PARA PODERLO APLICAR)
 
-- Simplex (per exemple, audio o vídeo per Internet)
-- Half-duplex o semiduplex (per exemple, Walkie-Talkie)
-- Full-duplex o duplex (per exemple, videoconferència)
+### 4. Comprobar cómo funciona el servicio DNS
 
-Cablatge i connectors
+El servicio DNS nos permite por ejemplo, navegar por Internet, ya que resuelve los nombres a direcciones ip. Esta resolución de nombres la hace mediante el fichero /etc/resolv.conf podemos ver de qué modo resuelve las direcciones tu pc con sistema operativo Linux Ubuntu.
 
-- Cable
-- Parell trenat (cable UTP)
-- Cable coaxial
-- Fibra òptica
-- Sense fil
+Al ver el fichero /etc/resolv.conf verás la ip 127.0.0.53 que es el DNS local de systemd-resolved que escucha en esta ip. Es decir, cualquier consulta que realiza el ordenador la tramita esta ip y la manda a los dns superiores que tenga configurados. Si ejecutamos la instrucción
 
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+$resolvectl status
 
-Adreces IP
+Podrás ver a que servidor dns lo transmite.
 
-- Podem trobar la versió 4 del protocol IP. Una adreça IP està formada per 32 bits
+### 5. El fichero hosts
 
-(quatre octets).
-
-- Exemple d’adreça IP: 192.33.45.6
-- (També existeix IPv6) de 128 bits
-
-Màscara de subxarxa: permet identificar la topologia de la xarxa. Permet identificar si una xarxa està dividida o no en subxarxes.
-
-- Els bits que fan referència a la xarxa són “1”
-- Els bits que fan referència als host són “0”
-
-Classes de xarxes
-
-- Classe A: Primer bit de l’adreça IP és “0” (de la 0 a la 127)
-- Classe B: Primer bit de l’adreça IP és “1” i el segon bit és “0”(de la 128 a la 191)
-- Classe C: Primer bit de l’adreça IP és “1”, el segon bit és “1” i el tercer bit és “0”. (de
-
-la 192 a la 223)
-
-- Classe D: Xarxes multicast
-- Classe E: Xarxes experimentals
-
-Adreces privades
-
-- Classe A: 10.0.0.0 a 10.255.255.255 (10.0.0.0 /8)
-- Classe B: 172.16.0.0 a 172.31.255.255 (172.16.0.0 /16)
-- Classe C: 192.168.0.0 a 192.168.255.255 (192.168.0.0 /24)
-
-Altres adreces d'interès
-
-- 0.0.0.0 Utilitzada pels dispositius quan estan engegant o no tenen adreça IP.
-- 127.X.X.X Utilitzada per a proves. Es denomina adreça de bucle o de loopback.
-- 169.X.X.X S’activa quan falla el mecanisme normal par assignar IP. Existeix un fallo al
-
-cable de xarxa, dispositiu, etc. Model OSI i TCP/IP Un poc d’història...
-
-- Cap als 70, ISO va dissenyar un model de referència OSI.
-- La idea era permetre el desenvolupament de protocols de diferents fabricants.
-- OSI divideix en 7 capes.
-- El model que segueix Internet és el model TCP/IP.
-- TCP/IP va ser desenvolupat abans que OSI.
-- OSI i TCP/IP engloben tot allò que té a veure en el funcionament d’una xarxa.
-
-funcionament d’una Xarxa
-
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
-
-Model OSI Per a reduir la complexitat, les xarxes s’organitzen en capes o nivells, cadascuna construïda sobre la inferior. El propòsit de cada capa es oferir serveis a les capes superiors de manera que no hagen d’ocupar-se de la implementació d’estos serveis. La capa n de una màquina du una conversa amb la capa n d’un altra màquina. Les regles que es segueixen en esta conversació s’anomenen protocols de capa n. Bàsicament un protocol establix com va a procedir la comunicació entre estes dos màquines.
-
-Entre cada parell de capes adjacents, n’hi ha una interfície que definix les operacions i serveis que ofereix la capa inferior a la superior. “Si una interfície està ben definida, es fàcil canviar d’implementació perquè l’únic que s’ha de fer és implementar és oferir els serveis que oferia l’anterior” El conjunt de capes i protocols rep el nom d’arquitectura de xarxa.
-
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
-
-S’ha d’entendre que quan es produix una comunicació des de la capa d’aplicació fins a la física la capa d’aplicació genera un missatge amb una capçalera i la entrega a la capa inferior, la de presentació, per a la seua transmissió. Esta capa col·loca un altra capçalera al principi del missatge per a identificar-lo i passa el resultat a la següent capa inferior, la de sessió. La capçalera inclou informació de control, números de seqüència, per a que la capa de presentació de la màquina receptora, puga entregar els missatges en l’ordre correcte si les capes inferiors no mantenen la seqüència.
-
-En la màquina receptora, el missatge avança cap a dalt, de capa en capa, perdent les capçaleres conforme va pujant. Així fins que arriba a la capa d’aplicació.
-
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
-
-Com es pot veure a la imatge anterior, a partir de la capa 4 del modelo OSI les comunicacions son extrem a extrem (d’ordinador a ordinador o de servidor a ordinador) mentre que les comunicacions amb un router des d’un pc serien totes treballant des de la capa 1 (física) fins a la capa 3 (xarxa).
-
-Model TCP/IP
-
-- TCP/IP no és un protocol, són una pila de protocols (una suite de protocols).
-- S’implementen tant en el host emissor com en el receptor.
-- La capa 1 del model TCP/IP s’implementa en hardware mitjançant la targeta de xarxa,
-
-mentre que la part de software s’aconsegueix mitjançant el drivers o els controladors de la targeta.
-
-- La resta de capes de l’arquitectura TCP/IP s’implementa mitjançant el NOS (network
-
-operating system), que es el software que implementa la pila de protocols i encarregat de que el sistema informàtic puga comunicar-se amb altres equips constituint una xarxa.
-
-TCP/IP (procés complet de comunicació)
-
-- Creació de dades en la capa d’aplicació del dispositiu d’origen.
-
-### 2. Segmentació i encapsulació de dades quan passen per la pila de protocols en el
-
-dispositiu d’origen.
-
-- Generació de les dades sobre el mitjà en la capa d’accés a la Xarxa.
-
-### 4. Transport de les dades per la Xarxa, que està formada pels mitjans i qualsevol
-
-dispositiu intermediari.
-
-- Recuperació de les dades en la capa d’accés a la Xarxa del dispositiu de destinació.
-- Desencapsulació i rearmament de les dades en passar per la pila en el dispositiu final.
-
-### 7. Traspàs d’aquestes dades a l’aplicació de destinació corresponent a la capa
-
-d’aplicació del dispositiu de destinació.
-
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
-
-En cada capa o nivell el tamany i tipus de
-
-- Transport: Segments
-- Internet: Paquets
-- Access a la xarxa: Trames(capa 2) i bits convertits en
-
-senyals elèctriques)
-
-Adreçament físic
-
-- Correspon al número d’identificació de nivell 2 (OSI) i s’anomena MAC.
-- És individual i únic per a cada dispositiu.
-- És un identificador de 6 blocs hexadecimals.
-- El protocol encarregat d’esbrinar l’adreçament MAC és l’ARP (Adress Resolution
-
-Protocol). Protocol ARP
-
-- Aquest protocol permet que els ordinadors facen difusió d’una petició ARP,
-
-demanant la MAC, la qual correspon a una IP.
-
-- Cada màquina va aprenent les MAC i IP dels veïns.
-- Les MAC i IP s’emmagatzemen en la Taula ARP.
-
-Adreçament lògic
-
-- Són les adreces IP. Actualment les més utilitzades són IP versió 4.
-- Les adreces IP són adreces de nivell 3 (OSI).
-
-Màscara de xarxa La màscara de xarxa permet distingir els bits que identifiquen la xarxa i els que identifiquen el host o màquina en una adreça IP. Per exemple, una màscara
-
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
-
-255.0.0.0 indica que el primer octet identifica la xarxa i els altres tres octets identifiquen el host.
-
-Subnetting Creació de subxarxes o subneting
-
-- Consisteix en dividir una xarxa en segments de xarxa o subxarxes. És habitual fer
-
-aquesta divisió en funció de criteris geogràfics.
-
-- Pisos d’un edifici connectats per una LAN
-- Diferents edificis connectats per una WAN
-- Subxarxes per departaments a una empresa (màrqueting, I+D+I, etc.)
-
-Avantatges de les subxarxes Millora la seguretat i el rendiment global:Les subxarxes s’han de connectar entre si mitjançant encaminadors (routers). Serà més fàcil filtrar els paquets que no van destinats a una xarxa. Simplifica la resolució de problemes:Com la xarxa està segmentada, resulta més fàcil identificar els problemes. Els problemes només afectaran a un segment de la xarxa (a una subxarxa).
-
-La creació de subxarxes permet aïllar el trànsit de cada xarxa
-
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
-
-Més exemples
-
-- Es vol segmentar una xarxa de tipus C amb la IP 193.25.31.0 en subxarxes que
-
-puguen contenir 80 host cadascuna, quina màscara hem d’utilitzar?.
-
-- Subneting de classe C. Quantes subxarxes es poden produir en una màscara de
-
-subxarxa 255.255.255.240 ?.
-
-- Quantes subxarxes es poden obtenir d’una màscara de subxarxa i de l’adreça de
-
-xarxa?.
-
-- IP: 199.42.78.0, màscara 255.255.255.192.
-- Subneting de classe B. En la IP 170.23.55.23 i la màscara 255.255.224.0, esbrina les
-
-dades de les 4 primeres subxarxes i les de l’última subxarxa. Esbrinar a quina xarxa pertany una IP
-
-- Hem de saber una IP i una màscara de subxarxa.
-- Passar la IP a binari.
-- Posar baix de la IP en binari, la màscara en binari.
-- Fer la operació AND (en vertical).
-
-### 4. Ara, per esbrinar la direcció de broadcast, posem la màscara invertida, baix de la IP
-
-de xarxa.
-
-- Fem l’operació OR i ja tenim la ip de broadcast.
-
-CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
-
-Encaminament Definició d’encaminament: L’encaminament IP és una de les funcions fonamentals que els dispositius encaminadors han de fer. Consisteix fonamentalment a determinar quina és la ruta que ha de seguir un paquet de dades d’un host d’origen fins a un host de destinació, basant-se en factors com poden ser els següents
-
-- Nombre de salts de l’origen a la destinació
-- Amplada de banda de la línia
-- Nombre d’usuaris connectats
-- Prioritats
-
-1. Encaminament estàtic Són aquelles rutes que l’administrador introdueix manualment S’ha de conèixer la xarxa.
-
-- Es poden definir rutes concretes per accedir a una destinació.
-- Amb show ip route veiem la taula de l’encaminador.
-- Amb 0.0.0.0 la ruta podrà ser qualsevol.
-
-2. Encaminament dinàmic Les rutes es generen automàticament quan activem els protocol, per la qual cosa, les taules d’encaminament es configuren automàticament. Si hi ha un canvi de xarxa, les rutes s’auto configuraran automàticament.
-
-- S’ha de tenir en conter que es poden presentar problemes de redundància i es poden
-
-generar bucles d’encaminament.
-
-- Quan tots els encaminadors han generat les seues taules i han actualitzat als
-
-dispositius veïns, es diu que han convergit.
-
-- Utilitzarem d’exemple el PROTOCOL RIP.
-
-Protocol RIP
-
-- És un protocol de vector distància  La millor ruta es determina pel menor número de
-
-salts.
-
-- S’utilitza per a xarxes petites i mitjanes.
-- No és un protocol propietari.
-- L’encaminador coneix les rutes que té directament connectades.
-- Anuncia a totes les xarxes que coneix la seva configuració.
-- Escolta les actualitzacions externes i les difon.
+Es el fichero que almacena información sobre ip’s locales de la red. Puedes visualizarlo mediante un: $cat /etc/hosts Y podrás añadir entradas como te interese.
 
 ---
 
-# 4.2 TEORIA SUBNETTING
+# 3.3 ENLLAÇOS DURS I SIMBÓLICS
 
-Tutorial de Subneteo Clase A, B, C - Ejercicios de Subnetting CCNA 1
+UD3: ADMINISTRACIÓ DE PROGRAMARI LLIURE Enlaces duros y blandos
 
-La función del Subneteo o Subnetting es dividir una red IP física en subredes lógicas (redes más pequeñas) para que cada una de estas trabajen a nivel envío y recepción de paquetes como una red individual, aunque todas pertenezcan a la misma red física y al mismo dominio.
+### 1. Introducción
 
-El Subneteo permite una mejor administración, control del tráfico y seguridad al segmentar la red por función. También, mejora la performance de la red al reducir el tráfico de broadcast de nuestra red. Como desventaja, su implementación desperdicia muchas direcciones, sobre todo en los enlaces seriales.
+Existen dos tipos de enlaces, los enlaces duros y los enlaces simbólicos. En los siguientes apartados explicaremos y veremos en detalle que son y para que podemos usar cada uno de los tipos de enlaces que acabamos de citar.
 
-Dirección IP Clase A, B, C, D y E
+### 2. Enlaces duros
 
-Las direcciones IP están compuestas por 32 bits divididos en 4 octetos de 8 bits cada uno. A su vez, un bit o una secuencia de bits determinan la Clase a la que pertenece esa dirección IP. Cada clase de una dirección de red determina una máscara por defecto, un rango IP, cantidad de redes y de hosts por red.
+Para entender lo que es un enlace duro, lo primero que tenemos que saber es que en Linux cada fichero y cada carpeta del sistema operativo tienen asignado un número entero llamado inodo.
 
-Cada Clase tiene una máscara de red por defecto, la Clase A 255.0.0.0, la Clase B 255.255.0.0 y la Clase C 255.255.255.0. Al direccionamiento que utiliza la máscara de red por defecto, se lo denomina “direccionamiento con clase” (classful addressing).
+Este inodo es único para cada uno de los archivos y cada una de las carpetas. La información que almacena cada uno de los inodos de los distintos archivos y carpetas es la siguiente
 
-Siempre que se subnetea se hace a paritr de una dirección de red Clase A, B, o C y está se adapta según los requerimientos de subredes y hosts por subred. Tengan en cuenta que no se puede subnetear una dirección de red sin Clase ya que ésta ya pasó por ese proceso, aclaro esto porque es un error muy común. Al direccionamiento que utiliza la máscara de red adaptada (subneteada), se lo denomina “direccionamiento sin clase” (classless addressing).
+Los permisos del archivo o carpeta. El propietario del fichero y carpeta. La posición/ubicación del archivo o de la carpeta dentro de nuestro disco duro. La fecha de creación del archivo o directorio, etc. Una vez comprendido esto, podemos decir que un enlace duro es un archivo que apunta al mismo contenido almacenado en disco que el archivo original.
 
-En consecuencia, la Clase de una dirección IP es definida por su máscara de red y no por su dirección IP. Si una dirección tiene su máscara por defecto pertenece a una Clase A, B o C, de lo contrario no tiene Clase aunque por su IP pareciese la tuviese. Máscara de Red
+Por lo tanto, los archivos originales y los enlaces duros dispondrán del mismo inodo y consecuentemente ambos estarán apuntando hacia el mismo contenido almacenado en el disco duro. De este modo, tal y como se puede ver representado en la imagen, un enlace duro no es más que una forma de identificar un contenido almacenado en el disco duro con un nombre distinto al del archivo original.
 
-La máscara de red se divide en 2 partes: Porción de Red: En el caso que la máscara sea por defecto, una dirección con Clase, la cantidad de bits “1” en la porción de red, indican la dirección de red, es decir, la parte de la dirección IP que va a ser común a todos los hosts de esa red.
+Se podrá realizar un enlace duro de un archivo siempre y cuando el archivo esté en la misma partición del disco duro que pretendemos crear el enlace. Esto es forzosamente así porque cada partición de nuestro disco duro dispone de su propia tabla de inodos, y se tiene que
 
-En el caso que sea una máscara adaptada, el tema es más complejo. La parte de la máscara de red cuyos octetos sean todos bits “1” indican la dirección de red y va a ser la parte de la dirección IP que va a ser común a todos los hosts de esa red, los bits “1” restantes son los que en la dirección IP se van a modificar para generar las diferentes subredes y van a ser común solo a los hosts que pertenecen a esa subred (asi explicado parece engorroso, así que
+evitar la posibilidad de que un mismo número de inodo esté apuntado a dos ubicaciones distintas de nuestro disco duro. ¿Cómo podremos crear un enlace duro? Generando un enlace duro podremos asimilar mucho mejor lo que acabamos de explicar en el apartado anterior. Para comprender bien lo que es un enlace duro crearemos un archivo de texto ejecutando el siguiente comando en la terminal
 
-más abajo les dejo ejemplos). En ambos caso, con Clase o sin, determina el prefijo que suelen ver después de una dirección IP (ej: /8, /16, /24, /18, etc.) ya que ese número es la suma de la cantidad de bits “1” de la porción de red. Porción de Host: La cantidad de bits "0" en la porción de host de la máscara, indican que parte de la dirección de red se usa para asignar direcciones de host, es decir, la parte de la dirección IP que va a variar según se vayan asignando direcciones a los hosts.
+touch alumno.txt Una vez creado el archivo vamos o consultar su número de inodo ejecutando el siguiente comando en la terminal
 
-Ejemplos
+```bash
+ls -li alumno.txt
+```
 
-Si tenemos la dirección IP Clase C 192.168.1.0/24 y la pasamos a binario, los primeros 3 octetos, que coinciden con los bits “1” de la máscara de red (fondo bordó), es la dirección de red, que va a ser común a todos los hosts que sean asignados en el último octeto (fondo gris). Con este mismo criterio, si tenemos una dirección Clase B, los 2 primeros octetos son la dirección de red que va a ser común a todos los hosts que sean asignados en los últimos 2 octetos, y si tenemos una dirección Clase A, el 1 octeto es la dirección de red que va a ser común a todos los hosts que sean asignados en los últimos 3 octetos.
+El resultado obtenido en mi caso es el siguiente: 1341693 -rw-r--r-- 1 user user 0 nov 17 22:50 alumno.txt Por lo tanto, el inodo del archivo que acabamos de crear es el 1341693. También vemos que actualmente solo hay 1 archivo/entrada en el sistema que esté apuntando al mismo inodo.
 
-Si en vez de tener una dirección con Clase tenemos una ya subneteada, por ejemplo la 132.18.0.0/22, la cosa es más compleja. En este caso los 2 primeros octetos de la dirección IP, ya que los 2 primeros octetos de la máscara de red tienen todos bits “1” (fondo bordo), es la dirección de red y va a ser común a todas las subredes y hosts. Como el 3º octeto está divido en 2, una parte en la porción de red y otra en la de host, la parte de la dirección IP que corresponde a la porción de red (fondo negro), que tienen en la máscara de red los bits “1”, se va a ir modificando según se vayan asignando las subredes y solo va a ser común a los host que son parte de esa subred. Los 2 bits “0” del 3º octeto en la porción de host (fondo gris) y todo el último octeto de la dirección IP, van a ser utilizados para asignar direcciones de host.
+Una vez creado el archivo crearemos un enlace duro hacia el archivo que acabamos de crear introduciendo el siguiente comando en la terminal: ln alumno.txt enlacealumno.txt Cada una de las partes del comando para crear el enlace duro tienen el siguiente significado
 
-Convertir Bits en Números Decimales
+ln: Es el comando encargado de realizar enlaces entre ficheros. alumno.txt: Es la ruta o nombre del archivo original que tenemos en nuestro disco duro. enlacealumno.txt: Corresponde a la ruta o nombre del enlace duro que vamos a crear. Una vez ejecutado el comando se habrá realizado el enlace duro.
 
-Como sería casi imposible trabajar con direcciones de 32 bits, es necesario convertirlas en números decimales. En el proceso de conversión cada bit de un intervalo (8 bits) de una dirección IP, en caso de ser "1" tiene un valor de "2" elevado a la posición que ocupa ese bit en el octeto y luego se suman los resultados. Explicado parece medio engorroso pero con la tabla y los ejemplos se va a entender mejor.
+Una vez creado el enlace volveremos a comprobar el número de inodo del archivo original ejecutando de nuevo el siguiente comando en la terminal
 
-La combinación de 8 bits permite un total de 256 combinaciones posibles que cubre todo el rango de numeración decimal desde el 0 (00000000) hasta el 255 (11111111). Algunos ejemplos.
+```bash
+ls -li alumno.txt
+```
 
-Calcular la Cantidad de Subredes y Hosts por Subred
+Ahora el resultado obtenido es el siguiente: 1341693 -rw-r--r—2 user user 0 nov 17 22:50 alumno.txt Como se puede ver el número de inodo sigue siendo el mismo que antes, pero ahora hay 2 archivos/entradas apuntando hacia el mismo inodo. Estos 2 archivos/entradas son el archivo original más el enlace duro que acabamos de crear.
 
-Cantidad de Subredes es igual a: 2N, donde "N" es el número de bits "robados" a la porción de Host.
+Seguidamente comprobaremos el número de inodo del enlace duro que hemos creado ejecutando el siguiente comando en la terminal
 
-Cantidad de Hosts x Subred es igual a: 2M -2, donde "M" es el número de bits disponible en la porción de host y "-2" es debido a que toda subred debe tener su propia dirección de red y su propia dirección de broadcast. Aclaración: Originalmente la fórmula para obtener la cantidad de subredes era 2N -2, donde "N" es el número de bits "robados" a la porción de host y "-2" porque la primer subred (subnet zero) y la última subred (subnet broadcast) no eran utilizables ya que contenían la dirección de la red y broadcast respectivamente. Todos los tutoriales que andan dando vueltas en Internet utilizan esa fórmula.
+```bash
+ls -li enlacealumno.txt
+```
 
-Actualmente para obtener la cantidad de subredes se utiliza y se enseña con la fórmula 2N, que permite utilizar tanto la subred zero como la subnet broadcast para ser asignadas.
+El resultado obtenido es
 
-Bueno, hasta acá la teoría básica. Una vez que comprendemos esto podemos empezar a subnetear. Como consejo les digo que se aprendan y asimilen la dinámica de este proceso ya que es fundamental, sobre todo para el final práctico y teórico del CCNA 1, y más adelante les va a simplificar el aprendizaje de las VLSM (Máscaras de Subred de Longitud Variable).
+1341693 -rw-r--r-- 2 user user 0 nov 17 22:50 enlacealumno.txt Por lo tanto, se puede observar que tanto el enlace duro como el archivo que hemos creado apuntan al mismo inodo, y consecuentemente apuntan hacia la misma información almacenada en nuestro disco duro. Además, tanto el enlace duro como el archivo original disponen de los mismos permisos, del mismo propietario y forman parte del mismo grupo.
 
-Subneteo Manual de una Red Clase A
+Crear enlaces duros recursivos de todo un directorio Acabamos de ver cómo crear un enlace duro de un único archivo. En el caso que queramos crear enlaces duros en masa de la totalidad de contenido almacenado en un directorio también lo podemos realizar muy fácilmente.
 
-Dada la dirección IP Clase A 10.0.0.0/8 para una red, se nos pide que mediante subneteo obtengamos 7 subredes. Este es un ejemplo típico que se nos puede pedir, aunque remotamente nos topemos en la vida real.
+Imaginemos que en la ubicación /home/user/vacances dispongo de una serie de fotos y quiero crear un enlace duro de la totalidad de fotos de esta carpeta en mi escritorio. Para conseguir mi objetivo tan solo hay que ejecutar el siguiente comando en la terminal
 
-Lo vamos a realizar en 2 pasos: Adaptar la Máscara de Red por Defecto a Nuestras Subredes (1)
+cp -rl /home/user/vacaciones /home/user/Escritorio/vacaciones/ Cada una de las partes del comando usado para crear los enlaces duros recursivos tienen el siguiente significado: cp: Se refiere al comando copy que es el que usamos para crear los enlaces duros de forma masiva.
 
-La máscara por defecto para la red 10.0.0.0 es
+rl: La letra r hace referencia a recursivo y la letra l hace referencia a enlace duro. Por lo tanto añadiendo estas 2 opciones hacemos que se copien la totalidad de archivos de una carpeta a otra mediante la creación de enlaces duros. /home/user/vacaciones: Es la ruta de la carpeta que contiene las fotos originales.
 
-Mediante la fórmula 2N, donde N es la cantidad de bits que tenemos que robarle a la porción de host, adaptamos la máscara de red por defecto a la subred.
+/home/user/Escritorio/vacaciones: Es la ruta de la carpeta en la que queremos crear los enlaces duros. Una vez ejecutado este comando, habremos creado multitud de enlaces duros sin ningún tipo de esfuerzo. Propiedades y particularidades de los enlaces duros 1- Cualquier cambio que se introduzca en el archivo original o en el enlace duro, afecta a los dos por igual.
 
-En este caso particular 2N = 7 (o mayor) ya que nos pidieron que hagamos 7 subredes.
+2- En el caso de borrar el archivo original alumno.txt aún podemos tener acceso al contenido a través de su enlace duro enlacealumno.txt. 3- No se pueden crear enlaces duros de carpetas.
 
-Una vez hecho el cálculo nos da que debemos robar 3 bits a la porción de host para hacer 7 subredes o más y que el total de subredes útiles va a ser de 8, es decir que va a quedar 1 para uso futuro.
+#### 4- El acceso al contenido a través de un enlace duro es más rápido que en los enlaces
 
-Tomando la máscara Clase A por defecto, a la parte de red le agregamos los 3 bits que le robamos a la porción de host reemplazándolos por "1" y así obtenemos 255.224.0.0 que es
+simbólico. Esto es así porque mientras el enlace duro apunta directamente a un contenido almacenado en nuestro disco duro, el enlace simbólico apunta al nombre de un archivo y posteriormente el archivo apunta a un contenido almacenado en nuestro disco duro.
 
-la mascara de subred que vamos a utilizar para todas nuestras subredes y hosts.
+5- Los enlaces duros únicamente se pueden usar en la partición en la que los hemos creado. Por lo tanto si creamos un enlace duro en la partición /home, no lo podremos usar en la partición /root. 6- Si cambiamos de ubicación el archivo original el enlace duro no se rompe y lo podemos usar sin ningún tipo de problema.
 
-Obtener Rango de Subredes (2)
+7- Los permisos, el propietario y el grupo del enlace duro serán los mismos que el del archivo original. Esto es así porque, como hemos visto anteriormente, el enlace duro y el archivo original tienen el mismo inodo, y por lo tanto forzosamente siempre tendrán las mismas propiedades. Un enlace duro no es más que una copia del archivo original.
 
-Para obtener las subredes se trabaja únicamente con la dirección IP de la red, en este caso 10.0.0.0. Para esto vamos a modificar el mismo octeto de bits (el segundo) que modificamos anteriormente en la mascara de red pero esta vez en la dirección IP.
+Utilidades y ventajas de los enlaces duros
 
-Para obtener el rango hay varias formas, la que me parece más sencilla a mí es la de restarle a 256 el número de la máscara de red adaptada. En este caso sería: 256-224=32, entonces 32 va a ser el rango entre cada subred.
+### 1. Realizar copias de seguridad incrementales ahorrando espacio en disco duro y un
 
-Si queremos calcular cuántos hosts vamos a obtener por subred debemos aplicar la fórmula 2M - 2, donde M es el número de bits "0" disponible en la porción de host de la dirección IP de la red y - 2 es debido a que toda subred debe tener su propia dirección de red y su propia dirección de broadcast.
+tiempo considerable ya que los enlaces duros permiten realizar una copia de seguridad de un archivo sin realmente realizar la copia.
 
-En este caso particular sería: 221 - 2 = 2.097.150 hosts utilizables por subred.
+### 2. Cuando copiamos un archivo de gran tamaño de un sitio a otro tardamos una cantidad
 
-Subneteo Manual de una Red Clase B
+importante de tiempo. Usando un enlace duro podemos evitar esta espera y de paso ahorraremos espacio en nuestro disco duro.
 
-Dada la red Clase B 132.18.0.0/16 se nos pide que mediante subneteo obtengamos un mínimo de 50 subredes y 1000 hosts por subred.
+- El enlace duro es una muy buena opción para tener un archivo en varias ubicaciones.
 
-Lo vamos a realizar en 3 pasos: Adaptar la Máscara de Red por Defecto a Nuestras Subredes (1)
+Usando enlaces duros para este fin evita que se generen enlaces simbólicos rotos. Si usamos enlaces simbólicos para disponer de un archivo en varias ubicaciones, es posible que cuando se elimine el archivo original nos olvidemos que en el pasado generamos enlaces simbólicos hacia este archivo generándose enlaces rotos.
 
-La máscara por defecto para la red 132.18.0.0 es
+### 3. Enlaces simbólicos o blandos
 
-Usando la fórmula 2N, donde N es la cantidad de bits que tenemos que robarle a la porción de host, adaptamos la máscara de red por defecto a la subred.
+Los enlaces simbólicos son parecidos a los accesos directos en Windows y son los enlaces que todos los usuarios comunes acostumbran a usar de forma habitual. Acabamos de ver que los enlaces duros apuntan a un archivo almacenado en nuestro disco duro. En contraposición, tal y como se puede ver representado en la imagen, los enlaces simbólicos apuntan al nombre de un archivo y posteriormente el archivo apunta a un contenido almacenado en nuestro disco duro.
 
-En este caso particular 2N= 50 (o mayor) ya que necesitamos hacer 50 subredes.
+A diferencia del caso anterior, cada enlace simbólico dispone de su propio número de inodo y es diferente al del archivo original. Por lo tanto, podremos crear enlaces simbólicos de archivos y de carpetas, aunque estén en discos duros diferentes o en particiones diferentes.
 
-El cálculo nos da que debemos robar 6 bits a la porción de host para hacer 50 subredes o más y que el total de subredes útiles va a ser de 64, es decir que van a quedar 14 para uso futuro. Entonces a la máscara Clase B por defecto le agregamos los 6 bits robados reemplazándolos por "1" y obtenemos la máscara adaptada 255.255.252.0.
+¿Cómo podemos crear un enlace simbólico o soft link? Creando un enlace simbólico podremos ver y entender más fácilmente lo que acabamos de explicar en el apartado anterior.
 
-Obtener Cantidad de Hosts por Subred (2)
+Para comprender bien lo que es un enlace simbólico crearemos un archivo de texto ejecutando el siguiente comando en la terminal
 
-Una vez que adaptamos la máscara de red a nuestras necesidades, ésta no se vuelve a tocar y va a ser la misma para todas las subredes y hosts que componen esta red. De acá en más solo trabajaremos con la dirección IP de la red. En este caso con la porción de host (fondo gris).
+touch nombre.txt Una vez creado el archivo vamos o consultar su número de inodo ejecutando el siguiente comando en la terminal
 
-El ejercicio nos pedía, además de una cantidad de subredes que ya alcanzamos adaptando la máscara en el primer paso, una cantidad específica de 1000 hosts por subred. Para verificar que sea posible obtenerlos con la nueva máscara, no siempre se puede, utilizamos la fórmula 2M - 2, donde M es el número de bits "0" disponibles en la porción de host y - 2 es debido a que la primer y última dirección IP de la subred no son utilizables por ser la dirección de la subred y broadcast respectivamente.
+```bash
+ls -li nombre.txt
+```
 
-210 - 2 = 1022 hosts por subred.
+El resultado obtenido es
 
-Los 10 bits "0" de la porción de host (fondo gris) son los que más adelante modificaremos según vayamos asignando los hosts a las subredes. Obtener Rango de Subredes (3)
+1334792 -rw-r--r-- 1 user user 0 nov 29 10:03 nombre.txt Por lo tanto, el inodo del archivo que acabamos de crear es el 1334792. También vemos que actualmente solo hay 1 archivo/entrada en el sistema que esté apuntando al mismo inodo.
 
-Para obtener las subredes se trabaja con la porción de red de la dirección IP de la red, más específicamente con la parte de la porción de red que modificamos en la máscara de red pero esta vez en la dirección IP. Recuerden que a la máscara de red con anterioridad se le agregaron 6 bits en el tercer octeto, entonces van a tener que modificar esos mismos bits pero en la dirección IP de la red (fondo negro).
+Una vez creado el archivo crearemos un enlace simbólico hacia el archivo que acabamos de crear ejecutando el siguiente comando en la terminal
 
-Los 6 bits "0" de la porción de red (fondo negro) son los que más adelante modificaremos según vayamos asignando las subredes.
+ln -s /home/user/nombre.txt /home/user/Escritorio/enlacenombre.txt Cada una de las partes del comando usado para crear el enlace simbólico tienen el siguiente significado
 
-Para obtener el rango hay varias formas, la que me parece más sencilla a mí es la de restarle a 256 el número de la máscara de subred adaptada. En este caso sería: 256-252=4, entonces 4 va a ser el rango entre cada subred. En el gráfico solo puse las primeras 10 subredes y las últimas 5 porque iba a quedar muy largo, pero la dinámica es la misma.
+ln: Es el comando encargado de realizar enlaces entre ficheros o carpetas.
 
-Subneteo Manual de una Red Clase C
+s: Es la parte del comando que indica que el tipo de enlace que queremos crear es un enlace simbólico.
 
-Nos dan la dirección de red Clase C 192.168.1.0 /24 para realizar mediante subneteo 4 subredes con un mínimo de 50 hosts por subred.
+/home/user/nombre.txt: Es la ruta y nombre del archivo original que tenemos en nuestro disco duro.
 
-Lo vamos a realizar en 3 pasos: Adaptar la Máscara de Red por Defecto a Nuestras Subredes (1)
+/home/user/Escritorio/enlacenombre.txt: Corresponde a la ruta y el nombre del enlace simbólico que vamos a crear. Una vez creado el enlace simbólico volveremos a comprobar el número de inodo del archivo original ejecutando de nuevo el siguiente comando en la terminal
 
-La máscara por defecto para la red 192.168.1.0 es
+```bash
+ls -li nombre.txt
+```
 
-Usando la fórmula 2N, donde N es la cantidad de bits que tenemos que robarle a la porción de host, adaptamos la máscara de red por defecto a la subred.
+Ahora el resultado obtenido es el siguiente
 
-Se nos solicitaron 4 subredes, es decir que el resultado de 2N tiene que ser mayor o igual a 4.
+1334792 -rw-r--r-- 1 user user 0 nov 29 10:03 user.txt Como se puede ver, el número de inodo sigue siendo el mismo que antes pero, a diferencia del caso anterior, a pesar de crear el enlace simbólico sigue habiendo únicamente 1 archivo/entrada apuntando hacia el mismo inodo.
 
-Como vemos en el gráfico, para hacer 4 subredes debemos robar 2 bits a la porción de host. Agregamos los 2 bits robados reemplazándolos por "1" a la máscara Clase C por defecto y obtenemos la máscara adaptada 255.255.255.192.
+Seguidamente comprobaremos el número de inodo del enlace duro que hemos creado ejecutando el siguiente comando en la terminal
 
-Obtener Cantidad de Hosts por Subred (2)
+```bash
+ls -li /home/user/Escritorio/enlacenombre.txt
+```
 
-Ya tenemos nuesta máscara de red adaptada que va a ser común a todas las subredes y hosts que componen la red. Ahora queda obtener los hosts. Para esto vamos a trabajar con la dirección IP de red, especificamente con la porción de host (fondo gris).
+El resultado obtenido es el siguiente
 
-El ejercicio nos pedía un mínimo de 50 hosts por subred. Para esto utilizamos la fórmula 2M
+1339963 lrwxrwxrwx 1 user user 23 nov 29 10:03 /home/user/Escritorio/enlacenombre.txt-> /home/user/nombre.txt Después de estudiar los resultados vemos que el archivo original y el enlace que hemos creado tienen un inodo diferente. Por lo tanto no están apuntando hacia el mismo contenido ya que el archivo original nombre.txt está apuntando hacia un contenido almacenado en nuestro disco duro, y el enlace simbólico está apuntado hacia el nombre del archivo original.
 
-- 2, donde M es el número de bits "0" disponibles en la porción de host y - 2 porque la
+Crear enlaces simbólicos recursivos de todo un directorio
 
-primer y última dirección IP de la subred no se utilizan por ser la dirección de la subred y broadcast respectivamente. 26 - 2 = 62 hosts por subred.
+Acabamos de ver cómo crear un enlace simbólico de un único archivo. En el caso que queramos crear enlaces simbólicos en masa de la totalidad de contenido almacenado en un directorio también lo podemos realizar muy fácilmente.
 
-Los 6 bits "0" de la porción de host (fondo gris) son los vamos a utilizar según vayamos asignando los hosts a las subredes. Obtener Rango de Subredes (3)
+Imaginemos que en la ubicación /home/user/vacaciones dispongo de una serie de fotos y quiero crear un enlace simbólico de la totalidad de fotos de esta carpeta en mi escritorio. Para conseguir mi objetivo tan solo hay que ejecutar el siguiente comando en la terminal
 
-Para obtener el rango subredes utilizamos la porción de red de la dirección IP que fue modificada al adaptar la máscara de red. A la máscara de red se le agregaron 2 bits en el cuarto octeto, entonces van a tener que modificar esos mismos bits pero en la dirección IP (fondo negro).
+cp -rs /home/user/vacaciones /home/user/Escritorio/vacaciones/ Cada una de las partes del comando usado para crear los enlaces simbólicos recursivos tienen el siguiente significado
 
-Los 2 bits "0" de la porción de red (fondo negro) son los que más adelante modificaremos según vayamos asignando las subredes.
+cp: Se refiere al comando copy que es el que usaremos para crear los enlaces simbólicos de forma masiva.
 
-Para obtener el rango la forma más sencilla es restarle a 256 el número de la máscara de subred adaptada. En este caso sería: 256-192=64, entonces 64 va a ser el rango entre cada subred.
+rs: La letra r hace referencia a recursivo y la letra s hace referencia a enlace simbólico. Por lo tanto añadiendo estas 2 opciones hacemos que se copien la totalidad de archivos de una carpeta a otra mediante la creación de varios enlaces simbólicos.
+
+/home/user/vacaciones: Es la ruta de la carpeta que contiene las fotos originales.
+
+/home/user/Escritorio/vacaciones: Es la ruta de la carpeta en la que queremos crear los enlaces simbólicos.
+
+Una vez ejecutado este comando habremos creado multitud de enlaces simbólicos sin ningún tipo de esfuerzo.
+
+Propiedades de los enlaces simbólicos
+
+### 1. Cualquier cambio que se introduzca en el archivo original o en el enlace simbólico
+
+afecta a los dos por igual.
+
+### 2. En el caso de borrar el archivo original nombre.txt se borra completamente el archivo
+
+y no podremos volver a acceder a él nunca más.
+
+### 3. Si por lo contrario borramos el enlace simbólico, aun podremos seguir accediendo al
+
+contenido mediante el archivo original.
+
+### 4. En contraposición con los enlaces duros, podemos crear enlaces simbólicos de
+
+carpetas sin ningún tipo de problema. De esta forma podremos usar los enlaces simbólicos como un atajo para acceder a un directorio determinado.
+
+### 5. Los enlaces simbólicos se pueden usar en cualquier ubicación, partición y sistema de
+
+archivos de nuestro disco duro. Por lo tanto a diferencia de los enlaces duros, los enlaces simbólicos funcionarán en todos los sistemas de archivos sea cual sea su ubicación.
+
+- Si cambiamos de ubicación el archivo original se romperá el enlace simbólico.
+
+- Eliminar enlaces duros y blandos.
+
+Si en algún momento precisamos eliminar alguno de los enlaces que hemos creado lo podemos hacer de forma muy fácil. Así por ejemplo si queremos eliminar el enlace simbólico que creamos anteriormente tan solo tenemos que ejecutar el siguiente comando en la terminal
+
+unlink /home/user/Escritorio/enlacenombre.txt Cada una de las partes usadas en el comando para eliminar enlaces tiene el siguiente significado unlink: Es la parte del comando encargada de eliminar el enlace. /home/user/Escritorio/enlacenombre.txt: Es la ruta y nombre del enlace que queremos eliminar.
 
 ---

@@ -10,48 +10,47 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Introducció a Python",
-          "href": "ut00/ut0001.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Elementos de un programa",
-          "href": "ut00/ut0002.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Tipos de datos",
-          "href": "ut00/ut0003.html"
+          "href": "./ut01/ut0103.html"
         },
         {
           "label": "1.4 Funciones integradas",
-          "href": "ut00/ut0004.html"
+          "href": "./ut01/ut0104.html"
         },
         {
           "label": "1.5 Módulos, paquetes y namespaces",
-          "href": "ut00/ut0005.html"
+          "href": "./ut01/ut0105.html"
         },
         {
           "label": "1.6 Estructuras de control",
-          "href": "ut00/ut0006.html"
+          "href": "./ut01/ut0106.html"
         },
         {
           "label": "1.7 Tipos de datos complejos",
-          "href": "ut00/ut0007.html"
+          "href": "./ut01/ut0107.html"
         },
         {
           "label": "1.8 Funciones",
-          "href": "ut00/ut0008.html"
+          "href": "./ut01/ut0108.html"
         },
         {
           "label": "1.9 Errores y excepciones",
-          "href": "ut00/ut0009.html"
+          "href": "./ut01/ut0109.html"
         },
         {
           "label": "1.10 Ficheros",
-          "href": "ut00/ut0010.html"
+          "href": "./ut01/ut0110.html"
         }
       ]
     },
@@ -60,32 +59,31 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 Introducción a las redes locales",
-          "href": "ut01/ut0101.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 Mapa físico y lógico",
-          "href": "ut01/ut0102.html"
+          "href": "./ut02/ut0202.html"
         },
         {
           "label": "2.3 Arquitecturas de red",
-          "href": "ut01/ut0103.html"
+          "href": "./ut02/ut0203.html"
         },
         {
           "label": "2.4 MODELO OSI",
-          "href": "ut01/ut0104.html"
+          "href": "./ut02/ut0204.html"
         },
         {
           "label": "2.5 MODELO TCP/IP",
-          "href": "ut01/ut0105.html"
+          "href": "./ut02/ut0205.html"
         },
         {
           "label": "2.6 Tipos de cableado",
-          "href": "ut01/ut0106.html"
+          "href": "./ut02/ut0206.html"
         }
       ]
     },
@@ -94,16 +92,15 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 CheatSheet HTML5",
-          "href": "ut02/ut0201.html"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 CheatSheet CSS3",
-          "href": "ut02/ut0202.html"
+          "href": "./ut03/ut0302.html"
         }
       ]
     },
@@ -112,12 +109,11 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
-          "label": "4.1 Continguts i Recursos",
-          "href": "ut03/ut0301.html"
+          "label": "4.1 Continguts Teòrics i Recursos",
+          "href": "./ut04/ut0401.html"
         }
       ]
     }

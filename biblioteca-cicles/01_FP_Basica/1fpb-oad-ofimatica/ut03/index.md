@@ -2,11 +2,11 @@
 layout: default
 title: "UD3 — CALC BÀSIC · Temari Complet"
 course_root: ".."
-badge: "1r FPB · Grau Bàsic · UT3 Completa"
+badge: "1r FPB · Grau Bàsic · UD3 — CALC BÀSIC"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 Temari"
 next_url: "../ut03/ut0301.html"
-next_label: "3.1 Continguts i Recursos ➡️"
+next_label: "3.1 Continguts Teòrics i Recursos ➡️"
 ---
 
 # 📘 UD3 — CALC BÀSIC (Unitat Completa)
@@ -16,14 +16,11 @@ next_label: "3.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**3.1 Continguts i Recursos**](./ut0301.md)
+- [**3.1 Continguts Teòrics i Recursos**](./ut0301.md)
 
 ---
 
-# 3.1 Continguts i Recursos
-
-> **📌 Introducció de la Unitat**
-> **Formació CALC**
+# 3.1 Continguts Teòrics i Recursos
 
 > **🔗 Recurs Web: Calc: Misssatges d'error**
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/calcavanzado1_v17es/00mensajes_error.php) ↗️**](http://www.tuinstitutoonline.com/cursos/calcavanzado1_v17es/00mensajes_error.php)
@@ -84,13 +81,5 @@ next_label: "3.1 Continguts i Recursos ➡️"
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/calcbasico1_v17es/11hoja_fratelf.php) ↗️**](http://www.tuinstitutoonline.com/cursos/calcbasico1_v17es/11hoja_fratelf.php)
 >
 > Calc: Comentarios. Hoja: Factura telefónica
-
-> **📌 🏷️ Apunt de la Unitat**
-> **TEST**
-
-> **🔗 Recurs Web: Calc: Examen. Helados caseros**
-> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/calcbasico1_v1406/ex02helados.php) ↗️**](http://www.tuinstitutoonline.com/cursos/calcbasico1_v1406/ex02helados.php)
->
-> Calc: Examen. Helados caseros
 
 ---

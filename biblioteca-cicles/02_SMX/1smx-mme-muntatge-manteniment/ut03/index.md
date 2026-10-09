@@ -1,15 +1,15 @@
 ---
 layout: default
-title: "UD3 — Unitat Didàctica 3 · Temari Complet"
+title: "UD3 — Manteniment, Diagnosi i Perifèrics · Temari Complet"
 course_root: ".."
-badge: "1r SMX · Grau Mitjà · UT3 Completa"
-prev_url: "../ut02/ut0207.html"
-prev_label: "⬅️ 2.7 DISCOS DUROS CHS ECHS LBA"
+badge: "1r SMX · Grau Mitjà · UD3 — Manteniment, Diagnosi i Perifèrics"
+prev_url: "../ut02/ut0206.html"
+prev_label: "⬅️ 2.6 DISCOS DUROS CHS ECHS LBA"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 P1 P2 P3 - PDF CONTINGUTS ➡️"
 ---
 
-# 📘 UD3 — Unitat Didàctica 3 (Unitat Completa)
+# 📘 UD3 — Manteniment, Diagnosi i Perifèrics (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
@@ -1532,9 +1532,6 @@ operatiu.
 
 un CD o un llapis USB, que contingui, però, el programari de ﬂashing proveït pel fabricant.
 
-> **💡 📚 Document extens (107 pàgines)**
-> S'han mostrat les primeres 80 pàgines completes del manual.
-
 ---
 
 # 3.2 P1 P2 P3 - PRESENTACIÓ CLASSE
@@ -2306,22 +2303,6 @@ Mejora el rendimiento
 Aumenta espacio en disco
 
 Orden en Windows (desinstala, soluciona errores, ...)
-
-Solución de problemas
-
-Malwarebytes’ Anti-Malware
-
-Otras herramientas
-
-Herramientas de mantenimiento, limpieza y optimización para el PC: Argente Registry Cleaner, Advanced SystemCare, Glary Utilities, WinsockXP Fix, IniFox.
-
-Anti-malware: HijackThis, ComboFix, MSNCleaner, IniRem, SDFix, DelPSGuard, Panda USB Vaccine, RKill, FixBagle, DT-Kill, VundoFix, Lop S&D, etc.
-
-Anti-rootkits: GMER, Avira AntiRootkit, Sophos Anti-Rootkit, F-Secure BlackLight, RootkitRevealer, Panda Anti-Rootkit.
-
-Anti-spyware, para eliminar y prevenir spywares (espías), como SpywareBlaster, SpyBot S&D, HijackThis, SUPERAntiSpyware, Spy Sweeper, o DelPSguard.
-
-Antivirus: Nod32 Antivirus, Avira AntiVir Norton™ AntiVirus, Avast, Kaspersky Antivirus, Panda Antivirus.
 
 ### 12. Herramientas de diagnóstico Linux
 

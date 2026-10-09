@@ -5,32 +5,28 @@ theme:
 nav:
   - Inici: index.md
   - "UD1 — Technologies for Web Development":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Resources: Example of HTML+CSS": ut01/ut0101.md
-      - "1.2 Resources: CSS Template Collection": ut01/ut0102.md
-      - "1.3 Resources: Reference Links": ut01/ut0103.md
-      - "1.4 HTML Example": ut01/ut0104.md
-      - "1.5 HTML Example": ut01/ut0105.md
-      - "1.6 Cheatsheet HTML (Manz)": ut01/ut0106.md
-      - "1.7 Cheatsheet CSS (Manz)": ut01/ut0107.md
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 Resources: Example of HTML+CSS": ./ut01/ut0101.md
+      - "1.2 Resources: Reference Links": ./ut01/ut0102.md
+      - "1.3 HTML Example": ./ut01/ut0103.md
+      - "1.4 HTML Example": ./ut01/ut0104.md
+      - "1.5 Cheatsheet HTML (Manz)": ./ut01/ut0105.md
+      - "1.6 Cheatsheet CSS (Manz)": ./ut01/ut0106.md
   - "UD2 — Desktop Web Applications":
-      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Resources: Reference Links": ut02/ut0201.md
-      - "2.2 EN Article: How Web Operating Systems Work": ut02/ut0202.md
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 Resources: Reference Links": ./ut02/ut0201.md
+      - "2.2 EN Article: How Web Operating Systems Work": ./ut02/ut0202.md
   - "UD3 — Deploying a web server":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Resources: Reference Links": ut03/ut0301.md
-      - "3.2 Taller AWS-AWS": ut03/ut0302.md
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 Resources: Reference Links": ./ut03/ut0301.md
+      - "3.2 Taller AWS-AWS": ./ut03/ut0302.md
   - "UD4 — Unit 4 Content Management Systems":
-      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 Resources: Reference Links": ut04/ut0401.md
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 Resources: Reference Links": ./ut04/ut0401.md
   - "UD5 — Unit 5 Web File Management and Web Office":
-      - "📘 UD5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 Resources: Reference Links": ut05/ut0501.md
-      - "5.2 EN Article: Battle of the Clouds": ut05/ut0502.md
+      - "📘 UD5 Completa (1 pàgina)": ./ut05/index.md
+      - "5.1 Resources: Reference Links": ./ut05/ut0501.md
+      - "5.2 EN Article: Battle of the Clouds": ./ut05/ut0502.md
   - "UD6 — Distance Learning Managers":
-      - "📘 UD6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Resources: Reference Links": ut06/ut0601.md
-  - "UD7 — JS Programming Introduction":
-      - "📘 UD7 Completa (1 pàgina)": ut07/index.md
-      - "7.1 Plantilla: Joc JS amb processing.js": ut07/ut0701.md
+      - "📘 UD6 Completa (1 pàgina)": ./ut06/index.md
+      - "6.1 Resources: Reference Links": ./ut06/ut0601.md

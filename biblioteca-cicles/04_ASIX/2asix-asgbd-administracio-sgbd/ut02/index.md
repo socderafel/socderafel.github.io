@@ -2,7 +2,7 @@
 layout: default
 title: "UD2 — Configuració d'un SGBD · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT2 Completa"
+badge: "2n ASIX · Grau Superior · UD2 — Configuració d'un SGBD"
 prev_url: "../ut01/ut0105.html"
 prev_label: "⬅️ 1.5 Arquitectura BBDD's en Oracle"
 next_url: "../ut02/ut0201.html"

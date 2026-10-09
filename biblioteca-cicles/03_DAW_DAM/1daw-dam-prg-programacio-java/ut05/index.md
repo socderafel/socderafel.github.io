@@ -1,1350 +1,1827 @@
 ---
 layout: default
-title: "UD1 — Introducción a la programación con Java · Temari Complet"
+title: "UD5 — Estructuras datos estáticas · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT5 Completa"
-prev_url: "../index.html"
-prev_label: "⬅️ 🏠 Inici del Mòdul"
+badge: "1r DAW / DAM · Grau Superior · UD5 — Estructuras datos estáticas"
+prev_url: "../ut04/ut0402.html"
+prev_label: "⬅️ 4.2 Programación estructurada y modular"
 next_url: "../ut05/ut0501.html"
-next_label: "1.1 Introducción a la Programacion ➡️"
+next_label: "5.1 Estructuras de datos estáticas ➡️"
 ---
 
-# 📘 UD1 — Introducción a la programación con Java (Unitat Completa)
+# 📘 UD5 — Estructuras datos estáticas (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**1.1 Introducción a la Programacion**](./ut0501.md)
-- [**1.2 Algoritmos**](./ut0502.md)
-- [**1.3 Introduccion a Java**](./ut0503.md)
-- [**1.4 Estilo de codificacion**](./ut0509.md)
+- [**5.1 Estructuras de datos estáticas**](./ut0501.md)
+- [**5.2 Estructuras de datos estaticas**](./ut0502.md)
 
 ---
 
-# 1.1 Introducción a la Programacion
-
-> **📌 🏷️ Apunt de la Unitat**
-> # BLOQUE 1: Introducción a la programación
->
-> #### INTRODUCCIÓN A LA PROGRAMACIÓN
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### INTRODUCCIÓN A JAVA
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Prácticas de aula
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Ampliación y refuerzo
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Estilos de codificación
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Otros Recursos
-
-> **🔗 Recurs Web: [YOUTUBE] 01e - Instalación del IDE Eclipse en Windows**
-> [**🌐 Obrir recurs extern (https://youtu.be/mAgYA5y9m2M?si=mCfhCAiboDACWBGJ) ↗️**](https://youtu.be/mAgYA5y9m2M?si=mCfhCAiboDACWBGJ)
+# 5.1 Estructuras de datos estáticas
 
 ---
+
+### UNIDAD 5: ESTRUCTURAS DE DATOS ESTÁTICAS
+
+V3.02.11.23
+
+Profesor: José Ramón Simó Martínez Contenido
+
+- Introducción ............................................................................................................................ 2
+- Librerías de clases útiles .......................................................................................................... 2
+
+2.1. La clase Math................................................................................................................................. 2 2.2. La clase Random ............................................................................................................................ 5 2.3. Clases envoltorio (wrapper) ........................................................................................................... 6 2.4. Manejo de fechas de Java: Clase LocalDate, LocalTime y LocalDateTime .......................................... 7 2.5. Gestionando periodos y duraciones de tiempo: Clases Period y Duration ...................................... 10
+
+- Los arrays ............................................................................................................................... 12
+
+3.1. Declaración y acceso a arrays ....................................................................................................... 12 3.2. Operaciones más comunes con arrays .......................................................................................... 18 3.3. La clase Arrays ............................................................................................................................. 22 3.4. Arrays multidimensionales ........................................................................................................... 24
+
+- Cadenas de caracteres ............................................................................................................ 27
+
+4.1. La clase String .............................................................................................................................. 28 4.2. Expresiones regulares con cadenas de texto ................................................................................. 32
+
+- Bibliografía ............................................................................................................................. 37
+
+V3.02.11.23
+
+### 1. Introducción
+
+Los arrays constituyen una de las estructuras de datos estáticas más recurridas en lenguajes de alto nivel. Es por ello que en esta unidad trataremos principalmente este tipo de estructura junto con todas sus operaciones de manipulación (creación, borrado y actualización) y búsqueda.
+
+Los programas informáticos habitualmente tratan con datos de tipo texto y podemos utilizar arrays de caracteres para tratarlos. Sin embargo, en Java ya existe la clase String para crear y manipular cadenas de texto de forma más eficiente. Es por ello que en esta unidad estudiaremos las propiedades de este objeto.
+
+No obstante, antes que nada, presentaremos en esta unidad un conjunto de clases útiles de Java que ayudarán a enriquecer las funcionalidades de nuestros programas.
+
+### 2. Librerías de clases útiles
+
+#### 2.1. La clase Math
+
+Ya vimos en unidades anteriores referencias a esta clase. En este apartado conoceremos algunos de los métodos de cálculo matemático que la clase Math nos ofrece. En Java disponemos de muchas funciones matemáticas predefinidas que nos ayudan ha obtener el resultado, por ejemplo
+
+• Del valor absoluto de un número • De la potencia de números (un número elevado a otro) • Redondeo de números decimales • Logaritmos • etc. Sin embargo, en este apartado sólo aprenderemos a utilizar la clase Math para: • Calcular potencias • Calcular raíz cuadrada En las siguientes unidades iremos ampliando su uso.
+
+Math es una clase de java y podemos utilizar sus métodos al igual que hemos hecho con la clase Scanner; por ejemplo, en Scanner tenemos los métodos nextInt(), nextFloat(), etc. Además, para utilizar estos métodos en la clase Scanner hacemos, por ejemplo
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+sc.nextInt(); // así podemos utilizar el método nextInt() de Scanner No obstante, para utilizar un método de la clase Math no hace falta crear una variable y hacer un new. Asimismo, para acceder a un método de esta clase deberemos escribir Math.nombredelmétodo, por ejemplo
+
+V3.02.11.23 Math.pow(2,3); // Nos da el resultado de 2 elevado a 3 Math.sqrt(9.0); // Nos da el resultado de la raíz cuadrada de 9 Nota La clase Math pertenece al paquete java.lang y por tanto no hace falta importarla como sí hacíamos con la clase Scanner.
+
+#### 2.1.1. Calcular potencias
+
+Math.pow(a,b) devuelve el resultado de la operación de ab y por tanto podemos almacenar este valor en una variable; pero atención, esta variable debe ser de tipo double. Por ejemplo
+
+```java
+double resultado = Math.pow(2,3);
+```
+
+También podemos hacer el cálculo directamente en la salida del programa
+
+```java
+System.out.println(Math.pow(2,3));
+```
+
+Nota En Math.pow(a, b) los valores a y b pueden ser números con decimales o variables tipo double.
+
+#### 2.1.2. Calcular raíz cuadrada
+
+Math.sqrt(a) devuelve el resultado de la operación de √𝑎 y por tanto podemos almacenar este valor en una variable; pero atención, esta variable debe ser de tipo double. Por ejemplo
+
+```java
+double resultado = Math.sqrt(9);
+```
+
+También podemos hacer el cálculo directamente en la salida del programa
+
+```java
+System.out.println(Math.sqrt(9));
+```
+
+Un ejemplo más completo de uso de la clase Math sería el siguiente
+
+V3.02.11.23 Nota En Math.sqrt(a) el valor de a puede ser un número con decimales o una variable tipo double.
+
+#### 2.1.3. Otros métodos de la clase math
+
+Un resumen de algunos métodos de la clase Math: Método Descripción Ejemplo de uso Resultado abs Devuelve el valor absoluto de un numero.
+
+```java
+int x = Math.abs(2.3);
+x = 2;
+```
+
+ceil Devuelve el entero más cercano por arriba.
+
+```java
+double x = Math.ceil(2.5);
+x = 3.0;
+```
+
+floor Devuelve el entero más cercano por debajo. double x =
+
+```java
+Math.floor(2.5);
+x = 2.0;
+```
+
+round Devuelve el entero más cercano. double x =
+
+```java
+Math.round(2.5);
+x = 3.0;
+```
+
+log Devuelve el logaritmo natural en base e de un número.
+
+```java
+double x = Math.log(2.71); x = 0.9996;
+```
+
+max Devuelve el mayor de dos entre dos valores.
+
+```java
+int x = Math.max(3, 8);
+x = 8;
+```
+
+min Devuelve el menor de dos entre dos valores.
+
+```java
+int x = Math.min(3, 8);
+x = 3;
+```
+
+random Devuelve un número aleatorio entre 0 y 1. Se pueden cambiar el rango de generación. double x =
+
+```java
+Math.ramdom();
+x = 0.206178;
+```
+
+sqlrt Devuelve la raíz cuadrada de un número.
+
+```java
+double x = Math.sqlrt(9);
+x = 3.0;
+```
+
+pow Devuelve un número elevado a un exponente. double x = Math.pow(2,
+
+```java
+10);
+x= 1024.0;
+```
+
+… … … … MÉTODO DESCRIPCIÓN Ejemplo de uso resultado abs Devuelve el valor absoluto de un numero.
+
+```java
+int x = Math.abs(2.3);
+x = 2;
+```
+
+ceil Devuelve el entero más cercano por arriba.
+
+```java
+double x = Math.ceil(2.5);
+x = 3.0;
+```
+
+floor Devuelve el entero más cercano por debajo. double x =
+
+```java
+Math.floor(2.5);
+x = 2.0;
+```
+
+round Devuelve el entero más cercano. double x =
+
+```java
+Math.round(2.5);
+x = 3.0;
+```
+
+log Devuelve el logaritmo natural en base e de un número.
+
+```java
+double x = Math.log(2.71); x = 0.9996;
+```
+
+max Devuelve el mayor de dos entre dos valores.
+
+```java
+int x = Math.max(3, 8);
+x = 8;
+```
+
+min Devuelve el menor de dos entre dos valores.
+
+```java
+int x = Math.min(3, 8);
+x = 3;
+```
+
+random Devuelve un número aleatorio entre 0 y 1. Se pueden cambiar el rango de generación. double x =
+
+```java
+Math.ramdom();
+x = 0.206178;
+```
+
+sqlrt Devuelve la raíz cuadrada de un número.
+
+```java
+double x = Math.sqlrt(9);
+x = 3.0;
+```
+
+pow Devuelve un número elevado a un exponente. double x = Math.pow(2,
+
+```java
+10);
+x= 1024.0;
+```
+
+… … … …
+
+Para consultar el resto de métodos de la clase Math: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/Math.html
+
+V3.02.11.23
+
+#### 2.2. La clase Random
+
+La clase Random nos permite generar números aleatorios. Esto nos puede servir para aplicarlo a los siguientes ejemplos: • El resultado de tirar un dado en un juego. • El sorteo de la lotería. • Generar claves encriptadas • Simular fenómenos físicos reales • etc. Esta clase, a diferencia de la clase Math, necesita crear un objeto para utilizarla. En nuestra primera aproximación a la creación de objetos en Java, por tanto, tenemos la clase Random. Un objeto de la clase Random se crea así
+
+```java
+Random rand = new Random();
+```
+
+Para usar la clase Random debemos importarla así en la cabecera de nuestro código
+
+```java
+import java.util.Random;
+```
+
+Hay cuatro funciones miembro diferentes que generan números aleatorios: Función miembro Descripción Rango r.nextInt() Número aleatorio entero de tipo int 2-32 y 232 r.nextLong() Número aleatorio entero de tipo long 2-64 y 264 r.nextFloat() Número aleatorio real de tipo float [0,1[ r.nextDouble() Número aleatorio real de tipo double [0,1[ En caso de necesitar números aleatorios enteros en un rango determinado, podemos trasladarnos a un intervalo distinto, simplemente multiplicando, aplicando la siguiente fórmula general
+
+(int)(rand.nextDouble()*cantidad_números_rango + término_inicial_rango) donde (int) al inicio, transforma un número decimal double en entero int, eliminando la parte decimal. Por ejemplo, si deseamos números aleatorios enteros comprendidos entre [1,6], que son los lados de un dado, la fórmula quedaría así.
+
+```java
+(int)(rnd.nextDouble() * 6 + 1);
+```
+
+donde 6 es la cantidad de números enteros en el rango [1,6] y 1 es el término inicial del rango. Más información sobre la clase Random: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Random.html
+
+V3.02.11.23
+
+#### 2.3. Clases envoltorio (wrapper)
+
+Clases envoltorio (wrapper) • En ocasiones es útil tratar los tipos de datos básicos como objetos. int, byte, short, long, char, boolean, float, double • Muchas funciones y clases trabajan con elementos que heredan de la clase Object (la clase que se sitúa en la parte más alta de la jerarquía de objetos en Java).
+
+No funcionarán directamente con estos tipos básicos. • Existe una clase envoltorio por cada tipo básico. • Cada una tiene un único atributo, que es del tipo básico al que “envuelven”. Tipo básico Clase envoltorio int Integer char Character boolean Boolean long Long double Double float Float short Short byte Byte A continuación, veremos la clase Integer como ejemplo de una clase envoltorio en Java
+
+Constantes
+
+```java
+int max = Integer.MAX_VALUE;
+```
+
+```java
+int min = Integer.MIN_VALUE;
+```
+
+Métodos //Pasar de INT a String
+
+```java
+int a1 = 45678;
+String a2 = Integer.toString( a1 );
+```
+
+//Pasar de String a INT
+
+```java
+String b1 = "45678";
+int b2 = Integer.parseInt( b1 );
+```
+
+int b3 = Integer.parseInt(CharSequence s, int beginIndex, int endIndex, int radix)
+
+> **💡 Apunt Tècnic**
+> Ejemplo: cadena = sc.next(); // Lee la siguiente cadena: “13-14”
+
+```java
+String[] separada = cadena.split("-");
+```
+
+a = Integer.parseInt( separada[0] ); // Pasar el 13 de texto a número b = Integer.parseInt( separada[1] ); // Pasar el 14 de texto a número Más información sobre la clase Integer: https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Integer.html
+
+V3.02.11.23
+
+#### 2.3.1. Boxing y unboxing automáticos
+
+Desde la versión 5 de Java, se convierte automáticamente entre las clases envoltorios y sus correspondientes tipos básicos. • Si se introduce un tipo básico donde se espera un objeto de una clase envoltorio, se llama al constructor correspondiente (boxing). • Si se introduce un objeto de una clase envoltorio donde se espera un tipo básico, se llama al método de acceso correspondiente (unboxing).
+
+Por ejemplo: Integer x = 5, y = 9; //Boxing
+
+```java
+int z = x + y;
+```
+
+//Unboxing
+
+```java
+System.out.printf("%s + %s = %d", x, y, z);
+```
+
+#### 2.4. Manejo de fechas de Java: Clase LocalDate, LocalTime y LocalDateTime
+
+Actualmente las clases más comunes para el manejo de fechas en Java son: LocalDate, LocalTime y LocalDateTime. Vamos a ver a continuación cómo utilizarlas.
+
+#### 2.4.1. La clase LocalDate
+
+La clase LocalDate representa una fecha en formato ISO (yyyy-MM-dd) sin indicar el tiempo. Por ejemplo, podemos usar esta clase para guardar fechas de cumpleaños o el día de paga. Esta clase es otro objeto de Java al igual que la clase Random, Scanner, etc. Para crear este objeto haremos lo siguiente
+
+```java
+LocalDate fecha = LocalDate.now();
+```
+
+Con esto también obtenemos la fecha actual del sistema. Y también podemos obtener con LocalDate una fecha específica (día, mes y año) utilizando los métodos of o parse.
+
+```java
+LocalDate.of(2023,05,04);
+```
+
+LocalDate.parse(“-04”); // parsea una cadena como fecha Por defecto se trabajo con el formato ISO 8601 que es el más aceptado, pero podemos generar nuestro propio formato: // Utilizamos la clase DateTimeFormatter y su método ofPattern(String). LocalDate aniversarioStarWars = LocalDate.parse(“5/04/2023”,
+
+```java
+DateTimeFormatter.ofPattern(“d/M/yyyy”));
+```
+
+V3.02.11.23 Asimismo, podemos usar una variedad de métodos de LocalDate para gestionar las fechas. Veamos algunos ejemplos de uso: • Obtener la fecha actual y añadirle un día
+
+```java
+LocalDate manyana = LocalDate.now().plusDays(1);
+```
+
+• Obtener la fecha actual y restarle un mes (fíjate cómo acepta un enum como unidad de tiempo)
+
+```java
+LocalDate mesAnteriorMismoDia = LocalDate.now().minus(1, ChronoUnit.MONTHS);
+```
+
+> **⚠️ Nota: La clase ChronoUnit dispone de una serie de const...**
+> Nota: La clase ChronoUnit dispone de una serie de constantes que nos permiten obtener las unidades que nos interesen (que a su vez son también objetos de la clase ChronoUnit)
+
+• En el siguiente código, parseamos la fecha “-04” y obtenemos el día de la semana y el día del mes, respectivamente. Observa que cada método devuelve tipos de datos distintos
+
+```java
+DayOfWeek viernes = LocalDate.parse(“2023-05-04”).getDayOfWeek();
+int cuatro = LocalDate.parse(“2023-05-04”).getDayOfMonth();
+```
+
+• Podemos averiguar si un año es bisiesto
+
+```java
+boolean esBisiesto = LocalDate.now().isLeapYear();
+```
+
+• También podemos saber la relación entre una fecha con otra, respecto a si ocurre antes o después: // -04 no va antes que-01
+
+```java
+boolean esAntes = LocalDate.parse(“2023-05-04”).isBefore(LocalDate.parse(“2023-05-01”);
+```
+
+// -10 va después que-04
+
+```java
+boolean esDespues = LocalDate.parse(“2023-05-10”).isAfter(LocalDate.parse(“2023-05-04”);
+```
+
+• Para obtener los límites de una fecha dada: // Obtenemos la hora de inicio del día-04 i usamos LocalDateTime para guardar la hora que devuelve el método
+
+```java
+LocalDateTime comienzoDelDia = LocalDate.parse(“2023-05-04”).atStartOfDay();
+```
+
+// Obtenemos la fecha del primer día del mes parseado LocalDate firstDayOfMonth = LocalDate.parse(“-04”).
+
+```java
+with(TemporalAdjusters.firstDayOfMonth());
+```
+
+> **⚠️ Nota: Existe una clase llamada TemporalAdjusters (en pl...**
+> Nota: Existe una clase llamada TemporalAdjusters (en plural) cuyos métodos permiten obtener ajustes de fecha (de la clase TemporalAdjuster) de manera sencilla para hacer muchas cosas. Más información de la API: https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html
+
+V3.02.11.23
+
+#### 2.4.2. La clase LocalTime
+
+La clase LocalTime representa el tiempo sin una fecha. Es similar a LocalDate, podemos crear una instancia de LocalTime para obtener la hora del sistema utilizando los métodos of o parse. Veamos algunos ejemplos: • Para crear una hora
+
+```java
+LocalTime horaActual = LocalTime.now();
+```
+
+• También podemos crear una hora deseada parsenado una cadena o utilizando el método of
+
+```java
+LocalTime horaPersonalizada1 = LocalTime.parse(“12:34”);
+LocalTime horaPersonalizada2 = LocalTime.of(12,34);
+```
+
+• Ahora vamos a crear una hora y sumarle una hora más
+
+```java
+LocalTime hora = LocalTime.parse(“12:34”).plus(1, ChronoUnit.HOURS);
+```
+
+• Podemos obtener la hora, minutos o segundos: int hora = LocalTime.parse(“12:34”).getHour(); // Devuelve 12 int minuto = LocalTime.parse(“12:34”).getMinute(); // Devuelve 34 • También, al igual que en las fichas, podemos comprobar si una hora es anterior o posterior a otra
+
+```java
+boolean esAntes = LocalTime.parse(“12:34”).isBefore(LocalTime.parse(“13:30”));
+```
+
+Más información de la API: https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html
+
+#### 2.4.3. La clase LocalDateTime
+
+La clase LocalDateTime es una combinación de las dos anteriores para trabajar con fechas y horas simultáneamente. Ejemplos de uso: • Crear una fecha y hora
+
+```java
+LocalDateTime.now();
+```
+
+• Crear una fecha y hora personalizados
+
+```java
+LocalDateTime.of(2023, Month.MAY, 5, 12, 34);
+```
+
+Más información de la API: https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html
+
+V3.02.11.23
+
+#### 2.5. Gestionando periodos y duraciones de tiempo: Clases Period y Duration
+
+Tanto la clase Period como la clase Duration gestionan rangos de tiempo, pero se diferencia en lo siguiente: • Period: representa una cantidad de tiempo en términos de años, meses y días. • Duration: representa una cantidad de tiempo en segundos o nanosegundos.
+
+#### 2.5.1. La clase Period
+
+Algunos ejemplos de uso de la clase Period: • Manipular fechas
+
+```java
+LocalDate fechaInicial = LocalDate.parse(“2023-05-04”);
+```
+
+LocalDate fechaFinal = fechaInicial.plus(Period.ofDays(5)); // -09 • Calcular la diferencia de días, meses, años entre dos fechas: int nDias = Period.between(fechaInicial, fechaFinal).getDays(); // 5
+
+#### 2.5.2. La clase Duration
+
+Algunos ejemplos de uso de la clase Duration: • Manipular el tiempo: LocalTime tiempoInicial = LocalTime.of(12, 34, 0); // 12:34:00 LocalTime tiempoFinal = tiempoInicial.plus(Duration.ofSeconds(30)); // 12:34:30 • Calcular la diferencia en segundos entre dos tiempos
+
+Long tiempoSegundos = Duration.between(tiempoInicial, tiempoFinal).getSeconds(); // 30
+
+Más información de la API: https://docs.oracle.com/javase/8/docs/api/java/time/Period.html https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html Más información en la web sobre el manejo de fechas: https://www.campusmvp.es/recursos/post/como-manejar-correctamente-fechas-en-java-el-paquete-java- time.aspx https://www.baeldung.com/java-8-date-time-intro
+
+V3.02.11.23 El siguiente código muestra un ejemplo de un programa que usa las clases que hemos introducido para el manejo de fechas
+
+V3.02.11.23
+
+### 3. Los arrays
+
+¿Por qué necesitamos los arrays? Los arrays, también conocidos con el nombre de vectores, son elementos que almacenan de manera estructurada un conjunto de valores que pertenecen al mismo tipo de dato (entero, real, carácter, objetos, etc). Muchas de las soluciones a nivel computacional requieren crear listas de datos. Por ejemplo, si necesitamos almacenar y manipular las notas de 5 alumnos, deberíamos declarar 10 variables
+
+```java
+int nota1, nota2, nota3, nota4, nota5;
+```
+
+¿Pero qué ocurre si en vez de 5 alumnos son 500 empleados de una multinacional? Evidentemente con la solución anterior nuestro programa sería inviable de tratar y mantener. En este caso, deberíamos de utilizar las estructuras de arrays.
+
+#### 3.1. Declaración y acceso a arrays
+
+#### 3.1.1. Declaración de arrays
+
+Con un array podemos manipular una sola variable pero que a la vez está tratando con múltiples datos. En el caso de los alumnos deberíamos declarar un array de 5 enteros para almacenar cada una de sus notas
+
+```java
+int[] notas = new int[5];
+```
+
+Por tanto, podemos deducir que la sintaxis para declarar un array de un tamaño fijo es la siguiente
+
+```java
+tipo_de_variable[] nombre_de_variable = new tipo_de_variable[tamaño_del_array];
+```
+
+ó
+
+```java
+tipo_de_variable nombre_de_variable[] = new tipo_de_variable[tamaño_del_array];
+```
+
+El estilo más habitual es el del primer caso ya que al declarar int[] y ver los corchetes ya puedes interpretar que la variable es de tipo array. En cualquier caso, debes elegir el estilo en el que más te sientas a gusto. Nota: En esta unidad estamos tratando con los arrays estáticos, es decir, tiene un número fijo de datos que pueden almacenar. En unidades posteriores estudiaremos las clases que Java ofrece para tratar con arrays dinámicos.
+
+V3.02.11.23
+
+#### 3.1.2. Almacenar y recuperar elementos de un array
+
+Un array se puede visualizar como una lista de elementos donde cada elemento ubica en una posición determinada y localizable llamada índice. Además, en el caso de los arrays de tipos primitivos, cuando se declara el array este inicializa a cero todos sus elementos.
+
+El array de notas de alumnos que hemos creado anteriormente se podría visualizar de la siguiente manera
+
+Hay que tener en cuenta que los índices del array siguen estas reglas: • Primer elemento = índice 0 • Último elemento = tamaño del array – 1 En el ejemplo anterior el tamaño del array es 5 y por tanto el último elemento se sitúa en el índice 4. También podemos hablar de que el primer elemento está en la posición 0 y el último elemento está en la posición 4.
+
+Si quisiéramos almacenar un 9 en la primera posición del array de notas deberíamos escribir la siguiente instrucción
+
+```java
+notas[0] = 9;
+```
+
+El contenido del array se actualizaría y se vería así
+
+Podríamos hacer los mismo con todos los elementos del array. Por ejemplo, el código completo en el que se declara el array de notas y se almacenan los valores correspondientes sería
+
+índices elementos
+
+```java
+int[] notas = new int[5];
+```
+
+V3.02.11.23 Y finalmente el contenido de array de notas
+
+Por otra parte, también queremos recuperar alguno de los valores almacenados en el array. En este caso, nos puede interesar recuperar las notas de los alumnos para poder hacer alguna operación aritmética con ellas, como por ejemplo calcular la nota media.
+
+```java
+int notaAlumno1 = notas[0];
+```
+
+Con la anterior instrucción recuperamos la nota guardada en la primera posición del array y la almacenamos en una variable llamada notaAlumno1. Puedes entender mejor este concepto a partir del siguiente ejemplo. Ejemplo: Calcular la nota media de 5 alumnos de clase
+
+#### 3.1.3. Asignar valores iniciales en la declaración del array
+
+Puede que necesitemos declarar el array con unos valores iniciales, bien por los conozcamos a priori o bien porque los necesitemos en la solución de nuestro problema. Siguiendo con el ejemplo de las notas el array se declararía e inicializaría con la siguiente instrucción
+
+```java
+int[] notas = new int[] {9,7,8,5,3};
+```
+
+ó
+
+```java
+int[] notas = {9,7,8,5,3};
+```
+
+Como ves el segundo caso es más simple y es estilo más habitual que utilizaremos. Podemos modificar el anterior ejemplo pero con el array ya rellenado de notas en su propia declaración
+
+V3.02.11.23
+
+#### 3.1.4. Recorrer los elementos de array: bucle foreach
+
+La suma de cada uno de los valores del array de nuestro ejemplo puede resultar algo engorrosa y más aún en el caso de que tuviéramos que sumar las notas de 50 alumnos, por ejemplo. Para ello es mejor utilizar una estructura repetitiva y habitualmente una buena opción sería el bucle for.
+
+Por ejemplo, si modificamos el código anterior para que sume las notas una a una lo haga con un bucle for, el fragmento de código que haría esto quedaría así
+
+Sin embargo, en Java existe la estructura de control foreach la cual está diseñada para recorrer y recuperar elementos de un array de una forma más eficiente (o sencilla). El código equivalente al ejemplo anterior con la estructura foreach sería
+
+La sintaxis de este bucle es: for (tipo_de_dato elemento: array) { // Procesar el elemento } En la primera iteración del bucle se guarda notas[0] en notaAlumno y se suma, en la segunda iteración se guarda notas[1] en notaAlumno y se suma, y así sucesivamente hasta llegar al último elemento del array y termina el bucle.
+
+V3.02.11.23 Nota En otros lenguajes como C#, PHP o Javascript la sintaxis para bucle foreach se utiliza el nombre foreach para la estructura. Sin embargo, cabe tener en cuenta que en Java la palabra clave no se llama foreach si no for. Utilizamos la denominación foreach para diferenciarlo del bucle for estándar.
+
+#### 3.1.5. Los límites del array: uso de constantes y el método length
+
+En los arrays estáticos debemos tener en cuenta el tamaño que le hemos dado a nuestro array. Un array tiene por tanto un rango limitado de índices de acceso según su tamaño; si N es el tamaño de nuestro array el rango será desde el índice 0 hasta N-1. Si accedemos a un índice que esté fuera de este rango, nuestro programa compilaría, no obstante, nos daría el siguiente error en la posterior ejecución del programa y terminaría
+
+java.lang.ArrayIndexOutOfBoundsException En el ejemplo que estamos desarrollando, si escribimos la siguiente instrucción
+
+```java
+notas[5] = 10;
+```
+
+Tendríamos el problema descrito, ya que el tamaño de nuestro array es de 5 y sólo podemos acceder a los índices de 0 a 4. A la hora de recorrer el array debemos tener en cuenta que no accedemos fuera del rango de valores disponibles. Podemos utilizar tres técnicas
+
+• Definir una constante con el tamaño máximo del array. • Utilizar el método length de la clase array que nos da su tamaño. • Una mezcla de las dos anteriores. Un ejemplo utilizando la primera técnica
+
+V3.02.11.23 Un ejemplo utilizando la segunda técnica
+
+Y por último, podemos hacer una mezcla de las dos anteriores
+
+De esta forma, si necesitamos modificar el tamaño del array es más limpio e intuitivo hacer desde la constante declarada y no dentro del array. Además, más adelante podemos utilizar el método length que nos asegura que no nos saldremos del rango del array por la parte superior.
+
+Nota Cuidado, los índices de un array no pueden ser negativos y por tanto debemos ser precavidos en el valor inicial de la variable contador del bucle. Otro ejemplo del uso del método length de la clase array sería para el ejemplo del cálculo de la media de los alumnos, ya que para obtener la media debemos saber el total de alumnos
+
+Un resumen de lo estudiado en el apartado 4.3: • Un array nos permite crear y manipular listas de datos, como por ejemplo, almacenar las notas de los alumnos de una clase.
+
+V3.02.11.23 • Se pueden crear arrays de cualquier tipo de dato: int, float, double, etc. Sin embargo, todos los elementos del mismo arrays deben ser del mismo tipo. • Un array se puede declarar vacío (todo a cero) o con unos valores iniciales. • Los arrays que estamos estudiando se conocen como estáticos, ya que se definen previamente con un tamaño limitado. Hay que tener cuidado con el rango de valores de un array.
+
+• Los arrays se recorren con un bucle for o foreach. • Resumen sintaxis con el ejemplo del array de notas: Tipo Java Rango de valores Crear un array de tamaño 5: int [] notas = new int[5] Guardar una nota en la primera posición
+
+```java
+notas[0] = 9;
+```
+
+Guardar una nota en la última posición
+
+```java
+notas[4] = 3;
+```
+
+Obtener el último elemento del array
+
+```java
+int notaAlumno1 = notas[4];
+```
+
+Obtener el tamaño del array
+
+```java
+int numeroAlumnos = notas.length;
+```
+
+#### 3.2. Operaciones más comunes con arrays
+
+#### 3.2.1. Elemento máximo o mínimo de un array
+
+Para encontrar el máximo o el mínimo de los elementos de un array, tomaremos el primero de los elementos como valor provisional, y compararemos con cada uno de los demás, para ver si está por encima o debajo de ese máximo o mínimo provisional, y actualizarlo si fuera necesario.
+
+El siguiente fragmento de código muestra el algoritmo descrito para calcular el elemento máximo de un array
+
+Cuidado, un error típico es inicializar la variable del máximo directamente a 0: int notaMax = 0; // Error!
+
+V3.02.11.23 3.2.2 Copia de un array A veces, en un programa, necesitamos duplicar un array o parte de un array. En estos casos, podrías tener la tentación de asignar un array a otro array. Por ejemplo, si tenemos dos arrays llamados notas1 y notas2: notas2 = notas1; // ¡Error! Haciendo esto no se copia Sin embargo, esta instrucción no copia el contenido de un array sobre otro. El motivo de que esto no funcione lo explicaremos en los temas de orientación a objetos que veremos en las siguientes unidades. Por ahora, debes entender que no debes hacer esto para copiar dos arrays.
+
+Evidentemente sí que se pueden copiar arrays, pero debes hacer siguiendo algunas de estas tres técnicas: • Usar un bucle para copiar elemento a elemento de un array a otro. • Usar el método arraycopy de la clase System. • Usar el método clone para copiar arrays. Este método lo estudiaremos en unidades posteriores.
+
+Para copiar elemento a elemento de un array a otro podemos utilizar el siguiente bucle
+
+Y con el método arraycopy lo deberíamos hacer con la siguiente instrucción
+
+Esta instrucción la podríamos leer así: “Copia el array notas1 (notas1) desde el inicio (0) hacia array notas2 (notas2) desde su inicio (0) y copia notas1 completamente (notas1.length)”. La sintaxis del método arraycopy es
+
+```java
+System.arraycopy (array_origen, índice_origen, array_destino, elementos_a_copiar);
+```
+
+> **⚠️ Nota: Hay que tener en cuenta que en ambos ejemplos el ...**
+> Nota: Hay que tener en cuenta que en ambos ejemplos el tamaño del array notas2 debe ser menor o igual que notas1.
+
+#### 3.2.3. Insertar elementos en el array
+
+Un elemento se puede insertar en un array de tres formas: • Al final del array. • En posiciones intermedias.
+
+V3.02.11.23 Insertar elementos al final del array Para insertar un elemento al final del array es lo más sencillo. Sólo debes tener en cuenta el índice del último elemento que se ha insertado en el array. Sin embargo, debemos comprobar si el array está lleno, ya que en tal caso no podremos insertar un elemento nuevo en ese array a no ser que lo redimensionemos.
+
+Por ejemplo: if (cantidad < capacidad) {
+
+```java
+notas[cantidad] = 5;
+    cantidad++;
+}
+```
+
+Hasta ahora hemos rellanado completamente nuestro array con un bucle for y por tanto la comprobación anterior no hace falta. Este ejemplo se aplica cuando tenemos un array que no está lleno y vamos insertando elementos en él en cualquier momento del programa. Insertar elementos en posiciones intermedias En este caso, y siempre que haya espacio libre en el array, debemos desplazar todos los elementos hacia la derecha desde la posición donde queramos insertar el nuevo elemento. Finalmente, insertaremos el nuevo elemento en dicha posición.
+
+La clave está en que este movimiento de desplazamiento debe empezar desde el final para que cada elemento que se mueve no sobreescriba el que estaba a continuación de él. Además, debemos actualizar el contador de elementos, para indicar que hay el array tiene un elemento más.
+
+El algoritmo sería el siguiente: for (i = cantidad; i > posicionInsertar; i--)
+
+```java
+notas[i] = notas[i-1];
+notas[posicionInsertar] = 9;
+```
+
+cantidad++;
+
+#### 3.2.4. Borrar elementos de un array
+
+Si queremos borrar el elemento que hay en una cierta posición de un array, los que estaban a continuación deberán desplazarse “hacia la izquierda” para que no queden huecos. Como en el caso anterior, deberemos actualizar el contador, pero ahora para indicar que el array tiene un elemento menos.
+
+for (i = posicionBorrar; i < cantidad-1; i++)
+
+```java
+notas[i] = notas[i+1];
+```
+
+cantidad--;
+
+V3.02.11.23 Nota: En este algoritmo se supone que posicionBorrar puede ser 0 hasta la cantidad de elementos que hay en el array menos 1.
+
+#### 3.2.5. Buscar elementos en un array
+
+Existen dos formas de buscar un elemento dentro de un array: • Búsqueda lineal • Búsqueda binaria o dicotómica Búsqueda secuencial o lineal El algoritmo para buscar elementos en un array de forma secuencial es el más sencillo e intuitivo. Simplemente deberemos comparar cada elemento del array con el elemento a buscar.
+
+En caso de encontrar el elemento podríamos: • Notificar al usuario que se ha encontrado el elemento. • Almacenar la posición en la que se ha encontrado el elemento. • Almacenar el éxito de haber encontrado el elemento. El ejemplo siguiente hace referencia al segundo caso
+
+La variable posicionBuscado la iniciamos a -1 para indicar que en un principio no hemos encontrado el elemento dentro del array. En caso de no encontrarlo, posicionBuscado seguirá valiendo -1. El anterior algoritmo no es muy eficiente, ya que en caso de encontrar el elemento sigue recorriendo el array hasta el final. Efectivamente, la idea sería que el bucle terminara cuando se haya encontrado el elemento.
+
+¿Cómo lo harías? Búsqueda binaria o dicotómica El algoritmo de búsqueda binaria o dicotómica es un poco más complejo, pero es mucho más eficiente que la búsqueda secuencial. A priori el array debe estar ordenado. El array se dividirá en dos para buscar el elemento en una parte del array o en otra y así sucesivamente hasta encontrar, o no, el elemento.
+
+V3.02.11.23 En el siguiente ejemplo aplicamos el algoritmo de búsqueda binaria al array de notas que hemos estado utilizando en los anteriores ejemplos. Cabe destacar que el array de notas debe estar necesariamente ordenado antes de iniciar la búsqueda
+
+3.2.6 Ordenación de arrays Para terminar con las operaciones más habituales sobre los arrays, cabe comentar alguno de los algoritmos que sirven para ordenar los elementos de un array: • Burbuja • Inserción • Selección • Quicksort Aunque estos algoritmos se estudian en profundidad en niveles universitarios, en el caso de los CFGS DAM/DAW en el módulo de Programación no entraremos en más detalle. Java ya tiene implementados estos algoritmos y podemos utilizar sus métodos de ordenación muy fácilmente (por ejemplo, con el método sort del array).
+
+Sin embargo, para aquellos y aquellas que tengan interés en saber más sobre los algoritmos de ordenación, os dejo el siguiente enlace: https://es.wikipedia.org/wiki/Algoritmo_de_ordenamiento
+
+#### 3.3. La clase Arrays
+
+Aunque no hayamos entrado en los conceptos de la programación orientada a objetos, durante el curso ya hemos tratado de manejar algunos objetos, sus propiedades y métodos, por ejemplo
+
+V3.02.11.23 • La clase System: System.out.println() • La clase Scanner y sus métodos nextInt(), nextFloat() • La clase Math con sus métodos (pow, random...) y propiedades (Math.PI). • etc. De la misma manera los arrays tiene unos métodos, o herramientas si lo quieres pensar así, que nos simplifican la elaboración de los programas. Estos se encuentran en la clase Arrays.
+
+Por ejemplo, si queremos ordenar un array de números enteros, sólo tenemos que utilizar el método sort. En el caso de que queramos ordenar el array de notas de nuestros ejemplos
+
+```java
+Arrays.sort(notas);
+```
+
+Por tanto, la sintaxis será
+
+```java
+Arrays.sort(nombre_array);
+```
+
+Cabe destacar que, al igual que hacíamos con la clase Scanner, debemos importar la clase Array a nuestro programa
+
+```java
+import java.util.Arrays;
+```
+
+Veamos un ejemplo completo
+
+La salida por pantalla será: Notas antes de ordenar: 9 7 8 5 3 Notas después de ordenar: 3 5 7 8 9
+
+V3.02.11.23 Otros métodos interesantes de la clase Arrays son: Métodos Descripción fill Permite rellenar un array unidimensional con un terminado valor. Sus argumentos son el array a rellenar y el valor deseado. Por ejemplo, para rellenar con todo a -1 un array donde almacenemos notas
+
+```java
+int[] notas = new int[10];
+Arrays.fill(notas, -1);
+```
+
+También podemos decidir desde qué índice hasta qué índice rellenamos
+
+Arrays.fill(notas, 5, 8, -1); // almacena -1 desde la posición 5 hasta la 7 del array notas equals Compara dos arrays y devuelve true si son iguales (false en caso contrario). Se consideran iguales si son del mismo tipo, tamaño y contienen los mismos valores.
+
+Arrays.equals(notas1, notas2); // notas1 y notas2 son arrays binarySearch Permite buscar un elemento de forma super eficiente y rápida en un array ordenado (atención, eso es importante, que esté ordenado). Devuelve el índice del elemento buscado. Por ejemplo
+
+```java
+int notas[] = {9, 7, 8, 5, 3};
+Arrays.sort(notas);
+```
+
+Arrays.binarySearch(notas, 5); //Devuelve el índice 3 que es donde está el elemento 5 Nota Toda la información de la clase Arrays la puedes encontrar en su documentación oficial: https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html
+
+#### 3.4. Arrays multidimensionales
+
+En los anteriores apartados estudiamos como usar arrays unidimensionales para guardar una colección de elementos de forma lineal. Sin embargo, Java permite crear arrays bidimensionales también llamados matrices o tablas. En estas estructuras puedes almacenar y manejar elementos como si tuvieras una tabla.
+
+V3.02.11.23 Nota Utilizaremos la denominación matriz para referirnos a los arrays bidimensionales. Por ejemplo, la siguiente tabla que muestra las notas de los alumnos en cada una de las evaluaciones del curso, puede ser almacena en una matriz llamada notasCurso.
+
+1a. Evaluación 2a. Evaluación 3a. Evaluación Baby yoda Luke Leia Rey En este apartado, vamos a estudiar: • Cómo declarar e inicializar una matriz bidimensional. • Cómo acceder a los elementos de una matriz bidimensional.
+
+#### 3.4.1. Declarar e inicializar una matriz bidimensional
+
+La sintaxis es muy parecida a la declaración de un array unidimensional, aunque debemos añadir dos corchetes
+
+```java
+tipo_de_variable[][] nombre_de_variable = new tipo_de_variable[nfilas][ncolumnas];
+```
+
+Debemos indicar, además, dos tamaños para la matriz. Un tamaño para el número de filas (nfilas) y un tamaño para el número de columnas (ncolumnas) de nuestra matriz. Si piensas en la estructura de una tabla quizá te ayude a visualizarlo. Siguiendo el ejemplo de la tabla anterior, para declarar la matriz notasCurso
+
+int[][] notasCurso = new int[4][3]; // 4 filas y 3 columnas Y si quisiéramos rellenar los datos del alumno Baby yoda: notasCurso[0][0] = 9; // fila 0, columna 0 notasCurso[0][1] = 10; // fila 0, columna 1 notasCurso[0][2] = 10; // fila 0, columna 2 notasCurso[1][0] = 3; // fila 1, columna 0 notasCurso[1][1] = 4; // fila 1, columna 1 notasCurso[1][2] = 5; // fila 1, columna 2 notasCurso[2][0] = 9; // fila 2, columna 0 notasCurso[2][1] = 8; // fila 2, columna 1 notasCurso[2][2] = 10; // fila 2, columna 2 notasCurso[3][0] = 8; // fila 3, columna 0 notasCurso[3][1] = 9; // fila 3, columna 1 notasCurso[3][2] = 9; // fila 3, columna 2
+
+V3.02.11.23 Los datos de la tabla de alumnos se almacenan en este tipo de estructura, con los índices de filas y columnas para acceder a cada elemento
+
+índices columnas
+
+índices filas Sin embargo, hay una forma más sencilla de inicializar la matriz con unos valores predeterminados
+
+```java
+int[][] notasCurso = {
+```
+
+{9,10,10}, {3,4,5}, {9,8,10}, {8,9,9}, };
+
+#### 3.4.2. Recorrer una matriz bidimensional
+
+Una vez tengamos la matriz rellanada con datos, podremos recorrer los elementos de la matriz para mostrarlos por pantalla. Como tenemos un array bidimensional, a diferencia del array unidimensional, deberemos utilizar un bucle anidado: un bucle para recorrer las filas y otro bucle para recorrer las columnas.
+
+Como puedes observar en este código, para controlar que estamos dentro del rango del tamaño de la fila o columna, utilizamos el método length Sin embargo, debes fijarte que a diferencia de como lo hacíamos con el array unidimensional, se debe indicar de que array queremos obtener el tamaño (el de las filas o el de las columnas)
+
+V3.02.11.23 notasCurso.length; // nos devuelve el número de filas de la matriz notasCurso notasCurso[i].length; // nos devuelve el número de columnas que tiene la fila i Nota Una matriz es un array de arrays. Por tanto, podríamos visualizar que una matriz tiene N arrays (n filas) de M elementos cada uno. Por ejemplo, en el ejemplo anterior, tenemos una matriz compuesta por 4 arrays y cada array está compuesto de 3 elementos.
+
+Finalmente, hay que tener en cuenta que las operaciones y restricciones que se aplican a un array unidimensional también valen para los arrays multidimensionales.
+
+### 4. Cadenas de caracteres
+
+Ya sabemos utilizar el tipo de dato char para almacenar un carácter.
+
+```java
+char letra = ‘a’;
+```
+
+Un texto no es nada más y nada menos que una cadena de caracteres. Por tanto, ahora que ya conocemos el concepto de array, podríamos crear la cadena “apto” como un array de tipo char
+
+```java
+char[] calificacion = {‘a’, ‘p’, ‘t’, ‘o’};
+```
+
+Aunque como puedes comprobar esta forma de crear cadenas no es eficiente. ¿Y si tuviéramos que crear textos más largos? Es por ello que Java incluye el tipo String, que ha sido especialmente diseñado para la manejar cadenas. En la unidad 3 ya se hizo una introducción al tipo de dato String. Sin embargo, no se profundizó en los métodos de los que este tipo de dato dispone. En los siguientes apartados se hará una descripción detallada del potencial de la clase String para crear y manipular cadenas de texto.
+
+Nota Recuerda que String es una clase. Y al igual que la clase Scanner, Math o Arrays, proporciona una serie de herramientas (métodos) que incluyen algoritmos que nos facilitan la tarea de programar. Estas son las operaciones más habituales que se hacen con una cadena de texto
+
+• Creación de una cadena. • Leer la cadena desde la entrada estándar. • Acceder a un carácter de la cadena. • Determinar la longitud de la cadena. • Concatenar con otras cadenas.
+
+V3.02.11.23 • Comparar con otras cadenas. • Extraer una subcadena. • Buscar texto dentro de la cadena. • Expresiones regulares En los siguientes apartados estudiaremos estas operaciones haciendo uso de los objetos de Java más adecuados.
+
+#### 4.1. La clase String
+
+Hasta ahora hemos utilizado la clase String como variable para crear datos de tipo cadena. A continuación, estudiaremos los métodos que proporciona esta clase para manipular cadenas de texto. 4.1.1 Declaración, creación e inicialización Existen diferentes formas de construir un String. A continuación, se muestra un ejemplo en el que se construye a partir de una secuencia de carateres encerrados entre comillas dobles (“”) y a través de un array de elementos de tipo char.
+
+Nota Una vez que se crea e inicializa un String este es inmutable y no se puede modificar.
+
+#### 4.1.2. Lectura desde teclado
+
+En la unidad 3 ya aprendimos a obtener una cadena de texto desde la entrada estándar (teclado) con la clase Scanner mediante el método nextLine()
+
+```java
+Scanner sc = new Scanner(System.in);
+String nombre = sc.nextLine();
+```
+
+Cuidado, no confundir nextLine() con next(). Por ejemplo, si escribimos “Ada Lovelace” en la entrada del programa y pulsamos la tecla enter
+
+V3.02.11.23 • nextLine(): obtiene una cadena hasta encontrar el retorno de carro (la tecla enter). Por tanto, obtiene la cadena “Ada Lovelace”. • next(): obtiene una cadena hasta encontrar el carácter espacio. En este caso, la cadena que obtiene es “Ada”.
+
+#### 4.1.3. Acceder a un carácter de la cadena
+
+En la unidad 3 también aprendimos a obtener un carácter desde teclado con el método: charAt(int posicion) Y lo utilizábamos de esta forma
+
+```java
+Scanner sc = new Scanner(System.in);
+String nombre = sc.nextLine().charAt(0);
+```
+
+Aunque lo utilizáramos junto con la clase Scanner, este método pertenece realmente a la clase String. Si descomponemos el anterior ejemplo en más instrucciones se puede entender mejor
+
+```java
+Scanner sc = new Scanner(System.in);
+```
+
+String nombre = sc.nextLine(); // Obtiene “Ada Lovelace”
+
+char caracter = nombre.charAt(0); // Obtiene ‘A’ Hasta ahora le hemos pasado un 0 (cero) al charAt() para obtener el primer carácter de la cadena. En cierta manera, esto se puede ver como un truco para obtener un carácter de entrada. Sin embargo, podemos obtener cualquier carácter de la cadena modificando ese valor. Por ejemplo, si queremos obtener la segunda letra de “Ada Lovelace”
+
+char caracter = nombre.charAt(1); // Me da el carácter ‘d’ Ten en cuenta que la cadena es un array y por tanto sus índices funcionan de la misma manera.
+
+#### 4.1.4. Longitud de la cadena
+
+Al igual que en los arrays, se puede saber cuántas letras forman una cadena con length
+
+```java
+String nombre = “Grace Hooper”;
+System.out.println( nombre.length() ); // 12
+```
+
+Otro ejemplo más completo donde mostramos carácter a carácter una cadena de texto de
+
+V3.02.11.23
+
+Como puedes observar hemos utilizado otra operación sobre String
+
+```java
+nombre.toCharArray();
+```
+
+Esto convierte la variable nombre, que es de tipo String, en un array de caracteres.
+
+#### 4.1.5. Concatenar cadenas
+
+En el caso de que queramos concatenar (juntar) dos podemos utilizar el método concat. La instrucción que se muestra a continuación concatena la cadena bienvenida y la cadena nombre, y la cadena resultante se guarda en otra cadena llamada saludo
+
+```java
+String bienvenida = “Bienvenida “;
+String nombre = “Hedy Lamarr”;
+String saludo = bienvenida.concat(nombre);
+```
+
+O también
+
+```java
+String bienvenida = “Bienvenida “;
+String saludo = bienvenida.concat(“Hedy Lamarr”);
+```
+
+Aunque debido a que la concatenación de cadenas es una operación muy habitual en los programas, Java permite hacer de una manera más simple. Es una operación que hemos ido haciendo durante el curso como puedes ver en el siguiente ejemplo
+
+```java
+String saludo = bienvenida + nombre;
+```
+
+También se permite concatenar cadenas con números, y en este caso el número se convertirá a String automáticamente
+
+```java
+System.out.println(“Nota final: “ + 7.2);
+```
+
+O también
+
+```java
+String mensajeNota = “Nota final: “ + 7.2;
+System.out.println(mensajeNota);
+```
+
+Pero recuerda, que si haces operaciones aritméticas dentro del operador de concactenación ‘+’, debes ponerlas entre paréntesis
+
+V3.02.11.23
+
+```java
+System.out.println(“Nota final: “ + (7.2 + 2);
+```
+
+#### 4.1.6. Comparar cadenas
+
+Ya sabemos cómo ver si una cadena tiene exactamente un cierto valor o si dos cadenas son iguales o no. Para
+
+```java
+ello empleamos la operación equals (y no ==). Siendo s1 y s2 variables de tipo String: s1.equals(s2);
+```
+
+Sin embargo, no sabemos comprobar qué cadena es mayor que otra (cuál aparecería la última de las dos en un diccionario), y se trata de algo que es necesario si deseamos ordenar textos. El operador mayor que (>), que usamos con los números, no se puede aplicar directamente en cadenas. En su lugar, debemos emplear el operador compareTo, el cual devolverá un número mayor que 0 si nuestra cadena es mayor que la que indicamos como parámetro (o un número negativo si nuestra cadena es menor, o 0 (cero) si son iguales)
+
+#### 4.1.7. Extraer una subcadena
+
+Como hemos visto anteriormente, podemos extraer un carácter de una cadena con charAt. Además, también podemos obtener una subcadena de la cadena utilizando substring. Por ejemplo
+
+```java
+String mensaje1 = “Bienvenido a Programación”;
+String mensaje2 = mensaje1.substring(0,13) + “Bases de Datos”;
+System.out.println(mensaje2); // Muestra “Bienvenido a Bases de Datos”
+```
+
+Se puede deducir que la subcadena se toma desde la posicion inicial (por ejemplo, 0) hasta una posición final (sin incluir esa posición final). Por ejemplo, “Bienvenido a “ tiene 13 caracteres (cuenta el último espacio), y queremos obtener la subcadena desde el principio.
+
+#### 4.1.8. Buscar en una cadena
+
+La inmensa mayoría los editores de texto, navegadores, etc, ofrecen la opción de buscar alguna palabra dentro del texto. En los String, para ver si una cadena contiene un cierto texto, podemos usar indexOf (puede leerse como posición de), que nos dice en qué posición se encuentra la cadena buscada. En caso de que sea 0 será la primera, y en caso de que no se encuentre, -1.
+
+Un ejemplo de su uso es el siguiente
+
+V3.02.11.23 Salida: Palabra encontrada en la posición: 4 Ten en cuenta que empieza contando los caracteres de la cadena desde 0.
+
+#### 4.1.9. Otras operaciones con cadenas
+
+Podemos utilizar otras operaciones útiles para tratar cadenas: •
+
+```java
+Convertir cadena a minúsculas: cadena.toLowerCase();
+```
+
+•
+
+```java
+Convertir cadena a mayúsculas: cadena.toUpperCase();
+```
+
+•
+
+```java
+Eliminar espacios en ambos extremos de la cadena de texto: cadena.trim();
+```
+
+•
+
+```java
+Comprobar si la cadena está vacía: cadena.isEmpty();
+```
+
+Nota Toda la información de la clase String la puedes encontrar en su documentación oficial: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+
+#### 4.2. Expresiones regulares con cadenas de texto
+
+A menudo necesitaremos escribir código que valide la entrada del usuario, como por ejemplo comprobar si el dato es un número, una cadena con todos los caracteres en minúscula, o si es el DNI. Este tipo de problemas se pueden solucionar adecuadamente utilizando expresiones regulares.
+
+Una expresión regular (abreviada como regex en inglés) es una carácter o conjunto de caracteres (cadena) que describe un patrón de búsqueda. De esta manera, podemos encontrar, reemplazar o separar una cadena según un determinado patrón de búsqueda. Nota Las expresiones regulares son una herramienta extremadamente útil y potente, muy utilizadas tanto por administradores de sistemas como programadores web con lenguajes de tipo script.
+
+El método que maneja principalmente las expresiones regulares con la clase String es matches. Este método devuelve true si la cadena que se examina coincide con la expresión regular. En principio, matches es muy similar a equals. Por ejemplo, las siguientes dos instrucciones son evaluadas como true.
+
+```java
+String lenguaje = “Java”;
+```
+
+lenguaje.matches(“Java”); // true
+
+V3.02.11.23 lenguaje.equals(“Java”); // true Sin embargo, la herramienta matches es mucho más potente. No solo puede confirmar la coincidencia de una determinada cadena con otra, sino también un conjunto de cadenas que siguen un patrón determinado (expresión regular). Por ejemplo, a partir de estos tres mensajes
+
+```java
+String mensaje1 = “Java mola”;
+String mensaje2 = “Java es divertido”;
+String mensaje3 = “Java es potente”;
+```
+
+Podemos aplicar el método matches, el cual evaluará las siguientes instrucciones como true: mensaje1.matches(“Java.*”); // true mensaje2.matches(“Java.*”); // true mensaje3.matches(“Java.*”); // true “Java.*” es una expresión regular. Describe el patrón de una cadena que empieza por la palabra Java seguida por cero o más caracteres.
+
+Otro ejemplo
+
+```java
+String codigo = “440-02-4534”;
+```
+
+codigo.matches(\\d{3}-\\d{2}-\\d{4}); // true En el anterior ejemplo \\d representa un único dígito, y \\d{3} representa 3 dígitos. A continuación, se hace un resumen en forma de tablas de los meta caracteres disponibles que pueden utilizarse en expresiones regulares.
+
+Símbolos comunes en expresiones regulares Regex Descripción . Un punto indica cualquier carácter ^regex El símbolo ^ indica el principio del String. En este caso el String debe contener la expresión al principio. regex$ El símbolo $ indica el final del String. En este caso el String debe contener la expresión al final.
+
+[abc] Los corchetes representan una definición de conjunto. En este ejemplo el String debe contener las letras a ó b ó c. [abc][12] El String debe contener las letras a ó b ó c seguidas de 1 ó 2 [^abc] El símbolo ^ dentro de los corchetes indica negación. En este caso el String debe contener cualquier carácter excepto a ó b ó c.
+
+[a-z1-9] Rango. Indica las letras minúsculas desde la a hasta la z (ambas incluidas) y los dígitos desde el 1 hasta el 9 (ambos incluidos) A|B El carácter | es un OR. A ó B
+
+V3.02.11.23 AB Concatenación. A seguida de B Meta caracteres Regex Descripción \d Dígito. Equivale a [0-9] \D No dígito. Equivale a [^0-9] \s Espacio en blanco. Equivale a [ \t\n\x0b\r\f] \S No espacio en blanco. Equivale a [^\s] \w Una letra mayúscula o minúscula, un dígito o el carácter _ Equivale a [a-zA-Z0-9_] \W Equivale a [^\w] \b Límite de una palabra.
+
+Cuantificadores Regex Descripción {X} Indica que lo que va justo antes de las llaves se repite X veces {X,Y} Indica que lo que va justo antes de las llaves se repite mínimo X veces y máximo Y veces. También podemos poner {X,} indicando que se repite un mínimo de X veces sin límite máximo.
+
+* Indica 0 ó más veces. Equivale a {0,} + Indica 1 ó más veces. Equivale a {1,} ? Indica 0 ó 1 veces. Equivale a {0,1}
+
+V3.02.11.23 Ejemplo de uso de expresiones regulares
+
+#### 4.2.1. Reemplazar subcadenas
+
+Muchas veces necesitaremos reemplazar una palabra por otro dentro de un texto. Esto se puede hacer de forma sencilla con replaceAll
+
+```java
+String noticia = “Rafa Nadal golpeó la pelota con su raqueta mientras comía una pelota”;
+String notificaFake = noticia.replaceAll(“pelota”, “naranja”);
+System.out.println(noticiaFake);
+```
+
+Salida: Rafa Nadal golpeó la naranja con su raqueta mientras comía una naranja El primer parámetro de replaceAll es la cadena buscada y el segundo parámetro es la cadena por la que se va a reemplazar. Nota Los String son inmutables y es por ello que necesitamos guardar en otro String el resultado de la cadena reemplazada.
+
+Sin embargo, también es posible que queramos reemplazar una cadena según un patrón de caracteres determinado. Ahora ya sabemos que lo podemos resolver con una expresión regular. Asimismo, replaceAll acepta como primer parámetro una expresión regular. En el siguiente ejemplo reemplazamos el patrón “ab”, pero solamente el que aparece al principio de la cadena1
+
+V3.02.11.23
+
+Salida: xyc bca abzd ab cdabs
+
+#### 4.2.2. Separar cadena en subcadenas
+
+Una operación relativamente frecuente, pero trabajosa, es descomponer una cadena en varios fragmentos que estén delimitados por ciertos separadores. Por ejemplo, podríamos descomponer una frase en varias palabras que estaban separadas por espacios en blanco. Si lo queremos hacer "de forma artesanal", podemos recorrer la cadena buscando y contando los espacios (o los separadores que nos interesen). Así podremos saber el tamaño del array que deberá almacenar las palabras (por ejemplo, si hay dos espacios, tendremos tres palabras). En una segunda pasada, obtendremos las subcadenas que hay entre cada dos espacios y las guardaríamos en el array. No es especialmente sencillo.
+
+Afortunadamente, Java nos permite hacerlo con split, que crea un array a partir de los fragmentos de la cadena, usando el separador que le indiquemos, así
+
+Salida: Lenguaje 0 = Java Lenguaje 1 = C# Lenguaje 2 = Python Lenguaje 3 = C++ Aunque también podemos usar expresiones regulares
+
+Obtenemos la misma salida que en el ejemplo anterior.
+
+V3.02.11.23
+
+### 5. Bibliografía
+
+Documentación oficial: https://docs.oracle.com/en/java/javase/17/docs/api/index.html Librerías de clases útiles: Apuntes de José Chamorro del CFGS DAW del .
+
+---
+
+# 5.2 Estructuras de datos estaticas
+
+Programación
+
+### UD 5: Estructuras de datos estáticas
+
+Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web Jose Chamorro Molina Actualizado por: José Ramón Simó
 
 Programación
 
 ### UD 1: Introducción a la Programación
 
-Jose Chamorro Molina Actualizado por: José Ramón Simó Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
-
-Programación
-
 Introducción a la Programación ORDEN 60/2012, de 25 de septiembre, de la Conselleria de Educación, Formación y Empleo por la que se establece para la Comunitat Valenciana el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web. [2012/9149] Contenidos
 
-1.- Identificación de los elementos de un programa informático: 1.1.− Estructura y bloques fundamentales. 1.2.− Soluciones y proyectos. 1.3.− Utilización de los entornos integrados de desarrollo. Real Decreto 686/2010, de 20 de mayo, por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web y se fijan sus enseñanzas mínimas.
+6.- Aplicación de las estructuras de almacenamiento: 6.1.− Librerías de clases. 6.2.− Estructuras. 6.3.− Creación de arrays. 6.4.− Inicialización. 6.5.− Arrays multidimensionales. 6.6.− Clases y métodos genéricos. 6.7.− Cadenas de caracteres. Expresiones regulares. Real Decreto 686/2010, de 20 de mayo, por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web y se fijan sus enseñanzas mínimas.
 
 Resultados de aprendizaje
 
-- Reconoce la estructura de un programa informático, identificando y relacionando los elementos propios del lenguaje
+- Escribe programas que manipulen información, seleccionando y utilizando tipos avanzados de datos.
 
-de programación utilizado. Criterios de evaluación: 1.a) Se han identificado los bloques que componen la estructura de un programa informático. 1.b) Se han creado proyectos de desarrollo de aplicaciones 1.c) Se han utilizado entornos integrados de desarrollo. Competencias profesionales, personales y sociales
+Criterios de evaluación: 6.a) Se han escrito programas que utilicen arrays. 6.b) Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados. Competencias profesionales, personales y sociales
 
-- Adaptarse a las nuevas situaciones laborales, manteniendo actualizados los conocimientos científicos, técnicos y
+- Integrar contenidos en la lógica de una aplicación web, desarrollando componentes de acceso a datos adecuados a
 
-tecnológicos relativos a su entorno profesional, gestionando su formación y los recursos existentes en el aprendizaje a lo largo de la vida y utilizando las tecnologías de la información y la comunicación.
+las especificaciones.
 
-Introducción a la Programación 1.- Algoritmos y Programas 2.- Lenguajes de Programación. Tipos 3.- Entornos de desarrollo 4.- Representación de los algoritmos
+Programación
 
-4.1.- Pseudocódigo
+Estructuras de datos estáticas 1.- Librerías de clases 2.- Estructuras de datos 3.- Creación de arrays 4.- Arrays multidimensionales 5.- Clases y métodos genéricos 6.- Cadenas de caracteres 7.- Expresiones regulares
 
-4.2.- Diagramas de Flujo Programación
+1.- Librerías de clases Programación
 
-1.- Algoritmos y programas Programación
+1.- Librerías de clases Clases envoltorio (wrapper) ✓ En ocasiones es útil tratar los tipos de datos básicos como objetos.
 
-1.- Algoritmos y programas Definiciones: Algoritmo: Secuencia finita de reglas o instrucciones que especifican un conjunto de operaciones, que al ser ejecutadas por un agente ejecutor (máquina real o abstracta), resuelve cualquier problema de un tipo determinado en un tiempo finito.
+int, byte, short, long, char, boolean, float, double ✓ Muchas funciones y clases trabajan con elementos que heredan de la clase Object.
 
-Programa informático: Conjunto de instrucciones que implementan un algoritmo. Una vez ejecutadas, las instrucciones realizarán una o varias tareas en un ordenador. Programación: Es el proceso por el cual una persona desarrolla un programa valiéndose de una herramienta que le permita escribir el código (el cual puede estar en uno o varios lenguajes, tales como C++, Java y Python entre otros) y de otra que sea capaz de “traducirlo” a lo que se conoce como lenguaje de máquina, el cual puede ser entendido por un microprocesador.
+No funcionarán directamente con estos tipos básicos. ✓ Existe una clase envoltorio por cada tipo básico. ✓ Cada una tiene un único atributo, que es del tipo básico al que “envuelven”. Programación
 
-PROGRAMACIÓN = ALGORITMOS + ESTRUCTURAS DE DATOS Programación
+1.- Librerías de clases Clases envoltorio (wrapper) Programación
 
-1.- Algoritmos y programas Problema Enunciado Algoritmo Programa Solución (Modelo formal) (Diseño) (Codificación) (Máquina)
+Tipo básico Clase envoltorio int Integer char Character boolean Boolean long Long double Double float Float short Short byte Byte
 
-- Dado
-
-un problema intentaremos encontrar un modelo formal que nos permita representarlo como un enunciado.
-
-- Mediante
-
-una técnica de diseño realizaremos un algoritmo que resuelva el problema
-
-- Mediante un lenguaje de programación
-
-realizaremos el programa.
-
-- Una vez ejecutado el programa por un
-
-agente ejecutor obtendremos un resultado que nos dará la solución del problema. Programación
-
-1.- Algoritmos y programas Algoritmos: Datos y variables: ALGORITMO = Técnica para resolver problemas a través de una serie de pasos intermedios hasta llegar a resultado. Pero siempre vamos a manejar distintos tipos de datos en un algoritmo ... tiempo, euros, cantidad de productos ...
-
-Y necesitaremos almacenar los resultados de los cálculos intermedios de cada algoritmo. Programación
-
-Ejemplo de algoritmo: Resolver un cubo de rubik Programación
-
-1.- Algoritmos y programas https://www.youtube.com/watch?v=CLzWY-SKAqk
-
-Movimientos en un cubo de rubik Programación
-
-1.- Algoritmos y programas
-
-Ejemplo de algoritmo: Resolver un cubo de rubik Programación
-
-1.- Algoritmos y programas D – R’ – D’- R D – R’ – D’- R Lo difícil es obtener el algoritmo, realizarlo (o programarlo) es sencillo
-
-Constantes Variables Almacena información que no va a ser modificada por el algoritmo Almacena un tipo de dato cuyo valor va a sufrir modificaciones durante la ejecución del algoritmo Nombre: letras, números y guiones. Siempre empieza por letra Tipo: número entero, número real, carácter, cadena, lógico Valor: información que almacena Datos Programación
-
-1.- Algoritmos y programas
-
-- Me traen un ordenador estropeado
-- Empiezo a contar el tiempo.
-- Cambio las piezas estropeadas y ... funciona.
-- Anoto las piezas cambiadas.
-- Cobro al dueño del pc por el tiempo trabajado por horas y las piezas
-
-cambiadas.
-
-- Compruebo el pc y detecto las averias.
-- Le pregunto al dueño si paga con tarjeta o en efectivo. Con tarjeta
-
-se recarga un 2%. •Anoto sus datos de cliente en base datos. Fin Ejemplo de algoritmo: Reparación de un ordenador Programación
-
-1.- Algoritmos y programas
-
-He almacenado el tiempo de reparación. Variable numérica entera.
-
-- El precio por hora es constante.
-- El precio de cada pieza no es exacto en euros, tiene céntimos.
-
-Variable numérica real.
-
-- Pago con tarjeta. Verdadero o falso. Variable lógica.
-- Almaceno la suma total en variable. ¿Tipo?
-- Almaceno los datos de cliente en variable tipo cadena de
-
-caracteres. Elementos usados Programación
-
-1.- Algoritmos y programas
-
-Enteros: Son los números enteros. Como horas exactas o euros sin céntimos Reales: Son los números con decimales. Como precios de productos. Lógicos: Tienen dos valores Verdadero o Falso. Carácter: Son las letras del alfabeto. Cadena de caracteres: Son un conjunto de caracteres como el nombre y apellidos de una persona.
-
-Tipos de datos Programación
-
-1.- Algoritmos y programas
-
-Expresión: constante o variable, es un conjunto de operadores y operandos. Ejemplo: x = 12 + 3 * 4 Operador Numérico: +, -, *, /, div, mod Relaciones: >, <, ==, >=, <=, <> Lógicos: NOT, AND, OR Operando: es una variable, una constante, etc.. un elemento que tiene un valor.
-
-Instrucciones Programación
-
-1.- Algoritmos y programas
-
-Un algoritmo debe ser: ✓ Preciso, debe indicar el orden de realización de cada paso. ✓ Definido, si se sigue un algoritmo dos veces se debe obtener el mismo resultado cada vez. ✓ Finito, debe terminar en un número finito de pasos Características de los algoritmos Programación
-
-1.- Algoritmos y programas
-
-2.- Lenguajes de Programación. Tipos Programación
-
-2.- Lenguajes de Programación Programación
-
-Definición: “Un lenguaje de programación es un lenguaje formal que especifica una serie de instrucciones para que una computadora produzca diversas clases de datos. Los lenguajes de programación pueden usarse para crear programas que pongan en práctica algoritmos específicos que controlen el comportamiento físico y lógico de una computadora.” (Wikipedia) #include <iostream> using namespace std;
+1.- Librerías de clases La clase Integer https://docs.oracle.com/javase/9/docs/api/java/lang/Integer.html Constantes
 
 ```java
-int main() {
-    cout << "Hola Mundo" << endl;
-    return 0;
-}
+int max = Integer.MAX_VALUE;
+int min = Integer.MIN_VALUE;
 ```
 
-Ejemplo. Hola mundo en c++
+Métodos //Pasar de INT a String
 
 ```java
-public class Hello {
-  public static void main(String[] args) {
-    System.out.println("Hola mundo");
-  }
-}
+int a1 = 45678;
+String a2 = Integer.toString( a1 );
 ```
 
-Ejemplo. Hola mundo en Java
-
-2.- Lenguajes de Programación Programación
-
-2.- Lenguajes de Programación Programación
-
-2.- Lenguajes de Programación Programación
-
-> **✍️ Ejercicio: ✓ Otras definiciones de Lenguaje de Programación ✓ Len**
-> Ejercicio: ✓ Otras definiciones de Lenguaje de Programación ✓ Lenguajes de 1era, 2nda, 3era y 4rta generación (¿5nta?) ✓ Clasificación de los lenguajes de programación según
-
-- La proximidad del lenguaje a la máquina (Alto nivel Vs Bajo nivel)
-- En función del paradigma de programación (Imperativos Vs Declarativos)
-- La traducción al código máquina (Interpretados Vs Compilados)
-- Según su funcionalidad
-
-3.- Entornos de Desarrollo Programación
-
-3.- Entornos de Desarrollo Programación
-
-Definición: “Un entorno de desarrollo integrado, en inglés Integrated Development Environment (IDE), es una aplicación informática que proporciona servicios integrales para facilitarle al desarrollador o programador el desarrollo de software.” (Wikipedia) Los IDEs pueden estar dedicados a un lenguaje de programación específico o servir para distintos lenguajes aunque hoy en día suelen ser multilenguaje.
-
-Existen IDEs multiplataforma, es decir, se pueden ejecutar sobre distintos SO y arquitecturas. Normalmente desarrollados en JAVA.
-
-3.- Entornos de Desarrollo Programación
-
-Un IDE, consta al menos de los siguientes elementos: ✓ Un editor de texto o código. Actualmente con sintaxis coloreada, predicción de texto y navegación por el código ✓ Un compilador y/o intérprete. ✓ Un depurador de errores. (Breakpoints, ejecución paso a paso, visualización de variables, pila, etc...) ✓ Opcionalmente. Funciones para la construcción de interfaces gráficas (GUI) ✓ Opcionalmente. Algún sistema de control de versiones.
-
-✓ Opcionalmente. Herramientas de generación de pruebas y documentación de código. ✓ Etc, etc...
-
-3.- Entornos de Desarrollo Programación
-
-Algunos de los IDE más utilizados son: Windows Linux Java Código abierto
-
-- DevC++. IDE completo para
-
-utilizar MinGW (Minimalist GNU for Windows)
-
-- Visual-MinGW. Diseñado
-
-para utilizar MinGW
-
-- Emacs, Vim. Editores de
-
-textos tradicionales de Unix, muy engorrosos.
-
-- Anjuta. C/C++, incorpora las
-
-heramientas GNU gcc, make, gdb, entre otros
-
-- Kdevelop. C/C++, Fortran,
-
-Pascal, Perl... Permite desarrollo de interfaces gráficas.
-
-- Eclipse. IDE independiente
-
-de la plataforma. Extensible mediante módulos. Da soporte por defecto para Java ampliable a otros lenguajes. Recomendado por Google para el desarrollo para Android
-
-- Netbeans. Idem eclipse
-
-Propietarios
-
-- Visual Studio. El IDE más
-
-popular de Microsoft. Admite C#, C++ y Visual Basic
-
-- C++ Builder. Delphi. RAD
-
-multiplataforma de Embarcadero basados en ObjectPascal y C++
-
-- Code Forge. Admite mas de
-
-30 lenguajes.
-
-- Maguma Workbench
-- Jbuilder. El más popular de
-
-los IDE comerciales para Java. Producto de Embarcadero compañía que cuenta también con Delphi y C++ Builder.
-
-- AIDE. Android para Android
-
-3.- Entornos de Desarrollo Programación
-
-IDE para 1ºDAW
-
-La última versión de Eclipse
-
-4.- Representación de algoritmos Programación
-
-4.- Representación de algoritmos Programación
-
-4.- Representación de algoritmos Programación
-
-4.- Representación de algoritmos Programación
-
-4.- Representación de algoritmos Programación
-
-Ordinograma (Diagrama de flujo): Representa el flujo de datos de un proceso Si No Inicio Entrada / Salida Instrucción Decisión Fin Elementos de un ordinograma
-
-- Lenguaje natural
-- Permite escribir las instrucciones que conducen a la resolución
-
-de problema utilizando estructuras básicas de programación
-
-- Reglas
-- Cada instrucción en una línea
-- Conjunto de palabras reservadas en minusculas: si,
-
-entonces, fsi, mientras, fmientras, etc …
-
-- Referencia a módulos entre <NOMBRE-MODULO>
-- Código indentado
-
-Pseudocódigo Programación
-
-4.- Representación de algoritmos
-
-Programa: NOMBRE correspondiente al programa Entorno: Declaración de las estructuras de datos en general. Algoritmo: Secuencia de instrucciones que forman el programa. Fin del programa. Programa: ARRANCA_COCHE Entorno: Algorítmo: Pisar embrague con pie izquierdo Poner punto muerto Dar a llave de contacto Pisar embrague Meter la marcha primera Quitar el freno de mano Levantar el pie del embrague Fin del programa Ejemplo Pseudocódigo. Estructura Programación
-
-4.- Representación de algoritmos
-
-Bibliografía Programación
-
-Bibliografía ✓ Aprende JAVA con ejercicios. Edición 2019. Luis José Sánchez. ✓ Empezar a programar usando Java. 2ª edición. Universitat Politècnica de València ✓ Apuntes de la asignatura Ingeniería del Software de la Universitat Politècnica de València. ✓ https://github.com/statickidz/TemarioDAW ✓https://es.khanacademy.org/computing/computer-science/algorithms ✓https://es.wikipedia.org/wiki/Lenguaje_de_programación ✓https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado Programación
-
----
-
-# 1.2 Algoritmos
-
-Programación
-
-### UD 1: Introducción a la programación
-
-ALGORITMOS Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web Jose Chamorro Molina Actualizado por: José Ramón Simó
-
-Programación
-
-### UD 1: Introducción a la programación - ALGORITMOS
-
-Algoritmos 1.- ¿Qué es un algoritmo? 2.- ¿Cómo resuelvo un problema?
-
-2.1.- Entender el problema
-
-2.2.- Trazar un plan
-
-2.3.- Ejecutar el plan
-
-2.4.- Revisar 3.- ¿Cómo resuelvo un algoritmo?
-
-3.1.- Análisis del problema
-
-3.2.- Diseñar un algoritmo
-
-3.3.- Traducir un algoritmo
-
-3.4.- Depurar el programa 4.- Ejercicios propuestos
-
-1.- ¿Qué es un algoritmo? Programación
-
-1.- ¿Qué es un algoritmo? De acuerdo a Wikipedia la definición del un algoritmo es: "...es un conjunto preescrito de instrucciones o reglas bien definidas, ordenadas y finitas que permite realizar una actividad mediante pasos sucesivos que no generen dudas a quien deba realizar dicha actividad. Dados un estado inicial y una entrada, siguiendo los pasos sucesivos se llega a un estado final y se obtiene una solución..." Programación
-
-2.- ¿Cómo resuelvo un problema? Programación
-
-2.- ¿Cómo resuelvo un problema? Programación
-
-Para entender cómo resolver un problema debemos entender el siguiente esquema, según Polya.
-
-Inicio ¿Cómo resuelvo un problema?
-
-Básicamente es poner a prueba nuestra comprensión de lectura (también puede ser oral) del problema. Debemos seguir estos pasos
-
-### 1. Leer y releer el problema
-
-### 2. Entender la pregunta, es decir, tener claro cuál es el
-
-resultado esperado.
-
-### 3. Identificar los datos importantes
-
-### 4. Organizar y clasificar los datos e información
-
-- Realizar un esquema o figura.
-
-Programación
-
-2.- ¿Cómo resuelvo un problema? Entender el problema
-
-Esto quiere decir que acciones debemos hacer con los datos y verificar nuestros datos, por lo que debemos tener presente estas preguntas: ✓ ¿Qué operaciones (acciones) necesito? ✓ ¿Qué datos que poseo no son importantes? ✓ ¿Será mejor descomponer el problema en otros más pequeños?
-
-✓ ¿Tengo más alternativas? Programación
-
-2.- ¿Cómo resuelvo un problema? Trazar (configurar) un plan
-
-✓ Ahora que entendemos el problema y hemos elegido nuestras operaciones debemos ejecutarlo, esto quiere decir seguir paso a paso nuestra traza (configuración) y verificar si vamos llegando al resultado esperado. ✓ Debemos ejecutar las operaciones y preguntarnos ¿vamos por camino correcto? si es así seguimos con las siguientes operaciones y comprobar si nos acercamos a la solución.
-
-Recuerda en apoyarte con dibujos o diagramas. Programación
-
-2.- ¿Cómo resuelvo un problema? Ejecutar Plan
-
-✓ Luego de ejecutar nuestro plan y al comprobar que hemos llegado al resultado esperado debemos entregar una respuesta completa. ✓ Podemos preguntarnos si existe otra forma de resolver el problema y comenzamos el ciclo de nuevo. Ver si podemos hacerlo más genérico para casos similares.
-
-✓ Tener en la mente el problema porque puede servir de ayuda en un caso similar. Programación
-
-2.- ¿Cómo resuelvo un problema? Revisar
-
-En un juego, el ganador obtiene una ficha roja; el segundo, una ficha azul; y el tercero, una amarilla. Al final de varias rondas, la puntuación se calcula de la siguiente manera: Al cubo de la cantidad de fichas rojas se adiciona el doble de fichas azules y se descuenta el cuadrado de las fichas amarillas. Si Andrés llegó 3 veces en primer lugar, 4 veces de último y 6 veces de intermedio, ¿Qué puntuación obtuvo?
-
-(Adaptado de Melo (2001), página 30). Programación
-
-2.- ¿Cómo resuelvo un problema? Manos a la obra!
-
-Esto es lo que pensamos... o ¿no? ¿Qué dijo?! ¿Cómo fue? AAAAAH!!!! Programación
-
-2.- ¿Cómo resuelvo un problema? Primera reacción
-
-Entonces ahora comenzamos aplicar nuestro ciclo. Primero ENTENDER el problema, leamos de nuevo pero más lento y por partes. Programación
-
-2.- ¿Cómo resuelvo un problema? Respiramos y continuamos
-
-En un juego, el ganador obtiene una ficha roja; el segundo, una ficha azul; y el tercero, una amarilla. ¿Tenemos datos importantes? Así es, debemos entender que existen 3 tipos de fichas para cada lugar Ayudas: Subrayar y colorear Programación
-
-2.- ¿Cómo resuelvo un problema? Parte 1 del enunciado
-
-Al final de varias rondas, el puntaje se calcula de la siguiente manera: Al cubo de la cantidad de fichas rojas se adiciona el doble de fichas azules y se descuenta el cuadrado de las fichas amarillas. ¿Tenemos datos importantes? Sí! tenemos una fórmula para calcular el puntaje final.
-
-Programación
-
-2.- ¿Cómo resuelvo un problema? Parte 2 del enunciado
-
-Si Andrés llegó 3 veces en primer lugar, 4 veces de último y 6 veces de intermedio, ¿Qué puntuación obtuvo? ¿Tenemos datos importantes? Sí, tenemos la cantidad de veces que Andrés ha ganado en los 3 distintos lugares. Además tenemos la pregunta, es decir, sabemos que debemos tener un resultado concreto.
-
-Programación
-
-2.- ¿Cómo resuelvo un problema? Parte 3 del enunciado
-
-Hemos leído el enunciado y releído, obtuvimos los datos de acuerdo a cada parte del enunciado, por lo que ahora pasamos a TRAZAR un plan según los datos que tenemos. Es decir ordenarlos según por cada parte del enunciado y verificar que operaciones necesito para resolver el problema.
-
-Programación
-
-2.- ¿Cómo resuelvo un problema? ¿Y ahora?
-
-Parte 1: Roja para el primer lugar Azul para el segundo lugar Amarilla para el tercer lugar Parte 2: Armamos la fórmula para calcular puntuación final: PF = (R3)+ (2 x Az) - (Am2) Parte 3: Andrés tiene: 3 fichas rojas (R), 6 azules (Az) y 4 amarillas (Am). Programación
-
-2.- ¿Cómo resuelvo un problema? Trazando nuestro plan
-
-Nuestro tercer paso es EJECUTAR nuestra traza según los datos obtenidos al entender el problema. Quiere decir unir las operaciones elegidas y aplicar los datos en dichas operaciones. Programación
-
-2.- ¿Cómo resuelvo un problema? Continuamos…
-
-Por lo que tenemos: Andrés tiene: 3 fichas rojas (R), 6 azules (Az) y 4 amarillas (Am). Y la fórmula obtenida: PF = (R3)+ (2 x Az) - (Am2) Reemplazando tenemos: PF = (33) + (2x6) - (42) Continuando cada operación: PF = 27 + 12 - 16 Nuestro resultado final es: PF = 23 Programación
-
-2.- ¿Cómo resuelvo un problema? Ejecutando el plan
-
-Al ejecutar nuestro plan ahora debemos REVISAR, para ello debemos comprobar que nuestro resultado es correcto, quiere decir que debemos revisar los cálculos y verificar con la solución estimada. Tenemos que dar una solución completa, en nuestro caso sería como respuesta según la pregunta del problema
-
-La puntuación final que obtuvo Andrés fue de 23 Programación
-
-2.- ¿Cómo resuelvo un problema? Revisando
-
-Entonces para resolver un problema debemos: Entender Trazar Ejecutar Revisar Programación
-
-2.- ¿Cómo resuelvo un problema? Resumiendo
-
-3.- ¿Cómo resuelvo un algoritmo? Programación
-
-Ahora que entendemos un poco más de cómo resolver un problema ahora llevemos el mismo teorema para resolver un algoritmo en computación. Cuyas fases serían entonces: Programación
-
-3.- ¿Cómo resuelvo un algoritmo? ¿Cómo resuelvo un algoritmo?
-
-Esta etapa sería Entender el problema por lo que aquí debemos: ✓ Formular el problema ✓ Conocer el resultado esperado ✓ Identificar datos e información ✓ Definir las operaciones ✓ Restricciones del problema Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Analizar el problema
-
-Es la representación gráfica mediante un diagrama la secuencia de las operaciones de forma lógica. Esta etapa sería Trazar el problema. Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Diseñar un algoritmo (I) El diagrama puede ser un diagrama de flujo, pseudocódigo o cualquier otro tipo de representación gráfica que te ayude a visualizar el algoritmo para resolver el programa.
-
-El diagrama para diseñar un algoritmo es conocido como Diagrama de Flujo, representa la secuencia lógica de nuestro análisis. Cuya simbología es: Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Diseñar un algoritmo (II)
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Diseñar un algoritmo (III)
-
-Es Ejecutar el problema, es decir que debemos pasar nuestro diagrama a un lenguaje (idioma), en donde cada lenguaje posee su propia gramática y sintaxis: ✓ Comenzar y terminar un programa: INICIO, FIN ✓ Declarar los tipos de los datos: entero, decimal, letra, texto.
-
-✓ Entrada por teclado: leer ✓ Desición: si - sino ✓ Iteración: mientras ✓ Mostrar por pantalla: imprimir Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Traducir un algoritmo
-
-✓ Esta etapa es Revisar. ✓ Aquí revisamos y se corrigen los errores de nuestra traducción mediante el resultado obtenido que debemos probar y validar. ✓ Para depurar nuestro programa debemos asignar valores a nuestras variables y seguir el flujo (secuencia) de nuestro diseño y nuestra traducción.
-
-✓ Nos podemos ayudar haciendo una tabla para seguir el flujo de nuestro programa y anotar los valores de las variables a medida se vayan modificando. Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Depurar un programa
-
-✓ Tenemos el mismo enunciado del ejercicio ya visto anteriormente. ✓ En un juego, el ganador obtiene una ficha roja; el segundo, una ficha azul; y el tercero, una amarilla. Al final de varias rondas, el puntaje se calcula de la siguiente manera: Al cubo de la cantidad de fichas rojas se adiciona el doble de fichas azules y se descuenta el cuadrado de las fichas amarillas. Si Andrés llegó 3 veces en primer lugar, 4 veces de último y 6 veces de intermedio, ¿Qué puntaje obtuvo?
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Manos a la obra!
-
-Para nuestro ejercicio tenemos en esta etapa, según lo entendido al leer el problema: ✓ Existen 3 tipos de fichas para cada lugar o Rojas, Azules y Amarillas ✓ Fórmula para calcular el puntaje final. o PF = (R3)+ (2 x Az) - (Am2) ✓ Cantidad de veces que Andrés ha ganado en los 3 distintos lugares o 3 fichas rojas, 6 azules y 4 amarillas ✓ Debemos tener un resultado concreto.
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Análisis del problema
-
-✓ Quiere decir que debemos utilizar la simbología de Diagrama de Flujo (ir a diapositiva) para diseñar nuestra solución. ✓ Básicamente es "dibujar" el análisis realizado anteriormente utilizando Diagrama de Flujo (ir a diapositiva). ✓ Debemos definir nuestros datos, las operaciones y el resultado a mostrar Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Diseñar un algoritmo
-
-3.- ¿Cómo resuelvo un algoritmo? Diseñar un algoritmo (II) Programación
-
-✓ Ahora es el momento de escribir nuestro diagrama en un lenguaje de programación el cual es conocido como Pseudo - código ✓ Para ello escribiremos con las palabras reservadas mencionadas anteriormente (ver diapositiva Traducir un algoritmo) Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Traducir un algoritmo (I)
-
-//Indicamos el inicio del programa INICIO //Declaramos las variables y las iniciamos ENTERO ENTERO ENTERO ENTERO
+//Pasar de String a INT
 
 ```java
-fichas_rojas = 3;
-fichas_azules = 6;
-fichas_amarillas = 4;
-puntaje_final = 0;
+String b1 = "45678";
+int b2 = Integer.parseInt( b1 );
+int b3 = Integer.parseInt​(CharSequence s, int beginIndex, int endIndex, int radix);
 ```
-
-//Escribirmos la operación a utilizar puntaje_final = fichas_rojas^3 + 2*fichas_azules
-
-- fichas_amarillas^2;
-
-//Imprimimos IMPRIMIR "El //Imprimimos por pantalla el texto que queremos mostrar puntaje final de Andres es de " por pantalla la variable que queremos mostrar IMPRIMIR puntaje_final; //Indicamos el fin del programa FIN Ayudas: // indica comentario Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Traducir un algoritmo (II)
-
-Para hacer la depuración debemos ir reemplazando los valores de las variables en nuestro programa. ✓ Tenemos los valores ya dados por el enunciado: f_rojas = 3, f_azules = 6 y f_amarillas = 4, estos valores debemos reemplazarlos en nuestra fórmula inicial
-
-```java
-puntaje_final = 3^3 + 2*6 - 4^2;
-```
-
-✓ Realizando el cálculo nos da como resultado
-
-```java
-puntaje_final = 39;
-```
-
-✓ Impresión por pantalla: El puntaje final de Andres es de 39 Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Depurar el programa
-
-¿Qué sucede si existen más jugadores? ¿Cómo podríamos calcular el puntaje final para un nuevo jugador y con cantidades de fichas distintas a Andrés? ¿Tienes alguna idea? Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Veamos si generalizamos el problema
-
-✓ Tenemos la base del problema, en el ejercicio teníamos el cálculo para una persona (Andrés) con una cantidad de fichas determinadas (3 rojas, 6 azules y 4 amarillas) ✓ Nos preguntamos: o ¿Tengo que cambiar la fórmula? No, el cálculo se mantiene igual. o ¿De dónde obtengo las fichas?
-
-o ¿Como puedo cambiar los valores de las fichas? ✓ Como no sabemos dónde obtengo los datos podemos decir que esos datos me los entrega el usuario, al ser asi el usuario debe ingresar los datos, esta entrada seria por teclado. Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Análisis del problema
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Diseñar un algoritmo
-
-INICIO
-
-```java
-ENTERO f_rojas=0, f_azules=0, f_amarillas=0, puntaje_final=0;
-```
-
-espacio TEXTO nombre_jugador = " "; //se inicia con un IMPRIMIR "Ingrese el nombre del jugador: "; LEER nombre_jugador; cantidad fichas rojas:"; cantidad fichas azules:"; cantidad fichas amarillas:"; IMPRIMIR "Ingrese LEER f_rojas; IMPRIMIR "Ingrese LEER f_azules; IMPRIMIR "Ingrese LEER f_amarillas;
-
-```java
-puntaje_final = f_rojas^3 + 2*f_azules - f_amarillas^2;
-```
-
-"El puntaje final de "; nombre_jugador; " es de: "; puntaje_final; IMPRIMIR IMPRIMIR IMPRIMIR IMPRIMIR FIN Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Traducir un algoritmo
-
-✓ En este caso nuestra depuracion seria distinta porque ahora debemos hacer un par de pruebas, con valores distintos dado que es el usuario quien ingresa los valores de las fichas y el nombre del jugador. ✓ Tenemos que usar valores supuestos, es decir nos imaginamos que valores podria ingresar el usuario y dados a estos valores hacemos la depuracion.
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Depurar el programa
-
-Debemos imaginarnos la ejecución del programa, suponiendo que el usuario nos ingresa los valores siguientes. Ingrese nombre jugador: Jorge Se asigna el texto Jorge en la variable nombre_jugador Ingrese cantidad fichas rojas: 2 Se asigna el número 2 en la variable f_rojas Ingrese cantidad fichas azules: 4 Se asigna el número 4 en la variable f_azules Ingrese cantidad fichas amarillas: 2 Se asigna el número 6 en la variable f_amarillas Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Depurar el programa
-
-Reemplazando los valores ingresados por el usuario en la formula quedaría puntaje_final = 2^3 + 2*4 - 6^2 Resultado de la operación: puntaje_final = -20 Impresión por pantalla: El puntaje final de Jorge es de -20 Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Depurar el programa
-
-✓ Sucede que ahora queremos seguir calculando más jugadores, por ejemplo 50 o 15 o 1000, pero sin tener que ejecutar tantas veces nuestro programa, solo sabemos que el usuario me diría cuantos jugadores se desea que le calculemos el puntaje. ✓¿Alguna idea? ¿como puedo modificar mi programa para que calcule los puntajes tantas veces según el usuario me ha dicho en un inicio la cantidad de jugadores?
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? ¿Y si agregamos algo más?
-
-✓ Ya sabemos cómo calcular para un jugador en donde el usuario ingresa la cantidad de las distintas fichas, solo sabemos que funciona para un jugador. ✓ Nos preguntamos entonces: o ¿que necesito para "n" jugadores? solo se que "n" me lo da el usuario o ¿como puedo hacer que repita la operación de calcular el puntaje?
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Análisis del problema
-
-✓ Bueno en realidad si pensamos que son 5 jugadores copiamos nuestro código 5 veces ¿o no?... pero creo que eso no es muy eficiente porque si fuesen 50 o 100 o 1000. ✓ La verdad tenemos pensar que no sabemos realmente cuántos jugadores son, solo sabemos que el usuario nos dirá en el inicio la cantidad.
-
-✓ Como la operación se repite tantas veces según la cantidad de jugadores, sabemos que debemos usar una condición de iteración Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Análisis del problema
-
-✓El diseño de éste algoritmo es tan grande que en la siguiente diapositiva la puedes encontrar. Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Diseñar un algoritmo
-
-Programación
-
-Creo que estás así nuevamente... o ¿no? AAAAAH!!!! Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Reacción
-
-Reacción Respira y.... meditar Programación
-
-3.- ¿Cómo resuelvo un algoritmo?
-
-INICIO
-
-```java
-ENTERO f_rojas=0, f_azules=0, f_amarillas=0, puntaje_final=0;
-ENTERO cantidad_jugadores = 0, contador = 0;
-```
-
-un espacio "; TEXTO nombre_jugador = " "; //se inicia con IMPRIMIR "Ingrese la cantidad de jugadores: LEER cantidad_jugadores; MIENTRAS (contador < cantidad_jugadores) IMPRIMIR "Ingrese el nombre del jugador: "; LEER nombre_jugador; IMPRIMIR "Ingrese cantidad fichas rojas:"; LEER f_rojas; IMPRIMIR "Ingrese cantidad fichas azules:"; LEER f_azules; IMPRIMIR "Ingrese cantidad fichas amarillas:"; LEER f_amarillas; Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Traducir un algoritmo
-
-Traducir un algoritmo
-
-```java
-puntaje_final = f_rojas^3 + 2*f_azules - f_amarillas^2;
-```
-
-"El puntaje final de "; nombre_jugador; " es de: "; puntaje_final;
-
-```java
-= contador + 1;
-```
-
-IMPRIMIR IMPRIMIR IMPRIMIR IMPRIMIR contador FIN MIENTRAS los jugadores"; IMPRIMIR "Se ha calculado los puntajes de FIN Programación
-
-3.- ¿Cómo resuelvo un algoritmo?
-
-✓En este caso haremos una tabla para mostrar la depuración del programa, imaginándonos las impresiones por pantalla. ✓Suponemos que el usuario quiere calcular el puntaje de 4 jugadores. ✓Iniciamos nuestras variables. Variables / n° vueltas valor inicial cantidad_jugadores contador (valor inicial) nombre_jugador " " f_rojas f_azules f_amarillas puntaje_final Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Depurar un algoritmo
-
-Variables / n° vueltas valor inicial cantidad_jugadores contador (valor inicial) nombre_jugador " " Jorge f_rojas f_azules f_amarillas puntaje_final 1010 Validamos la condición mientras: contador < cantidad_jugadores Reemplazamos los valores: 0 < 4 Donde el resultado de esta operación es VERDADERA, por lo que entra al ciclo mientras y ejecuta las operaciones que están dentro.
-
-Vuelta (iteración) 1 ●El usuario ingresa los valores de cada ficha y las reemplazamos en la fórmula donde obtenemos el resultado final. ●La última operación del ciclo mientras es: ●contador = contador + 1, es decir estamos aumentando en 1 la variable contador por lo que su nuevo valor es 1, este valor inicial de la siguiente vuelta.
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo?
-
-Volvemos a validar la condición mientras con nuevo valor de la variable contador: 1 < 4 Donde el resultado VERDADERA, se entra al ciclo mientras y ejecuta las operaciones nuevamente Variables / n° vueltas valor inicial cantidad_jugadores contador (valor inicial) nombre_jugador " " Jorge Ana f_rojas f_azules f_amarillas puntaje_final 1010 El usuario ingresa los valores de cada ficha y las reemplazamos en la fórmula donde obtenemos el resultado final.
-
-La última operación del ciclo mientras es: contador = contador + 1, es decir estamos aumentando en 1 la variable contador por lo que su nuevo valor es 2, este valor inicial de la siguiente vuelta. Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Vuelta (iteración) 2
-
-Volvemos a validar la condición mientras con nuevo valor de la variable contador: 2 < 4 Donde el resultado VERDADERA, se entra al ciclo mientras y ejecuta las operaciones nuevamente Variables / n° vueltas valor inicial cantidad_jugadores contador (valor inicial) nombre_jugador " " Jorge Ana Fran f_rojas f_azules f_amarillas puntaje_final 1010 El usuario ingresa los valores de cada ficha y las reemplazamos en la fórmula donde obtenemos el resultado final.
-
-La última operación del ciclo mientras es: contador = contador + 1, es decir estamos aumentando en 1 la variable contador por lo que su nuevo valor es 3, este valor inicial de la siguiente vuelta. Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Vuelta (iteración) 3
-
-Variables / n° vueltas VI cantidad_jugadores contador (valor inicia) nombre_jugador " " Jorge Ana Fran Fabiola f_rojas f_azules f_amarillas puntaje_final 1010 Volvemos a validar la condición mientras con nuevo valor de la variable contador: 3 < 4 Donde el resultado VERDADERA, se entra al ciclo mientras y ejecuta las operaciones nuevamente El usuario ingresa los valores de cada ficha y las reemplazamos en la fórmula donde obtenemos el resultado final.
-
-La última operación del ciclo mientras es: contador = contador + 1, es decir estamos aumentando en 1 la variable contador por lo que su nuevo valor es 4, este valor inicial de la siguiente vuelta. Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Vuelta (iteración) 4
-
-Variables / n° vueltas valor inicial cantidad_jugadores contador (valor que inicia) nombre_jugador " " Jorge Ana Francisco Fabiola - f_rojas - f_azules - f_amarillas - puntaje_final 1010 - Volvemos a validar la condición mientras con nuevo valor de la variable contador: 4 < 4 Donde el resultado FALSA, no entra al ciclo mientras y muestra por pantalla el mensaje final y finaliza nuestro programa.
-
-Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Vuelta (iteración) 5
-
-Así se resuelven las depuraciones de nuestra traducción. La finalidad, recordar, es verificar si nuestro análisis, diseño y traducción están correctos. En caso de haber error sabremos en que parte tenemos el error y así corregirlo. La depuración también se realiza en caso de un programa ya existente.
-
-¡Solo debes practicar! Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Depurar el programa
-
-✓ Te dejo una pregunta para que resuelvas y con el fin de mejorar las soluciones ya planteadas. ✓ ¿Qué sucede si el usuario ingresa números negativos o letras? ✓ ¿Sigue funcionando el programa o existen errores? Son cosas que también debemos tener presente al analizar el problema aunque no estén en el enunciado Programación
-
-3.- ¿Cómo resuelvo un algoritmo? Validaciones
-
-4.- Ejercicios propuestos Programación
-
-Dejo 2 ejercicios propuestos
-
-### 1. Dado tres números ingresados por teclado enteros
-
-mostrar por pantalla los números ordenados de mayor a menor, en caso de ser iguales mostrar un aviso.
-
-### 2. Calcular el promedio de "n" números ingresados
-
-por teclado, mostrar por pantalla el resultado. Recuerda seguir las etapas Programación
-
-4.- Ejercicios propuestos Ejercicios propuestos
-
-✓ Espero que con esta presentación se pueda entender más o tener una idea más clara de cómo resolver problemas de algoritmos. ✓ Recuerda seguir los pasos: Analizar (Entender), Diseñar (Trazar), Traducir (Ejecutar) y Depurar (Revisar). ✓ Siempre puede haber otra solución, trata de hacer el mismo problema con diferentes soluciones y/o agregar restricciones.
-
-Programación
-
-4.- Ejercicios propuestos Comentarios finales
-
-Bibliografía Programación
-
-Bibliografía Programación
-
-✓ Empezar a programar usando Java. 2ª edición. Universitat Politècnica de València ✓ Apuntes de la asignatura Ingeniería del Software de la Universitat Politècnica de València. ✓https://es.wikipedia.org/wiki/Algoritmo ✓https://es.wikipedia.org/wiki/Lenguaje_de_programación ✓https://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado
-
----
-
-# 1.3 Introduccion a Java
-
-Programación
-
-### UD 1: Introducción a JAVA
-
-Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web Jose Chamorro Molina Actualizado por: José Ramón Simó
-
-Introducción a Java 1.- Variables e Identificadores 2.- Palabras reservadas 3.- Tipos de datos primitivos 4.- Declaración e inicialización 5.- Literales 6.- Constantes 7.- Operadores y expresiones 8.- Conversiones de tipo 9.- Comentarios Programación
-
-El lenguaje de programación Java ¿Qué es Java? El lenguaje de programación Java es un lenguaje sencillo de aprender. Su sintaxis es la de C++ “simplificada”. Los creadores de Java partieron de la sintaxis de C++ y trataron de eliminar de este todo lo que resultase complicado o fuente de errores en este lenguaje.
-
-Java es un lenguaje orientado a objetos, aunque no de los denominados puros; en Java todos los tipos, a excepción de los tipos fundamentales de variables (int, char, long...) son clases. Sin embargo, en los lenguajes orientados a objetos puros incluso estos tipos fundamentales son clases, por ejemplo en Smalltalk.
-
-Programación
-
-El lenguaje de programación Java Historia El 23 de Mayo de 1995, Java vio la luz de forma pública, durante la conferencia SunWorld. La compañía Sun Microsystems presentó el lenguaje en el que había estado trabajando durante más de cinco años de forma interna el equipo de James Gosling (el padre de la criatura).
-
-Un auténtico lenguaje moderno concebido para funcionar en cualquier dispositivo, esa fue la idea. Programación
-
-El lenguaje de programación Java Características Está diseñado para facilitar el trabajo en la WWW, mediante el uso de los programas navegadores de uso completamente difundido hoy en día. Los programas de Java que se ejecutan a través de la red se denominan applets (aplicación pequeña).
-
-Inclusión en el lenguaje de un entorno para la programación gráfica (AWT y Swing) Su ejecución es independiente de la plataforma, lo que significa que un mismo programa se ejecutará exactamente igual en diferentes sistemas. Write Once, Run Anywhere "Escríbelo una vez, ejecútalo en cualquier lugar" Programación
-
-El lenguaje de programación Java Java Runtime Environment o JRE es un conjunto de utilidades que permite la ejecución de programas Java. En su forma más simple, el entorno en tiempo de ejecución de Java está conformado por una Máquina Virtual de Java o JVM, un conjunto de bibliotecas Java y otros componentes necesarios para que una aplicación escrita en lenguaje Java pueda ser ejecutada. El JRE actúa como un "intermediario" entre el sistema operativo y Java.
-
-La JVM es el programa que ejecuta el código Java previamente compilado (bytecode) mientras que las librerías de clases estándar son las que implementan el API de Java. Ambas JVM y API deben ser consistentes entre sí, de ahí que sean distribuidas de modo conjunto. Un usuario sólo necesita el JRE para ejecutar las aplicaciones desarrolladas en lenguaje Java, mientras que para desarrollar nuevas aplicaciones en dicho lenguaje es necesario un entorno de desarrollo, denominado Java Development Kit o JDK, que además del JRE (mínimo imprescindible) incluye, entre otros, un compilador para Java.
-
-Programación
-
-El lenguaje de programación Java Programación
-
-El lenguaje de programación Java Simplificando… Programación
-
-El lenguaje de programación Java De codificar a ejecutar… Programación
-
-El lenguaje de programación Java ¿Por qué Java? ✓ Es un lenguaje sencillo de aprender. ✓ Es un lenguaje Orientado a Objetos. ✓ Gran comunidad de desarrolladores. ✓ Su ejecución es independiente de la plataforma. ✓ Se pueden desarrollar todos los contenidos del currículo de 1º DAW.
-
-✓ Incorporación al mundo laboral actual. Programación
-
-El lenguaje de programación Java ¿Por qué Java en 1ºDAW? Hay que escoger un Lenguaje Orientado a Objetos… Concurso nacional ciclos formativos ProgramaMe: Java o C++ Entonces… ¿Java o C++? El módulo Programación es común para 1º DAW y 1º DAM 2º DAW
-
-2º DAM Servlets en Java (MVC)
-
-Programar para Android: Programación
-
-El lenguaje de programación Java https://www.tiobe.com/tiobe-index/ Programación
-
-TIOBE Index for September 2023
-
-El lenguaje de programación Java Programación
-
-El lenguaje de programación Java Programación
-
-Oracle Java SE Support Roadmap https://www.oracle.com/java/technologies/java-se-support-roadmap.html
-
-Programación
-
-1.- Variables e Identificadores
-
-1.- Variables e identificadores Una variable es una zona en la memoria del ordenador con un valor que puede ser almacenado para ser usado más tarde en el programa. Las variables vienen determinadas por
-
-- un nombre, que permite al programa acceder al valor que contiene
-
-en memoria. Debe ser un identificador válido.
-
-- un tipo de dato, que especifica qué clase de información guarda la
-
-variable en esa zona de memoria
-
-- un rango de valores que puede admitir dicha variable.
-
-Programación
-
-1.- Variables e identificadores Sirven para referirse tanto a objetos como a tipos primitivos. Tienen que declararse antes de usarse
-
-tipo identificador;
-
-```java
-int posicion;
-```
-
-Se puede inicializar mediante una asignación
-
-```java
-tipo identificador = valor;
-```
-
-```java
-int posicion = 0;
-```
-
-Definición de constantes
-
-```java
-static final float PI = 3.14159f;
-```
-
-Programación
-
-1.- Variables e identificadores Se llama identificador al nombre que le damos a la variable. Los identificadores
-
-- Nombran variables, funciones, clases y objetos.
-- Comienza con una letra. Los siguientes caracteres pueden ser
-
-letras o dígitos.
-
-- Se distinguen las mayúsculas de las minúsculas.
-- No hay una longitud máxima establecida para el identificador.
-
-Programación
-
-1.- Variables e identificadores Tipos de variables: ✓ Variables de tipos primitivos y variables referencia. ✓ Variables y constantes. ✓ Variables miembro y variables locales. Programación
-
-1.- Variables e identificadores Variables de tipos primitivos y variables referencia, según el tipo de información que contengan. En función de a qué grupo pertenezca la variable, tipos primitivos o tipos referenciados, podrá tomar unos valores u otros, y se podrán definir sobre ella unas operaciones u otras.
-
-Variables y constantes, dependiendo de si su valor cambia o no durante la ejecución del programa. La definición de cada tipo sería: ✓ Variables. Sirven para almacenar los datos durante la ejecución del programa, pueden estar formadas por cualquier tipo de dato primitivo o referencia. Su valor puede cambiar varias veces a lo largo de todo el programa.
-
-✓ Constantes o variables finales. Son aquellas variables cuyo valor no cambia a lo largo de todo el programa. Programación
-
-1.- Variables e identificadores Programación
-
-### UD 2: Introducción a JAVA
-
-Variables miembro y variables locales, en función del lugar donde aparezcan en el programa. La definición concreta sería: Variables miembro. Son las variables que se crean dentro de una clase, fuera de cualquier método. Pueden ser de tipos primitivos o referencias, variables o constantes. En un lenguaje puramente orientado a objetos como es Java, todo se basa en la utilización de objetos, los cuales se crean usando clases.
-
-Variables locales. Son las variables que se crean y usan dentro de un método o, en general, dentro de cualquier bloque de código. La variable deja de existir cuando la ejecución del bloque de código o el método finaliza. Al igual que las variables miembro, las variables locales también pueden ser de tipos primitivos o referencias.
-
-2.- Palabras reservadas Programación
-
-2.- Palabras reservadas En el lenguaje de programación Java se puede hacer uso de las palabras clave (keywords), también llamadas palabras reservadas, mostradas en la siguiente tabla. Dichas palabras, no pueden ser utilizadas como identificadores por los programadores para definir variables, constantes, etc.
-
-true, false y null no son considerados palabras clave de Java, sino literales. Ahora bien, tampoco se pueden utilizar como indentificadores. La descripción de la funcionalidad de todas las palabras reservadas se puede encontrar en: https://www.abrirllave.com/java/palabras-clave.php Programación
-
-abstract default if private this boolean do implements protected throw break double import public throws byte else instanceof return transient case extends int short try catch final interface static void char finally long strictfp volatile class float native super while const for new switch assert continue goto package synchronized enum
-
-3.- Tipos de datos primitivos Programación
-
-3.- Tipos de datos primitivos Programación
-
-Tipo Descripción Bytes Rango Valor por defecto byte Entero muy corto -128 a 127 short Entero corto -32.768 a 32.767 int Entero -2.147.486.648 a 2.147.486.647 ( -231 a 231-1 ) long Entero largo -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 0L float Número con punto flotante de precisión individual con hasta 7 dígitos significativos +/-1.4E-45 (+/-1.4 times 10-45) a +/-3.4E38 (+/-3.4 times 1038) 0.0f double Número con punto flotante de precisión doble con hasta 16 dígitos significativos +/-4.9E-324 (+/-4.9 times 10-324) a +/-1.7E308 (+/-1.7 times 10308) 0.0d char Carácter Unicode https://en.wikipedia.org/wiki/Li st_of_Unicode_characters \u0000 a \uFFFF ‘\u0000’ boolean Valor verdadero o false true o false false
-
-3.- Tipos de datos primitivos Tipos referenciados A partir de los ocho tipos datos primitivos, se pueden construir otros tipos de datos. Estos tipos de datos se llaman tipos referenciados o referencias, porque se utilizan para almacenar la dirección de los datos en la memoria del ordenador.
-
-int[] arrayDeEnteros;
-
-Cuenta cuentaCliente; En la primera instrucción declaramos una lista de números del mismo tipo, en este caso, enteros. En la segunda instrucción estamos declarando la variable u objeto cuentaCliente como una referencia de tipo Cuenta. Cuando el conjunto de datos utilizado tiene características similares se suelen agrupar en estructuras para facilitar el acceso a los mismos, son los llamados datos estructurados.
-
-Son datos estructurados los arrays, listas, árboles, etc. Pueden estar en la memoria del programa en ejecución, guardados en el disco como ficheros, o almacenados en una base de datos. Programación
-
-3.- Tipos de datos primitivos Tipos enumerados Los tipos de datos enumerados son una forma de declarar una variable con un conjunto restringido de valores. Por ejemplo, los días de la semana, las estaciones del año, los meses, etc. Es como si definiéramos nuestro propio tipo de datos.
-
-La forma de declararlos es con la palabra reservada enum, seguida del nombre de la variable y la lista de valores que puede tomar entre llaves. A los valores que se colocan dentro de las llaves se les considera como constantes, van separados por comas y deben ser valores únicos.
-
-La lista de valores se coloca entre llaves, porque un tipo de datos enum no es otra cosa que una especie de clase en Java, y todas las clases llevan su contenido entre llaves. Programación
-
-4.- Declaración e inicialización Programación
-
-4.- Declaración e inicialización Las declaraciones de variables pueden ir en cualquier parte del programa pero siempre antes de que la variable sea usada. Hay que tener cuidado con el rango de validez (scope) de la declaración. Ejemplos
-
-```java
-int i;
-int j = 1;
-double pi = 3.14159;
-char c = 'a';
-boolean estamosBien = true;
-```
-
-Programación
-
-5.- Literales Programación
-
-5.- Literales Un literal, valor literal o constante literal es un valor concreto para los tipos de datos primitivos del lenguaje, el tipo String o el tipo null. Los distintos tipos de literales son: ✓ Literales booleanos ✓ Literales enteros ✓ Literales reales ✓ Literales caracter ✓ Literales cadenas de caracteres Programación
-
-5.- Literales Literales booleanos Los literales booleanos tienen dos únicos valores que puede aceptar el tipo: true y false. Por ejemplo, con la instrucción
-
-```java
-boolean encontrado = true;
-```
-
-estamos declarando una variable de tipo booleana a la cual le asignamos el valor literal true. Literales enteros Los literales enteros se pueden representar en tres notaciones: Decimal: por ejemplo 20. Es la forma más común. Octal: por ejemplo 024. Un número en octal siempre empieza por cero, seguido de dígitos octales (del 0 al 7).
-
-Hexadecimal: por ejemplo 0x14. Un número en hexadecimal siempre empieza por 0x seguido de dígitos hexadecimales (del 0 al 9, de la ‘a’ a la ‘f’ o de la ‘A’ a la ‘F’). Las constantes literales de tipo long se le debe añadir detrás una l ó L, por ejemplo 873L, si no se considera por defecto de tipo int. Se suele utilizar L para evitar la confusión de la ele minúscula con 1.
-
-Programación
-
-5.- Literales Literales reales Los literales reales o en coma flotante se expresan con coma decimal o en notación científica, o sea, seguidos de un exponente e ó E. El valor puede finalizarse con una f o una F para indica el formato float o con una d o una D para indicar el formato double (por defecto es double).
-
-Por ejemplo, podemos representar un mismo literal real de las siguientes formas
-
-13.2, 13.2D, 1.32e1, 0.132E2. Otras constantes literales reales son por ejemplo
-
-.54, 31.21E-5, 2.f, 6.022137e+23f, 3.141e-9d. Programación
-
-5.- Literales Literal carácter Un literal carácter puede escribirse como un carácter entre comillas simples como 'a', 'ñ', 'Z', 'p', etc. o por su código de la tabla Unicode, anteponiendo la secuencia de escape ‘\’ si el valor lo ponemos en octal o ‘\u’ si ponemos el valor en hexadecimal.
-
-Por ejemplo, si sabemos que tanto en ASCII como en Unicode, la letra A (mayúscula) es el símbolo número 65, y que 65 en octal es 101 y 41 en hexadecimal, podemos representar esta letra como '\101' en octal y '\u0041' en hexadecimal. Existen unos caracteres especiales que se representan utilizando secuencias de escape
-
-Programación
-
-Secuencia de escape Significado Secuencia de escape Significado \b Retroceso \r Retorno de carro \t Tabulador \” Carácter comillas dobles \n Salto de línea \’ Carácter comillas simples \f Salto de página \\ Barra diagonal
-
-5.- Literales Literales de cadenas de caracteres Los literales de cadenas de caracteres se indican entre comillas dobles. En el ejemplo anterior “El primer programa” es un literal de tipo cadena de caracteres. Al construir una cadena de caracteres se puede incluir cualquier carácter Unicode excepto un carácter de retorno de carro, por ejemplo en la siguiente instrucción utilizamos la secuencia de escape \” para escribir dobles comillas dentro del mensaje
-
-```java
-String texto = “Pedro dijo: \"Hoy hace un día fantástico…\"";
-```
-
-En el ejemplo anterior de tipos enumerados ya estábamos utilizando secuencias de escape, para introducir un salto de línea en una cadena de caracteres, utilizando el carácter especial \n. Normalmente, los objetos en Java deben ser creados con la orden new. Sin embargo, los literales String no lo necesitan ya que son objetos que se crean implícitamente por Java.
-
-Programación
-
-6.- Constantes Programación
-
-6.- Constantes Constantes o variables finales Son aquellas variables cuyo valor no cambia a lo largo de todo el programa. Declaración de constantes en Java
-
-```java
-final double PI = 3.1415926536;
-```
-
-En nombre de las constantes se deben ser en mayúsculas. Programación
-
-7.- Operadores y expresiones Programación
-
-7.- Operadores y expresiones Operadores Aritméticos: Suma + Resta - Multiplicación * División / Resto de la División % Programación
-
-7.- Operadores y expresiones Operadores de Asignación: El principal es '=' pero hay más operadores de asignación con distintas funciones. '+=': op1 += op2
-
-op1 = op1 + op2 '-=': op1 -= op2
-
-op1 = op1 - op2 '*=': op1 *= op2
-
-op1 = op1 * op2 '/=': op1 /= op2
-
-op1 = op1 / op2 '%=': op1 %= op2
-
-op1 = op1 % op2 Programación
-
-7.- Operadores y expresiones Operadores Relacionales: Permiten comparar variables según relación de igualdad/desigualdad o relación mayor/menor. Devuelven siempre un valor boolean. '>': Mayor que '<': Menor que '==': Iguales '!=': Distintos '>=': Mayor o igual que '<=': Menor o igual que Programación
-
-7.- Operadores y expresiones Operadores Lógicos: Nos permiten construir expresiones lógicas. '&&' : devuelve true si ambos operandos son true. '||' : devuelve true si alguno de los operandos son true. '!' : Niega el operando que se le pasa. Programación
-
-A B A && B A || B ! A true true true true false true false false true false false true false true true false false false false true
-
-7.- Operadores y expresiones Operador de Concatenación: Operador de concatenación con cadena de caracteres '+': Ejemplo
-
-```java
-System.out.println(“El total es “ + result + “ unidades.“);
-```
-
-Operadores Incrementales: Son los operadores que nos permiten incrementar las variables en una unidad. Prefija ó sufija. '++' '--' Programación
-
-7.- Operadores y expresiones Operadores de Desplazamiento de bits: Para saber más: Los operadores de bits raramente los vas a utilizar en tus aplicaciones de gestión. No obstante, si sientes curiosidad sobre su funcionamiento, puedes ver el siguiente enlace dedicado a este tipo de operadores
-
-http://www.zator.com/Cpp/E4_9_3.htm Programación
-
-Operador Ejemplo en Java Significado ~ ~op Realiza el complemento binario de op (invierte el valor de cada bit) & op1 & op2 Realiza la operación AND binaria sobre op1 y op2 | op1 | op2 Realiza la operación OR binaria sobre op1 y op2 ^ op1 ^ op2 Realiza la operación OR-exclusivo (XOR) binaria sobre op1 y op2 << op1 << op2 Desplaza op2 veces hacia la iquierda los bits de op1 >> op1 >> op2 Desplaza op2 veces hacia la derecha los bits de op1 >>> op1 >>> op2 Desplaza op2 (en positivo) veces hacia la derecha los bits de op1
-
-7.- Operadores y expresiones Operador Condicional: condición ? exp1 : exp2 Se explica con detalle en la UD04 - Uso de estructuras de control Programación
-
-7.- Operadores y expresiones Operadores en orden de precedencia Programación
-
-8.- Conversiones de tipo Programación
-
-8.- Conversiones de tipo El casting es un procedimiento para transformar una variable primitiva de un tipo a otro. También se utiliza para transformar un objeto de una clase a otra clase siempre y cuando haya una relación de herencia entre ambas. *En este tema nos centraremos en el primer tipo de casting.
-
-Dentro de este casting de variables primitivas se distinguen dos clases
-
-Casting implícito
-
-Casting explícito Las conversiones de tipo se realizan para hacer que el resultado de una expresión sea del tipo que nosotros deseamos. Programación
-
-8.- Conversiones de tipo Casting implícito o automático Cuando a una variable de un tipo se le asigna un valor de otro tipo numérico con menos bits para su representación, se realiza una conversión automática. En ese caso, el valor se dice que es promocionado al tipo más grande (el de la variable), para poder hacer la asignación.
-
-También se realizan conversiones automáticas en las operaciones aritméticas, cuando estamos utilizando valores de distinto tipo, el valor más pequeño se promociona al valor más grande, ya que el tipo mayor siempre podrá representar cualquier valor del tipo menor (por ejemplo, de int a long o de float a double).
-
-En este caso no se necesita escribir código para que la conversión se lleve a cabo. Ocurre cuando se realiza lo que se llama una conversión ancha (widening casting), es decir, cuando se coloca un valor pequeño en un contenedor grande. Ejemplo
-
-```java
-int  num1 = 100;
-```
-
-long num2 = num1; //Un int "cabe" en un long Programación
-
-8.- Conversiones de tipo Casting explícito Cuando hacemos una conversión de un tipo con más bits a un tipo con menos bits. En estos casos debemos indicar que queremos hacer la conversión de manera expresa, ya que se puede producir una pérdida de datos y hemos de ser conscientes de ello. Este tipo de conversiones se realiza con el operador cast.
-
-El operador cast es un operador unario que se forma colocando delante del valor a convertir el tipo de dato entre paréntesis. Tiene la misma precedencia que el resto de operadores unarios y se asocia de izquierda a derecha. El formato general para indicar que queremos realizar la conversión es
-
-(tipo) valor_a_convertir En el casting explícito sí es necesario escribir código. Ocurre cuando se realiza una conversión estrecha (narrowing casting), es decir, cuando se coloca un valor grande en un contenedor pequeño.
-
-```java
-int num1   = 100;
-```
-
-short num2 = (short) num1; //Casting explícito
-
-//short tiene menor rango que int Programación
-
-8.- Conversiones de tipo Debemos tener en cuenta que un valor numérico nunca puede ser asignado a una variable de un tipo menor en rango, si no es con una conversión explícita. Ejemplo
-
-```java
-int a;
-```
-
-byte b; a = 12; // no se realiza conversión alguna b = 12; // se permite porque 12 está dentro del rango permitido de valores para b b = a; // error, no permitido (incluso aunque 12 podría almacenarse en un byte) byte b = (byte) a; // Correcto, forzamos conversión explícita En el ejemplo anterior vemos un caso típico de error de tipos, ya que estamos intentando asignarle a b el valor de a, siendo b de un tipo más pequeño. Lo correcto es promocionar a al tipo de datos byte, y entonces asignarle su valor a la variable b.
-
-Programación
-
-8.- Conversiones de tipo N: Conversión no permitida (un boolean no se puede convertir a ningún otro tipo y viceversa). CI: Conversión implícita o automática. CI*: Conversión implícita o automática. Puede haber posible pérdida de datos. C: Casting de tipos o conversión explícita.
-
-Programación
-
-Tabla de Conversión de Tipos de Datos Primitivos Tipo destino boolean char byte short int long float double Tipo origen boolean - N N N N N N N char N - C C CI CI CI CI byte N C - CI CI CI CI CI short N C C - CI CI CI CI int N C C C - CI CI* CI long N C C C C - CI* CI* float N C C C C C - CI double N C C C C C C
-
-8.- Conversiones de tipo Reglas de Promoción de Tipos de Datos Cuando en una expresión hay datos o variables de distinto tipo, el compilador realiza la promoción de unos tipos en otros, para obtener como resultado el tipo final de la expresión. Esta promoción de tipos se hace siguiendo unas reglas básicas en base a las cuales se realiza esta promoción de tipos, y resumidamente son las siguientes
-
-- Si uno de los operandos es de tipo double, el otro es convertido a double.
-- En cualquier otro caso
-
-- Si el uno de los operandos es float, el otro se convierte a float
-
-- Si uno de los operandos es long, el otro se convierte a long
-
-- Si no se cumple ninguna de las condiciones anteriores, entonces
-
-ambos operandos son convertidos al tipo int. Programación
-
-8.- Conversiones de tipo Conversión de números en Coma flotante (float, double) a enteros (int) Cuando convertimos números en coma flotante a números enteros, la parte decimal se trunca (redondeo a cero). Si queremos hacer otro tipo de redondeo, podemos utilizar, entre otras, las siguientes funciones
-
-Math.round(num): Redondeo al siguiente número entero. Math.ceil(num): Mínimo entero que sea mayor o igual a num. Math.floor(num): Entero mayor, que sea inferior o igual a num. Ejemplo
-
-```java
-double num = 3.5;
-```
-
-x = Math.round(num); // x = 4 y = Math.ceil(num); // y = 4 z = Math.floor(num); // z = 3 Programación
-
-8.- Conversiones de tipo Conversiones entre caracteres (char) y enteros (int) Como un tipo char lo que guarda en realidad es el código Unicode de un carácter, los caracteres pueden ser considerados como números enteros sin signo. Ejemplo
-
-```java
-int num;
-```
-
-char c;
-
-```java
-num = (int) 'A';
-```
-
-// num = 65 c
-
-```java
-= (char) 65;
-```
-
-// c = 'A' c = (char) ((int) 'A' + 1); // c = 'B' Programación
-
-8.- Conversiones de tipo Conversiones de tipo con cadenas de caracteres (String) Para convertir cadenas de texto a otros tipos de datos se utilizan las siguientes funciones
-
-```java
-num = Byte.parseByte(cad);
-num = Short.parseShort(cad);
-num = Integer.parseInt(cad);
-num = Long.parseLong(cad);
-num = Float.parseFloat(cad);
-num = Double.parseDouble(cad);
-```
-
-Por ejemplo, si hemos leído de teclado un número que está almacenado en una variable de tipo String llamada cadena, y lo queremos convertir al tipo de datos byte, haríamos lo siguiente
-
-```java
-byte n = Byte.parseByte(cadena);
-```
-
-Programación
-
-9.- Comentarios Programación
-
-9.- Comentarios Los comentarios son muy importantes a la hora de describir qué hace un determinado programa. A lo largo de la unidad los hemos utilizado para documentar los ejemplos y mejorar la comprensión del código. Para lograr ese objetivo, es normal que cada programa comience con unas líneas de comentario que indiquen, al menos, una breve descripción del programa, el autor del mismo y la última fecha en que se ha modificado.
-
-Todos los lenguajes de programación disponen de alguna forma de introducir comentarios en el código. En el caso de Java, nos podemos encontrar los siguientes tipos de comentarios: ✓ Comentarios de una sola línea ✓ Comentarios de múltiples líneas ✓ Comentarios Javadoc Programación
-
-9.- Comentarios Comentarios de una sola línea: Utilizaremos el delimitador // para introducir comentarios de sólo una línea. Ejemplo
-
-// comentario de una sola línea Comentarios de múltiples líneas: Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco (/*), al principio del párrafo y un asterisco seguido de una barra inclinada (*/) al final del mismo. Ejemplo
-
-/* Esto es un comentario
-
-- de varias líneas.
-- En concreto, de 3 líneas. */
-
-Programación
-
-9.- Comentarios Programación
-
-Comentarios Javadoc: Utilizaremos los delimitadores /** y */. Al igual que con los comentarios tradicionales, el texto entre estos delimitadores será ignorado por el compilador. Este tipo de comentarios se emplean para generar documentación automática del programa. A través del programa javadoc, incluido en JavaSE, se recogen todos estos comentarios y se llevan a un documento en formato .html.
 
 > **💡 Apunt Tècnic**
 > Ejemplo
 
-/** Comentario de documentación.
+cadena = sc.next(); // Lee la siguiente cadena: “13-14”
 
-- Javadoc extrae los comentarios del código y
-- genera un archivo html a partir de este tipo de comentarios */
+```java
+String[] separada = cadena.split("-");
+```
 
-9.- Comentarios Programación
+a = Integer.parseInt( separada[0] ); // Pasar el 13 de texto a número
 
-Comentarios Javadoc: Cuando se crea una clase nueva el código debe venir precedido por un comentario de documentación que incluye la descripción de la clase y, precedidas por las etiquetas @author y @version respectivamente, el nombre del autor o autores y el número de versión o fecha de creación de la clase.
+b = Integer.parseInt( separada[1] ); // Pasar el 14 de texto a número Programación
 
-En los comentarios de documentación en Java también se puede usar código html (por ejemplo, para resaltar texto en negrita <b> </b> o para incluir un cambio de línea <br>). Desde Eclipse se puede producir automáticamente la documentación html de un código comentado de esta forma. El resultado es un fichero html que se puede abrir con cualquier navegador y cuyo resultado es idéntico a la documentación online de Oracle sobre Java.
+1.- Librerías de clases Boxing y Unboxing automáticos Desde la versión 5 de Java, se convierte automáticamente entre las clases envoltorios y sus correspondientes tipos básicos. Si se introduce un tipo básico donde se espera un objeto de una clase envoltorio, se llama al constructor correspondiente (boxing).
+
+Si se introduce un objeto de una clase envoltorio donde se espera un tipo básico, se llama al método de acceso correspondiente (unboxing).
+
+```java
+Integer x = 5, y = 9;
+```
+
+//Boxing
+
+```java
+int z = x + y;
+```
+
+//Unboxing
+
+```java
+System.out.printf("%s + %s = %d", x, y, z);
+```
+
+Programación
+
+1.- Librerías de clases La clase Character https://docs.oracle.com/javase/9/docs/api/java/lang/Character.html Ejemplo: Se ha impuesto una política de contraseñas para seguridad de la información de una empresa. Debemos ayudar a escribir un programa que comprueba si la contraseña es válida (mostrando OK) o inválida (mostrando ERROR).
+
+Los requerimientos son los siguientes: ✓ Al menos una letra minúscula. ✓ Al menos una letra mayúscula. ✓ Al menos un dígito.
+
+```java
+✓ Al menos un símbolo del conjunto +_)(*&^%$#@!./,;{}
+```
+
+✓ Longitud mínima de 12.
+
+```java
+Character.isDigit('3');
+```
+
+//Devuelve True
+
+```java
+Character.isLetter('3');
+```
+
+//Devuelve False
+
+```java
+Character.isUpperCase('D');
+```
+
+//Devuelve True
+
+```java
+Character.toLowerCase('D');
+```
+
+//Devuelve ‘d’ Programación
+
+1.- Librerías de clases La clase Random https://docs.oracle.com/javase/9/docs/api/java/util/Random.html Crear un objeto de la clase Random
+
+```java
+Random r = new Random();
+```
+
+Hay cuatro funciones miembro diferentes que generan números aleatorios: Programación
+
+Función miembro Descripción Rango r.nextInt() Número aleatorio entero de tipo int 2-32 y 232 r.nextLong() Número aleatorio entero de tipo long 2-64 y 264 r.nextFloat() Número aleatorio real de tipo float [0,1[ r.nextDouble() Número aleatorio real de tipo double [0,1[
+
+1.- Librerías de clases La clase Random En el caso de necesitar números aleatorios enteros en un rango determinado, podemos trasladarnos a un intervalo distinto, simplemente multiplicando, aplicando la siguiente fórmula general
+
+(int) (rnd.nextDouble() * cantidad_números_rango + término_inicial_rango) donde (int) al inicio, transforma un número decimal double en entero int, eliminando la parte decimal. Por ejemplo, si deseamos números aleatorios enteros comprendidos entre [1,6], que son los lados de un dado, la fórmula quedaría así.
+
+```java
+(int)(rnd.nextDouble() * 6 + 1);
+```
+
+donde 6 es la cantidad de números enteros en el rango [1,6] y 1 es el término inicial del rango. Programación
+
+1.- Librerías de clases La clase Math https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html Programación
+
+MÉTODO DESCRIPCIÓN EJEMPLO DE USO RESULTADO abs Devuelve el valor absoluto de un numero.
+
+```java
+int x = Math.abs(2.3);
+x = 2;
+```
+
+ceil Devuelve el entero más cercano por arriba.
+
+```java
+double x = Math.ceil(2.5);
+x = 3.0;
+```
+
+floor Devuelve el entero más cercano por debajo.
+
+```java
+double x = Math.floor(2.5);
+x = 2.0;
+```
+
+round Devuelve el entero más cercano.
+
+```java
+double x = Math.round(2.5);
+x = 3.0;
+```
+
+log Devuelve el logaritmo natural en base e de un número.
+
+```java
+double x = Math.log(2.71);
+x = 0.9996;
+```
+
+max Devuelve el mayor de dos entre dos valores.
+
+```java
+int x = Math.max(3, 8);
+x = 8;
+```
+
+min Devuelve el menor de dos entre dos valores.
+
+```java
+int x = Math.min(3, 8);
+x = 3;
+```
+
+random Devuelve un número aleatorio entre 0 y 1. Se pueden cambiar el rango de generación.
+
+```java
+double x = Math.ramdom();
+x = 0.206178;
+```
+
+sqlrt Devuelve la raíz cuadrada de un número.
+
+```java
+double x = Math.sqlrt(9);
+x = 3.0;
+```
+
+pow Devuelve un número elevado a un exponente.
+
+```java
+double x = Math.pow(2, 10);
+x= 1024.0;
+```
+
+… … … … CONSTANTE DESCRIPCIÓN PI Devuelve el valor de PI. Es un double. E Devuelve el valor de E (Euler). Es un double.
+
+1.- Librerías de clases Manejo de fechas con: • LocalDate • LocalTime • LocalDateTime • Period • Duration Ver apuntes 05a – Estructuras de datos estáticas Programación
+
+1.- Librerías de clases La clase Arrays La clase java.util.Arrays contiene una batería de métodos estáticos útiles para el manejo de arrays de cualquier tipo.
+
+static int binarySearch(int[] a, int clave)
+
+static int[] copyOf(int[] a, int longitud)
+
+static boolean equals(int[] a, int[] b)
+
+static void fill(int[] a, int valor)
+
+System.arrayCopy()
+
+static void sort(int[] a)
+
+static String toString(int[] a) El método System.arrayCopy permite copiar elementos de un array en otro.
+
+```java
+static void arrayCopy(Object origen, int posOrigen, Object destino, int posDestino, int longitud);
+```
+
+Programación
+
+1.- Librerías de clases La Interfaz Collections Especifica funciones para manejar grupos de objetos, conocidos como elementos. boolean add(Object o) boolean addAll(Collection c) void clear() boolean contains(Object o) boolean isEmpty() boolean remove(Object o) int size() Iterator iterator() Object[] toArray() NOTA: esta interfaz ser verá con mas profundidad en la “U.D.7 Estructuras de Datos Dinámicas” Programación
+
+2.- Estructuras de datos Programación
+
+2.- Estructuras de datos Empecemos recordando que un dato de tipo simple, no esta compuesto de otras estructuras, que no sean los bits, y que por tanto su representación sobre el ordenador es directa, sin embargo existen unas operaciones propias de cada tipo, que en cierta manera los caracterizan.
+
+Una estructura de datos es, a grandes rasgos, una colección de datos (normalmente de tipo simple) que se caracterizan por su organización y las operaciones que se definen en ellos. Llamaremos dato de tipo estructurado a una entidad, con un solo identificador, constituida por datos de otro tipo, de acuerdo con las reglas que definen cada una de las estructuras de datos.
+
+Los datos estructurados se pueden clasificar según la variabilidad de su tamaño durante la ejecución del programa en: estáticos y dinámicos. Programación
+
+2.- Estructuras de datos Estructuras de datos estáticas Las estructuras estáticas son aquellas en las que el tamaño ocupado en memoria se define con anterioridad a la ejecución del programa que los usa, de forma que su dimensión no puede modificarse durante la misma (p.e., un vector o una matriz) aunque no necesariamente se tenga que utilizar toda la memoria reservada al inicio (en todos los lenguajes de programación las estructuras estáticas se representan en memoria de forma contigua).
+
+Estructuras de datos dinámicas Por el contrario, ciertas estructuras de datos pueden crecer o decrecer en tamaño, durante la ejecución, dependiendo de las necesidades de la aplicación, sin que el programador pueda o deba determinarlo previamente: son las llamadas estructuras dinámicas. Las estructuras dinámicas no tienen teóricamente limitaciones en su tamaño, salvo la única restricción de la memoria disponible en el computador.
+
+> **⚠️ NOTA: Las estructuras de datos dinámicas se estudian en...**
+> NOTA: Las estructuras de datos dinámicas se estudian en la UD7 Programación
+
+Estructuras de Datos Estáticas Simples boolean char int Compuestas vectores matrices strings archivos Dinámicas pilas colas listas árboles 2.- Estructuras de datos Programación
+
+3.- Creación de arrays Programación
+
+3.- Creación de arrays Los arrays permiten almacenar una colección de objetos o datos del mismo tipo. Son muy útiles y su utilización es muy simple: Declaración del array: La declaración de un array consiste en decir “esto es un array” y sigue la siguiente estructura
+
+tipo[] nombre; El tipo será un tipo de variable o una clase ya existente, de la cual se quieran almacenar varias unidades. Creación del array: La creación de un array consiste en decir el tamaño que tendrá el array, es decir, el número de elementos que contendrá, y se pone de la siguiente forma
+
+nombre = new tipo[dimension] Donde dimensión es un número entero positivo que indicará el tamaño del array. Una vez creado el array este no podrá cambiar de tamaño. Declaración y creación
+
+tipo[] nombre = new tipo[dimension] Programación
+
+3.- Creación de arrays Programación
+
+3.- Creación de arrays Ejemplos: //Declarar un vector int[] numeros; //Declarar y crear un vector de tamaño 7 (0..6)
+
+```java
+String[] dias = new String[7];
+```
+
+//Crear e Inicializar un vector
+
+```java
+int[] inicializado = {1, 2, 3, 4, 5};
+```
+
+//Modificar el valor de una posición del vector
+
+```java
+dias[0] = "lunes";
+dias[3] = "jueves";
+```
+
+//Acceder al valor de una posición del vector
+
+```java
+int valor = inicializado[2];
+```
+
+//valor = 3
+
+```java
+System.out.println( valor );
+```
+
+Programación
+
+3.- Creación de arrays Programación
+
+Recorrido Ascendente
+
+```java
+public static void imprimirVectorAscendente(int[] miVector){
+for (int i = 0; i < miVector.length; i++) {
+```
+
+```java
+System.out.printf("%4d", miVector[i]);
+}
+System.out.printf("\n");
+}
+```
+
+Recorrido Descendente
+
+```java
+public static void imprimirVectorDescendente(int[] miVector){
+for (int i = miVector.length-1; i >= 0; i--) {
+System.out.printf("%4d", miVector[i]);
+}
+System.out.printf("\n");
+}
+```
+
+3.- Creación de arrays La clase Arrays La biblioteca de clases de Java incluye una clase auxiliar llamada java.util.Arrays que incluye como métodos algunas de las tareas que se realizan más a menudo con vectores: Arrays.sort(v) ordena los elementos del vector. Arrays.equals(v1, v2) comprueba si dos vectores son iguales.
+
+Arrays.fill(v, val) rellena el vector v con el valor val. Arrays.toString(v) devuelve una cadena que representa el contenido del vector. Arrays.binarySearch(v, k) busca el valor k dentro del vector v (que previamente ha de estar ordenado). Programación
+
+4.- Arrays multidimensionales Programación
+
+4.- Arrays multidimensionales //Declarar una matriz int[][] matriz; //Declarar e Inicializar una matriz
+
+```java
+int[][] miMatriz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+```
+
+//Obtener el número de filas y columnas de la Matriz int filas
+
+```java
+= miMatriz.length;
+int columnas = miMatriz[0].length;
+```
+
+//Recorrer e Imprimir todos los elementos de la Matriz
+
+```java
+for (int i = 0; i < filas; i++){
+for(int j = 0; j < columnas; j++){
+```
+
+//Recuperar el valor de la posición (i,j) de la Matriz
+
+```java
+System.out.printf("%4d", miMatriz[i][j]);
+}
+System.out.printf("\n");
+}
+```
+
+Programación
+
+4.- Arrays multidimensionales //Declarar y crear una matriz vacía
+
+```java
+int[][] puntuaciones = new int[3][3];
+```
+
+//Asignar valores a todas las posiciones de la matriz
+
+```java
+puntuaciones[0][0] = 50;
+puntuaciones[0][1] = 100;
+puntuaciones[0][2] = 75;
+puntuaciones[1][0] = 0;
+puntuaciones[1][1] = 84;
+puntuaciones[1][2] = 17;
+puntuaciones[2][0] = 369;
+puntuaciones[2][1] = 8;
+puntuaciones[2][2] = 44;
+```
+
+Programación
+
+[0] [1] [2] [0] [1] [2]
+
+5.- Clases y métodos genéricos Programación
+
+5.- Clases y métodos genéricos Tipos genéricos o Generic Types son clases o interfaces parametrizadas por un tipo. Métodos genéricos o Generic Methods son métodos donde se definen y utilizan los tipos genéricos pero que están limitados al ámbito del método donde se declara.
+
+Por tanto en una clase genérica o Generic Class podemos tener métodos genéricos y métodos normales, y en una clase normal podemos tener métodos genéricos y métodos normales. La declaración del tipo genérico se encuentra entre los caracteres < y > Para más información
+
+https://www.arquitecturajava.com/uso-de-java-generics/ Programación
+
+6.- Cadenas de caracteres Programación
+
+6.- Cadenas de caracteres La clase String https://docs.oracle.com/javase/9/docs/api/java/lang/String.html Son parte del lenguaje (no hay que importarlos) Se crean
+
+```java
+String s = new String(“Hola Mundo”);
+```
+
+pero esto se puede resumir con
+
+```java
+String s = “Hola Mundo”;
+```
+
+Tamaño de un String
+
+```java
+int i = s.length();
+```
+
+k-esimo carácter
+
+```java
+char c = s.charAt(k);
+```
+
+Subsecuencias
+
+```java
+String sub = s.substring(k);
+String sub = s.substring(inicio, fin);
+```
+
+Búsqueda de subsecuencias
+
+```java
+int i = s.indexOf(“hola”);
+int i = s.indexOf(String str, int inicio);
+```
+
+Programación
+
+6.- Cadenas de caracteres La clase String Comparacion (boolean)
+
+```java
+s1.equals(s2);
+```
+
+Comparacion (entero)
+
+```java
+int i = s1.compareTo(s2);
+```
+
+0 si s1 == s2, >0 si s1 > s2, <0 si s1 < s2
+
+int compareToIgnoreCase(String otra) Pasar a mayúsculas: String.toUpperCase() Pasar a minúsculas: String.toLowerCase() Quitar espacios: String.trim() Separar cadenas
+
+```java
+String[] separada = cadena.split("-");
+```
+
+Programación
+
+6.- Cadenas de caracteres La clase String
+
+```java
+String cadena = "Esto es un ejemplo";
+System.out.println(cadena.charAt(2));
+```
+
+//t
+
+```java
+System.out.println(cadena.indexOf("es"));
+```
+
+//5
+
+```java
+System.out.println(cadena.toLowerCase());     //esto es un ejemplo
+System.out.println(cadena.toUpperCase());
+```
+
+//ESTO ES UN EJEMPLO
+
+```java
+System.out.printf("|%s|", " cadena ".trim()); //|cadena|
+```
+
+La clase StringBuffer Los objetos de la clase String son inmutables. No pueden cambiarse una vez creados. Un objeto StringBuffer puede ser modificado tras su creación.
+
+Método append()
+
+Método delete()
+
+Método insert()
+
+… En el caso de cadenas mutables, es más eficiente que crear Strings desde cero. Programación
+
+7.- Expresiones regulares Programación
+
+7.- Expresiones regulares Una expresión regular es un patrón que describe un conjunto de cadenas. Por ejemplo
+
+[gm]ato describe las palabras “gato” y “mato”.
+
+\d\d\d describe una secuencia de tres dígitos.
+
+(des)?atar describe las palabras “desatar” y “atar”.
+
+[A-Z][a-z]* describe una palabra que comienza con letra mayúscula. Programación
+
+7.- Expresiones regulares Clases de caracteres Programación
+
+Símbolo Caracteres admisibles [abc] a, b, c [^abc] Cualquier carácter excepto a, b, c [a-z] Carácter de a a z [a-z0-9] Carácter de a a z, y de 0 a 9 . Cualquier carácter \d Carácter numérico \D Carácter no numérico (=[^\d]) \s Carácter blanco, tabulador, salto de línea, etc. \S Carácter no blanco, tabulador, salto de línea, etc.
+
+\w Carácter alfanumérico, o símbolo de subrayado. \W Carácter no alfanumérico, ni símbolo de subrayado
+
+7.- Expresiones regulares Capturadores de límites Operadores Programación
+
+Símbolo Captura ^ Inicio de línea $ Fin de línea \b Límite de palabra \A Inicio de entrada \G Fin de entrada Símbolo Captura XY X seguido de Y X|Y X o Y (X) Agrupamiento: X como un grupo de captura \número Referencia a grupo de captura anterior
+
+7.- Expresiones regulares Cuantificadores Si se quiere capturar literalmente uno de los caracteres especiales, ha de introducirse precedido por el carácter especial \. Por ejemplo, \( captura el carácter (. Programación
+
+Expresión Captura X? X una vez, o ninguna. X* X cero o más veces. X+ X una o más veces. X{n} X repetido n veces. X{n,} X repetido n veces o más. X{n,m} X repetido de n a m veces.
+
+7.- Expresiones regulares Programación
+
+7.- Expresiones regulares Cuantificadores (II) [ab]*b
+
+aabaabaa Intenta ajustar la cadena total. Si no es posible,
+
+retrocede hasta lograr un ajuste. [ab]*?b
+
+aabaabaa Intenta ajustar la cadena vacía. Si no es posible,
+
+avanza hasta lograr un ajuste. [ab]*+b
+
+aabaabaa Intenta ajustar la cadena total. Si no es posible,
+
+no hay ajuste. Programación
+
+Voraces Reticentes Posesivos X? X?? X?+ X* X*? X*+ X+ X+? X++ X{n} X{n}? X{n}+ X{n,} X{n,}? X{n,}+ X{n,m} X{n,m}? X{n,m}+
+
+7.- Expresiones regulares La clase Pattern Paquete java.util.regex Sus objetos representan expresiones regulares compiladas. No tiene constructores públicos. Creación
+
+static Pattern compile(String regex) Métodos
+
+static boolean matches(String regex, CharSequence cadena)
+
+Matcher matcher(CharSequence cadena) La clase Matcher Realiza el reconocimiento de una expresión regular a una cadena específica No tiene constructor público. Métodos: boolean matches() boolean find() int start() / int start(int grupo) int end() / int end(int grupo) String group() / String group(int grupo) String replaceAll(String reemplazo) Programación
+
+7.- Expresiones regulares Ejemplo
+
+```java
+import java.util.regex.*;
+public class RegexTest
+```
+
+{
+
+```java
+private static final String cadena = "+34 918237173\n" +
+```
+
+"+31 628838812\n" + "+49 3055718080\n";
+
+```java
+private static final String regex = "\\+(\\d+)\\s+(\\d+)" ;
+    public static void main(String[] args) {
+Pattern p = Pattern.compile(RegexTest.regex);
+Matcher m = p.matcher(RegexTest.cadena);
+while (m.find()) {
+```
+
+```java
+System.out.printf("Ajuste encontrado desde %d hasta %d\n", m.start(), m.end());
+System.out.printf("Prefijo: %s, Teléfono: %s\n", m.group(1), m.group(2));
+}
+}
+}
+```
+
++34 918237173\n+31 628838812\n+49 3055718080\n Programación
+
+7.- Expresiones regulares Ejemplo
+
+```java
+import java.util.regex.*;
+public class RegexTest
+```
+
+{
+
+```java
+private static final String cadena = "+34 918237173\n" +
+```
+
+"+31 628838812\n" + "+49 3055718080\n";
+
+```java
+private static final String regex = "\\+(\\d+)\\s+(\\d+)" ;
+    public static void main(String[] args) {
+Pattern p = Pattern.compile(RegexTest.regex);
+Matcher m = p.matcher(RegexTest.cadena);
+while (m.find()) {
+```
+
+```java
+System.out.printf("Ajuste encontrado desde %d hasta %d\n", m.start(), m.end());
+System.out.printf("Prefijo: %s, Teléfono: %s\n", m.group(1), m.group(2));
+}
+}
+}
+```
+
+m.find() = true
+
++34 918237173\n+31 628838812\n+49 3055718080\n Programación
+
+7.- Expresiones regulares Ejemplo
+
+```java
+import java.util.regex.*;
+public class RegexTest
+```
+
+{
+
+```java
+private static final String cadena = "+34 918237173\n" +
+```
+
+"+31 628838812\n" + "+49 3055718080\n";
+
+```java
+private static final String regex = "\\+(\\d+)\\s+(\\d+)" ;
+    public static void main(String[] args) {
+Pattern p = Pattern.compile(RegexTest.regex);
+Matcher m = p.matcher(RegexTest.cadena);
+while (m.find()) {
+```
+
+```java
+System.out.printf("Ajuste encontrado desde %d hasta %d\n", m.start(), m.end());
+System.out.printf("Prefijo: %s, Teléfono: %s\n", m.group(1), m.group(2));
+}
+}
+}
+```
+
+m.find() = true
+
++34 918237173\n+31 628838812\n+49 3055718080\n Programación
+
+7.- Expresiones regulares Ejemplo
+
+```java
+import java.util.regex.*;
+public class RegexTest
+```
+
+{
+
+```java
+private static final String cadena = "+34 918237173\n" +
+```
+
+"+31 628838812\n" + "+49 3055718080\n";
+
+```java
+private static final String regex = "\\+(\\d+)\\s+(\\d+)" ;
+    public static void main(String[] args) {
+Pattern p = Pattern.compile(RegexTest.regex);
+Matcher m = p.matcher(RegexTest.cadena);
+while (m.find()) {
+```
+
+```java
+System.out.printf("Ajuste encontrado desde %d hasta %d\n", m.start(), m.end());
+System.out.printf("Prefijo: %s, Teléfono: %s\n", m.group(1), m.group(2));
+}
+}
+}
+```
+
+m.find() = true
+
++34 918237173\n+31 628838812\n+49 3055718080\n Programación
+
+7.- Expresiones regulares Ejemplo
+
+```java
+import java.util.regex.*;
+public class RegexTest
+```
+
+{
+
+```java
+private static final String cadena = "+34 918237173\n" +
+```
+
+"+31 628838812\n" + "+49 3055718080\n";
+
+```java
+private static final String regex = "\\+(\\d+)\\s+(\\d+)" ;
+    public static void main(String[] args) {
+Pattern p = Pattern.compile(RegexTest.regex);
+Matcher m = p.matcher(RegexTest.cadena);
+while (m.find()) {
+```
+
+```java
+System.out.printf("Ajuste encontrado desde %d hasta %d\n", m.start(), m.end());
+System.out.printf("Prefijo: %s, Teléfono: %s\n", m.group(1), m.group(2));
+}
+}
+}
+```
+
+m.find() = false
+
++34 918237173\n+31 628838812\n+49 3055718080\n Programación
 
 Bibliografía Programación
 
-Bibliografía ORACLE Java Documentation: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html ¿Qué es Java?: https://www.java.com/es/download/help/whatis_java.html Características del lenguaje de programación Java: https://es.wikibooks.org/wiki/Programación_en_Java/Características_del_lenguaje Utilización de los distintos lenguajes de programación
-
-https://www.tiobe.com/ ¿Por qué Java en 2023? https://www.computerweekly.com/es/consejo/Por-que-Java-en-2023 Programación
-
----
-
-# 1.4 Estilo de codificacion
-
-Programación
-
-### UD 1: Introducción a JAVA
-
-- Estilo de Codificación
-
-Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
-
-Programación
-
-### UD 2: Introducción a JAVA – Estilo de codificación
-
-Estilo de Codificación 1.- Introducción 2.- Normas y estilo de codificación
-
-2.1.- Nombres de ficheros
-
-2.2.- Organización de ficheros
-
-2.3.- Identación
-
-2.4.- Comentarios
-
-2.5.- Declaraciones
-
-2.6.- Sentencias
-
-2.7.- Separaciones
-
-2.8.- Nombres
-
-1.- Introducción Programación
-
-1.- Introducción Una vez realizado el diseño se realiza el proceso de codificación. En esta etapa, el programador recibe las especificaciones del diseño y las transforma en un conjunto de instrucciones escritas en un lenguaje de programación. A este conjunto de instrucciones se le llama código fuente.
-
-En cualquier proyecto en el que trabaja un grupo de personas debe haber unas normas de codificación y estilo, claras y homogéneas. Estas normas facilitan las tareas de corrección y mantenimiento de los programas, sobre todo cuando se realizan por personas que no los han desarrollado.
-
-Programación
-
-1.- Introducción
-
-```java
-import java.util.Scanner;
-public class Suma {
-     public static void main (String[] args){
-int suma = 0;
-int contador = 0;
-```
-
-```java
-while (contador < 10) {
-```
-
-contador++;
-
-```java
-suma = suma + contador;
-}
-System.out.println("Suma => " + suma);
-}
-}
-```
-
-Programación
-
-```java
-import java.util.Scanner;
-public class
-```
-
-Suma {
-
-```java
-public static
-void main (String[] args){
-int suma = 0; int contador = 0;
-```
-
-while (contador < 10) { contador++;
-
-```java
-suma = suma + contador; }
-System.out.println("Suma => " + suma);
-}
-}
-```
-
-2.- Normas y estilo de codificación Programación
-
-2.- Normas y estilo de codificación 2.1.- Nombres de ficheros: La extensión para los ficheros de código fuente es .java La extensión para los ficheros compilados es .class Programación
-
-2.- Normas y estilo de codificación 2.2.- Organización de ficheros: Cada fichero debe contener una sola clase pública y debe ser la primera. Las clases privadas e interfaces asociados con esa clase pública se pueden poner en el mismo fichero después de la clase pública.
-
-Las secciones en las que se divide el fichero son
-
-- Comentarios
-
-- Sentencias del tipo package e import
-
-- Declaraciones de clases e interfaces
-
-Programación
-
-2.- Normas y estilo de codificación 2.2.- Organización de ficheros: Comentarios: Todos los ficheros fuente deben comenzar con un comentario que muestre
-
-- El nombre de la clase
-- Información de la versión
-- La fecha de creación y/o modificación
-- Aviso de derechos de autor
-
-Programación
-
-/**
-
-- Nombre de la clase
-
-*
-
-- @version
-
-*
-
-- @since
-
-*
-
-- @author
-
-* */
-
-2.- Normas y estilo de codificación 2.2.- Organización de ficheros: Package e import: Van después de los comentarios, la sentencia package va delante de import. Ejemplo
-
-```java
-package paquete.ejemplo;
-```
-
-```java
-import java.util.ArrayList;
-```
-
-Programación
-
-2.- Normas y estilo de codificación 2.2.- Organización de ficheros: Clases e interfaces: Comentario de documentación (/** … */) Sentencia class o interface Variables estáticas, en este orden: públicas, protegidas y luego privadas. Variables de instancia, en este orden: públicas, protegidas y luego privadas.
-
-Constructores Métodos. Se agrupan por su funcionalidad, no por su alcance. Programación
-
-2.- Normas y estilo de codificación 2.3.- Identación Como norma general se usarán cuatro espacios. La longitud de las líneas de código no debe superar 80 caracteres. La longitud de las líneas de comentarios no debe superar 70 caracteres. Cuando una expresión no cabe en una solo línea: romper después de una coma, romper antes de un operador, alinear la nueva línea al principio de la anterior.
-
-IMPORTANTE
-
-ctrl + i ( en Eclipse ) Programación
-
-2.- Normas y estilo de codificación 2.4.- Comentarios Los comentarios deben contener solo la información que es relevante para la lectura y la comprensión del programa. Existen 2 tipos de comentarios: De documentación: Están destinados a describir la especificación del código. Se utilizan para describir las clases Java, las interfaces, los constructores, los métodos, ...
-
-De implementación: Son para comentar algo acerca de la aplicación particular, de qué está realizando el algoritmo, ... Programación
-
-2.- Normas y estilo de codificación 2.5.- Declaraciones Se recomienda declarar una variable por línea. Inicializar las variables locales donde están declaradas y colocarlas al comienzo del bloque. En las clases e interfaces
-
-- No se ponen espacios en blanco entre el nombre del método y el
-
-paréntesis “(”.
-
-- La llave de apertura “{” se coloca en la misma línea que el nombre
-
-del método o clase.
-
-- La llave de cierre “}” aparece en una línea aparte.
-
-Programación
-
-2.- Normas y estilo de codificación 2.6.- Sentencias Cada línea debe contener una sentencia. Si hay un bloque de sentencias, este debe ser sangrado con respecto a la sentencia que lo genera y debe estar entre llaves aunque solo tenga una sentencia. Programación
-
-2.- Normas y estilo de codificación 2.7.- Separaciones Mejoran la legibilidad del código. Se utilizan: Dos líneas en blanco: entre las definiciones de clases e interfaces. Una línea en blanco: entre los métodos, la definición de las variables locales de un método y la primera instrucción, antes de un comentario, entre secciones lógicas de un método para mejorar la legibilidad.
-
-Un carácter en blanco: entre una palabra y un paréntesis, después de una coma, los operadores binarios menos el punto, las expresiones del for, y entre un cast y la variable. Programación
-
-2.- Normas y estilo de codificación 2.8.- Nombres Los nombres de las variables, métodos, clases, etc., hacen que los programas sean más fáciles de leer ya que pueden darnos información acerca de su función. Las normas para asignar nombres son las siguientes: Programación
-
-2.- Normas y estilo de codificación 2.8.- Nombres Paquetes: El nombre se escribe en minúscula, se pueden utilizar puntos para reflejar algún tipo de jerarquía. Ejemplo: java.io Clases e interfaces: Los nombres deben ser sustantivos. Se deben utilizar nombres descriptivos. La primera letra siempre será en mayúscula.
-
-> **💡 Apunt Tècnic**
-> Ejemplo: Clientes Métodos*: Se deben usar verbos en infinitivo. Ejemplo: asignarDestino() Variables*: Deben ser cortas y significativas. Ejemplo: sumaTotal. Constantes: El nombre debe ser descriptivo. Se escriben en mayúsculas y si son varias palabras unidas por subrayado. Ejemplo: MAX_VALOR *ver siguiente diapositiva Programación
-
-2.- Normas y estilo de codificación 2.8.- Nombres Si las variables o métodos tienen varias palabras para hacerlas mas entendibles, se puede utilizar una de las siguientes 3 notaciones: CamelCase camelCase snake_case kebab-case: no se puede utilizar en Java Programación
-
-RESUMEN Programación
-
-Regla Ejemplo paquetes todo en minúscula dominio clases empiezan con Mayúscula en singular Cliente variables en minúsculas (camelCase) cantidadTotal constantes en mayúsculas (snake_case) VALOR_PTAS métodos en minúsculas verbos en infinitivo asignarDestino() En instrucciones
-
-Una instrucción por línea.
-
-Líneas de separación antes condicionales, bucles, comentarios y métodos. En expresiones
-
-Poner espacios entre las variables y los operadores; En Eclipse
-
-ctrl + i
-
-> identar el código
-
-ctrl + mayus + f -> separación entre expresiones (espacios en blanco e intros)
-
-Bibliografía Programación
-
-Bibliografía Buenas Prácticas de Codificación https://github.com/kosme10/standards/wiki/Buenas-Practicas-de-codificacion Java - Estándares de programación http://javafoundations.blogspot.com.es//java-estandares-de-programacion.html Programación
+Bibliografía Codificación de caracteres ✓https://es.wikipedia.org/wiki/Codificación_de_caracteres Clases Java ✓https://docs.oracle.com/javase/9/docs/api/java/lang/String.html ✓https://docs.oracle.com/javase/9/docs/api/java/util/Date.html ✓https://docs.oracle.com/javase/9/docs/api/java/lang/Math.html ✓https://docs.oracle.com/javase/9/docs/api/java/util/Random.html ✓https://docs.oracle.com/javase/9/docs/api/java/lang/Character.html ✓https://docs.oracle.com/javase/9/docs/api/java/lang/Integer.html Expresiones regulares ✓https://www.regular-expressions.info Clases y métodos genéricos ✓https://www.arquitecturajava.com/uso-de-java-generics/ Programación
 
 ---

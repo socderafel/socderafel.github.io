@@ -21,8 +21,8 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
 | **UD1** | **Conceptes bàsics** | 3 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UD2** | **Writer** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut02actividades.md) |
-| **UD3** | **Calc** | 1 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut03actividades.md) |
+| **UD2** | **Writer** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UD3** | **Calc** | 1 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
 
 ## UD1 — Conceptes bàsics
 
@@ -40,7 +40,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 
 [**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Continguts i Casos Guiats**](./ut02/ut02actividades.md)
+- [**2.1 Format de text, llistes i taules en Writer**](./ut02/ut0201.md)
 
 ## UD3 — Calc
 
@@ -48,4 +48,4 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Taller 
 
 [**📘 Obrir UD3 Completa en una sola pàgina**](./ut03/index.md)
 
-- [**3.1 Continguts i Casos Guiats**](./ut03/ut03actividades.md)
+- [**3.1 Format de cel·les, fórmules i gràfics en Calc**](./ut03/ut0301.md)

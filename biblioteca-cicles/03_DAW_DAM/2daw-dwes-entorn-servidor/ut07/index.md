@@ -2,7 +2,7 @@
 layout: default
 title: "UD7 — Web Services · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT7 Completa"
+badge: "2n DAW · Grau Superior · UD7 — Web Services"
 prev_url: "../ut06/ut0603.html"
 prev_label: "⬅️ 6.3 How to clone a Laravel project from Github"
 next_url: "../ut07/ut0701.html"
@@ -22,14 +22,8 @@ next_label: "7.1 Web Services ➡️"
 
 # 7.1 Web Services
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Resources
-
 > **🔗 Recurs Web: Public REST API's (to use as clients)**
 > [**🌐 Obrir recurs extern (https://github.com/public-api-lists/public-api-lists) ↗️**](https://github.com/public-api-lists/public-api-lists)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Tasks
 
 ---
 

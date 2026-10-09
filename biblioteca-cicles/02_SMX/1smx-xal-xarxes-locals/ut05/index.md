@@ -1,52 +1,63 @@
 ---
 layout: default
-title: "UD3 — i 6 · Temari Complet"
+title: "UD5 — Monitoratge, Diagnosi i Resolució d'Incidències · Temari Complet"
 course_root: ".."
-badge: "1r SMX · Grau Mitjà · UT5 Completa"
+badge: "1r SMX · Grau Mitjà · UD5 — Monitoratge, Diagnosi i Resolució d'Incidències"
 prev_url: "../ut04/ut0401.html"
-prev_label: "⬅️ 2.1 Continguts i Recursos"
+prev_label: "⬅️ 4.1 Commutadors (Switches), VLANs, Spanning Tree, Encaminadors i Wi-Fi"
 next_url: "../ut05/ut0501.html"
-next_label: "3.1 Continguts i Recursos ➡️"
+next_label: "5.1 Verificació, manteniment i diagnosi d'incidències en xarxes locals ➡️"
 ---
 
-# 📘 UD3 — i 6 (Unitat Completa)
+# 📘 UD5 — Monitoratge, Diagnosi i Resolució d'Incidències (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**3.1 Continguts i Recursos**](./ut0501.md)
+- [**5.1 Verificació, manteniment i diagnosi d'incidències en xarxes locals**](./ut0501.md)
 
 ---
 
-# 3.1 Continguts i Recursos
+# 5.1 Verificació, manteniment i diagnosi d'incidències en xarxes locals
 
-> **📌 Introducció de la Unitat**
-> Monitoratge i detecció d’incidències [21]
-> 5.1 Procediments sistemàtics de verificació i prova d’elements de connectivitat de xarxes locals
-> 5.2 Actualització dels dispositius de xarxa
->
-> Identificació, diagnosi, resolució i documentació d’incidències. [14]
-> 6.1 Detecció i diagnosi d’incidències en xarxes locals
-> 6.2 Monitoratge de la xarxa local per detectar situacions anòmales
+### Documentació
 
-> **🔗 Recurs Web: 05 - Enllaç: TightVNC**
-> [**🌐 Obrir recurs extern (http://www.tightvnc.com/) ↗️**](http://www.tightvnc.com/)
+### Procediments de verificació
 
-> **🔗 Recurs Web: 05 - Enllaç: Zenmap**
+### Eines de verificació
+
+### Actualització dels dispositius
+
+### Diagnòstic i monitoratge
+
+### Referències
+
+- Activitats
+- Bibliografia
+- Afegit
+- Aplicacions: ssh, VNC, Zenmap, Wireshark, ntop
+- Ampliació
+- “Xarxes d’Àrea Local” IOC
+- Unitat 5 i 6
+- “Redes Locales” McGrawHill
+- Unitat 8
+
+---
+
+### Eines i Recursos Complementaris
+
+> **🔗 Recurs Web: TightVNC (Control remot)**
+> [**🌐 Obrir recurs extern (https://www.tightvnc.com/) ↗️**](https://www.tightvnc.com/)
+
+> **🔗 Recurs Web: Zenmap (Escàner de xarxa Nmap)**
 > [**🌐 Obrir recurs extern (https://nmap.org/zenmap/) ↗️**](https://nmap.org/zenmap/)
->
-> 05 - Enllaç: Zenmap
 
-> **🔗 Recurs Web: 05 - Enllaç: Wireshark**
+> **🔗 Recurs Web: Wireshark (Analitzador de protocols)**
 > [**🌐 Obrir recurs extern (https://www.wireshark.org/) ↗️**](https://www.wireshark.org/)
->
-> 05 - Enllaç: Wireshark
 
-> **🔗 Recurs Web: 05 - Enllaç: Ntop**
-> [**🌐 Obrir recurs extern (http://www.ntop.org/) ↗️**](http://www.ntop.org/)
->
-> 05 - Enllaç: Ntop
+> **🔗 Recurs Web: Ntop (Monitoratge de trànsit de xarxa)**
+> [**🌐 Obrir recurs extern (https://www.ntop.org/) ↗️**](https://www.ntop.org/)
 
 ---

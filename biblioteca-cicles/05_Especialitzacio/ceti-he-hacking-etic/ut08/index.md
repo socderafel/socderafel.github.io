@@ -2,7 +2,7 @@
 layout: default
 title: "UD8 — Contratos pretesting · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT8 Completa"
+badge: "CE Ciberseguretat (CETI) · UD8 — Contratos pretesting"
 prev_url: "../ut07/ut0701.html"
 prev_label: "⬅️ 7.1 Auditorias utilizando hping3"
 next_url: "../ut08/ut0801.html"

@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — Sistemes de Fitxers Linux · Temari Complet"
 course_root: ".."
-badge: "4t ESO · UT1 Completa"
+badge: "4t ESO · UD1 — Sistemes de Fitxers Linux"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
@@ -50,49 +50,6 @@ Ordres bàsiques de navegació
 - cd – canvia de directori.
 - tree – mostra l’estructura jeràrquica d’un directori.
 
-Pràctica + entregable (AULES)
-
-### 1. Navegació bàsica
-
-pwd
-
-```bash
-cd /
-```
-
-ls
-
-```bash
-cd /home
-cd ~
-```
-
-### 2. Creació d’una estructura de projecte
-
-```bash
-mkdir -p ~/ProjecteLinux/imatges
-mkdir ~/ProjecteLinux/textos
-mkdir ~/ProjecteLinux/docs
-```
-
-### 3. Creació d’un document de teoria
-
-```bash
-nano ~/ProjecteLinux/docs/rutes_linux.txt
-```
-
-Contingut mínim (escrit per l’alumne): - Definició de ruta absoluta amb almenys 2 exemples propis. - Definició de ruta relativa amb almenys 2 exemples propis. - Breu explicació de què són /, /home i /etc.
-
-### 4. Informe d’estructura
-
-tree ~/ProjecteLinux > ~/ProjecteLinux/docs/estructura_projecte.txt Entregable per pujar a AULES Comprimir la carpeta docs en un ZIP des de dins de ~/ProjecteLinux
-
-```bash
-cd ~/ProjecteLinux
-```
-
-zip -r projecte_linux_nom_cognom.zip docs Pujar a AULES el fitxer projecte_linux_nom_cognom.zip, que ha de con- tindre: - rutes_linux.txt - estructura_projecte.txt Durada de la classe: 50 minuts Material necessari: Terminal de LliureX, editor de text (nano o similar)
-
 ---
 
 # 1.2 Gestió de Fitxers
@@ -130,53 +87,6 @@ Comodins (metacaràcters)
 - ls -l – llistat llarg amb permisos i propietaris.
 - cp -r dir1 dir2 – còpia recursiva de directoris.
 - rm -i fitxer – demana confirmació abans d’esborrar.
-
-Pràctica + entregable (AULES)
-
-### 1. Crear directori de pràctica
-
-```bash
-mkdir ~/GestioFitxers
-cd ~/GestioFitxers
-```
-
-### 2. Crear fitxers i carpetes
-
-touch informe1.txt informe2.txt prova.dat notes.md
-
-```bash
-mkdir originals copies
-```
-
-### 3. Organitzar fitxers
-
-mv informe1.txt informe2.txt originals/ cp originals/informe1.txt copies/informe1_copia.txt
-
-### 4. Afegir contingut als fitxers
-
-echo "Resum de la sessió 2 de Linux" > originals/informe1.txt echo "Proves amb ordres cp, mv i rm" > originals/informe2.txt echo "Notes de l'alumne sobre gestió de fitxers" > notes.md
-
-### 5. Consultar contingut
-
-cat originals/informe1.txt less originals/informe2.txt
-
-### 6. Registrar les ordres utilitzades
-
-history | tail -n 50 > historial_brut.txt
-
-```bash
-nano comandes_utilitzades.txt
-```
-
-En comandes_utilitzades.txt, l’alumne ha de copiar només les ordres rela- cionades amb l’activitat i afegir un comentari breu a cada línia (en valencià) descrivint què fa l’ordre. Exemple de línia: cp originals/informe1.txt copies/informe1_copia.txt
-
-```bash
-# còpia un fitxer d'originals a copies
-```
-
-Entregable per pujar a AULES Des de ~/GestioFitxers, comprimir els fitxers requerits: zip gestio_fitxers_nom_cognom.zip comandes_utilitzades.txt notes.md
-
-Pujar a AULES el fitxer gestio_fitxers_nom_cognom.zip, que ha de contin- dre: - comandes_utilitzades.txt (llistat d’ordres + comentaris). - notes.md (almenys 5 línies explicant què han aprés sobre cp, mv, rm, mkdir i ls). Durada de la classe: 50 minuts Material necessari: Terminal de LliureX, editor de text (nano o similar)
 
 ---
 
@@ -239,69 +149,5 @@ Ordres principals de permisos
 Exemples d’ús de chmod Mode simbòlic: - chmod u+x script.sh – afegeix execució a l’usuari. - chmod g-w document.txt – lleva escriptura al grup. - chmod o-r fitxer.txt – lleva lectura als altres. Mode numèric: - chmod 600 fitxer.txt – només l’usuari pot llegir i escriure.
 
 - chmod 644 fitxer.txt – l’usuari pot llegir i escriure, la resta només llegir.
-
-Pràctica + entregable (AULES)
-
-### 1. Preparar directori
-
-```bash
-mkdir ~/PermisosLinux
-cd ~/PermisosLinux
-```
-
-touch fitxer_privats fitxer_public fitxer_lectura
-
-### 2. Assignar permisos inicials
-
-```bash
-chmod 700 fitxer_privats
-# només l'usuari pot tot
-chmod 644 fitxer_lectura
-# lectura per a tots
-chmod 766 fitxer_public
-# usuari: rwx, grup: rwx, altres: rw-
-```
-
-### 3. Guardar l’estat inicial
-
-```bash
-ls -l > informe_permisos_inicials.txt
-```
-
-### 4. Modificar permisos
-
-```bash
-chmod g-w fitxer_public
-chmod o-r fitxer_lectura
-chmod u+x fitxer_privats
-```
-
-### 5. Guardar l’estat final
-
-```bash
-ls -l > informe_permisos_finals.txt
-```
-
-### 6. Fitxer d’explicació
-
-```bash
-nano explicacio_permisos.txt
-```
-
-Contingut mínim: - Descripció en text dels permisos inicials i finals de cada fitxer (fitxer_privats, fitxer_public, fitxer_lectura). - Explicació del significat de r, w, x.
-
-- Explicació del significat de 7, 6 i 4 en el context de
-
-```bash
-chmod (mode numèric). - Un exemple addicional inventat, per exemple chmod
-```
-
-754 script.sh, explicant què pot fer l’usuari, el grup i els altres. Entregable per pujar a AULES Des de ~/PermisosLinux: zip permisos_linux_nom_cognom.zip informe_permisos_inicials.txt informe_permisos_finals.txt Pujar a AULES el fitxer permisos_linux_nom_cognom.zip, que ha de con- tindre
-
-- informe_permisos_inicials.txt
-- informe_permisos_finals.txt
-- explicacio_permisos.txt
-
-Durada de la classe: 50 minuts Material necessari: Terminal de LliureX, editor de text (nano o similar)
 
 ---

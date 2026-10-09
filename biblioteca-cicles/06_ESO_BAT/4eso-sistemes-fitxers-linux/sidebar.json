@@ -10,20 +10,19 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Sistema d'arxius",
-          "href": "ut01/ut0101.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Gestió de Fitxers",
-          "href": "ut01/ut0102.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Permisos",
-          "href": "ut01/ut0103.html"
+          "href": "./ut01/ut0103.html"
         }
       ]
     }

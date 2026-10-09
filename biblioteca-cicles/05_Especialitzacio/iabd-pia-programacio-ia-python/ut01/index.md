@@ -1,0 +1,216 @@
+---
+layout: default
+title: "UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python) · Temari Complet"
+course_root: ".."
+badge: "CE IA i Big Data · UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python)"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
+next_url: "../ut01/ut0101.html"
+next_label: "1.1 Instalación entorno de trabajo. ➡️"
+---
+
+# 📘 UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python) (Unitat Completa)
+
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 Instalación entorno de trabajo.**](./ut0101.md)
+- [**1.2 SO LINUX MINT MATE**](./ut0102.md)
+
+---
+
+# 1.1 Instalación entorno de trabajo.
+
+---
+
+Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT1. Herramientas de desarrollo de IA Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Taula de continguts
+
+- Herramientas de desarrollo de IA.........................................................................................................3
+
+1.1. Introducción...................................................................................................................................3 1.2. Hardware de IA.............................................................................................................................3 1.3. Proveedores de IA en la nube........................................................................................................4 1.4. Herramientas de software de IA....................................................................................................4
+
+- Máquina virtual.....................................................................................................................................5
+- Instalación del SO en una maquina virtual...........................................................................................5
+- Instalación de Anaconda.......................................................................................................................5
+- Anaconda.navigator...............................................................................................................................8
+
+2 / 2
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+- HERRAMIENTAS DE DESARROLLO DE IA.
+
+1.1. Introducción. La IA es una rama de la tecnología que se enfoca en el desarrollo de sistemas inteligentes capaces de realizar tareas específicas de manera autónoma. Para lograr esto, son necesarios dispositivos de hardware que puedan procesar enormes cantidades de datos en tiempo real.
+
+1.2. Hardware de IA. Uno de los fabricantes de hardware más conocidos en el mercado de la IA es Nvidia.Corporation. No es el único, AMD, Intel, ... también dedican parte de su actividad al desarrollo de hardware para la IA. El hardware de IA reside en unidades de procesamiento como pueden ser las unidades de procesamiento gráfico (GPU), las unidades de procesamiento tensorial (TPU) y las unidades de procesamiento neuronal (NPU).
+
+➢GPUs: Diseñadas para renderizar gráficos, su procesamiento paralelo, las hace perfectas para entrenar modelos de IA. 3 / 3 Módulo HGX H100 Nvidia, que usa hasta ocho chips de IA para entrenar sistemas de inteligencia artificial y realizar otras tareas.
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢TPUs: Creadas especificamente por Google para acelerar los cálculos de IA, las TPU destacan especialmente en tareas de aprendizaje profundo. ➢NPUs: Utilizadas en tareas donde intervienen redes neuronales.
+
+Todos los componentes de hardware se utilizan para procesar y analizar grandes cantidades de datos, lo que permite a los sistemas de IA, aprender, adaptarse y hacer predicciones. 1.3. Proveedores de IA en la nube. Los más conocidos actualmente son: • AWS
+
+de Amazon Web Services. • Azure
+
+de Microsoft. • Google Cloud
+
+. El uso de estos servicios cubre todas las necesidades de los clientes, desde el uso directo de los algoritmos sin ningún tipo de programación por parte del usuario, hasta la ejecución de un proyecto completo. 1.4. Herramientas de software de IA. Existen bastantes lenguajes de programación que ofrecen herramientas y funcionalidades (librerías) para el desarrollo de IA (machine learning).
+
+➢Python. Scikit-Learn TensorFlow Keras PyTorch ... En cuanto a entornos de desarrollo (framework), Jupyter Notebook propone una excelente plataforma para la creación de documentos que contienen código, texto explicativo, visualizaciones y otros elementos. Será la que usaremos en el módulo de programación de IA.
+
+Otros lenguajes de programación y ejemplos de bibliotecas : ➢C/C++. TensorFlow, PyTorch, Caffe, Dlib, OpenCV, Shark, Mlpack, FastAI C++, XGBoost, …). ➢JAVA. (Deeplearning4j, Weka, DL4J, Encog, Mallet, Apache OpenNLP, JADE, DL4J UI, Jupyter Kernel, …). 4 / 4
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢C#. (ML, Accord, TensorFlow CNTK, SharpLearning, BrainSharp, Deedle, …). ➢MATLAB (Deep Learning Toolbox, Reinforcement Learning Toolbox, Machine Learning Toolbox, Computer Vision Toolbox, Statistics and Machine Learning Toolbox, MATLAB Neural Network Toolbox, MATLAB Compiler, Keras y TensorFlow, …).
+
+➢R. (Caret, Tensorflow, Keras, RandomForest, XGBoost, Nnet, Tm, Rsentiment, CaretEnsemble, RSOCR, …).
+
+- MÁQUINA VIRTUAL.
+
+Se utilizará el Oracle VM VirtualBox, instalado en todos los ordenadores del aula.
+
+- INSTALACIÓN DEL SO EN UNA MAQUINA VIRTUAL.
+
+A fin de evitar perdidas de trabajos y permitir al alumno siempre llevar consigo sus avances, se trabajará sobre una máquina virtual con la última versión del sistema operativo (SO): Linux Mint Mate. Link de decarga.
+
+- INSTALACIÓN DE ANACONDA.
+
+Anaconda es una plataforma de distribución de Python y R de código abierto muy popular para la computación científica. Viene con muchas herramientas como los intérpretes de los lenguajes Python y R, IDEs como Spyder y Jupyter Notebooks y muchos paquetes de
+
+```python
+Python necesarios para el ML.
+```
+
+• Primero instalamos la distribución de anaconda descargando la última versión disponible: Link. (Información sobre la instalación en linux: Link). • Descargamos el instalador y lo guardamos localmente. • Opcional (aunque recomendado) comprobamos la integridad del archivo de descarga.
+
+Abrimos la terminal y generamos el la suma SHA256 con el comando
+
+```python
+# sha256sum nombre del archivo.sh
+```
+
+5 / 5
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Y lo comparamos con los hashes disponibles aquí. • Empezamos con la instalación. Escribir en la terminal
+
+```python
+# bash ~/Descarga/Anaconda3-2023.07-2-Linux-aarch64.sh
+```
+
+• Pulsamos “enter” tantas veces como sea necesario. • Aceptamos los términos de la licencia y aceptamos la ruta para la instalación. • Continuamos con la instalación. • Aceptamos que el instalador inicialice Anaconda3. 6 / 6
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web • Cerramos la terminal • La abrimos de nuevo y escribimos
+
+```python
+# jupyter notebook
+```
+
+Aparecerán los enlaces para poder acceder al notebook. • Seguimos los enlaces propuestos y accedemos a la aplicación web de jupyter donde podemos ver nuestra carpeta de proyectos de Anaconda3. 7 / 7
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+- ANACONDA.NAVIGATOR.
+
+Anaconda Navigator es una interfaz gráfica de usuario (GUI) incluida en Anaconda. Permite iniciar aplicaciones y administrar paquetes, entornos y canales de Conda sin utilizar comandos de la interfaz de línea de comandos. • Escribimos en la consola: 8 / 8
+
+---
+
+# 1.2 SO LINUX MINT MATE
+
+**Instalación del sistema operativo Linux MINT MATE**
+**y comandos básicos de Linux para poder usarlo.**
+Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT1. Herramientas de desarrollo de IA Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Taula de continguts
+
+- Herramientas de desarrollo de IA.........................................................................................................3
+
+1.1. Introducción...................................................................................................................................3 1.2. Hardware de IA.............................................................................................................................3 1.3. Proveedores de IA en la nube........................................................................................................4 1.4. Herramientas de software de IA....................................................................................................4
+
+- Máquina virtual.....................................................................................................................................5
+- Instalación del SO en una maquina virtual...........................................................................................5
+- Instalación de Anaconda.......................................................................................................................5
+- Anaconda.navigator...............................................................................................................................8
+
+2 / 2
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+- HERRAMIENTAS DE DESARROLLO DE IA.
+
+1.1. Introducción. La IA es una rama de la tecnología que se enfoca en el desarrollo de sistemas inteligentes capaces de realizar tareas específicas de manera autónoma. Para lograr esto, son necesarios dispositivos de hardware que puedan procesar enormes cantidades de datos en tiempo real.
+
+1.2. Hardware de IA. Uno de los fabricantes de hardware más conocidos en el mercado de la IA es Nvidia.Corporation. No es el único, AMD, Intel, ... también dedican parte de su actividad al desarrollo de hardware para la IA. El hardware de IA reside en unidades de procesamiento como pueden ser las unidades de procesamiento gráfico (GPU), las unidades de procesamiento tensorial (TPU) y las unidades de procesamiento neuronal (NPU).
+
+➢GPUs: Diseñadas para renderizar gráficos, su procesamiento paralelo, las hace perfectas para entrenar modelos de IA. 3 / 3 Módulo HGX H100 Nvidia, que usa hasta ocho chips de IA para entrenar sistemas de inteligencia artificial y realizar otras tareas.
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢TPUs: Creadas especificamente por Google para acelerar los cálculos de IA, las TPU destacan especialmente en tareas de aprendizaje profundo. ➢NPUs: Utilizadas en tareas donde intervienen redes neuronales.
+
+Todos los componentes de hardware se utilizan para procesar y analizar grandes cantidades de datos, lo que permite a los sistemas de IA, aprender, adaptarse y hacer predicciones. 1.3. Proveedores de IA en la nube. Los más conocidos actualmente son: • AWS
+
+de Amazon Web Services. • Azure
+
+de Microsoft. • Google Cloud
+
+. El uso de estos servicios cubre todas las necesidades de los clientes, desde el uso directo de los algoritmos sin ningún tipo de programación por parte del usuario, hasta la ejecución de un proyecto completo. 1.4. Herramientas de software de IA. Existen bastantes lenguajes de programación que ofrecen herramientas y funcionalidades (librerías) para el desarrollo de IA (machine learning).
+
+➢Python. Scikit-Learn TensorFlow Keras PyTorch ... En cuanto a entornos de desarrollo (framework), Jupyter Notebook propone una excelente plataforma para la creación de documentos que contienen código, texto explicativo, visualizaciones y otros elementos. Será la que usaremos en el módulo de programación de IA.
+
+Otros lenguajes de programación y ejemplos de bibliotecas : ➢C/C++. TensorFlow, PyTorch, Caffe, Dlib, OpenCV, Shark, Mlpack, FastAI C++, XGBoost, …). ➢JAVA. (Deeplearning4j, Weka, DL4J, Encog, Mallet, Apache OpenNLP, JADE, DL4J UI, Jupyter Kernel, …). 4 / 4
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢C#. (ML, Accord, TensorFlow CNTK, SharpLearning, BrainSharp, Deedle, …). ➢MATLAB (Deep Learning Toolbox, Reinforcement Learning Toolbox, Machine Learning Toolbox, Computer Vision Toolbox, Statistics and Machine Learning Toolbox, MATLAB Neural Network Toolbox, MATLAB Compiler, Keras y TensorFlow, …).
+
+➢R. (Caret, Tensorflow, Keras, RandomForest, XGBoost, Nnet, Tm, Rsentiment, CaretEnsemble, RSOCR, …).
+
+- MÁQUINA VIRTUAL.
+
+Se utilizará el Oracle VM VirtualBox, instalado en todos los ordenadores del aula.
+
+- INSTALACIÓN DEL SO EN UNA MAQUINA VIRTUAL.
+
+A fin de evitar perdidas de trabajos y permitir al alumno siempre llevar consigo sus avances, se trabajará sobre una máquina virtual con la última versión del sistema operativo (SO): Linux Mint Mate. Link de decarga.
+
+- INSTALACIÓN DE ANACONDA.
+
+Anaconda es una plataforma de distribución de Python y R de código abierto muy popular para la computación científica. Viene con muchas herramientas como los intérpretes de los lenguajes Python y R, IDEs como Spyder y Jupyter Notebooks y muchos paquetes de
+
+```python
+Python necesarios para el ML.
+```
+
+• Primero instalamos la distribución de anaconda descargando la última versión disponible: Link. (Información sobre la instalación en linux: Link). • Descargamos el instalador y lo guardamos localmente. • Opcional (aunque recomendado) comprobamos la integridad del archivo de descarga.
+
+Abrimos la terminal y generamos el la suma SHA256 con el comando
+
+```python
+# sha256sum nombre del archivo.sh
+```
+
+5 / 5
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Y lo comparamos con los hashes disponibles aquí. • Empezamos con la instalación. Escribir en la terminal
+
+```python
+# bash ~/Descarga/Anaconda3-2023.07-2-Linux-aarch64.sh
+```
+
+• Pulsamos “enter” tantas veces como sea necesario. • Aceptamos los términos de la licencia y aceptamos la ruta para la instalación. • Continuamos con la instalación. • Aceptamos que el instalador inicialice Anaconda3. 6 / 6
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web • Cerramos la terminal • La abrimos de nuevo y escribimos
+
+```python
+# jupyter notebook
+```
+
+Aparecerán los enlaces para poder acceder al notebook. • Seguimos los enlaces propuestos y accedemos a la aplicación web de jupyter donde podemos ver nuestra carpeta de proyectos de Anaconda3. 7 / 7
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+- ANACONDA.NAVIGATOR.
+
+Anaconda Navigator es una interfaz gráfica de usuario (GUI) incluida en Anaconda. Permite iniciar aplicaciones y administrar paquetes, entornos y canales de Conda sin utilizar comandos de la interfaz de línea de comandos. • Escribimos en la consola: 8 / 8
+
+---

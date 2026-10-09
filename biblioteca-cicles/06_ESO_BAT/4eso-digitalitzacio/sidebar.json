@@ -6,20 +6,19 @@
   },
   "units": [
     {
-      "summary": "UD1 — U1. Introducció a la informática",
+      "summary": "UD1 — Introducció a la informática",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Teoria sobre maquinari (hardware)",
-          "href": "ut00/ut0001.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Apuntes de sistemas de numeración",
-          "href": "ut00/ut0002.html"
+          "href": "./ut01/ut0102.html"
         }
       ]
     },
@@ -28,12 +27,11 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 Tutorial Canva",
-          "href": "ut01/ut0101.html"
+          "href": "./ut02/ut0201.html"
         }
       ]
     },
@@ -42,12 +40,11 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
-          "label": "3.1 Continguts i Recursos",
-          "href": "ut03/ut0301.html"
+          "label": "3.1 Continguts Teòrics i Recursos",
+          "href": "./ut03/ut0301.html"
         }
       ]
     },
@@ -56,12 +53,11 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
-          "label": "4.1 Continguts i Recursos",
-          "href": "ut04/ut0401.html"
+          "label": "4.1 Continguts Teòrics i Recursos",
+          "href": "./ut04/ut0401.html"
         }
       ]
     },
@@ -70,12 +66,11 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 BBDD",
-          "href": "ut05/ut0501.html"
+          "href": "./ut05/ut0501.html"
         }
       ]
     },
@@ -84,16 +79,15 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 Redes Informáticas (PPT)",
-          "href": "ut06/ut0601.html"
+          "href": "./ut06/ut0601.html"
         },
         {
           "label": "6.2 Redes Informáticas",
-          "href": "ut06/ut0602.html"
+          "href": "./ut06/ut0602.html"
         }
       ]
     },
@@ -102,16 +96,15 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut07/index.html"
         },
         {
           "label": "7.1 HTML5",
-          "href": "ut07/ut0701.html"
+          "href": "./ut07/ut0701.html"
         },
         {
           "label": "7.2 CSS3",
-          "href": "ut07/ut0702.html"
+          "href": "./ut07/ut0702.html"
         }
       ]
     }

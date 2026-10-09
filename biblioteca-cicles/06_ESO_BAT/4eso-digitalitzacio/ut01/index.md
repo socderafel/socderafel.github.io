@@ -1,397 +1,263 @@
 ---
 layout: default
-title: "UD2 — Canva · Temari Complet"
+title: "UD1 — Introducció a la informática · Temari Complet"
 course_root: ".."
-badge: "4t ESO · UT1 Completa"
-prev_url: "../ut00/ut0002.html"
-prev_label: "⬅️ 1.2 Apuntes de sistemas de numeración"
+badge: "4t ESO · UD1 — Introducció a la informática"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
-next_label: "2.1 Tutorial Canva ➡️"
+next_label: "1.1 Teoria sobre maquinari (hardware) ➡️"
 ---
 
-# 📘 UD2 — Canva (Unitat Completa)
+# 📘 UD1 — Introducció a la informática (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 Tutorial Canva**](./ut0101.md)
+- [**1.1 Teoria sobre maquinari (hardware)**](./ut0101.md)
+- [**1.2 Apuntes de sistemas de numeración**](./ut0102.md)
 
 ---
 
-# 2.1 Tutorial Canva
+# 1.1 Teoria sobre maquinari (hardware)
 
-José Aurelio Pina (@pina_agost) Tutorial Canva
+> **🔗 Recurs Web: Com funciona un ordinador?**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=SQvR7209fSg) ↗️**](https://www.youtube.com/watch?v=SQvR7209fSg)
 
-José Aurelio Pina Romero (@pina_agost) pinamix@gmail.com www.pinae.es
+> **🔗 Recurs Web: Representación digital de la información URL**
+> [**🌐 Obrir recurs extern (https://docs.google.com/presentation/d/e/2PACX-1vQzIWg8VDa4L9wDTQLB4uc0W2tbBClPnuy6sxcMiO4sXkSZbQ1RkWCjR_tuMgg4ExiteyXhScmctpsF/pub?start=false&loop=false&delayms=60000&slide=id.p1) ↗️**](https://docs.google.com/presentation/d/e/2PACX-1vQzIWg8VDa4L9wDTQLB4uc0W2tbBClPnuy6sxcMiO4sXkSZbQ1RkWCjR_tuMgg4ExiteyXhScmctpsF/pub?start=false&loop=false&delayms=60000&slide=id.p1)
 
-José Aurelio Pina (@pina_agost) ÍNDICE
+---
 
-- ¿Qué es canva? ................................................................................................. 3
-- Accesibilidad ..................................................................................................... 5
-- Registro .............................................................................................................. 6
-- Manejo .............................................................................................................. 13
+Maquinari 2n ESO
 
-4.1 Menú lateral ................................................................................................................................................... 13 4.2 Plantillas .......................................................................................................................................................... 19 4.3 Manipulación plantillas prediseñadas .............................................................................................. 20 4.4 Exportar diseños ......................................................................................................................................... 27 4.5 Diseño propio a partir de una plantilla en blanco. ..................................................................... 32
+Índex - Parts del maquinari d’un ordinador - Unitat central de processament - Placa base - Microprocessador - Memòria RAM - Disc dur - Dispositius d'emmagatzematge òptic - Targetes d'expansió - Ports - Perifèrics - D’entrada - D’eixida - D’entrada/eixida
 
-- Actividades ...................................................................................................... 44
+Parts del maquinari d’un ordinador - Els dispositius que formen el hardware d’un ordinador es poden classificar en dos grans grups: - Unitat central de processament (CPU). Carcassa de l'ordinador juntament amb els dispositius informàtics i xips electrònics que hi ha en el seu interior (processador, memòria RAM, disc dur, etc.) - Perifèrics. Dispositius informàtics que permeten la comunicació de l'ordinador amb l'exterior (monitor, teclat, ratolí, impressora, etc.)
 
-5.0 Páginas webs de interés ........................................................................................................................ 44 5.1 Currículum ...................................................................................................................................................... 45 5.2 Menú de un restaurante .......................................................................................................................... 46 5.3 Infografía sobre categorías gramaticales ...................................................................................... 47 5.4 Infografía sobre figuras planas ............................................................................................................ 48 5.5 Infografía sobre cuerpos geométricos ............................................................................................. 49 5.6 Storyboard ...................................................................................................................................................... 50 5.7 Receta .............................................................................................................................................................. 51 5.9 Mapas conceptuales ................................................................................................................................. 52 5.9 Mapas mentales .......................................................................................................................................... 53 5.10 Newsletter .................................................................................................................................................... 54 5.11 Historieta ...................................................................................................................................................... 55 5.12 Timeline ........................................................................................................................................................ 56
+Parts del maquinari d’un ordinador
 
-José Aurelio Pina (@pina_agost)
+Unitat central de processament (CPU) - Està composta pels dispositius i xips més importants de l'ordinador. Els principals components de la CPU són: - Placa base. - Microprocessador. - Memòria RAM. - Disc dur. - Dispositius d'emmagatzematge òptic. - Targetes d'expansió. - Ports.
 
-- ¿Qué es canva?
+Unitat central de processament (CPU)
 
-Canva es un sitio web de herramienta online de diseño gráfico (no es de retoque fotográfico) simplificado, fundado en 2012. Utiliza un formato de arrastrar y soltar y proporciona acceso a más de un millón de fotografías, vectores, gráficos y fuentes. Es utilizado por no diseñadores, así como profesionales. Las herramientas se pueden utilizar tanto para el diseño web como para los medios de impresión y gráficos.
+Unitat central de processament (CPU) - Placa base És el soport on es conecten la resta de elements de la CPU (microprocessador, memòria RAM, disc dur, etc)
 
-Es una herramienta que nos permite realizar de forma muy sencilla, atractiva e intuitiva diseños para nuestras redes sociales, carteles, posters, infografías, banners, revistas, ‘ebooks’, currículums, tarjetas de visita y todo lo que nuestra imaginación pueda llegar a inventar.
+Unitat central de processament (CPU) - Placa base https://www.youtube.com/watch?v=9XiU-R8jPcY
 
-Dispone de infinidad de plantillas para diseño (Facebook post, documento A4, presentación…). Puedes utilizar tus propias imágenes y logos, combinándolos con gran variedad de fondos, tipografías e imágenes de un banco muy amplio, gratuitas o de pago. Mediante una barra de búsqueda puedes encontrar cualquier de las plantillas, así como imágenes y recuerda en utilizar los términos en inglés para que aparezcan más opciones.
+Unitat central de processament (CPU) - Microprocessador És el cervell de l'ordinador. Es tracta d'un xip format per milions de transistors i altres components electrònics que li permeten manejar gran quantitat de dades i realitzar càlculs i operacions amb ells a gran velocitat.
 
-Se puede modificar el tamaño, color y orientación de cualquier de los diseños, añadir nuevas páginas y guardarlo diversos formatos.
+El xip sol situar-se sota el ventilador, ja que la seua elevada potència de càlcul fa que es calfe a altes temperatures.
 
-Se puede utilizar desde cualquier ordenador y los diseños se quedan guardados en nuestro perfil ya que se trabaja sin tener instalado ningún programa.
+Unitat central de processament (CPU) - Microprocessador El microprocessador s'encarrega de fer les tasques més importants de l'ordinador: Rep les dades dels perifèrics d'entrada (teclat, ratolí, etc.), realitza operacions i càlculs matemàtics amb les dades (processa les dades i executa programes), i finalment envia els resultats als perifèrics de salda (pantalla, impressora, etc.).
 
-¿Para qué edades es recomendable? Canva es perfecto para niños de todas las edades. En el caso de niños menores de 13 años, se necesita la supervisión de un padre o tutor u otro adulto autorizado (como un docente) que acepte nuestros Términos y Condiciones.
+Unitat central de processament (CPU) - Microprocessador https://www.youtube.com/watch?v=W93MuCAGd6g
 
-¿Cuánto cuesta canva para educación? ¡Nada! Canva Para Educación es gratis para las escuelas. Registra tu clase para obtener acceso a las funciones adicionales. (has de tener una cuenta creada con la dirección de correo electrónico del
+Unitat central de processament (CPU) - Memòria RAM És una memòria d'alta velocitat on s'emmagatzemen temporalment els programes o dades amb els quals l'ordinador treballarà perquè el microprocessador puga accedir a aquesta informació de forma ràpida. Es modifica constantment en obrir arxius, tancar programes i fitxers, etc. En apagar l'ordinador, el contingut de la RAM s'esborra -> és una memòria no permanent.
 
-José Aurelio Pina (@pina_agost) instituto, colegio o universidad y debes de aportar una prueba de tu pertenencia al gremio. https://www.canva.com/es_es/educacion/
+Unitat central de processament (CPU) - Memòria RAM https://www.youtube.com/watch?v=XT0gkwSJPTU
 
-José Aurelio Pina (@pina_agost)
+Unitat central de processament (CPU) - Disc dur És el dispositiu que s'usa per a emmagatzemar la informació (dades, programes, fitxers, etc.) de forma permanent, encara que s'apague l'ordinador. La informació emmagatzemada en el disc dur es tracta d'informació que no està en ús en aqueix precís moment. Quan es vol recuperar i treballar amb determinada informació del disc dur, aquesta s'ha de carregar en memòria RAM.
 
-### 2. Accesibilidad
+Unitat central de processament (CPU) - Disc dur
 
-Canva se puede utilizar en versión escritorio (en cualquier ordenador de sobremesa) accediendo a su página e iniciando sesión con usuario y contraseña.
+https://www.youtube.com/watch?v=Y7U8M6UsEwE
 
-También es accesible en cualquier dispositivo móvil (teléfono móvil o tableta) a través de sus apps según sistema operativo.
+Unitat central de processament (CPU) - Dispositius d'emmagatzematge òptic A més dels discos durs, se sol utilitzar altres dispositius de memòria òptica de gran capacitat per a emmagatzemar informació de forma externa. Els dispositius d'emmagatzematge òptics més utilitzats en l'actualitat són el CD, DVD i BlueRay.
 
-https://apps.apple.com/es/app/canva-crear-fotos- diseño/id897446215
+Unitat central de processament (CPU) - Dispositius d'emmagatzematge òptic A més dels discos durs, se sol utilitzar altres dispositius de memòria òptica de gran capacitat per a emmagatzemar informació de forma externa. Els dispositius d'emmagatzematge òptics més utilitzats en l'actualitat són el CD, DVD i BlueRay.
 
-https://play.google.com/store/apps/details?id=com.canva.editor
+Unitat central de processament (CPU) - Dispositius d'emmagatzematge òptic Els dispositius òptics utilitzen la llum d'un raig làser tant per a llegir com per a escriure dades en la superfície del disc CD o DVD. Les dades queden gravades de forma permanent en clots o solcs microscòpics en els discos.
 
-José Aurelio Pina (@pina_agost)
+http://www.youtube.com/watch?v=ESpL4a08kVE
 
-### 3. Registro
+Unitat central de processament (CPU) - Dispositius d'emmagatzematge òptic
 
-Para acceder a Canva tecleamos la dirección de su página principal. https://www.canva.com
+Unitat central de processament (CPU) - Ports Són connexions elèctriques per a connectar els perifèrics (ratolí, teclat, impressora) a l'ordinador. D'aquesta forma el processador pot comunicar-se i controlar dites perifèriques. A cada port només se li pot endollar un cable determinat (connector), la forma del qual i funcionament depén del perifèric que es connectarà.
 
-Ahora pulsa en Regístraste à Puedes crear tu cuenta vía Google, Facebook o correo electrónico.
+Unitat central de processament (CPU) - Ports
 
-José Aurelio Pina (@pina_agost)
+Unitat central de processament (CPU) - Ports Alguns dels ports més habituals són
 
-- Vía Google
+Unitat central de processament (CPU) - Ports
 
-Seleccionas una cuenta de google que tengas vinculada en tu ordenador, o le pulsas a Usar otra cuenta y añades la de uso diario.
+Unitat central de processament (CPU) - Ports
 
-Y vemos que podemos registrarnos con diferentes perfiles. Elegimos el correspondiente a Educación y accedemos a su interfaz.
+Unitat central de processament (CPU) - Ports
 
-José Aurelio Pina (@pina_agost)
+Unitat central de processament (CPU) - Targetes d'expansió Són circuits que s'instal·len en la placa base de l'ordinador per a ampliar la seua funcionalitat.
 
-Además puedes crear un equipo de trabajo, pero olvida este paso y pulsa en Saltar.
+Unitat central de processament (CPU) - Targetes d'expansió
 
-A continuación ya puedes empezar a trabajar.
+Perifèrics Són els components informàtics que permeten a l'ordinador comunicar-se amb l'exterior. Són dispositius externs (fora de la CPU). Hi ha de 3 tipus: - D’entrada - D’eixida - D’entrada / eixida
 
-Te obliga a crear un diseño en primero instancia, puedes pulsar en Infografía.
+Perifèrics - Perifèrics d'entrada Són els perifèrics que permeten introduir dades a l'ordinador. Són perifèrics d'entrada el teclat, el ratolí, l'escàner, el micròfon, la webcam, els joystick, els lectors de codi de barres, lectors de bandes magnètiques, etc.
 
-José Aurelio Pina (@pina_agost)
+Perifèrics - Perifèrics d'entrada
 
-Ya puedes crear tu primer diseño, pulsa en una de las plantillas y ya tienes tu primer diseño.
+Perifèrics - Perifèrics d'eixida Són els perifèrics que permeten a l'ordinador enviar informació a l'exterior. Són perifèrics d'eixida el monitor, la impressora, els altaveus, canó projector, etc
 
-En la parte superior tienes las siguientes funcionalidades
+Perifèrics - Perifèrics d'entrada/eixida Són perifèrics que permeten tant introduir com extraure informació de l'ordinador. Alguns exemples de perifèrics d'entrada-eixida són les memòries flaix, el mòdem, la pantalla tàctil, etc
 
-Inicio: te redirige a la pantalla inicial
+---
 
-Archivo
+# 1.2 Apuntes de sistemas de numeración
 
-José Aurelio Pina (@pina_agost) Redimensionar (es de pago)
+### TEMA1: Sistemas de numeración
 
-Nombre del fichero: escribe el nombre de tu diseño. Dispone de un autoguardado automático.
+- Concepto
 
-Prueba Canva Pro
+Un sistema de numeración es un conjunto de símbolos y reglas de generación que permiten construir todos los números válidos en el sistema.
 
-Compartir: puedes compartir vía correo electrónico o mediante enlace.
+Ejemplos de sistemas de numeración son
 
-Descargar: Te permite descargar la presentación en diversos formatos (PNG, JPG PDF estándar, PDF para impresión, vídeo, animación(de pago)). Así como
+- El sistema de numeración egipcio.
 
-José Aurelio Pina (@pina_agost)
+- El sistema de numeración romano
 
-José Aurelio Pina (@pina_agost) La cuenta gratuita nos permitirá realizar muchas cosas pero que, en algunos casos, debemos tener una cuenta Premium para disfrutar de algunas ventajas. Algunas diferencias entre las cuentas se pueden ver aquí
+- El sistema de numeración decimal
 
-Y recuerda que puedes crear una cuenta para Educación gratis con las funcionalidades de la cuenta Canva Pro.
+- El sistema de numeración binario
 
-José Aurelio Pina (@pina_agost)
+### Sistemas de numeración posicionales
 
-### 4. Manejo
+Los sistemas de numeración posicionales son aquellos en los que el valor de un dígito depende tanto del símbolo utilizado, como de la posición que ése símbolo ocupa en el número.
 
-4.1 Menú lateral
+El número de símbolos permitidos en un sistema de numeración posicional se conoce como base del sistema de numeración. Si un sistema de numeración posicional tiene base b significa que disponemos de b símbolos diferentes para escribir los números.
 
-Analizaremos el menú lateral desde la parte inferior a la superior.
+El conjunto de símbolos permitidos en el sistema decimal (base 10) son {0,1...9}; en el binario (base 2) son {0,1}; en el octal (base 8) son {0,1...7}; en el hexadecimal (base 16) son {0,1...9,A, B, C, D, E, F}.
 
-El botón “Prueba Canva Pro” nos llevará a una ventana en la que nos incitará a probar de manera gratuita durante 30 días las funcionalidad pro, y después pagar la suscripción mensual.
+### Primeros 25 números en varios sistemas de numeración posicionales
 
-Si seguimos hacia arriba vemos que existe una papelera donde se guardarán por 30 días los diseños que no nos hayan gustado y hayamos eliminado de nuestra cuenta. También podemos crear dos carpetas para ordenar y/o clasificar aquí nuestros diseños.
+- Conversión de un número de cualquier base a decimal
 
-Al agregar una carpeta nos pedirá un nombre y una descripción. A continuación podemos mover aquí nuestros diseños, simplemente, arrastrándolos.
+La conversión de un número de cualquier base a decimal consiste en sumar el producto de cada uno de los dígitos por el valor de la posición que ocupan, el cual es la base elevada a la posición del dígito. La posición del dígito de más a la derecha es la 0, la siguiente la 1, etc. Veamos algunos ejemplos
 
-José Aurelio Pina (@pina_agost)
+### Conversión de un número binario a decimal
 
-José Aurelio Pina (@pina_agost) A continuación podemos crear un equipo para que podamos compartir diseños de una forma más rápida.
+11010(2 = 1 · 24 + 1 · 23 + 0 · 22 + 1 · 21 + 0 · 20 = 26
 
-La siguiente funcionalidad nos permite crear un Kit de Marca, en la que puedes mantener el control de tu marca. Es decir, puedes tener todos tus logos a un solo clic, mantener tu identidad visual uniforme con paletas de colores y fuentes determinadas, y subir tus propias fuentes . Aunque es de pago.
+Este caso es la más simple de todos, pues sólo son multiplicaciones por 0 que son siempre 0 y por 1 que da siempre el otro número por el que se multiplica, de esta forma, se descartan las posiciones que tengan un 0 y se suman sólo las potencias de las posiciones que tienen un 1. Así para el ejemplo anterior, quedaría
 
-Una nueva funcionalidad es el apartado de fotos, en el que puedes buscar fotos gratuitas o Premium, descargarlas o utilizarlas en tus diseños.
+11010(2 = 24 + 23 + 21 = 26
 
-José Aurelio Pina (@pina_agost)
+O bien, si observamos que las potencias de 2 de derecha a izquierda se corresponden con los números
 
-José Aurelio Pina (@pina_agost) Más arriba nos disponemos las “plantillas” (abrirá una ventana nueva con un menú de categorías y todas las plantillas disponibles para utilizar en nuestros diseños).
+1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, etc.
 
-A continuación “Todos tus diseños”, donde se almacenara el trabajo que se vaya realizando.
+Podríamos poner
 
-José Aurelio Pina (@pina_agost) La siguiente opción nos lleva al Inicio, que nos permitirá crear nuestros diseños. Analicemos con más detalle esta opción.
+11010(2 = 16 + 8 + 2 = 2 + 8 + 16 = 26
 
-La pantalla que aparece está dividida en tres partes: la superior es un buscador, la central nos muestra algunas plantillas que podemos utilizar para crear un diseño nuevo, la inferior contiene nuestros diseños guardados y a continuación todos los posibles diseños.
+### Conversión de un número octal a decimal
 
-Si pulsas en “Crear un diseño”, te conduce al apartado con todas las plantillas agrupadas por categorías.
+3571(8 = 3 · 83 + 5 · 82 + 7 · 81 + 1 · 80 = 1913
 
-Aunque si pulsas en la flecha que aparece la parte derecha de la pantalla, van apareciendo diversidad de plantillas.
+### Conversión de un número hexadecimal a decimal
 
-José Aurelio Pina (@pina_agost) 4.2 Plantillas
+2AC5(16 = 2 · 163 + A · 162 + C · 161 + 5 · 160 = 2 · 163 + 10 · 162 + 12 · 161 + 5 · 160 =
 
-Las plantillas que tenemos a nuestras disposición se clasifican en las siguientes categorías
+10949
 
-- Redes sociales. Podemos crear posts para Instagram o
+### Conversión de un número decimal a otro de cualquier base
 
-Facebook, publicaciones para Twitter, banners para nuestras cuentas o imágenes para nuestros perfiles.
+Para convertir un número decimal en un número de base B, se procede de la siguiente manera: en primer lugar, se divide el número decimal entre la base B. Se escribe el cociente y el resto. Si el cociente es mayor o igual que B, se divide el cociente entre B. Se vuelve a escribir el cociente y el resto. Este proceso se sigue realizando hasta que el cociente sea menor que B. Para obtener el número buscado, una vez llegado a la última división, se cuentan el último cociente, es decir, el cociente menor que B final, seguido de los residuos de las divisiones subsiguientes. Del más reciente hasta el primero que resultó. Este número será el que buscamos.
 
-- Documentos. Cartas, membretes, currículums, informes,
+### Conversión de un número decimal a binario
 
-facturas, memorandos...
+Conversión de un número decimal a hexadecimal
 
-- Anuncios. Para Facebook, para revistas, para banners...
-- Educación. Podemos crear anuarios, marca páginas,
+La conversión del número 1869 a hexadecimal se realizaría como sigue
 
-boletines de notas, certificados, índices, mapas mentales, etc.
+1869(10 = 74D(16
 
-- Marketing. Logotipos, pósters, flyers, tarjetas de visita o de
+### Conversiones especiales Conversión de octal a binario
 
-regalo, folletos, etiquetas, infografías, etc.
+Si la conversión es de octal a binario cada cifra se sustituirá por su equivalente binario de tres bits. Ejemplo, para el número 472(8 sería
 
-- Eventos. Invitaciones, tarjetas y programas.
-- Personal. Aquí tenemos plantillas de calendarios, collage de
+472(8 = 100111010(2
 
-fotos, tarjetas, storyboard, postales, portadas...
+### Conversión de binario a octal
 
-Pero, por si todas estas opciones no fueran suficientes, siempre podemos crear un documento nuevo desde cero con las dimensiones que necesitemos.
+El método consiste en hacer grupos de 3 bits hacia la izquierda, hasta cubrir la totalidad del número binario. A continuación se convierte cada grupo de número binario de 3 bits a su equivalente octal.
 
-José Aurelio Pina (@pina_agost) 4.3 Manipulación plantillas prediseñadas
+Ejemplo
 
-Si seleccionamos, por ejemplo, infografía desde la pantalla de inicio nos aparecen las siguientes plantillas
+Convertir el número 10101012 a octal.
 
-De las que podremos elegir (a la izquierda) la que más nos interese.
+### Conversión de Hexadecimal a Binario
 
-Cabe recordar que todas ellas son plantillas y que podremos utilizarlas como están (cambiando el texto, añadiendo algún logotipo y poco más) o podemos hacer todas las modificaciones de las que seamos capaces haciendo que se parezca poco a la plantilla original.
+La conversión de hexadecimal a binario se facilita porque cada dígito hexadecimal se convierte directamente en 4 dígitos binarios equivalentes.
 
-José Aurelio Pina (@pina_agost) Si algo me gusta de Canva es su sencillez y la rapidez con la que se puede hacer un diseño, por lo que, si no necesitamos un resultado profesional y original, podemos decantarnos por utilizar una plantilla y modificar los mínimos elementos.
+Ejemplo
 
-La forma de trabajar en estos diseños, en todos los casos, serán similares, así que vamos a practicar creando, por ejemplo, los criterios de calificación para los alumnos de 1º de Bachillerato.
+Convertir el número 1F0C16 a binario.
 
-Del menú de la izquierda donde nos muestra las diferentes plantillas disponibles me fijaré solamente en las que estén etiquetadas como “gratis” si no tengo una cuenta Premium en Canva.
+1F0C16 = 11111000011002
 
-Selecciona una de ellas, y en la parte derecha de la imagen ha abierto el modelo de infografía que he seleccionado. Aquí debemos diferenciar elementos de texto y de imagen. Todos ellos los podremos modificar a continuación, así como añadir o eliminar otros.
+### Conversión de Binario a Hexadecimal
 
-En primer lugar es aconsejable ocultar las plantillas pulsando sobre la flecha de la parte central de la pantalla.
+El método consiste en conformar grupos de 4 bits hacia la izquierda, hasta cubrir la totalidad del número binario. A continuación se convierte cada grupo de número binario de 4 bits a su equivalente hexadecimal.
 
-José Aurelio Pina (@pina_agost) En la parte superior podemos darle un nombre a este diseño (no aparecerá en el propio diseño pero nos resultará de utilidad cuando queramos buscarlo entre nuestros trabajos más adelante).
+Ejemplo
 
-En la parte inferior vemos que podemos añadirle páginas a este diseño. En este caso sería una página en azul, y cabe destacar que podríamos diseñar el reservo de la infografía.
+Convertir el número 10011101010(2 a hexadecimal.
 
-Podríamos darle un nombre a cada página (“anverso” y “reverso”, por ejemplo). En este caso, como no nos interesa, procederemos a eliminar esta segunda página (botón papelera situado en la parte superior de la página).
+### 5. Conversión de un número en base b a otro número en base c
 
-Existe la posibilidad de aumentar o reducir el tamaño de la plantilla en pantalla, debes de pulsar sobre el siguiente cuadro y después elegir el tamaño.
+Para este tipo de conversiones se debe utilizar el sistema de numeración decimal (base 10) como sistema intermedio, de manera que en primer lugar se pasaría el número en base b a su equivalente en decimal, y en segundo lugar, el número decimal obtenido en el paso anterior, se convertiría a su equivalente en base c.
 
-José Aurelio Pina (@pina_agost) Si nos situamos sobre un texto veremos que nos permitirá seleccionarlo y editarlo, con lo que podremos cambiar el propio texto pero también su color o su tipografía.
+Siempre se tendrán en cuenta los casos especiales vistos anteriormente, pues en estos casos, es más rápida la manera explicada previamente.
 
-Vamos a ver qué nos aparece en la página cuando queremos editar este texto
+Ejemplo
 
-3 4 5 6 7 8
+Convertir el número 1223(4 a base 5.
 
-1: Tipo de letra 2: Tamaño de la letra 3: Color de la letra 4: Resaltado 5: Alineación del texto 6: Mayúscula o minúscula 7: Viñeta 8: Espaciado
+Primer paso: 1223(4 = 1 · 43 + 2 · 42 + 2 · 41 + 3 · 40 = 107(10
 
-1 2 3 4 5 6 7
+Segundo paso
 
-1: Agrupar texto o imagen 2: Duplicar texto o imagen 3: Posición del texto o imagen 4: Copiar estilo 5: Introducir un enlace a una página web. 6: Bloquear contenido. 7: Eliminar.
+y por lo tanto
 
-José Aurelio Pina (@pina_agost) Utilizando, prácticamente, todos los elementos de la plantilla, modificando el texto y añadiendo algunos elementos queda un diseño como el siguiente.
+107(10 = 412(5
 
-En caso que decidas incluir algún elemento, pulsa sobre “Elementos” y recuerda que hay gratuitos y de pago. Solo has de pulsar sobre el elemento y se añade a la plantilla.
+1223(4 = 107(10 = 412(5
 
-José Aurelio Pina (@pina_agost)
+| Decimal | Binario | Octal | Hexadecimal |
+| --- | --- | --- | --- |
+| 0 | 0 | 0 | 0 |
+| 1 | 1 | 1 | 1 |
+| 2 | 10 | 2 | 2 |
+| 3 | 11 | 3 | 3 |
+| 4 | 100 | 4 | 4 |
+| 5 | 101 | 5 | 5 |
+| 6 | 110 | 6 | 6 |
+| 7 | 111 | 7 | 7 |
+| 8 | 1000 | 10 | 8 |
+| 9 | 1001 | 11 | 9 |
+| 10 | 1010 | 12 | A |
+| 11 | 1011 | 13 | B |
+| 12 | 1100 | 14 | C |
+| 13 | 1101 | 15 | D |
+| 14 | 1110 | 16 | E |
+| 15 | 1111 | 17 | F |
+| 16 | 10000 | 20 | 10 |
+| 17 | 10001 | 21 | 11 |
 
-José Aurelio Pina (@pina_agost) También puedes incluir texto en diversos formatos
+| 18 | 10010 | 22 | 12 |
+| --- | --- | --- | --- |
+| 19 | 10011 | 23 | 13 |
+| 20 | 10100 | 24 | 14 |
+| 21 | 10101 | 25 | 15 |
+| 22 | 10110 | 26 | 16 |
+| 23 | 10111 | 27 | 17 |
+| 24 | 11000 | 30 | 18 |
 
-Existe la posibilidad de incluir vídeos, cambiar el fonos y subir archivos del ordenador.
-
-José Aurelio Pina (@pina_agost) 4.4 Exportar diseños
-
-En la parte superior derecha de nuestro escritorio nos aparecen los botones para ello.
-
-En primer lugar nos permite compartirlo con otras personas, destacando a las personas de nuestro propio equipo.
-
-Para descargar el archivo, con nuestra cuenta gratuita, nos ofrece las siguientes opciones
-
-José Aurelio Pina (@pina_agost) Pero, y aquí llega nuestra primera pega, el formato PNG no permite transparencias en la cuenta gratuita. Si necesitamos alguna imagen con transparencias tendremos que editarla posteriormente con algún software de edición de imagen.
-
-Y la segunda, en este caso, nos indica que nuestro diseño contiene enlaces y es conveniente eligir el formato pdf.
-
-En caso que el diseño contenga imágenes de pago, puedes cambiarla por una entre imágenes Creative Commons
-
-- https://www.flickr.com
-- https://pixabay.com/es/
-- https://www.pexels.com/es-es/
-- https://avopix.com
-- https://wallpapers.io
-- https://burst.shopify.com
-- https://search.creativecommons.org
-- https://canweimage.com
-
-José Aurelio Pina (@pina_agost) Las imágenes las puedes subir desde el apartado archivos subidos.
-
-José Aurelio Pina (@pina_agost) Existe la posibilidad de publicar tu diseño mediante enlace, y cualquier usuario que disponga del enlace puede visualizar el diseño sin necesidad de iniciar sesión en Canva.
-
-https://www.canva.com/design/DADvX7kkAPY/WYmrH7IKeZReOGr H0VOWbA/view?utm_content=DADvX7kkAPY&utm_campaign=desi gnshare&utm_medium=link&utm_source=publishsharelink
-
-Existe la posibilidad de publicar en Facebook y en Twitter, pero has de autorizar a Canva a acceder a la cuenta para que te permita publicar al instante tus diseños.
-
-José Aurelio Pina (@pina_agost) Otras posibilidades
-
-José Aurelio Pina (@pina_agost) 4.5 Diseño propio a partir de una plantilla en blanco.
-
-A partir de Crear un diseño en la parte superior izquierda, o en la pantalla de inicio en dimensiones personalizadas.
-
-En todos los elementos que queramos añadir a nuestro diseño veremos que tenemos las mismas opciones que nos han ido apareciendo: algunos de ellos son gratuitos y otros tienen un coste.
-
-Comenzamos el diseño con el ancho y el alto. Por ejemplo, 10 cm de ancho y 10 cm de alto.
-
-José Aurelio Pina (@pina_agost)
-
-Empezamos seleccionando un fondo para nuestro diseño
-
-José Aurelio Pina (@pina_agost) Podemos cambiar fácilmente de uno a otro simplemente seleccionando el fondo nuevo que queramos aplicar.
-
-En el apartado “Elementos” tenemos diferentes subcategorías para elegir
-
-José Aurelio Pina (@pina_agost) Podemos elegir, por ejemplo, un “flecha” que encontramos en la subcategoría de “Formas”, al pinchar sobre él nos lo situará en el centro de nuestro diseño con un tamaño más o menos grande y, entonces, le podremos modificar el color, el tamaño e, incluso girarlo
-
-Sabemos que el objeto está seleccionado porque se dibuja un cuadrado que contiene la figura. Este cuadrado tiene cuatro tiradores en las esquinas que nos permitirán cambiar su tamaño.
-
-José Aurelio Pina (@pina_agost)
-
-Ahora podemos girar la figura pinchando y arrastrando sobre el icono que aparece en la parte inferior de ese cuadrado contenedor de la figura.
-
-Así como copiar y pegar tantas como queramos. Y por último podemos cambiar el color de la figura pulsando sobre el cuadrado de la esquina superior izquierda.
-
-José Aurelio Pina (@pina_agost)
-
-Recuerda que puedes añadir los colores que desees pulsando sobre el botón del más.
-
-José Aurelio Pina (@pina_agost) También tenemos la opción de modificar la transparencia de la forma elegida pulsando sobre
-
-Además podemos seleccionar las tres formas y agruparlas. De esta forma las puedes mover en grupo, y copiar en grupo. También puedes deshacer el agrupamiento si no has quedado satisfecho.
-
-Además fíjate qué figura tienes seleccionada porque esa será a la que se le aplicará el efecto que queramos (cambiar el tamaño, girarla, cambiar el color, añadirle nivel de transparencia...).
-
-De la misma forma que hemos añadido este triángula podríamos hacer lo propio con líneas, iconos, ilustraciones, fotografías, etc. en esta categoría “Elementos”.
-
-Podemos añadir texto ahora a nuestro diseño, para ello tenemos gran cantidad de opciones en el menú correspondiente, desde el texto sin formato hasta conjuntos de texto con algunas frases (en inglés) que podemos editar posteriormente.
-
-Permite añadirle un enlace, de forma que si tenemos la imagen publicada en alguna página web, al pinchar sobre el objeto nos puede llevar a la dirección que le indiquemos en ese enlace.
-
-José Aurelio Pina (@pina_agost)
-
-Por ejemplo podemos añadir este texto
-
-Y modificarlo a nuestro gusto. No obstante, vemos que al seleccionar este texto no nos aparece ninguna opción para modificarlo en la parte superior (como sí ocurría con el triángulo).
-
-José Aurelio Pina (@pina_agost) Esto es debido a que realmente no es un cuadro de texto sino un conjunto de cuadros de texto.
-
-Si pulsamos sobre una de las frases que lo contienen nos aparecerá seleccionada de la siguiente forma
-
-Y está seleccionado dentro de otra selección. En realidad es un grupo de cuadros de texto. Tenemos la opción para desagruparlos pero habría que pensar si lo necesitamos, porque Canva nos deja editar cada grupo por separado aunque sigan agrupados. Esto nos permitirá mantener la relación entre ellos por si necesitamos moverlo o cambiar el tamaño a todo el grupo.
-
-José Aurelio Pina (@pina_agost) Ahora vamos a ver la opción “Plantillas”. Aquí tenemos algunas imágenes prediseñadas y algunas plantillas de fondo en que podemos colocar imágenes o fondos en collage.
-
-Añadimos una página nueva (vemos que nos ha copiado el diseño que teníamos en la primera, pero ya sabemos que podemos modificarlo si lo necesitamos en cualquier momento).
-
-Esta imagen no es pago y se puede bajar sin ningún coste.
-
-José Aurelio Pina (@pina_agost) Finalmente, una opción que hemos visto con anterioridad es la de “Archivos subidos”. Aquí se guardarán todos los archivos que subamos para utilizar en cualquier momento.
-
-Y podemos modificar la imagen que hemos añadió si no nos gusta. En mi caso voy a subir una imagen y cambiarla por el osito.
-
-Además esta imagen hay que cambiar de posición, así pues le pulsamos a “Posición” y enviamos la imagen hacía atrás.
-
-José Aurelio Pina (@pina_agost) Posteriormente modifico el tamaño de la imagen para que quede bien.
-
-José Aurelio Pina (@pina_agost)
-
-### 5. Actividades
-
-5.0 Páginas webs de interés
-
-- http://www3.gobiernodecanarias.org/medusa/ecoescuela/recursosdigitales/
-
-especial/infografias-simples/
-
-- https://www.storyboardthat.com
-
-- https://www.makebeliefscomix.com
-
-- https://www.popcornstudio.es/storyboard
-
-- https://parapnte.educacion.navarra.es/recursos/herramientas-on-line
-
-storyboard/
-
-APPS
-
-Storyboard
-
-https://play.google.com/store/apps/details?id=com.google.android.apps.photolab .storyboard&hl=es
-
-Storyboarder
-
-José Aurelio Pina (@pina_agost) 5.1 Currículum
-
-José Aurelio Pina (@pina_agost) 5.2 Menú de un restaurante
-
-José Aurelio Pina (@pina_agost) 5.3 Infografía sobre categorías gramaticales
-
-http://www3.gobiernodecanarias.org/medusa/ecoescuela/recursosdigitales/files /formidable/6/cd-09_0702015_categorias_gramaticales.pdf
-
-José Aurelio Pina (@pina_agost) 5.4 Infografía sobre figuras planas
-
-http://www3.gobiernodecanarias.org/medusa/ecoescuela/recursosdigitales/files /formidable/6/cd-09_0003022_figurasplanas_mudofiguras_v.pdf
-
-José Aurelio Pina (@pina_agost) 5.5 Infografía sobre cuerpos geométricos
-
-http://www3.gobiernodecanarias.org/medusa/ecoescuela/recursosdigitales/files /formidable/6/cd-09_0803001_cuerpos_h-2.pdf
-
-José Aurelio Pina (@pina_agost) 5.6 Storyboard
-
-https://www.storyboardthat.com/es/storyboards/valenciano2 018/valencia
-
-José Aurelio Pina (@pina_agost) 5.7 Receta
-
-José Aurelio Pina (@pina_agost) 5.9 Mapas conceptuales
-
-José Aurelio Pina (@pina_agost) 5.9 Mapas mentales
-
-José Aurelio Pina (@pina_agost) 5.10 Newsletter
-
-José Aurelio Pina (@pina_agost) 5.11 Historieta
-
-José Aurelio Pina (@pina_agost) 5.12 Timeline
+| 1 | F | 0 | C |
+| --- | --- | --- | --- |
+| 0001 | 1111 | 0000 | 1100 |
+| 1111100001100(2 | 1111100001100(2 | 1111100001100(2 | 1111100001100(2 |
 
 ---

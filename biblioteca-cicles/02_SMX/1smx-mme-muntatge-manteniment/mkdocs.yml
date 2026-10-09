@@ -4,27 +4,25 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UD1 — Unitat Didàctica 1":
-      - "📘 UD1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 P1 | P2 | P3 - CONTINGUTS": ut01/ut0101.md
-  - "UD2 — Unitat Didàctica 2":
-      - "📘 UD2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 P1 | P2 | P3 - TEXT CONTINGUTS": ut02/ut0201.md
-      - "2.2 P2 - PROCESADOR Y MEMORIA": ut02/ut0202.md
-      - "2.3 P2 - CONT3 - AMD NOMENCLATURA PROCESADORS": ut02/ut0203.md
-      - "2.4 P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS": ut02/ut0204.md
-      - "2.5 P3 - Perifèrics i Communications": ut02/ut0205.md
-      - "2.6 P3 - UNITATS D'EMMAGATZENATGE": ut02/ut0206.md
-      - "2.7 DISCOS DUROS CHS ECHS LBA": ut02/ut0207.md
-  - "UD3 — Unitat Didàctica 3":
-      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 P1 P2 P3 - PDF CONTINGUTS": ut03/ut0301.md
-      - "3.2 P1 P2 P3 - PRESENTACIÓ CLASSE": ut03/ut0302.md
-  - "UD4 — Unitat Didàctica 4":
-      - "📘 UD4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 RGPD - CONTINGUTS": ut04/ut0401.md
-      - "4.2 COPIAS DE SEGURIDAD - CONTINGUTS": ut04/ut0402.md
-      - "4.3 CLASIF INFORMACION - CONTINGUTS": ut04/ut0403.md
-      - "4.4 P1 P2 P3 PRESENTACIÓ CONTINGUTS": ut04/ut0404.md
-      - "4.5 P1 P2 P3 - CONTINGUTS": ut04/ut0405.md
-      - "4.6 P1 P2 P3 - PRESENTACIÓ": ut04/ut0406.md
+  - "UD1 — Components d'un Equip Microinformàtic":
+      - "📘 UD1 Completa (1 pàgina)": ./ut01/index.md
+      - "1.1 P1 | P2 | P3 - CONTINGUTS": ./ut01/ut0101.md
+  - "UD2 — Muntatge d'Equips, Processadors i Emmagatzematge":
+      - "📘 UD2 Completa (1 pàgina)": ./ut02/index.md
+      - "2.1 P1 | P2 | P3 - TEXT CONTINGUTS": ./ut02/ut0201.md
+      - "2.2 P2 - PROCESADOR Y MEMORIA": ./ut02/ut0202.md
+      - "2.3 P2 - CONT3 - AMD NOMENCLATURA PROCESADORS": ./ut02/ut0203.md
+      - "2.4 P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS": ./ut02/ut0204.md
+      - "2.5 P3 - UNITATS D'EMMAGATZENATGE": ./ut02/ut0205.md
+      - "2.6 DISCOS DUROS CHS ECHS LBA": ./ut02/ut0206.md
+  - "UD3 — Manteniment, Diagnosi i Perifèrics":
+      - "📘 UD3 Completa (1 pàgina)": ./ut03/index.md
+      - "3.1 P1 P2 P3 - PDF CONTINGUTS": ./ut03/ut0301.md
+      - "3.2 P1 P2 P3 - PRESENTACIÓ CLASSE": ./ut03/ut0302.md
+  - "UD4 — Seguretat, Còpies de Seguretat i Implantació de Programari":
+      - "📘 UD4 Completa (1 pàgina)": ./ut04/index.md
+      - "4.1 RGPD - CONTINGUTS": ./ut04/ut0401.md
+      - "4.2 COPIAS DE SEGURIDAD - CONTINGUTS": ./ut04/ut0402.md
+      - "4.3 CLASIF INFORMACION - CONTINGUTS": ./ut04/ut0403.md
+      - "4.4 P1 P2 P3 PRESENTACIÓ CONTINGUTS": ./ut04/ut0404.md
+      - "4.5 P1 P2 P3 - CONTINGUTS": ./ut04/ut0405.md

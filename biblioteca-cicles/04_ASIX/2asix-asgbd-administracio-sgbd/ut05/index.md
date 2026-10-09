@@ -1,711 +1,395 @@
 ---
 layout: default
-title: "UD4 — Automatització de tasques · Temari Complet"
+title: "UD5 — Optimització de l'SGBD · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT5 Completa"
-prev_url: "../ut03/ut0305.html"
-prev_label: "⬅️ 3.5 Seguretat en un SGBD"
-next_url: "../ut05/ut0502.html"
-next_label: "4.1 Repàs: PL/SQL ➡️"
+badge: "2n ASIX · Grau Superior · UD5 — Optimització de l'SGBD"
+prev_url: "../ut04/ut0401.html"
+prev_label: "⬅️ 4.1 Automatització de tasques"
+next_url: "../ut05/ut0501.html"
+next_label: "5.1 Optimització de l'SGBD ➡️"
 ---
 
-# 📘 UD4 — Automatització de tasques (Unitat Completa)
+# 📘 UD5 — Optimització de l'SGBD (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**4.1 Repàs: PL/SQL**](./ut0502.md)
-- [**4.2 Repàs: PL/SQL (II)**](./ut0503.md)
-- [**4.3 Automatització de tasques**](./ut0505.md)
+- [**5.1 Optimització de l'SGBD**](./ut0501.md)
 
 ---
 
-# 4.1 Repàs: PL/SQL
+# 5.1 Optimització de l'SGBD
 
-CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Bloc anònim en Oracle La sentència de bloc anònim PL/SQL és una sentència executable que pot contindre sentències de control PL/SQL i sentències SQL Per realitzar esta pràctica, utilitzarem la mv Windows 10 amb Oracle SQL Developer En SQL Developer podem guardar un script amb ctrl-s o Archivo-guardar o En SQL Developer podem recuperar un script amb ctrl-o o Archivo-abrir o En SQL Developer podem executar un script amb F5 Activar l’exida => set serveroutput on Connecta amb SYSTEM a pdb1 Crea usuari usuari1 Donar permisos a usuari1 Connecta amb usuari1 en pdb1 Tasca 1 Declaracions => Indica quines declaracions donarien error i perquè. Després prova-les en sql-developer SET SERVEROUTPUT ON DECLARE
+### UNITAT 05 Optimització del SGBD
 
-```sql
-primera number:=5.0;
-```
+Optimització del SGBD
 
-siguiente number not null;
+Identificar les eines de monitoratge disponibles per al sistema gestor. Descriure els avantatges i inconvenients de la creació d'índexs. Crear índexs en taules i vistes. Optimitzar l'estructura de la base de dades. Optimitzar els recursos del sistema gestor. Obtindre informació sobre el rendiment de les consultes per a la seua optimització.
 
-```sql
-fija constant varchar2(20);
-```
+Programar alertes de rendiment. Realitzar modificacions en la configuració del sistema operatiu per a millorar el rendiment del gestor.
 
-cadena varchar2;
+Monitorització Rendiment Errors, logs DD Optimització Entorn SG BD ( índex, consultes )
 
-```sql
-valor1 number not null:=4;
-varlor2 number:=valor1/2;
-valor3 number:=valor4+valor2;
-valor4 number:= default 5;
-cad varchar2(10);
-```
+Monitorització .........................................................................................
 
-proximo valor1%TYPE;
+S'ha de tractar que les tasques de monitoratge i diagnòstic del sistema siguen el menys intrusives possible perquè no penalitzen el rendiment del sistema gestor, i relegar les tasques que requerisquen un consum de recursos mitjà o elevat per a realitzar-les en moments de baixa càrrega.
 
-```sql
-numero number(4,2):=150.3;
-```
+Eines principals de monitoratge
 
-num1 num2 number;
+- Monitor de rendiment
+- El log d’execució
+- El diccionari de dades
 
-```sql
-CAd varchar2(12);
-cad2 varchar2(2):='HOLA';
-```
+Monitor de rendiment
 
-4num number; BEGIN
+- Seguiment de mètriques
+- Detecció de bloquejos
+- Detecció de processos acaparadors
+- Consum de recursos
+- Definició d’alertes o llindars
 
-```sql
-dbms_output.put_line (‘La primera variable val ’ || primera);
-dbms_output.put_line (‘La suma val ’ || primera+valor1);
-```
+Transaccions / ut Temps de resposta Escalabilitat Concurrència
 
-Posa ací més línies per provar els resultats END; ================
+Registre d’erros -> fitxers LOGs
 
-CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Tasca 2 Conversió de dates El tipus de data és molt potent però necessita d’un tractament específic. Escriu un Bloc anònim que demane una data amb una variable de substitució (en char) i inserisca una fila en la taula LLIBRES. (compte amb els camps datapub i datareg ) Els valors has d’estar en majúscules. Utilitza les funcions necessàries.
+- Inicis i parades del sistema
+- Operacions rellevants
+- Errors o warnings
+- Registre de consultes que tarden molt en acabar
 
-Script de creació de taula llibres i de tres files de dades
+Nivell de detall dels logs
 
-```sql
-drop table llibres;
-CREATE TABLE llibres(
-```
+- Debug
+- Warning
+- Error
 
-titol VARCHAR2(60) NOT NULL, autor varchar2(30) not null, datapub DATE, editorial VARCHAR2(30), edicio VARCHAR2(12), isbn VARCHAR2(25), preu number( 6,2), datareg date, CONSTRAINT pk_codi PRIMARY KEY(titol,autor)
+Diccionari de dades DD Es pot comprovar
 
-```sql
-);
-insert into llibres (titol,autor,datapub,preu,datareg)
-values ('INTRODUCCIÓN A LA PROGRAMACIÓN INFORMÁTICA', 'CAROL VORDERMAN', '22/10/2019', 18.90, sysdate);
-insert into llibres (titol,autor,datapub,preu,datareg)
-values ('SEGURIDAD INFORMÁTICA','ANTONIO POSTIGO PALACIOS','19/05/2020',27.07, sysdate);
-insert into llibres (titol,autor,datapub,preu,datareg)
-values ('EL ARTE DE LA INVISIBILIDAD','KEVIN MITNICK','4/10/2018',28.44, sysdate);
-```
+- Consultes que se estan executant, i consum de recursos
+- Qui les executa
+- Bloquejos actius i a que sentències afecten
+- etc..
 
----
+Les tasques de monitorització i diagnòstic deuen ser el menys intrusives possible !! Les ferramentes gràfiques consumeixen més recursos que les consultes al DD Les ferramentes gràfiques requereixen més permisos que les consultes al DD
 
-# 4.2 Repàs: PL/SQL (II)
+Monitorització en ORACLE .........................................................................................
 
-CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Butlletí repàs PL/SQL Connecta amb SYSTEM a pdb1 Crea usuari usuari1 Donar permisos a usuari1 Connecta amb usuari1 en pdb1 Tasca 1 Crea un bloc anònim que demane dos números (utilitza dos variables de substitució) i diga la suma, la multiplicació, la resta, la divisió dels números.
+Monitor de rendiment
 
-Tasca 2 Càlcul de la superfície de diverses figures geomètriques. (utilitza tres variables de substitució) Rectangle base*altura Quadrat base Triangle (base*altura) / 2 Cercle ∏*radi Tasca 3 Crea un fragment de codi que donat un mes de l’any en número (de 1 a 12), i a continuació, que mostre el nom del mes. (utilitza variables de substitució) Tasca 4 Fes un altre fragment que donat un mes (utilitza variables de substitució), en lloc de mostrar el nom del mes, mostre els dies que té. (Considerem que febrer sempre té 28 dies).
+- EM Enterprise Manager (deprecated)
 
-Tasca 5 un altre fragment que donat un dia de la setmana en número (d’1 a 7) i, a continuació que mostre si el dia introduït és entre setmana o cap de setmana. (utilitza variables de substitució) Tasca 6 un bloc anònim que reba una cadena i la visualitze a l'inrevés. (utilitza variables de substitució).
+✔Monitor de rendiment ✔Gestió d’incidències ✔Definició d’accions correctives ✔Definició de notificacions ✔Consulta d’informes predefinits
 
-Transforma el bloc anònim en un procediment. Tasca 7 una fragment de codi que retorne el nombre d'anys complets que hi ha entre dues dates que es passen com a strings. Transforma el bloc anònim en una funció. Tasca 8 un bloc anònim que retorne solament caràcters alfabètics substituint qualsevol altre caràcter per blancs a partir d'una cadena que es passarà en una variable de substitució TIPS: Pots utilitzar funcions predefinides de PL/SQL round( n) trunc( n) mod(n,m ) floor(n ) Ceil(n ) Length( s) Lower(s ) Upper(s ) Ascii(s ) Chr(n ) Substr(s,n [,l]) trim(s) instr(c,s) || initcap(s) replace(s,s1,s2) Data2 – data1 : resultat , num de dies entre les dos dates Data1 + num : resultat , data de ‘num’ de dies més que Data1
+- Diccionari de Dades
 
----
+Vistes dinàmiques => v$..... p.exemple v$sqlarea
 
-# 4.3 Automatització de tasques
+- SQL Developer ( o altres com TOAD for Oracle, de pagament)
 
-### UNITAT 04 Automatització de tasques
+✔Monitor de rendiment ✔Historial de SQLs ✔Informes predefinits
 
-Automatització de tasques
+Monitor de rendiment
 
-Objectius de la unitat
+- SQL Developer ( o altres com TOAD for Oracle, de pagament)
 
-- Reconéixer la importància d'automatitzar tasques administratives.
-- Descriure els diferents mètodes d'execució de guions.
-- Identificar les eines disponibles per redactar guions.
-- Definir i utilitzar guions per automatitzar tasques.
-- Identificar els esdeveniments susceptibles d'activar disparadors.
-- Definir disparadors.
-- Fer servir estructures de control de flux.
-- Adoptar mesures per mantenir la integritat i la consistència de la informació.
+Historial de SQLs Informes predefinits Obrir finestra de DBA amb ( Ver- DBA )
 
-Rutines de BD Blocs anònims Estructures de programació Procediments Funcions Disparadors (triggers) Seqüències Tasques automatitzables Automatització
+Monitor de rendiment
 
-Avantatges Automatització
+- SQL Developer ( o altres com TOAD for Oracle, de pagament)
 
-- Estalvi de temps
-- Reducció costos administració
-- Reducció errors ( humà)
+Historial de SQLs Informes predefinits Obrir finestra de DBA amb ( Ver- DBA ) ASH: Active Session History AWR: Automatic Workload Repository
 
-Tipus
+Monitor de rendiment
 
-- Programa extern (al SGBD)
-- Programa intern : rutina de bbdd
+- SQL Developer ( o altres com TOAD for Oracle, de pagament)
 
-L'automatització consisteix a fer tasques de manera sistemàtica i repetitiva sense que estiga involucrat un usuari en la seua execució Programador de tasques en Windows, o cron/crontab en Linux Procediments Funcions Disparadors
+Historial de SQLs Informes predefinits Obrir finestra de sessions ( Herramientas – Controlar sesiones )
 
-Rutina
+Monitor de rendiment
 
-- Script, guió, programa o seqüència de comandos que permeten dur a terme el processament d'unes
+- SQL Developer
 
-certes accions.
+Monitoritzar Top SQL Obrir finestra de informes ( Ver – Informes )
 
-- Quan és creada rep un nom que permet que siga invocada tantes vegades com siga necessari
-- Van ser introduïdes en la versió SQL3, o SQL:1999
+Monitor de rendiment
 
-El SGBD deu proporcionar
+- SQL Developer
 
-- Eines necessàries per a crear rutines.
-- Eines per a executar les rutines automàticament.
+Monitoritzar Tasques de llarga duració Obrir finestra de informes ( Ver – Informes - Sesiones)
 
-Avantatges rutina interna
+Registre d’erros Des de la versió 11 d’Oracle -> ARD Automatic Diagnostic Repository
 
-- Rendiment
-- Reutilització (codi)
-- Encapsula regles de negoci
-- Major seguretat
+- ORACLE_BASE/diag
+- Diferents subdirectoris
+- vista V$DIAG_INFO
 
-Les rutines: S’han de Documentar, Descripció de la tasca, descripció de paràmetres d’entrada i eixida, Autor, Versió, Data d’última modificació
+alert.log cdump incident trace others
 
-Bloc anònim set serveroutput on DECLARE
+Optimització .........................................................................................
 
-```sql
-Vnom VARCHAR2(15) := '&nom';
-```
+Optimització de l’Entorn a nivell de SO a nivell de Xarxa del SG (Sistema Gestor) -Grandària de blocs de dades -Grandària i ubicació de fitxers de dades -Deshabilitar processos ocults (auto-grow, auto-shrink) i executar-los fora d’horari de producció -Grandària del emmagatzemament temporal
 
-BEGIN
+Optimització de la BD ( índex, consultes ) -Disseny de taules i tipus de dades (Ajustar al necessari) -Camps calculats (intentar mantindre els menys possibles) -Desnormalització (reduir JOIN a costa de augmentar redundància) -Particionament -Desfragmentació -Balanceig d’índex -Crear, modificar o eliminar índex
 
-```sql
-DBMS_OUTPUT.PUT_LINE ('Hola ' || Vnom);
-   DBMS_OUTPUT.PUT_LINE ('Benvingut a la programació en PL/SQL');
-```
+Optimització Particionament
 
-END; .  En SQL*Plus, tot bloc ha d'acabar en . perquè siga emmagatzemat en el buffer SQL. Una vegada guardat el podem executar amb l'ordre run (en SQL*Plus) paquet dbms_output procediment put_line En SQL Developer no es posa el . Variable de substitució . punt
+- S’evita processar tota una taula (sols es processa la partició)
+- Permet guardar en una sola taula més dades que en un disc
+- Les dades poden ser accedides en paral·lel
+- Facilita operacions com p.e. el purgat de dades
 
-Comandos bàsics en SQL*Plus SQL> edit SQL> list SQL> run (r o /) SQL> save fitxer.ext [replace] SQL> get fitxer.ext SQL> run SQL> start fitxer.ext SQL> SQL> @fitxer.ext (@ equival a start) tutorial SQL*Plus SQL*Plus sols guarda la última ordre, que pot tindre diverses línies..
+Optimització Creació d’índex Sobre que columnes crear ( i sobre que columnes NO crear) Que tipus d’índex crear Per organització Agrupats / No agrupats Per estructura Índex B-tree Índex bitmap Índex hash
 
-Esta es pot editar, llistar, executar, etc... El comando start carrega i executa un script d’un fitxer Practica: amb diversos CREATE TABLE de 2 o 3 línies !! en sql*plus !!
+Optimització Creació d’índex Sobre que columnes crear Claus primaries i alienes ( normalment ja ho fa el SGBD) Columnes que habitualment apareixen en SELECT i en WHERE Columnes amb bona selectivitat ( si poques files tenen el mateix valor) Sobre que columnes NO crear Taules amb poques dades Columnes amb molts valors NULL Columnes amb valors que es modifiquen molt sovint Índex sobre moltes columnes Molts índex per taula
 
-Bloc anònim  En SQL Developer s’executa amb F5 En SQL Developer no es posa el . F5 Executa script F9 Executa sentència En este script hi ha dos sentències !! Un set i un bloc anònim
+Optimització Optimització de consultes
 
-<codi> El codi dels procediments, funcions i disparadors pot ser des d’una línia o sentència, fins a un programa complex amb estructures de repetició, selecció i seqüenciació, seguint les regles de PL/SQL PL/SQL (Procedural Language/Structured Query Language) és un llenguatge de programació incrustat en Oracle ( va ser el primer SGBD en incloure un llenguatge dins) PL/SQL suportarà totes les consultes, ja que la manipulació de dades que s'usa és la mateixa que en SQL PostgreSQL dona suport a una variant, el PL/PGSQL SQL Server utilitza una altra variant, el TSQL Son tots molt pareguts
+- Consulta estadístiques de taules en el DD
+- Reescriptura de consultes
 
-Estructures de programació en PL/SQL
+#### 1- Substituir els OR per UNION
 
-- Comentaris
-- Variables
-- Execució condicional
-- Bucles
-- Blocs
-- Cursors
-- Transaccions
-- Excepcions
+### 2. IN vs EXISTS
 
-Estructures de programació en PL/SQL
+### 3. IN vs BETWEEN
 
-- Comentaris
-- Variables
-- Execució condicional
-- Bucles
-- Blocs
-- Cursors
-- Transaccions
-- Excepcions
+### 4. Comparacions. Evitar IS NULL, i <>
 
-Repàs de primer curs Altres estructures en PL/SQL
+### 5. Usar taules derivades, subconsultes i joins
 
-- Comentaris
+### 6. Evitar el GROUP BY
 
-Una línia -- Més d’una línia /* .... */
+### 7. Cursors i funcions
 
-- Variables
+Actualitzar estadístiques periòdicament Objectius
 
-v_nom := 'Francisco'; v_empno := 10; tutorial tipos de dades Tipus : char() varchar2() number() boolean date() tutorial dates
+- Evitar recórrer tota la
+
+taula si es possible.
+
+- Simplificar i reduir la
+
+grandària de les taules abans de fer JOINs
+
+Optimització Ferramentes d’optimització Basant-se en
+
+### 1. Monitor de rendiment
+
+### 2. Registre d’errors
+
+### 3. Diccionari de dades
+
+### 4. Pla d’execució
+
+Optimització en ORACLE .........................................................................................
+
+Optimització del sistema gestor Optimització dels objectes de la bbdd Fragmentació / Desfragmentació Indexació Estadístiques Particionament Optimització de consultes
+
+Optimització del sistema gestor
+
+- Grandària dels blocs de dades -> paràmetre ‘db_block_size’ del spfile , 8k, 16k en datawarehouse
+
+### 2. Grandària i ubicació dels fitxers de dades -> tablespaces
+
+### 3. Deshabilitar processos ‘ocults’ -> autoextensible dels datafiles
+
+### 4. Grandària de l’emmagatzemament temporal -> afegir datafile al tablespace TEMP
+
+Paràmetre comú a la instància (CDB)
+
+Optimització Blocs – Extensions – Segments – fitxers – Tablespaces
+
+Optimització dels objectes de la bbdd
+
+### 1. Fragmentació de les taules
 
 ```sql
-anynou DATE:='01/ene/2024';
-B1 boolean := true;
-dataactual DATE:=SYSDATE;
-B2 boolean := false;
+alter table nom_taula move [compress];
 ```
 
-- Operacions
-
-+ - * / ** || := tutorial operadors Molt important, per documentar el codi Declaració ( i assignació ) Assignació de valors
-
-- Execució condicional
-
-IF condicion1 THEN instrucción/es; [ELSIF condicion2 THEN instrucción/es; ] [ELSE instrucción/es; ] END IF; CASE expr WHEN valor THEN instrucciones1 [WHEN valor THEN instrucciones2] [ ELSE instrucciones3] END CASE; CASE WHEN condicion1 THEN instrucciones1 [WHEN condicion2 THEN instrucciones2] [ ELSE instrucciones3] END CASE;
-
-- Bucles
-
-LOOP sentències EXIT (dins d’un if ) END LOOP; WHILE condició LOOP sentències END LOOP; FOR v_comptador IN [REVERSE] liminf..limsup LOOP sentències END LOOP;
-
-- Condicions
-
-var > num < >= <= = <> var2 >= num and var3=var3 // or not ( ) BETWEEN 1 and 10 LIKE expr IN ( , , ) NOT IN ( , , ) Compte amb el valor NULL ; operació IS NULL CONTINUE EXIT
-
-- Precedència d’operadors
-
-Operator Operation ** exponentiation +, - identity, negation *, / multiplication, division +, -, || addition, subtraction, concatenation comparison NOT logical negation AND conjunction (logical) OR inclusion (logical) 1+2*3-1 no és (1+2)*(3-1)
-
-Un procediment emmagatzemat o STORED PROCEDURE és un codi SQL preparat que es pot guardar, per la qual cosa el codi pot reutilitzar-se una vegada i una altra. (tindrà un nom) Així que, si es té una consulta SQL que s’ha d’escriure una vegada i una altra, es podrà guardar com un procediment emmagatzemat i després cridar-la per a executar-la.
-
-També pot passar paràmetres a un procediment emmagatzemat, de manera que el procediment emmagatzemat puga actuar en funció dels valors de paràmetre que es passen. Procediments Funcions Triggers
-
-Permisos
-
-- Creació i execució
-- Sols execució
-- Cap permís
+### 2. Índex
 
 ```sql
-GRANT CREATE PROCEDURE, CREATE TRIGGER TO <usu>;
+create index nom_ind on nom_taula (camp1, camp2,..);
 ```
 
-(si te permís de crear, també pot executar)
+alter index nom_ind rebuild;
+
+### 3. Actualització d’estadístiques
 
 ```sql
-GRANT EXECUTE ON <esquema>.<procedim> TO <usu> [WITH GRANT OPTION];
+execute dbms_stats.gather_table_stats(‘esquema’.’taula’);
+execute dbms_stats.gather_schema_stats(‘esquema’);
 ```
 
- Un usuari necessita tindre permís per executar rutines, o per crear-les i executar-es !! procediments funcions triggers Procediments Funcions Triggers El permís val per procediments I també per funcions
-
-Procediments [emmagatzemats]
-
-- No tornen cap informació (valor)
-- Com crear-los
-
-CREATE [OR REPLACE] PROCEDURE <nom_proc> [( <param1> [ IN | OUT | IN OUT ] <tipus>,..)] [AUTHID INVOKER | DEFINER] AS [<declaració variables>] BEGIN <codi pl/sql> [EXCEPTION] [<codi excepció>] END; / Un procediment [emmagatzemat] és un subprograma que executa una acció específica i que no retorna cap valor per si mateix, com succeeix amb les funcions. Un procediment té un nom, un conjunt de paràmetres (opcional) i un bloc de codi.
-
-Per defecte, definer (creador). Authid determina amb quins permisos s’executarà l’script
-
-Procediments - exemple CREATE OR REPLACE PROCEDURE Actualiza_Saldo(cuenta NUMBER, new_saldo NUMBER) IS -- Lloc per a Declaració de variables locals BEGIN UPDATE SALDOS_CUENTAS SET SALDO = new_saldo, DATA_ACTUALITZACIO = SYSDATE
+### 4. Particionament
 
 ```sql
-WHERE CO_CUENTA = cuenta;
+create table ....(  ) partition by range(nomcamp) (....);
 ```
 
-END Actualiza_Saldo; / En SQL*Plus, finalitza la definició del procediment (també es pot posar un punt . )
+Optimització dels objectes de la bbdd - índex
 
-Procediments
+### 1. Quan es crea una taula amb una clau primaria o unique, ORACLE crea un índex
 
-- Com executar-los
+automàticament
 
-execute <nom_proc> ( <param1>, <param2> ...); // oracle També amb exec execute <nom_proc> ; execute <nom_esquema>.<nom_proc> ; o call (en postgres)
-
-- Com esborrar-los
-
-DROP PROCEDURE nom_proc;
-
-- Com explorar-los
-
-En DD user_procedures
+### 2. Tipus Índex
 
 ```sql
-select object_name, object_type from user_procedures;
-select object_name, object_type, status from user_objects;
+create [bitmap | unique] index nom_ind on nom_taula (camp1, camp2,..);
 ```
 
-user_procedures user_source user_objects
+alter index nom_ind rebuild;
 
-Procediments
+- Com explorar-los En DD user_indexes
 
-- Com executar-los
-
-Notació posicional Es passen els valors dels paràmetres en el mateix orde en que el procedure els defineix. BEGIN
+select index_name , index_type ,table_name , tablespace_name , secondary
 
 ```sql
-actualiza_Saldo(200501,2500);
+from all_indexes where table_name = 'TAULA_A_CONSULTAR';
 ```
 
-COMMIT;
+Optimització dels objectes de la bbdd - Particionament Per exemple imaginem una taula de factures, on tenim el detall de la nostra facturació al llarg de 6 anys, 2017, 2018… 2022, si volguérem fer
 
 ```sql
-DBMS_OUTPUT.put (‘Saldo act’);
+SELECT SUM(total_fac) FROM facturacio WHERE any = 2019;
 ```
 
-END; Des de qualsevol rutina interna d’Oracle ( inclús des d’un bloc d’instruccions) es pot cridar a un procediment o funció invocant-la directament com una instrucció, sense la necessitat d’utilitzar execute o exec. També es poden utilitzar funcions i procediments de paquets, posant el nom del paquet, punt, el nom de la funció o procediment.
+En aquest exemple s'hauria de recórrer tota la taula (imaginem que parlem de 30 milions de registres en total, és molt no?), per aquest motiu un criteri possible per a particionar la taula seria per l'any de la data de la factura
 
-En sql*plus es deu activar prèviament amb SET serveroutput ON
-
-Procediments
-
-- Com executar-los
-
-Notació nominal Es passen els valors en qualsevol orde, nominant explícitament el paràmetre i el seu valor separats pel símbol =>. BEGIN
+Optimització dels objectes de la bbdd Particionament – exemple - ( by range )
 
 ```sql
-actualiza_Saldo(cuenta => 200501,new_saldo => 2500);
+create table nom_taula (idCOD NUMBER(6), idFECHA DATE)
 ```
 
-COMMIT; END;
-
-Funcions - Tornen informació (un únic valor, d’un tipus) Existeixen funcions predefinides que podem utilitzar en oracle
+partition by range( idFECHA ) ( partition p_1 values less than (TO_DATE('-01', 'YYYY-MM-DD')), partition p_2 values less than (TO_DATE('-01', 'YYYY-MM-DD')), partition p_3 values less than (TO_DATE('-01', 'YYYY-MM-DD')), partition p_4 values less than (TO_DATE('-01', 'YYYY-MM-DD')),
 
 ```sql
-select sysdate from dual;
-select sqrt(5) from dual;
-update taula set camp=lower(‘DadesDelCaMp’) ; <-- sense WHERE ,tota la taula!
+partition p_5 values less than (MAXVALUE) );
 ```
 
-Funcions numèriques, round,trunc,mod,power,sign,abs,... de cadenes (strings) , lower,upper,trim,substr,length,replace,reverse,... de treball en NULLs , nvl,nvl2, nullif, coalesce de dates, sysdate,last_day, extract, add_months, .... de conversió, to_number, to_date, to_char,...
+- Com explorar-les En DD user_tab_partitions
 
-i altres avançades... A més a més, Oracle permet definir noves funcions que podrem utilitzar. Com se solen usar les funcions
-
-Funcions - Tornen informació (un únic valor, d’un tipus)
-
-- Com definir-les / crear-les
-
-CREATE [OR REPLACE] FUNCTION <nom_func> [( <param> [ IN | OUT | IN OUT ] <tipus>,.. )] RETURN <tipus> [AUTHID INVOKER | DEFINER] IS [ <variables>] BEGIN <codi> RETURN <valor> END; / Sempre ha de tornar un valor
-
-Funcions En Oracle existeix una taula de sistema anomenada dual que permet executar consultes que no accedeixen a cap taula de la bbdd, la qual cosa és molt útil per a comprovar el resultat d'invocar una funció.
+SELECT table_name, partition_name, high_value
 
 ```sql
-select sysdate from dual;
-select funcio_de_usuari(valor_parametre) from dual;
-select funcio_de_usuari(nom_par => valor) from dual;
-                   -> notació posicional o nominal <-
+FROM user_tab_partitions WHERE table_name = 'NOM_TAULA';
 ```
 
-- Com explorar-les en el DD
-
-vista user_procedures
+Optimització dels objectes de la bbdd Particionament – exemple - ( by range ) - especificant tablespace
 
 ```sql
-select object_name, object_type from user_procedures;
+create table nom_taula (idCOD NUMBER(6), idFECHA DATE)
 ```
 
-Funcions i procediments estan junts en el DD, el camp object_type els diferencia user_procedures user_source user_objects
-
-Funcions -exemple- create or replace function f_incremento (avalor number, aincremento number) return number is begin
+partition by range( idFECHA ) ( partition p_1 values less than (TO_DATE('-01', 'YYYY-MM-DD')) tablespace tab1, partition p_2 values less than (TO_DATE('-01', 'YYYY-MM-DD')) tablespace tab2, partition p_3 values less than (TO_DATE('-01', 'YYYY-MM-DD')) tablespace tab3, partition p_4 values less than (TO_DATE('-01', 'YYYY-MM-DD')) tablespace tab4,
 
 ```sql
-return avalor + (avalor*aincremento/100);
+partition p_5 values less than (MAXVALUE) );
 ```
 
-end; --------------------------------------------------------- Utilitzar una funció.
+Optimització dels objectes de la bbdd Particionament – exemples
 
 ```sql
-select titulo,precio,f_incremento(precio,20) from libros;
+ALTER TABLE facturacion ADD PARTITION (PARTITION p4 VALUES LESS THAN (2010));
+ALTER TABLE facturacion DROP PARTITION p2;
+ALTER TABLE facturacion DROP PARTITION p2 UPDATE GLOBAL INDEX;
+ALTER TABLE facturacion MERGE PARTITION p2 AND p3 INTO PARTITION pnueva;
+ALTER TABLE facturacion SPLIT PARTITION p1 INTO
 ```
 
-Esborrar una funció. DROP FUNCTION f_incremento;
-
-Funcions - Exemple create or replace function notaCHAR (avalor number) return varchar2 is
+(PARTITION p11 VALUES LESS THAN (2006)
 
 ```sql
-valorretornado varchar2(20);
+(PARTITION p12 VALUES LESS THAN (MAXVALUE));
+ALTER TABLE facturacion TRUNCATE PARTITION p11;  (ESBORRA DADES !!)
 ```
 
-begin
+Optimització dels objectes de la bbdd Particionament – exemple ( by list)
 
 ```sql
-valorretornado:='';
+CREATE TABLE q1_sales_by_region
+      (deptno number,
+       deptname varchar2(20),
+       quarterly_sales number(10, 2),
+       state varchar2(2))
 ```
 
-if avalor>=5 then
+PARTITION BY LIST (state) (PARTITION q1_CV VALUES ('VA', 'AL', 'CS'), PARTITION q1_CA VALUES ('BA', 'TA', 'LL', 'GI'), PARTITION q1_MU VALUES ('MU'), PARTITION q1_EU VALUES ('BI', 'SS', 'VI'), PARTITION q1_GA VALUES ('SC', 'LU', 'VG'), PARTITION q1_IB VALUES ('MA', 'ME' , 'FO' ), PARTITION q1_nulos VALUES (NULL ),
 
 ```sql
-valorretornado:='APROBADO';
-   else valorretornado:='NO APROBADO';
+PARTITION q1_desconegut VALUES (DEFAULT )  );
 ```
 
-end if;
+Optimització dels objectes de la bbdd Particionament – exemple - passar una taula no particionada a particionada
 
 ```sql
-return valorretornado;
+create table nom_taula (idCOD NUMBER(6), idFECHA DATE) ;
+alter table nom_taula modify partition by range( idFECHA )
 ```
 
-end; / Podriem utilitzar la funció, per exemple, dins d’un select..
+( partition p_1 values less than (TO_DATE('-01', 'YYYY-MM-DD')), partition p_2 values less than (TO_DATE('-01', 'YYYY-MM-DD')), partition p_3 values less than (TO_DATE('-01', 'YYYY-MM-DD')), partition p_4 values less than (TO_DATE('-01', 'YYYY-MM-DD')),
 
 ```sql
-select count(*),notaCHAR(nota) from taula_notes group by notaCHAR(nota);
+partition p_5 values less than (MAXVALUE) );
 ```
 
-if avalor>=5 then
+Optimització de consultes Oracle activa un optimitzador de consultes automàticament i reescriu les consultes si ho estima necessari. Realitza les següents operacions.
+
+### 1. Avalua expressions i condicions
+
+### 2. Transforma sentències complexes
+
+### 3. Transforma vistes en consultes
+
+- Avalua els JOIN i ordena el accés i la forma d’accés.
+
+Ferramentes d’Optimització Pla d’execució Oracle guarda en el DD , les estadístiques de les taules En la Vista ==> user_tables Usant les estadístiques (DD) , el monitor de rendiment i el registre d’errors, proposa un pla d’execució, que determina com es pot resoldre una consulta de la forma més eficient Una vegada executades les consultes, els plans d’execució s’emmagatzemen en la cau de consultes Usa estadístiques de taules !!
+
+Ferramentes d’Optimització Pla d’execució Cada vegada que executem una sentència una de les coses que fa Oracle és crear un pla d'execució de la sentència. (SELECT, UPDATE, INSERT o DELETE) Un pla d'execució defineix la forma en què Oracle cerca o grava les dades. Decideix, per exemple, si usarà o no els índexs en una sentència SELECT DELETE PLAN_TABLE;
 
 ```sql
-return 'APROBADO';
+EXPLAIN PLAN FOR SELECT * FROM T_PEDIDOS WHERE CODPEDIDO = 5;
+select * from plan_table;
 ```
 
-else
+Usa estadístiques de taules !!
+
+Ferramentes d’Optimització Pla d’execució
 
 ```sql
-return 'NO APROBADO';
+grant select_catalog_role to nom_usu;
+grant select any dictionary to nom_usu;
 ```
 
-end if;
+El SQL*Plus permet consultar el pla d’execució de les consultes, executant la següent instrucció set autotrace traceonly explain El SQL Developer permet consultar el pla d’execució de forma gràfica, polsant F10 sobre la consulta abans de llançar-la  Un usuari necessita tindre permís per revisar els plans d’execució de les consultes Usa estadístiques de taules !!
 
-Funcions - Resum variables
+Pla d’execució El SQL Developer permet consultar el pla d’execució de forma gràfica, polsant F10 sobre la consulta abans de llançar-la
 
-Funcions - Resum
+Ferramentes d’Optimització SQL Tunning Advisor
 
-Disparadors (trigger) Un trigger o disparador en una Base de Dades , és un bloc de codi que s'executa (automàticament) quan es compleix una condició establida, com per exemple, realitzar una operació (INSERT, UPDATE, DELETE) sobre una taula (o sobre un camp d’una taula) Els triggers poden ser d'inserció (INSERT), actualització (UPDATE) o esborrat (DELETE).
+- SQL Developer - SQL Tuning Advisor
 
-El procediment s’executarà abans (BEFORE), desprès (AFTER) de que es realitze l’operació, o (INSTEAD OF) en compte de l’operació. Segons el cas, es poden utilitzar valors d’una fila abans de la operació o després de l’operació: :new i :old
+En una SQL, abans d’executar, pulsa ctrl + F12 L’usuari necessita permís/privilegi d’ ADVISOR Run sql: alt+F11  Un usuari necessita tindre permís per executar el SQL tuning advisor
 
-Disparadors (trigger) CREATE [OR REPLACE] TRIGGER <nom_disp> BEFORE | AFTER | INSTEAD OF INSERT | DELETE | UPDATE | UPDATE OF <colum1> [, colum2,...] ON <nom_taula> [REFERENCING OLD <nomold> NEW <nomnew> ] [FOR EACH ROW | STATEMENT] [WHEN condición] BEGIN <codi> END <nom_disp>; / Per defecte
+Ferramentes d’Optimització Monitor d’operacions Es consulta des de EM , secció SQL Monitor o des del paquet DBMS_SQL_MONITOR,
 
-Disparadors (trigger) FOR EACH ROW El codi s'executa tantes vegades com files afectades per la sentència que ha disparat el trigger (abans o després de cada fila) FOR EACH STATEMENT (per defecte) El codi s'executa una vegada, abans o després de la sentència que ha disparat el trigger WHEN condició El codi s’executa si es compleix la condició, en el moment que li haguera tocat executar-se.
+- procediment report_sql_monitor
+- vista V$SQL_MONITOR
 
-BeforeStatement BeforeRow AfterRow BeforeRow AfterRow BeforeRow AfterRow AfterStatement 7839 KING 1200 7698 BLAKE 2100 7788 SMITH 2300 Suposem un UPDATE que afecta a 3 files d’una taula. Observem quan s’executaria el trigger depenent del tipus.
-
-Disparadors (trigger) exemple create or replace trigger tr_actualizar_precio_libros before update of precio on libros for each row begin
+Ferramentes d’Optimització Operacions particulars d’Oracle Insercions massives : SQL Loader
 
 ```sql
-insert into control values(user,sysdate,:new.codigo,:old.precio,:new.precio);
+Insert Append:    INSERT /*+ APPEND */ INTO NOM_taula VALUES (...);
 ```
 
-end tr_actualizar_precio_libros; / El trigger s’activarà quan es llance una sentència que vaja a actualitzar el valor del camp «precio» de la taula «libros» (update of precio on libros) El codi s’executara abans (before) d’actualitzar el valor de «precio» per cada fila que es vaja a actualitzar (for each row)
+Nologging alter table t1 nologging; Truncate table truncate table t1 ; Intercanvi de particions Vistes materialitzades. Guarden consulta i dades. Solen guardar càlculs massius Merge Combina la inserció i la modificació en una sola instrucció Hints S’ha d’anar amb compte amb estes operacions, donat que redueixen la seguretat i la possibilitat de recuperació davant d’operacions no desitjades !!
 
-```sql
-Exemple:  UPDATE libros SET precio=precio*0.95 WHERE editorial=’McGraw Hill’;
-```
-
-Disparadors (trigger) raise_application_error create or replace trigger tr_actualitzar_preu_neg before update of precio on libros for each row begin if :new.preu<0 then
-
-```sql
-raise_application_error(-20020,’No es permet preu negatiu’);
-    end if;
-```
-
-end tr_actualitzar_preu_neg; / El procediment "raise_application_error" permet emetre un missatge d'error. El NUMERO de missatge ha de ser un número negatiu entre -20000 i -20999 i el missatge de TEXT una cadena de caràcters de fins a 2048 bytes. Si durant l'execució d'un trigger es produeix un error definit per l'usuari, s'anul·len totes les actualitzacions realitzades per l'acció del trigger així com l'esdeveniment que la va activar, és a dir, es reprén qualsevol efecte retornant un missatge i es desfà l'ordre executada.
-
-Disparadors (trigger) Per a un activador INSERT, :OLD no conté valors, i :NEW conté els valors nous. Per a un activador UPDATE, :OLD conté els valors antics, i :NEW conté els valors nous. Per a un activador DELETE, :OLD conté els valors antics, i :NEW no conté valors.
-
-- Com explorar-los
-
-En DD user_triggers
-
-```sql
-select * from user_triggers where trigger_name=’TR_MITRIGGER’;
-```
-
-dba_triggers dba_source
-
-Disparadors múltiples (trigger) exemple create or replace trigger tr_actualizar_precio_libros before insert or delete on llibres for each row Begin If inserting then
-
-```sql
-insert into control values(user,sysdate,:new.codigo,’INSERTAR’);
-    Else
-        insert into control values(user,sysdate,:old.codigo,’ESBORRAR’);
-    End if;
-```
-
-end tr_actualizar_precio_libros;
-
-El trigger s’activarà quan es llance una sentència insert o una sentència sentència delete sobre la taula llibres El codi s’executara abans (before) de cada fila afectada. INSERTING UPDATING DELETING
-
-Disparadors (trigger) En oracle existeixen altres tipus de triggers, segons l'esdeveniment que el dispara: ●Un INSERT, UPDATE o DELETE en una taula específica ●Un CREATE, ALTER o DROP en qualsevol objecte d’esquema ●Una arrancada(startup) de Base de Dades o un tancament (shutdown) d’instància ●Un missatge d’error ●Un inici o final de sessió d’usuari de Base de Dades Hem vist Els triggers es poden deshabilitar temporalment
-
-alter trigger tr_trig1 disable; alter trigger tr_trig1 enable; Es poden habilitar/deshabilitar tots els triggers d’una taula
-
-```sql
-alter table nom_taula disable all triggers;
-alter table nom_taula enable all triggers;
-```
-
-Disparadors (trigger) Restriccions en l'ús de disparadors ●No poden executar-se instruccions DDL ●No poden executar-se instruccions de TCL ●Per sentència, no te sentit l'ús de :old i :new ●Per fila. No es poden consultar les dades de la taula que ha disparat el trigger, es a dir, no es pot fer un SELECT ●Oracle no deixa crear triggers en l’esquema de SYS !!
-
-Seqüències Una seqüència (sequence) s'empra per a generar valors sencers seqüencials únics i assignar-li'ls a camps numèrics; s'utilitzen generalment per a les claus primàries de les taules garantint que els seus valors no es repetisquen. Una seqüència és una taula amb un camp numèric en el qual s'emmagatzema un valor i cada vegada que es consulta, s'incrementa tal valor per a la pròxima consulta.
-
-Permís
-
-```sql
-GRANT CREATE SEQUENCE TO <usu>;
-```
-
-Crear: CREATE SEQUENCE <NOM_SEQ>; Esborrar: DROP SEQUENCE <NOM_SEQ>; Utilitzar seqüència
-
-```sql
-INSERT INTO taula VALULES
-```
-
-(nom_seq.nextval, ‘valor1’,
-
-```sql
-‘varlor2’, ...);
-```
-
-Vista del DD:dba_sequences Arregla problema de concurrència
-
-Estructures de programació en PL/SQL
-
-- Comentaris
-- Variables
-- Execució condicional
-- Bucles
-- Blocs
-- Cursors
-- Transaccions
-- Excepcions
-
-Repàs de primer curs Altres estructures en PL/SQL
-
-En PL/SQL no es poden utilitzar sentències SELECT de sintaxi bàsica ( SELECT <lista> FROM <tabla> ). PL/SQL utilitza cursors per a gestionar les instruccions SELECT. Un cursor és un conjunt de registres retornat per una instrucció SQL. Dos tipus -Implícits => select into ( no es declaren, sols tornen un resultat o fila) -Explícits => es declaren i controlen pel programador. Poden tornar més d’un resultat Cursors Els cursors implícits només poden retornar una única fila. En cas que es retorne més d'una fila (o cap fila) es produirà una excepció: NO_DATA_FOUND o TOO_MANY_ROWS
-
-Per a treballar amb un cursor (explícit ) cal realitzar els següents passos
-
-- Declarar el cursor
-
-CURSOR .nom. IS .....
-
-- Obrir el cursor en el servidor
-
-OPEN .nom.
-
-- Recuperar cadascuna de les seues files (bucle)
-
-FETCH .nom. INTO ..variable/s.
-
-- Tancar el cursor
-
-CLOSE .nom. Cursors nom_cursor%NOTFOUND nom_cursor%FOUND En cursors implícits podem utilitzar SQL%FOUND SQL%NOTFOUND SQL%ROWCOUNT Després d’executar l’ordre
-
-Definir (en el DECLARE)
-
-```sql
-CURSOR nom_cursor (par1 tipus1, par2 tipus2, ..) IS SELECT ...;
-```
-
-Utilitzar (en el BEGIN)
-
-```sql
-OPEN nom_cursor ( par1, par2) ;
-```
-
-FETCH nom_cursor INTO v_aux; CLOSE nom_cursor; Cursors Important !! tancar el cursor Carrega la primera fila en v_aux V$open_cursor Vista dinàmica
-
-Utilitzar cursor amb sentència FOR cursor c_articulos is select idarticulo from .... FOR datos IN c_articulos LOOP sentències END LOOP; FOR datos IN nom_cursor(par1,par2) LOOP
-
-```sql
-update personal set nom=datos.nom, coddep=datos.coddep
-   where codemp=datos.codemp;
-```
-
-END LOOP; Cursors Quan un cursor torna moltes files, es pot processar amb una bucle FOR El bucle FOR tanca el cursor automàticament en acabar El bucle FOR fa el OPEN, FETCH, CLOSE cursor internament També es pot processar amb un bucle LOOP o un WHILE
-
-Utilitzar cursor amb sentència FOR create or replace procedure pr_guardar_preu as
-
-```sql
-cursor cli is select num1,preu from taula1 where estat=’actiu’;
-```
-
-begin for x in cli loop
-
-```sql
-insert into taula2 values ( x.num1, sysdate, x.preu, ‘estat’);
-    end loop;
-```
-
-end; / Cursors - exemple x és una variable de tipus ‘registre’ C u r s o r Registre
-
-Dades estructurades vs Dades escalars
-
-```sql
-a number(8,2);
-b varchar2(40);
-```
-
-c date; type llibre is record ( titol varchar2(50), autor varchar2(50),
-
-```sql
-preu number );
-```
-
-LL1 llibre; Cursors - exemple LL1 és una variable Registre Tipus escalars
-
-- Transaccions
-
-tablespace de UNDO ‘limitat’ commit en procediments
-
-- Excepcions
-
-BEGIN sentències EXCEPTION WHEN error THEN sentències quan error [RAISE_APPLICATION_ERROR(SQLCODE, SQLERRM)] *Para la execució de la rutina END; Si s’inicia una transacció i no es fa commit, UNDO creix i s’ompli Els procediments no inclouen per defecte un "commit". És important recordar-se d'executar un commit després de l'execució d'un procediment perquè els canvis siguen persistents en la base de dades.
-
-!
-
-- Excepcions
-
-EXCEPTION WHEN DIVISION BY ZERO THEN ... EXCEPTION WHEN OTHERS THEN ... sentències quan error
-
-```sql
-DBMS_OUTPUT.PUT_LINE(‘Se ha producido el error ’|| SQLERRM);
-```
-
-[RAISE_APPLICATION_ERROR(SQLCODE, SQLERRM)] *Para la execució de la rutina Oracle deshabilita per defecte l'eixida per pantalla. Per a veure els missatges emesos per "dbms_ouptput.put_line" s'haurà d'habilitar prèviament l'eixida per pantalla amb la sentència "SET SERVEROUTPUT ON" Des de qualsevol rutina interna de Oracle es pot cridar a qualsevol funció o procediment invocant-ho directament sense necessitat d'incloure "execute" Es poden utilitzar les funcions o procediments inclosos en paquets del DD, precedint el nom de procediment o funció del nom del paquet al qual pertany SQLCODE i SQLERRM existeixen dins dels blocs de captura d'excepcions
-
-Tasques automatitzables
-
-- Còpies de Seguretat
-
-Particionament
-
-- Execució d’estadístiques – en horari de càrrega mínima
-- Desfragmentació - alter table <nom> move;
-- Reconstrucció d'índex - alter index <nom> rebuild;
-- purgat i passe a històric
-- Tasques de BD
-- Tasques d’administració
-
-Estes tasques es veuen més endavant ... en la unitat 5
-
-Tasques d’administració -S’utilitzarà el diccionari de dades (amb un cursor) -Per a cada objecte de DD s’aplica la sentència corresponent Dins d’un procediment no es poden executar sentències de DDL directament. S’utilitzarà la sentència «execute immediate»
-
-```sql
-execute immediate (‘alter table’ || par_taula || ‘move’);
-```
-
-DDL: Data Definition Language
-
-Particionament Permet dividir una taula gran en subtaules Avantatges
-
-- Optimitza l’accés a la taula
-- Optimitza les tasques d’administració
-- Facilita el purgat de dades
-- Facilita el manteniment
-- Permet la realització de operacions d’optimització avançades
-
-Formes de particionar: -Particions fixes (es definix quan es crea la taula) -Particions variables (es definix al llarg del temps) Una taula sempre es particiona per un camp, definint el rang de valors de cada partició Este camp deu ser numèric , data o time i amb restricció de NOT NULL El particionament es veu més endavant...
-
-en la unitat 5
-
-Automatització de tasques en ORACLE .........................................................................................
-
-Eines del SO sqlplus usuari/password@servei @script.sql > log.txt I esta tasca la llancem amb el programador de tasques de SO problema de seguretat. El password està en clar Solució: Utilitzar eines del SGBD : dbms_scheduler
-
-DBMS Scheduler - Permisos
-
-```sql
-grant create job to <usuario>
-grant execute on dbms_scheduler to <usuario>;
-```
-
- Un usuari necessita tindre permís per crear jobs (treballs) i executar-los !! DD Vista del DD : dba_scheduler_jobs
-
-DBMS Scheduler DBMS_JOB en versions anteriors a 10g. Ara, DBMS_SCHEDULER Programa «jobs» i «chains»
-
-```sql
-DBMS_SCHEDULER.CREATE_JOB ( atribut=>valor, .....);
-DBMS_SCHEDULER.SET_JOB_ARGUMENT_VALUE(‘nom_job’,1,’valor’);
-DBMS_SCHEDULER.SET_JOB_ARGUMENT_VALUE(‘nom_job’,2,’valor2);
-DBMS_SCHEDULER.ENABLE(‘nom_job’);
-DBMS_SCHEDULER.DISABLE(‘nom_job’);
-DBMS_SCHEDULER.DROP_JOB(‘nom_job’);
-dbms_scheduler.set_attribute_null( name=>’nom’, attribute=>’a’);
-dbms_scheduler.set_attribute(name=>’nom’,attribute=>’a’,value=>’v’);
-```
-
-En SQL Developer -conexiones
-
-DBMS Scheduler - exemple BEGIN DBMS_SCHEDULER.CREATE_JOB ( job_name => 'nom_del_job', job_type => 'STORED_PROCEDURE', job_action => 'usuari1.actualitza_preus', start_date => sysdate , repeat_interval => 'FREQ=MONTHLY;BYMONTHDAY=1', auto_drop => FALSE,
-
-```sql
-comments           =>  'Aclariments del treball...',   );
-```
-
-END; / MENSUAL, CADA DIA 1 esquema.procedure Nom del treball Atributs Valors
-
-Automatització de tasques en Postgres .........................................................................................
-
-Automatització en postgres Des de SO cron ( linux ) Task manager ( windows) Des de postgres pgAgent (en pgAdmin) pg_cron (en servidor)
-
-Triggers en postgres Primer pas - Definició de la funció del trigger Segon pas - Definició del trigger CREATE OR REPLACE FUNCTION nom_funcio() RETURNS trigger AS $$ BEGIN sentencies RETURN NEW; (RETURN NULL;) END; $$ LANGUAGE 'plpgsql';
-
-Triggers en postgres Segon pas - Definició del trigger CREATE [ OR REPLACE ] TRIGGER name { BEFORE | AFTER | INSTEAD OF } { event [ OR ... ] } ON table_name [ FOR [ EACH ] { ROW | STATEMENT } ] [ WHEN ( condition ) ] EXECUTE { FUNCTION | PROCEDURE } function_name ( arguments )
-
-“ ” Activitat Investiga com funciona el pg_cron de postgres
+Els hints s'incorporen a una sentència DML en forma de comentari i han d'anar just darrere del comando principal. Per exemple, si es tractara d'una sentència SELECT el format seria el següent: SELECT /*+ COMANDO-HINT */ ...
 
 ---

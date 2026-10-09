@@ -2,11 +2,11 @@
 layout: default
 title: "UD2 — WRITER · Temari Complet"
 course_root: ".."
-badge: "1r ESO · UT2 Completa"
+badge: "1r ESO · UD2 — WRITER"
 prev_url: "../ut01/ut0103.html"
 prev_label: "⬅️ 1.3 Sistemes operatius"
 next_url: "../ut02/ut0201.html"
-next_label: "2.1 Continguts i Recursos ➡️"
+next_label: "2.1 Continguts Teòrics i Recursos ➡️"
 ---
 
 # 📘 UD2 — WRITER (Unitat Completa)
@@ -16,11 +16,11 @@ next_label: "2.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 Continguts i Recursos**](./ut0201.md)
+- [**2.1 Continguts Teòrics i Recursos**](./ut0201.md)
 
 ---
 
-# 2.1 Continguts i Recursos
+# 2.1 Continguts Teòrics i Recursos
 
 > **🔗 Recurs Web: Writer: Documentos y elementos. Procesador de textos**
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/01documentos_texto.php) ↗️**](http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/01documentos_texto.php)
@@ -84,21 +84,5 @@ next_label: "2.1 Continguts i Recursos ➡️"
 > [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/13rotulos_artisticos.php) ↗️**](http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/13rotulos_artisticos.php)
 >
 > Writer: Rótulos artísticos
-
-> **📌 🏷️ Apunt de la Unitat**
-> **EXAMEN**
-
-> **🔗 Recurs Web: Writer: Examen. Diario de un desgraciado**
-> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/ex01diariodesgraciado.php) ↗️**](http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/ex01diariodesgraciado.php)
->
-> Writer: Examen. Diario de un desgraciado
-
-> **📌 🏷️ Apunt de la Unitat**
-> **TRABAJO DE RECUPERACIÓN**
-
-> **🔗 Recurs Web: Writer: Trabajo de recuperación**
-> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/tr01writer_basico1.php) ↗️**](http://www.tuinstitutoonline.com/cursos/writerbasico1_v17es/tr01writer_basico1.php)
->
-> Writer: Trabajo de recuperación
 
 ---

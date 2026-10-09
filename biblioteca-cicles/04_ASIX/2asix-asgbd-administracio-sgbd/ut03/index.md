@@ -2,7 +2,7 @@
 layout: default
 title: "UD3 — Usuaris i permisos. Seguretat · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT3 Completa"
+badge: "2n ASIX · Grau Superior · UD3 — Usuaris i permisos. Seguretat"
 prev_url: "../ut02/ut0204.html"
 prev_label: "⬅️ 2.4 Solucions errors de connexió amb SQLDeveloper"
 next_url: "../ut03/ut0301.html"

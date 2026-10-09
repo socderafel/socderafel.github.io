@@ -2,9 +2,9 @@
 layout: default
 title: "UD5 — Bases de Datos · Temari Complet"
 course_root: ".."
-badge: "4t ESO · UT5 Completa"
+badge: "4t ESO · UD5 — Bases de Datos"
 prev_url: "../ut04/ut0401.html"
-prev_label: "⬅️ 4.1 Continguts i Recursos"
+prev_label: "⬅️ 4.1 Continguts Teòrics i Recursos"
 next_url: "../ut05/ut0501.html"
 next_label: "5.1 BBDD ➡️"
 ---
@@ -22,20 +22,6 @@ next_label: "5.1 BBDD ➡️"
 
 # 5.1 BBDD
 
-> **📌 🏷️ Apunt de la Unitat**
-> ### Recursos
->
-> __________________________________________________________________________________________________________________________________________________
-
-📎 **Material de laboratori (BBDD Biblioteca):** `BibliotecaCAS.odb`
-
-📎 **Material de laboratori (BBDD Marina):** `biblioteca.odb`
-
-> **📌 🏷️ Apunt de la Unitat**
-> ### Teoría
->
-> __________________________________________________________________________________________________________________________________________________
-
 > **🔗 Recurs Web: Presentación: Base de datos**
 > [**🌐 Obrir recurs extern (https://docs.google.com/presentation/d/e/2PACX-1vROa91UIpW6LN0hcsVPPLLej7GD_Gu5T8_dKgcalZhuwDYbRIxyVlCevBQ3FFONXhBCmxzjcLXG5INH/pub?start=false&loop=false&delayms=60000&slide=id.gcb9a0b074_1_0) ↗️**](https://docs.google.com/presentation/d/e/2PACX-1vROa91UIpW6LN0hcsVPPLLej7GD_Gu5T8_dKgcalZhuwDYbRIxyVlCevBQ3FFONXhBCmxzjcLXG5INH/pub?start=false&loop=false&delayms=60000&slide=id.gcb9a0b074_1_0)
 
@@ -48,19 +34,19 @@ next_label: "5.1 BBDD ➡️"
 > **🔗 Recurs Web: 3. Base: Formato, edición, validación, ordenación y filtrado de datos**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/03formedval_ordfilt_datos.php) ↗️**](https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/03formedval_ordfilt_datos.php)
 
-> **🔗 Recurs Web: 4. Base: Clave primaria. Edición de tablas (solo apartados 1 y 2)**
+> **🔗 Recurs Web: 4. Base: Clave primaria. Edición de tablas**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/04clave_primaria.php) ↗️**](https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/04clave_primaria.php)
 
 > **🔗 Recurs Web: 5. Base: Relaciones entre tablas. Integridad referencial**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/05relaciones_integridad.php) ↗️**](https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/05relaciones_integridad.php)
 
-> **🔗 Recurs Web: 6. Base: Consultas. Criterios de ordenación y selección. Informes (solo apartados 1,2,5 y 6)URL**
+> **🔗 Recurs Web: 6. Base: Consultas. Criterios de ordenación y selección. InformesURL**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/06consultas_informes.php) ↗️**](https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/06consultas_informes.php)
 
 > **🔗 Recurs Web: 7. Base: Formularios simples. Manipulación de datosURL**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/07formularios_simples.php) ↗️**](https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/07formularios_simples.php)
 
-> **🔗 Recurs Web: SKIP - 8. Base: Diseño de formularios**
+> **🔗 Recurs Web: 8. Base: Diseño de formularios**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/08disenyo_formularios.php) ↗️**](https://www.tuinstitutoonline.com/cursos/bbdd/basebasico1_v19es/08disenyo_formularios.php)
 
 > **🔗 Recurs Web: Presentación: Base de datos**

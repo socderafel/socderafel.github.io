@@ -2,7 +2,7 @@
 layout: default
 title: "UD6 — Distance Learning Managers · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT6 Completa"
+badge: "2n SMX · Grau Mitjà · UD6 — Distance Learning Managers"
 prev_url: "../ut05/ut0502.html"
 prev_label: "⬅️ 5.2 EN Article: Battle of the Clouds"
 next_url: "../ut06/ut0601.html"
@@ -26,8 +26,6 @@ next_label: "6.1 Resources: Reference Links ➡️"
 > [**🌐 Obrir recurs extern (https://es.wordpress.org/plugins/sensei-lms/) ↗️**](https://es.wordpress.org/plugins/sensei-lms/)
 
 ---
-
-07 - Resources: Reference Links
 
 Plataforma de formación Sakai - [http://www.sakaiproject.org](http://www.sakaiproject.org)
 Plataforma de formación Blackboard - [http://www.blackboard.com](http://www.blackboard.com)

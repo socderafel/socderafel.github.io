@@ -2,7 +2,7 @@
 layout: default
 title: "UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT4 Completa"
+badge: "2n ASIX · Grau Superior · UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia"
 prev_url: "../ut03/ut0302.html"
 prev_label: "⬅️ 3.2 Anàlisi Forense"
 next_url: "../ut04/ut0401.html"
@@ -22,9 +22,6 @@ next_label: "4.1 Clau simètrica i Hash ➡️"
 ---
 
 # 4.1 Clau simètrica i Hash
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### UD 3 Criptografia. Clau simètrica
 
 ---
 
@@ -175,11 +172,5 @@ Podem situar les dades ocultes (disfressats) en: • En la mateixa imatge • En
 CFGS Administració de Sistemes Informàtics en Xarxa Mòdul Seguretat i Alta disponibilitat UD3.2 Esteganografia La esteganografia té per tant una terna en l'equilibri de la qual radica la funció per a la qual s'ha desenvolupat. Habitualment, les tècniques de esteganografia que permeten ocultar major informació (quantitat) són menys robustes i passen menys desapercebudes (invisibilitat). Per contra, a major robustesa, normalment menor quantitat d'informació oculta.
 
 Tècniques mes utilitzades en esteganografia. • En documents • En imatges • En àudio • En vídeo • En arxius de qualsevol tipus. • Altres. Una nova tècnica esteganogràfica implica l'injectar retards (coneguts per la seua traducció a l'anglés com "delays") imperceptibles als paquets enviats sobre la xarxa des del teclat. Els retards en el tecleig dels comandos en alguns usos (telnet o programari d'escriptori remot) poden significar un retard en paquets, i els retards en els paquets es poden utilitzar per a codificar dades.
-
-> **✍️ Activitat: ESTEGANO-1 Busca en este document, informació amagada.**
-> Activitat: ESTEGANO-1 Busca en este document, informació amagada. pista (no està en esta pàgina) Activitat: ESTEGANO-2 En una mv Ubuntu 22.04, instal·la la utilitat Steghide i busca informació de com s'utilitza. Descriu les seues opcions i prova-les. Utilitza la imatge d'aquest enllaç i crea un fitxer de text anomenat secret.txt. Dins del fitxer escriu el teu nom i data de naixement. Amaga este fitxer dins d’una imatge.
-
-> **✍️ Activitat: ESTEGANO-3 En una mv Windows 10 , baixa la utilitat Fi**
-> Activitat: ESTEGANO-3 En una mv Windows 10 , baixa la utilitat FileFriend d' http://www.filefriend.net/ Utilitza l'opció d'amagar un fitxer dins d'un altre Activitat: ESTEGANO-4 Instal·la la utilitat exiftool i explora el fitxer del enllaç . Busca la «password» 2 de 2
 
 ---

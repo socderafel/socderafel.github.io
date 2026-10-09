@@ -2,11 +2,11 @@
 layout: default
 title: "UD2 — Criptografia · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT2 Completa"
+badge: "2n SMX · Grau Mitjà · UD2 — Criptografia"
 prev_url: "../ut01/ut0101.html"
-prev_label: "⬅️ 1.1 Continguts i Recursos"
+prev_label: "⬅️ 1.1 Principis de seguretat, amenaces, vulnerabilitats i anàlisi de riscos"
 next_url: "../ut02/ut0201.html"
-next_label: "2.1 Continguts i Recursos ➡️"
+next_label: "2.1 Criptografia simètrica, asimètrica, funcions hash i certificats digitals ➡️"
 ---
 
 # 📘 UD2 — Criptografia (Unitat Completa)
@@ -16,16 +16,43 @@ next_label: "2.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 Continguts i Recursos**](./ut0201.md)
+- [**2.1 Criptografia simètrica, asimètrica, funcions hash i certificats digitals**](./ut0201.md)
 
 ---
 
-# 2.1 Continguts i Recursos
+# 2.1 Criptografia simètrica, asimètrica, funcions hash i certificats digitals
 
-> **🔗 Recurs Web: VIDEO: Steganography, Hide Data in Media Files (Mr. Robot Hack)**
+### Seguretat Informàtica
+
+- 02 – Criptografia
+
+### Continguts
+
+- 14
+- hores
+- Unitat 2
+- Criptografia
+
+### Per què xifrar?
+
+### Criptografia
+
+### Simètrica i Asimètrica I
+
+### Simètrica i Asimètrica II
+
+### Xifrar i Firmar
+
+### PKI i DNIe
+
+---
+
+### Recursos Complementaris
+
+> **🔗 Recurs Web: Esteganografia i ocultació de dades en fitxers multimèdia**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=4EwFNYcOazQ) ↗️**](https://www.youtube.com/watch?v=4EwFNYcOazQ)
 
-> **🔗 Recurs Web: Firma Digital en documents Libreoffice**
+> **🔗 Recurs Web: Signatura digital en documents LibreOffice**
 > [**🌐 Obrir recurs extern (https://geekland.eu/firmar-digitalmente-documento-libreoffice/) ↗️**](https://geekland.eu/firmar-digitalmente-documento-libreoffice/)
 
 ---

@@ -20,12 +20,12 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Muntatg
 
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
-| **UD1** | **Unitat Didàctica 1** | 1 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UD2** | **Unitat Didàctica 2** | 7 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UD3** | **Unitat Didàctica 3** | 2 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UD4** | **Unitat Didàctica 4** | 6 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UD1** | **Components d'un Equip Microinformàtic** | 1 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UD2** | **Muntatge d'Equips, Processadors i Emmagatzematge** | 6 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UD3** | **Manteniment, Diagnosi i Perifèrics** | 2 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UD4** | **Seguretat, Còpies de Seguretat i Implantació de Programari** | 5 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
 
-## UD1 — Unitat Didàctica 1
+## UD1 — Components d'un Equip Microinformàtic
 
 `1r SMX · Grau Mitjà · UD1 · 1 apartats`
 
@@ -33,9 +33,9 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Muntatg
 
 - [**1.1 P1 | P2 | P3 - CONTINGUTS**](./ut01/ut0101.md)
 
-## UD2 — Unitat Didàctica 2
+## UD2 — Muntatge d'Equips, Processadors i Emmagatzematge
 
-`1r SMX · Grau Mitjà · UD2 · 7 apartats`
+`1r SMX · Grau Mitjà · UD2 · 6 apartats`
 
 [**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
@@ -43,11 +43,10 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Muntatg
 - [**2.2 P2 - PROCESADOR Y MEMORIA**](./ut02/ut0202.md)
 - [**2.3 P2 - CONT3 - AMD NOMENCLATURA PROCESADORS**](./ut02/ut0203.md)
 - [**2.4 P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS**](./ut02/ut0204.md)
-- [**2.5 P3 - Perifèrics i Communications**](./ut02/ut0205.md)
-- [**2.6 P3 - UNITATS D'EMMAGATZENATGE**](./ut02/ut0206.md)
-- [**2.7 DISCOS DUROS CHS ECHS LBA**](./ut02/ut0207.md)
+- [**2.5 P3 - UNITATS D'EMMAGATZENATGE**](./ut02/ut0205.md)
+- [**2.6 DISCOS DUROS CHS ECHS LBA**](./ut02/ut0206.md)
 
-## UD3 — Unitat Didàctica 3
+## UD3 — Manteniment, Diagnosi i Perifèrics
 
 `1r SMX · Grau Mitjà · UD3 · 2 apartats`
 
@@ -56,9 +55,9 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Muntatg
 - [**3.1 P1 P2 P3 - PDF CONTINGUTS**](./ut03/ut0301.md)
 - [**3.2 P1 P2 P3 - PRESENTACIÓ CLASSE**](./ut03/ut0302.md)
 
-## UD4 — Unitat Didàctica 4
+## UD4 — Seguretat, Còpies de Seguretat i Implantació de Programari
 
-`1r SMX · Grau Mitjà · UD4 · 6 apartats`
+`1r SMX · Grau Mitjà · UD4 · 5 apartats`
 
 [**📘 Obrir UD4 Completa en una sola pàgina**](./ut04/index.md)
 
@@ -67,4 +66,3 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Muntatg
 - [**4.3 CLASIF INFORMACION - CONTINGUTS**](./ut04/ut0403.md)
 - [**4.4 P1 P2 P3 PRESENTACIÓ CONTINGUTS**](./ut04/ut0404.md)
 - [**4.5 P1 P2 P3 - CONTINGUTS**](./ut04/ut0405.md)
-- [**4.6 P1 P2 P3 - PRESENTACIÓ**](./ut04/ut0406.md)

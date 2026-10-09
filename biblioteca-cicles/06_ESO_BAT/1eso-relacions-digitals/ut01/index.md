@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — L'ordinador i els seus components i els sistemes operatius · Temari Complet"
 course_root: ".."
-badge: "1r ESO · UT1 Completa"
+badge: "1r ESO · UD1 — L'ordinador i els seus components i els sistemes operatius"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
@@ -24,70 +24,17 @@ next_label: "1.1 L'ordinador i els seus components ➡️"
 
 # 1.1 L'ordinador i els seus components
 
-> **📌 Introducció de la Unitat**
-> **Equips informàtics** ![Imatge](http://www.tuinstitutoonline.com/img/logoslideshare.png)
->
-> Material en format de presentació SlideShare (v.14)
+- Concepte d'Informàtica. Hardware i software.
+- Tipus d'equips informàtics. Elements funcionals dels equips.
+- Perifèrics i dispositius d'emmagatzemament.
+- Unitats de mesura de la capacitat.
+- Conseqüències de l'ús prolongat de les tecnologies. Aspectes adictius dels medis digitals. Bon ús.
 
-> **📌 🏷️ Apunt de la Unitat**
-> - Concepte d'Informàtica. Hardware i software.
-> - Tipus d'equips informàtics. Elements funcionals dels equips.
-> - Perifèrics i dispositius d'emmagatzemament.
-> - Unitats de mesura de la capacitat.
-> - Conseqüències de l'ús prolongat de les tecnologies. Aspectes adictius dels medis digitals. Bon ús.
-
-> **📌 🏷️ Apunt de la Unitat**
-> [![Imatge](http://www.tuinstitutoonline.es/img/presentacion32.png)Elements d'un Sistema Informàtic](http://www.slideshare.net/slideshow/embed_code/25888133)
->
-> | **Elementos de un Sistema Informático** |  |  |
-> | --- | --- | --- |
-> |  |  |  |
-> |  |  |  |
-
-> **📌 🏷️ Apunt de la Unitat**
-> [![Imatge](http://www.tuinstitutoonline.es/img/presentacion32.png)Periféricos. Tipología y mantenimiento](http://www.slideshare.net/slideshow/embed_code/25888246)
->
-> | **Periféricos. Tipología y mantenimiento** |  |  |
-> | --- | --- | --- |
-> |  |  |  |
-> |  |  |  |
-
-> **🔗 Recurs Web: Pràctica de mecanografia**
-> [**🌐 Obrir recurs extern (http://www.artypist.com/es/curso-mecanografia/contenidos) ↗️**](http://www.artypist.com/es/curso-mecanografia/contenidos)
-
-> **🔗 Recurs Web: Mecanografia: Test de velocitat**
-> [**🌐 Obrir recurs extern (http://www.tuinstitutoonline.es/cursos/mecanografia_v1306/test_velocidad.php) ↗️**](http://www.tuinstitutoonline.es/cursos/mecanografia_v1306/test_velocidad.php)
-
-> **📌 🏷️ Apunt de la Unitat**
-> [![Imatge](http://www.tuinstitutoonline.es/img/presentacion32.png)Seguridad e higiene](http://www.slideshare.net/slideshow/embed_code/26231769)
->
-> | **Seguridad e higiene** |  |  |
-> | --- | --- | --- |
-> |  |  |  |
-> |  |  |  |
-
-> **📌 🏷️ Apunt de la Unitat**
-> - Sistemes operatius comuns. Tipus.
-> - L'escriptori de treball del sistema operatiu Lliurex. Personalització de l'entorn de treball.
-> - Organització de la informació.
-> - Operacions bàsiques amb arxius i carpetes.
-> - Sistemes preventius amb l'ús de les tecnologies.
-
-> **📌 🏷️ Apunt de la Unitat**
-> [![Imatge](http://www.tuinstitutoonline.es/img/presentacion32.png)Uso práctico del ordenador. Uso básico](http://www.slideshare.net/slideshow/embed_code/25888185)
->
-> | **Uso práctico del ordenador. Uso básico** |  |  |
-> | --- | --- | --- |
-> |  |  |  |
-> |  |  |  |
-
-> **📌 🏷️ Apunt de la Unitat**
-> [![Imatge](http://www.tuinstitutoonline.es/img/presentacion32.png)Protección del sistema](http://www.slideshare.net/slideshow/embed_code/25888281)
->
-> | **Protección del sistema** |  |  |
-> | --- | --- | --- |
-> |  |  |  |
-> |  |  |  |
+- Sistemes operatius comuns. Tipus.
+- L'escriptori de treball del sistema operatiu Lliurex. Personalització de l'entorn de treball.
+- Organització de la informació.
+- Operacions bàsiques amb arxius i carpetes.
+- Sistemes preventius amb l'ús de les tecnologies.
 
 > **🔗 Recurs Web: joc ciberseguretat**
 > [**🌐 Obrir recurs extern (http://cyberscouts.osi.es/) ↗️**](http://cyberscouts.osi.es/)
@@ -108,17 +55,11 @@ L'ORDINADOR I ELS SEUS COMPONENTS
 
 Al llarg de l'últim segle la tecnologia ha anat adquirint una importància progressiva en la vida de les persones i en el funcionament de la societat. Dins de les diverses tecnologies destaca la informàtica. Actualment, la informàtica està present a tots els àmbits i ha canviat, entre altres, la forma de treballar, de divertir-se i de relacionar-se. La nostra societat s'ha vist condicionada per tots aquests canvis fins al punt de denominar-se societat de la informació.
 
-> **✍️ Activitat 1. La informàtica en les nostres vides a) Fes una llist**
-> Activitat 1. La informàtica en les nostres vides a) Fes una llista de 3 activitats que faces habitualment amb l'ordinador. b) Pregunta a casa, sobre activitats que abans feien de forma manual i ara fan mitjançant l'ordinador i fes-ne una llista (mínim de 3 elements).
-
 ### 2. CONCEPTES BÀSICS
 
 Un ordinador és una màquina electrònica que rep i processa dades per a convertir- les en informació útil. Un ordinador està format per un conjunt de components electrònics que poden executar amb exactitud, rapidesa i d'acord amb les instruccions que reben per part d'un programa.
 
 D'esta definició, s'intuïx que l’ordinador està format per dos tipus de components: • Maquinari (hardware). Conjunt de dispositius físics (electrònics, mecànics, etc.), connectats entre sí, que composen l’ordinador. • Programari (software). Conjunt de mètodes, programes i procediments necessaris per fer possible la realització d’una tasca específica.
-
-> **✍️ Activitat 2. Respon a les següents qüestions: a) Què és el maquin**
-> Activitat 2. Respon a les següents qüestions: a) Què és el maquinari? Escriu tres exemples. b) Què és el programari? Escriu tres elements de programari que tingues a l'ordinador de casa. Informàtica Ciència que estudia el tractament de la informació mitjançant l'ús d'ordinadors.
 
 ### 3. MAQUINARI
 
@@ -147,9 +88,6 @@ L'ORDINADOR I ELS SEUS COMPONENTS  Memòria principal (o RAM). Manté la info
 Els ports de connexió permeten la connexió a l'ordinador de diversos dispositius. Són com els endolls que permeten connectar els aparells electrònics a la corrent elèctrica però amb diferents formes i funcions. Aquestos són els tipus més habituals:  Port PS/2. Connecten el ratolí i el teclat. Els ports són de diferents colors: el verd, per al ratolí i el lila, per al teclat.
 
  Port USB. Connecten “en calent” i a una gran velocitat una amplia quantitat de dispositius. A banda del tipus A, que és el més habitual hi ha diversos tipus de connectors: mini-usb i micro-usb.  Port LAN. Connecten l'ordinador a una xarxa.  Ports d’àudio (mini-jack). Connecten els dispositius de so, com el micròfon i els altaveus. El color indica la funció.
-
-> **✍️ Activitat 4. Ports de connexió a) Què són els ports de connexió.**
-> Activitat 4. Ports de connexió a) Què són els ports de connexió. b) Fes un llistat dels ports de connexió que tens a l'ordinador que més utilitzes a casa.
 
 #### 3.4. PERIFÈRICS
 

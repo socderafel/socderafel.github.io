@@ -1,161 +1,283 @@
 ---
 layout: default
-title: "UD7 — Servei de Transferència de Fitxers (FTP) · Temari Complet"
+title: "UD2 — Assignació Dinàmica d'Adreces (DHCP) · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT2 Completa"
-prev_url: "../ut03/ut0303.html"
-prev_label: "⬅️ 6.3 Les Guest additions"
+badge: "2n SMX · Grau Mitjà · UD2 — Assignació Dinàmica d'Adreces (DHCP)"
+prev_url: "../ut01/ut0101.html"
+prev_label: "⬅️ 1.1 Repàs Interconnexió de Xarxes"
 next_url: "../ut02/ut0201.html"
-next_label: "7.1 FTP ➡️"
+next_label: "2.1 presentació DHCP ➡️"
 ---
 
-# 📘 UD7 — Servei de Transferència de Fitxers (FTP) (Unitat Completa)
+# 📘 UD2 — Assignació Dinàmica d'Adreces (DHCP) (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**7.1 FTP**](./ut0201.md)
+- [**2.1 presentació DHCP**](./ut0201.md)
+- [**2.2 Presentació DHCP. Visió general**](./ut0202.md)
+- [**2.3 Servei DHCP**](./ut0203.md)
+- [**2.4 Servidor DHCP**](./ut0204.md)
 
 ---
 
-# 7.1 FTP
+# 2.1 presentació DHCP
 
-> **📌 🏷️ Apunt de la Unitat**
-> ### **U6: Servicio de Transferencia de ficheros (FTP)**
->
-> **Duración**
->
-> :
->
-> **Guía de estudio**
->
-> :
->
-> En esta ocasión nos vamos a ocupar del conocido servicio de FTP, cuyo aprendizaje realizaremos una vez más sobre la base del escenario que venimos manejando a lo largo del curso. La implementación la haremos basándonos en CentOS, a través de las diferentes versiones existentes de este servicio.
->
-> **Organización las sesiones:**
->
-> | Sesión | Contenido |
-> | --- | --- |
-> | 7 | Autoevaluación inicialIntroducción al servicio en la pizarra (15 min.)Estudio enunciado del escenario + Organización grupalEntrega acta inicial |
-> | 11 | Trabajo individual |
-> | 12 | Trabajo individual |
-> | 14 | Reunión grupal de seguimientoEntrega acta de seguimiento |
-> | 18 | Trabajo individual |
-> | 19 | Trabajo individual |
-> | 21 | Reunión grupal de seguimientoEntrega acta de seguimiento |
-> | 25 | Trabajo individual |
-> | 26 | Estudio en equipo del escenarioCorrección cuestionario por pares |
-> | 28 | Test de conocimientosEvaluación compañerosEntrega documentación |
-> Recursos
+> **🔗 Recurs Web: Carpeta Drive: U1-DHCP**
+> [**🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1wjOGrwCN9aAbw9nrx2x_OVahJH687otP?usp=sharing) ↗️**](https://drive.google.com/drive/folders/1wjOGrwCN9aAbw9nrx2x_OVahJH687otP?usp=sharing)
 
-> **🔗 Recurs Web: Enunciado Caso Práctico**
-> [**🌐 Obrir recurs extern (https://docs.google.com/document/d/10dWqO8_LV_JhO5Zloe4pWmOTCqacC5bjP-Va_MWjchs/pub) ↗️**](https://docs.google.com/document/d/10dWqO8_LV_JhO5Zloe4pWmOTCqacC5bjP-Va_MWjchs/pub)
+> **🔗 Recurs Web: 3.0-Introduccion-DHCP**
+> [**🌐 Obrir recurs extern (https://drive.google.com/file/d/0B4LlvGqxqWsOaGpjRlZQbTI4U0U/view?usp=sharing) ↗️**](https://drive.google.com/file/d/0B4LlvGqxqWsOaGpjRlZQbTI4U0U/view?usp=sharing)
 
-📎 **Material de laboratori (Modelo actas equipo):** `Acta_Planificacion_Inicial_U6.rtf`, `Acta_seguimiento_semanal_U6.rtf`
+> **🔗 Recurs Web: 3.1-dhcp3-server-options**
+> [**🌐 Obrir recurs extern (https://drive.google.com/file/d/0B4LlvGqxqWsOcFVPbGcxWHQ3Qlk/view?usp=sharing) ↗️**](https://drive.google.com/file/d/0B4LlvGqxqWsOcFVPbGcxWHQ3Qlk/view?usp=sharing)
 
 ---
 
-FTP
+presentació DHCP
 
-2 SMX – Servicios en Red 2 SMX – Servicios en Red Tema 6: Tema 6: Servicio FTP Servicio FTP
+SINTESIS DHCP 2º SMR SERVICIOS EN RED Tema 3: Servicio DHCP
 
-Tema 6: Servicio FTP
+DHCP Servicio TCP/IP que asigna direcciones IP de forma dinámica a los equipos conectados a una red. RFC2131 v4 Cliente DHCP RFC2132 v4 Servidor DHCP RFC3315 v6 Servicio DHCP
 
-### 1. Introducción
+ASIGNACION IP Los valores TCP/IP han de introducirse en cada equipo previamente, uno a uno. Existe posibilidad de equivocación y tener que volver a reconfigurar los valores TCP/IP. Habrá que dedicar más tiempo (configuración manual) y podrá tener más fallos la red.
 
-### 2. Servidores FTP
+Debe cambiarse la IP de forma manual cada vez que se reubica un equipo. MANUAL
 
-### 3. Estructura
+ASIGNACION IP Los valores TCP/IP son asignados cuando arranca el cliente sin necesidad de intervención del administrador. Se centraliza la información de manera que una vez configurado y probado, no puede haber equivocaciones. Se ahorra tiempo y esfuerzo de administración.
 
-### 4. Modos de Conexión
+En una red permite la movilidad de los equipos entre sus diferentes subredes. Se evitan colisiones de dirs IP y se optimiza el consumo de éstas. AUTOMATICA O DINAMICA
 
-4.1.Modo Activo 4.2.Modo Pasivo
+Elementos del servicio Cliente (puerto 68 UDP) Servidor (puerto 67 UDP) El servidor DHCP permite configurar de forma automática: Dirección IP Máscara subred Tiempo de concesión (lease time) Tiempo de renovación (renewal time) Tiempo de reconexión (rebinding time)
 
-### 5. Tipos de Archivos
+Elementos del servicio (2) De forma opcional puede configurar: Puerta enlace Servidores DNS Nombre del dominio DNS En redes Windows (Tipo de nodo WINS y servidor WINS).
 
-### 6. Tipos de Usuario
+Tipos de asignación Dinámica e ilimitada. Asigna una IP de forma permanente a una máquina cliente la primera vez que hace la solicitud al servidor DHCP y hasta que el cliente la libera. Se usa cuando el nº clientes no varia demasiado. Dinámica y limitada: se cede una IP libre de manera temporal, como si se racionase su uso.
 
-### 7. Cuotas de Usuario
+Tiempo: 10 a 15 minutos. Es habitual en compañías proveedoras de acceso a internet. Dinámica con reserva: asigna la misma IP a un ordenador concreto, en función de su MAC. Ej: servidores.
 
-Índice
+PROTOCOLO DHCP: Función Este protocolo regula la manera como un cliente DHCP obtiene una configuración IP válida y el orden en qué debe hacerlo. Cada red debe tener un servidor DHCP configurado y activo para atender las solicitudes de los clientes, ofreciéndoles una IP válida durante un tiempo determinado (tiempo de concesión).
 
-Tema 6: Servicio FTP El Protocolo FTP (File Transfer Protocol) es uno de los primeros que se empezó a explotar en redes TCP/IP. Aporta la funcionalidad de conectarse de forma remota a un servidor FTP y realizar con él intercambio de ficheros. Al principio de la era Internet, era un protocolo muy utilizado, pero hoy en día, no es así, pues existen otros protocolos más jóvenes (como el http), con los que se puede realizar la función de la transferencia de ficheros, de forma sencilla y segura. Aún así, actualmente, FTP es muy útil en determinados escenarios de uso, como el de “almacén público de datos”.
+Cuando el cliente libera esa conexión, se lo comunica al servidor y la IP quedará libre para cualquier otro dispositivo que la necesite.
 
-Un problema básico de FTP es que está pensado para ofrecer la máxima velocidad en la conexión, pero no la máxima seguridad, ya que todo el intercambio de información, desde el login y password del usuario en el servidor hasta la transferencia de cualquier archivo, se realiza en texto plano sin ningún tipo de cifrado 1.- Introducción
+PROTOCOLO DHCP: Elementos Cliente configurado de forma automática. Servidor configurado correctamente. Escenario: CLIENTE UDP 68 SERVIDOR UDP 67 1 DHCP Discover 2 DHCP Offer 3 DHCP Request 7 DHCP Release 4 DHCP ACK 5 DHCP Renew 6 DHCP ACK
 
-Tema 6: Servicio FTP Esto hace que sea posible el sniffing de los mismos, provocando un agujero de seguridad en el servidor. Para solucionar este problema son de gran utilidad aplicaciones como scp y sftp, incluidas en el paquete SSH, que permiten transferir archivos pero cifrando todo el tráfico.
+PROTOCOLO DHCP: Ordenes CLIENTE DHCP DISCOVER DHCP REQUEST DHCP DECLINE DHCP RELEASE DHCP INFORM DHCP RENEW SERVER DHCP OFFER DHCP ACK DHCP NAK
 
-Existe otro protocolo similar, llamado TFTP (Trivial File Transfer Protocol), que está pensado para su uso dentro de redes locales fiables. Este último utiliza un sistema de control más sencillo y usa UDP como protocolo de transporte, que no implementa control de errores.
+PROTOCOLO DHCP: Negociación Negociación = orden en el que se envían los mensajes anteriores y su contenido
 
-1.- Introducción
+- Hay un servidor DHCP configurado y esperando a recibir peticiones.
 
-Tema 6: Servicio FTP Existe una gran diversidad de servidores FTP para UNIX/Linux. Cabe destacar dos servicios: ProFTPD: Puede incorporar cifrado. Es muy recomendable y está constantemente actualizado y revisado. – http://www.proftpd.org/goals.html VSFTPD (Very Safe FTPD): Compatible con IPv6, cifrado SSL, multihilo... Es muy moderno, hace especial hincapié en la seguridad y es muy eficiente y muy rápido.
+#### 2) Cuando un cliente DHCP se conecta a la red, envía un mensaje de broadcast
 
-https://security.appspot.com/vsftpd.html 2.- Servidores FTP
+#### 3) Todos los servidores DHCP que han recibido la solicitud responden al cliente
 
-Tema 6: Servicio FTP Aunque la transferencia de archivos de un sistema a otro parece simple y sencilla, se deben resolver algunos problemas. Por ejemplo, dos sistemas pueden utilizar convenciones diferentes para los nombres de los archivos. Dos sistemas pueden tener diferentes formas de representar texto y datos. Dos sistemas pueden tener diferentes estructuras de directorios. Todos estos problemas han sido resueltos por FTP utilizando un enfoque muy sencillo y elegante.
+proponiéndole una IP.
 
-FTP difiere de otras aplicaciones cliente-servidor en que establece dos conexiones entre las estaciones. Una conexión se utiliza para la transferencia de datos y la otra para información de control (órdenes y respuestas). La separación de las órdenes de la transferencia de datos hace que FTP sea más eficiente.
+- El cliente acepta una de ellas y se lo comunica al servidor elegido.
 
-3.- Estructura
+#### 5) El servidor le contesta con un mensaje que incluye la MAC de cli, la IP y máscara
 
-Tema 6: Servicio FTP La conexión de control utiliza reglas muy simples de conexión. Se necesita transferir una línea de orden o una línea de respuesta en cada instante de tiempo. La conexión de datos, por otro lado, necesita reglas más complejas debido a la variedad de tipos de datos transferidos.
+de subred asignadas, la IP del servidor y el período de validez de la dirección IP.
 
-FTP utiliza dos puertos TCP bien conocidos: el puerto 21 se utiliza para la conexión de control y el puerto 20 para la conexión de datos. La figura siguiente muestra el modelo básico de FTP. El cliente tiene tres componentes: la interfaz de usuario, el proceso del control del cliente y el proceso de transferencia del cliente. La conexión de control permanece abierta durante toda la sesión FTP interactiva. La conexión de datos se abre y se cierra para cada archivo a transferir.
+#### 6) Esta información permanece asociada al cliente mientras éste no desactive su
 
-3.- Estructura
+interfaz de red o finalice el plazo del ”contrato”. NOTA: El plazo del contrato o alquiler es el tiempo en que un cliente DHCP mantiene como propios los datos que le asignó un servidor.
 
-Tema 6: Servicio FTP 3.- Estructura
+PROTOCOLO DHCP: Negociación
 
-Tema 6: Servicio FTP 3.- Estructura
+#### 7) Una vez vencido el plazo del contrato, el servidor puede
 
-Tema 6: Servicio FTP Servidor FTP: Las aplicaciones más comunes de los servidores FTP suelen ser el alojamiento web, en el que sus clientes utilizan el servicio para subir sus páginas web y sus archivos correspondientes; o como servidor de backup (copia de seguridad) de los archivos importantes que pueda tener una empresa. Para ello, existen protocolos de comunicación FTP para que los datos se transmitan cifrados, como el SFTP (Secure File Transfer Protocol).
+- renovar la información del cliente (la dir. IP), y asignarle otra nueva
+- ampliar el plazo (manteniendo la misma información).
 
-Cliente FTP: Un usuario se conecta a un servidor FTP mediante un cliente FTP. – Navegadores que incluyen una función FTP: permiten conectarse a un servidor FTP mediante una URL que comienza por ftp:// . (no es la mejor opción de seguridad) – Clientes de FTP básicos en modo consola integrados en los sistemas operativos – Clientes con opciones añadidas e interfaz gráfica.
+#### 8) Antes de que sea consumido el período de validez, el cliente envía una
 
-3.- Estructura
+solicitud de renovación al servidor, que será atendida o no.
 
-Tema 6: Servicio FTP Modo Activo: Se establece una conexión desde el cliente hacia el puerto 21 del servidor. En esa conexión se comunica al servidor qué puerto utiliza el cliente para la recepción de datos. El servidor inicia la conexión abriendo el puerto 20 y abre el puerto indicado en el cliente para la transmisión de datos.
+#### 9) Si llega a expirar completamente el tiempo de validez, tiene que pedir
 
-4.- Modos de conexión: Servidor Activo y Pasivo
+una nueva. NOTA: El cliente sabe que una respuesta es para él, por la MAC que lleva incorporada el mensaje del servidor y le contesta.
 
-Tema 6: Servicio FTP 4.- Modos de conexión: Servidor Activo y Pasivo
+DHCP: Proceso de asignación de IPs Es necesario conocer dos conceptos: Direcciones disponibles: rangos de direcciones a asignar a los clientes y que está configurado en el servidor DHCP. Intervalo de exclusión: Algunas direcciones que no se desea que sean asignadas a clientes, ejemplo: direcciones de servidores, que son estáticas.
 
-Tema 6: Servicio FTP Modo Pasivo: La conexión la comienza el cliente hacia el puerto 21 en el servidor FTP. Para la transferencia de datos, el cliente solicita un puerto abierto superior al 1024 en el servidor. Cuando recibe la contestación, establece la conexión con el servidor para la transferencia de datos. El cliente siempre es el que inicia las conexiones.
+Se van concediendo direcciones del rango que tiene configurado hasta que se agotan, si alguna es liberada, pasa a estar disponible.
 
-4.- Modos de conexión: Servidor Activo y Pasivo
+CLIENTE DHCP Función → obtener IP automáticamente Negociación de órdenes → Ver mensajes anteriores Configuración del cliente → Windows / Ubuntu
 
-Tema 6: Servicio FTP 4.- Modos de conexión: Servidor Activo y Pasivo
+- Cambiar las propiedades de la interfaz: Manual
 
-Tema 6: Servicio FTP Problema en Modo Activo: ●El problema en este modo es que se abre una conexión para datos desde el servidor a la maquina cliente, esto es, una conexión de fuera a dentro.. Si la maquina cliente está protegida por un firewall, es posible que filtre o bloquee la conexión entrante, al ser un proceso desconocido.
+por Configurar de forma automática (DHCP).
 
-●En el modo pasivo es el cliente el que inicia ambas conexiones, de control y de datos, con lo cual el firewall no tiene ninguna conexión entrante que filtrar. 4.- Modos de conexión: Servidor Activo y Pasivo
+- Desactivar y activar el interfaz para que nos
 
-Tema 6: Servicio FTP Desde el punto de vista de FTP, los archivos se agrupan en dos tipos: Archivos ASCII: son archivos de texto plano. Archivos binarios: todo lo que no son archivos de texto: ejecutables (.exe), imágenes, archivos de audio, vídeo, archivos comprimidos, etc.
+concedan una nueva dirección.
 
-A la hora de descargar o subir un archivo del servidor hay que indicar el tipo, ya que si no la información del archivo puede destruirse. Afortunadamente, los clientes FTP suelen detectar el tipo de archivo que se transfiere para establecerlo automáticamente. 5.- Tipos de Archivos
+SERVIDOR DHCP Definición: proporciona un mecanismo rápido de configuración de red para el cliente. Función: optimizar proceso asignación. Estructura del archivo de configuración Archivo de texto que recoge una serie de entradas (# comentarios) compuestas por Parametros y declaraciones.
 
-Tema 6: Servicio FTP La conexión de un usuario al servidor FTP puede hacerse como inicio de una sesión de un usuario que existe en el sistema, o como un usuario genérico llamado anónimo. El acceso al sistema de archivos del servidor está limitado, según el tipo de usuario que se conecta.
+Ej: [option] <nombre_parámetro> [valores]; Dispositivos que ofrecen el servicio DHCP (routers o servidores) Problemas del servicio DHCP (más de un servidor DHCP activo, falten direcciones, etc.)
 
-Una vez establecida la conexión con el servidor, el usuario tiene disponible un conjunto de órdenes que permiten al usuario subir o bajar archivos del servidor. 6.- Tipos de Usuario
+---
 
-Tema 6: Servicio FTP Usuarios locales FTP: aquellos que disponen de una cuenta en la máquina que ofrece el servicio FTP. Usuarios virtuales FTP: no existen en el sistema, únicamente se crean para el acceso a través de FTP. 6.- Tipos de Usuario
+# 2.2 Presentació DHCP. Visió general
 
-Tema 6: Servicio FTP Usuarios anónimos: usuarios cualesquiera que, al conectarse al servidor FTP teclean la palabra «anonymous». Solamente con eso se consigue acceso a los archivos del FTP, aunque con menos privilegios que un usuario normal. Normalmente tienen acceso limitado y solo se puede leer y copiar archivos que sean públicos.
+De Cristian i Robert
 
-Es la forma más cómoda fuera del servicio web de permitir que todo el mundo tenga acceso a cierta información sin que para ello el administrador de un sistema tenga que crear una cuenta para cada usuario. 6.- Tipos de Usuario
+### 3. SERVICIO
 
-Tema 6: Servicio FTP Vsftpd tiene la posibilidad de establecer cuotas de disco para los usuarios del servicio, siendo necesario gestionarlas desde el sistema operativo, y requiriendo la instalación del paquete quota. Asignación de cuotas a usuarios o grupos A la hora de asignar cuotas, tienes varias opciones para imponer límites en el espacio de disco que un usuario o grupo puede ocupar, y cuántos ficheros pueden crear.
+DHCP 1. ¿Qué es el servicio DHCP? 2. ¿Se puede trabajar sin el servicio DHCP? 2.1. Características generales del servicio DHCP. 2.2. Funcionamiento del protocolo DHCP. 2.3. Conﬁguración del cliente DHCP. 2.4. Autoconﬁguración de red sin DHCP. 2.5. Conﬁguración del servidor DHCP.
 
-Puedes limitar el uso de disco basándote en el espacio en disco (cuotas de bloque) o en el número de ficheros (cuotas de inodo) o una combinación de ambas. Cada uno de estos límites a su vez se divide en dos categorías: límites suaves (soft) y límites duros (hard).
+Cristian Castelblanque Roberto Brines 2º SMX-B
 
-7.- Cuotas de Usuario
+¿Qué es el servicio DHCP? El DHCP, protocolo que permite obtener a un equipo/cliente una IP de forma dinámica.
 
-Tema 6: Servicio FTP Límites suaves (soft): Pueden excederse por un período de tiempo llamado periodo de gracia, que por defecto es una semana. Si un usuario sobrepasa su período de gracia, el límite suave se convertirá en un límite duro y no se permitirán usos de disco adicionales. Cuando el usuario devuelve su cuota de uso de recursos a un punto por debajo de su límite suave, el período de gracia se reinicia al valor por defecto del sistema. Este tiempo de gracia se puede ajustar para cada usuario individual o para todos los usuarios globalmente Un límite duro (hard) especifica el límite absoluto, que no puede ser excedido nunca. Una vez que un usuario alcanza su límite duro no puede realizar más ubicaciones en el sistema de ficheros en cuestión. Por ejemplo, si el usuario tiene un límite duro de 500 kb y está utilizando 490 kb, el usuario solo puede ocupar otros 10 kb. Un intento de ocupar 11 kb más fallará.
+¿Se puede trabajar sin el servicio DHCP? Sí, con la configuración manual
 
-7.- Cuotas de Usuario
+Características generales del servicio DHCP. -Asignación automática e ilimitada. -Asignación dinámica y limitada. -Asignación manual o estática con reserva.
+
+Funcionamiento del protocolo DHCP En una comunicación DHCP, Se dan 4 fases.
+
+Conﬁguración del Cliente DHCP WINDOWS 7
+
+UBUNTU
+
+Autoconﬁguración de red sin DHCP APIPA, permite configuración dinámica de IP de enlace local
+
+Conﬁguración del Servidor DHCP
+
+---
+
+# 2.3 Servei DHCP
+
+SINTESIS DHCP 2º SMR SERVICIOS EN RED Tema 3: Servicio DHCP
+
+DHCP Servicio TCP/IP que asigna direcciones IP de forma dinámica a los equipos conectados a una red. RFC2131 v4 Cliente DHCP RFC2132 v4 Servidor DHCP RFC3315 v6 Servicio DHCP
+
+ASIGNACION IP Los valores TCP/IP han de introducirse en cada equipo previamente, uno a uno. Existe posibilidad de equivocación y tener que volver a reconfigurar los valores TCP/IP. Habrá que dedicar más tiempo (configuración manual) y podrá tener más fallos la red.
+
+Debe cambiarse la IP de forma manual cada vez que se reubica un equipo. MANUAL
+
+ASIGNACION IP Los valores TCP/IP son asignados cuando arranca el cliente sin necesidad de intervención del administrador. Se centraliza la información de manera que una vez configurado y probado, no puede haber equivocaciones. Se ahorra tiempo y esfuerzo de administración.
+
+En una red permite la movilidad de los equipos entre sus diferentes subredes. Se evitan colisiones de dirs IP y se optimiza el consumo de éstas. AUTOMATICA O DINAMICA
+
+Elementos del servicio Cliente (puerto 68 UDP) Servidor (puerto 67 UDP) El servidor DHCP permite configurar de forma automática: Dirección IP Máscara subred Tiempo de concesión (lease time) Tiempo de renovación (renewal time) Tiempo de reconexión (rebinding time)
+
+Elementos del servicio (2) De forma opcional puede configurar: Puerta enlace Servidores DNS Nombre del dominio DNS En redes Windows (Tipo de nodo WINS y servidor WINS).
+
+Tipos de asignación Dinámica e ilimitada. Asigna una IP de forma permanente a una máquina cliente la primera vez que hace la solicitud al servidor DHCP y hasta que el cliente la libera. Se usa cuando el nº clientes no varia demasiado. Dinámica y limitada: se cede una IP libre de manera temporal, como si se racionase su uso.
+
+Tiempo: 10 a 15 minutos. Es habitual en compañías proveedoras de acceso a internet. Dinámica con reserva: asigna la misma IP a un ordenador concreto, en función de su MAC. Ej: servidores.
+
+PROTOCOLO DHCP: Función Este protocolo regula la manera como un cliente DHCP obtiene una configuración IP válida y el orden en qué debe hacerlo. Cada red debe tener un servidor DHCP configurado y activo para atender las solicitudes de los clientes, ofreciéndoles una IP válida durante un tiempo determinado (tiempo de concesión).
+
+Cuando el cliente libera esa conexión, se lo comunica al servidor y la IP quedará libre para cualquier otro dispositivo que la necesite.
+
+PROTOCOLO DHCP: Elementos Cliente configurado de forma automática. Servidor configurado correctamente. Escenario: CLIENTE UDP 68 SERVIDOR UDP 67 1 DHCP Discover 2 DHCP Offer 3 DHCP Request 7 DHCP Release 4 DHCP ACK 5 DHCP Renew 6 DHCP ACK
+
+PROTOCOLO DHCP: Ordenes CLIENTE DHCP DISCOVER DHCP REQUEST DHCP DECLINE DHCP RELEASE DHCP INFORM DHCP RENEW SERVER DHCP OFFER DHCP ACK DHCP NAK
+
+PROTOCOLO DHCP: Negociación Negociación = orden en el que se envían los mensajes anteriores y su contenido
+
+- Hay un servidor DHCP configurado y esperando a recibir peticiones.
+
+#### 2) Cuando un cliente DHCP se conecta a la red, envía un mensaje de broadcast
+
+#### 3) Todos los servidores DHCP que han recibido la solicitud responden al cliente
+
+proponiéndole una IP.
+
+- El cliente acepta una de ellas y se lo comunica al servidor elegido.
+
+#### 5) El servidor le contesta con un mensaje que incluye la MAC de cli, la IP y máscara
+
+de subred asignadas, la IP del servidor y el período de validez de la dirección IP.
+
+#### 6) Esta información permanece asociada al cliente mientras éste no desactive su
+
+interfaz de red o finalice el plazo del ”contrato”. NOTA: El plazo del contrato o alquiler es el tiempo en que un cliente DHCP mantiene como propios los datos que le asignó un servidor.
+
+PROTOCOLO DHCP: Negociación
+
+#### 7) Una vez vencido el plazo del contrato, el servidor puede
+
+- renovar la información del cliente (la dir. IP), y asignarle otra nueva
+- ampliar el plazo (manteniendo la misma información).
+
+#### 8) Antes de que sea consumido el período de validez, el cliente envía una
+
+solicitud de renovación al servidor, que será atendida o no.
+
+#### 9) Si llega a expirar completamente el tiempo de validez, tiene que pedir
+
+una nueva. NOTA: El cliente sabe que una respuesta es para él, por la MAC que lleva incorporada el mensaje del servidor y le contesta.
+
+DHCP: Proceso de asignación de IPs Es necesario conocer dos conceptos: Direcciones disponibles: rangos de direcciones a asignar a los clientes y que está configurado en el servidor DHCP. Intervalo de exclusión: Algunas direcciones que no se desea que sean asignadas a clientes, ejemplo: direcciones de servidores, que son estáticas.
+
+Se van concediendo direcciones del rango que tiene configurado hasta que se agotan, si alguna es liberada, pasa a estar disponible.
+
+CLIENTE DHCP Función → obtener IP automáticamente Negociación de órdenes → Ver mensajes anteriores Configuración del cliente → Windows / Ubuntu
+
+- Cambiar las propiedades de la interfaz: Manual
+
+por Configurar de forma automática (DHCP).
+
+- Desactivar y activar el interfaz para que nos
+
+concedan una nueva dirección.
+
+SERVIDOR DHCP Definición: proporciona un mecanismo rápido de configuración de red para el cliente. Función: optimizar proceso asignación. Estructura del archivo de configuración Archivo de texto que recoge una serie de entradas (# comentarios) compuestas por Parametros y declaraciones.
+
+Ej: [option] <nombre_parámetro> [valores]; Dispositivos que ofrecen el servicio DHCP (routers o servidores) Problemas del servicio DHCP (más de un servidor DHCP activo, falten direcciones, etc.)
+
+---
+
+# 2.4 Servidor DHCP
+
+Instalación del servidor DHCP ●Podemos hacerlo desde la línea de comandos con derechos de administrador: # apt­get install dhcp3­server ●o bien desde Synaptic buscando dhcp3­server
+
+Instalación del servidor DHCP ●Tras la instalación obtendremos un mensaje de error similar al siguiente debido a que aún no hemos realizado la configuración pertinente del servidor.
+
+Configuración del servidor DHCP ●El servidor DHCP deberá saber: – Rangos de direcciones IP que puede conceder – Parámetros adicionales (puerta de enlace, servidores DNS, etc...). ●Una configuración TCP/IP mínima debe contener: – la dirección IP – la máscara de subred
+
+Configuración del servidor DHCP ●Otros parámetros: – Dirección IP – Máscara de subred – Dirección de difusión o broadcast (192.168.0.255) – Puerta de enlace – Servidores DNS – etc...
+
+Configuración del servidor DHCP ●Condiciones de concesión: – Tiempo de cesión por defecto – Tiempo de cesión máximo – Otros parametros más. ●Esta información compone la configuración del servidor DHCP.
+
+Configuración del servidor DHCP ●Archivo de configuración del servidor DHCP /etc/dhcp/dhcpd.conf ●Consta de: – Parte principal (valores por defecto) ●especifica los parámetros generales que definen la concesión y los parámetros adicionales que se proporcionarán al cliente.
+
+Secciones (concretan a la principal) ●Subnet – Especifican rangos de direcciones IPs que serán cedidas a los clientes que lo soliciten. ●Host – Especificaciones concretas de equipos.
+
+Configuración del servidor DHCP ●Notación IP – Subred 192.168.0.0/24 es equivalente a: ●DS: 192.168.0.0 ●MS: 255.255.255.0 (24 bits a 1) ●Sección Subnet ejemplo: // Rango de cesión subnet 192.168.0.0 netmask 255.255.255.0 { range 192.168.0.60 192.168.0.90; } // Rango de cesión y parámetros adicionales subnet 192.168.0.0 netmask 255.255.255.0 { option routers 192.168.0.254; option domain­name­servers 80.58.0.33, 80.58.32.97; range 192.168.0.60 192.168.0.90; }
+
+Configuración del servidor DHCP ●Configuración concreta a cliente concreto identificándolo por la dirección MAC de su tarjeta de red. – La dirección MAC (MAC address) es un número único, formado por 6 octetos, grabado en la memoria ROM de las tarjetas de red ethernet fijado de fábrica.
+
+Se escriben los 6 octetos en hexadecimal separados por dos puntos ':'. ●Los tres primeros octetos indican el fabricante y los tres siguientes el número de serie en fabricación.
+
+Configuración del servidor DHCP ●Comandos: – ifconfig, ipconfig, winipconfig
+
+Configuración del servidor DHCP ●Sección Host ejemplo: // Crear una reserva de dirección IP host Profesor5 { hardware ethernet 00:0c:29:c9:46:80; fixed­address 192.168.0.50; option routers 192.168.0.213; option domain.name "iesromerovargas.net"; option netbios­name­servers 192.168.0.250; }
+
+// Ejemplo de archivo dhcp.conf # Sample configuration file for ISC dhcpd for Debian # $Id: dhcpd.conf,v 1.4.2.2/10 03:50:33 peloy Exp $ # Opciones de cliente y de dhcp aplicables por defecto a todas las secciones # Estas opciones pueden ser sobreescritas por otras en cada sección option domain­name­servers 195.53.123.57; # DNS para los clientes (atenea) option domain­name "iesromerovargas.net"; # Nombre de dominio para los clientes option subnet­mask 255.255.255.0; # Máscara por defecto para los clientes default­lease­time 600; # Tiempo en segundos del 'alquiler' max­lease­time 7200; # Máximo tiempo en segundos que durará la concesión # Especificación de un rango subnet 192.168.0.0 netmask 255.255.255.0 { range 192.168.0.60 192.168.0.80; # Rango de la 60 a la 80 inclusive option broadcast­address 192.168.0.255; # Dirección de difusión option routers 192.168.0.254; # Puerta de enlace option domain­name­servers 80.58.0.33; # DNS (ej: el de telefónica) default­lease­time 6000; # Tiempo en segundos que durará la concesión } # Configuración particular para un equipo host aula5pc6 { hardware ethernet 00:0c:29:1e:88:1d; # Dirección MAC en cuestión fixed­address 192.168.0.66; # IP a asignar (siempre la misma) }
+
+Arranque y parada manual del servidor DHCP ●El servidor DHCP, al igual que todos los servicios en Debian, dispone de un script de arranque y parada en la carpeta /etc/init.d. – Arrancar el servidor DHCP
+
+```bash
+sudo /etc/init.d/dhcp3­server start
+```
+
+Parar el servidor DHCP
+
+```bash
+sudo /etc/init.d/dhcp3­server stop
+```
+
+Reiniciar el servidor DHCP
+
+```bash
+sudo /etc/init.d/dhcp­server restart
+```
 
 ---

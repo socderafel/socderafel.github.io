@@ -2,8 +2,8 @@
 layout: default
 title: "UD2 — USO DE ESTILOS · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT2 Completa"
-prev_url: "../ut01/ut0106.html"
+badge: "2n DAW · Grau Superior · UD2 — USO DE ESTILOS"
+prev_url: "../ut01/ut0105.html"
 prev_label: "⬅️ 1.5 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A ➡️"
@@ -17,26 +17,14 @@ next_label: "2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A ➡️"
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A**](./ut0201.md)
-- [**2.2 TEORÍA CSS PROPIEDAD DISPLAY**](./ut0203.md)
-- [**2.3 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE**](./ut0204.md)
-- [**2.4 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO**](./ut0205.md)
-- [**2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI**](./ut0206.md)
+- [**2.2 TEORÍA CSS PROPIEDAD DISPLAY**](./ut0202.md)
+- [**2.3 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE**](./ut0203.md)
+- [**2.4 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO**](./ut0204.md)
+- [**2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI**](./ut0205.md)
 
 ---
 
 # 2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **SECCIÓN 1: INTRODUCCIÓN A CSS**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **SECCIÓN 2: PROPIEDADES DE FUENTE Y TEXTO**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **SECCIÓN 3: LOS COLORES Y LOS FONDOS**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **SECCIÓN 4: FLOTAR Y POSICIONAR**
 
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — Technologies for Web Development · Temari Complet"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT1 Completa"
+badge: "2n SMX · Grau Mitjà · UD1 — Technologies for Web Development"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
@@ -17,12 +17,11 @@ next_label: "1.1 Resources: Example of HTML+CSS ➡️"
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**1.1 Resources: Example of HTML+CSS**](./ut0101.md)
-- [**1.2 Resources: CSS Template Collection**](./ut0102.md)
-- [**1.3 Resources: Reference Links**](./ut0103.md)
+- [**1.2 Resources: Reference Links**](./ut0102.md)
+- [**1.3 HTML Example**](./ut0103.md)
 - [**1.4 HTML Example**](./ut0104.md)
-- [**1.5 HTML Example**](./ut0105.md)
-- [**1.6 Cheatsheet HTML (Manz)**](./ut0106.md)
-- [**1.7 Cheatsheet CSS (Manz)**](./ut0107.md)
+- [**1.5 Cheatsheet HTML (Manz)**](./ut0105.md)
+- [**1.6 Cheatsheet CSS (Manz)**](./ut0106.md)
 
 ---
 
@@ -335,24 +334,7 @@ Creative Commons may be contacted at http://creativecommons.org/ <http://creativ
 
 ---
 
-# 1.2 Resources: CSS Template Collection
-
-01 - Recursos: Colección de plantillas CSS
-
-> **💡 📦 Contingut del paquet comprimit (html_templates_css.zip)**
-> - `css/beachsunset.tar.gz`
-> - `css/beachsunset.zip`
-> - `css/brewedcoffee.zip`
-> - `css/chocolatebrown.zip`
-> - `css/coolblack.zip`
-> - `css/flattering.zip`
-> - `css/pamphlet.zip`
-> - `css/pinkish.zip`
-> - `css/superior.zip`
-
----
-
-# 1.3 Resources: Reference Links
+# 1.2 Resources: Reference Links
 
 01 - Referencias
 
@@ -382,7 +364,7 @@ Gestor de MySQL phpMyAdmin - [http://www.phpmyadmin.net](http://www.phpmyadmin.n
 
 ---
 
-# 1.4 HTML Example
+# 1.3 HTML Example
 
 #### 📦 1.html
 
@@ -472,7 +454,7 @@ Aquest és el primer text de Html
 
 ---
 
-# 1.5 HTML Example
+# 1.4 HTML Example
 
 #### 📦 primer.html
 
@@ -529,7 +511,7 @@ Text
 
 ---
 
-# 1.6 Cheatsheet HTML (Manz)
+# 1.5 Cheatsheet HTML (Manz)
 
 [https://www.emezeta.com/articulos/html5-cheatsheet-chuleta-html](https://www.emezeta.com/articulos/html5-cheatsheet-chuleta-html)
 
@@ -570,7 +552,7 @@ IdiomaU-ISOíCV9(8 IdiomaU-ISOíCV9(8 formatoUdeUarchivo formatoUdeUarchivo mét
 
 ---
 
-# 1.7 Cheatsheet CSS (Manz)
+# 1.6 Cheatsheet CSS (Manz)
 
 Columnas columnDwidth0y[size]; columnDcount0k[number]; columns0k width count auto Posicionamiento absolute position0k top.right.bottom.left0k[size]y clipDpath0kurl6shape0svg9y overflow0k auto auto fixed relative static visible hidden scroll auto Tablas borderDcollapse0 borderDspacing0ky[size]; captionDside0k emptyDcells0 tableDlayout0k separate collapse top bottom show hide auto fixed 1mm 1in 1cm 1pc 1pt 25.4mm 10mm 4.23mm 0.35mm Márgeneskykespaciados margin.padding0k margin.padding0k margin.padding0k margin.padding0k top right bottom left top rightyleft bottom topybottom leftyright topyrightybottomyleft Listas listDstyleDimage0kurl6image0png9;y listDstyleDposition0 listDstyleDtype0kdisc circle none inside outside square none decimal decimal,leading,zero lower,alpha upper,alpha lower,roman upper,roman listDstyle0k type position image backgroundDcolor0y[color]; backgroundDimage0kurl6image0jpg9; backgroundDrepeat0k backgroundDattachment0k backgroundDposition0k[pos,x]y[pos,y]; background0k repeat none repeat,x repeat,y no,repeat scroll fixed color image repeat attachment position color0y[color]; Coloreskykfondos Bordes borderDcolor0y[color]; borderDwidth0k[size]; borderDstyle0k[style];y thin medium thick border0k width style color Colores Keywords0yRoyalBlue; Hexadecimal0yR%SC/ES;yyyyyR%CE; RGBkmodel0yRGB6C85SH85LL89; HSLkmodel0kHSL6LL85AS#533#9; currentColor transparent withkalphakchannel RGBA6C85SH85LL85yH089; HSLA6LL85AS#533#5yH089; solid dotted dashed double groove ridge inset outset Estilos FuenteskEvariacionesF fontDvariant0k textDdecoration0 textDtransform0k normal none none small,caps underline overline line,through capitalize uppercase lowercase Fuentes fontDfamily0y[fontS]5y[fontL]5y[font7]5y000y; fontDsize0k[size]yyyyyyyyyyyyyyyyyyy fontDstyle0k fontDweight0k[SHH,/HH]y serif sans,serif cursive fantasy monospace xx,small x,small small medium large x,large xx,large smaller larger normal italic oblique normal bold lighter bolder font0k style variant weight size2height family Perfiles outlineDcolor0y[color]; outlineDstyle0k[style]; outlineDwidth0k[size]; outline0 thin medium thick width style color invert Tiposkdekelementos display0k list,item table table,cell table,row inline block inline,block none visibility0kvisible hidden collapse FuentekEalineacioneskykespaciadoF Desplazamiento float0k clear0 left none right left none right both 15 5 -5 zDindex0 SintaxiskCSS selectorkkHidkk#classkk0pseudoclasskk00pseudoelementkk[attr]kk letterDspacing0y[size]; lineDheight0k[size];yyyyyyyyyyyyyyyyyy textDindent0k[size]; wordDspacing0k[size]; whiteDspace0k tabDsize0y[size]; textDalign0 verticalDalign0k[size] normal normal normal normal no,wrap pre pre,line pre,wrap left center right justify baseline sub super top middle bottom text,top text,bottom borderDtopD( borderDrightD( borderDbottomD( borderDleftD( Separadorkdekcolumnas columnDruleDwidth0k[size]; columnDruleDstyle0k[style]; columnDruleDcolor0k[color];y columnDrule0kwidth style color columnDgap0y[size]; columnDspan0k[number]; columnDfill0kbalance auto normal all http://www.emezeta.com/ Creadospors@Manzs(shttp://twitter.com/Manzs)s DISEÑO WEB CSS3 CHEAT SHEET propertykk0kkvaluekkA } { (Dtop (Dleft (Dright (Dbottom A A A 2em normal 1em 0.5em 1ex 2ex 4ex Cursoreskdelkratón none cursor0yurl6image0png9 default crosshair help move pointer progress text wait context,menu cell vertical,text alias copy no,drop not,allowed all,scroll col,resize row,resize ,resize s se sw n w e ne nw border padding margin top-left top-right bottom-right bottom-left top bottom left right Ubicaciones Dimensiones maxDwidth0y[size]; minDwidth0k[size]; width0k[size] auto none none (Dheight ]#k*#kk[]#k[*# a#kb#kkkkkA#kB# i#kii#kkkkkkkkI#kII# shape
 

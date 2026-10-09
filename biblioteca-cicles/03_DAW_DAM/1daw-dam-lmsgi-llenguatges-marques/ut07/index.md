@@ -1,205 +1,63 @@
 ---
 layout: default
-title: "UD2 — Llenguatge XML · Temari Complet"
+title: "UD7 — Programació amb JavaScript i DOM · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Grau Superior · UT7 Completa"
-prev_url: "../ut08/ut0801.html"
-prev_label: "⬅️ 1.1 UD1 Introducción a los Lenguajes de Marcas"
+badge: "1r DAW / DAM / ASIX · Grau Superior · UD7 — Programació amb JavaScript i DOM"
+prev_url: "../ut06/ut0601.html"
+prev_label: "⬅️ 6.1 Continguts Teòrics i Recursos"
 next_url: "../ut07/ut0701.html"
-next_label: "2.1 XML ➡️"
+next_label: "7.1 Programació amb JavaScript i DOM ➡️"
 ---
 
-# 📘 UD2 — Llenguatge XML (Unitat Completa)
+# 📘 UD7 — Programació amb JavaScript i DOM (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**2.1 XML**](./ut0701.md)
-- [**2.2 Ejemplos en XML**](./ut0702.md)
+- [**7.1 Programació amb JavaScript i DOM**](./ut0701.md)
 
 ---
 
-# 2.1 XML
+# 7.1 Programació amb JavaScript i DOM
 
-> **🔗 Recurs Web: Tutorial de xml estructuras de datos - Etiquetas (Elementos) y Atributos**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=cQ5xECYH760) ↗️**](https://www.youtube.com/watch?v=cQ5xECYH760)
+> **🔗 Recurs Web: UD7- JavaScript**
+> [**🌐 Obrir recurs extern (https://www.w3schools.com/js/default.asp) ↗️**](https://www.w3schools.com/js/default.asp)
 >
-> Un minitutorial de XML básico.
-> El autor del vídeo llama etiquetas a lo que nosotros llamamos elementos.
-
----
-
-Lenguajes de Marcas Tema 2: XML (eXtensible Markup Language) Vicent Gómez Ciclo Formativo de Grado Superior
-
-Un documento XML es un archivo de texto que contiene un determinado número de etiquetas estructuradas en forma de árbol. Los elementos del árbol están vinculados entre ellos a través de las ramas que se hayan creado, existiendo un único nodo o elemento raíz Estructura de un Documento XML único nodo o elemento raíz.
-
-Lenguajes de Marcas
-
-### UD 2: XML (eXtensible Markup Language)
-
-Elemento raíz Prólogo Elemento hijo Atributo Estructura de un Documento XML Lenguajes de Marcas
-
-Ejemplo 2.1 Queremos representar los datos de un correo electrónico. correo (elemento raíz), está compuesto por diferentes tipos de informaciones (hijos): Ejemplo Documento XML Correo: Remitente: el que envía el correo Alias dirección Destinatario: el que recibe el correo Alias dirección Asunto: tema del correo Texto: texto del correo párrafos Lenguajes de Marcas
-
-Ejemplo 2.1 <?xml version="1.0" encoding="UTF-8"?> <correo> <remitente> <alias>patxi</alias> <direccion>patxi_sanchis@ieslasenia.org</direccion> </remitente> Ejemplo Documento XML <destinatario> <alias>jose_chamorro</alias> <direccion>jose.chamorro@ieslasenia.org</direccion> </destinatario> <asunto>reunión de departamento</asunto> <texto> <parrafo>Haremos reunión en el aula 3, el miércoles 12, a las 13:00 horas </parrafo> </texto> </correo> Lenguajes de Marcas
-
-### 1. El prólogo de un documento XML
-
-### 2. Elementos
-
-### 3. Atributos
-
-### 4. La raíz de un documento
-
-Estructura de un Documento XML
-
-### 5. Los comentarios
-
-### 6. Caracteres especiales
-
-### 7. Documentos válidos y bien formados
-
-### 8. Los espacios de nombres
-
-Lenguajes de Marcas
-
-El prólogo de un documento representa la primera línea del documento XML. Puede contener la siguiente información
-
-- version: versión XML empleada
-- encoding
-
-codificación de los caracteres, archivos de internacionalización Documento XML internacionalización.
-
-- standalone: (yes/no) especifica si el documento depende de
-
-otra gramática distinta al XML.
-
-- Parámetros de validación y estilos: vínculos hacia la información
-
-DTD para la validación o a las hojas de estilo CSS o XLS para la presentación. <?xml version="1.0" encoding="UTF-8"?> Lenguajes de Marcas
-
-Los elementos de un documento representan la estructura en árbol del documento XML. Los elementos se encuentran delimitados por etiquetas de apertura y cierre (<>) con el siguiente formato: <nombre>valor del elemento</nombre> Documento XML <nombre>valor del elemento</nombre> Los elementos hijos se anidan dentro de los padres y las etiquetas se colocan en el orden correcto (no se puede mezclar el orden de las etiquetas).
-
-Etiqueta de cierre Etiqueta de apertura Texto Lenguajes de Marcas
-
-Orden de las etiquetas: L l i d Documento XML Los elementos vacios se pueden expresar: <nombre></nombre> <nombre/> Los nombre tienen las siguientes características
-
-- Son sensibles a mayúsculas y minúsculas.
-- Se permiten: '-','_', '.' y caracteres alfanuméricos.
-- Los espacios no están permitidos.
-
-Lenguajes de Marcas
-
-Los atributos representan información adicional de los elementos. Se expresan detrás del nombre del elemento y en la etiqueta de apertura. Se indica el nombre del atributo y su valor. Documento XML <nombre atributo="valor">valor_elemento</nombre> El numero de atributos de un elemento es ilimitado y estos se separan por espacios.
-
-Los atributos no se pueden repetir y da igual el orden en el que se ponga. Lenguajes de Marcas
-
-Ejemplo 2.2 <empresa> <nombre>todo webs</nombre> <persona tipo="directivo"> <nombre>paco</nombre> </persona> Ejemplo Atributos XML </persona> <persona tipo="empleado"> <nombre>juana</nombre> </persona> <persona tipo="cliente"> <nombre>alex</nombre> </persona> </empresa> Lenguajes de Marcas
-
-La raíz de un documento es el elemento padre del documento. Debe ser único. correo remitente destinatario asunto texto Documento XML Los comentarios no se consideran partes del documento ya que solo son anotaciones que no serán validadas. Se expresan con: <!–- Esto es un comentario --> remitente destinatario asunto texto alias dirección alias dirección párrafo Lenguajes de Marcas
-
-Los caracteres especiales son algunos caracteres que al tener un significado especial en el lenguaje hay que tratarlos de manera diferente. Caracteres como <, >, ', ", &, @,… Se pueden expresar de dos formas
-
-- Usando la sección CDATA para que los elementos no se
-
-Documento XML Usando la sección CDATA para que los elementos no se interpreten. <correo><![CDATA[ptx@server.com]]></correo>
-
-- Sustituir el carácter por su elemento entidad.
-
-Lenguajes de Marcas
-
-Cuando hablamos de un documento XML bien formado significa
-
-- Que tiene estructura de árbol (raíz, padres e hijos).
-
-á Documentos XML bien formados
-
-- Y que el documento es correcto sintácticamente
-- Etiquetas cerradas y sin solaparse.
-- Atributos entre comillas.
-- Tener un único elemento raíz.
-- Los caracteres especiales representados correctamente.
-- Tener un prólogo válido.
-- Los nombres de los elementos formados por caracteres válidos.
-
-Lenguajes de Marcas
-
-Ejemplo 2.3 <?xml version="1.0" encoding="UTF-8"?> <!-- Menu de la casa --> <menu> <plato> <nombre>ensalada mediterranea</nombre> <precio>6,5€</precio> <d i i >l h t t b ll t h </d i i > Ejemplo Documento XML bien formado <descripcion>lechuga, tomate, cebolla, atun y huevo</descripcion> </plato> <plato> <nombre>chuletas de cordero</nombre> <precio>8,5€</precio> <descripcion>chuletas cordero, patatas y verduras</descripcion> </plato> <plato> <nombre>tiramisu</nombre> <precio>3,5€</precio> <descripcion>queso mascarpone con bizcocho y cacao</descripcion> </plato> </menu> Lenguajes de Marcas
-
-Ejemplo 2.4 <?xml version="1.0" encoding="UTF-8"?> <!-- Menu de la casa --> <menu> <plato> <nombre>ensalada mediterranea</nombre> <precio>6,5€</precio> <descripcion>lechuga, tomate, cebolla, atun y huevo</descripcion> Ejemplo Documento XML NO bien formado <descripcion>lechuga, tomate, cebolla, atun y huevo</descripcion> </plato> <plato> <nombre>chuletas de cordero</nombre> <precio>8,5€</precio> <descripcion>chuletas cordero, patatas y verduras</descripcion> </plato> <plato> <nombre>tiramisú <precio>3,5€</precio> <descripcion>queso mascarpone con bizcocho y cacao</descripcion> </plato> </menu> Lenguajes de Marcas
-
-Cuando hablamos de un documento XML válido nos referimos a que sean semánticamente correctos. Para ello ha de cumplir las restricciones establecidas en un DTD o un XML Schema. Estos son lenguajes de definición de esquemas de documentos Documentos XML válidos definición de esquemas de documentos.
-
-Para comprobar si un documento está bien formado y es válido se utilizan los analizadores o parsers. Son herramientas que permiten interpretar los documentos XML y analizarlos sintáctica y semánticamente. Lenguajes de Marcas
-
- En XML, los nombres de elementos se definen por el desarrollador. Esto puede provocar un conflicto cuando se utilizan diferentes documentos XML en aplicaciones. Ejemplo 2.5 <table> <tr> <td>Apples</td> <td>Bananas</td> </tr> </table> Documento XML. Evitar conflictos <table> <name>African Coffee Table</name> <width>80</width> <length>120</length> </table>  Los espacios de nombres permiten definir un nombre único a elementos y atributos, según el nombre de cada familia de vocabulario XML.
-
- Se referencia de la siguiente manera: <nombre_elemento xmln:ALIAS="URI">  Esto permite integrar etiquetas de diferentes lenguajes en un mismo documento. Lenguajes de Marcas
-
-Ejemplo 2.5 (cont.) Si se añaden los fragmentos XML juntos, habría un conflicto de nombres. Un elemento <table> tiene un contenido y un significado diferente en cada fragmento.  Los espacios de nombres permiten definir un nombre único para elementos y atributos, evitando los conflictos de nombres.
-
-Documento XML. Espacio de nombres  Para definir el espacio de nombres se utiliza el atributo xmlns en la etiqueta inicial de un elemento. <nombre_elemento xmlns:ALIAS="URI"> prefijo del espacio de nombres a utilizar Dirección del documento de descripción Lenguajes de Marcas
-
-Ejemplo 2.5 (cont.) <h:table xmlns:h="http://www.w3.org/TR/html4/"> <h:tr> <h:td>Apples</h:td> <h:td>Bananas</h:td> Documento XML. Espacio de nombres </h:tr> </h:table> <f:table xmlns:f="http://www.w3schools.com/furniture"> <f:name>African Coffee Table</f:name> <f:width>80</f:width> <f:length>120</f:length> </f:table> Lenguajes de Marcas
-
-El atributo xmlns indica para cada etiqueta table un espacio de nombres cualificado y diferente. Los espacios de nombres también pueden ser declarados en el elemento raíz XML: Ejemplo 2.5 (cont.) Documento XML. Espacio de nombres <raiz xmlns:h="http://www.w3.org/TR/html4/" xmlns:f="http://www.w3schools.com/furniture"> <h:table> ...
-
-</h:table> <f:table> ... </f:table> </raiz> Lenguajes de Marcas
-
-La manera más cómoda de representar un espacio de nombres es hacerlo de forma predeterminada, así se ahorra el uso de prefijos en todos los elementos secundarios. xmlns="espacio_de_nombres_URI" Documento XML. Espacio de nombres Ejemplo 2.5 (cont.) <table xmlns="http://www.w3.org/TR/html4/"> <tr> <td>Apples</td> <td>Bananas</td> </tr> </table> Lenguajes de Marcas
-
-Cuando se confecciona un documento XML, hay que empezar identificando cuáles son los elementos. Pueden existir diferentes soluciones. Muchas veces dependerá del uso dado al documento. Elaborando un Documento XML Ejemplo 2.6 Queremos realizar documento xml para almacenar el nombre de una persona. Tenemos que ver cada una de las opciones y elegir la solución más adecuada según las circunstancias.
-
-Lenguajes de Marcas
-
-Ejemplo 2.6 (cont.) <nombre>Jose Maria Fernandez de Parma Molinero</nombre> o <nombre> <nombre_pila>Jose Maria</nombre_pila> <apellidos>Fernandez de Parma Molinero</apellidos> </nombre> Elaborando un Documento XML </nombre> o <nombre> <nombre_pila>Jose Maria</nombre_pila> <apellido1>Fernandez de Parma</apellido1> <apellido2>Molinero</apellido2> </nombre> Lenguajes de Marcas
-
-Ejemplo 2.6 (cont.) Elegiremos la opción dependiendo de qué tengamos que hacer con el documento.
-
-### 1. Si necesitamos solo la información sin necesidad de
-
-Elaborando un Documento XML procesarla.
-
-- Si debemos procesar nombre y apellidos por separado.
-
-### 3. Si es posible que en el futuro debamos separar
-
-apellidos. Lenguajes de Marcas
-
-A la hora de escoger los elementos no solo hay que ver las necesidades presentes de procesamiento sino anticiparse a posibles necesidades futuras dotando de la mayor semántica posible al documento. Un consejo es en caso de duda asignar un elemento Elaborando un Documento XML Un consejo es, en caso de duda, asignar un elemento diferente a la información.
-
-En nuestro Ejemplo 2.6 no optaremos por la opción uno pues no permite ninguna clasificación por apellidos que, por experiencia, suele necesitarse como criterio de ordenación. Lenguajes de Marcas
-
-También tenemos que decidir cuándo usar elementos nuevos o atributos de un elemento. Para decidir esto seguiremos las siguientes pautas: Elaborando un Documento XML
-
-- Si la información contiene una estructura interna debe ser un elemento.
-- Si contiene una gran cantidad de información, es más adecuado usar un
-
-elemento.
-
-- Aquella información que deba ser procesada o tenga una presentación
-
-compleja será un elemento.
-
-- Normalmente, puede usarse el símil de que un elemento es un sustantivo y un
-
-atributo un adjetivo. Lenguajes de Marcas
-
-Ejemplo 2.7 Supongamos que creamos un documento que contiene las transparencias de una presentación. Cada transparencia, obviamente, tiene un título. <transparencia> Elaborando un Documento XML p <titulo>Uso de elementos y atributos</titulo> ... </transparencia> o <transparencia titulo="Uso de elementos y atributos"> ...
-
-</transparencia> Lenguajes de Marcas
-
----
-
-# 2.2 Ejemplos en XML
-
-Ejemplos en XML de un correo electrónico, de dos libros y un menú.
-
-> **💡 📦 Contingut del paquet comprimit (Ejemplos_tema2.zip)**
-> - `Ejemplos_tema2/Correo_electronico.xml`
-> - `Ejemplos_tema2/Libros.xml`
-> - `Ejemplos_tema2/Menu.xml`
+> Secciones a estudiar de la web w3Schols
+>
+> JS HOME
+>
+> JS Introduction
+>
+> JS Where To
+>
+> JS Output
+>
+> JS Statements
+>
+> JS Syntax
+>
+> JS Comments
+>
+> JS Variables
+>
+> JS Operators
+>
+> JS Arithmetic
+>
+> JS Data Types
+>
+> JS Functions
+>
+> JS Objects
+>
+> JS Events
+
+> **🔗 Recurs Web: Aprende JavaScript en 15 Minutos**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=Q9fwkpxr3Dw) ↗️**](https://www.youtube.com/watch?v=Q9fwkpxr3Dw)
+>
+> ##### Os dejo un videotutorial con una pequeña introducción al JavaScript
 
 ---

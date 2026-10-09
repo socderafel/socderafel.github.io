@@ -2,7 +2,7 @@
 layout: default
 title: "UD5 — Introduction to frameworks. Laravel I · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT5 Completa"
+badge: "2n DAW · Grau Superior · UD5 — Introduction to frameworks. Laravel I"
 prev_url: "../ut04/ut0401.html"
 prev_label: "⬅️ 4.1 U4 Data Access"
 next_url: "../ut05/ut0501.html"
@@ -23,9 +23,6 @@ next_label: "5.1 Frameworks. Laravel I ➡️"
 
 # 5.1 Frameworks. Laravel I
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Resources
-
 > **🔗 Recurs Web: Laravel official reference**
 > [**🌐 Obrir recurs extern (https://laravel.com/docs/10.x) ↗️**](https://laravel.com/docs/10.x)
 
@@ -34,9 +31,6 @@ next_label: "5.1 Frameworks. Laravel I ➡️"
 
 > **🔗 Recurs Web: Laravel form validations**
 > [**🌐 Obrir recurs extern (https://laravel.com/docs/10.x/validation#available-validation-rules) ↗️**](https://laravel.com/docs/10.x/validation#available-validation-rules)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Tasks
 
 ---
 

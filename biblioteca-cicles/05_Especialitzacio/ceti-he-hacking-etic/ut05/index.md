@@ -2,7 +2,7 @@
 layout: default
 title: "UD5 — Fingerprint · Temari Complet"
 course_root: ".."
-badge: "CE Ciberseguretat (CETI) · UT5 Completa"
+badge: "CE Ciberseguretat (CETI) · UD5 — Fingerprint"
 prev_url: "../ut04/ut0404.html"
 prev_label: "⬅️ 4.4 Footprint"
 next_url: "../ut05/ut0501.html"

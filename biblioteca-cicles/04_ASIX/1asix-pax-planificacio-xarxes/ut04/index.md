@@ -1,214 +1,382 @@
 ---
 layout: default
-title: "UD3 — Xarxes d'àrea local · Temari Complet"
+title: "UD4 — Nivell físic · Temari Complet"
 course_root: ".."
-badge: "1r ASIX · Grau Superior · UT4 Completa"
-prev_url: "../ut03/ut0302.html"
-prev_label: "⬅️ 2.2 1 IPs"
+badge: "1r ASIX · Grau Superior · UD4 — Nivell físic"
+prev_url: "../ut03/ut0301.html"
+prev_label: "⬅️ 3.1 U3 Xarxes àrea local"
 next_url: "../ut04/ut0401.html"
-next_label: "3.1 U3 Xarxes àrea local ➡️"
+next_label: "4.1 U4 Nivell físic ➡️"
 ---
 
-# 📘 UD3 — Xarxes d'àrea local (Unitat Completa)
+# 📘 UD4 — Nivell físic (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**3.1 U3 Xarxes àrea local**](./ut0401.md)
+- [**4.1 U4 Nivell físic**](./ut0401.md)
 
 ---
 
-# 3.1 U3 Xarxes àrea local
-
-📎 **Material de laboratori (U3 E1):** `Captura de pantalla-01 a las 19.21.05.png`
+# 4.1 U4 Nivell físic
 
 ---
 
-PAX - U3 – Xarxes d’àrea local 1er ASIX
+PAX - U4 – Nivell físic 1er ASIX
 
-1 ASIX - PAX Característiques
+1 ASIX - PAX Introducció a la capa física
 
-- Operen dins d’un àrea geogràfica limitada. Màxim 4 km, sempre que
+- Abans que es produeixen
 
-el cable no supere els 100m aprox.
+comunicacions de xarxa cal establir una connexió física a una xarxa local.
 
-- Permet multiaccés a medis amb gran ampli de banda
-- Controla la xarxa de forma privada amb administració local
-- Titularitat privada
+- Una connexió física pot ser
 
-1 ASIX - PAX Característiques
+una connexió per cable o una connexió inalàmbrica.
 
-- Baixa tassa d’error
-- Topologia física: bus, anell, estrella(més habitual), arbre
-- Estàndards: Ethernet, WIFI, etc.
+- Es fa mitjançant NIC, bé de
 
-1 ASIX - PAX Avantatges
+cable o inalàmbriques.
 
-- Compartir recursos
-- Perifèrics, app’s, dades, càlcul, etc.
-- Fiabilitat
-- Gestió centralitzada, seguretat, etc.
-- Eficiència
-- Gestió d’usuaris, grups, permisos, directives, etc.
-- Flexibilitat
-- Canvis en situació física dels equips no afecten
+1 ASIX - PAX Propòsit de la capa física
 
-1 ASIX - PAX Inconvenients
+- Proporciona el medi per transportar els bits que componen un marc
 
-- Seguretat i privacitat
-- Manteniment
-- Limitació de distància
-- Si tenim servidor i cau, cau la xarxa.
+de la capa d’enllaç a través dels medis de xarxa.
 
-1 ASIX - PAX Projecte IEEE 802
+- Accepta un marc complet d’enllaç de dades, el codifica com a
 
-- Publicat en 1985 per IEEE amb l’objectiu de comunicar equips de
+seqüencia de senyals que es transmet pels medis locals.
 
-diferents fabricants.
+- Un dispositiu final (o intermediari) rep els bits codificats que
 
-- Cobreix els dos primers nivells del model OSI i part del tercer nivell.
-- La segona capa la divideix en 2 subnivells
+composen la trama.
 
-1 ASIX - PAX Projecte IEEE 802
+1 ASIX - PAX Propòsit de la capa física
 
-- Subnivell LLC – 802.2 – És el mateix per a totes les xarxes
-- Subnivell MAC - 802.3-802-22 – Conté mòduls diferents per cada
+1 ASIX - PAX Medis de la capa física
 
-xarxa.
+- El medi de transmissió és el suport físic mitjançant el qual l’emissor i
 
-1 ASIX - PAX Projecte IEEE 802
+el receptor poden realitzar una comunicació en un sistema de transmissió de dades.
 
-- El projecte IEEE 802 conté molts estàndards: 802.1 fins 802.22
-- Corresponen a les LAN
-- Ethernet 802.3
-- Token Bus 802.4
-- Token Ring 802.5
-- FDDI 802.8
-- WLAN 802.11
+1 ASIX - PAX Medis de la capa física
 
-1 ASIX - PAX Projecte IEEE 802
+- Tres formats bàsics de medis de xarxa
+- Senyals elèctriques per cable de coure
+- Puls de llum del cable de fibra òptica
+- Senyals de microones de la tecnologia inalàmbrica
 
-1 ASIX - PAX Ethernet - IEEE 802.3
+1 ASIX - PAX Tipus de transmissions
 
-- Tecnologia LAN més utilitzada hui en dia
-- Funciona en la capa d’enllaç i en la capa física
-- Depén de les dos subcapes de la capa d’enllaç per a funcionar (LLC i
+- En un ordinador la informació es transmet digitalment. Els dígits
 
-MAC)
+binaris es converteixen en senyals elèctriques convenientment codificades
 
-1 ASIX - PAX Ethernet - IEEE 802.3
+- A cada dígit binari (0,1) se li associa un nivell de tensió o voltatge
 
-- Subcapa LLC. Control enllaç lògic. Maneja la comunicació entre capes
+diferent.
 
-superiors i inferiors. Se implementa via software (SW) i és completament independent del hardware (HW).
+1 ASIX - PAX Tipus de transmissions
 
-- Subcapa MAC. Control accés al medi. És la subcapa inferior i
+- Normalment es considera que la transmissió que va pels cables és
 
-s’implementa mitjançant HW, generalment, en la NIC (Network Interface Card) de la computadora.
+perfecta però no és així degut a la tecnologia.
 
-1 ASIX - PAX Ethernet - IEEE 802.3 - Característiques
+1 ASIX - PAX Tipus de transmissions
 
-- Usa senyals digitals
-- Full Duplex
-- Un únic canal de dades (no multiplexació)
-- Gasta repetidors, hubs i switchs
+- Una senyal analògica és una onda continua, que canvia suaument
 
-1 ASIX - PAX Ethernet - IEEE 802.3 - Característiques
+amb el temps i agafa un nombre infints de valors dins del rang que li permet el medi de transmissió.
 
-- Topologia estrella
-- Mètode accés al medi: CSMA/CSD
-- Varis usuaris comparteixen mateix medi, perill que envien senyals a la vegada i col·lisione. Cal un
+1 ASIX - PAX Tipus de transmissions
 
-mecanisme per a regular l’enviament.
+- Una senyal digital es discreta, es a dir, sols pot agafar un nombre finits
 
-- Adreçament físic: MAC
-- Cada estació de la xarxa ethernet té una targeta de xarxa (NIC), que proporciona una interfície
+de valors, normalment entre 0 i 1. La transició entre valors es instantània.
 
-física única en format de 12 dígits hexadecimals. 00-1F-D0-94-AE-CC
+1 ASIX - PAX Estàndards de la capa física
 
-- Per conèixer la direcció física del teu equip, des de terminal executem
-- Windows: ipconfig /all
-- Linux: ip a s
+- En capa física els estàndards son Hardware i venen determinats per
 
-1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
+diferents organismes entre els que es troben els següents
 
-- Es tracta de les versions d’Ethernet que existeixen.
-- Cada implementació es representa per un codi.
-- Tassa de transferència (Mbps)
-- Tipo de transmissió (Base/Broad)
-- Màxima longitud sense degradació de senyal (en hectòmetres) o tipus de cable.
+- ISO (Org. Internacional para la Estandarización)
+- TIA i EIA (Asociación de Industrias de Telecos y Electrónicas)
+- ITU (Unión Internacional de Telecos)
+- ANSI (Instituto Nacional Estadounidense de Estándares)
+- IEEE (Instituto de Ingenieros Eléctricos y Electrónicos)
 
-1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
+1 ASIX - PAX Característiques de la capa física
 
-- Ethernet – IEEE 802.3 - 10 Mbps
+- Codificació -> Mètode que s’utilitza per convertir una transmissió de
 
-1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
+bits de dades en un “codi” predefinit.
 
-- Fast Ethernet – IEEE 802.3u - 100 Mbps
+- Mètode de senyalització -> Els estàndars de la capa física deuen
 
-1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
+definir quin tipus de senyal representa un “1” i quin un “0”. Sol fer-se per voltatge però també es pot fer depenent de la durada de la pulsació.
 
-- Gigabit Ethernet – IEEE 802.3ab - 1 Gbps
+1 ASIX - PAX Característiques de la capa física
 
-1 ASIX - PAX Ethernet - IEEE 802.3 - Tecnologies
+- El ample de banda és la capacitat d’un medi per transportar dades.
+- El ample de banda digital medix la quantitat de dades que poden fluir
 
-- 10 Gigabit Ethernet – IEEE 802.3ae - 100 Mbps
+des d’un lloc fins altre en un període de temps determinat.
 
-1 ASIX - PAX Token Bus - IEE 802.4
+- En ocasions, l’ample de banda es pensa com la velocitat a la que
 
-- LAN amb topologia física en bus i amb organització lògica en anell.
+viatgen els bits però no és així. En Ethernet, els bits s’envien a la velocitat de l’electricitat i l’ample de banda medix el número de bits per segon.
 
-1 ASIX - PAX Token Bus - IEE 802.4
+1 ASIX - PAX Característiques de la capa física
 
-- Els nodes es connecten amb cable coaxial (com el de l’antena de TV)
-- Sempre hi ha un token el qual les estacions de xarxa es van passant
+- Rendiment -> Mesura de transferència de bits pels
 
-segons l’ordre en el que estan connectades. Sols pot transmetre un node i serà el que tinga el token.
+medis durant un període determinat.
 
-- Si no té cap data a transmetre, passa el token al veí.
+- En general, no coincideix amb l’ample de banda
 
-1 ASIX - PAX Token Ring - IEE 802.5
+especificat degut a
 
-- Igual que el token bus però es connecten amb topologia en anell.
+- Quantitat de tràfic
+- Tipus de tràfic
+- Latència entre dispositius d’oritge i destí
+- El rendiment real representa el rendiment sense
 
-1 ASIX - PAX FDDI - IEE 802.8
+aquests factors.
 
-- Fiber Distributed Data Interface. Interfície de dades distribuïda per fibra.
-- Estàndard per a la transmissió de dades en xarxes locals (i WAN) sobre fibra
+1 ASIX - PAX Característiques de la capa física
 
-òptica.
+- En la figura podem vore diferents interfícies i ports disponibles a un
 
-- El mètode d’accés es mitjançant token.
-- S’implementa com un anell doble.
+router Cisco 1941
 
-1 ASIX - PAX FDDI - IEE 802.8
+1 ASIX - PAX Cablejat de coure
 
-- Primer anell per a la transmissió i el segon de suport.
-- Comunicació dúplex i fins un radi de 200 km.
+- Es transmet la informació com impulsos elèctrics.
+- Atenuació: Quan més lluny viatja la senyal, més es deteriora
+- Existeixen interferències tant electromagnètiques com de radiofreqüència
 
-1 ASIX - PAX WLAN - IEE 802.11
+que distorsionen i danyen la senyal.
 
-- WLAN o WiFi es una xarxa de xarxa sense fil que utilitza ondes de
+- Es pot reforçar el cable amb blindatge metàl·lic
+- També existeixen interferències d’altres cables que estiguen prop (es diu
 
-radio.
+comunicació).
 
-- Complementen les LAN per cable.
-- Instal·lació fàcil, econòmica, aplega on el cable no pot aplegar.
-- Important en portàtils i dispositius mòbils
+1 ASIX - PAX Cablejat de coure
 
-1 ASIX - PAX WLAN - IEE 802.11
+1 ASIX - PAX Cablejat de coure
 
-- La velocitat depén de la versió utilitzada
+- Es transmet la informació com impulsos elèctrics.
+- Atenuació: Quan més lluny viatja la senyal, més es deteriora
+- Existeixen interferències tant electromagnètiques (EMI) com de
 
-1 ASIX - PAX WLAN - IEE 802.11
+radiofreqüència (RFI) que distorsionen i danyen la senyal.
 
-- Necessita que els “clients” tinguen interfície inalàmbrica. Poden ser
+- Es pot reforçar el cable amb blindatge metàl·lic
+- També existeixen interferències d’altres cables que estiguen prop (es diu
 
-interns o externs.
+comunicació).
 
-- Ad-Hoc o xarxa de infraestructura
+1 ASIX - PAX Cablejat de coure
+
+- Tres tipus de medis de
+
+coure a les xarxes
+
+1 ASIX - PAX Cablejat de coure: UTP
+
+- El UTP és el més utilitzat a les xarxes
+- Acaba amb connectors RJ-45
+- Utilitzar per interconnectar hosts de xarxa amb dispositius de xarxa (com
+
+switches, hubs, routers, etc)
+
+- Consta de 4 parells de fils codificats per colors que estan trenats entre si per
+
+ajudar a protegir contra les interferències de senyals amb altres fils.
+
+- Els colors ens ajuden a fer el cable
+
+1 ASIX - PAX Cablejat de coure: UTP
+
+1 ASIX - PAX Cablejat de coure: STP
+
+- Proporciona millor protecció contra interferències que UTP
+- Més costós i difícil de instal·lar
+- Utilitza connector RJ45
+- Utilitza 4 parells de fils, cadascun empaquetat amb blindatge metàl·lic
+
+i després tots amb una fulla metàl·lica.
+
+1 ASIX - PAX Cablejat de coure: STP
+
+1 ASIX - PAX Cablejat de coure: Coaxial
+
+- Consta de
+- Conductor de coure
+- Aïllament de plàstic que protegeix el
+
+cable
+
+- Malla de blindatge similar a la de STP
+- Embolcall de plàstic
+- Ha estat reemplaçat per UTP en quasi
+
+tots els aspectes.
+
+1 ASIX - PAX Cablejat de coure: Seguretat
+
+- Vulnerables a perills elèctrics
+
+i incendis
+
+1 ASIX - PAX Cablejat UTP
+
+1 ASIX - PAX Cablejat UTP: Estàndards
+
+- Tot el cablejat UTP cumplix amb els estàndards
+
+establerts per la TIA/EIA.
+
+- TIA/EIA-568 estableix els estàndards per al cablejat
+
+d’instal·lacions LAN.
+
+- Cable UTP de categoria 3.
+- S’utilitza per a comunicacions de veu.
+- Línies telefòniques.
+
+1 ASIX - PAX Cablejat UTP: Connectors
+
+- Els cables UTP acaben amb connector RJ-45
+- L’estàndard TIA/EIA-568 descriu les assignacions de la codificació de
+
+colors dels cables als pins (distribució de terminals) per als cables Ethernet.
+
+- Es fonamental que totes les terminacions dels medis de coure siguen
+
+de qualitat per garantir un rendiment òptim amb la tecnologia.
+
+1 ASIX - PAX Cablejat UTP: Connectors
+
+- Els connector RJ-45 és el
+
+component mascle enganxat a l’extrem del cable.
+
+- El socket és el component
+
+femella que es troba bé al dispositiu de xarxa, a la pared o a un panell de connexions.
+
+1 ASIX - PAX Cablejat UTP: Tipus
+
+1 ASIX - PAX Cablejat UTP: Prova
+
+- Mapa de cablejat
+- Llargària del cable
+- Pèrdua de senyal degut a atenuació
+- Crosstalk (diafonia)
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Propietats
+
+- Es gasta en 4 tipus d’industries
+- Xarxes empresarials
+- Fiber-to-the-home (FTTH)
+- Xarxes de llarg radi
+- Xarxes per cable submarines
+- Transmet dades a través de distàncies més extenses i a amples de banda majors.
+- Transmet senyals amb menys atenuació i és totalment immune a EMI i RFI
+- Fil no molt més gros que un pèl humà, semiflexible.
+- Els bits es codifiquen com polsades de llum
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Disseny
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Disseny
+
+- Embolcall: Protegeix la fibra contra abrasió, humitat, etc.
+- Material de reforç: Evita que el cable de fibra s’estira quan es tira d’ell.
+- Búfer: S’utilitza per protegir el nucli i revestiment
+- Coberta: Actua com un espill que reflexa la llum cap al nucli de la
+
+fibra.
+
+- Nucli. Element de transmissió de llum en el centre de la fibra òptica.
+
+Normalment fet de silici o vidre.
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Tipus
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Connectors
+
+- Per a realitzar operacions dúplex calen 2 fibres ja que la llum sols pot
+
+viatjar en una direcció a través de la fibra òptica.
+
+- Connectors de punta directa (ST)
+- Un dels primers
+- Bloqueja amb una tapa a rosca
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Connectors
+
+- Connectors subscriptor (SC)
+- Connector estàndard
+- Utilitzat en multimode i monomode
+- Mecanisme de vaivé per la inserció
+- Connector Lucent (LC) símplex o dúplex
+- Versió més xicoteta que SC.
+- Símplex es més popular
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Connectors
+
+- Els colors ens indiquen si són monomode o multimode.
+- Els cables deuen estar protegits amb un caputxó quan on es gasten.
+
+1 ASIX - PAX Cablejat de Fibra Òptica: Prova
+
+- La terminació i empalme del cablejat de fibra requereixen
+
+d’equipament i capacitació especials.
+
+- Els problemes solen estar en la terminació.
+- Es por realitzar una prova de camp que consisteix en il·luminar un
+
+extrem de la fibra amb una forta llanterna mentre s’observa l’altre extrem.
+
+- Reflectòmetre és la ferramenta més adequada.
+
+1 ASIX - PAX Comparativa UTP vs Fibra
+
+1 ASIX - PAX Medis inalàmbrics (sense fil)
+
+- Wi-Fi: estàndard IEEE 802.11
+- Accés múltiple amb prevenció de col·lisions (CSMA/CA)
+- Targeta NIC sense fil espera fins que canal estiga lliure.
+- Bluetooth: estàndard IEEE 802.15
+- PAN
+- Emparellament de dispositius en distàncies curtes
+- WiMAX: Estàndard IEEE 802.16
+- Interoperabilitat mundial
+- Accés per banda ampla inalàmbrica
+
+1 ASIX - PAX Medis inalàmbrics (sense fil)
+
+- Una LAN sense fil requereix els següents dispositius de xarxa
+- Punt d’accés inalàmbric (AP): concentra senyals inalàmbriques dels usuaris i
+
+es connecta a una infraestructura de xarxa existent basada en coure com pot ser Ethernet.
+
+- Adaptadors NIC inalàmbrics: proporcionen capacitat de comunicació
+
+inalàmbrica a cada host de la xarxa.
+
+- Els routers inalàmbrics solen integrar diferents funcions: router, switch i punt
+
+d’accés en un sol dispositiu.
+
+1 ASIX - PAX Medis inalàmbrics (sense fil)
 
 1 ASIX - PAX Dubtes?
 

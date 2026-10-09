@@ -1,822 +1,249 @@
 ---
 layout: default
-title: "UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN · Temari Complet"
+title: "UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA) · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT8 Completa"
+badge: "2n ASIX · Grau Superior · UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA)"
 prev_url: "../ut07/ut0703.html"
-prev_label: "⬅️ 6.2 2 Programari anti malware"
+prev_label: "⬅️ 7.3 VPN"
 next_url: "../ut08/ut0801.html"
-next_label: "7.1 Segurertat en xarxes corporatives ➡️"
+next_label: "8.1 Firewall_i_Proxy ➡️"
 ---
 
-# 📘 UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN (Unitat Completa)
+# 📘 UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA) (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**7.1 Segurertat en xarxes corporatives**](./ut0801.md)
-- [**7.2 Seguretat en xarxes sense fil**](./ut0802.md)
-- [**7.3 VPN**](./ut0803.md)
+- [**8.1 Firewall_i_Proxy**](./ut0801.md)
+- [**8.2 HA - Alta_Disponibilitat**](./ut0802.md)
 
 ---
 
-# 7.1 Segurertat en xarxes corporatives
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### UD 6 Accés remot
+# 8.1 Firewall_i_Proxy
 
 ---
 
-SEGURETAT EN XARXES CORPORATIVES
+FIREWALL I PROXY
 
-Amenaces i atacs a la xarxa corporativa Tipus d’atacs
+Tallafocs Un firewall, o també conegut com a tallafocs, és un sistema maquinari i/o programari que s'encarrega de monitorar totes les connexions entrants i eixints de diferents xarxes, amb l'objectiu de permetre o denegar el trànsit entre les diferents xarxes. Tipus de Firewall (funcionalitat) Stateless cortafuegos-con-estado-vs-sin-estado Stateful Aplication Level Gateway ALG Next Generation Firewall ngfw
 
-➔Interrupció: Integra els que produeix una falta de disponibilitat. Pot provocar que un objecte del sistema es perda, quede no utilitzable no disponible Exemples: Destrucció del maquinari, Esborrat de programes, dades, Fallades en el sistema operatiu, DoS, DDoS
+Tipus de Firewall (abast) Personal: ufw gufw tinywall zone alarm firewall de Windows Domèstic: Router SOHO Corporatiu: ●Per HW ( CISCO, Sophos, WatchGuard, Fortinet, PaloAlto, ..) ●Per SW Distribucions especialitzades. IPCop, IPFIRE, pfSense ●WAF - Web Application Firewall (protegix de SQLi, XSS, DoS(web), CSRF) Dispositius UTM utm-firewall-ha-ido-al-gimnasio «Unified Threat Management» o Gestión Unificada de Amenazas
 
-Amenaces i atacs a la xarxa corporativa
+Firewall Personal El Firewall personal és una programa o servei instal·lat en l'ordinador a protegir
 
-➔Interceptació: Atac contra la confidencialitat d'un sistema a través del que un programa, procés o usuari aconsegueix accedir a recursos per als quals no té autorització. És l'incident més difícil de detectar, ja que, no produeix una alteració en el sistema. Exemples: sniffing
+Firewall Corporatiu El Firewall corporatiu és una maquina amb almenys dues interfícies de xarxa. Protegeix una xarxa.
 
-Amenaces i atacs a la xarxa corporativa
+Tipus de Firewall Corporatiu Host Controlat La DMZ és un sol Host, i està desviada per el router de l’ISP Host Dual-Homed El Firewall és una màquina amb DOS interfícies
 
-➔Fabricació o suplantació: Atac contra l'autenticitat mitjançant el qual un atacant inserida objectes falsificats en el sistema. (adreça IP, adreça web, correu electrònic) Exemples: spoofing (suplantar la identitat) Amenaces i atacs a la xarxa corporativa
+Tipus de Firewall Corporatiu Screened Host La DMZ està apantallada per un host (màquina) Screened Subnet La DMZ està apantallada per una xarxa
 
-➔Modificació: Atac contra la integritat d'un sistema a través del qual es manipula. Aquests atacs solen ser els més nocius, ja que pot eliminar part de la informació, deixar alguns dispositius inutilitzables, alterar els programes perquè funcionin de manera diferent..
+Firewall Corporatiu (amb DMZ) El Firewall Screened Host té almenys tres interfícies de xarxa. ● Roja -> Internet / Wan ● Verda -> LAN / nostra xarxa local ● Taronja -> DMZ / servidors exposats
 
-Exemples: pharming (redirigir a atre domini de forma fraudulenta)
+Firewall Pràctica: Instal·lar gufw en Ubuntu
 
-Amenaces i atacs a la xarxa corporativa
+Instal·lar tinywall en Windows
 
-Vulnerabilitats TCP/IP (Nivells 1 y 2 de OSI) ➔El primer nivell de vulnerabilitats és l'accés físic a la cambra de telecomunicacions, cablejat físic o els equips que intervenen en la comunicació ➔Problemes: disponibilitat, confidencialitat i control d'accés ➔Exemples. Bucle físic, desconnexió de dispositius, desbordament taula CAM en switch Mesures de seguretat ➔Fortificar accés a cambra de comunicacions ➔Activar STP ➔Link aggregation (bond) entre switch, o entre servidors i switch ➔Crear VLANS, Vlan d'administració.
+Instal·lar ZoneAlarm en Windows Pràctica: Instal·lar IPCop (fer màquina virtual ) Instal·lar IPFIRE (fer màquina virtual) Instal·lar pfsense (fer màquina virtual)
 
-➔Activar i configurar Seguretat de ports en switch
+Firewall Pràctica: Busca informació i investiga com funciona iptables
 
-Vulnerabilitats TCP/IP (Nivell 3 OSI) ➔El principal problema és l'escolta de paquets no autoritzats de paquets IP ➔El segon problema és el de la suplantació d'adreces IP ➔Un tercer atac és l'enverinament de les taules d’ARP , que permet la suplantació de les adreces MAC Mesures de seguretat ➔Utilitzar protocols segurs (ssh) ➔Deshabilitar / impedir protocols insegurs ( telnet) ➔Monitorar trànsit arp. Arpwatch
+Honeypot Un Honeypot (pot de mel) es refereix a una eina de seguretat (normalment un PC, o diversos PCs amb un cert programari) usat com a sistema de detecció i registre de dades d'atacs informàtics en una xarxa. Hi ha xarxes completes de honeypots interconnectades i dedicades en exclusiva per a ser potencials objectius d'atacs. A aquestes xarxes se les denomina Honeynets.
 
-Vulnerabilitats TCP/IP (Nivell 4 OSI) ➔Els principals problemes s'associen amb la intercepció dels ports UDP i TCP ➔L'obertura de ports indiscriminada o la seva falta de protecció mitjançant tallafocs pot donar lloc a l'exposició pública de serveis que poden ser atacats mitjançant força bruta ➔La cerca de ports oberts sol fer-se mitjançant utilitats d'escaneig de xarxa
+Honeypot Hi ha principalment dos diferents tipus de Honeypots depenent de la seva funció: ➔els de baixa interacció: El programari del honeypot simula el sistema operatiu amb les seves vulnerabilitats, solen usar-se com a mesura de prevenció i alerta. La seva principal funció és alertar quan es produeix un atac a una xarxa o un sistema, disposant diverses solucions per a impedir que l'atacant prengui algun control sobre aquest.
 
-Vulnerabilitats TCP/IP (Nivells 5 a 7 OSI) ➔Presenta problemes associats als serveis de xarxa i a l'autenticació de les dades ➔Problemes més comuns: ◆Enverinament de les caus DNS ◆Suplantació del servidor DNS ◆Inseguretat de protocols no xifratges que transporten contrasenyes com ftp ◆Vulnerabilitats específiques del protocol *htttp associades a la construcció d'URL’s per exemple la injecció de codi Mesures de seguretat ➔Utilitzar contrasenyes fortes ➔Mantenir equips actualitzats ( firmware encaminadors ) ➔Configurar opcions de seguretat en els encaminadors i APs
+➔i els d'alta interacció: El sistema operatiu és real però no manté cap procés de producció real, solen usar-se com a mètode de recerca, recaptant dades com que tipus d'arxius són els més buscats per un atacant, activitats dins del sistema, eines usades, possibles danys en el sistema, adreça IP de l'atacant, etc...
 
-Exemples d’atacs a xarxes TCP/IP Email extractor Eina que permet obtenir les adreces d’email d'un lloc web ( informació pública !) ● Descarrega el executable de https://emailextractorpro.com/ ● Comprova quants emails estan disponibles en el lloc gva.es ● Comprova quants emails estan disponibles www.mujerhoy.com ● Comprova quants emails estan disponibles marca.com
+Honeypot Detecció d’atacs en un honeypot ➔La detecció de trànsit d'entrada significatiu és ja un senyal d'atac ➔Si es detecta trànsit de sortida => el honeypot ha estat compromès i està sent usat per l'atacant ➔Alguns honeypots fan creure a l'atacant que ha aconseguit comprometre el sistema ➔El honeypot és un complement de seguretat que permet detectar patrons per als quals encara no hi ha una signatura per al IDS ➔Un honeypot també pot usar-se per a la detecció de l'activitat de cucs i altres malware que fan un alt ús de la xarxa amb la finalitat d'explotar vulnerabilitats que no han estat posades pegats
 
-WireShark Eina que permet obtenir els paquets que circulen per la xarxa. ● Descarrega el executable de https://www.wireshark.org/ ● Comprova com pots llegir els paquets que circulen por la xarxa ● Comprova com pots llegir una contrasenya introduïda en una pàgina http Nota: El Wireshark té mòduls per a escoltar en xarxes WiFi , GSM, o Radiofreqüència Exemples d’atacs a xarxes TCP/IP Compte amb la segmentació del switch !!
+Honeypot Avantatges d’un honeypot ➔Les dades que ofereixen sempre procedeixen d'atacs pel que tenen menys falsos positius que els IDS ➔Requereixen pocs recursos i capturen poques dades ➔Són sistemes simples, no requereixen ni actualitzacions ni manteniment significatiu Desavantatges d’un honeypot ➔Només veuen els atacs en contra seva, per tant no detecten altres atacs a la xarxa ➔Poden ser detectats pels atacants i enganyar l'administrador perquè pensés que la seva xarxa està sent atacada ➔Poden ser utilitzats com a plataforma per a atacar a la xarxa
 
-Arp poisoning ARP (Address Resolution Protocol) En les xarxes broadcast tots els dispositius llancen peticions arp de broadcast per a trobar les direccions MAC de xarxa. El funcionament ARP és: ◆Quan una màquina necessita comunicar amb una altra mira en la seva taula ARP ◆Si no està llança una petició ARP_request a la xarxa ◆Totes les màquines comparen amb la seva IP ◆Si la IP coincideix respon al ARP_request amb la seva IP i la seva MAC ◆La màquina que llança la petició guarda el parell IP i l'adreça MAC en la seva taula Exemples d’atacs a xarxes TCP/IP
+Honeypot El honeypot no ajuda a la prevenció, però si ajuda a la detecció d'atacs Proporciona ajuda a l'administrador per a triar les eines adequades per a contrarestar atacs http://www.elladodelmal.com//t-pot-una-colmena-de-honeypots-para.html
 
-Arp poisoning Un ARP Spoofing és un atac en el qual un atacant envia missatges falsificats ARP (Address Resolution Protocol) a una LAN. Com a resultat, l'atacant vincula la seva adreça MAC amb l'adreça IP d'un equip legítim (o servidor) en la xarxa Si l'atacant va aconseguir vincular la seva adreça MAC a una adreça IP autèntica, començarà a rebre qualsevol dada que es pot accedir mitjançant l'adreça IP.
+Honeypot Alguns Honeypots ●Cowrie ●Honeytrap ●Tanner ●Dionaea ●Adbhoney ●Redishoneypot ●Ciscoasa ●Heralding ●ConPot ●CitrixHoneypot ●.....
 
-Sol ser una fase de l’atac MitM Exemples d’atacs a xarxes TCP/IP
+Proxy Definició Un proxy és un equip informàtic que fa d'intermediari entre les connexions d'un client i un servidor de destí, filtrant tots els paquets entre tots dos La pàgina que es visita no sabrà la IP origen sinó la del proxy, i podràs fer-te passar per un internauta d'un altre país diferent al teu
 
-MitM (Man -in -the -Middle) L'atacant crea una connexió entre les víctimes i controlant la comunicació. Les víctimes creuen que es comuniquen entre elles ¿Qué es DNS poisoning? Exemples d’atacs a xarxes TCP/IP
+Proxy Tipus Proxy Web Proxy Cau Proxy Invers Proxy Transparent
 
-El ataque de denegació de servei DoS (Denial of Service) L'objectiu principal és impedir l'ús legítim del sistema atacat per part d'usuaris no autoritzats. Sol produir-se perquè l'atacant provoca un excessiu consum de recursos del servidor La defensa es realitza bloquejant l’adreça IP de l’atacant Exemples d’atacs a xarxes TCP/IP
+https://hide.me/es/proxy https://www.vpnbook.com/webproxy Configurar client Windows 10 – configuració – red – proxy On aconseguir adreces de proxy https://hidemy.name/es/proxy-list/
 
-DDoS (Distributed Denial of Service) Quan l'atacant s'amaga darrere de tota una xarxa d'atacants (xarxa de zombis o xarxa zombi) composta per sistemes infectats amb troians Exemples d’atacs a xarxes TCP/IP
+Proxy Instal·lació Servidor Servidor proxy squid Suporta, entre altres, els protocols HTTP, HTTP/2, HTTPS y FTP Funciona en Linux, macOS y Windows Configuració de filtres Configuració de cau
 
-Exemples d’atacs a xarxes TCP/IP Tipus d’atacs DDoS ➔Net Flood: S'organitzen atacs massius des de diferents punts de la xarxa mitjançant zombis. Amb la tecnologia actual, contra aquest atac es pot fer poc. ➔Connection flood:Tots els serveis orientats a connexió suporten un nombre de connexions simultànies L'atacant intenta esgotar amb connexions il·legítimes. En la connexions TCP/IP es pot conèixer la IP de l'atacant indicant al tallafocs que la bloquegi ➔Syn Flood: Es tracta d'esgotar els recursos del sistema atacat mitjançant connexions semiobertes. Es pot evitar mantenint el sistema actualitzat ➔Atac Smurf i atac Fraggle ➔Atac teardrop Com fer un atac DDoS? (2)
-
-Exemples d’atacs a xarxes TCP/IP
-
-Exemples d’atacs a xarxes mòbils Atac d’estació base falsa ➔Milions de subscriptors en el món continuen fent ús de GSM cada dia i la pràctica totalitat dels terminals mòbils 3G són compatibles amb 2G. GSM és molt feble en qüestió de seguretat ➔Atac ‘IMSI catcher’ ➔Atac: localització geogràfica ➔Atac: denegació de servei ➔Atac: «Downgrade selectiu» . Obliga a utilitzar 2G ➔Atac: SIM Swaping
-
-Exemples d’atacs a xarxes Bluetooth Atac a Bluetooth ➔Atac: BIAS ➔Atac: BLESA ➔Atac: KNOB ➔Atac: BLURtooth ➔Bluejacking ➔Bluedebugging ➔Bluesnarfing
-
-Amenaces internes i externes Les amenaces de seguretat causades per intrusos en xarxes corporatives o privades d'una organització, poden originar-se tant de manera interna com externa: Amenaça externa o d’accés remot: ➔Són atacants externs a la xarxa privada o interna de l'organització. Es introdueixen des de xarxes públiques.
-
-➔Els objectius d'atacs són servidors i encaminadors accessibles des de l'exterior, i que serveixen de passarel·la d'accés a la xarxa corporativa. ➔La protecció d'aquesta mena d'amenaces es veurà en una altra unitat: Seguretat perimetral.
-
-Amenaça interna o corporativa: ➔Els atacants pertanyen a la xarxa privada de l'organització o han aconseguit accés a ella. ➔Poden comprometre la seguretat i sobretot la informació i serveis de l'organització. Insiders Exfiltracions Amenaces internes i externes
-
-Elements bàsics de seguretat perimetral Perímetre de xarxa: és el límit entre la xarxa interna segura d'una organització i Internet, o qualsevol altra xarxa externa no controlada. El perímetre de la xarxa és el límit del que una organització controla. Encaminador/Router de frontera: dispositius situats entre la xarxa interna i les xarxes d'altres proveïdors que intercanvien el trànsit amb nosaltres DMZ: és una subxarxa d'àrea local (LAN) situada entre la xarxa privada d'una organització i la xarxa externa, normalment Internet.
-
-Bastió: Sistema que actua com a intermediari entre els usuaris de la xarxa interna d'una organització amb una altra mena de xarxes. Aquesta màquina ha d'estar especialment assegurada, però en principi és vulnerable a atacs per estar oberta a Internet, generalment proveeix un sol servei (com per exemple un servidor proxy)
-
-Encaminador de frontera L'encaminador de frontera és l'encaminador que s'instal·la en la part més externa de la xarxa corporativa, s'encarrega de comprovacions de seguretat en el trànsit d'entrada i eixida de la xarxa, una espècie de policia de trànsit entrant i sortint.
-
-Bastió Històricament, se'n deia bastions a les altes parts fortificades dels castells medievals; punts que cobrien àrees crítiques de defensa en cas d'invasió, usualment tenint muralles molt fortificades, sales per a allotjar tropes, i armes d'atac a curta distància com a olles d'oli bullent per a allunyar als invasors quan ja estaven per penetrar al castell També s’anomena Dual-Homed Host
-
-Firewall i DMZ Configuracions típiques d’una DMZ ARQUITECTURA FEBLE DE SUBXARXA PROTEGIDA ARQUITECTURA FORTA DE SUBXARXA PROTEGIDA
-
-DMZ TI i DMZ TO DMZ TI - Tecnologies de la Informació. Sistemes informàtics ●El servidor proxy pel qual es realitzaria la navegació a Internet. ●El servidor de correu corporatiu. ●El servidor web de la companyia. ●Honeypots DMZ TO - Tecnologies de la operació. Sistemes industrials ●Servidor de pegats ●Màquina de salt ●Historiador ●Servidor d'autenticació
-
-Sistemes de detecció d’intrusos ⇒ IDS Un IDS és una eina de seguretat la funció de la qual és la de detectar o monitorar els esdeveniments ocorreguts en un sistema informàtic amb la intenció de trobar intents de comprometre la seguretat. Els IDS busquen patrons prèviament definits. Aquests patrons impliquen una activitat sospitosa sobre la xarxa o equip.
-
-Gràcies a aquests patrons s'intenta dotar a la seguretat d'una capacitat de prevenció i alerta anticipada. Els IDS no estan dissenyats per a detenir els atacs sobre el Sistema informàtic
-
-Els IDS s'encarreguen de: ➔Vigilar el trànsit de la xarxa. ➔Examinar els paquets a la recerca de dades sospitoses. ➔Detectar les primeres fases d'una atac: ➔Anàlisi de la xarxa. ➔Escombratge de ports. Sistemes de detecció d’intrusos ⇒ IDS
-
-Sistemes de Prevenció d’Intrusos ⇒ IDS => IPS L’operació d’un IPS té quatre fases
-
-### 1. Identificació de l'atac
-
-### 2. Registre d'esdeveniments
-
-### 3. Bloqueig de l'atac
-
-### 4. Reporti als administradors i personal de seguretat
-
-Sistemes de detecció d’intrusos ⇒ IDS Hi ha dos tipus d’ IDS: HIDS (Host IDS) Aquests IDS protegeixen un únic equip en la xarxa que pot ser un servidor o un equip normal. Monitoren una gran quantitat d'esdeveniments i activitats amb una gran precisió. Determinen quins processos i usuaris s'involucren en una determinada acció.
-
-Recapten informació del sistema com a fitxers, logs, recursos… per a la seva posterior anàlisi. Pràctica IDS: Instal·lar “Comodo Firewall” en Windows (HIPS)
-
-Sistemes de detecció d’intrusos ⇒ IDS NIDS (Net IDS) Protegeixen un sistema informàtic basat en xarxa. Actuen sobre la xarxa capturant i analitzant paquets de xarxa, són com sniffers connectats a la xarxa. Després analitzen els paquets capturats buscant patrons que suposin algun tipus d'atacs. Actuen mitjançant la utilització d'un dispositiu de xarxa configurat en manera promíscua (analitzen en temps real tots els paquets que circulen per la xarxa encara que no vagin dirigits a aquest determinat dispositiu).
-
-Compte amb els switch !!
-
-Sistemes de detecció d’intrusos ⇒ IDS L’arquitectura d’un IDS està formada per: ➔Font de recollida de dades: pot ser un log, un dispositiu de xarxa o el propi sistema en un HIDS. ➔Regles i filtres: s'apliquen sobre les dades per a detectar anomalies. ➔Dispositiu generador d'informes i alarmes: en alguns casos són capaços d'enviar alertes per mail o SMS.
-
-Sistemes de Detecció d’Intrusos distribuïts DIDS El servei IDS Distribuït recull totes les dades dels IDS, analitza i correlaciona tots els esdeveniments produïts en la xarxa avaluant de manera global el que ocorre en la xarxa a cada moment
+```bash
+sudo apt-get update
+sudo apt-get install squid
+```
 
 Consells finals Protegir la xarxa. STP, Link Aggregation, Port Security, VLAN, ... Instal·lar i configurar tallafocs. Fer un bon disseny perimetral. Activar comunicacions xifrades sempre que es puga (https, sftp, ssh, etc..) Tancar ports (serveis) no utilitzats Instal·lar un IDS Configurar ACL’s en Encaminadors i Seguretat de ports en Switch Actualitzar microprogramari (firmware) dels equips de xarxa Utilitzar eines de detecció de bootnets (OSI) Davant un incident -> CERT
 
 ---
 
-# 7.2 Seguretat en xarxes sense fil
+# 8.2 HA - Alta_Disponibilitat
 
-XARXES SENSE FIL
+ALTA DISPONIBILITAT
 
-Introducció 1999
+DEFINICIONS HA (High Availability): És un protocol de disseny del sistema que assegura un cert elevat grau de continuïtat operacional durant un període de mesurament donat L'alta disponibilitat és la capacitat que té un sistema de T.I. per a ser accessible i de confiança quasi tot el temps, la qual cosa elimina o disminueix el temps d'inactivitat Conceptes
 
-,
+Fallada, error, avaria Downtime, Uptime MTBF ( temps mitjà entre fallades ) , MTTR (.. entre reparació) SPoF (Punt únic de fallada) -> redundància
 
-,
+DEFINICIONS HA (High Availability): AD (Alta Disponibilitat) Exemples d’elements d’AD
 
-En diverses empreses entre elles Com i Nokia es van unir per a crear
+DEFINICIONS Càlcul de disponibilitat: S'expressa com el percentatge de minuts de funcionament sobre el total d'un any, segons la següent expressió: Tdisponible = Hores compromeses de disponibilitat. Tinactivo = Nombre d'hores fora de línia (correspon a les hores de "caiguda del sistema" durant el temps de disponibilitat compromés).
 
-. un mecanisme que permetera la connexió sense fil entre diferents dispositius (
+Per a sistemes altament disponibles, la disponibilitat es categoritza com a número de nous (9) de la ràtio obtinguda: “tres nous”, “quatre nous”, “cinc nous” SLA Disponibilitat (%)= Tdisponible Tdisponible +Tinactiu x 100
 
-- ).
+DEFINICIONS • 99,9% = 43 minuts/mes o 8,76 hores/any ("tres nous") de sistema no disponible. • 99,99% = 4,4 minuts/mes o 32,6 minuts/any ("quatre nous") de sistema no disponible. • 99.999% = 0,4 minuts/mes o 5,3 minuts/any ("cinc nous") de sistema no disponible. La disponibilitat ha de ser monitorada amb eines especials.
 
-aliança Wi Fi
-
-. Aquests dispositius no havien de ser del mateix fabricant 2000
-
-802.11
-
-L'any segons la norma IEEE b se certifica
-
-. la interoperabilitat de dispositius
-
-La família d'estàndards 802.11
-
-ha crescut des de
-
-llavors adaptant se a les necessitats de
-
-. velocitat i seguretat entre altres
-
-Estàndards 802.11
-
-Estàndards 802.11
-
-Estàndards 802.11
-
-La freqüència 2,4
-
-. GHz també la utilitzen altres tecnologies
-
-. Pot haver interferències entre aquestes tecnologies
-
-1.2
-
-Bluetooth en la seua versió es va actualitzar per a evitar aquestes . interferències
-
-802.11
-
-Amb l'estàndard ac es va optar per la freqüència GHz perquè cap
-
-. altra tecnologia la utilitza
-
-5 *
-
-10%
-
-Amb la banda GHz es perd un d'abast respecte a 2,4 . GHz
-
-Risc i limitacions ➔Utilitzen rangs de freqüència (RF) sense costos de llicència,
-
-són
-
-,
-
-,
-
-. rangs d'ús públic estan saturats i els senyals interfereixen entre si ➔La seguretat,
-
-qualsevol equip amb targeta WiFi pot interceptar els senyals ●
-
-,
-
-Utilitzant aplicacions de captura i anàlisi de transit com per exemple Wireshark ➔
-
-Per a solucionar els problemes de seguretat s'usen les següents : tècniques ➔Encriptació. ➔Autenticació.
-
-Sistemes de seguretat en WLAN Open System (Sistema obert) ➔
-
-. No existeix autenticació ➔
-
-’
-
-’ . El control d accés el realitza el punt d accés ➔
-
-. No existeix xifrat entre les comunicacions Perquè és perillós connectar-se a Wifis públiques qué fer per a protegir-te
-
-Sistemes de seguretat en WLAN WEP - W
-
-ired E
-
-quivalent Privacy ➔Encriptació
-
-de missatges amb claus de longitud 64 bits → + 24 ’ clau vector d inicialització 128 bits → 104 + 24 256 bits → 232 + 24 ➔Autenticació ◆Open System
-
-. els clients no s'identifiquen
-
-Després d'autenticar se i associar se a la xarxa es
-
-. necessita la clau WEP correcta ◆Pre-Shared Keys (PSK)
-
-la mateixa clau WEP
-
-. s'usa per a autenticar i realitzar el control d'accés
-
-Sistemes de seguretat en WLAN WEP - W
-
-ired E
-
-quivalent Privacy
-
-,
-
-. Encara que pot semblar que usar PSK és més segur no és així
-
-Per a realitzar l'autenticació mitjançant PSK se segueixen quatre passos ●
-
-( ). Client envia petició al punt d'accés PA ●
-
-. El PA envia un text model com a resposta ●
-
-. El client xifra el text amb la clau WEP i l'envia al PA ●
-
-. El PA desxifra el text i el compara i s'envia confirmació o denegació
-
-Capturant aquests quatre paquets la clau WEP
-
-. es desxifra directament
-
-Sistemes de seguretat en WLAN WPA - W - i Fi P
-
-rotected Access
-
-. Creat per a esmenar les deficiències del xifratge previ
-
-Es van publicar dues versions temporals de WPA (
-
-). solucions intermèdies
-
-Finalment es va publicar la versió definitiva WPA2,
-
-sota l'estàndard 802.11i.
-
-Sistemes de seguretat en WLAN WPA - W - i Fi P
-
-rotected Access
-
-Disposa de dues solucions segons el seu àmbit d'aplicació ➔WPA Personal
-
-. L'autenticació es realitza amb una clau precompartida
-
-. És el sistema usat habitualment en xarxes xicotetes ➔WPA Enterprise
-
-L'autenticació es realitza mitjançant les credencials
-
-de cada usuari utilitzant un servidor RADIUS.
-
-És el sistema usat habitualment en xarxes
-
-corporatives en les quals els usuaris disposen
-
-. de credencials per a utilitzar els equips
-
-Sistemes de seguretat en WLAN
-
-2. En els últims mesos s'ha descobert una fallada en el protocol WPA
-
-Les empreses de l'aliança Wi-Fi
-
-van llançar el nou protocol WPA durant 2018. l'any
-
-3
-
-Arriba el nou WIFI WAP Com funciona i per a que serveix 
-
-(
-
-) Xifratge de bits en comptes de bits 
-
-Mecanisme anti atacs de força bruta 
-
-(* * ) Configuració senzilla amb un altre dispositiu Easy Connect
-
-WPS W - i Fi P
-
-rotected Setup
-
-WPS defineix els mecanismes per a connectar se a una xarxa WPA
-
-(
-
-minimitzant la intervenció dels usuaris generalment prement únicament un ). botó
-
-,
-
-Mitjançant aquests mecanismes els dispositius obtenen les credencials tant el
-
-. SSID com la PSK
-
-No és un sistema de seguretat i la seua feble implementació el converteixen
-
-. en una de les majors vulnerabilitats en les xarxes WLAN
-
-WPS Atac a xarxa amb WPS ➔
-
-Es poden utilitzar mètodes
-
-de força bruta ➔
-
-Reaver WPS programa per
-
-a obtindre la clau Solució ➔
-
-Desactivar el WPS Qué és WPS Pin i perquè deus desactivar-lo
-
-Auditories wireless
-
-Realitzar auditories wireless per a mesurar el nivell de seguretat de les
-
-.
-
-nostres xarxes sense fils és essencial Existeixen multitud d'aplicacions que
-
-( permeten monitorar i recuperar contrasenyes de xarxes sense fils airodump aircarck )
-
-( etc i distribucions live backtrack, wifiway, wifislax…) Pràctica: Comprovar les vulnerabilitats de les claus WEP ● ’
-
-Configurar l acces point modificant la xarxa per defecte el SSID i les
-
-claus wep ●
-
-( ) Configurar la targeta wifi i comprovar l'accés al Acces Point AP ●
-
-Obtindre la contrasenya d'accés a la xarxa wifi utilitzant wifislax .
-
-WiFiSlax El Tutorial definitivo
-
-,
-
-Com s'ha pogut comprovar les xarxes WLAN ofereixen molts avantatges
-
-. però estan molt lluny de ser completament segures
-
-Tant pels errors d'implementació dels estàndards com per la facilitat d'accedir
-
-, . al mitjà de transmissió utilitzat l'aire
-
-,
-
-Encara així les xarxes WLAN s'utilitzen i es continuaran utilitzant per la gran
-
-. escalabilitat i connectivitat que ofereixen
-
-Per això caldrà tindre en compte una sèrie de recomanacions per a evitar
-
-. intrusions en la mesura que siga possible Recomanacions de seguretat
-
-➔
-
-( )
-
-Assegurar l'administració del Punt d'Accés AP ja que és un punt crític
-
-. de la xarxa ➔
-
-, , . Establir una contrasenya d'accés a la xarxa complexa llarga i única (
-
-) Només s'haurà d'introduir una vegada ➔
-
-,
-
-Actualitzar el microprogramari dels encaminadors dispositius AP i clients
-
-. per a evitar vulnerabilitats i afegir noves funcions ➔
-
-Usar sempre la major versió del protocol de seguretat WPA o servidor . RADIUS ➔
-
-. Desactivar el protocol WPS ➔
-
-. Desconnectar l'AP quan no s'use ➔
-
-(
-
-) Limitar la potència del senyal evitar que isca fora ➔
-
-Aïllar la xarxa de convidats Recomanacions de seguretat
-
-➔
-
-. Canviar el SSID per defecte i periòdicament ➔
-
-Tria un nom per a la xarxa que no siga obvi ni fàcil d'endevinar ➔
-
-. Ocultar la difusió del SSID
-
-D'aquesta manera els intrusos hauran de conéixer ho prèviament
-
-. per a poder realitza atacs
-
-Això complica una mica l'administració de la xarxa ja que els
-
-clients també hauran de conéixer per endavant el SSID i
-
-. introduir ho a l'hora de connectar se per primera vegada Recomanacions de seguretat
-
-Recomanacions de seguretat ➔
-
-Desactivar el servidor DHCP i assignar les adreces IP de manera manual
-
-. o mitjançant reserva amb l'adreça MAC ➔
-
-’ ’ ( )
-
-(
-
-) Canviar la contrasenya d accés a l aparell AP per defecte de fàbrica ➔
-
-( ). Canviar les IP per defecte del punt d'accés AP ➔
-
-. Canviar el rang d'IP per defecte ➔
-
-. Activar el filtrat MAC ➔
-
-Analitzar periòdicament els clients connectats per a comprovar que estan
-
-. entre els equips autoritzats ➔
-
-. Establir un nombre màxim de clients en l'AP misconfiguration
-
----
-
-# 7.3 VPN
-
-XARXES PRIVADES VIRTUALS
-
-Caracterització d’una VPN Amb una arquitectura VPN el client utilitzarà Internet, però establirà un canal xifrat per a connectar-se a un servidor VPN que traspassarà tot el trànsit, una vegada desxifrat, per la xarxa interna segura al servidor. Com la connexió per la xarxa pública està xifrada, el seu contingut queda protegit
-
-Caracterització d’una VPN
-
-Caracterització d’una VPN
-
-Tipus de VPN segons la seua funció ●VPN d'accés anònim ●VPN d'accés remot o Roadwarrior ●VPN punt a punt,lloc a lloc o site-to-site ●VPN over LAN
-
-VPN d’accés anònim
-
-L'usuari es connecta a internet a través d'un servidor VPN aconseguint anonimat i deslocalització
-
-VPN d’accés remot o roadwarrior
-
-Consisteix en el fet que un usuari es connecta amb el lloc remot utilitzant Internet
-
-,
-
-com a xarxa d'accés de manera que s'estableix un túnel entre el sistema de l'usuari i
-
-el servidor de VPN remot que li proporciona l'accés a una xarxa local
-
-L'usuari s'autentica en el
-
-.
-
-servidor remot Només els
-
-usuaris amb permís podran
-
-establir el túnel
-
-VPN punt a punt,lloc a lloc o site-to-site
-
-El túnel s'estableix entre dues xarxes locals pel que cada xarxa local ha de tindre el
-
-seu propi servidor VPN
-
-VPN over LAN
-
-.
-
-El túnel s'estableix entre equips dins d'un xarxa local Serveix per a aïllar zones i serveis de la
-
-.
-
-xarxa interna Aquesta capacitat ho fa molt convenient per a millorar les prestacions de seguretat
-
-,
-
-de les xarxes sense fils i per a accessos a servidors amb informació sensible com per exemples . nòmines Activitat : ¿Qué és VPN sobre LAN? Dibuixa un esquema
-
-Arquitectures bàsiques de VPN
-
-La tècnica de tunelització consisteix a encapsular un protocol de xarxa sobre un altre (
-
-)
-
-protocol de xarxa encapsulador creant un túnel dins d'una xarxa d'ordinadors
-
-Es tracta d'encapsular el paquet origen dins d'un altre en el qual afegim tres : capçaleres ➔Camp PPP,
-
-que porta el control d'autenticació i xifratge propi del protocol PPP (
-
-). Point to Point Protocol ➔Camp GRE,
-
-. que porta informació sobre el túnel que estableix PPTP ➔ Camp IP,
-
-que especifica les adreces IP de tot el paquet complet en la xarxa de
-
-. trànsit segons les especificacions de PPTP Arquitectures bàsiques de VPN
-
-Nivells de seguretat en una connexió de xarxa
-
-Una connexió de xarxa es pot assegurar en un d'aquests tres nivells funcionals de
-
-/ : l'arquitectura TCP IP ➔Seguretat en el nivell d’enllaç
-
-Un exemple de protocol de seguretat en este
-
-nivell és L2TP, PPTP, PPPoE ➔Seguretat en el nivell de xarxa
-
-Este és el tipus de seguretat que ’
-
-s aconsegueix amb IPsec.
-
-Per a que una aplicació puga assegurar les seues
-
-connexions deurà encapsular les dades a enviar en paquets IP que seran
-
-assegurats mitjantsant IPsec ➔Seguretat en el nivel d’aplicació
-
-En este cas es tracta de sustituir el
-
-protocol insegur per altre més segur però funcionalment equivalent SSL, SSH, https, ftps, .. Las xarxes privades virtuals utilitzen majoritàriament tècniques de seguretat propies del nivel d’enllaç i del nivel de xarxa
-
-Implantació d’una VPN
-
-Par establir una VPN són necessaris al menys dos requisits bàsics ➔Una connexió a Internet o a la xarxa de trànsit que suporta el túnel (
-
-’
-
-),
-
-en el cas d una VPN sobre LAN seria una xarxa local que fa la funció de xarxa
-
-. de transport ➔Dos adreces IP, una per a cada extrem del túnel,
-
-de manera que els
-
-encaminadors puguen discriminar quin paquet ha d'anar a quina seu de .
-
-l'organització En les xarxes locals dels extrems del túnel seran els encaminadors
-
-.
-
-els encarregats d'introduir els paquets en el túnel Si la xarxa de trànsit és ,
-
-. Internet les dues adreces IP hauran de ser públiques .
-
-.
-
-El protocol estàndard més utilitzat és Ipsec Les solucions
-
-. VPN es poden implementar per maquinari o per programari
-
-Les de maquinari tenen major rendiment i són més fàcils de ,
-
-,
-
-configurar no obstant això tenen menys flexibilitat que les
-
-de programari
-
-Protocols VPN PPPoE (PPP over Ethernet)
-
-(
-
-És l'estàndard per a connectar estacions utilitzant PPP sobre una xarxa Ethernet en
-
-)
-
-comptes d'una línia serie És l'estàndard utilitzat per a connectar se a un ISP a través
-
-.
-
-,
-
-de DSL o cable mòdem En la creació de túnels PPP se sol utilitzar juntament amb
-
-un protocol de tunelització denominat GRE,
-
-però també pot tunelitzar se amb L2TP.
-
-Protocols VPN PPTP (Point-to-Point Tunneling Protocol)
-
-És un protocol desenvolupat per Microsoft que expandeix les característiques de PPP
-
-que li encapsula perquè qualsevol tipus de dades PPP puguen travessar Internet com
-
-.
-
-,
-
-una transmissió IP habitual Suporta encriptació autenticació i serveis d'accés
-
-(
-
-).
-
-mitjançant RRAS Routing and remalnom Access Server Actualment es troba obsolet i
-
-. ha sigut reemplaçat per altres protocols mes avançats
-
-Protocols VPN L2TP (Layer 2 Tunneling Protocol)
-
-Està desenvolupat per Cisco
-
-i estandarditzat per la IETF
-
-com a hereu de PPTP i L2F (
-
-).
-
-,
-
-de Cisco Encapsula dades com a PPP però a diferència d'ell està acceptat per
-
-.
-
-, multitud de fabricants PPTP i L TP no sols s'utilitzen en la creació de túnels VPN
-
-sinó que també són utilitzats en les xarxes per les seues capacitats d'encriptació de . 2
-
-.25,
-
-dades L TP pot funcionar sobre X FrameRelay i ATM
-
-Protoclos VPN IPsec ( Internet Protocol security)
-
-. És una extensió del protocol IP que permeten assegurar les comunicacions sobre IP ,
-
-,
-
-. autenticant i si es desitja xifrant els paquets IP d'una comunicació
-
-IPsec treballa en la capa de xarxa i per això pot ser utilitzat per qualsevol aplicació
-
-. sense necessitat de realitzar cap modificació en la configuració d'aquesta
-
-, IPsec consta de tres protocols ➔ Authentication Header (AH)
-
-,
-
-Proporciona integritat autenticació i no repudi
-
-,
-
-. de tot el paquet enviat incloent hi la capçalera IP ➔ Encapsulating Security Payload (ESP)
-
-Afig a l'anterior el xifratge de tota
-
-,
-
-la informació que s'envia però no inclou en els seus càlculs les dades de la capçalera ➔Internet key exchange (IKE)
-
-Empra un intercanvi secret de claus
-
-. de tipus Diffie Hellman per a establir el secret compartit de la sessió
-
-. Se solen usar sistemes de Criptografia de clau pública o clau pre compartida
-
-Protocols d’autenticació en la xarxa
-
-Un protocol d'autenticació és un protocol que permet verificar la identitat de la
-
-.
-
-persona o servei que desitja accedir a un recurs de la xarxa Constitueixen el primer
-
-. passe a donar en tot procés segur
-
-Els protocols més utilitzats ➔PAP (Password Authentication Protocol)
-
-Protocol d'autenticació de .
-
-,
-
-contrasenya En PAP les credencials de l'usuari representades pel nom d'usuari i
-
-,
-
-la seua contrasenya s'envien per la xarxa
-
-sense xifrar,
-
-per la qual cosa és un
-
-.
-
-mètode d'autenticació insegur Una captura de la trama PPP permetria un examen
-
-. lliure de la contrasenya ➔CHAP (Challenge Handshake Authentication Protocol)
-
-.
-
-protocol d'autenticació per desafiament mutu En CHAP el
-
-client envia una petició d'accés amb un hash
-
-de la (
-
-,
-
-). contrasenya no la contrasenya que mai viatja per la xarxa
-
-Protocols d’autenticació en la xarxa ➔EAP (Extensible Authentication Protocol)
-
-Protocol d'autenticació .
-
-.
-
-extensible EAP admet diverses maneres d'autenticació És més una arquitectura
-
-.
-
-que un únic protocol Pot utilitzar tant certificats digitals com tokens i fins i tot
-
-/
-
-parelles usuari contrasenya És molt utilitzat en l'autenticació sobre xarxes sense fils
-
-. i connexions punt a punt ➔EAP-TLS (EAP Transport Layer Security).
-
-És una extensió de EAP que
-
-permet que EAP interaccione amb un servidor RADIUS que proporciona
-
-l'autenticació de credencials i les claus de xifratge fent de EAP un dels protocols
-
-.
-
-més segurs i molt habitual en dispositius sense fils corporatius També admet la
-
-. gestió del xifratge i autenticació mitjançant certificació digital
-
-Protocols d’autenticació en la xarxa Kerberos.
-
-Creat pel MIT (
-
-)
-
-Institut Tecnològic de Massachusetts i estandarditzat en la RFC 4120.
-
-.
-
-( 3962). Client i servidor s'autentiquen recíprocament Utilitza xifrat AES RFC
-
-,
-
-Cada servidor usuari o servei disposa d'una clau que es registra en una base de
-
-.
-
-dades unificada en el servidor Kerberos Client i servidor confien en el servidor ,
-
-Kerberos qui els proporciona tiquets de sessió que posteriorment seran utilitzats
-
-.
-
-per a autenticar se enfront dels serveis de xarxa Tant els sistemes Windows com
-
-/
-
-. els GNU Linux poden usar Kerberos
-
-Proveïdors (de VPN d’accés anònim) ● Ciberghost ● TunnelBear (gratuito) ● HotSpot Shield ●
+Acords SLA (Acords de nivell de servei)
 
 ```bash
-Private Tunnel
+Service Level Agreement
 ```
 
-● Etc…. Altres proveïdors…. ●Opera VPN (free) ●Google ●Mozilla ●Avira ●NordVPN ●….. Extensió de navegador
+Disponibilitat (%)= Tdisponible Tdisponible +Tinactiu x 100
 
-Software de servidors i clients de VPN Arquitectures: Client a Servidor Router a Router Firewall a Firewall ● Servidor VPN – OpenVPN – FreeLan ● Client VPN – Configura Windows – Configura Linux – Configura MAC – Configura Android – Configura iOS punt a punt router a router
+COMPONENTS D’UN SISTEMA DE HA 1. Elements de l'entorn. a. Alimentació. b. Humitat i temperatura. c. Seguretat d'accés. 2. Equipaments de processament de dades. a. Redundància. b. Configuració del programari. 3. Equipaments d'emmagatzematge, a. DAS, NAS, SAN. b. RAID, cintes, etc. c. Equips de còpia de seguretat (suport de dades).
 
-Software per implementar Roadwarrior ● LogMeIn Hamachi ● Radmin VPN ● SoftEher VPN és un programari gratuït de codi obert, multiplataforma, client VPN i servidor VPN multiprotocol ● NetOverNet ● ZeroTier ● GameRanger ● Wippien (P2P VPN) https://vpn.net/
+4. Xarxa a. Cablejat estructurat. b. Redundància i balanceadores de càrrega. c. Firewalls i IDS. 5. Sistemes de monitoratge, alertes i gestió d'acords SLA. 6. Redundància del CPD 7. Aliances amb proveïdors d'equips i serveis. 8. Polítiques internes. 9. Equips humans d'atenció i suport.
+
+- Directives empresarials.
+
+PRINCIPIS BÀSICS DE DISSENY DE HA
+
+### 1. REDUNDÀNCIA
+
+### 2. RECUPERACIÓ
+
+### 3. MINIMITZACIÓ DEL MTTR (Mean Time To Repair)
+
+### 4. PREDICCIÓ I PREVENCIÓ DE FALLADES
+
+SISTEMES TOLERANTS A FALLADES FAULT-TOLERANT Capacitat de continuar donant servei després d'una fallada FAILOVER (canvi a suport davant fallada) Temps de failover TOLERÀNCIA PER REPLICACIÓ (Actiu / Actiu) TOLERÀNCIA PER REDUNDÀNCIA (Actiu / Passiu ) Configuració actiu/passiu (A/P) (Existeix un node passiu, que s'activa en produir-se fallada) Configuració actiu/actiu (A/A) (load balancer) RECUPERACIÓ DE DESASTRES
+
+SISTEMES TOLERANTS A FALLADES
+
+- ELEMENTS
+
+Fonts d’alimentació redundants SAI / UPS redundants amb línies d’electricitat redundants Grups electrògens Equip humà de resposta 24/7 Connexions a xarxa elèctrica redundants (amb diferents proveïdors) Connexions a xarxa INTERNET redundants ( amb diferents ISP) Balancejadors Sistemes en Clusters
+
+BALANCEJADORS DE CÀRREGA Dispositiu Hw o Sw que es posa al capdavant d'un conjunt de servidors que suporten una aplicació i que assigna o balanceja les sol·licituds dels clients Afinitat del balancejador: Prendre el control de les sessions/connexions per a accedir al servidor adequat
+
+SISTEMES EN CLUSTER ELEMENTS Nodes Interconnexió dels nodes ( xarxa privada) Sistema d'emmagatzematge Connexió a xarxes externes al clúster Gestor de clúster ( Clúster Manager)
+
+SISTEMES EN CLUSTER ELEMENTS Nodes Interconnexió dels nodes ( xarxa privada) Sistema d'emmagatzematge Connexió a xarxes externes al clúster Gestor de clúster ( Clúster Manager)
+
+SISTEMES EN CLUSTER DAS NAS SAN DAS - Direct Attached Storage NAS - Network Attached Storage SAN - Storage Area Network
+
+DAS - Direct Attached Storage .
+
+NAS - Network Attached Storage .
+
+SAN - Storage Area Network
+
+SAN - Storage Area Network Elements: Fibre Channel Switch: dissenyat per a xarxes d'àrea d'emmagatzematge (SAN), és una tecnologia de xarxa d'alta velocitat que s'utilitza per a connectar l'emmagatzematge de dades de la computadora als servidors, proporcionant interfícies punt a punt, commutades i en bucle per a lliurar les dades en brut sense pèrdues i en ordre.
+
+HBA: (adaptador de bus del host) , connecta un sistema servidor (computadora) a una xarxa de computadores i dispositius o unitats d'emmagatzematge.
+
+SAN - Storage Area Network Tecnologies per a xarxes SAN
+
+- Xarxes Fibre Channel o FC
+
+◦ FC-P2P ◦ FC-AL (arbitrari) ◦ FC-SW (fabric)
+
+- Xarxes iSCSI
+- Xarxes FCoE
+
+SAN - Storage Area Network Tecnologies per a xarxes SAN
+
+- Xarxes Fibre Channel o FC
+
+◦ FC-AL ◦ FC-SW
+
+- Xarxes iSCSI
+- Xarxes FCoE
+
+SISTEMES EN CLUSTER (conceptes) ELEMENTS Failover Heartbeat Split brain Quòrum Recurs Agent del recurs El CM (Clúster Manager) actua Designa un node principal, que serà la cara a l'exterior Detectar caiguda de nodes i failover Si la caiguda és del node primari, designar un nou node primari
+
+SISTEMES EN CLUSTER (middleware) SOFTWARE QUE RESIDEIX EN CADA NODE o Single System Image SSI o Service Availability
+
+TOPOLOGIES BÀSIQUES DE CLUSTER
+
+- TOPOLOGIA DE PARELLS CLUSTERITZATS
+- TOPOLOGIA DE CLÚSTER N+1
+- TOPOLOGIA DE CLÚSTER PARELL+N
+
+TIPUS BÀSICS DE CLUSTERS • ALTA DISPONIBILITAT (Cluster HA High Availability) • ALTA EFICIÈNCIA (Clusters HT, High Throughput ) • ELEVADA CAPACITAT DE CÁLCUL (Clusters HPC) Cluster failover (HA). Mecanisme failback Cluster Load-Balancing (HA) Cluster High Performance Computing (HPC) Clusters Científics Clusters IT
+
+SPLIT BRAIN Situació pel qual 2 o més nodes del clúster prenen el control en quedar-se aïllats. Això provoca corrupció de dades i dessincronització Solució: Quòrum (Recurs compartit i accessible per tots els nodes del clúster) Fencing: Node actiu que ha deixat de pertànyer al clúster fins que se solucionin els problemes
+
+RECURSOS COMPARTITS DEL CLUSTER SAN Utilització de Dispositius de blocs DRDB (Replicació de dades en recursos locals, Linux ) Clusters de Balanceig de Càrrega ( sense dades compartides )
+
+TECNOLOGIA GRID COMPUTING Un grid és una malla d'ordinadors interconnectats entre si a través d'Internet amb capacitat de procés paral·lel. Utilitzen programari específicament preparat per a ser usat en el grid. Són molt utilitzats en computació científica. Els nodes que componen un grid estan feblement acoblats entre si i són essencialment heterogenis, a diferència dels quals componen un clúster que han de ser bastant homogenis i amb configuracions semblants quan no idèntiques.
+
+GRID COMPUTING – COMPUTACIÓN EN MALLA En la computació grid, les xarxes poden ser vistes com una forma de computació distribuïda on un “supercomputador virtual” està compost per una sèrie de computadors agrupats per a fer grans tasques Podem trobar projectes en els quals formar part de manera voluntària en diferents pàgines. Una d'elles BOINC, ofereix la participació en diferents projectes.
+
+https://boinc.berkeley.edu/ Exemple de Projecte: PROYECTOS A LOS QUE PUEDES DONAR PROCESAMIENTO
+
+VIRTUALITZACIÓ Per virtualització s'entén l'abstracció dels recursos d'un sistema, anomenada Hypervisor o VMM (Virtual Machine Monitor) que crea un embolcall de programari (capa d'abstracció) entre el maquinari de la màquina física (host) i el sistema operatiu de la màquina virtual (virtual machine, guest).
+
+Virtualització assistida per maquinari: Intel-VT AMD-V Màquina virtual de maquinari o de sistema: Són les que corren sobre una màquina física amfitrió o host. Propietats: • Particionament. Múltiples màquines virtuals es poden executar en el mateix equip físic, aprofitant millor els recursos de maquinari.
+
+• Aïllament. La virtualització assigna espais independents per al maquinari virtual de cada màquina virtual, controlant l'assignació de recursos, per la qual cosa cada màquina virtual corre aïlladament encara que comparteixin maquinari físic. • Encapsulació. Les màquines virtuals es gestionen com a arxius, per la qual cosa salvar un sistema és salvar un conjunt de fitxers.
+
+VIRTUALITZACIÓ - Tipus Màquina virtual de procés o de aplicació: S'executa com un procés més del sistema. El seu objectiu fonamental és proporcionar un entorn d'execució independent del maquinari i del propi sistema operatiu per a les aplicacions que executaran • JVM (java) • CLR (.NET) Hipervisor: És un petit monitor (capa de programari per a l'abstracció del maquinari o capa de virtualització) de baix nivell per a les màquines virtuals que s'inicia durant l'arrencada • Tipus 1, Nadiu, bare-metal o sense amfitrió. Corren directament sobre el maquinari. Alguns productes comercials que virtualitzen d'aquesta manera són VMware ESX Server, Citrix XEN Server o Microsoft _Hyper-V.
+
+• Tipus 2, Hosted. Corren sobre el sistema operatiu del host. Alguns productes que usen aquest model són VMware Workstation, Oracle VirtualBox o Parallels Workstation. • Tipus Híbrid. En aquest model tant el sistema operatiu amfitrió com el hipervisor interactuen directament amb el maquinari físic. Les màquines virtuals s'executen en un tercer nivell respecte al maquinari, per sobre del hipervisor, però també interactuen directament amb el sistema operatiu amfitrió.
+
+VIRTUALITZACIÓ – Tipus d’hipervisors
+
+VIRTUALITZACIÓ – Tipus d’hipervisors VirtualBox VMware Workstation Parallels Desktop QEMU Bhyve
+
+VIRTUALITZACIÓ – Tipus d’hipervisors TIPUS 1
+
+VMware ESXi Microsoft Hyper-V KVM Xen Proxmox VE Oracle VM Server VIRTUALITZACIÓ – Tipus d’hipervisors
+
+RECURSOS VIRTUALITZABLES  Plataforma  Recursos ●Xarxes ●Emmagatzematge ●Dades  Aplicacions  Escritori PRACTICA: Instalación de un Hipervisor bare-metal (proxmox) proxmox
+
+ALTA DISPONIBILITAT VIRTUALITZADA  Resposta enfront de fallades més eficaç  Integració de conjunt d'eines d'administració  Desplegament de nous servidors virtuals en molt poc temps, donant resposta ràpida  Estalvi de costos de manteniment i energètics  Gestió de l'espai d'emmagatzematge  Arrencada i parada de màquines virtuals  Gestió de còpies de seguretat de màquines virtuals  Trasllat de màquines virtuals entre sistemes ( en fred o en calent) vMotion  Trasllat de recursos virtuals entre sistemes ( en fred o en calent) svMotion  Monitoratge de recursos per a la presa de decisions
+
+ALTA DISPONIBILITAT VIRTUALITZADA Estalvi de temps de recuperació i continuïtat del treball (min MTTR)
+
+vMotion - video -- Storage vMotion -- ALTA DISPONIBILITAT VIRTUALITZADA -- vSphere vMotion
+
+https://www.youtube.com/watch?v=vcPzrnrnYCU ALTA DISPONIBILITAT VIRTUALITZADA
+
+Monitorització de recursos ALTA DISPONIBILITAT VIRTUALITZADA
+
+Monitorització de recursos ALTA DISPONIBILITAT VIRTUALITZADA
+
+Monitorització de recursos ALTA DISPONIBILITAT VIRTUALITZADA
+
+Estalvi de costos ALTA DISPONIBILITAT VIRTUALITZADA
+
+HIPER-CONVERGÈNCIA És un marc de T.I. que combina emmagatzematge, computació i xarxes en un únic sistema en un esforç per reduir la complexitat del centre de dades i augmentar l'escalabilitat. Exemples de sistemes HC NUTANIX VMware VSAN Simplivity Dell DMC CISCO Hyperflex
+
+HIPER-CONVERGÈNCIA DATA TIERING
+
+HIPER-CONVERGÈNCIA DEDUPLICACIÓ https://www.redeszone.net/tutoriales/servidores/sistema-archivos-zfs-servidores/ INCONVENIENTS
+
+- Ús de molta memòria i
+
+processador AVANTATGES
+
+- Millor aprofitament de
+
+l'espai
+
+- Menor cost d'electricitat i
+
+amplada de banda
+
+- Millora en la creació de CS
+
+On trobem ALTA DISPONIBILITAT FD : Failure Domain CPD - Cloud
+
+On trobem ALTA DISPONIBILITAT
 
 ---

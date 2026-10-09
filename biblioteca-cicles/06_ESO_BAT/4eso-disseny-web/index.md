@@ -20,7 +20,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Disseny
 
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
-| **UD1** | **HTML** | 8 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0102.md) |
+| **UD1** | **HTML** | 8 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
 | **UD2** | **WORDPRESS** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
 
 ## UD1 — HTML
@@ -29,14 +29,14 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Disseny
 
 [**📘 Obrir UD1 Completa en una sola pàgina**](./ut01/index.md)
 
-- [**1.1 Introducción**](./ut01/ut0102.md)
-- [**1.2 Estructura básica**](./ut01/ut0104.md)
-- [**1.3 Etiquetas para estructurar el texto**](./ut01/ut0106.md)
-- [**1.4 Etiquetas básicas de marcado**](./ut01/ut0108.md)
-- [**1.5 listas**](./ut01/ut0110.md)
-- [**1.6 enlaces**](./ut01/ut0111.md)
-- [**1.7 Tablas**](./ut01/ut0112.md)
-- [**1.8 Formularios**](./ut01/ut0113.md)
+- [**1.1 Introducción**](./ut01/ut0101.md)
+- [**1.2 Estructura básica**](./ut01/ut0102.md)
+- [**1.3 Etiquetas para estructurar el texto**](./ut01/ut0103.md)
+- [**1.4 Etiquetas básicas de marcado**](./ut01/ut0104.md)
+- [**1.5 listas**](./ut01/ut0105.md)
+- [**1.6 enlaces**](./ut01/ut0106.md)
+- [**1.7 Tablas**](./ut01/ut0107.md)
+- [**1.8 Formularios**](./ut01/ut0108.md)
 
 ## UD2 — WORDPRESS
 
@@ -44,4 +44,4 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Disseny
 
 [**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Continguts i Recursos**](./ut02/ut0201.md)
+- [**2.1 Continguts Teòrics i Recursos**](./ut02/ut0201.md)

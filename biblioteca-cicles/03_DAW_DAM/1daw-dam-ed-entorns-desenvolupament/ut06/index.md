@@ -1,213 +1,160 @@
 ---
 layout: default
-title: "UD7 — Refactorización, optimización y documentación · Temari Complet"
+title: "UD6 — Diagramas de comportamiento · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT6 Completa"
-prev_url: "../ut05/ut0502.html"
-prev_label: "⬅️ 6.2 Diagramas de estado"
+badge: "1r DAW / DAM · Grau Superior · UD6 — Diagramas de comportamiento"
+prev_url: "../ut05/ut0501.html"
+prev_label: "⬅️ 5.1 Diagramas de clase"
 next_url: "../ut06/ut0601.html"
-next_label: "7.1 Refactorización ➡️"
+next_label: "6.1 Diagramas de casos de uso ➡️"
 ---
 
-# 📘 UD7 — Refactorización, optimización y documentación (Unitat Completa)
+# 📘 UD6 — Diagramas de comportamiento (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**7.1 Refactorización**](./ut0601.md)
-- [**7.2 Documentación**](./ut0602.md)
+- [**6.1 Diagramas de casos de uso**](./ut0601.md)
+- [**6.2 Diagramas de estado**](./ut0602.md)
 
 ---
 
-# 7.1 Refactorización
+# 6.1 Diagramas de casos de uso
 
 ---
 
-Unidad 6: Refactorización Módulo: EDE
+DIAGRAMAS EN UML Use Case Diagrams Use Case Diagrams Diagramas de Casos de Uso Scenario Diagrams Scenario Diagrams Diagramas de Colaboración State Diagrams State Diagrams Diagramas de Componentes Component Diagrams Component Diagrams Diagramas de Distribución State Diagrams State Diagrams Diagramas de Objetos Scenario Diagrams Scenario Diagrams Diagramas de Estados Use Case Diagrams Use Case Diagrams Diagramas de Secuencia State Diagrams State Diagrams Diagramas de Clases Diagramas de Actividad UML
 
-¿Qué es la refactorización? Técnica disciplinada para efectuar cambios en la estructura interna de un código sin cambiar su comportamiento externo.
+CASOS DE USO
 
-¿Por qué refactorizar?
+- Para poder dibujar un diagrama de casos de
 
-- Para mejorar su diseño
-- Conforme se modifica, el software cambia su estructura.
-- Eliminar código duplicado simplifica su mantenimiento.
-- Para hacerlo más entendible
+uso utilizando la notación UML es preciso que entendamos conceptualmente lo que vamos a representar con iconos UML.
 
-La legibilidad del código facilita su mantenimiento.
+- Los casos de uso están íntimamente
 
-- Para encontrar errores
+relacionados con los requisitos funcionales del sistema.
 
-Al reorganizar un programa, se pueden apreciar con mayor facilidad las suposiciones que hayamos podido hacer.
+- Los casos de uso se extraen del documento de
 
-- Para programar más rápido
+requisitos del sistema.
 
-Al mejorar el diseño del código, mejorar su legibilidad y reducir los errores que se cometen al programar, se mejora la productividad de los programadores.
+CASOS DE USO
 
-¿Cuándo se debe refactorizar?
+- En el diagrama de casos de uso no hay que
 
-- Cuando se está escribiendo nuevo código
+describir el funcionamiento interno del sistema. Ejemplo Caso de uso: Registrar Venta No hay que describir
 
-Al añadir nueva funcionalidad a un programa (o modificar su funcionalidad existente), puede resultar conveniente refactorizar
+- El sistema escribe la venta en un BBDD…
 
-- para que éste resulte más fácil de entender, o
-- para simplificar la implementación de las nuevas funcionalidades.
-- Cuando se corrige un error
+- El sistema genera una sentencia insert…
 
-La mayor dificultad de la depuración de programas radica en que hemos de entender exactamente cómo funciona el programa para encontrar el error. Cualquier refactorización que mejore la calidad del código tendrá efectos positivos en la búsqueda del error.
+CASOS DE USO ELEMENTOS Ahora que ya conocemos conceptualmente lo que tenemos que dibujar en el diagrama de casos de uso, veamos los iconos que los representan
 
-- Cuando se revisa el código
+- Actor
+- Caso de Uso
+- Relaciones entre casos de uso
 
-Una de las actividades más productivas desde el punto de vista de la calidad del software es la realización de revisiones del código (recorridos e inspecciones).
+Extiende (extend) – Usa (include)
 
-¿Por qué es importante la refactorización? Cuando se corrige un error o se añade una nueva función, el valor actual de un programa aumenta. Sin embargo, para que un programa siga teniendo valor, debe ajustarse a nuevas necesidades (mantenerse), que puede que no sepamos prever con antelación. La refactorización, precisamente, facilita la adaptación del código a nuevas necesidades.
+CASOS DE USO
 
-¿Qué síntomas indican que se debería refactorizar? El código es difícil de entender cuando: 1. Usa identificadores mal escogidos 2. Incluye fragmentos de códigos duplicados 3. Incluye lógica condicional compleja 4. Los métodos usan un número elevado de parámetros 5. Está dividido en módulos enormes 6.
+CASOS DE USO Actores Los actores se representan con el icono de estereotipo estándar para casos de uso (el “stick man” o monigote) con el nombre del actor al pie de la figura. Los nombres de los actores suelen empezar por mayúscula. Actores: – Principales: el objetivo del caso de uso es esencial – Secundarios: interactúan con el caso de uso, pero el objetivo no es esencial.
 
-Un método accede continuamente a los datos de un objeto de una clase diferente a la clase en la que está definida (posiblemente, el método debería pertenecer a la otra clase). 7. Etc.
+CASOS DE USO Actores § El actor suele ser una persona, pero se diferencia de un usuario. Ahora vemos cómo… § Un actor representa un cierto papel que distintos usuarios pueden jugar. § El actor sería la clase y el usuario una instancia de la clase..
 
-Patrones de refactorización más comunes
+CASOS DE USO Casos de uso Los casos de uso se representan por una elipse y un nombre, que puede ir dentro o debajo de la elipse. Los casos de uso describen en forma de acciones el comportamiento del sistema, estudiado desde el punto de vista del usuario. Un escenario es una instancia de un caso de uso.
 
-### 1. Rename
+CASOS DE USO Ejemplo Consideremos como sistema un criadero de caballos. La compra de un caballo por parte de un cliente constituye un caso de uso. El comprador del caballo es el actor primario. El actor que registra el certificado de venta es un actor secundario. La compra del caballo Jorgelina constituye un ejemplo de escenario del caso de uso compra de un caballo.
 
-Patrones de refactorización más comunes
+CASOS DE USO
 
-### 2. Move
+CASOS DE USO § UML define cuatro tipos de relación en los Diagramas de Casos de Uso: – Comunicación: La relación que vincula a un actor con un caso de uso se denomina relación de comunicación. Actor C aso de U so
 
-Patrones de refactorización más comunes
+CASOS DE USO
 
-### 3. Extract Local Variable
+- Inclusión: Cuando decimos que un caso de uso incluye
 
-Patrones de refactorización más comunes
+a otro indicamos que siempre lo necesita. El usuario puede comprar Un billete de avión Y el usuario puede entrar Al sistema e identificarse Pero no puede terminar La compra sin identificarse
 
-### 4. Extract Constant
+CASOS DE USO
 
-Patrones de refactorización más comunes
+- Extensión: Cuando decimos que un caso de uso extiende
 
-### 5. Convert Local Variable to Field
+a otro indicamos que opcionalmente lo necesita. Se utiliza cuando se quiere reflejar el comportamiento opcional de un caso de uso. A la hora de adquirir un caballo, el comprador puede examinar su pelaje. Por lo tanto, el caso de uso compra de un caballo puede extenderse con esa verificación.
+
+CASOS DE USO
+
+- Herencia
+
+Es posible especializar un caso de uso en otro. El subcaso hereda las relaciones de comunicación, inclusión y extensión del supercaso de uso. En el diagrama de los casos de uso, la relación de especialización se representa mediante una flecha de especialización idéntica a la que une las subclases con las superclases.
+
+CASOS DE USO
+
+- Ejemplo
+
+El caso de uso compra de un caballo se especializa en dos subcasos: la compra de una yegua o la compra de un semental. La relación de comunicación que existe entre el caso de uso de compra del caballo y el Comprador se hereda en los dos subcasos de uso.
+
+CASOS DE USO
+
+CASOS DE USO
 
 ---
 
-# 7.2 Documentación
+# 6.2 Diagramas de estado
 
-U7.2 - Documentación 1º DAW
+U6.2 - Diagrama de estados 1º DAW
 
 Introducción
 
-- Cuando empezamos con cualquier lenguaje de programación o
+- Muestra los estados por los que pasa un objeto durante el transcurso
 
-Framework es muy importante que desde el principio controlemos la API.
-
-- Application Program Interface.
-- En el caso de Java, en la API vienen descritos todos los paquetes,
-
-clases, métodos y atributos del lenguaje.
+del tiempo.
 
 Introducción
 
-- Un buen programador debe ser capaz de
-- Saber leer e interpretar la documentación.
-- Saber documentar sus aplicaciones correctamente.
+- Los objetos o entidades que involucradas en el proceso de desarrollo
 
-Leer documentación
+pueden modificar sus estados como respuesta a la ejecución de una acción o evento.
 
-- https://docs.oracle.com/javase/8/docs/api/
+- El diagrama de estados de UML es quien captura cada uno de los
 
-Leer documentación
+estados de los objetos.
 
-- https://docs.oracle.com/en/java/javase/22/docs/api/index.html
+Introducción
 
-Leer documentación
+Introducción
 
-- Independientemente del formato de la documentación, en la
+- Un diagrama de estados captura los cambios de un UN solo objeto.
+- Si tenemos varios objetos, necesitamos varios diagramas.
+- Uno por objeto.
 
-documentación de una clase Java siempre encontraremos
+Introducción
 
-- Paquete al que pertenece
-- Nombre de la clase
-- Objeto del que hereda (en caso que herede)
-- Descripción de la clase
-- Resumen de atributos (no privados) y método de la clase. OJO!! RESUMEN!!!
+- El diagrama de estado empieza por un círculo relleno inicial y termina
 
-Suele coger solo la primera frase
+con un círculo doble que denota el estado final
 
-- Detalle de los atributos
-- Detalle de los métodos
+¿Qué necesito?
 
-Generar documentación
+- Para realizar el diagrama de estados es necesario saber todo el flujo
 
-- ¿Qué es Javadoc?
-- Herramienta de Oracle para la generación de documentación de APIs en
+de datos del programa.
 
-formato HTML a partir del código fuente Java.
+- Diagrama de actividades
 
-- Es el estándar de la industria para documentar clases Java y es ampliamente
+Elementos de un diagrama de estados
 
-utilizado en el desarrollo de software.
+Elaboración de diagramas de estado
 
-- Genera la documentación automáticamente a partir del código.
-- Esta documentación se puede visualizar mediante un navegador web.
-- Para otros lenguajes no se utiliza Javadoc pero existen multitud de
+- 1. Identificar los objetos de nuestra aplicación.
+- 2. Recordar que se realiza un diagrama por cada objeto.
+- 3. Para cada uno de los objetos.
+- 3.1. Identificar los estados por los que puede pasar el objeto
+- Compra - Registrada, Pendiente de Envío, Enviada, En Camino, Entregada, No_Entregada
 
-herramientas específicas para automatizar la generación de código.
-
-Generar documentación
-
-- Toda la documentación que queramos que se tenga en cuenta para
-
-Javadoc ha de empezar con /** y terminar con */
-
-Generar documentación
-
-- Toda la documentación que queramos que se tenga en cuenta para
-
-Javadoc ha de empezar con /** y terminar con */
-
-Generar documentación
-
-- Vemos que dependiendo de donde estemos escribiendo la anotación,
-
-el propio JavaDoc nos rellena con etiquetas especiales útiles para el tipo de bloque.
-
-- @author: Autor de la clase o método.
-- @version: Especifica la versión de la clase o método.
-- @param: Describir parámetro del método
-- @return: Explica qué devuelve el método
-- @see: Referencia a otra clase
-- @throws: Documenta excepciones que puede arrojar.
-- @deprecated: Marca el método como obsoleto
-
-Generar documentación
-
-Generar documentación
-
-- Una vez tenemos nuestro código correctamente comentado con las
-
-etiquetas necesarias para Javadoc, podemos ver que esta documentación ya es accesible desde el propio código con la ayuda contextual propia de java que aparece cuando pulsamos ctrl+espacio.
-
-- Dependiendo de la visibilidad de los atributos o métodos, esta
-
-documentación será accesible o no.
-
-Generar documentación
-
-- Para generar la documentación en formato HTML y que así sea accesible a
-
-modo de manual es muy sencillo.
-
-- Boton derecho sobre el proyecto
-- Exportar->Java->JavaDoc
-- Seleccionamos de qué clases queremos crear la documentación (se deben excluir
-
-tests, clases de prueba, etc)
-
-- Finalizamos el asistente
-- La documentación estará creada en el proyecto dentro de una carpeta
-
-llamada doc
-
-¿Dudas?
+Elaboración de diagramas de estado
 
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — Conceptes bàsics · Temari Complet"
 course_root: ".."
-badge: "2n ESO · UT1 Completa"
+badge: "2n ESO · UD1 — Conceptes bàsics"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
@@ -45,8 +45,6 @@ Passos pràctics
 ### 5. Fes una captura de pantalla (Botó Impt Pant del teclat) on es vegen les 3 carpetes
 
 creades dins de la carpeta “Informatica”
-
-- Puja la captura de pantalla a Aules.
 
 Tancament: Reflexiona, per què és important organitzar bé les carpetes?
 
@@ -137,13 +135,6 @@ Busca dins d’un web concret reciclaje → resultats de tot Internet reciclaje 
 - (asterisc)
 
 Substitueix una paraula desconeguda “la * más alta del mundo” — Serveix per completar frases quan no recordes una paraula AND / OR Combina o alterna termes gatos perros → resultats barrejats gatos OR perros → pàgines sobre gatos o perros Millora la varietat o l’especificitat dels resultats
-
-Activitat guiada per entendre-ho
-
-- Escriu primer: jaguar i mira els primers resultats.
-- Després escriu: jaguar -coche i compara.
-- Descriu què ha canviat i per què.
-- Repeteix amb 'energías renovables' i després 'energías renovables filetype:pdf'.
 
 Conclusió: Fer servir operadors és com donar-li instruccions més clares al cercador. Així gastem menys temps, trobem fonts millors i aprenem a pensar com busquen els professionals.
 

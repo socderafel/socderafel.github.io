@@ -20,7 +20,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 | Unitat | Títol de la Unitat Didàctica | Apartats | Accés Directe |
 | --- | --- | --- | --- |
-| **UD1** | **App Inventor** | 1 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut01actividades.md) |
+| **UD1** | **App Inventor** | 1 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
 | **UD2** | **Robòtica** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
 
 ## UD1 — App Inventor
@@ -29,7 +29,7 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 [**📘 Obrir UD1 Completa en una sola pàgina**](./ut01/index.md)
 
-- [**1.1 Continguts i Casos Guiats**](./ut01/ut01actividades.md)
+- [**1.1 Disseny d'interfície, components i programació per blocs**](./ut01/ut0101.md)
 
 ## UD2 — Robòtica
 
@@ -37,4 +37,4 @@ Temari complet d'apunts teòrics i continguts didàctics del mòdul de **Program
 
 [**📘 Obrir UD2 Completa en una sola pàgina**](./ut02/index.md)
 
-- [**2.1 Continguts i Recursos**](./ut02/ut0201.md)
+- [**2.1 Continguts Teòrics i Recursos**](./ut02/ut0201.md)

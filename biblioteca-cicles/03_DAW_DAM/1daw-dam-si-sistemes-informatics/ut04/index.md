@@ -1,845 +1,459 @@
 ---
 layout: default
-title: "UD5 — GESTIÓ DE LA INFORMACIÓ · Temari Complet"
+title: "UD4 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI · Temari Complet"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UT4 Completa"
-prev_url: "../ut03/ut0302.html"
-prev_label: "⬅️ 4.2 TEORIA SUBNETTING"
+badge: "1r DAW / DAM · Grau Superior · UD4 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI"
+prev_url: "../ut03/ut0303.html"
+prev_label: "⬅️ 3.3 ENLLAÇOS DURS I SIMBÓLICS"
 next_url: "../ut04/ut0401.html"
-next_label: "5.1 GUIA DE LA UNITAT 5 ➡️"
+next_label: "4.1 TEORIA XARXES ➡️"
 ---
 
-# 📘 UD5 — GESTIÓ DE LA INFORMACIÓ (Unitat Completa)
+# 📘 UD4 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI (Unitat Completa)
 
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**5.1 GUIA DE LA UNITAT 5**](./ut0401.md)
-- [**5.2 TEORIA UNITAT 5 PART 1**](./ut0402.md)
-- [**5.3 TEORIA UNITAT 5 PART 2**](./ut0403.md)
-- [**5.4 TEORIA UNITAT 5 PART 3**](./ut0404.md)
-- [**5.5 TEORIA UNITAT 5 PART 4**](./ut0405.md)
-- [**5.6 TEORIA UNITAT 5 PART 5**](./ut0406.md)
-- [**5.7 TEORIA UNITAT 5 PART 6**](./ut0407.md)
-- [**5.8 TEORIA UNITAT 5 PART 7**](./ut0408.md)
+- [**4.1 TEORIA XARXES**](./ut0401.md)
+- [**4.2 TEORIA SUBNETTING**](./ut0402.md)
 
 ---
 
-# 5.1 GUIA DE LA UNITAT 5
+# 4.1 TEORIA XARXES
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### APUNTS I FÒRUM
+> **🔗 Recurs Web: Conceptos básicos de una estructura de directorio activo**
+> [**🌐 Obrir recurs extern (http://somebooks.es/3-2-conceptos-basicos-en-una-estructura-de-directorio-activo/) ↗️**](http://somebooks.es/3-2-conceptos-basicos-en-una-estructura-de-directorio-activo/)
+>
+> En este enlace de somebooks.es, se detallan con buen acierto los elementos que participan en Active Directory. Estudiadlo con atención.
 
-> **📌 🏷️ Apunt de la Unitat**
-> ##### ACTIVITATS EVALUABLES
-
-> **📌 🏷️ Apunt de la Unitat**
-> ##### ACTIVITATS NO EVALUABLES
-
-> **📌 🏷️ Apunt de la Unitat**
-> ##### ACTIVITATS D'AMPLIACIÓ
-
-> **📌 🏷️ Apunt de la Unitat**
-> ##### ACTIVITATS DE REFORÇ
-
-> **🔗 Recurs Web: IMESI.NET: UEFI, GPT I MBR**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=I8jFHTE9OkA) ↗️**](https://www.youtube.com/watch?v=I8jFHTE9OkA)
-
-> **🔗 Recurs Web: COMPARTICIÓ DE RECURSOS EN XARXA EN SAMBA**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=xzx0lR8g2kc) ↗️**](https://www.youtube.com/watch?v=xzx0lR8g2kc)
-
-> **🔗 Recurs Web: NATE GENTILE: UNIDADES SSD, M.2 Y NVME**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=ANVvxlv6DV4) ↗️**](https://www.youtube.com/watch?v=ANVvxlv6DV4)
+> **🔗 Recurs Web: GRUPOS Y ÁMBITOS DE GRUPO DE ACTIVE DIRECTORY, GPO**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=OQMKOm7Ut3Y) ↗️**](https://www.youtube.com/watch?v=OQMKOm7Ut3Y)
 
 ---
 
-En este document aniré posant els continguts que anem donant durant la unitat, destacant els aspectes que considere més importants.
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
 
-CONTENIDOS
+ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO
 
-Conceptuales
+▪ Administración de usuarios i grupos ▪ Usuarios del Windows ▪ Tipos de cuentas de usuario. Gestión de contraseñas. ▪ Modificación de las contraseñas. ▪ Perfiles de usuarios locales y grupos de usuarios ▪ Dominios y grupos de trabajo. ▪ Navegación ▪ Controlador de dominio. ▪ Dominio Active Directory.
 
-Entender el concepto de unidad física y lógica de un dispositivo de almacenamiento.
+▪ Configuración del protocolo de red ▪ Protocolos ▪ Modelo TCP/IP ▪ Proceso de comunicación ▪ Direccionamiento de red ▪ Protocolos de capa 2 de TCP/IP ▪ Direccionamiento y clases IPv4 ▪ Direccionamiento estático o dinámico para dispositivos de usuario final ▪ Desfragmentar el disco duro ▪ Limpiar el disco duro
 
-Conocer la tarea del sistema operativo de administrar el sistema de archivos.
+Introducció a les Xarxes
 
-Conocer como particiona un disco el modelo de particionado MBR.
+- A l’any 1833 va aparèixer el telègraf (Samuel Morse).
+- La evolució que han patit les xarxes ha estat molt gran.
 
-Conocer como particiona un disco el modelo de particionado GPT.
+En primer lloc xarxes telegràfiques. Posteriorment xarxes telefòniques.
 
-Conocer los 3 sistemas de archivos: de disco, de red y de propósito especial.
+Aquest panorama va canviar amb l’aparició de l’ordinador (1940)
 
-Sistema de archivos NTFS.
+Definició de xarxa Una xarxa informàtica és un grup d’ordinadors interconnectats amb la finalitat d’intercanviar dades o compartir recursos. Tipus de xarxes Segons l’abast
 
-Procedimentales
+- PAN, xarxa d'àrea personal
+- LAN, xarxa d’àrea local
+- MAN, xarxa d’àrea metropolitana
+- WAN, xarxa d’àrea estesa
 
-Instalar W10 en modo UEFI usando Oracle VM VirtualBox.
+Segons el mètode de connexió
 
-Manejar particiones desde la utilidad de Windows 10: Crear y formatear particiones del disco duro.
+- Xarxes guiades. El medi físic és el cable.
 
-Manejar particiones desde la utilidad de Windows 10: Diskpart.
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
 
-Actitudinales
+- Xarxes no guiades. El medi físic és el buit.
 
-| UD5: GESTIÓN DE LA INFORMACIÓN |
-| --- |
+Tipus de xarxes Segons la funcionalitat
+
+- Client-Servidor.
+
+En informàtica s’anomena arquitectura de xarxa client-servidor la relació que s’estableix entre dos ordinadors, en la qual el servidor ofereix un recurs de qualsevol tipus a l’altre, el client, perquè en traga algun profit o avantatge. Generalment, d’un servidor se’n beneficien diversos o molts clients.
+
+- Igual a Igual.
+
+Les xarxes d’igual a igual defineixen un sistema de comunicació que no té clients ni servidors fixos, sinó una sèrie de màquines que es comporten alhora com a clients i com a servidors de les altres màquines de la xarxa. Em aquest sistema les dades es transmeten per mitjà d’una xarxa dinàmica.
+
+Segons la topologia
+
+- Xarxa en anell
+- Xarxa en estrella
+- Xarxa en bus
+- Xarxa en arbre
+- Xarxa en malla
+
+Segons la direccionalitat de les dades
+
+- Simplex (per exemple, audio o vídeo per Internet)
+- Half-duplex o semiduplex (per exemple, Walkie-Talkie)
+- Full-duplex o duplex (per exemple, videoconferència)
+
+Cablatge i connectors
+
+- Cable
+- Parell trenat (cable UTP)
+- Cable coaxial
+- Fibra òptica
+- Sense fil
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+Adreces IP
+
+- Podem trobar la versió 4 del protocol IP. Una adreça IP està formada per 32 bits
+
+(quatre octets).
+
+- Exemple d’adreça IP: 192.33.45.6
+- (També existeix IPv6) de 128 bits
+
+Màscara de subxarxa: permet identificar la topologia de la xarxa. Permet identificar si una xarxa està dividida o no en subxarxes.
+
+- Els bits que fan referència a la xarxa són “1”
+- Els bits que fan referència als host són “0”
+
+Classes de xarxes
+
+- Classe A: Primer bit de l’adreça IP és “0” (de la 0 a la 127)
+- Classe B: Primer bit de l’adreça IP és “1” i el segon bit és “0”(de la 128 a la 191)
+- Classe C: Primer bit de l’adreça IP és “1”, el segon bit és “1” i el tercer bit és “0”. (de
+
+la 192 a la 223)
+
+- Classe D: Xarxes multicast
+- Classe E: Xarxes experimentals
+
+Adreces privades
+
+- Classe A: 10.0.0.0 a 10.255.255.255 (10.0.0.0 /8)
+- Classe B: 172.16.0.0 a 172.31.255.255 (172.16.0.0 /16)
+- Classe C: 192.168.0.0 a 192.168.255.255 (192.168.0.0 /24)
+
+Altres adreces d'interès
+
+- 0.0.0.0 Utilitzada pels dispositius quan estan engegant o no tenen adreça IP.
+- 127.X.X.X Utilitzada per a proves. Es denomina adreça de bucle o de loopback.
+- 169.X.X.X S’activa quan falla el mecanisme normal par assignar IP. Existeix un fallo al
+
+cable de xarxa, dispositiu, etc. Model OSI i TCP/IP Un poc d’història...
+
+- Cap als 70, ISO va dissenyar un model de referència OSI.
+- La idea era permetre el desenvolupament de protocols de diferents fabricants.
+- OSI divideix en 7 capes.
+- El model que segueix Internet és el model TCP/IP.
+- TCP/IP va ser desenvolupat abans que OSI.
+- OSI i TCP/IP engloben tot allò que té a veure en el funcionament d’una xarxa.
+
+funcionament d’una Xarxa
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+Model OSI Per a reduir la complexitat, les xarxes s’organitzen en capes o nivells, cadascuna construïda sobre la inferior. El propòsit de cada capa es oferir serveis a les capes superiors de manera que no hagen d’ocupar-se de la implementació d’estos serveis. La capa n de una màquina du una conversa amb la capa n d’un altra màquina. Les regles que es segueixen en esta conversació s’anomenen protocols de capa n. Bàsicament un protocol establix com va a procedir la comunicació entre estes dos màquines.
+
+Entre cada parell de capes adjacents, n’hi ha una interfície que definix les operacions i serveis que ofereix la capa inferior a la superior. “Si una interfície està ben definida, es fàcil canviar d’implementació perquè l’únic que s’ha de fer és implementar és oferir els serveis que oferia l’anterior” El conjunt de capes i protocols rep el nom d’arquitectura de xarxa.
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+S’ha d’entendre que quan es produix una comunicació des de la capa d’aplicació fins a la física la capa d’aplicació genera un missatge amb una capçalera i la entrega a la capa inferior, la de presentació, per a la seua transmissió. Esta capa col·loca un altra capçalera al principi del missatge per a identificar-lo i passa el resultat a la següent capa inferior, la de sessió. La capçalera inclou informació de control, números de seqüència, per a que la capa de presentació de la màquina receptora, puga entregar els missatges en l’ordre correcte si les capes inferiors no mantenen la seqüència.
+
+En la màquina receptora, el missatge avança cap a dalt, de capa en capa, perdent les capçaleres conforme va pujant. Així fins que arriba a la capa d’aplicació.
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+Com es pot veure a la imatge anterior, a partir de la capa 4 del modelo OSI les comunicacions son extrem a extrem (d’ordinador a ordinador o de servidor a ordinador) mentre que les comunicacions amb un router des d’un pc serien totes treballant des de la capa 1 (física) fins a la capa 3 (xarxa).
+
+Model TCP/IP
+
+- TCP/IP no és un protocol, són una pila de protocols (una suite de protocols).
+- S’implementen tant en el host emissor com en el receptor.
+- La capa 1 del model TCP/IP s’implementa en hardware mitjançant la targeta de xarxa,
+
+mentre que la part de software s’aconsegueix mitjançant el drivers o els controladors de la targeta.
+
+- La resta de capes de l’arquitectura TCP/IP s’implementa mitjançant el NOS (network
+
+operating system), que es el software que implementa la pila de protocols i encarregat de que el sistema informàtic puga comunicar-se amb altres equips constituint una xarxa.
+
+TCP/IP (procés complet de comunicació)
+
+- Creació de dades en la capa d’aplicació del dispositiu d’origen.
+
+### 2. Segmentació i encapsulació de dades quan passen per la pila de protocols en el
+
+dispositiu d’origen.
+
+- Generació de les dades sobre el mitjà en la capa d’accés a la Xarxa.
+
+### 4. Transport de les dades per la Xarxa, que està formada pels mitjans i qualsevol
+
+dispositiu intermediari.
+
+- Recuperació de les dades en la capa d’accés a la Xarxa del dispositiu de destinació.
+- Desencapsulació i rearmament de les dades en passar per la pila en el dispositiu final.
+
+### 7. Traspàs d’aquestes dades a l’aplicació de destinació corresponent a la capa
+
+d’aplicació del dispositiu de destinació.
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+En cada capa o nivell el tamany i tipus de
+
+- Transport: Segments
+- Internet: Paquets
+- Access a la xarxa: Trames(capa 2) i bits convertits en
+
+senyals elèctriques)
+
+Adreçament físic
+
+- Correspon al número d’identificació de nivell 2 (OSI) i s’anomena MAC.
+- És individual i únic per a cada dispositiu.
+- És un identificador de 6 blocs hexadecimals.
+- El protocol encarregat d’esbrinar l’adreçament MAC és l’ARP (Adress Resolution
+
+Protocol). Protocol ARP
+
+- Aquest protocol permet que els ordinadors facen difusió d’una petició ARP,
+
+demanant la MAC, la qual correspon a una IP.
+
+- Cada màquina va aprenent les MAC i IP dels veïns.
+- Les MAC i IP s’emmagatzemen en la Taula ARP.
+
+Adreçament lògic
+
+- Són les adreces IP. Actualment les més utilitzades són IP versió 4.
+- Les adreces IP són adreces de nivell 3 (OSI).
+
+Màscara de xarxa La màscara de xarxa permet distingir els bits que identifiquen la xarxa i els que identifiquen el host o màquina en una adreça IP. Per exemple, una màscara
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+255.0.0.0 indica que el primer octet identifica la xarxa i els altres tres octets identifiquen el host.
+
+Subnetting Creació de subxarxes o subneting
+
+- Consisteix en dividir una xarxa en segments de xarxa o subxarxes. És habitual fer
+
+aquesta divisió en funció de criteris geogràfics.
+
+- Pisos d’un edifici connectats per una LAN
+- Diferents edificis connectats per una WAN
+- Subxarxes per departaments a una empresa (màrqueting, I+D+I, etc.)
+
+Avantatges de les subxarxes Millora la seguretat i el rendiment global:Les subxarxes s’han de connectar entre si mitjançant encaminadors (routers). Serà més fàcil filtrar els paquets que no van destinats a una xarxa. Simplifica la resolució de problemes:Com la xarxa està segmentada, resulta més fàcil identificar els problemes. Els problemes només afectaran a un segment de la xarxa (a una subxarxa).
+
+La creació de subxarxes permet aïllar el trànsit de cada xarxa
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+Més exemples
+
+- Es vol segmentar una xarxa de tipus C amb la IP 193.25.31.0 en subxarxes que
+
+puguen contenir 80 host cadascuna, quina màscara hem d’utilitzar?.
+
+- Subneting de classe C. Quantes subxarxes es poden produir en una màscara de
+
+subxarxa 255.255.255.240 ?.
+
+- Quantes subxarxes es poden obtenir d’una màscara de subxarxa i de l’adreça de
+
+xarxa?.
+
+- IP: 199.42.78.0, màscara 255.255.255.192.
+- Subneting de classe B. En la IP 170.23.55.23 i la màscara 255.255.224.0, esbrina les
+
+dades de les 4 primeres subxarxes i les de l’última subxarxa. Esbrinar a quina xarxa pertany una IP
+
+- Hem de saber una IP i una màscara de subxarxa.
+- Passar la IP a binari.
+- Posar baix de la IP en binari, la màscara en binari.
+- Fer la operació AND (en vertical).
+
+### 4. Ara, per esbrinar la direcció de broadcast, posem la màscara invertida, baix de la IP
+
+de xarxa.
+
+- Fem l’operació OR i ja tenim la ip de broadcast.
+
+CONTINGUTS UD4: ADMINISTRACIÓN DEL SISTEMA OPERATIVO DE BASE PROPIETARIO Teoria xarxes
+
+Encaminament Definició d’encaminament: L’encaminament IP és una de les funcions fonamentals que els dispositius encaminadors han de fer. Consisteix fonamentalment a determinar quina és la ruta que ha de seguir un paquet de dades d’un host d’origen fins a un host de destinació, basant-se en factors com poden ser els següents
+
+- Nombre de salts de l’origen a la destinació
+- Amplada de banda de la línia
+- Nombre d’usuaris connectats
+- Prioritats
+
+1. Encaminament estàtic Són aquelles rutes que l’administrador introdueix manualment S’ha de conèixer la xarxa.
+
+- Es poden definir rutes concretes per accedir a una destinació.
+- Amb show ip route veiem la taula de l’encaminador.
+- Amb 0.0.0.0 la ruta podrà ser qualsevol.
+
+2. Encaminament dinàmic Les rutes es generen automàticament quan activem els protocol, per la qual cosa, les taules d’encaminament es configuren automàticament. Si hi ha un canvi de xarxa, les rutes s’auto configuraran automàticament.
+
+- S’ha de tenir en conter que es poden presentar problemes de redundància i es poden
+
+generar bucles d’encaminament.
+
+- Quan tots els encaminadors han generat les seues taules i han actualitzat als
+
+dispositius veïns, es diu que han convergit.
+
+- Utilitzarem d’exemple el PROTOCOL RIP.
+
+Protocol RIP
+
+- És un protocol de vector distància  La millor ruta es determina pel menor número de
+
+salts.
+
+- S’utilitza per a xarxes petites i mitjanes.
+- No és un protocol propietari.
+- L’encaminador coneix les rutes que té directament connectades.
+- Anuncia a totes les xarxes que coneix la seva configuració.
+- Escolta les actualitzacions externes i les difon.
 
 ---
 
-# 5.2 TEORIA UNITAT 5 PART 1
+# 4.2 TEORIA SUBNETTING
 
-Unidad 5: Gestión de la información
+Tutorial de Subneteo Clase A, B, C - Ejercicios de Subnetting CCNA 1
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 1. Introducción • Los almacenamiento secundarios, discos duros magnéticos, unidades SSD, USBs, nos permiten almacenar información que los dispositivos de memoria principales no nos permitirían hacerlo, al ser memorias volátiles(RAM).
+La función del Subneteo o Subnetting es dividir una red IP física en subredes lógicas (redes más pequeñas) para que cada una de estas trabajen a nivel envío y recepción de paquetes como una red individual, aunque todas pertenezcan a la misma red física y al mismo dominio.
 
-• Los sistemas operativos, como ya hemos visto, una de sus principales características es la administración del sistema de archivos, permitiendo mostrar al usuario los bytes de almacenamiento en una estructura de archivos lógica organizada en archivos y carpetas. • ¿Qué es entonces un archivo? Un conjunto de bits asociados a un nombre que lo identifica unívocamente.
+El Subneteo permite una mejor administración, control del tráfico y seguridad al segmentar la red por función. También, mejora la performance de la red al reducir el tráfico de broadcast de nuestra red. Como desventaja, su implementación desperdicia muchas direcciones, sobre todo en los enlaces seriales.
 
-• ¿Y un directorio? es un contenedor con un nombre asociado que puede almacenar archivos u otros directorios. • Todos los sistemas operativos (SO) se caracterizan por tener una estructura jerárquica de almacenamiento de la información, organizándose en una estructura de árbol.
+Dirección IP Clase A, B, C, D y E
 
-• Cuando hablamos de unidades físicas, hablamos de HW: un disco duro, una unidad SSD, un USB. • Cuando hablamos de unidades lógicas nos indica como se representan en el SO estas unidades físicas. En Windows sabemos que se representan las unidades lógicas como A:, B:, C:, etc.
+Las direcciones IP están compuestas por 32 bits divididos en 4 octetos de 8 bits cada uno. A su vez, un bit o una secuencia de bits determinan la Clase a la que pertenece esa dirección IP. Cada clase de una dirección de red determina una máscara por defecto, un rango IP, cantidad de redes y de hosts por red.
 
-• Siguiendo la estructura de árbol, a cada unidad lógica les seguirán directorios y ficheros para almacenar toda la información que contiene un ordenador. Y así será como lo veremos representado.
+Cada Clase tiene una máscara de red por defecto, la Clase A 255.0.0.0, la Clase B 255.255.0.0 y la Clase C 255.255.255.0. Al direccionamiento que utiliza la máscara de red por defecto, se lo denomina “direccionamiento con clase” (classful addressing).
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
+Siempre que se subnetea se hace a paritr de una dirección de red Clase A, B, o C y está se adapta según los requerimientos de subredes y hosts por subred. Tengan en cuenta que no se puede subnetear una dirección de red sin Clase ya que ésta ya pasó por ese proceso, aclaro esto porque es un error muy común. Al direccionamiento que utiliza la máscara de red adaptada (subneteada), se lo denomina “direccionamiento sin clase” (classless addressing).
 
-### 2. Particionado del disco
+En consecuencia, la Clase de una dirección IP es definida por su máscara de red y no por su dirección IP. Si una dirección tiene su máscara por defecto pertenece a una Clase A, B o C, de lo contrario no tiene Clase aunque por su IP pareciese la tuviese. Máscara de Red
 
-• Un aspecto importante en la instalación de un SO es el particionado del disco duro. • Durante el proceso de instalación, nuestro disco duro se va a particionar en varias unidades lógicas, comportándose como si tuviera varios discos duros. • Estas unidades lógicas son las particiones.
+La máscara de red se divide en 2 partes: Porción de Red: En el caso que la máscara sea por defecto, una dirección con Clase, la cantidad de bits “1” en la porción de red, indican la dirección de red, es decir, la parte de la dirección IP que va a ser común a todos los hosts de esa red.
 
-• En muchas ocasiones esas particiones serán visibles por los usuarios como si unidades físicas distintas se trataran y en otras ocasiones estas particiones van a ser invisibles e inaccesibles para los usuarios ,siendo utilizadas por el propio SO para el correcto funcionamiento del equipo.
+En el caso que sea una máscara adaptada, el tema es más complejo. La parte de la máscara de red cuyos octetos sean todos bits “1” indican la dirección de red y va a ser la parte de la dirección IP que va a ser común a todos los hosts de esa red, los bits “1” restantes son los que en la dirección IP se van a modificar para generar las diferentes subredes y van a ser común solo a los hosts que pertenecen a esa subred (asi explicado parece engorroso, así que
 
-• Al particionar un disco duro se obtienen una serie de ventajas
+más abajo les dejo ejemplos). En ambos caso, con Clase o sin, determina el prefijo que suelen ver después de una dirección IP (ej: /8, /16, /24, /18, etc.) ya que ese número es la suma de la cantidad de bits “1” de la porción de red. Porción de Host: La cantidad de bits "0" en la porción de host de la máscara, indican que parte de la dirección de red se usa para asignar direcciones de host, es decir, la parte de la dirección IP que va a variar según se vayan asignando direcciones a los hosts.
 
-- elegir al usuario desde que partición queremos arrancar el SO que esté instalado. Una vez arrancado, el SO
+Ejemplos
 
-verá las distintas particiones como unidades lógicas distintas. Pero, será reconocida o no dependiendo del sistema de ficheros con que se hayan formateado las particiones(FAT32, NTFS, EXT4,…)
+Si tenemos la dirección IP Clase C 192.168.1.0/24 y la pasamos a binario, los primeros 3 octetos, que coinciden con los bits “1” de la máscara de red (fondo bordó), es la dirección de red, que va a ser común a todos los hosts que sean asignados en el último octeto (fondo gris). Con este mismo criterio, si tenemos una dirección Clase B, los 2 primeros octetos son la dirección de red que va a ser común a todos los hosts que sean asignados en los últimos 2 octetos, y si tenemos una dirección Clase A, el 1 octeto es la dirección de red que va a ser común a todos los hosts que sean asignados en los últimos 3 octetos.
 
-- reinstalar el SO de una de las particiones sin afectar al resto de particiones.
+Si en vez de tener una dirección con Clase tenemos una ya subneteada, por ejemplo la 132.18.0.0/22, la cosa es más compleja. En este caso los 2 primeros octetos de la dirección IP, ya que los 2 primeros octetos de la máscara de red tienen todos bits “1” (fondo bordo), es la dirección de red y va a ser común a todas las subredes y hosts. Como el 3º octeto está divido en 2, una parte en la porción de red y otra en la de host, la parte de la dirección IP que corresponde a la porción de red (fondo negro), que tienen en la máscara de red los bits “1”, se va a ir modificando según se vayan asignando las subredes y solo va a ser común a los host que son parte de esa subred. Los 2 bits “0” del 3º octeto en la porción de host (fondo gris) y todo el último octeto de la dirección IP, van a ser utilizados para asignar direcciones de host.
 
-• Durante la instalación de los sistemas operativos se suele ejecutar una aplicación para crear, eliminar o expandir particiones en el disco. • Además de las utilidades que incorporan los sistemas operativos, hay multitud de aplicaciones en el mercado con licencias privativas y libres capaces de crear, redimensionar o eliminar particiones en el disco.
+Convertir Bits en Números Decimales
 
-• Antes de ver los distintos tipos y formatos de las particiones, debemos primero entender el esquema o modelo de discos que nos podemos encontrar según como tengan definida la tabla de particiones: MBR o GPT. • Podríamos decir que MBR y GPT realizan un primer particionado del disco para que después mediante el formateo de las particiones (FAT32, NTFS, EXT4,etc) ya se adecue cada partición al SO correspondiente.
+Como sería casi imposible trabajar con direcciones de 32 bits, es necesario convertirlas en números decimales. En el proceso de conversión cada bit de un intervalo (8 bits) de una dirección IP, en caso de ser "1" tiene un valor de "2" elevado a la posición que ocupa ese bit en el octeto y luego se suman los resultados. Explicado parece medio engorroso pero con la tabla y los ejemplos se va a entender mejor.
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
+La combinación de 8 bits permite un total de 256 combinaciones posibles que cubre todo el rango de numeración decimal desde el 0 (00000000) hasta el 255 (11111111). Algunos ejemplos.
 
-### 3. MBR y GPT
+Calcular la Cantidad de Subredes y Hosts por Subred
 
-• El ordenador antes de que se cargue y ejecute el SO usa unos programas elementales llamados BIOS grabados en un chip de la placa base (PB) llamado ROM BIOS que realizan una comprobación del HW, reconoce el hardware que contiene, testea que funciona bien, carga el SO, drivers y le transfiere el control a este.
+Cantidad de Subredes es igual a: 2N, donde "N" es el número de bits "robados" a la porción de Host.
 
-• BIOS con el tiempo se ha quedado obsoleto y pequeño en cuanto a capacidades: solo 4 particiones primarias y cada disco duro no puede ser mayor de 2TiB.(Gran limitación!!!) • Apareció UEFI en 2005, y actualmente todas las PB nuevas vienen con este estándar UEFI incorporado.
+Cantidad de Hosts x Subred es igual a: 2M -2, donde "M" es el número de bits disponible en la porción de host y "-2" es debido a que toda subred debe tener su propia dirección de red y su propia dirección de broadcast. Aclaración: Originalmente la fórmula para obtener la cantidad de subredes era 2N -2, donde "N" es el número de bits "robados" a la porción de host y "-2" porque la primer subred (subnet zero) y la última subred (subnet broadcast) no eran utilizables ya que contenían la dirección de la red y broadcast respectivamente. Todos los tutoriales que andan dando vueltas en Internet utilizan esa fórmula.
 
-• La antigua BIOS gestionaba los discos y las particiones mediante un esquema denominado MBR(Master Boot Record o registro maestro de arranque). UEFI utiliza un nuevo esquema de particiones denominado GPT (GUID Partition table), mucho más potente. • UEFI también soporta MBR, así que es posible tener un equipo nuevo con UEFI y particionados los discos duros de ese equipo con el esquema MBR.
+Actualmente para obtener la cantidad de subredes se utiliza y se enseña con la fórmula 2N, que permite utilizar tanto la subred zero como la subnet broadcast para ser asignadas.
 
-• Enlace a un vídeo que muestra la limitación de 2TiB de un disco en MBR: https://www.youtube.com/watch?v=4eFEeMyusx0
+Bueno, hasta acá la teoría básica. Una vez que comprendemos esto podemos empezar a subnetear. Como consejo les digo que se aprendan y asimilen la dinámica de este proceso ya que es fundamental, sobre todo para el final práctico y teórico del CCNA 1, y más adelante les va a simplificar el aprendizaje de las VLSM (Máscaras de Subred de Longitud Variable).
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.1 MBR • MBR maneja 3 tipos de particiones
+Subneteo Manual de una Red Clase A
 
-- Primaria: particiones donde se instala un SO porque es arrancable. Cada partición primaria puede tener
+Dada la dirección IP Clase A 10.0.0.0/8 para una red, se nos pide que mediante subneteo obtengamos 7 subredes. Este es un ejemplo típico que se nos puede pedir, aunque remotamente nos topemos en la vida real.
 
-DATOS + SECTOR DE ARRANQUE. Pueden haber 4 particiones primarias como máximo en un disco.
+Lo vamos a realizar en 2 pasos: Adaptar la Máscara de Red por Defecto a Nuestras Subredes (1)
 
-- Extendida: se usa para contener unidades o particiones lógicas en su interior. Actúa como una primaria sin
+La máscara por defecto para la red 10.0.0.0 es
 
-serlo. Solo puede haber 1 de este tipo y se creó para romper la limitación de las 4 particiones primarias.
+Mediante la fórmula 2N, donde N es la cantidad de bits que tenemos que robarle a la porción de host, adaptamos la máscara de red por defecto a la subred.
 
-- Lógica: ocupa un trozo de partición extendida o la totalidad. Puede haber muchas de ellas. Se formatea en un
+En este caso particular 2N = 7 (o mayor) ya que nos pidieron que hagamos 7 subredes.
 
-tipo de formato de sistema de archivos y se le asigna una unidad. SOLO PUEDE TENER DATOS. • El sector de arranque se llama MBR, de ahí su nombre y se localiza en sector 0 del disco y realiza dos funciones
+Una vez hecho el cálculo nos da que debemos robar 3 bits a la porción de host para hacer 7 subredes o más y que el total de subredes útiles va a ser de 8, es decir que va a quedar 1 para uso futuro.
 
-- Contiene un pequeño programa que se ejecuta cuando se arranca el ordenador y permite cargar el SO en
+Tomando la máscara Clase A por defecto, a la parte de red le agregamos los 3 bits que le robamos a la porción de host reemplazándolos por "1" y así obtenemos 255.224.0.0 que es
 
-memoria. Se llama GESTOR DE ARRANQUE y dispone de las tabla de particiones en la que se almacena toda la información básica sobre las particiones: si es arrancable, si no lo es, el formato, el tamaño y el sector de inicio.
+la mascara de subred que vamos a utilizar para todas nuestras subredes y hosts.
 
-- Contiene una tabla de información relativa al disco: número de caras, pistas por cara, sectores por pista,
+Obtener Rango de Subredes (2)
 
-tamaño del sector, etiqueta del disco, número de serie -> TABLA BPB (BIOS PARAMETER BLOCK). • IMPORTANTE: Si creamos más particiones primarias, se incluye en cada una un sector de arranque!!!
+Para obtener las subredes se trabaja únicamente con la dirección IP de la red, en este caso 10.0.0.0. Para esto vamos a modificar el mismo octeto de bits (el segundo) que modificamos anteriormente en la mascara de red pero esta vez en la dirección IP.
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.1 MBR • En resumen
+Para obtener el rango hay varias formas, la que me parece más sencilla a mí es la de restarle a 256 el número de la máscara de red adaptada. En este caso sería: 256-224=32, entonces 32 va a ser el rango entre cada subred.
 
-- El sector de arranque puede estar en cualquier partición primaria y puede elegir que partición primaria puede arrancar
+Si queremos calcular cuántos hosts vamos a obtener por subred debemos aplicar la fórmula 2M - 2, donde M es el número de bits "0" disponible en la porción de host de la dirección IP de la red y - 2 es debido a que toda subred debe tener su propia dirección de red y su propia dirección de broadcast.
 
-con el SO que contenga, usando el gestor de arranque que contiene.
+En este caso particular sería: 221 - 2 = 2.097.150 hosts utilizables por subred.
 
-- Si necesitas 4 particiones o menos, recomiendo que sean las 4 primarias. Si tienes 4 SO, tendrás 1 sector de arranque en
+Subneteo Manual de una Red Clase B
 
-cada partición y podrás elegir que partición primaria eliges para arrancar el SO que te interese.
+Dada la red Clase B 132.18.0.0/16 se nos pide que mediante subneteo obtengamos un mínimo de 50 subredes y 1000 hosts por subred.
 
-- Si necesitamos más de 4, haces una extendida de las 4, y ya añades las unidades lógicas que necesites.
-- Sí que se puede instalar el sector de arranque en una primaria, y el SO en una lógica y funcionaría! Pero tienes el riesgo
+Lo vamos a realizar en 3 pasos: Adaptar la Máscara de Red por Defecto a Nuestras Subredes (1)
 
-de poderte cargar la partición primaria sin querer y ya no tendría sector de arranque para cargar el SO desde la lógica.
+La máscara por defecto para la red 132.18.0.0 es
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.1 MBR • Hay que tener en cuenta que cuando instalamos Windows 10 en un disco MBR, crea automáticamente particiones en el disco y no solamente la partición que contiene el Windows 10. • En concreto crea una partición de 500 MB que contiene lo siguiente
+Usando la fórmula 2N, donde N es la cantidad de bits que tenemos que robarle a la porción de host, adaptamos la máscara de red por defecto a la subred.
 
-Un código del gestor de arranque y la base de datos del arranque (BCD). Sirve para cargar la unidad desde donde arrancará el SO. - Espacio para los archivos de inicio que necesita las características de cifrado de unidad Bitlocker. - Una imagen de Windows RE (Entorno de recuperación, MRE) que permite recuperar causas comunes por los que un SO no puede arrancar. Se puede acceder mediante arranque alternativo desde el disco de instalación con la opción: “Reparar el sistema”.
+En este caso particular 2N= 50 (o mayor) ya que necesitamos hacer 50 subredes.
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.1 MBR • Como vemos a continuación • Además de estas dos particiones mencionadas, es posible encontrarnos también con una partición de recovery (recuperación) en la que el fabricante OEM(fabricante de equipo original) guarda una imagen del disco con la configuración de fábrica y que permite reinstalar el SO junto con los drivers y algunos programas preinstalados sin usar ningún DVD de instalación ni SW adicional. Suelen ser particiones primarias que están al final del disco. Esta partición de recovery la hace el fabricante pero la podemos crear nosotros manualmente.
+El cálculo nos da que debemos robar 6 bits a la porción de host para hacer 50 subredes o más y que el total de subredes útiles va a ser de 64, es decir que van a quedar 14 para uso futuro. Entonces a la máscara Clase B por defecto le agregamos los 6 bits robados reemplazándolos por "1" y obtenemos la máscara adaptada 255.255.252.0.
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.1 MBR • Linux no crea tantas particiones, aunque también crea una partición de sistema llamada swapping necesaria para intercambiar páginas de memoria con el disco duro, cuando estas no caben en la RAM (memoria virtual). El tamaño de esta partición se fija en el proceso de instalación dependiendo de la memoria que tenga el ordenador y del tamaño del disco duro.
+Obtener Cantidad de Hosts por Subred (2)
 
-• Como vimos previamente, MBR aloja en el primer sector del disco (sector 0) una tabla de particiones en la que se almacena toda la información básica sobre las particiones: si es arrancable, si no lo es, el formato, el tamaño y el sector de inicio. A cada partición se le asigna un código que identifica qué tipo de partición es.
+Una vez que adaptamos la máscara de red a nuestras necesidades, ésta no se vuelve a tocar y va a ser la misma para todas las subredes y hosts que componen esta red. De acá en más solo trabajaremos con la dirección IP de la red. En este caso con la porción de host (fondo gris).
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.1 MBR • Además de este código, cada partición tiene un número con el que el SO lo identifica. Windows y Linux tienen diferente manera de numerar las particiones. • Windows (primero las primarias) (después el resto) • Linux
+El ejercicio nos pedía, además de una cantidad de subredes que ya alcanzamos adaptando la máscara en el primer paso, una cantidad específica de 1000 hosts por subred. Para verificar que sea posible obtenerlos con la nueva máscara, no siempre se puede, utilizamos la fórmula 2M - 2, donde M es el número de bits "0" disponibles en la porción de host y - 2 es debido a que la primer y última dirección IP de la subred no son utilizables por ser la dirección de la subred y broadcast respectivamente.
 
-(Primarias: 1-4) (Lógicas: a partir de la 5)
+210 - 2 = 1022 hosts por subred.
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.2 GPT (Identificador Único Global) • Permite particionar el disco hasta 128 particiones primarias, por lo que no es necesario utilizar particiones extendidas y lógicas como en MBR y pueden ser los discos de un tamaño de hasta 8 ZiB.(8000 millones de TB) • El inconveniente que no se pueden arrancar estando en GPT un disco duro si la BIOS están en modo Legacy. Tiene que estar en modo UEFI. (Por ejemplo los M.2 no podrían ser usados en Bios Legacy) • Su principal característica es que trabaja con LBA (direccionamiento de bloque lógico), un método para especificar la localización de los bloques de datos en el disco, numerándose como LBA 0, LBA 1, LBA 2, el cual sustituye al antiguo CHS(cilindro-cabeza-sector).
+Los 10 bits "0" de la porción de host (fondo gris) son los que más adelante modificaremos según vayamos asignando los hosts a las subredes. Obtener Rango de Subredes (3)
 
-• Al igual que MBR, GPT dispone de un GUID para identificar a cada tipo de partición, en función de si es Windows, Linux, Mac OS X.
+Para obtener las subredes se trabaja con la porción de red de la dirección IP de la red, más específicamente con la parte de la porción de red que modificamos en la máscara de red pero esta vez en la dirección IP. Recuerden que a la máscara de red con anterioridad se le agregaron 6 bits en el tercer octeto, entonces van a tener que modificar esos mismos bits pero en la dirección IP de la red (fondo negro).
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.2 GPT (Identificador Único Global) • En cuanto a las particiones de sistema, en GPT se crean las siguientes
+Los 6 bits "0" de la porción de red (fondo negro) son los que más adelante modificaremos según vayamos asignando las subredes.
 
-- Particiones de arranque EFI: se instalan todos los módulos de arranque o imágenes de kernel de todos los SO
+Para obtener el rango hay varias formas, la que me parece más sencilla a mí es la de restarle a 256 el número de la máscara de subred adaptada. En este caso sería: 256-252=4, entonces 4 va a ser el rango entre cada subred. En el gráfico solo puse las primeras 10 subredes y las últimas 5 porque iba a quedar muy largo, pero la dinámica es la misma.
 
-que hayan en las distintas particiones. Lleva un sistema de archivos FAT32 y aparece en todos los discos GPT. Además, dispone de la característica Secure Boot que ayuda a proteger al equipo de SW malicioso del tipo bootkit. (Se habilita en la UEFI) Se firma digitalmente la partición y si el arranque no coincide con la partición pues no arranca el SO.
+Subneteo Manual de una Red Clase C
 
-- Las particiones MSR (Microsoft System Reserved), se usa como partición de respaldo con la etiqueta GUID
+Nos dan la dirección de red Clase C 192.168.1.0 /24 para realizar mediante subneteo 4 subredes con un mínimo de 50 hosts por subred.
 
-e3c9e316-0b5c-4db8-817d-f92df00215ae. No recibe unidad y no almacena datos, y ocupa 16MB en Windows10. Tiene formato NTFS y debe estar entre la EFI y la primaria del sistema. Almacena información para el cifrado de unidades bitlocker.
+Lo vamos a realizar en 3 pasos: Adaptar la Máscara de Red por Defecto a Nuestras Subredes (1)
 
-- Partición primaria: pueden haber 128 por limitación de Windows. Contiene datos de usuario, programas y
+La máscara por defecto para la red 192.168.1.0 es
 
-Windows instalado.
+Usando la fórmula 2N, donde N es la cantidad de bits que tenemos que robarle a la porción de host, adaptamos la máscara de red por defecto a la subred.
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 3.2 GPT (Identificador Único Global) • También podemos encontrarnos las siguientes particiones
+Se nos solicitaron 4 subredes, es decir que el resultado de 2N tiene que ser mayor o igual a 4.
 
-- Una partición de recuperación MRE con GUID DE94BBA4-06D1-4D40-A16ABFD50179D6AC. El tamaño puede
+Como vemos en el gráfico, para hacer 4 subredes debemos robar 2 bits a la porción de host. Agregamos los 2 bits robados reemplazándolos por "1" a la máscara Clase C por defecto y obtenemos la máscara adaptada 255.255.255.192.
 
-variar pero puede ser de 450MB. En esta partición se almacena el programa de recuperación de Windows RE.
+Obtener Cantidad de Hosts por Subred (2)
 
-- Algunos fabricantes tienen sus propios GUIDs para particiones análogas a las EFI pero que contienen
+Ya tenemos nuesta máscara de red adaptada que va a ser común a todas las subredes y hosts que componen la red. Ahora queda obtener los hosts. Para esto vamos a trabajar con la dirección IP de red, especificamente con la porción de host (fondo gris).
 
-cargadores de arranque para lanzar herramientas de recuperación específicas. Por ejemplo
+El ejercicio nos pedía un mínimo de 50 hosts por subred. Para esto utilizamos la fórmula 2M
 
-- Partición de recuperación OEM. El fabricante del equipo guarda la imagen de recuperación con los datos,
+- 2, donde M es el número de bits "0" disponibles en la porción de host y - 2 porque la
 
-sistema operativo y software preinstalado de fábrica.
+primer y última dirección IP de la subred no se utilizan por ser la dirección de la subred y broadcast respectivamente. 26 - 2 = 62 hosts por subred.
 
----
+Los 6 bits "0" de la porción de host (fondo gris) son los vamos a utilizar según vayamos asignando los hosts a las subredes. Obtener Rango de Subredes (3)
 
-# 5.3 TEORIA UNITAT 5 PART 2
+Para obtener el rango subredes utilizamos la porción de red de la dirección IP que fue modificada al adaptar la máscara de red. A la máscara de red se le agregaron 2 bits en el cuarto octeto, entonces van a tener que modificar esos mismos bits pero en la dirección IP (fondo negro).
 
-Unidad 5: Gestión de la información
+Los 2 bits "0" de la porción de red (fondo negro) son los que más adelante modificaremos según vayamos asignando las subredes.
 
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 4. Sistema de archivos
-
-• El sistema de archivos (FS, File System) es la parte del sistema operativo que se encarga de estructurar la información guardada en una unidad de almacenamiento ( discos duros, CDs, DVDs, Unidades flash, USBs). • Cada SO utiliza su propio sistema de archivos, aunque hay sistemas de archivos que son compatibles en diferentes versiones.
-
-• La parte del SO relativo a la gestión del sistema de archivos, es el responsable de organizar el disco en sectores para que en ellos se puedan guardar archivos y directorios, manteniendo un registro de qué sectores pertenecen a qué archivos, cuáles no han sido utilizados o qué sectores se quedan inutilizados debido a que se han estropeado.
-
-• También el componente del SO relativo a la gestión del sistema de archivos proporciona métodos para crear, mover, renombrar y eliminar tanto archivos como directorios, control de acceso(ACL, permisos), así como un conjunto de operaciones que permiten mantener la información almacenada y organizada de forma segura y adecuada. También almacena metadatos, tales como tamaño, fecha de creación, propietario, que ayudan a la gestión de la información.
-
-• Los sistema de archivos se clasifican en tres grupos
-
-- De disco
-- De red
-- De propósito especial
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW 4.1 Sistema de archivos de disco • Son los que nos encontramos en los discos duros • Los más conocidos son
-
-- UNIX/Linux: ext2, ext3, ext4, ReiserFS
-- Windows: FAT (FAT16, FAT32), NTFS, ReFS
-- Apple: HFS, HFS+
-- IBM: HPFS (en OS/2), IFS (en OS/400)
-- Sun Microsystems: ZFS (Soportado entre otros por Linux, o Mac OS X)
-
-VMware: VMFS (para servidores de virtualización) 4.2 Sistema de archivos de red • Es un sistema de archivo que actúa como un cliente de un protocolo de acceso a archivos remotos, proporcionando acceso a los archivos en un servidor a través de la red. • Dentro de los sistemas de archivos en red pueden ser distribuidos o paralelos.
-
-• Distribuidos: los archivos residen en equipos remotos a los cuales acceden los clientes vía red.
-
-- Windows tiene SMB(conocido después por CIFS) que es el que permite compartir archivos e impresoras en
-
-red.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Existe una variante libre para Linux llamada SAMBA, que permite crear archivos y carpetas compartidas entre
-
-Windows y Linux.
-
-- En los servidores de Windows, Microsoft incorpora el sistema de archivos DFS (Distributed File System) que es
-
-un componente de red del servidor que facilita la forma de encontrar y manejar datos en la red, agrupando ficheros que están en diferentes ordenadores en un espacio de nombres único.
-
-- DFS facilita la construcción de una única vista jerárquica de múltiples servidores de archivos.
-- El sistema de archivos de red utilizado en Linux es el NFS (network file system) que viene por defecto en los
-
-SO Unix y en alguna distribuciones de Linux.
-
-- Ejemplos de sistemas de archivos distribuidos son SMB (ICFS), DFS, NFS, AFS, NSS y NCP (de Novell) , AFP
-
-(Apple). • Paralelos: se permite almacenar un archivo de forma segmentada en diferentes máquinas. Se usan en sistemas de alto rendimiento y clústeres. Formatos conocidos son PVFS, PVFS2, FhGFS. 4.3 De propósito especial Se utilizan en CDs (CDFS), DVDs(UDF), particiones especiales de disco, o sistemas de disco cifrados (EFS, Encrypted File System), virtuales (VFS, Virtual File System). Dentro de este grupo se engloban también los FS de tipo swap, usado en UNIX para la gestión de la memoria virtual y zona de intercambio de disco.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 5. El sistema de ficheros de Windows NTFS
-
-• Evolución de FAT32. • FAT significa File Allocation Table, y como su nombre indica, tiene una tabla de localización de ficheros. • FAT funciona como el índice de un libro, pues se almacena en una tabla donde empiezan los archivos y lo que ocupa. • En NTFS la tabla FAT se llama MFT (Maste File Table) y NTFS organiza la información en archivos que se organizan en volúmenes.
-
-• En NTFS, tenemos 3 volúmenes: Sector de arranque, MFT, Área de contenido de ficheros que engloba: Directorio Raíz y Datos. • El sector de arranque (boot) es el primer sector del disco (sector 0). Contiene un pequeño programa que se ejecuta cuando se enciende el ordenador y también con información relativa al disco (nº de caras, pistas por cara, sectores por pistas, tamaño del sector, cilindros, …).
-
-SECTOR DE ARRANQUE BOOT MFT DIRECTORIO RAÍZ + ÁREA DE DATOS
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-• Tabla de localización de archivos (MFT, Master File Table). Se encarga de organizar la información en forma de ficheros dentro de la zona de datos. Indica qué sectores están libres. Normalmente se trabaja con clústeres que son agrupaciones de sectores. En esta tabla se indica si un clúster está defectuoso, si tiene el final de un archivo (EOF), qué clúster almacena el siguiente trozo de archivo. Si se borra un archivo, queda constancia de ello. Si se utiliza un archivo, también queda anotado. Por ello, se usa mucho en ANÁLISIS FORENSE.
-
-• Bloque Directorio Raíz(sistema), que contiene información referente a la zona de datos de sistema, nombre de los archivos, extensión, tamaño, fecha y hora de creación, atributos • Bloque área de datos del usuario, que es la zona de mayor tamaño del disco que está dividida en sectores pero se gestiona en clústeres. Se almacena la información de los archivos y subdirectorios.
-
----
-
-# 5.4 TEORIA UNITAT 5 PART 3
-
-Unidad 5: Gestión de la información
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 6. Nomenclatura de ficheros y directorios
-
-• Un fichero es un mecanismo de abstracción que sirve como unidad lógica de almacenamiento de información. • Un fichero agrupa una colección de informaciones relacionadas entre sí y definidas por el “creador del fichero”. • Un fichero le corresponde un nombre único que lo distingue del resto de archivos.
-
-• Los ficheros se organizan en directorios (también llamados carpetas) para facilitar su uso. Estos directorios son ficheros que contienen información sobre otros ficheros: no son más que contenedores de secuencias de registros, cada uno de los cuales posee información acerca de otros ficheros.
-
-• Hay muchos tipos diferentes de información que puede almacenarse en un fichero: programas fuente, programas ejecutables, datos numéricos, textos, música, fotografías, videos, etc. • Un fichero tiene una cierta estructura, definida según el uso que se vaya a hacer de él. Por ejemplo, un fichero de texto es una secuencia de caracteres organizados en líneas (y posiblemente en páginas); un fichero fuente es una secuencia de subrutinas y funciones, un fichero gráfico es una secuencia que permite dibujar pixeles en pantalla, etc.
-
-• Aunque el SO no conozca internamente la estructura de los ficheros, sí es capaz de manejarlos eficientemente gracias al uso de las extensiones. • Habitualmente los archivos están formados por dos partes: nombre que se le asigna al archivo y extensión, que sirve para identificar el archivo o fichero.
-
-• Los directorios no suelen requerir extensión, aunque en sistemas operativos Linux no es extraño encontrarse con directorios con extensión.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW • En Windows, los nombres de archivos y directorios pueden tener hasta 260 caracteres en total. • Estos 260 caracteres incluyen el camino completo para llegar al archivo.(ejemplo:C:\Windows\System32\calc.exe) • Los nombres de archivos y directorios no pueden incluir los siguientes caracteres
-
-- Barra invertida: \
-- Barra: /
-- Interrogante: ?
-- Dos puntos
-- Asterisco: *
-- Comillas dobles: "
-- Mayor: >
-- Menor: <
-- Barra vertical: |
-
-• Como recomendación, evitar puntos, evitar acentos e intentar separar los nombres con barras bajas o guiones en vez de espacios. • Windows no es case sensitive como sí lo es Linux.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 7. Estructura de directorio en Windows
-
-• Todos los sistemas operativos disponen de una organización para que los archivos que añaden al sistema se encuentren en la ubicación diseñada a tal efecto. Estas decisiones las toma Microsoft en Windows. En Linux se sigue un estándar conocido como FHS. • La estructura de directorios de Windows es
-
-• Program Files: se instalan los programas. En Windows 64 bits en Program Files(x86) se instalan los programas de 32 bits. • Program Data: directorio oculto que contiene datos de los programas que vamos instalando en el equipo. • Perflogs: se almacenan los logs de los distintos programas del sistema de monitorización y rendimiento.
-
-• Users: información de cada uno de los usuarios con su propia carpeta del sistema. Antiguamente, Documents and Settings. Dentro de cada carpeta de usuario. • AppData: directorio oculto. Información sobre la configuración de Windows y los programas que usa el usuario.
-
-• Contacts: lo usan aplicaciones de correo para guardar los contactos. • Desktop: permite trabajar con el contenido que tiene el escritorio. • Documents: almacén de documentos. • Downloads: carpeta descargas. • Favourites: se depositan marcadores que se han añadido a los navegadores de Internet.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW • Users: • Links: favoritos de Windows que hemos definido en los navegadores de Internet. • Music: almacén de música. • Pictures: para almacenar imágenes. • Saved Games: guarda las partidas en juego para los juegos que tienen programado hacer uso de este directorio.
-
-• Searches: almacena búsquedas recientes, para que se puedan volver a usar. • Videos: almacén de videos. • Public: poder compartir recursos con el resto de usuarios del sistema. • Windows: contiene los archivos del sistema operativo, junto con los binarios imprescindibles para que funcione. No se debe manipular si no se conoce lo que se hace.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 8. Rutas
-
-• El sistema de ficheros de Windows tiene una estructura arbórea. • Cada unidad lógica de almacenamiento se representa por una letra seguida del carácter dos puntos (:). • A la unidad principal de disco duro se representa por C: • Si hubiera otra partición en el mismo disco, u otro disco duro, el sistema le asigna la siguiente letra del abecedario, D
-
-• Para el DVD o CD se asigna la E: • Los dispositivos externos como discos duros extraíbles se usan las letras F: G: • Cada letra que representa a una unidad tiene un árbol de directorios separado, , con una raíz representada por la barra invertida o contrabarra (\).
-
-• El árbol es de raíz única, de modo que cada fichero tiene un único nombre de ruta de acceso. • Un directorio (o subdirectorio) contiene a su vez ficheros y/o subdirectorios, y todos los directorios poseen el mismo formato interno. • Se define directorio padre de un fichero o subdirectorio como el directorio en el que se encuentra su entrada de referencia. Se referencia como punto punto (..)
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW • Se define directorio hijo de un directorio como el directorio que tiene por padre al primero. Un directorio puede contener múltiples directorios hijos, y cada directorio (a excepción del raíz) es hijo de algún otro.
-
-• Se define directorio actual como aquel en el que trabaja el usuario por defecto. Suele ser referenciado por los sistemas operativos con un punto (.). • Se utilizan rutas cuando se hace referencia a los archivos o directorios de un sistema informático. Un camino es la especificación de la localización de un fichero o directorio. Hay dos maneras de hacer esta especificación
-
-- Ruta absoluta: Cuando esta especificación se hace respecto la raíz del sistema (o del volumen donde se
-
-encuentra este). Ej: C:\Windows\notepad.exe. Si nos encontramos ubicados en C:, una ruta absoluta sería \Windows\notepad.exe
-
-- Cuando se hace respecto del directorio actual de trabajo (en el que estamos situados), se trata de una ruta
-
-relativa. Ej. Para separar estos directorios se utiliza un carácter delimitador, que es \ en Windows y / en Linux.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW C:\ Program Files Users Windows Apuntes Tema 1.pdf Ejercicios.doc Notepad.exe Tema 2.pdf Juan Vicente Documents Desktop Images Documents Desktop Images Firefox.lnk Estando en ese directorio vamos a ver cómo se nombran algunos ficheros utilizando rutas absolutas y relativas
-
-• Tema 1.pdf utilizando una Ruta Absoluta (al llevar un espacio en el nombre lo ponemos entre comillas): \Users\Juan\Documents\Apuntes\“Tema 1.pdf” ** • Tema 1.pdf utilizando una Ruta Relativa: Documents\Apuntes\“Tema 1.pdf” • Firefox.lnk utilizando una Ruta Absoluta: \Users\Vicente\Desktop\Firefox.lnk • Firefox.lnk utilizando una Ruta Relativa
-
-..\Vicente\Desktop\Firefox.lnk • Notepad.exe utilizando una Ruta Absoluta: \Windows\Notepad.exe • Notepad.exe utilizando una Ruta Relativa: ..\..\Windows\Notepad.exe **prescindimos de la letra de unidad (si nos encontramos situados en ella, podemos omitirla)
-
----
-
-# 5.5 TEORIA UNITAT 5 PART 4
-
-### 9. Escritorio, ventanas, menú Inicio, barra de herramientas
-
-La interfaz gráfica de Windows 10 se compone, en su pantalla principal, de un escritorio con iconos, un menú de inicio con los programas y la barra de tareas, siguiendo el diseño que se iniciara con Windows 95. La versión Windows 10 vuelve a incorporar el menú de inicio clásico tras el fiasco que supuso quitarlo en Windows 8.
-
-Todas las versiones de Windows incorporan el explorador de archivos. Es un elemento fundamental que nos permite gestionar los ficheros y carpetas del sistema.
-
-En el Escritorio nos encontramos varios iconos que pueden ser ficheros o carpetas almacenados en la carpeta del escritorio del usuario (C:\Users\Usuario\Desktop), accesos directos a ficheros o programas, o iconos de acceso al Equipo, la Red o la carpeta de usuario.
-
-Es importante destacar la diferencia entre un fichero y un acceso directo a un fichero. En el segundo caso lo que tenemos es un enlace a la ubicación del fichero que se encontrará (normalmente) en una ruta distinta a donde aparece. La eliminación de un acceso directo no implica la eliminación del archivo (ni la desinstalación de un programa). Los accesos directos pueden ser a carpetas, ficheros o aplicaciones y son equivalentes a los enlaces blandos en Linux.
-
-Pulsando el botón secundario del ratón sobre el escritorio las opciones Personalizar y Configuración Pantalla, te permiten configurar e indicar la apariencia, resolución, tamaños y los iconos que deseamos que nos muestre.
-
-Es importante seleccionar los iconos que deseamos ver en nuestro escritorio sin necesidad de hacer accesos directos.
-
-Respecto al menú de inicio, lo más importante es saber que podemos configurar tanto su apariencia como configurar los elementos que contiene.
-
-Podemos diseñar el menú Inicio a nuestro gusto, añadiendo aplicaciones al menú y agrupándolas. Basta con arrástralas desde el menú donde se encuentran al lugar del menú Inicio donde queremos que esté, o bien con el botón secundario del ratón le decimos Anclar al menú Inicio.
-
-También se puede configurar la apariencia de la Barra de tareas. Con el botón secundario del ratón hacemos clic sobre la barra y aparece un menú contextual en el que podemos elegir varias opciones y configurar las Propiedades de la barra de tareas.
-
-Una de las grandes novedades de Windows 10 y el menú Inicio es el útil menú contextual que aparece al pulsar con el botón secundario del ratón sobre el menú Inicio.
-
-Desde este menú podemos acceder a muchas de las opciones de administración que se encuentran en el panel de control, así como al propio panel de configuración, al símbolo del sistema (PowerShell), a la ventana de ejecutar comandos o a la ventana del explorador de archivos.
-
-También podemos apagar el equipo o cerrar la sesión de usuario o mostrar y ocultar todas las ventanas abiertas y mostrar solo el escritorio.
-
-Otra utilidad de Windows 10 es la Vista de Tareas. Tiene su propio icono en la barra de tareas. Además de proporcionarnos una vista de todas las aplicaciones abiertas para poder alternar entre ellas, nos posibilita la creación de escritorios virtuales, una característica demandada por los usuarios de Windows que ya incorporaban otros sistemas operativos.
-
-### 10. Gestión de la información con el explorador de Windows
-
-Una de las herramientas de la interfaz gráfica más importantes que incorpora el sistema operativo es el Explorador de Windows.
-
-El Explorador de Windows nos va a permitir trabajar con todos los ficheros y carpetas del sistema para poder gestionarlos, copiarlos, moverlos, borrarlos, …
-
-Dependiendo de la carpeta con la que estemos trabajando tenemos la posibilidad de personalizar la Vista de la misma en el Explorador. Aun así hay unos elementos que son constantes en toda la ventana del explorador, como son el Panel de Navegación, Barra de Direcciones, Barra de Herramientas, Cuadro de Búsqueda, Panel de Contenidos. Los paneles de Navegación, Detalles y de Vista Previa son opcionales.
-
-Dependiendo de la opción seleccionada en el menú, la barra de herramientas cambia. En el ejemplo siguiente corresponde a la opción Vista del menú.
-
-Pulsando la tecla Alt (Alternativa) del teclado nos aparecen los atajos de teclado en el menú de opciones.
-
-Desde el menú o desde la barra de herramientas podemos cambiar la Vista de la carpeta, así como hacer aparecer o desaparecer el Panel de Vista Previa. Dependiendo de la vista que elijamos y del tipo de carpeta que nos encontremos, nos aparecerán más o menos detalles del fichero. También se pueden añadir o quitar campos desde el menú o con el botón secundario sobre la cabecera de las columnas del panel de contenidos o desde la opción Ver del Menú.
-
-Todos estos detalles los podemos ver desde la opción Propiedades del menú contextual sobre un archivo o carpeta.
-
-También aparecen detalles (metadatos) del fichero seleccionado en el Panel de Detalles. Dependiendo del tipo de fichero nos aparecerán más o menos metadatos en el panel de detalles y podremos por tanto agregar más o menos columnas al panel de contenidos. Barra de Direcciones Importante. En la Barra de Direcciones aparece un formato que facilita la navegación entre las carpetas del disco, pero puede llevar a confusión con los nombres reales de las carpetas y ficheros. Se muestra el nombre de éstos traducido al idioma de instalación, pero ya sabemos que no es su nombre real. Haciendo clic sobre la propia Barra de Direcciones podemos ver el nombre correcto, así como toda su ruta absoluta.
-
-Hacemos clic sobre la Barra de Direcciones
-
-Opciones de carpeta Para configurar el Explorador de Windows hay que acceder a la opción Vista y seleccionar Opciones.
-
-Aparece una ventana con 3 pestañas. En ellas se puede configurar distintas opciones. Nos interesa la pestaña de Ver.
-
-En la pestaña de Ver tenemos la configuración avanzada. En ella hay muchas opciones que podemos ir seleccionando y deseleccionando para ir probando. Algunas de las más interesantes (y recomendable cambiar) son las siguientes: • Mostrar archivos, carpetas y unidades ocultos. Nos permite ver aquellos ficheros que tienen el atributo oculto dentro de las propiedades.
-
-• Ocultar archivos protegidos del sistema. Existen una serie de archivos del sistema que no se muestran. Si deseamos verlos hay que activar esta opción (junto la de mostrar archivos ocultos).
-
-• Ocultar las extensiones de archivo para tipos de archivo conocidos. Aunque aparezca Recomendado lo correcto es desactivarla y que muestre siempre las extensiones. Se pierde información del archivo si no nos muestra la extensión. Mi recomendación es desactivar esta casilla y que muestre siempre las extensiones.
-
-• Usar el asistente para compartir. Lo veremos en el siguiente tema. Mi recomendación es también desactivar esta casilla.
-
-Versiones de archivos Por último, relacionado con el explorador de archivos, una característica interesante que incorporó Windows 7 es la de restaurar Versiones anteriores de archivos y carpetas.
-
-Esta característica funciona como una máquina del tiempo que permite volver a una versión anterior de un archivo. Esta versión anterior está guardada automáticamente por el sistema junto con los puntos de restauración. No son copias de seguridad propiamente dichas, sino instantáneas que se guardan junto a los puntos de restauración. Es posible que no nos permita volver a una versión que nosotros deseemos, sino a la que se guardó junto con el punto de restauración, pero en algunos casos nos puede salvar la papeleta…
-
-Para comprobar qué versiones anteriores de un archivo o carpeta hay disponibles en el sistema, hacemos clic con el botón secundario sobre el archivo o carpeta y seleccionamos la opción Restaurar Versiones Anteriores. También podemos acceder mediante la opción Propiedades del elemento y pinchar en la pestaña Versiones Anteriores.
-
-En el cuadro de diálogo seleccionamos la versión y pulsamos Restaurar o Copiar, dependiendo de si queremos conservar la versión actual.
-
----
-
-# 5.6 TEORIA UNITAT 5 PART 5
-
-Unidad 5: Gestión de la información
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Vamos a trabajar en esta sección con la shell de Windows. • El shell permite al usuario una comunicación directa con el sistema operativo. • El shell proporciona acceso a aplicaciones y utilidades basadas en caracteres, mostrando el resultado en pantalla. • El shell de comandos de los sistemas operativos Windows ha sido cmd.exe durante mucho años, pero Microsoft lanzó PowerShell, que dispone de muchísimos más comandos que cmd.exe.
-
-• Actualmente PowerShell ya ha sustituido a cmd.exe y presenta potentes opciones de scripting (creación de procesos por lotes). • Nosotros vamos a trabajar con cmd.exe, sirviéndonos para aprender a manejar los comandos que nos permitan manejar la información de nuestro Windows 10.
-
-• Los comandos que lanzaremos en cmd.exe, se pueden lanzar desde PowerShell, pero para esta unidad, vemos más adecuado trabajar desde cmd.exe.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales
-
-- Ayuda
-
-EJEMPLOS: > dir C:\Users > dir C:\Users\ /A –H -S
-
-- Limpiar pantalla msdos: > cls
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales
-
-- Usar varios comandos juntos
-
-Ejemplo 1: > dir F: || dir D: (se ejecuta dir F y si falla, dir D:) Ejemplo II: > dir F: && dir D: (se ejecuta dir F: y si se ejecuta correctamente, después dir D:)
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales
-
-- Uso de comodines: los comodines, que se representan por el asterisco (*) o la interrogación (?) se
-
-pueden utilizar para representar uno o más caracteres reales al buscar archivos o carpetas. ejemplo1: > dir rim* (buscará todos los directorios que empiecen por rim, sin límite de longitud y con cualquier extensión) ejemplo 2: > dir rim*.doc (en este caso el fichero buscará ficheros de cualquier longitud pero solamente con extensión .doc) ejemplo 3: > dir rim? (en esta caso solo acepta un solo carácter más seguido de la extensión)
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales: Comando Descripción Ejemplo VER Muestra la versión del sistema operativo. VER Unidad: Cambia la unidad activa C: D: E: A: HELP Muestra una pequeña ayuda sobre los comandos HELP HELP comando DIR Visualiza el contenido de un directorio DIR C:\WINDOWS\ ECHO Muestra mensajes de texto ECHO HOLA MUNDO FORMAT Formatea una unidad (cuidado, no probar) FORMAT G
-
-CHKDSK Comprueba el estado de un disco CHKDSK C: LABEL Cambia la etiqueta de un disco LABEL D: VOL Muestra la etiqueta de un disco VOL C: CLS Limpia la pantalla CLS TIME Muestra y permite cambiar la hora TIME
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales: DATE Muestra y permite cambiar la fecha DATE ATTRIB Muestra o cambia los atributos de un archivo ATTRIB FOTO1.JPG COPY Permite copiar ficheros COPY C:\BOOT.INI E:\ MOVE Mueve ficheros MOVE C:\BOOT.INI E:\ DEL Borra ficheros DEL E:\WINDOWS\*.JPG REN Renombra ficheros REN E:\BOOT.INI E:\BT.INI TYPE Muestra el contenido de un fichero TYPE FICHERO.EXT
-
-```bash
-MKDIR (MD)
-```
-
-Crea un directorio MD E:\APUNTES RMDIR (RD) Borra directorios RD E:\APUNTES CHDIR (CD) Cambia de directorio actual
-
-```bash
-CD E:\APUNTES
-```
-
-TREE Muestra la estructura de directorios TREE CACLS Muestra/modifica las listas de control de acceso CACLS FOTO1.JPG EXIT Sale del símbolo de comandos (si es posible) EXIT XCOPY Copy extendido. Dispone de modificadores exclusivos XCOPY E:\ D:\ /E SUBST Le da un nombre de volumen a un directorio SUBST J: E:\UTILES FIND Busca una cadena de caracteres en un fichero FIND “CADENA” FICHERO.EXT SORT Recibe un fichero y lo devuelve ordenado SORT NOMBRES.TXT
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales
-
-- > dir -> visualiza el contenido tanto de archivos como de carpetas, tamaño expresado en
-
-bytes, fecha de ultima edición.
-
-- > dir /p -> con pausa, y así poder ver el contenido.
-- > dir /w -> listado a lo ancho
-- > dir /w /p -> combinación de los dos anteriores
-- > dir /s -> nos muestra los subdirectorios de todas las carpetas incluidas en este directorio
-- > cd .. -> permite subir un nivel, al directorio padre
-- > cd C:\Windows o del mismo modo > cd :\Windows
-- > cd \ -> se accede a C:\
-- > mkdir ruta_directorio-> crea directorio a partir de rutas absolutas o relativas
-- > md ruta_directorio -> crea directorio
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales
-
-- > md \directorio -> crea un directorio en C
-- > rename \Users\Usuario\gato.txt bola.txt
-- > rename practicas laboratorio
-- > copy bola.txt armario.txt
-- > copy *.txt practicas
-- > copy *.jpg practicas (se copian todos los *.jpg al directorio practicas que están en este mismo
-
-directorio)
-
-- > xcopy practicas c:\practicas
-- > move origen destino (tanto archivos como directorios)
-- > move document.odt Documents
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Comandos más habituales
-
-- > move \Users\User\abc.pdf \Users\User\Documents
-- > move practicas Documents\practicas (mover un directorio completo)
-- > del archivo (permite borrar archivos) -> del *.txt
-- > rd o rmdir (borrar directorios) -> rd practicas , se borra si está vacío
-- > rd practicas /s (borra el directorio aunque tenga otros ficheros y carpetas)
-- > type fichero (permite ver el contenido de un fichero)
-- > COPY CON fichero (crea un fichero y si es de texto, puedes añadir contenido dentro. Ctrl Z para finalizar)
-- > TYPE CON > fichero.txt (igual que el punto anterior pero con otro comando)
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Redirecciones y tuberías 1. Cualquier software que ejecutemos en nuestro sistema informático, va a procesar una información que le llega desde una ENTRADA(STDIN) y va a enviar el resultado del proceso a una SALIDA(STDOUT). 2. Normalmente STDIN se refiere al teclado y STDOUT al monitor.
-
-3. Además tenemos otra SALIDA, se llama STDERROR, donde salen los mensajes de error al ejecutar comandos erróneos. 4. Usando las redirecciones y tuberías, podemos alterar las STDIN, STDOUT, y STDERROR
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Gestión de la información. Comandos Windows.
-
-• Redirecciones y tuberías EJEMPLOS: STDOUT
-
-- > echo “Hola Mundo” > FICHERO1
-- > echo “ESTO ES UN EJEMPLO” >> FICHERO1
-
-STDIN
-
-- > primero preparamos un archivo de texto: > NOTEPAD HORA.TXT
-- > TIME < HORA.TXT
-
-STDERROR
-
-- > MKDIR UNO DOS TRES DOS > SALIDA.TXT 2> ERRORES.TXT
-- Si hacemos un type de errores.txt podremos ver los errores que han aparecido
-
-al ejecutar la instrucción
-
-- Si hacemos un type de salida.txt podremos ver si contiene información correcta.
-
-TUBERÍA -> con la tubería mandamos la salida del primer comando al segundo comando echo 14:30:00 | TIME COMANDOS PARA TRABAJAR CON TUBERÍAS: SORT/FIND/MORE 1ª línea: 15:00:00 2ª línea: Pulsar tecla enter NOTEPAD.TXT
-
----
-
-# 5.7 TEORIA UNITAT 5 PART 6
-
-Unidad 5: Gestión de la información
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Administración de discos.
-
-Ahora vamos a conocer técnicas de tolerancias a fallos en discos. - Antiguamente ante un error hardware de nuestro disco -> recurrir a una copia de seguridad para restaurar. - Actualmente con la tecnología RAID es posible solventar fallos de hardware. - RAID (Redundant Array of Independent Disks, conjunto redundante de discos independientes)-> sistema de almacenamiento que usa múltiples discos duros para almacenar los datos.
-
-RAID se organiza en niveles: con soluciones distintas para mantener la integridad, la tolerancia a fallos o incluso la rapidez en el acceso a la información. - Cada nivel tiene sus ventajas/desventajas. - Los discos están conectados a través de una controladora HW, que lo que permite es llevar una gestión de la información del RAID y permite poder recuperar la información usando diferentes técnicas que dispone. Accediendo al programa de la controladora te permite su gestión.
-
-También se puede acceder a ese control de la información del disco, via software, mediante aplicaciones específicas.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Administración de discos.
-
-Tipos de RAID - Las configuraciones de RAID más conocidas son RAID0, RAID1 y RAID5.
-
-### 1. RAID 0
-
-No tenemos redundancia ni usa técnicas de paridad. - La función es distribuir la información entre los discos disponibles. - Proporciona buena velocidad de acceso, ya que la información está equitativamente repartida para tener acceso simultáneo a mayor cantidad de datos con sus discos funcionando en paralelo.
-
-Si se rompe una de las unidades de almacenamiento, perdemos todos los datos. - Es necesario tener una copia de seguridad. - Se aprovecha todo el tamaño de los discos.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Administración de discos.
-
-Tipos de RAID
-
-### 1. RAID 1 (espejo o mirroring)
-
-Tenemos redundancia. - La función es distribuir la información del mismo modo en los discos. - Cuando almacenamos datos, se replica en su espejo. - Es caro porque se pierde la mitad de espacio a costa de replicar la información. - Dispone de buena velocidad de lectura de datos, ya que permite leer de forma simultánea de las dos unidades en espejo.
-
-No dispone de técnicas de paridad.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Administración de discos.
-
-Tipos de RAID
-
-### 1. RAID 5 (espejo o mirroring)
-
-Se integran códigos de detección de error mediante paridad, en donde los datos y la paridad se distribuyen por los discos. - Se necesitan pues 3 discos, en dos de ellos se guarda la información y en otro, la paridad. - En un RAID-5 montado sobre 3 discos se aprovecha el 66’6% del tamaño total del volumen. También se puede montar sobre más discos. Con 4 discos se aprovecha el 75% del tamaño total.
-
-% aprovechado= 𝑵º 𝒅𝒆𝒅𝒊𝒔𝒄𝒐𝒔−𝟏𝒙(𝒕𝒂𝒎𝒂ñ𝒐𝒅𝒆𝒅𝒊𝒔𝒄𝒐𝒎á𝒔𝒑𝒆𝒒𝒖𝒆ñ𝒐) 𝑻𝒐𝒕𝒂𝒍𝒅𝒆𝒍𝒕𝒂𝒎𝒂ñ𝒐𝒅𝒆𝒍𝒐𝒔𝒅𝒊𝒔𝒄𝒐𝒔 x 100 - Calcular la paridad de dos bits: operación XOR Bit 1 Bit 2 Paridad Si lo extrapolamos a que queremos almacenar dos bytes, 1 byte a disco 1, otro byte a disco 2 y en el disco 3 la paridad.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Administración de discos.
-
-Tipos de RAID
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 13. Discos, volúmenes y particiones
-
-Disco es la palabra utilizada para referirse a los dispositivos de almacenamiento físico. Los discos contienen volúmenes, pudiendo contener varios volúmenes de diferentes tamaños. Un disco es como el contenedor principal para todas las divisiones lógicas de almacenamiento que podrían estar debajo de él. Los principales tipos de discos de almacenamiento son los discos duros, las unidades de estado sólido, los DVD y los CD - En un nivel más bajo, hay dos tipos básicos de almacenamiento: volumen y partición. Los dos términos a menudo se usan indistintamente pero sí existen diferencias.
-
-Una partición es una parte lógica de un volumen de almacenamiento físico. Puede estar formateado o no pudiendo tener o no tener un sistema de archivos. Es sólo una parte del disco con un tamaño asignado que se establece en la creación. - Los usuarios generalmente crean múltiples particiones en el mismo disco duro para alojar diferentes sistemas operativos sin que se interrumpan entre sí.
-
-Un volumen es un contenedor de almacenamiento en un sistema de archivos particular que su computadora puede usar y reconocer. Incluso se le puede asignar un nombre junto con su tamaño. - En conclusión, si un volumen está formateado a un sistema de archivos y una partición puedo o no estarlo.
-
-Nosotros, comúnmente le llamamos a un volumen partición, pero es importante entender la diferencia.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Discos básicos y dinámicos.
-
-Ya conocemos el modelado de particiones que se pueden crear con MBR y GPT. - MBR solo puede crear 4 particiones primarias, o 3 primarias y una extendida, siendo las primarias las que tienen el gestor de arranque para poder instalar sistemas operativos. Las extendidas tienen particiones lógicas que no tienen gestor de arranque. Almacenan datos.
-
-GPT ya no tiene limitación de particiones. Hasta 128 primarias. - Windows 2003 introdujo una nueva manera de dividir el disco haciendo particiones, implementando discos dinámicos. - Los discos básicos es un disco físico que contiene particiones primarias o extendidas, si manejamos MBR. Las particiones y las unidades lógicas, que se crean dentro de una partición extendida, se conocen como volúmenes básicos. Se podrá asignar más espacio a un volumen básico si tiene espacio contiguo que asignarle.
-
-Un disco dinámico contiene volúmenes dinámicos y tienen una funcionalidad diferente, la cual consiste en poder crear volúmenes repartidos entre varios discos (volúmenes distribuidos y seccionados) y de crear volúmenes tolerantes a errores (volúmenes reflejados y RAID5).
-
-Así, los volúmenes dinámicos son los equivalentes a las particiones en los discos básicos, pero con más ventajas y flexibilidad que éstas.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Discos básicos y dinámicos.
-- Hay cinco tipos de volúmenes dinámicos: simples, distribuidos, seccionados, reflejados y RAID-5.
-
-1. Simples: Un volumen simple es un volumen creado en un disco dinámico que funciona como una unidad independiente. Como hemos visto es equivalente a una partición en un disco básico.
-
-### 2. Distribuidos
-
-Se forma con la unión de dos o más áreas de espacio no asignado (sin formatear) que están en dos o más discos duros. Tiene la ventaja de poder usar pequeños trozos de espacio libre para formar un volumen con mayores dimensiones, pero tiene el inconveniente de que si se estropea cualquier parte del disco, se pierden todos los datos.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Discos básicos y dinámicos.
-
-### 3. Seccionados (RAID-0)
-
-Es un volumen dinámico en el que los datos se almacenan en secciones repartidas en dos o más discos físicos. Los datos de un volumen seccionado se asignan de forma alternativa y equitativa (en bandas) en los discos, ocupando la primera fila de bandas de cada disco duro antes de pasar a la segunda.
-
-Esta organización en bandas permite que el acceso sea más rápido ya que se elimina parte del tiempo que tarda el cabezal en buscar los sectores y pistas donde se encuentra el archivo, pero si se estropea un disco duro, se pierde toda la información. Es equivalente a RAID-0.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-- Discos básicos y dinámicos.
-
-### 4. Reflejados (RAID-1)
-
-Es equivalente a RAID-1.
-
-- RAID-5.
-
-Con 3 o más discos dinámicos se puede crear un volumen RAID-5 que permite que en caso de fallo de uno de los discos el sistema funcione de manera normal.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 15. Utilidades de Windows para la administración de discos
-
-Se accede desde el botón Inicio y y tecleando “disco” aparece: “Crear y formatear particiones del disco duro”. - En esa pantalla nos aparece en la parte superior las distintas unidades lógicas que tenemos. Pueden ser volúmenes, particiones o discos. A cada una de ellas que Windows reconozca su sistema de archivos (las particiones de Linux no las reconoce) le asigna una letra de unidad. Nótese que les denomina a todos volúmenes.
-
-PARTE SUPERIOR PARTE INFERIOR
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-En la pantalla se indica el tipo de volumen, el sistema de ficheros con el que está formateado (Windows 10 utiliza NTFS, si es un CD será CDFS) e información diversa como el estado, el tipo de partición, capacidad, espacio disponible, etc. - En el ejemplo mostrado en la imagen hay una partición primaria de 931GB, de arranque, que contiene el archivo de paginación (C:\pagefile.sys) y cuya letra de unidad es C
-
-El archivo pagefile.sys es utilizado por el sistema para poder almacenar de forma temporal parte de los datos que se encuentran almacenados en la memoria RAM física de nuestro equipo. Si el equipo dispone de suficiente RAM, puede estar deshabilitado. - Además, en el mismo disco, hay una partición primaria de 500MB. Ya sabemos cuál es. Esta partición es la que se crea de manera automática al instalar Windows 10. Está marcada como partición activa, es del sistema y no le asigna ninguna letra de unidad.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-En otro disco hay una única partición primaria, de 48 GB asignada a la letra E:. Esto es lo que se conoce como una partición de datos, aunque en este caso está en otro disco distinto. - En el caso concreto del ejemplo, este disco de 48GB es un disco duro virtual. Windows 10 incorpora como novedad la conexión de discos duros virtuales (archivos con extensión .vhd o .vhdx) que funcionan como si de unidades físicas se trataran. Estos archivos son compatibles con las máquinas virtuales, pudiendo ser conectados a una máquina virtual o a la máquina host indistintamente (pero no al mismo tiempo).
-
-En la parte inferior de la pantalla aparecen las unidades de disco (incluidas las de CD/DVD) instaladas en el equipo. Por cada disco se nos muestra el tipo de disco (Básico o Dinámico) y el tamaño total del mismo. La representación gráfica se realiza con una escala logarítmica (se puede cambiar), para que se muestren también las particiones más pequeñas. Los tipos de discos básicos y dinámicos los estudiaremos a fondo en la segunda evaluación.
-
-Se utiliza un sistema de representación de colores para indicar los distintos tipos de particiones de cada disco básico: primarias, extendidas, lógicas…
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-Así como el tipo de volumen en el caso de los discos dinámicos
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-Desde el administrador de discos, con el menú contextual, se pueden realizar muchas operaciones sobre los discos y sobre las particiones. Las más importantes: • Discos: o Conectar o desconectar los discos. o Inicializar los discos (cuando se ha instalado uno nuevo, por ejemplo). o Convertir discos básicos en dinámicos y viceversa. o Convertir el disco MBR en GPT. o Crear particiones o volúmenes.
-
-o En el caso de los dinámicos se pueden crear volúmenes reflejados, distribuidos, RAID-5, … • Particiones y volúmenes: o Extender una partición. Hacerla más grande (si hay espacio sin asignar en el disco, sin formatear). o Reducir una partición. Hacerla más pequeña. Si el disco no está fragmentado y hay espacio disponible en dicha partición.
-
-o Formatear la partición. o Cambiar la letra asignada a una unidad. o Marcar una partición como activa. o Eliminar la partición. - Todo esto se puede hacer como hemos visto desde la utilidad de disco de Windows Diskpart como mediante utilidades de fabricantes externos a Microsoft
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 16. Desfragmentar el disco
-
-Cuando se formatea un disco, este se divide en sectores, cada uno de 512 bytes. - El sistema de archivos combina grupos de sectores en clústeres, que son las unidades más pequeñas de almacenamiento, con un tamaño de 4KB. - Si hay un fichero que queremos almacenar de 200MB, Windows lo divide en 50.000 partes, correspondiente cada parte a un clúster y almacena el fichero en clústeres contiguos.
-
-Esto es una situación perfecta, porque los cabezales del disco se mueven rápidamente al estar físicamente contiguos. - El problema viene cuando se van borrando, creando ficheros y van quedando pocos clústeres libres en el disco y ya no ocupan los ficheros clústeres contiguos por lo que se pierde eficacia en las lecturas y escrituras.
-
-Al desfragmentar el disco, se reorganiza el disco consiguiendo organizar mejor los clústeres para que hayan los mayores números de clústeres contiguos y vacíos para hacer más rápidas estas tareas de lectura y escritura. - Para acceder a la herramienta hay que ir al menú Inicio - Herramientas Administrativas - Desfragmentar y optimizar unidades.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-Con esta herramienta se puede analizar el disco, para que nos indique el grado de fragmentación.
-
-### 17. Liberar espacio
-
-- Limpia el sistema de archivos innecesarios que están ocupando espacio en el disco: archivos temporales que no
-
-han sido eliminados, archivos de Internet descargados, la papelera de reciclaje que no se ha vaciado, … Estos archivos pueden llegar a ocupar varios GBs y en la mayoría de los casos son prescindibles. Se accede al Liberador de espacio en disco desde el menú Inicio Herramientas Administrativas.
-
----
-
-# 5.8 TEORIA UNITAT 5 PART 7
-
-Unidad 5: Gestión de la información
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 18. Permisos
-
-Tipos de cuentas en Windows 10 1. Cuenta con permisos estándar. • Cambios determinados pero no cambiar el registro o instalar programas. • Tareas: escribir documentos, jugar, ver vídeos, etc. 2. Cuenta de administrador • Puede realizar todo tipo de cambios en el sistema.
-
-• Puede realizar cambios sobre otros usuarios. 3. Cuenta de invitado • Uso puntual del ordenador. Cambiar permisos • Si compartimos ordenador con alguien y queremos proteger archivos importantes de trabajo. Así evitaremos que se eliminen por error, que se pierdan o se modifiquen sin permiso. Podemos bloquear el acceso para que solo algunos usuarios puedan acceder.
-
-• Se cambian permisos: ir a la carpeta o archivo en cuestión y hacer clic sobre él con el botón derecho del ratón para acceder a sus propiedades. En la ventana que se nos abre seleccionamos la pestaña Seguridad y ahí encontraremos un listado con el nombre de los grupos o usuarios del sistema, así como los permisos de cada uno de ellos sobre esa carpeta o archivo.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 18. Permisos y herencia
-
-Cambiar permisos en local • Si compartimos ordenador con alguien y queremos proteger archivos importantes de trabajo. Así evitaremos que se eliminen por error, que se pierdan o se modifiquen sin permiso. Podemos bloquear el acceso para que solo algunos usuarios puedan acceder.
-
-• Se cambian permisos: ir a la carpeta o archivo en cuestión y hacer clic sobre él con el botón derecho del ratón para acceder a sus propiedades. En la ventana que se nos abre seleccionamos la pestaña Seguridad y ahí encontraremos un listado con el nombre de los grupos o usuarios del sistema, así como los permisos de cada uno de ellos sobre esa carpeta o archivo.
-
-• Activar/desactivar permisos de herencia en Windows 10: los y carpetas archivos pueden heredar permisos de su carpeta principal. Se puede habilitar o deshabilitar esta opción.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW Cambiar permisos en carpetas compartidas en red • Se pueden dar permisos a recursos compartidos en red. • Lo primero de todo es localizar la carpeta o archivo en red sobre los que queramos modificar los permisos.
-
-• Cuando estemos sobre ella, pulsamos con el botón derecho del ratón y accedemos a la opción Propiedades dentro del menú contextual que se nos abre. • Una vez dentro de la ventana, en la zona superior hay varias pestañas disponibles. Nosotros pinchamos en Compartir.
-
-• En el primer apartado de Uso compartido y archivos en red, elegimos de nuevo el botón Compartir. • Aparecerá entonces una nueva ventana llamada Acceso a la red. Aquí, tendremos que accionar el desplegable y seleccionar Crear un nuevo usuario.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 19. Gestión de procesos
-
-• Cuando pulsas a la vez las teclas Control + Alt + Suprimir en el ordenador, irás a una pantalla de Windows en la que tienes varias opciones, entre ellas la de acceder al administrador de tareas. • También lo puedes encontrar haciendo click derecho en la barra de tareas de Windows o escribiendo taskmgr en el menú de inicio para que sea tu primer resultado de búsqueda.
-
-• ¿Qué puedes hacer en el administrador de tareas? • Informarte sobre procesos activos. • Los datos que te ofrece sobre cada aplicación y proceso son: • Nombre: El nombre de la aplicación o proceso en ejecución. • Estado: Cuando un proceso o aplicación esté en modo de ahorro de energía, te aparecerá.
-
-• CPU: El porcentaje de potencia de procesador que está utilizando. Cuanto más alto sea, más exigente será el funcionamiento de la aplicación o el proceso. • Memoria: La cantidad de memoria RAM que esté consumiendo cada uno de los procesos o aplicaciones que tengas en ejecución.
-
-• Disco: Si un proceso o aplicación están escribiendo en el disco duro de tu ordenador, aquí verás la velocidad de escritura de cada uno.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW • Red: Si una aplicación o proceso están accediendo a Internet, aquí verás la velocidad de descarga que cada uno está empleando. • GPU: Cuando un proceso o aplicación está utilizando la tarjeta gráfica, aquí vas a poder verlo y saber el porcentaje de uso.
-
-• Motor de GPU: Si no te vale con saber que se está usando tu gráfica, aquí podrás ver qué característica está usando. Por ejemplo, puede ser procesando vídeo, o gráficos en 3D. • Consumo de energía: Podrás saber el consumo de energía total de cada uno de los procesos en tiempo real, indicándote su impacto en la CPU, GPU y el disco duro.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 20. Instalación de programas y gestión de servicios
-
-• Accediendo a Panel de Control – Programas y características -> nos permite acceder y activar o desactivar ciertas funciones que puede realizar nuestro sistema operativo Windows 10.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW • Desde la siguiente ventana se visualizan las características activas y las que se pueden no están activas y se pueden activar. • En función de lo que necesitemos tener activado, se deberá proceder.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 21. Planificación de tareas
-
-• En el cuadro de búsqueda de Windows 10 escribe «programador de tareas» y haz clic para entrar. • Dentro del programador, verás un panel con las tareas que tienes programadas. Podrás empezar a crear tus tareas simplemente haciendo «crear tarea«. • En la pestaña de General, podrás indicar un nombre, descripción y ubicación, entre otros datos.
-
-• En la pestaña Desencadenar podrás elegir los días que quieres que se lance. • En Acción podrás elegir la ejecución de «algo». Aquí podrás decidir si quieres que se envíe un email (por ejemplo). • En Condiciones podrás añadir condiciones para la ejecución automática de la tarea.
-
-• Es ideal para programar a determinadas horas del día determinadas tareas/programas que quieres que se ejecuten.
-
-Unidad 5: Gestión de la información Sistemes Informàtics: 1er DAW
-
-### 22. Crear punto de restauración del sistema
-
-• Los puntos de restauración son una especie de copia de seguridad de elementos importante de Windows, de modo que puedas restaurar el sistema en caso de que algo vaya mal tras apagar, reiniciar o hacer un apagado automático. • Windows crea puntos de restauración por sí mismo de forma periódica o antes de instalar actualizaciones, pero también puedes ordenarle tú que cree un punto de restauración.
+Para obtener el rango la forma más sencilla es restarle a 256 el número de la máscara de subred adaptada. En este caso sería: 256-192=64, entonces 64 va a ser el rango entre cada subred.
 
 ---

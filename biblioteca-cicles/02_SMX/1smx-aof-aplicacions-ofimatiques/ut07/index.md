@@ -1,0 +1,93 @@
+---
+layout: default
+title: "UD7 — BDA. Model RELACIONAL (Segona part) · Temari Complet"
+course_root: ".."
+badge: "1r SMX · Grau Mitjà · UD7 — BDA. Model RELACIONAL (Segona part)"
+prev_url: "../ut06/ut0603.html"
+prev_label: "⬅️ 6.3 Tema 2. Model Entitat-Relació (RESUMEN)"
+next_url: "../ut07/ut0701.html"
+next_label: "7.1 Tema 2. Model Relacional (2ª part) ➡️"
+---
+
+# 📘 UD7 — BDA. Model RELACIONAL (Segona part) (Unitat Completa)
+
+> **💡 Temari Complet de la Unitat**
+> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**7.1 Tema 2. Model Relacional (2ª part)**](./ut0701.md)
+
+---
+
+# 7.1 Tema 2. Model Relacional (2ª part)
+
+---
+
+Aci teniu la segona part del tema 2. Es el model relacional. Com passar del Model Entitat-Relació (vist en la primera part) a taules (model relacional)
+
+Transformación del Modelo Entidad-Relación al Modelo Relacional
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación del ModeloEntidad-Relación (E-R) al ModeloRelacional Lugares Departamento Código Nombre Cliente RIF Nombre Servicio presta Código Nombre Fecha N M Empleado Cédula Teléfono Nombre pertenece N Departamento (Código, Nombre) Cliente (RIF, Nombre) Servicio (Código, Nombre) Empleado (Cédula, Nombre, Teléfono, CodDpto) Presta (CódDpto, CodServ, RIF, Fecha) Base de Datos Relacional Modelo Entidad-Relación Modelo RELACIONAL
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL ¿Porquées Necesaria laTransformación? ● ● ● ● El modelo E-R es un modelo de datos conceptual de alto nivel. Facilita las tareas de diseño conceptual de bases de datos. Es necesario traducirlo a un esquema que sea compatible con un SGBD (programa).
+
+El Modelo Relacional es utilizado por la mayoría de los SGBD existentes en el mercado.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación del ModeloE-R al ModeloRelacional ●Modelo Entidad Relación-Transformación al modelo Relacional de: – Entidades – Atributos – Relaciones 1:N – Relaciones 1:1 – Relaciones M:N Definir los pasos, para pasar al modelo Relacional (de donde saldrán las TABLAS de la base de datos)
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de Entidades • Toda ENTIDAD (del modelo E-R), se transforma en una TABLA (modelo RELACIONAL) • Todo ATRIBUTO (del modelo E-R) de la entidad, se transforma en una COLUMNA de la tabla (modelo RELACIONAL) • El identificador único de la entidad (modelo E-R), se transforma en la CLAVE PRINCIPAL o PRIMARIA de la tabla (modelo RELACIONAL) • RELACIONES: dependiendo del tipo de relación que tengamos (1:1, 1:N. N:1, N:M) se procederá de una manera u otra.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de Entidades: Representación Se representa: • Nombre de la tabla en mayúsculas • Y entre paréntesis, y separados por comas, los nombres de los campos (atributos) de la tabla. • La clave principal, la subrayaremos, para indicar que es la clave principal Ejemplo
+
+ALUMNOS(num_exp, nombre, apellidos, direccion, telefono)
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de Entidades: Ejemplo EMPLEADO (CEDULA, PrimNombre, PrimApellido, SegApellido, Teléfono) CP Atributo compuesto Nombre Empleado CEDULA Teléfono Nombre PrimNombre PrimApellido SegApellido
+
+#### 1) E-R
+
+#### 2) RELACIONAL
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de Entidades: Ejemplo En caso de que más de un atributo sea parte de la clave primaria: Proyecto (Número_Proyecto, Nombre_Proyecto, Descripción_Proyecto) CP Compuesta Proyecto Numero_Proyecto Descripción_Proyecto Nombre_Proyecto
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES 1:N • Toda RELACION 1:N (modelo E-R), en el modelo RELACIONAL, se propaga la clave, es decir, el identificador único de la entidad que está en la parte del 1, se pasa a la tabla generada que está en la parte del N, y se convierte en CLAVE AJENA.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES1:N Ejemplo EMPLEADO(Cédula, PrimNombre, PrimApellido, SegApellido, Teléfono, Numero_Dpto) pertenece_a DEPARTAMENTO(Número_Dpto, Nombre_Dpto) N Empleado Cédula Teléfono PrimApellido PrimNombre SegApellido Nombre Departamento Numero_Dpto Nombre_Dpto Entidad-Relación RELACIONAL
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES1:N Ejemplo EMPLEADO(Cédula, PrimNombre, PrimApellido, SegApellido, Teléfono, Numero_Dpto) DEPARTAMENTO(Número_Dpto, Nombre_Dpto) Entidad-Relación RELACIONAL En el ejemplo anterior, tenemos DOS ENTIDADES, que se transforman en DOS TABLAS, la tabla EMPLEADOS, y la tabla DEPARTAMENTO.
+
+La CLAVE PRINCIPAL de cada una de las tablas, es el identificador único en el diagrama Entidad- Relación, y en el modelo relacional, la subrayamos (en el ejemplo, la clave principal de EMPLEADO es cédula, y en la tabla DEPARTAMENTO, es numero_dpto. LA relación es una relación 1:N, asi que propagamos la clave principal de la entidad que esta en la parte del 1 (DEPARTAMENTO) a la tabla que está en la parte del N (EMPLEADO), y se transforma en una CLAVE AJENA. No se subraya, porque sólo se subraya la clave principal.
+
+Esta clave ajena, nos va a indicar, por cada empleado a QUÉ departamento pertenece, pues en cada registro de empleado, tenemos el campo numero_dpto que indica el departamento del empleado.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES1:N (Ejemplo) Empleado (Cédula, PrimNombre, PrimApellido, SegApellido, Teléfono, Numero_Dpto) Departamento (Número_Dpto, Nombre_Dpto)
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES 1:1 • Toda RELACION 1:1 (modelo E-R), en el modelo RELACIONAL, se propaga cualquier clave, es decir, el identificador único de cualquier entidad, se pasa a la tabla generada en la otra tabla, y se convierte en CLAVE AJENA.
+
+• Funciona de la misma manera que en las relaciones 1:N, solo que aquí elegimos la clave que queremos pasar.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES1:1 Ejemplo tiene_jefe Empleado Cédula Teléfono Nombre PrimApellido PrimNombre SegApellido Departamento Numero_Dpto Nombre_Dpto DEPARTAMENTO(Número_Dpto, Nombre_Dpto, Cédula_Jefe) EMPLEADO(Cédula, PrimNombre, PrimApellido, SegApellido, Teléfono) Entidad-Relación RELACIONAL
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES1:1 Ejemplo Entidad-Relación En el ejemplo anterior, tenemos DOS ENTIDADES, que se transforman en DOS TABLAS, la tabla EMPLEADOS, y la tabla DEPARTAMENTO. La CLAVE PRINCIPAL de cada una de las tablas, es el identificador único en el diagrama Entidad- Relación, y en el modelo relacional, la subrayamos (en el ejemplo, la clave principal de EMPLEADO es cédula, y en la tabla DEPARTAMENTO, es numero_dpto.
+
+La relación es una relación 1:1, asi que propagamos la clave principal de una de las entidades que esta en la parte del 1 (EMPLEADO) a la tabla que está en la otra parte del 1 (DEPARTAMENTO), y se transforma en una CLAVE AJENA. No se subraya, porque sólo se subraya la clave principal.
+
+Esta clave ajena, nos va a indicar, por cada DEPARTAMENTO QUÉ empleado es el JEFE También podríamos propagar la clave de DEPARTAMENTO a EMPLEADOS, pero en este caso, estariamos indicando en la tabla EMPELADO el DEPARTAMENTO del que es jefe. Qué opción elegir? La que tenga más sentido siempre.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES1:1 (Ejemplo) Departamento (Número_Dpto, Nombre_Dpto, Cédula_Jefe) Empleado (Cédula, PrimNombre, PrimApellido, SegApellido, Teléfono)
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES N:M • Toda RELACION N:M (modelo E-R), se transforma en una nueva TABLA (modelo RELACIONAL), que tendrá como clave principal o primaria, la concatenación (unión) de las claves o identificadores únicos de las entidades asociadas a la relación.
+
+• La CLAVE PRINCIPAL, es la unión de las dos claves, que a su vez, también son CLAVES AJENAS a cada una de las tablas. • Si la relación tiene atributos, se añaden como campos en la tabla generada.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL TRABAJA_EN(Cédula, Número_Proyecto, Horas) EMPLEADO (Cédula, PrimNombre, PrimApellido, SegApellido, Teléfono) PROYECTO (Número_Proyecto, Nombre_Proyecto) Transformación de RELACIONESM:N Ejemplo trabaja_en N M Empleado Cédula Teléfono PrimApellido PrimNombre SegApellido Nombre Proyecto Numero_Proyecto Nombre_Proyecto Horas RELACIONAL RELACIONAL
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONES N:M Ejemplo En el ejemplo anterior, tenemos dos entidades y una relación N:M. Veamos como transformalo a tablas (modelo relacional): • Cada entidad, será una tabla. En este caso, tenemos dos tablas que hacen referencia a las entidades: EMPLEADO y PROYECTOS.
+
+• La clave principal de estas dos tablas, es el identificador único de cada una de las entidades, y esta clave, la subrayamos (cedula en EMPLEADO, y num_proyecto en PROYECTOS). A su vez, son claves ajenas también. • La relación N:M la transformamos a una nueva TABLA, cuyo nombre es el nombre de la relación, TRABAJA_EN, y la clave principal de esta nueva tabla, será la concatenación (unión) de las dos claves principales de las entidades que forman parte de la relación (cedula y num_proyecto), por lo tanto, subrayamos los dos campos. Si la relación tiene atributos, se añaden como campos a esta nueva tabla, pero sin subrayar, ya que no formarian parte de la clave principal.
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONESM:N (Ejemplo) Empleado (Cédula, PrimNombre, PrimApellido, SegApellido, Teléfono) Trabaja_en (Cédula, Número_Proyecto, Horas) Proyecto (Número_Proyecto, Nombre_Proyecto)
+
+Aplicaciones Ofimáticas Base de Datos Tema 02. Modelo RELACIONAL Transformación de RELACIONESM:N Ejemplo estacionado_en N M Avion Siglas Peso_Max Num_Motores Hangar Código Ubicación Fecha_Ent Fecha_Sal AVION (siglas, num_motores,peso_max) ESTACIONADO_EN (siglas, código, fecha_ent, fecha_sal) HANGAR(código, ubicación)
+
+---

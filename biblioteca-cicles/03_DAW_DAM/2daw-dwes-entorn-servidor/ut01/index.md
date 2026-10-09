@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — Server-side development · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT1 Completa"
+badge: "2n DAW · Grau Superior · UD1 — Server-side development"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
@@ -24,17 +24,8 @@ next_label: "1.1 U1 Server-Side Development ➡️"
 
 # 1.1 U1 Server-Side Development
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Resources
-
 > **🔗 Recurs Web: Oh my Git! (Game)**
 > [**🌐 Obrir recurs extern (https://ohmygit.org/) ↗️**](https://ohmygit.org/)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Tasks
-
-> **🔗 Recurs Web: (Profe) Kahoot link networks**
-> [**🌐 Obrir recurs extern (https://create.kahoot.it/share/40-preguntas-sobre-internet/ffb5a58c-4e58-4656-826f-0f8d94304331) ↗️**](https://create.kahoot.it/share/40-preguntas-sobre-internet/ffb5a58c-4e58-4656-826f-0f8d94304331)
 
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: "UD2 — Basic PHP · Temari Complet"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT2 Completa"
+badge: "2n DAW · Grau Superior · UD2 — Basic PHP"
 prev_url: "../ut01/ut0103.html"
 prev_label: "⬅️ 1.3 Git Cheat Sheet"
 next_url: "../ut02/ut0201.html"
@@ -22,14 +22,8 @@ next_label: "2.1 U2 Basic PHP ➡️"
 
 # 2.1 U2 Basic PHP
 
-> **📌 🏷️ Apunt de la Unitat**
-> #### Resources
-
 > **🔗 Recurs Web: Flexbox guide**
 > [**🌐 Obrir recurs extern (https://css-tricks.com/snippets/css/a-guide-to-flexbox/) ↗️**](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### Tasks
 
 ---
 

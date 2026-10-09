@@ -2,11 +2,11 @@
 layout: default
 title: "UD6 — GIMP · Temari Complet"
 course_root: ".."
-badge: "1r FPB · Grau Bàsic · UT6 Completa"
+badge: "1r FPB · Grau Bàsic · UD6 — GIMP"
 prev_url: "../ut05/ut0501.html"
-prev_label: "⬅️ 5.1 Continguts i Recursos"
+prev_label: "⬅️ 5.1 Continguts Teòrics i Recursos"
 next_url: "../ut06/ut0601.html"
-next_label: "6.1 Continguts i Recursos ➡️"
+next_label: "6.1 Continguts Teòrics i Recursos ➡️"
 ---
 
 # 📘 UD6 — GIMP (Unitat Completa)
@@ -16,11 +16,11 @@ next_label: "6.1 Continguts i Recursos ➡️"
 
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
-- [**6.1 Continguts i Recursos**](./ut0601.md)
+- [**6.1 Continguts Teòrics i Recursos**](./ut0601.md)
 
 ---
 
-# 6.1 Continguts i Recursos
+# 6.1 Continguts Teòrics i Recursos
 
 > **🔗 Recurs Web: 1. Imagen digital: Conceptos básicos. Tipos de imagen y elementos. GIMP: Entorno de trabajo**
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/01conceptos_basicos_gimp.php) ↗️**](https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/01conceptos_basicos_gimp.php)
@@ -81,28 +81,5 @@ next_label: "6.1 Continguts i Recursos ➡️"
 > [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/12her_clonado.php) ↗️**](https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/12her_clonado.php)
 >
 > 12. GIMP: La herramienta de clonado
-
-> **📌 🏷️ Apunt de la Unitat**
-> **EXAMEN**
-
-> **🔗 Recurs Web: 1. GIMP: Examen. Molino de Minaya**
-> [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex01minayamolino.php) ↗️**](https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex01minayamolino.php)
->
-> 1. GIMP: Examen. Molino de Minaya
-
-> **🔗 Recurs Web: 2. GIMP: Examen. Iglesia de Minaya**
-> [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex02minayaiglesia.php) ↗️**](https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex02minayaiglesia.php)
->
-> 2. GIMP: Examen. Iglesia de Minaya
-
-> **🔗 Recurs Web: 3. GIMP: Examen. Luna de Valencia**
-> [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex03ciudadcac.php) ↗️**](https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex03ciudadcac.php)
->
-> 3. GIMP: Examen. Luna de Valencia
-
-> **🔗 Recurs Web: 4. GIMP: Examen. Bola de Drac**
-> [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex04boladrac.php) ↗️**](https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/ex04boladrac.php)
->
-> 4. GIMP: Examen. Bola de Drac
 
 ---

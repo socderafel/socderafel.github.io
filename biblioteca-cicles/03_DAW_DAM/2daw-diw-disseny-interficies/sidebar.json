@@ -10,28 +10,27 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 Enlaces interesantes UD1 Sección 1",
-          "href": "ut01/ut0102.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 DIAPOSITIVAS SECCIÓN 1: ELEME",
-          "href": "ut01/ut0103.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB",
-          "href": "ut01/ut0104.html"
+          "href": "./ut01/ut0103.html"
         },
         {
           "label": "1.4 DIAPOSITIVAS UD 1 SECCIÓN 3",
-          "href": "ut01/ut0105.html"
+          "href": "./ut01/ut0104.html"
         },
         {
           "label": "1.5 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4",
-          "href": "ut01/ut0106.html"
+          "href": "./ut01/ut0105.html"
         }
       ]
     },
@@ -40,28 +39,27 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut02/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A",
-          "href": "ut02/ut0201.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 TEORÍA CSS PROPIEDAD DISPLAY",
-          "href": "ut02/ut0203.html"
+          "href": "./ut02/ut0202.html"
         },
         {
           "label": "2.3 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE",
-          "href": "ut02/ut0204.html"
+          "href": "./ut02/ut0203.html"
         },
         {
           "label": "2.4 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO",
-          "href": "ut02/ut0205.html"
+          "href": "./ut02/ut0204.html"
         },
         {
           "label": "2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI",
-          "href": "ut02/ut0206.html"
+          "href": "./ut02/ut0205.html"
         }
       ]
     },
@@ -70,16 +68,15 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut04/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1",
-          "href": "ut04/ut0401.html"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2",
-          "href": "ut04/ut0402.html"
+          "href": "./ut03/ut0302.html"
         }
       ]
     },
@@ -88,16 +85,15 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 DIW INTRODUCCIÓN A BOOTSTRAP5",
-          "href": "ut05/ut0501.html"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 PROPIEDAD FLEX DE BOOTSTRAP5",
-          "href": "ut05/ut0502.html"
+          "href": "./ut04/ut0402.html"
         }
       ]
     },
@@ -106,20 +102,19 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 SECCIÓN 1: IMÁGENES Y LA LEY DE PROPIEDAD INTELE",
-          "href": "ut06/ut0601.html"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 DIW: Conceptos básicos de fotografía digital",
-          "href": "ut06/ut0602.html"
+          "href": "./ut05/ut0502.html"
         },
         {
           "label": "5.3 SECCIÓN 2: SONIDO Y VÍDEO",
-          "href": "ut06/ut0603.html"
+          "href": "./ut05/ut0503.html"
         }
       ]
     },
@@ -128,12 +123,11 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut06/index.html"
         },
         {
           "label": "6.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD",
-          "href": "ut07/ut0701.html"
+          "href": "./ut06/ut0601.html"
         }
       ]
     }

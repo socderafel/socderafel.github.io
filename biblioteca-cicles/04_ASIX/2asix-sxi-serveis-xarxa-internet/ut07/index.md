@@ -2,7 +2,7 @@
 layout: default
 title: "UD7 — Audio and Video · Temari Complet"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT7 Completa"
+badge: "2n ASIX · Grau Superior · UD7 — Audio and Video"
 prev_url: "../ut06/ut0601.html"
 prev_label: "⬅️ 6.1 U6 Email"
 next_url: "../ut07/ut0701.html"
@@ -21,15 +21,6 @@ next_label: "7.1 U7 Audio and Video ➡️"
 ---
 
 # 7.1 U7 Audio and Video
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Resources**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Tasks**
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### **Practices**
 
 ---
 

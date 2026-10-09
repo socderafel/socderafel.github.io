@@ -10,20 +10,19 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "ut11/index.html",
-          "class": "unit-full-link"
+          "href": "./ut01/index.html"
         },
         {
           "label": "1.1 3 Preparación del servidor de directorios L",
-          "href": "ut11/ut1101.html"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 2 Servicio de directorios LDAP",
-          "href": "ut11/ut1102.html"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 1 Servicios de Red",
-          "href": "ut11/ut1103.html"
+          "href": "./ut01/ut0103.html"
         }
       ]
     },
@@ -32,16 +31,15 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "ut10/index.html",
-          "class": "unit-full-link"
+          "href": "./ut02/index.html"
         },
         {
           "label": "2.1 2 Introducció - Creació servidor FTP amb SF",
-          "href": "ut10/ut1001.html"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 1 Introducció - Creació servidor FTP amb VS",
-          "href": "ut10/ut1002.html"
+          "href": "./ut02/ut0202.html"
         }
       ]
     },
@@ -50,24 +48,23 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "ut09/index.html",
-          "class": "unit-full-link"
+          "href": "./ut03/index.html"
         },
         {
           "label": "3.1 4 Arquitectures web",
-          "href": "ut09/ut0901.html"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 3 Arquitectures web",
-          "href": "ut09/ut0902.html"
+          "href": "./ut03/ut0302.html"
         },
         {
           "label": "3.3 2 Arquitectures web",
-          "href": "ut09/ut0903.html"
+          "href": "./ut03/ut0303.html"
         },
         {
           "label": "3.4 1 Arquitectures web",
-          "href": "ut09/ut0904.html"
+          "href": "./ut03/ut0304.html"
         }
       ]
     },
@@ -76,16 +73,15 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
+          "href": "./ut04/index.html"
         },
         {
           "label": "4.1 2 Administració de servidors web - Seguritz",
-          "href": "ut08/ut0801.html"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 1 Administració de servidors web - Instal·l",
-          "href": "ut08/ut0802.html"
+          "href": "./ut04/ut0402.html"
         }
       ]
     },
@@ -94,24 +90,23 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "ut07/index.html",
-          "class": "unit-full-link"
+          "href": "./ut05/index.html"
         },
         {
           "label": "5.1 4 Documentació i control de versions - GitH",
-          "href": "ut07/ut0701.html"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 3 Documentació i control de versions - Git",
-          "href": "ut07/ut0702.html"
+          "href": "./ut05/ut0502.html"
         },
         {
           "label": "5.3 2 Documentació i control de versions - phpD",
-          "href": "ut07/ut0703.html"
+          "href": "./ut05/ut0503.html"
         },
         {
           "label": "5.4 1 Documentació i control de versions - Java",
-          "href": "ut07/ut0704.html"
+          "href": "./ut05/ut0504.html"
         }
       ]
     }

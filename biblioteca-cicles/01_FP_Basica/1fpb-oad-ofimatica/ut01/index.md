@@ -2,7 +2,7 @@
 layout: default
 title: "UD1 — COMUNICACIONS INTERNES I EXTERNES · Temari Complet"
 course_root: ".."
-badge: "1r FPB · Grau Bàsic · UT1 Completa"
+badge: "1r FPB · Grau Bàsic · UD1 — COMUNICACIONS INTERNES I EXTERNES"
 prev_url: "../index.html"
 prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
