@@ -26,7 +26,7 @@
       --text-muted: #4b5563;
       --border: #e5e7eb;
       --code-bg: #f1f5f9;
-      --header-bg: #1e3a8a;
+      --header-bg: #3f51b5;
     }
 
     [data-theme="dark"] {
@@ -39,7 +39,7 @@
       --text-muted: #cbd5e1;
       --border: #334155;
       --code-bg: #334155;
-      --header-bg: #020617;
+      --header-bg: #0f172a;
     }
 
     * {
@@ -55,11 +55,11 @@
       line-height: 1.65;
     }
 
-    /* Barra superior compacta estilo MkDocs Material */
+    /* Barra superior compacta estilo MkDocs Material (sin scrollbar nunca) */
     .md-header {
       background: var(--header-bg);
       color: #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.16);
       position: sticky;
       top: 0;
       z-index: 200;
@@ -68,48 +68,49 @@
     .md-header-inner {
       max-width: 1460px;
       margin: 0 auto;
-      padding: 0 24px;
-      min-height: 52px;
+      padding: 0 20px;
+      min-height: 48px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
     .md-header-brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       color: #ffffff !important;
       text-decoration: none !important;
       font-weight: 700;
-      font-size: 1.02rem;
+      font-size: 0.96rem;
       letter-spacing: 0.01em;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .md-header-brand svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       flex-shrink: 0;
     }
 
     .md-header-nav {
       display: flex;
       align-items: center;
-      gap: 6px;
-      overflow-x: auto;
+      gap: 4px;
       flex-wrap: wrap;
+      overflow: visible;
     }
 
     .md-header-nav a {
-      color: rgba(255, 255, 255, 0.9) !important;
+      color: rgba(255, 255, 255, 0.92) !important;
       text-decoration: none !important;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 500;
-      padding: 6px 11px;
-      border-radius: 6px;
+      padding: 5px 9px;
+      border-radius: 5px;
       transition: background-color 0.15s ease, color 0.15s ease;
       white-space: nowrap;
     }
@@ -120,15 +121,16 @@
     }
 
     .btn-toggle {
-      background: rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.25);
       color: #ffffff;
-      padding: 5px 11px;
-      border-radius: 6px;
+      padding: 4px 9px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 600;
       white-space: nowrap;
+      margin-left: 2px;
     }
 
     .btn-toggle:hover {
@@ -672,7 +674,7 @@
         <a href="{{ '/programacio/' | relative_url }}">☕ Programació</a>
         <a href="{{ '/projecte-intermodular/' | relative_url }}">🚀 Projecte Intermodular</a>
         <a href="{{ '/biblioteca-cicles/' | relative_url }}">📚 Biblioteca Cicles</a>
-        <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+        <button class="btn-toggle" onclick="toggleTheme()" title="Canviar entre mode fosc i clar">🌓 Tema</button>
       </nav>
     </div>
   </header>
