@@ -1,0 +1,241 @@
+{
+  "title": "⚙️ Entorns de Desenvolupament — 1r DAW / DAM · Grau Superior",
+  "home": {
+    "label": "🏠 Inici Entorns de Desenvolupament",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — Unitat Didàctica 0",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 Guía del estudiante",
+          "href": "ut00/ut0001.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT0",
+          "href": "ut00/ut00actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT0 — Introducción al desarrollo de software",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 U1 - Intr. al desarrollo de SW",
+          "href": "ut00/ut0001.html"
+        },
+        {
+          "label": "0.2 Especificaciones requisitos IEEE380_ejemplo",
+          "href": "ut00/ut0002.html"
+        },
+        {
+          "label": "0.3 Especificaciones requisitos software_ejemplo",
+          "href": "ut00/ut0003.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT0",
+          "href": "ut00/ut00actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT1 — IDE's y estilo de programación",
+      "items": [
+        {
+          "label": "📘 UT1 Completa (1 pàgina)",
+          "href": "ut01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.1 U2 - IDEs. Estilos de programación",
+          "href": "ut01/ut0101.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT1",
+          "href": "ut01/ut01actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — Control de versiones",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 U3 - Control de versiones",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "2.2 Git Cheat Sheet",
+          "href": "ut02/ut0202.html"
+        },
+        {
+          "label": "2.3 Crear alias para log con ramas",
+          "href": "ut02/ut0203.html"
+        },
+        {
+          "label": "2.4 Material-Heroes",
+          "href": "ut02/ut0204.html"
+        },
+        {
+          "label": "2.5 Actividades de clase",
+          "href": "ut02/ut0205.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — Debugging y testing",
+      "items": [
+        {
+          "label": "📘 UT3 Completa (1 pàgina)",
+          "href": "ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 U4 - Debugging y testing",
+          "href": "ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 EjercicioGrafo2",
+          "href": "ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 EjercicioGrafo3",
+          "href": "ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 Códigos debugging",
+          "href": "ut03/ut0304.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT3",
+          "href": "ut03/ut03actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — Diagramas de clase",
+      "items": [
+        {
+          "label": "📘 UT4 Completa (1 pàgina)",
+          "href": "ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 U5 - Diagramas de clase",
+          "href": "ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 U5 - Diagramas de clase profe",
+          "href": "ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Actividades de clase",
+          "href": "ut04/ut0403.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT4",
+          "href": "ut04/ut04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — Diagramas de comportamiento",
+      "items": [
+        {
+          "label": "📘 UT5 Completa (1 pàgina)",
+          "href": "ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 Diagramas de casos de uso",
+          "href": "ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 U6.2 - Diagramas de estado",
+          "href": "ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Actividades de clase",
+          "href": "ut05/ut0503.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT5",
+          "href": "ut05/ut05actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — Refactorización, optimización y documentación",
+      "items": [
+        {
+          "label": "📘 UT6 Completa (1 pàgina)",
+          "href": "ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 U7. Refactorización",
+          "href": "ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 U7.2 - Documentación",
+          "href": "ut06/ut0602.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT6",
+          "href": "ut06/ut06actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT7 — Metodologías ágiles",
+      "items": [
+        {
+          "label": "📘 UT7 Completa (1 pàgina)",
+          "href": "ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 U8. Metodologías ágiles",
+          "href": "ut07/ut0701.html"
+        },
+        {
+          "label": "7.2 U8.1 - Planificación de proyectos",
+          "href": "ut07/ut0702.html"
+        },
+        {
+          "label": "7.3 Poker planning",
+          "href": "ut07/ut0703.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT7",
+          "href": "ut07/ut07actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

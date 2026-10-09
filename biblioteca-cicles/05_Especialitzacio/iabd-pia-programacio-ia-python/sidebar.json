@@ -1,0 +1,159 @@
+{
+  "title": "🐍 Programació d'Intel·ligència Artificial amb Python — CE IA i Big Data",
+  "home": {
+    "label": "🏠 Inici Programació d'Intel·ligència Artificial amb Python",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — Unitat Didàctica 0",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 Continguts i Recursos",
+          "href": "ut00/ut0001.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — Redes Neuronales",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 Continguts i Recursos",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — Scikit Learn",
+      "items": [
+        {
+          "label": "📘 UT3 Completa (1 pàgina)",
+          "href": "ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de",
+          "href": "ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 UT 3.5 Biblioteca plotly",
+          "href": "ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 UT 3.4 Biblioteca seaborn",
+          "href": "ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 UT 3.3 Biblioteca matplotlib",
+          "href": "ut03/ut0304.html"
+        },
+        {
+          "label": "3.5 UT 3.2 Biblioteca Pandas",
+          "href": "ut03/ut0305.html"
+        },
+        {
+          "label": "3.6 UT 3.1 Biblioteca Numpy",
+          "href": "ut03/ut0306.html"
+        },
+        {
+          "label": "3.7 UT 3.0 Presentació unitat",
+          "href": "ut03/ut0307.html"
+        },
+        {
+          "label": "3.8 Housing",
+          "href": "ut03/ut0308.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT3",
+          "href": "ut03/ut03actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — Primeros pasos con Python",
+      "items": [
+        {
+          "label": "📘 UT4 Completa (1 pàgina)",
+          "href": "ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 Python apuntes de clase",
+          "href": "ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Python para todos (libro).",
+          "href": "ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Ejercicios",
+          "href": "ut04/ut0403.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT4",
+          "href": "ut04/ut04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — Creación entorno de trabajo",
+      "items": [
+        {
+          "label": "📘 UT5 Completa (1 pàgina)",
+          "href": "ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 Instalación entorno de trabajo.",
+          "href": "ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 SO LINUX MINT MATE",
+          "href": "ut05/ut0502.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT5",
+          "href": "ut05/ut05actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — Presentación del módulo",
+      "items": [
+        {
+          "label": "📘 UT6 Completa (1 pàgina)",
+          "href": "ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 Presentación.",
+          "href": "ut06/ut0601.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT6",
+          "href": "ut06/ut06actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

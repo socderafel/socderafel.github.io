@@ -1,0 +1,233 @@
+---
+layout: default
+title: "UT5 — Setmanes (9-10) del 6 al 19 de novembre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "2n ASIX · Grau Superior · UT5 Completa"
+prev_url: "../ut04/ut04actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+next_url: "../ut05/ut0501.html"
+next_label: "5.1 Criptografia de clau pública ➡️"
+---
+
+# 📘 UT5 — Setmanes (9-10) del 6 al 19 de novembre (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**5.1 Criptografia de clau pública**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
+> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+
+---
+
+## 5.1 Criptografia de clau pública
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### UD 4 Criptografia. Clau asimètrica. Clau pública
+
+---
+
+CRIPTOGRAFIA Clau Asimètrica (Clau pública)
+
+Recordem....CRIPTOGRAFIA SIMÈTRICA Els principals problemes dels sistemes de xifratge simètric: ➔L’intercanvi de claus ◆Quin canal de comunicació segur han usat per a transmetre's les claus? ◆Més fàcil per a l'atacant intentar interceptar una clau que provar totes les possibles combinacions.
+
+➔El nombre de claus que es necessiten ◆Per a n persones que necessiten comunicar-se entre si, es necessiten n(n-1)/2 claus diferents 90 persones -> 4.005 claus 300 persones -> 44.850 claus 6000 persones -> 17.997.000 claus ◆Funciona amb un grup reduït de persones ➔Fortalesa de la clau ◆Principi de Kerckhoffs i ◆La responsabilitat de la fortalesa de la clau recau sobre l'usuari
+
+CRIPTOGRAFIA DE CLAU ASIMÈTRICA Cada usuari del sistema ha de tindre una parella de claus
+
+➔Clau pública: coneguda per tothom ➔Clau privada: custodiada per el propietari i no se donarà a conéixer mai a ningú que no siga el propietari Video: Asymmetric Encryption : Simply explained Bernardo
+
+CRIPTOGRAFIA DE CLAU ASIMÈTRICA Claus ➔Parella de claus complementàries: el que xifra una, sol ho pot desxifrar l'altra i viceversa ➔Aquestes claus s'obtenen mitjançant mètodes matemàtics complicats de manera que per raons de còmput és impossible conèixer una clau a partir d'una altra.
+
+Avantatges ➔Se sol xifrar amb una clau i desxifrar amb una altra Desavantatges ➔Per a una mateixa longitud de clau el missatge es necessita major temps de procés ➔Les claus han de ser de major grandària que les simètriques, es recomanen claus públiques de 1024 bits com a mínim ➔El missatge xifrat ocupa més espai que l'original Algorismes de tècniques de clau asimètrica
+
+➔Diffe-Hellman, RSA, ECC, ElGamal...
+
+COMPARATIVA CRIPTOGRAFIA SIMÈTRICA I ASIMÈTRICA
+
+CRIPTOGRAFIA ASIMÈTRICA Pràctica Instal·lar extensió per a Chrome FlowCrypt 1. Generar claus i compartir la clau pública. 2. Enviar un correu xifrat a un company que tinga instal·lada la extensió. 3. Enviar un correu xifrat(simètric) a un compte que no tinga instal·lada la extensió.
+
+4. Enviar un correu incloguent parts no xifrades.
+
+XIFRAT ASIMÈTRIC – Base64 - 26=64 Els xifrats moderns treballen a nivell de bit. (Les claus també)
+
+XIFRAT ASIMÈTRIC – Base64 - 26=64 64 → ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ b W F u
+
+XIFRAT ASIMÈTRIC – Base64 - 26=64 64 → ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ Quan no es múltiple de 3 → Farcit / Padding
+
+XIFRAT ASIMÈTRIC – Base64 - 26=64 64 → ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ H SA== Ho SG8= Hol SG9s Hola SG9sYQ== Hola SG9sYSA= Hola M SG9sYSBN … ... Hola Mundo SG9sYSBNdW5kbw==
+
+XIFRAT ASIMÈTRIC PGP (Pretty Good Privacy) ➔Programa més popular d'encriptació i de creació de claus públiques i privades per a seguretat en documents i aplicacions informàtiques ➔Es considera híbrid GPG o (GNU Privacy Guard) ➔Eina per a xifratge i signatures digitals ➔Reemplaçament de PGP, és programari lliure llicenciat baix GPL Comando: gpg opcions : -c (xifrat simètric) Genera un arxiu amb extensió .pgp -d (desxifrat) Exemple: gpg -c arxiu gpg -d arxiu.gpg ¿ … Ha funcionat bé ?
+
+¿ On estan les claus asimètriques ?
+
+XIFRAT ASIMÈTRIC OpenSSL ➔Projecte de programari lliure consistent en un robust paquet d'eines d'administració i biblioteques relacionades amb la criptografia, que subministren funcions criptogràfiques a altres paquets com OpenSSH i navegadors web. ➔Xifra (simètrica) , Xifra (asimètric), Hash, Signatura, Certificats digitals, PKI, conversió entre formats, monitoratge de la connectivitat d'un Servidor Web Segur, Comprovació d'expiració de certificats, generar contrasenyes aleatòries.
+
+XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) 1 Generar parell de claus per a xifrat asimètric: gpg --gen-key o gpg --full-generate-key Durant el procés de generació se'ns aniran fent diverses preguntes: ➔Tipus de xifratge. L'opció DSA and ElGamal ens permet encriptar i signar escollim 1 ➔Grandària de les claus. Per defecte es recomana 3072 (a major grandària més seguretat) =>4096 ➔Temps de validesa de la clau. 0 indicarà que no caduqui mai. (NO RECOMANAT !!!) posa termini ➔Frase de pas (o passphrase) Contrasenya que ens assegurarà que ningú més que nosaltres mateixos podrà usar aquesta clau GPG 2 Comprobar les claus ➔Vore les claus públiques disponibles: gpg --list-keys ➔Vore les claus privades gpg --list-secret-keys
+
+XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) 3 Com vore la ClauID gpg --list-key --keyid-format SHORT La ClauID és molt important !! , ja que s'utilitzarà per a qualsevol operació sobre les nostres claus o sobre les claus dels altres. Compte, perquè hi ha dos !! ( o quatre !! )
+
+XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) ¿Perquè hi ha dos? Hi ha una clau mestra i una subclau. La clau mestra s’utilitza per a [SC] Sign , Cert La subclau s’utilitza per a [E] Encrypt
+
+### 4. Esborrar claus
+
+➔Esborrar la clau privada: gpg --delete-secret-key ClaveID ➔Esborrar la clau pública: gpg --delete-key ClaveID En este ordre
+
+XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard)
+
+### 5. Distribució de la clau pública (dos opcions)
+
+1) Pujar-la a un servidor de claus públiques (pe El servidor pgp de rediris) 2) Els servidors solen estar interconnectats gpg --send-keys --keyserver pgp.rediris.es ClaveID ● Per buscar les claus públiques en el servidor gpg --keyserver NombreDelServidor --search-keys ClaveID/nombre/email ● Per descarregar la clau pública del servidor gpg --keyserver NombreDelServidor --recv-keys ClaveID 2) Enviar-la per correu o en suport portable (pendrive, CD/DVD …) La bolquem en un fitxer de text gpg --armor --output fichero --export ClaveID
+
+### 6. Fer una còpia de la nostra clau privada per a poder recuperar-la
+
+gpg --armor --output fichero --export-secret-key ClaveID Fem servir este
+
+XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) 7 Importar la clau bolcada en un fitxer gpg --import fichero
+
+### 8. Eliminar claus distribuides en servidors ( ¡¡ no es poden esborrar !! )
+
+Si s'ha oblidat la contrasenya o hem perdut la clau privada o considerem que està compromesa podem generar un certificat de revocació i pujar-lo al servidor de claus (es recomana generar aquest certificat al final del procés de generació de claus) gpg -o revocacion.asc --gen-revoke ClaveID 1) Crear certificat de revocació
+
+gpg -o revocacion.asc --gen-revoke claveID 2) Revocar la clau (importació a la nostra relació de claus) gpg --import revocacion.asc 3) Comunicar a els servidors que la nostra clau ja no és válida gpg --keyserver NombreDelServidor --send-key ClaveID
+
+XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard)
+
+CONFIDENCIALIDAD
+
+### 9. Encriptar un fitxer amb la clau pública (del destinatari)
+
+gpg --encrypt --recipient claveID documento.txt 10 Desencriptar un fitxer amb la clau privada (el que rep) gpg -d documento.txt.gpg Manual de GPG: xifra, signa i envia dades de manera segura
+
+XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard)
+
+AUTENTICIDAD
+
+### 11. Signar fitxer
+
+gpg -u XXXXXXXX --output documento-firmado.sig --clearsign documento-sin-firmar gpg -u XXXXXXXX --output documento-firmado.sig --sign documento-sin-firmar 12 (el que rep) “Verifica” un fitxer amb la clau PUBLICA del que envia gpg -d documento-firmado.sig gpg --verify documento-firmado.sig Manual de GPG: xifra, signa i envia dades de manera segura
+
+CRIPTOGRAFIA HÍBRIDA Utilitza els dos algorismes: ➔Algorisme de clau pública ◆Per al xifratge en l'enviament de la clau simètrica (petita quantitat d'informació). Més segur ➔Algorisme de clau simètrica ◆Per al xifratge del missatge. Es redueix el cost computacional ➔Eines SW que usen els algorismes anteriors
+
+◆PGP , GPG , OpenSSL ➔Protocols de comunicació que usen els algorismes anteriors ◆SSH, SSL y TLS
+
+CRIPTOGRAFIA HÍBRIDA PROCÉS: ➔A i B tenen els seus parells de claus respectives ➔A escriu un missatge a B. El xifra amb el sistema de criptografia de clau simètrica. La clau que utilitza s’anomena clau de sesió i se genera aleatoriament. Per enviar la clau de sesió de forma segura, ésta se xifra amb la clau pública de B, utilitzant per tant criptografia de clau asimètrica ➔B rep el missatge xifrat amb la clau de sesió i esta mateixa xifrada amb la seua clau pública. Per a realitzar el procés invers, en primer lloc utilitza la seua clau privada per a desxifrar la claue de sesió una vegada obtinguda la clau de sesió ja pot desxifrar el missatge
+
+CRIPTOGRAFIA HÍBRIDA
+
+SIGNATURA DIGITAL ➔Permet al receptor d’un missatge: ◆Verificar l'autenticitat de l'origen de la informació (autenticació) ◆Verificar que la informació no ha estat modificada des de la seva generació (integritat) ➔L'emissor del missatge signat no pot argumentar que no ho va fer (no repudi) ➔Una signatura digital està destinada al mateix propòsit que una manuscrita, però la manuscrita és senzilla de falsificar, mentre que la digital és impossible mentre no es descobreixi la clau privada del signant ➔La signatura digital és un xifratge del missatge que s'està signant però utilitzant la clau privada en lloc de la pública Signatura digital = resultat de xifrar amb clau privada el resum de dades a signar, fent ús de les funcions resum o hash
+
+SIGNATURA DIGITAL
+
+SIGNATURA DIGITAL Exemple Anna i Bernat tenen els seus parells de claus respectives. Anna escriu un missatge a Bernat. És necessari que Bernat puga verificar que realment és Anna qui ha enviat el missatge, per tant, Anna ha d'enviar-lo signat: 1. Anna resumeix el missatge o dades mitjançant una funció hash.
+
+2. Xifra el resultat de la funció hash amb la seva clau privada. D'aquesta manera obté la seva signatura digital. 3. Envia a Bernat el missatge original juntament amb la signatura. Bernat rep el missatge al costat de la signatura digital. Haurà de comprovar la validesa d'aquesta per a donar per bo el missatge i reconèixer a l'autor del mateix (integritat i autenticació ).
+
+4. Desxifra el resum del missatge mitjançant la clau pública d'Anna. 5. Aplica al missatge la funció hash per a obtenir el resum. 6. Compara el resum rebut desxifrat, amb l'obtingut a partir de la funció hash. 7. Si són iguals, Bernat pot estar segur que qui ha enviat el missatge (és Anna) i que aquest no ha estat modificat.
+
+SIGNATURA DIGITAL Però Que passa si Carles genera un parell de claus amb el nom d'Anna, i les usa per a enviar un missatge a Bernat? Bernat creu que el missatge és d'Anna, i no té manera de comprovar si realment el missatge és d'Anna o no.
+
+CERTIFICAT DIGITAL Les operacions de xifratge i signatura digital només són eficaces si es garanteix que les claus privades són úniques. ➔Per a garantir la unicitat de les claus privades se sol recórrer a: ◆Suports físics (targetes intel·ligents p.e. DNIe, que impossibiliten la duplicació de les claus) ◆protegides per un número personal o PIN ➔Per a assegurar que una determinada clau pública pertany a un usuari concret ◆Certificats digitals
+
+CERTIFICAT DIGITAL CERTIFICAT DIGITAL=document electrònic (arxiu) que associa una clau pública amb la identitat del seu propietari ➔Conté informació sobre la identitat del seu propietari (nom, adreça ,email) la clau pública, altres atributs (àmbit d'ús de la clau, dates de validesa etc) i una signatura digital d'una autoritat certificadora, a Espanya, La casa de moneda i timbre ➔El format estàndard de certificats digitals és X.509, la seva distribució és possible realitzar-la
+
+◆Amb clau privada (sol tindre extensió .pxf o .p12) mes segur i destinat a un us privat d’exportació i importació com mètode de còpia segura ◆Sols amb la clau pública (sol ser extensió .cer o .crt), destinat a la distribució no segura , per a que altres entitats puguen verificar la identitat en els arxius o missatges signats ➔Aplicacions: banca online, l’administració pública etc
+
+UTILITATS DE CERTIFICATS Testificar la veracitat d’un lloc web En els navegadors web quan visitem un lloc segur (https) es mostra un cadenat que té un formulari de dades d’enviament de credencials o dades privades que se deuen enviar de forma segura es mostra un cadenat que ens permetrà vore el seu certificat digital i la entitat certificadora Esbrina qui és la entitat certificadora dels següents llocs web , i la validesa dels seus certificats
+
+UTILIDATS DE CERTIFICATS Instal·lar / Vore certificats del SO, navegadors web o clients de correu chrome : Configuración/ Privacidad y Seguridad/Seguridad/Gestionar certificados Esbrina com s’accedix des d’altres navegadors. (firefox, opera, ..)
+
+TERCERES PARTS DE CONFIANÇA La validesa d'un certificat és la confiança que la clau pública continguda en el certificat pertany a l'usuari indicat en el certificat ➔La manera de confiar en el certificat d'un usuari és mitjançant la confiança en terceres parts La idea consisteix en el fet que dos usuaris puguin confiar directament entre si, tots dos tenen relació amb una tercera part i que aquesta pugui donar fe de la fiabilitat dels dos ➔Es podrà tenir confiança en el certificat digital d'un usuari al qual prèviament no coneixem si aquest certificat està avalat per una tercera part en la qual si confiem.
+
+➔La forma en què aquesta tercera part avalarà que el certificat és de fiar és mitjançant la seva signatura digital sobre el certificat La tercera part confiable (TPC Tercera Part Confiable o TTP Trusted Third Party) que s’encarrega de la signatura digital dels certificats dels usuaris en un entorn de clau pública es coneix amb el nom de Autoritat de Certificació (AC)
+
+TERCERES PARTS DE CONFIANÇA El model de confiança basat en Terceres Parts Confiables es la base de la definició de les Infraestructures de Clau Pública (ICP o PKI Public Key Infraestructures) formades per : ➔Autoritat de certificació (CA): emet i elimina els certificats digitals ➔Autoritat de registre (RA): controla la generació dels certificats, processa les peticions i comprova la identitat dels usuaris, mitjançant el requeriment de la identificació personal oportuna ➔Autoritats de repositori: emmagatzemen els certificats emesos i eliminats ➔Software per a l’ús de certificats ➔Política de seguretat en les comunicacions relacionades amb la gestió de certificats
+
+TERCERES PARTS DE CONFIANÇA Infraestructures de Claue Pública (ICP o PKI Public Key Infraestructures) formades per : Autoritat de certificació (CA): Autoritat de registre (RA): Esbrina qui és l’Autoritat de registre i l’Autoritat de certificació de: bbva, caixabank.cat, bancosantander.es Després comprova que estes autoritats es troven instal·lades en el teu navegador (SO)
+
+DNIE El Document Nacional d'Identitat (DNI) emès per la Direcció General de la Policia (Ministeri de l'interior) El document electrònic ha d'oferir les mateixes certeses que el document físic: ➔Acreditar electrònicament i sense possibilitat de dubte la identitat de persona ➔Signar digitalment documents electrònics, atorgant-los una validesa jurídica equivalent a la que els proporciona la signatura manuscrita
+
+DNIE El Document Nacional d'Identitat electrònic (DNIe) incorpora un petit circuit integrat (xip) capaç de guardar de manera segura, mitjançant mesures específiques de seguretat per a impedir la seva falsificació. La informació que conté és: ➔Un certificat electrònic per autenticar la personalitat del ciutadà ➔Un certificat electrònic per a signar electrònicament amb la mateixa validesa jurídica que la signatura manuscrita ➔Certificat de l'Autoritat de Certificació emissora ➔Claus per a la seva utilització ➔La plantilla biomètrica per a la impressió dactilar Per a utilitzar el DNIe es necesari
+
+➔Maquinari específic: lector de targetes que compleixi és estàndard ISO-7816 ➔Programari específic: controladors o mòduls criptogràfics que permetin ➔l'accés a xip de la targeta ◆Windows : Crtyptographic Sevice Provider (CSP) ◆GNU/Linux : mòdul criptogràfic PKC#11
+
+Certificat digital Que es pot fer amb el certificat digital? punxa ací ● Presentació i liquidació d'impostos. ● Presentació de recursos i reclamacions. ● Emplenament de les dades del cens de població i habitatges. ● Consulta i inscripció en el padró municipal. ● Consulta de multes de circulació.
+
+● Consulta i tràmits per a sol·licitud de subvencions. ● Consulta d'assignació de col·legis electorals. ● Actuacions comunicades. ● Signatura electrònica de documents i formularis oficials. ● Sol·licitar treball
+
+On usar el certificat
+
+Certificat digital On es pot obtenir el certificat digital?
+
+CA ● FNMT-Ceres, creada per la Fábrica Nacional de Moneda y Timbre ● IZENPE: l’autoritat de certificació impulsada per el Govern Basc i les Diputacions Forals ● ACCV, Autoritat de Certificació de la Comunitat Valenciana ● CATCert, Agència Catalana de Certificació RA Consulta la página de la agencia tributaria i selecciona el servei electrònic de confiança que necessites sol·licitar.
+
+Certificat digital
+
+● FNMT-Ceres, creada per la Fábrica Nacional de Moneda y Timbre ● IZENPE: la autoritat de certificació impulsada per el Govern Basc i les Diputacions Forals ● ACCV, Autoritat de Certificació de la Comunitat Valenciana ● CATCert, Agència Catalana de Certificación
+
+Certificat digital ¿Que tipus de certificats digital existeixen? ● Persona física (com es ve expedint en l'actualitat). ● Representants de persones jurídiques que siguin administradors únics o solidaris. ● Representants de persones jurídiques. ● Representant d'entitats sense personalitat jurídica.
+
+● Certificat d'empleat públic ● Certificat de component (ssl/tls) més info Suports: ● Software / instal·lables Com instal·lar ● DNIe ● Targetes ● Dispositiu USB ● Cl@ve
+
+Certificat digital Formats de codificació dels certificats (exporta Importar) ● PEM Format de text, xifrat Base64 Utilitza extensions .cer .crt .pem .key ● DER Format binari Utilitza extensions .cer .der ● PB7 Format Base64 Utilitza extensions .p7b .p7c No contenen claue privada ● PFX/P12 Format binari Utilitza extensions .pfx .p12 Conté la clau privada
+
+Email encriptat Pràctica Envia’m un correu de gmail encriptat amb la contrasenya : SVF2023 Utilitza l’extensió Mailvelope
+
+CERTIFICATS DIGITALS Pràctica Obtenir un certificat digital que acredite la nostra identitat. 1. Triar que tipus de certificat sol·licitarem. Per a això farem una primera recerca sobre els certificats i mètodes disponibles al nostre país. 2. Sol·licitar el certificat elegit i justificar l'elecció.
+
+3. Identificar-se i explicar el mètode utilitzat. 4. Instal·lar el certificat si és necessari. 5. Utilitzar el certificat. 6. Exportar el certificat a un mitjà extern. Suggerència Troba l’error de concepte... ;-)
+
+---
+
+## ✍️ Activitats pràctiques UT5
+
+> **✍️ Activitat Pràctica 5.1 — (SAD) Hack a doble signatura**
+> ### 📄 activitat hack doble signatura en PDF.pdf
+>
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: doble signatura PDF En aquesta activitat s'utilitzarà el certificat digital per a signar un document en format PDF per més d'un signant. Necessitem
+>
+> 1 document signat ( utilitza este ) Programari de signatura ( autofirma, pdf ) Certificat electrònic (el teu) Hex Editor o https://hexed.it/ per editar/modificar un fitxer signat. Punt 1. Utilitza este document, signat pel professor Punt 2 Realitza una còpia del document signat i modifica-la amb HexEditor (canvia un bit o dos) Punt 3. Signa amb el teu certificat digital, per segona vegada (doble signatura) el document signat, i el document signat-modificat Punt 4. Observa i comenta els resultats Punt 5. Envia el document PDF doble-signat correcte adjunt al treball Documenta tot el procés i lliura un document en format PDF.
+>
+> Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”
+>
+> ### 📄 activitat hack doble signatura en PDF_signed.pdf
+>
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: doble signatura PDF En aquesta activitat s'utilitzarà el certificat digital per a signar un document en format PDF per més d'un signant. Necessitem
+>
+> 1 document signat ( utilitza este ) Programari de signatura ( autofirma, pdf ) Certificat electrònic (el teu) Hex Editor o https://hexed.it/ per editar/modificar un fitxer signat. Punt 1. Utilitza este document, signat pel professor Punt 2 Realitza una còpia del document signat i modifica-la amb HexEditor (canvia un bit o dos) Punt 3. Signa amb el teu certificat digital, per segona vegada (doble signatura) el document signat, i el document signat-modificat Punt 4. Observa i comenta els resultats Punt 5. Envia el document PDF doble-signat correcte adjunt al treball Documenta tot el procés i lliura un document en format PDF.
+>
+> Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball” Firmado por ENRIQUE MELCHOR IBORRA SANJAIME - NIF:***6325** el día 11/11/2023 con un certificado emitido
+
+> **✍️ Activitat Pràctica 5.2 — (SAD) Suite GPG**
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: xifrat asimètric amb gpg Aquesta activitat consisteix en utilitzar la suite gpg per a generar claus asimètriques, xifrar missatges, desxifrar missatges, generar certificats de revocació, signar missatges i familiaritzar-se amb les funcions criptogràfiques asimètriques.
+>
+> Passos a seguir Crear claus (privada y pública) Crear claus amb el comando/opció --full-generate-key tipus RSA i RSA grandària: 4096 validesa: 6meses Nomb: El teu nom email: El teu email (no es pot inventar, ha de ser real) Clau de protecció Moure el ratolí fins que es genere.
+>
+> Crear 2 parells de claus. Llistar / Comprovar que s’ha creat be Esborrar un dels dos parells de claus i quedar-se amb u Anotar el ClaveID (de la subclau) del parell no descartat. Exportar la clau pública i enviar al professor (per mail, no esperar a entregar el treball).
+>
+> Adjunt a este pdf trobaràs la clau pública del professor, descarrega i importa la clau pública del professor al teu clauer Crear un fitxer.txt amb l’editor nano, on introduirem un missatge secret Xifrar el fitxer amb la clau pública del professor i adjunta’l a la entrega del treball.
+>
+> Rebrem un fitxer xifrat del professor El desxifrem i veiem el missatge secret. Guardem la nostra clau secreta (privada) en un fitxer per a després fer una copia de seguretat fora de l’equip. Crearem un certificat de revocació de la nostra clau i el guardem també. Signem un fitxer amb gpg i l’enviem al professor (adjunta al treball) Rebem i comprovem els fitxers signats Documenta tot el procés i lliura un document en format PDF.
+>
+> Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”
+>
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Resum de comandos. Xifrat simètric Des de la consola de linux.: comando: gpg opcions : -c (xifrat simètric) Genera un arxiu amb extensió pgp , -d (desxifrat) Exemple
+>
+> gpg -c arxiu gpg -d arxiu.gpg Xifrat asimètric Generar claus. gpg --gen-key → gpg --full-generate-key Tipus de xifratge. L'opció DSA i ElGamal ens permet encriptar i signar ➔ Grandària de les claus. Per defecte es recomana 2048 (a major grandària mes seguretat ➔ Temps de validesa de la clau. 1y indicarà que caduque en un any.
+>
+> ➔ Frase de pas (o passphrase) Contrasenya que ens assegurarà que ningú mes que nosaltres mateixos ➔ podrà usar la nostra clau privada. Comprovar les claus que tenim instal·lades. Vore las claus públiques disponibles gpg --list-keys Vore las claus privades gpg –list-secret-keys Obtenir la ClaveID gpg --list-key --keyid-format SHORT Esborrar claus ➔ Necessitem el ClaveID Esborrar la clau privada: gpg --delete-secret-key ClaveID Esborrar la clau pública: gpg --delete-key ClaveID Abans de xifrar necessitem tindre la clau publica del destinatari.
+>
+> Si la tenim/rebem en un fitxer, l’haurem d’importar Importar la clau pública d’un altre des d’un fitxer (clau que ens envien) gpg --import fichero (també podem utilitzar aquesta funció per a recuperar la nostra clau privada guardada) Però també podem pujar les claus(públiques) a un servidor de claus.
+>
+> Pujar la nostra clau pública: gpg --send-keys --keyserver pgp.rediris.es ClaveID Per buscar las claus públiques en el servidor gpg --keyserver NombreDelServidor --search-keys ClaveID/nombre/email Per a descarregar la clau pública d’un destinatari del servidor de claus gpg --keyserver NombreDelServidor --recv-keys ClaveID
+>
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Si volem enviar-la per correu o en suport físic (USB, CD/DVD …) La bolquem en un fitxer de text i enviem el fitxer. gpg --armor --output fichero --export ClaveID
+>
+> - Fer una còpia de la nostra clau privada per a poder recuperar-la si la perdem
+>
+> o si anem a un altre equip: (NO ENVIAR A NINGÚ MAI, ESTA ES LA NOSTRA CLAU SECRETA PRIVADA) gpg --armor --output fichero --export-secret-key ClaveID ******* ----------------------------------------------------------------------------------------------- Esborrar las nostra clau pública pujada als servidors públics. (revocació) gpg -o revocacion.asc --gen-revoke ClaveID
+>
+> - Crear certificat de revocació : gpg -o revocacion.asc --gen-revoke claveID
+>
+> (És convenient crear aquest certificat a continuació de la generació de claus i guardar-lo en lloc segur al costat de la clau privada). Revocar la clau (importació a la nostra relació de claus) gpg --import revocacion.asc
+>
+> - Comunicar als servidors que la nostra clau ja no es vàlida
+>
+> gpg --keyserver NombreDelServidor --send-key ClaveID ----------------------------------------------------------------------------------------------- Xifrar documents Encriptar un fitxer amb la clau pública d’un destinatari: gpg --encrypt --recipient claveID documento.txt Desencriptar un fitxer dirigit a nosaltres amb la clave privada nostra gpg -d documento.txt.gpg gpg -d documento.txt.gpg > document_en_clar.txt ----------------------------------------------------------------------------------------------- Signar documents Signar un fitxer amb la clau privada gpg --output fichero.firmado –sign fichero.txt Verificar de qui és el fitxer signat gpg --verify fichero.firmado Desxifrar fitxer signat gpg --output fichero.txt –decrypt fichero.firmado Signar un fitxer amb la clau privada, i deixant el text llegible gpg --output fichero.firmado –clearsign fichero.txt

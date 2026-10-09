@@ -1,0 +1,179 @@
+{
+  "title": "🏷️ Llenguatges de Marques i Sistemes de Gestió d'Informació — 1r DAW / DAM / ASIX · Grau Superior",
+  "home": {
+    "label": "🏠 Inici Llenguatges de Marques i Sistemes de Gestió d'Informació",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT1 — Unidad 8",
+      "items": [
+        {
+          "label": "📘 UT1 Completa (1 pàgina)",
+          "href": "ut01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.1 UD 8 - Sistemas empresariales de gestión de info",
+          "href": "ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 UD 8 - Sistemas empresariales de gestión de info",
+          "href": "ut01/ut0102.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT1",
+          "href": "ut01/ut01actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — Unidad 7",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 Ejercicios JavaScript Solucionados",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — Unidad 6",
+      "items": [
+        {
+          "label": "📘 UT3 Completa (1 pàgina)",
+          "href": "ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 Continguts i Recursos",
+          "href": "ut03/ut0301.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT3",
+          "href": "ut03/ut03actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — Unidad 5",
+      "items": [
+        {
+          "label": "📘 UT4 Completa (1 pàgina)",
+          "href": "ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 U5-HTML5",
+          "href": "ut04/ut0401.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT4",
+          "href": "ut04/ut04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — Unidad 4",
+      "items": [
+        {
+          "label": "📘 UT5 Completa (1 pàgina)",
+          "href": "ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 UD4-XSD (XML Schema Definition)",
+          "href": "ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 Ejercicios resueltos XML Schema",
+          "href": "ut05/ut0502.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT5",
+          "href": "ut05/ut05actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — Unidad 3",
+      "items": [
+        {
+          "label": "📘 UT6 Completa (1 pàgina)",
+          "href": "ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 UD3-DTD (Document Type Definition)",
+          "href": "ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 Soluciones Ejercicios Tema 3",
+          "href": "ut06/ut0602.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT6",
+          "href": "ut06/ut06actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT7 — Unidad 2",
+      "items": [
+        {
+          "label": "📘 UT7 Completa (1 pàgina)",
+          "href": "ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 UD 2 - XML",
+          "href": "ut07/ut0701.html"
+        },
+        {
+          "label": "7.2 Ejemplos en XML",
+          "href": "ut07/ut0702.html"
+        },
+        {
+          "label": "7.3 Soluciones ejercicios Tema 2",
+          "href": "ut07/ut0703.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT7",
+          "href": "ut07/ut07actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT8 — Unidad 1",
+      "items": [
+        {
+          "label": "📘 UT8 Completa (1 pàgina)",
+          "href": "ut08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 UD1 Introducción a los Lenguajes de Marcas",
+          "href": "ut08/ut0801.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT8",
+          "href": "ut08/ut08actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

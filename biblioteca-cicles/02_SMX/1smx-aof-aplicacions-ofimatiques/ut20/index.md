@@ -1,0 +1,47 @@
+---
+layout: default
+title: "UT20 — TREBALL FINAL BASE DE DADES — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "1r SMX · Grau Mitjà · UT20 Completa"
+prev_url: "../ut19/ut1904.html"
+prev_label: "⬅️ 19.4 B2-EXERCICIS BDA MACROS"
+next_url: "../ut20/ut2001.html"
+next_label: "20.1 Treball Final Base de dades ➡️"
+---
+
+# 📘 UT20 — TREBALL FINAL BASE DE DADES (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**20.1 Treball Final Base de dades**](#ut2001) (o [obrir en pàgina individual ➡️](./ut2001.md) )
+
+---
+
+## 20.1 Treball Final Base de dades
+
+EJERCICIO FINAL BASE DE DATOS Realiza una base de datos para una empresa real o ficticia. Requisitos mínimos
+
+### 1. Realiza el modelo entidad-relación de la base de datos. El modelo tendrá como mínimo
+
+o 3 entidades, o una relación muchos a muchos y o una relación una a muchos, muchos a uno, ó uno a uno. Especifica de manera clara los atributos y la clave principal de cada entidad.
+
+- Pasa el modelo entidad-relación al modelo relacional.
+- En este punto, indica para cada campo de la tabla el tipo de datos y el tamaño y si tiene alguna
+
+restricción (máscara de entrada, valor predeterminado, regla de validación…).
+
+- Implementa estas tablas y sus relaciones en Access.
+- Introduce 5 registros completos en cada tabla. Introduce datos coherentes.
+- Realiza un formulario principal, llamado MENU para poder acceder a todas las opciones de la
+
+base de datos, mediante botones u otros controles que consideres. También debe aparecer un botón para cerrar el formulario MENU y otro para cerrar la aplicación Access.
+
+- Realiza un formulario de introducción de datos, para cada una de las tablas.
+- En cada formulario eliminar los botones de desplazamiento y selectores de registro. Poner los
+
+botones necesarios para poder realizar las operaciones sobre los registros (mínimo: ir al primero, ir al anterior, ir al siguiente, ir al último, añadir un nuevo registro).
+
+- En cada formulario, añadir un botón para cerrar el formulario, y volver al formulario principal.
+
+10. Realiza un mínimo de un informe por cada una de las tablas. Dale el formato adecuado. 11. Realiza como mínimo dos formularios más, para poder realizar informes a partir los filtros que tu consideres (por ejemplo, un formulario con un cuadro de texto para poder introducir un numero y un botón para abrir un informe con los alumnos que tengan una nota superior o igual al número introducido en el formulario).
+
+Aplica el formato que consideres. El funcionamiento debe ser correcto, y tanto los formularios como los informes deben tener un formato adecuado. Se valorará cualquier otra opción que añades al diseño de la base de datos. Recuerda que el FORMATO de la base de datos es un aspecto realmente importante y se valorará.

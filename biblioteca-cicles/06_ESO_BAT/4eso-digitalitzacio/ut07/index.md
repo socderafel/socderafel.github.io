@@ -1,0 +1,109 @@
+---
+layout: default
+title: "UT7 — Páginas Web — Digitalització | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "4t ESO · UT7 Completa"
+prev_url: "../ut06/ut06actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+next_url: "../ut07/ut0701.html"
+next_label: "7.1 HTML5 ➡️"
+---
+
+# 📘 UT7 — Páginas Web (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**7.1 HTML5**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
+> - [**7.2 CSS3**](#ut0702) (o [obrir en pàgina individual ➡️](./ut0702.md) )
+> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+
+---
+
+## 7.1 HTML5
+
+> **🔗 Recurs Web: Introducción a HTML (PPT)**
+> [**🌐 Obrir recurs extern (https://docs.google.com/presentation/d/e/2PACX-1vTQD5wxt8wJ_i8nhXKSYlpcRuCExaebs1S7ARi_RJzTq-GI9RzcrAvwi5DCx8WDVlzgNiqd7cbb_8RR/pub?start=false&loop=false&delayms=60000) ↗️**](https://docs.google.com/presentation/d/e/2PACX-1vTQD5wxt8wJ_i8nhXKSYlpcRuCExaebs1S7ARi_RJzTq-GI9RzcrAvwi5DCx8WDVlzgNiqd7cbb_8RR/pub?start=false&loop=false&delayms=60000)
+
+---
+
+;tiquetas>de>texto Creado por @Manz ( http://twitter.com/Manz ) http://www.emezeta.com/ DESARROLLO WEB CHEAT SHEET HTML5 <em> texto>enfatizado <strong> texto>importante <mark> <i> <b> <u> texto>resaltado vozAtono>alternativo palabra>clave anotaciones Sintaxis>2TJ+ Felemento>>atributo>8ñvalorñ0>contenido>FAelemento0 <sub> subíndice>A>superíndice <super> <small> <var> <samp> pequeñas>aclaraciones variable>o>incógnita resultado>de>operación <kbd> <dfn> title <abbr> entrada>de>usuario>htecladoá definición>A>abreviatura significado <cite> <q> <br> títulos>de>trabajos>u>obras citas>hfrasesá salto>de>línea cite <wbr> <s> oportunidad>de>salto>de>línea texto>eliminado>hinexactoá <ins> texto>añadido>A>eliminado <del> cite datetime <time> fecha>A>hora>hlegibleá datetime <data> equivalencia>para>máquinas value información>hpara>robotsá <code> fragmento>de>código <a> href target download nombre>de>descarga rel _blank _self _parent destino hreflang type alternate author bookmark help ;tiquetas>de>agrupación <p> párrafo>de>texto <div> capa>hdivisión>en>bloqueá <span> <hr> <blockquote> <ul> capa>hfragmento>en>líneaá separación>temática agrupación>de>cita lista>sin>orden <ol> lista>ordenada <li> elemento>de>la>lista <table> <tr> tabla>de>datos>tabulados fila>de>la>tabla>hrowá <article> <h1> cuerpo>del>tema encabezados cite reversed lista>inversa type start primer>número>de>la>lista é a 4 i value valor>del>elemento>hrobotsá <dl> lista>de>definiciones <dt> término>A>descripción <dd> <th> cabecera>de>la>tabla>hheaderá <td> datos>de>la>tabla>hdataá <thead> agrupación>de>cabecera <tbody> agrupación>de>datos <tfoot> agrupación>de>pie>de>tabla <col> columna>A>agrupación span aplicar>a>X>columnas <colgroup> <figure> ilustración>hfiguraw>imagen111á <figcaption> leyenda>de>ilustración <main> contenido>principal <h2> ... <h6> <section> sección>hgrupo>temáticoá <nav> zona>de>navegación <aside> contenido>no>relacionado
+
+```bash
+<header>
+```
+
+cabecera>hlogow>título111á <footer> pie>de>página <address> información>de>contacto ;tiquetas>de>sección UR+ 5dioma>h5SOR.3úéá CechaAhora>h5SO6RIéá CechaAhora>h5SO6RIéá <img> imagen src ;tiquetas>multimedia alt texto>alternativo>a>imagen width anchoAalto>de>imagen <iframe> marco>flotante>h2TJ+á src name nombre>del>iframe <embed> recurso>externo src type J5J; J5J; height width anchoAalto>de>imagen height width anchoAalto>de>imagen height <object> recurso>externo data type J5J; width anchoAalto>de>imagen height name nombre>del>objeto 2TJ+ SWC SWC <param> parámetros>de>Fobject0 value name nombre>del>parámetro valor>del>parámetro <video> src JPy W;BJ ODV poster width anchoAalto>de>imagen height enlace>de>referencia UR+ enlace>de>referencia UR+ enlace>o>archivo UR+ enlace>de>referencia UR+ enlace>a>imagen UR+ enlace>a>página UR+ enlace>a>recurso UR+ enlace>a>recurso UR+ enlace>a>video UR+ enlace>a>imagen>previa preload none metadata auto autoplay reproduce>al>inicio loop modo>infinito>hbucleá muted silencia>el>audio controls muestra>controles mediagroup agrupación>multimedia solo>para>Fvideo0 <audio> JP. OPUS ODD <source> formatos>alternativos src UR+ enlace>a>videoAaudio type J5J; -codecs8 GOV;G <track> subtítulos src UR+ enlace>a>subtítulo VTT lang kind label leyenda>del>subtítulo subtitles captions descriptions chapters metadata default subtítulo>primario CechaAhora>h5SO6RIéá ,IéUúI.ú.ITéy9.I9IOkIé9II license next search prefetch prev nofollow tag noreferrer sandbox allowúforms allowúpointerúlock allowúpopups allowúsameúorigin allowúscripts allowútopúnavigation <caption> leyenda>de>la>tabla <canvas> lienzo>de>dibujo width anchoAalto>del>lienzo height border hfallback>para>U4>limitadosá sortable permite>ordenar>columnas <picture> :PD PND SVD D5C W;BP elemento>de>audio elemento>de>video para>Fvideo0>y>Faudio0 <source> formatos>para>Fpicture0 srcset UR+ lista>de>imágenes type J5J; sizes descriptor>de>ancho media media>queries ;tiquetas>de>tablas ;tiquetas>de>listas alt texto>alternativo coords lista>de>coordenadas shape circle rectangle poly default <area> vínculos>y>área>de>enlaces hsolo>para>Farea0á <map> mapa>de>imágenes>hFarea0á name nombre>del>mapa 5dioma>h5SOR.3úéá es español en inglés imágenes <pre> texto>preformateado :PD PND SVD D5C W;BP de alemán ...
+
+```bash
+<script>
+```
+
+src type J5J; UR+ enlace>o>archivo ejecuta>o>carga>un>script charset UTCú6 5SOú66U3úé 111 async carga>asíncrona defer aplaza>ejecución <noscript> alternativa>sin>scripts <template> carga>plantilla>2TJ+ ;tiquetas>de>scripting tipo>numeración formato>de>archivo formato>de>archivo formato>de>archivo formato>de>archivo formato>de>archivo 5dioma>h5SOR.3úéá
+
+EtiquetasUDheadPUyUmetadatos Creado por @Manz ( http://twitter.com/Manz ) http://www.emezeta.com/ DESARROLLO WEB CHEAT SHEET HTML5 <link> relaciónUconUotroUdocumento FormulariosUHTML <form> formulario <label> leyendaUparaUunUcampo name nombreUdelUformulario FormulariosUHTML alternate versiónUalternativa type MIME href URL enlaceUoUarchivo hreflang rel tipoUdeUrelación author informaciónUsobreUelUautor license licenciaUdelUdocumento help documentoUdeUayuda canonical URLUcanónica prev páginaUanterior.siguiente next prefetch precargaUdeUpágina search URLUdeUbúsquedaUweb <meta> codificaciónUdelUdocumento charset UTF9A ISO9AA_V9( 111 <meta> metadatosUdelUdocumento name keywords description icon iconoUdeUlaUURLU-favicon8 stylesheet URLUdeUestilosUCSS content valorUdelUmetadato author application9name generator
+
+```bash
+<style> estilosUCSSUincrustados
+```
+
+title nombreUdelUestiloUalternativo type MIME media tipoUdeUmedioUaplicable method get post action URL enlaceUaUback9end accept-charset UTF9A ISO9AA_V9( ... autocomplete on off enctype application.x9www9form9urlencoded multipart.form9data text.plain novalidate noUrealizaUvalidaciones target _blank _self _parent destino for asociaUconUidUdeUunUcampo <input> campoUdeUentradaUdeUdatos type text hidden search tel url email password date time number range color checkbox radio file submit image reset button value valorUinicial accept formatosUsoportadosUo alt textoUalternativo width ancho.altoUdeUimagen height src enlaceUoUimagen URL autocomplete on off autofocus colocaUfocoUenUcampo checked campoUseleccionado disabled desactivadoU-noUseUenvía8 form asociaUconUidUdeUunUformulario list asociaUconUidUdeUDdatalistP multiple permiteUmúltiplesUvalores name nombreUdelUcampo placeholder sugerenciaUvisual readonly impideUeditarUcampo size tamañoUdelUcampo min númeroUmínimo.máximo max step cantidadUentreUsaltos maxlength longitudUmin.máx minlength required campoUobligatorio pattern patrónUdeUvalidación <textarea> áreaUampliaUdeUtexto name nombreUdelUcampo autocomplete on off rows númeroUdeUfilas cols númeroUdeUcolumnas placeholder sugerenciaUvisual wrap mantieneUsaltos soft hard <select> listaUdeUselección name nombreUdelUcampo multiple selecciónUmúltiple size tamañoUdelUcampo GtributosUqueUalteranUformulario <option> elementoUdeUlista value valorUinicial label textoUvisible selected opciónUseleccionada <optgroup> agrupaciónUdeUopciones label textoUvisible <button> botón name nombreUdelUcampo type submit reset button value valorUinicial <datalist> listaU-modificable8 <keygen> generadorUdeUparUdeUclaves name nombreUdelUcampo keytype rsa challenge cadenaUdeUdesafío <output> resultados name nombreUdelUcampo for asociaUconUidUdeUunUcampo <progress> barraUdeUprogreso value progresoUactual max valorUmáximo <meter> medidor value progresoUactual low umbralUinferior high umbralUsuperior optimum valorUóptimo LowUDUOptUDUHigh ValueUDULow Otro ValueUDULow ValueUDUHigh Otro OptUDULowUDUHigh ValueUPULow ValueUPUHigh Otro EsquemasUdeUDmeterP <fieldset> agrupaciónUtemática name nombreUdelUcampo <legend> leyendaUparaUDfieldsetP formmethod get post formaction URL enlaceUaUback9end formenctype application.x9www9form9urlencoded multipart.form9data text.plain formnovalidate noUrealizaUvalidaciones formtarget _blank _self _parent destino GtributosUcomunesUdeUformulario accesskey tabindex ordenUdelUcampoU-número8 spellcheck revisaUortografía hidden teclaUdeUaccesoUrápido false true ocultaUunUcampo contenteditable permiteUeditarUcampo RestricciónUdeUcampos camposUnuméricos camposUtextuales tipoUgeneral LowUDUHighUDUOpt ValueUPUHigh <base> baseUdeUURLsUrelativas href URL enlaceUoUarchivo target _blank _self _parent destino <details> informaciónU-desplegable8 open despliegaUcontenido <summary> información <dialog> cuadroUdeUdiálogoUHTML open despliegaUcontenido datetime week month class claseU-múltiplesUporUpágina8 id identificadorU-únicoUporUpágina8 GtributosUglobales lang translate palabraUtraducible yes no title informaciónUalUpasarUelUratón data-* metadatosUpersonalizados style estilosUCSSUenUlínea dir ltr auto rtl direcciónUdelUtexto
+
+```bash
+<html> contenidoUdelUdocumento
+<head> cabeceraU-metadatos8
+```
+
+EtiquetasUdeUdocumento manifest URL archivoUdeUcaché DRDOCTYPEUhtmlP documentoUHTML_
+
+```bash
+<body> contenidoUdeUlaUpágina
+```
+
+IdiomaU-ISOíCV9(8 IdiomaU-ISOíCV9(8 formatoUdeUarchivo formatoUdeUarchivo métodoUHTTP DR99UcomentariosU99P REGEX MIME
+
+---
+
+## 7.2 CSS3
+
+Columnas columnDwidth0y[size]; columnDcount0k[number]; columns0k width count auto Posicionamiento absolute position0k top.right.bottom.left0k[size]y clipDpath0kurl6shape0svg9y overflow0k auto auto fixed relative static visible hidden scroll auto Tablas borderDcollapse0 borderDspacing0ky[size]; captionDside0k emptyDcells0 tableDlayout0k separate collapse top bottom show hide auto fixed 1mm 1in 1cm 1pc 1pt 25.4mm 10mm 4.23mm 0.35mm Márgeneskykespaciados margin.padding0k margin.padding0k margin.padding0k margin.padding0k top right bottom left top rightyleft bottom topybottom leftyright topyrightybottomyleft Listas listDstyleDimage0kurl6image0png9;y listDstyleDposition0 listDstyleDtype0kdisc circle none inside outside square none decimal decimal,leading,zero lower,alpha upper,alpha lower,roman upper,roman listDstyle0k type position image backgroundDcolor0y[color]; backgroundDimage0kurl6image0jpg9; backgroundDrepeat0k backgroundDattachment0k backgroundDposition0k[pos,x]y[pos,y]; background0k repeat none repeat,x repeat,y no,repeat scroll fixed color image repeat attachment position color0y[color]; Coloreskykfondos Bordes borderDcolor0y[color]; borderDwidth0k[size]; borderDstyle0k[style];y thin medium thick border0k width style color Colores Keywords0yRoyalBlue; Hexadecimal0yR%SC/ES;yyyyyR%CE; RGBkmodel0yRGB6C85SH85LL89; HSLkmodel0kHSL6LL85AS#533#9; currentColor transparent withkalphakchannel RGBA6C85SH85LL85yH089; HSLA6LL85AS#533#5yH089; solid dotted dashed double groove ridge inset outset Estilos FuenteskEvariacionesF fontDvariant0k textDdecoration0 textDtransform0k normal none none small,caps underline overline line,through capitalize uppercase lowercase Fuentes fontDfamily0y[fontS]5y[fontL]5y[font7]5y000y; fontDsize0k[size]yyyyyyyyyyyyyyyyyyy fontDstyle0k fontDweight0k[SHH,/HH]y serif sans,serif cursive fantasy monospace xx,small x,small small medium large x,large xx,large smaller larger normal italic oblique normal bold lighter bolder font0k style variant weight size2height family Perfiles outlineDcolor0y[color]; outlineDstyle0k[style]; outlineDwidth0k[size]; outline0 thin medium thick width style color invert Tiposkdekelementos display0k list,item table table,cell table,row inline block inline,block none visibility0kvisible hidden collapse FuentekEalineacioneskykespaciadoF Desplazamiento float0k clear0 left none right left none right both 15 5 -5 zDindex0 SintaxiskCSS selectorkkHidkk#classkk0pseudoclasskk00pseudoelementkk[attr]kk letterDspacing0y[size]; lineDheight0k[size];yyyyyyyyyyyyyyyyyy textDindent0k[size]; wordDspacing0k[size]; whiteDspace0k tabDsize0y[size]; textDalign0 verticalDalign0k[size] normal normal normal normal no,wrap pre pre,line pre,wrap left center right justify baseline sub super top middle bottom text,top text,bottom borderDtopD( borderDrightD( borderDbottomD( borderDleftD( Separadorkdekcolumnas columnDruleDwidth0k[size]; columnDruleDstyle0k[style]; columnDruleDcolor0k[color];y columnDrule0kwidth style color columnDgap0y[size]; columnDspan0k[number]; columnDfill0kbalance auto normal all http://www.emezeta.com/ Creadospors@Manzs(shttp://twitter.com/Manzs)s DISEÑO WEB CSS3 CHEAT SHEET propertykk0kkvaluekkA } { (Dtop (Dleft (Dright (Dbottom A A A 2em normal 1em 0.5em 1ex 2ex 4ex Cursoreskdelkratón none cursor0yurl6image0png9 default crosshair help move pointer progress text wait context,menu cell vertical,text alias copy no,drop not,allowed all,scroll col,resize row,resize ,resize s se sw n w e ne nw border padding margin top-left top-right bottom-right bottom-left top bottom left right Ubicaciones Dimensiones maxDwidth0y[size]; minDwidth0k[size]; width0k[size] auto none none (Dheight ]#k*#kk[]#k[*# a#kb#kkkkkA#kB# i#kii#kkkkkkkkI#kII# shape
+
+Fotogramas EkeyframesGnameanimationG{ GGGG6pG{Gpropiedad:OvalorO}G GGGG222 GGGG566pG{Gpropiedad:OvalorO} } 6pGAGfrom 566pGAGto http://www.emezeta.com/ Creado por @Manz ( http://twitter.com/Manz ) DISEÑO WEB CSS3 CHEAT SHEET 8webkit8 8moz8 8ms8 8o8 background8imageMG OOOOOOlinear8gradientk[dir]4O[col1]4O[col2]XXXx; OOOOOOradial8gradientk[shape]O[size]OatO[pos]4O[col1]4O[col2]4OXXXx;O OOOOOOrepeating8linear8gradientkXXXx; OOOOOOrepeating8radial8gradientkXXXx; Gradientes DirecciónGenGgradienteGlineal line8through OpcionesGdelGgradienteGradial TipografíasGCSSú Efont8faceG{ GGGfont8familyMGbOpenOSansb; GGGfont8weightMO3__;O GGGsrcMOlocalkbOpenOSansbx4 GGGurlkfileXttfxOformatkbtruetypebx4 GGGurlkfileXwoffxOformatkbwoffbx;O} j6deg 5v6deg 4á6deg úB6deg ú*deg 5x*deg 45*deg ú4*deg toGtop toGtopGright toGright toGbottomGright toGbottom toGtopGleft toGleft toGbottomGleft ellipse circle shapeMG sizeMG[size] O posM farthest8corner closest8corner farthest8side closest8side center top left right bottom topOleft topOright bottomOleft bottomOright FondosGoGsombrasGmúltiples background8imageMOurlkback1Xpngx4Ourlkback2Xpngx4OXXX; background8repeatMGno8repeat4Orepeat8x4OXXX; Sombras text8shadowMG[pos8x]O[pos8y]O[blur]O[color]; box8shadowMO[pos8x]O[pos8y]O[blur]O[size]O[color];O none none inset Fondos backgroundMGcolor position size background8clipMG background8originMG background8sizeMG[size8w]O[size8h]; border8box padding8box content8box padding8box content8box border8box cover contain auto repeat origin clip att img border8top8left83 border8top8right83 border8bottom8left83 border8bottom8right83 border8radiusMG border8radiusMG border8radiusMGG top right bottom left topObottom leftOright topOrightObottomOleft BordesGredondeados border8image8outsetMG[size]O border8image8repeatMG border8image8sliceMG border8image8sourceMGurlkimageXpngx border8image8widthMG[size] BordesGconGimágenes border8imageMG source slice width outset repeat stretch repeat round space top right bottom left http://fonts.googleapis.com/css?family=Open+Sans:300,400|Roboto:400 FuentesGCSSú font8stretchMG G text8overflowMG[text]; text8justifyMG font8size8adjustMG[number] ultra8condensed clip ellipsis normal extra8condensed condensed semi8condensed semi8expanded expanded extra8expanded ultra8expanded auto inter8word distribute none none Medios EmediaGprintG{ OOOOpropiedadO:Ovalor; } EmediaGscreenG{ OOOOpropiedadO:Ovalor; } EmediaGscreenGand Cmax8widthMGBx6pxS { OOOOpropiedadO:Ovalor; } Z X Y TransformacionesGúD transformMGtranslate3dkx4Oy4Ozx; transformMGtranslateZkzx; transformMGscale3dkx4Oy4Ozx; transformMGscaleZkzx; transformMGrotate3dkx4y4z4degx; transformMGrotateZkdegx; transformMGperspectiveknx; transformMGmatrix3dkn4n4n4XXXx transform8originMG[pos8x]O[pos8y]O[pos8z]; transform8styleMG Transformaciones flat preserve83d Animaciones animationMG name duration timing8func animation8nameMG[name]; animation8durationMG[time];O animation8timing8functionM animation8delayMG[time]; animation8iteration8countMG[number]; animation8directionMG animation8fill8modeMG animation8play8stateMG none infinite normal reverse alternate alternate8reverse none forwards backwards both running paused delay i8c dir f8m p8s FiltrosGCSS filterMG[filter]knx Transiciones transitionMG property duration transition8propertyMG[css8property]; transition8durationMG[time]; transition8timing8functionMG[timing8function] transition8delayMG[time]; none all t8function delay ease linear ease8in ease8out ease8in8out cubic8bezierkx k_X254O_X14O_X254O1x k_X__4O_X_4O1X__4O1x k_X424O_X_4O1X__4O1x k_X__4O_X_4O_X584O1x k_X424O_X_4O_X584O1x timing8function EpageG{ OOOOsize:O[width]O[height]; OOOOmargin:O[XXX] OOOOorphans:O[number]; OOOOwidows:O[number];O} auto landscape portrait Paginación transformMGscalekx4Oyx; transformMGskewkdeg4Odegx; transformMGrotatekdegx; transformMGtranslateXkxx; transformMGtranslateYkyx; TranslaciónG4D transformMGrotateXkdeg_xx; transformMGrotateYkdeg_yx; RotaciónG4D transformMGscaleXkxx; transformMGscaleYkyx; EscaladoG4D transformMGskewXkdeg_xx; transformMGskewYkdeg_yx; DeformaciónG4D transformMGtranslatekx4Oyx; E8vendor8keyframes 5v6 j6 4á6 deg grayscaleMG[_XXX1] blurMG[size]O sepiaMG[_XXX1] saturateMG[_XXX1] opacityMG[_XXX1] brightnessMG[_XXX1]O contrastMG[_XXX1] hue8rotateMG[deg] invertMG[_XXX1] knx filter8func filterMGf5CnSGf4CnSG222
+
+---
+
+## ✍️ Activitats pràctiques UT7
+
+> **✍️ Activitat Pràctica 7.1 — Actividad "Enlaces"**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.2 — Mi primer HTML**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.3 — Párrafos**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.4 — Enlaces**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.5 — Llistes**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.6 — Párrafos-Listas**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.7 — EjemploImagen**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.8 — Biblioteca**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.9 — Exercici audio i video**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.10 — Exercici Object**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.11 — Biblioteca plus**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 7.12 — Tabla amb dades**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.

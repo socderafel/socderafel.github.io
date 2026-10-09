@@ -4,18 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ page.title | default: site.title }}</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1="32" y1="42" x2="48" y2="42" stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
   <style>
     :root {
       --md-text-font: "Roboto", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
       --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
-      --md-primary-fg-color: #3f51b5;
-      --md-primary-dark: #303f9f;
-      --md-default-fg-color: #333333;
-      --md-default-bg-color: #ffffff;
-      --md-typeset-a-color: #3f51b5;
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --md-primary-fg-color: #1e3a8a;
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+    }
+
+    [data-theme="dark"] {
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --md-primary-fg-color: #0f172a;
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --border: #334155;
+      --code-bg: #334155;
+      --header-bg: #020617;
     }
 
     * {
@@ -24,32 +48,33 @@
 
     body {
       font-family: var(--md-text-font);
-      background-color: #f5f7fa;
-      color: #374151;
+      background-color: var(--bg-body);
+      color: var(--text-main);
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    /* Barra superior compacta estilo MkDocs Material (48px) */
+    /* Barra superior compacta estilo MkDocs Material */
     .md-header {
-      background-color: var(--md-primary-fg-color);
+      background: var(--header-bg);
       color: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 200;
     }
 
     .md-header-inner {
-      max-width: 1020px;
+      max-width: 1460px;
       margin: 0 auto;
       padding: 0 24px;
-      height: 50px;
+      min-height: 52px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
+      flex-wrap: wrap;
     }
 
     .md-header-brand {
@@ -75,91 +100,225 @@
       align-items: center;
       gap: 6px;
       overflow-x: auto;
+      flex-wrap: wrap;
     }
 
     .md-header-nav a {
-      color: rgba(255, 255, 255, 0.88) !important;
+      color: rgba(255, 255, 255, 0.9) !important;
       text-decoration: none !important;
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       font-weight: 500;
-      padding: 6px 12px;
-      border-radius: 5px;
+      padding: 6px 11px;
+      border-radius: 6px;
       transition: background-color 0.15s ease, color 0.15s ease;
       white-space: nowrap;
     }
 
     .md-header-nav a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.16);
       color: #ffffff !important;
     }
 
-    /* Contenedor de página idéntico a las páginas de contenido */
+    .btn-toggle {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #ffffff;
+      padding: 5px 11px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .btn-toggle:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    /* Contenedor de 1 columna (Portal principal e índices generales) */
     .main-wrapper {
       padding: 24px 16px 40px 16px;
     }
 
     .page-container {
-      max-width: 960px;
+      max-width: 1020px;
       margin: 0 auto;
-      background: #ffffff;
-      padding: 34px 48px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 36px 48px;
       border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    /* Contenedor de 2 columnas para Cursos Completos (con Sidebar UT) */
+    .layout {
+      max-width: 1460px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 28px;
+      padding: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 980px) {
+      .layout {
+        grid-template-columns: 1fr;
+        padding: 14px;
+      }
+      aside.sidebar {
+        position: static !important;
+        max-height: none !important;
+      }
     }
 
     @media (max-width: 768px) {
-      .page-container {
-        padding: 24px 20px;
+      .page-container, main.content {
+        padding: 24px 18px !important;
       }
       .md-header-inner {
-        height: auto;
         padding: 10px 16px;
-        flex-wrap: wrap;
       }
     }
 
-    /* Encabezados al estilo exacto de MkDocs Material */
-    h1 {
-      font-size: 1.85rem;
+    aside.sidebar {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+      position: sticky;
+      top: 72px;
+      max-height: calc(100vh - 92px);
+      overflow-y: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .sidebar-course-header {
+      padding: 6px 8px 10px 8px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.83rem;
+    }
+
+    aside.sidebar details.nav-unit {
+      margin-bottom: 6px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--bg-body);
+    }
+
+    aside.sidebar details.nav-unit > summary {
+      padding: 8px 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--text-main);
+      background: var(--code-bg);
+      list-style: none;
+      user-select: none;
+    }
+
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+
+    aside.sidebar li {
+      margin-bottom: 3px;
+    }
+
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
       font-weight: 400;
-      color: #1f2937;
+    }
+
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+
+    /* Tipografía y Encabezados */
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: var(--text-main);
       margin-top: 0;
       margin-bottom: 1rem;
       letter-spacing: -0.02em;
     }
 
     h2 {
-      font-size: 1.32rem;
-      font-weight: 500;
-      color: #3f51b5;
-      margin-top: 1.6rem;
+      font-size: 1.38rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 2rem;
       margin-bottom: 0.75rem;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 0.35rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.4rem;
     }
 
     h3 {
-      font-size: 1.08rem;
+      font-size: 1.12rem;
       font-weight: 700;
-      color: #1f2937;
-      margin-top: 1.3rem;
+      color: var(--text-main);
+      margin-top: 1.4rem;
       margin-bottom: 0.45rem;
     }
 
     h4 {
       font-size: 0.98rem;
       font-weight: 700;
-      color: #4b5563;
-      margin-top: 1rem;
+      color: var(--text-muted);
+      margin-top: 1.1rem;
     }
 
     p, li {
-      font-size: 0.95rem;
-      color: #374151;
+      font-size: 0.96rem;
+      color: var(--text-muted);
     }
 
     a {
-      color: var(--md-typeset-a-color);
+      color: var(--primary);
       text-decoration: none;
       font-weight: 500;
     }
@@ -171,8 +330,24 @@
     hr {
       border: 0;
       height: 1px;
-      background: #e5e7eb;
-      margin: 1.6rem 0;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
     }
 
     /* Tarjetas de Módulos para el Landing Page */
@@ -190,21 +365,21 @@
     }
 
     .module-card {
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--border);
       border-top: 4px solid #3f51b5;
       border-radius: 8px;
       padding: 18px 20px;
-      background: #ffffff;
+      background: var(--bg-card);
       box-shadow: 0 2px 6px rgba(0,0,0,0.03);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .module-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(63, 81, 181, 0.12);
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.12);
     }
 
     .module-card.smx { border-top-color: #3f51b5; }
@@ -231,13 +406,13 @@
     .module-card h3 {
       margin: 0 0 8px 0;
       font-size: 1.12rem;
-      color: #111827;
+      color: var(--text-main);
     }
 
     .module-card p {
       margin: 0 0 16px 0;
       font-size: 0.88rem;
-      color: #4b5563;
+      color: var(--text-muted);
       line-height: 1.5;
     }
 
@@ -254,59 +429,101 @@
       transition: background-color 0.15s ease;
     }
 
-    .module-btn:hover {
-      background-color: #303f9f;
-    }
-
+    .module-btn:hover { background-color: #303f9f; }
     .module-card.prog .module-btn { background-color: #00897b; }
     .module-card.prog .module-btn:hover { background-color: #00695c; }
     .module-card.inter .module-btn { background-color: #f57c00; }
     .module-card.inter .module-btn:hover { background-color: #ef6c00; }
 
-    /* Tablas idénticas a MkDocs Material */
+    /* Tablas */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1.2rem 0;
+      margin: 1.3rem 0;
       font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
     }
 
     th, td {
       padding: 10px 14px;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--border);
       text-align: left;
     }
 
     th {
-      background-color: #f9fafb;
+      background-color: var(--code-bg);
       font-weight: 700;
-      color: #1f2937;
+      color: var(--text-main);
     }
 
-    tr:nth-child(even) {
-      background-color: #fdfdfd;
-    }
-
-    /* Blockquotes / Callouts estilo Admonition */
+    /* Blockquotes y Admonitions */
     blockquote {
-      border-left: 4px solid #3f51b5;
-      background: #f0f4ff;
-      margin: 1.1rem 0;
+      border-left: 4px solid var(--primary);
+      background: rgba(37, 99, 235, 0.06);
+      margin: 1.3rem 0;
       padding: 12px 18px;
       border-radius: 0 6px 6px 0;
     }
 
     blockquote p {
-      margin: 0.3rem 0;
-      color: #1e3a8a;
+      margin: 0.35rem 0;
     }
 
-    /* Código inline y bloques de código */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+
+    /* Código y Cajas de Terminal */
     code {
       font-family: var(--md-code-font);
       font-size: 0.86em;
-      background-color: #f1f5f9;
-      color: #0f172a;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
       padding: 2px 6px;
       border-radius: 4px;
     }
@@ -321,7 +538,6 @@
       font-size: 0.88rem;
       line-height: 1.55;
       margin: 1.1rem 0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
 
     pre code {
@@ -329,6 +545,113 @@
       color: inherit;
       padding: 0;
       font-size: inherit;
+    }
+
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+
+    .btn-copy:hover { background: #45475a; }
+
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      border-radius: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      display: block;
+      margin: 1.2rem auto;
+    }
+
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
     }
   </style>
 </head>
@@ -349,14 +672,199 @@
         <a href="{{ '/programacio/' | relative_url }}">☕ Programació</a>
         <a href="{{ '/projecte-intermodular/' | relative_url }}">🚀 Projecte Intermodular</a>
         <a href="{{ '/biblioteca-cicles/' | relative_url }}">📚 Biblioteca Cicles</a>
+        <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
       </nav>
     </div>
   </header>
 
+  {% if page.course_root %}
+  <div class="layout">
+    <aside class="sidebar" id="course-sidebar" data-course-root="{{ page.course_root }}">
+      <input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+      <div id="sidebar-nav-content">Carregant índex del curs...</div>
+    </aside>
+    <main class="content">
+      {% if page.badge %}
+      <span class="up-badge">{{ page.badge }}</span>
+      {% endif %}
+      {{ content }}
+      {% if page.prev_url or page.next_url %}
+      <div class="page-nav-footer">
+        {% if page.prev_url %}
+        <a class="page-nav-btn" href="{{ page.prev_url }}">{{ page.prev_label }}</a>
+        {% else %}
+        <span></span>
+        {% endif %}
+        {% if page.next_url %}
+        <a class="page-nav-btn" href="{{ page.next_url }}">{{ page.next_label }}</a>
+        {% endif %}
+      </div>
+      {% endif %}
+    </main>
+  </div>
+  {% else %}
   <main class="main-wrapper">
     <div class="page-container">
       {{ content }}
     </div>
   </main>
+  {% endif %}
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+
+    function copyCode(btn) {
+      const box = btn.closest('.terminal-box');
+      const pre = box ? box.querySelector('pre') : null;
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Normalitzar enllaços relatius .md -> .html en el contingut compilat
+      document.querySelectorAll('main a[href]').forEach(a => {
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) return;
+        if (href.endsWith('.md') || href.includes('.md#')) {
+          a.setAttribute('href', href.replace(/\.md(#|$)/, '.html$1'));
+        }
+      });
+
+      // 2. Transformar blocs de codi Markdown (<pre><code>) en caixes .terminal-box
+      document.querySelectorAll('main pre').forEach(pre => {
+        if (pre.closest('.terminal-box')) return;
+        const code = pre.querySelector('code');
+        let lang = 'TEXT';
+        const container = pre.closest('[class*="language-"]') || code || pre;
+        if (container && container.className) {
+          const m = container.className.match(/language-([a-zA-Z0-9_+-]+)/);
+          if (m) lang = m[1].toUpperCase();
+        }
+        const wrapper = document.createElement('div');
+        wrapper.className = 'terminal-box';
+        const bar = document.createElement('div');
+        bar.className = 'terminal-bar';
+        bar.innerHTML =
+          '<div class="terminal-dots"><span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span></div>' +
+          '<div class="terminal-title">Codi / Terminal</div>' +
+          '<div class="terminal-actions"><span class="terminal-lang">' + lang + '</span><button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button></div>';
+        const target = pre.closest('div.highlighter-rouge') || pre;
+        target.parentNode.insertBefore(wrapper, target);
+        wrapper.appendChild(bar);
+        wrapper.appendChild(pre);
+        if (target !== pre && target.parentNode) target.parentNode.removeChild(target);
+      });
+
+      // 3. Transformar blockquotes amb títol en negreta en caixes .admonition
+      document.querySelectorAll('main blockquote').forEach(bq => {
+        const firstP = bq.querySelector('p:first-child');
+        if (!firstP) return;
+        const firstStrong = firstP.querySelector('strong:first-child');
+        if (!firstStrong) return;
+        const titleText = firstStrong.innerText.trim();
+        let kind = 'note';
+        if (/^(💡|🛠️|✅)/.test(titleText)) kind = 'tip';
+        else if (/^(⚠️|⏳|📌)/.test(titleText)) kind = 'warning';
+        else if (/^(✍️|📝|🚀)/.test(titleText)) kind = 'exercise';
+        else if (/^(🚨|❌|🛑)/.test(titleText)) kind = 'danger';
+
+        const adm = document.createElement('div');
+        adm.className = 'admonition ' + kind;
+        const titleEl = document.createElement('p');
+        titleEl.className = 'admonition-title';
+        titleEl.textContent = titleText;
+        adm.appendChild(titleEl);
+
+        // Si el primer paràgraf només tenia el títol o un salt de línia després del títol
+        firstStrong.remove();
+        firstP.innerHTML = firstP.innerHTML.replace(/^\s*<br\s*\/?>\s*/i, '').trim();
+        if (!firstP.innerText.trim() && !firstP.querySelector('a, code, img')) {
+          firstP.remove();
+        }
+        while (bq.firstChild) {
+          adm.appendChild(bq.firstChild);
+        }
+        bq.parentNode.replaceChild(adm, bq);
+      });
+
+      // 4. Carregar sidebar.json si la pàgina forma part d'un curs
+      const sidebar = document.getElementById('course-sidebar');
+      if (sidebar) {
+        const root = sidebar.getAttribute('data-course-root') || '.';
+        const prefix = root === '.' ? './' : root + '/';
+        fetch(prefix + 'sidebar.json')
+          .then(r => r.json())
+          .then(data => {
+            const container = document.getElementById('sidebar-nav-content');
+            if (!container) return;
+            const currentPath = window.location.pathname;
+            let html = '';
+            if (data.home) {
+              const homeHref = prefix + data.home.href;
+              const isHome = currentPath.endsWith('/') || (currentPath.endsWith('/index.html') && root === '.');
+              html += '<ul><li><a href="' + homeHref + '"' + (isHome ? ' class="active"' : '') + '>' + data.home.label + '</a></li></ul>';
+            }
+            (data.units || []).forEach(unit => {
+              let unitActive = false;
+              let itemsHtml = '';
+              (unit.items || []).forEach(item => {
+                const itemHref = prefix + item.href;
+                const cleanHref = item.href.replace(/^\.\//, '');
+                const isItemActive = currentPath.endsWith('/' + cleanHref) ||
+                  (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, '')));
+                if (isItemActive) unitActive = true;
+                const cls = [item.class || '', isItemActive ? 'active' : ''].filter(Boolean).join(' ');
+                itemsHtml += '<li><a href="' + itemHref + '"' + (cls ? ' class="' + cls + '"' : '') + '>' + item.label + '</a></li>';
+              });
+              const openAttr = (root === '.' || unitActive) ? ' open' : '';
+              html += '<details class="nav-unit"' + openAttr + '><summary>' + unit.summary + '</summary><ul>' + itemsHtml + '</ul></details>';
+            });
+            if (data.footer && data.footer.length) {
+              html += '<ul>';
+              data.footer.forEach(f => {
+                const fHref = prefix + f.href;
+                const isFActive = currentPath.endsWith('/' + f.href);
+                html += '<li><a href="' + fHref + '"' + (isFActive ? ' class="active"' : '') + '>' + f.label + '</a></li>';
+              });
+              html += '</ul>';
+            }
+            container.innerHTML = html;
+          })
+          .catch(() => {
+            const container = document.getElementById('sidebar-nav-content');
+            if (container) container.innerHTML = '';
+          });
+      }
+    });
+  </script>
 </body>
 </html>

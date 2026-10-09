@@ -1,0 +1,335 @@
+{
+  "title": "📡 Planificació i Administració de Xarxes — 1r ASIX · Grau Superior",
+  "home": {
+    "label": "🏠 Inici Planificació i Administració de Xarxes",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — General PAX",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 Continguts i Recursos",
+          "href": "ut00/ut0001.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT0",
+          "href": "ut00/ut00actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT1 — Tutoria 1ASIX",
+      "items": [
+        {
+          "label": "📘 UT1 Completa (1 pàgina)",
+          "href": "ut01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.1 Horari 1ASIX",
+          "href": "ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 Calendari 21 22",
+          "href": "ut01/ut0102.html"
+        },
+        {
+          "label": "1.3 Plànol IES",
+          "href": "ut01/ut0103.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — U1 - Caracterització de les xarxes",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 U1. Caracterització de les xarxes",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — U2 - Arquitectura de xarxa",
+      "items": [
+        {
+          "label": "📘 UT3 Completa (1 pàgina)",
+          "href": "ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 U2 Arquitectura de xarxa",
+          "href": "ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 U2.1 IPs",
+          "href": "ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 U2 P1 ES",
+          "href": "ut03/ut0303.html"
+        },
+        {
+          "label": "3.4 U2 P1 EN",
+          "href": "ut03/ut0304.html"
+        },
+        {
+          "label": "3.5 U2 E1",
+          "href": "ut03/ut0305.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT3",
+          "href": "ut03/ut03actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — U3 - Xarxes d'àrea local",
+      "items": [
+        {
+          "label": "📘 UT4 Completa (1 pàgina)",
+          "href": "ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 U3 Xarxes àrea local",
+          "href": "ut04/ut0401.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT4",
+          "href": "ut04/ut04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — U4 - Nivell físic",
+      "items": [
+        {
+          "label": "📘 UT5 Completa (1 pàgina)",
+          "href": "ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 U4 Nivell físic",
+          "href": "ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 U4 P1",
+          "href": "ut05/ut0502.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT5",
+          "href": "ut05/ut05actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — U5 - Cablejat estructurat",
+      "items": [
+        {
+          "label": "📘 UT6 Completa (1 pàgina)",
+          "href": "ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 U5 Cablejat Estructurat",
+          "href": "ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 Cablejat Casa de l'Alumne UPV",
+          "href": "ut06/ut0602.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT6",
+          "href": "ut06/ut06actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT7 — U6 - Nivell d'enllaç",
+      "items": [
+        {
+          "label": "📘 UT7 Completa (1 pàgina)",
+          "href": "ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 U6 - Nivell d'enllaç",
+          "href": "ut07/ut0701.html"
+        },
+        {
+          "label": "7.2 Trama PPP",
+          "href": "ut07/ut0702.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT7",
+          "href": "ut07/ut07actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT8 — U7 - El switch",
+      "items": [
+        {
+          "label": "📘 UT8 Completa (1 pàgina)",
+          "href": "ut08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 U7 El switch",
+          "href": "ut08/ut0801.html"
+        },
+        {
+          "label": "8.2 Cisco IOS",
+          "href": "ut08/ut0802.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT8",
+          "href": "ut08/ut08actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT9 — U8 - VLAN",
+      "items": [
+        {
+          "label": "📘 UT9 Completa (1 pàgina)",
+          "href": "ut09/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 U8 VLAN",
+          "href": "ut09/ut0901.html"
+        },
+        {
+          "label": "9.2 Comandos Cisco VLAN",
+          "href": "ut09/ut0902.html"
+        },
+        {
+          "label": "9.3 U8E1",
+          "href": "ut09/ut0903.html"
+        },
+        {
+          "label": "9.4 U8E2",
+          "href": "ut09/ut0904.html"
+        },
+        {
+          "label": "9.5 VTP, DTP i Capa 3",
+          "href": "ut09/ut0905.html"
+        },
+        {
+          "label": "9.6 Colisió i difusió",
+          "href": "ut09/ut0906.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT9",
+          "href": "ut09/ut09actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT10 — U9 - Nivell de xarxa. El router",
+      "items": [
+        {
+          "label": "📘 UT10 Completa (1 pàgina)",
+          "href": "ut10/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "10.1 U9 Nivell de xarxa. El Router",
+          "href": "ut10/ut1001.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT10",
+          "href": "ut10/ut10actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT11 — U10 - Adreçament IP",
+      "items": [
+        {
+          "label": "📘 UT11 Completa (1 pàgina)",
+          "href": "ut11/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "11.1 U10 Adreçament IP",
+          "href": "ut11/ut1101.html"
+        },
+        {
+          "label": "11.2 Exercicis classe subnetting",
+          "href": "ut11/ut1102.html"
+        },
+        {
+          "label": "11.3 Taula A2",
+          "href": "ut11/ut1103.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT11",
+          "href": "ut11/ut11actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT12 — U11 - Encaminament",
+      "items": [
+        {
+          "label": "📘 UT12 Completa (1 pàgina)",
+          "href": "ut12/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "12.1 U11 Enrutament",
+          "href": "ut12/ut1201.html"
+        },
+        {
+          "label": "12.2 Exemple Enrutament Estàtic",
+          "href": "ut12/ut1202.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT12",
+          "href": "ut12/ut12actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT13 — U12 - Capa de transport i aplicació",
+      "items": [
+        {
+          "label": "📘 UT13 Completa (1 pàgina)",
+          "href": "ut13/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "13.1 U12 Nivell de Transport i Aplicació",
+          "href": "ut13/ut1301.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT13",
+          "href": "ut13/ut13actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

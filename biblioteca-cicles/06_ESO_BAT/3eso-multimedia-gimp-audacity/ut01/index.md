@@ -1,0 +1,319 @@
+---
+layout: default
+title: "UT1 — GIMP — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "3r ESO · UT1 Completa"
+prev_url: "../ut00/ut0001.html"
+prev_label: "⬅️ 0.1 Continguts i Recursos"
+next_url: "../ut01/ut0101.html"
+next_label: "1.1 Modos de color ➡️"
+---
+
+# 📘 UT1 — GIMP (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**1.1 Modos de color**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
+> - [**1.2 Dosier de actividades**](#ut0102) (o [obrir en pàgina individual ➡️](./ut0102.md) )
+> - [**✍️ Activitats pràctiques UT1**](#ut01actividades) (o [obrir en pàgina individual ➡️](./ut01actividades.md) )
+
+---
+
+## 1.1 Modos de color
+
+> **🔗 Recurs Web: Conceptos básicos**
+> [**🌐 Obrir recurs extern (https://www.tuinstitutoonline.com/cursos/gimp_2_8/01conceptos_basicos.php) ↗️**](https://www.tuinstitutoonline.com/cursos/gimp_2_8/01conceptos_basicos.php)
+
+---
+
+Modos de color: guía interactiva
+Grises · Indexado · RGB · HSV · CMYK
+
+RGB
+
+HSV
+
+CMYK
+
+Escala de grises
+
+Indexado
+
+Resumen
+**Muestra**: el recuadro refleja el color según los controles del panel activo. En los modos que no son aditivos (p.ej., CMYK), se convierte a RGB para visualizarlo en pantalla.
+### RGB (pantallas)
+
+R (0–255): 128
+G (0–255): 80
+B (0–255): 200
+Hex
+
+#8050C8
+Modelo aditivo: más luz ⇒ más cerca del blanco.
+### HSV (tono, saturación, valor)
+
+Tono H (0–360°): 270
+Saturación S (0–100%): 60
+Valor V (0–100%): 78
+Equivalente RGB
+
+rgb(128, 80, 200)
+Práctico para elegir colores por “familias” y su intensidad.
+### CMYK (impresión)
+
+Cian C (0–100%): 36
+Magenta M (0–100%): 60
+Amarillo Y (0–100%): 0
+Negro K (0–100%): 22
+Equivalente RGB (aprox.)
+
+rgb(128, 80, 200)
+Notas
+
+Conversión aproximada, sin gestión de color/ICC.
+Modelo sustractivo: más tinta ⇒ menos luz reflejada.
+### Escala de grises
+
+Valor (0–255): 128
+Ejemplos de pasos
+Cada píxel guarda una sola componente de luminancia.
+### Color indexado (paleta)
+
+La imagen guarda índices a una *paleta* de N colores. Aquí simulamos la cuantización del color seleccionado al color más cercano de la paleta.
+
+Elige un color base (RGB)
+
+R: 128
+G: 80
+B: 200
+Color indexado
+
+#8050C8 → #8033CC (índice 5)
+Paleta (8 colores)
+### Resumen rápido
+
+- **Grayscale** : tonos de gris (1 canal). Ideal para B/N y análisis.
+- **Indexed** : usa paletas (pocos colores). Ahorra espacio.
+- **RGB** : pantallas, luz (aditivo).
+- **HSV** : tono/saturación/valor. Selección de color amigable.
+- **CMYK** : impresión, tintas (sustractivo).
+
+Consejo: Diseña en RGB, convierte a CMYK (con perfiles) solo al preparar para imprenta.
+¿Qué diferencias prácticas hay?
+
+- **Visualización** : Siempre ves RGB en pantalla; otros modos se convierten temporalmente a RGB.
+- **Precisión** : CMYK real requiere gestión de color (perfiles ICC) para que coincida con una imprenta concreta.
+- **Rendimiento** : Indexado es ligero para gráficos simples o retro.
+- **Edición** : HSV facilita ajustes de tono e intensidad sin romper el color.
+Hecho para aprender jugando con el color ✨
+
+---
+
+## 1.2 Dosier de actividades
+
+Gimp: Ejercicios de aplicación
+
+### 1. Ejercicio: Selección de partes de imágenes
+
+Tenemos una imagen de una hoja sobre fondo blanco y queremos quitarle el fondo blanco, dejarlo transparente, para luego poder pegar la hoja en otro sitio. ¿Cómo lo hacemos? Podemos hacerlo con la varita mágica, seleccionando el fondo y luego invirtiendo la selección ¿verdad?
+
+También podría hacerse de más modos, pero para este caso en particular parece que la varita es la mejor opción: Cogemos la varita mágica y con la opción de ir añadiendo zonas, vamos pinchando en el blanco (nos habrá seleccionado la mayoría de un plumazo), hasta dejar todo el fondo seleccionado.
+
+Pero nosotros no queremos seleccionar el blanco, sino la hoja, es decir , justo lo contrario, debemos invertir la selección. (Menú: Seleccionar:Invertir) Y ahora copiamos la selección (Ctrol+C). Creamos un nuevo documento con fondo transparente de las mismas dimensiones que el original y en esta nueva imagen recién creada, pegamos lo seleccionado (Ctrol + V) Guardamos la imagen como hoja.xcf para tener el original por si queremos más tarde seguir trabajando con ello, y como hoja.gif para preservar la transparencia y ya tenemos la imagen para poder usarla con fondo transparente. Enviamos los dos ficheros por correo
+
+### 2. Ejercicio: hacer desaparecer una zona de la imagen por medio de
+
+clonación Tenemos una imagen y queremos hacer desaparecer un trozo de ella, sin que se note que estaba ahí. Suponer tenemos esta imagen de abajo y queremos quedarnos con un trozo nada más y quitar algunas cosillas que sobran
+
+Si sabemos que realmente no queremos el resto de la imagen y queremos recortarla directamente, tenemos la herramienta de recorte . Así no tenemos que pegar en otra imagen, nos quedamos en esta. Selecciono el área con el que quiero quedarme. Todavía es demasiado grande, queremos apurar un poco más. Nos posicionamos en la esquina o borde que queremos agrandar, pulsamos con el ratón y arrastramos un poco hacia donde nos interese, hasta que consigamos que quede seleccionada exactamente el área que queremos.
+
+Ya está, ya tenemos el área que quiero. Ahora, ¿cómo hacemos para cortarlo? Tan solo haciendo doble click dentro de la selección, y en el mismo documento nos quedamos con lo que tenía seleccionado. Usamos la herramienta de clonar (Tecla Abreviada: C): con opacidad a la mitad y desvanecimiento seleccionado y vamos a borrar los trozos de gente que se ve arriba de la imagen.
+
+Vamos copiando zonas (Con el Control seleccionado, seleccionamos lo que queremos copiar). En este caso un trocito de agua
+
+Soltamos el control y vamos haciendo click para ir pegando lo que habíamos copiado. Vamos poco a poco y con paciencia borrando a la gente, hasta conseguir el efecto que queremos.
+
+y con la herramienta de desenfoque o gota de agua (Mayúsculas + U), difuminar el entorno para que el foco se fije en los remeros
+
+Esta herramienta de gota, tiene un parámetro que es velocidad, podemos jugar con ello, así nos desenfocará aún más guardar como piragua.xcf y como piragua.gif y enviadlas por correo.
+
+### 3. Ejercicio: montaje de 2 imágenes una sobre otra
+
+Vamos a hacer una composición con 2 imágenes. Tenemos estas 2 imágenes, un lago y un pato. Queremos obtener una imagen en la que el pato esté en este lago. A ver qué tal queda. Aquí tenemos el lago y Aquí tenemos el pato
+
+Lo primero que tenemos que hacer es seleccionar el pato. Lo hacemos con las tijeras, con cuidado. Una vez hemos terminado el contorno, clickamos dentro, y obtenemos la selección del pato que es lo que queremos. La copiamos (Ctrl+C)
+
+Creamos un nuevo documento. En la capa del fondo pegamos el estanque. Y creamos otras 2 capas, pato y pato2 Nos ponemos en la capa pato y pegamos la selección que habíamos copiado. Queda un poco "antinatural" por el pedazo tamaño de pato que hemos pegado. Vamos a ponerlo un poco más pequeño.
+
+Para ello (estando en la capa "pato"), cogemos la herramienta de Redimensionar (Tecla Abreviada: Mayúsculas + T), y probamos tamaños. El de 50px en nuestro caso queda bien. Aquí vemos el resultado, todavía donde está ahí queda un poco mal, demasiado grande, Pero si movemos (Herramienta Mover: Tecla Abreviada: M) la capa del pato hasta traerla adelante al primer plano, ya queda más natural Ahora hacemos lo mismo, pero en la capa del segundo pato: pato2
+
+Primero vamos a voltearlo horizontalmente: Seleccionamos la herramienta de volteo: (Tecla Abreviada: Mayúsculas + F) y clickamos en el pato: Vamos a poner un pato más pequeño que el anterior, lo redimensionamos (manteniendo proporción: cadena cerrada) a 35px por ejemplo.
+
+Ahí tenemos el pato, casi en la montaña.. ;) Cogemos la capa y la movemos , hasta dejar al patito pequeño enfrentado a su madre. Fácil ¿Verdad? Ahora podemos añadir un texto por ejemplo
+
+Vamos a rotarlo, para dejarlo vertical; Aquí lo tenemos. Tenemos otra capa más (la ha creado el Gimp) para el texto Movemos un poco el texto para dejarlo bien arrimado, Guardar como lago.xcf y como lago.gif. Enviadlos por correo.
+
+### 4. Ejercicio: quitar las arrugas al rostro
+
+Vamos a hacernos un poquillo más jóvenes quitándonos las arrugas del rostro.. ;) En el tema de retoque no hay que exagerar. Hay que ser lo más sutil posible. Siempre es interesante duplicar la capa. Tener la imagen original en una capa y tener otra en la que vas haciendo los retoques, para poder ir viendo los cambios (con el ocultar/mostrar capa). Al final Cuando ya tengamos el resultado final que queremos obtener podríamos borrar la capa original.
+
+Nos acercamos a la imagen con el zoom (+) para poder ir más al detalle y para movernos por la imagen podemos usar la tecla espaciadora. Vamos a hacerle desaparecer las arruguillas. Para ello usaremos la herramienta que clona luces y texturas (Tecla Abreviada: H)
+
+Vamos a coger un pincel grande y torcido Funciona similar al clonar: seleccionas una zona con la tecla Control (así selecciona la textura y el color de la zona). Ahora sueltas el control y vas pulsando sobre las zonas que quieras limpiar. Pinchamos en zonas próximas a las arrugas con el Ctrol seleccionado, y luego suelto el ctrol y voy quitando poco a poco y con paciencia las arrugas.
+
+En cada momento veo qué tipo de pincel usar, más pequeño, más gordo, diferente forma... Antes Después Tras seguir con diferentes zonas, aquí tenemos un resultado. ¿notáis la diferencia? Le hemos quitado hasta el agujero del pendiente.. ;) Guardar en los dos formatos como siempre y enviadlas por correo.
+
+### 5. Ejercicios: quitar zonas con herramienta de clonar
+
+Este es un ejemplo muy claro. También hay que decir que la foto es muy fácil de retocar Sin hacer mucho trabajo, mirar lo que podemos obtener Tenemos la imagen inicial, un camino en medio de una selva. Con la herramienta de tampón de clonar (Tecla Abreviada: C), rápidamente podemos quitar el camino. Seleccionamos en una zona de árboles con el Ctrol y luego soltamos el Ctrol y vamos rellenando el camino con cuidado.
+
+Según vamos moviéndonos volvemos a seleccionar con el Ctrol otra zona cercana al camino, y volvemos a pintar. otro ejemplo sencillo En este caso de abajo vamos a borrar la sombra con la herramienta de clonar : (Tecla Abreviada: C) Para eso hacemos lo mismo. seleccionamos una parte que queremos copiar (la hierba) y con paciencia vamos pegando en la sombra.
+
+Aquí tenéis el resultado
+
+### 6. Ejercicio: arreglar color de
+
+imágenes Ejemplos de aplicación de las herramientas de ajuste del Gimp Tenemos esta imagen que de normal la borraríamos directamente. Vamos a retocarla un poco con Niveles: Menú: Colores: Niveles: Vemos que el color empieza muy a la derecha, eso quiere decir que hay exceso de blancos, y en este caso que la foto está quemada.
+
+Tocamos un poco los niveles. El de la izquierda lo arrastramos hasta que empieza color Y bueno, algo hemos conseguido, ¿no?
+
+### 7. Ejemplo de fusión de capas
+
+Vamos a ver otro ejemplo de fusión de capas. Tenemos estas dos imágenes. En la imagen de las chispas, con la herramienta de selección por color , seleccionamos en el negro.
+
+Lo que queremos seleccionar es todo lo que no sea negro, así que debemos Invertir la selección Ya tenemos las chispas seleccionadas. Lo copiamos, y ahora vamos a la imagen de la niña, donde pegamos la selección. Dependiendo del modo de fusión que elijamos , el resultado será diferente
+
+Modo Normal: Si elegimos Modo Multiplicar
+
+Si elegimos Blanquear Queremos hacer que las chispas aparezcan en la tarta. Debemos de hacer más pequeñas las chispas . Escalamos para dejarlo más pequeño, y las movemos hasta que queden justo encima de la tarta, y no tapando a la niña. Pero.. parece muy artificial.. queremos hacer que sea más real.
+
+En la capa de los rayos, podemos hacer una selección redonda y le decimos que nos difumine los bordes (en la herramienta de selección), invertimos selección y le damos a borrar.
+
+Hemos puesto que difumine los bordes, y el radio de difuminar lo hemos subido. Así queda un efecto “bastante real”
+
+### 8. Ejemplo: aplicación de varios conceptos
+
+Selección de diferentes modos, filtros.. Tenemos la siguiente foto: y queremos obtener el siguiente efecto: Pasos a seguir : • seleccionar rosa o fondo • aplicar un filtro • desaturar el color al fondo. Como siempre, primero duplicamos la capa para tener el original e ir viendo los cambios Seleccionar Tenemos que seleccionar la rosa o el fondo, como queramos, pero creemos que es más sencillo
+
+seleccionar la rosa. Para seleccionar la rosa, tenemos varias opciones: herramienta varita mágica (Tecla Abreviada: U) , selección por umbral (Tecla Abreviada: Mayúsculas + U) o incluso selección con máscara rápida. Vamos a empezar con la varita mágica (puedo seleccionar con un umbral. Con la varita mágica cuando seleccionamos un color vamos a seleccionar pixeles parecidos.
+
+Cuanto mayor sea el umbral, más seleccionamos pero corremos el riesgo de pasarnos). La mayor parte lo haremos con varita mágica , pero es díficil conseguir seleccionar todo. Nos ayudaremos también de la máscara rápida. Para activar la máscara rápida: botón derecho : Activar Máscara rápida o con Shift+Q. Me crea una mascara roja, donde lo rojo no está seleccionado. Ahora si pongo con color negro o blanco voy a seleccionar o deseleccionar.
+
+Cojo una brocha y elijo el color blanco, así con esto consigo AGREGAR SELECCIÓN. Mientras tanto para ir viendo cómo está quedando puedo ir jugando con el Mayúsculas + Q (va quitando y poniendo la máscara rápida, dejando lo que está seleccionado a la vista) Termino con paciencia de seleccionar todo
+
+Desaturar Quiero desaturar la parte de atrás, pero lo que tengo seleccionado es la rosa. Primero he de invertir la selección; menú Seleccionar : Invertir Selección (Ctrol + I) y ya tengo seleccionado el fondo en lugar de la rosa. Podríamos guardar la selección por si luego queremos hacer algo con ella. Menú Selección
+
+Guardar en canal Menú Color: Desaturar Aquí tenemos el resultado. Aún nos queda algo , aplicar un filtro Aplicar un filtro Los filtros son fórmulas matemáticas para afectar a los pixels de determinado modo. Para crear retoques como si fuera una cámara. No hay que abusar de ellos Para acceder a los filtros. Menú Filtros. y hay un montón.
+
+En este ejemplo vamos a aplicarle el filtro de desenfoque de movimiento: Menú Filtros: Desenfoque : Desenfoque de movimiento
+
+Listo, ya hemos obtenido lo que queríamos.. ;)
+
+### 9. Ejemplo de saturación
+
+Tenemos esta foto bastante sosa Vamos a Menú Colores: Tono y saturación y tocamos un poco la saturación Mirar que cambio de foto: la arena ha cogido un tono más rojizo y más real
+
+### 10. Ejemplo de foto
+
+quemada con flash Intentaremos corregir una foto que está un poco quemada por el flash. Con niveles (Menú Colores: Niveles), puede ser que lleguemos a mejorar algo. Seleccionamos la zona que está quemada (o podríamos aplicar a toda la foto), y vamos a niveles y jugamos un poco con ellos hasta obtener algo que queramos.
+
+Los movemos hasta que empieza a haber información Aquí tenemos el resultado
+
+### 11. Ejemplo de modo de fusión de capas
+
+colorear un ojo Veremos cómo cambiar el color de un ojo mediante los modos de fusión de capas Tengo una capa, creo otra transparente, dentro de esa capa hago la selección del ojo
+
+Cojo un color que quiera, y relleno la selección con ese color con la herramienta de bote de pintura: (Tecla Abreviada: Mayúsculas + B) El modo de fusión lo pongo en modo Solapar (en la imagen tenemos normal), y ya tengo el efecto deseado, le he coloreado el ojo según el color que elijamos, quedará más o menos natural el efecto.. ;)
+
+---
+
+## ✍️ Activitats pràctiques UT1
+
+> **✍️ Activitat Pràctica 1.1 — Act0_Conceptos básicos**
+> TEORIA IMATGE DIGITAL
+>
+> Contesta a les preguntes cercant la informació a les següents pàgines
+>
+> Imatge digital: https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/01conceptos_basicos_gimp.php
+>
+> Formats d’imatge: https://www.tuinstitutoonline.com/cursos/imagen/gimpbasico_v19es/02opsbasicas_formatos.php
+>
+> Què es un pixel?
+>
+> Explica quina és la diferència entre un mapa de bits i una imatge vectorial. Nomena un programa informàtic que s’utilitze per editar imatges vectorials i un altre que s’utilitze per editar mapes de bits.
+>
+> Indica si les següents afirmacions fan referència a la resolució, tamany digital, tamany d’arxiu o profunditat de color.
+>
+> DEFINICIÓ
+>
+> TERME
+>
+> Fa referència a la quantitat de memòria física necessària per desar una imatge digital en un suport informàtic d’emmagatzematge (disc dur, memòria USB, memòria RAM, etc.).
+>
+> Representa la quantitat de detall que es pot observar en una imatge, ja siga obtinguda mitjançant escàner, càmera de fotos o impresa. Aquesta quantitat es mesura en ppp (píxels o punts per polzada) Quan més gran siga, tindrem una imatge amb més detall o qualitat visual.
+>
+> Fa referència al nombre de bits necessaris per codificar i desar la informació de color de cada píxel en una imatge.
+>
+> Nombre de píxels (ample x alt) que formen una imatge digital. S'expressa en Megapíxels (milions de píxels).
+>
+> Modes de color. Completa la següent tabla
+>
+> Mode de color
+>
+> Definició
+>
+> Representació gràfica
+>
+> Defineix un model de color en termes dels seus components: to, saturació i brillantor
+>
+> CMYK
+>
+> Formats d’imatge. Contesta estes preguntes
+>
+> Quin format permet animació?
+>
+> Què vol dir que un format tinga compressió amb pèrdua? Quins formats de compressió tenen pèrdua de qualitat?
+>
+> Quin es el format propi de Microsoft Paint (Windows)?
+>
+> Quin format està lliure de patents?
+>
+> En quin format s’extrauen les imatges de la càmera de fotos?
+>
+> Quin es el format d’imatge més estès?
+>
+> Quins formats permeten desar imatges amb fons transparent?
+>
+> Quin es el format que utilitza Gimp? (cerca-ho en Internet)
+
+> **✍️ Activitat Pràctica 1.2 — 1. Ejercicio: Selección de partes de imágenes**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.3 — 2. Ejercicio: hacer desaparecer una zona de la imagen por medio de clonación**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.4 — 3. Ejercicio: montaje de 2 imágenes una sobre otra**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.5 — 4. Ejercicio: quitar las arrugas al rostro**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.6 — 5. Ejercicios: quitar zonas con herramienta de clonar**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.7 — 6. Ejercicio: arreglar color de imágenes**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.8 — 7. Ejemplo de fusión de capas**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.9 — 8. Ejemplo: aplicación de varios conceptos**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.10 — 9. Ejemplo de saturación**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.11 — 10. Ejemplo de foto quemada con flash**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 1.12 — 11. Ejemplo de modo de fusión de capas: colorear un ojo**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.

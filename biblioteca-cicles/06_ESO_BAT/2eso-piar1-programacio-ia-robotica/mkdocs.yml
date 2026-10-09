@@ -1,0 +1,15 @@
+site_name: "🤖 Programació, IA i Robòtica I — 2n ESO"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT1 — Scratch":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "1.1 Continguts i Recursos": ut01/ut0101.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
+  - "UT2 — Robòtica":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 Continguts i Recursos": ut02/ut0201.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "📂 Índex de Documents i Recursos": references.md

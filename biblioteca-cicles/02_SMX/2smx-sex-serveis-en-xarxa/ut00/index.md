@@ -1,0 +1,675 @@
+---
+layout: default
+title: "UT0 — Unitat Didàctica 0 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "2n SMX · Grau Mitjà · UT0 Completa"
+prev_url: "../index.html"
+prev_label: "⬅️ Inici Serveis en Xarxa"
+next_url: "../ut00/ut0001.html"
+next_label: "0.1 Exámenes ➡️"
+---
+
+# 📘 UT0 — Unitat Didàctica 0 (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**0.1 Exámenes**](#ut0001) (o [obrir en pàgina individual ➡️](./ut0001.md) )
+> - [**0.2 Escenario general**](#ut0002) (o [obrir en pàgina individual ➡️](./ut0002.md) )
+> - [**0.3 rúbrica presentacions**](#ut0003) (o [obrir en pàgina individual ➡️](./ut0003.md) )
+
+---
+
+## 0.1 Exámenes
+
+> **🔗 Recurs Web: RD i curriculum**
+> [**🌐 Obrir recurs extern (http://www.ceice.gva.es/va/web/formacion-profesional/publicador-ciclos/-/asset_publisher/FRACVC0hANWa/content/ciclo-formativo-sistemas-microinformatico-y-redes) ↗️**](http://www.ceice.gva.es/va/web/formacion-profesional/publicador-ciclos/-/asset_publisher/FRACVC0hANWa/content/ciclo-formativo-sistemas-microinformatico-y-redes)
+
+> **🔗 Recurs Web: Presentació Curs**
+> [**🌐 Obrir recurs extern (https://docs.google.com/presentation/d/1E6xi9hUaWe7jJ4FKjtEwd4mScy6zOyuFOvEKQfQeGys/present?token=AC4w5VgmacaAO8hackidSyNLGeMEma6BKg%3A1598604857024&includes_info_params=1&eisi=CP7XjpXDvesCFSgYyAodxTMFbA#slide=id.p4) ↗️**](https://docs.google.com/presentation/d/1E6xi9hUaWe7jJ4FKjtEwd4mScy6zOyuFOvEKQfQeGys/present?token=AC4w5VgmacaAO8hackidSyNLGeMEma6BKg%3A1598604857024&includes_info_params=1&eisi=CP7XjpXDvesCFSgYyAodxTMFbA#slide=id.p4)
+
+📎 **Material de laboratori (Modelo actas equipos):** `Acta_Planificacion_Inicial_U2.rtf`, `Acta_seguimiento_semanal_U2.rtf`
+
+> **🔗 Recurs Web: Model Acta Inicial**
+> [**🌐 Obrir recurs extern (https://drive.google.com/file/d/0B4LlvGqxqWsOa0FINi1ST3luRDQ/view?usp=sharing) ↗️**](https://drive.google.com/file/d/0B4LlvGqxqWsOa0FINi1ST3luRDQ/view?usp=sharing)
+>
+> Cal que ompliu un Model Acta Inicial per cada unitat que comencem on vos repartiu les tasques tant administratives com tècniques entre els membres dels equips.
+
+> **🔗 Recurs Web: Model Acta de Seguiment - Tancament**
+> [**🌐 Obrir recurs extern (https://drive.google.com/file/d/0B4LlvGqxqWsOX1pDckZQSHUxdWs/view?usp=sharing) ↗️**](https://drive.google.com/file/d/0B4LlvGqxqWsOX1pDckZQSHUxdWs/view?usp=sharing)
+>
+> Cal que ompliu un Model Acta de Seguiment cada divendres on expliqueu els objectius aconseguits al llarg de la setmana pel membres de l'equip. I també serà la de Tancament per a cada unitat quant acabem l'última setmana.
+
+> **🔗 Recurs Web: Equips**
+> [**🌐 Obrir recurs extern (https://docs.google.com/spreadsheets/d/e/2PACX-1vRI39JfAbLzO5UIr1stATwMol05g7eLiCSLnRZGn6_TyQAhFEcbIyeEdKZK0wJRgWNBixX-XmlYLNcl/pubhtml?gid=2002113081&single=true) ↗️**](https://docs.google.com/spreadsheets/d/e/2PACX-1vRI39JfAbLzO5UIr1stATwMol05g7eLiCSLnRZGn6_TyQAhFEcbIyeEdKZK0wJRgWNBixX-XmlYLNcl/pubhtml?gid=2002113081&single=true)
+
+> **🔗 Recurs Web: Planificació**
+> [**🌐 Obrir recurs extern (https://docs.google.com/document/d/e/2PACX-1vTkVIzwFF3REZmQS5PhPHd1nm_6OKit8AzBDXNNbME2_qIJiGoJsp3kJu5cHppAQBRGEgqx1suVyUYm/pub) ↗️**](https://docs.google.com/document/d/e/2PACX-1vTkVIzwFF3REZmQS5PhPHd1nm_6OKit8AzBDXNNbME2_qIJiGoJsp3kJu5cHppAQBRGEgqx1suVyUYm/pub)
+
+---
+
+### 📄 Examen_1Ev_SR_SMR2A.odt
+
+Nº ES026288
+
+Nº ES026288
+
+EXAMEN 1ª EVALUACIÓN – Servicios de Red y de Internet
+
+Nombre: ______________________________________________________ Curso: 2º SMRTipo: A
+
+Responde a cada una de las preguntas marcando sólo una de las respuestas propuestas.
+
+Acierto ->0,05 , Fallo -> -0,025
+
+Tiempo estimado: 40 min.
+
+Valor test: 10% de la nota de Evaluación
+
+1.- ¿Qué pasos sigue el cliente/servidor en esta imagen?
+
+- Discover, Offer,Ack, Request
+
+- Request,Offer,Ack,Discover
+
+- Discover,Offer,Request,Ack
+
+- Ack,Discover,Offer,Request
+
+2.- ¿En qué caso sería apropiado utilizar el DHCP Relay? (señala la respuesta incorrecta)
+
+- Para dar servicio a redes distintas sin que tengan conflicto de asignación de direcciones.
+
+- Para dar servicio a redes diferentes.
+
+- Para asignar direcciones de red automáticamente.
+
+- Para realizar el encaminamiento de los paquetes de red.
+
+3.- ¿Qué dos parámetros faltarían en la imagen para el funcionamiento correcto del servicio DHCP?
+
+- authorative
+
+- fixed-address 192.168.6.0
+
+- subnet 192.168.6.0 network 255.255.255.0
+
+- option ip-fowarding on
+
+- subnet 172.16.6.0 network 255.255..0
+
+4.- ¿Qué efecto tiene la inclusión de la directiva “Deny unknown-clients” en el 'dhcpd.conf'? a) Nos envia direcciones a los hosts no conocidos.b) Nos permite identificar la dirección MAC de los clientes.c) Nos permite enviar direcciones solamente a los hosts conocidos.
+
+- Ninguna de las respuestas anteriores es correcta.
+
+5.- ¿Qué fichero hay que modificar para pasarle argumentos al servicio? a) /etc/dhcpd/dhcpd.confb) /etc/dhcp.conf
+
+- /etc/sysconfig/dhcpd
+
+- /etc/sysconfig/dhcpd,conf
+
+6.- ¿Qué podemos decir sobre el control de acceso incluido mediante la directiva “Allow” en esta declaración?
+
+<VirtualHost *>
+
+ServerName www.chapasmartinez.com
+
+DocumentRoot /webs/chapasmartinez/
+
+DirectoryIndex default.jsp
+
+Options ­Indexes
+
+Allow from all
+
+</VirtualHost>
+
+- que mediante la misma se controla el acceso de cualquier tipo de usuario a la web “www.chapasmartinez.com”
+
+- que no debería ubicarse dentro de una sección de “virtual host”, ya que no está permitido.
+
+- que redefinirá lo expresado a nivel de acceso en “/var/www/html”.
+
+- que deberá unbicarse dentro de una seacción “<Directory>” para que funcione correctamente.
+
+7.- ¿Qué se está diciendo en el httpd.conf con la directiva “DefaultType text/plain”
+
+- que el tipo MIME principal de Apache es el relacionado con texto plano.
+
+- que si se intenta servir un fichero PDF es posible que acabe cargándose como texto plano.
+
+- que en ausencia del tipo MIME “application/pdf” se cargará un PDF como texto plano.
+
+- que la posibilidad de servir ficheros que contegan texto plano está habilitada.
+
+8.- Si nos encontramos con esta sección y accedemos al servidor desde la IP 192.168.6.2 … ¿qué ocurrirá?
+
+Order deny, allow
+
+Deny from 192.168.6.2
+
+Allow from 192.168.6.0/24
+
+- se denegará el acceso porque la directiva “Deny” lo impide.
+
+- se denegará el acceso porque la directiva “Deny” tiene preferencia en “Order”.
+
+- se permitirá el acceso porque la directiva “Allow” lo permite.
+
+- se permitirá el acceso porque la directiva “Allow” es lo último que prevalece según “Order”.
+
+9.- Si quisiéramos cambiar el punto del sistema del ficheros a partir del cual se organizan los directorios quealbergan las diferentes webs que servimos …, ¿qué directiva en el 'thhtpd.conf' habría que modificar?
+
+- DocumentRoot
+
+- ServerName
+
+- Directory
+
+- Listen
+
+10.- ¿Cuál de los siguientes ficheros intervienen en la configuración de un servidor de DNS? (señala las respuestas que consideres correctas)
+
+- /etc/named.conf
+
+- los ficheros de zona ubicados
+
+- /etc/resolv.conf
+
+- /etc/sysconfig/named
+
+11.- Los valores de tiempo que se incluyen en un registro SOA sirven para …
+
+- actualizar la caché que el servidor mantiene respecto de sus peticiones.
+
+- para que el servidor maestro pueda sincronizarse con el esclavo.
+
+- para que otros servidores públicos sepan cuando ha sido la actualización más reciente del servidor.
+
+- para definir los parámetros de carga de la información de la zona directa e inversa.
+
+12.- Respecto a la relación entre servidores, “zonas” y “dominios” es incorrecto decir que …
+
+- un servidor puede albergar diferentes zonas con diferentes rangos de direccionamiento.
+
+- una zona de autoridad puede incluir más de un subdominio.
+
+- una zona delegada necesita de un segundo servidor a la fuerza.
+
+- una zona puede contener nombres relativos a diferentes redes.
+
+13.- Señala cuál de las siguientes afirmaciones es incorrecta
+
+- todo registro PTR necesita de su correspondiente registro A.
+
+- un servidor esclavo tiene sentido sólo cuando un su servidor maestro no está disponible.
+
+- si en “named.conf” no existe referencia a una zona con la relación de servidores raíz, nuestro servidor no funcionará correctamente.
+
+- la diferencia ente el comando 'host' y el comando 'nslookup' es que mientras el primero muestra el servidor de resolución, el segundo no lo hace.
+
+14.- Estamos intentando resolver desde un cliente “www.google.com” y nuestro servidor no responde dando un mensaje de “Connection refused; server unreachable”. ¿Cuál de las siguientes razones empezarías comprobando? (señala 2 entre las propuestas),
+
+- que el servidor DNS local tenga configurados la parte de reenvío en “named.conf”.
+
+- que el fichero “resolv.conf” apunte al servidor.
+
+- que el cortafuegos activo esté impidiendo la conexión con el puerto 54.
+
+- que el servidor esté realmente activo.
+
+15.- De acuerdo a la siguiente figura respecto al funcionamiento de FTP… ¿de qué modo de operación hace referencia?
+
+- modo activo
+
+- modo pasivo
+
+- modo operativo
+
+- modo de datos
+
+16.- ¿Qué pasaría si en en lado del cliente en una comunicación en modo pasivo de FTP tuviéramos un cortafuegos?
+
+- no pasaría nada porque la comunicación parte del cliente.
+
+- el cortafuegos del cliente bloquearía la comunicación.
+
+- el servidor no podría establecer contacto con el cliente porque parte de él la conexión.
+
+- la conexión podría establecerse, pero no así la de datos.
+
+17.- ¿Qué ficheros cabe tener en cuenta en el control de acceso a un servidor FTP? (Marca las opciones que consideres necesarias)
+
+- /etc/vsftpd/ftpusers
+
+- /etc/vsftpd/chroot_list
+
+- /etc/vsftpd/vsftpd.conf
+
+- /etc/vsftpd/vsftpd.userlist
+
+18.- ¿Qué permitimos ajustando la directiva 'write_enable=YES' en el 'vsftpd.conf'?
+
+- que los usuarios de sistema pueden modificar el contenido de las carpetas compartidas por FTP.
+
+- que el usuario anónimo pueda escribir en cualquier carpeta de las habilitadas por el servidor FTP.
+
+- que los usuarios puedan crear, modificar y borrar ficheros, pero no directorios.
+
+- que las cuentas de sistema funcionen como cuentas de usuario de FTP.
+
+19.- Un cliente puede alcanzar a un servidor de FTP, pero se le impide abrir una sesión. ¿Qué dos directivas cabría revisar/ajustar en primer lugar para tratar de proporcionar acceso al mismo?
+
+- listen
+
+- port_enable
+
+- max_per_ip
+
+- listen_address
+
+20.- Dada la siguiente definición … ¿qué error encuentras?
+
+ServerName server.domain.com
+
+NameVirtualHost 111.22.33.44
+
+<VirtualHost 111.22.33.44>
+
+DocumentRoot /www/domain.net
+
+ServerName www.domain.net
+
+...
+
+</VirtualHost>
+
+<VirtualHost 111.22.33.44>
+
+DocumentRoot /www/subdomain.com
+
+ServerName www.sub.domain.net
+
+...
+
+</VirtualHost>
+
+- los 'virtual hosts' no pueden compartir la misma dirección 111.22.33.44
+
+- el registro FQDN del servidor no puede acabar en “.com”.
+
+- el fichero con el 'DocumentRoot' debe referirse al mismo dominio.
+
+- en la directiva 'NameVirtualHost' debería figurar un '*'.Nº ES026288
+
+Nº ES026288
+
+### 📄 Examen_1Ev_SR_SMR2B.odt
+
+Nº ES026288
+
+Nº ES026288
+
+EXAMEN 1ª EVALUACIÓN – Servicios de Red
+
+Nombre: ______________________________________________________ Curso: 2º SMRTipo: B
+
+Responde a cada una de las preguntas marcando sólo una de las respuestas propuestas.
+
+Acierto ->0,05 , Fallo -> -0,025
+
+Tiempo estimado: 40 min.
+
+Valor test: 10% de la nota de Evaluación
+
+1.- ¿Qué pasos sigue el cliente/servidor en esta imagen?
+
+- Discover,Offer,Request,Ack
+
+- Discover, Offer,Ack, Request
+
+- Request,Offer,Ack,Discover
+
+- Ack,Discover,Offer,Request
+
+2.- Estamos intentando resolver desde un cliente “www.google.com” y nuestro servidor no responde dando un mensaje de “Connection refused; server unreachable”. ¿Cuál de las siguientes razones empezarías comprobando? (señala 2 entre las propuestas),
+
+- que el cortafuegos activo esté impidiendo la conexión con el puerto 54.
+
+- que el fichero “resolv.conf” apunte al servidor.
+
+- que el servidor DNS local tenga configurados la parte de reenvío en “named.conf”.
+
+- que el servidor esté realmente activo.
+
+3.- ¿En qué caso sería apropiado utilizar el DHCP Relay? (señala la respuesta incorrecta)
+
+- Para dar servicio a redes distintas sin que tengan conflicto de asignación de direcciones.
+
+- Para dar servicio a redes diferentes.
+
+- Para realizar el encaminamiento de los paquetes de red.
+
+- Para asignar direcciones de red automáticamente.
+
+4.- Señala cuál de las siguientes afirmaciones es incorrecta
+
+- todo registro PTR necesita de su correspondiente registro A.
+
+- un servidor esclavo tiene sentido sólo cuando un su servidor maestro no está disponible.
+
+- la diferencia ente el comando 'host' y el comando 'nslookup' es que mientras el primero muestra el servidor de resolución, el segundo no lo hace.
+
+- si en “named.conf” no existe referencia a una zona con la relación de servidores raíz, nuestro servidor no funcionará correctamente.
+
+5.- ¿Qué dos parámetros faltarían en la imagen para el funcionamiento correcto del servicio DHCP?
+
+- authorative
+
+- fixed-address 192.168.6.0
+
+- subnet 172.16.6.0 network 255.0.0.255
+
+- option ip-fowarding on
+
+- subnet 192.168.6.0 network 255.255.255.0
+
+6.- Respecto a la relación entre servidores, “zonas” y “dominios” es incorrecto decir que …
+
+- un servidor puede albergar diferentes zonas con diferentes rangos de direccionamiento.
+
+- una zona de autoridad puede incluir más de un subdominio.
+
+- una zona puede contener nombres relativos a diferentes redes.
+
+- una zona delegada necesita de un segundo servidor a la fuerza.
+
+7.- ¿Qué efecto tiene la inclusión de la directiva “Deny unknown-clients” en el 'dhcpd.conf'?
+
+- Nos permite enviar direcciones solamente a los hosts conocidos.
+
+- Nos envia direcciones a los hosts no conocidos.c) Nos permite identificar la dirección MAC de los clientes.d) Ninguna de las respuestas anteriores es correcta.
+
+8.- ¿Qué podemos decir sobre el control de acceso incluido mediante la directiva “Allow” en esta declaración?
+
+<VirtualHost *>
+
+ServerName www.chapasmartinez.com
+
+DocumentRoot /webs/chapasmartinez/
+
+DirectoryIndex default.jsp
+
+Options ­Indexes
+
+Allow from all
+
+</VirtualHost>
+
+- que mediante la misma se controla el acceso de cualquier tipo de usuario a la web “www.chapasmartinez.com”
+
+- que deberá unbicarse dentro de una seacción “<Directory>” para que funcione correctamente.
+
+- que no debería ubicarse dentro de una sección de “virtual host”, ya que no está permitido.
+
+- que redefinirá lo expresado a nivel de acceso en “/var/www/html”.
+
+9.- ¿Cuál de los siguientes ficheros intervienen en la configuración de un servidor de DNS? (señala las respuestas que consideres correctas)
+
+- /etc/named.conf
+
+- los ficheros de zona ubicados
+
+- /etc/resolv.conf
+
+- /etc/sysconfig/named
+
+10.- Si quisiéramos cambiar el punto del sistema del ficheros a partir del cual se organizan los directorios quealbergan las diferentes webs que servimos …, ¿qué directiva en el 'thhtpd.conf' habría que modificar?
+
+- ServerName
+
+- DocumentRoot
+
+- Directory
+
+- Listen
+
+11.- Si nos encontramos con esta sección y accedemos al servidor desde la IP 192.168.6.2 … ¿qué ocurrirá?
+
+Order deny, allow
+
+Deny from 192.168.6.2
+
+Allow from 192.168.6.0/24
+
+- se permitirá el acceso porque la directiva “Allow” lo permite.
+
+- se denegará el acceso porque la directiva “Deny” tiene preferencia en “Order”.
+
+- se denegará el acceso porque la directiva “Deny” lo impide.
+
+- se permitirá el acceso porque la directiva “Allow” es lo último que prevalece según “Order”.
+
+12.- ¿Qué se está diciendo en el httpd.conf con la directiva “DefaultType text/plain”
+
+- que el tipo MIME principal de Apache es el relacionado con texto plano.
+
+- que en ausencia del tipo MIME “application/pdf” se cargará un PDF como texto plano.
+
+- que si se intenta servir un fichero PDF es posible que acabe cargándose como texto plano.
+
+- que la posibilidad de servir ficheros que contegan texto plano está habilitada.
+
+13.- Los valores de tiempo que se incluyen en un registro SOA sirven para …
+
+- actualizar la caché que el servidor mantiene respecto de sus peticiones.
+
+- para que el servidor maestro pueda sincronizarse con el esclavo.
+
+- para que otros servidores públicos sepan cuando ha sido la actualización más reciente del servidor.
+
+- para definir los parámetros de carga de la información de la zona directa e inversa.
+
+14.- ¿Qué pasaría si en en lado del cliente en una comunicación en modo pasivo de FTP tuviéramos un cortafuegos?
+
+- el cortafuegos del cliente bloquearía la comunicación.
+
+- no pasaría nada porque la comunicación parte del cliente.
+
+- el servidor no podría establecer contacto con el cliente porque parte de él la conexión.
+
+- la conexión podría establecerse, pero no así la de datos.Nº ES026288
+
+Nº ES026288
+
+15.- ¿Qué ficheros cabe tener en cuenta en el control de acceso a un servidor FTP? (Marca las opciones que consideres necesarias)
+
+- /etc/vsftpd/ftpusers
+
+- /etc/vsftpd/chroot_list
+
+- /etc/vsftpd/vsftpd.userlist
+
+- /etc/vsftpd/vsftpd.conf
+
+16.- Un cliente puede alcanzar a un servidor de FTP, pero se le impide abrir una sesión. ¿Qué dos directivas cabría revisar/ajustar en primer lugar para tratar de proporcionar acceso al mismo?
+
+- max_per_ip
+
+- listen
+
+- port_enable
+
+- listen_addressNº ES026288
+
+Nº ES026288
+
+17.- Dada la siguiente definición … ¿qué error encuentras?
+
+ServerName server.domain.com
+
+NameVirtualHost 111.22.33.44
+
+<VirtualHost 111.22.33.44>
+
+DocumentRoot /www/domain.net
+
+ServerName www.domain.net
+
+...
+
+</VirtualHost>
+
+<VirtualHost 111.22.33.44>
+
+DocumentRoot /www/subdomain.com
+
+ServerName www.sub.domain.net
+
+...
+
+</VirtualHost>
+
+- el registro FQDN del servidor no puede acabar en “.com”.
+
+- los 'virtual hosts' no pueden compartir la misma dirección 111.22.33.44
+
+- el fichero con el 'DocumentRoot' debe referirse al mismo dominio.
+
+- en la directiva 'NameVirtualHost' debería figurar un '*'.Nº ES026288
+
+Nº ES026288
+
+### 18. Que puerto se utiliza como control de datos en el modo pasivo en FTP?
+
+a)20
+
+b)21
+
+c)22
+
+- ninguno de los anteriores.
+
+19.- ¿Qué permitimos ajustando la directiva 'write_enable=YES' en el 'vsftpd.conf'?
+
+- que el usuario anónimo pueda escribir en cualquier carpeta de las habilitadas por el servidor FTP.
+
+- que los usuarios de sistema pueden modificar el contenido de las carpetas compartidas por FTP.
+
+- que los usuarios puedan crear, modificar y borrar ficheros, pero no directorios.
+
+- que las cuentas de sistema funcionen como cuentas de usuario de FTP.Nº ES026288
+
+Nº ES026288
+
+20.- De acuerdo a la siguiente figura respecto al funcionamiento de FTP… ¿de qué modo de operación hace referencia?
+
+- modo activob) modo pasivoc) modo operativod) modo de datosNº ES026288
+
+Nº ES026288
+
+### 📄 Examen_Acceso_Libre_SR_1213.pdf
+
+Nº ES026288 PRUEBA ACCESO LIBRE – Servicios de Red Nombre: ___________________________________________________________ Curso: 2ºSMR Duración: 3 horas Puntuación: 2'5 puntos cada apartado Enunciado: La operadora UNO te ha contratado como técnico de administración de sus servicios de hosting para particulares. Actualmente, UNO ofrece un paquete de contratación básico que incluye una cantidad reducida de espacio de disco, dominio propio, acceso por FTP y 10 cuentas de correo. Tu tarea va a ser proporcionar las condiciones adecuadas para satisfacer el uso de los servicios por parte de los usuarios.
+
+Condiciones
+
+de realización
+
+Para la resolución del enunciado propuesto partimos de una serie de equipos mediante los cuales simularemos las condiciones internas de la empresa. • 2 VMs, una con Windows 2003 y la otra con Linux (CentOS) como sistemas operativos. • Cada una de las 2 VM tienen
+
+instalados
+
+los diferentes servicios que hemos usado a lo largo del curso Tareas
+
+a realizar
+
+1. Aségúrate que existe conectividad básica dentro del esquema propuesto (entre servidores y host Fedora), sin el cual ningún servicio puede llegar a funcionar. Por tanto, debes empezar configurando la red interna de la empresa, cuyos equipos de servidor funcionarán bajo la dirección dirección de red (192.168.0.0/24) siguiendo el siguiente esquema de asignación dinámica de datos red
+
+• VM1 (W2003): se le reservará la dirección 192.168.0.1 • VM2 (CentOS): este servidor, recibirá su dirección de red como parte de un intervalo que se encontrará entre 3 y 10, no sirviendo direcciones de red fuera del mismo.
+
+Nº ES026288 La VM (servidor) que proporcionará esta función de asignación dinámica de direcciones de red será la VM1. 2. UNO proporciona a sus clientes el acceso a sus servicios a través del nombre de dominio contratado. Realiza en la VM2 los ajustes necesarios para que un futuro usuario que ha contratado el dominio “examen.es” tenga acceso a los servicios web y ftp partiendo de su nombre de dominio. (por ej. ftp.examen.es). Deberás configurar los servidores indicados de forma que se pueda garantizar el servicio de forma ininterrumpida1.
+
+3. Como se ha indicado al principio, los usuarios particulares necesitan disponer de su página web propia accesible desde www.examen.es. UNO indica en su contrato que: • como medida de seguridad el servicio se sirve en el puerto 8090. • si el usuario introduce como URL en su navegador la referencia “localhost”, se cargará en su lugar su página principal (www.examen.es)2.
+
+• el cliente puede incluir la palabra “restringido” dentro de su URL particular para acceder a una zona de su web protegida por contraseña3. Además, esta zona será sólo accesible desde los 2 servidores que tenemos en cada VM y por nadie más. Este servicio se implementará en la VM2.
+
+4. Por último, los clientes disponen por FTP de acceso a su espacio contratado. En este caso, debes proporcionar tal acceso teniendo en cuenta las siguientes restricciones que UNO impone en su política de servicio: • No se permite el acceso anónimo. • Al iniciar una sesión el servidor muestra el mensaje: “¡Bienvenido a UNO!”.
+
+• El usuario sólo puede ver la zona de su espacio personal. • Los usuarios de FTP no podrán iniciar sesiones en el sistema. Este servicio se implementará en la VM2. 1 De esto se puede deducir que este servicio se implementará también en la VM1, funcionando coordinamente.
+
+2 Ayuda: buscar en la ayuda una directiva que permita “redirigir” la referencia a “localhost” a la URL sugerida. 3 Esto quiere decir que si, por ejemplo, nuestro cliente ficticio tiene como URL particular www.examen.es, si se carga la página www.examen.es/restringido, se nos solicitará una contraseña para acceder a la misma.
+
+### 📄 Examen_final_Junio_SMR2.pdf
+
+Nº ES026288 PRUEBA EXTRAORDINARIA (Convocatoria Junio) Nombre: ___________________________________________________________ Curso: 2ºSMR • Duración
+
+3’30 horas • Puntuación
+
+cada sección de las que siguen suponen el 25% de la notal total de la prueba. Enunciado: La empresa “Servicios de Comunicación Online” se dedica al desarrollo de aplicaciones web. Actualmente, tiene dos oficinas en las que trabajan sus 20 empleados agrupados en 2 departamentos. En la primera oficina, se localiza el departamento de desarrollo, en el que trabajan 15 personas siendo éstos diseñadores y programadores; en la segunda oficina, se ubica el personal de gestión y administración de la empresa, que suman 5 persona. La empresa desea ahora disponer un sistema de servicios que se ajuste a sus necesidades organizativas. En particular, se desea disponer de
+
+• un esquema de nombres de dominio mediante el cual poder identificar fácilmente el resto de servicios de internet. Este esquema contemplará la existencia de las 2 oficinas, bajo los nombres “oficina1.empresa.es” y “oficina2.empresa.es”. • un servicio de asignación dinámica de direcciones a los diferentes equipos de la empresa a lo largo de ambas oficinas.
+
+• un servicio de web que permite a la empresa (www.empresa.es), por un lado, mostrar su página web, y por otro, que los empleados accedan a documentación confidencial. • un servicio de correo que permita la comunicación de los empleados entre sus 2 oficinas. Los detalles concretos de implementación vienen a continuación.
+
+Nº ES026288 Condiciones
+
+de realización
+
+Para la resolución del enunciado propuesto partimos de una serie de equipos mediante los cuales simularemos las condiciones internas de la empresa. • 2 VM, una con Windows 2003 y la otra con Fedora como sistemas operativos, en los que puedes configurar los servicios que creas convenientes.
+
+• Cada una de las 2 VM tienen
+
+instalados
+
+los diferentes servicios que hemos usado a lo largo del curso Tareas
+
+a realizar
+
+1. Asegúrate que existe conectividad básica dentro del esquema propuesto, sin el cual ningún servicio puede llegar a funcionar. Por tanto, debes empezar configurando la red interna de la empresa, cuyos equipos de servidor, a los cuales se reservará la direcciones que figuran a continuación, funcionarán bajo la dirección dirección de red (192.168.0.0/24)
+
+• VM1 (W2003): 192.168.0.19 • VM2 (Fedora): 192.168.0.20 El servidor que proporcionará esta función estará ubicado en la VM1. 2. A efectos de configuración del DNS, cabe contar con la existencia de 3 dominios. El primero corresponde a la primera oficina y recibe la denominación “oficina1.empresa.es”; el segundo la de “oficina2.empresa.es”. El servidor que implementa este servicio estará ubicado en la VM1. Además, el servicio de nombres proporcionará la resolución del nombre de la web de la empresa (www.empresa.es) junto con el de los servicios de correo (SMTP y POP3) para ambas oficinas.
+
+3. Como se ha indicado al principio, la empresa dispone de su propia web, que se alojará en un servidor web que se ubicará en la VM2, y al que tendrán acceso los trabajadores de ambas oficinas. • los trabajadores pueden acceder a cierta documentación compartida a partir de una zona de acceso restringido, accesible desde la página principal de su web (“www.empresa.es/documentacion””). El sistema de control de acceso basado en su identidad particular funcionará de acuerdo al sistema de autenticación básica por
+
+Nº ES026288 grupo que Apache incluye. • además de los usuarios, sólo los equipos de la empresa podrán acceder a la zona restringida. • el servidor mostrará una página de error personalizada siempre que haya algún problema en la carga de la página solicitada. • El servidor funcionará en el puerto 9000.
+
+4. Por último, cada trabajador de cada una de las dos oficina dispondrá de su propia dirección de correo (por ejemplo, “usuario1@oficina1.empresa.es”) con la que podrá comunicarse tanto con compañeros del mismo departamento como con los del otro. Este servicio se implementará en la VM1.
+
+### 📄 Examen_final_SMR2_extraord_parteA_1314.pdf
+
+Nº ES026288 PRUEBA EXTRAORDINARIA (Julio) Curso: 2ºSMR PRIMERA PARTE Puntuación: 1'5 puntos. Condiciones de realización: Para la resolución del enunciado propuesto partimos de las siguientes premisas:  Usa una VM con CentOS 6.3 como servidor que se te facilitará con anterioridad, y en la que debes configurar los servicios que se sugieren en el siguiente enunciado, teniendo instalados los paquetes necesarios en la VM.
+
+ Usa una segunda VM que haga las funciones de cliente, siendo indiferente el sistema operativo que lleve instalado.  Esta parte del examen se podrá realizar en casa con un par de días de antelación. Enunciado: La operadora UNO te ha contratado como técnico de administración de sus servicios de hosting para particulares. Actualmente, UNO ofrece un paquete de contratación básico que incluye una cantidad reducida de espacio de disco, dominio propio, acceso por FTP y 10 cuentas de correo. Tu tarea va a ser proporcionar las condiciones adecuadas para satisfacer el uso de los servicios por parte de los usuarios.
+
+Tareas a realizar: 1. Aségúrate que existe conectividad básica dentro del esquema propuesto, sin el cual ningún servicio puede llegar a funcionar. En nuestro esquema de red tendremos 2 únicos equipos. Por un lado, el servidor tendrá como dirección dirección de red 192.168.0.1, y residirá en la VM1, mientras que el cliente (que puede ser cualquier otra VM que tengas en tu VirtualBox) recibirá su datos de red dinámicamente dentro de un intérvalo que se encontrará entre 3 y 10, no sirviendo direcciones de red fuera del mismo. (0,25 puntos)
+
+Nº ES026288 2. UNO proporciona a sus clientes el acceso a sus servicios a través del nombre de dominio contratado. Para ello, configura en la VM1 un servicio de DNS que permita resolver los nombres del dominio “examen.es”, correspondiente a los equipos “ftp.examen.es”, “www.examen.es” y “dhcp.examen.es”, nombres todos ellos que apuntan al servidor que tenemos en producción. (0,25 puntos) 3.
+
+Como se ha indicado al principio, los clientes particulares pueden disponer de su página web propia accesible en este caso desde “www.examen.es”. (0,5 puntos) UNO indica en su contrato que:  como medida de seguridad el servicio se sirve en el puerto 8090.  si el usuario introduce como URL en su navegador la referencia “localhost”, se cargará en su lugar su página principal (www.examen.es).
+
+ el cliente puede incluir la palabra “restringido” dentro de su URL particular para acceder a una zona de su web protegida por contraseña1. 4. Por último, los clientes disponen también de acceso por FTP2 a su espacio contratado. En este caso, debes proporcionar tal acceso teniendo en cuenta las siguientes restricciones que UNO impone en su política de servicio
+
+ Se permite el acceso anónimo.  Al iniciar una sesión el servidor muestra el mensaje: “¡Bienvenido a UNO!”.  El usuario sólo puede ver la zona de su espacio personal. Créate una cuenta de FTP llamada “ftpuser” para hacer las pruebas de conexión al y uso del servidor. (0,5 puntos) 1 Esto quiere decir que si, por ejemplo, nuestro cliente ficticio tiene como URL particular www.examen.es, si se carga la página www.examen.es/restringido, se nos solicitará una contraseña para acceder a la misma.
+
+2 Usa la versión de VSFTPD como servidor FTP.
+
+### 📄 Examen_final_SMR2_extraord_parteB_1314.pdf
+
+Nº ES026288 PRUEBA EXTRAORDINARIA (Julio) Curso: 2ºSMR SEGUNDA PARTE Puntuación: 7 puntos. Duración: 2 horas y media Medios de realización:  VM con CentOs 6.3 como sistema operativo, en el que hayas realizado la primera parte de la prueba, que debes clonar antes de empezar esta parte de la prueba.
+
+ Una segunda VM que haga las funciones de cliente, siendo indiferente el sistema operativo que lleve instalado.  Se podrán consultar apuntes o cualquier otra fuente de internet. Enunciado: Modifica la configuración hecha en la primera parte de la primera en base a los siguientes requisitos
+
+1. El servidor de DHCP ofrecerá al cliente ubicado en la VM2 siempre la misma IP, que será última del rango asignado previamente. (2 puntos) 2. Respecto del servidor Apache, queremos que ...  sea sólo el cliente ubicado en la VM2 el que pueda acceder a la zona “restringida” que se implementó en la primera parte de la prueba. (1 punto)  además de contar con acceso autenticado, la zona “restringida” abra un canal de comunicación segura basado en el uso de certificados SSL (1,5 puntos)
+
+Nº ES026288 3. Por último, modifica la configuración del servidor de FTP para que satisfazca los siguientes requisitos:  No se permitirán más de 5 conexiones simultáneamente. (0,5 puntos)  El tiempo máximo de conexión será de 30 segundos. (0,5 puntos)  El usuario “ftpuser” no tendrá acceso al sistema, siendo únicamente usuario de FTP (1 punto)  El usuario anónimo no podrá subir ficheros al servidor, sólo descargarlos. (0,5 puntos)
+
+---
+
+## 0.2 Escenario general
+
+Escenario general
+
+---
+
+## 0.3 rúbrica presentacions
+
+rúbrica presentacions

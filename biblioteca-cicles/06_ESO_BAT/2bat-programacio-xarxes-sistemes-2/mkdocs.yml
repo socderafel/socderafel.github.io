@@ -1,0 +1,51 @@
+site_name: "🔐 Programació, Xarxes i Sistemes Informàtics II — 2n Batxillerat"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT0 — Unitat Didàctica 0":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Presentació": ut00/ut0001.md
+      - "0.2 Apunts sistemes de numeració": ut00/ut0002.md
+      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
+  - "UT0 — Introducció a la programació":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 UD1. Introducció a la programació": ut00/ut0001.md
+      - "0.2 UD1. Introducció a la programació Part 2": ut00/ut0002.md
+      - "0.3 UD1. Introducció a la programació Part 3": ut00/ut0003.md
+      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
+  - "UT0 — Introducción a Phyton":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Introducció a Python": ut00/ut0001.md
+      - "0.2 Elementos de un programa": ut00/ut0002.md
+      - "0.3 Tipos de datos": ut00/ut0003.md
+      - "0.4 Funciones integradas": ut00/ut0004.md
+      - "0.5 Módulos, paquetes y namespaces": ut00/ut0005.md
+      - "0.6 Estructuras de control": ut00/ut0006.md
+      - "0.7 Tipos de datos complejos": ut00/ut0007.md
+      - "0.8 Funciones": ut00/ut0008.md
+      - "0.9 Errores y excepciones": ut00/ut0009.md
+      - "0.10 Ficheros": ut00/ut0010.md
+      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
+  - "UT1 — Xarxes Locals":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "1.1 Introducción a las redes locales": ut01/ut0101.md
+      - "1.2 Mapa físico y lógico": ut01/ut0102.md
+      - "1.3 Arquitecturas de red": ut01/ut0103.md
+      - "1.4 MODELO OSI": ut01/ut0104.md
+      - "1.5 MODELO TCP/IP": ut01/ut0105.md
+      - "1.6 Tipos de cableado": ut01/ut0106.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
+  - "UT2 — Págines Web":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 CheatSheet HTML5": ut02/ut0201.md
+      - "2.2 CheatSheet CSS3": ut02/ut0202.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — Seguridad":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "3.1 Continguts i Recursos": ut03/ut0301.md
+  - "UT4 — Unitat Didàctica 6":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 Continguts i Recursos": ut04/ut0401.md
+  - "📂 Índex de Documents i Recursos": references.md

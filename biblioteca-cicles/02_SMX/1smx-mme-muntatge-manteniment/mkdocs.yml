@@ -1,0 +1,37 @@
+site_name: "🔧 Muntatge i Manteniment d'Equips — 1r SMX · Grau Mitjà"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT1 — Unitat Didàctica 1":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "1.1 U1 - P1 | P2 | P3 - CONTINGUTS": ut01/ut0101.md
+  - "UT2 — Unitat Didàctica 2":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS": ut02/ut0201.md
+      - "2.2 U2 - P2 - PROCESADOR Y MEMORIA": ut02/ut0202.md
+      - "2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS": ut02/ut0203.md
+      - "2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS": ut02/ut0204.md
+      - "2.5 U2 - P3 - Perifèrics i Communications": ut02/ut0205.md
+      - "2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE": ut02/ut0206.md
+      - "2.7 DISCOS DUROS CHS ECHS LBA": ut02/ut0207.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — Unitat Didàctica 5":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "3.1 U5 - P1 P2 P3 - PDF CONTINGUTS": ut03/ut0301.md
+      - "3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE": ut03/ut0302.md
+      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
+  - "UT4 — Unitat Didàctica 6":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 U6 - RGPD - CONTINGUTS": ut04/ut0401.md
+      - "4.2 U6 - COPIAS DE SEGURIDAD - CONTINGUTS": ut04/ut0402.md
+      - "4.3 U6 - CLASIF INFORMACION - CONTINGUTS": ut04/ut0403.md
+      - "4.4 U6 - P1 P2 P3 PRESENTACIÓ CONTINGUTS": ut04/ut0404.md
+      - "4.5 U6 - P1 P2 P3 - CONTINGUTS": ut04/ut0405.md
+      - "4.6 U6 - P1 P2 P3 - PRESENTACIÓ": ut04/ut0406.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UT5 — FINAL DE CURSO":
+      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
+  - "📂 Índex de Documents i Recursos": references.md

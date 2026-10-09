@@ -1,0 +1,229 @@
+{
+  "title": "🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà",
+  "home": {
+    "label": "🏠 Inici Serveis en Xarxa",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — Unitat Didàctica 0",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 Exámenes",
+          "href": "ut00/ut0001.html"
+        },
+        {
+          "label": "0.2 Escenario general",
+          "href": "ut00/ut0002.html"
+        },
+        {
+          "label": "0.3 rúbrica presentacions",
+          "href": "ut00/ut0003.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT1 — Enquesta de Serveis en Xarxa (SeX)",
+      "items": [
+        {
+          "label": "📘 UT1 Completa (1 pàgina)",
+          "href": "ut01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT1",
+          "href": "ut01/ut01actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — U6: Servicio de Transferencia de ficheros (FTP)",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 FTP",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — U5: Servici de Correu",
+      "items": [
+        {
+          "label": "📘 UT3 Completa (1 pàgina)",
+          "href": "ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 Presentació",
+          "href": "ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 El correu electrònic",
+          "href": "ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 Les Guest additions",
+          "href": "ut03/ut0303.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT3",
+          "href": "ut03/ut03actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — U4: Servici de Web (HTTP)",
+      "items": [
+        {
+          "label": "📘 UT4 Completa (1 pàgina)",
+          "href": "ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 Recursos Escenario U3",
+          "href": "ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Introducción virtual hosting",
+          "href": "ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Configuración Virtual hosting",
+          "href": "ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 Ips clients",
+          "href": "ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 Recuperació_prova de validació_Apache",
+          "href": "ut04/ut0405.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT4",
+          "href": "ut04/ut04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — U2: Servici de Resolució de Noms (DNS)",
+      "items": [
+        {
+          "label": "📘 UT5 Completa (1 pàgina)",
+          "href": "ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 UD3 Servidor de Nombres de Dominio SMX",
+          "href": "ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 Presentació Victor i Javier",
+          "href": "ut05/ut0502.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT5",
+          "href": "ut05/ut05actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)",
+      "items": [
+        {
+          "label": "📘 UT6 Completa (1 pàgina)",
+          "href": "ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 presentació DHCP",
+          "href": "ut06/ut0601.html"
+        },
+        {
+          "label": "6.2 Presentació DHCP. Visió general",
+          "href": "ut06/ut0602.html"
+        },
+        {
+          "label": "6.3 Servei DHCP",
+          "href": "ut06/ut0603.html"
+        },
+        {
+          "label": "6.4 Servidor DHCP",
+          "href": "ut06/ut0604.html"
+        },
+        {
+          "label": "6.5 Presentació SX20-U1-E3 \"Bronx\"",
+          "href": "ut06/ut0605.html"
+        },
+        {
+          "label": "6.6 Qüestionari DHCP",
+          "href": "ut06/ut0606.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT6",
+          "href": "ut06/ut06actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT7 — U1: SSH. Secure Shell",
+      "items": [
+        {
+          "label": "📘 UT7 Completa (1 pàgina)",
+          "href": "ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Plantilla qüestionari d'avaluació",
+          "href": "ut07/ut0701.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT7",
+          "href": "ut07/ut07actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT8 — U0: Virtualización y repaso de conceptos previos",
+      "items": [
+        {
+          "label": "📘 UT8 Completa (1 pàgina)",
+          "href": "ut08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Repàs Interconnexió de Xarxes",
+          "href": "ut08/ut0801.html"
+        },
+        {
+          "label": "8.2 Plantilla qüestionai d'avaluació",
+          "href": "ut08/ut0802.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT8",
+          "href": "ut08/ut08actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

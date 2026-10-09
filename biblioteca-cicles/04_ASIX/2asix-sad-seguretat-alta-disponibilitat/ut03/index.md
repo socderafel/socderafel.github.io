@@ -1,0 +1,409 @@
+---
+layout: default
+title: "UT3 — Setmanes (5-6) del 9 al 22 d'octubre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "2n ASIX · Grau Superior · UT3 Completa"
+prev_url: "../ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+next_url: "../ut03/ut0301.html"
+next_label: "3.1 Contrasenyes ➡️"
+---
+
+# 📘 UT3 — Setmanes (5-6) del 9 al 22 d'octubre (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**3.1 Contrasenyes**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
+> - [**3.2 Anàlisi Forense**](#ut0302) (o [obrir en pàgina individual ➡️](./ut0302.md) )
+> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+
+---
+
+## 3.1 Contrasenyes
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### UD 2 Mecanismes de seguretat
+
+---
+
+SEGURETAT en SO
+
+PRINCIPIS DE LA SEGURETAT LÒGICA La seguretat lògica Consisteix en l'aplicació de barreres i procediments que resguardin l'accés a dades i només permeti l'accés a les persones que estiguin autoritzades per a fer- lo. Principals amenaces ➔Accés ➔Modificacions no autoritzades a dades i aplicacions Principi de seguretat lògica ”Tot el que no està permès ha d'estar prohibit”
+
+CONTROL D’ACCÉS LÒGIC
+
+CONTROL D’ACCÉS LÒGIC Control d’accés lògic Prevenir l'ingrés de persones no autoritzades a la informació del sistema El control d'accés comporta dos processos: ➔Identificació: l'usuari es dona a conèixer al sistema ➔Autenticació: verificació que realitza el sistema sobre la identificació
+
+Atacs més comuns als sistemes de control d’accés protegits per contrasenyes: ➔Atac per força bruta: ◆ Esbrinar la clau provant totes les combinacions possibles ◆ Quant mes curta la clau => menys combinacions=>mes senzill desxifrar-la ➔Atac de diccionari: ◆ Aconseguir la clau provant totes les paraula d'un diccionari o conjunt de paraules comunes ◆ No es recomana usar com a clau una paraula del propi idioma perquè sigui fàcil de recordar Protecció ➔Establir un nombre màxim d'intents (eg targetes SIM) ➔Polítiques de contrasenyes (forçar característiques de contrasenyes) CONTROL D’ACCÉS LÒGIC
+
+CONTROL D’ACCÉS LÒGIC
+
+POLÍTIQUES DE CONTRASENYES Recomanacions per a contrasenyes segures: ➔Establir una longitud mínima: cada caràcter augmenta exponencialment el grau de protecció que ofereixen (mínim 8 , convenient 14 o més) ➔Combinació de caràcters: lletres majúscules, minúscules, números i símbols especials Exemple de combinacions de força bruta
+
+➔Contrasenya de 5 caràcters en minúscules (27)5=14.348 907 ➔Contrasenya de 5 caràcters en minúscules i majúscules (27*2)5 =380.204.032 Saps quant de temps es tarda en trencar la teua contrasenya?
+
+Més recomanacions: ➔No incloure seqüències ni caràcters repetits ➔No utilitzar el nom de l'inici de sessió ➔No utilitzar paraules del diccionari ➔Utilitzar diverses contrasenyes en diferents entorns ➔Evitar l'opció de contrasenya en blanc ➔No revelar la contrasenya a ningú ➔Canviar les contrasenyes amb regularitat POLÍTIQUES DE CONTRASENYES
+
+> **✍️ Pràctica: Vegem quant es tarda en trencar una contrasenya ‘feble’**
+> Pràctica: Vegem quant es tarda en trencar una contrasenya ‘feble’ en un equip amb poques prestacions !!!!!! En W10: Donar d’alta 8 usuaris amb contrasenyes febles (longitud <7)
+
+(5 minúscules, 5 min-maj 5 min-maj-dig 5 min-maj-dig-simb
+
+6 minúscules, 6 min-maj 6 min-maj-dig 6 min-maj-dig-simb ) Utilitzar el programa Hash Suite per a trencar per força bruta les contrasenyes https://hashsuite.openwall.net/ Observar el temps utilitzat i el conjunt de claus utilitzat Importar usuaris Configurar paràmetres d'atac Trencar contrasenyes Exportar dades Executa un Benchmark POLÍTIQUES DE CONTRASENYES
+
+> **✍️ Pràctica: En W10: Donar d’alta 4 usuaris amb contrasenyes febles**
+> Pràctica: En W10: Donar d’alta 4 usuaris amb contrasenyes febles (longitud <7) Utilitzar el programa John the Ripper per a trencar per força bruta les contrasenyes https://www.openwall.com/john/ Observar el temps utilitzat i el conjunt de claus utilitzat Pàgina exemple.
+
+https://www.top-password.com/blog/crack-windows-password-with-john-the-rippe r/ Interfície gràfica per a John  Johnny https://openwall.info/wiki/john/johnny https://esgeeks.com/como-usar-johnny-la-gui-john-the-ripper/ POLÍTIQUES DE CONTRASENYES
+
+Exemples: John per a extraure contrasenyes d’arxius zip https://dfir.science//how-to-cracking-zip-and-rar-protected.html Contrasenyes d’usuaris en Linux https://www.redeszone.net/seguridad-informatica/john-the-ripper-crackear-contrasenas/ Contrasenyes d’usuaris en Windows https://noticiasseguridad.com/tutoriales/john-the-ripper-crackear-contrasenas-de-windows/ Força bruta sobre pdf, certificats digitals https://www.comunixgroup.com/blog/fuerza-bruta-sobre-ficheros/ POLÍTIQUES DE CONTRASENYES
+
+CONFIGURAR CONTRASENYES SEGURES WINDOWS Les directives de comptes permeten configurar el comportament dels comptes. Permeten controlar d'una forma eficient la manera d'accedir al sistema. secpol.msc Directiva de seguretat de comptes
+
+WINDOWS Directives de contrasenyes (realitza la següent configuració en el teu servidor) ➔No habilitar emmagatzemar contrasenya usant xifratge reversible. ➔Forçar l'historial de contrasenyes: estableix el nombre de contrasenyes a recordar, perquè els usuaris no puguin utilitzar la mateixa contrasenya quan caduca (valor mínim 1) ➔Les contrasenyes han de complir els requisits de complexitat ◆ 6 caràcters com a mínim ◆ Contenir almenys tres de les següents classes: majúscules, minúscules, dígits, caràcters no alfanumèrics (!,$,# o %), altres caràcters unicode ◆ No contenir tres o més caràcters de compte d'usuari CONFIGURAR CONTRASENYES SEGURES
+
+➔Longitud mínima de la contrasenya: 8 ➔Vigència màxima de la contrasenya (establir el nombre de dies màxim que una contrasenya va a està activa): 3 mesos ➔Vigència mínima de la contrasenya (si és major que 0 els usuaris no poden canviar repetidament les contrasenyes per a eludir la directiva forçar contrasenyes ):1 setmana CONFIGURAR CONTRASENYES SEGURES
+
+Directives de bloqueig de comptes ➔Durada del bloqueig de comptes (estableix en minuts el temps que un compte pot estar bloquejada): 30 minuts ➔Restablir la contrasenya després de(minuts que ha de passar per a restablir el compte de bloquejos, ha de ser menor que la durada del bloqueig de comptes) ➔Llindar de bloquejos del compte (estableix el nombre d'intents fallits per a bloquejar l'accés a un compte) Crea un nou usuari i comprova que es complixen les restriccions CONFIGURAR CONTRASENYES SEGURES
+
+Servici PAM (Pluggable Authentication Module) ➔Arxius de configuració del comando passwd ◆ /etc/pam.d/passwd (crida a common-password) ◆ /etc/pam.d/common-password Una configuració possible per a contrasenyes segures és: password required pam_unix.so obscure sha512 Per a rebaixar requisits, podriem cambiar-la per password required pam_unix.so minlen=4 sha512 Els efectes actuen immediatament, no fa falta reiniciar ni parar servici CONTRASENYES SEGURES LINUX
+
+Servici PAM (Pluggable Authentication Module) ➔El mòdul pam_cracklib està fet per a determinar si es suficientment forta una contrasenya ➔Per a instal·lar-lo sudo apt-get install libpam-cracklib ➔Arxius de configuració del comando passwd ◆ /etc/pam.d/common-password Una configuració possible per a contrasenyes segures és: (s'afegeix automàticament al fitxer common-password) password required pam_cracklib.so retry=3 minlen=8 difok=3 Podem personalitzar les restriccions amb
+
+lcredit=0 ucredit=1 dcredit=1 ocredit=2 Que significa esta configuració ? CONTRASENYES SEGURES LINUX
+
+Servici PAM (Pluggable Authentication Module) ➔Edita el fitxer /etc/pam.d/common-password i afegix les següents restriccions ◆ La contrasenya ha de contenir almenys 2 dígits ◆ La contrasenya ha de contenir almenys 1 majúscula ➔Crea un un nou usuari amb el comando adduser ➔Canvia la contrasenya de l'usuari i comprova que es compleixen les restriccions Per a verificar els accessos al sistema i altres successos es guarden en arxius situats en la carpeta /*var/*log. La identificació d'usuaris la podem veure en ➔/var/log/auth.log CONTRASENYES SEGURES LINUX
+
+Servici PAM (Pluggable Authentication Module) Caducitat de contrasenyes. /etc/login.defs /etc/default/useradd Encara que això és una directiva per a la creació d'usuaris. Cada usuari porta la seva pròpia caducitat codificada en etc/shadows Per a canviar la caducitat a un usuari utilitzarem el comando chage
+
+```bash
+$ chage -l <usuario>
+```
+
+CONTRASENYES SEGURES LINUX
+
+Servici PAM (Pluggable Authentication Module) Caducitat de contrasenyes Si volem que les claus hagin de canviar-se -per exemple- cada 80 dies(M), amb un avís previ de 7 dies(W), 10 dies de gràcia una vegada vençuda la clau(I) i un dia d'espera abans de tornar a canviar la clau(m), usem el següent comando per cada usuari existent
+
+```bash
+# sudo chage -M 80 -W 7 -I 10 -m 1 <usuario>
+```
+
+Això farà que molts usuaris quedin automàticament bloquejats perquè van canviar la seva clau fa més que 90 (80 + 10) dies. Solució: Forcem la data d'últim canvi a una data recent, idealment just perquè estiguin obligats a canviar la clau en el pròxim *login.
+
+```bash
+# sudo chage -d 2020-11-1 <usuario>
+```
+
+CONTRASENYES SEGURES LINUX
+
+CONFIGURAR AUDITORIA Control d'accessos indeguts Per a controlar per part de l'administrador els accessos podem habilitar en Directives locals/directiva auditoria /auditar successos d'inici i fi de sessió de compte
+
+CONFIGURAR AUDITORIA Visor d’esdeveniments En l'apartat de seguretat comprovar que s'ha bloquejat el compte
+
+POLÍTICA D’USUARIS I GRUPS Tasques de l’administrador ➔Definir comptes d'usuari, assignar-les a perfils determinats, grups o rols ➔Assignar privilegis sobre els objectes del sistema ➔Determinar el nivell de seguretat de les dades i aplicacions ◆ Classificar la informació ◆ determinar el risc davant l'accés d'usuaris no autoritzats
+
+CONTROL D’ACCÉS MITJANÇANT CONTRASENYES Nivells dels mecanismes de control d'accés ➔1r nivell: control de contrasenya d'arrencada i de la pròpia configuració de la BIOS ➔2n nivell: Contrasenya de l'arrencada i de l'edició d'opcions proporcionades pels gestors d'arrencada ➔3r nivell:control mitjançant usuari i contrasenya per part del sistema operatiu. El SO permet el control d'accés a dades i aplicacions mitjançant la configuració de privilegis als diferents perfils d'usuari o individualment a aquests ➔4t nivell: Contrasenya i xifratge d'accés dades i aplicacions.
+
+PERILLS DISTRIBUCIONS LIVE Sistemes operatius en mode live Arrancables des d'unitats extraïbles USB, CD, DVD) sense necessitat de formatar i instal·lar-los en el disc dur. Inclouen gran quantitat d'aplicacions de recuperació de dades i contrasenyes d'usuari. Exemples de distribucions arrancables en manera Live ➔Ultimate Boot CD (UBCD). Conté utilitats freeware per a Windows per a reparar, restaurar i diagnosticar diversos problemes informàtics.
+
+➔Backtrack. Conté eines d'auditories de seguretat Windows i GNU/Linux. ➔Ophcrack. Conté l'aplicació amb el mateix nom per a extreure contrasenyes en Windows. ➔Slax.Permet el muntatge i l'accés als sistemes de fitxers instal·lats en disc ➔Wifiway i wifislax. Distribucions orientades a realitzar auditories wireless com a recuperació de contrasenyes Aquestes distribucions poden accedir a les particions i fitxers de manera transparent pel que poden comprometre la seguretat de les dades i fitxers
+
+CONTROL D’ACCÉS EN LA BIOS BIOS (Basic Input/Output System) ➔Xicotet programa que es troba gravat en una memòria de la placa base. Guarda la configuració del nostre sistema ➔Reconeix i localitza tots els dispositius necessaris per a carregar el sistema operatiu en la memòria RAM ➔Important protegir la BIOS perquè només un Administrador o un usuari responsable puguen canviar valors de configuració
+
+Segons els nivels de seguretat es poden classificar en : ➔Seguretat del sistema (system): En cada arrencada del sistema ens demanarà que introduïm una contrasenya que prèviament s'ha configurat en la *BIOS. En cas que no sigui correcta el sistema no arrenca
+
+```bash
+➔Seguretat de configuració de la BIOS (setup): Se solen distingir dos rols;
+```
+
+◆ Usuari (sols lectura) ◆ Administrador ( lectura/modificacions): CONTROL D’ACCÉS EN LA BIOS
+
+Vulnerabilitats de la BIOS
+
+### 1. Es pot reinicialitzar i tornar als seus valors de fàbrica (les contrasenyes, per tant
+
+desapareixeran) llevant la pila o a través del jumper CLR_CMOS Recomanació: Protecció d'accés físic a la placa base (la forma més senzilla, amb un cadenat que asseguri l'obertura de la torre i no permeti l'accés a la placa base
+
+### 2. Es pot accedir i canviar la seva configuració si no està protegida per contrasenya
+
+Recomanació: Sol·licitar cada vegada que s'arrenqui la màquina (setup) Si no s'introdueix correctament, el sistema no arrencarà.
+
+### 3. Distribucions Live
+
+Recomanació: Establir com a primer dispositiu d'arrencada el disc dur on es troba els SO (system) + contrasenya BIOS CONTROL D’ACCÉS EN LA BIOS
+
+CONTROL D’ACCÉS AL GESTOR D’ARRANCADA GRUB ➔Gestor d'arrencada que permet seleccionar amb quin sistema operatiu arrencar quan tenim instal·lat diversos sistemes operatius en el disc dur ➔Opció recovery mode per a la recuperació en cas de fallada del sistema. Pot modificar contrasenyes o accedir a la informació del disc dur ➔Recomanació: Afegir contrasenya encriptada al menú d'edició (és a dir, impossibilitar l'edició per qualsevol usuari no autoritzat) i al mode recuperació
+
+Aprofitar el gestor d’arrancada no securitzat (grub) ➔Arrancar amb privilegis sense saber cap usuari ni contrasenya del sistema ➔Realitzar modificacions significatives en el sistema Pràctica Utilitza grub per a arrancar en mode administrador (root) https://byte-mind.net/obtener-acceso-root-desde-grub-linux/ NOTA: Canvia la password de root, afegix un usuari amb privilegis Activar grub en maquina virtual !!!
+
+```bash
+sudo nano /etc/default/grub
+sudo update-grub
+```
+
+reboot CONTROL D’ACCÉS AL GESTOR D’ARRANCADA
+
+Afegir contrasenya encriptada al grub ➔Impossibilita l'edició per qualsevol usuari no autoritzat ➔Afegir usuaris en el fitxer /etc/grub.d/00_header Pràctica Realitza els passos de l’1 al 4 del següent enllaç https://geekland.eu/proteger-el-grub-con-contrasena/ NOTA: Afegix un usuari amb contrasenya i altre sense CONTROL D’ACCÉS AL GESTOR D’ARRANCADA
+
+CONTROL D’ACCÉS EN EL SISTEMA OPERATIU Métodes d’accés ➔Més segur: petjada digital ➔Més usat : usuari i contrasenya Vulnerabilitats ➔Accés mitjançant la manera de recuperació (GNU/Linux) o a manera de prova de fallades (Windows) ➔Arrencar amb una distribució Live per a recuperar/esborrar/modificar contrasenyes Recomanacions
+
+➔Ús d'eines d'auditoria de sistemes d'accés i nivell de fortalesa de contrasenyes ❖ Ophcrack (Windows) ❖ John the Ripper (GNU/Linux)
+
+RECUPERACIÓ DE CONTRASENYES WINDOWS Ophcrack És una aplicació que permet recuperar contrasenyes de Windows. Es basa en el coneixement de com emmagatzema Windows les seves contrasenyes d'usuari (normalment en windows/system32/config/SAM (només accessible si s'arrenca l’equip amb una distribució Live).
+
+Empra una comprovació mitjançant força bruta i diccionaris que caldrà carregar depenent de la versió i l'idioma Recomanació: Ophcrack té grans dificultats amb paraules separades amb espais i caràcters especials, per la qual cosa es recomana el seu ús Altra defensa es la utilització del xifrat de disc (del SO) Ophcrack per a recuperar la contrasenya de Windows
+
+RECUPERACIÓ DE CONTRASENYES GNU/LINUX ➔En GNU/Linux l'arxiu que controla usuaris i les seves contrasenyes encriptades és /etc/shadow visible tan sols per a l’usuari root
+
+Recuperar la contrasenya amb John the ripper
+
+MODIFICACIÓ DE CONTRASENYES WINDOWS ➔Totes les utilitats requereixen arrencar des d'una distribució live ➔'Ultimate Boot CD for Windows' o 'UBCD4Win' és un CD de recuperació d'arrancada (Live CD) que conté programari utilitzat per a reparar, restaurar i diagnosticar diversos problemes informàtics.
+
+GNU/Linux ➔Si podem accedir al sistema de fitxers i modifiquem en /etc/shadow la contrasenya actual per una altra encriptada que coneguem podrem accedir amb la nova contrasenya ➔A tenir en compte: ◆ Hem de conèixer l'algorisme de xifratge (buscar en el fitxer /etc/pam.d/common-password la línia corresponent al mòdul pam_unix.so ◆ Emprar una ferramenta de xifrat
+
+XIFRAT DE PARTICIÓ DEL SISTEMA OPERATIU WINDOWS ➔Bitlocker (en W10 Profesional y Enterprise) https://rootear.com/windows/activa-bitlocker-w10 GNU/Linux ➔Xifrar al instal·lar el SO ➔https://www.muylinux.com//23/cifrado-disco-ubuntu/ ➔Xifrar carpeta d’usuari ➔http://somebooks.es/cifrar-la-carpeta-de-usuario-en-ubuntu-18-04-lts/
+
+AMENAÇA: Keyloggers TIPUS ➔Entrada amb un Phishing ➔Extensió d'un navegador ➔Dispositiu Maquinari ➔Enregistrador de teclat CSS (visitant una pàgina web) Instal·la i prova l’extensió Fea KeyLogger en Chrome
+
+Alternativa: Congelació del Sistema TIPUS ➔Deep Freeze ➔ToolWiz Time Freeze ➔Reboot Restore Rx Congelar un sistema operatiu és com prendre una instantània i cada vegada que s'apaga o reinicia, torna al punt de la instantània. Aquest sistema és també conegut com una sandbox.
+
+INFORMACIÓ SENSIBLE El que esborres , No s’esborra !!!! Abans de rebutjar un disc dur, esborra'l, o destrueix-lo Per a un entorn amb informació sensible, utilitza eines especialitzades
+
+INFORMACIÓ SENSIBLE El que esborres , No s’esborra !!!! Abans de rebutjar un disc dur, esborra'l, o destrueix-lo Per a un entorn amb informació sensible, utilitza eines especialitzades Herramientas Linux
+
+RESUM Mantingues el Sistema Operatiu actualitzat Instal·la antivirus i mantín-lo actualitzat (també plugins de seguretat en navegadors) Mantingues les aplicacions actualitzades Estableix una bona política de contrasenyes, i mantín-les secretes Estableix contrasenyes a tots els nivells ( bios, arrencada, SO, aplicacions) Considera la utilització de mètodes d'accés alternatius o complementaris (petjada) Utilitza usuari amb privilegis SOLAMENT quan siga necessari Considera la utilització de xifratge de dades ( partició, carpetes, arxius)
+
+RESUM Considera la utilització d'eines d'esborrat segur Considera l'ús de gestor de contrasenyes Realitza escanejos periòdics de vulnerabilitats dels teus sistemes Desinstal·lar serveis no utilitzats ( rdp, vnc, telnet, ssh, …) Desinstal·lar aplicacions no utilitzades.
+
+Considera utilitzar un EDR ( empresa ) https://geekflare.com/es/edr-tools/
+
+---
+
+## 3.2 Anàlisi Forense
+
+INFORMÀTICA FORENSE
+
+CONTINGUTS Definicions: forense, informàtica forense Funciones de un informàtic forense Fases de un anàlisis forense
+
+Definició “forense” Origen Préstec (s. XVII) del llatí forensis ‘de la plaça pública, del fòrum’, ‘forense, judicial’, derivat de fòrum ‘recinte sense edificar’, ‘plaça pública’, i d'ací ‘vida pública i judicial’, ‘tribunals de justícia’ per celebrar-se allí els judicis.
+
+Ciències forenses, també conegudes com les branques de la criminalística... Arte Forense Antropología Forense Balística Forense Dactiloscopía Documentoscopía Entomología Forense Fisionomía Forense Fotografía Forense Genética Forense Hematología Forense Incendios y explosivos Informática Forense Medicina Forense Meteorología Forense Odontología Forense Patología Forense Peritaje caligráfico Psicología Forense Química Forense Toxicología Forense
+
+DEFINICIONS La informàtica forense és la ciència forense que s'encarrega d'assegurar, identificar, preservar, analitzar i presentar la prova digital, de manera que aquesta siga acceptada en un procés judicial. Òptiques des de les quals abordar la informàtica forense ✔Judicial ✔Empresarial
+
+Etapes que formen l’anàlisi forense Enfocament criminalístic • Assegurar l'escena • Identificar proves • Adquirir dades • Preservar (Cadena de custòdia) • Analitzar dades • Documentar resultats • Presentar resultats (Informe pericial)
+
+Enfocament criminalístic Etapes que formen l’anàlisi forense
+
+Enfocament criminalístic : Informe pericial Les normes processals estableixen que els informes pericials els realitzaran els professionals que disposen del títol oficial corresponent a la matèria d'estudi. En el nostre cas : Un perit informàtic. Perquè el peritatge tinga validesa judicial, el professional ha d'actuar respectant les normes d'Enjudiciament Civil i Criminal i respectant una sèrie de principis
+
+• Està obligat a dir la veritat i sempre sobre la base de la seua formació tècnica. • Ha d'actuar amb independència, és a dir, no esbiaixar el seu dictamen en funció de la part que el contracta. • Ha de col·laborar amb el jutge o tribunal perquè és un auxiliar de la Justícia.
+
+Etapes que formen l’anàlisi forense
+
+Perit informàtic. Requisits d’accés al curs https://www.unir.net/ingenieria/curso-perito-judicial-informatico/acceso/ Per a exercir com a perit informàtic judicial, es pot consultar l’article 340 de la Lley 1/2000, de 7 de gener, de Enjudiciament Civil. https://www.boe.es/buscar/act.php?id=BOE-A-2000-323&tn=1&p=20141105&vd=#a340 Etapes que formen l’anàlisi forense
+
+Enfocament empresarial • Preparació i prevenció • Detecció i anàlisi • Contenció • Recuperació • Activitats post-incident Etapes que formen l’anàlisi forense
+
+Enfocament empresarial L'informe pericial serveix, per tant, com a mitjà de prova en un procediment judicial, però també és de gran utilitat en causes extrajudicials que requerisquen un peritatge, és a dir, l'opinió experta sobre un tema i la seua comprovació mitjançant tècniques especialitzades.
+
+Etapes que formen l’anàlisi forense
+
+Detall de les etapes Preparació i prevenció
+
+Copia de seguretat
+
+Control (Monitorització)
+
+Plan de seguretat, SGSI
+
+CSIRT Detecció i anàlisis
+
+Identificació
+
+Classificació
+
+Priorització
+
+Notificació Contenció
+
+Minimització
+
+Protecció de proves
+
+Notificació Recuperació
+
+Recuperar sistemes
+
+Compilar i organitzar la informació
+
+Valorar danys i costs
+
+Revisar directives
+
+Ferramentes Fase de prevenció
+
+Cobian Bakcup
+
+Veeam (entornos virtualizados)
+
+Snort
+
+Suricata
+
+Nagios
+
+PRTG
+
+Zenoss Fase de adquisició
+
+CAINE
+
+Kali
+
+Deft* Deft Zero
+
+FTK Imager
+
+EnCase Forensic Imager
+
+LiME Fase de anàlisis.
+
+The Sleuth Kit y Autopsy
+
+Volatility
+
+OSForensics
+
+X-Ways
+
+Encase
+
+Forensics Took Kit
+
+Magnet AXIOM
+
+Auditories Una auditoria, des d'un punt de vista molt general, és un procés executat per un auditor, que té la característica de ser sistemàtica, independent i documentada, i que busca obtindre a partir de la realització de proves d'auditoria registres, declaracions de fets o una altra informació coneguda com a proves d'auditoria.
+
+Les proves d'auditoria han de ser verificables, pertinents i avaluables de manera objectiva amb la finalitat de determinar, d'acord amb aquestes, la mesura en què el fet auditat compleix uns criteris d'auditoria. Finalment, el procés conclou amb l'anàlisi d'aquestes troballes per a poder emetre unes conclusions de l'auditoria.
+
+Auditories Principis d’auditoria. ➢Integritat / Conducta ètica ➢Presentació justa i imparcial ➢Atenció professional adequada ➢Independent ➢Enfocament basat en la prova ➢Confidencialitat Tipus d’auditories
+
+Auditories internes o de primera part
+
+Auditories de segona part
+
+Auditories de tercera part
+
+PLA INTEGRAL DE PROTECCIÓ PERIMETRAL
+
+QUÈ ÉS ? La seguretat perimetral és el conjunt de mecanismes i sistemes relatius al control de l'accés físic de persones a les instal·lacions, així com la detecció i la prevenció d'intrusions
+
+OBJECTIUS
+
+- Suportar els atacs externs.
+
+Detectar i identificar els atacs rebuts i alertar sobre ells. – Segmentar i securitzar els sistemes i serveis en funció de la seua superfície d'atac. – Filtrar i bloquejar el trànsit il·legítim.
+
+Plataformes de seguretat informàtica
+
+- Tallafocs
+- IDS / IPS
+- Honeypots
+- Sistemes anti Ddos
+- Passarel·les antivirus i antispam
+- VPN
+- Control d'accés i identitat
+
+Elaboració d’un pla de seguretat Etapes • Revisió / auditoria de seguretat • Revisió de la eficiència de la xarxa • Redacció del pla • Aprovació del pla ( gerència ) • Difusió del pla en la organització • Posada en producció del pla • Revisió periòdica / auditoria del pla
+
+---
+
+## ✍️ Activitats pràctiques UT3
+
+> **✍️ Activitat Pràctica 3.1 — Copia de seguretat amb Cobian**
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: Cobian Backup 11 Utilitza una maquina virtual amb W10 Profesional 64bits. Crea una carpeta en l'escriptori Prepara 4 carpetes dins de la carpeta creada. (Crida-les: UNA, DOS, TRES, QUATRE) Prepara 2 fitxers de text amb contingut en cada carpeta, crida'ls com tu vulgues.
+>
+> Visualitza i observa el Camp/Columna «Atributs» dels arxius involucrats en la pràctica. Que informació tenen ? Que significa? Utilitza el manual de Sagrario Pedraza per a instal·lar la utilitat Cobian Backup 11. Atents al Check de Volume Shadow Copy, ¡ desmarca'l !
+>
+> Tingues en compte que les tasques s'executaran elles soles. Deixa que ho facen quan els corresponga, no les executes manualment. Crea la teua primera tasca: Programa una còpia incremental cada 10 min. Indica que la còpia es realitze de les carpetes creades, i el destí estiga en una carpeta dins de Documents. També pots posar com a destí un altre disc dur (si el teu equip en té un) Deixa que el programa execute la primera còpia. Observa el resultat.
+>
+> En el temps entre còpies, modifica algun fitxer, afig un altre fitxer. Observa les carpetes creades. hi ha carpetes buides? fan falta? com es pot solucionar això? Crea una tasca amb mes opcions. Analitza cadascuna de les finestres de la tasca. Utilitza les opcions d'execució pre-còpia (tancar un programa) i post-copia (apagar l'equip).
+>
+> Utilitza un filtre per a no copiar els arxius de tipus vídeo. Utilitza el xifratge d'arxius. (indica la clau de xifratge) Quan es cree la còpia, Quin format tenen ? Com es poden desxifrar? Aprén a observar i interpretar els log, que en cobian es diuen Diari Configura l'aplicació perquè t'envie els log al teu compte de correu Obri el menú Eines – Opcions Estudia les pestanyes de “Diari” i “Correu” Configura perquè se t'envie el Diari al teu correu.
+>
+> Configura una còpia incremental, que mantinga 2 còpies completes i que realitze una completa cada 2 incrementals. Executa manualment reiterades còpia per a observar com va creant completes i esborrant còpies obsoletes. Documenta tot el procés en format pdf. Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”
+
+> **✍️ Activitat Pràctica 3.2 — (SAD) John**
+> ### 📄 01 activitat john.pdf
+>
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: John John és una eina que permet descobrir contrasenyes en diferents mitjans: Contrasenyes d'usuari (shadow) , de fitxer *zip encriptat, de fitxer pdf encriptat, etc...
+>
+> Activitat Busca informació en internet de la ferramenta i com utilitzar-la (documenta els resultats) En kali, john està instal·lat, però els diccionaris de contrasenyes estan comprimits
+>
+> - En kali, busquem el diccionari comprimit i el descomprimim a un txt. (PISTA: El diccionari
+>
+> s’anomena rockyou......)
+>
+> - Utilitzem l’eina John para trencar la contrasenya d’un fitxer shadow ( el que acompanya a la
+>
+> pràctica )
+>
+> ### 3. Utilitzem l’eina(es) John para trencar/desvelar la contrasenya del fitxer .zip
+>
+> ### 4. Utilitzem l’eina(es) John para trencar/desvelar la contrasenya del fitxer pdf
+>
+> Activitat d’ampliació. Opcional
+>
+> ### 5. Sabem que hi ha un usuari amb una contrasenya complexa, però hem pogut saber
+>
+> que te un patró. Una majúscula, 3 minúscules, 2 simbol i 2 digits.
+>
+> Ajuda: Ferramenta CRUNCH Documentar tot el procés en un document. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball” ===================================================================
+>
+> ### 📄 docu1.pdf
+>
+> > **📄 Document Escanejat / Visual (docu1.pdf)**
+> > Aquest document PDF (1 pàgines) està compost principalment per esquemes o imatges escanejades.
+>
+> ### 📄 hash.txt
+>
+> root:!:19634:0:99999:7::: daemon:*:19634:0:99999:7::: bin:*:19634:0:99999:7::: sys:*:19634:0:99999:7::: sync:*:19634:0:99999:7::: games:*:19634:0:99999:7::: man:*:19634:0:99999:7::: lp:*:19634:0:99999:7::: mail:*:19634:0:99999:7::: news:*:19634:0:99999:7::: uucp:*:19634:0:99999:7
+>
+> proxy:*:19634:0:99999:7::: www-data:*:19634:0:99999:7::: backup:*:19634:0:99999:7::: list:*:19634:0:99999:7::: irc:*:19634:0:99999:7::: _apt:*:19634:0:99999:7::: nobody:*:19634:0:99999:7::: systemd-network:!*:19634:::::: mysql:!:19634:::::: tss:!:19634:::::: strongswan:!:19634
+>
+> systemd-timesync:!*:19634:::::: redsocks:!:19634:::::: rwhod:!:19634:::::: _gophish:!:19634:::::: iodine:!:19634:::::: messagebus:!:19634:::::: miredo:!:19634:::::: redis:!:19634:::::: usbmux:!:19634:::::: mosquitto:!:19634:::::: tcpdump:!:19634:::::: sshd:!:19634:::::: _rpc:!:19634
+>
+> dnsmasq:!:19634:::::: statd:!:19634:::::: avahi:!:19634:::::: stunnel4:!*:19634:::::: Debian-snmp:!:19634:::::: _gvm:!:19634:::::: speech-dispatcher:!:19634:::::: sslh:!:19634:::::: postgres:!:19634:::::: pulse:!:19634:::::: inetsim:!:19634:::::: lightdm:!:19634:::::: geoclue:!:19634
+>
+> saned:!:19634:::::: polkitd:!*:19634:::::: rtkit:!:19634:::::: colord:!:19634:::::: nm-openvpn:!:19634:::::: nm-openconnect:!:19634:::::: kali:$y$j9T$AwE33Tc30iw3jXAoqM8L40$fsG5Xk1wdmVvc5lBwMl.k9RK1V3KgMMY4XNG4.noIu3:19634:0:99999:7::: user1:$1$3RHk5NUv$.qA2Hwzq7Yw0TdrqoddIo1:19642:0:99999:7
+>
+> user2:$1$SRCYpfDZ$TPQi3NXrUN9kgorGRYLZd/:19642:0:99999:7::: user3:$1$BFEO8EDP$gAUpZQA/2Iy37rLCEfZpm1:19642:0:99999:7::: user4:$1$441zQzdA$Cr/W5zyZiCjjQ3eP1LB.B/:19642:0:99999:7::: user5:$1$sdqJX.ZT$85fgv7TJyeGeX8KPn073q/:19642:0:99999:7
+
+> **✍️ 📋 Exercici / Qüestionari 3.3 — Activitat DeepFreeze ( ampliació )**
+> En esta activitat no cal entregar document
+>
+> CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: DeepFreeze En Windows, existeixen un tipus de programes que permeten “congelar” el sistema en un moment determinat, a partir del qual, tot el que es realitze, instal·le, esborre, etc. serà oblidat quan es reinicie el sistema.
+>
+> Utilitza una màquina virtual amb Windows 10 profesional 64 bits
+>
+> ### 1. Instal·lar esta ferramenta. És de pagament, però permet un
+>
+> període de prova (30 dies), suficient per a realitzar pràctiques i observar com funciona i els beneficis que pot reportar-nos en seguretat informàtica. Utilitzarem la versió Standard. https://www.faronics.com/es/downloads_es/download-form_es?product=DFS
+>
+> - Congelar el sistema utilitzant esta aplicació.
+>
+> ### 3. Realitzar modificacions, esborrats, instal·lacions d’altres
+>
+> aplicacions, canvis de contrasenyes, etc.
+>
+> ### 4. Reiniciar sistema i comprovar que tot el realitzat, inclús
+>
+> danyat del sistema, no s’ha quedat reflectit.
+>
+> ### 5. Observa las opcions addicionals, practica i detalla el seu us
+>
+> i per a que serveixen.
+>
+> ### 6. Porta a l’extrem la prova, esborrant la carpeta del sistema
+>
+> operatiu, i reinicia el sistema Documentar tot el procés en un document. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”

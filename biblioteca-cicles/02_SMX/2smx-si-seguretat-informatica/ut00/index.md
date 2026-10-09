@@ -1,0 +1,3186 @@
+---
+layout: default
+title: "UT0 — Introducció — Seguretat Informàtica | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "2n SMX · Grau Mitjà · UT0 Completa"
+prev_url: "../index.html"
+prev_label: "⬅️ Inici Seguretat Informàtica"
+next_url: "../ut00/ut0001.html"
+next_label: "0.1 Presentacions ➡️"
+---
+
+# 📘 UT0 — Introducció (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**0.1 Presentacions**](#ut0001) (o [obrir en pàgina individual ➡️](./ut0001.md) )
+> - [**✍️ Activitats pràctiques UT0**](#ut00actividades) (o [obrir en pàgina individual ➡️](./ut00actividades.md) )
+
+---
+
+## 0.1 Presentacions
+
+> **📌 Introducció de la Unitat**
+> Correu de contacte: [ferran.pelechano@iessantvicent.com](https://mail.google.com/mail/?view=cm&fs=1&to=ferran.pelechano%40iessantvicent.com&authuser=0)
+
+> **🔗 Recurs Web: Enquesta de Valoració (2nd SMX - SI)**
+> [**🌐 Obrir recurs extern (https://docs.google.com/a/iessantvicent.com/forms/d/e/1FAIpQLSfJ0YBPA7dsxjSUE7OQgczbHqJQ7pAsdtHQ4g2DZmB7zuTJxA/closedform) ↗️**](https://docs.google.com/a/iessantvicent.com/forms/d/e/1FAIpQLSfJ0YBPA7dsxjSUE7OQgczbHqJQ7pAsdtHQ4g2DZmB7zuTJxA/closedform)
+
+> **🔗 Recurs Web: Materiales INCIBE**
+> [**🌐 Obrir recurs extern (https://www.incibe.es/jornadas-incibe-espacios-ciberseguridad/estudiantes) ↗️**](https://www.incibe.es/jornadas-incibe-espacios-ciberseguridad/estudiantes)
+
+> **🔗 Recurs Web: Materials IOC**
+> [**🌐 Obrir recurs extern (https://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M06/web/html/index.html) ↗️**](https://ioc.xtec.cat/materials/FP/Materials/2201_SMX/SMX_2201_M06/web/html/index.html)
+
+> **🔗 Recurs Web: MATERIALS Jose Domigo**
+> [**🌐 Obrir recurs extern (https://fp.josedomingo.org/seguridadgm/) ↗️**](https://fp.josedomingo.org/seguridadgm/)
+
+> **🔗 Recurs Web: Materials MCGrawHill**
+> [**🌐 Obrir recurs extern (https://www.mheducation.es/9788448183967-spain-seguridad-informatica-gm-group) ↗️**](https://www.mheducation.es/9788448183967-spain-seguridad-informatica-gm-group)
+
+> **📌 🏷️ Apunt de la Unitat**
+> **TREBALL INCIBE**(Revisió Parcial: 12 Desembre 2019)
+>
+> Set.6 Gen - Mi ordenador es un zombie (Alexis + Alex)
+>
+> Set.13 Gen - Fundamentos del análisis de sitios Web (Samuel + Miguel Angel)
+>
+> Set.20 Gen - Fundamentos del análisis de sistemas (Roberto + Cristian)
+>
+> Set.27 Gen - Seguridad Wifi (Adria)
+>
+> Set.3 Feb - Espionaje y cibervigilancia (Raul + Pau)
+>
+> Set.10 Feb - Forense en Windows (Victor + Rene)
+
+---
+
+### 📄 SI2018-5.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-5.zip)**
+> - `SI2018-5/Diapositiva1.JPG`
+> - `SI2018-5/Diapositiva2.JPG`
+> - `SI2018-5/Diapositiva3.JPG`
+> - `SI2018-5/Diapositiva4.JPG`
+> - `SI2018-5/Diapositiva5.JPG`
+> - `SI2018-5/Diapositiva6.JPG`
+> - `SI2018-5/desktop.ini`
+
+### 📄 SI2018-6.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-6.zip)**
+> - `SI2018-6/Diapositiva1.JPG`
+> - `SI2018-6/Diapositiva2.JPG`
+> - `SI2018-6/Diapositiva3.JPG`
+> - `SI2018-6/Diapositiva4.JPG`
+> - `SI2018-6/Diapositiva5.JPG`
+> - `SI2018-6/Diapositiva6.JPG`
+> - `SI2018-6/desktop.ini`
+
+### 📄 SI2018-7.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-7.zip)**
+> - `SI2018-7/Diapositiva1.JPG`
+> - `SI2018-7/Diapositiva2.JPG`
+> - `SI2018-7/Diapositiva3.JPG`
+> - `SI2018-7/Diapositiva4.JPG`
+> - `SI2018-7/Diapositiva5.JPG`
+> - `SI2018-7/Diapositiva6.JPG`
+> - `SI2018-7/Diapositiva7.JPG`
+> - `SI2018-7/desktop.ini`
+
+### 📄 SI2018-8.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-8.zip)**
+> - `SI2018-8/Diapositiva1.JPG`
+> - `SI2018-8/Diapositiva2.JPG`
+> - `SI2018-8/Diapositiva3.JPG`
+> - `SI2018-8/Diapositiva4.JPG`
+> - `SI2018-8/Diapositiva5.JPG`
+> - `SI2018-8/Diapositiva6.JPG`
+> - `SI2018-8/desktop.ini`
+
+### 📄 SI2018-0.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-0.zip)**
+> - `SI2018-0/Diapositiva1.JPG`
+> - `SI2018-0/Diapositiva2.JPG`
+> - `SI2018-0/Diapositiva3.JPG`
+> - `SI2018-0/Diapositiva4.JPG`
+> - `SI2018-0/desktop.ini`
+
+### 📄 SI2018-1.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-1.zip)**
+> - `SI2018-1/Diapositiva1.JPG`
+> - `SI2018-1/Diapositiva2.JPG`
+> - `SI2018-1/Diapositiva3.JPG`
+> - `SI2018-1/Diapositiva4.JPG`
+> - `SI2018-1/Diapositiva5.JPG`
+> - `SI2018-1/Diapositiva6.JPG`
+> - `SI2018-1/Diapositiva7.JPG`
+> - `SI2018-1/Diapositiva8.JPG`
+> - `SI2018-1/Diapositiva9.JPG`
+> - `SI2018-1/desktop.ini`
+
+### 📄 SI2018-2.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-2.zip)**
+> - `SI2018-2/Diapositiva1.JPG`
+> - `SI2018-2/Diapositiva2.JPG`
+> - `SI2018-2/Diapositiva3.JPG`
+> - `SI2018-2/Diapositiva4.JPG`
+> - `SI2018-2/Diapositiva5.JPG`
+> - `SI2018-2/Diapositiva6.JPG`
+> - `SI2018-2/Diapositiva7.JPG`
+> - `SI2018-2/Diapositiva8.JPG`
+> - `SI2018-2/desktop.ini`
+
+### 📄 SI2018-3.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-3.zip)**
+> - `SI2018-3/Diapositiva1.JPG`
+> - `SI2018-3/Diapositiva2.JPG`
+> - `SI2018-3/Diapositiva3.JPG`
+> - `SI2018-3/Diapositiva4.JPG`
+> - `SI2018-3/Diapositiva5.JPG`
+> - `SI2018-3/Diapositiva6.JPG`
+> - `SI2018-3/Diapositiva7.JPG`
+> - `SI2018-3/desktop.ini`
+
+### 📄 SI2018-4.zip
+
+> **💡 📦 Contingut del paquet comprimit (SI2018-4.zip)**
+> - `SI2018-4/Diapositiva1.JPG`
+> - `SI2018-4/Diapositiva2.JPG`
+> - `SI2018-4/Diapositiva3.JPG`
+> - `SI2018-4/Diapositiva4.JPG`
+> - `SI2018-4/Diapositiva5.JPG`
+> - `SI2018-4/Diapositiva6.JPG`
+> - `SI2018-4/Diapositiva7.JPG`
+> - `SI2018-4/desktop.ini`
+
+### 📄 Seguridad-Informatica-McGraw-Hill-2013-xlibros.com_.pdf
+
+Seguridad informática Jose Fabián Roa Buendía Formativo Ciclo Grado Medio www.mhe.es/cf/informatica Certiﬁcados de profesionalidad www.xlibros.com
+
+Seguridad informática José Fabián Roa Buendía Revisión Técnica Francisco Javier Sanz MADRID - BARCELONA - BOGOTÁ - BUENOS AIRES - CARACAS - GUATEMALA MÉXICO - NUEVA YORK - PANAMÁ - SAN JUAN - SANTIAGO - SÃO PAULO AUCKLAND - HAMBURGO - LONDRES - MILÁN - MONTREAL - NUEVA DELHI - PARÍS SAN FRANCISCO - SIDNEY - SINGAPUR - ST. LOUIS - TOKIO - TORONTO www.xlibros.com
+
+4FHVSJEBEJOGPSNÃUJDBr$JDMP'PSNBUJWP(SBEP.FEJP No está permitida la reproducción total o parcial de este libro, ni su tratamiento informático, ni la transmisión de ninguna forma o por cualquier medio, ya sea electrónico, mecánico, por fotocopia, por registro u otros métodos, sin el permiso previo y por escrito de los titulares del Copyright.
+
+Si necesita fotocopiar o escanear algún fragmento de esta obra, diríjase a CEDRO (Centro Español de Derechos Reprográficos, www.conlicencia.org). Nota: Este libro se atiene al artículo 32 del derecho de cita de la Ley de Propiedad Intelectual de 1996 (R. D. Leg. 1/1996, de 12 de abril).
+
+Derechos reservados © 2013, respecto a la primera edición en español, por: McGraw-Hill/Interamericana de España, S. L. Edificio Valrealty, 1.a planta Basauri, 17 28023 Aravaca (Madrid) ISBN: 978-84-481-8569-5 ©
+
+José Fabián Roa Buendía "VUPSFTEFMNBUFSJBMDPNQMFNFOUBSJP José Fabián Roa Buendía, Gopal Bijani Chiquero &RVJQPFEJUPSJBM Ariadna Allés, Paloma Sánchez, María Dolores Crispín Diseño de cubierta: rload.es Diseño interior: dfrente.es 'PUPHSBGÎBT 123RF, iStockphoto *MVTUSBDJPOFT M.ª Carmen Fuente Canalda $PNQPTJDJÓO Diseño y Control Gráfico, S. L. U.
+
+Obra original: © 2013, respecto a la segunda edición en español, por McGraw-Hill Interamericana de España, S.L. ISBN edición original: 978-84-481-8396-7 Seguridad informática www.xlibros.com
+
+Presentación Cuando alguien me pregunta qué estudiamos en SMR (Sistemas Microinformá- ticos y Redes), yo les planteo esta analogía: a muchos nos gustan los coches, pero conducirlos. Si aparece alguna avería, o tenemos que pasar una revisión, lo llevamos a un mecánico. Pues bien, en SMR formamos mecánicos de sistemas, ordenadores y redes.
+
+Este libro cubre el módulo de Seguridad Informática dentro del currículo de este ciclo formativo de Formación Profesional. Es un tema imprescindible, puesto que el mundo está digitalizado a todos los niveles: personal, empresarial y guber- namental. La era de la información, con Internet como principal exponente, ha mejorado el nivel de vida y la convivencia en este planeta. La información es poder, luego hay que protegerla.
+
+Todos los servicios avanzados que disfrutamos están implementados sobre sis- temas informáticos que utilizan ordenadores con un hardware y un software concretos, conﬁgurados adecuadamente y conectados entre sí y con los clientes mediantes redes de comunicaciones. Cualquiera de estos elementos es suscep- tible de ser atacado por un saboteador o, simplemente, fallar. La seguridad informática intenta evitarlo y, en caso de que ocurra, minimizar los daños para recuperar el servicio lo antes posible. Al usuario ﬁnal no le importa si ha sido un ataque de un equipo de hackers contratado por la competencia o un simple apagón en la sala de servidores: él contaba con utilizar un servicio que nuestra empresa ha dejado de prestarle.
+
+Pero tenemos que asumir que la seguridad total es imposible. Ante cualquier ba- rrera física o lógica, el atacante buscará una forma de romperla o rodearla. Así ha sido hasta ahora y seguirá ocurriendo. Debemos tomar todas las medidas que estén a nuestro alcance y entren en nuestro presupuesto, pero su eﬁcacia dependerá del interés que otros tengan por acceder a nuestros datos y sistemas.
+
+No se protege igual la caja de un banco que la hucha de un niño. Quiero agradecer la total colaboración material y humana por parte del Co- legio Valle del Miro, tanto de mis compañeros informáticos como, sobre todo, de la jefatura de estudios, la dirección y la presidencia del centro. Nos que- dan muchos años juntos, y los vamos a disfrutar.
+
+Muchas gracias también a la editorial McGraw-Hill, a mis dos editoras, Ariadna y Loly, y a mi revisor, Francisco Javier, por toda la paciencia que han derrocha- do conmigo. Pero este libro va dedicado a los que cada día me dan todo su amor y cariño: mi mujer, Tote; mis hijos, Daniel y Enrique; mis padres, Fabián y Amparo, y todos los miembros de mi familia.
+
+Volviendo a la analogía del coche, el piloto y el mecánico, tienen algo en co- mún, además del vehículo: les gusta su trabajo. Y encima les pagan por hacerlo. Si vas a trabajar ocho horas de lunes a viernes, durante muchos años, intenta que sea haciendo algo que te guste de verdad. Y fórmate para conseguirlo.
+
+El autor www.xlibros.com
+
+Índice Conceptos sobre seguridad informática
+
+- ¿Por qué proteger? ........................................................................................................................................8
+- ¿Qué proteger? ...........................................................................................................................................10
+- Deﬁniciones ................................................................................................................................................14
+- Tipos de ataques .........................................................................................................................................19
+- Buenas prácticas .........................................................................................................................................21
+- Legislación ..................................................................................................................................................22
+
+Síntesis .......................................................................................................................................................24 Test de repaso .............................................................................................................................................25 Comprueba tu aprendizaje ...........................................................................................................................26 Criptografía
+
+- ¿Por qué cifrar? ...........................................................................................................................................28
+- Criptografía ................................................................................................................................................29
+- Criptografía simétrica y asimétrica .................................................................................................................30
+- Cifrar y ﬁrmar .............................................................................................................................................40
+- PKI. DNIe ...................................................................................................................................................48
+
+Síntesis .......................................................................................................................................................58 Test de repaso .............................................................................................................................................59 Comprueba tu aprendizaje ...........................................................................................................................60 Seguridad pasiva: equipos
+
+- Ubicación del CPD ......................................................................................................................................62
+- Centro de respaldo ......................................................................................................................................67
+- SAI/UPS .....................................................................................................................................................68
+
+Síntesis .......................................................................................................................................................72 Test de repaso .............................................................................................................................................73 Comprueba tu aprendizaje ........................................................................................................................... 74 Seguridad pasiva: almacenamiento
+
+- Estrategias de almacenamiento .....................................................................................................................76
+- Backup de datos .........................................................................................................................................94
+- Imagen del sistema .................................................................................................................................... 101
+
+Síntesis .....................................................................................................................................................108 Test de repaso ...........................................................................................................................................109 Comprueba tu aprendizaje ......................................................................................................................... 110 www.xlibros.com
+
+Índice Seguridad activa: sistema operativo y aplicaciones
+
+- Carrera de obstáculos ................................................................................................................................ 112
+- Autenticación en el sistema operativo .......................................................................................................... 121
+- Cuotas .....................................................................................................................................................129
+- Actualizaciones y parches .......................................................................................................................... 131
+- Antivirus ................................................................................................................................................... 132
+- Monitorización .........................................................................................................................................133
+- Aplicaciones web ......................................................................................................................................138
+- Cloud computing .......................................................................................................................................139
+
+Síntesis .....................................................................................................................................................140 Test de repaso ........................................................................................................................................... 141 Comprueba tu aprendizaje .........................................................................................................................142 Seguridad activa: acceso a redes
+
+- Redes cableadas .......................................................................................................................................144
+- Redes inalámbricas ....................................................................................................................................154
+- VPN ........................................................................................................................................................ 162
+- Servicios de red. Nmap y netstat .................................................................................................................164
+
+Síntesis .....................................................................................................................................................166 Test de repaso ...........................................................................................................................................167 Comprueba tu aprendizaje .........................................................................................................................168 Seguridad activa: control de redes
+
+- Espiar nuestra red ...................................................................................................................................... 170
+- Firewall ....................................................................................................................................................183
+- Proxy ..................................................................................................................................................... 194
+- Spam ......................................................................................................................................................200
+
+Síntesis .....................................................................................................................................................204 Test de repaso ...........................................................................................................................................205 Comprueba tu aprendizaje .........................................................................................................................206 Ataques y contramedidas
+
+- Ataques TCP/IP. MITM ................................................................................................................................208
+- Ataques wiﬁ. Aircrack-ng ............................................................................................................................ 214
+- Ataques web. WebGoat............................................................................................................................. 216
+- Ataques proxy. Ultrasurf ............................................................................................................................. 219
+
+Síntesis .....................................................................................................................................................222 Test de repaso ...........................................................................................................................................223 Comprueba tu aprendizaje .........................................................................................................................224 www.xlibros.com
+
+Cómo se utiliza este libro Presentación de la unidad Desarrollo de los contenidos Cierre de la unidad En esta unidad aprenderemos a: t%FTDSJCJSTJTUFNBTEFJEFOUJGJDBDJØO  DPNPMBGJSNBFMFDUSØOJDB ZFMDFSUJGJDBEPEJHJUBM FOUSFPUSPT t6UJMJ[BSTJTUFNBTEFJEFOUJGJDBDJØO  DPNPMBGJSNBFMFDUSØOJDB ZFMDFSUJGJDBEPEJHJUBM FOUSFPUSPT Y estudiaremos
+
+t-BDSJQUPHSBGÓB t-BJEFOUJGJDBDJØOEJHJUBM GJSNBFMFDUSØOJDB ZDFSUJGJDBEPEJHJUBM t-PTTJTUFNBTEFJEFOUJGJDBDJØO GJSNBFMFDUSØOJDB DFSUJGJDBEPT EJHJUBMFTZPUSPT Unidad Criptografía Aquí encontrarás los criterios de evaluación de la unidad. Además, te avanzamos los contenidos que se van a desarrollar.
+
+Seguridad activa: sistema operativo y aplicaciones Síntesis Evitar que abra la caja. Evitar que arranque desde un dispositivo externo (CD, USB). Evitar que modifique la configuración de la BIOS. Evitar que edite la configuración del gestor de arranque. Cifrar el contenido del disco por si falla alguna medida anterior.
+
+Hay que encaminar al usuario hasta la autenticación del sistema operativo Permiten controlar el uso de los recursos por parte de los usuarios. Generalmente se refieren al disco. Se pueden aplicar a todos los usuarios o a un grupo de ellos. Se puede configurar que solo avise al administrador o que también evite que exceda el límite impuesto.
+
+Cuotas Las herramientas suelen automatizar la búsqueda, descarga y aplicación de sus parches. Utilizan Internet. Generalmente conviene aplicarlos. Actualizaciones y parches Es importante instalarlo y, sobre todo, tenerlo actualizado. Antivirus No basta con instalar mecanismos de seguridad: hay que asegurarse de que están funcionando.
+
+También hay que supervisar los equipos y servicios para detectar nuevas necesidades de seguridad. Las tareas rutinarias hay que automatizarlas mediante herramientas de inventario y monitorización. Monitorización El trabajo de vigilancia se complica: los servidores pueden estar en un proveedor externo, los usuarios utilizan sus propios navegadores y la comunicación puede ser intervenida.
+
+Hay que redactar con cuidado el SLA con los proveedores. Aplicaciones web Mismos temores que con las aplicaciones web, aumentados porque hay más tecnologías, no solo HTTP. Hay que decidir si los servicios informáticos con el exterior (correo, chat, redes sociales) los seguimos implementando con recursos propios (máquinas, personal de soporte) o los subcontratamos.
+
+Cloud computing Establecer límites de longitud mínima, antigüedad, etc. Fácil de recordar por nosotros, difícil para cualquier otro. Complementan el usuario/password. Fáciles de manejar (tornos de entrada y otros). Reconocen características físicas de la persona (huella dactilar, retina, voz, etc.).
+
+Permite realizar puntualmente tareas de administrador sin estar presentado como administrador. En Linux, mediante sudo; en Windows, mediante UAC a partir de Windows Vista. Autenticación en el sistema operativo Usuario/password Tarjetas Biometría Elevación de privilegios Seguridad activa: control de redes Monitorización de tráfico Duración:  1 hora  Dificultad:  Alta Objetivo. Aprender a configurar e interpretar interfaces monitorizadas.
+
+Material. Cuatro ordenadores (uno con Windows 7, tres con Linux Ubuntu), acceso a Internet, software SpiceWorks.
+
+### 1. Vamos a instalar una red con un router Linux, un par
+
+de ordenadores de trabajo (llamados Ubuntu Server y Ubuntu Desktop) y un ordenador más, que será la esta- ción de supervisión, donde corre el software de moni- torización. Desde los ordenadores de trabajo genera- remos tráfico de red sobre el router Linux y desde la estación de supervisión controlaremos todo el proceso.
+
+### 2. Primero conectamos los ordenadores según el esquema
+
+de la Figura 7.1. El ordenador llamado Ubuntu Desktop puede ser una máquina virtual corriendo en la estación de supervisión. Necesitaremos conexión a Internet en la estación de supervisión para descargar el software asociado.
+
+### 3. El router Linux conecta dos subredes: la 10.0.1.0/24
+
+y la 192.168.10.0/24. Hay una tercera subred, la 192.168.1.0/24, para la salida a Internet por el router ADSL.
+
+### 4. Para facilitar la tarea, utilizaremos direcciones estáticas
+
+en todas las interfaces
+
+- 10.0.1.4 en Ubuntu Server.
+- 10.0.1.1 y 192.168.10.1 en router Linux.
+- 192.168.10.4 en Ubuntu Desktop.
+- 19192.168.10.3 y 192.168.1.33 en la estación de
+
+supervisión.
+
+### 5. En la Figura 7.2 vemos la configuración de la interfaz
+
+Ethernet de la estación de supervisión. No necesitamos servidor DNS porque siempre trabajaremos directa- mente con las direcciones IP.
+
+### 6. No debemos olvidar activar el enrutamiento de paque
+
+tes en el router Linux para que de verdad actúe como un router. Basta con introducir un 1 en el fichero ip _ forward.
+
+```bash
+# echo 1 > /proc/sys/net/ipv4/ip _ forward
+```
+
+### 7. Terminada la configuración de direcciones, empeza
+
+mos con los generadores de tráfico. En el router Linux vamos a poner un servidor FTP y desde los ordenado- res de trabajo (Ubuntu Server y Ubuntu Desktop) efec- tuaremos descargas de ficheros continuamente.
+
+### 8. Como servidor FTP podemos utilizar vsftpd. Lo instala
+
+remos con apt-get install vsftpd y dejaremos la confi- guración por defecto. La descarga la haremos con el usuario anonymous; por tanto, los ficheros que vamos a descargar debemos ponerlos en el directorio particu- lar del usuario FTP (será /home/ftp). Ahí crearemos un fichero de 10 KB con el comando
+
+```bash
+# dd if=/dev/zero of=/home/ftp/10k bs=1024
+```
+
+count=10
+
+### 9. Ahora vamos a los dos ordenadores de trabajo para
+
+crear los generadores de tráfico. Utilizaremos un script llamado generador.sh
+
+```bash
+# cat generador.sh
+```
+
+N=$1 E=$2 while `expr $N > 0` do echo intento $N
+
+```bash
+$N=`expr $N – 1`
+```
+
+ftp 192.168.10.1 <<EOF get 10k bye EOF sleep $E done El primer parámetro es el número de ejecuciones, y el segundo, el tiempo entre cada ejecución. Podemos pro- bar con diez ejecuciones y un segundo entre cada una. Caso práctico 1 (Continúa) Internet 192.168.1.33 192.168.10.3 192.168.10.4 192.168.10.1 10.0.1.1 10.0.1.4 Router wifi Ubuntu Server Ubuntu Desktop Router Linux Estación de supervisión Fig. 7.1. Esquema de monitorización.
+
+Fig. 7.2. Conﬁ guración IP de la estación de supervisión. Seguridad activa: control de redes 1.1. tcpdump tcpdump es una herramienta sencilla disponible en Linux que permite hacer un volcado de todo el tráfico que llega a una tarjeta de red. Captura todo el tráfico, no solo el tráfi- co TCP, como aparece en su nombre. Los paquetes leídos se muestran en pantalla o se pueden almacenar en un fichero del disco para ser tratados posteriormente por esta mis- ma herramienta u otra más avanzada. Se necesitan privilegios para ejecutarla, porque necesitamos poner la tarjeta en modo promiscuo para que acepte todos los paquetes, no solo los destinados a suMAC, como ya vimos en la Unidad 6.
+
+La captura con tcpdump se puede hacer en uno de los extremos si la conversación que estamos estudiando ocurre entre una máquina Unix y otra máquina Unix/Windows/etc. (hay versiones de tcpdump para Windows, pero aquí es mejor WireShark). Aunque tam- bién lo utilizaremos muchas veces para capturar las conversaciones que atraviesan un router Linux. En la distribución representada en la Figura 7.15 podremos capturar las co- municaciones entre los ordenadores de las dos VLAN y todas las conexiones a Internet, aunque no podremos conocer qué hablan entre sí los ordenadores de una misma VLAN.
+
+- Investiga qué son los filtros de tcpdump y prueba algunos de ellos.
+- Prueba a decodificar una conversación ping, FTP o HTTP mediante tcpdump –X.
+
+### 6. Prueba a conectar dos o tres routers Linux en cascada y efectúa captura en
+
+todas las interfaces para comprobar cómo cruzan los paquetes de un extremo a otro.
+
+### 7. Utiliza tcpdump para comprobar que los paquetes destinados a la misma
+
+subred llevan la IP y la MAC del ordenador destino, mientras que los paquetes destinados a ordenadores de otra subred llevan la IP del ordenador destino pero la MAC de la puerta de enlace.
+
+- ¿Cuándo podemos utilizar tcpdump con la opción -n, y qué nos aporta?
+
+Actividades Fig. 7.15. Captura con router Linux. Switch planta 2 Switch planta 1 Switch internet Router Linux VLAN soporte VLAN marketing Internet Routers tcpdump es un analizador de paquetes. Es útil para protocolos no orientados a conexión, como IP, UDP, DHCP, DNS e ICMP.
+
+Pero no ayuda mucho en los pro- tocolos orientados a conexión, como HTTP y SMTP, donde inte- resa identificar fácilmente todos los paquetes de una conexión. ¿Sabías que…? CASOS PRÁCTICOS Aplican los conocimientos aprendidos a problemas y situaciones reales del entorno profesional.
+
+ACTIVIDADES Permiten trabajar los contenidos a medida que se van explicando, y aseguran un aprendizaje progresivo. Una exposición clara y concisa de la teoría, acompa- ñada de recuadros que ayudan a la comprensión de los aspectos más importantes: Seguridad activa: sistema operativo y aplicaciones Test de repaso
+
+### 1. Caja del ordenador
+
+- No se puede proteger porque no tiene software donde
+
+poner usuario y contraseña.
+
+- Podemos protegerla metiéndola dentro de una caja
+
+fuerte.
+
+- Podemos utilizar un candado para dificultar el acceso
+
+a los componentes, sobre todo al disco duro.
+
+### 2. BIOS del ordenador
+
+- No hace falta protegerla si tenemos protegida la
+
+caja.
+
+- No tiene nada que proteger. La función de la BIOS
+
+es otra.
+
+- Debemos fijar el orden de arranque para arrancar
+
+siempre desde el disco duro.
+
+### 3. Contraseñas de las BIOS
+
+- Siempre hay que activarlas todas: usuario, supervi
+
+sor, cifrado de disco, etc.
+
+- Como mínimo, activaremos la contraseña de supervi
+
+sor para impedir modificaciones de la configuración.
+
+- La BIOS no tiene contraseñas.
+
+### 4. En el boot manager
+
+- No hay nada que temer: cuando arranque el sistema
+
+operativo ya le pedirá el usuario y la contraseña.
+
+- No hay nada que hacer: es un software muy simple.
+- Podemos poner contraseñas a la configuración y a
+
+cada una de las opciones de arranque.
+
+### 5. El cifrado de particiones
+
+- Solo tiene sentido para la partición del sistema ope
+
+rativo.
+
+- Solo tiene sentido para las particiones de datos.
+- Es necesario generar un disco de arranque para
+
+recuperar el sistema en caso de desastre.
+
+### 6. La contraseña de nuestro usuario
+
+- Debe ser fácil de recordar para nosotros pero difícil
+
+de adivinar para cualquier otra persona.
+
+- Es mejor dejarla en blanco: así no tenemos que re
+
+cordarla.
+
+- Le ponemos la marca de nuestro coche, para recor
+
+darla fácilmente.
+
+### 7. El acceso mediante tarjeta
+
+- Es más seguro si lo combinamos con la introduc
+
+ción de una contraseña («algo que tienes, algo que sabes»).
+
+- Si la tarjeta tiene un chip, es inteligente y ya no nece
+
+sitamos contraseña.
+
+- Es molesto porque las tarjetas llevan chips y necesi
+
+tan cargar las baterías.
+
+### 8. El acceso mediante biometría
+
+- Es más seguro si lo combinamos con la introduc
+
+ción de una contraseña («algo que eres, algo que sabes»).
+
+- Es más seguro si lo combinamos con la introducción
+
+de una contraseña y la lectura de una tarjeta («algo que eres, algo que sabes, algo que tienes»).
+
+- Solo está disponible para los servicios secretos y la
+
+policía.
+
+### 9. Cuotas de disco
+
+- No son necesarias: cada usuario controla muy bien
+
+cuánto ocupa.
+
+- Solo tienen sentido para usuarios administradores.
+- Son necesarias para evitar afectar el rendimiento del
+
+sistema.
+
+### 10. Actualizaciones de software
+
+- Siempre hay que aplicarlas, porque algo bueno harán.
+- En algunos casos habrá que revisarlas por si afectan
+
+a determinados servicios que ofrece nuestra máquina.
+
+- No son necesarias porque mi sistema operativo es
+
+original.
+
+### 11. Antivirus
+
+- Solo hace falta activarlo para escanear el programa
+
+de instalación de la aplicación que vamos a instalar.
+
+- No conviene arrancarlo, porque degrada el rendi
+
+miento de la máquina.
+
+- Debe estar activo siempre.
+
+### 12. Registros del sistema
+
+- No merece la pena revisarlos: no entenderemos nada.
+- Solo los utilizan los programadores, para depurar
+
+problemas.
+
+- Tenemos que revisarlos regularmente y, a ser posible,
+
+de manera automatizada.
+
+### 13. Computación en la nube
+
+- Nos permite olvidarnos de la seguridad, porque lo
+
+hace otro.
+
+- Nos permite olvidarnos de la seguridad, porque en
+
+Internet nunca pasa nada.
+
+- Tenemos que confiar en que el proveedor de la nube
+
+aplica las medidas de seguridad apropiadas. Soluciones: 1 c, 2 c, 3 b, 4 c, 5 c, 6 a, 7 a, 8 b, 9 c, 10 b, 11 c, 12 c, 13 c. Síntesis: esquema-resumen de los con- tenidos estudiados en la unidad. Test: ayuda a detectar cualquier lagu- na de conocimientos. Comprueba tu aprendizaje: activi- dades ﬁ nales agrupadas por crite- rios de evaluación.
+
+¿Sabías que…? Importante Web Ten cuidado Vocabulario www.xlibros.com
+
+En esta unidad aprenderemos a: t7BMPSBSMBJNQPSUBODJBEFNBOUFOFS MBJOGPSNBDJØOTFHVSB t$POPDFSMBTEJGFSFODJBTFOUSF TFHVSJEBEGÓTJDBZMØHJDB t$POUSBTUBSMBJODJEFODJBEFMBTUÏDOJDBT EFJOHFOJFSÓBTPDJBMFOMPTGSBVEFT JOGPSNÈUJDPTZSPCPTEFJOGPSNBDJØO t$POPDFSMBMFHJTMBDJØOTPCSF QSPUFDDJØOEFEBUPTEFDBSÈDUFS QFSTPOBM t$POPDFSMBMFHJTMBDJØOBDUVBM TPCSFMPTTFSWJDJPTEFMBTPDJFEBE EFMBJOGPSNBDJØOZDPNFSDJP FMFDUSØOJDP t$POUSBTUBSMBTOPSNBTTPCSF HFTUJØOEFTFHVSJEBE EFMBJOGPSNBDJØO Y estudiaremos
+
+t-BBQMJDBDJØOEFNFEJEBTEFTFHVSJEBE BDUJWBZQBTJWB t-PTNÏUPEPTQBSBBTFHVSBSMBQSJWBDJEBE EFMBJOGPSNBDJØOUSBOTNJUJEB t-PTGSBVEFTJOGPSNÈUJDPTZSPCPTEF JOGPSNBDJØO t-BMFHJTMBDJØOTPCSFQSPUFDDJØO EFEBUPT t-BMFHJTMBDJØOTPCSFMPTTFSWJDJPT EFMBTPDJFEBEEFMBJOGPSNBDJØO ZFMDPSSFPFMFDUSØOJDP Unidad Conceptos sobre seguridad informática www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+- ¿Por qué proteger?
+
+Una experiencia personal: una persona me trae su portátil porque dice que va lento. Le extraña que haya entrado algún troyano porque le puso un antivirus. Recojo el ordenador y le pregunto por la contraseña del administrador. Dice que no tie- ne ningún usuario que se llame así, solo el usuario con su nombre. Y no tiene contraseña, entra directamente al pinchar sobre el icono.
+
+¿No temes que alguien pueda usar tu ordenador sin tu permiso? —¿Por qué? Mi portátil solo lo uso yo. —Pero sí lo conectas a Internet. ¿No sabes que pueden entrar por ahí? —Imposible: sí que tengo contraseña en la wifi de casa. No insisto más y cojo el ordenador. En efecto, tenía un antivirus, pero estaba caducado.
+
+Lo quito, instalo otro y encuentra un troyano. El antivirus lo quita y devuelvo el ordenador a su dueño. Le volveré a ver pronto, me temo. Así es la inmensa mayoría de los usuarios de ordenadores, tabletas, móviles… Deberían saber que sus máquinas son muy poderosas, pero también muy vulnerables. Es impor- tante reconocerlo, dado que nuestra vida es digital
+
+t Hablamos por teléfonos móviles. t Enviamos mensajes con aplicaciones IP, como e-mail, WhatsApp, etc. t Hacemos compras por Internet. De todo tipo: libros, viajes, comida. t Estudiamos por Internet, desde una simple búsqueda de información en la Wikipedia hasta clases en directo en un campus virtual.
+
+t Entramos en contacto con determinadas empresas y organizaciones a través de su página web para conocer las novedades de su último lanzamiento, pedir ayuda con un problema, etc. t Las empresas realizan entre sí contratos electrónicos sin necesitar una firma en un papel.
+
+No hay marcha atrás. La era de la información es el presente y el futuro de nuestra civi- lización. Por eso hay que estar preparados para evitar estas situaciones: t Nuestras conversaciones son personales: nadie más debería poder escucharlas. t Nuestros mensajes son privados: nadie debería tener acceso a ellos.
+
+t Una compra solo interesa al vendedor y al comprador. Y debe asegurarse que el vende- dor proporcionará los productos elegidos y el comprador pagará el precio acordado. t La información pública en Internet debe estar al alcance de todos. t Las empresas deben cuidar su imagen: no pueden consentir un ataque a su página web que modifique el contenido, engañando a sus clientes y usuarios.
+
+t Los contratos entre empresas son privados en muchos casos, y en todos los casos les com- prometen a llevarlos a cabo. Nadie externo debe poder alterarlos, ni siquiera conocerlos. La seguridad informática intenta proteger el almacenamiento, procesamiento y transmi- sión de información digital. En los ejemplos anteriores
+
+t Las conversaciones por teléfono móvil van cifradas: aunque otro móvil pueda recibir la misma señal, no puede entender qué están transmitiendo. t Los mensajes se almacenan en el servidor de correo y, opcionalmente, en el cliente de correo que ejecuta en mi ordenador. Debemos proteger esos equipos, así como la co- municación entre ambos (como veremos en la Unidad 6). Por ejemplo, podemos cifrar el mensaje y enviarlo al servidor por una conexión cifrada.
+
+t La navegación por la web del vendedor puede ser una conexión no cifrada, pero cuando se utiliza el carrito debemos pasar a servidor seguro. Por otra parte, la web del vende- dor debe estar disponible a todas horas: hay que protegerla frente a caídas de tensión, cortes de red, accidentes o sabotajes de sus instalaciones (inundaciones, incendios, etc.).
+
+t Los servidores de información de una red mundial deben estar disponibles a todas horas.
+
+### 1. Encuentra los defectos de
+
+seguridad del ejemplo del portátil contaminado. ¿Cómo los resolverías? Actividades En agosto de 2012 algunos futbo- listas famosos sufrieron un ata- que en sus cuentas de Twitter: un hacker podía incluir men- sajes falsos, que aparecían en sus cuentas, pero no los habían escrito ellos
+
+http://goo.gl/1Gf6O El 8 de julio de 2008 hubo una actuación coordinada de la ma- yoría de los fabricantes de soft- ware y hardware para resolver una vulnerabilidad descubier- ta en el protocolo DNS, el res- ponsable de traducir nombres a direcciones IP. Toda la red In- ternet estaba en peligro
+
+http://goo.gl/5Eryq ¿Sabías que…? En el Centro de Enseñanza On- line de este libro (http://www. mhe.es/cf/informatica) encontra- rás todos los documentos mencio- nados en los cuadros CEO. CEO www.xlibros.com
+
+Conceptos sobre seguridad informática t Las empresas deben restringir el acceso a las partes protegidas de su web, como la administración y la edición de contenidos (Unidad 5). t Los contratos deben llevar la firma digital de las empresas interesadas (Unidad 2) y deben almacenarse en discos cifrados con almacenamiento redundante (Unidad 4), cuya copia de seguridad irá también cifrada (Unidad 4), y se dejará en un edificio diferente, a ser posible en otra ciudad (Unidad 3).
+
+A pesar de toda nuestra preocupación y todas las medidas que tomemos, la seguridad com- pleta es imposible. Debemos asumir que hemos desplegado la máxima seguridad posible con el presupuesto asignado y la formación actual de nuestros técnicos y usuarios: t Con más dinero podríamos replicar los servidores, las conexiones, el suministro eléc- trico o todo a la vez (Unidad 3).
+
+t Con más formación en los técnicos podríamos desplegar sistemas avanzados de protec- ción, como los NIPS (Network Intrusion Prevention System), que veremos en la Unidad 7. t Con más formación en los usuarios podríamos estar tranquilos porque no comparti- rían su contraseña con otros usuarios, no entrarían en páginas potencialmente peligro- sas y, cuando llegaran a casa, el portátil o el móvil de empresa no lo usaría cualquier otro componente de su familia.
+
+Por otra parte, podemos estar seguros de que en nuestra casa o en nuestra empresa estamos aplicando todas las medidas; pero no sabemos qué hacen las otras personas con las que nos comunicamos. En el ámbito personal, posiblemente enviamos imágenes a alguien que no sabe que tiene un troyano en su ordenador, y que ese troyano está especializado en difundir en Internet cualquier imagen que encuentra.
+
+En el fondo, todo es información: sean los escasos 140 caracteres de un tweet, sean ficheros de varios megabytes, están en nuestro equipo y alguien puede intentar obtener- los. La clave es la motivación: quién está interesado en nuestra información. Es poco pro- bable que algún superhacker intente entrar en nuestro ordenador portátil a por nuestras fotos descargadas de la cámara o nuestros apuntes de clase; seguramente no le costaría mucho, pero el esfuerzo no le merece la pena.
+
+En cambio, las empresas sí son mucho más atractivas para estas actividades delictivas. Hasta tal punto que existen las auditorías de seguridad: contratamos a una empresa externa especializada en seguridad informática para que revise nuestros equipos y nuestros procedimientos. Un ejemplo de estas empresas son los tiger teams (equipos tigre): intentan acceder a nuestras instalaciones como lo haría un hacker, para confirmar si podemos estar tranquilos.
+
+Por otro lado, los mecanismos de seguridad deben estar adaptados a cada caso particular: una contraseña de 20 caracteres que utiliza mayúsculas, minúsculas, números y signos de puntuación es muy segura; pero si obligamos a que sean así las contraseñas de todos los empleados, la mayoría la apuntará en un papel y la pegará con celofán en el monitor. Cual- quiera que se siente en el ordenador tendrá acceso a los recursos de ese usuario.
+
+Un caso real donde se mezcla lo profesional y lo personal: una persona regala a su pa- reja un teléfono móvil de la empresa. La pareja no lo sabe, pero el equipo lleva preins- talado un troyano que registra todas las llamadas y mensajes efectuados con ese telé- fono. Con esa información, el programa elabora un informe que luego cuelga en una web, donde se puede consultar introduciendo el usuario y la contraseña adecuados.
+
+Por este medio descubre que su pareja mantiene una relación paralela con otra persona, que es amigo de la pareja y también trabaja en la misma empresa. El siguiente paso es regalar otro móvil a ese amigo con el mismo troyano, para así espiar la vida de ambos. Afortunadamente, la empresa de telefonía que da servicio a la empresa tiene un equipo de vigilancia que detecta ese tráfico extraño de informes espontáneos. Avisa a los direc- tivos de la empresa y se denuncia al empleado.
+
+Este último ejemplo también muestra que, aunque los ataques necesitan un componente técnico informático más o menos avanzado, muchas veces hay un factor humano que facilita enormemente la tarea del atacante y contra el que los administradores de los sistemas poco pueden hacer.
+
+En las empresas es habitual en- contrar carteles en los pasillos que recuerdan a los emplea- dos que los datos que manejan son importantes y deben pro- tegerlos. ¿Sabías que…? www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+- ¿Qué proteger?
+
+Debido al presupuesto, no podemos aplicar todas las medidas de seguridad posibles a todos los equipos de la empresa. Debemos identificar los activos que hay que proteger: qué equipos son más importantes y qué medidas aplicamos en cada uno. Por ejemplo, todos los equipos deben llevar antivirus y firewall; sin embargo, la ocupación del disco duro solo nos preocupará en los servidores, no en los puestos de trabajo. Del mismo modo, el control del software instalado es mucho más exhaustivo en un servidor que en un ordenador personal.
+
+Sin embargo, el mayor activo es la información contenida en los equipos, porque un equipo dañado o perdido se puede volver a comprar y podemos volver a instalar y configurar todas las aplicaciones que tenía. Es caro, pero tenemos el mismo ordenador o mejor; sin embargo, los datos de nuestra empresa son nuestros, nadie nos los puede devolver si se pierden. En este punto nuestra única esperanza son las copias de seguri- dad y el almacenamiento redundante, que veremos en la Unidad 4.
+
+#### 2.1. Equipos
+
+En cuanto a la seguridad física de los equipos: t Es fundamental que no se puedan sustraer, ni el equipo entero ni alguna pieza del mismo (principalmente el disco duro, pero también el dispositivo donde se hace la copia de seguridad de ese disco). t En el caso de los portátiles no podemos evitar que salgan de la empresa, porque los trabajadores visitan las dependencias del cliente o se llevan trabajo a casa. Pero sí debemos vigilar que esos ordenadores apliquen cifrado en el disco duro y tengan contraseñas actualizadas, sobre todo en los usuarios con perfil de administrador.
+
+t Es importante que no se puedan introducir nuevos equipos no autorizados. Un hacker no necesita romper la seguridad de un servidor si puede conectar a la red de la em- presa un equipo suyo con el software adecuado para realizar el ataque. O si puede introducir un troyano en algún ordenador de un empleado.
+
+t Aplicaremos mantenimiento preventivo para evitar averías. Por ejemplo, en cada or- denador, una vez al año, abrir la caja para limpiar los disipadores y los ventiladores, porque el polvo acumulado puede anular su función de rebajar la temperatura del sistema.
+
+#### 2.2. Aplicaciones
+
+Los ordenadores de una empresa deben tener las aplicaciones estrictamente necesarias para llevar a cabo el trabajo asignado: ni más ni menos. Menos es evidente porque impediría cumplir la tarea; pero también debemos evitar instalar software extra por- que puede tener vulnerabilidades que puedan dañar al sistema completo.
+
+Cuando una empresa adquiere un nuevo equipo, el personal de sistemas procede a maquetarlo: instala las aplicaciones utilizadas en esa empresa, cada una en la versión adecuada para esa empresa, con la configuración particular de esa empresa. Incluso puede llegar a sustituir el sistema operativo que traía el equipo por la versión que se utiliza en la empresa. El objetivo perseguido es múltiple
+
+t Ahorrar al usuario la tarea de instalar y configurar cada aplicación (y de paso evita- mos darle demasiados privilegios). t Asegurar que el software instalado responde a las licencias compradas en la empresa. t Homogeneizar el equipamiento, de manera que solo tendremos que enfrentarnos a los problemas en una lista reducida de configuraciones de hardware. La solución encontrada se aplica rápidamente a todos los equipos afectados.
+
+El número de ataques aumenta, y las consiguientes pérdidas eco- nómicas también: http://goo.gl/sJQFI Para lanzar un ataque no hacen falta muchos conocimientos de in- formática: simplemente podemos comprarlo: http://goo.gl/R66r1 Los principales objetivos de los hackers son compañías de segu- ridad y bancos
+
+http://goo.gl/ET69Q Web www.xlibros.com
+
+Conceptos sobre seguridad informática Pero debemos estar preparados porque otras aplicaciones intentarán instalarse: t Intencionadamente. El usuario lanza un instalador del programa que ha descargado de Internet o lo trae de casa en un CD/USB. t Inocentemente. El usuario entra en una página pirata que hace la descarga sin que lo sepa, o introduce un CD/USB que desconoce que está infectado por un virus.
+
+En ambos casos, el antivirus será una barrera y la ausencia de privilegios de administra- ción también ayudará. Pero conviene aplicar otras medidas para no ponerlos a prueba: t A la hora de crear un usuario, evitar que tenga privilegios de administración del siste- ma. Aunque todavía puede instalar determinadas aplicaciones, solo afectarán a ese usuario, no a todos los de esa máquina.
+
+t Desactivar el mecanismo de autoarranque de aplicaciones desde CD o USB (en algu- nas empresas, al maquetar los equipos de usuario, incluso quitan los lectores de CD y desactivan los USB de la máquina). Autoarranque de aplicaciones en sistema Windows Duración:  15 minutos  Dificultad:  Fácil Objetivo. Conocer el mecanismo de autoarranque de apli- caciones y los riesgos que conlleva.
+
+Material. Ordenadores con distintas versiones de Windows, pendrive USB.
+
+### 1. En Windows 95, Microsoft introdujo la funcionalidad
+
+llamada AutoRun. El objetivo era facilitar al usuario la instalación de aplicaciones en los ordenadores: bas- taba con introducir el CD del programa y automática- mente arrancaba el asistente de instalación.
+
+### 2. Para que ocurriera así, debía existir un fichero llamado
+
+autorun.inf en la raíz del CD. En este fichero se indicaba el programa que había que lanzar cuando se insertaba el CD.
+
+### 3. Sin embargo, un virus puede aprovechar este meca
+
+nismo para reproducirse fácilmente, introduciéndose en cada CD que se grabe en esa máquina.
+
+### 4. Por desgracia, también funciona con los USB. Y utiliza
+
+mos mucho más los USB que los CD.
+
+### 5. Vamos a comprobarlo. En un ordenador con XP SP2
+
+insertamos el USB. El sistema lo reconoce y nos pre- gunta qué queremos hacer con esa unidad (Fig. 1.1). No elegimos nada especial.
+
+### 6. Ahora nos vamos a la raíz de esa unidad para crear
+
+dos ficheros. Uno será una copia del bloc de notas (le llamaremos bloc.exe); el otro será un autorun.inf que simplemente lanzará ese bloc de notas. El conte- nido del fichero será (Fig. 1.2): [autorun] shellexecute=bloc.exe Caso práctico 1 (Continúa) Fig. 1.2. Preparamos la trampa.
+
+Fig. 1.1. Acciones posibles. www.xlibros.com
+
+Conceptos sobre seguridad informática La primera garantía que debemos tener a la hora de instalar una aplicación es su ori- gen: si ha llegado en un CD del fabricante o si la descargamos de su web, o si está incluida en el mecanismo de actualizaciones automáticas de la versión actual. Si el CD no es original, o si descargamos de la web de otro, debemos desconfiar.
+
+Por ejemplo, en los teléfonos móviles y tabletas la mayoría de las aplicaciones procede de la aplicación oficial del fabricante (Google Play en Android, App Store en iPhone). Utilizamos su opción de búsqueda, miramos que el número de descargas sea elevado y la bajamos. Durante la instalación nos pide permiso para hacer algunas cosas en el equipo, aunque no tiene mucho sentido porque el 99 % de los usuarios no sabe qué le está preguntando y siempre acepta. En el fondo, confiamos en que la aplicación no es peligrosa porque la hemos encontrado en el sitio oficial, donde se supone que la prue- ban antes de colgarla.
+
+#### 2.3. Datos
+
+Como hemos dicho antes, las máquinas y las aplicaciones se compran; pero los datos de nuestra empresa son exclusivamente suyos. Hay que protegerlos por dos aspectos: t Si desaparecen, la empresa no puede funcionar con normalidad. t Si llegan a manos de la competencia, la estrategia empresarial y el futuro de la com- pañía están en riesgo.
+
+### 7. Listo. Sacamos y volvemos a meter el USB. De nuevo,
+
+no elegimos ninguna acción y vamos Inicio > Mi PC para localizar la unidad correspondiente (Fig. 1.3).
+
+### 8. Si hacemos doble clic sobre la unidad E: no aparece
+
+rán los ficheros de la unidad, sino que se ejecutará el bloc de notas. Si ese ejecutable tuviera un virus, ya estaríamos infectados.
+
+### 9. Ahora vamos a un Windows Vista y repetimos la
+
+prueba. Al conectar el USB también aparece una ven- tana de acciones posibles (Fig. 1.4).
+
+### 10. De nuevo evitamos elegir nada y vamos a Inicio >
+
+Equipo para intentar el doble clic en la unidad. Afortu- nadamente, se ignora nuestro autorun.inf y apare- cen los ficheros sin ningún riesgo (Fig. 1.5).
+
+### 11. Este cambio de comportamiento con los USB ha sido una
+
+decisión de Microsoft que afecta a Windows 7, Vista y XP SP3. Está explicado en esta web: http://goo.gl/NXXVt. Caso práctico 1 (Continuación)
+
+### 2. Discute en clase si resulta
+
+conveniente desactivar los USB de los ordenadores de los empleados.
+
+### 3. Aunque un usuario tenga
+
+privilegios limitados en una máquina, ¿todavía es un peligro potencial?
+
+- ¿Resulta totalmente fiable
+
+utilizar las aplicaciones descargadas de Google Play? Actividades Fig. 1.3. Localizamos la unidad. Fig. 1.4. Acciones en Windows Vista. Fig. 1.5. Lista de ﬁ cheros. www.xlibros.com
+
+Conceptos sobre seguridad informática Las empresas modernas responden al esquema de «oficina sin papeles»: están informa- tizados todos los datos que entran, los generados internamente y los que comunicamos al exterior. La infraestructura necesaria es amplia y compleja porque los niveles de segu- ridad son elevados
+
+t Todos los equipos deben estar especialmente protegidos contra software malicioso que pueda robar datos o alterarlos. t El almacenamiento debe ser redundante: grabamos el mismo dato en más de un dispositivo. En caso de que ocurra un fallo de hardware en cualquier dispositivo, no hemos perdido la información.
+
+t El almacenamiento debe ser cifrado. Las empresas manejan información muy sensi- ble, tanto los datos personales de clientes o proveedores como sus propios informes, que pueden ser interesantes para la competencia. Si, por cualquier circunstancia, per- demos un dispositivo de almacenamiento (disco duro, pendrive USB, cinta de backup), los datos que contenga deben ser inútiles para cualquiera que no pueda descifrarlos.
+
+#### 2.4. Comunicaciones
+
+Los datos no suelen estar recluidos siempre en la misma máquina: en muchos casos salen con destino a otro usuario que los necesita. Esa transferencia (correo electrónico, men- sajería instantánea, disco en red, servidor web) también hay que protegerla. Debemos utilizar canales cifrados, incluso aunque el fichero de datos que estamos transfiriendo ya esté cifrado (doble cifrado es doble obstáculo para el atacante).
+
+Además de proteger las comunicaciones de datos, también es tarea de la seguridad in- formática controlar las conexiones a la red de la empresa. Sobre todo con la expansión del teletrabajo, que permite aprovechar Internet para trabajar en la red interna como si estuviéramos sentados en una mesa de la oficina. Ahora las redes de las empresas necesitan estar más abiertas al exterior, luego estarán más expuestas a ataques desde cualquier parte del mundo.
+
+El peligro también está en la propia oficina: no puede ser que cualquier visitante entre en nuestra red con solo conectar su portátil a una toma de la pared o a través del wifi de la sala de espera. Un hacker seguramente no conoce los usuarios y contraseñas de los administradores de cada máquina; pero puede introducir software malicioso que in- tente adivinarlo, aprovechar vulnerabilidades no resueltas en nuestras aplicaciones para desplegar gusanos que ralenticen el rendimiento de la red, etc.
+
+Un segundo objetivo de la supervisión de las comunicaciones es evitar la llegada de correo no deseado (spam) y publicidad en general. Con ello liberamos parte de la ocu- pación de la conexión a Internet, reducimos la carga de los servidores de correo (así como la ocupación de disco), nuestros usuarios no sufrirán distracciones y finalmente evitamos ataques camuflados en esos correos.
+
+La tendencia actual en las empresas es migrar sus sistemas a Internet. Es el llamado cloud computing. Las más atrasadas todavía se limitan a disponer del servicio de correo elec- trónico con su propio dominio (@miempresa.es) y colgar la página web en algún servidor compartido (hosting); pero muchas ya utilizan el almacenamiento en web (por ejemplo, Dropbox y Google Drive para usuarios individuales; S3 de Amazon para empresas) y algunas están desplazando toda su infraestructura informática a servidores virtuales situa- dos en algún punto del planeta con conexión a Internet (de nuevo Amazon con su EC2).
+
+Realmente hace mucho que utilizamos cloud computing: todos los webmail (Gmail, Hotmail, etc.) son servicios de correo electrónico que no están en nuestros ordenado- res, sino que nos conectamos a ellos mediante un navegador para enviar, recibir y leer los mensajes, sin importarnos cuántos servidores o equipos de red ha necesitado desplegar esa empresa para que todo funcione con normalidad.
+
+Sea cual sea el grado de adopción de cloud computing en una empresa, la primera premisa debe ser la seguridad en las comunicaciones, porque todos esos servicios están en máquinas remotas a las que llegamos atravesando redes de terceros. Las redes de telefonía móvil no son inmunes a los ataques
+
+http://goo.gl/7Xt6r Los teléfonos por satélite, tam- poco: http://goo.gl/KpZYu Web www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+### 3. Definiciones
+
+Para fijar los conceptos relacionados con la seguridad informática vamos a intentar ela- borar un pequeño diccionario. Utilizaremos ejemplos de la vida real para comprobar que la seguridad está en todas partes, no solo en los ordenadores.
+
+#### 3.1. Seguridad física/lógica, activa/pasiva
+
+La seguridad física cubre todo lo referido a los equipos informáticos: ordenadores de propósito general, servidores especializados y equipamiento de red. La seguridad ló- gica se refiere a las distintas aplicaciones que ejecutan en cada uno de estos equipos. Las amenazas contra la seguridad física son
+
+t Desastres naturales (incendios, inundaciones, hundimientos, terremotos). Los tenemos en cuenta a la hora de ubicar el emplazamiento del centro de proceso de datos (CPD), donde alojamos los principales servidores de la empresa; pero, aunque tengamos el mejor sistema de extinción de incendios o la sala esté perfectamente sellada, siempre deberíamos tener un segundo CPD para que la actividad no pare.
+
+t Robos. Nuestros equipos, y sobre todo la información que contienen, resultan valiosos para otros individuos u organizaciones. Debemos proteger el acceso a la sala del CPD mediante múltiples medidas de seguridad: vigilantes, tarjetas de acceso, identifi- cación mediante usuario y contraseña, etc.
+
+t Fallos de suministro. Los ordenadores utilizan corriente eléctrica para funcionar y necesitan redes externas para comunicar con otras empresas y con los clientes. Estos servicios los contrataremos con determinados suministradores, pero debemos estar preparados para las ocasiones en que no puedan proporcionarlo: unas baterías o un grupo electrógeno por si falla la corriente, una segunda conexión a Internet como línea de backup —incluso podemos optar por una solución inalámbrica— para estar protegidos ante un corte en la calle.
+
+Las amenazas contra la seguridad lógica son: t Virus, troyanos y malware en general. Como ocurre con el spam en el correo electró- nico, el malware es software no deseado y que debemos eliminar. t Pérdida de datos. Un defecto en el código fuente de una aplicación, o una configu- ración defectuosa de la misma, puede ocasionar modificaciones inexplicables en la información almacenada, incluso la pérdida de datos. Para reducir este riesgo, las empresas prueban muy bien una aplicación antes de decidir utilizarla y, sobre todo, realizan copias de seguridad en varios puntos del procesamiento de la información para poder recuperarse sin perderlo todo.
+
+t Ataques a las aplicaciones de los servidores. Los hackers intentarán entrar a por los datos aprovechando cualquier vulnerabilidad del sistema operativo o de las aplica- ciones que ejecutan en esa máquina (por eso conviene tener instalado el software mínimo imprescindible).
+
+Por otro lado, podemos hablar de seguridad activa y seguridad pasiva. La seguridad pasiva son todos los mecanismos que, cuando sufrimos un ataque, nos permiten recuperarnos razonablemente bien. Por ejemplo, las baterías ante una caída de tensión o la copia de seguridad cuando se ha estropeado la información de un disco.
+
+La seguridad activa intenta protegernos de los ataques mediante la adopción de medi- das que protejan los activos de la empresa, como vimos en el epígrafe anterior: equipos, aplicaciones, datos y comunicaciones. Malware se refiere al software que se diseña e implementa para causar daño a quien, inocente- mente, lo instale. Los antivirus in- tentan detectar y eliminar estos programas antes de que infec- ten el sistema.
+
+Vocabulario www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+#### 3.2. Confidencialidad, disponibilidad, integridad y no repudio
+
+La confidencialidad intenta que la información solo sea utilizada por las personas o máquinas debidamente autorizadas. Para garantizar la confidencialidad necesitamos disponer de tres tipos de mecanismos: t Autenticación. La autenticación intenta confirmar que una persona o máquina es quien dice ser, que no estamos hablando con un impostor.
+
+t Autorización. Una vez autenticado, los distintos usuarios de la información tendrán distintos privilegios sobre ella. Básicamente dos: solo lectura, o lectura y modificación. t Cifrado. La información estará cifrada para que sea inútil para cualquiera que no supere la autenticación.
+
+Veamos algunos ejemplos del mundo real: t Para entrar a un estadio de fútbol se necesita una entrada (autenticación); pero unos irán a tribuna y otros a un palco VIP (autorización). t Para sacar dinero de un cajero necesitas una tarjeta y el PIN de esa tarjeta (autenti- cación).
+
+t Al recoger un envío certificado necesitas llevar el DNI, para que comprueben que eres tú (autenticación). t En los parques temáticos hay que llevar una entrada (autenticación) y, si pagas un poco más, tienes un fast-pass para no hacer cola en las atracciones (autorización).
+
+El objetivo de la integridad es que los datos queden almacenados tal y como espera el usuario: que no sean alterados sin su consentimiento. Un ejemplo sería el identificador de la cuenta bancaria, que tiene cuatro grupos de números: t Cuatro dígitos del código del banco.
+
+t Cuatro dígitos del código de la sucursal del banco donde hemos abierto la cuenta. t Dos dígitos de control. t Diez dígitos para el código de la cuenta, dentro de todas las abiertas en esa sucursal. Los dígitos de control se obtienen por combinación numérica de los otros 18 números.
+
+Esa combinación es una operación matemática que nos asegura que cualquier pequeño cambio en alguno de los 18 números generaría unos dígitos de control distintos. Es decir, si queremos hacer una transferencia bancaria por teléfono y, al dictar el número de cuenta, cambiamos sin querer alguno de los dígitos (da igual cualquiera de los 20), quien apun- ta ese número de cuenta no podrá operar con ella porque es un número inválido, ya que los dígitos de control no corresponden a los otros 18.
+
+La disponibilidad intenta que los usuarios puedan acceder a los servicios con norma- lidad en el horario establecido. Para ello se invierte en sobredimensionar los recursos: t Una tienda tiene dos datáfonos con dos bancos distintos. Así siempre puede ofrecer el cobro por tarjeta.
+
+t Un equipo de fútbol tiene varios suplentes en el banquillo. Así siempre puede intentar mantener once jugadores cuando alguno se lesiona. t Los aviones llevan piloto y copiloto. t Cuando se hacen obras entre dos estaciones de metro, hay una línea de autobuses que lleva de una a otra por superficie, y el ticket es el mismo.
+
+El no repudio se refiere a que, ante una relación entre dos partes, intentaremos evitar que cualquiera de ellas pueda negar que participara en esa relación. Hay muchos ejemplos de la vida real: t Los contratos se firman por las dos partes. Por ejemplo, la hipoteca de una casa.
+
+t Firmamos el impreso de matriculación en un ciclo formativo. t En algunas tarjetas de crédito hay que firmar un papel con los datos de la compra, y la tienda se queda una copia.
+
+### 5. Busca el algoritmo matemá
+
+tico que permite obtener la letra del DNI a partir de los números del mismo. Com- pruébalo con tu DNI y el de algún compañero. Actividades www.xlibros.com
+
+Conceptos sobre seguridad informática t Conservamos el ticket de compra para poder solicitar la devolución. t Cuando hacemos una reserva de vuelo obtenemos un localizador; a la hora de retirar el billete no pueden negar que hicimos la reserva. Comprobación de integridad en Linux Duración:  10 minutos  Dificultad:  Fácil Objetivo. Utilizar la suma de comprobación de ficheros.
+
+Material. Ordenador con Linux Ubuntu 12.04.
+
+### 1. En Linux el comando sum permite obtener de un
+
+fichero el equivalente al dígito de control de la cuenta bancaria. Si modificamos el fichero, el valor devuelto por sum cambia. La secuencia de comandos sería (Fig. 1.6)
+
+```bash
+$ echo esto es una prueba > a
+$ sum a
+```
+
+01578 1
+
+```bash
+$ echo mas >>a
+$ sum a
+```
+
+00204 1
+
+### 2. Por tanto, si nos han enviado un fichero, para compro
+
+bar que ha llegado bien deberíamos preguntar al emi- sor cuál es el sum en su máquina, y compararlo con el sum del fichero que hemos recibido.
+
+### 3. En algunos ficheros pequeños, el comando sum puede
+
+fallar y generar el mismo par de números, aunque efec- tivamente se hayan producido algunos cambios. Es más fiable el comando cksum (Fig. 1.7). Caso práctico 2 Fig. 1.6. Ejemplo de sum. Fig. 1.7. Ejemplo de cksum.
+
+#### 3.3. Sabes-tienes-eres
+
+La autenticación es especialmente importante en temas de seguridad. Debemos estar muy seguros de la identidad de la persona o sistema que solicita acceder a nuestra informa- ción. Un esquema muy utilizado para analizar la autenticación es clasificar las medidas adoptadas según tres criterios
+
+t Algo que sabes. Para acceder al sistema necesitas conocer alguna palabra secreta: la típica contraseña. t Algo que tienes. En este caso es imprescindible aportar algún elemento material: ge- neralmente una tarjeta. t Algo que eres. El sistema solicita reconocer alguna característica física del individuo (biometría): huella dactilar, escáner de retina, reconocimiento de voz, etc.
+
+La autenticación será más fiable cuantos más criterios distintos cumpla: t Para entrar en casa solamente nos hace falta una llave (algo que tienes). Pero en al- gunos países europeos los portales tienen un código (algo que sabes). t Para entrar a un ordenador, generalmente necesitamos un usuario (algo que sabes) y una contraseña (algo que sabes).
+
+t Para sacar dinero de un cajero necesitamos una tarjeta (algo que tienes) e introducir un PIN (algo que sabes). En cambio, en la web del banco solo necesitamos un usuario (que suele ser nuestro DNI, relativamente fácil de localizar) y un PIN (algo que sabes).
+
+### 6. En los primeros Unix el
+
+usuario root estaba disponi- ble para entrar al sistema; actualmente no. ¿Por qué?
+
+### 7. En las webs de los ban
+
+cos puedes entrar con un usuario y contraseña. Pero para realizar trans- ferencias a otras cuentas solicitan una nueva auten- ticación. ¿Cuál?
+
+### 8. En la película La amenaza
+
+de Andrómeda, la auto- destrucción del laborato- rio solo se podía detener de una forma. ¿Cómo? Actividades www.xlibros.com
+
+Conceptos sobre seguridad informática t Para recoger en Correos un envío certificado o para identificarte a la Policía, necesi- tas llevar tu DNI (algo que tienes) y que sea tu cara la que aparece (algo que eres). Los sistemas biométricos no siempre se aplican en entornos de muy alta seguridad. Por ejemplo, pueden estar en el comedor de la empresa, comprobando quién es empleado y quién no para decidir solicitar el pago del menú.
+
+#### 3.4. AAA
+
+La sigla AAA se refiere a autenticación, autorización y accounting. Las dos primeras ya las hemos visto con anterioridad; la tercera se refiere a la información interna que los siste- mas generan acerca de sí mismos. Concretamente, el uso que se hace de sus servicios.
+
+Esta información sirve para revisar el dimensionado de los equipos y, debidamente asocia- da a cada departamento de la empresa, permite establecer limitaciones y penalizaciones. Pero la información del accounting también permite comprobar la eficacia de las medi- das de autenticación y autorización, sobre todo en un análisis forense tras un ataque.
+
+Siguiendo el rastro podremos localizar por dónde ha entrado e intentar resolverlo. Por este motivo, es importante que el registro del accounting se haga en una máquina distinta: si el hacker ha conseguido entrar, puede fácilmente borrar sus huellas. Sin em- bargo, si el registro se hace simultáneamente en otra máquina, ya son dos las máquinas que debe atacar (y generalmente la máquina de registro se carga con el mínimo soft- ware posible, para reducir las opciones de entrada).
+
+3.5. e2e e2e significa extremo a extremo: la seguridad debe controlarse en el origen de los datos, en el destino de los datos y en el canal de comunicación utilizado entre origen y destino: t En el origen y en el destino intentaremos que el equipo y las aplicaciones no hayan sido modificados. Si alguno no está bajo nuestro control, debemos desconfiar.
+
+t En el canal intentaremos limitar quién accede y, sobre todo, cifraremos, porque nues- tros datos atravesarán las redes de otras compañías. Sobre sus equipos y el personal que opera con ellos no tenemos ningún control, luego debemos desconfiar.
+
+#### 3.6. Vulnerabilidad, malware, exploit
+
+El software está hecho por humanos, luego debemos estar preparados para sufrir los errores introducidos durante su programación. Pueden ser leves (algún mensaje mal tradu- cido), graves (corrupción de datos) y críticos (un agujero de seguridad da acceso libre a datos confidenciales).
+
+Una vulnerabilidad es un defecto de una aplicación que puede ser aprovechado por un atacante. Si lo descubre, el atacante programará un software (llamado malware) que uti- liza esa vulnerabilidad para tomar el control de la máquina (exploit) o realizar cualquier operación no autorizada.
+
+Hay tres tipos de vulnerabilidades: t Vulnerabilidades reconocidas por el suministrador de la aplicación y para las cuales ya tiene un parche que las corrige. Si nuestra empresa utiliza esa aplicación, debe- mos aplicar el parche inmediatamente. t Vulnerabilidades reconocidas por el suministrador, pero todavía no hay un parche. En algunos casos sí se proporciona una solución temporal (workaround), pero, general- mente, lo mejor es desactivar el servicio hasta haber aplicado el parche.
+
+t Vulnerabilidades no reconocidas por el suministrador. Es el peor caso, porque pode- mos estar expuestos a un ataque durante un tiempo largo sin saberlo. Podemos convertirnos en peritos informáticos forenses con este curso: http://goo.gl/TgCyA En este artículo podemos ampliar la información sobre seguridad extremo a extremo
+
+http://goo.gl/qi0Br Web www.xlibros.com
+
+Conceptos sobre seguridad informática Los fabricantes de software intentan reaccionar rápidamente ante cualquier informe que demuestre una vulnerabilidad en sus programas. Gracias a Internet, de manera progra- mada, los programas conectan con la web de su suministrador para comprobar si hay algún parche pendiente de aplicar (actualizaciones automáticas). Es decir, no esperan a que el administrador de la máquina compruebe uno a uno el estado de todos los progra- mas instalados, porque puede pasar un tiempo precioso desde que se libera el parche hasta que el administrador se entera, lo descarga y lo aplica.
+
+Hay muchos tipos de malware: t Virus. Intentan dejar inservible el ordenador infectado. Pueden actuar aleatoriamente o esperar una fecha concreta (por ejemplo, Viernes 13). t Gusanos. Van acaparando todos los recursos del ordenador: disco, memoria, red. El usuario nota que el sistema va cada vez más lento, hasta que no hay forma de trabajar.
+
+t Troyanos. Suelen habilitar puertas traseras en los equipos: desde otro ordenador po- demos conectar con el troyano para ejecutar programas en el ordenador infectado. Realmente no es tan importante qué malware nos ha entrado: hay que eliminarlo de to- das formas porque es una aplicación que no hemos querido instalar y que no nos traerá nada bueno (incluso puede mutar: un gusano convertirse en troyano, etc.).
+
+Todos tienen en común su afán de replicación: intentan contaminar el máximo número de ordenadores posible para continuar la infección. También hay que tener cuidado con los falsos antivirus. En algunas páginas web peli- grosas (servicios de descargas ilegales, por ejemplo) aparece un mensaje que nos avisa de que estamos infectados y se ofrecen amablemente para descargar un antivirus que nos limpiará el ordenador.
+
+Si pulsamos en el enlace y descargamos e instalamos ese programa, lo que realmente ocurre es que hemos dejado entrar un malware que, desde ese instante, puede hacer cualquier cosa: lanzar anuncios sin parar, instalar otros virus, abrir una puerta trasera para convertirnos en ordenador zombi en algún ataque organizado, robar datos perso- nales (imágenes, vídeos), etc.
+
+En algunos casos, el virus da la cara y directamente nos dice que ha secuestrado nuestro ordenador. Efectivamente: ya no podemos hacer nada con el teclado ni el ratón. Para recuperar la máquina hay que introducir una contraseña que solo nos la proporcionan tras efectuar un pago económico (es decir, piden un rescate).
+
+Por supuesto, el primer aviso era falso; seguramente, al entrar de nuevo en esa página, seguirá apareciendo. Si bien es cierto que los navegadores pueden realizar análisis del disco duro buscando virus (los llamados antivirus on-line, como Panda Activescan), para ello necesitan la instalación previa de un software específico para esa tarea de buscar virus. Después podrán avisar o no, dependiendo de lo que encuentren; pero nunca apa- recerá un aviso solo por entrar a una página.
+
+Lo mismo puede ocurrir con programas que nos aseguran que acelerarán el rendimien- to del ordenador, o el disco duro, o la conexión a Internet. Estos programas existen, pero debemos descargarlos desde fuentes de toda confianza, como las webs de los autores de ese software o un sitio con buena reputación (Softonic, CNET, etc.).
+
+Para evitar que ocurra, lo mejor es tener siempre activado el antivirus (y tenerlo actuali- zado, claro). Y, si por cualquier razón, el ordenador ya está secuestrado, algunos antivi- rus tienen la opción de ejecutarse desde un LiveCD. Es decir, descargamos desde la web del fabricante del antivirus una imagen que grabamos en un CD. Esa imagen lleva un minisistema operativo y el programa del antivirus. Arrancamos el ordenador desde ese
+
+```bash
+CD y podemos hacer una limpieza a fondo, con la tranquilidad de que el virus no se ha
+```
+
+activado porque no está funcionando el sistema operativo del disco duro. Aquí tenemos un exploit contra Joomla! http://goo.gl/Ek4vA En este vídeo nos hablan sobre la importancia del malware: http://goo.gl/BfcJw Web www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+### 4. Tipos de ataques
+
+Una vez que alguien está decidido a atacarnos, puede elegir alguna de estas formas: t Interrupción. El ataque consigue provocar un corte en la prestación de un servicio: el servidor web no está disponible, el disco en red no aparece o solo podemos leer (no escribir), etc.
+
+t Interceptación. El atacante ha logrado acceder a nuestras comunicaciones y ha copia- do la información que estábamos transmitiendo. t Modificación. Ha conseguido acceder, pero, en lugar de copiar la información, la está modificando para que llegue alterada hasta el destino y provoque alguna reacción anormal. Por ejemplo, cambia las cifras de una transacción bancaria.
+
+t Fabricación. El atacante se hace pasar por el destino de la transmisión, por lo que puede tranquilamente conocer el objeto de nuestra comunicación, engañarnos para obtener información valiosa, etc. Para conseguir su objetivo puede aplicar una o varias de estas técnicas
+
+t Ingeniería social. A la hora de poner una contraseña, los usuarios no suelen utilizar combinaciones aleatorias de caracteres. En cambio, recurren a palabras conocidas para ellos: el mes de su cumpleaños, el nombre de su calle, su mascota, su futbolista favorito, etc. Si conocemos bien a esa persona, podemos intentar adivinar su con- traseña.
+
+También constituye ingeniería social pedir por favor a un compañero de trabajo que introduzca su usuario y contraseña, que el nuestro parece que no funciona. En esa sesión podemos aprovechar para introducir un troyano, por ejemplo. t Phishing. El atacante se pone en contacto con la víctima (generalmente, un correo electrónico) haciéndose pasar por una empresa con la que tenga alguna relación (su banco, su empresa de telefonía, etc.). En el contenido del mensaje intenta convencer- le para que pulse un enlace que le llevará a una (falsa) web de la empresa. En esa web le solicitarán su identificación habitual y desde ese momento el atacante podrá utilizarla.
+
+t Keyloggers. Un troyano en nuestra máquina puede tomar nota de todas las teclas que pulsamos, buscando el momento en que introducimos un usuario y contraseña. Si lo consigue, los envía al atacante. t Fuerza bruta. Las contraseñas son un número limitado de caracteres (letras, números y signos de puntuación). Una aplicación malware puede ir generando todas las combi- naciones posibles y probarlas una a una; tarde o temprano, acertará. Incluso puede ahorrar tiempo si utiliza un diccionario de palabras comunes y aplica combinaciones de esas palabras con números y signos de puntuación.
+
+Contra los ataques de fuerza bruta hay varias medidas
+
+Utilizar contraseñas no triviales. No utilizar nada personal e insertar en medio de la palabra o al final un número o un signo de puntuación. En algunos sistemas nos avisan de la fortaleza de la contraseña elegida (Fig. 1.8).
+
+Cambiar la contraseña con frecuencia (un mes, una semana). Dependiendo del hardware utilizado, los ataques pueden tardar bastante; si antes hemos cambiado la clave, se lo ponemos difícil.
+
+Impedir ráfagas de intentos repetidos. Nuestro software de autenticación que so- licita usuario y contraseña fácilmente puede detectar varios intentos consecutivos en muy poco tiempo. No puede ser un humano: debemos responder introduciendo una espera. En Windows se hace: tras cuatro intentos fallidos, el sistema deja pasar varios minutos antes de dejarnos repetir. Esta demora alarga muchísimo el tiempo necesario para completar el ataque de fuerza bruta.
+
+### 9. Busca información sobre
+
+la iniciativa Confianza on- line. ¿Qué te parece?
+
+- ¿Cómo detectarías un ata
+
+que DoS? ¿Qué harías para defenderte? Actividades www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+Establecer un máximo de fallos y después bloquear el acceso. Es el caso de las tar- jetas SIM que llevan los móviles GSM/UMTS: al tercer intento fallido de introducir el PIN para desbloquear la SIM, ya no permite ninguno más. Como el PIN es un número de cuatro cifras, la probabilidad de acertar un número entre 10 000 en tres intentos es muy baja.
+
+t Spoofing. Alteramos algún elemento de la máquina para hacernos pasar por otra máquina. Por ejemplo, generamos mensajes con la misma dirección que la máquina auténtica. t Sniffing. El atacante consigue conectarse en el mismo tramo de red que el equipo atacado. De esta manera tiene acceso directo a todas sus conversaciones.
+
+t DoS (Denial of Service, denegación de servicio). Consiste en tumbar un servidor satu- rándolo con falsas peticiones de conexión. Es decir, intenta simular el efecto de una carga de trabajo varias veces superior a la normal. t DDoS (Distributed Denial of Service, denegación de servicio distribuida). Es el mismo ataque DoS, pero ahora no es una única máquina la que genera las peticiones falsas (que es fácilmente localizable y permite actuar contra ella), sino muchas máquinas re- partidas por distintos puntos del planeta. Esto es posible porque todas esas máquinas han sido infectadas por un troyano que las ha convertido en ordenadores zombis (obedecen las órdenes del atacante).
+
+#### 4.1. Tipos de atacantes
+
+Se suele hablar de hacker de manera genérica para referirse a un individuo que se salta las protecciones de un sistema. A partir de ahí podemos distinguir entre: t Hacker. Ataca la defensa informática de un sistema solo por el reto que supone hacerlo. Si tiene éxito, moralmente debería avisar a los administradores sobre los agujeros de seguridad que ha utilizado, porque están disponibles para cualquiera.
+
+t Cracker. También ataca la defensa, pero esta vez sí quiere hacer daño: robar datos, desactivar servicios, alterar información, etc. t Script kiddie. Son aprendices de hacker y cracker que encuentran en Internet cual- quier ataque y lo lanzan sin conocer muy bien qué están haciendo y, sobre todo, las consecuencias derivadas de su actuación (esto les hace especialmente peligrosos).
+
+t Programadores de malware. Expertos en programación de sistemas operativos y apli- caciones capaces de aprovechar las vulnerabilidades de alguna versión concreta de un software conocido para generar un programa que les permita atacar. t Sniffers. Expertos en protocolos de comunicaciones capaces de procesar una captura de tráfico de red para localizar la información interesante.
+
+t Ciberterrorista. Cracker con intereses políticos y económicos a gran escala. Fig. 1.8. Fortaleza de contraseña. En esta web puedes probar la fortaleza de las contraseñas que usas habitualmente: http://goo.gl/bzsne A veces, un hacker es contratado por la compañía a la que ha per- judicado. Aunque esa relación no suele durar mucho tiempo
+
+http://goo.gl/zuyja Algún ayuntamiento ha sufrido robos de hackers en sus cuentas bancarias: http://goo.gl/0x8EW Web www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+### 5. Buenas prácticas
+
+Es muy dura la tarea del responsable de seguridad informática en una empresa grande: hay mucha información que proteger y múltiples puertas por donde sufrir intrusiones. Sus funciones son: t Localizar los activos que hay que proteger: equipos, aplicaciones, datos y comunica- ciones. Sobre todo, revisar la política de copias de seguridad: qué copiamos, cuándo copiamos, dónde lo copiamos, dónde guardamos de manera segura los dispositivos de copia, cómo verificamos que la copia se ha hecho bien, cuándo hacemos una prueba de recuperación de una copia, etc.
+
+t Redactar y revisar regularmente los planes de actuación ante catástrofes, contemplan- do todas las posibilidades: ataque intencionado, desastre natural, arranque parcial de servicios (pocos servicios o todos los servicios pero con menor capacidad). t No instalar nada que no sea estrictamente necesario, y revisar la configuración de los sistemas y aplicaciones por si estamos otorgando más permisos de los impres- cindibles.
+
+t Estar al día de todos los informes de seguridad que aparezcan. Para ello hay que registrarse en listas de correo sobre seguridad y, además, en las listas de nuestros proveedores (tanto de hardware como de software) para recibir sus noticias directa- mente. t Activar los mecanismos de actualización automática de las aplicaciones que tenemos instaladas. Salvo sistemas delicados (tenemos que probar muy bien cada actualiza- ción antes de aplicarla), en general los fabricantes liberan actualizaciones que no dan problemas.
+
+t Dar formación a los usuarios para que utilicen la seguridad y la vean como una ayu- da, no como un estorbo. t Revisar los log del sistema (el accounting que hemos visto antes). Algunas herramien- tas nos ayudan porque recogen los ficheros de log y aplican fácilmente muchos pa- trones conocidos (buscar la palabra error o warning, etc.).
+
+t Considerar la opción de contratar una auditoría externa, porque si hemos cometido un error de concepto, es muy difícil que lo encontremos por nosotros mismos. t Revisar la lista de equipos conectados: pueden haber introducido equipos no autori- zados. t Revisar la lista de usuarios activos: puede que algún empleado ya no esté en la em- presa pero su usuario y todos los privilegios asociados siguen disponibles para él o para alguien de su confianza.
+
+t En aquellos sistemas que lo permitan, configurar el aviso por SMS o correo electró- nico para que nos enteremos los primeros de cualquier problema. Por ejemplo, los sistemas de baterías (SAI [sistema de alimentación ininterrumpida]) suelen tener esta funcionalidad.
+
+Formalmente hay una serie de estándares sobre la seguridad informática. La normati- va ISO/IEC 27002:2009 trata sobre la gestión de la seguridad de la información. En ella se propone implantar controles para afrontar los riesgos inherentes a los sistemas informáticos. Los controles incluyen políticas de empresa, estructura de la organización y procedimientos. Los controles se aplican a todas las partes afectadas: gestión de activos, seguridad sobre los recursos humanos (antes, durante y después de pertenecer a la empresa), seguridad física y ambiental, gestión de comunicaciones y operaciones, control de acceso, etc.
+
+La segunda referencia mundial son las normas ITIL (Information Technology Infrastructure Library), que están orientadas a la gestión de servicios de tecnologías de la información, y uno de los aspectos que cubren es la seguridad. Visita alguna web de avisos de seguridad, como CERT o INTECO.
+
+Web Aunque los navegadores nos in- tentan facilitar la vida ofrecien- do recordar la contraseña que introducimos en una página web, no es recomendable hacerlo por- que, si alguien se sienta a nuestro ordenador, entrará directamen- te en esas páginas con nuestra identidad y privilegios.
+
+Importante www.xlibros.com
+
+Conceptos sobre seguridad informática
+
+### 6. Legislación
+
+Como en el mundo real, romper la seguridad informática de una empresa para robar sus datos es un delito perseguido por la ley. También el desarrollo de Internet ha im- pulsado la aparición de leyes completamente nuevas, como la que regula el comercio electrónico.
+
+#### 6.1. LOPD
+
+La Ley Orgánica de Protección de Datos de Carácter Personal (LO 15/1999, de 13 de diciembre) establece las bases para proteger el tratamiento de los datos de carácter personal de las personas físicas. Estos datos pueden estar en cualquier tipo de soporte, digitalizado o no. La ley establece cómo se pueden tomar los datos, qué tipo de alma- cenamiento protegido necesitan y qué derecho y obligaciones tiene el ciudadano sobre esos datos suyos en manos de terceros.
+
+El Real Decreto 1720/2007, de 21 de diciembre, desarrolla la LOPD para ficheros (automatizados y no automatizados). Define tres tipos de medidas en función de la sensibilidad de los datos tratados: t Nivel básico. Cualquier fichero de datos de carácter personal. Las medidas de segu- ridad con estos datos son
+
+Identificar y autenticar a los usuarios que pueden trabajar con esos datos.
+
+Llevar un registro de incidencias acontecidas en el fichero.
+
+Realizar copia de seguridad como mínimo semanalmente. t Nivel medio. Cuando los datos incluyen información sobre infracciones administrati- vas o penales, informes financieros y de gestión tributaria y datos sobre la persona- lidad del sujeto. Las medidas de seguridad incluyen las del nivel básico más
+
+Al menos una vez cada dos años una auditoría externa verificará los procedimien- tos de seguridad.
+
+Debe existir control de acceso físico a los medios de almacenamiento de los datos. t Nivel alto. Son los datos especialmente protegidos: ideología, vida sexual, origen racial, afiliación sindical o política, historial médico, etc. Las medidas de seguridad amplían las de nivel medio
+
+Cifrado de las comunicaciones.
+
+Registro detallado de todas las operaciones sobre el fichero, incluyendo usuario, fecha y hora, tipo de operación y resultado de la autenticación y autorización.
+
+#### 6.2. LSSI-CE
+
+La Ley de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE 34/2002, de 11 de julio) intenta cubrir el hueco legal que había con las empresas que prestan servicios de la sociedad de la información: t Las obligaciones de los prestadores de servicio, incluidos los que actúen como inter- mediarios en la transmisión de contenidos por las redes de telecomunicaciones.
+
+t Las comunicaciones comerciales por vía electrónica. t La información previa y posterior a la celebración de contratos electrónicos. t Las condiciones relativas a su validez y eficacia. t El régimen sancionador aplicable a los prestadores de servicios de la sociedad de la información.
+
+### 11. En algún documento ofi
+
+cial de toma de datos per- sonales, busca el aviso que detalla tus derechos sobre los datos que estás aportando.
+
+### 12. Esta misma información
+
+está disponible junto a las cámaras de seguridad que graban espacios públicos. Busca alguna y trae una foto a clase.
+
+- ¿Cuáles son las funciones
+
+de la Agencia de Protec- ción de Datos (APD)? Actividades Las sanciones por no cumplir la LOPD son elevadas multas. Son frecuentes entre las empresas del sector de las telecomunicaciones. http://goo.gl/HdvBr Web www.xlibros.com
+
+Conceptos sobre seguridad informática La ley es de obligado cumplimiento para todas las webs que consiguen algún tipo de ingreso, bien directo (pago de cuotas, venta de productos y servicios), bien indirecto (publicidad). La primera obligación que tienen es incluir en su página información de la persona o empresa que está detrás de esa página: nombre o denominación social, dirección postal, datos de inscripción en el registro de la propiedad mercantil, etc.
+
+#### 6.3. LPI
+
+La Ley de Propiedad Intelectual (LPI) establece los derechos de autor en los entornos digitales. Considera la digitalización de un contenido como un acto de reproducción, luego se necesita autorización expresa del titular del contenido. Como excepción incluye la copia privada, que es para uso personal del dueño de ese contenido legalmente adquirido. La copia, al igual que el original, no se puede utilizar de manera colectiva ni lucrativa.
+
+Para compensar a los autores por estas copias no controladas, se establece un canon sobre los distintos dispositivos de almacenamiento. Este canon revierte en las sociedades de autores.
+
+#### 6.4. Administración electrónica
+
+La Administración electrónica hace referencia al esfuerzo de todos los estamentos públi- cos para adaptar sus procedimientos a las nuevas tecnologías. Así evitan seguir mane- jando papeles, y los ciudadanos y empresas pueden relacionarse con la Administración de manera telemática.
+
+Poder resolver los trámites por Internet tiene múltiples ventajas: t Disponibilidad las 24 horas del día. No hace falta pedir permiso en el trabajo; incluso podemos hacerlo en días festivos y fines de semana. t Facilidad de acceso. Los portales de la Administración incorporan múltiples asistentes que proporcionan toda la ayuda necesaria.
+
+t Ahorro de tiempo. No hay que desplazarse hasta una oficina y esperar turno para ser atendido. t Fiabilidad. Los procedimientos ya no dependen de personas, sino de sistemas. La realidad es que muchas webs todavía se limitan a ofrecer la descarga del PDF del mismo formulario para que lo pasemos a papel y lo entreguemos en mano o por correo certificado. En contadas excepciones se completa el procedimiento: rellenar un formula- rio y enviarlo a un servidor donde nos acepten la solicitud y nos proporcionen informa- ción puntual sobre el estado de su tramitación.
+
+El DNI electrónico (DNIe) supuso un punto de inflexión porque ahora el ciudadano sí dis- pone de una autenticación fiable. Pero todavía está lejos de ser ampliamente utilizado, sobre todo en el sector privado. Fig. 1.9. Ventajas de la Administración electrónica. Ciudadanos Administración Interoperabilidad administrativa Acercamiento al ciudadano «Administración próxima» Mejora de procesos internos Digitalización de la información La implantación de administración electrónica supone un importante ahorro
+
+http://goo.gl/gBbhv Web www.xlibros.com
+
+Conceptos sobre seguridad informática Síntesis Nuestra sociedad se basa en información procesada digitalmente: hay que protegerla porque la información es poder. La inversión en seguridad depende del interés de otros en nuestros equipos y, sobre todo, nuestros datos.
+
+Las auditorías de seguridad son revisiones de la seguridad de nuestra empresa. Para ello se suele contratar a empresas especializadas, como los tiger teams. La complejidad de la seguridad debe estar equilibrada con la formación del personal que la tiene que aplicar: una contraseña de 20 caracteres terminará apuntada en un papel bajo el teclado.
+
+La seguridad física se ocupa de los equipos; la seguridad lógica, de los programas que se ejecutan en esos equipos. La seguridad activa intenta impedir una catástrofe; la seguridad pasiva intenta que, si ocurre, la recuperación sea posible. La integridad intenta que los datos almacenados por un usuario no sufran ninguna alteración sin su consentimiento.
+
+La disponibilidad se refiere a todas las técnicas dirigidas a mantener activo un servicio. Generalmente supone añadir equipamiento adicional. No repudio: que ninguna de las partes que intervienen en una relación pueda negarlo. Los tipos de ataques son: interrupción, interceptación, modificación y fabricación.
+
+t -PTFRVJQPTTPONÈRVJOBTZQVFEFOGBMMBS/PTJOUFSFTBOQBSUJDVMBSNFOUF los dispositivos de almacenamiento: discos duros y memorias externas. Nos protegeremos con almacenamiento redundante y copias de seguridad. t -PTTJTUFNBTPQFSBUJWPTZMBTBQMJDBDJPOFTMPTQSPHSBNBOQFSTPOBTZQVFEFO fallar. Las consecuencias más importantes son una caída del servicio, una pérdida de datos o una vulnerabilidad que permite la intrusión de un atacante.
+
+Nos protegeremos mediante servidores redundantes, antivirus y activando las actualizaciones automáticas. t -PTVTVBSJPTTPOQFSTPOBTZQVFEFOGBMMBSEFTDBSHBOTPGUXBSFOPQFSNJUJEP o revelan sus contraseñas a terceras personas. Nos protegeremos limitando privilegios, dando cursos de formación y estableciendo una política de contraseñas (caducidad, complejidad mínima).
+
+t &OOVFTUSBTDPNVOJDBDJPOFTDPOPUSBTQFSTPOBTEFTDPOPDFNPTFMOJWFMEF seguridad que aplican. Incluso generalmente atravesamos redes públicas operadas por otras empresas, de las que también desconocemos el nivel de seguridad que aplican. Debemos aplicar protección extremo a extremo.
+
+La seguridad completa es imposible de alcanzar: La confidencialidad busca garantizar que una información solo sea utilizada por los usuarios y máquinas que lo necesitan. Se materializa en: t "VUFOUJDBDJØO Cómo confirmamos que el usuario es quien dice ser. Aplicaremos el esquema sabes-tienes-eres.
+
+t "VUPSJ[BDJØO Qué operaciones puede efectuar. t $JGSBEP Los datos se almacenan cifrados para que no puedan ser aprovechados por nadie que no esté debidamente autenticado y autorizado. La seguridad informática comprende: t &RVJQPT Robo; evitar intentos de conectar equipos externos a la empresa, mantenimiento preventivo.
+
+t "QMJDBDJPOFT Limitar privilegios, revisar vulnerabilidades conocidas, descargar aplicaciones de fuentes fiables. t %BUPT. Almacenamiento redundante, copias de seguridad y cifrado. t $PNVOJDBDJPOFT Utilizaremos canales cifrados para proteger la información cuando es transmitida por nuestra red interna y, sobre todo, por Internet.
+
+www.xlibros.com
+
+Conceptos sobre seguridad informática Test de repaso
+
+### 1. Hablar por teléfono móvil es seguro
+
+- Es más seguro que hablar por teléfono fijo.
+- Es más seguro que hablar por teléfono fijo, salvo
+
+cuando utilizamos un terminal DECT.
+
+- Es más inseguro porque las ondas se transmiten por
+
+el aire y cualquier otro teléfono puede recibirlas.
+
+- ¿Es seguro utilizar el WhatsApp?
+- Es más seguro enviar un SMS, porque utiliza telefo
+
+nía móvil, que es muy segura.
+
+- Es igual de seguro que el SMS, porque la conexión
+
+al servidor de WhatsApp también utiliza telefonía móvil.
+
+- Es menos seguro que el SMS, porque para llegar a
+
+su servidor atraviesa Internet, que es una red poco segura.
+
+- ¿Es seguro comprar por Internet?
+- No: cualquiera puede saber nuestro número de tar
+
+jeta de crédito y comprar con ella.
+
+- No: cualquiera puede saber nuestro número de cuenta
+
+corriente y comprar con ella.
+
+- Sí: además de la tarjeta (algo que tienes), la mayoría
+
+de los bancos solicitan un PIN (algo que sabes).
+
+### 4. Tengo una cuenta corriente en MiBanco y me llega un
+
+correo de info@mibanco.es donde me avisan de que hay una nueva web donde cambiar las claves
+
+- Imposible. Los bancos nunca utilizan el correo elec
+
+trónico para ese tipo de notificaciones.
+
+- Agradezco el aviso y pincho para probarlo.
+- Pincho en el enlace y envío este correo a mis cono
+
+cidos.
+
+### 5. Queremos enviar fotos personales a un amigo
+
+- Las subo a Facebook, porque es más cómodo y segu
+
+ramente nadie las verá.
+
+- Las envío a su dirección de correo electrónico del
+
+trabajo.
+
+- Las grabo en un CD y se las llevo a casa.
+
+### 6. Un tiger team
+
+- Es un nuevo espectáculo de lucha libre americana.
+- Es un equipo de expertos en seguridad que ofrecen
+
+sus servicios a empresas.
+
+- Es un grupo de becarios del departamento de infor
+
+mática que revisan los log de los sistemas.
+
+### 7. Los portátiles que una empresa proporciona para algu
+
+nos empleados
+
+- Nunca salen de las oficinas. Los tienen para poder
+
+trabajar en las salas de reunión.
+
+- Como los utilizarán fuera de las oficinas, el usuario
+
+del empleado tiene privilegios de administración, por si necesita instalar algo.
+
+- Los discos duros aplican cifrado de la información
+
+almacenada por si el portátil resulta extraviado.
+
+### 8. En los ordenadores de la empresa
+
+- Todos llevan el mismo software, por si alguna vez
+
+necesitamos sustituir unos por otros.
+
+- En cada uno instalamos las aplicaciones estricta
+
+mente necesarias.
+
+- Dejamos que cada usuario instale lo que quiera.
+
+### 9. Cuando un usuario nos pide instalar una nueva aplica
+
+ción
+
+- Aceptamos el CD que nos ofrece.
+- Aceptamos el USB que nos ofrece.
+- Buscamos el suministrador de esa aplicación y con
+
+tactamos para conseguir una copia oficial.
+
+### 10. Durante la descarga de un programa, el antivirus detecta
+
+que tiene un troyano
+
+- Lo dejamos estar: peor sería tener un virus.
+- Lo ejecutamos para confirmar que es un troyano.
+- Lo borramos y buscamos ese software en otra parte
+
+más fiable.
+
+### 11. Para facilitar el acceso de un empleado a su nómina,
+
+la empresa quiere ponerla en un disco compartido en la red interna
+
+- Mejor colgarla en la web para que pueda consul
+
+tarla desde casa.
+
+- Utilizaremos una carpeta distinta para cada usuario,
+
+con permisos exclusivos para ese usuario.
+
+- No hay problema: como la transferencia va cifrada,
+
+nadie que escuche en la red podrá obtener esa infor- mación. Soluciones: 1 a, 2 c, 3 c, 4 a, 5 c, 6 b, 7 c, 8 b, 9 c, 10 c, 11 b. www.xlibros.com
+
+Conceptos sobre seguridad informática Comprueba tu aprendizaje Aplicar medidas de seguridad pasiva en sistemas informá- ticos describiendo características de entornos y relacionán- dolas con sus necesidades
+
+- Trabajas en una auditoría de seguridad informática.
+
+Llega un nuevo cliente que desea conocer la situación de su empresa y si es aceptable o podría mejorar. Durante la entrevista tomas las siguientes notas: t El edificio tiene un servicio de vigilancia a través de una empresa externa. Por reducción del presupues- to, ahora solo hay un vigilante que también atiende el edificio del otro lado de la calle.
+
+t El CPD tiene otro vigilante, de otra compañía, que también atiende el teléfono de la centralita a partir de las tres, cuando termina el turno del recepcionista. t Para entrar al CPD, cada informático tiene una tarje- ta particular, si bien hay una en el cajón de la mesa del vigilante para el personal de limpieza o por si ocurre una emergencia.
+
+t Una vez a la semana se hace la copia de seguri- dad. Como solo disponen de un dispositivo de cin- ta, los cuatro servidores se reparten cada semana del mes. Dado que solo hay un vigilante para el CPD, las cintas se dejan dentro de la sala, cada una encima de su servidor (cada servidor tiene una cinta en exclusiva).
+
+t El edificio pertenece al patrimonio histórico y no ad- mite reformas en la fachada. Por tanto, no ha sido posible instalar equipos de aire acondicionado en el CPD. Para combatir el calor que desprenden los ordenadores, las ventanas están siempre abiertas. t Cada servidor tiene un disco duro de alta gama, que no ha fallado nunca.
+
+t Los servidores tienen doble fuente de alimentación, por si se estropea alguna. t El presidente y el contable tienen cada uno un por- tátil de la empresa. El disco duro de estas máquinas no está cifrado porque no se arriesgan al desastre que supondría olvidar la contraseña.
+
+t Los ordenadores tienen dos usuarios: uno para las ta- reas normales y otro para cuando necesitan realizar alguna instalación o modificar un parámetro del sis- tema operativo. Los empleados saben cuándo deben usar cada uno. Termináis por hoy la entrevista porque ha sido una reunión muy larga. Todavía no has redactado el infor- me final, pero ¿encuentras algo que mejorar? ¿Qué alternativa le puedes proponer?
+
+Asegurar la privacidad de la información transmitida en redes informáticas describiendo vulnerabilidades e insta- lando software específico
+
+### 2. Al día siguiente continúa la entrevista. Tus nuevas notas
+
+son: t Hay una red wifi en la oficina que permite entrar en la red de ordenadores y salir a Internet. No tiene contra- seña para que los clientes puedan utilizarla con total comodidad. t La mayoría de los ordenadores utilizan Windows XP, pero algunos empleados necesitan Windows 7. Como la empresa no puede afrontar la compra de nuevas licencias, están utilizando software pirata.
+
+t En cuanto al antivirus, cada empleado pone el que más le gusta y se los pasan entre ellos mediante dis- cos USB. t Los ordenadores que hacen de servidores tienen ac- tivadas las actualizaciones automáticas de todas las aplicaciones y el sistema operativo, pero en los or- denadores de los empleados no se hace porque han visto que se satura la conexión a Internet.
+
+t La mayoría de los equipos de red son switch y rou- ters, pero algunos despachos todavía tienen hubs porque son fiables y el ancho de banda es suficiente. t Para entrar a la red desde Internet utilizan Hamachi, un servicio gratuito y muy sencillo de instalar. t El servidor web está instalado sobre una máquina con sistema operativo Linux Ubuntu Server 9.04.
+
+Termina la entrevista del segundo día porque el cliente tiene otro compromiso. De nuevo, ¿encuentras algo que mejorar? ¿Qué le puedes proponer? Reconocer la legislación y normativa sobre seguridad y protección de datos analizando las repercusiones de su in- cumplimiento
+
+### 3. Tus notas del tercer y último día son las siguientes
+
+t Los clientes rellenan una ficha con su nombre, direc- ción, teléfono, correo electrónico y la medicación que están tomando en ese momento. t Después, una secretaria introduce la ficha en una hoja Excel de su ordenador. Finalmente, ¿tienes algo que aportar sobre la seguridad que necesitan estos datos?
+
+www.xlibros.com
+
+En esta unidad aprenderemos a: t%FTDSJCJSTJTUFNBTEFJEFOUJGJDBDJØO  DPNPMBGJSNBFMFDUSØOJDB ZFMDFSUJGJDBEPEJHJUBM FOUSFPUSPT t6UJMJ[BSTJTUFNBTEFJEFOUJGJDBDJØO  DPNPMBGJSNBFMFDUSØOJDB ZFMDFSUJGJDBEPEJHJUBM FOUSFPUSPT Y estudiaremos: t-BDSJQUPHSBGÓB t-BJEFOUJGJDBDJØOEJHJUBM GJSNBFMFDUSØOJDB ZDFSUJGJDBEPEJHJUBM t-PTTJTUFNBTEFJEFOUJGJDBDJØO GJSNBFMFDUSØOJDB DFSUJGJDBEPT EJHJUBMFTZPUSPT Unidad Criptografía www.xlibros.com
+
+Criptografía
+
+- ¿Por qué cifrar?
+
+La información es poder: los planos de un nuevo motor de coche eléctrico, la estrategia electoral de un partido político o la fórmula de un nuevo medicamento. Todos son ejem- plos de información que interesa a terceras personas: una empresa de la competencia, un partido rival.
+
+Para sacar el máximo partido de una información hay que compartirla con otros indivi- duos: el plano del motor o la fórmula deben llegar a la fábrica, y la estrategia electoral se discutirá en algún comité regional. En todos estos casos, el autor del documento (emisor) debe transferirlo a algún soporte (disco duro, CD, pendrive USB, impresión en papel, cuenta de correo electrónico, upload a un servidor web, etc.) y hacer llegar ese soporte hasta el destino (receptor) mediante algún canal de comunicación (empresa de mensajería, fax, Internet, etc.).
+
+En ese canal pueden estar acechando terceras personas con la intención de intercep- tarlo: sobornarán al mensajero para hacer una copia del disco duro/CD/USB o una fotocopia del papel, «hackearán» el servidor de correo, capturarán el tráfico de red en el servidor web. Es imposible asegurar que nunca conseguirán el documento. Nuestra esperanza es que, aunque lo tengan y lo puedan leer, no entiendan nada porque el contenido estará cifrado. Aquí nos ayuda la criptografía.
+
+Nuestra era de la información y las comunicaciones necesita el cifrado más que nunca, porque cada vez existen más medios de almacenamiento (memorias portables de todo tipo) y, sobre todo, más mecanismos de comunicación (Fig. 2.1): t Voz mediante teléfono (fijo/móvil) con tecnología analógica (fijo) y digital (GSM, UMTS, RDSI, VoIP), así como el aumento constante de videoconferencias.
+
+t Mensajería electrónica breve (SMS, Skype, WhatsApp) o completa (correo electróni- co, burofax). t Datos por línea digital (ADSL, fibra, HFC) o inalámbrica (wifi, UMTS, LTE). t Apertura de las redes internas de las empresas para que puedan trabajar sus traba- jadores (VPN de teletrabajo), sus clientes (acceso web) y otras empresas (VPN de empresas), todo a través de Internet.
+
+### 1. Investiga el cifrado utiliza
+
+do por Julio César y haz una prueba con tu compa- ñero.
+
+### 2. Investiga en qué consiste
+
+el voto electrónico.
+
+### 3. Repasa todas las veces
+
+que se utiliza criptografía en la película El Código Da Vinci (2006).
+
+### 4. Discute las ventajas e in
+
+convenientes de los algo- ritmos de cifrado abier- tos (se conocen todos los pasos, incluso hay están- dares) frente a los priva- dos (la empresa dueña del equipo de cifrado no lo publica).
+
+### 5. Investiga el cifrado del pro
+
+grama Skype.
+
+### 6. Investiga cómo y dónde
+
+se guardan las claves de los usuarios en Linux. Actividades Todas esas conversaciones utilizan redes compartidas con otros usuarios que no somos nosotros y administradas por otras empresas que no son la nuestra. Las operadoras de telecomunicaciones pueden darnos confianza utilizando protocolos seguros; pero para las empresas no es suficiente (las operadoras de telecomunicaciones también son soborna- bles y «hackeables») y por eso aplican cifrado en todas partes (incluso dentro: podemos tener empleados «traidores»); también los usuarios particulares deberían preocuparse de hacerlo porque su privacidad les pertenece (llamadas personales, correos intercambiados con sus contactos, movimientos bancarios, etc.).
+
+ADSL Internet UMTS Fig. 2.1. Posibles ataques. www.xlibros.com
+
+Criptografía
+
+### 2. Criptografía
+
+La palabra criptografía viene del griego cripto (que significa «ocultar») y graphos (que significa «escribir»). Se podría traducir por: cómo escribir mensajes ocultos. En la antigüe- dad se utilizaba sobre todo durante las guerras, para comunicar estrategias, de manera que, aunque el mensajero fuera interceptado por el enemigo, el contenido del mensaje estaba a salvo.
+
+La criptografía consiste en tomar el documento original y aplicarle un algoritmo cuyo resultado es un nuevo documento. Ese documento está cifrado: no se puede entender nada al leerlo directamente. Podemos, tranquilamente, hacerlo llegar hasta el destinata- rio, que sabrá aplicar el algoritmo para recuperar el documento original.
+
+Realmente, hace falta algo más que el algoritmo, porque el enemigo también puede conocerlo (incluso lo utiliza en sus propias comunicaciones). Por ejemplo, nosotros tene- mos una red wifi con cifrado WPA, pero el vecino también. La privacidad la conse guimos gracias a la clave del algoritmo (Fig. 2.2): un conjunto de valores que, combinados con el documento original tal y como se indica en el algoritmo, generan un documento cifra- do de tal forma que, solo con ese documento, es imposible deducir ni el documento ori- ginal ni la clave utilizada. Por supuesto, debemos evitar que el enemigo pueda llegar a conocer nuestra clave.
+
+En este artículo se estudia el tiem- po necesario para probar todas las claves del algoritmo AES: http://goo.gl/OeYtK El ataque al cifrado de la má- quina Enigma fue clave para el desen lace de la Segunda Guerra Mundial: http://goo.gl/NtBiQ Web Mensaje original: “Hola mundo” Mensaje transmitido
+
+2WX780sl:?a42... Internet En el pórtátil se hace el cifrado WPA usando la clave “empresa 1” En el router se hace el descifrado WPA usando la clave “empresa 1” Mensaje recibido: “Hola mundo” Fig. 2.2. Cifrado WPA en redes wiﬁ . Las claves son combinaciones de símbolos (letras, números, signos de puntuación, etc.).
+
+Por tanto, nuestra seguridad está expuesta a los ataques de fuerza bruta: probar todas las combinaciones posibles de símbolos. Para evitarlo tomaremos estas medidas: t Utilizar claves de gran longitud (512-1024-2048-4096 bytes), de manera que el atacan- te necesite muchos recursos computacionales para cubrir todo el rango rápidamente.
+
+t Cambiar regularmente la clave. De esta forma, si alguien quiere intentar cubrir todo el rango de claves, le limitamos el tiempo para hacerlo. t Utilizar todos los tipos de caracteres posibles: una clave compuesta solo de números (diez valores posibles) es más fácil de adivinar que una con números y letras (36 valores posibles).
+
+t No utilizar palabras fácilmente identificables: palabras de diccionario, nombres pro- pios, etc. t Detectar repetidos intentos fallidos en un corto intervalo de tiempo. Por ejemplo, la tarjeta del móvil se bloquea si fallamos tres veces al introducir el PIN. Las claves no son el único punto débil de la criptografía; pueden existir vulnerabilidades en el propio algoritmo o en la implementación del algoritmo en alguna versión de un sistema operativo o un driver concreto. Estas vulnerabilidades las estudia el criptoanálisis.
+
+www.xlibros.com
+
+Criptografía
+
+### 3. Criptografía simétrica y asimétrica
+
+Los algoritmos de criptografía simétrica utilizan la misma clave para los dos procesos: cifrar y descifrar. Son sencillos de utilizar y, en general, resultan bastante eficientes (tar- dan poco tiempo en cifrar o descifrar). Por este motivo, todos los algoritmos, desde la antigüedad hasta los años setenta, eran simétricos. Los más utilizados actualmente son DES, 3DES, AES, Blowfish e IDEA.
+
+El funcionamiento es simple: en la Figura 2.3 el emisor quiere hacer llegar un documento al receptor. Toma ese documento y le aplica el algoritmo simétrico, usando la clave única, que también conoce el receptor. El resultado es un documento cifrado que ya podemos enviar tranquilamente.
+
+Cuando el receptor recibe este documento cifrado, le aplica el mismo algoritmo con la misma clave, pero ahora en función de descifrar. Si el documento cifrado no ha sido alterado en el camino y la clave es la misma, el resultado será el documento original.
+
+### 7. Busca información sobre
+
+algoritmos de cifrado de tipo bloque y de flujo.
+
+### 8. Idea mecanismos para ha
+
+cer llegar la clave simé- trica a los participantes de una comunicación.
+
+### 9. Un método sencillo de cam
+
+biar la clave simétrica sería avisarlo en el último men- saje intercambiado. ¿Te parece adecuado? Actividades Alicia y Bernardo nos explican la criptografía simétrica: http://goo.gl/L6jzs Web Sniffer de red. Dispositivo con acceso a un medio físico de trans- misión de datos que es capaz de capturar todos los paquetes, aun- que no vayan destinados a él.
+
+Vocabulario Clave única Receptor Emisor Algoritmo simétrico Algoritmo simétrico Documento cifrado Documento original Documento original Cifrado Descifrado Fig. 2.3. Criptografía simétrica. Un ejemplo de criptografía simétrica es la autenticación de un móvil GSM: por qué sabe que es nuestro número, aunque metamos la tarjeta SIM en otro teléfono. El procedimien- to es el siguiente
+
+t Nuestra tarjeta SIM contiene un identificador T y una clave K. t Ese identificador T y la clave K aparecen asociados a nuestro contrato en los servido- res de autenticación de la operadora de la que somos clientes. t Cuando encendemos el teléfono, se conecta a la red de la operadora y solicita entrar con el identificador T. Su servidor de autenticación recibe la petición y genera un número aleatorio A (llamado desafío), que nos lo envía.
+
+t Una vez recibido, en nuestro teléfono aplicamos un determinado algoritmo simétrico sobre ese número A, utilizando la clave K. El resultado es el número B. Enviamos el número B al servidor de autenticación. t Cuando lo recibe, él también aplica el mismo algoritmo con la misma clave. Si el re- sultado es igual a B, se confirma que somos los dueños del identificador T. Nos asigna nuestro número 6XX, y ya podemos hacer y recibir llamadas.
+
+t Si cambiamos de teléfono, no importa porque el número va asociado a la SIM. Con esta solución estamos protegidos de una posible captura de tráfico inalámbrico me- diante un sniffer de red: t Podría capturar el número A. Pero es un simple número aleatorio: sin el algoritmo y la clave, el atacante no podrá generar la respuesta correcta B.
+
+t Podría capturar también el número B y ya tendría la respuesta correcta cuando el servi- dor envía el número A. Pero la probabilidad de que el servidor repita el mismo número A para este abonado es muy baja. Es decir, si el atacante elabora una tarjeta SIM prepa- rada para responder B cuando le pregunten A, es muy poco probable que tenga éxito.
+
+www.xlibros.com
+
+Criptografía Cifrado simétrico en Windows Objetivo. Cifrar ficheros con algoritmos simétricos mediante la herramienta IZArc. Material. Dos ordenadores con Windows. Duración:  10 minutos Dificultad:  Fácil
+
+### 1. En un ordenador con Windows 7 descargamos la herra
+
+mienta de la web oficial www.izarc.org. Realmente es un compresor de ficheros, pero como además tiene la opción de cifrar el fichero comprimido, podemos utili- zarlo para las dos cosas. Por ejemplo, podemos cifrar muchos ficheros, incluso una estructura de carpetas, en un solo fichero fácil de transportar.
+
+### 2. Durante la instalación nos indicará qué tipos de cifrado
+
+queremos manejar con IZArc. Están los habituales (.zip, .rar) y algunos interesantes (.tar, .7z).
+
+### 3. Una vez instalado, podemos situarnos sobre cualquier
+
+fichero o carpeta y acceder al menú del botón dere- cho. En este ejemplo hemos creado el fichero de texto top secret y en la opción IZArc elegiremos la operación Agregar a top secret.zip (el nombre se genera auto- máticamente). Aparecerá la ventana de la herramienta, donde podremos elegir el algoritmo de encriptación. En nuestro caso será AES de 128 bits (Fig. 2.4).
+
+### 4. La opción por defecto es None porque estamos tra
+
+bajando con un programa que es fundamentalmente un compresor de ficheros. Terminaremos pulsando en Agregar. En ese momento nos preguntará la clave que queremos utilizar en el cifrado. La preguntará una segunda vez para confirmar que la hemos tecleado bien. Si es así, estará disponible el fichero cifrado top secret.zip.
+
+### 5. Ese fichero .zip lo podemos llevar a otra máquina que
+
+también tenga IZArc y descifrarlo allí (en este ejemplo, un XP). Nos situamos sobre el fichero .zip y desde el menú del botón derecho recuperamos los ficheros pul- sando en Extract Here (Fig. 2.5).
+
+### 6. Nos preguntará la clave (Fig. 2.6). Si la introducimos
+
+bien, habremos conseguido el fichero de texto que alma- cenaba el fichero .zip.
+
+### 7. El programa ofrece más funciones, como elegir el direc
+
+torio donde almacenar los ficheros recuperados (Extract to…), comprobar la integridad del fichero (Test), cam- biar de formato de compresión (Convert Archive) o crear un ejecutable (Create Self-Extracting [.EXE] File). Esta última opción es particularmente útil si la máquina donde llevamos el fichero comprimido no tiene insta- lado ningún descompresor compatible con el formato utilizado.
+
+### 8. En todos los casos, como era de esperar, cuando el
+
+fichero utilizado está cifrado, antes de realizar la ope- ración nos preguntará por la contraseña correcta. Caso práctico 1 Fig. 2.4. Cifrado de un ﬁ chero. Fig. 2.5. Descifrado de un ﬁ chero. Fig. 2.6. Introducimos la clave de cifrado. www.xlibros.com
+
+Criptografía Cifrado simétrico en Linux Objetivo. Cifrar ficheros con algoritmos simétricos mediante la herramienta gpg. Material. Ordenador con Ubuntu 12.04. Duración:  20 minutos Dificultad:  Fácil
+
+### 1. La herramienta gpg nos permite utilizar tanto criptogra
+
+fía simétrica como asimétrica. En este ejemplo veremos la simétrica.
+
+### 2. Nos presentamos en Ubuntu y creamos un directorio
+
+llamado cifrado donde vamos a trabajar. Lo primero será crear un fichero de prueba. Podemos utilizar la herramienta fortune, que ofrece aleatoriamente refra- nes, chistes, etc. En este ejemplo ejecutamos (Fig. 2.7)
+
+```bash
+$ fortune > mensaje
+```
+
+### 3. Para cifrarlo con clave simétrica el comando es
+
+```bash
+$ gpg –-symmetric mensaje
+```
+
+El comando nos pedirá la clave que queremos utilizar (Fig. 2.8). La pedirá de nuevo para confirmarla.
+
+### 4. El resultado del comando es un nuevo fichero con la
+
+extensión .gpg. Es un fichero cifrado: si intentamos ver qué hay dentro con el comando strings, no aparece nada inteligible (Fig. 2.9). No es recomendable utilizar directamente cat porque es un fichero binario y podría- mos inutilizar la sesión.
+
+### 5. Ahora ya podríamos eliminar el fichero mensaje,
+
+porque su contenido está protegido en el fichero mensaje.gpg. Para hacer llegar este fichero .gpg a las personas interesadas, podemos utilizar cualquier mecanismo normal de gestión de ficheros (disco duro, USB, upload web, FTP, etc.). Cuando necesiten leerlo, lo descifrarán con el comando (Fig. 2.10)
+
+```bash
+$ gpg -–decrypt mensaje.gpg
+```
+
+El comando pedirá la clave que habíamos utilizado para cifrar (y que haremos llegar al interesado a tra- vés de un medio seguro). Si la introducimos correcta- mente, aparecerá en pantalla el contenido del fichero (Fig. 2.10).
+
+### 6. Si no queremos verlo por pantalla, sino volcarlo a un
+
+fichero, podemos redirigir la salida estándar (Fig. 2.11)
+
+```bash
+$ gpg –-decrypt mensaje.gpg > mensaje2
+```
+
+- Los ficheros binarios .gpg no siempre son adecuados.
+
+No sirven para incluirlos dentro de un texto (por ejemplo, en un script o un correo electrónico). Para resolverlo tene- mos el parámetro -a, que genera un fichero cifrado pero compuesto solo de caracteres ASCII. Estos ficheros ya no tienen extensión .gpg, sino .asc. Dentro está el contenido cifrado y alrededor un par de cabeceras informativas. En nuestro ejemplo el comando sería (Fig. 2.12)
+
+Caso práctico 2 (Continúa) Fig. 2.7. Creamos un ﬁ chero de prueba. Fig. 2.8. Ciframos el ﬁ chero con clave simétrica. Fig. 2.9. Fichero cifrado. Fig. 2.10. Desciframos. Fig. 2.11. Desciframos y volcamos a ﬁ chero. www.xlibros.com
+
+Criptografía
+
+```bash
+$ gpg –a -–symmetric mensaje
+```
+
+### 8. El fichero .asc ofrece las mismas garantías que el .gpg
+
+y se utiliza igual. Para descifrar sería (Fig. 2.13)
+
+```bash
+$ gpg –-decrypt mensaje.asc
+```
+
+### 9. La herramienta por defecto utiliza el algoritmo de cifrado
+
+CAST5 (en pantalla nos lo informa al descifrar). Podemos cambiarlo con el parámetro cipher-alg. Por ejemplo, para utilizar AES ejecutaríamos (Fig. 2.14)
+
+```bash
+$ gpg –a –-symmetric –-cipher-alg AES –o
+```
+
+mensaje.aes mensaje En este ejemplo hemos utilizado -a para tener el fichero en ASCII y el parámetro -o para indicar el fichero de salida (es equivalente a redirigir la salida estándar).
+
+### 10. El descifrado se hace como siempre (Fig. 2.15)
+
+```bash
+$ gpg -–decrypt mensaje.aes
+```
+
+Ahora, el mensaje de la pantalla nos avisa de que el fichero estaba cifrado con AES (ya no es CAST5).
+
+### 11. Con esta herramienta podemos cifrar ficheros binarios,
+
+no solo ficheros de texto. Vamos a trabajar sobre una copia del propio ejecutable fortune y le llamaremos refranes. Los comandos serían (Fig. 2.16)
+
+```bash
+$ cp /usr/games/fortune refranes
+$ ./refranes
+```
+
+### 12. Lo ciframos en modo ASCII para verlo mejor (Fig. 2.17)
+
+```bash
+$ gpg –a -–symmetric refranes
+```
+
+- Podemos recuperarlo descifrando el fichero refranes.
+
+asc con las opciones conocidas. Por ejemplo, pode- mos dejar el resultado en un nuevo fichero dichos. Después de introducir la contraseña, solo necesita- mos darle permisos de ejecución y estará disponible. Los comandos son
+
+```bash
+$ gpg –-decrypt –o dichos refranes.asc
+$ chmod 755 dichos
+$ ./dichos
+```
+
+Caso práctico 2 (Continuación) Fig. 2.12. Ciframos en modo ASCII. Fig. 2.13. Desciframos desde modo ASCII. Fig. 2.14. Elegimos el algoritmo de cifrado AES. Fig. 2.15. Desciframos el ﬁ chero AES. Fig. 2.16. Traemos un ejecutable. Fig. 2.17. Ciframos el ejecutable. www.xlibros.com
+
+Criptografía El problema principal de la criptografía simétrica es la circulación de las claves: cómo con- seguimos que el emisor y el receptor tengan la clave buena. No podemos utilizar el mismo canal inseguro por el que enviaremos el mensaje (la inseguridad nos ha llevado a cifrar).
+
+Hay que utilizar un segundo canal de comunicación, que también habría que proteger, y así sucesivamente. Por ejemplo, en el correo de bienvenida a una empresa puede apa- recer la contraseña de la wifi de la oficina; cuando se cambie, se envía otro correo, etc. El segundo problema es la gestión de las claves almacenadas. Si en una empresa hay diez trabajadores y todos tienen conversaciones privadas con todos, cada uno necesita establecer nueve claves distintas y encontrar nueve canales seguros para actualizarlas cada vez (en total 81 claves y 81 canales). Si aparece un trabajador nuevo, ahora son 100 claves y 100 canales. Y las empresas pueden tener muchos trabajadores: 500, 5 000, 50 000... ¿Cada vez que cambie mi clave tengo que avisar a 49 999 compa- ñeros? Es poco manejable.
+
+En los años setenta, los criptógrafos Diffie y Hellman publicaron sus investigaciones so- bre criptografía asimétrica. Su algoritmo de cifrado utiliza dos claves matemáticamente relacionadas de manera que lo que cifras con una solo lo puedes descifrar con la otra.
+
+Comparado con la clave simétrica, ahora el emisor no necesita conocer y proteger una clave propia; es el receptor quien tiene el par de claves. Elige una de ellas (llamada clave pública) para comunicarla al emisor por si quiere enviarle algo cifrado. Pero ya no hace falta buscar canales protegidos para enviarla porque, aunque un tercer individuo la conozca, todo lo que se cifre con esa clave solo se podrá descifrar con la otra clave de la pareja (la clave privada), que nunca es comunicada. Y matemáticamente es impo- sible deducir la clave privada conociendo solo la clave pública.
+
+Como se ilustra en la Figura 2.18, cuando el emisor quiere hacer llegar un mensaje con- fidencial al receptor, primero consigue la clave pública del receptor. Con esa clave y el documento original, aplica el algoritmo asimétrico. El resultado es un documento cifrado que puede enviar al receptor por cualquier canal. Cuando el mensaje cifrado llega al receptor, él recupera el documento original aplicando el algoritmo asimétrico con su clave privada.
+
+Si el receptor quiere enviar al emisor una respuesta cifrada, debería conseguir la clave pública del emisor y seguir el mismo procedimiento.
+
+### 10. Para cifrar y descifrar no
+
+necesitamos privilegios especiales en Linux. ¿Por qué?
+
+### 11. Prueba a intentar cifrar un
+
+fichero con IZArc aplican- do el algoritmo AES256 y después llévalo a un Linux Ubuntu e intenta descifrarlo con gpg. ¿Funcionará? Actividades Alicia y Bernardo nos explican la criptografía asimétrica: http://goo.gl/qM51P Web Clave pública Clave privada Receptor Emisor Algoritmo asimétrico Algoritmo asimétrico Documento cifrado Documento original Documento original Cifrado Descifrado Fig. 2.18. Criptografía asimétrica.
+
+La criptografía asimétrica resuelve los dos problemas de la clave simétrica: t No necesitamos canales seguros para comunicar la clave que utilizaremos en el ci- frado. Podemos adjuntarla en nuestros correos, añadirla al perfil de nuestras redes sociales, «postearla» en un blog, incluso repartirla en octavillas por la calle.
+
+t No hay desbordamiento en el tratamiento de claves y canales. Si somos nueve em- pleados, solo necesitamos nueve claves y un solo canal: la intranet de la empresa, un correo destinado a toda la empresa, etc. Y si aparece un empleado nuevo, serán diez claves y el mismo canal.
+
+www.xlibros.com
+
+Criptografía Sin embargo, los algoritmos asimétricos tienen sus propios problemas: t Son poco eficientes: tardan bastante en aplicar las claves para generar los documen- tos cifrados, sobre todo porque las claves deben ser largas para asegurar la indepen- dencia matemática entre ellas.
+
+t Utilizar las claves privadas repetidamente es arriesgado porque algunos ataques crip- tográficos se basan en analizar paquetes cifrados. Estos paquetes serían capturados en la red o directamente el atacante podría elaborar un software malicioso que gene- rase paquetes de tamaño y contenido elegidos cuidadosamente y conseguir enviarlos a nuestro servidor para que los devolviera cifrados con su clave privada.
+
+t Hay que proteger la clave privada. No basta con dejarla en un fichero de una carpeta del disco duro en la cuenta de nuestro usuario; cualquier otro usuario con permisos de administrador podría llegar hasta él. Por este motivo, las claves pri- vadas se guardan todas juntas en un fichero llamado keyring (archivo de llaves, llavero), y este fichero está protegido mediante cifrado simétrico. Es decir, para poder usar la clave privada, hay que introducir una clave que descifra el llavero y permite leerla.
+
+Necesitamos una segunda medida de protección de la clave privada: la copia de seguridad del llavero. Si el disco duro se estropea, perderemos el fichero que contiene la clave privada y no podremos volver a utilizarla. Por tanto, debemos incluirlo en la política de backup de la empresa, y confiamos en que, aunque alguien más tenga acceso al backup (cintas, discos, etc.), la clave simétrica todavía protege el llavero.
+
+t Hay que transportar la clave privada. En cifrado simétrico, si hemos enviado el fi- chero cifrado a otra máquina y queremos descifrarlo, basta con recordar la clave e introducirla. Pero en la clave privada esto es imposible (son cientos de símbolos sin sentido). Debemos transportar el llavero, con el riesgo que supone (si lo perdemos, podrían intentar un ataque de fuerza bruta contra el cifrado simétrico).
+
+Cifrado asimétrico en Linux Objetivo. Cifrar ficheros con algoritmos asimétricos mediante la herramienta gpg. Material. Ordenador con Ubuntu 12.04. Duración:  30 minutos Dificultad:  Media
+
+### 1. En el caso práctico 2 hemos utilizado la herramienta
+
+gpg para el cifrado simétrico. Esta misma herra- mienta sirve para el cifrado asimétrico.
+
+### 2. Entramos con un usuario de la máquina (en este ejem
+
+plo, alumno). Lo primero será generar un par de claves de criptografía asimétrica, nuestra propia clave pública y clave privada. El comando es (Fig. 2.19): alumno$ gpg --gen-key
+
+### 3. En el proceso de generación de la clave nos pregun
+
+tarán varios detalles. El primero es el tipo de clave. La herramienta nos ofrece cuatro opciones. Los nombres se corresponden con el tipo de algoritmo asimétrico aso- ciado (hay varios tipos, como también ocurría en crip- tografía simétrica: DES, AES, etc.). Es decir, una clave de tipo DSA se utiliza en un algoritmo DSA, y una clave Elgamal, en un algoritmo Elgamal. Las dos prime- ras opciones ofrecen dos algoritmos, luego generan dos pares de claves: en total, cuatro claves, dos públicas y dos privadas. El motivo es que generalmente se utiliza una clave (un par) para cifrar y otra diferente (otro par) para firmar, como veremos en el siguiente apartado de esta unidad. Elegimos la opción 2, que tiene algoritmos distintos, y así veremos claramente cuándo se utiliza cada clave.
+
+Caso práctico 3 (Continúa) Fig. 2.19. Generamos un par de claves. www.xlibros.com
+
+Criptografía
+
+### 4. A continuación nos pregunta el tamaño de la clave del
+
+algoritmo DSA. Por defecto ofrece 2 048, pero en este ejemplo elegimos el mínimo, 1 024, para tardar menos en generarla (Fig. 2.20).
+
+- La siguiente pregunta es el periodo de validez de la clave.
+
+Ya estamos advertidos de los problemas que supone pro- teger la clave privada. Por si la perdemos, conviene fijar una fecha de caducidad para que no se pueda usar más allá de ese día. En nuestro ejemplo no hace falta tanta seguridad y elegiremos que nunca caduque (Fig. 2.21).
+
+### 6. A continuación nos pide algunos datos para identificar la
+
+clave. Ya sabemos que en el llavero se pueden almace- nar varias claves (de hecho, estamos generando dos pares ahora mismo). Para elegir una u otra en cada ocasión, tenemos que identificarlas fácilmente. En este caso nos pedirá un nombre, una dirección de correo y un comenta- rio (Fig. 2.22). La herramienta gpg nunca nos enviará un correo; pero es una forma de contactar con el dueño de la clave (entregaremos nuestra clave pública a mucha gente, y ellos tendrán las claves públicas de otras personas).
+
+### 7. El siguiente paso es elegir la clave simétrica que prote
+
+gerá nuestras claves (Fig. 2.23). Como siempre, debe ser una clave fácil de recordar para nosotros y difícil de averiguar para cualquier otra persona. Si la olvidamos, no podremos utilizar nuestras claves asimétricas.
+
+### 8. Ya no hay más preguntas. Ahora la herramienta ejecuta
+
+los procedimientos matemáticos para obtener las claves asimétricas que hemos solicitado. Estos procedimientos necesitan muchos datos aleatorios, por lo que nos pide que generemos actividad en el sistema para ayudarle (Fig. 2.24).
+
+### 9. En poco tiempo el proceso termina y ya tenemos nues
+
+tras claves creadas (Fig. 2.25).
+
+### 10. Si nos fijamos, veremos una clave primaria (pub) de tipo
+
+DSA con tamaño de clave 1 024 (1024D). Debajo hay una clave subordinada de tipo Elgamal con tamaño de clave 1 024 (1024g).
+
+### 11. En el directorio HOME del usuario se ha creado un direc
+
+torio oculto llamado .gnupg, donde se guardan los ficheros internos que utiliza la herramienta (Fig. 2.26). El fichero pubring.gpg contiene las claves públicas y el fichero secring.gpg, las claves privadas. Por supuesto, ambos están cifrados.
+
+### 12. Para trabajar con las claves debemos utilizar la pro
+
+pia herramienta. La lista de claves la obtenemos con el parámetro list-keys (Fig. 2.27). En pantalla apare- cerá nuestra clave principal y la subordinada. alumno$ gpg –-list-keys Caso práctico 3 (Continuación) (Continúa) Fig. 2.20. Elegimos el tamaño de la clave. Fig. 2.21. Fijamos la caducidad de la clave.
+
+Fig. 2.22. Identiﬁ camos la clave. Fig. 2.23. Elegimos la clave simétrica que protege la clave privada. Fig. 2.24. Entropía. Fig. 2.25. Claves creadas. Fig. 2.26. Ficheros internos. www.xlibros.com
+
+Criptografía
+
+### 13. Comparado con el caso práctico del cifrado simétrico,
+
+estamos en el paso 13 y todavía no hemos cifrado nada: como ya suponíamos, la criptografía asimétrica es un poco más complicada. Ahora tenemos que comunicar nuestra clave pública a quien esté interesado en enviar- nos un mensaje cifrado. Primero tenemos que sacarla del llavero. El parámetro es export (Fig. 2.28)
+
+alumno$ gpg –a –-export –o /tmp/alumno. pub alumno Hemos utilizado los parámetros a (armor) para que el resultado no sea binario y o (output) para guardarlo directamente en un fichero (si no, aparece por la salida estándar). El fichero lo ponemos tranquilamente en /tmp porque no nos importa que otros usuarios lo copien.
+
+### 14. En la máquina tenemos un segundo usuario llamado
+
+profesor. Entramos con este usuario para enviar un mensaje cifrado al usuario alumno con la misma herra- mienta gpg. Para coger las claves públicas de alumno utilizamos el parámetro import (Fig. 2.29): profesor$ gpg -–import /tmp/alumno.pub
+
+### 15. En nuestro ejemplo el usuario profesor es la primera
+
+vez que utiliza la herramienta gpg, por lo que se le informa que se crea el directorio .gnupg y los ficheros internos.
+
+### 16. Podemos consultar las claves disponibles en el llavero
+
+con el mismo parámetro list-keys que vimos ante- riormente (Fig. 2.30): profesor$ gpg -–list-keys
+
+### 17. Vamos a crear un fichero llamado mensaje y lo cifrare
+
+mos para enviárselo al usuario alumno. Los comandos serían (Fig. 2.31): profesor$ fortune > mensaje profesor$ gpg –v –a –o /tmp/mensaje.cifrado –-encrypt -–recipient alumno mensaje Los parámetros a y o ya los conocemos (dejamos el fichero en /tmp porque no nos importa que otros usuarios puedan leerlo: sin la clave privada, el con- tenido es ininteligible). Hemos añadido el paráme- tro v (verbose) para obtener más información. En este caso, nos sirve para conocer que utilizará la clave subordinada (Elgamal), en lugar de la clave primaria (DSA).
+
+El parámetro encrypt indica que deseamos cifrado asimétrico y el parámetro recipient va seguido del identificador de la clave pública que queremos utilizar. Como ya sabemos, el cifrado utiliza la clave pública del receptor.
+
+### 18. Una vez introducido ese comando, la respuesta es
+
+una advertencia: no hay seguridad de que esa clave pública sea realmente la clave pública de alumno. Cualquiera podría haber cambiado el fichero /tmp/ alumno.pub antes de que profesor hiciera el import de las claves. Como ayuda, el comando nos Caso práctico 3 (Continuación) (Continúa) Fig. 2.27. Lista de claves.
+
+Fig. 2.28. Exportamos la clave pública. Fig. 2.29. Importamos la clave pública. Fig. 2.30. Claves disponibles. Fig. 2.31. Ciframos un ﬁ chero. www.xlibros.com
+
+Criptografía La solución más común a los problemas de proteger y transportar la clave privada es la tarjeta inteligente (Fig. 2.36). Es una tarjeta de plástico que contiene un chip electrónico. Hay dos tipos: t Tarjeta de memoria. Es equivalente a una memoria Flash y se limita a almacenar el lla- vero. Cuando se introduce en el lector, el ordenador hace una copia temporal del llavero y trabaja con él introduciendo la clave simétrica, etc.
+
+t Tarjeta procesadora. La tarjeta de memoria es peligrosa porque hemos expuesto nues- tro llavero. En cambio, en las tarjetas procesadoras las claves también están almace- nadas, pero nunca salen de la tarjeta. Cualquier cifrado que necesite nuestra clave privada es realizado por el propio chip porque incluye una CPU, memoria RAM, etc.
+
+Por supuesto, sigue siendo necesario introducir la clave simétrica que abre el llavero. ofrece la huella (fingerprint) de la clave y nos pide la confirmación de que es la clave que queremos uti- lizar.
+
+### 19. Podemos volver a la sesión del usuario alumno, obte
+
+ner la huella de su clave pública y compararla con la que aparece en la sesión de profesor. El parámetro para obtener la huella es fingerprint (Fig. 2.32): alumno$ gpg -–fingerprint
+
+### 20. Efectivamente, las huellas coinciden y podemos confiar
+
+en que la clave importada en profesor es correcta. Confirmamos que queremos usar esa clave y se crea el fichero cifrado. Ahora podemos volver a la sesión del usuario alumno e intentar descifrarlo. El parámetro es decrypt: alumno$ gpg -–decrypt /tmp/mensaje. cifrado Como esperábamos, el comando nos solicita la con- traseña que da acceso a la clave privada. En la ven- tana aparece qué clave necesita (en nuestro caso, la clave del algoritmo Elgamal), con toda su identificación (Fig. 2.33).
+
+Si pulsamos en Detalles podemos elegir que el sis- tema recuerde esta clave; así ahorraremos volver a teclearla. Como vimos en la Unidad 1, no es recomen- dable que la recuerde para siempre, porque cualquiera podría coger nuestro ordenador y descifrar nuestros mensajes.
+
+### 21. Si hemos introducido bien la contraseña aparecerá el men
+
+saje que nos ha enviado el usuario profesor (Fig. 2.34).
+
+### 22. Podemos comprobar qué pasa si el fichero, por cual
+
+quier razón, resulta dañado (defecto físico del disco duro, error en la transmisión, etc.). En el usuario alumno hacemos una copia del fichero y lo editamos para cam- biar cualquier letra. Si después lo intentamos descifrar, aparecerá un error (Fig. 2.35).
+
+### 23. Si ahora el usuario alumno quisiera enviar un fichero
+
+cifrado a profesor, primero profesor debería gene- rar su propio par de claves, después exportar la clave pública, hacerla llegar hasta alumno para que la importe, etc. Caso práctico 3 (Continuación) Fig. 2.32. Obtenemos la huella de la clave. Fig. 2.33. Desciframos el ﬁ chero.
+
+Fig. 2.34. Contenido recuperado. Fig. 2.35. Detectamos error en el ﬁ chero cifrado. Fig. 2.36. Tarjeta inteligente. www.xlibros.com
+
+Criptografía El ejemplo más sencillo es la tarjeta SIM de los teléfonos móviles: para poder usarla necesitamos introducir el número PIN. Aunque la usemos en otro teléfono, el PIN es el mismo porque está asociado a la tarjeta. En la sección final de esta unidad veremos otro ejemplo de tarjeta inteligente: el DNI electrónico.
+
+Las tarjetas inteligentes también se pueden clasificar por su tipo de interfaz: t Tarjeta de contacto. El lector necesita tocar los contactos metálicos del chip para interactuar con él. Son las más utilizadas, sobre todo en entornos de alta seguridad, como el sector bancario, Administración electrónica, etc.
+
+t Tarjeta sin contacto. El lector utiliza tecnologías inalámbricas para interactuar con el chip. Se utilizan en situaciones donde se necesitan transacciones rápidas, como el acceso al transporte público. El cifrado asimétrico no se puede utilizar para cifrar todos los paquetes intercambiados en una red local porque el bajo rendimiento del algoritmo ralentizaría el tráfico. En su lugar se adopta un esquema híbrido
+
+t Criptografía asimétrica solo para el inicio de la sesión, cuando hay que generar un canal seguro donde acordar la clave simétrica aleatoria que se utilizará en esa con- versación. t Criptografía simétrica durante la transmisión, utilizando la clave simétrica acordada du- rante el inicio de sesión. Generalmente se suele cambiar la clave simétrica cada cierto tiempo (minutos) para dificultar más el espionaje de la conversación.
+
+Es decir, cuando A quiere establecer una conversación con B, en A se genera en ese instante una nueva clave simétrica (CS). Para enviársela a B de modo seguro, A la cifra uti- lizando un algoritmo asimétrico con la clave pública de B. Cuando B recibe la CS cifrada, la descifra con su clave privada y desde ese momento pueden seguir el diálogo cifrando con el algoritmo simétrico acordado y la CS recibida. En la Figura 2.37 vemos un ejem- plo con el protocolo SSH.
+
+### 12. Entre dos compañeros, uti
+
+lizad gpg en modo asimé- trico para enviar un correo electrónico que dentro lleve un mensaje cifrado.
+
+- ¿Podríamos proteger el ar
+
+chivo de llaves con un al- goritmo asimétrico?
+
+- ¿Para qué sirve el pará
+
+metro gen-revoke en la he- rramienta gpg?
+
+### 15. Investiga si la tarjeta SIM
+
+es de tipo procesadora o memoria.
+
+### 16. Las primeras tarjetas de
+
+crédito utilizaban una ban- da magnética; después cambiaron a chip. ¿Por qué?
+
+### 17. Busca cómo se puede esta
+
+blecer un túnel seguro con un servidor FTP mediante SSH. Actividades SSH (Secure SHell). Protocolo de comunicaciones que permite cifrar la conversación extremo a extremo. Se utiliza para sesiones interactivas de comandos (es un buen sustituto de telnet), transfe- rencias de archivos (sustituto de FTP), túneles seguros entre aplica- ciones, etc.
+
+Vocabulario Ok Mensaje no cifrado Cifrado simétrico Cifrado asimétrico Cliente SSH Servidor SSH Clave pública Clave privada ¿Podemos hablar con seguridad? Ok, esta es mi clave pública Propongo utilizar el algoritmo simétrico AES Propongo utilizar esta clave simétrica Ok, pasamos a cifrado simétrico Login
+
+Ok, podemos empezar a trabajar Clave pública del servidor SSH Clave privada del servidor SSH Clave simétrica cifrada Clave simétrica generada Clave simétrica cifrada Clave simétrica propuesta por el cliente SSH Mensajes intercambiados en la red Algoritmo simétrico Algoritmo simétrico Fig. 2.37. Esquema híbrido de cifrado en SSH.
+
+www.xlibros.com
+
+Criptografía
+
+### 4. Cifrar y firmar
+
+La primera utilidad de la criptografía es ocultar el mensaje para aquellos que no son destinatarios del mismo. Es decir, garantizar la confidencialidad de la comunicación cifrando el documento original. La segunda utilidad es conseguir determinar la autenticidad del emisor. ¿Cómo podía estar seguro el general romano de que ese mensaje con las nuevas órdenes venía de otro gene- ral romano, y no de algún enemigo? Si el enemigo conocía el algoritmo de cifrado y la cla- ve actual, podía intentar engañarle mediante un mensaje falso pero correctamente cifrado.
+
+En el paso 18 del caso práctico 3 nos ha ocurrido lo mismo: hemos tenido que recurrir a una comprobación más (entrar al usuario alumno para comparar la huella de su clave) para estar seguros de que estábamos cifrando el mensaje para el destinatario correcto. En criptografía asimétrica, el mecanismo de firma garantiza que el emisor es quien dice ser. Supongamos que vamos a enviar un documento y queremos que el receptor confíe en que somos nosotros (Fig. 2.38). Para conseguirlo, el emisor aplica al documento una función resumen (función hash). El resultado de esta función es una lista de caracteres, el resumen, que la función garantiza que solo se pueden haber obtenido con el documento original (el algoritmo de la función hash no necesita una clave extra como los algoritmos de cifrado). Ahora el emisor cifra ese resumen con su clave privada y lo envía al destino, junto con el documento original.
+
+En el destino se hacen dos operaciones: t Aplicar la misma función hash al documento para obtener su resumen. t Descifrar el resumen recibido, utilizando la clave pública del emisor. Si ambos resúmenes coinciden, el destino puede estar seguro de que el emisor del docu- mento es el mismo que el dueño de la clave pública que acaba de aplicar para descifrar el resumen recibido.
+
+- ¿Cómo harías llegar al
+
+servidor, de manera segu- ra, las claves públicas de los clientes?
+
+### 19. Investiga cómo confirma
+
+un cliente que el servidor al que se conecta es el auténtico y no un impostor.
+
+### 20. Envía a un compañero un
+
+fichero ejecutable firma- do. Él deberá comprobar la firma, extraer el fichero y ejecutarlo para confir- mar que ha llegado bien.
+
+- ¿Por qué se firma solo el
+
+resumen del documento, y no el documento com- pleto? Actividades La función hash se utiliza también para comprobar que un fichero no ha sido alterado. Es importan- te sobre todo si el fichero es un ejecutable, que puede haber sido modificado por un virus para intentar replicarse. Las funciones más utilizadas son MD5 y las dis- tintas versiones de SHA.
+
+Vocabulario Por supuesto, si queremos que el documento original no pueda ser interceptado en la transmisión desde el emisor al receptor, debemos cifrarlo. Para ello usaremos la clave pública del receptor. El procedimiento completo sería: t El emisor aplica la función hash al original para generar el resumen.
+
+t El emisor toma su clave privada para aplicar el algoritmo asimétrico al documento resumen. El resultado es un documento resumen cifrado. t El emisor toma la clave pública del receptor para aplicar el algoritmo asimétrico al documento original y al documento resumen. El resultado es un documento conjunto cifrado que se envía al receptor.
+
+En el receptor, utiliza su clave privada para descifrar los documentos y la clave pública del origen para comprobar la firma. Emisor Clave pública Clave privada Función hash Documento original Algoritmo asimétrico Resumen cifrado Resumen descifrado Algoritmo asimétrico Función hash Resumen generado Descifrado Cifrado Resumen Receptor Si son iguales confirmamos que el origen del documento es el dueño de la clave pública Fig. 2.38. Mecanismo de ﬁ rma.
+
+www.xlibros.com
+
+Criptografía Firma digital en Linux Objetivo. Utilizar la herramienta gpg para firmar ficheros. Material. Ordenador con Linux Ubuntu 12.04. Duración:  15 minutos Dificultad:  Media
+
+- Seguimos con el usuario alumno del caso práctico 3.
+
+Recordemos que habíamos generado dos parejas de claves, una pareja DSA y una pareja Elgamal. En el cifrado del fichero habíamos utilizado la clave Elgamal.
+
+### 2. En la sesión de alumno creamos un fichero men
+
+saje y lo firmamos con nuestra clave privada para que cualquiera pueda confirmar que es nuestro. Usare- mos el parámetro detach-sign, que crea un fichero nuevo solo con la firma (el cifrado del resultado de aplicar el hash al fichero original). Utilizaremos tam- bién el parámetro a para observar ese fichero. Los comandos son
+
+alumno$ fortune > mensaje alumno$ gpg –a -–detach-sign mensaje
+
+### 3. En la Figura 2.39 vemos que la herramienta nos pide
+
+la contraseña de nuestra clave secreta de tipo DSA (directamente utiliza esa, no Elgamal). Como al cifrar, es recomendable evitar que recuerde la contraseña.
+
+### 4. El resultado del cifrado será un nuevo fichero men
+
+saje.asc (Fig. 2.40). La primera línea indica que es una firma (PGP SIGNATURE).
+
+### 5. Ahora realizamos el envío al usuario profesor (por
+
+ejemplo, podríamos estar entregando un trabajo). En este caso simplemente lo copiaremos en /tmp. Hay que copiar los dos ficheros: mensaje, que no lleva la firma, y mensaje.asc, que solo es una firma. Los comandos serían: alumno$ cp mensaje /tmp alumno$ cp mensaje.asc /tmp
+
+### 6. Iniciamos una sesión con el usuario profesor, copiamos
+
+los ficheros a nuestro directorio y comprobamos la firma. El parámetro es verify junto con el nombre del fichero que lleva la firma (en nuestro caso, mensaje.asc). Los comandos son (Fig. 2.41): profesor$ cp /tmp/mensaje* . profesor$ gpg –-verify mensaje.asc
+
+### 7. El mensaje de la herramienta dice que, efectivamente,
+
+el fichero mensaje ha sido firmado por el dueño de la clave privada cuya clave pública tenemos almacenada con esa misma identificación (nombre, huella, etc.). También insiste en que no está confirmado que efec- tivamente esa sea su clave; pero esto lo resolveremos pronto.
+
+### 8. Podemos probar a alterar algún carácter dentro del
+
+fichero original o dentro del fichero cifrado; la verifica- ción fallará (Fig. 2.42).
+
+### 9. Para evitar enviar dos ficheros, podemos incluirlo todo
+
+en el mismo. Volvemos a la sesión del usuario alumno y ahora firmamos con el parámetro clearsign. El comando sería: alumno$ gpg –a -–clearsign mensaje
+
+### 10. De nuevo hay un fichero mensaje.asc pero ahora
+
+contiene tanto la firma como el texto del mensaje (Fig. 2.43). Caso práctico 4 (Continúa) Fig. 2.39. Firma separada. Fig. 2.40. Fichero de ﬁ rma. Fig. 2.41. Comprobamos la ﬁ rma. Fig. 2.42. Detectamos modiﬁ caciones. www.xlibros.com
+
+Criptografía
+
+### 11. Podemos copiarlo de nuevo a /tmp y tomarlo desde la
+
+sesión del profesor. El comando de verificación es el mismo que en el caso del fichero separado (Fig. 2.44).
+
+### 12. Hasta ahora, el fichero mensaje estaba accesible,
+
+bien porque estaba separado de la firma, bien porque estaba junto a ella pero en texto claro. Si utilizamos la opción sign tendremos un fichero único con el texto y la firma, e ilegible. El comando sería (Fig. 2.45): alumno$ gpg –a –-sign mensaje
+
+### 13. De nuevo podemos llevarlo al directorio /tmp para que
+
+el usuario profesor haga una copia y lo verifique. Si además queremos extraer el fichero (Fig. 2.46) utiliza- remos decrypt: profesor$ rm mensaje.* profesor$ cp /tmp/mensaje.asc . profesor$ gpg –-verify mensaje.asc profesor$ gpg –-decrypt –o mensaje men- saje.asc
+
+### 14. Aunque esta protección es bastante débil, porque cual
+
+quiera que tenga la clave pública de alumno tendrá acceso al contenido del fichero. Debemos utilizar el cifrado normal, lo que nos lleva a que el usuario pro- fesor genere su par de claves (hasta ahora no ha sido necesario). Utilizaremos el parámetro gen-key (Fig. 2.47) con parámetros similares al caso práctico 3 (claves DSA y Elgamal, duración ilimitada, etc.)
+
+profesor$ gpg –-gen-key
+
+### 15. Con list-keys podemos comprobar que tenemos dos
+
+claves: las nuestras y las de alumno (Fig. 2.48).
+
+### 16. Ahora por fin podemos confirmar que la clave pública
+
+del usuario alumno es auténtica. Utilizaremos el paráme- tro sign-key y el identificador de la clave (Fig. 2.49): profesor$ gpg –-sign-key alumno Caso práctico 4 (Continuación) (Continúa) Fig. 2.43. Firma y contenido en el mismo ﬁ chero. Fig. 2.44. Comprobamos la ﬁ rma del ﬁ chero conjunto.
+
+Fig. 2.45. Firma protegida. Fig. 2.46. Comprobamos la ﬁ rma y extraemos el ﬁ chero. Fig. 2.47. Generamos las claves de profesor. Fig. 2.48. Todas las claves de profesor. www.xlibros.com
+
+Criptografía
+
+### 17. Desde ahora las verificaciones ya no emitirán el aviso
+
+de que la clave es sospechosa (Fig. 2.50).
+
+### 18. Para que alumno nos pueda cifrar el fichero firmado,
+
+debemos seguir el procedimiento conocido: exportar la clave pública de profesor e importarla en alumno. Los comandos a introducir en cada sesión serían: profesor$ gpg –a –-export /tmp/profesor. pub profesor alumno$ gpg –-import /tmp/profesor.pub
+
+### 19. En la sesión de alumno podemos usar list-key
+
+para consultar todas las claves que tiene almacenadas (Fig. 2.51).
+
+### 20. En la sesión de alumno vamos a generar un nuevo
+
+fichero, lo cifraremos para que solo profesor pueda recuperarlo y lo firmaremos para que sepa que es nues- tro. Primero firmaremos la clave pública de profesor para evitar mensajes de error. Después ejecutaremos conjuntamente sign y encript (Fig. 2.52): Alumno$ gpg –-sign-key profesor Alumno$ fortune > mensaje Alumno$ gpg –a –-sign –-encrypt –-reci- pient profesor mensaje Alumno$ cp mensaje.asc /tmp
+
+### 21. El fichero mensaje.asc es ilegible y lleva dentro el con
+
+tenido del fichero mensaje y la firma. Lo copiamos en /tmp para recuperarlo desde la sesión de profesor, descifrarlo, verificar la firma y recuperar el fichero men- saje. El parámetro será decrypt, porque también nos ofrece la confirmación de la firma (Fig. 2.53). Nos pedirá la contraseña que protege la clave privada de profesor, necesaria para descifrar el fichero. Los comandos serían
+
+profesor$ cp /tmp/mensaje.asc profesor$ gpg -–decrypt –o mensaje men- saje.asc profesor$ cat mensaje
+
+### 22. Si no tenemos la clave privada de profesor, no pode
+
+mos descifrar ni, por tanto, recuperar el fichero ni com- probar la firma. Por ejemplo, podemos borrar nuestras propias claves con los parámetros delete-secret- key y delete-key. Después ya no funcionará ni des- cifrar ni verificar. El mensaje de error indicará que el fichero fue cifrado con una clave Elgamal que ya no tenemos (Fig. 2.54). Los comandos son
+
+profesor$ gpg -–delete-secret-key profesor profesor$ gpg –-delete-key profesor profesor$ gpg –-list-key profesor$ gpg –-decrypt mensaje.asc profesor$ gpg –-verify mensaje.asc Caso práctico 4 (Continuación) Fig. 2.49. Conﬁ rmamos la clave de alumno. Fig. 2.50. Ahora la ﬁ rma es ﬁ able.
+
+Fig. 2.51. Todas las claves de alumno. Fig. 2.52. Firmamos y ciframos. Fig. 2.53. Recuperamos el ﬁ chero destinado a profesor. Fig. 2.54. Mensaje irrecuperable. www.xlibros.com
+
+Criptografía Firma digital en Windows Objetivo. Realizar una firma digital sobre un fichero utili- zando Windows. Material. Ordenador con Windows, ordenador con Linux Ubuntu 12.04, conexión a Internet. Duración:  30 minutos Dificultad:  Media
+
+### 1. Instalaremos el software Gpg4win. Es una adaptación
+
+a Windows de la utilidad gpg que hemos venido uti- lizando en Linux, aunque el entorno es bastante dife- rente. Lo descargamos de la página web y lanzamos el asistente de instalación (Fig. 2.55).
+
+### 2. Al final de la instalación nos pedirá realizar una serie
+
+de pasos para establecer las autoridades de certificación raíz de confianza (root CA). La utilidad de una CA la veremos en el apartado siguiente al hablar de PKI. Pero en este ejemplo no lo necesitamos, así que podemos omi- tir este paso activando skip configuration (Fig. 2.56).
+
+### 3. Terminada la instalación, abrimos el programa. La apli
+
+cación principal se llama Kleopatra y es el adminis- trador de certificados. Como hicimos en el caso prác- tico de Linux, primero vamos a generar un certificado nuevo. Entraremos en File > New certificate (Fig. 2.57).
+
+### 4. La primera pregunta nos deja elegir el tipo de certifi
+
+cado: el simple par de claves o utilizar una CA. Como hicimos en el caso Linux, nos limitaremos a las claves, para posteriormente exportarlas, importarlas, etc.
+
+### 5. El siguiente paso es introducir los datos identificativos
+
+del certificado (Fig. 2.58), que nos permiten elegirlo entre todos los disponibles en el almacén.
+
+### 6. Pulsando en Advanced Settings podemos cambiar el
+
+tipo de algoritmo asimétrico (Fig. 2.59). Elegimos DSA y Elgamal. También podemos limitar el uso (cifrar, fir- mar, etc.) y la validez. Caso práctico 5 (Continúa) Fig. 2.55. Asistente de instalación de Gpg4win. Fig. 2.56. Certiﬁ cados de conﬁ anza. Fig. 2.57. Nuevo certiﬁ cado.
+
+Fig. 2.58. Datos identiﬁ cativos. www.xlibros.com
+
+Criptografía
+
+### 7. En el último paso nos pedirán confirmar los parámetros
+
+del certificado que estamos a punto de crear (Fig. 2.60).
+
+### 8. Si seguimos adelante pulsando Create Key, nos pe
+
+dirá la contraseña simétrica que protege el certificado (Fig. 2.61).
+
+### 9. Una vez introducida la contraseña y su verificación, la
+
+herramienta necesita un tiempo para conseguir generar buenos números aleatorios que aseguren la calidad de las claves (Fig. 2.62).
+
+### 10. En poco tiempo aparecerá la ventana de confirma
+
+ción (Fig. 2.63). En ella aparece la huella de la clave pública (fingerprint) y nos permite terminar en este punto o hacer alguna otra operación, como un backup de las claves (el ordenador donde está Kleopatra podría estro- pearse), enviar el certificado por correo o subirlo a un servidor.
+
+Caso práctico 5 (Continuación) (Continúa) Fig. 2.59. Ajustes del certiﬁ cado. Fig. 2.60. Parámetros del certiﬁ cado. Fig. 2.61. Contraseña que protege el certiﬁ cado. Fig. 2.62. Generando las claves. Fig. 2.63. Claves generadas. www.xlibros.com
+
+Criptografía
+
+### 11. Pulsamos Finish y ahora en la ventana principal aparece
+
+nuestro certificado, con los identificadores utilizados y el tipo OpenPGP que habíamos elegido (Fig. 2.64).
+
+### 12. Vamos a probar nuestras claves. Creamos un fichero
+
+de texto llamado top secret.txt, nos situamos sobre él y desplegamos al menú del botón derecho. En el nuevo menú, llamado Más opciones de GgpEX, elegimos Fir- mar (Fig. 2.65).
+
+### 13. Aparecerá un asistente del proceso de firma digital
+
+(Fig. 2.66). En el primer paso podemos elegir incluir todos los ficheros en un único fichero de tipo .tar. Tam- bién optaremos entre firmar y cifrar o solo firmar. En este ejemplo elegimos solo firmar y marcamos la opción de que el fichero de salida sea legible (la conocida opción -a de la herramienta Linux).
+
+### 14. El siguiente paso es elegir el certificado que vamos a
+
+utilizar para firmar (Fig. 2.67).
+
+### 15. Finalmente, nos solicita la contraseña para poder tra
+
+bajar con la clave privada (Fig. 2.68). En la ventana aparece que estamos firmando con la clave DSA (ya sabemos que el cifrado se hace con la clave Elgamal).
+
+### 16. Si todo va bien, la firma se completa y el resultado es
+
+un fichero top secret.txt.asc (Fig. 2.69).
+
+### 17. Ahora podemos llevar el fichero original junto con
+
+el fichero de firma hasta otra máquina y comprobar la firma. Previamente necesitamos un tercer fichero: la clave pública del certificado, para poder importarlo en la otra máquina. Para conseguirlo nos situamos sobre Caso práctico 5 (Continuación) (Continúa) Fig. 2.64. Certiﬁ cado creado.
+
+Fig. 2.65. Menú contextual. Fig. 2.66. Asistente de ﬁ rma. Fig. 2.67. Elegimos el certiﬁ cado. Fig. 2.68. Introducimos la contraseña. Fig. 2.69. Firma completada. www.xlibros.com
+
+Criptografía El mecanismo de firma también se utiliza en las comunicaciones de datos para garanti- zar al servidor que somos un cliente de confianza, y así podemos evitar introducir usua- rio y contraseña (autenticación sin contraseña). Previamente, el servidor debe tener al- macenada la clave pública del cliente (que habrá llegado hasta allí de manera segura).
+
+Cuando el cliente empieza una sesión y solicita autenticación sin contraseña, el servidor genera en ese momento un documento especial, llamado desafío, compuesto de cifras y letras elegidas aleatoriamente. Busca en sus ficheros la clave pública del cliente, cifra con ella ese desafío y se lo envía al cliente.
+
+El cliente lo recibe, lo intenta descifrar con su clave privada y el resultado lo devuelve al servidor. Entonces el servidor compara la secuencia de caracteres recibida con el desa- fío que generó; si son iguales, efectivamente el cliente es de confianza y puede conectar directamente. Todo este diálogo puede quedar a salvo de miradas ajenas si usamos una conexión cifrada mediante la clave pública del servidor.
+
+el certificado y en el menú del botón derecho elegimos Export Certificates (Fig. 2.70).
+
+### 18. Lo exportamos al fichero windows.asc. Como es un
+
+fichero ASCII, lo podemos mirar con un editor de textos (Fig. 2.71). La cabecera PGP PUBLIC KEY indica que es una clave pública, como esperábamos.
+
+### 19. Transferimos los tres ficheros a una máquina Linux
+
+(Fig. 2.72). En este ejemplo utilizamos la misma máquina del caso práctico 4. Podemos utilizar cualquier meca- nismo: disco compartido, servidor FTP, pendrive USB, etc.
+
+### 20. El resto del procedimiento ya lo conocemos: primero
+
+hay que importar la clave pública con el comando (Fig. 2.73): alumno$ gpg -–import windows.asc
+
+### 21. Ya podemos comprobar la firma con el comando
+
+(Fig. 2.74): alumno$ gpg -–verify top secret.txt.asc
+
+### 22. Podemos comprobar también que, alterando un solo
+
+carácter del fichero de texto o de su firma, la verifica- ción ya no es posible. Caso práctico 5 (Continuación) Fig. 2.70. Exportamos el certiﬁ cado. Fig. 2.71. Contenido del certiﬁ cado. Fig. 2.72. Ficheros transferidos. Fig. 2.73. Importamos la clave pública. Fig. 2.74. Comprobamos la ﬁ rma.
+
+www.xlibros.com
+
+Criptografía
+
+### 5. PKI. DNIe
+
+Hasta ahora hemos aprendido a enviar documentos a un destinatario de manera que solo él pueda aprovecharlos (cifrado), y garantizando que el documento es nuestro (firmado). Pero en todos los casos hemos necesitado una comprobación extra sobre la clave pública: comparar la huella de esa clave importada con la huella de la clave ori- ginal, para estar seguros de que vamos a comunicarnos con la persona correcta.
+
+En nuestros casos prácticos ha sido sencillo porque estamos trabajando en la misma máquina o, como mucho, en la máquina del compañero. Pero la mayoría de las comu- nicaciones seguras ocurren entre máquinas muy alejadas entre sí que seguramente per- tenecen a otras empresas. Por ejemplo, las oficinas virtuales de los bancos o el correo web (Gmail, Hotmail, etc.). No podemos entrar en sus máquinas para ver las huellas ni negociar con cada uno otro canal seguro donde poder consultarlas.
+
+La solución a este problema es la implantación de una PKI (Public Key Infrastructure, infraestructura de clave pública). Ahora, en la comunicación segura entre cliente y servi- dor aparecen nuevos interlocutores: t La Autoridad de Certificación (CA [Certificate Authority]), cuya misión es emitir cer- tificados. Hasta ahora los generábamos nosotros mismos con una herramienta en el ordenador.
+
+t La Autoridad de Registro (RA [Registration Authority]), que es la responsable de asegu- rar que el solicitante del certificado es quien dice ser. Por ejemplo, en los certificados necesarios para presentar la declaración de la renta, la solicitud se puede hacer por Internet, pero para recogerlos hay que presentarse con el DNI en una oficina de la Administración.
+
+t La Autoridad de Validación (VA [Validation Authority]) es la responsable de compro- bar la validez de los certificados digitales emitidos. En la práctica suele coincidir con la CA. t Los repositorios. Son almacenes de certificados. Los principales son el repositorio de certificados activos y el repositorio de listas de revocación de certificados (certificados que, por cualquier motivo, fueron expresamente desactivados antes de caducar).
+
+El funcionamiento es el siguiente: t Durante el inicio de la sesión, el servidor envía su clave pública al cliente para que cifre el diálogo que van comenzar (autenticación usuario/contraseña, etc.); pero el cliente, antes de utilizarla, desconfía: necesita comprobar que el servidor es quien dice ser.
+
+t El servidor lo ha supuesto y ha enviado, junto con su clave pública, la firma digital de esa clave. Esa firma digital ha sido realizada por una CA oficial utilizando la clave privada de esa CA. t El cliente puede verificar la firma recibida utilizando la clave pública de la CA (en este punto puede necesitar conectar con la VA). Si la firma es correcta, la clave pública del servidor también lo es y podemos iniciar la sesión segura con toda confianza.
+
+Por tanto, para que funcione la autenticación de una clave pública mediante PKI, se necesitan dos pasos previos: t El servidor ha conseguido que una CA le firme su clave pública. Por ejemplo: Veri- Sign, FNMT, etc. t El cliente dispone de la clave pública de esa CA dentro de su llavero de claves asi- métricas.
+
+En la Figura 2.75 hemos añadido estos dos pasos al ejemplo de la Figura 2.37 acerca del protocolo SSH. En algún momento el servidor SSH consigue que una CA le firme la clave pública, y en algún momento el cliente SSH instala la clave pública de esa CA. Desde ese instante ya pueden establecerse conversaciones seguras entre cliente y servi- dor SSH, porque el cliente puede autentificar la clave pública ofrecida por el servidor.
+
+### 22. Investiga precios y requisi
+
+tos para conseguir un cer- tificado de una empresa de PKI. Actividades Este vídeo sobre navegación se- gura en SSL ilustra el concepto de PKI: http://goo.gl/aFO0L Web www.xlibros.com
+
+Criptografía Realmente, las CA no emiten un simple fichero con la firma, como hemos visto hasta ahora en los casos prácticos (ficheros .gpg o .asc); ni encontramos suelta la clave pú- blica de una CA para importarla. Es importante la información complementaria: quién firma, para quién firma, qué usos tiene la clave (cifrado y firmado, solo firmado, etc.), en qué fecha se firmó, cuándo caduca esa firma, qué algoritmos se han utilizado, etc.
+
+Esta información se recoge en una estructura que constituye el certificado digital, según el estándar X.509. Por tanto, en el funcionamiento de una PKI los usuarios importan certificados de CA y los servidores envían sus claves públicas dentro de certificados. Ahora bien, ¿cómo podemos estar seguros de que la clave pública de la CA es auténti- ca? Porque se ha instalado en nuestro ordenador de manera segura: bien porque forma parte de la instalación del sistema operativo, bien porque en algún momento la hemos importado voluntariamente. Se suelen llamar certificados raíz (root certificates).
+
+Hay muchas empresas públicas y privadas que disponen de una PKI y se dedican a emitir certificados. Los usuarios que desean un certificado de esa empresa visitarán solo una vez su RA y su CA para obtenerlo, aunque después usarán muchas veces la VA y los reposi- torios. Solo volverán a la CA para renovar el certificado cuando esté próximo a caducar.
+
+Además de las comunicaciones por Internet, las empresas también necesitan cifrar la información interna que circula por sus sistemas y sus redes. Para reducir el coste que supone contratar los certificados con una empresa externa, suelen crear una PKI propia que no emita certificados al público en general, sino solo a sus empleados y sus siste- mas. La instalación consiste en configurar un servidor de la empresa con el software necesario para ejercer las funciones de CA y VA, y poner la clave pública de la CA en todos los equipos, uno a uno. La RA es asumida por el departamento de informática.
+
+Como casi todo en seguridad informática, la PKI no es perfecta. Todavía tenemos dos vulnerabilidades: t Un virus en nuestro ordenador puede alterar el depósito de claves, e importar sin nues- tro consentimiento claves públicas de CA fraudulentas. Una conexión segura a servido- res respaldados por esas CA no es fiable.
+
+t Un ataque a los servidores de una CA podría robar su clave privada. Desde ese momento, el atacante puede firmar las claves públicas de servidores peligrosos y los clientes se conectarían a ellos confiando en que es una firma legal.
+
+### 23. En un certificado X.509 se
+
+pueden indicar otros usos de la clave del cliente, además de cifrar y firmar. ¿Cuáles son?
+
+- ¿Qué son los ficheros con
+
+extensión .pem, .cer, .p7b, .p12, etc.? Actividades Cliente SSH Mensajes intercambiados en la red ¿Cuál es tu clave pública? Toma mi clave pública firmada por la CA FNMT Propongo utilizar el algoritmo simétrico AES Servidor SSH (CS) Clave pública de CS Clave pública del servidor CS firmada por la CA FNMT Clave privada de CS Clave pública de la CA FNMT Clave pública de CS firmada Firma correcta ¿Podrías firmar mi clave pública?
+
+Aquí la tienes Algoritmo asimétrico Clave pública del servidor CS Algoritmo asimétrico de firma Servidor CA de la entidad FNMT Clave pública de FNMT Clave privada de FNMT Aquí la tienes Fig. 2.75. Funcionamiento de una PKI. www.xlibros.com
+
+Criptografía Uso de certificados en Windows Objetivo. Confirmar que la navegación es segura. Material. Ordenador con Windows 7 con conexión a Internet. Duración:  15 minutos Dificultad:  Fácil
+
+- Abrimos el navegador y nos conectamos a gmail.com.
+
+Aparecerá la página para introducir usuario y contra- seña. Esta es una página segura y vamos a compro- barlo. Buscamos en el navegador el icono asociado. En la versión de Chrome de la Figura 2.76 es un candado verde junto a la URL (que ya vemos que utiliza el proto- colo seguro HTTPS).
+
+### 2. Al pulsar sobre el candado aparecen las caracterís
+
+ticas de seguridad. En este ejemplo dice que la web accounts.google.com es quien dice ser, según la CA de la empresa Thawte. También dice que en la comunica- ción se está utilizando el algoritmo de cifrado RC4_128 con una clave de 128 bits. Esa clave se acordó en un canal asegurado mediante ECDHE_RSA. La autentica- ción utiliza el algoritmo SHA1.
+
+### 3. Si pulsamos en Datos del certificado aparece la infor
+
+mación general del mismo (Fig. 2.77): usos posibles de la clave pública que están firmando, identificador del solicitante y de la CA, y caducidad. En los usos pode- mos ver que sirve tanto para un servidor que quiere demostrar a un cliente que es quien dice ser como para un cliente que necesita demostrar al servidor que es quien dice ser. El intervalo de validez no es demasiado amplio (dos años), pero es más que suficiente para el uso que estamos haciendo (abrir el correo). En gene- ral, las operaciones en la web suelen durar muy poco tiempo.
+
+### 4. Si vamos a la pestaña Detalles podemos consultar todos
+
+los campos del certificado según el estándar X.509 (Fig. 2.78): versión, algoritmos, emisor, sujeto, etc.
+
+### 5. Finalmente, en la pestaña Ruta de certificación tene
+
+mos quién respalda a quién (Fig. 2.79). Vemos que accounts.google.com está autentificado por Thawte, y que a su vez Thawte está autentificado por VeriSign. Caso práctico 6 (Continúa) Fig. 2.76. Navegación segura. Fig. 2.77. Datos del certiﬁ cado. Fig. 2.78. Detalles del certiﬁ cado.
+
+Fig. 2.79. Ruta de certiﬁ cación. www.xlibros.com
+
+Criptografía
+
+### 6. Si hacemos doble clic en Thawte SGC CA veremos su
+
+certificado (Fig. 2.80). En los datos generales tenemos el destinatario (Thawte) y el emisor, así como la caduci- dad y los usos posibles.
+
+### 7. Haciendo doble clic sobre el tercer certificado veremos
+
+la información de un certificado raíz (Fig. 2.81). Es muy diferente a los anteriores: más usos, más duración de la validez y, sobre todo, está firmado por sí mismo (el des- tinatario y el emisor son el mismo). Por tanto, es un certi- ficado que venía con el sistema operativo o lo hemos instalado nosotros mismos.
+
+La mayor duración de la validez (diez años) refleja que esa CA firma claves para procesos mucho más durade- ros que una simple sesión web. Por ejemplo, contratos entre compañías, entre una compañía y un cliente o incluso entre una compañía y un empleado. El equivalente en el mundo real es el notario, donde acu- den los interesados para asegurar que no existirá repu- dio por ninguno de ellos sobre el acuerdo alcanzado y formulado en un contrato o cualquier otro documento.
+
+### 8. La lista de certificados que tenemos almacenados en
+
+la máquina está en Propiedades de Internet (esta herra- mienta también suele estar accesible al entrar en la con- figuración de los navegadores). Vamos a la pestaña Contenido y pulsamos el botón Certificados. Aparece una ventana con varias pestañas (Fig. 2.82).
+
+### 9. Pulsando en Entidades de certificación raíz de con
+
+fianza, la tabla ofrece la identidad del solicitante del certificado, la identidad del emisor del certificado y la fecha de emisión. Ahora podemos encontrar la entidad del paso anterior. Un doble clic sobre ella nos muestra los datos que esperábamos (Fig. 2.83). Caso práctico 6 (Continuación) Fig. 2.80. Certiﬁ cado de Thawte.
+
+Fig. 2.81. Certiﬁ cado raíz. Fig. 2.82. Lista de certiﬁ cados. Fig. 2.83. Datos del certiﬁ cado raíz. www.xlibros.com
+
+Criptografía A modo de ejemplo de PKI vamos a estudiar el DNI electrónico (DNIe), recientemente implantado en nuestro país. Tiene el mismo tamaño que el DNI anterior y también apare- cen escritos los datos de identificación de la persona. La diferencia es un pequeño chip que lo convierte en una tarjeta inteligente. El chip permite conocer
+
+t Datos generales de la persona, los mismos que están impresos en la tarjeta. t Datos biométricos de la persona, como su huella dactilar digitalizada. t Claves de cifrado asimétrico. El DNIe incluye claves distintas para firmar y para cifrar, por los motivos que ya conocemos: utilizar mucho una clave la expone a análisis crip- tográficos. Si al final alguien consigue nuestra clave de cifrado, por lo menos que no pueda firmar contratos en nuestro nombre.
+
+Para conseguirlo hay que ir a una comisaría de Policía especializada en DNI. Si ya te- níamos DNI anteriormente, solo llevaremos la fotografía. Tras identificarnos, aportar las huellas dactilares y pagar las tasas correspondientes, nos entregan dos cosas: el DNIe y un sobre ciego (su contenido no es visible al trasluz, sino que hay que abrirlo). Según el esquema PKI, la misma comisaría (en general, la Policía) hace de CA (emite el certifi- cado) y también de RA (ha confirmado quiénes somos). El sobre ciego contiene la clave simétrica que permite utilizar la clave privada para descifrar o firmar.
+
+Para usarlo necesitaremos un lector de tarjetas inteligentes como el de la Figura 2.84. La contraseña la podemos cambiar desde casa o en unos quioscos especiales instalados en la misma comisaría. También acudiremos a los quioscos para renovar los certificados, porque tienen una validez de 30 meses.
+
+Identificación mediante DNIe Objetivo. Utilizar el DNIe para identificarnos. Material. Ordenador con Windows, DNI electrónico con certificados en vigor y PIN válido, lector de tarjetas inteli- gentes, conexión a Internet. Duración:  30 minutos Dificultad:  Media
+
+### 1. Conectamos al ordenador el lector de tarjetas inteligen
+
+tes. En este ejemplo utiliza una conexión USB. Auto- máticamente es reconocido por el sistema operativo (Fig. 2.85).
+
+### 2. Introducimos el DNIe y abrimos el navegador para
+
+comprobar que funciona. Por ejemplo, vamos a la web de la DGT (Dirección General de Tráfico). En esta web se puede utilizar el DNIe para consultar los puntos del carné de conducir. Pulsamos en esa opción, pero no podemos acceder a esa información (Fig. 2.86).
+
+### 3. Efectivamente, no es suficiente con tener el lector y el
+
+DNIe. El lector sabe trabajar con tarjetas inteligentes, pero en este caso necesitamos un software más para realizar las operaciones criptográficas (cifrar, firmar, etcétera). Este software lo podemos descargar de la web oficial www.dnielectronico.es. Elegiremos la ver- sión adecuada para nuestro sistema operativo: en nues- tro caso, Windows (Fig. 2.87).
+
+### 4. Descargamos y lanzamos la instalación. Una vez ter
+
+minada, nos pide reiniciar la máquina (Fig. 2.88). Es necesario porque hemos introducido una nueva CA raíz, la CA del DNIe de la Policía, que debe estar ins- talada como CA de confianza dado que las claves de Caso práctico 7 (Continúa) Fig. 2.84. Lector de tarjetas inteligentes.
+
+Fig. 2.85. Lector disponible. Fig. 2.86. DNIe no reconocido. Fig. 2.87. Descarga del software criptográﬁ co. www.xlibros.com
+
+Criptografía nuestra nueva tarjeta inteligente van firmadas por ella. Aunque los sistemas operativos traen varias CA como VeriSign, es poco probable que traigan esta CA par- ticular. Y la Policía tiene su propia CA porque la infor- mación que firman es muy valiosa y no conviene que esté en manos de empresas privadas.
+
+### 5. En Windows Vista y Windows 7 la instalación de la
+
+nueva CA pasa desapercibida; en Windows XP sí apa- rece una ventana de confirmación (Fig. 2.89). Como era de esperar, el destinatario y el emisor coinciden.
+
+### 6. Tras arrancar, podemos consultar la lista de certificados
+
+en la herramienta de opciones de Internet para com- probar que se ha introducido con éxito (Fig. 2.90). Se llama AC RAIZ DNIE (certificado raíz de la Autoridad de Certificación del DNIe).
+
+### 7. Ahora introducimos nuestro DNIe en el lector. Aparecerá
+
+una ventana informativa (Fig. 2.91) que nos recuerda que solo debemos introducir el DNIe en el lector cuando este- mos a punto de realizar una operación de identificación o firma. Es decir, que no lo tengamos siempre conec- tado. Esto sirve para dificultar que un troyano realice múltiples intentos de obtener nuestras claves.
+
+### 8. Cerramos esa ventana y, en la misma ventana de cer
+
+tificados, vamos a la pestaña Personal. Ahí deberían estar los dos certificados de nuestro DNIe: el de auten- ticación y el de firma (Fig. 2.92). Si extraemos el DNIe del lector, esos certificados desaparecen de la ventana. Caso práctico 7 (Continuación) (Continúa) Fig. 2.88. Fin de la instalación.
+
+Fig. 2.89. Instalación de la nueva CA. Fig. 2.90. Nuevo certiﬁ cado de CA. Fig. 2.91. Advertencia de uso del DNIe. Fig. 2.92. Encontramos nuestros certiﬁ cados. www.xlibros.com
+
+Criptografía
+
+- Ahora podemos volver a la página web de la DGT.
+
+Al entrar en la opción de consultar los puntos, la tar- jeta empieza a trabajar y el navegador nos pregun- ta qué identificación queremos utilizar (Fig. 2.93). La lista que aparece son los certificados personales que hemos visto en el punto anterior (en este caso, el de autenticación, porque no estamos firmando). En el men- saje aparece la URL de la web que nos lo pide: en este caso, aplcr.dgt.es:443.
+
+### 10. Lo seleccionamos y pulsamos en Aceptar. Ahora nos
+
+pedirá el PIN de la tarjeta (Fig. 2.94), que es la con- traseña que viene en el sobre ciego que nos entrega- ron junto al DNIe. Esta contraseña autoriza el procesa- miento de datos (en este caso, el desafío) con la clave privada del certificado de autenticación que hemos ele- gido. Por tanto, cualquiera que tenga nuestro DNIe nece- sitará también conocer esta contraseña para utilizarlo.
+
+### 11. Si lo hemos hecho bien, aparecerá la información aso
+
+ciada a ese conductor (Fig. 2.95).
+
+### 12. Lo normal es validar el funcionamiento del DNIe en
+
+trando en una página de validación de la propia web www.dnielectronico.es. Iremos a la página llamada Comprobación de certificados y de nuevo nos pedirá elegir identificación (Fig. 2.96). La ventana informa sobre qué URL lo está solicitando: av-dnie.cert.fnmt.es:443.
+
+### 13. Si todo va bien, aparecerá una página con nuestros
+
+datos personales almacenados en el DNIe (Fig. 2.97). Caso práctico 7 (Continuación) Fig. 2.93. Elegimos el certiﬁ cado de identiﬁ cación. Fig. 2.94. Contraseña de acceso a la clave privada. Fig. 2.95. Información de la DGT. Fig. 2.96. Elegimos el certiﬁ cado de identiﬁ cación.
+
+Fig. 2.97. Datos personales del DNIe. www.xlibros.com
+
+Criptografía Firma con DNIe Objetivo. Utilizar el DNIe para firmar documentos. Material. Ordenador con Windows, DNI electrónico con certificados en vigor y PIN válido, lector de tarjetas inteli- gentes, conexión a Internet. Duración:  30 minutos Dificultad:  Media
+
+### 1. Ahora vamos a probar la firma de nuestro DNIe. Hay
+
+una aplicación llamada eCoFirma disponible en la web del Ministerio de Industria. Está hecha en Java. Nos conectamos y la descargamos para instalarla.
+
+### 2. La instalación consiste en un asistente de varios pasos
+
+(Fig. 2.98).
+
+### 3. En el segundo paso nos pide crear una contraseña
+
+que proteja nuestra configuración de la herramienta (Fig. 2.99). Es una contraseña particular de esta herra- mienta, no tiene nada que ver con la contraseña de nuestros certificados del DNIe.
+
+### 4. Más adelante nos preguntará dónde están nuestros
+
+certificados (Fig. 2.100). Hasta ahora siempre hemos trabajado con los certificados de Windows, que tam- bién los utiliza Internet Explorer; pero en el ordenador podemos tener otros almacenes (Firefox, etc.). Elegimos el almacén de Windows porque ya lo conocemos, aun- que la herramienta de instalación del DNIe debería haber actualizado también el almacén de Firefox.
+
+- El siguiente paso es elegir el tipo de firma (Fig. 2.101).
+
+Dejamos el valor por defecto XAdES-BES. En esta ven- tana también podemos seleccionar que la herramienta genere un documento firmado por cada documento original, o que haga un único documento firmado con todos los documentos originales.
+
+### 6. El siguiente paso nos permite cambiar los servidores
+
+OCSP (Online Certificate Status Protocol). Los certifica- dos de nuestro DNIe están firmados con la clave pri- vada de una CA de confianza; pero puede que estén revocados. Por ejemplo, si nos quitan el DNIe y tienen nuestra contraseña de uso, debemos denunciarlo inme- diatamente y la Policía procederá a invalidar ese certifi- cado en su servidor OCSP. Esto anula cualquier intento de firma con los certificados de ese DNIe robado. Así introducimos un nivel más de seguridad: se necesita la tarjeta, el PIN y, además, en directo se comprueba que los certificados de esa tarjeta son válidos.
+
+Caso práctico 8 (Continúa) Fig. 2.98. Asistente de instalación de eCoFirma. Fig. 2.99. Contraseña de eCoFirma. Fig. 2.100. Almacenes de certiﬁ cados. Fig. 2.101. Tipo de ﬁ rma. www.xlibros.com
+
+Criptografía En nuestro caso, pasamos a la siguiente ventana sin cambiar nada (Fig. 2.102).
+
+### 7. Más adelante nos pide confirmación para cambiar la
+
+asociación de la extensión de fichero .xsig, de manera que haciendo doble clic sobre ellos directamente abre el programa eCoFirma. Aceptamos.
+
+### 8. El siguiente paso es comprobar la lista de CA de con
+
+fianza (Fig. 2.103). Comprobamos que ahí está nuestra CA DNIE y seguimos.
+
+### 9. Finalmente efectúa un test de la configuración que
+
+hemos elegido. Como siempre, nos pide el PIN de la tarjeta para operar con ella. Si todo va bien, la herra- mienta nos lo confirma.
+
+### 10. Terminada la configuración, aparece la ventana princi
+
+pal de la herramienta eCoFirma (Fig. 2.104). Hay tres opciones: firmar, validar firma y añadir una firma (un documento original puede ser firmado varias veces por distintos responsables).
+
+### 11. Entramos en la primera opción y aparece un asistente. El
+
+primer paso es elegir el documento que queremos firmar. En este ejemplo, es un PDF de nuestro disco (Fig. 2.105).
+
+### 12. Pulsamos Siguiente y la herramienta busca nuestros cer
+
+tificados. Como siempre, nos pedirá el PIN (Fig. 2.106). Caso práctico 8 (Continuación) (Continúa) Fig. 2.102. Lista de servidores OCSP. Fig. 2.103. Lista de CA de conﬁ anza. Fig. 2.104. Herramienta eCoFirma. Fig. 2.105. Elegimos el ﬁ chero que queremos ﬁ rmar. Fig. 2.106. PIN del DNIe.
+
+www.xlibros.com
+
+Criptografía
+
+### 13. En la ventana (Fig. 2.107) aparecerá directamente nues
+
+tro certificado de firma (en las operaciones anteriores aparecía el certificado de autenticación).
+
+### 14. El paso siguiente es la firma. En este proceso apare
+
+cerá una ventana para confirmar que vamos a firmar (Fig. 2.108). Esta ventana no pertenece a eCoFirma, sino al software del DNIe.
+
+### 15. Si todo va bien, ya tendremos el fichero firmado. En la
+
+pestaña Información aparecerá nuestro certificado de firma (Fig. 2.109).
+
+### 16. En el disco se habrá creado un fichero con el mismo nom
+
+bre que el PDF pero con extensión .xsig. Ahora podemos copiar el fichero en un USB, ir a otra máquina (en este ejemplo un XP), copiar el fichero e instalar allí el software eCoFirma para proceder a validar la firma. Por supuesto, en esta nueva máquina no necesitamos el DNIe porque solo vamos a validar, no vamos a cifrar ni firmar.
+
+Entramos en la opción Validar firma y elegimos el fichero .xsig copiado.
+
+- Si todo va bien, la firma debe ser correcta (Fig. 2.110).
+
+### 18. En la pestaña Documentos aparece la lista de documen
+
+tos asociados a este documento de firma (podríamos haber firmado varios). En el último icono de la derecha podemos acceder a la descarga del documento ori- ginal (Fig. 2.111). Pulsándolo recuperamos el PDF que estaba cifrado dentro del fichero .xsig.
+
+### 19. Si abrimos el fichero .xsig con un editor de texto, com
+
+probamos que es un XML que sigue el estándar de firma que elegimos con anterioridad (Fig. 2.112). Caso práctico 8 (Continuación) Fig. 2.107. Nuestro certiﬁ cado de ﬁ rma. Fig. 2.108. Conﬁ rmación de ﬁ rma. Fig. 2.109. Datos de la ﬁ rma. Fig. 2.110. Firma correcta. Fig. 2.111. Podemos descargar el ﬁ chero.
+
+Fig. 2.112. XML del ﬁ chero de ﬁ rma. www.xlibros.com
+
+Criptografía Síntesis La información importante debe permanecer inaccesible para quien no esté debidamente autorizado. Por supuesto, protegeremos
+
+```bash
+el medio físico donde está almacenada (disco duro, CD, USB) o por donde circula (redes de voz y datos, cableadas e inalámbricas);
+```
+
+pero, por si acaso, el contenido estará cifrado para que no puedan aprovecharlo si cae en sus manos. Si el algoritmo utiliza la misma clave para cifrar y descifrar, es un algoritmo simétrico (DES, 3DES, AES); si utiliza claves distintas, es asimétrico (RSA, DSA, Elgamal).
+
+En los algoritmos simétricos la clave debe ser conocida por el emisor y por el receptor del mensaje cifrado. Por tanto, necesitamos un canal seguro para comunicársela. Los algoritmos asimétricos evitan el canal seguro de intercambio de claves, pero no son perfectos: son poco eficientes y necesitan proteger la clave privada (generalmente con una clave simétrica).
+
+Las claves privadas suelen viajar dentro de tarjetas inteligentes. Estas tarjetas incorporan un chip capaz de ejecutar las operaciones de cifrado con esas claves. Generalmente se combinan las dos operaciones: firmamos un documento y ciframos el resultado para que nadie extraño pueda utilizarlo.
+
+Las claves públicas de los individuos e instituciones pueden ser autentificadas por una CA (Certificate Authority), dentro de un esquema PKI (Private Key Infrastructure). Otros elementos son la RA (Autoridad de Registro) y la VA (Autoridad de Validación). t 6Oalgoritmo: es el procedimiento paso a paso que convierte el mensaje original en un mensaje cifrado.
+
+t 6OBclave: es un dato para el algoritmo gracias al cual se genera un mensaje cifrado tan complejo que es imposible deducir el mensaje original. Necesitaremos una clave para descifrarlo. Las técnicas criptográficas permiten generar mensajes que ocultan el mensaje original. Cada técnica se caracteriza por
+
+Los algoritmos simétricos cifran así: t &MFNJTPSVUJMJ[BFMBMHPSJUNPTJNÏUSJDPZMBDMBWFDPNQBSUJEBQBSBDJGSBSFM documento. t &MEPDVNFOUPDJGSBEPTFUSBOTNJUFBMSFDFQUPSQPSDVBMRVJFSNFEJP t &MSFDFQUPSVUJMJ[BFMBMHPSJUNPTJNÏUSJDPZMBDMBWFDPNQBSUJEBQBSBEFTDJGSBSMP y así recuperar el documento original.
+
+Los algoritmos asimétricos trabajan con dos claves: t 6OBclave pública, que se puede difundir por cualquier medio sin ningún problema. t 6OBclave privada, que solo debe conocer el dueño de la clave pública. Los algoritmos asimétricos cifran así: t &Memisor utiliza el algoritmo asimétrico y la clave pública del receptor para cifrar el documento.
+
+t &MEPDVNFOUPDJGSBEPTFUSBOTNJUFBMSFDFQUPSQPSDVBMRVJFSNFEJP t &Mreceptor utiliza el algoritmo asimétrico y su clave privada para descifrarlo y así recuperar el documento original. Los algoritmos asimétricos, además de cifrar, permiten firmar un documento para garantizar el origen del mismo. La firma consiste en
+
+t &Memisor utiliza el algoritmo asimétrico y su clave privada para cifrar un resumen del documento. El resumen se genera con una función hash. t &MEPDVNFOUPGJSNBEPTFUSBOTNJUFBMSFDFQUPSQPSDVBMRVJFSNFEJP t &Mreceptor utiliza el algoritmo asimétrico y la clave pública del emisor para verificar la firma.
+
+www.xlibros.com
+
+Criptografía Test de repaso
+
+### 1. Una agente del FBI necesita enviar un fichero top secret
+
+a su jefe, que está en Langley (Virginia)
+
+- Lo imprime y envía los folios por correo certificado.
+- Lo imprime y envía los folios por mensajero.
+- Lo cifra con IZArc utilizando la contraseña habitual y
+
+el resultado lo graba en un CD. El CD lo manda por correo ordinario.
+
+### 2. El jefe lo necesita con urgencia. Como el agente tiene
+
+acceso a Internet, decide transferir el fichero
+
+- Se conecta al servidor FTP de su departamento. Se
+
+identifica con su usuario y contraseña y completa la transferencia.
+
+- Se conecta al servidor HTTPS de su departamento.
+
+Se identifica con su usuario y contraseña y efectúa el upload.
+
+- Se conecta al servidor HTTP de su departamento. Se
+
+identifica con su usuario y contraseña y efectúa el upload.
+
+### 3. Todos los servidores del departamento están caídos. El
+
+agente y el jefe acuerdan un mecanismo alternativo
+
+- El agente envía el fichero a la cuenta de correo
+
+jefe@fbi.com.
+
+- El agente envía el fichero cifrado a la cuenta de
+
+correo jefe_fbi@hotmail.com.
+
+- El agente envía el fichero cifrado a la cuenta de
+
+correo jefe@fbi.com.
+
+### 4. Si podemos elegir entre algoritmo simétrico y asimé
+
+trico
+
+- Siempre simétrico, porque son más eficientes.
+- Siempre asimétrico, porque son más seguros.
+- Depende de la situación: si necesitamos rendimiento,
+
+simétrico; si necesitamos seguridad, asimétrico.
+
+### 5. Tenemos que elegir entre un algoritmo simétrico con
+
+clave de 512 bits y un algoritmo asimétrico con clave de 32 bits
+
+- El simétrico, porque la clave es larga, luego segura.
+- El asimétrico, porque son más modernos.
+- Da igual, porque la información que enviamos no es
+
+muy importante.
+
+### 6. Hemos cifrado un fichero con un algoritmo simétrico
+
+- Lo enviamos en un CD y en la carátula escribimos la
+
+clave, por si nuestro destinatario la ha olvidado.
+
+- Lo enviamos en un CD y en la carátula ponemos
+
+nuestro teléfono móvil, por si el destinatario ha olvi- dado la clave.
+
+- Lo enviamos en un CD sin ninguna indicación espe
+
+cial en la carátula. Confiamos en que el destinatario sabe la clave y, si no, sabrá cómo preguntárnosla.
+
+### 7. En una operación de cifrado con un algoritmo asimé
+
+trico
+
+- Necesitamos la clave pública y privada del receptor
+
+del mensaje.
+
+- Necesitamos la clave pública y privada del emisor
+
+del mensaje.
+
+- Necesitamos la clave pública del emisor y la clave
+
+privada del receptor del mensaje.
+
+### 8. En una operación de firma con un algoritmo asimétrico
+
+- Necesitamos la clave pública y privada del receptor
+
+del mensaje.
+
+- Necesitamos la clave pública y privada del emisor
+
+del mensaje.
+
+- Necesitamos la clave pública del emisor y la clave
+
+privada del receptor del mensaje.
+
+### 9. Las tarjetas inteligentes
+
+- Contienen la clave simétrica del dueño de la tarjeta,
+
+como si fuera un pendrive USB.
+
+- Contienen la clave pública del dueño de la tarjeta,
+
+porque la privada siempre está en su ordenador.
+
+- Contienen la clave privada del dueño de la tarjeta,
+
+porque la pública puede estar en cualquier otra parte.
+
+### 10. La tarjeta electrónica del DNIe
+
+- Contiene dos parejas de claves asimétricas asocia
+
+das al ciudadano: una para identificarse y otra para firmar.
+
+- Contiene la clave pública del ciudadano.
+- Contiene la clave privada del ciudadano.
+
+### 11. La tarjeta electrónica del DNIe
+
+- Se puede grabar en casa como un USB.
+- Solo puede emitirla la Policía, que hace de CA den
+
+tro de un esquema PKI.
+
+- Podemos pedirla en cualquier banco, porque tienen
+
+experiencia en tarjetas.
+
+### 12. En una comunicación, ¿podemos utilizar algoritmos simé
+
+tricos y asimétricos?
+
+- Sí. El simétrico para cifrar y el asimétrico para inter
+
+cambiar la clave.
+
+- Sí. El asimétrico para cifrar y el simétrico para inter
+
+cambiar las claves públicas y privadas.
+
+- Nunca. Son incompatibles.
+
+Soluciones: 1 c, 2 b, 3 c, 4 c, 5 a, 6 c, 7 a, 8 b, 9 c, 10 a, 11 b, 12 a. www.xlibros.com
+
+Criptografía Comprueba tu aprendizaje Asegurar la privacidad de la información transmitida en redes informáticas describiendo vulnerabilidades e insta- lando software específico
+
+### 1. Utiliza dos máquinas conectadas entre sí
+
+Una debe ser un sistema Windows. En ella instala un servidor FTP. En ese servidor crea un usuario james con contraseña bond007 y permisos para subir y bajar fi- cheros. La otra debe ser un sistema Linux. Puedes utilizar el clien- te nativo ftp desde la shell o algún cliente gráfico, como un navegador.
+
+- Comprueba que el esquema funciona: desde el sis
+
+tema Linux, ese usuario puede trabajar con el servi- dor FTP de la máquina Windows.
+
+- Ahora, en la máquina Windows instala el software
+
+de captura de paquetes wireshark (lo veremos en detalle en la Unidad 7).
+
+- Inicia una captura de tráfico. Conéctate al servidor
+
+para realizar la transferencia de un fichero de texto.
+
+- Termina la captura y demuestra que eres capaz de
+
+localizar los paquetes donde va el usuario y la con- traseña y algunos paquetes del contenido. Como has visto, las transferencias FTP son fáciles de espiar. Una primera solución: cifrar el contenido transmitido
+
+- En el sistema Linux utiliza la herramienta gpg para
+
+realizar un cifrado simétrico del mismo fichero de texto del punto anterior.
+
+- Activa la captura de tráfico en el servidor y realiza la
+
+transferencia del fichero cifrado.
+
+- Detén la captura y demuestra que, aunque todavía
+
+eres capaz de conocer el usuario y la contraseña, los paquetes que llevan el contenido del fichero son ilegibles. Una segunda solución: instalar un servidor FTPS
+
+- En el sistema Windows instala un servidor FTPS.
+
+Habilita el mismo usuario james con contraseña bond007.
+
+- Activa la captura de tráfico en el servidor y realiza la
+
+transferencia del fichero de texto (normal, sin cifrar).
+
+- Detén la captura y demuestra que en los paquetes
+
+ya no puedes identificar ni el usuario ni el contenido del fichero. Utilizar sistemas de identificación, como la firma electróni- ca y el certificado digital, entre otros
+
+### 2. En las dos máquinas del ejercicio 1, realiza estas ope
+
+raciones
+
+- En la máquina Windows instala Gpg4win y crea un
+
+par de claves DSA-Elgamal identificadas como bill gates.
+
+- En la máquina Linux crea un usuario linus y utiliza la
+
+herramienta gpg para crearle un par de claves DSA- Elgamal identificadas como linus torvalds.
+
+- En la máquina Windows crea un fichero de texto
+
+y envíalo cifrado y firmado por bill gates para que lo reciba linus torvalds. Al recibirlo linus torvalds deberá comprobar la firma y recuperar el fichero.
+
+- En la máquina Linux crea un fichero de texto y envíalo
+
+cifrado y firmado por linus torvalds para que lo reciba bill gates. Al recibirlo bill gates deberá comprobar la firma y recuperar el fichero.
+
+- Repite las dos operaciones de cifrado y firmado,
+
+pero utilizando el correo electrónico como meca- nismo de transferencia entre máquinas.
+
+- Repite las dos operaciones, pero utilizando una ima
+
+gen en lugar del fichero de texto.
+
+- Repite las dos operaciones con la imagen y enviando
+
+mediante correo electrónico.
+
+- En la máquina Linux crea un nuevo usuario larry y
+
+créale un nuevo par de claves identificadas como larry ellison.
+
+- En la máquina Windows crea un nuevo fichero de
+
+texto y envíalo cifrado y firmado por bill gates para larry ellison. Al recibirlo, deberá comprobar la firma y recuperar el fichero.
+
+- En la máquina Linux elige un archivo de sonido y
+
+envíalo cifrado y firmado por larry ellison para que lo reciba bill gates. Al recibirlo, deberá comprobar la firma.
+
+- En la máquina Linux crea un archivo de texto y
+
+déjalo en /tmp cifrado y firmado por larry ellison para linus torvalds. Entra con el usuario linus para compro- bar la firma y recuperar el fichero.
+
+- En todos los casos, documenta el procedimiento lle
+
+vado a cabo. www.xlibros.com
+
+En esta unidad aprenderemos a: t%FGJOJSMBTDBSBDUFSÓTUJDBTEFMBVCJDBDJØO GÓTJDBZDPOEJDJPOFTBNCJFOUBMFT EFMPTFRVJQPTZTFSWJEPSFT t7FSJGJDBSFMGVODJPOBNJFOUPEFMPTTJTUFNBT EFBMJNFOUBDJØOJOJOUFSSVNQJEB t4FMFDDJPOBSMPTQVOUPTEFBQMJDBDJØO EFMPTTJTUFNBTEFBMJNFOUBDJØO JOJOUFSSVNQJEB t7BMPSBSMBTWFOUBKBTRVFTVQPOF MBVUJMJ[BDJØOEFTJTUFNBT CJPNÏUSJDPT Y estudiaremos
+
+t-BVCJDBDJØOZMBQSPUFDDJØOGÓTJDB EFMPTFRVJQPTZTFSWJEPSFT t-PTTJTUFNBTEFBMJNFOUBDJØO JOJOUFSSVNQJEB Unidad Seguridad pasiva: equipos www.xlibros.com
+
+Seguridad pasiva: equipos
+
+### 1. Ubicación del CPD
+
+Las empresas colocan los equipos de usuario cerca del usuario (un ordenador sobre su mesa, un portátil que se lleva a casa); pero los servidores están todos juntos en una misma sala. Esa sala tiene varios nombres: CPD (centro de proceso de datos), centro de cálculo, DataCenter, sala fría, «pecera», etc. Centralizando se consigue
+
+t Ahorrar en costes de protección y mantenimiento. No necesitan duplicar la vigilancia, la refrigeración, etc. t Optimizar las comunicaciones entre servidores. Al estar unos cerca de otros no ne- cesitan utilizar cables largos o demasiados elementos intermedios que reducen el rendimiento.
+
+t Aprovechar mejor los recursos humanos del departamento de informática. No tienen que desplazarse a distintos edificios para realizar instalaciones, sustituir tarjetas, etc. Tan importante como tomar medidas para proteger los equipos es tener en cuenta qué hacer cuando esas medidas fallan. Todas las empresas deben tener documentado un plan de recuperación ante desastres, donde se describa con el máximo detalle (en una crisis no hay tiempo para reflexionar) qué hacer ante una caída de cualquiera de los servicios que presta el CPD. Este plan debe ser actualizado cuando se efectúe un cambio en el CPD (nuevo servicio, nuevo equipo). El plan debe incluir
+
+t Hardware. Qué modelos de máquinas tenemos instalados (tanto servidores como equipamiento de red), qué modelos alternativos podemos utilizar y cómo se instalarán (conexiones, configuración). t Software. Qué sistema operativo y aplicaciones están instalados, con el número de versión actualizado y todas las opciones de configuración (permisos, usuarios, etc.).
+
+t Datos. Qué sistemas de almacenamiento utilizamos (discos locales, armario de discos), con qué configuración y cómo se hace el respaldo de datos (copias de seguridad).
+
+#### 1.1. Protección
+
+La informática es vital para la empresa: si los servidores se paran, la empresa se para. Sucede en todos los sectores: en una empresa de telefonía, en una compañía aérea, en unos grandes almacenes... El CPD debe estar protegido al máximo: t Elegiremos un edificio en una zona con baja probabilidad de accidentes naturales (terremotos, ciclones, inundaciones).
+
+t También evitaremos la proximidad de ríos, playas, presas, aeropuertos, autopistas, bases militares, centrales nucleares, etc. t Evitaremos ubicaciones donde los edificios vecinos al nuestro pertenezcan a empre- sas dedicadas a actividades potencialmente peligrosas: gases inflamables, explosi- vos, etc.
+
+t Preferentemente seleccionaremos las primeras plantas del edificio.
+
+La planta baja está expuesta a sabotajes desde el exterior (impacto de vehículos, asaltos, etc.).
+
+Las plantas subterráneas serían las primeras afectadas por una inundación.
+
+Las plantas superiores están expuestas a un accidente aéreo y, en caso de incendio iniciado en plantas inferiores, es seguro que nos afectará. t Se recomienda que el edificio tenga dos accesos y por calles diferentes. Así siempre podremos entrar en caso de que una entrada quede inaccesible (obras, incidente, etc.).
+
+### 1. Investiga la reacción de la
+
+empresa Deloitte ante la pérdida de su CPD en el incendio del edificio Windsor de Madrid.
+
+### 2. Discute en clase las venta
+
+jas e inconvenientes que tiene para la seguridad pasiva utilizar servidores de otras empresas (cloud computing).
+
+### 3. Busca la clasificación de
+
+infraestructuras TIER 1 a 4 en las especificaciones del estándar ANSI\TIA-942. Actividades Este vídeo describe el funciona- miento de los CPD de Google: http://goo.gl/TeGHY Y este, el CPD de una universi- dad española: http://goo.gl/TcUHQ Web El término CPD (centro de pro- ceso de datos) es una evolución de la primera denominación
+
+centro de cálculo (la primera utilidad de los ordenadores fue realizar cálculos matemáticos). ¿Sabías que…? www.xlibros.com
+
+Seguridad pasiva: equipos t Es recomendable evitar señalizar la ubicación del CPD para dificultar su localización a posibles atacantes. La lista de empleados que entran a esa sala es muy reducida y saben perfectamente dónde está. t Los pasillos que llevan hasta el CPD deben ser anchos porque algunos equipos son bastante voluminosos. Incluso conviene dotarlo de un muelle de descarga.
+
+t El acceso a la sala debe estar muy controlado. Los servidores solo interesan al perso- nal del CPD. t En las paredes de la sala se deberá utilizar pintura plástica porque facilita su limpieza y se evita la generación de polvo. t En la sala se utilizará falso suelo y falso techo (Fig. 3.1) porque facilita la distribución del cableado (para electricidad y comunicaciones) y la ventilación.
+
+t La altura de la sala será elevada tanto para permitir el despliegue de falso suelo y fal- so techo como para acumular muchos equipos en vertical (Fig. 3.1), porque el espacio de esta sala es muy valioso. t En empresas de alta seguridad, la sala del CPD se recubre con un cofre de hormigón para protegerla de intrusiones desde el exterior.
+
+t Instalaremos equipos de detección de humos y sistemas automáticos de extinción de incendios, como los elementos del techo de la Figura 3.1. t El mobiliario de la sala debe utilizar materiales ignífugos. Fig. 3.1. Equipos en un CPD.
+
+- ¿Qué se utiliza para apa
+
+gar un incendio en un CPD?
+
+### 5. Busca las especificacio
+
+nes de tu placa base y el disco duro, y localiza la temperatura y humedad recomendadas.
+
+### 6. Las CPU modernas miden
+
+la temperatura y reaccio- nan ante un exceso de calor. ¿Qué hacen?
+
+### 7. El elevado calor generado
+
+en un CPD puede aprove- charse. Investiga las solu- ciones adoptadas en algu- nas empresas. Actividades Sala fría. Al CPD también se le suele llamar sala fría porque tiene una refrigeración especial para combatir el calor generado por todos los ordenadores que hay dentro.
+
+Vocabulario Este vídeo muestra el proce- so de instalación de un sistema de detección y extinción auto- mática de incendios: http://goo.gl/Xt9hC Y este vídeo es una demostra- ción práctica: http://goo.gl/h1Ft3 Web
+
+#### 1.2. Aislamiento
+
+Las máquinas que situamos en el CPD utilizan circuitos electrónicos. Por tanto, hay que protegerlas ante: t Temperatura. Los circuitos de los equipos, en especial los procesadores, trabajan a alta velocidad, por lo que generan mucho calor. Si además le sumamos la temperatu- ra del aire, los equipos pueden tener problemas.
+
+t Humedad. No solo el agua, también un alto porcentaje de humedad en el ambiente puede dañarnos. Para evitarlo utilizaremos deshumidificadores. t Interferencias electromagnéticas. El CPD debe estar alejado de equipos que generen estas interferencias, como material industrial o generadores de electricidad, sean nuestros o de alguna empresa vecina.
+
+t Ruido. Los ventiladores de las máquinas del CPD generan mucho ruido (son muchas máquinas trabajando en alto rendimiento), tanto que conviene introducir aislamiento acústico para no afectar a los trabajadores de las salas adyacentes. www.xlibros.com
+
+Seguridad pasiva: equipos Control de temperatura en Windows Duración:  15 minutos  Dificultad:  Fácil Objetivo. Vigilar la temperatura de la máquina. Material. Ordenador con Windows.
+
+### 1. El ordenador tiene varios sensores de temperatura: en
+
+la CPU, en la tarjeta gráfica, en el disco duro, etc. El principal es el de la CPU, porque es la parte crítica del sistema que funciona a más velocidad, lo cual genera mucho calor. Por eso la CPU siempre dispone de venti- lación especial (disipador más ventilador).
+
+### 2. Podemos conocer la temperatura instalando alguna uti
+
+lidad software, como RealTemp. En la Figura 3.2 tene- mos la ventana principal de la herramienta. Por desgra- cia, estas herramientas no funcionan bien en todos los equipos porque dependen mucho del API (Application Programming Interface) ofrecido por el fabricante de la CPU, la tarjeta gráfica, la placa base, etc. Es decir, el sensor está, pero no siempre resulta fácil que cualquier software lo consulte.
+
+La primera parte de la ventana muestra el tipo de CPU y la velocidad actual (en Mhz), así como la carga del sistema operativo (Load: una alta carga supone que la CPU trabaja más y genera más calor). Debajo tiene la temperatura de la CPU. En este caso ofrece dos valores porque es un procesador de doble núcleo. La siguiente fila es la diferencia con el máximo que admiti- mos (este valor lo podemos configurar), es decir: cuán- tos grados más se puede calentar antes de que sea importante. Finalmente, hay dos filas donde apare- cen los valores mínimo y máximo que ha registrado la herramienta desde que está arrancada. Esto nos sirve para comprobar si la máquina está siempre trabajando al mismo ritmo o tiene altibajos.
+
+### 3. Pulsando en Settings accedemos a la configuración
+
+(Fig. 3.3). Si nuestra tarjeta gráfica es ATI o Nvidia, podemos activar la casilla correspondiente para dispo- ner de su temperatura. Para verla activaremos su casilla en la zona central bajo GPU (Graphics Processing Unit, el procesador gráfico).
+
+### 4. Si pulsamos OK, ahora la ventana principal nos ofrece
+
+la temperatura de la tarjeta gráfica (Fig. 3.4).
+
+### 5. Esta misma información está disponible en la barra de
+
+tareas (Fig. 3.5).
+
+### 6. Finalmente, esta herramienta incorpora un mecanismo
+
+de aviso de sobrecalentamiento. En la ventana de configuración activaremos la casilla Alarm (Fig. 3.6). A la derecha podemos asignar valores para la tem- peratura de CPU y GPU. Si se superan, oiremos una sirena. También podemos ejecutar un programa cual- quiera (enviar un correo, registrar un evento, avisar a un sistema de monitorización como los que veremos en la Unidad 5): basta elegirlo pulsando en Alarm EXE.
+
+En el ejemplo, como la temperatura de la CPU estaba por encima de 60, poniendo un valor de 60 y pulsando Apply se activa la alarma. Caso práctico 1 (Continúa) Fig. 3.2. Utilidad RealTemp. Fig. 3.3. Conﬁ guración de RealTemp. Fig. 3.4. Temperatura de la tarjeta gráﬁ ca.
+
+Fig. 3.5. Temperaturas en la barra de tareas. www.xlibros.com
+
+Seguridad pasiva: equipos
+
+#### 1.3. Ventilación
+
+Los CPD no suelen tener ventanas. La ventilación que conseguiríamos con ellas sería mínima para todo el calor que se genera, y el riesgo de intrusiones desde el exterior (o simplemente la lluvia) no es admisible en una instalación de tanta importancia. La temperatura recomendable en la sala estaría alrededor de los 22 grados. Las máqui- nas no lo necesitan, pero hay que pensar que ahí también van a trabajar personas. Para conseguirlo instalaremos equipos de climatización. Se suelen instalar por duplicado, para estar cubiertos ante el fallo de uno de los equipos.
+
+En los CPD grandes se adopta la configuración de pasillos calientes y pasillos fríos (Fig. 3.8). Las filas de equipos se colocan en bloques formando pasillos, de manera que todos los ventiladores que extraen el calor de la máquina (fuente de alimentación, caja de la CPU) apunten hacia el mismo pasillo. En este pasillo se colocan los extractores de calor del equipo de climatización.
+
+Ese mismo equipo introduce aire frío en los pasillos fríos, generalmente a través del falso suelo utilizando baldosas perforadas. (Continuación)
+
+### 7. Algunas utilidades, además de la temperatura, saben
+
+cómo hablar con la placa base para obtener la velo- cidad de los ventiladores. Por ejemplo, SpeedFan. En la Figura 3.7 vemos que aparece la velocidad en RPM (revoluciones por minuto) de los ventiladores Fan1 y Fan2 (mirando en el manual de la placa, uno corresponde a la CPU y el otro, al chipset). Hay un tercero, Fan3, que no está siendo utilizado. Si la velocidad de Fan1 o Fan2 baja repentinamente, debemos averiguar qué pasa, por- que en poco tiempo subirá la temperatura.
+
+### 8. Un ventilador se puede parar por un fallo interno o por
+
+un uso excesivo; pero la causa más frecuente de proble- mas con los ventiladores es la acumulación de polvo y otras partículas. Por este motivo, conviene abrir la caja del ordenador para limpiarla con un aspirador. Nos centraremos especialmente en los ventiladores y disi- padores. Dependiendo del ambiente de la sala, esta tarea se hará una vez al año (oficina) o una vez al mes (ordenador en contacto con el exterior).
+
+Caso práctico 1 Fig. 3.6. Alarma de sobrecalentamiento. Fig. 3.7. Ventana principal de SpeedFan. Este vídeo muestra el proceso de construcción de un CPD, donde se cuida especialmente la venti- lación: http://goo.gl/bT6hj Y este vídeo muestra un CPD ya construido: http://goo.gl/GvmGL Web www.xlibros.com
+
+Seguridad pasiva: equipos Si es posible, todo el cableado de potencia irá en los pasillos fríos (es peligroso sobre- calentarlos) y el cableado de datos en los pasillos calientes.
+
+#### 1.4. Suministro eléctrico y comunicaciones
+
+Nuestro CPD no está aislado: necesita ciertos servicios del exterior. Los principales son la alimentación eléctrica y las comunicaciones. En ambos casos conviene contratar con dos empresas distintas, de manera que un fallo en una compañía suministradora no nos impida seguir trabajando.
+
+El suministro eléctrico del CPD debería estar separado del que alimenta al resto de la empresa para evitar que un problema en cualquier despacho de ese edificio afecte a los servidores, porque están siendo utilizados por empleados de otros edificios, inclu so por clientes y proveedores.
+
+Para los sistemas críticos, en los que la empresa no puede permitirse ninguna interrupción del servicio, deberemos instalar generadores eléctricos alimentados por combustible. En cuanto a las comunicaciones, conviene que el segundo suministrador utilice una tec- nología diferente al primero. Por ejemplo, si tenemos una conexión ADSL, el segundo no debería ser ADSL también, porque comparten el mismo cable hasta llegar a la central
+
+un fallo en ese cable nos desconectaría de los dos suministradores. En cualquier caso, siempre conviene tener una tercera opción de conexión inalámbrica, por si el problema ocurre en la calle (obras en la acera, etc.).
+
+#### 1.5. Control de acceso
+
+Las máquinas del CPD son vitales para la empresa y solo necesitan ser utilizadas por un reducido grupo de especialistas. El acceso a esta sala de máquinas debe estar especial- mente controlado. No podemos consentir que alguien se lleve ninguna máquina o algún componente de ella (discos duros, cintas de backup) ni dejarle dentro intentando tener acceso desde las consolas de los servidores.
+
+Las identificaciones habituales (contraseñas, tarjetas de acceso) se complementan con medidas más seguras, como la biometría, que veremos en la Unidad 5. En instalaciones importantes, el CPD puede tener su propio equipo de vigilantes de seguridad. En la sala se suele instalar también una red de sensores de presencia y cámaras de vídeo para detectar visitas inesperadas.
+
+Fig. 3.8. Pasillos calientes y fríos.
+
+### 8. Haz una lista con todos
+
+los controles que había para acceder al computa- dor principal en la película Misión: Imposible (1996). A pesar de todo, los supe- raron. ¿Cómo lo hubieras evitado? Actividades Algunos routers ADSL incorporan un puerto USB donde podemos conectar un módem 3G. Esto per- mite mantener la conexión a In- ternet aunque falle el ADSL
+
+http://goo.gl/fvYLl Web Equipo de climatización Pasillo caliente Cableado de datos Cableado de potencia Pasillo frío Pasillo frío El aire frío sale por baldosas perforadas del falso suelo Calor generado por los equipos www.xlibros.com
+
+Seguridad pasiva: equipos
+
+### 2. Centro de respaldo
+
+A pesar de tanta protección, debemos pensar en la posibilidad de que ocurra una catástrofe en nuestro CPD y quede inservible (inundación, terremoto, sabotaje). La conti- nuidad de la empresa no puede depender de un punto único de fallo; si disponemos de presupuesto suficiente, debemos instalar un segundo CPD.
+
+Este segundo CPD, también llamado centro de respaldo (CR), ofrece los mismos servi- cios del centro principal (CP). Aunque, si la inversión en hardware resulta demasiado elevada, puede limitarse a los servicios principales, o a los mismos servicios pero con menos prestaciones. Por supuesto, debe estar físicamente alejado del CP; cuantos más kilómetros entre ambos, mejor (Fig. 3.9).
+
+Fig. 3.9. Centro de respaldo alejado del centro principal. En condiciones normales, el CR está parado (stand-by) esperando que, en cualquier mo- mento, la empresa pueda necesitar detener el CP y activar el CR como nuevo CP. Los usuarios (empleados, clientes, proveedores) no deberían notar el cambio. Para ello, la información del CP también está en el CR. Esto incluye la configuración de los servicios; pero, sobre todo, los datos que han sido modificados en el último instante, antes de la con- mutación de centros. Por tanto, no es suficiente con recuperar la última copia de seguridad del CP (sobre todo, porque la configuración puede ser distinta): debemos habilitar meca- nismos especiales de réplica, en especial para las bases de datos, que son más complejas que los sistemas de ficheros. Pero esto necesita de muy buenas comunicaciones entre el CP y el CR, con lo que la distancia que los separa puede ser un problema.
+
+Como hemos señalado con anterioridad en el plan de recuperación ante desastres, puede que las circunstancias que nos lleven a conmutar el CR al CP sean muy urgentes y no haya tiempo para descubrir cómo se hace: todo el procedimiento de conmutación debe estar documentado con el máximo detalle, así como la posterior recuperación del CP, asumiendo los cambios ocurridos mientras estaba inactivo. Incluso conviene probar- lo una vez al año para confirmar que los pasos están bien descritos y el personal está capacitado para ejecutarlos bien.
+
+Los equipos del centro principal y el centro de respaldo constituyen los centros de pro- ducción de la empresa: están en funcionamiento para dar servicio a los empleados, clientes y proveedores de la misma. Pero no son las únicas salas con servidores y equi- pamiento de red. Cualquier cambio en las aplicaciones corporativas o la nueva web de la empresa no puede instalarse directamente en las máquinas de producción, porque un fallo no detectado puede bloquear algunas áreas de la empresa. Primero se prueba en un entorno controlado, llamado maqueta de preproducción, donde el personal de la empresa aplica el cambio. En esta fase hay un contacto directo con el suministrador del software para resolver inmediatamente cualquier contingencia.
+
+Las empresas de desarrollo de software tienen sus propias salas de ordenadores para montar va- rias maquetas de la aplicación que están desarrollando. Como mínimo hay dos: maqueta de desarrollo (para programadores) y maqueta de pruebas de siste- ma (prueba final antes de la en- trega al cliente).
+
+¿Sabías que…?
+
+### 9. La conmutación del CR al
+
+CP no siempre se debe a desastres en el CP. También puede ser una parada ordenada y pla- nificada. ¿Se te ocurre al- gún ejemplo?
+
+### 10. En algunas empresas, el
+
+CR no está parado, sino que funciona al 100 %, en paralelo con el CP. Cuando uno falla, el otro asume toda la carga. Discute las ventajas y los inconvenientes de esta so- lución. Actividades Centro principal Centro de respaldo Réplica www.xlibros.com
+
+Seguridad pasiva: equipos
+
+### 3. SAI/UPS
+
+La corriente eléctrica es vital en cualquier ordenador. Como no podemos confiar en que nunca va a fallar la empresa con la que hemos contratado el suministro eléctrico, tenemos que pensar en alternativas. En esta misma unidad hemos sugerido contratar un segundo suministrador o disponer de un generador propio (grupo electrógeno). Sin abandonar estas soluciones, en un CPD nunca debe faltar un SAI (sistema de alimenta- ción ininterrumpida), en inglés UPS (Uninterruptible Power Supply).
+
+Un SAI es un conjunto de baterías que alimentan una instalación eléctrica (en nuestro caso, equipos informáticos). La Figura 3.10 corresponde a la vista trasera de un SAI. Lo enchufamos a la corriente eléctrica por la toma de la izquierda y ofrece cuatro enchufes en la derecha.
+
+En caso de corte de la corriente, los equipos conectados al SAI siguen funcionando porque consigue electricidad de las baterías. La capacidad de estas baterías es reducida depende del SAI elegido y del consumo de los equipos, aunque el mínimo garantizado suele ser diez minutos. Este es el factor más importante a la hora de adquirir un SAI
+
+cuántos vatios consumen los equipos que debe proteger y cuánto tiempo necesitamos que los proteja. Al igual que ocurría con los equipos de climatización, si el presupuesto lo permite, con- viene aplicar redundancia e instalar un doble juego de equipos SAI, para estar cubiertos en caso de que uno fallara. Esto es posible porque la mayoría de los servidores vienen con doble fuente de alimentación y conectaríamos una fuente a cada grupo de SAI.
+
+Cuando ocurre un corte de luz, el SAI procede de esta manera: t Espera unos minutos por si el corte ha sido puntual y el suministro se recupera inme- diatamente por sí solo. t Si no es así, ejecuta una parada ordenada de los equipos conectados al SAI. Siempre es mejor solicitar una parada al sistema operativo y las aplicaciones que ejecuta que perder la corriente y confiar en que no se genere ninguna inconsistencia.
+
+Comunicación con el ordenador supervisor Protección de conexión telefónica Conexión a la red eléctrica Conexiones eléctricas para equipos protegidos Fig. 3.10. Vista trasera de un SAI con todas sus conexiones.
+
+### 11. Busca características y pre
+
+cios de algunos SAI para uso doméstico y empre- sarial.
+
+### 12. Si tienes acceso a un SAI,
+
+conéctale dos máquinas y configúralo para que, cuando se corte la luz, lance una parada orde- nada de las dos. Com- pruébalo. Actividades Fig. 3.11. Medidor de consumo. Para elegir el SAI debes conocer el consumo eléctrico de tus equi- pos; si no tienes su ficha técnica, puedes utilizar un medidor de consumo como este
+
+¿Sabías que…? www.xlibros.com
+
+Seguridad pasiva: equipos Conectar los equipos al SAI tiene otras ventajas: t Suelen llevar un estabilizador de corriente que quita los picos, que también pueden ser muy dañinos. t En algunos SAI también se incluye una entrada y salida de cable telefónico (conecto- res a la izquierda del ventilador en la Figura 3.10), que sirve para proteger nuestra conexión, porque las comunicaciones por línea telefónica también utilizan corriente eléctrica, luego también estamos expuestos a picos de tensión.
+
+#### 3.1. Tipos
+
+Tradicionalmente, se han considerado dos tipos de equipos SAI: t SAI en estado de espera (stand-by). Los equipos informáticos toman corriente del sumi- nistro principal, mientras el SAI se limita a vigilar que ese suministro fluya (Fig. 3.12). Cuando ocurre un corte, el SAI activa inmediatamente sus baterías para que los equipos no se vean afectados (el tiempo de respuesta suele ser suficiente). A partir de ese momento, el SAI aplica los tiempos de espera señalados en el punto anterior.
+
+Cuando vuelve la corriente, desactiva la generación de corriente propia y empieza a cargar las baterías. t SAI en línea (on-line). Los equipos siempre están tomando corriente de las baterías del SAI. Cuando ocurre un corte, el SAI se limita a aplicar los tiempos de espera. Cuando vuelve la corriente, empieza a cargar las baterías.
+
+La ventaja del SAI en línea es que no dependemos del tiempo de respuesta para acti- var las baterías; en cambio, la ventaja del SAI en espera es que podemos sustituir las baterías sin detener el suministro a los equipos conectados.
+
+#### 3.2. Monitorización
+
+Cuando tenemos un SAI confiamos en que está bien y que responderá cuando sea necesaria su intervención. Pero conviene revisar regularmente el estado del SAI. Estos equipos suelen incorporar unos indicadores luminosos en el frontal (Fig. 3.13): si está cargando o descargando las baterías, porcentaje de batería restante, etc.
+
+Sin embargo, es una información puntual y solo disponible si se está delante del equipo. Para mejorar su gestión, los SAI suelen incorporar un puerto de conexión con un orde- nador. En la Figura 3.10 vemos dos: un puerto serie y un USB. En ese ordenador insta- laremos el software adecuado para comunicarse con el SAI y conocer no solo el estado actual, sino todas las veces que ha actuado en el pasado reciente. Por supuesto, ese ordenador debe estar protegido, sea por este SAI o por cualquier otro.
+
+En la Figura 3.14 vemos una ventana del log de un SAI. Muestra una lista de los eventos que ha registrado: t La primera columna señala el tipo de evento. Puede ser informativo o una alerta. t Las dos siguientes indican la fecha y hora en que ocurrió el evento. Es importante para asociarlo a otros sucesos ocurridos: caída de alguna máquina, corte de líneas de comunicaciones, etc.
+
+t La cuarta es la descripción del evento. Hay algunos sencillos, como Agent Start, que indican que ha arrancado el agente (el software que corre en el ordenador). Vemos que minutos antes ha ocurrido un USB Communication with device lost, lo que signifi- ca que el ordenador se ha reiniciado.
+
+Los más graves son los eventos AC power failure, que es un corte de luz. En la imagen se aprecia que después ocurre un AC power restored, que indica que se ha recuperado el suministro. Observar el tiempo transcurrido entre ambos eventos nos servirá para ajustar la espera del SAI antes de lanzar la parada de equipos (y para reclamar a la compañía eléctrica, por supuesto).
+
+Fig. 3.12. Esquema de un SAI en stand-by. Las impresoras láser no deben formar parte de los equipos pro- tegidos en un SAI porque utili- zan resistencias de alto consumo para calentar el rodillo del tóner. Este elevado consumo instantá- neo genera ruido a los otros equi- pos protegidos, que esperaban que el SAI les librara de estos problemas.
+
+Ten cuidado Situación normal Cargador Batería Inversor Cargador Batería Inversor Pérdida de corriente Fig. 3.13. LED en el frontal de un SAI. www.xlibros.com
+
+Seguridad pasiva: equipos
+
+#### 3.3. Triggers
+
+El software del SAI, además de la monitorización, incluye la configuración de los co- mandos para responder ante un corte de corriente. En general, la respuesta consistirá en realizar la parada ordenada de los equipos protegidos. En la Figura 3.15 vemos un ejemplo de la interfaz asociada. Las opciones principales son
+
+t Cuándo hacerlo: en un instante concreto (cuando se alcance Battery Backup Time) o cuando detecte que la carga de la batería está baja. t Qué hacer con el sistema: suspenderlo o apagarlo. t Qué comando ejecutar antes de empezar el apagado (Run Command File Before Shutdown). En este apartado aprovecharemos para apagar las otras máquinas co- nectadas a este SAI.
+
+Si queremos que el SAI pueda desconectar otras máquinas, incluso avisarnos mediante un correo electrónico, debemos acordarnos de enchufar al SAI también los equipos de red aso- ciados (switch, router ADSL). Ten cuidado Los SAI manejan baterías some- tidas a fuertes cargas eléctricas y pueden explotar
+
+http://goo.gl/AacRZ Web El SAI casi nunca entra en acción; pero cuando lo hace, es extrema- damente importante que todo funcione a la perfección, porque hay poco tiempo de maniobra. Por ejemplo, deben estar actuali- zadas las contraseñas de acceso a los servidores remotos para lanzar la parada, o el usuario y la contraseña del servidor de correo que nos tiene que hacer llegar el aviso.
+
+Importante Para conocer el estado del SAI, además de revisar el log y progra- mar los trigger, podemos incluir- lo como un equipo más dentro de los sistemas de inventario que veremos en la Unidad 5. ¿Sabías que…? Fig. 3.14. Log de un SAI. Fig. 3.15. Conﬁ guración de acciones de respuesta en un SAI.
+
+www.xlibros.com
+
+Seguridad pasiva: equipos Además de la parada, se puede configurar un aviso por correo a los administradores del sistema. En la ventana de la Figura 3.16 introduciremos los datos del servidor de correo donde tenemos cuenta (dirección y usuario/contraseña), las direcciones destino del aviso y la lista de eventos de los que queremos informarles.
+
+#### 3.4. Mantenimiento
+
+Las baterías se desgastan con el tiempo y ofrecen cada vez menos rendimiento. El soft- ware del SAI nos ayuda en este aspecto: t Permite lanzar determinados test para comprobar la degradación actual de las bate- rías. Si no es suficiente para garantizar la parada ordenada de los equipos protegi- dos, debemos cambiarlas (Fig. 3.17). Para cambiar las baterías acudiremos al perso- nal especializado, porque las baterías utilizan componentes químicos muy peligrosos.
+
+t Incluye operaciones automáticas de descarga controlada, que alargan la vida de las baterías. Como hemos visto antes, la operación de cambiar las baterías será relativamente senci- lla en un SAI de tipo stand-by porque mientras tanto los equipos seguirán alimentados; pero en un SAI on-line perderemos la alimentación, por lo que es necesario detener los equipos. Este aspecto puede ser crítico en una empresa que no pueda permitirse ningu- na parada.
+
+Los SAI empresariales suelen adoptar una configuración modular: no utilizan pocas ba- terías grandes, sino muchas baterías pequeñas. Con este diseño podemos reemplazar fácilmente una batería sin afectar demasiado a la carga total ofrecida por el equipo, y a la vez conseguimos escalabilidad: el cliente compra un bastidor con capacidad de alojar muchas baterías, y lo va rellenando según aumenta el número de equipos protegidos.
+
+Fig. 3.16. Aviso por correo. Fig. 3.17. Batería de repuesto. La capacidad de un SAI se suele medir en voltiamperios (VA) y está relacionada con el consu- mo eléctrico en watios (W). En general, las fuentes de alimen- tación utilizan un factor 0.6, de manera que un SAI de 1 000 VA solo puede alimentar equipos de hasta 600 W.
+
+¿Sabías que…? www.xlibros.com
+
+Seguridad pasiva: equipos Síntesis La empresa debe tener por escrito un plan de recuperación ante cualquier problema que pueda ocurrir en el CPD y afecte a uno o varios servicios. La ventilación será forzada, utilizando el esquema de pasillos fríos y calientes. El centro de respaldo es un CPD similar al centro principal pero alejado en muchos kilómetros.
+
+Está sincronizado al máximo para poder asumir sus funciones en cualquier momento. El suministro eléctrico y comunicaciones al CPD estará separado del utilizado por el resto de la empresa, para estar aislados de sus problemas y poder conectar fácilmente proveedores alternativos.
+
+Las baterías de un SAI se degradan con el tiempo, por lo que en algún momento necesitarán ser sustituidas. Esta tarea debe realizarla personal especializado, por la presencia de componentes químicos peligrosos. Los equipos informáticos más importantes para la empresa se sitúan en una sala especial llamada CPD (centro de proceso de datos).
+
+Se busca centralizarlos porque: t &TNÈTGÈDJMQSPUFHFSMPT t &TNÈTGÈDJMDPOUSPMBSFMBDDFTP t )BZNFKPSSFOEJNJFOUPEFTVTJOUFSDPOFYJPOFT t 3FTVMUBNÈTGÈDJMBENJOJTUSBSMPT El aislamiento de esta sala incluye: t 5FNQFSBUVSB t )VNFEBE t *OUFSGFSFODJBTFMFDUSPNBHOÏUJDBT t 3VJEP La ubicación de esta sala se elige con especial cuidado
+
+t "MFKBEBEFQPTJCMFTEFTBTUSFTOBUVSBMFT t "MFKBEBEFPUSBTFNQSFTBTQPUFODJBMNFOUFQFMJHSPTBT t 1SFGFSFOUFNFOUFFOMBTQSJNFSBTQMBOUBT – Ni planta baja ni sótanos, expuestas a ataques del exterior o inundaciones. – Las plantas superiores serán difíciles de salvar en un incendio.
+
+t %FCFSÈEJTQPOFSEFVOBDDFTPEFTEFMBDBMMF DPOQBTJMMPTBODIPT  por el tipo de máquinas que pueden llegar. t "DDFTPNVZDPOUSPMBEP TVQFSJPSBDVBMRVJFSPUSB[POBEFUSBCBKP t %PUBEBEFEFUFDUPSFTEFIVNPZFYUJOUPSFTBVUPNÈUJDPT El control de acceso es superior a otras zonas de trabajo
+
+t .FDBOJTNPTEFBMUBTFHVSJEBE DPNPSFDPOPDJNJFOUPCJPNÏUSJDP t .FDBOJTNPTEFVTPFYDMVTJWPEFM$1% DPNPWJHJMBOUFTEFTFHVSJEBE Los equipos SAI (sistema de alimentación ininterrumpida) disponen de baterías para alimentar un conjunto de máquinas en caso de que la corriente eléctrica general sufra un corte. Hay dos tipos
+
+t 4"*FOFTQFSB TUBOECZ -BTCBUFSÓBTFOUSBOFOBDDJØODVBOEPFM4"* detecta el corte. t 4"*FOMÓOFB POMJOF -BTCBUFSÓBTTJFNQSFFTUÈOBMJNFOUBOEPBMPT equipos protegidos. Un SAI posee cierta inteligencia y es capaz de conectar con un ordenador por una interfaz serie o USB. Mediante esta conexión podemos
+
+t $POPDFSFMFTUBEPEFMBTCBUFSÓBTEFM4"* t $POPDFSMBBDUJWJEBESFDJFOUFEFM4"* DPSUFTPDVSSJEPT FUD  t &KFDVUBSEFUFSNJOBEBTBDDJPOFT DVBOEPBQBSF[DBVODPSUF  que permitan la parada ordenada de los sistemas si el suministro no se recupera en un tiempo prudencial.
+
+www.xlibros.com
+
+Seguridad pasiva: equipos Test de repaso
+
+### 1. En una empresa tenemos varios servidores importantes
+
+y queremos protegerlos
+
+- Los dejamos desperdigados por las salas de trabaja
+
+dores para que pasen desapercibidos.
+
+- Los separamos en dos grupos y llevamos un grupo a
+
+una sala protegida del edificio de Madrid y el otro a una sala protegida del edificio de Barcelona.
+
+- Los reunimos en una única sala protegida de uno de
+
+los edificios de la compañía (Madrid o Barcelona).
+
+### 2. Colocar todos los servidores en una sala
+
+- Es malo porque generan más calor y se estropearán.
+- Es bueno porque controlamos mejor el calor.
+- No es bueno porque conviene mezclarlos con los
+
+ordenadores de los puestos de usuario, que se calien- tan menos.
+
+### 3. El plan de recuperación de un desastre ocurrido en el CPD
+
+- No es necesario elaborarlo: como no sabemos qué
+
+pasará, cuando ocurra ya pensaremos alguna solu- ción.
+
+- Lo redactamos durante la instalación del CPD, porque
+
+tenemos más reciente la motivación de cada decisión.
+
+- Lo revisamos en cada cambio importante en los servi
+
+cios ofrecidos por las máquinas del CPD.
+
+### 4. La sala donde instalaremos las máquinas del CPD de
+
+la empresa
+
+- Será una sala de nuestro edificio o el de otra empresa,
+
+lo que salga más barato.
+
+- Será una sala de nuestro edificio, con una protección
+
+superior a cualquier otra sala de trabajo.
+
+- Utilizaremos cualquier almacén del sótano, porque
+
+allí apenas hace calor.
+
+### 5. Somos una empresa multinacional con sedes en varios
+
+países de varios continentes. En este caso instalaremos el CPD
+
+- En un país de África, porque la mano de obra es
+
+más barata.
+
+- En un país de Asia, porque saben más de ordenadores.
+- En un país donde tengamos la mejor combinación de
+
+recursos materiales y recursos humanos.
+
+### 6. Una empresa multinacional decide instalar dos CPD
+
+iguales, uno en Indonesia y otro en Brasil
+
+- Buena idea: así siempre podemos tener uno funcio
+
+nando solamente por la noche, cuando hace menos calor. Mientras, el otro estará parado, y viceversa.
+
+- Es mejor poner todas las máquinas en Indonesia.
+- Es mejor poner todas las máquinas en Brasil.
+
+### 7. Si se declara un incendio en un CPD
+
+- El personal de informática debe acudir con los extin
+
+tores de mano.
+
+- Los vigilantes de seguridad acudirán con las man
+
+gueras de agua a presión.
+
+- Se dispara el sistema automático de extinción, que
+
+utiliza un compuesto especial que no afecta ni a per- sonas ni a máquinas.
+
+### 8. La ventilación de la sala del CPD
+
+- Basta con abrir las ventanas para que el calor escape
+
+al exterior.
+
+- Utiliza un equipo de climatización especial, en cuya
+
+instalación se aprovechan los pasillos fríos y calien- tes que dejan las máquinas.
+
+- Debe priorizar el confort de los administradores de
+
+las máquinas.
+
+### 9. El suministro eléctrico de las máquinas del CPD
+
+- Puede ser el mismo que utilizamos para los emplea
+
+dos porque, si se va la luz, todos dejan de trabajar.
+
+- Utilizamos un suministrador diferente al del resto de
+
+la empresa.
+
+- Contratamos un segundo suministrador, además del
+
+que compartimos con el resto de la empresa.
+
+### 10. El acceso a la sala del CPD
+
+- Está permitido a cualquier empleado de la empresa,
+
+porque puede necesitar entrar a buscar un listado de la impresora.
+
+- Está permitido a cualquier persona, porque se suele
+
+enseñar a las visitas.
+
+- Está más restringido que cualquier otra sala de tra
+
+bajo.
+
+### 11. Un centro de respaldo
+
+- Siempre tiene la misma configuración que el centro
+
+principal.
+
+- Siempre tiene menos capacidad que el centro prin
+
+cipal.
+
+- Tiene la configuración adecuada al presupuesto de
+
+la empresa.
+
+### 12. Un SAI
+
+- Protege todas las máquinas de la empresa.
+- Protege solo los servidores.
+- Protege las máquinas del CPD.
+
+Soluciones: 1 c, 2 b, 3 c, 4 b, 5 c, 6 a, 7 c, 8 b, 9 c, 10 c, 11 c, 12 c. www.xlibros.com
+
+Seguridad pasiva: equipos Comprueba tu aprendizaje Aplicar medidas de seguridad pasiva en sistemas infor- máticos describiendo características de entornos y relacio- nándolas con sus necesidades
+
+### 1. Una empresa está experimentando un fuerte creci
+
+miento y necesita incluir nuevas máquinas en el CPD. Se están planteando cambiarlo a una nueva ubicación. Indica qué harías ante cada situación
+
+- La instalación eléctrica está al máximo de su capa
+
+cidad. No se puede conectar ningún nuevo servidor de alto consumo.
+
+- Hasta ahora, el CPD no tiene climatización espe
+
+cífica porque la sala está en una zona del edificio orientada hacia el norte.
+
+- Carecen de grupo electrógeno porque, hasta la fecha,
+
+la compañía eléctrica nunca ha tenido una avería en su zona.
+
+- No hay sensores de humo porque, si en el CPD se
+
+declara un incendio, se vería en la cámara de segu- ridad, que está conectada al panel de control del servicio de vigilancia de la entrada de la empresa.
+
+- La cámara de seguridad del CPD carece de sistema
+
+de grabación automático. Solo se utiliza para vigi- lancias rutinarias.
+
+- La sala con los SAI y los cuadros eléctricos está sepa
+
+rada de la sala de servidores, para que el personal de mantenimiento no tenga acceso a las consolas de los ordenadores.
+
+- Para el acceso a la sala de ordenadores solamente
+
+se necesita una llave, que está custodiada por el ser- vicio de vigilancia.
+
+- La operativa de la empresa se desarrolla principal
+
+mente en horario de nueve a cinco, de lunes a vier- nes. Pero durante ese tiempo no se puede parar nin- gún servicio del CPD.
+
+### 2. Una empresa se traslada a una nueva ciudad y busca un
+
+edificio adecuado para instalar el CPD. Está dudando entre unas oficinas en el interior de la ciudad, un par- que empresarial o un parque industrial. Indica qué reco- mendarías en cada situación
+
+- El CPD posee varias máquinas antiguas que hacen
+
+mucho ruido.
+
+- Por la noche, el parque empresarial es una zona de
+
+copas muy animada.
+
+- El parque industrial solamente proporciona la nave,
+
+mientras que el edificio de la ciudad y el parque empresarial tienen varias instalaciones disponibles.
+
+- El parque industrial carece de seguridad centrali
+
+zada: cada nave contrata su servicio particular.
+
+- La mayoría de las empresas del parque industrial se
+
+dedican al almacenaje de maderas y pinturas.
+
+- En el parque empresarial ya dispone de oficina alguna
+
+de las empresas que le suministran material informá- tico y comunicaciones.
+
+- En el edificio de la ciudad solo tienen disponible la
+
+última planta o alguna de las plantas subterráneas.
+
+### 3. Una consultora realiza una auditoría al CPD de una
+
+empresa. Elabora un informe con las principales con- clusiones. Para cada punto, evalúa si es correcto o, en cambio, tú propones alguna modificación
+
+- Las paredes del CPD son módulos de madera, como
+
+el utilizado para habilitar salas de reunión dentro de la planta.
+
+- El sistema de extinción de incendios es el mismo
+
+para todas las salas de trabajo: aspersores de agua desde el techo.
+
+- Varias salas próximas al CPD se utilizan como alma
+
+cenes de papel.
+
+- La cubierta del techo suele tener goteras en invierno.
+- La sala del CPD tiene sensores de temperatura y hume
+
+dad conectados al mismo sistema que supervisa los servidores.
+
+- La puerta del CPD está abierta a cualquiera, porque
+
+nunca han tenido problemas de sabotaje en la histo- ria de la empresa. Por la misma razón, no hay nin- gún detector de presencia.
+
+- El sistema de SAI instalado permite una autonomía
+
+de 30 minutos.
+
+- Una pared del CPD tiene un gran ventanal a pie de
+
+calle.
+
+- La sala del CPD dispone de un conjunto de cámaras
+
+conectadas por IP con el ordenador del responsable de informática.
+
+- La colocación de ordenadores es caótica, sin respe
+
+tar ningún pasillo de ventilación.
+
+- En la planta superior está el laboratorio de I+D de
+
+una empresa de telecomunicaciones. www.xlibros.com
+
+En esta unidad aprenderemos a: t1SFPDVQBSOPTQPSMBJOGPSNBDJØO BMNBDFOBEBSFOEJNJFOUP EJTQPOJCJMJEBE  BDDFTJCJMJEBE t3FBMJ[BSDPQJBTEFTFHVSJEBE FOEJTQPTJUJWPTMPDBMFTZSFNPUPT  GJKPTZFYUSBÓCMFT t*OUFSQSFUBSEPDVNFOUBDJØOUÏDOJDB TPCSFTPMVDJPOFTEFBMNBDFOBNJFOUP t)BDFSJNÈHFOFTDPNQMFUBT PQBSDJBMFTEFMTJTUFNBPQFSBUJWP JOTUBMBEP Y estudiaremos
+
+t&MBMNBDFOBNJFOUPSFEVOEBOUF ZEJTUSJCVJEP t&MBMNBDFOBNJFOUPFOMBSFEMPDBM ZFO*OUFSOFU t-BTDPQJBTEFTFHVSJEBE ZMBTJNÈHFOFTEFSFTQBMEP t&MBMNBDFOBNJFOUPSFNPUP ZFYUSBÓCMF t-PTNFEJPTEF BMNBDFOBNJFOUP Unidad Seguridad pasiva: almacenamiento www.xlibros.com
+
+Seguridad pasiva: almacenamiento
+
+### 1. Estrategias de almacenamiento
+
+Para una empresa, la parte más importante de la informática son los datos: sus datos. Porque: t El hardware es caro, pero se puede volver a comprar. t Un informático muy bueno puede despedirse, pero es posible contratar otro. t Si una máquina no arranca porque se ha corrompido el sistema de ficheros (el típico BSOD), puedes instalar de nuevo el sistema operativo y las aplicaciones desde los
+
+```bash
+CD o DVD originales.
+```
+
+En todos los casos anteriores se recupera la normalidad en un plazo de tiempo razonable. Sin embargo, los datos de esa empresa son únicos: no se pueden comprar, no se pue- den contratar, no hay originales. Si se pierden, no los podemos recuperar (por lo menos, ni fácil ni rápidamente).
+
+Bien, puesto que los datos son tan importantes, hay que esforzarse especialmente en mejorar su integridad y disponibilidad (estos conceptos los aprendimos en la Unidad 1)
+
+```bash
+t Podemos comprar los mejores discos del mercado en calidad (MTBF) y velocidad;
+```
+
+aunque nunca debemos olvidar que son máquinas y pueden fallar (salvo los SSD, to- dos los discos tienen partes móviles). En un puesto de usuario nos lo podemos permitir (lo cambiamos y listo): en un servidor hemos visto que no. t Podemos concentrar los discos en unos servidores especializados en almacenamiento.
+
+t Podemos replicar la información varias veces y repartirla por ciudades distintas. t Podemos contratar el servicio de respaldo de datos a otra empresa, conectados por Internet, para no depender de nuestros equipos y personal. A continuación estudiaremos cada una de estas alternativas.
+
+Cada empresa elegirá implementar una o varias, según sus necesidades y posibilidades. BSOD (Blue Screen of Death). Es el típico pantallazo azul de los sistemas operativos Windows cuando ocurre un error grave. MTBF (Mean Time Before Failure). Es el tiempo medio entre fallos de un sistema. En los discos duros estamos hablando de 1,4 millo- nes de horas.
+
+SSD (Solid State Drive). Unidad de almacenamiento tipo pendri- ve USB pero con comportamien- to de disco duro. Vocabulario Vamos a suponer que trabajamos en el departamento de informática de una cadena de restaurantes. Tenemos establecimientos en España y en el extranjero.
+
+Nuestras bases de datos almacenan información acerca de reservas, facturas, pro- veedores, pedidos, bancos, empleados, etc.
+
+### 1. Hay una sede central en la que están los servidores principales donde corren
+
+esas bases de datos. Si ocurre un incendio y se destruyen esos ordenadores, ¿qué consecuencias tendría para la empresa?
+
+- ¿Y si solo se hubiera perdido alguna de las tablas (pedidos, facturas, emplea
+
+dos), no todas?
+
+### 3. Razona si cada una de las actuaciones referidas (comprar discos mejores, uti
+
+lizar servidores especializados, etc.) mejora la integridad, la disponibilidad o ambas.
+
+### 4. Busca las características del disco duro de tu ordenador de clase y localiza el
+
+tiempo medio de fallo. Actividades www.xlibros.com
+
+Seguridad pasiva: almacenamiento
+
+#### 1.1. Rendimiento y redundancia. RAID en Windows y Linux
+
+Los ordenadores pueden conectar varios discos internos porque las placas base suelen traer integrada una controladora de discos para dos o tres conexiones. Y si pinchamos más controladoras (Fig. 4.1), podremos conectar más dispositivos. Pero ¿para qué que- remos varios discos en un ordenador? Por la misma razón por la que compramos CPU de varios núcleos o placas base con varias CPU.
+
+Podemos aprovechar varios discos de un ordenador para: t Crear unidades más grandes. Dos discos de 500 GB juntos nos pueden dar una uni- dad de 1 TB. Con tres discos tenemos 1,5 TB, etc. Por ejemplo, si queremos ripear un Blu-ray de 25 GB y solo tenemos discos de 20 GB, necesitamos juntar dos en una unidad de 40 GB. O, si queremos darle al /home 2 TB y solo tenemos discos de 640 GB, podemos juntar tres.
+
+t Crear unidades más rápidas. Si tenemos dos discos de 500 GB y configuramos el sistema para que, en cada fichero, los bloques pares se escriban en un disco y los impares en otro, después podremos hacer lecturas y escrituras en paralelo (en el me- jor caso, ahorramos la mitad de tiempo). Con un único disco de 1 TB tenemos la mis- ma capacidad, pero cada lectura o escritura debe esperar que termine la operación anterior. La diferencia es más notable si ponemos tres discos, cuatro, etc.
+
+t Crear unidades más fiables. Si configuramos los dos discos anteriores para que, en cada fichero, los bloques se escriban a la vez en ambos discos, podemos estar tran- quilos porque, si falla un disco, los datos estarán a salvo en el otro. Pues una de las tecnologías que lo consigue se llama RAID. Hay varios niveles de RAID.
+
+Los más importantes son: t RAID 0. Agrupamos discos para tener un disco más grande, incluso más rápido. Desde ese momento, los bloques que lleguen al disco RAID 0 se escribirán en alguno de los discos del grupo. Por supuesto, para el usuario este proceso es transparente
+
+él solo ve un disco de 1 TB donde antes había dos discos de 500 GB. En el RAID 0 podemos elegir entre spanning y striping (que es lo más común). En cualquier caso, si falla uno de los discos, lo perdemos todo. t RAID 1. Se le suele llamar mirror o espejo. Agrupamos discos por parejas, de manera que cada bloque que llegue al disco RAID 1 se escribirá en los dos discos a la vez. Si falla uno de los discos, no perdemos la información, porque estará en el otro. A cambio, sacrificamos la mitad de la capacidad (el usuario ha conectado dos discos de 500 GB y solo tiene disponibles 500 GB, en lugar de 1 TB) y no ganamos rendimiento.
+
+t RAID 5. Hemos visto que el RAID 0 es más rápido que cada uno de los discos, pero tan seguro como cualquiera de ellos. El RAID 1 es más seguro que los discos por se- parado, pero con el mismo rendimiento. El RAID 5 consigue ambas cosas aplicando dos mecanismos
+
+Para cada dato que el sistema quiere almacenar en el RAID, este aplica un procedi- miento matemático (en general, la paridad) para obtener información complemen- taria a ese dato, de tal manera que se puede recuperar el dato en caso de perder cualquier disco (sea disco de datos o paridad).
+
+Una vez obtenida la paridad, se hace striping para repartir el dato y su paridad por los discos conectados al RAID.
+
+### 5. Busca en Internet precios y características de una tarjeta controladora SATA
+
+para pinchar en un equipo con slots PCI.
+
+### 6. Investiga en qué consiste la técnica XOR para obtener la información redun
+
+dante en RAID 5 y explícalo a tus compañeros. Actividades Fig. 4.1. Tarjeta RAID. Hablamos de ficheros, pero en los bloques de los discos se es- cribe cualquier cosa que necesite el sistema operativo o las aplica- ciones instaladas. Por ejemplo, el sector de arranque (MBR [Master Boot Record]).
+
+Importante RAID (Redundant Array of Inde- pendent Disks). Es un grupo de discos configurados para trabajar en conjunto, con el fin de lograr más rendimiento, más fiabilidad o ambas cosas. Spanning. Los bloques se escri- ben en el primer disco hasta que lo llenan; entonces pasan al siguiente, y así sucesivamen- te. Por tanto, la lectura o escri- tura de cada bloque tiene que esperar hasta que el disco haya terminado la anterior.
+
+Striping. Los bloques se escriben cada vez en un disco distinto. Es más rápido que el spanning porque hace trabajar a todos los discos a la vez. Vocabulario www.xlibros.com
+
+Seguridad pasiva: almacenamiento Por tanto, necesitamos un disco más para almacenar la paridad. Por ejemplo, si queremos una capacidad de 1 TB, necesitamos tres discos de 500 GB (o cinco discos de 250 GB). Gracias al striping hemos conseguido mejor rendimiento que el disco individual, y gracias a la paridad estamos más seguros que en RAID 0. A cambio, sacrificamos la capacidad de un disco (aunque cuantos más discos, menos porcentaje de capacidad perdida).
+
+Estamos viendo que el RAID para el sistema operativo es una especie de disco «virtual», que está organizado en stripes (bandas, filas). Al igual que el tamaño del bloque en los discos «físicos» (512 bytes, 4 096 bytes) y el tamaño del bloque del sistema de ficheros (4 096 bytes en NTFS), en el RAID es importante el tamaño de stripe. El valor recomendado es 64 KB.
+
+Veamos un ejemplo (Fig. 4.2). Tenemos tres ficheros y queremos almacenarlos en un RAID donde, por simplificar, el tamaño de stripe es el mismo que el tamaño de bloque del sistema operativo. El primer fichero ocupa tres bloques; el segundo, cuatro, y el tercero, cinco. Todos los discos son de 1 TB.
+
+t Si tenemos cuatro discos y los configuramos en RAID 0, los bloques de los ficheros se reparten por los cuatro discos. La capacidad total es de 4 TB, y los bloques de un fichero se pueden recuperar simultáneamente por varios discos. t Si ponemos dos discos en RAID 1, los bloques de los ficheros se copian en los dos. La capacidad total es de 1 TB.
+
+t Si ponemos los cuatro discos en RAID 5, los bloques de los ficheros se reparten por los cuatro discos, pero hay que incluir un bloque R que representa la redundancia (la paridad). La paridad se calcula para cada fila (el stripe que hemos visto). Este bloque no se usa durante la lectura (salvo fallo de un disco), pero sí durante la escritura, porque hay que actualizarlo. Los bloques R no se dejan en el mismo disco para evitar cuellos de botella.
+
+- ¿El tamaño del stripe es
+
+importante? ¿De qué de- pende?
+
+- ¿Los discos de un RAID
+
+tienen que ser todos igua- les? ¿O incluso conviene que sean diferentes?
+
+### 9. Cuando cae un disco en
+
+un RAID 5, hay que susti- tuirlo y regenerar el RAID. Y hay que hacerlo con el sistema arrancado, porque la información sigue dis- ponible y la empresa no puede parar. ¿Qué ocurre cuando utilizamos discos muy grandes (varios tera- bytes)?
+
+### 10. Investiga otros tipos de
+
+RAID, como el RAID 6 (do- ble paridad), RAID 10 (ha- cer mirror de un RAID 0), etcétera.
+
+### 11. La tarea de repartir la
+
+información por los dis- cos del RAID puede ser asumida por el sistema operativo o por la tarjeta controladora. Investiga y debate sobre las ventajas e inconvenientes de cada método. Actividades RAID 1 2 x 1 TB = 1 TB RAID 0 4 x 1 TB = 4 TB RAID 5 4 x 1 TB = 3 TB FICH 1 FICH 2 FICH 3 R R R Fig. 4.2. Almacenamiento en RAID 0, RAID 1 y RAID 5.
+
+Algunas empresas han construido sus propios servidores en RAID: http://goo.gl/4uPCi Web www.xlibros.com
+
+Seguridad pasiva: almacenamiento (Continúa) RAID en Linux Duración:  15 minutos  Dificultad:  Media Objetivo. Crear discos RAID 1 por software en Linux. Tam- bién sustituiremos un disco fallido. Material. Ubuntu Server 12.04 sobre VirtualBox 4. Lo hare- mos en máquina virtual para añadir discos con facilidad; todos los pasos son válidos para una máquina real, porque el sistema operativo no sabe que se está ejecutando en una máquina virtual.
+
+- Crear una máquina virtual e instalar Ubuntu Server 12.04.
+
+### 2. Antes de arrancarla, crearemos los discos que quere
+
+mos conectar. Entramos en VirtualBox, seleccionamos nuestra máquina UbuntuServer y pulsamos en Almace- namiento. Sobre el controlador SATA pulsamos el botón derecho y elegimos Agregar disco duro. Nos pregun- tará si ya lo tenemos o hay que crearlo (Fig. 4.3).
+
+### 3. Seleccionamos Crear y aparece un asistente. Elegire
+
+mos el tipo VDI, tipo dinámico y tamaño de 100 MB. Lo llamaremos disco1.
+
+- Repetimos los pasos para disco2.
+
+### 5. Arrancamos la máquina virtual y nos ponemos con pri
+
+vilegios de administrador.
+
+```bash
+$ sudo –i
+```
+
+#
+
+- Comprobamos que los discos están ahí (Fig. 4.4).
+
+```bash
+# fdisk -l
+```
+
+### 7. Instalamos el paquete mdadm, que gestiona los disposi
+
+tivos RAID por software.
+
+```bash
+# apt-get install mdadm
+```
+
+Veremos que, además del mdadm, vamos a insta- lar el servidor de correo postfix. Esto se debe a que el RAID se puede configurar para que avise por correo cuando ocurra un fallo.
+
+### 8. Creamos el RAID 1 con el comando
+
+```bash
+# mdadm --create /dev/md0 --level=1
+```
+
+raid-devices=2 /dev/sdb /dev/sdc Donde /dev/md0 es el nombre del nuevo dispositivo RAID, level=1 indica un RAID 1, raid-devices=2 indica que son dos discos.
+
+### 9. Comprobamos que el nuevo dispositivo está disponible
+
+y tiene 100 MB, como los originales (Fig. 4.5). Caso práctico 1 En el CEO del proyecto tienes una exhaustiva explicación y los ficheros necesarios para realizar la instalación de la máquina virtual Ubuntu Server. CEO Fig. 4.3. Añadimos disco nuevo. Fig. 4.4. Comprobamos discos conectados.
+
+Fig. 4.5. Comprobamos nuevo disco RAID. www.xlibros.com
+
+> **💡 📚 Document extens (226 pàgines)**
+> S'han mostrat les primeres 80 pàgines completes del manual.
+
+---
+
+## ✍️ Activitats pràctiques UT0
+
+> **✍️ Activitat Pràctica 0.1 — Dossier de Recuperació**
+> Per poder recuperar el mòdul, a més de la superació d'un examen escrit, has de realitzar de forma obligatòria i amb un nivell de qualitat suficient el següent dossier de recuperació. Una vegada entregat, procediràs a defensar la feina realitzada davant del professor.
+>
+> Teoria
+> - Realitzar un resum (escrit a mà) de cada una de les 8 unitats didàctiques.-
+> - Realitzar un esquema (escrit a mà) de cada una de les 8 unitats didàctiques.-
+> - Realitza una presentació (digital) de la unitat assignada.
+>
+> Pràctiques (digital) 
+> - 01 Integritat Linux CP2 
+> - 02 Xifrat asimètric amb gpg CP3 
+> - 03 Instalacions CPD 
+> - 04 Backup CP7 + CP8
+> - 05 Boot Manager: Grub2 CP3 
+> - 06 Netstat CP9 + Nmap CP10
+> - 07 Tcpdump CP2 + Wireshark CP3
+> - 08 Ultrasurf CP6 
+>
+> Projectes (digital)
+> - Presentació del tema assignat del INCIBE
+> - Vídeo 3-5 Min d'una ferramenta de Seguretat de KALI

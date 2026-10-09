@@ -1,0 +1,210 @@
+---
+layout: default
+title: "UT8 — Unidad 1 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Grau Superior · UT8 Completa"
+prev_url: "../ut07/ut07actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+next_url: "../ut08/ut0801.html"
+next_label: "8.1 UD1 Introducción a los Lenguajes de Marcas ➡️"
+---
+
+# 📘 UT8 — Unidad 1 (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**8.1 UD1 Introducción a los Lenguajes de Marcas**](#ut0801) (o [obrir en pàgina individual ➡️](./ut0801.md) )
+> - [**✍️ Activitats pràctiques UT8**](#ut08actividades) (o [obrir en pàgina individual ➡️](./ut08actividades.md) )
+
+---
+
+## 8.1 UD1 Introducción a los Lenguajes de Marcas
+
+Lenguajes de Marcas
+
+### UD 1: Introducción a los Lenguajes de Marcas
+
+Vicent Gómez Gimeno Ciclo Formativo de Grado Superior
+
+Lenguajes de Marcas
+
+1.- Concepto y ventajas 2.- Historia de los Lenguajes de Marcas 3.- Características de los Lenguajes de Marcas 4.- Clasificación de los Lenguajes de Marcas 5.- Organizaciones y estándares 6.- Introducción a los principales LM
+
+- HTML
+- XML
+
+7.- Lenguajes y Tecnologías XML
+
+ Formato de la información (hablado y escrito).  Lenguaje de Marcas es el sistema para dar formato a los documentos que, por ejemplo, se intercambian por Internet.  El “user-agent” (navegador Web) interpreta las marcas.  Una marca es una señal colocada en el texto. Se usan los símbolos “<“ y “>”. Aparecen por parejas.
+
+Lenguajes de Marcas
+
+1.- Conceptos y Ventajas
+
+> **✍️ Ejercicio 1.1 1.- Crear un archivo de texto llamado textos.txt. 2**
+> Ejercicio 1.1 1.- Crear un archivo de texto llamado textos.txt. 2.- Inserta el siguiente texto: <h1>Texto grande</h1> <h3>Texto pequeño</h3> 3.- Abrirlo con un navegador. 4.- Renombrarlo por textos.html. 5.- Volver a abrirlo con el navegador Lenguajes de Marcas
+
+1.- Conceptos y Ventajas
+
+ LM <> LP (variables, arrays, control, funciones,…) No debemos utilizar la palabra “programar” cuando nos referimos a LM  LM + LP (Javascript, PHP, …)  LM es interpretado  LM + Representación (CSS) Responsive Design LM = Lenguajes de Marcas LP = Lenguajes de Programación Lenguajes de Marcas
+
+1.- Conceptos y Ventajas
+
+> **✍️ Ejercicio 1.2**
+> Ejercicio 1.2
+
+- Ir http://www.w3c.es, y probar escritorio, móvil,
+
+impresora.
+
+- Instalar User Agent Switcher para Firefox o Chrome y
+
+probarlo con diferentes web. (www.20minutos.es) Lenguajes de Marcas
+
+1.- Conceptos y Ventajas
+
+ Problema de compatibilidad. Cada aplicación utilizaba sus propias marcas, lo cual impedía intercambio de documentos entre plataformas.  IBM crea GML (Generalized Markup Language), independiza el documento del dispositivo que lo va a utilizar con marcas genéricas.  SGML (Standard GML) es un Metalenguaje (conjunto de normas que permiten crear otros LM)  SGML es Software Libre y de Código abierto Lenguajes de Marcas
+
+2.- Historia de los Lenguajes de Marcas
+
+Un documento SGML tiene:  Una declaración: indica que el documento es SGML  Un DTD (definición de tipo de documento): indica la sintaxis particular del lenguaje creado  Una instancia: contiene los datos Lenguajes de Marcas
+
+2.- Historia de los Lenguajes de Marcas
+
+Ejemplo Módulos de DAW Vocabulario: daw, modulo, titulo, contenido, unidad Reglas: daw contiene varios modulos, un modulo tiene un titulo y un contenido, contenido tiene varias unidades, todas las unidades están en un contenido, las unidades son texto simple, detrás de una unidad solo puede ir otra unidad o fin contenido, detrás de un modulo solo puede ir otro modulo o fin de daw Lenguajes de Marcas
+
+2.- Historia de los Lenguajes de Marcas
+
+<daw> <modulo> <titulo>Lenguaje de Marcas</titulo>
+
+<contenido> <unidad>Introduccion</unidad> <unidad>HTML</unidad> <unidad>CSS</unidad> …
+
+</contenido> </modulo> … </daw> Lenguajes de Marcas
+
+2.- Historia de los Lenguajes de Marcas
+
+> **✍️ Ejercicio 1.3 Crear tu propio documento SGML indicando vocabular**
+> Ejercicio 1.3 Crear tu propio documento SGML indicando vocabulario y reglas. Implementar los datos. Otro ejemplo: Continentes, Países del mundo, Regiones, Ciudades, ... Lenguajes de Marcas
+
+2.- Historia de los Lenguajes de Marcas
+
+ TEXTO PLANO  COMPACIDAD  INDEPENDENCIA  ESPECIALIZACIÓN  FLEXIBILIDAD Lenguajes de Marcas
+
+3.- Características de los LM
+
+TEXTO PLANO.  Compuestos únicamente por caracteres de texto.  Se pueden codificar con distintos códigos: ASCII, UTF-8  Interpretados por un editor de texto.  Independiente del SO. Lenguajes de Marcas
+
+3.- Características de los LM
+
+COMPACIDAD  Las instrucciones (marcas) van integradas con el texto del documento. Por ejemplo: <h2>Contenido</h2> Lenguajes de Marcas
+
+3.- Características de los LM
+
+INDEPENDENCIA  El mismo documento puede ser interpretado de diferentes formas dependiendo del dispositivo final.  El LM NO depende del dispositivo. Lenguajes de Marcas
+
+3.- Características de los LM
+
+ESPECIALIZACIÓN  Pensamos que solo son para Web!!!  Existen muchos usos prácticos donde se utilizan Lenguajes de Marcas Lenguajes de Marcas
+
+3.- Características de los LM
+
+FLEXIBILIDAD  Combinar con otros lenguajes.  Por ejemplo, HTML puede combina con PHP o Java solo con una etiqueta (<script>) Lenguajes de Marcas
+
+3.- Características de los LM
+
+Atendiendo al tipo de marcas  De presentación (RTF, TeX, ...) Indican el formato del texto o tipografía, sin especificar su estructura. Los procesadores de texto y en general las aplicaciones de edición utilizan este tipo de marcado.  Descriptivo, estructural o semántico  Indican las diferentes partas en las que se estructura el documento, pero sin especificar cómo debe representarse ni en qué orden.
+
+ Híbrido  Contienen marcas de los dos tipos anteriores. (HTML, ...) Lenguajes de Marcas
+
+4.- Clasificación de los LM
+
+Atendiendo a su funcionalidad  Para crear documentación electrónica Wikitexto, DocBook, LinuxDoc, ...  Tecnologías de Internet Páginas web, formularios, mensajería instantánea, ...  De propósito específico Fórmulas matemáticas, síntesis de voz, partituras de música, ...
+
+Lenguajes de Marcas
+
+4.- Clasificación de los LM
+
+ Podemos definir la estandarización o normalización como el proceso de especificación de normas, para garantizar el correcto funcionamiento de elementos construidos de forma independiente.  Aplicado al contexto de LM, sería, por ejemplo, el desarrollo de páginas web atendiendo a las especificaciones oficiales del lenguaje utilizado.
+
+Lenguajes de Marcas
+
+5.- Organizaciones y estándares
+
+ Las organizaciones más importantes en materia de software son W3C, ISO y Open Source.  Según el propio W3C: “El World Wide Web Consortium (W3C) es una comunidad internacional que desarrolla estándares que aseguran el crecimiento de la Web a largo plazo” Lenguajes de Marcas
+
+5.- Organizaciones y estándares
+
+> **✍️ Ejercicio 1.4**
+> Ejercicio 1.4
+
+- Consulta los objetivos del W3C
+- Consulta el listado de miembros españoles
+- Consulta el validador del W3C
+- ¿Qué es?
+- ¿Para que se utiliza?
+- ¿Qué tipos hay?
+- Consulta w3schools
+- ¿Qué es?
+
+Lenguajes de Marcas
+
+5.- Organizaciones y estándares
+
+HTML (HyperText Markup Language): Creación páginas web. Hipervinculos, potente herramienta. Evolución sin planificar. Deficiencias. Combinación con otros elementos. (CSS, Javascript). Edición de texto plano (notepad++). Lenguajes de Marcas
+
+6.- Principales Lenguajes de Marcas
+
+XML  Metalenguaje, para desarrollar otros lenguajes de marcas.  Flexibilidad, creando infinitas etiquetas.  Estructurado, configurando datos sin pensar en la presentación  Validable, permite ser verificado.  No limitado a aplicaciones web.  Está siendo un estándar para el intercambio de información.
+
+Puede usarse para cualquier tipo de aplicación. Lenguajes de Marcas
+
+6.- Principales Lenguajes de Marcas
+
+Algunos Lenguajes basados en XML nombre uso SVG Pensado para gráficos vectoriales en 2D con animaciones o sin MathML Lenguaje para representar fórmulas matemáticas CML Lenguaje para el intercambio de información química SMIL Tratamiento de información multimedia SSML Síntesis de voz ChessGML Para representar partidas de ajedrez XFRML Para hacer informes financieros SML Usado en la industria del acero Lenguajes de Marcas
+
+6.- Principales Lenguajes de Marcas
+
+### 1. Abrir programa Inkscape
+
+### 2. Realizar un dibujo con una elipse, un
+
+cuadrado y una estrella.
+
+### 3. Guardar el archivo como “dibujo.svg”
+
+### 4. Abrir un editor de texto plano (Notepad,
+
+Pluma, etc).
+
+### 5. Abrir archivo “dibujo.svg”
+
+- ¿Qué observas?
+- ¿Qué tipo de documento es?
+
+Lenguajes de Marcas
+
+7.- Ejercicio
+
+---
+
+## ✍️ Activitats pràctiques UT8
+
+> **✍️ Activitat Pràctica 8.1 — Ejercicios unidad 1**
+> Ejercicios teóricos sobre los Lenguajes de Marcas. Fecha máxima de entrega viernes 15 de octubre del 2021.
+>
+> Lenguajes de Marcas y Sistemas de Gestión de Información
+>
+> Ejercicios tema 1
+>
+> Nombre y apellidos del Alumno:¿ASIX o DAW?
+>
+> Ejercicio1 1¿Qué es el Lenguaje de Marcas?
+>
+> Ejercicio2¿Qué quieren decir las siglas SGML? Y ¿Qué nos permite?
+>
+> Ejercicio3
+>
+> ¿Qué tiene que tener un documento SGML?
+>
+> Ejercicio4 ¿Qué características tienen los Lenguajes de Marcas?
+>
+> Ejercicio5¿Son lo mismo un Lenguaje de Marcas y un Lenguaje de Programación? Justifica tu respuesta.¿Se pueden combinar?, si se pueden combinar, ¿Puedes decir algunos ejemplos? Para este último ejercicio se puede consultar en internet

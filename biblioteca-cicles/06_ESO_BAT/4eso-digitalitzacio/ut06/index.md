@@ -1,0 +1,359 @@
+---
+layout: default
+title: "UT6 — Redes — Digitalització | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "4t ESO · UT6 Completa"
+prev_url: "../ut05/ut05actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+next_url: "../ut06/ut0601.html"
+next_label: "6.1 Redes Informáticas (PPT) ➡️"
+---
+
+# 📘 UT6 — Redes (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**6.1 Redes Informáticas (PPT)**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
+> - [**6.2 Redes Informáticas**](#ut0602) (o [obrir en pàgina individual ➡️](./ut0602.md) )
+> - [**6.3 Criteris Avaluació Presentació Redes**](#ut0603) (o [obrir en pàgina individual ➡️](./ut0603.md) )
+> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+
+---
+
+## 6.1 Redes Informáticas (PPT)
+
+> **🔗 Recurs Web: Cómo funciona internet: los cables submarinos (7m)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=u1xxZ8r2rRc) ↗️**](https://www.youtube.com/watch?v=u1xxZ8r2rRc)
+
+> **🔗 Recurs Web: ¿Quién inventó la Internet? (7m)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=l-zFtlzanvQ) ↗️**](https://www.youtube.com/watch?v=l-zFtlzanvQ)
+
+> **🔗 Recurs Web: Cómo funciona internet (10m)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=rw41W8crZ_Y) ↗️**](https://www.youtube.com/watch?v=rw41W8crZ_Y)
+
+> **🔗 Recurs Web: Tabla temas y grupos**
+> [**🌐 Obrir recurs extern (https://docs.google.com/spreadsheets/d/1mEfwl5Ilgpd3ccwsAjsSwsd2sKe2SdYPfXpjw9aKZT0/edit#gid=0) ↗️**](https://docs.google.com/spreadsheets/d/1mEfwl5Ilgpd3ccwsAjsSwsd2sKe2SdYPfXpjw9aKZT0/edit#gid=0)
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### Presentación
+
+> **🔗 Recurs Web: Actividad 4.1 CALIFICABLE - Presentación "REDES"**
+> [**🌐 Obrir recurs extern (https://docs.google.com/document/d/e/2PACX-1vTOpT0VAc_z2zdZsEssJ6izFXLT02TNlTxDdc_bj3-FiXsX5pvaTAojvvcZv48KX54JMD-B2Wuv9Uty/pub) ↗️**](https://docs.google.com/document/d/e/2PACX-1vTOpT0VAc_z2zdZsEssJ6izFXLT02TNlTxDdc_bj3-FiXsX5pvaTAojvvcZv48KX54JMD-B2Wuv9Uty/pub)
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### Examen sobre las presentaciones
+
+---
+
+Fichero para el profesor
+
+### 📊 1. REDES INFORMÁTICAS
+
+- REDES LOCALES
+
+### 📊 2. ÍNDICE
+
+- 1. Definición
+- 2. Tipos de redes
+- 2.1 Según su cobertura
+- 2.2 Según el medio
+- 2.3 Según su Topología
+- 3. Dispositivos de conexión
+- 3.1 Tarjeta de Red
+- 3.2 Cables de conexión
+- 3.3 Concentrador
+- 3.4 Conmutador
+- 3.5 Router
+- 4. Dirección IP
+- 5. Servidor DNS
+
+### 📊 3. DEFINICIÓN
+
+- Conjunto de ordenadores y otros dispositivos, conectados por medios físicos o sin cable, con el objetivo de compartir unos determinados recursos.
+- Éstos dispositivos pueden ser aparatos (hardware), como impresoras, sistemas de almacenamiento, etc., o programas (software), que incluyen aplicaciones, archivos, etc.
+
+### 📊 4. TIPOS DE REDES
+
+- Según su alcance
+- LAN
+- MAN
+- WAN
+- Según el medio de propagación
+- Alámbrica
+- Inalámbrica
+- Según su topología
+
+### 📊 5. TIPOS DE REDES SEGÚN SU COBERTURA
+
+- LAN: Red de área local. Su extensión esta limitada físicamente a un edificio o a un entorno de hasta 200 metros. Ejemplo: Instituto.
+- WLAN: Red local inalámbrica
+- MAN: Red de área metropolitana. Conjunto de redes LAN, en el entorno de un municipio.
+- WIMAX: red inalámbrica en el entorno de unos 5 a 50 km.
+- WAN: Una Red de Área Amplia (Wide Area Network ), es un tipo de red de computadoras capaz de cubrir distancias desde unos 100 hasta unos 1000 km, dando el servicio a un país o un continente. Ejemplo: internet.
+
+### 📊 6. TIPOS DE RED SEGÚN EL MEDIO
+
+### 📊 7. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+- Redes en bus: Comparten canal de transmisión
+- Fallo en cable central, perdida de red.
+- Acumulación de datos.
+
+### 📊 8. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+- Topología en anillo: forman un anillo cerrado. La información circula en un sentido y cada ordenador analiza si él es el destinatario de la información.
+- Si uno de los ordenadores falla se pierde la red.
+- Velocidad de la información lenta
+- Red simple.
+
+### 📊 9. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+- Topología en estrella: Todos los ordenadores están conectados a un dispositivo que se encarga de transmitir la información. Hub o concentrador, o Switch o conmutador.
+- Ventaja: Cada nodo es independiente del resto.
+- Si es un concentrador, envía la información a todos los ordenadores de la red. La comunicación se ralentiza.
+- Si es un conmutador o switch, envía la información solo al ordenador al que va destinado.
+
+### 📊 10. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+- Cada nodo está conectado al resto de los equipos con más de un cable.
+- Red segura a prueba de fallos.
+- Red costosa requiere más cable.
+
+### 📊 11. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+- Red en árbol: parecida a una serie de redes en estrella. Tiene un nodo de enlace troncal, generalmente ocupado por un hub o switch, desde el que se ramifican los demás nodos.
+- Ventajas: permite conectar mayor número de equipos.
+- Inconvenientes: Difícil configuración. Si falla el segmento principal la red se pierde.
+
+### 📊 12. DISPOSITIVOS DE RED
+
+- Tarjeta de Red
+- Cables de conexión
+- Concentrador o Hub
+- Conmutador o Switch
+- Router.
+
+### 📊 13. LA TARJETA DE RED
+
+- Permite conectar nuestro equipo a la red.
+- Normalmente se instala en la placa base.
+- Cada tarjeta tiene un identificador denominado MAC, seis pares de dígitos, no puede haber dos tarjetas con el mismo identificador MAC. Formado por seis pares de números
+- Forma de conocer la MAC: Desde interprete de comandos
+- Comandos: getmac o ipconfig/all (dirección física)
+
+### 📊 14. CABLES DE CONEXIÓN
+
+- Es el medio físico por el que viaja la información de los equipos hasta los concentradores o conmutadores.
+
+### 📊 15. CABLE COAXIAL
+
+- Posee dos conductores concéntricos,
+- uno central, encargado de llevar la información,
+- y uno exterior, de aspecto tubular, llamado malla o blindaje, que sirve como referencia de tierray uno exterior, de aspecto tubular, llamado malla o blindaje, que sirve como referencia de tierra y retorno de las corrientes.
+- Entre ambos se encuentra una capa aislanteEntre ambos se encuentra una capa aislante llamada dieléctrico,
+- Se ha sustituido paulatinamente
+
+### 📊 16. EL CABLE DE PARES TRENZADOS
+
+- Es el cable más utilizado actualmente para redes locales.
+- Está formado por cuatro pares de hilos. Cada par está trenzado para evitar interferencias radioeléctricas.
+- Los problemas que presenta son la atenuación, que es la pérdida de señal.
+- En los extremos del cable es necesario un conector, RJ-45.
+
+### 📊 17. LA FIBRA ÓPTICA
+
+- Está formada por filamentos de vidrio que son capaces de transportar los paquetes de información como haces de luz producidos por un láser.
+- Velocidad de transmisión de hasta 10 Tb/s.
+
+### 📊 18. CONCENTRADOR O HUB
+
+- Recibe un paquete de datos a través de un puerto y lo transmite al resto.
+- Esto provoca que la información no la reciba sólo el equipo al cual va dirigida sino también los demás, lo que puede implicar un problema de saturación de la red, ralentización de la red.
+
+### 📊 19. CONMUTADOR O SWITCH
+
+- Almacena las direcciones MAC (Dirección física de la tarjeta de red) de todos los equipos que están conectados a cada uno de sus puertos.
+- Cuando recibe un paquete a través de un puerto, revisa la dirección MAC a la que va dirigido y reenvía el paquete por el puerto que corresponde a esa dirección, dejando los demás libres de tránsito.
+- Esta gestión más avanzada de la red permite mayor tránsito de datos sin saturarla.
+
+### 📊 20. ROUTER O ENRUTADOR
+
+- Destinado a interconectar diferentes redes entre sí. Por ejemplo, una LAN con una WAN o con Internet.
+- Si utilizamos un enrutador para conectarnos a Internet a través de la tecnología ADSL, aparte de conectar dos redes (la nuestra con Internet), el router también tendrá que traducir los paquetes de información de nuestra red al protocolo de comunicaciones que utiliza la tecnología ADSL, función que antes realizaban los modem.
+- Hoy en día los routers incorporan tecnología WI-FI, para conectar portátiles. También disponen de más de un puerto de conexión, lo que les convierte en switchs.
+
+### 📊 21. LA DIRECCIÓN IP
+
+- Cada equipo que pertenece a una red dispone un identificador único dirección IP.
+- La dirección IP está formado por 4 números de tres dígitos cada uno (de 0 a 255)
+- Los tres primeros dígitos son iguales para ordenadores que forman parte de la misma red
+- El cuarto dígito es identificador del equipo dentro de la red.
+- La dirección IP de un ordenador debe ser única dentro de la misma red
+- Ejemplos
+- 192.168.2.5 CORRECTA
+- 80.20.20.6 CORRECTA
+- 20.40.30.260 ERRONEA, No puede ser superior a 255
+
+### 📊 22. SERVIDOR DNS
+
+- (Domain Name System)  Sistema de nombres de dominio. Sirve para traducir las direcciones IP de los equipos conectados a internet a nombres más legibles y fáciles de recordar para los usuarios.
+- Ejemplos
+- 216.58.209.68  http://www.google.es
+- 31.13.83.36  http://www.facebook.es
+
+---
+
+## 6.2 Redes Informáticas
+
+Contiene la presentación que se usará para la explicación del tema
+
+REDES LOCALES REDES INFORMÁTICAS
+
+### 1. Definición
+
+### 2. Tipos de redes
+
+2.1 Según su cobertura 2.2 Según el medio 2.3 Según su Topología
+
+### 3. Dispositivos de conexión
+
+3.1 Tarjeta de Red 3.2 Cables de conexión 3.3 Concentrador 3.4 Conmutador 3.5 Router
+
+### 4. Dirección IP
+
+### 5. Servidor DNS
+
+ÍNDICE
+
+◼Conjunto de ordenadoresy otros dispositivos, conectados por medios físicos o sin cable, con el objetivo de compartir unos determinadosrecursos. ◼Éstos dispositivos pueden ser aparatos (hardware), como impresoras, sistemasde almacenamiento, etc., o programas (software), que incluyen aplicaciones, archivos, etc.
+
+DEFINICIÓN
+
+◼Según su alcance ▪LAN ▪MAN ▪WAN ◼Según el medio de propagación ▪Alámbrica ▪Inalámbrica ◼Según su topología TIPOS DE REDES
+
+◼LAN: Red de área local. Su extensión esta limitadafísicamente a un edificio o a un entorno de hasta 200 metros. Ejemplo: Instituto. ▪WLAN: Red local inalámbrica ◼MAN: Red de área metropolitana. Conjunto de redes LAN, en el entorno de un municipio. ▪WIMAX: red inalámbrica en el entorno de unos 5 a 50 km.
+
+◼WAN: Una Red de Área Amplia (Wide Area Network ), es un tipo de red de computadoras capazde cubrir distancias desde unos 100 hasta unos 1000 km, dando el servicio a un país o un continente. Ejemplo: internet. TIPOS DE REDES SEGÚN SU COBERTURA
+
+TIPOS DE RED SEGÚN EL MEDIO medio Nombre Tipo de transmisión Velocidad Distancia máxima Físico Cable coaxial Señal eléctrica Hasta 10 Mb/s 185 m Pares trenzados Señal eléctrica Hasta 1 Gb/s <100m Fibra óptica Haz de luz Hasta 1 Tb/s <2 Km Sin cables WI-FI Ondas electromagnética Hasta 100 Mb/s <100m Bluetooth Ondas electromagnética Hasta 3Mb/s 10 m Infrarrojos Onda electromagnética Hasta 4Mb/s <1 m Angulo 30º
+
+◼Redes en bus: Comparten canal de transmisión ▪Fallo en cable central, perdida de red. ▪Acumulación de datos. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+◼Topología en anillo: forman un anillo cerrado. La información circula en un sentido y cada ordenador analiza si él es el destinatario de la información. ▪Si uno de los ordenadores falla se pierde la red. ▪Velocidad de la información lenta ▪Red simple. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+}Topología en estrella: Todos los ordenadores están conectados a un dispositivo que se encarga de transmitir la información. Hub o concentrador, o Switch o conmutador. } Ventaja: Cada nodo es independiente del resto. } Si es un concentrador, envía la información a todos los ordenadores de la red. La comunicación se ralentiza.
+
+} Si es un conmutador o switch, envía la información solo al ordenador al que va destinado. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+◼Cada nodo está conectado al resto de los equipos con más de un cable. ▪Red segura a prueba de fallos. ▪Red costosa requiere más cable. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+}Red en árbol: parecida a una serie de redes en estrella. Tiene un nodo de enlace troncal, generalmente ocupado por un hub o switch, desde el que se ramifican los demás nodos. } Ventajas: permite conectar mayor número de equipos. } Inconvenientes: Difícil configuración.
+
+Si falla el segmento principal la red se pierde. TIPOS DE REDES SEGÚN SU TOPOLOGÍA
+
+◼Tarjeta de Red ◼Cables de conexión ◼Concentrador o Hub ◼Conmutador o Switch ◼Router. DISPOSITIVOS DE RED
+
+◼Permite conectar nuestro equipo a la red. ◼Normalmente se instala en la placa base. ◼Cada tarjeta tiene un identificador denominado MAC, seis pares de dígitos, no puede haber dos tarjetas con el mismo identificador MAC. Formado por seis pares de números ▪Forma de conocer la MAC: Desde interprete de comandos ▪Comandos: getmac o ipconfig/all (dirección física) LA TARJETA DE RED
+
+◼Es el medio físico por el que viaja la información de los equipos hasta los concentradores o conmutadores. CABLES DE CONEXIÓN
+
+◼Posee dos conductores concéntricos, ▪uno central, encargado de llevar la información, ▪y uno exterior, de aspecto tubular, llamado malla o blindaje, que sirve como referencia de tierray uno exterior, de aspecto tubular, llamado malla o blindaje, que sirve como referencia de tierra y retorno de las corrientes.
+
+▪Entre ambos se encuentra una capa aislanteEntre ambos se encuentra una capa aislante llamada dieléctrico, ◼Se ha sustituido paulatinamente CABLE COAXIAL
+
+◼Es el cable más utilizado actualmente para redes locales. ◼Está formado por cuatro pares de hilos. Cada par está trenzado para evitar interferencias radioeléctricas. ◼Los problemas que presenta son la atenuación, que es la pérdida de señal. ◼En los extremos del cable es necesario un conector, RJ-45.
+
+EL CABLE DE PARES TRENZADOS
+
+◼Está formada por filamentos de vidrio que son capaces de transportar los paquetes de información como haces de luz producidos por un láser. ◼Velocidad de transmisión de hasta 10 Tb/s. LA FIBRA ÓPTICA
+
+◼Recibe un paquete de datos a través de un puerto y lo transmite al resto. ◼Esto provoca que la información no la reciba sólo el equipo al cual va dirigida sino también los demás, lo que puede implicar un problema de saturación de la red, ralentización de la red. CONCENTRADOR O HUB
+
+◼Almacena las direcciones MAC (Dirección física de la tarjeta de red) de todos los equipos que están conectados a cada uno de sus puertos. ◼Cuando recibe un paquete a través de un puerto, revisa la dirección MAC a la que va dirigido y reenvía el paquete por el puerto que corresponde a esa dirección, dejando los demás libres de tránsito.
+
+◼Esta gestión más avanzada de la red permite mayor tránsito de datos sin saturarla. CONMUTADOR O SWITCH
+
+◼Destinado a interconectar diferentes redes entre sí. Por ejemplo, una LAN con una WAN o con Internet. ◼Si utilizamos un enrutador para conectarnos a Internet a través de la tecnología ADSL, aparte de conectar dos redes (la nuestra con Internet), el router también tendrá que traducir los paquetes de información de nuestra red al protocolo de comunicaciones que utiliza la tecnología ADSL, función que antes realizaban los modem.
+
+◼Hoy en día los routers incorporan tecnología WI- FI, para conectar portátiles. También disponen de más de un puerto de conexión, lo que les convierte en switchs. ROUTER O ENRUTADOR
+
+◼Cada equipo que pertenece a una red dispone un identificador único dirección IP. ◼La dirección IP está formado por 4 números de tres dígitos cada uno (de 0 a 255): ◼Los tres primeros dígitos son iguales para ordenadores que forman parte de la misma red ◼El cuarto dígito es identificador del equipo dentro de la red.
+
+◼La dirección IP de un ordenador debe ser única dentro de la misma red ◼Ejemplos: ◼192.168.2.5 CORRECTA ◼80.20.20.6 CORRECTA ◼20.40.30.260 ERRONEA, No puede ser superior a 255 LA DIRECCIÓN IP
+
+▪(Domain Name System) à Sistema de nombres de dominio. Sirve para traducir las direcciones IP de los equipos conectados a internet a nombres más legibles y fáciles de recordar para los usuarios. ▪Ejemplos
+
+▪216.58.209.68 à http://www.google.es ▪31.13.83.36 à http://www.facebook.es SERVIDOR DNS
+
+---
+
+## 6.3 Criteris Avaluació Presentació Redes
+
+Puntuació sobre l’exposició de CANVA
+
+Exposició Oral (5 punts)
+
+Estudi i no mirar els apunts: 2 punts.
+
+Parlar bé i mirar al davant de la classe: 1 punt.
+
+Temps correcte: 1 punt.
+
+Escoltar als altres companys: 1 punt.
+
+CANVA (5 punts)
+
+Contingut: 1 punt.
+
+Presentació (Índex, transicions, imatges...): 1 punt.
+
+Codi QR: 1 punt.
+
+Treball en classe: 1 punt.
+
+Treball en equip: 1 punt.
+
+---
+
+## ✍️ Activitats pràctiques UT6
+
+> **✍️ Activitat Pràctica 6.1 — Presentació REDES**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 6.2 — Extra 4.1 - Tests sobre seguretat en Internet**
+> Realiza los siguientes 3 tests y sube una captura de pantalla con el resultado (3 capturas).
+> Tienes que obtener más de un 50% de aciertos en cada test para superar la actividad:
+> Conocimientos generales
+>
+> https://www.osi.es/es/test-evaluacion/conocimientos-generales
+>
+> Ponte a prueba I: ¿cuánto sabes sobre ciberseguridad?
+>
+> https://www.osi.es/es/test-evaluacion/ponte-prueba-cuanto-sabes-sobre-ciberseguridad
+>
+> Ponte a prueba II: ¿cuánto sabes sobre ciberseguridad?: https://www.osi.es/es/test-evaluacion/ponte-prueba-ii-cuanto-sabes-sobre-ciberseguridad
+
+> **✍️ 📋 Exercici / Qüestionari 6.3 — Cuestionario Redes**
+> CARACTERÍSTICAS DEL CUESTIONARIO
+>
+> - Solo disponéis de una oportunidad para responder todo el cuestionario
+> - Las preguntas se presentarán de una en una
+> - Podéis moveros libremente por las diferentes preguntas
+> - Si una pregunta os cuesta más, pasad a la siguiente y luego ya volveréis a esa
+> - Todas la preguntas valen lo mismo
+> - NO SE PUEDE NAVEGAR POR INTERNET NI CONSULTAR LOS APUNTES
+> - Solamente podéis tener abierto el cuestionario, ninguna otra ventana en el ordenador
+> - Cuando finalizáis el cuestionario, se os mostrará la solución a las preguntas y la nota obtenida
+> - Cuando acabéis, apagad el monitor (no el ordenador) y esperad instrucciones del profesor
+
+> **✍️ 📋 Exercici / Qüestionari 6.4 — Recuperación Cuestionario Redes**
+> CARACTERÍSTICAS DEL CUESTIONARIO
+>
+> - Solo disponéis de una oportunidad para responder todo el cuestionario
+> - Las preguntas se presentarán de una en una
+> - Podéis moveros libremente por las diferentes preguntas
+> - Si una pregunta os cuesta más, pasad a la siguiente y luego ya volveréis a esa
+> - Todas la preguntas valen lo mismo
+> - NO SE PUEDE NAVEGAR POR INTERNET NI CONSULTAR LOS APUNTES
+> - Solamente podéis tener abierto el cuestionario, ninguna otra ventana en el ordenador
+> - Cuando finalizáis el cuestionario, se os mostrará la solución a las preguntas y la nota obtenida
+> - Cuando acabéis, apagad el monitor (no el ordenador) y esperad instrucciones del profesor

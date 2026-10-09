@@ -1,0 +1,59 @@
+site_name: "💻 Aplicacions Web — 2n SMX · Grau Mitjà"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT0 — Unit 0: Introduction":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Reference Material": ut00/ut0001.md
+      - "0.2 Presentation Folder": ut00/ut0002.md
+      - "0.3 Activities": ut00/ut0003.md
+      - "0.4 EN Article- Recovery Dossier": ut00/ut0004.md
+      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
+  - "UT1 — Unit 1: Technologies for Web Development":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "1.1 Resources: Example of HTML+CSS": ut01/ut0101.md
+      - "1.2 Resources: CSS Template Collection": ut01/ut0102.md
+      - "1.3 Resources: Reference Links": ut01/ut0103.md
+      - "1.4 HTML Example": ut01/ut0104.md
+      - "1.5 HTML Example": ut01/ut0105.md
+      - "1.6 Cheatsheet HTML (Manz)": ut01/ut0106.md
+      - "1.7 Cheatsheet CSS (Manz)": ut01/ut0107.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
+  - "UT2 — Unit 2: Desktop Web Applications":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 Resources: Reference Links": ut02/ut0201.md
+      - "2.2 EN Article: How Web Operating Systems Work": ut02/ut0202.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — Unit 3: Deploying a web server":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "3.1 Resources: Reference Links": ut03/ut0301.md
+      - "3.2 Taller AWS-ASIX2023": ut03/ut0302.md
+      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
+  - "UT4 — Unit 4 Content Management Systems":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 Resources: Reference Links": ut04/ut0401.md
+      - "4.2 CMS Correction Form": ut04/ut0402.md
+      - "4.3 WordpressEvaluation Template": ut04/ut0403.md
+      - "4.4 WordpressEvaluation Template (WORD)": ut04/ut0404.md
+      - "4.5 Wordpress Practical Exam Example": ut04/ut0405.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UT5 — Unit 5 Web File Management and Web Office":
+      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+      - "5.1 Resources: Reference Links": ut05/ut0501.md
+      - "5.2 EN Article: Battle of the Clouds": ut05/ut0502.md
+      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
+  - "UT6 — Unit 6: Distance Learning Managers":
+      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
+      - "6.1 Resources: Reference Links": ut06/ut0601.md
+      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
+  - "UT7 — Unit 7: JS Programming Introduction":
+      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+      - "7.1 Plantilla: Joc JS amb processing.js": ut07/ut0701.md
+      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
+  - "UT8 — Recuperació":
+      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
+      - "8.1 Continguts i Recursos": ut08/ut0801.md
+      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
+  - "📂 Índex de Documents i Recursos": references.md

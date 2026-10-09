@@ -1,0 +1,101 @@
+---
+layout: default
+title: "UT7 — Presentació del mòdul — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "CE IA i Big Data · UT7 Completa"
+prev_url: "../ut06/ut0601.html"
+prev_label: "⬅️ 6.1 UT 1. Caracterització de IA forta I dèbil usos i"
+next_url: "../ut07/ut0701.html"
+next_label: "7.1 Introducció ➡️"
+---
+
+# 📘 UT7 — Presentació del mòdul (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**7.1 Introducció**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
+
+---
+
+## 7.1 Introducció
+
+---
+
+Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. INTRODUCCIÓN Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Taula de continguts
+
+- presentación del módulo según textos oficiales....................................................................................3
+
+1.1. Real decreto...................................................................................................................................3 1.2. Entorno profesional (salidas laborales).........................................................................................3 1.3. Modulo profesional.......................................................................................................................3 1.4. Contenidos básicos........................................................................................................................4 1.5. Duración........................................................................................................................................7
+
+- Temporalización....................................................................................................................................8
+- contenidos impartidos en clase:............................................................................................................9
+
+3.1. Unidades de trabajo totales............................................................................................................9 Unidad 1................................................................................................................................................9 Unidad 2................................................................................................................................................9 Unidad 3................................................................................................................................................9 Unidad 4................................................................................................................................................9 Unidad 5................................................................................................................................................9 Unidad 6................................................................................................................................................9 3.2. Carga horaria por unidad:..............................................................................................................9 2 / 9
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+- PRESENTACIÓN DEL MÓDULO SEGÚN TEXTOS OFICIALES.
+
+1.1. Real decreto. Real Decreto 279/2021, de 20 de abril, por el que se establece el Curso de especialización en Inteligencia Artificial y Big Data y se fijan los aspectos básicos del currículo. 1.2. Entorno profesional (salidas laborales). ➢Las personas que hayan obtenido el certificado que acredita la superación de este curso de especialización podrán ejercer su actividad en empresas, públicas y privadas de todos los sectores productivos, tanto por cuenta ajena como propia, desempeñando su trabajo en el área de programación, infraestructura o consultoría.
+
+➢Las ocupaciones y puestos de trabajo más relevantes son los siguientes
+
+- Desarrollador de Inteligencia Artificial y Big Data.
+- Programador de sistemas expertos.
+- Experto en Inteligencia y Big Data.
+- Analista de datos.
+
+1.3. Modulo profesional. Módulo profesional: Sistemas de Aprendizaje Automático. Resultados de aprendizaje. ➢Caracteriza la Inteligencia Artifcial fuerte y débil determinando usos y posibilidades.
+
+- Determina técnicas y herramientas de sistemas de aprendizaje automático
+
+(Machine Learning), testeando su aplicabilidad para la resolución de problemas. ➢Aplica algoritmos de aprendizaje supervisado, optimizando el resultado del modelo y minimizando los riesgos asociados. ➢Aplica técnicas de aprendizaje no supervisado relacionándolas con los tipos de problemas que tratan de resolver.
+
+➢Aplica modelos computacionales de redes neuronales comparándolos con otros métodos de inteligencia artificial. ➢Valora la calidad de los resultados obtenidos en la práctica con sistemas de aprendizaje automático integrando principios fundamentales de la computación.
+
+3 / 9
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web 1.4. Contenidos básicos. ➢Caracterización de la Inteligencia Artificial fuerte y débil: Inteligencia Artificial Débil:  Características y aplicaciones.  Ventajas e inconvenientes.  Usos y posibilidades.
+
+Inteligencia Artificial Fuerte:  Características y aplicaciones.  Ventajas e inconvenientes.  Usos y posibilidades. ➢Determinación de sistemas de aprendizaje automático (Machine Learning): Clasificación de sistemas de aprendizaje automático. Supervisado y no supervisado.
+
+Principales técnicas para desarrollar aprendizaje automático: Redes neuronales, Aprendizaje inductivo, Razonamiento basado en casos, entre otros. Algoritmos o modelos aplicados al aprendizaje automático:  Algoritmos de clasificación.  Algoritmos de detección de anomalías.
+
+ Algoritmos de regresión.  Algoritmos de clustering.  Algoritmos de refuerzo del aprendizaje.  Árboles y reglas de decisión.  Otros algoritmos relacionados con el aprendizaje automático. Procedimientos del Machine Learning: Datos, identifica patrones y toma decisiones.
+
+Herramientas de. Aprendizaje automático. Aplicaciones del Machine Learning. 4 / 9
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢Algoritmos aplicados al aprendizaje supervisado y optimización del modelo: Determinación de elementos y herramientas de aprendizaje supervisado. Datos etiquetados. Variables de entrada (input data). Etiquetas de salida.
+
+Plataformas de aprendizaje automático supervisado. Fases del aprendizaje automático:  Selección del algoritmo de aprendizaje supervisado.  Selección de datos.  Construcción del modelo.  Validación del modelo.  Ajuste de características o parámetros.  Implementación del modelo propuesto.
+
+ Verificación del modelo de prueba.  Optimización del modelo. ➢Algoritmos aplicados al aprendizaje no supervisado y optimización del modelo: Aplicación de técnicas de aprendizaje no supervisado:  Técnicas de aprendizaje no supervisado.  Algoritmos de aprendizaje no supervisado. Agrupación de cluster, Reducción de dimensión, entre otros.
+
+ Determinación de elementos y herramientas de Aprendizaje no supervisado.  Plataformas de aprendizaje automático no supervisado.  Fases del aprendizaje automático no supervisado. ➢Aplicación de modelos computacionales de redes neuronales y comparación con otros modelos
+
+Aprendizaje automático frente a aprendizaje profundo. Cómo aprende una red neuronal. Modelos de redes neuronales artificiales: Redes neuronales convolucionales (CNN). 5 / 9
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢Valoración de la calidad de los resultados obtenidos en la práctica con sistemas de aprendizaje automático: Capacidad de generalización. Test. Validación. Matriz de confusión. 6 / 9
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web 1.5. Duración. 90H / 3H a la semana. Fuente: Conselleria d’Educació, Cultura i Esport 7 / 9
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+### 2. TEMPORALIZACIÓN
+
+Lunes / 2H / 19:25 a 21:15 Miércoles / 1H / 20:20 a 21:15 Evaluaciones: 1ª 29/11/23 – 2ª 7/03/24 – Final 11/06/24 – Extraordinaria 27/06/24 8 / 9 Tut TC 1ª avaluació MARÇ 2ª avaluació Final Extraordinària SETEMBRE OCTUBRE 11 12 13 14 15 16 17 10 11 12 13 14 15 18 19 20 21 22 23 24 16 17 18 19 20 21 22 25 26 27 28 29 30 23 24 25 26 27 28 29 30 31 NOVEMBRE DESEMBRE 10 11 12 13 14 15 16 17 18 19 11 12 13 14 15 16 17 20 21 22 23 24 25 26 18 19 20 21 22 23 24 27 28 29 30 25 26 27 28 29 30 31 GENER FEBRER 10 11 12 13 14 10 11 15 16 17 18 19 20 21 12 13 14 15 16 17 18 22 23 24 25 26 27 28 19 20 21 22 23 24 25 29 30 31 26 27 28 29 ABRIL 10 11 12 13 14 11 12 13 14 15 16 17 15 16 17 18 19 20 21 18 19 20 21 22 23 24 22 23 24 25 26 27 28 25 26 27 28 29 30 31 29 30 MAIG JUNY 10 11 12 13 14 15 16 17 18 19 10 11 12 13 14 15 16 20 21 22 23 24 25 26 17 18 19 20 21 22 23 27 28 29 30 31 24 25 26 27 28 29 30
+
+DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
+
+### 3. CONTENIDOS IMPARTIDOS EN CLASE
+
+#### 3.1. Unidades de trabajo totales
+
+Unidad 1 Caracterización de la inteligencia artificial fuerte y débil. Usos y posibilidades. Unidad 2 Caracterización de sistemas de aprendizaje automático. Unidad 3 Aplicación de algoritmos de aprendizaje supervisado. Unidad 4 Aplicación de algoritmos de aprendizaje no supervisado.
+
+Unidad 5 Caracterización de modelos computacionales de redes neuronales y comparación. Unidad 6 Valoración de la calidad de los resultados obtenidos en la práctica por los sistemas.
+
+#### 3.2. Carga horaria por unidad
+
+Media aproximada de 5 semanas / 15H por unidad. 9 / 9

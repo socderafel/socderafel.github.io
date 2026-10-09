@@ -1,0 +1,302 @@
+---
+layout: default
+title: "UT7 — Unit 7 - Audio and Video — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "2n ASIX · Grau Superior · UT7 Completa"
+prev_url: "../ut06/ut06actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+next_url: "../ut07/ut0701.html"
+next_label: "7.1 U7 Audio and Video ➡️"
+---
+
+# 📘 UT7 — Unit 7 - Audio and Video (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**7.1 U7 Audio and Video**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
+> - [**7.2 U7 P1**](#ut0702) (o [obrir en pàgina individual ➡️](./ut0702.md) )
+> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+
+---
+
+## 7.1 U7 Audio and Video
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### **Resources**
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### **Tasks**
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### **Practices**
+
+---
+
+SXI / NSI - UNIT 7 – Audio and Video 2nd ASIX
+
+2 ASIX - SXI Previous concepts: Digital audio
+
+- Frequency (Hz): Number of times that the air vibrates in a second.
+
+Analogic sound.
+
+- https://www.youtube.com/watch?v=8-Mz6cRA-_8
+- Sample rate (Hz): A digital audio is a sequence of 0 and 1 obtained
+
+from the analogic signal. Sample rate defines how many time we’ll get the analogic signal for generating the digital signal.
+
+- 44100 Hz indicates that in a second, 44100 samples of an analogic signal were
+
+taken for creating the digital audio.
+
+- The bigger the sample rate, the bigger the quality of the sound.
+
+2 ASIX - SXI Previous concepts: Digital audio
+
+- Bit resolution: Number of bits used for storing our analogic signal.
+- More resolution implies more quality.
+- Bitrate: Defines how many space in HD take a second of the audio.
+- 3 minutes of MP3 at 128 kb/s takes 2,88 MB. (180*128=23040Kb=2,88MB)
+- MP3 used to work in 128 Kbps.
+- More bitrate implies more quality and more space.
+
+2 ASIX - SXI Previous concepts: Digital audio
+
+- Codec: Acronym of codification/decodification. Is an special algorithm
+
+that reduces the number of bytes that takes an audio/video file.
+
+- Files codified with a codec, needs the same codec to be decodified.
+- Most used for audio is MP3.
+- Most used for video is DivX, XviD, Intel Indeo 5, etc.
+- Decibel (dB): Unit of measure of the volume of intensity of a sound.
+- Silence is quantified as 0 dB
+- Threshold for human ear is 140 dB.
+
+2 ASIX - SXI Previous concepts: Digital video
+
+- Dimensions or resolution: Size of the video (weight x height)
+
+expressed in pixels when visualized at 100%. 4K -> 3840 x 2160
+
+- Bitrate: Defines how many space in HD take a second of the video.
+- More bitrate implies more quality and more space.
+- Frames per second (fps): A video is a sequence of frames. This
+
+indicates how many frames appears in a second.
+
+- 30 (iphone), 40 (PS4), 60 – 120 (PS5) FPS.
+
+2 ASIX - SXI Previous concepts: Digital video
+
+- Aspect ratio: Proportion between height and weight. Recorded in an
+
+aspect radio, displayed in this aspect radio.
+
+- 4:3, 16:9
+
+2 ASIX - SXI Codification and compression
+
+- If file is not digitalized, it’s necessary a digitalization process and
+
+compression for generating a file able to be played in a computer.
+
+- Usually, audio and video are compressed separately and the
+
+compression methods are different.
+
+- Compression techniques consists in reduce and eliminate redundant
+
+data.
+
+2 ASIX - SXI Codification and compression
+
+- With efficient compression techniques the file size can be
+
+dramatically reduced without affect (almost) the quality of our video/audio.
+
+- Excessive compression may lead to lose video quality
+
+2 ASIX - SXI Codification and compression
+
+2 ASIX - SXI Video compression
+
+- Compression algorithms used to use interframe prediction to reduce
+
+video data between frames.
+
+- This consists in techniques like differential codification. A frame is compared
+
+with a reference frame and only are codified the pixels that have changed from the original frame.
+
+2 ASIX - SXI Video format
+
+- Video format is how the videos are stored for being interpretated by a
+
+computer.
+
+- Include codecs in the specification. Format is not the codec.
+
+2 ASIX - SXI Video format
+
+- Video format is how the videos are stored for being interpretated by a
+
+computer.
+
+- .mpg, .avi, .mp4, .mkv…
+- Include codecs in the specification. Format is not the codec.
+- Format defines how metadata, video and audio are stored. Do not
+
+define codification neither compression.
+
+- A movie, contains at least a video track and an audio track.
+- Additionally, can have more video tracks (languages) and subtitules.
+
+2 ASIX - SXI Audio format
+
+- Many audio format. Not supported by all players.
+- .wav, .mp3, .ogg, .wma, .mid…
+
+2 ASIX - SXI Streaming
+
+- Allow the exchange of file, generally multimedia, from a server to a client.
+- It’s different than other services because we don’t need the whole file to
+
+be used.
+
+- It is possible to provide a continuous data flow and the client play the info
+
+while it’s downloading it.
+
+- Play as you get. Youtube, Spotify, Webinars, Skype, Twitch, TuneIn…
+
+2 ASIX - SXI Streaming: Features
+
+- Client needs a buffer for storing the file as it arrives. Buffer needs a
+
+minimum of data and can be configured minimum and maximum in some apps.
+
+- Some apps change the quality of the video/audio if consider that the
+
+buffer is not loading fast enough to avoid stops. Is algo known as lag.
+
+- We need a player in the client.
+- Desktop/mobile app
+- Webpage. HTML5. <audio> <video> tags.
+
+2 ASIX - SXI Streaming: RTSP Protocol
+
+- Real Time Streaming Protocol.
+- Version 2.
+- Audio and video.
+- 2 TCP connections. One for controlling the data flow and one for sending
+
+the information.
+
+- https://youtu.be/tW6MiByt0Mw
+
+2 ASIX - SXI Streaming: SIP Protocol
+
+- Session initiation protocol.
+- Designed for VoIP.
+- The operation mode is quite simple.
+- Locate the recipient user
+- Ring the user to connect
+- Stablish the session parameters
+- Exchange of data
+- Finish session
+
+2 ASIX - SXI Streaming: SIP Protocol
+
+2 ASIX - SXI VoIP Components
+
+- IP phones
+- Hardphones: physical devices specifically designed for VoIP.
+- Softphones software app that emulates the behaviour of a hardphone. We
+
+need headphones and a microphone. Most popular is MicroSIP.
+
+- VoIP central server: same functionality than traditional central
+
+switchboard. Connect both (or more) points into a call.
+
+- Hardware server: physical devices where the clients are connected.
+- Software server: software that can be installed into the server and work as a
+
+switchboard. Most popular is Asterisk.
+
+2 ASIX - SXI Streaming: Audio
+
+- Most popular audio server in Ubuntu is Icecast2.
+- Simple and lot of documentation.
+- We also need a source for emitting like a microphone or some music.
+- Nowadays, almost everybody uses 3rd party services. Cheap (or free)
+
+and reliable.
+
+2 ASIX - SXI Streaming: Video
+
+- Most popular video server in Ubuntu is Streama.
+- For videoconference the most used in Windows is Trueconf.
+- Open source and Java based.
+- Nowadays, almost everybody uses 3rd party services. Cheap (or free)
+
+and reliable.
+
+2 ASIX - SXI Questions?
+
+---
+
+## 7.2 U7 P1
+
+Unit 6 – Mail
+
+U7 – P1
+
+For both practices you are going to need your research skills and the self-learning you have used this year, so both practices are not guided. You may use as many resources on the Internet to accomplish them (tutorials, youtube, etc).
+
+Only one is mandatory and the other one is optional. You can choose the one you prefer. The optional (if OK) will add 0,5 additional points to the final activities mark.
+
+Good luck.
+
+Install and configure a VoIP service
+
+You will need an Ubuntu server with Asterisk and an Ubuntu 2 clients with the application MicroSIP (It’s recommended to use more than one computer).
+
+At the end of the practice, you have to be able of making a phone call from a client to another.
+
+Install and configure a videoconference service.
+
+You will need to install and configure in a Windows Server the application TrueConf in its free version. This will work as a videoconference server and from the client (Windows) you’ll need to follow the steps for connecting to the videoconference.
+
+At the end of the practice, at least two clients must connect to the videoconference at the same time.
+
+---
+
+## ✍️ Activitats pràctiques UT7
+
+> **✍️ Activitat Pràctica 7.1 — U7 A1**
+> Unit 7 – Audio and Video services
+>
+> U7 – A1
+>
+> Instructions
+>
+> - Remember to copy both, questions and answers.
+> - Deliver the document in .pdf
+> - Send the document through the task in Aules.
+>
+> ### 1. After watching the video about RSTP from the UPV, answer the following
+>
+> questions.
+>
+> - What’s the protocol used to control the data flow as a remote
+>
+> controller in the network?
+>
+> - What’s the protocol used for transporting this data?
+> - What are the ports by default for RSTP?
+>
+> - Search information about podcast and answer the following questions.
+> - What is a podcast?
+> - Explain what is a subscription.
+> - What are the most popular podcast platforms?

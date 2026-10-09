@@ -1,0 +1,65 @@
+{
+  "title": "📲 Programació, IA i Robòtica II: App Inventor i Robòtica — 3r ESO",
+  "home": {
+    "label": "🏠 Inici Programació, IA i Robòtica II: App Inventor i Robòtica",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — Unitat Didàctica 0",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT0",
+          "href": "ut00/ut00actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT1 — App Inventor",
+      "items": [
+        {
+          "label": "📘 UT1 Completa (1 pàgina)",
+          "href": "ut01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.1 Projecte final 2a Avaluació",
+          "href": "ut01/ut0101.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT1",
+          "href": "ut01/ut01actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — Robòtica",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 Continguts i Recursos",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

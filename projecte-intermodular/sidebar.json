@@ -1,0 +1,239 @@
+{
+  "title": "🚀 Projecte Intermodular — 2n FPB (IES Mestre Ramón Esteve)",
+  "home": {
+    "label": "🏠 Inici Projecte Intermodular",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UP1 — Creació de la Marca: Naming i Logotip Digital",
+      "items": [
+        {
+          "label": "📘 UP1 Completa (1 pàgina)",
+          "href": "up01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.0 RA i Criteris d'Avaluació",
+          "href": "up01/up01ras.html"
+        },
+        {
+          "label": "1.1 El Naming Comercial i la Paleta de Colors TIC",
+          "href": "up01/up0101.html"
+        },
+        {
+          "label": "1.2 Isotip, Logotip i el Format .PNG Transparent",
+          "href": "up01/up0102.html"
+        },
+        {
+          "label": "1.3 Guia Pràctica Pas a Pas (Paper i Digitalització)",
+          "href": "up01/up0103.html"
+        },
+        {
+          "label": "Activitat i Entrega Tasca 1 en Aules",
+          "href": "up01/up01actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UP2 — Identitat Corporativa i Paper de Carta amb Writer",
+      "items": [
+        {
+          "label": "📘 UP2 Completa (1 pàgina)",
+          "href": "up02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.0 RA i Criteris d'Avaluació",
+          "href": "up02/up02ras.html"
+        },
+        {
+          "label": "2.1 Configuració de Pàgina (2 cm) i Estils Corporatius",
+          "href": "up02/up0201.html"
+        },
+        {
+          "label": "2.2 Encapçalament, Peu de Pàgina i Plantilla (.ott)",
+          "href": "up02/up0202.html"
+        },
+        {
+          "label": "2.3 Carta de Serveis i Model de Taula de Pressupost",
+          "href": "up02/up0203.html"
+        },
+        {
+          "label": "Activitat i Entrega Tasca 2 en Aules",
+          "href": "up02/up02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UP3 — Manual Bàsic de Prevenció de Riscos Laborals (PRL)",
+      "items": [
+        {
+          "label": "📘 UP3 Completa (1 pàgina)",
+          "href": "up03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.0 RA i Criteris d'Avaluació",
+          "href": "up03/up03ras.html"
+        },
+        {
+          "label": "3.1 Ergonomia Postural davant Pantalles (PVD)",
+          "href": "up03/up0301.html"
+        },
+        {
+          "label": "3.2 Riscos Elèctrics i Redacció del Manual en Writer",
+          "href": "up03/up0302.html"
+        },
+        {
+          "label": "Activitat i Entrega Tasca 3 en Aules",
+          "href": "up03/up03actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UP4 — Defensa Oral Inicial de la Marca en Impress",
+      "items": [
+        {
+          "label": "📘 UP4 Completa (1 pàgina)",
+          "href": "up04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.0 RA i Criteris d'Avaluació",
+          "href": "up04/up04ras.html"
+        },
+        {
+          "label": "4.1 Disseny Visual de Diapositives en LibreOffice Impress",
+          "href": "up04/up0401.html"
+        },
+        {
+          "label": "4.2 Estructura de les 4 Diapositives i Defensa de 5 Minuts",
+          "href": "up04/up0402.html"
+        },
+        {
+          "label": "Activitat i Entrega Tasca 4 en Aules",
+          "href": "up04/up04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UP5 — Gestió Econòmica i Pressupostos en LibreOffice Calc",
+      "items": [
+        {
+          "label": "📘 UP5 Completa (1 pàgina)",
+          "href": "up05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.0 RA i Criteris d'Avaluació",
+          "href": "up05/up05ras.html"
+        },
+        {
+          "label": "5.1 Costos d'un Taller: Base Imposable, IVA (21%) i Fórmules",
+          "href": "up05/up0501.html"
+        },
+        {
+          "label": "5.2 Full d'Inventari i Plantilla de Pressupost Automatitzada",
+          "href": "up05/up0502.html"
+        },
+        {
+          "label": "5.3 Simulació Pràctica: Resolució de 2 Casos de Clients",
+          "href": "up05/up0503.html"
+        },
+        {
+          "label": "Activitat i Entrega Tasca 5 en Aules",
+          "href": "up05/up05actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UP6 — Seguretat al Taller de Muntatge i Gestió RAEE",
+      "items": [
+        {
+          "label": "📘 UP6 Completa (1 pàgina)",
+          "href": "up06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.0 RA i Criteris d'Avaluació",
+          "href": "up06/up06ras.html"
+        },
+        {
+          "label": "6.1 Seguretat Física en el Muntatge i Protecció ESD",
+          "href": "up06/up0601.html"
+        },
+        {
+          "label": "6.2 Classificació de Residus Electrònics (RAEE) i Ecoparc",
+          "href": "up06/up0602.html"
+        },
+        {
+          "label": "Activitat i Entrega Tasca 6 en Aules",
+          "href": "up06/up06actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UP7 — Catàleg de Serveis, Full d'Incidències i Atenció al Client",
+      "items": [
+        {
+          "label": "📘 UP7 Completa (1 pàgina)",
+          "href": "up07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.0 RA i Criteris d'Avaluació",
+          "href": "up07/up07ras.html"
+        },
+        {
+          "label": "7.1 Disseny del Catàleg Comercial amb Packs a Preu Tancat",
+          "href": "up07/up0701.html"
+        },
+        {
+          "label": "7.2 Full de Recepció d'Incidències (RMA), Targetes i Rètol",
+          "href": "up07/up0702.html"
+        },
+        {
+          "label": "Activitat i Entrega Tasca 7 en Aules",
+          "href": "up07/up07actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UP8 — Fira Comercial Tecnològica i Defensa Final",
+      "items": [
+        {
+          "label": "📘 UP8 Completa (1 pàgina)",
+          "href": "up08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.0 RA i Criteris d'Avaluació Globals",
+          "href": "up08/up08ras.html"
+        },
+        {
+          "label": "8.1 Presentació Final de 6 Diapositives en Impress",
+          "href": "up08/up0801.html"
+        },
+        {
+          "label": "8.2 Muntatge d'Estand, Atenció Comercial i Resolució en Viu",
+          "href": "up08/up0802.html"
+        },
+        {
+          "label": "Entrega Portfolio Final Tasca 8 en Aules",
+          "href": "up08/up08actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📋 Tasques Aules (Professorat)",
+      "href": "tasques-aules.html"
+    },
+    {
+      "label": "📂 Recursos i Documents Oficials",
+      "href": "references.html"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+---
+layout: default
+title: "UT4 — Unidad 5 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "1r DAW / DAM / ASIX · Grau Superior · UT4 Completa"
+prev_url: "../ut03/ut03actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+next_url: "../ut04/ut0401.html"
+next_label: "4.1 U5-HTML5 ➡️"
+---
+
+# 📘 UT4 — Unidad 5 (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**4.1 U5-HTML5**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
+> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+
+---
+
+## 4.1 U5-HTML5
+
+Introducción al HTML.
+El contenido lo he sacado de la web https://www.w3schools.com/html/, en esta web podéis probar todo lo que hay en las diapositivas con el editor que hay online para cada ejemplo. 
+
+**En los ejercicios y en el examen solo se preguntara sobre lo que hay en la diapositivas.**
+
+Vicent Gómez Gimeno Ciclo Formativo de Grado Superior Lenguaje de Marcas Tema 5: HTML 5
+
+Ciclo Formativo de Grado Superior ¿Qué es HTML5? -Lo que hoy conocemos por HTML5 ha tenido una historia relativamente turbulenta. Como ya sabemos, HTML es el lenguaje de marcado predominante para describir el contenido o los datos en la World Wide Web. HTML5 es la última versión de este lenguaje, e incluye nuevas características, mejoras en las características existentes, y scripting basado en APIs.
+
+HTML5 no es una reformulación de las versiones anteriores del lenguaje, de hecho, incluye todos los elementos válidos tanto en HTML 4 como en XHTML
+
+#### 1.0. Por otra parte, ha sido diseñado con unos principios fundamentales en
+
+mente para asegurarse de que funciona en la mayoría de las plataformas existentes en el mercado, es compatible con los navegadores antiguos y se ocupa de los errores de una forma amigable.
+
+Ciclo Formativo de Grado Superior Novedades en HTML5 -Incorpora etiquetas (canvas 2D y 3D, audio, vídeo) con codecs para mostrar los contenidos multimedia. Actualmente hay una lucha entre imponer codecs libres (WebM + VP8) o privados (H.264/MPEG-4 AVC). -Etiquetas para manejar grandes conjuntos de datos: Datagrid, Details, Menu y Command. Permiten generar tablas dinámicas que pueden filtrar, ordenar y ocultar contenido en cliente.
+
+Mejoras en los formularios. Nuevos tipos de datos (eMail, number, url, datetime …) y facilidades para validar el contenido sin Javascript. -Visores: MathML (fórmulas matemáticas) y SVG (gráficos vectoriales). En general se deja abierto a poder interpretar otros lenguajes XML.
+
+Drag & Drop. Nueva funcionalidad para arrastrar objetos como imágenes.
+
+Ciclo Formativo de Grado Superior Web Semántica -Añade etiquetas para manejar la Web semántica (Web 3.0): header, footer, article, nav, time (fecha del contenido), link rel=‘’ (tipo de contenido que se enlaza). -Estas etiquetas permiten describir cuál es el significado del contenido. Por ejemplo su importancia, su finalidad y las relaciones que existen. No tienen especial impacto en la visualización, se orientan a buscadores.
+
+Los buscadores podrán indexar e interpretar esta meta información para no buscar simplemente apariciones de palabras en el texto de la página. -Permite incorporar a las páginas ficheros RDF / OWL (con meta información) para describir relaciones entre los términos utilizados.
+
+Además, ofrece versatilidad en el manejo y animación de objetos simples, imágenes etc.
+
+Ciclo Formativo de Grado Superior HTML -HTML son las siglas de Hyper Text Markup Language -HTML es el lenguaje de marcado estándar para crear páginas web. -HTML describe la estructura de una página web -HTML consta de una serie de elementos -Los elementos HTML le dicen al navegador cómo mostrar el contenido.
+
+Los elementos HTML etiquetan partes de contenido.
+
+Ciclo Formativo de Grado Superior Un documento HTML simple
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+```
+
+<title>Page Title</title> </head>
+
+```html
+<body>
+```
+
+<h1>This is a Heading</h1> <p>This is a paragraph.</p> </body> </html>
+
+Ciclo Formativo de Grado Superior Ejemplo explicado -La <!DOCTYPE html>declaración define que este documento es un documento HTML5 -El <html>elemento es el elemento raíz de una página HTML. -El <head>elemento contiene metainformación sobre la página HTML. -El <title>elemento especifica un título para la página HTML (que se muestra en la barra de título del navegador o en la pestaña de la página) -El <body>elemento define el cuerpo del documento y es un contenedor para todos los contenidos visibles, como encabezados, párrafos, imágenes, hipervínculos, tablas, listas, etc.
+
+El <h1>elemento define un encabezado grande -El <p>elemento define un párrafo
+
+Ciclo Formativo de Grado Superior ¿Qué es un elemento HTML? Un elemento HTML se define mediante una etiqueta de inicio, algo de contenido y una etiqueta de finalización: <nombre de etiqueta > El contenido va aquí ... < / nombre de etiqueta > El elemento HTML es todo, desde la etiqueta de inicio hasta la etiqueta de finalización
+
+<h1> Mi primer título </h1> <p> Mi primer párrafo. </p>
+
+Ciclo Formativo de Grado Superior Resultado Si creamos un documento y lo llamamos index.html con el contenido de la diapositiva titulada "Un documento HTML simple", y lo abrimos en un explorador, este es el resultado.
+
+Ciclo Formativo de Grado Superior Estructura de la página HTML A continuación, se muestra una visualización de la estructura de una página HTML: Nota: El contenido dentro de la sección <body> (el área blanca de arriba) se mostrará en un navegador. El contenido dentro del elemento <title> se mostrará en la barra de título del navegador o en la pestaña de la página.
+
+Ciclo Formativo de Grado Superior Ejemplos básicos de HTML La declaración <! DOCTYPE> La declaración <!DOCTYPE> representa el tipo de documento y ayuda a los navegadores a mostrar las páginas web correctamente. Solo debe aparecer una vez, en la parte superior de la página (antes de cualquier etiqueta HTML).
+
+La declaración <!DOCTYPE> no distingue entre mayúsculas y minúsculas. La declaración para HTML5 es: <!DOCTYPE html> Encabezados Los encabezados HTML se definen con las etiquetas (de menos a más importante) <h1> a la <h6>, ejemplo: <h1>This is heading 1</h1> <h2>This is heading 2</h2> <h3>This is heading 3</h3>
+
+Ciclo Formativo de Grado Superior Párrafos Los párrafos HTML se definen con la etiqueta <p>. Ejemplo: <p>This is a paragraph.</p> <p>This is another paragraph.</p> Enlaces Los enlaces HTML se definen con la etiqueta <a>. Ejemplo: <a href="https://www.w3schools.com">Esto es un enlace</a> Ejemplos básicos de HTML
+
+Ciclo Formativo de Grado Superior Imágenes Las imágenes HTML se definen con la etiqueta <img>.El archivo de origen ( src), el texto alternativo ( alt) y los atributos width (ancho) y height (alto). Código Resultado en el navegador
+
+Ciclo Formativo de Grado Superior Atributos -Todos los elementos HTML pueden tener atributos -Los atributos proporcionan información adicional sobre los elementos. -Los atributos siempre se especifican en la etiqueta de inicio -Los atributos generalmente vienen en pares de nombre/valor como: nombre="valor" <a href="https://www.w3schools.com">Visit W3Schools</a> Atributo
+
+Ciclo Formativo de Grado Superior Atributos La etiqueta <a> define un hipervínculo. El atributo href especifica la URL de la página a la que va el enlace. Ejemplo: <a href="https://www.w3schools.com">Visit W3Schools</a> Puedes ver el ejemplo aquí. href
+
+Ciclo Formativo de Grado Superior Atributos src La etiqueta <img> se utiliza para incrustar una imagen en una página HTML. El atributo src especifica la ruta a la imagen que se va a mostrar. Ejemplo: <img src="img_girl.jpg"> URL absoluta : enlazas a una imagen externa alojada en otro sitio web. Ejemplo: src="https://www.w3schools.com/images/img_girl.jpg" .
+
+URL relativa : enlazas a una imagen alojada en el sitio web. Aquí, la URL no incluye el nombre de dominio. Si la URL comienza sin una barra inclinada, será relativa a la página actual. Ejemplo: src="img_girl.jpg". Si la URL comienza con una barra inclinada, será relativa al dominio. Ejemplo: src="/images/img_girl.jpg".
+
+Ciclo Formativo de Grado Superior Atributos Otros atributos de la etiqueta <img> son alt que especifica un texto alternativo para una imagen, si la imagen por algún motivo no se puede mostrar, width (ancho) y height (alto). Ejemplo: <img src="img_girl.jpg" alt="Girl with a jacket“width="500" height="600">
+
+Ciclo Formativo de Grado Superior Atributos style El atributo style se usa para agregar estilos a un elemento, como color, fuente, tamaño y más. <p style="color:red;">This is a red paragraph.</p>
+
+Ciclo Formativo de Grado Superior Atributos title El atributo title define alguna información adicional sobre un elemento. El valor del atributo de título se mostrará como información sobre herramientas cuando pase el mouse sobre el elemento. <p title="I'm a tooltip">This is a paragraph.</p>
+
+Ciclo Formativo de Grado Superior Formatos Los formatos son para mostrar tipos de texto especiales.
+
+Ciclo Formativo de Grado Superior Comentarios Los comentarios HTML no se muestran en el navegador, pero pueden ayudar a documentar su código fuente HTML. Ejemplo: <!-- This is a comment --> <p>This is a paragraph.</p> <!-- Remember to add more information here -->
+
+Ciclo Formativo de Grado Superior Colores Los colores HTML se especifican con nombres de colores predefinidos o con valores RGB, HEX, HSL, RGBA o HSLA. En las diapositivas solo explicaremos las 3 primeras (Colores predefinidos, RGB y HEX). Nombres de colores En HTML, un color se puede especificar usando un nombre de color.
+
+HTML admite más de 140 nombres de colores
+
+Ciclo Formativo de Grado Superior Colores Color de fondo Puede establecer el color de fondo para los elementos HTML
+
+Ciclo Formativo de Grado Superior Valores de color RGB En HTML, un color se puede especificar como un valor RGB, utilizando esta fórmula: rgb ( rojo,verde , azul ) Cada parámetro (rojo, verde y azul) define la intensidad del color con un valor entre 0 y 255. ¡Esto significa que hay 256 x 256 x 256 = 16777216 colores posibles!
+
+Por ejemplo, rgb (255, 0, 0) se muestra como rojo, porque el rojo está configurado en su valor más alto (255) y los otros dos (verde y azul) están configurados en 0. Otro ejemplo, rgb (0, 255, 0) se muestra como verde, porque el verde se establece en su valor más alto (255) y los otros dos (rojo y azul) se establecen en 0.
+
+Para mostrar negro, configure todos los parámetros de color en 0, así: rgb (0, 0, 0). Para mostrar el blanco, configure todos los parámetros de color en 255, así: rgb (255, 255, 255).
+
+Ciclo Formativo de Grado Superior Valores de color RGB
+
+Ciclo Formativo de Grado Superior Valores de color Hexadecimal En HTML, se puede especificar un color usando un valor hexadecimal en la forma: #rrggbb Donde rr (rojo), gg (verde) y bb (azul) son valores hexadecimales entre 00 y ff (igual que decimal 0-255). Por ejemplo, #ff0000 se muestra en rojo, porque el rojo está configurado en su valor más alto (ff) y los otros dos (verde y azul) están configurados en 00.
+
+Otro ejemplo, #00ff00 se muestra como verde, porque el verde se establece en su valor más alto (ff) y los otros dos (rojo y azul) se establecen en 00. Para mostrar negro, establezca todos los parámetros de color en 00, así: #000000. Para mostrar blanco, establezca todos los parámetros de color en ff, así: #ffffff.
+
+Ciclo Formativo de Grado Superior Valores de color Hexadecimal
+
+Ciclo Formativo de Grado Superior Tablas Las tablas HTML permiten a los desarrolladores web organizar los datos en filas y columnas. Ejemplo de una tabla básica Para no hacer un numero infinito de diapositivas, mirar también los apartados de la tabla en HTML de la web W3CSchool (recordar que la se puede traducir la página).
+
+Ciclo Formativo de Grado Superior Webgrafía https://www.w3schools.com/html/
+
+---
+
+## ✍️ Activitats pràctiques UT4
+
+> **✍️ Activitat Pràctica 4.1 — Ejercicio HTML**
+> Crear una página web básica
+>
+> Debe tener un índice y este enlace a los htmls con fondos rojo, verde y azul la imagen del IES San Vicent Ferrer Algemesi
+>
+> Contenido del HTML fondo Rojo
+>
+> Título se llamará "Ejercicio tema 5"
+>
+> Encabezado se llamará "Fondo Rojo y tabla"
+>
+> Una tabla (Inventada o se puede coger como ejemplo la del vídeo)
+>
+> Enlaces al resto de htmls (índice, azul y verde)
+>
+> Contenido del HTML fondo Verde
+>
+> Título se llamará "Ejercicio tema 5"
+>
+> Encabezado se llamará "Fondo Verde-Foto IES"
+>
+> Una imagen del Instituto con su tooltip que ponga "Algemesi"
+>
+> Un HyperEnlace que te lleve a la web del Instituto " https://portal.edu.gva.es/iessantvicent/"
+>
+> Enlaces al resto de htmls (índice, azul y Rojo)
+>
+> Contenido del HTML fondo Azul
+>
+> Título se llamará "Ejercicio tema 5"
+>
+> Encabezado se llamará "Fondo Azul"
+>
+> Enlaces al resto de htmls (índice, verde y Rojo)
+>
+> He creado un vídeo como guía de como podría ser la web.
+>
+> Hacer una web básica como la del vídeo se optara como máximo a un 7, para optar a más nota se tendrá que investigar un poco (en W3CSchool por ejemplo) y hacer una web más "rica".¿A que me refiero con una web más rica?, utilizar la web del vídeo como base y por ejemplo que la tabla esté centrada, que la cabecera tenga otro formato, etc. Dejar salir vuestro informático artístico que lleváis dentro.
+>
+> **Me tenéis que subir una carpeta comprimida con los archivos html. 
+> Fecha de entrega 14-02-2022 a las 00 horas.**
+>
+> Saludos.

@@ -1,0 +1,40 @@
+site_name: "🤖 Sistemes d'Aprenentatge Automàtic (Machine Learning) — CE IA i Big Data"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT0 — Unitat Didàctica 0":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Continguts i Recursos": ut00/ut0001.md
+  - "UT2 — Xarxes neuronals":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 Continguts i Recursos": ut02/ut0201.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — Sistemes d'aprenentatge no supervisat":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "3.1 Continguts i Recursos": ut03/ut0301.md
+  - "UT4 — Sistemes d'aprenentatge supervisat":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 UT 5.4. Aprenentatge supervisat. Tractament de d": ut04/ut0401.md
+      - "4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r": ut04/ut0402.md
+      - "4.3 UT 5.2. Aprenentatge supervisat. Models de regre": ut04/ut0403.md
+      - "4.4 UT 5.1. Aprenentatge supervisat. Models de regre": ut04/ut0404.md
+      - "4.5 UT 5. Aprenentatge supervisat. Introducció.": ut04/ut0405.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UT5 — Sistemes d'aprenentatge automàtic":
+      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+      - "5.1 UT 4 . Eines d'aprenentatge automàtic": ut05/ut0501.md
+      - "5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto": ut05/ut0502.md
+      - "5.3 UT 2 . Caracterització de sistemes d'aprenentatg": ut05/ut0503.md
+  - "UT6 — Caracterització de IA forta i dèbil":
+      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
+      - "6.1 UT 1. Caracterització de IA forta I dèbil usos i": ut06/ut0601.md
+  - "UT7 — Presentació del mòdul":
+      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+      - "7.1 Introducció": ut07/ut0701.md
+  - "UT8 — Avaluació":
+      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
+      - "8.1 Continguts i Recursos": ut08/ut0801.md
+      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
+  - "📂 Índex de Documents i Recursos": references.md

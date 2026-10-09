@@ -1,0 +1,163 @@
+{
+  "title": "🤖 Sistemes d'Aprenentatge Automàtic (Machine Learning) — CE IA i Big Data",
+  "home": {
+    "label": "🏠 Inici Sistemes d'Aprenentatge Automàtic (Machine Learning)",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — Unitat Didàctica 0",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 Continguts i Recursos",
+          "href": "ut00/ut0001.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — Xarxes neuronals",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 Continguts i Recursos",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — Sistemes d'aprenentatge no supervisat",
+      "items": [
+        {
+          "label": "📘 UT3 Completa (1 pàgina)",
+          "href": "ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 Continguts i Recursos",
+          "href": "ut03/ut0301.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — Sistemes d'aprenentatge supervisat",
+      "items": [
+        {
+          "label": "📘 UT4 Completa (1 pàgina)",
+          "href": "ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 UT 5.4. Aprenentatge supervisat. Tractament de d",
+          "href": "ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r",
+          "href": "ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 UT 5.2. Aprenentatge supervisat. Models de regre",
+          "href": "ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 UT 5.1. Aprenentatge supervisat. Models de regre",
+          "href": "ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 UT 5. Aprenentatge supervisat. Introducció.",
+          "href": "ut04/ut0405.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT4",
+          "href": "ut04/ut04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — Sistemes d'aprenentatge automàtic",
+      "items": [
+        {
+          "label": "📘 UT5 Completa (1 pàgina)",
+          "href": "ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 UT 4 . Eines d'aprenentatge automàtic",
+          "href": "ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto",
+          "href": "ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 UT 2 . Caracterització de sistemes d'aprenentatg",
+          "href": "ut05/ut0503.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — Caracterització de IA forta i dèbil",
+      "items": [
+        {
+          "label": "📘 UT6 Completa (1 pàgina)",
+          "href": "ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 UT 1. Caracterització de IA forta I dèbil usos i",
+          "href": "ut06/ut0601.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT7 — Presentació del mòdul",
+      "items": [
+        {
+          "label": "📘 UT7 Completa (1 pàgina)",
+          "href": "ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Introducció",
+          "href": "ut07/ut0701.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT8 — Avaluació",
+      "items": [
+        {
+          "label": "📘 UT8 Completa (1 pàgina)",
+          "href": "ut08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Continguts i Recursos",
+          "href": "ut08/ut0801.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT8",
+          "href": "ut08/ut08actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

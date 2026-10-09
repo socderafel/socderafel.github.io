@@ -1,0 +1,45 @@
+site_name: "🖧 Xarxes Locals — 1r SMX · Grau Mitjà"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT0 — Unitat Didàctica 0":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Sistemes Microinformàtics i Xarxes": ut00/ut0001.md
+      - "0.2 Avaluació": ut00/ut0002.md
+      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
+  - "UT1 — Unitat Didàctica 1":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "1.1 Continguts i Recursos": ut01/ut0101.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
+  - "UT2 — Unitat Didàctica 2":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 Solución: Proyecto de Instalación LAN": ut02/ut0201.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — Unitat Didàctica 3":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "3.1 Recursos: Ejercicios de Direccionamiento IP": ut03/ut0301.md
+      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
+  - "UT4 — Unitat Didàctica 4":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 Continguts i Recursos": ut04/ut0401.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UT5 — i 6":
+      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+      - "5.1 Continguts i Recursos": ut05/ut0501.md
+      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
+  - "UT6 — Final de Curs":
+      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
+      - "6.1 Dossier de Recuperació": ut06/ut0601.md
+      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
+  - "UT7 — Unitat Didàctica 7":
+      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+      - "7.1 Continguts i Recursos": ut07/ut0701.md
+  - "UT8 — Unitat Didàctica 8":
+      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
+      - "8.1 Continguts i Recursos": ut08/ut0801.md
+  - "UT9 — Unitat Didàctica 9":
+      - "📘 UT9 Completa (1 pàgina)": ut09/index.md
+      - "9.1 Continguts i Recursos": ut09/ut0901.md
+  - "📂 Índex de Documents i Recursos": references.md

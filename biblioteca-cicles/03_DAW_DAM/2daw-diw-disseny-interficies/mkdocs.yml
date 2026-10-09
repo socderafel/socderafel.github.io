@@ -1,0 +1,53 @@
+site_name: "🎨 Disseny d'Interfícies Web — 2n DAW · Grau Superior"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT0 — Unitat Didàctica 0":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Presentació del curs": ut00/ut0001.md
+  - "UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "1.1 DIAPOSITIVAS SECCIÓN 1: ELEMENTOS DEL DISEÑO": ut01/ut0101.md
+      - "1.2 Enlaces interesantes UD1 Sección 1": ut01/ut0102.md
+      - "1.3 !! ACTUALIZACIÓN!! DIAPOSITIVAS SECCIÓN 1: ELEME": ut01/ut0103.md
+      - "1.4 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB": ut01/ut0104.md
+      - "1.5 DIAPOSITIVAS UD 1 SECCIÓN 3": ut01/ut0105.md
+      - "1.6 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4": ut01/ut0106.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
+  - "UT2 — USO DE ESTILOS":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A": ut02/ut0201.md
+      - "2.2 DIW: SOLUCIONES EJERCICIOS PLANTEADOS EN LAS DIA": ut02/ut0202.md
+      - "2.3 TEORÍA CSS PROPIEDAD DISPLAY": ut02/ut0203.md
+      - "2.4 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE": ut02/ut0204.md
+      - "2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO": ut02/ut0205.md
+      - "2.6 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI": ut02/ut0206.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — EXAMEN 1ª AVALUACIÓ UD1 UD2":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
+  - "UT4 — ACCESIBILIDAD":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1": ut04/ut0401.md
+      - "4.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2": ut04/ut0402.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UT5 — BOOTSTRAP":
+      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+      - "5.1 DIW INTRODUCCIÓN A BOOTSTRAP5": ut05/ut0501.md
+      - "5.2 PROPIEDAD FLEX DE BOOTSTRAP5": ut05/ut0502.md
+      - "5.3 FICHERO INDEX_EJ6": ut05/ut0503.md
+      - "5.4 FICHERO BASE DISEÑO TARJETAS BOOTSTRAP5": ut05/ut0504.md
+      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
+  - "UT6 — IMPLANTACIÓN DE CONTENIDO MULTIMEDIA":
+      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
+      - "6.1 SECCIÓN 1: IMÁGENES Y LA LEY DE PROPIEDAD INTELE": ut06/ut0601.md
+      - "6.2 DIW: Conceptos básicos de fotografía digital": ut06/ut0602.md
+      - "6.3 SECCIÓN 2: SONIDO Y VÍDEO": ut06/ut0603.md
+      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
+  - "UT7 — USABILIDAD":
+      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+      - "7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD": ut07/ut0701.md
+      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
+  - "📂 Índex de Documents i Recursos": references.md

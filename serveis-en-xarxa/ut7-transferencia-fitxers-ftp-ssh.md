@@ -205,7 +205,6 @@ Antes de configurar los servicios en la máquina, debemos garantizar que el **Se
 ![Detalles básicos del Security Group](./07_Transferencia_Ficheros_FTP_SSH/imagenes/03_detalles_basicos_sg.png)
 *Figura 3: Configuración del nombre, descripción y VPC del nuevo grupo de seguridad.*
 
-
 4. En la sección **Inbound rules** (*Reglas de entrada*), pulsar en el botón **Add rule** (*Agregar regla*):
 
 ![Pulsar el botón Agregar regla en Reglas de entrada](./07_Transferencia_Ficheros_FTP_SSH/imagenes/04_boton_agregar_regla.png)

@@ -1,0 +1,6445 @@
+---
+layout: default
+title: "UT2 — Unitat Didàctica 2 — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "1r SMX · Grau Mitjà · UT2 Completa"
+prev_url: "../ut01/ut0101.html"
+prev_label: "⬅️ 1.1 U1 - P1 | P2 | P3 - CONTINGUTS"
+next_url: "../ut02/ut0201.html"
+next_label: "2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS ➡️"
+---
+
+# 📘 UT2 — Unitat Didàctica 2 (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
+> - [**2.2 U2 - P2 - PROCESADOR Y MEMORIA**](#ut0202) (o [obrir en pàgina individual ➡️](./ut0202.md) )
+> - [**2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS**](#ut0203) (o [obrir en pàgina individual ➡️](./ut0203.md) )
+> - [**2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS**](#ut0204) (o [obrir en pàgina individual ➡️](./ut0204.md) )
+> - [**2.5 U2 - P3 - Perifèrics i Communications**](#ut0205) (o [obrir en pàgina individual ➡️](./ut0205.md) )
+> - [**2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE**](#ut0206) (o [obrir en pàgina individual ➡️](./ut0206.md) )
+> - [**2.7 DISCOS DUROS CHS ECHS LBA**](#ut0207) (o [obrir en pàgina individual ➡️](./ut0207.md) )
+> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+
+---
+
+## 2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS
+
+> **🔗 Recurs Web: Top 6: Best Gaming SSD For 2022**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=B71gcWBR24M) ↗️**](https://www.youtube.com/watch?v=B71gcWBR24M)
+
+📎 **Material de laboratori (U2 - P4 - COMPONENTS ADICIONALS):** `U2 - P4 - Graficas, Tarjetas Expansión, Multimedia.pdf`
+
+---
+
+Muntatge d’un equip microinformàtic Joan Alfred Noll Obiol Muntatge i manteniment d’equips
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Índex Introducció Resultats d’aprenentatge Disseny d’un equip informàtic. Prestacions, informació tècnica 1.1 Cicle de vida d’un sistema informàtic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.2 Anàlisi i deﬁnició dels requeriments de l’equip . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.1 Anàlisi de requeriments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.2 Deﬁnició dels requeriments. Potència de l’equip . . . . . . . . . . . . . . . . . . . .
+
+1.3 Disseny de l’equip. Perﬁl segons requeriments . . . . . . . . . . . . . . . . . . . . . . . . . 1.4 Especiﬁcació de components. Tria segons requeriments . . . . . . . . . . . . . . . . . . . . . 1.4.1 Processador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.4.2 Placa base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.3 Memòria de treball (memòria interna) . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.4 Mitjans d’emmagatzematge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.4.5 Targeta gràﬁca i targeta de so . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.6 Caixa i font d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.7 Perifèrics bàsics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.5 Model d’equip. Llista de components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.5.1 Components OEM i retail (al detall) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.5.2 Proveïdors dels components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Muntatge d’un equip 2.1 Procediments per a la instal·lació de maquinari . . . . . . . . . . . . . . . . . . . . . . . . . 2.2 Normativa de seguretat sobre la instal·lació de components . . . . . . . . . . . . . . . . . . . 2.3 Eines necessàries per al muntatge i manteniment d’equips informàtics . . . . . . . . . . . . .
+
+2.4 Manuals de muntatge de components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5 Procés de muntatge de la unitat central de procés . . . . . . . . . . . . . . . . . . . . . . . . 2.5.1 Caixa i font d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.5.2 Memòria RAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5.3 Processador i ventilador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5.4 Placa base i connectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.5.5 Unitats d’emmagatzematge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5.6 Targetes d’expansió . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.6 Connexió dels dispositius perifèrics externs . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.7 Engegada de l’equip. Codis POST . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Conﬁguració, proves i documentació del muntatge 3.1 Conﬁguració del maquinari . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.1 Els jumpers o ponts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.1.2 La BIOS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.3 Proves de funcionament i rendiment. Veriﬁcació del procés de muntatge. . . . . . . . 3.1.4 Instal·lació bàsica del Windows . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.1.5 Programes de "benchmark" en entorn Windows . . . . . . . . . . . . . . . . . . . . .
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic 3.1.6 Arrencada amb un CD autònom GNU/Linux . . . . . . . . . . . . . . . . . . . . . . 3.1.7 Eines de "benchmark" en l’entorn GNU/Linux . . . . . . . . . . . . . . . . . . . . . 3.2 Procés de documentació del muntatge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.2.1 Documentació per al tècnic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.2 Documentació per a l’usuari . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.3 Característiques de la documentació . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Introducció Quan a l’agost de 1981 va sortir al mercat el primer IBM PC, es tractava d’un equip de baix cost destinat al mercat domèstic, nascut en resposta a l’èxit dels models Apple, i amb un enfocament corporatiu heretat de l’entorn empresarial de l’època. És a dir, cada fabricant d’ordinadors s’encarregava de tots els components de maquinari d’aquest, tant interns com perifèrics.
+
+Els altres fabricants de l’època o anteriors tenien una ﬁlosoﬁa similar. Tant Apple, com tots els productors d’ordinadors de 8 bits que havien comportat la primera onada informàtica al mercat domèstic venien solucions completes (ﬁns i tot de programari), encara que en alguns casos calia connectar l’ordinador a un televisor convencional.
+
+La decisió d’IBM de permetre la creació de clònics d’altres empreses, com Columbia o Compaq, i la popularització de MS-DOS com sistema operatiu d’aquests equips va provocar amb els anys la popularització de la plataforma de maquinari i programari que ha vingut en anomenar-se Wintel. Amb el temps, aquest nínxol de mercat s’ha obert a altres participants: les plataformes basades en AMD han tingut un cert èxit i cada cop és més habitual trobar PCs amb altres sistemes operatius instal·lats en lloc de Windows (com és el cas de Linux) pero al mateix temps ha aconseguit expandir-se més enllà del mercat domèstic (per exemple al sector servidors) i fer desaparèixer altres plataformes, com poden ser les basades en arquitectura PowerPC (ﬁns i tot els Apple actuals es basen en arquitectura Intel).
+
+La generalització d’un sol tipus de maquinari compatible ha fet que aparegués un actiu i populós mercat de fabricants de recanvis i actualitzacions que poden instal·lar-se en qualsevol d’aquests equips hereus del primer IBM PC. A més es tracta d’equips que, en molts casos, encara són capaços d’executar aplicacions creades en les primeres generacions de l’estàndard, trenta anys enllà.
+
+Aquesta varietat de maquinari que podem trobar al mercat avui dia permet que, amb els coneixements apropiats sobre components bàsics, de seguretat i sobre l’electricitat, puguem assemblar el nostre propi equip informàtic utilitzant components compatibles. En aquest unitat formativa veurem el procés a realitzar per realitzar aquest muntatge, des de la deﬁnició d’un projecte de muntatge, passant per la implementació de l’equip ﬁns a les proves i documentació d’aquest.
+
+A l’apartat “Disseny d’un equip informàtic. Prestacions, informació tècnica” podeu aprendre les etapes del cicle de vida d’un sistema informàtic. Aquestes comprenen l’ anàlisi de requeriments i deﬁnició de la potència necessària per a l’equip, el disseny de l’equip situant-lo en un perﬁl de treball, i l’ especiﬁcació de components , que inclou processador, placa Base , memòria RAM , mitjans d’emmagatzematge , targeta gràﬁca i de so , caixa i font d’alimentació , així com perifèrics bàsics . Un cop disposem del model d’equip, veureu els tipus de
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic components utilitzables, i els proveïdors a que podem acudir per comprar-los. L’apartat “Muntatge d’un equip” desenvolupa un projecte de muntatge comentant- ne tots els passos per tal de ser el més genèric possible. S’expliquen els conei- xements de muntatge necessaris, com procediments de muntatge , normatives de seguretat o eines i lloc de treball . També es descriu pas a pas el muntatge d’un equip, component a component i amb l’ajuda de ﬁgures que il·lustren els passos més importants. Es parla també de la conveniència de la utilització dels manuals de perifèrics. Així mateix, veureu com comprovar la connexió correcta dels components en engegar l’equip, i interpretar els codis d’error (POST) que ens indiquen la fallada o mala connexió d’algun component de maquinari.
+
+L’apartat “Conﬁguració, proves i documentació del muntatge” parteix de la base que disposem d’un equip ja muntat correctament i volem avaluar-ne el rendiment adequat i documentar el muntatge realitzat. Per a això cal que conﬁgureu correctament tot el maquinari instal·lat, sigui mitjançant jumpers (ponts) o amb el programa de la BIOS per tot seguit passar a realitzar els tests.
+
+Aquesta comprovació de rendiment o benchmarks es pot realitzar en entorn GNU/Linux o Windows , depenent de la destinació de l’equip i de les nostres capacitats tècniques. Veureu el funcionament de diverses eines destinades a cadascun dels sistemes operatius. També coneixereu el procés de documentació del muntatge realitzat, que inclou documentació per al tècnic i per a l’ usuari i aprendreu les característiques d’una documentació de qualitat.
+
+La present unitat té un contingut procedimental molt gran, ja que es basa en la realització d’un projecte de muntatge d’un equip. Cal tenir coneixements previs sobre maquinari per aproﬁtar-la completament, encara que se’n dóna una visió general que permet realitzar-la igualment. El fet de realitzar un disseny d’equip, segons els requeriments que ens vinguin donats, farà que a l’hora de muntar-lo ens assegurem un funcionament més acurat d’aquest. Quant a les habilitats manuals que requireix el muntatge d’un equip es donen indicacions sobre la forma de realitzar-lo amb cura i la qualitat requerida pels components electrònics. El procés de proves necessita la utilització d’un sistema operatiu, encara que els suports d’arranc en viu ens donen una eina molt adequada per provar l’equip abans de la instal·lació deﬁnitiva. Per últim, la documentació és un punt molts cops oblidat que cal conèixer i utilitzar per aproﬁtar la feina feta per altres i aconseguir que la que fem nosaltres també tingui una vida més llarga.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Resultats d’aprenentatge En ﬁnalitzar aquesta unitat l’alumne/a
+
+### 1. Acobla un equip microinformàtic, interpretant plans i instruccions del
+
+fabricant, i aplicant tècniques de muntatge.
+
+- Selecciona les eines i estris necessaris per al muntatge d’equips
+
+microinformàtics.
+
+- Interpreta la documentació tècnica de tots els components a acoblar.
+- Determina el sistema d’obertura/tancament del xassís i els diferents
+
+sistemes de ﬁxació per a acoblar-desacoblar els elements de l’equip.
+
+- Acobla diferents conjunts de placa base, microprocessador i elements
+
+de refrigeració en diferents models de xassís, segons les especiﬁcaci- ons donades.
+
+- Acobla els mòduls de memòria RAM, els discos ﬁxos, les unitats
+
+de lectura/enregistrament en suports de memòria auxiliar i altres components.
+
+- Conﬁgura paràmetres bàsics del conjunt accedint a la conﬁguració de
+
+la placa base.
+
+- Executa utilitats de revisió i diagnòstic per a veriﬁcar les prestacions
+
+del conjunt acoblat.
+
+- Realitza un informe de muntatge, especiﬁcant tots els detalls del
+
+procés.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+### 1. Disseny d’un equip informàtic. Prestacions, informació tècnica
+
+El fet de dissenyar i muntar un ordinador (o equip informàtic) pot estar motivat bàsicament per dos raons, relacionades amb la persona o persones que hagin de fer tot aquest procés. En primer lloc, un usuari domèstic té diverses possibilitats a l’hora d’adquirir un ordinador personal.
+
+Una d’elles és comprar-ne un de premuntat en una botiga informàtica o ﬁns i tot en una gran superfície. En aquests casos només cal anar a la botiga, recollir- lo i endollar-lo a casa (o demanar que ens ho facin els de la botiga). Però una bona raó per a muntar el propi equip és el fet que ens costarà més barat.
+
+Encara que els components microelectrònics han baixat molt de preu continua essent més econòmic fer part de la feina un mateix. D’altra banda, el fet de triar els components un per un ens donarà la llibertat de realment escollir quins components són els que volem muntar, sense haver de plegar-nos a allò que ens volen vendre.
+
+L’altra raó té més a veure amb la creació d’una petita empresa, en què podríem muntar i vendre la nostra pròpia línia d’ordinadors personals. Moltes franquícies informàtiques fan aquest tipus de negoci. Venen ordinadors amb la seva marca, els quals simplement han estat dissenyats segons una idea inicial, però en lloc de muntar-ne només un en faran sèries que es vendran a les seves botigues.
+
+Un sistema informàtic és un conjunt de parts que funcionen relacionant- se entre elles amb un objectiu precís. Les seves parts són les següents: maquinari, programari i les persones que l’utilitzen. Per exemple, un ordinador, els seus dispositius i la persona que els maneja poden constituir un sistema informàtic.
+
+Un sistema informàtic pot formar part d’un sistema d’informació; en aquest últim la informació, ús i accés a aquesta no necessàriament ha d’estar informatitzada. Per exemple, el sistema d’arxiu de llibres d’una biblioteca i la seva activitat en general és un sistema d’informació. Si dins del sistema d’informació hi ha ordinadors que ajuden en la tasca d’organitzar la biblioteca, llavors aquest és un sistema informàtic.
+
+Un ordinador es deﬁneix com una màquina programable que és capaç de respondre a un conjunt d’instruccions d’una manera predeﬁnida. Els ordinadors actuals són capaços de realitzar una innumerable quantitat de tasques que han simpliﬁcat en gran manera la feina de processament d’informació i han entrat amb força en el món de l’entreteniment. Vegeu en la ﬁgura 1.1 l’esquema bàsic d’un ordinador o equip informàtic.
+
+L’empresa de mobles IKEA ha adoptat una ﬁlosoﬁa semblant a la del mercat de components informàtics: compra les peces i monta-ho tu mateix!
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic No tots els equips informàtics estan destinats al mateix ús: hi ha equips destinats a un ús personal, i ﬁns i tot lúdic, d’altres de destinats a un ús d’una estació de treball que només utilitza un conjunt molt restringit de programes, d’altres de destinats a servidors de dades de volum considerable i uns altres de destinats a funcionar, potser, com a estacions gràﬁques de producció d’animacions.
+
+Figura 1.1. Esquema bàsic d’un equip informàtic Aquestes diferències fan que les prestacions que s’han de mesurar segons les necessitats d’ús dels ordinadors siguin diferents i prou importants per a tenir-les en compte. A grans trets, la informació tècnica necessària per a determinar les prestacions d’un equip informàtic passarà per conèixer-ne la potència de treball en diferents àmbits: el de procés, el d’emmagatzematge, el gràﬁc i el de comunicació.
+
+El procés de disseny i muntatge d’un equip o conjunt d’equips seguint uns paràmetres de qualitat adequats hauria d’incloure els passos bàsics que s’indiquen per al cicle de vida d’un sistema informàtic: estudi de viabilitat, anàlisi de requeriments, disseny, implementació, validació/prova i operació/manteniment.
+
+1.1 Cicle de vida d’un sistema informàtic El cicle de vida d’un equip informàtic és el temps que “viu” des que es dissenya sobre paper ﬁns que es rebutja o recicla. El cicle de vida de desenvolupament de sistemes informàtics es pot dividir en activitats o fases que, en general, s’ajusten a l’esquema que es mostra en la ﬁgura
+
+#### 1.2. Aquest esquema és el cicle de vida típic, ja que hi ha una gran quantitat
+
+de variants que depenen de l’organització, del tipus de sistema que es realitzarà, de les preferències dels administradors, dels temps d’entrega, etc. Per exemple, en cas d’haver de muntar un sol equip informàtic no es farà la part de creació de prototipus, mentre que pot ser necessari fer-la si s’han de muntar un nombre elevat de màquines iguals per a una empresa.
+
+Les activitats típiques del cicle de vida són
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+### 1. Estudi de viabilitat
+
+### 2. Anàlisi de requeriments
+
+### 3. Disseny
+
+#### 4.1. Creació de prototipus
+
+#### 4.2. Implementació
+
+### 5. Validació i prova
+
+### 6. Operació i manteniment
+
+Figura 1.2. Cicle de vida d’un equip informàtic Fer el disseny d’un equip és complicat, ja que hi ha molts paràmetres en joc. La utilització de l’anàlisi estructurada té com a objectiu reduir aquestes diﬁcultats mitjançant la subdivisió del sistema en els components que el formen i la deﬁnició d’un model de l’equip.
+
+Aquest mètode es pot integrar en les etapes inicials del cicle de vida de l’equip, que comporten elements d’anàlisi i disseny. L’anàlisi estructurada se centra en l’especiﬁcació d’allò que es requereix que faci el sistema i després d’això es podrà elaborar un disseny físic que especiﬁqui els components per al seu ús previst.
+
+Per tant, en aquest apartat ens centrarem en el procés de disseny de l’equip, des de l’anàlisi de requeriments ﬁns al disseny. En l’etapa d’estudi de viabilitat es vol assegurar que el projecte serà realitzable i tindrà una bona rendibilitat econòmica. En el cas del muntatge d’un ordinador no és necessari fer un estudi, ja que es tracta d’un projecte aïllat, però si es vol fabricar el mateix ordinador en cadena, caldrà realitzar-lo per tal de garantir-ne l’èxit, ja que ens permetrà deﬁnir els requisits, i a partir d’aquests avaluar la relació entre beneﬁcis i costos.
+
+Consulteu en l’apartat de “Recursos de contingut” dels materials web el procés per a realitzar un estudi de viabilitat.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic L’anàlisi estructurada és una eina molt utilitzada en la creació de programari, i també per al disseny de sistemes informàtics. El model essencial forma part de l’anàlisi estructurada per a l’anàlisi de sistemes.
+
+Es pot utilitzar com a sinònim de model lògic. 1.2 Anàlisi i deﬁnició dels requeriments de l’equip Els equips informàtics estan constituïts per un conjunt de components compatibles. Per a cada component es pot trobar molta varietat de tipus i de prestacions. Tot i que per a fer certes tasques es necessita un “equip a mida”, no sempre és possible trobar-lo entre els equips comercials que hi ha en el mercat. Llavors cal cercar un equip amb unes prestacions superiors a les que es necessiten o bé cercar un equip de prestacions inferiors i acoblar-hi nous components o substituir els que no compleixen els requisit, o bé muntar l’equip que es vol a partir de components de mercat combinats adequadament. Per a dissenyar aquest equip, caldrà fer una anàlisi i deﬁnició dels seus requeriments funcionals i tècnics, a ﬁde deﬁnir els components que formaran el sistema.
+
+Un cop deﬁnits els requeriments del nostre sistema informàtic, es pot deﬁnir un model essencial que ens donarà les característiques bàsiques que ha de tenir. El model essencial reﬂecteix què ha de fer el sistema per a satisfer els requeriments de l’usuari, sense especiﬁcar com s’implementarà, és a dir, no especiﬁca com es duen a terme les funcions, ni on ni què o qui les fa.
+
+Els components d’un model essencial, tal com el deﬁneix l’anàlisi estructurada, són
+
+- Model ambiental: deﬁneix la frontera entre el sistema i el món exterior.
+- Model de comportament: deﬁneix les funcions del sistema perquè interactuï
+
+amb èxit amb l’ambient. El model ambiental deﬁneix la frontera entre el sistema i el món exterior. En altres paraules, diu què forma part del sistema i què no. Concretament, podem dir que allò que deﬁneix el model ambiental és
+
+- Fronteres: determinen ﬁns on arriba el sistema.
+- Ambient: grup de sistemes, persones o organitzacions amb els quals un
+
+sistema interactua.
+
+- Interfícies: mostra l’intercanvi de dades entre el sistema i l’ambient.
+- Esdeveniments: determina els esdeveniments que ocorren en l’ambient als
+
+quals el sistema ha de reaccionar. Per la seva banda, el model de comportament és el conjunt de models que reﬂecteixen què ha de fer el sistema i com ho ha de fer.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En un model aplicat al món del maquinari, podem considerar que el model de comportament ens dirà quin tipus d’ordinador muntem (oﬁmàtic, de jocs, etc.), mentre que el model ambiental dirà quin maquinari utilitzem i quines connexions tenen uns components o uns altres, segons els requeriments.
+
+1.2.1 Anàlisi de requeriments Aquesta etapa centra l’atenció en la interacció dels usuaris amb el sistema. Els passos a seguir són
+
+- Obtenció de requeriments: cerca i obtenció dels requeriments consultant els
+
+usuaris.
+
+- Anàlisi: comprovació de la consistència i completesa dels requeriments.
+- Veriﬁcació: constatació que els requeriments especiﬁcats són correctes.
+
+En l’etapa d’anàlisi de requeriments l’analista s’encarregarà de deﬁnir els requeriments del sistema. Hem de tenir en compte que, perquè els requeriments siguin realment funcionals, cal que compleixin una sèrie de característiques, que són
+
+- Actual: el requeriment no s’ha de tornar obsolet amb el pas del temps.
+- Cohesió: el requeriment s’ha de dirigir a una única cosa.
+- Complet: el requeriment ha d’estar completament declarat en un únic lloc,
+
+sense que falti informació.
+
+- Consistent: el requeriment no ha de contradir cap altre requeriment i ha de
+
+ser completament coherent amb tota la documentació.
+
+- Correcte/necessari: el requeriment ha de complir amb la necessitat declara
+
+da pels interessats en el sistema/programari.
+
+- Factible/viable: el requeriment s’ha de poder implementar.
+- No ambigu: el requeriment ha d’estar declarat concisament; ha d’expressar
+
+fets objectius, no opinions; s’ha de poder interpretar d’una única manera.
+
+- Obligatori: el requeriment ha de representar una característica deﬁnida pel
+
+grup interessat en el desenvolupament del sistema/programari, i la seva absència no es pot reemplaçar.
+
+- Observador extern: el requeriment ha d’especiﬁcar una característica obser
+
+vable externa o experimentada per l’usuari del producte. Adequar els components de l’equip També pot passar que es disposi d’un equip d’unes prestacions determinades que es vol utilitzar per a fer una tasca per a la qual no és del tot adequat. Cal, doncs, actualitzar aquest equip amb la substitució d’algun component per un altre d’adequat o bé afegir els components que calen per a obtenir les prestacions necessàries.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Veriﬁcable/demostrable: la implementació del requeriment s’ha de poder
+
+resoldre amb el mètode d’inspecció, anàlisi, demostració o prova. Es considera un requeriment (tant en enginyeria del programari com en desenvolupament de sistemes) una necessitat documentada sobre el contingut, forma o funcionalitat d’un producte o servei, en aquest cas un equip informàtic.
+
+Per a analitzar els requeriments del nostre equip, caldrà determinar-ne la potència necessària a partir de les especiﬁcacions de l’equip a muntar. Per a això, s’han de contestar les preguntes següents
+
+- S’han de fer càlculs gaire complexos i repetitius?
+
+Si la resposta a aquesta pregunta és positiva, vol dir que es necessita un processador força potent i amb força memòria cau. Els requeriments del processador s’avaluen a partir d’aquesta resposta.
+
+- Quanta memòria requereixen el sistema, els programes que s’utilitzaran i
+
+les dades que han de restar permanentment en la memòria? Depenent de la resposta, caldrà una quantitat de memòria més o menys gran. Els requeriments de memòria s’avaluen a partir d’aquesta resposta.
+
+- Quin volum de dades s’ha de manipular? És gaire gran?
+
+Aquí es podran determinar la velocitat dels busos i la capacitat d’emmagatzemat- ge.
+
+- Quin volum d’informació s’espera obtenir? És gaire gran?
+
+Amb aquesta pregunta es vol valorar la capacitat d’emmagatzematge i possible- ment la capacitat de comunicació, i si cal o no un sistema d’emmagatzematge extern. Els requeriments de velocitat dels busos de la placa base i el model d’interfície amb els sistemes d’emmagatzematge s’avaluen a partir de la resposta a aquesta pregunta i a l’anterior.
+
+- Quants programes s’han d’emmagatzemar? Quin volum aproximat tenen?
+
+També són vàlides per a determinar la capacitat d’emmagatzematge que caldrà. Els requeriments de capacitat i de velocitat dels sistemes d’emmagatzematge s’avaluen a partir de la resposta a aquesta pregunta i a les anteriors.
+
+- Es treballarà amb informació gràﬁca? Quina deﬁnició es necessita?
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Valen per a determinar la resolució tant del monitor, com de la memòria i resolució de la targeta gràﬁca.
+
+- Es treballarà amb animacions gràﬁques? Amb quina deﬁnició? Quants
+
+quadres per segon? Amb aquestes preguntes es pot valorar si és necessària una targeta amb processa- dor gràﬁc i amb una extensió de memòria gran i les seves característiques. Els requeriments de la targeta gràﬁca es determinen a partir de la resposta a aquesta pregunta i a l’anterior.
+
+- Cal comunicar-se amb l’exterior?
+
+Quin sistema de comunicacions es necessita? Amb quins tipus de mitjans s’ha de connectar? Per a determinar quins mitjans de comunicació seran necessaris.
+
+- Quin volum de dades s’han de rebre/enviar? En quant de temps?
+
+Per a determinar la velocitat dels mitjans de comunicació. Els requeriments de tipus de connexió i velocitat es determinen a partir de la resposta a aquesta pregunta i a l’anterior. De la resposta d’aquestes preguntes, n’ha de sortir el perﬁl de les prestacions que ha de tenir l’equip i, en conseqüència, de les característiques que han de tenir els components amb què s’ha de construir.
+
+Després cal seleccionar el material necessari per a la composició de l’equip que compleixi els requeriments mínims, i es pot elaborar el pressupost del cost. 1.2.2 Deﬁnició dels requeriments. Potència de l’equip Un cop recollida tota la informació sobre què volem que faci el sistema i com ho volem, hem acabat el procés d’anàlisi de requeriments i tenim la informació necessària sobre el funcionament de l’equip a dissenyar.
+
+El pas següent serà la deﬁnició de requeriments. Els requeriments són declaracions que identiﬁquen atributs, capacitats, característiques i/o qualitats que ha de complir un sistema perquè tingui utilitat per a l’usuari. En altres paraules, els requeriments mostren quins elements i funcions són necessàries per a l’equip.
+
+Per tant, per a disposar d’un equip que tingui les prestacions exigides per les tasques que ha de realitzar, s’han de triar els components que donin la potència necessària a l’equip. Per a això, caldrà esbrinar quines seran les necessitats de cada
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En l’Unix, Linux... ...la mesura de potència que s’utilitza són els bogoMIPS, és a dir, els falsos MIPS, que és la mesura que fa servir el nucli d’aquests sistemes operatius per a calcular els cicles morts de procés. Es podria deﬁnir com els milions de vegades per segon en què el processador no pot fer res.
+
+Podeu cercar programes de benchmark a Internet. N’hi ha força de gratuïts i per a diferents usos. una de les àrees: la de procés, la d’emmagatzematge, la gràﬁca i la de comunicació. Trobareu una esquematització d’aquest procés en la ﬁgura 1.3. Figura 1.3. Requeriments tècnics a partir de la deﬁnició de la potència necessària per a l’equip.
+
+Potència de procés La potència de procés d’un ordinador es pot mesurar en MIPS (milions d’instruc- cions per segon), però aquesta mesura només permet comparar processadors d’un mateix tipus d’arquitectura de processament i de potència d’instrucció. La mesura de la potència de procés es determina per la quantitat d’instruccions per segon que és capaç d’executar un ordinador amb un model determinat de programa que té en compte la majoria de situacions que es poden produir.
+
+Els programes per a mesurar la potència de procés s’anomenen programes de benchmark. El benchmark és una tècnica utilitzada per a mesurar el rendiment d’un sistema o una part d’un sistema, sovint comparant-lo amb algun paràmetre de referència. La tècnica consisteix en l’execució d’un programa o d’un conjunt de programes en la màquina objecte de l’estudi, amb la ﬁnalitat de fer una estimació del rendiment d’un element o d’un conjunt d’elements concrets per a comparar els resultats amb els d’altres màquines semblants.
+
+La tasca d’executar un benchmark, originalment, es reduïa a estimar el temps de procés que tarda l’execució d’un programa que executa un nombre d’instruccions conegut (mesurat en milers o milions d’operacions per segon). Més endavant, en millorar els compiladors i amb la gran varietat d’arquitectures i situacions diferents, s’ha fet d’aquesta tècnica tota una especialitat. Els diferents tipus de sistemes i les diferents situacions de treball fan que la tasca de comparar dos o més sistemes sigui força complicada. A més, les comparacions possibles de temps d’e- xecució tracten sobre tasques molt especíﬁques i l’ús per part d’aquestes tasques dels recursos, com pot ser quantitat de memòria usada, quantitat d’accessos als recursos i temps d’utilització dels busos entre altres.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Per tant, per a determinades aplicacions, pot ser que el rendiment d’un sistema quant a potència de procés no estigui determinat tan sols per la freqüència del processador o processadors, sinó també per la quantitat i nivell de memòria cau, la memòria de treball de què disposa o el model d’accés als busos del sistema.
+
+Vegeu en la ﬁgura 1.4 un exemple de processador Intel. Figura 1.4. Processador Intel Core 2 Quad 6600 El processador és el màxim responsable de la potència de procés, però cal que l’acompanyin components adequats. Potència d’emmagatzematge Molt sovint, en treballs informàtics, cal processar una gran quantitat de dades, o el resultat d’un procés pot donar una gran quantitat d’informació o, ﬁns i tot, pot ser que mentre dura un determinat procés es necessiti tenir a l’abast del sistema un espai de reserva per a desar temporalment una gran quantitat de dades intermèdies.
+
+També pot ser necessari tenir reservada una gran quantitat d’informació o de programes per a l’ús del mateix sistema, o perquè el sistema és un servidor de dades o d’aplicacions. En aquests casos, el fet de disposar en l’ordinador de força espai d’emmagatzematge dóna una potència d’emmagatzematge alta, però s’ha de poder accedir a aquesta informació en un temps raonable per als processos.
+
+La potència d’emmagatzematge es mesura tenint en compte la capacitat d’emmagatzemar informació i el temps d’accés a aquesta informació. Els programes de benchmark mesuren la velocitat d’accés a les dades emmagatze- mades i donen el rendiment del dispositiu. Potència gràﬁca En alguns casos, els sistemes han de ser capaços de generar i mostrar imatges molt complexes -com és el cas de sistemes de modelatge o de disseny gràﬁc- o bé de generar i mostrar imatges molt detallades amb una cadència elevada -com pot ser el cas de les animacions cinematogràﬁques o dels videojocs d’alta deﬁnició.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Clúster d’ordinador El terme clúster s’aplica als conjunts o conglomerats d’ordinadors que treballen de manera cooperativa, construïts amb components de maquinari comuns i programari lliure que permeten obtenir una potència de procés molt gran a partir de sistemes reduïts.
+
+Un perﬁl d’ordinador oﬁmàtic pot utilitzar ﬁns i tot un processador pensat per a un ordinador portàtil, malgrat que el seu rendiment és inferior. En aquests casos, les targetes gràﬁques tenen un paper molt important, ja que la seva resolució, la quantitat de memòria disponible per a intercanviar imatges i la presència en la mateixa targeta d’un o més processadors gràﬁcs -que poden substituir amb avantatge el processador del sistema en les tasques dels càlculs de projecció geomètrica i d’il·luminació- pot fer que el sistema es pugui considerar com una estació gràﬁca prou potent.
+
+La potència gràﬁca es mesura tenint en compte la resolució màxima que és capaç de donar, la quantitat de memòria que explicitarà quantes imatges amb la màxima resolució pot emmagatzemar (frame buﬀer) i la potència del processador gràﬁc incorporat. Molts dels programes de benchmark també mesuren aquesta potència gràﬁca.
+
+Potència de comunicació Actualment, l’ordinador no és un element aïllat, sinó que moltes vegades està connectat a una xarxa o bé forma part d’un sistema més gran. Cal, doncs, que disposi de capacitat per a comunicar-se amb una o més xarxes -com podria ser el cas d’un sistema que fes les funcions d’un encaminador-, o amb altres sistemes dels quals forma part com, per exemple, un clúster d’ordinadors.
+
+La potència de comunicació es mesura tenint en compte la quantitat d’enllaços de dades del sistema i la velocitat de transferència conjunta de tots ells. La potència de comunicació es pot mesurar amb programes d’anàlisi de comuni- cacions. 1.3 Disseny de l’equip. Perﬁl segons requeriments Un cop coneguts els requeriments cal deﬁnir el model a partir del qual muntarem el nostre equip. En aquest cas el model essencial dependrà del tipus d’utilització que tindrà el nostre ordinador. Per a aquest projecte limitarem al muntatge d’un equip de sobretaula destinat a l’ús domèstic com a estació de treball. En aquest sentit farem una divisió, de les moltes possibles, dels diferents tipus d’ordinadors que es podrien muntar
+
+- Ordinador oﬁmàtic: es tracta d’un ordinador que s’utilitzarà com a “mà
+
+quina d’escriure”; en general no necessitarà components d’altes prestacions. – Potència de procés: per tal fer servir processadors de textos o fulls de càlcul no es farà ús d’una potència de procés alta.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic – Potència d’emmagatzematge: els documents oﬁmàtics ocupen molt poc i, per tant, aquesta també serà baixa. – Potència gràﬁca: el monitor haurà de ser d’una mida adequada per a no cansar la vista de l’usuari, però no farà falta un resolució gaire alta ni capacitat de modelat 3D.
+
+Potència de comunicació: l’ordinador ha d’estar connectat a Internet, però no necessitarà una connexió de banda ampla si només s’utilitza el correu electrònic i programes navegadors web.
+
+- Ordinador lúdic-multimèdia. En aquest cas pot ser un ordinador dedicat
+
+a la reproducció d’arxius multimèdia o a la utilització de jocs en entorn gràﬁc. En els dos casos els components hauran de tenir unes prestacions elevades per a funcionar adequadament amb els programes corresponents. Com podeu veure en la ﬁgura 1.5, la carcassa d’aquest tipus d’ordinadors pot ser molt semblant a un aparell hi-ﬁ.
+
+Potència de procés. Encara que molt del processat en el cas de les imatges estarà realitzat per la targeta gràﬁca, cal un processador de gamma alta per a donar el rendiment adequat amb els programes d’última generació. – Potència d’emmagatzematge. Els arxius multimèdia, sobretot els vídeos, i també els jocs d’última generació necessiten molt d’espai en el disc dur, de manera que caldrà un espai d’emmagatzematge gran i amb una bona velocitat de lectura/escriptura.
+
+Potència gràﬁca. És un dels punts més importants d’un ordinador d’aquest tipus. Cal que porti una targeta gràﬁca de qualitat, capaç de generar textures i polígons 3D en temps real. Els jocs d’última generació requereixen una gran capacitat de processament que ha produït una carrera espectacular en el món de les targetes gràﬁques. El cas d’un reproductor de vídeo no necessita una potència tan elevada, però no totes les targetes integrades reproduiran vídeos d’alta deﬁnició en bones condicions.
+
+Potència de comunicació. Malgrat el fet que ﬁns fa uns quants anys els ordinadors multimèdia no havien d’estar necessàriament connectats en xarxa, avui dia és molt habitual descarregar continguts multimèdia d’Internet, i ﬁns i tot veure’ls directament en la xarxa mitjançant la reproducció en temps real o streaming. En el cas dels jocs, n’hi ha diversos que requereixen connexions a la xarxa per a partides en grup, encara que en aquest cas els requeriments de velocitat de transferència de dades no són tan elevats.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic La deﬁnició de la connectivitat de l’equip i dels perifèrics necessaris ens descriu el seu model ambiental. Podem deﬁnir un perﬁl d’altes prestacions, que agafaria els valors de potència més elevats dels tres perﬁls que hem vist.
+
+S’utilitza habitualment com a estació de jocs o per a editar vídeos. Figura 1.5. Ordinador amb capacitats multimèdia (Home Thea- ter PC) Aquest tipus d’equip es pot encabir en una caixa de tipus bastidor o “rack” per a utilitzar-lo a la sala d’estar. Observeu els connectors frontals i el teclat sense ﬁl que hi ha a sobre de l’aparell.
+
+- Ordinador servidor SOHO (small oﬃce home oﬃce server): es tractaria
+
+d’un ordinador que s’encarregués de fer de servidor (de ﬁtxers, d’Internet, proxy, etc.); en aquest cas la potència no seria un factor crític sempre que no estigués donant servei a molts clients.; a més, ﬁns i tot es podria tractar d’un equip sense monitor al qual s’accedís mitjançant una connexió remota.
+
+Potència de procés: podria ser una potència de procés mitjana/alta, capaç de treballar amb algunes connexions simultànies. – Potència d’emmagatzematge: depenent de l’ús que s’hi donés podria ser el punt crucial de l’equip; en el cas d’utilitzar-se com a servidor de ﬁtxers hauria de tenir una bona capacitat d’emmagatzematge i també tenir en compte la seguretat, implementant, per exemple, RAID 0 per a assegurar més les dades.
+
+Potència gràﬁca: no és un factor crucial. Una targeta gràﬁca integrada seria suﬁcient, i no tindria necessitat d’una gran resolució; ﬁns i tot en cas d’instal·lar un servidor Linux en mode text no faria falta entorn gràﬁc. – Potència de comunicació: un ordinador destinat a fer de servidor hauria de tenir una bona connexió de banda ampla, i també la xarxa interna hauria de complir requeriments de velocitat de transferència elevats.
+
+Evidentment hi ha altres tipus d’ordinadors, però aquests tres representen prou adequadament els perﬁls d’els que es munten en caixes ATX, les quals són l’objectiu del nostre projecte de muntatge. Per tant, l’anàlisi dels requeriments de cadascun d’aquests equips ens permetrà una tria acurada dels components que haurem d’utilitzar per a ajustar-nos en prestacions i preu a allò que volem aconseguir.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic 1.4 Especiﬁcació de components. Tria segons requeriments El conjunt d’elements que constitueixen un ordinador i que són físicament palpa- bles és el que s’anomena components físics. En el cas d’un projecte de muntatge també podrem parlar de components comercials, ja que evidentment ens trobem limitats als dispositius que puguem trobar en el mercat.
+
+Per a fer una tria dels components que formaran part del nostre sistema informàtic, caldrà que en coneguem a bastament les característiques tècniques, que escollim els components segons un compromís entre la qualitat i el preu, i que ens assegurem que són adequats per a la tasca que hauran de realitzar.
+
+La varietat dels components físics fa que en primera instància en fem una classiﬁcació segons la tasca que realitzen i on estan situats. Alguns dels components estaran determinats per la tria d’un component previ. Per exemple, si escollim una placa base determinada a partir de les seves prestacions quant a connexionat, estem escollint implícitament un joc de xips o chipset, i una gamma de processadors que poden funcionar en aquesta placa base.
+
+En aquest projecte ens centrarem bàsicament en el muntatge de la CPU (unitat central de procés), però també trobareu una sèrie d’indicacions per a la tria dels perifèrics adequats, que només caldrà connectar un cop muntat l’equip. 1.4.1 Processador La tria del processador és un dels punts crucials a l’hora de determinar el rendiment del nostre sistema.
+
+Malgrat que hi ha diversos fabricants que fan processadors (ARM, VIA, etc.), en el mercat domèstic i de sobretaula es tracta d’una guerra entre dos: Intel i AMD. Alguns contendents van caure pel camí, com Cyrix o Motorola, però durant molt de temps la major part del pastís se l’han repartit aquests dos contendents. Per a ser més exactes, Intel ha anat generalment per davant, però AMD ha aconseguit tenir una part important del mercat malgrat la superioritat econòmica del seu adversari.
+
+L’un i l’altre fabricant intenten a cada moment treure al mercat nous processadors que aportin alguna millora als seus predecessors: més velocitat, una velocitat de bus més alta, nous jocs d’instruccions, més nuclis, etc. En tot cas es tracta d’un món en moviment en què un processador comprat avui probablement serà antiquat l’any que ve. Llavors, se’ns pot plantejar la pregunta: quin processador m’he de comprar?
+
+La resposta, malgrat no ser única, es pot concretar en la següent: compreu el processador més nou i avançat que us pugueu permetre. En l’apartat 1 de la unitat “Components d’un equip microinformàtic” d’aquest mateix mòdul, podeu trobar una visió aprofundida dels components que formen un ordinador: tot allò que es refereix a la UCP, que incorpora el sistema bàsic d’un ordinador, és a dir, el processador, la memòria principal, la unitat de control, els busos i els canals o dispositius de comunicació entre els diferents perifèrics.
+
+Altres fabricants ARM fabrica sobretot processadors per a dispositius tipus PDA i mòbil, i també per a encaminadors o routers. Els processadors VIA estan enfocats als ultraportàtils i ordinadors de baix consum. En els dos casos es tracta de processadors integrats en la placa base. Els models enfocats als ultraportàtils són competència directa del processador Intel Atom.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Això pot semblar una obvietat, però l’explicació més detallada és la següent: l’últim processador que hagi sortit al mercat serà caríssim, mentre que el que va sortir fa sis mesos i que probablement no té tantes grans diferències amb el que acaba de treure Intel o AMD segurament val la meitat o la quarta part dels cents d’euros que costava quan va sortit al mercat; per tant, l’habitual per a un ordinador domèstic serà comprar aquest penúltim model que donarà un rendiment fantàstic a un preu acceptable.
+
+En quins casos ens decantarem per un processador més avançat? Evidentment quan necessitem la màxima potència de processament possible, com en el cas de voler muntar un equip per a l’última generació de jocs, o quan es tracti d’un equip que hagi de fer edició de vídeo.
+
+I en l’extrem oposat, quan ens conformarem amb un processador menys potent? Es donarà el cas quan només necessitem poca potència, com en el cas d’un equip destinat a usos oﬁmàtics. La tria d’un determinat processador determina quines plaques podrem utilitzar al nostre sistema i l’arquitectura del sistema.
+
+Característiques d’un processador
+
+- Sòcol (socket). Es refereix al tipus de connector amb la placa base. El
+
+sòcol del processador també està determinat pel fabricant que hàgim triat. Hem de tenir en compte que busquem processadors per a muntar un equip de sobretaula. Per tant, en el cas del processador Intel podem trobar-ne de sòcol LGA478 (Pentium4), LGA775 (Pentium4, Celeron, Core 2, Xeon), LGA771 (Core 2 Extreme, Xeon), LGA1366 (Core i7) o LGA1156 (Core i7, i5) . Quant a models AMD, el mercat ofereix sòcol AM2 (Athlon 64 X2, Sempron, Opteron, Phenom), AM2+ (Athlon, Opteron, Phenom, Phenom II) o AM3 (Athlon II, Phenom II, Sempron). Aquesta llista no és exhaustiva, ja que cada sòcol ha estat capaç d’acollir diversos tipus de processador, però com la major part de components informàtics, aquest també evoluciona de manera molt ràpida.
+
+- Freqüència. Quan parlem de la freqüència d’un processador ens referim a
+
+la seva velocitat de rellotge. Aquest paràmetre indica amb quina rapidesa la CPU és capaç d’executar les seves instruccions. Suposant que s’executa una instrucció per cicle de rellotge, com més ràpid vagi aquest més ràpid serà el nostre ordinador. Hem de tenir en compte, però, que l’increment d’aquesta freqüència també comporta un increment de la dissipació de calor a la nostra màquina, que se soluciona afegint-hi dissipadors i ventiladors cada cop més eﬁcients. El nivell actual d’aquest paràmetre està entorn de 2GHz o 3 GHz.
+
+- FSB (front side bus). Del bus ens interessa sobretot la velocitat. Aquesta
+
+dada es refereix a la velocitat de transferència amb què la CPU es comunica amb els altres components. Tant la CPU com la placa base han de funcionar a la mateixa velocitat de transferència de dades. Encara que no és una relació
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic lineal, com més alta és aquesta velocitat, millor és el rendiment del nostre ordinador. La freqüència de l’FSB serà un submúltiple de la velocitat del processador. De manera que fFSB x multiplicador = fCPU. Actualment la freqüència és de prop de 1.000 MHz, mentre que la velocitat de transferència serà més alta perquè es transmet més d’una dada per cicle.
+
+- Memòria cau (cache). La memòria de treball actua com un espai de treball
+
+d’alta velocitat per a la nostra CPU, i desa les dades amb què aquesta treballa en un moment donat. Amb això s’aconsegueix que el processador no hagi de fer càlculs amb dades desades en la RAM (molt més lenta). Com major sigui la memòria cache, més ràpidament i eﬁcientment funcionarà el processador.
+
+Actualment els processadors AMD arriben a tenir ﬁns a tres nivells de memòria cache (L1,L2 i L3). Habitualment la cache de nivell 1 es divideix en dos (una de dades i una d’instruccions). Les capacitats són d’entre 64 KB i 128 KB (L1), 512 KB i 1 MB (L2) i 4 MB (L3). Quant als models Intel s’utilizen dos nivells de cache, en què les capacitats són de prop de 4 x 8 / 16 KB en les L1 i 2 x 4 MB en les L2.
+
+- Longitud de paraula. Entre 32 bits i 64 bits. Es refereix a la mida de les
+
+instruccions de treball de la CPU. En processadors de sobretaula actuals la pràctica totalitat de tenen una longitud de paraula de 64 bits, de manera que seria aconsellable utilitzar sistemes operatius també de 64 bits. Només en el cas de processadors d’equip portàtil o de baix consum encara s’utilitzen processadors de 32 bits, com és el cas de l’Intel Atom.
+
+- Tecnologies incloses. Aquest punt es refereix als jocs d’instruccions que
+
+inclou el processador, i que van des de les ja venerables MMX (multimedia extensions) d’Intel o el seu equivalent 3DNow d’AMD, passant per les SSE/SSE2/SSE3/SSE4 (que han afegit noves instruccions progressivament) ﬁns als jocs d’instruccions de 64 bits (EM64T d’Intel o AMD64 d’AMD).
+
+- Consum energètic. Aquest paràmetre deriva de la freqüència de treball,
+
+com també de la tecnologia de fabricació i el voltatge del nucli. Depenent del consum del nostre equip també ens variarà el grau de soroll que genera, ja que un dels components que en genera més és el ventilador del processador (com més potent sigui més soroll produirà).
+
+Cal tenir clars aquests paràmetres per a saber comparar els processadors i triar-ne un determinat model amb coneixement de causa. 1.4.2 Placa base La placa base és el circuit imprès fonamental del nostre sistema. De fet podríeu pensar que aquest és el processador, però heu de tenir en compte que la tria de placa base ens determina quins processadors (també de quina marca) podem instal·lar.
+
+També ens marca quina connectivitat tindrà el nostre equip, i evidentment ens limita la grandària mínima que podrà tenir la nostra màquina. En els recursos de contingut del web d’aquest mòdul podeu consultar un complet article sobre la despesa energètica d’un ordinador, amb diverses maneres de calcular-la.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En la unitat 1 d’aquest mòdul podeu trobar més informació sobre la font d’alimentació i el seu connexionat. A la placa base es connecten tota la resta de components: el processador, la memòria de treball, les targetes d’expansió i els dispositius d’emmagatzematge.
+
+Per a triar bé la placa base, cal que coneguem quines característiques hem de tenir en compte per a comparar unes plaques amb les altres
+
+- Sòcol del processador. Es tracta d’un dels punts més importants, ja que
+
+ens indicarà quin tipus de processadors podem utilitzar en el nostre equip. Es tracta bàsicament d’un connector amb cents de contactes que ens permet connectar el processador. En alguns equips el processador es troba integrat a la placa base. Això té sentit si el sistema no ha de ser actualitzat, com pot ser el cas d’un sistema integrat o un telèfon mòbil, però en cas d’equips de sobretaula actualment sempre tindrem la possibilitat de substituir el nostre processador si s’ha avariat o si volem més prestacions a l’equip. La placa també limita quins processadors és capaç de suportar.
+
+- Sòcol de memòria. La memòria de treball del nostre equip estarà inserida
+
+en aquestes ranures. Actualment es tracta de sockets DIMM (DDR2 o DDR3). Les especiﬁcacions de la placa base ens indicaran quina freqüència es capaç de suportar la nostra placa per a col·locar-hi la RAM adequada. Actualment la memòria DDR2 encara dóna molt bon rendiment a preus baixos, encara que això està canviant de manera molt ràpida.
+
+Si la placa suporta la tecnologia dual channel això comporta un increment del rendiment en l’accés a la memòria, ja que s’accedeix simultàniament a dos blocs de memòria (es fa a blocs de 128 bits en lloc dels tradicionals 64).
+
+- Connexions d’energia.
+
+Generalment les plaques actuals disposen de connectors ATX 2.2 de 24 pius amb suport per a dispositius PCI-Express i un connector ATX12V dedicat al processador (des del Pentium 4), encara que podeu trobar alguna placa que només tingui un connector de 20 pius juntament al connector ATX12V.
+
+- Joc de xips o chipset . El conjunt de xips controladors no són actualitzables
+
+i depenen en tot cas de la placa base que hàgim triat. Habitualment se subdivideix la seva funcionalitat en dues parts: north bridge (amb un ventilador), que controla els dispositius més ràpids, com la memòria, i south bridge, que s’encarrega de les funcions d’entrada i sortida i, per tant, dels dispositius més lents. Aquesta és una subdivisió que utilitza Intel, ja que els processadors AMD de fet fa molt temps que tenen el controlador de memòria integrat al processador. També podem trobar sistemes en què el joc de xips és un sol xip o són més de dos. Fins i tot alguns sistemes compactes tenen el processador i el joc de xips tot integrat en un sol xip.
+
+- BIOS i pila. El model de BIOS de què disposi la placa base és un apartat
+
+important a l’hora de saber com interaccionarà amb els components de la placa. D’altra banda, depenent del fabricant del xip tindrà millor o pitjor suport a l’hora d’actualitzar-ne el microprogramari o ﬁrmware. La pila inclosa ha de permetre el funcionament de la BIOS sense connexió elèctrica.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Dispositius integrats. Una de les característiques que hem de conèixer és
+
+quins dispositius ja porta integrats, que poden ser la targeta gràﬁca, la de so o la de xarxa, entre d’altres.
+
+- Ranures o slots d’expansió. Un dels punts importants a l’hora de triar la
+
+placa serà veure si és extensible fàcilment. Per a això disposarem d’una sèrie de connectors que permetran la connexió de dispositius addicionals. – Ranures PCI. Una de les ranures d’expansió més utilitzades i des de fa més temps. Encara té utilitat per a dispositius que no requereixin una gran velocitat de transferència de dades, com pot ser una targeta sense ﬁl.
+
+Ranures PCI-Express. Utilitzades inicialment per a l’adaptador gràﬁc, s’han convertit en un connector per a tot tipus de perifèrics interns. Cal saber quantes ranures té la placa base i de quin tipus són, ja que depenent del nombre de canals la velocitat és més o menys gran.
+
+Ranura AGP. La podem trobar encara en algunes plaques antigues. Utilitzada per a connectar la targeta gràﬁca. – Connectors IDE. Cada cop menys utilitzats, però la major part de plaques encara en porten un o dos per a connectar discos d’aquesta tecnologia (dos per connector).
+
+Connectors de disquet. De la mateixa manera, es conserva per raons de compatibilitat (en alguns casos és necessari per a l’actualització de BIOS o instal·lació de drivers de la placa base). – Connectors S-ATA. Els dispositius que s’hi connecten donen una velocitat de transferència de dades molt més alta que els dispositius IDE. Només se’n pot posar un per connector, de manera que és preferible tenir-ne almenys quatre.
+
+- Connexionat. El nombre de ports USB i Firewire que permeti connectar
+
+la placa base ens limitarà el nombre de sortides a l’exterior que té el nostre equip. Com més elevat sigui el nombre més possibilitats de connexió de perifèrics tindrem. Han de permetre posar en funcionament els connectors del tauler frontal de la caixa, com també els del tauler posterior.
+
+- Altres connectors. Malgrat que ja no s’utilitzen gaire, encara podem trobar
+
+plaques base que inclouen ports en paral·lel i en sèrie, en cas de necessitar- los per a connectar algun component antic. El factor de forma és un conjunt d’indicacions que mostren als fabricants com han de construir o muntar un component físicament i elèctricament perquè sigui compatible amb altres del mateix factor de forma.
+
+Habitualment en una caixa ATX podem instal·lar una placa ATX o microATX. Evidentment en una caixa microATX no podrem instal·lar una placa ATX. La font serà del tipus ATX2.2, amb suport per a dispositius PCI-E. Altres factors de forma. En ordinadors actuals hi ha altres formats utilitzats com el mini-ITX que té una mida molt reduïda (17cm x 17cm).
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic 1.4.3 Memòria de treball (memòria interna) L’altre component fonamental del sistema és la memòria de treball, que usual- ment s’anomena memòria RAM. La quantitat i tipus de memòria que tingui el nostre equip n’afectarà molt el rendiment, ja que es tracta del lloc en què es desen els programes i les dades mentre s’estan utilitzant, de manera que com més ràpidament s’hi pugui accedir millor.
+
+Consulteu la ﬁgura 1.6 per veure esquematitzada l’arquitectura d’un ordinador, en què s’indiquen tots els nivells de memòria (registre, memòria interna i externa). Les característiques bàsiques que deﬁneixen la memòria RAM són
+
+- Capacitat. Els mòduls de memòria RAM es poden trobar en mides diverses,
+
+que van des de 128 Mb ﬁns a mòduls de 4 Gg o 8 Gg. En equips antics podem trobar mòduls de mides més reduïdes. La capacitat de la memòria és important per a aconseguir un bon rendiment en un ordinador. Es pot trobar RAM en paquets o packs que ens asseguren que tots els mòduls són de la mateixa sèrie.
+
+- Mètode d’accés. La memòria RAM actual és en tot cas SDRAM (synchro
+
+nous dinamic random access memory), en la qual els accessos a la memòria se sincronitzen amb el rellotge del sistema. La tecnologia anterior era asíncrona i, per tant, no esperava el rellotge per enviar o rebre dades.
+
+- Velocitat d’accés. A més de la velocitat de rellotge, les noves tecnologies
+
+(DDR, DDR2, DDR3, etc.) permeten que cada cop s’enviï més informació per cada cicle de rellotge, de manera que com més nova sigui la tecnologia de memòria més ràpida podrà ser enviant i rebent les dades al processador.
+
+- Tipus de mòdul.
+
+Ens indica el format físic dels mòduls de memòria (actualment el format DIMM). Coincideix amb la tecnologia emprada, de manera que resulta impossible connectar mòduls de memòria en sòcols que no siguin compatibles (per exemple, un mòdul DDR2 no encaixa en un sòcol DDR3).
+
+Encara que les memòries actuals tenen velocitats de rellotge molt elevades, continuen sense poder competir amb la que tenen els processadors, de manera que aquests encara necessiten “sales d’espera” com són les memòries cau L1, L2 i L3, que permeten minimitzar el temps que el processador ha d’esperar que la memòria li enviï les dades que necessita a cada moment.
+
+La tria de la memòria RAM depèn un altre cop de quina memòria suporti la placa base. En resum caldrà triar entre memòria DDR2 i DDR3. La quantitat de memòria que necessitarem dependrà de l’ús que vulguem donar al sistema i, en gran mesura, de quin sistema operatiu vulguem instal·lar.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En general els sistemes operatius Windows necessiten més memòria que els equivalents d’escriptori de la rama GNU/Linux. Un equip amb 1 GB de RAM podrà fer córrer bé un sistema Windows XP o Linux 9.04, mentre que per a utilitzar Windows Vista sense problemes d’alentiment s’aconsella un mínim de 2 GB (encara que és molt millor si són 4 GB). Les versions del Windows 7 que s’han provat ﬁns ara prometen funcionar sense tants requeriments de memòria, encara que 2 GB pot ser una bona mida per a començar.
+
+S’ha de tenir en compte que els sistemes operatius de 32 bits d’escriptori no seran capaços en principi d’encaminar més de 4 GB, de manera que no té sentit posar més RAM en l’ordinador si no s’ha d’utilitzar un sistema de 64 bits. Malgrat que encara es poden trobar SIMM de memòria DDR, per a actualitzar equips antics, la gran majoria de plaques actuals funcionen amb memòria DDR2, mentre que cada cop més trobarem sistemes que aproﬁten les millors prestacions de velocitat ofertes pels mòduls DDR3.
+
+És recomanable comprar parells de mòduls de memòria, encara que la placa base no suporti dual channel (la majoria ho fan). D’aquesta manera, encara que un dels mòduls deixés de funcionar, el sistema podria continuar funcionant amb l’altre i, d’altra banda, ens resultarà més econòmic per a la mateixa quantitat de memòria.
+
+L’inconvenient és que ens serà més complicat ampliar la memòria de l’ordinador, ja que tindrem més ranures ocupades. Figura 1.6. Esquema d’un ordinador amb èmfasi en les memòries (interna i externa)Figura 1.4.4 Mitjans d’emmagatzematge Si observeu l’esquema bàsic d’un ordinador (ﬁgura 1.6) recordareu que la me- mòria principal és l’encarregada de fer les operacions que es produeixen en un moment determinat. Però hi ha una sèrie de dades que no s’estan utilitzant i que cal tenir desades. Aquesta tasca és de la memòria externa o secundària, que
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Els dispositius external-SATA funcionen a les mateixes velocitats que els SATA interns, i són competència directa dels USB i Firewire. Els discos durs d’estat sòlid (utilitzen memòria ﬂaix per a emmagatzemar les dades) són cada cop més populars per la seva rapidesa i poca despesa energètica malgrat el seu preu elevat.
+
+Tingueu en compte que els fabricants de discos durs utilitzen els bytes decimals i no binaris. Així un disc dur que es ven com a disc de 500 GB és realment de 500.000.000 bytes = 476,84 GB. habitualment és el disc dur. També es troben incloses en aquesta categoria les unitats òptiques, els lectors de targetes ﬂaix, etc.
+
+Les interfícies de connexió d’aquests dispositius són actualment
+
+- EIDE (enhanced integrated drive electronics).
+
+És un format en què el dispositiu té integrada tota l’electrònica que antigament calia posar a una targeta ampliadora del PC. Els dispositius també s’anomenen P-ATA (o parallel advanced technology attachment referint-se al tipus de connector) i es connecten mitjançant un cable de tipus cinta on poden anar dues unitats, una conﬁgurada com a master (mestre) i l’altra com a slave (esclau).
+
+- SATA. S’anomenen serial ATA (utilitzen transferència de dades serial)
+
+en contraposició als dispositius ATA anteriors que usaven la transferència paral·lela. Només es connecta una unitat per cable, però els cables són menys voluminosos i permeten una organització millor de la caixa i també una circulació millor de l’aire per aquesta. La transferència de dades també és molt més ràpida en les unitats S-ATA. Actualment hi ha una connexió per a dispositius externs anomenada external SATA (eSATA), que permet connectar dispositius SATA (com discos durs) directament a l’exterior de la caixa.
+
+- SCSI. Acrònim anglès de small computers system interface (sistema d’in
+
+terfície per a petits ordinadors). Per poder muntar-lo és necessari que tant el dispositiu com la placa base disposin de controlador SCSI. S’havia utilitzat freqüentment en tot tipus d’ordinadors, però avui dia només continua essent popular en llocs de treball d’alt rendiment, servidors i perifèrics de gamma alta.
+
+- USB/Firewire. Aquest tipus de dispositius estan pensats per a ser con
+
+nectats de manera externa a la caixa, de manera que es poden transportar fàcilment d’un ordinador a un altre. Es poden connectar “en calent” a l’equip. Hi ha una àmplia gamma de mides i capacitats, tant de discos durs com d’unitats òptiques externes. Disc dur A part de la diferència de concepte entre memòria principal i secundària, els discos durs són diferents de la RAM en el fet que es tracta d’una altra tecnologia.
+
+Els discos durs actuals utilitzen discos magnètics per a emmagatzemar les dades, en front de la memòria RAM que utilitza transistors per a desar els uns i zeros. Per a escollir un disc dur per al nostre equip també haurem de conèixer les característiques principals que el deﬁneixen
+
+- Capacitat. Podem resumir aquest punt en la pregunta següent: “quanta
+
+informació hi puc posar?” Els discos durs actuals es mesuren en gigabytes, encara que comencen a ser comuns els mesurats en terabytes. Sempre que puguem escollir, és interessant tenir un disc dur tan gran com sigui possible.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Velocitat de rotació. Indica amb quina velocitat giren els discos situats dins
+
+el disc dur. Com més ràpid ho facin més eﬁcientment es localitzaran les dades adequades. Les velocitats són aproximadament de 7.200 rpm, 10.000 rpm, etc.
+
+- Temps de cerca (seek time). Indica com de ràpid un disc dur pot localitzar
+
+una dada determinada. Es mesura en mil·lisegons (ms). Depenent de la gamma, els valors es poden trobar entre 5 ms i 10 ms.
+
+- Buﬀer. El buﬀer d’un disc dur funciona com la memòria cau de la CPU.
+
+S’encarrega d’“avançar” dades que encara no s’han demanat de manera que n’incrementa el rendiment. Els valors del mercat estan entre 32 Mb i 64 Mb en discos destinats al consum domèstic.
+
+- Mida física. La majoria de discos durs són de 3,5 polzades, de manera que
+
+encaixaran en un compartiment estàndard d’aquesta mida. La major part de caixes ATX tenen diversos compartiments disponibles per a aquest tipus d’unitats. Els discos de 2,5 polzades s’utilitzen a ordinadors portàtils. Tant una mida com l’altra es poden utilitzar com a unitats externes, i encabir-los en una caixa amb adaptador SATA-USB de la mida adequada.
+
+Unitat òptica Les unitats òptiques han estat durant anys el mitjà per excel·lència per a transpor- tar dades d’un sistema a un altre utilitzant un suport físic. A més, el mercat musical i de pel·lícules ha estat dominat per aquest format gràcies als CD i DVD. Els ordinadors personals amb una unitat òptica permeten llegir i enregistrar suports òptics amb facilitat. Malgrat que encara són molt utilitzats, la popularització dels suports USB i les targetes de memòria, i també els continguts en línia, estan fent baixar la utilització d’aquest mitjà. Sigui com sigui avui dia encara us serà necessari instal·lar una unitat òptica, i per a això cal conèixer-les una mica millor.
+
+Les característiques principals seran semblants a les dels discos durs: temps de cerca, velocitat de transferència de dades, velocitat de ràfega, etc.
+
+- El temps de cerca aleatòria representa el temps que costa al capçal del disc
+
+arribar ﬁns a una dada concreta. Els temps són de prop de 100 ms. Com més petit sigui aquest temps més ràpid accedirem a una dada.
+
+- La taxa de transferència de dades sostinguda indica amb quina rapidesa
+
+la unitat pot transferir dades sense modiﬁcar la velocitat. Són valors normals entre 2.000 Kbps i 20.000 Kbps.
+
+- La taxa de ràfaga ens diu la velocitat de pic que pot donar una unitat.
+
+Aquesta pot ser d’uns 33,3 Mbps per a un dispositiu ultraDMA. Malgrat que hi ha molts formats de suport òptic —CD-ROM, CD-RW, DVD-RW, DVD-RAM, DVD-R, etc.—, avui dia és aconsellable instal·lar una unitat que sigui capaç de treballar amb tots aquests formats. També hem de tenir en compte la possibilitat de posar a l’equip una unitat de blueray, amb capacitats de ﬁns a 50
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic GB per disc en front dels 9,4 GB d’un DVD de doble capa i doble cara. Com a similituds entre els dos formats d’alta deﬁnició trobem que tots dos es basen en el làser blau, utilitzen el mateix format de compressió de vídeo i la mateixa mida que un CD/DVD, és a dir, 12 cm de diàmetre. Les diferèncieses deuen sobretot a la capacitat d’emmagatzematge (en el blueray és més gran i, per tant, té un preu més elevat). Malgrat que va sorgir com un format per a reproductors de vídeo domèstic, com sempre van acabar sorgint les unitats reproductores i enregistradores compatibles amb ordinadors personals.
+
+La batalla del làser blau. Blueray enfront d’HD DVD La guerra per succeir el DVD va durar diversos anys i encara que un dels dos formats en disputa sembla que ha guanyat la batalla, el format antic es resisteix a morir. El blueray és un format de disc òptic pensat per a emmagatzemar vídeo d’alta qualitat i dades. Per al seu desenvolupament es va crear la BDA, en què es troben, entre d’altres, Sony o Phillips. El model bàsic, d’una cara i una capa, pot emmagatzemar uns 25 GB, però també hi ha models de ﬁns a 50 GB amb doble capa.
+
+L’HD DVD fou l’altre gran candidat per a succeir el DVD, amb un model d’alta deﬁnició. Va rebre el suport de companyies de la talla de NEC, Toshiba, Sanyo i Microsoft, però això no fou suﬁcient per a imposar-se. El model bàsic té una capacitat d’emmagatzematge de 15 GB, que es tradueixen en 30 GB en cas d’utilitzar doble capa.
+
+Durant un quant temps, l’HD DVD tingué una gran acceptació, però la utilització del BlueRay a les cònsoles PlayStation3 va representar un cop molt dur per als competidors i va conduir a la supremacia de BlueRay, malgrat el preu més elevat i el fet que Microsoft muntava lectors HD DVD a les seves cònsoles XBox 360. En aquest cas, Sony va sortir guanyador de la cursa, al contrari de com havia passat amb la guerra de les cintes de vídeo, en què el format VHS va superar el Betamax impulsat per Sony.
+
+Altres dispositius Els lectors de targetes s’han convertit en el substitut de facto de les unitats de disc ﬂexible, encara que aquestes es continuen muntant als ordinadors de sobretaula actuals, en el model estàndard. A més, els lectors també es podrien convertir en substituts de les unitats òptiques (de fet alguns ordinadors com, per exemple, els UMPC ja les han descartat a favor d’altres tipus de connectivitat).
+
+Per a triar un lector de targetes cal ﬁxar-se sobretot en les velocitats de transferència de dades i també en la quantitat de tipus de targetes que sigui capaç de llegir. De fet, quan comprem un d’aquests dispositius podem llegir que es tracta, per exemple, d’un dispositiu 16x1. Amb això el fabricant ens indica que podem llegir setze tipus diferents de targetes ﬂaix amb un sol dispositiu adaptador. En la ﬁgura 1.7 s’aprecia el frontal d’un ordinador amb un lector de targetes conjuntament amb una unitat de disc ﬂexible.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 1.7. Els lectors de targetes encara conviuen amb les unitats de disquets o “ﬂoppy” 1.4.5 Targeta gràﬁca i targeta de so A l’hora de triar la targeta gràﬁca cal conèixer també què és tot el que el mercat té per oferir-nos. Primer que res cal conèixer quines són les característiques més importants que deﬁneixen aquest dispositiu
+
+- GPU (graphics processing unit)
+- Quantitat de memòria
+- Interfície de la memòria
+- Freqüència de rellotge
+- Freqüència de la memòria
+
+El primer pas per a triar serà conèixer si la nostra placa base porta incorporada una targeta gràﬁca integrada. En cas aﬁrmatiu, és possible que aquesta targeta sigui suﬁcient per a les nostres necessitats gràﬁques. Habitualment això passarà si no necessitem una targeta amb grans capacitats de processament o de modelatge 3D.
+
+En cas contrari, o si igualment volem afegir-la, seguirem el procés següent. En primer lloc, triarem quina GPU volem, basant-nos en les característiques que realment ens són necessàries. Després d’això buscarem una targeta que inclogui aquesta GPU ﬁxant-nos en el preu. Algunes de les companyies que fabriquen GPU són ATI (actualment, propietat d’AMD), Nvidia, Intel o S3 Graphics (propietat de VIA Technologies).
+
+La GPU (processador gràﬁc) és el processador de la targeta gràﬁca, que descarrega el processador de l’ordinador de les tasques relacionades amb el vídeo. Podem trobar GPU d’una àmplia gama de preus, entre les quals les més cares estan destinades als PC de més rendiment (en molts casos, ordinadors destinats als jocs Consulteu algunes pàgines que us ajudaran a triar una GPU adequada en la secció “Annexos” del web del mòdul.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En la secció “Adreces d’interès” del web del mòdul podeu consultar informació ampliada sobre targetes de so y a la de “Recursos de contingut” una llista de marques. Un targeta de so per a un sistema d’altaveus 5+1 requeriria cinc connectors (un per a cada canal d’audio).
+
+3D). La gamma mitjana és adequada com a reproductor multimèdia, mentre que la gamma baixa és suﬁcient per a tasques oﬁmàtiques. En cas d’haver d’instal·lar una targeta gràﬁca a l’equip, aquesta ha de ser compatible amb el bus de gràﬁcs de la placa base. En alguns casos, sobretot si estem reaproﬁtant una placa, encara podem trobar el bus AGP, encara que a les plaques actuals ha guanyat la competició el bus PCI-Express.
+
+Hi ha molts fabricants de targetes gràﬁques malgrat els pocs que hi ha de GPU. Habitualment els fabricants de GPU són molt exigents quant a les especiﬁcacions que han de complir les targetes, de manera que és prou segur comprar qualsevol marca basant-se en el preu un cop trobades les característiques que es buscaven.
+
+En el moment de triar la targeta de so ens trobem en un cas semblant al de la targeta gràﬁca. Moltes plaques base actuals porten integrada una targeta de so que serà suﬁcient per a la major part de tasques de reproducció de so. Almenys, però, hauríem de tenir en compte si la targeta té els connectors adequats per al sistema d’altaveus que vulguem instal·lar. Si ens conformem amb un sistema de dos altaveus estèreo i només necessitem reproduir àudio d’una bona qualitat, qualsevol targeta (incloent-hi les integrades) serà suﬁcient.
+
+Si no disposem d’una targeta de so integrada o volem ampliar-ne les capacitats, podem optar per un model amb connexió al port PCI o ﬁns i tot PCI-Express. 1.4.6 Caixa i font d’alimentació Malgrat no ser un component informàtic, la caixa és indispensable per a contenir tots els nostres components. Caldrà triar-la atentament perquè s’ajusti als nostres requeriments, tant de connexionat com d’espai que ocuparà o, ﬁns i tot, de l’aspecte que ha de tenir el nostre ordinador.
+
+Una caixa estàndard és un xassís habitualment fet de metall (que resulta un bon lloc per a fer de presa de terra dels components i de l’electricitat estàtica que portem al damunt). Les plaques que tanquen el xassís habitualment també són de metall, però de vegades n’hi ha de plàstic. La placa frontal -on trobem el botó d’engegada i els indicadors de funcionament (LED) entre altres coses- és habitualment de plàstic.
+
+Malgrat que hi ha diversos tipus de caixes, ens concentrarem en les caixes ATX, tal com ja hem fet amb les fonts d’alimentació. Es tracta del tipus més comú de caixes i, per tant, són les més fàcils de trobar i de poder escollir entre diversos models. Hi ha altres factors de forma, com les caixes de mida petita (per exemple, mini-ITX) que no permeten una instal·lació i actulització fàcil per la falta d’espai, encara que tenen altres avantatges, o les caixes de tipus “torre” que habitualment s’utilitzen per a servidors de mida gran que necessiten una gran quantitat d’unitats d’emmagatzematge o equips de refrigeració líquids que ocupen més espai que els que funcionen per aire.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic De fet, la caixa pot ser de la mida microATX o ATX, encara que ens decantarem per models ATX, ja que ens donen més capacitat de maniobra i comoditat en el muntatge de components per a la mida més gran.
+
+Quant als components, totes dues tindran bàsicament els mateixos, que inclouran connectors PS/2; USB; components d’àudio, de xarxa i, ﬁns i tot, connectors en paral·lel i en sèrie, malgrat que ja no s’utilitzen. Un altre dels paràmetres a tenir en compte serà el nombre de compartiments (espai destinat a unitats d’emmagatzematge) de 3,5 o 5,25 polzades de què disposa la caixa. N’hi ha tant d’externes com d’internes.
+
+Una altra de les característiques de la caixa és el nombre de compartiments de què disposa. Els compartiments són espais de mida estàndard pensats per a situar-hi components informàtics a dins d’una caixa d’ordinador. En general es troben a dins de la caixa, i poden ser interns o externs, entenent com a externs els que ens permeten l’accés al component des de l’exterior de la caixa (com, per exemple, en el cas d’una unitat de CD). Usualment els compartiments s’utilitzen per a unitats d’emmagatzematge, encara que hi podem posar altres dispositius com ports USB, lectors de targetes, pantalles LCD d’estat de l’ordinador, i altres.
+
+Moltes caixes porten integrada la font d’alimentació, però probablement ens interessarà muntar la que hàgim escollit nosaltres. Per a tenir un equip realment estable, necessitem posar-hi una font d’alimentació que sigui suﬁcient per a tots els components que hi muntem i amb una ﬁabilitat adequada perquè no falli en moments inadequats. Per a saber de quina potència (en watts) hem de posar la nostra font tenim una manera senzilla de fer-ho
+
+- Consultarem els components a muntar per veure quins requeriments de
+
+potència tenen (en alguns casos els trobarem en volts × amperes, que haurem de multiplicar per a trobar els watts).
+
+- Sumarem les potències de tots els dispositius per saber quin serà el consum
+
+màxim de la nostra font.
+
+- Escollirem una font que superi amb escreix la suma de les potències que
+
+hem vist abans. I per què hauríem de triar una font més gran que el que aparentment ens fa falta? És molt senzill: és molt habitual que el nostre ordinador hagi de ser actualitzat en qualsevol moment, i cada un dels components que hi afegim se sumarà a la potència incial que havíem calculat; i, d’altra banda, si la font està treballant sense haver d’arribar ﬁns als seus límits, amb això també aconseguim que la potència subministrada sigui molt més estable que amb una font que estigui treballant “forçada”.
+
+1.4.7 Perifèrics bàsics El projecte de muntatge no comporta el muntatge dels perifèrics, ja que aquests ja venen muntats a l’hora de comprar-los i només caldrà connectar-los. De totes La potència d’una font... ...ha de ser suﬁcient per a alimentar tots els components que hàgim muntat al nostre ordinador personal.
+
+Consulteu una calculadora de potència per a la vostra font en els “Recursos de contingut” al web d’aquest mòdul.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Trobareu informació aprofundida sobre perifèrics en l’apartat “Manteniment de perifèrics” de la unitat formativa “Manteniment d’equips microinformàtics”. En la secció “Adreces d’interès” de la web del mòdul, consulteu comparatives de components de maquinari actual.
+
+Dins un disseny basat en l’anàlisi estructurada, la llista de components a muntar es podria considerar com el model essencial del nostre sistema informàtic. maneres els hem d’incloure en el projecte de creació del sistema informàtic, ja que sense aquests no hi podria haver interacció entre l’usuari i el seu ordinador.
+
+De manera que en aquest apartat veurem com s’escullen els perifèrics bàsics que ens han de permetre comunicar-nos amb el nostre equip. Necessitarem tant perifèrics d’entrada (teclat i ratolí) com de sortida (monitor).
+
+- Monitor. Malgrat que encara podem trobar en el mercat alguns monitors
+
+CRT, el mercat actual ja està dominat per les pantalles LCD. Es tracta de dues tecnologies molt diferents, però allò en què ens afecten més, ara que els monitors LCD han arribat a la maduresa, és en el fet que aquests ocupen molt menys! Per a comprar-ne un o un altre ens haurem de ﬁxar en la mida, el factor de forma i la resolució màxima. Els connectors que podem utilitzar són el venerable connector VGA, i el connector DVI, encara que moltes targetes de vídeo porten altres connectors com l’S-vídeo, que permetran connectar l’ordinador a un televisor amb aquest connector integrat (també pot ser que tingui entrada DVI).
+
+- Teclat. El teclat per a un ordinador domèstic pot ser un teclat estàndard de
+
+cent quatre tecles, que inclou les dedicades al sistema operatiu Windows, o també pot ser un teclat multimèdia, que afegeix tecles amb funcions especials: accés al reproductor multimèdia, llançament de programes, etc. La interfície amb el PC pot ser del tipus PS/2, USB o sense ﬁl. La més utilitzada en els ordinadors actuals és la USB, encara que podem trobar dispositius dels altres tipus sense problemes.
+
+- Ratolí. Tots els sistemes operatius actuals (amb entorn gràﬁc) necessiten
+
+un ratolí (mouse) perquè l’usuari interaccioni amb l’entorn de ﬁnestres. Sens dubte, el ratolí serà del tipus amb almenys dos botons i rodeta de desplaçament. La connectivitat del mouse serà per al mateix tipus de ports que la del teclat, i també és molt comú el connector USB.
+
+A part d’aquests perifèrics bàsics, qualsevol ordinador actual en necessitarà d’altres que faran la feina més productiva o més agradable, com poden ser la impressora, escàner (també els equips multifuncionals), equips d’altaveus, comandaments per a jocs, etc. 1.5 Model d’equip. Llista de components Ja coneixem tots els components. Ara és el moment de decidir quins haurem de posar al nostre sistema. Amb aquest conjunt de components podem crear un model essencial del nostre equip que inclourà totes les peces que hi instal·larem, els connexionats, i les característiques bàsiques dels components.
+
+En aquest esquema s’inclouran tots els components de la llista següent, que caldrà comprar o reaproﬁtar. La llista hauria d’incloure
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Una caixa o xassís del factor de forma adequat.
+- Una font d’alimentació que encaixi amb el factor de forma de la placa base
+
+i la caixa.
+
+- Una placa base amb el factor de forma adequat i que suporti la CPU
+
+escollida.
+
+- Un processador que funcioni amb la nostra placa base.
+- Una memòria que funcioni amb la nostra placa base i processador.
+- Una targeta gràﬁca que pugui funcionar amb la placa base (pot ser integra
+
+da).
+
+- Una targeta de so que funcioni amb la placa base (també pot ser integrada).
+- Un disc dur (SATA o IDE).
+- Una unitat òptica (també SATA o IDE).
+- Una unitat de disquet.
+- Uns altaveus.
+- Un teclat.
+- Un ratolí.
+- Un monitor.
+
+També és important disposar d’una llibreta de muntatge en què anotarem els components que s’han d’instal·lar. Aquesta documentació serà molt útil durant el procés, ja que la podrem actualitzar amb totes les incidències que es produeixin durant el muntatge o actualització de l’equip.
+
+Segons els tres models escollits anteriorment, els següents són un exemple de conﬁguració per als components bàsics de cada gamma (vegeu les taules 1, 2, 3 i 4). S’ha considerat que els equips poden funcionar amb monitor, caixa, teclat i ratolí estàndard, encara que es podrien modiﬁcar per a adaptar-los encara més a l’equip dissenyat. Els components que s’han personalitzat (processador, placa base i memòria RAM) es consideren els bàsics per a un ordinador quant a capacitat de processament i prestacions. Els components triats, en conﬁguració Intel i AMD, serien
+
+Taula 1.1. Ordinador oﬁmàtic Processador Placa base RAM Intel® Procesador Celeron S 440 Boxed, FC-LGA4, “Conroe-L” Gigabyte GA-EP31-DS3L amb so, Gigabit-LAN, SATAII Buffalo DIMM 2 GB DDR2-800 FSX800D2B-2GJ, Firestix AMD Athlon64 X2 5200+ Boxed, OPGA, “Brisbane” ASRock N68-S µATX amb so, VGA, LAN, SATAII-RAID Buffalo DIMM 2 GB DDR2-800 FireStix Heat En aquest cas (taula 1.1), l’ordinador porta totes els controladors integrats en la placa base i no té una gran potència de processament. El preu dels components
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic El muntatge en RAID-1 comporta un disc de suport per cada un que tinguem de dades, ja que tota la informació es desarà dos cops. És aconsellable que el RAID sigui implementat pel maquinari per a aconseguir un rendiment millor.
+
+respecte a l’ordinador sencer és d’aproximadament el 40%. Només caldrà afegir- hi un disc dur IDE o SATA de gamma baixa. Taula 1.2. Ordinador lúdic/multimèdia Processador Placa base RAM Intel® Core™2 Duo E8400 Boxed, FC-LGA4, “Wolfdale” ASRock P45XE-WiFiN amb so, 2x GLAN, WLAN, SATAII-RAID, eSATA Corsair Kit DIMM 4 GB DDR2-1066 Dominator AMD Phenom II X2 550 Boxed, OPGA, “Callisto” Asus M4A78T-E amb so, HDMI, DVI, G-LAN, FW, RAID, eSATA Corsair Kit DIMM 4 GB DDR3-1333 En aquest cas (taula 1.2) caldria afegir
+
+- Un disc dur SATA-II
+- Sintonitzador de televisió
+
+Els components fonamentals es troben en un rang de preus i prestacions mitjà. En aquest cas el preu dels components bàsics ja comporta un pes aproximat del 60% del total. Taula 1.3. Ordinador servidor Processador Placa base RAM Intel Xeon E5410 Harpertown 2.33 GHz 12 MB L2 Cache LGA 771 80 W Quad-Core ASUS DSBV-DX Dual LGA 771 Intel 5.000 V SSI CEB 1.1 Dual Intel Xeon Server 2x G.Skill Kit DIMM 4 GB DDR2-1066 AMD Opteron 2360SE Barcelona 2.5 GHz Socket F 105W Quad-Core TYAN S3970G2NR-E Tomcat h1000E Dual 1207(F) Broadcom BCM-5785 ATX Dual AMD 45nm Quad-Core Opteron 2300 Series Processors (Barcelona/Shanghai) Server 2x G.Skill Kit DIMM 4 GB DDR2-1000 Per a completar l’equip (taula 1.3) caldria afegir-hi
+
+- Almenys dos discos durs SCSI per a muntar-los en RAID (depenent de la
+
+conﬁguració de RAID implementada). Als tres models ja vistos, podem afegir un model d’“altes prestacions” (taula 1.4), que s’utilitzaria en tasques que requerissin la màxima potència en totes les seves variants. Això es produirà sobretot en equips destinats a l’edició de vídeo i a funcionar com a estació de jocs d’última generació.
+
+Per tant, aquest tipus d’ordinador té algunes particularitats quant a potència de processament i qualitat dels components que augmenten el preu. Els components fonamentals ja són de qualitat molt elevada i, per tant, comporten aproximadament un 80% del total del preu de l’equip.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Taula 1.4. Ordinador gamer / edició de vídeo Processador Placa base RAM Intel® Core™i7-975 4x 3333 MHz, 4x 256 kByte, 6400 MT/s, Bloomﬁeld Asus Rampage II Extreme Intel® X58 Express, 6.400 MT/s, 3 PCIe 2.0 x16, SLI, Crossﬁre, Socket 1366 2x Kingston ValueRAM Tri-Kit DIMM 6 GB DDR3-1066 AMD Phenom II X4 965 Deneb 3.4 GHz 4 x 512 KB L2 Cache 6 MB L3 Cache Socket AM3 140 W Quad-Core ASUS M4A79T Deluxe AM3 DDR3 AMD 790FX ATX AMD 2x Kingston HyperX Kit DIMM 4 GB DDR2-800 En aquest cas caldria afegir
+
+- Dos discos durs SATA-II Hitachi HDT721010SLA360 1 TB per a muntar
+
+los en RAID-1 (mirall).
+
+- Targeta gràﬁca d’altes prestacions, si és possible que suporti SLI o Crossﬁre.
+- Targeta de so de gamma alta.
+- Sistema de refrigeració per aire de gamma alta o líquid.
+
+Aquest perﬁl d’ordinador representa la gamma més alta en el mercat de consum domèstic. El preu per als components bàsics és alt, ja que es tracta dels més avançats que es poden trobar. De la mateixa manera que en el cas de l’ordinador servidor, els components fonamentals tindran molt pes en el preu, i aquest es pot moure entre el 80% i el 90% del total de l’equip depenent de si el muntem amb components AMD o Intel.
+
+1.5.1 Components OEM i retail (al detall) A l’hora de comprar els components d’un sistema PC, a part de tots els detalls tècnics que hem tingut en compte a l’hora de triar el component (atributs, característiques, limitacions i costos), també hauríem de valorar quin tipus de component compraem. Molts components de PC estan disponibles en dues formes similars, però diferents: al detall o OEM. Les unitats poden semblar gairebé iguals però poden ser molt diferents a l’interior, o en com el fabricant les tracta després de la venda. Aquest és un tema molt important en el mercat dels PC d’avui, així que cal tenir-lo en compte.
+
+Una de les claus per a l’èxit de la plataforma de PC fou l’aparició del mercat de fabricació casolana i el PC fet a mida. Això és possible perquè la majoria de components són estàndard i intercanviables. No fou ﬁns fa pocs anys que l’usuari ﬁnal va poder comprar els components interns, ja que primer només es venien a fabricants ﬁnals. El mercat va madurar i els “clons” van començar a dominar el mercat amb l’aparició de gran quantitat de marques i models. Això va permetre a l’usuari l’actualització de la seva màquina i la construcció de PC a mida.
+
+En entreveure aquest nou mercat, els fabricants van començar a fabricar versions comercials empaquetades dels components interns, amb manuals SLI i Crossﬁre: Són les tecnologies de NVIDIA i ATI, respectivament, que permeten connectar dues targetes gràﬁques al mateix ordinador, utilitzant bus PCIe, per a augmentar el rendiment gràﬁc.
+
+Els components de PC... ...es van començar a fer compatibles força d’hora en la història dels ordinadors PC compatibles - ﬁns i tot les màquines més antigues es poden actualitzar d’una manera o altra.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic L’estat actual del mercat és, doncs, que gairebé qualsevol component intern del PC es pot comprar en la versió minorista o de l’OEM. D’una banda, això és bo, ja que es poden aconseguir components a preu més baix, però l’usuari ha d’entendre quines són les diferències entre components OEM i comercials per a poder prendre una decisió meditada.
+
+Un fabricant de components ven peces al detall suposant que seran adquirits pels usuaris ﬁnals, i les peces OEM per a fabricants a gran escala d’usuari, programari de suport i, evidentment, amb un preu superior que el que tenien els que ja estaven muntats. Els fabricants continuaven venent components “a l’engròs” per als fabricants de PC (o muntadors). Són els anomenats components OEM, en referència a un terme comú per a un constructor d’equip gran: fabricant d’equips originals (original equipment manufacturer). Finalment, a mitjan anys noranta els fabricants van començar a vendre els seus excedents de components OEM a particulars o petites empreses, principalment per correu o canals d’Internet. Després d’un quant temps, els venedors van començar a demanar els components OEM especíﬁcament per a la revenda als usuaris ﬁnals, sense necessitat de vendre’ls amb l’equip ja muntat.
+
+Cal comprar components OEM assumint-ne les responsabilitats, ja que són components pensats per a fabricants a gran escala. Diferències entre peces OEM retail
+
+- Embalatge i contingut. Normalment, els components al detall són envasats
+
+amb tots els materials de suport que l’usuari ﬁnal haurà d’instal·lar i conﬁ- gurar. Les parts OEM solen ser més simples: el component es proporciona només amb els elements de suport que un fabricant necessita per a instal·lar el dispositiu. Generalment s’inclou el component en un mínim d’embalatge -potser només una bossa antiestàtica- i potser alguns jumpers i un disc de controladors (vegeu-ne un exemple en la ﬁgura 1.8). Normalment, no tindrà un manual a tot color, una caixa de luxe, accessoris de muntatge, cables i altres accessoris. Això estalvia molts diners al fabricant.
+
+- Personalització. Quan un fabricant d’ordinadors grans vol signar un con
+
+tracte amb un fabricant de targetes per a comprar quantitats molt elevades, generalment pot fer alguns “ajustaments” al producte per a reduir-ne els costos o canviar-ne les característiques. Una vegada més, això estalvia els diners d’OEM, i en última instància, estalvia als usuaris ﬁnals dels seus equips. Però per al comprador de components, això signiﬁca que potser no compra exactament el que pensa que necessita.
+
+Figura 1.8. Un component OEM ve dins una bossa antiestàtica i molts cops només inclou el disc de controladors
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Els components retail són pensats per al mercat de consum i inclouen tots els manuals, garanties i discos de controladors oferts pel fabricant. Per exemple, una targeta de vídeo té memòria de vídeo més lenta, o els proces- sadors OEM sovint no tenen ventiladors de CPU, perquè els fabricants d’equips utilitzen la seva pròpia solució de refrigeració. D’altra banda, alguns components poden ser exactament el mateix, però amb menys embalatge.
+
+- Garantia.
+
+Aquest és potser el problema més gran de tots quan es trac- ta de components OEM: els fabricants de components solen negar-se a proporcionar-los la mateixa garantia. Això es deu al fet que són productes destinats al muntatge en grans quantitats, de manera que la garantia la donaria el fabricant de l’equip.
+
+- Suport tècnic. De manera similar a la qüestió de la garantia, les peces OEM
+
+es venen normalment als fabricants d’equips sense cost addicional per a cobrir els previstos de suport tècnic. El fabricant de components sovint no donarà suport a l’usuari ﬁnal. Els components OEM estan pensats inicialment per a grans majoristes, i generalment només inclouen el component en una bossa antiestàtica i un disc de controladors.
+
+Els punts anteriors no han de ser motiu per a evitar els components OEM, sinó que cal saber de quin peu calcen perquè no ens agaﬁde sorpresa. Si la rebaixa en el preu (que ﬁns i tot pot ser del 20%) ens compensa les limitacions de la peça OEM, la comprarem sense cap problema, sempre sabent a què ens exposem.
+
+1.5.2 Proveïdors dels components Per a cada component hauríem de saber clarament quines característiques neces- sitem i assegurar-nos que és compatible amb la resta de components del sistema. Per exemple, no utilitzarem un disc dur IDE si la nostra placa base ja no porta aquest conector.
+
+En aquest punt caldria deﬁnir especíﬁcament quins són els components que volem muntar. Podem comprar les peces a diversos llocs, segons les nostres possibilitats
+
+- Distribuidor físic.
+
+Es tracta de botigues d’informàtica que venen tant components com ordinadors muntats. És útil en cas que tinguem problemes en els processos d’instal·lació, ja que podem acudir al servei tècnic de la botiga, que ens ajudarà per un preu acordat.
+
+- Distribuidor amb espai de muntatge. Algunes botigues permeten comprar
+
+tots els components i ofereixen un espai perquè l’usuari es munti l’equip. L’ajuda del tècnic de la botiga és opcional i, evidentment, de pagament. Les peces OEM de vegades són lleugerament diferents de les versions al detall. Algunes personalitzacions són relativament poc importants, però d’altres poden ser més signiﬁcatives.
+
+Si compareu el cost dels components d’na quantitat de proveïdors diferents i alguns els venen per molt menys que altres, hi ha moltes possibilitats que es tracti de peces OEM. Assegureu-vos de preguntar de manera explícita. Els fraus... ...de vegades es produeixen en la compra de components en línia i, per tant, sempre cal comprar en botigues de reputació garantida.
+
+Les cases de subhastes en línia tenen programes de protecció del consumidor. En les “Adreces d’interès” del web del mòdul podeu trobar pàgines en què s’avaluen els components segons l’opinió dels usuaris o de l’editor de la pàgina.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Botiga en línia. En aquest cas podem comprar els components i ens els
+
+enviaran a casa a canvi del pagament de les despeses d’enviament. Habitu- alment el preu serà més baix que en una botiga física, ja que s’estalvien les despeses del distribuïdor, encara que no tenim la possibilitat de consultar el servei tècnic de manera presencial, i en cas d’haver de retornar algun producte gairebé sempre haurem de tornar a pagar les despeses d’enviament.
+
+La botiga pot ser nacional o internacional. El fet de comprar en botigues internacionals afegeix el problema de la distància i en molts casos dels impostos de duana, que s’afegeixen al preu del producte si aquest ve de fora de la Comunitat Europea. D’altra banda, també pot ser que la botiga en línia tingui associades botigues físiques, de manera que tindrem un lloc on anar a presentar reclamacions si escau, o que es tracti només d’un magatzem de distribució, de manera que només el podrem utilitzar per a comunicar-nos per telèfon o Internet.
+
+- Pàgines de subastes.
+
+És habitual comprar components electrònics en pàgines de subastes (com eBay). En alguns casos es tracta de components posats a la venda per botigues i, en altres, per particulars. Malgrat que no tots els venedors tenen la mateixa garantia, molts cops les empreses de subhastes tenen assegurances que protegeixen el consumidor en cas d’estafa.
+
+Tant si volem comprar els components a una botiga física o en alguna botiga en línia, és interessant que busquem exemples dels components que ens anírien bé per a tenir més clar què és el que hem de comprar. Per a això podem buscar diverses pàgines en què trobarem els models que hi ha en el mercat dels components desitjats. Aquest tipus de pàgines ens ofereixen comparatives, notícies sobre els components més actuals, consells d’instal·lació, etc. En ﬁ, tota classe d’informació perquè puguem escollir i muntar els nostres components amb garanties.
+
+Una altra possibilitat és la compra d’equips premuntats, que cada cop es troben a un preu més baix, i que podem actualitzar al nostre gust afegint els components adequats. En aquest moment, al model essencial del nostre equip i més concretament a la llista de components, podem afegir la marca i model de cada component que volem muntar, com també algun component de reserva per si no trobem la nostra primera opció.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+### 2. Muntatge d’un equip
+
+Un cop es disposa dels components que hauran de formar part de l’equip, és el moment de muntar-lo. Els components s’han triat per les seves característiques i tenint en compte que siguin compatibles. Per tant, el muntatge hauria de ser un procés senzill i sense problemes posteriors. Malgrat això, un cop muntat l’equip caldrà assegurar-se que els components funcionen com se suposa que ho han de fer (complint les especiﬁcacions de funcionament).
+
+Una vegada muntat l’equip, se n’ha de veriﬁcar el bon funcionament. Per a això seran vàlides les eines de benchmark, per a assegurar-se que compleix els requeriments que es van deﬁnir en el seu moment. En l’etapa d’implementació haureu d’assemblar els components escollits anteriorment, seguint els procediments adequats i assegurant-ne una bona connexió i funcionament.
+
+En aquest apartat veureu en detall el procés de muntatge d’un equip. Malgrat que el fet de muntar uns components o uns altres marca algunes diferències a l’hora d’assemblar els components, es tracta d’un procediment molt similar, de manera que l’apartat us serà útil per a conèixer els procediments generals de muntatge, veient en aquest cas un exemple concret.
+
+2.1 Procediments per a la instal·lació de maquinari Moltes vegades, en la nostra vida laboral, ens trobarem amb la necessitat d’ins- tal·lar un sistema informàtic, d’haver-lo de reparar o d’ampliar. En funció dels components del sistema informàtic en qüestió, haurem de procedir de manera diferent.
+
+Però, en tot cas, serà necessari observar les indicacions següents
+
+#### 1) Determinar quina operació cal realitzar
+
+#### 2) Disposar de tota la documentació tècnica necessària
+
+#### 3) Planiﬁcar l’operació
+
+#### 4) Prendre les mesures de seguretat adequades (en l’àmbit elèctric i físic)
+
+#### 5) Realitzar l’operació
+
+#### 6) Comprovar el funcionament correcte del canvi realitzat
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Vegeu l’apartat “Conﬁguració, proves i documentació del muntatge” d’aquesta unitat per a una explicació més extensa sobre els codis POST.
+
+#### 7) Anotar o registrar les operacions realitzades
+
+Un dels punts més importants i al qual caldrà dedicar més esforços serà, doncs, la interpretació eﬁcient i correcta de la documentació tècnica de cada component dels ordinadors. Excepte si es tracta de dispositius que es poden connectar i desconnectar en calent (hot plug), és a dir, sense apagar l’ordinador, per a realitzar les operacions amb seguretat caldrà observar els passos següents
+
+#### 1) Apagar l’ordinador
+
+#### 2) Desconnectar l’ordinador de la xarxa elèctrica
+
+#### 3) Connectar-hi o desconnectar-hi el dispositiu
+
+#### 4) Connectar l’ordinador a la xarxa elèctrica
+
+#### 5) Engegar l’ordinador
+
+#### 6) Reconﬁgurar el sistema, tant si s’ha instal·lat com desinstal·lat un dispositiu,
+
+mitjançant les utilitats proporcionades pel sistema operatiu La majoria de dispositius i sistemes operatius actuals suporten el Plug and Play (o PnP), un sistema que autoconﬁgura els paràmetres de funcionament intern del dispositiu, com ara el número d’IRQ (interrupt request) o les adreces d’entrada/sortida. Això facilita la conﬁguració dels dispositius i evita problemes com la duplicitat de valors per a diferents dispositius.
+
+Sovint, la instal·lació o canvi estaran forçats pel mal funcionament d’algun dels components del sistema. En aquests casos, serà útil conèixer el sistema d’autodiagnòstic d’arrencada(power on self test) de la placa base, que amb diferents combinacions de tons llargs o curts (beep), codiﬁca el problema detectat.
+
+Són els anomenats codis POST. N’hi ha diverses versions, depenent dels fabricants, per això és important consultar el manual tècnic de la placa base amb què treballem. 2.2 Normativa de seguretat sobre la instal·lació de components De la mateixa manera que la majoria d’elements que trobem al nostre voltant, els PC estan subjectes a la normativa internacional. Des de la mida d’un full de paper ﬁns a la mida de les ﬁnestres, tot està perfectament mesurat i calibrat per a obtenir un equilibri entre ergonomia i rendiment econòmic. Aquesta estandardització porta a unir esforços que redunden en beneﬁci de tots. Malgrat que les normatives són diverses —n’hi ha de nacionals, internacionals, de la Unió Europea...—, cada cop es tendeix més a la uniformització d’aquestes.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Normativa en els sistemes informàtics En l’actualitat, els equips microinformàtics han de complir uns requisits que afecten fonamentalment dos aspectes: emissió d’interferències i seguretat en la manipulació interna dels equips. El control de l’emissió té com a ﬁnalitat evitar que els ordinadors generin interferències en altres dispositius, a més de protegir el medi ambient de l’usuari. La seguretat en la manipulació respon a unes normes bàsiques que ajudin a prevenir accidents fonamentalment derivats de la manipulació elèctrica, encara que també se’n produeixen per la manipulació mecànica dels components.
+
+Hi ha diverses agències que s’encarreguen de certiﬁcar el maquinari des d’aquest punt de vista de seguretat. Les més importants són la FCC i la TÜV, cadascuna en el seu departament dedicat especíﬁcament al tema. Només entitats de solvència internacional poden garantir una normativa adequada.
+
+Logo de l’entitat certiﬁcadora Communications Comission del govern federal dels EUA
+
+- La FCC (Federal Communications Commission) és una agència indepen
+
+dent del govern dels EUA que dóna cobertura a cinquanta estats i informa directament al Congrés americà. Fou establerta l’any 1934 i és responsable de la regulació de les comunicacions per radio, TV, cablejades i per satèl·lit, tant nacionals com internacionals.
+
+- La TÜV (Technischer Überwachungs-Verein) desenvolupa serveis d’inspec
+
+ció, control, auditoria tècnica i certiﬁcació en tots els àmbits: qualitat, medi ambient, prevenció de riscos laborals, seguretat industrial i alimentària, instal·lacions i obra civil, incloent-hi seguretat vial amb el servei ITV. Hi ha dues normatives que regulen la certiﬁcació d’equips microinformàtics segons les dues organitzacions esmentades. Les normatives són la FCC, part 15 EMI Certiﬁcation i la UL/CSA/TÜV Safety Certiﬁcation.
+
+L’FCC, part 15, s’encarrega de certiﬁcar els sistemes complets i no els compo- nents individuals. A partir de la ﬁnalitat d’aquests equips hi ha establertes dues categories amb diferents requeriments: les classes A i B. La classe A regula tots els sistemes que tindran l’entorn de treball en un ambient comercial. Aquesta normativa té uns requeriments menys estrictes que la classe B, que regula els sistemes que treballaran en un entorn domèstic. El procés de certiﬁcació és senzill.
+
+Cada component (targetes, perifèrics, etc.) té la seva pròpia certiﬁcació FCC, de manera que es podrà vendre independentment. Si un sistema sencer ha passat la certiﬁcació FCC, l’assemblador pot modiﬁcar o afegir targetes i perifèrics que tinguin la seva pròpia certiﬁcació FCC, de manera que es continuarà mantenint la conformitat amb la norma.
+
+Alguns dels requisits que ha de complir un equip per a no contradir la normativa són
+
+- No es pot substituir la placa base, font d’alimentació o caixa sense tornar a
+
+certiﬁcar l’equip (vegeu l’esquema en la ﬁgura 2.1).
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Entitats certiﬁcadores Hi ha altres agències certiﬁcadores, nacionals com AENOR (Associació Espanyola de Normalització i Certiﬁcació) o internacionals com ISO (Organització Internacional per a la Normalització) o ETSI (Institut Europeu d’Estandardització de les Telecomunicacions).
+
+- Els teclats i ratolins no requereixen una certiﬁcació independent si es
+
+venen com a part integrant d’un sistema, encara que la majoria de vegades compleixen la normativa sense problemes. Els monitors, impressores i perifèrics externs amb alimentació han de tenir cadascun la seva pròpia certiﬁcació. Figura 2.1. L’actualització d’un equip comporta tornar a certiﬁcar que compleix la normativa Pel que fa a la UL/ETL/CSA/TÜV, les sigles corresponen a Underwriters Laboratories / Electronic Testing Laboratories / Canadian Santdards Association / German Safety Agency, i és un recull de normatives d’agències esteses per tot el món. Els equips de prestacions elevades compleixen la normativa UL/CSA/TÜV.
+
+Una llista de requisits d’un equip per a complir aquesta normativa són
+
+- L’usuari no pot tenir accés a les altes tensions de l’equip (per exemple, els
+
+connectors de la font d’alimentació). No totes les fonts superen aquestes especiﬁcacions.
+
+- Tots els perifèrics alimentats des del PC han de tenir fusibles a les línies de
+
+corrent (ﬁns i tot en casos en què no semblaria necessari pel baix consum de corrent, com és el cas de ratolins o teclats).
+
+- Les bateries de liti de la màquina (portàtils) han d’estar protegides doble
+
+ment quan es produeix el procés de càrrega per part del sistema.
+
+- Tots els connectors d’alimentació, fusibles i terminals d’interruptors, polsa
+
+dors i commutadors han d’estar clarament etiquetats.
+
+- Els perifèrics han de disposar de la pròpia certiﬁcació.
+- Un test de dits (ﬁnger test) ha de garantir que l’usuari no pot tocar parts
+
+mòbils del sistema com, per exemple, ventiladors.
+
+- L’equip ha de funcionar correctament amb totes les targetes i perifèrics
+
+connectats que generarien un consum equivalent al d’un usuari perquè la certiﬁcació sigui vàlida.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Els components plàstics han de tenir la seva certiﬁcació independent quant
+
+a la inﬂamabilitat i toxicitat del material.
+
+- Les torres o caixes també han d’estar certiﬁcades quant al disseny, vigilant
+
+l’estabilitat i un bon sistema d’evacuació d’aire.
+
+- El sistema ha de tenir en un lloc visible els adhesius i etiquetes que indiquen
+
+el compliment de normatives. 2.3 Eines necessàries per al muntatge i manteniment d’equips informàtics Primer que res, i encara que no es tracta exactament d’una eina, assegureu-vos que teniu espai suﬁcient per a treballar amb comoditat, i que la il·luminació és adequada. A més comproveu un altre cop que teniu tots els components a mà i que no heu oblidat res de necessari per al vostre equip.
+
+Tot seguit, malgrat que sembli sorprenent, les eines que ens faran falta per a muntar o reparar equips informàtics són molt bàsiques
+
+- Cal disposar d’un tornavís d’estrella també conegut com a tornavís Philips,
+
+si és possible magnetitzat, que utilitzarem per a ﬁxar tots els components de l’equip, tant els panells de la caixa, com la placa base o tots els dispositius d’emmagatzematge.
+
+- És convenient utilitzar també unes pinces que ens permetran arribar a punts
+
+on ens sigui més complicat amb les mans, moure components de mida menuda com jumpers, etc.
+
+- També seran útils unes alicates, que ens poden servir per a treure els panells
+
+metàl·lics que té la caixa quan encara no s’han instal·lat els dispositius corresponents. Es pot fer amb les mans però pot resultar perillós, ja que molts cops els acabats de les caixes tenen vores tallants. Si hem de tallar brides o algun paquet “rebel” ens faran molt servei unes alicates de tall.
+
+- Ens farà molt servei una llanterna. La nostra àrea de treball ha d’estar
+
+ben il·luminada, però les caixes d’ordinador poden tenir zones fosques on és complicat veure què fem. Una bona llanterna ens pot ajudar a il·luminar aquestes àrees. Podem utilitzar una caixa d’eines com la de la ﬁgura 2.2 o similar, on disposem de totes les eines necessàries i algunes de més per si es presenta algun problema.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.2. Caixa d’eines per a utilitzar en el muntatge Quants als visos que utilitzarem per a connectar els components la major part de vegades vénen inclosos amb la caixa o amb el dispositiu que volem connectar, però en cas contrari són molt fàcils de trobar a qualsevol establiment de tipus ferreteria.
+
+Utilitzeu classiﬁcadors o caixes per a emmagatzemar aquestes peces menudes com cargols o brides. Alguns models de caixa pensats per a ser modiﬁcats fàcilment tenen la particulari- tat que ni tan sols necessiten aquestes eines per a muntar i desmuntar dispositius, ja que disposen de mecanismes i ﬁxacions lliscants que no utilitzen cargols.
+
+A part de les eines, tingueu a mà la documentació dels components adquirits: manuals, conﬁguracions, etc. El braçalet antiestàtic sol anar acompanyat d’un manual d’utilització. A més, durant el procés de muntatge és molt aconsellable que compliu aquestes senzilles regles
+
+- Tracteu els components amb compte.
+- No doblegueu mai una placa de circuit imprès.
+- Assegureu-vos que els cables que utilitzeu estan en perfecte estat.
+- No forceu els components. Si alguna cosa sembla que no encaixa,
+
+comproveu que l’esteu col·locant al lloc adequat. També cal utilitzar un braçalet antiestàtic que es connecta a la carcassa metàl·lica de l’ordinador, per a evitar danyar els components electrònics amb l’electricitat estàtica que s’acumula als nostres cossos (ﬁgura 2.3). La seva utilització només comporta
+
+- Ajustar l’extrem del braçalet al nostre canell.
+- Connectar la pinça inclosa en la carcassa de l’ordinador.
+- Manipular els components electrònics amb el braçalet posat.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.3. Utilització del braçalet antiestàtic Mentre no hàgiu comprovat l’equip, deseu també totes les caixes i rebuts dels components per si heu de fer ús de la garantia. 2.4 Manuals de muntatge de components Els manuals tècnics dels components són una font indispensable d’informació per a conèixer el funcionament i les instruccions d’instal·lació dels components que formen part del nostre equip informàtic. Hi ha diversos tipus de documents tècnics que ens donen tot tipus d’informació sobre cadascun dels components (processador, memòria RAM, placa base, etc.).
+
+Generalment, a l’hora de comprar un component aquest inclou el manual d’es- peciﬁcacions tècniques i les instruccions d’instal·lació (vegeu-ne una mostra en la ﬁgura 2.4), encara que cada cop és més freqüent que només trobem un full d’instal·lació i una referència a la pàgina web del fabricant.
+
+La documentació que ens ofereixen els fabricants en la seva pàgina de suport tècnic inclou normalment
+
+- Especiﬁcacions tècniques
+- Característiques del producte
+- Manuals d’instal·lació
+
+El manual d’instal·lació és indispensable per a conèixer totes les particularitats d’un determinat component de maquinari i instal·lar-lo correctament. Per exemple, en el cas d’un processador, aquest manual inclou tots els passos per
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic a ﬁxar el processador al seu sòcol, i també per a la col·locació del seu dissipador- ventilador, especíﬁcament per al model que s’hagi adquirit. Tot el procés es troba exempliﬁcat amb croquis o imatges.
+
+Figura 2.4. Els manuals inclosos amb els components de l’ordinadors són fonamentals per a conèixer-ne les característiques tècniques i muntar-los de manera correcta. Malgrat que tots els components disposen de documentació tècnica, hem de tenir en compte sobretot la que es refereix a la placa base i al processador, ja que es tracta dels dispositius més complexos i que requereixen més habilitat per a instal·lar-los. Quant a altres components com la memòria RAM o les unitats d’emmagatzematge, en tenim prou de conèixer-ne les característiques bàsiques per a saber-ne la compatibilitat.
+
+2.5 Procés de muntatge de la unitat central de procés L’Apple I de 1976 es venia com un conjunt de peces per muntar i ﬁns i tot construir-ne la caixa El muntatge d’un ordinador personal comporta bàsicament l’assemblatge dels components que trobem dins la CPU (unitat central de procés) comunament coneguda com la caixa. A partir d’aquí només cal que connecteu una sèrie de perifèrics que ja vénen totalment muntats comercialment.
+
+Fent la connexió correcta de la placa base amb tots els components necessaris (processador, unitats d’emmagatzematge, memòria RAM i connectors d’expansió) disposarem d’un equip preparat per a instal·lar un sistema operatiu. 2.5.1 Caixa i font d’alimentació En aquest projecte de muntatge utilitzarem una caixa ATX. Malgrat que es tracta d’un format que ja fa anys que és en el mercat, s’ha imposat als altres i molt probablement és el que utilitzeu (si no és un portàtil!). Hi ha altres tipus de caixes que es podrien utilitzar (com les caixes microATX), però són més complicades
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic d’ampliar i disposen de menys espai per a instal·lar els components amb comoditat. Arribats en aquest punt, el primer pas a l’hora de muntar l’equip serà l’assemblatge de la caixa i la font d’alimentació.
+
+Cal posar la caixa en posició horitzontal sobre una superfície estable i neta (per exemple, una taula de taller). D’aquesta manera podrem treballar en el muntatge sense perill que ens caigui i en una posició ergonòmicament còmoda per a nosaltres. Normalment, en el moment de comprar-les, les caixes ja vénen muntades, però en alguns casos els haurem d’acabar de donar els detalls ﬁnals, com pot ser muntar els peus de goma que els donaran estabilitat (ﬁgura 2.5).
+
+Figura 2.5. Col·locació dels suports de goma de la torre En alguns casos la font d’alimentació ja ve muntada al xassís, però, si hem triat un model que no en porti o volem canviar la de sèrie per un model amb més prestacions o més silenciosa, també haurem de fer aquest pas (ﬁgura 2.6).
+
+Figura 2.6. Col·locació i ajustament de la font d’alimentació Un cop presentada la font en la seva posició, hem de cargolar quatre visos que deixaran la font ajustada i preparada per a alimentar el nostre equip. El fet de El primer pas... en el muntatge implica treure la caixa del seu embalatge de cartró, amb cura de no donar-hi cops.
+
+Complements necessaris En molts casos les caixes inclouen els visos necessaris per al muntatge de dispositius i també els peus de goma i brides per a subjectar els cables.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic La tecnologia de memòria Dual-Channel... permet un increment del rendiment gràcies a l’accés simultani a dos mòduls de memòria (en blocs de 128 bits en lloc de 64 bits com anteriorment). col·locar la font abans que cap altre component no és imprescindible, però ens permetrà col·locar la resta de components amb comoditat si ho fem a posteriori.
+
+2.5.2 Memòria RAM Els DIMM de memòria RAM només encaixen en una posició Per tal de col·locar la memòria en la placa base localitzeu els sòcols corresponents i assegureu-vos que podeu col·locar la memòria sense problemes. A continuació feu els passos següents
+
+- Observeu el mòdul de memòria i tot seguit el sòcol. Veureu que la memòria
+
+té una osca clau que encaixa amb un sortint del sòcol, de manera que és impossible connectar-la malament.
+
+- Trobeu i obriu els clips que hi ha a cada costat del sòcol.
+- Alineeu el mòdul de memòria amb el sòcol, amb l’ajut de la marca que hem
+
+vist abans.
+
+- Feu lliscar la memòria dins el sòcol de manera perpendicular ﬁns a l’interior.
+- Trobareu una certa resistència que haureu de vèncer fent pressió al llarg del
+
+mòdul.
+
+- Notareu com el DIMM encaixa. Els clips dels cantons s’haurien de tancar
+
+sols.
+
+- Assegureu-vos que la memòria no balla i està ben connectada.
+
+Caldrà que repetiu el procés per a cada mòdul de memòria de què disposeu. Podeu veure els passos principals en la ﬁgura 2.7. Figura 2.7. Procés d’instal·lació d’un mòdul de memòria RAM
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En cas que la placa suporti Dual-Channel, haureu de col·locar els mòduls que heu comprat en parelles de manera que el color coincideixi per a cada parella. 2.5.3 Processador i ventilador En una superfície plana col·loqueu la placa base per posar-hi el processador.
+
+Aquest pas també es podria fer un cop instal·lada la placa a la caixa, i de fet si volem actualitzar el processador habitualment ho farem així. Però, en aquest cas i atès que estem fent la instal·lació des de zero, és aconsellable col·locar-lo d’aquesta manera, cosa que ens evita treballar amb obstacles i ens facilita el procés d’assemblatge.
+
+Com ja sabeu, els dos fabricants que s’han de tenir en compte per a triar un processador són Intel i AMD. Els següents són els passos bàsics que heu de fer per a muntar un processador d’una de les dues grans marques. Els passos que heu de fer per a instal·lar un processador Intel són els següents
+
+- Obriu la tapa protectora del sòcol.
+- Traieu la tapa protectora del processador.
+- Comproveu l’orientació del processador a partir de la marca triangular que
+
+té a un cantó (també la trobareu al sòcol).
+
+- Col·loqueu el processador al seu lloc de manera vertical i pressioneu-lo
+
+lleugerament per ajustar-lo.
+
+- Tanqueu la tapa protectora i accioneu la palanca d’ajustament (vegeu la
+
+ﬁgura 2.8). Figura 2.8. Col·locació del processador al seu sòcol Processador AMD 64 x2 Dual Core Observeu els pius de connexió i la marca triangular que té a un cantó per a col·locar-lo al seu sòcol correctament. No toqueu en cap cas els connectors del sòcol ni els contactes del processador.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En la secció “Recursos de contingut” del web del mòdul podeu consultar els manuals en vídeo de l’empresa AMD sobre el mètode d’instal·lació dels seus processadors. En comprar un dissipador/ventilador, normalment aquest disposarà d’una capa de pasta tèrmica ja preparada de fàbrica que ajuda a la dissipació correcta de la calor. En cas de no tenir aquesta capa n’haurem de posar una manualment.
+
+Donades les altes velocitats a què treballen els processadors actuals, caldrà instal·lar-hi un sistema de refrigeració. Hi ha diversos sistemes per a refrigerar la caixa, però el més utilitzat és el que inclou un, dos o més ventiladors per a ajudar a la dissipació de la calor (un situat a sobre del dissipador del processador, i un que habitualment inclou la caixa a la part posterior).
+
+Figura 2.9. Ajusteu el dissipador i el ventilador per aconseguir el rendiment tèrmic màxim del processador Un mal funcionament del ventilador redueix el rendiment de l’equip i pot arribar a provocar danys en el processador, de manera que cal assegurar-ne un funcionament adequat Els processadors in a box es venen directament amb un ventilador compatible (ﬁgura 2.9) per a instal·lar-lo a la vegada a la placa base.
+
+Així, el ventilador que ve amb la CPU serà suﬁcient per a un ús habitual de l’ordinador. En obrir la capsa i observar el processador veureu que a la part inferior hi ha una làmina adhesiva que cal treure abans d’instal·lar-lo al seu lloc. Es tracta d’una protecció per al material tèrmic que permetrà una dissipació millor de la calor del processador. Hi ha diferents models de ventiladors, encara que en general seran compatibles amb Intel o AMD. La instal·lació estarà detallada per a cada model, però en general només haureu de fer els passos següents
+
+El ventilador del processador té la pròpia connexió d’alimentació situada a la placa base.
+
+- Col·locar el dissipador/ventilador a sobre del processador.
+- Assegurar-vos que la pasta tèrmica fa un bon contacte entre el dissipador i
+
+el ventilador.
+
+- Fer encaixar els enganxalls en la placa base, de manera que quedi ﬁx a sobre.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Connectar l’alimentació del ventilador a la placa base.
+
+Si seguim correctament els passos ens assegurarem que aquest serà capaç de refrescar al màxim el processador durant el seu funcionament i aconseguir-ne, per tant, un bon rendiment. Al seu torn, la major part de les caixes disposen d’un ventilador per a treure a l’exterior l’aire calent. Com podeu veure en la ﬁgura 2.10, per a alimentar aquest ventilador hem de connectar-lo a un dels connectors Molex de la font d’alimentació.
+
+Figura 2.10. Ajustament del cable d’alimentació del ventilador de la caixa 2.5.4 Placa base i connectors El fet d’escollir la placa base determinarà molts de la resta de components del sistema. De fet, les plaques base estan dissenyades per a un tipus de processador.
+
+Malgrat que històricament hi ha hagut diversos fabricants, per al tipus de muntatge que ens ocupa (un equip estàndard amb caixa ATX) només hi ha dues opcions possibles (processador Intel o AMD). Abans de col·locar ﬁnalment la placa base, cal acabar de preparar la caixa, que en molts casos disposa d’un embellidor per a les connexions que no ha de coincidir necessàriament amb el que encaixa amb la nostra placa base. Per tant, haurem de fer els passos que segueixen (els podeu veure en la ﬁgura 2.11).
+
+- Descargoleu l’embellidor de la caixa i deseu-lo si no encaixa amb la placa
+
+a instal·lar.
+
+- Traieu les plaques metàl·liques que necessiteu de l’embellidor de la placa
+
+per deixar pas als connectors d’aquesta. Utilitzeu unes alicates si cal.
+
+- Encaixeu l’embellidor al seu lloc. Pot anar amb cargols o simplement entrar
+
+a pressió.
+
+- Situeu la placa base al seu lloc, comprovant que podeu encabir-la bé i que
+
+tots els connectors són fàcilment accessibles des de l’exterior. Podeu consultar els manuals d’instal·lació de processadors Intel a la secció “Recursos de contingut” del web del mòdul. Els dispositius com el PC ultraportàtil o ultra-mobile PC o el PC de butxaca o pocket PC utilitzen processadors integrats com l’Intel Atom, el VIA C7 o l’ARM XScale.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Un cop fet això podeu passar a cargolar la placa al seu lloc com veureu en
+
+els passos següents . Per a ﬁxar la placa al seu lloc els passos a seguir són
+
+- Presenteu la placa base a la caixa i localitzeu els punts on cal posar un cargol
+
+per a ﬁxar-la.
+
+- Marqueu aquests punts amb un retolador o recordeu-los .
+- Poseu un suport per a la placa base a cada un d’aquests punts.
+- Col·loqueu la làmina de connexions corresponent a la placa al seu lloc de la
+
+caixa.
+
+- Situeu la placa al seu lloc i poseu un cargol per a cadascun dels suports
+
+que heu posat anteriorment. En cap cas cal forçar la placa. És aconsellable col·locar els cargols amb cura i no cargolar-los del tot ﬁns assegurar-nos que ho podem fer amb tots (ﬁgura 2.11).
+
+- Comproveu la col·locació correcta de la placa (ﬁgura 2.12).
+
+Figura 2.11. Col·loqueu l’embellidor per als connectors i encaixeu-hi la placa base.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.12. Fixació dels cargols de la placa base Connexió dels cables frontals i USB Connector USB situat al seu lloc Per a acabar la connexió de la placa base, caldrà situar el cablejat del frontal de la placa base, com també l’altaveu intern o PC-speaker.
+
+Encaix del cable d’àudio frontal
+
+- El connector d’àudio serveix per a connectar l’àudio frontal (entrada i
+
+sortida) i també el PC-speaker.
+
+- Els USB frontals també tenen la seva connexió pròpia, que pot variar
+
+depenent del fabricant. Si teniu dubtes sobre la posició del connector veriﬁqueu-la en el manual .
+
+- Per acabar, caldrà connectar la resta de cablejat frontal, que inclou els botons
+
+d’engegada (Power On) i reinicialització (Reset), com també els indicadors lluminosos de funcionament de l’ordinador i el disc dur. Consulteu el manual de la placa base per assegurar-vos de la posició d’aquests cables, ja que és molt fàcil posar-los en la posició incorrecta. En la ﬁgura 2.13 teniu un exemple de la col·locació d’aquests connectors.
+
+Figura 2.13. Consulteu el manual de la placa base per comprovar la connexió correcta dels cables frontals.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Connecteu els cables d’alimentació de la placa base (en la ﬁgura 2.14 veiem
+
+la placa amb només el connexionat de dades). Cal comprovar que s’han realitzat bé totes les connexions prèvies. Això implica: – Revisar el funcionament correcte dels botons d’engegada i reset. – Comprovar el funcionament correcte del LED d’engegada. – Veure que l’engegada de l’equip fa funcionar correctament els ventila- dors.
+
+Un cop hàgim acabat de connectar els dispositius d’emmagatzematge, també comprovarem que el LED del disc dur s’engega. Figura 2.14. Placa base amb tot el connexionat de dades. Només falta connectar l’alimentació. 2.5.5 Unitats d’emmagatzematge El muntatge de la unitat òptica no comporta diﬁcultats. Utilitzarem una unitat de 5,25 polzades muntada en un dels compartiments exteriors de la caixa. Vegeu-ne un resum en la ﬁgura 2.15. Els passos a seguir són
+
+- Trieu un compartiment exterior lliure.
+- Traieu un dels embellidors plàstics de la torre per a donar sortida a la unitat a
+
+l’exterior. Utilitzeu alguna eina per a treure-la si teniu problemes. En alguns casos haureu de treure una placa metàl·lica interior. Aneu amb compte, ja que tenen vores tallants.
+
+- Munteu la unitat òptica al compartiment escollit.
+- Fixeu la unitat amb cargols als dos costats com heu fet amb el disc dur.
+- Connecteu el cable d’alimentació a la part posterior de la unitat i a un dels
+
+cables corresponents de la font d’alimentació.
+
+- Connecteu també el cable de dades a la unitat i la placa base.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Comproveu la bona connexió de tot el cablatge.
+
+Algunes fonts no disposen de connector d’alimentació SATA o no en tenen suﬁcients. Hi ha adaptadors que corregeixen aquest problema. Figura 2.15. Fixeu la unitat al seu compartiment i connecteu els cables d’alimentació i dades a la part posterior i a la placa base. Al llarg del temps, el muntatge d’un disc dur ha estat un dels procediments més senzills de realitzar, i la generalització de les unitats SATA ha simpliﬁcat encara més el procès. Instal·larem una unitat de 3,5 polzades amb interfície SATA. La ﬁgura 2.16 ens mostra els passos principals. El procediment és el següent
+
+- Munteu el disc dur en un dels compartiments lliures de 3,5 polzades.
+- Fixeu el disc dur amb dos cargols per costat (per a fer això haureu de treure
+
+les tapes dels dos costats de la caixa). El disc dur queda prou ben ﬁxat amb cargols només a un costat, però és convenient muntar-lo de manera adequada si no s’ha de desmuntar el disc durant molt de temps, ja que això evitarà vibracions en la unitat i, per tant, pot evitar avaries degudes a aquest fet.
+
+- Connecteu el cable d’alimentació a la part posterior del disc dur i a un
+
+connector adequat de la font d’alimentació.
+
+- Connecteu el cable de dades SATA a la part posterior del disc dur i al
+
+connector de la placa base.
+
+- Assegureu-vos que els connectors han quedat ben ﬁxats.
+
+Els compartiments exteriors de 3,5 permeten la col·locació d’unitats de la mida adequada, com unitats de disc ﬂexible, o lectors de targetes de memòria. Consulteu la instal·lació d’una conﬁguració mestre/esclau de dos discos durs IDE en els “Recursos de contingut” del web del mòdul.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.16. Un cop ﬁxat el disc dur, connecteu l’alimentació, i el cable de dades SATA al disc i la placa base. Malgrat que cada cop s’utilitza menys la unitat de disc ﬂexible, en muntarem una, ja que pot ser necessària per a l’actualització de la BIOS o la instal·lació d’un equip Windows amb sistema RAID. El muntatge d’aquesta unitat comporta
+
+- Escollir un compartiment exterior de 3,5 polzades on situar la unitat.
+- Treure l’embellidor plàstic que donarà sortida a la unitat de disc ﬂexible a
+
+l’exterior.
+
+- Muntar la unitat al seu lloc i ﬁxar-la mitjançant cargols als dos costats.
+- Connectar el cable de dades al port corresponent de la placa base i a la part
+
+posterior de la unitat.
+
+- Alimentar el dispositiu amb el cable que va de la seva part posterior al
+
+connector corresponent de la font d’alimentació.
+
+- Comprovar que tot el cablatge fa bona connexió.
+
+Per acabar, connectarem un lector de targetes, ja que és un dispositiu que s’utilitza molt per a llegir dades provinents de càmeres fotogràﬁques, de vídeo, telèfons mòbils, etc. El procés és molt semblant als anteriors i comporta els passos següents: En acabar, recolliu tots el cablatges (tant d’alimentació com de dades) amb "brides". Aconseguireu millorar l’aspecte interior de la caixa, però sobretot la ventilació d’aquesta.
+
+- Escollir un altre compartiment exterior de 3,5 polzades. En cas de només
+
+tenir-ne una hauríem d’escollir si volem muntar el lector de targetes o la unitat de disc ﬂexible.
+
+- Treure l’embellidor plàstic per a donar sortida a la unitat a l’exterior.
+
+És habitual que almenys un dels compartiments de 3,5 també tingui una
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic protecció interior metàl·lica que caldrà treure amb molta cura. Utilitzeu unes alicates per a fer-lo girar a un costat i a l’altre ﬁns que se solti, ja que les vores són tallants.
+
+- Cargolar la unitat al seu lloc pels dos costats.
+- En molts casos els lectors de targetes aproﬁten els connectors USB per
+
+funcionar. Per tant, haureu de triar un d’aquests connectors per a fer la instal·lació.
+
+- Connectar el cable integrat al lector al port USB escollit de la placa base. En
+
+aquest cas no cal connectar un cable addicional per a l’alimentació, ja que el mateix cable transporta les dades i la potència necessària per al dispositiu. En cas de no tenir prou ports USB a la placa base, haureu d’escollir quines sortides USB de la torre (davanteres, posteriors, lector de targetes) voleu que estiguin operatives.
+
+2.5.6 Targetes d’expansió Un cop fets tots els passos anteriors el muntatge de la CPU es podria donar per acabat, però és possible que calgui instal·lar algun dispositiu com una expansió de l’ordinador. La targeta gràﬁca o la targeta de so són habitualment ampliacions que podem fer al nostre equip si no estem satisfets amb les que vénen integrades en la placa base. El procés d’instal·lació és molt senzill. En el cas de la targeta gràﬁca, la interfície utilitzada seria un port PCI-Express, mentre que la targeta de so sol utilitzar un port PCI o PCI-Express.
+
+En veurem un exemple amb la instal·lació d’una targeta sense ﬁl, que ampliarà les opcions de comunicació de la nostra màquina. Malgrat que l’equip ja té connectivitat amb l’exterior integrada, en la targeta de xarxa, és molt convenient poder accedir també a xarxes sense ﬁl, l’ús de les quals s’ha generalitzat molt.
+
+El procés de muntatge d’una targeta sense ﬁl PCI requereix els passos següents (podeu veure els principals en la ﬁgura 2.17)
+
+- Escollir un ranura PCI lliure per a instal·lar el dispositiu.
+- Treure l’embellidor metàl·lic de la caixa per a donar sortida a l’exterior
+
+al dispositiu. En alguns casos, per a una caixa de gamma baixa haureu d’utilitzar unes alicates per a desenganxar la plaqueta metàlica (que després no es pot tornar a col·locar). En caixes de més qualitat els embellidors es poden posar i treure, mitjançant cargols o de vegades amb mecanismes senzills a pressió que faciliten la instal·lació i desinstal·lació de dispositius.
+
+- Situar la targeta a sobre de la ranura i encaixar-la al seu lloc verticalment
+
+fent la pressió necessària.
+
+- Cargolar la targeta a la caixa comprovant abans que es troba en posició
+
+correcta.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En els “Recursos de contingut” del web del mòdul, podeu trobar un enllaç a altres programes d’aprenentatge amb tot el procés de muntatge d’un ordinador fotograﬁat pas a pas.
+
+- Un cop ajustada la targeta, col·locar l’antena exterior i posar-la en posició
+
+vertical per a assegurar una recepció correcta de les ones. Figura 2.17. Un cop tret l’embellidor, heu de col·locar i cargolar la targeta en la seva ranura o “slot” (en aquest cas PCI). 2.6 Connexió dels dispositius perifèrics externs Els dispositius bàsics com són el teclat i el monitor només necessiten ser connectats per a funcionar, però alguns dispositius no seran reconeguts pel sistema ﬁns que tingui instal·lat un sistema operatiu, i de vegades ﬁns que no s’instal·lin els controladors corresponents.
+
+De totes maneres, la connexió de dispositius externs és simple pel disseny. Només s’ha de connectar el dispositiu i més endavant, si cal, instal·lar els drivers. Podeu veure un resum dels connectors de cada dispositiu en la taula 2.1. Alguns equipaments, com els ratolins i teclats PS/2, els monitors o les impressores connectades al port en paral·lel, s’han d’instal·lar amb l’ordinador apagat. Quan s’engegui el sistema es podrà passar als controladors. Per exemple, els teclats de cent quatre tecles no necessiten controladors, però els teclats multimèdia amb tecles addicionals sí que en necessiten. Els ratolins normalment funcionaran amb el controlador genèric (tant en el Windows com en el GNU/Linux o d’altres), però en cas de botons addicionals també necessitaran el seu programari especíﬁc.
+
+Els dispositius connectables en calent (amb l’ordinador en marxa), com poden ser els components amb connectivitat USB o Firewire, es poden endollar amb el sistema en funcionament. El primer cop que el sistema els detecta mira d’esbrinar quins dispositius són i d’instal·lar els controladors adequats. Alguns dispositius
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic com discos durs externs o càmares digitals són detectats directament pel sistema i tractats com a unitats d’emmagatzematge sense necessitat d’afegir cap controlador al sistema. Taula 2.1. Resum de perifèrics externs i del connector més utilitzat corresponent Dispositiu Connector Teclat PS/2 o USB Monitor VGA o DVI Ratolí PS/2 o USB Impressora USB Escàner USB Altaveus connector mini o minijack Els sistemes operatius actuals inclouen una gran quantitat de controladors per a simpliﬁcar el procés d’instal·lació de qualsevol perifèric nou.
+
+Figura 2.18. Visió del panell posterior de la caixa amb els perifèrics externs connectats El tauler de connexions -que podeu veure en la ﬁgura 2.18- ha de ser accessible per a connectar els perifèrics imprescindibles (monitor, teclat i ratolí) i els auxiliars, com pot ser la impressora, l’escàner o els altaveus.
+
+2.7 Engegada de l’equip. Codis POST Per comprovar la connexió adequada de l’alimentació dels dispositius, connecteu el cable d’alimentació de la caixa i polseu el botó d’engegada. Si s’engega l’indicador lluminós d’engegada i el ventilador del processador comença a girar, l’alimentació és correcta. Si, en canvi, el ventilador no començar a girar, apagueu l’equip ràpidament per evitar danys al processador, encara que molts processadors actuals porten proteccions que l’apaguen si la temperatura és massa alta.
+
+Consulteu la unitat formativa “Instal·lació de programari” per aprendre com s’instal·la i preinstal·la el programari base.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Plaques de diagnòstic... dónen informació sobre els problemes trobats en l’equip sense haver de consultar les llistes de codis d’error. Un beep es la denominació anglesa d’un so electrònic generat per l’altaveu del PC.
+
+És una sinusoide pura generalment de to molt agut. En l’apartat “Adreces d’interès” del material web, podeu consultar pàgines amb el signiﬁcat d’alguns conjunts de codis POST. Si hem connectat tots els components i perifèrics correctament, el nostre equip ja està llest per a instal·lar-hi un sistema operatiu. Si hi ha hagut algun problema, la nostra feina no ha fet més que començar!
+
+Una ajuda que tenim a l’hora de detectar alguns dels problemes que s’hagin pogut produir són els codis d’error que ens ofereix l’ordinador a l’hora d’engegar- se. Quan un ordinador compatible IBM s’engega, el maquinari fa un test dels components connectats, anomenat POST (power on self test). Si es troba algun error durant aquest test, es pot conèixer habitualment mitjançant un so de l’altaveu intern del PC (sempre que l’hàgim connectat!). També es mostrarà l’error amb un codi numèric en la pantalla de l’ordinador, sempre que no hi hagi cap problema gràﬁc.
+
+Els codis sonors permeten conèixer exactament quin tipus de problema hi ha encara que no funcioni la pantalla o la targeta gràﬁca, i es poden distingir per la llargada i nombre de beeps que sonen. Taula 2.2. Codis orginals del procès POST d’IBM Codi sonor Problema trobat 1 beep curt POST normal - el sistema està correcte.
+
+2 beep curt Error de POST - es mostra el codi d’error per pantalla. Cap beep Problema amb la font d’alimentació o la placa base. 1 Beep continu Problema amb la font d’alimentació, la placa base o el teclat. Diversos Beeps curts repetits Problema amb la font d’alimentació o la placa base.
+
+1 beep llarg i 1 de curt Problema amb la placa base o system board problem 1 beep llarg i 2 de curts Problema amb el dispositiu de gràﬁcs (MDA, CGA). 1 beep llarg i 3 de curts Problema amb el dispositiu de gràﬁcs (EGA). 3 beeps llargs Error en la targeta de teclat 3270.
+
+Molts codis POST es consideren greus, ja que el procés POST s’encarrega de revisar components vitals del sistema. Un error greu d’aquest tipus causarà una aturada del sistema, que no arribarà a arrancar. La taula 2.2 ens mostra els codis originals que es van introduir en els models d’IBM PC. És molt interessant que la BIOS tingui un conjunt el més ampli possible d’errors POST, ja que això ens pot donar molta informació del problema que s’ha produït en el nostre equip. En aquest sentit, BIOS més actuals com, per exemple, la Phoenix BIOS Q3.07 o 4.X arriben a tenir prop de cent deu codis diferents.
+
+Si heu arribat a aquest punt i l’ordinador s’engega sense problemes, ja podeu posar les tapes de la caixa amb els cargols corresponents, encara que no els colleu gaire! De ben segur que l’haureu d’obrir més d’una vegada per a ampliar l’equip o comprovar alguna connexió.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+### 3. Conﬁguració, proves i documentació del muntatge
+
+La conﬁguració, proves i documentació del muntatge és l’últim pas que cal fer, però marcarà el rendiment adequat de l’equip. D’una banda, cal conﬁgurar els dispositius de maquinari perquè funcionin correctament, en tots els casos en què la conﬁguració no sigui automàtica, utilitzant diverses eines com són la conﬁguració directa del maquinari (jumpers) o l’ajustament del programa BIOS, que s’encarrega de la comunicació bàsica amb els components de maquinari.
+
+D’altra banda, cal documentar adequadament tot el muntatge realitzat per tal d’entregar l’equip al destinatari amb tota la informació necessària que li permeti tenir un bon coneixement de la màquina, i també més facilitat a l’hora de reparar-la si es dóna el cas. En darrer lloc realitzarem una sèrie de proves de rendiment o benchmarks, que més enllà del funcionament correcte o no dels dispositius ens dirà si el funcionament és òptim o si alguns components no estan completament acoblats i, per tant, caldria optimitzar la conﬁguració de l’equip.
+
+En l’etapa de validació de l’equip haureu de conﬁgurar els dispositius, documentar el muntatge realitzat i comprovar-ne el bon rendiment mitjançant proves comparatives. 3.1 Conﬁguració del maquinari Quan ja s’ha muntat i veriﬁcat, i abans d’instal·lar qualsevol sistema operatiu, cal conﬁgurar el maquinari per a adaptar-ne les característiques a allò que es necessita, com poden ser tipus de perifèrics detectables, estat del teclat en arrencar, dispositiu d’arrencada primari, i totes les característiques que permetin un ús més acurat del maquinari i més adaptat a la ﬁnalitat de l’equip.
+
+El procés inclou la conﬁguració directa del maquinari mitjançant ponts físics o jumpers, la modiﬁcació si escau del setup de la BIOS (programa de conﬁguració bàsic), i també la instal·lació i conﬁguració posterior dels controladors de dispositiu, que dependran del sistema operatiu que s’hagi instal·lat.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic La posició del pont en un disc dur IDE determina si funciona com a mestre, esclau o cable select. En els equips més moderns, l’ús més comú dels ponts és en la conﬁguració del mode de funcionament de les unitats IDE/ATA (mestre, esclau o cable select).
+
+3.1.1 Els jumpers o ponts En l’electrònica i en particular la informàtica, un pont és un tram curt de conductor que s’utilitza per a tancar un circuit elèctric. Els ponts se solen utilitzar per a conﬁgurar o ajustar circuits impresos, com ara plaques base, targetes gràﬁques o discos durs.
+
+Jumpers Les primeres generacions d’ordinadors personals en general feien servir molt els ponts per a la seva conﬁguració, encara que sovint la conﬁguració no estava ben documentada i, per tant, es feia difícil d’establir-la correctament. Per exemple, una placa base del principi del 386 d’Intel podia tenir ﬁns a trenta o quaranta ponts de conﬁguració. Típicament, a cada pont s’assigna una etiqueta amb un nombre, que està documentada en una llista d’instrucció impresa en la placa base o en el manual.
+
+La tendència recent ha estat la de tractar d’eliminar per complet els ponts dels dis- positius del maquinari en favor de l’autoconﬁguració o del control per programari de conﬁguració. Les conﬁguracions poden ser emmagatzemades en la NVRAM, carregades per un processador o negociades en el moment d’inicialització del sistema. En alguns casos, els dispositius connectables en calent són capaços de negociar la seva conﬁguració mentre el sistema està funcionant. Els dissenys amb ponts tenen l’avantatge que solen ser ràpids i fàcils de conﬁgurar, sovint requereixen pocs coneixements tècnics, i es poden ajustar sense tenir accés físic al circuit imprès (però sí, al component).
+
+En canvi, els sistemes que utilitzen targetes amb els ponts físics tendeixen a ser conﬁgurats correctament pels usuaris ﬁnals, ja que en general les persones no tècniques estan menys disposades a modiﬁcar físicament la conﬁguració del maquinari que experimentaran amb la conﬁguració del teclat.
+
+També tenen l’avantatge que en general només s’han de ﬁxar una vegada, mentre que la conﬁguració del microprogramari o ﬁrmware pot ser fàcilment perduda o danyada per un usuari descuidat, un virus o un error d’energia. L’única manera de modiﬁcar una conﬁguració correcta del pont és canviant això físicament.
+
+Una utilitat important dels ponts en les plaques base actuals és que es pot esborrar la informació de la memòria CMOS quan volem restaurar la conﬁguració de la BIOS. Això permet arrencar l’equip amb la conﬁguració inicial en cas que doni problemes d’arrencada o que hàgim oblidat la contrasenya del setup de la BIOS.
+
+També s’utilitzen en la conﬁguració de discos IDE com a mestre/esclau, depenent de les indicacions del fabricant (ﬁgura 3.1). En unitats de disc SATA2, els ponts poden servir per a ajustar el funcionament del dispositiu a velocitats corresponents a SATA1 si el controlador només suporta aquest mode de funcionament.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 3.1. Consulteu el propi disc IDE per saber la posició correcta de ponts segons la conﬁguració desitjada. 3.1.2 La BIOS El nom BIOS és l’acrònim anglès de basic input-output system, que podem traduir com sistema bàsic d’entrada/sortida.
+
+El BIOS és un subsistema de l’ordinador ubicat en un xip de la placa base. Aquest xip conté microprogramari (ﬁrmware, en anglès) allotjat bàsicament en memòria EPROM (erasable programmable read only memory) i memòria de tipus ﬂaix (ﬂash memory) no volàtil, que pot ser esborrable i reprogramable elèctricament.
+
+El BIOS s’encarrega, en primera instància, de detectar i comprovar tots els components connectats a l’ordinador per oferir connexió d’aquests cap al sistema operatiu. Aquest procés s’anomena POST (power-on self-test). La conﬁguració del BIOS es pot realitzar per mitjà d’una interfície d’aplicació no visual que es pot carregar en iniciar l’ordinador, normalment prement una tecla.
+
+La majoria de sistemes usen Esc, Del, F1, F2, Ctrl-Esc o Ctrl-Alt-Esc per a entrar en el setup. Habitualment podreu veure una línia de text en la part baixa de la pantalla en engegar el sistema, que us indicarà ”Press ___ to Enter Setup”. Heu d’estar atents a aquest missatge si no coneixeu la combinació de tecles correcta.
+
+Les funcionalitats més habituals i útils són les següents (ﬁgura 3.2)
+
+- Canviar la data i hora del sistema.
+- Visualitzar i conﬁgurar els dispositius d’emmagatzematge (disquets, discos
+
+durs, CD, DVD, etc.).
+
+- Canviar la contrasenya d’accés al BIOS.
+- Conﬁguració de dispositius tipus teclat.
+
+Fabricants de BIOS Els productors més importants actualment són American Megatrends (AMI), Insyde Software i Phoenix Technologies. Podeu consultar el procés POST en l’apartat “Muntatge d’un equip” d’aquesta unitat.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Podeu consultar els webs d’alguns dels fabricants principals de BIOS en l’apartat “Adreces d’interès” del web del mòdul. Per la seva poca despesa d’energia..., una petita bateria de liti o níquel-cadmi pot proveir energia suﬁcient per a guardar la data i la conﬁguració de la BIOS durant anys.
+
+- Plug and Play: canviar la conﬁguració de l’estàndard d’autodetecció de
+
+dispositius; ha d’estar en yes si l’ordinador i el sistema operatiu ho suporten.
+
+- Conﬁguració dels ports i dispositius PCI, USB, etc.
+- Conﬁguració de paràmetres avançats, com ara de freqüència del processa
+
+dor, memòria, actualització del BIOS, etc.
+
+- Conﬁguració de sistemes d’estalvi d’energia (per a monitor i discos).
+- Seqüència de dispositius d’arrencada o boot (ordre en què s’iniciarà la
+
+càrrega del sistema). Se sol deixar en primer lloc la disquetera, si n’hi ha - per a introduir un disquet de recuperació en cas necessari-, disc dur principal -per a carregar, per defecte, el sistema operatiu que té instal·lat- i unitat de CD.
+
+- Desar o no els canvis realitzats.
+
+Figura 3.2. El menú principal (“main”) del programa de conﬁguració del BIOS permet accedir a la informació del sistema i la conﬁguració dels dispositius d’emmagatzematge. En sortir de l’aplicació de conﬁguració del BIOS, es poden acceptar i emmagat- zemar els canvis introduïts o bé sortir sense gravar-los. En cas de no estar segurs dels canvis introduïts, la millor opció és deixar la conﬁguració inicial.
+
+En l’aplicació de conﬁguració del BIOS, es pot introduir una contrasenya perquè usuaris no autoritzats no la puguin reconﬁgurar. També des del BIOS es pot establir una contrasenya d’accés a l’ordinador. Actualment, també, els fabricants permeten actualitzar el programari del BIOS per obtenir noves funcionalitats o controls. L’actualització del BIOS és un procés delicat perquè una mala conﬁguració podria deixar l’ordinador sense funcionar.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Assegureu-vos que la BIOS està conﬁgurada amb el dispositiu d’arrencada correcte, o és possible que l’ordinador no es posi en funcionament adequadament. Cal anar amb compte a l’hora de fer canvis en la conﬁguració de la BIOS. El fet d’equivocar-se en els paràmetres pot fer que l’ordinador deixi d’arrencar. Quan acabeu de fer els canvis en la conﬁguració, recordeu triar l’opció per a desar els canvis realitzats: Save changes abans de sortir. Llavors la BIOS reiniciarà l’ordinador de manera que els canvis realitzats tinguin efecte en el sistema.
+
+EFI davant BIOS L’estàndard BIOS no és l’únic sistema d’entrada/sortida que ha existit, i donat els anys que es troba en funcionament han aparegut candidats a substituir-lo. Un d’aquests ha estat EFI (Extensible Firmware Interface). Es tracta d’una especiﬁcació que deﬁneix una interfície de programari entre un sistema operatiu i una plataforma ﬁrmware. L’EFI és molt més gran i complex que BIOS i potser per això no ha aconseguit ser majoritari en el mercat.
+
+L’especiﬁcació EFI inicial fou desenvolupada per Intel, però ha estat assumida a dia d’avui per l’Uniﬁed EFI Forum. Va sorgir per superar les superacions de la BIOS (mode de 16 bits, només 1 MB d’espai adreçable, etc.). Diverses platafor- mes de maquinari han adoptat l’estàndard, des dels primers Intel Itanium en què es va desenvolupar. Avui dia es pot trobar en equips Apple Macintosh basats en la plataforma Intel, a la major part de plaques base Intel (poden actualitzar-se a un microprogramari EFI, encara que moltes es venen amb microprogramari BIOS) o a servidors IBM System o Dell PowerEdge.
+
+Hi ha diversos sistemes operatius que són capaços d’arrencar des de (U)EFI, com són el Linux, HP-UX, HP OpenVMS, MacOSX 10.4 i 10.5, o algunes versions del Windows de 32 bits i 64 bits. 3.1.3 Proves de funcionament i rendiment. Veriﬁcació del procés de muntatge. L’últim procés, un cop ja hem instal·lat i conﬁgurat el maquinari, consistirà a veriﬁcar-ne el bon funcionament.
+
+Aquesta acció esdevé de vital importància per a assegurar-nos que el sistema dóna el rendiment màxim possible per a les seves característiques i prestacions. Per a realitzar aquestes proves necessitarem instal·lar en la màquina algun sistema operatiu que pugui utilitzar eines de diagnosi i benchmarking, de manera que es pugui veure el funcionament de tots els components interaccionant amb el programari que en farà ús o un de molt similar.
+
+En la unitat formativa “Manteniment d’equips microinformàtics” d’aquest mòdul s’explica el procés d’actualització del BIOS.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic El benchmarking es basa en la realització de comparatives d’uns components amb altres per a avaluar-ne la qualitat relativa. Per a comprovar el funcionament del sistema assemblat, caldrà utilitzar-lo amb un sistema operatiu instal·lat i amb els drivers (o controladors) corresponents.
+
+L’últim punt de la conﬁguració també depèn del sistema operatiu que s’hagi instal·lat i de la utilització dels controladors de dispositiu. Importància del "benchmarking" El sentit de fer una operació de benchmarking es pot donar sobretot quan ens trobem en el moment de consolidar una decisió de muntatge, per exemple: hem muntat un prototipus i hem de decidir si el volem passar a la producció en cadena.
+
+També pot servir per a comprovar el funcionament de l’equip, encara que això no comporti canvis posteriors en el disseny
+
+- Com maximitzem el rendiment dins d’un preu donat.
+- Com minimitzem els costos per arribar a un rendiment mínim.
+- Com obtenim la millor ràtio rendiment/cost (dins uns requeriments de preu
+
+o rendiment). La realització de proves de rendiment pren el màxim sentit durant un procés de decisió, és a dir: si hem de triar un component entre dues o més alternatives. Consideracions que cal descartar a l’hora de valorar un component de maquinari
+
+### 1. Reputació del fabricant (no mesurable i realment no signiﬁcant)
+
+### 2. Participació de mercat omarket share del fabricant (no mesurable i realment
+
+no signiﬁcant).
+
+### 3. Paràmetres irracionals (per exemple, prejudicis com que no ens agradi el
+
+color de la targeta gràﬁca).
+
+### 4. Valor percebut (no mesurable i irracional, per exemple, que porti imatges
+
+d’un personatge de Disney no és important!)
+
+- Quantitat de màrqueting que ha tingut el producte: els logos, publicitat, etc.
+
+no garanteixen el millor funcionament.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Procediments de //benchmarking// o comparació i interpretació dels resultats
+
+### 1. Primer que res, cal identiﬁcar els nostres objectius de comparació. Què
+
+volem comprovar exactament? De quina manera ens ajudarà el procés de benchmarking a prendre decisions? Quant temps i recursos estem disposats a posar en aquest procés?
+
+- Utilitzeu eines estàndard, ben comprovades i en versions actualitzades.
+
+### 3. Feu les proves component a component i comparant-los amb dispositius
+
+coneguts.
+
+### 4. Veriﬁqueu els resultats obtinguts sempre que sigui possible. Feu les proves
+
+més d’una vegada i comproveu els resultats de conﬁguracions similars.
+
+### 5. Si obteniu resultats que semblen fora de lloc, proveu de demanar ajuda o
+
+comprovar que heu fet tots els passos correctament. Eines de veriﬁcació/diagnòstic A l’hora de fer una anàlisi del nostre ordinador i obtenir el màxim d’informació, disposem d’una sèrie d’eines. Aquest tipus de programari ens permet generar diversos resums, en què es detallen les característiques dels sistemes operatius instal·lats, dels programes, dels components de maquinari (memòria, CPU, targe- tes), dels controladors,etc.
+
+Alguns d’aquests programes de diagnòstic també ens permeten fer comparatives entre el nostre ordinador i d’altres equips amb determinades prestacions -placa base, disc dur, etc.- i també mesurar el rendiment i veriﬁcar que el maquinari funciona de manera òptima. Aquest tipus de programari s’anomenen eines de benchmark. En general, són programes que s’instal·len com una aplicació clàssica.
+
+Normalment generen una sèrie de tests, que poden ser individuals o bé de grup, per exemple, velocitat d’escriptura en memòria, velocitat de CPU, nombre d’imatges per segon,etc. Per tant, és molt important l’ús d’aquest tipus d’eines per a comprovar que el nostre equip funciona correctament i conèixer els detalls dels components que en formen part.
+
+Els programes de diagnòstic són eines que permeten analitzar diferents aspectes de l’ordinador, tant del programari com del maquinari. Així, per exemple, permeten veure amb detall la conﬁguració de la placa base, del sistema operatiu, del programari instal·lat, etc.
+
+Aquest tipus de programes poden tenir diversos enfocaments, però en general disposen de la possibilitat de realitzar comparatives de components quan es tracta de maquinari i donar una puntuació per al component mesurat que ens donarà una idea del seu valor respecte a altres.
+
+Entre els programes de diagnòstic més coneguts hi ha l’Everest Home, SiSoft Sandra, etc.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En el subapartat “La BIOS” s’explica la conﬁguració bàsica de la BIOS. Els bechmarks sintètics (syntethic benchmarks) mesuren la capacitat màxima d’aspectes especíﬁcs d’un sistema mitjançant càlculs o proves repetitives, mentre que els benchmarks d’aplicacions (application benchmarks) mesuren el rendiment de programes reals.
+
+Algunes eines en entorn Windows
+
+- Administrador de dispositius del Windows
+- Everest (antic AIDA32)
+- SiSoftSandra
+- BurnInTest
+- Dr Hardware
+- 3DMark
+
+Altres eines en entorn Linux
+
+- Phoronix Test Suite
+- Paquet Hardinfo
+- LBT: Linux Benchmarking Toolkit
+
+3.1.4 Instal·lació bàsica del Windows La conﬁguració ﬁnal dels dispositius s’ha de realitzar un cop tenim un sistema operatiu instal·lat en l’ordinador ja muntat. Això ens permetrà comprovar el funcionament correcte de tots els dispositius en conjunt, i també realitzar proves de rendiment.
+
+La conﬁguració del dispositiu serà diferent depenent del sistema operatiu que uti- litzem. Tot seguit disposeu del procés bàsic d’instal·lació d’un sistema Windows XP per a poder realitzar les proves de funcionament dels nostres dispositius (la ﬁgura 3.3 us mostra algunes pantalles del procés).
+
+Abans de començar la instal·lació assegureu-vos que disposeu del següent
+
+- El CD original d’instal·lació del Windows XP SP2 o SP3 (per a assegurar
+
+nos el màxim suport de dispositius SATA).
+
+- La clau d’activació del producte, que es troba inclosa en el CD.
+- El sistema completament muntat, incloent-hi els perifèrics externs.
+- CD de controladors de tot el maquinari muntat.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 3.3. Instal·lació d’un sistema XP Cal assegurar-se que el sistema compleix els requisits mínims d’instal·lació, encara que qualsevol equip actual serà capaç d’executar un sistema operatiu Windows XP, sempre que disposi de controladors per a tot el maquinari (per exemple, la RAM recomanada per a funcionar és de 128 MB).
+
+- Assegureu-vos que el vostre sistema es troba conﬁgurat per a arrencar des de
+
+CD. D’aquesta manera el sistema podrà accedir als ﬁtxers d’intal·lació que es troben en suport òptic. Pitgeu una tecla si us demana fer-ho per arrancar des de CD.
+
+- Trieu l’opció Install Windows XP i accepteu l’acord de llicència de Micro
+
+soft.
+
+- Atès que esteu treballant amb un disc encara no inicialitzat, podeu triar
+
+l’opció que us permet instal·lar el sistema en tot el disc dur (Unpartitioned space). Tingueu en compte que estem fent una instal·lació bàsica que ens permetrà fer comprovacions del rendiment del maquinari. Formateu el disc amb el sistema d’arxius NTFS.
+
+- En aquest punt el programa d’instal·lació dóna format al disc dur i hi copia
+
+els arxius d’instal·lació. Pot tardar uns minuts a fer aquesta operació.
+
+- L’equip es reinicia i a partir d’ara podreu utilitzar el ratolí. Trieu les opcions
+
+de llenguatge i regió adequades, i podeu afegir el vostre nom i empresa, abans d’introduir el número de sèrie (tingueu en compte que si no escriviu el número correcte no podreu avançar!).
+
+- El programa us demanarà una contrasenya d’administrador, que podeu
+
+deixar en blanc si el sistema no s’ha d’utilitzar un cop fetes les proves amb
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Consulteu en l’apartat “Recursos de contingut” del web del mòdul el manual d’instal·lació del Windows XP en un equip nou, ubicat en la mateixa pàgina de Microsoft. Coneixeu, en els “Recursos de contingut” del web del mòdul, altres eines de diagnòstic presents en l’entorn Windows.
+
+CPU-z També es pot descarregar lliurement i dóna informació detallada sobre la placa base (incloent-hi la BIOS), el processador i la memòria RAM. aquesta instal·lació. Deixeu les opcions de xarxa per defecte, ja que en principi no necessiteu connectar l’ordinador a una xarxa.
+
+- En aquest punt, i un cop li heu dit que no necessiteu actualitzacions
+
+automàtiques, podeu saltar la resta de passos (skip) i iniciar el sistema en Windows per primer cop. Instal·lació dels controladors de dispositiu Un cop heu arrencat l’equip, alguns components de maquinari (com la targeta gràﬁca) estaran funcionant en mode bàsic, ja que el sistema encara no disposa dels controladors de dispositius ajustats al maquinari muntat. Per això ara haureu d’utilitzar els discos compactes amb els controladors que venien amb el maquinari connectat.
+
+Encara que cada fabricant ofereix un programa d’instal·lació personalitzat, el procés bàsic per a instal·lar qualsevol perifèric és el següent
+
+- Introduïu el disc que conté els controladors en la unitat lectora.
+- Executeu el programa d’instal·lació del dispositiu adequat.
+- Connecteu el dispositiu en acabar la instal·lació si el programa no us
+
+ha demanat fer-ho abans (evidentment, els dispositius interns ja estaran connectats ).
+
+- En alguns casos haureu de reiniciar l’equip perquè el sistema carregui els
+
+controladors en el nucli del sistema operatiu.
+
+- Conﬁgureu el dispositiu si és necessari. Per exemple, en el cas de la targeta
+
+gràﬁca probablement haureu de modiﬁcar la resolució d’aquesta, perquè s’adapti al vostre monitor, i la profunditat de color que us sigui necessària. 3.1.5 Programes de "benchmark" en entorn Windows Hi ha moltes eines de diagnòstic que funcionen sobre un entorn Windows a causa de la seva popularitat. Tot seguit podeu veure la descripció del funcionament i possibilitats d’anàlisi de dues d’aquestes eines.
+
+La major part d’eines de diagnòstic permeten descarregar de la xarxa una versió de prova o avaluació, freqüentment amb funcionalitats limitades. Everest Home (Antic AIDA32) Ens mostra, de manera detallada, la conﬁguració del nostre sistema. És un programari que ens dóna molta informació, però que és relativament senzill d’utilitzar. La pantalla, tal com podeu veure en la ﬁgura 3.4, ens apareix dividida
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic en dos apartats. El de l’esquerra, ens mostra els elements a examinar, i si en seleccionem un ens mostra tots els elements que formen part d’aquest grup. Figura 3.4. Detall dels elements del nostre sistema Les seccions principals d’aquest programari són les següents
+
+- Ordinador, en el qual destacaríem dues seccions
+
+La primera seria el resum que mostra detalladament les característi- ques del sistema operatiu, les dades de la placa base, les unitats d’em- magatzematge, les particions, les targetes de xarxa, etc. Normalment, també apareix un vincle en la pàgina web del proveïdor del component, que ens permetrà, si escau, actualitzar els controladors o drivers.
+
+L’altra secció seria la DMI. En aquesta secció, s’aprofundeix més en els aspectes de maquinari. Per exemple, dóna més informació sobre el BIOS, sobre els mòduls de memòria (indica de quin tipus són, el nombre de mòduls solts, si estan ocupats o no), el tipus de processador, les ranures de les targetes del sistema, etc.
+
+- Placa mare. Dóna informació detallada en les seves seccions corresponents.
+
+Així, proporciona informació sobre el tipus de memòria instal·lada, la placa base, el processador, la informació física sobre la CPU, etc.
+
+- Sistema operatiu.
+
+Mostra de manera detallada els elements principals que hi tinguem instal·lats, juntament amb informació sobre la llicència, els processos actius i els serveis activats.
+
+- Servidor.
+
+Mostra les carpetes compartides, les dades del domini i del servidor, els usuaris de l’equip i la connexió actual.
+
+- Monitor. Dóna tota la informació sobre aquest dispositiu de sortida. Mos
+
+tra informació sobre la targeta gràﬁca, les fonts instal·lades i les propietats de la conﬁguració de l’escriptori.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic El programa Sisoft Sandra disposa de versions d’escriptori per al Windows (XP, Vista, Server 2008, etc.)i també per a dispositius mòbils (Windows Mobile) sobre processadors ARM.
+
+- Multimèdia. Dóna diverses informacions sobre els dispositius d’àudio.
+- Emmagatzematge. Dóna informació detallada sobre els dispositius d’em
+
+magatzematge del nostre ordinador: capacitat, controladors, canals IDE, IRQ, fabricants,etc.
+
+- DirectX. Aquesta tecnologia potencia l’ús multimèdia del PC en vídeo,
+
+música i so. Dóna informació sobre els controladors DirectX, sobre el rendiment i sobre la detecció de problemes en els components del sistema.
+
+- Perifèrics. Detallen tota la informació sobre els diferents dispositius: els
+
+recursos (IRQ, DMA, memòria), les impressores, els controladors, etc.
+
+- Programari. Indica els programes que s’han carregat quan el programari
+
+instal·lat ha iniciat les tasques planiﬁcades, les actualitzacions del Windows i els antivirus instal·lats.
+
+- Conﬁguració.
+
+Mostra els arxius de sistema (ﬁgura 3.5), les variables d’entorn, la carpeta del sistema i la conﬁguració regional (idioma, país, moneda). Figura 3.5. Conﬁguració dels ﬁtxers de sistema
+
+- Comparacions.
+
+En aquest últim apartat, trobarem diferències entre el nostre equip i altres de diferents característiques a l’hora d’escriure i llegir en memòria. SiSoftSandra És una utilitat que, a part d’informar-nos sobre els diferents components del sistema, insisteix més en l’anàlisi del rendiment del maquinari, fa comparatives amb altres sistemes, avisa sobre millores del sistema i permet obtenir una sèrie d’informes.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic És un programa que disposa d’un nombre molt important de possibles proves. En total, el programa disposa de cinc apartats
+
+- Wizard modules
+- Information modules
+- Benchmarking modules
+- Testing/diagnostic modules
+- Listing modules
+
+#### 1) Wizard modules
+
+Són una sèrie de mòduls que ens permeten utilitzar diferents tipus d’assistents.
+
+- Add New Module.
+
+Permet seleccionar més mòduls. Per defecte, ens apareixen per pantalla.
+
+- Combined Performance Index Wizard. Ens permet seleccionar diferents
+
+tipus d’anàlisi -sobre CPU, memòria, disc dur, targeta de xarxa i, també, realitzar comparatives amb altres sistemes. El resultat es reﬂecteix amb una ﬁgura geomètrica, en concret amb un pentàgon. Cada component es reﬂecteix en una superfície concreta de la ﬁgura. Si surt de color blau, ens indica que les prestacions del sistema que estem comparant són superiors a les del nostre; en cas contrari, ens pintaria la superfície de color vermell.
+
+En la ﬁgura 3.6 veureu que, en general, els elements que estem comparant tenen un resultat superior al nostre sistema. Figura 3.6. Comparativa de diferents elements del sistema Sandra Lite La versió Lite és gratuita i es pot descarregar lliurement per a ús personal o educatiu, encara que té limitacions d’ús i de funcionalitats.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Burn-In Wizard. Aquest assistent permet realitzar una prova d’estrès sobre
+
+els diferents components; és a dir, permet sotmetre’ls a una sèrie de proves basades en la realització de càlculs numèrics que els facin treballar al màxim. Per exemple, la ﬁgura 3.7 mostra una sessió de prova de la CPU amb un resultat correcte. Figura 3.7. Prova d’estrès sobre el nostre equip
+
+- WebUpdate Wizard. Permet baixar les últimes actualitzacions del programa.
+- Performance Tune-up Wizard. Fa una anàlisi completa del nostre PC i ens
+
+mostra, si convé, una sèrie d’avisos per a millorar el nostre sistema. Les maneres de desar un informe són diverses: per pantalla, per impressora o per fax.
+
+- Create a Report Wizard.
+
+Permet realitzar diversos informes sobre els mòduls que escollim. També permet desar la conﬁguració d’aquests mòduls per poder-los utilitzar posteriorment.
+
+#### 2) Information modules
+
+Donen una llista de cada component de l’ordinador. En seleccionar-lo amb el ratolí, automàticament ens dóna informació detallada de la CPU, el BIOS, la targeta de vídeo, la targeta de so, la CMOS, les fonts instal·lades, el teclat, el ratolí, etc.
+
+#### 3) Benchmarking modules
+
+En aquest apartat, podrem realitzar una sèrie de proves comparatives entre diferents components, per exemple, entre les unitats d’emmagatzematge, l’ALU,
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic la memòria, la connexió a Internet, la connexió a la xarxa local, la CPU, etc. En la ﬁgura 3.8, apareixen les característiques principals del ratolí. Figura 3.8. Característiques especíﬁques sobre un dispositiu: el ratolí
+
+#### 4) Testing/diagnostic modules
+
+Mostren detalls sobre diferents components
+
+- Hardware Irq Settings. Mostren una llista de les interrupcions del sistema
+
+associada al component que s’hi ha assignat.
+
+- DMA Channel Setting. Mostra una llista dels dispositius que poden accedir
+
+a memòria mitjançant un canal directe.
+
+- I/O Port Setting. Mostra la llista de ports d’entrada i de sortida, associats
+
+als components corresponents.
+
+- Memory Resource. Ens envia la informació dels components i de l’adreça
+
+de memòria que s’hi ha assignat.
+
+- Plug & Play Enumerator. Mostra la llista de classes de dispositius: targetes
+
+de xarxes, controladors IDE, impressores, ratolí, monitor, etc. En cas que tinguem més d’una opció -per exemple, si tenim dues impressores instal·lades-, un cop tenim seleccionat el tipus, caldrà escollir un dels components.
+
+#### 5) Listing modules
+
+En aquest apartat, es dóna informació sobre la conﬁguració del sistema: progra- mes instal·lats, variables d’entorn, ﬁtxers del sistema com autoexec.bat, boot.ini, win.ini, o system.ini (ﬁgura 3.9).
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Algunes distribucions Linux en CD autònom que inclouen eines de diagnòstic són SoL-diag, Stresslinux o Mutagenix. Consulteu, en les “Adreces d’interès” del web del mòdul, un enllaç a les distribucions del Linux existents amb les seves característiques especiﬁcades.
+
+Figura 3.9. Detall sobre el ﬁtxer boot.ini Des del menú Tools (Eines), podem realitzar diferents tasques que ens ajudaran en el manteniment del nostre equip, i que són pròpies del sistema operatiu Windows. Entre les opcions principals, cal destacar les següents
+
+- Accés a Panel de control
+- Compactació del disc dur
+- Realització de còpies de seguretat del disc dur
+- Obtenció d’informació sobre el rendiment del sistema
+- Utilització de l’editor de conﬁguració del sistema
+- Realització d’un scandisk del disc dur
+
+3.1.6 Arrencada amb un CD autònom GNU/Linux Per a realitzar proves de rendiment sense necessitat d’instal·lar un sistema de proves es pot utilitzar un CD autònom o live CD del GNU/Linux (ﬁgura 3.10). En principi, aquest tipus de sistema operatiu està pensat per a provar un sistema operatiu Linux sense necessitat d’instal·lar-lo, però una altra utilitat també pot ser la que ens ocupa: fer proves del rendiment a l’equip instal·lat recentment. Els passos que haureu de fer són
+
+- Assegureu-vos que el sistema es troba conﬁgurat per arrencar des de CD i
+
+que tots els dispositius estan connectats i alimentats.
+
+- Introduïu un disc autònom en la unitat lectora i trieu l’opció que permeti
+
+utilitzar el sistema sense necessitat d’instal·lar-lo.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic
+
+- Si esteu utilitzant un CD pensat especíﬁcament per a fer diagnòstics, podeu
+
+executar directament els programes adequats. En cas contrari, abans de continuar haureu d’instal·lar els programes que vulgueu utilitzar per a fer les proves. De la mateixa manera que amb un CD, els sistemes Linux actuals vénen preparats per a arrencar-se des d’una unitat USB. Per tant, és molt interessant tenir un llapis USB autoarrencable, on podem instal·lar els nostres programes sense necessitat de repetir el procés cada cop que arrenquem un sistema.
+
+Figura 3.10. Arrencada amb un sistema GNU-Linux en viu. Un cop el sistema es troba en funcionament es pot conﬁgurar la connexió a la xarxa i instal·lar-hi qualsevol programa de diagnòstic que vulguem utilitzar. 3.1.7 Eines de "benchmark" en l’entorn GNU/Linux L’entorn Linux, malgrat la diﬁcultat d’ús aparentment superior, disposa d’algunes eines de diagnòstic amb interfície d’usuari gràﬁca que faciliten la feina als menys familiaritzats amb l’entorn de consola.
+
+Paquet Hardinfo Una manera senzilla de fer comprovacions de rendiment d’un ordinador amb el GNU/Linux és utilitzar el paquet de programari Hardinfo. Aquest és capaç donar un perﬁl del nostre equip que ens permeti comparar-lo amb altres i fer-ne proves de rendiment o benchmarks. Les seves funcionalitats inclouen recollir informació Vegeu, en els “Recursos de contingut” del web del mòdul, un programa d’aprenentatge d’instal·lació de programes en entorn GNU/Linux.
+
+En la unitat formativa “Instal·lació de programari”, podeu consultar el procés per a passar un CD del Linux a un llapis USB autoarrencable. Vegeu, en els “Recursos de contingut” del web del mòdul, un enllaç a un manual d’instruccions de consola GNU/Linux, amb l’explicació d’ordres relacionades amb la informació de maquinari, com lshw, lspci o lsusb, entre altres.
+
+Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic sobre el nostre ordinador i sistema operatiu, realitzar diversos benchmarks i exportar les dades a format HTML. Un cop engegat el programa des de Sistema\Preferències \Syste proﬁler and benchmark, la manera més senzilla de recórrer els informes és posar-los en funcionament de manera que generin una pàgina HTML. Per a fer això només cal clicar en el botó Report en la barra de tasques, i seleccionar-hi la informació que volem incloure i també la destinació de ﬁtxer. La generació d’un informe, incloent- hi els benchmarks, pot tardar uns minuts depenent de la rapidesa de l’ordinador (ﬁgura 3.11).
+
+Figura 3.11. Generació d’informes mitjançant l’eina HardInfo Els benchmarks que es poden realitzar, relacionats amb el rendiment de la CPU i l’FPU (unitat de coma ﬂotant), són
+
+- CPU ZLib
+- CPU Fibonacci
+- CPU MD5
+- CPU SHA1
+- CPU Blowﬁsh
+- FPU Raytracing
+
+El paquet Hardinfo es troba en els repositoris de programari de l’Ubuntu i també es pot instal·lar manualment en qualsevol sistema Linux.
+
+> **💡 📚 Document extens (85 pàgines)**
+> S'han mostrat les primeres 80 pàgines completes del manual.
+
+---
+
+## 2.2 U2 - P2 - PROCESADOR Y MEMORIA
+
+COMPONENTES INTERNOS
+
+Memorias
+
+Memorias Principales
+
+Memoria RAM
+
+El microprocesador
+
+Paralelismo
+
+Refrigeración
+
+<número>
+
+COMPONENTES INTERNOS1. memoriaS
+
+<número>
+
+COMPONENTES INTERNOS1. memoriaS
+
+La memoria de un ordenador se organiza en varios niveles en función de su velocidad. Se denomina jerarquía de memoria y optimiza su uso, ya que la información se ubica en un determinado nivel según su probabilidad de ser utilizada. Mientas mayor es la probabilidad o frecuencia de uso, menor es su nivel.
+
+Los niveles están diseñados de forma que las memorias más rápidas se sitúan en los niveles más bajos. Existe relación entre la velocidad de una memoria y su capacidad y coste: a mayor velocidad, mayor coste y menos capacidad.
+
+- Auxiliar: se usa como soporte de respaldo de información, pudiendo situarse en medios extraíbles o en red.
+
+- Secundaria: recibe también el nombre de <memoria de disco> se utiliza para almacenar información de forma permanente.
+
+- Principal: conocida como <memoria RAM> se emplea para almacenar datos y programas de forma temporal.
+
+- Cache: memoria intermedia entre la UM y la CPU utilizada para acelerar los sucesos de la CPU o UM. Esta dispuesta en varios niveles (L1 L2 L3 L4) siendo L1 la más rápida y de menor capacidad, y la L4(eDRAM) la más lenta y de mayor capacidad. (L4 para Graficas integradas)
+
+- Registros: son memorias de alta velocidad y baja capacidad utilizadas para el almacenamiento intermedio de datos en las unidades funcionales, especialmente en la UC y la UAL.
+
+Más Información ←
+
+<número>
+
+COMPONENTES INTERNOS1. memoriaS
+
+Los niveles 0,1 y 2 constituyen la memoria interna del equipo. El resto de niveles conforman la memoria externa.
+
+<número>
+
+COMPONENTES INTERNOS1. memoriaS
+
+L4, Se encuentra situada en los periféricos y en algunos procesadores como el Itanium. La tendencia de los gráficos integrados en los procesadores de Intel es ofrecer un rendimiento inferior a las soluciones de Nvidia y AMD.
+
+Intel quiere combatir esto y está mejorando el rendimiento de sus gráficos para los nuevos ultrabooks, NUC… Los procesadores Haswell, se fabricaron, con núcleos gráficos más grandes y están acompañados de una memoria caché L4 (eDRAM).
+
+https://seminariodearquitecturadecomputadoras.wordpress.com//19/cache/
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+La memoria principal se organiza en una especie de casilleros numerados.
+
+El casillero recibe el nombre de posición de memoria y su identificación o número de orden se denomina dirección de memoria.
+
+El sistema de memoria de los ordenadores modernos consta de varias secciones con diferentes tareas
+
+La memoria de trabajo o RAM
+
+La memoria caché. Se usa para acelerar la transferencia de datos. En ella se almacenan datos de la memoria principal a los que accederá el microprocesador próximamente. Justo antes de necesitar esos datos, se seleccionan y se colocan en dicha memoria.
+
+La memoria CMOS. Almacena información sobre la configuración del sistema
+
+La ROM o memoria de solo lectura. BIOS = ROM + CMOS
+
+La memoria gráfica o de vídeo.
+
+→ Ampliación memoria RAM ←
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+La memoria RAM es el dispositivo que almacena los datos e instrucciones necesarios para el correcto funcionamiento del equipo informático.
+
+La clasificaremos según en función de la tecnología de fabricación
+
+SRAM-> RAM estática :Capacidad reducida pero alcanza grandes velocidades. La RAM estática no necesita ser refrescada tan frecuentemente para conservar la información , por lo que se suelen utilizar para la memoria caché.
+
+DRAM-> RAM dinámica. Mayora capacidad y más lenta que la SRAM. La información que contiene se tiene que actualizar periódicamente con cada ciclo de reloj para evitar que se pierda. Se utiliza comúnmente para la memoria principal en los equipos.
+
+Hay varios tipos de DRAM entre los que destacamos;
+
+SDRAM-> RAM dinámica sincronizada. Se sincroniza con las señales del reloj del ordenador y, por tanto, con el bus del sistema de ordenador. Pude ser
+
+SDR: Funciona a la misma velocidad que el bus del sistema.
+
+DDR:Funciona al doble de velocidad que el bus del sistema.
+
+DDR2: 4 veces más rápido que el bus del sistema
+
+DDR3: 8 veces más rápido que el bus del sistema.
+
+DDR4: Duplica la velocidad que la DDR3.
+
+DDR5:https://hardzone.es/tutoriales/componentes/memoria-ram-ddr4-vs-ddr5/
+
+GDDR: Desarrollada para tarjetas gráficas. Actualmente la GDDR5
+
+https://www.profesionalreview.com//27/diferencias-ddr4-ddr4l-ddr4u-lpddr4/
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Gama de módulos de memoria RAM más comunes
+
+La diferencia física es que la SDR tiene dos muescas y la DDR únicamente una.
+
+A la hora de instalar varios módulos en el PC es recomendable utilizar siempre el mismo modelo, incluso del mismo fabricante y con las mismas características de frecuencia y latencia. Es recomendable utiliza parejas de módulos y, siempre que sea posible, utilizar módulos idénticos para aprovechar los sistemas de doble o cuádruple canal de las placas base.Por lo tanto, si tienes pensado instalar 8 GB de memoria RAM en tu ordenador, es mejor hacerlo en dos módulos idénticos de 4 GB que en uno solo de 8 GB.
+
+La latencia (CL) es es el tiempo que tarda la memoria RAM en situarse en una determinada posición para leer o escribir su contenido. Cuanto mayor sea la latencia de la memoria RAM, mayor es el tiempo que “pierde” en llegar a una determinada celda y, por lo tanto, menos eficiente en su trabajo.
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM.Tipos
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM.Módulos
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM.Módulos
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+DDR2→ 4 accesos/ciclo
+
+DDR3→ 8 accesos/ciclo
+
+DDR4→ 8 accesos/ciclo
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Name
+
+Chip
+
+Bus
+
+Timings
+
+Standard
+
+Type
+
+Module
+
+Clock rate (MHz)
+
+Cycle time (ns)
+
+Clock rate (MHz)
+
+Transfer rate (MT/s)
+
+Bandwidth (MB/s)
+
+CL-TRCD-TRP
+
+CAS latency (ns)
+
+DDR2-400
+
+B
+
+PC2-3200
+
+3200
+
+3-3-3
+
+C
+
+4-4-4
+
+DDR2-533
+
+B
+
+PC2-4200*
+
+133⅓
+
+7.5
+
+266⅔
+
+533⅓
+
+4266⅔
+
+3-3-3
+
+11.25
+
+C
+
+4-4-4
+
+DDR2-667
+
+C
+
+PC2-5300
+
+166⅔
+
+333⅓
+
+666⅔
+
+5333⅓
+
+4-4-4
+
+D
+
+5-5-5
+
+DDR2-800
+
+C
+
+PC2-6400
+
+6400
+
+4-4-4
+
+D
+
+5-5-5
+
+12.5
+
+E
+
+6-6-6
+
+DDR2-1066
+
+E
+
+PC2-8500*
+
+266⅔
+
+3.75
+
+533⅓
+
+1066⅔
+
+8533⅓
+
+6-6-6
+
+11.25
+
+F
+
+7-7-7
+
+13125
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Name
+
+Chip
+
+Bus
+
+Timings
+
+Standard
+
+Type
+
+Module
+
+Clock rate (MHz)
+
+Cycle time (ns)[22]
+
+Clock rate (MHz)
+
+Transfer rate (MT/s)
+
+Bandwidth (MB/s)
+
+CL-TRCD-TRP
+
+CAS latency (ns)
+
+DDR3-800
+
+D
+
+PC3-6400
+
+6400
+
+5-5-5
+
+12.5
+
+E
+
+6-6-6
+
+DDR3-1066
+
+E
+
+PC3-8500
+
+133⅓
+
+7.5
+
+533⅓
+
+1066.67
+
+8533⅓
+
+6-6-6
+
+11.25
+
+F
+
+7-7-7
+
+13.125
+
+G
+
+8-8-8
+
+DDR3-1333
+
+F*
+
+PC3-10600
+
+166⅔
+
+666⅔
+
+1333⅓
+
+10666.67
+
+7-7-7
+
+10.5
+
+G
+
+8-8-8
+
+H
+
+9-9-9
+
+13.5
+
+J*
+
+10-10-10
+
+DDR3-1600
+
+G*
+
+PC3-12800
+
+1600
+
+12800
+
+8-8-8
+
+H
+
+9-9-9
+
+11.25
+
+J
+
+10-10-10
+
+12.5
+
+K
+
+11-11-11
+
+13.75
+
+DDR3-1866
+
+JKLM
+
+PC3-14900
+
+233⅓
+
+4286
+
+0933⅓
+
+1866⅔
+
+14933⅓
+
+10-10-1011-11-1112-12-1213-13-13
+
+10.56 11.78612.857 13.929
+
+DDR3-2133
+
+KLMN
+
+PC3-17000
+
+266⅔
+
+3.75
+
+1066⅔
+
+2133⅓
+
+17066⅔
+
+11-11-1112-12-1213-13-1314-14-14
+
+10.31311.25 12.18813.125
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Standard name
+
+Modulename
+
+Memoryclock(MHz)
+
+I/O busclock(MHz)
+
+Datarate(MT/s)
+
+Peak trans-fer rate(MB/s)
+
+TimingsCL-tRCD-tRP
+
+CASlatency(ns)
+
+DDR4-1600J*DDR4-1600K DDR4-1600L
+
+PC4-12800
+
+1600
+
+12800
+
+10-10-1011-11-1112-12-12
+
+12.513.75 15
+
+DDR4-1866L*DDR4-1866MDDR4-1866N
+
+PC4-14900
+
+233.33
+
+933.33
+
+1866.67
+
+14933.33
+
+12-12-1213-13-1314-14-14
+
+12.85713.92915
+
+DDR4-2133N*DDR4-2133PDDR4-2133R
+
+PC4-17000
+
+266.67
+
+1066.67
+
+2133.33
+
+17066.67
+
+14-14-1415-15-1516-16-16
+
+13.12514.06315
+
+DDR4-2400P*DDR4-2400RDDR4-2400TDDR4-2400U
+
+PC4-19200
+
+1200
+
+2400
+
+19200
+
+15-15-1516-16-1617-17-1718-18-18
+
+12.5 13.32 14.16 15
+
+DDR4-2666TDDR4-2666UDDR4-2666VDDR4-2666W
+
+PC4-21333
+
+333.33
+
+1333.33
+
+2666.67
+
+21333.33
+
+17-17-1718-18-1819-19-1920-20-20
+
+12.75 13.50 14.25 15
+
+DDR4-2933VDDR4-2933WDDR4-2933YDDR4-2933AA
+
+PC4-23466
+
+366.67
+
+1466.67
+
+2933.33
+
+23466.67
+
+19-19-1920-20--2122-22-22
+
+12.96 13.64 14.32 15
+
+DDR4-3200WDDR4-3200AADDR4-3200AC
+
+PC4-25600
+
+1600
+
+3200
+
+25600
+
+20-20--2224-24-24
+
+12.5 13.75 15
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Mhz (millones de hercios= millones de ciclos por segundo) hacen referencia a
+
+la velocidad del reloj del sistema.
+
+El procesador va conectado al BUS de datos y puede efectuar operaciones en
+
+el ciclo de subida y en el de bajada de modo que si la velocidad (en
+
+realidad: frecuencia) del reloj es de 1.000 MHz, la velocidad del sistema
+
+sería 2.000 MT/s lo que a los efectos prácticos significa que la velocidad
+
+real del sistema se mide en MT/s (el doble de la velocidad -frecuencia- del
+
+reloj). Claro que hay placas madre que pueden efectuar 4 transferencias de
+
+datos por ciclo de reloj con lo que la velocidad del reloj en Mhz se
+
+multiplica por 4 y obtenemos los Mt/s. Es muy frecuente que al leer las
+
+especificaciones del BUS (FSB= Front-side bus ) nos den el dato en MT/s en
+
+lugar de su frecuencia de reloj (en Mhz)
+
+En consecuencia, la velocidad real del sistema viene condicionado por la
+
+combinación de la frecuencia del reloj y el multiplicador mencionado (amén de
+
+otras cosas... porque el sistema no correrá más que su elemento más lento)
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Descripción
+
+DDR3
+
+DDR4
+
+Ventaja
+
+Densidades de chip
+
+De 512Mb a 8b
+
+De 4Gb a 16Gb
+
+Capacidades DIMM mayores
+
+Velocidades de transferencia de datos
+
+800Mb/s – 2133Mb/s
+
+1600Mb/s – 3200Mb/s
+
+Migración a E/S de más alta velocidad
+
+Voltaje
+
+1,5V
+
+1,2V
+
+Demanda reducida de energía de la memoria
+
+Bajo voltaje estándar
+
+Sí (DDR3L a 1,35V)
+
+Se prevé una reducción hasta 1,1V
+
+Reducciones de energía de la memoria
+
+Bancos internos
+
+Más bancos
+
+Grupos de bancos (GB)
+
+Accesos más rápidos en modo de ráfagas
+
+Entradas VREF
+
+2 – DQ y CMD/ADDR
+
+1 – CMD/ADDR
+
+El VREFDQ ahora es interno
+
+tCK – DLL habilitado
+
+300MHz – 800MHz
+
+667MHz – 1,6GHz
+
+Mayores velocidades de transferencia de datos
+
+tCK – DLL deshabilitado
+
+10MHz – 125MHz (opcional)
+
+Indeterminado hasta 125MHz
+
+Totalmente compatible con DLL-off
+
+Latencia de lectura
+
+AL + CL
+
+AL + CL
+
+Valores ampliados
+
+Latencia de escritura
+
+AL + CWL
+
+AL + CWL
+
+Valores ampliados
+
+Controlador DQ (ALT)
+
+40 Ω
+
+48 Ω
+
+Óptimo para las aplicaciones PtP
+
+Bus DQ
+
+SSTL15
+
+POD12
+
+Menos ruido y consumo de energía de E/S
+
+Valores RTT (expresados en Ω)
+
+120, 60, 40, 30, 20
+
+240, 120, 80, 60, 48, 40, 34
+
+Admite velocidades de transferencia de datos más altas
+
+No se admite RTT
+
+LECTURA en modo de ráfagas
+
+Se inhabilita durante las lecturas en modo de ráfagas
+
+Facilidad de uso
+
+Modos ODT
+
+Nominal, Dinámico
+
+Nominal, Dinámico, Park
+
+Modo de control adicional; cambio de valor OTF
+
+Control ODT
+
+Se requiere señalización ODT
+
+No se requiere señalización ODT
+
+Facilidad de control ODT; permite enrutamiento sin ODT, aplicaciones PtP
+
+Registro para múltiples propósitos
+
+Cuatro registros – 1 definido, 3 RFU
+
+Cuatro registros – 3 definidos, 1 RFU
+
+Proporciona una lectura especializada adicional
+
+Tipos de DIMM
+
+RDIMM, LRDIMM, UDIMM, SODIMM
+
+RDIMM, LRDIMM, UDIMM, SODIMM
+
+Clavijas del DIMM
+
+240 (R, LR, U); 204 (SODIMM)
+
+288 (R, LR, U); 260 (SODIMM)
+
+RAS
+
+ECC
+
+CRC, Paridad, Direccionabilidad, GDM
+
+Más funciones RAS; integridad de datos mejorada
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Parámetros que hay que tener en cuenta en la memoria son
+
+La velocidad. Se mide en megahercios (MHz). Por ejemplo, si la velocidad de una memoria es de 800 MHz, significa que con ella se pueden realizar 800 millones de operaciones (lecturas y escrituras) en un segundo.
+
+El ancho de banda o tasa de transferencia de datos. Es la máxima cantidad de memoria que puede transferir por segundo, se expresa en megabytes por segundo (MB/s) o en gigabytes por segundo (GB/s).
+
+Dual/triple channel. Permite a la CPU trabajar con dos/tres canales independientes y simultáneos para acceder a los datos. De esta manera se multiplica el ancho de banda. Para ello, es imprescindible rellenar los bancos de memoria con dos o tres módulos de idénticas características.
+
+Tiempo de acceso. Es el tiempo que tarda la CPU en acceder a la memoria. Se mide en nanosegundos (un nanosegundo = 10–9 segundos).
+
+Latencia. Es el retardo producido al acceder a los distintos componentes de la memoria RAM.
+
+Latencias CAS o CL. Indica el tiempo (en número de ciclos de reloj) que transcurre desde que el controlador de memoria envía una petición para leer una posición de memoria hasta que los datos son enviados a los pines de salida del módulo. Cuanto menor sea, más rápida será la memoria.
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Fuente: https://hardzone.es//17/asi-funciona-atencia-memoria-ram-ddr4/
+
+Los siguientes cuatro parámetro siempre son número de ciclos de reloj, y se nombran como CAS, tRCD, tRP y tRAS respectivamente. En otras palabras, unas latencias de 15-15-15-38 significa que el parámetro CAS tarda 15 ciclos, el tRCD 15 ciclos, el tRP otros 15 ciclos y finalmente el parámetro tRAS tarda 38 ciclos de reloj en completarse.
+
+Cada vez que la RAM recibe información, éste queda en cola hasta que empieza un ciclo de reloj para poder procesarlo, y entonces se suceden los demás comandos. El acceso a memoria tiene las siguientes etapas
+
+RAS: Es el primer paso, y se le dice a la RAM qué fila del almacenamiento debe seleccionar.
+
+CAS: Es el segundo paso, y se le dice a la RAM la columna que debe solucionar.
+
+PRE: Tercer paso, se le dice a la memoria que empiece a cargar la siguiente fila. No se puede comenzar un nuevo paso RAS hasta que termina el PRE.
+
+Datos: Último paso, donde o se le da los datos a la RAM, o la RAM le da datos almacenados al procesador.
+
+Si vamos resumiendo, las dos primeras cifras (CAS y tRCD, recordemos) nos dicen cuánto tardan los datos en poder entrar y ser almacenados en la memoria RAM. El parámetro RCD es el tiempo que se tarda entre la fase RAS y CAS. Y CAS Latency es el retardo entre la fase CAS y la fase Datos.
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Gama de módulos de memoria RAM SoDIMM más comunes
+
+Para equipos portátiles de bajo consumo (ultraportátiles), dispositivos móviles, tables, etc se utilizan memorias LPDDR
+
+<número>
+
+COMPONENTES INTERNOS1.1. La memoria RAM
+
+Los módulos buffered o registered tienen registros incorporados (circuitos que aseguran la estabilidad a costa de perder rendimiento) que actúan como almacenamiento intermedio entre la CPU y la memoria. Este tipo de memoria aumenta la fiabilidad del sistema, pero también retarda los tiempos de transferencia de datos entre esta y el sistema.
+
+Se suelen usar sobre todo en servidores, donde es mucho más importante la
+
+integridad de los datos que la velocidad. Los módulos registered se distinguen de los unregistered por tener varios chips de pequeño tamaño. Incluyen detección y corrección de errores (ECC). ECC (Error Checking and Correction). Todas las memorias RAM experimentan errores, debido a factores tales como fluctuaciones de energía, interferencias, componentes defectuosos, etc. Las memorias ECC son capaces de detectar y corregir algunos de estos errores.
+
+Los módulos unbuffered o unregistered se comunican directamente con el northbridge de la placa base. Esto hace que la memoria sea más rápida, aunque menos segura que la registered.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador
+
+### 1. Concepto de microprocesador
+
+Es el cerebro del ordenador encargado de
+
+decodificar y ejecutar las instrucciones de los programas cargados en memoria principal.
+
+coordinar y controlar el resto de componentes que forman el ordenador y aquellos periféricos conectados a éste.
+
+Físicamente es un circuito integrado o chip formado por millones de transistores construidos sobre una oblea de silicio.
+
+Suelen tener forma cuadrada o rectangular y van colocados sobre un elemento de la placa base denominado zócalo.
+
+Modelos Intel;
+
+Web Intel
+
+Modelo AMD;
+
+Web AMD AMD/RyzenRyzen EspecificacionesRyzen G
+
+También se le conoce como CPU.
+
+Vídeo: Funcionamiento CPU
+
+Leer esta web
+
+→ Ampliación ←
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador
+
+Se trata de un chip de silicio(grafeno como futuro) compuesto por una serie circuitos integrados llamados núcleos que son capaces de procesar la información que circula a través de nuestro ordenador. Además de los núcleos, una CPU tiene un controlador de memoria para comunicarse con la RAM, memoria caché y controladores de entrada/salida.
+
+Seguramente todos sabréis que CPU significa en español Unidad Central de Procesamiento (Central Processing Unit). Se trata de un chip de silicio compuesto por una serie circuitos integrados llamados núcleos que son capaces de procesar la información que circula a través de nuestro ordenador. Además de los núcleos, una CPU tiene un controlador de memoria para comunicarse con la RAM, memoria caché y controladores de entrada/salida. Estos permiten comunicar la CPU con los carriles PCIe, en donde normalmente tenemos una tarjeta gráfica instada.
+
+Aportaciones de compañeros;
+
+Minix - Misterio de Intel
+
+Cómo funciona un procesador
+
+Canal de Hardware
+
+Overclock
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador
+
+### 1. Concepto de microprocesador. Fabricación
+
+Interpretación indicadores de cache
+
+AMD Phenon 9600 Quadcore tiene 3 niveles de cache
+
+L1 512 kB
+
+L2 4 x 512 KB
+
+L3 2 MB.
+
+Total 4,56MB de cache
+
+Intel Core 2 Quad Q6600, tiene dos niveles de cache
+
+L1 64 kB + 64 kB
+
+L2 2 x 4MB
+
+Total de 8,128MB
+
+Cuando aparece cache 64kB + 64kB, quiere decir 64kB para instrucciones y 64kB para datos
+
+Cuando aparece caché 2 x 4MB, quiere decir que son 4 MB por núcleo si tiene dos nucleos o 4 MB por pareja de núcleos si tiene cuatro nucleos.
+
+Si aparece completo, es decir, si sale 2MB y no 4 x 512kB, entonces es compartido por todos los núcleos, en este caso cuatro.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador
+
+Arquitectura de procesadores mononúcleo.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador
+
+Arquitectura de un procesador multinúcleo.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador
+
+Figura. Microarquitectura Nehalem
+
+GPU integrada en el procesador
+
+AMD y sus gráficas integradas Radeon, ejem Ryzen 5 2400G (Graghics)
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador
+
+Figura. Microarquitectura Sandy Bridge (mayor integración)
+
+GPU integrada en el procesador
+
+L3 compartida por todos los nucleos. Eso significa que todos los núcleos pueden acceder a los mismos datos, sin tener que estar cargando las mismas informaciones de forma independiente.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+Una instrucción no es más que un código binario que la CPU puede entender.
+
+Programa = conjunto de instrucciones.
+
+Ejecución de un programa = ejecución secuencial de cada una de sus instrucciones.
+
+¿Cómo se ejecuta una instrucción?
+
+Fase de búsqueda → traer la instrucción desde la memoria hasta la CPU
+
+Fase de ejecución → llevar a cabo las acciones descritas por la instrucción
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+Todos los procesadores trabajan con un conjunto de instrucciones concreto.
+
+Decimos que dos procesadores son compatibles si comprenden las mismas instrucciones.
+
+Así, todos los procesadores de la familia del PC son compatibles por lo que pueden ejecutar las mismas instrucciones y, en consecuencia, los mismos programas.
+
+A este conjunto de instrucciones que inicialmente utilizaron los PCs se le llamó x86.
+
+El conjunto de instrucciones x86 apareció con el procesador Intel 8086 a finales de los años 70.
+
+El Intel 80386 amplió este conjunto de instrucciones para trabajar con registros de 32 bits (el 8086 era de 16 bits).
+
+Es por ello que muchas veces también nos referimos a este conjunto de instrucciones como x86-32 o IA-32 (Intel Arquitecture 32-bit) para diferenciarlo del conjunto original x86-16 así como de su posterior adaptación a máquinas de 64 bits (x86-64, x64, EM64T, etc).
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+Cada nueva generación de procesadores ha ampliado este conjunto de instrucciones inicial con nuevas instrucciones con dos fines principales
+
+Permitir realizar nuevas tareas a la CPU. Los ordenadores actuales ejecutan muchos programas que en aquella época no existían.
+
+Mejorar la eficiencia en la ejecución de las instrucciones
+
+Habréis visto en multitud de ocasiones que un programa tenga como requisito para poder ejecutarse una CPU mínima.
+
+En ocasiones, este requisito puede atender a razones de velocidad pero en otras muchas situaciones es debido a que necesita que el procesador soporte unas
+
+instrucciones determinadas que se introdujeron con dicha CPU.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+Algunas de las instrucciones que han ampliado el conjunto x86 son las siguientes
+
+IA-32 (Intel Arquitecture 32-bit)
+
+Extensión del conjunto x86 para trabajar en procesadores de 32 bits.
+
+MMX (MultiMedia eXtension)
+
+Introducidas por el Pentium MMX en 1997. Eran un conjunto de nuevas instrucciones y registros para realizar operaciones con enteros de forma más eficiente en aplicaciones ricas en gráficos.
+
+3DNow!
+
+Fue la respuesta de AMD a las instrucciones MMX de Intel. Aparecieron con el AMD K6-2 en 1998 con el fin de mejorar la ejecución en aplicaciones 3D.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+SSE (Streaming SIMD Extensions) o MMX2
+
+Aparecieron con el Pentium III en 1999 para mejorar a las anteriores MMX en dos aspectos: trabajan con números en coma flotante y pueden emplearse simultáneamente con el uso de la FPU.
+
+SSE2, SSE3, SSSE3, SSE4, SSE5, AVX, CVT16...
+
+Sucesivas versiones que mejoran las instrucciones SSE para manejo de gráficos.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+X86-64 o AMD64
+
+Extensión del conjunto x86 para trabajar en procesadores de 64bits. Fueron creadas por AMD e implementadas por primera vez en su procesador Opteron en 2003.
+
+- IA-32e, EM64T o Intel64
+
+Nombres que dio Intel a su extensión del conjunto x86 para trabajar en procesadores de 64bits. Hay que distinguirlas del conjunto IA64 que Intel implementó en sus procesadores para servidores Itanium, las cuales son incompatibles con las instrucciones x86.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+Hasta 2006, los ordenadores de Apple utilizaban unos procesadores que los hacían incompatibles con los PC.
+
+Se trataba de procesadores Motorola y PowerPC.
+
+El motivo de esta incompatibilidad radica en que dichos procesadores ejecutan un conjunto de instrucciones distinto al conjunto de instrucciones soportado por los procesadores Intel o AMD (recordad x86).
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+Se trataba de dos filosofías de diseño de microprocesadores distintas
+
+CISC (Complex Instruction Set Computer), es decir, utilizar un conjunto de instrucciones formado por pocas instrucciones pero complejas (Intel, AMD).
+
+RISC (Reduced Instruction Set Computer), o lo que es lo mismo, muchas instrucciones pero simples (Apple, Motorola, IBM, PowerPC).
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+¿Qué es mejor CISC o RISC?
+
+Estudios de prestaciones de ambas tecnologías muestran que los RISC obtienen mejores prestaciones (más potentes y rápidos) que los CISC.
+
+Sin embargo, el mercado de los ordenadores personales está copado por x86 → CISC más utilizado.
+
+¿Es cierto?
+
+Realmente, las diferencias son cada vez más borrosas entre las arquitecturas CISC y RISC.
+
+Las CPU modernas de Intel y AMD se basan en una combinación de instrucciones CISC y RISC.
+
+Estos procesadores traducen las largas instrucciones CISC de la arquitectura x86 a operaciones sencillas de longitud fija que se ejecutan en un núcleo de estilo RISC.
+
+El objetivo es obtener las ventajas de ambas tecnologías: mantener la compatibilidad con las instrucciones CISC x86 consiguiendo las prestaciones de ejecución de instrucciones RISC.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador.Instrucciones
+
+Arquitectura y Procesos de fabricación
+
+Información;
+
+Ampliación procesadores Intel AMD
+
+Guía Procesadores Intel AMD 2017
+
+Muy Interesante;
+
+Procesadores-intel-amd-equivalencias/
+
+Novedades Intel / AMD
+
+Ryzen 3000
+
+<número>
+
+COMPONENTES INTERNOS2. El MICROPROCESADOR
+
+¿Qué es el Hyperthreading?
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador. CARACTERÍSTICAS
+
+https://www.youtube.com/watch?v=UNtyWoHvuxI
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador. CARACTERÍSTICAS
+
+Fuente: https://pcsinmisterios.com//17/generaciones-intel-core-ix/
+
+Esta octava generación de procesadores Intel no da el salto a los 10nm, son una evolución de los Kaby Lake .
+
+Caché L0
+
+Una de las principales novedades en la arquitectura Sandy Bridge (2ª Generación) es el caché L0. Esa pequeña memoria viene para ayudar al procesador a la hora de aprovechar datos comúnmente utilizados. El caché L0 recibió el nombre de caché de micro instrucciones descodificadas, el cual es capaz de almacenar hasta 1.536 micro instrucciones.
+
+Ese nuevo caché es un beneficio en dos sentidos: primero que el procesador no tendrá que descodificar las mismas instrucciones dos veces y segundo que el CPU logra desactivar la recolección de nuevos datos por algún tiempo, factor que auxilia en la economía de energía. La ventaja obtenida al usar el caché L0 llega a 80%, dato obtenido en una presentación de Intel.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador. CARACTERÍSTICAS
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador. NOMENCLATURA
+
+Marca Intel (Core, Pentium, Celeron…)
+
+Modificador de marca (i7, i5, i3…).
+
+Indicador de generación, en este caso el
+
+número 8 que corresponde a la octava generación de procesadores Core, Coffee Lake.
+
+Dígitos numéricos SKU (Stock-keeping unit o número de referencia). Identificador usado para el seguimiento de un producto.
+
+Sufijos opcionales que representan la línea de procesadores
+
+XE: Extreme Edition. De momento solo los procesadores i9 más potentes son XE. Son los más rápidos, pero cuestan más de 1.000€
+
+X: Extreme. Máximo rendimiento. CPUs pensadas para gaming, eSports, streaming, codificación de vídeo en tiempo real
+
+K: CPUs sin bloqueo de velocidad ni voltaje (Unlocked). Están pensadas para hacer overclocking, es decir, aumentar su rendimiento por encima de los valores de fábrica.
+
+SIN LETRA: Mejor rendimiento que los T
+
+T: Bajo consumo para Sobremesa
+
+F: Procesadores sin Gráficos integrados. IGPU deshabilitada. (9ª Generación)
+
+H (Portátil): Gráficos de alto rendimiento para portátiles
+
+HK (Portátil): Gráficos de alto rendimiento con overclocking
+
+HQ (Portátil): Gráficos de alto rendimiento con cuatro núcleos
+
+U (Portátil): Consumo mínimo, en algunos casos ni siquiera necesita ventiladores.
+
+Y (Portátil): Bajo consumo y bajo rendimiento
+
+G(Portátil):Menor rendimiento y con una gráfica discreta.
+
+M(Portátil):Xeon Mobile. Workstation móviles.
+
+<número>
+
+COMPONENTES INTERNOS2. El microprocesador. NOMENCLATURA
+
+Investiga sobre la nomenclatura que realiza AMDen la identificación de sus procesadores.
+
+<número>
+
+COMPONENTES INTERNOS11. El microprocesador. ESPECIFICACIONES
+
+https://www.muycomputer.com//24/core-i9-9900k-especificaciones/
+
+PROCESADOR AMD RYZEN THREADRIPPER CON 32 NÚCLEOS Y 64 HILOS;
+
+https://www.globomatik.com/blog/amd-chipset-450
+
+<número>
+
+COMPONENTES INTERNOS11. El microprocesador. ESPECIFICACIONES
+
+La velocidad máxima del procesador es la velocidad que asegura que será estable con el procesador, pero puedes poner ram más veloces que puedan soportar tu motherboard.
+
+Pero cuidado, revisa las frecuencias de reloj de memoria que soporta la placa base.
+
+Para evitar configuraciones inestables de frecuencia de placabase tenemos dos opciones;
+
+una es que cada motherboard publica una lista QVL con el modelo y serie exacta de la ram que soporta asegurando funcionar a la velocidad que indica la marca, es decir no todas las memorias de 3600 van a funcionar bien sino solo algunos modelos.
+
+Y otra opción es comprar memorias con la denominación B-die de samsung, son memorias con los mejores chips y aseguran funcionar bien en Ryzen, pero cuestan bastante y son escasas.
+
+<número>
+
+COMPONENTES INTERNOS3. Paralelismo
+
+El paralelismo es una forma de computación en la cual varios cálculos pueden realizarse simultáneamente.”
+
+- Algunas técnicas relacionadas con el paralelismo
+
+Multitarea (Multitask)
+
+Habilidad del procesador para dar la apariencia de estar realizando varias tareas a la vez.
+
+Multihilo (Multithreading)
+
+Dividir el trabajo de un programa (proceso) en varios subtrabajos que pueden correr en procesadores distintos.
+
+Multinúcleo (Multicore)
+
+Procesadores que contienen dos o más núcleos. Permite ejecutar un hilo por núcleo.
+
+<número>
+
+COMPONENTES INTERNOS3. Paralelismo
+
+El Hyperthreading (HT) de Intel es un ejemplo de tecnología multithreading.
+
+Mejora el rendimiento global del ordenador haciendo que un único microprocesador físico emule a dos microprocesadores lógicos.
+
+Para poder utilizar esta tecnología el sistema operativo, la placa base, el chipset y la BIOS deben soportar HT.
+
+Además, es necesario que las aplicaciones estén programadas de forma que sean divisibles en varios hilos.
+
+Comparativa del rendimiento de procesadores multinúcleo ejecutando juegos 3D
+
+http://www.chw.net//review-de-juegos-en-multi-nucleo/
+
+Fijaos como no todos los juegos funcionan mucho mejor cuantos más núcleos tenemos → el rendimiento depende fuertemente de que las aplicaciones estén programadas para aprovechar los distintos núcleos.
+
+<número>
+
+COMPONENTES INTERNOS4. Refrigeración
+
+Todo componente electrónico al paso de corriente eléctrica genera calor.
+
+Dicho calor puede hacer que el dispositivo electrónico sea inestable y produzca errores en su funcionamiento.
+
+Por tanto, es importantísimo disipar el calor que producen los elementos de un ordenador. Además
+
+A mayor voltaje → más calor
+
+A mayor velocidad de trabajo (frecuencia) → más calor
+
+Tipos de refrigeración
+
+Pasiva por aire → disipadores
+
+El objetivo del disipador es incrementar la superficie de contacto con el aire para maximizar el calor que éste es capaz de retirar. Cuantas más aletas y más delgadas más calor disipará.
+
+Activa por aire → disipador + ventilador – Mejora la eficacia de la anterior.
+
+<número>
+
+COMPONENTES INTERNOS4. Refrigeración
+
+<número>
+
+COMPONENTES INTERNOS4. Refrigeración
+
+Refrigeración líquida
+
+Básicamente se compone de un radiador, un depósito, una bomba de agua y el circuito de tubos.
+
+Más eficaz que por aire.
+
+Menos ruidosa.
+
+Permite refrigerar todos los componentes a la vez (procesador, chipsets, gráfica, disco duro y memoria)
+
+- Cara, compleja y peligrosa.
+
+<número>
+
+COMPONENTES INTERNOS4. Refrigeración
+
+Refrigeración por inmersión
+
+El computador es totalmente sumergido en un líquido de conductividad eléctrica muy baja, como aceite mineral
+
+<número>
+
+COMPONENTES INTERNOS4. Refrigeración
+
+Refrigeración por Heatpipes
+
+Se trata de un circuito cerrado en donde un fluido se calienta en la base de contacto con el CPU, se evapora, sube por una tubería hasta el disipador, se condensa y baja como líquido a la base nuevamente. Se utilizan bastante en los diseños de placas actuales.
+
+<número>
+
+COMPONENTES INTERNOS4. Refrigeración
+
+<número>
+
+COMPONENTES INTERNOS4. Refrigeración
+
+Otros tipos de refrigeración
+
+Refrigeración por software (ahorro de energía)
+
+Criogenia (nitrógeno líquido) ➢ Etc.
+
+https://www.youtube.com/watch?v=s3MbnYt_u5E
+
+https://www.youtube.com/watch?v=U107s8VW4CI
+
+Mejores Disipadores
+
+https://gamerpc.es/mejores-disipadores-aire-cpu/
+
+Consejos
+
+https://computerhoy.com/noticias/zona-gaming/como-elegir-caja-sistemas-refrigeracion-tu-pc-41325
+
+https://computerhoy.com/noticias/hardware/claves-consejos-refrigerar-tu-pc-reducir-temperatura-42779
+
+<número>
+
+COMPONENTES INTERNOS 4. actividades
+
+Haz una búsqueda de los últimos sistemas refrigeración
+
+<número>
+
+COMPONENTES INTERNOS4. Actividades
+
+Investiga sobre el overcloking.
+
+<número>
+
+---
+
+## 2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS
+
+COMPONENTES INTERNOS
+
+Procesadores AMD Nomencaltura
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+Procesador AMD: modelos, como identificarlos y sus usos
+
+1.-¿Qué es una CPU, y una APU?
+
+2.-Generaciones y cómo identificar un procesador AMD
+
+3.-AMD Ryzen Threadripper
+
+3.1.-Usos
+
+4.-AMD Ryzen de escritorio
+
+4.1.-Uso
+
+5.-APU AMD Ryzen para escritorio
+
+5.1.-Uso
+
+5.2.-APU Ryzen para portátiles
+
+6.-APU AMD Athlon y Serie A
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+Procesador AMD: modelos, como identificarlos y sus usos
+
+1.-¿Qué es una CPU, y una APU?
+
+Seguramente todos sabréis que CPU significa en español Unidad Central de Procesamiento (Central Processing Unit). Se trata de un chip de silicio compuesto por una serie circuitos integrados llamados núcleos que son capaces de procesar la información que circula a través de nuestro ordenador. Además de los núcleos, una CPU tiene un controlador de memoria para comunicarse con la RAM, memoria caché y controladores de entrada/salida. Estos permiten comunicar la CPU con los carriles PCIe, en donde normalmente tenemos una tarjeta gráfica instada.
+
+En el caso de una APU (Accelerated Processor Unit) no solo disponemos de estos elementos, sino que además el fabricante incorpora una o varias unidades de procesamiento para gráficos. Esto significa que no necesitaríamos una tarjeta gráfica dedicada.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+Procesador AMD: modelos, como identificarlos y sus usos
+
+2.-Generaciones y cómo identificar un procesador AMD
+
+Aquí encontramos las siguientes familias
+
+AMD Threadripper
+
+AMD Ryzen para escritorio y portátiles
+
+APU AMD Ryzen
+
+APU AMD Athlon
+
+AMD Ryzen y Athlon para portátiles
+
+Vamos a obviar las anteriores generaciones de AMD como los Bulldozer y los FX por carecer de sentido en la época actual.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+3.-AMD Ryzen Threadripper
+
+No disponen de gráficos integrados y todos ellos cuenta con el socket sTR4 en formato LGA y un puente sur constituido por el chipset AMD X399. Estas CPU consisten básicamente en dos CPU Ryzen unidas entre sí físicamente con la arquitectura AMD Whiteheaven en 1ª generación y Pinnacle Ridge en la segunda. Cuentan con hasta 64 líneas PCIe, memoria caché de entre 16 y 64 MB, y soporte para 8 canales de memoria (128 GB DDR4).Todos ellos llevan el carácter “X” al final del modelo, indicando que son de alto rendimiento. En el caso de “WX” significa que además están orientados a Workstation.
+
+El primer número indica la generación, y actualmente tenemos dos arquitecturas
+
+Zen (Whitehaven) con proceso de 14 nm,
+
+Zen+ (Pinnacle Ridge) con proceso de 12 nm.
+
+Pronto aparecerá la 3ª generación, y aquí veremos un 3. Respecto al segundo número, todos los TR lleva el 9 en el distintivo.
+
+El tercer y cuarto número indican en número de núcleos del procesador AMD
+
+00: 8 núcleos
+
+20: 12 núcleos
+
+50: 16 núcleos
+
+70: 24 núcleos
+
+90: 32 núcleos
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+4.-AMD Ryzen de escritorio
+
+Actualmente encontramos en el mercado tres generaciones de estos procesadores la serie 1000 de 14 nm, 2000 de 12nm y 3000 de 7 nm que ha salido este mismo año 2019.
+
+Un aspecto positivo es que todos ellos funcionan bajo el socket PGA AM4, y contamos con los chipsets A320, B350, B450, X370, X470 y X570. Los más recomendables son el B450 como gama media, y los X470 y X570 como gama alta, especialmente el X570 para Ryzen de 2ª y 3ª generación.
+
+El primer número vendría a ser la gama, y es muy similar a lo que hace Intel con sus Core iX. De esta forma tenemos cuatro segmentos distintos en la actualidad, y en cada uno de ellos un determinado recuento de núcleos, salvo algunos casos.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+Cuatro segmentos distintos en la actualidad;
+
+Ryzen 9: gama entusiasta (12 y 16 núcleos)
+
+Ryzen 7: gama alto rendimiento (8 núcleos)
+
+Ryzen 5: gama alta (6 o 4 núcleos)
+
+Ryzen 3: gama media (4 núcleos)
+
+El segundo número está claro, y es la generación. Actualmente tenemos 3
+
+1: primera generación Zen (Summit Ridge) de 14 nm
+
+2: segunda generación Zen+ (Pinnacle Ridge) de 12 nm
+
+3: tercera generación Zen 2 (Matisse) de 7 nm
+
+El siguiente número nos informa del rendimiento del procesador, se puede identificar también con la frecuencia;
+
+7, 8, 9: Alto rendimiento y entusiasta
+
+4, 5, 6: Medio y alto rendimiento
+
+El tercer y cuarto número aportan más detalles acerca del modelo de procesador y de su sku. En la mayoría de casos simplemente es “00”, pero podemos encontrar 20 o 50 para referirnos a variantes con distinta cantidad de núcleos o frecuencia. Mientras más alto sea el número, mayor será el rendimiento.
+
+Y finalizamos con el carácter “X, G, T o S” que indica las características especiales
+
+X: alto rendimiento con la tecnología XFR (Los procesadores podrán superar su velocidad turbo cuando la refrigeración los mantenga suficientemente fríos, de forma automática)
+
+G: procesador con: gráficos integrados
+
+T: procesador de bajo consumo
+
+S: procesador de bajo consumo con GFX (Graphic Effects – Efectos Gráficos)
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+5.-APU AMD Ryzen para escritorio
+
+El aspecto fundamental será su configuración gráfica en la que encontramos dos variantes.
+
+En los modelos inferiores (2200G, 2200GE y 3200G) tenemos gráficos Radeon Vega 8, con 8 núcleos gráficos a 1250/1000 MHz y 512 shaders.
+
+Y en los modelos superiores (3400G y 2400G) tenemos AMD Radeon RX Vega 11, con 11 núcleos gráficos a 1400/1250 MHz y 704 shaders con capacidad de overclocking.
+
+El primero indica en este caso el número de núcleos y segmento, y en consecuencia la disponibilidad de tecnología multihilo o no
+
+Ryzen 3: procesador AMD de rendimiento medio, 4 núcleos y 4 hilos + gráficos Radeon Vega 8
+
+Ryzen 5: alto rendimiento 4 núcleos y 8 hilos + Gráficos Radeon RX Vega 11
+
+En cuanto al segundo número, nos indica la generación, aunque deberíamos de restarle -1 para no equivocarnos.
+
+si tenemos “2” pertenecerá a la 1ª generación Zen (Raven Ridge) de 14 nm,
+
+mientras que el “3” representará la 2ª generación Zen+ (Picasso) a 12 nm.
+
+El tercer número hace de nuevo referencia a su rendimiento:, así que será distintivo de la frecuencia de la APU principalmente.
+
+El “2” para APU con menos de 3,8 GHz y
+
+El “4”, para APU de más de 3,8 GHz.
+
+Los números utilizados para el modelo todos son “00”.
+
+El último carácter que representa el rendimiento del procesador,
+
+más concretamente su TDP, y tenemos dos variantes
+
+G: alto rendimiento (65W TDP)
+
+GE: bajo rendimiento (35W TDP)
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+5.2.-APU Ryzen para portátiles
+
+Llevan gráficos Radeon Vega de 3, 6, 8 y 10 núcleos, y RX Vega de 10 núcleos para los modelos más potentes.
+
+La nomenclatura para el procesador AMD Ryzen de portátiles es exactamente la misma que la usada en los de escritorio, aunque debemos de tener en cuenta los siguientes cambios
+
+Generación: los procesadores de 1ª generación Zen y 14 nm serán la serie 2000, mientras que los de 2ª generación Zen+ y 12 nm, serían la serie 3000.
+
+TDP y rendimiento: ahora además se introducen dos letras más, la “U”, para referirse a procesadores de 15W TDP (bajo consumo), y la “H”, para referirse a los de alto consumo (35W).
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+6.-APU AMD Athlon y Serie A
+
+Tres subfamilias
+
+AMD Athlon con gráficos integrados
+
+AMD Athlon sin gráficos integrados
+
+AMD Serie A
+
+En primer lugar, tenemos el distintivo Ax que se usa para el recuento de núcleos y la versión de los gráficos integrados
+
+A6 e inferiores: Dos núcleos y Radeon R5 Series con 384 Sahders a 800 MHz en el mejor de los casos.
+
+A8 y superiores: 4 núcleos con gráficos Radeon R7 Series. Parten de los 384 Shaders a 900 MHz del A8-9600, hasta los 512 Shaders y 1108 MHz del A12-9800.
+
+El primer número de código representa la generación del procesador, y tenemos las siguientes
+
+6000: 5ª generación, arquitectura Piledriver
+
+7000: 6º generación, arquitectura Steamroller
+
+8000: 6ª generación, arquitectura Excavator
+
+9000: 7ª generación, arquitectura Excavator V2
+
+Con el segundo número:frecuencia de trabajo, y con los dos números siguientes al número de modelo. De nuevo distinguiremos modelos 00, 20, 50, y así sucesivamente en función de sus prestaciones.
+
+Finalmente tenemos la letra final, y su presencia nos indica la función de su rendimiento. En la generación actual tan solo encontramos
+
+la letra “E”, si la APU es de 35W, o
+
+su ausencia, si es de 65W. Pero
+
+en generaciones anteriores también se utilizaba la letra “K” para indicar que era una APU con el multiplicador desbloqueado.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+Hablaremos de las novedades de la tercera generación de 7 nm de Ryzen sin olvidarnos aún de la generación anterior y las APUs. AMD está en un momento dulce y sus Ryzen 3000 son las CPU de mayor rendimiento disponibles en el mercado para montar un equipo gaming. Si aún no conoces estos procesadores, aquí te aclararemos las dudas.
+
+Fuente;
+
+https://www.profesionalreview.com//26/procesador-amd-modelos/
+
+https://www.opirata.com/blog/tipos-de-procesadores-amd/
+
+https://www.muycomputer.com//22/procesadores-amd-guia/
+
+<número>
+
+---
+
+## 2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS
+
+COMPONENTES INTERNOS
+
+Procesadores Intel Nomencaltura
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+1.-Introducción
+
+2.-Procesadores de la 9ª Generación
+
+3.-Procesadores de la 8ª Generación
+
+4.-Procesadores de la 7ª Generación
+
+5.-Procesadores de la 6ª Generación
+
+6.-Procesadores de la 5ª Generación
+
+7.-Procesadores de la 4ª Generación
+
+8.-Procesadores de la 3ª Generación
+
+9.-Procesadores de la 2ª Generación
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+1.-Introducción
+
+El nombre de un procesador de Intel es el Intel Core i3 8350K, de aquí se puede saber que
+
+Core: es la arquitectura interna.
+
+i3: es la categoría, dentro de todos los procesadores.
+
+8: indica la generación de procesadores a la que pertenece.
+
+K: indica que el procesador lleva los multiplicadores desbloqueados.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+2.-Procesadores de la 9ª Generación
+
+K: procesador con los multiplicadores desbloqueados.
+
+F: procesador con la iGPU deshabilitada, por lo que necesita una tarjeta gráfica dedicada.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+3.-Procesadores de la 8ª Generación
+
+Escritorio
+
+K: Procesador con multiplicadores desbloqueados.
+
+Portátil
+
+G: Incluye una tarjeta gráfica dedicada en el empaquetado.
+
+U: Procesador de muy poco consumo.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+4.-Procesadores de la 7ª Generación
+
+Escritorio
+
+K: Procesador con multiplicadores desbloqueados
+
+T: Procesador de bajo consumo
+
+Portátil
+
+H: Tarjeta gráfica integrada de alto rendimiento.
+
+HK: Procesador con multiplicadores desbloqueados, tarjeta gráfica integrada de alto rendimiento
+
+HQ: Tarjeta gráfica integrada de alto rendimiento, procesador de cuatro núcleos.
+
+U: Procesador de bajo consumo.
+
+Y: Procesador de muy bajo consumo.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+5.-Procesadores de la 6ª Generación
+
+Escritorio
+
+K: Procesador con multiplicadores desbloqueados.
+
+T: Procesador de bajo consumo.
+
+Portátil
+
+H: Tarjeta gráfica de alto rendimiento
+
+HK: Tarjeta gráfica de alto rendimiento, procesador con multiplicadores desbloqueados.
+
+HQ: Tarjeta gráfica integrada de alto rendimiento, procesador de cuatro núcleos.
+
+U: Procesador de bajo consumo.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+6.-Procesadores de la 5ª Generación
+
+Escritorio
+
+C: Procesador con multiplicadores desbloqueados.
+
+R: Procesador de escritorio pero soldado a la placa base.
+
+Portátil
+
+H: Tarjeta gráfica de alto rendimiento.
+
+HQ: Tarjeta gráfica integrada de alto rendimiento, procesador de cuatro núcleos.
+
+U: Procesador de bajo consumo.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+7.-Procesadores de la 4ª Generación
+
+Escritorio
+
+K: Procesador con multiplicadores desbloqueados.
+
+R: Procesador de escritorio pero soldado a la placa base.
+
+S: Procesador de bajo consumo.
+
+T: Procesador de muy bajo consumo.
+
+Portátil
+
+HQ: Tarjeta gráfica integrada de alto rendimiento.
+
+M: Procesador para portátil
+
+MQ: Procesador para portátil de cuatro núcleos.
+
+MX: Procesador de edición Xtreme pero para portátil.
+
+U: Procesador de bajo consumo.
+
+Y: Procesador de muy bajo consumo.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+8.-Procesadores de la 3ª Generación
+
+Escritorio
+
+K: Procesador con multiplicadores desbloqueados.
+
+S: Procesador de bajo consumo.
+
+T: Procesador de muy bajo consumo.
+
+Portátil
+
+M: Procesador para portátil.
+
+QM: Procesador para portátil de cuatro núcleos.
+
+U: Procesador de bajo consumo.
+
+Y: Procesador de muy bajo consumo.
+
+<número>
+
+COMPONENTES INTERNOS1. PROCESADORES AMD
+
+9.-Procesadores de la 2ª Generación
+
+Escritorio
+
+K: Procesador con multiplicadores desbloqueados.
+
+S: Procesador de bajo consumo.
+
+T: Procesador de muy bajo consumo.
+
+Portátil
+
+M: Procesador para portátil
+
+QM: Procesador para portátil de cuatro núcleos.
+
+<número>
+
+---
+
+## 2.5 U2 - P3 - Perifèrics i Communications
+
+Components d’un equip microinformatic Joan Alfred Noll Obiol Muntatge i manteniment d’equips
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Índex Introducció Resultats d’aprenentatge Sistemes informàtics. Unitats funcionals 1.1 Informació i sistemes informàtics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.1.1 Elements de la informació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.1.2 Els ordinadors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2 Unitats funcionals dels ordinadors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.1 La memòria principal i els seus elements . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.2.2 La unitat central de processament . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.3 Busos del sistema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.4 Suports i unitats d’entrada i sortida . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.3 Estructura externa d’un sistema microinformàtic . . . . . . . . . . . . . . . . . . . . . . . . . 1.3.1 L’estructura física d’un equip informàtic . . . . . . . . . . . . . . . . . . . . . . . . . Placa base: components i conﬁguració 2.1 Placa base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.1.1 El joc de xips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.2 BIOS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.3 Connector del processador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.1.4 Ranures o sòcols de memòria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.5 Busos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.6 Ranures d’expansió . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.1.7 Connectors interns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.8 Connectors externs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.9 Connector d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.1.10 Pila . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.11 El pont . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2 El processador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2.1 Freqüència del rellotge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.2 Alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.3 Registres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2.4 Memòria cau (cache) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.5 Joc d’instruccions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.6 Segmentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2.7 Processadors superescalars . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.8 Paral·lelisme de ﬁls (threads) o hyperthreading . . . . . . . . . . . . . . . . . . . . . 2.2.9 Multiprocessament i xips multinucli . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2.10 Fabricants . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3 La memòria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.1 Jerarquia de memòria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.3.2 Memòria principal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.3.3 Limitacions en la quantitat de memòria . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.4 MMU . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.5 Tipus de memòria RAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.3.6 Memòria virtual . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.7 Fabricants de memòria RAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.8 Memòria ROM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Perifèrics i comunicacions 3.1 El disc dur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.1 Estructura interna d’un disc dur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.2 Característiques dels discos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.1.3 Format i particions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.4 Estàndards d’interfícies i de control . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.5 Modes de transferència . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.1.6 Memòria cau de disc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2 La disquetera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.3 Discos òptics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.3.1 Tipus de discos òptics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.3.2 Tipus de dispositius de lectura/escriptura de discos òptics . . . . . . . . . . . . . . . 3.4 Unitats basades en memòria ﬂaix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.5 La targeta gràﬁca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.5.1 Conceptes importants per a gràﬁcs . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.5.2 Components de la targeta gràﬁca . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.6 La targeta de so . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.6.1 Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.7 Connectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.7.1 Interfícies amb la placa base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.8 La targeta de xarxa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.8.1 Targetes Ethernet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.8.2 Targetes sense ﬁls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.9 El mòdem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.9.1 Monitor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.9.2 Teclat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.9.3 Ratolí . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.10 Carcassa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.11 Font d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Introducció L’ordinador personal ha esdevingut en els últims anys un company de viatge per a tots nosaltres. En la unitat “Components d’un equip microinformàtic” estudiarem els components que formen un ordinador físicament, i ens centrarem en aquells que s’utilitzen en l’entorn domèstic o de consum. Veurem també el concepte ampliat de sistema informàtic, que inclou tant l’ordinador com els usuaris que l’han d’utilitzar.
+
+El maquinari, la matèria que ara ens ocupa, és la part física de l’ordinador. Consta de diversos sistemes o components electrònics, que examinarem al llarg d’aquesta unitat. Hem de tenir en compte que l’evolució de la informàtica és molt ràpida, de manera que no podem aspirar més que a fer una fotograﬁa de l’estat actual dels components i mirar d’endevinar cap a on aniran les coses en un futur proper. És important conèixer tant els elements físics com els elements lògics de l’ordinador (el microprocessador, la memòria principal, el bus del sistema, la placa base, etc.), i la seva importància en el món informàtic.
+
+En l’apartat “Sistemes informàtics. Unitats funcionals” començareu treballant els conceptes d’informació, dades i tractament de la informació. Tot seguit s’introdueix el concepte d’informàtica, els seus objectius i els elements que s’hi poden trobar, i a continuació es deﬁneix l’ordinador i les seves parts funcionals.
+
+L’apartat “Placa base: components i conﬁguració” us permetrà conèixer i avaluar les plaques base i cadascuna de les seves parts, els processadors i els diferents tipus de memòries dels ordinadors. Aquests són els components fonamentals de qualsevol sistema informàtic, tal com estan construïts actualment. La placa base és un component fonamental perquè és el que controla i interconnecta la resta de dispositius del sistema. Així, començarem per la memòria principal
+
+n’analitzarem el funcionament, la importància i els tipus. Tot seguit, treballarem sobre el microprocessador, la seva funció, i la seva importància, i també dels elements que el componen, dels tipus de microprocessadors i de com funcionen. Veurem també els camins de comunicació que té el processador amb la memòria de treball i amb els perifèrics, com són els diferents busos i la resta de components de la placa base.
+
+En l’apartat “Perifèrics i comunicacions” estudiareu les principals característiques i el funcionament dels suports i dispositius d’entrada i sortida utilitzats en l’entorn informàtic. L’ordinador per si mateix no pot gestionar la informació: li calen altres elements, que anomenem perifèrics. En concret, veurem els tradicionals discos durs o disquets, els CD, DVD i memòries USB. Examinarem la tecnologia que empra cadascun d’aquests sistemes com a base del seu funcionament. Això ens permetrà diferenciar-los i associar-los funcionalitats especíﬁques.
+
+També ens introduirem en les targetes d’expansió –com ara les targetes gràﬁques, les targetes de so o les de xarxa, i els mòdems. A més a més, farem una introducció
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic als perifèrics i, en concret, analitzarem les tecnologies de tres dels perifèrics imprescindibles en els sistemes informàtics actuals: el monitor, el teclat i el ratolí. També donarem un cop d’ull a les carcasses que integren totes les parts internes dels ordinadors i a la font d’alimentació, i donarem les principals indicacions per als procediments per a la instal·lació dels diversos components de maquinari.
+
+Es tracta d’una unitat amb una càrrega forta de continguts molt necessaris per al tractament correcte dels dispositius que haurem de muntar i reparar. És important conèixer les característiques dels dispositius, per tal de poder conﬁgurar-los de la manera més adequada. Coneixent la diversitat de dispositius, comprendrem millor la diversitat de models i les especiﬁcitats de cadascun d’aquests sistemes a l’hora de ser utilitzats pels usuaris, tractats pels sistemes operatius i conﬁgurats pels seus administradors. El bon coneixement d’aquests ens permetrà fer-ne un bon ús i conﬁgurar els equips de la manera més adequada.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Resultats d’aprenentatge En ﬁnalitzar aquesta unitat l’alumne/a
+
+### 1. Selecciona els components d’integració d’un equip microinformàtic es
+
+tàndard, descriure les seves funcions i comparar prestacions de diferents fabricants.
+
+- Descriu els blocs que componen un equip microinformàtic i les seves
+
+funcions.
+
+- Reconeix l’arquitectura de busos.
+- Descriu les característiques dels tipus de microprocessadors (freqüèn
+
+cia, tensions, potència, sòcols, entre d’altres).
+
+- Descriu la funció dels dissipadors i ventiladors.
+- Descriu les característiques i utilitats més importants de la conﬁgura
+
+ció de la placa base.
+
+- Avalua tipus de xassís per a la placa base i la resta de components.
+- Identiﬁca i manipular els components bàsics (mòduls de memòria,
+
+discos ﬁxos i els seus controladors, suports de memòries auxiliars, entre d’altres).
+
+- Analitza la funció de l’adaptador gràﬁc i el monitor.
+- Identiﬁca i manipular diferents adaptadors (gràﬁcs, LAN i mòdems,
+
+entre d’altres).
+
+- Identiﬁca els elements que acompanyen un component d’integració
+
+(documentació, controladors, cables i programari d’utilitats, entre d’altres).
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+### 1. Sistemes informàtics. Unitats funcionals
+
+Els sistemes informàtics permeten un tractament automatitzat de les dades que no seria possible sense aquestes eines. Els éssers humans intentem aprendre del nostre entorn. Mitjançant la comunicació incrementem o modiﬁquem els coneixements que tenim. Els ordinadors es poden descriure segons les unitats funcionals que els componen, i que en part fan el tractament de la informació i en part permeten la comunicació entre la persona i l’eina informàtica. Es pot considerar la informàtica com una eina per a la comunicació i l’ordinador el mitjà per a aconseguir-ho.
+
+1.1 Informació i sistemes informàtics Contínuament ens arriba informació per diferents canals. Les vies poden ser molt variades: les imatges, els sons, els escrits, els senyals, etc. Si poguéssim mesurar aquest volum d’informació, al ﬁnal del dia comprovaríem que és molta la quantitat que rebem.
+
+Heus ací dues maneres de deﬁnir la informació: La informació és el resultat de la manipulació de les dades. La informació és qualsevol forma de representació de fets, objectes, valors, idees..., que permet la comunicació entre persones i l’adquisició del coneixement de les coses.
+
+Tota informació consta de dades o unitats relacionades. 1.1.1 Elements de la informació La informació està formada per les dades. Les dades s’utilitzen per a produir informació, que ens ajuda a prendre decisions. Les dades són fets o objectes que no han estat manipulats.
+
+No totes les dades són del mateix tipus. Si pensem en la nostra adreça postal (per exemple, c/ Muntaner, 100, 3r), podem comprovar que hi ha diferents tipus de caràcters. Aleshores, podem classiﬁcar les dades segons els tipus següents: Les dades són tot allò que forma la informació.
+
+Un caràcter és cada un dels símbols que formen part de la informació. La diferència entre un nombre i un nombre alfanumèric és que amb els alfanumèrics no es poden fer operacions matemàtiques.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Programa Un programa és un conjunt d’accions executades segons un ordre determinat, que permeten resoldre un problema determinat.
+
+- Numèriques. Formades per nombres (0, 1, ... , 9).
+- Alfabètiques. Formades per lletres (a, b, ... , z).
+- Alfanumèriques. Formades per tots els caràcters.
+
+Tractament de la informació La informació ha estat manipulada i tractada de diferents maneres, segons el moment històric i els avenços tecnològics de cada època. Podem deﬁnir el tractament de la informació com el conjunt d’operacions que s’han d’efectuar sobre les dades que componen la informació.
+
+En tot procés de tractament de la informació hi ha d’haver tres elements impres- cindibles perquè aquest sigui eﬁcient: l’emissor, el canal i el receptor.
+
+#### 1) L’emissor és el responsable de generar la informació (per exemple, una
+
+persona quan parla, un llibre que llegim, etc.).
+
+#### 2) El canal és l’element que permet la transmissió de la informació
+
+(per exemple, l’aire quan parlem, el ﬁl de telèfon en les comunicacions telefòniques, etc.).
+
+#### 3) El receptor és l’element que rep la informació (per exemple, en aquest
+
+moment, sou vosaltres, que esteu estudiant aquesta unitat didàctica). Quan es processa la informació es diferencien tres operacions, tal com es pot veure a la taula 1.1. Taula 1.1. Operacions Funcions Entrada Recollida de la informació Depuració de les dades Emmagatzematge de les dades Procés Aritmètic Lògic Sortida Recollida dels resultats Distribució dels resultats Les característiques més importants de cadascuna de les operacions que hem indicat són les següents
+
+- Entrada. Operació que permet adreçar cap a un lloc determinat la informa
+
+ció que es tractarà (per exemple, quan llegim revistes, llibres...). El procés que segueix és el següent: selecció de la informació, comprovació de la informació i col·locació de la informació en un suport.
+
+- Procés. Operació que permet manipular la informació. Hi ha dos tipus
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic de tractament de la informació: de càlcul matemàtic (sumes, restes...) i d’operacions lògiques (el resultat només pot ser vertader o fals).
+
+- Sortida. Operació destinada a fer conèixer de manera externa els resultats
+
+de la manipulació. D’altra banda, el tractament de la informació no ha estat el mateix al llarg de la història. Podem diferenciar tres tipus de tractament: L’ordinador
+
+- Manual. La manipulació de la informació es fa tota manualment. Per
+
+exemple, emplenar un rebut, una factura...
+
+- Mecànic. El tractament de la informació rep el suport de les maquines; ara
+
+bé, perquè funcionin, hi ha d’haver una intervenció humana. Per exemple, la calculadora, la màquina d’escriure...
+
+- Automàtic. Cap als anys quaranta, va sortir al mercat un altre tipus de
+
+màquines, les màquines automàtiques, que tracten la informació sense la participació de les persones. Per exemple, la màquina automàtica de rentar la roba –en què seleccionem un programa i aquest fa tot el procés de rentat–, els ordinadors... En el moment en què es comença a utilitzar el concepte de tractament automàtic de la informació, també es comença a utilitzar el terme informàtica.
+
+1.1.2 Els ordinadors La física, la química, la meteorologia, etc., són ciències que expliquen, que justiﬁquen determinats fets i situacions del nostre entorn; així mateix, hi ha una ciència, la informàtica, que estudia el tractament de la informació i això és possible gràcies a la utilització, entre altres eines, de l’ordinador.
+
+La informàtica La informàtica neix amb la idea d’ajudar les persones en els treballs rutinaris i repetitius, generalment de càlcul i de gestió, en què és freqüent la repetició de tasques. La idea és que una màquina pot fer la feina millor, per la seva exactitud i la rapidesa; ara bé, sempre sota el control de la persona.
+
+El terme informàtica va aparèixer a França l’any 1962 sota la denominació de informatique. Aquesta paraula sorgeix de la contracció de les paraules: INFORmation autoMATIQUE Computer science és la ciència dels ordinadors.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Les aplicacions informàtiques són un conjunt d’un o més programes informàtics dissenyats per a fer una determinada tasca. L’explotació d’una aplicació informàtica equival a la utilització d’una aplicació informàtica.
+
+Amb el terme oﬁmàtica ens referim a la utilització de la informàtica en els departaments de gestió administrativa de l’empresa. El SO (sistema operatiu) consta d’un conjunt de programes informàtics imprescindibles per al bon funcionament de l’ordinador. El programari (sofware) és un conjunt d’idees, dades o informacions i accions.
+
+Podeu veure més dades sobre el programari bàsic i d’aplicació a la unitat “Instal·lació de programari”. Posteriorment, va ser acceptada per tots els països europeus; a Espanya, el 1968, amb el nom de informàtica; als països de parla anglesa, es coneix com a computer science.
+
+Una manera de deﬁnir aquesta paraula podria ser la que us oferim a continuació: La informàtica és la ciència que estudia el tractament automàtic i racional de la informació. El concepte d’informàtica inclou tota una sèrie de tasques que es poden fer. Citarem les següents
+
+- El desenvolupament i la millora de noves màquines, és a dir, de nous
+
+ordinadors i dels elements que hi estan relacionats.
+
+- El desenvolupament i la millora de nous mètodes automàtics de treball, que
+
+en informàtica es basen en l’anomenat sistema operatiu (SO).
+
+- La construcció d’aplicacions informàtiques, conegudes amb el nom de
+
+programes o paquets informàtics. Generalment, s’utilitza l’expressió sistema informàtic per a referir-se de manera més concreta al terme informàtica, en el sentit de conjunt d’elements necessaris per a la realització i utilització d’aplicacions informàtiques. Un sistema informàtic és el conjunt d’elements necessaris per a la realització i l’explotació d’aplicacions informàtiques.
+
+S’hi inclouen els elements de programari, de maquinari i els humans. En un sistema informàtic hi ha els elements constitutius interrelacionats següents
+
+- Part física: L’element físic també es coneix amb el nom de maquinari
+
+(hardware). Està format per tot allò que es pot veure i tocar en el món de la informàtica (els monitors, les impressores, el ratolí, els suports...).
+
+- Part lògica: L’element lògic es coneix també amb el nom de programari
+
+(software). Té el seu origen en les idees (conceptes) i està compost per tot allò que fem servir en el camp de la informàtica que no podem veure ni tocar (els jocs d’ordinador, els programes de comptabilitat, els sistemes operatius...).
+
+- Part humana: L’element humà és l’element més important que forma part
+
+de la informàtica o d’un sistema informàtic. Sense les persones que estan al càrrec de la informàtica no hi hauria ni la part física ni la part lògica. Conceptes bàsics sobre els ordinadors La informàtica necessita un element físic o mecànic que faci el tractament de la informació automàticament; aquest element s’ano mena ordinador.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Els ordinadors no han nascut en els últims anys. En realitat, les persones sempre han buscat dispositius que els ajudin a efectuar càlculs precisos i ràpids. Des de l’aparició de les calculadores binàries ﬁns als nostres dies, hi ha molt poques activitats humanes que no estiguin lligades d’una manera o altra a les màquines electròniques. Això ens permet deﬁnir l’ordinador de moltes maneres.
+
+Seguidament, n’indiquem algunes
+
+- L’ordinador és una màquina formada per una sèrie d’elements físics connec
+
+tats de manera lògica i racional que tracten la informació automàticament.
+
+- L’ordinador és una màquina electrònica ràpida i exacta que és capaç d’ac
+
+ceptar dades per un mitjà d’entrada, processar-les automàticament sota el control d’un programa prèviament emmagatzemat i proporcionar la informació resultant a un mitjà de sortida.
+
+- L’ordinador és un dispositiu electrònic capaç de rebre un conjunt d’instruc
+
+cions i executar-les, fer càlculs sobre les dades numèriques i relacionar-les amb altres tipus d’informació per a obtenir un altre conjunt de dades o informació com a resposta.
+
+- L’ordinador és un sistema electrònic que fa operacions aritmètiques i
+
+lògiques a alta velocitat d’acord amb les instruccions internes, que són executades sense intervenció humana. A més, té la capacitat d’acceptar i emmagatzemar dades d’entrada, processar-les i produir resultats de sortida automàticament. La seva funció principal és el processament de dades.
+
+Les característiques principals d’un ordinador són les següents
+
+- Fa una acció a la vegada.
+- Pot fer càlculs matemàtics: sumar, restar, multiplicar i dividir.
+- Pot fer operacions lògiques, és a dir, comparar lletres i nombres.
+- Opera a alta velocitat.
+- És exacte i precís –fa exactament el que se li indica.
+- És eﬁcient –pot treballar sense parar.
+- Té capacitat per a manipular grans quantitats d’informació.
+- És ﬁable –té la capacitat de veriﬁcar l’exactitud de les seves operacions
+
+internes, és a dir, autocomprovació.
+
+- Pot manipular símbols.
+- Cada vegada són més petits, més útils i menys costosos.
+
+El conjunt d’accions que s’ordena i que executa un ordinador es coneix amb el nom de programa. Processament de dades equival a manipulació.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic La UCP o CPU (central processing unit) és la unitat central de processament. En general, un programa és un conjunt d’accions que s’han de fer seguint un ordre determinat per a resoldre un problema determinat.
+
+Relacionat amb aquest concepte, tenim el de aplicació informàtica. Una aplicació informàtica és un conjunt d’un o més programes per a fer un treball determinat en un sistema informàtic. L’ordinador està format per dos elements fonamentals: l’element físic o maquinari, i l’element lògic o programari, encara que podem trobar-ne d’altres de manera implícita
+
+- El maquinari (hardware). Fa referència a tot allò que podem veure i tocar
+
+(el monitor, el teclat, la CPU...).
+
+- El programari (software). Fa referència als elements que no tenen existèn
+
+cia física, com les idees, els conceptes, els programes, les aplicacions...
+
+- L’usuari i el programador. L’usuari és la persona que utilitza l’ordinador,
+
+i el programador és la persona que escriu els programes en un determinat llenguatge de programació perquè els ordinadors els puguin executar.
+
+- Les dades i la informació. Les dades són fets o materials originals que
+
+no han estat processats. La informació és el producte de les dades ja processades.
+
+- Documentació. És el conjunt d’instruccions o manuals de procediment
+
+que ensenyen a l’usuari com ha d’utilitzar l’ordinador i els programes informàtics. A continuació, classiﬁcarem els elements físics o dispositius que formen l’ordina- dor segons les seves funcions
+
+- Dispositius d’entrada (input)
+- Dispositius de sortida (output)
+- Dispositius de processament
+- Dispositius d’entrada/sortida
+- Dispositius de comunicacions (busos)
+
+A la ﬁgura 1.1, es mostra l’esquema d’un ordinador.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 1.1. Elements principals d’un ordinador
+
+#### 1) Dispositius d’entrada. La seva funció consisteix a permetre l’entrada de dades
+
+en l’ordinador. Hi ha molts dispositius que poden fer aquesta tasca: el teclat, el ratolí, l’escàner, el llapis òptic, la palanca de control (joystick), el micròfon, etc.
+
+#### 2) Dispositius de sortida. La seva funció consisteix a treure la informació a
+
+l’exterior de l’ordinador. Hi ha moltes màquines que fan aquesta funció, com el monitor o la pantalla, la impressora, els altaveus o el traçador.
+
+#### 3) Dispositius d’entrada/sortida. Són totes les màquines la conﬁguració de
+
+les quals els permet fer funcions d’entrada i funcions de sortida. Per exemple, les unitats de cintes magnètiques, les unitats de discos magnètics o les unitats opticomagnètiques. També es coneixen com a memòries auxiliars. Els dispositius d’entrada, de sortida i d’entrada/sortida també es coneixen com a perifèrics.
+
+Els perifèrics són totes les màquines que han d’estar connectades a la CPU per a funcionar. Aleshores, podem parlar de perifèrics d’entrada (el teclat, el ratolí, etc.), perifèrics de sortida (els monitors, les impressores, etc.) i perifèrics d’entrada/sortida (unitats de discos magnètics, unitats de cintes magnètiques, etc.).
+
+#### 4) Dispositius de processament. També es coneixen com a UCP (unitat central
+
+de processament) o, en anglès, CPU (central processing unit). Són la part més important d’un ordinador, en què es manipula la informació. Podem comparar la seva funció a la d’un director d’orquestra. Els dispositius de processament s’encarreguen de coordinar i dur a terme totes les operacions de tipus lògic i matemàtic.
+
+L’esquema de components de la unitat central de processament és el que us mostrem a la ﬁgura 1.2. Memòries auxiliars L’ordinador pot col·locar la informació en uns magatzems electrònics anomenats memòries auxiliars (per exemple, discos magnètics i discos opticomagnètics), d’on la pot recuperar més tard. La CPU no hi té accés directe.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Operacions de la CPU Les operacions de la CPU poden ser
+
+- Lògiques. Totes les
+
+operacions en què el resultat pot ser vertader o fals.
+
+- Matemàtiques.
+
+Operacions de càlcul matemàtic (per exemple, sumes i restes). Figura 1.2. Esquema de la CPU A continuació, detallem les característiques més importants dels components de la CPU
+
+- Processador (microprocessador). És el cervell de l’ordinador. Coordina i
+
+dirigeix la feina que s’ha de fer en cada moment, i també fa totes les operacions aritmètiques i lògiques. Són els circuits que controlen la interpretació i l’execució de les instruccions. Hi podem distingir dues parts
+
+- CU (unitat de control). La unitat de control s’encarrega de governar la
+
+resta d’unitats, és a dir, interpreta les instruccions i en controla l’execució i la seqüència.
+
+- ALU (unitat aritmètica i lògica). La unitat aritmètica i lògica és on es fan
+
+les operacions de càlcul matemàtic i les operacions lògiques.
+
+- Memòria principal.
+
+És l’encarregada d’emmagatzemar les dades i els programes mentre s’estan executant en l’ordinador. És important recordar que un programa només pot ser executat per un ordinador. Per tant, cal que el programa i les dades que necessita manipular siguin a la memòria.
+
+#### 5) Dispositius de comunicacions (busos). Enllacen tots els elements del sistema
+
+i permeten la comunicació amb el món exterior. El bus representa bàsicament una sèrie de cables que serveixen per a carregar dades en la memòria i, des d’allà, transportar-les a la CPU. És l’autopista de les dades dins del PC, ja que comunica tots els components de l’ordinador amb el processador.
+
+El bus es controla i manipula des de la CPU. 1.2 Unitats funcionals dels ordinadors L’estructura bàsica d’un microprocessador està formada pel conjunt de placa base i microprocessador, la memòria i les unitats d’entrada i sortida, i tots aquests elements estan interconnectats per mitjà del bus d’adreces, el bus de dades i el bus de control.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Les principals unitats que formen un ordinador són les següents
+
+- Unitats d’entrada
+- Unitat de processament i emmagatzematge
+- Unitat de sortida
+- Unitat d’entrada/sortida
+
+Deﬁnim com a unitats funcionals de l’ordinador el conjunt d’elements del maquinari imprescindibles per al seu funcionament correcte. Els elements del maquinari es poden classiﬁcar segons la funció que tinguin en
+
+- Unitat central de processament
+- Memòria principal
+- Unitats d’entrada i sortida
+
+Unitat central de processament També es coneix amb les sigles UCP (unitat central de processament), o bé CPU (de l’anglès central processing unit). Alguns autors consideren la memòria central com un element més de la CPU per la relació que tenen i per les seves característiques i funcions.
+
+En realitat, però, no és així, ja que avui dia la memòria principal no forma part de la CPU. Tots els elements que formen les unitats funcionals necessiten algun tipus de comunicació per a funcionar correctament; això s’aconsegueix gràcies al bus del sistema. També, perquè la comunicació entre aquests dispositius i altres màquines sigui eﬁcient, a vegades cal que altres màquines la gestionin. Això és el que fan els anomenats controladors.
+
+Podem veure aquests elements i les relacions que estableixen a la ﬁgura 1.3, ﬁgura 1.4 i ﬁgura 1.5. Figura 1.3. Esquema dels elements de les unitats funcionals d’un ordinador El bus del sistema és el mitjà de comunicació entre els diferents elements que formen les unitats funcionals.
+
+Controladors Dispositius que gestionen el funcionament de determinats maquinaris i fan la comunicació entre elements de les unitats funcionals i dispositius perifèrics (per exemple, els monitors, les impressores, etc.).
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic ALU és la unitat aritmètica i lògica. Memòria externa (memòria secundària) La memòria secundària és un dispositiu que permet desar grans quantitats d’informació durant períodes generalment llargs de temps.
+
+Figura 1.4. Esquema dels elements de les unitats funcionals d’un ordinador Figura 1.5. Estructura funcional dels ordinadors Aquests elements que constitueixen les unitats funcionals formen part del maqui- nari; per tant, tenen una part física que podem veure, tocar, etc., i estan formats per circuits electrònics. Els podem estudiar a partir de l’àmbit electrònic o de circuit, o a partir de l’àmbit lògic. Nosaltres els estudiarem des de l’àmbit electrònic.
+
+1.2.1 La memòria principal i els seus elements La memòria principal també es coneix com a memòria central. Igual que passa amb les persones, la memòria de l’ordinador és capaç de retenir o emmagatzemar dades i instruccions que són accessibles en qualsevol moment. Abans que l’ordinador manipuli les dades i les ordres mitjançant l’ALU, aquestes es transfereixen a la memòria principal.
+
+De la mateixa manera, els resultats obtinguts del procés quedaran emmagatzemats en aquesta memòria. La memòria principal o central és el dispositiu electrònic en què estan situades les dades o instruccions que manipularà l’ALU, o els resultats que obtinguin d’aquests tractaments.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic La memòria principal té un paper molt important dintre de la unitat central de pro- cessament. És un dispositiu totalment electrònic i, per tant, qualsevol informació que contingui és accessible quasi instantàniament. Per això, a vegades, també és coneguda amb el nom de dispositiu d’emmagatzematge d’accés immediat.
+
+D’altra banda, la memòria principal té una capacitat limitada i, en determinats moments, ha tingut uns preus bastant elevats en comparació d’altres elements del maquinari. Per això i per altres factors, aquesta memòria es complementa amb la memòria externa o memòria secundària.
+
+La memòria principal està formada per xips de silici. Els xips són dispositius electrònics formats per circuits integrats. Elements de la memòria La memòria està formada per cel·les o posicions de memòria numerades de manera consecutiva, que tenen la capacitat de retenir la informació mentre l’ordinador està connectat a una font d’energia elèctrica.
+
+Cada cel·la té un nom que s’anomena posició de memòria i un identiﬁcador o número d’ordre anomenat adreça de memòria. A la ﬁgura 1.6, teniu un esquema. Figura 1.6. Esquema bàsic de la memòria principal Cel·la de la memòria Cada posició de la memòria està formada per dispositius electrònics de base binària, de manera que, en cada instant, cada un pot adoptar un dels dos estats binaris: on per a representar l’1 binari, i off per a representar el 0 binari.
+
+Com a conseqüència de tot això, el conjunt complet dels dispositius de dos estats que forma cada posició de la memòria principal proporciona un mètode per a codiﬁcar les dades d’una manera semblant al d’un llum encès o apagat. Cada posició de memòria té una quantitat determinada de bits, de manera que totes les posicions tenen el mateix nombre de bits (per exemple, 8 bits, 16 bits, 32 bits...).
+
+La manera de gestionar cada posició de la memòria, quan es manipula la memòria en operacions de lectura o escriptura, s’anomena paraula. La memòria principal disposa dels elements següents per a dur a terme les seves funcions
+
+- registre d’adreça de memòria (RAM)
+- registre d’informació o intercanvi de memòria (RIM)
+
+Circuit integrat Un circuit integrat és un conjunt de components electrònics amb funcions determinades. Hi ha milers de components electrònics en una integració en miniatura.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Capacitat de la memòria A ﬁde mesurar la capacitat de la memòria principal o central, es fan servir les mateixes unitats que les que hem utilitzat per a la mesura de la informació. Per tant, podem parlar de capacitats de la memòria principal d’uns 512 bytes, 1.024 KB, 32 MB, 64 MB, 128 MB, etc.
+
+Podeu consultar més dades sobre la memòria DRAM a la secció Recursos de Contingut de la web del mòdul, incloent el seu funcionament i els tipus de mòduls existents.
+
+- selector o descodiﬁcador de memòria
+
+Analitzem més detalladament cada element
+
+#### 1) Registre d’adreça de memòria. Abans de fer qualsevol operació de lectura
+
+o escriptura en la memòria, s’ha de col·locar l’adreça de la cel·la que s’utilitzarà en l’operació en aquest registre, tant si és per a gravar-hi com si és per a treure’n dades.
+
+#### 2) Registre d’informació o intercanvi de memòria (RIM). Aquest registre rep la
+
+informació obtinguda de la lectura de la memòria. Aquest registre ha de contenir la informació que volem escriure i desar en la memòria.
+
+- Selector de memòria o descodiﬁcador.
+
+Aquest dispositiu s’activa cada vegada que es produeix una ordre de lectura o escriptura. Connecta la cel·la de memòria –indicada per l’adreça del registre d’adreça de memòria– amb el registre d’informació de memòria, la qual cosa fa possible la transferència de dades en un sentit o en l’altre (memòria a RIM, RIM a memòria).
+
+Bàsicament, hi ha tres paràmetres que permeten mesurar la velocitat de resposta d’una memòria
+
+- Temps d’accés (Ta). És el temps màxim que es tarda a llegir o escriure el
+
+contingut d’una posició de memòria.
+
+- Temps de cicle (Tc). És el temps mínim entre dues lectures.
+- Amplada de banda (Ab). És el nombre de paraules que es transfereixen
+
+entre la memòria i la CPU en cada unitat de temps: Ab = 1 / Tc. Seqüència de passos per a llegir o escriure una dada en la memòria principal
+
+#### 1) Llegir
+
+Per a llegir una dada se segueixen els passos següents
+
+- Es posa l’adreça en el registre d’adreça.
+- Mitjançant el descodiﬁcador, s’accedeix a l’adreça de memòria.
+- Se situen les dades en el registre de dades.
+
+#### 2) Escriure
+
+Per a escriure una dada se segueixen els passos següents
+
+- Es transfereix l’adreça en què s’escriurà al registre d’adreça.
+- Es transfereixen les dades al registre d’informació.
+- Es descodiﬁca l’adreça de memòria.
+- Es passa el contingut del registre d’informació a l’adreça que conté el registre d’adreça.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 1.2.2 La unitat central de processament La unitat central de processament (UCP o CPU) és el cervell de l’ordinador. La seva missió és controlar, coordinar i efectuar les operacions del sistema informàtic. Per això, agafa cada una de les ordres del programa que hi ha en la memòria principal, les analitza i interpreta, i dóna les ordres necessàries per a executar-les.
+
+Físicament, està formada per circuits electrònics que en un microordinador es troben integrats en una pastilla o xip denominada microprocessador. Actualment, hi ha diverses empreses que es dediquen a comercialitzar microprocessadors; per exemple: Motorola (família 68xxx), IBM, Apple, Intel (família 8080, 8086, 8088, 80286 –286–, 386, 486, Pentium, Pentium lI, Pentium III, Pentium IV, etc.), Digital (Alpha), CYRIX (família Mx), AMD (família Kx), etc.
+
+La unitat central de processament està formada per les unitats que se citen a continuació (vegeu la ﬁgura 1.7)
+
+- Els registres
+- Unitat aritmètica i lògica (ALU)
+- Unitat de control (CU)
+
+Figura 1.7. Esquema d’un processador Els registres A l’interior del processador hi ha unes zones reservades per a l’emmagatzematge de petites quantitats d’informació. Són els registres interns. S’anomena registre un conjunt de bits que es manipulen en bloc. El microprocessador és un conjunt de circuits electrònics que estan integrats en un xip.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic PC, SP, FLAG i IR PC (personal counter) és un registre especíﬁc que apunta cap a la instrucció del programa que s’executa o la propera per executar. SP (stack pointer) és un registre que manté l’adreça d’una dada emmagatzemada a la pila. FLAG (ﬂag register) és un registre que conté informació sobre el resultat de l’última operació efectuada en l’ALU. IR (instruction register) és un registre que manté el codi de la instrucció que s’executa.
+
+Un registre de 8 bits pot enviar la seva informació a la memòria o a un altre registre. La transferència no és bit a bit, sinó que es passen els 8 bits alhora. Hi ha registres de 4, 8, 16, 32 i 64 bits. Els registres interns d’un processador acostumen a tenir la mateixa amplada.
+
+Podem diferenciar dos tipus de registres interns
+
+#### 1) Registres interns d’ús general. El processador utilitza aquests registres per a
+
+l’emmagatzematge temporal de dades o adreces de memòria; és a dir, la posició de memòria en què s’emmagatzemen les dades. Podem trobar els següents
+
+- Registres interns de dades.
+
+S’utilitzen per a emmagatzemar dades que el processador sol·licita freqüentment. Un exemple d’aquest tipus de registre és l’acumulador que s’utilitza en les operacions aritmètiques.
+
+- Registres interns d’adreça. Es pot guardar l’adreça de memòria on es troba la
+
+dada. Mitjançant aquest registre podem accedir a posicions contigües de memòria.
+
+#### 2) Registres interns especíﬁcs. Hi ha registres a l’interior dels processadors que
+
+tenen una comesa especíﬁca i, per tant, no són d’ús general. Podem indicar els següents
+
+- Comptador de programa. Un dels registres que du el control de les instruccions
+
+del programa que s’executen és el comptador de programa. El comptador de programa (program counter, PC) és un registre especíﬁc que està pendent de la instrucció del programa que s’executa o la propera per executar. El processador porta de la memòria la instrucció assenyalada pel PC i la comença a executar. Immediatament, el PC incrementa el seu valor per a preparar-se per a la instrucció següent.
+
+- Punter de pila. Dins la memòria RAM, hi ha una zona destinada a l’emmagat
+
+zematge d’informació temporal: és la pila o stack. El punter de pila (stack pointer, SP) és un registre que manté l’adreça d’una dada que està emmagatzemada en la pila. El processador pot guardar el contingut dels seus registres interns temporalment, per a recuperar-los més tard, a la pila. El processador accedeix ràpidament a aquesta memòria, ja que el registre punter de pila l’assenyala permanentment.
+
+Aquest registre s’incrementa o disminueix automàticament quan s’accedeix a la memòria de pila.
+
+- Indicador de resultat. Cada bit del registre indicador de resultat (ﬂag register,
+
+FLAGS) conté informació sobre el resultat de l’última operació efectuada en l’ALU. El nombre de bits del FLAGS i el seu signiﬁcat varien d’un processador a un altre.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Registre d’instrucció. La unitat de control té una referència permanent de la
+
+instrucció en curs mitjançant el registre d’instrucció. El registre d’instrucció (instruction register, IR) manté el codi de la instrucció que s’executa. Unitat aritmètica i lògica Totes les operacions matemàtiques i lògiques que el processador ha d’efectuar es fan en un bloc intern especialitzat anomenat unitat aritmètica i lògica (UAL o ALU, arithmetic logic unit).
+
+La unitat aritmètica i lògica gestiona les operacions elementals de tipus aritmètic (sumes, restes, etc.) i, també, les de tipus lògic (operacions en les quals el resultat és vertader o fals). Aquesta unitat té dues entrades per als operands i una sortida per al resultat. El processador dirigeix cap a les entrades de l’ALU els registres sobre els quals s’ha d’efectuar l’operació. El resultat apareix a la sortida de l’ALU i es recull en un registre o s’envia al bus.
+
+Molts processadors dirigeixen la sortida de l’ALU (vegeu la ﬁgura 1.8) cap a l’acumulador. Figura 1.8. Esquema de l’ALU Bus és una paraula anglesa que signiﬁca ‘transport’. En arquitectura de mi- croprocessadors, un bus pot connectar lògicament diversos perifèrics sobre el mateix conjunt de cables. Aplicada a la informàtica, es relaciona amb la idea de les transferències internes de dades que es produeixen en un ordinador en Un acumulador és un registre en què se situen els resultats de les operacions de càlcul fetes per l’ALU.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic PCI correspon a les sigles angleses de interconnexió de components perifèrics (peripheral component interconnection). funcionament. En el bus tots els nodes reben les dades, encara que no es dirigeixin a tots aquests nodes; els nodes als quals no van dirigides les dades, simplement les ignoren. Per tant, un bus és un conjunt de conductors elèctrics en forma de pistes metàl·liques impreses sobre la placa base del computador per on circulen els senyals que corresponen a les dades binàries del llenguatge màquina que opera al microprocessador.
+
+Els primers busos de computadores eren literalment busos elèctrics paral·lels amb múltiples connexions. Avui dia el terme és usat per a qualsevol arranjament físic que proveeixi la mateixa funció lògica que un bus elèctric paral·lel. Els busos moderns poden usar tant connexions paral·leles com connexions en sèrie, i poden ser cablejats en topologia multidrop o en daisy chain, o connectats per cables trenats, com el cas de l’USB.
+
+Hi ha tres classes de busos: bus de dades, bus de direccions i bus de control. Una placa base de tipus ATX té tantes pistes elèctriques destinades a busos com l’amplada dels canals de busos del microprocessador de la CPU: 64 per al bus de dades i 32 per al bus de direccions. L’amplada de canal explica la quantitat de bits que es poden transferir simultàniament. Així, el bus de dades transfereix 8 bytes a la vegada, i el canal de direccions del microprocessador per a una PC-ATX pot “encaminar” més de quatre mil milions de combinacions diferents per al conjunt de 32 bits del seu bus.
+
+#### 1) El bus de dades mou les dades entre els dispositius del maquinari d’entrada
+
+com el teclat, l’escàner, el ratolí, etc.–, de sortida –com la impressora, el monitor o la targeta de so– i d’emmagatzematge –com el disc dur, el disquet o la memòria ﬂaix. Aquestes transferències que es donen a través del bus de dades són governades per diversos dispositius i mètodes, dels quals el controlador PCI és un dels principals. El seu treball equival, simpliﬁcant molt, a una central de semàfors per al trànsit als carrers d’una ciutat.
+
+#### 2) El bus d’adreces està vinculat al bloc de control de la CPU per a prendre i
+
+col·locar dades en el subsistema de memòria durant l’execució dels processos de còmput. Per al bus d’adreces, l’amplada de canal determina la quantitat d’ubicacions o direccions diferents amb què el microprocessador pot treballar. Aquesta quantitat d’ubicacions resulta d’elevar el 2 a la 32a potència. 2 perquè són dos els senyals binaris, els bits 1 i 0; i 32a potència perquè les 32 pistes del bus de direccions són, en un instant donat, un conjunt de 32 bits.
+
+#### 3) El bus de control transporta senyals d’estat de les operacions fetes per la CPU
+
+amb les altres unitats. El mètode que utilitza l’ordinador per a sincronitzar les diferents operacions és un rellotge intern que facilita la sincronització i evita les col·lisions d’operacions (unitat de control). Aquestes operacions es transmeten d’una manera bidireccional.
+
+Aquest tipus d’estructura interna, però, no és aplicable directament al que conei- xem actualment com a ordinador personal. En un PC hi ha dispositius controladors d’accés directe a memòria, controladors de disc dur, de tecla, processadors gràﬁcs, memòria RAM en diferents nivells de jerarquia, etc., de manera que trobem una estructura molt més complexa. En aquest sentit, interessa tractar aquesta
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic estructura des del punt de vista del tècnic de manteniment o reparació, tenint en compte el concepte d’unitat mínima reparable. Amb aquest concepte s’entén la part de l’equip que es canvia en cas d’avaria sense intentar reparar-la. Per qüestions de temps de reparació (cost de la mà d’obra) i equips de diagnòstic necessaris, en la majoria dels casos seria més car substituir un component defectuós d’una targeta que comprar-ne una de nova i canviar-la.
+
+Els busos s’utilitzen per a comunicar les diferents unitats funcionals entre elles. Hi podem trobar els elements següents
+
+- Circuits operacionals. Circuits necessaris per a fer les operacions amb les
+
+dades procedents dels registres d’entrada.
+
+- Registre d’entrada. Emmagatzema dades o operands que intervenen en
+
+una instrucció abans de la realització de l’operació per part del circuit operacional.
+
+- Registre acumulador. Emmagatzema els resultats numèrics del circuit
+
+operacional. També està connectat als registres d’entrada per a la realimen- tació, en cas d’operacions encadenades, i té una connexió amb el bus de dades per a enviar els resultats a la memòria central o a la unitat de control.
+
+- Registre d’estat. Registre que emmagatzema algunes condicions de situa
+
+cions esdevingudes en l’última operació feta i que hem de tenir en compte en les operacions següents. Unitat de control La unitat de control (control unit, UC o CU) fa una sèrie d’operacions bàsiques per al funcionament del processador
+
+- Interpreta les instruccions del programa que arriben de la memòria del
+
+sistema.
+
+- Dirigeix els registres adequats cap a l’ALU.
+- Controla els busos interns.
+- Ordena a l’ALU efectuar l’operació indicada en el programa.
+- Porta de la memòria les dades necessàries, i hi envia les dades resultants.
+- Gestiona els busos externs de comunicació amb la memòria externa i els
+
+perifèrics. La unitat de control és el centre nerviós de l’ordinador, ja que és on es controlen, es governen i es decideixen totes les operacions. És el cervell que organitza tots els elements interns i externs del processador.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 1.9. Unitat de control La unitat de control (ﬁgura 1.9) controla directament el registre d’instrucció IR, el comptador de programa PC, el registre de pila SP i una sèrie de registres ocults a l’usuari, en els quals s’emmagatzemen temporalment instruccions, dades o adreces.
+
+La unitat de control consta dels elements següents
+
+#### 1) Descodiﬁcador d’instruccions. La instrucció que el processador porta de la
+
+memòria s’emmagatzema en el registre d’instrucció, IR. Aquest registre està connectat a una unitat anomenada descodiﬁcador d’instrucció (instruction deco- der, ID). El descodiﬁcador és el dispositiu que té com a funció la interpretació del tipus d’instrucció a partir del codi d’operació que hi ha en el registre d’instrucció, i genera els senyals de control que són necessaris per a executar correctament una instrucció.
+
+#### 2) El rellotge o temporitzador. El ritme de funcionament del descodiﬁcador
+
+d’instrucció el marca un senyal de rellotge. Tots els senyals generats pel des- codiﬁcador d’instrucció estan sincronitzats amb aquest rellotge per mitjà del bloc seqüenciador. Aquest procés de sincronització s’anomena temporització (timing). Gràcies a aquesta temporització, les diferents operacions de gestió es fan d’una manera ordenada, sense encavalcar el control ni la informació.
+
+Una de les mesures de velocitat d’un sistema processador la dóna la freqüència de rellotge. Aquesta és una primera aproximació de la velocitat i permet la comparació entre sistemes que utilitzen el mateix processador. La freqüència es pot mesurar en Hz, kHz, MHz, etc. Un Hz equival a un cicle per segon; aleshores, quan es parla d’una freqüència de rellotge de 16 MHz, es parla de 16 milions de cicles per segon. També sabem que T = 1 / F, en què T és el període expressat en segons i F és la freqüència, ja que T = 1 / 16.000.000 = 6,25 · 10–8 s, equivalent a 62,5 ns, que indica la duració d’un cicle.
+
+- El seqüenciador.
+
+És el dispositiu que marca les pautes amb què s’han d’executar les diferents parts de la instrucció en coordinació amb els impulsos enviats pel rellotge.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Arquitectures dels microprocessadors Els microprocessadors s’han fabricat utilitzant dues tecnologies conegudes amb els noms de CISC i RISC.
+
+#### 1) CISC (complex-instruction-set computing, ‘repertori complex d’instruccions
+
+d’ordinador’): la tecnologia més utilitzada en la fabricació dels microprocessadors, que consisteix en la utilització d’un joc d’instruccions complexes que es basen en la implementació d’un gran nombre d’instruccions en el processador per a possibilitar tenir programes més petits i, per tant, més ràpids. Les CPU i les CISC més esteses són de la família 80x86 d’Intel. També són importants les companyies Cirix i AMD, que fabriquen processadors amb el joc d’instruccions 80x86 a un preu més reduït que els d’Intel.
+
+#### 2) RISC (reduced-instruction-set computing, ‘repertori reduït d’instruccions d’or
+
+dinador’): en aquesta tecnologia es fa servir un joc d’instruccions reduït, i s’intenta utilitzar el nombre més petit possible d’instruccions. És la més fàcil de dissenyar i té l’avantatge de fer les operacions a més velocitat, a costa d’utilitzar programes més grans. És una tecnologia més simple. Per això permet minimitzar el nombre d’instruccions i la complexitat a l’hora de dissenyar la CPU. Alguns exemples d’arquitectura RISC són l’SPARC, de l’empresa Sun Microsystems, el micropro- cessador Alpha, dissenyat per Digital, els Motorola 88000 i el PowerPC. Aquest processadors s’utilitzen, principalment, en aplicacions industrials i professionals per la seva gran rendibilitat i ﬁabilitat.
+
+Tecnologia de fabricació dels microprocessadors Intel Normalment, els microprocessadors de l’empresa Intel per a PC han estat dissenyats segons la tecnologia CISC, però actualment s’estan desenvolupant solucions mixtes. Amb les tecnologies actuals, és possible integrar, en l’interior del microprocessador, milions de transistors. Tots aquests transistors s’organitzen en un gran circuit que rep el nom de DIE i que no és més gran de 4 cm2. Aquest circuit està embolcallat per una càpsula de ceràmica o plàstic que el protegeix.
+
+També podem destacar els paràmetres següents en els processadors
+
+- Un dels paràmetres de fabricació del microprocessador és el nivell d’inte
+
+gració, que en aquests moments utilitza com a unitat de treball el nm (1 nm = 10–9 m). El pas a la tecnologia de fabricació CMOS en 90 nm, la que utilitza actualment el Pentium 4, es considerava impossible no fa gaires anys i, no obstant això, els enginyers ja han aconseguit fabricar-ne en 65 nm; l’any 2007 arribaran als 45 nm, l’any 2009 a 35 nm i, ﬁns i tot, a 20 nm, el límit actual per a aquesta tecnologia.
+
+- Pel que fa a la tensió de corrent, podem dir que la tensió de 5 volts, que es
+
+feia servir ﬁns no fa gaire, actualment és de 2 volts, aproximadament, amb la qual cosa s’ha millorat el problema de l’escalfament del microprocessador.
+
+- La placa base proporciona allotjament al microprocessador i a les línies de
+
+comunicació amb altres components de l’arquitectura PC. En les plaques, el bus del sistema funcionava a 66 MHz ﬁns no fa gaire, però avui dia ja podem tenir busos de sistema que funcionen per sobre dels 100 MHz Llei de Moore La llei de Moore diu que cada divuit mesos la tecnologia de fabricació dels microprocessadors millora, de tal manera que es podrà duplicar el nombre de transistors integrats en el microprocessador.
+
+El nivell d’integració indica l’amplada o l’espai lliure que hi ha entre els diferents elements que formen el microprocessador.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu trobar informació sobre els diferents tipus de sòcols del processador en la secció “Recursos de contingut” del web d’aquest mòdul. Sèrie i paral·lel Sèrie: tots els bits passen pel mateix ﬁl un darrere de l’altre.
+
+Paral·lel: cada bit passa per un ﬁl diferent i en el mateix moment.
+
+```bash
+(velocitat amb què es comunica el processador amb la memòria principal;
+```
+
+a la meitat d’aquesta velocitat, s’accedeix als dispositius PCI connectats). Cal tenir en compte aquesta velocitat del microprocessador, ja que sempre ha de ser múltiple de la velocitat del bus dels sistemes (per exemple, si tenim un processador a 133 MHz i amb un bus de 66 MHz, la velocitat del microprocessador que s’obté, segons el càlcul, és 66 × 2).
+
+- Una de les parts del processador s’encarrega de descodiﬁcar les instruc
+
+cions. Cada instrucció es manipula en registres interns petits que té el microprocessador mateix i, segons la grandària d’aquests registres, el microprocessador tindrà una arquitectura o una altra. Així, el 80286 i el 8086 tenien una arquitectura de microprocessador de 16 bits, perquè cada un dels registres interns tenia aquesta capacitat; la del 386 era de 32 bits i la dels Pentium, de 64 bits.
+
+- Un altre element important que cal tenir en compte en el microprocessador
+
+és la memòria cau. La memòria cau que tenen els microprocessadors s’anomena de nivell 1, i la capacitat que té és de pocs KB. Funciona a una velocitat propera a la del microprocessador. Hi ha una altra memòria cau de nivell 2, que generalment és a la placa base (en el cas del Pentium II i Pentium III, és al cartutx, i en el Pentium Pro al microprocessador mateix), i en alguns equips hi ha una tercera memòria cau anomenada de nivell 3.
+
+1.2.3 Busos del sistema Podem deﬁnir com a bus del sistema el conjunt de circuits encarregats de la connexió i comunicació entre la CPU i la resta dels elements de l’ordinador. Un bus és un conjunt de cables (pistes de circuit imprès o ﬁls conductors) que proporcionen un camí per al ﬂux d’informació entre els diferents elements que formen l’ordinador. Quan una dada passa d’un component a un altre, viatja al llarg d’aquest camí comú per a arribar al seu destí. Per cada pista o cable, es transmet un bit. Un bloc de bits es pot transmetre fent-los passar tots pels mateix cable (un bit després de l’altre), o bé fent-los passar per diferents cables a la vegada.
+
+Si passen tots pel mateix cable, es diu que hi ha una transmissió en sèrie; si passen per cables diferents, es diu que hi ha una transmissió en paral·lel. A la ﬁgura 1.10 i ﬁgura 1.11, teniu un esquema dels busos de comunicació d’un ordinador.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 1.10. Esquema de busos de comunicació d’un ordinador Figura 1.11. Esquema de busos de comunicació d’un ordinador Pel bus, s’han de transmetre diferents tipus d’informació: l’adreça de les dades a les quals volem accedir, la dada per transferir o la informació de control, que permet l’operació amb els diferents elements. Així, segons la funció (i, per tant, el tipus d’informació) que circula pels busos, es poden diferenciar els tres busos següents
+
+#### 1) Bus d’adreces de memòria. S’encarrega de transportar les adreces de memòria
+
+o del perifèric a les quals la CPU vol accedir. L’amplada del bus d’adreces indica la quantitat de memòria a la qual pot accedir un processador. Hi ha processadors amb el bus d’adreces de 16, 20 i 32 bits d’amplada. Amb un bus de 16 bits (16 ﬁls conductors en paral·lel), podem accedir a 2 × 16 = 65.536 posicions de memòria.
+
+#### 2) Bus de dades. Transporta les dades entre registres. És bidireccional, és a dir,
+
+els mateixos ﬁls s’utilitzen per a transmetre informació cap a dintre o cap a fora d’una unitat en instants diferents.
+
+#### 3) Bus de control. Proporciona uns senyals de lectura i escriptura que controlen
+
+l’adreça a la qual es dirigeix la dada, que pot anar del processador a la memòria, o bé de la memòria al processador. Els processadors tenen un altre bus de control per a governar els seus registres interns. A la taula 1.2 teniu un resum de les característiques principals dels busos d’adreces i de dades segons el tipus de processador.
+
+Podeu trobar informació sobre l’evolució dels microprocessadors en la secció “Adreces d’interès” del web d’aquest mòdul.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Bus intern i bus extern Bus intern (de CPU): comunica la CPU i la memòria principal. Bus extern (d’expansió): comunica la CPU i la resta dels components de l’ordinador. E/S: entrada/sortida. DMA (direct memory access) signiﬁca ‘accés directe a memòria’.
+
+Interrupció Una interrupció és la situació en la qual es para momentàniament l’execució d’una determinada tasca per a executar-ne una altra. Una vegada acabada, es continua amb la primera a partir del punt en què es va deixar. Podeu trobar més informació sobre el bus PCI en la secció “Adreces d’Interès” del web d’aquest mòdul.
+
+Taula 1.2. Característiques dels busos d’adreces i de dades Processador Bus d’adreces (bits) Bus de dades (bits) 8086 8088 80186 80188 80286 80386 SX 80386 DX 80486 DX 80486 SX Pentium Pentium Pro A més, podem diferenciar dos tipus de busos segons les parts del sistema que connecten: el bus que connecta la CPU amb la memòria (bus intern o de CPU) i el que connecta la CPU amb la resta d’elements (bus d’expansió), que és una prolongació del bus intern.
+
+- El bus de CPU és interessant pels tipus de memòria que exigeix, ja que es
+
+dedica a transferir dades entre la CPU i la memòria. Destaca per la velocitat. Hi ha arquitectures amb velocitats superiors a 100 MHz.
+
+- Però els busos realment interessants són els busos d’expansió. Les diverses
+
+arquitectures de les plaques es diferencien bàsicament per les característi- ques del bus d’expansió. El bus permet intercomunicar el processador, la memòria i els perifèrics, i les seves característiques són decisives a l’hora de determinar-ne les prestacions. Busos d’expansió Hi ha dues organitzacions físiques d’operacions E/S que estan relacionades amb els busos
+
+- Bus únic. No accepta un controlador DMA (tot es controla des de la CPU).
+
+#### 2) Bus dedicat. Suporta controladors DMA. Tracta la memòria de manera diferent
+
+que els perifèrics (utilitza un bus especial), al contrari que el bus únic, que considera posicions de memòria en tots dos. Aquest bus especial dedicat té 4 components fonamentals
+
+- Dades. Intercanvia informació entre la CPU i els perifèrics.
+- Control. Porta la informació referent a l’estat dels perifèrics (petició d’inter
+
+rupcions).
+
+- Adreces. Identiﬁca els perifèrics que ha d’utilitzar.
+- Sincronització. Temporitza els senyals de rellotge.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic L’avantatge del bus únic és la simplicitat de l’estructura, que el fa més econòmic; però no permet que tingui lloc, a la vegada, transferència d’informació entre la memòria i el processador, i entre els perifèrics i el processador. D’altra banda, el bus dedicat és molt més ﬂexible i permet transferències simultànies, però és més complex i, per tant, els costos són més elevats.
+
+A la taula 1.3 i taula 1.4 es presenten algunes característiques dels busos principals. Taula 1.3. Característiques dels principals busos (I) Sortida Denominació Connectors Bit dades /adreces Velocitat de transferència Nota Fast SCSI (SCSI-2) 8/ 10 MBps (10 MHz)
+
+- Connecta ﬁns a 8
+
+dispositius. Fast wide SCSI (Fast SCSI-2) 16/ 20 MBps (10 MHz) Connecta ﬁns a 16 dispositius. Ultra SCSI (Fast-20) 8/ 20 MBps (20 MHz) Connecta entre 4 i 8 dispositius. Wide ultra SCSI (Fast-40) 16/ 40 MBps (20 MHz) Connecta 4, 8 i 16 dispositius. Ultra2 SCSI (Fast-40) 8/ 40 MBps (40 MHz) Connecta 8 dispositius.
+
+Ultra2 SCSI (Fast-40) 16/ 80 MBps (40 MHz) Connecta 16 dispositius. USB (universal serial bus, ‘bus en sèrie universal’) 1/ 1 Mbps a 12 Mbps Aquest bus ha estat dissenyat per a poder utilitzar-lo amb un gran nombre de dispositius (p. ex.: teclats, palanques de control, ratolins, càmeres digitals, etc.).
+
+Suporta plug and play. Permet la desconnexió de dispositius en calent. USB permet connexions de ﬁns a 5 min cada vegada i es poden connectar ﬁns a 127 dispositius. ISA (XT) (industry standard architecture, ‘arquitectura estàndard de la indústria’) 8/20 1 MB/s (5 MHz) Destinat al processador 8088.
+
+Baixa resistència al soroll. 1984 ISA (AT) 62 + 98 16/24 8 MB/s (8 MHz) Destinat al processador 80286. Baixa resistència al soroll.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.4. Característiques dels principals busos (i II) Sortida Denominació Connectors Bit dades /adreces Velocitat de transferència Nota 1987 MCA (micro channel architecture, ‘arquitectura de microcanal’) 32/ 10 MB/s (>10 MHz) Destinat al processador PS/2 (50,80) d’IBM.
+
+Estàndard proposat per IBM. Més resistència al soroll que l’ISA; això els fa més segurs. Incompatible amb ISA. Permet conﬁgurar las plaques d’interfície per a aquest bus per mitjà de programari. 1988 EISA (extended ISA, ‘ISA estès’) 32/ 33 MB/s (8 MHz) Destinat al processador 80386. Estàndard proposat per Compaq, Tandy, AST, AT&T. Més resistència al soroll que l’ISA.
+
+Compatible amb ISA. Permet conﬁgurar las plaques d’interfície per a aquest bus per mitjà de programari. 1993 VESA (local bus) (Video Electronics Standards Association, ‘Associació d’Estàndards per a l’Electrònica de Vídeo’) 62 + 98 + 112 32/ 133 MB/s (33 MHz) 148 MB/s (40 MHz) 267 MB/s (50 MHz) Destinat al processador 80486.
+
+Compatible amb ISA. Suporta targetes de vídeo, controladora de discos, targetes de xarxa i targetes de memòria.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.4 (continuació) Sortida Denominació Connectors Bit dades /adreces Velocitat de transferència Nota PCI (V 1.0) (peripheral component interconnect, ‘interconnexió de components electrònics’) 32/ 132 MB/s (<33 MHz) Destinat al processador 80486DX4 i Pentium.
+
+Incompatible amb ISA. Suporta ﬁns a 10 dispositius (interfície de vídeo, discos rígids, xarxes locals, plaquetes per a multimèdia). Suport plug and play. 1994 PCI (V 2.0) 64/ 264 MB/s (<33 MHz) 1997 PCI (V 2.1) 64/ 264 MB/s (<33 MHz) 1980 SCSI (SCSI-1) (small computer system interface, ‘interfície per a sistemes de computació petits’) 8/ 5 MBps (5 MHz) Dóna suport a dispositius com escàners, unitats CD-ROM, DVD, discos Bernoulli, ZIP, etc. Permet la connexió de dispositius (ﬁns a 8) SCSI en forma de cadena, utilitzant el bus per torns.
+
+La placa base Quan un usuari amb pocs coneixements d’informàtica compra un equip informàtic nou, generalment avalua la velocitat del microprocessador, la quantitat de memòria RAM instal·lada o la quantitat de GB de disc dur que necessita. Però poques vega- des es dóna importància a la placa base (placa mare, principal o motherboard), i amb això cometem un greu error. No té sentit tenir un processador molt ràpid, molta memòria i molta capacitat de disc dur si tot això ho muntem en una placa base antiquada.
+
+La placa base és el component sobre el qual es col·loquen tots els altres. És una placa de circuit imprès en què s’insereixen tots els xips de tots els components. És la placa més gran d’un ordinador. El rendiment general de l’equip dependrà molt del seu disseny i del joc de xips de la placa.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic La placa base és l’encarregada d’interconnectar i comunicar tots els components de l’ordinador. La placa base és la base de qualsevol sistema informàtic. De la seva construcció, disseny i qualitat dependrà el bon funcionament del nostre equip informàtic.
+
+Disposar d’una placa ben dissenyada i preparada per al futur signiﬁca, a més de poder treballar a més velocitat, tenir més possibilitats per a ampliar la memòria, canviar el microprocessador i no patir incompatibilitats amb les noves tecnologies que apareixen. 1.2.4 Suports i unitats d’entrada i sortida Sabem que perquè la unitat central de processament faci la seva feina cal que la informació que ha de manipular estigui situada en elements físics als quals pugui accedir de manera ràpida i eﬁcient. Aquests elements físics s’anomenen suports de la informació.
+
+El suport de la informació és l’element físic que permet emmagatzemar la informació i les dades de tal manera que l’ordinador hi pugui accedir. Objectius de tot suport Emmagatzemar la informació que serà manipulada i tenir la capacitat de desar-la durant períodes de temps més o menys llargs.
+
+Ser un mitjà de comunicació entre els usuaris i l’ordinador, de manera que les dades d’entrada siguin intel·ligibles per a l’ordinador i les dades de sortida ho siguin per a les persones. Els suports es poden classiﬁcar de diverses maneres, però les més utilitzades són les que tenen en compte els criteris següents
+
+#### 1) Per l’ús que se’n faci
+
+- Reutilitzable.
+
+Podem fer servir el suport més d’una vegada per a desar informació (per exemple, els disquets, el disc dur, la cinta magnètica...).
+
+- No reutilitzable. Només el podem utilitzar una vegada per a desar la informació
+
+(per exemple, el paper, la ﬁtxa perforada...).
+
+#### 2) Per la forma d’accés a la informació
+
+- Seqüencials. Per a accedir a una determinada informació del suport, cal passar
+
+per tota la informació anterior (per exemple, les cintes magnètiques).
+
+- Directes. Permeten accedir a la informació de manera directa o immediata (per
+
+exemple, els disquets).
+
+#### 3) Per les característiques físiques del suport
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Perforats.
+
+Són els que codiﬁquen i mantenen la informació per mitjà de perforacions en el suport (per exemple, les ﬁtxes perforades de 80 columnes i les de 96 columnes, les cintes perforades...).
+
+- Magnètics.
+
+Mantenen la informació codiﬁcada per mitjà de dispositius magnètics (per exemple, els disquets).
+
+- Òptics. Els continguts d’aquests suports es manipulen mitjançant tècniques
+
+especials com la reﬂexió de la llum (per exemple, el CD-ROM, el DVD...).
+
+- Altres tipus. Formen part d’aquest grup tots els suports que no podem situar
+
+en cap dels grups anteriors i que es limiten a presentar els resultats d’un procés (per exemple, el monitor).
+
+#### 4) Per la seva situació
+
+- Locals. El suport està situat en el mateix lloc en què es manipularà.
+- Remots. El suport no està situat en el mateix lloc en què es manipularà la
+
+informació, sinó en un altre. Per a manipular els continguts dels diferents suports informàtics, l’ordinador necessita els dispositius perifèrics, també coneguts com a perifèrics d’entrada i sortida o unitats d’entrada/sortida. Perifèrics Tot ordinador, per potent que sigui, necessita comunicar-se amb l’ésser humà, que el programa, li introdueix dades i aproﬁta els resultats del treball de la màquina.
+
+Un dispositiu perifèric és una unitat capaç de manipular el suport de dades i que permet comunicar l’usuari i l’ordinador. Com ja hem dit, els perifèrics són dispositius que es fan servir per a comunicar-se amb l’ordinador. Han d’estar connectats a l’ordinador, ja que tots sols no tenen capacitat per a efectuar les funcions per a les quals han estat dissenyats.
+
+En els entorns informàtics, també s’utilitzen altres dispositius per a tasques complementàries. Aquests dispositius no necessiten estar connectats a l’ordinador per a fer la seva feina i són capaços de treballar independentment. Són els dispositius auxiliars. Per exemple, les màquines perforadores de ﬁtxes, les talladores de paper continu...
+
+Com hem fet per als suports d’informació, establirem una classiﬁcació dels perifèrics tenint en compte tot un seguit de criteris
+
+#### 1) Segons la funció
+
+- Perifèrics d’entrada. La seva funció és l’entrada de dades des de l’exterior ﬁns
+
+a la memòria principal de l’ordinador (per exemple, el teclat, el ratolí, l’escàner...). Dispositius auxiliars Els dispositius auxiliars no necessiten estar connectats a l’ordinador per a fer la seva feina. Són capaços de treballar independentment.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Perifèrics de sortida.
+
+La seva funció és treure les dades de la memòria principal a l’exterior (per exemple, el monitor, les impressores, el traçador...).
+
+- Perifèrics d’entrada/sortida.
+
+Són els dispositius capaços de fer les dues funcions anteriors en una mateixa màquina (per exemple, les unitats de discos magnètics, les unitats de cintes magnètiques...).
+
+#### 2) Per la situació que tenen respecte a la CPU
+
+- Locals Estan situats molt a prop de la CPU.
+- Remots. Estan situats lluny de la CPU; per tant, per a gestionar-los calen
+
+sistemes complementaris (per exemple, els encaminadors, els mòdems...). Els perifèrics no són fàcils ni còmodes d’utilitzar per als processos. D’altra banda, aquests no necessiten conèixer les característiques dels perifèrics, només els intercanvis de dades. Per tant, aquests detalls han d’estar amagats, i així les operacions d’entrada/sortida seran independents del tipus i model del dispositiu.
+
+Generalment, els perifèrics són a l’exterior de l’ordinador, encara que alguns (per exemple, la targeta de so...), es troben a dintre. La transferència d’informació entre el processador i els perifèrics es fa seguint el camí: processador, controlador, bus extern, interfície i perifèric(vegeu la ﬁgura 1.12).
+
+Figura 1.12. Esquema de l’operació d’entrada-sortida Interfície processador-perifèric La comunicació que s’estableix entre el processador i els perifèrics es pot produir per alguns dels camins següents
+
+#### 1) Registres. Els dispositius es poden connectar al processador per mitjà dels
+
+registres dels dispositius, als quals es pot accedir directament en una zona determinada de memòria o, indirectament, per ordre del maquinari que retorna l’estat del dispositiu.
+
+- Controladors.
+
+Els dispositius complexos (discos, etc.) no es connecten directament al processador, sinó per mitjà d’un controlador que conté l’estat del dispositiu, el controla i comprova les dades transferides. El controlador accepta les ordres del processador i s’hi comunica per mitjà de registres com si fos un dispositiu. El controlador, també anomenat unitat de control, pot gestionar
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic diversos dispositius del mateix tipus.
+
+#### 3) Canals. Normalment, els controladors estan connectats al processador per
+
+un canal o processador d’entrada/sortida (IOP, input/output processor ). La ﬁnalitat d’un canal és aconseguir que els dispositius es tractin com a transparents. Els comandaments manipulen els canals i, quan acaben, el control torna al processador. Per a tenir una visió tan àmplia com sigui possible dels dispositius d’entrada/sor- tida, cal que fem referència al controlador.
+
+Els controladors són el programari format per un conjunt de programes i taules que formen part del nucli del sistema operatiu, que executen i controlen totes les operacions d’entrada/sortida sobre qualsevol perifèric connectat a l’ordinador. A més, el controlador conté la informació que caracteritza cada perifèric connectat a l’ordinador, i uns programes que controlen la gestió pròpia i la de les informa- cions que circulen en qualsevol sentit. Està situat permanentment en la memòria principal. L’esquema de composició d’un driver s’observa a la ﬁgura 1.13.
+
+Figura 1.13. Esquema del controlador Dispositius d’entrada Els dispositius d’entrada són totes les màquines que ens permeten introduir informació de l’exterior a la memòria central. Avui dia, n’hi ha molts que poden fer aquesta funció: els teclats, els ratolins, els escàners...
+
+A la taula 1.5, podeu veure les característiques d’alguns perifèrics d’entrada.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.5. Perifèrics d’entrada Perifèric Característiques Teclat Cinc àrees: teclat alfanumèric, teclat numèric, tecles de funció, tecles del cursor i tecles especials. Ratolí Els seus moviments es reﬂecteixen en la pantalla (cursor). Simpliﬁca la selecció de funcions.
+
+Palanques de control Joystick i similars. Principalment per a jocs (3D). De diversos tipus. Escàner Digitalitza imatges i textos (mitjançant el reconeixement òptic de caràcters). De diversos tipus: de taula de corró i de mà. Pantalles tàctils Són pantalles que serveixen per a detectar pulsacions pel canvi de temperatura. S’utilitzen en centres d’ús públic.
+
+Digitalització d’imatges i so Són targetes que detecten senyals analògics i els converteixen en digitals. Juntament amb la targeta de so, s’acostuma a incloure un micròfon. Tauletes digitalitzadores i llapis òptics. Utilitzades per a dibuix i arts gràﬁques. Es tracta d’una taula en què es fa el dibuix amb un llapis òptic.
+
+El llapis es pot utilitzar independentment com una pantalla tàctil. Càmeres fotogràﬁques digitals Digitalitzen imatges estàtiques. Fan a la vegada els processos de fotograﬁa i escaneig. Minicàmeres de vídeo (webcam) S’utilitzen d’ençà de l’auge d’Internet. Es poden utilitzar simultàniament amb micròfon i auriculars.
+
+Lectors de codi de barres Detecten l’amplada i la separació de les bandes. Quan llegeixen el senyal accedeixen a la base de dades en què hi ha la informació del producte. Altres Dispositius per a nens, persones amb discapacitats, de reconeixement de la veu, etc. Dispositius de sortida Formen part del grup de dispositius de sortida tots els perifèrics que tenen com a funció principal visualitzar la informació que hi ha emmagatzemada a la memòria principal.
+
+En podem destacar els següents: els traçadors, les impressores i els monitors. A la taula 1.6 podeu veure les característiques d’alguns perifèrics de sortida. Taula 1.6. Perifèrics de sortida Perifèric Característiques Monitor A més de ser un dispositiu de sortida, permet comprovar les entrades de dades. Les imatges es formen a partir de petits punts de llum (píxels). Com més punts té el monitor, millor qualitat d’imatge obtenim.
+
+Impressora Plasma en paper la informació procedent de l’ordinador. Tipus: de matriu, tèrmiques, d’injecció de tinta i de làser.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.6 (continuació) Perifèric Característiques Traçador Imprimeix gràﬁcs de gran qualitat. Funciona amb retoladors que es desplacen sobre el paper. Altaveu Proporciona la sortida d’àudio. N’hi ha de diversos tipus i potències.
+
+Sintetitzador de veu Dóna els resultats d’un programa generant sons similars als de la parla humana. Dispositius d’entrada/sortida La característica principal dels dispositius d’entrada/sortida és que el mateix dispositiu pot actuar com a dispositiu d’entrada en un moment determinat i, en un altre, com un dispositiu de sortida.
+
+Exemples: les unitats de cintes magnètiques, les unitats de discos magnètics, etc. Aquestes són les característiques d’alguns perifèrics d’entrada/sortida. Perifèrics d’entrada-sortida
+
+- Cintes magnètiques: són reutilitzables, però no direccionables.
+
+Això implica que l’accés és lent.
+
+- Discos magnètics. Poden ser
+
+Flexibles: Reutilitzables, direccionables i portables. Discos de plàstic recoberts d’una superfície magnètica. Dividits en sectors. Poca capacitat. Diferents tipus: 3,5 polzades (720 KB a 2,88 MB) o 5,25 polzades (de 360 KB a 1,2 MB). – Durs: Reutilitzables i direccionables. Normalment, van a dins d’una carcassa. Formats per diverses capes de discos. Des de 20 MB ﬁns a uns quants GB.
+
+Altres: Discos de cartutxos, Winchester, etc., com els ZIP i els JAZ.
+
+- Discos òptics. Poden ser
+
+CD-ROM: Direccionables i portables. La lectura es fa per mitjans òptics. Alta capacitat d’emmagatzematge, barats i segurs. Són els més utilitzats actualment. Diferents tipus: CD-R, CD-RW, etc. – DVD: Semblants als CD però amb més capacitat (d’aproximadament uns quants GB).
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 1.3 Estructura externa d’un sistema microinformàtic L’estructura externa d’un equip microinformàtic consta bàsicament de quatre elements (ﬁgura 1.14) que han de permetre establir la relació directa entre l’usuari del sistema i la CPU
+
+- Unitat central
+- Monitor (element de sortida)
+- Teclat (element d’entrada)
+- Ratolí (element d’entrada)
+
+Figura 1.14. Estructura externa d’un equip microinformàtic Actualment es disposa, també, d’una gran varietat d’altres elements d’entrada- sortida, com ara impressores, altaveus externs, mòdem/encaminador (router), auriculars/micròfon, webcam... (ﬁgura 1.15). Figura 1.15. Encaminador i altaveus externs A la unitat central hi ha les unitats d’emmagatzemament d’informació (disquetera, disc dur, ZIP...), el lector de DVD/CD-ROM, la targeta gràﬁca, la targeta de so..., a més de la placa base, el microprocessador i la memòria.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Els elements externs a la unitat central es connecten mitjançant els seus respectius cables i connectors. Aquests connectors són, normalment, especíﬁcs per a cada element, tot i que hi pot haver elements que utilitzin el mateix tipus de connector.
+
+Per exemple, el teclat i el ratolí utilitzen un connector de tipus PS/2 i es diferencien l’un de l’altre pel color: verd per al connector del ratolí i violeta per al connector del teclat. Aquests connectors són els següents
+
+- DIN femella: és de cinc forats i correspon a l’antic connector de teclat
+
+estàndard. Actualment no s’utilitza.
+
+- PS/2 femella: és el connector del teclat i el ratolí de tipus PS/2. S’anomena
+
+també mini DIN.
+
+- DE-9 mascle: connector de nou pius. És el connector en sèrie RS-232C.
+
+S’anomena COM1. Actualment no se sol utilitzar. Era el connector utilitzat en els primers ordinadors per a la connexió del ratolí.
+
+- DB-25 mascle: connector de vint-i-cinc pius. És el connector en sèrie RS
+
+232C. Pot ser també de nou pius. S’anomena COM2 i actualment no es troba pràcticament a cap ordinador.
+
+- DB-25 femella: connector de vint-i-cinc forats. És el connector en paral·lel
+
+Centronics o LPT1. S’utilitza per a la connexió d’impressores, tot i que la majoria ja es connecten a l’ordinador mitjançant el connector USB.
+
+- DB-15 HD (alta densitat) femella
+
+sortida de vídeo de quinze forats distribuïts en tres ﬁleres. És el connector de sortida de la targeta gràﬁca VGA i SVGA.
+
+- DB-15 femella: és el connector de jocs.
+- USB: és el connector del bus en sèrie universal.
+- RJ11: és el connector de mòdem per a connectar la línia telefònica.
+- RJ45: és el connector de xarxa.
+
+Detall de connectors de ratolí, port en sèrie COM1 i PS2 Actualment no trobarem en cap ordinador connectors del tipus DIN ni del tipus DB-25 mascle (vegeu la ﬁgura 1.16). I la resta solen estar codiﬁcats amb diferents colors. Això pot permetre’ns, en un moment determinat, decidir la viabilitat de poder reparar l’ordinador o no.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic En la secció “Adreces d’interès” del web del mòdul trobareu més informació sobre els diferents tipus de connectors. Figura 1.16. Connectors d’un PC antic Cable Centronics. Els connectors són: DIN femella, DB-9 mascle, DB-15 HD femella, DB-15 femella i DB-25 mascle i femella; aquests indiquen que es tracta d’un PC molt antic.
+
+Figura 1.17. Detall de connectors d’un PC actual A la ﬁgura 1.17 s’observen els connectors típics d’un ordinador actual. Veiem els connectors de tipus PS/2 per a ratolí i teclat (verd i violeta), els connectors USB, RJ45 i diferents tipus de connectors de vídeo i d’àudio. Veiem també que la majoria de connectors segueixen una codiﬁcació de colors que facilita la connexió amb l’element corresponent.
+
+Aquests connectors ens indiquen que la reparació d’una possible avaria del PC és factible, ja que els elements que cal substituir són fàcils d’obtenir. 1.3.1 L’estructura física d’un equip informàtic Més enllà del disseny abstracte amb què podem explicar un ordinador, tenim un maquinari comercial que és el que podem trobar a les botigues. Podem anomenar aquest maquinari “real” també l’estructura física d’un equip informàtic.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Cal fer esment, però, que aquesta estructura està basada en un equip informàtic de sobretaula, en què tenim una unitat central (coneguda habitualment com la “torre”) i una sèrie de dispositius que s’hi connecten, com són el monitor, el teclat, el ratolí i altres perifèrics que siguin necessaris per al seu propòsit. Existeixen altres estructures físiques lleugerament diferents segons quina sigui la seva ﬁnalitat.
+
+Per exemple, un ordinador portàtil té integrat el monitor amb la seva unitat central i el teclat. També un media center pot disposar només com a perifèric d’entrada/sortida d’un comandament a distància, etc. Figura 1.18. Estructura física-funcional d’un equip microinformàtic L’estructura física/funcional fa referència a l’estructura física real en què cadascun dels elements compleix una funció determinada i es poden trobar per separat i subministrats per diferents fabricants. Aquesta estructura es representa a la ﬁgura
+
+#### 1.18. La unitat central porta associats els elements d’entrada (costat esquerre), els
+
+elements de sortida (costat dret) i els elements interns (a sota). S’han representat només els elements més utilitzats per tal que l’esquema sigui tan aclaridor com sigui possible, però en el mercat hi ha molts dispositius que poden connectar-se als ports en sèrie/paral·lel per a l’entrada i sortida de dades.
+
+La placa base o placa mare (mainboard o motherboard, en anglès) porta el sòcol on es col·loca el microprocessador; aquests dos elements són els que deﬁneixen les característiques més importants que pot tenir l’ordinador. De la placa base depenen, a més del microprocessador, tots els elements que s’hi puguin connectar, com ara la memòria RAM, la targeta de vídeo, la targeta d’àudio, la targeta de xarxa, etc.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+### 2. Placa base: components i conﬁguració
+
+A la placa base de l’ordinador podem trobar els components fonamentals que conformen un ordinador. Per tal de conèixer aquest maquinari fonamental començarem fent una introducció al concepte de maquinari, tal com s’entén en l’entorn de la informàtica. Les màquines informàtiques o els sistemes informàtics més habituals en la informàtica són els ordinadors. Llavors, podem dir que un ordinador està compost per un conjunt de maquinari (que inclou la caixa o carcassa i tots els components interns d’aquesta, a més de tots els elements externs o perifèrics: el monitor, el teclat, el ratolí, etc.) i un conjunt de programari (software, en anglès) que permet usar més còmodament els ordinadors i treure’n el màxim proﬁt.
+
+El maquinari que forma actualment els ordinadors ha canviat al llarg del temps, a mesura que la tecnologia ha evolucionat. Conèixer aquesta evolució ens permetrà comprendre millor el maquinari actual i les tendències futures. A continuació, es presenta un esquema sobre l’evolució històrica de l’arquitectura dels ordinadors des del primer computador ﬁns avui dia
+
+- Es pot considerar que Charles Babbage (1792-1871) va dissenyar el primer
+
+ordinador, anomenat màquina analítica. Però no el va poder fer funcionar realment, ja que la tecnologia de la seva època no era prou precisa.
+
+- La primera generació de veritables ordinadors es va caracteritzar per la
+
+seva arquitectura de tubs de buit (1945-1955). Eren màquines molt grans i molt lentes.
+
+- La segona generació la van constituir les màquines basades en transistors
+
+(1955-1965). Gràcies a la introducció del transistor, es van començar a construir mainframes o macrocomputadors.
+
+- La tercera generació (1965-1980) fou la dels circuits integrats o xips. La
+
+incorporació dels circuits integrats en xips possibilità la creació d’ordina- dors més petits.
+
+- La quarta generació (des de 1980) és la dels PC (ordinadors personals o mi
+
+croordinadors). En aconseguir-se un xip que integrés un microprocessador, els ordinadors van baixar de preu. ENIAC: mítica màquina de primera generació construïda amb tubs de buit Actualment, doncs, el maquinari dels ordinadors consta d’una sèrie de components electrònics, que continuen evolucionant a mesura que ho fa la tecnologia.
+
+Les parts de maquinari fonamentals dels ordinadors actuals són la placa base –que és la que controla i interconnecta la resta de dispositius del sistema–, el processador –que moltes vegades ha estat deﬁnit com el cervell del sistema Podeu trobar més informació sobre la història de la informàtica a la secció Adreces d’interès dels materials web.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic perquè implementa la unitat central de processament i executa els programes– i la memòria principal –que és la part que emmagatzema la informació i els programes en execució. 2.1 Placa base La placa base també és coneguda com a placa mare i amb els termes anglesos mainboard o motherboard.
+
+És la targeta de circuits impresos principal de l’ordinador, on, gràcies a les ranures o slots, es connecten el processador, la memòria, la targeta gràﬁca, la targeta de so, els controladors per a discos durs, els perifèrics, etc. Placa base La placa base està constituïda per diversos elements o components, cadascun amb diferents funcions. A continuació, se’n proporciona una llista no exhaustiva
+
+- Chipset o joc de xips
+- Busos
+- BIOS
+- Ranura o sòcol per al processador
+- Ranures o sòcols per a la memòria
+- Ranures d’expansió
+- Pila
+- Rellotge
+- Ponts de conﬁguració
+- Connector d’alimentació
+- Connectors de les interfícies IDE
+- Connectors per a perifèrics...
+
+La distribució d’aquests components de la placa base i les seves dimensions depe- nen d’estàndards. L’estàndard més habitual actualment és l’ATX (que concorda amb el seu equivalent en carcasses), però n’hi ha molts altres, com ara l’antic AT, o d’altres derivats de l’ATX com el baby ATX, el mini ATX, el micro ATX, el mini ITX... També hi ha estàndards com el que es preveu que substituirà l’ATX en un futur proper, el BTX.
+
+L’estàndard ATX és l’estàndard més utilitzat actualment per a la distribució i organització dels diferents components dintre de les plaques base. L’ATX té unes dimensions de 12′′ × 9,6′′, és a dir, de 305 mm × 244 mm.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Darrerament les plaques base incorporen, integrats, certs components que anteri- orment tan sols es podien afegir a l’ordinador com a components independents, connectats a aquesta placa base. Aquests components integrats poden ser els següents
+
+- Controladors de dispositius: xips que controlen els discos durs, disqueteres
+
+o ports en sèrie.
+
+- Targeta de so integrada.
+- Controladora de vídeo o targeta de vídeo integrada.
+- Targeta de xarxa Ethernet integrada.
+- Mòdem integrat...
+
+La integració de components fa que baixi el preu dels ordinadors. A més, es guanya en comoditat de muntatge, ja que hi ha menys cables i targetes a l’interior de la carcassa. També fa disminuir la temperatura a l’interior de la caixa i n’afavoreix la ventilació. Alguns detractors d’aquest sistema assenyalen la menor qualitat dels dispositius integrats en comparació dels tradicionals i el fet que el no- funcionament d’un d’aquests components integrats el fa pràcticament irreparable, ja que la reparació d’una part de la placa base pot resultar complicada i costosa.
+
+2.1.1 El joc de xips El chipset o joc de circuits integrats o xips consisteix, normalment, en un parell de xips (northbridge i southbridge) que controlen les connexions entre diferents parts de l’ordinador. Es tracta d’una de les parts més importants de la placa base, ja que del joc de xips depèn, en gran part, el bon funcionament i el control de tot el sistema.
+
+Normalment, el xip northbridge (situat tradicionalment a la part superior –nord– a les plaques base ATX) s’encarrega de controlar la comunicació del proces- sador amb la memòria cau i la memòria central, i de la comunicació amb el southbridge (situat tradicionalment a la part inferior –sud– a les plaques base ATX). El southbridge normalment s’encarrega del control dels ports, dispositius d’emmagatzematge, targetes d’expansió...
+
+2.1.2 BIOS El nom de BIOS és l’acrònim anglès de basic input-output system. Podeu consultar un llistat dels principals fabricants de xipsets en l’apartat “Adreces d’interès” del web del mòdul.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu consultar els webs d’alguns dels principals fabricants de BIOS en l’apartat “Adreces d’interès” del web del mòdul. El BIOS és un subsistema de l’ordinador ubicat en un xip de la placa base. Aquest xip conté microprogramari (ﬁrmware, en anglès) allotjat bàsicament en memòria EPROM (erasable programmable read only memory) i memòria de tipus ﬂaix (ﬂash memory) no volàtil, que pot ser esborrada i reprogramada elèctricament.
+
+El BIOS s’encarrega, en primera instància, de detectar i comprovar tots els components connectats a l’ordinador per a oferir connexió d’aquests amb el sistema operatiu. Aquest procés és anomenat POST (power-on self-test). La conﬁguració del BIOS es pot fer per mitjà d’una interfície d’aplicació no visual que es pot carregar en iniciar l’ordinador, normalment prement una tecla (per exemple la tecla Del, o la tecla F2) o una combinació de tecles, segons s’indiqui en iniciar-se el sistema.
+
+En l’aplicació de conﬁguració del BIOS es pot introduir una contrasenya perquè els usuaris no autoritzats no el puguin reconﬁgurar. També des del BIOS es pot establir una contrasenya d’accés a l’ordinador. Les funcionalitats més habituals i útils són les següents
+
+- Canviar la data i hora del sistema.
+- Visualitzar i conﬁgurar els dispositius d’emmagatzematge (disquets, discos
+
+durs, CD, DVD...).
+
+- Canviar la contrasenya d’accés al BIOS.
+- Conﬁguració de dispositius com el teclat.
+- Conﬁguració dels ports i dispositius PCI, USB...
+- Conﬁguració de paràmetres avançats, com ara de freqüència del processa
+
+dor, de la memòria, actualització del BIOS...
+
+- Conﬁguració de sistemes d’estalvi d’energia (per a monitor i discos).
+- Seqüència de dispositius d’engegada (ordre en què s’iniciarà la càrrega del
+
+sistema). Se sol deixar en primer lloc la disquetera, si n’hi ha –per introduir un disquet de recuperació en cas necessari–, el disc dur principal –per a carregar, per defecte, el sistema operatiu que té instal·lat–, i la unitat de CD.
+
+- Desar o no els canvis realitzats.
+
+En sortir de l’aplicació de conﬁguració del BIOS, es poden acceptar i emmagat- zemar els canvis introduïts o bé sortir sense gravar-los. En cas de no estar segurs dels canvis introduïts, la millor opció és deixar la conﬁguració inicial. Actualment, també, els fabricants permeten actualitzar el programari del BIOS per a obtenir noves funcionalitats o controls. L’actualització del BIOS és un procés delicat perquè una mala conﬁguració podria deixar l’ordinador sense funcionar.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.3 Connector del processador La zona preparada per a connectar el processador a la placa base es coneix amb el nom de connector del processador. De vegades també s’anomena sòcol del processador. En anglès, s’utilitzen els termes slot (ranura) o socket.
+
+Aquest connector presenta formats diferents segons la família de processadors que s’hi vulgui connectar. Els formats més típics per a ranures de processadors són els següents
+
+- PGA (acrònim anglès de pin grid array). Es tracta d’un sistema per a antics
+
+processadors 286, 386 i 486. Malgrat que n’hi ha diversos submodels depe- nent del processador concret, la forma general consistia en una quadrícula plena de petits connectors on s’introduïen els pius del xip del processador a pressió.
+
+- ZIF (acrònim anglès de zero insertion force). En paral·lel amb el sistema
+
+PGA, es va crear aquest sistema mecànic que facilitava la inserció del xip del processador sense haver de fer força i així evitava el deteriorament dels pius.
+
+- LGA (acrònim anglès de land grid array). Aquest nou sistema sorgeix en
+
+els processadors Pentium 4 i AMD64. Canvia el sistema de subjecció de pius.
+
+- D’altres. S’han creat altres sistemes de connexió del processador a la placa
+
+base com ara slot 1, que es va crear per a Pentium II. Consistia en una ranura allargada, semblant a les ranures d’expansió PCI. AMD també va crear uns sòcols en aquest format allargat per als primers AMD K7. Actualment, les versions dels formats de connectors més usats són les següents
+
+- Per a processadors Intel
+
+Socket 478, per a alguns Intel Pentium 4 i Celeron. – Socket T o LGA775, per a Intel Pentium Extreme Edition, Petium D i Intel Core Duo. – Socket P, per a processadors Intel Core 2 d’ordinador portàtil. – Socket 441, per a processadors Intel Atom, utilitzats en ordinadors ultraportàtils i smart phones (telèfons intel·ligents).
+
+Socket B o LGA1366 per a Intel Core i7 i i9, – Socket H o LGA1156 per a Intel Core i3, i6 i i7.
+
+- Per a processadors AMD
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic La memòria volàtil... ... és la memòria que no manté la informació una vegada s’apaga l’ordinador. Les interfícies de connexió... ... són les zones on s’interconnecten pròpiament els mòduls de memòria amb la placa base. Se solen caracteritzar pel nombre de pius o contactes de què disposen.
+
+Socket 754, per a microprocessadors Athlon 64, Sempron i Turion 64. – Socket 939, per a AMD Athlon 64 i Opteron. – Socket S1, per a AMD Turion 64, Athlon 64 Mobile i Sempron. – Socket AM2 (substitut del Socket 939), per a AMD Opteron. – Socket AM2+ per a AMD Athlon 64, Athlon X2 i Phenom.
+
+Socket AM3 per a AMD Phenom II i AMD Athlon II. Tant en el cas d’AMD com d’Intel estan ordenats per ordre d’aparició. Alguns dels models han estat utilitzats tant en ordinadors de sobretaula com en portàtils, com és el cas del Socket 754 d’AMD. Altres han estat dissenyats directament per a la informàtica mòbil, com el Socket 441 d’Intel.
+
+Addicionalment, a sobre del processador, se solen posar ventiladors o dissipadors per a mantenir una temperatura adequada per al bon funcionament del processador i del sistema. 2.1.4 Ranures o sòcols de memòria Les ranures o sòcols de memòria són les zones on s’insereixen els mòduls de memòria principal.
+
+Els mòduls de memòria principal, o simplement mòduls de memòria, són com petites targetes on hi ha connectats els xips de memòria volàtil de tipus RAM (random access memory). Aquests mòduls de memòria es troben en formats i interfícies de connexió amb la placa base diferents. Els tipus de mòduls, amb les seves interfícies més habituals, són els següents
+
+- SIMM (single in-line memory module). Per a plaques base amb busos de
+
+ﬁns a 32 bits. Hi ha dues modalitats d’interconnexió amb la placa base: – 30 pius o 30 contactes – 72 pius o 72 contactes
+
+- DIMM (dual in-line memory module). Per a sistemes de 64 bits. Se solen
+
+interconnectar per mitjà d’interfícies de 168 pius.
+
+- DIMM DDR (DIMM per a DDR SDRAM). La interfície de connexió és de
+
+184 pius.
+
+- DIMM DDR2 (DIMM per a DDR2 SDRAM). Amb una interfície de 240
+
+pius. Sistema que millora DIMM DDR però que no és compatible.
+
+- RIMM (rambus in line memory module). Amb una interfície de 184 pius.
+
+Actualment, en desús.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.5 Busos Els busos són un conjunt de línies de transmissió tradicionalment en paral·lel, tot i que actualment se’n fan de sèrie, que serveixen per a intercomunicar els diferents blocs (unitat central de processament, memòria, equips perifèrics, etc.) que componen un ordinador.
+
+Els busos, doncs, proporcionen el camí per a comunicar el processador amb la resta de dispositius integrats o connectats a la placa base i aquests amb aquells. La velocitat a la qual es transmeten les dades sobre aquests busos és determinant, juntament amb l’eﬁciència del joc de xips, per a garantir uns bons resultats de la placa base.
+
+Els busos poden tenir sistemes de comunicació
+
+- En paral·lel. Aquests sistemes permeten transmetre diversos bits simul
+
+tàniament per diversos ﬁls (com, per exemple, els busos FSB, ISA, ATA, SCSI, PCI...). Dintre dels busos en paral·lel hi ha amplades de bus diferents (normalment de 8, 16, 32 i, actualment, 64 bits de transmissió en paral·lel).
+
+- En sèrie.
+
+Transmeten un bit darrere l’altre, seqüencialment. En són exemples els busos USB, FireWire, Serial ATA, PCI Express... Tradicionalment, els busos eren en paral·lel i estaven lligats a la freqüència del rellotge del bus. Actualment, es fan busos en sèrie molt ràpids aproﬁtant les seves característiques elèctriques i gràcies al fet que aquests busos no estan lligats al rellotge.
+
+Moltes vegades, en fer referència als busos, no solament s’inclouen en el concepte els canals o línies de transmissió, sinó que també s’hi associen les ranures, slots o connectors ﬁnals que permeten comunicar els diferents elements del sistema amb la placa base. Així, doncs, en parlar de bus PCI, ens referim tant a les línies impreses a la placa base que compleixen les especiﬁcacions corresponents, com a les ranures d’expansió homònimes que ofereixen la interfície amb els dispositius o targetes que ﬁnalment hi connectarem.
+
+Podem distingir diferents tipus de busos, depenent de la funcionalitat o dels dispositius que interconnectin. Els més importants són els següents
+
+- Bus de sistema. Conegut amb el terme anglès FSB (acrònim de front
+
+side bus) o simplement system bus. Es tracta d’un bus que ha d’oferir un rendiment màxim, ja que comunica el processador amb el joc de xips.
+
+- ISA (industry standard architecture). Tipus de bus antic (es va crear al
+
+principi dels vuitanta), inicialment de 8 bits, i posteriorment de 16 bits.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Ofereix unes ranures homònimes per a connectar-hi targetes d’expansió. Actualment està en desús.
+
+- EISA (extended industry standard architecture). Compatible amb targetes
+
+ISA, n’estén i millora les característiques. S’ofereix en 32 bits. Actualment en desús.
+
+- MCA (micro channel architecture). Bus creat per IBM per a millorar els
+
+busos ISA, tot i que són incompatibles entre aquells. Funciona amb 32 bits. No es va utilitzar gaire.
+
+- VESA (video electronics standards association). També anomenat VESA
+
+local bus o, de manera abreujada, VL-Bus o VLB. Permetia connectar la targeta gràﬁca amb el processador i, així, augmentar-ne el rendiment. S’usava en plaques base per a 486. Actualment en desús.
+
+- PCI (peripheral component interconnect). Bus que interconnecta la placa
+
+base amb les targetes d’expansió i, al mateix temps, amb els perifèrics. Fou creat per Intel. Aquests busos tenen una amplada de bus de 32 bits o de 64 bits, i milloren en rendiment i funcionalitat els anteriors. Els ordinadors actuals ofereixen la major part de ranures d’expansió per a targetes en aquest format. Un dels grans avantatges és el fet que amb un sistema operatiu PnP (plug and play), com els actuals, es poden reconèixer i autoconﬁgurar automàticament els dispositius que hi connectem. Es preveu que aquest bus en paral·lel se substitueixi pel seu successor en sèrie PCI-Express.
+
+- PCMCIA (personal computer memory card industry association).
+
+Es tracta de busos per a ordinadors portàtils que permeten la connexió de dispositius externs. Són PnP i es poden inserir i extreure del sistema sense reiniciar-lo (en calent). Ofereixen la propietat de tenir un consum baix, que els fa molt apropiats per a ordinadors portàtils.
+
+- AGP (accelerated graphics port). Es tracta d’un bus que connecta la placa
+
+base amb la targeta gràﬁca. Proporciona, respecte al bus PCI, un mitjà d’alta velocitat per a accelerar el processament dels gràﬁcs 3D. Actualment, el sistema PCI Express està deixant obsolet aquest tipus de busos.
+
+- PCI Express (també conegut com a PCIe o PCIX, i com a 3GIO, de 3rd
+
+Generation I/O). Sistema de bus en sèrie que ofereix unes prestacions de velocitat superiors als busos anteriors. Connecta punt a punt els dispositius PCIe amb els ports de la placa base. Es preveu que substitueixi els busos anteriors. Sovint es considera un híbrid entre bus en sèrie i en paral·lel, ja que sol agrupar diverses línies o lanes per a crear interconnexions de més alta velocitat. Aquestes interconnexions es coneixen amb el multiplicador que les origina: x1, x4, x8, x16.
+
+- USB (universal serial bus). Bus i port per a dispositius perifèrics que es va
+
+crear a mitjan anys noranta amb la idea de substituir els antics ports en sèrie i en paral·lel per a perifèrics. Com el seu nom indica, es tracta d’un bus en sèrie. Millora les prestacions del sistema PnP, ja que permet incorporar i extreure dispositius del sistema sense necessitat de reiniciar-lo (en calent).
+
+També ofereix energia elèctrica als dispositius que s’hi connecten.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.6 Ranures d’expansió Les ranures d’expansió o slots d’expansió són les zones o connectors que serveixen d’interfície entre la placa base i la resta de targetes que s’hi connecten directament (per exemple, targeta de so, targeta gràﬁca, targeta capturadora de vídeo...). Els noms i tecnologies de les ranures d’expansió van associats als busos corresponents.
+
+Les ranures més comunes (ﬁgura 2.1) són homònimes, doncs, dels busos que hi tenen associats
+
+- ISA (industry standard architecture)
+- EISA (extended industry standard architecture)
+- VESA (video electronics standards association)
+- PCI (peripheral component interconnect)
+- AGP (accelerated graphics port)
+- PCI Express (també conegut com a PCIe o PCIX, i com a 3GIO, de 3rd
+
+Generation I/O) Figura 2.1. Ranures d’expansió. D’esquerra a dreta i de dalt a baix, ranures d’expansió ISA, PCI, AGP i PCIe 2.1.7 Connectors interns Hi ha una sèrie d’elements interns de la carcassa o caixa de l’ordinador que cal controlar i connectar a la placa base. Aquests són bàsicament els següents
+
+Consulteu l’apartat “Recursos de contingut” del material web per a veure diversos tipus de ranures d’expansió.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Consulteu l’apartat “Recursos de contingut” del material web per a veure diversos tipus de connectors interns.
+
+- La disquetera
+- El disc dur o discos durs
+- El lector/gravador de CD/DVD
+
+Per a connectar aquests elements interns a la carcassa de l’ordinador disposem, també, d’unes interfícies en la placa base. Aquestes interfícies poden obeir a diversos estàndards. Els sistemes estàndard (ﬁgura 2.2) més usats són els següents
+
+- IDE (integrated device electronics). És un sistema de connexió per a dis
+
+positius d’emmagatzematge basat en el sistema ATA (advanced technology attachment) o parallelATA. En una placa base hi sol haver una interfície IDE de 34 pius per a la disquetera, i dues interfícies IDE de 40 pius (IDE primari i secundari). A cada piu es poden connectar dos dispositius IDE (un de màster o principal i l’altre d’esclau). És en les interfícies de 40 pius on es connecten els discos durs IDE, el lector de CD o DVD i les gravadores de CD/DVD, ﬁns a un màxim de quatre dispositius.
+
+- SCSI (small computer system interface).
+
+Es tracta d’un sistema d’alt rendiment que, normalment, es fa servir per a discos durs de servidors. És més car que el sistema IDE.
+
+- S-ATA o Serial ATA. Proporciona una velocitat més elevada de transmissió
+
+que el sistema paral·lel ATA. Té la capacitat de connectar els discos “en calent” (una vegada l’ordinador ja està engegat), i permet connectar ﬁns a set o quinze dispositius S-ATA. Figura 2.2. Connectors interns D’esquerra a dreta i de dalt a baix, connectors d’alimentació de la placa base, IDE, SCSI i S-ATA
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.8 Connectors externs Els connectors externs se solen anomenar ports i serveixen d’interfície per a connectar els perifèrics (teclat, ratolí, impressora...). Els ports que ofereix la placa base més freqüentment (ﬁgura 2.3) són els següents
+
+- En sèrie.
+
+També anomenat RS232 o COM. Si n’hi ha més d’un a l’ordinador, prenen els noms successius de COM1, COM2, etc. Se solien usar per a connectar el ratolí, mòdems externs, etc. Hi ha dues modalitats, tot i que la primera és més habitual: – 9 pius – 25 pius
+
+- En paral·lel. S’anomenen LPT1, LPT2... Típicament, s’hi connectaven les
+
+impressores i escàners. Presenta una interfície de 25 pius.
+
+- USB (universal serial bus). Connector que es va crear a mitjan anys noranta
+
+amb la idea de substituir els antics ports en sèrie i en paral·lel. Com indica el seu nom, es tracta d’un bus en sèrie. Millora les prestacions del sistema PnP, ja que permet incorporar i extreure dispositius del sistema sense necessitat de reiniciar-lo. També ofereix energia elèctrica als dispositius que s’hi connecten. Hi ha dues variants principals dels connectors USB
+
+Connectors USB de tipus A – Connectors USB de tipus B
+
+- PS/2. Port per al teclat i el ratolí (que substitueix els antics DIN de 5 pius
+
+i DE-9 RS-232 –serial mouse). Actualment, el port destinat al teclat és de color violeta, i el destinat al ratolí, verd.
+
+- RJ45 (RJ prové de l’anglès registered jack). Es tracta d’un connector per a
+
+la connexió a la xarxa local.
+
+- RJ11 (RJ prové de l’anglès registered jack). És la interfície del mòdem
+
+intern. Consisteix en un connector similar a l’RJ45, de dimensions més petites, per a connectar-hi la línia telefònica bàsica.
+
+- Connectors d’àudio o jacks (darrerament segueixen l’estàndard de colors
+
+PC 99 creat per Microsoft i Intel).
+
+- FireWire. Connector per a dispositius multimèdia de vídeo i àudio.
+- Port per a jocs o port de joystick. És un port similar al port en paral·lel, de
+
+15 pius distribuïts en dues ﬁles.
+
+- VGA. Interfície de la targeta gràﬁca amb el monitor. Presenta 15 pius
+
+agrupats en tres ﬁles. Consulteu l’apartat “Recursos de contingut” del material web per a distingir visualment cadascun d’aquests ports.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 2.3. Ports D’esquerra a dreta i de dalt a baix: ports en sèrie, VGA, en paral·lel, PS-2, USB (de tipus A i B), RJ45 i de targeta d’àudio 2.1.9 Connector d’alimentació És la zona on arriben els cables de la font d’alimentació que proporcionen subministrament elèctric a la placa base. En el cas de les plaques ATX, consisteix en un únic connector, que podeu veure a la ﬁgura 2.4.
+
+Figura 2.4. Connector d’alimentació d’una placa base Els estàndards de les plaques ATX suporten l’apagament de l’ordinador per part del programari –apagament del sistema sense necessitat de prémer l’interruptor de la carcassa de l’ordinador. 2.1.10 Pila La pila de l’ordinador, normalment de botó, s’utilitza bàsicament per a mantenir certa informació del BIOS, les característiques dels discos durs i el rellotge de l’ordinador.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic És, doncs, un element necessari per a no haver de reconﬁgurar tota aquesta informació cada vegada que s’engega l’ordinador. Cada cert nombre d’anys cal canviar la pila de l’ordinador. Aleshores, s’han de consultar, en el manual de la placa base, les característiques concretes i exactes de la pila (voltatge, dimensions...).
+
+2.1.11 El pont Un pont és un petit element que interconnecta un circuit elèctric. A la placa base i en altres components de l’ordinador, els ponts s’utilitzen per a conﬁgurar o ajustar el funcionament d’alguns dispositius. Per exemple, el voltatge de funcionament de la placa base o d’alguns dispositius que s’hi connecten directament.
+
+2.2 El processador Actualment, aquesta part de l’ordinador es coneix amb diversos noms. Els més comuns són els següents
+
+- Processador
+- CPU (acrònim de l’anglès central processing unit, és a dir, unitat central de
+
+processament)
+
+- Microprocessador
+
+Estrictament, en els PC (ordinadors personals) hauríem de parlar de micropro- cessador, per diferenciar-lo del processador o CPU dels ordinadors centrals o mainframes (més potents). En la pràctica, però, el preﬁx micro s’omet, i així ho farem també en aquests materials.
+
+El processador és una de les parts més importants de l’ordinador. Es diu que el processador és el cervell de l’ordinador. Es tracta d’un xip que conté milions de transistors integrats. En aquest xip, s’executen seqüències d’instruccions o operacions conegudes com a programes.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.2.1 Freqüència del rellotge La característica principal del processador és la freqüència del rellotge (clock rate, en anglès) o unitat de temps mínima amb què s’executen operacions bàsiques com una suma de dos enters. S’expressa en cicles per segon o, més freqüentment, en hertzs i els seus múltiples. Són valors habituals 2,4 GHz, 3 GHz o 3,8 GHz. La freqüència del rellotge la marca un oscil·lador de quars.
+
+Malgrat que la freqüència del rellotge és un paràmetre important per a comparar processadors, per a determinar el rendiment d’un ordinador cal considerar, a més, altres paràmetres que hi intervenen, també molt importants, com ara l’amplada dels busos i la freqüència del rellotge del sistema, o l’eﬁciència del joc de xips, que són determinants per a calcular aquest rendiment ﬁnal.
+
+2.2.2 Alimentació Un paràmetre del processador que també cal tenir present és el voltatge d’alimenta- ció. Com més alts són els valors, més temperatura induïda hi ha. I el processador, si s’escalfa per sobre d’una temperatura de funcionament normal, resulta inestable i pot provocar un mal funcionament del sistema. Per això, normalment, per sobre del processador hi ha un ventilador o dissipador que procura que la temperatura no augmenti excessivament.
+
+2.2.3 Registres El processador inclou els registres o memòria de nivell 0. Es tracta d’un conjunt molt reduït d’espais d’accés molt ràpid i volàtil (que només hi és mentre l’ordinador està engegat). El conjunt de registres se sol anomenar banc de registres, i es caracteritza per l’amplada en bits de cada registre, que va de 8 bits a 64 bits, i que dóna nom al nombre de bits que pot tractar el processador. Els registres se solen classiﬁcar en els tipus següents
+
+- Registres de dades
+- Registres de condició
+- Registres d’adreça
+- Registres de propòsit general
+- Registres de propòsit especíﬁc (que inclou el registre d’instrucció)
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Registres de coma ﬂotant
+- Altres
+
+2.2.4 Memòria cau (cache) Una de les propietats que, en els últims temps, ha explotat la indústria en la tecnologia de disseny dels processadors és la d’incorporar (en el mateix xip de la CPU) un o diversos nivells de memòria addicional als registres, que anomenem memòria cau o cache.
+
+La memòria cau és una memòria de nivell 1 (perquè és d’accés més lent que els registres –nivell 0–, però d’accés molt més ràpid que la memòria principal o RAM –que resideix fora del processador). La memòria cau té una capacitat limitada en comparació de la memòria principal, i el seu objectiu és contenir duplicats (accessibles molt ràpidament) de les dades més utilitzades. La memòria cau també és volàtil (només hi és mentre l’ordinador està engegat).
+
+La memòria cau és, doncs, una memòria que ofereix una velocitat d’accés molt ràpida i una capacitat limitada, per a les dades que s’utilitzen més en un moment determinat. La presència d’aquest tipus de memòria millora el rendiment del processador. Actualment, s’exploten les memòries cau multinivell. Normalment, són memòri- es cau de dos nivells, tot i que hi ha màquines amb tres nivells. Habitualment, les memòries cau multinivell (multilevel) presenten un primer nivell (L1, o level 1) de memòria cau molt ràpida i amb capacitats molt limitades (per exemple, 64 kB), i un segon nivell (L2) una mica més lent però de més capacitat (per exemple, 1 MB o 2 MB). Actualment, aquests dos nivells solen estar integrats en el processador. En les màquines amb un tercer nivell de memòria cau (L3), aquest nivell de memòria, però, no és dintre del xip del processador. En aquest cas, es tracta d’un xip directament connectat a la CPU, però fora d’aquesta.
+
+2.2.5 Joc d’instruccions Respecte a les instruccions del processador, cada un té deﬁnit un conjunt d’ins- truccions que el caracteritza, i està preparat per a executar-les. Aquest conjunt d’instruccions se sol anomenar joc d’instruccions del processador. Segons com siguin aquestes instruccions, podem classiﬁcar els processadors segons si operen amb aquests tipus de conjunts d’instruccions
+
+- RISC (reduced instruction set computer). Conjunt d’instruccions senzilles
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic i segmentables (divisibles en fases d’execució per a facilitar el disseny superescalar, pipeline en anglès).
+
+- CISC (complex instruction set computer). Conjunt d’instruccions comple
+
+xes que solen contenir suboperacions. La majoria de processadors actuals ofereixen un conjunt d’instruccions CISC que internament es tradueixen en instruccions RISC per a facilitar el procés superescalar dels processadors. 2.2.6 Segmentació Els processadors executen seqüències d’instruccions. Cada instrucció es divideix en diverses fases d’execució. La divisió en fases d’una instrucció es coneix com a segmentació (pipeline, en anglès).
+
+Una instrucció se sol dividir en les fases següents
+
+- Recollida de la instrucció. Cerca de la instrucció en la memòria.
+- Descodiﬁcació. Determinació de la instrucció que s’ha d’executar.
+- Recollida de dades. Cerca de les dades en memòria.
+- Execució pròpiament dita.
+- Escriptura dels resultats.
+
+2.2.7 Processadors superescalars Si s’executa cada fase de la instrucció seqüencialment, i no es comença la instrucció següent ﬁns que no s’hagi acabat l’anterior, deixem en repòs parts del processador a l’espera del seu torn. En canvi, si executem les instruccions com si es tractés d’una cadena de muntatge, de manera que cada fase d’una instrucció s’encadeni amb la de la instrucció següent, encavalcant instruccions, aproﬁtem la potència del processador al màxim (execució d’un conjunt d’instruccions molt més ràpidament). Aquests tipus de processadors s’anomenen processadors superescalars.
+
+Figura 2.5. Execució d’una seqüència d’instruccions en un ordinador no superescalar
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 2.6. Execució d’una seqüència d’instruccions en un ordinador superes- calar A la ﬁgura 2.5, es pot veure la forma d’execució d’una seqüència d’instruccions segmentades en un ordinador no superescalar. A la ﬁgura 2.6, es pot veure la forma d’execució d’una seqüència d’instruccions en un ordinador superescalar.
+
+La majoria de processadors actuals utilitzen dissenys superescalars. 2.2.8 Paral·lelisme de ﬁls (threads) o hyperthreading Una característica també important dels processadors és el paral·lelisme de ﬁls (threads) o hyperthreading. L’hyperthreading consisteix en l’execució simultània de diversos threads (ﬁls d’execució) o processos.
+
+Perquè s’utilitzi aquesta característica, cal que els sistemes operatius també hi donin suport. 2.2.9 Multiprocessament i xips multinucli Una altra tendència per a optimitzar el rendiment dels ordinadors és el mul- tiprocessament (en anglès, multiprocessing), que consisteix en l’ús de dos o més processadors interconnectats dintre d’un sol ordinador. Quan els diversos processadors estan integrats en un mateix xip, com és el cas del processador Intel Core 2 Duo, es parla de chip-level multiprocessing (multiprocessament a escala de xip) o de xip multinucli. Vegeu l’esquema d’aquest xip a la ﬁgura 2.7.
+
+Figura 2.7. Esquema del xip multinucli Intel Core 2 Duo
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu consultar els webs d’Intel i AMD en l’apartat “Adreces d’interès” del web del crèdit. 2.2.10 Fabricants Hi ha diversos fabricants de processadors. De totes maneres, els principals competidors en el mercat són dos
+
+- Intel, que és la marca més comercialitzada i estesa.
+- AMD
+
+Intel és conegut per la història dels seus processadors: Intel 8086, Intel 8088, Intel 80286 (més conegut com a Intel 286), Intel 386, Intel 486, Intel Pentium, Intel Pentium II, Intel Pentium III, Intel Pentium 4, Intel Pentium D, i els seus últims Intel Core 2 Duo, Intel Core 2 Quad i Intel Core 2 Extreme.
+
+AMD es va començar a conèixer amb AMD K5, i sobretot AMD K6, AMD K6- 2, AMD K7 o Athlon, AMD Athlon 64, AMD Athlon 64 X2 Dual Core i AMD Athlon 64 FX. Tots dos fabricants també fan versions per a ordinadors portàtils (més reduïts i que requereixen menys energia). 2.3 La memòria La memòria és un dispositiu o circuit que permet l’entrada i la sortida d’una informació determinada i que és capaç d’enregistrar-la i d’emmagatzemar-la temporalment o indeﬁnidament.
+
+Es tracta, doncs, d’un espai en què es desen les dades i els programes. 2.3.1 Jerarquia de memòria Hi ha, però, diferents tipus de memòries, organitzades segons una jerarquia de memòria. Aquesta jerarquia s’estructura per nivells
+
+- Nivell 0: registres del processador
+- Nivell 1: memòria cau
+- Nivell 2: memòria principal o memòria, simplement
+- Nivell 3: memòria virtual
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Els nivells de memòria es caracteritzen perquè van creixent de capacitat –com més gran sigui el nivell, més capacitat–, i perquè van disminuint de velocitat d’accés, a la vegada que el preu per unitat d’emmagatzematge es redueix. És a dir, el nivell 0 és el nivell en què la memòria és més ràpida i més cara, però en què se’n disposa de menys quantitat. En canvi, el nivell 3 és d’accés més lent, és més barat i és on es pot disposar de més quantitat de memòria.
+
+Com ja s’ha comentat en l’apartat anterior, els registres del processador i la me- mòria cau solen estar integrats en el xip del processador. En concret, els registres formen un conjunt molt reduït d’espais d’accés molt ràpid per al processament de la CPU, i la memòria cau ofereix una velocitat d’accés molt ràpida –però menys que els registres– i una capacitat menys limitada, perquè les dades que s’utilitzen en un moment determinat la facin servir. Al mateix temps, la memòria cau se sol organitzar en subnivells (típicament L1 i L2).
+
+2.3.2 Memòria principal La memòria principal, memòria RAM (random access memory) o memòria, simplement, és una memòria d’accés directe. Això signiﬁca que s’accedeix amb la mateixa rapidesa a qualsevol element d’aquesta memòria, independentment de la seva posició i de la posició de la sol·licitud anterior
+
+s’accedeix directament a qualsevol informació. S’anomena memòria principal perquè el processador la requereix. Per a executar programes, la CPU necessita les instruccions i les dades, i aquestes han d’estar emmagatzemades en aquesta memòria; altrament no es podria processar res.
+
+Com els registres del processador i les memòries cau, la RAM també és una memòria volàtil (és a dir, quan s’apaga l’ordinador no es manté la informació). La RAM està composta de cel·les elèctriques o biestables, integrades en xips. Aquests xips s’agrupen o incrusten en plaques anomenades mòduls de memòria.
+
+Aquests mòduls de memòria són els que, ﬁnalment, s’insereixen en les ranures de la placa base destinades a connectar-hi la memòria. Cadascun d’aquests mòduls pot contenir des de pocs megabytes de capacitat ﬁns als valors actuals de 256 MB, 512 MB o 1 GB. Els tipus de format més habituals per als mòduls de memòria són els següents
+
+- SIMM (single in-line memory module).
+
+Es tracta d’un sistema antic per a plaques base amb busos de ﬁns a 32 bits. Hi ha dues modalitats d’interconnexió amb la placa base: – de 30 pius o contactes – de 72 pius o contactes
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- DIMM (dual in-line memory module). Per a sistemes de 64 bits. Se solen
+
+interconnectar mitjançant interfícies de 168 pius.
+
+- DIMM DDR (DIMM per a DDR SDRAM). Es tracta d’un tipus de memò
+
+ria RAM dinàmica i síncrona que ofereix doble ràtio de dades (doubledata- rate synchronous dynamic random access memory). La interfície de connexió és de 184 pius. Hi ha diversos tipus de mòduls DIMM DDR depenent de la velocitat o amplada de banda que ofereixen: – PC-1600: opera a 100 MHz i ofereix 1.600 MB/s d’amplada de banda – PC-2100: opera a 133 MHz i ofereix 2.133 MB/s d’amplada de banda – PC-2700: opera a 166 MHz i ofereix 2.667 MB/s d’amplada de banda – PC-3200: opera a 200 MHz i ofereix 3.200 MB/s d’amplada de banda
+
+- DIMM DDR2 (DIMM per a DDR2 SDRAM). Interfície de 240 pius.
+
+Sistema que millora la DIMM DDR però que no hi és compatible. Vegem- ne alguns mòduls comercialitzats: – PC2-3200 (200 MHz, 3.200 MB/s) – PC2-4200 (266 MHz, 4.264 MB/s) – PC2-5300 (333 MHz, 5.336 MB/s) – PC2-6400 (400 MHz, 6.400 MB/s) – PC2-8500 (533 MHz, 8.500 MB/s)
+
+- DIMM DDR3 (DIMM per a DDR3 SDRAM). Interfície de 240 pius.
+
+Sistema que redueix el consum de la DIMM DDR2. Tampoc no són compatibles físicament per la diferent ubicació de l’osca clau. Els següents són alguns mòduls comercialitzats: – PC3-6400 (400 MHz, 6.400 MB/s) – PC3-8500 (533 MHz, 8.500 MB/s) – PC3-10600 (667 MHz, 10.600 MB/s) – PC3-12800 (800 MHz, 12.800 MB/s) – PC3-16000 (1.000 MHz, 16.000 MB/s) – PC3-17000 (1.066 MHz, 17.000 MB/s)
+
+- SO-DIMM (Versions per a ordinador portàtil dels DIMM de memòria DDR.
+
+Són d’aproximadament la meitat de la mida dels DIMM estàndard). N’hi ha de 72, 100, 144, 200 i 204 pius.
+
+- RIMM (rambus in line memory module). Amb una interfície de 184 pius.
+
+Actualment en desús. Un banc de memòria és una agrupació de mòduls de memòria que proporcionen tots junts un nombre de bits simultanis equivalent a l’amplada de banda de la CPU. Per exemple, si es disposa d’una CPU de 32 bits, un banc de memòria estaria compost per quatre mòduls de 8 bits o bé per un sol mòdul de 32 bits.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.3.3 Limitacions en la quantitat de memòria La memòria s’utilitza com a element bàsic d’emmagatzematge d’instruccions i dades per a l’execució de programes. Els programes o aplicacions necessiten cada vegada més memòria perquè cada vegada són més complexos i tenen més dades.
+
+Si una aplicació no pot carregar a la memòria totes les dades que necessita, les ha d’anar a buscar al disc o a suports d’emmagatzematge més lents, com ara un CD, i això fa baixar la velocitat d’execució de l’aplicació. Per això, tradicionalment, sempre s’ha pensat que la quantitat de memòria havia de ser la màxima possible perquè l’ordinador sigui més ràpid. I això és cert, però hi ha una sèrie d’elements que limiten la quantitat de memòria que pot tenir l’ordinador. Bàsicament, són aquests
+
+- Capacitat d’adreçament. Hem de disposar de suﬁcients bits per a poder
+
+adreçar una posició de memòria.
+
+- Capacitat de control per part del joc de xips.
+- Capacitat física d’encapsulament en les ranures de la placa base (nombre
+
+de ranures suﬁcient). 2.3.4 MMU La MMU (memory management unit) és la unitat gestora o de control de la memòria. Es tracta d’uns circuits integrats, normalment incorporats al joc de xips que s’encarreguen del següent
+
+- Traduir les adreces lògiques o virtuals (utilitzades pels programes) a adreces
+
+físiques (reals), seguint sistemes de paginació, segmentació o mixtos.
+
+- Protecció de la memòria (evitar l’accés a llocs restringits).
+- Control de la memòria cau.
+
+2.3.5 Tipus de memòria RAM Si ens ﬁxem en la velocitat, la complexitat i el refresc que han de tenir les cel·les de la memòria RAM, podem distingir aquests dos tipus bàsics de RAM
+
+- DRAM (dynamic random access memory). Memòria RAM que requereix
+
+refresc de corrent contínuament. Estructuralment és força simple i s’utilitza per a implementar memòria principal.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu consultar els webs de Buffalo, Kingston i Samsung en l’apartat “Adreces d’interès” del web del mòdul.
+
+- SRAM (static random access memory). Memòria RAM que no requereix
+
+refresc de corrent elèctric, és estructuralment més complexa que la DRAM i més cara de construir. Té una velocitat d’accés molt ràpida. Se sol utilitzar per a implementar memòria cau. La DRAM és el tipus de memòria principal més estès. Dintre d’aquest, però, hi ha diverses variants, entre altres
+
+- DRAM pròpiament dita, que funciona de manera asíncrona.
+- SDRAM (synchronous dynamic random access memory).
+
+DRAM de tipus síncron, que està sincronitzada amb el rellotge del sistema, fet que la fa òptima. Hi ha subvariants d’aquesta, com ara DDR SDRAM o DDR2 SDRAM (versions de double-data-rate SDRAM que ofercap aeixen velocitat doble de transferència de dades).
+
+- FPM (fast page mode). Tecnologia DRAM que treballa amb pàgines i
+
+millora el rendiment de la DRAM.
+
+- EDO (extended data out). Millora el disseny i el rendiment de la DRAM i
+
+de la FPM.
+
+- BEBO (burst extended data out). Deriva de l’EDO, però funciona per
+
+ràfegues que milloren la velocitat.
+
+- GDDR3 (graphics double data rate 3).
+
+Tecnologia que deriva de la DDR2 SDRAM i que s’utilitza com a memòria especíﬁca per a les targetes gràﬁques. La família GDDR3 ha evolucionat envers la GDDR4 i posteriors. 2.3.6 Memòria virtual La memòria virtual s’utilitza per a ampliar la memòria principal real d’un sistema. Aquesta ampliació de memòria no és real, però, sinó que es fa per simulació gràcies a programari especialitzat.
+
+La majoria de sistemes operatius actuals ofereixen memòria virtual mitjançant un programari gestor d’aquesta que gestiona un espai del disc dur anomenat ﬁtxer d’intercanvi. Així, doncs, s’agafa una part del disc dur i s’utilitza com si fos una expansió de la memòria principal.
+
+Fent aplicació d’algoritmes apropiats, s’aconsegueix un bon rendiment del sistema. A banda del programari gestor, per a fer ús d’aquest servei cal tenir disponible espai suﬁcient en el disc dur per a poder-lo implementar.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic 2.3.7 Fabricants de memòria RAM Tot i que hi ha moltes empreses que encapsulen en mòduls els diversos xips de memòria. Els xips de memòria mateixos els fabriquen marques com ara
+
+- Buﬀalo
+- Kingston
+- Samsung
+
+2.3.8 Memòria ROM L’ordinador també necessita memòries no volàtils (que mantinguin la informació en tancar el sistema) i només de lectura (o que no es puguin escriure fàcilment). Aquest tipus de memòria és la memòria ROM. La memòria ROM se sol utilitzar com a microprogramari (programari de baix nivell, molt proper al maquinari). L’aplicació més comuna és la implementació del BIOS.
+
+Hi ha diversos tipus de memòria ROM. Els més habituals són els següents
+
+- PROM (programmable read only memory). La memòria només es pot
+
+programar una vegada.
+
+- EPROM (erasable programmable read only memory). Es pot esborrar amb
+
+l’exposició a llum ultraviolada.
+
+- EEPROM (electrically erasable programmable read only memory). De
+
+funcionament semblant a les memòries ﬂaix.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+### 3. Perifèrics i comunicacions
+
+A part dels components fonamentals, l’ordinador pot disposar d’una sèrie d’am- pliacions que es coneixen habitualment com a perifèrics, si retallem l’expressió “dispositius perifèrics”. Aquests components de maquinari poden ser fonamentals per a la utilització de l’ordinador per part d’un usuari, com pot ser el cas d’un monitor de visualització, o poden ser simplement una ampliació que permet un ús més productiu del sistema informàtic, com per exemple el ratolí.
+
+De fet, els perifèrics són aquells dispositius que, tot i formar part de l’ordinador, es troben fora del contenidor principal (anomenat caixa o torre), malgrat que en ordinadors de tipus compacte, com per exemple els portàtils, aquests ja es troben integrats en el sistema. Per tant, el concepte “perifèric” fa referència no tant a la posició física d’un component com a la seva situació lògica respecte al bus principal del sistema. En certa manera, tot allò que no sigui la unitat de procés central i la memòria principal i el bus del sistema és considerat perifèric. En alguns casos també es consideren perifèrics els dispositius de memòria secundària (per exemple, el disc dur).
+
+Els perifèrics són aquells dispositius que formen part del maquinari d’un sistema informàtic i amplien les funcionalitats dels components fonamentals: CPU, memòria principal i bus del sistema. Es pot considerar la part central de l’ordinador la que es troba dintre de la carcassa o caixa i un usuari rarament veu. La resta de dispositius externs a aquesta carcassa que formen el sistema informàtic se solen anomenar perifèrics.
+
+Així, doncs, a la part central o interna d’un ordinador trobem, com a elements més importants, els següents
+
+- La carcassa
+- La font d’alimentació
+- La placa base
+- El processador
+- La memòria
+- El disc dur
+- La disquetera
+- Els lectors i gravadors de CD i DVD
+- La targeta gràﬁca
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- La targeta de so
+- La targeta de xarxa
+- El mòdem intern
+
+Fora de la carcassa, trobarem els elements externs o perifèrics. De perifèrics n’hi ha de molts tipus, depenent de les necessitats. Els perifèrics imprescindibles en els sistemes informàtics actuals són els següents
+
+- Monitor
+- Teclat
+- Ratolí
+
+Hi ha diverses classiﬁcacions per a organitzar els tipus de perifèrics. La més habitual és la següent
+
+- Perifèrics d’entrada.
+
+Perifèrics que permeten introduir dades des de l’exterior de l’ordinador cap a la part central. Són exemples de perifèrics d’entrada els següents: – Teclat – Ratolí – Micròfon – Escàner – Càmera web
+
+- Perifèrics de sortida.
+
+Perifèrics que permeten extreure dades des de l’interior de l’ordinador o part central cap a l’exterior o usuari. Són exemples de perifèrics de sortida els següents: – Monitor – Altaveus – Auriculars – Impressora
+
+- Perifèrics d’entrada/sortida. Perifèrics que permeten introduir i extreure
+
+informació de l’ordinador. Com a exemple de perifèric d’entrada/sortida es podria esmentar la pantalla tàctil, que visualitza la informació a la vegada que permet introduir-ne de nova per mitjà de les pulsacions. El concepte de perifèric es pot considerar de manera àmplia, i es poden incloure també entre els perifèrics els dispositius d’emmagatzematge no primari (com els discos durs, disquets o discos òptics), els dispositius de comunicació (com ara les targetes de xarxa o els mòdems) i els elements de comunicació (com les targetes de so o les targetes gràﬁques). En aquest sentit més ampli, un perifèric és un dispositiu o component que s’afegeix a l’ordinador per a afegir funcionalitats addicionals a les bàsiques.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Perifèrics d’emmagatzematge. Serveixen per a desar dades i informació
+
+per un temps llarg, al contrari que la memòria de treball: – Disc dur – Disquetera – Discos òptics – Memòria USB – Lector de targetes
+
+- Perifèrics de comunicació. Són aquells que s’encarreguen de comunicar-se
+
+amb altres màquines o ordinadors, per a treballar en conjunt o simplement per a enviar i rebre informació: – Targeta Ethernet – Mòdem – Targeta inalàmbrica 3.1 El disc dur Els discos durs són uns discos magnètics amb una gran capacitat d’emmagatzematge que, generalment, són instal·lats a l’interior de l’ordinador. Els discos durs implementen un sistema de memòria no volàtil (la informació es conserva una vegada es desconnecten del corrent elèctric).
+
+Disc dur El disc dur es classiﬁca com a memòria secundària o sistema d’emmagatzematge secundari, en un nivell addicional a la memòria principal. És a dir, proporciona molta més capacitat d’emmagatzematge a un preu per unitat de capacitat més econòmic, però d’accés més lent. Els discos durs es coneixen també amb el terme anglès hard disk o les abreviacions HD o HDD (hard disk drive).
+
+3.1.1 Estructura interna d’un disc dur Un disc dur està constituït, bàsicament, pels elements següents
+
+- Una carcassa que protegeix les parts internes.
+- Un o diversos plats amb la superfície de material magnetitzable.
+- Un motor que fa girar tots els plats alhora.
+- Una sèrie de capçals lectors subjectats per braços per a accedir als plats.
+- També sol incorporar, com a mínim, un circuit imprès que fa les tasques de
+
+controlador de disc.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Els discos durs estan organitzats de la manera següent (vegeu la ﬁgura 3.1)
+
+- Cada plat del disc té dues cares. Cada cara es divideix en cercles concèntrics
+
+anomenats pistes o tracks.
+
+- S’anomena cilindre un conjunt de pistes alineades en els diversos discos.
+- Cada pista conté diversos sectors. Un sector conté 512 bytes.
+
+Figura 3.1. Estructura interna d’un disc dur Els sistemes de ﬁtxers poden deﬁnir un clúster com el nombre mínim de sectors seleccionables, és a dir, el nombre mínim d’informació que es pot llegir o escriure en bloc. Si es deﬁneixen clústers molt grans s’optimitzen les operacions de lectura i escriptura, però se sol perdre força espai, ja que qualsevol ﬁtxer s’haurà d’incloure en un nombre enter de clústers, i l’espai no usat en el seu interior es perd.
+
+La densitat de gravació és la quantitat de dades emmagatzemada per unitat de superfície. Així, doncs, per a augmentar la densitat de gravació hi ha dues possibilitats: disminuir la distància entre pistes o bé augmentar el nombre de bits dintre d’un sector. 3.1.2 Característiques dels discos Un disc dur se sol caracteritzar pels elements següents
+
+- Capacitat. Quantitat d’informació que pot contenir (per exemple 120 GB).
+- Dimensions. Habitualment, els discos són de 3,5 polzades, tot i que en
+
+ordinadors portàtils solen ser de 2,5 polzades.
+
+- Nombre d’operacions d’E/S per segon. Els valors típics són de prop de 50
+
+operacions d’E/S aleatòries. Les operacions seqüencials poden ser moltes més, ja que no cal localitzar la dada per transferir.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Velocitat de rotació. Normalment, velocitat angular, per exemple revo
+
+lucions per minut (rpm). Això implica que, en els sectors de les pistes més externes, els capçals recorreran més distància per unitat de temps, per exemple 7.200 rpm. Com més velocitat de rotació, més energia i més calor es desprèn.
+
+- Nombre de sectors absoluts, o bé nombre de pistes i nombre de sectors per
+
+pista.
+
+- Temps de cerca (seek time). Temps que triga un capçal a trobar la pista
+
+que conté la informació demanada. Aquest temps depèn del lloc on sigui el capçal en el moment de la petició. Si és en una pista molt propera, el seek time és relativament petit (un o dos mil·lisegons), altrament triga ﬁns a 15 mil·lisegons.
+
+- Latència (rotational delay). Una vegada seleccionada la pista, el temps
+
+que comporta localitzar el sector concret és la latència (aquest temps pot ser d’uns 2 mil·lisegons). Com més velocitat de rotació del disc, menys latència.
+
+- Temps mitjà d’accés.
+
+Mitjana de la suma del temps de cerca més la latència.
+
+- Temps de transferència.
+
+Mesura, en megabits per segon (Mbps), la capacitat de llegir sectors i transferir-los a la controladora o memòria cau. 3.1.3 Format i particions El format del disc és la manera en què s’organitzaran les dades en aquest. Hi ha dos tipus de format, el físic i el lògic.
+
+El format físic consisteix a dividir el disc en sectors de 512 bytes cadascun. Aquest format se sol fer, si cal, mitjançant el BIOS. El format lògic consisteix a incorporar l’estructura en el disc per al sistema de ﬁtxers i el sector d’engegada o boot sector, que contindrà la informació mínima per a engegar un sistema operatiu o aplicació instal·lats en aquest.
+
+Els sistemes de ﬁtxers solen estar associats a un sistema operatiu; els sistemes operatius Windows solen usar sistemes de ﬁtxers de tipus FAT16, FAT32 o NTFS, mentre que els sistemes operatius Linux solen usar sistemes de ﬁtxers com ara ext3 o ext4. Un disc dur es pot particionar en unitats més petites, i cada partició es pot formatar amb un sistema de ﬁtxers diferent. Una partició és l’establiment de divisions lògiques en un disc dur, normalment per a instal·lar-hi diversos sistemes operatius, o bé per a organitzar les dades amb unitats lògiques diferenciades.
+
+Tradicionalment, en l’MS-DOS i el Windows hi ha la limitació de quatre particions de tipus primari (en què cadascuna pot contenir un únic sistema operatiu), tot i que
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Es recomana consultar la secció “Recursos de contingut” del material web per a identiﬁcar els cables connectors de cadascun d’aquests tipus de connexió. Els principals fabricants (Seagate, Iomega, Western Digital) ofereixen discos durs amb capacitats ja habituals de centenars de gigabytes.
+
+en un moment determinat, només pot estar-ne activa una (la partició “per defecte”). Hi pot haver, però, altres particions anomenades particions esteses. Les particions esteses poden contenir una o diverses particions lògiques. 3.1.4 Estàndards d’interfícies i de control Els discos durs es connecten a les interfícies de la placa base preparades per a allotjar-los. Associades a aquestes interfícies, hi ha uns estàndards de sistemes de control. Els estàndards següents són els més comuns
+
+- IDE (integrated device electronics). És un sistema de connexió per a dispo
+
+sitius d’emmagatzematge basat en ATA (advanced technology attachment) o Parallel ATA. Els discos durs es connecten a les interfícies de 40 pius que els permeten la transmissió de les dades i del control, i per uns cables d’alimentació provinents de la font d’alimentació
+
+- SCSI (small computer system interface).
+
+Es tracta d’un sistema d’alt rendiment que, normalment, es fa servir per a discos durs de servidors. És més car que el sistema IDE.
+
+- S-ATA o Serial ATA. Proporciona una velocitat més elevada de transmissió
+
+que el sistema Parallel ATA. Té la capacitat de connectar els discos “en calent” (una vegada l’ordinador ja està engegat) i permet connectar ﬁns a set o quinze dispositius S-ATA. És compatible amb IDE. 3.1.5 Modes de transferència Hi ha diversos sistemes per a fer la transferència de dades del disc dur al processador o memòria. La implementació d’una o altra depèn, bàsicament, de la capacitat del BIOS i del joc de xips de la placa base d’adoptar aquests mètodes
+
+- PIO (programmed input/output).
+
+Sistema en el qual és el processador l’encarregat de controlar les peticions de lectura/escriptura en disc. És un sistema molt lent i poc eﬁcient que requereix que la CPU destini molt de temps a aquest tipus d’operacions i al seu control.
+
+- DMA (direct memory access). El seu ús està condicionat a la presència
+
+d’aquesta característica en el joc de xips de la placa base. En aquest cas, es transfereixen les dades des del disc a la memòria o viceversa sense que hi intervingui el processador. El controlador de la DMA és el que gestiona la transferència.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Ultra DMA. Sistema que millora l’anterior. Exemples d’aquest tipus són
+
+ATA-6 i ATA-7.
+
+- Block mode.
+
+Sistema que consisteix a agrupar diverses operacions de lectura o escriptura per a controlar-les conjuntament. Comporta una millora en el rendiment. Aquesta característica s’ha d’activar (en cas de ser suportada) mitjançant el BIOS. 3.1.6 Memòria cau de disc La majoria de discos disposen de sistemes de memòria cau per a millorar els temps d’accés als sectors. Així, en aquestes memòries cau, es pot emmagatzemar el que es preveu que se sol·licitarà en un futur immediat, i també la cua d’escriptures pendents en disc.
+
+Aquestes memòries cau poden estar incorporades en el disc dur mateix, en targetes a part, o poden fer ús de la memòria principal per a aquesta ﬁnalitat. 3.2 La disquetera La disquetera és la unitat per a la lectura i escriptura de disquets o discos ﬂexibles. La disquetera també es coneix per les sigles FDD (ﬂoppy disk drive).
+
+Disquet de 3,5 polzades Un disquet (ﬂoppy disk, en anglès) és un disc magnètic de material ﬂexible, de petites dimensions, tancat en una funda, magnetitzable per les dues bandes. Els disquets permeten emmagatzemar informació de manera no volàtil (no s’esborra si no hi ha corrent) i oﬀ-line o esborrable (mitjans d’emmagatzematge de dades que han de ser introduïts en el dispositiu lector de l’ordinador per a poder ser llegits, a diferència dels dispositius d’emmagatzematge intern, com ara els discos durs).
+
+S’han estandarditzat dos formats de disquets al llarg de la història
+
+- De 5,25 polzades
+- De 3,5 polzades
+
+Actualment, els primers estan en desús, i els segons s’estan substituint per altres tipus d’emmagatzematge, com ara discos òptics o memòries USB o ﬂaix.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic L’estructura interna d’un disquet s’organitza, de la mateixa manera que en els discos durs, en pistes (cercles concèntrics) i sectors (seccions de cercle). Els disquets encara utilitzats actualment són els de 3,5 polzades d’alta densitat (HD) amb una mida de 1,44 MB.
+
+3.3 Discos òptics Els discos òptics són suports d’informació de gran capacitat formats per superfícies circulars de policarbonat en què la informació s’emmagatzema perforant la superfície plana. La informació s’emmagatzema en una espiral que cobreix tota la superfície del disc, i que va de la part interior a l’exterior.
+
+La densitat de bits per unitat de superfície és idèntica en tot el disc, i la velocitat de lectura de bits també és constant; per tant, la velocitat de rotació angular no serà constant, ja que per a llegir la part interior del disc s’haurà de fer girar més ràpid. La informació es llegeix aproﬁtant les propietats opticoreﬂectives de la incisió de la llum làser en la superfície perforada.
+
+3.3.1 Tipus de discos òptics Hi ha dos tipus principals de discos òptics usats habitualment en els sistemes informàtics, els quals es divideixen en diversos subtipus depenent de la funció per a la qual es vulguin utilitzar. Els més comuns en informàtica són els següents
+
+- CD (compact disc)
+
+CD-ROM (compact disc-read only memory). Disc òptic de només lectura (escrit durant la fabricació). – CD-R (compact disc-recordable). Disc gravable, una única vegada (s’hi pot escriure per l’acció d’un feix làser). – CD-RW (compact disc-rewritable). Disc reenregistrable (s’hi pot escriure diverses vegades).
+
+- DVD (digital versatile disc)
+
+DVD-ROM (digital versatile disc-read only memory). Successors dels CD-ROM (escrits durant la fabricació). – DVD-R (digital versatile disc recordable). Gravable, una única vegada.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic – DVD+R. Com els DVD-R però creats per una altra aliança de fabri- cants. – DVD-RW (digital versatile disc rewritable). Disc reenregistrable (s’hi pot escriure diverses vegades). – DVD+RW. Igual que els DVD-RW però creats per una altra aliança de fabricants.
+
+Externament, tots aquests discos presenten un aspecte similar: són discos òptics, majoritàriament de 12 cm de diàmetre. La diferència més important entre els CD i els DVD és la quantitat d’informació que s’hi pot emmagatzemar. En els DVD, s’ha disminuït la distància entre pistes i la distància entre bits, i això ha fet que es puguin emmagatzemar en el mateix espai físic (12 cm de diàmetre) molts més bits. Mentre que els CD solen emmagatzemar uns 800 MB, tot i que hi ha variants, els DVD solen emmagatzemar 4,7 GB (els d’una sola cara i capa).
+
+Entre les tecnologies DVD es poden distingir les següents
+
+- DVD d’una cara.
+- DVD de dues cares (amb informació per les dues cares).
+- DVD d’una capa (la informació està escrita en forma d’espiral en una sola
+
+dimensió).
+
+- DVD de dues capes (la informació està escrita en dues capes diferents, com
+
+en dues superfícies superposades. L’enfocament de la lent làser és el que permet obtenir la informació de cadascuna de les cares). Aquesta tecnologia dobla la capacitat de la cara. Aleshores, comercialment, es poden trobar DVD de diversos formats
+
+- DVD-5: DVD d’una sola cara i una sola capa
+- DVD-9: DVD d’una sola cara i doble capa
+- DVD-10: DVD de doble cara i una sola capa per cara
+- DVD-18: DVD de doble cara i doble capa a cada cara
+
+En ordinadors actuals és possible ja trobar unitats de Blu-ray Disk (el nom fa referència al làser blau utilitzat per a la lectura/escriptura). Es tracta d’un format de disc òptic amb el mateix format físic que el CD o el DVD. Ha estat creat per a l’emmagatzematge de vídeo d’alta deﬁnició o grans quantitats de dades. La seva capacitat arriba ﬁns als 50 GB. Hi ha en estudi suports ﬁns a 400 GB.
+
+Els formats actuals són els següents
+
+- Blu-ray d’una capa: 25 GB.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic
+
+- Blu-ray de doble capa: 50 GB.
+
+Aquest format es va imposar al seu competidor (l’HD DVD) en la guerra de formats per a convertir-se en el successor del DVD, encara que actualment el DVD encara és majoritari. 3.3.2 Tipus de dispositius de lectura/escriptura de discos òptics Hi ha diferents dispositius que permeten accedir a la informació d’aquests discos òptics
+
+- Lectors de CD
+- Lectors de DVD
+- Gravadors de CD (que inclouen la lectura de CD)
+- Gravadors de DVD (que inclouen la lectura de DVD)
+- Lectors de Blu-ray
+- Gravadors de Blu-ray (que inclouen la lectura de CD i DVD).
+
+Actualment, se solen oferir totes les funcions o algunes (lectura i escriptura de CD i de DVD) en un únic dispositiu lector/gravador d’aquests diversos formats. Així, es disposa de dispositius com ara els següents
+
+- Lectors de CD i DVD (que tenen dos capçals, un per a llegir CD i l’altre per
+
+als DVD).
+
+- Lectors de Blu-ray, DVD i CD.
+- Gravadors (i lectors) de CD i DVD.
+- Gravadors de Blu-ray (compatibles amb CD i DVD).
+
+Totes les unitats actuals són capaces d’enregistrar dades en suports gravables (un cop) com CD-R o DVD-R i regravables (diversos cops) com el CD-RW o el DVD- RW. Això inclou els discs Blu-ray regravables que, malgrat el seu elevat preu, es troben disponibles en el mercat.
+
+3.4 Unitats basades en memòria ﬂaix La memòria ﬂaix és un tipus d’emmagatzematge desenvolupat a partir de la memòria EEPROM (electrically erasable programmable read only memory) que permet múltiples lectures i escriptures en un dispositiu no volàtil.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic És un tipus de memòria molt resistent als cops, de baix consum i silenciosa, ja que no conté motors o parts mòbils com els discs magnètics tradicionals. A més, la seva mida petita ha propiciat la proliferació de formats d’emmagatzematge portàtils basats en aquesta tecnologia. Com a inconvenient podem trobar que el nombre de vegades que es pot escriure i esborrar és limitat, i pot arribar a nombres entre 10.000 i un milió de cops, depenent del procés de fabricació i altres factors.
+
+Els tipus de dispositius d’emmagatzematge més freqüents basats en aquest format són
+
+- Memòria USB: (universal serial bus). També coneguda com a llapis de
+
+memòria. És un dispositiu portàtil de mida compacta (com un clauer) que pot emmagatzemar actualment ﬁns a 256 GB en algun model. S’han convertit en el sistema d’emmagatzematge i transport personal de dades més utilitzat, i ha desplaçat deﬁnitivament els disquets ﬂexibles, però també els formats òptics com CD o DVD. Es tracta de dispositius plug & play (‘endollar i llest’) que reconeixen gairebé tots els sistemes operatius actuals sense necessitat de controladors afegits.
+
+- Targetes de memòria: És també un dispositiu en forma de petita targeta de
+
+dades. S’ha popularitzat a partir de les càmeres digitals, però s’ha estès a altres dispositius com les càmeres de vídeo, PDA, reproductors multimèdia o telèfons mòbils. Conviuen múltiples formats (Compact Flash, Secure Digital, xD-Picture Card...) en diverses mides i capacitats, que arriben ﬁns als gigabytes en alguns casos. Per a poder llegir-les en un ordinador personal cal disposar d’un lector de targetes que habitualment és capaç de reconèixer- ne múltiples tipus (són habituals els que en llegeixen 16 tipus diferents).
+
+- Unitats d’estat sòlid: (SSD, de l’anglès solid state drive). Aquest dispositiu
+
+en format de disc dur utilitza memòria no volàtil com la ﬂaix per a emmagatzemar dades en lloc del suport magnètic amb plats i capçal dels discos habituals. El fet de no tenir parts mòbils redueix molt el temps de cerca, la latència i altres paràmetres vitals d’un suport d’aquest tipus. A més, és més immune a les vibracions externes i als cops, de manera que s’ha estès molt el seu ús per a ordinadors portàtils, sobretot del tipus UMPC (ultra mobile PC) que solen tenir ﬁns a 10 polzades de pantalla.
+
+En general s’ha estès molt l’ús dels dispositius basats en memòria ﬂaix, gràcies a la facilitat de transport i a la immunitat contra pols, ratllades, etc. –enfront d’altres dispositius d’emmagatzematge, com els disquets, CD o DVD–, a la velocitat d’accés que ofereixen, i al nombre i ﬂexibilitat d’escriptures que permeten.
+
+Muntatge i manteniment d’equips Components d’un equip microinformatic Hi ha diversos fabricants de targetes gràﬁques. N’hi ha que fabriquen la GPU i n’hi ha que només integren els components a la placa. 3.5 La targeta gràﬁca Una targeta gràﬁca, també coneguda com a targeta de vídeo i, de vegades, com a adaptadora de pantalla, és una targeta d’expansió (tot i que, cada vegada més sovint, ja es troba integrada a la placa base) que s’encarrega de processar les dades per a fer-les visibles en el monitor o pantalla.
+
+Anteriorment, era el processador el que s’encarregava de gestionar el processa- ment de la informació per a poder visualitzar-la, però, actualment, a causa de la complexitat creixent dels sistemes gràﬁcs, aquesta funció s’ha hagut d’especialit- zar. Algunes targetes gràﬁques actuals, a banda del tractament pròpiament dit dels grà- ﬁcs, ofereixen funcionalitats addicionals com ara la captura de vídeo, sintonització de televisió i descodiﬁcació de MPEG-2 i MPEG-4.
+
+3.5.1 Conceptes importants per a gràﬁcs Associada a les targetes gràﬁques, hi ha tota una sèrie de conceptes de gràﬁcs que cal conèixer per a comprendre millor els elements d’aquesta tecnologia. Els més importants són els següents
+
+- Píxel (picture element). És la unitat mínima d’informació gràﬁca. Una
+
+pantalla està formada per milers o milions de píxels o petits punts.
+
+- Resolució de la pantalla. Nombre de píxels que es mostren en la pantalla,
+
+expressat en píxels horitzontals per píxels verticals. Són resolucions típiques 800×600 o 1.024×768.
+
+- Profunditat de color (o bits per píxel). El nombre de bits que es necessiten
+
+per a representar un píxel condiciona el nombre total de colors disponibles per a aquest píxel. Per exemple, si es destinen 16 bits, es poden representar 65.000 colors, però amb 24 bits se’n poden representar 16,7 milions, la qual cosa permetrà representar una imatge més real.
+
+- Freqüència de refresc. Nombre de vegades per segon que s’actualitza o
+
+repinta la pantalla. Són valors habituals 60 Hz, 75 Hz i 100 Hz. Com més freqüència de refresc, menys parpelleig en la pantalla. 3.5.2 Components de la targeta gràﬁca Una targeta gràﬁca integra diverses parts, cadascuna amb la seva funció especíﬁca
+
+> **💡 📚 Document extens (90 pàgines)**
+> S'han mostrat les primeres 80 pàgines completes del manual.
+
+---
+
+## 2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE
+
+DISPOSITIVOS DE ALMACENAMIENTO
+
+Discos duros
+
+Características de un disco
+
+Discos duros ATA/IDE o PATA
+
+Discos duros SATA
+
+La BIOS
+
+Discos duros SCSI
+
+Discos duros externos
+
+Discos duros SSD
+
+Cabinas de discos
+
+NAS/SAN
+
+RAID
+
+Disquetes
+
+Dispositivos de almacenamiento óptico
+
+Tarjetas de memoria flash
+
+Herramienta Información DD
+
+Cifrado
+
+Dispositivos de almacenamiento
+
+### 1. Disco Duro
+
+Concepto
+
+1.1 Estructura física
+
+1.1 Estructura física
+
+Plato: cada uno de los discos que hay dentro del disco duro(de material ferromagnético).
+
+Cara: cada uno de los dos lados de un plato.
+
+Cabeza: número de cabezales (graba/lee datos).
+
+Pistas: una circunferencia dentro de una cara; la pista 0 está en el borde exterior.
+
+Cilindro: conjunto de varias pistas; son todas las circunferencias que están alineadas verticalmente (una de cada cara).
+
+Sector: cada una de las divisiones de una pista. Todos tienen el mismo tamaño. El tamaño estándar actual 4096 bits (512B) por el sistema FAT.
+
+Clúster: es un conjunto contiguo de sectores de un disco.
+
+Sector geométrico: es un conjunto de sectores de pistas continuas (si el plato fuera una pizza, el sector geométrico sería una porción)
+
+1.1 Estructura física
+
+La geometría de un disco duro hace referencia al número físico real de cabezas, cilindros, pistas y sectores (CHS Cylinder, Head, Sector).
+
+Las limitaciones más importantes para el cálculo son
+
+Especificación ATA; Máximo número de cilindros, cabezas y sectores
+
+Cilindros= 65536; cabezas=16 (8discosx2caras); sectores/pista=256
+
+Podemos direccionar = Cilindros x Cabezas x Sectores x Almacenamiento_Sector =aprox 128 GB
+
+La Bios; Máximo número de cilindros, cabezas y sectores
+
+Cilindros= 1024; cabezas=256 (128discosx2caras); sectores/pista=63
+
+Podemos direccionar = Cilindros x Cabezas x Sectores x Almacenamiento_Sector =aprox 7,88 GB
+
+Según estas limitaciones, un disco duro solo puede direccionar;
+
+Cilindros x Cabezas x Sectores x Almacenamiento_Sector =1024*16*63*512= aprox 504 MB
+
+1.1 Estructura física
+
+Solución → introducción en la BIOS un sistema de traducción de geometrías
+
+El sistema de traducción LBA (Logical Block Addressing, o dirección de bloque lógico).En lugar de referirse a ellos en términos geométricos (Cilindro, Cabeza y Sector), a cada cluster se le asigna un número único, Número de Sector. Para ello se numeran 0, 1, 2, ... N-1, donde N es el número total de sectores del disco.
+
+LBA tiene sus limitaciones pero van apareciendo nuevas extensiones como LBA48
+
+El disco mantiene el número máximo de sectores
+
+Ayuda; https://www.taringa.net/+info/solucion-a-limites-de-discos-en-bios_i3k1b
+
+Las tuplas CHS pueden ser mapeadas a una dirección LBA con la siguiente fórmula;
+
+LBA = (C × HPC + H) × SPT + (S – 1)
+
+C, H y S son el “cylinder number”, el “head number”, y el “sector number”
+
+LBA es el logical block address
+
+HPC es el número máximo de cabezas por cilindro (reported by disk drive, typically 16 for 28-bit LBA)
+
+SPT e sel número máximo de sectores por pista (track). (reported by disk drive, typically 63 for 28-bit LBA)
+
+https://en.wikipedia.org/wiki/Logical_block_addressing#CHS_conversion
+
+1.1 Estructura física
+
+Calcular la capacidad de un disco sabiendo que cada sector almacena 512 B. Para ello, nos dan los datos siguientes
+
+Cilindros = 6.253
+
+Cabezas = 16
+
+Sectores/pista = 63
+
+Capacidad = CilindrosxCabezasxSectoresxAlmacenamiento_Sector=3 227 148 288 B =aprox 3GB
+
+1.1 Estructura física
+
+Calcula la capacidad de un disco duro con los valores siguientes
+
+Cilindros = 528 Cabezas = 64 Sectores = 63
+
+- Señala la respuesta correcta: un disco con 4.096 cilindros, 16 cabezales y 63 sectores por pista alberga un total de
+
+- 4 128 768 sectores
+
+- 2 113 929 216 B
+
+- 2 064 384 kB
+
+- 2 016 MB
+
+- 1,96875 GB
+
+### 3. Señala cuál de estas afirmaciones es correcta
+
+- Todos los platos de un disco están unidos y también lo están entre sí las cabezas lectoras.
+
+- El conjunto de pistas que se encuentran bajo todas las cabezas lectoras
+
+recibe el nombre de sector.
+
+- La capacidad de un disco puede describirse indicando su número de cilindros, cabezas y sectores por pista.
+
+1.2 Estructura lógica
+
+La estructura lógica de un disco duro es la forma en la cual se organiza la información que contienen
+
+El sector de arranque (master boot record MBR).
+
+Es el primer sector de todo el disco duro: Cab0,Cil0,Sect1. Por ello el tamaño útil del sector es 255 y no 256
+
+Se almacena la tabla de particiones, con información acerca del inicio y el fin de cada partición, y un pequeño programa llamado master boot, que leer la tabla de particiones y cede el control al sector de arranque de la partición activa, desde la que arranca el PC.
+
+El espacio particionado es el espacio de disco duro que ha sido asignado a alguna partición. Las particiones se definen por cilindros. Cada partición tiene un nombre; en los sistemas Microsoft llevan asociada una letra: C, D, E, etc.
+
+El espacio sin particionar es el espacio que no se ha asignado a ninguna partición..
+
+1.2 Estructura lógica
+
+Al instalar un sistema operativo nos preguntará si queremos usar las estructuras de partición MBR o GPT.
+
+La estructura de partición se encarga de definir como se organiza la información en el disco duro, para hacerlo sencillo podemos decir que es la forma de clasificar la información.
+
+MBR (Master Boot Record) es el estándar de partición más antiguo y el más compatible. MBR contiene un gestor de arranque para el sistema operativo, así como información sobre las diferentes particiones del disco duro. La limitación más importante de MBR es que solo soporta discos duros de hasta 2 TB y solo admite hasta cuatro particiones primarias, si queremos más particiones tenemos que coger una de las primarias y dividirla en varias lógicas.
+
+GPT (GUID Partition Table) (GUID, Identificador Unico Global) va asociado con UEFI de forma que en los equipos que se usa vamos a encontrar este firmware y no BIOS, que también está en desuso. El nombre completo de este estándar es Tabla de particiones GUID, este se debe a que incluye un identificador único para cada partición. GPT elimina las principales limitaciones de MBR, pues permite hasta 128 particiones en un solo disco y es compatible con discos duros de tamaños inmensos, en este sentido no nos quedaremos cortos a medio plazo.
+
+Un inconveniente de GPT es que los datos de partición y arranque se almacenan en un solo espacio por lo que si se corrompe tendrás serios problemas, para solucionarlo se crean varias copias de estos datos, de forma que si se corrompen es posible recuperar los datos perdidos.
+
+1.2 Estructura lógica
+
+https://stackoverflow.com/questions/39972313/whats-so-special-about-0x55aa
+
+1.2 Estructura lógica
+
+Mientras que el MBR comienza con el código de arranque maestro (Master Boot Code), que contienen un binario ejecutable que identifica la partición activa e inicia el proceso de arranque, la GPT se basa en las capacidades extendidas del EFI para estos procesos. A pesar de que una entrada de MBR comienza el disco, con propósitos de protectividad y compatibilidad con el viejo esquema BIOS PC, la GPT propiamente dicha comienza con la cabecera de la tabla de particiones.
+
+GPT usa un moderno modo de direccionamiento lógico (LBA, logical block addressing) en lugar del modelo cilindro-cabeza-sector (CHS) usado con el MBR. La información de MBR heredado está almacenada en el LBA 0, la cabecera GPT está en el LBA 1, y la tabla de particiones en sí en los bloques sucesivos. En los sistemas operativos Windows de 64-bits, 16.384 bytes, o lo que es lo mismo, 32 sectores, están reservados para la GPT, dejando el bloque LBA 34 como el primer sector usable del disco.
+
+GPT proporciona asimismo redundancia. La cabecera GPT y la tabla de particiones están escritas tanto al principio como al final del disco.
+
+El motivo de que se haya mantenido un MBR al principio del disco es evitar que las herramientas antiguas de manejo de discos basados en MBR, que no reconocen los discos basados en GPT, se confundan y pudieran estropear el disco
+
+https://es.m.wikipedia.org/wiki/Tabla_de_particiones_GUID
+
+1.2 Estructura lógica
+
+Razones que aconsejan el uso de particiones
+
+Podrás salvar tus datos en caso de fallos del sistema:Contar al menos con dos particiones, una para el sistema y otra para los datos, te asegura que un fallo del sistema no afectará a tus archivos personales.
+
+Podrás instalar varios sistemas operativos:La mayoría de sistemas operativos obliga a instalarlos en sus propias particiones.
+
+Rendimiento mejorado: Los discos duros actuales de hasta 4 o 6 Tbytes ofrecen una enorme capacidad de almacenamiento pero obligan a las cabezas lectoras a un mayor recorrido
+
+Mayor facilidad en la organización: Contar con varias particiones de disco facilita la organización y búsqueda de los archivos.
+
+1.2 Estructura lógica
+
+Sistemas de Archivos
+
+Se encargan de asignarle a los archivos el espacio que necesiten, ordenarlos, permitir el acceso a ellos y administrar el espacio libre de las unidades de almacenamiento.
+
+Es como un bibliotecario, que ordena y registra la posición exacta en la que se ha escrito un fichero dentro de la unidad, y así tu sistema operativo puede acceder rápidamente a ellos y saber dónde empieza y acaba cada uno.
+
+Cada sistema de archivo organiza y gestiona los datos de maneras diferentes.
+
+Un sistema de archivos desempeña tres funciones principales
+
+- control del espacio asignado y disponible,
+
+- mantenimiento de directorios y nombres de archivo y
+
+- control del lugar donde cada archivo se encuentra físicamente almacenado en el disco.
+
+1.2 Estructura lógica
+
+Sistemas de Archivos
+
+1.2 Estructura lógica
+
+Investiga y realiza un trabajo sobre el sistema de archivos
+
+1.2 Estructura lógica
+
+Ver las particiones de un disco desde el sistema operativo Linux
+
+fdisk -l y lsblk -fm y df -h
+
+TMPFS:se trata de un sistema de almacenamiento típico de sistemas UNIX y similares, como BSD o GNU Linux. Se trata de un sistema de ficheros montado que utiliza memoria volátil.
+
+Por lo que los datos que pueda contener (tmpfs) se pierden al reiniciar el equipo. Por normal general puede utilizar también el espacio de intercambio o SWAP, en las situaciones en que haya poca memoria volátil, generalmente RAM.
+
+### 2. Características de un disco
+
+La capacidad y el rendimiento de los discos duros se determina en función de los siguientes factores
+
+El modo de transferencia
+
+El tiempo de acceso
+
+El tiempo de búsqueda
+
+La velocidad de rotación
+
+La latencia
+
+La capacidad de almacenamiento
+
+La caché del disco.
+
+2.1 Modo de transferencia
+
+Técnicas donde se transfieren los datos de la unidad de disco duro hacia la memoria RAM: PIO y DMA
+
+PIO: entrada/salida programada.
+
+Utiliza el microprocesador del sistema como intermediario para el intercambio de datos;
+
+PIO Modo1: 5,2 Mb/s.
+
+PIO Modo2: 8,3 Mb/s.
+
+PIO Modo3: 11,1 Mb/s.
+
+PIO Modo4: 16,6 Mb/s.
+
+2.1 Modo de transferencia
+
+DMA: Transfiere datos desde la RAM hasta el disco duro, y viceversa, sin que intervenga el microprocesador → Libera la CPU.
+
+DMA 16 o ultra DMA:16,6 MB/s
+
+DMA33 o ultra DMA Mode 2, o Ultra ATA/33: 33 MB/s
+
+UDMA66 o ultra DMA Mode 4, o Ultra ATA/66: 66MB/s
+
+UDMA100 o Ultra-DMA-Mode-5, o Ultra-ATA/100: 100 MB/s
+
+UDMA133 o Ultra-DMA-Mode-6, o Ultra-ATA/133: 133 MB/s
+
+2.2 Tiempo de acceso
+
+Es el tiempo usado por las cabezas de lectura/escritura para colocarse encima del sector que se va a leer o escribir
+
+Entre 9 y 12 mseg.
+
+2.3 Tiempo de búsqueda
+
+Es el tiempo que necesita la unidad para desplazar las cabezas desde una pista a otra
+
+Entre 8 y 12 mseg.
+
+2.4 Velocidad de rotación
+
+Marca la velocidad de giro del disco
+
+HDD de portatiles: 5400 rpm
+
+HDD de PC sobremesa: 7200 rpm
+
+HDD con interface SCSI: hasta 15000 rpm
+
+2.5 Latencia
+
+Cuando se desplazan las cabezas hasta el cilindro adecuado, la unidad tiene que esperar hasta que el sector deseado pase por debajo de la cabeza
+
+Latencia = 60s/Velocidad de rotación.
+
+Principal característica del disco duro
+
+2.6 Capacidad de almacenamiento
+
+2.7 Caché del disco
+
+Almacenará las lecturas, de forma que cuando la controladora solicite datos del disco ya los tenga disponibles en su caché y no haya que esperar a que los cabezales cambien de posición.
+
+2.8 Otras características
+
+La interfaz que define el mecanismo de conexión entre el disco duro y el PC. Los PC de sobremesa y los portátiles suelen usar ATA/IDE y SATA, los servidores SATA y SCSI; para los discos externos se suele usar USB, FireWire o eSATA.
+
+El tamaño: los discos duros para PC de sobremesa suelen tener 3,5”; en los portátiles suele ser de 2,5 o 1,8 pulgadas.
+
+El ruido, que suele depender del tipo de disco. Los de alta velocidad de rotación, como los SCSI, son más ruidosos.
+
+Temperatura máxima de funcionamiento.
+
+Tolerancia a golpes y vibraciones.
+
+El precio.
+
+PREGUNTA
+
+Indica si son verdaderas o falsas las siguientes afirmaciones
+
+- Actualmente la interfaz que más se usa para los discos duros es ATA/IDE.
+
+- A mayor velocidad de rotación, mayor latencia.
+
+- Se puede decir que lo principal de un disco duro es su capacidad.
+
+- El tiempo que necesita la unidad para desplazar las cabezas de una pista a otra es el tiempo de acceso.
+
+Video
+
+Funcionamiento de un disco duro
+
+Disco Duro desmontado
+
+### 3. Discos Duros ATA/IDE o PATA
+
+Conocidos como IDE (Integrated Device Electronics, electrónica de unidades integradas)
+
+La conexión al sistema → Por cable plano de 40 pines que se conectará a la interfaz IDE o conector IDE en la placa base → uno o dos conectores o canales IDE
+
+Conector Primario → para unidad de arranque del sistema.
+
+Conector Secundario → Otro HDD
+
+3.1 Maestro/Esclavo
+
+Cada interfaz o conector IDE soporta dos dispositivos y cada dispositivo debe ser identificado
+
+Maestro (master)
+
+Esclavo (slave)
+
+No puede haber dos maestros o dos esclavos sobre el mismo cable.
+
+3.1 Maestro/Esclavo
+
+Los dispositivos IDE usan jumpers (o puentes) para la identificación maestro/esclavo.
+
+Las configuraciones típicas de los jumpers son
+
+Maestro en un cable de una sola unidad → Master with non-ATA-slave.
+
+Maestro en un cable de dos unidades → Master or stand alone o Master or single drive.
+
+Esclavo → Slave.
+
+Selección por cable → Cable Select, o bien Enable cable Select.
+
+3.1 Maestro/Esclavo
+
+> **✍️ Ejercicio**
+> Ejercicio
+
+Como realizaríais la configuración con dos canales teniendo en cuenta los siguientes componentes
+
+HDD1 de 60Gb con el sistemas
+
+HDD2 de 500Gb libre.
+
+Un DVD y una grabadora
+
+3.2 Estándares ATA
+
+### 4. Discos Duros SATA
+
+En el 2001 aparece un nuevo estándar para conectar HDD, Serial ATA.
+
+Se produce cambios en
+
+Velocidad de transmisión
+
+Tipo de conectores, cable, ...
+
+Los conector de datos → Ancho 10mm, 7 hilos y hasta 1m de longitud
+
+Conector electrico → Plano y tiene 15 conectores
+
+Cada disco duro necesita un cable de datos, y no diferencia disco maestro de disco esclavo
+
+¿Cómo se fabrica un Disco Duro?
+
+Comparativa DD
+
+> **✍️ Ejercicio**
+> Ejercicio
+
+Si tenemos una placa base con dos canales SATA, ¿Cuántos HDD podré conectar?
+
+Y si tengo dos canales ATA/IDE, ¿Cuántos podré tener conectados?
+
+### 5. La BIOS
+
+La BIOS comprueba los dispositivos que hay conectados en cada conector IDE o SATA de la placa base.
+
+Detectará el tamaño del disco y la geometría del disco
+
+Publicación
+
+AHCI o Interfaz de controlador host avanzada es una especificación que optimiza tanto el funcionamiento como la comunicación de los conectores SATA.
+
+IDE (Integrated Device Electronics) también conocido como circuito integrado del dispositivo y generalmente se usa como interfaz del hardware ATA. El modo IDE puede asignar el disco SATA como un disco duro IDE normal sin cargar una unidad SATA adicional, pero no está compatible con la nueva característica de la interfaz SATA.
+
+### 6. Discos duros SCSI (Small Computer System Interface)
+
+Es necesaria una tarjeta adaptadora que se insertará en una ranura de la placa base.
+
+Tiene su propia BIOS → regula todas las actividades → independiente del microprocesador.
+
+Uso habitual por su alto rendimiento y fiabilidad → Servidores de red.
+
+### 7. Discos duros externos
+
+Dos forma de alimentación
+
+Externamente o a través de USB.
+
+Puertos a los que se conecta
+
+Normalmente USB, también fireWire y Serial ATA externo (eSATA).
+
+Tamaños: 2.5’’, 1.8’’ y 3.5’’
+
+Carcasa para discos duros que queramos aprovechar de un PC
+
+### 8. Discos duros SSD (Solid-State Drive)
+
+Basados en memorias
+
+no volátiles (flash), Tipo NAND o V-NAND
+
+volátiles (SDRAM) → con batería
+
+Ventajas al no tener elementos móviles
+
+Mucho más rápidos y silenciosos.
+
+Resisten mucho mejor los golpes.
+
+Su consumo energético es inferior.
+
+No desprenden calor.
+
+Desventaja
+
+No hay un estándar de velocidad
+
+Menor recuperación en caso de fallo mecánico
+
+Menor velocidad en operaciones de I/O secuenciales
+
+Periodo de vida más limitado
+
+8 Diferencias entrte HD y SSD
+
+Componentes de un SSD
+
+Controladora: es un procesador electrónico que se encarga de administrar, gestionar y unir los módulos de memoria con los conectores en entrada y salida.
+
+Ejecuta software en firmware y es el factor más determinante para las velocidades del dispositivo.
+
+Caché: es un pequeño dispositivo de memoria DRAM similar al caché de los discos duros.
+
+Condensador: para almacenar datos temporalmente en caso de pérdida de corriente.
+
+Tipos de memorias FLASH
+
+SLC (celda de un solo nivel)
+
+MLC (Celda de múltiple nivel)
+
+TLC (triple nivel de celdas)
+
+QLC (cuadruple nivel de celdas)
+
+Tecnologías para albergar más información por celda
+
+SLC: Bit único que puede estar activado o desactivado cuando está cargada.
+
+Pros
+
+Tiene la vida útil más larga y los ciclos de carga sobre cualquier otro tipo de flash.
+
+Habitación más pequeña y confiable para error de lectura / escritura.
+
+Puede operar en un rango de temperatura más amplio.
+
+Contras
+
+El tipo de flash NAND más caro del mercado.
+
+A menudo sólo está disponible en capacidades más pequeñas.
+
+Recomendado para
+
+Uso industrial y cargas de trabajo que requieren ciclos intensos de lectura / escritura, como servidores.
+
+MLC:almacena múltiples bits de datos en una celda.
+
+Pros
+
+Los menores costos de producción se pasan al consumidor.
+
+Es más confiable que el flash TLC.
+
+Contras
+
+No es tan duradero y confiable como SLC o SSD de empresa.
+
+Recomendado para
+
+Uso cotidiano del consumidor, jugadores y entusiastas.
+
+TLC: Al almacenar 3 bits por celda, TLC es una forma muybarata de fabricar NAND
+
+Pros
+
+Más barato de fabricar, lo que a su vez conduce a un SSD más barato para comercializar.
+
+Contras
+
+Las células sobrevivirán considerablemente menos ciclos de lectura / escritura en comparación con MLC NAND. Esto significa que el flash TLC es bueno solo para uso de consumidor.
+
+Recomendado para
+
+Uso diario del consumidor, máquinas de web / correo electrónico, netbooks y tablets.
+
+QLC: Almacenar 4 bits por celda, mayor densidad de almacenamiento.
+
+Pros
+
+La memoria más barata de fabricar, lo que a su vez conduce a un SSD más barato.
+
+Contras
+
+Las células sobrevivirán aún menos ciclos de lectura / escritura en comparación con TLC NAND.
+
+Recomendado para
+
+Uso diario del consumidor, máquinas de web / correo electrónico, netbooks y tablets.
+
+Los ssd leen y almacenan los datos en grupos denominados páginas. Cuando juntamos 128 de estas páginas, lo que tenemos es un bloque de datos.
+
+Cuando queremos borrar una página, el SSD copiará todas las páginas del bloque, que no quiere borrar, a una caché temporal (buffer), borrará todo el bloque y volverá a meter todas las páginas que ha copiado en la caché temporal en otro bloque
+
+¿Qué es TRIM?
+
+Para no estar realizando operaciones de lectura y escritura, TRIM marca aquellos bloques que están listos para ser borrados.
+
+Todas las operaciones de borrado se realizarán a la vez cuando no se esté utilizando el SSD.
+
+Cómo activarlo (si es compatible);fsutil behavior set Disable DeleteNotify 1, pero antes comprobar el estado.
+
+C:\fsutil behavior set Disable DeleteNotify, si la respuesta es 0 está activado
+
+Como activar TRIM con Linuxen systemd
+
+Instalar el paquete
+
+```bash
+$ sudo apt install util-linux
+```
+
+Para conocer el estado
+
+```bash
+$ sudo systemctl is-active fstrim
+```
+
+```bash
+$ sudo systemctl is-active fstrim.timer
+```
+
+El comando que habilita la ejecución periódica (semanal)de TRIM es el siguiente
+
+En el caso de usuarios Debian 8 y 9, primero crear los servicios de Systemd
+
+```bash
+$ sudo cp /usr/share/doc/util-linux/examples/fstrim.{service,timer} /etc/systemd/system
+```
+
+Para cualquier distro se debe habilitar y iniciar el servicio.
+
+```bash
+$ sudo systemctl enable fstrim.timer
+```
+
+O en caso no de usar sudo
+
+```bash
+$ su
+```
+
+```bash
+# systemctl enable fstrim.timer
+```
+
+Características
+
+http://noticias.gti.es/servidores-y-almacenamiento/partes-de-una-ssd/
+
+https://discodurossd.info/guias/tipos-de-memoria-nand-flash-ssd/
+
+Todo lo que debes saber→ https://www.muycomputer.com//28/guia-de-compra-ssd/
+
+Opciones de mejora de rendimiento en Windows; https://hardzone.es//24/tutorial-optimiza-rendimiento-ssd-windows-10/
+
+Vida Útil;https://hardzone.es/tutoriales/compras/calcular-vida-util-ssd-m-2-sata/
+
+8.1 Discos duros PCI Express
+
+Dispositivos SSD no volátiles que pueden conectarse a la placa base a través de la ranura PCI Expres
+
+Alcanzar velocidades de lectura y escritura superiores a la interfaz SATA.
+
+### 8. Discos Duros SSD. mSata
+
+También conocido como mini SATA. Lo puedes encontrar en algunas placas base y notebook. Mismas limitaciones que SATA. Es para discos de 1.8 pulgadas.
+
+mSATA solo es compatible con SATA. Tienen un aspecto físico diferente a los M.2 y no se pueden conectar en los mismos conectores. La siguiente imagen muestra una SSD M.2 y otra mSATA (puede ver que tanto el tamaño de sus tarjetas como sus conectores son distintos)
+
+### 8. Discos Duros SSD. SATA Express
+
+Esta tecnología le permite aprovechar por un lado las líneas de comunicación de los SATA, pero por otro es capaz de utilizar el protocolo pci-e, con lo que es capaz de conseguir un rendimiento de 10 Gbps, algo cercano al doble de lo que ofrece el SATA 3
+
+Pero si analizamos la conexión Sata Express de nuestra placa base, entenderemos el porqué de esta velocidad. Aquí lo que realmente vemos es que las velocidades son las equivalentes a las que obtendríamos con un RAID 0 de dos SSD SATA 3.
+
+### 8. Discos Duros SSD M.2., PCIe y NVMe
+
+Los discos SSD M.2 han venido a solucionar el problema del tamaño y además están desplazando al disco de estado sólido tradicional por sus mayores prestaciones y velocidad. Las memorias o discos SSD M.2 son unos discos SSD pero en los que el factor forma ha cambiado y por un formato mucho más pequeño.
+
+### 8. Clasificación según tamaño
+
+En función de su tamaño tenemos varias nomenclaturas para designar los discos SSD M.2. Las 2 primeras cifras indican el ancho de la memoria SSD y las 2 o 3 siguientes la longitud.
+
+Aunque las memorias M.2 más habituales son de 22mm de ancho y entre 42 y 110 mm de largo, los modelos que actualmente existen son los siguientes
+
+Ancho: 12, 16, 22 y 30 mm
+
+Largo: 16, 26, 30, 38, 42, 60, 80 y 110 mm
+
+La memoria flash que suelen utilizan estos discos SSD son del tipo NAND. Cuanto mayor sea su longitud de una memoria SSD M.2 mayor número de chips podrán alojar y por lo tanto mayor capacidad de almacenamiento tendrá
+
+### 8. Conexión M.2 según velocidad
+
+Los SSD M.2 SATA utilizan el mismo controlador que sus hermanos SSD de 2,5″, mientras que los SSD M.2 PCIe utilizan unos controladores específicamente diseñados para este tipo de conexión.
+
+Los SSD M.2 sólo admiten uno de estos protocolos de conexión, aunque algunos zócalos o bancos de inserción en los que van pinchados puedan ser compatibles con ambos protocolos. Es decir, cada disco tiene sólo una controladora y por lo tanto es un disco SATA III (6Gb/s) o una PCIe.
+
+### 8. Nomenclaturas y tipos de PCIe
+
+En una PCIe deberemos tener en cuenta dos cosas: la versión de PCIe que sea y el número de carriles que tenga.
+
+### 8. SSD M.2 NVMe
+
+Los discos o memorias SSD más rápidos que hay, los SSD NVMe.
+
+Las memorias NAND que son los chips que tienen los discos SSD. Se caracterizan porque son muy rápidos aunque están muy lejos de las velocidades que alcanzan los chips de las memorias RAM. Su mayor ventaja es que no necesitan energía para mantener los datos en su interior. Cuando apagamos el equipo se mantienen los datos en la memoria NAND.
+
+Llegamos a las NVMe o “NVM Express”que es el acrónimo de memoria no volátil (Non Volatile Memory) express y es una especificación para el acceso a unidades SSD.
+
+Los nuevos SSD NVMe superan a los SSD SATA en 4,5 veces en lectura y 2,5 en escritura secuencial, llegando a los 2.500 MB/s y 1.500 MB/s respectivamente.
+
+Los SSD de Samsung, la NVMe 960 EVO pro es un SSD M.2 PCIe 3.0 x4 que alcanza los 3.500 y 2.100 MB/sg en lectura/escritura secuencial, es decir, 3,5 y 2,1 GB/s respectivamente. Una gran diferencia comparado con los 600MB/sg de los SSD SATA III.
+
+Para distinguir un tipo de disco de otro es muy sencillo. Los discos SSD M.2 SATA tienen 2 ranuras mientras que los NVMe sólo tienen una.
+
+Los discos M.2 de tamaño más pequeño pueden ocasionar más problemas de calentamiento porque tienen menos superficie para poder disipar el calor generado. Para solucionar este problema es conveniente pegarle unos disipadores al igual que se hace en los procesadores
+
+Video
+
+Incompatibilidades; ¿Es compatible tu SSD NVMe con la ranura M.2 de tu placa base?
+
+La ranura M.2 de la placa base lleva ya bastantes años siendo usada en este componente. Pero los primeros modelos que llegaron al mercado solo soportaban los SSD SATA, dado que empleaban este bus de datos, que compartían con los SSD tradicionales. Es bueno que os aseguréis de este aspecto antes de comprar la unidad.
+
+Cada ranura M.2 puede dar acceso (generalmente) a hasta cuatro vías de datos del bus PCIe, al bus SATA 3 y al bus USB 3.0, siendo el fabricante del conector el que decide a qué tipo de bus quiere tener acceso, en base a la funcionalidad que le quiera dar a aquello que se conecte en la ranura. (Para SSD o Wifi)
+
+Los SSD de Samsung, la NVMe 960 EVO pro es un SSD M.2 PCIe 3.0 x4 que alcanza los 3.500 y 2.100 MB/sg en lectura/escritura secuencial, es decir, 3,5 y 2,1 GB/s respectivamente. Una gran diferencia comparado con los 600MB/sg de los SSD SATA III.
+
+Para distinguir un tipo de disco de otro es muy sencillo. Los discos SSD M.2 SATA tienen 2 ranuras mientras que los NVMe sólo tienen una. Los primeros NVME tenían dos muescas, porque eran PCIe x2
+
+Los discos M.2 de tamaño más pequeño pueden ocasionar más problemas de calentamiento porque tienen menos superficie para poder disipar el calor generado. Para solucionar este problema es conveniente pegarle unos disipadores al igual que se hace en los procesadores
+
+Video
+
+### 8. Test de prueba
+
+Tres tipos de pruebas de velocidad de lectura/escritura
+
+Secuenciales: Estas se realizan accediendo a bloques largos y contiguos del disco. Este tipo de acceso se da comúnmente al leer o escribir videos, música o imágenes. Se mide en MBps. Por lo regular nos dan los resultados de escritura/lectura más rápidos y son en los que se basan los vendedores.
+
+Aleatorias 4K: Esta prueba consiste en acceder a bloques muy pequeños (4KB) ubicados en lugares aleatorios del disco. Se mide en MBps. Estos tipos de acceso se dan comúnmente cunado arranca el sistema o cuando se lanzan las aplicaciones.
+
+Aleatorias 4K–64Thrd: Es similar a la anterior con la modificante que se realizan 64 peticiones de lectura/escritura simultáneamente. Igualmente se mide en MBps y se realiza comúnmente en servidores.
+
+Herramientas;
+
+ATTO Disk Benchmark
+
+AS SSD Benchmark
+
+IsMyHdOK
+
+CrystaldiskMark
+
+### 9. Cabinas de discos
+
+Sistemas de almacenamiento de datos formados por múltiples discos físicos.
+
+Disponen de múltiples puertos para ofrecer alta disponibilidad basada en la existencia de múltiples caminos
+
+Utilizar tecnologías RAID para ofrecer alta disponibilidad en el almacenamiento
+
+La pérdida de un disco no ocasionará pérdida de dato
+
+Se pueden conectar a la red de almacenamiento SAN (Storage Area Network) → Para compartir los recursos de almacenamiento entre varios servidores dentro de una LAN o WAN
+
+### 10. SAN, NAS
+
+NAS - NETWORK ATTACHED STORAGE
+
+Cuando compartimos información mediante un dispositivo NAS los equipos de nuestra empresa se conectan al dispositivo a través de la propia LAN (la red de datos general de la empresa) a través de TCP/IP y utilizando sistemas de ficheros remotos como NFS (Network File System) o CIFS.
+
+El cliente (el equipo que reclama la información del NAS) solicita el fichero compartido y el NAS se lo sirve.
+
+Este es un dato importante, los NAS trabajan a nivel de fichero.
+
+La capacidad de ampliación de los NAS es menor que los SAN y está limitada en gran medida por la cantidad de discos que es capaz de albergar el propio dispositivo. Un NAS típico dispone de entre 2 y 8 bahías para discos, habitualmente SATA (y en menor medida SAS)
+
+SAN – STORAGE AREA NETWORK
+
+A diferencia de los dispositvos NAS, SAN trabaja a bajo nivel, a nivel de bloque (a diferencia de NAS que trabaja a nivel de fichero). La comunicación es similar a como se produce entre un ordenador y sus discos locales (SATA, SCSI...).
+
+Habitualmente la conexión con las SAN se hace a través de redes dedicadas de alta velocidad, generalmente fibra a 4 u 8Gbps utilizando el protocolo Fibre Channel, aunque también se puede utilizar el protocolo iSCSI, más económico aunque de menor rendimiento (habitualmente a 1Gbps). De esta forma, la comunicación con el almacenamiento es independiente de la red general de la empresa, la cual no interfiere.
+
+### 11. RAID
+
+El sistema RAID (Redundant Array of Independent Disks) es una tecnología de virtualización de almacenamiento de datos que combina múltiples discos (magnéticos [HDD] o de estado sólido [SSD]) en una sola unidad lógica con el fin de redundancia de datos (seguridad), aumento de tasa de transferencia (velocidad) o en ciertos tipos de RAID, ambos.
+
+Los datos se distribuyen a lo largo de los discos de formas distintas denominadas como niveles de RAID dependiendo del nivel de redundancia o aumento de tasa de transferencia requerida. Los distintos niveles se denominan como RAID seguido por un número (por ejemplo, RAID 0 o RAID 1).
+
+Cada nivel provee un balance de pros y cons según nuestras necesidades. Todos los niveles por encima de RAID 0 (no inclusive) proveen protección contra sectores no recuperables y errores de lectura además del completo fallo de disco. A parte de esto, hay 3 métodos de obtener RAID, los denominados “Hardware RAID”, “Software RAID” y “Firmware RAID”.
+
+### 11. RAID. RAID 0
+
+RAID 0 consiste en usar 2 o más discos. Sea cual sea el sistema operativo que usemos, detectará tales discos como una sola unidad lógica (solo veremos un disco) del tamaño de almacenamiento de todos los discos juntos y con mayor velocidad. La fórmula para saber la velocidad bajo nuestra experiencia es la siguiente
+
+“Velocidad del disco más lento” x “cantidad de discos” – “5% del total”.
+
+A diferencia de todos los demás niveles de RAID, este nivel no tiene ningún tipo de seguridad o redundancia, si uno de los discos muere, no solo perdemos lo que contenga ese disco si no que, en la gran mayoría de los casos, sin sistemas especialidad no podremos recuperar la información del resto de los discos
+
+### 11. RAID. RAID 1
+
+RAID 1 es el nivel básico de redundancia de discos. Hace falta 2 o más discos para hacer RAID 1 pero siempre tendrá que ser una cantidad de discos par (2, 4, 6, 8, 10, etc). Al usar RAID 1 perdemos uso de uno de cada 2 discos. Nuestro sistema operativo verá una sola unidad Lógica del tamaño del disco con menos capacidad y con velocidad del disco más lento de los discos que tengamos asignados en RAID 1. Cada bit que se escriba se escribe simultáneamente en todos los discos que formen parte del RAID 1 por lo que si un disco sufre errores de lectura o tiene sectores dañados no afectará al uso de nuestro equipo, es más, si uno de los discos muere completamente, podremos seguir usando nuestro equipo como si no pasase nada, simplemente se nos avisará de que X disco debe ser reemplazado lo antes posible.
+
+### 11. RAID. RAID 5
+
+RAID 5 hoy en día simplemente no es recomendado por tener un coste de escrituras incrementadas muy alto reduciendo así considerablemente la vida de nuestros discos.
+
+Su intención original es ampliar el funcionamiento de RAID 1 con un coste menor en discos (no a nivel monetario si no a nivel de discos “consumidos” en lo que a redundancia y uso de almacenamiento se refiere.
+
+En resumen, RAID 5 requiere 3 discos como mínimo, al igual que en RAID 1, es un sistema de redundancia, pero a diferencia de RAID 1, no perdemos el 50% del almacenamiento con fin de redundancia, si no solo el 33%. La información espejo, a diferencia de RAID 1 siendo directa, se guarda en todos los discos, de ahí el incremento y costo en operaciones de escritura continua y que no se recomiende mucho hoy en día puesto que RAID 6 (no disponible en placas de consumo) soluciona este problema y prácticamente reemplaza a RAID 5 en lo que a servidores y sistemas de industria se refiere.
+
+### 11. RAID. OTROS
+
+RAID Híbrido (0+1)
+
+RAID 10 (1+0)
+
+Raid Calculator
+
+- Otros dispositivos de almacenamiento.
+
+Disquetes.
+
+Dispositivos de almacenamiento óptico
+
+Capacidad de Almacenamiento: 74-80 min (audio) o 640-700 MB (datos)
+
+CD-ROM → Formatos (CD-DA, CD-I, CD-R, CD-RW, etc)
+
+Sólo lectura: CD-ROM (Compact Disc - Read Only Memory).
+
+Grabable: CD-R (Compact Disc – Recordable). Y Multisesión.
+
+Regrabable: CD-RW (Compact Disc - Re-Writable).
+
+De audio: CD-DA (Compact Disc - Digital Audio).
+
+Unidad de CD-ROM
+
+Las unidades de CD leen en la cara inferior del disco (la que no tiene la etiqueta), pero el conjunto de datos se estampa en el lado superior, debajo de la etiqueta.
+
+- Otros dispositivos de almacenamiento.
+
+Dispositivos de almacenamiento óptico
+
+DVD → Formatos (DVD-R, -R DL, -RW, +R, +RW). Capacidad de Almacenamiento:4,7 - 17 GB
+
+Los DVD se pueden clasificar
+
+Según su contenido
+
+DVD-Video: películas (vídeo y audio).
+
+DVD-Audio: audio de alta fidelidad. Por ejemplo: 24 bits por muestra, una velocidad de muestreo de 48 kHz y un rango dinámico de 144 dB.[cita requerida]
+
+DVD-Data: todo tipo de datos.
+
+Según su capacidad de regrabado (La mayoría de las grabadoras de DVD nuevas pueden grabar en ambos formatos y llevan ambos logotipos, «+RW» y «DVD-R/RW»)
+
+DVD-ROM: solo lectura, manufacturado con prensa.
+
+DVD-R y DVD+R: grabable una sola vez. La diferencia entre los tipos +R y -R radica en la forma de grabación y de codificación de la información. En los +R los agujeros son 1 lógicos mientras que en los –R los agujeros son 0 lógicos.
+
+DVD-RW y DVD+RW: regrabable.
+
+DVD-RAM: regrabable de acceso aleatorio. Lleva a cabo una comprobación de la integridad de los datos siempre activa tras completar la escritura.
+
+DVD+R DL: grabable una sola vez de doble capa.
+
+El DVD-ROM almacena desde 4,7 GB hasta 17 GB.
+
+Según su número de capas o caras
+
+DVD-5: una cara, capa simple; 4,7 GB o 4,38 GiB. Discos DVD±R/RW.
+
+DVD-9: una cara, capa doble; 8,5 GB o 7,92 GiB. Discos DVD+R DL.
+
+DVD-10: dos caras, capa simple en ambas; 9,4 GB o 8,75 GiB. Discos DVD±R/RW.
+
+DVD-14: dos caras, capa doble en una, capa simple en la otra; 13,3 GB o 12,3 GiB. Raramente utilizado.
+
+DVD-18: dos caras, capa doble en ambas; 17,1 GB o 15,9 GiB. Discos DVD+R.
+
+También existen DVD de 8 cm que son llamados miniDVD (no confundir con cDVD, que son CD que contienen información de tipo DVD video) que tienen una capacidad de 1,5 GB.
+
+Unidad de DVD
+
+Unidades grabadoras (CD y DVD)
+
+- Otros dispositivos de almacenamiento.
+
+Dispositivos de almacenamiento óptico
+
+Blu-Ray Disc (BD): capacidades de 25 GB / 50 GB (Doble capa) - 100 / 128 GB (BDXL)
+
+Utiliza tecnología de laser azul-violeta.
+
+Soporte de vídeo de alta resolución (HD), máximo 1 920 × 1 080 píxeles, a una velocidad de 24 imágenes por segundo de modo progresivo.
+
+Soporta los formatos de compresión de imagen MPEG2, MPEG4 y VC1.
+
+La velocidad de transferencia de datos supera cualquier otro formato, 54 MB/s
+
+Tipos: BD-ROM, BD-R y BD-RW
+
+Blu-Ray Disc HD (BD): capacidades de 50 GB (doble capa,1​ 82 Mb/s), 66 GB (doble capa,1​ 108 Mb/s),100 GB (triple capa,1​ 128 Mb/s)
+
+El disco Blu-ray Ultra HD admite video en 4K UHD (resolución de 3840 × 2160) a velocidades de cuadro de hasta 60 cuadros por segundo,2​ codificado mediante High Efficiency Video Coding (HEVC)
+
+Los discos admiten HDR (Alto Rango Dinámico) al aumentar la profundidad de color a 10 bits por color y una mayor gama de colores que la admitida por el video Blu-ray convencional mediante el uso del espacio de color
+
+Aplicaciones
+
+Televisión de alta definición
+
+Almacenamiento de datos y backup
+
+Desarrollo de Juegos.
+
+Estudios de cine/TV.
+
+Home computing.
+
+- Otros dispositivos de almacenamiento.
+
+Tarjetas de memoria Flash
+
+Dispositivos portátiles de tamaño reducido
+
+Gran capacidad de almacenamiento
+
+Tipos
+
+NOR→ Lectura de acceso aleatorio
+
+NAND→ Lectura de acceso secuencial. Coste inferior a NOR
+
+Resistente a golpes
+
+Bajo consumo
+
+Tipo de Memoria EEPROM (ROM programable y borrable eléctricamente)
+
+Memoria no volátil
+
+La velocidad dependerá del chip de memoria, el controlador y la interface
+
+Formatos: CF (CompactFlash), SMC (SmartMedia Card), MS (Memory Stic) y MS PRO, SD (Secure Digital), SDHC (High Capacity), MMC (Multimedia Card), xD (Picture Card), tarjetas mini (RSMMC, MMCmobile, MiniSD, MicroSD, MSD y MSM/M2
+
+Las memorias flash están subdivididas en bloques (en ocasiones llamados sectores) y por lo tanto, para el borrado, se limpian bloques enteros para agilizar el proceso, ya que es la parte más lenta del proceso. Por esta razón, las memorias flash son mucho más rápidas que las EEPROM convencionales, ya que borran byte a byte.
+
+No obstante, para reescribir un dato es necesario limpiar el bloque primero para después reescribir su contenido.
+
+- Otros dispositivos de almacenamiento.
+
+Memoria USB
+
+Pequeño dispositivo que se conecta al puerto USB para poder transferir datos sin complicaciones
+
+- Herramienta diagnostico DD.
+
+GSMARTCONTROL;
+
+```bash
+$ sudo apt-get install gsmartcontrol
+```
+
+- Cifrado.
+
+https://www.incibe.es/protege-tu-empresa/blog/cifrar-informacion-sensible
+
+https://www.osi.es/es/herramientas
+
+Encripta tu información e impide el acceso a todo aquel que no tenga tu contraseña. Funciona como una caja fuerte electrónica donde puedes guardar tus archivos de manera segura.
+
+https://www.veracrypt.fr/en/Downloads.html
+
+---
+
+## 2.7 DISCOS DUROS CHS ECHS LBA
+
+Tutoriales de ayuda e información para todos los niveles (ver más tutoriales)
+
+DISCOS DUROS: DIRECCIONAMIENTOS CHS, ECHS Y LBA
+
+Diferencias entre los sistemas de direccionamiento CHS, ECHS y LBA en un disco duro
+
+Al formatear un disco duro, éste se divide en bloques (Tracks o sectores direccionables), que es la unidad más pequeña para almacenar información.
+
+Cada bloque tiene un tamaño (capacidad) fijo, que puede ser de 512 Bytes o más recientemente de 1024 Bytes. Para acceder a ellos hace falta que estén marcados en el disco, indicando su número, cabeza, sector y cilindro. La cabeza es la cara del disco, y recibe este nombre porque a cada cara le corresponde una cabeza lectora, el sector en una división radial de la superficie de cada cabeza y el cilindro (o pista) es una división circular. Con estas tres referencias se sabe la posición exacta de cada bloque dentro del conjunto de discos.
+
+Para esto se han utilizado varios sistemas de direccionamiento, denominados CHS (Cylinder Head Sector), ECHS (Extended Cylinder Head Sector) y, más recientemente, LBA (Logical Block Addressing), que es el que se utiliza actualmente.
+
+CHS
+
+El sistema de direccionamiento CHS (Cylinder Head Sector) se ha utilizado en discos RLL, MFM y los primeros ATA, y está basado en lo anteriormente expuesto. Se trabaja sobre la base de discos divididos en 1024 cilindros, 16 cabezas y 63 sectores como máximo, con bloques de 512 Bytes. Esto, por unas simples operaciones matemáticas, nos da una capacidad máxima para un disco duro de 504 MiB, capacidad que durante bastante tiempo (hasta bien entrados los ’90) fue la capacidad máxima de los discos duros, ya que la única forma de aumentar ésta era aumentando el número de discos internos, y por tanto, de cabezas, hasta un máximo de 8 discos (8 discos x 2 caras = 16 cabezas), lo que generaba unos discos con una altura enorme.
+
+ECHS
+
+La necesidad de discos duros de mayor capacidad dejó el sistema de archivos CHS obsoleto, y se creó ECHS (Extended Cylinder Head Sector), que consiste en crear una serie de cabezas virtuales, pasando los parámetros a 1024 cilindros, 256 cabezas y 63 sectores, también con bloques de 512 Bytes. En realidad no hay 256 cabezas, lo que sí puede haber son más cilindros, pero como la BIOS no soporta más de 1024 cilindros, lo que se hace es dividir éstos hasta que se número sea 1024 o inferior y multiplicar las cabezas por el dividendo resultante. Esto elevó la capacidad de los discos duros a 8064 MiB (7.88 GiB). Esta virtualización se controla desde la BIOS por la INT 13h. Pero había una limitación añadida… y es que DOS no puede controlar más de 255 cabezas, por lo que el tamaño máximo no llegó a utilizarse en ordenadores basados en este sistema.
+
+Ambos sistemas se utilizaron en discos ATA, pero pronto la capacidad máxima que puede ofrecer un disco con sistema de archivos ECHS resultó insuficiente. Además, los dos sistemas plantean un serio inconveniente, y es el de que los bloques que se crean por la intersección de los cilindros y los sectores, aunque siempre tienen la misma capacidad (512 Bytes), físicamente aumentan de tamaño según se alejan del centro del disco, lo que supone un desperdicio enorme de espacio.
+
+LBA
+
+Para solucionar estos problemas se creó el sistema de direccionamiento LBA (Logical Block Addressing).
+
+Este sistema no se basa en una división del disco mediante cilindros, cabezas y sectores, sino que a cada bloque (también llamados Unidad de asignación) se le asigna un número único (n-1, n-2…, donde n es el número total de bloques), y permite bloques de 512 Bytes y de 1024 Bytes. En este caso, la capacidad máxima de un disco duro está limitada solo por dos factores, el número real de bloques que pueda contener, que siempre van a tener el mismo tamaño físico, y es un límite puramente físico que depende exclusivamente del disco, y el número de bits que pueda utilizar para comunicar el número del bloque, dependiendo en este caso tanto del disco duro como de la placa base. LBA utiliza, en cuanto a bits, dos tipos de extensiones
+
+- LBA de 26 bits, con una capacidad máxima de 128 GiB
+
+- LBA de 48 bits, que es el utilizado actualmente, con una capacidad máxima
+
+(teórica) de 144.11 Pebibytes (millones de Gibibytes).
+
+©2009 - www.abueloinformatico.es
+
+---
+
+## ✍️ Activitats pràctiques UT2
+
+> **✍️ Activitat Pràctica 2.1 — U2 - P1 - T PRACT - LA BIOS**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 2.2 — U2 - P2 - ACT1- BEST RELATION Q/P IN A 16GB DDR4 DUAL CHANNEL.**
+> (ENGLISH)
+>
+> Make a table with 4 rows
+>
+> Spec Product. | Best Price | Best Relation Q/P | Best Quality (Specs)
+>
+> When finish, write a brief recommendation about the option Best Relation Q/P
+
+> **✍️ Activitat Pràctica 2.3 — U2 - P2 - ACT2 - NOMENCLATURA MICROS INTEL**
+> Completa el que hem vist per a les noves generacions de Procesadors Intel
+
+> **✍️ Activitat Pràctica 2.4 — U2 - P2 - ACT3 - WEBQUEST MEMÒRIA**
+> Realitza la webquest adjunta i puja les respostes en format PDF
+>
+> WEBQUEST
+>
+> LA MEMORIA RAM
+>
+> La expresión memoria RAM se utiliza frecuentemente para referirse a los módulos de memoria utilizados en los computadores. En el sentido estricto, esta memoria es solo una variedad de la memoria de acceso aleatorio. Los módulos de RAM son la presentación comercial de este tipo de memoria, que se compone de circuitos integrados soldados sobre un circuito impreso independiente.
+>
+> Consulta las páginas web propuestas y contesta a las siguientes preguntas
+>
+> 1. ¿Cómo se llama la organización que regula los estándares relativos a las velocidades de las memorias?
+>
+> 2. ¿Cuál son los ancho de banda teóricos que establece dicha organización para una memoria DDR?
+>
+> 3. ¿Cuáles son las dos características fundamentales de las memorias RAM DDR4 frente a sus antecesoras?
+>
+> 4. ¿A qué voltaje funciona la primera memoria DDR4 de Samsung?
+>
+> Recursos en Internet
+>
+> http://www.samsung.com/global/business/semiconductor/newsView.do?news_id=1228
+>
+> http://www.samsung.com/semiconductor/insights/news/13767
+>
+> http://www.pcactual.com/articulo/laboratorio/especiales/9780/todo_sobre_memoria_ram_ddr3.html
+>
+> http://www.muycomputer.com//22/caracteristicas-de-las-futuras-memorias-ram-ddr4
+
+> **✍️ Activitat Pràctica 2.5 — U2 - P2 - ACT4- BEST RELATION Q/P IN A CPU COOLER**
+> (ENGLISH)
+>
+> Make a table with 4 rows
+>
+> Spec Product. | Best Price | Best Relation Q/P | Best Quality (Specs)
+>
+> When finish, write a brief recommendation about the option Best Relation Q/P
+
+> **✍️ Activitat Pràctica 2.6 — U2 P2 I P3 - ACT 6 - ESTAT DE L'ART MICROPROCESADORS**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 2.7 — U2 - P2 I P3 - T PRACT PBL - Projecte per a un diseñador gràfic**
+> Donat el problema plantejat a Classe, Redacta una memòria tècnica amb
+>
+> Portada
+>
+> Index
+>
+> Objectius del projecte.
+>
+> Justificació de la oferta.
+>
+> Oferta tècnica.
+>
+> Presupost econòmic (Recorda incloure les teves hords de feina)
+>
+> Planning per a fer la instalació.
+
+> **✍️ Activitat Pràctica 2.8 — U2 - P2 I P3 - P CONT - MEMORIA I PROCESADOR**
+> [https://forms.gle/dfnnDoq9arsci2Qu8](https://forms.gle/dfnnDoq9arsci2Qu8)
+
+> **✍️ Activitat Pràctica 2.9 — U2 - P3 - ACT1- RELATION BETWEEN HDD SPECS**
+> (ENGLISH)
+>
+> Make a table with 4 rows
+>
+> Spec Product. | Low Specs HDD 5400rpm | HDD 7200rpm | Best Specs HDD 10000rpm
+>
+> When finish, write a brief recommendation about the different options in yout comparative.
+
+> **✍️ Activitat Pràctica 2.10 — U2 - P3 - READING 1 - A2 "Email invitation to a job"**
+> Read an email invitation to a job interview to practise and improve your reading skills.
+>
+> Do the preparation task first.
+>
+> Then read the text and do the exercises.
+>
+> > **📄 Document Escanejat / Visual (LearnEnglish-Reading-A2-An-invitation-to-a-job-interview.pdf)**
+> > Aquest document PDF (3 pàgines) està compost principalment per esquemes o imatges escanejades.
+
+> **✍️ Activitat Pràctica 2.11 — U2 - P3 - Listening B1 "A phone call from a customer"**
+> Listen to the phone call from a customer to practise and improve your listening skills.
+>
+> Do the preparation task first. Then listen to the audio and do the exercises.
+>
+> > **📄 Document Escanejat / Visual (LearnEnglish-Listening-B1-A-phone-call-from-a-customer.pdf)**
+> > Aquest document PDF (2 pàgines) està compost principalment per esquemes o imatges escanejades.
+
+> **✍️ Activitat Pràctica 2.12 — U2 - P3 - T PRACT - ALMACENAMIENTO INTERNO**
+> ****0.- (PER A TOTS ELS DISCS) Actividad: Configuració de la BIOS****
+>
+> **Accedeix a la BIOS, Configura correctament segons el vist als apunts el Disc i fes una foto per adjuntar a la memòria.**
+>
+> **1.- (PER A LA MÁQUINA VIRTUAL) Actividad:Tabla de Particiones GPT**
+>
+> En este apartado tenéis que realizar la instalación de un SO
+> en un disdo duro con el sistema de particiones GPT.
+>
+> Debéis de entregar una guía donde esté claramente explicado
+> los pasos a seguir para disponer de un disco con GPT y una imagen final con el
+> comando fdik -l para comprobar el sistema de archivos.
+>
+> **2.- (PER AL TALLER) Partició de diferents Unitats**
+>
+> En aquesta
+> pràctica hem de fer una manual, amb **captures
+> de pantalla** de tots els passos que es demanen.
+>
+> [if !supportLists]1. [endif]Utilitza diferents discs de Linux que tingues.
+>
+> 2. Instal·la el programa Gparted des del centre de
+> programari de Ubuntu o des de la terminal (consultar Internet).
+>
+> [if !supportLists]3. [endif]Ara obrim el programa i seleccionem el disc a
+> particionar /dev/sdb/ (o similar). Anem a Dispositius – Crear una taula de particions…
+> per a dur a terme les particions corresponents en aquest nou disc.
+>
+> [if !supportLists]4. [endif]Creem una partició primària de 4 GB amb un sistema de
+> fitxers ext4. En la part de etiqueta has de posar “primera partició”.
+>
+> [if !supportLists]5. [endif]Amb l'espai restant crea una altra partició primària de amb un sistema de fitxers swap. En la part de l'etiqueta has de posar
+> “segona partició”.
+>
+> [if !supportLists]6. [endif]Finalment, crea una partició estesa amb l'espai
+> disponible. En la part de l'etiqueta has de posar “tercera partició”.
+>
+> [if !supportLists]7. [endif]Canvia la grandària de la primera partició i
+> modifica la grandària de la segona partició.
+>
+> [if !supportLists]8. [endif]Per a finalitzar la pràctica, heu de deixar el disc amb
+> les següents particions: una partició primària amb un sistema de
+> fitxers ext3 i una partició estesa.
+>
+> [if !supportLists]9. [endif]Entra en el terminal i
+> mira com han quedat les particions (lsblk -fm). crida'm per a que vega que ho has fet correctament.
+>
+> PROBLEMA;
+> quizas la respuesta al comando sea que la tabla de particiones es “dos” es
+> decir MBR
+
+> **✍️ Activitat Pràctica 2.13 — U2 - P2 - P CONT - DISCOS DUROS**
+> [https://forms.gle/jVx7Ep8y73AFxzyD7](https://forms.gle/jVx7Ep8y73AFxzyD7)
+
+> **✍️ Activitat Pràctica 2.14 — U2 - P3 - T PRACT - TASAS I RAID0/1**
+> Esta práctica consta de 2 partes:
+> REALIZA UNA MEMORIA CON LAS PAUTAS VISTAS DURANTE EL CURSO:
+>
+> 1º PARTE: VEO/PIENSO/ME PREGUNTO :Evaluar tasas de transferencia en Dispositivos de Almacenamiento.
+> - Con las herramientas de Benchmark vistas en la unidad o disponibles en el Sistema Operativo Linux evalúa las tasas de transferencia y las curvas de transferencia de 4 sistemas de almacenamiento diferentes.
+> - Una vez realizadas las pruebas realiza un comentario evaluando las diferentes opciones vistas así como indica de forma breve las conclusiones a las que llegas
+>
+> 2º PARTE
+>
+> EXPLÍCAME Y LO OLVIDARÉ --> MUÉSTRAME Y LO RECORDARÉ --> DÉJAME HACERLO Y LO APRENDERÉ
+>
+> El trabajo consiste
+> en crear un Sistema RAID 0 o 1 en una máquina virtual y realizar pruebas para justificar cómo funcionan los diferentes RAID
+>
+> RAID 0 Software: Realiza fotos de la configuración de la máquina virtual así como de los pasos de comprobación.
+>
+> RAID 1 Software: Realiza fotos de la configuración de la máquina virtual así como de los pasos de comprobación. Realiza una prueba de Fallo (desactiva un Disco en la máquina virtual) y comprueba que arranca solo con el de Backup.
+>
+> Unos
+> apuntes que pueden ayudarte son
+>
+> - [https://principiantedelinux.wordpress.com//09/crear-raid-1-por-soft-en-gnulinux-con-sistema-montado-y-con-datos-en-kubuntu-11-04/](https://principiantedelinux.wordpress.com//09/crear-raid-1-por-soft-en-gnulinux-con-sistema-montado-y-con-datos-en-kubuntu-11-04/)
+>
+> - [https://www.youtube.com/watch?v=7j1uxxhEygo](https://www.youtube.com/watch?v=7j1uxxhEygo)
+>
+> QUE LA FUERZA OS ACOMPAÑE ;)
+
+> **✍️ Activitat Pràctica 2.15 — U2 - P4 - TEST CONTINGUTS**
+> Realitza el test anexe.
+>
+> Adaptadores gráfi co, red, multimedia Test de repaso
+>
+> ### 1. Las tarjetas ExpressCard tienen
+>
+> - Dos factores de forma 34 y 54.
+> - Dos factores de forma 35 y 55.
+> - Tres factores de forma 34, 35 y 55.
+> - Ninguna de las anteriores es correcta.
+>
+> ### 2. Las tarjetas ExpressCard soportan dos sistemas de
+>
+> conectividad que el fabricante decide en su diseño del producto; estos sistemas son
+>
+> - PCI y PCIe.
+> - PCI y USB.
+> - USB y PCIe.
+> - AGP y PCI.
+>
+> ### 3. Un módem ADSL, técnicamente hablando, está bien
+>
+> denominado
+>
+> - Sí, ya que permite el acceso a Internet.
+> - No, ya que al ser digital no hay ningún tipo de
+>
+> modulación/desmodulación.
+>
+> - No, no existen los módem ADSL.
+> - Sí, porque se conectan a la roseta telefónica.
+>
+> ### 4. Según el tipo de televisión que queramos ver en nuestro
+>
+> ordenador, podemos encontrar en el mercado diferen- tes tipos de tarjetas sintonizadoras
+>
+> - Capturadoras y digitales.
+> - Satélite y analógicas.
+> - Híbridas y digitales.
+> - Las respuestas b) y c) son correctas.
+>
+> ### 5. En una tarjeta de sonido, el pequeño microprocesador
+>
+> que efectúa los cálculos necesarios para gestionar el sonido, con tareas como la compresión y la descompre- sión de su señal, se denomina
+>
+> - DAC.
+> - ADC.
+> - DSP.
+> - Mezclador.
+>
+> ### 6. En una tarjeta de sonido Sound Blaster 16, el número
+>
+> representa
+>
+> - La versión de la tarjeta.
+> - Que maneja simultáneamente 16 voces o canales.
+> - Que funciona a 16 bits.
+> - Que funciona a 16 bytes.
+>
+> ### 7. Una tarjeta de red Wi-Fi 5
+>
+> - Solo opera en la banda de 5 GHz.
+> - Solo opera en la banda de 2,4 GHz.
+> - Opera en la banda de 2,4 GHz y en la de
+>
+> 5 GHz.
+>
+> - Todas las anteriores son falsas.
+>
+> ### 8. El estándar de redes de computadoras Ethernet que
+>
+> permite encender remotamente computadoras apaga- das mediante el envío de un magic packet, un paquete especial que recibe la tarjeta de red, se denomina
+>
+> - WAKEUP-LINK.
+> - Wi-FiUP.
+> - Wake on LAN.
+> - Eso no existe.
+>
+> ### 9. El conector HDMI tipo A es compatible (solo imagen) con
+>
+> un conector
+>
+> - DVI.
+> - S-Vídeo.
+> - Mini-jack.
+> - RJ45.
+>
+> ### 10. El componente de la tarjeta gráfica que se utiliza en la
+>
+> transformación de señales digitales (con las que trabaja la tarjeta gráfica) a señales analógicas (para poder ser interpretadas por el monitor) es
+>
+> - RAMDAC.
+> - Buffer.
+> - GPU.
+> - GDDR4.
+>
+> Soluciones: 1a; 2c; 3c; 4d; 5c; 6b; 7a; 8c; 9a; 10a.
+
+> **✍️ Activitat Pràctica 2.16 — T2 - P SPEAKING - GIVE ADVICE ABOUT A SSD**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 2.17 — U2 - P4 - P CONT - T. EXPANSIÓ**
+> [https://forms.gle/q3kabPEM5Z9kpUJa9](https://forms.gle/q3kabPEM5Z9kpUJa9)
+
+> **✍️ Activitat Pràctica 2.18 — U2 - P4 - ACT1- RELATION BETWEEN GRAPHICs CARDS SPECS**
+> (ENGLISH)
+>
+> Make a table with 4 rows
+>
+> Spec Product. | Low Specs Graphic Gaming Card | Best Relation Quality/Prize Graphic Gaming Card | Best Specs Graphic Gaming Card
+>
+> When finish, write a brief recommendation about the different options in yout comparative.

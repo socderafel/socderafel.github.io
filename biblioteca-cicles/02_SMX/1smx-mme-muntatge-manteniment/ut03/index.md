@@ -1,0 +1,2435 @@
+---
+layout: default
+title: "UT3 — Unitat Didàctica 5 — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "1r SMX · Grau Mitjà · UT3 Completa"
+prev_url: "../ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+next_url: "../ut03/ut0301.html"
+next_label: "3.1 U5 - P1 P2 P3 - PDF CONTINGUTS ➡️"
+---
+
+# 📘 UT3 — Unitat Didàctica 5 (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**3.1 U5 - P1 P2 P3 - PDF CONTINGUTS**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
+> - [**3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE**](#ut0302) (o [obrir en pàgina individual ➡️](./ut0302.md) )
+> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+
+---
+
+## 3.1 U5 - P1 P2 P3 - PDF CONTINGUTS
+
+Manteniment d’equips microinformàtics Joan Alfred Noll Obiol Muntatge i manteniment d’equips
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Índex Introducció Resultats d’aprenentatge Detecció d’avaries 1.1 Procés de resolució d’avaries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.1.1 Diagnosi del problema que causa l’avaria . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.1.2 La tècnica de solució de problemes. Diagrames de ﬂux . . . . . . . . . . . . . . . . . 1.1.3 Manteniment preventiu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.1.4 Missatges d’error del BIOS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.2 Eines de diagnòstic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.1 Eines de maquinari per a diagnòstic d’avaries . . . . . . . . . . . . . . . . . . . . . . 1.2.2 Eines de programari per a diagnòstic d’avaries . . . . . . . . . . . . . . . . . . . . .
+
+1.2.3 Classiﬁcació de programes de diagnòstic . . . . . . . . . . . . . . . . . . . . . . . . 1.3 Resolució d’avaries en els dispositius bàsics . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.3.1 Localització de la font d’error . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.3.2 Errors més comuns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.3.3 Altres errors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.3.4 Incompatibilitats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.4 Documentació de la tasca efectuada i dels resultats . . . . . . . . . . . . . . . . . . . . . . . 1.4.1 Informe d’assistència . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.2 Pla de suport . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+1.4.3 Documentació del sistema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Manteniment de perifèrics 2.1 Perifèrics d’un ordinador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.1 Pantalles o monitors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.1.2 Les targetes gràﬁques . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.3 Teclats . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.4 Ratolí, dispositiu senyalador i palanca de joc . . . . . . . . . . . . . . . . . . . . . .
+
+2.1.5 Impressores . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.6 Altres dispositius d’entrada i sortida de dades . . . . . . . . . . . . . . . . . . . . . . 2.1.7 Mitjans d’emmagatzematge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.2 Instal·lació i conﬁguració de perifèrics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.1 Controladors de dispositiu . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.2 Conﬁguració de dispositius . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.3 Manteniment i neteja de perifèrics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.1 Manteniment de perifèrics d’entrada . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.2 Manteniment de perifèrics de sortida . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2.3.3 Manteniment de perifèrics d’emmagatzematge . . . . . . . . . . . . . . . . . . . . .
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Ampliacions de maquinari 3.1 Canvis en el maquinari. Procés d’ampliació . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.1 Mesures de seguretat davant de canvis de maquinari . . . . . . . . . . . . . . . . . .
+
+3.1.2 Actualització del microprogramari (ﬁrmware) del BIOS . . . . . . . . . . . . . . . . 3.2 Connectors per a ampliacions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.1 Sistemes de connexió . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.2.2 Caixes i mitjans de refrigeració . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.3 Fonts d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.3 Ampliació d’un equip . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+3.3.1 Ampliació de memòria RAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.3.2 Ampliació de la capacitat de processament . . . . . . . . . . . . . . . . . . . . . . . 3.3.3 Ampliació de l’emmagatzematge . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Introducció Dins el cicle de vida d’un equip informàtic, concretament d’un ordinador personal, l’última fase és la d’explotació, en la qual l’equip té la seva veritable vida útil, ja que és quan l’usuari en treu proﬁt. Aquest període no és estàtic, sinó que els dispositius electrònics tenen avaries i passen per alts i baixos en el rendiment.
+
+Quan es fa servir un ordinador es dóna per fet que ha de funcionar i no ens adonem que utilitzem una màquina complexa, amb gran quantitat de components de maquinari i de programari, que han de funcionar correctament i de manera conjunta perquè l’equip presti l’ajuda que se n’espera.
+
+Evidentment tots aquests components no sempre es troben en un estat òptim. Els dispositius electrònics tenen un cicle de vida propi que pot no coincidir amb el dels altres components de l’equip: es produeix un desgast de les peces mecàniques que intervenen, els connectors poden deixar de funcionar, els consumibles d’alguns dispositius com ara les impressores sovint s’exhaureixen, i es pot produir tota classe de problemes que ens faran adonar que hi ha alguna cosa que no es va com cal.
+
+L’apartat “Detecció d’avaries” se centra en el coneixement del procés de diagnosi i de reparació d’un equip informàtic. Per a això s’hi expliquen els passos que cal seguir en un mètode de resolució d’avaries sistemàtic i les eines de diagnosi que hi ha, tant de maquinari com de programari, que us permetran localitzar i solucionar aquestes avaries. També hi podreu consultar les avaries més comunes dels dispositius que componen la unitat central en un ordinador PC, amb les solucions que és possible aplicar. També tindreu accés als documents que us poden ajudar a dur a terme de manera òptima els processos de reparació, i reaproﬁtar la informació compilada anteriorment.
+
+En l’apartat “Manteniment de perifèrics” trobareu informació sobre el mante- niment de tots els dispositius que es poden considerar perifèrics en un equip informàtic, tant els que són perifèrics fonamentals com ara el teclat o el monitor, com els que afegeixen funcionalitats a l’equip, com poden ser les impressores, els escàners o els perifèrics d’emmagatzematge. En primer lloc, hi trobareu una llista exhaustiva dels perifèrics més utilitzats en els equips PC actuals. També podreu veure de quina manera s’instal·len o conﬁguren adequadament nous perifèrics, mentre que en els punts sobre el manteniment diari i manteniment preventiu podreu aprofundir en els mètodes que permeten allargar la vida útil d’aquests dispositius mitjançant una utilització i neteja adequades.
+
+Quant a l’apartat “Ampliacions de maquinari”, direm que està enfocat a l’amplia- ció de prestacions. Un equip pot ampliar la capacitat de processat, d’emmagatze- matge, de comunicacions, o gràﬁca. En aquest apartat veureu els connectors que us permeten afegir nous dispositius a l’equip per ampliar-ne o modiﬁcar-ne les funcionalitats. També s’aprofundirà en els mètodes de què es disposa per ampliar
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics la capacitat de processat, mitjançant la substitució o modiﬁcació de la conﬁguració en components fonamentals com ara el microprocessador o la memòria RAM. Aquesta unitat formativa consta d’una part teòrica i d’una part procedimental.
+
+En la part teòrica s’expliquen de manera detallada els dispositius perifèrics dels ordinadors personals, com també els connectors i els cables que s’utilitzen per connectar aquests dispositius. La part procedimental es refereix a la instal·lació i la conﬁguració d’aquests dispositius, la detecció i resolució d’avaries en el funcionament quotidià d’un equip, i també a la introducció de canvis en el maquinari que permetin treure més proﬁt de l’equip que voleu modiﬁcar.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Resultats d’aprenentatge En ﬁnalitzar aquesta unitat l’alumne/a
+
+### 1. Manté equips informàtics i perifèrics interpretant les recomanacions dels
+
+fabricants i relacionant les disfuncions amb les seves causes.
+
+- Reconeix els senyals acústics i/o visuals que avisen de problemes al
+
+maquinari d’un equip.
+
+- Identiﬁca i resoldre les avaries produïdes per sobreescalfament del
+
+microprocessador.
+
+- Identiﬁca i resoldre avaries típiques d’un equip microinformàtic (mala
+
+connexió de components, incompatibilitats, problemes en discos ﬁxos, brutícia, entre d’altres).
+
+- Identiﬁca i solucionar problemes mecànics en perifèrics d’impressió
+
+estàndard.
+
+- Substitueix components deteriorats.
+- Veriﬁca la compatibilitat dels components substituïts.
+- Substitueix consumibles en perifèrics d’impressió estàndard.
+- Identiﬁca i solucionar problemes mecànics en perifèrics d’entrada.
+- Actualitza i ampliar components.
+- Elabora informes d’avaria (reparació o ampliació). Elaborar les guies
+
+tècniques de suport a l’usuari.
+
+- Associa les característiques i les prestacions dels perifèrics de captura
+
+d’imatges digitals, ﬁxes i en moviment, amb les seves possibles aplicacions.
+
+- Associa les característiques i les prestacions d’altres perifèrics multi
+
+mèdia amb les seves possibles aplicacions.
+
+- Reconeix els usos i els àmbits d’aplicació d’equips de fotocopiat,
+
+impressió digital professional i ﬁlmat.
+
+- Aplica tècniques de manteniment preventiu als perifèrics.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+### 1. Detecció d’avaries
+
+Quan els equips informàtics es troben en el període d’explotació del seu cicle de vida, la tasca més comuna d’un tècnic de manteniment de sistemes informàtics és la reparació de les avaries i l’assistència als usuaris en problemes de maquinari i de programari. Un equip informàtic és un dispositiu capaç d’acceptar dades per un mitjà d’entrada, processar-les sota el control d’un programa prèviament emmagatzemat en la memòria i retornar la informació obtinguda per un mitjà de sortida.
+
+Encara que l’administrador dels sistemes dugui a terme la seva tasca amb molta cura, en faci un repàs freqüent, els equips siguin ﬁables i els usuaris vagin amb compte amb l’ús del programari, pot passar que, en un moment determinat, algun equip tingui un funcionament incorrecte.
+
+La persona encarregada de mantenir els equips amb un funcionament correcte ha de ser capaç d’analitzar, solucionar i corregir els problemes, sota la pressió d’una fallada que origina un temps d’inactivitat d’un equip o d’un conjunt d’equips. 1.1 Procés de resolució d’avaries El procés de resolució d’avaries Les avaries poden aparèixer de moltes maneres, poden ser problemes que afecten un equip o bé un conjunt d’equips que treballen en col·laboració. Cada problema pot tenir diferents causes i, per tant, pot ser més o menys difícil trobar-les i solucionar-les.
+
+Quan un sistema deixa de funcionar, s’ha d’actuar al més ràpidament possible. Primer s’ha de fer el diagnòstic de l’avaria, i tenint en compte aquest es fa una reparació. Un cop fet això haurem de veriﬁcar que, després de la reparació, el funcionament és correcte, i haurem de documentar les decisions que hem pres.
+
+Atenent a factors diversos, es poden produir diferents tipus de fallades
+
+- Fallades de conﬁguració dels dispositius
+- Fallades del programari
+- Avaries dels dispositius
+- Avaries dels sistemes auxiliars
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Diari tècnic S’anomena diari tècnic el registre del manteniment del conjunt d’equips de la instal·lació, en què s’apunten les avaries i les solucions, i totes les accions i les modiﬁcacions que s’han dut a terme en el manteniment dels sistemes. El diari tècnic forma part del registre del maquinari.
+
+També podem classiﬁcar les avaries segons la gravetat en funció del dany que causen. Bàsicament, es mesuren tres factors
+
+- El cost del temps d’aturada del sistema en què es produeix l’avaria.
+- El temps que es requereix per reparar-lo.
+- El cost de la reparació.
+
+Avaries greus i lleus Per exemple, no tindrà el mateix cost l’avaria d’un disc dur d’una estació de treball que l’avaria d’un disc dur d’un servidor. Mentre que, en el primer cas, es pot considerar que és una avaria lleu –ja que només implica l’estació de treball–, en el segon cas, es pot considerar greu –ja que cap estació de treball no pot accedir al servidor mentre dura la reparació. En canvi, el temps emprat en la substitució i reinstal·lació del disc, i l’abocament de les dades de salvaguarda, és breu, ja que és una tasca que es pot fer en poc temps.
+
+Per tant, el cost de la reparació serà baix. D’això es pot concloure que l’avaria no és tan greu com, en un principi, podia semblar. Un cas molt diferent seria si el disc dur del servidor fos força especial; per exemple, un disc de molta capacitat que no té recanvi és difícil de trobar en el mercat i el preu és molt alt.
+
+Aquest seria un exemple de cóm una circumstància que és externa a l’avaria pot modiﬁcar- ne la gravetat. 1.1.1 Diagnosi del problema que causa l’avaria Podeu emetre un diagnòstic de l’avaria si sou capaços de trobar la resposta correcta a unes quantes preguntes bàsiques
+
+- On és l’avaria?
+- Quina n’és la causa?
+- Quins danys ha provocat?
+
+Per fer el diagnòstic, la consulta del diari tècnic pot ajudar força si el problema que es presenta ja s’ha solucionat alguna vegada. Les avaries freqüents són fàcils de diagnosticar, perquè els efectes només poden ser produïts per causes ben determinades; de manera que, si es coneix l’efecte negatiu produït, se’n pot determinar la causa i solucionar el problema.
+
+Però, a vegades, hi ha avaries que són molt difícils de diagnosticar, perquè no se’n coneix la causa, perquè pot ser provocada per una fallada del maquinari, del programari o de la xarxa, si l’equip està interconnectat amb altres, o bé per un conjunt de causes diferents i concurrents.
+
+Quan es rep una notiﬁcació d’una avaria, el primer que cal fer és establir un diagnòstic. Per tant, cal seguir uns passos bàsics ben determinats.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Els passos que cal seguir per establir el diagnòstic de l’avaria són aquests
+
+### 1. Deﬁnir d’una manera clara el problema i els seus símptomes. A partir
+
+d’aquestes dades, descriure tots els factors que poden produir aquests símptomes.
+
+- Recopilar tota la informació possible sobre la situació que s’està produint.
+
+Per a això, cal consultar tots els usuaris que treballen amb l’equip que falla i que es troben afectats per la fallada, i també l’administrador del sistema. Es poden utilitzar eines de diagnòstic, com ara el programari de benchmark o un programari especíﬁc de diagnòstic d’avaries.
+
+### 3. A partir de les informacions obtingudes, cal confeccionar una llista dels
+
+problemes que poden produir l’avaria detectada, i eliminar de la llista els que no tenen cap relació amb el problema. D’aquesta manera, només es revisaran els punts realment rellevants.
+
+### 4. Quan ja conegueu els problemes que poden produir l’avaria, cal establir un
+
+pla d’accions per solucionar cada problema. Heu de començar per tractar el problema que té més probabilitats de ser la causa de l’avaria.
+
+### 5. Dur a terme totes les accions previstes en el pla anterior, de manera
+
+ordenada, i observar si els símptomes de l’avaria desapareixen.
+
+### 6. Una vegada fets tots els passos, si els símptomes de l’avaria no desapareixen,
+
+cal tornar a començar a partir del quart pas i elaborar el pla d’accions per al problema següent de la llista. Si, després de tot el procés, els símptomes de l’avaria persisteixen, cal tornar a començar a partir del primer pas i fer una nova revisió, més exhaustiva, de la deﬁnició i dels símptomes de l’avaria.
+
+1.1.2 La tècnica de solució de problemes. Diagrames de ﬂux El procés d’eliminació és la manera més habitual de posar en pràctica un mètode cientíﬁc per a la solució dels problemes. Exemple del procés d’eliminació
+
+- Es rep un avís d’avaria d’un usuari que diu que a la pantalla no es veu res. S’emplena el
+
+formulari d’errors i es comunica al tècnic.
+
+- El tècnic parla amb l’usuari, que li comunica que a primera hora del matí ja no es veia res
+
+a la pantalla i que, en acabar la feina el dia anterior, tot funcionava correctament; encara que l’equip sembla que s’engega correctament –fa els sons habituals i “els llumets s’encenen com sempre”–, també sap que l’equip de manteniment va actualitzar els sistemes la nit anterior, i que l’equip de neteja va fer una neteja a fons de les oﬁcines.
+
+- Es veriﬁca que l’equip sembla que s’engega correctament, i la primera hipòtesi és que hi
+
+ha una fallada de corrent elèctric del monitor. El tècnic sospita que el cable d’alimentació està mal connectat i veriﬁca que estigui correctament endollat per un extrem a l’equip i, per l’altre, a la presa de corrent; també sospita que l’interruptor del monitor és apagat,
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Quan les accions dutes a terme no resolen el problema, s’han de tornar a avaluar les dades i buscar-ne d’altres per formular noves hipòtesis. El procés continua ﬁns que es troba la solució. Consulteu en la bibliograﬁa els exemples de diagrames de ﬂux per a la reparació tant d’ordinadors d’escriptori com portàtils.
+
+i manipula l’interruptor i veriﬁca que el llum que indica l’alimentació elèctrica del monitor és encès; en veure’l encès, el tècnic descarta que es tracti d’un problema d’alimentació elèctrica.
+
+- La hipòtesi següent és que una mala regulació del contrast o de la lluentor del monitor
+
+fa que no s’hi vegi res. Veriﬁca els controls de contrast i brillantor, i sembla que estan ben regulats.
+
+- La sospita recau ara en el fet que el cable de senyal del monitor pot estar mal connectat.
+
+Es veriﬁca que el cable estigui ben connectat tant al monitor com a la targeta gràﬁca de l’equip; però el monitor continua fosc.
+
+#### 6) La hipòtesi següent és que el monitor s’ha fet malbé. Es desconnecta el monitor de
+
+l’equip i es connecta a un altre equip que s’acaba de parar i es té la certesa que funciona correctament. Quan s’engega aquest altre equip, el monitor funciona ara correctament. Es descarta, per tant, que es tracti d’una avaria del monitor.
+
+- El monitor continua sense funcionar, però les accions anteriors delimiten el problema a
+
+una avaria de l’equip, i sembla que es tracta de la targeta gràﬁca. Es desconnecta l’equip del corrent elèctric, es desmunten les tapes i, en treure la targeta gràﬁca, el tècnic s’adona que no està ben inserida al connector (potser s’ha mogut en tocar el cable de senyal), la treu, la neteja, neteja també el connector i les pistes de connexió, i la torna a inserir tot prement amb fermesa perquè encaixi bé, i colla bé el vis de subjecció. Torna a connectar l’equip, el monitor i els accessoris, i fa una nova prova. Ara l’equip s’engega i el monitor funciona correctament. Torna a posar les tapes, veriﬁca que les connexions externes siguin correctes i dóna l’avaria per solucionada.
+
+#### 8) L’últim pas consisteix a documentar la solució del problema en el formulari d’informe
+
+d’errors, i lliurar-lo al servei tècnic perquè el registri com a solucionat. Cal, també, documentar la solució en el diari tècnic per a referències futures. Com podeu veure, l’exemple mostra, pas a pas, un procés d’eliminació de les possibles causes d’un problema. Cada hipòtesi s’ha controlat successivament i s’ha eliminat individualment. Els canvis s’han fet d’un en un. Si s’haguessin fet simultàniament, el procés hauria resultat confús i no s’hauria identiﬁcat amb precisió la solució. A tot això, també hi ha ajudat una observació acurada, per part del tècnic, dels petits detalls que moltes vegades donen les pistes bàsiques per a la solució dels problemes.
+
+El problema s’ha de documentar en previsió del futur. No importa el tipus de problemes que es trobin en un sistema, el procés per resoldre’ls serà sempre el mateix. Diagrames de ﬂux per a la reparació d’avaries Un mètode per documentar el procés de diagnòstic d’una avaria és la utilització de diagrames de ﬂux. Si disposem d’una bona eina que prevegi tots els casos possibles, ens pot facilitar la resolució de les avaries i sistematitzar la nostra feina de reparació.
+
+Un diagrame de ﬂux és un tipus de diagrama que representa un algorisme o procés de decisió, tot indicant-ne els passos a seguir amb quadres de diversos tipus que són ordenats mitjançant ﬂetxes.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Els diagrames de ﬂux s’utilitzen en processos d’anàlisi, disseny, documentació o manteniment. En el cas que us ocupa es tracta de diagrames d’anàlisi o de diagnosi d’avaries. En podeu veure un exemple en la ﬁgura 1.1, basat en l’exemple anterior exposat en aquest subapartat.
+
+Figura 1.1. Diagrama de ﬂux: Problemes amb la imatge 1.1.3 Manteniment preventiu Moltes de les avaries que pateixen els equips informàtics es poden evitar si es fa un manteniment preventiu; és a dir, amb una periodicitat programada, s’han de revisar els equips per trobar indicis de possibles fallades i prendre les mesures adequades per evitar-les o minimitzar-ne els efectes.
+
+Aquestes mesures preventives de cura i manteniment que es poden prendre per garantir un bon funcionament i rendiment de l’ordinador i el fet d’evitar algunes accions perjudicials poden ajudar a minimitzar el desgast de l’ordinador i prevenir errors més grans causats per l’acumulació de brutícia a diversos components.
+
+A part de les fallades per desgast, la pols i el fum, altres fonts de problemes com són els canvis de temperatura, els camps magnètics i la humitat poden afectar en diferent grau els components. Per tant, si voleu allargar la vida del vostre ordinador és aconsellable
+
+- Evitar la brutícia (la nicotina, la pols i altres partícules). La unitat del
+
+ventilador en el subministrament elèctric extreu aire calent des de l’interior de l’ordinador i permet penetrar dins de la carcassa a través dels seus obertures aire fresc, portant pols i altres partícules, especialment nicotina. Això pot provocar, per exemple, que les partícules de pols i nicotina es dipositin en els capçals de lectura i d’escriptura de les unitats de disquets i n’afectin el bon funcionament.
+
+- Evitar la humitat excessiva. La humitat pot produir una capa de pols sobre
+
+l’ordinador amb un efecte aïllant, la qual cosa provoca l’acumulació de calor en els components de l’ordinador. Els camps magnètics... ...poden destruir la informació desada en els suports de dades. No col·loqueu disquets prop de cap font de camp magnètic, com la font d’alimentació de l’ordinador.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Certiﬁcats TCO La certiﬁcació TCO’95 ens garanteix les emissions per a ordinadors, monitor, i teclats. La TCO’99 amplia l’exigència a portàtils, impressores i fotocopiadores. Quant a la TCO’01, és especíﬁca per a telèfons mòbils.
+
+Vegeu, en la unitat “Electricitat a l’ordinador”, l’apartat dedicat als supressors de crestes i als SAI.
+
+- Minimitzar els canvis sobtats de temperatura.
+
+La temperatura ideal per al funcionament d’un ordinador personal se situa entre 18 °C i 23 °C. Massa calor pot destruir fàcilment els components electrònics o el xips del processador i els del coprocessador. Aquests components han estat dissenyats per operar a una temperatura constant.
+
+Les temperatures extremes poden provocar que els suports de dades s’expandeixin o es contreguin massa, i causar errors de lectura-escriptura.
+
+- Evitar interferències magnètiques.
+
+Altres aparells electrònics poden produir forts camps magnètics que causen interferències en l’ordinador. Per exemple, una impressora làser a prop del monitor o uns cables mal protegits poden produir que la imatge del monitor es torni borrosa. Certiﬁcacions ecològiques En la majoria dels casos, els productes amb certiﬁcacions ecològiques són els que produeixen menys emissions electromagnètiques a l’atmosfera, ja que estan dissenyats per tenir menys impacte ambiental al llarg del seu cicle de vida, bé perquè utilitzen menys matèries primeres i consumeixen menys aigua i energia, o bé perquè minimitzen la generació de residus i d’aquesta manera redueixen la contaminació de les aigües i les emissions contaminants a l’atmosfera.
+
+Certiﬁcació d’eﬁciència energètica Energy Star <iocstl textG>Hi ha diferents tipus de certiﬁcacions ecològiques, com el distintiu de garantia de qualitat ambiental de la Generalitat de Catalunya, l’etiqueta ecològi- ca de la UE, el certiﬁcat Energy Star de l’Agència de Protecció del Medi Ambient dels Estats Units o la certiﬁcació TCO.
+
+En deﬁnitiva, els passos bàsics en el procés de manteniment preventiu d’un equip es poden resumir en els següents
+
+### 1. Inspecció general del sistema i dels perifèrics, amb una valoració de l’estat
+
+general i de funcionament.
+
+### 2. Inspecció interna, neteja i observació de l’estat dels components interns,
+
+veriﬁcació de les connexions i veriﬁcació dels sistemes de refrigeració.
+
+### 3. Execució dels programes de benchmark i comparació amb les dades que
+
+consten en el registre del maquinari.
+
+### 4. Valoració dels resultats i presa de decisió de continuïtat, reparació o
+
+substitució.
+
+### 5. Anotació dels resultats i la decisió presa en el registre del maquinari, i
+
+generació de l’informe de manteniment. Un altre mecanisme de manteniment preventiu és la utilització d’un SAI (sistema d’alimentació ininterrompuda), que també és molt útil per prevenir algunes avaries que pot provocar la caiguda sobtada de l’alimentació elèctrica o les ﬂuctuacions en el corrent.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Un SAI és un dispositiu que, gràcies a les seves bateries, pot proporcionar energia elèctrica a tots els dispositius connectats quan hi ha una apagada. A més té la funció de millorar la qualitat de l’energia elèctrica que arriba als aparells, ﬁltrant-ne les pujades i baixades de tensió, i eliminant harmònics en el corrent altern.
+
+1.1.4 Missatges d’error del BIOS A cada inicialització d’un sistema, el BIOS executa una sèrie de tests que serveixen per comprovar l’estat de la memòria, la presència d’unitats de disquet i la correcció de la resta de paràmetres consignats. En la taula 1.1 trobareu una llista i la descripció dels missatges d’error més habituals.
+
+Taula 1.1. Tons d’error per a errors freqüents Missatge Descripció Cap To Cap missatge. És possible que el subministrament elèctric de l’equip estigui fallant, per això l’ordinador no s’encén. Si l’ordinador s’encén però no se sent cap so, llavors és possible que falli només l’altaveu o la connexió a la placa base.
+
+To interromput Cap missatge. Error en el subministrament elèctric Tons curts constants. Cap missatge. Placa base defectuosa 1 xiulet llarg. RAM Refresh Failure. Els diferents components encarregats del refresc de la memòria RAM fallen o no hi són. 1 llarg i 1 curt. Cap missatge. Error general a la placa mare o en la ROM bàsica del sistema 1 llarg i 2 curts. 1 llarg i 3 curts.
+
+No s’ha trobat targeta de vídeo. No s’ha trobat el monitor 1 llarg i diversos curts. Error relacionat amb el vídeo Hi pot haver una altra sèrie de xiulets que depenen de la targeta de vídeo, segons les diferents conﬁguracions de canvis que hi ha en el mercat (taula 1.2). Per conèixer més característiques d’una placa base determinada, cal posar-se en contacte amb el venedor.
+
+Taula 1.2. Tons d’error per a altres dispositius Missatge Descripció 2 llargs i 1 curt No disponible. Error en la sincronització de les imatges 2 curts. 3 curts. 4 curts Parity Error. Error de paritat de memòria. La paritat no és suportada per la placa base. Base 64 Kb Memory Failure. Error de memòria en els primers 64 Kbytes de la RAM. Timer not operational. El temporitzador o comptador de la placa base està defectuós. El Timer 1 de la placa no funciona
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Taula 1.2 (continuació) Missatge Descripció 5 curts Processor Error. La CPU ha generat un error perquè el processador o la memòria de vídeo està bloquejada 6 curts 8042-Gate A20 Failure. El controlador o processador del teclat (8042) pot estar en mal estat. Aquest error se sol donar quan es connecta o desconnecta el teclat amb l’ordinador encès 7 curts Processor Exception / Interrupt Error. La CPU ha generat una interrupció excepcional o el mode virtual del processador està activat 8 curts Display Memory Read / Write error. L’adaptador de vídeo (targeta gràﬁca) del sistema no existeix o la seva memòria de vídeo (RAM) falla. No és un error fatal 9 curts ROM Checksum Error. El valor del checksum (recompte de la memòria) de la RAM no coincideix amb el valor desat al BIOS 10 curts CMOS Shutdown Register / Read / Write Error. El registre de la CMOS RAM falla a l’hora de la desconnexió 11 curts Cache Error / External Cache Bad. La memòria cache o cau externa falla És evident que hi ha inﬁnitat d’errors de cada un dels dispositius, de manera que un codi ﬁnit d’avisos sonors resulta molt escàs per explicar cada un dels problemes. Això duu a concretar encara més quan sorgeix un problema. Sens dubte l’aparició d’un nombre en la pantalla seguit d’algun tipus d’advertència no serveix per explicar què passa amb la nostra màquina. Doncs bé, la interpretació d’aquest nombre ens pot aclarir concretament la decisió que s’ha pres. La llegenda d’aquests codis per a un exemple concret la podeu trobar en la taula 1.3.
+
+Taula 1.3. Exemple de codis d’error i part de l’ordinador afectada Codi d’error Tipus d’error 1xx POST Placa base 2xx POST Memòria RAM 3XX POST Teclat 4xx POST Targeta de vídeo MDA (monocromàtica) 5xx POST Targeta de vídeo (CGA) 6XX POST Unitat de disc o el seu controlador 9XX POST Port en paral·lel LPT1 10xx POST Port paral·lel LPT2 11xx POST Port en sèrie COM1 12xx POST Port en sèrie COM2 13xx POST Port de jocs 14xx POST Impressora 15xx POST Adaptador SDLC (de connexió a ordinadors centrals o mainframes) 17xx POST Disc rígid o el seu controlador 18xx POST Targetes d’expansió
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Taula 1.3 (continuació) Codi d’error Tipus d’error 20XX POST Primer adaptador BSC (Connexió a ordinadors centrals) 21xx POST Segon adaptador BSC (Connexió a ordinadors centrals) 104xx POST Controlador de PS / 2 1.2 Eines de diagnòstic Quan es produeix una avaria, cal diagnosticar-la i resoldre-la. Per això és necessari tenir una sèrie d’eines que us permetin determinar la causa del problema.
+
+Encara que l’eina principal sempre serà l’experiència, podeu comptar amb altres eines que us permetin determinar la causa del problema. Aquestes eines es poden classiﬁcar en eines de maquinari i eines de programari per a diagnòstic d’avaries. 1.2.1 Eines de maquinari per a diagnòstic d’avaries Dins d’aquest tipus de dispositius destinats al diagnòstic de l’ordinador podem trobar targetes de diagnòstic, comprovadors de les tensions d’alimentació de la font, entre altres dispositius.
+
+Les targetes PCI de diagnòstic són eines de maquinari que permeten diagnosticar i detectar problemes de la placa base i dels components de la placa del sistema. Figura 1.2. Targeta de diagnòstic amb doble connexió PCI i ISA La targeta permet als fabricants de sistemes, tècnics de PC, i aﬁcionats detectar instantàniament problemes de placa base i d’altres components de la placa. En la ﬁgura 1.2 en podeu veure un model.
+
+Encara es poden trobar models ISA o PCI, malgrat que el connector ISA està obsolet per als ordinadors actuals. Les targetes de diagnòstic... com les que fabriquen Elston o Soyo, són el camí més ràpid per escurçar el temps de detecció d’avaries, perquè utilitzen codis POST i, per instal·lar-les, és suﬁcient que hi hagi una ranura d’expansió lliure a la placa base.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Els connectors de ports en sèrie, en paral·lel o USB es poden adquirir comercialment o, ﬁns i tot, es poden construir si es tenen coneixements d’electrònica. Les targetes de diagnòstic poden detectar tant problemes de maquinari com defectes de la CPU o de la placa mare. En deﬁnitiva, tots els problemes que els codis POST ens poden indicar, però d’una manera més còmoda.
+
+El mètode d’utilització consta d’aquests passos
+
+- Abans d’encendre el sistema, només cal inserir la targeta en una ranura
+
+d’expansió (normalment PCI) lliure.
+
+- En engegar el sistema, la targeta consulta automàticament el BIOS i com
+
+prova tots els components de maquinari de la placa.
+
+- Una vegada que detecta un problema, la targeta mostra un codi d’error a
+
+l’indicador de què disposa (per exemple, dos dígits LED), localitzat a la targeta.
+
+- Per identiﬁcar el problema de maquinari, simplement haureu de comparar
+
+el codi d’error amb el problema corresponent que trobareu en el manual d’usuari de la placa. Els veriﬁcadors de retroalimentació USB (ﬁgura 1.3) són un dels mètodes més ràpids i eﬁcients per diagnosticar i resoldre problemes a l’hora que es comprova el funcionament dels connectors i controladors USB d’un equip informàtic.
+
+Figura 1.3. Eina de comprovació de ports USB En combinació amb un programari de diagnòstic adequat aquest tipus d’eines es poden utilitzar per al següent
+
+- Comprovar si un port USB té l’alimentació adequada.
+- Comprovar que el port envia i rep dades correctament.
+- Comprovar la velocitat de transmissió de dades i la taxa d’errors de trans
+
+missió.
+
+- Mesurar el nivell de dades retransmeses per errors de recepció.
+- Veriﬁcar que el sistema es manté estable durant períodes llargs de funciona
+
+ment.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+- Comprovar que el suport USB es troba disponible en el Windows o el Linux.
+- Autocomprovar el funcionament adequat de hubs i ports USB.
+- Comprovar el cablejat USB.
+- Diagnosticar múltiples ports USB a la vegada.
+- Diagnosticar els ports i hubs d’un PC.
+- Comprovar el tipus de port de què es disposa (480Mbits/s – USB 2.0,
+
+12Mbits/s – USB 1.x, etc.). Hi ha altres veriﬁcadors de connectors de retroalimentació, per exemple, per als ports en sèrie i en paral·lel. Si s’han fet les connexions correctes, quan passeu un programa de comprovació o de veriﬁcació dels ports, aquest us dirà si hi ha algun tipus error de comunicació en algun d’aquests.
+
+Veriﬁcador de la font d’alimentació A més dels dispositius que permeten comprovar la connexió de dades de l’equip, també podeu disposar d’altres eines que serveixen per comprovar que hi ha un subministrament d’energia correcte a tots els components de l’equip i, per tant, comprovar també l’estat de la font d’alimentació de l’ordinador.
+
+Els veriﬁcadors de la font d’alimentació són eines que es poden utilitzar per comprovar el funcionament correcte d’una font d’alimentació, incloent- hi els connectors de la placa base i els dels dispositius perifèrics. Multímetre digital de butxaca Per utilitzar el veriﬁcador (tester) s’ha de connectar a un extrem del connector de vint pius o vint-i-quatre pius de la font (placa base). Aquest és el connector més utilitzat als diversos veriﬁcadors. Amb models més complets, també es poden comprovar els connectors d’alimentació dels perifèrics, com els Molex (per a dispositius IDE), els SATA, i també el P4 i el de la disquetera.
+
+Aquests tipus de veriﬁcadors fan la mateixa mena de comprovacions que es poden fer amb un multímetre, però simpliﬁcant la connexió, ja que disposen del mateix tipus de connector que els dispositius a comprovar, sense la necessitat d’utilitzar sondes. 1.2.2 Eines de programari per a diagnòstic d’avaries Juntament amb el processos descrits anteriorment, els administradors i els tècnics de xarxa tenen a la seva disposició les eines de programari per ajudar-los a solucionar els problemes.
+
+Les eines de programari més habituals són, d’una banda, les que permeten mesurar el rendiment de determinats components de l’equip, els programes de benchmark, i, de l’altra, els programes de diagnosi especíﬁcs per a cada component que es vol veriﬁcar. Els sistemes GNU/Linux...
+
+...disposen d’ordres com lshw, lspci o lsusb, que ens indiquen el maquinari connectat al PC mitjançant la interfície de línia d’ordres.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Consulteu la sintaxi de les ordres sobre maquinari en el Linux en els recursos de contingut del web del mòdul. Consulteu més informació sobre Win PE en la unitat formativa “Instal·lació de programari base i d’aplicació”.
+
+Podeu trobar l’enllaç a la pàgina del CD d’utilitats i diagnosi Ultimate Boot
+
+```bash
+CD en els recursos de
+```
+
+contingut del web del crèdit. Així hi ha programes de diagnòstic per a la memòria, els ports, la CPU, la targeta de so, les targetes de vídeo, la placa base (chipset, elements integrats, etc.), discos durs, CD-ROM i, en deﬁnitiva, per a cada element que pot integrar un ordinador.
+
+S’entén per programari de diagnòstic tot tipus de programa que permeti obtenir informació i conèixer l’estat de salut que presenten els diferents components que integren un ordinador. Aquest tipus de programari pot ser individual per a aquest dispositiu, o bé pot ser una eina que integri diversos d’aquests programes i ens proporcioni una informació completa i detallada sobre el nostre equip.
+
+Si voleu obtenir un resultat real i no distorsionat d’un mal funcionament en algun dels dispositius, és convenient utilitzar un programari que arrenqui directament des dels disquets, el suport òptic o altres mètodes com USB o xarxa, i carregui en memòria l’estrictament necessari per fer-ne el diagnòstic.
+
+Un exemple: comprovant la RAM Si voleu passar un test de comprovació de memòria, en cap cas és aconsellable fer-lo amb el sistema en marxa, ja que el funcionament del sistema operatiu en desvirtuarà el resultat. El Windows, per exemple, us pot crear problemes on no n’hi ha o viceversa. És millor passar-lo amb un sistema autònom en Linux o en un entorn Windows preinstal·lat.
+
+Les eines de diàgnostic que funcionen en sistemes autònoms autoarrencables poden estar basades en el Windows, com Win PE i Bart PE o en GNU/Linux, com System Rescue CD o Trinity Rescue Kit. El programari de diagnòstic també ens permet saber l’estat dels diferents perifèrics connectats al vostre ordinador, com ara el monitor, la impressora, etc.
+
+1.2.3 Classiﬁcació de programes de diagnòstic La majoria dels programes de diagnòstic es poden trobar en versions de programari de prova (shareware) i de programari lliure (freeware). Les de programari de prova són versions de prova, que permeten treballar només amb algunes de les funcions del programa o fer-ho durant un temps limitat. Les versions de programari lliure, en canvi, són gratuïtes i completament funcionals, tot i que no tenen suport tècnic.
+
+Els programes de diagnòstic es poden classiﬁcar segons el dispositiu físic que són capaços d’analitzar i diagnosticar. Tot seguit trobareu breument descrits segons aquesta classiﬁcació alguns dels programes d’utilitats per als diferents dispositius.
+
+- CD-ROM/DVD/BlueRay. Hi ha múltiples utilitats que permeten detectar
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics el mal funcionament de la unitat (errors en l’òptica, posicionament, etc.) i també errors en el suport. Per exemple: – CD-Check: utilitat per mesurar la integritat de suports CD-ROM. – CD-Speed: programa que mesura la velocitat de transferència del lector de CD-ROM o DVD.
+
+CD-DVD diagnostic: facilita informació detallada sobre l’estructura de discos CD-ROM i DVD.
+
+- Memòria. Les utilitats per a l’anàlisi de la memòria acostumen a treballar
+
+sempre amb l’MS-DOS o el Linux. Hi ha utilitats molt bones que indiquen si la memòria té algun error en algun segment. Normalment el que aquest tipus de programes acostuma a fer és llegir i escriure en totes les posicions de memòria. – AmiDiag: programa de diagnòstic de sistema que sol ser molt bo en la comprovació de la memòria.
+
+Memtest: programa que comprova la memòria EMS i XMS del sistema.
+
+- Disc dur. Hi ha utilitats que ens permetran veriﬁcar la integritat del disc
+
+dur. Com, per exemple: – Disk Checkup: eina que permet obtenir informació sobre els nostres discos durs. – Hdd Health: utilitat que controla l’estat dels nostres discos durs, en prevenció de possibles desastres. – Seatools Disk Diagnostic: utilitat de diagnòstic per a discos durs.
+
+Active SMART: utilitat per monitorar discos durs mitjançant la tecno- logia SMART. – Easy Recovery: permet multitud d’opcions per a disc dur, com la recuperació de dades, etc. Però l’opció que aquí us interessa és la que permet fer un reconeixement i una anàlisi del disc dur mitjançant la tecnologia SMART (self monitoring analyse and reporting techno- logy), és a dir, “tecnologia d’automonitorització, anàlisi i informe”), que tenen alguns discos durs. La llàstima és que aquesta versió no sigui programari de prova o programari liure.
+
+- Microprocessador. Sol ser un programa que permet conèixer les caracte
+
+rístiques i l’activitat del microprocessador. Exemples: – Active CPU: utilitat que mostra l’activitat del microprocessador. – Hot CPU: complexa bateria de tests per posar a prova les prestacions del vostre microprocessador. Es pot donar el cas... ...de tenir instal·lat un mòdul de memòria que sembla que funciona bé, però que, de cop, dóna error. Si s’hi hagués passat un programa de veriﬁcació de memòria, l’hauríeu pogut detectar i haver-lo tornat a temps a la botiga.
+
+La tecnologia SMART... ...és un mètode pel qual el mateix disc dur és capaç de detectar els possibles errors ﬁns i tot abans que es produeixin. Perquè aquesta tecnologia funcioni el BIOS de l’equip l’ha de suportar, ha d’estar activada i, a més, l’ha de suportar el disc dur.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Hi ha utilitats per a diagnòstic... ...de molts altres tipus, com ara les utilitats del sistema gràﬁc, so, teclat i ratolí, etc., que podeu trobar en les pàgines de programari d’utilitats d’Internet o en les del fabricant del dispositiu.
+
+- Monitor. Algunes utilitats que permeten comprovar les capacitats gràﬁques
+
+i prestacions del nostre monitor són: – Nokia test: és un dels millors programes per provar i conﬁgurar el nostre monitor. – PowerStrip: permet comprovar les capacitats gràﬁques del monitor.
+
+- Placa base. Permet conèixer els components de la placa, com també el seu
+
+funcionament. Entre d’altres es poden utilitzar: – Chip Info: programa que fa una anàlisi exhaustiva de la placa base. – Motherboard Monitor: utilitat completa que permet monitorar el funcionament de nombrosos paràmetres de la placa base.
+
+- Ports. Podeu trobar diverses utilitats per comprovar els ports de la placa.
+- Sistema.
+
+Aquestes són utilitats que s’encarreguen de fer un diagnòstic complet de l’ordinador. De vegades són molt generals i aprofundeixen poc en alguns dispositius, i s’utilitzen exclusivament per mostrar informació del sistema i dispositius. Entre d’altres es poden esmentar
+
+Dr Hardware 2004: programa complet per al diagnòstic del sistema. – Burning Test: conjunt complet de tests intensius que permeten mesu- rar les prestacions del nostre ordinador. – SiSoft Sandra: un dels programes de diagnòstic de l’ordinador més complets que hi ha.
+
+Syschk: utilitat des de DOS que proporciona una informació completa sobre el sistema. 1.3 Resolució d’avaries en els dispositius bàsics Les causes d’un mal funcionament de l’ordinador poden ser en el maquinari o en el programari. Aquest últim element causa el 90% dels problemes, i el 10% restant té l’origen en el maquinari. Heu de tenir en compte això a l’hora de buscar el problema.
+
+Quan un ordinador presenta símptomes clars d’algun problema o us adoneu que no funciona com l’última vegada que el vau utilitzat perquè es bloqueja la base de dades, o no podeu imprimir, etc., cal disposar d’un sistema de diagnòstic d’errors que permeti trobar-ne la causa, i corregir- la adequadament.
+
+Això, però, no és tan senzill. En realitat un ordinador no és una màquina essencialment complexa, però reacciona de manera molt sensible davant de qualsevol complicació.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics 1.3.1 Localització de la font d’error Hi ha vegades que les avaries són fàcilment identiﬁcables per l’evidència dels símptomes, però n’hi ha d’altres en què aquests símptomes poden emmascarar i tergiversar una causa completament diferent. Així, és possible que un defecte en el port d’impressió no obstaculitzi el funcionament de la impressora i, en canvi, impedeixi el formatatge de disquets, o que un problema al teclat provoqui la paralització total de l’ordinador.
+
+Per aquest motiu és important respondre a una sèrie de preguntes prèvies, que ajudaran a localitzar l’avaria i a evitar pèrdues de temps innecessàries en la seva localització.
+
+- En quin moment exacte es va constatar l’errada per primera vegada?
+
+¿Va ser després d’una instal·lació de programari, després d’un canvi de lloc de l’ordinador o després d’un canvi d’usuari, etc.? Si es coneix aquesta dada resulta més fàcil trobar la solució ja que podem localitzar la font de l’error.
+
+- Quan es produeix l’error?
+
+L’instant en què aquest es produeix (abans, mentre o després, per exemple, de la posada en marxa del sistema) permet treure conclusions molt útils.
+
+- Es pot reproduir l’error?
+
+Intenteu deﬁnir tan exactament com sigui possible les condicions en què la fallada es posa de manifest. Les possibles causes d’un error relacionat, per exemple, amb l’escalfament de l’aparell, difereixen de les d’un error que es constata, també a tall d’exemple, després de l’execució d’una ordre del sistema operatiu.
+
+- En què consisteix l’error, pròpiament?
+
+No n’hi ha prou de dir que l’ordinador xiula quan es posa en marxa. Cal indicar el nombre i la durada dels xiulets, perquè poden convertir-se en un criteri decisiu a l’hora de reconèixer l’error. Així mateix, tots els canvis que es registrin en el comportament de l’ordinador poden tenir un paper rellevant: funciona el ventilador o el disc dur?, els LED s’il·luminen?
+
+Un cop descrita i localitzada la decisió mitjançant aquest procediment, es pot actuar prenent mesures especíﬁques. En molts casos el procès de reparació haurà d’utilitzar el mètode d’assaig i error si no s’ha pogut localitzar la font de l’error. La substitució del component sospitós us permetrà aïllar l’error i esbrinar si la vostra hipòtesi és correcta.
+
+Comproveu... ...per seguretat, abans d’emprendre manipulacions complexes com pot ser el desmuntatge d’una unitat de disc, si totes les connexions dels cables són correctes. Aquesta mesura acostuma a estalviar força feina.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Podeu consultar l’ordre de muntatge d’un ordinador en la unitat formativa “Muntatge d’un equip microinformàtic”. 1.3.2 Errors més comuns És clar que, segons el problema que presenti l’ordinador, caldrà seguir una sèrie de passos, però com no és possible fer una llista de tots els problemes que poden plantejar-se, és interessant almenys establir unes regles generals a seguir.
+
+L’ordre de muntatge d’un ordinador us dóna certa idea sobre la manera en què es poden descartar els diferents dispositius. A continuació es detallen grups de problemes i l’enfocament que és possible adoptar per fer-ne el diagnòstic i corregir l’avaria.
+
+- No hi ha cap indici de funcionament (leds apagats, ventilador de la font
+
+aturat). És evident que no hi ha alimentació. La font pot estar danyada o un curtcircuit li impedeix lliurar corrent. Manera de procedir Traieu tots els connectors d’alimentació i veriﬁqueu si hi ha tensió. Una font costa més de reparar que de substituir, tret que l’avaria estigui en el fusible que incorpora a dins, cosa que és difícil perquè aquestes fonts estan protegides contra sobrecàrregues, de manera que abans de fondre el fusible, es desconnecta automàticament.
+
+- No hi ha imatge de vídeo. Aquest problema pot tenir causes diverses. Si
+
+els LED s’encenen però no es veu la imatge, cal comprovar si l’ordinador s’engega observant l’activitat del LED del disc dur i el soroll que fan aquest i la unitat de disc mentre es veriﬁquen. Si hi ha arrencada, el problema és en la part de vídeo (targeta o monitor). Si no hi ha arrencada poden passar dues coses: o bé la targeta de vídeo té algun problema i la placa mare no permet l’arrencada, o bé el conjunt placa-micro-memòria està avariat.
+
+Aquesta última circumstància pot provocar que l’altaveu emeti uns xiulets que delaten l’existència d’alguna avaria. Manera de procedir Primer desconnecteu els discos durs i altres dispositius que no siguin imprescindibles per obtenir la imatge, així descartareu la interferència d’una avaria d’aquests dispositius. Si no aconseguiu tenir imatge, veriﬁqueu mitjançant substitució, i en aquest ordre, la memòria, el micro i la placa base.
+
+- Hi ha imatge però el sistema operatiu no es carrega. Cal ﬁxar-se ﬁns a on
+
+arriba l’arrencada. Depenent d’això, el problema es pot centrar en el grup placa-micro-memòria o en la lectura del disc d’arrencada. Si s’aconsegueix arrencar un disquet, és que el disc dur no es pot llegir o ha perdut el sistema operatiu. En el primer cas, pot haver-hi avaria del disc dur, avaria de controlador o pèrdua dels paràmetres del disc dur en el setup del BIOS. Si no s’arriba a la lectura del disc dur, el conjunt placa-micro-memòria pot
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics ser el causant. Tingueu en compte, a més, que un controlador de dispositiu danyat pot bloquejar el sistema en aquest punt. Manera de procedir Veriﬁqueu per substitució segons el cas. En aquest punt poden començar a aparèixer missatges del BIOS que indicaran el problema.
+
+Un de molt comú és la pèrdua de la conﬁguració del setup per deteriorament de la pila o la bateria de la placa, que pot ocasionar ﬁns i tot que no hi hagi arrencada ni tan sols des de la disquetera, ja que també s’ha perdut el paràmetre que n’indica el tipus.
+
+- L’ordinador es bloqueja o es reinicia aleatòriament. Si hem pogut descartar
+
+que es tracta d’un error de programari, podem passar a comprovar el maquinari. Hi pot haver conﬂictes entre interrupcions, una conﬁguració errònia de la placa, avaria de placa base o micro.
+
+- Apareixen caràcters estranys en la pantalla. Probablement, la targeta de
+
+vídeo s’ha fet malbé i, per tant, heu de comprovar-ne el funcionament en un altre equip o fer una substitució de prova per veriﬁcar el funcionament correcte de la placa base. 1.3.3 Altres errors A part del que s’ha exposat, hi ha una inﬁnitat de símptomes que poden produir-se i entorpir el funcionament de l’equip. La cerca requereix una observació atenta i la substitució pas a pas dels dispositius que se sospita que la provoquen. El micro i la placa base solen causar problemes molt variats i estranys, de vegades intermitents, i difícils de localitzar. No perdeu temps i substituïu components per delimitar l’avaria en menys temps.
+
+A grans trets, aquests són els símptomes d’una avaria indeﬁnida. Si aconseguiu localitzar el dispositiu que falla, les instruccions següents us ajudaran a resoldre els casos més freqüents. Micro i placa base La placa base se sol avariar amb més freqüència que el microprocessador, però és el component més laboriós de substituir.
+
+Si sospiteu que està avariada, situeu el processador en una altra placa per comprovar-ho. Les avaries de micro i placa base provoquen símptomes molt variats tant si l’ordinador arrenca com si no. Com a motor de l’ordinador, causen errors i problemes d’allò més variats i cal tenir en compte que els problemes de programari i de la placa base tenen molt sovint els mateixos símptomes.
+
+L’estreta relació entre placa, micro i memòria fa que l’única manera d’aïllar l’error sigui la substitució de prova.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics A causa de la ràpida evolució del mercat informàtic, de vegades les avaries de la placa base fan que s’hagi de canviar tot el conjunt placa-micro-memòria, tret que s’aconsegueixin components usats, si el propietari de l’ordinador ho considera el més adequat.
+
+Memòria Donant per fet que s’utilitzen mòduls adequats, els possibles problemes de memòria es redueixen als següents
+
+- L’ordinador detecta només una part de la memòria.
+- L’ordinador no arrenca o arrenca i es bloqueja.
+- Es rep el missatge “S’ha detectat una adreça de memòria no ﬁable a...”
+
+En els dos primers casos, probablement no s’ha inserit correctament un o diversos mòduls, o bé, tot i comprovar-ho, hem afegit mòduls d’un tipus no adequat (per exemple, d’una velocitat que la placa base no suporta). També és possible que un mòdul de memòria s’hagi avariat i que, per tant, no permeti l’arrencada del sistema.
+
+El missatge que indica que s’ha detectat una adreça de memòria no ﬁable és determinat per la comprovació de memòria que duu a terme el procés POST en iniciar el sistema. Aquest test consisteix a escriure una dada en cada posició de memòria i a llegir-la després per comprovar si ha estat emmagatzemada correctament.
+
+Si la dada llegida no es correspon amb l’escrita, això vol dir que aquesta posició de memòria perd les dades i que, per tant, presenta danys. Caldrà substituir un dels mòduls després d’identiﬁcar (com sempre, mitjançant la substitució) quin s’ha fet malbé. Unitats de disc Pel que fa a les unitats de disc, els errors més habituals es produeixen en les parts mecàniques, els capçals i la conﬁguració dels discos durs magnètics, així com en els ports de connexió dels dispositius USB
+
+- Errors de lectura i/o d’escriptura del disc dur
+
+És possible, encara que no freqüent que el disc es deteriori de manera que algunes zones ja no puguin retenir la informació escrita. També pot passar que, arran d’un cop, un dels capçals hagi tocat la superfície del disc i l’hagi danyat. En aquests dos casos disposeu d’eines de programari que marquen la zona defectuosa perquè no es torni a utilitzar.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Cal, però, tenir en compte que si es tracta d’un deteriorament progressiu de la superfície del disc, els errors de lectura i/o d’escriptura en el disc dur es repetiran ﬁns que la unitat sigui substituïda.
+
+Una pila gastada, per exemple, farà que el BIOS oblidi quin tipus de disc dur hi ha instal·lat, la qual cosa pot provocar que, en engegar-lo, no arrenqui. La conﬁguració del BIOS amb autodetecció de dispositius evita aquest problema encara que alenteix el procès d’arrencada del sistema.
+
+Paràmetres incorrectes en el SETUP també provoquen lectures i escriptures errònies, i la impossibilitat d’arrencar perquè no es pot llegir el sector d’arrencada. A algunes unitats, hi ha un relé que s’encarrega de subministrar corrent al motor del disc dur. Si el relé no es dispara, el disc no gira, i resulta impossible llegir-lo.
+
+El disc dur deixa de girar Els discos durs actuals tenen un sistema d’estalvi d’energia que atura el gir sempre que transcorre un cert espai de temps sense activitat, i recupera el moviment en el moment en què hi tornem a treballar. Tanmateix quan el motor d’un disc dur magnètic deixa de funcionar per qualsevol problema mecànic o elèctric, o qualsevol traba que l’impedeix girar, fa que la unitat quedi inutilitzada.
+
+Es tracta d’un dels pitjors casos, perquè no permet extreure la informació del disc. També pot passar que l’errada sigui intermitent: aleshores cal fer amb urgència una còpia de seguretat de les dades, ja que en qualsevol moment pot deixar de funcionar deﬁnitivament i caldrà substituir la unitat.
+
+- Errors dels dispositius USB
+
+Els dispositius USB depenen dels ports USB de la caixa. Si algun d’aquests dispositius deixa de funcionar proveu a desmuntar-lo i tornar-lo a muntar (el Windows permet expulsar els dispositius amb seguretat). Si això no funciona, proveu a les altres connexions USB de l’equip. Pot ser que alguns dels ports USB no subministrin prou alimentació per a un determinat equip extern. Si cap dels ports no funciona i el dispositiu extern, en canvi, sí que funciona en un altre equip, probablement el programa controlador USB no funcioni correctament o potser s’haurà avariat el maquinari corresponent de la placa base. En aquest darrer cas, l’única solució és muntar una ampliació de ports USB (ﬁgura 1.4) que es pugui connectar per la ranura PCI.
+
+Figura 1.4. Ampliació de ports USB per una ranura PCI Errors a la disquetera i neteja de capçals Quan els capçals de la disquetera són bruts o es troben desajustats, la disquetera dóna errors de lectura amb freqüència. En cas –tot i així no gaire freqüent– que els capçals Hi ha molts més problemes possibles, però la majoria són causats pel programari o per altres dispositius, com ara la placa base o la controladora.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Quan els lectors deixen de funcionar... ...en general no es reparen, perquè el cost de la reparació és més elevat que el preu d’un de nou. siguin bruts, hi ha uns kits de neteja que tenen un funcionament semblant als que es fan servir per als reproductors de cintes d’àudio.
+
+D’altra banda, hi ha errors que es poden produir degut al desgast que ocasiona el pas del temps i l’ús de l’aparell, i en aquest cas serà necessari substituir la disquetera. Vídeo Cal destacar que si seleccioneu una resolució i/o un nombre de colors que no és el que suporta el monitor o la targeta, no tindreu imatge en el sistema o aquesta serà defectuosa. Altres problemes com ara la distorsió del color o de la forma, o simplement l’absència d’imatge, poden ser deguts al monitor. I per esbrinar-ho només cal intercanviar monitors.
+
+Reparació de monitors En alguns casos, els monitors, els pot reparar un tècnic de televisió. També podeu arrencar l’equip en mode gràﬁc de baixa ressolució i amb un controlador estàndard: en el Windows cal premer F8 durant l’arrancada i triar l’opció Arrencada a prova d’errors. En el GNU-Linux, en el menú d’arrencadda del grup s’ha de triar Arrencada en mode gràﬁc segur.
+
+Unitats de CD-DVD El lector de CD/DVD generalment no planteja problemes. Si la instal·lació ha estat correcta, ha de funcionar sense cap tipus de problema, tret que estigui avariat. Tot i així el sistema de lectura per làser pot patir desajustos, així com la rotació del disc. No oblideu, però, que hi ha formats de CD-DVD que són il·legibles per algunes unitats lectores.
+
+En cas de dubte sobre el funcionament correcte del lector, es pot comprovar instal·lant-lo momentàniament en un altre equip, i podeu netejar els capçals mitjançant kits de neteja que consten d’un disc especial i un líquid netejador. Targetes de so Una avaria a la targeta de so és una incidència poc habitual, llevat que s’hagi fet un mal ús dels connectors d’entrada i sortida d’àudio o del port de joystick.
+
+Per evitar problemes cal assegurar-se que els controladors de les targetes de so són els proporcionats pel fabricant i els més actualitzats. Abans de la conﬁguració mateixa de les targetes de so (interrupcions, adreces IO, etc.) era una font de problemes, però els sistemes operatius actuals utilitzen una conﬁguració automàtica per evitar aquesta problemàtica.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Font d’alimentació Fusible d’una font d’alimentació Hi ha avaries que solen produir-se i están relacionades amb la font d’alimentació. Tot seguit, en trobareu algunes d’indicades –en l’ordre en què s’han de veriﬁcar– i també la seva possible solució. L’ordinador ha d’estar totalment apagat quan mesureu els valors de resistència amb el polímetre.
+
+- El sistema falla després d’estar funcionant una estona.
+
+Comprovar si el cable d’alimentació està ben connectat. – Comprovar la temperatura. Si és massa alta, comprovar si el ventilador funciona. Si no funcionés, mesurar la tensió que hi arriba, i si és de 12 V, cal reemplaçar el ventilador. – Calcular les necessitats d’alimentació per veure si la font és prou potent. Si se sobrepassen els límits especiﬁcats, canviar-la per una de més potent.
+
+Mitjançant un polímetre, comprovar les tensions de sortida de la font i canviar-la si els valors són propers als valors límit.
+
+- El sistema està completament aturat
+
+Comprovar si el selector de tensió d’entrada està en la posició adequa- da. Comprovar la tensió de la línia, i examinar si s’encenen els llums o si funciona el ventilador o el monitor (si està connectat al mateix endoll). – Veriﬁcar si el cable d’alimentació està ben connectat.
+
+Examinar la continuïtat del cable d’alimentació (per exemple, mesu- rant la tensió al ﬁnal del cable mateix). – Comprovar si funciona l’interruptor i mesurar la resistència entre els terminals positiu i negatiu, mentre s’acciona l’interruptor. La resistència ha de ser alta quan està desconnectat i baixa quan es connecta (en les fonts AT).
+
+Comprovar, mitjançant un polímetre, les tensions de sortida i el senyal d’alimentació correcta del connector P8 en els models AT de la font. – Veriﬁcar el fusible que és dins de la font (si l’equip no està en garantia). – Treure totes les targetes d’expansió i desconnectar l’alimentació de les unitats de disc. Tornar a comprovar les tensions de sortida i el senyal d’alimentació correcta de la font; en cas de sobrecàrrega, es produirà un tall. Canviar la font d’alimentació si encara no hi ha corrent.
+
+Si no hi ha energia, calcular les necessitats d’alimentació i comprovar si la font és prou potent. Canviar-la si és necessari. En cas contrari, anar connectant les targetes d’expansió i els perifèrics ﬁns que es trobi quin és el que està consumint massa energia.
+
+En els recursos de contingut del web del mòdul podeu trobar una calculadora de potència mínima de fonts d’alimentació. Les fonts ATX es poden comprovar sense necessitat de connectar-les a la placa base si es curtcircuita el cable verd amb qualsevol dels de massa i mesurant la tensió a la resta de cables.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Consulteu la unitat formativa “Electricitat a l’ordinador” per conèixer el funcionament genèric d’un multímetre. Quan l’avaria... ...és de la font i no ha estat possible determinar per inspecció visual o mesurament ràpid quin és el component de la font defectuós, sovint es canvia la font completa, ja que el preu és reduït i no compensa el temps que cal emprar per a reparar-la.
+
+- El sistema funciona momentàniament, però després s’atura
+
+Comprovar si el cable d’alimentació està connectat correctament i si el selector de tensió d’entrada està en la posició adequada. – Comprovar l’interruptor d’acord amb el que s’ha exposat anteriorment. El mecanisme pot estar bloquejat, per la qual cosa és necessari mirar si l’interruptor es pot moure lliurement en tots dos extrems.
+
+Comprovar les tensions de sortida i el senyal d’alimentació correcta utilitzant un polímetre. – Veriﬁcar els apartats 7 i 8 del punt anterior.
+
+- El sistema es bloqueja o torna a arrencar per sí sol
+
+Normalment és un problema de programari. Tanmateix, si passa mentre es duen a terme operacions normals del sistema operatiu o mentre s’executa una operació depurada, segurament es tracta de ﬂuctuacions de tensió. – Utilitzant un polímetre, comprovar les tensions de sortida de la font i canviar-la si els valors són a prop dels valors límit.
+
+Examinar la tensió de la xarxa. Ha de ser de 230 V. – Canviar el PC per un altre de la zona per veure si el problema depèn de la ubicació de l’ordinador.
+
+- L’ordinador s’engega, la pantalla resta negra i ni s’activa el ventilador
+
+de la font d’alimentació ni el disc dur comença a girar – Si el cable de connexió i l’endoll de la paret estan en condicions òptimes, segurament hi ha un problema a la font d’alimentació. – Per esbrinar si la mateixa font és el dispositiu defectuós o si hi ha un altre component que pot causar un curtcircuit i impedir l’alimentació correcta del sistema, cal desconnectar del subministrament un dispo- sitiu darrere l’altre, i engegar i apagar l’ordinador cada vegada a ﬁde veriﬁcar si el ventilador de la font d’alimentació funciona.
+
+Exemple pràctic Per determinar quin és el dispositiu defectuós, comenceu per desconnectar del corrent elèctric les disqueteres i després els discos durs. Si al mig d’aquestes operacions el ventilador es posa en marxa, heu de tornar a connectar, per seguretat, l’últim dispositiu desconnectat, i tornar-lo a engegar.
+
+Si aleshores el ventilador no s’activa és que el dispositiu en qüestió ha patit un curtcircuit i s’ha de canviar. Si el procediment anterior no dóna resultat, cal desconnectar la placa base de la font d’alimentació (en les plaques AT) i, abans de tornar a posar en marxa l’equip, s’ha de connectar algun altre dispositiu, preferiblement el disc dur, ja que la majoria de les fonts d’alimentació no han d’operar si no hi ha cap dispositiu connectat.
+
+En el cas de les plaques ATX, en desconnectar la placa base, la font no arrenca (per arrencar una font ATX desconnectada de la placa base, cal unir les patilles 14 i massa, i aleshores la majoria de plaques arrenquen). Si el ventilador continua sense funcionar, la font d’alimentació pot ser defectuosa. Mesurant els senyals dels diversos connectors es pot comprovar que és realment així. En cas que el ventilador funcioni i el disc dur també, l’error és a la placa base.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Impressora La impressora no forma part de la unitat central de procés, però és important tenir en compte algunes precaucions. En impressores de port paral·lel encara en funcionament cal comprovar que s’utilitza el cable adequat.
+
+Això evitarà problemes de funcionament com impressió de caràcters estranys, absència de color, etc. Els controladors de programari són imprescindibles per a l’ús de la impressora amb el Windows. De vegades passa que no es disposa d’aquests controladors, i s’opta per instal·lar els d’un model superior o inferior de la mateixa marca, o pels d’un model que la impressora pot emular. En qualsevol d’aquests casos, correm el risc que la impressora no funcioni adequadament. Habitualment, la pàgina web del fabricant conté els controladors de totes les seves impressores, encara que les més antigues pot ser que no hi apareguin.
+
+Figura 1.5. Model d’escriptori d’una impressora Epson d’injecció de tinta Les avaries de les impressores poden ser degudes a la part mecànica (desgast) o a l’electrònica. En qualsevol cas, podeu avaluar el cost de la reparació demanant un pressupost de les peces necessàries. En cas que decidiu reparar- la, és millor deixar aquesta tasca per al servei tècnic del fabricant, que coneix perfectament la impressora i en pot garantir la reparació.
+
+La càrrega del paper a les impressores d’alimentació automàtica es deteriora amb el temps per desgast, i això mateix passa amb les unions mecàniques entre les peces. De vegades el problema que causa que la impressora carregui diversos fulls en comptes d’un de sol és el desgast d’una peça situada al fons de la safata de càrrega, que ja no pot agafar els fulls i evitar que es desplacin.
+
+Petits problemes d’impressió Les impressores d’injecció de tinta poden presentar problemes a l’hora de carregar la tinta del cartutx un cop se l’ha substituït. En aquest cas, els botons de control de la impressora permeten forçar una nova càrrega o netejar l’injector. Si no aconseguiu imprimir bé, cal que repetiu diverses vegades aquesta mateixa operació.
+
+És habitual que a les impressores hi hagi un cable paral·lel de divuit ﬁls, però moltes en necessiten un de bidireccional de vint-i-cinc ﬁls. Les impressores requereixen un manteniment constant perquè se’n fa un ús quotidià A vegades és necessari... ...greixar la barra de desplaçament del capçal després d’un quant temps de funcionament, però cal fer-ho amb cura i utilitzant productes especíﬁcs, els quals, sovint, consisteixen en una pols ﬁna en comptes d’una substància greixosa.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics De vegades, en els equips PC es produeixen incompatibilitats difícils de preveure a priori que no tenen cap altra solució que la substitució del component afectat. És tan difícil esbrinar... ...quin és el component incompatible, que de vegades s’acaba preguntant a d’altres tècnics si han tingut mai problemes semblants, tot i que en casos com aquests l’experiència personal no acostuma a ser de gaire ajuda.
+
+Un cop rebut... ...i registrat l’informe d’assistència pel servei tècnic, cal que el problema i la solució adoptada, si encara no s’han anotat en el diari tècnic, ho siguin per tenir una referència posterior per a altres reparacions similars. 1.3.4 Incompatibilitats L’ordinador és un equip complex, i atesa la varietat de components és difícil veriﬁcar-ne totes les possibles combinacions, especialment les de targetes i plaques base. És per això que de vegades sorgeixen problemes que porten a la conclusió que una targeta de vídeo determinada no funciona correctament amb un model concret de la placa base i d’altres de semblants.
+
+Això no hauria de passar, ja que hi ha una sèrie de normes que els components han de complir, però per desgràcia passa. Teniu-ho en compte quan feu les substitucions perquè, si una targeta de vídeo no pot funcionar correctament amb una placa base, probablement haureu de provar la targeta de vídeo en un altre ordinador, i en comprovar que funciona potser atribuireu l’avaria a la placa base, quan de fet és la targeta de vídeo la que es resisteix a funcionar amb aquesta placa mare.
+
+Amb el canvi constant de models que caracteritza el mercat de material informàtic, és millor optar per assemblar els components que han donat proves de funcionar correctament en conjunció amb una bona quantitat d’altres components. El fabricant en molts pocs casos reconeixerà que el seu producte dóna problemes si treballa amb determinats models d’altres components, una situació que es dóna cada cop més.
+
+1.4 Documentació de la tasca efectuada i dels resultats La documentació de les avaries és fonamental per mantenir un control sobre les tasques que es duen a terme i tenir un punt de referència per a futures reparacions, ja que la majoria de les avaries es repeteixen freqüentment. Només unes quantes incidències són poc habituals i difícils de diagnosticar.
+
+A l’hora de documentar, no es tracta de fer una explicació molt extensa sobre l’avaria, sinó de registrar l’actuació que s’ha fet. Quan sí que cal documentar més extensament és quan l’avaria ha estat molt complexa i ha calgut molt de temps per solucionar-la. D’aquesta manera, la propera vegada que hi hagi la mateixa avaria, el document indicarà pas a pas la solució de la incidència.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics 1.4.1 Informe d’assistència En l’informe d’assistència bàsic ha de constar la data i l’hora en què s’ha comunicat la incidència al servei tècnic i una breu descripció d’aquesta. Després de registrar-ne l’entrada, aquest informe es lliurarà al tècnic que ha d’efectuar la reparació.
+
+Quan el tècnic comenci la reparació, haurà d’omplir l’informe amb les dades obtingudes dels usuaris i dels administradors, com també amb les observacions que hagi fet en el lloc; també haurà d’enumerar les proves que durà a terme per aïllar el problema i, ﬁnalment, un cop resolta la incidència, haurà de descriure la solució i la causa probable; també pot afegir-hi notes, per exemple, sobre la manera de prevenir futures fallades. Un cop hagi acabat de redactar-lo, cal que torni l’informe al servei tècnic, el qual registrarà la ﬁnalització de la incidència i comunicarà el resultat a la persona que va avisar de la seva existència.
+
+1.4.2 Pla de suport La majoria de les grans empreses tenen un departament especialitzat en el suport als usuaris; però, en les empreses petites i mitjanes, l’encarregat de donar servei als usuaris acostuma a ser el departament d’informàtica. El departament de suport ha de tenir un pla especíﬁc per canalitzar el suport que necessiten els usuaris i ha de tenir tipiﬁcades les actuacions que es poden dur a terme i el camí que, en cada cas, s’ha de seguir.
+
+Qüestions principals a tenir en compte Com s’han de comunicar les incidències i les sol·licituds d’assistència i quin procés s’ha de seguir? Cada incidència s’ha de registrar tant a l’inici com un cop ja s’ha solucionat, i s’ha de canalitzar pels mitjans adequats. En ﬁnalitzar, cal comunicar la resolució a qui va avisar de la incidència.
+
+Com s’han de comunicar els suggeriments dels usuaris i els procediments que cal seguir? Cada suggeriment ha de ser revisat perquè segueixi el seu curs per a la implementació o bé sigui rebutjat. També cal comunicar el resultat a qui va formular els suggeriments. Quina és la formació que han de rebre els usuaris? Una formació sobre la manera de fer servir els equips i el programari com també sobre els temes de seguretat, còpies de seguretat i contrasenyes.
+
+Com s’han de fer les comunicacions als usuaris, quins són els canals pels quals els usuaris rebran informació i què i a qui s’ha de notiﬁcar?
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics 1.4.3 Documentació del sistema Per tenir més facilitats a l’hora de solucionar els problemes d’una instal·lació informàtica en general, l’administrador o els administradors del sistema han de disposar de la documentació completa de la instal·lació.
+
+Normalment, la documentació que es recomana inclou aquestes coses
+
+- El registre del maquinari amb tota la informació de components de cada
+
+equip.
+
+- La informació de conﬁguració de cada un dels equips.
+- El programari i la documentació de cada component de cada equip.
+- El programari de conﬁguració, programari auxiliar i controladors de cada
+
+dispositiu per a diferents sistemes operatius.
+
+- El programari de diagnòstic i de benchmark general i especíﬁc per a cada
+
+dispositiu.
+
+- La informació actualitzada en el diari tècnic dels problemes que ha tingut
+
+la instal·lació i els mètodes emprats per solucionar-los. Així es poden solucionar més ràpidament els problemes que tornen a sorgir.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+### 2. Manteniment de perifèrics
+
+Tot i que els perifèrics són una de les fonts de problemes més gran en un sistema informàtic, l’usuari espera que tant els perifèrics fonamentals de l’equip –teclat, monitor i ratolí– com els que són complementaris –la impressora o l’escàner, per exemple– funcionin correctament.
+
+Aconseguir que tots aquests dispositius complementaris funcionin correctament la major part del temps comporta una sèrie de procediments previs a la utilització del perifèric (instal·lació i conﬁguració) i uns altres que es donen al llarg de la seva vida útil (manteniment).
+
+El manteniment pot ser preventiu, quan es basa en un bon ús i conﬁguració dels dispositius, o pot ser també simptomàtic, quan tracta de solucionar problemes puntuals que s’han produït amb un component o perifèric, tant si es tracta de l’empitjorament del rendiment com d’una avaria pròpiament dita.
+
+Per dur a terme un manteniment adequat dels dispositius cal conèixer-ne la classiﬁcació i les característiques tècniques bàsiques que els deﬁneixen. També cal aprofundir en el procés d’instal·lació d’aquests dispositius en equips Windows i GNU/Linux, com també en el procés de manteniment que cal seguir per assegurar- ne un funcionament adequat.
+
+A continuació podeu trobar una breu descripció dels perifèrics més importants i les seves característiques tècniques. 2.1 Perifèrics d’un ordinador Per fer la seva tasca, la unitat central de processament ha de tenir accés, en primer lloc, a les dades que utilitzarà i, després, ha de poder dipositar la informació que generarà en algun lloc en què la pugui reutilitzar. Per tant, caldrà que disposi d’unitats d’entrada-sortida que la comuniquin amb l’exterior, i els dispositius que es connecten a aquests canals de comunicació són els perifèrics.
+
+Els perifèrics són elements que serveixen perquè la màquina interaccioni amb l’entorn. Com el nom indica, normalment estan situats al voltant de l’ordinador i el connecten amb l’exterior. Així, doncs,la ﬁnalitat de la majoria dels perifèrics és la interacció de l’ordinador amb les persones, tant pel que fa a l’entrada com a la sortida de dades, i per això tots els perifèrics –tant els interns com els externs– són dispositius que es Un bon manteniment...
+
+...d’un equip informàtic estàndard requereix conèixer a fons la varietat de tipus de perifèrics com també les connexions i el cablejat corresponents. Consulteu els processos del manteniment simptomàtic o de resolució d’avaries en equips PC en l’apartat “Detecció d’avaries” d’aquesta unitat formativa.
+
+Un connector elèctric... és un dispositiu conductor capaç de mantenir units dos dispositius elèctrics. La connexió pot ser temporal o requerir eines per a l’assemblatge. En informàtica els connectors també reben el nom d’interfícies físiques.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Els terminals Són perifèrics per a la interacció entre les persones i l’ordinador, tant en l’entrada de dades com en la sortida d’informació. Van substituir els terminals teletip. Els monitors TRC dels ordinadors, com les pantalles dels televisors, són tubs de rajos catòdics.
+
+RGB (red, green, blue) Combinant els colors primaris additius –vermell, verd i blau– amb diferents intensitats es poden aconseguir, gairebé, tots els colors visibles. comuniquen amb els components fonamentals –processador, placa base i memòria interna– mitjançant diversos tipus de connectors d’ampliació.
+
+2.1.1 Pantalles o monitors Les pantalles són un dels perifèrics principals de sortida dels ordinadors. Ens permeten visualitzar tant l’entrada de les dades introduïdes per l’operador (usuari) com la informació de retorn del procés que s’executa. Les pantalles han evolucionat força. Des dels “primitius” monitors de tub de rajos catòdics (TRC o CRT) monocroms de fòsfor verd, que només presentaven informació textual, ﬁns a les pantalles actuals, que permeten la representació d’imatges en color i alta deﬁnició, hi ha hagut un avenç signiﬁcatiu.
+
+Pantalla TRC o CRT (de l’anglèscathode ray tube) El tub de rajos catòdics Fins fa ben poc, el tub de rajos catòdics era l’únic sistema de presentació d’imatges. Realment, el TRC és una vàlvula electrònica en què l’ànode està recobert internament d’un compost capaç d’emetre llum quan hi incideix un raig d’electrons anomenat pinzell electrònic procedent del càtode (d’aquí, la denominació de rajos catòdics). Tant la intensitat com el gruix d’aquest raig estan controlats electrònicament, i fa que incideixi en un petit punt a la pantalla. Si es controla la seva posició amb un camp magnètic produït per unes bobines externes, es pot fer incidir el raig d’electrons en qualsevol punt de la pantalla i il·luminar-la en tots els punts. Si la intensitat i la posició del raig es controla adequadament en cada moment, es genera una imatge en la pantalla.
+
+Les imatges en els tubs de rajos catòdics es generen per tramatge; és a dir, el pinzell electrònic recorre la pantalla fent línies horitzontals d’esquerra a dreta i de dalt a baix, modiﬁcant adequadament la seva intensitat per a cada punt del recorregut. Per omplir una pantalla amb una resolució semblant a la dels televisors, calen, aproximadament, sis centes línies. Cada pantalla es “dibuixa” unes vint vegades per segon per evitar que l’ull percebi el parpelleig de la imatge.
+
+Per obtenir imatges en color, s’utilitzen tres compostos diferents -un per cada color primari agrupats en un punt anomenat triplet de color, per la qual cosa el frontal del tub està cobert de punts minúsculs. Cada un d’aquests compostos produeix un color si és sotmès a un raig d’electrons; per això, hi ha tres càtodes emissors d’electrons, un per cada color primari RGB. Cada càtode només pot encendre els punts d’un color a causa de la presència d’una màscara entre el càtode i l’ànode frontal que tan sols permet la incidència del raig en el punt del color corresponent. Si es regula adequadament la intensitat del raig d’electrons per a cada color en cada punt, es pot obtenir una gran gamma de colors.
+
+Respecte a les noves tecnologies, les pantalles TRC tenen, però, una sèrie d’in- convenients: un consum elevat d’energia, un índex de radiació electromagnètica apreciable, i un volum i un pes notables. Les pantalles planes La tecnologia de construcció de les pantalles ha evolucionat molt, i s’estan substituint les pantalles de tub de rajos catòdics per pantalles fabricades amb tecnologies de LCD, de plasma o de matriu activa, les anomenades pantalles
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics planes, de baix consum, radiació gairebé inapreciable, sense els problemes de convergència, enfocament i geometria que tenen els TRC, i que ocupen menys de la tercera part de l’espai. Les pantalles de LCD (liquid cristal display) consten de dues plaques de vidre amb metal·litzat transparent –per formar elèctrodes per la cara interior, un per cada punt– i d’una capa intermèdia d’un líquid d’estructura molecular cristal·lina que s’altera amb la inﬂuència d’un camp elèctric. El camp elèctric es genera a conseqüència de l’aplicació d’una tensió als dos elèctrodes, la qual cosa fa que els cristalls de la solució intermèdia s’orientin d’una determinada manera i deixin passar o bloquegin la llum procedent d’un mitjà d’il·luminació de la part posterior.
+
+Pantalla TFT Les pantalles TFT (thin ﬁlm transistor) permeten una qualitat i una resolució excepcional. Representen un pas més en l’evolució de les pantalles planes. Una pantalla plana fabricada amb la tecnologia TFT no és res més que un monitor LCD en què cada píxel és activat directament per un transistor.
+
+La tecnologia de les pantalles TFT ofereix un angle de visió molt més gran que permet veure la imatge a la perfecció encara que no s’estigui enfront de la pantalla. El consum energètic és molt reduït. Les pantalles TFT es coneixen amb el nom de matrius actives, perquè cada píxel, en comptes de ser activat per un elèctrode, és activat per un transistor immediat a la seva posició; per tant, la velocitat de resposta és molt més ràpida que en les pantalles de tecnologia LCD de matriu passiva.
+
+Les pantalles de plasma utilitzen una tecnologia similar als tubs ﬂuorescents o a les làmpades de neó. Una pantalla de plasma consisteix en dues plaques de vidre amb metal·litzat transparent per formar elèctrodes per la cara interior i per cada punt d’emissió de llum. Entre els dos vidres, hi ha petites concavitats plenes amb un gas dielèctric i amb fòsfors dels colors RGB. En aplicar una tensió elèctrica a una parella d’elèctrodes, el gas s’ionitza i es converteix en plasma (ions + electrons), la qual cosa produeix una emissió ultraviolada que reacciona amb els fòsfors. Això produeix el punt de color que és visible al panell frontal. Com que la pantalla ja emet llum, no cal que tingui cap mitjà d’il·luminació addicional. La brillantor i el contrast són molt millors que els de les pantalles LCD, i tant el pes com el gruix són més reduïts.
+
+Els sistemes i tecnologies de projecció d’imatges Dins de la mateixa família de pantalles que anomenem visualitzadores, també podem trobar els sistemes de projecció d’imatges com els panells de retroprojector i els projectors de vídeo. Els panells de retroprojector no són altra cosa que una pantalla LCD, muntada en un marc, que permet que la llum la travessi.
+
+Aquesta pantalla muntada damunt d’un retroprojector permet que les imatges rebudes de la targeta gràﬁca es Píxel És el punt mínim que es pot mostrar en un dispositiu per formar una imatge. El nom ve de l’anglès picture element (element de la imatge), que abreviat ha quedat píxel.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics projectin sobre qualsevol superfície. Els projectors de vídeo són dispositius que projecten directament les imatges generades per senyals de vídeo de la targeta gràﬁca. Entre les diverses tecnologies de projecció cal esmentar
+
+- La projecció per mitjà de tubs TRC d’alta lluminositat. Aquesta tecnologia
+
+va ser de les primeres a ser emprada. S’utilitza un tub de rajos catòdics amb ﬁltres de color per cada un dels colors primaris RGB, i s’enfoquen conjuntament per mitjans òptics.
+
+- La projecció per mitjà d’un panell d’LCD de mida molt reduïda per cada
+
+un dels colors primaris. Aquests projectors són semblants a un projector de diapositives en què el panell fa la funció de la pel·lícula.
+
+- La tecnologia DLP (digital light processing). La tecnologia de processa
+
+ment digital de la llum es basa en el principi de reﬂexió de la llum en uns miralls microscòpics posicionats en ﬁles i columnes en un xip conegut com a DMD (digital micromirror device) o dispositiu digital micromirall. Cada mirallet representa un píxel. El moviment d’aquests minúsculs miralls es limita a dues posicions: on i oﬀ. En la posició on, dirigeixen el reﬂex de la llum cap a l’òptica i, en la posició oﬀ, no. La llum que es reﬂecteix passa a través d’un ﬁltre del color primari que es projecta. Els mirallets es controlen electrònicament per obtenir les diferents gradacions de color regulant el temps que dura la posició en on. La deﬁnició de la imatge és força bona i, actualment, arriba a 1.920 × 1.080 punts HDTV (high deﬁnition television).
+
+- La tecnologia LCoS (liquid crystal on silicon, o cristall líquid sobre silici).
+
+La tecnologia LCoS és similar a la DLP, però utilitza cristalls líquids. En la tecnologia LCoS, els cristalls líquids estan col·locats directament damunt de la superfície del xip recoberta per una capa aluminitzada molt reﬂectora que fa de mirall. Els cristalls líquids obren o tanquen el pas de la llum que es reﬂecteix en el mirall. D’aquesta manera, es modula la llum i es crea la imatge.
+
+2.1.2 Les targetes gràﬁques Targeta gràﬁca VGA La sortida gràﬁca de l’ordinador està formada per la pantalla o monitor, i també per un dispositiu que és capaç de transformar la informació que rep de la unitat central per mitjà dels busos del sistema en informació gràﬁca representable, i de transformar aquesta en els senyals elèctrics adequats perquè els utilitzi la pantalla.
+
+Aquest dispositiu rep el nom de targeta gràﬁca o d’adaptador gràﬁc, que ha evolucionat de manera paral·lela a com ho han fet les pantalles. La targeta gràﬁca és el dispositiu que s’encarrega de controlar la informació que surt en la pantalla del monitor.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics La targeta gràﬁca rep la informació digital de la imatge que ha de presentar, la processa i l’emmagatzema en la mateixa memòria RAM de vídeo. A partir d’aquí, genera els senyals elèctrics que la pantalla necessita per representar la imatge –senyals de sincronisme vertical, horitzontal i de quadre– i els senyals analògics o digitals adequats per a cada un dels colors primaris que s’han de representar en cada punt lluminós de la pantalla.
+
+A partir dels primers sistemes amb targetes gràﬁques que només podien repre- sentar text MDA (monochrome display adapter) van sorgir les targetes que ja permetien la representació en colors i gràﬁcs. Aquí en teniu una llista breu
+
+- CGA (computer graphics adapter). Representava text en una resolució de
+
+5 × 7 punts per caràcter, tenia una resolució gràﬁca de 320 × 200 punts a 16 colors per cada punt i una memòria de vídeo de 64 kB.
+
+- EGA (enhaced graphics adapter). Representa text amb una resolució de
+
+14 × 18 punts i, en mode gràﬁc, té una resolució de 640 × 480 punts i 16 colors amb una memòria de vídeo de 256 kB.
+
+- VGA (video graphics adapter). Amb aquesta targeta va aparèixer un nou
+
+estàndard. Ofereix una paleta de 256 colors, amb el resultat d’unes imatges més acolorides. Les primeres VGA tenien 256 kB de memòria de vídeo, i amb 256 colors només arribaven a una resolució de 320 × 240 punts; però, més endavant, la memòria de vídeo es va ampliar, primer a 512 kB i després a 1.024 kB, i es van aconseguir resolucions de 1.024 × 768 punts i 256 colors. En mode text, té una resolució de 720 × 400 punts i suporta totes les característiques de la CGA.
+
+- SVGA (super video graphics adapter). És una targeta que ja conté un
+
+conjunt de xips especialitzats que n’augmenta les prestacions. Ja no és com les targetes anteriors, que es limitaven a emmagatzemar la imatge en memòria i a convertir-la en senyals elèctrics per a ús de la pantalla; les SVGA reben, de la unitat central, informació de la composició de la imatge i la processen abans de presentar-la.
+
+2.1.3 Teclats Teclat i ratolí Els teclats per a ordinador són semblants als de les màquines d’escriure, tot i que, habitualment, disposen d’un conjunt de tecles ampliat, que permet l’accés ràpid a determinades funcions, i d’un conjunt addicional de tecles, que són les tecles numèriques que faciliten l’entrada d’aquest tipus de dades.
+
+El teclat és el perifèric més utilitzat per introduir ordres i dades a l’ordinador. Les diferents tecnologies de construcció dels teclats no s’han limitat al sistema de polsadors de les tecles, que ha passat dels polsadors individuals mecànics, als teclats de membrana i els teclats tàctils.
+
+Les targetes SVGA... ...disposen d’un conjunt xips anomenats accelerador gràﬁc que no són res més que un processador especialitzat que fa les funcions relacionades amb la presentació dels gràﬁcs en pantalla. Així, estalvia aquesta feina al processador del sistema i s’arriba a resolucions molt altes.
+
+El teclat més usat en els ordinadors s’anomena QWERTY, nom format per les sis primeres lletres de la línia superior del teclat.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics En data recent, han aparegut teclats projectats: un raig làser dibuixa un teclat damunt d’una superfície, i el simple tecleig amb els dits sobre la imatge projectada és detectat per l’aparell, que es comporta com un teclat normal.
+
+2.1.4 Ratolí, dispositiu senyalador i palanca de joc Als laboratoris de Xerox, a Califòrnia (Estats Units), pels volts de 1963 dos enginyers, Douglas Engelbart i Bill English, que treballaven en un projecte de representació de gràﬁcs en l’ordinador i que necessitaven un sistema apuntador, van inventar el computer mouse, que ara tothom coneix amb el nom de ratolí.
+
+El ratolí és un dispositiu electrònic d’entrada de dades que, en ser desplaçat per una superfície, produeix senyals elèctrics que indiquen la direcció, el sentit i la magnitud del desplaçament efectuat. A més, el ratolí disposa d’un conjunt de botons que, en preme’ls, generen, al seu torn, altres senyals elèctrics que també poden ser interpretats per l’ordinador.
+
+Actualment, el ratolí d’ordinador és un dels perifèrics de entrada de dades més utilitzats juntament amb el teclat, sobretot en interfícies gràﬁques en què el desplaçament del ratolí damunt d’una superfície provoca el desplaçament d’un cursor que assenyala el punt corresponent de la pantalla.
+
+Com funciona el ratolí El mecanisme que detecta el desplaçament en els ratolins consisteix en una bola que gira en contacte amb la superfície per on s’arrossega el ratolí. Aquest moviment és captat per fricció de la bola sobre dos corrons interns situats als dos eixos del moviment en dues dimensions. Solidari a cada un dels corrons, hi ha un disc amb ranures radials que actua sobre dos captadors que determinen la magnitud i el sentit del desplaçament.
+
+Actualment, però, s’ha substituït la bola per un captador òptic. Un díode electroluminescent il·lumina la superfície per on es desplaça el ratolí, el reﬂex d’aquesta llum és captat per un sensor òptic CCD semblant al sensor de les càmeres fotogràﬁques digitals, que envia la imatge capturada a un processador de senyal, que determina el sentit i la magnitud del moviment.
+
+A la família dels dispositius senyaladors, de la qual el ratolí és el màxim exponent, pertany també el ratolí de bola (track ball). El ratolí de bola és un aparell semblant al ratolí amb la diferència que, en lloc de moure’l, es manipula directament sobre la bola mentre l’aparell resta estàtic damunt de la superfície.
+
+Touchpad En el mateix tipus de dispositius d’entrada, també hi trobem el ratolí tàctil (touch pad). El ratolí tàctil és una petita superfície sensible que, en passar el dit pel damunt, també detecta el sentit i la magnitud del moviment. Un altre dispositiu és la tauleta gràﬁca, que també és una superfície sensible i té un comportament similar al ratolí tàctil, però és molt més gran i molt més precís.
+
+La tauleta gràﬁca es fa servir bàsicament pel dibuix, tant lineal com artístic. Per dibuixar en la tauleta gràﬁca, s’utilitza un llapis especial, i no tan sols es determina
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics la posició, direcció, magnitud i sentit del traç, sinó que també es pot determinar la pressió efectuada pel llapis damunt de la superfície sensible. La pantalla tàctil és un altre dispositiu d’entrada força utilitzat últimament, sobretot en els anomenats TPV i en els caixers automàtics. Essencialment, una pantalla tàctil és una superfície transparent i sensible a la pressió que es col·loca damunt d’una pantalla normal i que es comporta d’una manera semblant a una tauleta gràﬁca: si es fa pressió o s’hi passa el dit per damunt, es detecta aquesta pressió i el punt on s’ha aplicat, o el sentit i la magnitud del desplaçament.
+
+Aquestes dades són comunicades a l’ordinador com si fos el ratolí. La palanca de control (joystick) també és un exemple de perifèric d’entrada de dades directament accionat per l’usuari. El joystick consta d’una palanca que, en moure-la a diferents posicions, envia a l’ordinador un senyal elèctric que en determina la posició. També disposa de diferents polsadors que, en ser premuts, generen al seu torn altres senyals elèctrics que també poden ser interpretats per l’ordinador.
+
+Hi ha altres dispositius d’entrada, però són dispositius dissenyats i construïts per a aplicacions especials, i queden fora de l’abast d’aquest resum. 2.1.5 Impressores Moltes vegades, es necessita disposar de la informació en un suport permanent i transportable com el paper. Per tant, cal tenir uns dispositius de sortida que ens permetin imprimir en aquest paper la informació: les impressores.
+
+La impressora és un perifèric de sortida encarregat de passar un document digital d’imatge o de text a un suport físic, normalment paper. Les impressores de margarida A les impressores de margarida, que van ser les primeres a heretar la tecnologia de les màquines d’escriure elèctriques, els tipus (lletres o símbols) estaven disposats en unes llengüetes a la perifèria d’un disc (semblant a la ﬂor de la margarida, d’això el seu nom) que girava davant d’un petit electroimant. Quan la llengüeta de la lletra que s’havia de marcar passava per davant d’aquest electroimant, es feia passar un corrent elèctric i aquest colpejava la lletra contra una cinta entintada que hi havia entre el disc i el paper, i marcava la lletra al paper, situat damunt d’un corró mòbil que es desplaçava longitudinalment per posicionar-lo al lloc on havia de ser impresa la lletra, just davant del punt on havia de colpejar l’electroimant.
+
+Les impressores, anomenades de tipus ﬁxos –impressores de margarida, de bola i de cadena–, tenien la limitació que només podien imprimir text, i només les lletres que hi havia en el joc de caràcters que tenia la margarida, la bola o la cadena que en aquell moment estava muntada a la impressora.
+
+La necessitat de tenir més jocs de caràcters i d’imprimir gràﬁcs va ser una de les raons per les quals van sorgir les impressores inicialment anomenades gràﬁques TPV signiﬁca terminal de punt de venda, ordinador que fa les funcions de caixa registradora. Les impressores de bola i de cadena,...
+
+...que van sortir després de les de margarida, funcionaven d’una manera similar, fent que el tipus adequat colpegés una cinta entintada que, col·locada entre el tipus i el paper, deixava impresa la lletra al paper.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics o matricials perquè es basen en la generació dels tipus o dels dibuixos mitjançant una matriu de punts que, junts, conﬁguren una imatge molt més gran. Impressora matricial Mostra de text de matriu de punts El terme matriu de punts (dot matrix) o impressora matricial és especíﬁc de les impressores d’agulles que disposen d’un capçal mòbil amb una, dues o més columnes d’agulles activades cada una independentment per un electroimant.
+
+Quan s’activa l’electroimant, l’agulla corresponent surt de la guia i colpeja una cinta entintada col·locada entre el capçal i el paper, i marca un punt en el paper. Mitjançant l’activació de les agulles adequades, s’aconsegueix marcar en cada posició un determinat conjunt de punts en una o més columnes (matriu de punts).
+
+Com que el capçal es desplaça per unes guies en paral·lel a la línia que s’ha d’imprimir en el paper, en el desplaçament es posa una columna al costat de l’altra amb diferents punts activats. D’aquesta manera, s’aconsegueixen imprimir els caràcters o les formes. Tot i que són força sorolloses, les impressores d’agulles encara són força utilitza- des, perquè permeten fer al mateix temps més d’una còpia del que s’imprimeix, i perquè els consumibles que necessiten són molt econòmics en comparació amb les altres tecnologies d’impressió. Tot i així, val a dir que la qualitat del text imprès és inferior a la de les impressores de margarida o de bola, però en canvi tenen l’avantatge de permetre imprimir gràﬁcs.
+
+Totes les impressores vistes ﬁns ara són del tipus anomenat d’impacte, ja que el seu funcionament es basa en colpejar les lletres sobre una cinta entintada, col·locada davant del paper. Altres impressores que també fan servir el mateix principi que les impressores matricials són les de raig de tinta, ara per ara les més utilitzades, i les impressores tèrmiques.
+
+Impressora de raig de tinta Cartutx de tinta de color amb capçal incorporat En les impressores de raig de tinta –també anomenades d’injecció–, el capçal té unes columnes de petits oriﬁcis anomenats injectors que, amb una disposició semblant a la de les agulles de la impressora matricial, en ser excitats per un impuls de corrent elèctric, projecten petitíssimes gotes de tinta al paper.
+
+Figura 2.1. Impressora de raig de tinta
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Hi ha dues maneres d’efectuar la projecció d’aquestes gotetes: per expulsió tèrmica o per expulsió piezoelèctrica. Expulsió tèrmica Un impuls elèctric molt breu (d’uns quants microsegons) produeix un increment de temperatura (uns 500 °C) que fa bullir la petitíssima quantitat de tinta que hi ha dins la càmera de l’injector, i això fa que es formi una bombolla de vapor que força la sortida de la tinta. Quan surt a l’exterior, la tinta es condensa i forma una petitíssima gota que es diposita sobre el paper. I quan es refreda, la càmera xucla una nova dosi de tinta del dipòsit.
+
+Expulsió piezoelèctrica Dins de la càmera, cada injector disposa d’un element piezoelèctric que, en rebre un impuls elèctric, modiﬁca bruscament la forma. D’aquesta manera, incrementa la pressió i força la sortida d’una petitíssima gota de tinta que es diposita sobre el paper. En acabar l’impuls elèctric, l’element piezoelèctric recupera la forma i bombeja una altra dosi de tinta dins la càmera de l’injector des del dipòsit.
+
+Combinant els colors primaris sostractius –cian, groc, magenta i negre (CMYK)– en diferents quantitats, es poden obtenir gairebé tots els colors visibles.</iocstl> Amb les impressores de raig de tinta es pot imprimir en color. Només cal tenir, en el capçal, un grup d’injectors per cada color primari, adequadament sincronitzats i regulats per obtenir tota la gamma de colors.
+
+A diferència dels monitors, que obtenen la gamma de colors de l’addició dels colors primaris additius (síntesi additiva), a les impressores els colors s’obtenen de la diferència de color (síntesi sostractiva) amb el model anomenat CMYK. Impressores tèrmiques Les impressores tèrmiques disposen d’un capçal ﬁx en línia; és a dir, el capçal té la llargada de la màxima línia que es pot imprimir, i disposa d’una ﬁla de punts tèrmics. Cada punt, en rebre un impuls elèctric, produeix un increment de temperatura de més de 200 °C de durada molt curta. El paper que s’ha d’imprimir, passa tocant el capçal per davant i pressionat per un corró.
+
+La impressió amb impressores tèrmiques sobre el paper es pot fer de dues maneres diferents, per transferència o de manera termoquímica. Impressió per transferència Entre el capçal i el paper, hi ha una pel·lícula molt prima impregnada amb tinta seca transferible per la cara que toca el paper. En rebre l’escalfor, la tinta (que és semblant a la cera) es fon i es diposita sobre el paper. La majoria de les impressores d’etiquetes funcionen seguint aquest principi. Es pot aconseguir la impressió en color si es disposa d’un capçal per a cada un dels colors CMYK.
+
+Impressió termoquímica El paper sobre el qual s’ha d’imprimir està recobert d’una substància termosensible que reacciona amb l’escalfor i es torna negre. El punt que rep escalfor s’ennegreix. Les impressores de tiquets de la majoria de caixes registradores i dels terminals de punt de venda funcionen seguint aquest principi.
+
+Els capçals... ...a les impressores de raig de tinta es desgasten força i, per això, en molts models es canvia el capçal al mateix temps que es recanvia el dipòsit o el cartutx de tinta amb un de nou. La resolució de les impressores tèrmiques depèn de la quantitat de punts per polzada que tingui el capçal.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics El tòner conté tinta seca ﬁnament polvoritzada que s’utilitza a les copiadores i impressores làser. Connexió impressora-ordinador La majoria d’impressores es connecten amb l’ordinador per un port paral·lel, tot i que, actualment, sovint ho fan per mitjà d’un port USB. En canvi, la majoria de les impressores de tiquets de les caixes registradores i dels TPV es connecten amb l’ordinador pel port en sèrie. La connexió per mitjà de xarxa gràcies a una targeta especíﬁca permet compartir les impressores pels ordinadors de la mateixa xarxa.
+
+Impressora làser Impressora làser Una tecnologia d’impressió totalment diferent respecte de les que heu vist ﬁns ara és la tecnologia de les impressores làser. Una impressora làser és un tipus d’impressora d’alta qualitat que utilitza una tecnologia heretada de les fotocopiadores.
+
+Impressió làser Un raig làser de baixa potència dibuixa el que es vol imprimir sobre la superfície d’un cilindre fotosensible de seleni, modiﬁcant la distribució de les carregues elèctriques de la superfície del cilindre que quedaran distribuïdes proporcionalment a la quantitat de llum rebuda. En girar, aquest cilindre entra en contacte amb el tòner, que s’adhereix per atracció electrostàtica a les zones que han estat exposades a la llum del làser. Després, aquest tòner es transfereix al paper per contacte, i es ﬁxa fonent-lo amb escalfor i aplicant pressió amb un corró calent.
+
+Actualment, hi ha impressores làser en color en què el paper passa successiva- ment per quatre dispositius làser adequadament sincronitzats. Cada dispositiu té tòner d’un dels colors de síntesi sostractiva CMYK, la qual cosa permet obtenir imatges en color de gran qualitat.
+
+Traçador o plòter Un altre dispositiu de la família de les impressores es el traçador o plòter, dissenyat especialment per traçar dibuixos lineals en formats grans de paper, tant per fer plànols com mapes o dibuixos. El plòter es basa en un corró que suporta el paper i que pot girar en dos sentits. Damunt del corró es desplaça un capçal que porta el dispositiu que ha de pintar el dibuix. Combinant adequadament el desplaçament lineal del capçal i el gir del corró, es conformen sobre el paper els dos eixos x i y, i es pot fer qualsevol traç. També es poden trobar plòters plans –de petit format– on el paper resta estàtic damunt d’una superfície plana i el capçal es desplaça en els dos eixos damunt d’un regle.
+
+El plòter imprimeix imatges de grans dimensions. La majoria de dispositius traçadors es connecten amb l’ordinador per un port en sèrie, tot i que, actualment, cada vegada són més els que es connecten per un port USB, i també hi ha versions que es connecten al port paral·lel.
+
+Bàsicament, hi ha dos tipus de capçals per al plòter
+
+- El capçal de plomes recull un retolador o ploma de dibuix que té el gruix
+
+de traç que porta indicat, i, mitjançant un mecanisme controlat per un electroimant, fa el traçat posant en contacte el retolador amb el paper. El plòter disposa d’un sistema que té un conjunt de plomes de diferent gruix i color que pot usar el capçal.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+- El capçal d’injecció és del mateix tipus que el capçal de les impressores de
+
+raig de tinta i funciona amb el mateix principi, la qual cosa permet que els dispositius traçadors s’utilitzin com a impressores d’alta qualitat de format gran. Fotocopiadora La major part de les fotocopiadores d’oﬁcina actuals utilitzen una tecnologia anomenada xerograﬁa, procés en sec que utilitza calor.
+
+Una fotocopiadora (o copiadora) és un dispositiu que fa còpies de documents o altres tipus d’imatges de manera ràpida i barata. Les fotocopiadores actuals han adoptat el funcionament digital, segons el qual el dispositiu consisteix en un escàner integrat i una impressora làser. Aquests aparells són capaços, entre altres funcions, d’escanejar un document només un cop i imprimir-lo tantes vegades com sigui necessari, o ﬁns i tot d’enviar-lo per correu electrònic sense imprimir-lo.
+
+2.1.6 Altres dispositius d’entrada i sortida de dades Per a l’entrada o la sortida de dades les persones utilitzen directament no tan sols dispositius perifèrics, sinó que també tenen a l’abast altres dispositius que permeten altres modalitats d’informació. En l’ordinador, per exemple, es poden introduir imatges, sons o informacions procedents de sensors especials.
+
+Els perifèrics d’entrada d’imatges més importants són els escàners i les càmeres digitals. Escàner L’escàner pla és el model d’escàner amb un ús més estès. Hi ha diversos tipus d’escàners. En els escàners plans, la imatge que es vol introduir en l’ordinador es col·loca damunt del vidre amb la imatge encarada al dispositiu; un capçal que disposa dels elements sensors de llum i d’un sistema d’il·luminació neutre recorre tota la imatge rastrejant-la i, en cada petit desplaça- ment, obté una línia digitalitzada de la imatge. L’agrupació ﬁnal de totes les línies conﬁgura la imatge digital.
+
+Els escàners són dispositius perifèrics que capturen imatges pel mètode de rastreig. També hi ha escàners de corró i escàners manuals. Els escàners de corró són Les copiadores de gamma baixa... ...sovint duen integrat un dispositiu de fax i imprimeixen per injecció de tinta. Això fa que el nombre de còpies impreses per minut sigui força més baix que a les impressores làser.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics semblants a un plòter amb el corró transparent i il·luminat interiorment que, en comptes de tenir al capçal un sistema per dibuixar, hi tenen els elements sensors de llum. En els escàners de corró, el procés d’escanejar es fa rastrejant la superfície de la imatge amb el moviment del corró i el desplaçament del capçal. En els escàners manuals, el capçal de rastreig i el sistema d’il·luminació es desplaça manualment per damunt de la imatge.
+
+Cal assenyalar que hi ha programes d’ordinador que, a partir d’una imatge, per- meten el reconeixement dels caràcters impresos. Aquests programes, anomenats OCR (optical character recognition) o ROC (reconeixement òptic de caràcters), permeten a l’ordinador “llegir” literalment el paper imprès.
+
+Lector de codi de barres Lector de codi de barres manual Un altre dispositiu d’entrada de dades basat en el reconeixement òptic és el lector de codi de barres que s’utilitza, sobretot, en els terminals de punts de venda. El codi de barres és la representació d’una determinada informació mitjançant un conjunt de línies paral·leles verticals de diferents gruixos i espaiat.
+
+Mitjançant la projecció d’un raig làser sobre la superfície que conté el codi de barres, el lector de codi de barres capta la reﬂexió de llum i els diferents gruixos, tant dels espais com de les línies del codi. Aquestes dades són llegides per l’ordinador com si es tractés d’una entrada estàndard de teclat.
+
+Càmera digital Càmera digital Les càmeres digitals són dispositius similars a les càmeres fotogràﬁques o a les càmeres de vídeo, que disposen d’una lent frontal que enfoca la imatge sobre un sensor intern CCD, el qual transforma la imatge de llum en un conjunt de senyals elèctrics que conﬁguren la imatge digital.
+
+El sensor CCD o sensor intern charge-coupled és un sensor format per una matriu de sensors fotoelèctrics petitíssims que, en rebre llum, la transformen en senyals elèctrics que, un cop són processats, conﬁguren una imatge digital.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Targeta de so Targeta de so També es poden introduir senyals d’àudio en l’ordinador utilitzant una targeta de so. Les targetes de so són dispositius que permeten l’entrada i sortida d’informació d’àudio.
+
+Normalment, les targetes de so incorporen un ampliﬁcador de baixa potència per a la sortida d’àudio. El so pot sortir per auriculars o per un conjunt d’altaveus amb ampliﬁcador incorporat. Les targetes de so tenen dues parts ben diferenciades, el CAD (ADC en anglès) i el CDA (DAC en anglès). El CAD o digitalitzador és un convertidor analògic- digital que transforma el senyal analògic –rebut del micròfon o un altre dispositiu que subministri senyals elèctrics d’àudio– en senyals digitals adequats per a l’ordinador. El CDA és un convertidor digital-analògic que transforma els senyals digitals en senyals analògics d’àudio perquè puguin ser reproduïts mitjançant uns altaveus.</iocstl> Cal assenyalar que hi ha programes de reconeixement de veu que utilitzen l’entrada d’àudio amb un micròfon i són capaços de reconèixer ordres per aplicar-les al sistema o bé paraules al dictat per a l’escriptura de documents.
+
+Targeta sintonitzadora de televisió Targeta sintonitzadora de televisió La proliferació actual en l’àmbit audiovisual ha dut a l’aparició de dispositius que inicialment no estan fets per comunicar-se directament amb els ordinadors, o per recollir informació d’altres mitjans de comunicació diferents de les xarxes de dades.
+
+Les anomenades targetes sintonitzadores de televisió són dispositius d’entrada que permeten sintonitzar i digitalitzar imatges de televisió. Combinades amb el programari adequat, les targetes sintonitzadores de televisió permeten transformar l’ordinador en un televisor i, a més, permeten la digitalit- zació i emmagatzematge de les imatges. Algunes d’aquestes targetes permeten la digitalització d’imatges de vídeo procedents, per exemple, de càmeres de vídeo analògiques.
+
+Targeta d’adquisició de dades Targeta d’entrades digitals Firewire Per introduir en l’ordinador informacions procedents de sensors especials com, per exemple, temperatura, esforç, humitat, etc., i per controlar des de l’ordinador altres tipus de sistemes, s’utilitzen dispositius especials, habitualment connectats a targetes d’adquisició de dades.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Una targeta Firewire... ...permet l’adquisició de dades de càmeres de vídeo digitals per unes entrades especíﬁques que porten aquests dispositius per a port Firewire. Les targetes d’adquisició de dades disposen de sistemes que, a partir de senyals elèctrics digitals o analògics, permeten convertir-los en senyals digitals aproﬁta- bles per l’ordinador i, a partir de la informació digital de l’ordinador, subministrar als dispositius connectats tant senyals digitals com analògics adequadament adaptats als sistemes que es volen controlar.
+
+Les entrades digitals cablejades (Firewire, USB) o sense ﬁl (Bluetooth, infrarojos) permeten la connexió de tot tipus de dispositius perifèrics i l’adquisició de dades que suportin l’estàndard. També hi ha diversos tipus de dispositius, que anteriorment estaven aïllats, com, per exemple, els reproductors multimèdia portàtils, les càmeres de fotos o ﬁns i tot els telèfons mòbils, i que ara es poden connectar amb els mitjans esmentats (en la majoria dels casos, USB) per ser conﬁgurats o compartir informació (fotograﬁes, àudio, vídeo i altres) amb l’ordinador, a la manera de mitjans d’emmagatzematge externs.
+
+Dispositiu multifuncional Un dispositiu multifuncional típic pot incloure funcions tant d’entrada com de sortida de dades. Aquestes funcionalitats poden incloure les d’impressora, escàner, fotocopiadora, fax o altres. Dispositiu multifuncional Canon Els dispositius multifuncionals són un tipus de perifèric que incorpora la funcionalitat de diversos dispositius en un de sol, amb la intenció d’aconseguir més funcions en un espai més compacte.
+
+Depenent del segment de mercat (domèstic, petita oﬁcina, oﬁcina, empresarial) al qual s’adreci, l’aparell tindrà més funcions, una velocitat d’impressió més alta o una funció d’escanejat superior o bé altres característiques especíﬁques. En el mercat domèstic, per exemple, està molt estès l’ús del multifuncional impressora- escàner, que també pot fer de fotocopiadora.
+
+2.1.7 Mitjans d’emmagatzematge La volatilitat de les memòries de treball de l’ordinador en cas de tall o caiguda del corrent elèctric fa que sigui imprescindible emmagatzemar les dades, la informació i els programes en mitjans que en garanteixin la permanència al llarg del temps.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Els mitjans d’emmagatzematge són dispositius en què s’emmagatzemen, a l’abast de l’ordinador perquè pugui treballar, les dades que utilitzen els programes informàtics, la informació generada per aquests programes i els mateixos programes.
+
+Els ordinadors sempre han disposat de mitjans d’emmagatzematge, tant antiga- ment, quan les dades, els programes i la informació resultant eren emmagatzemats en les targetes perforades o bé en la cinta perforada, com més recentment, quan van aparèixer altres sistemes com, per exemple, les targetes magnètiques, els tambors magnètics i les cintes magnètiques com a mitjans per a l’emmagatzematge en massa de dades.
+
+El volum de les dades, la informació i els programes fan que, en la majoria dels casos, no es pugui emmagatzemar tot en la memòria de treball de l’ordinador. Per això, els ordinadors disposen del que s’anomena dispositius d’emmagatzematge de massa. Segons la tecnologia utilitzada per emmagatzemar, aquests dispositius es poden classiﬁcar en dispositius magnètics, dispositius òptics i dispositius d’altres tipus.
+
+Dispositius magnètics El principi de funcionament dels dispositius magnètics es basa en la propietat que tenen alguns materials de polaritzar-se magnèticament quan són sotmesos a un camp magnètic suﬁcientment potent, i de mantenir aquesta magnetització posteriorment.
+
+Per gravar la informació en els suports magnètics cal magnetitzar en sentit nord o en sentit sud algunes partícules de material ferromagnètic dipositades en una ﬁna capa damunt d’una superfície uniforme, i a tal ﬁes destina el capçal de gravació, que és un petit electroimant amb els dos pols molt propers, separats per un petit espai anomenat entreferro. Quan l’entreferro és molt a prop de la zona on es vol gravar, es fa passar un corrent elèctric per la bobina de l’electroimant. Depenent del sentit del corrent elèctric, el capçal magnetitzarà en sentit nord o en sentit sud les partícules del material ferromagnètic que siguin davant de l’entreferro.
+
+Per recuperar la informació gravada en un suport magnètic s’utilitza el capçal de lectura, que és un capçal semblant al de gravació. Quan les partícules magnetitzades es mouen a una distància i amb una velocitat suﬁcients i uniformes per davant de l’entreferro del capçal, indueixen en la bobina una tensió elèctrica de polaritat positiva o negativa, segons el sentit del moviment i el sentit de la polarització de les partícules, cosa que ens permet llegir la informació del suport.
+
+Tot seguit veurem els principals tipus de dispositius magnètics: La majoria de materials que es poden magnetitzar són derivats del ferro i, normalment, se’ls anomena ferromagnètics. Molt sovint el mateix capçal fa les dues funcions, la de gravació i la de lectura
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics DAT és l’acrònim anglès de digital audio tape que signiﬁca ‘cinta d’àudio digital’. Els discos magnètics... ...com la majoria dels dispositius d’emmagatzematge magnètics abans de poder ser utilitzats per emmagatzemar dades han de ser formatats, procés que consisteix a gravar unes marques magnètiques per sincronitzar la posició dels diferents segments del suport magnètic.
+
+- Cintes magnètiques
+
+Cartutx de streamer Les primeres cintes magnètiques eren cintes de paper recobertes amb òxid me- tàl·lic. Aviat es van descartar perquè eren un suport massa fràgil que es deteriorava amb força facilitat. En l’actualitat, les cintes són de polièster, recobertes per una cara amb materials ferromagnètics de persistència magnètica elevada. L’ús actual de les cintes magnètiques ha quedat relegat a l’emmagatzematge de còpies de seguretat de dades i programes, ja que no permeten accedir a la informació amb prou rapidesa.
+
+Cartutx de cinta DAT La cinta magnètica és una cinta prima d’un material de suport, d’una longitud considerable, recoberta per una de les seves cares de material ferromagnètic. Com que, per accedir a la informació dipositada en un punt determinat de la cinta, cal rebobinar o avançar ràpidament en un sentit o altre ﬁns a arribar a la posició on es troba gravada la informació, és a dir, cal passar en seqüència per damunt del que hi ha gravat abans, aquests dispositius han rebut el nom de dispositius d’accés seqüencial.
+
+Els primers sistemes que van usar cintes magnètiques ho feien en dispositius de rodet obert. Un rodet té la cinta magnètica enrotllada, i aquesta es fa passar amb la cara recoberta de material ferromagnètic en contacte amb els capçals de lectura i gravació, arrossegada per un mecanisme que fa que la cinta avanci a una velocitat uniforme. Després de llegida o gravada, la cinta s’enrotlla en un altre rodet de recollida accionat per un motor, d’això el nom de bobina a bobina (reel-to-reel).
+
+Les cintes que s’utilitzen en l’actualitat estan tancades dins d’un estoig, casset o cartutx, semblant al de les cintes de càmera de vídeo. Els cartutxos més coneguts de cintes han evolucionat des de les cintes streamer que arribaven a emmagatzemar ﬁns a 500 MB, amb una llargada propera als 500 m ﬁns a les conegudes com a cintes DAT, que, tot i el preu elevat del dispositiu de lectura-gravació, han estat molt utilitzades en sistemes professionals.
+
+- Discos magnètics
+
+Els discos magnètics estan formats per una peça circular de suport recoberta, per les dues cares, de material ferromagnètic i, atès que permeten accedir directament a la informació, són un exemple de dispositius d’accés directe. El disc gira solidàriament a un eix central perpendicular a les seves cares amb una velocitat regular i la informació es grava en circumferències concèntriques anomenades pistes que, al seu torn, es divideixen en segments qu reben el nom de sectors. El capçal de lectura-gravació se situa en un suport que el posiciona radialment damunt de cada una de les pistes i així es pot fer la lectura o la gravació
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics de les dades. Aquest fet permet accedir directament a la informació, sempre que es conegui la cara, la pista i el sector en què ha estat gravada. Hi ha dos tipus de discos, els discos ﬂexibles i els discos durs.
+
+- Discos ﬂexibles
+
+En els discos ﬂexibles, habitualment anomenats disquets, el material de suport és una làmina prima de polièster, d’això, el nom de ﬂexibles. Els discos ﬂexibles estan tancats en un estoig prim i quadrat o rectangular, fet d’un material plàstic, que té unes ranures o ﬁnestres per les quals el disc de polièster entra en contacte amb els capçals de lectura-gravació.
+
+Els discos ﬂexibles tenen un diàmetre de 8”, 51 4” –a hores d’ara en desús–, i 31 2”, actualment amb un ús més estès. La capacitat d’emmagatzematge dels disquets va des de 160 kb (els més antics d’una sola cara), ﬁns a 1,44 Mb o 2,88 Mb (els de 3 1 2” de doble cara i alta densitat).
+
+- Discos durs (hard disk drive o HDD)
+
+Disc dur i vista interior Els discos durs són els mitjans d’emmagatzemament de dades més utilitzats com a memòria immediata de massa i la seva capacitat actual ja està per sobre del terabyte (Tb), amb velocitats de transferència de dades que superen 3 Gbps. El suport d’un disc dur és una sèrie de discos metàl·lics, anomenats plats recoberts per les dues cares de material ferromagnètic. Els discos durs porten integrats els dispositius electrònics de control, els capçals, l’eix i el motor. Tot el conjunt es connecta directament a uns busos especíﬁcs del sistema, dels quals, actualment, hi ha diferents interfícies estàndard: IDE/ATA, SCSI i SATA.
+
+IDE i ATA, SCSI i SATA IDE és l’acrònim de l’anglès integrated device electronics que signiﬁca ‘electrònica integrada al dispositiu’; ATA és l’acrònim de l’anglès advanced technology attachment, és a dir, dispositiu de tecnologia avançada de connexió. SCSI, acrònim de l’anglès small computer system interface, signiﬁca ‘interfície de sistema per a petits ordenadors’; SATA és l’acrònim de serial ATA, és a dir, dispositiu de tecnologia avançada de connexió en sèrie.
+
+Els plats, tots apilats en el mateix eix, giren a una velocitat força elevada tancats dins d’una carcassa hermètica. Damunt dels plats, se situen els capçals (un per cada cara) que s’encarreguen de llegir o d’escriure en les pistes. El conjunt de pistes del mateix radi de les diferents cares del conjunt dels plats formen el que s’anomena cilindre i tots els capçals accedeixen simultàniament a les diferents pistes del mateix cilindre.
+
+Per accedir a les diferents informacions que hi ha en els discos, primer s’utilit- zava un mètode anomenat CHS (cilinder head sector, és a dir, cilindre-capçal- sector). Però, últimament, s’ha estès l’ús d’un sistema més senzill i controlat per Els discos ﬂexibles...
+
+...es llegeixen i graven mitjançant una disquetera (ﬂoppy disk drive o FDD) que va connectada al sistema per un bus especíﬁc i incorpora el motor de gir, l’eix i els capçals de lectura-gravació, un per a cada cara del disquet. Una polzada (1”) equival a 2,54 cm.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Les dades binàries... ...s’emmagatzemen en forma de plans i depressions, de tal manera que, en incidir la llum làser del capçal de lectura, l’angle de reﬂexió és diferent si es tracta d’un pla o d’una depressió.
+
+Els dispositius ATAPI utilitzen ordres de control SCSI transmeses a través de la interfície ATA en lloc del bus SCSI original. La gran majoria de dispositius gravadors de discos òptics són, al mateix temps, dispositius lectors. l’electrònica del mateix disc que s’anomena LBA (logic block address, és a dir, adreçament lògic de blocs), que consisteix a assignar un únic nombre a cada sector.
+
+La numeració de les pistes (i dels cilindres) comença a la pista 0, que és la més exterior. Dispositius òptics En els dispositius òptics, la informació s’enregistra digitalment, és a dir, directament amb uns (1) i zeros (0), de tal manera que es pot llegir detectant la reﬂexió d’un primíssim raig làser projectat a la superfície del mitjà.
+
+Els principals suports per a dispositius òptics són
+
+- El disc compacte o CD
+
+Els dispositius òptics més coneguts es basen en la tecnologia CD –compact disc o disc compacte–, que es va desenvolupar al principi de la dècada de 1980. El CD és un suport digital òptic utilitzat per emmagatzemar qualsevol tipus d’informació (àudio, vídeo, documents, etc.).
+
+CD-ROM i el seu dispositiu lector El CD és un disc de policarbonat transparent de 12 cm de diàmetre, que té una de les cares metal·litzada perquè reﬂecteixi la llum làser del capçal de lectura. La informació està emmagatzemada en format digital en una sola pista en espiral que s’inicia en la part més propera al centre del disc i que té unes 45.000 voltes/cm.
+
+El dispositiu lector de CD incorpora el capçal de lectura –que es desplaça radialmente davant de la superﬁcie del disc–, el sistema electrónic de lectura, el sistema del motor i l’eix de gir del disc. Aquest dispositu lector es connecta als mateixos busos especials del sistema que els discos durs, habitualment, en el busos de tipus IDE/ATA compatibles amb l’ATAPI (advanced technology attachement packet interface) especíﬁc per a aquests dispositius.
+
+També és possible enregistrar dades en discos òptics. Per gravar aquestes dades s’utilitzen les gravadores, que són dispositius molt semblants als dispositius lectors, amb la diferència que, a més de disposar del làser de lectura, disposen d’un làser modulable de més potència que permet “cremar” la pista de tal manera que es poden formar plans i depressions a les pistes, que, posteriorment, es poden llegir amb un dispositiu lector. Això és possible gràcies al desenvolupament de nous materials per a la fabricació dels discos òptics que permeten fer la gravació. També hi ha materials que, a més de poder ser gravats, permeten esborrar el contingut i ser gravats una altra vegada.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+- Tecnologies aplicades als discos òptics
+
+Actualment es disposa de diferents tecnologies per a discos òptics que s’utilitzen amb els ordinadors, els CD i els DVD (digital video disc). En els CD, la capacitat arriba ﬁns a 700 Mb aproximadament, mentre que en els DVD la capacitat màxima amb les tecnologies actuals per a discos de doble cara i doble capa és d’uns 16 Gb aproximadament. A més, l’ús de les dues cares fa que aquesta capacitat es dupliqui, i amb la utilització de dues capes de gravació per cada cara la capacitat gairebé es torna a duplicar.
+
+Una llista de les tecnologies dels discos òptics ﬁns a aquest moment us resultarà d’ajuda
+
+- CD-ROM (compact disc read only memory). Són els discos CD de només
+
+lectura. Aquests discos vénen “impresos” del fabricant.
+
+- CD-R (compact disc recordable). Són els discos CD gravables una sola
+
+vegada.
+
+- CD-RW (compact disc rewritable). Són els discos CD que es poden gravar,
+
+esborrar i tornar a gravar.
+
+- DVD-ROM. Són els discos DVD de només lectura, utilitzats per a l’enregis
+
+trament de productes de consum multimèdia.
+
+- DVD-R, DVD+R. Són els formats enregistrables en format DVD.
+- DVD-RW, DVD+RW, DVD-RAM. Són els formats reenregistrables en
+
+format DVD.
+
+- HD-DVD. És un format de disc òptic amb unes mides iguals a les dels CD
+
+i DVD, pensat en principi per emmagatzemar vídeo en alta deﬁnició.
+
+- Blueray. També és un format de disc òptic de nova generació amb unes
+
+mides iguals a les dels actuals CD i DVD, també pensat, en principi, per emmagatzemar vídeo en alta deﬁnició i dades en alta densitat. Ha aconseguit quedar-se amb el mercat d’alta deﬁnició a costa dels HD-DVD. Les tecnologies DVD i CD es diferencien pel fet que en la tecnología DVD el raig làser de lectura és molt més prim, i això fa que la densitat de gravació sigui molt més alta; a més, la compressió de dades deguda al format també és superior.
+
+Atès que la majoria dels sistemes de lectura i gravació de DVD també són compatibles amb els sistemes de lectura i gravació dels CD, es pot dir que la tecnologia del DVD està a hores d’ara desplaçant la tecnologia del CD, encara que el CD no ha quedat, ni molt menys, obsolet.
+
+Els formats més nous Els HD-DVD (high deﬁnition DVD) i els BD (blueray disc) són una evolució d’aquesta tecnologia. Utilitzant rajos làser molt més prims, aconsegueixen incrementar la densitat de gravació i, en conseqüència, la capacitat dels discos. Actualment els blueray han aconseguit dominar el mercat.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics El capçal lector magnetoòptic és semblant al capçal lector de CD i és capaç de discriminar la reﬂexió de la llum làser del punt en què està llegint.
+
+- Discos magnetoòptics
+
+Disc magnetoòptic (MO) També hi ha tecnologies híbrides que, per alguna raó, no han tingut una acceptació massiva del mercat informàtic. Però, com en el cas dels discos magnetoòptics, això no ha fet que tinguessin menys difusió. El disc magnetoòptic(MO) és un disc òptic d’aproximadament 9 cm de diàmetre, tancat dins un estoig de material plàstic rígid semblant al dels disquets ﬂexibles de 3 1 2” que, com ells, es llegeix i es grava amb un sistema combinat mitjançant un dispositiu semblant a una disquetera.
+
+En els discos MO, es grava magnèticament i es reprodueix òpticament. Les dades es graven digitalment al disc mitjançant un recobriment de canvi de fase. El disc s’escalfa amb un làser mentre està sota la inﬂuència d’un camp magnètic produït pel capçal de gravació que es força semblant a un capçal de gravació- lectura magnètica. A causa del camp magnètic i l’escalfor del làser, l’aliatge metàl·lic de què està fet el disc en modiﬁca l’estat de cristal·lització i, en refredar- se ràpidament, les partícules es reorienten. En conseqüència, es modiﬁca l’índex de reﬂexió de la superfície.
+
+Altres dispositius En cas que es disposi de dos ordinadors diferents proveïts de dispositius de lectura iguals o, si més no, compatibles, els sistemes d’emmagatzematge amb suport extraïble us permeten transportar dades de l’un a l’altre, tant amb cintes magnètiques com amb disquets, CD, DVD, MO o altres.
+
+Però, en el mercat, hi ha altres dispositius d’emmagatzematge que permeten el transport de dades, en els quals el sistema de lectura i d’escriptura està incorporat en el mateix dispositiu i que, normalment, es connecten a un dels ports externs de l’ordinador, tant si és un port SCSI, SATA, USB, paral·lel o en sèrie.
+
+- Els discos Zip
+
+Disc Zip i el seu dispositiu lector Els discos Zip d’una capacitat de 100 Mb o 250 Mb es van presentar com una alternativa als disquets d’1,44 Mb de capacitat com a element d’emmagatzematge i transport dades. El dispositiu de lectura-gravació és semblant a una disquetera, muntat en una carcassa que el fa transportable juntament amb un sistema d’alimentació elèctrica i un cable de connexió a un port de l’ordinador. Hi ha versions SCSI i per a port paral·lel, i versions per muntar el dispositiu dins de la pròpia carcassa de l’ordinador connectat al bus IDE-ATA o SCSI.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+- Els discos Jazz
+
+Els discos Jazz, també d’aquesta mateixa empresa, es van presentar com els successors dels Zip amb unes capacitats d’1 Gb o 2 Gb. Tots dos sistemes, els discos Zip i els Jazz, es troben ja en desús a causa de la competència dels CD-RW i els DVD-RW.
+
+- Memòria USB (ﬂash drive)
+
+USB ﬂash drive Les tecnologies emprades en la fabricació dels xips de memòria han aconseguit capacitats molt grans i un abaratiment de costos força important. És per això que han sorgit els mitjans d’emmagatzematge portàtils coneguts normalment com a clauers USB (USB ﬂash drive).
+
+Els USB ﬂash drive són uns dispositius relativament petits i lleugers que no tenen parts mecàniques, ja que estan construïts a partir de memòries de tipus ﬂaix. Aquests dispositius porten integrat el sistema de lectura i gravació de la memòria, i el sistema de comunicacions, per via del port USB. La seva capacitat va des de 64 Mb ﬁns a 8 Gb, però no es descarta que es pugui arribar força més enllà de 20 Mb amb la tecnologia actual.
+
+La memòria ﬂaix és una forma evolucionada de la memòria EEPROM, que permet que múltiples posicions de memòria siguin escrites o esborrades en una sola operació mitjançant impulsos elèctrics. Targetes de memòria ﬂaix i dispositiu lector Això representa un avantatge respecte als models anteriors, que només permeten escriure o esborrar una cel·la cada vegada. Per aquest motiu, amb les memòries ﬂaix, es pot llegir i escriure a velocitats molt superiors.
+
+- Targetes de memòria ﬂaix
+
+Les targetes de memòria ﬂaix han sorgit com a dispositius d’emmagatzematge per a aparells com càmeres de fotograﬁa digital, reproductors de música, telèfons mòbils i altres dispositius portàtils. A ﬁde llegir-enregistrar aquests tipus de memòries en els ordinadors, hi ha dispositius lectors que permeten l’ús de diferents tipus i models de targetes ﬂaix.
+
+També de la mateixa mida que les targetes ﬂaix més grans (compact ﬂash) i adaptats a l’estàndard PC Card, van sorgir els microdrives, que eren uns discos durs d’1” que emmagatzemaven ﬁns a 1 Gb. Els discos Zip i Jazz són suports magnètics semblants als disquets, amb un format propietat de l’empresa que en té la patent.
+
+En la unitat didàctica “Informació i sistemes informàtics” d’aquest mateix crèdit trobareu més informació sobre les memòries.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Consulteu la llista de connectors que connecten una CPU i els dispositius perifèrics a “Ampliacions de maquinari” d’aquesta unitat formativa.
+
+- Discos durs externs
+
+La necessitat de transportar gran quantitat d’informació i el fet que els discos durs actuals siguin relativament petits, lleugers i de baix consum energètic ha fet sorgir els que s’anomenen discos durs externs o discos durs transportables. Els discos durs externs no són res més que una carcassa que conté un disc dur normal o un disc dur d’ordinador portàtil (que incorpora els sistemes de control del disc dur i el sistema de comunicacions amb l’ordinador), normalment pensat per connectar-se per un port USB, però que també es pot connectar per un port paral·lel, un port SCSI o, ﬁns i tot, un bus SATA.
+
+Disc dur extern En cas de dispositius de molt baix consum, el disc dur extern rep l’energia pel port USB. Si no, la font d’energia pot estar integrada en la pròpia carcassa amb bateries recarregables o bé pot estar a l’exterior del disc. En aquests dispositius, la capacitat depèn de la capacitat del disc dur que s’ha muntat, i la velocitat de transferència de dades depèn de les limitacions pròpies del port o del bus.
+
+2.2 Instal·lació i conﬁguració de perifèrics La posada en funcionament de qualsevol tipus de perifèric implica, primer, la seva connexió al port, ranura o sòcol corresponent i, després, la instal·lació del programari controlador que permetrà que es comuniqui adequadament amb el sistema operatiu instal·lat a l’equip. El resultat d’aquest procés ha de ser deixar el dispositiu a punt perquè l’usuari pugui fer-lo servir.
+
+Un cop es disposa del perifèric cal instal·lar-lo perquè funcioni correctament amb l’equip triat. De la mateixa manera que Microsoft Windows, les distribucions Linux modernes disposen d’autodetecció de maquinari. Per instal·lar un dispositiu cal seguir una sèrie de passos
+
+### 1. Poseu l’equip en marxa en l’entorn desitjat (Windows/Linux). No endolleu
+
+el dispositiu que voleu afegir ﬁns que el sistema no estigui totalment en funcionament.
+
+### 2. Sigui quin sigui el dispositiu que connecteu a un port USB, l’ordinador
+
+en detectarà la connexió, i si no disposa de controladors per a instal·lar-lo demanarà que introduïu el disc que els contingui. Els dispositius gairebé sempre inclouen en el seu paquet un CD en què hi ha els controladors necessaris per funcionar en diversos sistemes operatius. Aquest és el disc que cal introduir en aquest moment.
+
+### 3. Un cop el sistema reconeix el controlador, el dispositiu ja hauria de
+
+funcionar correctament. En alguns casos el sistema operatiu demanarà que
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics es reiniciï la màquina per carregar els serveis necessaris per gestionar el nou maquinari que ha estat afegit. Si tots els passos s’han seguit de manera correcta, el dispositiu ja hauria de funcionar, encara que de vegades caldrà reiniciar la màquina.
+
+Plug-and-Play vol dir que si el sistema operatiu, el BIOS i el dispositiu suporten la connexió en calent, i els controladors es troben inclosos en la base de dades del sistema operatiu, només amb connectar el dispositiu a un port USB de l’equip n’hi haurà prou per començar el procés d’instal·lació de l’equipament.
+
+La connexió en calent La connexió en calent instal·la els dispositius amb molt poca o cap interacció de l’usuari. Si el controlador no és en la base de dades del sistema operatiu, l’usuari haurà de localitzar manualment el programari controlador abans de continuar amb la instal·lació.
+
+Tant els sistemes Windows com els GNU/Linux ofereixen un bon suport per a la detecció en calent. Alguns dispositius es poden connectar a l’ordinador i un cop conﬁgurats, passats uns quants segons, ja es poden utilitzar. Figura 2.2. Connexió d’una càmera de fotos i una impressora en un sistema Linux Ubuntu. Els dispositius són detectats automàticament.
+
+En la ﬁgura 2.2 podeu veure què passa quan en un equip amb el sistema operatiu Ubuntu instal·lat es connecta un dispositiu perifèric, en aquest cas una càmara de fotos i una impressora multifunció. El sistema detecta automàticament els controladors apropiats i ofereix a l’usuari la possibilitat d’utilitzar un programari adequat.
+
+En el cas de la càmara de fotos, per exemple, podeu fer servir el programari F-Spot per importar i classiﬁcar les fotograﬁes en el vostre equip. En alguns casos, però, pot ser necessari dur a terme algun tipus de conﬁguració del dispositiu. La impressora, l’escàner, la càmara digital, els reproductors multimèdia portables o els llapis de memòria també són perifèrics.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Consulteu els recursos de contingut del web del mòdul les pàgines de controladors dels sistemes Windows i GNU/Linux. Els controladors de dispositiu comuniquen el sistema operatiu amb el maquinari. En el sistema operatiu Windows, un controlador de dispositiu normalment té una extensió dll o exe. En el cas dels dispositius virtuals l’extensió és vxd.
+
+2.2.1 Controladors de dispositiu Els sistemes operatius tenen la capacitat d’ampliar les seves funcionalitats en consonància amb els canvis del maquinari associat al seu equip. Per a això necessiten un programari especíﬁc que rep el nom de controlador de dispositiu, l’esquema de funcionament del qual podeu trobar en la ﬁgura 2.3.
+
+Un controlador de dispositiu (driver) és un programa que permet que un sistema operatiu utilitzi un tipus determinat de dispositiu connectat a un equip. Hi ha controladors per a impressores, pantalles i unitats òptiques entre d’altres. Figura 2.3. Funcionament dels controladors de dispositiu Controladors en el Windows En el moment de comprar i instal·lar un sistema operatiu comprovareu que la major part de dispositius són detectats automàticament, i és així perquè els sistemes operatius porten un gran nombre de controladors integrats.
+
+Tot i això, si es vol instal·lar algun dispositiu molt nou o bé, al contrari, un que ja té una certa edat, s’ha d’instal·lar manualment el controlador de dispositiu, que serà l’encarregat de convertir les instruccions d’entrada-sortida del sistema operatiu en missatges que el dispositiu és capaç d’entendre.
+
+Els fabricants de components perifèrics inclouen en la pràctica totalitat dels casos, juntament amb el dispositiu, el CD amb els controladors per a diverses versions del Windows, encara que no sempre serà la versió més actualitzada. Algunes ampliacions com, per exemple, una impressora o un escàner, inclouen en el CD del fabricant, a més del controlador pròpiament dit, altres programes de gestió del dispositiu o d’utilitat. Aquests programes no són estrictament necessaris i en cas d’instal·lar-los es poden retirar més endavant sense que aquest fet afecti el funcionament del dispositiu.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Cerca de controladors GNU-Linux El ventall de perifèrics que no són detectats automàticament en un entorn GNU/- Linux pot anar des d’una enregistradora de cintes ﬁns a un model determinat d’impressora, tot passant per qualsevol dispositiu no connectable en calent. En aquests casos caldrà buscar-ne els controladors, ja que el fabricant rarament els inclou en els CD del producte.
+
+Un dispositiu perifèric s’ha d’instal·lar tenint en compte la distribució GNU/Linux amb què es treballa. Així, hi ha diferents controladors per al Red Hat, SUSE, Linspire i Debian o els seus derivats, com ara l’Ubuntu, entre d’altres. En el cas de la distribució Ubuntu, atès que el nucli del sistema operatiu deriva del Debian, podeu utilitzar els controladors d’aquesta distribució.
+
+- Interfície de suport d’impressores en entorn UNIX-Linux
+
+En el cas d’un dels perifèrics més utilitzats universalment –la impressora–, podeu utilitzar el sistema d’impressió comú CUPS que integra en un mateix paquet de programari el suport per a inﬁnitat d’impressores en entorn UNIX-Linux. El common UNIX printing system (CUPS o sistema d’impressió comú de UNIX) és un mètode d’impressió modular per a sistemes operatius de tipus UNIX que permet que un ordinador actuï com a servidor d’impressió, acceptant tasques d’impressió d’equips clients i enviant-les al servidor d’impressió adequat.
+
+CUPS és programari lliure i hi ha diverses interfícies d’usuari a diferents platafor- mes que permeten conﬁgurar-lo. Algunes són
+
+- El GNOME CUPS Manager es pot utilitzar per afegir noves impressores,
+
+i per administrar les impressores CUPS i les seves cues. Hi ha altres aplicacions (de terceres parts) per administrar les impressions, com ara GtkPSproc.
+
+- KDEPrint, per a KDE, és un entorn que conté diverses eines d’interfícies
+
+gràﬁques d’usuaris que actua com un front-end de CUPS i permet l’admi- nistració d’impressores, cues d’impressió i treballs. Inclou un assistent per afegir noves impressores, entre altres característiques.
+
+- L’entorn CUPS també disposa de la possibilitat de ser conﬁgurat des d’una
+
+interfície web. L’ordre lsmod del GNU/Linux permet conèixer els dispositius carregats en memòria en un moment donat. Les dependències es poden consultar mitjançant l’ordre depmod. En la pàgina del maquinari suportat per la distribució GNU-Linux a Internet, trobareu indicats els dispositius segons les seves funcionalitats.
+
+El 12 de juliol de 2007, Apple Computer va anunciar la compra feta el febrer d’aquell any del Common UNIX Printing System. Des del Linux ﬁns al mateix OSX d’Apple depenen de la biblioteca CUPS per imprimir. Instal·lar una impressora PDF Si bé en l’Ubuntu i el GNU/Linux en general molts programes porten la modalitat d’exportar en format PDF (per exemple, OpenOﬃce.org), n’hi ha d’altres que no, però es pot crear una impressora que permeti exportar a PDF des de qualsevol aplicació que pugui imprimir.
+
+Impressores compatibles amb l’Ubuntu Gran part de les impressores més populars, de diferents fabricants com HP, Epson, Canon, etc, funcionen en Ubuntu, unes millor que d’altres. En cas de dubtes o si penseu en adquirir una impressora nova vegeu la llista actualitzada (en anglès) que facilita la LinuxPrinting.org.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics De la interfície d’escàner universal SANE ja s’han desenvolupat, o bé s’estan desenvolupant, ports per a MacOS X, OS/2 i Microsoft Windows. Exemple d’instal·lació d’una impressora en l’Ubuntu Els passos següents mostren com s’instal·la una impressora en l’Ubuntu, mitjançant l’assistent inclòs en el sistema.
+
+- Adreceu-vos a Sistema\Administració\Impressores per obrir l’Administrador d’Impressores del
+
+GNOME.
+
+- Un cop en l’Administrador, assegureu-vos que la impressora està engegada i connectada a
+
+l’ordinador correctament (consulteu el manual en cas de dubte). Feu doble clic en la icona Impressora nova per començar l’assistent per afegir noves impressores en Ubuntu. L’assistent cercarà automàticament impressores connectades a l’equip i si les troba les mostrarà en una llista. Si detecta diversos possibles models seleccioneu el corresponent i seguiu l’assistent, i feu el mateix si detecta el model correcte.
+
+- En aquest punt, si la impressora no és detectada per l’assistent, haureu d’indicar el port de
+
+connexió que utilitza (habitualment, USB) i seleccionar el fabricant i model manualment. Per això, activeu la casella Utilitzeu una altra impressora, especiﬁqueu un port, seleccioneu en el menú desplegable el port al qual està connectada la vostra impressora i feu doble clic en el botó Endavant. Es poden descarregar nous controladors des de fonts de programari ﬁables.
+
+- Seleccioneu el controlador que vulgueu fer servir per a la impressora, per defecte utilitzeu el
+
+recomanat per l’assistent i continueu endavant.
+
+- Per acabar, editeu la informació que vulgueu que aparegui per descriure la impressora: nom,
+
+descripció (opcional) i on és (opcional). Feu clic en el botó Aplicar per desar la conﬁguració de la impressora i, si tot és correcte, ja la podreu utilitzar.
+
+- Interfície de suport d’escàners en entorn UNIX-Linux
+
+De la mateixa manera que en el cas de les impressores, els escàners en entorn UNIX-Linux disposen d’una interfície per donar suport a un gran nombre d’escà- ners, és l’anomenada SANE. SANE –acrònim de l’anglès scanner access now easy, accés a escàner ara fàcil– és una interfície de programació d’aplicacions (API) que facilita un accés estandarditzat a qualsevol escàner d’imatges en mapa de bits de maquinari, com són els escàners de taula, els escàners de mà i les càmeres de vídeo entre d’altres.
+
+La importància de la interfície universal SANE rau en el fet que permet l’escriptura d’un sol controlador per a cada tipus de dispositiu d’adquisició d’imatges en lloc d’un per a cada dispositiu i aplicació. Amb SANE, totes les aplicacions poden accedir al mateix controlador i, per tant, encara que es creïn aplicacions noves o s’actualitzin no caldrà crear controladors nous per a cada una.
+
+2.2.2 Conﬁguració de dispositius Quan s’instal·la un dispositiu de tipus Plug and Play, el sistema operatiu és l’encarregat de conﬁgurar-lo, pràcticament, de manera automàtica. En cas que el dispositiu no sigui detectat automàticament o requireixi algun tipus de
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics conﬁguració, s’haurà d’accedir a les eines incloses en cada sistema operatiu per fer aquestes tasques administratives. Tot seguit es descriurà el procès que se segueix en sistemes operatius Microsoft Windows i GNU/Linux, amb les eines incloses en cada cas.
+
+Conﬁguració de dispositius en el Windows A més de les eines que pugui incloure cada fabricant amb els controladors del dispositiu, el sistema Windows inclou eines de sistema que permeten accedir a tots els dispositius connectats i a la seva conﬁguració. L’administrador de dispositius del Windows és una eina que permet comprovar gràﬁcament el maquinari que hi ha instal·lat en la màquina i actualitzar-ne els controladors.
+
+Les funcions principals d’aquesta eina són solucionar problemes de dispositius, veure detalls dels controladors, actualitzar controladors, inhabilitar o desinstal·lar dispositius i canviar els recursos assignats als diferents dispositius. Seleccionar un dispositiu amb el Windows Per seleccionar un dispositiu cal, un cop en la consola Mi PC del Windows, prémer el botó dret, i seleccionar l’opció Administrar. Després, cal escollir l’opció Herramientas del sistema i, a continuació, l’opció Administrador de dispositivos i seleccionar el tipus de dispositiu.
+
+Després, l’opció Propiedades us mostra diferents opción per a cada dispositiu. Les opcions més comunes per a dispositius en el menú Propiedades del Windows són
+
+- General. Especiﬁca el tipus de dispositiu, la ubicació i l’estat per saber
+
+si funciona correctament. En cas que mostri un missatge d’error, s’ha de seleccionar el solucionador de problemes, i anirà indicant els diferents passos a seguir per determinar el problema i la possible solució. També permet inhabilitar el dispositiu.
+
+- Controlador.
+
+Permet veure els arxius del controlador, actualitzar-los, tornar a una versió anterior o bé desinstal·lar el controlador. En cas que el dispositiu no funcioni bé del tot, possibilita actualitzar el controlador.
+
+- Recursos.
+
+Segons els tipus de dispositius, permet canviar l’estat de conﬁguració automàtica i conﬁgurar-lo manualment. També mostra una llista de dispositius en conﬂicte. Hi ha quatre tipus principals de recursos que s’hi assignen: número d’interrupció (IRQ); adreces de ports d’entrada i sortida (E/S); canals d’accés directe a memòria (DMA), i intervals d’adreces de memòria (ﬁgura 2.4).
+
+- Dispositius i recursos assignats. Per trobar una llista dels dispositius i
+
+recursos assignats en l’Administrador de dispositius, heu d’anar al menú Visualitza i, des d’allà, triar la manera de visualitzar-los. Cal estar segurs que la conﬁguració de recursos que es vol aplicar és la correcta, perquè, en cas contrari, la màquina podria deixar de funcionar correctament.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Quan al costat d’un dispositiu apareix un símbol d’interrogació de color groc ? us indica que el dispositiu no funciona correctament. Conﬂicte d’assignació A cada dispositiu pertoca un dels quatre tipus principals de recursos. Si s’assigna el mateix recurs a diferents dispositius, hi pot haver conﬂicte. Poques vegades cal conﬁgurar els dispositius manualment, i abans de fer res cal pensar-ho bé.
+
+- Dispositius segons els tipus de dispositiu. En aquest cas, els dispositius
+
+es mostren classiﬁcats segons els diferents perifèrics; per exemple: monitor, adaptador de xarxa i altres. Vegeu-ne una mostra en la ﬁgura 2.5.
+
+- Dispositius segons el tipus de connexió. Mostren els dispositius segons
+
+el tipus de connexió a l’equip. Hi apareix la llista de dispositius amb el maquinari a què estan connectats, com podeu veure en la ﬁgura 2.6.
+
+- Recursos segons el tipus de connexió. Mostren l’estat de tots els recursos
+
+assignats en funció del tipus de dispositiu que utilitzen.
+
+- Recursos per tipus.
+
+Mostren l’estat de tots els recursos assignats en funció del tipus de dispositiu que utilitzen. Els recursos són canals d’accés directe a memòria (DMA), ports d’entrada-sortida, adreces de memòria i interrupcions (IRQ). Figura 2.4. Detall de l’interval de memòria d’un dispositiu Figura 2.5. Classiﬁcació per tipus de dispositiu
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Figura 2.6. Classiﬁcació segons el tipus de connexió Codis d’error de l’administrador de dispositius L’administrador de dispositius mostra una sèrie de codis d’error que indiquen de quin tipus són. La taula 2.1 destaca els codis principals amb les possibles maneres de solucionar els errors.
+
+Taula 2.1. Codis d’error i possibles solucions Codi error Descripció Solució Codi 1 El dispositiu no està conﬁgurat de maneracorrecta Actualitzar els controladors. Utilitzar l’assistent Codi 3 Controlador danyat, o bé es disposa de pocs recursos Desinstal·lar el controlador i tornar a instal·lar Utilitzar l’assistent.
+
+Comprovar memòria Codi 18 Reinstal·lar els controladors Desinstal·lar. Utilitzar l’assistent Codi 22 El dispositiu està desactivat Habilitar el dispositiu Codi 37 Windows no pot inicialitzar el controlador de dispositiu Desinstal·lar el controlador i tornar-lo a instal·lar o actualitzar-lo Codi 44 Una aplicació o servei ha apagat aquest dispositiu.
+
+Reiniciar l’equip Conﬁguració de dispositius en el GNU/Linux La conﬁguració de dispositius és un dels processos que tradicionalment han donat al GNU/Linux la fama de ser un sistema per a experts. Tots els dispositius (alhora que els serveis que dóna el sistema operatiu) es poden conﬁgurar mitjançant l’edició de ﬁtxers de text que marquen la conﬁguració i el funcionament dels dispositius, i que es troben emmagatzemats en determinades carpetes del sistema.
+
+En cas que algun dispositiu no funcioni automàticament, podeu demanar ajuda a diversos forums i wikis de la comunitat corresponents a la vostra distribució GNU/Linux.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Algunes ordres en el GNU/Linux per veure la conﬁguració de maquinari són lshw, lspci o lsusb Els sistemes GNU/Linux utilitzen sistemes gestors de paquets per a la instal·lació i conﬁguració del sistema. Aquests gestors són una col lecció d’eines que serveixen per automatitzar el procés d’instal lació, actualització, conﬁguració i eliminació de paquets de programari. Alguns dels paquets més utilitzats són RPM (Fedora, Red Hat, SUSE) o DEB (Debian, Ubuntu).
+
+La major part d’aquests gestors de paquets es poden utilitzar mitjançant una interfície gràﬁca. Malgrat això, l’esforç per automatizar i simpliﬁcar aquest procés amb el propòsit d’arribar també a l’usuari no expert, ha permès simpliﬁcar cada cop més aquest procés ﬁns a fer-lo molt similar al que un usuari del Microsoft Windows pot estar acostumat.
+
+En primer lloc, molts dispositius seran detectats automàticament i tret que es vulgui fer algun canvi en el seu funcionament no serà necessari fer modiﬁcacions en la conﬁguració. El fet que alguns fabricants (Dell, Asus, HP i altres) hagin començat a oferir ordinadors amb el Linux preinstal·lat ha facilitat encara més aquesta tendència.
+
+Eines per conﬁgurar dispositius en el GNU/Linux Atenent sempre a la distribució utilitzada, es poden trobar diverses eines que simpliﬁquen el procés de conﬁguració i/o el de consulta de la conﬁguració en el GNU/Linux, a l’estil de l’administrador de dispositius del Windows.
+
+Algunes d’aquestes eines són YaST a SUSE, Control Center a Mandriva, Synaptic en distribucions basades en Debian o HardInfo, instal·lable a diversos sistemes. Figura 2.7. El gestor de paquets Synaptic Synaptic permet instal·lar tant programes com controladors de dispositius. En la imatge, paquet corresponent al controlador per a impressores HP
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Les eines basades en consola d’ordres de codi lliure són
+
+- Advanced Packaging Tool (APT), l’eina avançada d’empaquetatge, és un
+
+sistema de gestió de paquets creat pel projecte Debian. APT simpliﬁca en gran mesura la instal·lació i eliminació de programes en els sistemes GNU/Linux.
+
+- Yellow Dog Updater, Modiﬁed (YUM) és una eina de gestió de paquets per a
+
+sistemes GNU/Linux basats en RPM. Fedora, CentOS o Red Hat l’utilitzen.
+
+- Yet another Setup Tool (YaST) és una eina de conﬁguració i instal·lació del
+
+sistema operatiu a partir de paquets RPM utilitzada en la distribució Linux openSUSE, i en les distribucions comercials de Novell. Disposa d’eines que poden conﬁgurar molts aspectes del sistema. YaST2 és una eina per a l’administració i el manteniment d’una instal·lació de SUSE Linux. Entre altres coses, permet als administradors instal·lar programari i maquinari, i crear xarxes i servidors.
+
+- Control Center de Mandriva permet als usuaris conﬁgurar la majoria dels
+
+components del sistema en una interfície molt senzilla. Es compon de diver- sos mòduls organitzats en pestanyes però també utilitzables autònomament. L’usuari (administrador) pot canviar la conﬁguració del nucli del sistema Mandriva Linux i els canvis poden afectar a tots els diferents usuaris de la màquina.
+
+- HardInfo és una eina d’informació i de benchmarking per al GNU/Linux.
+
+Permet obtenir informació sobre el maquinari de l’ordinador. Genera informes en HTML o en text net.
+
+- Synaptic és un programa informàtic amb interfície gràﬁca (ﬁgura 2.7) per al
+
+sistema de gestió de paquets del Debian GNU/Linux. Generalment s’utilitza Synaptic en sistemes basats en paquets .deb, però també es pot utilitzar en sistemes basats en paquets .rpm.
+
+- El Centre de Programari d’Ubuntu (Ubuntu Software Center) és també un
+
+programa informàtic que ofereix una interfície gràﬁca a l’eina Advanced Packaging Tool. Es pot utilitzar per instal·lar i desinstal·lar paquets i repositoris de programari. 2.3 Manteniment i neteja de perifèrics L’interior del PC ha d’estar lliure de borrissol. El manteniment dels perifèrics en bon estat de neteja i ordre ajudarà a una vida útil més llarga i a un bon rendiment mentre duri. Per fer aquestes tasques de manera efectiva, pràctica i sense riscos, cal seguir unes normes bàsiques genèriques per a tots els dispositius que ens ajudaran a aconseguir-ho.
+
+- Desconnexió dels cables externs. Desconnectar aquests cables és el primer
+
+que cal fer abans de començar a netejar el dispositiu. Cal que desconnecteu Eines com YaST i Control Center permeten una conﬁguració totalment basada en una interfície gràﬁca, mentre que altres com HardInfo es limiten a posar en una llista tota la informació de maquinari del sistema.
+
+Si consulteu els recursos de contingut del web del mòdul, trobareu l’enllaç a la pàgina amb informació sobre dispositius en entorn GNU/Linux i el seu manteniment.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics el cable d’entrada d’energia elèctrica i també tots els aparells o perifèrics que hi ha connectats a l’equip. Compte quan torneu a connectar els cables i dispositius, ja que es poden haber produït ruptures o, ﬁns i tot, el desprendiment d’ancoratges i cargols dels connectors del PC.
+
+- Neteja de l’interior del PC. Per retirar la pols es recomana utilitzar un
+
+aparell bufador-aspirador que sigui capaç de llançar un corrent d’aire fort. Podeu trobar a la venda esprais d’aire a pressió. Si utilitzeu una aspiradora heu de netejar primer l’equip amb una brotxa o pinzell per ajudar en la neteja de borra (combinació de pols i greix o pols i humitat) tenint cura de no fer malbé els components o aﬂuixar cables en el procés. De fet és la font d’alimentació de l’ordinador la que reté més pols, per la qual cosa cal netejar amb aire comprimit les reixetes com també la cavitat de l’extractor d’aire o ventilador.
+
+- Neteja de la superfície exterior del PC i perifèrics. Normalment són
+
+metàl·liques pintades i plàstiques. Es recomana utilitzar una tela humitejada en sabó líquid (ja que els equips informàtics usualment s’embruten a causa de la pols ambiental, els fums, les partícules i el contacte amb les mans dels usuaris). No és recomenable fer servir dissolvents o alcohol de netejar a les cobertes, carcasses o gabinets de PC i perifèrics degut a la seva acció abrasiva i dissolvent.
+
+Per netejar cal utilitzar draps i baietes. Sempre que es fan feines de neteja, cal revisar els connectors interns i externs del PC (punts on s’endollen cables o connecten dispositius) un cop s’ha acabat el procès per assegurar-se de que no estan ﬂuixos, perquè es poden haver mogut. El mateix procediment és aplicable a les plaques o targetes afegides i els mòduls de memòria RAM (ja que si estan mal connectats poden produir errors, bloqueig o ﬁns i tot reinicis del PC).
+
+2.3.1 Manteniment de perifèrics d’entrada Els perifèrics d’entrada són els més exposats a la brutícia, ja que són accionats directament per l’usuari. És habitual que caiguin molles de pa a un teclat, o que un escàner tingui taques a la superfície dels papers, o que el ratolí no funcioni bé a causa també a la brutícia acumulada.
+
+Els perifèrics d’entrada són els dispositius que permeten introduir dades exteriors en l’ordinador a ﬁde ser tractades amb posterioritat per la CPU. Aquestes dades poden provenir de diferents fonts, de les quals la principal es l’ésser humà. Per tant, és aconsellable fer-ne un manteniment periòdic que asseguri un funcio- nament adequat i unes condicions de treball higièniques.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Teclat El manteniment preventiu que es fa a un teclat consisteix bàsicament a netejar-ne l’exterior, ja que aquest acumula força brutícia produïda pels usuaris i el medi ambient. Figura 2.8. Netegeu les tecles amb una esponja humida i, l’espai de separació entre elles, amb una brotxa o pinzell.
+
+La neteja exterior del teclat comporta treure tots els cossos estranys que s’hi puguin trobar. Però, en ocupar-se del seu manteniment, convé seguir aquest passos: Els teclats de membrana són més fàcils de netejar.
+
+- S’ha de veriﬁcar que l’equip estigui apagat i a ser el possible desconnectat.
+- Traieu la pols del teclat amb la brotxa ﬁns que no es vegi cap resta de pols o
+
+borrissol. Si fos necessari, per a una millor neteja, utilitzeu un compressor o secador de cabell.
+
+- Podeu utilitzar un compost especial per a aquest propòsit, generalment en
+
+forma de crema. També hi ha escumes o esprais que permeten netejar les tecles sense que es produeixi humitat en el teclat, cosa que podria causar-hi curtcircuits.
+
+- Passeu l’esponja sobre la superfície retirant la brutícia i, si escau, l’excedent
+
+de producte netejador (ﬁgura 2.8).
+
+- Utilitzeu un drap sec de cotó per ﬁnalitzar la neteja del teclat i absorbir les
+
+restes d’humitat. El manteniment interior el teclat requereix uns coneixements i habilitats més especialitzades, ja que haureu d’obrir i desmuntar el dispositiu i tornar-lo a muntar correctament un cop net. Si es vol netejar a fons el teclat, heu de retirar-ne la carcassa amb cura, tot ﬁxant- vos bé en la manera en què està muntada, ja que és una cosa que varia notablement d’una marca a una altra. A més, cal tenir molta cura amb les tecles, perquè cadascuna té el seu lloc i els seus mecanismes de tancament.
+
+Una neteja ràpida del teclat passa simplement per girar-lo cap per avall i passar un aspirador, brotxa o un pinzell entre les tecles per retirar la pols i els cossos estranys.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Els escàners amb alimentador de fulls... ...no es poden netejar per dins amb tanta facilitat com els de taula, que a més permeten escanejar llibres o altres suports amb volum. Escàner Un escàner Fujitsu 5100 amb alimentador de fulls L’escàner s’ha de netejar i recalibrar si a les còpies, els faxos enviats o els documents escanejats s’aprecien línies blanques o negres. De no fer-ho així, la qualitat dels documents escanejats decreixerà amb el temps.
+
+Per fer aquesta neteja necessitareu
+
+- Dos draps sense borrissol
+- líquid de netjar els vidres
+- Mocador humit
+
+Hi ha alguns consells que cal tenir en compte. Netegeu només les superfícies i el vidre per fora. No netegeu l’escàner per sota del vidre, ja que hi ha perill de generar problemes elèctrics. En tot cas és preferible consultar el servei de reparacions autoritzat pel proveïdor. No apliqueu productes abrasius, ni acetona o tetraclorur de carboni o alcohol isopropílic sobre el vidre de l’escàner, ja que es podria fer malbé.
+
+Com en la resta de casos de neteja i manteniment que heu vist, hi ha alguns passos que convé seguir. En el cas de l’escàner són
+
+- Desendolleu l’escàner de l’endoll elèctric i, després, del PC.
+- Si l’escàner encara és calent perquè s’ha fet servir, deixeu-lo refredar el
+
+temps suﬁcient.
+
+- Obriu la porta d’accès als documents.
+- Si la franja blanca llarga (a la part de dins de la porta d’accés als documents)
+
+és bruta, netegeu-la amb un drap de cotó. Si després de fer-ho, encara hi queda brutícia, utilitzeu un drap de cotó humitejat amb alcohol isopropílic per netejar suaument la franja. Si feu servir alcohol, apliqueu sempre una quantitat molt petita. L’exposició de les peces internes al degoteig d’alcohol pot causar danys.
+
+- Si la franja llarga de vidre oposada a la franja llarga blanca és bruta, netegeu
+
+la amb un drap de cotó sec (ﬁgura 2.9). Si hi quedès brutícia, també podeu utilitzar un drap de cotó humitejat amb una petita quantitat d’alcohol isopropílic per netejar el vidre amb suavitat. Recordeu que heu d’aplicar el líquid netejador al drap i no al vidre.
+
+- No toqueu el vidre. Sequeu el vidre utilitzant un drap que no deixi anar
+
+pelussa i que estigui ben sec.
+
+- Netegeu els rodets bruts amb un drap que no deixi ﬁls (com els draps de
+
+netejar els vidres de les ulleres) humitejat amb una petita quantitat d’aigua.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+- Si el suport de pressió i el coixinet estan bruts, netegeu-los amb un drap
+
+humitejat amb una mica d’aigua que no deixi anar ﬁls.
+
+- El vidre s’ha de netejar amb un drap suau que no deixi anar borrissol i un
+
+líquid netejador suau de vidres.
+
+- Netegeu amb suavitat la coberta externa fent servir un drap humit que no
+
+deixi ﬁls com els que heu fet servir per treure la pols o les partícules acumulades.
+
+- Eixugueu l’escàner amb un drap que no deixi anar borrissol ni ﬁls.
+- Espereu ﬁns que tot quedi ben eixut i després tanqueu la porta d’accés de la
+
+safata de documents.
+
+- La part exterior de l’escàner la podeu netejar amb un drap humit.
+
+Productes de neteja Figura 2.9. Per netejar la safata de documents heu d’obrir-ne la porta d’accés. Eviteu l’ús de productes comercials per a la neteja de vidre perquè poden contenir abrasius que ratllen la superfície i no feu servir cera, ja que pot deixar taques.
+
+Reviseu també periòdicament la pàgina que el fabricant té a Internet. Hi podeu trobar actualitzacions dels drivers que contenen reparacions per a petits errors del programari original i optimitzar el rendiment del vostre escàner. Consells per a un bon escanejat A més del manteniment adequat, altres factors poden assegurar escanejats d’alta qualitat
+
+- Abans d’escanejar, descarteu tots els elements innecessaris, com grapes i clips. Poden travar
+
+l’escàner i provocar danys, embussos del paper o mala qualitat.
+
+- Quan es tracti d’escanejar múltiples documents, primer ventileu el paper. És fàcil que els fulls
+
+de paper s’enganxin i provoquin una doble alimentació.
+
+- Feu especial atenció als elements de dimensions no estàndard. Escanegeu-los sempre per
+
+separat si són d’amplades diferents (generalment, els escàners poden gestionar elements de diferents longituds).
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Els ratolins òptics, que fan servir llum làser, no requereixen la neteja de l’interior. En cas d’avaria probablement haureu de substituir el perifèric. Perifèrics de sortida... ...són els que reben informació que és processada per la CPU i la reprodueixen perquè sigui perceptible per l’usuari.
+
+No obriu el monitor per netejar-lo per dins, ja que podríeu danyar els components electrònics i perdre la garantia del fabricant.
+
+- Per elements petits com talons, penseu en la possibilitat de fotocopiar abans de l’escaneig o
+
+d’afegir l’element al full de paper de mida estàndard. Si us cal un adhesiu, feu servir una cinta amb superfície rugosa (la cinta de cel·lofana llisca i pot causar problemes).
+
+- No feu servir mai cola.
+
+Ratolí Si l’acumulació de brutícia fa que el ratolí no respongui a moviments suaus, es queda enganxat o funciona a salts cal netejar-lo. No es requereixen eines especials per netejar un ratolí i no cal gaire temps. El ratolí tradicional (de boleta) és un element recol·lector de pols i brutícia.
+
+La boleta arrossega contínuament la pols i partícules petites de la superfície on es desplaça, i es van acumulant als rodets de l’interior, la qual cosa n’altera el coeﬁcient de fricció. El ratolí es pot obrir fent girar la peça que sosté la boleta, en el sentit que indica la ﬂetxa (si no hi ha ﬂetxa proveu en tots dos sentits). Quan retireu la boleta podreu observar dos cilindres col·locats en angle recte, on se sol acumular la brutícia.
+
+Aquestes peces s’han de netejar, traient amb l’ungla o un tornavís petit la crosta de brutícia que de vegades és molt compactada i està adherida. No feu servir dissolvents ni aigua. Gireu gradualment les peces mentre es va desprenent la brutícia i bufeu perquè surti de la cavitat.
+
+Un cop net, reinstal·leu els components. En condicions normals el ratolí tornarà a funcionar, però si continua fallant després del manteniment, o un dels seus botons no respon, o és queda enganxat, caldrà substituir-lo per un de nou. 2.3.2 Manteniment de perifèrics de sortida Els perifèrics de sortida han de funcionar correctament perquè l’usuari tingui la sensació que l’ordinador es troba en perfecte estat. Pot ser que tot el sistema funcioni perfectament però si no hi ha tinta a la impressora la impressió serà que l’ordinador no va bé. D’altra banda, si el monitor està brut podem continuar treballant, però segur que la vista se’ns pot arribar a ressentir.
+
+Tot seguit trobareu descrits alguns exemples de perifèrics de sortida i la manera de fer-ne el manteniment. Neteja del monitor Cal que repasseu periòdicament el monitor per veure si hi ha gaire brutícia i pols acumulades. Assegureu-vos de comprovar que no hi ha pols o brutícia als oriﬁcis de ventilació del monitor ni a la pantalla. Si observeu que la carcassa del monitor ha acumulat pols i brutícia, i heu de netejar-la, mireu de seguir aquests passos
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics L’aplicació correcta d’alcohol per netejar
+
+- Utilitzeu un drap humit amb aigua tèbia per netejar el monitor.
+- Si hi ha restes d’adhesiu, utilitzeu alcohol isopropílic o alcohol desinfectant
+
+i un drap per eliminar els residus.
+
+- Utilitzeu un drap net i sec per assecar-lo.
+- Netegeu els oriﬁcis de ventilació del monitor.
+
+Aquests permeten que l’aire circuli a través del PC i d’aquesta manera el mantenen refrigerat. L’acumulació de brutícia dins d’aquests ventiladors impedeix el procés de refrigeració.
+
+- Si no n’hi ha prou de bufar als oriﬁcis, utilitzeu una aspiradora portàtil per
+
+xuclar la pols i la brutícia.
+
+- Netegeu la pantalla del monitor utilitzant un drap net i sec (ﬁgura 2.10).
+- Per a una neteja més profunda, utilitzeu un netejador de pantalla antiestàtic
+
+i un drap net. Les botigues de consumibles d’informàtica en línia venen baietes de neteja de pantalla antiestàtiques molt bé de preu. Figura 2.10. Vigileu de no ratllar la pantalla quan la netegeu. Manteniment de la impressora En general, i com en qualsevol altre dispositiu, s’ha de procurar que estigui neta de pols i brutícia. Per a això només ens cal una brotxa, un drap i una mica de temps i paciència. Si és molta la brutícia acumulada podeu utilitzar una mica d’alcohol (aplicant-lo sempre al drap, mai directament, i sempre després d’haver eliminat tota la pols) i després eixugar-la sempre.
+
+Els materials de manteniment i neteja de la impressora són aquests
+
+- Una brotxa o paletina d’uns 3 cm.
+- Un parell de draps de cotó.
+
+Comproveu si el vostre monitor té píxels morts amb el programa indicat en els recursos de contingut del web del mòdul. El manteniment de la impressora implica la neteja i substitució dels consumibles, és a dir, els cartutxos o tòners de tinta.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Una bona idea... ...és apagar la impressora o l’escàner quan no es facin servir o a l’hora d’engegar el sistema, ja que cada cop que ho fem es comunica amb l’ordinador i es realineen els capçals d’impressió.
+
+I això pot fer disminuir el temps de vida de l’aparell. Un bon manteniment és una garantía per evitar l’acumulació de greix a les impressores i escàners, ja que pot ocasionar avaries greus. Vigilar els nivells de tinta de la impressora Si bé no hi ha cap mètode universal per comprovar els nivells de tinta, sempre resulta d’utilitat consultar el manual de la impressora. En general, per obtenir informació sobre com s’instal·la, usar-la o solucionar-ne els problemes, consulteu el lloc web del fabricant.
+
+Quan un tòner... ...imprimeix amb ratlles en blanc podeu donar-hi una mica més de vida traient-lo i sacsejant-lo enèrgicament per repartir la tinta que hi queda. En els recursos de contingut del web del mòdul, consulteu el programa d’aprenentatge amb fotograﬁes sobre la manera de canviar els cartuxos d’una impressora d’injecció.
+
+- Una mica d’alcohol (el millor és l’alcohol de neteja o el de cremar).
+- Una mica de greix amb base de graﬁt (el podem trobar en botigues
+
+d’electrònica).
+
+- És convenient un pot d’aire comprimit.
+
+En les impressores d’injecció de tinta més usuals, el manteniment de l’usuari és simple i es limita a mantenir ben lubricat l’eix per on llisca el suport dels cartutxos de tinta, retirant si escau el greix vell en els carrils que suporten el lliscament del cartutx i assegurant-se que la banda transmissora del moviment al capçal queda neta de greix o tinta.
+
+En algunes impressores d’injecció de tinta o segons el seu estat, pot ser necessari netejar els mecanismes que arrosseguen el paper a causa de l’acumulació de les partícules de paper i pols a la superfície. La pols acumulada a l’interior es pot expulsar mitjançant un assecador de cabells o un aspirador de mà (ﬁgura 2.11).
+
+En casos de brutícia extrema i greix (com, per exemple, impressores de cuina a restaurants), podeu netejar l’exterior amb una mica de desgreixador (sempre aplicant-lo sobre el drap, mai directament a la impressora), passant posteriorment un drap humit i, per acabar, deixar-lo ben eixut. Si bé pot causar danys a les parts de plàstic –com ara la pèrdua de brillantor i dels logotips impresos–, del que es tracta sobretot és d’eliminar el greix acumulat, que sempre és el més perjudicial.
+
+Figura 2.11. Podeu ajudar-vos d’un assecador per treure la pols i partícules acumulades. La resta del manteniment no té a veure amb la neteja sinó amb la reposició de consumibles (cartutxos de tinta). Si la impressora produeix còpies borroses, tènues o incompletes, pot ser que tingui poca tinta. Cal comprovar els nivells de tinta de la impressora.
+
+Si sospiteu que una impressora té poca tinta, és recomanable que imprimiu una pàgina de prova abans d’intentar imprimir alguna cosa.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Si no imprimeix en negre o altres colors (o si no imprimeix en absolut), pot ser que la impressora no tingui tinta, s’hagi de netejar o tingui un problema de maquinari o controlador. Per obtenir més ajuda, vegeu la informació que acompanya la impressora o aneu al lloc web del fabricant.
+
+Un cop heu esbrinat que la impressora no té prou tinta per imprimir amb la qualitat necessària, cal canviar-ne el cartutx o el tòner. Tampoc hi ha un mètode universal per canviar cartutxos de tinta o tòners, sinó que per saber quins cartutxos s’han d’usar i com canviar-los, cal que consulteu el manual de la impressora.
+
+Vista dels cartutxos de tinta a la impressora Procés de canvi d’un cartutx de tinta Després d’obrir la carcassa de la impressora, si els cartutxos no es col·loquen en posició d’extracció, s’haurà d’accionar algun tipus de palanca o botó que els hi col·loqui. Un cop aconseguit això s’han d’extreure els cartutxos afectats i substituir-los per uns altres de nous, i en acabat, si escau, es torna a accionar la palanca de manteniment. Finalment, cal tancar la carcassa.
+
+Un cop la impressora hagi activat els cartutxos és convenient imprimir una pàgina de prova per comprovar-ne el funcionament. Si imprimiu en color i en blanc i negre, podreu fer-ho utilitzant només un cartutx ﬁns que pugueu substituir el cartutx buit. Si teniu pensat comprar un cartutx, assegureu-vos de conèixer el nom i el número de model del cartutx o dels cartutxos que necessiteu. Aquesta informació pot aparèixer en el cartutx gastat o en el manual de la impressora. Si no, podeu extreure el cartutx i portar-lo a un distribuïdor que us pugui ajudar a trobar-ne un de nou.
+
+Per a la majoria d’impressores hi ha kits de recàrrega que permeten reomplir de manera econòmica els cartutxos oﬁcials de cada fabricant d’impressores. Cal tenir en compte que aquests mètodes no estan suportats pels fabricants, ja que inﬂueixen en la part del seu negoci basat en la substitució de consumibles.
+
+Manteniment d’altaveus Un altaveu és un transductor electroacústic que s’utilitza per a la reproducció de so. Un o diversos altaveus poden formar una pantalla acústica. L’únic manteniment que es pot dur a terme de manera bàsica en els altaveus és procurar que la pantalla protectora estigui ben neta per facilitar el moviment de l’aire des de l’altaveu, i, si es noten fallades intermitents en la reproducció de so, comprovar que els connectors jack o mini-jack no s’hagin oxidat.
+
+Consulteu, en les “Adreces d’interès” del web del crèdit, la pàgina en què es descriuen mètodes per reomplir els cartutxos de tinta de diferents fabricants.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Hi ha uns discos de neteja especialitzats que permeten netejar la lent sense haver de desmuntar cap peça ni dipositiu. 2.3.3 Manteniment de perifèrics d’emmagatzematge En el cas dels perifèrics d’emmagatzematge, sobretot dels que utilitzen algun tipus de mecanisme per introduir els suports de dades, també es pot fer algun tipus de manteniment, sobretot en tot allò que té a veure amb la neteja del dispositiu.
+
+Manteniment de les unitats òptiques El manteniment de les unitats òptiques –CD-ROM, CD-RW, DVD, Blueray– es basa en tenir nets els components mòbils susceptibles d’acumular brutícia. També és possible netejar i alinear l’òptica del dispositiu. Normalment les unitats òptiques no s’han d’obrir excepte en algun cas particular. La safata s’ha de netejar amb un drap humit per retirar la pols i la brutícia de manera que disminueixi la quantitat de partícules en suspensió quan es llegeix o escriu en un disc.
+
+La neteja de la unitat òptica Si en l’ambient de treball hi ha pols, fums, etc. (o quan fa molt temps que no s’ha fet el manteniment de la unitat) cal obrir-la per netejar-la i lubricar-la, però es tracta d’una tasca delicada més pròpia del servei tècnic del dispositiu que no de l’usuari.
+
+Aquest manteniment consisteix a netejar amb cura la lent làser (està sostinguda per un suport ﬂotant molt delicat). La lent es pot netejar amb uns palets com els que es fan servir en medicina. El tros de cotó de la punta s’ha d’humitejar amb una mica d’alcohol. No ho feu si no teniu un pols ferm, perque aplicar una força indeguda a la lent la pot fer malbé.
+
+En acabat, també cal netejar els rails pels quals llisca la safata, i després convé lubricar-los, com també els pinyons plàstics que estan a la vista. Figura 2.12. Interior d’una unitat òptica d’ordinador portàtil, amb la lent al descobert En cas que abans del servei de manteniment la unitat òptica presentés un problema de mala lectura-escriptura i un cop fet el manteniment aquesta anomalia continués,
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics les opcions són
+
+- Fer un rentat-neteja profund a la unitat làser (ﬁgura 2.12), però només si
+
+teniu experiència i habilitat per desmuntar-la, o com a últim recurs a una unitat abans de deixar-la per perduda.
+
+- Fer algun reajustament al díode làser –tasca també més pròpia del personal
+
+especialitzat– per donar-hi més eﬁciència a canvi de disminuir-ne el temps de vida (aquesta tasca requereix tenir coneixements d’electrònica). Manteniment de la unitat de disquet Com tots els dispositius amb parts mòbils accessibles a l’exterior, el manteniment de les unitats de disquet es basa en la neteja del dispositiu per facilitar la lectura de dades per mitjà del capçal.
+
+Per netejar els capçals de la unitat podeu utilitzar un disquet de neteja especialitat. Si queda algun cos estrany a l’interior (com ara una etiqueta adhesiva, grapa, clip o xapa ressort d’un disquet) i no el podeu treure amb unes pinces, no quedarà més remei que desmuntar el lector de la carcassa i obrir-lo per extreure’l.
+
+Si es tracta d’una disquetera que treballa en un ambient ple de pols o fums, normalment també caldrà obrir-la per netejar-la i lubricar-la bé, però aquestes feines són delicades i més pròpies del personal especialitzat. Per a una neteja superﬁcial n’hi ha prou d’extreure amb un aspirador la pols de l’interior.
+
+Manteniment del disc dur. Programes El manteniment de components interns com el disc dur comporta pendre bona cura del contingut de dades que s’hi emmagatzemen. Davant l’acció constant de programari maligne –virus, programes espia, publicitaris, etc.– cal revisar periòdicament el disc dur amb eines antivirus i programes antiespia (antispyware).
+
+També és important instal·lar-hi un bon tallafoc (ﬁrewall) per evitar l’atac d’intru- sos a través dels ports oberts en el PC i tenir les utilitats i els programes de neteja, de registre, de desfragmentació, etc. Per assegurar un bon temps de vida... ...als discos durs cal que la ventilació de l’aire a dins la caixa sigui l’adequada per al dispositiu. D’altra banda, hi ha dispositius de refrigeració per a discos durs que funcionen a un nombre elevat de revolucions per minut i, per tant, s’escalfen més del desitjable.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics
+
+### 3. Ampliacions de maquinari
+
+Els equips microinformàtics tenen una vida útil que depèn del maquinari que s’hi ha instal·lat en el moment de l’assemblatge. Com més nou sigui aquest maquinari, durant un interval més llarg de temps l’equip serà capaç de dur a terme les seves tasques d’una manera correcta malgrat possibles actualitzacions del sistema operatiu i, per tant, dels seus requeriments de maquinari.
+
+Els canvis en el maquinari poden tenir diversos motius, però en tots els casos persegueixen incrementar les prestacions de l’ordinador destinatari
+
+- Incrementar la vida útil de l’equip és un dels motius més comuns.
+- Augmentar les prestacions per assolir noves tasques també pot ser un motiu
+
+per ampliar el maquinari.
+
+- Afegir nous perifèrics també es pot considerar un canvi en el maquinari,
+
+malgrat que no sigui necessari tocar la CPU. 3.1 Canvis en el maquinari. Procés d’ampliació En els equips d’escriptori tots els components interns, incloent-hi la placa base, processador o memòria, com també els components que es connecten a la unitat central de processament poden ser ampliables i substituïbles amb una gran diversitat de recanvis possibles.
+
+Qualsevol tipologia d’equip d’escriptori és a priori una candidata a l’ampliació de maquinari, i això val per a equips d’oﬁcina, servidors, equips multimèdia o equips d’alt rendiment destinats a jocs d’última generació o a l’edició de vídeo. En el cas dels ordinadors portàtils, la capacitat d’actualització és molt més limitada en comparació amb els ordinadors de taula.
+
+En general, els discos durs i la memòria es poden actualitzar fàcilment, i passa el mateix cada cop més amb les unitats òptiques i les targetes d’expansió interna. Els altres components interns, però, incloent-hi la CPU, la placa base i la targeta gràﬁca, no estan destinats a ser actualitzables.
+
+La major part de millores es poden fer mitjançant l’addició de dispositius externs USB o en format de targeta d’expansió com, per exemple, una targeta PC Card. Requeriments de maquinari Són els components de maquinari que un sistema operatiu o programari necessita hi hagi en un ordinador per funcionar eﬁcientment.
+
+Consulteu les ampliacions possibles en equips d’escriptori i portàtils en la unitat formativa “Muntatge d’un equip microinformàtic”.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics Consulteu el procés d’instal·lació de controladors i conﬁguració del dispositiu en l’apartat “Manteniment de perifèrics” d’aquesta mateixa unitat. Còpies de seguretat Consisteixen a desar, en un lloc segur, la informació sensible referida a un sistema per tal de recuperar, posteriorment, aquesta informació en cas de necessitat.
+
+Figura 3.1. Procés d’ampliació d’un equip El procés d’ampliació, tal com l’esquematitza la ﬁgura 3.1, requereix
+
+- Una anàlisi prèvia dels requirements i la deﬁnició del maquinari necessari.
+- La presa de mesures de seguretat quant a la funcionalitat de l’equip a
+
+ampliar.
+
+- L’adaptació de la conﬁguració de l’equip: actualització del microprograma
+
+ri (ﬁrmware) del BIOS i dels controladors del sistema.
+
+- La instal·lació dels nous components o perifèrics mitjançant els components
+
+disponibles.
+
+- La conﬁguració del component mitjançant jumpers i instal·lació dels con
+
+troladors de dispositiu.
+
+- La comprovació que el funcionament és el correcte i realització, si escau,
+
+de proves de rendiment. 3.1.1 Mesures de seguretat davant de canvis de maquinari Per motius de reparació o substitució d’alguna part d’un equip o de la seva totalitat, s’ha de procedir tenint cura de preservar les característiques bàsiques del sistema, tant pel que fa a la funcionalitat, com pel que fa al programari o les dades que conté. Per això, sempre cal disposar dels elements de seguretat bàsics, tant del maquinari com del programari o de les dades.
+
+Quan s’ha de substituir algun dispositiu, s’ha de procurar que el nou sigui el més adequat possible. Si aquest dispositiu no és un dispositiu d’emmagatzematge i se substitueix per un d’igual –o, si més no, amb les mateixes característiques, marca, model–, no es presentaran diﬁcultats addicionals.
+
+Ara bé, si el dispositiu que s’ha de substituir és un dispositiu actiu que el sistema té identiﬁcat per alguna característica especíﬁca –per exemple, l’identiﬁcador d’una targeta de xarxa–, pot ser que s’hagi de reconﬁgurar el dispositiu per al sistema operatiu. Si el dispositiu substituït té unes característiques semblants, però no és de la mateixa marca o model que el dispositiu original, potser caldrà retocar algunes ca- racterístiques de la conﬁguració del BIOS i, segurament, fer una nova instal·lació
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics del programari controlador del dispositiu per al corresponent al que s’ha instal·lat. Per tant, com a mesura de precaució, cal disposar del programari controlador adequat per al nou dispositiu. Per prevenir una pèrdua important en cas de reparació per avaria o de substitució d’un equip, cal disposar de còpies de seguretat tant del sistema operatiu com del programari de controladors, i del programari auxiliar i de treball i, el més important de tot, de les dades més actuals possibles.
+
+També es pot fer el que s’anomena un clonatge; és a dir, a partir del sistema operatiu i el programari contingut en un disc, fer una còpia exacta (clon) en un altre disc, de manera que també es recupera, d’un cop, tant el sistema com el programari. De totes maneres, tant la imatge de disc com el clonatge no preserven les dades, els documents i la informació dels programes, que s’han de continuar desant a banda per mitjà d’un sistema de còpies de seguretat.
+
+3.1.2 Actualització del microprogramari (ﬁrmware) del BIOS El sistema bàsic d’entrada-sortida (BIOS) és un programari integrat en la placa base que controla i conﬁgura el maquinari que s’hi connecta. Així, doncs, per què s’hauria d’actualitzar el BIOS? No es tracta d’un microprogramari que ja ve inclòs amb la placa base i que no cal tocar-lo? Per bé que en molts casos és així, no sempre ho és.
+
+Haureu d’optar per actualitzar el BIOS si
+
+- Es vol resoldre algun problema de funcionament de la placa base.
+- Es volen afegir característiques noves a la placa base (sobretot, millorar el
+
+suport de microprocessadors o altres dispositius). El programari del BIOS es pot actualitzar mitjançant un procediment de substitució del microprogramari anomenat ﬂashing. Eviteu reconﬁgurar el BIOS si no esteu ben segurs del procediment a seguir. El BIOS és un component fonamental del sistema, i una conﬁguració incorrecta pot fer que us trobeu amb una placa base inservible i amb un ordinador que no pot arrencar.
+
+És molt important que aquest tipus d’operacions amb el BIOS es facin amb la màxima cura, atès que una petita equivocació pot deixar el BIOS inutilitzat i l’ordinador sense poder arrencar. Si bé hi ha diversos fabricants de BIOS, amb processos d’actualització lleugerament diferents, els passos que cal seguir per actualitzar-lo i les precaucions que s’han de prendre són similars.
+
+Hi ha BIOS que inclouen integrat el procés d’actualització, la qual cosa fa innecessari disposar de mitjans d’arrencada. Els errors... ...acostumen a ser deguts a ﬂuctuacions en el corrent elèctric o, ﬁns i tot, a talls de corrent en el moment de l’actualització, encara que només duri uns segons. Per això és convenient disposar d’un SAI (sistema d’alimentació ininterrompuda), en venda a qualsevol botiga d’informàtica. Això permet respirar tranquils en cas d’un tall de corrent inesperat.
+
+Sempre que els equips encara estiguin en garantia, els fabricants d’equips i plaques bases normalment ofereixen servei tècnic encara que s’hagi produït una errada durant l’actualització del BIOS.
+
+Muntatge i manteniment d’equips Manteniment d’equips microinformàtics A l’hora de descarregar tant les noves versions del BIOS com els programes de ﬂashing per actualitzar-lo, assegureu-vos que ho feu des de pàgines de conﬁança, com ara la del servei tècnic del fabricant de la placa base o de l’equip.
+
+Figura 3.2. Consulta del model de placa base i versió del BIOS Com cal procedir per actualitzar el BIOS Els passos a seguir per actualitzar el programa basic d’entrada-sortida (BIOS) es pot resumir en aquests passos
+
+- Esbrineu quina és la versió del BIOS que utilitza l’equip. Aquesta informació apareix quan
+
+arrenca l’equip o es pot consultar amb algun programa com CPU-Z (ﬁgura 3.2).
+
+- Determineu la necessitat d’actualitzar el BIOS. Pot ser que l’equip mai no s’hagi actualitzat
+
+ﬁns ara i en tingueu necessitat perquè voleu millorar-ne el rendiment, però també pot ser que amb la conﬁguració actual tot funcioni correctament i, per tant, no tingueu necessitat de dur a terme el ﬂashing.
+
+- Esbrineu quin tipus d’ordinador voleu actualitzar quant a la construcció.
+- Si és un equip de taula, pot ser que hagi estat construït a base de components compatibles o
+
+que sigui un equip premuntat d’alguna empresa com Acer, Dell/Alienware, HP/Compaq, IBM, Lenovo, Sun o Gateway entre d’altres. En el primer cas heu de cercar l’actualització en la pàgina de suport del fabricant de la placa base i, en el segon, en la de l’empresa ﬁnal.
+
+- En el cas d’un ordinador portàtil, en la majoria de casos heu de visitar la pàgina del fabricant
+
+ﬁnal, com pot ser Dell/Alienware, HP/Compaq, Acer o Toshiba.
+
+- Descobriu quins mètodes d’actualització es troben disponibles per al BIOS de l’equip en
+
+qüestió.
+
+- Algunes plaques es poden actualitzar mitjançant un programa instal·lat en el mateix sistema
+
+operatiu.
+
+- En altres casos heu d’arrencar l’equip amb un suport autoarrencable com pot ser un disquet,
+
+un CD o un llapis USB, que contingui, però, el programari de ﬂashing proveït pel fabricant.
+
+> **💡 📚 Document extens (107 pàgines)**
+> S'han mostrat les primeres 80 pàgines completes del manual.
+
+---
+
+## 3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE
+
+T-10 Reparación de equipos
+
+Reparación de equipos
+
+Detección de averías en un equipo informático.
+
+### 2. Fallos en la fuente de alimentación
+
+### 3. Fallos en el chequeo de la memoria
+
+### 4. Problemas con el microprocesador
+
+### 5. Problemas con la placa base
+
+### 6. Problemas con disqueteras, CD o DVD
+
+### 7. Problemas con los dispositivos de almacenamiento
+
+### 8. Problemas con las tarjetas
+
+### 9. Problemas con los periféricos
+
+### 10. Incompatibilidades y ampliaciones hardware
+
+### 11. Herramientas de diagnóstico
+
+### 12. Herramientas de diagnóstico en Linux
+
+- Detección de averías en un equipo informático.
+
+Los ordenadores necesitan mantenimiento. El mantenimiento incluye tanto el hardware como el software de los equipos.
+
+Los diversos tipos de mantenimiento pueden funcionar simultáneamente como en escala. En el caso del mantenimiento correctivo, actuará en el caso de que el mantenimiento predictivo y/o el mantenimiento preventivo no hayan sido capaces de anticiparse al problema
+
+- Detección de averías en un equipo informático.
+
+Los principales tipos de mantenimiento informatico;
+
+Mantenimiento predictivo
+
+Mantenimiento preventivo
+
+Mantenimiento correctivo
+
+Mantenimiento evolutivo
+
+- Detección de averías en un equipo informático.
+
+Mantenimiento predictivo
+
+Se trata de un tipo de mantenimiento que se lleva a cabo utilizando herramientas de diagnóstico, con el fin de anticiparse a posibles fallos e intentar evitarlos antes de que se produzcan.
+
+A través de la monitorización de sistemas informáticos.
+
+- Detección de averías en un equipo informático.
+
+Mantenimiento preventivo
+
+Se trata de un tipo de mantenimiento muy frecuente, que se lleva a cabo con el fin no sólo de prevenir posibles fallos y mejorar el funcionamiento de un sistema, sino con el de alargar la vida útil de los distintos componentes del mismo.
+
+Preventivo de hardware hablamos, la que consiste en tareas periódicas (como la limpieza), y la que pretende garantizar su durabilidad (evitar impacto directo de la luz del sol).
+
+- Detección de averías en un equipo informático.
+
+Mantenimiento correctivo
+
+Se da en las clásicas situaciones en las que falla un equipo o sistema (por ejemplo por una avería en el hardware) y lo que se pretende es conseguir que vuelva a estar operativo y en condiciones óptimas.
+
+Conllevará operaciones de reparación o de sustitución, en función de las necesidades de cada caso.
+
+- Detección de averías en un equipo informático.
+
+Mantenimiento evolutivo
+
+Es un tipo de mantenimiento que no se dedica a corregir o prevenir posibles fallos, sino a hacer evolucionar los recursos informáticos con los que se cuenta.
+
+Este tipo de mantenimiento incluirá desde labores de actualización de software hasta la sustitución completa de equipos o sistemas, dependiendo de las necesidades que aparezcan en cada momento
+
+- Detección de averías en un equipo informático.
+
+No existen fórmulas mágicas para solucionar todos los problemas que puedan ocurrir en el PC, pero hay una serie de procesos o pautas generales que podemos seguir para identificar lo que puede estar causando el problema
+
+#### 1.1. Comprobaciones iniciales
+
+Comados útiles
+
+Ver el resumen de comandos hardware
+
+Apuntes 10-01: Comandos
+
+Tras el montaje del PC
+
+Si la placa base está bien conectada a la caja y recibe la energía de la fuente de alimentación.
+
+Si el microprocesador, el disipador y el ventilador están bien sujetos y conectados, y si reciben la energía de la fuente de alimentación.
+
+Si los módulos de memoria están bien sujetos y en la posición adecuada.
+
+Si las tarjetas están bien insertadas en su ranura y sujetas mediante los tornillo.
+
+Si los conectores de HDD, DVD y CD están bien conectados a la fuente de alimentación y a la placa base
+
+Si los conectores del frontal de la caja están bien conectados a la posición indicada en la placa base.
+
+Antes de enchufar el ordenador
+
+Que las conexiones externas, como son teclado, ratón y monitor, estén correctamente en su conector.
+
+Que la alimentación eléctrica llegue a la fuente de alimentación del PC y al monitor.
+
+Antes de enchufar el ordenador
+
+Que las conexiones externas, como son teclado, ratón y monitor, estén correctamente en su conector.
+
+Que la alimentación eléctrica llegue a la fuente de alimentación del PC y al monitor.
+
+Enchufar el ordenador y Examinar
+
+Si todos los ventiladores giran.
+
+Si los LED del panel frontal se encienden y si las distintas unidades también se encienden.
+
+Preguntas
+
+Partimos de un ordenador apagado que funciona correctamente. Quitamos la memoria y enchufamos el ordenador, ¿qué ocurre?
+
+Partimos, de nuevo, de un ordenador apagado que funciona correctamente. Quitamos el conector de datos o de alimentación del disco duro de arranque del sistema. En ese momento encendemos el ordenador, ¿qué sucede?
+
+#### 1.2. Señales de aviso luminosas y acústicas
+
+En el proceso de arranque se realiza el POST. El significado de algunos pitidos
+
+Un único pitido indica que todo está correcto.
+
+Uno, dos o tres pitidos suelen indicar un error de memoria. Los motivos pueden ser varios
+
+no se ha instalado correctamente
+
+la velocidad de la memoria es incompatible
+
+Un pitido largo y dos o tres cortos pueden indicar un fallo en la tarjeta de vídeo. Debemos comprobar que esté bien insertada en su ranura. Podemos probar con otra tarjeta de vídeo.
+
+Seis pitidos, fallo de teclado. La solución más inmediata es sustituir el teclado. Si el nuevo teclado no funciona, el puerto está mal.
+
+Ocho pitidos, problemas con la tarjeta de vídeo.
+
+Mensajes en la pantalla, como (Buscar fabricante de BIOS)
+
+Un Error de la suma de verificación de la ROM BIOS. Al comprobar el estado de la ROM BIOS se ha detectado un error. Este tipo de errores son graves y tienen como única solución la sustitución de la placa.
+
+La batería del CMOS falló (CMOS battery failed). Es necesario cambiar la batería.
+
+Error de teclado o teclado no presente (keyboard error or no keyboard present).
+
+Fallo de disco duro (hard disk install failure). No puede encontrar el disco duro. Hay que comprobar que el disco duro funciona correctamente y que está bien conectado y configurado.
+
+Fallo al iniciar el sistema (boot failure). No encuentra el disco de arranque.
+
+#### 1.3. Fallos comunes
+
+El ordenador no hace nada cuando se enciende.
+
+No se ve nada en la pantalla del monitor.
+
+El equipo no detecta el disco duro.
+
+No se mueve el puntero del ratón o el teclado no responde.
+
+La unidad de CD o DVD no leen los discos.
+
+El ordenador no hace nada cuando se enciende.
+
+No se ve nada en la pantalla del monitor.
+
+El equipo no detecta el disco duro.
+
+No se mueve el puntero del ratón o el teclado no responde.
+
+La unidad de CD o DVD no leen los discos.
+
+Pregunta
+
+Partimos, de nuevo, de un ordenador apagado que funciona correctamente. Desconectamos el teclado del sistema. En ese momento encendemos el ordenador, ¿qué sucede?
+
+Responsable de al menos 1/3 de los fallos del PC. Algunos fallos comunes
+
+Picos.
+
+Apagones.
+
+Sobrevoltaje.
+
+Caídas de voltaje
+
+Síntomas que pueden significar un problema de alimentación
+
+El PC se bloquea o se reinicia sin razón aparente.
+
+Se producen fallos en los discos duros, errores de escritura, errores de acceso a archivos, etc.
+
+Algunos componentes internos fallan.
+
+Las luces oscilan y su intensidad varía.
+
+El PC se comporta de forma extraña al conectar un dispositivo de elevado consumo
+
+Dispositivos protectores
+
+Algunas de las situaciones en las que ocurren estos problemas son
+
+Después de instalar la memoria → Pitidos
+
+Puede ocurrir durante el proceso de arranque.
+
+El ordenador muestra unos mensajes de error similar a estos
+
+Memory address error at xxxxx (error en la dirección de memoria xxxxx)
+
+Memory failure at xxxxx, read yyyyy, expecting zzzzz (fallo de memoria en xxxxx, leído yyyyy, esperado zzzzz)
+
+Memory parity error at xxxxx (error de paridad de memoria en xxxxx)
+
+Problemas de memoria relacionados con el software
+
+¿A quién no le ha aparecido en pantalla la típica pantalla azul de Windows que nos indica que hay errores?
+
+Un ordenador funciona bien y de repente comienza a tener problemas de memoria.
+
+Pregunta
+
+¿Qué debemos hacer cuando aparecen las pantallas azules de Windows, así como los reinicios inesperados, o los errores en kernel, etc.?
+
+Respuesta
+
+Seguramente tenemos un problema en la memoria RAM, para ello necesitamos chequearla para saber qué ocurre
+
+Si tenemos más de dos módulos de memoria, los probaremos de uno en uno.
+
+Comprobaremos que los slots están limpios.
+
+Chequearemos la memoria con el software de chequeo MemoryTest, que comprobará la superficie de la memoria bit a bit.
+
+Ejecutamos una prueba de estrés de la memoria, para ello se puede utilizar el software Prime 95. Puedes descargar la última versión de este programa desde la página web http://www.mersenne.org/freesoft/default.php
+
+Respuesta
+
+Restauración de la memoria RAM
+
+Como saber si la memoria RAM dañada
+
+Resumen
+
+Algunos de los síntomas que indican un posible fallo del microprocesador son
+
+El ordenador no arranca.
+
+El ordenador arranca, pero no inicia el sistema operativo.
+
+El ordenador deja de funcionar durante el proceso de inicio del sistema operativo, y si se inicia, se cae con frecuencia cuando se ejecutan aplicaciones.
+
+El ordenador de repente tiene problemas de error de paridad POST en muchos dispositivos.
+
+El ordenador se bloquea después de unos minutos de funcionamiento
+
+Revisar el enfriamiento del microprocesador y del sistema, la conexión de energía a la placa base y limpiar el interior de la caja del ordenador.
+
+#### 4.1. Calentamiento del microprocesador
+
+Cuando un PC funciona correctamente y al cabo de un tiempo se detiene
+
+no responden el teclado ni el ratón
+
+la pantalla muestra la imagen del último proceso que se estaba ejecutando
+
+Pasos a seguir
+
+Apagar el ordenador.
+
+Volver a encenderlo después de unos minutos que haya dado tiempo al micro para que se enfríe.
+
+Si vuelve se repite es porque el procesador no se ha enfriado lo suficiente y se está recalentando.
+
+Agregar un ventilador o un disipador de calor al micro
+
+Agregar ventiladores de enfriamiento extra a la caja del ordenador.
+
+#### 4.2. Parámetros de la BIOS
+
+Configuración de la CPU en la BIOS
+
+Velocidad del micro → revisar la documentación de placa base y microprocesador (valores de fábrica)
+
+Examinar la adecuada configuración del microprocesador, la RAM y el chipset → comprobar que si se ha modificado.
+
+Menú→ suele aparecer como Advanced , Chipset features Setup, etc.
+
+La mayoría de los problemas se detectan antes de que arranque el SO
+
+Normas para identificar y corregir problemas en la placa base
+
+Comprobación de todos los conectores
+
+Verificación de todos los componentes montados en la placa
+
+Comprobar si la placa tiene objetos extraños (tornillo, clip o trozo de cable)
+
+Cotejar si todos los jumpers e interruptores DIP están configurados correctamente
+
+Inspeccionar todos los tornillos de la placa base y comprobar que no toquen las trazas del circuito impreso
+
+### 6. Problemas con CD o DVD
+
+Si encontramos problemas al arrancar desde CD o DVD
+
+Comprobación comprobar que el CD o DVD sea un disco de arranque.
+
+Que la BIOS reconozca la unidad como primer disco de arranque
+
+Que la unidad esté bien conectada a la placa base
+
+Que esté bien conectada a la fuente de alimentación y al bus de datos
+
+instalados los dispositivos IDE o SATA, se comprueba en la BIOS, sino los reconoce
+
+Revisar jumpers maestro-esclavo(IDE), las conexiones con la PB y la fuente de alimentación.
+
+Descartar problemas con
+
+Otro cable de datos
+
+Otra unidad de HDD.
+
+Tener en cuenta ruidos anormales (un chirrido), pueden indicar problemas → Copia de seguridad.
+
+Mensajes que indican problemas en el disco
+
+Mensajes que indican problemas en el disco
+
+Aparece un mensaje de error en pantalla
+
+disk boot failure, insert system disk and press enter.
+
+El sistema es incapaz de leer el sector de arranque.
+
+Motivos
+
+El cable de datos no funciona correctamente; probamos con otro
+
+La secuencia de arranque de la BIOS se dirige a un disco que no es de arranque → Revisaremos la BIOS.
+
+Puede que tenga un virus → arrancamos con un disco de arranque limpio y ejecutamos un antivirus.
+
+Puede que el sector de arranque se haya estropeado
+
+Iniciamos el ordenador un disco de arranque y ejecutamos la orden FDISK/MBR desde el indicador del DOS
+
+Se volverá a crear el sector de arranque y se eliminará cualquier virus que pueda haber en el sector de arranque. Después escribimos SYS C
+
+A continuación pulsamos la tecla Intro para transferir nuevamente los archivos de sistema al disco duro.
+
+Mensajes con errores que indican fallos por daños físicos en Disco o daños en los datos
+
+error leyendo la unidad <X>,
+
+error de E/S, error de datos al escribir en la unidad <X>
+
+error de búsqueda-sector no encontrado
+
+Ejecutar SCANDISK para reparar errores físicos, si no repara → sustituir otro dispositivo
+
+Inicio con Windows → aparecer un mensaje de error indicando que falta el sistema operativo o sistema operativo no encontrado.
+
+El problema puede deberse a
+
+Que la BIOS no detecta el disco → comprobaremos la configuración de la BIOS
+
+Si el MBR es incorrecto → utilizaremos el comando FIXMBR de la consola de recuperación de Windows para reparar el MBR de la partición de inicio
+
+Si alguna partición incompatible está marcada como activa o la partición que contiene el MBR ya no está activa.
+
+Cambiar entonces la partición activa a aquella que contiene el sistema operativo.
+
+Y arrancar con un disco de arranque que tenga el comando FDISK y ejecutar dicho comando
+
+Si el disco está dañado → el coste de las reparaciones supera el de uno nuevo (imprescindible →evitarlo con copias de seguridad )
+
+Ejercicio
+
+Supongamos que un cliente nos llama y nos dice que su equipo no carga el sistema operativo y que no se ve nada en la pantalla. Nos dice que la fuente sí recibe corriente, porque se oye el ruido de siempre. No se oye ningún pitido cuando arranca el ordenador.
+
+¿Qué pasos seguirías ante esta incidencia? ¿Sustituirías alguna pieza? ¿Qué harías para ir descartando los componentes que fallan?
+
+Ejercicio
+
+Relaciona en tu cuaderno los siguientes problemas con las posibles soluciones
+
+Fáciles de diagnosticar, porque dejan de prestar la funcionalidad que proporcionan
+
+Tarjeta de red no funciona→ no se puede conectar a la red.
+
+Comprobar versión del driver.
+
+Comprobar los contactos de la tarjeta→ Limpiarlos.
+
+Si sigue sin funcionar → cambiar.
+
+Tarjeta de vídeo
+
+Ordenador encendido y la pantalla está en blanco y negro o no tiene imagen
+
+Revisar conexiones del monitor
+
+Monitor conectado a la fte de alimentación y a la red eléctrica mediante cable de alimentación.
+
+Monitor conectado a través del cable de video al ordenador.
+
+Comprobar con otro monitor para descartar el monitor
+
+Limpiar los contactores de la tarjeta y utilizar otra ranura de expansión.
+
+Si se inicia correctamente pero falla con una aplicación en concreto → Actualizar el controlador de video
+
+Tarjeta de sonido
+
+Averías bastante raras
+
+Revisar que las conexiones de los altavoces, el micrófono y el joystick están en el conector adecuado y que encajan correctamente.
+
+Revisar el volumen en la tarjeta de sonido y que los altavoces estén activos.
+
+Verificaremos que los cables de los altavoces no estén rotos → Multímetro
+
+Los problemas más frecuentes suelen deberse a su configuración (IRQ o pedidos de interrupción, direcciones de entrada/salida, etc.)→ Si existe conflicto con otro dispositivo, reasignar la tarjeta de sonido o dispositivo en conflicto.
+
+Actualizar el controlador de sonido
+
+Tarjeta de sonido
+
+IRQs
+
+Tarjeta de sonido
+
+IRQs
+
+Tarjeta de sonido
+
+IRQs
+
+Tarjeta de red
+
+Comprobar la tarjeta esté bien conectada y ajustada en la ranura de expansión en la placa base.
+
+Revisar el cable de red esté bien conectado a la tarjeta.
+
+Examinar que el cable funcione correctamente
+
+Muchas tarjetas de red vienen con un software de diagnóstico
+
+Si detecta que la tarjeta de red está bien → examinar la IRQ y las direcciones de entrada/salida.
+
+Posible conflicto con otro dispositivo→ reasignar el dispositivo en conflicto o la tarjeta de red.
+
+Podemos utilizar el comando PING
+
+Teclado y ratón
+
+Comprobar los conectores, el cable y su limpieza.
+
+Si sigue sin funcionar→ Sustituir
+
+Monitor
+
+Como se comentó anteriormente, comprobar las conexiones de datos y alimentación del monitor, así como el interruptor de encendido.
+
+Examinar la configuración del monitor (contraste)
+
+Por último, revisar con otro monitor.
+
+La impresora
+
+Casi todas las impresoras que se instalan actualmente incluyen asistentes de ayuda rápida que facilitan al usuario localizar y resolver problema. Posibles problemas
+
+La impresora no imprime.
+
+Encender, añadir papel, comprobar información
+
+Algunos LED del panel están intermitentes
+
+Examinar el motivo.
+
+Todo parece estar bien y la impresora sigue sin imprimir.
+
+Reinstalar software y comprobar IRQ
+
+Actualizar controladores de la impresora.
+
+Comprobar cableado y conectores.
+
+La impresora
+
+Casi todas las impresoras que se instalan actualmente incluyen asistentes de ayuda rápida que facilitan al usuario localizar y resolver problema. Posibles problemas
+
+La impresora no imprime.
+
+Encender, añadir papel, comprobar información
+
+Algunos LED del panel están intermitentes
+
+Examinar el motivo.
+
+Todo parece estar bien y la impresora sigue sin imprimir.
+
+Reinstalar software y comprobar IRQ
+
+Actualizar controladores de la impresora.
+
+Comprobar cableado y conectores.
+
+VIDEOS
+
+Limpieza de un Laptop
+
+Link interesante
+
+Windows Lento
+
+El problema de la compatibilidad
+
+Fabricantes de software y hardware que ofrecen solución única para sus productos.
+
+Planificar antes de comprar
+
+Incompatibilidades más habituales → entre software y hardware.
+
+Ej: actualización del SO conlleva una planificación de la actualización de los controladores hardware.
+
+Por tanto, manual de los componentes hardware para comprobar compatibilidades y disponer de los controladores para el SO.
+
+Comprobar estabilidad del ordendor
+
+Prime95 (Pruebas de estrés)
+
+OCCT (OverClock Checking Tool)
+
+Comprobar Discos Duros
+
+HD-Tune (Pruebas, Rendimiento, etc)
+
+CrystalDisk Info
+
+CrustalDisk Mark (Rendimiento)
+
+Estabilidad y Rendimiento Tarjeta Gráfica
+
+FurMark
+
+3DMArk
+
+3DMark 11
+
+3DMArk Dx11
+
+Unigine Heaven Dx11
+
+Catzilla
+
+MSI Kombustor
+
+MSI Afterburner
+
+EVGA Precision
+
+TriXX
+
+Testear memoria RAM
+
+MemTest86
+
+Información Sobre PC
+
+CPU-z
+
+GPU-z
+
+HW-Monitor
+
+Open Hardware Monitor
+
+CoreTemp
+
+AIDA64
+
+SiSoft Sandra
+
+SpeedFan
+
+Benchmarks
+
+CineBench
+
+SuperPI
+
+Testeo – Monitorización -Rendimiento
+
+Aida64
+
+Desarrollado por la empresa FinalWire.
+
+Dos versiones de Aida64
+
+Extreme Edition
+
+Business Edition
+
+Herramienta que realiza un extenso y detallado análisis del PC.
+
+Muestra todos los aspectos del sistema referentes a hardware, software, configuración de red, etc.
+
+El programa no requiere instalación → Ejecutable.
+
+Permite
+
+Mostrar componentes y enlaces de la web del fabricante.
+
+Crear completos informes con los datos (TXT, HTML, CSV,…)
+
+Botón informe.
+
+Aida64: información detallada de componentes
+
+Moverse por cada uno de los nodos y seleccionar los componentes. Los nodos siguientes
+
+Placa basa: información sobre CPU, Placa, memoria y módulo, chipset y BIOS (con sugerencias)
+
+SO: Procesos abiertos, controladores, servicios y DLL.
+
+Monitor: Gráfica, dispositivos asociados, monitor, escritorio, ftes instaladas, etc.
+
+Multimedia: Dispositivos de audio, controladores, dispositivos MCI y de los códecs instalados .
+
+Amacenamiento: Dispositivos físicos y lógicos, estándares ATA y la tecnología SMART.
+
+Red: Red de Windows e internet, recursos de red, correo electrónico, rutas e historial.
+
+Aida64: información detallada de componentes
+
+Moverse por cada uno de los nodos y seleccionar los componentes. Los nodos siguientes
+
+Directx → ofrece acceso a las capacidades de las tarjetas de video y sonido, mejorando las capacidades multimedia del equipo: Inf de video, sonido y música. Extensión del SO Widows.
+
+Dispositivos de hardware: Entrada, impresoras, PCI, PnP, USB, puertos, sus Propiedades, recursos, IRQ asociada, archivo *.INF asociado, etc.
+
+Programas: De inicio, tareas programadas,programas instalados, licencias con claves y tipos de archivo que reconoce el sistema.
+
+Seguridad: Opiciones, antivirus, cortafuegos.
+
+Configuración: variables del entorno, iconos del panel de control, papelera asociada a cada disco, archivos y carpetas, recursos de sucesos.
+
+Base de datos: Recursos y controladores para el acceso a la base de datos.
+
+Renimiento: Comparativa de operaciones de lectura y escritura de memoria.
+
+Aida64: Pruebas de rendimiento
+
+Diferentes pruebas dle sistema desde menú Herramientas.
+
+Medir el rendimiento de los dispositivos de almacenamiento (Rendimiento del disco).
+
+Pruebas de rendimiento de la memoria y la caché de memoria.
+
+Diagnóstico del monitor → test de calibración, color, visualización geométrica y enfoque.
+
+Pruebas de estabilidad del sistema → Prueba de máximo trabajo a la CPU, FPU, cachés, la memoria del sistema y unidades del disco duro. También podemos monitorizar el hardware para controlar las temperaturas, voltajes y velocidades del ventilador,mientras se ejecute la prueba de estabilidad.
+
+Visualizar las características de la CPU en funcionamiento
+
+Actividad
+
+Utiliza el menú Herramientas de Aida64 y realiza
+
+El diagnóstico del monitor.
+
+Pruebas de rendimiento de la memoria y la caché de memoria, observa las velocidades de escritura, lectura, copiado y la latencia.
+
+Haz una prueba de la estabilidad del sistema y observa las temperaturas de la CPU, las velocidades de los ventiladores de refrigeración (si los tiene), los voltajes de la CPU. Accede a Preferencias para seleccionar sobre los componentes para realizar la prueba.
+
+Otras herramientas de diagnóstico
+
+SiSoft Sandra→ System ANalyser, Diagnostic and Reporting Assistant (Windows)
+
+Más orientado a los análisis de rendimiento del hardware y benchmarks
+
+Permite analizar cada componente y comparar su rendimiento con el de otros dispositivos similares.
+
+interfaz mucho más atractiva e intuitiva
+
+PCMark 7 (windows)
+
+Software de benchmark para Windows
+
+incluye más de 20 pruebas actualizadas, separadas por categorías o «suites»
+
+Herramientas de recuperación de archivos
+
+PC Inspector. (http://www.pcinspector.de/)
+
+La recuperación se tiene que realizar antes de que los archivos sean permanentemente sobreescritos por nuevos datos.
+
+Recupera todos los datos perdidos después de un fallo del sistema o bien por un apagado anormal o por el ataque de un virus, después de formatear, por pérdida de partición, o por funcionamiento defectuoso de software
+
+interfaz mucho más atractiva e intuitiva
+
+Recuperar información de CD rayados
+
+Permitirá copiar los archivos dañados de CD o discos duros.
+
+Recupera archivos corruptos.
+
+Repara sistema de ficheros, etc.
+
+Herramientas de recuperación de archivos
+
+Data Recovery Software (solución completa)
+
+Recupera datos de tarjetas SIM
+
+Recupera datos de disco con formato NTFS
+
+Recupera datos de disco con formato FAT
+
+Recupera datos de pendrives
+
+Recupera datos de tarjetas de memoria
+
+Recupera datos de camaras digitales
+
+Recupera datos de dispositivos iPods
+
+Recupera datos de almacenamiento en disco USB
+
+Recupera datos de fotografías digitales
+
+Herramientas de recuperación de archivos
+
+Victoria (https://www.youtube.com/watch?v=zCEUv4gwsgc&feature=youtu.be)
+
+CristalDiskInfo ( https://hardzone.es//04/crystaldiskinfo-tutorial-completo/)
+
+Otras herramientas
+
+Dr Hardware → programa de gran alcance de detección de hardware para Windows
+
+Driver Magician → busca los drivers que tienes instalados, los muestra y permite realizar copias de seguridad.
+
+Ccleaner → software y herramienta de optimización y limpieza del sistema.
+
+Otras herramientas
+
+TuneUp Utilities → Limpia y optimiza el sistema operativo Windows.
+
+Tareas
+
+Mejora el rendimiento
+
+Aumenta espacio en disco
+
+Orden en Windows (desinstala, soluciona errores, ...)
+
+Solución de problemas
+
+Malwarebytes’ Anti-Malware
+
+Otras herramientas
+
+Herramientas de mantenimiento, limpieza y optimización para el PC: Argente Registry Cleaner, Advanced SystemCare, Glary Utilities, WinsockXP Fix, IniFox.
+
+Anti-malware: HijackThis, ComboFix, MSNCleaner, IniRem, SDFix, DelPSGuard, Panda USB Vaccine, RKill, FixBagle, DT-Kill, VundoFix, Lop S&D, etc.
+
+Anti-rootkits: GMER, Avira AntiRootkit, Sophos Anti-Rootkit, F-Secure BlackLight, RootkitRevealer, Panda Anti-Rootkit.
+
+Anti-spyware, para eliminar y prevenir spywares (espías), como SpywareBlaster, SpyBot S&D, HijackThis, SUPERAntiSpyware, Spy Sweeper, o DelPSguard.
+
+Antivirus: Nod32 Antivirus, Avira AntiVir Norton™ AntiVirus, Avast, Kaspersky Antivirus, Panda Antivirus.
+
+### 12. Herramientas de diagnóstico Linux
+
+```bash
+cat /proc/cpuinfo. Fichero con información básica sobre el procesador: fabricante, modelo, velocidad, caché, stepping, flags y algunos datos más.
+```
+
+Comando → $ cat /proc/cpuinfo
+
+lspci. Esta utilidad muestra información sobre todos los dispositivos conectados vía PCI.
+
+Información más detallada→ verbose (lspci -vvv).
+
+Comando → $ lspci
+
+lshw. Muestra una lista del hardware de forma jerárquica. Podemos obtener la salida en formato HTML. Por ejemplo, crear el archivo diagnostico.htm con el listado del hardware instalado
+
+```bash
+$ sudo lshw -html > Escritorio/diagnostico.htm
+```
+
+Interfaz gráfica de lshw → instalar lshw-gtk (sudo apt-get install lshw-gtk).
+
+```bash
+$ comando → sudo lshw -X
+```
+
+hwinfo. consultas al hardware y aporta información sobre qué drivers lo controlan. (salida extensa).
+
+Para instalarlo → sudo apt-get install hwinfo.
+
+```bash
+$ comando → hwinfo
+```
+
+x86info. Informa de parámetros internos de la CPU: registros, flags, asociatividad de los niveles de caché.
+
+Para instalarlo → sudo apt-get install x86info
+
+Comando → $ x86info
+
+Toda información → $ x86info –a
+
+discover. Detectar recursos hardware.
+
+Para instalarla → sudo apt-get install discover.
+
+Comando → $ discover
+
+sysinfo. Vistazo rápido del hardware del equipo.
+
+Para instalarla → sudo apt-get install sysinfo.
+
+Comando → $ sysinfo
+
+hardinfo. Muestra información del sistema y realiza benchmarks. (recuerda a Aida64 )
+
+Para instalarla → sudo apt-get install hardinfo
+
+Comando → $ hardinfo
+
+---
+
+## ✍️ Activitats pràctiques UT3
+
+> **✍️ Activitat Pràctica 3.1 — T5 - P LISTENING - A STAR WARS EPISODE**
+> Answer these questions about the episode 6 of Boba Fett
+>
+> 1.- What want to eat Grogu while Skywalker was
+> teaching him?
+>
+> 2.-
+> In Grogu’s vision, What did he see?
+>
+> 3.-
+> At the beginning of the episode, who did they say that is the owner
+> of the territory?
+>
+> 4.-
+> What is the name of Baby Yoda?
+>
+> 5.-
+> Did Mandalorian finally talk to Luke Skywalker?
+>
+> 6.-
+> Who is Mandalorian looking for when he arrives with the ship?
+>
+> 7.-
+> Which kind of robot was building the Yedi Temple?
+>
+> 8.-
+> What use Skywalker to improve the capacity of Grogu?
+>
+> 9.-
+> At the end of the episode, What learns to do Grogu?
+>
+> 10.-
+> What was inside the chest?
+
+> **✍️ Activitat Pràctica 3.2 — U5 - T PRACT - CHECKLIST - REPARA LOS FALLOS DE TU ORDENANOR**
+> Mediante el Checklist que has elaborado con lo visto en clase. Resuelve los problemas de tu equipo de Prácticas y sube la memoria del Checklist completo, las observaciones y la solución del problema.
+>
+> Si te da tiempo, realiza fotos de las soluciones y adjuntalas a la memoria.
+
+> **✍️ Activitat Pràctica 3.3 — U5 - T PRACT - EXPOSICIÓ - FERRAMENTES DE MANTENIMENT.**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 3.4 — U5 - T PRACT - PROCEDIMENT - FERRAMENTES DE MANTENIMENT**
+> Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+> **✍️ Activitat Pràctica 3.5 — U5 - ACT - CHECKLIST DE MANTENIMIENTO FINAL**
+> Sube en formato PDF el CHECKLIST para revisión del estado, fallos, mantenimiento de un ordenador.
+>
+> Tiene que contener todos los puntos vistos en la Unidad 5 de Clase.

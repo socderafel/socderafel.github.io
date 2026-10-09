@@ -1,0 +1,403 @@
+{
+  "title": "🕵️ Hacking Ètic i Auditoria de Seguretat — CE Ciberseguretat (CETI)",
+  "home": {
+    "label": "🏠 Inici Hacking Ètic i Auditoria de Seguretat",
+    "href": "index.html"
+  },
+  "units": [
+    {
+      "summary": "UT0 — Unitat Didàctica 0",
+      "items": [
+        {
+          "label": "📘 UT0 Completa (1 pàgina)",
+          "href": "ut00/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "0.1 Chat general",
+          "href": "ut00/ut0001.html"
+        },
+        {
+          "label": "0.2 Programación del módulo",
+          "href": "ut00/ut0002.html"
+        },
+        {
+          "label": "0.3 Contenidos y criterios de evaluación",
+          "href": "ut00/ut0003.html"
+        },
+        {
+          "label": "0.4 Presentación del módulo",
+          "href": "ut00/ut0004.html"
+        },
+        {
+          "label": "0.5 Accesibilidad",
+          "href": "ut00/ut0005.html"
+        },
+        {
+          "label": "0.6 guia para aprender a programar",
+          "href": "ut00/ut0006.html"
+        },
+        {
+          "label": "0.7 Primera evaluación",
+          "href": "ut00/ut0007.html"
+        },
+        {
+          "label": "0.8 Segunda evaluación",
+          "href": "ut00/ut0008.html"
+        },
+        {
+          "label": "0.9 Tercera evaluación",
+          "href": "ut00/ut0009.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT1 — Elementos esenciales del HE",
+      "items": [
+        {
+          "label": "📘 UT1 Completa (1 pàgina)",
+          "href": "ut01/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.1 HE 1",
+          "href": "ut01/ut0101.html"
+        },
+        {
+          "label": "1.2 Prácticas tema 1",
+          "href": "ut01/ut0102.html"
+        },
+        {
+          "label": "1.3 tema1",
+          "href": "ut01/ut0103.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT1",
+          "href": "ut01/ut01actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT2 — Unitat Didàctica 2",
+      "items": [
+        {
+          "label": "📘 UT2 Completa (1 pàgina)",
+          "href": "ut02/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 tema2",
+          "href": "ut02/ut0201.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT2",
+          "href": "ut02/ut02actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT3 — Unitat Didàctica 3",
+      "items": [
+        {
+          "label": "📘 UT3 Completa (1 pàgina)",
+          "href": "ut03/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 Auditories",
+          "href": "ut03/ut0301.html"
+        },
+        {
+          "label": "3.2 Material adicional",
+          "href": "ut03/ut0302.html"
+        },
+        {
+          "label": "3.3 Material adicional 2",
+          "href": "ut03/ut0303.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT3",
+          "href": "ut03/ut03actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT4 — Footprinting",
+      "items": [
+        {
+          "label": "📘 UT4 Completa (1 pàgina)",
+          "href": "ut04/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 Footprinting con Google",
+          "href": "ut04/ut0401.html"
+        },
+        {
+          "label": "4.2 Footprinting con Bing",
+          "href": "ut04/ut0402.html"
+        },
+        {
+          "label": "4.3 Footprinting con Shodan",
+          "href": "ut04/ut0403.html"
+        },
+        {
+          "label": "4.4 Footprint",
+          "href": "ut04/ut0404.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT4",
+          "href": "ut04/ut04actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT5 — Fingerprint",
+      "items": [
+        {
+          "label": "📘 UT5 Completa (1 pàgina)",
+          "href": "ut05/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 Introducción al Fingerprinting",
+          "href": "ut05/ut0501.html"
+        },
+        {
+          "label": "5.2 Nmap",
+          "href": "ut05/ut0502.html"
+        },
+        {
+          "label": "5.3 Fingerprinting",
+          "href": "ut05/ut0503.html"
+        },
+        {
+          "label": "5.4 Presentación fingerprint",
+          "href": "ut05/ut0504.html"
+        },
+        {
+          "label": "5.5 Enumeración con nmap",
+          "href": "ut05/ut0505.html"
+        },
+        {
+          "label": "5.6 Scripts amb nmap",
+          "href": "ut05/ut0506.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT5",
+          "href": "ut05/ut05actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT6 — Auditorias de seguridad con Wireshark",
+      "items": [
+        {
+          "label": "📘 UT6 Completa (1 pàgina)",
+          "href": "ut06/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 Wireshark",
+          "href": "ut06/ut0601.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT6",
+          "href": "ut06/ut06actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT7 — Auditorias de seguridad utilizando hping",
+      "items": [
+        {
+          "label": "📘 UT7 Completa (1 pàgina)",
+          "href": "ut07/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Auditorias utilizando hping3",
+          "href": "ut07/ut0701.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT8 — Contratos pretesting",
+      "items": [
+        {
+          "label": "📘 UT8 Completa (1 pàgina)",
+          "href": "ut08/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Creación de contratos",
+          "href": "ut08/ut0801.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT8",
+          "href": "ut08/ut08actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT9 — Fase de análisis",
+      "items": [
+        {
+          "label": "📘 UT9 Completa (1 pàgina)",
+          "href": "ut09/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 analisi",
+          "href": "ut09/ut0901.html"
+        },
+        {
+          "label": "9.2 Nessus",
+          "href": "ut09/ut0902.html"
+        },
+        {
+          "label": "9.3 practiques",
+          "href": "ut09/ut0903.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT9",
+          "href": "ut09/ut09actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT10 — Ejercicios Fingerprinting",
+      "items": [
+        {
+          "label": "📘 UT10 Completa (1 pàgina)",
+          "href": "ut10/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT10",
+          "href": "ut10/ut10actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT11 — Ingenieria social",
+      "items": [
+        {
+          "label": "📘 UT11 Completa (1 pàgina)",
+          "href": "ut11/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "11.1 Ingenieria social",
+          "href": "ut11/ut1101.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT11",
+          "href": "ut11/ut11actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT12 — Explotación de vulnerabilidades",
+      "items": [
+        {
+          "label": "📘 UT12 Completa (1 pàgina)",
+          "href": "ut12/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "12.1 Introducción",
+          "href": "ut12/ut1201.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT13 — Pentesting web",
+      "items": [
+        {
+          "label": "📘 UT13 Completa (1 pàgina)",
+          "href": "ut13/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "13.1 Pentesting web",
+          "href": "ut13/ut1301.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT13",
+          "href": "ut13/ut13actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT14 — Robots de Búsquedas",
+      "items": [
+        {
+          "label": "📘 UT14 Completa (1 pàgina)",
+          "href": "ut14/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "14.1 Continguts i Recursos",
+          "href": "ut14/ut1401.html"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT14",
+          "href": "ut14/ut14actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT15 — Riesgos laborales en el entorno de HE",
+      "items": [
+        {
+          "label": "📘 UT15 Completa (1 pàgina)",
+          "href": "ut15/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT15",
+          "href": "ut15/ut15actividades.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT16 — Explotación de vulnerabilidades",
+      "items": [
+        {
+          "label": "📘 UT16 Completa (1 pàgina)",
+          "href": "ut16/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "16.1 Explotación",
+          "href": "ut16/ut1601.html"
+        },
+        {
+          "label": "16.2 Metasploit",
+          "href": "ut16/ut1602.html"
+        }
+      ]
+    },
+    {
+      "summary": "UT17 — -------",
+      "items": [
+        {
+          "label": "📘 UT17 Completa (1 pàgina)",
+          "href": "ut17/index.html",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "✍️ Activitats pràctiques UT17",
+          "href": "ut17/ut17actividades.html"
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "label": "📂 Índex de Documents i Recursos",
+      "href": "references.html"
+    }
+  ]
+}

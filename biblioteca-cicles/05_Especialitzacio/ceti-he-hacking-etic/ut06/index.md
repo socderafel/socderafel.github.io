@@ -1,0 +1,240 @@
+---
+layout: default
+title: "UT6 — Auditorias de seguridad con Wireshark — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "CE Ciberseguretat (CETI) · UT6 Completa"
+prev_url: "../ut05/ut05actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+next_url: "../ut06/ut0601.html"
+next_label: "6.1 Wireshark ➡️"
+---
+
+# 📘 UT6 — Auditorias de seguridad con Wireshark (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**6.1 Wireshark**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
+> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+
+---
+
+## 6.1 Wireshark
+
+Auditoria de seguridad mediante el uso de Wireshark.
+
+Se trata de un método pasivo, donde se trata de "oir" la red y analizar los paquetes para identificar máquinas y servicios.
+
+No se genera ninguna comunicación con el destino por lo que este método es indetectable para el receptor
+
+Tema 5.3. Auditoria de seguretat: Fingerprint passiu mitjançant Wireshark. Hacking ètic (HE) 1r CIBER
+
+Hacking ètic 1r CIBER La informació continguda en aquesta presentació només és per a fins educatius. EL PROFESSORAT DEL CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ I EL CENTRE EDUCATIU NO ES FAN RESPONSABLES DE L'ÚS INDEGUT D'AQUESTA INFORMACIÓ.
+
+ÍNDEX Hacking ètic 1r CIBER ➤ AUDITORIA DE SEGURETAT. ○ INTRODUCCIÓ. ○ FASES DEL PROCÉS. ➤ WIRESHARK. ○ INTRODUCCIÓ. ○ DEFINICIÓ. ○ PER A QUÈ SERVEIX? ○ AVANTATGES. ○ INCONVENIENTS. ○ INSTAL·LACIÓ. ○ INTERFÍCIE GRÀFICA. ○ UTILITZACIÓ. ■ CAPTURA DE TRÀFIC D’UNA XARXA.
+
+■ FILTRACIÓ DE PAQUETS OBTINGUTS PER PROTOCOL, PORT I DIRECCIÓ IP. ■ ANÀLISI DE PAQUETS OBTINGUTS. ■ ESTADÍSTIQUES. ○ INFORMACIÓ ADDICIONAL.
+
+● Una auditoria es una revisió pràctica que es realitza sobre els recursos informàtics que disposa una entitat amb la finalitat d'emetre un informe o dictamen sobre la situació en què es desenvolupen i s'utilitzen. ● Un procés d'auditoria recorre certes pràctiques enfocades a les diferents proves que s'hauran de realitzar per satisfer la demanda de client, utilitzant el Hacking Ètic en algunes de les fases d’aquest procés.
+
+Hacking ètic 1r CIBER AUDITORIA DE SEGURETAT INTRODUCCIÓ
+
+### 1. Footprinting: Recollida d'informació pública o “information gathering” (menys
+
+important en un procés d'auditoria interna).
+
+- Fingerprinting: Anàlisi de serveis localitzats en la fase de Footprint.
+
+### 3. Anàlisi de Vulnerabilitats sobre els serveis operatius que s’han analitzat en la
+
+fase de Fingerprint.
+
+- Explotació de Vulnerabilitats localitzades en la fase d'Anàlisi de Vulnerabilitats.
+
+### 5. Generació d'informes amb les vulnerabilitats localitzades i les possibles
+
+solucions. Hacking ètic 1r CIBER AUDITORIA DE SEGURETAT FASES DEL PROCÉS
+
+- Fingerprint: Anàlisi de serveis localitzats en la fase de Footprint.
+
+○ Després de donar una volta a l'edifici, observant de lluny si hi ha alguna porta o finestra oberta, algun forat a la paret (footprinting), ens aproparem i intentarem donar colps a les portes, per si alguna s'obri, per veure si apareixen guàrdies… (fingerprinting).
+
+○ El fingerprinting és el procés de recol·lecció d'informació en el qual s'interactua directament amb els sistemes per aprendre més sobre la seua configuració i el seu comportament. Hacking ètic 1r CIBER AUDITORIA DE SEGURETAT FASES DEL PROCÉS: FINGERPRINT
+
+Hacking ètic 1r CIBER AUDITORIA DE SEGURETAT FASES DEL PROCÉS: FINGERPRINT PASSIU ● Les ferramentes passives es configuren per escoltar en una xarxa i analitzar els paquets per identificar màquines i serveis (sniffing), la qual cosa vol dir que el sistema atacant no genera cap comunicació cap a la destinació per tal de provocar una resposta.
+
+● Les ferramentes passives són indetectables per al receptor.
+
+● Qualsevol administrador de xarxes s'ha enfrontat alguna vegada a una pèrdua del rendiment de la xarxa que gestiona. En aquest cas sabrà que no sempre és senzill, per falta de temps i recursos o per desconeixement de les ferramentes apropiades, tindre clars els motius pels quals s’ha produït aquest problema.
+
+● En la majoria d'ocasions, les causes d'aquests problemes tenen un origen no premeditat i es deuen a una mala configuració de la xarxa. ● Però, en altres ocasions, pot tractar-se d'atacs induïts per tercers que pretenen deixar fora de servei un servidor web mitjançant un atac DoS, ensumar trànsit mitjançant un enverinament ARP o infectar els equips amb codi maliciós, amb la finalitat de que formen part d'una xarxa zombi.
+
+Hacking ètic 1r CIBER WIRESHARK INTRODUCCIÓ
+
+● En qualsevol cas, conèixer l'origen de l'incident és el primer pas per poder prendre les contramesures necessàries i aconseguir una protecció correcta. ● En aquest punt, els analitzadors de trànsit poden ser útils per detectar, analitzar i correlacionar trànsit identificant les amenaces de xarxa i limitar-ne l'impacte.
+
+● Amb aquest propòsit, hi ha al mercat dispositius avançats com el sistema MARS (Monitoring, Analysis and Response System) de Cisco, entre altres. ● Però aquestes solucions no sempre estan a l'abast de totes les empreses, ja que tenen un cost elevat, moltes vegades no assumible per l’organització.
+
+● Per això, i per cobrir les necessitats d'entitats amb infraestructures tecnològiques més modestes, es presenta la ferrramenta Wireshark. Hacking ètic 1r CIBER WIRESHARK INTRODUCCIÓ
+
+● Wireshark és l'analitzador de paquets més conegut i utilitzat a tot el món, que té l’objectiu de capturar i analitzar detalladament tot el trànsit de xarxa que entra i ix del nostre ordinador, per detectar les amenaces existents a la nostra xarxa. ● Wireshark implementa una àmplia gamma de filtres, que faciliten la definició de criteris de búsqueda, per als més de 1100 protocols suportats a la última versió.
+
+● Wireshark és una de les ferramentes que s’han d’utilitzar a la majoria dels processos d’auditoris que es poden dur a terme en un procés de Hacking Ètic. WIRESHARK DEFINICIÓ Hacking ètic 1r CIBER
+
+● Wireshark serveix per a detectar problemes que van des de paquets caiguts, problemes de latència i fins a activitat maliciosa a la xarxa, proporcionant ferramentes i instruccions per filtrar i analitzar amb detalls el trànsit de xarxa, apropant-se a la causa principal del problema.
+
+● Els administradors de sistemes i de xarxa l’utilitzen per identificar dispositius defectuosos que estan descartant paquets, problemes de latència en peticions causades per màquines defectuoses que encaminen el trànsit de xarxa a qualsevol lloc del món possible, exfiltracions de dades (fuga d’informació) i, fins i tot, intents d'atac amb malware contra una organització.
+
+WIRESHARK PER A QUÈ SERVEIX? Hacking ètic 1r CIBER
+
+Les característiques principals de Wireshark són les següents: ● Permet seguir el rastre als paquets TCP stream, per veure tot allò relacionat amb aquest paquet, l'abans i el després, podent aplicar filtres personalitzats a aquests paquets sense perdre el flux. ● Els paquets es poden descodificar, exportar-los en formats específics i guardar aquests objectes.
+
+● Permet veure estadístiques dels paquets capturats, on s’inclou un resum, jerarquia de protocols, converses, punts finals i gràfica de fluxos entre d'altres. WIRESHARK CARACTERÍSTIQUES Hacking ètic 1r CIBER
+
+Les característiques principals de Wireshark són les següents: ● Anàlisi fàcil i informatiu mitjançant resolució de noms per mac, per xarxa, entre altres, i reassemblatge de paquets. ● Compta amb una ferramenta de línies de comandaments (CLI) per executar funcionalitats, anomenada TShark, similar al terminal de linux.
+
+WIRESHARK CARACTERÍSTIQUES Hacking ètic 1r CIBER
+
+Els avantatges principals de Wireshark són els següents: ● Té un gran suport darrere de les seues analítiques i funcionalitats, amb molt de personal a càrrec de noves funcions i parxes, solucionant errors que la comunitat detecta. Això inclou la seva documentació extensa, a més de comptar amb una comunitat enorme, que crea i soluciona consultes sobre funcionalitats molt específiques relacionades amb l’anàlisi d'aquests paquets de xarxa.
+
+● Captura tot tipus de paquets quan analitza la xarxa. ● Mostra errors i problemes a nivells inferiors del protocol HTTP. ● Guarda i restaura les dades empaquetades capturades, en fitxers .pcap. WIRESHARK AVANTATGES Hacking ètic 1r CIBER
+
+Els principals inconvenients, encara que no són tan importants, de Wireshark són els exposats seguidament: ● Quan es realitza un anàlisi de la xarxa, no es poden modificar dades dels paquets, únicament es pot fer mitjançant fitxers de xarxa, que són els fitxer d’extensió .pcap.
+
+● El programa presenta una interfície d’usuari poc funcional i intuïtiva. WIRESHARK INCONVENIENTS Hacking ètic 1r CIBER
+
+● Wireshark és completament gratuït i és multiplataforma, ja que està disponible per a sistemes operatius Windows, Linux, mac OS, etc. Per a descarregar-lo, es pot accedir directament a la web oficial de Wireshark al següent enllaç: Download Wireshark ● Si tens un sistema operatiu basat en Linux, és molt probable que al teu gestor de paquets tingues Wireshark, i, per tant, sols has d'executar l’ordre següent
+
+```bash
+sudo apt install wireshark
+```
+
+● A Kali Linux, Wireshark ja ve preinstal·lat. WIRESHARK INSTAL·LACIÓ Hacking ètic 1r CIBER
+
+WIRESHARK INTERFÍCIE GRÀFICA
+
+● A continuació, s’exposen alguns exemples d’utilització de Wireshark, a Kali Linux, per a exemplificar l’ús d’aquesta ferramenta d’anàlisi de dades: ○ Captura de tràfic d’una xarxa. ○ Filtració de paquets obtinguts. ○ Anàlisi de paquets obtinguts. ○ Estadístiques. WIRESHARK UTILITZACIÓ Hacking ètic 1r CIBER
+
+● Wireshark té la capacitat de capturar el tràfic existent a una xarxa. ● Per a començar, anem a realitzar un escaneig de la interfície de xarxa eth0, que ens mostrarà el tràfic que circula per la xarxa d’ethernet. ● Però, abans de res, anem a veure la nostra configuració de red, utilitzant la instrucció ifconfig, que ens servirà per saber que els paquets que originem, aniran marcats amb l’etiqueta de la nostra direcció IP.
+
+● Comencem l’escaneig polsant el botó: ● Les dos diapositives resultants mostren el resultat del procés. WIRESHARK UTILITZACIÓ: CAPTURA DE TRÀFIC D’UNA XARXA Hacking ètic 1r CIBER
+
+WIRESHARK UTILITZACIÓ: CAPTURA DE TRÀFIC D’UNA XARXA Hacking ètic 1r CIBER
+
+● Ací podem veure les diferents opcions que té Wireshark: ○ Podem iniciar, parar o tornar a realitzar l’escaneig, inclús canviar opcions. ○ Podem guardar, obrir, tancar o tornar a carregar l’arxiu obtingut. ○ Amb les fletxes, podem avançar, retrocedir o anar al primer o últim paquet.
+
+○ Podem aplicar filtres de pantalla segons la informació que ens interesse. ○ Podem fer zoom o canviar els tamanys per a visualitzar millor la informació. WIRESHARK UTILITZACIÓ: CAPTURA DE TRÀFIC D’UNA XARXA Hacking ètic 1r CIBER
+
+● Ací podem veure totes les columnes que té Wireshark: ○ Podem aplicar filtres de pantalla segons la informació que ens interese. Per exemple, podem filtrar pel protocol HTTP o DNS. ○ A les columnes, podem veure diversa informació d’interés: com el nombre de paquets (No), el temps en el que han entrat (Time), la direcció IP o MAC de l’origen del paquet (Source), la direcció on va dirigit el paquet (Destination), el protocol utilitzat per a transferir el paquet (Protocol), la longitud (Length) i informació addicional sobre el paquet (Info).
+
+WIRESHARK UTILITZACIÓ: CAPTURA DE TRÀFIC D’UNA XARXA Hacking ètic 1r CIBER
+
+● Si a les columnes no apareix tota la informació que volem, podem afegir-la
+
+- Fem click dret sobre la capçalera, on estan les columnes.
+- Seleccionem Column Preferences.
+
+### 3. Podem personalitzar les columnes que volem que apareixen a l’escaneig
+
+WIRESHARK UTILITZACIÓ: CAPTURA DE TRÀFIC D’UNA XARXA Hacking ètic 1r CIBER
+
+● Podem personalitzar els colors dels paquets que capturem a la xarxa, per poder identificar-los d’una manera àgil i ràpida: ● Edició ⇒Preferències ⇒Aparença ⇒Fonts i colors. WIRESHARK UTILITZACIÓ: CAPTURA DE TRÀFIC D’UNA XARXA Hacking ètic 1r CIBER
+
+● El panell de detalls i capes està immediatament baix dels paquets capturats. ● Si seleccionem un paquet que ha utilitzat el protocol TCP, dins d’aquest panell, tenim 4 desplegables: ○ Frame: Indica el nombre de bits que té i la interfície utilitzada. ○ Ethernet II: Capa física de connexió, indica direccions MAC d’origen i destí.
+
+○ Internet Protocol Version: Indica direccions IP d’origen i destí. ○ Transmission Control Protocol: Indica els ports d’origen i destí. WIRESHARK UTILITZACIÓ: CAPTURA DE TRÀFIC D’UNA XARXA ⇒PANELL DE DETALLS I CAPES Hacking ètic 1r CIBER
+
+● Wireshark permet la filtració de paquets, per realitzar anàlisis més concrets. ● El més recomanable sempre es realitzar, primer, un escanejat complet de la xarxa i, després, aplicar els filtres corresponents. ● Encara que, si volem aplicar filtres abans d’executar l’anàlisi, s’indiquen ací
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS OBTINGUTS Hacking ètic 1r CIBER
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS PER PROTOCOL ⇒HTTP (OCSP)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS PER PROTOCOL ⇒TCP
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS PER PROTOCOL ⇒UDP (DNS)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER PORT ⇒TCP PER PORT 80 (HTTP)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER PORT ⇒UDP PER PORT 53 (DNS)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER PORT ⇒TCP PER PORT 443 (HTTPS)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER PORT ⇒TCP PER SOURCE PORT 443 (HTTPS)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER PORT ⇒TCP PER DEST PORT 443 (HTTPS)
+
+● Wireshark permet la utilització d’operadors lògics per a aplicar filtres amb major complexitat, enumerant els més importants: ○ && // and ⇒AND lògic. ○ || // or ⇒OR lògic. ○ not ⇒Negació. ○ == ⇒Comparació (igual). ○ != ⇒Comparació (desigual). ○ contains ⇒filtra els paquets segons el seu contingut.
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS OBTINGUTS Hacking ètic 1r CIBER
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER PORT ⇒TCP O UDP PER PORT 443 (HTTPS)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS OBTINGUTS Hacking ètic 1r CIBER ● Es poden aplicar filtres directes, dirigint-nos a les trames (Aplicar com filtre)
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS OBTINGUTS Hacking ètic 1r CIBER ● Aplicant, com a filtre, el nombre de seqüència, obtenim els resultats
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS PER DIRECCIÓ IP Hacking ètic 1r CIBER ● Wireshark també ens permet aplicar filtres per direcció IP, ja siga direccions IP versió 4 (IPv4) o direccions IP versió 6 (IPv6). ● Per a filtrar per IP, podem començar filtrant per la nostra direcció IP.
+
+● Sols introduint “ip”, ja ens mostra una sèrie de suggerències
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ DE PAQUETS PER LA NOSTRA DIRECCIÓ IP Hacking ètic 1r CIBER
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER NOSTRA DIRECCIÓ IP I SOURCE PORT Hacking ètic 1r CIBER
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER LA NOSTRA DIRECCIÓ IP I PORT 443 Hacking ètic 1r CIBER
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER L’OPCIÓ “SEGUIR FLUX TCP” Hacking ètic 1r CIBER ● Wireshark permet seguir el rastre de determinats paquets. ● Amb l'opció “Seguir flux TCP”, es pot observar la connexió entre dos màquines i quin ha sigut el flux d'informació entre elles. A través d'aquesta opció, es poden visualitzar les comunicacions i seguir-les, i fins i tot reconstruir fitxers.
+
+WIRESHARK UTILITZACIÓ: FILTRACIÓ PER L’OPCIÓ “SEGUIR FLUX TCP” Hacking ètic 1r CIBER
+
+● L’anàlisi dels paquets obtinguts l’heu realitzat a l’assignatura d’Anàlisi Forense. ● El contingut dels paquets es mostra en la part inferior de la interfície gràfica: WIRESHARK UTILITZACIÓ: ANÀLISI DE PAQUETS OBTINGUTS Hacking ètic 1r CIBER
+
+WIRESHARK UTILITZACIÓ: ESTADÍSTIQUES ⇒JERARQUIA DE PROTOCOLS Hacking ètic 1r CIBER ● Wireshark disposa de diversos mòduls d'estadístiques molt interessants, capaços de mostrar en temps real percentatges i estadístiques sobre trames capturades. A la pestanya “Estadístiques”, es poden trobar diferents opcions, entre les quals destaquem “Jerarquia de Protocols”, que mostra en percentatges els paquets capturats de quin tipus són, a quin nivell de xarxa pertanyen...
+
+WIRESHARK UTILITZACIÓ: ESTADÍSTIQUES ⇒GRÀFIC DE FLUX Hacking ètic 1r CIBER ● Una altra opció interessant que ens permet visualitzar la comunicació amb el trànsit TCP o general, amb l'opció “Gràfic de flux”.
+
+● La documentació de Wireshark, la podeu trobar al següent enllaç: Wireshark · Documentation ● Wireshark compta amb una comunitat de més de 3600 membres a Reddit, que crea i soluciona consultes sobre funcionalitats molt específiques relacionades amb l’anàlisi d'aquests paquets de xarxa. L’enllaç a aquesta comunitat és
+
+Everything Wireshark ● Com a documentació extra Wireshark, vos adjunte una extensa guía d’usuari, per a poder trobar informació relacionada amb funcions bàsiques i avançades Wireshark User's Guide.pdf WIRESHARK INFORMACIÓ ADDICIONAL Hacking ètic 1r CIBER
+
+---
+
+## ✍️ Activitats pràctiques UT6
+
+> **✍️ Activitat Pràctica 6.1 — Ejercicio**
+> PRÀCTICA TEMA 5.3 PART 1 - HACKING ÈTIC - WIRESHARK.
+>
+> CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ.
+>
+> En aquesta pràctica 5.3, heu de realitzar uns exercicis, mitjançant Kali Linux i la ferramenta Wireshark, amb la finalitat de realitzar análisis amb les captures de tràfic de la xarxa ethernet.
+>
+> Abans de començar amb els exercicis, heu d’iniciar una captura de paquets a través de la xarxa ethernet (eth0), mentre obriu el navegador, entreu a les pàgines web google.com, wireshark.org i incibe.es, i tanqueu el navegador.
+>
+> El nom i el tipus de columnes que contindrà cada resposta de l’exercici seran les següents, ordenades amb el mateix ordre que vos indique: No. (Number), Time (Time, format as specified), Absolute Time (Absolute Time), Source (Source Address), Source Port (Source Port), Destination (Destination Address), Destination Port (Destination Port), Protocol (Protocol), Length (Packet length, bytes), Cumulative Bytes (Cumulative Bytes), Info (Information).
+>
+> A partir d’ací, heu d’aplicar els filtres corresponents a les especificacions de l’exercici i realitzar un anàlisi del resultat obtingut.
+>
+> Filtrar els paquets obtinguts per protocol UDP.
+>
+> Filtrar els paquets obtinguts per protocol UDP i port d’origen DNS.
+>
+> Filtrar els paquets obtinguts per protocol TCP i port de destí HTTP.
+>
+> Filtrar els paquets obtinguts per protocol TCP, ignorant els ports de HTTP i HTTPS, enviats pel port d’origen i destí.
+>
+> Filtrar els paquets obtinguts per protocol JSON.
+>
+> Filtrar els paquets obtinguts per TCP amb un nombre de seqüència de 20938814. Si no s’obté cap resultat, proveu amb un altre nombre de seqüència.
+>
+> Filtrar els paquets obtinguts per una longitud de trama de 54 bytes.
+>
+> Filtrar els paquets obtinguts per un nombre de respostes del paquet igual a 2 (Answer RRs = 2), tenint en compte únicament els paquets que han utilitzat el protocol DNS.
+>
+> Les respostes hauran de contenir
+>
+> La instrucció completa del filtre que s’ha utilitzat a Wireshark per a complir els requisits de la búsqueda.
+>
+> Una descripció de cada instrucció utilitzada (no repetir explicació).
+>
+> Una o varies captures de pantalla dels resultats obtinguts.
+>
+> Un anàlisi dels resultats obtinguts.

@@ -1,0 +1,55 @@
+site_name: "☁️ Serveis de Xarxa i Internet — 2n ASIX · Grau Superior"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT0 — Unitat Didàctica 0":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Welcome SXI": ut00/ut0001.md
+      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
+  - "UT1 — Unit 1 - DHCP":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "1.1 U1 DHCP": ut01/ut0101.md
+      - "1.2 U1 P1": ut01/ut0102.md
+      - "1.3 U1 P2": ut01/ut0103.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
+  - "UT2 — Unit 2 - DNS":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 U2 DNS": ut02/ut0201.md
+      - "2.2 U2 P1": ut02/ut0202.md
+      - "2.3 U2 P2": ut02/ut0203.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — Unit 3 - HTTP":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "3.1 U3 HTTP": ut03/ut0301.md
+      - "3.2 Grups Treball": ut03/ut0302.md
+      - "3.3 U3 A3 Windows Group": ut03/ut0303.md
+      - "3.4 U3 P1": ut03/ut0304.md
+      - "3.5 U3 P2": ut03/ut0305.md
+      - "3.6 U3 P3": ut03/ut0306.md
+      - "3.7 U3 P4": ut03/ut0307.md
+      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
+  - "UT4 — Unit 4 - FTP":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 U4 FTP": ut04/ut0401.md
+      - "4.2 Grups": ut04/ut0402.md
+      - "4.3 U4 P1": ut04/ut0403.md
+      - "4.4 U4 P2": ut04/ut0404.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UT5 — Unit 5 - SSH":
+      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+      - "5.1 U5 SSH": ut05/ut0501.md
+      - "5.2 U5 P1": ut05/ut0502.md
+      - "5.3 U5 P2": ut05/ut0503.md
+  - "UT6 — Unit 6 - Email":
+      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
+      - "6.1 U6 Email": ut06/ut0601.md
+      - "6.2 U6P1": ut06/ut0602.md
+      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
+  - "UT7 — Unit 7 - Audio and Video":
+      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+      - "7.1 U7 Audio and Video": ut07/ut0701.md
+      - "7.2 U7 P1": ut07/ut0702.md
+      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
+  - "📂 Índex de Documents i Recursos": references.md

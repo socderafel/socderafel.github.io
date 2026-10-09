@@ -1,0 +1,1354 @@
+---
+layout: default
+title: "UT16 — Interfaces gráficas de usuario — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
+course_root: ".."
+badge: "1r DAW / DAM · Grau Superior · UT16 Completa"
+prev_url: "../ut15/ut1503.html"
+prev_label: "⬅️ 15.3 mysql-connector-java-8.0.19"
+next_url: "../ut16/ut1601.html"
+next_label: "16.1 Código de clase ➡️"
+---
+
+# 📘 UT16 — Interfaces gráficas de usuario (Unitat Completa)
+
+> **💡 📑 Índex d'Apartats d'aquesta Unitat**
+> - [**16.1 Código de clase**](#ut1601) (o [obrir en pàgina individual ➡️](./ut1601.md) )
+> - [**16.2 JavaFX**](#ut1602) (o [obrir en pàgina individual ➡️](./ut1602.md) )
+> - [**16.3 JavaFX**](#ut1603) (o [obrir en pàgina individual ➡️](./ut1603.md) )
+> - [**16.4 ContadorSimpleFX mejorado**](#ut1604) (o [obrir en pàgina individual ➡️](./ut1604.md) )
+
+---
+
+## 16.1 Código de clase
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### Contenido de la unidad
+
+> **🔗 Recurs Web: 01 - Unidad 12: Instalación y configuración de JavaFX en Eclipse**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=K6owPFtZtIE) ↗️**](https://www.youtube.com/watch?v=K6owPFtZtIE)
+
+> **🔗 Recurs Web: 02 - Unidad 12: MVC en JavaFX (Parte 1 de 4)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=yq0lniASj_A) ↗️**](https://www.youtube.com/watch?v=yq0lniASj_A)
+
+> **🔗 Recurs Web: 03 - Unidad 12: MVC en JavaFX (Parte 2 de 4)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=gDn8mj32-Ko) ↗️**](https://www.youtube.com/watch?v=gDn8mj32-Ko)
+
+> **🔗 Recurs Web: 04 - Unidad 12: MVC en JavaFX (Parte 3 de 4)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=vJ4eqtce7ZI) ↗️**](https://www.youtube.com/watch?v=vJ4eqtce7ZI)
+
+> **🔗 Recurs Web: 05 - Unidad 12: MVC en JavaFX (Parte 4 de 4)**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=MgQacC06APA) ↗️**](https://www.youtube.com/watch?v=MgQacC06APA)
+
+> **🔗 Recurs Web: 06 - Unidad 12: CSS en JavaFX**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=Va1CHKEp6Wk) ↗️**](https://www.youtube.com/watch?v=Va1CHKEp6Wk)
+
+> **🔗 Recurs Web: 07 - Unidad 12: Asociación de eventos sobre controles**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=wuHoafbjdac) ↗️**](https://www.youtube.com/watch?v=wuHoafbjdac)
+
+> **🔗 Recurs Web: 08 - Unidad 12: Menús**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=ttr7OGaEgGQ) ↗️**](https://www.youtube.com/watch?v=ttr7OGaEgGQ)
+
+> **🔗 Recurs Web: 09 - Unidad 12: Ventana modal**
+> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=Ze3nVS6K3uI) ↗️**](https://www.youtube.com/watch?v=Ze3nVS6K3uI)
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### Prácticas de aula
+
+> **🔗 Recurs Web: JavaFX: Web oficial**
+> [**🌐 Obrir recurs extern (https://openjfx.io/) ↗️**](https://openjfx.io/)
+
+> **🔗 Recurs Web: Tutorial JavaFX (cómo crear una aplicación desde 0)**
+> [**🌐 Obrir recurs extern (https://code.makery.ch/es/library/javafx-tutorial/) ↗️**](https://code.makery.ch/es/library/javafx-tutorial/)
+
+> **🔗 Recurs Web: JavaFX Dialogs (with examples)**
+> [**🌐 Obrir recurs extern (https://code.makery.ch/blog/javafx-dialogs-official/) ↗️**](https://code.makery.ch/blog/javafx-dialogs-official/)
+
+> **🔗 Recurs Web: Learning JavaFX (free ebook)**
+> [**🌐 Obrir recurs extern (https://aules.edu.gva.es/docent/pluginfile.php/1872734/mod_resource/content/1/javafx.pdf) ↗️**](https://aules.edu.gva.es/docent/pluginfile.php/1872734/mod_resource/content/1/javafx.pdf)
+
+> **🔗 Recurs Web: JavaFX Tutorial**
+> [**🌐 Obrir recurs extern (https://www.javatpoint.com/javafx-tutorial) ↗️**](https://www.javatpoint.com/javafx-tutorial)
+
+> **🔗 Recurs Web: Best JavaFX Libraries**
+> [**🌐 Obrir recurs extern (https://www.jrebel.com/blog/best-javafx-libraries) ↗️**](https://www.jrebel.com/blog/best-javafx-libraries)
+
+> **🔗 Recurs Web: 10 principios de usabilidad de Jakob Nielsen**
+> [**🌐 Obrir recurs extern (https://www.intuix.cat/es/blog/principios-usabilidad-jakob-nielsen-ui) ↗️**](https://www.intuix.cat/es/blog/principios-usabilidad-jakob-nielsen-ui)
+
+> **🔗 Recurs Web: Crear un ejecutable (.jar)**
+> [**🌐 Obrir recurs extern (https://es.wikihow.com/crear-un-archivo-ejecutable-en-Eclipse) ↗️**](https://es.wikihow.com/crear-un-archivo-ejecutable-en-Eclipse)
+
+> **📌 🏷️ Apunt de la Unitat**
+> #### Iconos
+
+📎 **Material de laboratori (Emoticonos EMOJI):** `emoticonos EMOJIone png.rar`
+
+> **🔗 Recurs Web: Flaticon**
+> [**🌐 Obrir recurs extern (https://www.flaticon.com) ↗️**](https://www.flaticon.com)
+
+---
+
+#### 📦 Main.java
+
+```java
+package application;
+
+	
+
+import javafx.application.Application;
+
+import javafx.stage.Stage;
+
+import javafx.scene.Scene;
+
+import javafx.scene.layout.AnchorPane;
+
+import javafx.fxml.FXMLLoader;
+
+public class Main extends Application {
+
+	@Override
+
+	public void start(Stage primaryStage) {
+
+		try {
+
+			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Semaforo.fxml"));
+
+			Scene scene = new Scene(root,400,400);
+
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
+			primaryStage.setScene(scene);
+
+			primaryStage.show();
+
+		} catch(Exception e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+
+	
+
+	public static void main(String[] args) {
+
+		launch(args);
+
+	}
+
+}
+```
+
+---
+
+#### 📦 Semaforo.java
+
+```java
+package application;
+
+public class Semaforo {
+
+	
+
+	enum EstadoSemaforo {
+
+		APAGADO,
+
+		VERDE,
+
+		AMARILLO,
+
+		ROJO
+
+	}
+
+	
+
+	private EstadoSemaforo estado;
+
+	
+
+	public Semaforo() {
+
+		this.estado = EstadoSemaforo.APAGADO;
+
+	}
+
+	
+
+	public EstadoSemaforo getEstado() {
+
+		return this.estado;
+
+	}
+
+	
+
+	public void irAEstado(EstadoSemaforo estado) {
+
+		this.estado = estado;
+
+	}
+
+	
+
+	public void reiniciar() {
+
+		this.estado = EstadoSemaforo.APAGADO;
+
+	}
+
+}
+```
+
+---
+
+#### 📦 SemaforoController.java
+
+```java
+package application;
+
+import java.net.URL;
+
+import java.util.ResourceBundle;
+
+import application.Semaforo.EstadoSemaforo;
+
+import javafx.event.ActionEvent;
+
+import javafx.fxml.FXML;
+
+import javafx.fxml.Initializable;
+
+import javafx.scene.control.Label;
+
+public class SemaforoController implements Initializable {
+
+    @FXML
+
+    private Label lbEstadoSemaforo;
+
+    
+
+    @FXML
+
+    private Label lbMensaje;
+
+    
+
+    private Semaforo semaforo;
+
+    
+
+  	@Override
+
+	public void initialize(URL arg0, ResourceBundle arg1) {
+
+		semaforo = new Semaforo();
+
+		
+
+		lbEstadoSemaforo.setText(semaforo.getEstado() + "");
+
+		lbMensaje.setText("Apagado");
+
+	}
+
+  	
+
+    @FXML
+
+    void clickCambiarEstado(ActionEvent event) {
+
+    	EstadoSemaforo estadoActual = semaforo.getEstado();
+
+    	
+
+    	switch(estadoActual) {
+
+    		case APAGADO:
+
+    			semaforo.irAEstado(EstadoSemaforo.VERDE);
+
+    			lbMensaje.setText("Puedes pasar");
+
+    			break;
+
+	    	case VERDE:
+
+	    		semaforo.irAEstado(EstadoSemaforo.AMARILLO);
+
+    			lbMensaje.setText("Frena poco a poco");
+
+	    		break;
+
+	    	case AMARILLO:
+
+	    		semaforo.irAEstado(EstadoSemaforo.ROJO);
+
+    			lbMensaje.setText("Para!");
+
+	    		break;
+
+	    	case ROJO:
+
+	    		semaforo.irAEstado(EstadoSemaforo.VERDE);
+
+    			lbMensaje.setText("Puedes pasar");
+
+	        	break;
+
+	        default:
+
+	        	System.out.println("Error");
+
+    	}
+
+    	
+
+    	lbEstadoSemaforo.setText(semaforo.getEstado()+"");
+
+    }
+
+	
+
+    @FXML
+
+    void clickReiniciar(ActionEvent event) {
+
+    	semaforo.reiniciar();
+
+    	
+
+    	lbEstadoSemaforo.setText(semaforo.getEstado()+"");
+
+		lbMensaje.setText("Apagado");
+
+    }
+
+}
+```
+
+---
+
+## 16.2 JavaFX
+
+Programación
+
+### UD 12: Interfaz Gráfica de Usuario
+
+- JavaFX
+
+Jose Chamorro Molina Revisado por: J. Ramón Simó Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web
+
+JavaFX Programación
+
+¿Qué es JavaFX? JavaFX es un conjunto de paquetes para gráficos y tecnologías de Oracle Corporation (inicialmente Sun Microsystems), que permite a los desarrolladores diseñar, crear, probar, depurar e implementar aplicaciones cliente que operan de manera consistente en diversas plataformas.
+
+Con JavaFX diseñaremos de una forma fácil e intuitiva aplicaciones de escritorio profesionales. Nota JavaFX es una tecnología muy extensa para profundizar en este curso. El objetivo será, por tanto, estudiar los conceptos básicos para crear aplicaciones con interfaces sencillas en JavaFX.
+
+Instalación y configuración Programación
+
+Instalar JavaFX Programación
+
+¡¡Atención!! Se ha comprobado que ciertas funcionalidades del plugin JavaFX no funcionan con la versión más reciente de Eclipse ( (4.27)). Por tanto, se recomienda tener instalada la versión (4.25) de Eclipse para poder realizar las actividades de esta unidad.
+
+Instalar JavaFX Programación
+
+help > Eclipse Marketplace > find “javafx” e(fx)clipse 3.8.0 > Install
+
+Instalar SceneBuilder Programación
+
+https://gluonhq.com/products/scene-builder/
+
+Descargar SDK JavaFX Programación
+
+https://gluonhq.com/products/javafx/
+
+- Descomprimir en una carpeta de fácil acceso
+
+Configurar Eclipse Programación
+
+- Especificar la ruta al ejecutable de SceneBuilder
+- Especificar la ruta al “/lib” de la carpeta descomprimida del SDK de JavaFX
+
+Nuestro primer proyecto Programación
+
+Crear Proyecto Programación
+
+Crear proyecto tipo JavaFX: New -> Other… -> JavaFX -> JavaFX Project
+
+Crear Proyecto Programación
+
+Crear Proyecto Programación
+
+Estructura del Proyecto Crear los siguientes paquetes por defecto: Programación
+
+Estructura del Proyecto Crear los siguientes paquetes por defecto: Programación
+
+Main.java Programación
+
+Clase Main por defecto crea el método start en vez de main como punto de ejecución de la App: Ejercicio 1: Añade la instrucción primaryStage.setTitle(“Hola (Tu Nombre)!”) justo antes de la instrucción primaryStage.setScene(scene) y ejecuta el programa.
+
+Posibles errores y las soluciones… Programación
+
+Error #1  No compila el Proyecto Programación
+
+Solución #1  Configurar Build Path añadiendo los .jar de JavaFX que se encuentran en la carpeta descomprimida del SDK. Programación
+
+Error #2  Error de ejecución: ClassNotFoundException Programación
+
+Solución #2  Añadir argumentos VM para la ejecución del proyecto. --module-path "C:\openjfx-20.0.1_windows-x64_bin-sdk\javafx-sdk-20.0.1\lib" --add-modules javafx.controls,javafx.fxml Programación
+
+Entre las comillas debéis poner vuestro PATH al /lib del sdk de javafx que habéis descargado y descomprimido.
+
+Error #3  Error de ejecución: InvocationTargetException  En main.java Sustituir: // Cargar la ventana Parent root =
+
+```java
+FXMLLoader.load(getClass().getClassLoader().getResource(fxml));
+```
+
+Por: // Cargar la ventana
+
+```java
+Parent root = FXMLLoader.load(getClass().getResource(fxml));
+```
+
+Programación
+
+Solución #3
+
+Error #4  Error de ejecución: NullPointerException  En Calculadora.fxml Revisar la ruta del controlador  En Main.java Revisar la ruta de la vista Programación
+
+Solución #4
+
+Modelo – Vista – Controlador Programación
+
+Modelo – Vista – Controlador Programación
+
+Modelo – Vista – Controlador Programación
+
+El patrón Modelo – Vista – Controlador (MVC) es un patrón de diseño de software que se utiliza en muchos entornos distintos con muchos lenguajes de programación. Se utiliza popularmente tanto para diseñar aplicaciones web y aplicaciones móviles, cómo aplicaciones de escritorio.
+
+Si no utilizamos el patrón MVC, el código fuente de la GUI (Graphical User Interface o Interfaz Gráfica de Usuario) y los eventos y métodos con la funcionalidad de la interfaz, están en el mismo archivo, lo que hace que éste tenga un mayor número de líneas y sea muy difícil de modificar y de ampliar.
+
+Si separamos en un archivo sólo el código para la GUI (vista), otro archivo sólo para controlar los eventos (controlador) y los archivos del dominio de nuestra aplicación (modelo), obtenemos un código mucho más simple, más fácil de comprender y mucho más fácil de mantener.
+
+Esta es la filosofía principal del patrón Modelo – Vista – Controlador.
+
+Modelo – Vista – Controlador Programación
+
+Los componentes de la arquitectura del patrón MVC están diseñados para manejar diferentes aspectos de una aplicación en desarrollo. El patrón de diseño MVC sirve para separar la capa de presentación de la lógica de la aplicación y es uno de los patrones de diseño de software más utilizados para el desarrollo web y de aplicaciones.
+
+Este patrón de diseño separa los distintos aspectos de nuestro proyecto en 3 grupos: • Modelo: Son todas las clases relacionadas con el dominio de nuestra aplicación. Clases que realizan la lógica del programa y clases que se utilizan para almacenar y gestionar los datos, a menudo, conectados con una base de datos • Vista: Conocida como GUI o Interfaz Gráfica de Usuario. La vista contiene todas las funciones que interactúan directamente con el usuario, como hacer clic en un botón o un evento de entrada. Además se encarga de mostrar los datos almacenados al usuario.
+
+• Controlador: El controlador conecta el modelo y la vista. Cuando un usuario interactúa con la IGU, solicita al controlador que se ejecute un evento. Este evento, va a comunicar con el modelo de la aplicación e intercambiar datos. Estos datos serán devueltos al controlador que los mostrará al usuario a través de la vista (IGU).
+
+Modelo – Vista – Controlador Programación
+
+En los siguientes apartados seguiremos el ejemplo de realizar una aplicación sencilla de un contador
+
+Vista Interfaz Gràfica de Usuario Programación
+
+Scene Builder Programación
+
+Stage – Scene - Nodes Programación
+
+En una aplicación JavaFX con una GUI, se diferencian tres grandes componentes: • Stage: Es la ventana principal de la aplicación y viene determinada por el sistema operativo donde estamos ejecutando el programa. Una ventana de mismo programa se verá de forma diferente en cada S.O. sin que el programador pueda modificarlo.
+
+• Scene: Es lo que se muestra dentro de la aplicación. La escena describe todo lo que hay dentro de una ventana en una aplicación JavaFX. La escena la define completamente el programador pudiendo diseñarla y cambiarla a su gusto. • Nodes: Son todos aquellos componentes gráficos que conforman la escena. Estos nodos se almacenan en el fichero FXML en forma de árbol. Puedes repasar este concepto en el módulo de Lenguajes de Marcas.
+
+Por tanto, tenemos que un Stage es el contenedor de nivel superior, que como mínimo consta de una escena y que a su vez es contenedora de otros componentes gráficos. Resumiendo: Stage : Se encarga del estilo y comportamiento de la GUI Scene : Almacena todos los nodos en un nodo raiz y maneja los eventos Nodes : Componentes o nodos que pertenecen a un Layout*.
+
+(*) Los componentes de diseño (layout) en JavaFX son los que nos permiten colocar de forma organizada el contenido de nuestra interfaz, ya sean botones, cajas de texto, imágenes, etc
+
+Stage – Scene - Nodes Programación
+
+Stage – Scene - Nodes Programación
+
+Layouts Classes Programación
+
+Layouts Pane … Programación
+
+Layouts Pane Programación
+
+Panel Descripción VBox Organiza de una forma sencilla una serie de nodos en una sola columna. HBox Organiza de una forma sencilla una serie de nodos en una sola fila. TilePane Un panel de mosaico es similar a un panel de flujo. El panel de diseño de TilePane coloca todos los nodos en una cuadrícula en la que cada celda o mosaico tiene el mismo tamaño. Los nodos se pueden colocar horizontalmente (en filas) o verticalmente (en columnas).
+
+GridPane Permite crear una cuadrícula flexible de filas y columnas en la que distribuir los nodos. Los nodos se pueden colocar en cualquier celda de la cuadrícula y pueden abarcar celdas según sea necesario. Es útil para crear formularios o cualquier diseño que esté organizado en filas y columnas.
+
+BorderPane Proporciona cinco regiones en las que colocar los nodos: superior, inferior, izquierda, derecha y central. Las regiones pueden ser de cualquier tamaño. Si su aplicación no necesita una de las regiones, no es necesario que la defina y no se le asigna espacio.
+
+FlowPane Los nodos se distribuyen consecutivamente y se ajustan al límite establecido para el panel. Los nodos pueden fluir verticalmente (en columnas) u horizontalmente (en filas). StackPane Organiza todos los nodos dentro de una sola pila con cada nodo nuevo agregado encima del nodo anterior.
+
+Este modelo de diseño proporciona una manera fácil de superponer texto en una forma o imagen o de superponer formas comunes para crear una forma compleja. AnchorPane Permite anclar nodos en la parte superior, inferior, izquierda, derecha o centro del panel. A medida que se cambia el tamaño de la ventana, los nodos mantienen su posición en relación con su punto de anclaje.
+
+Componentes gráficos Programación
+
+Componentes gráficos Programación
+
+Dialogs and Alerts Programación
+
+Dialogs and Alerts Programación
+
+Menús Programación
+
+Menús <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="25.0" prefWidth="250.0"> <menus> <Menu mnemonicParsing="false" text="Ver"> <items> <MenuItem fx:id="menu_Historial" mnemonicParsing="false" text="Historial" /> <MenuItem fx:id="menu_Salir" mnemonicParsing="false" text="Salir" /> </items> </Menu> <Menu mnemonicParsing="false" text="Edición"> <items> <MenuItem fx:id="menu_Copiar" mnemonicParsing="false" text="Copiar" /> <MenuItem fx:id="menu_Pegar" mnemonicParsing="false" text="Pegar" /> </items> </Menu> <Menu mnemonicParsing="false" text="Ayuda"> <items> <MenuItem fx:id="menu_Ayuda" mnemonicParsing="false" text="Ver la Ayuda" /> <MenuItem fx:id="menu_AcercaDe" mnemonicParsing="false" text="Acerca de Calculadora" /> </items> </Menu> </menus> </MenuBar> Programación
+
+Reutilizar un panel Programación
+
+Controlador Programación
+
+Controlador En el paquete controlador, la clase ContadorController.java implementa la interfaz Initializable y sobrescribe el método initialize de esta
+
+```java
+public class ContadorController implements Initializable{
+```
+
+@FXML
+
+```java
+private TextField tfContador;
+@Override
+public void initialize(URL url, ResourceBundle resourceBundle) {
+```
+
+// Crear la Calculadora
+
+```java
+contador = new Contador();
+}
+```
+
+Programación
+
+En las clases XXXController se utiliza el método initialize que hace la función de constructor de clase. De esta forma este método podrá acceder a los atributos de la clase marcados con @FXML. El constructor por defecto de java no puede acceder a los atributos marcados con @FXML.
+
+Los atributos marcados con @FXML son aquellos que están asociados a la Vista y por tanto les estamos diciendo que son accesibles desde el fichero de Vista correspondiente .fxml (por ejemplo, contador.fxml).
+
+Eventos En JavaFX, se produce un evento cada vez que el usuario interactúa con los componentes gráficos de la aplicación. Hay varias formas mediante las cuales el usuario puede generar el evento. Por ejemplo, el usuario puede hacer uso del ratón, puede presionar cualquier botón del teclado o puede minimizar o cerrar la ventana.
+
+De ahí que podamos decir que los eventos son básicamente las notificaciones que nos indican que el usuario ha realizado alguna acción con nuestra aplicación. Los principales tipos de eventos que se pueden gestionar con JavaFX son: • ActionEvent: Un evento que representa algún tipo de acción. Es un evento genérico que luego se debe especificar que hace realmente. Este tipo de evento se usa ampliamente para representar una variedad de acciones.
+
+• InputEvent: Un evento que indica una entrada de usuario. Como cuándo se ha pulsado un botón, se ha pulsado una tecla, se ha liberado la tecla pulsada y otros usos similares. • WindowEvent: Evento relacionado con acciones de mostrar / ocultar ventanas. Programación
+
+Interacción con el usuario - Eventos Opción A.- Asignar evento en la vista (.fxml) Contador.fxml (código FXML): ContadorController.java (código Java): Programación
+
+<Button fx:id="btnIncrementa" layoutX="13.0" layoutY="82.0" mnemonicParsing="false" onAction="#incrementa" text="Incrementa" /> @FXML
+
+```java
+private Button btnIncrementa;
+```
+
+// Event Listener on Button[#btnIncrementa].onAction @FXML
+
+```java
+public void incrementa(ActionEvent event) {
+```
+
+// TODO Autogenerated }
+
+Interacción con el usuario - Eventos Opción B.- Asignar eventos, desde el controlador, al inicializar la vista. Contador.fxml <Button fx:id="btnIncrementa" layoutX="13.0" layoutY="82.0" mnemonicParsing="false" text="Incrementa" /> ContadorController.java
+
+```java
+public class ContadorController implements Initializable {
+```
+
+// Atributos graficos FXML @FXML
+
+```java
+private Button btnIncrementa;
+@Override
+public void initialize(URL url, ResourceBundle
+resourceBundle) {
+```
+
+// Evento botones, apertura de ventanas btnIncrementa.setOnMouseClicked((event) ->
+
+```java
+incrementa());
+}
+```
+
+Programación
+
+Interacción con el usuario - Eventos (Sigue) Opción B.- Asignar eventos, desde el controlador, al inicializar la vista. CalculadoraController.java
+
+```java
+public class ContadorController implements Initializable {
+```
+
+// Atributos graficos FXML @FXML
+
+```java
+private Button btnIncrementa;
+@Override
+public void initialize(URL url, ResourceBundle
+resourceBundle) {
+```
+
+// Evento botones, apertura de ventanas btnIncrementa.setOnMouseClicked((event) ->
+
+```java
+incrementa());
+}
+}
+```
+
+// Ahora incrementa es un método “normal” y no necesita ni @FXML ni ActionEvent
+
+```java
+public void incrementa() {
+```
+
+// TODO Autogenerated Programación
+
+Modelo Programación
+
+Modelo Programación
+
+ Diagrama de clases
+
+Modelo Programación
+
+Podemos crea un modelo de contador escribiendo una clase llamada Contador.java
+
+```java
+public class Contador {
+    private int numero;
+    public Contador() {
+        this.numero = 0;
+    }
+```
+
+// … Resto de métodos que modelan el comportamiento de un contador }
+
+Organización del proyecto MVC Programación
+
+Organización del proyecto MVC Programación
+
+El proyecto lo podemos organizar en paquetes siguiendo el concepto del patrón MVC: • Paquete application: donde se encuentra el Main.java, que es la clase de entrada a nuestra aplicación. • Paquete controlador: contiene el controlador XXXController.java correspondiente a la vista XXX.
+
+• Paquete modelo: contiene el fichero XXX.java que corresponderá al modelo de datos. • Paquete vista: contiene el XXX.fxml de la vista. Atención, los recursos asociados a la vista se pueden situar en paquetes vista.css, vista.imágenes, etc. Para la mayoría de aplicaciones a pequeña escala normalmente tendremos una vista y un controlador asociado. Sin embargo, en GUIs más complejas podríamos tener distintas vistas con controladores correspondientes.
+
+Organización del proyecto MVC Programación
+
+Para que no de problemas la compilación de nuestra aplicación al crear la estructura de paquetes, debemos modificar la instrucción de carga del FXMLLoader en el Main.java: • Para el Layout (AnchorPane, Parent, etc) añadir el método getClassLoader() a la siguiente instrucción
+
+```java
+AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("vista/Contador.fxml"));
+```
+
+Y quedaría así: AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getClassLoader().getResource("vista/
+
+```java
+Contador.fxml"));
+```
+
+• Para la ruta del css, cambar la ruta según el nombre del paquete. Por ejemplo, si el fichero .css está en el paquete vista.css entonces la ruta es /vista/css/micss.css (date cuenta que hay que poner la barra “/” al inicio en este caso)
+
+scene.getStylesheets().add(getClass().getResource("/vista/css/application.css").toExternalForm
+
+```java
+());
+```
+
+Personalizando la aplicación Programación
+
+Icono de la aplicación Main.java
+
+```java
+@Override
+public void start(Stage primaryStage) {
+```
+
+... // Asignar icono de la aplicación primaryStage.getIcons().add(new
+
+```java
+Image(getClass().getResource("/vista/img/icon.png").toExternalForm()));
+```
+
+... } Programación
+
+Mostrar otra ventana //Mostrar otra ventana
+
+```java
+private void mostrarVentanaAyuda(String rutaFXML, String titulo) {
+```
+
+try{ //Léeme el source del archivo que te digo fxml y te pongo el path
+
+```java
+FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(rutaFXML));
+      Parent root = (Parent) fxmlLoader.load();
+      //Creame un nuevo Stage (una nueva ventana vacía)
+      Stage stage = new Stage();
+      //Asignar al Stage la escena que anteriormente hemos leído y guardado en root
+      stage.setTitle(titulo);
+      stage.setResizable(false);
+      stage.initModality(Modality.APPLICATION_MODAL);
+      stage.setScene(new Scene(root));
+```
+
+//Mostrar el Stage (ventana)
+
+```java
+stage.show();
+    }
+    catch (Exception e){
+        e.printStackTrace();
+    }
+}
+```
+
+Programación
+
+El toque profesional… Programación
+
+Excepciones En el paquete Excepciones crear, al menos, las siguientes excepciones: NumeroNegativoException.java Añadir la funcionalidad necesaria en la aplicación utilizando las excepciones creadas. Programación
+
+Estilos CSS Las hojas de estilo en cascada de JavaFX se basan en las reglas de W3C CSS. El objetivo de JavaFX CSS es permitir que los desarrolladores web que ya están familiarizados con CSS para HTML utilicen CSS para personalizar y desarrollar estilos para controles JavaFX y objetos de gráficos de escena de forma natural.
+
+Todos los conceptos CSS que has estudiado en el módulo de Lenguaje de Marcas, son válidos para el diseño de IGU con JavaFX. En la medida de lo posible, JavaFX CSS sigue los estándares de W3C; sin embargo, los nombres de propiedad de JavaFX han sido prefijados con una extensión "-fx-".
+
+Programación
+
+Estilos CSS Main.java
+
+```java
+@Override
+public void start(Stage primaryStage) {
+```
+
+... // Asignar hoja de estilos
+
+```java
+scene.getStylesheets().add("/vista/css/estilos.css");
+```
+
+... } Estilos.css .button { -fx-background-color: #FBFCFC; -fx-text-fill: #979A9A; } Programación
+
+KeyListener //1.- Asignar evento al TextArea <TextArea fx:id="display" editable="false" layoutX="10.0" layoutY="37.0" onKeyPressed="#pulsarTecla" prefHeight="100.0" prefWidth="245.0" text="0" />
+
+//2.- Desactivar que puedan quedarse el foco de la aplicación TODOS los botones <Button fx:id="boton_0" focusTraversable="false" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="0" /> //3.- Programar evento en el controlador @FXML
+
+```java
+void pulsarTecla(KeyEvent event) {
+     switch (event.getCode()) {
+case DIGIT0: case NUMPAD0: insertarNumero("0"); break;
+     }
+}
+```
+
+//4.- Combinaciones de teclas //MC KeyCombination ctrlL = new KeyCodeCombination(KeyCode.L,
+
+```java
+KeyCodeCombination.CONTROL_DOWN);
+if (ctrlL.match(event)) memoryClear();
+```
+
+Programación
+
+Resumen Programación
+
+Resumen Programación
+
+Para terminar… Programación
+
+Despliegue de la aplicación (.jar) Para exportar nuestro proyecto a una aplicación real debemos exportarlo a .jar. Click derecho sobre el proyecto, exportar y escogemos la opción runnable JAR file. En library handling escogeremos la segunda opción. Esta opción empaqueta las librerías necesarias dentro del .jar.
+
+Este .jar podrá ejecutarse por consola con el comando: java -jar ContadorFX.jar También se puede hacer doble clic sobre el ejecutable o crear un acceso directo. Existen programas para exportar el .jar a .exe si se considera oportuno. Programación
+
+---
+
+## 16.3 JavaFX
+
+### 📊 1. Diapositiva 1
+
+- Programación
+- UD 12: Interfaz Gráfica de Usuario
+- JavaFX
+- Jose Chamorro Molina
+- Revisado por: J. Ramón Simó
+- Ciclo Formativo de Grado Superior
+- Desarrollo de Aplicaciones Web
+
+### 📊 2. Diapositiva 2
+
+- JavaFX
+- Programación UD 12: Interfaz Gráfica de Usuario
+- ¿Qué es JavaFX?
+- JavaFX es un conjunto de paquetes para gráficos y tecnologías de Oracle Corporation (inicialmente Sun Microsystems), que permite a los desarrolladores diseñar, crear, probar, depurar e implementar aplicaciones cliente que operan de manera consistente en diversas plataformas.
+- Con JavaFX diseñaremos de una forma fácil e intuitiva aplicaciones de escritorio profesionales.
+- Nota
+- JavaFX es una tecnología muy extensa para profundizar en este curso. El objetivo será, por tanto, estudiar los conceptos básicos para crear aplicaciones con interfaces sencillas en JavaFX.
+
+### 📊 3. Diapositiva 3
+
+- Instalación y configuración
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 4. Diapositiva 4
+
+- Instalar JavaFX
+- Programación UD 12: Interfaz Gráfica de Usuario
+- ¡¡Atención!!
+- Se ha comprobado que ciertas funcionalidades del plugin JavaFX no funcionan con la versión más reciente de Eclipse ( (4.27)).
+- Por tanto, se recomienda tener instalada la versión (4.25) de Eclipse para poder realizar las actividades de esta unidad.
+
+### 📊 5. Diapositiva 5
+
+- Instalar JavaFX
+- Programación UD 12: Interfaz Gráfica de Usuario
+- help > Eclipse Marketplace > find “javafx”
+- e(fx)clipse 3.8.0 > Install
+
+### 📊 6. Diapositiva 6
+
+- Instalar SceneBuilder
+- Programación UD 12: Interfaz Gráfica de Usuario
+- https://gluonhq.com/products/scene-builder/
+
+### 📊 7. Diapositiva 7
+
+- Descargar SDK JavaFX
+- Programación UD 12: Interfaz Gráfica de Usuario
+- https://gluonhq.com/products/javafx/
+- Descomprimir en una carpeta de fácil acceso
+
+### 📊 8. Diapositiva 8
+
+- Configurar Eclipse
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Especificar la ruta al ejecutable de SceneBuilder
+- Especificar la ruta al “/lib” de la carpeta descomprimida del SDK de JavaFX
+
+### 📊 9. Diapositiva 9
+
+- Nuestro primer proyecto
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 10. Diapositiva 10
+
+- Crear Proyecto
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Crear proyecto tipo JavaFX
+- New -> Other… ->
+- JavaFX -> JavaFX Project
+
+### 📊 11. Diapositiva 11
+
+- Crear Proyecto
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 12. Diapositiva 12
+
+- Crear Proyecto
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 13. Diapositiva 13
+
+- Estructura del Proyecto
+- Crear los siguientes paquetes por defecto
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 14. Diapositiva 14
+
+- Estructura del Proyecto
+- Crear los siguientes paquetes por defecto
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 15. Diapositiva 15
+
+- Main.java
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Clase Main por defecto crea el método start en vez de main como punto de ejecución de la App
+- Ejercicio 1
+- Añade la instrucción primaryStage.setTitle(“Hola (Tu Nombre)!”) justo antes de la instrucción primaryStage.setScene(scene) y ejecuta el programa.
+
+### 📊 16. Diapositiva 16
+
+- Posibles errores y
+- las soluciones…
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 17. Diapositiva 17
+
+- Error #1
+- No compila el Proyecto
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 18. Diapositiva 18
+
+- Solución #1
+- Configurar Build Path añadiendo los .jar de JavaFX que se encuentran en la carpeta descomprimida del SDK.
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 19. Diapositiva 19
+
+- Error #2
+- Error de ejecución: ClassNotFoundException
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 20. Diapositiva 20
+
+- Solución #2
+- Añadir argumentos VM para la ejecución del proyecto.
+- module-path "C:\openjfx-20.0.1_windows-x64_bin-sdk\javafx-sdk-20.0.1\lib" --add-modules javafx.controls,javafx.fxml
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Entre las comillas debéis poner vuestro PATH al /lib del sdk de javafx que habéis descargado y descomprimido.
+
+### 📊 21. Diapositiva 21
+
+- Error #3
+- Error de ejecución: InvocationTargetException
+- En main.java
+- Sustituir
+- // Cargar la ventana
+- Parent root = FXMLLoader.load(getClass().getClassLoader().getResource(fxml));
+- Por
+- // Cargar la ventana
+- Parent root = FXMLLoader.load(getClass().getResource(fxml));
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Solución #3
+
+### 📊 22. Diapositiva 22
+
+- Error #4
+- Error de ejecución: NullPointerException
+- En Calculadora.fxml
+- Revisar la ruta del controlador
+- En Main.java
+- Revisar la ruta de la vista
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Solución #4
+
+### 📊 23. Diapositiva 23
+
+- Modelo – Vista – Controlador
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 24. Diapositiva 24
+
+- Modelo – Vista – Controlador
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 25. Diapositiva 25
+
+- Modelo – Vista – Controlador
+- Programación UD 12: Interfaz Gráfica de Usuario
+- El patrón Modelo – Vista – Controlador (MVC) es un patrón de diseño de software que se utiliza en muchos entornos distintos con muchos lenguajes de programación.
+- Se utiliza popularmente tanto para diseñar aplicaciones web y aplicaciones móviles, cómo aplicaciones de escritorio.
+- Si no utilizamos el patrón MVC, el código fuente de la GUI (Graphical User Interface o Interfaz Gráfica de Usuario) y los eventos y métodos con la funcionalidad de la interfaz, están en el mismo archivo, lo que hace que éste tenga un mayor número de líneas y sea muy difícil de modificar y de ampliar.
+- Si separamos en un archivo sólo el código para la GUI (vista), otro archivo sólo para controlar los eventos (controlador) y los archivos del dominio de nuestra aplicación (modelo), obtenemos un código mucho más simple, más fácil de comprender y mucho más fácil de mantener.
+- Esta es la filosofía principal del patrón Modelo – Vista – Controlador.
+
+### 📊 26. Diapositiva 26
+
+- Modelo – Vista – Controlador
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Los componentes de la arquitectura del patrón MVC están diseñados para manejar diferentes aspectos de una aplicación en desarrollo. El patrón de diseño MVC sirve para separar la capa de presentación de la lógica de la aplicación y es uno de los patrones de diseño de software más utilizados para el desarrollo web y de aplicaciones.
+- Este patrón de diseño separa los distintos aspectos de nuestro proyecto en 3 grupos
+- Modelo: Son todas las clases relacionadas con el dominio de nuestra aplicación. Clases que realizan la lógica del programa y clases que se utilizan para almacenar y gestionar los datos, a menudo, conectados con una base de datos
+- Vista: Conocida como GUI o Interfaz Gráfica de Usuario. La vista contiene todas las funciones que interactúan directamente con el usuario, como hacer clic en un botón o un evento de entrada. Además se encarga de mostrar los datos almacenados al usuario.
+- Controlador: El controlador conecta el modelo y la vista. Cuando un usuario interactúa con la IGU, solicita al controlador que se ejecute un evento. Este evento, va a comunicar con el modelo de la aplicación e intercambiar datos. Estos datos serán devueltos al controlador que los mostrará al usuario a través de la vista (IGU).
+
+### 📊 27. Diapositiva 27
+
+- Modelo – Vista – Controlador
+- Programación UD 12: Interfaz Gráfica de Usuario
+- En los siguientes apartados seguiremos el ejemplo de realizar una aplicación sencilla de un contador
+
+### 📊 28. Diapositiva 28
+
+- Vista
+- Interfaz Gràfica de Usuario
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 29. Diapositiva 29
+
+- Scene Builder
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 30. Diapositiva 30
+
+- Stage – Scene - Nodes
+- Programación UD 12: Interfaz Gráfica de Usuario
+- En una aplicación JavaFX con una GUI, se diferencian tres grandes componentes
+- Stage: Es la ventana principal de la aplicación y viene determinada por el sistema operativo donde estamos ejecutando el programa. Una ventana de mismo programa se verá de forma diferente en cada S.O. sin que el programador pueda modificarlo.
+- Scene: Es lo que se muestra dentro de la aplicación. La escena describe todo lo que hay dentro de una ventana en una aplicación JavaFX. La escena la define completamente el programador pudiendo diseñarla y cambiarla a su gusto.
+- Nodes: Son todos aquellos componentes gráficos que conforman la escena. Estos nodos se almacenan en el fichero FXML en forma de árbol. Puedes repasar este concepto en el módulo de Lenguajes de Marcas.
+- Por tanto, tenemos que un Stage es el contenedor de nivel superior, que como mínimo consta de una escena y que a su vez es contenedora de otros componentes gráficos.
+- Resumiendo
+- Stage : Se encarga del estilo y comportamiento de la GUI
+- Scene : Almacena todos los nodos en un nodo raiz y maneja los eventos
+- Nodes : Componentes o nodos que pertenecen a un Layout*.
+- (*) Los componentes de diseño (layout) en JavaFX son los que nos permiten colocar de forma organizada el contenido de nuestra interfaz, ya sean botones, cajas de texto, imágenes, etc
+
+### 📊 31. Diapositiva 31
+
+- Stage – Scene - Nodes
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 32. Diapositiva 32
+
+- Stage – Scene - Nodes
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 33. Diapositiva 33
+
+- Layouts Classes
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 34. Diapositiva 34
+
+- Layouts Pane
+- …
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 35. Diapositiva 35
+
+- Layouts Pane
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 36. Diapositiva 36
+
+- Componentes gráficos
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 37. Diapositiva 37
+
+- Componentes gráficos
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 38. Diapositiva 38
+
+- Dialogs and Alerts
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 39. Diapositiva 39
+
+- Dialogs and Alerts
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 40. Diapositiva 40
+
+- Menús
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 41. Diapositiva 41
+
+- Menús
+- <MenuBar layoutX="0.0" layoutY="0.0" prefHeight="25.0" prefWidth="250.0">
+- <menus>
+- <Menu mnemonicParsing="false" text="Ver">
+- <items>
+- <MenuItem fx:id="menu_Historial" mnemonicParsing="false" text="Historial" />
+- <MenuItem fx:id="menu_Salir" mnemonicParsing="false" text="Salir" />
+- </items>
+- </Menu>
+- <Menu mnemonicParsing="false" text="Edición">
+- <items>
+- <MenuItem fx:id="menu_Copiar" mnemonicParsing="false" text="Copiar" />
+- <MenuItem fx:id="menu_Pegar" mnemonicParsing="false" text="Pegar" />
+- </items>
+- </Menu>
+- <Menu mnemonicParsing="false" text="Ayuda">
+- <items>
+- <MenuItem fx:id="menu_Ayuda" mnemonicParsing="false" text="Ver la Ayuda" />
+- <MenuItem fx:id="menu_AcercaDe" mnemonicParsing="false" text="Acerca de Calculadora" />
+- </items>
+- </Menu>
+- </menus>
+- </MenuBar>
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 42. Diapositiva 42
+
+- Reutilizar un panel
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 43. Diapositiva 43
+
+- Controlador
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 44. Diapositiva 44
+
+- Controlador
+- En el paquete controlador, la clase ContadorController.java implementa la interfaz Initializable y sobrescribe el método initialize de esta
+- public class ContadorController implements Initializable{
+- @FXML
+- private TextField tfContador;
+- @Override
+- public void initialize(URL url, ResourceBundle resourceBundle) {
+- // Crear la Calculadora
+- contador = new Contador();
+- }
+- Programación UD 12: Interfaz Gráfica de Usuario
+- En las clases XXXController se utiliza el método initialize que hace la función de constructor de clase. De esta forma este método podrá acceder a los atributos de la clase marcados con @FXML. El constructor por defecto de java no puede acceder a los atributos marcados con @FXML.
+- Los atributos marcados con @FXML son aquellos que están asociados a la Vista y por tanto les estamos diciendo que son accesibles desde el fichero de Vista correspondiente .fxml (por ejemplo, contador.fxml).
+
+### 📊 45. Diapositiva 45
+
+- Eventos
+- En JavaFX, se produce un evento cada vez que el usuario interactúa con los componentes gráficos de la aplicación. Hay varias formas mediante las cuales el usuario puede generar el evento. Por ejemplo, el usuario puede hacer uso del ratón, puede presionar cualquier botón del teclado o puede minimizar o cerrar la ventana.
+- De ahí que podamos decir que los eventos son básicamente las notificaciones que nos indican que el usuario ha realizado alguna acción con nuestra aplicación.
+- Los principales tipos de eventos que se pueden gestionar con JavaFX son
+- ActionEvent: Un evento que representa algún tipo de acción. Es un evento genérico que luego se debe especificar que hace realmente. Este tipo de evento se usa ampliamente para representar una variedad de acciones.
+- InputEvent: Un evento que indica una entrada de usuario. Como cuándo se ha pulsado un botón, se ha pulsado una tecla, se ha liberado la tecla pulsada y otros usos similares.
+- WindowEvent: Evento relacionado con acciones de mostrar / ocultar ventanas.
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 46. Diapositiva 46
+
+- Interacción con el usuario - Eventos
+- Opción A.- Asignar evento en la vista (.fxml)
+- Contador.fxml (código FXML)
+- ContadorController.java (código Java)
+- Programación UD 12: Interfaz Gráfica de Usuario
+- <Button fx:id="btnIncrementa" layoutX="13.0" layoutY="82.0" mnemonicParsing="false" onAction="#incrementa" text="Incrementa" />
+- @FXML
+- private Button btnIncrementa;
+- // Event Listener on Button[#btnIncrementa].onAction
+- @FXML
+- public void incrementa(ActionEvent event) {
+- // TODO Autogenerated
+- }
+
+### 📊 47. Diapositiva 47
+
+- Interacción con el usuario - Eventos
+- Opción B.- Asignar eventos, desde el controlador, al inicializar la vista.
+- Contador.fxml
+- <Button fx:id="btnIncrementa" layoutX="13.0" layoutY="82.0" mnemonicParsing="false" text="Incrementa" />
+- ContadorController.java
+- public class ContadorController implements Initializable {
+- // Atributos graficos FXML
+- @FXML
+- private Button btnIncrementa;
+- @Override
+- public void initialize(URL url, ResourceBundle resourceBundle) {
+- // Evento botones, apertura de ventanas
+- btnIncrementa.setOnMouseClicked((event) -> incrementa());
+- }
+- }
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 48. Diapositiva 48
+
+- Interacción con el usuario - Eventos
+- (Sigue) Opción B.- Asignar eventos, desde el controlador, al inicializar la vista.
+- CalculadoraController.java
+- public class ContadorController implements Initializable {
+- // Atributos graficos FXML
+- @FXML
+- private Button btnIncrementa;
+- @Override
+- public void initialize(URL url, ResourceBundle resourceBundle) {
+- // Evento botones, apertura de ventanas
+- btnIncrementa.setOnMouseClicked((event) -> incrementa());
+- }
+- }
+- // Ahora incrementa es un método “normal” y no necesita ni @FXML ni ActionEvent
+- public void incrementa() {
+- // TODO Autogenerated
+- }
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 49. Diapositiva 49
+
+- Modelo
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 50. Diapositiva 50
+
+- Modelo
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Diagrama de clases
+
+### 📊 51. Diapositiva 51
+
+- Modelo
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Podemos crea un modelo de contador escribiendo una clase llamada Contador.java
+- public class Contador {
+- private int numero;
+- public Contador() {
+- this.numero = 0;
+- }
+- // … Resto de métodos que modelan el comportamiento de un contador
+- }
+
+### 📊 52. Diapositiva 52
+
+- Organización del proyecto MVC
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 53. Diapositiva 53
+
+- Organización del proyecto MVC
+- Programación UD 12: Interfaz Gráfica de Usuario
+- El proyecto lo podemos organizar en paquetes siguiendo el concepto del patrón MVC
+- Paquete application: donde se encuentra el Main.java, que es la clase de entrada a nuestra aplicación.
+- Paquete controlador: contiene el controlador XXXController.java correspondiente a la vista XXX.
+- Paquete modelo: contiene el fichero XXX.java que corresponderá al modelo de datos.
+- Paquete vista: contiene el XXX.fxml de la vista. Atención, los recursos asociados a la vista se pueden situar en paquetes vista.css, vista.imágenes, etc.
+- Para la mayoría de aplicaciones a pequeña escala normalmente tendremos una vista y un controlador asociado. Sin embargo, en GUIs más complejas podríamos tener distintas vistas con controladores correspondientes.
+
+### 📊 54. Diapositiva 54
+
+- Organización del proyecto MVC
+- Programación UD 12: Interfaz Gráfica de Usuario
+- Para que no de problemas la compilación de nuestra aplicación al crear la estructura de paquetes, debemos modificar la instrucción de carga del FXMLLoader en el Main.java
+- Para el Layout (AnchorPane, Parent, etc) añadir el método getClassLoader() a la siguiente instrucción
+- AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("vista/Contador.fxml"));
+- Y quedaría así
+- AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getClassLoader().getResource("vista/Contador.fxml"));
+- Para la ruta del css, cambar la ruta según el nombre del paquete. Por ejemplo, si el fichero .css está en el paquete vista.css entonces la ruta es /vista/css/micss.css (date cuenta que hay que poner la barra “/” al inicio en este caso)
+- scene.getStylesheets().add(getClass().getResource("/vista/css/application.css").toExternalForm());
+
+### 📊 55. Diapositiva 55
+
+- Personalizando la aplicación
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 56. Diapositiva 56
+
+- Icono de la aplicación
+- Main.java
+- @Override
+- public void start(Stage primaryStage) {
+- ...
+- // Asignar icono de la aplicación
+- primaryStage.getIcons().add(new
+- Image(getClass().getResource("/vista/img/icon.png").toExternalForm()));
+- ...
+- }
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 57. Diapositiva 57
+
+- Mostrar otra ventana
+- //Mostrar otra ventana
+- private void mostrarVentanaAyuda(String rutaFXML, String titulo) {
+- try{
+- //Léeme el source del archivo que te digo fxml y te pongo el path
+- FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(rutaFXML));
+- Parent root = (Parent) fxmlLoader.load();
+- //Creame un nuevo Stage (una nueva ventana vacía)
+- Stage stage = new Stage();
+- //Asignar al Stage la escena que anteriormente hemos leído y guardado en root
+- stage.setTitle(titulo);
+- stage.setResizable(false);
+- stage.initModality(Modality.APPLICATION_MODAL);
+- stage.setScene(new Scene(root));
+- //Mostrar el Stage (ventana)
+- stage.show();
+- }
+- catch (Exception e){
+- e.printStackTrace();
+- }
+- }
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 58. Diapositiva 58
+
+- El toque profesional…
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 59. Diapositiva 59
+
+- Excepciones
+- En el paquete Excepciones crear, al menos, las siguientes excepciones
+- NumeroNegativoException.java
+- Añadir la funcionalidad necesaria en la aplicación utilizando las excepciones creadas.
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 60. Diapositiva 60
+
+- Estilos CSS
+- Las hojas de estilo en cascada de JavaFX se basan en las reglas de W3C CSS. El objetivo de JavaFX CSS es permitir que los desarrolladores web que ya están familiarizados con CSS para HTML utilicen CSS para personalizar y desarrollar estilos para controles JavaFX y objetos de gráficos de escena de forma natural.
+- Todos los conceptos CSS que has estudiado en el módulo de Lenguaje de Marcas, son válidos para el diseño de IGU con JavaFX.
+- En la medida de lo posible, JavaFX CSS sigue los estándares de W3C; sin embargo, los nombres de propiedad de JavaFX han sido prefijados con una extensión "-fx-".
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 61. Diapositiva 61
+
+- Estilos CSS
+- Main.java
+- @Override
+- public void start(Stage primaryStage) {
+- ...
+- // Asignar hoja de estilos
+- scene.getStylesheets().add("/vista/css/estilos.css");
+- ...
+- }
+- Estilos.css
+- .button {
+- fx-background-color: #FBFCFC;
+- fx-text-fill: #979A9A;
+- }
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 62. Diapositiva 62
+
+- KeyListener
+- //1.- Asignar evento al TextArea
+- <TextArea fx:id="display" editable="false" layoutX="10.0" layoutY="37.0" onKeyPressed="#pulsarTecla" prefHeight="100.0" prefWidth="245.0" text="0" />
+- //2.- Desactivar que puedan quedarse el foco de la aplicación TODOS los botones
+- <Button fx:id="boton_0" focusTraversable="false" layoutX="10.0" layoutY="400.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="0" />
+- //3.- Programar evento en el controlador
+- @FXML
+- void pulsarTecla(KeyEvent event) {
+- switch (event.getCode()) {
+- case DIGIT0: case NUMPAD0: insertarNumero("0"); break;
+- }
+- }
+- //4.- Combinaciones de teclas
+- //MC
+- KeyCombination ctrlL = new KeyCodeCombination(KeyCode.L, KeyCodeCombination.CONTROL_DOWN);
+- if (ctrlL.match(event)) memoryClear();
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 63. Diapositiva 63
+
+- Resumen
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 64. Diapositiva 64
+
+- Resumen
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 65. Diapositiva 65
+
+- Para terminar…
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+### 📊 66. Diapositiva 66
+
+- Despliegue de la aplicación (.jar)
+- Para exportar nuestro proyecto a una aplicación real debemos exportarlo a .jar.
+- Click derecho sobre el proyecto, exportar y escogemos la opción runnable JAR file.
+- En library handling escogeremos la segunda opción. Esta opción empaqueta las librerías necesarias dentro del .jar.
+- Este .jar podrá ejecutarse por consola con el comando
+- java -jar ContadorFX.jar
+- También se puede hacer doble clic sobre el ejecutable o crear un acceso directo.
+- Existen programas para exportar el .jar a .exe si se considera oportuno.
+- Programación UD 12: Interfaz Gráfica de Usuario
+
+---
+
+## 16.4 ContadorSimpleFX mejorado
+
+A partir del ejemplo de ContadorSimpleFX explicado en los vídeos, realiza las siguientes mejoras
+
+- Añade un botón **Decrementar** que decrementa en 1 el valor del contador.
+- Añade un botón **Reset** que ponga a cero el contador.
+- Añade un botón **Salir** que termina la aplicación.
+- Añade estilos CSS mejorando el aspecto del **Layout** ( **AnchorPane** ) y de los controles.
+- Modifica (si no lo has hecho ya) para que las acciones de los botones las controle un mismo método.
+- Añade control de excepciones personalizado, de manera que si el contador tiene valor negativo se lance la excepción **NumeroNegativoException** .

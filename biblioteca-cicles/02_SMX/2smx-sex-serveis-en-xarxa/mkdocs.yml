@@ -1,0 +1,56 @@
+site_name: "🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà"
+theme:
+  name: material
+  language: ca
+nav:
+  - Inici: index.md
+  - "UT0 — Unitat Didàctica 0":
+      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
+      - "0.1 Exámenes": ut00/ut0001.md
+      - "0.2 Escenario general": ut00/ut0002.md
+      - "0.3 rúbrica presentacions": ut00/ut0003.md
+  - "UT1 — Enquesta de Serveis en Xarxa (SeX)":
+      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
+  - "UT2 — U6: Servicio de Transferencia de ficheros (FTP)":
+      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
+      - "2.1 FTP": ut02/ut0201.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UT3 — U5: Servici de Correu":
+      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+      - "3.1 Presentació": ut03/ut0301.md
+      - "3.2 El correu electrònic": ut03/ut0302.md
+      - "3.3 Les Guest additions": ut03/ut0303.md
+      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
+  - "UT4 — U4: Servici de Web (HTTP)":
+      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
+      - "4.1 Recursos Escenario U3": ut04/ut0401.md
+      - "4.2 Introducción virtual hosting": ut04/ut0402.md
+      - "4.3 Configuración Virtual hosting": ut04/ut0403.md
+      - "4.4 Ips clients": ut04/ut0404.md
+      - "4.5 Recuperació_prova de validació_Apache": ut04/ut0405.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UT5 — U2: Servici de Resolució de Noms (DNS)":
+      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
+      - "5.1 UD3 Servidor de Nombres de Dominio SMX": ut05/ut0501.md
+      - "5.2 Presentació Victor i Javier": ut05/ut0502.md
+      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
+  - "UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)":
+      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
+      - "6.1 presentació DHCP": ut06/ut0601.md
+      - "6.2 Presentació DHCP. Visió general": ut06/ut0602.md
+      - "6.3 Servei DHCP": ut06/ut0603.md
+      - "6.4 Servidor DHCP": ut06/ut0604.md
+      - "6.5 Presentació SX20-U1-E3 'Bronx'": ut06/ut0605.md
+      - "6.6 Qüestionari DHCP": ut06/ut0606.md
+      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
+  - "UT7 — U1: SSH. Secure Shell":
+      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+      - "7.1 Plantilla qüestionari d'avaluació": ut07/ut0701.md
+      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
+  - "UT8 — U0: Virtualización y repaso de conceptos previos":
+      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
+      - "8.1 Repàs Interconnexió de Xarxes": ut08/ut0801.md
+      - "8.2 Plantilla qüestionai d'avaluació": ut08/ut0802.md
+      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
+  - "📂 Índex de Documents i Recursos": references.md
