@@ -1,4 +1,4 @@
-# 💻 Portal Docent d'Informàtica i Comunicacions
+# 💻 Portal Docent de Pepe Cuenca
 
 Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de laboratori i activitats avaluables:
 
@@ -16,7 +16,7 @@ Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de l
     <div>
       <span class="module-badge">DAW / DAM · Grau Superior</span>
       <h3>☕ Programació (Java)</h3>
-      <p>Desenvolupament d'aplicacions en Java amb VSCode, tipus de dades, estructures de control, POO i col·leccions.</p>
+      <p>Desenvolupament d'aplicacions en Java amb VSCode, tipus de dades, estructures de control, POO, col·leccions, fitxers i JDBC.</p>
     </div>
     <a href="./programacio/" class="module-btn">Entrar a Programació →</a>
   </div>
@@ -30,6 +30,21 @@ Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de l
     <a href="./projecte-intermodular/" class="module-btn">Entrar al Projecte →</a>
   </div>
 </div>
+
+---
+
+## 📚 Biblioteca General de Cicles, Mòduls i Assignatures (30 Cursos)
+
+Accés directe al repositori històric de temaris, enunciats de tasques i guies de pràctiques classificats per etapa educativa (sense duplicats, versió més actual de cada mòdul):
+
+| Etapa / Cicle Formatiu | Mòduls i Assignatures Disponibles | Accés Directe |
+| :--- | :--- | :---: |
+| **1. FP Grau Bàsic (CFGB)** | *Ofimàtica i Arxiu de Documents (1r FPB)* i *Projecte Intermodular (2n FPB)* | [Ver Mòduls FPB →](./biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina) |
+| **2. FP Grau Mitjà (SMX)** | *Aplicacions Ofimàtiques (AOF), Muntatge (MME), Xarxes Locals (XAL), Serveis en Xarxa (SeX), Aplicacions Web (AWE) i Seguretat (SI)* | [Ver Mòduls SMX →](./biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes) |
+| **3. FP Grau Superior (DAW / DAM)** | *Programació Java (UD1-12), Entorns (ED), Sistemes Informàtics (SI), Marques (LMSGI), Servidor (DWES), Desplegament (DAW) i Disseny (DIW)* | [Ver Mòduls DAW/DAM →](./biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions) |
+| **4. FP Grau Superior (ASIX)** | *Planificació i Admin de Xarxes (PAX), Serveis de Xarxa i Internet (SXI), Admin d'SGBD (ASGBD) i Seguretat i Alta Disponibilitat (SAD)* | [Ver Mòduls ASIX →](./biblioteca-cicles/#-fp-grau-superior--asix-administració-de-sistemes-i-xarxes) |
+| **5. Especialització (IABD / CETI)** | *Programació d'IA amb Python (PIA), Sistemes d'Aprenentatge Automàtic (SAA) i Hacking Ètic (HE)* | [Ver Màsters FP →](./biblioteca-cicles/#-cursos-despecialització-ia--big-data--ciberseguretat) |
+| **6. ESO i Batxillerat** | *Digitalització 4t ESO, Linux, Disseny Web, Multimèdia, Ofimàtica, PIAR I i II (2n/3r ESO) i Programació i Xarxes I i II (1r/2n BAT)* | [Ver ESO i BAT →](./biblioteca-cicles/#-secundària-eso-i-batxillerat) |
 
 ---
 
