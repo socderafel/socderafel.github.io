@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT19 — BDA. Base de Datos. MACROS — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT19 Completa</span>
+<h1>📘 UT19 — BDA. Base de Datos. MACROS (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut1901"><strong>19.1 Tema 7. MACROS</strong></a> (o <a href="./ut1901.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1902"><strong>19.2 Abrir Form sin Abrir Access</strong></a> (o <a href="./ut1902.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1903"><strong>19.3 B1-EXERCICIS BDA-MACROS</strong></a> (o <a href="./ut1903.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1904"><strong>19.4 B2-EXERCICIS BDA MACROS</strong></a> (o <a href="./ut1904.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut1901">19.1 Tema 7. MACROS</h2>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(239, 69, 64);">TEMA 7. MACROS</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">TEMA</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">EXERCICIS MACROS</span></b><br/></p></div>
+<p>📎 <strong>Material de laboratori (BDA ALUMNOS PER A MACROS (CLASSE)):</strong> <code>ALUMNOS.mdb</code></p>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">VIDEOS</span></b><br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 14.1. Crear una macro</p><p><a href="https://www.youtube.com/watch?v=2j3eNgV_t-Y" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=2j3eNgV_t-Y) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 14.2. Macros condicionals</p><p><a href="https://www.youtube.com/watch?v=XL4UCkKIWB8" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=XL4UCkKIWB8) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 15.1. Personalitzar barra d'acces ràpid</p><p><a href="https://www.youtube.com/watch?v=ALD6QP6olgM" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=ALD6QP6olgM) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 15.2. Opcions de la base de datos</p><p><a href="https://www.youtube.com/watch?v=JwuCGzR_rXg" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=JwuCGzR_rXg) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 15.3. El panel de control</p><p><a href="https://www.youtube.com/watch?v=vRuR1OMhJG0" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=vRuR1OMhJG0) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 16. Analitzar taules</p><p><a href="https://www.youtube.com/watch?v=cXvIMW4eGbM" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=cXvIMW4eGbM) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 17. Importar dades</p><p><a href="https://www.youtube.com/watch?v=3YwTd8VkUmY" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=3YwTd8VkUmY) ↗️</strong></a></p></div>
+<hr/>
+<p>Tema 7</p>
+<p>M i c r o s o f t A C C E S S</p>
+<p>M A C R O S</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>INDICE</p>
+<p>Las Macros, aspectos generales</p>
+<p>Introducción</p>
+<p>Concepto</p>
+<p>La macro especial Autoexec</p>
+<p>Crear una Macro Ejecutar una macro, relacionar las macros con los eventos</p>
+<p>Consideraciones previas</p>
+<p>Los Eventos Acciones mas utilizadas en las macros</p>
+<p>Abrir Tabla, Consulta, Formulario o Informe</p>
+<p>Descripción</p>
+<p>Argumentos</p>
+<p>Buscar Registro</p>
+<p>Descripción</p>
+<p>Argumentos</p>
+<p>Cerrar Ventana</p>
+<p>Descripción</p>
+<p>Argumentos</p>
+<p>Cuadro De Mensaje</p>
+<p>Descripción</p>
+<p>Argumentos</p>
+<p>Eco</p>
+<p>Descripción</p>
+<p>Argumentos</p>
+<p>EjecutarComandoDeMenú EstablecerValor</p>
+<p>Descripción</p>
+<p>Argumentos IrARegistro</p>
+<p>Descripción</p>
+<p>Argumentos SalirDeAccess Bibliografía</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>1 Las Macros, aspectos generales</p>
+<p>Introducción</p>
+<p>Concepto Las Macros son un método sencillo para llevar a cabo una o varias tareas básicas como abrir y cerrar formularios, mostrar u ocultar barras de herramientas, ejecutar informes, etc. También sirven para crear métodos abreviados de teclado y para que se ejecuten tareas automáticamente cada vez que se inicie la base de datos.</p>
+<p>La configuración por defecto de Access, nos impedirá ejecutar ciertas acciones de macro si la base de datos no se encuentra en una ubicación de confianza, para evitar acciones malintencionadas. Para ejecutar correctamente las macros de bases de datos que consideremos fiables, podemos añadir la ubicación en el Centro de confianza.</p>
+<p>La macro especial Autoexec Si guardamos la Macro con el nombre de AutoExec, cada vez que se inicie la base de datos, se ejecutará automáticamente. Esto es debido a que Access al arrancar busca una macro con ese nombre, si la encuentra será el primer objeto que se ejecute antes de lanzar cualquier otro.</p>
+<p>Crear una Macro Para definir una macro, indicaremos una acción o conjunto de acciones que automatizarán un proceso. Cuando ejecutemos una Macro, el proceso se realizará automáticamente sin necesidad, en principio, de interacción por nuestra parte. Por ejemplo, podríamos definir una Macro que abra un formulario cuando el usuario haga clic en un botón, o una Macro que abra una consulta para subir un diez por cien el precio de nuestros productos.</p>
+<p>Crear una Macro es relativamente fácil, sólo tenemos que hacer clic el botón Macro de la pestaña Crear y se abrirá la ventana con la nueva macro, así como sus correspondientes Herramientas de macros, englobadas en la pestaña Diseño. La ventana principal consta de una lista desplegable permite elegir la Acción para la macro. En el panel de la izquierda encontraremos estas mismas acciones agrupadas por categorías según su tipo y con un útil buscador en la zona superior, de forma que sea más sencillo localizar la que se desee aplicar (Ver Ilustración 1).</p>
+<p>Podemos añadir tantas acciones como queramos, ya que al elegir una opción en el desplegable aparecerá otro inmediatamente debajo del primero, y así consecutivamente. Simplemente deberemos tener presente que se ejecutarán en el orden en que se encuentren. Es una cuestión de lógica, se ejecuta de forma lineal, de forma que no tendría sentido tratar de Cerrar ventana si aún no la hemos abierto, por ejemplo.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>Para cambiar el orden en el que se encuentren las acciones puedes arrastrarlas con el ratón hasta la posición correcta o bien utilizar los botones de la acción, que aparecerán al pasar el cursor sobre ella. Con ellos podrás subir o bajar un nivel la acción por cada pulsación.</p>
+<p>Obviamente estos botones sólo están disponibles si hay más de una acción. La última sólo podrá ascender, la primera sólo podrá descender y si sólo hay una acción únicamente dispondrá del botón Eliminar situado a la derecha.</p>
+<p>En función de la acción que seleccionemos aparecerá un panel con un aspecto u otro, en el que podremos especificar los detalles necesarios.</p>
+<p>Por ejemplo, para la acción Abrir una tabla, necesitaríamos saber su nombre, en qué vista queremos que se muestre y si los datos se podrán modificar o no una vez abierta.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>No siempre será obligatorio rellenar todos los campos, únicamente los que indique que son Requeridos. El resto puede que tengan un valor por defecto (como en este caso Vista: Hoja de datos) o que simplemente sean opcionales. Cuando tengamos muchas acciones en una macro, es posible que interese ocultar los detalles para ver la lista de acciones una bajo otra. En ese caso, podremos expandir y contraer la información desde el botón de la esquina superior izquierda. Cuando se ocultan los detalles, la información relevante se muestra toda en una fila, como observamos en la siguiente imagen.</p>
+<p>Otra forma de contraer y expandir es desde su correspondiente grupo en la pestaña Diseño.</p>
+<p>Cuando la Macro está terminada, puede guardarse , ejecutarse y cerrarse. Más tarde podremos llamarla desde un control Botón, o ejecutarla directamente desde la ventana de la base de datos haciendo clic en Ejecutar o bien haciendo doble clic directamente sobre ella.</p>
+<p>2 Ejecutar una macro, relacionar las macros con los eventos</p>
+<p>Consideraciones previas Aunque aún no hayamos aprendido mucho sobre ellas, es importante que tengamos claro para qué sirven exactamente las macros y cuándo se ejecutan. Desde luego, siempre podemos abrir el diseño de la macro y pulsar el botón Ejecutar en la cinta de opciones, para ejecutarla de forma manual. También podríamos hacer doble clic sobre ella en el Panel de navegación. Pero estas no son las prácticas más utilizadas.</p>
+<p>La mayoría de veces, las macros serán acciones que se ejecutan por detrás, sin la plena consciencia del usuario de la base de datos. El usuario que se encarga de actualizar el inventario o dar de alta pacientes no tiene por qué saber cómo se llaman las tablas y qué acciones concretas ejecuta cada macro. Normalmente, el usuario en realidad trabaja con formularios amigables, con botones y otros controles, que utiliza de forma intuitiva.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>Somos nosotros, quienes creamos la base de datos, los encargados de asignar a cada control la macro conveniente. Por lo tanto, lo que debemos hacer es asignar una macro que programe qué acción se ejecutará al interactuar con un determinado control u objeto. Y para ello trabajaremos con sus Eventos</p>
+<p>Los Eventos</p>
+<p>Un evento es una acción que el usuario realiza, normalmente de forma activa. Por ejemplo hacer clic o doble clic sobre un botón, cambiar de un registro a otro en un formulario, modificar un determinado campo de un registro, cerrar la base de datos, etc. Deberemos reflexionar sobre en qué momento nos interesa que se ejecute la macro, para aprender a elegir qué evento y qué control la desencadenarán.</p>
+<p>Para asociar la macro a un control: En la vista diseño de formulario, seleccionamos un control o el propio formulario.</p>
+<p>Luego abrimos la Hoja de propiedades, si no está ya abierta, y nos situamos en la pestaña Eventos</p>
+<p>Entre los posibles eventos, elegimos el que nos conviene que ejecute la macro. Al hacer clic en él aparecerán dos botones</p>
+<p> El primero nos permitirá desplegar la lista de macros que tengamos en la base de datos. Ahí es donde deberemos indicar qué macro ejecutar.  El segundo botón nos permite elegir el tipo de generador entre los generadores de macros, expresiones y código. No vamos a entrar en detalle en él.</p>
+<p>En el ejemplo de la imagen hemos asignado al evento Al hacer clic en un Botón de comando na macro que se encarga de mostrar la nómina del empleado actual. De forma que si el usuario está viendo los registros de empleados en un formulario y pulsa el botón, se abrirá una ventana con el formulario que contiene los datos de su última nómina</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>3 Acciones mas utilizadas en las macros En este apartado veremos las acciones más utilizadas en las Macros. Siempre puedes recurrir a la ayuda de Access para obtener información sobre acciones que aquí no tratemos.</p>
+<ul>
+<li>Algunas de estas acciones no se muestran si no está pulsado el icono Mostrar todas las</li>
+</ul>
+<p>acciones, en la pestaña Diseño.</p>
+<p>Abrir Tabla, Consulta, Formulario o Informe</p>
+<p>Descripción Esta acción abre una tabla, consulta, formulario o informe escogida entre las existentes en la base de datos.</p>
+<p>Argumentos</p>
+<p>Para el caso de abrir una consulta tenemos los siguientes argumentos</p>
+<p>Debemos indicar</p>
+<p>el nombre de la consulta a abrir,</p>
+<p>la Vista en la que quieras que se abra (Hoja de Datos, Diseño, Vista Preliminar, TablaDinámica, GráficoDinámico),</p>
+<p>Modo de datos de la consulta. Si seleccionamos Agregar, la consulta sólo permitirá añadir nuevos registros a los existentes y no se tendrá acceso a los datos ya almacenados. Seleccionando Modificar permites la edición total de los datos de la consulta. Seleccionando Sólo lectura se abrirá la consulta mostrando todos sus datos pero sin ser editables, no se podrán modificar.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>Para el caso de abrir un formulario tenemos los siguientes argumentos</p>
+<p>Destaca</p>
+<p>En el argumento Vista especificaremos el modo en el que queremos que se abra el formulario: en vista Formulario, Diseño, Vista Preliminar, Hoja de Datos, TablaDinámica o GráficoDinámico.</p>
+<p>En Nombre del filtro podremos indicar el nombre de una consulta que hayamos creado previamente. Al abrirse el formulario solamente mostrará los registros que contengan los resultados de la consulta indicada.</p>
+<p>En el argumento Condición WHERE podemos introducir, mediante el generador de expresiones, o tecleándola directamente, una condición que determinará los registros que se muestren en el formulario. Un ejemplo sería [Alumnado]![Código Postal] = 46183, para que mostrase solamente aquellos registros de la tabla Alumnado cuyo campo código postal fuese igual a 46183.</p>
+<p>En Modo de datos podrás seleccionar los mismos parámetros que en la acción anterior: Agregar, Modificar o Sólo lectura.</p>
+<p>El argumento Modo de la ventana decidirá si la ventana del formulario se deberá abrir en modo Normal, Oculta, como Icono o como Diálogo. Si abres un formulario en modo Oculto no podrá ser visto por el usuario, pero sí referenciado desde otros lugares para extraer datos o modificarlos. El modo Diálogo permite que el formulario se posicione encima de los demás formulario abiertos y sea imposible operar con el resto de la aplicación hasta que no se haya cerrado (como pasa con todos los cuadros de diálogo).</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>Para el caso de abrir un informe tenemos los siguientes argumentos</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>Destaca: - Las Vistas que ofrece esta acción son: Imprimir, Diseño, Vista preliminar, Informe y Distribución.</p>
+<p>Igual que con los formularios puedes establecer un Nombre de filtro basado en una consulta o una Condición WHERE a través del Generador de expresiones. - En Modo de la ventana tenemos los mismo modos que para los formularios: Normal, Oculta, Icono y Diálogo.</p>
+<p>Para el caso de abrir una tabla tenemos los siguientes argumentos</p>
+<p>Como Vista podrás elegir los valores Hoja de Datos, Diseño, Vista Preliminar, TablaDinámica o GráficoDinámico.</p>
+<p>Selecciona una opción de Modo de datos entre Agregar, Modificar y Sólo lectura igual que en la acción AbrirConsulta.</p>
+<p>Buscar Registro</p>
+<p>Descripción Utilizaremos esta acción para buscar registros. Esta acción busca el primer registro que cumpla los criterios especificados. Puedes utilizar esta acción para avanzar en las búsquedas que realices.</p>
+<p>Argumentos</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>En el argumento Buscar introduciremos el valor a buscar en forma de texto, número, fecha o expresión. Podemos elegir en qué lugar del campo debe coincidir el cadena introducida, puedes elegir entre Cualquier parte del campo, Hacer coincidir todo el campo o al Comienzo del campo.</p>
+<p>También puedes diferenciar entre hacer Coincidir mayúsculas y minúsculas o no. Se supone que la Búsqueda se realiza cuando estamos visualizando un registro determinado, de aquí el porqué de las siguientes opciones. Esta acción se para en el primer registro que cumpla las condiciones, por lo que en el argumento Buscar en podremos decidir el sentido en la que Access recorrerá los registros, selecciona Arriba para empezar a buscar hacia atrás. Selecciona Abajo para buscar hacia adelante. En ambos casos la búsqueda parará al llegar al final (o principio) del conjunto de registros. Selecciona Todo para buscar hacia adelante hasta el final, y después desde el principio hasta el registro actual.</p>
+<p>En el argumento Buscar con formato decidiremos si se tiene en cuenta el formato que tienen los datos entre los que buscamos o no. Por ejemplo, si buscamos la cadena 1.234 y hacemos que busque con formato seleccionando Sí, en los campos con formato Access intentará hacer coincidir el formato de la cadena introducida con el dato almacenado con formato, por lo tanto no encontraría un campo que almacenase un valor de 1234. Si seleccionamos No, deberemos escribir 1234 para encontrar un campo con formato que contenga el dato 1.234, porque Access comparará 1234 con el valor del campo sin formato.</p>
+<p>La opción Sólo el campo activo buscará en todos los registros, pero solamente en el campo activo en ese momento sino buscará en todos los campos. El argumento Buscar primero fuerza a que la búsqueda se realice desde el primer registro en vez de buscar a partir del registro actual.</p>
+<p>Cerrar Ventana</p>
+<p>Descripción Con esta acción podrás cerrar cualquier objeto que se encuentre abierto.</p>
+<p>Argumentos</p>
+<p>Selecciona en Tipo de objeto: Tabla, Formulario, Consulta, Informe, etc. , y en Nombre del objeto escribe el nombre de éste. Puedes configurar si se guardará el objeto antes de cerrarlo seleccionando Sí o No. Con Preguntar dejarás que esto quede a decisión del usuario</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>Cuadro De Mensaje</p>
+<p>Descripción Con las Macros incluso podremos mostrar mensajes para interactuar con el usuario. Esto nos lo permitirá la acción CuadroDeMensaje.</p>
+<p>Argumentos</p>
+<p>Sus argumentos son muy sencillos, en Mensaje deberemos escribir el mensaje que queremos que aparezca en el cuadro de mensaje. Utiliza la combinación de teclas MAYÚS+INTRO para crear saltos de línea.</p>
+<p>También puedes utilizar el símbolo @ para rellenar el mensaje por secciones (o párrafos). Si utilizas esta alternativa deberás introducir 3 secciones. Aunque podrías dejar alguna en blanco. En el mensaje que ves a continuación, el contenido del argumento Mensaje era: Se ha producido un error guardando el registro.@Se perderán todos los cambios.@. Como puedes ver la tercera sección se ha dejado en blanco deliberadamente y el resultado sería este</p>
+<p>En Bip podremos decidir si junto al mensaje suena una alarma auditiva para alertar al usuario.</p>
+<p>Selecciona el Tipo de mensaje eligiendo entre: Ninguno, Crítico, Aviso: !, Aviso: ? e Información.</p>
+<p>También puedes modificar el Título del cuadro de mensaje y escribir lo que prefieras.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>Eco</p>
+<p>Descripción Esta acción es muy útil para ocultar al usuario las operaciones que se están realizando con una Macro. Permite la activación o desactivación de la visualización de las acciones en pantalla. Si no está pulsado el icono Mostrar todas las acciones, en la pestaña Diseño, no podrás elegir esta acción.</p>
+<p>Argumentos</p>
+<p>Si quieres utilizarla es conveniente que la coloques al principio de la Macro para desactivar la visualización. Luego vuelve a utilizarla al final de la Macro para volverla a activar la visualización.</p>
+<p>Activa o desactiva la visualización utilizando el argumento Eco activo. En Texto de la barra de estado podrás escribir un texto que se mostrará en la barra de estado mientras la Macro esté ejecutándose y el Eco se encuentre desactivado.</p>
+<p>Las acciones DetenerMacro y DetenerTodasMacros activan el Eco automáticamente.</p>
+<p>EjecutarComandoDeMenú Utiliza esta acción para lanzar comandos que puedas encontrar en cualquier barra de herramientas. Solo deberás seleccionar la acción que prefieras en el argumento Comando y se ejecutará.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>EstablecerValor</p>
+<p>Descripción Una acción muy útil que te permitirá modificar los valores de los campos. Si no está pulsado el icono Mostrar todas las acciones, en la pestaña Diseño, no podrás elegir esta acción.</p>
+<p>Argumentos</p>
+<p>En Elemento introduce el nombre del campo sobre el que quieras establecer un valor. Podrás acceder al generador de expresiones para ello.</p>
+<p>En el argumento Expresión introduciremos el valor que queremos que tome el campo. Recuerda que si es una cadena de texto deberá ir entre comillas.</p>
+<p>IrARegistro</p>
+<p>Descripción Te permitirá saltar a un registro en particular dentro de un objeto.</p>
+<p>Argumentos</p>
+<p>Para ello sólo tienes que indicar el Tipo de objeto (Tabla, Informe, Formulario...) y su Nombre.</p>
+<p>Luego en Registro indicaremos a qué registro queremos ir. Podemos elegir entre Primero, Último o Nuevo. También es posible seleccionar las opciones Anterior, Siguiente o Ir a. En estos últimos casos deberemos rellenar también el argumento Desplazamiento para indicar el número del registro al que queremos ir (para Ir a), o cuántos registros queremos que se desplace hacia atrás o hacia delante (para Anterior y Siguiente).</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. MS-Access. MACROS</p>
+<p>SalirDeAccess Esta acción hace que Access se cierre.</p>
+<p>Puedes elegir entre Guardar Todo, Preguntar o Salir directamente sin guardar los cambios.</p>
+<p>4 Bibliografía</p>
+<p>http://www.aulaclic.es/access-2010/t_14_1.htm</p>
+<hr/>
+<h2 id="ut1902">19.2 Abrir Form sin Abrir Access</h2>
+<p>FORM-UNLOAD</p>
+<p>Option Explicit Const SW_HIDE = 0 Const SW_NORMAL = 1 Const SW_MINIMIZED = 2 Const SW_MAXIMIZED = 3</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Private Declare Function ShowWindow Lib "user32" _</code></pre>
+</div>
+<p>(ByVal hwnd As Long, ByVal nCmdShow As Long) As Long</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Private Sub Form_Open(cancel As Integer)</code></pre>
+</div>
+<p>Call ShowWindow(hWndAccessApp, SW_HIDE) DoCmd.OpenForm "MENU", windowmode:=acDialog End Sub</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Private Sub form_Unload(cancel As Integer)</code></pre>
+</div>
+<p>Dim IngRetCode As Long IngRetCode = ShowWindow(hWnAccessApp, SW_MAXIMIZED)</p>
+<p>End Sub</p>
+<hr/>
+<h2 id="ut1903">19.3 B1-EXERCICIS BDA-MACROS</h2>
+<p>Tema 7</p>
+<p>EJERCICIOS</p>
+<p>BDA RELACIONALES . MACROS</p>
+<p>1 parte: Editorial Paraninfo</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. EJERCICIOS. Base de datos relacionales. MACROS (B1)</p>
+<p>ACTIVIDADES</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Actividad 7.1.</p><p>Actividad 7.1.</p></div>
+<p>Utilizando la BD LIBROS, crear una macro que muestre sobre un informe, que hay que crear previamente, los registros de la tabla Libros, aquellos con fecha de compra del año 99. Mostrar los datos: REF, TITULO, AUTOR, EDITORIAL y TEMA.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Actividad 7.2.</p><p>Actividad 7.2.</p></div>
+<p>Utilizando la BD ALUMNOS, crear el formulario que se muestra en la figura, en el que hay que elegir un determinado curso del cuadro combinado y al pulsar el botón que aparece debajo visualice sobre un informe, que hay que crear previamente, los datos NOMBRE, POBLACIÓN y DIRECCIÓN de la tabla ALUMNOS, aquellos cuyo curso coincida con el mostrado en el cuadro combinado.</p>
+<p>Formulario Actividad 2.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Actividad 7.3.</p><p>Actividad 7.3.</p></div>
+<p>Crear una macro que automáticamente (al abrir la base de datos) abra un formulario llamado Inicio, que hay que crear, que presente utilizando botones de comando, las opciones para ejecutar los formularios e informes que se han realizado en la unidad, además de un botón para salir de la aplicación, el diseño se muestra en la siguiente figura.</p>
+<p>Formulario de la Actividad 3.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. EJERCICIOS. Base de datos relacionales. MACROS (B1)</p>
+<p>EJERCICIOS PROPUESTOS</p>
+<h4>7.1. Utilizando la BD EMPLEADOS, crear una macro que muestre sobre un</h4>
+<p>informe, que hay que crear previamente, los datos: APELLIDO, SALARIO, COMISION y NOMBRE DE DEPARTAMENTO de aquellos con comisión entre 100 y 200.</p>
+<h4>7.2. Utilizando la BD VENTAS, crear una macro que muestre sobre un informe,</h4>
+<p>que hay que crear previamente, los productos cuya suma de unidades vendidas sea superior o igual a una cantidad tecleada, esa cantidad debe ser mayor de 0, validarla utilizando macros. Los datos a mostrar serán el nombre de producto y la suma de unidades. Crear el formulario que se muestra en la figura. El botón ejecutará la macro.</p>
+<p>Formulario del ejercicio.</p>
+<h4>7.3. Utilizando la BD ALUMNOS, crear una macro que muestre sobre un</h4>
+<p>informe, que hay que crear previamente, los alumnos cuya nota media sea mayor o igual a una nota tecleada, y un curso seleccionado. Los datos a mostrar serán el nombre del alumno y nota media. Crear el formulario que se muestra en la figura. El botón ejecutará la macro. La nota tecleada se tiene que validar y debe estar comprendida entre 0 y 10, validarla utilizando macros.</p>
+<p>Formulario del ejercicio.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 07. EJERCICIOS. Base de datos relacionales. MACROS (B1)</p>
+<h4>7.4. Crear un formulario para la entrada de datos a la tabla CURSOS de la BD</h4>
+<p>ALUMNOS. El formulario estará asociado a la tabla CURSOS, y debe tener 5 botones, el primer botón para ver el registro anterior, el segundo para ver el siguiente, el tercero para guardar el registro, el cuarto para insertar y el quinto ejecutará una macro que abrirá un informe que liste los distintos cursos. Hay que crear el informe. En la entrada de datos se pide que se validen utilizando macros los datos de TURNO, cuyos valores deben estar entre DIURNO, NOCTURNO y VESPERTINO; y ETAPA cuyos valores deben ser: PRIMER CICLO, SEGUNDO CICLO, BACHILLERATO y FP.</p>
+<hr/>
+<h2 id="ut1904">19.4 B2-EXERCICIS BDA MACROS</h2>
+<p>Tema 7</p>
+<p>EJERCICIOS</p>
+<p>BDA-Relacionales. MACROS (completo)</p>
+<p>2 parte (B2)</p>
+<p>Ejercicios de macros en Access. Pág. 2</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 2 EJERCICIO 3 EJERCICIO 4</p>
+<p>Crea un formulario en Vista de Diseño con una etiqueta en la que ponga tu nombre.</p>
+<p>Crea a continuación una macro llamada Saludo que muestre el mensaje “Bienvenido a mi formulario”. El tipo del mensaje será de información y el título será “Hola!!!”. Abrir las propiedades del formulario creado y cambiarlas para que al iniciar el formulario se muestre el mensaje que se ha construido con la macro.</p>
+<p>Guarda la base de datos creada con el nombre ejer1-3.mdb.</p>
+<p>Crear una macro llamada Despedida que muestre el mensaje “Hasta la próxima!!!”. Dicho mensaje se va a visualizar al cerrar el formulario creado en el ejercicio anterior. Guardar los cambios realizados.</p>
+<p>Crear una nueva macro cuya acción sea maximizar y otra macro cuya acción sea minimizar. Los nombres de las macros serán Maximizar y Minimizar respectivamente. Añadir al formulario del ejercicio 1 dos botones de comando y asociarles las macros creadas.</p>
+<p>Abre la base de datos zoo.mdb y ve a la ventana de la base de datos para crear una nueva macro, como puede observarse en la siguiente imagen</p>
+<p>Observa que se ha pulsado el botón de la barra de herramientas para hacer visible la columna Condición . Guarda la macro con el nombre Condicional. EJERCICIO 1</p>
+<p>Ejercicios de macros en Access. Pág. 3</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 5 EJERCICIO 6</p>
+<p>Ahora crea de forma automática un formulario para la tabla Cuidadores y, desde la vista Diseño, añade un botón para Ejecutar macro (Categoría­&gt;Otras Acción­&gt;Ejecutar macro). En el siguiente paso del asistente, selecciona la macro creada, Condicional. Después, deja la imagen para el frontal del botón que propone el asistente antes de finalizar. Prueba el funcionamiento de la macro pulsando el botón desde diferentes registros, si el salario es 1000 saldrá un mensaje y, en caso contrario, otro.</p>
+<p>Crear una tabla llamada ejercicio3 con los campos dni, nombre y edad. Construir sobre esa tabla un formulario con el asistente y añadir un botón con la etiqueta “Comprobar edad” mostrará el mensaje “La persona tiene 18 años” en el caso de que se haya introducido 18 en el campo edad. Guardar el ejercicio con el nombre ejer5-7.mdb</p>
+<p>Añade 2 condiciones más a la macro creada en el ejercicio anterior.</p>
+<p>Si la edad es mayor que 18 se mostrará el mensaje “La persona es mayor de edad”. - Si la edad es menor que 18 se mostrará el mensaje “La persona tiene menos de 18 años”.</p>
+<p>Ejercicios de macros en Access. Pág. 4</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 8 EJERCICIO 9</p>
+<p>Construir un nuevo formulario sobre la tabla creada en el ejercicio 6. Quitar del formulario los botones de desplazamiento (los que sirven para moverse por los registros del formulario). Añadir al formulario un botón con la etiqueta “Guardar datos” que realizará lo siguiente.</p>
+<p>Mostrará el mensaje “Se van a guardar los datos de un nuevo socio” cuando se pulse sobre él y hará las siguientes comprobaciones.</p>
+<p>Si el nombre dni está vacío se mostrará el mensaje de error “Se debe introducir el DNI”. - Si el nombre está vacío se mostrará el mensaje de error “Se debe introducir el nombre”. - Si la edad no se ha introducido también se mostará un mensaje de error con el texto “Se debe introducir la edad”.</p>
+<p>La macro creada se guardará con el nombre ComprNulos</p>
+<p>Abre la base de datos zoo.mdb y crea automáticamente un nuevo formulario sobre la tabla ANIMALES llamado ANIMALES. En el formulario creado, el número de patas no puede ser superior a 8 ni inferior a 0. En ese caso se mostrará un mensaje de error y no se procederá a la actualización del registro.</p>
+<p>Guarda el ejercicio con el nombre ejer8.mdb</p>
+<p>En una base de datos en blanco, crea un formulario en vista Diseño y agrega los dos controles de la imagen.</p>
+<p>Programa a continuación las siguientes macros: EJERCICIO 7</p>
+<p>Ejercicios de macros en Access. Pág. 5</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>Evento Objeto Nombre macro Efecto Al abrir Formulario Saludo Mensaje “Bienvenido” D e s p u é s d e actualizar T e x t o “Nombre” Hola Mensaje “Hola” Después de actualizar Texto “Edad” MayorDeEdad Si ha cumplido 18 años el mensaje será “Puede acceder a la base de datos”, en otro caso se mostrará el mensaje “Debe esperar a cumplir los 18 años para poder ver contenidos”.</p>
+<p>Guarda la base de datos con el nombre ejer9.mdb</p>
+<p>A partir de una base de datos en blanco crea un formulario como el que se muestra a continuación.</p>
+<p>Añade en primer lugar un grupo de opciones . Las etiquetas del grupo de opciones serán las que ves en el formulario de arriba. Los valores que devolverán ese grupo de opciones serán 1, 2, 3 y 4 respectivamente. Selecciona todo el grupo de opciones y asígnale el nombre “Opciones”.</p>
+<p>Construye ahora una macro y asigna las siguientes condiciones y acciones.</p>
+<p>EJERCICIO 10</p>
+<p>Ejercicios de macros en Access. Pág. 6</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 11 EJERCICIO 13 Ahora tan solo tienes que añadir un botón de comando al formulario que creaste y asociarle la macro.</p>
+<p>Guarda la base de datos con el nombre ejer10-11.mbd</p>
+<p>Realiza una modificación al ejercicio anterior para que se ejecuten las acciones que elijas nada más elegir una opción del grupo de opciones, sin tener que pulsar sobre el botón “Ejecutar acción”. (Tendrás que seleccionar el grupo de opciones y asignarle al evento “Después de actualizar” la macro creada en el ejercicio anterior).</p>
+<p>A partir de la base de datos zoo.mdb crear un informe a partir de la tabla Cuidadores y otro a partir de la tabla Animale.s</p>
+<p>Crear a continuación un formulario como el que se indica a continuación.</p>
+<p>Dependiendo de la opción que se elija se abrirá un informe u otro. Guarda la base de datos con el nombre ejer12.mdb.</p>
+<p>EJERCICIO 12</p>
+<p>Ejercicios de macros en Access. Pág. 7</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>Crear un formulario como el siguiente</p>
+<p>En este formulario deberás realizar la suma dos números que se encuentran en dos campos (operando1 y operando2). El resultado de la suma se visualizará en el campo Resultado cuando se pulse sobre el botón “Realizar suma”. Guardar el ejercicio con el nombre ejer13.mdb.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: El formato de cada campo de texto debe ser Número...</p><p>Nota: El formato de cada campo de texto debe ser Número general.</p></div>
+<p>Añadir al ejercicio anterior las siguientes comprobaciones al pulsar sobre el botón realizar suma.   Si el primer campo está vacío (operando1) se debe mostrar el mensaje “Debe introducirse el primer operando” y se detendrá la macro.   Si no se ha puesto ningún valor en el segundo campo (operando2) se debe mostrar el mensaje “Debe introducirse el segundo operando” y se detendrá la macro.</p>
+<p>Guardar el ejercicio con el nombre ejer14.mdb</p>
+<p>EJERCICIO 14</p>
+<p>Ejercicios de macros en Access. Pág. 8</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 15 EJERCICIO 16</p>
+<p>Utilizando la base de datos empleados.mdb, construir un formulario como el siguiente. En dicho formulario se introducirá un salario, y al pulsar sobre el botón “Ver informe” se mostrará un informe con los empleados que tienen un salario mayor que la cantidad introducida en el cuadro de texto del formulario.</p>
+<p>Guarda el ejercicio con el nombre ejer15.mdb</p>
+<p>Realizar una modificación en la macro del ejercicio anterior para que en el caso de que se introduzca una cantidad negativa en el salario, se muestre un cuadro de mensaje con el texto “El salario introducido no puede ser negativo”.</p>
+<p>Guarda el ejercicio con el nombre ejer16.mdb</p>
+<p>Ejercicios de macros en Access. Pág. 9</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 18</p>
+<p>Sobre la base de datos ventas.mdb, crear una consulta que muestre el nombre de los productos y la suma de unidades vendidas de cada producto. Sobre esa consulta, crear un informe cuyos campos sean el nombre del producto y la suma de unidades.</p>
+<p>A continuación crear un formulario como el siguiente. En él se introducirá una cantidad, y al pulsar sobre el botón “Mostrar informe” se visualizará un informe con los datos de los productos cuya suma de unidades vendidas sea superior a la cantidad introducida. La cantidad introducida debe ser mayor que 0. En caso contrario se mostrará un mensaje de error con el texto “La cantidad de unidades no puede ser negativa”.</p>
+<p>A partir de la base de datos mundo.mdb, crear un formulario como el que se muestra a continuación. En dicho formulario aparecen dos cuadros combinados y un botón de comando. El primer cuadro combinado mostrará una lista de todos los continentes de la tabla PAÍSES. Cuando se elija un continente de la lista, se visualizará un informe con los datos de los países del continente elegido. El segundo cuadro combinado mostrará una lista de todas las lenguas de la tabla PAÍSES. Al elegir un valor de la lista, se mostrará un informe con los datos de los países en los que se habla la lengua elegida. El botón de comando mostrará un informe con los datos de los países del continente y lengua elegidos en los dos cuadros combinados.</p>
+<p>Guarda el ejercicio con el nombre ejer18.mdb</p>
+<p>EJERCICIO 17</p>
+<p>Ejercicios de macros en Access. Pág. 10</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 19 EJERCICIO 20 EJERCICIO 21</p>
+<p>Utilizando la base de datos alumnos.mdb, crear una macro que muestre sobre un informe, que hay que crear previamente, los alumnos cuya nota media sea mayor o igual que una nota tecleada, y un curso seleccionado. Los datos a mostrar serán el nombre de alumno y la nota media. Crear el formulario que aparece a continuación. El botón ejecutará la macro. La nota tecleada tiene que estar comprendida entre 0 y 10. En caso contrario se mostrará un mensaje de error y no se mostrará el informe.</p>
+<p>Guarda el ejercicio con el nombre ejer19.mdb</p>
+<p>A partir de la base de datos hospitales.mdb, crear un formulario con los campos de la tabla PLANTILLA. En el cuadro de texto “Turno”, los únicos valores posibles son ʻMʼ (Mañana) o ʻTʼ (Tarde). En caso de que se introduzcan valores distintos, se mostrará un mensaje de error y no se actualizará el registro.</p>
+<p>Guarda el ejercicio con el nombre ejer20.mdb</p>
+<p>En el siguiente formulario introduciremos una edad y el precio de entrada a un acontecimiento. El iva aplicable al precio de la entrada variará dependiendo de la edad introducida</p>
+<p>Si la edad es menor de 18 el iva aplicable es del 16%. Si la edad está entre 18 y 65 el iva aplicable es del 20%. Si la edad introducida es mayor de 65 el iva aplicable será del 25%.</p>
+<p>Ejercicios de macros en Access. Pág. 11</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 22</p>
+<p>En este ejercicio vamos a construir un convertidor de euros a pesetas.</p>
+<p>Añade un campo de texto con el nombre pesetas y otro campo de texto con el nombre euros.</p>
+<p>A continuación agrega un campo de opciones . Las etiquetas del grupo de opciones serán “Euros a pesetas” y “Pesetas a euros”. Los valores que devolverán las opciones serán 1 y 2 respectivamente.</p>
+<p>Por último selecciona todo el grupo de opciones y ponle el nombre “Opciones”.</p>
+<p>Ahora tan solo queda construir la macro y asignarle las acciones apropiadas. Guarda el ejercicio con el nombre ejer22.mdb.</p>
+<p>Ejercicios de macros en Access. Pág. 12</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 23 EJERCICIO 24</p>
+<p>Supongamos que tenemos un formulario para introducir características de clientes. La empresa ofrece descuentos especiales a clientes según la edad que tengan, según el siguiente criterio</p>
+<p>Edad Descuento &lt;10 5% &gt;=10 Y &lt;25 10% &gt;=25 y &lt;50 15% &gt;=50 25%</p>
+<p>La tabla que almacena esta información consta de los siguientes campos (el Descuento, aunque se puede calcular a partir de los otros campos, se almacena en la tabla por razones de eficiencia)</p>
+<p>Campo Comentarios Apellidos, Nombre, DNI Texto. Edad Numérico. Descuento Numérico entre 0 y 100.</p>
+<p>Tenemos un formulario con un control para cada campo, con el mismo nombre que el campo. El formulario deberá tener además un botón de comando que calcule automáticamente el descuento a partir de la edad del cliente. Si el campo edades nulo, se deberá mostrar un mensaje indicando que se debe rellenar ese campo para calcular el descuento.</p>
+<p>Guarda el ejercicio con el nombre ejer23.mdb</p>
+<p>Ejercicios de macros en Access. Pág. 13</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 26</p>
+<p>Diseñar un formulario con un solo botón con la etiqueta “Salir del formulario”. Al pulsar sobre este botón se mostrará el mensaje que aparece a continuación, y dependiendo del botón que se pulse en este mensaje se cerrará el formulario o no.</p>
+<p>Guardar la base de datos creada con el nombre ejer26.mdb.</p>
+<p>Realizar las siguientes modificaciones sobre el ejercicio anterior.   El cuadro de mensaje debe mostrar los botones Sí, No y Cancelar (sin ningún icono).   El cuadro de mensaje debe mostrar los botones Aceptar y Cancelar (sin ningún icono).   El cuadro de mensaje debe mostrar los botones Aceptar y Cancelar y debe llevar el icono de pregunta.</p>
+<p>  El cuadro de mensaje debe mostrar los botones Sí, No y Cancelar y debe llevar el icono de información.</p>
+<p>En una base de datos en blanco, crea un formulario como el de la imagen con el siguiente comportamiento</p>
+<p>Si la fecha de llegada es posterior a la fecha del sistema, dará un cuadro de mensaje titulado ERROR DE FECHA con el texto “Fecha incorrecta”. (La función que devuelve la fecha actual es la función Ahora()).</p>
+<p>Si la fecha de salida es anterior o igual a la fecha de llegada, dará un cuadro de mensaje titulado ERROR DE FECHA con el texto “La salida no puede ser anterior a la llegada”.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ NOTA: Asegúrate que los dos cuadros de texto tienen el ...</p><p>NOTA: Asegúrate que los dos cuadros de texto tienen el formato Fecha corta. Se tienen que crear dos macros. Una para comprobar que la fecha de llegada es posterior a la fecha del sistema y otra para comprobar que la fecha de llegada es mayor que la fecha de salida.</p></div>
+<p>EJERCICIO 25</p>
+<p>Ejercicios de macros en Access. Pág. 14</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 27</p>
+<p>Cuando se cierre el formulario se debe mostrar un mensaje con los botones Sí y No y con el texto “Desea cerrar el formular.ioE?l m” ensaje debe también mostrar un icono de interrogante. Si se pulsa sobre el botónSí se cerrará el formulario.</p>
+<p>Guardar la base de datos creada con el nombre ejer26.mdb</p>
+<p>Crear un formulario desde cero que contenga tres controles de tipo Cuadro de textollamados C1, C2 y C3, que se supone que van a contener números, y un botón de comando con el texto “Ejecutar”. Deben funcionar así:   Siempre los valores introducidos deben ser C1 &lt; C2 &lt; C3. Si se intenta infringir esta regla, se debe abortar la modificación (utilizar el evento Antes de modific)a. r   Si se modifica el valor de C1 o C3, C2 debe calcularse automáticamente C2 como C1+C2.</p>
+<p>  Si se pulsa sobre el botón Ejecutar y C1 está vacío debe llenarse a 0. Si se pulsa sobre el botón Ejecutar y C2 está vacío debe llenarse a C1+1, y si C3 queda vacío debe llenarse a C2+1.</p>
+<p>Guardar el ejercicio con el nombre ejer27.mdb.</p>
+<p>Ejercicios de macros en Access. Pág. 15</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>Crea en Access la siguiente calculadora.</p>
+<p>Cuando se pulse sobre un botón de operación (+, ­, * ó /), debe aparecer en el campo resultado la operación seleccionada. Si se pulsa el botón + debe aparecer en operación el texto “Suma”, si se pulsa el botón – debe aparecer “Resta”, si se pulsa el botón * debe aparecer el texto “Multiplicación” y si se pulsa sobre el botón / debe aparecer el texto “División”.</p>
+<p>Cuando se pulse un botón que contenga un número (1, 2 ó 3) debe ocurrir lo siguiente. Si el campo operando1 está vacío debe aparecer en este campo el valor del botón pulsado. Si se pulsa el botón de un número y el campo operando1 no está vacío debe aparecer en operando2 el valor del botón pulsado y el campo operando1 debe permanecer igual.</p>
+<p>Cuando se pulse sobre el botón “Ejecutar operación” debe aparecer en el campo resultado el resultado de la operación seleccionada. En caso de que se pulse este botón y no haya un valor en el campo operando1 u operando2, se debe mostrar un mensaje indicando que no se ha introducido ningún número en estos campos y no se realizará ninguna operación.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: En el formulario no debe aparecer ningún botón de...</p><p>Nota: En el formulario no debe aparecer ningún botón de desplazamiento. Guardar el ejercicio con el nombre ejer31.mdb</p></div>
+<p>EJERCICIO 28</p>
+<p>Ejercicios de macros en Access. Pág. 16</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>EJERCICIO 29</p>
+<p>En una base de datos nueva, crea un formulario como el de la imagen que permita jugar a adivinar un número secreto entre 1 y 100.</p>
+<p>Al abrir el formulario, se ha de calcular un número aleatorio entre 1 y 100 y se escribirá en el controlSecreto. En otro cuadro de texto, se pedirá al usuario que introduzca un número y, al pulsar un botón de comando, se le indicará si el número secreto es mayor o menor, con el siguiente comportamiento</p>
+<ul>
+<li>Si el número introducido es mayor que 100 o menor que 1, se mostrará</li>
+</ul>
+<p>un mensaje de error avisando al usuario que el número es excesivo o, por el contrario, demasiado bajo.</p>
+<ul>
+<li>Si el valor es igual al número secreto, se mostrará un mensaje titulado</li>
+</ul>
+<p>“NÚMERO ACERTADO” con el texto “Enhorabuena, éste es el número secreto”.</p>
+<ul>
+<li>Si el valor introducido es menor que el número secreto, se mostrará un</li>
+</ul>
+<p>mensaje titulado “NÚMERO BAJO” con el texto “El número introducido es menor que el número secreto”.</p>
+<ul>
+<li>Si el valor introducido es mayor que el número secreto, se mostrará un</li>
+</ul>
+<p>mensaje titulado “NÚMERO ALTO” con el texto “El número introducido es mayor que el número secreto”.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ NOTA: Para calcular el número aleatorio, introduce la s...</p><p>NOTA: Para calcular el número aleatorio, introduce la siguiente expresión en el cuadro de texto Secreto</p></div>
+<p>=Ent(100*NúmAleat(100)+1)</p>
+<p>Esta expresión tomará la parte entera del resultado de multiplicar 100 por un número generado al azar entre 0 y 1, más una unidad.</p>
+<p>Para ocultar el cuadro de texto Secreto, pon la propiedad Visiblede este campo con el valor No (Propiedades del cuadro de texto ­&gt; Formato ­&gt; Visible).</p>
+<p>Ejercicios de macros en Access. Pág. 17</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>Supongamos que tenemos una formulario par introducir características de clientes. Nuestra empresa ofrece descuentos especiales a clientes menores de 25 años, a minusválidos y a poseedores de un carnet de socios según el siguiente criterio</p>
+<p>Tipo Descuento Menores de 25 años 5% Minusválidos 10% Socios 20% Socios minusválidos 25% Minusválidos menores de 25 10% Socios menores de 25 años NO PERMITIDOS</p>
+<p>La tabla que almacena esta información consta de los siguientes campos (el Descuento, aunque se puede calcular a partir de los otros campos, se almacena en la tabla por razones de eficiencia)</p>
+<p>Campo Comentarios Apellidos, Nombre, DNI Texto. Edad Numérico. Minusválido Texto de longitud 1, con dos únicas posibilidades: "S" o "N" NumSocio Numérico. Nulo si no es socio. Descuento Numérico entre 0 y 100.</p>
+<p>Tenemos un formulario con un control para cada campo, con el mismo nombre que el campo. El formulario debe establecer de forma automática el descuento a partir de las características del cliente. Además debe detectar las situaciones prohibidas, como un cliente menor de 25 años.</p>
+<p>EJERCICIO 30</p>
+<p>Ejercicios de macros en Access. Pág. 18</p>
+<p>Aplicaciones Ofimáticas Base de datos</p>
+<p>Tema 07: Base de Datos RELACIONALES. MACROS (B2)</p>
+<p>Veamos las macros necesarias para el formulario, así como los eventos asociados a cada macro. Suponemos que el formulario se llama "Clientes" y que existen reglas de validación para verificar que el contenido del campo minusválido es "S" o "N" y que el descuento está comprendido entre 0 y 100.</p>
+<p>Necesitaremos las siguientes macros</p>
+<p>Nombre de macro Descripción Eventos a los que asocia Calcular descuento Calcula el descuento a partir de los datos del cliente, siempre y cuando el descuento esté en blanco Evento “Después de actualizar” del control Edad Evento “Después de actualizar” del control Minusválido Evento “Después de actualizar” del control NumSocio Comprobar validez Comprueba que no haya situaciones prohibidas como socios menores de 25 años Evento “Antes de actualizar” del control Edad Evento “Antes de actualizar” del control NumSocio</p>
+<p>Guarda el ejercicio con el nombre ejer30.mdb</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut18/ut1804.html">⬅️ 18.4 B2-BDA per a exercicis de INFORMES</a>
+<a class="page-nav-btn" href="../ut19/ut1901.html">19.1 Tema 7. MACROS ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

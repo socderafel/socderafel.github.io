@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>5.5 Automatització de tasques — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🗄️ Administració de Sistemes Gestors de Bases de Dades — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Administració de Sistemes Gestors de Bases de Dades</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació Mòdul ASGBD</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Com fer un treball de classe</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Com fer un treball de classe (conclusions)</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Beques OpenWebinars</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Instal·lació d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Preparació de l'entorn</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Instal·lació d'un SGBD</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Videos d'instal·lació</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Primers passos. Ordres bàsiques</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Arquitectura BBDD's en Oracle</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Configuració d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Configuració d'un SGBD</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tablespaces i datafiles</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Us d'SQL*Plus</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Solucions errors de connexió amb SQLDeveloper</a></li>
+<li><a href="../ut02/ut0205.html">2.5 primers pasos - sol</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Usuaris i permisos. Seguretat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Usuaris i permisos</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Connectar a SGBD Oracle des d'altra màquina</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Usuaris NO admin en Windows</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Permisos d'Update i Delete + Select</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Seguretat en un SGBD</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Primera avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — Automatització de tasques</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Enquesta valoració docent. 1er trimestre</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Repàs: PL/SQL</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Repàs: PL/SQL (II)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Repàs: PL/SQL (II) _ SOLUCIONS</a></li>
+<li><a class="active" href="../ut05/ut0505.html">5.5 Automatització de tasques</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Butlletí procediments i funcions</a></li>
+<li><a href="../ut05/ut0507.html">5.7 Butlletí triggers</a></li>
+<li><a href="../ut05/ut0508.html">5.8 Solucions a pl/sql</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Optimització de l'SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Optimització de l'SGBD</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Disponibilitat d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Disponibilitat d'un SGBD</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Segona Avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Enquesta valoració docent. 2on trimestre</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Convocatoria Ordinaria</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Continguts i Recursos</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Programa de recuperació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Dates en Oracle</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Convocatòria extraordinaria ASGBD - curs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Continguts i Recursos</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT5 — Automatització de tasques</span>
+<h1>5.5 Automatització de tasques</h1>
+
+<h3>UNITAT 04 Automatització de tasques</h3>
+<p>Automatització de tasques</p>
+
+
+<p>Objectius de la unitat</p>
+<ul>
+<li>Reconéixer la importància d'automatitzar tasques administratives.</li>
+<li>Descriure els diferents mètodes d'execució de guions.</li>
+<li>Identificar les eines disponibles per redactar guions.</li>
+<li>Definir i utilitzar guions per automatitzar tasques.</li>
+<li>Identificar els esdeveniments susceptibles d'activar disparadors.</li>
+<li>Definir disparadors.</li>
+<li>Fer servir estructures de control de flux.</li>
+<li>Adoptar mesures per mantenir la integritat i la consistència de la informació.</li>
+</ul>
+
+
+<p>Rutines de BD Blocs anònims Estructures de programació Procediments Funcions Disparadors (triggers) Seqüències Tasques automatitzables Automatització</p>
+
+
+<p>Avantatges Automatització</p>
+<ul>
+<li>Estalvi de temps</li>
+<li>Reducció costos administració</li>
+<li>Reducció errors ( humà)</li>
+</ul>
+<p>Tipus</p>
+<ul>
+<li>Programa extern (al SGBD)</li>
+<li>Programa intern : rutina de bbdd</li>
+</ul>
+<p>L'automatització consisteix a fer tasques de manera sistemàtica i repetitiva sense que estiga involucrat un usuari en la seua execució Programador de tasques en Windows, o cron/crontab en Linux Procediments Funcions Disparadors</p>
+
+
+<p>Rutina</p>
+<ul>
+<li>Script, guió, programa o seqüència de comandos que permeten dur a terme el processament d'unes</li>
+</ul>
+<p>certes accions.</p>
+<ul>
+<li>Quan és creada rep un nom que permet que siga invocada tantes vegades com siga necessari</li>
+<li>Van ser introduïdes en la versió SQL3, o SQL:1999</li>
+</ul>
+<p>El SGBD deu proporcionar</p>
+<ul>
+<li>Eines necessàries per a crear rutines.</li>
+<li>Eines per a executar les rutines automàticament.</li>
+</ul>
+
+
+<p>Avantatges rutina interna</p>
+<ul>
+<li>Rendiment</li>
+<li>Reutilització (codi)</li>
+<li>Encapsula regles de negoci</li>
+<li>Major seguretat</li>
+</ul>
+<p>Les rutines: S’han de Documentar, Descripció de la tasca, descripció de paràmetres d’entrada i eixida, Autor, Versió, Data d’última modificació</p>
+
+
+<p>Bloc anònim set serveroutput on DECLARE</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Vnom VARCHAR2(15) := '&amp;nom';</code></pre>
+</div>
+<p>BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_OUTPUT.PUT_LINE ('Hola ' || Vnom);
+   DBMS_OUTPUT.PUT_LINE ('Benvingut a la programació en PL/SQL');</code></pre>
+</div>
+<p>END; .  En SQL*Plus, tot bloc ha d'acabar en . perquè siga emmagatzemat en el buffer SQL. Una vegada guardat el podem executar amb l'ordre run (en SQL*Plus) paquet dbms_output procediment put_line En SQL Developer no es posa el . Variable de substitució . punt</p>
+
+
+<p>Comandos bàsics en SQL*Plus SQL&gt; edit SQL&gt; list SQL&gt; run (r o /) SQL&gt; save fitxer.ext [replace] SQL&gt; get fitxer.ext SQL&gt; run SQL&gt; start fitxer.ext SQL&gt; SQL&gt; @fitxer.ext (@ equival a start) tutorial SQL*Plus SQL*Plus sols guarda la última ordre, que pot tindre diverses línies..</p>
+<p>Esta es pot editar, llistar, executar, etc... El comando start carrega i executa un script d’un fitxer Practica: amb diversos CREATE TABLE de 2 o 3 línies !! en sql*plus !!</p>
+
+
+<p>Bloc anònim  En SQL Developer s’executa amb F5 En SQL Developer no es posa el . F5 Executa script F9 Executa sentència En este script hi ha dos sentències !! Un set i un bloc anònim</p>
+
+
+<p>&lt;codi&gt; El codi dels procediments, funcions i disparadors pot ser des d’una línia o sentència, fins a un programa complex amb estructures de repetició, selecció i seqüenciació, seguint les regles de PL/SQL PL/SQL (Procedural Language/Structured Query Language) és un llenguatge de programació incrustat en Oracle ( va ser el primer SGBD en incloure un llenguatge dins) PL/SQL suportarà totes les consultes, ja que la manipulació de dades que s'usa és la mateixa que en SQL PostgreSQL dona suport a una variant, el PL/PGSQL SQL Server utilitza una altra variant, el TSQL Son tots molt pareguts</p>
+
+
+<p>Estructures de programació en PL/SQL</p>
+<ul>
+<li>Comentaris</li>
+<li>Variables</li>
+<li>Execució condicional</li>
+<li>Bucles</li>
+<li>Blocs</li>
+<li>Cursors</li>
+<li>Transaccions</li>
+<li>Excepcions</li>
+</ul>
+
+
+<p>Estructures de programació en PL/SQL</p>
+<ul>
+<li>Comentaris</li>
+<li>Variables</li>
+<li>Execució condicional</li>
+<li>Bucles</li>
+<li>Blocs</li>
+<li>Cursors</li>
+<li>Transaccions</li>
+<li>Excepcions</li>
+</ul>
+<p>Repàs de primer curs Altres estructures en PL/SQL</p>
+
+
+<ul>
+<li>Comentaris</li>
+</ul>
+<p>Una línia -- Més d’una línia /* .... */</p>
+<ul>
+<li>Variables</li>
+</ul>
+<p>v_nom := 'Francisco'; v_empno := 10; tutorial tipos de dades Tipus : char() varchar2() number() boolean date() tutorial dates</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>anynou DATE:='01/ene/2024';
+B1 boolean := true;
+dataactual DATE:=SYSDATE;
+B2 boolean := false;</code></pre>
+</div>
+<ul>
+<li>Operacions</li>
+</ul>
+<p>+ - * / ** || := tutorial operadors Molt important, per documentar el codi Declaració ( i assignació ) Assignació de valors</p>
+
+
+<ul>
+<li>Execució condicional</li>
+</ul>
+<p>IF condicion1 THEN instrucción/es; [ELSIF condicion2 THEN instrucción/es; ] [ELSE instrucción/es; ] END IF; CASE expr WHEN valor THEN instrucciones1 [WHEN valor THEN instrucciones2] [ ELSE instrucciones3] END CASE; CASE WHEN condicion1 THEN instrucciones1 [WHEN condicion2 THEN instrucciones2] [ ELSE instrucciones3] END CASE;</p>
+
+
+<ul>
+<li>Bucles</li>
+</ul>
+<p>LOOP sentències EXIT (dins d’un if ) END LOOP; WHILE condició LOOP sentències END LOOP; FOR v_comptador IN [REVERSE] liminf..limsup LOOP sentències END LOOP;</p>
+<ul>
+<li>Condicions</li>
+</ul>
+<p>var &gt; num &lt; &gt;= &lt;= = &lt;&gt; var2 &gt;= num and var3=var3 // or not ( ) BETWEEN 1 and 10 LIKE expr IN ( , , ) NOT IN ( , , ) Compte amb el valor NULL ; operació IS NULL CONTINUE EXIT</p>
+
+
+<ul>
+<li>Precedència d’operadors</li>
+</ul>
+<p>Operator Operation ** exponentiation +, - identity, negation *, / multiplication, division +, -, || addition, subtraction, concatenation comparison NOT logical negation AND conjunction (logical) OR inclusion (logical) 1+2*3-1 no és (1+2)*(3-1)</p>
+
+
+<p>Un procediment emmagatzemat o STORED PROCEDURE és un codi SQL preparat que es pot guardar, per la qual cosa el codi pot reutilitzar-se una vegada i una altra. (tindrà un nom) Així que, si es té una consulta SQL que s’ha d’escriure una vegada i una altra, es podrà guardar com un procediment emmagatzemat i després cridar-la per a executar-la.</p>
+<p>També pot passar paràmetres a un procediment emmagatzemat, de manera que el procediment emmagatzemat puga actuar en funció dels valors de paràmetre que es passen. Procediments Funcions Triggers</p>
+
+
+<p>Permisos</p>
+<ul>
+<li>Creació i execució</li>
+<li>Sols execució</li>
+<li>Cap permís</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT CREATE PROCEDURE, CREATE TRIGGER TO &lt;usu&gt;;</code></pre>
+</div>
+<p>(si te permís de crear, també pot executar)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT EXECUTE ON &lt;esquema&gt;.&lt;procedim&gt; TO &lt;usu&gt; [WITH GRANT OPTION];</code></pre>
+</div>
+<p> Un usuari necessita tindre permís per executar rutines, o per crear-les i executar-es !! procediments funcions triggers Procediments Funcions Triggers El permís val per procediments I també per funcions</p>
+
+
+<p>Procediments [emmagatzemats]</p>
+<ul>
+<li>No tornen cap informació (valor)</li>
+<li>Com crear-los</li>
+</ul>
+<p>CREATE [OR REPLACE] PROCEDURE &lt;nom_proc&gt; [( &lt;param1&gt; [ IN | OUT | IN OUT ] &lt;tipus&gt;,..)] [AUTHID INVOKER | DEFINER] AS [&lt;declaració variables&gt;] BEGIN &lt;codi pl/sql&gt; [EXCEPTION] [&lt;codi excepció&gt;] END; / Un procediment [emmagatzemat] és un subprograma que executa una acció específica i que no retorna cap valor per si mateix, com succeeix amb les funcions. Un procediment té un nom, un conjunt de paràmetres (opcional) i un bloc de codi.</p>
+<p>Per defecte, definer (creador). Authid determina amb quins permisos s’executarà l’script</p>
+
+
+<p>Procediments - exemple CREATE OR REPLACE PROCEDURE Actualiza_Saldo(cuenta NUMBER, new_saldo NUMBER) IS -- Lloc per a Declaració de variables locals BEGIN UPDATE SALDOS_CUENTAS SET SALDO = new_saldo, DATA_ACTUALITZACIO = SYSDATE</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>WHERE CO_CUENTA = cuenta;</code></pre>
+</div>
+<p>END Actualiza_Saldo; / En SQL*Plus, finalitza la definició del procediment (també es pot posar un punt . )</p>
+
+
+<p>Procediments</p>
+<ul>
+<li>Com executar-los</li>
+</ul>
+<p>execute &lt;nom_proc&gt; ( &lt;param1&gt;, &lt;param2&gt; ...); // oracle També amb exec execute &lt;nom_proc&gt; ; execute &lt;nom_esquema&gt;.&lt;nom_proc&gt; ; o call (en postgres)</p>
+<ul>
+<li>Com esborrar-los</li>
+</ul>
+<p>DROP PROCEDURE nom_proc;</p>
+<ul>
+<li>Com explorar-los</li>
+</ul>
+<p>En DD user_procedures</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select object_name, object_type from user_procedures;
+select object_name, object_type, status from user_objects;</code></pre>
+</div>
+<p>user_procedures user_source user_objects</p>
+
+
+<p>Procediments</p>
+<ul>
+<li>Com executar-los</li>
+</ul>
+<p>Notació posicional Es passen els valors dels paràmetres en el mateix orde en que el procedure els defineix. BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>actualiza_Saldo(200501,2500);</code></pre>
+</div>
+<p>COMMIT;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_OUTPUT.put (‘Saldo act’);</code></pre>
+</div>
+<p>END; Des de qualsevol rutina interna d’Oracle ( inclús des d’un bloc d’instruccions) es pot cridar a un procediment o funció invocant-la directament com una instrucció, sense la necessitat d’utilitzar execute o exec. També es poden utilitzar funcions i procediments de paquets, posant el nom del paquet, punt, el nom de la funció o procediment.</p>
+<p>En sql*plus es deu activar prèviament amb SET serveroutput ON</p>
+
+
+<p>Procediments</p>
+<ul>
+<li>Com executar-los</li>
+</ul>
+<p>Notació nominal Es passen els valors en qualsevol orde, nominant explícitament el paràmetre i el seu valor separats pel símbol =&gt;. BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>actualiza_Saldo(cuenta =&gt; 200501,new_saldo =&gt; 2500);</code></pre>
+</div>
+<p>COMMIT; END;</p>
+
+
+<p>Funcions - Tornen informació (un únic valor, d’un tipus) Existeixen funcions predefinides que podem utilitzar en oracle</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select sysdate from dual;
+select sqrt(5) from dual;
+update taula set camp=lower(‘DadesDelCaMp’) ; &lt;-- sense WHERE ,tota la taula!</code></pre>
+</div>
+<p>Funcions numèriques, round,trunc,mod,power,sign,abs,... de cadenes (strings) , lower,upper,trim,substr,length,replace,reverse,... de treball en NULLs , nvl,nvl2, nullif, coalesce de dates, sysdate,last_day, extract, add_months, .... de conversió, to_number, to_date, to_char,...</p>
+<p>i altres avançades... A més a més, Oracle permet definir noves funcions que podrem utilitzar. Com se solen usar les funcions</p>
+
+
+<p>Funcions - Tornen informació (un únic valor, d’un tipus)</p>
+<ul>
+<li>Com definir-les / crear-les</li>
+</ul>
+<p>CREATE [OR REPLACE] FUNCTION &lt;nom_func&gt; [( &lt;param&gt; [ IN | OUT | IN OUT ] &lt;tipus&gt;,.. )] RETURN &lt;tipus&gt; [AUTHID INVOKER | DEFINER] IS [ &lt;variables&gt;] BEGIN &lt;codi&gt; RETURN &lt;valor&gt; END; / Sempre ha de tornar un valor</p>
+
+
+<p>Funcions En Oracle existeix una taula de sistema anomenada dual que permet executar consultes que no accedeixen a cap taula de la bbdd, la qual cosa és molt útil per a comprovar el resultat d'invocar una funció.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select sysdate from dual;
+select funcio_de_usuari(valor_parametre) from dual;
+select funcio_de_usuari(nom_par =&gt; valor) from dual;
+                   -&gt; notació posicional o nominal &lt;-</code></pre>
+</div>
+<ul>
+<li>Com explorar-les en el DD</li>
+</ul>
+<p>vista user_procedures</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select object_name, object_type from user_procedures;</code></pre>
+</div>
+<p>Funcions i procediments estan junts en el DD, el camp object_type els diferencia user_procedures user_source user_objects</p>
+
+
+<p>Funcions -exemple- create or replace function f_incremento (avalor number, aincremento number) return number is begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>return avalor + (avalor*aincremento/100);</code></pre>
+</div>
+<p>end; --------------------------------------------------------- Utilitzar una funció.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select titulo,precio,f_incremento(precio,20) from libros;</code></pre>
+</div>
+<p>Esborrar una funció. DROP FUNCTION f_incremento;</p>
+
+
+<p>Funcions - Exemple create or replace function notaCHAR (avalor number) return varchar2 is</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>valorretornado varchar2(20);</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>valorretornado:='';</code></pre>
+</div>
+<p>if avalor&gt;=5 then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>valorretornado:='APROBADO';
+   else valorretornado:='NO APROBADO';</code></pre>
+</div>
+<p>end if;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>return valorretornado;</code></pre>
+</div>
+<p>end; / Podriem utilitzar la funció, per exemple, dins d’un select..</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select count(*),notaCHAR(nota) from taula_notes group by notaCHAR(nota);</code></pre>
+</div>
+<p>if avalor&gt;=5 then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>return 'APROBADO';</code></pre>
+</div>
+<p>else</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>return 'NO APROBADO';</code></pre>
+</div>
+<p>end if;</p>
+
+
+<p>Funcions - Resum variables</p>
+
+
+<p>Funcions - Resum</p>
+
+
+<p>Disparadors (trigger) Un trigger o disparador en una Base de Dades , és un bloc de codi que s'executa (automàticament) quan es compleix una condició establida, com per exemple, realitzar una operació (INSERT, UPDATE, DELETE) sobre una taula (o sobre un camp d’una taula) Els triggers poden ser d'inserció (INSERT), actualització (UPDATE) o esborrat (DELETE).</p>
+<p>El procediment s’executarà abans (BEFORE), desprès (AFTER) de que es realitze l’operació, o (INSTEAD OF) en compte de l’operació. Segons el cas, es poden utilitzar valors d’una fila abans de la operació o després de l’operació: :new i :old</p>
+
+
+<p>Disparadors (trigger) CREATE [OR REPLACE] TRIGGER &lt;nom_disp&gt; BEFORE | AFTER | INSTEAD OF INSERT | DELETE | UPDATE | UPDATE OF &lt;colum1&gt; [, colum2,...] ON &lt;nom_taula&gt; [REFERENCING OLD &lt;nomold&gt; NEW &lt;nomnew&gt; ] [FOR EACH ROW | STATEMENT] [WHEN condición] BEGIN &lt;codi&gt; END &lt;nom_disp&gt;; / Per defecte</p>
+
+
+<p>Disparadors (trigger) FOR EACH ROW El codi s'executa tantes vegades com files afectades per la sentència que ha disparat el trigger (abans o després de cada fila) FOR EACH STATEMENT (per defecte) El codi s'executa una vegada, abans o després de la sentència que ha disparat el trigger WHEN condició El codi s’executa si es compleix la condició, en el moment que li haguera tocat executar-se.</p>
+
+
+<p>BeforeStatement BeforeRow AfterRow BeforeRow AfterRow BeforeRow AfterRow AfterStatement 7839 KING 1200 7698 BLAKE 2100 7788 SMITH 2300 Suposem un UPDATE que afecta a 3 files d’una taula. Observem quan s’executaria el trigger depenent del tipus.</p>
+
+
+<p>Disparadors (trigger) exemple create or replace trigger tr_actualizar_precio_libros before update of precio on libros for each row begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>insert into control values(user,sysdate,:new.codigo,:old.precio,:new.precio);</code></pre>
+</div>
+<p>end tr_actualizar_precio_libros; / El trigger s’activarà quan es llance una sentència que vaja a actualitzar el valor del camp «precio» de la taula «libros» (update of precio on libros) El codi s’executara abans (before) d’actualitzar el valor de «precio» per cada fila que es vaja a actualitzar (for each row)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Exemple:  UPDATE libros SET precio=precio*0.95 WHERE editorial=’McGraw Hill’;</code></pre>
+</div>
+
+
+<p>Disparadors (trigger) raise_application_error create or replace trigger tr_actualitzar_preu_neg before update of precio on libros for each row begin if :new.preu&lt;0 then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>raise_application_error(-20020,’No es permet preu negatiu’);
+    end if;</code></pre>
+</div>
+<p>end tr_actualitzar_preu_neg; / El procediment "raise_application_error" permet emetre un missatge d'error. El NUMERO de missatge ha de ser un número negatiu entre -20000 i -20999 i el missatge de TEXT una cadena de caràcters de fins a 2048 bytes. Si durant l'execució d'un trigger es produeix un error definit per l'usuari, s'anul·len totes les actualitzacions realitzades per l'acció del trigger així com l'esdeveniment que la va activar, és a dir, es reprén qualsevol efecte retornant un missatge i es desfà l'ordre executada.</p>
+
+
+<p>Disparadors (trigger) Per a un activador INSERT, :OLD no conté valors, i :NEW conté els valors nous. Per a un activador UPDATE, :OLD conté els valors antics, i :NEW conté els valors nous. Per a un activador DELETE, :OLD conté els valors antics, i :NEW no conté valors.</p>
+<ul>
+<li>Com explorar-los</li>
+</ul>
+<p>En DD user_triggers</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select * from user_triggers where trigger_name=’TR_MITRIGGER’;</code></pre>
+</div>
+<p>dba_triggers dba_source</p>
+
+
+<p>Disparadors múltiples (trigger) exemple create or replace trigger tr_actualizar_precio_libros before insert or delete on llibres for each row Begin If inserting then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>insert into control values(user,sysdate,:new.codigo,’INSERTAR’);
+    Else
+        insert into control values(user,sysdate,:old.codigo,’ESBORRAR’);
+    End if;</code></pre>
+</div>
+<p>end tr_actualizar_precio_libros;</p>
+<p>El trigger s’activarà quan es llance una sentència insert o una sentència sentència delete sobre la taula llibres El codi s’executara abans (before) de cada fila afectada. INSERTING UPDATING DELETING</p>
+
+
+<p>Disparadors (trigger) En oracle existeixen altres tipus de triggers, segons l'esdeveniment que el dispara: ●Un INSERT, UPDATE o DELETE en una taula específica ●Un CREATE, ALTER o DROP en qualsevol objecte d’esquema ●Una arrancada(startup) de Base de Dades o un tancament (shutdown) d’instància ●Un missatge d’error ●Un inici o final de sessió d’usuari de Base de Dades Hem vist Els triggers es poden deshabilitar temporalment</p>
+<p>alter trigger tr_trig1 disable; alter trigger tr_trig1 enable; Es poden habilitar/deshabilitar tots els triggers d’una taula</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>alter table nom_taula disable all triggers;
+alter table nom_taula enable all triggers;</code></pre>
+</div>
+
+
+<p>Disparadors (trigger) Restriccions en l'ús de disparadors ●No poden executar-se instruccions DDL ●No poden executar-se instruccions de TCL ●Per sentència, no te sentit l'ús de :old i :new ●Per fila. No es poden consultar les dades de la taula que ha disparat el trigger, es a dir, no es pot fer un SELECT ●Oracle no deixa crear triggers en l’esquema de SYS !!</p>
+
+
+<p>Seqüències Una seqüència (sequence) s'empra per a generar valors sencers seqüencials únics i assignar-li'ls a camps numèrics; s'utilitzen generalment per a les claus primàries de les taules garantint que els seus valors no es repetisquen. Una seqüència és una taula amb un camp numèric en el qual s'emmagatzema un valor i cada vegada que es consulta, s'incrementa tal valor per a la pròxima consulta.</p>
+<p>Permís</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT CREATE SEQUENCE TO &lt;usu&gt;;</code></pre>
+</div>
+<p>Crear: CREATE SEQUENCE &lt;NOM_SEQ&gt;; Esborrar: DROP SEQUENCE &lt;NOM_SEQ&gt;; Utilitzar seqüència</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>INSERT INTO taula VALULES</code></pre>
+</div>
+<p>(nom_seq.nextval, ‘valor1’,</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>‘varlor2’, ...);</code></pre>
+</div>
+<p>Vista del DD:dba_sequences Arregla problema de concurrència</p>
+
+
+<p>Estructures de programació en PL/SQL</p>
+<ul>
+<li>Comentaris</li>
+<li>Variables</li>
+<li>Execució condicional</li>
+<li>Bucles</li>
+<li>Blocs</li>
+<li>Cursors</li>
+<li>Transaccions</li>
+<li>Excepcions</li>
+</ul>
+<p>Repàs de primer curs Altres estructures en PL/SQL</p>
+
+
+<p>En PL/SQL no es poden utilitzar sentències SELECT de sintaxi bàsica ( SELECT &lt;lista&gt; FROM &lt;tabla&gt; ). PL/SQL utilitza cursors per a gestionar les instruccions SELECT. Un cursor és un conjunt de registres retornat per una instrucció SQL. Dos tipus -Implícits =&gt; select into ( no es declaren, sols tornen un resultat o fila) -Explícits =&gt; es declaren i controlen pel programador. Poden tornar més d’un resultat Cursors Els cursors implícits només poden retornar una única fila. En cas que es retorne més d'una fila (o cap fila) es produirà una excepció: NO_DATA_FOUND o TOO_MANY_ROWS</p>
+
+
+<p>Per a treballar amb un cursor (explícit ) cal realitzar els següents passos</p>
+<ul>
+<li>Declarar el cursor</li>
+</ul>
+<p>CURSOR .nom. IS .....</p>
+<ul>
+<li>Obrir el cursor en el servidor</li>
+</ul>
+<p>OPEN .nom.</p>
+<ul>
+<li>Recuperar cadascuna de les seues files (bucle)</li>
+</ul>
+<p>FETCH .nom. INTO ..variable/s.</p>
+<ul>
+<li>Tancar el cursor</li>
+</ul>
+<p>CLOSE .nom. Cursors nom_cursor%NOTFOUND nom_cursor%FOUND En cursors implícits podem utilitzar SQL%FOUND SQL%NOTFOUND SQL%ROWCOUNT Després d’executar l’ordre</p>
+
+
+<p>Definir (en el DECLARE)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CURSOR nom_cursor (par1 tipus1, par2 tipus2, ..) IS SELECT ...;</code></pre>
+</div>
+<p>Utilitzar (en el BEGIN)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>OPEN nom_cursor ( par1, par2) ;</code></pre>
+</div>
+<p>FETCH nom_cursor INTO v_aux; CLOSE nom_cursor; Cursors Important !! tancar el cursor Carrega la primera fila en v_aux V$open_cursor Vista dinàmica</p>
+
+
+<p>Utilitzar cursor amb sentència FOR cursor c_articulos is select idarticulo from .... FOR datos IN c_articulos LOOP sentències END LOOP; FOR datos IN nom_cursor(par1,par2) LOOP</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>update personal set nom=datos.nom, coddep=datos.coddep
+   where codemp=datos.codemp;</code></pre>
+</div>
+<p>END LOOP; Cursors Quan un cursor torna moltes files, es pot processar amb una bucle FOR El bucle FOR tanca el cursor automàticament en acabar El bucle FOR fa el OPEN, FETCH, CLOSE cursor internament També es pot processar amb un bucle LOOP o un WHILE</p>
+
+
+<p>Utilitzar cursor amb sentència FOR create or replace procedure pr_guardar_preu as</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>cursor cli is select num1,preu from taula1 where estat=’actiu’;</code></pre>
+</div>
+<p>begin for x in cli loop</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>insert into taula2 values ( x.num1, sysdate, x.preu, ‘estat’);
+    end loop;</code></pre>
+</div>
+<p>end; / Cursors - exemple x és una variable de tipus ‘registre’ C u r s o r Registre</p>
+
+
+<p>Dades estructurades vs Dades escalars</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>a number(8,2);
+b varchar2(40);</code></pre>
+</div>
+<p>c date; type llibre is record ( titol varchar2(50), autor varchar2(50),</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>preu number );</code></pre>
+</div>
+<p>LL1 llibre; Cursors - exemple LL1 és una variable Registre Tipus escalars</p>
+
+
+<ul>
+<li>Transaccions</li>
+</ul>
+<p>tablespace de UNDO ‘limitat’ commit en procediments</p>
+<ul>
+<li>Excepcions</li>
+</ul>
+<p>BEGIN sentències EXCEPTION WHEN error THEN sentències quan error [RAISE_APPLICATION_ERROR(SQLCODE, SQLERRM)] *Para la execució de la rutina END; Si s’inicia una transacció i no es fa commit, UNDO creix i s’ompli Els procediments no inclouen per defecte un "commit". És important recordar-se d'executar un commit després de l'execució d'un procediment perquè els canvis siguen persistents en la base de dades.</p>
+<p>!</p>
+
+
+<ul>
+<li>Excepcions</li>
+</ul>
+<p>EXCEPTION WHEN DIVISION BY ZERO THEN ... EXCEPTION WHEN OTHERS THEN ... sentències quan error</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_OUTPUT.PUT_LINE(‘Se ha producido el error ’|| SQLERRM);</code></pre>
+</div>
+<p>[RAISE_APPLICATION_ERROR(SQLCODE, SQLERRM)] *Para la execució de la rutina Oracle deshabilita per defecte l'eixida per pantalla. Per a veure els missatges emesos per "dbms_ouptput.put_line" s'haurà d'habilitar prèviament l'eixida per pantalla amb la sentència "SET SERVEROUTPUT ON" Des de qualsevol rutina interna de Oracle es pot cridar a qualsevol funció o procediment invocant-ho directament sense necessitat d'incloure "execute" Es poden utilitzar les funcions o procediments inclosos en paquets del DD, precedint el nom de procediment o funció del nom del paquet al qual pertany SQLCODE i SQLERRM existeixen dins dels blocs de captura d'excepcions</p>
+
+
+<p>Tasques automatitzables</p>
+<ul>
+<li>Còpies de Seguretat</li>
+</ul>
+<p>Particionament</p>
+<ul>
+<li>Execució d’estadístiques – en horari de càrrega mínima</li>
+<li>Desfragmentació - alter table &lt;nom&gt; move;</li>
+<li>Reconstrucció d'índex - alter index &lt;nom&gt; rebuild;</li>
+<li>purgat i passe a històric</li>
+<li>Tasques de BD</li>
+<li>Tasques d’administració</li>
+</ul>
+<p>Estes tasques es veuen més endavant ... en la unitat 5</p>
+
+
+<p>Tasques d’administració -S’utilitzarà el diccionari de dades (amb un cursor) -Per a cada objecte de DD s’aplica la sentència corresponent Dins d’un procediment no es poden executar sentències de DDL directament. S’utilitzarà la sentència «execute immediate»</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>execute immediate (‘alter table’ || par_taula || ‘move’);</code></pre>
+</div>
+<p>DDL: Data Definition Language</p>
+
+
+<p>Particionament Permet dividir una taula gran en subtaules Avantatges</p>
+<ul>
+<li>Optimitza l’accés a la taula</li>
+<li>Optimitza les tasques d’administració</li>
+<li>Facilita el purgat de dades</li>
+<li>Facilita el manteniment</li>
+<li>Permet la realització de operacions d’optimització avançades</li>
+</ul>
+<p>Formes de particionar: -Particions fixes (es definix quan es crea la taula) -Particions variables (es definix al llarg del temps) Una taula sempre es particiona per un camp, definint el rang de valors de cada partició Este camp deu ser numèric , data o time i amb restricció de NOT NULL El particionament es veu més endavant...</p>
+<p>en la unitat 5</p>
+<p>Automatització de tasques en ORACLE .........................................................................................</p>
+
+
+<p>Eines del SO sqlplus usuari/password@servei @script.sql &gt; log.txt I esta tasca la llancem amb el programador de tasques de SO problema de seguretat. El password està en clar Solució: Utilitzar eines del SGBD : dbms_scheduler</p>
+
+
+<p>DBMS Scheduler - Permisos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>grant create job to &lt;usuario&gt;
+grant execute on dbms_scheduler to &lt;usuario&gt;;</code></pre>
+</div>
+<p> Un usuari necessita tindre permís per crear jobs (treballs) i executar-los !! DD Vista del DD : dba_scheduler_jobs</p>
+
+
+<p>DBMS Scheduler DBMS_JOB en versions anteriors a 10g. Ara, DBMS_SCHEDULER Programa «jobs» i «chains»</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_SCHEDULER.CREATE_JOB ( atribut=&gt;valor, .....);
+DBMS_SCHEDULER.SET_JOB_ARGUMENT_VALUE(‘nom_job’,1,’valor’);
+DBMS_SCHEDULER.SET_JOB_ARGUMENT_VALUE(‘nom_job’,2,’valor2);
+DBMS_SCHEDULER.ENABLE(‘nom_job’);
+DBMS_SCHEDULER.DISABLE(‘nom_job’);
+DBMS_SCHEDULER.DROP_JOB(‘nom_job’);
+dbms_scheduler.set_attribute_null( name=&gt;’nom’, attribute=&gt;’a’);
+dbms_scheduler.set_attribute(name=&gt;’nom’,attribute=&gt;’a’,value=&gt;’v’);</code></pre>
+</div>
+<p>En SQL Developer -conexiones</p>
+
+
+<p>DBMS Scheduler - exemple BEGIN DBMS_SCHEDULER.CREATE_JOB ( job_name =&gt; 'nom_del_job', job_type =&gt; 'STORED_PROCEDURE', job_action =&gt; 'usuari1.actualitza_preus', start_date =&gt; sysdate , repeat_interval =&gt; 'FREQ=MONTHLY;BYMONTHDAY=1', auto_drop =&gt; FALSE,</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>comments           =&gt;  'Aclariments del treball...',   );</code></pre>
+</div>
+<p>END; / MENSUAL, CADA DIA 1 esquema.procedure Nom del treball Atributs Valors</p>
+<p>Automatització de tasques en Postgres .........................................................................................</p>
+
+
+<p>Automatització en postgres Des de SO cron ( linux ) Task manager ( windows) Des de postgres pgAgent (en pgAdmin) pg_cron (en servidor)</p>
+
+
+<p>Triggers en postgres Primer pas - Definició de la funció del trigger Segon pas - Definició del trigger CREATE OR REPLACE FUNCTION nom_funcio() RETURNS trigger AS $$ BEGIN sentencies RETURN NEW; (RETURN NULL;) END; $$ LANGUAGE 'plpgsql';</p>
+
+
+<p>Triggers en postgres Segon pas - Definició del trigger CREATE [ OR REPLACE ] TRIGGER name { BEFORE | AFTER | INSTEAD OF } { event [ OR ... ] } ON table_name [ FOR [ EACH ] { ROW | STATEMENT } ] [ WHEN ( condition ) ] EXECUTE { FUNCTION | PROCEDURE } function_name ( arguments )</p>
+<p>“ ” Activitat Investiga com funciona el pg_cron de postgres</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut05/ut0504.html">⬅️ 5.4 Repàs: PL/SQL (II) _ SOLUCIONS</a>
+<a class="page-nav-btn" href="../ut05/ut0506.html">5.6 Butlletí procediments i funcions ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

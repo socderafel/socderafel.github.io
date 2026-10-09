@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Recursos — Aplicacions Ofimàtiques — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="./index.html">📚 Índex del Mòdul</a>
+<a href="../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="./index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="./ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="./ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="./ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="./ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="./ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="./ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="./ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="./ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="./ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="./ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="./ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="./ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="./ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="./ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="./ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="./ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="./ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="./ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="./ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="./ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="./ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="./ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="./ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="./ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="./ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="./ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="./ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="./ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="./ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="./ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="./ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="./ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="./ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="./ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="./ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="./ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="./ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="./ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="./ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="./ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="./ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="./ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="./ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="./ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="./ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="./ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="./ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="./ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="./ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="./ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="./ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="./ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="./ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="./ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="./ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="./ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="./ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="./ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="./ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="./ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="./ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="./ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="./ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="./ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="./ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="./ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="./ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="./ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="./ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="./ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="./ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="./ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="./ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="./ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="./ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="./ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="./ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="./ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="./ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="./ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="./ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="./ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="./ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="./ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="./ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="./ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="./ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="./ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="./ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="./ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="./ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="./ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="./ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="./ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="./ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="./ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="./ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="./ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="./ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="./ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="./ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="./ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="./ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="./ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="./ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="./ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="./ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="./ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="./ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="./ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="./ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="./ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="./ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="./ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="./ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="./ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="./ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="./ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="./ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a class="active" href="./references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · Documentació i Recursos</span>
+<h1>📂 Índex de Materials i Documents Integrats</h1>
+<p>Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràctics el contingut dels quals ha estat integrat en les unitats d'aquest curs de Aplicacions Ofimàtiques</p>
+<table><thead><tr><th>Format</th><th>Document / Material Integrat</th><th>Apartat del Curs</th><th>Mida</th></tr></thead><tbody><tr><td><code>PDF</code></td><td><strong>21-22_Calendari_Escolar_def.pdf</strong></td><td>Calendari escolar</td><td>217.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>21-22_Planol_Centre_def.pdf</strong></td><td>Plànol del centre</td><td>125.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>21-22_Horari_1SMXB.pdf</strong></td><td>Horari Grup 1 SMX B</td><td>59.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>21-22_Permis_Eixida.pdf</strong></td><td>Permis Eixida</td><td>302.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>21-22_Justificacio_Faltes.pdf</strong></td><td>Justificació de faltes</td><td>625.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>BEQUES 2022 2023. DOCUMENT INFORMATIU_VAL.pdf</strong></td><td>Beques Ministeri (Valencià)</td><td>1375.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>BECAS 2022 2023. DOCUMENTO INFORMATIVO_CAS.pdf</strong></td><td>Becas Ministerio (Castellano)</td><td>1335.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>CARTEL INFORMATIVO NUEVO PLAZO.pdf</strong></td><td>Beques (Cartell inforamtiu)</td><td>290.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema1_Suites Ofimaticas.pdf</strong></td><td>Tema 0. Suites Ofimàtiques</td><td>5861.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema2_Writer.pdf</strong></td><td>Tema 0. Writer</td><td>5027.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Mapa conceptual WRITER_Al.pdf</strong></td><td>Mapa conceptual WRITER</td><td>169.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-01-FORMATO(1part).pdf</strong></td><td>Pràctiques Tema 1 (1ª part-Format)</td><td>948.0 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema01_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 1 (1ª part)</td><td>468.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-01-FORMATO(2part).pdf</strong></td><td>Pràctiques Tema 1 (2ª part-Format)</td><td>521.6 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema01(2part)_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 1 (2ª part)</td><td>334.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Creación de tablas_RESUM_ALUMNES.pdf</strong></td><td>Tema 2. Taules</td><td>1192.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-02-TABLAS.pdf</strong></td><td>Pràctiques Tema 2 (Taules)</td><td>3597.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>TEMA 3_Imagenes_COMPLET.pdf</strong></td><td>Tema 3. IMATGES</td><td>1462.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-03-Graficos-Autoformas-WordArt.pdf</strong></td><td>Pràctiques Tema 3 (Imatges)</td><td>661.3 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema03_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 3</td><td>119.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-04-Columnas-Tabulaciones.pdf</strong></td><td>Pràctiques Tema 4 (Columnes i Tabulacions)</td><td>4453.3 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema04_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 4</td><td>62.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-05-NumeracionyViñetas.pdf</strong></td><td>Pràctiques Tema 5 (Numeració i Vinyetes)</td><td>318.7 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema05_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 5</td><td>29.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Ejemplos_Numercion_Viñetas.pdf</strong></td><td>Exemple Numeració i Vinyetes</td><td>75.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>10_writer_crearuncolorenlibreoffice.pdf</strong></td><td>10 curiosidades en Writer</td><td>231.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>03_como-eliminar-automaticamente-todas-las-lineas-en-blanco-o-parrafos-vacios-en-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>826.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>02_como-crear-una-marca-de-agua-en-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>841.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>01_como-crear-una-imagen-transparente-en-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>548.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>09_como-crear-y-ejecutar-macros-en-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>483.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>08_transformar-documento-writer-una-presentacion-impress.pdf</strong></td><td>10 curiosidades en Writer</td><td>707.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>07_como-poner-en-sentido-horizontal-una-o-varias-paginas-en-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>697.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>06_como-navegar-por-nuestro-documento-en-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>422.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>05_mover-partes-documento-solo-clic-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>390.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>04_como-eliminar-automaticamente-todos-los-saltos-de-linea-y-de-parrafo-en-writer.pdf</strong></td><td>10 curiosidades en Writer</td><td>569.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-06-Encabezados_PiesdePagina_NotasalPie.pdf</strong></td><td>Pràctiques Tema 6 (Capçaleres i Peus de pàgina. Camps. Notes al peu)</td><td>304.6 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema06_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 6</td><td>54.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema07_CombinarCorrespondencia.pdf</strong></td><td>Tema 7. COMBINAR CORRESPONDENCIA</td><td>431.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>writer_laformafacildecombinarcorrespondencia.pdf</strong></td><td>Pràctica guiada combinar correspondència</td><td>428.9 KB</td></tr><tr><td><code>XLS</code></td><td><strong>listainvitados.xls</strong></td><td>Pràctica guiada combinar correspondència</td><td>6.5 KB</td></tr><tr><td><code>ODT</code></td><td><strong>cartainvitacion.odt</strong></td><td>Pràctica guiada combinar correspondència</td><td>15.6 KB</td></tr><tr><td><code>ODS</code></td><td><strong>Alumnos.ods</strong></td><td>Exemple Combinar correspondència</td><td>15.1 KB</td></tr><tr><td><code>ODT</code></td><td><strong>Carta_Notes_1.odt</strong></td><td>Exemple Combinar correspondència</td><td>13.0 KB</td></tr><tr><td><code>ODT</code></td><td><strong>Carta_Notes.odt</strong></td><td>Exemple Combinar correspondència</td><td>11.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Carta_Notes.pdf</strong></td><td>Exemple Combinar correspondència</td><td>35.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Carta_Notes_Combinada.pdf</strong></td><td>Exemple Combinar correspondència</td><td>39.8 KB</td></tr><tr><td><code>ODT</code></td><td><strong>Carta_Notes_Combinada.odt</strong></td><td>Exemple Combinar correspondència</td><td>12.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Carta_Notes_1.pdf</strong></td><td>Exemple Combinar correspondència</td><td>22.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-07-Combinar_Correspondencia.pdf</strong></td><td>Pràctiques Tema 7 (Combinar correspondència)</td><td>313.0 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema07_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 7</td><td>25.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-08-Hipervinculos.pdf</strong></td><td>Pràctiques Tema 8 (Hipervincles)</td><td>263.5 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema08_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 8</td><td>110.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema09_PLANTILLAS.pdf</strong></td><td>Tema 9. PLANTILLES</td><td>480.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-09-Plantillas.pdf</strong></td><td>Pràctiques Tema 9 (Plantilles)</td><td>123.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-10-Imprimir.pdf</strong></td><td>Pràctiques Tema 10 (Imprimir) - En CASA</td><td>34.6 KB</td></tr><tr><td><code>ODT</code></td><td><strong>writer_practicaindices - classe.odt</strong></td><td>Tema 11. Document writer per a practicar Index en classe</td><td>169.7 KB</td></tr><tr><td><code>ODT</code></td><td><strong>comoconvertirseenhacker-encrudo.odt</strong></td><td>Tema 11. Pràctica guiada Estils i Taula Continguts</td><td>29.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>writer_practicaestilos.pdf</strong></td><td>Tema 11. Pràctica guiada Estils i Taula Continguts</td><td>1030.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema11(1)_como-crear-modificar-y-actualizar-un-indice-automaticamente-en-writer-.pdf</strong></td><td>Tema 11. Index de continguts, figures i alfabètic</td><td>837.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema11(2)_como-crear-un-indice-de-todas-las-tablas-e-imagenes-del-documento-en-writer.pdf</strong></td><td>Tema 11. Index de continguts, figures i alfabètic</td><td>227.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-11-IndicesyTablasContenido.pdf</strong></td><td>Tema 11. Pràctiques Tema 11 (Index i Taules de Continguts)</td><td>470.9 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema11_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 11</td><td>54.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-12-Crear-formulario-protegerlo-writer.pdf</strong></td><td>Pràctiques Tema 12 (Crear Formularis)</td><td>546.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-12-Formularios-VOLUNTARIO.pdf</strong></td><td>Pràctiques Tema 12 (Formularis-Voluntari)</td><td>269.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Writer-trabajo-documentos-largos.pdf</strong></td><td>Tema 13. Treballar amb documents llargs</td><td>1003.9 KB</td></tr><tr><td><code>ODT</code></td><td><strong>hermes.odt</strong></td><td>Tema 13. Treballar amb documents llargs</td><td>18.9 KB</td></tr><tr><td><code>ODT</code></td><td><strong>proyecto-escritorio-libre.odt</strong></td><td>Tema 13. Treballar amb documents llargs</td><td>64.6 KB</td></tr><tr><td><code>ODT</code></td><td><strong>mitos.odt</strong></td><td>Tema 13. Treballar amb documents llargs</td><td>31.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-13-Doc Largos-I.pdf</strong></td><td>Pràctiques Tema 13 (Documents llargs - I )</td><td>2075.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-14-Doc Largos-II.pdf</strong></td><td>Pràctiques Tema 14 (Documents llargs - II)-VOLUNTARIA</td><td>201.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema-15-RepasoFinal.pdf</strong></td><td>Pràctiques Tema 15 (Repàs final)</td><td>412.1 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Tema15_Recursos.zip</strong></td><td>Recursos Pràctiques Tema 15</td><td>76.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Ex_Repas01.pdf</strong></td><td>Exercici Repàs 01</td><td>645.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Ex_REPAS02.pdf</strong></td><td>Exercici Repàs 02</td><td>2471.4 KB</td></tr><tr><td><code>ODT</code></td><td><strong>ex01diario_desgraciado.odt</strong></td><td>Exercici Repàs 02</td><td>40.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Ex_REPAS03.pdf</strong></td><td>Exercici Repàs 03</td><td>4064.8 KB</td></tr><tr><td><code>ODT</code></td><td><strong>13txt_pringao.odt</strong></td><td>Exercici Repàs 03</td><td>25.9 KB</td></tr><tr><td><code>ODT</code></td><td><strong>ex01padres.odt</strong></td><td>Exercici Examen 01</td><td>20.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Examen01.pdf</strong></td><td>Exercici Examen 01</td><td>2259.6 KB</td></tr><tr><td><code>ODT</code></td><td><strong>ex02viajeroma.odt</strong></td><td>Exercici Examen 02</td><td>16.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Examen02.pdf</strong></td><td>Exercici Examen 02</td><td>934.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Examen03.pdf</strong></td><td>Exercici Examen 03</td><td>1224.2 KB</td></tr><tr><td><code>ODT</code></td><td><strong>ex03agencia_viajes.odt</strong></td><td>Exercici Examen 03</td><td>21.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>7-Tablas.pdf</strong></td><td>Pràctiques Impress</td><td>400.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>6-ImageneRotulosArtisticos.pdf</strong></td><td>Pràctiques Impress</td><td>613.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>5-PlantillasFondosImaganes.pdf</strong></td><td>Pràctiques Impress</td><td>483.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>4-Diapositivas.pdf</strong></td><td>Pràctiques Impress</td><td>454.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>3-Textos.pdf</strong></td><td>Pràctiques Impress</td><td>342.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>1-EntornoDeTrabajo.pdf</strong></td><td>Pràctiques Impress</td><td>586.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>14-PresentacionConcesionario.pdf</strong></td><td>Pràctiques Impress</td><td>578.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>13-PresentacionGimnasio.pdf</strong></td><td>Pràctiques Impress</td><td>289.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>12-MusicaFondo-Bazar.pdf</strong></td><td>Pràctiques Impress</td><td>605.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>11-Interactividad.pdf</strong></td><td>Pràctiques Impress</td><td>1019.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>10-ObjetosMultimedia.pdf</strong></td><td>Pràctiques Impress</td><td>478.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>9-TransicionesAnimaciones.pdf</strong></td><td>Pràctiques Impress</td><td>342.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>8-AutoformasDiagramas.pdf</strong></td><td>Pràctiques Impress</td><td>308.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>2-CreacionPresentacionesTipos.pdf</strong></td><td>Pràctiques Impress</td><td>3136.5 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Recursos_Impress_Curs_2020_21.zip</strong></td><td>Recursos Pràctiques Impress</td><td>8697.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Resultat-Friki.pdf</strong></td><td>Resultat final pràctiques Impress (Friki)</td><td>663.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Joc1_Impress.pdf</strong></td><td>Treball Impress: Un joc senzill amb IMPRESS</td><td>149.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>PRACTICAFINAL.pdf</strong></td><td>Pràctica FINAL IMPRESS (EXAMEN)</td><td>218.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Joc2_Impress.pdf</strong></td><td>Treball 2 Impress: Un joc senzill amb POWERPOINT</td><td>473.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>LibreOffice - Manual Usuario Calc-BASICO_al.pdf</strong></td><td>Manual bàsic CALC</td><td>604.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P5-FormulasSencillas.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>518.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P4-ImagenesRotulosArtisticos.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>440.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P3-FormatoTextoNumero.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>409.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P2-LibrosDeTrabajo.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>410.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P1-InterfazUsuario.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>546.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P11-FacturaTelefonica.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>418.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P10-HojaFactura.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>427.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P9-HojaComisiones.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>533.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P8-RefenrenciasCeldas.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>522.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P7-RellenarSeries.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>416.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P6-RangoCeldas.pdf</strong></td><td>Pràctiques MÒDUL 1</td><td>547.1 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>M1_Recursos_Alumnes.zip</strong></td><td>RECURSOS pràctiques MÒDUL 1</td><td>485.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P1-InterfazUsuario.pdf</strong></td><td>M1-Pràctica 1: Interfície d'usuari</td><td>546.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P2-LibrosDeTrabajo.pdf</strong></td><td>M1-Pràctica 2: Llibres de treball</td><td>410.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P3-FormatoTextoNumero.pdf</strong></td><td>M1-Pràctica 3: Format de cel·les</td><td>409.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P4-ImagenesRotulosArtisticos.pdf</strong></td><td>M1-Pràctica 4: Imatges i ròtuls artístics</td><td>440.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P5-FormulasSencillas.pdf</strong></td><td>M1-Pràctica 5: Fòrmules senzilles</td><td>518.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P6-RangoCeldas.pdf</strong></td><td>M1-Pràctica 6: Rangs de cel·les</td><td>547.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P7-RellenarSeries.pdf</strong></td><td>M1-Pràctica 7: Omplir sèries</td><td>416.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P8-RefenrenciasCeldas.pdf</strong></td><td>M1-Pràctica 8: Referències a cel·les</td><td>522.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P9-HojaComisiones.pdf</strong></td><td>M1-Pràctica 9: Pràctica comissions</td><td>533.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P10-HojaFactura.pdf</strong></td><td>M1-Pràctica 10: Pràctica factures</td><td>427.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M1P11-FacturaTelefonica.pdf</strong></td><td>M1-Pràctica 11: Pràctica factura telefònica</td><td>418.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P8-DatosHojasDiferentes.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>307.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P7-Estadisticas.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>314.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P6-RangosNOconsecutivos.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>405.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P5-Graficos.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>504.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P4-Funcion-MIN-MAX.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>710.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P3-FuncionSUMA-Promedio.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>458.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P2-HojaCafePepito.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>419.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P1-FormatoCondicional.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>311.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P11-FormatoCondicional-Voluntaria.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>641.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P10-GraficosClimaticos.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>356.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P9-CuentaBancaria.pdf</strong></td><td>Pràctiques MÒDUL 2</td><td>494.2 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>M2_Recursos_Alumnes.zip</strong></td><td>RECURSOS pràctiques MÒDUL 2</td><td>388.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P1-FormatoCondicional.pdf</strong></td><td>M2-Pràctica 1: Format condicional</td><td>311.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P2-HojaCafePepito.pdf</strong></td><td>M2-Pràctica 2: Pràctica</td><td>419.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P3-FuncionSUMA-Promedio.pdf</strong></td><td>M2-Pràctica 3: Funció SUMA i PROMEDIO</td><td>458.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P4-Funcion-MIN-MAX.pdf</strong></td><td>M2-Pràctica 4: Funció MIN i MAX</td><td>710.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P5-Graficos.pdf</strong></td><td>M2-Pràctica 5: Gràfics</td><td>504.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P6-RangosNOconsecutivos.pdf</strong></td><td>M2-Pràctica 6: Rangs no consecutius</td><td>405.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P7-Estadisticas.pdf</strong></td><td>M2-Pràctica 7: Estadístiques</td><td>314.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P8-DatosHojasDiferentes.pdf</strong></td><td>M2-Pràctica 8: Dades en fulles diferents</td><td>307.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P9-CuentaBancaria.pdf</strong></td><td>M2-Pràctica 9: Pràctica compte bancari (VOLUNTARIA)</td><td>494.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P10-GraficosClimaticos.pdf</strong></td><td>M2-Pràctica 10: Gràfics climàtics (VOLUNTARIA)</td><td>356.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M2P11-FormatoCondicional-Voluntaria.pdf</strong></td><td>M2-Pràctica 11: Pràctica format condicional (VOLUNTARIA)</td><td>641.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Diagrama de Gantt en Calc.pdf</strong></td><td>DIAGRAMA DE GANTT (1)</td><td>634.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Diagrama_Gantt_2.pdf</strong></td><td>Diagrama de Gantt (2)</td><td>471.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P4-FuncionSI.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>5032.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P5-FuncionesCONTAR.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1375.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P3-AlcanceNombres.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1352.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P2-NombresRangos.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1475.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P1-DefininirNombres.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1444.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P11-Hiperenlaces.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>2818.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P10-DatosVinculados.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1501.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P9-DatosLibrosDiferetnes.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>2424.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P8-FuncionesTiempo.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1436.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P7-FuncionSUMARSI.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1835.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P6-HojaQuinielasPuntuaciones.pdf</strong></td><td>Pràctiques MÒDUL 3</td><td>1471.7 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>M3_Recursos_Alumnos.zip</strong></td><td>RECURSOS pràctiques MÒDUL 3</td><td>455.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P1-DefininirNombres.pdf</strong></td><td>M3-Pràctica 1: Definit noms</td><td>1444.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P2-NombresRangos.pdf</strong></td><td>M3-Pràctica 2: Noms de rangs</td><td>1475.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P3-AlcanceNombres.pdf</strong></td><td>M3-Pràctica 3: Alcanç dels noms (VOLUNTARIA)</td><td>1352.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P4-FuncionSI.pdf</strong></td><td>M3-Pràctica 4: Funció SI</td><td>5032.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P5-FuncionesCONTAR.pdf</strong></td><td>M3-Pràctica 5: Funcions de CONTAR</td><td>4347.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P6-HojaQuinielasPuntuaciones.pdf</strong></td><td>M3-Pràctica 6: Pràctica quinieles i puntuacions</td><td>1471.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P7-FuncionSUMARSI.pdf</strong></td><td>M3-Pràctica 7: Funció SUMAR.SI</td><td>1835.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P8-FuncionesTiempo.pdf</strong></td><td>M3-Pràctica 8: Funcions de temps (VOLUNTARIA)</td><td>1436.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P9-DatosLibrosDiferetnes.pdf</strong></td><td>M3-Pràctica 9: Dades en llibres diferents</td><td>2424.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P10-DatosVinculados.pdf</strong></td><td>M3-Pràctica 10: Dades vinculades</td><td>1501.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M3P11-Hiperenlaces.pdf</strong></td><td>M3-Pràctica 11: Hipervincles</td><td>2818.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P6-HojaPRESTAMO.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>534.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P5-FuncionPAGO.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>545.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P4-HojaPAU.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>892.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P3-FuncionesBooleanas.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>846.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P2-HojaBAR.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>593.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P1-FuncionesBusqueda.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>405.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P12-Hojacooperativa.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>1585.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P11-Esquemas.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>1012.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P10-Consolidar.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>445.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P9-ValidacionatosProteccionCeldas.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>473.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P8-OperacionesMultiples.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>478.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P7-EscenariosBuscarDestino.pdf</strong></td><td>Pràctiques MÒDUL 4</td><td>614.8 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>M4_Recursos_Alumnes.zip</strong></td><td>RECURSOS pràctiques MÒDUL 4</td><td>2908.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P1-FuncionesBusqueda.pdf</strong></td><td>M4-Pràctica 1: Funcions de búsqueda</td><td>405.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P2-HojaBAR.pdf</strong></td><td>M4-Pràctica 2: Pràctica</td><td>593.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>PracticaNIF.pdf</strong></td><td>Pràctica NIF</td><td>62.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>PracticaPREMIOS.pdf</strong></td><td>Pràctica PREMIOS</td><td>135.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>PracticaCOCHES.pdf</strong></td><td>Pràctica COCHES</td><td>234.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>PracticaPRIMAS.pdf</strong></td><td>Pràctica PRIMAS</td><td>170.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P3-FuncionesBooleanas.pdf</strong></td><td>M4-Pràctica 3: Funcions booleanes</td><td>846.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P4-HojaPAU.pdf</strong></td><td>M4-Pràctica 4: Pràctica PAU</td><td>892.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>PracticaNOTES-Func-SI_Curs_2022.pdf</strong></td><td>Pràctica NOTES</td><td>4498.8 KB</td></tr><tr><td><code>ODS</code></td><td><strong>NOTES-SOLUCIO.ods</strong></td><td>Exercici notes SOLUCIO</td><td>19.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P5-FuncionPAGO.pdf</strong></td><td>M4-Pràctica 5: Funció PAGO</td><td>545.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P6-HojaPRESTAMO.pdf</strong></td><td>M4-Pràctica 6: Pràctica prèstec</td><td>534.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P7-EscenariosBuscarDestino.pdf</strong></td><td>M4-Pràctica 7: Escenaris, búsqueda d'objectiu i destí</td><td>614.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P8-OperacionesMultiples.pdf</strong></td><td>M4-Pràctica 8: Operacions múltiples</td><td>478.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P9-ValidacionatosProteccionCeldas.pdf</strong></td><td>M4-Pràctica 9: Validació i protecció de dades</td><td>473.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P10-Consolidar.pdf</strong></td><td>M4-Pràctica 10: Consolidar (VOLUNTARIA)</td><td>445.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P11-Esquemas.pdf</strong></td><td>M4-Pràctica 11: Esquemes</td><td>1012.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M4P12-Hojacooperativa.pdf</strong></td><td>M4-Pràctica 12: Pràctica final. Fulla cooperativa</td><td>1585.9 KB</td></tr><tr><td><code>ODS</code></td><td><strong>Exercici_Notes_Alumnes.ods</strong></td><td>Exercici Notes per a classe</td><td>12.3 KB</td></tr><tr><td><code>ODS</code></td><td><strong>PRESTAMOS (posibles combinaciones).ods</strong></td><td>COMBINACIONS FUNCIONS PAGO</td><td>14.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA4.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>219.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA3.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>286.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA2.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>219.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA1.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>331.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA9.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>178.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA8.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>189.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA7.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>260.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA6.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>167.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>M5PRÀCTICA5.pdf</strong></td><td>Mòdul 5 - Pràctiques Extra</td><td>195.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_0_BaseDeDades_AL.pdf</strong></td><td>Tema 0. Introducció a les base de dades.</td><td>6323.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_01_SGBD_1part.pdf</strong></td><td>Tema 1. Sistemas Gestores de Base de Datos (vers 1).</td><td>13498.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_01_SGBD_2part.pdf</strong></td><td>Tema 1. Sistemas Gestores de Base de Datos (vers 2).</td><td>9152.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_01_EXERCICIS_SGBD.pdf</strong></td><td>Tema 1. EXERCICIS SGBD</td><td>902.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>exemple_classe_er.pdf</strong></td><td>Exemple_inicial_Classe_ER</td><td>113.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_02_1_Modelo_Entidad_Relacion_COMPLET.pdf</strong></td><td>Tema 2. Model Entitat-Relació (COMPLET)</td><td>9536.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_02_1_Modelo_Entidad_Relacion_RESUMEN.pdf</strong></td><td>Tema 2. Model Entitat-Relació (RESUMEN)</td><td>3048.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_02_2_ER_2part.pdf</strong></td><td>Tema 2. Model Entitat-Relació (2 vers)</td><td>8107.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_02_EXERCICIS_1_E-R.pdf</strong></td><td>B1-EXERCICIS Model Entitat-Relació</td><td>976.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_02_EXERCICIS_Complet.pdf</strong></td><td>B2-EXERCICIS Model Entitat-Relació</td><td>6207.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_02_2_Modelo_Relacional.pdf</strong></td><td>Tema 2. Model Relacional (2ª part)</td><td>12993.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_02_EXERCICIS_2_Relacional.pdf</strong></td><td>B1-EXERCICIS Model Relacional</td><td>1308.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_02_EXERCICIS_Complet.pdf</strong></td><td>B2-EXERCICIS Model Relacional</td><td>6207.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_03_BDA_Tablas.pdf</strong></td><td>Tema 3. TAULES ACCESS</td><td>15412.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_03_BDA_Integridad_Referencial.pdf</strong></td><td>Tema 3. Integridad Referencial</td><td>668.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_03_Def_mascara_regla_validacion.pdf</strong></td><td>DEFINICION Mascara entrada_Regla validación</td><td>169.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Ejemplos de validación de datos2.pdf</strong></td><td>Ejemplos reglas de validación</td><td>1256.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_03_EXERCICIS_BDA_TABLAS__Paraninfo_2022.pdf</strong></td><td>B1-EXERCICIS BDA-Creació de Taules</td><td>1917.6 KB</td></tr><tr><td><code>RAR</code></td><td><strong>BDA_Exercicis_Tema3_Paraninfo.rar</strong></td><td>B1-BDA per a exercicis Tema 3</td><td>99.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_3_BDA Relacionales.pdf</strong></td><td>B2-EXERCICIS BDA-Creació de Taules</td><td>7999.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_04_BDA_Consultas.pdf</strong></td><td>Tema 4. CONSULTES</td><td>11330.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_4_Consultas_Esquema.pdf</strong></td><td>RESUMEN CONSULTES</td><td>545.7 KB</td></tr><tr><td><code>MDB</code></td><td><strong>EMPLEADOS.mdb</strong></td><td>BDA EMPLEADOS (per a consultes de classe)</td><td>340.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_04_EXERCICIS_BDA_CONSULTAS_AL_Paraninfo_.pdf</strong></td><td>B1-EXERCICIS BDA-CONSULTES</td><td>1709.9 KB</td></tr><tr><td><code>RAR</code></td><td><strong>B1_BDA_per_a_exercicis.rar</strong></td><td>B1-BDA per a exercicis</td><td>129.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_4_Consultas Ex_1_i_2.pdf</strong></td><td>B2-EXERCICIS BDA-CONSULTES (Ex 1)</td><td>1283.4 KB</td></tr><tr><td><code>RAR</code></td><td><strong>B2_BDA_per_a_exercicis.rar</strong></td><td>B2-BDA per a exercicis</td><td>278.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_4_Consultas Access _complet_.pdf</strong></td><td>B2-EXERCICIS BDA-CONSULTES (Complet)</td><td>4140.6 KB</td></tr><tr><td><code>ACCDB</code></td><td><strong>VENTAS_EXAMEN.accdb</strong></td><td>BDA VENTAS PER A EXAMEN</td><td>504.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_05_BDA_Formularios.pdf</strong></td><td>Tema 5. FORMULARIS</td><td>11220.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_05_EXERCICIS_BDA_FORMULARIOS_Paraninfo_.pdf</strong></td><td>B1-EXERCICIS BDA-FORMULARIS</td><td>2485.2 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_5_Formularios Access-Ex_1_a_8.pdf</strong></td><td>B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</td><td>3194.7 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_5_Formularios Access _complet_.pdf</strong></td><td>B2-EXERCICIS BDA-FORMULARIS (Complet)</td><td>4533.2 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>BDA_per_a_exercicis.zip</strong></td><td>B2-BDA concesionario</td><td>21.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_06_BDA_Informes.pdf</strong></td><td>Tema 6. INFORMES</td><td>19405.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_06_EXERCICIS_BDA_INFORMES_Paraninfo_.pdf</strong></td><td>B1-EXERCICIS BDA-INFORMES</td><td>1665.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_6_Informes Access _complet_.pdf</strong></td><td>B2-EXERCICIS BDA-INFORMES</td><td>1579.2 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>BDA_per_a_exercicis.zip</strong></td><td>B2-BDA per a exercicis de INFORMES</td><td>159.4 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_07_BDA_Macros.pdf</strong></td><td>Tema 7. MACROS</td><td>9365.9 KB</td></tr><tr><td><code>PDF</code></td><td><strong>CODIGO_ABRIR_FORM_SIN_Access.pdf</strong></td><td>Abrir Form sin Abrir Access</td><td>103.0 KB</td></tr><tr><td><code>MDB</code></td><td><strong>ALUMNOS.mdb</strong></td><td>BDA ALUMNOS PER A MACROS (CLASSE)</td><td>1472.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>Tema_07_EXERCICIS_BDA_MACROS_Paraninfo_.pdf</strong></td><td>B1-EXERCICIS BDA-MACROS</td><td>1656.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>B2_Tema_7_Macros Access _original_.pdf</strong></td><td>B2-EXERCICIS BDA MACROS</td><td>8902.8 KB</td></tr><tr><td><code>PDF</code></td><td><strong>ejercicio_final_BDA.pdf</strong></td><td>Treball Final Base de dades</td><td>127.6 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>Pràctiques_Pendents_Alumnes.zip</strong></td><td>Practiques_Pendents</td><td>10450.3 KB</td></tr><tr><td><code>PDF</code></td><td><strong>TEMA1_TEORIA_IMAGEN_DIGITAL.pdf</strong></td><td>Tema 1: Imatge Digital</td><td>540.5 KB</td></tr><tr><td><code>PDF</code></td><td><strong>TEMA2_Imagen_Vectorial_Teoria_basica_Inkscape.pdf</strong></td><td>Tema 2. Imatge vectorial (Inkscape)</td><td>660.0 KB</td></tr><tr><td><code>PDF</code></td><td><strong>TEMA2_practicaB_1_Uso_herramientas_basicas_inkscape.pdf</strong></td><td>Tema 2. Pràctica 1 Inkscape</td><td>1054.6 KB</td></tr><tr><td><code>PDF</code></td><td><strong>TEMA2_practicaB_2_Crear_Cartel_Publicitario.pdf</strong></td><td>Tema 2. Pràctica 2 Inkscape</td><td>485.1 KB</td></tr><tr><td><code>PDF</code></td><td><strong>TEMA2_practicaB_3_Crear_Iconos.pdf</strong></td><td>Tema 2. Pràctica 3 Inkscape</td><td>494.3 KB</td></tr><tr><td><code>ZIP</code></td><td><strong>recursos_imagen_inkscape.zip</strong></td><td>Tema 2. Recursos per a pràctiques</td><td>2259.0 KB</td></tr></tbody></table>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="./ut22/ut22actividades.html">⬅️ ✍️ Activitats pràctiques UT22</a>
+<span></span>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

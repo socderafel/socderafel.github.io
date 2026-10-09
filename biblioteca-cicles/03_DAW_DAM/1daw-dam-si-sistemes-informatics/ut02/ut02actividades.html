@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT2 — Sistemes Informàtics | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖥️ Sistemes Informàtics — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Sistemes Informàtics</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 SI: LLIBRE QUE ANEM A SEGUIR EN LES CLASES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 TRANSPARÈNCIES UNITAT 1</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Exercisis conversió binari - decimal I</a></li>
+<li><a href="../ut00/ut0003.html">0.3 SI: ENLLAÇ RENDIMENT CPU</a></li>
+<li><a href="../ut00/ut0004.html">0.4 DIASPOSITIVES UD1 PART 1</a></li>
+<li><a href="../ut00/ut0005.html">0.5 SI: TAULA DE TOPOLOGIES LAN</a></li>
+<li><a href="../ut00/ut0006.html">0.6 SI: TEORIA XARXES UD1</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 LA SHELL DE LINUX</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D</a></li>
+<li><a href="../ut02/ut0203.html">2.3 ENLLAÇOS DURS I SIMBÓLICS</a></li>
+<li><a class="active" href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TEORIA XARXES</a></li>
+<li><a href="../ut03/ut0302.html">3.2 TEORIA SUBNETTING</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — GESTIÓ DE LA INFORMACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 GUIA DE LA UNITAT 5</a></li>
+<li><a href="../ut04/ut0402.html">4.2 TEORIA UNITAT 5 PART 1</a></li>
+<li><a href="../ut04/ut0403.html">4.3 TEORIA UNITAT 5 PART 2</a></li>
+<li><a href="../ut04/ut0404.html">4.4 TEORIA UNITAT 5 PART 3</a></li>
+<li><a href="../ut04/ut0405.html">4.5 TEORIA UNITAT 5 PART 4</a></li>
+<li><a href="../ut04/ut0406.html">4.6 TEORIA UNITAT 5 PART 5</a></li>
+<li><a href="../ut04/ut0407.html">4.7 TEORIA UNITAT 5 PART 6</a></li>
+<li><a href="../ut04/ut0408.html">4.8 TEORIA UNITAT 5 PART 7</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 TEORIA UNITAT 6 PART 1</a></li>
+<li><a href="../ut05/ut0502.html">5.2 TEORIA UNITAT 6 PART 2</a></li>
+<li><a href="../ut05/ut0503.html">5.3 TEORIA UNITAT 6 PART 3</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — SEGURETAT, RENDIMENT I RECURSOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 TEORIA UNITAT 7 PART1</a></li>
+<li><a href="../ut06/ut0602.html">6.2 TEORIA UNITAT 7 PART 2</a></li>
+<li><a href="../ut06/ut0603.html">6.3 TEORIA UNITAT 7 PART 3</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — TALLER HARDWARE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Manual placa base taller</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Teoria Components Hardware</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT2 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE</span>
+<h1>✍️ Activitats pràctiques UT2</h1>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.1 — EJERCICIOS SHELL LINUX I</p><p>UD3: ADMINISTRACIÓ DE PROGRAMARI LLIURE</p>
+<p>La Shell de Unix y de Linux</p>
+<p>EJERCICIOS</p>
+<ul><li>¿Cómo compruebas en que directorio estas?</li></ul>
+<ul><li>¿Cómo puedes listar todos los elementos del directorio /home?</li></ul>
+<ul><li>¿Cómo puedes copiar el directorio mp3 dentro del directorio mp4?</li></ul>
+<ul><li>Si te posicionas en /home/usuario/Descargas/mp3, ¿cómo te cambiarias al directorio /bin?</li></ul>
+<ul><li>¿Cómo borras el directorio mp3 que se encuentra dentro del directorio mp4?</li></ul>
+<ul><li>¿Cómo moverías el fichero alice.jpg del directorio mp3 al mp4?</li></ul>
+<ul><li>¿Cómo moverías la carpeta Pearl de mp3 a mp4?</li></ul>
+<ul><li>Listar todos los archivos del directorio bin.</li></ul>
+<ul><li>Listar todos los archivos del directorio tmp.</li></ul>
+<ul><li>Listar todos los archivos del directorio etc que empiecen por t en orden inverso.</li></ul>
+<ul><li>Listar todos los archivos del directorio dev que empiecen por tty y tengan 5 caracteres.</li></ul>
+<ul><li>Listar todos los archivos del directorio dev que empiecen por tty y acaben en 1,2,3 ó 4.</li></ul>
+<ul><li>Listar todos los archivos del directorio dev que empiecen por t y acaben en C1.</li></ul>
+<ul><li>Listar todos los archivos, incluidos los ocultos, del directorio raíz.</li></ul>
+<ul><li>Listar todos los archivos del directorio etc que no empiecen por t.</li></ul>
+<ul><li>Listar todos los archivos del directorio usr y sus subdirectorios.</li></ul>
+<ul><li>Cambiarse al directorio tmp, crear directorio PRUEBA. (en dos pasos)</li></ul>
+<ul><li>Mostrar el día y la hora actual.</li></ul>
+<ul><li>Con un solo comando posicionarse en el directorio $HOME.</li></ul>
+<ul><li>Listar todos los ficheros del directorio HOME mostrando su número de inodo.</li></ul>
+<ul><li>Crear los directorios dir1, dir2 y dir3 en el directorio PRUEBA. Dentro de dir1 crear el directorio dir11. Dentro del directorio dir3 crear el directorio dir31. Dentro del directorio dir31, crear los directorios dir311 y dir312.</li></ul>
+<ul><li>Convierte el fichero alice.jpg en oculto.</li></ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.2 — EJERCICIOS PARA EL APRENDIZAJE DE LA UNIDAD3</p><p>UD3: ADMINISTRACIÓ DE PROGRAMARI LLIURE</p>
+<p>EJERCICIOS PARA REALIZAR MIENTRAS SE LEE EL PDF DE LA UD3</p>
+<ul><li>Indica como es el sistema operativo GNU/Linux y justifica tu respuesta (monousuario/multiusuario)</li></ul>
+<ul><li>Indica los dos modos básicos de funcionamiento de Linux y haz una pequeña descripción.</li></ul>
+<ul><li>¿Por qué se considera una mala idea conectarse gráficamente utilizando el nombre de usuario root?</li></ul>
+<ul><li>¿Como podemos acceder a una consola como usuario root?</li></ul>
+<ul><li>Indica como abrir la ventana de terminal o xterm. Muéstralo con una captura de pantalla, e indica para que sirve.</li></ul>
+<ul><li>¿Qué información muestra el intérprete de ordenes?</li></ul>
+<ul><li>Diferencia entre ordenes internas y órdenes externes y pon algún ejemplo.</li></ul>
+<ul><li>Teniendo en cuenta la definición de opciones (p.13), indica algún ejemplo.</li></ul>
+<ul><li>¿Qué son los parámetros? Indica algún ejemplo de orden con un parámetro.</li></ul>
+<ul><li>¿Se pueden combinar las opciones y parámetros en un orden determinado? Indica un ejemplo.</li></ul>
+<ul><li>Indica el contenido del archivo etc/passwd</li></ul>
+<ul><li>Indica si es viable guardar las contraseñas en el archivo etc/passwd, justifica la respuesta e indica dónde se deben guardar.</li></ul>
+<ul><li>Indica una contraseña que sea considerada buena, atendiendo a lo descrito en la página 16.</li></ul>
+<ul><li>Indica el archivo con información de grupos.</li></ul>
+<ul><li>Indica qué usuario puede administrar las cuentas de usuarios y grupos, creándolas de nuevo, borrando...</li></ul>
+<ul><li>Indica la sintaxis que se emplea para añadir usuarios al sistema.</li></ul>
+<ul><li>Indica la sintaxis que se emplea para eliminar usuarios del sistema</li></ul>
+<ul><li>¿Existe alguna forma de deshabilitar temporalmente una cuenta sin tener que borrarla?</li></ul>
+<ul><li>Indica como crearías un grupo de usuarios llamado alumnos.</li></ul>
+<ul><li>Creus que un usuario puede pertenecer a más de un grupo?</li></ul>
+<ul><li>Indica cómo cambiar el grupo primario de un usuario después de haberlo creado.</li></ul>
+<ul><li>¿Cómo puedo saber qué usuarios están autentificados?</li></ul>
+<ul><li>¿Y el tiempo de conexión de un usuario?</li></ul>
+<ul><li>Vamos a acceder a las herramientas de administración de usuarios y grupos, tal y como se indica en la Fig 1.2 (p.22) haz una captura de pantalla, así como otra captura de la contraseña de usuario para hacer estas tareas de administración.</li></ul>
+<ul><li>Vamos a crear un usuario nuevo, fíjate en la Fig.1.8 y a continuación modifica el nombre corto según la Fig. 1.9. Fíjate que te pide la contraseña del usuario con el que hemos iniciado sesión para llevar el alta del usuario en el sistema (mira Fig. 1.10).</li></ul>
+<p>26. Volveremos a la pantalla inicial de la herramienta de administración de usuarios y grupos, pero ahora, en la lista nos aparecerá un usuario adicional, como puede ver en la figura 1.11.</p>
+<p>27. Da de alta a otro usuario y a continuación realiza una captura de pantalla indicando que la has suprimido, fíjate en la Fig. 1.12. Verás que podemos escoger no suprimir la cuenta, suprimir el usuario manteniendo sus archivos, o suprimir el usuario y sus archivos</p>
+<p>28. En cuanto a la gestión de los grupos, para acceder a ellos es necesario pulsar el botón Gestiona los grupos, desde la ventana principal de la aplicación de gestión de usuarios y grupos. Aparecerá el cuadro de diálogo de la figura 1.13. Realiza una captura de pantalla.</p>
+<p>29. Si seleccionamos uno de los grupos de la lista y hacemos clic en Propiedades, aparece un cuadro de diálogo en el que podemos asignar usuarios al grupo seleccionado. Lo puedes ver en la figura 1.14. Si hacemos un clic en el cuadro de confirmación junto al nombre del usuario, haremos que éste pertenezca al grupo en cuestión. Podemos asignar tantos usuarios como queramos a un grupo determinado. Haz una captura.</p>
+<p>30. Fíjate en que, por defecto, por cada usuario que creamos en el sistema, se crea un grupo con el mismo nombre. Esto no es muy conveniente, y es más adecuado agrupar a todos los usuarios similares en un solo grupo. Haz captura tal y como aparece en 1.15 de la supresión de grupos</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.3 — SI CONFIGURACIÓN DE RED CON NETPLAN Y LA SUITE IPROUTE2</p><p>UD3: ADMINISTRACIÓ DE PROGRAMARI LLIURE</p>
+<p>CONFIGURACIÓN DE LA RED</p>
+<p>EJERCICIOS</p>
+<ul><li>Introducción</li></ul>
+<p>El paquete net-tools al que pertenece ifconfig, es un conjunto de comandos para la configuración del subsistema de red del núcleo Linux y, aunque siguen presentes en algunas distribuciones de Linux, otras como Debian 9 stretch consideran que net-tools es un paquete obsoleto (deprecated) y optan por sustituirlo por el paquete iproute2 suite.</p>
+<p>La suite iproute2 es una herramienta mucho más completa y moderna que net-tools, por lo que se recomienda su uso para la gestión del del subsistema de red. Con iproute2 suite podemos hacer lo mismo que con net-tools y, al ser una suite más completa, podremos configurar más parámetros que con net-tools. La suite iproute2 incluye todas las funcionalidades que podemos llevar a cabo con los comandos del paquete net-tools. El paquete net-tools se compone de los siguientes comandos: netstat, ifconfig, ipmaddr, iptunnel, mii-tool, nameif, pliconfig, rarp, route, slattach y arp.</p>
+<p>El propósito de la suite iproute2 es reemplazar el conjunto de herramientas que componen las net-tools y encargarse de configurar las interfaces de red, la tabla de enrutamiento y gestionar la tabla ARP.</p>
+<p>La suite iproute2 tiene la misma funcionalidad que net-tools y, añade otras funcionalidades que convierten a GNU/Linux en un sistema de enrutamiento avanzado. Las herramientas que se incluyen en el paquete iproute2 suite son: bridge, devlink, ip, rtacct, rtmon, tc, tipc, ctstat, lnstat, nstat, routef, routel, rtstat, arpd y genl. Algunas de sus funcionalidades son: enrutamiento por origen, balanceo de carga, tunneling, gestión del ancho de banda, QoS (Quality of Service), VLAN switching, bridging, etc.</p>
+<p>Ejercicios para trabajar la configuración de red en Linux Ubuntu</p>
+<p>Nota1: en todos los ejercicios debes de indicar que comando has utilizado.</p>
+<p>Nota2: se deben usar instrucciones de la suite iproute2.</p>
+<ul><li>Asigna una dirección ipv4 a tu interfaz cableada y especifica donde se ha aplicado.</li></ul>
+<ul><li>Borra una de las dos direcciones que tienes configurada en la interfaz cableada.</li></ul>
+<ul><li>Indica el comando para ver la información en capa2 del modelo OSI.</li></ul>
+<ul><li>Muestra las direcciones ipv4 que tienes configurado en tu interfaz cableada.</li></ul>
+<ul><li>Deshabilita la interfaz cableada, muestra que se ha deshabilitado y vuélvela a activar.</li></ul>
+<ul><li>Visualiza la tabla de rutas.</li></ul>
+<ul><li>Visualiza la tabla ARP. Indica para que sirve esta tabla.</li></ul>
+<ul><li>Configura una ip estática usando la herramienta NETPLAN.</li></ul>
+<ul><li>Imagina que debes configurar un servidor con una ip estática. Para ello, puedes utilizar la herramienta NETPLAN. Haz uso de ella, indicando en cada caso, las ip’s que vas a utilizar para hacer la configuración y que estudio has realizado para ponerlas.</li></ul>
+<ul><li>Indica con una imagen la configuración que has establecido.</li></ul>
+<p>INFORMACIÓN SOBRE LA ENTREGA</p>
+<p>ENTREGAR LA INFORMACIÓN EN FORMATO ODT, DOC O EN FORMATO PDF. INDICAR SIEMPRE VUESTRO NOMBRE Y APELLIDOS.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.4 — EJERCICIOS LINUX DE RECOPILACIÓN DE LA UD3</p><p>UD3: ADMINISTRACIÓ DE PROGRAMARI LLIURE</p>
+<p>La Shell de Unix y de Linux</p>
+<p>EJERCICIOS DE RECOPILACIÓN DE LA UNIDAD</p>
+<p>EJERCICIO DE ENLACES DEL PDF DE TEORÍA</p>
+<p>En estos ejercicios debes indicar la instrucción que has puesto para resolver el ejercicio.</p>
+<ul><li>Crea 1 directorio desde /home/usuario en el escritorio que se llamen dir1 usando rutas relativas con una sola instrucción.</li></ul>
+<ul><li>En el directorio dir1 crea tres ficheros que se llamen cara1, cara2, cara3, pie1, pie2, pie3, pomulo1, pomulo2, pomulo3 desde /home/usuario y usando una sola instrucción.</li></ul>
+<ul><li>Cambia al directorio / (raíz) usando rutas relativas y comprueba donde estás.</li></ul>
+<ul><li>Vuelve al directorio /home/user de la manera más breve posible. Es decir, usando el mínimo de caracteres.</li></ul>
+<ul><li>Lista los ficheros de dir1 que empiezan por po.(usa el filtrado con grep)</li></ul>
+<ul><li>Edita los ficheros cara1, cara2 y cara3 añadiendo algo de contenido en cada uno de ellos. Hazlo con una sola instrucción.</li></ul>
+<ul><li>Crea dentro de dir1 un directorio llamado dir2 con tres ficheros dentro que se llamen mano1, mano2, mano3.</li></ul>
+<ul><li>Lista el contenido de todo el directorio dir1 de manera recursiva. (cuando indico recursivo me refiero a que se muestre todo el contenido de ese directorio y los subyacentes)</li></ul>
+<ul><li>Busca los ficheros el directorio dir1 que contengan la palabra pie.</li></ul>
+<ul><li>Crea una carpeta que se llame dir3 en el escritorio y copia el fichero cara1 dentro del directorio dir3.</li></ul>
+<ul><li>Comprueba la umask que tienes en este momento</li></ul>
+<ul><li>Lista los permisos que dispone ahora mismo el fichero cara1 del directorio dir3. Explica que permisos tiene asignado este fichero con relación a la umask.</li></ul>
+<ul><li>Asigna con el comando chmod permisos de ejecución tanto al usuario, grupo y a otros.</li></ul></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0203.html">⬅️ 2.3 ENLLAÇOS DURS I SIMBÓLICS</a>
+<a class="page-nav-btn" href="../ut03/index.html">📘 UT3 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

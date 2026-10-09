@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.2 EN Article: How Web Operating Systems Work — Aplicacions Web | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>💻 Aplicacions Web — 2n SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Web</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unit 0: Introduction</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Reference Material</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Presentation Folder</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Activities</a></li>
+<li><a href="../ut00/ut0004.html">0.4 EN Article- Recovery Dossier</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unit 1: Technologies for Web Development</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Resources: Example of HTML+CSS</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Resources: CSS Template Collection</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Resources: Reference Links</a></li>
+<li><a href="../ut01/ut0104.html">1.4 HTML Example</a></li>
+<li><a href="../ut01/ut0105.html">1.5 HTML Example</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Cheatsheet HTML (Manz)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Cheatsheet CSS (Manz)</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unit 2: Desktop Web Applications</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Resources: Reference Links</a></li>
+<li><a class="active" href="../ut02/ut0202.html">2.2 EN Article: How Web Operating Systems Work</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unit 3: Deploying a web server</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Resources: Reference Links</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Taller AWS-ASIX2023</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unit 4 Content Management Systems</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Resources: Reference Links</a></li>
+<li><a href="../ut04/ut0402.html">4.2 CMS Correction Form</a></li>
+<li><a href="../ut04/ut0403.html">4.3 WordpressEvaluation Template</a></li>
+<li><a href="../ut04/ut0404.html">4.4 WordpressEvaluation Template (WORD)</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Wordpress Practical Exam Example</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Unit 5 Web File Management and Web Office</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Resources: Reference Links</a></li>
+<li><a href="../ut05/ut0502.html">5.2 EN Article: Battle of the Clouds</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Unit 6: Distance Learning Managers</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Resources: Reference Links</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unit 7: JS Programming Introduction</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Plantilla: Joc JS amb processing.js</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Recuperació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Continguts i Recursos</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n SMX · Grau Mitjà · UT2 — Unit 2: Desktop Web Applications</span>
+<h1>2.2 EN Article: How Web Operating Systems Work</h1>
+<p><a href="https://computer.howstuffworks.com/web-operating-system.htm/printable">https://computer.howstuffworks.com/web-operating-system.htm/printable</a><br/></p><p>As the Web evolves, people invent new words to describe its features and applications. Sometimes, a term gains widespread acceptance even if some people believe it's misleading or inaccurate. Such is the case with Web operating systems.<br/><br/>An operating system (OS) is a special kind of program that organizes and controls computer hardware and software. Operating systems interact directly with computer hardware and serve as a platform for other applications. Whether it's Windows, Linux, Unix or Mac OS X, your computer depends on its OS to function.<br/><br/>That's why some people object to the term Web OS. A Web OS is a user interface (UI) that allows people to access applications stored completely or in part on the Web. It might mimic the user interface of traditional computer operating systems like Windows, but it doesn't interact directly with the computer's hardware. The user must still have a traditional OS on his or her computer.<br/><br/>While there aren't many computer operating systems to choose from, the same can't be said of Web operating systems. There are dozens of Web operating systems available. Some of them offer a wide range of services, while others are still in development and only provide limited functionality. In some cases, there may be a single ambitious programmer behind the project. Other Web operating systems are the product of a large team effort. Some are free to download, and others charge a fee. Web operating systems can come in all shapes and sizes.<br/><br/>What exactly do Web operating systems do? Keep reading to find out.<br/>Name Calling<br/><br/>Some people use the term "WebOS" instead of Web OS, but there's a problem with that. WebOS is the name of a project that the University of California, Berkeley began in 1996. The project is dedicated to building wide area applications. It's not the same thing as a Web operating system. Other people object to using the words "operating system" at all and instead prefer to call such applications "Web Desktop" or "Webtop" software. That's because Web OSs tend to mimic traditional computer desktop applications.<br/>What do Web operating systems do?<br/>Portals like iGoogle aren't true operating systems, but they do pull information from other Web pages into a centralized site.<br/>Portals like iGoogle aren't true operating systems, but they do pull information from other Web pages into a centralized site.<br/>©2008 HowStuffWorks<br/><br/>Web operating systems are interfaces to distributed computing systems, particularly cloud or utility computing systems. In these systems, a company provides computer services to users through an Internet connection. The provider runs a system of computers that include application servers and databases.<br/><br/>With some systems, people access the applications using Web browsers like Firefox or Internet Explorer. With other systems, users must download a program that creates a system-specific client. A client is software that accesses information or services from other software. In either case, users access programs that are stored not on their own computers, but on the Web.<br/><br/>What sort of services do they provide? Web operating systems can give users access to practically any program they could run on a computer's desktop. Common applications include:<br/><br/> Calendars<br/> E-mail<br/> File management<br/> Games<br/> Instant messaging programs<br/> Photo, video and audio editing programs<br/> RSS readers<br/> Spreadsheet programs<br/> Word processing programs<br/><br/>With traditional computer operating systems, you'd have to install applications to your own computer. The applications would exist on your computer's hard disk drive. They would run by accessing the processing power of your computer's central processing unit (CPU) by sending electronic requests to your computer's OS.<br/><br/>Web operating systems can't replace your computer's native OS -- in fact, they depend on traditional computer operating systems to work. The user side of Web OS software, whether it's a Web browser or a system-specific client, runs on top of your computer's OS. But programmers design Web operating systems to look and act like a desktop OS. A Web OS might look a lot like a traditional OS, but it doesn't manage your computer's hardware or software.<br/><br/>A Web OS allows you to access applications stored not on your computer, but on the Web. The applications exist wholly or in part on Web servers within a particular provider network. When you save information in an application, you might not store it on your computer. Instead, you save the information to databases connected to the Internet. Some Web operating systems also give you the option to save information to your local hard disk drive.<br/><br/>Because Web operating systems aren't tied to a specific computer or device, you can access Web applications and data from any device connected to the Internet. That is, you can do it as long as the device can run the Web operating software (whether that's a particular Web browser or client). This means that you can access the Web OS on one computer, create a document, save the work and then access it again later using a completely different machine. Web operating systems offer users the benefit of accessibility -- data isn't tied down to your computer.<br/><br/>What makes a Web OS tick? Keep reading to find out.<br/>Don't Call it a Portal<br/><br/>It's easy to confuse a Web OS with a portal. Portals are Web pages that give users access to multiple applications and services. For example, iGoogle is a portal that allows users to customize a Web page with news feeds, e-mail, games and other applications. Portals offer users a chance to access multiple applications or data sources from a single site, but they don't try to emulate desktop computer operating systems.<br/>The Technology of Web Operating Systems<br/><br/>With so many different Web operating systems either currently available or in development, it should come as no surprise that programmers use different approaches to achieve the same effect. While the goal of a Web OS is to provide an experience similar to using a desktop OS, there are no hard and fast rules for how to make that happen. The two most popular approaches rely on Flash technologies or Asynchronous JavaScript and XML (AJAX) technologies.<br/><br/>Flash is a set of technologies that enable programmers to create interactive Web pages. It's a technology that uses vector graphics. Vector graphics record image data as a collection of shapes and lines rather than individual pixels, which allows computers to load Flash images and animation faster than pixel-based graphics.<br/><br/>Flash files stream over the Internet, which means the end user accessing the file doesn't have to wait for the entire file to download to his or her computer before accessing parts of it. With Flash-based programs like YouTube's video player, this means you can start watching a film clip without having to download it first.<br/><br/>More than 98 percent of all computers connected to the Internet have a Flash player installed [source: Adobe]. That makes Flash an attractive approach for many programmers. They can create a Web OS knowing that the vast majority of computer users will be able to access it without having to download additional software.<br/><br/>AJAX technologies rely on hypertext markup language (HTML), the JavaScript programming language, Cascading Style Sheets (CSS) and eXtensible Markup Language (XML). It's a browser technology. The HTML language is a collection of markup tags programmers use on text files that tell Web browsers how to display the text file as a Web page. CSS is a tool that gives programmers more options when tweaking a Web site's appearance. Programmers can create a style sheet with certain attributes such as font style and color, and then apply those styles across several Web pages at once. JavaScript is a programming language that allows applications to send information back and forth between servers and browsers. XML is a markup language, which means programmers use it to describe the structure of information within a file and how it relates to other information.<br/><br/>The "asynchronous" aspect of AJAX means that AJAX applications transfer data between servers and browsers in small bits of information as needed. The alternative is to send an entire Web page to the browser every time something changes, which would significantly slow down the user's experience. With sufficient skill and knowledge, a programmer can create an AJAX application with the same functions as a desktop application.<br/><br/>Like Flash, most computers can run AJAX applications. That's because AJAX isn't a new programming language but rather a way to use established Web standards to create new applications. As long as an application programmer includes the right information in an application's code, it should run fine on any major Web browser. Some well known Web applications based on AJAX include Google Calendar and Gmail.<br/><br/>Why would anyone want to use a Web OS? Keep reading to find out.<br/>A Sample of Web Operating Systems<br/><br/>Why Use a Web OS?<br/>YouOS is one of the more popular Web operating systems on the Internet.<br/>YouOS is one of the more popular Web operating systems on the Internet.<br/>©2008 HowStuffWorks<br/><br/>Web operating systems simplify a user's experience when accessing applications hosted on remote servers. Ideally, a Web OS behaves like a desktop OS. The more familiar and intuitive the system, the faster people will learn how to use it. When a person chooses to run a certain application, his or her computer sends a request to the system's control node -- a special server that acts as a system administrator. The control node interprets the request and connects the user's client to the appropriate application server or database. By offloading applications, storage and processing power to a remote network, users don't have to worry about upgrading computer systems every few years.<br/><br/>For many people, that's the most attractive feature of Web operating systems. As long as their computers can run the browser or client software necessary to access the system, there's no need to upgrade. Some people become frustrated when they have to purchase new computers in order to run current software. With distributed computing, it's the provider's responsibility to provide application functionality. If the provider isn't able to meet user demands, users might look elsewhere for services.<br/><br/>Web operating systems can also make it easier to share data between computers. Perhaps you own both a Mac computer and a PC. It can be challenging to share data between the two different computers. Even if you use file formats that are compatible with both Mac computers and PCs, you could end up with a copy of the same file on each machine. Changing one copy isn't reflected on the other computer's copy. Web operating systems provide an interface where you can use any computer to create, modify and access a single copy of a file saved on a remote database. As long as the Web OS you're using can cross platforms, meaning it works on both Macs and PCs, you'll be able to work on the file at any time using either of your computers.<br/><br/>Likewise, Web operating systems can simplify collaborative projects. Many Web operating systems allow users to share files. Each user can work from the file saved to the system's native network. For many users, this is an attractive alternative to organizing multiple copies of the same file and then incorporating everyone's changes into a new version.<br/><br/>Right now, Web operating systems aren't as robust as their desktop counterparts. But some people believe that Web operating systems provide just enough functionality to compete with more traditional desktop software suites. If Web OS providers can address issues like the functionality gap and data security concerns, we might see a dramatic shift in computer network systems.<br/><br/>To learn more about Web operating systems and related topics, visit the links on the following page.<br/>Why Not?<br/><br/>A common concern about Web operating systems is that they require users to trust a third party to keep potentially sensitive data secure. For many users, this is a leap of faith. Will the provider be able to fend off hackers? It's in the provider's best interests to employ advanced security measures to keep client data safe. As distributed computing systems become more popular, we'll likely see a battle between hackers and security specialists.<br/></p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0201.html">⬅️ 2.1 Resources: Reference Links</a>
+<a class="page-nav-btn" href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

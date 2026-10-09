@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.1 Bases del concurso — Digitalització | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🌐 Digitalització — 4t ESO</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Digitalització</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — Presentación asignatura</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació asignatura</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Exportar les activitats a pdf</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — U1. Introducció a la informática</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Teoria sobre maquinari (hardware)</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Apuntes de sistemas de numeración</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Canva</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Tutorial Canva</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — CONCURSO INCIBE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut02/ut0201.html">2.1 Bases del concurso</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Procesadores de Texto</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Continguts i Recursos</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Hojas de cálculo</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Bases de Datos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 BBDD</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Redes</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Redes Informáticas (PPT)</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Redes Informáticas</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Criteris Avaluació Presentació Redes</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Páginas Web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 HTML5</a></li>
+<li><a href="../ut07/ut0702.html">7.2 CSS3</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Concurs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">4t ESO · UT2 — CONCURSO INCIBE</span>
+<h1>2.1 Bases del concurso</h1>
+<p>📎 <strong>Material de laboratori (Logo Incibe):</strong> <code>Incibe+017.jpg</code>, <code>TuAyudaCiberseguridad_Canales.jpg</code>, <code>TuAyudaCiberseguridad.jpg</code></p>
+<hr/>
+<h3>¿Qué es para ti el 017? II edición</h3>
+<p>Bases del concurso</p>
+<p>ÍNDICE</p>
+<h3>BASES DEL CONCURSO</h3>
+<h4>CONVOCATORIA</h4>
+<p>INCIBE, S.M.E. Instituto Nacional de Ciberseguridad de España, M.P., S.A., convoca el concurso “¿Qué es para ti el 017? II edición” que se desarrollará de conformidad con lo establecido en las presentes bases.</p>
+<h4>FINALIDAD</h4>
+<p>El concurso, sin ánimo de lucro, tiene como finalidad que los centros educativos y sus alumnos conozcan el servicio que INCIBE pone a su disposición, Tu Ayuda en Ciberseguridad, para ayudarles a resolver los problemas de ciberseguridad que les puedan surgir en su día a día.</p>
+<p>Este concurso se enmarca en la celebración del cuarto aniversario del 017 y, además, está englobado dentro del Safer Internet Day 2024 (SID 2024)1, que se celebrará el 6 de febrero de 2024 en todo el mundo, con el objetivo de promover el uso seguro y responsable de las nuevas tecnologías y bajo el lema “Juntos por una Internet mejor”.</p>
+<p>Los centros educativos interesados en participar deberán grabar un vídeo, según la mecánica descrita a continuación, y publicarlo en la red social Instagram bajo las condiciones que se establecen en estas bases.</p>
+<h4>DESCRIPCIÓN DE LA ACTIVIDAD</h4>
+<p>Al final de este documento se proporciona una propuesta de actividad didáctica para facilitar su desarrollo en los centros educativos, si bien, su realización no es obligatoria de cara a participar en el concurso.</p>
+<p>A continuación se indica brevemente en qué consiste la actividad y los objetivos a conseguir.</p>
+<p>Los alumnos son encomendados para preparar un vídeo, y publicarlo en la red social Instagram, cuyo contenido podrá tener el formato que ellos deseen: coreografía, canción, representación teatral, entrevista, etc. en el que se transmita, por una parte, una o varias problemáticas con las que se hayan encontrado o creen que se puedan encontrar al hacer uso de Internet y las nuevas tecnologías y les preocupe y, por otra parte, se manifieste cómo el servicio Tu Ayuda en Ciberseguridad de INCIBE puede ayudarles a evitarlas y/o solucionarlas.</p>
+<p>A modo de ejemplo, estas son algunas de las temáticas en las que se pueden basar los vídeos, a escoger según las edades e inquietudes de los alumnos</p>
+<ul><li>Ciberacoso.</li></ul>
+<ul><li>Fake news y bulos.</li></ul>
+<ul><li>Privacidad y reputación online.</li></ul>
+<ul><li>Suplantación de identidad.</li></ul>
+<ul><li>Contenidos abusivos.</li></ul>
+<p>1 https://www.saferinternetday.org/</p>
+<ul><li>Grooming.</li></ul>
+<ul><li>Sexting.</li></ul>
+<ul><li>Sextorsión.</li></ul>
+<ul><li>Comunidades peligrosas.</li></ul>
+<ul><li>Uso excesivo de las TIC.</li></ul>
+<ul><li>Phishing.</li></ul>
+<ul><li>Smishing.</li></ul>
+<ul><li>Vishing.</li></ul>
+<ul><li>Malware.</li></ul>
+<ul><li>Compras fraudulentas.</li></ul>
+<ul><li>Publicidad maliciosa o no deseada.</li></ul>
+<ul><li>Configuración y protección de dispositivos.</li></ul>
+<ul><li>Falsas inversiones y criptomonedas.</li></ul>
+<ul><li>Fraudes en mensajería instantánea.</li></ul>
+<ul><li>Juegos online.</li></ul>
+<ul><li>Apps falsas.</li></ul>
+<ul><li>Contraseñas seguras.</li></ul>
+<p>Para el desarrollo de la actividad, en caso de que los alumnos tengan dudas sobre la temática escogida, por ejemplo, cómo funciona cierto fraude, cómo pueden verse afectados, cuales son las pautas preventivas, qué deben hacer de forma reactiva en caso de haber sido víctimas, etc., los participantes podrán ponerse en contacto con el servicio Tu Ayuda en Ciberseguridad cualquier día del año de 8:00 a 23:00 de forma gratuita y confidencial, a través de</p>
+<ul><li>Teléfono: llamando al 017.</li></ul>
+<h4>Mensajería instantánea</h4>
+<ul><li>WhatsApp: guardando el contacto 900116117.</li></ul>
+<ul><li>Telegram: a través del usuario @INCIBE017.</li></ul>
+<h4>Formulario web</h4>
+<p>https://www.incibe.es/linea-de-ayuda-en-ciberseguridad/formulario017</p>
+<h4>REQUISITOS DE PARTICIPACIÓN</h4>
+<p>Para participar en el concurso, deberán cumplirse los siguientes requisitos</p>
+<ul><li>Ser un centro educativo de España en el que se imparta alguno o varios de los siguientes niveles de enseñanza reglada</li></ul>
+<ul><li>Tercer ciclo de Educación Primaria (EP).</li></ul>
+<ul><li>Educación Básica Obligatoria (EBO), a partir de 10 años.</li></ul>
+<ul><li>Educación Secundaria Obligatoria (ESO).</li></ul>
+<ul><li>Formación Profesional Básica (FP).</li></ul>
+<ul><li>Bachillerato.</li></ul>
+<ul><li>Ciclos Formativos de Grado Medio (CFGM).</li></ul>
+<ul><li>Programas de Transición a la Vida Adulta (TVA).</li></ul>
+<ul><li>Otros tipos de centros educativos, a partir de 10 años.</li></ul>
+<ul><li>Cada centro educativo podrá participar solo con 1 vídeo por cada línea o extraescolar. En el caso de que un centro presente más de un vídeo de una misma línea o extraescolar, solo se considerará válido el primero que se haya enviado al concurso.</li></ul>
+<ul><li>Un mismo alumno podrá participar en diferentes vídeos, por ejemplo, en el vídeo de su curso y de una extraescolar.</li></ul>
+<ul><li>El vídeo deberá cumplir los siguientes puntos</li></ul>
+<ul><li>Representar, por una parte, una o varias problemáticas con las que se hayan encontrado los alumnos o creen que se puedan encontrar al hacer uso de Internet y las nuevas tecnologías y les preocupe y, por otra parte, se manifieste cómo el servicio Tu Ayuda en Ciberseguridad puede ayudarles a evitarlo y/o solucionarlo.</li></ul>
+<ul><li>El contenido será libre, dando rienda suelta a la creatividad. Podrá tener, por ejemplo, formato de coreografía, canción, representación teatral, animación digital, entrevista, etc., o cualquier otra idea que tengan los alumnos.</li></ul>
+<ul><li>Duración máxima de 90 segundos.</li></ul>
+<ul><li>Idioma castellano.</li></ul>
+<ul><li>Formato vertical.</li></ul>
+<ul><li>Podrá contener los efectos y filtros que los participantes deseen.</li></ul>
+<ul><li>Deberán aparecer, como mínimo, los siguientes elementos</li></ul>
+<ul><li>Logo de INCIBE.</li></ul>
+<ul><li>Logo de la Línea de Ayuda en Ciberseguridad de INCIBE.</li></ul>
+<p>No será necesario que los logos aparezcan durante toda la duración del vídeo, si no de forma puntual.</p>
+<p>NOTA: Se facilita un kit de materiales con los logos anteriormente mencionados, así como otros recursos opcionales de Tu Ayuda en Ciberseguridad.</p>
+<ul><li>En caso de utilizar música, se deberán tener los derechos sobre ella. Además, se recomienda usar música que ofrezca Instagram directamente, ya que si se usan otras fuentes (incluso plataformas gratuitas) los contenidos pueden ser rechazados y bloqueados, impidiendo así la participación del centro.</li></ul>
+<p>NOTA: INCIBE no se hace responsable del cumplimiento de esta recomendación por parte de los participantes ni de la imposibilidad de participar o publicar los vídeos participantes si son rechazados por Meta.</p>
+<p>Para que la participación en el concurso se haga efectiva, deberán presentarse los vídeos cumpliendo los siguientes puntos</p>
+<ul><li>Publicar el vídeo en el perfil de Instagram del centro educativo, de forma pública, en los siguientes formatos</li></ul>
+<ul><li>Reel, deberá estar disponible, al menos, durante la vigencia del concurso.</li></ul>
+<ul><li>Storie, además, se tendrá que crear una historia destacada con el storie que deberá estar disponible, al menos, durante la vigencia del concurso</li></ul>
+<ul><li>Etiquetar en ambos formatos (reel y storie) a la cuenta de @incibe.</li></ul>
+<ul><li>Utilizar en ambos formatos (reel y storie) el hashtag #017Contigo.</li></ul>
+<ul><li>Además, los participantes deberán enviar un correo electrónico, por cada vídeo que se presente, a 017contigo@incibe.es hasta el 12 de enero de 2024 a las 13:00, indicando en el asunto: Participación concurso “¿Qué es para ti el 017?”, con la siguiente información</li></ul>
+<ul><li>“ANEXO IV: DATOS DE PARTICIPACIÓN”, en el que deberán facilitarse los siguientes datos</li></ul>
+<ul><li>Título del vídeo.</li></ul>
+<ul><li>Temática escogida.</li></ul>
+<ul><li>Enlace del reel publicado en la red social Instagram.</li></ul>
+<ul><li>Enlace de la historia destacada creada en la red social Instagram.</li></ul>
+<ul><li>Nombre del centro educativo.</li></ul>
+<ul><li>Curso y línea o actividad extraescolar.</li></ul>
+<ul><li>Localidad y provincia del centro educativo.</li></ul>
+<ul><li>Datos del responsable del concurso por parte del centro</li></ul>
+<ul><li>Nombre.</li></ul>
+<ul><li>Email de contacto.</li></ul>
+<ul><li>Teléfono de contacto.</li></ul>
+<ul><li>Declaración del “ANEXO III: DECLARACIÓN JURADA DEL CENTRO” a estas bases conforme a lo recogido en el apartado “PROPIEDAD INTELECTUALY DERECHOS DE IMAGEN”, firmada por el centro.</li></ul>
+<p>La organización se reserva el derecho de no aceptar dentro del concurso aquellos vídeos que no cumplan uno o varios de los anteriores requisitos de participación, así como aquellos que incluyan elementos que no se rijan bajo unas normas de educación, civismo, buen gusto y decoro.</p>
+<h4>DURACIÓN</h4>
+<p>El concurso estará vigente desde la publicación de las presentes bases hasta el viernes 12 de enero de 2024 a las 13:00.</p>
+<p>Si por causas de fuerza mayor u otras causas justificadas fuera necesario aplazar, modificar, anular o repetir el concurso, este hecho se les notificará por los mismos medios y con el mismo grado de publicidad que se ha dado al concurso.</p>
+<h4>SELECCIÓN DE GANADORES</h4>
+<p>Una vez cerrado el plazo de participación, se procederá a valorar todos los vídeos recibidos que cumplan con los requisitos establecidos.</p>
+<p>En primera instancia, se seleccionarán 5 vídeos finalistas en cada categoría por parte del equipo de la Línea de Ayuda en Ciberseguridad de INCIBE. La votación final, entre los vídeos finalistas, se realizará por parte de un jurado compuesto por 1 gerente de la subdirección de INCIBE-CERT y 4 jurados externos a INCIBE.</p>
+<p>Tanto en la selección de los vídeos finalistas, como en la votación final, se valorarán desde 1 a 4 puntos los siguientes criterios</p>
+<ul><li>Originalidad y creatividad.</li></ul>
+<ul><li>Formato.</li></ul>
+<ul><li>Mensaje sobre ciberseguridad.</li></ul>
+<ul><li>Mensaje sobre el servicio Tu Ayuda en Ciberseguridad de INCIBE.</li></ul>
+<p>Teniendo en cuenta la siguiente rúbrica</p>
+<p>Se fallará cuatro vídeos ganadores, uno por categoría, haciéndose público durante los actos de celebración del SID 2024. La decisión del jurado será inapelable.</p>
+<p>El jurado podrá declarar el concurso nulo si, a su juicio, ninguno de los videos es merecedor del premio.</p>
+<p>La comunicación con el centro ganador se hará a través del teléfono y/o correo electrónico facilitados para participar en el concurso.</p>
+<p>Las decisiones adoptadas por los jurados respecto de las actividades tienen carácter firme desde que se hagan públicas y serán inapelables; se decidirán según el criterio del jurado que deberán ajustarse a las presentes bases generales.</p>
+<h4>PREMIO</h4>
+<p>Los cuatro vídeos ganadores, uno por categoría, serán publicados en la web y redes sociales de INCIBE como parte de la campaña del SID 2024.</p>
+<p>Los cuatro centros educativos correspondientes podrán ser premiados con el siguiente pack2</p>
+<ul><li>1 Impresora 3D modelo CoLiDo 3.0.</li></ul>
+<ul><li>1 Licencia Dibuprint3D.</li></ul>
+<ul><li>1 Bobina de 1kg de filamento PLA de 1,75mm.</li></ul>
+<p>2 Los premios dependen de que se postulen empresas candidatas a ser patrocinadoras del concurso 017</p>
+<p>Las categorías se dividen según el nivel de enseñanza y edad</p>
+<h4>Categoría A</h4>
+<ul><li>Tercer ciclo de Educación Primaria (EP)</li></ul>
+<ul><li>1º y 2º curso de Educación Secundaria Obligatoria (ESO).</li></ul>
+<ul><li>Otros tipos de centros educativos, a partir de 10 años hasta 13 años.</li></ul>
+<h4>Categoría B</h4>
+<ul><li>3º y 4º curso de Educación Secundaria Obligatoria (ESO).</li></ul>
+<ul><li>Formación Profesional Básica (FP).</li></ul>
+<ul><li>Otros tipos de centros educativos, a partir de 14 años hasta 16 años.</li></ul>
+<h4>Categoría C</h4>
+<ul><li>Bachillerato.</li></ul>
+<ul><li>Ciclos Formativos de Grado Medio (CFGM).</li></ul>
+<ul><li>Otros tipos de centros educativos, a partir de 17 años.</li></ul>
+<h4>Categoría D</h4>
+<ul><li>Educación Básica Obligatoria (EBO), a partir de 10 años.</li></ul>
+<ul><li>Programas de Transición a la Vida Adulta (TVA).</li></ul>
+<p>Los ganadores tienen derecho a renunciar al premio ganado; sin embargo, no podrán, en ningún caso, canjearlo por su valor en metálico o por otro distinto.</p>
+<h4>NORMATIVA FISCAL</h4>
+<p>Los premios del presente concurso están sujetos a tributación y tendrán el tratamiento fiscal previsto en la normativa vigente correspondiente a cada caso. Serán a cuenta y cargo de las empresas PATROCINADORAS del concurso los importes resultantes de los ingresos a cuenta aplicados a los premios. Así mismo los PATROCINADORES asumirán las obligaciones de información que le correspondan ante la Administración Tributaria correspondiente. En caso de que el centro ganador no estuviera sujeto o estuviera exento del impuesto deberá aportar certificado motivando esta circunstancia.</p>
+<h4>PROPIEDAD INTELECTUALY DERECHOS DE IMAGEN</h4>
+<p>Los centros ganadores y todos los centros participantes autorizan a INCIBE, a la Secretaría de Estado de Digitalización e Inteligencia Artificial y al Ministerio de Asuntos Económicos y transformación Digital a reproducir, modificar, utilizar y difundir los vídeos participantes en cualquier medio y actividad que considere la entidad.</p>
+<p>La cesión incluye todos los derechos de reproducción, transformación y distribución de los vídeos, sin limitación de tiempo ni de territorio.</p>
+<p>Los centros participantes aseguran con la publicación de los vídeos que tienen todos los derechos, licencias y autorizaciones necesarias para el desarrollo de los mismos, haciéndose responsables de todo el contenido incluyendo las imágenes y el permiso de las personas que aparecen en ellos.</p>
+<p>Esto último supone que los centros deben garantizar que todos los participantes mayores de 14 años de los que aparezca su imagen, han firmado una autorización con al menos el contenido que se recoge en el ANEXO I a estas Bases, y que en el caso de ser menores</p>
+<p>de 14 años han recabado la autorización de cesión de imagen del menor por parte del padre, madre o tutor legal con al menos el contenido del ANEXO II a estas Bases.</p>
+<p>El centro será el responsable de disponer de dichas autorizaciones de cesión de imagen de los participantes, adjuntando a su solicitud el ANEXO III firmado por un responsable del centro.</p>
+<p>Los participantes eximen a INCIBE de cualquier responsabilidad por causa de violación de los derechos de autor de terceros; siendo aquellos los únicos responsables en caso de reclamación, obligándose a indemnizar a INCIBE de cuantos daños y perjuicios pudiera haberle causado ese incumplimiento.</p>
+<h4>PROTECCIÓN DE DATOS PERSONALES</h4>
+<p>Le informamos que los datos personales que nos facilita son recabados por la S.M.E. Instituto Nacional de Ciberseguridad de España M.P., S.A. (INCIBE) como responsable del tratamiento con el fin de llevar a cabo su participación en el concurso.</p>
+<p>Los datos que se recaban son los recogidos en la solicitud de participación al concurso y serán tratados de conformidad con lo dispuesto en las normativas vigentes en protección de datos personales, el Reglamento (UE) 2016/679 de 27 de abril de 2016 (GDPR) , así como la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales y la Ley 1/1982 de protección civil, derecho al honor, intimidad personal y familiar y a la propia imagen.</p>
+<p>INCIBE recoge exclusivamente la información personal relativa al responsable del centro participante y los vídeos que acompañan a la solicitud, en la medida necesaria para alcanzar un propósito específico en este caso gestionar su participación en el presente concurso y/o para informarle de futuros eventos, iniciativas y concursos similares si ha dado el Centro su autorización expresa (Anexo III). La información no se utilizará para una finalidad incompatible con la descrita o autorizada.</p>
+<p>Así mismo, los datos serán tratados para cumplir con las obligaciones normativas requeridas a INCIBE.</p>
+<p>Los datos personales podrán ser comunicados a autoridades y organismos públicos, para el cumplimiento de una obligación legal requerida a INCIBE, así como a proveedores de servicios y a terceros si fuera necesario para la gestión del presente concurso</p>
+<p>Los datos serán tratados mientras permanezcan vigentes las autorizaciones derivadas de la participación en el presente concurso; sin perjuicio de lo anterior, se suprimirán una vez resuelto el concurso y entregados los premios correspondientes, siendo conservados exclusivamente</p>
+<ul><li>Durante el plazo de prescripción de las acciones derivadas de dichas relaciones, a los únicos efectos de cumplir las obligaciones legales requeridas, y para la formulación, ejercicio o defensa de reclamaciones.</li></ul>
+<ul><li>El correo electrónico de los representantes se conservará para informarles sobre eventos, iniciativas o concursos organizados por INCIBE similares al de las presentes bases si hubiera prestado su autorización expresa y durante el tiempo que se mantenga dicha autorización.</li></ul>
+<ul><li>Los participantes, en relación a las imágenes que pudieran contener los videos, aseguran con el envío de los videos que tienen todas las autorizaciones necesarias de las personas que aparecen en ellos, para la cesión a INCIBE del uso de su imagen personal, sin limitación temporal, de forma que pueda ser objeto de reproducción, exhibición, comunicación pública y publicación en las páginas web de INCIBE, redes sociales y otros medios.</li></ul>
+<ul><li>Los ganadores de cualquier concurso o actividad que tenga lugar durante el evento, autorizan de forma irrevocable y gratuita a INCIBE para hacer uso de su imagen y/o sus nombres en cualquier aviso o comunicación que se realice a través de cualquier medio escrito o audiovisual, en todo el mundo y durante todo el tiempo permitido legalmente y se comprometen a suscribir cualesquiera documentos o autorizaciones que pudieren ser necesarios para el uso de dicha imagen y/o nombre.</li></ul>
+<h4>¿QUÉ DERECHOS TIENES SOBRE TUS DATOS PERSONALES?</h4>
+<ul><li>Derecho de acceso. Puedes preguntar a INCIBE si está tratando tus datos y de qué manera.</li></ul>
+<ul><li>Derecho de rectificación. Puedes pedirnos que actualicemos tus datos personales si son incorrectos, y suprimirlos si así lo deseas.</li></ul>
+<ul><li>Derecho de limitación del tratamiento. En este caso únicamente serán conservados por INCIBE para el ejercicio o la defensa de reclamaciones.</li></ul>
+<ul><li>Derecho de oposición. Tras tu solicitud de oposición al tratamiento, INCIBE dejará de tratar los datos en la forma que indiques, salvo que por motivos legítimos imperiosos o el ejercicio o la defensa de posibles reclamaciones se tengan que seguir tratando.</li></ul>
+<ul><li>Derecho a la portabilidad de los datos. En caso de que quieras que tus datos sean tratados por otra empresa, INCIBE te facilitará la portabilidad de tus datos al nuevo responsable cuando sea de aplicación de acuerdo con lo previsto en la normativa.</li></ul>
+<ul><li>Derecho de supresión. Puedes solicitar que eliminemos tus datos cuando ya no sean necesarios para el tratamiento, retires tu consentimiento, sea un tratamiento ilícito o haya una obligación legal de hacerlo. Analizaremos el supuesto y aplicaremos la ley.</li></ul>
+<p>Para el ejercicio de sus derechos puede dirigirse mediante carta a INCIBE Avenida José Aguado nº 41 de León o por correo electrónico a dpd@incibe.es.</p>
+<p>Si necesitas más información sobre qué derechos tienes reconocidos en la Ley y cómo ejercerlos, te recomendamos dirigirte a la Agencia Española de Protección de Datos, que es la autoridad de control en materia de protección de datos y la autoridad ante la que puedes presentar una reclamación.</p>
+<h4>ACEPTACIÓN DE LAS BASES</h4>
+<p>La participación en el presente concurso supone el conocimiento y la aceptación íntegra de las presentes bases. INCIBE queda facultada para resolver cualquier contingencia no prevista en las bases.</p>
+<p>INCIBE se reserva también el derecho a suspender, ampliar este concurso e incluso a su posible anulación, siempre que hubiera causa justificada y se compromete a comunicar con la suficiente antelación dicha situación, así como la publicación de, las nuevas bases, condiciones o, en su caso, la anulación definitiva.</p>
+<h4>LEGISLACIÓN Y FUERO APLICABLE</h4>
+<p>Las presentes bases se rigen por la legislación española. Cualquier conflicto derivado de la aplicación o interpretación de las presentes bases se someterá a los juzgados y tribunales de la ciudad de León, con renuncia expresa de las partes a su fuero propio si éste fuera otro.</p>
+<h4>Don. Félix Antonio Barrio Juárez Director General</h4>
+<h4>León, 17 de noviembre de 2023</h4>
+<p>FICHA DE ANÁLISIS</p>
+<p>Nombre del grupo Participantes Temática escogida</p>
+<p>TU AYUDA EN</p>
+<p>CIBERSEGURIDAD</p>
+<p>¿Cuáles son sus características?</p>
+<p>¿Cuáles son sus riesgos?</p>
+<p>¿Cómo puede afectarme?</p>
+<p>¿Qué puedo hacer para protegerme?</p>
+<p>¿Qué debo hacer si me sucede?</p>
+<p>¿Cómo puede ayudarme el servicio de Tu Ayuda en Ciberseguridad de INCIBE?</p>
+<p>Según lo analizado, idea general y formato para el vídeo</p>
+<table><thead><tr><th>CRITERIO</th><th>4</th><th>3</th><th>2</th><th>1</th></tr></thead><tbody><tr><td>Originalidad y creatividad</td><td>Demuestra gran originalidad.
+Las ideas son creativas e
+ingeniosas.</td><td>Demuestra cierta originalidad.
+Se usan nuevas ideas y perspicacia.</td><td>No hay casi evidencia de ideas originales ni de creatividad.</td><td>El vídeo no aporta originalidad ni creatividad.</td></tr><tr><td>Formato</td><td>Utiliza diferentes ángulos de cámara y/o tomas.
+Incluye efectos de sonido.
+Los efectos visuales y sonoros del vídeo son variados y
+correctos.</td><td>Utiliza diferentes ángulos de cámara y/o tomas.
+Incluye efectos de sonido.
+Presenta algunos fallos formales en cuanto a imagen y/o
+sonido.</td><td>Hay poca variedad en las tomas, ángulos y/o efectos de sonido.
+Y/O presenta diversos fallos formales en cuanto a imagen y/o sonido.</td><td>No presenta variedad de tomas, ángulos y/o efectos de sonido.
+Y/O la calidad de imagen y/o sonido es deficiente.</td></tr><tr><td>Mensaje sobre ciberseguridad</td><td>Cubre el tema en profundidad.
+El conocimiento sobre ciberseguridad es excelente.</td><td>Incluye conocimiento esencial sobre la temática.
+El conocimiento sobre ciberseguridad
+es bueno.</td><td>Incluye información básica sobre la temática.
+El conocimiento sobre ciberseguridad
+es superficial.</td><td>El contenido sobre ciberseguridad es mínimo y/o contiene algún error de concepto.</td></tr><tr><td>Mensaje sobre el servicio Tu Ayuda en Ciberseguridad de INCIBE</td><td>La información aportada sobre el servicio es excelente.</td><td>La información aportada sobre el servicio es básica.</td><td>La información aportada sobre el servicio es mínima y/o contiene algún
+error.</td><td>No aporta información sobre el servicio.</td></tr></tbody></table>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/index.html">⬅️ 📘 UT2 Completa</a>
+<a class="page-nav-btn" href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

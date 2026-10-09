@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>1.6 Tipos de cableado — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔐 Programació, Xarxes i Sistemes Informàtics II — 2n Batxillerat</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació, Xarxes i Sistemes Informàtics II</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Apunts sistemes de numeració</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — Introducció a la programació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 UD1. Introducció a la programació</a></li>
+<li><a href="../ut00/ut0002.html">0.2 UD1. Introducció a la programació Part 2</a></li>
+<li><a href="../ut00/ut0003.html">0.3 UD1. Introducció a la programació Part 3</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — Introducción a Phyton</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducció a Python</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Elementos de un programa</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Tipos de datos</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Funciones integradas</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Módulos, paquetes y namespaces</a></li>
+<li><a href="../ut00/ut0006.html">0.6 Estructuras de control</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Tipos de datos complejos</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Funciones</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Errores y excepciones</a></li>
+<li><a href="../ut00/ut0010.html">0.10 Ficheros</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT1 — Xarxes Locals</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Introducción a las redes locales</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Mapa físico y lógico</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Arquitecturas de red</a></li>
+<li><a href="../ut01/ut0104.html">1.4 MODELO OSI</a></li>
+<li><a href="../ut01/ut0105.html">1.5 MODELO TCP/IP</a></li>
+<li><a class="active" href="../ut01/ut0106.html">1.6 Tipos de cableado</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Págines Web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 CheatSheet HTML5</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CheatSheet CSS3</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Seguridad</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n Batxillerat · UT1 — Xarxes Locals</span>
+<h1>1.6 Tipos de cableado</h1>
+<p>Redes Locales Redes Locales 1º CFGM 1º CFGM Sistemas Microinformáticos y Redes Sistemas Microinformáticos y Redes Tema 3 Tema 3 Medios de transmisión Medios de transmisión 3.2 3.2 Tipos de cableado Tipos de cableado Miguel Á. Ferrer Miguel Á. Ferrer</p>
+<p>Medios de transmisión</p>
+<h4>1) Tipos de cableado</h4>
+<p>1)Par sin trenzar 2)Par trenzado 3)Cable coaxial 4)Fibra óptica 5)Medios inalámbricos</p>
+<h3>1. Tipos de cableado</h3>
+
+<p>Distinguimos 2 TIPOS DE MEDIOS: Guiados: Conducen las ondas a través de un soporte físico. No guiados: proporcionan un soporte para que las ondas se transmitan pero no las dirigen. En ambos casos la transmisión se realiza por medio de ondas electromagnéticas.</p>
+
+<p>Cuando hablamos de medios guiados es el medio el que determina las limitaciones de la transmisión a realizar. Cada uno de los medios cumplen una determinada característica en cuanto a: Velocidad de transmisión de datos Ancho de banda que puede soportar Espacio entre repetidores Fiabilidad en la transmisión Coste Facilidad de instalación</p>
+<p>1.1 Par sin trenzar (paralelo)</p>
+<p>1.1 Par sin trenzar (paralelo) Este medio de transmisión está formado por dos hilos de cobre paralelos recubiertos de un material aislante (plástico). Este tipo de cableado ofrece muy poca protección frente a interferencias. Normalmente se utiliza como cable telefónico para transmitir voz analógica y las conexiones se realizan mediante un conector denominado RJ-11.</p>
+<p>Es un medio semidúplex ya que la información circula en los dos sentidos por el mismo cable pero no se realiza al mismo tiempo.</p>
+<p>1.1 Par sin trenzar (paralelo) Se utiliza para transmisión de datos a corta distancia, ya que las interferencias afectan mucho a este tipo de transmisiones.</p>
+<p>1.2 Par trenzado</p>
+<p>1.2 Par trenzado El par trenzado consiste en dos cables de cobre aislados, normalmente de 1 mm de espesor, enlazados de dos en dos de forma helicoidal, semejante a la estructura del ADN.</p>
+<p>1.2 Par trenzado PROBLEMA: Dos cables paralelos constituyen una antena simple por lo que se generan radiaciones innecesarias. SOLUCIÓN: Cuando se trenzan los cables las ondas se cancelan y la radiación del cable generada como recibida es menos efectiva. Así se reduce la interferencia eléctrica tanto exterior como de pares cercanos.</p>
+<p>1.2 Par trenzado Ventajas del par trenzado: Bajo coste Fácil instalación Buen rendimiento Se solucionan fácilmente los problemas de instalación Velocidad de transmisión de varios Mbps</p>
+<p>1.2 Par trenzado Desventajas del par trenzado: Ancho de banda limitado Altas tasas de error a altas velocidades Baja inmunidad al ruido Baja inmunidad al crosstalk Distancia limitada (En Ethernet 100 m.)</p>
+<p>1.2 Par trenzado TIPOS de cable de par trenzado para DATOS: UTP : Pares trenzados no apantallados STP : Pares trenzados apantallados individualmente FTP : Pares trenzados totalmente apantallados SFTP / SSTP : Pares trenzados apantallados individualmente con malla global</p>
+<p>1.2 Par trenzado UTP – Unshielded Twisted Pair – Par trenzado no apantallado El más simple y económico Sin pantalla protectora Muy flexibles Sensibles a interferencias</p>
+<p>1.2 Par trenzado STP – Shielded Twisted Pair – Par trenzado apantallado Cada par va rodeado de una malla conductora Gran inmunidad al ruido La malla protectora debe de estar conectada a las tomas de tierra de los equipos.</p>
+<p>1.2 Par trenzado FTP – Foiled Twisted Pair – Par trenzado con pantalla global Posee una malla conductora global Gran inmunidad al ruido exterior De coste inferior a los cables STP La malla protectora debe de estar conectada a las tomas de tierra de los equipos.</p>
+<p>1.2 Par trenzado SFTP – Shielded Foiled Twisted Pair o Super Foiled Twisted Pair – Par trenzado apantallado con pantalla global Cada par va rodeado de una malla conductora y además posee una pantalla global Son los que poseen mayor inmunidad al ruido Es el cable que tiene mayor coste La malla protectora debe de estar conectada a las tomas de tierra de los equipos.</p>
+<p>1.2 Par trenzado ¿Qué es esto?</p>
+<p>1.2 Par trenzado SEPARADOR plástico en forma de cruz: Permite mantener ordenados los pares internos del cable con el objetivo de reducir el CROSSTALK.</p>
+<p>1.2 Par trenzado ¿Qué es esto?</p>
+<p>1.2 Par trenzado RIP CORD : Pequeño hilo de nailon o poliéster pensado para quitar de forma fácil el protector plástico del cable. Se utiliza estirando y presionando al mismo tiempo sobre el cable para conseguir cortar la cubierta protectora.</p>
+<p>1.2 Par trenzado La mayoría de los cables UTP están recubiertos con PVC (Policloruro de vinilo) de color gris. Ventajas del PVC: Resiste bien altas temperaturas. Buen aislante eléctrico. Flexible. Es barato. Inconvenientes: Material potencialmente contaminante. Genera mucho humo y emite partículas al quemarse Vídeo comparativo en youtube</p>
+<p>1.2 Par trenzado LSZH : Low Smoke Zero Halogen Low Smoke → Emiten poco humo al quemarse Zero halogen → No contienen halógenos que producen las partículas tóxicas al quemarse (Polipropileno). En edificios con mucho cableado es conveniente utilizar cableado LSZH por sus características. El inconveniente es que el mismo cable con cubierta LSZH respecto a uno de PVC es mucho más caro.</p>
+<p>1.3 Cable coaxial</p>
+<p>1.3 Cable coaxial 1 : Conductor central o vivo. Alambre de cobre duro. 2 : Aislante (dieléctrico de espuma) 3 : Malla, blindaje o trenza 4 : Cubierta aislante o Chaqueta exterior</p>
+<p>1.3 Cable coaxial Utilizado para transportar señales eléctricas de alta frecuencia. Excelente inmunidad contra el ruido. La velocidad de transmisión depende de la longitud del cable. Por ejemplo: En cables de de 1 km. se pueden obtener velocidad de 1 y 2 Gbps. Se ha ido sustituyendo poco a poco por la fibra óptica debido al mejor ancho de banda de ésta.</p>
+<p>1.3 Cable coaxial Utilizado en antiguas redes Ethernet thinnet. Grosor de 0,64 cm Capacidad para transportar una señal hasta 185 m. Flexible y de fácil instalación</p>
+<p>1.3 Cable coaxial En la actualidad se sigue utilizando en: Televisión por cable Señales de antena (Wifi, TDT, …) Redes urbanas de Internet Líneas de distribución de vídeo Redes telefónicas Interurbanas Cables submarinos ...</p>
+<p>1.4 Fibra óptica</p>
+<p>1.4 Fibra óptica La fibra óptica está basada en la utilización de las ondas de luz para transmitir información binaria. La fibra óptica siempre transmite de FORMA DIGITAL. Los pulsos de luz representan los datos a transmitir.</p>
+<p>1.4 Fibra óptica Un sistema de transmisión óptica tiene tres componentes: La fuente de luz: convierte una señal digital eléctrica (0s y 1s) en una señal óptica. Típicamente se utiliza un pulso de luz para representar un "1" y la ausencia de luz para representar un "0". La fuente de luz puede ser un láser o un LED.</p>
+<p>El medio de transmisión: es una fibra de vidrio o material plástico ultradelgado que transporta la luz. El detector: se encarga de generar un pulso eléctrico en el momento en el que la luz incide sobre él.</p>
+<p>1.4 Fibra óptica La transmisión en un cable de fibra óptica siempre es SIMPLEX. Se trata de un cilindro de pequeña sección flexible (diámetro del orden de 2 a 125 micras) por el que se transmite la luz. A continuación viene una cubierta plástica delgada para proteger el revestimiento e impedir que cualquier rayo de luz del exterior penetre en la fibra. Finalmente, varias fibras suelen agruparse en haces protegidos por una funda exterior.</p>
+<p>El micrómetro o micra equivale a una millonésima parte de metro.</p>
+<p>1.4 Fibra óptica Para que nos hagamos una idea del grosor del cable de fibra óptica, el grosor del cabello humano es de alrededor de 50 micrones.</p>
+<p>1.4 Fibra óptica Básicamente existen 2 tipos diferentes de fibras ópticas: Monomodo: El diámetro del núcleo de la fibra es muy pequeño y sólo permite la propagación de un único modo o rayo (fundamental), el cual se propaga directamente sin reflexión. Este efecto causa que su ancho de banda sea muy elevado, por lo que su utilización se suele reservar a grandes distancias, superiores a 10 Km, junto con dispositivos de elevado coste (LÁSER).</p>
+<p>Multimodo: Indica que pueden ser guiados muchos modos o rayos luminosos, cada uno de los cuales sigue un camino diferente dentro de la fibra óptica. Este efecto hace que su ancho de banda sea inferior al de las fibras monomodo. Por el contrario los dispositivos utilizados con las multimodo tienen un coste inferior (LED). Este tipo de fibras son las preferidas para comunicaciones en pequeñas distancias, hasta 10 Km.</p>
+<p>1.4 Fibra óptica &lt; Ancho de banda &lt; Coste &lt; 10 Km. LED &gt; Ancho de banda &gt; Coste &gt; 10 Km. LÁSER</p>
+<p>1.4 Fibra óptica ¡ RÉCORD VELOCIDAD ¡ En febrero de 2013 investigadores del Departamento de Física Aplicada de la Universidad de Santiago de Compostela consiguieron batir el récord mundial de transmisión de datos a través de fibra óptica: 1,05 Pbps = 1050 Tbps = 1050000 Gbps 1,05 Pbps = 1050 Tbps = 1050000 Gbps ¡ 250 discos Bluray de de doble capa en 1 segundo !</p>
+<p>1.4 Fibra óptica Respecto a la velocidad de transmisión el límite práctico se encuentra cerca de 10 Gbps y es debido a la incapacidad que los dispositivos tienen para convertir con mayor rapidez las señales eléctricas a ópticas y al revés (tanto los emisores como los detectores).</p>
+<p>La fibra óptica permite instalar cables de longitudes muy elevadas (de hasta 30 km), aunque esto se puede ver limitado por una baja calidad en la fabricación de la fibra. Con fibras monomodo se han alcanzado distancias de hasta 400 km. utilizando un láser de alta intensidad.</p>
+<p>1.4 Fibra óptica El inconveniente principal es su gran coste. No tiene tanto que ver con el precio por metro de fibra, sino que más bien está relacionado con el montaje. El cable de fibra óptica no se puede doblar demasiado y las conexiones son muy costosas y complicadas.</p>
+<p>Muchas veces sale más rentable desechar varios kilómetros de fibra antes que hacer una unión de varios tramos. Una unión mal hecha en un cable de fibra óptica puede generar atenuaciones y reflexiones.</p>
+<p>1.4 Fibra óptica Ventajas de la fibra óptica: Anchos de banda mayores que el cobre. Baja atenuación (sólo se necesitan repetidores cada 30 km.) No es interferido por ondas electromagnéticas. Es delgada y ligera comparado con cable de cobre de igual capacidad de transmisión.</p>
+<p>Gran seguridad: Se detecta fácilmente la intrusión en un cable de fibra óptica por debilitamiento. No produce interferencias.</p>
+<p>1.5 Medios inalámbricos</p>
+<p>1.5 Medios inalámbricos Las comunicaciones inalámbricas consisten en el envío y recepción de electrones (o fotones) que circulan por el espacio libre (el aire). Estas partículas viajan en forma de ondas electromagnéticas que se propagan del mismo modo que las ondas del agua en un estanque.</p>
+<p>Dependiendo de la frecuencia de la señal, existen diferentes tipos de enlaces inalámbricos: Ondas de radio Microondas Ondas infrarrojas Ondas de luz</p>
+<p>1.5 Medios inalámbricos Las ONDAS DE RADIO son fáciles de generar, pueden recorrer largas distancias, penetran en los edificios sin problemas y viajan en todas direcciones desde la fuente emisora. Cuando estas redes cubren largas distancias, es necesario realizar un control estricto por parte de los gobiernos para que las diferentes transmisiones no se interfieran entre sí.</p>
+<p>Sin embargo, en señales de radio que cubren distancias más cortas, no es necesario solicitar permisos especiales y varias redes cercanas pueden utilizar frecuencias diferentes.</p>
+<p>1.5 Medios inalámbricos Además de su aplicación en hornos, las MICROONDAS permiten transmisiones tanto terrestres como con satélites. Posibilitan velocidades de transmisión aceptables, del orden de 10 Mbps. A diferencia de las ondas de radio, las microondas no atraviesan bien los obstáculos, de forma que es necesario situar antenas repetidoras cuando queremos realizar comunicaciones a largas distancias.</p>
+<p>1.5 Medios inalámbricos Las ONDAS INFRARROJAS se utilizan mucho para la comunicación de corto alcance, en controles remotos de aparatos electrónicos, comunicación de ordenadores son sus periféricos, etc. Tienen un inconveniente importante: no atraviesan los objetos sólidos.</p>
+<p>La comunicación infrarroja no puede usarse en exteriores porque el Sol también emite gran cantidad de radiaciones infrarrojas que perturban la señal enviada.</p>
+<p>1.5 Medios inalámbricos Las ONDAS DE LUZ permiten la comunicación de diferentes zonas, siempre que exista una visión directa entre ellas, ya que se transmiten en línea recta y no atraviesan los objetos. Una de las señales más utilizadas es el láser, ya que el haz de luz se mantiene enfocado en un punto muy estrecho a lo largo de su trayecto. La señalización óptica mediante láser es unidireccional, de modo que cada edificio necesita un emisor láser y un receptor.</p>
+<p>Este esquema ofrece un coste muy bajo, es fácil de instalar y posee una elevada velocidad de transmisión. Sin embargo, es difícil colocar correctamente los emisores y los receptores y el rayo láser es fácilmente interferido por los agentes climáticos.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut01/ut0105.html">⬅️ 1.5 MODELO TCP/IP</a>
+<a class="page-nav-btn" href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

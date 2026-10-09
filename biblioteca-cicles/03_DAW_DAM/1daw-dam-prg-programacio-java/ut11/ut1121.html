@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>11.21 Programación orientada a objetos (versión extend — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>☕ Programació en Java (1r DAW / DAM) — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació en Java (1r DAW / DAM)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — PRESENTACIÓN DEL MÓDULO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guia Didàctica</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Criterios de calificación</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Poema Ítaca (Konstantino Kavafis)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — EJERCICIOS: JUECES ONLINE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Ejercicios JOEL</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Cómo resolver los problemas de ProgramaMe</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Guía de Compilación y Pruebas</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Ejercicios entrenamiento ProgramaMe - vol.1</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Chuletas</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Cuadernillo completo ProgramaMe Navidad 2024</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Ideas para resolver los problemas</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Chuletas</a></li>
+<li><a href="../ut01/ut0109.html">1.9 EjemploTreeMap</a></li>
+<li><a href="../ut01/ut0110.html">1.10 Soluciones Concurso Navidad</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — EJERCICIOS DE REPASO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 bloque01 - ud01 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0202.html">2.2 bloque01 - ud02 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0203.html">2.3 RB102Soluciones</a></li>
+<li><a href="../ut02/ut0204.html">2.4 bloque01 - ud03 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Ejercicios - BLOQUE 2</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Repaso POO: Juego de Cartas (ENTREGABLE)</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — EXÁMENES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TestFotografia</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Principal.java</a></li>
+<li><a href="../ut03/ut0303.html">3.3 CodigoBASIC.bas</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Principal</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Principal</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Principal</a></li>
+<li><a href="../ut03/ut0307.html">3.7 TiendaTest</a></li>
+<li><a href="../ut03/ut0308.html">3.8 TableroTest</a></li>
+<li><a href="../ut03/ut0309.html">3.9 ficheroExamen</a></li>
+<li><a href="../ut03/ut0310.html">3.10 ExamenPRG</a></li>
+<li><a href="../ut03/ut0311.html">3.11 fichero2</a></li>
+<li><a href="../ut03/ut0312.html">3.12 fichero1</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — PROYECTOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Hundir La Flota</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Reversi (Othello)</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Proyecto 2: Calculadora FX</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Proyecto AEMET</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Iconos.png</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Estados del cielo.txt</a></li>
+<li><a href="../ut04/ut0407.html">4.7 diccionario24.csv</a></li>
+<li><a href="../ut04/ut0408.html">4.8 parsear-xml-aemet</a></li>
+<li><a href="../ut04/ut0409.html">4.9 InternacionalizacionFX</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Introducción a la programación con Java</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 01a - Introducción a la Programacion</a></li>
+<li><a href="../ut05/ut0502.html">5.2 01b - Algoritmos</a></li>
+<li><a href="../ut05/ut0503.html">5.3 01c - Introduccion a Java</a></li>
+<li><a href="../ut05/ut0504.html">5.4 01a - Ejercicios</a></li>
+<li><a href="../ut05/ut0505.html">5.5 01a - Soluciones</a></li>
+<li><a href="../ut05/ut0506.html">5.6 01c - Ejercicios</a></li>
+<li><a href="../ut05/ut0507.html">5.7 01c - Soluciones</a></li>
+<li><a href="../ut05/ut0508.html">5.8 Ejercicios - AyR</a></li>
+<li><a href="../ut05/ut0509.html">5.9 01d - Estilo de codificacion</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Entrada y salida de información</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Entrada y salida de información</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Colores</a></li>
+<li><a href="../ut06/ut0603.html">6.3 ClasePrintf</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Ejercicios</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Estructuras de control</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Uso de estructuras de control</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Ejercicios</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Ejercicios AyR - Condicionales Parte 1</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Ejercicios AyR - Condicionales Parte 2</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Ejercicios AyR - Estructrura repetitiva while do</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Ejercicios AyR - Estructura repetitiva for - mis</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Ejercicios AyR - Mortadelo y Filemon</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Ejercicios - AyR</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Programación Estructurada y Modular</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 04a - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0802.html">8.2 04b - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0803.html">8.3 04a - Ejercicios</a></li>
+<li><a href="../ut08/ut0804.html">8.4 04b - Ejercicios</a></li>
+<li><a href="../ut08/ut0805.html">8.5 Ejercicios - Diagrama de flujo a Java (para algo</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Estructuras datos estáticas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 05a - Estructuras de datos estáticas</a></li>
+<li><a href="../ut09/ut0902.html">9.2 05b - Estructuras de datos estaticas</a></li>
+<li><a href="../ut09/ut0903.html">9.3 Código en el aula</a></li>
+<li><a href="../ut09/ut0904.html">9.4 05b - Ejercicios</a></li>
+<li><a href="../ut09/ut0905.html">9.5 05a - Ejercicios ampliación</a></li>
+<li><a href="../ut09/ut0906.html">9.6 05b - Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Estructuras de datos dinámicas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 06a - Estructuras de datos dinámicas</a></li>
+<li><a href="../ut10/ut1002.html">10.2 06b - Estructuras de datos dinamicas</a></li>
+<li><a href="../ut10/ut1003.html">10.3 Código de aula</a></li>
+<li><a href="../ut10/ut1004.html">10.4 06a - Ejercicios</a></li>
+<li><a href="../ut10/ut1005.html">10.5 06b - Ejercicios</a></li>
+<li><a href="../ut10/ut1006.html">10.6 Ejercicios de Repaso: Estructuras de datos dinám</a></li>
+<li><a href="../ut10/ut1007.html">10.7 SolucionesEjerciciosRepaso</a></li>
+<li><a href="../ut10/ut1008.html">10.8 EjercicioVuelosPythonJava</a></li>
+<li><a href="../ut10/ut1009.html">10.9 06b - Recursividad</a></li>
+<li><a href="../ut10/ut1010.html">10.10 06b - Ejercicios básicos de recursividad</a></li>
+<li><a href="../ut10/ut1011.html">10.11 06b - Ejercicios Recursividad</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT11 — Programación orientada a objetos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Programación Orientada a Objetos</a></li>
+<li><a href="../ut11/ut1102.html">11.2 EstructuraClase</a></li>
+<li><a href="../ut11/ut1103.html">11.3 Ejercicios (I)</a></li>
+<li><a href="../ut11/ut1104.html">11.4 Cafetera</a></li>
+<li><a href="../ut11/ut1105.html">11.5 TestCafetera</a></li>
+<li><a href="../ut11/ut1106.html">11.6 Fraccion</a></li>
+<li><a href="../ut11/ut1107.html">11.7 TestFraccion</a></li>
+<li><a href="../ut11/ut1108.html">11.8 Main Fraccion (.java)</a></li>
+<li><a href="../ut11/ut1109.html">11.9 Pizza</a></li>
+<li><a href="../ut11/ut1110.html">11.10 TestPizza</a></li>
+<li><a href="../ut11/ut1111.html">11.11 Moneda</a></li>
+<li><a href="../ut11/ut1112.html">11.12 EurocoinMain - 1</a></li>
+<li><a href="../ut11/ut1113.html">11.13 Main Eurocoin - 2 (.java)</a></li>
+<li><a href="../ut11/ut1114.html">11.14 Main Eurocoin - 3 (.java)</a></li>
+<li><a href="../ut11/ut1115.html">11.15 Ejercicios (II)</a></li>
+<li><a href="../ut11/ut1116.html">11.16 Soluciones ejercicios ii</a></li>
+<li><a href="../ut11/ut1117.html">11.17 Ejercicios - AyR</a></li>
+<li><a href="../ut11/ut1118.html">11.18 Circulo</a></li>
+<li><a href="../ut11/ut1119.html">11.19 Cuadrado</a></li>
+<li><a href="../ut11/ut1120.html">11.20 Punto</a></li>
+<li><a class="active" href="../ut11/ut1121.html">11.21 Programación orientada a objetos (versión extend</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Utilización avanzada de clases</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 08b - Utilizacion avanzada de clases</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Códigos de classe</a></li>
+<li><a href="../ut12/ut1203.html">12.3 08a - Ejercicios I (Relaciones entre clases)</a></li>
+<li><a href="../ut12/ut1204.html">12.4 08b - Ejercicios II</a></li>
+<li><a href="../ut12/ut1205.html">12.5 Ejercicios III (Herencia)</a></li>
+<li><a href="../ut12/ut1206.html">12.6 08a - Utilización avanzada de clases (Versión ex</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Gestión de excepciones</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Gestión de excepciones</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Códigos de clase</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Ejercicios A</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Ejercicios B</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Lectura y escritura de ficheros</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Lectura y escritura de información en ficheros</a></li>
+<li><a href="../ut14/ut1402.html">14.2 Códigos de clase</a></li>
+<li><a href="../ut14/ut1403.html">14.3 Ejercicios A</a></li>
+<li><a href="../ut14/ut1404.html">14.4 Ejercicios B</a></li>
+<li><a href="../ut14/ut1405.html">14.5 numeros</a></li>
+<li><a href="../ut14/ut1406.html">14.6 alumnos notas</a></li>
+<li><a href="../ut14/ut1407.html">14.7 Ejercicios C</a></li>
+<li><a href="../ut14/ut1408.html">14.8 Ejercicios D</a></li>
+<li><a href="../ut14/ut1409.html">14.9 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Interacción con bases de datos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Interacción con bases de datos</a></li>
+<li><a href="../ut15/ut1502.html">15.2 bdpersonas</a></li>
+<li><a href="../ut15/ut1503.html">15.3 mysql-connector-java-8.0.19</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — Interfaces gráficas de usuario</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Código de clase</a></li>
+<li><a href="../ut16/ut1602.html">16.2 JavaFX</a></li>
+<li><a href="../ut16/ut1603.html">16.3 JavaFX</a></li>
+<li><a href="../ut16/ut1604.html">16.4 ContadorSimpleFX mejorado</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — Proyecto Integrador</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Proyectos a elegir</a></li>
+<li><a href="../ut17/ut1702.html">17.2 AjedrezFX</a></li>
+<li><a href="../ut17/ut1703.html">17.3 ClaseFX</a></li>
+<li><a href="../ut17/ut1704.html">17.4 controlsfx-8.40.11</a></li>
+<li><a href="../ut17/ut1705.html">17.5 Introducción a Canvas</a></li>
+<li><a href="../ut17/ut1706.html">17.6 Introducción a AnimationTimer en JavaFX</a></li>
+<li><a href="../ut17/ut1707.html">17.7 compartirDatos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT11 — Programación orientada a objetos</span>
+<h1>11.21 Programación orientada a objetos (versión extend</h1>
+<h3>UNIDAD 7: PROGRAMACIÓN ORIENTADA A OBJETOS</h3>
+<p>V1.19.01.23</p>
+
+<p>Profesor: José Ramón Simó Martínez Contenido</p>
+<ul>
+<li>Introducción ............................................................................................................................ 2</li>
+</ul>
+<p>1.2. Definición de POO ......................................................................................................................... 2</p>
+<ul>
+<li>Abstracción ............................................................................................................................. 3</li>
+<li>Clases y objetos ....................................................................................................................... 3</li>
+</ul>
+<p>3.1. Definición de clases ....................................................................................................................... 4 3.2. Instanciación de objetos ................................................................................................................ 4</p>
+<ul>
+<li>Atributos y métodos ................................................................................................................ 5</li>
+</ul>
+<p>4.1. Definición y acceso a atributos ....................................................................................................... 5 4.2. Definición y acceso a métodos ....................................................................................................... 6 4.3. Constructores ................................................................................................................................ 8</p>
+<ul>
+<li>Encapsulamiento .................................................................................................................... 10</li>
+</ul>
+<p>5.1. Modificadores de acceso .............................................................................................................. 11 5.2. Getters y setters .......................................................................................................................... 13</p>
+<ul>
+<li>Empaquetado de clases .......................................................................................................... 14</li>
+</ul>
+<p>6.1. Paquetes integrados .................................................................................................................... 15 6.2. Paquetes definidos por el desarrollador ....................................................................................... 15 6.3. Ejemplo de creación y uso de paquetes propios ............................................................................ 18</p>
+<ul>
+<li>Bibliografía ............................................................................................................................. 19</li>
+</ul>
+
+<p>V1.19.01.23</p>
+<h3>1. Introducción</h3>
+<p>En este punto del curso y con todo lo que has aprendido ya eres capaz de resolver gran parte de los problemas, a nivel de programación, utilizando las estructuras de control, arrays y métodos. Sin embargo, los proyectos empiezan a ser más complejos, incluyendo por ejemplo interfaces gráficas, bases de datos o software de gran escalabilidad. Esto requiere de un nivel mayor de abstracción en el diseño del software, así como un lenguaje que permita organizar y aplicar ese nivel de abstracción.</p>
+<p>En esta unidad introduciremos la programación orientada a objetos (POO) y su aplicación en el lenguaje de programación Java, con el objetivo de aprender a desarrollar proyectos de software de mayor calidad, robustez, eficiencia y seguridad, entre otros. Al terminar esta unidad deberás ser capaz de</p>
+<p>• Comprender las bases de la POO. • Entender el concepto de objeto y clase dentro de la POO. • Definir y utilizar tus propias clases. • Definir los atributos y métodos de una clase. • Crear y utilizar constructores de clase. • Desarrollar programas sencillos aplicando el paradigma orientado a objetos básico en lenguaje Java.</p>
+<h4>1.2. Definición de POO</h4>
+<p>La POO es un estilo de programación donde todos los elementos que forman parte del problema se conciben como objetos, definiendo cuáles son sus atributos y comportamiento, cómo se relacionan entre sí y cómo están organizados. Los principales elementos que componen la POO</p>
+<p>• Abstracción • Clases y objetos • Encapsulamiento • Herencia • Polimorfismo De forma teórica también forman parte el Principio de Ocultación de Información y la Modularidad. No entraremos en definiciones sobre estos conceptos, pero si quieres saber más te dejo este enlace.</p>
+<p>En esta unidad estudiaremos los tres primeros elementos. Dejaremos la Herencia y Polimorfismo para la siguiente unidad como conceptos avanzados de POO.</p>
+
+<p>V1.19.01.23</p>
+<h3>2. Abstracción</h3>
+<p>En el pensamiento humano tendemos a abstraer el mundo real con el objetivo de simplificar la realidad. De un objeto, problema, situación, etc., obtenemos la información esencial y desechamos aquella que no sirve para nuestro objetivo. Por ejemplo: No necesitamos saber la física que hay detrás de un microondas para poder calentar nuestra comida.</p>
+<p>Solamente debemos saber: • Las características del microondas (tamaño, potencia, etc.). • Las funciones que nos ofrece (regular tiempo y potencia, descongelar, función grill, etc.). A estas características y funciones las denominamos en los lenguajes de POO como Atributos y Métodos, respectivamente.</p>
+<p>Nota A estas características y funciones las denominamos en los lenguajes de POO como Atributos y Métodos, respectivamente. La abstracción como técnica de programación Concluimos que la programación es una tarea compleja y mediante la abstracción es posible elaborar software que permita solucionar problemas cada vez más grandes.</p>
+<p>Nota En el módulo de Entornos de Desarrollo (ED) se estudia con más detalle los conceptos teórico-prácticos del paradigma orientado a objeto, como por ejemplo los diagramas UML. En esta unidad se dará por entendido que el estudiante ha adquirido dichos conocimientos del módulo de ED.</p>
+<h3>3. Clases y objetos</h3>
+<p>En los lenguajes de programación un objeto está compuesto por: • Atributos: definen el estado del objeto. • Métodos: definen el comportamiento del objeto. Una vez entendido el concepto de objeto podemos definir qué es una clase en los lenguajes de programación: “Podemos entender como clase el molde a partir del cual se crearán los objetos de dicha clase.” Una analogía para entender mejor la diferencia entre objeto y clase sería el diccionario, donde la clase sería la palabra y su definición, y los objetos cada elemento real de dicha palabra. Por ejemplo, en el diccionario podemos encontrar la definición de Persona (la clase) y en el mundo real tenemos miles de personas (objetos).</p>
+
+<p>V1.19.01.23 Una clase, al igual que los objetos, se compone de: • Información: campos (atributos, propiedades) • Comportamiento: métodos (operaciones, funciones) Diremos que un objeto es una instancia de una clase. Por ejemplo: Clase Objetos (Instancias) Persona Ramon, Gala, Jose, Reme, Melis… Coche KITT, DeLorean DMC-12, Batmovil… Jedi Luke Skywalker, Yoda, Obi-Wan Kenobi, Ansoka Tano… Nave Halcón milenario, USS Enterprise, USCSS Prometheus… Planeta Tierra, Júpiter, Arrakis, Tatooine, Krypton… String “Hola mundo”… Date 17-01-2023… A continuación, vamos a ver como se definen las clases e instancian los objetos en Java.</p>
+<h4>3.1. Definición de clases</h4>
+<p>El esquema de una clase en Java es la siguiente: class NombreDeClase {</p>
+<p>// Atributos</p>
+<p>// Constructores</p>
+<p>// Métodos }</p>
+<h4>3.2. Instanciación de objetos</h4>
+<p>A lo largo del curso ya hemos utilizado algunas de las clases predefinidas de Java, como por ejemplo la clase String, Random, Date, etc. Para poder utilizar estas clases hacíamos lo siguiente, por ejemplo: Random r = new Random(); // Instanciamos un objeto de la clase Random Date fecha = new Date(); // Instanciamos un objeto de la clase Date … Ahora ya sabemos que lo que estábamos haciendo era instanciar un objeto de una clase. Hay dos elementos que participan en la instancia de un objeto</p>
+<p>• La palabra clave new. • El constructor de clase, que debe coincidir exactamente con el nombre de la clase.</p>
+
+<p>V1.19.01.23 El esquema general para instanciar (crear) un objeto de una clase será</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>NombreDeClase objeto = new NombreDeClase();</code></pre>
+</div>
+<p>Más adelante estudiaremos las particularidades a la hora de instanciar objetos utilizando los constructores de clase con parámetros.</p>
+<h3>4. Atributos y métodos</h3>
+<p>A continuación, vamos a estudiar cómo se definen en Java los atributos y métodos de un clase, así como su uso por parte de un objeto.</p>
+<h4>4.1. Definición y acceso a atributos</h4>
+<p>Definen las propiedades del objeto de la clase. Para ello, los atributos son las variables (tipos de datos primitivos u objetos) que ya conocemos. Por ejemplo: Clase Atributos Persona nombre, edad, teléfono,… Coche nº de bastidor, tipo, marca, color,… Jedi nivel de fuerza, experiencia, categoria, lado,… Nave tamaño, potencia, capacidad,… Existen dos tipos de atributos: de instancia y de clase.</p>
+<p>• De instancia: hay una copia de un campo de instancia por cada objeto de la clase. • De clase (static): hay una única copia de un campo static en el sistema. Es el equivalente a una variable global en otros lenguajes de programación. El campo static es accesible a través de la propia clase (sin necesidad de instanciar la clase).</p>
+<p>Por ejemplo: Clase Atributos de instancia Atributos de clase Persona nombre, edad, teléfono,… Nº de personas creadas Un ejemplo de clase Persona con sus atributos definidos: class Persona {</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String nombre;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int edad;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String teléfono;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static int numeroDePersonasCreadas;
+}</code></pre>
+</div>
+
+<p>V1.19.01.23 Para acceder a los atributos de una instancia se utiliza la sintaxis del objeto</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Persona p1 = new Persona();</code></pre>
+</div>
+<p>p1.nombre = “Leia”;p</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>p1.edad = 38;</code></pre>
+</div>
+<p>Acceso a las variables static se utiliza la sintaxis de clase: Persona.numeroDePersonasCreadas++;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(“Persona.numerosDePersonasCreadas”);</code></pre>
+</div>
+<h4>4.2. Definición y acceso a métodos</h4>
+<p>En anteriores unidades ya estudiamos el concepto de función como estructura que permite modular un programa. En Java a las funciones se les conoce como métodos. Por tanto, ya conocemos la estructura básica de un método: recibe parámetros (o no), ejecuta instrucciones y devuelve (o no) un dato.</p>
+<p>No obstante, al igual que en los atributos existen dos tipos de métodos en la POO: de instancia y de clase. • De instancia: se invoca sobre un objeto de la clase, al cual tiene acceso mediante la palabra reservada this. Sus variables de instancia son accesibles de manera directa.</p>
+<p>• De clase (static): no opera sobre un objeto de la clase, y la palabra reservada this no es válida en su interior. Nota En los métodos de clase NO podemos utilizar variables de instancia. Por ejemplo: Clase Métodos de instancia Métodos de clase Persona esMayorDeEdad() obtenerPoblacion(), incrementarPoblacion() En código Java</p>
+<p>class Persona {</p>
+<p>// Atributos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String nombre;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int edad;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String teléfono;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static int numeroDePersonasCreadas;</code></pre>
+</div>
+<p>// Métodos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>void esMayorDeEdad() {</code></pre>
+</div>
+<p>if (edad &gt; = 18) // atributo de instancia</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(nombre + “ es mayor de edad”);</code></pre>
+</div>
+<p>else</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(nombre + “ no es mayor de edad”);</code></pre>
+</div>
+<p>}</p>
+
+<p>V1.19.01.23</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static int obtenerPoblacion() {</code></pre>
+</div>
+<p>return numeroDePersonasCreadas; // atributo de clase</p>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static void incrementarPoblacion() {</code></pre>
+</div>
+<p>numeroDePersonasCreadas++; // atributo de clase</p>
+<p>} }</p>
+<h4>4.2.1. La palabra reservada this</h4>
+<p>La palabra reservada this permite que se pueda hacer referencia al objeto actual de la clase. De este modo, nos servirá para hacer referencia a los propios atributos y métodos de la clase. Su sintaxis es this.nombreDeVariable. Por ejemplo</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>void esMayorDeEdad() {</code></pre>
+</div>
+<p>if (this.edad &gt; = 18) // atributo de instancia</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(nombre + “ es mayor de edad”);</code></pre>
+</div>
+<p>else</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(nombre + “ no es mayor de edad”);</code></pre>
+</div>
+<p>} En el ejemplo anterior podemos obviar el uso del this, ya que Java detecta que edad es un atributo de la clase. No obstante, como veremos más adelante, el uso del this será necesario en muchos casos dentro de los métodos de la clase. Nota Dependiendo de la guía de estilo del proyecto en el que se trabaje se recomendará usar o no el this siempre que se haga referencia a un atributo o método de la clase.</p>
+<h4>4.2.2. Acceso a los métodos</h4>
+<p>Para acceder a los métodos de una instancia se utiliza la sintaxis del objeto (objeto.metodo): Persona p1 = new Persona(); // p1 es un objeto de la clase persona p1.esMayorDeEdad(); // método de instancia Acceso a los métodos de clase (static) se utiliza la sintaxis de clase (Clase.metodo)</p>
+<p>int poblacionTotal = Persona.obtenerPoblaciona(); // método de clase</p>
+
+<p>V1.19.01.23</p>
+<h4>4.2.3. Sobrecarga de métodos</h4>
+<p>Los métodos de una clase pueden tener el mismo nombre, pero diferentes parámetros. Cuando se invoca un método el compilador compara el número y tipo de los parámetros y determina qué método debe invocar. Ejemplo: class Persona { double ahorros;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>void ingresarDinero(double cantidad) {
+        this.ahorros += cantidad;
+    }</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>void ingresarDinero(double cantidad, String moneda) {</code></pre>
+</div>
+<p>// Procesar el ingreso } } Ahora podemos utilizar el mismo nombre de método, pero pasando diferentes parámetros</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Persona p1 = new Persona();
+p1.ingresarDinero(128.25);
+p1.ingresarDinero(50, “€”);</code></pre>
+</div>
+<p>En resumen, esta técnica se conoce como sobrecarga de métodos y nos permite definir más de un método con el mismo nombre con la condición de que sus parámetros sean distintos Nota Si no existiera la sobrecarga de métodos deberíamos de haber nombrado a los anteriores métodos del ejemplo como “ingresarDinero1(double cantidad)”, “ingresarDinero2(double cantidad, String moneda)”. La ventaja de esta técnica práctica es reducir el número de nombres de método distintos y agrupar características comunes.</p>
+<h4>4.3. Constructores</h4>
+<p>Un constructor es un método especial invocado para instanciar e inicializar un objeto de la clase, y se invoca con la sentencia new.</p>
+<p>Los métodos constructores cumplen con estas características</p>
+<p>✓ Tienen el mismo que la clase. ✓ Pueden tener cero (conocido como constructor por defecto) o más parámetros (conocido como constructor con parámetros). ✓ Deben declararse públicos (public) para que se puedan invocar fuera de la clase, de otra forma se restringiría el acceso a la creación de objetos.</p>
+<p>✓ No tiene tipo de retorno, ni siquiera void.</p>
+
+<p>V1.19.01.23 ✓ Sólo se ejecuta cuando es invocado para crear una instancia de un objeto. ✓ Si la clase no tiene ningún constructor, el sistema crea un constructor por defecto. ✓ Si la clase tiene algún constructor, debe usarse alguno de los constructores definidos al instanciar la clase (en este caso el sistema no crea un constructor por defecto).</p>
+<h4>4.3.1. Constructores por defecto</h4>
+<p>El objetivo de crear constructores por defecto es inicializar el valor de los atributos. Debemos hacernos la siguiente pregunte: ¿qué valor queremos que tengan los atributos de un objeto al crear dicho objeto? En la mayoría de los casos los valores iniciales son los cero para valores numéricos, cadena vacía para String, etc. Sin embargo, en algunos casos queremos que tengan un valor concreto. Por ejemplo, en una clase llamada Tripode querremos que su atributo numeroDePatas (de tipo entero) sea inicialmente 3.</p>
+<p>Ejemplo de constructor por defecto en la clase Persona: class Persona {</p>
+<p>// Atributos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String nombre;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int edad;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String teléfono;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static int numeroDePersonasCreadas;</code></pre>
+</div>
+<p>// Constructor por defecto</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public Persona() {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.nombre = “”;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.edad = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.teléfono = “”;</code></pre>
+</div>
+<p>numeroDePersonasCreadas = 0; // tipos static se usan aquí</p>
+<p>} } Nota Observa en ejemplo anterior que no usamos this en el atributo de tipo static. Esto es porque this sólo se usa en atributos de instancia. En caso de no crear el constructor por defecto, Java crea uno internamente e inicializa las variables a un valor inicial. No entraremos en detalle por ahora sobre este aspecto, así que nosotros crearemos siempre el constructor por defecto e inicializaremos los atributos de la clase.</p>
+<h4>4.3.2. Constructores con parámetros</h4>
+<p>La sobrecarga de métodos también se aplica a los constructores de la clase. Es decir, podemos tener constructores con el mismo nombre, pero diferentes parámetros. Esto permitirá que podamos tener más de un constructor de clase según nuestras necesidades de diseño a la hora de instanciar objetos de la clase.</p>
+
+<p>V1.19.01.23 Por ejemplo: class Persona {</p>
+<p>// Atributos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String nombre;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int edad;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String teléfono;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static int numeroDePersonasCreadas;</code></pre>
+</div>
+<p>// Constructor por defecto</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public Persona() {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.nombre = “”;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.edad = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.teléfono = “”;</code></pre>
+</div>
+<p>numeroDePersonasCreadas = 0; // tipos static se usan aquí</p>
+<p>}</p>
+<p>// Constructores con parámetros</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public Persona(String nombre) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.nombre = nombre;</code></pre>
+</div>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public Persona(String nombre, int edad) {</code></pre>
+</div>
+<p>this.nombre = nombre; // Uso necesario del this!!</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.edad = edad;</code></pre>
+</div>
+<p>} } Nota Como puedes observar el uso del this es necesario en este caso para diferenciar el nombre del parámetro de entrada y el atributo de la clase, cuando estos por claridad de código se nombran igual. Para instanciar un objeto usando los constructores de parámetros se haría así</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Persona p1 = new Persona();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Persona p2 = new Persona(“Adrián”);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Persona p3 = new Persona(“Reme”, 62);</code></pre>
+</div>
+<p>En el ejemplo se han instanciado tres objetos de la clase Persona utilizando diferentes los constructores de clase que hemos definido anteriormente.</p>
+<h3>5. Encapsulamiento</h3>
+<p>Uno de los objetos de la POO es agrupar tanto los datos como las funciones dentro de una estructura que llamamos Clase. Por otra parte, en el ecosistema de un proyecto software orientado a objetos conviven diferentes clases y objetos, que de una manera u otra se pueden relacionar.</p>
+
+<p>V1.19.01.23 Surge por tanto la necesidad de crear un mecanismo que permita agrupar los datos en una unidad llamada Clase, que permita indicar cuáles de sus atributos y métodos se pueden compartir, y además qué clases pueden acceder o no a ellos. Este mecanismo se denomina Encapsulamiento, que en resumen permite limitar el acceso a los elementos de la propia clase.</p>
+<p>El encapsulamiento es consecuencia del concepto de Principio de Ocultación de la Información que indica la necesidad de ocultar la representación interna de un objeto o su estado desde el exterior. En la siguiente imagen podemos observar cómo un objeto incluye diferentes métodos y atributos, pero solamente aquellos que son públicos podrán interactuar con el exterior de la clase. A estos métodos públicos también los denominamos Interfaces de la clase.</p>
+<p>A continuación, veremos los diferentes modificadores de acceso que definen la visibilidad de los métodos y atributos de una clase.</p>
+<h4>5.1. Modificadores de acceso</h4>
+<p>Durante el curso ya has utilizado el modificador public en el código, aunque lo haya generado el IDE</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public class Principal {
+    public static void main(String[] args) {</code></pre>
+</div>
+<p>// Código… } } La palabra reservada public es un modificador de acceso, que define el nivel de acceso para las clases, atributos, métodos y constructores. Los modificadores de acceso de Java que modifican el acceso a las clases son: • public: la clase es accesible por cualquier otra clase.</p>
+<p>• default: la clase solo es accesible por otras clases del mismo paquete. El modificador default es aplicado cuando no se especifica ningún modificador.</p>
+
+<p>V1.19.01.23 Los modificadores de acceso de Java que modifican el acceso a los atributos, métodos y constructores son: • public: es accesible por todas las clases. • private: es accesible solamente dentro de la clase donde está declarado. • default: es accesible solamente dentro del mismo paquete. El modificador default es aplicado cuando no se especifica ningún modificador.</p>
+<p>• protected: es accesible en el mismo paquete y las subclases. Nota Los paquetes los veremos en los siguientes apartados mientras que concepto de subclases lo introduciremos en la siguiente unidad. Una tabla de resumen de la accesibilidad de los modificadores de acceso</p>
+<p>Modificador Clase Paquete Subclase Otros public Sí Sí Sí Sí protected Sí Sí Sí No (default) Sí Sí No No private Sí No No No Ejemplo</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public class Persona {</code></pre>
+</div>
+<p>// Atributos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>private String nombre;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public int edad; // no es nada recomendable hacer public el atributo!!</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>protected String teléfono; // lo estudiaremos en subclases</code></pre>
+</div>
+<p>static int numeroDePersonasCreadas; // default</p>
+<p>// Métodos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public void esMayorDeEdad() {</code></pre>
+</div>
+<p>if (edad &gt; = 18) // atributo de instancia</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(nombre + “ es mayor de edad”);</code></pre>
+</div>
+<p>else</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(nombre + “ no es mayor de edad”);</code></pre>
+</div>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static int obtenerPoblacion() {</code></pre>
+</div>
+<p>return numeroDePersonasCreadas; // atributo de clase</p>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>static void incrementarPoblacion() {</code></pre>
+</div>
+<p>numeroDePersonasCreadas++; // atributo de clase</p>
+<p>}</p>
+
+<p>V1.19.01.23 Ejemplo de uso en otra clase Principal que esté en el mismo paquete que la clase Persona</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public class Principal {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public static void main(String[] args) {
+    Persona p1 = new Persona();</code></pre>
+</div>
+<p>// Dará error al ser private</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String miNombre = p1.nombre;</code></pre>
+</div>
+<p>// Funcionará, pero no es para nada adecuado acceder de esta forma a los datos da la clase</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int miEdad = p1.edad;
+}</code></pre>
+</div>
+<p>Nota En el ejemplo se indican los atributos con diferentes tipos de modificadores. Como veremos en el siguiente apartado no es recomendable establecer los atributos como public o default (sin definir).</p>
+<h4>5.2. Getters y setters</h4>
+<p>Como consecuencia de la Encapsulación y la ocultación de los datos sensibles al usuario, una buena práctica de programación es</p>
+<ul>
+<li>Declarar todos los atributos de la clase como private.</li>
+<li>Ofrecer métodos declarados como public para poder acceder y actualizar los valores de esos atributos</li>
+</ul>
+<p>private. Estos métodos se conocen como getters y setters: • getter: método que devolverá el valor de un atributo private de la clase. • setter: método que almacena o actualiza un valor de un atributo private de la clase. La sintaxis para ambos métodos es escribir get o set, seguido del nombre del atributo con el primer carácter en mayúsculas. Por ejemplo</p>
+<p>class Persona {</p>
+<p>// Atributos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>private String nombre;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>private int edad;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>private String teléfono;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>private static int numeroDePersonasCreadas;</code></pre>
+</div>
+<p>// Constructores…</p>
+<p>// Getter</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public int getEdad() {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>return edad; // o también return this.edad;</code></pre>
+</div>
+<p>}</p>
+
+<p>V1.19.01.23</p>
+<p>// Setter</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public void setEdad(int edad) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.edad = edad;</code></pre>
+</div>
+<p>} } A continuación, un ejemplo para probar los getters y setters</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public class Principal {
+    public static void main(String[] args) {
+        Persona p1 = new Persona();
+        p1.setEdad(40);
+        int edadPersona = p1.getEdad(); // devolverá 40
+        System.out.println(edadPersona); // mostrará 40
+}</code></pre>
+</div>
+<h3>6. Empaquetado de clases</h3>
+<p>Nota Durante el curso has utilizado necesariamente esta herramienta de Java para solucionar los ejercicios propuestos. Quizás lo hacías de forma inconsciente ya que el entorno de desarrollo (en este curso Eclipse) suele advertir o directamente añade los paquetes necesarios conforme los vamos escribiendo en el programa. La motivación de este apartado es entender mejor el concepto de paquete, pero sobre todo aprender a crear tus propios paquetes en Java.</p>
+<p>La encapsulación de la información dentro de las clases ha permitido llevara cabo el proceso de ocultación, que es fundamental para el trabajo con clases y objetos. Cuando un proyecto empieza a crecer en cuanto al número de clases y a las relaciones que se establecen entre ellas por el modelo de datos diseñado, quizás necesites organizar dichas clases en un nivel superior de encapsulamiento conocido como empaquetado (package en Java).</p>
+<p>Un paquete en Java se utiliza para agrupar clases relacionadas entre sí bajo un mismo nombre. Es aconsejable reunir aquellas clases que tienen unas características en común. Por ejemplo, durante el curso ya hemos utilizado el paquete java.util, en el que podemos encontrar todas las clases fundamentales (útiles) que los desarrolladores del lenguaje Java han creído conveniente agrupar (Scanner, Date, Calendar, Random, etc).</p>
+<p>Como consejo, puedes pensar que los paquetes son carpetas de un directorio de archivos. Se usan paquetes para evitar conflictos y facilitar el mantenimiento del código. Los paquetes se dividen en dos categorías: • Paquetes integrados (built-in Packages): paquetes de la API de Java.</p>
+<p>• Paquetes definidos por el usuario: Java permite que los desarrolladores puedan crear sus propios paquetes.</p>
+
+<p>V1.19.01.23</p>
+<h4>6.1. Paquetes integrados</h4>
+<p>Para acceder a las clases de un paquete se debe utilizar la palabra clave import seguida de una estructura organizativa separada por puntos: import paquete.nombrepaquete.nombreclase; Para utilizar todas las clases del paquete sustituimos la Clase por un asterisco (*)</p>
+<p>import paquete.nombrepaquete.*; Nota Es recomendable que importemos únicamente las clases que vayamos a utilizar para nuestro proyecto. Dicho de otra forma, evitar en la medida de lo posible la tentación de usar el asterisco (*).</p>
+<p>Ejemplo en Java</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>import java.util.Scanner;</code></pre>
+</div>
+<p>class TestScanner {</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print(“Introduce tu nombre: “);
+        String nombre = sc.nextLine();
+}</code></pre>
+</div>
+<h4>6.2. Paquetes definidos por el desarrollador</h4>
+<p>Para crear tus propios paquetes necesitas saber que Java utiliza un sistema de directorios para guardarlos. Como habíamos dicho al principio de este apartado, los paquetes son carpetas desde el punto de vista del sistema operativo. En el siguiente ejemplo vemos el árbol de directorios de un paquete en Java en el path C:\MiProyectoJava\src\nombrePaquete\MiClase.java</p>
+<p>|___ MiProyectoJava</p>
+<p>|___ src</p>
+<p>|___ nombrePaquete</p>
+<p>|___ MiClase.java Para crear un paquete debemos usar la palabra reservada package seguida del nombre del paquete. Esta instrucción se debe situar al inicio del fichero .java. Por ejemplo</p>
+
+<p>V1.19.01.23</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>package nombrePaquete;</code></pre>
+</div>
+<p>class MiClase {</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public static void main(String[] args) {
+        System.out.println(“Hola mundo”);
+}</code></pre>
+</div>
+<p>Sin embargo, en este curso estamos utilizando un entorno de desarrollo que permite crear el paquete desde una ventana gráfica. A continuación, se mostrarán los pasos para crear un paquete en el IDE Eclipse</p>
+<ul>
+<li>Dentro de tu proyecto realiza los pasos abrir la ventana de creación de Clases. Como se ve en el</li>
+</ul>
+<p>ejemplo, escribe el nombre del paquete en el segundo campo donde pone Package. Sigue los pasos para rellenar el nombre de clase y demás opciones</p>
+<ul>
+<li>Una vez le das al botón Finish, verás que te crea una clase con la instrucción situada arriba para crear</li>
+</ul>
+<p>paquetes</p>
+
+<p>V1.19.01.23</p>
+<p>Ahora podrás ver en la vista de Package Explorer que Eclipse ha creado tanto el paquete y la clase</p>
+<p>Si nos vamos al sistema de directorios del sistema operativo (Windows en este caso) verás que el paquete es realmente un directorio</p>
+<p>Por otra parte, cuando separamos por puntos (.) en el package lo que estamos haciendo es crear cada vez un subdirectorio del directorio anterior. Por ejemplo</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>package ejemplos.faciles;</code></pre>
+</div>
+<p>En este caso, el sistema operativo crear el directorio ejemplos y dentro de este el subdirectorio faciles. Nota En eclipse, cuando quieres añadir algo al proyecto con New… verás que en el desplegable también tienes la opción de crear un paquete directamente. La ventaja de hacerlo así es que cuando queramos añadir una clase directamente a ese paquete (botón derecho sobre el paquete creado, New, Class…) añadirá la clase a ese paquete directamente.</p>
+
+<p>V1.19.01.23</p>
+<h4>6.3. Ejemplo de creación y uso de paquetes propios</h4>
+<p>Para cerrar el apartado de paquetes en Java, se mostrará un ejemplo de creación y uso de paquetes. Para ello vamos a simular el paquete que contiene los paquetes básicos de java (java.lang) y la clase Math que contiene métodos para hacer cálculos matemáticos. Por supuesto, el ejemplo es una versión super reducida de la clase Math y con un método simple para sumar dos números enteros.</p>
+<p>Desde el IDE de Eclipse, los pasos son</p>
+<ul>
+<li>Creamos un paquete llamado basicos.</li>
+<li>Añadimos este paquete una clase llamada Matematicas.</li>
+<li>Añadimos a esta clase un método llamado suma, que recibe dos parámetros de tipo entero y devuelve</li>
+</ul>
+<p>un valor entero que será el resultado de la suma de los dos parámetros. Una vez realizados estos pasos, la estructura del proyecto y el código fuente deberían quedar así</p>
+<p>Como puedes observar no hay un método llamado main en esta clase. Esto es correcto, ya que no queremos tener un punto de entrada de programa para ejecutar esta clase. La clase Matematicas sólo nos sirve para usar sus métodos. Ahora si queremos probar la clase Matematicas podemos crear otra clase Test (en otro paquete) y en ella importar el paquete basicos. Por tanto, dicha clase quedaría así</p>
+
+<p>V1.19.01.23</p>
+<p>Nota En el código fuente es aconsejable situar los package antes que los import.</p>
+<h3>7. Bibliografía</h3>
+<p>Documentación oficial: https://docs.oracle.com/en/java/javase/17/docs/api/index.html Web w3schools.com Apuntes de José Chamorro del CFGS DAW del . Apuntes de: https://github.com/statickidz/TemarioDAW/blob/master/PROG/PR05.pdf</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut11/ut1120.html">⬅️ 11.20 Punto</a>
+<a class="page-nav-btn" href="../ut12/index.html">📘 UT12 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

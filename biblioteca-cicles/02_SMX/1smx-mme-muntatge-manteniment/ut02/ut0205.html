@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.5 U2 - P3 - Perifèrics i Communications — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔧 Muntatge i Manteniment d'Equips — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Muntatge i Manteniment d'Equips</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 - P1 | P2 | P3 - CONTINGUTS</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 - P2 - PROCESADOR Y MEMORIA</a></li>
+<li><a href="../ut02/ut0203.html">2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0204.html">2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS</a></li>
+<li><a class="active" href="../ut02/ut0205.html">2.5 U2 - P3 - Perifèrics i Communications</a></li>
+<li><a href="../ut02/ut0206.html">2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE</a></li>
+<li><a href="../ut02/ut0207.html">2.7 DISCOS DUROS CHS ECHS LBA</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 5</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U5 - P1 P2 P3 - PDF CONTINGUTS</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U6 - RGPD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U6 - COPIAS DE SEGURIDAD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U6 - CLASIF INFORMACION - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U6 - P1 P2 P3 PRESENTACIÓ CONTINGUTS</a></li>
+<li><a href="../ut04/ut0405.html">4.5 U6 - P1 P2 P3 - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0406.html">4.6 U6 - P1 P2 P3 - PRESENTACIÓ</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — FINAL DE CURSO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT2 — Unitat Didàctica 2</span>
+<h1>2.5 U2 - P3 - Perifèrics i Communications</h1>
+<p>Components d’un equip microinformatic Joan Alfred Noll Obiol Muntatge i manteniment d’equips</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Índex Introducció Resultats d’aprenentatge Sistemes informàtics. Unitats funcionals 1.1 Informació i sistemes informàtics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.1.1 Elements de la informació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.1.2 Els ordinadors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2 Unitats funcionals dels ordinadors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.1 La memòria principal i els seus elements . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.2.2 La unitat central de processament . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.3 Busos del sistema . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.4 Suports i unitats d’entrada i sortida . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.3 Estructura externa d’un sistema microinformàtic . . . . . . . . . . . . . . . . . . . . . . . . . 1.3.1 L’estructura física d’un equip informàtic . . . . . . . . . . . . . . . . . . . . . . . . . Placa base: components i conﬁguració 2.1 Placa base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.1.1 El joc de xips . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.2 BIOS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.3 Connector del processador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.1.4 Ranures o sòcols de memòria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.5 Busos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.6 Ranures d’expansió . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.1.7 Connectors interns . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.8 Connectors externs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.9 Connector d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.1.10 Pila . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.1.11 El pont . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2 El processador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.2.1 Freqüència del rellotge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.2 Alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.3 Registres . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.2.4 Memòria cau (cache) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.5 Joc d’instruccions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.6 Segmentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.2.7 Processadors superescalars . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.2.8 Paral·lelisme de ﬁls (threads) o hyperthreading . . . . . . . . . . . . . . . . . . . . . 2.2.9 Multiprocessament i xips multinucli . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.2.10 Fabricants . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3 La memòria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.1 Jerarquia de memòria . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.3.2 Memòria principal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.3.3 Limitacions en la quantitat de memòria . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.4 MMU . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.5 Tipus de memòria RAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.3.6 Memòria virtual . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.7 Fabricants de memòria RAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.3.8 Memòria ROM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>Perifèrics i comunicacions 3.1 El disc dur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.1 Estructura interna d’un disc dur . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.2 Característiques dels discos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.1.3 Format i particions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.4 Estàndards d’interfícies i de control . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.5 Modes de transferència . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.1.6 Memòria cau de disc . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2 La disquetera . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.3 Discos òptics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.3.1 Tipus de discos òptics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.3.2 Tipus de dispositius de lectura/escriptura de discos òptics . . . . . . . . . . . . . . . 3.4 Unitats basades en memòria ﬂaix . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.5 La targeta gràﬁca . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.5.1 Conceptes importants per a gràﬁcs . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.5.2 Components de la targeta gràﬁca . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.6 La targeta de so . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.6.1 Components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.7 Connectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.7.1 Interfícies amb la placa base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.8 La targeta de xarxa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.8.1 Targetes Ethernet . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.8.2 Targetes sense ﬁls . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.9 El mòdem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.9.1 Monitor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.9.2 Teclat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.9.3 Ratolí . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.10 Carcassa . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.11 Font d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Introducció L’ordinador personal ha esdevingut en els últims anys un company de viatge per a tots nosaltres. En la unitat “Components d’un equip microinformàtic” estudiarem els components que formen un ordinador físicament, i ens centrarem en aquells que s’utilitzen en l’entorn domèstic o de consum. Veurem també el concepte ampliat de sistema informàtic, que inclou tant l’ordinador com els usuaris que l’han d’utilitzar.</p>
+<p>El maquinari, la matèria que ara ens ocupa, és la part física de l’ordinador. Consta de diversos sistemes o components electrònics, que examinarem al llarg d’aquesta unitat. Hem de tenir en compte que l’evolució de la informàtica és molt ràpida, de manera que no podem aspirar més que a fer una fotograﬁa de l’estat actual dels components i mirar d’endevinar cap a on aniran les coses en un futur proper. És important conèixer tant els elements físics com els elements lògics de l’ordinador (el microprocessador, la memòria principal, el bus del sistema, la placa base, etc.), i la seva importància en el món informàtic.</p>
+<p>En l’apartat “Sistemes informàtics. Unitats funcionals” començareu treballant els conceptes d’informació, dades i tractament de la informació. Tot seguit s’introdueix el concepte d’informàtica, els seus objectius i els elements que s’hi poden trobar, i a continuació es deﬁneix l’ordinador i les seves parts funcionals.</p>
+<p>L’apartat “Placa base: components i conﬁguració” us permetrà conèixer i avaluar les plaques base i cadascuna de les seves parts, els processadors i els diferents tipus de memòries dels ordinadors. Aquests són els components fonamentals de qualsevol sistema informàtic, tal com estan construïts actualment. La placa base és un component fonamental perquè és el que controla i interconnecta la resta de dispositius del sistema. Així, començarem per la memòria principal</p>
+<p>n’analitzarem el funcionament, la importància i els tipus. Tot seguit, treballarem sobre el microprocessador, la seva funció, i la seva importància, i també dels elements que el componen, dels tipus de microprocessadors i de com funcionen. Veurem també els camins de comunicació que té el processador amb la memòria de treball i amb els perifèrics, com són els diferents busos i la resta de components de la placa base.</p>
+<p>En l’apartat “Perifèrics i comunicacions” estudiareu les principals característiques i el funcionament dels suports i dispositius d’entrada i sortida utilitzats en l’entorn informàtic. L’ordinador per si mateix no pot gestionar la informació: li calen altres elements, que anomenem perifèrics. En concret, veurem els tradicionals discos durs o disquets, els CD, DVD i memòries USB. Examinarem la tecnologia que empra cadascun d’aquests sistemes com a base del seu funcionament. Això ens permetrà diferenciar-los i associar-los funcionalitats especíﬁques.</p>
+<p>També ens introduirem en les targetes d’expansió –com ara les targetes gràﬁques, les targetes de so o les de xarxa, i els mòdems. A més a més, farem una introducció</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic als perifèrics i, en concret, analitzarem les tecnologies de tres dels perifèrics imprescindibles en els sistemes informàtics actuals: el monitor, el teclat i el ratolí. També donarem un cop d’ull a les carcasses que integren totes les parts internes dels ordinadors i a la font d’alimentació, i donarem les principals indicacions per als procediments per a la instal·lació dels diversos components de maquinari.</p>
+<p>Es tracta d’una unitat amb una càrrega forta de continguts molt necessaris per al tractament correcte dels dispositius que haurem de muntar i reparar. És important conèixer les característiques dels dispositius, per tal de poder conﬁgurar-los de la manera més adequada. Coneixent la diversitat de dispositius, comprendrem millor la diversitat de models i les especiﬁcitats de cadascun d’aquests sistemes a l’hora de ser utilitzats pels usuaris, tractats pels sistemes operatius i conﬁgurats pels seus administradors. El bon coneixement d’aquests ens permetrà fer-ne un bon ús i conﬁgurar els equips de la manera més adequada.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Resultats d’aprenentatge En ﬁnalitzar aquesta unitat l’alumne/a</p>
+<h3>1. Selecciona els components d’integració d’un equip microinformàtic es</h3>
+<p>tàndard, descriure les seves funcions i comparar prestacions de diferents fabricants.</p>
+<ul>
+<li>Descriu els blocs que componen un equip microinformàtic i les seves</li>
+</ul>
+<p>funcions.</p>
+<ul>
+<li>Reconeix l’arquitectura de busos.</li>
+<li>Descriu les característiques dels tipus de microprocessadors (freqüèn</li>
+</ul>
+<p>cia, tensions, potència, sòcols, entre d’altres).</p>
+<ul>
+<li>Descriu la funció dels dissipadors i ventiladors.</li>
+<li>Descriu les característiques i utilitats més importants de la conﬁgura</li>
+</ul>
+<p>ció de la placa base.</p>
+<ul>
+<li>Avalua tipus de xassís per a la placa base i la resta de components.</li>
+<li>Identiﬁca i manipular els components bàsics (mòduls de memòria,</li>
+</ul>
+<p>discos ﬁxos i els seus controladors, suports de memòries auxiliars, entre d’altres).</p>
+<ul>
+<li>Analitza la funció de l’adaptador gràﬁc i el monitor.</li>
+<li>Identiﬁca i manipular diferents adaptadors (gràﬁcs, LAN i mòdems,</li>
+</ul>
+<p>entre d’altres).</p>
+<ul>
+<li>Identiﬁca els elements que acompanyen un component d’integració</li>
+</ul>
+<p>(documentació, controladors, cables i programari d’utilitats, entre d’altres).</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<h3>1. Sistemes informàtics. Unitats funcionals</h3>
+<p>Els sistemes informàtics permeten un tractament automatitzat de les dades que no seria possible sense aquestes eines. Els éssers humans intentem aprendre del nostre entorn. Mitjançant la comunicació incrementem o modiﬁquem els coneixements que tenim. Els ordinadors es poden descriure segons les unitats funcionals que els componen, i que en part fan el tractament de la informació i en part permeten la comunicació entre la persona i l’eina informàtica. Es pot considerar la informàtica com una eina per a la comunicació i l’ordinador el mitjà per a aconseguir-ho.</p>
+<p>1.1 Informació i sistemes informàtics Contínuament ens arriba informació per diferents canals. Les vies poden ser molt variades: les imatges, els sons, els escrits, els senyals, etc. Si poguéssim mesurar aquest volum d’informació, al ﬁnal del dia comprovaríem que és molta la quantitat que rebem.</p>
+<p>Heus ací dues maneres de deﬁnir la informació: La informació és el resultat de la manipulació de les dades. La informació és qualsevol forma de representació de fets, objectes, valors, idees..., que permet la comunicació entre persones i l’adquisició del coneixement de les coses.</p>
+<p>Tota informació consta de dades o unitats relacionades. 1.1.1 Elements de la informació La informació està formada per les dades. Les dades s’utilitzen per a produir informació, que ens ajuda a prendre decisions. Les dades són fets o objectes que no han estat manipulats.</p>
+<p>No totes les dades són del mateix tipus. Si pensem en la nostra adreça postal (per exemple, c/ Muntaner, 100, 3r), podem comprovar que hi ha diferents tipus de caràcters. Aleshores, podem classiﬁcar les dades segons els tipus següents: Les dades són tot allò que forma la informació.</p>
+<p>Un caràcter és cada un dels símbols que formen part de la informació. La diferència entre un nombre i un nombre alfanumèric és que amb els alfanumèrics no es poden fer operacions matemàtiques.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Programa Un programa és un conjunt d’accions executades segons un ordre determinat, que permeten resoldre un problema determinat.</p>
+<ul>
+<li>Numèriques. Formades per nombres (0, 1, ... , 9).</li>
+<li>Alfabètiques. Formades per lletres (a, b, ... , z).</li>
+<li>Alfanumèriques. Formades per tots els caràcters.</li>
+</ul>
+<p>Tractament de la informació La informació ha estat manipulada i tractada de diferents maneres, segons el moment històric i els avenços tecnològics de cada època. Podem deﬁnir el tractament de la informació com el conjunt d’operacions que s’han d’efectuar sobre les dades que componen la informació.</p>
+<p>En tot procés de tractament de la informació hi ha d’haver tres elements impres- cindibles perquè aquest sigui eﬁcient: l’emissor, el canal i el receptor.</p>
+<h4>1) L’emissor és el responsable de generar la informació (per exemple, una</h4>
+<p>persona quan parla, un llibre que llegim, etc.).</p>
+<h4>2) El canal és l’element que permet la transmissió de la informació</h4>
+<p>(per exemple, l’aire quan parlem, el ﬁl de telèfon en les comunicacions telefòniques, etc.).</p>
+<h4>3) El receptor és l’element que rep la informació (per exemple, en aquest</h4>
+<p>moment, sou vosaltres, que esteu estudiant aquesta unitat didàctica). Quan es processa la informació es diferencien tres operacions, tal com es pot veure a la taula 1.1. Taula 1.1. Operacions Funcions Entrada Recollida de la informació Depuració de les dades Emmagatzematge de les dades Procés Aritmètic Lògic Sortida Recollida dels resultats Distribució dels resultats Les característiques més importants de cadascuna de les operacions que hem indicat són les següents</p>
+<ul>
+<li>Entrada. Operació que permet adreçar cap a un lloc determinat la informa</li>
+</ul>
+<p>ció que es tractarà (per exemple, quan llegim revistes, llibres...). El procés que segueix és el següent: selecció de la informació, comprovació de la informació i col·locació de la informació en un suport.</p>
+<ul>
+<li>Procés. Operació que permet manipular la informació. Hi ha dos tipus</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic de tractament de la informació: de càlcul matemàtic (sumes, restes...) i d’operacions lògiques (el resultat només pot ser vertader o fals).</p>
+<ul>
+<li>Sortida. Operació destinada a fer conèixer de manera externa els resultats</li>
+</ul>
+<p>de la manipulació. D’altra banda, el tractament de la informació no ha estat el mateix al llarg de la història. Podem diferenciar tres tipus de tractament: L’ordinador</p>
+<ul>
+<li>Manual. La manipulació de la informació es fa tota manualment. Per</li>
+</ul>
+<p>exemple, emplenar un rebut, una factura...</p>
+<ul>
+<li>Mecànic. El tractament de la informació rep el suport de les maquines; ara</li>
+</ul>
+<p>bé, perquè funcionin, hi ha d’haver una intervenció humana. Per exemple, la calculadora, la màquina d’escriure...</p>
+<ul>
+<li>Automàtic. Cap als anys quaranta, va sortir al mercat un altre tipus de</li>
+</ul>
+<p>màquines, les màquines automàtiques, que tracten la informació sense la participació de les persones. Per exemple, la màquina automàtica de rentar la roba –en què seleccionem un programa i aquest fa tot el procés de rentat–, els ordinadors... En el moment en què es comença a utilitzar el concepte de tractament automàtic de la informació, també es comença a utilitzar el terme informàtica.</p>
+<p>1.1.2 Els ordinadors La física, la química, la meteorologia, etc., són ciències que expliquen, que justiﬁquen determinats fets i situacions del nostre entorn; així mateix, hi ha una ciència, la informàtica, que estudia el tractament de la informació i això és possible gràcies a la utilització, entre altres eines, de l’ordinador.</p>
+<p>La informàtica La informàtica neix amb la idea d’ajudar les persones en els treballs rutinaris i repetitius, generalment de càlcul i de gestió, en què és freqüent la repetició de tasques. La idea és que una màquina pot fer la feina millor, per la seva exactitud i la rapidesa; ara bé, sempre sota el control de la persona.</p>
+<p>El terme informàtica va aparèixer a França l’any 1962 sota la denominació de informatique. Aquesta paraula sorgeix de la contracció de les paraules: INFORmation autoMATIQUE Computer science és la ciència dels ordinadors.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Les aplicacions informàtiques són un conjunt d’un o més programes informàtics dissenyats per a fer una determinada tasca. L’explotació d’una aplicació informàtica equival a la utilització d’una aplicació informàtica.</p>
+<p>Amb el terme oﬁmàtica ens referim a la utilització de la informàtica en els departaments de gestió administrativa de l’empresa. El SO (sistema operatiu) consta d’un conjunt de programes informàtics imprescindibles per al bon funcionament de l’ordinador. El programari (sofware) és un conjunt d’idees, dades o informacions i accions.</p>
+<p>Podeu veure més dades sobre el programari bàsic i d’aplicació a la unitat “Instal·lació de programari”. Posteriorment, va ser acceptada per tots els països europeus; a Espanya, el 1968, amb el nom de informàtica; als països de parla anglesa, es coneix com a computer science.</p>
+<p>Una manera de deﬁnir aquesta paraula podria ser la que us oferim a continuació: La informàtica és la ciència que estudia el tractament automàtic i racional de la informació. El concepte d’informàtica inclou tota una sèrie de tasques que es poden fer. Citarem les següents</p>
+<ul>
+<li>El desenvolupament i la millora de noves màquines, és a dir, de nous</li>
+</ul>
+<p>ordinadors i dels elements que hi estan relacionats.</p>
+<ul>
+<li>El desenvolupament i la millora de nous mètodes automàtics de treball, que</li>
+</ul>
+<p>en informàtica es basen en l’anomenat sistema operatiu (SO).</p>
+<ul>
+<li>La construcció d’aplicacions informàtiques, conegudes amb el nom de</li>
+</ul>
+<p>programes o paquets informàtics. Generalment, s’utilitza l’expressió sistema informàtic per a referir-se de manera més concreta al terme informàtica, en el sentit de conjunt d’elements necessaris per a la realització i utilització d’aplicacions informàtiques. Un sistema informàtic és el conjunt d’elements necessaris per a la realització i l’explotació d’aplicacions informàtiques.</p>
+<p>S’hi inclouen els elements de programari, de maquinari i els humans. En un sistema informàtic hi ha els elements constitutius interrelacionats següents</p>
+<ul>
+<li>Part física: L’element físic també es coneix amb el nom de maquinari</li>
+</ul>
+<p>(hardware). Està format per tot allò que es pot veure i tocar en el món de la informàtica (els monitors, les impressores, el ratolí, els suports...).</p>
+<ul>
+<li>Part lògica: L’element lògic es coneix també amb el nom de programari</li>
+</ul>
+<p>(software). Té el seu origen en les idees (conceptes) i està compost per tot allò que fem servir en el camp de la informàtica que no podem veure ni tocar (els jocs d’ordinador, els programes de comptabilitat, els sistemes operatius...).</p>
+<ul>
+<li>Part humana: L’element humà és l’element més important que forma part</li>
+</ul>
+<p>de la informàtica o d’un sistema informàtic. Sense les persones que estan al càrrec de la informàtica no hi hauria ni la part física ni la part lògica. Conceptes bàsics sobre els ordinadors La informàtica necessita un element físic o mecànic que faci el tractament de la informació automàticament; aquest element s’ano mena ordinador.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Els ordinadors no han nascut en els últims anys. En realitat, les persones sempre han buscat dispositius que els ajudin a efectuar càlculs precisos i ràpids. Des de l’aparició de les calculadores binàries ﬁns als nostres dies, hi ha molt poques activitats humanes que no estiguin lligades d’una manera o altra a les màquines electròniques. Això ens permet deﬁnir l’ordinador de moltes maneres.</p>
+<p>Seguidament, n’indiquem algunes</p>
+<ul>
+<li>L’ordinador és una màquina formada per una sèrie d’elements físics connec</li>
+</ul>
+<p>tats de manera lògica i racional que tracten la informació automàticament.</p>
+<ul>
+<li>L’ordinador és una màquina electrònica ràpida i exacta que és capaç d’ac</li>
+</ul>
+<p>ceptar dades per un mitjà d’entrada, processar-les automàticament sota el control d’un programa prèviament emmagatzemat i proporcionar la informació resultant a un mitjà de sortida.</p>
+<ul>
+<li>L’ordinador és un dispositiu electrònic capaç de rebre un conjunt d’instruc</li>
+</ul>
+<p>cions i executar-les, fer càlculs sobre les dades numèriques i relacionar-les amb altres tipus d’informació per a obtenir un altre conjunt de dades o informació com a resposta.</p>
+<ul>
+<li>L’ordinador és un sistema electrònic que fa operacions aritmètiques i</li>
+</ul>
+<p>lògiques a alta velocitat d’acord amb les instruccions internes, que són executades sense intervenció humana. A més, té la capacitat d’acceptar i emmagatzemar dades d’entrada, processar-les i produir resultats de sortida automàticament. La seva funció principal és el processament de dades.</p>
+<p>Les característiques principals d’un ordinador són les següents</p>
+<ul>
+<li>Fa una acció a la vegada.</li>
+<li>Pot fer càlculs matemàtics: sumar, restar, multiplicar i dividir.</li>
+<li>Pot fer operacions lògiques, és a dir, comparar lletres i nombres.</li>
+<li>Opera a alta velocitat.</li>
+<li>És exacte i precís –fa exactament el que se li indica.</li>
+<li>És eﬁcient –pot treballar sense parar.</li>
+<li>Té capacitat per a manipular grans quantitats d’informació.</li>
+<li>És ﬁable –té la capacitat de veriﬁcar l’exactitud de les seves operacions</li>
+</ul>
+<p>internes, és a dir, autocomprovació.</p>
+<ul>
+<li>Pot manipular símbols.</li>
+<li>Cada vegada són més petits, més útils i menys costosos.</li>
+</ul>
+<p>El conjunt d’accions que s’ordena i que executa un ordinador es coneix amb el nom de programa. Processament de dades equival a manipulació.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic La UCP o CPU (central processing unit) és la unitat central de processament. En general, un programa és un conjunt d’accions que s’han de fer seguint un ordre determinat per a resoldre un problema determinat.</p>
+<p>Relacionat amb aquest concepte, tenim el de aplicació informàtica. Una aplicació informàtica és un conjunt d’un o més programes per a fer un treball determinat en un sistema informàtic. L’ordinador està format per dos elements fonamentals: l’element físic o maquinari, i l’element lògic o programari, encara que podem trobar-ne d’altres de manera implícita</p>
+<ul>
+<li>El maquinari (hardware). Fa referència a tot allò que podem veure i tocar</li>
+</ul>
+<p>(el monitor, el teclat, la CPU...).</p>
+<ul>
+<li>El programari (software). Fa referència als elements que no tenen existèn</li>
+</ul>
+<p>cia física, com les idees, els conceptes, els programes, les aplicacions...</p>
+<ul>
+<li>L’usuari i el programador. L’usuari és la persona que utilitza l’ordinador,</li>
+</ul>
+<p>i el programador és la persona que escriu els programes en un determinat llenguatge de programació perquè els ordinadors els puguin executar.</p>
+<ul>
+<li>Les dades i la informació. Les dades són fets o materials originals que</li>
+</ul>
+<p>no han estat processats. La informació és el producte de les dades ja processades.</p>
+<ul>
+<li>Documentació. És el conjunt d’instruccions o manuals de procediment</li>
+</ul>
+<p>que ensenyen a l’usuari com ha d’utilitzar l’ordinador i els programes informàtics. A continuació, classiﬁcarem els elements físics o dispositius que formen l’ordina- dor segons les seves funcions</p>
+<ul>
+<li>Dispositius d’entrada (input)</li>
+<li>Dispositius de sortida (output)</li>
+<li>Dispositius de processament</li>
+<li>Dispositius d’entrada/sortida</li>
+<li>Dispositius de comunicacions (busos)</li>
+</ul>
+<p>A la ﬁgura 1.1, es mostra l’esquema d’un ordinador.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 1.1. Elements principals d’un ordinador</p>
+<h4>1) Dispositius d’entrada. La seva funció consisteix a permetre l’entrada de dades</h4>
+<p>en l’ordinador. Hi ha molts dispositius que poden fer aquesta tasca: el teclat, el ratolí, l’escàner, el llapis òptic, la palanca de control (joystick), el micròfon, etc.</p>
+<h4>2) Dispositius de sortida. La seva funció consisteix a treure la informació a</h4>
+<p>l’exterior de l’ordinador. Hi ha moltes màquines que fan aquesta funció, com el monitor o la pantalla, la impressora, els altaveus o el traçador.</p>
+<h4>3) Dispositius d’entrada/sortida. Són totes les màquines la conﬁguració de</h4>
+<p>les quals els permet fer funcions d’entrada i funcions de sortida. Per exemple, les unitats de cintes magnètiques, les unitats de discos magnètics o les unitats opticomagnètiques. També es coneixen com a memòries auxiliars. Els dispositius d’entrada, de sortida i d’entrada/sortida també es coneixen com a perifèrics.</p>
+<p>Els perifèrics són totes les màquines que han d’estar connectades a la CPU per a funcionar. Aleshores, podem parlar de perifèrics d’entrada (el teclat, el ratolí, etc.), perifèrics de sortida (els monitors, les impressores, etc.) i perifèrics d’entrada/sortida (unitats de discos magnètics, unitats de cintes magnètiques, etc.).</p>
+<h4>4) Dispositius de processament. També es coneixen com a UCP (unitat central</h4>
+<p>de processament) o, en anglès, CPU (central processing unit). Són la part més important d’un ordinador, en què es manipula la informació. Podem comparar la seva funció a la d’un director d’orquestra. Els dispositius de processament s’encarreguen de coordinar i dur a terme totes les operacions de tipus lògic i matemàtic.</p>
+<p>L’esquema de components de la unitat central de processament és el que us mostrem a la ﬁgura 1.2. Memòries auxiliars L’ordinador pot col·locar la informació en uns magatzems electrònics anomenats memòries auxiliars (per exemple, discos magnètics i discos opticomagnètics), d’on la pot recuperar més tard. La CPU no hi té accés directe.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Operacions de la CPU Les operacions de la CPU poden ser</p>
+<ul>
+<li>Lògiques. Totes les</li>
+</ul>
+<p>operacions en què el resultat pot ser vertader o fals.</p>
+<ul>
+<li>Matemàtiques.</li>
+</ul>
+<p>Operacions de càlcul matemàtic (per exemple, sumes i restes). Figura 1.2. Esquema de la CPU A continuació, detallem les característiques més importants dels components de la CPU</p>
+<ul>
+<li>Processador (microprocessador). És el cervell de l’ordinador. Coordina i</li>
+</ul>
+<p>dirigeix la feina que s’ha de fer en cada moment, i també fa totes les operacions aritmètiques i lògiques. Són els circuits que controlen la interpretació i l’execució de les instruccions. Hi podem distingir dues parts</p>
+<ul>
+<li>CU (unitat de control). La unitat de control s’encarrega de governar la</li>
+</ul>
+<p>resta d’unitats, és a dir, interpreta les instruccions i en controla l’execució i la seqüència.</p>
+<ul>
+<li>ALU (unitat aritmètica i lògica). La unitat aritmètica i lògica és on es fan</li>
+</ul>
+<p>les operacions de càlcul matemàtic i les operacions lògiques.</p>
+<ul>
+<li>Memòria principal.</li>
+</ul>
+<p>És l’encarregada d’emmagatzemar les dades i els programes mentre s’estan executant en l’ordinador. És important recordar que un programa només pot ser executat per un ordinador. Per tant, cal que el programa i les dades que necessita manipular siguin a la memòria.</p>
+<h4>5) Dispositius de comunicacions (busos). Enllacen tots els elements del sistema</h4>
+<p>i permeten la comunicació amb el món exterior. El bus representa bàsicament una sèrie de cables que serveixen per a carregar dades en la memòria i, des d’allà, transportar-les a la CPU. És l’autopista de les dades dins del PC, ja que comunica tots els components de l’ordinador amb el processador.</p>
+<p>El bus es controla i manipula des de la CPU. 1.2 Unitats funcionals dels ordinadors L’estructura bàsica d’un microprocessador està formada pel conjunt de placa base i microprocessador, la memòria i les unitats d’entrada i sortida, i tots aquests elements estan interconnectats per mitjà del bus d’adreces, el bus de dades i el bus de control.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Les principals unitats que formen un ordinador són les següents</p>
+<ul>
+<li>Unitats d’entrada</li>
+<li>Unitat de processament i emmagatzematge</li>
+<li>Unitat de sortida</li>
+<li>Unitat d’entrada/sortida</li>
+</ul>
+<p>Deﬁnim com a unitats funcionals de l’ordinador el conjunt d’elements del maquinari imprescindibles per al seu funcionament correcte. Els elements del maquinari es poden classiﬁcar segons la funció que tinguin en</p>
+<ul>
+<li>Unitat central de processament</li>
+<li>Memòria principal</li>
+<li>Unitats d’entrada i sortida</li>
+</ul>
+<p>Unitat central de processament També es coneix amb les sigles UCP (unitat central de processament), o bé CPU (de l’anglès central processing unit). Alguns autors consideren la memòria central com un element més de la CPU per la relació que tenen i per les seves característiques i funcions.</p>
+<p>En realitat, però, no és així, ja que avui dia la memòria principal no forma part de la CPU. Tots els elements que formen les unitats funcionals necessiten algun tipus de comunicació per a funcionar correctament; això s’aconsegueix gràcies al bus del sistema. També, perquè la comunicació entre aquests dispositius i altres màquines sigui eﬁcient, a vegades cal que altres màquines la gestionin. Això és el que fan els anomenats controladors.</p>
+<p>Podem veure aquests elements i les relacions que estableixen a la ﬁgura 1.3, ﬁgura 1.4 i ﬁgura 1.5. Figura 1.3. Esquema dels elements de les unitats funcionals d’un ordinador El bus del sistema és el mitjà de comunicació entre els diferents elements que formen les unitats funcionals.</p>
+<p>Controladors Dispositius que gestionen el funcionament de determinats maquinaris i fan la comunicació entre elements de les unitats funcionals i dispositius perifèrics (per exemple, els monitors, les impressores, etc.).</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic ALU és la unitat aritmètica i lògica. Memòria externa (memòria secundària) La memòria secundària és un dispositiu que permet desar grans quantitats d’informació durant períodes generalment llargs de temps.</p>
+<p>Figura 1.4. Esquema dels elements de les unitats funcionals d’un ordinador Figura 1.5. Estructura funcional dels ordinadors Aquests elements que constitueixen les unitats funcionals formen part del maqui- nari; per tant, tenen una part física que podem veure, tocar, etc., i estan formats per circuits electrònics. Els podem estudiar a partir de l’àmbit electrònic o de circuit, o a partir de l’àmbit lògic. Nosaltres els estudiarem des de l’àmbit electrònic.</p>
+<p>1.2.1 La memòria principal i els seus elements La memòria principal també es coneix com a memòria central. Igual que passa amb les persones, la memòria de l’ordinador és capaç de retenir o emmagatzemar dades i instruccions que són accessibles en qualsevol moment. Abans que l’ordinador manipuli les dades i les ordres mitjançant l’ALU, aquestes es transfereixen a la memòria principal.</p>
+<p>De la mateixa manera, els resultats obtinguts del procés quedaran emmagatzemats en aquesta memòria. La memòria principal o central és el dispositiu electrònic en què estan situades les dades o instruccions que manipularà l’ALU, o els resultats que obtinguin d’aquests tractaments.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic La memòria principal té un paper molt important dintre de la unitat central de pro- cessament. És un dispositiu totalment electrònic i, per tant, qualsevol informació que contingui és accessible quasi instantàniament. Per això, a vegades, també és coneguda amb el nom de dispositiu d’emmagatzematge d’accés immediat.</p>
+<p>D’altra banda, la memòria principal té una capacitat limitada i, en determinats moments, ha tingut uns preus bastant elevats en comparació d’altres elements del maquinari. Per això i per altres factors, aquesta memòria es complementa amb la memòria externa o memòria secundària.</p>
+<p>La memòria principal està formada per xips de silici. Els xips són dispositius electrònics formats per circuits integrats. Elements de la memòria La memòria està formada per cel·les o posicions de memòria numerades de manera consecutiva, que tenen la capacitat de retenir la informació mentre l’ordinador està connectat a una font d’energia elèctrica.</p>
+<p>Cada cel·la té un nom que s’anomena posició de memòria i un identiﬁcador o número d’ordre anomenat adreça de memòria. A la ﬁgura 1.6, teniu un esquema. Figura 1.6. Esquema bàsic de la memòria principal Cel·la de la memòria Cada posició de la memòria està formada per dispositius electrònics de base binària, de manera que, en cada instant, cada un pot adoptar un dels dos estats binaris: on per a representar l’1 binari, i off per a representar el 0 binari.</p>
+<p>Com a conseqüència de tot això, el conjunt complet dels dispositius de dos estats que forma cada posició de la memòria principal proporciona un mètode per a codiﬁcar les dades d’una manera semblant al d’un llum encès o apagat. Cada posició de memòria té una quantitat determinada de bits, de manera que totes les posicions tenen el mateix nombre de bits (per exemple, 8 bits, 16 bits, 32 bits...).</p>
+<p>La manera de gestionar cada posició de la memòria, quan es manipula la memòria en operacions de lectura o escriptura, s’anomena paraula. La memòria principal disposa dels elements següents per a dur a terme les seves funcions</p>
+<ul>
+<li>registre d’adreça de memòria (RAM)</li>
+<li>registre d’informació o intercanvi de memòria (RIM)</li>
+</ul>
+<p>Circuit integrat Un circuit integrat és un conjunt de components electrònics amb funcions determinades. Hi ha milers de components electrònics en una integració en miniatura.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Capacitat de la memòria A ﬁde mesurar la capacitat de la memòria principal o central, es fan servir les mateixes unitats que les que hem utilitzat per a la mesura de la informació. Per tant, podem parlar de capacitats de la memòria principal d’uns 512 bytes, 1.024 KB, 32 MB, 64 MB, 128 MB, etc.</p>
+<p>Podeu consultar més dades sobre la memòria DRAM a la secció Recursos de Contingut de la web del mòdul, incloent el seu funcionament i els tipus de mòduls existents.</p>
+<ul>
+<li>selector o descodiﬁcador de memòria</li>
+</ul>
+<p>Analitzem més detalladament cada element</p>
+<h4>1) Registre d’adreça de memòria. Abans de fer qualsevol operació de lectura</h4>
+<p>o escriptura en la memòria, s’ha de col·locar l’adreça de la cel·la que s’utilitzarà en l’operació en aquest registre, tant si és per a gravar-hi com si és per a treure’n dades.</p>
+<h4>2) Registre d’informació o intercanvi de memòria (RIM). Aquest registre rep la</h4>
+<p>informació obtinguda de la lectura de la memòria. Aquest registre ha de contenir la informació que volem escriure i desar en la memòria.</p>
+<ul>
+<li>Selector de memòria o descodiﬁcador.</li>
+</ul>
+<p>Aquest dispositiu s’activa cada vegada que es produeix una ordre de lectura o escriptura. Connecta la cel·la de memòria –indicada per l’adreça del registre d’adreça de memòria– amb el registre d’informació de memòria, la qual cosa fa possible la transferència de dades en un sentit o en l’altre (memòria a RIM, RIM a memòria).</p>
+<p>Bàsicament, hi ha tres paràmetres que permeten mesurar la velocitat de resposta d’una memòria</p>
+<ul>
+<li>Temps d’accés (Ta). És el temps màxim que es tarda a llegir o escriure el</li>
+</ul>
+<p>contingut d’una posició de memòria.</p>
+<ul>
+<li>Temps de cicle (Tc). És el temps mínim entre dues lectures.</li>
+<li>Amplada de banda (Ab). És el nombre de paraules que es transfereixen</li>
+</ul>
+<p>entre la memòria i la CPU en cada unitat de temps: Ab = 1 / Tc. Seqüència de passos per a llegir o escriure una dada en la memòria principal</p>
+<h4>1) Llegir</h4>
+<p>Per a llegir una dada se segueixen els passos següents</p>
+<ul>
+<li>Es posa l’adreça en el registre d’adreça.</li>
+<li>Mitjançant el descodiﬁcador, s’accedeix a l’adreça de memòria.</li>
+<li>Se situen les dades en el registre de dades.</li>
+</ul>
+<h4>2) Escriure</h4>
+<p>Per a escriure una dada se segueixen els passos següents</p>
+<ul>
+<li>Es transfereix l’adreça en què s’escriurà al registre d’adreça.</li>
+<li>Es transfereixen les dades al registre d’informació.</li>
+<li>Es descodiﬁca l’adreça de memòria.</li>
+<li>Es passa el contingut del registre d’informació a l’adreça que conté el registre d’adreça.</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 1.2.2 La unitat central de processament La unitat central de processament (UCP o CPU) és el cervell de l’ordinador. La seva missió és controlar, coordinar i efectuar les operacions del sistema informàtic. Per això, agafa cada una de les ordres del programa que hi ha en la memòria principal, les analitza i interpreta, i dóna les ordres necessàries per a executar-les.</p>
+<p>Físicament, està formada per circuits electrònics que en un microordinador es troben integrats en una pastilla o xip denominada microprocessador. Actualment, hi ha diverses empreses que es dediquen a comercialitzar microprocessadors; per exemple: Motorola (família 68xxx), IBM, Apple, Intel (família 8080, 8086, 8088, 80286 –286–, 386, 486, Pentium, Pentium lI, Pentium III, Pentium IV, etc.), Digital (Alpha), CYRIX (família Mx), AMD (família Kx), etc.</p>
+<p>La unitat central de processament està formada per les unitats que se citen a continuació (vegeu la ﬁgura 1.7)</p>
+<ul>
+<li>Els registres</li>
+<li>Unitat aritmètica i lògica (ALU)</li>
+<li>Unitat de control (CU)</li>
+</ul>
+<p>Figura 1.7. Esquema d’un processador Els registres A l’interior del processador hi ha unes zones reservades per a l’emmagatzematge de petites quantitats d’informació. Són els registres interns. S’anomena registre un conjunt de bits que es manipulen en bloc. El microprocessador és un conjunt de circuits electrònics que estan integrats en un xip.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic PC, SP, FLAG i IR PC (personal counter) és un registre especíﬁc que apunta cap a la instrucció del programa que s’executa o la propera per executar. SP (stack pointer) és un registre que manté l’adreça d’una dada emmagatzemada a la pila. FLAG (ﬂag register) és un registre que conté informació sobre el resultat de l’última operació efectuada en l’ALU. IR (instruction register) és un registre que manté el codi de la instrucció que s’executa.</p>
+<p>Un registre de 8 bits pot enviar la seva informació a la memòria o a un altre registre. La transferència no és bit a bit, sinó que es passen els 8 bits alhora. Hi ha registres de 4, 8, 16, 32 i 64 bits. Els registres interns d’un processador acostumen a tenir la mateixa amplada.</p>
+<p>Podem diferenciar dos tipus de registres interns</p>
+<h4>1) Registres interns d’ús general. El processador utilitza aquests registres per a</h4>
+<p>l’emmagatzematge temporal de dades o adreces de memòria; és a dir, la posició de memòria en què s’emmagatzemen les dades. Podem trobar els següents</p>
+<ul>
+<li>Registres interns de dades.</li>
+</ul>
+<p>S’utilitzen per a emmagatzemar dades que el processador sol·licita freqüentment. Un exemple d’aquest tipus de registre és l’acumulador que s’utilitza en les operacions aritmètiques.</p>
+<ul>
+<li>Registres interns d’adreça. Es pot guardar l’adreça de memòria on es troba la</li>
+</ul>
+<p>dada. Mitjançant aquest registre podem accedir a posicions contigües de memòria.</p>
+<h4>2) Registres interns especíﬁcs. Hi ha registres a l’interior dels processadors que</h4>
+<p>tenen una comesa especíﬁca i, per tant, no són d’ús general. Podem indicar els següents</p>
+<ul>
+<li>Comptador de programa. Un dels registres que du el control de les instruccions</li>
+</ul>
+<p>del programa que s’executen és el comptador de programa. El comptador de programa (program counter, PC) és un registre especíﬁc que està pendent de la instrucció del programa que s’executa o la propera per executar. El processador porta de la memòria la instrucció assenyalada pel PC i la comença a executar. Immediatament, el PC incrementa el seu valor per a preparar-se per a la instrucció següent.</p>
+<ul>
+<li>Punter de pila. Dins la memòria RAM, hi ha una zona destinada a l’emmagat</li>
+</ul>
+<p>zematge d’informació temporal: és la pila o stack. El punter de pila (stack pointer, SP) és un registre que manté l’adreça d’una dada que està emmagatzemada en la pila. El processador pot guardar el contingut dels seus registres interns temporalment, per a recuperar-los més tard, a la pila. El processador accedeix ràpidament a aquesta memòria, ja que el registre punter de pila l’assenyala permanentment.</p>
+<p>Aquest registre s’incrementa o disminueix automàticament quan s’accedeix a la memòria de pila.</p>
+<ul>
+<li>Indicador de resultat. Cada bit del registre indicador de resultat (ﬂag register,</li>
+</ul>
+<p>FLAGS) conté informació sobre el resultat de l’última operació efectuada en l’ALU. El nombre de bits del FLAGS i el seu signiﬁcat varien d’un processador a un altre.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Registre d’instrucció. La unitat de control té una referència permanent de la</li>
+</ul>
+<p>instrucció en curs mitjançant el registre d’instrucció. El registre d’instrucció (instruction register, IR) manté el codi de la instrucció que s’executa. Unitat aritmètica i lògica Totes les operacions matemàtiques i lògiques que el processador ha d’efectuar es fan en un bloc intern especialitzat anomenat unitat aritmètica i lògica (UAL o ALU, arithmetic logic unit).</p>
+<p>La unitat aritmètica i lògica gestiona les operacions elementals de tipus aritmètic (sumes, restes, etc.) i, també, les de tipus lògic (operacions en les quals el resultat és vertader o fals). Aquesta unitat té dues entrades per als operands i una sortida per al resultat. El processador dirigeix cap a les entrades de l’ALU els registres sobre els quals s’ha d’efectuar l’operació. El resultat apareix a la sortida de l’ALU i es recull en un registre o s’envia al bus.</p>
+<p>Molts processadors dirigeixen la sortida de l’ALU (vegeu la ﬁgura 1.8) cap a l’acumulador. Figura 1.8. Esquema de l’ALU Bus és una paraula anglesa que signiﬁca ‘transport’. En arquitectura de mi- croprocessadors, un bus pot connectar lògicament diversos perifèrics sobre el mateix conjunt de cables. Aplicada a la informàtica, es relaciona amb la idea de les transferències internes de dades que es produeixen en un ordinador en Un acumulador és un registre en què se situen els resultats de les operacions de càlcul fetes per l’ALU.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic PCI correspon a les sigles angleses de interconnexió de components perifèrics (peripheral component interconnection). funcionament. En el bus tots els nodes reben les dades, encara que no es dirigeixin a tots aquests nodes; els nodes als quals no van dirigides les dades, simplement les ignoren. Per tant, un bus és un conjunt de conductors elèctrics en forma de pistes metàl·liques impreses sobre la placa base del computador per on circulen els senyals que corresponen a les dades binàries del llenguatge màquina que opera al microprocessador.</p>
+<p>Els primers busos de computadores eren literalment busos elèctrics paral·lels amb múltiples connexions. Avui dia el terme és usat per a qualsevol arranjament físic que proveeixi la mateixa funció lògica que un bus elèctric paral·lel. Els busos moderns poden usar tant connexions paral·leles com connexions en sèrie, i poden ser cablejats en topologia multidrop o en daisy chain, o connectats per cables trenats, com el cas de l’USB.</p>
+<p>Hi ha tres classes de busos: bus de dades, bus de direccions i bus de control. Una placa base de tipus ATX té tantes pistes elèctriques destinades a busos com l’amplada dels canals de busos del microprocessador de la CPU: 64 per al bus de dades i 32 per al bus de direccions. L’amplada de canal explica la quantitat de bits que es poden transferir simultàniament. Així, el bus de dades transfereix 8 bytes a la vegada, i el canal de direccions del microprocessador per a una PC-ATX pot “encaminar” més de quatre mil milions de combinacions diferents per al conjunt de 32 bits del seu bus.</p>
+<h4>1) El bus de dades mou les dades entre els dispositius del maquinari d’entrada</h4>
+<p>com el teclat, l’escàner, el ratolí, etc.–, de sortida –com la impressora, el monitor o la targeta de so– i d’emmagatzematge –com el disc dur, el disquet o la memòria ﬂaix. Aquestes transferències que es donen a través del bus de dades són governades per diversos dispositius i mètodes, dels quals el controlador PCI és un dels principals. El seu treball equival, simpliﬁcant molt, a una central de semàfors per al trànsit als carrers d’una ciutat.</p>
+<h4>2) El bus d’adreces està vinculat al bloc de control de la CPU per a prendre i</h4>
+<p>col·locar dades en el subsistema de memòria durant l’execució dels processos de còmput. Per al bus d’adreces, l’amplada de canal determina la quantitat d’ubicacions o direccions diferents amb què el microprocessador pot treballar. Aquesta quantitat d’ubicacions resulta d’elevar el 2 a la 32a potència. 2 perquè són dos els senyals binaris, els bits 1 i 0; i 32a potència perquè les 32 pistes del bus de direccions són, en un instant donat, un conjunt de 32 bits.</p>
+<h4>3) El bus de control transporta senyals d’estat de les operacions fetes per la CPU</h4>
+<p>amb les altres unitats. El mètode que utilitza l’ordinador per a sincronitzar les diferents operacions és un rellotge intern que facilita la sincronització i evita les col·lisions d’operacions (unitat de control). Aquestes operacions es transmeten d’una manera bidireccional.</p>
+<p>Aquest tipus d’estructura interna, però, no és aplicable directament al que conei- xem actualment com a ordinador personal. En un PC hi ha dispositius controladors d’accés directe a memòria, controladors de disc dur, de tecla, processadors gràﬁcs, memòria RAM en diferents nivells de jerarquia, etc., de manera que trobem una estructura molt més complexa. En aquest sentit, interessa tractar aquesta</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic estructura des del punt de vista del tècnic de manteniment o reparació, tenint en compte el concepte d’unitat mínima reparable. Amb aquest concepte s’entén la part de l’equip que es canvia en cas d’avaria sense intentar reparar-la. Per qüestions de temps de reparació (cost de la mà d’obra) i equips de diagnòstic necessaris, en la majoria dels casos seria més car substituir un component defectuós d’una targeta que comprar-ne una de nova i canviar-la.</p>
+<p>Els busos s’utilitzen per a comunicar les diferents unitats funcionals entre elles. Hi podem trobar els elements següents</p>
+<ul>
+<li>Circuits operacionals. Circuits necessaris per a fer les operacions amb les</li>
+</ul>
+<p>dades procedents dels registres d’entrada.</p>
+<ul>
+<li>Registre d’entrada. Emmagatzema dades o operands que intervenen en</li>
+</ul>
+<p>una instrucció abans de la realització de l’operació per part del circuit operacional.</p>
+<ul>
+<li>Registre acumulador. Emmagatzema els resultats numèrics del circuit</li>
+</ul>
+<p>operacional. També està connectat als registres d’entrada per a la realimen- tació, en cas d’operacions encadenades, i té una connexió amb el bus de dades per a enviar els resultats a la memòria central o a la unitat de control.</p>
+<ul>
+<li>Registre d’estat. Registre que emmagatzema algunes condicions de situa</li>
+</ul>
+<p>cions esdevingudes en l’última operació feta i que hem de tenir en compte en les operacions següents. Unitat de control La unitat de control (control unit, UC o CU) fa una sèrie d’operacions bàsiques per al funcionament del processador</p>
+<ul>
+<li>Interpreta les instruccions del programa que arriben de la memòria del</li>
+</ul>
+<p>sistema.</p>
+<ul>
+<li>Dirigeix els registres adequats cap a l’ALU.</li>
+<li>Controla els busos interns.</li>
+<li>Ordena a l’ALU efectuar l’operació indicada en el programa.</li>
+<li>Porta de la memòria les dades necessàries, i hi envia les dades resultants.</li>
+<li>Gestiona els busos externs de comunicació amb la memòria externa i els</li>
+</ul>
+<p>perifèrics. La unitat de control és el centre nerviós de l’ordinador, ja que és on es controlen, es governen i es decideixen totes les operacions. És el cervell que organitza tots els elements interns i externs del processador.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 1.9. Unitat de control La unitat de control (ﬁgura 1.9) controla directament el registre d’instrucció IR, el comptador de programa PC, el registre de pila SP i una sèrie de registres ocults a l’usuari, en els quals s’emmagatzemen temporalment instruccions, dades o adreces.</p>
+<p>La unitat de control consta dels elements següents</p>
+<h4>1) Descodiﬁcador d’instruccions. La instrucció que el processador porta de la</h4>
+<p>memòria s’emmagatzema en el registre d’instrucció, IR. Aquest registre està connectat a una unitat anomenada descodiﬁcador d’instrucció (instruction deco- der, ID). El descodiﬁcador és el dispositiu que té com a funció la interpretació del tipus d’instrucció a partir del codi d’operació que hi ha en el registre d’instrucció, i genera els senyals de control que són necessaris per a executar correctament una instrucció.</p>
+<h4>2) El rellotge o temporitzador. El ritme de funcionament del descodiﬁcador</h4>
+<p>d’instrucció el marca un senyal de rellotge. Tots els senyals generats pel des- codiﬁcador d’instrucció estan sincronitzats amb aquest rellotge per mitjà del bloc seqüenciador. Aquest procés de sincronització s’anomena temporització (timing). Gràcies a aquesta temporització, les diferents operacions de gestió es fan d’una manera ordenada, sense encavalcar el control ni la informació.</p>
+<p>Una de les mesures de velocitat d’un sistema processador la dóna la freqüència de rellotge. Aquesta és una primera aproximació de la velocitat i permet la comparació entre sistemes que utilitzen el mateix processador. La freqüència es pot mesurar en Hz, kHz, MHz, etc. Un Hz equival a un cicle per segon; aleshores, quan es parla d’una freqüència de rellotge de 16 MHz, es parla de 16 milions de cicles per segon. També sabem que T = 1 / F, en què T és el període expressat en segons i F és la freqüència, ja que T = 1 / 16.000.000 = 6,25 · 10–8 s, equivalent a 62,5 ns, que indica la duració d’un cicle.</p>
+<ul>
+<li>El seqüenciador.</li>
+</ul>
+<p>És el dispositiu que marca les pautes amb què s’han d’executar les diferents parts de la instrucció en coordinació amb els impulsos enviats pel rellotge.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Arquitectures dels microprocessadors Els microprocessadors s’han fabricat utilitzant dues tecnologies conegudes amb els noms de CISC i RISC.</p>
+<h4>1) CISC (complex-instruction-set computing, ‘repertori complex d’instruccions</h4>
+<p>d’ordinador’): la tecnologia més utilitzada en la fabricació dels microprocessadors, que consisteix en la utilització d’un joc d’instruccions complexes que es basen en la implementació d’un gran nombre d’instruccions en el processador per a possibilitar tenir programes més petits i, per tant, més ràpids. Les CPU i les CISC més esteses són de la família 80x86 d’Intel. També són importants les companyies Cirix i AMD, que fabriquen processadors amb el joc d’instruccions 80x86 a un preu més reduït que els d’Intel.</p>
+<h4>2) RISC (reduced-instruction-set computing, ‘repertori reduït d’instruccions d’or</h4>
+<p>dinador’): en aquesta tecnologia es fa servir un joc d’instruccions reduït, i s’intenta utilitzar el nombre més petit possible d’instruccions. És la més fàcil de dissenyar i té l’avantatge de fer les operacions a més velocitat, a costa d’utilitzar programes més grans. És una tecnologia més simple. Per això permet minimitzar el nombre d’instruccions i la complexitat a l’hora de dissenyar la CPU. Alguns exemples d’arquitectura RISC són l’SPARC, de l’empresa Sun Microsystems, el micropro- cessador Alpha, dissenyat per Digital, els Motorola 88000 i el PowerPC. Aquest processadors s’utilitzen, principalment, en aplicacions industrials i professionals per la seva gran rendibilitat i ﬁabilitat.</p>
+<p>Tecnologia de fabricació dels microprocessadors Intel Normalment, els microprocessadors de l’empresa Intel per a PC han estat dissenyats segons la tecnologia CISC, però actualment s’estan desenvolupant solucions mixtes. Amb les tecnologies actuals, és possible integrar, en l’interior del microprocessador, milions de transistors. Tots aquests transistors s’organitzen en un gran circuit que rep el nom de DIE i que no és més gran de 4 cm2. Aquest circuit està embolcallat per una càpsula de ceràmica o plàstic que el protegeix.</p>
+<p>També podem destacar els paràmetres següents en els processadors</p>
+<ul>
+<li>Un dels paràmetres de fabricació del microprocessador és el nivell d’inte</li>
+</ul>
+<p>gració, que en aquests moments utilitza com a unitat de treball el nm (1 nm = 10–9 m). El pas a la tecnologia de fabricació CMOS en 90 nm, la que utilitza actualment el Pentium 4, es considerava impossible no fa gaires anys i, no obstant això, els enginyers ja han aconseguit fabricar-ne en 65 nm; l’any 2007 arribaran als 45 nm, l’any 2009 a 35 nm i, ﬁns i tot, a 20 nm, el límit actual per a aquesta tecnologia.</p>
+<ul>
+<li>Pel que fa a la tensió de corrent, podem dir que la tensió de 5 volts, que es</li>
+</ul>
+<p>feia servir ﬁns no fa gaire, actualment és de 2 volts, aproximadament, amb la qual cosa s’ha millorat el problema de l’escalfament del microprocessador.</p>
+<ul>
+<li>La placa base proporciona allotjament al microprocessador i a les línies de</li>
+</ul>
+<p>comunicació amb altres components de l’arquitectura PC. En les plaques, el bus del sistema funcionava a 66 MHz ﬁns no fa gaire, però avui dia ja podem tenir busos de sistema que funcionen per sobre dels 100 MHz Llei de Moore La llei de Moore diu que cada divuit mesos la tecnologia de fabricació dels microprocessadors millora, de tal manera que es podrà duplicar el nombre de transistors integrats en el microprocessador.</p>
+<p>El nivell d’integració indica l’amplada o l’espai lliure que hi ha entre els diferents elements que formen el microprocessador.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu trobar informació sobre els diferents tipus de sòcols del processador en la secció “Recursos de contingut” del web d’aquest mòdul. Sèrie i paral·lel Sèrie: tots els bits passen pel mateix ﬁl un darrere de l’altre.</p>
+<p>Paral·lel: cada bit passa per un ﬁl diferent i en el mateix moment.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>(velocitat amb què es comunica el processador amb la memòria principal;</code></pre>
+</div>
+<p>a la meitat d’aquesta velocitat, s’accedeix als dispositius PCI connectats). Cal tenir en compte aquesta velocitat del microprocessador, ja que sempre ha de ser múltiple de la velocitat del bus dels sistemes (per exemple, si tenim un processador a 133 MHz i amb un bus de 66 MHz, la velocitat del microprocessador que s’obté, segons el càlcul, és 66 × 2).</p>
+<ul>
+<li>Una de les parts del processador s’encarrega de descodiﬁcar les instruc</li>
+</ul>
+<p>cions. Cada instrucció es manipula en registres interns petits que té el microprocessador mateix i, segons la grandària d’aquests registres, el microprocessador tindrà una arquitectura o una altra. Així, el 80286 i el 8086 tenien una arquitectura de microprocessador de 16 bits, perquè cada un dels registres interns tenia aquesta capacitat; la del 386 era de 32 bits i la dels Pentium, de 64 bits.</p>
+<ul>
+<li>Un altre element important que cal tenir en compte en el microprocessador</li>
+</ul>
+<p>és la memòria cau. La memòria cau que tenen els microprocessadors s’anomena de nivell 1, i la capacitat que té és de pocs KB. Funciona a una velocitat propera a la del microprocessador. Hi ha una altra memòria cau de nivell 2, que generalment és a la placa base (en el cas del Pentium II i Pentium III, és al cartutx, i en el Pentium Pro al microprocessador mateix), i en alguns equips hi ha una tercera memòria cau anomenada de nivell 3.</p>
+<p>1.2.3 Busos del sistema Podem deﬁnir com a bus del sistema el conjunt de circuits encarregats de la connexió i comunicació entre la CPU i la resta dels elements de l’ordinador. Un bus és un conjunt de cables (pistes de circuit imprès o ﬁls conductors) que proporcionen un camí per al ﬂux d’informació entre els diferents elements que formen l’ordinador. Quan una dada passa d’un component a un altre, viatja al llarg d’aquest camí comú per a arribar al seu destí. Per cada pista o cable, es transmet un bit. Un bloc de bits es pot transmetre fent-los passar tots pels mateix cable (un bit després de l’altre), o bé fent-los passar per diferents cables a la vegada.</p>
+<p>Si passen tots pel mateix cable, es diu que hi ha una transmissió en sèrie; si passen per cables diferents, es diu que hi ha una transmissió en paral·lel. A la ﬁgura 1.10 i ﬁgura 1.11, teniu un esquema dels busos de comunicació d’un ordinador.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 1.10. Esquema de busos de comunicació d’un ordinador Figura 1.11. Esquema de busos de comunicació d’un ordinador Pel bus, s’han de transmetre diferents tipus d’informació: l’adreça de les dades a les quals volem accedir, la dada per transferir o la informació de control, que permet l’operació amb els diferents elements. Així, segons la funció (i, per tant, el tipus d’informació) que circula pels busos, es poden diferenciar els tres busos següents</p>
+<h4>1) Bus d’adreces de memòria. S’encarrega de transportar les adreces de memòria</h4>
+<p>o del perifèric a les quals la CPU vol accedir. L’amplada del bus d’adreces indica la quantitat de memòria a la qual pot accedir un processador. Hi ha processadors amb el bus d’adreces de 16, 20 i 32 bits d’amplada. Amb un bus de 16 bits (16 ﬁls conductors en paral·lel), podem accedir a 2 × 16 = 65.536 posicions de memòria.</p>
+<h4>2) Bus de dades. Transporta les dades entre registres. És bidireccional, és a dir,</h4>
+<p>els mateixos ﬁls s’utilitzen per a transmetre informació cap a dintre o cap a fora d’una unitat en instants diferents.</p>
+<h4>3) Bus de control. Proporciona uns senyals de lectura i escriptura que controlen</h4>
+<p>l’adreça a la qual es dirigeix la dada, que pot anar del processador a la memòria, o bé de la memòria al processador. Els processadors tenen un altre bus de control per a governar els seus registres interns. A la taula 1.2 teniu un resum de les característiques principals dels busos d’adreces i de dades segons el tipus de processador.</p>
+<p>Podeu trobar informació sobre l’evolució dels microprocessadors en la secció “Adreces d’interès” del web d’aquest mòdul.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Bus intern i bus extern Bus intern (de CPU): comunica la CPU i la memòria principal. Bus extern (d’expansió): comunica la CPU i la resta dels components de l’ordinador. E/S: entrada/sortida. DMA (direct memory access) signiﬁca ‘accés directe a memòria’.</p>
+<p>Interrupció Una interrupció és la situació en la qual es para momentàniament l’execució d’una determinada tasca per a executar-ne una altra. Una vegada acabada, es continua amb la primera a partir del punt en què es va deixar. Podeu trobar més informació sobre el bus PCI en la secció “Adreces d’Interès” del web d’aquest mòdul.</p>
+<p>Taula 1.2. Característiques dels busos d’adreces i de dades Processador Bus d’adreces (bits) Bus de dades (bits) 8086 8088 80186 80188 80286 80386 SX 80386 DX 80486 DX 80486 SX Pentium Pentium Pro A més, podem diferenciar dos tipus de busos segons les parts del sistema que connecten: el bus que connecta la CPU amb la memòria (bus intern o de CPU) i el que connecta la CPU amb la resta d’elements (bus d’expansió), que és una prolongació del bus intern.</p>
+<ul>
+<li>El bus de CPU és interessant pels tipus de memòria que exigeix, ja que es</li>
+</ul>
+<p>dedica a transferir dades entre la CPU i la memòria. Destaca per la velocitat. Hi ha arquitectures amb velocitats superiors a 100 MHz.</p>
+<ul>
+<li>Però els busos realment interessants són els busos d’expansió. Les diverses</li>
+</ul>
+<p>arquitectures de les plaques es diferencien bàsicament per les característi- ques del bus d’expansió. El bus permet intercomunicar el processador, la memòria i els perifèrics, i les seves característiques són decisives a l’hora de determinar-ne les prestacions. Busos d’expansió Hi ha dues organitzacions físiques d’operacions E/S que estan relacionades amb els busos</p>
+<ul>
+<li>Bus únic. No accepta un controlador DMA (tot es controla des de la CPU).</li>
+</ul>
+<h4>2) Bus dedicat. Suporta controladors DMA. Tracta la memòria de manera diferent</h4>
+<p>que els perifèrics (utilitza un bus especial), al contrari que el bus únic, que considera posicions de memòria en tots dos. Aquest bus especial dedicat té 4 components fonamentals</p>
+<ul>
+<li>Dades. Intercanvia informació entre la CPU i els perifèrics.</li>
+<li>Control. Porta la informació referent a l’estat dels perifèrics (petició d’inter</li>
+</ul>
+<p>rupcions).</p>
+<ul>
+<li>Adreces. Identiﬁca els perifèrics que ha d’utilitzar.</li>
+<li>Sincronització. Temporitza els senyals de rellotge.</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic L’avantatge del bus únic és la simplicitat de l’estructura, que el fa més econòmic; però no permet que tingui lloc, a la vegada, transferència d’informació entre la memòria i el processador, i entre els perifèrics i el processador. D’altra banda, el bus dedicat és molt més ﬂexible i permet transferències simultànies, però és més complex i, per tant, els costos són més elevats.</p>
+<p>A la taula 1.3 i taula 1.4 es presenten algunes característiques dels busos principals. Taula 1.3. Característiques dels principals busos (I) Sortida Denominació Connectors Bit dades /adreces Velocitat de transferència Nota Fast SCSI (SCSI-2) 8/ 10 MBps (10 MHz)</p>
+<ul>
+<li>Connecta ﬁns a 8</li>
+</ul>
+<p>dispositius. Fast wide SCSI (Fast SCSI-2) 16/ 20 MBps (10 MHz) Connecta ﬁns a 16 dispositius. Ultra SCSI (Fast-20) 8/ 20 MBps (20 MHz) Connecta entre 4 i 8 dispositius. Wide ultra SCSI (Fast-40) 16/ 40 MBps (20 MHz) Connecta 4, 8 i 16 dispositius. Ultra2 SCSI (Fast-40) 8/ 40 MBps (40 MHz) Connecta 8 dispositius.</p>
+<p>Ultra2 SCSI (Fast-40) 16/ 80 MBps (40 MHz) Connecta 16 dispositius. USB (universal serial bus, ‘bus en sèrie universal’) 1/ 1 Mbps a 12 Mbps Aquest bus ha estat dissenyat per a poder utilitzar-lo amb un gran nombre de dispositius (p. ex.: teclats, palanques de control, ratolins, càmeres digitals, etc.).</p>
+<p>Suporta plug and play. Permet la desconnexió de dispositius en calent. USB permet connexions de ﬁns a 5 min cada vegada i es poden connectar ﬁns a 127 dispositius. ISA (XT) (industry standard architecture, ‘arquitectura estàndard de la indústria’) 8/20 1 MB/s (5 MHz) Destinat al processador 8088.</p>
+<p>Baixa resistència al soroll. 1984 ISA (AT) 62 + 98 16/24 8 MB/s (8 MHz) Destinat al processador 80286. Baixa resistència al soroll.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.4. Característiques dels principals busos (i II) Sortida Denominació Connectors Bit dades /adreces Velocitat de transferència Nota 1987 MCA (micro channel architecture, ‘arquitectura de microcanal’) 32/ 10 MB/s (&gt;10 MHz) Destinat al processador PS/2 (50,80) d’IBM.</p>
+<p>Estàndard proposat per IBM. Més resistència al soroll que l’ISA; això els fa més segurs. Incompatible amb ISA. Permet conﬁgurar las plaques d’interfície per a aquest bus per mitjà de programari. 1988 EISA (extended ISA, ‘ISA estès’) 32/ 33 MB/s (8 MHz) Destinat al processador 80386. Estàndard proposat per Compaq, Tandy, AST, AT&amp;T. Més resistència al soroll que l’ISA.</p>
+<p>Compatible amb ISA. Permet conﬁgurar las plaques d’interfície per a aquest bus per mitjà de programari. 1993 VESA (local bus) (Video Electronics Standards Association, ‘Associació d’Estàndards per a l’Electrònica de Vídeo’) 62 + 98 + 112 32/ 133 MB/s (33 MHz) 148 MB/s (40 MHz) 267 MB/s (50 MHz) Destinat al processador 80486.</p>
+<p>Compatible amb ISA. Suporta targetes de vídeo, controladora de discos, targetes de xarxa i targetes de memòria.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.4 (continuació) Sortida Denominació Connectors Bit dades /adreces Velocitat de transferència Nota PCI (V 1.0) (peripheral component interconnect, ‘interconnexió de components electrònics’) 32/ 132 MB/s (&lt;33 MHz) Destinat al processador 80486DX4 i Pentium.</p>
+<p>Incompatible amb ISA. Suporta ﬁns a 10 dispositius (interfície de vídeo, discos rígids, xarxes locals, plaquetes per a multimèdia). Suport plug and play. 1994 PCI (V 2.0) 64/ 264 MB/s (&lt;33 MHz) 1997 PCI (V 2.1) 64/ 264 MB/s (&lt;33 MHz) 1980 SCSI (SCSI-1) (small computer system interface, ‘interfície per a sistemes de computació petits’) 8/ 5 MBps (5 MHz) Dóna suport a dispositius com escàners, unitats CD-ROM, DVD, discos Bernoulli, ZIP, etc. Permet la connexió de dispositius (ﬁns a 8) SCSI en forma de cadena, utilitzant el bus per torns.</p>
+<p>La placa base Quan un usuari amb pocs coneixements d’informàtica compra un equip informàtic nou, generalment avalua la velocitat del microprocessador, la quantitat de memòria RAM instal·lada o la quantitat de GB de disc dur que necessita. Però poques vega- des es dóna importància a la placa base (placa mare, principal o motherboard), i amb això cometem un greu error. No té sentit tenir un processador molt ràpid, molta memòria i molta capacitat de disc dur si tot això ho muntem en una placa base antiquada.</p>
+<p>La placa base és el component sobre el qual es col·loquen tots els altres. És una placa de circuit imprès en què s’insereixen tots els xips de tots els components. És la placa més gran d’un ordinador. El rendiment general de l’equip dependrà molt del seu disseny i del joc de xips de la placa.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic La placa base és l’encarregada d’interconnectar i comunicar tots els components de l’ordinador. La placa base és la base de qualsevol sistema informàtic. De la seva construcció, disseny i qualitat dependrà el bon funcionament del nostre equip informàtic.</p>
+<p>Disposar d’una placa ben dissenyada i preparada per al futur signiﬁca, a més de poder treballar a més velocitat, tenir més possibilitats per a ampliar la memòria, canviar el microprocessador i no patir incompatibilitats amb les noves tecnologies que apareixen. 1.2.4 Suports i unitats d’entrada i sortida Sabem que perquè la unitat central de processament faci la seva feina cal que la informació que ha de manipular estigui situada en elements físics als quals pugui accedir de manera ràpida i eﬁcient. Aquests elements físics s’anomenen suports de la informació.</p>
+<p>El suport de la informació és l’element físic que permet emmagatzemar la informació i les dades de tal manera que l’ordinador hi pugui accedir. Objectius de tot suport Emmagatzemar la informació que serà manipulada i tenir la capacitat de desar-la durant períodes de temps més o menys llargs.</p>
+<p>Ser un mitjà de comunicació entre els usuaris i l’ordinador, de manera que les dades d’entrada siguin intel·ligibles per a l’ordinador i les dades de sortida ho siguin per a les persones. Els suports es poden classiﬁcar de diverses maneres, però les més utilitzades són les que tenen en compte els criteris següents</p>
+<h4>1) Per l’ús que se’n faci</h4>
+<ul>
+<li>Reutilitzable.</li>
+</ul>
+<p>Podem fer servir el suport més d’una vegada per a desar informació (per exemple, els disquets, el disc dur, la cinta magnètica...).</p>
+<ul>
+<li>No reutilitzable. Només el podem utilitzar una vegada per a desar la informació</li>
+</ul>
+<p>(per exemple, el paper, la ﬁtxa perforada...).</p>
+<h4>2) Per la forma d’accés a la informació</h4>
+<ul>
+<li>Seqüencials. Per a accedir a una determinada informació del suport, cal passar</li>
+</ul>
+<p>per tota la informació anterior (per exemple, les cintes magnètiques).</p>
+<ul>
+<li>Directes. Permeten accedir a la informació de manera directa o immediata (per</li>
+</ul>
+<p>exemple, els disquets).</p>
+<h4>3) Per les característiques físiques del suport</h4>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Perforats.</li>
+</ul>
+<p>Són els que codiﬁquen i mantenen la informació per mitjà de perforacions en el suport (per exemple, les ﬁtxes perforades de 80 columnes i les de 96 columnes, les cintes perforades...).</p>
+<ul>
+<li>Magnètics.</li>
+</ul>
+<p>Mantenen la informació codiﬁcada per mitjà de dispositius magnètics (per exemple, els disquets).</p>
+<ul>
+<li>Òptics. Els continguts d’aquests suports es manipulen mitjançant tècniques</li>
+</ul>
+<p>especials com la reﬂexió de la llum (per exemple, el CD-ROM, el DVD...).</p>
+<ul>
+<li>Altres tipus. Formen part d’aquest grup tots els suports que no podem situar</li>
+</ul>
+<p>en cap dels grups anteriors i que es limiten a presentar els resultats d’un procés (per exemple, el monitor).</p>
+<h4>4) Per la seva situació</h4>
+<ul>
+<li>Locals. El suport està situat en el mateix lloc en què es manipularà.</li>
+<li>Remots. El suport no està situat en el mateix lloc en què es manipularà la</li>
+</ul>
+<p>informació, sinó en un altre. Per a manipular els continguts dels diferents suports informàtics, l’ordinador necessita els dispositius perifèrics, també coneguts com a perifèrics d’entrada i sortida o unitats d’entrada/sortida. Perifèrics Tot ordinador, per potent que sigui, necessita comunicar-se amb l’ésser humà, que el programa, li introdueix dades i aproﬁta els resultats del treball de la màquina.</p>
+<p>Un dispositiu perifèric és una unitat capaç de manipular el suport de dades i que permet comunicar l’usuari i l’ordinador. Com ja hem dit, els perifèrics són dispositius que es fan servir per a comunicar-se amb l’ordinador. Han d’estar connectats a l’ordinador, ja que tots sols no tenen capacitat per a efectuar les funcions per a les quals han estat dissenyats.</p>
+<p>En els entorns informàtics, també s’utilitzen altres dispositius per a tasques complementàries. Aquests dispositius no necessiten estar connectats a l’ordinador per a fer la seva feina i són capaços de treballar independentment. Són els dispositius auxiliars. Per exemple, les màquines perforadores de ﬁtxes, les talladores de paper continu...</p>
+<p>Com hem fet per als suports d’informació, establirem una classiﬁcació dels perifèrics tenint en compte tot un seguit de criteris</p>
+<h4>1) Segons la funció</h4>
+<ul>
+<li>Perifèrics d’entrada. La seva funció és l’entrada de dades des de l’exterior ﬁns</li>
+</ul>
+<p>a la memòria principal de l’ordinador (per exemple, el teclat, el ratolí, l’escàner...). Dispositius auxiliars Els dispositius auxiliars no necessiten estar connectats a l’ordinador per a fer la seva feina. Són capaços de treballar independentment.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Perifèrics de sortida.</li>
+</ul>
+<p>La seva funció és treure les dades de la memòria principal a l’exterior (per exemple, el monitor, les impressores, el traçador...).</p>
+<ul>
+<li>Perifèrics d’entrada/sortida.</li>
+</ul>
+<p>Són els dispositius capaços de fer les dues funcions anteriors en una mateixa màquina (per exemple, les unitats de discos magnètics, les unitats de cintes magnètiques...).</p>
+<h4>2) Per la situació que tenen respecte a la CPU</h4>
+<ul>
+<li>Locals Estan situats molt a prop de la CPU.</li>
+<li>Remots. Estan situats lluny de la CPU; per tant, per a gestionar-los calen</li>
+</ul>
+<p>sistemes complementaris (per exemple, els encaminadors, els mòdems...). Els perifèrics no són fàcils ni còmodes d’utilitzar per als processos. D’altra banda, aquests no necessiten conèixer les característiques dels perifèrics, només els intercanvis de dades. Per tant, aquests detalls han d’estar amagats, i així les operacions d’entrada/sortida seran independents del tipus i model del dispositiu.</p>
+<p>Generalment, els perifèrics són a l’exterior de l’ordinador, encara que alguns (per exemple, la targeta de so...), es troben a dintre. La transferència d’informació entre el processador i els perifèrics es fa seguint el camí: processador, controlador, bus extern, interfície i perifèric(vegeu la ﬁgura 1.12).</p>
+<p>Figura 1.12. Esquema de l’operació d’entrada-sortida Interfície processador-perifèric La comunicació que s’estableix entre el processador i els perifèrics es pot produir per alguns dels camins següents</p>
+<h4>1) Registres. Els dispositius es poden connectar al processador per mitjà dels</h4>
+<p>registres dels dispositius, als quals es pot accedir directament en una zona determinada de memòria o, indirectament, per ordre del maquinari que retorna l’estat del dispositiu.</p>
+<ul>
+<li>Controladors.</li>
+</ul>
+<p>Els dispositius complexos (discos, etc.) no es connecten directament al processador, sinó per mitjà d’un controlador que conté l’estat del dispositiu, el controla i comprova les dades transferides. El controlador accepta les ordres del processador i s’hi comunica per mitjà de registres com si fos un dispositiu. El controlador, també anomenat unitat de control, pot gestionar</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic diversos dispositius del mateix tipus.</p>
+<h4>3) Canals. Normalment, els controladors estan connectats al processador per</h4>
+<p>un canal o processador d’entrada/sortida (IOP, input/output processor ). La ﬁnalitat d’un canal és aconseguir que els dispositius es tractin com a transparents. Els comandaments manipulen els canals i, quan acaben, el control torna al processador. Per a tenir una visió tan àmplia com sigui possible dels dispositius d’entrada/sor- tida, cal que fem referència al controlador.</p>
+<p>Els controladors són el programari format per un conjunt de programes i taules que formen part del nucli del sistema operatiu, que executen i controlen totes les operacions d’entrada/sortida sobre qualsevol perifèric connectat a l’ordinador. A més, el controlador conté la informació que caracteritza cada perifèric connectat a l’ordinador, i uns programes que controlen la gestió pròpia i la de les informa- cions que circulen en qualsevol sentit. Està situat permanentment en la memòria principal. L’esquema de composició d’un driver s’observa a la ﬁgura 1.13.</p>
+<p>Figura 1.13. Esquema del controlador Dispositius d’entrada Els dispositius d’entrada són totes les màquines que ens permeten introduir informació de l’exterior a la memòria central. Avui dia, n’hi ha molts que poden fer aquesta funció: els teclats, els ratolins, els escàners...</p>
+<p>A la taula 1.5, podeu veure les característiques d’alguns perifèrics d’entrada.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.5. Perifèrics d’entrada Perifèric Característiques Teclat Cinc àrees: teclat alfanumèric, teclat numèric, tecles de funció, tecles del cursor i tecles especials. Ratolí Els seus moviments es reﬂecteixen en la pantalla (cursor). Simpliﬁca la selecció de funcions.</p>
+<p>Palanques de control Joystick i similars. Principalment per a jocs (3D). De diversos tipus. Escàner Digitalitza imatges i textos (mitjançant el reconeixement òptic de caràcters). De diversos tipus: de taula de corró i de mà. Pantalles tàctils Són pantalles que serveixen per a detectar pulsacions pel canvi de temperatura. S’utilitzen en centres d’ús públic.</p>
+<p>Digitalització d’imatges i so Són targetes que detecten senyals analògics i els converteixen en digitals. Juntament amb la targeta de so, s’acostuma a incloure un micròfon. Tauletes digitalitzadores i llapis òptics. Utilitzades per a dibuix i arts gràﬁques. Es tracta d’una taula en què es fa el dibuix amb un llapis òptic.</p>
+<p>El llapis es pot utilitzar independentment com una pantalla tàctil. Càmeres fotogràﬁques digitals Digitalitzen imatges estàtiques. Fan a la vegada els processos de fotograﬁa i escaneig. Minicàmeres de vídeo (webcam) S’utilitzen d’ençà de l’auge d’Internet. Es poden utilitzar simultàniament amb micròfon i auriculars.</p>
+<p>Lectors de codi de barres Detecten l’amplada i la separació de les bandes. Quan llegeixen el senyal accedeixen a la base de dades en què hi ha la informació del producte. Altres Dispositius per a nens, persones amb discapacitats, de reconeixement de la veu, etc. Dispositius de sortida Formen part del grup de dispositius de sortida tots els perifèrics que tenen com a funció principal visualitzar la informació que hi ha emmagatzemada a la memòria principal.</p>
+<p>En podem destacar els següents: els traçadors, les impressores i els monitors. A la taula 1.6 podeu veure les característiques d’alguns perifèrics de sortida. Taula 1.6. Perifèrics de sortida Perifèric Característiques Monitor A més de ser un dispositiu de sortida, permet comprovar les entrades de dades. Les imatges es formen a partir de petits punts de llum (píxels). Com més punts té el monitor, millor qualitat d’imatge obtenim.</p>
+<p>Impressora Plasma en paper la informació procedent de l’ordinador. Tipus: de matriu, tèrmiques, d’injecció de tinta i de làser.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Taula 1.6 (continuació) Perifèric Característiques Traçador Imprimeix gràﬁcs de gran qualitat. Funciona amb retoladors que es desplacen sobre el paper. Altaveu Proporciona la sortida d’àudio. N’hi ha de diversos tipus i potències.</p>
+<p>Sintetitzador de veu Dóna els resultats d’un programa generant sons similars als de la parla humana. Dispositius d’entrada/sortida La característica principal dels dispositius d’entrada/sortida és que el mateix dispositiu pot actuar com a dispositiu d’entrada en un moment determinat i, en un altre, com un dispositiu de sortida.</p>
+<p>Exemples: les unitats de cintes magnètiques, les unitats de discos magnètics, etc. Aquestes són les característiques d’alguns perifèrics d’entrada/sortida. Perifèrics d’entrada-sortida</p>
+<ul>
+<li>Cintes magnètiques: són reutilitzables, però no direccionables.</li>
+</ul>
+<p>Això implica que l’accés és lent.</p>
+<ul>
+<li>Discos magnètics. Poden ser</li>
+</ul>
+<p>Flexibles: Reutilitzables, direccionables i portables. Discos de plàstic recoberts d’una superfície magnètica. Dividits en sectors. Poca capacitat. Diferents tipus: 3,5 polzades (720 KB a 2,88 MB) o 5,25 polzades (de 360 KB a 1,2 MB). – Durs: Reutilitzables i direccionables. Normalment, van a dins d’una carcassa. Formats per diverses capes de discos. Des de 20 MB ﬁns a uns quants GB.</p>
+<p>Altres: Discos de cartutxos, Winchester, etc., com els ZIP i els JAZ.</p>
+<ul>
+<li>Discos òptics. Poden ser</li>
+</ul>
+<p>CD-ROM: Direccionables i portables. La lectura es fa per mitjans òptics. Alta capacitat d’emmagatzematge, barats i segurs. Són els més utilitzats actualment. Diferents tipus: CD-R, CD-RW, etc. – DVD: Semblants als CD però amb més capacitat (d’aproximadament uns quants GB).</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 1.3 Estructura externa d’un sistema microinformàtic L’estructura externa d’un equip microinformàtic consta bàsicament de quatre elements (ﬁgura 1.14) que han de permetre establir la relació directa entre l’usuari del sistema i la CPU</p>
+<ul>
+<li>Unitat central</li>
+<li>Monitor (element de sortida)</li>
+<li>Teclat (element d’entrada)</li>
+<li>Ratolí (element d’entrada)</li>
+</ul>
+<p>Figura 1.14. Estructura externa d’un equip microinformàtic Actualment es disposa, també, d’una gran varietat d’altres elements d’entrada- sortida, com ara impressores, altaveus externs, mòdem/encaminador (router), auriculars/micròfon, webcam... (ﬁgura 1.15). Figura 1.15. Encaminador i altaveus externs A la unitat central hi ha les unitats d’emmagatzemament d’informació (disquetera, disc dur, ZIP...), el lector de DVD/CD-ROM, la targeta gràﬁca, la targeta de so..., a més de la placa base, el microprocessador i la memòria.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Els elements externs a la unitat central es connecten mitjançant els seus respectius cables i connectors. Aquests connectors són, normalment, especíﬁcs per a cada element, tot i que hi pot haver elements que utilitzin el mateix tipus de connector.</p>
+<p>Per exemple, el teclat i el ratolí utilitzen un connector de tipus PS/2 i es diferencien l’un de l’altre pel color: verd per al connector del ratolí i violeta per al connector del teclat. Aquests connectors són els següents</p>
+<ul>
+<li>DIN femella: és de cinc forats i correspon a l’antic connector de teclat</li>
+</ul>
+<p>estàndard. Actualment no s’utilitza.</p>
+<ul>
+<li>PS/2 femella: és el connector del teclat i el ratolí de tipus PS/2. S’anomena</li>
+</ul>
+<p>també mini DIN.</p>
+<ul>
+<li>DE-9 mascle: connector de nou pius. És el connector en sèrie RS-232C.</li>
+</ul>
+<p>S’anomena COM1. Actualment no se sol utilitzar. Era el connector utilitzat en els primers ordinadors per a la connexió del ratolí.</p>
+<ul>
+<li>DB-25 mascle: connector de vint-i-cinc pius. És el connector en sèrie RS</li>
+</ul>
+<p>232C. Pot ser també de nou pius. S’anomena COM2 i actualment no es troba pràcticament a cap ordinador.</p>
+<ul>
+<li>DB-25 femella: connector de vint-i-cinc forats. És el connector en paral·lel</li>
+</ul>
+<p>Centronics o LPT1. S’utilitza per a la connexió d’impressores, tot i que la majoria ja es connecten a l’ordinador mitjançant el connector USB.</p>
+<ul>
+<li>DB-15 HD (alta densitat) femella</li>
+</ul>
+<p>sortida de vídeo de quinze forats distribuïts en tres ﬁleres. És el connector de sortida de la targeta gràﬁca VGA i SVGA.</p>
+<ul>
+<li>DB-15 femella: és el connector de jocs.</li>
+<li>USB: és el connector del bus en sèrie universal.</li>
+<li>RJ11: és el connector de mòdem per a connectar la línia telefònica.</li>
+<li>RJ45: és el connector de xarxa.</li>
+</ul>
+<p>Detall de connectors de ratolí, port en sèrie COM1 i PS2 Actualment no trobarem en cap ordinador connectors del tipus DIN ni del tipus DB-25 mascle (vegeu la ﬁgura 1.16). I la resta solen estar codiﬁcats amb diferents colors. Això pot permetre’ns, en un moment determinat, decidir la viabilitat de poder reparar l’ordinador o no.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic En la secció “Adreces d’interès” del web del mòdul trobareu més informació sobre els diferents tipus de connectors. Figura 1.16. Connectors d’un PC antic Cable Centronics. Els connectors són: DIN femella, DB-9 mascle, DB-15 HD femella, DB-15 femella i DB-25 mascle i femella; aquests indiquen que es tracta d’un PC molt antic.</p>
+<p>Figura 1.17. Detall de connectors d’un PC actual A la ﬁgura 1.17 s’observen els connectors típics d’un ordinador actual. Veiem els connectors de tipus PS/2 per a ratolí i teclat (verd i violeta), els connectors USB, RJ45 i diferents tipus de connectors de vídeo i d’àudio. Veiem també que la majoria de connectors segueixen una codiﬁcació de colors que facilita la connexió amb l’element corresponent.</p>
+<p>Aquests connectors ens indiquen que la reparació d’una possible avaria del PC és factible, ja que els elements que cal substituir són fàcils d’obtenir. 1.3.1 L’estructura física d’un equip informàtic Més enllà del disseny abstracte amb què podem explicar un ordinador, tenim un maquinari comercial que és el que podem trobar a les botigues. Podem anomenar aquest maquinari “real” també l’estructura física d’un equip informàtic.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Cal fer esment, però, que aquesta estructura està basada en un equip informàtic de sobretaula, en què tenim una unitat central (coneguda habitualment com la “torre”) i una sèrie de dispositius que s’hi connecten, com són el monitor, el teclat, el ratolí i altres perifèrics que siguin necessaris per al seu propòsit. Existeixen altres estructures físiques lleugerament diferents segons quina sigui la seva ﬁnalitat.</p>
+<p>Per exemple, un ordinador portàtil té integrat el monitor amb la seva unitat central i el teclat. També un media center pot disposar només com a perifèric d’entrada/sortida d’un comandament a distància, etc. Figura 1.18. Estructura física-funcional d’un equip microinformàtic L’estructura física/funcional fa referència a l’estructura física real en què cadascun dels elements compleix una funció determinada i es poden trobar per separat i subministrats per diferents fabricants. Aquesta estructura es representa a la ﬁgura</p>
+<h4>1.18. La unitat central porta associats els elements d’entrada (costat esquerre), els</h4>
+<p>elements de sortida (costat dret) i els elements interns (a sota). S’han representat només els elements més utilitzats per tal que l’esquema sigui tan aclaridor com sigui possible, però en el mercat hi ha molts dispositius que poden connectar-se als ports en sèrie/paral·lel per a l’entrada i sortida de dades.</p>
+<p>La placa base o placa mare (mainboard o motherboard, en anglès) porta el sòcol on es col·loca el microprocessador; aquests dos elements són els que deﬁneixen les característiques més importants que pot tenir l’ordinador. De la placa base depenen, a més del microprocessador, tots els elements que s’hi puguin connectar, com ara la memòria RAM, la targeta de vídeo, la targeta d’àudio, la targeta de xarxa, etc.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<h3>2. Placa base: components i conﬁguració</h3>
+<p>A la placa base de l’ordinador podem trobar els components fonamentals que conformen un ordinador. Per tal de conèixer aquest maquinari fonamental començarem fent una introducció al concepte de maquinari, tal com s’entén en l’entorn de la informàtica. Les màquines informàtiques o els sistemes informàtics més habituals en la informàtica són els ordinadors. Llavors, podem dir que un ordinador està compost per un conjunt de maquinari (que inclou la caixa o carcassa i tots els components interns d’aquesta, a més de tots els elements externs o perifèrics: el monitor, el teclat, el ratolí, etc.) i un conjunt de programari (software, en anglès) que permet usar més còmodament els ordinadors i treure’n el màxim proﬁt.</p>
+<p>El maquinari que forma actualment els ordinadors ha canviat al llarg del temps, a mesura que la tecnologia ha evolucionat. Conèixer aquesta evolució ens permetrà comprendre millor el maquinari actual i les tendències futures. A continuació, es presenta un esquema sobre l’evolució històrica de l’arquitectura dels ordinadors des del primer computador ﬁns avui dia</p>
+<ul>
+<li>Es pot considerar que Charles Babbage (1792-1871) va dissenyar el primer</li>
+</ul>
+<p>ordinador, anomenat màquina analítica. Però no el va poder fer funcionar realment, ja que la tecnologia de la seva època no era prou precisa.</p>
+<ul>
+<li>La primera generació de veritables ordinadors es va caracteritzar per la</li>
+</ul>
+<p>seva arquitectura de tubs de buit (1945-1955). Eren màquines molt grans i molt lentes.</p>
+<ul>
+<li>La segona generació la van constituir les màquines basades en transistors</li>
+</ul>
+<p>(1955-1965). Gràcies a la introducció del transistor, es van començar a construir mainframes o macrocomputadors.</p>
+<ul>
+<li>La tercera generació (1965-1980) fou la dels circuits integrats o xips. La</li>
+</ul>
+<p>incorporació dels circuits integrats en xips possibilità la creació d’ordina- dors més petits.</p>
+<ul>
+<li>La quarta generació (des de 1980) és la dels PC (ordinadors personals o mi</li>
+</ul>
+<p>croordinadors). En aconseguir-se un xip que integrés un microprocessador, els ordinadors van baixar de preu. ENIAC: mítica màquina de primera generació construïda amb tubs de buit Actualment, doncs, el maquinari dels ordinadors consta d’una sèrie de components electrònics, que continuen evolucionant a mesura que ho fa la tecnologia.</p>
+<p>Les parts de maquinari fonamentals dels ordinadors actuals són la placa base –que és la que controla i interconnecta la resta de dispositius del sistema–, el processador –que moltes vegades ha estat deﬁnit com el cervell del sistema Podeu trobar més informació sobre la història de la informàtica a la secció Adreces d’interès dels materials web.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic perquè implementa la unitat central de processament i executa els programes– i la memòria principal –que és la part que emmagatzema la informació i els programes en execució. 2.1 Placa base La placa base també és coneguda com a placa mare i amb els termes anglesos mainboard o motherboard.</p>
+<p>És la targeta de circuits impresos principal de l’ordinador, on, gràcies a les ranures o slots, es connecten el processador, la memòria, la targeta gràﬁca, la targeta de so, els controladors per a discos durs, els perifèrics, etc. Placa base La placa base està constituïda per diversos elements o components, cadascun amb diferents funcions. A continuació, se’n proporciona una llista no exhaustiva</p>
+<ul>
+<li>Chipset o joc de xips</li>
+<li>Busos</li>
+<li>BIOS</li>
+<li>Ranura o sòcol per al processador</li>
+<li>Ranures o sòcols per a la memòria</li>
+<li>Ranures d’expansió</li>
+<li>Pila</li>
+<li>Rellotge</li>
+<li>Ponts de conﬁguració</li>
+<li>Connector d’alimentació</li>
+<li>Connectors de les interfícies IDE</li>
+<li>Connectors per a perifèrics...</li>
+</ul>
+<p>La distribució d’aquests components de la placa base i les seves dimensions depe- nen d’estàndards. L’estàndard més habitual actualment és l’ATX (que concorda amb el seu equivalent en carcasses), però n’hi ha molts altres, com ara l’antic AT, o d’altres derivats de l’ATX com el baby ATX, el mini ATX, el micro ATX, el mini ITX... També hi ha estàndards com el que es preveu que substituirà l’ATX en un futur proper, el BTX.</p>
+<p>L’estàndard ATX és l’estàndard més utilitzat actualment per a la distribució i organització dels diferents components dintre de les plaques base. L’ATX té unes dimensions de 12′′ × 9,6′′, és a dir, de 305 mm × 244 mm.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Darrerament les plaques base incorporen, integrats, certs components que anteri- orment tan sols es podien afegir a l’ordinador com a components independents, connectats a aquesta placa base. Aquests components integrats poden ser els següents</p>
+<ul>
+<li>Controladors de dispositius: xips que controlen els discos durs, disqueteres</li>
+</ul>
+<p>o ports en sèrie.</p>
+<ul>
+<li>Targeta de so integrada.</li>
+<li>Controladora de vídeo o targeta de vídeo integrada.</li>
+<li>Targeta de xarxa Ethernet integrada.</li>
+<li>Mòdem integrat...</li>
+</ul>
+<p>La integració de components fa que baixi el preu dels ordinadors. A més, es guanya en comoditat de muntatge, ja que hi ha menys cables i targetes a l’interior de la carcassa. També fa disminuir la temperatura a l’interior de la caixa i n’afavoreix la ventilació. Alguns detractors d’aquest sistema assenyalen la menor qualitat dels dispositius integrats en comparació dels tradicionals i el fet que el no- funcionament d’un d’aquests components integrats el fa pràcticament irreparable, ja que la reparació d’una part de la placa base pot resultar complicada i costosa.</p>
+<p>2.1.1 El joc de xips El chipset o joc de circuits integrats o xips consisteix, normalment, en un parell de xips (northbridge i southbridge) que controlen les connexions entre diferents parts de l’ordinador. Es tracta d’una de les parts més importants de la placa base, ja que del joc de xips depèn, en gran part, el bon funcionament i el control de tot el sistema.</p>
+<p>Normalment, el xip northbridge (situat tradicionalment a la part superior –nord– a les plaques base ATX) s’encarrega de controlar la comunicació del proces- sador amb la memòria cau i la memòria central, i de la comunicació amb el southbridge (situat tradicionalment a la part inferior –sud– a les plaques base ATX). El southbridge normalment s’encarrega del control dels ports, dispositius d’emmagatzematge, targetes d’expansió...</p>
+<p>2.1.2 BIOS El nom de BIOS és l’acrònim anglès de basic input-output system. Podeu consultar un llistat dels principals fabricants de xipsets en l’apartat “Adreces d’interès” del web del mòdul.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu consultar els webs d’alguns dels principals fabricants de BIOS en l’apartat “Adreces d’interès” del web del mòdul. El BIOS és un subsistema de l’ordinador ubicat en un xip de la placa base. Aquest xip conté microprogramari (ﬁrmware, en anglès) allotjat bàsicament en memòria EPROM (erasable programmable read only memory) i memòria de tipus ﬂaix (ﬂash memory) no volàtil, que pot ser esborrada i reprogramada elèctricament.</p>
+<p>El BIOS s’encarrega, en primera instància, de detectar i comprovar tots els components connectats a l’ordinador per a oferir connexió d’aquests amb el sistema operatiu. Aquest procés és anomenat POST (power-on self-test). La conﬁguració del BIOS es pot fer per mitjà d’una interfície d’aplicació no visual que es pot carregar en iniciar l’ordinador, normalment prement una tecla (per exemple la tecla Del, o la tecla F2) o una combinació de tecles, segons s’indiqui en iniciar-se el sistema.</p>
+<p>En l’aplicació de conﬁguració del BIOS es pot introduir una contrasenya perquè els usuaris no autoritzats no el puguin reconﬁgurar. També des del BIOS es pot establir una contrasenya d’accés a l’ordinador. Les funcionalitats més habituals i útils són les següents</p>
+<ul>
+<li>Canviar la data i hora del sistema.</li>
+<li>Visualitzar i conﬁgurar els dispositius d’emmagatzematge (disquets, discos</li>
+</ul>
+<p>durs, CD, DVD...).</p>
+<ul>
+<li>Canviar la contrasenya d’accés al BIOS.</li>
+<li>Conﬁguració de dispositius com el teclat.</li>
+<li>Conﬁguració dels ports i dispositius PCI, USB...</li>
+<li>Conﬁguració de paràmetres avançats, com ara de freqüència del processa</li>
+</ul>
+<p>dor, de la memòria, actualització del BIOS...</p>
+<ul>
+<li>Conﬁguració de sistemes d’estalvi d’energia (per a monitor i discos).</li>
+<li>Seqüència de dispositius d’engegada (ordre en què s’iniciarà la càrrega del</li>
+</ul>
+<p>sistema). Se sol deixar en primer lloc la disquetera, si n’hi ha –per introduir un disquet de recuperació en cas necessari–, el disc dur principal –per a carregar, per defecte, el sistema operatiu que té instal·lat–, i la unitat de CD.</p>
+<ul>
+<li>Desar o no els canvis realitzats.</li>
+</ul>
+<p>En sortir de l’aplicació de conﬁguració del BIOS, es poden acceptar i emmagat- zemar els canvis introduïts o bé sortir sense gravar-los. En cas de no estar segurs dels canvis introduïts, la millor opció és deixar la conﬁguració inicial. Actualment, també, els fabricants permeten actualitzar el programari del BIOS per a obtenir noves funcionalitats o controls. L’actualització del BIOS és un procés delicat perquè una mala conﬁguració podria deixar l’ordinador sense funcionar.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.3 Connector del processador La zona preparada per a connectar el processador a la placa base es coneix amb el nom de connector del processador. De vegades també s’anomena sòcol del processador. En anglès, s’utilitzen els termes slot (ranura) o socket.</p>
+<p>Aquest connector presenta formats diferents segons la família de processadors que s’hi vulgui connectar. Els formats més típics per a ranures de processadors són els següents</p>
+<ul>
+<li>PGA (acrònim anglès de pin grid array). Es tracta d’un sistema per a antics</li>
+</ul>
+<p>processadors 286, 386 i 486. Malgrat que n’hi ha diversos submodels depe- nent del processador concret, la forma general consistia en una quadrícula plena de petits connectors on s’introduïen els pius del xip del processador a pressió.</p>
+<ul>
+<li>ZIF (acrònim anglès de zero insertion force). En paral·lel amb el sistema</li>
+</ul>
+<p>PGA, es va crear aquest sistema mecànic que facilitava la inserció del xip del processador sense haver de fer força i així evitava el deteriorament dels pius.</p>
+<ul>
+<li>LGA (acrònim anglès de land grid array). Aquest nou sistema sorgeix en</li>
+</ul>
+<p>els processadors Pentium 4 i AMD64. Canvia el sistema de subjecció de pius.</p>
+<ul>
+<li>D’altres. S’han creat altres sistemes de connexió del processador a la placa</li>
+</ul>
+<p>base com ara slot 1, que es va crear per a Pentium II. Consistia en una ranura allargada, semblant a les ranures d’expansió PCI. AMD també va crear uns sòcols en aquest format allargat per als primers AMD K7. Actualment, les versions dels formats de connectors més usats són les següents</p>
+<ul>
+<li>Per a processadors Intel</li>
+</ul>
+<p>Socket 478, per a alguns Intel Pentium 4 i Celeron. – Socket T o LGA775, per a Intel Pentium Extreme Edition, Petium D i Intel Core Duo. – Socket P, per a processadors Intel Core 2 d’ordinador portàtil. – Socket 441, per a processadors Intel Atom, utilitzats en ordinadors ultraportàtils i smart phones (telèfons intel·ligents).</p>
+<p>Socket B o LGA1366 per a Intel Core i7 i i9, – Socket H o LGA1156 per a Intel Core i3, i6 i i7.</p>
+<ul>
+<li>Per a processadors AMD</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic La memòria volàtil... ... és la memòria que no manté la informació una vegada s’apaga l’ordinador. Les interfícies de connexió... ... són les zones on s’interconnecten pròpiament els mòduls de memòria amb la placa base. Se solen caracteritzar pel nombre de pius o contactes de què disposen.</p>
+<p>Socket 754, per a microprocessadors Athlon 64, Sempron i Turion 64. – Socket 939, per a AMD Athlon 64 i Opteron. – Socket S1, per a AMD Turion 64, Athlon 64 Mobile i Sempron. – Socket AM2 (substitut del Socket 939), per a AMD Opteron. – Socket AM2+ per a AMD Athlon 64, Athlon X2 i Phenom.</p>
+<p>Socket AM3 per a AMD Phenom II i AMD Athlon II. Tant en el cas d’AMD com d’Intel estan ordenats per ordre d’aparició. Alguns dels models han estat utilitzats tant en ordinadors de sobretaula com en portàtils, com és el cas del Socket 754 d’AMD. Altres han estat dissenyats directament per a la informàtica mòbil, com el Socket 441 d’Intel.</p>
+<p>Addicionalment, a sobre del processador, se solen posar ventiladors o dissipadors per a mantenir una temperatura adequada per al bon funcionament del processador i del sistema. 2.1.4 Ranures o sòcols de memòria Les ranures o sòcols de memòria són les zones on s’insereixen els mòduls de memòria principal.</p>
+<p>Els mòduls de memòria principal, o simplement mòduls de memòria, són com petites targetes on hi ha connectats els xips de memòria volàtil de tipus RAM (random access memory). Aquests mòduls de memòria es troben en formats i interfícies de connexió amb la placa base diferents. Els tipus de mòduls, amb les seves interfícies més habituals, són els següents</p>
+<ul>
+<li>SIMM (single in-line memory module). Per a plaques base amb busos de</li>
+</ul>
+<p>ﬁns a 32 bits. Hi ha dues modalitats d’interconnexió amb la placa base: – 30 pius o 30 contactes – 72 pius o 72 contactes</p>
+<ul>
+<li>DIMM (dual in-line memory module). Per a sistemes de 64 bits. Se solen</li>
+</ul>
+<p>interconnectar per mitjà d’interfícies de 168 pius.</p>
+<ul>
+<li>DIMM DDR (DIMM per a DDR SDRAM). La interfície de connexió és de</li>
+</ul>
+<p>184 pius.</p>
+<ul>
+<li>DIMM DDR2 (DIMM per a DDR2 SDRAM). Amb una interfície de 240</li>
+</ul>
+<p>pius. Sistema que millora DIMM DDR però que no és compatible.</p>
+<ul>
+<li>RIMM (rambus in line memory module). Amb una interfície de 184 pius.</li>
+</ul>
+<p>Actualment, en desús.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.5 Busos Els busos són un conjunt de línies de transmissió tradicionalment en paral·lel, tot i que actualment se’n fan de sèrie, que serveixen per a intercomunicar els diferents blocs (unitat central de processament, memòria, equips perifèrics, etc.) que componen un ordinador.</p>
+<p>Els busos, doncs, proporcionen el camí per a comunicar el processador amb la resta de dispositius integrats o connectats a la placa base i aquests amb aquells. La velocitat a la qual es transmeten les dades sobre aquests busos és determinant, juntament amb l’eﬁciència del joc de xips, per a garantir uns bons resultats de la placa base.</p>
+<p>Els busos poden tenir sistemes de comunicació</p>
+<ul>
+<li>En paral·lel. Aquests sistemes permeten transmetre diversos bits simul</li>
+</ul>
+<p>tàniament per diversos ﬁls (com, per exemple, els busos FSB, ISA, ATA, SCSI, PCI...). Dintre dels busos en paral·lel hi ha amplades de bus diferents (normalment de 8, 16, 32 i, actualment, 64 bits de transmissió en paral·lel).</p>
+<ul>
+<li>En sèrie.</li>
+</ul>
+<p>Transmeten un bit darrere l’altre, seqüencialment. En són exemples els busos USB, FireWire, Serial ATA, PCI Express... Tradicionalment, els busos eren en paral·lel i estaven lligats a la freqüència del rellotge del bus. Actualment, es fan busos en sèrie molt ràpids aproﬁtant les seves característiques elèctriques i gràcies al fet que aquests busos no estan lligats al rellotge.</p>
+<p>Moltes vegades, en fer referència als busos, no solament s’inclouen en el concepte els canals o línies de transmissió, sinó que també s’hi associen les ranures, slots o connectors ﬁnals que permeten comunicar els diferents elements del sistema amb la placa base. Així, doncs, en parlar de bus PCI, ens referim tant a les línies impreses a la placa base que compleixen les especiﬁcacions corresponents, com a les ranures d’expansió homònimes que ofereixen la interfície amb els dispositius o targetes que ﬁnalment hi connectarem.</p>
+<p>Podem distingir diferents tipus de busos, depenent de la funcionalitat o dels dispositius que interconnectin. Els més importants són els següents</p>
+<ul>
+<li>Bus de sistema. Conegut amb el terme anglès FSB (acrònim de front</li>
+</ul>
+<p>side bus) o simplement system bus. Es tracta d’un bus que ha d’oferir un rendiment màxim, ja que comunica el processador amb el joc de xips.</p>
+<ul>
+<li>ISA (industry standard architecture). Tipus de bus antic (es va crear al</li>
+</ul>
+<p>principi dels vuitanta), inicialment de 8 bits, i posteriorment de 16 bits.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Ofereix unes ranures homònimes per a connectar-hi targetes d’expansió. Actualment està en desús.</p>
+<ul>
+<li>EISA (extended industry standard architecture). Compatible amb targetes</li>
+</ul>
+<p>ISA, n’estén i millora les característiques. S’ofereix en 32 bits. Actualment en desús.</p>
+<ul>
+<li>MCA (micro channel architecture). Bus creat per IBM per a millorar els</li>
+</ul>
+<p>busos ISA, tot i que són incompatibles entre aquells. Funciona amb 32 bits. No es va utilitzar gaire.</p>
+<ul>
+<li>VESA (video electronics standards association). També anomenat VESA</li>
+</ul>
+<p>local bus o, de manera abreujada, VL-Bus o VLB. Permetia connectar la targeta gràﬁca amb el processador i, així, augmentar-ne el rendiment. S’usava en plaques base per a 486. Actualment en desús.</p>
+<ul>
+<li>PCI (peripheral component interconnect). Bus que interconnecta la placa</li>
+</ul>
+<p>base amb les targetes d’expansió i, al mateix temps, amb els perifèrics. Fou creat per Intel. Aquests busos tenen una amplada de bus de 32 bits o de 64 bits, i milloren en rendiment i funcionalitat els anteriors. Els ordinadors actuals ofereixen la major part de ranures d’expansió per a targetes en aquest format. Un dels grans avantatges és el fet que amb un sistema operatiu PnP (plug and play), com els actuals, es poden reconèixer i autoconﬁgurar automàticament els dispositius que hi connectem. Es preveu que aquest bus en paral·lel se substitueixi pel seu successor en sèrie PCI-Express.</p>
+<ul>
+<li>PCMCIA (personal computer memory card industry association).</li>
+</ul>
+<p>Es tracta de busos per a ordinadors portàtils que permeten la connexió de dispositius externs. Són PnP i es poden inserir i extreure del sistema sense reiniciar-lo (en calent). Ofereixen la propietat de tenir un consum baix, que els fa molt apropiats per a ordinadors portàtils.</p>
+<ul>
+<li>AGP (accelerated graphics port). Es tracta d’un bus que connecta la placa</li>
+</ul>
+<p>base amb la targeta gràﬁca. Proporciona, respecte al bus PCI, un mitjà d’alta velocitat per a accelerar el processament dels gràﬁcs 3D. Actualment, el sistema PCI Express està deixant obsolet aquest tipus de busos.</p>
+<ul>
+<li>PCI Express (també conegut com a PCIe o PCIX, i com a 3GIO, de 3rd</li>
+</ul>
+<p>Generation I/O). Sistema de bus en sèrie que ofereix unes prestacions de velocitat superiors als busos anteriors. Connecta punt a punt els dispositius PCIe amb els ports de la placa base. Es preveu que substitueixi els busos anteriors. Sovint es considera un híbrid entre bus en sèrie i en paral·lel, ja que sol agrupar diverses línies o lanes per a crear interconnexions de més alta velocitat. Aquestes interconnexions es coneixen amb el multiplicador que les origina: x1, x4, x8, x16.</p>
+<ul>
+<li>USB (universal serial bus). Bus i port per a dispositius perifèrics que es va</li>
+</ul>
+<p>crear a mitjan anys noranta amb la idea de substituir els antics ports en sèrie i en paral·lel per a perifèrics. Com el seu nom indica, es tracta d’un bus en sèrie. Millora les prestacions del sistema PnP, ja que permet incorporar i extreure dispositius del sistema sense necessitat de reiniciar-lo (en calent).</p>
+<p>També ofereix energia elèctrica als dispositius que s’hi connecten.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.6 Ranures d’expansió Les ranures d’expansió o slots d’expansió són les zones o connectors que serveixen d’interfície entre la placa base i la resta de targetes que s’hi connecten directament (per exemple, targeta de so, targeta gràﬁca, targeta capturadora de vídeo...). Els noms i tecnologies de les ranures d’expansió van associats als busos corresponents.</p>
+<p>Les ranures més comunes (ﬁgura 2.1) són homònimes, doncs, dels busos que hi tenen associats</p>
+<ul>
+<li>ISA (industry standard architecture)</li>
+<li>EISA (extended industry standard architecture)</li>
+<li>VESA (video electronics standards association)</li>
+<li>PCI (peripheral component interconnect)</li>
+<li>AGP (accelerated graphics port)</li>
+<li>PCI Express (també conegut com a PCIe o PCIX, i com a 3GIO, de 3rd</li>
+</ul>
+<p>Generation I/O) Figura 2.1. Ranures d’expansió. D’esquerra a dreta i de dalt a baix, ranures d’expansió ISA, PCI, AGP i PCIe 2.1.7 Connectors interns Hi ha una sèrie d’elements interns de la carcassa o caixa de l’ordinador que cal controlar i connectar a la placa base. Aquests són bàsicament els següents</p>
+<p>Consulteu l’apartat “Recursos de contingut” del material web per a veure diversos tipus de ranures d’expansió.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Consulteu l’apartat “Recursos de contingut” del material web per a veure diversos tipus de connectors interns.</p>
+<ul>
+<li>La disquetera</li>
+<li>El disc dur o discos durs</li>
+<li>El lector/gravador de CD/DVD</li>
+</ul>
+<p>Per a connectar aquests elements interns a la carcassa de l’ordinador disposem, també, d’unes interfícies en la placa base. Aquestes interfícies poden obeir a diversos estàndards. Els sistemes estàndard (ﬁgura 2.2) més usats són els següents</p>
+<ul>
+<li>IDE (integrated device electronics). És un sistema de connexió per a dis</li>
+</ul>
+<p>positius d’emmagatzematge basat en el sistema ATA (advanced technology attachment) o parallelATA. En una placa base hi sol haver una interfície IDE de 34 pius per a la disquetera, i dues interfícies IDE de 40 pius (IDE primari i secundari). A cada piu es poden connectar dos dispositius IDE (un de màster o principal i l’altre d’esclau). És en les interfícies de 40 pius on es connecten els discos durs IDE, el lector de CD o DVD i les gravadores de CD/DVD, ﬁns a un màxim de quatre dispositius.</p>
+<ul>
+<li>SCSI (small computer system interface).</li>
+</ul>
+<p>Es tracta d’un sistema d’alt rendiment que, normalment, es fa servir per a discos durs de servidors. És més car que el sistema IDE.</p>
+<ul>
+<li>S-ATA o Serial ATA. Proporciona una velocitat més elevada de transmissió</li>
+</ul>
+<p>que el sistema paral·lel ATA. Té la capacitat de connectar els discos “en calent” (una vegada l’ordinador ja està engegat), i permet connectar ﬁns a set o quinze dispositius S-ATA. Figura 2.2. Connectors interns D’esquerra a dreta i de dalt a baix, connectors d’alimentació de la placa base, IDE, SCSI i S-ATA</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.1.8 Connectors externs Els connectors externs se solen anomenar ports i serveixen d’interfície per a connectar els perifèrics (teclat, ratolí, impressora...). Els ports que ofereix la placa base més freqüentment (ﬁgura 2.3) són els següents</p>
+<ul>
+<li>En sèrie.</li>
+</ul>
+<p>També anomenat RS232 o COM. Si n’hi ha més d’un a l’ordinador, prenen els noms successius de COM1, COM2, etc. Se solien usar per a connectar el ratolí, mòdems externs, etc. Hi ha dues modalitats, tot i que la primera és més habitual: – 9 pius – 25 pius</p>
+<ul>
+<li>En paral·lel. S’anomenen LPT1, LPT2... Típicament, s’hi connectaven les</li>
+</ul>
+<p>impressores i escàners. Presenta una interfície de 25 pius.</p>
+<ul>
+<li>USB (universal serial bus). Connector que es va crear a mitjan anys noranta</li>
+</ul>
+<p>amb la idea de substituir els antics ports en sèrie i en paral·lel. Com indica el seu nom, es tracta d’un bus en sèrie. Millora les prestacions del sistema PnP, ja que permet incorporar i extreure dispositius del sistema sense necessitat de reiniciar-lo. També ofereix energia elèctrica als dispositius que s’hi connecten. Hi ha dues variants principals dels connectors USB</p>
+<p>Connectors USB de tipus A – Connectors USB de tipus B</p>
+<ul>
+<li>PS/2. Port per al teclat i el ratolí (que substitueix els antics DIN de 5 pius</li>
+</ul>
+<p>i DE-9 RS-232 –serial mouse). Actualment, el port destinat al teclat és de color violeta, i el destinat al ratolí, verd.</p>
+<ul>
+<li>RJ45 (RJ prové de l’anglès registered jack). Es tracta d’un connector per a</li>
+</ul>
+<p>la connexió a la xarxa local.</p>
+<ul>
+<li>RJ11 (RJ prové de l’anglès registered jack). És la interfície del mòdem</li>
+</ul>
+<p>intern. Consisteix en un connector similar a l’RJ45, de dimensions més petites, per a connectar-hi la línia telefònica bàsica.</p>
+<ul>
+<li>Connectors d’àudio o jacks (darrerament segueixen l’estàndard de colors</li>
+</ul>
+<p>PC 99 creat per Microsoft i Intel).</p>
+<ul>
+<li>FireWire. Connector per a dispositius multimèdia de vídeo i àudio.</li>
+<li>Port per a jocs o port de joystick. És un port similar al port en paral·lel, de</li>
+</ul>
+<p>15 pius distribuïts en dues ﬁles.</p>
+<ul>
+<li>VGA. Interfície de la targeta gràﬁca amb el monitor. Presenta 15 pius</li>
+</ul>
+<p>agrupats en tres ﬁles. Consulteu l’apartat “Recursos de contingut” del material web per a distingir visualment cadascun d’aquests ports.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 2.3. Ports D’esquerra a dreta i de dalt a baix: ports en sèrie, VGA, en paral·lel, PS-2, USB (de tipus A i B), RJ45 i de targeta d’àudio 2.1.9 Connector d’alimentació És la zona on arriben els cables de la font d’alimentació que proporcionen subministrament elèctric a la placa base. En el cas de les plaques ATX, consisteix en un únic connector, que podeu veure a la ﬁgura 2.4.</p>
+<p>Figura 2.4. Connector d’alimentació d’una placa base Els estàndards de les plaques ATX suporten l’apagament de l’ordinador per part del programari –apagament del sistema sense necessitat de prémer l’interruptor de la carcassa de l’ordinador. 2.1.10 Pila La pila de l’ordinador, normalment de botó, s’utilitza bàsicament per a mantenir certa informació del BIOS, les característiques dels discos durs i el rellotge de l’ordinador.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic És, doncs, un element necessari per a no haver de reconﬁgurar tota aquesta informació cada vegada que s’engega l’ordinador. Cada cert nombre d’anys cal canviar la pila de l’ordinador. Aleshores, s’han de consultar, en el manual de la placa base, les característiques concretes i exactes de la pila (voltatge, dimensions...).</p>
+<p>2.1.11 El pont Un pont és un petit element que interconnecta un circuit elèctric. A la placa base i en altres components de l’ordinador, els ponts s’utilitzen per a conﬁgurar o ajustar el funcionament d’alguns dispositius. Per exemple, el voltatge de funcionament de la placa base o d’alguns dispositius que s’hi connecten directament.</p>
+<p>2.2 El processador Actualment, aquesta part de l’ordinador es coneix amb diversos noms. Els més comuns són els següents</p>
+<ul>
+<li>Processador</li>
+<li>CPU (acrònim de l’anglès central processing unit, és a dir, unitat central de</li>
+</ul>
+<p>processament)</p>
+<ul>
+<li>Microprocessador</li>
+</ul>
+<p>Estrictament, en els PC (ordinadors personals) hauríem de parlar de micropro- cessador, per diferenciar-lo del processador o CPU dels ordinadors centrals o mainframes (més potents). En la pràctica, però, el preﬁx micro s’omet, i així ho farem també en aquests materials.</p>
+<p>El processador és una de les parts més importants de l’ordinador. Es diu que el processador és el cervell de l’ordinador. Es tracta d’un xip que conté milions de transistors integrats. En aquest xip, s’executen seqüències d’instruccions o operacions conegudes com a programes.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.2.1 Freqüència del rellotge La característica principal del processador és la freqüència del rellotge (clock rate, en anglès) o unitat de temps mínima amb què s’executen operacions bàsiques com una suma de dos enters. S’expressa en cicles per segon o, més freqüentment, en hertzs i els seus múltiples. Són valors habituals 2,4 GHz, 3 GHz o 3,8 GHz. La freqüència del rellotge la marca un oscil·lador de quars.</p>
+<p>Malgrat que la freqüència del rellotge és un paràmetre important per a comparar processadors, per a determinar el rendiment d’un ordinador cal considerar, a més, altres paràmetres que hi intervenen, també molt importants, com ara l’amplada dels busos i la freqüència del rellotge del sistema, o l’eﬁciència del joc de xips, que són determinants per a calcular aquest rendiment ﬁnal.</p>
+<p>2.2.2 Alimentació Un paràmetre del processador que també cal tenir present és el voltatge d’alimenta- ció. Com més alts són els valors, més temperatura induïda hi ha. I el processador, si s’escalfa per sobre d’una temperatura de funcionament normal, resulta inestable i pot provocar un mal funcionament del sistema. Per això, normalment, per sobre del processador hi ha un ventilador o dissipador que procura que la temperatura no augmenti excessivament.</p>
+<p>2.2.3 Registres El processador inclou els registres o memòria de nivell 0. Es tracta d’un conjunt molt reduït d’espais d’accés molt ràpid i volàtil (que només hi és mentre l’ordinador està engegat). El conjunt de registres se sol anomenar banc de registres, i es caracteritza per l’amplada en bits de cada registre, que va de 8 bits a 64 bits, i que dóna nom al nombre de bits que pot tractar el processador. Els registres se solen classiﬁcar en els tipus següents</p>
+<ul>
+<li>Registres de dades</li>
+<li>Registres de condició</li>
+<li>Registres d’adreça</li>
+<li>Registres de propòsit general</li>
+<li>Registres de propòsit especíﬁc (que inclou el registre d’instrucció)</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Registres de coma ﬂotant</li>
+<li>Altres</li>
+</ul>
+<p>2.2.4 Memòria cau (cache) Una de les propietats que, en els últims temps, ha explotat la indústria en la tecnologia de disseny dels processadors és la d’incorporar (en el mateix xip de la CPU) un o diversos nivells de memòria addicional als registres, que anomenem memòria cau o cache.</p>
+<p>La memòria cau és una memòria de nivell 1 (perquè és d’accés més lent que els registres –nivell 0–, però d’accés molt més ràpid que la memòria principal o RAM –que resideix fora del processador). La memòria cau té una capacitat limitada en comparació de la memòria principal, i el seu objectiu és contenir duplicats (accessibles molt ràpidament) de les dades més utilitzades. La memòria cau també és volàtil (només hi és mentre l’ordinador està engegat).</p>
+<p>La memòria cau és, doncs, una memòria que ofereix una velocitat d’accés molt ràpida i una capacitat limitada, per a les dades que s’utilitzen més en un moment determinat. La presència d’aquest tipus de memòria millora el rendiment del processador. Actualment, s’exploten les memòries cau multinivell. Normalment, són memòri- es cau de dos nivells, tot i que hi ha màquines amb tres nivells. Habitualment, les memòries cau multinivell (multilevel) presenten un primer nivell (L1, o level 1) de memòria cau molt ràpida i amb capacitats molt limitades (per exemple, 64 kB), i un segon nivell (L2) una mica més lent però de més capacitat (per exemple, 1 MB o 2 MB). Actualment, aquests dos nivells solen estar integrats en el processador. En les màquines amb un tercer nivell de memòria cau (L3), aquest nivell de memòria, però, no és dintre del xip del processador. En aquest cas, es tracta d’un xip directament connectat a la CPU, però fora d’aquesta.</p>
+<p>2.2.5 Joc d’instruccions Respecte a les instruccions del processador, cada un té deﬁnit un conjunt d’ins- truccions que el caracteritza, i està preparat per a executar-les. Aquest conjunt d’instruccions se sol anomenar joc d’instruccions del processador. Segons com siguin aquestes instruccions, podem classiﬁcar els processadors segons si operen amb aquests tipus de conjunts d’instruccions</p>
+<ul>
+<li>RISC (reduced instruction set computer). Conjunt d’instruccions senzilles</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic i segmentables (divisibles en fases d’execució per a facilitar el disseny superescalar, pipeline en anglès).</p>
+<ul>
+<li>CISC (complex instruction set computer). Conjunt d’instruccions comple</li>
+</ul>
+<p>xes que solen contenir suboperacions. La majoria de processadors actuals ofereixen un conjunt d’instruccions CISC que internament es tradueixen en instruccions RISC per a facilitar el procés superescalar dels processadors. 2.2.6 Segmentació Els processadors executen seqüències d’instruccions. Cada instrucció es divideix en diverses fases d’execució. La divisió en fases d’una instrucció es coneix com a segmentació (pipeline, en anglès).</p>
+<p>Una instrucció se sol dividir en les fases següents</p>
+<ul>
+<li>Recollida de la instrucció. Cerca de la instrucció en la memòria.</li>
+<li>Descodiﬁcació. Determinació de la instrucció que s’ha d’executar.</li>
+<li>Recollida de dades. Cerca de les dades en memòria.</li>
+<li>Execució pròpiament dita.</li>
+<li>Escriptura dels resultats.</li>
+</ul>
+<p>2.2.7 Processadors superescalars Si s’executa cada fase de la instrucció seqüencialment, i no es comença la instrucció següent ﬁns que no s’hagi acabat l’anterior, deixem en repòs parts del processador a l’espera del seu torn. En canvi, si executem les instruccions com si es tractés d’una cadena de muntatge, de manera que cada fase d’una instrucció s’encadeni amb la de la instrucció següent, encavalcant instruccions, aproﬁtem la potència del processador al màxim (execució d’un conjunt d’instruccions molt més ràpidament). Aquests tipus de processadors s’anomenen processadors superescalars.</p>
+<p>Figura 2.5. Execució d’una seqüència d’instruccions en un ordinador no superescalar</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Figura 2.6. Execució d’una seqüència d’instruccions en un ordinador superes- calar A la ﬁgura 2.5, es pot veure la forma d’execució d’una seqüència d’instruccions segmentades en un ordinador no superescalar. A la ﬁgura 2.6, es pot veure la forma d’execució d’una seqüència d’instruccions en un ordinador superescalar.</p>
+<p>La majoria de processadors actuals utilitzen dissenys superescalars. 2.2.8 Paral·lelisme de ﬁls (threads) o hyperthreading Una característica també important dels processadors és el paral·lelisme de ﬁls (threads) o hyperthreading. L’hyperthreading consisteix en l’execució simultània de diversos threads (ﬁls d’execució) o processos.</p>
+<p>Perquè s’utilitzi aquesta característica, cal que els sistemes operatius també hi donin suport. 2.2.9 Multiprocessament i xips multinucli Una altra tendència per a optimitzar el rendiment dels ordinadors és el mul- tiprocessament (en anglès, multiprocessing), que consisteix en l’ús de dos o més processadors interconnectats dintre d’un sol ordinador. Quan els diversos processadors estan integrats en un mateix xip, com és el cas del processador Intel Core 2 Duo, es parla de chip-level multiprocessing (multiprocessament a escala de xip) o de xip multinucli. Vegeu l’esquema d’aquest xip a la ﬁgura 2.7.</p>
+<p>Figura 2.7. Esquema del xip multinucli Intel Core 2 Duo</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu consultar els webs d’Intel i AMD en l’apartat “Adreces d’interès” del web del crèdit. 2.2.10 Fabricants Hi ha diversos fabricants de processadors. De totes maneres, els principals competidors en el mercat són dos</p>
+<ul>
+<li>Intel, que és la marca més comercialitzada i estesa.</li>
+<li>AMD</li>
+</ul>
+<p>Intel és conegut per la història dels seus processadors: Intel 8086, Intel 8088, Intel 80286 (més conegut com a Intel 286), Intel 386, Intel 486, Intel Pentium, Intel Pentium II, Intel Pentium III, Intel Pentium 4, Intel Pentium D, i els seus últims Intel Core 2 Duo, Intel Core 2 Quad i Intel Core 2 Extreme.</p>
+<p>AMD es va començar a conèixer amb AMD K5, i sobretot AMD K6, AMD K6- 2, AMD K7 o Athlon, AMD Athlon 64, AMD Athlon 64 X2 Dual Core i AMD Athlon 64 FX. Tots dos fabricants també fan versions per a ordinadors portàtils (més reduïts i que requereixen menys energia). 2.3 La memòria La memòria és un dispositiu o circuit que permet l’entrada i la sortida d’una informació determinada i que és capaç d’enregistrar-la i d’emmagatzemar-la temporalment o indeﬁnidament.</p>
+<p>Es tracta, doncs, d’un espai en què es desen les dades i els programes. 2.3.1 Jerarquia de memòria Hi ha, però, diferents tipus de memòries, organitzades segons una jerarquia de memòria. Aquesta jerarquia s’estructura per nivells</p>
+<ul>
+<li>Nivell 0: registres del processador</li>
+<li>Nivell 1: memòria cau</li>
+<li>Nivell 2: memòria principal o memòria, simplement</li>
+<li>Nivell 3: memòria virtual</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Els nivells de memòria es caracteritzen perquè van creixent de capacitat –com més gran sigui el nivell, més capacitat–, i perquè van disminuint de velocitat d’accés, a la vegada que el preu per unitat d’emmagatzematge es redueix. És a dir, el nivell 0 és el nivell en què la memòria és més ràpida i més cara, però en què se’n disposa de menys quantitat. En canvi, el nivell 3 és d’accés més lent, és més barat i és on es pot disposar de més quantitat de memòria.</p>
+<p>Com ja s’ha comentat en l’apartat anterior, els registres del processador i la me- mòria cau solen estar integrats en el xip del processador. En concret, els registres formen un conjunt molt reduït d’espais d’accés molt ràpid per al processament de la CPU, i la memòria cau ofereix una velocitat d’accés molt ràpida –però menys que els registres– i una capacitat menys limitada, perquè les dades que s’utilitzen en un moment determinat la facin servir. Al mateix temps, la memòria cau se sol organitzar en subnivells (típicament L1 i L2).</p>
+<p>2.3.2 Memòria principal La memòria principal, memòria RAM (random access memory) o memòria, simplement, és una memòria d’accés directe. Això signiﬁca que s’accedeix amb la mateixa rapidesa a qualsevol element d’aquesta memòria, independentment de la seva posició i de la posició de la sol·licitud anterior</p>
+<p>s’accedeix directament a qualsevol informació. S’anomena memòria principal perquè el processador la requereix. Per a executar programes, la CPU necessita les instruccions i les dades, i aquestes han d’estar emmagatzemades en aquesta memòria; altrament no es podria processar res.</p>
+<p>Com els registres del processador i les memòries cau, la RAM també és una memòria volàtil (és a dir, quan s’apaga l’ordinador no es manté la informació). La RAM està composta de cel·les elèctriques o biestables, integrades en xips. Aquests xips s’agrupen o incrusten en plaques anomenades mòduls de memòria.</p>
+<p>Aquests mòduls de memòria són els que, ﬁnalment, s’insereixen en les ranures de la placa base destinades a connectar-hi la memòria. Cadascun d’aquests mòduls pot contenir des de pocs megabytes de capacitat ﬁns als valors actuals de 256 MB, 512 MB o 1 GB. Els tipus de format més habituals per als mòduls de memòria són els següents</p>
+<ul>
+<li>SIMM (single in-line memory module).</li>
+</ul>
+<p>Es tracta d’un sistema antic per a plaques base amb busos de ﬁns a 32 bits. Hi ha dues modalitats d’interconnexió amb la placa base: – de 30 pius o contactes – de 72 pius o contactes</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>DIMM (dual in-line memory module). Per a sistemes de 64 bits. Se solen</li>
+</ul>
+<p>interconnectar mitjançant interfícies de 168 pius.</p>
+<ul>
+<li>DIMM DDR (DIMM per a DDR SDRAM). Es tracta d’un tipus de memò</li>
+</ul>
+<p>ria RAM dinàmica i síncrona que ofereix doble ràtio de dades (doubledata- rate synchronous dynamic random access memory). La interfície de connexió és de 184 pius. Hi ha diversos tipus de mòduls DIMM DDR depenent de la velocitat o amplada de banda que ofereixen: – PC-1600: opera a 100 MHz i ofereix 1.600 MB/s d’amplada de banda – PC-2100: opera a 133 MHz i ofereix 2.133 MB/s d’amplada de banda – PC-2700: opera a 166 MHz i ofereix 2.667 MB/s d’amplada de banda – PC-3200: opera a 200 MHz i ofereix 3.200 MB/s d’amplada de banda</p>
+<ul>
+<li>DIMM DDR2 (DIMM per a DDR2 SDRAM). Interfície de 240 pius.</li>
+</ul>
+<p>Sistema que millora la DIMM DDR però que no hi és compatible. Vegem- ne alguns mòduls comercialitzats: – PC2-3200 (200 MHz, 3.200 MB/s) – PC2-4200 (266 MHz, 4.264 MB/s) – PC2-5300 (333 MHz, 5.336 MB/s) – PC2-6400 (400 MHz, 6.400 MB/s) – PC2-8500 (533 MHz, 8.500 MB/s)</p>
+<ul>
+<li>DIMM DDR3 (DIMM per a DDR3 SDRAM). Interfície de 240 pius.</li>
+</ul>
+<p>Sistema que redueix el consum de la DIMM DDR2. Tampoc no són compatibles físicament per la diferent ubicació de l’osca clau. Els següents són alguns mòduls comercialitzats: – PC3-6400 (400 MHz, 6.400 MB/s) – PC3-8500 (533 MHz, 8.500 MB/s) – PC3-10600 (667 MHz, 10.600 MB/s) – PC3-12800 (800 MHz, 12.800 MB/s) – PC3-16000 (1.000 MHz, 16.000 MB/s) – PC3-17000 (1.066 MHz, 17.000 MB/s)</p>
+<ul>
+<li>SO-DIMM (Versions per a ordinador portàtil dels DIMM de memòria DDR.</li>
+</ul>
+<p>Són d’aproximadament la meitat de la mida dels DIMM estàndard). N’hi ha de 72, 100, 144, 200 i 204 pius.</p>
+<ul>
+<li>RIMM (rambus in line memory module). Amb una interfície de 184 pius.</li>
+</ul>
+<p>Actualment en desús. Un banc de memòria és una agrupació de mòduls de memòria que proporcionen tots junts un nombre de bits simultanis equivalent a l’amplada de banda de la CPU. Per exemple, si es disposa d’una CPU de 32 bits, un banc de memòria estaria compost per quatre mòduls de 8 bits o bé per un sol mòdul de 32 bits.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.3.3 Limitacions en la quantitat de memòria La memòria s’utilitza com a element bàsic d’emmagatzematge d’instruccions i dades per a l’execució de programes. Els programes o aplicacions necessiten cada vegada més memòria perquè cada vegada són més complexos i tenen més dades.</p>
+<p>Si una aplicació no pot carregar a la memòria totes les dades que necessita, les ha d’anar a buscar al disc o a suports d’emmagatzematge més lents, com ara un CD, i això fa baixar la velocitat d’execució de l’aplicació. Per això, tradicionalment, sempre s’ha pensat que la quantitat de memòria havia de ser la màxima possible perquè l’ordinador sigui més ràpid. I això és cert, però hi ha una sèrie d’elements que limiten la quantitat de memòria que pot tenir l’ordinador. Bàsicament, són aquests</p>
+<ul>
+<li>Capacitat d’adreçament. Hem de disposar de suﬁcients bits per a poder</li>
+</ul>
+<p>adreçar una posició de memòria.</p>
+<ul>
+<li>Capacitat de control per part del joc de xips.</li>
+<li>Capacitat física d’encapsulament en les ranures de la placa base (nombre</li>
+</ul>
+<p>de ranures suﬁcient). 2.3.4 MMU La MMU (memory management unit) és la unitat gestora o de control de la memòria. Es tracta d’uns circuits integrats, normalment incorporats al joc de xips que s’encarreguen del següent</p>
+<ul>
+<li>Traduir les adreces lògiques o virtuals (utilitzades pels programes) a adreces</li>
+</ul>
+<p>físiques (reals), seguint sistemes de paginació, segmentació o mixtos.</p>
+<ul>
+<li>Protecció de la memòria (evitar l’accés a llocs restringits).</li>
+<li>Control de la memòria cau.</li>
+</ul>
+<p>2.3.5 Tipus de memòria RAM Si ens ﬁxem en la velocitat, la complexitat i el refresc que han de tenir les cel·les de la memòria RAM, podem distingir aquests dos tipus bàsics de RAM</p>
+<ul>
+<li>DRAM (dynamic random access memory). Memòria RAM que requereix</li>
+</ul>
+<p>refresc de corrent contínuament. Estructuralment és força simple i s’utilitza per a implementar memòria principal.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Podeu consultar els webs de Buffalo, Kingston i Samsung en l’apartat “Adreces d’interès” del web del mòdul.</p>
+<ul>
+<li>SRAM (static random access memory). Memòria RAM que no requereix</li>
+</ul>
+<p>refresc de corrent elèctric, és estructuralment més complexa que la DRAM i més cara de construir. Té una velocitat d’accés molt ràpida. Se sol utilitzar per a implementar memòria cau. La DRAM és el tipus de memòria principal més estès. Dintre d’aquest, però, hi ha diverses variants, entre altres</p>
+<ul>
+<li>DRAM pròpiament dita, que funciona de manera asíncrona.</li>
+<li>SDRAM (synchronous dynamic random access memory).</li>
+</ul>
+<p>DRAM de tipus síncron, que està sincronitzada amb el rellotge del sistema, fet que la fa òptima. Hi ha subvariants d’aquesta, com ara DDR SDRAM o DDR2 SDRAM (versions de double-data-rate SDRAM que ofercap aeixen velocitat doble de transferència de dades).</p>
+<ul>
+<li>FPM (fast page mode). Tecnologia DRAM que treballa amb pàgines i</li>
+</ul>
+<p>millora el rendiment de la DRAM.</p>
+<ul>
+<li>EDO (extended data out). Millora el disseny i el rendiment de la DRAM i</li>
+</ul>
+<p>de la FPM.</p>
+<ul>
+<li>BEBO (burst extended data out). Deriva de l’EDO, però funciona per</li>
+</ul>
+<p>ràfegues que milloren la velocitat.</p>
+<ul>
+<li>GDDR3 (graphics double data rate 3).</li>
+</ul>
+<p>Tecnologia que deriva de la DDR2 SDRAM i que s’utilitza com a memòria especíﬁca per a les targetes gràﬁques. La família GDDR3 ha evolucionat envers la GDDR4 i posteriors. 2.3.6 Memòria virtual La memòria virtual s’utilitza per a ampliar la memòria principal real d’un sistema. Aquesta ampliació de memòria no és real, però, sinó que es fa per simulació gràcies a programari especialitzat.</p>
+<p>La majoria de sistemes operatius actuals ofereixen memòria virtual mitjançant un programari gestor d’aquesta que gestiona un espai del disc dur anomenat ﬁtxer d’intercanvi. Així, doncs, s’agafa una part del disc dur i s’utilitza com si fos una expansió de la memòria principal.</p>
+<p>Fent aplicació d’algoritmes apropiats, s’aconsegueix un bon rendiment del sistema. A banda del programari gestor, per a fer ús d’aquest servei cal tenir disponible espai suﬁcient en el disc dur per a poder-lo implementar.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic 2.3.7 Fabricants de memòria RAM Tot i que hi ha moltes empreses que encapsulen en mòduls els diversos xips de memòria. Els xips de memòria mateixos els fabriquen marques com ara</p>
+<ul>
+<li>Buﬀalo</li>
+<li>Kingston</li>
+<li>Samsung</li>
+</ul>
+<p>2.3.8 Memòria ROM L’ordinador també necessita memòries no volàtils (que mantinguin la informació en tancar el sistema) i només de lectura (o que no es puguin escriure fàcilment). Aquest tipus de memòria és la memòria ROM. La memòria ROM se sol utilitzar com a microprogramari (programari de baix nivell, molt proper al maquinari). L’aplicació més comuna és la implementació del BIOS.</p>
+<p>Hi ha diversos tipus de memòria ROM. Els més habituals són els següents</p>
+<ul>
+<li>PROM (programmable read only memory). La memòria només es pot</li>
+</ul>
+<p>programar una vegada.</p>
+<ul>
+<li>EPROM (erasable programmable read only memory). Es pot esborrar amb</li>
+</ul>
+<p>l’exposició a llum ultraviolada.</p>
+<ul>
+<li>EEPROM (electrically erasable programmable read only memory). De</li>
+</ul>
+<p>funcionament semblant a les memòries ﬂaix.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<h3>3. Perifèrics i comunicacions</h3>
+<p>A part dels components fonamentals, l’ordinador pot disposar d’una sèrie d’am- pliacions que es coneixen habitualment com a perifèrics, si retallem l’expressió “dispositius perifèrics”. Aquests components de maquinari poden ser fonamentals per a la utilització de l’ordinador per part d’un usuari, com pot ser el cas d’un monitor de visualització, o poden ser simplement una ampliació que permet un ús més productiu del sistema informàtic, com per exemple el ratolí.</p>
+<p>De fet, els perifèrics són aquells dispositius que, tot i formar part de l’ordinador, es troben fora del contenidor principal (anomenat caixa o torre), malgrat que en ordinadors de tipus compacte, com per exemple els portàtils, aquests ja es troben integrats en el sistema. Per tant, el concepte “perifèric” fa referència no tant a la posició física d’un component com a la seva situació lògica respecte al bus principal del sistema. En certa manera, tot allò que no sigui la unitat de procés central i la memòria principal i el bus del sistema és considerat perifèric. En alguns casos també es consideren perifèrics els dispositius de memòria secundària (per exemple, el disc dur).</p>
+<p>Els perifèrics són aquells dispositius que formen part del maquinari d’un sistema informàtic i amplien les funcionalitats dels components fonamentals: CPU, memòria principal i bus del sistema. Es pot considerar la part central de l’ordinador la que es troba dintre de la carcassa o caixa i un usuari rarament veu. La resta de dispositius externs a aquesta carcassa que formen el sistema informàtic se solen anomenar perifèrics.</p>
+<p>Així, doncs, a la part central o interna d’un ordinador trobem, com a elements més importants, els següents</p>
+<ul>
+<li>La carcassa</li>
+<li>La font d’alimentació</li>
+<li>La placa base</li>
+<li>El processador</li>
+<li>La memòria</li>
+<li>El disc dur</li>
+<li>La disquetera</li>
+<li>Els lectors i gravadors de CD i DVD</li>
+<li>La targeta gràﬁca</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>La targeta de so</li>
+<li>La targeta de xarxa</li>
+<li>El mòdem intern</li>
+</ul>
+<p>Fora de la carcassa, trobarem els elements externs o perifèrics. De perifèrics n’hi ha de molts tipus, depenent de les necessitats. Els perifèrics imprescindibles en els sistemes informàtics actuals són els següents</p>
+<ul>
+<li>Monitor</li>
+<li>Teclat</li>
+<li>Ratolí</li>
+</ul>
+<p>Hi ha diverses classiﬁcacions per a organitzar els tipus de perifèrics. La més habitual és la següent</p>
+<ul>
+<li>Perifèrics d’entrada.</li>
+</ul>
+<p>Perifèrics que permeten introduir dades des de l’exterior de l’ordinador cap a la part central. Són exemples de perifèrics d’entrada els següents: – Teclat – Ratolí – Micròfon – Escàner – Càmera web</p>
+<ul>
+<li>Perifèrics de sortida.</li>
+</ul>
+<p>Perifèrics que permeten extreure dades des de l’interior de l’ordinador o part central cap a l’exterior o usuari. Són exemples de perifèrics de sortida els següents: – Monitor – Altaveus – Auriculars – Impressora</p>
+<ul>
+<li>Perifèrics d’entrada/sortida. Perifèrics que permeten introduir i extreure</li>
+</ul>
+<p>informació de l’ordinador. Com a exemple de perifèric d’entrada/sortida es podria esmentar la pantalla tàctil, que visualitza la informació a la vegada que permet introduir-ne de nova per mitjà de les pulsacions. El concepte de perifèric es pot considerar de manera àmplia, i es poden incloure també entre els perifèrics els dispositius d’emmagatzematge no primari (com els discos durs, disquets o discos òptics), els dispositius de comunicació (com ara les targetes de xarxa o els mòdems) i els elements de comunicació (com les targetes de so o les targetes gràﬁques). En aquest sentit més ampli, un perifèric és un dispositiu o component que s’afegeix a l’ordinador per a afegir funcionalitats addicionals a les bàsiques.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Perifèrics d’emmagatzematge. Serveixen per a desar dades i informació</li>
+</ul>
+<p>per un temps llarg, al contrari que la memòria de treball: – Disc dur – Disquetera – Discos òptics – Memòria USB – Lector de targetes</p>
+<ul>
+<li>Perifèrics de comunicació. Són aquells que s’encarreguen de comunicar-se</li>
+</ul>
+<p>amb altres màquines o ordinadors, per a treballar en conjunt o simplement per a enviar i rebre informació: – Targeta Ethernet – Mòdem – Targeta inalàmbrica 3.1 El disc dur Els discos durs són uns discos magnètics amb una gran capacitat d’emmagatzematge que, generalment, són instal·lats a l’interior de l’ordinador. Els discos durs implementen un sistema de memòria no volàtil (la informació es conserva una vegada es desconnecten del corrent elèctric).</p>
+<p>Disc dur El disc dur es classiﬁca com a memòria secundària o sistema d’emmagatzematge secundari, en un nivell addicional a la memòria principal. És a dir, proporciona molta més capacitat d’emmagatzematge a un preu per unitat de capacitat més econòmic, però d’accés més lent. Els discos durs es coneixen també amb el terme anglès hard disk o les abreviacions HD o HDD (hard disk drive).</p>
+<p>3.1.1 Estructura interna d’un disc dur Un disc dur està constituït, bàsicament, pels elements següents</p>
+<ul>
+<li>Una carcassa que protegeix les parts internes.</li>
+<li>Un o diversos plats amb la superfície de material magnetitzable.</li>
+<li>Un motor que fa girar tots els plats alhora.</li>
+<li>Una sèrie de capçals lectors subjectats per braços per a accedir als plats.</li>
+<li>També sol incorporar, com a mínim, un circuit imprès que fa les tasques de</li>
+</ul>
+<p>controlador de disc.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Els discos durs estan organitzats de la manera següent (vegeu la ﬁgura 3.1)</p>
+<ul>
+<li>Cada plat del disc té dues cares. Cada cara es divideix en cercles concèntrics</li>
+</ul>
+<p>anomenats pistes o tracks.</p>
+<ul>
+<li>S’anomena cilindre un conjunt de pistes alineades en els diversos discos.</li>
+<li>Cada pista conté diversos sectors. Un sector conté 512 bytes.</li>
+</ul>
+<p>Figura 3.1. Estructura interna d’un disc dur Els sistemes de ﬁtxers poden deﬁnir un clúster com el nombre mínim de sectors seleccionables, és a dir, el nombre mínim d’informació que es pot llegir o escriure en bloc. Si es deﬁneixen clústers molt grans s’optimitzen les operacions de lectura i escriptura, però se sol perdre força espai, ja que qualsevol ﬁtxer s’haurà d’incloure en un nombre enter de clústers, i l’espai no usat en el seu interior es perd.</p>
+<p>La densitat de gravació és la quantitat de dades emmagatzemada per unitat de superfície. Així, doncs, per a augmentar la densitat de gravació hi ha dues possibilitats: disminuir la distància entre pistes o bé augmentar el nombre de bits dintre d’un sector. 3.1.2 Característiques dels discos Un disc dur se sol caracteritzar pels elements següents</p>
+<ul>
+<li>Capacitat. Quantitat d’informació que pot contenir (per exemple 120 GB).</li>
+<li>Dimensions. Habitualment, els discos són de 3,5 polzades, tot i que en</li>
+</ul>
+<p>ordinadors portàtils solen ser de 2,5 polzades.</p>
+<ul>
+<li>Nombre d’operacions d’E/S per segon. Els valors típics són de prop de 50</li>
+</ul>
+<p>operacions d’E/S aleatòries. Les operacions seqüencials poden ser moltes més, ja que no cal localitzar la dada per transferir.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Velocitat de rotació. Normalment, velocitat angular, per exemple revo</li>
+</ul>
+<p>lucions per minut (rpm). Això implica que, en els sectors de les pistes més externes, els capçals recorreran més distància per unitat de temps, per exemple 7.200 rpm. Com més velocitat de rotació, més energia i més calor es desprèn.</p>
+<ul>
+<li>Nombre de sectors absoluts, o bé nombre de pistes i nombre de sectors per</li>
+</ul>
+<p>pista.</p>
+<ul>
+<li>Temps de cerca (seek time). Temps que triga un capçal a trobar la pista</li>
+</ul>
+<p>que conté la informació demanada. Aquest temps depèn del lloc on sigui el capçal en el moment de la petició. Si és en una pista molt propera, el seek time és relativament petit (un o dos mil·lisegons), altrament triga ﬁns a 15 mil·lisegons.</p>
+<ul>
+<li>Latència (rotational delay). Una vegada seleccionada la pista, el temps</li>
+</ul>
+<p>que comporta localitzar el sector concret és la latència (aquest temps pot ser d’uns 2 mil·lisegons). Com més velocitat de rotació del disc, menys latència.</p>
+<ul>
+<li>Temps mitjà d’accés.</li>
+</ul>
+<p>Mitjana de la suma del temps de cerca més la latència.</p>
+<ul>
+<li>Temps de transferència.</li>
+</ul>
+<p>Mesura, en megabits per segon (Mbps), la capacitat de llegir sectors i transferir-los a la controladora o memòria cau. 3.1.3 Format i particions El format del disc és la manera en què s’organitzaran les dades en aquest. Hi ha dos tipus de format, el físic i el lògic.</p>
+<p>El format físic consisteix a dividir el disc en sectors de 512 bytes cadascun. Aquest format se sol fer, si cal, mitjançant el BIOS. El format lògic consisteix a incorporar l’estructura en el disc per al sistema de ﬁtxers i el sector d’engegada o boot sector, que contindrà la informació mínima per a engegar un sistema operatiu o aplicació instal·lats en aquest.</p>
+<p>Els sistemes de ﬁtxers solen estar associats a un sistema operatiu; els sistemes operatius Windows solen usar sistemes de ﬁtxers de tipus FAT16, FAT32 o NTFS, mentre que els sistemes operatius Linux solen usar sistemes de ﬁtxers com ara ext3 o ext4. Un disc dur es pot particionar en unitats més petites, i cada partició es pot formatar amb un sistema de ﬁtxers diferent. Una partició és l’establiment de divisions lògiques en un disc dur, normalment per a instal·lar-hi diversos sistemes operatius, o bé per a organitzar les dades amb unitats lògiques diferenciades.</p>
+<p>Tradicionalment, en l’MS-DOS i el Windows hi ha la limitació de quatre particions de tipus primari (en què cadascuna pot contenir un únic sistema operatiu), tot i que</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Es recomana consultar la secció “Recursos de contingut” del material web per a identiﬁcar els cables connectors de cadascun d’aquests tipus de connexió. Els principals fabricants (Seagate, Iomega, Western Digital) ofereixen discos durs amb capacitats ja habituals de centenars de gigabytes.</p>
+<p>en un moment determinat, només pot estar-ne activa una (la partició “per defecte”). Hi pot haver, però, altres particions anomenades particions esteses. Les particions esteses poden contenir una o diverses particions lògiques. 3.1.4 Estàndards d’interfícies i de control Els discos durs es connecten a les interfícies de la placa base preparades per a allotjar-los. Associades a aquestes interfícies, hi ha uns estàndards de sistemes de control. Els estàndards següents són els més comuns</p>
+<ul>
+<li>IDE (integrated device electronics). És un sistema de connexió per a dispo</li>
+</ul>
+<p>sitius d’emmagatzematge basat en ATA (advanced technology attachment) o Parallel ATA. Els discos durs es connecten a les interfícies de 40 pius que els permeten la transmissió de les dades i del control, i per uns cables d’alimentació provinents de la font d’alimentació</p>
+<ul>
+<li>SCSI (small computer system interface).</li>
+</ul>
+<p>Es tracta d’un sistema d’alt rendiment que, normalment, es fa servir per a discos durs de servidors. És més car que el sistema IDE.</p>
+<ul>
+<li>S-ATA o Serial ATA. Proporciona una velocitat més elevada de transmissió</li>
+</ul>
+<p>que el sistema Parallel ATA. Té la capacitat de connectar els discos “en calent” (una vegada l’ordinador ja està engegat) i permet connectar ﬁns a set o quinze dispositius S-ATA. És compatible amb IDE. 3.1.5 Modes de transferència Hi ha diversos sistemes per a fer la transferència de dades del disc dur al processador o memòria. La implementació d’una o altra depèn, bàsicament, de la capacitat del BIOS i del joc de xips de la placa base d’adoptar aquests mètodes</p>
+<ul>
+<li>PIO (programmed input/output).</li>
+</ul>
+<p>Sistema en el qual és el processador l’encarregat de controlar les peticions de lectura/escriptura en disc. És un sistema molt lent i poc eﬁcient que requereix que la CPU destini molt de temps a aquest tipus d’operacions i al seu control.</p>
+<ul>
+<li>DMA (direct memory access). El seu ús està condicionat a la presència</li>
+</ul>
+<p>d’aquesta característica en el joc de xips de la placa base. En aquest cas, es transfereixen les dades des del disc a la memòria o viceversa sense que hi intervingui el processador. El controlador de la DMA és el que gestiona la transferència.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Ultra DMA. Sistema que millora l’anterior. Exemples d’aquest tipus són</li>
+</ul>
+<p>ATA-6 i ATA-7.</p>
+<ul>
+<li>Block mode.</li>
+</ul>
+<p>Sistema que consisteix a agrupar diverses operacions de lectura o escriptura per a controlar-les conjuntament. Comporta una millora en el rendiment. Aquesta característica s’ha d’activar (en cas de ser suportada) mitjançant el BIOS. 3.1.6 Memòria cau de disc La majoria de discos disposen de sistemes de memòria cau per a millorar els temps d’accés als sectors. Així, en aquestes memòries cau, es pot emmagatzemar el que es preveu que se sol·licitarà en un futur immediat, i també la cua d’escriptures pendents en disc.</p>
+<p>Aquestes memòries cau poden estar incorporades en el disc dur mateix, en targetes a part, o poden fer ús de la memòria principal per a aquesta ﬁnalitat. 3.2 La disquetera La disquetera és la unitat per a la lectura i escriptura de disquets o discos ﬂexibles. La disquetera també es coneix per les sigles FDD (ﬂoppy disk drive).</p>
+<p>Disquet de 3,5 polzades Un disquet (ﬂoppy disk, en anglès) és un disc magnètic de material ﬂexible, de petites dimensions, tancat en una funda, magnetitzable per les dues bandes. Els disquets permeten emmagatzemar informació de manera no volàtil (no s’esborra si no hi ha corrent) i oﬀ-line o esborrable (mitjans d’emmagatzematge de dades que han de ser introduïts en el dispositiu lector de l’ordinador per a poder ser llegits, a diferència dels dispositius d’emmagatzematge intern, com ara els discos durs).</p>
+<p>S’han estandarditzat dos formats de disquets al llarg de la història</p>
+<ul>
+<li>De 5,25 polzades</li>
+<li>De 3,5 polzades</li>
+</ul>
+<p>Actualment, els primers estan en desús, i els segons s’estan substituint per altres tipus d’emmagatzematge, com ara discos òptics o memòries USB o ﬂaix.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic L’estructura interna d’un disquet s’organitza, de la mateixa manera que en els discos durs, en pistes (cercles concèntrics) i sectors (seccions de cercle). Els disquets encara utilitzats actualment són els de 3,5 polzades d’alta densitat (HD) amb una mida de 1,44 MB.</p>
+<p>3.3 Discos òptics Els discos òptics són suports d’informació de gran capacitat formats per superfícies circulars de policarbonat en què la informació s’emmagatzema perforant la superfície plana. La informació s’emmagatzema en una espiral que cobreix tota la superfície del disc, i que va de la part interior a l’exterior.</p>
+<p>La densitat de bits per unitat de superfície és idèntica en tot el disc, i la velocitat de lectura de bits també és constant; per tant, la velocitat de rotació angular no serà constant, ja que per a llegir la part interior del disc s’haurà de fer girar més ràpid. La informació es llegeix aproﬁtant les propietats opticoreﬂectives de la incisió de la llum làser en la superfície perforada.</p>
+<p>3.3.1 Tipus de discos òptics Hi ha dos tipus principals de discos òptics usats habitualment en els sistemes informàtics, els quals es divideixen en diversos subtipus depenent de la funció per a la qual es vulguin utilitzar. Els més comuns en informàtica són els següents</p>
+<ul>
+<li>CD (compact disc)</li>
+</ul>
+<p>CD-ROM (compact disc-read only memory). Disc òptic de només lectura (escrit durant la fabricació). – CD-R (compact disc-recordable). Disc gravable, una única vegada (s’hi pot escriure per l’acció d’un feix làser). – CD-RW (compact disc-rewritable). Disc reenregistrable (s’hi pot escriure diverses vegades).</p>
+<ul>
+<li>DVD (digital versatile disc)</li>
+</ul>
+<p>DVD-ROM (digital versatile disc-read only memory). Successors dels CD-ROM (escrits durant la fabricació). – DVD-R (digital versatile disc recordable). Gravable, una única vegada.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic – DVD+R. Com els DVD-R però creats per una altra aliança de fabri- cants. – DVD-RW (digital versatile disc rewritable). Disc reenregistrable (s’hi pot escriure diverses vegades). – DVD+RW. Igual que els DVD-RW però creats per una altra aliança de fabricants.</p>
+<p>Externament, tots aquests discos presenten un aspecte similar: són discos òptics, majoritàriament de 12 cm de diàmetre. La diferència més important entre els CD i els DVD és la quantitat d’informació que s’hi pot emmagatzemar. En els DVD, s’ha disminuït la distància entre pistes i la distància entre bits, i això ha fet que es puguin emmagatzemar en el mateix espai físic (12 cm de diàmetre) molts més bits. Mentre que els CD solen emmagatzemar uns 800 MB, tot i que hi ha variants, els DVD solen emmagatzemar 4,7 GB (els d’una sola cara i capa).</p>
+<p>Entre les tecnologies DVD es poden distingir les següents</p>
+<ul>
+<li>DVD d’una cara.</li>
+<li>DVD de dues cares (amb informació per les dues cares).</li>
+<li>DVD d’una capa (la informació està escrita en forma d’espiral en una sola</li>
+</ul>
+<p>dimensió).</p>
+<ul>
+<li>DVD de dues capes (la informació està escrita en dues capes diferents, com</li>
+</ul>
+<p>en dues superfícies superposades. L’enfocament de la lent làser és el que permet obtenir la informació de cadascuna de les cares). Aquesta tecnologia dobla la capacitat de la cara. Aleshores, comercialment, es poden trobar DVD de diversos formats</p>
+<ul>
+<li>DVD-5: DVD d’una sola cara i una sola capa</li>
+<li>DVD-9: DVD d’una sola cara i doble capa</li>
+<li>DVD-10: DVD de doble cara i una sola capa per cara</li>
+<li>DVD-18: DVD de doble cara i doble capa a cada cara</li>
+</ul>
+<p>En ordinadors actuals és possible ja trobar unitats de Blu-ray Disk (el nom fa referència al làser blau utilitzat per a la lectura/escriptura). Es tracta d’un format de disc òptic amb el mateix format físic que el CD o el DVD. Ha estat creat per a l’emmagatzematge de vídeo d’alta deﬁnició o grans quantitats de dades. La seva capacitat arriba ﬁns als 50 GB. Hi ha en estudi suports ﬁns a 400 GB.</p>
+<p>Els formats actuals són els següents</p>
+<ul>
+<li>Blu-ray d’una capa: 25 GB.</li>
+</ul>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic</p>
+<ul>
+<li>Blu-ray de doble capa: 50 GB.</li>
+</ul>
+<p>Aquest format es va imposar al seu competidor (l’HD DVD) en la guerra de formats per a convertir-se en el successor del DVD, encara que actualment el DVD encara és majoritari. 3.3.2 Tipus de dispositius de lectura/escriptura de discos òptics Hi ha diferents dispositius que permeten accedir a la informació d’aquests discos òptics</p>
+<ul>
+<li>Lectors de CD</li>
+<li>Lectors de DVD</li>
+<li>Gravadors de CD (que inclouen la lectura de CD)</li>
+<li>Gravadors de DVD (que inclouen la lectura de DVD)</li>
+<li>Lectors de Blu-ray</li>
+<li>Gravadors de Blu-ray (que inclouen la lectura de CD i DVD).</li>
+</ul>
+<p>Actualment, se solen oferir totes les funcions o algunes (lectura i escriptura de CD i de DVD) en un únic dispositiu lector/gravador d’aquests diversos formats. Així, es disposa de dispositius com ara els següents</p>
+<ul>
+<li>Lectors de CD i DVD (que tenen dos capçals, un per a llegir CD i l’altre per</li>
+</ul>
+<p>als DVD).</p>
+<ul>
+<li>Lectors de Blu-ray, DVD i CD.</li>
+<li>Gravadors (i lectors) de CD i DVD.</li>
+<li>Gravadors de Blu-ray (compatibles amb CD i DVD).</li>
+</ul>
+<p>Totes les unitats actuals són capaces d’enregistrar dades en suports gravables (un cop) com CD-R o DVD-R i regravables (diversos cops) com el CD-RW o el DVD- RW. Això inclou els discs Blu-ray regravables que, malgrat el seu elevat preu, es troben disponibles en el mercat.</p>
+<p>3.4 Unitats basades en memòria ﬂaix La memòria ﬂaix és un tipus d’emmagatzematge desenvolupat a partir de la memòria EEPROM (electrically erasable programmable read only memory) que permet múltiples lectures i escriptures en un dispositiu no volàtil.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic És un tipus de memòria molt resistent als cops, de baix consum i silenciosa, ja que no conté motors o parts mòbils com els discs magnètics tradicionals. A més, la seva mida petita ha propiciat la proliferació de formats d’emmagatzematge portàtils basats en aquesta tecnologia. Com a inconvenient podem trobar que el nombre de vegades que es pot escriure i esborrar és limitat, i pot arribar a nombres entre 10.000 i un milió de cops, depenent del procés de fabricació i altres factors.</p>
+<p>Els tipus de dispositius d’emmagatzematge més freqüents basats en aquest format són</p>
+<ul>
+<li>Memòria USB: (universal serial bus). També coneguda com a llapis de</li>
+</ul>
+<p>memòria. És un dispositiu portàtil de mida compacta (com un clauer) que pot emmagatzemar actualment ﬁns a 256 GB en algun model. S’han convertit en el sistema d’emmagatzematge i transport personal de dades més utilitzat, i ha desplaçat deﬁnitivament els disquets ﬂexibles, però també els formats òptics com CD o DVD. Es tracta de dispositius plug &amp; play (‘endollar i llest’) que reconeixen gairebé tots els sistemes operatius actuals sense necessitat de controladors afegits.</p>
+<ul>
+<li>Targetes de memòria: És també un dispositiu en forma de petita targeta de</li>
+</ul>
+<p>dades. S’ha popularitzat a partir de les càmeres digitals, però s’ha estès a altres dispositius com les càmeres de vídeo, PDA, reproductors multimèdia o telèfons mòbils. Conviuen múltiples formats (Compact Flash, Secure Digital, xD-Picture Card...) en diverses mides i capacitats, que arriben ﬁns als gigabytes en alguns casos. Per a poder llegir-les en un ordinador personal cal disposar d’un lector de targetes que habitualment és capaç de reconèixer- ne múltiples tipus (són habituals els que en llegeixen 16 tipus diferents).</p>
+<ul>
+<li>Unitats d’estat sòlid: (SSD, de l’anglès solid state drive). Aquest dispositiu</li>
+</ul>
+<p>en format de disc dur utilitza memòria no volàtil com la ﬂaix per a emmagatzemar dades en lloc del suport magnètic amb plats i capçal dels discos habituals. El fet de no tenir parts mòbils redueix molt el temps de cerca, la latència i altres paràmetres vitals d’un suport d’aquest tipus. A més, és més immune a les vibracions externes i als cops, de manera que s’ha estès molt el seu ús per a ordinadors portàtils, sobretot del tipus UMPC (ultra mobile PC) que solen tenir ﬁns a 10 polzades de pantalla.</p>
+<p>En general s’ha estès molt l’ús dels dispositius basats en memòria ﬂaix, gràcies a la facilitat de transport i a la immunitat contra pols, ratllades, etc. –enfront d’altres dispositius d’emmagatzematge, com els disquets, CD o DVD–, a la velocitat d’accés que ofereixen, i al nombre i ﬂexibilitat d’escriptures que permeten.</p>
+<p>Muntatge i manteniment d’equips Components d’un equip microinformatic Hi ha diversos fabricants de targetes gràﬁques. N’hi ha que fabriquen la GPU i n’hi ha que només integren els components a la placa. 3.5 La targeta gràﬁca Una targeta gràﬁca, també coneguda com a targeta de vídeo i, de vegades, com a adaptadora de pantalla, és una targeta d’expansió (tot i que, cada vegada més sovint, ja es troba integrada a la placa base) que s’encarrega de processar les dades per a fer-les visibles en el monitor o pantalla.</p>
+<p>Anteriorment, era el processador el que s’encarregava de gestionar el processa- ment de la informació per a poder visualitzar-la, però, actualment, a causa de la complexitat creixent dels sistemes gràﬁcs, aquesta funció s’ha hagut d’especialit- zar. Algunes targetes gràﬁques actuals, a banda del tractament pròpiament dit dels grà- ﬁcs, ofereixen funcionalitats addicionals com ara la captura de vídeo, sintonització de televisió i descodiﬁcació de MPEG-2 i MPEG-4.</p>
+<p>3.5.1 Conceptes importants per a gràﬁcs Associada a les targetes gràﬁques, hi ha tota una sèrie de conceptes de gràﬁcs que cal conèixer per a comprendre millor els elements d’aquesta tecnologia. Els més importants són els següents</p>
+<ul>
+<li>Píxel (picture element). És la unitat mínima d’informació gràﬁca. Una</li>
+</ul>
+<p>pantalla està formada per milers o milions de píxels o petits punts.</p>
+<ul>
+<li>Resolució de la pantalla. Nombre de píxels que es mostren en la pantalla,</li>
+</ul>
+<p>expressat en píxels horitzontals per píxels verticals. Són resolucions típiques 800×600 o 1.024×768.</p>
+<ul>
+<li>Profunditat de color (o bits per píxel). El nombre de bits que es necessiten</li>
+</ul>
+<p>per a representar un píxel condiciona el nombre total de colors disponibles per a aquest píxel. Per exemple, si es destinen 16 bits, es poden representar 65.000 colors, però amb 24 bits se’n poden representar 16,7 milions, la qual cosa permetrà representar una imatge més real.</p>
+<ul>
+<li>Freqüència de refresc. Nombre de vegades per segon que s’actualitza o</li>
+</ul>
+<p>repinta la pantalla. Són valors habituals 60 Hz, 75 Hz i 100 Hz. Com més freqüència de refresc, menys parpelleig en la pantalla. 3.5.2 Components de la targeta gràﬁca Una targeta gràﬁca integra diverses parts, cadascuna amb la seva funció especíﬁca</p>
+<div class="admonition tip"><p class="admonition-title">📚 Document extens (90 pàgines)</p><p>S'han mostrat les primeres 80 pàgines completes del manual.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0204.html">⬅️ 2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS</a>
+<a class="page-nav-btn" href="../ut02/ut0206.html">2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

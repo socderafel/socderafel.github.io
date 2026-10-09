@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT1 — Programació — Programació, Xarxes i Sistemes Informàtics I | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>💻 Programació, Xarxes i Sistemes Informàtics I — 1r Batxillerat</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació, Xarxes i Sistemes Informàtics I</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT1 — Programació</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 01_Conceptos básicos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 02_Condicionales</a></li>
+<li><a href="../ut01/ut0103.html">1.3 03_Listas y tuplas</a></li>
+<li><a href="../ut01/ut0104.html">1.4 04_Bucles</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Tasca Projecte hardware amb Word</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Xarxes</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Introducció</a></li>
+<li><a href="../ut03/ut0302.html">3.2 TCP-IP</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Maquinari</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Projecte hardware Excel</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Guía projecte pressupost</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Sistemes de fitxers Linux</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Sistema d'arxius</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Gestió de Fitxers</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Permisos</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r Batxillerat · UT1 Completa</span>
+<h1>📘 UT1 — Programació (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0101"><strong>1.1 01_Conceptos básicos</strong></a> (o <a href="./ut0101.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0102"><strong>1.2 02_Condicionales</strong></a> (o <a href="./ut0102.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0103"><strong>1.3 03_Listas y tuplas</strong></a> (o <a href="./ut0103.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0104"><strong>1.4 04_Bucles</strong></a> (o <a href="./ut0104.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut01actividades"><strong>✍️ Activitats pràctiques UT1</strong></a> (o <a href="./ut01actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0101">1.1 01_Conceptos básicos</h2>
+<p>PROGRAMACIÓN</p>
+<h3>1. Conceptos básicos y variables</h3>
+<p>Índice</p>
+<ul>
+<li>Hola mundo</li>
+<li>Variables</li>
+<li>Strings</li>
+<li>Números</li>
+<li>Comentarios</li>
+<li>Zen de Python</li>
+<li>Ejercicios</li>
+</ul>
+<p>Python: 1. Conceptos básicos y variables</p>
+<p>Hola mundo</p>
+<ul>
+<li>Función print(): Mostrar por pantalla</li>
+<li>SyntaxError</li>
+<li>Errores tipográficos</li>
+<li>Paréntesis incompletos</li>
+<li>Falta de comillas…</li>
+</ul>
+<p>print ("Hola mundo") Hola mundo pint ("Hola mundo") Traceback (most recent call last): File "&lt;stdin&gt;", line 1, in &lt;module&gt; NameError: name 'pint' is not defined Ejercicio Escribe un programa que muestre por pantalla: ¡Hola mundo! Python: 1. Conceptos básicos y variables</p>
+<ul>
+<li>Las variables guardan los valores que le asignamos</li>
+<li>Python diferencia entre mayúsculas y minúsculas</li>
+<li>Podemos cambiar los valores de las variables en cualquier momento</li>
+</ul>
+<p>mensaje = "Hola mundo" print(mensaje) Hola mundo mensaje = "Hola mundo" print(mensaje) mensaje = "Estoy estudiando Python" print (mensaje) Hola mundo Estoy estudiando Python mensaje = "Hola mundo" print(Mensaje) ERROR Variables Ejercicio Escribe un programa que</p>
+<h3>1. Guarde el mensaje: "Estoy en</h3>
+<p>clase" en una la variable</p>
+<h3>2. Muestre el mensaje</h3>
+<h3>3. Cambia el valor de la variable</h3>
+<p>a: "Estudio Python".</p>
+<h3>4. Muestra el mensaje</h3>
+<p>Python: 1. Conceptos básicos y variables</p>
+<p>Variables SINTAXIS VARIABLES</p>
+<ul>
+<li>No podemos usar palabras "reservadas" del propio lenguaje de programación (print,</li>
+</ul>
+<p>input…)</p>
+<ul>
+<li>No deben incluir espacios (edad del usuario edad_usuario)</li>
+<li>Sólo pueden contener letras, números y el guion bajo</li>
+<li>No pueden empezar con un número (se puede usar mensaje1 pero no 1mensaje)</li>
+<li>Nombre representativo (contador, edad, nombre) en lugar de usar x, azz32, c3</li>
+<li>Convención: las variables deben empezar con minúsculas</li>
+</ul>
+<p>Python: 1. Conceptos básicos y variables</p>
+<p>Variables - Strings</p>
+<ul>
+<li>Strings son cadenas de texto.</li>
+<li>Texto entre comillas dobles o simples</li>
+<li>Esto permite usar textos entrecomillados</li>
+</ul>
+<p>mensaje = "Hola mundo" print(mensaje) Hola mundo mensaje = 'Hola mundo' print(mensaje) Hola mundo mensaje = 'Le dije a un amigo: "Python es mi lenguaje favorito"' print(mensaje) Le dije a un amigo: "Python es mi lenguaje favorito". Ejercicio: Busca una cita famosa y muéstrala entre comillas junto con el nombre del autor. Por ejemplo</p>
+<p>"La innovación es lo que distingue a un líder de un seguidor", Steve Jobs. Python: 1. Conceptos básicos y variables</p>
+<p>Variables - Strings FORMATO</p>
+<ul>
+<li>Primera letra en mayúscula .title()</li>
+<li>Todas las letras en mayúscula .upper()</li>
+<li>Todas las letras en minúscula .lower()</li>
+</ul>
+<p>nombre = "rebeca VIDAL" print(nombre.title()) Rebeca Vidal nombre = "rebeca VIDAL" print(nombre.upper()) REBECA VIDAL nombre = "rebeca VIDAL" print(nombre.lower()) rebeca vidal Ejercicio: Guarda tu nombre y apellidos y muéstralo en pantalla: • En mayúsculas • En minúsculas • Cada palabra que comience por mayúscula Python: 1. Conceptos básicos y variables</p>
+<p>Variables - Strings CONCATENACIÓN</p>
+<ul>
+<li>Concatenar variables en otra variable</li>
+<li>Concatenar texto y variables</li>
+</ul>
+<p>nombre = "rebeca" apellido = "vidal" nombre_completo = nombre + " " + apellido print(nombre_completo) rebeca vidal nombre = "rebeca" apellido = "vidal" nombre_completo = nombre + " " + apellido print("Hola, " + nombre_completo.title()) Hola, Rebeca Vidal Ejercicio: Repite el ejemplo de la izquierda con tu nombre y apellidos.</p>
+<p>Python: 1. Conceptos básicos y variables</p>
+<p>Variables - Strings ESPACIOS</p>
+<ul>
+<li>Añadir una tabulación \t</li>
+<li>Añadir un salto de línea \n</li>
+</ul>
+<p>print ("\tHola") Hola print ("Hola. \nEscriba nombre y apellidos.") Hola. Escriba nombre y apellidos. Ejercicio: Utiliza print() para mostrar por pantalla tus 3 asignaturas favoritas. Cada asignatura debe estar en una línea diferente (utiliza \n) Python: 1. Conceptos básicos y variables</p>
+<p>Variables - Strings</p>
+<ul>
+<li>La función input() sirve para que el usuario haga una entrada de</li>
+</ul>
+<p>datos. La información se guarda siempre en una variable. nombre_completo = input("Escriba nombre y apellido: ") print("Hola, " + nombre_completo) &gt;&gt;&gt;rebeca vidal Hola, rebeca vidal Ejercicio: Escribe un programa que pida tu edad y lo guarde en una variable [edad]. Luego debe mostrar por pantalla: Tu edad es [edad].</p>
+<p>Python: 1. Conceptos básicos y variables</p>
+<p>Variables - Números</p>
+<ul>
+<li>Enteros (int)</li>
+</ul>
+<p>sumar(+), restar(-), multiplicar (*), dividir (/), potencia (**)</p>
+<ul>
+<li>Decimales (float)</li>
+</ul>
+<p>print(2+3) print(2.3+3.3) 5.6 Python: 1. Conceptos básicos y variables</p>
+<p>Variables - Números ERRORES CON NÚMEROS</p>
+<ul>
+<li>Convertir a texto para mostrar dentro de un string</li>
+<li>Convertir a entero para operar</li>
+</ul>
+<p>edad = 15 print ("Tengo " + str(edad) + " años") Tengo 15 años edad = 15 print ("Tengo " + edad + " años") ERROR euros = input ("¿Cuántos euros tienes? ") dolares = 1.08*euros print("Dólares:") print(dolares) ERROR euros = input ("¿Cuántos euros tienes? ") dolares = 1.08*int(euros) print("Dolares:") print(dolares) &gt;&gt;&gt;5 Dolares</p>
+<p>5.4 Python: 1. Conceptos básicos y variables</p>
+<p>Comentarios</p>
+<ul>
+<li>Útiles para entender el código</li>
+<li>Comentarios en una línea: #</li>
+<li>Comentarios en un párrafo: abrir y cerrar con tres comillas '''</li>
+</ul>
+<p>#saludar a todo el mundo print("Hola a todos") Hola a todos '''saludar a todo el mundo y dar las gracias''' print("Hola a todos, gracias por venir.") Hola a todos, gracias por venir. Ejercicio: Escribe un comentario en el ejercicio anterior Python: 1. Conceptos básicos y variables</p>
+<p>Zen de Python</p>
+<ul>
+<li>19 principios que debe seguir un programador. Escritos por Tim</li>
+</ul>
+<p>Peters en 1999. import this Bonito es mejor que feo Explícito es mejor que implícito. Simple es mejor que complejo. Complejo es mejor que complicado. Plano es mejor que anidado. Disperso es mejor que denso. La legibilidad importa. Los casos especiales no son lo suficientemente especiales como para romper las reglas.</p>
+<p>Practicidad vence a la pureza. Los errores nunca deberían ocurrir silenciosamente. A no ser que se silencien explícitamente. En el caso de ambigüedad, rechaza la tentación de adivinar Debería haber una, y preferiblemente solo una, forma obvia de hacerlo. Aunque la forma no parezca obvia a la primera, a no ser que seas Holandés.</p>
+<p>Ahora es mejor que nunca. Aunque nunca es a menudo mejor que ahora mismo Si la implementación es difícil de explicar, es una mala idea. Si la implementación es fácil de explicar, puede que sea una buena idea. Los espacios de nombres son una gran idea, ¡tengamos más de esos!</p>
+<p>https://elpythonista.com/zen-de-python Python: 1. Conceptos básicos y variables</p>
+<p>Ejercicios Enviar un solo archivo con los 3 programas. Utilizar comentarios para identificar cada ejercicio. 1. País y ciudad. Crear un programa donde se guarde en dos variables</p>
+<ul>
+<li>nombre de un país</li>
+<li>nombre de su capital</li>
+</ul>
+<p>y que muestre por pantalla: La capital de [país] es [capital]. Utiliza la función .title() para mostrar el nombre del país y capital. 2. Calcular IMC. Crear un programa que solicite</p>
+<ul>
+<li>Altura</li>
+<li>Peso</li>
+</ul>
+<p>y que calcule y muestre por pantalla: Tu IMC es: [IMC] 3. Calcular descuento. Crear un programa que solicite</p>
+<ul>
+<li>Precio inicial de un artículo</li>
+<li>Porcentaje de descuento a aplicar</li>
+</ul>
+<p>y que muestre por pantalla: El precio final del artículo es de [precio_final]. Python: 1. Conceptos básicos y variables</p>
+<hr/>
+<h2 id="ut0102">1.2 02_Condicionales</h2>
+<p>PROGRAMACIÓN</p>
+<h3>2. Condicionales</h3>
+<p>Índice</p>
+<ul>
+<li>Condicional if</li>
+<li>Comparaciones numéricas</li>
+<li>Comparaciones con "strings"</li>
+<li>Operador %</li>
+<li>Condicional if-else</li>
+<li>Condicional if-elif-else</li>
+</ul>
+<p>Python: 2. Condicionales</p>
+<p>Condicional if</p>
+<ul>
+<li>Si determinada condición se cumple se ejecutará una instrucción.</li>
+<li>Sintaxis</li>
+<li>if</li>
+<li>dos puntos (:)</li>
+<li>Todo lo que vaya dentro del if va indentado</li>
+</ul>
+<p>Python: 2. Condicionales if se cumple la condición: ____ejecuta una instrucción</p>
+<p>Condicional if</p>
+<ul>
+<li>Comparaciones numéricas</li>
+</ul>
+<p>Python: 2. Condicionales edad = 19 if edad &gt; 18: print("Mayor de edad") Mayor de edad Sintaxis Signo Valor igual que == Valor distinto de != Valor mayor que &gt; Valor menor que &lt; Valor Mayor o igual &gt;= Valor menor o igual &lt;= ¡Cuidado! Doble signo para la igualdad Recomendación: Dejar espacio entre el número y el signo para mayor claridad.</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo: edad&gt;18 edad &gt; 18</p></div>
+<p>Condicional if</p>
+<ul>
+<li>Comparaciones en "strings"</li>
+</ul>
+<p>Python diferencia entre mayúsculas y minúsculas: Python: 2. Condicionales coche = 'ford' if coche != 'peugeot': print("Mi coche no es un peugeot") Mi coche no es un peugeot Sintaxis Signo Valor igual que == Valor distinto de != Longitud mayor que &gt; Longitud menor que &lt; Longitud Mayor o igual &gt;= Longitud menor o igual &lt;= coche = 'Ford' if coche == 'ford'</p>
+<p>print("Mi coche es un ford") (Vacío) coche = 'Ford' if coche.lower() == 'ford': print("Mi coche es un ford") Mi coche es un ford</p>
+<p>Condicional if</p>
+<ul>
+<li>Condiciones múltiples</li>
+</ul>
+<p>Varias condiciones se deben cumplir a la vez (and): Una condición u otra se debe cumplir (or): Python: 2. Condicionales edad = 13 if edad &gt; 6 and edad &lt; 65: print("Entrada a precio habitual") Entrada a precio habitual edad = 5 if edad &lt;= 6 or edad &gt;= 65: print("Entrada con descuento") Entrada con descuento</p>
+<p>Condicional if</p>
+<ul>
+<li>Operador %</li>
+<li>Calcula el resto de dividir un número por otro.</li>
+<li>Por ejemplo: 3 % 2 1</li>
+<li>Utilizando % podemos saber si un número es par (resto 0) o impar (resto 1)</li>
+</ul>
+<p>Python: 2. Condicionales numero = 3 if numero % 2 == 1: print("número impar") número impar</p>
+<p>Condicional if-else</p>
+<ul>
+<li>if-else: si se cumple la condición1, ejecuta la instrucción1, pero si no se cumple,</li>
+</ul>
+<p>ejecuta la instrucción2.</p>
+<ul>
+<li>Sintaxis</li>
+<li>Ejemplo</li>
+</ul>
+<p>Python: 2. Condicionales if se cumple la condición1: ejecuta la instrucción1 else: ejecuta instrucción2 edad = 13 if edad &gt;= 18: print("Mayor de edad") else: print("Menor de edad") Menor de edad</p>
+<p>Condicional if-elif-else</p>
+<ul>
+<li>if-elif-else</li>
+<li>Si se cumple condición1 ,ejecuta instrucción1.</li>
+<li>Si no se cumple condición1 pero se cumple condición2, ejecuta instrucción2.</li>
+<li>Si no se cumple nada, ejecuta instrucción 3</li>
+<li>Sintaxis</li>
+</ul>
+<p>Python: 2. Condicionales if se cumple condición: ejecuta instrucción1 elif se cumple condición: ejecuta instrucción2 else: ejecuta instrucción3 edad = 13 if edad &lt; 6: print("Entrada gratuita") elif edad &lt; 18: print("Precio de la entrada: 5€") else: print("Precio de la entrada: 10€") Precio de la entrada: 5€</p>
+<ul>
+<li>Ejemplo</li>
+</ul>
+<p>Condicional if-elif-else</p>
+<ul>
+<li>Puede haber varios elif encadenados</li>
+<li>No es obligatorio acabar con un else. Por ejemplo, podemos formar una cadena if-elif-elif</li>
+</ul>
+<p>Python: 2. Condicionales edad = 13 if edad &lt; 6: precio = 0 elif edad &lt; 12: precio = 3 elif edad &lt; 18: precio = 5 else: precio = 10 print("Coste de la entrada: " + str(precio) + "€") Precio de la entrada: 5€</p>
+<p>Ejercicios Enviar un solo archivo con los 3 programas. Utilizar comentarios para identificar cada ejercicio. 1. Par o impar (else-if). Crea un programa que solicite un número. Después, el programa debe indicar si el número es par o impar. 2. Fases de la vida (if-elif-else). Crea una variable que sea edad y asígnale un número. Para cada tramo de edad, se debe mostrar un mensaje indicando</p>
+<ul>
+<li>Si la edad es menor de 13: la persona es un niño</li>
+<li>Si la edad está entre 14 y 20: la persona es un adolescente</li>
+<li>Si la edad está entre 20 y 60 la persona es un adulto</li>
+<li>Si la edad es mayor de 60: la persona es un anciano</li>
+</ul>
+<p>3. Calculadora. Crea un programa que solicite elegir una operación</p>
+<ul>
+<li>suma</li>
+<li>resta</li>
+<li>multiplicación</li>
+<li>división</li>
+</ul>
+<p>Si el usuario no introduce ninguna de las opciones disponibles, debe informar de que no ha elegido ninguna opción correcta. A continuación, el programa debe pedir al usuario que introduzca dos números. Finalmente, el programa debe mostrar por pantalla el resultado de la operación.</p>
+<p>Python: 2. Condicionales</p>
+<hr/>
+<h2 id="ut0103">1.3 03_Listas y tuplas</h2>
+<p>PROGRAMACIÓN</p>
+<h3>3. Listas y tuplas</h3>
+<p>Índice</p>
+<ul>
+<li>Crear una lista</li>
+<li>Acceder a un elemento de la lista</li>
+<li>Modificar listas</li>
+<li>Ordenar listas</li>
+<li>Crear listas númericas</li>
+<li>Fórmulas estadísticas básicas</li>
+<li>Cortar un trozo de lista</li>
+<li>Copiar una lista</li>
+<li>Tuplas</li>
+<li>Condicional if</li>
+<li>Ejercicios</li>
+</ul>
+<p>Python: 3. Listas y tuplas</p>
+<p>Crear una lista</p>
+<ul>
+<li>Una lista es un conjunto de elementos en un determinado orden.</li>
+<li>Sintaxis</li>
+<li>Elementos separados por comas dentro de corchetes.</li>
+<li>Elementos entrecomillados</li>
+<li>Recomendación</li>
+<li>plural y minúscula (Ej: coches).</li>
+<li>espacio después de coma.</li>
+</ul>
+<p>coches = ['ford', 'audi', 'peugeot'] print(coches) ['ford', 'audi', 'peugeot'] Ejercicio Escribe un programa que muestre una lista de 4 marcas de ropa. Python: 3. Listas y tuplas</p>
+<p>Acceder a un elemento de la lista</p>
+<ul>
+<li>Accedemos a un elemento de la lista por su índice de posición.</li>
+<li>El primero es [0]</li>
+<li>El último se puede acceder directamente utilizando [-1]</li>
+</ul>
+<p>Python: 3. Listas y tuplas coches = ['ford', 'audi', 'peugeot'] print(coches[0]) ford coches = ['ford', 'audi', 'peugeot'] print("Voy a comprarme un " + coches[1].title()) Voy a comprarme un Audi Ejercicio Muestra por pantalla el segundo elemento de tu lista.</p>
+<p>Modificar listas</p>
+<ul>
+<li>Para modificar elementos utilizamos el índice de posición</li>
+<li>Para añadir elementos utilizamos la función insert() e indicamos la posición</li>
+</ul>
+<p>Python: 3. Listas y tuplas coches = ['ford', 'audi', 'peugeot'] print(coches) coches[1] = 'seat' print(coches) ['ford', 'audi', 'peugeot'] ['ford', 'seat', 'peugeot'] coches = ['ford', 'audi', 'peugeot'] print(coches) coches.insert(0,'toyota') print(coches) ['ford', 'audi', 'peugeot'] ['toyota', 'ford', 'audi', 'peugeot'] Ejercicio Modifica el tercer elemento de tu lista.</p>
+<p>Modificar listas</p>
+<ul>
+<li>Para añadir elementos al final utilizamos la función append()</li>
+</ul>
+<p>Podemos empezar con una lista vacía e ir añadiendo elementos: Python: 3. Listas y tuplas coches = ['ford', 'audi', 'peugeot'] print(coches) coches.append('opel') print(coches) ['ford', 'audi', 'peugeot'] ['ford', 'audi', 'peugeot', 'opel'] coches = [] coches.append('ford') coches.append('audi') coches.append('peugeot') print(coches) ['ford', 'audi', 'peugeot'] Ejercicio Partiendo desde una lista vacía, utiliza la función append para crear una listado de 4 ciudades</p>
+<p>Modificar listas</p>
+<ul>
+<li>Para borrar elementos, sabiendo su posición, utilizamos la instrucción del</li>
+<li>Para borrar elementos, sabiendo su valor, utilizamos la función remove()</li>
+</ul>
+<p>Python: 3. Listas y tuplas coches = ['ford', 'audi', 'peugeot'] print(coches) del coches[1] print(coches) ['ford', 'audi', 'peugeot'] ['ford', 'peugeot'] coches = ['ford', 'audi', 'peugeot'] print(coches) coches.remove('audi') print(coches) ['ford', 'audi', 'peugeot'] ['ford', 'peugeot'] Si queremos reservar un valor antes de borrarlo, lo podemos guardar en una variable</p>
+<p>Modificar listas</p>
+<ul>
+<li>Para quitar de la lista elementos que vamos a utilizar más tarde,</li>
+</ul>
+<p>usamos la función pop(). Python: 3. Listas y tuplas coches = ['ford', 'audi', 'peugeot'] print(coches) popped_coche = coches.pop(0) print(coches) print(popped_coche) ['ford', 'audi', 'peugeot'] ['audi', 'peugeot'] ford Si no ponemos número de índice coches.pop(), por defecto borra el último de la lista.</p>
+<p>Ejercicio Borra el tercer elemento de tu lista utilizando pop() y muestra por pantalla la nueva lista. A continuación muestra el elemento borrado</p>
+<p>Ordenar listas</p>
+<ul>
+<li>Para mostrar la lista en orden inverso al inicial, utilizamos la función reverse().</li>
+</ul>
+<p>Python: 3. Listas y tuplas coches = ['ford', 'audi', 'peugeot'] coches.sort() print(coches) ['audi', 'ford, 'peugeot'] coches = ['ford', 'audi', 'peugeot'] coches.reverse() print(coches) ['peugeot', 'audi', 'ford'] coches = ['ford', 'audi', 'peugeot'] coches.sort(reverse=True) print(coches) ['peugeot', 'ford', 'audi']</p>
+<ul>
+<li>Para ordenar alfabéticamente,</li>
+</ul>
+<p>utilizamos sort().</p>
+<ul>
+<li>Para ordenar alfabéticamente al</li>
+</ul>
+<p>contrario, utilizamos sort(reverse=True). Ejercicio Ordena alfabéticamente tu lista.</p>
+<p>Crear listas numéricas</p>
+<ul>
+<li>Para crear una lista numérica utilizamos la función list() y range()</li>
+<li>Podemos añadir otro valor a la función range() para indicar la</li>
+</ul>
+<p>distancia entre números: Python: 3. Listas y tuplas numeros = list(range(1,8)) print(numeros) [1, 2, 3, 4, 5, 6, 7] numeros = list(range(1,8,3)) print(numeros) [1, 4, 7] Ejercicio Utilizando list() y range(), crea una lista que muestre los 5 primeros números pares y muéstrala.</p>
+<p>El rango para antes de llegar a las segunda posición. Por tanto, en el ejemplo, acaba en 7 en vez de en 8.</p>
+<p>Fórmulas estadísticas básicas</p>
+<ul>
+<li>Máximo: max()</li>
+<li>Mínimo: min()</li>
+<li>Suma: sum()</li>
+<li>Número de elementos: len()</li>
+</ul>
+<p>Python: 3. Listas y tuplas numeros = [1,5,8,6,4,7] maximo = max(numeros) print(maximo) numeros = [1,5,8,6,4,7] print(min(numeros))</p>
+<p>Cortar una trozo de lista (slicing a list)</p>
+<ul>
+<li>Definimos un rango de una lista para utilizar solo esa parte</li>
+<li>Si no definimos el primer número del rango, por defecto empieza</li>
+</ul>
+<p>desde 0. Ej: coches[:3] coches[0:3]</p>
+<ul>
+<li>Si no definimos el segundo número del rango, por defecto toma el</li>
+</ul>
+<p>último: Ej: coches [1:] coches[1:5]</p>
+<ul>
+<li>Para que muestre los n últimos, utilizamos [-n:]</li>
+</ul>
+<p>Ej: coches[-2:] coches [3:5] Python: 3. Listas y tuplas coches = ['ford', 'audi', 'peugeot', 'seat', 'toyota'] print(coches[1:3]) ['audi', 'ford']</p>
+<p>Copiar una lista</p>
+<ul>
+<li>Utilizamos [:] para copiar una lista. De este modo, podemos hacer</li>
+</ul>
+<p>cambios en la nueva lista que no afecten a la primera.</p>
+<ul>
+<li>Si no utilizo [:], los cambios que haga en la segunda lista afectarán a la</li>
+</ul>
+<p>primera y viceversa. Python: 3. Listas y tuplas mis_asignaturas = ['tecno', 'mates', 'informatica'] asignaturas_amigo = mis_asignaturas[:] asignaturas_amigo.append('ingles') print(mis_asignaturas) print(asignaturas_amigo) ['tecno', 'mates', 'informatica'] ['tecno', 'mates', 'informatica', 'ingles']</p>
+<p>Tuplas</p>
+<ul>
+<li>Una tupla es un conjunto de elementos que no pueden ser modificados.</li>
+<li>Se define como una lista pero con () en vez de [].</li>
+<li>Por ejemplo, si quiero definir las dimensiones de una habitación que no</li>
+</ul>
+<p>van a cambiar, puedo utilizar una tupla</p>
+<ul>
+<li>Si intento modificar un elemento de una tupla, aparecerá ERROR.</li>
+<li>No podemos modificar los elementos de una tupla pero sí redefinirla</li>
+</ul>
+<p>entera Python: 3. Listas y tuplas medidas = (5, 3) print(medidas[0]) print(medidas[1])</p>
+<p>Condicional if in: not in: Comprobar lista no vacía: Python: 3. Listas y tuplas usuarios = ['raul', 'luis', 'sandra'] if 'sandra' in usuarios: print("Hola, sandra") Hola sandra Sintaxis Signo Está en in No está en not it usuarios_baneados = ['juan', 'andrea', 'lucas'] if 'noelia' not in usuarios_baneados</p>
+<p>print("Hola, noelia") Hola, noelia. usuarios = ['raul', 'luis', 'sandra'] if usuarios: print("Usuarios disponibles") Usuarios disponibles</p>
+<p>Ejercicios Enviar un solo archivo con los 3 programas. Utilizar comentarios para identificar cada ejercicio. 1. Crea una lista con 4 elementos. 1. Muestra el segundo elemento por pantalla 2. Modifica el tercer elemento y muestra la lista por pantalla 3. Borra el último elemento y muestra la lista por pantalla 4.</p>
+<p>Utiliza la función "sort" para ordenar la lista alfabéticamente y muéstrala por pantalla 2. Producto escalar. Crea un programa que guarde estos vectores en dos tuplas (2,5,4) y (1,3,6) y calcule su producto escalar. 3. A partir de esta lista: materiales_actuales= ['lapiz', 'goma', 'libreta'].</p>
+<p>1. Utilizando "input", solicita al usuario que escriba un nuevo material. Si el material está en la lista, muestra por pantalla "Material disponible"; si no está en la lista, muestra "Material no disponible". 2. Realiza una copia utilizando [:] y añade un nuevo elemento. Muestra ambas listas por pantalla.</p>
+<p>Python: 3. Listas y tuplas</p>
+<hr/>
+<h2 id="ut0104">1.4 04_Bucles</h2>
+<p>PROGRAMACIÓN</p>
+<h3>4. Bucles for y while</h3>
+<p>Índice</p>
+<ul>
+<li>Bucles (loops)</li>
+<li>Bucle for</li>
+<li>Mostrar de forma ordenada elementos de una lista</li>
+<li>Hacer que algo se repita</li>
+<li>Crear series numéricas</li>
+<li>Bucle while</li>
+<li>Crear series numéricas</li>
+<li>Crear bucles infinitos</li>
+<li>variables + condicionales</li>
+<li>variable = True</li>
+<li>while True + break</li>
+<li>Ejercicios</li>
+</ul>
+<p>Python: 4. Bucles for y while</p>
+<p>Bucles (loops)</p>
+<ul>
+<li>Un bucle es una secuencia de operaciones que se ejecuta repetidas</li>
+</ul>
+<p>veces hasta que la condición asignada a dicho bucle deja de cumplirse.</p>
+<ul>
+<li>En programación, los más usados son for y while.</li>
+</ul>
+<p>Python: 4. Bucles for y while</p>
+<p>Bucle for El bucle for se utiliza especialmente en las listas y las tuplas para</p>
+<h3>1. Mostrar de forma ordenada los elementos de una lista</h3>
+<h3>2. Hacer que algo se repita</h3>
+<h3>3. Crear series numéricas</h3>
+<p>Python: 4. Bucles for y while</p>
+<p>Bucle for</p>
+
+<p>Python: 4. Bucles for y while coches = ['ford', 'audi', 'peugeot'] for coche in coches: print(coche) ford audi peugeot Importante: • Lo que va dentro del bucle va indentado. • No olvidar los dos puntos (:)</p>
+<p>Bucle for</p>
+
+<p>Python: 4. Bucles for y while coches = ['ford', 'audi', 'peugeot'] for coche in coches: print("Me voy a comprar un " + coche.title()) print("\nSon demasiados coches") Me voy a comprar un Ford Me voy a comprar un Audi Me voy a comprar un Peugeot Son demasiados coches</p>
+<p>Bucle for</p>
+
+<ul>
+<li>Listado ordenado de números utilizando la función range()</li>
+<li>Series numéricas. Por ejemplo, 10 primeros cuadrados perfectos</li>
+</ul>
+<p>Python: 4. Bucles for y while for valor in range(1,5): print(valor) Ejercicio Crea un listado que llegue hasta mil. cuadrados = [] for valor in range(1,11): cuadrado = valor**2 cuadrados.append(cuadrado) print(cuadrados) [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]</p>
+<p>Bucle while</p>
+<ul>
+<li>El bucle for ejecuta un boque de código un número definido de veces.</li>
+<li>El bucle while hace que un código se repita indefinidamente mientras</li>
+</ul>
+<p>se cumpla una condición. Cuando dicha condición deja de cumplirse, el bucle para de repetirse.</p>
+<h3>1. Series numéricas</h3>
+<h3>2. Hacer que un programa se ejecute hasta que el usuario quiera</h3>
+<p>1. Utilizando únicamente condicionales 2. Utilizando variable = True 3. Utilizando while True (bucle infinito) y break para parar. Python: 4. Bucles for y while</p>
+<p>Bucle while</p>
+
+<p>Python: 4. Bucles for y while numero_actual = 1 while numero_actual &lt;=5: print(numero_actual) numero_actual +=1 numero_actual +=1 equivale a escribir: numero_actual = numero_actual + 1</p>
+<p>Bucle while</p>
+<h3>2. Permitir a un usuario salir del programa</h3>
+<p>2.1. Estableciendo una variable vacía (Ej: nombre) y condicionales Python: 4. Bucles for y while #programa que saluda respuesta = "\n¿Cómo te llamas?: " respuesta += "\nEscribe 'salir' para cerrar el programa. " nombre = "" while nombre != 'salir': nombre = input(respuesta) if nombre != "salir"</p>
+<p>print("Hola, " + nombre)</p>
+<p>Bucle while</p>
+
+<p>2.2. Utilizando una variable = True Python: 4. Bucles for y while #programa que saluda respuesta = "\n¿Cómo te llamas?: " respuesta += "\nEscribe 'salir' para cerrar el programa. " activo = True while activo: nombre = input(respuesta) if nombre != 'salir': print("Hola, " + nombre) else</p>
+<p>activo = False</p>
+<p>Bucle while</p>
+
+<p>2.3. Utilizando while True (bucle infinito) y break para parar. Python: 4. Bucles for y while #programa que saluda respuesta = "\n¿Cómo te llamas?: " respuesta += "\nEscribe 'salir' para cerrar el programa. " while True: nombre = input (respuesta) if nombre != 'salir'</p>
+<p>print("hola, "+ nombre) else: break</p>
+<p>Ejercicios Enviar cada programa en un archivo (3 archivos) 1. Calculadora. Modifica la práctica que hiciste de la calculadora de manera que tras realizar el cálculo, el programa pida de nuevo 2 números y la operación (bucle infinito). 2. Listas numéricas. Crea un programa que calcule los números impares entre 1-20.</p>
+<p>(Crea la lista dos veces. Una vez utilizando el bucle for, y otra vez utilizando el bucle while). Muéstralas por pantalla en forma de columna. 3. Lista de la compra.</p>
+<ul>
+<li>Empieza con una lista vacía.</li>
+<li>El programa debe solicitar al usuario que introduzca un producto de la compra hasta que escriba</li>
+</ul>
+<p>"salir" (utiliza while). Cada producto que introduzca el usuario debe guardarse en la lista. (Utiliza la función "append" del tema anterior).</p>
+<ul>
+<li>Muestra por pantalla la lista de forma ordenada en una columna (utiliza el bucle for).</li>
+</ul>
+<p>4. EJERCICIO VOLUNTARIO: Crea una lista numérica que calcule los números primos entre 1-20 Python: 4. Bucles for y while</p>
+<hr/>
+<h2 id="ut01actividades">✍️ Activitats pràctiques UT1</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.1 — Activitat 1</p><p>Resol els exercicis de la pàgina 4.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.2 — Activitat2_Formato_Concatenación</p><p>Ejercicis diapositives pag 7 i 8</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.3 — ActFinal_Problemes Introducció</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.4 — Act4_If i operadors</p><p data-end="409" data-start="247"><strong data-end="260" data-start="247">Objetivo:</strong> Practicar operadores relacionales (<code data-end="299" data-start="296">&lt;</code>, <code data-end="305" data-start="301">==</code>, <code data-end="310" data-start="307">&gt;</code>)</p>
+<p data-end="409" data-start="247">Enunciado: Pide al usuario su edad y muestra los siguientes mensajes según corresponda</p>
+<ul data-end="599" data-start="410">
+<li data-end="470" data-start="410">
+<p data-end="470" data-start="412">Si tiene menos de 18 años → <em data-end="468" data-start="440">“No puedes votar todavía.”</em></p>
+</li>
+<li data-end="548" data-start="471">
+<p data-end="548" data-start="473">Si tiene exactamente 18 años → <em data-end="546" data-start="504">“¡Acabas de cumplir la edad para votar!”</em></p>
+</li>
+<li data-end="599" data-start="549">
+<p data-end="599" data-start="551">Si tiene más de 18 años → <em data-end="597" data-start="577">“Ya puedes votar.”</em></p>
+</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.5 — Act5_if i operadors</p><p><strong data-end="924" data-start="911">Objetivo:</strong> Practicar operadores lógicos (<code data-end="960" data-start="955">and</code>, <code data-end="966" data-start="962">or</code>, <code data-end="973" data-start="968">not</code>)</p>
+<p><br data-end="977" data-start="974"/><strong data-end="991" data-start="977">Enunciado:</strong><br data-end="994" data-start="991"/>Pide al usuario su <strong data-end="1034" data-start="1013">nombre de usuario</strong> y <strong data-end="1051" data-start="1037">contraseña</strong>.<br data-end="1055" data-start="1052"/>Solo podrá acceder si el usuario es <code data-end="1100" data-start="1091">"admin"</code> <strong data-end="1106" data-start="1101">y</strong> la contraseña es <code data-end="1132" data-start="1124">"1234"</code>.<br data-end="1136" data-start="1133"/>Si alguna de las condiciones no se cumple, muestra un mensaje de error.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.6 — Act6_If/elif/else i operador</p><p data-end="409" data-start="247"><strong data-end="260" data-start="247">Objetivo:</strong> Practicar operadores relacionales (<code data-end="299" data-start="296">&lt;</code>, <code data-end="305" data-start="301">==</code>, <code data-end="310" data-start="307">&gt;</code>)</p>
+<p data-end="409" data-start="247">Enunciado: Pide al usuario su edad y muestra los siguientes mensajes según corresponda</p>
+<ul data-end="599" data-start="410">
+<li data-end="470" data-start="410">
+<p data-end="470" data-start="412">Si tiene menos de 18 años → <em data-end="468" data-start="440">“No puedes votar todavía.”</em></p>
+</li>
+<li data-end="548" data-start="471">
+<p data-end="548" data-start="473">Si tiene exactamente 18 años → <em data-end="546" data-start="504">“¡Acabas de cumplir la edad para votar!”</em></p>
+</li>
+<li data-end="599" data-start="549">
+<p data-end="599" data-start="551">Si tiene más de 18 años → <em data-end="597" data-start="577">“Ya puedes votar.”</em></p>
+</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.7 — ActFinal_Condicionals</p><p>Fer les últimes activitats del document "Condicionals"</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.8 — Act8_Listas</p><p>pàgina 3 i 4</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.9 — Act9_append i insert</p><p>pàgina 5 i 6.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.10 — Act10_eliminar elementos</p><p>Usar funciones POP, del y remove.</p>
+<p>página 7 y 8.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.11 — Act11_organizar listas</p><p>página 9, 10 y 11</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.12 — Act12_ListasFinal</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.13 — Figuras_Bucles</p><p>El programa debe pedir por pantalla.</p>
+<ul>
+<li>Para el cuadrado: el <strong>LADO</strong>.</li>
+<li>para el rectángulo: <strong>BASE</strong> y <strong>ALTURA</strong>.</li>
+<li>para el triangulo: <strong>ALTURA </strong>(será un triangulo rectángulo).</li>
+</ul>
+<p>Dependiendo de estas variables el programa dibujará las figuras.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.14 — TascaFinal_Bucles</p><p>4 últimes activitats del tema</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/ut0001.html">⬅️ 0.1 Continguts i Recursos</a>
+<a class="page-nav-btn" href="../ut01/ut0101.html">1.1 01_Conceptos básicos ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

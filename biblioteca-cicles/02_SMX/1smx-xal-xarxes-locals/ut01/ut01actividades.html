@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT1 — Xarxes Locals | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖧 Xarxes Locals — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Xarxes Locals</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Sistemes Microinformàtics i Xarxes</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Avaluació</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a class="active" href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Solución: Proyecto de Instalación LAN</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Recursos: Ejercicios de Direccionamiento IP</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 4</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — i 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Continguts i Recursos</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Final de Curs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Dossier de Recuperació</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unitat Didàctica 7</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Unitat Didàctica 8</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Unitat Didàctica 9</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT1 — Unitat Didàctica 1</span>
+<h1>✍️ Activitats pràctiques UT1</h1>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.1 — 01 - Actividad 01: Taxonomía de Redes</p><div style="text-align: justify;">Indica brevemente cómo se clasifican las redes en función del criterio de extensión y las principales características de cada uno de los tipos enunciados. </div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.2 — 01 - Actividad 02: Diagrama de Red ***</p><div style="text-align: justify;">Realiza un diagrama de red de la instalación del aula en un programa informático representando en él los componentes y conexionado que reconozcas. Indica si los nodos son equipos clientes, servidores (y de qué servicio) o equipos de interconexión.<br/></div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.3 — 01 - Actividad 03: Diagrama de Topologías ***</p><div style="text-align: justify;">Realiza 3 diagramas con el programa DIA que representen los modelos de topologías físicas más importantes (bus, anillo y estrella). Indica en el propio diagrama pero en una capa distinta las ventajas y desventajas que presentan junto con las consecuencias de la caída de un nodo.</div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.4 — 01 - Actividad 04: Análisis de un RFC</p><div style="text-align: justify;">Accede al grupo de traducción al español de los RFC en <a href="http://www.rfc-es.org/" target="_blank" title="RFC-es">http://www.rfc-es.org/</a> y localiza el documento que hace referencia al protocolo TCP. Lee brevemente el apartado 1 observando con detalle su estructura y propósito general. ¿Qué número de RFC es? ¿En qué fecha se editó? Comenta los aspectos más relevantes.<br/></div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.5 — 01 - Activitat: Glossari (Llibreta) ***</p><p>Realitza un glossari de termes tècnics relatius als continguts estudiats a la unitat on oferisques una definició curta dels mateixos: Telemàtica, ETD, ETCD, Transductor, RTC, modulació, codificació compressió, modem, codec, Host, NIC, Repetidor, HUB, Pont, Switch, Router, Punt d'accés, PAN, LAN, MAN, WAN, Backbone, VPN, SAN, XDSI, ATM, Frame Relay, xDSL, MAU, CSMA/CD, P2P, C/S, Col·lissió, Ethernet, OSI, ISO, ANSI, IEEE, TCP/IP, TCP, IP, UDP, MAC, LLC, Embolcallar, FCS, Bit Stuffing, Paritat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.6 — 01 - Activitat: Revisió de Continguts (Llibreta) ***</p><p>1.- Explica els components i principals funcions d'un sistema de comunicacions informàtiques.</p>
+<p>2.- Enumera i descriu breument els principals components d'una xarxa.</p>
+<p>3.- Explica com es classifiquen les carxes en funció de la seva extensió.</p>
+<p>4.- Explica la diferència entre titularitat privada i pública.</p>
+<p>5.- Comenta els principals tipus de VPN existents.</p>
+<p>6.- Comenta les diferències entre topologia física i lògica.</p>
+<p>7.- Explica les diferències entre lògiques per testimoni i per contenció.</p>
+<p>8.- Comenta les diferències entre el model P2P i el C/S.</p>
+<p>9.- Comenta les principals topologies físiques, els seus avantatges i desavantatges.</p>
+<p>10.- Diferencia els conceptes estandard de facto i de iure.</p>
+<p>11.- Comenta els principals organismes reguladors al camp de les xarxes.</p>
+<p>12.- Explica el concepte d'arquitectura de xarxa. Explica el concepte de nivell, iterfície i protocol.</p>
+<p>13.- Explica el model OSI. Comenta les seves funcions, nivells i unitats de dades.</p>
+<p>14.- Explica els tipus de serveis que proporciona OSI.</p>
+<p>15.- Exemplifica una comunicació entre dos equips passant per un router utilitzant la pila de OSI.</p>
+<p>16.- Comenta el model TCP/IP. Compara-lo amb OSI.</p>
+<p>17.- Explica com funciona el CSMA/CD de 802.3 Ethernet.</p>
+<p>18.- Explica les regles de noms que gasten els diferents tipus de Ethernet.</p>
+<p>19.- Comenta el format de l'adreça MAC.</p>
+<p>20.- Explica com són les trames de Ethernet 802.3.</p>
+<p>21.- Comenta les diferències entre els protocols MAC deterministes i no deterministes.</p>
+<p>22.- Comenta els diferents tipus d'enllaç que es poden donar en les comunicacions.</p>
+<p>23.- Explica els tipus de Ethernet més interessants en l'actualitat.</p>
+<p>24.- Comenta breument els principals dispositius d'interconnexió utilitzats: NIC, repetidor, HUB, pont, switch, punt d'accés i router.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.7 — 01 - Activitat: Casos Pràctics (Llibreta) ***</p><p>1.- Una instalación de red quiere añadir dos impresoras a la red. Cada impresora se conecta a través de su interfaz de red. Sobre la primera impresora se desea que puedan imprimir todos los usuarios de la red, pero sobre la segunda impresora se quieren mantener unas ciertas restricciones. ¿Qué modelo de red —cliente/servidor o peer to peer—sería el más apropiado para cada una de las impresoras? Razona la respuesta.<br/><br/>2.- Comenta qué problemas se pueden generar en una red de cada topología estudiada cuando se rompe uno de los segmentos de red, por ejemplo, la conexión entre dos estaciones contiguas en un anillo, el bus de una red en árbol, etc.<br/><br/>3.- Busca en Internet información sobre los RFC de los protocolos SMTP, POP e IMAP que son utilizados por las aplicaciones de gestión de correo electrónico. ¿En qué números de RFC se detallan estos protocolos?<br/><br/>4.- Clasifica las redes que intervienen en las circunstancias que se citan a continuación según sean PAN, WAN, LAN, MAN, WLAN o cloud computing. Razona la respuesta.</p>
+<div style="margin-left: 40px;">a. Una conexión por módem a Internet.<br/> b. Un televisor recibe una transmisión televisiva por cable.<br/> c .Un receptor de radio recibe por su antena la radiodifusión de un programa musical.<br/> d. Un ordenador se conecta a una red para imprimir por una impresora de red.<br/> e. Una agenda electrónica sincroniza el correo electrónico utilizando Bluetooth.<br/> f. Varios usuarios comparten una conexión a Internet sin necesidad de cables.<br/> g. Dos campus universitarios en la misma ciudad, pero distantes, se conectan mediante fibra óptica.<br/> h. Una aplicación accede a sus datos en Internet desde cualquier lugar.</div>
+<p>5.- A continuación se va a especificar un conjunto de palabras, siglas y acrónimos. Se trata de que relaciones cada uno de ellos con los distintos tipos de redes. Razona la respuesta.</p>
+<div style="margin-left: 40px;">a. Wi-Fi.<br/> b .Ethernet.<br/> c. Frame-Relay.<br/> d. X.25.<br/> e. Token ring.<br/> f. Ondas de radio.<br/> g. WiMAX.<br/> h. Bluetooth.</div>
+<p>6.- Describe los factores que harían necesaria la introducción de una red de área local en el flujo de trabajo de una oficina bancaria. <br/><br/>7.- De los elementos que se enumeran a continuación, di cuáles son dispositivos activos de interconexión de red y cuáles no. Razona la respuesta.</p>
+<div style="margin-left: 40px;">a. Encaminador.<br/> b. Punto de acceso inalámbrico.<br/> c. Cable coaxial.<br/> d. Conmutador.<br/> e. Armario de comunicaciones.<br/> f. Disco duro.<br/> g. Sistema operativo de red.<br/> h. Módem.<br/> i. Conexión ADSL.<br/> j. Router ADSL.</div>
+<p>8.- Averigua si son verdaderas o falsas las siguientes afirmaciones</p>
+<p style="margin-left: 30px;">a. Una red en anillo es más rápida que una red en bus.<br/> b. Una red en bus en más rápida que una red en anillo.<br/> c. La rotura del anillo de una red impide totalmente la comunicación en toda la red.<br/> d. La rotura de un segmento de red en una red en árbol impide la comunicación en toda la red.<br/> e. Una red en bus es muy sensible a la congestión provocada por exceso de tráfico.<br/> f. Una red en bus se adapta mejor a la estructura de cableado de un edificio.<br/> g. Una red en anillo se adapta mejor a la estructura de un campus.<br/> h. Todas las redes metropolitanas son anillos.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.8 — 01 - Test de Repaso</p><div style="text-align: justify;">Realiza el <a href="$@FILEPHP@$$@SLASH@$testrepaso$@SLASH@$01-Test.jpg" target="_blank">Test de Repaso de la Unidad 1</a> justificando las respuestas elegidas e indicando la razón o motivo que las hace correctas e incorrectas.<br/><br/></div></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 1.9 — 01 - Autoevaluación</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.10 — 01 - Examen Pràctico</p>01 - Examen Pràctico</div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.11 — 01 - Examen Unidad</p>01 - Examen Unidad</div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut01/ut0101.html">⬅️ 1.1 Continguts i Recursos</a>
+<a class="page-nav-btn" href="../ut02/index.html">📘 UT2 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

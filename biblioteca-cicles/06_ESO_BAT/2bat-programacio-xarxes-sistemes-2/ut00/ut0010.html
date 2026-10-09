@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>0.10 Ficheros — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔐 Programació, Xarxes i Sistemes Informàtics II — 2n Batxillerat</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació, Xarxes i Sistemes Informàtics II</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Apunts sistemes de numeració</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — Introducció a la programació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 UD1. Introducció a la programació</a></li>
+<li><a href="../ut00/ut0002.html">0.2 UD1. Introducció a la programació Part 2</a></li>
+<li><a href="../ut00/ut0003.html">0.3 UD1. Introducció a la programació Part 3</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — Introducción a Phyton</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducció a Python</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Elementos de un programa</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Tipos de datos</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Funciones integradas</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Módulos, paquetes y namespaces</a></li>
+<li><a href="../ut00/ut0006.html">0.6 Estructuras de control</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Tipos de datos complejos</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Funciones</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Errores y excepciones</a></li>
+<li><a class="active" href="../ut00/ut0010.html">0.10 Ficheros</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Xarxes Locals</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Introducción a las redes locales</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Mapa físico y lógico</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Arquitecturas de red</a></li>
+<li><a href="../ut01/ut0104.html">1.4 MODELO OSI</a></li>
+<li><a href="../ut01/ut0105.html">1.5 MODELO TCP/IP</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Tipos de cableado</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Págines Web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 CheatSheet HTML5</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CheatSheet CSS3</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Seguridad</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n Batxillerat · UT0 — Introducción a Phyton</span>
+<h1>0.10 Ficheros</h1>
+<p>ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Ficheros Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.</p>
+<p>Autora: María Paz Segura Valero (mpazprofe@gmail.com)</p>
+<p>Escuela de programación - Python Ficheros CONTENIDO</p>
+<ul>
+<li>Introducción.....................................................................................................................................2</li>
+<li>Qué es un fichero.............................................................................................................................2</li>
+<li>Tipos de ficheros..............................................................................................................................3</li>
+<li>Puntero de un fichero.......................................................................................................................4</li>
+<li>Operaciones con ficheros................................................................................................................4</li>
+</ul>
+<p>5.1. Abrir y cerrar ficheros..............................................................................................................4 5.2. Lectura de datos.......................................................................................................................7 5.2.1. Recorrido de ficheros.....................................................................................................10 5.3. Escritura de datos...................................................................................................................12 5.4. Manejo del puntero del fichero..............................................................................................13</p>
+<ul>
+<li>Tratamiento de errores...................................................................................................................15</li>
+<li>Fuentes de información.................................................................................................................15</li>
+</ul>
+<p>Escuela de programación - Python Ficheros</p>
+<h3>1. Introducción</h3>
+<p>Hasta el momento todos los datos que manejábamos en nuestros programas desaparecían una vez que acababa su ejecución. Dicho con otras palabras, cuando volvíamos a ejecutar el programa no quedaba ni rastro de las modificaciones que había hecho el usuario. Conforme vayamos haciendo programas más complejos, lo habitual será que nos interese almacenar de forma persistente los cálculos que hacemos para utilizarlos en otro momento. Es decir, almacenar la información que generan nuestros programas en el disco duro del ordenador, móvil, etc.</p>
+<p>Tradicionalmente han existidos dos sistemas de almacenamiento de información: los ficheros y las bases de datos. Aunque las bases de datos ofrecen mayores prestaciones para almacenar gran cantidad de datos relacionados entre sí, nosotros nos centraremos en la manipulación de ficheros con</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python ya que es bastante más sencilla. Cuando domines este sistema de almacenamiento</code></pre>
+</div>
+<p>podrás dar el salto y aprender a trabajar con bases de datos.</p>
+<h3>2. Qué es un fichero</h3>
+<p>Un fichero o archivo es una unidad lógica de almacenamiento de información que nos permite guardar de manera persistente una gran cantidad de información en una máquina. Todos los ficheros disponen de un nombre y una extensión y se almacenan en una carpeta/directorio de una máquina.</p>
+<p>• El nombre suele darnos una idea de la información que contiene. Por ejemplo: lista_alumnos, notas_4eso, receta_cocina. • La extensión se compone de 3 o cuatro letras que indican el formato o tipo de información que contiene el fichero. Por ejemplo: .jpg para imágenes, .txt para documentos de texto plano, .py para programas de Python, etc.</p>
+<p>◦El nombre y la extensión están separados entre sí por un punto. Por ejemplo: calculadora.py, lista_alumnos.txt, logotipo.jpg. Figura 1: Imagen de Jan Vašek en Pixabay</p>
+<p>Escuela de programación - Python Ficheros • Como hemos dicho, los ficheros se almacenan en carpetas o directorios y para poder acceder a ellos debemos conocer la ruta o secuencia de carpetas que debemos visitar para llegar hasta ellos. Dependiendo del sistema operativo en el que nos encontremos la especificación de la ruta se hará de una manera o de otra.</p>
+<p>Por</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>ejemplo</p></div>
+<p>C:\cursos\python\presentacion.pdf</p>
+<p>en</p>
+<p>Windows</p>
+<p>o /home/cursos/python/presentacion.pdf en Lliurex. Además, los ficheros están organizados internamiento como registros, es decir, están formados por un conjunto de registros que almacenan datos de todo tipo. registro1 registro2 ... registron Podríamos entender un registro como la unidad básica de trasvase de información entre un fichero y un programa.</p>
+<h3>3. Tipos de ficheros</h3>
+<p>Los ficheros son de dos tipos: • Ficheros de texto</p>
+<p>, que están compuestos por texto plano, sin inclusión de ningún código para dar formato al mismo. Ejemplo de ficheros de texto plano son los .py o los .csv. ◦Estos ficheros se pueden abrir con cualquier editor de texto plano como el Bloc de Notas de Windows o el Pluma de Lliurex.</p>
+<p>◦Dependiendo de la codificación de caracteres utilizada, a cada carácter del texto se le asocia un byte o un grupo de bytes. Ejemplos de codificación: ASCII, UTF-8. FICHERO FICHERO Escribo registro3 Leo registro1</p>
+<p>Escuela de programación - Python Ficheros • Ficheros binarios</p>
+<p>, son aquellos que no contienen texto plano. El formato o la estructura de cada registro del fichero estará determinada por el programa que lo haya creado. Por ejemplo: los ficheros .doc o .ods sólo pueden abrirse con procesadores de texto. Si los abrimos con un editor de texto plano, aparecen caracteres “extraños” que no reconoce.</p>
+<p>En este curso nos centraremos en el tratamiento de ficheros de texto.</p>
+<h3>4. Puntero de un fichero</h3>
+<p>A todo fichero que se abre con un programa Python se le asocia un puntero que indica la posición del fichero en la que nos encontramos actualmente. Por ejemplo: si hemos leído el primer registro del fichero, el puntero se situará detrás de dicho registro y, tanto si la siguiente instrucción es para leer como si es para escribir, se realizará justo donde esté apuntando el puntero.</p>
+<p>registro1 registro2 ... registron Cuando se han leído todos los registros del fichero y el puntero se posiciona después del último registro, se dice que ha alcanzado la marca EOF (End Of File).</p>
+<h3>5. Operaciones con ficheros</h3>
+<p>Siempre que se trabaja con ficheros en Python se sigue la siguiente estructura de programa</p>
+<ul>
+<li>Abrir el fichero en el modo adecuado.</li>
+<li>Realizar operaciones de lectura y/o escritura con él.</li>
+<li>Cerrar el fichero con el que estamos trabajando.</li>
+</ul>
+<p>Veamos los métodos e instrucciones que nos ofrece Python para realizar estas tareas.</p>
+<h4>5.1. Abrir y cerrar ficheros</h4>
+<p>Para abrir un fichero debemos ejecutar el método open() de la siguiente forma: mi_fichero = open(ruta_fichero, modo_apertura) FICHERO Leemos registro1 puntero</p>
+<p>Escuela de programación - Python Ficheros Donde… • mi_fichero será el nombre del objeto fichero que manejará el programa. Podemos verlo como el alias que tendrá el fichero físico dentro del programa. • ruta_fichero será una cadena de texto con la ruta de acceso al fichero, el nombre y la extensión. Puede tratarse de una ruta absoluta o una ruta relativa (desde la carpeta en la que nos encontramos actualmente). El formato dependerá del sistema operativo en el que estemos trabajando.</p>
+<p>◦Ejemplos en Windows: “C:\cursos\python\datos.txt” sería un ruta absoluta y “datos.txt“ o “..\python\datos.txt” serían dos rutas relativas que podría utilizar, según la carpeta en la que nos encontrásemos en ese momento. ◦Ejemplo en Lliurex: “/home/cursos/python/datos.txt” sería un ruta absoluta y “datos.txt“ o “../python/datos.txt” serían dos rutas relativas que podría utilizar, según la carpeta en la que nos encontrásemos en ese momento.</p>
+<p>• modo_apertura indica el propósito de apertura del fichero (leer, escribir, añadir) y el tipo de fichero (texto, binario). Si no se indica, se entiende que estamos abriendo un fichero de texto para lectura. A continuación puedes ver más modos de apertura: Modo Descripción r Modo de lectura. El fichero debe existir o se producirá un error.</p>
+<p>w Modo de escritura. Si el fichero existe, se sobreescribirá su contenido. a Modo de escritura. Se añaden datos al final del contenido existente en el fichero. El fichero debe existir o se producirá un error. r+ Modo de lectura y escritura. El fichero debe existir o se producirá un error.</p>
+<p>Los modos recogidos en la tabla anterior son los más habituales para trabajar con ficheros de texto pero puedes ver la lista completa en el siguiente enlace web: https://docs.python.org/3/library/functions.html#open Si vas a probar los siguientes programas en el editor on-line OnlineGBD, fíjate que cuando un programa cree un fichero de texto, se creará una pestaña nueva en el editor con su contenido y si el programa va a leer un fichero entonces deberás subirlo previamente a una pestaña para que lo encuentre.</p>
+<p>Escuela de programación - Python Ficheros Ejemplo 1: Diferentes formas de abrir un fichero para leer su contenido. Figura 2: Abrir fichero para lectura Ejemplo 2: Diferentes modos de abrir un fichero para escribir. Figura 3: Abrir fichero para escribir Por defecto el juego de caracteres (codificación) que se utiliza para representar el contenido del fichero viene determinado por la codificación que está configurada en el sistema operativo. Para saber cuál es dicha codificación puedes ejecutar el siguiente bloque de instrucciones</p>
+<p>import locale print(locale.getpreferredencoding(False)) Ejemplo: ejecución de las instrucciones anteriores en Windows y Lliurex. Figura 4: Codificación de caracteres en Windows Figura 5: Codificación de caracteres en Lliurex Si queremos asegurarnos de que la codificación que se utiliza en los ficheros que utilizan nuestros programas en Python es siempre la misma, por ejemplo: UTF-8, podemos indicarlo en el modo de apertura del fichero.</p>
+<p>Escuela de programación - Python Ficheros Su sintaxis es la siguiente: mi_fichero = open(ruta_fichero, modo_apertura, encoding = codificación) Donde… • codificación es una cadena de texto que especifica el juego de caracteres. Figura 6: Uso del parámetro "encoding" Cuando ya hayamos acabado de trabajar con nuestro fichero, debemos asegurarnos de cerrarlo para evitar pérdidas de información y malgasto de recursos del sistema. Esta operación se realiza con el método close() del objeto fichero.</p>
+<p>mi_fichero.close() Una forma de realizar el cierre de un fichero de forma automática es utilizar la siguiente estructura para trabajar con los ficheros: with open(nombre_fichero) as mi_fichero: #instrucciones de manejo del fichero La instrucción with se encarga de cerrar el fichero cuando acaba de ejecutarse dicho bloque, incluso cuando se haya producido un error. Es recomendable utilizar esta instrucción, cuando sea posible.</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo: Abrimos un fichero y lo cerramos después de tratar su contenido. Figura 7: Uso de "with"</p></div>
+<h4>5.2. Lectura de datos</h4>
+<p>El objeto fichero dispone de tres métodos que permiten realizar la lectura del contenido de un fichero de texto: read(), readline() y readlines().</p>
+<p>Escuela de programación - Python Ficheros El método read() permite leer el contenido completo de un fichero y volcarlo en una variable de tipo cadena de texto. Su sintaxis es: mi_fichero.read() Este método devuelve una cadena de texto, así que podemos asignarlo a una variable para trabajar con ella.</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo: Leemos el fichero con read() y comprobamos que devuelve un tipo str. Figura 8: Uso del método "read()" Fíjate que las líneas de texto acaban con un carácter “\n” para indicar el salto de línea entre una y otra. Por lo tanto, en el ejemplo anterior, hemos leído un fichero que tiene tres líneas de texto. Cada una de estas líneas se correspondería con un registro del fichero.</p></div>
+<p>El método readline() lee una línea completa de un fichero de texto. Cada vez que se ejecuta mueve el puntero del fichero a la línea siguiente. Fichero “datos.txt” Estoy escribiendo algunas líneas en un fichero. tiempo = 0 #ejecutamos readline() Fichero “datos.txt” Estoy escribiendo algunas líneas en un fichero.</p>
+<p>tiempo = 1 Su sintaxis es la siguiente: mi_fichero.readline() Al igual que con el método anterior, readline() devuelve una cadena de texto, así que podemos asignarla a una variable para trabajar con ella. puntero puntero</p>
+<p>Escuela de programación - Python Ficheros Figura 9: Uso del método "readline()” Por último, el método readlines() lee todas las líneas de texto del fichero y las asigna a una lista donde cada elemento contiene el texto de una de las líneas del fichero. Su sintaxis es</p>
+<p>mi_lista = mi_fichero.readlines() Figura 10: Uso del método “readlines()” Como hemos visto, los tres métodos anteriores, devuelven el carácter de fin de línea (“\n”) al final del texto de cada línea. Si queremos deshacernos de él podemos utilizar el método rstrip(“\n”) que elimina del final de una cadena de texto el carácter especificado como argumento.</p>
+<p>A continuación podemos ver un programa donde se realiza la lectura de cada línea de un fichero de texto eliminando el carácter de fin de línea. Cuando llegamos al EOF, devuelve una cadena vacía.</p>
+<p>Escuela de programación - Python Ficheros Figura 11: Uso del método "rstrip()" en una cadena de texto Ahora que ya sabemos cómo utilizar los métodos anteriores, vamos a ver cómo utilizar bucles para procesar el contenido de un fichero de texto.</p>
+<h4>5.2.1. Recorrido de ficheros</h4>
+<p>A la hora de tratar el contenido de las líneas de un fichero de texto podemos apoyarnos en el uso de bucles for o while, según el caso. Además, como hemos visto, podemos utilizar la instrucción with para tratar los ficheros. Ejemplo 1: Lectura de las líneas de un fichero de texto sin utilizar ningún método de lectura, simplemente usando un bucle for.</p>
+<p>Figura 12: Lectura con un bucle "for"</p>
+<p>Figura 13: Ejecución Ejemplo 2: Similar al ejemplo anterior pero utilizando la instrucción with. Figura 14: Uso de "with" sin métodos de lectura.</p>
+<p>Figura 15: Ejecución</p>
+<p>Escuela de programación - Python Ficheros Ejemplo 3: Utilizamos un while que llama al método readline() hasta que encuentra el fin de fichero o EOF (equivalente a una cadena de texto vacía). Figura 16: Uso de "while" y "readline"</p>
+<p>Figura 17: Ejecución Ejemplo 4: Similar al ejemplo anterior pero utilizando la instrucción with. Figura 18: Uso de "with" y "readline"</p>
+<p>Figura 19: Ejecución Ejemplo 5: Como el método readlines() devuelve una lista de líneas, podemos utilizar un bucle for para procesarlas. Figura 20: Uso de "for" y "readlines"</p>
+<p>Figura 21: Ejecución Ejemplo 6: Similar al ejemplo anterior pero utilizando la instrucción with. Figura 22: Uso de "with" con readlines()</p>
+<p>Figura 23: Ejecución</p>
+<p>Escuela de programación - Python Ficheros</p>
+<h4>5.3. Escritura de datos</h4>
+<p>El objeto fichero dispone de dos métodos que permiten realizar la lectura del contenido de un fichero de texto: write(), y writelines(). Ninguno de los métodos de escritura que vamos a ver a continuación incluyen al final de cada línea el carácter ‘\n’ de forma automática, así que será tarea nuestra ocuparnos de ello.</p>
+<p>Recordemos que si utilizamos un modo de lectura ‘a’, el puntero se posicionará al final del contenido para seguir escribiendo. En otro caso, se posicionará al principio del fichero. El método write() permite escribir una cadena de texto en un fichero y su sintaxis es la siguiente: mi_fichero.write(linea) Figura 24: Uso del método "write()" A continuación se puede ver una ejecución del programa y el contenido final del fichero.</p>
+<p>Figura 25: Ejecución del programa</p>
+<p>Figura 26: Contenido del fichero El método writelines(), por su parte, recibe como parámetro una lista de cadenas y las guardar en el fichero correspondiente. Su sintaxis es la siguiente: mi_fichero.writelines(lista) Figura 27: Uso del método "writelines()" Insertamos el carácter de fin de línea antes de escribir la cadena en el fichero.</p>
+<p>Añadimos el carácter de fin de línea a cada cadena de la lista que queremos escribir en el fichero.</p>
+<p>Escuela de programación - Python Ficheros A continuación se puede ver una ejecución del programa y el contenido final del fichero. Figura 28: Ejecución del programa</p>
+<p>Figura 29: Contenido del fichero</p>
+<h4>5.4. Manejo del puntero del fichero</h4>
+<p>En algún momento puede ser de utilidad conocer la posición del puntero en el fichero o ubicarlo al principio o al final del fichero. Para llevar a cabo estas tareas disponemos de dos métodos en los ficheros: tell() y seek(). El método tell() devuelve un número entero que indica la posición del puntero desde el principio del fichero. Su sintaxis es la siguiente: mi_fichero.tell() Figura 30: Uso de tell() Este programa lee un fichero de texto línea a línea e indica la posición en la que se encuentra el puntero en cada momento.</p>
+<p>Utilizamos la función ljust(número) que permite alinear una cadena de texto a su izquierda. El número que se pasa como argumento es el número de posiciones que se reservan para escribir la cadena de texto. Figura 31: Ejecución programa Por su parte, el método seek() permite mover el puntero del fichero a una posición determinada.</p>
+<p>Su sintaxis es la siguiente: mi_fichero.seek(desplazamiento, origen) Si calculamos la longitud de la cadena veremos que en la tercera línea la posición del puntero no coincide con nuestros cálculos. Esto se debe a que el carácter á no ocupa los mismos bytes que una letra no acentuada.</p>
+<p>Escuela de programación - Python Ficheros Donde: • desplazamiento es el número de bytes que vamos a movernos desde origen. • origen es la posición desde la que partimos. En los ficheros de texto sólo es posible realizar los siguientes movimientos: • Un desplazamiento desde el principio del fichero teniendo en cuenta que los desplazamientos deben basarse en un valor devuelto por el método tell().</p>
+<p>• Ir directamente al final del fichero. Fichero “datos.txt” Estoy escribiendo algunas líneas en un fichero. A continuación se puede ver el ejemplo anterior ampliado donde utiliza el método seek() para desplazarse al principio del fichero, al final de la segunda línea y al final del fichero.</p>
+<p>Para conocer la posición exacta del final de la segunda línea, debemos utilizar el método tell() cuando acabamos de leerla y guardarlo en la variable desplazamiento. Figura 32: Uso del método seek() origen desplazamiento destino</p>
+<p>Escuela de programación - Python Ficheros</p>
+<h3>6. Tratamiento de errores</h3>
+<p>Si, en lugar de utilizar la instrucción with, preferimos encargarnos de abrir y cerrar los ficheros nosotros mismos, debemos asegurarnos de que los ficheros quedan cerrados, incluso cuando se produce algún error. Por eso, deberíamos utilizar una instrucción try...finally con la siguiente sintaxis</p>
+<p>mi_fichero.open(nombre_fichero, modo) try: #instrucciones de lectura/escritura finally: mi_fichero.close() A continuación se puede ver un ejemplo de uso: Figura 33: Uso de try...finally Si quieres ampliar la información sobre ficheros, puedes visitar las siguientes páginas web</p>
+<p>• Leyendo y escribiendo ficheros (en castellano): https://docs.python.org/es/3/tutorial/inputoutput.html#reading-and-writing-files • Reading and writing files in Python: https://realpython.com/read-write-files- python/</p>
+<h3>7. Fuentes de información</h3>
+<p>• Página oficial del lenguaje Python: https://www.python.org/ • Reading and writing files in Python: https://realpython.com/read-write-files-python/</p>
+<p>Escuela de programación - Python Ficheros • Curso de Python 3 de José Domingo Muñoz: https://plataforma.josedomingo.org/pledin/cursos/python3/ • Manejo de ficheros de Hektor Profe: https://docs.hektorprofe.net/python/manejo- de-ficheros/ • «Curso de Programación en Python», José Luis Tomás Navarro.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/ut0009.html">⬅️ 0.9 Errores y excepciones</a>
+<a class="page-nav-btn" href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

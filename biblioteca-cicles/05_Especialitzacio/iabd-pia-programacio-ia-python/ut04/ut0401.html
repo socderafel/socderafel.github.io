@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>4.1 Python apuntes de clase — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🐍 Programació d'Intel·ligència Artificial amb Python — CE IA i Big Data</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació d'Intel·ligència Artificial amb Python</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Redes Neuronales</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Continguts i Recursos</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Scikit Learn</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de</a></li>
+<li><a href="../ut03/ut0302.html">3.2 UT 3.5 Biblioteca plotly</a></li>
+<li><a href="../ut03/ut0303.html">3.3 UT 3.4 Biblioteca seaborn</a></li>
+<li><a href="../ut03/ut0304.html">3.4 UT 3.3 Biblioteca matplotlib</a></li>
+<li><a href="../ut03/ut0305.html">3.5 UT 3.2 Biblioteca Pandas</a></li>
+<li><a href="../ut03/ut0306.html">3.6 UT 3.1 Biblioteca Numpy</a></li>
+<li><a href="../ut03/ut0307.html">3.7 UT 3.0 Presentació unitat</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Housing</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Primeros pasos con Python</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut04/ut0401.html">4.1 Python apuntes de clase</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Python para todos (libro).</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Ejercicios</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Creación entorno de trabajo</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Instalación entorno de trabajo.</a></li>
+<li><a href="../ut05/ut0502.html">5.2 SO LINUX MINT MATE</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Presentación del módulo</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Presentación.</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE IA i Big Data · UT4 — Primeros pasos con Python</span>
+<h1>4.1 Python apuntes de clase</h1>
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p>
+<h4><span class="" style="background-color: rgb(125, 159, 211);">Materiales.</span></h4><br/></div>
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p>
+<h4><span class="" style="background-color: rgb(125, 159, 211);">ACTIVITATS DE REFORÇ</span></h4><br/></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p>
+<h4><span class="" style="background-color: rgb(125, 159, 211);">ACTIVITATS D'AMPLIACIÓ</span></h4><br/></div>
+<hr/>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. UT2. Programación en Python. Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Taula de continguts</p>
+<ul>
+<li>Introducción..........................................................................................................................................4</li>
+</ul>
+<p>1.1. Instalación de Python.....................................................................................................................4 1.2. Entorno de desarrollo de Python (IDE)..........................................................................................4</p>
+<ul>
+<li>Programación en Python.......................................................................................................................6</li>
+</ul>
+<p>2.1. Elementos de un programa de Python (1/2)...................................................................................6 2.1.1. Lineas y espacios....................................................................................................................6 2.1.2. Delimitadores..........................................................................................................................7 2.1.3. Palabras reservadas...............................................................................................................10 2.1.4. Variables................................................................................................................................11 2.1.5. Operadores aritméticos.........................................................................................................14 2.1.6. Operadores relacionales (o de comparación)........................................................................16 2.1.7. Operadores lógicos...............................................................................................................17 2.1.8. Resumen de operadores........................................................................................................18 2.2. Estructuras de control...................................................................................................................18 2.2.1. Bucle condicional if-elif-else................................................................................................19 2.2.2. Bucle de repetición for..........................................................................................................20 2.2.3. Bucle de repetición while.....................................................................................................22 2.2.4. Elementos adicionales a las estructuras de control...............................................................23 2.3. Funciones de entrada y salida.......................................................................................................26 2.3.1. Print(): Función de salida de datos por consola....................................................................26 2.3.2. Input(): Función de entrada de datos por consola.................................................................33 2.4. Refundición de variables (casting)...............................................................................................35 2.4.1. Conversión implícita.............................................................................................................35 2.4.2. Conversión explícita.............................................................................................................36 2.5. Elementos de un programa en Python (2/2).................................................................................37 2.5.1. Listas.....................................................................................................................................37 2.5.2. Manipulación de listas..........................................................................................................38 2.5.3. Tuplas....................................................................................................................................46 2.5.4. Diccionarios..........................................................................................................................47 2.5.5. Operaciones sobre diccionarios............................................................................................49 2.6. Funciones......................................................................................................................................52 2.6.1. Definición de funciones en Python.......................................................................................52 2.6.2. Paso de argumentos a las funciones......................................................................................53 2.6.3. Paso de argumentos de longitud variable a las funciones.....................................................55 2.6.4. Sentencia return....................................................................................................................56 2.6.5. Anotaciones en funciones.....................................................................................................57 2.6.6. Paso por valor y paso por referencia.....................................................................................57 2.6.7. Funciones Lambda................................................................................................................60 2.6.8. Función filter()......................................................................................................................62 2.6.9. Función map().......................................................................................................................63</p>
+<ul>
+<li>Programación orientada a objetos.......................................................................................................64</li>
+</ul>
+<p>3.1. Creación de una clase en Python:.................................................................................................65 3.2. Creación de un objeto a partir de la clase.....................................................................................65 3.3. Definiendo atributos de clase.......................................................................................................65 3.4. Cambiando los atributos de clase.................................................................................................66 3.5. Definiendo métodos de clase........................................................................................................67 3.6. Encapsulación de métodos...........................................................................................................68 2 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 3.7. Acceso a métodos.........................................................................................................................70 3.8. Acceso a atributos.........................................................................................................................71</p>
+<ul>
+<li>Excepciones.........................................................................................................................................72</li>
+</ul>
+<p>4.1. Uso de try y except.......................................................................................................................72</p>
+<ul>
+<li>Acceso a archivos................................................................................................................................74</li>
+</ul>
+<p>5.1. Abrir un archivo............................................................................................................................74 5.2. Leer un archivo.............................................................................................................................74 5.3. Leer un archivo linea a linea........................................................................................................75 5.4. Cerrar un archivo..........................................................................................................................76 5.5. Argumentos adicionales de open()...............................................................................................76 5.6. Otra forma de abrir archivos.........................................................................................................77</p>
+<ul>
+<li>Escritura en archivos...........................................................................................................................78</li>
+</ul>
+<p>6.1. Método write()..............................................................................................................................78 3 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>INTRODUCCIÓN.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python es un lenguaje de programación interpretado cuya filosofía hace hincapié en una</code></pre>
+</div>
+<p>sintaxis muy limpia y un código legible. Ideado por Guido Van Rossum, Empezó su desarrollo en 1989. Es un lenguaje de alto nivel con una gramática sencilla, clara y muy legible. Tipado dinámico fuerte. Como todos los lenguajes de programación en uso actualmente es orientado a objetos.</p>
+<p>Open Source, código abierto (gratuito). Relativamente fácil de aprender. Presenta numerosas librerías que lo convierten en un firme candidato para la programación de IA. Lenguaje interpretado (no compilado). Lenguaje “todo terreno”. Sirve tanto para aplicaciones de escritorio, programación en entorno servidor, programación web, etc.</p>
+<p>Multiplataforma (Mac, Windows, Linux, …). 1.1. Instalación de Python. Ir a la página de python, descargar e instalar. 1.2. Entorno de desarrollo de Python (IDE). Un IDE es un software con herramientas para desarrolladores para desarrollar software y probarlo. El IDE proporciona un entorno de desarrollo en el que todas las herramientas están disponibles en una única interfaz gráfica de usuario (GUI).</p>
+<p>Un IDE incluye principalmente: • Editor de código para escribir los códigos del software. • Automatización de la ejecución local. • Depurador de programas. • ... 4 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. E jemplos de IDEs</p>
+<ul>
+<li>IDLE (por defecto con Python).</li>
+<li>Visual Studio Code.</li>
+<li>Sublime Text.</li>
+<li>Atom</li>
+<li>Spyder</li>
+<li>PyDev</li>
+</ul>
+<p>• Dentro del ámbito de este curso no será necesario instalar ningún IDE, ya que usaremos el framework de Anaconda para programar en Python. 5 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>PROGRAMACIÓN EN PYTHON.</li>
+</ul>
+<p>2.1. Elementos de un programa de Python (1/2). Un programa de Python es un fichero de texto (codificado en formato UTF-8) que contiene expresiones y sentencias que se consiguen combinando los elementos básicos del lenguaje. El lenguaje Python está formado por elementos (tokens) de diferentes tipos</p>
+<p>• Lineas y espacios. • Palabras reservadas (keywords) • Variables, operadores y expresiones • Funciones integradas (built-in functions). • Delimitadores • Identificadores En la documentación de Python se puede consultar una descripción mucho más detallada y completa de los elementos constitutivos del lenguaje Python.</p>
+<p>Para que un programa se pueda ejecutar, el programa debe ser sintácticamente correcto, es decir, utilizar los elementos del lenguaje Python respetando su reglas de "ensamblaje". Esas reglas se comentan en otras lecciones de este curso. Obviamente, que un programa se pueda ejecutar no significa que un programa vaya a realizar la tarea deseada, ni que lo vaya a hacer en todos los casos.</p>
+<h4>2.1.1. Lineas y espacios</h4>
+<p>Un programa de Python está formado por líneas de texto. Se recomienda que cada línea contenga una única instrucción, aunque puede haber varias instrucciones en una línea, separadas por un punto y coma (;). 6 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Los elementos del lenguaje se separan por espacios en blanco (normalmente, uno), aunque en algunos casos no se escriben espacios: • Entre los nombres de las funciones y el paréntesis • Antes de una coma (,) • Entre los delimitadores y su contenido (paréntesis, llaves, corchetes o comillas) Nota: No poner nunca espacios al principio de una línea.</p>
+<p>Los espacios al principio de una línea (el sangrado) son significativos porque indican un nivel de agrupamiento. El sangrado inicial es una de las características de Python que lo distinguen de otros lenguajes, que utilizan un carácter para delimitar agrupamientos.</p>
+<h4>2.1.2. Delimitadores</h4>
+<p>Los delimitadores son los caracteres que permiten delimitar, separar o representar expresiones. ' " # \ ( ) [ ] { } , : . ; @ = -&gt; += -= *= /= //= %= @= &amp;= |= ⁼ &gt;&gt;= &lt;&lt;= **= 7 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Nota: No se pueden usar para otra cosa que no sea su uso como delimitador. Cualquier uso indebido generará un error en tiempo de ejecución. Nota: Los delimitadores # y “”” “”” permiten insertar comentarios dentro de un programa.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: El delimitador ‘’ y “” se usan para definir varia...</p><p>Nota: El delimitador ‘’ y “” se usan para definir variables de tipo string. 8 / 79</p></div>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Nota: El delimitador \ permite truncar una linea muy larga. Por motivos de legibilidad, se recomienda que las líneas no superen los 79 caracteres. Si una instrucción supera esa longitud, se puede dividir en varias líneas usando el carácter contrabarra (\)</p>
+<p>9 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<h4>2.1.3. Palabras reservadas</h4>
+<p>Las palabras reservadas de Python son las que forman el núcleo del lenguaje Python y no se pueden usar para nombrar otros elementos (variables, funciones, …). Se puede acceder al listado de las palabras reservadas desde la ayuda de IDLE (Python 3.11, 64bits).</p>
+<ul>
+<li>Condicionales: if, elif, else</li>
+<li>Bucles: while, for, break, continue</li>
+<li>Valores: False, True, None</li>
+<li>Operadores lógicos: and, or, not</li>
+<li>Funciones: def, return, lambda, pass, yield</li>
+<li>Clases: class</li>
+<li>Excepciones: assert, try, except, finally, raise</li>
+<li>Variables: global, nonlocal</li>
+</ul>
+<p>10 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Concurrencia: async, await</li>
+<li>Eliminar variables: del</li>
+<li>Context Managers: with, as</li>
+<li>Módulos: from, import</li>
+<li>Pertenencia e Identidad: in, is</li>
+</ul>
+<h4>2.1.4. Variables</h4>
+<p>➢ Declaración de variables¶</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python es un lenguaje de tipado dinámico en el que no hace falta declarar el tipo de</code></pre>
+</div>
+<p>dato que asignará a una variable, de igual manera una variable puede cambiar de tipo conforme la ejecución del programa, por ello se debe tener cuidado con la sintaxis para definir cada tipo de dato. Como veremos más adelante en Python todo lo que creamos son objetos y las variables son referencias a esos objetos. Las variables se definen por asignación utilizando el signo =.</p>
+<p>Los tipos de datos básicos en Python son: ➢ Enteros (int)¶ Los enteros son un tipo de dato básico en cualquier lenguaje de programación. Si se usan enteros de 32 bits el rango a representar es de -2^31 a 2^31–1. Con 64 bits, el rango es de -2^63 a 2^63–1. No tenemos que preocuparnos de la codificación de los enteros, ya que Python se encarga de asignar más o menos memoria al número.</p>
+<p>11 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. ➢ De coma flotante (float)¶ ➢ Booleanos (bool) Las variables booleanas sólo pueden adoptar dos valores: verdadero (True) o falso (False). ➢ Números complejos 12 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. ➢ Cadena de caracteres (string) Es un tipo de dato que contiene una secuencia de símbolos (alfanuméricos). Los strings se definen utilizando comillas dobles o simples.</p>
+<p>➢ Resumen de variables 13 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<h4>2.1.5. Operadores aritméticos</h4>
+<p>Los operadores aritméticos permiten realizar las operaciones aritméticas básicas con tipos numéricos. La sintaxis en Python es la siguiente: Operación Operador Suma + Resta - Multiplicación * División / División entera // Módulo % Potencia ** Ejercicios: Escribir la expresión que permita calcular los siguientes valores</p>
+<p>3+ 8 60+ 29 2+ 40 3= 3,1415740740740743 √7+√6+√5= 3.1416325445036177 5+ 1−1 0,35 = 7.321938217183423 14 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Soluciones: 15 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Aunque no lo hayamos visto aun, existe una manera más simple de escribir las expresiones. Si usamos la biblioteca math accedemos a todos sus operadores matemáticos (métodos) lo que permite dar más claridad al código.</p>
+<h4>2.1.6. Operadores relacionales (o de comparación)</h4>
+<p>Permiten efectuar comparaciones entre objetos de Python. El resultado de una comparación es un valor booleano (True o False). La sintaxis en Python es la siguiente</p>
+<ul>
+<li>"igual que"</li>
+</ul>
+<p>1 == 1 (True)</p>
+<ul>
+<li>"diferente a"</li>
+</ul>
+<p>"a" != "a" (False)</p>
+<ul>
+<li>"mayor que"</li>
+</ul>
+<p>10 &gt; 5 (True)</p>
+<ul>
+<li>"menor que"</li>
+</ul>
+<p>5 &lt; 1 (False)</p>
+<ul>
+<li>"mayor o igual que"</li>
+</ul>
+<p>30 &gt;= 30 (True)</p>
+<ul>
+<li>"menor o igual que"</li>
+</ul>
+<p>20 &lt;= 10 (False) 16 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Nota: Los operadores relacionales solo se pueden ejecutar para comparar valores del mismo tipo.</p>
+<ul>
+<li>"a" &gt; 10 devolverá un error.</li>
+<li>[0,4] &lt; (1,2) devolverá un error al no poder comparar una lista con una tupla.</li>
+</ul>
+<p>También se pueden concatenar</p>
+<ul>
+<li>3 == 3 &gt;= 2 (true)</li>
+</ul>
+<h4>2.1.7. Operadores lógicos</h4>
+<p>Sirven para realizar operaciones de lógica booleana entre valores de tipo bool. Los operadores lógicos son and, or y not. Ejemplos</p>
+<ul>
+<li>True and True devuelve True.</li>
+<li>True or False devuelve True.</li>
+<li>not True devuelve False.</li>
+<li>(1 == 1) and (2 &gt; 1) devuelve True</li>
+<li>(0 != 0) or (10 &gt; 20) devuelve False</li>
+<li>(0 != 0) or (10 &lt; 20)devuelve True</li>
+</ul>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: Cuidado con la sintaxis. Si usamos los símbolos d...</p><p>Nota: Cuidado con la sintaxis. Si usamos los símbolos de la lógica combinatoria los resultados no serán los esperados. 17 / 79</p></div>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<h4>2.1.8. Resumen de operadores</h4>
+<p>2.2. Estructuras de control. Un código es una secuencia de instrucciones, que por norma general son ejecutadas una tras otra. Sin embargo, en muchas ocasiones no basta con ejecutar las instrucciones una tras otra desde el principio hasta llegar al final. Puede ser que ciertas instrucciones se tengan que ejecutar si y sólo si se cumple una determinada condición.</p>
+<p>En un lenguaje de programación, las estructuras de control permiten modificar el flujo de la ejecución de un conjunto de instrucciones. Se pueden distinguir tres tipos básicos de control de flujo, a saber</p>
+<ul>
+<li>Bucle condicional if-elif-else</li>
+<li>Bucle for</li>
+<li>Bucle while¶</li>
+</ul>
+<p>18 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<h4>2.2.1. Bucle condicional if-elif-else</h4>
+<p>La estructura de control if ... permite que un programa ejecute unas instrucciones cuando se cumpla una condición. La estructura de control if … else ... permite que un programa ejecute unas instrucciones cuando se cumple una condición y otras instrucciones cuando no se cumple esa condición.</p>
+<p>19 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. La estructura de control if … elif … else ... permite encadenar varias condiciones (elif es una contracción de else if). Nota: A diferencia de otros lenguajes de programación, Python no incorpora la función switch.</p>
+<h4>2.2.2. Bucle de repetición for</h4>
+<p>El bucle for es una estructura de control de repetición, en la cual se conocen (a priori) el número de iteraciones a realizar. El bucle for usa un iterable que define las veces que se ejecutará el código. En el siguiente ejemplo vemos un bucle for que se ejecuta 5 veces y donde la i incrementa su valor automáticamente en 1 a cada iteración.</p>
+<p>20 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. En Python se puede iterar prácticamente todo, como por ejemplo un string, una matriz, una lista, una tupla... 21 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. También se puede usar la función enumerate: Ejemplo donde se devuelve el indice y el valor de la lista.</p>
+<h4>2.2.3. Bucle de repetición while</h4>
+<p>El bucle while ejecuta un bloque de instrucciones mientras haya una condición que se cumpla. En el siguiente ejemplo tenemos un bucle infinito del cual saldremos si se cumple una condición. 22 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.2.4. Elementos adicionales a las estructuras de control.</p>
+<ul>
+<li>Break¶</li>
+</ul>
+<p>Como acabamos de ver en el ejemplo anterior, la sentencia break nos permite alterar el comportamiento de los bucles while y for. Concretamente, permite terminar con la ejecución del bucle. Break en un bucle for: Break en un bucle while: 23 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Bucles anidados.</li>
+</ul>
+<p>Un bucle anidado es un bucle que se encuentra incluido en el bloque de sentencias de otro bloque. Los bucles pueden tener varios niveles de anidamiento. En los bucles anidados es importante utilizar variables de control distintas, para no obtener resultados inesperados.</p>
+<p>Continue¶ Al igual que break, continue permite modificar el comportamiento de los bucles while y for. En este caso continue se salta todo el código restante en la iteración actual y vuelve al principio en el caso de que aún queden iteraciones por completar. La diferencia entre break y continue es que continue no rompe el bucle, sino que pasa a la siguiente iteración saltando el código pendiente.</p>
+<p>En este ejemplo podemos ver que cuando el programa encuentra la letra t, no se imprime por consola. No obstante el bucle no se interrumpe y continua hasta completar todas las letras. 24 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Iteración en paralelo con zip¶</li>
+</ul>
+<p>La función zip() crea un iterador que irá agregando elementos procedentes de varios elementos iterables a la vez. Ejemplo de creación de una lista de tuplas: Nota: Como se puede ver, las listas no tienen la misma longitud si usamos esa lista para iterar un bucle for</p>
+<p>Como podemos ver la iteración se hace sobre la lista más pequeña 25 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.3. Funciones de entrada y salida. Llevamos usando desde el principio la función print() sin saber muy bien como usarla. De igual manera vamos a describir la función input().</p>
+<p>2.3.1. Print(): Función de salida de datos por consola. En Python 3 print() es una función, por lo que el contenido siempre debe estar entre paréntesis. La finalidad de la función print() es imprimir (pintar / visualizar) los resultados que deseamos visualizar en la consola del IDE con el que estamos programando.</p>
+<p>Existen diversas maneras de visualizar los datos: • Print() → Texto, escribir texto. Para mostrar texto en la consola se pueden usar las siguientes sintaxis: 26 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. • Print() → Números, escribir datos. Para escribir datos (números, operaciones, ...) el interior del paréntesis debe ir sin comillas. Nota: Para escribir el resultado de una operación es suficiente escribir la operación dentro de los paréntesis de la función print().</p>
+<p>27 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. • Print() → Escribir variables y textos La función print() permite permite combinar texto y variables. Nota: Cuidado con el operador + de otros lenguajes de programación. En Python, no sirve para concatenar argumentos en la función print().</p>
+<p>28 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. • Cadenas f → Print(f{}), Introducir valores o strings en la función print(). Introducido por primera vez en la versión 3.6 de Python, esta nueva notación, hace más sencillo introducir variables y expresiones en la función print().</p>
+<p>Una cadena f contiene variables y expresiones entre llaves "{}" que se sustituyen directamente por su valor. Las cadenas "f" se reconocen porque comienzan por una letra f{}. Cadena f con texto: 29 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Nota: Los {} también pueden devolver operaciones aritméticas. Ya hemos visto que la secuencia de escape “\” nos permite dividir lineas de código (demasiado largas).</p>
+<p>También existen otras secuencias como \t, \n y \r (tabulación, linea nueva y retroceso de linea) que pueden tener alguna utilidad a la hora de usar la función print(). Salto de linea \n: 30 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Tabulación \t: Retroceso \r: Nota: Cuidado con el retroceso ya que sobrescribe el texto inicial. 31 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. end= “”: En Python, el valor predeterminado de end es \n. Eso significa que después de la instrucción print, sin especificar el valor de end, se salta de linea. Si el valor no es nulo, entonces se imprimirá al final de la linea el contenido de end y no se saltará a la linea siguiente.</p>
+<p>32 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.3.2. Input(): Función de entrada de datos por consola. La entrada de datos en Python se realiza con la función input() pero hay una consideración a tener en cuenta al momento de usar input(): La función input solo devuelve cadenas de caracteres.</p>
+<p>En este ejemplo vemos como la clase de la variable var es un string. Otro ejemplo donde el resultado no es el esperado. Para poder introducir datos numéricos deberemos hacer una refundición (que veremos en el siguiente capitulo). 33 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Nota: Se puede añadir texto a la función input() para dar más información al usuario sobre lo que tiene que hacer. 34 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.4. Refundición de variables (casting). Hacer un cast o casting significa convertir un tipo de dato a otro. Hemos visto que los tipos de datos en Python son enteros (int), flotantes (float) y texto (string) Ahora veremos que es posible convertir un tipo de dato a otro.</p>
+<p>Antes de nada, es necesario recordar que la asignación de la variables es dinámica, es decir que el interprete de Python decide en cada momento el tipo de los datos que contiene una variable. Eso nos lleva a distinguir 2 tipos de conversiones. Conversión implícita: Es realizada automáticamente por Python. Sucede cuando se realizan operaciones con dos tipos distintos.</p>
+<p>Conversión explícita: Es realizada expresamente por el programador (convertir un string a int).</p>
+<h4>2.4.1. Conversión implícita</h4>
+<p>Esta conversión de tipos es realizada automáticamente por Python, prácticamente sin que nos demos cuenta. Aún así, es importante saber lo que pasa por debajo para evitar problemas futuros. Aquí abajo un ejemplo donde podemos ver este comportamiento: 35 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<h4>2.4.2. Conversión explícita</h4>
+<p>Para hacer una conversión explicita haremos uso de las funciones float(), str(), int(), list(), set() entre otras. Si retomamos el ejemplo anterior para introducir datos por consola: 36 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.5. Elementos de un programa en Python (2/2). Hemos usado varias estructuras de datos sin explicarlas previamente. En este apartado hablaremos de las listas, tuplas y diccionarios.</p>
+<p>2.5.1. Listas. Las listas son conjuntos ordenados de elementos (números, cadenas, otras listas, etc). Las listas se delimitan por [ ... ] y los elementos se separan por comas. La cantidad de elementos de una lista se puede modificar removiendo o añadiendo elementos.</p>
+<p>Ejemplo de una lista de apellidos (strings): Ejemplo de una lista con varios tipos de datos: 37 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejemplo de una lista que incluye una lista: 2.5.2. Manipulación de listas.</p>
+<ul>
+<li>Acceso a los elementos de una lista.</li>
+</ul>
+<p>Como hemos visto, las listas son elementos iterables lo que también implica que se puede acceder a sus elementos mediante indexación. La sintaxis es lista[índice]. Cuidado: Los índices siempre empiezan en ‘0’. Incorrecto: Correcto: 38 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Modificación de los elementos de una lista.</li>
+</ul>
+<p>Las listas son estructuras de datos dinámicas y por tanto se puede modificar, agregar y quitar sus elementos. Evidentemente, antes de realizar ninguna operación sobre una lista, puede resultar útil conocer su tamaño. Eso se hace utilizando la función len(). Para sustituir un elemento de una lista se accede al elemento correspondiente por indexación y se le asigna un nuevo valor.</p>
+<p>También se puede modificar más de un elemento a la vez: 39 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Agregar elementos a una lista.</li>
+</ul>
+<p>Para agregar elementos a una lista podemos utilizar los métodos append, insert y extend del objeto lista (veremos en detalle qué son los métodos y atributos de un objeto en la unidad de programación orientada a objetos POO). ➢ Método append() El método append agrega un nuevo elemento al final de la lista.</p>
+<p>Además, solo permite agregar un elemento a la vez. Si pasamos a la lista más de un elemento, se creará una lista anidada. Incorrecto: 40 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Correcto: ➢ Método insert() A diferencia del método append, insert agrega un nuevo elemento en una posición que pasaremos por parámetro a la función insert(). La sintaxis de insert es: lista.insert(índice, elemento a insertar).</p>
+<p>Ejemplo donde intercalamos el elemento Sandía a la posición 2 de la lista frutas. 41 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejemplo: llenar una lista vacía con los resultados de la ecuación y= x2 con un bucle for.</p>
+<ul>
+<li>Eliminar elementos a una lista.</li>
+</ul>
+<p>Para eliminar elementos de una lista se pueden usar los métodos remove, pop y clear. ➢ Método remove() El método remove elimina el elemento de la lista pasado como argumento el elemento a eliminar. Nota importante: En el ejemplo podemos ver que el método remove solo elimina el primer elemento encontrado. De existir varias veces, solo se eliminará el primero.</p>
+<p>42 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. ➢ Método pop() El método pop elimina el elemento de una lista cuyo índice ha sido pasado como argumento. Si no se pasa ningún argumento se toma por defecto el índice -1, (último elemento de la lista).</p>
+<p>➢ Método clear() Vacía completamente una lista de todos sus elementos. 43 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. ➢ Función del() Para eliminar totalmente una lista podemos usar la palabra reservada para la función del(). Como podemos ver, se genera un error en tiempo de ejecución al haber dejado de existir la lista “frutas”.</p>
+<ul>
+<li>Buscar elementos a una lista.</li>
+</ul>
+<p>En cualquier aplicación puede ser necesario buscar o identificar ciertos valores dentro de una lista. Count(): El método count nos permite contar las apariciones de un elemento dentro de una lista. 44 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Index(): El método index devuelve la posición del elemento dentro de esa misma lista. Nota: al igual que para el método remove(), index() solo devuelve el índice del primer elemento encontrado. Si hay más elementos estos no se tendrán en cuenta.</p>
+<p>In (palabra reservada): Permite identificar si un elemento (o una secuencia) está presente dentro de un objeto de tipo secuencia. El valor devuelto será de tipo booleano. 45 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.5.3. Tuplas. Al igual que las listas, las tuplas son estructuras de datos que se utilizan para almacenar una colección de elementos. Sin embargo se distinguen en que las tuplas son inmutables, es decir que no se pueden modificar por lo que carecen de los métodos append() o insert().</p>
+<p>La sintaxis de la tupla es: tupla=(item1, item2 , 3 ,4, …). Las listas también disponen de métodos para que aparezcan, basta con poner un punto después del nombre de la tupla y el entorno de desarrollo (IDE) los hará aparecer. Para obtener más información sobre los métodos disponibles, consultar la documentación oficial de Python.</p>
+<p>46 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.5.4. Diccionarios. Son también unas estructuras que contienen una colección de elementos puestos entre corchetes {…} y ordenados de la siguiente manera: Clave: Valor y separados por comas.</p>
+<p>Las claves son objetos inmutables y los valores pueden ser de cualquier tipo. De una manera similar a los valores de las claves primarias de las bases de datos, las claves de los diccionarios deben ser únicas en cada diccionario (no así los valores). Se puede acceder a cada valor de un diccionario mediante su clave</p>
+<p>47 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Un diccionario es un elemento iterable y se puede recorrer con un bucle for. 48 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.5.5. Operaciones sobre diccionarios. Al igual que las listas, los diccionarios se puede modificar y como todo objeto dispone de una seria de métodos.</p>
+<ul>
+<li>Añadir elementos a un diccionario.</li>
+</ul>
+<p>Para añadir un nuevo elemento a un diccionario existente, se usa el operador de asignación = [nueva clave]= valor nueva clave.</p>
+<ul>
+<li>Modificar elementos a un diccionario.</li>
+</ul>
+<p>Lo mismo que para añadir un elemento pero esta vez ponemos el nuevo valor de la clave. 49 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Eliminar elementos a un diccionario.</li>
+</ul>
+<p>Se pueden usar los métodos, pop() y popitem().</p>
+<ul>
+<li>Vaciar o eliminar un diccionario.</li>
+</ul>
+<p>Se pueden usar la función del() y el método clear(). 50 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Comprobar si un elemento existe en un diccionario.</li>
+</ul>
+<p>Usar el operador de pertenencia in.</p>
+<ul>
+<li>Comparar 2 diccionarios.</li>
+</ul>
+<p>Usar el operador de igualdad ==. 51 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.6. Funciones. Por el momento solo se ha escrito código sin ningún tipo de estructura, lo que implica que todas las líneas del programa se ejecuten. Además, si debemos realizar en varias partes del programa la misma operación, deberemos volver a escribir exactamente el mismo código.</p>
+<p>Esos 2 inconvenientes contradicen 2 principios de buenas practicas</p>
+<ul>
+<li>El principio de reusabilidad nos dice que si un fragmento de código se usa en</li>
+</ul>
+<p>muchos sitios, la mejor solución será pasarlo a una función.</p>
+<ul>
+<li>El principio de modularidad defiende que en vez de escribir largos trozos de</li>
+</ul>
+<p>código, es mejor crear módulos o funciones que agrupen ciertos fragmentos de código, haciendo que el código resultante sea más fácil de leer. Para evitar esos inconvenientes se hace uso de funciones. 2.6.1. Definición de funciones en Python. ➢Las funciones se pueden crear en cualquier punto de un programa.</p>
+<p>➢La primera línea de la definición de una función contiene la palabra reservada def. Nota: La guía de estilo de Python recomienda escribir todos los caracteres en minúsculas separando las palabras por guiones bajos). ➢Las instrucciones que forman la función se escriben con sangría con respecto a la primera línea.</p>
+<p>➢Al final de la función se puede escribir la palabra reservada return (no siempre es obligatorio). El uso de la sentencia return permite: • Salir de la función y transferir la ejecución de vuelta a donde se realizó la llamada. • Devolver uno o varios parámetros, fruto de la ejecución de la función.</p>
+<p>Nota importante: Aunque la función se puede definir en cualquier posición del programa, solo se podrá utilizar si se ha declarado previamente. Para ese motivo se recomienda escribir las funciones al principio de los programas. 52 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.6.2. Paso de argumentos a las funciones. A las funciones se les puede (o no) pasar argumentos es decir variables. Ejemplo 1: Funciones sin argumentos. Ejemplo 2: Funciones con argumentos.</p>
+<p>53 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Nota: No se puede no pasar argumentos a una función que sí los requiere. No obstante se le puede pasar argumentos por defecto. Nota importante: Con el siguiente programa vemos que el IDE da error con las variables var3 y var4. Así pues, a la hora de hacer la declaración de variables para escribir las funciones, siempre tendremos que tener en cuenta el ámbito de declaración de las variables (como lo veremos a continuación).</p>
+<p>54 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.6.3. Paso de argumentos de longitud variable a las funciones. Imaginemos que queremos una función suma(), pero necesitamos que sume todos los números de entrada que se le pasen (1, 5 , 100...). Una primera forma de hacerlo sería con una lista.</p>
+<p>En este caso vemos que estamos pasando una lista de valores variable a la función, pero no estamos pasando una cantidad de argumentos variables. Realmente para pasar un argumento de longitud variable se usa el ‘*’.</p>
+<p>55 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. También es posible pasar como parámetro de entrada una lista de elementos almacenados en forma de clave y valor usando ‘**kwargs’.</p>
+<p>2.6.4. Sentencia return. Como hemos visto la sentencia return permite devolver uno o varios parámetros, resultado de la ejecución de la función. También indica una salida incondicional de la función y un retorno al punto del programa donde se realizó la llamada a la función.</p>
+<p>56 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.6.5. Anotaciones en funciones. Pyrhon permite añadir metadatos a las funciones es decir indicar al programa qué tipo de datos debe devolver la función. 2.6.6. Paso por valor y paso por referencia.</p>
+<p>El concepto de paso por valor y por referencia viene a definir como trata la función a los parámetros que se le pasan.</p>
+<ul>
+<li>Si usamos un parámetro pasado por valor, se creará una copia local de la</li>
+</ul>
+<p>variable, lo que implica que cualquier modificación sobre la misma no tendrá efecto sobre la original. 57 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>Con una variable pasada como referencia, se actuará directamente sobre la</li>
+</ul>
+<p>variable pasada, por lo que las modificaciones afectarán a la variable original.</p>
+<ul>
+<li>Cuidado las listas pasadas por valor. En este caos Python se comporta como si</li>
+</ul>
+<p>estuviesen pasadas por parámetro. 58 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>En caso de confusión, usar la función id(). Esa función devuelve el identificador</li>
+</ul>
+<p>(único) de cada parámetro. Si los identificadores internos y externos a la función son diferentes, eso significa que los parámetros son diferentes. 59 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.6.7. Funciones Lambda. Sintaxis: lambda argumentos: expresión Es una función que NO tiene nombre, pero es muy útil cuando queremos escribir funciones muy cortas (o muy complejas).</p>
+<p>Como cualquier función, se le puede pasar varios parámetros. 60 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Otro ejemplo de declaración de función lambda instanciando con varios métodos. Nota: Este código no genera errores en tiempo de ejecución pero no funciona. 61 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.6.8. Función filter(). A partir de una lista o iterador y una función condicional, devuelve una colección con los elementos filtrados que cumplan la condición.</p>
+<p>62 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 2.6.9. Función map(). Aplica una función sobre todos los elementos de una lista y como resultado devuelve un iterable de tipo map: Lo mismo con una función lambda.</p>
+<p>63 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 3. PROGRAMACIÓN ORIENTADA A OBJETOS. La programación orientada a objetos (POO) es un paradigma de programación que parte del concepto de "objetos" como base, los cuales contienen información en forma de campos (atributos) y código en forma de métodos.</p>
+<p>Ejemplo del objeto coche en la vida real: Atributos: color / cantidad de ruedas / peso / tamaño... Métodos: arrancar, frenar, acelerar, girar... Si trasladamos el objeto coche a los lenguajes de programación tendremos: Objeto coche en un lenguaje informático. Atributos color ruedas peso tamaño ...</p>
+<p>Métodos arrancar frenar acelerar girar ... 64 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<h4>3.1. Creación de una clase en Python</h4>
+<p>En python y en otros lenguajes de programación los objetos se definen mediante clases (class). Ejemplo de creación de la clase coche: 3.2. Creación de un objeto a partir de la clase. 3.3. Definiendo atributos de clase. Los definiremos como a continuación. Después de definir los atributos se pueden instanciar poniendo un punto después del objeto.</p>
+<p>65 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 3.4. Cambiando los atributos de clase. Para poder cambiar los atributos de clase, es decir crear un objeto con unos atributos que lle pasaremos, crearemos la función init con la sintaxis: __init__().</p>
+<p>A partir de ahora para crear el objeto micoche podremos pasar a la clase coche parámetros que definirán completamente nuestro nuevo objeto. El método __init__ es un método reservado para un uso especial del lenguaje y se conoce como método constructor. 66 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 3.5. Definiendo métodos de clase. Para definir un método usaremos la misma sintaxis que para __init__: A esos métodos se les podrá pasar (o no) argumentos. 67 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 3.6. Encapsulación de métodos. Puede resultar útil hacer que los métodos no sean accesibles desde fuera de la clase: Hablaremos entonces de métodos encapsulados o métodos de clase.</p>
+<p>La sintaxis en ese caso es def __metododeclase(): En el ejemplo anterior, si encapsulamos el método __arranca, el editor ya no autocompletará al poner un punto después del objeto micoche. Si seguimos instanciando el objeto micoche y ejecutamos el programa, el IDE nos devolverá un error en tiempo de ejecución.</p>
+<p>68 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Nota: Aparece el método __arranca pero tampoco se ejecuta. 69 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 3.7. Acceso a métodos. A diferencia de otros lenguajes de programación los métodos de las clases son globales y siempre son accesibles desde fuera de la clase sin necesidad de crear un objeto de clase.</p>
+<p>Como podemos ver en el ejemplo, un método que no requiere objeto (no necesita que le pasen el parámetro “self”) se ejecuta correctamente pero el otro no.</p>
+<p>70 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 3.8. Acceso a atributos. Al igual que los métodos, los atributos también son globales y son accesibles desde fuera de la clase. Para encapsular el atributo añadiremos __nombreDelAtributo delante de la variable.</p>
+<p>71 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 4. EXCEPCIONES. Las excepciones son herramientas muy útiles a la hora de anticipar errores de ejecución de los programas. Ejemplos</p>
+<ul>
+<li>División por cero.</li>
+<li>Acceder a un archivo que no existe, o una ruta mal definida.</li>
+<li>Realizar una conexión a una base de datos, pero el servidor tarda en responder.</li>
+</ul>
+<h4>4.1. Uso de try y except</h4>
+<p>La sintaxis para la gestión de las excepciones con try y except es la siguiente. try: código con posibilidades de generar una excepción. except: código a ejecutar si se ha producido una excepción. Ejemplo: 72 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejecución. 73 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 5. ACCESO A ARCHIVOS. 5.1. Abrir un archivo. Para abrir un archivo se puede usar la función open() pasando por argumento la ruta y el nombre del archivo al cual queremos acceder.</p>
+<p>5.2. Leer un archivo. Para leer un archivo de texto se puede usar el método .read() del objeto fichero. 74 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 5.3. Leer un archivo linea a linea. También se puede leer un archivo linea a linea con el método .readlline(). En este caso len() nos devuelve la cantidad de lineas del archivo.</p>
+<p>Otro ejemplo: 75 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 5.4. Cerrar un archivo. Aunque el SO termina liberando el archivo, es conveniente cerrar el archivo. Para ello se usa el metodo .close(). 5.5. Argumentos adicionales de open().</p>
+<p>Normalmente cuando se trabajan con archivos es importante también especificar el modo de apertura. De ese modo es el editor el que se encarga de la gestión de las excepciones (en el caso de producirse). 76 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. 5.6. Otra forma de abrir archivos. Existe una sintaxis más simple para abrir archivos: with open(archivo, argumento) as variable. Ademas la salida del bloque de instrucción implica el cierre (automatico) del archivo.</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo: 77 / 79</p></div>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial.</p>
+<ul>
+<li>ESCRITURA EN ARCHIVOS.</li>
+</ul>
+<p>6.1. Método write(). 78 / 79</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Mismo programa pero usando el with. 79 / 79</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/index.html">⬅️ 📘 UT4 Completa</a>
+<a class="page-nav-btn" href="../ut04/ut0402.html">4.2 Python para todos (libro). ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

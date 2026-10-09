@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>5.4 01a - Ejercicios — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>☕ Programació en Java (1r DAW / DAM) — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació en Java (1r DAW / DAM)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — PRESENTACIÓN DEL MÓDULO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guia Didàctica</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Criterios de calificación</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Poema Ítaca (Konstantino Kavafis)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — EJERCICIOS: JUECES ONLINE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Ejercicios JOEL</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Cómo resolver los problemas de ProgramaMe</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Guía de Compilación y Pruebas</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Ejercicios entrenamiento ProgramaMe - vol.1</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Chuletas</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Cuadernillo completo ProgramaMe Navidad 2024</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Ideas para resolver los problemas</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Chuletas</a></li>
+<li><a href="../ut01/ut0109.html">1.9 EjemploTreeMap</a></li>
+<li><a href="../ut01/ut0110.html">1.10 Soluciones Concurso Navidad</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — EJERCICIOS DE REPASO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 bloque01 - ud01 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0202.html">2.2 bloque01 - ud02 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0203.html">2.3 RB102Soluciones</a></li>
+<li><a href="../ut02/ut0204.html">2.4 bloque01 - ud03 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Ejercicios - BLOQUE 2</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Repaso POO: Juego de Cartas (ENTREGABLE)</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — EXÁMENES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TestFotografia</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Principal.java</a></li>
+<li><a href="../ut03/ut0303.html">3.3 CodigoBASIC.bas</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Principal</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Principal</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Principal</a></li>
+<li><a href="../ut03/ut0307.html">3.7 TiendaTest</a></li>
+<li><a href="../ut03/ut0308.html">3.8 TableroTest</a></li>
+<li><a href="../ut03/ut0309.html">3.9 ficheroExamen</a></li>
+<li><a href="../ut03/ut0310.html">3.10 ExamenPRG</a></li>
+<li><a href="../ut03/ut0311.html">3.11 fichero2</a></li>
+<li><a href="../ut03/ut0312.html">3.12 fichero1</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — PROYECTOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Hundir La Flota</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Reversi (Othello)</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Proyecto 2: Calculadora FX</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Proyecto AEMET</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Iconos.png</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Estados del cielo.txt</a></li>
+<li><a href="../ut04/ut0407.html">4.7 diccionario24.csv</a></li>
+<li><a href="../ut04/ut0408.html">4.8 parsear-xml-aemet</a></li>
+<li><a href="../ut04/ut0409.html">4.9 InternacionalizacionFX</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — Introducción a la programación con Java</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 01a - Introducción a la Programacion</a></li>
+<li><a href="../ut05/ut0502.html">5.2 01b - Algoritmos</a></li>
+<li><a href="../ut05/ut0503.html">5.3 01c - Introduccion a Java</a></li>
+<li><a class="active" href="../ut05/ut0504.html">5.4 01a - Ejercicios</a></li>
+<li><a href="../ut05/ut0505.html">5.5 01a - Soluciones</a></li>
+<li><a href="../ut05/ut0506.html">5.6 01c - Ejercicios</a></li>
+<li><a href="../ut05/ut0507.html">5.7 01c - Soluciones</a></li>
+<li><a href="../ut05/ut0508.html">5.8 Ejercicios - AyR</a></li>
+<li><a href="../ut05/ut0509.html">5.9 01d - Estilo de codificacion</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Entrada y salida de información</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Entrada y salida de información</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Colores</a></li>
+<li><a href="../ut06/ut0603.html">6.3 ClasePrintf</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Ejercicios</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Estructuras de control</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Uso de estructuras de control</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Ejercicios</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Ejercicios AyR - Condicionales Parte 1</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Ejercicios AyR - Condicionales Parte 2</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Ejercicios AyR - Estructrura repetitiva while do</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Ejercicios AyR - Estructura repetitiva for - mis</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Ejercicios AyR - Mortadelo y Filemon</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Ejercicios - AyR</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Programación Estructurada y Modular</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 04a - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0802.html">8.2 04b - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0803.html">8.3 04a - Ejercicios</a></li>
+<li><a href="../ut08/ut0804.html">8.4 04b - Ejercicios</a></li>
+<li><a href="../ut08/ut0805.html">8.5 Ejercicios - Diagrama de flujo a Java (para algo</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Estructuras datos estáticas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 05a - Estructuras de datos estáticas</a></li>
+<li><a href="../ut09/ut0902.html">9.2 05b - Estructuras de datos estaticas</a></li>
+<li><a href="../ut09/ut0903.html">9.3 Código en el aula</a></li>
+<li><a href="../ut09/ut0904.html">9.4 05b - Ejercicios</a></li>
+<li><a href="../ut09/ut0905.html">9.5 05a - Ejercicios ampliación</a></li>
+<li><a href="../ut09/ut0906.html">9.6 05b - Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Estructuras de datos dinámicas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 06a - Estructuras de datos dinámicas</a></li>
+<li><a href="../ut10/ut1002.html">10.2 06b - Estructuras de datos dinamicas</a></li>
+<li><a href="../ut10/ut1003.html">10.3 Código de aula</a></li>
+<li><a href="../ut10/ut1004.html">10.4 06a - Ejercicios</a></li>
+<li><a href="../ut10/ut1005.html">10.5 06b - Ejercicios</a></li>
+<li><a href="../ut10/ut1006.html">10.6 Ejercicios de Repaso: Estructuras de datos dinám</a></li>
+<li><a href="../ut10/ut1007.html">10.7 SolucionesEjerciciosRepaso</a></li>
+<li><a href="../ut10/ut1008.html">10.8 EjercicioVuelosPythonJava</a></li>
+<li><a href="../ut10/ut1009.html">10.9 06b - Recursividad</a></li>
+<li><a href="../ut10/ut1010.html">10.10 06b - Ejercicios básicos de recursividad</a></li>
+<li><a href="../ut10/ut1011.html">10.11 06b - Ejercicios Recursividad</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Programación orientada a objetos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Programación Orientada a Objetos</a></li>
+<li><a href="../ut11/ut1102.html">11.2 EstructuraClase</a></li>
+<li><a href="../ut11/ut1103.html">11.3 Ejercicios (I)</a></li>
+<li><a href="../ut11/ut1104.html">11.4 Cafetera</a></li>
+<li><a href="../ut11/ut1105.html">11.5 TestCafetera</a></li>
+<li><a href="../ut11/ut1106.html">11.6 Fraccion</a></li>
+<li><a href="../ut11/ut1107.html">11.7 TestFraccion</a></li>
+<li><a href="../ut11/ut1108.html">11.8 Main Fraccion (.java)</a></li>
+<li><a href="../ut11/ut1109.html">11.9 Pizza</a></li>
+<li><a href="../ut11/ut1110.html">11.10 TestPizza</a></li>
+<li><a href="../ut11/ut1111.html">11.11 Moneda</a></li>
+<li><a href="../ut11/ut1112.html">11.12 EurocoinMain - 1</a></li>
+<li><a href="../ut11/ut1113.html">11.13 Main Eurocoin - 2 (.java)</a></li>
+<li><a href="../ut11/ut1114.html">11.14 Main Eurocoin - 3 (.java)</a></li>
+<li><a href="../ut11/ut1115.html">11.15 Ejercicios (II)</a></li>
+<li><a href="../ut11/ut1116.html">11.16 Soluciones ejercicios ii</a></li>
+<li><a href="../ut11/ut1117.html">11.17 Ejercicios - AyR</a></li>
+<li><a href="../ut11/ut1118.html">11.18 Circulo</a></li>
+<li><a href="../ut11/ut1119.html">11.19 Cuadrado</a></li>
+<li><a href="../ut11/ut1120.html">11.20 Punto</a></li>
+<li><a href="../ut11/ut1121.html">11.21 Programación orientada a objetos (versión extend</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Utilización avanzada de clases</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 08b - Utilizacion avanzada de clases</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Códigos de classe</a></li>
+<li><a href="../ut12/ut1203.html">12.3 08a - Ejercicios I (Relaciones entre clases)</a></li>
+<li><a href="../ut12/ut1204.html">12.4 08b - Ejercicios II</a></li>
+<li><a href="../ut12/ut1205.html">12.5 Ejercicios III (Herencia)</a></li>
+<li><a href="../ut12/ut1206.html">12.6 08a - Utilización avanzada de clases (Versión ex</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Gestión de excepciones</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Gestión de excepciones</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Códigos de clase</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Ejercicios A</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Ejercicios B</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Lectura y escritura de ficheros</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Lectura y escritura de información en ficheros</a></li>
+<li><a href="../ut14/ut1402.html">14.2 Códigos de clase</a></li>
+<li><a href="../ut14/ut1403.html">14.3 Ejercicios A</a></li>
+<li><a href="../ut14/ut1404.html">14.4 Ejercicios B</a></li>
+<li><a href="../ut14/ut1405.html">14.5 numeros</a></li>
+<li><a href="../ut14/ut1406.html">14.6 alumnos notas</a></li>
+<li><a href="../ut14/ut1407.html">14.7 Ejercicios C</a></li>
+<li><a href="../ut14/ut1408.html">14.8 Ejercicios D</a></li>
+<li><a href="../ut14/ut1409.html">14.9 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Interacción con bases de datos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Interacción con bases de datos</a></li>
+<li><a href="../ut15/ut1502.html">15.2 bdpersonas</a></li>
+<li><a href="../ut15/ut1503.html">15.3 mysql-connector-java-8.0.19</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — Interfaces gráficas de usuario</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Código de clase</a></li>
+<li><a href="../ut16/ut1602.html">16.2 JavaFX</a></li>
+<li><a href="../ut16/ut1603.html">16.3 JavaFX</a></li>
+<li><a href="../ut16/ut1604.html">16.4 ContadorSimpleFX mejorado</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — Proyecto Integrador</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Proyectos a elegir</a></li>
+<li><a href="../ut17/ut1702.html">17.2 AjedrezFX</a></li>
+<li><a href="../ut17/ut1703.html">17.3 ClaseFX</a></li>
+<li><a href="../ut17/ut1704.html">17.4 controlsfx-8.40.11</a></li>
+<li><a href="../ut17/ut1705.html">17.5 Introducción a Canvas</a></li>
+<li><a href="../ut17/ut1706.html">17.6 Introducción a AnimationTimer en JavaFX</a></li>
+<li><a href="../ut17/ut1707.html">17.7 compartirDatos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT5 — Introducción a la programación con Java</span>
+<h1>5.4 01a - Ejercicios</h1>
+<p>Programación</p>
+<h3>UD 1: Introducción a la Programación</h3>
+<ul>
+<li>Ejercicios</li>
+</ul>
+<p>Jose Chamorro Molina Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web</p>
+<p>EJERCICIOS Algoritmos</p>
+<p>Pseudocódigo y</p>
+<p>diagramas de flujo Programación</p>
+
+<p>Ejercicio 1 Realizar el algoritmo en Pseudocódigo y Diagrama de flujo. Programar un robot que suba 10 cajas del piso de abajo al aula de informática. El robot acepta las siguientes instrucciones: Bajar a planta baja. Subir a segundo piso. Coger caja / Dejar caja. Comprobar si la puerta está cerrada.</p>
+<p>Abrir puerta / Cerrar puerta. Instrucción condicional. Si Instrucción de repetición. Repite Programación</p>
+
+<p>Ejercicio 2 Realizar el algoritmo en Pseudocódigo y Diagrama de flujo. Calcular el promedio de "n" números ingresados por teclado, mostrar por pantalla el resultado. Programación</p>
+
+<p>Ejercicio 3 Realizar el algoritmo en Pseudocódigo. Dadas dos variables numéricas A y B, que el usuario debe teclear, se pide realizar un algoritmo que intercambie los valores de ambas variables y muestre cuanto valen al final las dos variables. Programación</p>
+
+<p>B A</p>
+<p>Ejercicio 4 Realizar el algoritmo en Pseudocódigo. Algoritmo que lea dos números, calculando y escribiendo el valor de su suma, resta, producto y división. Programación</p>
+
+<p>Ejercicio 5 Realizar el algoritmo en Diagrama de flujo. Algoritmo que lea dos números y nos diga cual de ellos es mayor o bien si son iguales (recuerda usar la estructura condicional SI). Programación</p>
+
+<p>Ejercicio 6 Realizar el algoritmo en Diagrama de flujo. Diseñar un algoritmo que pida por teclado tres números; ✓ si el primero es negativo, debe imprimir el producto de los tres ✓ y si no lo es, imprimirá la suma. Programación</p>
+
+<p>Ejercicio 7 Realizar el algoritmo en Pseudocódigo y Diagrama de flujo. Algoritmo que nos diga si una persona puede acceder a cursar un ciclo formativo de grado superior o no. Para acceder a un grado superior, si se tiene un titulo de bachiller, en caso de no tenerlo, se puede acceder si hemos superado una prueba de acceso.</p>
+<p>Programación</p>
+
+<p>Ejercicio 8 Realizar el algoritmo en Diagrama de flujo. Desarrollar un algoritmo que nos calcule el cuadrado de los 9 primeros números naturales (recuerda la estructura desde-hasta) Programación</p>
+
+<p>Ejercicio 9 Realizar el algoritmo en Pseudocódigo y Diagrama de flujo. Se pide representar el algoritmo que nos calcule la suma de los N primeros números naturales. N se leerá por teclado (no tenemos porque llamar a la variable N, podemos llamarla como queramos). Programación</p>
+
+<p>Ejercicio 10 Realizar el algoritmo en Pseudocódigo y Diagrama de flujo. Dado tres números ingresados por teclado enteros mostrar por pantalla los números ordenados de mayor a menor, en caso de ser iguales mostrar un aviso. Programación</p>
+
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut05/ut0503.html">⬅️ 5.3 01c - Introduccion a Java</a>
+<a class="page-nav-btn" href="../ut05/ut0505.html">5.5 01a - Soluciones ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT5 — Setmanes (9-10) del 6 al 19 de novembre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔐 Seguretat i Alta Disponibilitat — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Seguretat i Alta Disponibilitat</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guia didàctica</a></li>
+<li><a href="../ut00/ut0002.html">0.2 DOSSIER SEMIPRESENCIAL</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Setmanes (1-2) del 11 al 24 de setembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Presentació mòdul SAD</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Com fer un treball</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Document: Aforismes en SI</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Document: Introducció. Conceptes inicials</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Elements vulnerables</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Setmanes (3-4) del 25 de setembre al 8 d'octubre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Biometria - Seguretat Física - Còpies de Seguret</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Concienciació en ciberseguretat</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Preparació Màquines Virtuals per a pràctiques po</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Setmanes (5-6) del 9 al 22 d'octubre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Contrasenyes</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Anàlisi Forense</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Setmanes (7-8) del 23 d'octubre al 5 de novembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Clau simètrica i Hash</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Esteganografia</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — Setmanes (9-10) del 6 al 19 de novembre</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Criptografia de clau pública</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Setmana d'exàmens. Del 20 al 26 de Novembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Continguts i Recursos</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Setmanes (11-12) del 27 de novembre al 10 de desembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C</a></li>
+<li><a href="../ut07/ut0702.html">7.2 UD5-1 Tipus de malware</a></li>
+<li><a href="../ut07/ut0703.html">7.3 UD5-2 Programari anti malware</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Setmanes (13-14) Del 11 al 22 de Desembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Segurertat en xarxes corporatives</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Seguretat en xarxes sense fil</a></li>
+<li><a href="../ut08/ut0803.html">8.3 VPN</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Setmanes Del 8 al 21 de Gener</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Firewall_i_Proxy</a></li>
+<li><a href="../ut09/ut0902.html">9.2 HA - Alta_Disponibilitat</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Setmanes Del 22 de Gener al 4 de Febrer</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Esciptoris_remots(kali)</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Setmanes Del 5 al 12 de Febrer</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Legislació en Ciberseguretat</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — ENQUESTA DE VALORACIÓ DEL PROFESORAT</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Setmana d'examens 2on Trimestre (Del 12 al 18 de Febrer)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Continguts i Recursos</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Setmana d'examens Convocatoria Ordinaria (Del 19 al 25 de Febrer)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Continguts i Recursos</a></li>
+<li><a href="../ut14/ut14actividades.html">✍️ Activitats pràctiques UT14</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Setmana d'examens Convocatoria Extraordinaria (Del 10 al 16 de Juny)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Continguts i Recursos</a></li>
+<li><a href="../ut15/ut15actividades.html">✍️ Activitats pràctiques UT15</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT5 Completa</span>
+<h1>📘 UT5 — Setmanes (9-10) del 6 al 19 de novembre (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0501"><strong>5.1 Criptografia de clau pública</strong></a> (o <a href="./ut0501.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut05actividades"><strong>✍️ Activitats pràctiques UT5</strong></a> (o <a href="./ut05actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0501">5.1 Criptografia de clau pública</h2>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p>
+<h4><span class="" style="background-color: rgb(125, 159, 211);">UD 4 Criptografia. Clau asimètrica. Clau pública</span></h4><br/></div>
+<hr/>
+<p>CRIPTOGRAFIA Clau Asimètrica (Clau pública)</p>
+<p>Recordem....CRIPTOGRAFIA SIMÈTRICA Els principals problemes dels sistemes de xifratge simètric: ➔L’intercanvi de claus ◆Quin canal de comunicació segur han usat per a transmetre's les claus? ◆Més fàcil per a l'atacant intentar interceptar una clau que provar totes les possibles combinacions.</p>
+<p>➔El nombre de claus que es necessiten ◆Per a n persones que necessiten comunicar-se entre si, es necessiten n(n-1)/2 claus diferents 90 persones -&gt; 4.005 claus 300 persones -&gt; 44.850 claus 6000 persones -&gt; 17.997.000 claus ◆Funciona amb un grup reduït de persones ➔Fortalesa de la clau ◆Principi de Kerckhoffs i ◆La responsabilitat de la fortalesa de la clau recau sobre l'usuari</p>
+<p>CRIPTOGRAFIA DE CLAU ASIMÈTRICA Cada usuari del sistema ha de tindre una parella de claus</p>
+<p>➔Clau pública: coneguda per tothom ➔Clau privada: custodiada per el propietari i no se donarà a conéixer mai a ningú que no siga el propietari Video: Asymmetric Encryption : Simply explained Bernardo</p>
+<p>CRIPTOGRAFIA DE CLAU ASIMÈTRICA Claus ➔Parella de claus complementàries: el que xifra una, sol ho pot desxifrar l'altra i viceversa ➔Aquestes claus s'obtenen mitjançant mètodes matemàtics complicats de manera que per raons de còmput és impossible conèixer una clau a partir d'una altra.</p>
+<p>Avantatges ➔Se sol xifrar amb una clau i desxifrar amb una altra Desavantatges ➔Per a una mateixa longitud de clau el missatge es necessita major temps de procés ➔Les claus han de ser de major grandària que les simètriques, es recomanen claus públiques de 1024 bits com a mínim ➔El missatge xifrat ocupa més espai que l'original Algorismes de tècniques de clau asimètrica</p>
+<p>➔Diffe-Hellman, RSA, ECC, ElGamal...</p>
+<p>COMPARATIVA CRIPTOGRAFIA SIMÈTRICA I ASIMÈTRICA</p>
+<p>CRIPTOGRAFIA ASIMÈTRICA Pràctica Instal·lar extensió per a Chrome FlowCrypt 1. Generar claus i compartir la clau pública. 2. Enviar un correu xifrat a un company que tinga instal·lada la extensió. 3. Enviar un correu xifrat(simètric) a un compte que no tinga instal·lada la extensió.</p>
+<p>4. Enviar un correu incloguent parts no xifrades.</p>
+<p>XIFRAT ASIMÈTRIC – Base64 - 26=64 Els xifrats moderns treballen a nivell de bit. (Les claus també)</p>
+<p>XIFRAT ASIMÈTRIC – Base64 - 26=64 64 → ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ b W F u</p>
+<p>XIFRAT ASIMÈTRIC – Base64 - 26=64 64 → ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ Quan no es múltiple de 3 → Farcit / Padding</p>
+<p>XIFRAT ASIMÈTRIC – Base64 - 26=64 64 → ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/ H SA== Ho SG8= Hol SG9s Hola SG9sYQ== Hola SG9sYSA= Hola M SG9sYSBN … ... Hola Mundo SG9sYSBNdW5kbw==</p>
+<p>XIFRAT ASIMÈTRIC PGP (Pretty Good Privacy) ➔Programa més popular d'encriptació i de creació de claus públiques i privades per a seguretat en documents i aplicacions informàtiques ➔Es considera híbrid GPG o (GNU Privacy Guard) ➔Eina per a xifratge i signatures digitals ➔Reemplaçament de PGP, és programari lliure llicenciat baix GPL Comando: gpg opcions : -c (xifrat simètric) Genera un arxiu amb extensió .pgp -d (desxifrat) Exemple: gpg -c arxiu gpg -d arxiu.gpg ¿ … Ha funcionat bé ?</p>
+<p>¿ On estan les claus asimètriques ?</p>
+<p>XIFRAT ASIMÈTRIC OpenSSL ➔Projecte de programari lliure consistent en un robust paquet d'eines d'administració i biblioteques relacionades amb la criptografia, que subministren funcions criptogràfiques a altres paquets com OpenSSH i navegadors web. ➔Xifra (simètrica) , Xifra (asimètric), Hash, Signatura, Certificats digitals, PKI, conversió entre formats, monitoratge de la connectivitat d'un Servidor Web Segur, Comprovació d'expiració de certificats, generar contrasenyes aleatòries.</p>
+<p>XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) 1 Generar parell de claus per a xifrat asimètric: gpg --gen-key o gpg --full-generate-key Durant el procés de generació se'ns aniran fent diverses preguntes: ➔Tipus de xifratge. L'opció DSA and ElGamal ens permet encriptar i signar escollim 1 ➔Grandària de les claus. Per defecte es recomana 3072 (a major grandària més seguretat) =&gt;4096 ➔Temps de validesa de la clau. 0 indicarà que no caduqui mai. (NO RECOMANAT !!!) posa termini ➔Frase de pas (o passphrase) Contrasenya que ens assegurarà que ningú més que nosaltres mateixos podrà usar aquesta clau GPG 2 Comprobar les claus ➔Vore les claus públiques disponibles: gpg --list-keys ➔Vore les claus privades gpg --list-secret-keys</p>
+<p>XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) 3 Com vore la ClauID gpg --list-key --keyid-format SHORT La ClauID és molt important !! , ja que s'utilitzarà per a qualsevol operació sobre les nostres claus o sobre les claus dels altres. Compte, perquè hi ha dos !! ( o quatre !! )</p>
+<p>XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) ¿Perquè hi ha dos? Hi ha una clau mestra i una subclau. La clau mestra s’utilitza per a [SC] Sign , Cert La subclau s’utilitza per a [E] Encrypt</p>
+<h3>4. Esborrar claus</h3>
+<p>➔Esborrar la clau privada: gpg --delete-secret-key ClaveID ➔Esborrar la clau pública: gpg --delete-key ClaveID En este ordre</p>
+<p>XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard)</p>
+<h3>5. Distribució de la clau pública (dos opcions)</h3>
+<p>1) Pujar-la a un servidor de claus públiques (pe El servidor pgp de rediris) 2) Els servidors solen estar interconnectats gpg --send-keys --keyserver pgp.rediris.es ClaveID ● Per buscar les claus públiques en el servidor gpg --keyserver NombreDelServidor --search-keys ClaveID/nombre/email ● Per descarregar la clau pública del servidor gpg --keyserver NombreDelServidor --recv-keys ClaveID 2) Enviar-la per correu o en suport portable (pendrive, CD/DVD …) La bolquem en un fitxer de text gpg --armor --output fichero --export ClaveID</p>
+<h3>6. Fer una còpia de la nostra clau privada per a poder recuperar-la</h3>
+<p>gpg --armor --output fichero --export-secret-key ClaveID Fem servir este</p>
+<p>XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard) 7 Importar la clau bolcada en un fitxer gpg --import fichero</p>
+<h3>8. Eliminar claus distribuides en servidors ( ¡¡ no es poden esborrar !! )</h3>
+<p>Si s'ha oblidat la contrasenya o hem perdut la clau privada o considerem que està compromesa podem generar un certificat de revocació i pujar-lo al servidor de claus (es recomana generar aquest certificat al final del procés de generació de claus) gpg -o revocacion.asc --gen-revoke ClaveID 1) Crear certificat de revocació</p>
+<p>gpg -o revocacion.asc --gen-revoke claveID 2) Revocar la clau (importació a la nostra relació de claus) gpg --import revocacion.asc 3) Comunicar a els servidors que la nostra clau ja no és válida gpg --keyserver NombreDelServidor --send-key ClaveID</p>
+<p>XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard)</p>
+<p>CONFIDENCIALIDAD</p>
+<h3>9. Encriptar un fitxer amb la clau pública (del destinatari)</h3>
+<p>gpg --encrypt --recipient claveID documento.txt 10 Desencriptar un fitxer amb la clau privada (el que rep) gpg -d documento.txt.gpg Manual de GPG: xifra, signa i envia dades de manera segura</p>
+<p>XIFRAT ASIMÈTRIC GPG (GNU Privacy Guard)</p>
+<p>AUTENTICIDAD</p>
+<h3>11. Signar fitxer</h3>
+<p>gpg -u XXXXXXXX --output documento-firmado.sig --clearsign documento-sin-firmar gpg -u XXXXXXXX --output documento-firmado.sig --sign documento-sin-firmar 12 (el que rep) “Verifica” un fitxer amb la clau PUBLICA del que envia gpg -d documento-firmado.sig gpg --verify documento-firmado.sig Manual de GPG: xifra, signa i envia dades de manera segura</p>
+<p>CRIPTOGRAFIA HÍBRIDA Utilitza els dos algorismes: ➔Algorisme de clau pública ◆Per al xifratge en l'enviament de la clau simètrica (petita quantitat d'informació). Més segur ➔Algorisme de clau simètrica ◆Per al xifratge del missatge. Es redueix el cost computacional ➔Eines SW que usen els algorismes anteriors</p>
+<p>◆PGP , GPG , OpenSSL ➔Protocols de comunicació que usen els algorismes anteriors ◆SSH, SSL y TLS</p>
+<p>CRIPTOGRAFIA HÍBRIDA PROCÉS: ➔A i B tenen els seus parells de claus respectives ➔A escriu un missatge a B. El xifra amb el sistema de criptografia de clau simètrica. La clau que utilitza s’anomena clau de sesió i se genera aleatoriament. Per enviar la clau de sesió de forma segura, ésta se xifra amb la clau pública de B, utilitzant per tant criptografia de clau asimètrica ➔B rep el missatge xifrat amb la clau de sesió i esta mateixa xifrada amb la seua clau pública. Per a realitzar el procés invers, en primer lloc utilitza la seua clau privada per a desxifrar la claue de sesió una vegada obtinguda la clau de sesió ja pot desxifrar el missatge</p>
+<p>CRIPTOGRAFIA HÍBRIDA</p>
+<p>SIGNATURA DIGITAL ➔Permet al receptor d’un missatge: ◆Verificar l'autenticitat de l'origen de la informació (autenticació) ◆Verificar que la informació no ha estat modificada des de la seva generació (integritat) ➔L'emissor del missatge signat no pot argumentar que no ho va fer (no repudi) ➔Una signatura digital està destinada al mateix propòsit que una manuscrita, però la manuscrita és senzilla de falsificar, mentre que la digital és impossible mentre no es descobreixi la clau privada del signant ➔La signatura digital és un xifratge del missatge que s'està signant però utilitzant la clau privada en lloc de la pública Signatura digital = resultat de xifrar amb clau privada el resum de dades a signar, fent ús de les funcions resum o hash</p>
+<p>SIGNATURA DIGITAL</p>
+<p>SIGNATURA DIGITAL Exemple Anna i Bernat tenen els seus parells de claus respectives. Anna escriu un missatge a Bernat. És necessari que Bernat puga verificar que realment és Anna qui ha enviat el missatge, per tant, Anna ha d'enviar-lo signat: 1. Anna resumeix el missatge o dades mitjançant una funció hash.</p>
+<p>2. Xifra el resultat de la funció hash amb la seva clau privada. D'aquesta manera obté la seva signatura digital. 3. Envia a Bernat el missatge original juntament amb la signatura. Bernat rep el missatge al costat de la signatura digital. Haurà de comprovar la validesa d'aquesta per a donar per bo el missatge i reconèixer a l'autor del mateix (integritat i autenticació ).</p>
+<p>4. Desxifra el resum del missatge mitjançant la clau pública d'Anna. 5. Aplica al missatge la funció hash per a obtenir el resum. 6. Compara el resum rebut desxifrat, amb l'obtingut a partir de la funció hash. 7. Si són iguals, Bernat pot estar segur que qui ha enviat el missatge (és Anna) i que aquest no ha estat modificat.</p>
+<p>SIGNATURA DIGITAL Però Que passa si Carles genera un parell de claus amb el nom d'Anna, i les usa per a enviar un missatge a Bernat? Bernat creu que el missatge és d'Anna, i no té manera de comprovar si realment el missatge és d'Anna o no.</p>
+<p>CERTIFICAT DIGITAL Les operacions de xifratge i signatura digital només són eficaces si es garanteix que les claus privades són úniques. ➔Per a garantir la unicitat de les claus privades se sol recórrer a: ◆Suports físics (targetes intel·ligents p.e. DNIe, que impossibiliten la duplicació de les claus) ◆protegides per un número personal o PIN ➔Per a assegurar que una determinada clau pública pertany a un usuari concret ◆Certificats digitals</p>
+<p>CERTIFICAT DIGITAL CERTIFICAT DIGITAL=document electrònic (arxiu) que associa una clau pública amb la identitat del seu propietari ➔Conté informació sobre la identitat del seu propietari (nom, adreça ,email) la clau pública, altres atributs (àmbit d'ús de la clau, dates de validesa etc) i una signatura digital d'una autoritat certificadora, a Espanya, La casa de moneda i timbre ➔El format estàndard de certificats digitals és X.509, la seva distribució és possible realitzar-la</p>
+<p>◆Amb clau privada (sol tindre extensió .pxf o .p12) mes segur i destinat a un us privat d’exportació i importació com mètode de còpia segura ◆Sols amb la clau pública (sol ser extensió .cer o .crt), destinat a la distribució no segura , per a que altres entitats puguen verificar la identitat en els arxius o missatges signats ➔Aplicacions: banca online, l’administració pública etc</p>
+<p>UTILITATS DE CERTIFICATS Testificar la veracitat d’un lloc web En els navegadors web quan visitem un lloc segur (https) es mostra un cadenat que té un formulari de dades d’enviament de credencials o dades privades que se deuen enviar de forma segura es mostra un cadenat que ens permetrà vore el seu certificat digital i la entitat certificadora Esbrina qui és la entitat certificadora dels següents llocs web , i la validesa dels seus certificats</p>
+<p>UTILIDATS DE CERTIFICATS Instal·lar / Vore certificats del SO, navegadors web o clients de correu chrome : Configuración/ Privacidad y Seguridad/Seguridad/Gestionar certificados Esbrina com s’accedix des d’altres navegadors. (firefox, opera, ..)</p>
+<p>TERCERES PARTS DE CONFIANÇA La validesa d'un certificat és la confiança que la clau pública continguda en el certificat pertany a l'usuari indicat en el certificat ➔La manera de confiar en el certificat d'un usuari és mitjançant la confiança en terceres parts La idea consisteix en el fet que dos usuaris puguin confiar directament entre si, tots dos tenen relació amb una tercera part i que aquesta pugui donar fe de la fiabilitat dels dos ➔Es podrà tenir confiança en el certificat digital d'un usuari al qual prèviament no coneixem si aquest certificat està avalat per una tercera part en la qual si confiem.</p>
+<p>➔La forma en què aquesta tercera part avalarà que el certificat és de fiar és mitjançant la seva signatura digital sobre el certificat La tercera part confiable (TPC Tercera Part Confiable o TTP Trusted Third Party) que s’encarrega de la signatura digital dels certificats dels usuaris en un entorn de clau pública es coneix amb el nom de Autoritat de Certificació (AC)</p>
+<p>TERCERES PARTS DE CONFIANÇA El model de confiança basat en Terceres Parts Confiables es la base de la definició de les Infraestructures de Clau Pública (ICP o PKI Public Key Infraestructures) formades per : ➔Autoritat de certificació (CA): emet i elimina els certificats digitals ➔Autoritat de registre (RA): controla la generació dels certificats, processa les peticions i comprova la identitat dels usuaris, mitjançant el requeriment de la identificació personal oportuna ➔Autoritats de repositori: emmagatzemen els certificats emesos i eliminats ➔Software per a l’ús de certificats ➔Política de seguretat en les comunicacions relacionades amb la gestió de certificats</p>
+<p>TERCERES PARTS DE CONFIANÇA Infraestructures de Claue Pública (ICP o PKI Public Key Infraestructures) formades per : Autoritat de certificació (CA): Autoritat de registre (RA): Esbrina qui és l’Autoritat de registre i l’Autoritat de certificació de: bbva, caixabank.cat, bancosantander.es Després comprova que estes autoritats es troven instal·lades en el teu navegador (SO)</p>
+<p>DNIE El Document Nacional d'Identitat (DNI) emès per la Direcció General de la Policia (Ministeri de l'interior) El document electrònic ha d'oferir les mateixes certeses que el document físic: ➔Acreditar electrònicament i sense possibilitat de dubte la identitat de persona ➔Signar digitalment documents electrònics, atorgant-los una validesa jurídica equivalent a la que els proporciona la signatura manuscrita</p>
+<p>DNIE El Document Nacional d'Identitat electrònic (DNIe) incorpora un petit circuit integrat (xip) capaç de guardar de manera segura, mitjançant mesures específiques de seguretat per a impedir la seva falsificació. La informació que conté és: ➔Un certificat electrònic per autenticar la personalitat del ciutadà ➔Un certificat electrònic per a signar electrònicament amb la mateixa validesa jurídica que la signatura manuscrita ➔Certificat de l'Autoritat de Certificació emissora ➔Claus per a la seva utilització ➔La plantilla biomètrica per a la impressió dactilar Per a utilitzar el DNIe es necesari</p>
+<p>➔Maquinari específic: lector de targetes que compleixi és estàndard ISO-7816 ➔Programari específic: controladors o mòduls criptogràfics que permetin ➔l'accés a xip de la targeta ◆Windows : Crtyptographic Sevice Provider (CSP) ◆GNU/Linux : mòdul criptogràfic PKC#11</p>
+<p>Certificat digital Que es pot fer amb el certificat digital? punxa ací ● Presentació i liquidació d'impostos. ● Presentació de recursos i reclamacions. ● Emplenament de les dades del cens de població i habitatges. ● Consulta i inscripció en el padró municipal. ● Consulta de multes de circulació.</p>
+<p>● Consulta i tràmits per a sol·licitud de subvencions. ● Consulta d'assignació de col·legis electorals. ● Actuacions comunicades. ● Signatura electrònica de documents i formularis oficials. ● Sol·licitar treball</p>
+<p>On usar el certificat</p>
+<p>Certificat digital On es pot obtenir el certificat digital?</p>
+<p>CA ● FNMT-Ceres, creada per la Fábrica Nacional de Moneda y Timbre ● IZENPE: l’autoritat de certificació impulsada per el Govern Basc i les Diputacions Forals ● ACCV, Autoritat de Certificació de la Comunitat Valenciana ● CATCert, Agència Catalana de Certificació RA Consulta la página de la agencia tributaria i selecciona el servei electrònic de confiança que necessites sol·licitar.</p>
+<p>Certificat digital</p>
+<p>● FNMT-Ceres, creada per la Fábrica Nacional de Moneda y Timbre ● IZENPE: la autoritat de certificació impulsada per el Govern Basc i les Diputacions Forals ● ACCV, Autoritat de Certificació de la Comunitat Valenciana ● CATCert, Agència Catalana de Certificación</p>
+<p>Certificat digital ¿Que tipus de certificats digital existeixen? ● Persona física (com es ve expedint en l'actualitat). ● Representants de persones jurídiques que siguin administradors únics o solidaris. ● Representants de persones jurídiques. ● Representant d'entitats sense personalitat jurídica.</p>
+<p>● Certificat d'empleat públic ● Certificat de component (ssl/tls) més info Suports: ● Software / instal·lables Com instal·lar ● DNIe ● Targetes ● Dispositiu USB ● Cl@ve</p>
+<p>Certificat digital Formats de codificació dels certificats (exporta Importar) ● PEM Format de text, xifrat Base64 Utilitza extensions .cer .crt .pem .key ● DER Format binari Utilitza extensions .cer .der ● PB7 Format Base64 Utilitza extensions .p7b .p7c No contenen claue privada ● PFX/P12 Format binari Utilitza extensions .pfx .p12 Conté la clau privada</p>
+<p>Email encriptat Pràctica Envia’m un correu de gmail encriptat amb la contrasenya : SVF2023 Utilitza l’extensió Mailvelope</p>
+<p>CERTIFICATS DIGITALS Pràctica Obtenir un certificat digital que acredite la nostra identitat. 1. Triar que tipus de certificat sol·licitarem. Per a això farem una primera recerca sobre els certificats i mètodes disponibles al nostre país. 2. Sol·licitar el certificat elegit i justificar l'elecció.</p>
+<p>3. Identificar-se i explicar el mètode utilitzat. 4. Instal·lar el certificat si és necessari. 5. Utilitzar el certificat. 6. Exportar el certificat a un mitjà extern. Suggerència Troba l’error de concepte... ;-)</p>
+<hr/>
+<h2 id="ut05actividades">✍️ Activitats pràctiques UT5</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 5.1 — (SAD) Hack a doble signatura</p><h3>📄 activitat hack doble signatura en PDF.pdf</h3>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: doble signatura PDF En aquesta activitat s'utilitzarà el certificat digital per a signar un document en format PDF per més d'un signant. Necessitem</p>
+<p>1 document signat ( utilitza este ) Programari de signatura ( autofirma, pdf ) Certificat electrònic (el teu) Hex Editor o https://hexed.it/ per editar/modificar un fitxer signat. Punt 1. Utilitza este document, signat pel professor Punt 2 Realitza una còpia del document signat i modifica-la amb HexEditor (canvia un bit o dos) Punt 3. Signa amb el teu certificat digital, per segona vegada (doble signatura) el document signat, i el document signat-modificat Punt 4. Observa i comenta els resultats Punt 5. Envia el document PDF doble-signat correcte adjunt al treball Documenta tot el procés i lliura un document en format PDF.</p>
+<p>Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”</p>
+<h3>📄 activitat hack doble signatura en PDF_signed.pdf</h3>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: doble signatura PDF En aquesta activitat s'utilitzarà el certificat digital per a signar un document en format PDF per més d'un signant. Necessitem</p>
+<p>1 document signat ( utilitza este ) Programari de signatura ( autofirma, pdf ) Certificat electrònic (el teu) Hex Editor o https://hexed.it/ per editar/modificar un fitxer signat. Punt 1. Utilitza este document, signat pel professor Punt 2 Realitza una còpia del document signat i modifica-la amb HexEditor (canvia un bit o dos) Punt 3. Signa amb el teu certificat digital, per segona vegada (doble signatura) el document signat, i el document signat-modificat Punt 4. Observa i comenta els resultats Punt 5. Envia el document PDF doble-signat correcte adjunt al treball Documenta tot el procés i lliura un document en format PDF.</p>
+<p>Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball” Firmado por ENRIQUE MELCHOR IBORRA SANJAIME - NIF:***6325** el día 11/11/2023 con un certificado emitido</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 5.2 — (SAD) Suite GPG</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: xifrat asimètric amb gpg Aquesta activitat consisteix en utilitzar la suite gpg per a generar claus asimètriques, xifrar missatges, desxifrar missatges, generar certificats de revocació, signar missatges i familiaritzar-se amb les funcions criptogràfiques asimètriques.</p>
+<p>Passos a seguir Crear claus (privada y pública) Crear claus amb el comando/opció --full-generate-key tipus RSA i RSA grandària: 4096 validesa: 6meses Nomb: El teu nom email: El teu email (no es pot inventar, ha de ser real) Clau de protecció Moure el ratolí fins que es genere.</p>
+<p>Crear 2 parells de claus. Llistar / Comprovar que s’ha creat be Esborrar un dels dos parells de claus i quedar-se amb u Anotar el ClaveID (de la subclau) del parell no descartat. Exportar la clau pública i enviar al professor (per mail, no esperar a entregar el treball).</p>
+<p>Adjunt a este pdf trobaràs la clau pública del professor, descarrega i importa la clau pública del professor al teu clauer Crear un fitxer.txt amb l’editor nano, on introduirem un missatge secret Xifrar el fitxer amb la clau pública del professor i adjunta’l a la entrega del treball.</p>
+<p>Rebrem un fitxer xifrat del professor El desxifrem i veiem el missatge secret. Guardem la nostra clau secreta (privada) en un fitxer per a després fer una copia de seguretat fora de l’equip. Crearem un certificat de revocació de la nostra clau i el guardem també. Signem un fitxer amb gpg i l’enviem al professor (adjunta al treball) Rebem i comprovem els fitxers signats Documenta tot el procés i lliura un document en format PDF.</p>
+<p>Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Resum de comandos. Xifrat simètric Des de la consola de linux.: comando: gpg opcions : -c (xifrat simètric) Genera un arxiu amb extensió pgp , -d (desxifrat) Exemple</p>
+<p>gpg -c arxiu gpg -d arxiu.gpg Xifrat asimètric Generar claus. gpg --gen-key → gpg --full-generate-key Tipus de xifratge. L'opció DSA i ElGamal ens permet encriptar i signar ➔ Grandària de les claus. Per defecte es recomana 2048 (a major grandària mes seguretat ➔ Temps de validesa de la clau. 1y indicarà que caduque en un any.</p>
+<p>➔ Frase de pas (o passphrase) Contrasenya que ens assegurarà que ningú mes que nosaltres mateixos ➔ podrà usar la nostra clau privada. Comprovar les claus que tenim instal·lades. Vore las claus públiques disponibles gpg --list-keys Vore las claus privades gpg –list-secret-keys Obtenir la ClaveID gpg --list-key --keyid-format SHORT Esborrar claus ➔ Necessitem el ClaveID Esborrar la clau privada: gpg --delete-secret-key ClaveID Esborrar la clau pública: gpg --delete-key ClaveID Abans de xifrar necessitem tindre la clau publica del destinatari.</p>
+<p>Si la tenim/rebem en un fitxer, l’haurem d’importar Importar la clau pública d’un altre des d’un fitxer (clau que ens envien) gpg --import fichero (també podem utilitzar aquesta funció per a recuperar la nostra clau privada guardada) Però també podem pujar les claus(públiques) a un servidor de claus.</p>
+<p>Pujar la nostra clau pública: gpg --send-keys --keyserver pgp.rediris.es ClaveID Per buscar las claus públiques en el servidor gpg --keyserver NombreDelServidor --search-keys ClaveID/nombre/email Per a descarregar la clau pública d’un destinatari del servidor de claus gpg --keyserver NombreDelServidor --recv-keys ClaveID</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Si volem enviar-la per correu o en suport físic (USB, CD/DVD …) La bolquem en un fitxer de text i enviem el fitxer. gpg --armor --output fichero --export ClaveID</p>
+<ul>
+<li>Fer una còpia de la nostra clau privada per a poder recuperar-la si la perdem</li>
+</ul>
+<p>o si anem a un altre equip: (NO ENVIAR A NINGÚ MAI, ESTA ES LA NOSTRA CLAU SECRETA PRIVADA) gpg --armor --output fichero --export-secret-key ClaveID ******* ----------------------------------------------------------------------------------------------- Esborrar las nostra clau pública pujada als servidors públics. (revocació) gpg -o revocacion.asc --gen-revoke ClaveID</p>
+<ul>
+<li>Crear certificat de revocació : gpg -o revocacion.asc --gen-revoke claveID</li>
+</ul>
+<p>(És convenient crear aquest certificat a continuació de la generació de claus i guardar-lo en lloc segur al costat de la clau privada). Revocar la clau (importació a la nostra relació de claus) gpg --import revocacion.asc</p>
+<ul>
+<li>Comunicar als servidors que la nostra clau ja no es vàlida</li>
+</ul>
+<p>gpg --keyserver NombreDelServidor --send-key ClaveID ----------------------------------------------------------------------------------------------- Xifrar documents Encriptar un fitxer amb la clau pública d’un destinatari: gpg --encrypt --recipient claveID documento.txt Desencriptar un fitxer dirigit a nosaltres amb la clave privada nostra gpg -d documento.txt.gpg gpg -d documento.txt.gpg &gt; document_en_clar.txt ----------------------------------------------------------------------------------------------- Signar documents Signar un fitxer amb la clau privada gpg --output fichero.firmado –sign fichero.txt Verificar de qui és el fitxer signat gpg --verify fichero.firmado Desxifrar fitxer signat gpg --output fichero.txt –decrypt fichero.firmado Signar un fitxer amb la clau privada, i deixant el text llegible gpg --output fichero.firmado –clearsign fichero.txt</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/ut04actividades.html">⬅️ ✍️ Activitats pràctiques UT4</a>
+<a class="page-nav-btn" href="../ut05/ut0501.html">5.1 Criptografia de clau pública ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

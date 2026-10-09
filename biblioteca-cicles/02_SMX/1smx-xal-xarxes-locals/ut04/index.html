@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT4 — Unitat Didàctica 4 — Xarxes Locals | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖧 Xarxes Locals — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Xarxes Locals</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Sistemes Microinformàtics i Xarxes</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Avaluació</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Solución: Proyecto de Instalación LAN</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Recursos: Ejercicios de Direccionamiento IP</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Unitat Didàctica 4</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — i 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Continguts i Recursos</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Final de Curs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Dossier de Recuperació</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unitat Didàctica 7</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Unitat Didàctica 8</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Unitat Didàctica 9</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT4 Completa</span>
+<h1>📘 UT4 — Unitat Didàctica 4 (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0401"><strong>4.1 Continguts i Recursos</strong></a> (o <a href="./ut0401.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut04actividades"><strong>✍️ Activitats pràctiques UT4</strong></a> (o <a href="./ut04actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0401">4.1 Continguts i Recursos</h2>
+<div class="admonition tip"><p class="admonition-title">📌 Introducció de la Unitat</p><p><span style="font-weight: bold;">Configuració de dispositius de xarxa [35]<br/></span>4.1.- Configuració de commutadors <br/>4.2.- Configuració d’encaminadors <br/>4.3.- Xarxes sense fil: conceptes bàsics i configuració <br/>4.4.- Documentació dels procediments de configuració</p></div>
+<p>📎 <strong>Material de laboratori (04 - Recursos: Exemple LAN Packet Tracer):</strong> <code>LAN_ejemplo.pkt</code></p>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p>Model de Switchs per pràctica de Taller: D-LINK DES-3526 / SMC 6724AL2</p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 04 - Enllaç: Protocol RIP</p><p><a href="http://es.wikipedia.org/wiki/Routing_Information_Protocol" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://es.wikipedia.org/wiki/Routing_Information_Protocol) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 04 - Enllaç: Protocol OSPF</p><p><a href="http://es.wikipedia.org/wiki/OSPF" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://es.wikipedia.org/wiki/OSPF) ↗️</strong></a></p></div>
+<p>📎 <strong>Material de laboratori (04 - Enllaç: Exemple Routing Packet Tracer):</strong> <code>ROUTING_ejemplo.pkt</code></p>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 04 - Enllaç: Exemple Rutes Estàtiques</p><p><a href="http://programacionsistemas.wikispaces.com/Ruteo+Estatico+Packet+Tracer+Cisco" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://programacionsistemas.wikispaces.com/Ruteo+Estatico+Packet+Tracer+Cisco) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 04 - Enllaç: Exemple Rutes RIP</p><p><a href="http://programacionsistemas.wikispaces.com/Ruteo+Rip+Packet+Tracer+Cisco" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://programacionsistemas.wikispaces.com/Ruteo+Rip+Packet+Tracer+Cisco) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 04 - Enllaç: Wifislax</p><p><a href="http://www.wifislax.com/" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.wifislax.com/) ↗️</strong></a></p></div>
+<hr/>
+<h2 id="ut04actividades">✍️ Activitats pràctiques UT4</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.1 — 04 - Activitat 01: Fitxa tècnica d'un Switch comercial ***</p><p>Examina les especificacions a partir de la fitxa tècnica d'un switch comercial destacant aquells paràmetres que has de tenir en conter perquè afecten substancialment al rendiment i funcionalitats.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.2 — 04 - Activitat 02: Manual tècnic d'un Switch ***</p><p>Descarrega i analitza un manual tècnic posant especial interés a les operacions descrites per configurar inicialment el dispositiu a travès del cable sèrie per poder després accedir a través de l'entorn web. Explica les possibilitas de configuració de VLANs i de QoS.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.3 — 04 - Activitat 03: Configuració Switch ***</p><p>Realitza en tallar la configuració d'un switch comercial per interconnectar 3 ordinadors en una xarxa. Després habilita una VLAN per ports de forma que dos dels equips estiguen a la mateixa VLAN i l'altre no. Comprova la connectivitat dels dispositius connectats.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.4 — 04 - Activitat 04: Simulació Packet Tracer: Xarxa en HUB vs SWITCH ***</p><p>Realitza una simulació d'una xarxa amb 3 PCs interconnectats per un Hub. Configura adequadament les adreces IP perquè existeixi comunicació entre els equips. Activa la simulació en mode ICMP exclusivament. Envia un ping del PC1 al PC3 i explica què passa en el procés.</p>
+<p>Realitza una simulació d'una xarxa amb 3 PCs interconnectats per un Switch. Configura adequadament les adreces IP i els ports del Switch perquè existeixi comunicació entre els equips. Activa la simulació en mode ICMP exclusivament. Envia un ping del PC1 al PC3 i explica què passa en el procés.<br/><br/>Per què el procés no és el mateix en els dos casos? Quin problema ens trobem amb el Hub?</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.5 — 04 - Activitat 05: Simulació Packet Tracer: Funcionament de ARP ***</p><p>Realitza una simulació d'una xarxa amb 3 PCs interconnectats per un Switch. Configura adequadament les adreces IP i els ports del Switch perquè existeixi comunicació entre els equips. Activa la simulació en mode ARP per explicar a través d'exemples pràctics el funcionament del protocol ARP.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.6 — 04 - Activitat 06: Simulació Packet Tracer: Funcionament de STP ***</p><p>Realitza una simulació d'una xarxa amb 3 Switchs interconnectatsen bucle. Activa la simulació en mode STPP per explicar a través d'exemples pràctics el funcionament del protocol STP.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.7 — 04 - Activitat 07: Simulació Packet Tracer: Configurar VLANs ***</p><p>Realitza una simulació d'una xarxa amb 5 PCs interconnectats per un Switch. Configura adequadament les adreces IP i els ports del Switch perquè existeixi comunicació entre els equips. Demostra com pots configurar VLANs al Switch. Intenta ampliar el model amb 2 Switchs interconnectats amb un port trunking.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.8 — 04 - Activitat 08: Simulació Packet Tracer: Routing ***</p><p>Partint de l'exemple proporcionat d'una estructura de xarxa amb Packet Tracer, observa les taules d'encaminament dels Routers i indica el camí que seguirà la informació. Llança els pings que demana el fitxer observant el camí que segueixen els paquets per la xarxa. Què passaria si cau un router de la xarxa? Finalment, proposa una estructura alternativa de connexió més eficient davant la caiguda d'un dels nodes.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.9 — 04 - Activitat 09: Encaminament RIP - OSPF ***</p><p>04 - Activitat 09: Encaminament RIP - OSPF ***</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.10 — 04 - Activitat 10: Encaminador comercial ***</p><p>Examina i documenta les principals funcions i prestacions que ofereix un encaminador comercial. COMPONENTS DEL GRUP: -Alumne 1: -Alumne 2: -Alumne 3: DADES DE L'ENCAMINADOR -Marca: -Model: -URL Manual d'usuari: -Voltatge del transformador: -Característiques principals: PROCEDIMENTS BÀSICS -Restaurar a paràmetres de fàbrica -Accedir a l'administració -Analitzar opcions disponibles del GUI CONFIGURAR XARXES -Configurar valors de la WAN -Configurar valors de la LAN -Activar servei DHCP -Activar i comprovar Log de sistema PROVES DE CONNECTIVITAT -Model de xarxa utilitzat: -Paràmetres IPv4 de tots els dispositius: -Comandaments i proves realitzades</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.11 — 04 - Activitat 11: Simulació Packet Tracer: Xarxa sense fils ***</p><p>Utilitza l'entorn visual del programa Packet Tracer per generar una estructura de xarxa amb un router wifi de Linksys i dos equips sense fil. Explicar les principals pantalles de configuració del router sense fil i els principals paràmetres a tenir en compte per a la seva connexió en una xarxa local protegida.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.12 — 04 - Activitat 12: Configurar una xarxa sense fils amb punt d'accés ***</p><p>Realitza en taller un muntatge d'un punt d'accés i configura dos clients per accedir a la xarxa sense fils. Utilitza Fing per analitzar la xarxa. Utilitza Wifi Analyzer per vore configuracions properes de xarxes wifi.Comprova com una seguretat feble es pot vulnerar amb ferramentes de Wifislax. </p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.13 — 04 - Activitat: Glossari (Llibreta) ***</p><p>Realitza un glossari de termes tècnics relatius als continguts estudiats a la unitat on oferisques una definició curta dels mateixos: repetidor, transceptor, concentrador, commutador, pont, encaminador, cascade, backplane, VLAN, trunking, MTU, Distancia administrativa, RIP, OSPF, FCC, Wifi Alliance, roaming, AP, trama de beacon, SSID, TKIP, AES, RADIUS, WPS.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.14 — 04 - Activitat: Revisió de Continguts (Llibreta) ***</p><p>1.- Explica les principals característiques que presenten el hub, el switch i el bridge indicant en quin nivell d'OSI funcionen i destacant especialment les limitacions de cada un d'ells.<br/>2.- Resumeix la utilitat i funcionament del protocol de nivell 2 STP resolent un exemple gràfic pas a pas. <br/>3.- Diferència els modes de configuració d'un commutador: mode d'usuari, priviligiat, de configuració global, altres modes. Quins comandos gastem per passar d'un mode a un altre? Exposa com configuraries una IP determinada a una interficie.<br/>4.- Explica els principals tipus de VLAN segons la funció que desenvolupa.<br/>5.- Diferència VLAN estàtica de dinàmica<br/>6.- Explica sobre una xarxe d'exemple com es pot realitzar la comunicació intra-VLAN i la comunicació entre VLANs.<br/>7.- Explica la utilitat de IEEE 802.1Q.<br/>8.- Diferència port d'accés de port troncal.<br/>9.- Quina és la funció principal d'un encaminador i de quins elements consta.<br/>10.- Classifica els tipus d'encaminament IP estàtics i dinàmics mostrant les característiques fonamentals de cada un d'ells.<br/>11.- Classifica i explica els protocols d'encaminamen dinàmics per "vector-distacia" i "estat de l'enllaç" focalitzant en RIP i OSPF com exemples aclaridors<br/>12.- Comenta els principals estàndards del IEEE 802.11 mostrant especial atenció a la freqüencia a la que transmet, la velocitat màxima teòrica i la distància d'abast.<br/>13.- Descriu les principals propietats de les antenes.<br/>14.- Descriu els principals tipus d'antenes.<br/>15.- Diferència entre mode infraestructura i mode ad-hoc en les comunicacions sense fils.<br/>16.- Diferència entre escaneig actiu i passiu.<br/>17.- Enumera els passos que has de realitzar per configurar adequadament un punt d'accés sense fils: xarxa, wireless i seguretat.<br/>18.- Explica com es resolen els principals problemes de configuració en tres passos sistemàtics.<br/>19.- Menciona les principals recomanacions alhora d'ubicar correctament un punt d'accés.<br/>20.- Resumeix els principals documents de configuració xarxa i destaca la seva utilitat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.15 — 04 - Examen Unitat</p><p>04 - Examen Unitat</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.16 — 04 - Examen Pràctic</p><p>04 - Examen Pràctic</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut03/ut03actividades.html">⬅️ ✍️ Activitats pràctiques UT3</a>
+<a class="page-nav-btn" href="../ut04/ut0401.html">4.1 Continguts i Recursos ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

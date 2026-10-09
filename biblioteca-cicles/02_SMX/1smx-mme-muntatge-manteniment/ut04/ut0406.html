@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>4.6 U6 - P1 P2 P3 - PRESENTACIÓ — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔧 Muntatge i Manteniment d'Equips — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Muntatge i Manteniment d'Equips</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 - P1 | P2 | P3 - CONTINGUTS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 - P2 - PROCESADOR Y MEMORIA</a></li>
+<li><a href="../ut02/ut0203.html">2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0204.html">2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0205.html">2.5 U2 - P3 - Perifèrics i Communications</a></li>
+<li><a href="../ut02/ut0206.html">2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE</a></li>
+<li><a href="../ut02/ut0207.html">2.7 DISCOS DUROS CHS ECHS LBA</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 5</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U5 - P1 P2 P3 - PDF CONTINGUTS</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U6 - RGPD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U6 - COPIAS DE SEGURIDAD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U6 - CLASIF INFORMACION - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U6 - P1 P2 P3 PRESENTACIÓ CONTINGUTS</a></li>
+<li><a href="../ut04/ut0405.html">4.5 U6 - P1 P2 P3 - CONTINGUTS</a></li>
+<li><a class="active" href="../ut04/ut0406.html">4.6 U6 - P1 P2 P3 - PRESENTACIÓ</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — FINAL DE CURSO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT4 — Unitat Didàctica 6</span>
+<h1>4.6 U6 - P1 P2 P3 - PRESENTACIÓ</h1>
+<p>Montaje y Mantenimiento de Equipos</p>
+<p>Tema 8 Implantación SO, Opciones de Arranque e Imágenes</p>
+<p>Tema 8 Implantación SO, Opciones de Arranque e Imágenes</p>
+<p>Índice</p>
+<p>Definiciones</p>
+<p>Particionado en Linux</p>
+<p>Virtualización</p>
+<p>Software de Backup y Punto de Restauración</p>
+<p>Opciones de Arranque de un equipo</p>
+<p>Utilidades para la creación de imágenes</p>
+<p>Herramientas para la clonación</p>
+<p>1.- DEFINICIONES</p>
+<p>1.- Software;</p>
+<p>Definición;</p>
+<p>DRAE; conjunto de programas, instrucciones y reglas informáticas para ejecutar ciertas tareas en una computadora.</p>
+<p>IEEE; Conjunto de los programas de cómputo, procedimientos, reglas, documentación y datos asociados que forman parte de las operaciones de un sistema de computación.</p>
+<p>Software Libre y propietario;</p>
+<p>S.Libre;Permite a los usuarios que lo adquieran trabajar con toda libertad sobre él, pudiendo usarlo, copiarlo, estudiarlo, modificarlo y distribuirlo de nuevo. (Free Software Foundation)</p>
+<p>S.Propietario;cuyas limitaciones para el usuario que lo adquiera son la de copia, modificación o distribución</p>
+<p>EL S. Libre puede ser de pago o gratuito. Tiene establecidas 4 premisas; https://www.gnu.org/philosophy/free-sw.es.html</p>
+<p>a)Libertad para utilizar el programa con cualquier propósito</p>
+<p>b)Libertad para estudiar el funcionamiento del programa y adaptarlo a las necesidades del usuario</p>
+<p>c)Libertad para distribuir copias del programa</p>
+<p>d)Libertad para modificar el programa, mejorándolo y haciendo públicas estas mejoras al resto de usuarios.</p>
+<p>DIFERENCIA Software Libre y Open Source</p>
+<p>1.- DEFINICIONES</p>
+<p>1.- DEFINICIONES</p>
+<p>Realiza un trabajo sobre SO actuales y requisitos/especificaciones</p>
+<p>1 Sistemas Linux</p>
+<p>Particionado</p>
+<p>https://docs.fedoraproject.org/es-ES/Fedora/13/html/Installation_Guide/s2-diskpartrecommend-x86.html</p>
+<p>https://www.atareao.es/como/particiones-en-linux/</p>
+<p>http://www.ubuntufacil.com//ubuntu-particionamiento-recomendado/</p>
+<p>2.- PARTICIONADO EN LINUX</p>
+<h3>3. Virtualización</h3>
+<p>3.1 Conceptos</p>
+<p>La virtualización consiste en la creación, a través de software, de una versión virtual de un recurso tecnológico, hardware o software.</p>
+<p>La virtualización de un sistema operativo consiste en usar software para permitir que un elemento de hardware gestione múltiples imágenes de sistemas operativos al mismo tiempo.</p>
+<p>El equipo sobre el que se virtualiza recibe el nombre de anfitrión (host) y lo que se pretende virtualizar se llama huésped (guest).</p>
+<p>3.- VIRTUALIZACIÓN</p>
+<p>El hipervisor (o Virtual Machine Monitor) es el encargado de realizar la virtualización en el host. Hay dos tipos Nativo y Alojado</p>
+<p>Nativo:El hipervisor es el host y se ejecuta directamente sobre el hardware del equipo.Ejemplos KVM, Virtual BOX, PROMOX</p>
+<p>Alojado: el hipervisor se ejecuta como una aplicación más sobre el sistema operativo del host. Se utilizan los recursos a través del SO del host. Ejemplo VMWare, VirtualBox.</p>
+<p>3.- VIRTUALIZACIÓN</p>
+<p>Mediante la virtualización se crea una máquina virtual.La VM simula un sistema (con hardware y software) que se ejecuta como si existiese en realidad. En cierta medida, podríamos verlo como una partición de nuestro ordenador: la máquina real y la máquina virtual. Por lo tanto dispone de disco duro, memoria ram, tarjeta gráfica, etc. y puede ejecutar programas como lo hace una computadora</p>
+<h4>3.2. Tipos de virtualización</h4>
+<p>Virtualización de Recursos→ Se simulan recursos como pueden ser vólumenes de almacenamientos o recursos de red. Ejemplo. Discos RAID, Redes privadas virtuales.</p>
+<p>Virtualización de Plataforma→ A través de software de virtualización se crea una máquina virtual. Esta VM es la simulación de un equipos con un SO. Tipos</p>
+<p>Emulación:permite simular un hardware completo con arquitecturas diferentes a las del anfitrión. Ejemplo MAME (Maquinas recreativas).</p>
+<p>Virtualización nativa: genera un sistema que funciona con la misma arquitectura que el host.</p>
+<p>Virtualización asistida por hardware: Es un tipo de virtualización nativa en laque el procesador del host contribuye a la virtualización. Solo Intel con su tecnología VT-x y AMD con AMD-V proporcionan ayuda por hardware al software de virtualización.</p>
+<p>3.- VIRTUALIZACIÓN</p>
+<h4>3.3. Software para virtualización</h4>
+<p>En clase practicamos con VMWare y VirtualBox.</p>
+<p>VirtualBox;</p>
+<p>1.- Instalar el paquete “extension”</p>
+<p>2.- Comprobar que la bios, opciones avanzadas, opciones permitir virtualización.</p>
+<p>3.- VIRTUALIZACIÓN</p>
+<p>3.- VIRTUALIZACIÓN</p>
+<p>Realiza un trabajo sobre Docker</p>
+<ul>
+<li>Backup y Punto de Restauración.</li>
+</ul>
+<p>INCIBE Copias de Seguridad</p>
+<p>Backup: Es una copia de seguridad realizada bien a los datos almacenados en el PC o bien al software instalado. Se podrá realizar de forma automática o manual.</p>
+<p>Copia de Seguridad por terminal: comando “TAR”</p>
+<p>Punto de Restauración: Es la creación de una instantánea del SO, software y ficheros de forma incremental. Se pueden realizar bien manualmente cuando queramos o de forma automática a intervalos marcados por el usuario.</p>
+<p>Software: Para sistemas Linux podemos utilizar “TimeShift”, es un programa de restauración del sistema para Linux, similar a lo que tiene Windows con la opción Restaurar o al Time Machine de Apple para su MacOS.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<p>Ejemplo, Tar</p>
+<p>tar cvpzf backup.tgz --exclude=/backup.tgz --exclude=/lost+found --exclude=/media /</p>
+<p>cvpzf: opciones: (c)-&gt; para crear un archivo y (v)-&gt; mostrar el proceso desfilar en pantalla. (p)-&gt; Cada archivo conservará sus permisos, (z) → utilizando gzip, (f)-&gt; para crear el archivo backup.tgz.</p>
+<p>Las carpetas y archivos después de --exclude/ son las carpetas que no deseamos incluir en el archivo</p>
+<p>backup.tgz: evidentemente no debemos incluir el mismo archivo si no se creará un bucle.</p>
+<p>/lost+found: estos archivos no sirven de mucho.</p>
+<p>/media: tampoco debemos incluir los otros sistemas de archivos.</p>
+<p>/:Como deseamos hacer una copia de respaldo de todo, ponemos “/” para incluir la raíz del sistema de archivos.</p>
+<p>Al final obtendremos un archivo backup.tgz en la raíz del sistema de archivos</p>
+<p>RESTAURACIÓN</p>
+<p>tar xvpfz backup.tgz -C /</p>
+<p>x: para extraer</p>
+<p>C: para utilizar el directorio actual (/) para extraer los archivos.</p>
+<p>Si hemos excluido carpetas (por ejemplo /lost+found), entonces tendríamos que volver a crearlas</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1. Copias de Seguridad</h4>
+<p>Las copias de seguridad son un elemento fundamental para que el trabajo que realizamos se pueda proteger de aquellos problemas o desastres que pueden ocurrir. El objetivo de las copias de seguridad no es evitar esos problemas, sino poder recuperar los datos en el caso de que ocurran, cosa que sin duda siempre sucede y además en el momento más inoportuno.</p>
+<p>Para estar preparados ante cualquier desastre que elimine la información de los discos duros del servidor, debemos planificar una política de realización de copias de seguridad periódicas que salvaguarden tanto los datos de los usuarios como los archivos de la configuración del sistema y los servicios.</p>
+<p>En función de la cantidad de datos a salvaguardar, podemos elegir entre tres tipos de tareas de copia de seguridad. Es importante seleccionar la tarea apropiada puesto que ello nos permitirá minimizar el número de cintas (u otros medios) y el tiempo empleado en realizar dicha tarea.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+
+<p>Tipos de copia de seguridad</p>
+<p>En función de la cantidad de archivos que se salvaguardan a la hora de realizar la copia de seguridad, podemos distinguir tres tipos de copia</p>
+<p>Copia de seguridad total o íntegra</p>
+<p>Copia de seguridad incremental</p>
+<p>Copia de seguridad diferencial</p>
+<h4>4.1.1. Copia normal o copia total</h4>
+<p>Una copia de seguridad normal, es una copia de seguridad total de todos los archivos y directorios seleccionados.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.2. Copia incremental</h4>
+<p>En un proceso de copia de seguridad incremental, se hace una copia de seguridad sólo de los archivos que han cambiado desde la última copia de seguridad realizada. Si tenemos que realizar la restauración de archivos ante un desastre, debemos disponer de la copia total y de todas las copias incrementales que hayamos realizado desde la copia total.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.3. Copia diferencial</h4>
+<p>Una copia de seguridad diferencial es una copia de todos los archivos que han cambiado desde la última copia de seguridad total que hayamos hecho. La ventaja es que se requiere menos espacio que la copia total y que en el proceso de restauración únicamente necesitaremos la última copia total y la última copia diferencial. Una copia diferencial anula a la copia diferencial anterior. Por el contrario, se consume más tiempo en realizar la copia y también más espacio que en el caso de copia incremental.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.4. Ejemplo</h4>
+<p>Por ejemplo en un caso típico se realizarían las siguientes tareas</p>
+<p>Todos los días 1 de cada mes, a las 23:00 horas: copia de seguridad total</p>
+<p>Todos los viernes a las 23:00 horas: copia de seguridad diferencial desde la copia de día 1</p>
+<p>Todos los días (excepto los viernes y el día 1) a las 23:00 horas: copia de seguridad incremental desde la copia del día anterior</p>
+<p>Con esta planificación nos aseguramos disponer de copia de seguridad diaria. En caso de desastre deberíamos recuperar la copia total, la última diferencial y todas las incrementales desde la última diferencial.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.5. Elección de carpetas a salvaguardar</h4>
+<p>Deberíamos salvaguardar, como mínimo, las siguientes carpetas</p>
+<p>/home (Carpetas personales de los usuarios)</p>
+<p>/etc (Archivos de configuración del sistema)</p>
+<p>/root (Carpeta personal del usuario root)</p>
+<p>/var/log (Carpeta de logs del sistema)</p>
+<p>/var/www (Web de la intranet)</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.6. Comprimir carpetas</h4>
+<p>Cuando realizamos copias de seguridad, los datos deben comprimirse siempre por tres razones</p>
+<p>La copia se realiza más rápidamente</p>
+<p>El tamaño de la copia es menor</p>
+<p>La compresión garantiza la integridad de los datos</p>
+<p>Al hecho de que los datos estén compactados en un único archivo, hace que el tiempo en trasmitir los datos desde el servidor al soporte, sea menor que si no se comprime.</p>
+<p>La integridad de los datos queda garantizada porque el algoritmo de compresión añade un código de redundancia cíclica (CRC) que se consulta a la hora de descomprimir los datos de forma que tenemos seguridad si están correctos o no lo están.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.7. Nomenclatura de los archivos</h4>
+<p>Normalmente, el nombre del archivo suele incluir el tipo de copia, las carpetas que contiene y la fecha (en el caso de copias totales) o fechas (en el caso de copias diferenciales e incrementales) de los datos.</p>
+<p>// Nombre de archivo copia de seguridad total</p>
+<p>CopiaTotal_etc-home_01feb19.tar.bz2</p>
+<p>// Nombre de archivo copia de seguridad diferencial</p>
+<p>CopiaDiferencial_etc-home_01feb19-08feb19.tar.bz2</p>
+<p>// Nombre de archivo copia de seguridad incremental</p>
+<p>CopiaIncremental_etc-home_08feb19-12feb19.tar.bz2</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.8. Creación Copia de Seguridad</h4>
+<p>// Utilización de tar</p>
+<p>// Para crear copia de seguridad de varias carpetas</p>
+<p>tar -jcvf CopiaTotal.tar.bz2 carpeta1 carpeta2 carpeta3 ...</p>
+<p>Opciones</p>
+<p>j: Comprimir utilizando bzip2</p>
+<p>c: Crear nuevo archivo</p>
+<p>v: Mostrar los archivos añadidos</p>
+<p>f: Escribir hacia un archivo</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.9. Extraer Copia de Seguridad</h4>
+<p>// Para extraer los archivos que contiene el archivo tar.bz2</p>
+<p>tar -jxvf copia.tar.bz2</p>
+<p>// Para extraer solo un archivo del archivo tar.bz2</p>
+<p>tar -jxvf copia.tar.bz2 ruta-del-archivo/nombre-del-archivo</p>
+<p>// Para ver una lista de los archivos que contiene el archivo tar.bz2</p>
+<p>tar -jtvf copia.tar.bz2</p>
+<p>Opciones</p>
+<p>j: Comprimir utilizando bzip2</p>
+<p>x: Extraer (descomprimir)</p>
+<p>v: Mostrar los archivos extraídos</p>
+<p>f: Extraer desde un archivo</p>
+<p>t: Mostrar el contenido</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.10. Creación parcial</h4>
+<p>// Para crear copia de seguridad de los archivos modificados tras una fecha dada</p>
+<p>tar -jcvf CopiaDiferencial.tar.bz2 -N 1feb2019</p>
+<p>La opción -N en el comando tar significa Newer que traducido es 'más nuevo que'. Si incluimos la opción -N 1feb19 significa que solamente va a añadir los archivos que se han modificado con posterioridad a dicha fecha, es decir, más nuevos que el 1 de febrero de 2019 a las 0 horas, 0 minutos.</p>
+<p>// Crear copia total poniendo la fecha de hoy en el nombre del archivo</p>
+<p>tar -jcvf /tmp/CopiaTotal_etc-home_`date +%d%b%y`.tar.bz2 /home /etc</p>
+<p>date +%d%b%y: muestra la fecha en un formato especial como por ejemplo 13sep18</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.1.11. Automatización</h4>
+<p>El proceso de creación de copias de seguridad debe ser un proceso automático.</p>
+<p>Para lanzar la realización automática de copias utilizaremos;</p>
+<p>Cron. Cada usuario tiene su propio cron en el que puede configurar sus tareas programadas mediante el comando 'crontab -e'.</p>
+<p>Con aplicación gráfica como gnome-schedule.</p>
+<p>En el caso, como realizamos copia de seguridad de carpetas que solamente tiene acceso el usuario root, debemos programar la copia mediante el cron de root.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.2. Copia de Seguridad en Servidores Remotos</h4>
+<p>Lo comentado anteriormente permite realizar copias de seguridad en un disco duro local.</p>
+<p>Una mejora añadida sería la creación de la copia en una carpeta remota.</p>
+<p>Al igual que se automatiza la creación de la copia, se podría ejecutar automáticamente un comando que, vía nfs, samba, ftp o ssh, vuelque los archivos en un servidor remoto para mayor seguridad.</p>
+<p>También existen herramientas para realizar directamente copias de seguridad remotas</p>
+<p>rsync: permite realizar copias en carpetas remotas</p>
+<p>unison: permite mantener sincronizadas dos carpetas remotas</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<h4>4.3. Aplicaciones para Copias de Seguridad</h4>
+<p>Existen aplicaciones tanto libres como de pago que facilitan la tarea de realización de copias de seguridad. Entre las aplicaciones libres destacamos</p>
+<p>BackupPC: Herramienta para hacer copias de seguridad de PCs de la red</p>
+<p>Amanda: Herramienta para hacer copias de seguridad de PCs de la red</p>
+<p>afbackup: Herramienta para hacer copias de seguridad de PCs de la red</p>
+<p>Estas aplicaciones tienen la ventaja de ser muy completas ya que disponen de un sinfín de posibilidades, pero son más complejas de manejar.</p>
+<p>4.- BACKUP Y PUNTO DE RESTAURACIÓN</p>
+<p>5.- OPCIONES DE ARRANQUE DE UN EQUIPO</p>
+<p>Pasos en el arranque de un equipo</p>
+<p>Encendido, se presiona el botón de encendido.</p>
+<p>El bootstrap, se ejecutan las instrucciones almacenadas en la memoria ROM.</p>
+<p>Autocomprobación del encendido (power-on self-test-POST), diagnóstico del sistema y de cada componente</p>
+<p>Localización del SO.</p>
+<p>Carga del SO.</p>
+<p>Establecimiento del entorno.</p>
+<p>5.- OPCIONES DE ARRANQUE DE UN EQUIPO</p>
+<p>Simulador de BIOS;</p>
+<p>https://aules.edu.gva.es/moodle/mod/assign/view.php?id=1055876</p>
+<p>5.- OPCIONES DE ARRANQUE DE UN EQUIPO</p>
+<p>Mediante la secuencia de arranque de la BIOS de un equipo se decide el orden de búsqueda de las unidades para el arranque del sistema.</p>
+<p>Disco de arranque o disco de inicio</p>
+<p>Disco que contiene los archivos necesarios para iniciar el SO.</p>
+<p>Utilizados como dispositivos de rescate o recuperación.</p>
+<p>Dos tipos</p>
+<p>Discos de arranque.</p>
+<p>Disco de arranque Live → No arranca el SO del equipo, es un SO que arranca desde un CD o USB.</p>
+<p>5.- OPCIONES DE ARRANQUE DE UN EQUIPO</p>
+<p>Arranque y ejecución de Linux desde una memoria USB</p>
+<p>Objetivo → instalar y aprender Linux, seguridad, gestión de la red, conexión a Internet, etc</p>
+<p>Existen muchas herramientas crean los Live USB que tienen una función similar a los Live CD.</p>
+<p>Usados para la administración de sistemas, la recuperación de datos, para probar las distintas distribuciones del SO GNU/Linux, etc</p>
+<p>USB de arranque múltiple → unidad USB que contiene varios SO, antivirus, sistemas de clonación y otras muchas herramientas que se pueden cargar directamente desde el USB sin necesidad de utilizar el SO instalado en nuestro ordenador.</p>
+<p>5.- OPCIONES DE ARRANQUE DE UN EQUIPO</p>
+<p>Arranque y ejecución de Linux desde una memoria USB</p>
+<p>Desde terminal</p>
+<p>Con herramientas con Interfaz Gráfica</p>
+<p>Herramientas incluidas en el SO.</p>
+<p>Unetbootin</p>
+<p>Multisystem:Varios SO en el mismo USB</p>
+<p>Rufus</p>
+<p>Yumi:Varios SO en el mismo USB</p>
+<p>5.- OPCIONES DE ARRANQUE DE UN EQUIPO</p>
+<h4>1.1. Desde Terminal</h4>
+<p>1.- Desmontar USB: $ umount /dev/sdc</p>
+<p>2.-Desde terminal: $ sudo dd if=ubuntu-15.04-desktop-amd64.iso of=/dev/sdc bs=4M status=progress conv=fdatasync</p>
+<p>Opción: Para que nos avise al terminar;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>$ sudo dd if=ubuntu-15.04-desktop-amd64.iso of=/dev/sdc bs=4M status=progress conv=fdatasync &amp;&amp; notify-send "¡Terminado!"</code></pre>
+</div>
+<p>O bien;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>$ sudo dd if=ubuntu-15.04-desktop-amd64.iso of=/dev/sdc bs=4M status=progress conv=fdatasync &amp;&amp; zenity --info --text="¡Grabación finalizada!"</code></pre>
+</div>
+<p>Fuente:https://www.atareao.es/como/creando-un-usb-de-arranque-desde-el-terminal-en-ubuntu/</p>
+<p>5.- OPCIONES DE ARRANQUE DE UN EQUIPO</p>
+
+<p>OPCIONES de la herramienta DD</p>
+<p>ibs: Lee N bytes del archivo de origen</p>
+<p>obs: Escribe N bytes en el archivo destino</p>
+<p>bs: Se usa para indicar un mismo tamaño para ibs y obs. Es la ‘velocidad’ de lectura/escritura. Si bs=4k se leerá/escribirá en bloques de 4Kb. A mas velocidad menos seguro será el tratamiento de la información.</p>
+<p>count: Es el tamaño a copiar. Para el ejemplo de la memoria swap. Se creará una partición de 1GB</p>
+<p>skip: Se salta N bloques del archivo origen antes realizar la operación de copiado. El tamaño es dado por bs o ibs</p>
+<p>seek: Se salta N bloques del archivo destino antes realizar la operación de copiado. El tamaño del bloque es indicado por bs o obs.</p>
+<p>conv=modo,[modo2,…]: Realiza conversiones o acciones. Se pueden pasar varios parámetros separados por ‘,’. Por ejemplo conv=noerror,sync</p>
+<p>MODOS (CONV)</p>
+<p>noerror: No se detiene el proceso ante errores de lectura en el origen</p>
+<p>sync: Rellena cada bloque leído con ceros</p>
+<p>ascii: Convierte los caracteres a ascii</p>
+<p>lcase: Convierte caracteres a minúsculas</p>
+<p>ucase: Convierte caracteres a mayúsculas</p>
+<p>notrunc: No se trunca el archivo utilizado como destino</p>
+<p>fdatasync: Introducimos este parámetro para obtener unos resultados de escritura que se aproximen a lo que es la velocidad de escritura real del disco. Si no usamos este parámetro el resultado obtenido solo contemplara el tiempo obtenido en volcar la totalidad de información a la cache de disco. Si usamos este comando el resultado obtenido tendrá en cuenta además el tiempo necesario en volcar la información de la cache de disco a la superficie del disco duro. Por lo tanto introduciendo este comando obtendremos una velocidad de escritura que se asemejará al rendimiento real de nuestro disco duro.</p>
+<p>Fuente:https://nebul4ck.wordpress.com//17/el-comando-dd-linux/</p>
+<p>Caso práctico</p>
+<p>1.2 Herramienta del SO</p>
+<p>Caso práctico</p>
+<p>Actividad</p>
+<p>Entra en la web de Linux Live USB Creator http://www.linuxliveusb.com/, descárgate la herramienta y pruébala. Escribe una lista de las distribuciones Linux que soporta.</p>
+<p>Actividad</p>
+<p>Entra en la web http://liveusb.info/dotclear/ y descárgate la versión de MultySystem de Linux para crear Live USB. Sigue los pasos indicados en la web para realizar la instalación. Crea un Live USB con varias distribuciones Linux.</p>
+<p>Busca en http://www.supergrubdisk.org el software Rescatux y anota en tu cuaderno sus principales ventajas en la recuperación de sistemas.</p>
+<p>6.-UTILIDADES PARA LA CREACIÓN DE IMÁGENES</p>
+<p>Imagen de disco es una copia exacta de todo el contenido del disco contenida en es uno o varios archivos.</p>
+<p>Una imagen ISO es una copia idéntica de un CD o un DVD que se almacena en un archivo (comprimido)</p>
+<p>Formatos</p>
+<p>7.- HERRAMIENTAS PARA LA CLONACIÓN</p>
+<p>Clonación→ En informática, llevar a cabo una clonación de un disco duro significa efectuar una copia exacta de todos los datos que contiene.</p>
+<p>Herramientas</p>
+<p>Clonezilla</p>
+<p>Norton Ghost de Symantec</p>
+<p>Acronis True Image.</p>
+<p>7.- HERRAMIENTAS PARA LA CLONACIÓN</p>
+<p>Clonezilla→ herramienta Open Source</p>
+<p>dos tipos de Clonezilla</p>
+<p>Clonezilla Live: adecuado para realizar copias de seguridad y de restauración de una máquina.</p>
+<p>Clonezilla SE (Server Edition): se utiliza para el despliegue masivo</p>
+<p>Para clonar varios ordenadores al mismo tiempo (40 o más).</p>
+<p>Características</p>
+<p>Es software libre (GPL).</p>
+<p>Sistema de archivos compatibles: de cualquier SO.</p>
+<p>Casi todos los pasos se pueden hacer a través de comandos y opciones</p>
+<p>Clonación masivamente de ordenadores (Clonezilla SE)</p>
+<p>El archivo de imagen puede ser un disco local, un servidor ssh, samba o NFS</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/ut0405.html">⬅️ 4.5 U6 - P1 P2 P3 - CONTINGUTS</a>
+<a class="page-nav-btn" href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

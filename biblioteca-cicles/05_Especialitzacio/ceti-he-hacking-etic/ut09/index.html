@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT9 — Fase de análisis — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🕵️ Hacking Ètic i Auditoria de Seguretat — CE Ciberseguretat (CETI)</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Hacking Ètic i Auditoria de Seguretat</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Chat general</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Programación del módulo</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Contenidos y criterios de evaluación</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Presentación del módulo</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Accesibilidad</a></li>
+<li><a href="../ut00/ut0006.html">0.6 guia para aprender a programar</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Primera evaluación</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Segunda evaluación</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Tercera evaluación</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Elementos esenciales del HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 HE 1</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Prácticas tema 1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 tema1</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 tema2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Auditories</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Material adicional</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Material adicional 2</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Footprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Footprinting con Google</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Footprinting con Bing</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Footprinting con Shodan</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Footprint</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Fingerprint</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Introducción al Fingerprinting</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Nmap</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Fingerprinting</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Presentación fingerprint</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Enumeración con nmap</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Scripts amb nmap</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Auditorias de seguridad con Wireshark</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Wireshark</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Auditorias de seguridad utilizando hping</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Auditorias utilizando hping3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Contratos pretesting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Creación de contratos</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT9 — Fase de análisis</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 analisi</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Nessus</a></li>
+<li><a href="../ut09/ut0903.html">9.3 practiques</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Ejercicios Fingerprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Ingenieria social</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Ingenieria social</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Introducción</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Pentesting web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Pentesting web</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Robots de Búsquedas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Continguts i Recursos</a></li>
+<li><a href="../ut14/ut14actividades.html">✍️ Activitats pràctiques UT14</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Riesgos laborales en el entorno de HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut15actividades.html">✍️ Activitats pràctiques UT15</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Explotación</a></li>
+<li><a href="../ut16/ut1602.html">16.2 Metasploit</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — -------</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut17actividades.html">✍️ Activitats pràctiques UT17</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE Ciberseguretat (CETI) · UT9 Completa</span>
+<h1>📘 UT9 — Fase de análisis (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0901"><strong>9.1 analisi</strong></a> (o <a href="./ut0901.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0902"><strong>9.2 Nessus</strong></a> (o <a href="./ut0902.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0903"><strong>9.3 practiques</strong></a> (o <a href="./ut0903.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut09actividades"><strong>✍️ Activitats pràctiques UT9</strong></a> (o <a href="./ut09actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0901">9.1 analisi</h2>
+<p>Hacking Ético 23AI32CF016 Raúl Fuentes Ferrer</p>
+<p>ÍNDICE Auditoría de Seguridad: Vulnerabilidades y Exploiting</p>
+<ul>
+<li>Footprint</li>
+<li>Fingerprint</li>
+<li>Análisis y explotación de vulnerabilidades</li>
+<li>Informe</li>
+</ul>
+<p>HACKING ÉTICO Disclaimer: La información contenida en esta presentación sólo es para fines educativos por lo cual no me hago responsable por el uso indebido de ella.</p>
+<p>Análisis de vulnerabilidades En la Fase de Fingerprint se ha visto como averiguar información sobre los objetivos, como el sistema operativo, aplicaciones utilizadas y sus versiones, etc. Ahora llega el momento de buscar si todos ellos padecen alguna vulnerabilidad.</p>
+<p>Para aprovecharnos de las vulnerabilidades recurriremos posteriormente a los exploits. AUDITORÍA DE SEGURIDAD</p>
+<p>Exploit Citando a la Wikipedia: “Un exploit puede definirse como un fragmento de software, fragmento de datos o secuencia de comandos y/o acciones, utilizada con el fin de aprovechar una vulnerabilidad de seguridad de un sistema de información para conseguir un comportamiento no deseado del mismo.” AUDITORÍA DE SEGURIDAD</p>
+<p>Escáneres de vulnerabilidades a nivel de sistemas Análisis de servicios y vulnerabilidades AUDITORÍA DE SEGURIDAD Nessus https://www.tenable.com/products/nessus-vulnerability-scanner https://es-la.tenable.com/tenable-for-education/nessus-essentials MBSA – Microsoft Baseline Security Analyzer https://www.microsoft.com/en-us/download/details.aspx?id=55319 CLARA - Herramienta para analizar las características de seguridad técnicas https://www.ccn-cert.cni.es/soluciones-seguridad/clara.html SUMo (Software Update Monitor) http://www.kcsoftwares.com/?sumo</p>
+<p>Escáneres de vulnerabilidades web Es posible que durante la auditoría interna localicemos algún servidor web En casos como este, aunque nuestro objetivo no sea auditar el sitio web del organismo, puede ser interesante explotar una vulnerabilidad de una intranet, de un panel de control o incluso de un repositorio web, para hacernos con el control de una máquina de la red y seguir escalando privilegios</p>
+<p>Vega Acunetix Wikto/Nikto OpenVAS OWASP Zed Attack Proxy (ZAP) W3af AUDITORÍA DE SEGURIDAD</p>
+<p>Herramientas más utilizadas en Auditoría de Seguridad Web Plataformas de entrenamiento Web Security Dojo: Se trata de una plataforma de entrenamiento con un conjunto bastante completo de aplicaciones con distintos niveles de vulnerabilidades, además de contar con herramientas para intentar encontrar y aprovechar dichas vulnerabilidades. Su contenido es enteramente destinado al pentesting de aplicaciones web.</p>
+<p>Las aplicaciones web vulnerables que se incluyen en esta plataforma son: Damn Vulnerable Web App Gruyere Hacme Casino Insecure Web App W3AF Tests Application OWASP Webgoat AUDITORÍA DE SEGURIDAD http://www.vulnweb.com/ https://securitytrails.com/blog/vulnerable-websites-for-penetration-testing</p>
+<p>Herramientas más utilizadas en Auditoría de Seguridad Web Estudio sobre detección de vulnerabilidades contra Badstore. Aplicación Vulnerabilidades identificadas Vulnerabilidades de Inyección SQL Acunetix AppScan W3af Vega Websecurity Scanner Wikto Webcruiser AUDITORÍA DE SEGURIDAD https://www.vulnhub.com/</p>
+<p>ÍNDICE Auditoría de Seguridad: Vulnerabilidades y Exploiting</p>
+<ul>
+<li>Footprint</li>
+<li>Fingerprint</li>
+<li>Análisis y explotación de vulnerabilidades</li>
+<li>Informe</li>
+</ul>
+<p>HACKING ÉTICO Disclaimer: La información contenida en esta presentación sólo es para fines educativos por lo cual no me hago responsable por el uso indebido de ella.</p>
+<p>Generación de Informes Durante la auditoría (en todas sus fases) es interesante utilizar una herramienta como Dradis Framework, para recopilar en un único lugar toda la información recuperada durante el proceso. Una vez finalizada la auditoría queda pendiente la labor más importante, el informe.</p>
+<p>Un buen informe es aquel que muestra al cliente de manera clara y concisa los hallazgos localizados. Se realizarán dos tipos de informes: Ejecutivo y Técnico AUDITORÍA DE SEGURIDAD https://dradisframework.com/ce/</p>
+<p>El Informe Ejecutivo El informe ejecutivo será leído por Directivos principalmente. Es decir, personal sin grandes conocimientos técnicos, cuyo interés será ver de una manera visual y rápida el estado de la seguridad de su organización. Este informe se centrará en mostrar mediante gráficas de barra y de queso, las vulnerabilidades localizadas durante la auditoría AUDITORÍA DE SEGURIDAD https://github.com/juliocesarfort/public-pentesting-reports https://www.offensive-security.com/reports/sample-penetration-testing-report.pdf</p>
+<p>El Informe Técnico El informe Técnico va dirigido a Jefes de Proyectos, Analistas y demás personal técnico cuya responsabilidad será solventar las vulnerabilidades localizadas durante la auditoría. Por ello, este informe debe detallar las vulnerabilidades encontradas.</p>
+<p>Además, deberá contener recomendaciones para solventar las vulnerabilidades localizadas. AUDITORÍA DE SEGURIDAD http://cybersecology.com/sampleReports/ScanReport_0142_hackazon.pdf</p>
+<p>Ejemplo de informe 1. Control de cambios 2. Índice del informe 3. Aspectos clave a) Nombre cliente b) Objetivos de la auditoría c) Tipo de auditoría d) Alcance de la auditoría (rango de IPs, etc.) e) Direcciones IP desde las que se realizará la auditoría f) Credenciales utilizadas (Caja blanca/gris) 4.</p>
+<p>Introducción 5. Pruebas realizada</p>
+<h3>6. Resumen ejecutivo de las vulnerabilidades localizadas</h3>
+<p>a) Solamente indicar con gráficas el estado a nivel global b) % de pruebas que han resultado fallidas c) % de vulnerabilidades identificadas por categoría d) Tabla con listado de vulnerabilidades graves y pequeño texto explicando las consecuencias que pueden acarrear</p>
+<h3>7. Informe técnico</h3>
+<p>a) Metodología utilizada b) Tabla con el listado de pruebas realizadas, marcando si han sido fallidas c) Apartados más completos explicando cada prueba, su éxito, la vulnerabilidad localizada, consejos para solventarla y evidencias. AUDITORÍA DE SEGURIDAD</p>
+<hr/>
+<h2 id="ut0902">9.2 Nessus</h2>
+<p>Tema 6.1. Auditoria de seguretat: Anàlisi de vulnerabilitats mitjançant Nessus. Hacking ètic (HE) 1r CIBER</p>
+<p>Hacking ètic 1r CIBER La informació continguda en aquesta presentació només és per a fins educatius. EL PROFESSORAT DEL CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ I EL CENTRE EDUCATIU NO ES FAN RESPONSABLES DE L'ÚS INDEGUT D'AQUESTA INFORMACIÓ.</p>
+<p>ÍNDEX Hacking ètic 1r CIBER ➤ AUDITORIA DE SEGURETAT. ○ INTRODUCCIÓ. ○ FASES DEL PROCÉS. ➤ NESSUS. ○ INTRODUCCIÓ. ○ DEFINICIÓ. ○ LLICÈNCIES. ○ DESCÀRREGA I INSTAL·LACIÓ. ○ FUNCIONAMENT. ■ INICIAR UN ESCANEIG. ■ PLANTILLES D’ESCANEIG. ■ POLÍTICA D’ESCANEIG: SETTINGS, CREDENTIALS I PLUGINS.</p>
+<p>○ UTILITZACIÓ. ■ ESCANEIG DE XARXA BÀSIC. ■ DESCOBRIR HOSTS. ■ ESCANEIG DE MALWARE. ○ API DISABLED. ○ INFORMACIÓ ADDICIONAL.</p>
+<p>● Una auditoria es una revisió pràctica que es realitza sobre els recursos informàtics que disposa una entitat amb la finalitat d'emetre un informe o dictamen sobre la situació en què es desenvolupen i s'utilitzen. ● Un procés d'auditoria recorre certes pràctiques enfocades a les diferents proves que s'hauran de realitzar per satisfer la demanda de client, utilitzant el Hacking Ètic en algunes de les fases d’aquest procés.</p>
+<p>Hacking ètic 1r CIBER AUDITORIA DE SEGURETAT INTRODUCCIÓ</p>
+<h3>1. Footprint: Recollida d'informació pública o “information gathering” (menys</h3>
+<p>important en un procés d'auditoria interna).</p>
+<ul>
+<li>Fingerprint: Anàlisi de serveis localitzats en la fase de Footprint.</li>
+</ul>
+<h3>3. Anàlisi de Vulnerabilitats sobre els serveis operatius que s’han analitzat en la</h3>
+<p>fase de Fingerprint.</p>
+<ul>
+<li>Explotació de Vulnerabilitats localitzades en la fase d'Anàlisi de Vulnerabilitats.</li>
+</ul>
+<h3>5. Generació d'informes amb les vulnerabilitats localitzades i les possibles</h3>
+<p>solucions. Hacking ètic 1r CIBER AUDITORIA DE SEGURETAT FASES DEL PROCÉS</p>
+<p>Hacking ètic 1r CIBER NESSUS INTRODUCCIÓ ● Un administrador de xarxes ha de ser conscient dels perills als que s'exposen constantment les xarxes mantingudes. ● Per això, cal analitzar constantment el trànsit de la xarxa, amb la finalitat d’identificar vulnerabilitats que puguen existir dins de l'organització.</p>
+<p>● És necessari comptar amb polítiques de seguretat, que ajuden a millorar la seguretat en qualsevol ambient.</p>
+<p>Hacking ètic 1r CIBER NESSUS INTRODUCCIÓ ● Fiquem-nos en la situació de que un grup de hackers, una empresa d’auditories de seguretat o un investigador descobreix una bretxa de seguretat. ● El descobriment pot ser accidental o degut a una investigació prèvia, és a dir, la combinació de footprinting + fingerprinting.</p>
+<p>● Nessus és una ferramenta dissenyada per ajudar a identificar i resoldre aquests problemes coneguts, abans que un cracker aprofite i explote la vulnerabilitat.</p>
+<p>Hacking ètic 1r CIBER NESSUS DEFINICIÓ ● Nessus és un escàner de vulnerabilitats que permet ser gestionat des d’un portal web, que realitza escanejos a diversos sistemes operatius i genera una alerta si descobreix qualsevol tipus de vulnerabilitat.</p>
+<p>● Nessus consisteix en un dimoni, “nessusd”, que realitza l'escaneig al sistema objectiu, i “nessus”, el client (basat en consola o gràfic) que mostra l'avanç i informa sobre l'estat dels escanejats. ● Està desenvolupada i mantinguda per Tenable.</p>
+<p>Hacking ètic 1r CIBER NESSUS DEFINICIÓ ● En operació normal, Nessus comença escanejant els ports amb Nmap, o amb el seu propi escanejador de ports, per buscar ports oberts i després intentar diversos exploits per atacar-ho. ● Té un motor per escanejar els objectius que es basa en plugins, xicotets programes escrits en un llenguatge de scripting anomenat Nessus Attack Scripting Language (NASL) que indiquen al motor que és el que ha d'avaluar en l'objectiu, per tal de determinar les falles.</p>
+<p>● Actualment, Nessus té Més de 67 mil CVE, més de 166.000 Plugins i més de 100 nous plugins s’introdueixen setmanalment.</p>
+<p>Hacking ètic 1r CIBER NESSUS DEFINICIÓ ● Els resultats de l'escaneig poden ser exportats com a informes en diversos formats, com ara text pla, XML o HTML. ● Els resultats també poden ser guardats en una base de coneixement per a referència en futurs escanejats de vulnerabilitats.</p>
+<p>● Algunes de les proves de vulnerabilitats de Nessus poden causar que els serveis o sistemes operatius es corrompen i caiguen. ● L'usuari pot evitar-ho desactivant l’opció “unsafe test” abans d'escanejar.</p>
+<p>Hacking ètic 1r CIBER NESSUS LLICÈNCIES ● La ferramenta Nessus té 3 tipus diferents de llicències: ○ Nessus Essentials: Una versió que pot realitzar escanejats fins a 16 adreces IP, pensada per a educadors i estudiants de ciberseguretat.</p>
+<p>○ Nessus Professional: Una versió comercial que permet realitzar escanejats a host il·limitats, enfocada a consultors i professionals de seguretat. ○ Tenable.io: Aquesta versió està més enfocada a la gestió de vulnerabilitats a organitzacions empresarials, xicotetes i mitjanes.</p>
+<p>Hacking ètic 1r CIBER NESSUS DESCÀRREGA I INSTAL·LACIÓ ● Per descarregar la ferramenta Nessus, heu d’entrar a l’enllaç següent: Descarrega Nessus Essentials | Tenable® ● Heu d’introduir el vostre nom, cognom i correu electrònic. ● Després, heu de descarregar la següent versió (o superior)</p>
+<p>● Recordeu verificar el correu, ja que ahí vos enviarà el codi d'activació requerit per poder activar el producte.</p>
+<p>Hacking ètic 1r CIBER NESSUS DESCÀRREGA I INSTAL·LACIÓ ● Una vegada completada la descàrrega, heu d’executar les següents instruccions al vostre terminal de Kali Linux: ● Quan es complete la instal·lació, vos apareixerà la següent informació</p>
+<p>Hacking ètic 1r CIBER NESSUS DESCÀRREGA I INSTAL·LACIÓ ● La primera vegada que s’executa la ferramenta Nessus, s’ha de seguir una sèrie de passos per poder configurar-la correctament</p>
+<ul>
+<li>Accedir a l’enllaç https://kali:8834/, utilitzant el navegador Mozilla Firefox.</li>
+<li>Seleccionar el producte Nessus Essentials.</li>
+<li>Introduir el codi d’activació que tindreu en el vostre correu electrònic.</li>
+<li>Crear-vos el vostre propi compte.</li>
+<li>Deixar que es descarreguen els plugins (tingueu paciència).</li>
+</ul>
+<p>Hacking ètic 1r CIBER NESSUS DESCÀRREGA I INSTAL·LACIÓ ● Quan es completen tots els passos, ens apareixerà automàticament la finestra següent, que és la interfície gràfica de Nessus</p>
+<p>Hacking ètic 1r CIBER NESSUS DESCÀRREGA I INSTAL·LACIÓ ● Una vegada s’ha instal·lat Nessus, per a executar aquesta ferramenta, hem de seguir 2 passos</p>
+<h3>1. Des de terminal, escriure la instrucció següent i introduir la contrasenya</h3>
+<p>/bin/systemctl start nessusd.service</p>
+<ul>
+<li>Accedir a l’enllaç https://kali:8834/.</li>
+</ul>
+<p>NESSUS FUNCIONAMENT: INICIAR UN ESCANEIG ● A la barra del menú esquerre superior, fem click sobre l’apartat “My Scans”. ● Cal seleccionar i fer click sobre el botó “Create a new scan”, amb l'objectiu d'afegir un nou escaneig amb Nessus.</p>
+<p>Hacking ètic 1r CIBER NESSUS FUNCIONAMENT: PLANTILLES D’ESCANEIG ● A continuació, es presenten una sèrie de plantilles, gratuïtes i de pagament. ● Cada plantilla té una finalitat i executa una sèrie d’instruccions diferents.</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ● Es pot inclús programar l'escaneig en una data concreta, però potser el més important és la política d'escaneig (opció “Policies”). ● En cas que l'auditor vullga configurar la seva pròpia política d'escaneig i no utilitzar una de les que venen predefinides, pot fer click a “Policies”.</p>
+<p>● En accedir a aquesta vista, l'auditor trobarà les polítiques creades al sistema. ● A la part dreta de la pàgina hi ha el botó “New Policy”, el qual haurà de ser activat si es vol afegir una nova política d'escaneig. ● Cal recordar que allò que es busca amb la creació d'una nova política és poder triar el tipus de proves o plugins es vol utilitzar a l’escaneig.</p>
+<p>Hacking ètic 1r CIBER</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ● La primera vegada que entrem a aquest apartat, no visualitzarem cap política, perquè encara no hi ha cap definida. ● Per a crear una política, s’ha de fer click a “New Policy” o “Create a new policy”. Hacking ètic 1r CIBER</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ● Una vegada iniciem una nova política i un tipus d’escaneig, ens apareixerà un formulari per a introduir diferents configuracions. ● El formulari per crear una política nova presenta 3 elements importants: ○ Settings. ○ Credentials.</p>
+<p>○ Plugins. Hacking ètic 1r CIBER</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ⇨SETTINGS ● A Settings, es troben diferents opcions generals de configuració de la política. ● Podem trobar opcions relatives als mètodes per a realitzar ping a la màquina remota, configurar la precisió, utilitzar força bruta, escanejar aplicacions web, escanejar malware, opcions per al report final, etc.</p>
+<p>Hacking ètic 1r CIBER</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ⇨CREDENTIALS ● A Credentials, s'indica la possibilitat d'utilitzar les credencials conegudes en el procés d'escaneig. La seua aplicació ideal es una auditoria de caixa blanca, on l'auditor en una podria tenir accés a un servei o un sistema i comprovar-ne la configuració o polítiques aplicades.</p>
+<p>Hacking ètic 1r CIBER</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ⇨PLUGINS ● A la pestanya de Plugins es poden seleccionar quins, concretament, es volen tenir disponibles a la política. ● D'aquesta manera, quan l'auditor cree un nou escaneig i seleccione la nova política d'escaneig, els connectors seleccionats ací seran els llançats en el procés.</p>
+<p>● El més adequat seria disposar de polítiques d'escaneig diferents, en funció de l'àmbit del treball que s'està realitzant. Hacking ètic 1r CIBER</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ⇨PLUGINS Hacking ètic 1r CIBER</p>
+<p>NESSUS FUNCIONAMENT: POLÍTICA D’ESCANEIG ● Una vegada s’ha configurat la política d’escaneig, s’emmagatzemarà en la pestanya de Policies, on podrem importar-la, eliminar-la, copiar-la… ● Per poder executar la política creada, hem de crear un nou escaneig i anar a la pestanya de User Defined, dins de les plantilles d’escaneig. Allí el trobarem.</p>
+<p>Hacking ètic 1r CIBER</p>
+<p>Hacking ètic 1r CIBER NESSUS UTILITZACIÓ ● Ara, es van a indicar alguns exemples d'utilització de la ferramenta Nessus: ○ Escaneig de xarxa bàsic. ○ Descobrir hosts. ○ Escaneig de malware.</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● Hem de fer click sobre el botó “Create a new scan”, amb l'objectiu d'iniciar l’escaneig. Si ja tenim alguns escanejos realitzats, fem click al botó “New Scan”.</p>
+<p>Hacking ètic 1r CIBER NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● De les diferents plantilles predefinides que existeixen a Nessus, anem a seleccionar la plantilla d’escaneig de xarxa bàsic</p>
+<p>Hacking ètic 1r CIBER NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● Anem a realitzar un escaneig bàsic a l’objectiu amb IP 172.20.10.7</p>
+<p>Hacking ètic 1r CIBER NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● Després de configurar l’escaneig, ens apareixerà en l’apartat “My Scans”: ● Si fem click al botó de Play, començarà l’escaneig sobre l’objectiu especificat. ● El podem pausar o parar als botons remarcats en roig</p>
+<p>Hacking ètic 1r CIBER NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● Deixem que Nessus execute el seu escaneig de xarxa bàsic. Una vegada ha finalitzat, ens torna el següent anàlisi sobre l’objectiu</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● A més, també ens indica informació sobre les vulnerabilitats trobades</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● Si fem click sobre una vulnerabilitat, ens mostra informació més detallada</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● Una volta realitzat l’escaneig, podem generar un report en HTML, PDF o CSV.</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE XARXA BÀSIC ● Per exemple, podem generar un informe de les vulnerabilitats del host en HTML</p>
+<p>NESSUS UTILITZACIÓ: DESCOBRIR HOSTS ● Amb la utilitat de descobrir hosts, podem veure què hosts i ports obert podem localitzar a la nostra xarxa: Hacking ètic 1r CIBER</p>
+<p>NESSUS UTILITZACIÓ: DESCOBRIR HOSTS ● Es va a completar un escaneig de ports a l’objectiu amb la IP 172.20.10.7: ● També podem utilitzar un rang d’IPs o un domini com a objectius. Hacking ètic 1r CIBER</p>
+<p>NESSUS UTILITZACIÓ: DESCOBRIR HOSTS ● Una vegada completat l’anàlisi, ens mostra un llistat dels ports oberts que ha trobat a la màquina objectiu: Hacking ètic 1r CIBER</p>
+<p>NESSUS UTILITZACIÓ: DESCOBRIR HOSTS ● També es poden veure les vulnerabilitats trobades que estan relacionades amb aquesta utilitat. Hacking ètic 1r CIBER</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE MALWARE ● Amb la utilitat d’escaneig de malware, es pot realitzar un anàlisi, per tal de trobar malware que haja pogut infectar a la màquina: Hacking ètic 1r CIBER</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE MALWARE Hacking ètic 1r CIBER ● Anem a realitzar un escaneig de malware a l’objectiu amb IP 172.20.10.7</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE MALWARE Hacking ètic 1r CIBER ● En aquest tipus d’escaneig, s’han de configurar també les credencials. ● Anem a realitzar un escaneig de la màquina de Windows 10 amb IP 172.20.10.7, per tant, es selecciona l’apartat Windows i s’introdueixen obligatòriament les dades d’usuari i contrasenya</p>
+<p>NESSUS UTILITZACIÓ: ESCANEIG DE MALWARE Hacking ètic 1r CIBER ● Ara ja es pot dur a terme l’anàlisi, que ens mostra 3 vulnerabilitats informatives. ● Aparentment, no s’ha detectat malware a la màquina objectiu.</p>
+<p>NESSUS API DISABLED Hacking ètic 1r CIBER ● La finestra emergent de la captura següent, només pretén alertar els clients que algunes funcionalitats de l'API de Nessus han quedat obsoletes. ● Els usuaris haurien de poder navegar més enllà de l'alerta sense problemes.</p>
+<p>● Si l'alerta restringeix l'accés de l'usuari a la interfície d'usuari de Nessus, heu d’eliminar la memòria catxé del navegador i tancar el propi navegador. ● Una vegada es torna a obrir el navegador, s’ha resolt el problema.</p>
+<p>NESSUS INFORMACIÓ ADDICIONAL Hacking ètic 1r CIBER ● Si necessiteu més informació relacionada amb els procediments d’anàlisi de vulnerabilitats utilitzats a Nessus i la seua utilitat, així com exemples, podeu visitar l’apartat de “Community”, de la pàgina web oficial de Tenable, amb l’enllaç que vos indique a continuació</p>
+<p>Welcome to the Tenable Community</p>
+<hr/>
+<h2 id="ut0903">9.3 practiques</h2>
+<p>23AI32CF016 - Hacking Ético Prácticas Análisis de Vulnerabilidades</p>
+<p>Prácticas Análisis de Vulnerabilidades</p>
+<p>Realizar los ejercicios siguientes. Podéis utilizar vuestra propia web (siempre y cuándo tengáis permiso firmado) para realizar los ejercicios o utilizar los que os propongo. Debéis de subir los pasos realizados acompañándolos con pantallazos de los resultados. Ejercicio 1 Realizar un escaneo con MBSA (Microsoft Baseline Security Analyzer) a un equipo Windows (8 o anterior) de tu red y analiza las actualizaciones y fallos de seguridad que dispone.</p>
+<p>https://docs.microsoft.com/es-es/windows/security/threat-protection/mbsa- removal-and-guidance Como vemos MSBA ya está retirado de la página oficial de Microsoft por lo que ahora lo que funciona sería una serie de scripts relacionados. Realizar las indicaciones para ejecutar el código ya sea en vbs o ps1 y lanzar el script. Además del script, es posible que si no tenéis instalado previamente WSUS (Windows Server Update Services) lo tengáis que descargar de http://download.windowsupdate.com/microsoftupdate/v6/wsusscan/wsusscn2.cab Podéis utilizar como alternativa también CLARA, herramienta para analizar las características de seguridad técnicas definidas a través del Real Decreto 3/2010 por el que se regula el Esquema Nacional de Seguridad en el ámbito de la Administración</p>
+<p>Electrónica en entornos Microsoft Windows y Linux https://www.ccn- cert.cni.es/soluciones-seguridad/clara.html Mostrar el resultado obtenido. Ejercicio 2 Realizar un análisis de vulnerabilidades con Nessus de la url testphp.vulnweb.com y obtener un informe detallado de las vulnerabilidades encontradas. ¿Hay alguna vulnerabilidad crítica?</p>
+<p>Para ello descargar Nessus desde la web oficial, registrarse y obtener un código temporal de 7 días o la versión de Educación. Acceder a la URL desde el navegador, introducir las credenciales y crear un nuevo escaneo. Indicarle la url a escanear y un escaneo de tipo “Web Application Tests”. Al cabo de un tiempo se obtendrán las vulnerabilidades obtenidas. Reportar el informe creado.</p>
+<p>Ejercicio 3 Realizar la búsqueda de vulnerabilidades web con OWASP ZAP a la web scanme.nmap.org y almacenar el reporte de las vulnerabilidades encontradas. Desde Kali Linux accedemos a OWASP ZAP. Antes de ello, recordar configurar el proxy en el navegador para que todo el tráfico del navegador pase por el proxy. Una vez realizado, desde ZAP introducimos la URL a atacar y comenzamos el escaneo. Al cabo de un tiempo irán apareciendo las posibles vulnerabilidades que se encuentren. Para general el informe en HTML seleccionar la opción Reporte – Generar informe HTML.</p>
+<hr/>
+<h2 id="ut09actividades">✍️ Activitats pràctiques UT9</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.1 — Realiza la práctica 2 sobre Nessus</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut08/ut08actividades.html">⬅️ ✍️ Activitats pràctiques UT8</a>
+<a class="page-nav-btn" href="../ut09/ut0901.html">9.1 analisi ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

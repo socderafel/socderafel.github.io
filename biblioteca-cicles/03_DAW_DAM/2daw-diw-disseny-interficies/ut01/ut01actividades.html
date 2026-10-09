@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT1 — Disseny d'Interfícies Web | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🎨 Disseny d'Interfícies Web — 2n DAW · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Disseny d'Interfícies Web</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació del curs</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 DIAPOSITIVAS SECCIÓN 1: ELEMENTOS DEL DISEÑO</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Enlaces interesantes UD1 Sección 1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 !! ACTUALIZACIÓN!! DIAPOSITIVAS SECCIÓN 1: ELEME</a></li>
+<li><a href="../ut01/ut0104.html">1.4 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB</a></li>
+<li><a href="../ut01/ut0105.html">1.5 DIAPOSITIVAS UD 1 SECCIÓN 3</a></li>
+<li><a href="../ut01/ut0106.html">1.6 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4</a></li>
+<li><a class="active" href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — USO DE ESTILOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A</a></li>
+<li><a href="../ut02/ut0202.html">2.2 DIW: SOLUCIONES EJERCICIOS PLANTEADOS EN LAS DIA</a></li>
+<li><a href="../ut02/ut0203.html">2.3 TEORÍA CSS PROPIEDAD DISPLAY</a></li>
+<li><a href="../ut02/ut0204.html">2.4 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE</a></li>
+<li><a href="../ut02/ut0205.html">2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO</a></li>
+<li><a href="../ut02/ut0206.html">2.6 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — EXAMEN 1ª AVALUACIÓ UD1 UD2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — ACCESIBILIDAD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1</a></li>
+<li><a href="../ut04/ut0402.html">4.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — BOOTSTRAP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 DIW INTRODUCCIÓN A BOOTSTRAP5</a></li>
+<li><a href="../ut05/ut0502.html">5.2 PROPIEDAD FLEX DE BOOTSTRAP5</a></li>
+<li><a href="../ut05/ut0503.html">5.3 FICHERO INDEX_EJ6</a></li>
+<li><a href="../ut05/ut0504.html">5.4 FICHERO BASE DISEÑO TARJETAS BOOTSTRAP5</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — IMPLANTACIÓN DE CONTENIDO MULTIMEDIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 SECCIÓN 1: IMÁGENES Y LA LEY DE PROPIEDAD INTELE</a></li>
+<li><a href="../ut06/ut0602.html">6.2 DIW: Conceptos básicos de fotografía digital</a></li>
+<li><a href="../ut06/ut0603.html">6.3 SECCIÓN 2: SONIDO Y VÍDEO</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — USABILIDAD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n DAW · Grau Superior · UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS</span>
+<h1>✍️ Activitats pràctiques UT1</h1>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.1 — Test Unidad 1 Sección 1</p><p dir="ltr" style="text-align: left;">Aquí tenéis un breve test a resolver sobre las transparencias de la sección 1 , unidad 1.</p>
+<p>1. Gestalt … (marca la/s respuesta/s correctas)</p>
+<p>es una corriente psicológica que solo se utiliza en marqueting.</p>
+<p>es un conjunto de principios que definen cómo las personas perciben y organizan</p>
+<p>elementos visuales.</p>
+<p>consta de tres principios: proximidad, simetría y cierre.</p>
+<p>nos sirven para definer patrones de diseño.</p>
+<p>2. El principio de cierre de Gestalt ... (marca la/s respuesta/s correctas)</p>
+<p>consiste en evitar los espacios en blanco en el diseño para que todo esté contenido</p>
+<p>dentro de un fondo.</p>
+<p>dice que las personas tienden a percibir figuras completas o cerradas a partir de</p>
+<p>contornos</p>
+<p>es un principio que no se utiliza en el diseño web.</p>
+<p>dice que la mente de las personas tiende a percibir los elementos continuos</p>
+<p>aunque estén interrumpidos entre si.</p>
+<p>3. En cual de las dos figuras el principio de simplicidad está mejor aplicado …</p>
+<p>Figura A</p>
+<p>Figura B</p>
+<p>Figura A</p>
+<p>Figura B</p>
+<p>4. Menciona al menos tres esquemas de colores que se pueden utilizar en el diseño web.</p>
+<p>5. ¿Qué esquema de colores se ha utilizado en la siguiente web?</p>
+<p>Diseño de Interfaces Web</p>
+<p>Bloque Tema ELEMENTOS DEL DISEÑO</p>
+<p>Test</p>
+<p>6. ¿Qué es un esquema de color triádico?</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.2 — ACTIVIDAD 1: TRABAJANDO LOS PRINCIPIOS DE GESTALT</p><h4>Título de la Actividad</h4>
+<p>Actividad 1: Primeros pasos básicos en Diseño de Interfaces Web</p>
+<h4>Objetivos</h4>
+<p>Identificar de manera correcta los elementos básicos del diseño</p>
+<h4>Temporalización</h4>
+<p>La duración de esta actividad está prevista en 2 horas</p>
+<h4>Proceso de desarrollo</h4>
+<p>El alumno deberá repasar los conceptos prácticos expuestos en los recursos educativos (diapositivas, vídeos y PDF’s). En este bloque se adjunta gran cantidad de material complementario estructurado en enlaces interesantes y otros recursos complementarios, además de los vistos en la sesión.</p>
+<p>Ejercicio 1. Realizar el análisis de 2 páginas Web elige entre estas 4</p>
+<p>https://www.jeanfrancoisbury.com/</p>
+<p>https://www.izzywheels.com/</p>
+<p>https://www.equinostrum.com/</p>
+<p>https://www.calabriaoro.es/</p>
+<p>y determinar si siguen las reglas de diseño planteadas por Gestalt (proximidad, semejanza, simetría, continuidad, cierre, figura-fondo, simplicidad-equilibrio) y en el caso de que estén presentes justificarlo y poner un ejemplo usando la herramienta de Windows “recortes” o hacéis una captura de pantalla. Así podré comprobar a que principio os referís.</p>
+<p>.</p>
+<table><thead><tr><th></th><th>Pagina web 1</th><th>Página web2</th></tr></thead><tbody><tr><td>Proximidad</td><td></td><td></td></tr><tr><td>Semejanza</td><td></td><td></td></tr><tr><td>Simetría</td><td></td><td></td></tr><tr><td>Continuidad</td><td></td><td></td></tr><tr><td>Cierre</td><td></td><td></td></tr><tr><td>Figura-fondo</td><td></td><td></td></tr><tr><td>Simplicidad</td><td></td><td></td></tr><tr><td>Proximidad</td><td></td><td></td></tr></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.3 — ACTIVIDAD 2: SEGUIMOS TRABAJANDO GESTALT</p>
+<p>Actividad 1: Primeros pasos básicos en Diseño de Interfaces Web</p>
+
+<p>Identificar de manera correcta los elementos básicos del diseño</p>
+
+<p>La duración de esta actividad está prevista en 2 horas</p>
+
+<p>El alumno deberá repasar los conceptos prácticos expuestos en los recursos educativos (diapositivas, vídeos y PDF’s). En este bloque se adjunta gran cantidad de material complementario estructurado en enlaces interesantes y otros recursos complementarios, además de los vistos en la sesión.</p>
+<p>Ejercicio 1. Realizar el análisis de las 2 páginas Web que no elegiste en la actividad 1</p>
+<p>https://www.jeanfrancoisbury.com/</p>
+<p>https://www.izzywheels.com/</p>
+<p>https://www.equinostrum.com/</p>
+<p>https://www.calabriaoro.es/</p>
+<p>y determinar si siguen las reglas de diseño planteadas por Gestalt (proximidad, semejanza, simetría, continuidad, cierre, figura-fondo, simplicidad-equilibrio) y en el caso de que estén presentes justificarlo y poner un ejemplo usando la herramienta de Windows “recortes” o hacéis una captura de pantalla. Así podré comprobar a que principio os referís.</p>
+<p>.</p>
+<table><thead><tr><th></th><th>Pagina web 1</th><th>Página web2</th></tr></thead><tbody><tr><td>Proximidad</td><td></td><td></td></tr><tr><td>Semejanza</td><td></td><td></td></tr><tr><td>Simetría</td><td></td><td></td></tr><tr><td>Continuidad</td><td></td><td></td></tr><tr><td>Cierre</td><td></td><td></td></tr><tr><td>Figura-fondo</td><td></td><td></td></tr><tr><td>Simplicidad</td><td></td><td></td></tr><tr><td>Proximidad</td><td></td><td></td></tr></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.4 — ACTIVIDAD 3: TRABAJANDO LOS COLORES</p><p>NOMBRE</p>
+<p>Título de la Actividad</p>
+<p>Actividad 3: Primeros pasos básicos en Diseño de Interfaces Web</p>
+<p>Objetivos</p>
+<p>Identificar de manera correcta los elementos básicos del diseño</p>
+<p>Temporalización</p>
+<p>La duración de esta actividad está prevista en 2 horas</p>
+<p>Proceso de desarrollo</p>
+<p>El alumno deberá repasar los conceptos prácticos expuestos en los recursos educativos (tutorial, vídeos y PDF’s).</p>
+<p>Elige dos páginas web para analizar entre estas 4. Son las mismas que las de la actividad anterior</p>
+<p>https://www.jeanfrancoisbury.com/</p>
+<p>https://www.izzywheels.com/</p>
+<p>https://www.equinostrum.com/</p>
+<p>https://www.calabriaoro.es/</p>
+<p>Ejercicio 1. Determinar qué tipos de colores (colores análogos, complementarios, o monocromáticos) que se han utilizado en el diseño de las páginas Web del ejercicio anterior. Además, intenta hacer un estudio sobre el impacto psicológico del uso de dichos colores, intenta plasmar que se quería transmitir con el uso de dichos colores, y si crees conveniente, aconseja un cambio de tonalidades o de gamas cromáticas.</p>
+<p>Ejercicio 2: Crea tu propia “paleta de sensaciones” con la tabla que se indica a continuación. Después, entra en los siguientes enlaces y obviamente, verás que tanto en estas dos páginas como en otras tantas, las sensaciones se repiten, comprueba si es así .</p>
+<p>https://www.lydiacalero.com/psicologia-del-color-en-diseno-web/</p>
+<p>https://www.onion.st/psicologia-del-color-en-el-diseno-web/</p>
+<table><thead><tr><th>UD1: PLANIFICACIÓN DE INTERFACES GRÁFICAS</th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>Colores</th><th>Sensaciones</th></tr></thead><tbody><tr><td>Rojo</td><td></td></tr><tr><td>Azul</td><td></td></tr><tr><td>Amarillo</td><td></td></tr><tr><td>Naranja</td><td></td></tr><tr><td>Verde</td><td></td></tr><tr><td>Negro</td><td></td></tr><tr><td>Blanco</td><td></td></tr><tr><td>Rosa</td><td></td></tr><tr><td>Marrón</td><td></td></tr></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.5 — Actividad 1 Sección 2 (BOCETO DISEÑO WEB A MANO ALZADA)</p><h3>GUIÓN DE ACTIVIDAD</h3>
+<h3>sección2/unidad1</h3>
+
+<p>Actividad 1: Diseña tu primer boceto</p>
+
+<p>Identificar de manera correcta los elementos básicos del diseño</p>
+
+<p>La duración de esta actividad está prevista en 1 horas</p>
+
+<p>El alumno/a deberá repasar los conceptos prácticos expuestos en esta sección número 2 de la unidad 1.</p>
+<p>Ejercicio 1. Realizar un boceto a mano alzada, eligiendo una de estas dos páginas mostradas a continuación</p>
+<p>https://netflix.com/es</p>
+<p>https://es.nba.com</p>
+<p>El alumno/a deberá identificar las diferentes zonas que componen una interfaz web así como los diferentes elementos empleados en cada una de ellas (elementos de interacción, identificación, contenido, navegación).</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.6 — Actividad 2 Sección 2 (BOCETO DISEÑO WEB MEDIANTE WIREFRAME CC )</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.7 — ACTIVIDAD 1 SECCIÓN 3</p><p>Diseño Interfaces Web Actividades UD1</p>
+<p>UD1: PLANIFICACIÓN DE INTERFACES GRÁFICAS SECCION 3: GENERACIÓN DE DOCUMENTOS Y SITIOS WEB</p>
+<p>NOMBRE: Título de la Actividad Actividad 1: En los ejercicios propuestos pondremos en práctica los conceptos asociados a la generación de documentación y guías de estilo.</p>
+<p>Objetivos Trabajar el conceto de guía de estilo. Temporalización La duración de esta actividad está prevista en 4 horas Proceso de desarrollo El alumno deberá repasar los conceptos expuestos en los recursos educativos (tutorial, vídeos, enlaces y PDF’s).</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Ejercicio 1. Acceda a las guías de estilo de los siguientes sitio</p><p>Ejercicio 1. Acceda a las guías de estilo de los siguientes sitios Web y haga una lista de los elementos comunes que reflejan todas ellas.</p></div>
+<ul>
+<li>https://si.ua.es/es/web-institucional-ua/guia-de-estilo.html</li>
+</ul>
+<ul>
+<li>http://www.upv.es/entidades/ASIC/manuales/guia_estilos_upv.</li>
+</ul>
+<p>pdf</p>
+<ul>
+<li>https://es.wikipedia.org/wiki/Wikipedia:Manual_de_estilo</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.8 — DIW: JUGANDO CON LA TIPOGRAFÍA EN EL DISEÑO WEB</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.9 — DIW: ACTIVIDAD 2 SECCIÓN 3</p><p>NOMBRE</p>
+<p>Actividad 2</p>
+<p>En los ejercicios propuestos pondremos en práctica los conceptos asociados a la generación de documentación y guías de estilo.</p>
+<p>Objetivos</p>
+<p>Trabajar el concepto de mapa de navegación</p>
+<p>Temporalización</p>
+<p>La duración de esta actividad está prevista en 15 minutos</p>
+<p>Proceso de desarrollo</p>
+<p>El alumno deberá repasar los conceptos expuestos en los recursos educativos.</p>
+<p>Ejercicio 1. Acceda a la siguiente web</p>
+<p>https://www.mercadona.es/</p>
+<p>e indique qué tipo de estructura de navegación sigue el sitio web: lineal, jerárquica, reticular, lineal jerárquica.</p>
+<p>Nota adicional: puede seguir una estructura que sea una combinación de dos de ellas.</p>
+<table><thead><tr><th>UD1: PLANIFICACIÓN DE INTERFACES GRÁFICAS
+SECCION 3: GENERACIÓN DE DOCUMENTOS Y SITIOS WEB</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.10 — DIW: ACTIVIDAD 3 SECCIÓN 3</p><p>UD1: PLANIFICACIÓN DE INTERFACES GRÁFICAS</p>
+<p>SECCION 3: GENERACIÓN DE DOCUMENTOS Y SITIOS WEB</p>
+<p>NOMBRE</p>
+<p>Actividad 3</p>
+<p>En los ejercicios propuestos pondremos en práctica los conceptos asociados a la generación de documentación y guías de estilo.</p>
+<p>Objetivos</p>
+<p>Trabajar los elementos incluídos en una guía de estilo.</p>
+<p>Temporalización</p>
+<p>La duración de esta actividad está prevista en 3 horas</p>
+<p>Proceso de desarrollo</p>
+<p>El alumno deberá repasar los conceptos expuestos en los recursos educativos.</p>
+<p>Se pretende elaborar una interfaz gráfica para el sitio Web de un negocio familiar de venta de bicis. El nombre del negocio es BicisVal.</p>
+<p>Después de hablar con los clientes se ha llegado a la conclusión de que, inicialmente, su principal objetivo es dar a conocer su negocio a través de Internet. Para ello se debe desarrollar una interfaz web que sea principalmente visual.</p>
+<p>El sitio Web deberá</p>
+<ul><li>Permitir la lectura del sitio en dos idiomas: Castellano y Valenciano.</li></ul>
+<ul><li>El sitio web debe tener tres secciones: Venta, Alquiler y Taller.</li></ul>
+<p>Mostrar las bicis que se ofertan en la tienda: una breve descripción técnica de cada bicicleta acompañada de una foto. El cliente nos ha comunicado que actualmente tienen un máximo de 10 modelos de bicis para la venta y 4 modelos para alquiler.</p>
+<p>En lo relacionado al Taller, nos han comentado que normalmente hacen 8 tipos de reparaciones.</p>
+<ul><li>El sitio debe mostrar la información de contacto con la dirección, el teléfono y un croquis de su ubicación.</li></ul>
+<p>Se pide en esta actividad</p>
+<ul><li>Realizar un boceto, primero a mano alzada, y después digital, realizando una clasificación de todos los elementos mencionados en el enunciado según sean: elementos de identificación, navegación, contenido o interacción. (Solamente hace falta que me indiques el boceto de la primera página, lo que correspondería a la página de inicio del portal web, el index.html)</li></ul>
+<ul><li>Indicar cuál es el tipo de estructura de navegación más adecuado y explicar el motivo: lineal, jerárquica, reticular, lineal jerárquica.</li></ul>
+<ul><li>Elaborar una guía de estilos indicando toda la información que debería figurar en función de los elementos que hemos estudiado en esta sección. Básate en cualquier guía de estilo vista durante la sección para elaborar el documento.</li></ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.11 — DIW: ACTIVIDAD 1 SECCIÓN 4 UNIDAD 1</p><p>Diseño Interfaces Web Actividades UD1</p>
+<p>UD1: PLANIFICACIÓN DE INTERFACES GRÁFICAS SECCIÓN 4: HTML NOMBRE: Actividad 1 En el ejercicio propuesto pondremos en práctica conceptos sobre HTML5. Objetivos Trabajar los elementos básicos de HTML5. Temporalización La duración de esta actividad está prevista en 1-2 horas.</p>
+<p>Proceso de desarrollo El alumno deberá repasar los conceptos expuestos en los recursos educativos.</p>
+<p>Basándonos en la interfaz gráfica del sitio Web BicisVal que os pedí en la sección 3, elabora con los requerimientos que preparaste el boceto, una página web SOLAMENTE con lenguaje HTML5. Como os indico, solamente debéis de preparar la primera página, index.html. No quiero que preparéis ni la página de venta, ni la de alquiler ni la de taller. Solamente la de inicio.</p>
+<p>La web debe incluir como ya os indicaba al crear el boceto, mínimo, los siguientes puntos</p>
+<ul>
+<li>Permitir la lectura del sitio en dos idiomas: Castellano y Valenciano.</li>
+<li>El sitio web debe tener tres secciones: Venta, Alquiler y Taller.</li>
+<li>El sitio web debe mostrar la información de contacto con la dirección, el teléfono y un</li>
+</ul>
+<p>croquis de su ubicación.</p>
+<p>Es importante que utilicéis los elementos básicos en los que se estructura una web en HTML5. Además del head y el body, que incluyáis dentro del body el elemento header, nav, section, article, footer, etc. Os muestro un posible ejemplo de como podría ser el index.html de la página web de BicisVal, solamente con elementos HTML5.</p>
+<p>Diseño Interfaces Web Actividades UD1</p>
+<p>Diseño Interfaces Web Actividades UD1</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.12 — DIW: ACTIVIDAD 2 SECCIÓN 4 UD1</p><p>NOMBRE</p>
+<p>Título de la Actividad</p>
+<p>Actividad 1: En los ejercicios propuestos pondremos en práctica los conceptos básicos de HTML.</p>
+<p>Objetivos</p>
+<p>Repasar conceptos de HTML.</p>
+<p>Temporalización</p>
+<p>La duración de esta actividad está prevista en 2 horas</p>
+<p>Proceso de desarrollo</p>
+<p>El alumno deberá repasar los conceptos expuestos en los recursos educativos.</p>
+<p>Ejercicio 1: Los siguientes ejemplos de código HTML son incorrectos. Describe qué es incorrecto en cada caso.</p>
+<p>a. &lt;img "birthday.jpg"&gt;</p>
+<p>b. &lt;i&gt;Congratulations!&lt;i&gt;</p>
+<p>c. &lt;a href="file.html"&gt;linked text&lt;/a href="file.html"&gt;</p>
+<p>d. &lt;p&gt;This is a new paragraph&lt;\p&gt;</p>
+<p>Ejercicio 2. Crear la carpeta 'imagenes' y copiar el archivo 'webDesign.jpeg' a la carpeta. El fichero ‘webDesign.jpeg’ lo tienes en la misma actividad, en Aules. Crea una página HTML que incluya un icono en la pestaña de la página. (Este icono en la pestaña se conoce como favicon y podéis crearos uno con la imagen ‘webDesign.jpeg’ con e introduciéndolo en la url https://www.favicon-generator.org) También debéis crear un título página web. El título de la página creada se llamará 'Pagina de prueba'.</p>
+<p>Ejercicio 3. Añade los elementos(etiquetas) de estructura necesarios para que la página web creada en el ejercicio 1, esté estructurada en HTML5.</p>
+<p>Ejercicio 4. Crear una lista anidada, dentro de la página creada en el ejercicio 1, basándose en las siguientes listas</p>
+<p>Lista ordenada</p>
+<p>1. Elemento uno lista ordenada</p>
+<p>2. Elemento dos lista ordentada</p>
+<p>3. Elemento tres lista ordenada</p>
+<p>Lista NO ordenada</p>
+<p>Elemento uno lista NO ordenada</p>
+<p>Elemento dos lista NO ordenada</p>
+<p>Elemento tres lista NO ordenada</p>
+<p>Ejercicio 5. Incluir en dicha página la siguiente tabla</p>
+<p>Ejercicio 6 Crear 2 enlaces</p>
+<p>A la página web de www.google.es.</p>
+<p>A la página web de Universidad politécnica de València: www.upv.es.</p>
+<p>Ejercicio 7. Nuestra página web tendrá un título de primer nivel con nuestro nombre y apellidos, además de un subtitulo con nuestra fecha de cumpleaños.</p>
+<p>Ejercicio 8. También definiremos un pie(footer) donde pondremos nuestro copyright, los datos de contacto y un icono de Facebook que apunte al Facebook del Instituto: https://www.facebook.com/IESSantVicentFerrerAlgemesi/</p>
+<p>Se puede incluir en la página web un aviso de copyright en la página principal de tu sitio web de la siguiente forma © con el nombre del titular y la fecha en que ha sido creado, y que puede servir como prueba en cualquier conflicto judicial que pueda surgir; por ello la importancia de incluirlo en la página y mantenerlo siempre actualizado.</p>
+<p>Nota1 Ejercicio 8: Para crear el icono siguiente: © , visitar en W3schools.com la sección relacionada con “Entities”.</p>
+<p>Nota2 Ejercicio 8: En este video de Youtube explica como insertar iconos de redes sociales usando HTML + CSS. Para este ejercicio que os pido, solamente usar HTML</p>
+<p>https://www.youtube.com/watch?v=uvcDTTZCQd4</p>
+<table><thead><tr><th>UD1: PLANIFICACIÓN DE INTERFACES GRÁFICAS
+SECCION 4: HTML</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.13 — DIW: ACTIVIDAD 3 SECCIÓN 4 UNIDAD 1</p><p>NOMBRE</p>
+<p>Título de la Actividad</p>
+<p>Actividad 3: En los ejercicios propuestos pondremos en práctica los conceptos básicos de HTML.</p>
+<p>Objetivos</p>
+<p>Repasar conceptos de HTML.</p>
+<p>Temporalización</p>
+<p>La duración de esta actividad está prevista en 2 horas</p>
+<p>Proceso de desarrollo</p>
+<p>El alumno deberá repasar los conceptos expuestos en los recursos educativos.</p>
+<p>En cada ejercicio se muestra como debe quedar el resultado.</p>
+<p>Ejercicio 1: Crea un control que nos permite ingresar un texto en una línea.</p>
+<p>Solución</p>
+<p>Ejercicio 2: Crea un control que nos permite que el usuario elija una sola opción de entre una serie de posibilidades.</p>
+<p>Solución</p>
+<p>Ejercicio 3: Crea un control que al usuario elegir varias opciones entre todas las posibilidades.</p>
+<p>Solución</p>
+<p>Ejercicio 4: Crea un control que nos permita ingresar contraseñas.</p>
+<p>Solución</p>
+<p>Ejercicio 5: Crea un control que nos permite envío de datos del formulario y un botón de reinicialización que al ser pulsado reinicializa todos los controles a sus valores iniciales.</p>
+<p>Solución</p>
+<p>Ejercicio 6: Crea un control que nos permita enviar archivos por medio de un formulario.</p>
+<p>Solución</p>
+<p>Ejercicio 7: Crea un control que nos permite utilizar una imagen personalizada como botón de un formulario.</p>
+<p>Solución</p>
+<p>Ejercicio 8: Crea un control que nos permita para crear un menú desplegable con las opciones, América, Asia, Europa, África y Oceanía. Solución</p>
+<p>Ejercicio 9: Crea un control de entrada de texto multilínea. La cantidad de filas será 5 y columnas que tendrá el recuadro del área de texto serán 30.</p>
+<p>Solución</p>
+<p>Ejercicio 10: Genera una página con la siguiente estructura</p>
+<p>Solución</p>
+<table><thead><tr><th>UD1: PLANIFICACIÓN DE INTERFACES GRÁFICAS
+SECCION 4: HTML</th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th></tr></thead><tbody><tr><td>Resultado
+Nombre: 
+Apellido:</td><td></td></tr></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th></tr></thead><tbody><tr><td>Resultado
+¿Edad?
+menor de 17
+entre 18 y 60
+mayor de 61</td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th><th></th></tr></thead><tbody><tr><td>Resultado
+¿Pasatiempos?
+TV
+Libros
+Música
+Otros</td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th>Ejemplo</th><th></th><th></th></tr></thead><tbody><tr><td>Resultado
+Nombre:   
+Password:</td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th></tr></thead><tbody><tr><td>Resultado
+Nombre: 
+Contraseña:</td><td></td></tr></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th><th></th></tr></thead><tbody><tr><td>Resultado
+Ingrese la foto:</td><td></td></tr></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th><th></th></tr></thead><tbody><tr><td>Resultado
+Nombre: 
+Contraseña:</td><td></td></tr></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th><th></th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>Ejemplo</th><th></th><th></th></tr></thead><tbody><tr><td>Resultado</td><td></td></tr></tbody></table></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut01/ut0106.html">⬅️ 1.6 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4</a>
+<a class="page-nav-btn" href="../ut02/index.html">📘 UT2 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

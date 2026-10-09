@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT3 — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🐍 Programació d'Intel·ligència Artificial amb Python — CE IA i Big Data</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació d'Intel·ligència Artificial amb Python</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Redes Neuronales</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Continguts i Recursos</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Scikit Learn</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de</a></li>
+<li><a href="../ut03/ut0302.html">3.2 UT 3.5 Biblioteca plotly</a></li>
+<li><a href="../ut03/ut0303.html">3.3 UT 3.4 Biblioteca seaborn</a></li>
+<li><a href="../ut03/ut0304.html">3.4 UT 3.3 Biblioteca matplotlib</a></li>
+<li><a href="../ut03/ut0305.html">3.5 UT 3.2 Biblioteca Pandas</a></li>
+<li><a href="../ut03/ut0306.html">3.6 UT 3.1 Biblioteca Numpy</a></li>
+<li><a href="../ut03/ut0307.html">3.7 UT 3.0 Presentació unitat</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Housing</a></li>
+<li><a class="active" href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Primeros pasos con Python</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Python apuntes de clase</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Python para todos (libro).</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Ejercicios</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Creación entorno de trabajo</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Instalación entorno de trabajo.</a></li>
+<li><a href="../ut05/ut0502.html">5.2 SO LINUX MINT MATE</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Presentación del módulo</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Presentación.</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE IA i Big Data · UT3 — Scikit Learn</span>
+<h1>✍️ Activitats pràctiques UT3</h1>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.1 — Tarea 10 - Modelos de clasificación</p><p dir="ltr" style="text-align: left;"><span id="notebook_name">Subir el notebook IA_BD_PIA_UT_3.8_SVM.ipynb completado.</span><br/><br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.2 — Tarea 9 - Datos duplicados y normalización</p><h3>📄 IA BD PIA UT 3.6 Tarea 9 duplicados i norm.ipynb</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># &lt;center&gt; Ejercicios sobre missing data, dupicates y normalización.&lt;/center&gt;&lt;img src="https://github.com/brohrer-ms/public-hosting/raw/master/missing_values/missing_values_data.png"  width=45% /&gt;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Descargar el siguiente dataset:</code></pre>
+</div>
+<p>**Bengaluru.csv**</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Cargar las bibliotecas necesarias para:</code></pre>
+</div>
+<ul>
+<li>Cargar el dataset.</li>
+<li>Poder trabajr con el dataset.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Cargar y visualizar el archivo</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Visualizar la información de los datos faltantes</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Visualizar cuantos valores = NaN tenemos.</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Visualizar cuantos valores = 0 tenemos.</code></pre>
+</div>
+<p>Realizar un bucle que mira los valores=0 de las columnas ¿Qué conclusión sacamos?</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Crear un dataset en el que se reemplaza los datos faltantes por 0</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Listar los tipos de las columnas</code></pre>
+</div>
+<p>¿Qué conclusiones podemos sacar?</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Sobre el dataset original</code></pre>
+</div>
+<ul>
+<li>Pasar a fillna() el argumento method =	"bfill" o "ffill"</li>
+<li>Repetir en paso anterior pasando también el argumento axis= 0 o 1</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Sobre el dataset original</code></pre>
+</div>
+<ul>
+<li>Con replace() cambiar todos los "Ready To Move" con la fecha de hoy</li>
+</ul>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: Para obtener la fecha (de hoy), importar la clase...</p><p>Nota: Para obtener la fecha (de hoy), importar la clase date de la biblioteca datetime **[más información](https://docs.python.org/es/3/library/datetime.html#)**</p></div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Sobre el dataset original</code></pre>
+</div>
+<ul>
+<li>Con replace() cambiar todos los "Shncyes" y "Chikka Tirupathi" con "Renegociar"</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Sobre el dataset original</code></pre>
+</div>
+<ul>
+<li>Con where() cambiar todos los "total_sqft" &gt; 1500 con "Gran lujo"</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Sobre el dataset original</code></pre>
+</div>
+<ul>
+<li>Reemplazar los valores de la columna "bath" por NaN con la condicion "indice de la linea" es impar</li>
+</ul>
+<div class="admonition warning"><p class="admonition-title">⚠️ nota: usar loc[condicion, columna]...</p><p>nota: usar loc[condicion, columna]</p></div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Sobre el dataset original</code></pre>
+</div>
+<ul>
+<li>Reemplazar los valores de la columna "price" con NaN por un valor interpolado con el metodo interpolate()</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Descargar el siguiente dataset:</code></pre>
+</div>
+<p>**car.scv**</p>
+<ul>
+<li>Cargar el dataset.</li>
+<li>Comprobar si hay duplicados.</li>
+<li>visualizar la cantidad de duplicados.</li>
+</ul>
+<ul>
+<li>Ver si hay duplicados</li>
+<li>Sacar la cantidad de duplicados</li>
+</ul>
+<ul>
+<li>Eliminar los duplicados</li>
+<li>Comprobar si hay duplicados</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Normalización de los datos</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Cargar el dataset valores.csv</code></pre>
+</div>
+<ul>
+<li>Ver el tipado de las columnas</li>
+<li>Eliminar los duplicados</li>
+</ul>
+<ul>
+<li>Aplicar la función MinMaxScaler de la clase preprocessing al dataset valores.csv despues de quitar los duplicados</li>
+</ul>
+<ul>
+<li>Aplicar la función standard scaler al dataset valores.csv despues de quitar los duplicados</li>
+</ul>
+<ul>
+<li>Aplicar la función standard scaler al dataset valores.csv despues de quitar los duplicados</li>
+<li>Sumar los valores de las columnas y comprobar resultados.</li>
+<li>calcular la desviación estándar del resultado.</li>
+</ul>
+<h3>📄 Bengaluru.csv</h3>
+<p>area_type,availability,location,size,society,total_sqft,bath,balcony,price ,19-Dec,Electronic City Phase II,2 BHK,0,1056,2.0,1.0,39.07 Plot Area,,Chikka Tirupathi,4 Bedroom,Theanmp,0,5.0,3.0,120.0 Built-up Area,Ready To Move,,3 BHK,,1440,0.0,3.0,62.0 Super built-up Area,Ready To Move,Lingadheeranahalli,,Soiewre,1521,3.0,0.0,95.0 Super built-up Area,Ready To Move,Kothanur,2 BHK,,1200,2.0,1.0,0.0 Super built-up Area,Ready To Move,Whitefield,2 BHK,DuenaTa,,2.0,1.0,38.0 ,18-May,Old Airport Road,4 BHK,Jaades ,2732,,,204.0 Super built-up Area,,Rajaji Nagar,4 BHK,Brway G,3300,4.0,,600.0 Super built-up Area,Ready To Move,,3 BHK,,1310,3.0,1.0, Plot Area,Ready To Move,Gandhi Bazar,,,1020,6.0,,370.0 Super built-up Area,18-Feb,Whitefield,3 BHK,,1800,2.0,2.0,70.0 0,Ready To Move,Whitefield,4 Bedroom,Prrry M,,5.0,3.0,295.0 Super built-up Area,0,7th Phase JP Nagar,2 BHK,Shncyes,1000,,1.0,38.0 Built-up Area,Ready To Move,0,2 BHK,,1100,2.0,,40.0 Plot Area,Ready To Move,Sarjapur,0,Skityer,2250,3.0,2.0,</p>
+<h3>📄 valores.csv</h3>
+<p>A,B,C,D,E 84,32,21,87,46 51,71,59,93,52 52,39,18,84,3 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 71,94,25,94,91 44,67,4,36,55 77,62,19,91,40 39,95,5,70,1 25,77,2,60,86 23,42,45,21,50 84,59,40,46,45 95,70,14,38,53 88,74,6,99,13 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 69,29,8,70,9 44,37,19,35,66 87,62,52,27,41 5,25,11,77,46 12,53,24,8,68 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 30,29,87,40,96 8,67,40,97,47 38,85,87,40,25 56,84,46,6,40 58,53,42,95,1 26,16,82,7,92 89,17,14,6,60 85,43,45,71,61 56,61,46,26,74 87,28,14,74,63 15,26,63,8,33 43,99,58,75,25 55,79,45,49,47 23,33,81,13,34 66,97,11,43,98 39,8,52,8,69 74,16,8,98,30 54,65,85,48,24 79,84,31,71,73 44,93,75,17,20 87,5,1,77,90 80,3,52,74,97 23,26,93,84,78 9,26,61,35,77 76,91,42,58,71 21,79,63,27,54 21,45,37,41,16 32,98,15,53,8 38,35,70,58,38 74,55,60,90,30 10,86,40,11,98 20,30,79,71,97 80,90,8,49,76 31,92,14,92,75 87,43,33,92,66 32,71,32,74,53 27,41,65,94,84 41,46,7,56,26 44,50,34,11,36 21,44,34,68,66 4,63,72,6,48 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 8,65,59,4,21 92,96,25,19,60 28,78,48,24,96 14,8,17,43,11 23,25,93,83,26 58,53,42,95,1 26,16,82,7,92 89,17,14,6,60 85,43,45,71,61 56,61,46,26,74 87,28,14,74,63 57,24,87,69,93 18,43,9,34,21 23,26,93,84,78 9,26,61,35,77 76,91,42,58,71 21,79,63,27,54 21,45,37,41,16 87,62,52,27,41 5,25,11,77,46 12,53,24,8,68 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 69,29,8,70,9 44,37,19,35,66 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 64,32,30,56,63 44,67,4,36,55 77,62,19,91,40 59,30,1,5,35 4,17,64,58,41 30,29,87,40,96 8,67,40,97,47 38,85,87,40,25 56,84,46,6,40 8,81,39,18,22 69,98,44,57,13 47,81,61,13,43 83,88,54,48,65 25,22,1,5,56 78,78,11,71,25 44,34,31,38,74 78,8,54,48,71 12,3,10,95,10 78,36,52,21,58 72,87,68,99,29 50,47,62,70,92 92,96,25,19,60 28,78,48,24,96 14,8,17,43,11 23,25,93,83,26 57,24,87,69,93 34,6,39,82,39 80,26,40,70,23 74,44,66,19,84 68,54,11,22,6 64,32,30,56,63 44,67,4,36,55 77,62,19,91,40 39,95,5,70,1 25,77,2,60,86 23,42,45,21,50 84,59,40,46,45 66,26,29,70,22 11,66,44,22,80 44,67,4,36,55 77,62,19,91,40 11,66,44,22,80</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.3 — Tarea 8 - Trabajando con scikit learm - Aconseguir dades</p><div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Recuperar desde el repositorio el dataset Wine recognition¶</code></pre>
+</div>
+<p>### Listar encabezados de los datos</p>
+<p>### Listar encabezados de los targets</p>
+<p>### Recuperar la cantidad de elementos de cada clase.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Recuperar desde el repositorio el dataset California Housing¶</code></pre>
+</div>
+<p>### Realizar un histograma que muestre la edad media de las viviendas</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Generar un dataset con make_swiss_roll y representarlo en 3D</code></pre>
+</div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.4 — Tarea 7 - Trabajando con la biblioteca Matplotlib</p><div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># &lt;center&gt; Ejercicios de matplotlib&lt;/center&gt;</code></pre>
+</div>
+<p>&lt;img align="center" src="https://interactivechaos.com/sites/default/files/inline-images/tutorial_matplotlib.png" width=25% /&gt;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Tarea 7 matplotlib.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Importar las librerias necesarias a la realización de los ejercicios.</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 1</code></pre>
+</div>
+<ul>
+<li>Escribir un programa que calcule las funciones polinomial siguiente: y = x*2 + 3, z = x**2 + 1</li>
+<li>Los valores de x iran desde -50 hasta +50 en pasos de 1</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 2</code></pre>
+</div>
+<p>**Realizar lo siguiente:**</p>
+<ul>
+<li>Crea una figura que visualice las curvas y(x) y z(x).</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 3</code></pre>
+</div>
+<p>**Como puedes ver, visualmente una curva domina sobre la otra.**</p>
+<ul>
+<li>Realizar las modificaciones oportunas al código para que las 2 curvas tengan la misma importante dentro del marco.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 4</code></pre>
+</div>
+<ul>
+<li>Añadir el nombre de los ejes.</li>
+<li>Añadir un título a la gráfica.</li>
+<li>Añadir una leyenda a las gráficas.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 5</code></pre>
+</div>
+<ul>
+<li>ir a https://claudiovz.github.io/scipy-lecture-notes-ES/intro/matplotlib/matplotlib.html</li>
+<li>Realizar una anotación en el punto de coordenadas x=20, y=f(x).</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 6</code></pre>
+</div>
+<p>**vamos a poner una grafica dentro de otra gráfica.** Para ello usaremos el método add.axes al que pasaremos una lista de la siguiente manera.</p>
+<ul>
+<li>fig = plt.figure()</li>
+<li>ax1 = fig.add_axes([0,0,1,1])</li>
+<li>ax2 = fig.add_axes([0.2,0.5,.2,.2])</li>
+</ul>
+<p>**Mirar el resultado e entender los argumentos que se han pasado a add_axex([]).**</p>
+<p>## Ejercicio 7</p>
+<ul>
+<li>Representa los valores de y en el marco encapsulado.</li>
+<li>Representa los valores de z en el marco principal.</li>
+</ul>
+<p>## Ejercicio 8</p>
+<ul>
+<li>Vamos a representar la misma gráfica pero cambiando las escalas de x.</li>
+<li>De esa manera emularemos un "zoom".</li>
+<li>Para limitar los valores de "x" en el marco encapsulado usar ax().set_xlim(xx,yy) / ax().set_ylim(zz,ww)</li>
+</ul>
+<p>## Ejercicio 9</p>
+<p>**Crear dos arcos para insertar 2 gráficos.**</p>
+<p>## Ejercicio 10</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.5 — Tarea 6 - Trabajando con la biblioteca Pandas</p><div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># &lt;center&gt; Ejercicios de Pandas</code></pre>
+</div>
+<p>&lt;img align="center" src="https://habrastorage.org/files/10c/15f/f3d/10c15ff3dcb14abdbabdac53fed6d825.jpg" width=50% /&gt;</p>
+<p>## Utilizando la biblioteca Pandas **[Pandas](http://pandas.pydata.org)**</p>
+<p>Las principales estructuras de datos en `Pandas` se implementan con las clases **Series** y **DataFrame**. La primera estructura es un tablero **indexado unidimensional** llamado **serie**. La segunda es un tablero **indexado bidimensional** llamado **dataframe**.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.2 Tarea 6 Pandas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import numpy as np
+import pandas as pd
+pd.set_option("display.precision", 4) # representación de los datos con 4 digitos</code></pre>
+</div>
+<p>### Ejercicio 1 Crear una serie que contenga los siguientes elementos: 1, 3, 5, NaN, 6, 8.</p>
+<p>### Ejercicio 2 Crear una serie que contenga los siguientes elementos: 1, 3, 5, 7, 9, 11, 13, NaN.</p>
+<p>### Ejercicio 3 Cambiar el indice de la serie a A, B ,C ,D, E, F, G, H.</p>
+<p>### Ejercicio 4 Acceder al valor del indice "F".</p>
+<p>### Ejercicio 5 Crear un serie temporal que empiece:&amp;emsp;- Ahora, $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$- Tenga 10 periodos. $\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;$- Una base de tiempo en segundos.</p>
+<p>### Ejercicio 6 Crear un dataframe de 10 x 4 de la siguiente manera</p>
+<ul>
+<li>El contenido del dataframe serán numeros flotantes que se representaran con 2 decimales.</li>
+<li>En indice será numerico y empezará en 1.</li>
+<li>El nombre de las columnas será A, B, C, D.</li>
+</ul>
+<p>### Ejercicio 7 Abrir el archivo `housing.csv` y visualizar las 5 primeras lineas.</p>
+<p>### Ejercicio 8 Visualizar la información siguiente.</p>
+<ul>
+<li>Talla del dataframe.</li>
+<li>nombre de las columnas.</li>
+<li>Tipo de datos.</li>
+<li>Cantidad total de datos.</li>
+</ul>
+<p>### Ejercicio 9 Abrir el archivo `taxisNY.parquet` y visualizar las 10 primeras lineas. (datos sacados de https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)</p>
+<p>### Ejercicio 10</p>
+<p>Del archivo parquet `taxisNY.parquet` sacar el tipo de datos.</p>
+<p>### Ejercicio 11 Indexación y recuperación de datos</p>
+<p>Del dataframe anterior, recuperar la columna de las propinas y calcular la media de esa columna.</p>
+<ul>
+<li>De esa misma columna sacar la suma total de las propinas dadas.</li>
+<li>Sacar el valor medio de las propinas.</li>
+<li>Sacar las veces que se ha dado propina y las que no.</li>
+</ul>
+<p>### Ejercicio 12 Indexación y recuperación de datos</p>
+<p>De la columna correspondiente al precio cobrado por la carrera recuperar el valor minimo y el máximo.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.6 — Tarea 5 - Trabajando con la biblioteca NumPy</p><div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Trabajando con la biblioteca NumPy</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.1 Tarea 5 numpy.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import numpy as np</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 1</code></pre>
+</div>
+<ul>
+<li>Crear 2 arrays que contengan los valores 5 y 6 y sumarlos.</li>
+<li>Mostrar el resultado.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 2</code></pre>
+</div>
+<ul>
+<li>Crear 3 arrays con los siguientes valores : [1,2,3], [3,2,1] et [0,1,-1].</li>
+<li>Sumarlos y mostrar el resultado.</li>
+<li>Mostrar el tamaño resultante del array.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 3</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 4</code></pre>
+</div>
+<ul>
+<li>Crear un array de 2 filas y 3 columnas con los valores 1, 2, 3, 4, 5, 6.</li>
+<li>Imprimir el resultado.</li>
+<li>Mostar la dimension del array.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 5</code></pre>
+</div>
+<ul>
+<li>Crear 2 arrays de 4 filas y 2 columnas.</li>
+</ul>
+<p>El primer array tendrá los valores 1, 2, 3, 4, 5, 6, 7, 8. El segundo los valores 8, 7, 6, 5, 4, 3, 2, 1.</p>
+<ul>
+<li>multiplicarlos y mostrar el resultado.</li>
+<li>Mostar la dimension del array resultante.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 6</code></pre>
+</div>
+<ul>
+<li>Crea 2 arrays con los valores [4,7], [3,6]</li>
+<li>Crea 3 arrays con los valores (2), (3), (1.5)</li>
+<li>Realiza las operaciones siguientes</li>
+</ul>
+<p>&gt; Multiplica A1 por A3 -&gt; Multiplica A2 por A4 por A5 -&gt; Suma A1 por A2 -&gt; Multiplica A1 por A2</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 7</code></pre>
+</div>
+<ul>
+<li>Crea un array con 10 ceros</li>
+<li>Crea un array con 10 unos</li>
+<li>Crea un array de 10 cincos</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 8</code></pre>
+</div>
+<ul>
+<li>Crea un array de enteros que empiece en 10 y acabe en 50</li>
+<li>Crea un array de enteros pares que empiece en 10 y acabe en 50</li>
+<li>Crea una matriz 3x3 con los valores desde el 0 hasta el 8</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 9</code></pre>
+</div>
+<ul>
+<li>Genera un array que contenfo un (1) número aleatorio</li>
+<li>Genera un array de 24 números aleatorios entre 1 y 50.</li>
+<li>A partir del array anterior crear una matriz (3,2,2)</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 10</code></pre>
+</div>
+<ul>
+<li>Crea el siguiente array</li>
+</ul>
+<p>[[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1 ], [0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2 ], [0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.29, 0.3 ], [0.31, 0.32, 0.33, 0.34, 0.35, 0.36, 0.37, 0.38, 0.39, 0.4 ], [0.41, 0.42, 0.43, 0.44, 0.45, 0.46, 0.47, 0.48, 0.49, 0.5 ], [0.51, 0.52, 0.53, 0.54, 0.55, 0.56, 0.57, 0.58, 0.59, 0.6 ], [0.61, 0.62, 0.63, 0.64, 0.65, 0.66, 0.67, 0.68, 0.69, 0.7 ], [0.71, 0.72, 0.73, 0.74, 0.75, 0.76, 0.77, 0.78, 0.79, 0.8 ], [0.81, 0.82, 0.83, 0.84, 0.85, 0.86, 0.87, 0.88, 0.89, 0.9 ], [0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1. ]])</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 11</code></pre>
+</div>
+<ul>
+<li>Crea un programa que genere un array de 5,5 con numeros aleatorios entre 0 y 9.</li>
+<li>Crea una rutina o busca una instruccion que permita cambiar los valores 5 por 10.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 12</code></pre>
+</div>
+<ul>
+<li>Crea un programa que genere un array de con 20 numeros aleatorios entre 0 y 9.</li>
+<li>Crea una rutina que permita contar cuantas veces aparece el valor 5 en el array.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Ejercicio 13</code></pre>
+</div>
+<ul>
+<li>Crea un programa que genere un array de (5,5) con numeros aleatorios entre 0 y 9.</li>
+<li>Crea una rutina que permita contar cuantas veces aparece el valor 5 en el array.</li>
+</ul></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut03/ut0308.html">⬅️ 3.8 Housing</a>
+<a class="page-nav-btn" href="../ut04/index.html">📘 UT4 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

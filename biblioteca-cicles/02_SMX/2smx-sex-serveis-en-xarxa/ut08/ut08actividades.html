@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT8 — Serveis en Xarxa | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Serveis en Xarxa</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Exámenes</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Escenario general</a></li>
+<li><a href="../ut00/ut0003.html">0.3 rúbrica presentacions</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Enquesta de Serveis en Xarxa (SeX)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — U6: Servicio de Transferencia de ficheros (FTP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 FTP</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — U5: Servici de Correu</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Presentació</a></li>
+<li><a href="../ut03/ut0302.html">3.2 El correu electrònic</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Les Guest additions</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — U4: Servici de Web (HTTP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Recursos Escenario U3</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Introducción virtual hosting</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Configuración Virtual hosting</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Ips clients</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Recuperació_prova de validació_Apache</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — U2: Servici de Resolució de Noms (DNS)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 UD3 Servidor de Nombres de Dominio SMX</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Presentació Victor i Javier</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 presentació DHCP</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Presentació DHCP. Visió general</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Servei DHCP</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Servidor DHCP</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Presentació SX20-U1-E3 "Bronx"</a></li>
+<li><a href="../ut06/ut0606.html">6.6 Qüestionari DHCP</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — U1: SSH. Secure Shell</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Plantilla qüestionari d'avaluació</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT8 — U0: Virtualización y repaso de conceptos previos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Repàs Interconnexió de Xarxes</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Plantilla qüestionai d'avaluació</a></li>
+<li><a class="active" href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n SMX · Grau Mitjà · UT8 — U0: Virtualización y repaso de conceptos previos</span>
+<h1>✍️ Activitats pràctiques UT8</h1>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 8.1 — Pràctica Virtualització. Part 1</p><p dir="ltr" style="text-align: left;">Pràctica Virtualització. Part 1<br/></p>
+<p>Pràctica Virtualització. Part 1</p>
+<p>Al llarg d'aquest curs usarem tant VMs basades en Windows i GNU/Linux. En aquesta primera pràctica refrescarem el procediment per a la creació de VMs amb VirtualBox.</p>
+<p>En principi, necessitarem 3 màquines virtuals</p>
+<ul>
+<li>Un client amb Windows</li>
+<li>Un servidor amb Ubuntu Server</li>
+<li>Un client amb Ubuntu Desktop</li>
+</ul>
+<h3>1. Cerca el VirtualBox en el teu ordinador, perquè ha de vindre amb la instal·lació</h3>
+<p>de base.</p>
+<h3>2. Crea una VMs partint de la ISO que pots descarregar de</h3>
+<p>Windows</p>
+<p>Quan finalitzes comprova si el Sistema Operatiu té les "*Guests *Additions", i en cas contrari, instal·la-les. Configura</p>
+<p>Pràctica Virtualització. Part 1</p>
+<ul>
+<li>El disc dur virtual han de ser d'emmagatzematge d'expansió dinàmica, de</li>
+</ul>
+<p>15 Gb de capacitat.</p>
+<ul>
+<li>La memòria RAM a assignar de 800MB.</li>
+</ul>
+<h3>3. Després crea una nova VM per a la versió de 64 bits servidor</h3>
+<p>de GNU/Linux coneguda com ​Ubuntu Server​ (*) partint d'un disc dur virtualitzat- un fitxer de tipus VDI ("Virtual Disk Image").</p>
+<p>Configura</p>
+<ul>
+<li>Tres adaptadors de xarxa (que, de moment, poden deixar-se dues en</li>
+</ul>
+<p>manera "Només amfitriona").</p>
+<p>Ajuda: per a això, hauràs de crear la VM des de zero i en el moment de configurar l'opció de disc dur, indicar-li que vols usar un prèviament creat.</p>
+<h3>4. Finalment, crea una altra VM partint d'un un fitxer de tipus</h3>
+<p>OVA a partir del qual pugues crear una VM amb​ Ubuntu Desktop (*) ja prèviament creada.</p>
+<p>Abans d'acabar amb aquest apartat, situa tant el​ servidor Ubuntu​ com a la VM amb ​Ubuntu Desktop​ dins de la mateixa xarxa, usant l'esquema de direccions que vulgues. Comprova que existeix connectivitat​ entre totes dues VMs abans de seguir.</p>
+<p>Una vegada tingues les VMs preparades, avisa al professor perquè passe a veure el resultat.</p>
+<p>(*) admini/admini</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 8.2 — Pràctica Virtualització. Part 2</p><p dir="ltr" style="text-align: left;">Pràctica Virtualització. Part 2<br/></p>
+<p>Pràctica Virtualització. Part 2</p>
+<p>En aquest segon exercici has de pensar en la configuració conjunta que hauria de presentar les diverses VMs de VirtualBox en cas de disposar d'un disseny de xarxa com aquest</p>
+<p>Abans de passar a resoldre l'escenari, en el qual usarem les VMs de l'apartat anterior, convé tindre clara la diferència entre els diferents tipus de configuració que pot presentar la interfície de xarxa. Revisa aquest ​document ​abans de seguir.</p>
+<p>Pràctica Virtualització. Part 2</p>
+<p>Observacions a l'esquema proposat: La icona que representa a l'encaminador serà en la pràctica el teu ordinador amb Ubuntu Server. Per tant, perquè el trànsit puga viatjar entre xarxes, l'encaminament haurà d'estar habilitat. Cerca en internet com activar l'encaminament en un S.O com Ubuntu Server (Linux). Els switches virtuals no existeixen en la pràctica, però cal suposar que en un cas real sí que serien necessaris.</p>
+<p>En la imatge s'observen 3 xarxes. Una d'elles, connecta l'encaminador a la xarxa del centre, és a dir, a la xarxa de l'aula. Configura un dels 3 adaptadors de xarxa d'aquesta VM en manera "Puente" de manera que reba automàticament una direcció de xarxa a l'aula. Les altres 2 xarxes deuran virtualitzar-se, ajustant els adaptadors de xarxa a la manera "Xarxa Interna". Indaga com fer-ho.</p>
+<p>Per configurar les xarxes en Ubuntu hauras de configurar les interfícies de xarxa. En aquest document tens tots els conceptes necessaris. Revisa-ho (​tutorial Ubuntu i netplan​ en l’apartat “​Configuración NETPLAN con direccionamiento estático/manual​”) En la tasca anomena les targetes amb el nom de la xarxa virtual on vagen a treballar.</p>
+<p>Ajuda't de les següents preguntes per a resoldre l'exercici</p>
+<p>1.- Quants interfícies hauran de crear-se en Virtual Box per a donar cabuda a les 2 xarxes virtuals?</p>
+<p>2.- Quina diferència existeix en el funcionament els adaptadors de xarxa virtuals dels clients, en manera “Puente”, “Només Amfitrió”, "Xarxa Interna" o NAT?</p>
+<p>3.- Com es pot canviar el número IP d'una xarxa virtual determinada quan l'adaptador funciona en "Només Amfitrió"?</p>
+<p>4.- Com podem aconseguir que l'encaminador (l'ordinador amb Ubunutu Server en aquest cas) encamine el trànsit entre les xarxes 1 i 2?</p>
+<p>Una vegada tingues les VMs preparades, avisa al professor perquè passe a veure el resultat.</p>
+<p>Pràctica Virtualització. Part 2</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 8.3 — Pràctica Virtualització. Part 3</p><p dir="ltr" style="text-align: left;">Pràctica Virtualització. Part 3<br/></p>
+<p>Pràctica Virtualització. Part 3</p>
+<p>Per a finalitzar, partint del cas anterior,</p>
+<p>realitza les modificacions necessàries en els seus components perquè s'ajuste al següent esquema de xarxa en el qual tenim dos nous equips, d'una banda, un Windows (genera'l clonant el que ja tens) i l'ordinador en el qual estàs treballant, que haurà d'estar connectat a l'encaminador</p>
+<p>Una vegada tingues les VMs preparades, avisa al professor perquè passe a veure el resultat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 8.4 — Entrega memoria UD0</p><p dir="ltr" style="text-align: left;">Entrega memoria de les pràctiques.<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 8.5 — Entrega presentació UD0</p><p dir="ltr" style="text-align: left;">Entrega presentació UD0<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 8.6 — Entrega Acta inicial</p><p dir="ltr" style="text-align: left;">Entrega Acta inicial<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 8.7 — Entrega Acta final</p><p dir="ltr" style="text-align: left;">Entrega Acta final<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 8.8 — Qüestionari d'avaluació U0</p><p dir="ltr" style="text-align: left;">Qüestionari d'avaluació U0<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 8.9 — Nota UD0</p><p dir="ltr" style="text-align: left;">Nota UD0<br/></p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut08/ut0802.html">⬅️ 8.2 Plantilla qüestionai d'avaluació</a>
+<a class="page-nav-btn" href="../references.html">📂 Índex de Documents ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

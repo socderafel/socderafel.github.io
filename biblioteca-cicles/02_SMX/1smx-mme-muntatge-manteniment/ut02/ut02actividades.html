@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT2 — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔧 Muntatge i Manteniment d'Equips — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Muntatge i Manteniment d'Equips</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 - P1 | P2 | P3 - CONTINGUTS</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 - P2 - PROCESADOR Y MEMORIA</a></li>
+<li><a href="../ut02/ut0203.html">2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0204.html">2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0205.html">2.5 U2 - P3 - Perifèrics i Communications</a></li>
+<li><a href="../ut02/ut0206.html">2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE</a></li>
+<li><a href="../ut02/ut0207.html">2.7 DISCOS DUROS CHS ECHS LBA</a></li>
+<li><a class="active" href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 5</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U5 - P1 P2 P3 - PDF CONTINGUTS</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U6 - RGPD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U6 - COPIAS DE SEGURIDAD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U6 - CLASIF INFORMACION - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U6 - P1 P2 P3 PRESENTACIÓ CONTINGUTS</a></li>
+<li><a href="../ut04/ut0405.html">4.5 U6 - P1 P2 P3 - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0406.html">4.6 U6 - P1 P2 P3 - PRESENTACIÓ</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — FINAL DE CURSO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT2 — Unitat Didàctica 2</span>
+<h1>✍️ Activitats pràctiques UT2</h1>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.1 — U2 - P1 - T PRACT - LA BIOS</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.2 — U2 - P2 - ACT1- BEST RELATION Q/P IN A 16GB DDR4 DUAL CHANNEL.</p><p dir="ltr" style="text-align: left;">(ENGLISH)</p><p dir="ltr" style="text-align: left;">Make a table with 4 rows</p><p dir="ltr" style="text-align: left;">Spec Product. | Best Price | Best Relation Q/P | Best Quality (Specs) </p><p dir="ltr" style="text-align: left;">When finish, write a brief recommendation about the option Best Relation Q/P</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.3 — U2 - P2 - ACT2 - NOMENCLATURA MICROS INTEL</p><p dir="ltr" style="text-align: left;">Completa el que hem vist per a les noves generacions de Procesadors Intel<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.4 — U2 - P2 - ACT3 - WEBQUEST MEMÒRIA</p><p dir="ltr" style="text-align: left;">Realitza la webquest adjunta i puja les respostes en format PDF</p>
+<p>WEBQUEST</p>
+<p>LA MEMORIA RAM</p>
+<p>La expresión memoria RAM se utiliza frecuentemente para referirse a los módulos de memoria utilizados en los computadores. En el sentido estricto, esta memoria es solo una variedad de la memoria de acceso aleatorio. Los módulos de RAM son la presentación comercial de este tipo de memoria, que se compone de circuitos integrados soldados sobre un circuito impreso independiente.</p>
+<p>Consulta las páginas web propuestas y contesta a las siguientes preguntas</p>
+<p>1. ¿Cómo se llama la organización que regula los estándares relativos a las velocidades de las memorias?</p>
+<p>2. ¿Cuál son los ancho de banda teóricos que establece dicha organización para una memoria DDR?</p>
+<p>3. ¿Cuáles son las dos características fundamentales de las memorias RAM DDR4 frente a sus antecesoras?</p>
+<p>4. ¿A qué voltaje funciona la primera memoria DDR4 de Samsung?</p>
+<p>Recursos en Internet</p>
+<p>http://www.samsung.com/global/business/semiconductor/newsView.do?news_id=1228</p>
+<p>http://www.samsung.com/semiconductor/insights/news/13767</p>
+<p>http://www.pcactual.com/articulo/laboratorio/especiales/9780/todo_sobre_memoria_ram_ddr3.html</p>
+<p>http://www.muycomputer.com//22/caracteristicas-de-las-futuras-memorias-ram-ddr4</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.5 — U2 - P2 - ACT4- BEST RELATION Q/P IN A CPU COOLER</p><p dir="ltr">(ENGLISH)</p><div id="intro"><div><p dir="ltr">Make a table with 4 rows</p><p dir="ltr">Spec Product. | Best Price | Best Relation Q/P | Best Quality (Specs) </p><p dir="ltr">When finish, write a brief recommendation about the option Best Relation Q/P</p></div></div><br/></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.6 — U2 P2 I P3 - ACT 6 - ESTAT DE L'ART MICROPROCESADORS</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.7 — U2 - P2 I P3 - T PRACT PBL - Projecte per a un diseñador gràfic</p><p dir="ltr">Donat el problema plantejat a Classe, Redacta una memòria tècnica amb</p><p dir="ltr">Portada</p><p dir="ltr">Index</p><p dir="ltr">Objectius del projecte.</p><p dir="ltr">Justificació de la oferta.</p><p dir="ltr">Oferta tècnica.</p><p dir="ltr">Presupost econòmic (Recorda incloure les teves hords de feina)</p><p dir="ltr">Planning per a fer la instalació.</p><br/></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.8 — U2 - P2 I P3 - P CONT - MEMORIA I PROCESADOR</p><p dir="ltr" style="text-align: left;"><a href="https://forms.gle/dfnnDoq9arsci2Qu8" target="_blank">https://forms.gle/dfnnDoq9arsci2Qu8</a><br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.9 — U2 - P3 - ACT1- RELATION BETWEEN HDD SPECS</p><div id="intro"><div><p dir="ltr">(ENGLISH)</p><div id="intro"><div><p dir="ltr">Make a table with 4 rows</p><p dir="ltr">Spec Product. | Low Specs HDD 5400rpm | HDD 7200rpm | Best Specs HDD 10000rpm <br/></p><p dir="ltr">When finish, write a brief recommendation about the different options in yout comparative.<br/></p></div></div></div></div><br/></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.10 — U2 - P3 - READING 1 - A2 "Email invitation to a job"</p><p>Read an email invitation to a job interview to practise and improve your reading skills. </p><div>
+</div>
+<div><p>Do the preparation task first. <br/></p><p>Then read the text and do the exercises.</p>
+</div><br/>
+<div class="admonition warning"><p class="admonition-title">📄 Document Escanejat / Visual (LearnEnglish-Reading-A2-An-invitation-to-a-job-interview.pdf)</p><p>Aquest document PDF (3 pàgines) està compost principalment per esquemes o imatges escanejades.</p></div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.11 — U2 - P3 - Listening B1 "A phone call from a customer"</p><p>Listen to the phone call from a customer to practise and improve your listening skills.</p><div>
+</div>
+<div><p>Do the preparation task first. Then listen to the audio and do the exercises.</p>
+</div><br/>
+<div class="admonition warning"><p class="admonition-title">📄 Document Escanejat / Visual (LearnEnglish-Listening-B1-A-phone-call-from-a-customer.pdf)</p><p>Aquest document PDF (2 pàgines) està compost principalment per esquemes o imatges escanejades.</p></div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.12 — U2 - P3 - T PRACT - ALMACENAMIENTO INTERNO</p><p><b><b>0.- (PER A TOTS ELS DISCS) Actividad: Configuració de la BIOS<br/></b></b></p><b>
+<p>Accedeix a la BIOS, Configura correctament segons el vist als apunts el Disc i fes una foto per adjuntar a la memòria.</p></b><p><b>1.- (PER A LA MÁQUINA VIRTUAL) Actividad:Tabla de Particiones GPT</b></p>
+<p>En este apartado tenéis que realizar la instalación de un SO
+en un disdo duro con el sistema de particiones GPT.</p>
+<p>Debéis de entregar una guía donde esté claramente explicado
+los pasos a seguir para disponer de un disco con GPT y una imagen final con el
+comando fdik -l para comprobar el sistema de archivos.</p>
+<p><b>2.- (PER AL TALLER) Partició de diferents Unitats</b></p>
+<p>En aquesta
+pràctica hem de fer una manual, amb <b>captures
+de pantalla</b> de tots els passos que es demanen.</p>
+<p><!--[if !supportLists]-->1. <!--[endif]-->Utilitza diferents discs de Linux que tingues.</p>
+<p><span style="font-size: 0.9375rem;">2. </span><span style="font-size: 0.9375rem;">Instal·la el programa Gparted des del centre de
+programari de Ubuntu o des de la terminal (consultar Internet).</span></p>
+<p><!--[if !supportLists]-->3. <!--[endif]-->Ara obrim el programa i seleccionem el disc a
+particionar /dev/sdb/ (o similar). Anem a Dispositius – Crear una taula de particions…
+per a dur a terme les particions corresponents en aquest nou disc.</p>
+<p><!--[if !supportLists]-->4. <!--[endif]-->Creem una partició primària de 4 GB amb un sistema de
+fitxers ext4. En la part de etiqueta has de posar “primera partició”.</p>
+<p><!--[if !supportLists]-->5. <!--[endif]-->Amb l'espai restant crea una altra partició primària de amb un sistema de fitxers swap. En la part de l'etiqueta has de posar
+“segona partició”.</p>
+<p><!--[if !supportLists]-->6. <!--[endif]-->Finalment, crea una partició estesa amb l'espai
+disponible. En la part de l'etiqueta has de posar “tercera partició”.</p>
+<p><!--[if !supportLists]-->7. <!--[endif]-->Canvia la grandària de la primera partició i
+modifica la grandària de la segona partició.</p>
+<p><!--[if !supportLists]-->8. <!--[endif]-->Per a finalitzar la pràctica, heu de deixar el disc amb
+les següents particions: una partició primària amb un sistema de
+fitxers ext3 i una partició estesa.</p>
+<p><!--[if !supportLists]-->9. <!--[endif]-->Entra en el terminal i
+mira com han quedat les particions (lsblk -fm). crida'm per a que vega que ho has fet correctament.</p>
+<p> PROBLEMA;
+quizas la respuesta al comando sea que la tabla de particiones es “dos” es
+decir MBR</p><br/></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.13 — U2 - P2 - P CONT - DISCOS DUROS</p><p dir="ltr" style="text-align: left;"><a href="https://forms.gle/jVx7Ep8y73AFxzyD7" target="_blank">https://forms.gle/jVx7Ep8y73AFxzyD7</a><br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.14 — U2 - P3 - T PRACT - TASAS I RAID0/1</p><div>Esta práctica consta de 2 partes:</div><div>REALIZA UNA MEMORIA CON LAS PAUTAS VISTAS DURANTE EL CURSO:<br/></div><div><br/></div><div>1º PARTE: VEO/PIENSO/ME PREGUNTO :Evaluar tasas de transferencia en Dispositivos de Almacenamiento.</div><div>- Con las herramientas de Benchmark vistas en la unidad o disponibles en el Sistema Operativo Linux evalúa las tasas de transferencia y las curvas de transferencia de 4 sistemas de almacenamiento diferentes.</div><div>- Una vez realizadas las pruebas realiza un comentario evaluando las diferentes opciones vistas así como indica de forma breve las conclusiones a las que llegas<br/></div><div><br/></div><p>2º PARTE</p><p>EXPLÍCAME Y LO OLVIDARÉ --&gt; MUÉSTRAME Y LO RECORDARÉ --&gt; DÉJAME HACERLO Y LO APRENDERÉ</p><p>El trabajo consiste
+en crear un Sistema RAID 0 o 1 en una máquina virtual y realizar pruebas para justificar cómo funcionan los diferentes RAID</p><p>RAID 0 Software: Realiza fotos de la configuración de la máquina virtual así como de los pasos de comprobación.</p><p>RAID 1 Software: Realiza fotos de la configuración de la máquina virtual así como de los pasos de comprobación. Realiza una prueba de Fallo (desactiva un Disco en la máquina virtual) y comprueba que arranca solo con el de Backup.</p><p>Unos
+apuntes que pueden ayudarte son</p>
+<ul>
+<li>
+<p>
+<a href="https://principiantedelinux.wordpress.com//09/crear-raid-1-por-soft-en-gnulinux-con-sistema-montado-y-con-datos-en-kubuntu-11-04/"><span lang="es-ES">https://principiantedelinux.wordpress.com//09/crear-raid-1-por-soft-en-gnulinux-con-sistema-montado-y-con-datos-en-kubuntu-11-04/</span></a></p>
+</li></ul>
+<ul>
+<li>
+<p>
+<a href="https://www.youtube.com/watch?v=7j1uxxhEygo"><span lang="es-ES">https://www.youtube.com/watch?v=7j1uxxhEygo</span></a></p>
+</li></ul>
+<p>
+QUE LA FUERZA OS ACOMPAÑE ;)<br/>
+</p>
+</div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.15 — U2 - P4 - TEST CONTINGUTS</p><p dir="ltr" style="text-align: left;">Realitza el test anexe.</p>
+<p>Adaptadores gráfi co, red, multimedia Test de repaso</p>
+<h3>1. Las tarjetas ExpressCard tienen</h3>
+<ul>
+<li>Dos factores de forma 34 y 54.</li>
+<li>Dos factores de forma 35 y 55.</li>
+<li>Tres factores de forma 34, 35 y 55.</li>
+<li>Ninguna de las anteriores es correcta.</li>
+</ul>
+<h3>2. Las tarjetas ExpressCard soportan dos sistemas de</h3>
+<p>conectividad que el fabricante decide en su diseño del producto; estos sistemas son</p>
+<ul>
+<li>PCI y PCIe.</li>
+<li>PCI y USB.</li>
+<li>USB y PCIe.</li>
+<li>AGP y PCI.</li>
+</ul>
+<h3>3. Un módem ADSL, técnicamente hablando, está bien</h3>
+<p>denominado</p>
+<ul>
+<li>Sí, ya que permite el acceso a Internet.</li>
+<li>No, ya que al ser digital no hay ningún tipo de</li>
+</ul>
+<p>modulación/desmodulación.</p>
+<ul>
+<li>No, no existen los módem ADSL.</li>
+<li>Sí, porque se conectan a la roseta telefónica.</li>
+</ul>
+<h3>4. Según el tipo de televisión que queramos ver en nuestro</h3>
+<p>ordenador, podemos encontrar en el mercado diferen- tes tipos de tarjetas sintonizadoras</p>
+<ul>
+<li>Capturadoras y digitales.</li>
+<li>Satélite y analógicas.</li>
+<li>Híbridas y digitales.</li>
+<li>Las respuestas b) y c) son correctas.</li>
+</ul>
+<h3>5. En una tarjeta de sonido, el pequeño microprocesador</h3>
+<p>que efectúa los cálculos necesarios para gestionar el sonido, con tareas como la compresión y la descompre- sión de su señal, se denomina</p>
+<ul>
+<li>DAC.</li>
+<li>ADC.</li>
+<li>DSP.</li>
+<li>Mezclador.</li>
+</ul>
+<h3>6. En una tarjeta de sonido Sound Blaster 16, el número</h3>
+<p>representa</p>
+<ul>
+<li>La versión de la tarjeta.</li>
+<li>Que maneja simultáneamente 16 voces o canales.</li>
+<li>Que funciona a 16 bits.</li>
+<li>Que funciona a 16 bytes.</li>
+</ul>
+<h3>7. Una tarjeta de red Wi-Fi 5</h3>
+<ul>
+<li>Solo opera en la banda de 5 GHz.</li>
+<li>Solo opera en la banda de 2,4 GHz.</li>
+<li>Opera en la banda de 2,4 GHz y en la de</li>
+</ul>
+<p>5 GHz.</p>
+<ul>
+<li>Todas las anteriores son falsas.</li>
+</ul>
+<h3>8. El estándar de redes de computadoras Ethernet que</h3>
+<p>permite encender remotamente computadoras apaga- das mediante el envío de un magic packet, un paquete especial que recibe la tarjeta de red, se denomina</p>
+<ul>
+<li>WAKEUP-LINK.</li>
+<li>Wi-FiUP.</li>
+<li>Wake on LAN.</li>
+<li>Eso no existe.</li>
+</ul>
+<h3>9. El conector HDMI tipo A es compatible (solo imagen) con</h3>
+<p>un conector</p>
+<ul>
+<li>DVI.</li>
+<li>S-Vídeo.</li>
+<li>Mini-jack.</li>
+<li>RJ45.</li>
+</ul>
+<h3>10. El componente de la tarjeta gráfica que se utiliza en la</h3>
+<p>transformación de señales digitales (con las que trabaja la tarjeta gráfica) a señales analógicas (para poder ser interpretadas por el monitor) es</p>
+<ul>
+<li>RAMDAC.</li>
+<li>Buffer.</li>
+<li>GPU.</li>
+<li>GDDR4.</li>
+</ul>
+<p>Soluciones: 1a; 2c; 3c; 4d; 5c; 6b; 7a; 8c; 9a; 10a.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.16 — T2 - P SPEAKING - GIVE ADVICE ABOUT A SSD</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.17 — U2 - P4 - P CONT - T. EXPANSIÓ</p><p dir="ltr" style="text-align: left;"><a href="https://forms.gle/q3kabPEM5Z9kpUJa9">https://forms.gle/q3kabPEM5Z9kpUJa9</a><br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.18 — U2 - P4 - ACT1- RELATION BETWEEN GRAPHICs CARDS SPECS</p><div id="intro"><div><div id="intro"><div><p dir="ltr">(ENGLISH)</p><div id="intro"><div><p dir="ltr">Make a table with 4 rows</p><p dir="ltr">Spec Product. | Low Specs Graphic Gaming Card | Best Relation Quality/Prize Graphic Gaming Card | Best Specs Graphic Gaming Card <br/></p><p dir="ltr">When finish, write a brief recommendation about the different options in yout comparative.</p></div></div></div></div></div></div><br/></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0207.html">⬅️ 2.7 DISCOS DUROS CHS ECHS LBA</a>
+<a class="page-nav-btn" href="../ut03/index.html">📘 UT3 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

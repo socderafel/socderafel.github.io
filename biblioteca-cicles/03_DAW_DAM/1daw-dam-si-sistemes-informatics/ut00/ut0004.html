@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>0.4 DIASPOSITIVES UD1 PART 1 — Sistemes Informàtics | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖥️ Sistemes Informàtics — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Sistemes Informàtics</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 SI: LLIBRE QUE ANEM A SEGUIR EN LES CLASES</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 TRANSPARÈNCIES UNITAT 1</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Exercisis conversió binari - decimal I</a></li>
+<li><a href="../ut00/ut0003.html">0.3 SI: ENLLAÇ RENDIMENT CPU</a></li>
+<li><a class="active" href="../ut00/ut0004.html">0.4 DIASPOSITIVES UD1 PART 1</a></li>
+<li><a href="../ut00/ut0005.html">0.5 SI: TAULA DE TOPOLOGIES LAN</a></li>
+<li><a href="../ut00/ut0006.html">0.6 SI: TEORIA XARXES UD1</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 LA SHELL DE LINUX</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D</a></li>
+<li><a href="../ut02/ut0203.html">2.3 ENLLAÇOS DURS I SIMBÓLICS</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TEORIA XARXES</a></li>
+<li><a href="../ut03/ut0302.html">3.2 TEORIA SUBNETTING</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — GESTIÓ DE LA INFORMACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 GUIA DE LA UNITAT 5</a></li>
+<li><a href="../ut04/ut0402.html">4.2 TEORIA UNITAT 5 PART 1</a></li>
+<li><a href="../ut04/ut0403.html">4.3 TEORIA UNITAT 5 PART 2</a></li>
+<li><a href="../ut04/ut0404.html">4.4 TEORIA UNITAT 5 PART 3</a></li>
+<li><a href="../ut04/ut0405.html">4.5 TEORIA UNITAT 5 PART 4</a></li>
+<li><a href="../ut04/ut0406.html">4.6 TEORIA UNITAT 5 PART 5</a></li>
+<li><a href="../ut04/ut0407.html">4.7 TEORIA UNITAT 5 PART 6</a></li>
+<li><a href="../ut04/ut0408.html">4.8 TEORIA UNITAT 5 PART 7</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 TEORIA UNITAT 6 PART 1</a></li>
+<li><a href="../ut05/ut0502.html">5.2 TEORIA UNITAT 6 PART 2</a></li>
+<li><a href="../ut05/ut0503.html">5.3 TEORIA UNITAT 6 PART 3</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — SEGURETAT, RENDIMENT I RECURSOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 TEORIA UNITAT 7 PART1</a></li>
+<li><a href="../ut06/ut0602.html">6.2 TEORIA UNITAT 7 PART 2</a></li>
+<li><a href="../ut06/ut0603.html">6.3 TEORIA UNITAT 7 PART 3</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — TALLER HARDWARE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Manual placa base taller</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Teoria Components Hardware</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ</span>
+<h1>0.4 DIASPOSITIVES UD1 PART 1</h1>
+<p dir="ltr" style="text-align: left;">VON NEUMANN, MICROPROCESSADOR, PLACA BASE, COMPONENTS</p>
+<p>SISTEMAS INFORMÁTICOS</p>
+<h3>UNIDAD 1</h3>
+<p>EXPLOTACIÓN DE SISTEMAS MICROINFORMÁTICOS</p>
+<p>Índice 1.1 La arquitectura de los ordenadores 1.1.1 La máquina de Turing 1.1.2 La arquitectura Harvard 1.1.3 La arquitectura Von Neumann 1.2 El sistema informático 1.3 Los componentes físicos de un sistema informático 1.3.1 Componentes de la placa base 1.3.2 El microprocesador 1.3.3 La memoria RAM 1.3.4 Memoria gráfica o de vídeo 1.3.5 Buses y ranuras de expansión 1.3.6 Puertos y conectores 1.3.7 Unidades de almacenamiento secundario 1.3.8 Tarjetas de expansión 1.3.9 Dispositivos externos de entrada/salida. Periféricos</p>
+<p>1.1 LA ARQUITECTURA DE LOS ORDENADORES 1.1.1 LA MÁQUINA DE TURING Alan Mathison Turing desarrolló un modelo computacional que permitía resolver cualquier problema matemático siempre y cuando se redujera a un algoritmo. Este modelo se considera el precursor de la computación digital morderna. Según Turing, se demuestra que un problema es computable si se puede construir una máquina de Turing capaz de llevar a cabo el procedimiento para resolverlo.</p>
+<p>1.1.1 LA MÁQUINA DE TURING. COMPONENTES Una máquina de Turing consiste, básicamente, en una cinta infinita (memoria), dividida en casillas. Sobre esta cinta hay un dispositivo capaz de desplazarse a lo largo de ella a razón de una casilla cada vez. Este dispositivo cuenta con un cabezal capaz de leer un símbolo escrito en la cinta, o de borrar el existente e imprimir uno nuevo en su lugar. Por último, contiene además un registro (procesador) capaz de almacenar un estado cualquiera, el cual viene definido por un símbolo.</p>
+<p>Ver ejemplo</p>
+<p>1.1 LA ARQUITECTURA DE LOS ORDENADORES 1.1.2 LA ARQUITECTURA HARVARD Tiene la memoria de datos separada de la memoria de instrucciones para mejorar el rendimiento. El inconveniente es que tiene que dividir la caché entre las dos memorias. Funciona mejor cuando la frecuencia de lectura de istrucciones y datos es más o menos la misma.</p>
+<p>Se utiliza en procesadores de señal digital, usados en productos para procesamiento de audio y vídeo.</p>
+<p>1.1 LA ARQUITECTURA DE LOS ORDENADORES 1.1.3 LA ARQUITECTURA VON NEUMANN En 1944, John von Neumann describió un computador que almacenaba los programas y los datos en una misma memoria. Según esta arquitectura, un ordenador está formado por:  ALU (Unidad Aritmético-Lógica): realiza cálculos, comparaciones y toma decisiones lógicas.</p>
+<p> UC (Unidad de Control): interpreta las instrucciones del programa.  Memoria: formada por elementos que permiten almacenar y recuperar la información y registros que almacenan temporalmente la información.  Sistemas de Entrada/Salida: permiten la comunicación con los dispositivos periféricos  Bus de datos: proporcionan un medio de transporte entre las distintas partes.</p>
+<p>Arquitectura de Von Neumann</p>
+<p>1.2 EL SISTEMA INFORMÁTICO Conjunto de partes interrelacionadas (HW, SW y componentes humanos) que permiten almacenar y procesar infomación</p>
+<p>1.3 COMPONENTES FÍSICOS DE UN SISTEMA INFORMÁTICO Torre, caja o carcasa Fuente de alimentación: transforma la corriente alterna en contínua. Sistema de refrigeración Placa base: elemento importante del ordenador. A ella se conectan el resto de componentes. Microprocesador: circuito integrado compuesto por millones de transistores. Encargado de realizar las operaciones aritmético-lógicas, de control y comunicación con el resto de componentes. Es el cerebro del ordenador.</p>
+<p> Circuito impreso (PCB): conectar eléctricamente componentes electrónicos.  Socket o zócalo del procesador.  Zócalos de memoria: ranuras donde se colocan los módulos de memoria.  Zócalos de expansión (de buses): ranuras para agregar características y aumentar el rendimiento del ordenador.</p>
+<p> Chipset: conjunto de circuitos electrónicos que realiza la gestión de la trasnferencia de datos entre los distintos componentes del ordenador 1.3.1 COMPONENTES DE LA PLACA BASE</p>
+<p>1.3.1 COMPONENTES DE LA PLACA BASE (II)  El chipset se divide en:  Northbridge, que une los componentes más rápidos (microprocesador, mem. RAM y unidad de procesamiento gráfico.  SouthBridge, que se encarga de unir los perifericos y dispositivos de almacenamiento (disco duro, ratón, teclado, puertos,...)  BIOS: programa registrado en una memoria no volátil (antes ROM, ahora flash). Identifica los componentes pricipales del ordenador y proporciona acceso y control a todos ellos.</p>
+<p>1.3.1 COMPONENTES DE LA PLACA BASE (III)  Pila o batería: proporciona la electricidad necesaria para almacenar cierta información cuando el ordenador no está encendido.  Conector de alimentación: es donde se conecta la fuente de alimentación.  Jumpers: permiten interconectar dos terminales de manera temporal. Una de sus aplicaciones más habituales es en las unidades IDE (discos duros y uds. discos ópticos) donde se usan para distinguir entre el dispositivo “maestro” y el “esclavo”.</p>
+<p> Pines: se conectan pares trenzados de cables que van al botón de encendido, reset, altavoz, led actividad disco duro,...  Puertos externos o controladores: se usan para conectar los periféricos al ordenador (teclado, ratón (PS2), USB, impresora (paralelo),etc.)</p>
+<p>1.3.2 EL MICROPROCESADOR Una CPU puede estar soportada por varios microprocesadores. Es lo que se llama procesador multinúcleo y combina 2 o más procesadores independientes en un solo circuito integrado. El rendimiento del procesador se puede medir de varias formas</p>
+<p> Frecuencia de reloj: indica la velocidad a la que un ordenador realiza las operaciones básicas. Se mide en ciclos por segundo (Hercios). Ultimamente se ha estabilizado entre los 2- 4Ghz, pues no se requiere frecuencias más altas para aumentar la capacidad e proceso.</p>
+<p> Velocidad del bus  Memoria Caché: más rápida que la RAM. Almacena los datos que se prevée que se van a usar. Los microprocesadores deben tener un sistema de disipación de calor para refrigerarse.</p>
+<p>1.3.3 LA MEMORIA RAM Memoria de acceso aleatorio: es donde se guardan los datos que se están utilizando en el momento actual. Es una memoria volátil: el almacenamiento es temporal. Los datos y programas permanecen mientras el ordenador está encendido. Hay distintos modelos de memoria RAM: enlos ordenadores antiguos se usa memorias DIMM.</p>
+<p>Actualmente se usan memorias DDR, DDR2 y DDR3, que funcionan al doble de velocidad que las primeras. Parámetros:  Tiempo de acceso: cuanto menor tiempo de acceso, más rápida.  Velocidad de reloj  Voltaje: normalmente cuanto más alto, mayor consumo y temperatura.  Tecnologías soportadas: Single Memory Chanel(1 canal intercambio información) y Dual Memory Channel (2 canales simultáneos)</p>
+<p>1.3.4 MEMORIA DE VÍDEO O GRÁFICA Utilizada por el controlador de la tarjeta gráfica para manejar toda la información visual 1.3.5 BUSES Y RANURAS DE EXPANSIÓN Interconectan los distintos componentes del ordenador  PCI: se utilizan para conectar tarjetas de propósito general (red, sintonizadorea TV, sonido...). Son de color blanco.</p>
+<p> PCI Express: evolución de PCI, más rápido. Se usa para tarjetas gráficas.  AGP: se usa para conectar la tarjeta gráfica. Es de color marrón.</p>
+<p>1.3.6 PUERTOS Y CONECTORES Son conectores externos que podemos encontrar en los ordenadores para conectar periféricos.  Puertos serie: sólo pueden transferir un bit a la vez. En muchos periféricos se está remplazando por USB.  Puertos paralelos: pueden transferir varios bits a la vez, por lo que son más rápidos que los serie.</p>
+<p> Puertos USB: permiten conectar/desconectar dispositivos con el ordenador encendido (Plug and Play).  Conector RJ-45, de la tarjeta de red.  Conector VGA (V ideo Graphic Adapter): para monitores y proyectores  DVI (Digital Visual Interface): monitores. Transmite en formato digital.</p>
+<p> HDMI (High-Definition Multimedia Interface): norma de audio y vídeo digital para ser sustituto del euroconector.</p>
+<p> IDE, Serial ATA: conectan dispositivos de almacenamiento masivo de datos (discos duros, discos ópticos).  Puertos Jack (conectores de audio): para conectar altavoces, micrófono,...  Puertos PS/2: para conectar teclados y ratones.</p>
+<p>1.3.7 UNIDADES DE ALMACENAMIENTO SECUNDARIO Debido a que la información de la memoria RAM desaparece al apagar el ordenador se necesitan dispositivos para almacenarla permanentemente. Existen varias tecnologias:  Almacenamiento magnético: dispositivos formados por una pieza metálica o de plástico con una capa de material magnético que permite almacenar información binaria.</p>
+<p> DISCO DURO: formado por varios discos rígidos apilados, unidos por un eje. Cada dos discos hay espacio para que puedan moverse las cabezas de lectura/escritura.Partes:  Plato: cada uno de los discos existentes.  Cara: cada uno de los lados de un plato.  Cabeza: número de cabezales.</p>
+<p> Pista: cada uno de los anillos concéntricos en que se dividen las caras.  Cilndro: conjunto de varias pistas que están alineadas verticalmente (una de cada cara)  Sector: cada una de las divisiones de una pista</p>
+<p> Tipos de conexión de los discos duros:  IDE  SCSI  SATA  SAS  Estructura lógica</p>
+<ul>
+<li>Sector de arramque (Master Boot Record). Es el primer sector</li>
+</ul>
+<p>del disco duro. En él se almacena la tabla de particiones y un pequeño programa master de inicialización, llamado también Master Boot. Es el encargado de leer la tabla de particiones y ceder el control al sector de arranque de la partición activa.</p>
+<ul>
+<li>Tabla de particiones y particiones. Diferentes divisiones de</li>
+</ul>
+<p>una unidad física. Existen de 3 tipos:  Primarias (sólo puede haber 4)  Extendidas (1 por disco). Contiene part. lógicas.  Lógicas (hasta 23). Ocupa toda o parte de 1 part. Ext. Formatos FAT, NTFS, EXT2, EXT3, EXT4, FAT32,...</p>
+<p>Almacenamiento óptico: los discos ópticos utilizan un soporte de alumninio y policarbonato. Utilizan la luz de un láser para leer o grabar información. LA unidad de CD está constituida por un motor que hace girar el disco y un rayo láser que recorre el disco. La luz láser rebota en la superfici del disco o se dispersa si hay una hendidura, interpretando unos y ceros. Existe otro láser de más intensidad que permite modificar las hendiduras consiguiendo grabar o borrar el disco.</p>
+<p>CD-ROM (700 MB) CD-R CD-RW DVD (4,7GB – 9GB) Blu-Ray (25 - 50GB)</p>
+<p>Almacenamiento electrónico: este tipo de memorias usan chips. Existen distintos tipos de memorias electrónicas, como pendrives y tarjetas de memoria, que para conectarlas al ordenadores necesitas un lector de tarjetas. Existen varios formatos de tarjetas de memoria</p>
+<p> CompactFlash  Memory Stick  SmartMedia  SD  MiniSD  MicroSD</p>
+<p>1.3.8 TARJETAS DE EXPANSIÓN TARJETA GRÁFICA Se encarga de procesar los datos que vienen de la CPU y transformarlos en información comprensible y representable en un dispositivo de salida (monitor, proyector) Puede aparecer como una tarjeta de expansión o integrada en la placa base.</p>
+<p>A veces puede ser necesario un procesador que se encarge de las tareas de los gráficos y libere un poco a la CPU.</p>
+<p>1.3.9 DISPOSITIVOS EXTERNOS DE E/S. PERIFÉRICOS Componentes del ordenador que amplian su funcionalidad básica. Se pueden clasificar en: Dispositivos de entrada: permiten introducir datos en el ordenador(teclado, ratón, escáner, …) Dispositivos de salida: son utilizados para mostrar información generada o contenida en el ordenador (impresora, monitor, altavoz, …) Dispositivos de E/S o comunicación: permiten la entrada y salida de información (pantalla táctil, impresora multifunción, módem, router, switch, etc.) Dispositivos de almacenamiento: para guardar datos de forma permanente o leer los datos almacenados (disco duro, pendrive, ...)</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/ut0003.html">⬅️ 0.3 SI: ENLLAÇ RENDIMENT CPU</a>
+<a class="page-nav-btn" href="../ut00/ut0005.html">0.5 SI: TAULA DE TOPOLOGIES LAN ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

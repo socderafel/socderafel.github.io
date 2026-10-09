@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT9 — U8 - VLAN — Planificació i Administració de Xarxes | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📡 Planificació i Administració de Xarxes — 1r ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Planificació i Administració de Xarxes</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — General PAX</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Tutoria 1ASIX</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Horari 1ASIX</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Calendari 21 22</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Plànol IES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — U1 - Caracterització de les xarxes</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U1. Caracterització de les xarxes</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — U2 - Arquitectura de xarxa</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U2 Arquitectura de xarxa</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U2.1 IPs</a></li>
+<li><a href="../ut03/ut0303.html">3.3 U2 P1 ES</a></li>
+<li><a href="../ut03/ut0304.html">3.4 U2 P1 EN</a></li>
+<li><a href="../ut03/ut0305.html">3.5 U2 E1</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — U3 - Xarxes d'àrea local</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U3 Xarxes àrea local</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — U4 - Nivell físic</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 U4 Nivell físic</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U4 P1</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — U5 - Cablejat estructurat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U5 Cablejat Estructurat</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Cablejat Casa de l'Alumne UPV</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — U6 - Nivell d'enllaç</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U6 - Nivell d'enllaç</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Trama PPP</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — U7 - El switch</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 U7 El switch</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Cisco IOS</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT9 — U8 - VLAN</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 U8 VLAN</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Comandos Cisco VLAN</a></li>
+<li><a href="../ut09/ut0903.html">9.3 U8E1</a></li>
+<li><a href="../ut09/ut0904.html">9.4 U8E2</a></li>
+<li><a href="../ut09/ut0905.html">9.5 VTP, DTP i Capa 3</a></li>
+<li><a href="../ut09/ut0906.html">9.6 Colisió i difusió</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — U9 - Nivell de xarxa. El router</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 U9 Nivell de xarxa. El Router</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — U10 - Adreçament IP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 U10 Adreçament IP</a></li>
+<li><a href="../ut11/ut1102.html">11.2 Exercicis classe subnetting</a></li>
+<li><a href="../ut11/ut1103.html">11.3 Taula A2</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — U11 - Encaminament</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 U11 Enrutament</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Exemple Enrutament Estàtic</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — U12 - Capa de transport i aplicació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 U12 Nivell de Transport i Aplicació</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r ASIX · Grau Superior · UT9 Completa</span>
+<h1>📘 UT9 — U8 - VLAN (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0901"><strong>9.1 U8 VLAN</strong></a> (o <a href="./ut0901.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0902"><strong>9.2 Comandos Cisco VLAN</strong></a> (o <a href="./ut0902.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0903"><strong>9.3 U8E1</strong></a> (o <a href="./ut0903.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0904"><strong>9.4 U8E2</strong></a> (o <a href="./ut0904.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0905"><strong>9.5 VTP, DTP i Capa 3</strong></a> (o <a href="./ut0905.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0906"><strong>9.6 Colisió i difusió</strong></a> (o <a href="./ut0906.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut09actividades"><strong>✍️ Activitats pràctiques UT9</strong></a> (o <a href="./ut09actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0901">9.1 U8 VLAN</h2>
+
+
+
+<hr/>
+<p>PAX - U8 – VLAN 1er ASIX</p>
+<p>1 ASIX - PAX Concepte de VLAN</p>
+<ul>
+<li>Domini de col·lisió</li>
+<li>Conjunt d’equipts conectat mitjançant hubs o cables directes.</li>
+</ul>
+<p>1 ASIX - PAX Concepte de VLAN</p>
+<ul>
+<li>Domini de difusió</li>
+<li>Conjunt d’equips connectats mitjançant hubs, ponts i switch.</li>
+<li>Els routers segmenten dominis de difusió, perquè no permeten passar</li>
+</ul>
+<p>missatges de difusió.</p>
+<p>1 ASIX - PAX Concepte de VLAN</p>
+<ul>
+<li>La utilització de switch va millorar el rendiment de les xarxes al crear</li>
+</ul>
+<p>els dominis de difusió però seguia existint el problema de que el switch reenvía el paquet per tots els ports menys pel que ha rebut la informació.</p>
+<ul>
+<li>En xarxes gran, genera tràfic innecessari. 2 opcions</li>
+<li>Utilitzar routers que separen cada subxarxa</li>
+<li>Utilitzar switch amb capacitat de crear VLAN</li>
+</ul>
+<p>1 ASIX - PAX Concepte de VLAN</p>
+<ul>
+<li>VLAN es un mecanisme que permet als switch gestionables</li>
+</ul>
+<p>segmentar la xarxa en dominis de difusió, sense necessitat d’usar routers (que són més lents).</p>
+<ul>
+<li>Cada VLAN està formada per un subconjunt qualsevol d’equips, que</li>
+</ul>
+<p>poden estar físicament en el mateix segment o en diferents segments de xarxa.</p>
+<p>1 ASIX - PAX Concepte de VLAN</p>
+<ul>
+<li>En la següent imatge es mostren dos VLAN</li>
+<li>VLAN ADM i VLAN INF</li>
+<li>Cada VLAN és un domini de difusió diferente. Cada missatge enviat per</li>
+</ul>
+<p>difusió, sols aplega als equips de la VLAN.</p>
+<p>1 ASIX - PAX Concepte de VLAN</p>
+<ul>
+<li>Cal tindre en compte també que els equips d’una VLAN no tenen</li>
+</ul>
+<p>perquè estar en el mateix segment de xarxa de forma obligada.</p>
+<p>1 ASIX - PAX Trama VLAN</p>
+<ul>
+<li>El mecanisme que tenen les VLAN per saber si un paquet l’envia a una</li>
+</ul>
+<p>VLAN o altra es afegir dos nous camps a la trama Ethernet.</p>
+<ul>
+<li>Trama IEEE 802.1q. DOT1Q.</li>
+</ul>
+<p>1 ASIX - PAX Tipus de VLAN</p>
+<ul>
+<li>VLAN predeterminada</li>
+<li>S’assignen tots els ports del switch quan el dispositiu inicia. En Cisco es la VLAN 1. No</li>
+</ul>
+<p>es pot canviar el nom ni eliminar. Swtich antic o tràfic sense etiqueta..</p>
+<ul>
+<li>VLAN de dades</li>
+<li>Està configurada sols per enviar tràfic generat per l’usuari. També anomenada VLAN</li>
+</ul>
+<p>d’usuari.</p>
+<ul>
+<li>VLAN d’administració</li>
+<li>La utilitza el administrador per realitzar tasques de gestió. Convenient canviar-la per</li>
+</ul>
+<p>la VLAN 99.</p>
+<p>1 ASIX - PAX Tipus de VLAN</p>
+<ul>
+<li>VLAN nativa</li>
+<li>Sols s’utilitza per enllaços</li>
+</ul>
+<p>troncals (trunks)</p>
+<ul>
+<li>VLAN de veu</li>
+<li>Requereix d’una VLAN</li>
+</ul>
+<p>separada perquè el tràfic de veu requereix alta prioritat.</p>
+<p>1 ASIX - PAX VLAN dinàmiques</p>
+<ul>
+<li>Protocol VTP – VLAN trunking protocol. Serveix per assignar a</li>
+</ul>
+<p>múltiples switch la configuració de VLAN des d’un switch que actua com a servidor. Aixo permet l’administració centralitzada des d’un sol switch. En Cisco existeix DTP (Dynamic troncal protocol)</p>
+<p>1 ASIX - PAX Dubtes?</p>
+<hr/>
+<h2 id="ut0902">9.2 Comandos Cisco VLAN</h2>
+<p>VLAN</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco 3 Configuración de VLAN</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Configuración de VLAN Rangos de VLAN en switches Catalyst Los switches Catalyst 2960 y 3650 admiten más de 4000 VLAN. Rango normal VLAN 1 - 1005 Rango extendido VLAN 1006 - 4095 Utilizado en pequeñas y medianas empresas Usado por los proveedores de servicios 1002 — 1005 están reservados para VLAN heredadas Están en Running-Config 1, 1002 — 1005 se crean automáticamente y no se pueden eliminar Admite menos funciones de VLAN Almacenado en el archivo vlan.dat en flash Requiere configuraciones de VTP VTP puede sincronizar entre conmutadores</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Comandos de creación deVLANde configuración de VLAN Los detalles de la VLAN se almacenan en el archivo vlan.dat. Crea VLAN en el modo de configuración global. Tarea Comando de IOS Ingresa al modo de configuración global.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch# configure terminal</code></pre>
+</div>
+<p>Cree una VLAN con un número de identificación válido.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config)# vlan vlan-id</code></pre>
+</div>
+<p>Especificar un nombre único para identificar la VLAN.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config-vlan)# name vlan-name</code></pre>
+</div>
+<p>Vuelva al modo EXEC con privilegios. Conmutador (config-vlan) # final Ingresa al modo de configuración global.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch# configure terminal</code></pre>
+</div>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Configuración de VLAN Ejemplo de creación de VLAN</p>
+<ul>
+<li>Si el Student PC va a estar en VLAN</li>
+</ul>
+<p>20, primero crearemos la VLAN y luego la nombraremos.</p>
+<ul>
+<li>Si no lo nombra, Cisco IOS le dará un</li>
+</ul>
+<p>nombre predeterminado de vlan y el número de cuatro dígitos de la VLAN. Por ejemplo, vlan0020 para VLAN 20. Indicador Comando S1# Configure terminal S1(config)# vlan 20 S1(config-vlan)# name student S1(config-vlan)# finalizar</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Comandos de asignación de puertos deVLANde configuración de VLAN Una vez creada la VLAN, podemos asignarla a las interfaces correctas. Tarea Comando Ingresa al modo de configuración global.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch# configure terminal</code></pre>
+</div>
+<p>Ingrese el modo de configuración de interfaz.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config)# interface interface-id</code></pre>
+</div>
+<p>Establezca el puerto en modo de acceso.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config-if)# switchport mode access</code></pre>
+</div>
+<p>Asigne el puerto a una VLAN.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config-if)# switchport access vlan vlan-id</code></pre>
+</div>
+<p>Vuelva al modo EXEC con privilegios.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config-if)# end</code></pre>
+</div>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Configuración de VLAN Ejemplo de asignación de puerto VLAN Podemos asignar la VLAN a la interfaz del puerto.</p>
+<ul>
+<li>Una vez que el dispositivo se asigna</li>
+</ul>
+<p>la VLAN, el dispositivo final necesitará la información de dirección IP para esa VLAN</p>
+<ul>
+<li>Aquí, Student PC recibe 172.17.20.22</li>
+</ul>
+<p>Indicador Comando S1# Configure terminal S1(config)# Interfaz fa0/18 S1(config-if)# Switchport mode access S1(config-if)# Switchport access vlan 20 S1(config-if)# finalizar</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Datos de configuración de VLAN y VLAN de voz Un puerto de acceso solo se puede asignar a una VLAN de datos. Sin embargo, también se puede asignar a una VLAN de voz para cuando un teléfono y un dispositivo final estén fuera del mismo puerto de conmutación.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Ejemplo de VLAN de voz ydatos de configuración de VLAN</p>
+<ul>
+<li>Queremos crear y nombrar VLAN de voz y</li>
+</ul>
+<p>datos.</p>
+<ul>
+<li>Además de asignar la VLAN de datos,</li>
+</ul>
+<p>también asignaremos la VLAN de voz y activaremos QoS para el tráfico de voz a la interfaz.</p>
+<ul>
+<li>El switch catalizador más reciente creará</li>
+</ul>
+<p>automáticamente la VLAN, si aún no existe, cuando se asigne a una interfaz. Nota: QoS está más allá del alcance de este curso. Aquí mostramos el uso del comando mls qos trust [cos | device cisco-phone | dscp | ip-precedence].</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Configuración de VLAN Verifique la información de VLAN Use el comando show vlan . La sintaxis completa es: show vlan [brief | id vlan-id | name vlan-name | summary] Tarea Opción de comando Muestra el nombre, el estado y sus puertos de la VLAN, una VLAN por línea.</p>
+<p>breve Muestra información sobre el número de ID de VLAN identificado. id vlan-id Muestra información sobre el número de ID de VLAN identificado. El nombre de vlane es una cadena ASCII de 1 a 32 caracteres. name vlan-name Mostrar el resumen de información de la VLAN. resumen</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Configuración de VLAN Cambiar pertenencia al puerto VLAN Hay varias formas de cambiar la membresía de VLAN</p>
+<ul>
+<li>Vuelva a ingresar el comando switchport</li>
+</ul>
+<p>access vlan vlan-id</p>
+<ul>
+<li>use la vlan de acceso sin puerto de</li>
+</ul>
+<p>conmutación para volver a colocar la interfaz en la VLAN 1 Utilice los comandos show vlan brief o show interface fa0/18 switchport para verificar la asociación correcta de VLAN.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Configuración de VLAN Eliminar VLAN Elimine las VLAN con el comando no vlan vlan-id . Precaución: antes de eliminar una VLAN, reasigne todos los puertos miembros a una VLAN diferente..</p>
+<ul>
+<li>Elimine todas las VLAN con los comandos delete flash:vlan.dat o delete vlan.dat .</li>
+<li>Vuelva a cargar el switch al eliminar todas las VLAN.</li>
+</ul>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: Para restaurar el valor predeterminado de fábrica...</p><p>Nota: Para restaurar el valor predeterminado de fábrica, desconecte todos los cables de datos, borre la configuración de inicio y elimine el archivo vlan.dat y, a continuación, vuelva a cargar el dispositivo.</p></div>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco 4 Troncales VLAN</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Comandos de configuracióntroncal deVLAN Configure y verifique las troncales VLAN. Los troncos son capa 2 y transportan tráfico para todas las VLAN. Tarea Comando de IOS Ingresa al modo de configuración global.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch# configure terminal</code></pre>
+</div>
+<p>Ingrese el modo de configuración de interfaz.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config)# interface interface-id</code></pre>
+</div>
+<p>Establezca el puerto en modo de enlace permanente. Conmutador(config-if) # troncaldemodo de puerto de conmutación Cambie la configuración de la VLAN nativa a otra opción que no sea VLAN 1.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config-if)# switchport trunk native vlan</code></pre>
+</div>
+<p>vlan-id Especificar la lista de VLAN que se permitirán en el enlace troncal.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config-if)# switchport trunk allowed</code></pre>
+</div>
+<p>vlan vlan-list Vuelva al modo EXEC con privilegios.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Switch(config-if)# end</code></pre>
+</div>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Ejemplo de Configuración de Troncales Troncales de VLAN Las subredes asociadas a cada VLAN son</p>
+<ul>
+<li>VLAN 10 - Faculty/Staff - 172.17.10.0/24</li>
+<li>VLAN 20 - Students - 172.17.20.0/24</li>
+<li>VLAN 30 - Guests - 172.17.30.0/24</li>
+<li>VLAN 99 - Native - 172.17.99.0/24</li>
+</ul>
+<p>F0/1 port on S1 is configured as a trunk port. Nota: Esto supone un conmutador 2960 que utiliza el etiquetado 802.1q. Los switches de capa 3 requieren que la encapsulación se configure antes del modo troncal. Indicador Comando S1(config)# Interfaz fa0/1 S1(config-if)# Switchport mode trunk S1(config-if)# Switchport trunk native vlan 99 S1(config-if)# Switchport trunk allowed vlan 10,20,30,99 S1(config-if)# finalizar</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Troncales de VLAN Verifique la configuración de troncales Establezca el modo troncal y la vlan nativa. Observe el comando sh int fa0/1 switchport</p>
+<ul>
+<li>Se establece en troncal administrativamente</li>
+<li>Se establece como troncal</li>
+</ul>
+<p>operacionalmente (en funcionamiento)</p>
+<ul>
+<li>La encapsulación es dot1q</li>
+<li>VLAN nativa establecida en VLAN 99</li>
+<li>Todas las VLAN creadas en el switch</li>
+</ul>
+<p>pasarán tráfico en este tronco</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Troncales de VLAN Restablezca el tronco al estado predeterminado</p>
+<ul>
+<li>Restablezca la configuración</li>
+</ul>
+<p>predeterminada del tronco con el comando no.</p>
+<ul>
+<li>Todas las VLAN permitidas para pasar</li>
+</ul>
+<p>tráfico</p>
+<ul>
+<li>VLAN nativa = VLAN 1</li>
+<li>Verifique la configuración</li>
+</ul>
+<p>predeterminada con un comando sh int fa0/1 switchport .</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Troncales de VLAN Restablezca el tronco al estado predeterminado (Cont.) Restablezca el tronco a un modo de acceso con el comando switchport mode access</p>
+<ul>
+<li>Se establece en una interfaz de acceso</li>
+</ul>
+<p>administrativamente</p>
+<ul>
+<li>Se establece como una interfaz de acceso</li>
+</ul>
+<p>operacionalmente (en funcionamiento)</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco 5 Dynamic Trunking ProtocolProtocolo de enlace dinámico</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Protocolo de enlace dinámico Introduction to DTP El Protocolo de enlace troncal dinámico (DTP) es un protocolo propietario de Cisco. Las características de DTP son las siguientes</p>
+<ul>
+<li>Activado de forma predeterminada en switches Catalyst 2960 y 2950</li>
+<li>Dynamic-Auto es el valor predeterminado en los conmutadores 2960 y 2950</li>
+<li>Puede desactivarse con el comando nonegotiate</li>
+<li>Puede volver a activarse configurando la interfaz en dinámico automático</li>
+<li>Establecer un conmutador en un tronco estático o acceso estático evitará problemas de</li>
+</ul>
+<p>negociación con los comandos switchport mode trunk o switchport mode access .</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Protocolo de enlace dinámico Modos de interfaz negociados El comando switchport mode tiene opciones adicionales. Utilice el comando switchport nonegotiate interface configuration para detener la negociación DTP.</p>
+<p>Opción Descripción Acceso Modo de acceso permanente y negocia para convertir el vínculo vecino en un vínculo de acceso Dinámico automático Will se convierte en una interfaz troncal si la interfaz vecina se configura en modo troncal o deseable Dinámico deseable Busca activamente convertirse en un tronco negociando con otras interfaces automáticas o deseables Enlace troncal Modo de enlace permanente y negocia para convertir el enlace vecino en un enlace troncal</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Resultados del protocolo de enlace troncal dinámico de una configuración DTP Las opciones de configuración de DTP son las siguientes: Dinámico automático Dinámico deseado Troncal Acceso Dinámico automático Acceso Troncal Troncal Acceso Dinámico deseado Troncal Troncal Troncal Acceso Troncal Troncal Troncal Troncal Conectividad limitada Acceso Acceso Acceso Conectividad limitada Acceso</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco Protocolo de enlace dinámico Verifique el modo DTP La configuración predeterminada de DTP depende de la versión y plataforma del IOS de Cisco. § Utilice el comando show dtp interface para determinar el modo DTP actual.</p>
+<p>§ La práctica recomendada recomienda que las interfaces se configuren para acceder o troncal y para desconectarse DTP</p>
+<hr/>
+<h2 id="ut0903">9.3 U8E1</h2>
+<div class="admonition warning"><p class="admonition-title">📄 Document Escanejat / Visual (U8E1.pdf)</p><p>Aquest document PDF (6 pàgines) està compost principalment per esquemes o imatges escanejades.</p></div>
+<hr/>
+<h2 id="ut0904">9.4 U8E2</h2>
+<div class="admonition warning"><p class="admonition-title">📄 Document Escanejat / Visual (U8E2.pdf)</p><p>Aquest document PDF (2 pàgines) està compost principalment per esquemes o imatges escanejades.</p></div>
+<hr/>
+<h2 id="ut0905">9.5 VTP, DTP i Capa 3</h2>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Escalamiento de VLAN</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. 1 VTP, VLAN extendidas y DTP</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § El protocolo de troncal VLAN (VTP) permite que un administrador de redes maneje las VLAN en un switch configurado como servidor VTP. § El servidor VTP distribuye y sincroniza la información de la VLAN en los enlaces troncales a los switches habilitados por el VTP en toda la red conmutada.</p>
+<p>Conceptos y funcionamiento del VTP Descripción general del VTP</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Conceptos y funcionamiento del VTP Modos del VTP</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Conceptos y funcionamiento del VTP Modos del VTP (cont.)</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Conceptos y funcionamiento del VTP Publicidad del VTP § Tres tipos de anuncios del VTP: • Publicaciones de resumen: contienen el nombre del dominio del VTP y el número de revisión de la configuración.</p>
+<p>• Solicitud de publicación: responde a un mensaje de publicación de resumen cuando la publicación de resumen contiene un número de revisión de configuración más alto que el valor actual. • Publicaciones de subgrupos: contienen información de VLAN, incluido cualquier cambio.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Conceptos y funcionamiento del VTP Versiones del VTP § Los switches en el mismo dominio VTP deben utilizar la misma versión de VTP. Nota: La última versión del VTP es la versión 3, que va más allá del alcance de este curso.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Conceptos y funcionamiento del VTP Configuración predeterminada del VTP § El comando show vtp status muestra el estado del VTP que incluye lo siguiente: • Versión de VTP que se puede ejecutar y que se está ejecutando • Nombre de dominio del VTP • Modo de depuración del VTP • Generación de traps del VTP • ID del dispositivo • Última modificación de la configuración • Modo operativo del VTP • Cantidad máxima de VLAN admitidas localmente • Cantidad de VLAN existentes • Revisión de la configuración • MD5 Digest Verificar el estado predeterminado del protocolo VTP</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Conceptos y funcionamiento del VTP Advertencias del VTP § El número de revisión de configuración del VTP se almacena en la NVRAM. § Para restablecer el número de revisión de configuración del VTP a cero</p>
+<p>• Cambie el dominio VTP del switch a un dominio VTP inexistente y luego vuelva a cambiar el dominio al nombre original. • Cambie al modo VTP del switch al modo transparente y luego vuelva al modo anterior del VTP.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Conceptos y funcionamiento del VTP Advertencias del VTP (cont.) § Consulte el gráfico: • Se agrega el S4. La configuración de inicio no se ha borrado y el archivo VLAN.DAT en el S4 no se ha eliminado. El S4 tiene el mismo nombre de dominio VTP configurado que los otros dos switches pero su número de revisión es 35, que es un número más alto que el número de revisión en los otros dos switches.</p>
+<p>• El S4 tiene la VLAN 1 y se configura con la VLAN 30 y</p>
+<h3>40. Pero el S4 no tiene las VLAN 10 y 20 en la base</h3>
+<p>de datos. Debido a que el S4 tiene un número de revisión más alto, el resto de los switches en el dominio se sincronizarán con la revisión del S4. • Como consecuencia, las VLAN 10 y 20 no existirán más en los switches, lo que deja sin conectividad a los clientes que están conectados a los puertos que pertenecen a VLAN no existentes.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Configuración del VTP Descripción general de la configuración del VTP § Pasos para configurar el VTP</p>
+<ul>
+<li>Paso 1: configure el servidor VTP.</li>
+<li>Paso 2: configure el nombre de</li>
+</ul>
+<p>dominio y la contraseña del VTP.</p>
+<ul>
+<li>Paso 3: configure los clientes VTP.</li>
+<li>Paso 4: configure las VLAN en el</li>
+</ul>
+<p>servidor VTP.</p>
+<ul>
+<li>Paso 5: verifique que los clientes</li>
+</ul>
+<p>VTP hayan recibido la nueva información de la VLAN.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Configuración del VTP Paso 1: configure el servidor VTP § Utilice el comando vtp mode server para configurar un switch como servidor VTP. • Confirme que todos los switches estén configurados con la configuración predeterminada antes de emitir este comando para evitar problemas con los números de revisión de configuración.</p>
+<p>§ Utilice show vtp status para verificar. • Observe que el número de revisión de configuración todavía esté configurado en 0 y la cantidad de VLAN existentes sea 5. • Las 5 VLAN son la VLAN 1 predeterminada y las VLAN 1002-1005.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Configuración del VTP Paso 2: configure el nombre de dominio y la contraseña del VTP § Utilice el comando dominio vtp domain-name para configurar el nombre de dominio. • El cliente VTP debe tener el mismo nombre de dominio que el servidor VTP antes de que acepte las publicaciones del VTP.</p>
+<p>§ Configure una contraseña con el comando vtp password password. • Use el comando show vtp password para verificar.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Configuración del VTP Paso 3: configure los clientes VTP § Use el comando vtp mode client para configurar los clientes VTP. § Utilice el mismo nombre de dominio y contraseña como servidor VTP.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Configuración del VTP Paso 4: configure las VLAN en el servidor VTP § Use el comando vlan vlan-number para crear las VLAN. § Use show vlan brief para verificar las VLAN.</p>
+<p>§ Use show vtp status para verificar el estado del servidor. • Cada vez que se agrega una VLAN, se incrementa el registro de configuración.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Configuración del VTP Paso 5: verifique que los clientes VTP hayan recibido la nueva información de la VLAN § Utilice el comando show vlan brief para verificar que el cliente haya recibido la nueva información de la VLAN.</p>
+<p>§ Verifique el estado del cliente con el comando show vtp status.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. VLAN extendidas Rangos de VLAN en los switches Catalyst § Los switches Catalyst de las series 2960 y 3560 admiten más de 4000 VLAN. § El rango normal de las VLAN se enumera del 1 al 1005.</p>
+<p>• Se almacena en el archivo vlan.dat. § El rango extendido de las VLAN se enumera del 1006 al 4094. • No se almacena en el archivo vlan. dat. • El VTP no detecta.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. VLAN extendidas Creación de una VLAN § El rango normal de VLAN se almacena en la memoria flash en vlan.dat. § Use vlan vlan-id para crear una VLAN. • Use name vlan-name to name the VLAN.</p>
+<p>• Se recomienda asignarle un nombre a cada VLAN en la configuración de un switch. § Para configurar varias VLAN, se puede introducir una serie de ID de VLAN separadas por comas o un rango de ID de VLAN separado por guiones. • vlan 100,102,105-107</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. VLAN extendidas Asignación de puertos a las VLAN § Un puerto de acceso puede pertenecer a solo una VLAN por vez. • La única excepción es cuando un teléfono IP se conecta al puerto.</p>
+<p>Hay dos VLAN asociadas al puerto: una para voz y otra para datos. Nota: utilice el comando interface range para configurar varias interfaces simultáneamente.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. VLAN extendidas Verificación de la información de la VLAN § Comandos para verificar las VLAN: • show vlan • show interfaces • show vlan name vlan-name • show vlan brief • show vlan summary • show interfaces vlan vlan-id</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. VLAN extendidas Configuración de las VLAN extendidas § Las VLAN de rango extendido se identifican por medio de una ID de VLAN que puede ir de 1006 a 4094. § Para configurar una red VLAN extendida en un switch 2960, se debe establecer en el modo VTP transparente. (De manera predeterminada, los switches 2960 no admiten VLAN de rango extendido).</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Protocolo de enlace troncal dinámico Introducción al DTP § Las negociaciones troncales se administran mediante el protocolo de enlace troncal dinámico (DTP). • El DTP es un protocolo patentado por Cisco • que se habilita automáticamente en los switches Catalyst de las series 2960 y 3560.</p>
+<p>§ Para habilitar los enlaces troncales desde un switch Cisco hacia un dispositivo que no admite el DTP, utilice switchport mode trunk y switchport nonegotiate.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Protocolo de enlace troncal dinámico Modos de interfaz negociados § Diferentes modos de enlaces troncales: • Switchport mode access: la interfaz se convierte en una interfaz no troncal.</p>
+<p>• Switchport mode dynamic auto: la interfaz se convierte en troncal si la interfaz vecina se establece en modo de enlace troncal o deseado. • Switchport mode dynamic desirable: la interfaz se convierte en troncal si la interfaz vecina se establece en modo de enlace troncal, deseado o dinámico automático.</p>
+<p>• Switchport mode trunk: la interfaz se convierte en troncal, incluso si la interfaz vecina no es una interfaz de enlace troncal. • Switchport nonegotiate: evita que la interfaz genere tramas DTP. § Configure los enlaces troncales estáticamente siempre que sea posible. § Use show dtp interface para comprobar el DTP.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Protocolo de enlace troncal dinámico Packet Tracer: configuración del VTP y el DTP</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. 2 Solución de problemas de VLAN múltiple</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de configuración entre VLAN Eliminación de VLAN § Eliminar una VLAN de un switch que está en el modo de servidor VTP elimina la VLAN de todos los switches del dominio VTP.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: No puede eliminar VLAN predeterminadas (es decir,...</p><p>Nota: No puede eliminar VLAN predeterminadas (es decir, VLAN 1, 1002 a 1005). § Use el comando de modo de configuración global no vlan vlan-id para borrar una VLAN. § Cualquier puerto asignado a esa VLAN queda inactivo. Permanece inactivo hasta que se asigna a una nueva VLAN.</p></div>
+<p>Suponga que el S1 tiene las VLAN 10, 20 y 99 configuradas y la VLAN 99 está asignada a los puertos Fa0/18 a Fa0/24.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de configuración entre VLAN Problemas en los puertos de switch § Al utilizar el modelo de routing antiguo para el routing entre VLAN, los puertos del switch que se conectan a las interfaces del router deben estar configurados en las VLAN correctas.</p>
+<ul>
+<li>La F0/4 del S1 está en la</li>
+</ul>
+<p>VLAN incorrecta.</p>
+<ul>
+<li>Debe estar en el modo de</li>
+</ul>
+<p>acceso de la VLAN 10.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de configuración entre VLAN Problemas en los puertos de switch (cont.) § Al utilizar el modelo de routing de router-on-a-stick, la interfaz en el switch conectado al router se debe configurar como puerto de enlace troncal.</p>
+<p>INCORRECTO</p>
+<ul>
+<li>La interfaz F0/5 en el</li>
+</ul>
+<p>switch S1 no está configurada como enlace troncal y queda en la VLAN predeterminada para el puerto.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de configuración entre VLAN Verificación de la configuración del switch § Comandos para verificar la configuración del switch</p>
+<ul>
+<li>show interfaces interface-id switchport</li>
+<li>show running-config</li>
+</ul>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de configuración entre VLAN Problemas en las interfaces § Al habilitar el routing entre VLAN en un router, uno de los errores de configuración más comunes es conectar la interfaz física del router al puerto de switch incorrecto.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de configuración entre VLAN Verificación de la configuración del routing § Con configuraciones de router-on-a-stick, un problema común es asignar una ID de VLAN incorrecta a la subinterfaz.</p>
+<p>§ Uso de los comandos show interfaces y show running-config para verificar las configuraciones del routing.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de direccionamiento IP Errores relacionados con direcciones IP y máscaras de subred § Para que el routing entre VLAN funcione, es necesario conectar un router a todas las VLAN, ya sea por medio de interfaces físicas separadas o subinterfaces.</p>
+<p>§ A cada interfaz o subinterfaz se le debe asignar una dirección IP que corresponda a la subred a la cual está conectada. § Cada PC debe configurarse con una dirección IP dentro de la VLAN a la que se asigna. Dirección IP incorrecta</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de direccionamiento IP Verificación de problemas de configuración de direcciones IP y máscaras de subred § Un error común es configurar incorrectamente una dirección IP para una subinterfaz.</p>
+<ul>
+<li>Use show run y show ip interface para verificar la asignación de direcciones IP.</li>
+</ul>
+<p>§ Otro error es el direccionamiento incorrecto del terminal.</p>
+<ul>
+<li>Use ipconfig para verificar la dirección en una PC con Windows.</li>
+</ul>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas de asignación de direcciones IP Packet Tracer: resolución de problemas de routing entre VLAN</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas con el VTP y el DTP Solución de problemas del VTP</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas con el VTP y el DTP Solución de problemas del DTP Problemas comunes con enlaces troncales</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Problemas con el VTP y el DTP Packet Tracer: solución de problemas del VTP y el DTP</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. 3 Switching de capa 3</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Funcionamiento y configuración del switching de capa 3 Introducción al switching de capa 3 § Los switches multicapa proporcionan velocidades de procesamiento de paquetes con switching basado en hardware.</p>
+<p>§ Los switches multicapas de Catalyst admiten los siguientes tipos de interfaces de capa 3: • Puerto enrutado: una interfaz de capa 3. • Interfaz virtual de switch (SVI): interfaz virtual para el routing entre VLAN. § Todos los switches Cisco Catalyst de capa 3 admiten protocolos de routing, pero varios modelos requieren un software mejorado para admitir características específicas de protocolos de routing.</p>
+<p>§ Los switches Catalyst de la serie 2960 que ejecutan IOS 12.2(55) o posterior admiten el routing estático.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Funcionamiento y configuración del switching de capa 3 Routing entre VLAN con interfaces virtuales de switch § En los comienzos de las redes conmutadas, el switching era rápido y el routing lento.</p>
+<p>Por eso, la parte de switching de capa 2 se extendió tanto como se pudo a la red. § Ahora el routing puede realizarse a la velocidad del cable, tanto en la capa de distribución como en la capa principal. § Los switches de distribución se configuran como gateways de capa 3 con interfaces virtuales de switch (SVI) o puertos enrutados.</p>
+<p>§ Los puertos enrutados se suelen implementar entre la capa de distribución y la capa principal.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Funcionamiento y configuración del switching de capa 3 Routing entre VLAN con interfaces virtuales de switch (cont.) § Una SVI es una interfaz virtual configurada en un switch multicapa</p>
+<p>• Para proporcionar un gateway a una VLAN a fin de poder enrutar el tráfico dentro o fuera de esa VLAN. • Para proporcionar conectividad IP de capa 3 al switch. • Para admitir las configuraciones de puente y protocolo de routing. § Ventajas de las SVI: • Son más rápidas que el router-on-a-stick.</p>
+<p>• El routing no requiere enlaces externos del switch al router. • No se limita a un solo enlace. Se pueden utilizar EtherChannels de capa 2 para obtener más ancho de banda.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Funcionamiento y configuración del switching de capa 3 Routing entre VLAN con puertos enrutados § Un puerto enrutado es un puerto físico que funciona de manera similar a una interfaz en un router</p>
+<p>• No está relacionado con una VLAN determinada. • No admite subinterfaces. § Los puertos enrutados principalmente se configuran entre los switches de las capas de núcleo y distribución. § Utilice el comando no switchport interface en el puerto apropiado para configurar un puerto enrutado.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: los switches de la serie Catalyst 2960 no admiten...</p><p>Nota: los switches de la serie Catalyst 2960 no admiten puertos enrutados.</p></div>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Funcionamiento y configuración del switching de capa 3 Packet Tracer: configuración del switching de capa 3 y routing entre redes VLAN</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Solución de problemas de switching de capa 3 Problemas de configuración de switch de capa 3 § Para solucionar problemas de switching de capa 3, compruebe lo siguiente: • VLAN: verifique la configuración correcta.</p>
+<p>• SVI: verifique la dirección IP correcta, la máscara de subred y el número de VLAN. • Routing: verifique que el routing estático o dinámico esté correctamente configurado y habilitado. • Hosts: verifique la dirección IP correcta, la máscara de subred y el gateway predeterminado.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Solución de problemas de switching de capa 3 Ejemplo: solución de problemas de switching de capa 3 § Hay cuatro pasos para implementar una nueva VLAN</p>
+<ul>
+<li>Paso 1. Cree y nombre una nueva VLAN 500 en el switch del quinto</li>
+</ul>
+<p>piso y en los switches de distribución.</p>
+<ul>
+<li>Paso 2. Agregue puertos a la VLAN 500 y asegúrese de que el</li>
+</ul>
+<p>enlace troncal esté configurado entre los switches de distribución.</p>
+<ul>
+<li>Paso 3. Cree una interfaz SVI en los switches de distribución y</li>
+</ul>
+<p>asegúrese de que las direcciones IP estén asignadas.</p>
+<ul>
+<li>Paso 4. Verificar la conectividad</li>
+</ul>
+<p>§ El plan de solución de problemas consta de los siguientes pasos de control</p>
+<ul>
+<li>Paso 1. Verifique que se hayan creado todas las VLAN.</li>
+<li>Paso 2. Asegúrese de que los puertos estén en la VLAN adecuada y</li>
+</ul>
+<p>de que el enlace troncal esté funcionando como se espera.</p>
+<ul>
+<li>Paso 3. Compruebe la configuración de la SVI.</li>
+</ul>
+<hr/>
+<h2 id="ut0906">9.6 Colisió i difusió</h2>
+<div class="admonition warning"><p class="admonition-title">📄 Document Escanejat / Visual (Colisió i difusió.pdf)</p><p>Aquest document PDF (1 pàgines) està compost principalment per esquemes o imatges escanejades.</p></div>
+<hr/>
+<h2 id="ut09actividades">✍️ Activitats pràctiques UT9</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.1 — U8A1</p><p>U8A1 1/2</p>
+<p>Ejercicio en clase Dado el escenario</p>
+<p>U8A1 2/2</p>
+<ul>
+<li>Asignar para todos los PC´s una misma subred clase B/19 de forma que “presuntamente” se vean entre sí.</li>
+</ul>
+<p>o Clase B -&gt; 128.X.X.X - 191.X.X.X o /19 -&gt; 255.255.224.0 à 11111111.11111111.11100000.00000000 • Es decir, los 19 primeros bits han de ser iguales para que se vean entre sí.</p>
+<ul>
+<li>Configurar los switches (en modo consola) para que los PC´s estén</li>
+</ul>
+<p>o PC0, PC1 y PC2 en la misma red virtual VLAN10 o PC3, PC4 Y PC5 en la misma red virtual VLAN11 o PC6, PC7 Y PC8 en la misma red virtual VLAN21 o PC9, PC10 Y PC11 en la misma red virtual VLAN22</p>
+<ul>
+<li>Guardar el escenario, asignándole un nombre que se pueda recordar</li>
+</ul>
+<ul>
+<li>De momento, no hacer nada más con los switches</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.2 — U8A2</p><p>U8A2 1/3</p>
+<p>Ejercicio en clase</p>
+<p>Dado el escenario</p>
+<p>U8A2 2/3</p>
+<p>Se necesita que todos los PC¨s estén en la mima subred. Las IP´s de esos PC´s son</p>
+<p>PC0: 201.177.94.161/27 PC1: 201.177.94.162/27 PC2: 201.177.94.163/27 …</p>
+<p>PC16: 201.177.94.177/27 PC17: 201.177.94.178/27</p>
+<p>Sin embargo, es también necesario crear 2 redes virtuales VLAN10 y VLAN20</p>
+<ul>
+<li>En la VLAN10 estarán los PC´s: PC0, PC1, PC2, PC6, PC7, PC8, PC12, PC13 y PC14.</li>
+</ul>
+<ul>
+<li>En la VLAN20 estarán los PC´s: PC3, PC4, PC5, PC9, PC10, PC11, PC15, PC16 y PC17.</li>
+</ul>
+<p>Así, todos los PC´s de la VLAN10 se verán entre sí pero no verán a los de la VLAN20. Del mismo modo, todos los PC´s de la VLAN20 se verán entre sí pero no verán a los de la VLAN10.</p>
+<p>Se pide</p>
+<ul>
+<li>Construir el escenario PACKET TRACER con las IP´s propuestas.</li>
+<li>Realizar la configuración en modo consola de los 3 switches para conseguir tener esas 2 redes virtuales</li>
+</ul>
+<p>U8A2 3/3</p>
+<p>Consejos</p>
+<ul>
+<li>Primero construir el escenario con los 3 switches y todos los PC´s conectados a cada uno de los switches. Asignar IP´s,</li>
+</ul>
+<p>máscaras de red, velocidad de conexión (100 mbps) y full dúplex en todos los PC´s. Conectar los PC´s a los switches (6 PC´s por cada switch) con el cable correspondiente</p>
+<ul>
+<li>A continuación, comprobar que todos los PC´s de switch0 se ven entre sí, todos los PC´s del switch1 se ven entre sí y todos los</li>
+</ul>
+<p>PC´s del switch2 se ven entre sí. Si eso no funciona, de nada sirve continuar</p>
+<ul>
+<li>Cuando todo está comprobado, guardar el escenario y empezar la configuración de los switches</li>
+</ul>
+<p>Ayuda inestimable: Se puede hacer que el switch2 sea el switch central. De esta manera, del switch0 irán 2 cables al switch2 y del switch1 irán otros 2 cables al switch2. Pero no habrá cables del switch0 al switch1. Así, en el switch0 y el switch1 habrá que definir 2 switchport trunk native pero en el switch2 habrá que definir 4 de esos switchport trunk native (2 para el switch0 y otros 2 para el switch1)</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.3 — U8P1</p><p>Packet Tracer: ¿quién escucha la difusión? Objetivos Parte 1: observar el tráfico de difusión en una implementación de VLAN Parte 2: completar las preguntas de repaso Situación En esta actividad, se ocupa la totalidad de un switch Catalyst 2960 de 24 puertos. Se utilizan todos los puertos. Observará el tráfico de difusión en una implementación de VLAN y responderá algunas preguntas de reflexión.</p>
+<p>Instrucciones Paso 1: Utilizar ping para generar tráfico.</p>
+<ul>
+<li>Haga clic en PC0 y, a continuación, haga clic en la ficha Desktop &gt; Command Prompt (Escritorio &gt;</li>
+</ul>
+<p>Símbolo del sistema).</p>
+<ul>
+<li>Introduzca el comando ping 192.168.1.8. El ping debe ser correcto.</li>
+</ul>
+<p>A diferencia de las LAN, las VLAN son dominios de difusión creados por switches. Utilice el modo Simulation (Simulación) de Packet Tracer para hacer ping a las terminales dentro de su propia VLAN. Responda las preguntas del paso 2 de acuerdo con lo observado. Paso 2: Genere y examine el tráfico de difusión en una implementación de VLAN.</p>
+<ul>
+<li>Cambie a modo de simulación.</li>
+<li>En el panel de simulación, haga clic en Edit Filters (Editar filtros). Desmarque la casilla de verificación</li>
+</ul>
+<p>Show All/None (Mostrar todos/ninguno). Active la casilla de verificación ICMP.</p>
+<ul>
+<li>Haga clic en la herramienta Add Complex PDU, el ícono de sobre abierto en la barra de herramientas</li>
+</ul>
+<p>derecha.</p>
+<ul>
+<li>Pase el mouse sobre la topología; el puntero se transforma a un sobre con un signo más (+).</li>
+<li>Haga clic en PC0 para que sirva como fuente para este mensaje de prueba y se abrirá la ventana de</li>
+</ul>
+<p>diálogo Crear PDU compleja. Introduzca los siguientes valores: o Dirección IP de destino: 255.255.255.255 (dirección de difusión) o Sequence Number (Número de secuencia): 1 o Tiempo de intento único: 0 En los parámetros de PDU, el valor predeterminado para Select Application (Seleccionar aplicación) es PING.</p>
+<p>Pregunta: Mencione, al menos, tres otras aplicaciones que estén disponibles para utilizar. Escriba sus respuestas aquí.</p>
+<p>f. Haga clic en Create PDU (Crear PDU). Este paquete de difusión de prueba ahora aparece en Simulation Panel Event List (Lista de eventos del panel de simulación). El paquete también aparece en la ventana de la lista de PDU. Es la primera PDU de la Situación 0.</p>
+<ul>
+<li>Haga clic en Capture/Forward (Capturar/Adelantar) dos veces.</li>
+</ul>
+<p>Pregunta: ¿Qué sucedió con el paquete?</p>
+<p>Packet Tracer: ¿quién escucha la difusión?</p>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Repita este proceso para la PC8 y la PC16.</li>
+</ul>
+<p>Preguntas de reflexión</p>
+<h3>1. Si un equipo en la VLAN 10 envía un mensaje de difusión, ¿qué dispositivos lo reciben?</h3>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Si una computadora en la VLAN 20 envía un mensaje de difusión, ¿qué dispositivos lo reciben?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Si una computadora en la VLAN 30 envía un mensaje de difusión, ¿qué dispositivos lo reciben?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>¿Qué le sucede a una trama enviada desde un equipo en la VLAN 10 hacia un equipo en la VLAN 30?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>¿Qué puertos del switch se encienden si una computadora conectada al puerto 11 envía un mensaje de</li>
+</ul>
+<p>unidifusión a una computadora conectada al puerto 13? Escriba sus respuestas aquí.</p>
+<ul>
+<li>¿Qué puertos del switch se encienden si una computadora conectada al puerto 2 envía un mensaje de</li>
+</ul>
+<p>unidifusión a una computadora conectada al puerto 23? Escriba sus respuestas aquí.</p>
+<ul>
+<li>Desde el punto de vista de los puertos, ¿cuáles son los dominios de colisiones en el switch?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Desde el punto de vista de los puertos, ¿cuáles son los dominios de difusión en el switch?</li>
+</ul>
+<p>Escriba sus respuestas aquí. Fin del documento</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.4 — U8P2</p><p>Packet Tracer: investigación de la implementación de una VLAN Tabla de asignación de direcciones Dispositivo Interfaz Dirección IP Máscara de subred Gateway predeterminado S1 VLAN 99 172.17.99.31 255.255.255.0 N/D S2 VLAN 99 172.17.99.32 255.255.255.0 N/D S3 VLAN 99 172.17.99.33 255.255.255.0 N/D PC1 NIC 172.17.10.21 255.255.255.0 172.17.10.1 PC2 NIC 172.17.20.22 255.255.255.0 172.17.20.1 PC3 NIC 172.17.30.23 255.255.255.0 172.17.30.1 PC4 NIC 172.17.10.24 255.255.255.0 172.17.10.1 PC5 NIC 172.17.20.25 255.255.255.0 172.17.20.1 PC6 NIC 172.17.30.26 255.255.255.0 172.17.30.1 PC7 NIC 172.17.10.27 255.255.255.0 172.17.10.1 PC8 NIC 172.17.20.28 255.255.255.0 172.17.20.1 PC9 NIC 172.17.30.29 255.255.255.0 172.17.30.1 Objetivos Parte 1: observar el tráfico de difusión en una implementación de VLAN Parte 2: observar el tráfico de difusión sin VLAN Aspectos básicos En esta actividad, observará el modo en que los switches reenvían el tráfico de difusión cuando se configuran las VLAN y cuando no se configuran las VLAN.</p>
+<p>Instrucciones Parte 1: Observar el tráfico de broadcast en la implementación de una VLAN Paso 1: Haga ping de PC1 a PC6.</p>
+<ul>
+<li>Espere que todas las luces de enlace se pongan en verde. Para acelerar este proceso, haga clic en la</li>
+</ul>
+<p>opción Fast Forward Time ubicado en la barra de herramientas inferior.</p>
+<ul>
+<li>Haga clic en la pestaña Simulation y utilice la herramienta Add Simple PDU. Haga clic en PC1y, a</li>
+</ul>
+<p>continuación, haga clic en PC6.</p>
+<ul>
+<li>Haga clic en el botón Capture/Forward para avanzar por el proceso. Observe las peticiones ARP a</li>
+</ul>
+<p>medida que atraviesan la red. Cuando aparezca la ventana Buffer Full (Búfer lleno), haga clic en el botón View Previous Events (Ver eventos anteriores). Preguntas: ¿Fueron correctos los pings? Explique.</p>
+<p>Packet Tracer: investigación de la implementación de una VLAN</p>
+<p>Escriba sus respuestas aquí.</p>
+<p>Examine el panel de simulación, ¿dónde envió el paquete el S3 después de recibirlo? Escriba sus respuestas aquí.</p>
+<p>En funcionamiento normal, cuando un switch recibe una trama de broadcast en uno de sus puertos, envía la trama a todos los demás puertos. Observe que el S2 solo envía la solicitud de ARP al S1por Fa0/1. También observe que el S3 solo envía la solicitud de ARP a la PC4 por F0/11. Tanto la PC1 como la PC4 pertenecen a la VLAN 10. La PC6 pertenece a la VLAN 30. Dado que el tráfico de difusión está dentro de la VLAN, la PC6 nunca recibe la solicitud de ARP de la PC1. Debido a que la PC4 no es el destino, descarta la solicitud de ARP. El ping de la PC1 falla debido a que la PC1 nunca recibe una respuesta de ARP.</p>
+<p>Paso 2: hacer ping de la PC1 a la PC4.</p>
+<ul>
+<li>Haga clic en el botón New (Nuevo) en la ficha desplegable Scenario 0 (Situación 0). Ahora, haga clic en</li>
+</ul>
+<p>el ícono Add Simple PDU (Agregar PDU simple) ubicado en el lado derecho de Packet Tracer y haga</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>ping de la PC1 a la PC4.</code></pre>
+</div>
+<ul>
+<li>Haga clic en el botón Capture/Forward para avanzar por el proceso. Observe las peticiones ARP a</li>
+</ul>
+<p>medida que atraviesan la red. Cuando aparezca la ventana Buffer Full (Búfer lleno), haga clic en el botón View Previous Events (Ver eventos anteriores). Pregunta: ¿Fueron correctos los pings? Explique. Escriba sus respuestas aquí.</p>
+<ul>
+<li>Examine el panel de simulación.</li>
+</ul>
+<p>Pregunta: Cuando el paquete llegó al S1, ¿por qué también se reenvió a la PC7?</p>
+<p>Parte 2: Observar el tráfico de broadcast sin las VLAN Paso 1: borrar las configuraciones en los tres switches y eliminar la base de datos de VLAN.</p>
+<ul>
+<li>Vuelva al modo Realtime.</li>
+</ul>
+<p>Abrir la ventana de configuración</p>
+<ul>
+<li>Elimine la configuración de inicio en los tres switches.</li>
+</ul>
+<p>Preguntas: ¿Qué comando se utiliza para eliminar la configuración de inicio de los switches? Escriba sus respuestas aquí.</p>
+<p>¿Dónde se almacena el archivo VLAN en los switches? Escriba sus respuestas aquí.</p>
+<p>Packet Tracer: investigación de la implementación de una VLAN</p>
+<ul>
+<li>Elimine el archivo VLAN en los tres switches.</li>
+</ul>
+<p>Pregunta: ¿Qué comando elimina el archivo VLAN almacenado en los switches? Escriba sus respuestas aquí.</p>
+<p>Paso 2: volver a cargar los switches. Utilice el comando reload en el modo EXEC privilegiado para reiniciar todos los switches. Espere a que todo el enlace se torne verde. Para acelerar este proceso, haga clic en la opción Fast Forward Time (Adelantar el tiempo), ubicada en la barra de herramientas inferior amarilla.</p>
+<p>Cerrar la ventana de configuración Paso 3: Haga clic en Capture/Forward para enviar las solicitudes de ARP y los pings.</p>
+<ul>
+<li>Luego de que los switches se vuelven a cargar y las luces de enlace vuelven a ponerse en verde, la red</li>
+</ul>
+<p>está lista para enviar su tráfico ARP y ping.</p>
+<ul>
+<li>Seleccione Scenario 0 en la ficha desplegable para volver a la situación 0.</li>
+<li>En el modo Simulation haga clic en Capture/Forward para continuar con el proceso. Observe que los</li>
+</ul>
+<p>switches ahora envían las solicitudes ARP a todos los puertos, excepto al puerto en el que se recibió la petición ARP. Esta acción predeterminada de los switches es la razón por la que las VLAN pueden mejorar el rendimiento de la red. El tráfico de broadcast se encuentra dentro de cada VLAN. Cuando aparezca la ventana Buffer Full, haga clic en el botón View Previous Events.</p>
+<p>Preguntas de reflexión</p>
+
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Si una computadora en la VLAN 20 envía un mensaje de difusión, ¿qué dispositivos lo reciben?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Si una computadora en la VLAN 30 envía un mensaje de difusión, ¿qué dispositivos lo reciben?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>¿Qué le sucede a una trama enviada desde un equipo en la VLAN 10 hacia un equipo en la VLAN 30?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Desde el punto de vista de los puertos, ¿cuáles son los dominios de colisiones en el switch?</li>
+</ul>
+<p>Escriba sus respuestas aquí.</p>
+<ul>
+<li>Desde el punto de vista de los puertos, ¿cuáles son los dominios de difusión en el switch?</li>
+</ul>
+<p>Escriba sus respuestas aquí. Fin del documento</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.5 — U8P3</p><p>Packet Tracer: Configuración de redes VLAN Tabla de asignación de direcciones Dispositivo Interfaz Dirección IP Máscara de subred VLAN PC1 NIC 172.17.10.21 255.255.255.0 PC2 NIC 172.17.20.22 255.255.255.0 PC3 NIC 172.17.30.23 255.255.255.0 PC4 NIC 172.17.10.24 255.255.255.0 PC5 NIC 172.17.20.25 255.255.255.0 PC6 NIC 172.17.30.26 255.255.255.0 Objetivos Parte 1: Verificar la configuración de VLAN predeterminada Parte 2: Configurar las VLAN Parte 3: Asignar las VLAN a los puertos Aspectos básicos Las VLAN son útiles para la administración de grupos lógicos y permiten mover, cambiar o agregar fácilmente a los miembros de un grupo. Esta actividad se centra en la creación y la denominación de redes VLAN, así como en la asignación de puertos de acceso a VLAN específicas.</p>
+<p>Parte 1: Visualizar la configuración de VLAN predeterminada Paso 1: Mostrar las VLAN actuales En el S1, emita el comando que muestra todas las VLAN configuradas. Todas las interfaces están asignadas a la VLAN 1 de forma predeterminada. Paso 2: Verificar la conectividad entre dos computadoras en la misma red Observe que cada computadora puede hacer ping a otra que comparta la misma red.</p>
+<p>• PC1 puede hacer ping a PC4 • PC2 puede hacer ping a PC5 • PC3 puede hacer ping a PC6 Los pings a las PC de otras redes fallan. Pregunta: ¿Qué beneficios pueden proporcionar las VLAN a la red? Escriba sus respuestas aquí.</p>
+<p>Packet Tracer: Configuración de redes VLAN</p>
+<p>Parte 2: Configurar las VLAN Paso 1: Crear y nombrar las VLAN en el S1</p>
+<ul>
+<li>Cree las siguientes VLAN. Los nombres distinguen entre mayúsculas y minúsculas y deben coincidir</li>
+</ul>
+<p>exactamente con el requisito: • VLAN 10: Faculty/Staff Abrir la ventana de configuración S1#(config)# vlan 10 S1#(config-vlan)# name Faculty/Staff</p>
+<ul>
+<li>Crea los VLAN restantes.</li>
+</ul>
+<p>• VLAN 20: Students • VLAN 30: Guest(Default) • VLAN 99: Management&amp;Native • VLAN 150: VOICE</p>
+<p>Paso 2: Verificar la configuración de la VLAN Pregunta: ¿Con qué comando se muestran solamente el nombre y el estado de la VLAN y los puertos asociados en un switch?</p>
+<p>Paso 3: Crear las VLAN en el S2 y el S3 Con los mismos comandos del paso 1, cree y nombre las mismas VLAN en el S2 y el S3. Paso 4: Verificar la configuración de la VLAN Cerrar la ventana de configuración Parte 3: Asignar VLAN a los puertos Paso 1: Asignar las VLAN a los puertos activos en el S2</p>
+<ul>
+<li>Configure las interfaces como puertos de acceso y asigne las VLAN de la siguiente manera</li>
+</ul>
+<p>• VLAN 10: FastEthernet 0/11 Abrir la ventana de configuración S2(config)# interface f0/11 S2(config-if)# switchport mode access S2(config-if)# switchport access vlan 10</p>
+<ul>
+<li>Asigne los puertos restantes a la VLAN adecuada.</li>
+</ul>
+<p>• VLAN 20: FastEthernet 0/18 • VLAN 30: FastEthernet 0/6</p>
+<p>Packet Tracer: Configuración de redes VLAN</p>
+<p>Paso 2: Asignar VLAN a los puertos activos en S3 El S3 utiliza las mismas asignaciones de puertos de acceso de VLAN que el S2. Configure las interfaces como puertos de acceso y asigne las VLAN de la siguiente manera: • VLAN 10: FastEthernet 0/11 • VLAN 20: FastEthernet 0/18 • VLAN 30: FastEthernet 0/6</p>
+<p>Paso 3: Asignar la red VLAN de voz a FastEthernet 0/11 en el S3 Como se muestra en la topología, la interfaz FastEthernet 0/11 del S3 se conecta a un teléfono IP de Cisco y PC4. El teléfono IP contiene un switch integrado 10/100 de tres puertos. Un puerto en el teléfono está etiquetado como switch y se conecta a F0/4. Otro puerto en el teléfono está etiquetado como PC y se conecta a la PC4. El teléfono IP también tiene un puerto interno que se conecta con las funciones del teléfono IP.</p>
+<p>La interfaz F0/11 del S3 debe estar configurada para admitir tráfico del usuario a la PC4 con VLAN 10 y tráfico de voz al teléfono IP con VLAN 150. La interfaz también debe habilitar QoS y confiar en los valores de clase de servicio (CoS) asignados por el teléfono IP. El tráfico de voz IP requiere una cantidad mínima de rendimiento para admitir una calidad de comunicación de voz aceptable. Este comando ayuda al switchport a proporcionar esta cantidad mínima de rendimiento.</p>
+<p>S3(config)# interface f0/11 S3(config-if)# mls qos trust cos S3(config-if)# switchport voice vlan 150 Paso 4: Verificar la pérdida de conectividad Anteriormente, las PC que compartían la misma red podían hacer ping entre sí con éxito. Estudie la salida de desde el siguiente comando en S2 y responda las siguientes preguntas basándose en su conocimiento de la comunicación entre VLAN. Preste mucha atención a la asignación del puerto Gig0/1.</p>
+<p>S2# show vlan brief VLAN Name Status Ports ---- -------------------------------- --------- ------------------------------- 1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4 Fa0/5, Fa0/7, Fa0/8, Fa0/9 Fa0/10, Fa0/12, Fa0/13, Fa0/14 Fa0/15, Fa0/16, Fa0/17, Fa0/19 Fa0/20, Fa0/21, Fa0/22, Fa0/23 Fa0/24, Gig0/1, Gig0/2 10 Faculty/Staff active Fa0/11</p>
+<p>Packet Tracer: Configuración de redes VLAN</p>
+<p>20 Students active Fa0/18 30 Guest(Default) active Fa0/6 99 Management&amp;Native active 150 VOICE active Intente hacer ping entre PC1 y PC4. Preguntas: Si bien los puertos de acceso están asignados a las VLAN adecuadas, ¿los pings se realizaron correctamente? Explique. Escriba sus respuestas aquí.</p>
+<p>¿Qué podría hacerse para resolver este problema? Escriba sus respuestas aquí. Cerrar la ventana de configuración Fin del documento</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.6 — U8P4</p><p>Packet Tracer: Configuración de enlaces troncales</p>
+<p>Tabla de asignación de direcciones Dispositivo Interfaz Dirección IP Máscara de subred Puerto del switch VLAN PC1 NIC 172.17.10.21 255.255.255.0 S2 F0/11 PC2 NIC 172.17.20.22 255.255.255.0 S2 F0/18 PC3 NIC 172.17.30.23 255.255.255.0 S2 F0/6 PC4 NIC 172.17.10.24 255.255.255.0 S3 F0/11 PC5 NIC 172.17.20.25 255.255.255.0 S3 F0/18 PC6 NIC 172.17.30.26 255.255.255.0 S3 F0/6 Objetivos Parte 1: verificar las VLAN Parte 2: configurar enlaces troncales Aspectos básicos Se requieren enlaces troncales para transmitir información de VLAN entre switches. Un puerto de un switch es un puerto de acceso o un puerto de enlace troncal. Los puertos de acceso transportan el tráfico de una VLAN específica asignada al puerto. De forma predeterminada, un puerto troncal es miembro de todas las VLAN. Por lo tanto, transporta tráfico para todas las VLAN. Esta actividad se centra en la creación de puertos de enlace troncal y en la asignación a una VLAN nativa distinta a la VLAN predeterminada.</p>
+<p>Instrucciones Parte 1: verificar las VLAN Paso 1: mostrar las VLAN actuales. Abrir la ventana de configuración</p>
+<ul>
+<li>En el S1, emita el comando que muestra todas las VLAN configuradas. Debería haber diez VLAN en</li>
+</ul>
+<p>total. Observe cómo los 26 puertos de acceso del switch se asignan a la VLAN 1.</p>
+<ul>
+<li>En S2 y S3, visualice y verifique que todas las VLAN estén configuradas y asignadas a los puertos de</li>
+</ul>
+<p>switch correctos según la tabla de direcciones. Cerrar la ventana de configuración Paso 2: verificar la pérdida de conectividad entre dos computadoras en la misma red. Hacer ping entre hosts en la misma VLAN en los diferentes switches. Aunque la PC1 y la PC4 estén en la misma red, no pueden hacer ping entre sí. Esto es porque los puertos que conectan los switches se asignaron a la VLAN 1 de manera predeterminada. Para proporcionar conectividad entre las computadoras en la misma red y VLAN, se deben configurar enlaces troncales.</p>
+<p>Parte 2: configurar los enlaces troncales Paso 1: configurar el enlace troncal en el S1 y utilizar la VLAN 99 como VLAN nativa. Abrir la ventana de configuración</p>
+<p>Packet Tracer: Configuración de enlaces troncales</p>
+<ul>
+<li>Configure las interfaces de G0/1 y G0/2 en S1 para los enlaces troncales.</li>
+</ul>
+<p>S1(config)# interface range g0/1 - 2 S1(config-if)# switchport mode trunk</p>
+<ul>
+<li>Configure VLAN 99 como la VLAN nativa para las interfaces de G0/1 y G0/2 en S1.</li>
+</ul>
+<p>S1(config-if)# switchport trunk native vlan 99 El puerto de enlace troncal tarda alrededor de un minuto en volverse activo debido al árbol de expansión. Haga clic en Fast Forward Time (Adelantar el tiempo) para acelerar el proceso. Una vez que los puertos se activan, recibirá de forma periódica los siguientes mensajes de syslog</p>
+<p>%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/2 (99), with S3 GigabitEthernet0/2 (1). %CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/0 (99), with S2 GigabitEthernet1/1 (1). Configuró la VLAN 99 como VLAN nativa en el S1. Sin embargo, S2 y S3 están usando VLAN 1 como la VLAN nativa predeterminada, según lo indica el mensaje de syslog.</p>
+<p>Pregunta: Si bien hay una incompatibilidad de VLAN nativa, los pings entre las computadoras de la misma VLAN ahora se realizan de forma correcta. Explique. Escriba sus respuestas aquí.</p>
+<p>Paso 2: verificar que el enlace troncal esté habilitado en el S2 y el S3. En el S2 y el S3, emita el comando show interface trunk para confirmar que el DTP haya negociado de forma correcta el enlace troncal con el S1 en el S2 y el S3. El resultado también muestra información sobre las interfaces troncales en el S2 y el S3. Más adelante en el curso aprenderá más sobre DTP.</p>
+<p>Pregunta: ¿Qué VLAN activas tienen permitido cruzar el enlace troncal? Escriba sus respuestas aquí.</p>
+<p>Paso 3: corregir la incompatibilidad de VLAN nativa en el S2 y el S3.</p>
+<ul>
+<li>Configure la VLAN 99 como VLAN nativa para las interfaces apropiadas en el S2 y el S3.</li>
+<li>Emita el comando show interface trunk para verificar que la configuración de la VLAN sea correcta.</li>
+</ul>
+<p>Paso 4: verificar las configuraciones del S2 y el S3.</p>
+<ul>
+<li>Emita el comando show interface interfaz switchport para verificar que la VLAN nativa ahora sea 99.</li>
+<li>Emita el comando show vlan para mostrar información acerca de las VLAN configuradas.</li>
+</ul>
+<p>Pregunta: ¿Por qué el puerto G0/1 en S2 dejó de estar asignado a VLAN 1? Escriba sus respuestas aquí.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.7 — U8P5</p><p>Packet Tracer: Configuración de DTP Tabla de asignación de direcciones Dispositivo Interfaz Dirección IP Máscara de subred PC1 NIC 192.168.10.1 255.255.255.0 PC2 NIC 192.168.20.1 255.255.255.0 PC3 NIC 192.168.30.1 255.255.255.0 PC4 NIC 192.168.30.2 255.255.255.0 PC5 NIC 192.168.20.2 255.255.255.0 PC6 NIC 192.168.10.2 255.255.255.0 S1 VLAN 99 192.168.99.1 255.255.255.0 S2 VLAN 99 192.168.99.2 255.255.255.0 S3 VLAN 99 192.168.99.3 255.255.255.0 Objetivos • Configurar la conexión troncal estática • Configurar y comprobar DTP Aspectos básicos/situación A medida que aumenta la cantidad de switches en una red, la administración necesaria para gestionar las redes VLAN y los enlaces troncales puede resultar un desafío. Para facilitar algunas de las configuraciones de VLAN y enlace troncal, la negociación de enlaces troncales entre dispositivos de red se gestiona mediante el Protocolo de enlace dinámico (DTP) y se habilita automáticamente en los switches Catalyst 2960 y Catalyst 3650.</p>
+<p>Durante esta actividad, deberá configurar enlaces troncales entre los switches. Asignará puertos a las VLAN y verificará la conectividad de extremo a extremo entre los hosts en la misma VLAN. Configurará enlaces troncales entre los switches y configurará VLAN 999 como la VLAN nativa.</p>
+<p>Instrucciones Parte 1: Compruebe la configuración de VLAN. Compruebe las VLAN configuradas en los switches.</p>
+<ul>
+<li>En S1, vaya al modo EXEC privilegiado y escriba el comando show vlan brief para verificar las VLAN</li>
+</ul>
+<p>presentes. Abrir la ventana de configuración S1# show vlan brief</p>
+<p>VLAN Name Status Ports ---- -------------------------------- --------- ------------------------------- 1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4 Fa0/5, Fa0/6, Fa0/7, Fa0/8 Fa0/9, Fa0/10, Fa0/11, Fa0/12 Fa0/13, Fa0/14, Fa0/15, Fa0/16 Fa0/17, Fa0/18, Fa0/19, Fa0/20</p>
+<p>Packet Tracer: Configuración de DTP</p>
+<p>Fa0/21, Fa0/22, Fa0/23, Fa0/24 Gig0/1, Gig0/2 99 Management active 999 Native active 1002 fddi-default active 1003 token-ring-default active 1004 fddinet-default active 1005 trnet-default active</p>
+<ul>
+<li>Repita el paso 1a en S2 y S3.</li>
+</ul>
+<p>Pregunta: ¿Qué redes VLAN están configuradas en los switches? Escriba sus respuestas aquí.</p>
+<p>Parte 2: Cree VLAN adicionales en S2 y S3.</p>
+<ul>
+<li>En S2, cree la VLAN 10 y asígnele el nombre Rojo.</li>
+</ul>
+<p>S2(config)# vlan 10 S2(config-vlan)# name Red</p>
+<ul>
+<li>Cree la VLAN 20 y la VLAN 30 de acuerdo con la siguiente tabla.</li>
+</ul>
+<p>Número de VLAN Nombre de la VLAN Red Blue Yellow</p>
+<ul>
+<li>Compruebe la incorporación de las VLAN nuevas. Introduzca show vlan brief en el modo EXEC</li>
+</ul>
+<p>privilegiado. Pregunta: Además de las VLAN predeterminadas, ¿qué VLAN están configuradas en S2? Escriba sus respuestas aq uí. Repita los pasos anteriores para crear las VLAN adicionales en S3. Parte 3: Asignar VLAN a los puertos Use el comando switchport mode access para establecer el modo de acceso de los enlaces de acceso.</p>
+<p>Utilice el comando switchport access vlan vlan-id para asignar una VLAN a un puerto de acceso. Puertos Asignaciones Red S2 F0/1 – 8 S3 F0/1 – 8 VLAN 10 (Red) 192.168.10.0 /24 S2 F0/9 – 16 S3 F0/9 – 16 VLAN 20 (Blue) 192.168.20.0 /24 S2 F0/17 – 24 S3 F0/17 – 24 VLAN 30 (Yellow) 192.168.30.0 /24</p>
+<ul>
+<li>Asigne VLAN a los puertos de S2 usando asignaciones de la tabla anterior.</li>
+</ul>
+<p>S2(config-if)# interface range f0/1 - 8</p>
+<p>Packet Tracer: Configuración de DTP</p>
+<p>S2(config-if-range)# switchport mode access S2(config-if-range)# switchport access vlan 10 S2(config-if-range)# interface range f0/9 -16 S2(config-if-range)# switchport mode access S2(config-if-range)# switchport access vlan 20 S2(config-if-range)# interface range f0/17 - 24 S2(config-if-range)# switchport mode access S2(config-if-range)# switchport access vlan 30</p>
+<ul>
+<li>Asigne VLAN a los puertos en S3 utilizando las asignaciones de la tabla anterior.</li>
+</ul>
+<p>Ahora que tiene los puertos asignados a las VLAN, intente hacer ping desde PC1 a PC6 . Pregunta: ¿El ping se realizó correctamente? Explique. Escriba sus res puestas aquí. Parte 4: Configure enlaces troncales en S1, S2 y S3. El protocolo DTP (Dynamic Trunking Protocol, protocolo de enlace troncal dinámico) administra los enlaces troncales entre switches de Cisco. Actualmente, todos los puertos de conmutación están en el modo de enlace predeterminado, que es dinámico automático. En este paso, deberá cambiar el modo de enlace troncal a dinámico conveniente (dynamic desirable) para el enlace entre los switches S1 y S2. En el switch S1, configure el enlace troncal a dinámico desechable en la interfaz GigabitEthernet 0/1. Use la red VLAN 999 como VLAN nativa en esta topología.</p>
+<ul>
+<li>En el switch S1, configure el enlace troncal a dinámico deseable en la interfaz GigabitEthernet 0/1. La</li>
+</ul>
+<p>configuración de S1 se muestra a continuación. S1(config)# interface g0/1 S1(config-if)# switchport mode dynamic desirable Pregunta: ¿Cuál será el resultado de la negociación troncal entre S1 y S2? Escriba sus respuestas aquí.</p>
+<ul>
+<li>En el switch S2, compruebe que el troncal se ha negociado introduciendo el comando show interfaces</li>
+</ul>
+<p>trunk . Interfaz GigabitEthernet 0/1 debería aparecer en la salida. Pregunta: ¿Cuál es el modo y el estado de este puerto? Escriba sus respuestas aquí.</p>
+<ul>
+<li>Para el enlace troncal entre el S1 y el S3, configure un enlace troncal estático en la interfaz</li>
+</ul>
+<p>GigabitEthernet 0/2. Además, deshabilite la negociación DTP en la interfaz G0/2 en S1. S1(config)# interface g0/2 S1(config-if)# switchport mode trunk S1(config-if)# switchport nonegotiate</p>
+<ul>
+<li>Utilice el comando show dtp para verificar el estado de DTP.</li>
+</ul>
+<p>S1# show dtp</p>
+<p>Packet Tracer: Configuración de DTP</p>
+<p>Global DTP information Sending DTP Hello packets every 30 seconds Dynamic Trunk timeout is 300 seconds 1 interfaces using DTP</p>
+<ul>
+<li>Compruebe que los enlaces troncales estén habilitados en todos los switches mediante el comando</li>
+</ul>
+<p>show interfaces trunk. S1# show interfaces trunk Port Mode Encapsulation Status Native vlan Gig0/1 desirable n-802.1q trunking 1 Gig0/2 on 802.1q trunking 1</p>
+<p>Port Vlans allowed on trunk Gig0/1 1-1005 Gig0/2 1-1005</p>
+<p>Port Vlans allowed and active in management domain Gig0/1 1,99,999 Gig0/2 1,99,999</p>
+<p>Port Vlans in spanning tree forwarding state and not pruned Gig0/1 1,99,999 Gig0/2 1,99,999 Pregunta: ¿Cuál es, actualmente, la VLAN nativa para estos enlaces troncales? Escriba sus respuestas aquí. f. Configure la VLAN 999 como VLAN nativa para los enlaces troncales en S1.</p>
+<p>S1(config)# interface range g0/1 - 2 S1(config-if-range)# switchport trunk native vlan 999 Pregunta: ¿Qué mensajes recibió en el S1? ¿Cómo corregiría el problema? Escriba sus respuestas aquí.</p>
+<ul>
+<li>Configure la VLAN 999 como VLAN nativa en S2 y S3.</li>
+<li>Compruebe que los enlaces troncales se hayan configurado correctamente en todos los switches. Debe</li>
+</ul>
+<p>poder hacer ping en un switch desde otro switch en la topología mediante el uso de las direcciones IP configuradas en la SVI. i. Intente hacer ping desde la PC1 a la PC6. Pregunta: ¿Por qué fallaron los pings? (Sugerencia: Mire la salida 'show vlan brief' de los tres switches. Compare las salidas del 'show interface trunk' en todos los switches.) Escriba sus respue stas aquí.</p>
+<p>j. Corrija la configuración según sea necesario.</p>
+<p>Packet Tracer: Configuración de DTP</p>
+<p>Parte 5: Vuelva a configurar el trunk en S3.</p>
+<ul>
+<li>Ejecute el comando ‘show interface trunk’ en S3.</li>
+</ul>
+<p>Pregunta: ¿Cuál es el modo y la encapsulación en G0/2? Escriba su s respuestas aquí.</p>
+<ul>
+<li>Configure G0/2 para que coincida con G0/2 en S1 .</li>
+</ul>
+<p>Pregunta: ¿Cuál es el modo y la encapsulación en G0/2 después del cambio? Escriba sus respuestas aquí.</p>
+<ul>
+<li>Ejecute el comando 'show interface G0/2 switchport' en el switch S3.</li>
+</ul>
+<p>Pregunta: ¿Cuál es el estado «Negociación del enlace troncal» que se muestra? Escriba sus respuestas aquí. Cerrar la ventana de configuración Parte 6: Verifique la conectividad completa.</p>
+<ul>
+<li>De PC1 ping PC6.</li>
+<li>De PC2 ping PC5.</li>
+<li>De PC3 ping PC4.</li>
+</ul>
+<p>Fin del documento</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.8 — U8P6</p><p>© 2013 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. Packet Tracer: Solución de problemas de implementación de VLAN, situación 1 Topología</p>
+<p>Tabla de asignación de direcciones Dispositivo Interfaz Dirección IPv4 Máscara de subred Puerto del switch VLAN PC1 NIC 172.17.10.21 255.255.255.0 S2 F0/11 PC2 NIC 172.17.20.22 255.255.255.0 S2 F0/18 PC3 NIC 172.17.30.23 255.255.255.0 S2 F0/6 PC4 NIC 172.17.10.24 255.255.255.0 S3 F0/11 PC5 NIC 172.17.20.25 255.255.255.0 S3 F0/18 PC6 NIC 172.17.30.26 255.255.255.0 S3 F0/6 Objetivos Parte 1: Probar la conectividad entre las computadoras en la misma VLAN Parte 2: Investigar los problemas de conectividad por medio de la recopilación de datos Parte 3: Implementar la solución y probar la conectividad Situación En esta actividad, se efectúa la solución de problemas de conectividad entre las PC de la misma VLAN. La actividad finaliza cuando las computadoras en la misma VLAN pueden hacer ping entre sí. Cualquier solución que implemente debe cumplir con la tabla de direccionamiento.</p>
+<p>Packet Tracer: Solución de problemas de implementación de VLAN, situación 1 © 2013 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. Parte 1: Probar la conectividad entre las PC de la misma VLAN En el símbolo del sistema de cada computadora, haga ping entre las computadoras en la misma VLAN.</p>
+<ul>
+<li>¿Puede PC1 hacer ping a PC4? ____________</li>
+<li>¿Puede PC2 hacer ping a PC5? ____________</li>
+<li>¿Puede PC3 hacer ping a PC6? ____________</li>
+</ul>
+<p>Parte 2: Investigar los problemas de conectividad por medio de la recopilación de datos Paso 1: Verificar la configuración en las computadoras Verifique si las siguientes configuraciones para cada computadora son correctas. •</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>IP Address (Dirección IP)</code></pre>
+</div>
+<p>• Máscara de subred Paso 2: Verificar la configuración en los switches Verifique si las siguientes configuraciones en los switches son correctas. • Los puertos están asignados a las VLAN correctas. • Los puertos se configuraron para el modo correcto. • Los puertos están conectados a los dispositivos correctos.</p>
+<p>Paso 3: Registrar el problema y las soluciones Enumere los problemas y las soluciones que permitirán que estas computadoras hagan ping entre sí. Recuerde que podría haber más de un problema o más de una solución. PC1 a PC4</p>
+<ul>
+<li>Explique los problemas de conectividad entre la PC1 y la PC4.</li>
+</ul>
+<p>____________________________________________________________________________________</p>
+<ul>
+<li>Registre las acciones necesarias para corregir los problemas.</li>
+</ul>
+<p>____________________________________________________________________________________ ____________________________________________________________________________________ PC2 a PC5</p>
+<ul>
+<li>Explique los problemas de conectividad entre la PC2 y la PC5.</li>
+</ul>
+<p>____________________________________________________________________________________</p>
+<ul>
+<li>Registre las acciones necesarias para corregir los problemas.</li>
+</ul>
+<p>____________________________________________________________________________________ ____________________________________________________________________________________ PC3 a PC6</p>
+<ul>
+<li>¿Cuáles son las razones por las que la conectividad falló entre las PC?</li>
+</ul>
+<p>____________________________________________________________________________________ ____________________________________________________________________________________</p>
+<p>Packet Tracer: Solución de problemas de implementación de VLAN, situación 1 © 2013 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. f. Registre las acciones necesarias para corregir los problemas. ____________________________________________________________________________________ ____________________________________________________________________________________ Parte 3</p>
+<p>Implementar la solución y probar la conectividad Verifique que las computadoras en la misma VLAN ahora puedan hacer ping entre sí. De lo contrario, continúe con el proceso de solución de problemas. Tabla de puntuación sugerida La actividad Packet Tracer vale 70 puntos. El registro realizado en el paso 2 de la parte 3 vale 30 puntos.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.9 — U8P7</p><p>ã 2019 - aa Cisco y/o sus filiales. Todos los derechos reservados. Información pública de Cisco</p>
+<p>www.netacad.com Packet Tracer - Implementar VLAN y Trunking Tabla de asignación de direcciones Dispositivo Interfaz Dirección IP Máscara de subred Switchport VLAN PC1 NIC 192.168.10.10 255.255.255.0 SWB F0/1 VLAN 10 PC2 NIC 192.168.20.20 255.255.255.0 SWB F0/2 VLAN 20 PC3 NIC 192.168.30.30 255.255.255.0 SWB F0/3 VLAN 30 PC4 NIC 192.168.10.11 255.255.255.0 SWC F0/1 VLAN 10 PC5 NIC 192.168.20.21 255.255.255.0 SWC F0/2 VLAN 20 PC6 NIC 192.168.30.31 255.255.255.0 SWC F0/3 VLAN 30 PC7 NIC 192.168.10.12 255.255.255.0 SWC F0/4 VLAN 10 VLAN 40 (Voz) SWA SVI 192.168.99.252 255.255.255.0 N/D VLAN 99 SWB SVI 192.168.99.253 255.255.255.0 N/D VLAN 99 SWC SVI 192.168.99.254 255.255.255.0 N/D VLAN 99 Objetivos Parte 1. Configurar las VLAN Parte 2: Asignar las VLAN a los puertos Parte 3: Configurar troncales estáticos Parte 4: Configurar enlace troncal dinámico Aspectos básicos Está trabajando en una empresa que se está preparando para implementar un conjunto de switches 2960 nuevos en una sucursal. Está trabajando en el laboratorio para probar las configuraciones de VLAN y trunking planificadas. Configurar y verificar las VLAN y los enlaces troncales Instrucciones Parte 1: Configurar las redes VLAN Configure las VLAN en los tres switches. Consulte la tabla de VLAN. Tenga en cuenta que los nombres de VLAN deben coincidir exactamente con los valores de la tabla.</p>
+<p>Tabla de VLAN Número de VLAN Nombre de la VLAN Admin Accounts HR</p>
+<p>Packet Tracer - Implementar VLAN y Trunking</p>
+<p>Número de VLAN Nombre de la VLAN Voice Management Native Parte 2: Asignar puertos a las VLAN Paso 1: Asignar puertos de acceso a las VLAN En SWB y SWC, asigne puertos a las VLAN. Consulte la tabla de direcciones. Paso 2: Configurar el puerto VLAN de voz Configure el puerto apropiado en el switch SWC para la funcionalidad de VLAN de voz.</p>
+<p>Paso 3: Configurar las interfaces de gestión virtual.</p>
+<ul>
+<li>Cree las interfaces de administración virtual en los tres switches.</li>
+<li>Dirija las interfaces de administración virtual de acuerdo con la Tabla de direcciones.</li>
+<li>Los switches no deberían poder hacer ping entre sí.</li>
+</ul>
+<p>Parte 3: Configurar troncales estáticos</p>
+<ul>
+<li>Configure el enlace entre SWA y SWB como una troncal estática. Deshabilite el enlace dinámico en este</li>
+</ul>
+<p>puerto.</p>
+<ul>
+<li>Desactive DTP en el puerto del switch en ambos extremos del enlace troncal.</li>
+<li>Configure el troncal con la VLAN native y elimine los conflictos de VLAN native en su caso.</li>
+</ul>
+<p>Parte 4: Configurar troncales dinamicos.</p>
+<ul>
+<li>Suponga que el puerto troncal en SWC está configurado en el modo DTP predeterminado para los</li>
+</ul>
+<p>switches 2960. Configure G0/2 en SWA para que negocie correctamente el enlace troncal con SWC.</p>
+<ul>
+<li>Configure el troncal con la VLAN nativa y elimine los conflictos de VLAN nativa en su caso.</li>
+</ul>
+<p>Fin del documento</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.10 — U8P8</p><p>© 2022 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. Packet Tracer: configuración de VLAN, VTP y DTP Topología</p>
+<p>Tabla de asignación de direcciones Dispositivo Interfaz Dirección IP Máscara de subred PC0 NIC 192.168.10.1 255.255.255.0 PC1 NIC 192.168.20.1 255.255.255.0 PC2 NIC 192.168.30.1 255.255.255.0 PC3 NIC 192.168.30.2 255.255.255.0 PC4 NIC 192.168.20.2 255.255.255.0 PC5 NIC 192.168.10.2 255.255.255.0 S1 VLAN 99 192.168.99.1 255.255.255.0 S2 VLAN 99 192.168.99.2 255.255.255.0 S3 VLAN 99 192.168.99.3 255.255.255.0 Objetivos Parte 1. Configurar y comprobar el DTP Parte 2. Configurar y comprobar el protocolo VTP Aspectos básicos/situación A medida que aumenta la cantidad de switches en una red, la administración necesaria para gestionar las redes VLAN y los enlaces troncales puede resultar un desafío. Para facilitar algunas de las configuraciones de la red VLAN y los enlaces troncales, el protocolo VTP (VLAN trunking protocol, protocolo de enlace troncal de red VLAN) le permite al administrador de redes automatizar la gestión de redes VLAN. La negociación de enlaces troncales entre los dispositivos de red se administra mediante el protocolo DTP (Dynamic Trunking Protocol, protocolo de enlace troncal dinámico) y se activa automáticamente en switches Catalyst 2960 y 3560.</p>
+<p>Packet Tracer: configuración de VLAN, VTP y DTP © 2022 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. Durante esta actividad, deberá configurar enlaces troncales entre los switches. Deberá configurar un servidor de VTP y clientes de VTP en el mismo dominio del VTP. También deberá observar el comportamiento del VTP cuando un switch se encuentre en modo de VTP transparente. Asignará puertos a las VLAN y comprobará la conectividad completa con la misma VLAN.</p>
+<p>Parte 1: Configurar y comprobar DTP En la parte 1, configurará enlaces troncales entre los switches y establecerá la VLAN 999 como VLAN nativa. Paso 1: Compruebe la configuración de VLAN. Compruebe las VLAN configuradas en los switches.</p>
+<ul>
+<li>En S1, haga clic en CLI. En el símbolo del sistema, introduzca enable y el comando show vlan brief</li>
+</ul>
+<p>para comprobar las VLAN configuradas en S1. S1# show vlan brief</p>
+<p>VLAN Name Status Ports ---- -------------------------------- --------- ------------------------------- 1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4 Fa0/5, Fa0/6, Fa0/7, Fa0/8 Fa0/9, Fa0/10, Fa0/11, Fa0/12 Fa0/13, Fa0/14, Fa0/15, Fa0/16 Fa0/17, Fa0/18, Fa0/19, Fa0/20 Fa0/21, Fa0/22, Fa0/23, Fa0/24 Gig0/1, Gig0/2 99 Management active 999 VLAN0999 active 1002 fddi-default active 1003 token-ring-default active 1004 fddinet-default active 1005 trnet-default active</p>
+<ul>
+<li>Repita el paso A en los switches S2 y S3. ¿Qué VLAN están configuradas en los switches?</li>
+</ul>
+<p>____________________________________________________________________________________ Paso 2: Configure enlaces troncales en S1, S2 y S3. El protocolo DTP (Dynamic Trunking Protocol, protocolo de enlace troncal dinámico) administra los enlaces troncales entre switches de Cisco. Actualmente, todos los puertos de switch se encuentran en el modo predeterminado de enlace troncal, que es dinámico automático (dynamic auto). En este paso, deberá cambiar el modo de enlace troncal a dinámico conveniente (dynamic desirable) para el enlace entre los switches S1 y S2. El enlace entre los switches S1 y S3 se definirá como enlace estático. Use la red VLAN 999 como VLAN nativa en esta topología.</p>
+<ul>
+<li>En el switch S1 y el switch S2, configure el enlace troncal en el modo dynamic desirable en la interfaz</li>
+</ul>
+<p>GigabitEthernet 0/1. La configuración de S1 se muestra a continuación. S1(config)# interface g0/1 S1(config-if)# switchport mode dynamic desirable</p>
+<ul>
+<li>Para el enlace troncal entre el S1 y el S3, configure un enlace troncal estático en la interfaz</li>
+</ul>
+<p>GigabitEthernet 0/2. S1(config)# interface g0/2 S1(config-if)# switchport mode trunk</p>
+<p>Packet Tracer: configuración de VLAN, VTP y DTP © 2022 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. S3(config)# interface g0/2 S3(config-if)# switchport mode trunk</p>
+<ul>
+<li>Compruebe que los enlaces troncales estén habilitados en todos los switches mediante el comando</li>
+</ul>
+<p>show interfaces trunk. S1# show interfaces trunk Port Mode Encapsulation Status Native vlan Gig0/1 desirable n-802.1q trunking 1 Gig0/2 on 802.1q trunking 1</p>
+<p>Port Vlans allowed on trunk Gig0/1 1-1005 Gig0/2 1-1005</p>
+<p>Port Vlans allowed and active in management domain Gig0/1 1,99,999 Gig0/2 1,99,999</p>
+<p>Port Vlans in spanning tree forwarding state and not pruned Gig0/1 none Gig0/2 none ¿Cuál es, en este momento, la VLAN nativa para estos enlaces troncales? _______________________</p>
+<ul>
+<li>Configure la VLAN 999 como VLAN nativa para los enlaces troncales en S1.</li>
+</ul>
+<p>S1(config)# interface range g0/1 - 2 S1(config-if-range)# switchport trunk native vlan 999 ¿Qué mensajes recibió en el S1? ¿Cómo lo corregiría? ____________________________________________________________________________________ ____________________________________________________________________________________</p>
+<ul>
+<li>Configure la VLAN 999 como VLAN nativa en S2 y S3.</li>
+</ul>
+<p>f. Compruebe que los enlaces troncales se hayan configurado correctamente en todos los switches. Debe poder hacer ping en un switch desde otro switch en la topología mediante el uso de las direcciones IP configuradas en la SVI. Parte 2: Configurar y comprobar el protocolo VTP El S1 se configurará como servidor del VTP y el S2 se configurará como cliente del VTP. Todos los switches deberán configurarse para estar en el dominio CCNA del VTP y usar la contraseña cisco.</p>
+<p>Las VLAN pueden crearse en el servidor del VTP y distribuirse a otros switches en el dominio del VTP. En esta parte, deberá crear 3 redes VLAN nuevas en el servidor del VTP S1. Estas redes VLAN se distribuirán al S2 usando el VTP. Observe cómo funciona el modo de VTP transparente.</p>
+<p>Paso 1: Configure S1 como servidor VTP. Configure S1 como servidor VTP en el dominio CCNA con la contraseña cisco.</p>
+<ul>
+<li>Configure S1 como servidor VTP.</li>
+</ul>
+<p>S1(config)# vtp mode server Setting device to VTP SERVER mode.</p>
+<p>Packet Tracer: configuración de VLAN, VTP y DTP © 2022 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco.</p>
+<ul>
+<li>Configure CCNA como el nombre de dominio VTP.</li>
+</ul>
+<p>S1(config)# vtp domain CCNA Changing VTP domain name from NULL to CCNA</p>
+<ul>
+<li>Utilice cisco como contraseña VTP.</li>
+</ul>
+<p>S1(config)# vtp password cisco Setting device VLAN database password to cisco Paso 2: Compruebe VTP en S1.</p>
+<ul>
+<li>Utilice el comando show vtp status en los switches para confirmar que el modo y el dominio VTP se</li>
+</ul>
+<p>hayan configurado correctamente. S1# show vtp status VTP Version : 2 Configuration Revision : 0 Maximum VLAN supported locally : 255 Number of existing VLANs : 7 VTP Operating Mode : Server VTP Domain Name : CCNA VTP Pruning Mode : Disabled VTP V2 Mode : Disabled VTP Traps Generation : Disabled MD5 digest : 0x8C 0x29 0x40 0xDD 0x7F 0x7A 0x63 0x17 Configuration last modified by 0.0.0.0 at 0-0-00 00:00:00 Local updater ID is 192.168.99.1 on interface Vl99 (lowest numbered VLAN interface found)</p>
+<ul>
+<li>Para verificar la contraseña VTP, utilice el comando show vtp password.</li>
+</ul>
+<p>S1# show vtp password VTP Password: cisco Paso 3: Agregue S2 y S3 al dominio VTP. Antes de que el S2 y el S3 puedan aceptar anuncios del VTP del S1, deben pertenecer al mismo dominio del VTP. Configure el S2 como cliente del VTP usando CCNA como nombre de dominio del VTP y cisco como contraseña del VTP. Recuerde que los nombres de los dominios del VTP distinguen mayúsculas de minúsculas.</p>
+<ul>
+<li>Configure S2 como cliente VTP en el dominio VTP CCNA con la contraseña VTP cisco.</li>
+</ul>
+<p>S2(config)# vtp mode client Setting device to VTP CLIENT mode. S2(config)# vtp domain CCNA Changing VTP domain name from NULL to CCNA S2(config)# vtp password cisco Setting device VLAN database password to cisco</p>
+<ul>
+<li>Para verificar la contraseña VTP, utilice el comando show vtp password.</li>
+</ul>
+<p>S2# show vtp password VTP Password: cisco</p>
+<p>Packet Tracer: configuración de VLAN, VTP y DTP © 2022 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco.</p>
+<ul>
+<li>Configure el S3 en el dominio CCNA del VTP con la contraseña cisco para el VTP. El switch S3</li>
+</ul>
+<p>permanecerá en el modo de VTP transparente. S3(config)# vtp mode Transparent S3(config)# vtp domain CCNA Changing VTP domain name from NULL to CCNA S3(config)# vtp password cisco Setting device VLAN database password to cisco</p>
+<ul>
+<li>Introduzca el comando show vtp status en todos los switches para responder la siguiente pregunta.</li>
+</ul>
+<p>Observe que el número de revisión de la configuración es 0 en los tres switches. Explique. ____________________________________________________________________________________ ____________________________________________________________________________________ ____________________________________________________________________________________ Paso 4</p>
+<p>Cree más VLAN en S1.</p>
+<ul>
+<li>En S1, cree la VLAN 10 y asígnele el nombre Red.</li>
+</ul>
+<p>S1(config)# vlan 10 S1(config-vlan)# name Red</p>
+<ul>
+<li>Cree la VLAN 20 y la VLAN 30 de acuerdo con la siguiente tabla.</li>
+</ul>
+<p>Número de VLAN Nombre de la VLAN Red Blue Yellow</p>
+<ul>
+<li>Compruebe la incorporación de las VLAN nuevas. Introduzca show vlan brief en el modo EXEC</li>
+</ul>
+<p>privilegiado. ¿Qué VLAN están configuradas en S1? ____________________________________________________________________________________</p>
+<ul>
+<li>Confirme los cambios en la configuración; para ello, utilice el comando show vtp status en los switches</li>
+</ul>
+<p>S1 y S2 para corroborar que el modo y el dominio VTP se hayan configurado correctamente. Aquí se muestra el resultado para el S2: S2# show vtp status VTP Version : 2 Configuration Revision : 6 Maximum VLAN supported locally : 255 Number of existing VLANs : 10 VTP Operating Mode : Client VTP Domain Name : CCNA VTP Pruning Mode : Disabled VTP V2 Mode : Disabled VTP Traps Generation : Disabled MD5 digest : 0xE6 0x56 0x05 0xE0 0x7A 0x63 0xFB 0x33 Configuration last modified by 192.168.99.1 at 3-1-93 00:21:07</p>
+<p>Packet Tracer: configuración de VLAN, VTP y DTP © 2022 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. ¿Cuántas son las redes VLAN configuradas en el S2? ¿Tiene el S2 la misma cantidad de redes VLAN que el S1? Explique.</p>
+<p>____________________________________________________________________________________ ____________________________________________________________________________________ Paso 5: Observe el modo transparente VTP. S3 está configurado actualmente como modo VTP transparente.</p>
+<ul>
+<li>Use el comando show vtp status para responder la siguiente pregunta.</li>
+</ul>
+<p>¿Cuántas VLAN están configuradas actualmente en S3? ¿Cuál es el número de revisión de la configuración? Justifique su respuesta. ____________________________________________________________________________________ ____________________________________________________________________________________ ¿Cómo cambiaría la cantidad de VLAN en S3?</p>
+<p>____________________________________________________________________________________ ____________________________________________________________________________________</p>
+<ul>
+<li>Cambie el modo VTP a cliente en S3.</li>
+</ul>
+<p>Utilice los comandos show para comprobar los cambios en modo VTP. ¿Cuántas VLAN existen ahora en S3? ____________________________________________________________________________________ Nota: Las notificaciones VTP se saturan en todo el dominio de administración cada cinco minutos o cada vez que ocurre un cambio en las configuraciones de VLAN. Para acelerar este proceso, puede alternar entre el modo en tiempo real y el modo de simulación hasta la siguiente ronda de actualización. Sin embargo, es posible que deba hacer esto varias veces, ya que este proceso solo adelantará el reloj de Packet Tracer 10 segundos. De forma alternativa, se puede cambiar uno de los switches clientes al modo transparente y luego regresar al modo cliente.</p>
+<p>Paso 6: Asignar VLAN a los puertos Use el comando switchport mode access para establecer el modo de acceso de los enlaces de acceso. Utilice el comando switchport access vlan vlan-id para asignar una VLAN a un puerto de acceso. Puertos Asignaciones Red S2 F0/1 – 8 S3 F0/1 – 8 VLAN 10 (Red) 192.168.10.0 /24 S2 F0/9 – 16 S3 F0/9 – 16 VLAN 20 (Blue) 192.168.20.0 /24 S2 F0/17 – 24 S3 F0/17 – 24 VLAN 30 (Yellow) 192.168.30.0 /24</p>
+<ul>
+<li>Asigne VLAN a los puertos de S2 usando asignaciones de la tabla anterior.</li>
+</ul>
+<p>S2(config-if)# interface range f0/1 - 8 S2(config-if-range)# switchport mode access S2(config-if-range)# switchport access vlan 10 S2(config-if-range)# interface range f0/9 -16</p>
+<p>Packet Tracer: configuración de VLAN, VTP y DTP © 2022 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. S2(config-if-range)# switchport mode access S2(config-if-range)# switchport access vlan 20 S2(config-if-range)# interface range f0/17 - 24 S2(config-if-range)# switchport mode access S2(config-if-range)# switchport access vlan 30</p>
+<ul>
+<li>Asigne VLAN a los puertos de S3 usando asignaciones de la tabla anterior.</li>
+</ul>
+<p>Paso 7: Verifique la conectividad completa.</p>
+<ul>
+<li>Desde la PC0 haga ping en la PC5.</li>
+<li>Desde la PC1 haga ping en la PC4.</li>
+<li>Desde la PC2 haga ping en la PC3.</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.11 — U8P9</p><p>© 2018 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco.</p>
+<p>Packet Tracer: configuración del switching de capa 3 y routing entre redes VLAN</p>
+<p>Topología</p>
+<p>Tabla de asignación de direcciones</p>
+<p>Dispositivo Interfaz Dirección IP Máscara de subred</p>
+<p>MLS VLAN 10 192.168.10.254 255.255.255.0 VLAN 20 192.168.20.254 255.255.255.0 VLAN 30 192.168.30.254 255.255.255.0 VLAN 99 192.168.99.254 255.255.255.0 G0/2 209.165.200.225 255.255.255.252 PC0 NIC 192.168.10.1 255.255.255.0 PC1 NIC 192.168.20.1 255.255.255.0 PC2 NIC 192.168.30.1 255.255.255.0 PC3 NIC 192.168.10.2 255.255.255.0 PC4 NIC 192.168.20.2 255.255.255.0 PC5 NIC 192.168.30.2 255.255.255.0 S1 VLAN 99 192.168.99.1 255.255.255.0 S2 VLAN 99 192.168.99.2 255.255.255.0 S3 VLAN 99 192.168.99.3 255.255.255.0</p>
+<p>Packet Tracer: configuración del switching de capa 3 y routing entre redes VLAN © 2018 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco.</p>
+<p>Objetivos Parte 1. Configurar el switching de capa 3 Parte 2. Configurar el routing entre redes VLAN Aspectos básicos/situación Un switch multicapa, como el Cisco Catalyst 3560, es capaz de realizar switching de capa 2 y routing de capa 3. Una de las ventajas de usar un switch multicapa es esta funcionalidad doble. Un beneficio para las empresas pequeñas/medianas es la capacidad de comprar un solo switch multicapa en lugar de dispositivos de red separados para switching y routing. Las capacidades de un switch multicapa incluyen la capacidad de hacer routing de una red VLAN a otra usando varias interfaces virtuales en modo switch (SVI), así como la capacidad de convertir un puerto de switch de capa 2 en una interfaz de capa 3.</p>
+<p>Parte 1: Configurar el switching de capa 3 En la parte 1, deberá configurar el puerto GigabitEthernet 0/2 en el switch multicapa (MLS) como puerto de routing y comprobar que pueda hacer ping a otra dirección de capa 3.</p>
+<ul>
+<li>En el MLS, configure G0/2 como un puerto de routing y asigne una dirección IP de acuerdo con la tabla</li>
+</ul>
+<p>de direcciones. MLS(config)# interface g0/2 MLS(config-if)# no switchport MLS(config-if)# ip address 209.165.200.225 255.255.255.252</p>
+<ul>
+<li>Compruebe la conectividad a la nube haciendo ping a la dirección 209.165.200.226.</li>
+</ul>
+<p>MLS# ping 209.165.200.226</p>
+<p>Type escape sequence to abort. Sending 5, 100-byte ICMP Echos to 209.165.200.226, timeout is 2 seconds: !!!!! Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms</p>
+<p>Parte 2: Configurar routing entre redes VLAN</p>
+<p>Paso 1: Agregar redes VLAN. Agregue redes VLAN al MLS según la siguiente tabla.</p>
+<p>Número de VLAN Nombre de la VLAN Personal Estudiante Cuerpo docente</p>
+<p>Paso 2: Configurar la SVI en el MLS. Configure y active la interfaz SVI para las redes VLAN 10, 20, 30 y 99 según la tabla de direcciones. A continuación, se muestra la configuración de la red VLAN 10. MLS(config)# interface vlan 10 MLS(config-if)# ip address 192.168.10.254 255.255.255.0</p>
+<p>Packet Tracer: configuración del switching de capa 3 y routing entre redes VLAN © 2018 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco.</p>
+<p>Paso 3: Activar el routing.</p>
+<ul>
+<li>Use el comando show ip route. ¿Hay rutas activas?</li>
+</ul>
+<ul>
+<li>Introduzca el comando ip routing para activar el routing en el modo de configuración global.</li>
+</ul>
+<p>MLS(config)# ip routing</p>
+<ul>
+<li>Use el comando show ip route para comprobar que el routing esté activado.</li>
+</ul>
+<p>MLS# show ip route Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2 E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area</p>
+<ul>
+<li>candidate default, U - per-user static route, o - ODR</li>
+</ul>
+<p>P - periodic downloaded static route</p>
+<p>Gateway of last resort is not set</p>
+<p>C 192.168.10.0/24 is directly connected, Vlan10 C 192.168.20.0/24 is directly connected, Vlan20 C 192.168.30.0/24 is directly connected, Vlan30 C 192.168.99.0/24 is directly connected, Vlan99 209.165.200.0/30 is subnetted, 1 subnets C 209.165.200.224 is directly connected, GigabitEthernet0/2</p>
+<p>Paso 4: Verificar la conectividad de extremo a extremo</p>
+<ul>
+<li>En la PC0, haga ping a la PC3 o al MLS para comprobar la conectividad con la red VLAN 10.</li>
+<li>En la PC1, haga ping a la PC4 o al MLS para comprobar la conectividad en la red VLAN 20.</li>
+<li>En la PC2, haga ping a la PC5 o al MLS para comprobar la conectividad en la red VLAN 30.</li>
+<li>En el S1, haga ping al S2, S3 o MLS para comprobar la conectividad en la red VLAN 99.</li>
+<li>Para comprobar el routing entre redes VLAN, haga ping a los dispositivos fuera de la red VLAN del emisor.</li>
+</ul>
+<p>f. Desde cualquier dispositivo, haga ping a esta dirección en la nube: 209.165.200.226</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 9.12 — Examen U8</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut08/ut08actividades.html">⬅️ ✍️ Activitats pràctiques UT8</a>
+<a class="page-nav-btn" href="../ut09/ut0901.html">9.1 U8 VLAN ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

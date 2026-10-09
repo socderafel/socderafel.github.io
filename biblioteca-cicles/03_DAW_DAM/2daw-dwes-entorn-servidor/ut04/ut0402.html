@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>4.2 DB's — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🐘 Desenvolupament Web en Entorn Servidor (PHP i Laravel) — 2n DAW · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Desenvolupament Web en Entorn Servidor (PHP i Laravel)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Student Guide</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — General</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unit 1 - Server-side development</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 Server-Side Development</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Git Recap</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Git Cheat Sheet</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unit 2 - Basic PHP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U2 Basic PHP</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 Class exercises</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Images exercise 2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unit 3 - Advanced PHP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U3 Advanced PHP</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U3 Class exercises</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Code examples</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Unit 4 - Data access</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U4 Data Access</a></li>
+<li><a class="active" href="../ut04/ut0402.html">4.2 DB's</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U4 Class exercises</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Unit 5 - Introduction to frameworks. Laravel I</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 U5 - Frameworks. Laravel I</a></li>
+<li><a href="../ut05/ut0502.html">5.2 How to install npm (node) into our existing cont</a></li>
+<li><a href="../ut05/ut0503.html">5.3 U5 Class exercises</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Unit 6 - Laravel II</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U6 - Frameworks. Laravel II</a></li>
+<li><a href="../ut06/ut0602.html">6.2 How to use Tailwind CSS into a Laravel project</a></li>
+<li><a href="../ut06/ut0603.html">6.3 How to clone a Laravel project from Github</a></li>
+<li><a href="../ut06/ut0604.html">6.4 U6 Class exercises</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unit 7 - Web Services</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U7 - Web Services</a></li>
+<li><a href="../ut07/ut0702.html">7.2 U7 Class exercises</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Unit 8 - Hybrid Applications</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 U8 - Hybrid applications</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Annual Project</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Annual Project</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Annual project (English)</a></li>
+<li><a href="../ut09/ut0903.html">9.3 Project planning. Distribution by units</a></li>
+<li><a href="../ut09/ut0904.html">9.4 Database Diagram</a></li>
+<li><a href="../ut09/ut0905.html">9.5 Database evaluation</a></li>
+<li><a href="../ut09/ut0906.html">9.6 bandaw.sql 1st quarter</a></li>
+<li><a href="../ut09/ut0907.html">9.7 bandaw.sql 2nd quarter</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — 3rd Quarter</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Welcome 2nd attempt</a></li>
+<li><a href="../ut10/ut1002.html">10.2 3rd quarter exercises</a></li>
+<li><a href="../ut10/ut1003.html">10.3 Laravel ex U6</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n DAW · Grau Superior · UT4 — Unit 4 - Data access</span>
+<h1>4.2 DB's</h1>
+<p dir="ltr" style="text-align: left;">A set of databases for testinc and practical purposes</p>
+<h3>📄 nba_oracle.sql</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">nba_oracle.sql</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE equipos (
+  Nombre varchar(20) NOT NULL,
+  Ciudad varchar(20) DEFAULT NULL,
+  Conferencia varchar(4) DEFAULT NULL,
+  Division varchar(9) DEFAULT NULL,
+  PRIMARY KEY (Nombre)
+);
+INSERT INTO equipos VALUES ('Celtics','Boston','East','Atlantic');
+INSERT INTO equipos VALUES ('Raptors','Toronto','East','Atlantic');
+INSERT INTO equipos VALUES ('76ers','Philadelphia','East','Atlantic');
+INSERT INTO equipos VALUES ('Nets','New Jersey','East','Atlantic');
+INSERT INTO equipos VALUES ('Knicks','New York','East','Atlantic');
+INSERT INTO equipos VALUES ('Pistons','Detroit','East','Central');
+INSERT INTO equipos VALUES ('Cavaliers','Cleveland','East','Central');
+INSERT INTO equipos VALUES ('Pacers','Indiana','East','Central');
+INSERT INTO equipos VALUES ('Bulls','Chicago','East','Central');
+INSERT INTO equipos VALUES ('Bucks','Milwaukee','East','Central');
+INSERT INTO equipos VALUES ('Magic','Orlando','East','SouthEast');
+INSERT INTO equipos VALUES ('Wizards','Washington','East','SouthEast');
+INSERT INTO equipos VALUES ('Hawks','Atlanta','East','SouthEast');
+INSERT INTO equipos VALUES ('Bobcats','Charlotte','East','SouthEast');
+INSERT INTO equipos VALUES ('Heat','Miami','East','SouthEast');
+INSERT INTO equipos VALUES ('Jazz','Utah','West','NorthWest');
+INSERT INTO equipos VALUES ('Nuggets','Denver','West','NorthWest');
+INSERT INTO equipos VALUES ('Trail Blazers','Portland','West','NorthWest');
+INSERT INTO equipos VALUES ('Timberwolves','Minnesota','West','NorthWest');
+INSERT INTO equipos VALUES ('Supersonics','Seattle','West','NorthWest');
+INSERT INTO equipos VALUES ('Lakers','Los Angeles','West','Pacific');
+INSERT INTO equipos VALUES ('Suns','Phoenix','West','Pacific');
+INSERT INTO equipos VALUES ('Warriors','Golden State','West','Pacific');
+INSERT INTO equipos VALUES ('Kings','Sacramento','West','Pacific');
+INSERT INTO equipos VALUES ('Clippers','Los Angeles','West','Pacific');
+INSERT INTO equipos VALUES ('Hornets','New Orleans','West','SouthWest');
+INSERT INTO equipos VALUES ('Spurs','San Antonio','West','SouthWest');
+INSERT INTO equipos VALUES ('Rockets','Houston','West','SouthWest');
+INSERT INTO equipos VALUES ('Mavericks','Dallas','West','SouthWest');
+INSERT INTO equipos VALUES ('Grizzlies','Memphis','West','SouthWest');
+
+CREATE TABLE jugadores (
+  codigo int NOT NULL,
+  Nombre varchar(30) DEFAULT NULL,
+  Procedencia varchar(20) DEFAULT NULL,
+  Altura varchar(4) DEFAULT NULL,
+  Peso int DEFAULT NULL,
+  Posicion varchar(5) DEFAULT NULL,
+  Nombre_equipo varchar(20) DEFAULT NULL,
+  PRIMARY KEY (codigo),
+  FOREIGN KEY (Nombre_equipo) References equipos(Nombre)
+);
+
+INSERT INTO jugadores VALUES (1,'Corey Brever','Florida','6-9',185,'F-G','Timberwolves');
+INSERT INTO jugadores VALUES (2,'Greg Buckner','Clemson','6-4',210,'G-F','Timberwolves');
+INSERT INTO jugadores VALUES (3,'Michael Doleac','Utah','6-11',262,'C','Timberwolves');
+INSERT INTO jugadores VALUES (4,'Randy Foye','Villanova','6-4',213,'G','Timberwolves');
+INSERT INTO jugadores VALUES (5,'Ryan Gomes','Providence','6-7',250,'F','Timberwolves');
+INSERT INTO jugadores VALUES (6,'Marko Jaric','Serbia','6-7',224,'G','Timberwolves');
+INSERT INTO jugadores VALUES (7,'Al Jefferson','Prentiss Hs','6-10',265,'C-F','Timberwolves');
+INSERT INTO jugadores VALUES (8,'Mark Madsen','Stanford','6-9',250,'C-F','Timberwolves');
+INSERT INTO jugadores VALUES (9,'Rashard McCants','North Carolina','6-4',21,'G','Timberwolves');
+INSERT INTO jugadores VALUES (10,'Chris Richard ','Florida','6-9',270,'F','Timberwolves');
+INSERT INTO jugadores VALUES (11,'Craig Smith','Boston College','6-8',250,'F-C','Timberwolves');
+INSERT INTO jugadores VALUES (12,'Kirk Snyder','Nevada-Reno','6-6',225,'G','Timberwolves');
+INSERT INTO jugadores VALUES (13,'Sebastian Telfair','Abraham Lincoln HS','6-0',175,'G','Timberwolves');
+INSERT INTO jugadores VALUES (14,'Antoine Walker','Kentucky','6-9',245,'F','Timberwolves');
+INSERT INTO jugadores VALUES (21,'Elton brand','duke','6-8',254,'F','Clippers');
+INSERT INTO jugadores VALUES (22,'Paul Davis','Michigan','6-11',270,'c','Clippers');
+INSERT INTO jugadores VALUES (23,'Dan Dickau','Gonzaga','6-0',180,'G','Clippers');
+INSERT INTO jugadores VALUES (24,'Nick Fazekas','Nevada-Reno','6-11',235,'F','Clippers');
+INSERT INTO jugadores VALUES (25,'Chris Kaman','Central Michigan','7-0',265,'C','Clippers');
+INSERT INTO jugadores VALUES (26,'Brevin Knight','Stanford','5-10',170,'G','Clippers');
+INSERT INTO jugadores VALUES (27,'Shaun Livingston','Peoria Central','6-7',182,'G','Clippers');
+INSERT INTO jugadores VALUES (28,'Corey Maggette','duke','6-6',225,'F','Clippers');
+INSERT INTO jugadores VALUES (29,'Cuttino Mobley','Rhode Island','6-4',215,'G','Clippers');
+INSERT INTO jugadores VALUES (30,'Smush Parker','Fordham','6-4',190,'G','Clippers');
+INSERT INTO jugadores VALUES (31,'Josh Powell','North Carolina State','6-9',240,'C-F','Clippers');
+INSERT INTO jugadores VALUES (32,'Quinton Ross','Southern Methodist','6-6',193,'G-F','Clippers');
+INSERT INTO jugadores VALUES (33,'Tim Thomas','Villanova','6-10',240,'F','Clippers');
+INSERT INTO jugadores VALUES (34,'al thornton','Florida State','6-8',220,'F','Clippers');
+INSERT INTO jugadores VALUES (35,'Marcus Williams','Arizona','6-7',207,'F','Clippers');
+INSERT INTO jugadores VALUES (41,'Andre Brown','De Paul','6-9',245,'F','Grizzlies');
+INSERT INTO jugadores VALUES (42,'Kwame Brown','Glynn Academy','6-11',270,'C','Grizzlies');
+INSERT INTO jugadores VALUES (43,'Brian Cardinal','Purdue','6-8',245,'F','Grizzlies');
+INSERT INTO jugadores VALUES (44,'Jason Collins','Stanford','7-0',255,'C-F','Grizzlies');
+INSERT INTO jugadores VALUES (45,'Mike Conley','Ohio State','6-1',180,'G','Grizzlies');
+INSERT INTO jugadores VALUES (46,'Javaris Crittenton','Georgia Tech','6-5',200,'G','Grizzlies');
+INSERT INTO jugadores VALUES (47,'Rudy Gay','Connecticut','6-8',222,'F','Grizzlies');
+INSERT INTO jugadores VALUES (48,'Casey Jacobsen','Stanford','6-6',215,'g','Grizzlies');
+INSERT INTO jugadores VALUES (49,'Kyle Lowry','Villanova','6-0',175,'G','Grizzlies');
+INSERT INTO jugadores VALUES (50,'Aaron Mckie','Temple','6-5',209,'G','Grizzlies');
+INSERT INTO jugadores VALUES (51,'Darko Milicic','Serbia Montenegro','7-0',275,'C-F','Grizzlies');
+INSERT INTO jugadores VALUES (52,'Mike Miller','Florida','6-8',218,'G-F','Grizzlies');
+INSERT INTO jugadores VALUES (53,'Juan Carlos Navarro','Spain','6-3',170,'G','Grizzlies');
+INSERT INTO jugadores VALUES (54,'Hakim Warrick','Syracuse','6-9',215,'F','Grizzlies');
+INSERT INTO jugadores VALUES (61,'Trevor Ariza','UCLA','6-8',210,'F','Lakers');
+INSERT INTO jugadores VALUES (62,'Kobe Bryant','Lower Merion HS (PA)','6-6',205,'G','Lakers');
+INSERT INTO jugadores VALUES (63,'Andrew Bynum','St. Joseph HS (NJ)','7-0',285,'C','Lakers');
+INSERT INTO jugadores VALUES (64,'Jordan Farmar','UCLA','6-2',180,'G','Lakers');
+INSERT INTO jugadores VALUES (65,'Derek Fisher','Arkansas-Little Rock','6-1',210,'G','Lakers');
+INSERT INTO jugadores VALUES (66,'Pau Gasol','Spain','7-0',250,'F-C','Lakers');
+INSERT INTO jugadores VALUES (67,'Didier Ilunga-Mbenga','Congo','7-0',255,'C','Lakers');
+INSERT INTO jugadores VALUES (68,'Coby Karl','Boise State','6-5',215,'G','Lakers');
+INSERT INTO jugadores VALUES (69,'Chris Mihm','Texas','7-0',265,'C','Lakers');
+INSERT INTO jugadores VALUES (70,'Ira Newble','Miami(Ohia)','6-7',220,'G-F','Lakers');
+INSERT INTO jugadores VALUES (71,'Lamar Odom','Rhode Island','6-10',230,'F','Lakers');
+INSERT INTO jugadores VALUES (72,'Vladimir Radmanovic','Serbia Montenegro','6-10',235,'F','Lakers');
+INSERT INTO jugadores VALUES (73,'Ronny Turiaf','Gonzaga','6-10',250,'F-C','Lakers');
+INSERT INTO jugadores VALUES (74,'Sasha Vujacic','Slovenia','6-7',205,'G','Lakers');
+INSERT INTO jugadores VALUES (75,'Luke Walton','Arizona','6-8',235,'F','Lakers');
+INSERT INTO jugadores VALUES (81,'Andrea Bargnani','Italy','7-0',250,'C-F','Raptors');
+INSERT INTO jugadores VALUES (82,'Maceo Baston','Michigan','6-10',230,'C-F','Raptors');
+INSERT INTO jugadores VALUES (84,'Primoz Brezec','Slovenia','7-1',255,'C','Raptors');
+INSERT INTO jugadores VALUES (85,'Jose Calderon','Spain','6-3',210,'G','Raptors');
+INSERT INTO jugadores VALUES (86,'Carlos Delfino','Argentina','6-6',230,'G','Raptors');
+INSERT INTO jugadores VALUES (87,'T.J. Ford','Texas','6-0',165,'G','Raptors');
+INSERT INTO jugadores VALUES (88,'Jorge Garbajosa','Spain','6-9',245,'F','Raptors');
+INSERT INTO jugadores VALUES (89,'Joey Graham','Oklahoma State','6-7',225,'F','Raptors');
+INSERT INTO jugadores VALUES (90,'Kris Humphries','Minnesota','6-9',235,'F','Raptors');
+INSERT INTO jugadores VALUES (91,'Linton Johnson III','Tulane','6-8',205,'F','Raptors');
+INSERT INTO jugadores VALUES (92,'Jason Kapono','UCLA','6-8',215,'F','Raptors');
+INSERT INTO jugadores VALUES (93,'Jamario Moon','Merdian CC (MS)','6-8',205,'F','Raptors');
+INSERT INTO jugadores VALUES (94,'Rasho Nesterovic','Slovenia','7-0',255,'C','Raptors');
+INSERT INTO jugadores VALUES (95,'Anthony Parker','Bradley','6-6',215,'G-F','Raptors');
+INSERT INTO jugadores VALUES (100,'Renaldo Balkman','South Carolina','6-8',202,'F','Knicks');
+INSERT INTO jugadores VALUES (101,'Wilson Chandler','DePaul','6-8',220,'F','Knicks');
+INSERT INTO jugadores VALUES (102,'Mardy Collins','Temple','6-6',220,'G','Knicks');
+INSERT INTO jugadores VALUES (103,'Jamal Crawford','Michigan','6-5',220,'G','Knicks');
+INSERT INTO jugadores VALUES (104,'Eddy Curry','Thornwood HS','6-11',285,'C','Knicks');
+INSERT INTO jugadores VALUES (105,'Jerome James','Florida AM','7-1',285,'C','Knicks');
+INSERT INTO jugadores VALUES (106,'Jared Jeffries','Indiana','6-11',240,'F','Knicks');
+INSERT INTO jugadores VALUES (107,'Fred Jones','Oregon','6-2',225,'G','Knicks');
+INSERT INTO jugadores VALUES (108,'David Lee','Florida','6-9',240,'F','Knicks');
+INSERT INTO jugadores VALUES (109,'Stephon Marbury','Georgia Tech','6-2',205,'G','Knicks');
+INSERT INTO jugadores VALUES (110,'Randolph Morris','Kentucky','6-11',260,'C','Knicks');
+INSERT INTO jugadores VALUES (111,'Zach Randolph','Michigan State','6-9',260,'F','Knicks');
+INSERT INTO jugadores VALUES (112,'Quentin Richardson','DePaul','6-6',235,'F-G','Knicks');
+INSERT INTO jugadores VALUES (113,'Nate Robinson','Washington','5-9',180,'G','Knicks');
+INSERT INTO jugadores VALUES (114,'Malik Rose','Drexel','6-7',255,'F','Knicks');
+INSERT INTO jugadores VALUES (120,'Louis Amundson',' Nevada-Las Vegas',' 6-9',225,'F','76ers');
+INSERT INTO jugadores VALUES (121,'Calvin Booth','Penn State','6-11',250,'C','76ers');
+INSERT INTO jugadores VALUES (122,'Rodney Carney','Memphis','6-7',204,'F','76ers');
+INSERT INTO jugadores VALUES (123,'Samuel Dalembert','Seton Hall','6-11',250,'C','76ers');
+INSERT INTO jugadores VALUES (124,'Reggie Evans','Iowa','6-8',245,'F','76ers');
+INSERT INTO jugadores VALUES (125,'Willie Green','Detroit Mercy','6-3',201,'G','76ers');
+INSERT INTO jugadores VALUES (126,'Herbert Hill','Providence','6-10',240,'F-C','76ers');
+INSERT INTO jugadores VALUES (127,'Andre Iguodala','Arizona','6-6',207,'F-G','76ers');
+INSERT INTO jugadores VALUES (128,'Andre Miller','Utah','6-2',200,'G','76ers');
+INSERT INTO jugadores VALUES (129,'Kevin Ollie','Connecticut','6-2',195,'G','76ers');
+INSERT INTO jugadores VALUES (130,'Shavlik Randolph','Duke','6-10',240,'F','76ers');
+INSERT INTO jugadores VALUES (131,'Jason Smith','Colorado Sate','7-0',240,'F','76ers');
+INSERT INTO jugadores VALUES (132,'Louis Williams','South Gwinnett HS','6-2',175,'G','76ers');
+INSERT INTO jugadores VALUES (133,'Thaddeus Young','Georgio Tech','6-8',220,'F','76ers');
+INSERT INTO jugadores VALUES (150,'Lance Allred','Weber State','6-11',250,'C','Cavaliers');
+INSERT INTO jugadores VALUES (151,'Devin Brown','Texas-San Antonio','6-5',210,'G','Cavaliers');
+INSERT INTO jugadores VALUES (152,'Daniel Gibson','Texas','6-2',194,'G','Cavaliers');
+INSERT INTO jugadores VALUES (153,'Zydrunas Ilgauskas','St. Vincent-St. Mary','7-3',260,'C','Cavaliers');
+INSERT INTO jugadores VALUES (154,'LeBron James','Houston','6-8',250,'F','Cavaliers');
+INSERT INTO jugadores VALUES (155,'Damon Jones','Saint Joseph''s','6-3',195,'G','Cavaliers');
+INSERT INTO jugadores VALUES (156,'Dwayne Jones','Serbia','6-11',251,'C-F','Cavaliers');
+INSERT INTO jugadores VALUES (157,'Aleksandar Pavlovic','Maryland','6-7',239,'G-F','Cavaliers');
+INSERT INTO jugadores VALUES (158,'Joe Smith','Michigan State','6-10',225,'F-C','Cavaliers');
+INSERT INTO jugadores VALUES (159,'Eric Snow','Miami ','6-3',205,'G','Cavaliers');
+INSERT INTO jugadores VALUES (160,'Wally Szczerbiak','Brazil','6-7',245,'F','Cavaliers');
+INSERT INTO jugadores VALUES (161,'Anderson Varejao','Merdian CC (MS)','6-10',240,'C-F','Cavaliers');
+INSERT INTO jugadores VALUES (162,'Ben Wallace','Virginia Union','6-9',240,'C-F','Cavaliers');
+INSERT INTO jugadores VALUES (163,'Delonte West','Saint Joseph''s','6-3',180,'G','Cavaliers');
+INSERT INTO jugadores VALUES (181,'Derek Anderson','Kentucky','6-5',195,'G','Bobcats');
+INSERT INTO jugadores VALUES (182,'Earl Boykins','Eastern michigan','5-5',133,'G','Bobcats');
+INSERT INTO jugadores VALUES (183,'Matt Carroll','Notre Dame','6-6',212,'G','Bobcats');
+INSERT INTO jugadores VALUES (184,'Jermareo Davidson','Alabama','6-10',230,'F','Bobcats');
+INSERT INTO jugadores VALUES (185,'Jared Dudley','Boston College','6-7',225,'F','Bobcats');
+INSERT INTO jugadores VALUES (186,'Raymond Felton','North Carolina','6-1',198,'G','Bobcats');
+INSERT INTO jugadores VALUES (187,'Othella Harrington','Georgetown','6-9',235,'F-C','Bobcats');
+INSERT INTO jugadores VALUES (188,'Ryan Hollins','Ucla','7-0',230,'C','Bobcats');
+INSERT INTO jugadores VALUES (189,'Sean May','North Carolina','6-9',266,'F-C','Bobcats');
+INSERT INTO jugadores VALUES (190,'Nazr Mohammed','Kentucky','6-10',250,'C','Bobcats');
+INSERT INTO jugadores VALUES (191,'Adam Morrison','Gonzaga','6-8',205,'F','Bobcats');
+INSERT INTO jugadores VALUES (192,'Emeka Okafor','Connecticut','6-10',255,'F-C','Bobcats');
+INSERT INTO jugadores VALUES (193,'Jason Richardson','Michigan State','6-6',225,'G-F','Bobcats');
+INSERT INTO jugadores VALUES (194,'Gerald Wallace','Alabama','6-7',220,'F','Bobcats');
+INSERT INTO jugadores VALUES (201,'Charlie Bell','Michigan State','6-3',200,'G','Bucks');
+INSERT INTO jugadores VALUES (202,'Andrew Bouqt','Utah','7-0',260,'C','Bucks');
+INSERT INTO jugadores VALUES (203,'Dan Gadzuric','Ucla','6-11',245,'C','Bucks');
+INSERT INTO jugadores VALUES (204,'Royal Ivey','Texas','6-4',215,'G','Bucks');
+INSERT INTO jugadores VALUES (205,'Desmond Mason','Oklahoma State','6-5',222,'F','Bucks');
+INSERT INTO jugadores VALUES (206,'Michael Redd','Ohio State','6-6',215,'G','Bucks');
+INSERT INTO jugadores VALUES (207,'Michael Ruffin','Tulsa','6-8',248,'F-C','Bucks');
+INSERT INTO jugadores VALUES (208,'Ramon Sessions','Nevava-Reno','6-3',190,'G','Bucks');
+INSERT INTO jugadores VALUES (209,'Bobby Simmons','DePaul','6-6',230,'F','Bucks');
+INSERT INTO jugadores VALUES (210,'Awvee Store','Arizona State','6-6',225,'F-G','Bucks');
+INSERT INTO jugadores VALUES (2</code></pre>
+</div>
+<h3>📄 Company.sql</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">Company.sql</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE EMPLOYEE(
+Fname VARCHAR (15) NOT NULL,
+Minit CHAR (1),
+Lname VARCHAR (15) NOT NULL,
+Ssn CHAR (9),
+Bdate DATE (10),
+Adress VARCHAR(35),
+Sex CHAR (1),
+Salary INT (6),
+Super_ssn CHAR (9),
+Dno INT (2),
+PRIMARY KEY (Ssn),
+FOREIGN KEY (Super_ssn) REFERENCES EMPLOYEE (Ssn) ON DELETE SET NULL, ON UPDATE CASCADE,
+FOREIGN KEY (Dno) REFERENCES DEPARTMENT(Dnumber));
+
+CREATE TABLE DEPARTMENT (
+Dname VARCHAR (15) NOT NULL,
+Dnumber INT (2),
+Mgr_ssn CHAR (9),
+Mgr_start_date DATE (10),
+PRIMARY KEY (Dnumber)
+FOREIGN KEY (Mgr_ssn) REFERENCES EMPLOYEE (Ssn));
+
+
+CREATE TABLE DEPT_LOCATIONS (
+Dnumber INT (2),
+Dlocation VARCHAR (15),
+PRIMARY KEY (Dnumber, Dlocation),
+FOREIGN KEY (Dnumber) REFERENCES DEPARTMENT(Dnumber) ON DELETE CASCADE, ON UPDATE CASCADE);
+
+CREATE TABLE PROJECT (
+Pname VARCHAR (15) NOT NULL,
+Pnumber (2),
+Plocation VARCHAR(15),
+Dnum INT (2),
+PRIMARY KEY (Pnumber),
+FOREIGN KEY (Dnum) REFERENCES DEPARTMENT(Dnumber));
+
+CREATE TABLE WORKS_ON (
+Essn CHAR (9),
+Pno INT (2),
+Hours DECIMAL (3,1),
+PRIMARY KEY (Essn, Pno),
+FOREIGN KEY (Essn) REFERENCES EMPLOYEE (Ssn),
+FOREIGN KEY (Pno) REFERENCES PROJECT(Pnumber));
+
+CREATE TABLE DEPENDENT (
+Essn CHAR (9),
+Dependent_name VARCHAR (15),
+Sex CHAR (1),
+Bdate DATE (10),
+Relationship VARCHAR (15),
+PRIMARY KEY (Essn, Dependent_name),
+FOREIGN KEY (Essn) REFERENCES EMPLOYEE (Ssn));</code></pre>
+</div>
+<h3>📄 jardineria.sql</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">jardineria.sql</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE Oficinas (
+  CodigoOficina varchar(10) NOT NULL,
+  Ciudad varchar(30) NOT NULL,
+  Pais varchar(50) NOT NULL,
+  Region varchar(50) DEFAULT NULL,
+  CodigoPostal varchar(10) NOT NULL,
+  Telefono varchar(20) NOT NULL,
+  LineaDireccion1 varchar(50) NOT NULL,
+  LineaDireccion2 varchar(50) DEFAULT NULL,
+  PRIMARY KEY (CodigoOficina)
+) engine=innodb;
+
+INSERT INTO Oficinas VALUES ('BCN-ES','Barcelona','España','Barcelona','08019','+34 93 3561182','Avenida Diagonal, 38','3A escalera Derecha');
+INSERT INTO Oficinas VALUES ('BOS-USA','Boston','EEUU','MA','02108','+1 215 837 0825','1550 Court Place','Suite 102');
+INSERT INTO Oficinas VALUES ('LON-UK','Londres','Inglaterra','EMEA','EC2N 1HN','+44 20 78772041','52 Old Broad Street','Ground Floor');
+INSERT INTO Oficinas VALUES ('MAD-ES','Madrid','España','Madrid','28032','+34 91 7514487','Bulevar Indalecio Prieto, 32','');
+INSERT INTO Oficinas VALUES ('PAR-FR','Paris','Francia','EMEA','75017','+33 14 723 4404','29 Rue Jouffroy d''abbans','');
+INSERT INTO Oficinas VALUES ('SFC-USA','San Francisco','EEUU','CA','94080','+1 650 219 4782','100 Market Street','Suite 300');
+INSERT INTO Oficinas VALUES ('SYD-AU','Sydney','Australia','APAC','NSW 2010','+61 2 9264 2451','5-11 Wentworth Avenue','Floor #2');
+INSERT INTO Oficinas VALUES ('TAL-ES','Talavera de la Reina','España','Castilla-LaMancha','45632','+34 925 867231','Francisco Aguirre, 32','5º piso (exterior)');
+INSERT INTO Oficinas VALUES ('TOK-JP','Tokyo','Japón','Chiyoda-Ku','102-8578','+81 33 224 5000','4-1 Kioicho','');
+
+CREATE TABLE Empleados (
+  CodigoEmpleado integer NOT NULL,
+  Nombre varchar(50) NOT NULL,
+  Apellido1 varchar(50) NOT NULL,
+  Apellido2 varchar(50) DEFAULT NULL,
+  Extension varchar(10) NOT NULL,
+  Email varchar(100) NOT NULL,
+  CodigoOficina varchar(10) NOT NULL,
+  CodigoJefe integer DEFAULT NULL,
+  Puesto varchar(50) DEFAULT NULL,
+  PRIMARY KEY (CodigoEmpleado),
+  CONSTRAINT Empleados_OficinasFK FOREIGN KEY (CodigoOficina) REFERENCES Oficinas (CodigoOficina),
+  CONSTRAINT Empleados_EmpleadosFK FOREIGN KEY (CodigoJefe) REFERENCES Empleados (CodigoEmpleado)
+) engine=innodb;
+
+INSERT INTO Empleados VALUES (1,'Marcos','Magaña','Perez','3897','marcos@jardineria.es','TAL-ES',NULL,'Director General');
+INSERT INTO Empleados VALUES (2,'Ruben','López','Martinez','2899','rlopez@jardineria.es','TAL-ES',1,'Subdirector Marketing');
+INSERT INTO Empleados VALUES (3,'Alberto','Soria','Carrasco','2837','asoria@jardineria.es','TAL-ES',2,'Subdirector Ventas');
+INSERT INTO Empleados VALUES (4,'Maria','Solís','Jerez','2847','msolis@jardineria.es','TAL-ES',2,'Secretaria');
+INSERT INTO Empleados VALUES (5,'Felipe','Rosas','Marquez','2844','frosas@jardineria.es','TAL-ES',3,'Representante Ventas');
+INSERT INTO Empleados VALUES (6,'Juan Carlos','Ortiz','Serrano','2845','cortiz@jardineria.es','TAL-ES',3,'Representante Ventas');
+INSERT INTO Empleados VALUES (7,'Carlos','Soria','Jimenez','2444','csoria@jardineria.es','MAD-ES',3,'Director Oficina');
+INSERT INTO Empleados VALUES (8,'Mariano','López','Murcia','2442','mlopez@jardineria.es','MAD-ES',7,'Representante Ventas');
+INSERT INTO Empleados VALUES (9,'Lucio','Campoamor','Martín','2442','lcampoamor@jardineria.es','MAD-ES',7,'Representante Ventas');
+INSERT INTO Empleados VALUES (10,'Hilario','Rodriguez','Huertas','2444','hrodriguez@jardineria.es','MAD-ES',7,'Representante Ventas');
+INSERT INTO Empleados VALUES (11,'Emmanuel','Magaña','Perez','2518','manu@jardineria.es','BCN-ES',3,'Director Oficina');
+INSERT INTO Empleados VALUES (12,'José Manuel','Martinez','De la Osa','2519','jmmart@hotmail.es','BCN-ES',11,'Representante Ventas');
+INSERT INTO Empleados VALUES (13,'David','Palma','Aceituno','2519','dpalma@jardineria.es','BCN-ES',11,'Representante Ventas');
+INSERT INTO Empleados VALUES (14,'Oscar','Palma','Aceituno','2519','opalma@jardineria.es','BCN-ES',11,'Representante Ventas');
+INSERT INTO Empleados VALUES (15,'Francois','Fignon','','9981','ffignon@gardening.com','PAR-FR',3,'Director Oficina');
+INSERT INTO Empleados VALUES (16,'Lionel','Narvaez','','9982','lnarvaez@gardening.com','PAR-FR',15,'Representante Ventas');
+INSERT INTO Empleados VALUES (17,'Laurent','Serra','','9982','lserra@gardening.com','PAR-FR',15,'Representante Ventas');
+INSERT INTO Empleados VALUES (18,'Michael','Bolton','','7454','mbolton@gardening.com','SFC-USA',3,'Director Oficina');
+INSERT INTO Empleados VALUES (19,'Walter Santiago','Sanchez','Lopez','7454','wssanchez@gardening.com','SFC-USA',18,'Representante Ventas');
+INSERT INTO Empleados VALUES (20,'Hilary','Washington','','7565','hwashington@gardening.com','BOS-USA',3,'Director Oficina');
+INSERT INTO Empleados VALUES (21,'Marcus','Paxton','','7565','mpaxton@gardening.com','BOS-USA',20,'Representante Ventas');
+INSERT INTO Empleados VALUES (22,'Lorena','Paxton','','7665','lpaxton@gardening.com','BOS-USA',20,'Representante Ventas');
+INSERT INTO Empleados VALUES (23,'Nei','Nishikori','','8734','nnishikori@gardening.com','TOK-JP',3,'Director Oficina');
+INSERT INTO Empleados VALUES (24,'Narumi','Riko','','8734','nriko@gardening.com','TOK-JP',23,'Representante Ventas');
+INSERT INTO Empleados VALUES (25,'Takuma','Nomura','','8735','tnomura@gardening.com','TOK-JP',23,'Representante Ventas');
+INSERT INTO Empleados VALUES (26,'Amy','Johnson','','3321','ajohnson@gardening.com','LON-UK',3,'Director Oficina');
+INSERT INTO Empleados VALUES (27,'Larry','Westfalls','','3322','lwestfalls@gardening.com','LON-UK',26,'Representante Ventas');
+INSERT INTO Empleados VALUES (28,'John','Walton','','3322','jwalton@gardening.com','LON-UK',26,'Representante Ventas');
+INSERT INTO Empleados VALUES (29,'Kevin','Fallmer','','3210','kfalmer@gardening.com','SYD-AU',3,'Director Oficina');
+INSERT INTO Empleados VALUES (30,'Julian','Bellinelli','','3211','jbellinelli@gardening.com','SYD-AU',29,'Representante Ventas');
+INSERT INTO Empleados VALUES (31,'Mariko','Kishi','','3211','mkishi@gardening.com','SYD-AU',29,'Representante Ventas');
+CREATE TABLE GamasProductos (
+  Gama varchar(50) NOT NULL,
+  DescripcionTexto text,
+  DescripcionHTML text,
+  Imagen blob,
+  PRIMARY KEY (Gama)
+) engine=innodb;
+INSERT INTO GamasProductos VALUES ('Herbaceas','Plantas para jardin decorativas',NULL,NULL);
+INSERT INTO GamasProductos VALUES ('Herramientas','Herramientas para todo tipo de acción',NULL,NULL);
+INSERT INTO GamasProductos VALUES ('Aromáticas','Plantas aromáticas',NULL,NULL);
+INSERT INTO GamasProductos VALUES ('Frutales','Árboles pequeños de producción frutal',NULL,NULL);
+INSERT INTO GamasProductos VALUES ('Ornamentales','Plantas vistosas para la decoración del jardín',NULL,NULL);
+
+
+
+CREATE TABLE Clientes (
+  CodigoCliente integer NOT NULL,
+  NombreCliente varchar(50) NOT NULL,
+  NombreContacto varchar(30) DEFAULT NULL,
+  ApellidoContacto varchar(30) DEFAULT NULL,
+  Telefono varchar(15) NOT NULL,
+  Fax varchar(15) NOT NULL,
+  LineaDireccion1 varchar(50) NOT NULL,
+  LineaDireccion2 varchar(50) DEFAULT NULL,
+  Ciudad varchar(50) NOT NULL,
+  Region varchar(50) DEFAULT NULL,
+  Pais varchar(50) DEFAULT NULL,
+  CodigoPostal varchar(10) DEFAULT NULL,
+  CodigoEmpleadoRepVentas integer DEFAULT NULL,
+  LimiteCredito numeric(15,2) DEFAULT NULL,
+  PRIMARY KEY (CodigoCliente),
+  CONSTRAINT Clientes_EmpleadosFK FOREIGN KEY (CodigoEmpleadoRepVentas) REFERENCES Empleados (CodigoEmpleado)
+) engine=innodb;
+
+INSERT INTO Clientes VALUES (1,'DGPRODUCTIONS GARDEN','Daniel G','GoldFish','5556901745','5556901746','False Street 52 2 A',NULL,'San Francisco',NULL,'USA','24006',19,3000);
+INSERT INTO Clientes VALUES (3,'Gardening Associates','Anne','Wright','5557410345','5557410346','Wall-e Avenue',NULL,'Miami','Miami','USA','24010',19,6000);
+INSERT INTO Clientes VALUES (4,'Gerudo Valley','Link','Flaute','5552323129','5552323128','Oaks Avenue nº22',NULL,'New York',NULL,'USA','85495',22,12000);
+INSERT INTO Clientes VALUES (5,'Tendo Garden','Akane','Tendo','55591233210','55591233211','Null Street nº69',NULL,'Miami',NULL,'USA','696969',22,600000);
+INSERT INTO Clientes VALUES (6,'Lasas S.A.','Antonio','Lasas','34916540145','34914851312','C/Leganes 15',NULL,'Fuenlabrada','Madrid','Spain','28945',8,154310);
+INSERT INTO Clientes VALUES (7,'Beragua','Jose','Bermejo','654987321','916549872','C/pintor segundo','Getafe','Madrid','Madrid','España','28942',11,20000);
+INSERT INTO Clientes VALUES (8,'Club Golf Puerta del hierro','Paco','Lopez','62456810','919535678','C/sinesio delgado','Madrid','Madrid','Madrid','España','28930',11,40000);
+INSERT INTO Clientes VALUES (9,'Naturagua','Guillermo','Rengifo','689234750','916428956','C/majadahonda','Boadilla','Madrid','Madrid','España','28947',11,32000);
+INSERT INTO Clientes VALUES (10,'DaraDistribuciones','David','Serrano','675598001','916421756','C/azores','Fuenlabrada','Madrid','Madrid','España','28946',11,50000);
+INSERT INTO Clientes VALUES (11,'Madrileña de riegos','Jose','Tacaño','655983045','916689215','C/Lagañas','Fuenlabrada','Madrid','Madrid','España','28943',11,20000);
+INSERT INTO Clientes VALUES (12,'Lasas S.A.','Antonio','Lasas','34916540145','34914851312','C/Leganes 15',NULL,'Fuenlabrada','Madrid','Spain','28945',8,154310);
+INSERT INTO Clientes VALUES (13,'Camunas Jardines S.L.','Pedro','Camunas','34914873241','34914871541','C/Virgenes 45','C/Princesas 2 1ºB','San Lorenzo del Escorial','Madrid','Spain','28145',8,16481);
+INSERT INTO Clientes VALUES (14,'Dardena S.A.','Juan','Rodriguez','34912453217','34912484764','C/Nueva York 74',NULL,'Madrid','Madrid','Spain','28003',8,321000);
+INSERT INTO Clientes VALUES (15,'Jardin de Flores','Javier','Villar','654865643','914538776','C/ Oña 34',NULL,'Madrid','Madrid','España','28950',30,40000);
+INSERT INTO Clientes VALUES (16,'Flores Marivi','Maria','Rodriguez','666555444','912458657','C/Leganes24',NULL,'Fuenlabrada','Madrid','España','28945',5,1500);
+INSERT INTO Clientes VALUES (17,'Flowers, S.A','Beatriz','Fernandez','698754159','978453216','C/Luis Salquillo4',NULL,'Montornes del valles','Barcelona','España','24586',5,3500);
+INSERT INTO Clientes VALUES (18,'Naturajardin','Victoria','Cruz','612343529','916548735','Plaza Magallón 15',NULL,'Madrid','Madrid','España','28011',30,5050);
+INSERT INTO Clientes VALUES (19,'Golf S.A.','Luis','Martinez','916458762','912354475','C/Estancado',NULL,'Santa cruz de Tenerife','Islas Canarias','España','38297',12,30000);
+INSERT INTO Clientes VALUES (20,'AYMERICH GOLF MANAGEMENT, SL','Mario','Suarez','964493072','964493063','C/Letardo',NULL,'Barcelona','Cataluña','España','12320',12,20000);
+INSERT INTO Clientes VALUES (21,'Aloha','Cristian','Rodrigez','916485852','914489898','C/Roman 3',NULL,'Canarias','Canarias','España','35488',12,50000);
+INSERT INTO Clientes VALUES (22,'El Prat','Francisco','Camacho','916882323','916493211','Avenida Tibidabo',NULL,' Barcelona','Cataluña','España','12320',12,30000);
+INSERT INTO Clientes VALUES (23,'Sotogrande','Maria','Santillana','915576622','914825645','C/Paseo del Parque',NULL,'Sotogrande','Cadiz','España','11310',12,60000);
+INSERT INTO Clientes VALUES (24,'Vivero Humanes','Federico','Gomez','654987690','916040875','C/Miguel Echegaray 54',NULL,'Humanes','Madrid','España','28970',30,7430);
+INSERT INTO Clientes VALUES (25,'Fuenla City','Tony','Muñoz Mena','675842139','915483754','C/Callo 52',NULL,'Fuenlabrada','Madrid','España','28574',5,4500);
+INSERT INTO Clientes VALUES (26,'Jardines y Mansiones CACTUS SL','Eva María','Sánchez','916877445','914477777','Polígono Industrial Maspalomas, Nº52','Móstoles','Madrid','Madrid','España','29874',9,76000);
+INSERT INTO Clientes VALUES (27,'Jardinerías Matías SL','Matías','San Martín','916544147','917897474','C/Francisco Arce, Nº44','Bustarviejo','Madrid','Madrid','España','37845',9,100500);
+INSERT INTO Clientes VALUES (28,'Agrojardin','Benito','Lopez','675432926','916549264','C/Mar Caspio 43',NULL,'Getafe','Madrid','España','28904',30,8040);
+INSERT INTO Clientes VALUES (29,'Top Campo','Joseluis','Sanchez','685746512','974315924','C/Ibiza 32',NULL,'Humanes','Madrid','España','28574',5,5500);
+INSERT INTO Clientes VALUES (30,'Jardineria Sara','Sara','Marquez','675124537','912475843','C/Lima 1',NULL,'Fenlabrada','Madrid','España','27584',5,7500);
+INSERT INTO Clientes VALUES (31,'Campohermoso','Luis','Jimenez','645925376','916159116','C/Peru 78',NULL,'Fuenlabrada','Madrid','España','28945',30,3250);
+INSERT INTO Clientes VALUES (32,'france telecom','FraÃ§ois','Toulou','(33)5120578961','(33)5120578961','6 place d Alleray 15Ã¨me',NULL,'Paris',NULL,'France','75010',16,10000);
+INSERT INTO Clientes VALUES (33,'Musée du Louvre','Pierre','Delacroux','(33)0140205050','(33)0140205442','Quai du Louvre',NULL,'Paris',NULL,'France','75058',16,30000);
+INSERT INTO Clientes VALUES (35,'Tutifruti S.A','Jacob','Jones','2 9261-2433','2 9283-1695','level 24, St. Martins Tower.-31 Market St.',NULL,'Sydney','Nueva Gales del Sur','Australia','2000',31,10000);
+INSERT INTO Clientes VALUES (36,'FLORES S.L.','Antonio','Romero','654352981','685249700','Avenida España',NULL,'Madrid','Fuenlabrada','España','29643',18,6000);
+INSERT INTO Clientes VALUES (37,'THE MAGIC GARDEN','Richard','Mcain','926523468','9364875882','Lihgting Park',NULL,'London','London','United Kingdom','65930',18,10000);
+INSERT INTO Clientes VALUES (38,'El Jardin Viviente S.L','Justin','Smith','2 8005-7161','2 8005-7162','176 Cumberland Street The rocks',NULL,'Sydney','Nueva Gales del Sur','Australia','2003',31,8000);
+
+CREATE TABLE Pedidos (
+  CodigoPedido integer NOT NULL,
+  FechaPedido date NOT NULL,
+  FechaEsperada date NOT NULL,
+  FechaEntrega date DEFAULT NULL,
+  Estado varchar(15) NOT NULL,
+  Comentarios text,
+  CodigoCliente integer NOT NULL,
+  PRIMARY KEY (CodigoPedido),
+  CONSTRAINT Pedidos_Cliente FOREIGN KEY (CodigoCliente) REFERENCES Clientes (CodigoCliente)
+) engine=innodb;
+
+INSERT INTO Pedidos VALUES (1,'2006-01-17','2006-01-19','2006-01-19','Entregado','Pagado a plazos',5);
+INSERT INTO Pedidos VALUES (2,'2007-10-23','2007-10-28','2007-10-26','Entregado','La entrega llego antes de lo esperado',5);
+INSERT INTO Pedidos VALUES (3,'2008-06-20','2008-06-25',NULL,'Rechazado','Limite de credito superado',5);
+INSERT INTO Pedidos VALUES (4,'2009-01-20','2009-01-26',NULL,'Pendiente',NULL,5);
+INSERT INTO Pedidos VALUES (8,'2008-11-09','2008-11-14','2008-11-14','Entregado','El cliente paga la mitad con tarjeta y la otra mitad con efectivo, se le realizan dos facturas',1);
+INSERT INTO Pedidos VALUES (9,'2008-12-22','2008-12-27','2008-12-28','Entregado','El cliente comprueba la integridad del paquete, todo correcto',1);
+INSERT INTO Pedidos VALUES (10,'2009-01-15','2009-01-20',NULL,'Pendiente','El cliente llama para confirmar la fecha - Esperando al proveedor',3);
+INSERT INTO Pedidos VALUES (11,'2009-01-20','2009-01-27',NULL,'Pendiente','El cliente requiere que el pedido se le entregue de 16:00h a 22:00h',1);
+INSERT INTO Pedidos VALUES (12,'2009-01-22','2009-01-27',NULL,'Pendiente','El cliente requiere que el pedido se le entregue de 9:00h a 13:00h',1);
+INSERT INTO Pedidos VALUES (13,'2009-01-12','2009-01-1</code></pre>
+</div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/ut0401.html">⬅️ 4.1 U4 Data Access</a>
+<a class="page-nav-btn" href="../ut04/ut0403.html">4.3 U4 Class exercises ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

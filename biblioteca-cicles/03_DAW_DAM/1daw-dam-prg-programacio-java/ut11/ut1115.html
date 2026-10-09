@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>11.15 Ejercicios (II) — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>☕ Programació en Java (1r DAW / DAM) — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació en Java (1r DAW / DAM)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — PRESENTACIÓN DEL MÓDULO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guia Didàctica</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Criterios de calificación</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Poema Ítaca (Konstantino Kavafis)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — EJERCICIOS: JUECES ONLINE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Ejercicios JOEL</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Cómo resolver los problemas de ProgramaMe</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Guía de Compilación y Pruebas</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Ejercicios entrenamiento ProgramaMe - vol.1</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Chuletas</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Cuadernillo completo ProgramaMe Navidad 2024</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Ideas para resolver los problemas</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Chuletas</a></li>
+<li><a href="../ut01/ut0109.html">1.9 EjemploTreeMap</a></li>
+<li><a href="../ut01/ut0110.html">1.10 Soluciones Concurso Navidad</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — EJERCICIOS DE REPASO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 bloque01 - ud01 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0202.html">2.2 bloque01 - ud02 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0203.html">2.3 RB102Soluciones</a></li>
+<li><a href="../ut02/ut0204.html">2.4 bloque01 - ud03 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Ejercicios - BLOQUE 2</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Repaso POO: Juego de Cartas (ENTREGABLE)</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — EXÁMENES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TestFotografia</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Principal.java</a></li>
+<li><a href="../ut03/ut0303.html">3.3 CodigoBASIC.bas</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Principal</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Principal</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Principal</a></li>
+<li><a href="../ut03/ut0307.html">3.7 TiendaTest</a></li>
+<li><a href="../ut03/ut0308.html">3.8 TableroTest</a></li>
+<li><a href="../ut03/ut0309.html">3.9 ficheroExamen</a></li>
+<li><a href="../ut03/ut0310.html">3.10 ExamenPRG</a></li>
+<li><a href="../ut03/ut0311.html">3.11 fichero2</a></li>
+<li><a href="../ut03/ut0312.html">3.12 fichero1</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — PROYECTOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Hundir La Flota</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Reversi (Othello)</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Proyecto 2: Calculadora FX</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Proyecto AEMET</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Iconos.png</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Estados del cielo.txt</a></li>
+<li><a href="../ut04/ut0407.html">4.7 diccionario24.csv</a></li>
+<li><a href="../ut04/ut0408.html">4.8 parsear-xml-aemet</a></li>
+<li><a href="../ut04/ut0409.html">4.9 InternacionalizacionFX</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Introducción a la programación con Java</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 01a - Introducción a la Programacion</a></li>
+<li><a href="../ut05/ut0502.html">5.2 01b - Algoritmos</a></li>
+<li><a href="../ut05/ut0503.html">5.3 01c - Introduccion a Java</a></li>
+<li><a href="../ut05/ut0504.html">5.4 01a - Ejercicios</a></li>
+<li><a href="../ut05/ut0505.html">5.5 01a - Soluciones</a></li>
+<li><a href="../ut05/ut0506.html">5.6 01c - Ejercicios</a></li>
+<li><a href="../ut05/ut0507.html">5.7 01c - Soluciones</a></li>
+<li><a href="../ut05/ut0508.html">5.8 Ejercicios - AyR</a></li>
+<li><a href="../ut05/ut0509.html">5.9 01d - Estilo de codificacion</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Entrada y salida de información</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Entrada y salida de información</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Colores</a></li>
+<li><a href="../ut06/ut0603.html">6.3 ClasePrintf</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Ejercicios</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Estructuras de control</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Uso de estructuras de control</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Ejercicios</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Ejercicios AyR - Condicionales Parte 1</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Ejercicios AyR - Condicionales Parte 2</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Ejercicios AyR - Estructrura repetitiva while do</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Ejercicios AyR - Estructura repetitiva for - mis</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Ejercicios AyR - Mortadelo y Filemon</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Ejercicios - AyR</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Programación Estructurada y Modular</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 04a - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0802.html">8.2 04b - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0803.html">8.3 04a - Ejercicios</a></li>
+<li><a href="../ut08/ut0804.html">8.4 04b - Ejercicios</a></li>
+<li><a href="../ut08/ut0805.html">8.5 Ejercicios - Diagrama de flujo a Java (para algo</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Estructuras datos estáticas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 05a - Estructuras de datos estáticas</a></li>
+<li><a href="../ut09/ut0902.html">9.2 05b - Estructuras de datos estaticas</a></li>
+<li><a href="../ut09/ut0903.html">9.3 Código en el aula</a></li>
+<li><a href="../ut09/ut0904.html">9.4 05b - Ejercicios</a></li>
+<li><a href="../ut09/ut0905.html">9.5 05a - Ejercicios ampliación</a></li>
+<li><a href="../ut09/ut0906.html">9.6 05b - Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Estructuras de datos dinámicas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 06a - Estructuras de datos dinámicas</a></li>
+<li><a href="../ut10/ut1002.html">10.2 06b - Estructuras de datos dinamicas</a></li>
+<li><a href="../ut10/ut1003.html">10.3 Código de aula</a></li>
+<li><a href="../ut10/ut1004.html">10.4 06a - Ejercicios</a></li>
+<li><a href="../ut10/ut1005.html">10.5 06b - Ejercicios</a></li>
+<li><a href="../ut10/ut1006.html">10.6 Ejercicios de Repaso: Estructuras de datos dinám</a></li>
+<li><a href="../ut10/ut1007.html">10.7 SolucionesEjerciciosRepaso</a></li>
+<li><a href="../ut10/ut1008.html">10.8 EjercicioVuelosPythonJava</a></li>
+<li><a href="../ut10/ut1009.html">10.9 06b - Recursividad</a></li>
+<li><a href="../ut10/ut1010.html">10.10 06b - Ejercicios básicos de recursividad</a></li>
+<li><a href="../ut10/ut1011.html">10.11 06b - Ejercicios Recursividad</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT11 — Programación orientada a objetos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Programación Orientada a Objetos</a></li>
+<li><a href="../ut11/ut1102.html">11.2 EstructuraClase</a></li>
+<li><a href="../ut11/ut1103.html">11.3 Ejercicios (I)</a></li>
+<li><a href="../ut11/ut1104.html">11.4 Cafetera</a></li>
+<li><a href="../ut11/ut1105.html">11.5 TestCafetera</a></li>
+<li><a href="../ut11/ut1106.html">11.6 Fraccion</a></li>
+<li><a href="../ut11/ut1107.html">11.7 TestFraccion</a></li>
+<li><a href="../ut11/ut1108.html">11.8 Main Fraccion (.java)</a></li>
+<li><a href="../ut11/ut1109.html">11.9 Pizza</a></li>
+<li><a href="../ut11/ut1110.html">11.10 TestPizza</a></li>
+<li><a href="../ut11/ut1111.html">11.11 Moneda</a></li>
+<li><a href="../ut11/ut1112.html">11.12 EurocoinMain - 1</a></li>
+<li><a href="../ut11/ut1113.html">11.13 Main Eurocoin - 2 (.java)</a></li>
+<li><a href="../ut11/ut1114.html">11.14 Main Eurocoin - 3 (.java)</a></li>
+<li><a class="active" href="../ut11/ut1115.html">11.15 Ejercicios (II)</a></li>
+<li><a href="../ut11/ut1116.html">11.16 Soluciones ejercicios ii</a></li>
+<li><a href="../ut11/ut1117.html">11.17 Ejercicios - AyR</a></li>
+<li><a href="../ut11/ut1118.html">11.18 Circulo</a></li>
+<li><a href="../ut11/ut1119.html">11.19 Cuadrado</a></li>
+<li><a href="../ut11/ut1120.html">11.20 Punto</a></li>
+<li><a href="../ut11/ut1121.html">11.21 Programación orientada a objetos (versión extend</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Utilización avanzada de clases</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 08b - Utilizacion avanzada de clases</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Códigos de classe</a></li>
+<li><a href="../ut12/ut1203.html">12.3 08a - Ejercicios I (Relaciones entre clases)</a></li>
+<li><a href="../ut12/ut1204.html">12.4 08b - Ejercicios II</a></li>
+<li><a href="../ut12/ut1205.html">12.5 Ejercicios III (Herencia)</a></li>
+<li><a href="../ut12/ut1206.html">12.6 08a - Utilización avanzada de clases (Versión ex</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Gestión de excepciones</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Gestión de excepciones</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Códigos de clase</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Ejercicios A</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Ejercicios B</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Lectura y escritura de ficheros</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Lectura y escritura de información en ficheros</a></li>
+<li><a href="../ut14/ut1402.html">14.2 Códigos de clase</a></li>
+<li><a href="../ut14/ut1403.html">14.3 Ejercicios A</a></li>
+<li><a href="../ut14/ut1404.html">14.4 Ejercicios B</a></li>
+<li><a href="../ut14/ut1405.html">14.5 numeros</a></li>
+<li><a href="../ut14/ut1406.html">14.6 alumnos notas</a></li>
+<li><a href="../ut14/ut1407.html">14.7 Ejercicios C</a></li>
+<li><a href="../ut14/ut1408.html">14.8 Ejercicios D</a></li>
+<li><a href="../ut14/ut1409.html">14.9 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Interacción con bases de datos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Interacción con bases de datos</a></li>
+<li><a href="../ut15/ut1502.html">15.2 bdpersonas</a></li>
+<li><a href="../ut15/ut1503.html">15.3 mysql-connector-java-8.0.19</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — Interfaces gráficas de usuario</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Código de clase</a></li>
+<li><a href="../ut16/ut1602.html">16.2 JavaFX</a></li>
+<li><a href="../ut16/ut1603.html">16.3 JavaFX</a></li>
+<li><a href="../ut16/ut1604.html">16.4 ContadorSimpleFX mejorado</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — Proyecto Integrador</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Proyectos a elegir</a></li>
+<li><a href="../ut17/ut1702.html">17.2 AjedrezFX</a></li>
+<li><a href="../ut17/ut1703.html">17.3 ClaseFX</a></li>
+<li><a href="../ut17/ut1704.html">17.4 controlsfx-8.40.11</a></li>
+<li><a href="../ut17/ut1705.html">17.5 Introducción a Canvas</a></li>
+<li><a href="../ut17/ut1706.html">17.6 Introducción a AnimationTimer en JavaFX</a></li>
+<li><a href="../ut17/ut1707.html">17.7 compartirDatos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT11 — Programación orientada a objetos</span>
+<h1>11.15 Ejercicios (II)</h1>
+<h3>UNIDAD 7: PROGRAMACIÓN ORIENTADA A OBJETOS</h3>
+<p>V19.01.23</p>
+<h3>1. Ejercicios</h3>
+<p>Los ejercicios están divididos en dos apartados: conceptuales y prácticos.</p>
+<h4>1.1. EJERCICIOS CONCEPTUALES</h4>
+<p>Nota En los ejercicios de esta introducción deberás pensar cuál la mejor respuesta según tu razonamiento basándote en los conceptos de Programación Orientada a Objetos (POO). Las soluciones se pueden discutir en el foro del módulo. Ejercicio 1. Conceptos básicos</p>
+<ul>
+<li>¿Cuáles serían los atributos de la clase PilotoDeFormula1? ¿Se te ocurren algunas instancias de esta</li>
+</ul>
+<p>clase?</p>
+<ul>
+<li>¿Cuáles serían los atributos de la clase Vivienda? ¿Qué subclases se te ocurren?</li>
+<li>Piensa en la liga de baloncesto, ¿qué 5 clases se te ocurren para representar 5 elementos distintos</li>
+</ul>
+<p>que intervengan en la liga?</p>
+<ul>
+<li>Lista los atributos de la clase Alumno ¿Sería nombre uno de los atributos de la clase? Razona tu</li>
+</ul>
+<p>respuesta.</p>
+<ul>
+<li>¿Cuáles serían los atributos de la clase Ventana (de ordenador)? ¿cuáles serían los métodos? Piensa</li>
+</ul>
+<p>en las propiedades y en el comportamiento de una ventana de cualquier programa. Ejercicio 2. Conceptos básicos A continuación, tienes una lista en la que están mezcladas varias clases con instancias de esas clases. Para ponerlo un poco más difícil, todos los elementos están escritos en minúscula.</p>
+<p>Di cuáles son las clases, cuáles las instancias, a qué clase pertenece cada una de estas instancias y cuál es la jerarquía entre las clases: paula goofy gardfiel perro mineral caballo tom silvestre pirita rocinante milu snoopy gato pluto animal javier bucefalo pegaso persona cuarzo laika pato_lucas ayudante_de_santa_claus</p>
+<h3>UNIDAD 6: ESTRUCTURAS DE DATOS DINÁMICAS</h3>
+<p>v1.07.01.23</p>
+<h4>1.2. EJERCICIOS PRÁCTICOS</h4>
+<p>Estos ejercicios están pensados para empezar creando clases muy sencillas (apartado A) que luego irás mejorando y ampliando (apartados B, C…) de modo que practiques y aprendas poco a poco los aspectos fundamentales de la POO. Lo importante es que entiendas qué está pasando. Si no lo tienes claro “juega” con el código, haz pruebas “a ver qué sucede si...”, revisa la teoría, etc. Si aun así no lo entiendes, pregunta en el foro (copia-pega el código si procede).</p>
+<p>En cada ejercicio debes crear un programa con dos clases: una clase principal (puedes llamarla por ejemplo UD7ProgramaPunto, según el ejercicio) que solo contendrá la función main, además de otra clase (con sus atributos y métodos) que utilizarás desde el main de la clase principal para hacer pruebas sobre su funcionamiento.</p>
+<p>En este apartado las clases solo contendrán atributos (variables) y haremos algunas pruebas sencillas con ellas para entender cómo se instancia objetos y se accede a sus atributos. Por ahora no utilices ningún modificador en los atributos (public, private, static, final...).</p>
+<p>Apartado A: Clases simples con atributos Nota En este apartado las clases solo contendrán atributos (variables) y haremos algunas pruebas sencillas con ellas para entender cómo se instancia objetos y se accede a sus atirbutos. Por ahora no utilices ningún modificador en los atributos (public, private, static, final...).</p>
+<p>Ejercicio A1. Punto Crea un programa con una clase llamada Punto que representará un punto de dos dimensiones en un plano. Solo contendrá dos atributos enteros llamadas x e y (coordenadas). En el main de la clase principal instancia 3 objetos Punto con las coordenadas (5,0), (10,10) y (-3, 7). Muestra por pantalla sus coordenadas (utiliza un println para cada punto). Modifica todas las coordenadas (prueba distintos operadores como = + - += *=...) y vuelve a imprimirlas por pantalla.</p>
+<p>Ejercicio A2. Persona Crea un programa con una clase llamada Persona que representará los datos principales de una persona: dni, nombre, apellidos y edad. En el main de la clase principal instancia dos objetos de la clase Persona. Luego, pide por teclado los datos de ambas personas (guárdalos en los objetos). Por último, imprime dos mensajes por pantalla (uno por objeto) con un mensaje del estilo “Azucena Luján García con DNI … es / no es mayor de edad”.</p>
+
+<p>V19.01.23 Ejercicio A3. Rectángulo Crea un programa con una clase llamada Rectangulo que representará un rectángulo mediante dos coordenadas (x1,y1) y (x2,y2) en un plano, por lo que la clase deberá tener cuatro atributos enteros: x1, y1, x2, y2. En el main de la clase principal instancia 2 objetos Rectangulo en (0,0)(5,5) y (7,9)(2,3). Muestra por pantalla sus coordenadas, perímetros (suma de lados) y áreas (ancho x alto). Modifica todas las coordenadas como consideres y vuelve a imprimir coordenadas, perímetros y áreas.</p>
+<p>Ejercicio A4. Artículo Crea un programa con una clase llamada Articulo con los siguientes atributos: nombre, precio (sin IVA), iva (siempre será 21) y cuantosQuedan (representa cuantos quedan en el almacén). En el main de la clase principal instancia un objeto de la clase artículo. Asígnales valores a todos sus atributos (los que quieras) y muestra por pantalla un mensaje del estilo “Pijama - Precio:10€ - IVA:21% - PVP:12,1€” (el PVP es el precio de venta al público, es decir, el precio con IVA). Luego, cambia el precio y vuelve a imprimir el mensaje.</p>
+<p>Apartado B: Constructores Nota El constructor es el método que se ejecuta cuando se instancia un objeto. Si no está definido Java ejecutará un constructor por defecto que creará el objeto e inicializará todas sus variables a cero, pero esta no es una buena práctica. Es mejor definir nosotros un constructor que controle qué debe suceder cuando se cree el objeto.</p>
+<p>En este apartado tienes que modificar los programas del apartado anterior (o haz una copia del proyecto si lo prefieres) y realizar los cambios indicados.</p>
+<p>Ejercicio B1. Punto Añade a la clase Punto un constructor con parámetros que copie las coordenadas pasadas como argumento a los atributos del objeto. Así: public Punto(int x, int</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>y){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.x = x;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.y = y;
+}</code></pre>
+</div>
+<p>Copiamos los valores pasados como argumento a los atributos del objeto. Ten en cuenta que int x e int y son variables locales del método, NO son los atributos del objeto. Para hacer referencia a los atributos del objeto hay que utilizar this. Fíjate que ya no será posible hacer Punto p = new Punto(). Ahora será obligatorio hacer por ejemplo Punto p = new Punto(2, 7). En el apartado A tenías que recordar asignar valores a x e y tras crear un punto, lo cual no</p>
+
+<p>v1.07.01.23 es una buena idea en proyectos grandes con cientos de objetos (es muy fácil equivocarse). Ahora es imposible equivocarse porque Java no te dejará. Hemos asegurado que todos los puntos siempre tendrán coordenadas. Corrige el main y utiliza el constructor con parámetros para instanciar los objetos, pasándole como argumento los valores deseados.</p>
+<p>Ejercicio B2. Persona Añade a Persona el constructor de abajo y corrige el main para utilizarlo</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public Persona(String dni, String nombre, String apellidos, int edad) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.dni = dni;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.nombre = nombre;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.apellidos = apellidos;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>this.edad = edad;</code></pre>
+</div>
+<p>} Ten en cuenta que no es obligatorio que los parámetros del constructor se llamen igual que los atributos del objeto (en tal caso no sería necesario utilizar this). Podríamos hacerlo así</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public Persona(String id, String nom, String ap, int e) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>dni = id;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>nombre = nom;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>apellidos = ap;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>edad = e;</code></pre>
+</div>
+<p>} Tampoco es obligatorio pasar al constructor todos los atributos de la clase. Podríamos decidir por ejemplo que en nuestro software todas las personas deben tener nombre, apellidos y edad, pero no es obligatorio el DNI (recién nacidos y niños). Este constructor también sería válido</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public Persona(String nom, String ap, int e) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>nombre = nom;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>apellidos = ap;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>edad = e;</code></pre>
+</div>
+<p>} Una clase puede tener tantos constructores como quieras siempre y cuando tengan distinto número y/o tipo de parámetros (para que no haya ambigüedad en cual utilizar). Ejercicio B3. Rectángulo En nuestro software necesitamos asegurarnos de que la coordenada (x1,y1) represente la esquina inferior izquierda y la (x2,y2) la superior derecha del rectángulo, como en el dibujo.</p>
+<p>Añade a Rectangulo un constructor con los 4 parámetros. Incluye un if que compruebe los valores (*). Si son válidos guardará los parámetros en el objeto.</p>
+
+<p>V19.01.23 Si no lo son mostrará un mensaje del estilo “ERROR al instanciar Rectangulo...” utilizando System.err.println(…). No podremos evitar que se instancie el objeto pero al menos avisaremos por pantalla. Corrige el main para utilizar dicho constructor. Debería mostrar un mensaje de error.</p>
+<p>(*) Pista: Es suficiente con un if ( (condición) &amp;&amp; (condición) ) Ejercicio B4. Artículo Añade un constructor con 4 parámetros que asigne valores a nombre, precio, iva y cuantosQuedan. Dicho constructor deberá mostrar un mensaje de error si alguno de los valores nombre, precio, iva o cuantosQuedan no son válidos. ¿Qué condiciones crees que podrían determinar si son válidos o no? Razónalo e implementa el código.</p>
+<p>Corrige el main y prueba a crear varios artículos. Introduce algunos con valores incorrectos para comprobar si avisa del error. Apartado C: Getters y Setters Un pilar fundamental de la programación orientada a objetos (POO) es el encapsulamiento: “Se denomina encapsulamiento al ocultamiento del estado, es decir, de los datos miembro de un objeto de manera que solo se pueda cambiar mediante las operaciones definidas para ese objeto.</p>
+<p>Cada objeto está aislado del exterior. El aislamiento protege a los datos asociados a un objeto contra su modificación por quien no tenga derecho a acceder a ellos, eliminando efectos secundarios e interacciones. De esta forma el usuario de la clase puede obviar la implementación de los métodos y propiedades para concentrarse solo en cómo usarlos.</p>
+<p>Por otro lado se evita que el usuario pueda cambiar su estado de maneras imprevistas e incontroladas.” Fuente: Wikipedia Por ello, una práctica muy habitual en POO consiste en ocultar todos los atributos (hacerlos private) para que no se puedan modificar directamente desde fuera de la clase. En su lugar añadiremos métodos getters (get = coger) y setters (set = fijar) visibles (public) que permitan leer y modificar dichos atributos desde fuera de la clase. La clave está en que al tratarse de métodos podremos incluir el código necesario para controlar el acceso a los atributos y protegerlas de usos incorrectos.</p>
+<p>En este apartado tienes que modificar los programas del apartado anterior (o haz una copia del proyecto si lo prefieres) y realizar los cambios indicados.</p>
+
+<p>v1.07.01.23 Ejercicio C1. Punto Modifica los atributos de Punto para que sean private. Fíjate que desde el main ya no te dejará utilizar ni modificar los atributos x e y de los objetos. Vamos a añadir los getters: int getX() e int getY() que devolverán los valores de x e y respectivamente. Es una forma indirecta de leer sus valores.</p>
+<p>Añadiremos también los setters: void setX(int x) y void setY(int y) que copiarán el valor pasado como parámetro a los atributos de la clase. Tanto getters como setters deben ser public. Corrige el main para utilizar los getters y setters. Prueba a instanciar varios objetos, mostrar sus valores por pantalla, modificarlos, etc.</p>
+<p>Ejercicio C2. Persona Aplica el encapsulamiento básico a la clase Persona: Declara todos sus atributos como private y crea todos los getters y setters necesarios (un get y un set por atributo). Corrige el main para utilizar los getters y setters. Prueba a instanciar varios objetos, mostrar sus valores por pantalla, modificarlos, etc.</p>
+<p>Ejercicio C3. Rectángulo Aplica el encapsulamiento básico a la clase Rectángulo: Declara todos sus atributos como private y crea todos los getters y setters necesarios (un get y un set por atributo). ¿Recuerdas la condición explicada en B3? Tendrás que programar los setters de modo que comprueben el valor pasado como argumento antes de guardarlo en el objeto. Si no fuera correcto se mostrará un mensaje de error (y NO se guardará el valor).</p>
+<p>Corrige el main para utilizar los getters y setters. Prueba a instanciar varios objetos, mostrar sus valores, modificarlos, etc. Prueba varios valores erróneos para comprobar si funciona.</p>
+
+<p>V19.01.23 Ejercicio C4. Artículo Aplica el encapsulamiento básico a la clase Articulo: Declara todos sus atributos como private y crea todos los getters y setters necesarios (un get y un set por atributo). Programa los setters para que comprueben los valores y los guarden en el objeto solo si son correctos. En caso contrario muestra un mensaje de error.</p>
+<p>Apartado D: Añadiendo métodos útiles Nota Una clase bien diseñada debería incluir métodos que realicen operaciones con la información de los objetos. De ese modo la clase dispondrá de funcionalidades útiles tanto para nosotros como para otros programadores. Esto es una práctica habitual y muy recomendable.</p>
+<p>Por ejemplo, la clase Scanner tiene métodos como getInt(), getDouble, getLine(), etc. que alguien ha programado y podremos utilizar cuando los necesitemos sin tener que programarlo nosotros ni preocuparnos por cómo funcionan internamente. Lo mismo sucede con la clase String (charAt, substring, toCharArray, etc.), la clase Math (random, min, max, abs, etc.), la clase Arrays, etc.</p>
+<p>Todas estas son clases que Java incorpora por defecto (hay miles). Existen muchas otras que permiten hacer todo tipo de cosas como crear interfaces gráficas con botones, trabajar con imágenes, leer y escribir en archivos, reproducir música, enviar o recibir datos a través de la red, etc.</p>
+<p>En esta unidad estamos aprendiendo a diseñar y programar nuestras propias clases, los fundamentos de la Programación Orientada a Objetos, necesario en cualquier proyecto software de cierta envergadura. Recuerda que los métodos pueden ser private (solo pueden utilizarse desde dentro de la clase) o public (pueden utilizarse desde fuera, forman parte de la interfaz de la clase).</p>
+<p>En este apartado tienes que modificar los programas del apartado anterior (o haz una copia del proyecto si lo prefieres) y añade los métodos que se indican.</p>
+<p>Ejercicio D1 – Punto Añade a la clase Punto los siguientes métodos públicos: •</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public void imprime() // Imprime por pantalla las coordenadas. Ejemplo: “(7, -5)”</code></pre>
+</div>
+<p>•</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public void setXY(int x, int y) // Modifica ambas coordenadas. Es como un setter doble.</code></pre>
+</div>
+<p>•</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public void desplaza(int dx, int dy) // Desplaza el punto la cantidad (dx,dy) indicada. Ejemplo: Si el</code></pre>
+</div>
+<p>punto (1,1) se desplaza (2,5) entonces estará en (3,6).</p>
+
+<p>v1.07.01.23 •</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public int distancia(Punto p) // Calcula y devuelve la distancia entre el propio objeto (this) y otro objeto</code></pre>
+</div>
+<p>(Punto p) que se pasa como parámetro: distancia entre dos coordenadas. Prueba a utilizar estos métodos desde el main para comprobar su funcionamiento. Ejercicio D2. Persona Añade a la clase Persona los siguientes métodos públicos: •</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public void imprime() // Imprime la información del objeto: “DNI:… Nombre:… etc.”</code></pre>
+</div>
+<p>•</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public boolean esMayorEdad() // Devuelve true si es mayor de edad (false si no).</code></pre>
+</div>
+<p>•</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public boolean esJubilado() // Devuelve true si tiene 65 años o más (false si no).</code></pre>
+</div>
+<p>•</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public int diferenciaEdad(Persona p) // Devuelve la diferencia de edad entre ‘this’ y p.</code></pre>
+</div>
+<p>Prueba a utilizar estos métodos desde el main para comprobar su funcionamiento. Ejercicio D3. Rectángulo Añade a la clase Rectangulo métodos públicos con las siguientes funcionalidades: • Método para imprimir la información del rectángulo por pantalla. • Métodos setters dobles y cuadruples: setX1Y1, set X2Y2 y setAll(…).</p>
+<p>• Métodos getPerimetro y getArea que calculen y devuelvan el paerímetro y área del objeto. Prueba a utilizar estos métodos desde el main para comprobar su funcionamiento. Ejercicio D4. Artículo Añade a la clase Artículo métodos públicos con las siguientes funcionalidades</p>
+<p>• Método para imprimir la información del artículo por pantalla. • Método getPVP que devuelva el precio de venta al público (PVP) con iva incluido. • Método getPVPDescuento que devuelva el PVP con un descuento pasado como argumento. • Método vender que actualiza los atributos del objeto tras vender una cantidad ‘x’ (si es posible).</p>
+<p>Devolverá true si ha sido posible (false en caso contrario). • Método almacenar que actualiza los atributos del objeto tras almacenar una cantidad ‘x’ (si es posible). Devolverá true si ha sido posible (false en caso contrario).</p>
+
+<p>V19.01.23 Apartado E: Añadiendo métodos útiles Los modificadores static y final son opcionales, pueden utilizarse tanto en atributos como en métodos y pueden combinarse ambos: static: El atributo o método pertenece a la clase (no al objeto). Por ello puede utilizarse sin instanciar ningún objeto, desde el nombre de la clase: NombreClase.atributo o NombreClase.metodo(...). Como el valor se almacena en la clase NO toma valores distintos en cada objeto (como sí sucede con los atirbutos ‘normales’ no static). Por ejemplo</p>
+<ul>
+<li>El atributo salarioMinimo de Empleado (ss común para todos, puede cambiar).</li>
+</ul>
+<ul>
+<li>Métodos útiles como Arrays.fill(…) o String.valueOf(…) que podemos utilizar directamente</li>
+</ul>
+<p>desde las clases Arrays y String sin instanciar un objeto. Es importante saber que desde un método static no se pueden utilizar atributos ni métodos no static. Al contrario, sí es posible. final: Un atributo final no se puede modificar. Puede tener valores distintos en cada objeto, pero debe fijarse su valor en el constructor. Un método final no se puede redefinir en una sub-clase heredada (veremos herencia en la siguiente unidad). Por ejemplo</p>
+<ul>
+<li>El DNI de la clase Persona. No puede cambiar y cada objeto tiene el suyo.</li>
+</ul>
+<p>La combinación de static y final combina ambas características. Por ejemplo</p>
+<ul>
+<li>El atributo Math.PI es static y final. Pertenece a la clase y no puede cambiar.</li>
+</ul>
+<p>Ejercicio E1. Punto Necesitamos un método que nos permita crear un objeto Punto con coordenadas aleatorias. Esta funcionalidad no depende de ningún objeto concreto por lo que será estática. Deberá crear un nuevo Punto (utiliza el constructor) con x e y entre -100 y 100, y luego devolverlo (con return).</p>
+<p>•</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public static Punto creaPuntoAleatorio()</code></pre>
+</div>
+<p>Pruébalo en el main para comprobar que funciona. Crea varios puntos aleatorios con Punto.creaPuntoAleatorio() e imprime su valor por pantalla. Ejercicio E2. Persona El DNI de una persona no puede variar. Añade el modificador final al atributo dni y asegúrate de que se guarde su valor en el constructor. Quita el método setDNI(…) que de todos modos ya no se podrá utilizar porque Java no te dejará modificar el atributo dni.</p>
+
+<p>v1.07.01.23 La mayoría de edad a los 18 años es un valor común a todas las personas y no puede variar. Crea un nuevo atributo llamado mayoriaEdad que sea static y final. Tendrás que inicializarlo a 18 en la declaración. Utilízalo en el método que comprueba si una persona es mayor de edad.</p>
+<p>Crea un método static boolean validarDNI(String dni) que devuelva true si dni es válido (tiene 8 números y una letra). Si no, devolverá false. Utilízalo en el constructor para comprobar el dni (si no es válido, muestra un mensaje de error y no guardes los valores).</p>
+<p>Realiza algunas pruebas en el main para comprobar el funcionamiento de los cambios realizados. También puedes utilizar Persona.validarDNI(…) por ejemplo para comprobar si unos DNI introducidos por teclado son válidos o no (sin necesidad de crear ningún objeto). Ejercicio E3. Rectángulo Necesitamos hacer algunos cambios para que todas las coordenadas estén entre (0,0) y (100,100). Añade a la clase Rectángulo dos atributos llamados min y max. Estos valores son comunes a todos los objetos y no pueden variar. Piensa qué modificados necesitas añadir a min y max.</p>
+<p>Utiliza min y max en el constructor y en los setters para comprobar los valores (como de costumbre, si no son correctos muestra un mensaje de error y apliques los cambios). También necesitamos un método no constructor para crear rectángulos aleatorios. Impleméntalo.</p>
+<p>Realiza pruebas en el main para comprobar su funcionamiento. Ejercicio E4. Artículo En España existen tres tipos de IVA según el tipo de producto: • El IVA general (21%): para la mayoría de los productos a la venta. • El IVA reducido (10%): hostelería, transporte, vivienda, etc.</p>
+<p>• El IVA super reducido (4%): alimentos básicos, libros, medicamentos, etc. Estos tres tipos de IVA no pueden variar y a cada artículo se le aplicará uno de los tres. Razona qué cambios sería necesario realizar a la clase Articulo e impleméntalos.</p>
+
+<p>V19.01.23</p>
+<h3>2. Bibliografía</h3>
+<p>Ejercicio Conceptuales: Apuntes de José Chamorro del CFGS DAW del . Ejercicios prácticos: Unidad 8 Programación Orientada a Objetos I Ejercicios (CEEDCV) de Lionel Tarazón</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut11/ut1114.html">⬅️ 11.14 Main Eurocoin - 3 (.java)</a>
+<a class="page-nav-btn" href="../ut11/ut1116.html">11.16 Soluciones ejercicios ii ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Índex — Hacking Ètic i Auditoria de Seguretat — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🕵️ Hacking Ètic i Auditoria de Seguretat — CE Ciberseguretat (CETI)</span>
+<a href="./index.html">📚 Índex del Mòdul</a>
+<a href="../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a class="active" href="./index.html">🏠 <strong>Inici Hacking Ètic i Auditoria de Seguretat</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="./ut00/ut0001.html">0.1 Chat general</a></li>
+<li><a href="./ut00/ut0002.html">0.2 Programación del módulo</a></li>
+<li><a href="./ut00/ut0003.html">0.3 Contenidos y criterios de evaluación</a></li>
+<li><a href="./ut00/ut0004.html">0.4 Presentación del módulo</a></li>
+<li><a href="./ut00/ut0005.html">0.5 Accesibilidad</a></li>
+<li><a href="./ut00/ut0006.html">0.6 guia para aprender a programar</a></li>
+<li><a href="./ut00/ut0007.html">0.7 Primera evaluación</a></li>
+<li><a href="./ut00/ut0008.html">0.8 Segunda evaluación</a></li>
+<li><a href="./ut00/ut0009.html">0.9 Tercera evaluación</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT1 — Elementos esenciales del HE</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="./ut01/ut0101.html">1.1 HE 1</a></li>
+<li><a href="./ut01/ut0102.html">1.2 Prácticas tema 1</a></li>
+<li><a href="./ut01/ut0103.html">1.3 tema1</a></li>
+<li><a href="./ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="./ut02/ut0201.html">2.1 tema2</a></li>
+<li><a href="./ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="./ut03/ut0301.html">3.1 Auditories</a></li>
+<li><a href="./ut03/ut0302.html">3.2 Material adicional</a></li>
+<li><a href="./ut03/ut0303.html">3.3 Material adicional 2</a></li>
+<li><a href="./ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Footprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="./ut04/ut0401.html">4.1 Footprinting con Google</a></li>
+<li><a href="./ut04/ut0402.html">4.2 Footprinting con Bing</a></li>
+<li><a href="./ut04/ut0403.html">4.3 Footprinting con Shodan</a></li>
+<li><a href="./ut04/ut0404.html">4.4 Footprint</a></li>
+<li><a href="./ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — Fingerprint</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="./ut05/ut0501.html">5.1 Introducción al Fingerprinting</a></li>
+<li><a href="./ut05/ut0502.html">5.2 Nmap</a></li>
+<li><a href="./ut05/ut0503.html">5.3 Fingerprinting</a></li>
+<li><a href="./ut05/ut0504.html">5.4 Presentación fingerprint</a></li>
+<li><a href="./ut05/ut0505.html">5.5 Enumeración con nmap</a></li>
+<li><a href="./ut05/ut0506.html">5.6 Scripts amb nmap</a></li>
+<li><a href="./ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT6 — Auditorias de seguridad con Wireshark</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="./ut06/ut0601.html">6.1 Wireshark</a></li>
+<li><a href="./ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT7 — Auditorias de seguridad utilizando hping</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="./ut07/ut0701.html">7.1 Auditorias utilizando hping3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT8 — Contratos pretesting</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="./ut08/ut0801.html">8.1 Creación de contratos</a></li>
+<li><a href="./ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT9 — Fase de análisis</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="./ut09/ut0901.html">9.1 analisi</a></li>
+<li><a href="./ut09/ut0902.html">9.2 Nessus</a></li>
+<li><a href="./ut09/ut0903.html">9.3 practiques</a></li>
+<li><a href="./ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT10 — Ejercicios Fingerprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="./ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT11 — Ingenieria social</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="./ut11/ut1101.html">11.1 Ingenieria social</a></li>
+<li><a href="./ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT12 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="./ut12/ut1201.html">12.1 Introducción</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT13 — Pentesting web</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="./ut13/ut1301.html">13.1 Pentesting web</a></li>
+<li><a href="./ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT14 — Robots de Búsquedas</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="./ut14/ut1401.html">14.1 Continguts i Recursos</a></li>
+<li><a href="./ut14/ut14actividades.html">✍️ Activitats pràctiques UT14</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT15 — Riesgos laborales en el entorno de HE</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="./ut15/ut15actividades.html">✍️ Activitats pràctiques UT15</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT16 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="./ut16/ut1601.html">16.1 Explotación</a></li>
+<li><a href="./ut16/ut1602.html">16.2 Metasploit</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT17 — -------</summary>
+<ul>
+<li><a class="unit-full-link" href="./ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="./ut17/ut17actividades.html">✍️ Activitats pràctiques UT17</a></li>
+</ul>
+</details>
+<ul><li><a href="./references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE Ciberseguretat (CETI) · Cursos d'Especialització (IA &amp; Big Data / Ciberseguretat)</span>
+<h1>🕵️ Hacking Ètic i Auditoria de Seguretat</h1>
+<p>Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de <strong>Hacking Ètic i Auditoria de Seguretat</strong> (CE Ciberseguretat (CETI)).</p>
+<div class="admonition tip">
+<p class="admonition-title">🛠️ Metodologia i Navegació del Curs</p>
+<ul>
+<li><strong>Temari Complet Integrat:</strong> Cada unitat de treball (<code>UT</code>) disposa d'una vista <strong>📘 Unitat Completa en 1 sola pàgina</strong> i d'apartats individuals navegables des del menú lateral esquerre.</li>
+<li><strong>Cercador Ràpid i Mode Fosc:</strong> Utilitza el filtre <code>🔍 Filtrar apartats...</code> de la barra lateral per localitzar qualsevol concepte i el botó <code>🌓 Mode Fosc / Clar</code> segons la teua preferència visual.</li>
+<li><strong>Caixes de Codi i Comandes:</strong> Tots els blocs de codi i comandes de terminal incorporen el botó <code>📋 Copiar</code> en un clic.</li>
+</ul>
+</div>
+<h2>📊 Estructura d'Unitats de Treball (UT0 a UT17)</h2>
+<table>
+<thead><tr><th>Unitat</th><th>Títol de la Unitat Didàctica</th><th>Continguts</th><th>Accés Directe</th></tr></thead>
+<tbody>
+<tr><td><strong>UT0</strong></td><td><strong>Unitat Didàctica 0</strong></td><td>9 apartats · 0 activitats</td><td><a href="./ut00/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut00/ut0001.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT1</strong></td><td><strong>Elementos esenciales del HE</strong></td><td>4 apartats · 6 activitats</td><td><a href="./ut01/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut01/ut0101.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT2</strong></td><td><strong>Unitat Didàctica 2</strong></td><td>2 apartats · 1 activitats</td><td><a href="./ut02/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut02/ut0201.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT3</strong></td><td><strong>Unitat Didàctica 3</strong></td><td>4 apartats · 1 activitats</td><td><a href="./ut03/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut03/ut0301.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT4</strong></td><td><strong>Footprinting</strong></td><td>5 apartats · 3 activitats</td><td><a href="./ut04/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut04/ut0401.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT5</strong></td><td><strong>Fingerprint</strong></td><td>7 apartats · 3 activitats</td><td><a href="./ut05/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut05/ut0501.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT6</strong></td><td><strong>Auditorias de seguridad con Wireshark</strong></td><td>2 apartats · 1 activitats</td><td><a href="./ut06/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut06/ut0601.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT7</strong></td><td><strong>Auditorias de seguridad utilizando hping</strong></td><td>1 apartats · 0 activitats</td><td><a href="./ut07/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut07/ut0701.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT8</strong></td><td><strong>Contratos pretesting</strong></td><td>2 apartats · 1 activitats</td><td><a href="./ut08/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut08/ut0801.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT9</strong></td><td><strong>Fase de análisis</strong></td><td>4 apartats · 1 activitats</td><td><a href="./ut09/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut09/ut0901.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT10</strong></td><td><strong>Ejercicios Fingerprinting</strong></td><td>1 apartats · 2 activitats</td><td><a href="./ut10/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut10/ut10actividades.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT11</strong></td><td><strong>Ingenieria social</strong></td><td>2 apartats · 1 activitats</td><td><a href="./ut11/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut11/ut1101.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT12</strong></td><td><strong>Explotación de vulnerabilidades</strong></td><td>1 apartats · 0 activitats</td><td><a href="./ut12/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut12/ut1201.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT13</strong></td><td><strong>Pentesting web</strong></td><td>2 apartats · 5 activitats</td><td><a href="./ut13/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut13/ut1301.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT14</strong></td><td><strong>Robots de Búsquedas</strong></td><td>2 apartats · 1 activitats</td><td><a href="./ut14/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut14/ut1401.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT15</strong></td><td><strong>Riesgos laborales en el entorno de HE</strong></td><td>1 apartats · 1 activitats</td><td><a href="./ut15/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut15/ut15actividades.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT16</strong></td><td><strong>Explotación de vulnerabilidades</strong></td><td>2 apartats · 0 activitats</td><td><a href="./ut16/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut16/ut1601.html">Apartat 1 ➡️</a></td></tr><tr><td><strong>UT17</strong></td><td><strong>-------</strong></td><td>1 apartats · 1 activitats</td><td><a href="./ut17/index.html"><strong>📘 Unitat Completa</strong></a> | <a href="./ut17/ut17actividades.html">Apartat 1 ➡️</a></td></tr>
+</tbody>
+</table>
+<h2>UT0 — Unitat Didàctica 0</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT0 · 9 apartats</span>
+<p><a href="./ut00/index.html"><strong>📘 Obrir UT0 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut00/ut0001.html"><strong>0.1 Chat general</strong></a></li>
+<li><a href="./ut00/ut0002.html"><strong>0.2 Programación del módulo</strong></a></li>
+<li><a href="./ut00/ut0003.html"><strong>0.3 Contenidos y criterios de evaluación</strong></a></li>
+<li><a href="./ut00/ut0004.html"><strong>0.4 Presentación del módulo</strong></a></li>
+<li><a href="./ut00/ut0005.html"><strong>0.5 Accesibilidad</strong></a></li>
+<li><a href="./ut00/ut0006.html"><strong>0.6 guia para aprender a programar</strong></a></li>
+<li><a href="./ut00/ut0007.html"><strong>0.7 Primera evaluación</strong></a></li>
+<li><a href="./ut00/ut0008.html"><strong>0.8 Segunda evaluación</strong></a></li>
+<li><a href="./ut00/ut0009.html"><strong>0.9 Tercera evaluación</strong></a></li>
+</ul><h2>UT1 — Elementos esenciales del HE</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT1 · 4 apartats</span>
+<p><a href="./ut01/index.html"><strong>📘 Obrir UT1 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut01/ut0101.html"><strong>1.1 HE 1</strong></a></li>
+<li><a href="./ut01/ut0102.html"><strong>1.2 Prácticas tema 1</strong></a></li>
+<li><a href="./ut01/ut0103.html"><strong>1.3 tema1</strong></a></li>
+<li><a href="./ut01/ut01actividades.html"><strong>✍️ Activitats pràctiques UT1</strong></a></li>
+</ul><h2>UT2 — Unitat Didàctica 2</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT2 · 2 apartats</span>
+<p><a href="./ut02/index.html"><strong>📘 Obrir UT2 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut02/ut0201.html"><strong>2.1 tema2</strong></a></li>
+<li><a href="./ut02/ut02actividades.html"><strong>✍️ Activitats pràctiques UT2</strong></a></li>
+</ul><h2>UT3 — Unitat Didàctica 3</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT3 · 4 apartats</span>
+<p><a href="./ut03/index.html"><strong>📘 Obrir UT3 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut03/ut0301.html"><strong>3.1 Auditories</strong></a></li>
+<li><a href="./ut03/ut0302.html"><strong>3.2 Material adicional</strong></a></li>
+<li><a href="./ut03/ut0303.html"><strong>3.3 Material adicional 2</strong></a></li>
+<li><a href="./ut03/ut03actividades.html"><strong>✍️ Activitats pràctiques UT3</strong></a></li>
+</ul><h2>UT4 — Footprinting</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT4 · 5 apartats</span>
+<p><a href="./ut04/index.html"><strong>📘 Obrir UT4 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut04/ut0401.html"><strong>4.1 Footprinting con Google</strong></a></li>
+<li><a href="./ut04/ut0402.html"><strong>4.2 Footprinting con Bing</strong></a></li>
+<li><a href="./ut04/ut0403.html"><strong>4.3 Footprinting con Shodan</strong></a></li>
+<li><a href="./ut04/ut0404.html"><strong>4.4 Footprint</strong></a></li>
+<li><a href="./ut04/ut04actividades.html"><strong>✍️ Activitats pràctiques UT4</strong></a></li>
+</ul><h2>UT5 — Fingerprint</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT5 · 7 apartats</span>
+<p><a href="./ut05/index.html"><strong>📘 Obrir UT5 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut05/ut0501.html"><strong>5.1 Introducción al Fingerprinting</strong></a></li>
+<li><a href="./ut05/ut0502.html"><strong>5.2 Nmap</strong></a></li>
+<li><a href="./ut05/ut0503.html"><strong>5.3 Fingerprinting</strong></a></li>
+<li><a href="./ut05/ut0504.html"><strong>5.4 Presentación fingerprint</strong></a></li>
+<li><a href="./ut05/ut0505.html"><strong>5.5 Enumeración con nmap</strong></a></li>
+<li><a href="./ut05/ut0506.html"><strong>5.6 Scripts amb nmap</strong></a></li>
+<li><a href="./ut05/ut05actividades.html"><strong>✍️ Activitats pràctiques UT5</strong></a></li>
+</ul><h2>UT6 — Auditorias de seguridad con Wireshark</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT6 · 2 apartats</span>
+<p><a href="./ut06/index.html"><strong>📘 Obrir UT6 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut06/ut0601.html"><strong>6.1 Wireshark</strong></a></li>
+<li><a href="./ut06/ut06actividades.html"><strong>✍️ Activitats pràctiques UT6</strong></a></li>
+</ul><h2>UT7 — Auditorias de seguridad utilizando hping</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT7 · 1 apartats</span>
+<p><a href="./ut07/index.html"><strong>📘 Obrir UT7 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut07/ut0701.html"><strong>7.1 Auditorias utilizando hping3</strong></a></li>
+</ul><h2>UT8 — Contratos pretesting</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT8 · 2 apartats</span>
+<p><a href="./ut08/index.html"><strong>📘 Obrir UT8 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut08/ut0801.html"><strong>8.1 Creación de contratos</strong></a></li>
+<li><a href="./ut08/ut08actividades.html"><strong>✍️ Activitats pràctiques UT8</strong></a></li>
+</ul><h2>UT9 — Fase de análisis</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT9 · 4 apartats</span>
+<p><a href="./ut09/index.html"><strong>📘 Obrir UT9 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut09/ut0901.html"><strong>9.1 analisi</strong></a></li>
+<li><a href="./ut09/ut0902.html"><strong>9.2 Nessus</strong></a></li>
+<li><a href="./ut09/ut0903.html"><strong>9.3 practiques</strong></a></li>
+<li><a href="./ut09/ut09actividades.html"><strong>✍️ Activitats pràctiques UT9</strong></a></li>
+</ul><h2>UT10 — Ejercicios Fingerprinting</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT10 · 1 apartats</span>
+<p><a href="./ut10/index.html"><strong>📘 Obrir UT10 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut10/ut10actividades.html"><strong>✍️ Activitats pràctiques UT10</strong></a></li>
+</ul><h2>UT11 — Ingenieria social</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT11 · 2 apartats</span>
+<p><a href="./ut11/index.html"><strong>📘 Obrir UT11 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut11/ut1101.html"><strong>11.1 Ingenieria social</strong></a></li>
+<li><a href="./ut11/ut11actividades.html"><strong>✍️ Activitats pràctiques UT11</strong></a></li>
+</ul><h2>UT12 — Explotación de vulnerabilidades</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT12 · 1 apartats</span>
+<p><a href="./ut12/index.html"><strong>📘 Obrir UT12 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut12/ut1201.html"><strong>12.1 Introducción</strong></a></li>
+</ul><h2>UT13 — Pentesting web</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT13 · 2 apartats</span>
+<p><a href="./ut13/index.html"><strong>📘 Obrir UT13 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut13/ut1301.html"><strong>13.1 Pentesting web</strong></a></li>
+<li><a href="./ut13/ut13actividades.html"><strong>✍️ Activitats pràctiques UT13</strong></a></li>
+</ul><h2>UT14 — Robots de Búsquedas</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT14 · 2 apartats</span>
+<p><a href="./ut14/index.html"><strong>📘 Obrir UT14 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut14/ut1401.html"><strong>14.1 Continguts i Recursos</strong></a></li>
+<li><a href="./ut14/ut14actividades.html"><strong>✍️ Activitats pràctiques UT14</strong></a></li>
+</ul><h2>UT15 — Riesgos laborales en el entorno de HE</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT15 · 1 apartats</span>
+<p><a href="./ut15/index.html"><strong>📘 Obrir UT15 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut15/ut15actividades.html"><strong>✍️ Activitats pràctiques UT15</strong></a></li>
+</ul><h2>UT16 — Explotación de vulnerabilidades</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT16 · 2 apartats</span>
+<p><a href="./ut16/index.html"><strong>📘 Obrir UT16 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut16/ut1601.html"><strong>16.1 Explotación</strong></a></li>
+<li><a href="./ut16/ut1602.html"><strong>16.2 Metasploit</strong></a></li>
+</ul><h2>UT17</h2>
+<span class="up-badge">CE Ciberseguretat (CETI) · UT17 · 1 apartats</span>
+<p><a href="./ut17/index.html"><strong>📘 Obrir UT17 Completa en una sola pàgina</strong></a></p>
+<ul>
+<li><a href="./ut17/ut17actividades.html"><strong>✍️ Activitats pràctiques UT17</strong></a></li>
+</ul>
+<div class="page-nav-footer">
+<span></span>
+<a class="page-nav-btn" href="./ut00/index.html">📘 UT0 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

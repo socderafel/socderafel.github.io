@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT7 — U6 - Nivell d'enllaç — Planificació i Administració de Xarxes | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📡 Planificació i Administració de Xarxes — 1r ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Planificació i Administració de Xarxes</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — General PAX</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Tutoria 1ASIX</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Horari 1ASIX</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Calendari 21 22</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Plànol IES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — U1 - Caracterització de les xarxes</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U1. Caracterització de les xarxes</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — U2 - Arquitectura de xarxa</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U2 Arquitectura de xarxa</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U2.1 IPs</a></li>
+<li><a href="../ut03/ut0303.html">3.3 U2 P1 ES</a></li>
+<li><a href="../ut03/ut0304.html">3.4 U2 P1 EN</a></li>
+<li><a href="../ut03/ut0305.html">3.5 U2 E1</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — U3 - Xarxes d'àrea local</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U3 Xarxes àrea local</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — U4 - Nivell físic</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 U4 Nivell físic</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U4 P1</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — U5 - Cablejat estructurat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U5 Cablejat Estructurat</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Cablejat Casa de l'Alumne UPV</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT7 — U6 - Nivell d'enllaç</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U6 - Nivell d'enllaç</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Trama PPP</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — U7 - El switch</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 U7 El switch</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Cisco IOS</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — U8 - VLAN</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 U8 VLAN</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Comandos Cisco VLAN</a></li>
+<li><a href="../ut09/ut0903.html">9.3 U8E1</a></li>
+<li><a href="../ut09/ut0904.html">9.4 U8E2</a></li>
+<li><a href="../ut09/ut0905.html">9.5 VTP, DTP i Capa 3</a></li>
+<li><a href="../ut09/ut0906.html">9.6 Colisió i difusió</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — U9 - Nivell de xarxa. El router</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 U9 Nivell de xarxa. El Router</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — U10 - Adreçament IP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 U10 Adreçament IP</a></li>
+<li><a href="../ut11/ut1102.html">11.2 Exercicis classe subnetting</a></li>
+<li><a href="../ut11/ut1103.html">11.3 Taula A2</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — U11 - Encaminament</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 U11 Enrutament</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Exemple Enrutament Estàtic</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — U12 - Capa de transport i aplicació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 U12 Nivell de Transport i Aplicació</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r ASIX · Grau Superior · UT7 Completa</span>
+<h1>📘 UT7 — U6 - Nivell d'enllaç (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0701"><strong>7.1 U6 - Nivell d'enllaç</strong></a> (o <a href="./ut0701.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0702"><strong>7.2 Trama PPP</strong></a> (o <a href="./ut0702.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut07actividades"><strong>✍️ Activitats pràctiques UT7</strong></a> (o <a href="./ut07actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0701">7.1 U6 - Nivell d'enllaç</h2>
+
+
+
+<hr/>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. 4.3 Protocolos de enlace de datos</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Propósito de la capa de enlace de datos Capa de enlace de datos</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Propósito de la capa de enlace de datos Capa de enlace de datos (continuación) Direcciones de enlace de datos de Capa 2</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Propósito de la capa de enlace de datos Subcapas de enlace de datos § La capa de enlace de datos se divide en dos subcapas: • Control de enlace lógico (LLC) • Se comunica con la capa de red.</p>
+<p>• Identifica qué protocolo de capa de red se utiliza para el marco. • Permite que varios protocolos de capa 3, como IPv4 e IPv6, utilicen la misma interfaz y los mismos medios de red. • Control de acceso a medios (MAC) • Define los procesos de acceso al medio que realiza el hardware.</p>
+<p>• Proporciona direccionamiento de la capa de enlace de datos y acceso a varias tecnologías de red. • Se comunica con Ethernet para enviar y recibir marcos a través de cables de cobre o fibra óptica. • Se comunica con tecnologías inalámbricas como Bluetooth y Wi-Fi.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Propósito de la capa de enlace de datos Control de acceso al medio § A medida que los paquetes se transfieren del host de origen al host de destino, deben atravesar diferentes redes físicas.</p>
+<p>§ Las redes físicas pueden constar de diferentes tipos de medios físicos, como cables de cobre, fibra óptica y tecnología inalámbrica compuesta por señales electromagnéticas, frecuencias de radio y microondas, y enlaces satelitales.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Propósito de la capa de enlace de datos Provisión de acceso a los medios § En cada salto a lo largo de la ruta, los routers realizan lo siguiente: • Aceptan una trama proveniente de un medio.</p>
+<p>• Desencapsulan la trama. • Vuelven a encapsular el paquete en una trama nueva. • Reenvían la nueva trama adecuada al medio de ese segmento.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Propósito de la capa de enlace de datos Estándares de la capa de enlace de datos § Las organizaciones de ingeniería que definen estándares y protocolos abiertos que se aplican a la capa de enlace de datos incluyen</p>
+<ul>
+<li>Instituto de Ingenieros Eléctricos y</li>
+</ul>
+<p>Electrónicos (IEEE)</p>
+<ul>
+<li>Unión Internacional de</li>
+</ul>
+<p>Telecomunicaciones (ITU)</p>
+<ul>
+<li>Organización Internacional para la</li>
+</ul>
+<p>Estandarización (ISO)</p>
+<ul>
+<li>Instituto Nacional Estadounidense de</li>
+</ul>
+<p>Estándares (ANSI)</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. 4.4 Control de acceso al medio</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías Control de acceso a los medios § El control de acceso a los medios es el equivalente a las reglas de tráfico que regulan la entrada de vehículos a una autopista.</p>
+<p>§ La ausencia de un control de acceso a los medios sería el equivalente a vehículos que ignoran el resto del tráfico e ingresan al camino sin tener en cuenta a los otros vehículos. § Sin embargo, no todos los caminos y entradas son iguales. El tráfico puede ingresar a un camino confluyendo, esperando su turno en una señal de parada o respetando el semáforo. Un conductor sigue un conjunto de reglas diferente para cada tipo de entrada.</p>
+<p>Uso compartido de medios</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías Topologías física y lógica § Topología física: se refiere a las conexiones físicas e identifica cómo se interconectan los terminales y dispositivos de infraestructura, como los routers, los switches y los puntos de acceso inalámbrico.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías Topologías física y lógica (continuación) § Topología lógica: se refiere a la forma en que una red transfiere tramas de un nodo al siguiente. Los protocolos de capa de enlace de datos definen estas rutas de señales lógicas.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes WAN Topologías WAN físicas comunes § Punto a punto: enlace permanente entre dos terminales. § Hub and Spoke (en estrella): un sitio central interconecta sitios de sucursal mediante enlaces punto a punto.</p>
+<p>§ Malla: proporciona alta disponibilidad, pero requiere que cada sistema final esté interconectado con todos los demás sistemas. Los costos administrativos y físicos pueden ser altos.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes WAN Topología física punto a punto § El nodo en un extremo coloca los marcos en los medios y el nodo en el otro extremo los saca de los medios del circuito punto a punto.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes WAN Topología lógica punto a punto</p>
+<ul>
+<li>Los nodos de los extremos que se comunican en una red punto a punto pueden</li>
+</ul>
+<p>estar conectados físicamente a través de una cantidad de dispositivos intermediarios.</p>
+<ul>
+<li>Sin embargo, el uso de dispositivos físicos en la red no afecta la topología lógica.</li>
+<li>La conexión lógica entre nodos forma lo que se llama un circuito virtual.</li>
+</ul>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes WAN Topología lógica punto a punto (continuación)</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes LAN Métodos de control de acceso a medios § Acceso basado en la contención</p>
+<ul>
+<li>Los nodos funcionan en</li>
+</ul>
+<p>modo semidúplex.</p>
+<ul>
+<li>Compiten por el uso del</li>
+</ul>
+<p>medio.</p>
+<ul>
+<li>Solo puede enviar un</li>
+</ul>
+<p>dispositivo a la vez.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes LAN Métodos de control de acceso a medios (continuación) § Acceso controlado</p>
+<ul>
+<li>Cada nodo tiene su</li>
+</ul>
+<p>propio tiempo para utilizar el medio.</p>
+<ul>
+<li>Las LAN de Token Ring</li>
+</ul>
+<p>antiguo son un ejemplo.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes LAN Acceso basado en la contención: CSMA/CD § En las redes LAN Ethernet de modo semidúplex, se utiliza el proceso de acceso múltiple con detección de portadora/detección de colisión (CSMA/CD).</p>
+<p>• Si dos dispositivos transmiten al mismo tiempo, se produce una colisión. • Ambos dispositivos detectarán la colisión en la red. • Los datos enviados por ambos dispositivos se dañarán y deberán enviarse nuevamente.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Topologías de redes LAN Acceso basado en la contención: CSMA/CA § CSMA/CA</p>
+<ul>
+<li>Utiliza un método para detectar</li>
+</ul>
+<p>si el medio está libre.</p>
+<ul>
+<li>No detecta colisiones pero</li>
+</ul>
+<p>intenta evitarlas ya que aguarda antes de transmitir. § Nota: Las redes LAN Ethernet con switches no utilizan sistemas por contención porque el switch y la NIC de host operan en el modo de dúplex completo.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Trama del enlace de datos La trama § Cada tipo de trama tiene tres partes básicas</p>
+<ul>
+<li>Encabezado</li>
+<li>Datos</li>
+<li>Tráiler</li>
+</ul>
+<p>§ La estructura de la trama y los campos contenidos en el encabezado y tráiler varían de acuerdo con el protocolo de capa 3.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Trama del enlace de datos Campos de trama § Indicadores de arranque y detención de trama: identifican los límites de comienzo y finalización de la trama. § Direccionamiento: indica los nodos de origen y de destino.</p>
+<p>§ Tipo: identifica el protocolo de capa 3 en el campo de datos. § Control: identifica los servicios especiales de control de flujo, como QoS. § Datos: incluye el contenido de la trama (es decir, el encabezado del paquete, el encabezado del segmento y los datos).</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. Trama del enlace de datos Direcciones de capa 2 Cada trama de enlace de datos contiene la dirección de origen de enlace de datos de la tarjeta NIC que envía la trama y la dirección de destino de enlace de datos de la tarjeta NIC que recibe la trama.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § El tamaño mínimo de trama de Ethernet de la dirección MAC de destino a FCS es de 64 bytes, y el máximo es de 1518 bytes. Trama de Ethernet Campos de la trama de Ethernet § Las tramas de menos de 64 bytes se consideran fragmentos de colisión o tramas cortas, y se descartan automáticamente por las estaciones receptoras. Las tramas de más de 1500 bytes de datos se consideran “jumbos” o tramas bebés gigantes.</p>
+<p>§ Si el tamaño de una trama transmitida es menor que el mínimo o mayor que el máximo, el dispositivo receptor descarta la trama.</p>
+<p>Trama de Ethernet MAC 48 bits Hexadecimal CSMA/CD Servicio Sin Conexión Medio Compartido IEEE 802.3 Ethernet 1000 Mbps</p>
+<p>Trama PPP Negociación Autenticación, Compresión y Multienlace Encapsula Otros protocolos PPP Protocolo WAN</p>
+<p>Trama Inalámbrica 802.11 Servicios Autenticación, Asociación y Privacidad CSMA/CA Medio Compartido IEEE 802.11 Wifi Actividad Interactiva •Campos de trama</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § La subcapa MAC de tiene dos responsabilidades principales: • Encapsulamiento de datos • Control de acceso al medio § El encapsulamiento de datos proporciona tres funciones principales</p>
+<p>• Delimitación de tramas • Direccionamiento • Detección de errores Trama de Ethernet Subcapa MAC § El control de acceso al medio es responsable de colocar las tramas en los medios y de quitarlas de ellos. Esta subcapa se comunica directamente con la capa física.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § Las direcciones MAC se crearon para identificar el origen y el destino reales. • Las reglas de la dirección MAC se establecen según IEEE. • El IEEE asigna al proveedor un código de 3 bytes (24 bits), llamado “identificador único de organización (OUI)”.</p>
+<p>Direcciones MAC de Ethernet Direcciones MAC: Identidad de Ethernet § El IEEE obliga a los proveedores a respetar dos normas simples: • Todas las direcciones MAC asignadas a una NIC o a otro dispositivo Ethernet deben utilizar el OUI que se le asignó a dicho proveedor como los tres primeros bytes.</p>
+<p>• Todas las direcciones MAC con el mismo OUI deben tener asignado un valor único en los tres últimos bytes.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § En general, la dirección MAC se denomina dirección grabada (BIA); es decir, la dirección está codificada en el chip de la ROM permanentemente. Cuando la computadora arranca, lo primero que hace la NIC es copiar la dirección MAC de la ROM a la RAM.</p>
+<p>Direcciones MAC de Ethernet Procesamiento de tramas § Cuando un dispositivo reenvía un mensaje a una red Ethernet, adjunta la información del encabezado a la trama. § La información del encabezado contiene las direcciones MAC de origen y de destino.</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § En un host de Windows, utilice el comando ipconfig /all para identificar la dirección MAC de un adaptador Ethernet. En un host Mac o Linux, se utiliza el comando ipconfig.</p>
+<p>§ Según el dispositivo y el sistema operativo, puede ver varias representaciones de direcciones MAC. Direcciones MAC de Ethernet Representaciones de direcciones MAC</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § Una dirección MAC de unidifusión es la dirección única utilizada cuando se envía una trama desde un único dispositivo transmisor hacia un único dispositivo receptor. § Para que un paquete de unidifusión se envíe y se reciba, la dirección IP de destino debe estar incluida en el encabezado del paquete IP. Además, el encabezado de la trama de Ethernet también debe contar con la dirección MAC de destino correspondiente.</p>
+<p>Direcciones MAC de Ethernet Dirección MAC unidifusión</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § Muchos protocolos de red, como DHCP y ARP, utilizan la difusión. § Los paquetes de difusión tienen una dirección IPv4 de destino que contiene solo números uno (1) en la porción de host, lo que significa que todos los hosts de esa red local recibirán y procesarán el paquete.</p>
+<p>§ Cuando el paquete de difusión IPv4 se encapsula en la trama de Ethernet, la dirección MAC de destino es la dirección MAC de difusión FF-FF-FF-FF-FF-FF en hexadecimal (48 números uno en binario). Direcciones MAC de Ethernet Dirección MAC de difusión</p>
+<p>© 2016 Cisco y/o sus filiales. Todos los derechos reservados. Información confidencial de Cisco. § Las direcciones de multidifusión le permiten a un dispositivo de origen enviar un paquete a un grupo de dispositivos. • Una dirección IP de grupo de multidifusión se asigna a los dispositivos que pertenecen a un grupo de multidifusión, en el rango de 224.0.0.0 a 239.255.255.255 (las direcciones de multidifusión IPv6 comienzan con FF00::/8).</p>
+<p>• La dirección IP de multidifusión requiere una dirección MAC de multidifusión correspondiente que comience con 01-00-5E en formato hexadecimal. Direcciones MAC de Ethernet Dirección MAC de multidifusión</p>
+<hr/>
+<h2 id="ut0702">7.2 Trama PPP</h2>
+<div class="admonition warning"><p class="admonition-title">📄 Document Escanejat / Visual (trama_PPP.pdf)</p><p>Aquest document PDF (2 pàgines) està compost principalment per esquemes o imatges escanejades.</p></div>
+<hr/>
+<h2 id="ut07actividades">✍️ Activitats pràctiques UT7</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 7.1 — U6 A1</p><p>Unitat 6 – Nivell d’enllaç U6 – A1</p>
+<p>Instruccions</p>
+<ul>
+<li>Recorda copiar tant l’enunciat com les respostes.</li>
+<li>Entrega el document en format .pdf.</li>
+</ul>
+<ul>
+<li>Utilitzant Packet Tracer construeix una xarxa com la de la següent figura.</li>
+</ul>
+<p>Envia un ping des del PC al portàtil en mode simulació. Analitza les trames indicant a qui correspon cada direcció MAC.</p>
+<h3>2. Representa mitjançant un diagrama de flux (pots utilitzar la ferramenta</h3>
+<p>DIA instal·lada al teu PC o bé la web draw.io), les passes que dona una estació quan té que transmetre utilitzant el mètode d’accés CSMA/CD.</p>
+<ul>
+<li>Explica per què CSMA / CD resulta inadequat per xarxes inalàmbriques.</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 7.2 — U6 P1</p><p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet Topología</p>
+<p>Objetivos Parte 1: Examinar los campos de encabezado de una trama de Ethernet II Parte 2: Utilizar Wireshark para capturar y analizar tramas de Ethernet Aspectos básicos/situación Cuando los protocolos de capa superior se comunican entre sí, los datos fluyen por las capas de interconexión de sistemas abiertos (OSI) y se encapsulan en una trama de capa 2. La composición de la trama depende del tipo de acceso al medio. Por ejemplo, si los protocolos de capa superior son TCP e IP, y el acceso a los medios es Ethernet, el encapsulamiento de tramas de capa 2 es Ethernet II. Esto es típico para un entorno LAN.</p>
+<p>Al aprender sobre los conceptos de la capa 2, es útil analizar la información del encabezado de la trama. En la primera parte de esta práctica de laboratorio, revisará los campos que contiene una trama de Ethernet II. En la parte 2, utilizará Wireshark para capturar y analizar campos de encabezado de tramas de Ethernet II de tráfico local y remoto.</p>
+<p>Recursos necesarios • 1 PC (Windows 7, 8 o 10 con acceso a Internet y Wireshark instalado) Parte 1: Examinar los campos de encabezado de una trama de Ethernet II En la parte 1, examinará los campos de encabezado y el contenido de una trama de Ethernet II. Se utilizará una captura de Wireshark para examinar el contenido de esos campos.</p>
+<p>Paso 1: Revisar las descripciones y longitudes de los campos de encabezado de Ethernet II Preámbulo Dirección de destino Dirección de origen Tipo de trama Datos FCS 8 bytes 6 bytes 6 bytes 2 bytes 46 a 1500 bytes 4 bytes</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>Paso 2: Examinar la configuración de red de la PC La dirección IP de este equipo host es 192.168.1.147, y el gateway predeterminado tiene la dirección IP 192.168.1.1.</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>Paso 3: Examinar las tramas de Ethernet en una captura de Wireshark En la siguiente captura de Wireshark, se muestran los paquetes generados por un ping que se hace de un equipo host a su gateway predeterminado. Se le aplicó un filtro a Wireshark para ver solamente el protocolo de resolución de direcciones (ARP) y el protocolo de mensajes de control de Internet (ICMP). La sesión comienza con una consulta ARP para obtener la dirección MAC del router del gateway seguida de cuatro solicitudes y respuestas de ping.</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>Paso 4: Examinar el contenido del encabezado de Ethernet II de una solicitud de ARP En la siguiente tabla, se toma la primera trama de la captura de Wireshark y se muestran los datos de los campos de encabezado de Ethernet II. Campo Valor Descripción Preámbulo No se muestra en la captura.</p>
+<p>Este campo contiene bits de sincronización, procesados por el hardware de la NIC. Dirección de destino Broadcast (ff:ff:ff:ff:ff:ff) (Difusión [ff:ff:ff:ff:ff:ff]) Direcciones de capa 2 para la trama. Cada dirección tiene una longitud de 48 bits, o 6 octetos, expresada como 12 dígitos hexadecimales (0-9, A-F).</p>
+<p>Un formato común es 12:34:56:78:9A:BC. Los primeros seis números hexadecimales indican el fabricante de la tarjeta de interfaz de red (NIC), y los últimos seis números son el número de serie de la NIC. La dirección de destino puede ser de difusión, que contiene todos números uno, o de unidifusión. La dirección de origen siempre es de unidifusión.</p>
+<p>Dirección de origen BelkinIn_9f:6b:8c (14:91:82:9f:6b:8c) Tipo de trama 0x0806 Para las tramas de Ethernet II, este campo contiene un valor hexadecimal que se utiliza para indicar el tipo de protocolo de capa superior del campo de datos. Ethernet II admite varios protocolos de capa superior. Dos tipos comunes de trama son los siguientes</p>
+<p>Valor Descripción 0x0800 Protocolo IPv4 0x0806 Protocolo de resolución de direcciones (ARP) Datos ARP Contiene el protocolo de nivel superior encapsulado. El campo de datos tiene entre 46 y 1500 bytes. FCS No se muestra en la captura. Secuencia de verificación de trama, utilizada por la NIC para identificar errores durante la transmisión. El equipo emisor calcula el valor abarcando las direcciones de trama, campo de datos y tipo. El receptor lo verifica.</p>
+<p>¿Qué característica significativa tiene el contenido del campo de dirección de destino? _______________________________________________________________________________________ _______________________________________________________________________________________ ¿Por qué envía la PC un ARP de difusión antes de enviar la primera solicitud de ping?</p>
+<p>_______________________________________________________________________________________ _______________________________________________________________________________________ _______________________________________________________________________________________ ¿Cuál es la dirección MAC del origen en la primera trama? _______________________ ¿Cuál es el identificador de proveedor (OUI) de la NIC del origen? __________________________ ¿Qué porción de la dirección MAC corresponde al OUI?</p>
+<p>_______________________________________________________________________________________ ¿Cuál es el número de serie de la NIC del origen? _________________________________</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>Parte 2: Utilizar Wireshark para capturar y analizar tramas de Ethernet En la parte 2, utilizará Wireshark para capturar tramas de Ethernet locales y remotas. Luego, examinará la información que contienen los campos de encabezado de las tramas. Paso 1: Determinar la dirección IP del gateway predeterminado de la PC Abra una ventana del símbolo del sistema y emita el comando ipconfig.</p>
+<p>¿Cuál es la dirección IP del gateway predeterminado de la PC? ________________________ Paso 2: Comenzar a capturar el tráfico de la NIC de la PC</p>
+<ul>
+<li>Cierre Wireshark. No es necesario guardar los datos capturados.</li>
+</ul>
+<ul>
+<li>Abra Wireshark e inicie la captura de datos.</li>
+</ul>
+<ul>
+<li>Observe el tráfico que aparece en la ventana Packet List (Lista de paquetes).</li>
+</ul>
+<p>Paso 3: Filtrar Wireshark para que solamente se muestre el tráfico ICMP Puede usar el filtro de Wireshark para bloquear la visibilidad del tráfico no deseado. El filtro no bloquea la captura de datos no deseados, sino lo que se muestra en pantalla. Por el momento, solo se debe visualizar el tráfico ICMP.</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>En el cuadro Filter (Filtro) de Wireshark, escriba icmp. Si escribió el filtro correctamente, el cuadro debe volverse de color verde. Si el cuadro está de color verde, haga clic en Apply (Aplicar) (la flecha hacia la derecha) para que se aplique el filtro.</p>
+<p>Paso 4: En la ventana del símbolo del sistema, hacer un ping al gateway predeterminado de la PC En la ventana del símbolo del sistema, haga un ping al gateway predeterminado con la dirección IP registrada en el paso 1. Paso 5: Dejar de capturar el tráfico de la NIC Haga clic en el ícono Stop Capture (Detener captura) para dejar de capturar el tráfico.</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>Paso 6: Examinar la primera solicitud de eco (ping) en Wireshark La ventana principal de Wireshark se divide en tres secciones: el panel Packet List (Lista de paquetes) en la parte superior, el panel Packet Details (Detalles del paquete) en el centro y el panel Packet Bytes (Bytes del paquete) en la parte inferior. Si seleccionó la interfaz correcta para la captura de paquetes en el paso 3, Wireshark debería mostrar la información de ICMP en el panel Packet List (Lista de paquetes), de manera similar a la del siguiente ejemplo.</p>
+<ul>
+<li>En el panel Packet List (Lista de paquetes) de la parte superior, haga clic en la primera trama de la lista.</li>
+</ul>
+<p>Debería ver el texto Echo (ping) request (Solicitud de eco [ping]) debajo del encabezado Info (Información). Con esta acción, se debe resaltar la línea con color azul.</p>
+<ul>
+<li>Examine la primera línea del panel Packet Details (Detalles del paquete) de la parte central. En esta</li>
+</ul>
+<p>línea, se muestra la longitud de la trama (en el ejemplo, 74 bytes).</p>
+<ul>
+<li>En la segunda línea del panel Packet Details (Detalles del paquete), se muestra que es una trama de</li>
+</ul>
+<p>Ethernet II. También se muestran las direcciones MAC de origen y de destino. ¿Cuál es la dirección MAC de la NIC de la PC? ________________________ ¿Cuál es la dirección MAC del gateway predeterminado? ______________________</p>
+<ul>
+<li>Puede hacer clic en el signo más (+) al principio de la segunda línea para obtener más información sobre</li>
+</ul>
+<p>la trama de Ethernet II. Observe que el signo más se transforma en un signo menos (-). ¿Qué tipo de trama se muestra? ________________________________</p>
+<ul>
+<li>En las últimas dos líneas de la parte central, se proporciona información sobre el campo de datos de la</li>
+</ul>
+<p>trama. Observe que los datos contienen información sobre las direcciones IPv4 de origen y de destino. ¿Cuál es la dirección IP de origen? _________________________________ ¿Cuál es la dirección IP de destino? ______________________________</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>f. Puede hacer clic en cualquier línea de la parte central para resaltar esa parte de la trama (hexadecimal y ASCII) en el panel Packet Bytes (Bytes del paquete) de la parte inferior. Haga clic en la línea Internet Control Message Protocol (Protocolo de mensajes de control de Internet) de la parte central y examine lo que se resalta en el panel Packet Bytes (Bytes de paquete).</p>
+<p>¿Qué texto muestran los últimos dos octetos resaltados? ______</p>
+<ul>
+<li>Haga clic en la siguiente trama de la parte superior y examine una trama de respuesta de eco. Observe</li>
+</ul>
+<p>que las direcciones MAC de origen y de destino se invirtieron porque esta trama se envió desde el router del gateway predeterminado como respuesta al primer ping. ¿Qué dispositivo y qué dirección MAC se muestran como dirección de destino? ___________________________________________ Paso 7: Reiniciar la captura de paquetes en Wireshark Haga clic en el ícono Iniciar captura para iniciar una nueva captura de Wireshark. Se muestra una ventana emergente que le pregunta si desea guardar los anteriores paquetes capturados en un archivo antes de iniciar la nueva captura. Haga clic en Continue without Saving (Continuar sin guardar).</p>
+<p>Paso 8: En la ventana del símbolo del sistema, hacer ping a www.cisco.com Paso 9: Dejar de capturar paquetes Paso 10: Examinar los nuevos datos del panel de Packet List (Lista de paquetes) de Wireshark En la primera trama de solicitud de eco (ping), ¿cuáles son las direcciones MAC de origen y de destino?</p>
+<p>Origen: _________________________________ Destino: ______________________________</p>
+<p>Práctica de laboratorio: Uso de Wireshark para examinar las tramas de Ethernet</p>
+<p>¿Cuáles son las direcciones IP de origen y de destino que contiene el campo de datos de la trama? Origen: _________________________________ Destino: ______________________________ Compare estas direcciones con las direcciones que recibió en el paso 6. La única dirección que cambió es la dirección IP de destino. ¿Por qué cambió la dirección IP de destino mientras que la dirección MAC permaneció igual?</p>
+<p>_______________________________________________________________________________________ _______________________________________________________________________________________ _______________________________________________________________________________________ _______________________________________________________________________________________ Reflexión En Wireshark, no se muestra el campo de preámbulo de un encabezado de trama. ¿Qué contiene el preámbulo?</p>
+<p>_______________________________________________________________________________________ _______________________________________________________________________________________ _______________________________________________________________________________________</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut06/ut06actividades.html">⬅️ ✍️ Activitats pràctiques UT6</a>
+<a class="page-nav-btn" href="../ut07/ut0701.html">7.1 U6 - Nivell d'enllaç ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

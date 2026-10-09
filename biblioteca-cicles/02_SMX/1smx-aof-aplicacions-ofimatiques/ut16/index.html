@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT16 — BDA. Base de Datos. CONSULTES — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT16 Completa</span>
+<h1>📘 UT16 — BDA. Base de Datos. CONSULTES (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut1601"><strong>16.1 Tema 4. CONSULTES</strong></a> (o <a href="./ut1601.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1602"><strong>16.2 RESUMEN CONSULTES</strong></a> (o <a href="./ut1602.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1603"><strong>16.3 B1-EXERCICIS BDA-CONSULTES</strong></a> (o <a href="./ut1603.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1604"><strong>16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</strong></a> (o <a href="./ut1604.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1605"><strong>16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</strong></a> (o <a href="./ut1605.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut16actividades"><strong>✍️ Activitats pràctiques UT16</strong></a> (o <a href="./ut16actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut1601">16.1 Tema 4. CONSULTES</h2>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(239, 69, 64);">TEMA 4. CONSULTES</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">TEMA</span></b><br/></p></div>
+<p>📎 <strong>Material de laboratori (BDA EMPLEADOS (per a consultes de classe)):</strong> <code>EMPLEADOS.mdb</code></p>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">EXERCICIS CONSULTES </span></b><br/></p></div>
+<p>📎 <strong>Material de laboratori (B1-BDA per a exercicis):</strong> <code>B1_BDA_per_a_exercicis.rar</code></p>
+<p>📎 <strong>Material de laboratori (B2-BDA per a exercicis):</strong> <code>B2_BDA_per_a_exercicis.rar</code></p>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">VIDEOS</span></b><br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 7.1. Crear una consulta</p><p><a href="https://www.youtube.com/watch?v=cl5_kYw2EjE" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=cl5_kYw2EjE) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 7.2. Ordenar i filtrar</p><p><a href="https://www.youtube.com/watch?v=Od1TqvibVqM" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=Od1TqvibVqM) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 7.3. Consultes multitaula</p><p><a href="https://www.youtube.com/watch?v=OHrcy9X5JsY" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=OHrcy9X5JsY) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 8. Consultes de resumen en ACCESS 2016</p><p><a href="https://www.aulaclic.es/access-2016/secuencias/p08_consulta_resumen_yt.htm" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p08_consulta_resumen_yt.htm) ↗️</strong></a></p><p>En este vídeo voreu com crear consultes de resumen en ACCESS 2016<br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 9. Consultes referències creuades</p><p><a href="https://www.aulaclic.es/access-2016/secuencias/p09_consulta_ref_cruzadas_yt.htm" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p09_consulta_ref_cruzadas_yt.htm) ↗️</strong></a></p><p>En este video voreu com crear consultes de referències creuades en ACCESS 2016<br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 10.1. Consultes d'actualització</p><p><a href="https://www.youtube.com/watch?v=lKsi_HD9j4A" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=lKsi_HD9j4A) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 10.2. Consultes de datos anexados</p><p><a href="https://www.aulaclic.es/access-2016/secuencias/p10_consulta_anexados_yt.htm" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p10_consulta_anexados_yt.htm) ↗️</strong></a></p><p>En este video voreu consultes de datos anexados en ACCESS 2016<br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 10.3. Consultes d'eliminació</p><p><a href="https://www.aulaclic.es/access-2016/secuencias/p10_consulta_eliminacion_yt.htm" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p10_consulta_eliminacion_yt.htm) ↗️</strong></a></p></div>
+<hr/>
+<p>Tema 4</p>
+<p>M i c r o s o f t A C C E S S</p>
+<p>C O N S U L T A S</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Índice</p>
+<h4>CAPÍTULO 7: LAS CONSULTAS</h4>
+<p>TIPOS DE CONSULTAS</p>
+<p>CREAR UNA CONSULTA</p>
+<p>LA VISTA DISEÑO</p>
+<p>AÑADIR CAMPOS</p>
+<p>DEFINIR CAMPOS CALCULADOS</p>
+<p>FORMAR EXPRESIONES</p>
+<p>ENCABEZADOS DE COLUMNA</p>
+<p>CAMBIAR EL ORDEN DE LOS CAMPOS</p>
+<p>GUARDAR LA CONSULTA</p>
+<p>EJECUTAR LA CONSULTA</p>
+<p>MODIFICAR EL DISEÑO DE UNA CONSULTA</p>
+<p>ORDENAR LAS FILAS</p>
+<p>SELECCIONAR FILAS</p>
+<p>CONSULTAS CON PARÁMETROS</p>
+<h4>CAPÍTULO 8: LAS CONSULTAS DE RESUMEN</h4>
+<p>DEFINICIÓN</p>
+<p>LAS FUNCIONES DE AGREGADO</p>
+<p>AGRUPAR REGISTROS</p>
+<p>INCLUIR EXPRESIONES</p>
+<p>INCLUIR CRITERIOS DE BÚSQUEDA</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Capítulo 7: Las Consultas</p>
+<p>Tipos de consultas.</p>
+<p>Las consultas son los objetos de una base de datos que permiten recuperar datos de una tabla, modificarlos e incluso almacenar el resultado en otra tabla. Existen varios tipos de consultas</p>
+<p> Consultas de selección. Son las consultas que extraen o nos muestran datos. Muestran aquellos datos de una tabla que cumplen los criterios especificados. Una vez obtenido el resultado podremos consultar los datos para modificarlos (esto se podrá hacer o no según la consulta). Una consulta de selección genera una tabla lógica (se llama lógica porque no está físicamente en el disco duro sino en la memoria del ordenador y cada vez que se abre se vuelve a calcular).</p>
+<p> Consultas de acción. Son consultas que realizan cambios a los registros. Existen varios tipos de consultas de acción, de eliminación, de actualización, de datos anexados y de creación de tablas.</p>
+<p>Crear una consulta.</p>
+<p>Para crear una consulta, seguir los siguientes pasos: Abrir la base de datos donde se encuentra la consulta a crear. Hacer clic en el botón Diseño de Consulta en la pestaña Crear</p>
+<p>También tenemos la posibilidad de utilizar el Asistente para consultas que puedes ver en la imagen anterior para crear consultas con un poco de ayuda.</p>
+<p>Si haces clic en el botón Asistente para consultas aparecerá el siguiente cuadro de diálogo</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>El Asistente para consultas sencillas crea una consulta de selección sencilla como definimos en el apartado anterior.</p>
+<p>Los otros asistentes nos permiten generar tipos especiales de consulta que veremos más adelante. Nosotros explicaremos detenidamente la opción Diseño de consulta que te permitirá crear cualquiera de las anteriores por ti mismo.</p>
+<p>Al entrar en la Vista Diseño de consulta nos pide primero las tablas de las que la consulta sacará los datos con un cuadro de diálogo parecido al siguiente</p>
+<p>Seleccionar la tabla de la que queremos sacar datos y hacer clic sobre el botón Agregar. Si queremos sacar datos de varias tablas agregar de la misma forma las demás tablas. Finalmente hacer clic sobre el botón Cerrar.</p>
+<p>Aparecerá la ventana Vista Diseño de consultas.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>La vista Diseño.</p>
+<p>Si observas la pantalla, en la parte superior tenemos la zona de tablas donde aparecen las tablas añadidas con sus correspondientes campos, y en la parte inferior denominada cuadrícula QBE definimos la consulta.</p>
+<p>Cada columna de la cuadrícula QBE corresponde a un campo.</p>
+<p>Cada fila tiene un propósito que detallamos brevemente a continuación, más adelante iremos profundizando en la explicación</p>
+<p>Campo: ahí ponemos el campo a utilizar que en la mayoría de los casos será el campo a visualizar, puede ser el nombre de un campo de la tabla y también puede ser un campo calculado.</p>
+<p>Tabla: nombre de la tabla de la que sacamos el campo. Nos será útil cuando definamos consultas basadas en varias tablas.</p>
+<p>Orden: sirve para ordenar las filas del resultado.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Mostrar: si la casilla de verificación aparece desactivada la columna no aparecerá en el resultado, se suele desactivar cuando queremos utilizar el campo para definir la consulta pero no queremos que aparezca en el resultado. Por ejemplo si queremos que la consulta nos saque todos los alumnos de Valencia, necesitamos el campo Población para seleccionar los alumnos pero no queremos que aparezca la población en el resultado ya que todos son de la misma población.</p>
+<p>Criterios: sirve para especificar un criterio de búsqueda. Un criterio de búsqueda es una condición que deben cumplir los registros que aparecerán en el resultado de la consulta. Por lo tanto está formado por una condición o varias condiciones unidas por los operadores Y (AND) y O (OR).</p>
+<p>O: esta fila y las siguientes se utilizan para combinar condiciones.</p>
+<p>Añadir campos</p>
+<p>Para añadir campos a la cuadrícula podemos:  Hacer doble clic sobre el nombre del campo que aparece en la zona de tablas, este se colocará en la primera columna libre de la cuadrícula.</p>
+<p> Hacer clic sobre el nombre del campo que aparece en la zona de tablas y sin soltar el botón del ratón arrastrar el campo sobre la cuadrícula, soltar el botón cuando estemos sobre la columna delante de la cual queremos dejar el campo que estamos añadiendo.</p>
+<p> Hacer clic sobre la fila Campo: de una columna vacía de la rejilla, aparecerá a la derecha la flecha para desplegar la lista de todos los campos de todas las tablas que aparecen en la zona de tablas. Si tenemos muchos campos y varias tablas podemos reducir la lista seleccionando primero una tabla en la fila Tabla: así en la lista desplegable sólo aparecerán campos de la tabla seleccionada.</p>
+<p> También podemos teclear directamente el nombre del campo en la fila Campo: de una columna vacía de la cuadrícula.</p>
+<p> Si queremos que todos los campos de la tabla aparezcan en el resultado de la consulta podemos utilizar el asterisco * (sinónimo de 'todos los campos').</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Definir campos calculados</p>
+<p>Al igual que podemos definir en una tabla un campo cuyo tipo de datos sea Calculado también podemos incluir campos calculados en las consultas.</p>
+<p>¿Cuándo incluir la expresión en una tabla y cuándo en una consulta? La respuesta dependerá de cada caso concreto. Si el resultado de la expresión se va a utilizar frecuentemente en consultas, listados o estadísticas, puede ser más interesante guardar el dato en la propia tabla. Si en cambio se trata de un cálculo más específico puede ser preferible no utilizar espacio en el disco para conservar estos valores, definiendo un campo calculado en la consulta.</p>
+<p>Para definir un campo como calculado, simplemente deberemos escribir una expresión en el espacio reservado para indicar el campo. La sintaxis será</p>
+<p>Nombre del campo: expresión</p>
+<p>Por ejemplo, si disponemos de un campo Precio, podríamos realizar la siguiente expresión: Precio con IVA: Precio * 1,18</p>
+<p>Al pulsar INTRO se guardará la expresión y se aplicarán ciertos cambios, como encerrar entre corchetes los campos referenciados o eliminar espacios innecesarios, etc.: Precio con IVA: [Precio]*1,18</p>
+<p>Formar expresiones</p>
+<p>Los campos calculados son campos obtenidos del resultado de una expresión.</p>
+<p>Una expresión se forma combinando un operador con uno o generalmente dos operandos. La mayoría de las veces un operando será un campo de la tabla y el otro un valor concreto u otro campo.</p>
+<p>Operadores operador +, se utiliza para sumar dos números. operador -, se utiliza para hallar la diferencia entre dos números.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>operador *, se utiliza para multiplicar dos números. operador ^, se utiliza para elevar un número a la potencia del exponente ( número ^ exponente ) operador / , se utiliza para dividir dos números y obtener un resultado de signo flotante. operador \, se utiliza para dividir dos números y obtener un resultado entero.</p>
+<p>operadorMod, divide dos números y devuelve sólo el resto. El operador &amp;, se utiliza para concatenar dos expresiones de tipo texto.</p>
+<p>También se puede utilizar el operador de suma + cuando los dos operandos son de tipo texto, para concatenarlos. Un consejo es utilizar el operador &amp; para la concatenación y así evitar errores o confusiones.</p>
+<p>Un operando puede ser un nombre de columna, una expresión, un valor concreto o una función predefinida.</p>
+<p>Valores concretos Los valores concretos se deben escribir siguiendo las siguientes reglas</p>
+<p>Los valores numéricos se indican poniendo el número sin más. Se tiene que utilizar para separar la parte entera de los decimales el símbolo definido en nuestra configuración de Windows; además los valores numéricos no se pueden escribir formateados, no podemos escribirlos con separadores de miles.</p>
+<p>Por ejemplo en una expresión correcta no puedo escribir (ventas + 1.000.000) ni tampoco (ventas + 1,000,000), tengo que escribir (ventas +1000000)</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo</p></div>
+<p>Los valores de tipo texto deben ir siempre entre comillas simples ' o dobles ". Ejemplo: ', ' ó ",", 'VALENCIA'</p>
+<p>Los literales de fecha se escriben entre # y deben estar en el formato de EE.UU., incluso si no estamos utilizando la versión norteamericana del motor de base de datos Microsoft Jet. Por ejemplo, el 10 de mayo de 1996, se escribe 10/5/96 en España y Latinoamérica, y 5/10/96 en Estados Unidos de América. Para indicar la fecha 10 de mayo de 1996 en cualquier base de datos sea española, latinoamericana o de EE.UU., debemos escribirla #5/10/96#; con el formato #mes/dia/año#</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>También se puede utilizar la función DateValue, que reconoce las configuraciones internacionales establecidas por Microsoft Windows. Por ejemplo, DateValue('10/5/96') es equivalente a #05/10/96# si nuestra configuración de Windows define las fechas con el formato dia/mes/año.</p>
+<p>Funciones predefinidas Access 2010 tiene muchas funciones predefinidas que se pueden utilizar, enumerarlas y explicarlas sería demasiado largo. Lo mejor es saber que tenemos a nuestra disposición muchas funciones y cuando queramos obtener algo diferente consultar la ayuda de access para ver si existe ya una función para lo que queremos hacer.</p>
+<p>A título de ejemplo tenemos unas que se utilizan más a menudo: DATE() o fecha() devuelve el día en que estamos</p>
+<p>NOW() o Hoy() devuelve el día y la hora actual YEAR(fecha) o Año() devuelve el año de la fecha MONTH(fecha) o Mes() devuelve el mes de la fecha DATEVALUE(literal) o ValorFecha() convierte el literal en un valor de fecha.</p>
+<p>Nombres de campos los nombres de los campos se indican entre corchetes [ ], cuando un nombre de campo está formado por una sola palabre se pueden omitir corchetes pero si el nombre contiene varias palabras separadas por espacios en blanco es oblogatorio ponerlo entre corchetes [ ].</p>
+<p>por ejemplo para hacer referencia al campo Poblacion puedo escribir Poblacion o [Poblacion], pero el campo Fecha de nacimiento siempre se escribirá [Fecha de nacimiento]</p>
+<p>Uso del paréntesis Cuando combinamos varias expresiones podemos utilizar los paréntesis para delimitar cada expresión. Siempre se tiene que utilizar un paréntesis de apertura ( y uno de cierre ).</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo: ventas + (ventas * 0.1)</p></div>
+<p>El uso del paréntesis sirve para que la expresión quede más clara sobre todo cuando combinamos muchas expresiones, y para que los operadores actuen en el orden que nosotros queramos para así olvidarnos de la prioridad de los operadores.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Encabezados de columna</p>
+<p>Podemos cambiar el encabezado de las columnas del resultado de la consulta.</p>
+<p>Normalmente aparece en el encabezado de la columna el nombre de la columna, si queremos cambiar ese encabezado lo indicamos en la fila Campo: escribiéndolo delante del nombre del campo y seguido de dos puntos ( : ). Se suele utilizar sobre todo para los campos calculados.</p>
+<p>Así, los encabezados de la tabla se mostrarán así</p>
+<p>Cambiar el orden de los campos</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Si hemos incluido campos en la cuadrícula y queremos cambiar el orden de estos campos podemos mover una columna (o varias) arrastrándola o bien cortando y pegando.</p>
+<p> Para mover una columna arrastrándola: Posicionar el cursor sobre el extremo superior de la columna y cuando aparece la flecha hacer clic, la columna aparecerá resaltada (está seleccionada). Mover un poco el cursor para que aparezca la flecha . Pulsar el botón del ratón y sin soltarlo arrastrar la columna hasta la posición deseada.</p>
+<p> Para mover una columna cortándola: Seleccionar la columna (posicionar el cursor sobre el extremo superior de la columna y cuando aparece la flecha hacer clic).</p>
+<p>Hacer clic sobre el icono en la pestaña Inicio (o bien teclear Ctrl+X), desaparecerá la columna.</p>
+<p>A continuación crear una columna en blanco en el lugar donde queremos mover la columna que hemos cortado con la opción Insertar Columnas de la pestaña Diseño.</p>
+<p>Seleccionar esa columna y hacer clic sobre el icono Pegar la pestaña Inicio (o bien teclear Ctrl+V).</p>
+<p>Podemos seleccionar varias columnas consecutivas seleccionando la primera y manteniendo la tecla MAYÚS pulsada, seleccionar la última columna a seleccionar, se seleccionarán las dos columnas y todas la columnas que se encuentren entre las dos.</p>
+<p>Guardar la consulta</p>
+<p>Podemos Guardar la consulta</p>
+<p> Haciendo clic sobre el botón de la barra de Acceso Rápido,</p>
+<p> O bien, seleccionando la opción Guardar dela pestaña Archivo. Si es la primera vez que guardamos la consulta aparecerá el cuadro de diálogo para darle un nombre. Se puede poner cualquier nombre excepto el de una tabla ya creada. A continuación hacer clic</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>sobre el botón Aceptar.</p>
+<p>Para cerrar la consulta hacer clic sobre su botón .</p>
+<p>Ejecutar la consulta</p>
+<p>Podemos ejecutar una consulta desde la ventana Diseño de consulta o bien desde el Panel de navegación.  Desde el Panel de navegación, haciendo doble clic sobre su nombre.  Desde la vista diseño de la consulta, haciendo clic sobre el botón Ejecutar de la pestaña Diseño</p>
+<p>Cuando estamos visualizando el resultado de una consulta, lo que vemos realmente es la parte de la tabla que cumple los criterios especificados, por lo tanto si modificamos algún dato de los que aparecen en la consulta estaremos modificando el dato en la tabla (excepto algunas consultas que no permiten esas modificaciones).</p>
+<p>Modificar el diseño de una consulta</p>
+<p>Si lo que queremos es modificar el diseño de una consulta</p>
+<p>Situarse en el Panel de Navegación y hacer clic derecho sobre el nombre de la consulta.</p>
+<p>En el menú contextual seleccionar .</p>
+<p>Ordenar las filas</p>
+<p>Para ordenar las filas del resultado de la consulta</p>
+<p>Hacer clic sobre la fila Orden: del campo por el cual queremos ordenar las filas, hacer clic sobre la flecha que aparecerá para desplegar la lista y elegir el tipo de ordenación.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Puede ser Ascendente en este caso se ordenarán de menor a mayor si el campo es numérico, por orden alfabético si el campo es de tipo texto, de anterior a posterior si el campo es de tipo fecha/hora, etc., o bien puede ser Descendente en orden inverso.</p>
+<p>Podemos ordenar también por varios campos para ello rellenar la fila Orden: de todas las columnas por las que queremos ordenar. En este caso se ordenan las filas por la primera columna de ordenación, para un mismo valor de la primera columna, se ordenan por la segunda columna, y así sucesivamente.</p>
+<p>El orden de las columnas de ordenación es el que aparece en la cuadrícula, es decir si queremos ordenar por ejemplo por provincia y dentro de la misma provincia por localidad tenemos que tener en la cuadrícula primero la columna provincia y después la columna localidad.</p>
+<p>El tipo de ordenación es independiente por lo que se puede utilizar una ordenación distinta para cada columna. Por ejemplo, ascendente por la primera columna y dentro de la primera columna, descendente por la segunda columna.</p>
+<p>Seleccionar filas</p>
+<p>Para seleccionar filas tenemos que indicar un criterio de búsqueda, un criterio de búsqueda es una condición que deberán cumplir todas las filas que aparezcan en el resultado de la consulta.</p>
+<p>Normalmente la condición estará basada en un campo de la tabla por ejemplo para seleccionar los alumnos de Valencia la condición sería población = "Valencia". Para escribir esta condición en la cuadrícula tenemos que tener en una de las columnas de la cuadrícula el campo poblacion y en esa columna ponemos en la fila Criterios: el resto de la condición o sea ="Valencia".</p>
+<p>Cuando la condición es una igualdad no es necesario poner el signo =, podemos poner directamente el valor Valencia en la filaCriterios: ya que si no ponemos operador asume por defecto el =.</p>
+<p>Tampoco es necesario poner las comillas, las añadirá él por defecto. Siempre que se encuentra un texto lo encierra entre comillas.</p>
+<p>Si en la fila Criterios: queremos poner un nombre de campo en vez de un valor (para comparar dos</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>campos entre sí) tenemos que encerrar el nombre del campo entre corchetes [ ]. Por ejemplo queremos poner la condición precio = coste en la que precio y coste son dos campos, tenemos que poner en la fila criterios: [coste], si no ponemos los corchetes añadirá las comillas y entenderá Precio = "coste", precio igual al valor Coste no al contenido del campo Coste.</p>
+<p>Para indicar varias condiciones se emplean los operadores Y y O.</p>
+<p>En un criterio de búsqueda en el que las condiciones están unidas por el operador Y, para que el registro aparezca se deben cumplir todas las condiciones. Por ejemplo precio &gt; 100 y precio &lt; 1200, aparecen los registros cuyo precio está comprendido entre 101 y 1199.</p>
+<p>En un criterio de búsqueda en el que las condiciones están unidas por el operador O, el registro aparecerá en el resultado de la consulta si cumple al menos una de las condiciones.</p>
+<p>Todas las condiciones establecidas en la misma fila de la cuadrícula quedan unidas por el operador Y.</p>
+<p>En el ejemplo siguiente serían alumnos de Valencia Y cuya fecha de nacimiento esté comprendida entre el 1/1/60 y el 31/12/69.</p>
+<p>Del mismo modo pasa con cada una de las filas o: Si queremos que las condiciones queden unidas por el operador O tenemos que colocarlas en filas distintas (utilizando las filas O: y siguientes).</p>
+<p>Por ejemplo, si en la cuadrícula QBE tenemos especificado los siguientes criterios</p>
+<p>Visualizaremos de la tabla Alumnado los campos Apellidos, Nombre, Población y Fecha nacimiento,</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>los alumnos aparecerán ordenados por Apellidos pero únicamente aparecerán aquellos que sean de Valencia y hayan nacido entre el 1/1/60 y el 31/12/69, o bien aquellos de Alicante sea cual sea su fecha de nacimiento. ¡Ojo! El criterio de la fecha de nacimiento únicamente afecta a la población Valencia por encontrarse en la misma fila Access no diferencia entre mayúsculas y minúsculas a la hora de realizar la búsqueda de registros.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Operador Significado = igual que &lt;&gt; distinto de &lt; menor que &lt;= menor o igual &gt; mayor que &gt;= mayor o igual</p>
+<p>Los operadores de comparación Estos operadores comparan el valor de una expresión con el valor de otra. Independientemente del operador si uno de los valores es nulo, el resultado de la comparación será nulo (ni verdadero ni falso). los operadores de comparación que podemos utilizar son</p>
+<p>El operador Entre</p>
+<p>Tiene la siguiente sintaxis</p>
+<p>Expresión Entre valor1 Y valor2</p>
+<p>Examina si el valor de la expresión está comprendido entre los dos valores definidos por valor1 y valor2. Normalmente la expresión será un nombre de campo. Ejemplo</p>
+<p>[fecha de nacimiento] entre #01/01/60# y 04/06/62#, en la cuadrícula QBE se pondría</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>El operador In Tiene la siguiente sintaxis</p>
+<p>Expresión In (valor1, valor2, ...)</p>
+<p>Examina si el valor de la expresión es uno de los valores incluidos en la lista de valores escritos entre paréntesis.</p>
+<p>Por ejemplo, para seleccionar los alumnos de Alicante, Elche, Elda y Onda podríamos poner la condición Población In ('Alicante'; 'Elche'; 'Elda'; 'Onda')</p>
+<p>El operador Es nulo</p>
+<p>Cuando una columna que interviene en una condición contiene el valor nulo, el resultado de la condición no es verdadero ni falso, sino nulo, sea cual sea el test que se haya utilizado. Por eso si queremos listar las filas que no tienen valor en una determinada columna, no podemos utilizar la condición columna = nulo debemos utilizar un operador especial, el operador Es nulo.</p>
+<p>Tiene la siguiente sintaxis</p>
+<p>Expresión Es nulo, donde expresión normalmente será un nombre de columna.</p>
+<p>Por ejemplo queremos saber los alumnos que no tienen población, la condición sería población Es Nulo</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>El operador Como</p>
+<p>Se utiliza cuando queremos utilizar caracteres comodines para formar el valor con el que comparar. Por ejemplo queremos visualizar los alumnos cuyo nombre acabe en 'o'. En este caso hay que utilizar el comodín * y utilizar el operadorComo para que Access reconozca el * como un comodín y no como el carácter asterisco. La condición sería nombre como '*o'.</p>
+<p>El valor que contiene los comodines se conoce como patrón y tiene que ir encerrado entre comillas (simples o dobles).</p>
+<p>La sintaxis es la siguiente</p>
+<p>Expresión Como 'patrón'</p>
+<p>En la siguiente tabla te indicamos los caracteres comodines que se pueden poner en un patrón y su significado.</p>
+<p>Caracteres en patrón Significado ? Un carácter cualquiera * Cero o más caracteres # Un dígito cualquiera (0-9) [ListaCaracteres] Un carácter cualquiera de listacaracteres [!ListaCaracteres] Un carácter cualquiera no incluido en listacaracteres</p>
+<p>ListaCaracteres representa una lista de caracteres y puede incluir casi cualquier carácter, incluyendo dígitos, los caracteres se escriben uno detrás de otro sin espacios en blanco ni comas. Por ejemplo para sacar los nombres que empiezan por a,g,r o v el patrón sería: '[agrv]*'</p>
+<p>Los caracteres especiales corchete de apertura [, interrogación ?, almohadilla # y asterisco * dejan de ser considerados comodinescuando van entre corchetes. Por ejemplo para buscar los nombres</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>que contienen un asterisco, el patrón sería: '*[*]*' en este caso el segundo * dentro del patrón no actúa como comodín sino como un carácter cualquiera porque va dentro de los corchetes.</p>
+<p>Si no se encierra entre corchetes, la exclamación ! representa el carácter exclamación.</p>
+<p>El corchete de cierre ] se puede utilizar fuera de una listacaracteres como carácter independiente pero no se puede utilizar en una listacaracteres. Por ejemplo, el patrón 'a]*' permite encontrar nombres que empiecen por una a seguida de un corchete de cierre.</p>
+<p>La secuencia de caracteres [] se considera una cadena de caracteres de longitud cero ("").</p>
+<p>Se puede especificar un intervalo de caracteres en ListaCaracteres colocando un guión - para separar los límites inferior y superiordel intervalo.</p>
+<p>Por ejemplo, la secuencia [A-Z ] en patrón representa cualquier carácter comprendido en el intervalo de la A a la Z.</p>
+<p>Cuando se especifica un intervalo de caracteres, éstos deben aparecer en orden ascendente (de menor a mayor).[A-Z] es un intervalo válido, pero [Z-A] no lo es.</p>
+<p>Se pueden incluir múltiples intervalos entre corchetes, sin necesidad de delimitadores.</p>
+<p>El guión - define un intervalo únicamente cuando aparece dentro de los corchetes entre dos caracteres, en cualquier otro caso representa el carácter guión.</p>
+<p>Por ejemplo queremos saber los alumnos de la provincia de Valencia (son los que tienen un código postal que empieza por 46 seguido de tres dígitos cualesquiera, la condición podría ser [código postal] como '46###'</p>
+<p>Consultas con parámetros</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>A menudo, en una consulta necesitamos utilizar un valor que no es conocido en ese momento sino que queremos que lo introduzca el usuario cuando se ejecute la consulta. Por ejemplo, queremos hacer una consulta para obtener los alumnos de una determinada Población, la población la introducirá el usuario cuando Access se lo pida.</p>
+<p>En este caso necesitamos utilizar en nuestra consulta un parámetro.</p>
+<p>Un parámetro funciona de forma parecida a un campo de tabla, pero el valor que almacena lo introduce el usuario cuando se ejecuta la consulta.</p>
+<p>En una consulta cuando utilizamos un nombre de campo que no está en el origen de datos, Access considera este campo como un parámetro y cuando se ejecuta la consulta nos pide Introducir el valor del parámetro mediante un cuadro de diálogo como este</p>
+<p>En el ejemplo anterior, en la consulta tendríamos que añadir una condición de búsqueda que especifique que la Población es igual alValor a introducir, de esta manera</p>
+<p>¡Ojo! cuando pongamos el nombre del parámetro es importante escribirlo entre corchetes, de lo contrario Access le añadirá comillas y no lo considerará como un nombre de parámetro sino como un valor.</p>
+<p>Otra forma de utilizar un parámetro en una consulta es definiéndolo mediante el botón Parámetros de la pestaña Diseño.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>En este caso, después de elegir la opción, se abre el cuadro de diálogo Parámetros de la consulta donde podemos indicar el nombre del parámetro y el tipo de dato.</p>
+<p>La diferencia entre escribir directamente un nombre de parámetro y definirlo con el botón Parámetros es que, si le hemos asignado un tipo de dato, Access comprueba automáticamente el tipo del valor introducido por el usuario.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Capítulo 8: Las consultas de resumen</p>
+<p>Definición</p>
+<p>En Access podemos definir un tipo de consultas cuyas filas resultantes son un resumen de las filas del origen de la consulta , por eso las denominamos consultas de resumen, también se conocen como consultas sumarias.</p>
+<p>Es importante entender que las filas del resultado de una consulta de resumen tienen una naturaleza distinta a las filas de las demás tablas resultantes de consultas, ya que corresponden a varias filas de la tabla origen.</p>
+<p>Para simplificar, veamos el caso de una consulta basada en una sola tabla, una fila de una consulta 'no resumen' corresponde a una fila de la tabla origen, contiene datos que se encuentran en una sola fila del origen, mientras que una fila de una consulta de resumen corresponde a un resumen de varias filas de la tabla origen, esta diferencia es lo que va a originar una serie de restricciones que sufren las consultas de resumen y que veremos a lo largo del tema. Por ejemplo este tipo de consulta no permite modificar los datos del origen.</p>
+<p>En el ejemplo que viene a continuación tienes un ejemplo de consulta normal en la que se visualizan las filas de una tabla de oficinas ordenadas por región, en este caso cada fila del resultado se corresponde con una sola fila de la tabla oficinas, mientras que la segunda consulta es una consulta resumen, cada fila del resultado se corresponde con una o varias filas de la tabla oficinas.</p>
+<p>Una consulta de resumen se define haciendo clic sobre el botón Totales en la pestaña de Diseño.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>En cualquiera de los dos casos se añade una fila a la cuadrícula QBE, la fila Total</p>
+<p>Todas las columnas que incluyamos en la cuadrícula deberán tener un valor en esa fila, ese valor le indicará a Access qué hacer con los valores contenidos en el campo escrito en la fila Campo</p>
+<p>Los valores que podemos indicar en la fila Total: son los que aparecen al desplegar la lista asociada a la celda como puedes ver en la imagen</p>
+<p>Las funciones de agregado</p>
+<p>Las funciones de agregado son funciones que permiten obtener un resultado basado en los valores contenidos en una columna de una tabla, son funciones que sólo se pueden utilizar en una consulta de resumen ya que obtienen un 'resumen' de los valores contenidos en las filas de la</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>tabla. Para utilizar estas funciones podemos escribirlas directamente en la fila Campo: de la cuadrícula como veremos más adelante pero podemos utilizar una forma más cómoda que es seleccionando en la fila Total: de la cuadrícula la opción correspondiente a la función.</p>
+<p>A continuación describiremos esas opciones.</p>
+<p> La opción Suma calcula la suma de los valores indicados en el campo. Los datos que se suman deben ser de tipo numérico (entero, decimal, coma flotante o monetario...). El resultado será del mismo tipo aunque puede tener una precisión mayor.</p>
+<p> La opción Promedio calcula el promedio (la media aritmética) de los valores contenidos en el campo, también se aplica a datos numéricos, y en este caso el tipo de dato del resultado puede cambiar según las necesidades del sistema para representar el valor del resultado.</p>
+<p> La opción DesvEst calcula la desviación estándar de los valores contenidos en la columna indicada en el argumento. Si la consulta base (el origen) tiene menos de dos registros, el resultado es nulo.</p>
+<p> La opción Var calcula la varianza de los valores contenidos en la columna indicada en el argumento. Si la consulta base (el origen) tiene menos de dos registros, el resultado es nulo.</p>
+<p>Es interesante destacar que el valor nulo no equivale al valor 0, las funciones de resumen no consideran los valores nulos mientras que consideran el valor 0 como un valor, por lo tanto en el promedio y la desviación estándar los resultados no serán los mismos con valores 0 que con valores nulos.</p>
+<p> Las opciones Mín y Max determinan los valores menores y mayores respectivamente de la columna. Los valores de la columna pueden ser de tipo numérico, texto o fecha. El resultado de la función tendrá el mismo tipo de dato que la columna. Si la columna es de tipo numérico Mín devuelve el valor menor contenido en la columna, si la columna es de tipo texto Mín devuelve el primer valor en orden alfabético, y si la columna es de tipo fecha, Mín devuelve la fecha más antigua y Max la fecha más posterior.</p>
+<p> Las opciones Primero y Último se utilizan para obtener el primer y último registro del grupo sobre el</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>que se realizan los cálculos. El orden lo determina el orden cronológico en el que se escribieron los registros. Ordenar los registros no tiene ningún efecto sobre estas opciones.</p>
+<p> La opción Cuenta cuenta el número de valores que hay en la columna, los datos de la columna pueden ser de cualquier tipo, y la función siempre devuelve un número entero. Si la columna contienevalores nulos esos valores no se cuentan, si en la columna aparece un valor repetido, lo cuenta varias veces.</p>
+<p>Para que cuente en número de registros hay que utilizar la función Cuenta(*) devuelve el número de filas por lo tanto contará también los valores nulos. En este caso tenemos que seleccionar la opción Expresión y escribirlo así</p>
+<p>Agrupar registros</p>
+<p>Hasta ahora las consultas de resumen que hemos visto utilizan todas las filas de la tabla y producen una única fila resultado.</p>
+<p>La opción Agrupar Por permite definir columnas de agrupación. Una consulta de resumen sin columnas de agrupación obtiene una única fila resultado y los cálculos se realizan sobre todos los registros del origen.</p>
+<p>Cuando se incluye una columna de agrupación Access forma grupos con todos los registros que tienen el mismo valor en la columna de agrupación y cada grupo así formado genera una fila en el resultado de la consulta y además todos los cálculos definidos se realizan sobre los registros de cada grupo. De esta forma se pueden obtener subtotales.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Por ejemplo queremos saber cuántos alumnos tenemos en cada población. Tenemos que indicar que queremos contar los registros de la tabla Alumnado pero antes agrupándolos por el campo Poblacion. De esta manera la función cuenta() la calculará sobre cada grupo de registros (los alumnos de la misma población). La consulta quedaría así</p>
+<p>Los campos de tipo memo u OLE no se pueden definir como columnas de agrupación.</p>
+<p> Se pueden agrupar las filas por varias columnas, en este caso se agrupan los registros que contienen el mismo valor en cada una de las columnas de agrupación.</p>
+<p> Todas las filas que tienen valor nulo en la columna de agrupación, pasan a formar un único grupo.</p>
+<p>Incluir expresiones</p>
+<p>La opción Expresión permite poner en la fila Campo: una expresión en vez de un nombre de columna.</p>
+<p>Esta expresión tiene ciertas limitaciones. Sólo puede contener operandos que sean funciones de agregado (las funciones que acabamos de ver (suma( ), Promedio(), DesvEst( ), Mín( ), Max( )...) valores fijos o nombres de columna que aparezcan con la opción AgruparPor.</p>
+<p>En una expresión se pueden combinar varias funciones de agregado pero no se pueden anidar funciones de agregado, por ejemplo en una expresión puedo poner Max(nºhoras)-Mín(nºhoras) pero noMax(suma(nºhoras)).</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04.MS-Access. CONSULTAS</p>
+<p>Incluir criterios de búsqueda</p>
+<p>La opción Dónde permite poner un criterio de búsqueda que se aplicará a las filas del origen de la consulta antes de realizar los cálculos. Por ejemplo queremos saber cuántos alumnos tenemos de Valencia, para ello tenemos que contar los registros de la tabla alumnado pero seleccionando previamente los de Valencia, esto se definiría de la siguiente forma</p>
+<p>También podemos incluir un criterio de búsqueda en una columna que no tenga la opción Dónde, en este caso la condición se aplicará a las filas resultantes de la consulta. Para la condición de selección se pueden utilizar los mismos operadores de condición que en una consulta normal, también se pueden escribir condiciones compuestas (unidas por los operadores OR, AND,NOT), existe una limitación, en la fila Criterios: no se podrá poner un nombre de columna si esta columna no es una columna de agrupación.</p>
+<hr/>
+<h2 id="ut1602">16.2 RESUMEN CONSULTES</h2>
+<p>Las consultas, nos van a mostrar los datos que cumplan los criterios especificados en su diseño. Se pueden establecer, dos categorias de consultas</p>
+<ul>
+<li>Consultas de SELECCION: muestran unos datos, a partir de unos filtros o condiciones que especificamos.</li>
+</ul>
+<ul>
+<li>Consultas de ACCION: en este tipo de consultas, se realizan dos operaciones : primero una consulta de</li>
+</ul>
+<p>selección para seleccionar los datos que cumplan unas condiciones, y luego, sobre el resultado de la consulta, se realizan cambios a los registros. Tipos</p>
+<ul>
+<li>Consulta de eliminacion: elimina de una tabla, los registros que cumplen ciertos criterios</li>
+<li>Consulta de actualización: modifica los registros que cumplen unos parámetros establecidos.</li>
+<li>Consulta de datos anexados: copia unos registros de una tabla a otra</li>
+<li>Consulta de creación de tablas: crea una tabla nueva a partir de los registros de otra, que cumplen ciertas</li>
+</ul>
+<p>condiciones.</p>
+<p>CONSULTA DE SELECCION</p>
+<p>A) Seleccionar intérvalos de valores de un campo (por ejemplo salario de un empleado)</p>
+<p>Criterio Resultado &gt;1000 Y &lt; 2000 Mayor que 1000 y menor que 2000 Entre 1000 y 2000 Entre 1000 y 2000, ambos incluidos &gt;= 2000 Mayor o igual a 2000 &gt; 2000 Mayor que 2000</p>
+<p>Si se trata de comparar fechas: Criterio Resultado &gt; #01/01/2015# Fecha mayor que 01/01/2015 Entre #01/01/2015# y #01/12/2015# Fecha entre 01/01/2015 y 01/12/2015 incluidos &lt;= #01/01/2015# Fecha menor 01/12/2015</p>
+<p>B) Usar carácteres comodines.</p>
+<ul>
+<li>Signo interrogación (?): para sustituir un caracter por cualquiera, en esa posición</li>
+<li>El asterisco ( * ): para representar cualquier numero de caracteres, situados en la misma posición que el</li>
+</ul>
+<p>asterisco.</p>
+<p>Imaginemos que se hacen consultas sobre el campo LOCALIDAD</p>
+<p>Criterio Resultado Como "M*" Localidad que empieza por M Como "M????D" Localidad empieza po M, seguido de 4 letras cualesquiera, y termina en D (por ej MADRID) Como "?A*" Localidad empieza por cualquier letra, le sigue una A y luego, cualquier número de caracteres Como "B*O" Localidad empieza por B y termina en O Como "*O" Localidad termina en O Como "*A*" Localidad que contenga una A</p>
+<p>C) Seleccionar registros que no coinciden con un valor</p>
+<p>Utilizaremos el operador NEGADO, ó NO. NoES (NoES como)</p>
+<p>Criterio Resultado Negado M* NoES como “M*” Localidad no empieza por M Negado "*O" NoEs como "*O" Localidad no termina en O Negado "*A*" NoEs como "*A*" Localidad no contiene una A</p>
+<p>D) Especificar varios criterios Podemos especificar varios criterios sobre un campo, utilizando los operadores lógicos Y y O</p>
+<p>E) Seleccionar registros que continene valores o no Utilizaremos la expresión NULO, para buscar los campos con valores nulos y NEGADO NULO para buscar campos que continen valores distintos de nulo</p>
+<p>F) Creacion de campos calculados En una consulta se pueden crear campos calculados d ela siguiente manera: en una nueva columns, escribimos el nombre del nuevo campo, dos puntos, y el calculo; si el calculo intervienen otros campos de la tabla, lo incluiremos estre corchetes [ ]</p>
+<p>G) Consulta de parámetros Una consulta de parámetros muestra uno o más cuadros de diálogo predefinidos que solicitan el valor del parámetro (criterio) para realizar la selección de los datos.</p>
+<p>Ejemplos de consultas . Sobre la base de datos EMPLEADOS.</p>
+<ul>
+<li>Se desea obtener una consulta que muestre los datos nombre de empleado, salario y numero de</li>
+</ul>
+<p>departamento, de aquellos empleados, con salario entre 1000 y 2000€, incluidos 2.Mostrar los datos numero de departamento, nombre y localidad de los departamentos cuyas localidades empiecen por M. 3.Mostrar los datos numero de departamento, nombre y localidad de los departamentos cuyo nombre contiene una "e", y cuya localidad no empieza por M 4.Ver los departamentos cuya localidad sea MADRID o BARCELONA.</p>
+<p>5.Se desea crear una consulta con un campo calculado llamado NUEVO_SALARIO, que será la suma del salario mas la comisión.</p>
+<ul>
+<li>Se desea crear una consulta de parámetros, que pida teclear el numero de departamento para visualizar los</li>
+</ul>
+<p>departamentos que coincidan con los datos escritos.</p>
+<ul>
+<li>Obtener la suma de salario y comisión por departamento. Se desea que muestre también el nombre del</li>
+</ul>
+<p>departameto. 8.Obtener el salario medio por departamento. 9.Obtener el salario máximo por departamento. 10.Obtener el numero de empleados por departamento. 12.Se desea borrar los empleados del departamento que se encuentra en GUADALAJARA.</p>
+<ul>
+<li>Se desea subir el sueldo y la comisión de los empleados del departamento numero 20, ambos en 100€</li>
+<li>Se desea añadir registros nuevos a la tabla EMPLEADOS. Estos registros se encuentran en la tabla</li>
+</ul>
+<p>EMPLEADOS_NUEVOS.</p>
+<ul>
+<li>Se desea crear una nueva tabla, llamada EMPLE_DEPAR, con los datos de empleados APELLIDOS, SALARIO,</li>
+</ul>
+<p>NOMBRE_DEPARTAMENTO, LOCALIDAD.</p>
+<hr/>
+<h2 id="ut1603">16.3 B1-EXERCICIS BDA-CONSULTES</h2>
+<p>U.D. 4. Consultas Operaciones con bases de datos</p>
+<p>Tema 4</p>
+<p>EJERCICIOS</p>
+<p>BDA RELACIONALES. CONSULTAS</p>
+<p>1 parte: Editorial Paraninfo</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04. EJERCICIOS. Base de datos relacionales. CONSULTAS (B1)</p>
+<p>ACTIVIDADES</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Actividad 4.1.</p><p>Actividad 4.1.</p></div>
+<p>Abrir la BD VENTAS , crear las siguientes consultas</p>
+<h3>1. Obtener todos los datos de los productos con Precio unidad entre 100 y</h3>
+<p>500 €.</p>
+<h3>2. Obtener todos los datos de los productos que contengan una a en el</h3>
+<p>Nombre.</p>
+<h3>3. Obtener todos los datos de los clientes que sean de Guadalajara y que</h3>
+<p>contengan una o en el Nombre</p>
+<ul>
+<li>Obtener todos los datos de los clientes que sean de Madrid y de Toledo.</li>
+</ul>
+<ul>
+<li>Obtener todos los datos de las VENTAS de un código de cliente tecleado.</li>
+</ul>
+<div class="admonition exercise"><p class="admonition-title">✍️ Actividad 4.2.</p><p>Actividad 4.2.</p></div>
+<p>Abrir la BD VENTAS , crear las siguientes consultas</p>
+<h3>1. Obtener los siguientes datos: Nombre de cliente, Nombre de producto,</h3>
+<p>Fechaventa, Precio unidad, Unidades vendidas, Importe venta (campo calculado que se obtiene multiplicando UnidadesVendidas por el Precio unidad).</p>
+<h3>2. Obtener los datos de la consulta anterior seleccionando sólo los clientes</h3>
+<p>que sean de una población tecleada.</p>
+<h3>3. Obtener los siguientes datos: Nombre de producto, Unidades en almacén,</h3>
+<p>Unidades vendidas, STOCK (campo calculado que se obtiene restando las UnidadesVendidas a Unidades almacén.)</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04. EJERCICIOS. Base de datos relacionales. CONSULTAS (B1)</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ ACTIVIDAD 4.3.</p><p>ACTIVIDAD 4.3.</p></div>
+<p>Utilizando la base de datos ALUMNOS , obtener las siguientes consultas: Para realizar estos ejercicios activaremos la opción de Totales de la pestaña de diseño, para que se vea la fila de Total en la vista de diseño.</p>
+<h3>1. La nota media por alumno, visualizar el nombre del alumno y la nota</h3>
+<p>media.</p>
+<h3>2. La nota máxima por alumno, visualizar el nombre del alumno y la nota</h3>
+<p>máxima.</p>
+<h3>3. El número de asignaturas por alumno, visualizar el nombre del alumno y</h3>
+<p>el número de asignaturas.</p>
+<h3>4. Número de alumnos por asignatura, visualizar el nombre de la asignatura</h3>
+<p>y el número de alumnos.</p>
+<ul>
+<li>Número de alumnos.</li>
+<li>Número de asignaturas.</li>
+</ul>
+<div class="admonition exercise"><p class="admonition-title">✍️ ACTIVIDAD 4.4.</p><p>ACTIVIDAD 4.4.</p></div>
+<p>Utilitzando la base de datos VENTAS, obtener las siguientes consultas</p>
+<ul>
+<li>Eliminar los clientes de la localidad “Navalmoral”.</li>
+</ul>
+<h3>2. Actualizar las Unidades en almacén de los productos, sumarle 20</h3>
+<p>unidades, sólo a aquellos productos que estén en ventas.</p>
+<h3>3. Insertar en la tabla Clientes los registros que se encuentran en</h3>
+<p>ClientesNuevos.</p>
+<h3>4. Crear una nueva tabla llamada VentasNuevas con los datos Nombre de</h3>
+<p>cliente, Nombre de producto, Fechaventa, Precio unidad, Unidades vendidas, Importe venta (campo calculado que se obtiene multiplicando UnidadesVendidas por el Precio unidad).</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 04. EJERCICIOS. Base de datos relacionales. CONSULTAS (B1)</p>
+<p>EJERCICIOS PROPUESTOS</p>
+<h4>4.1. Utilizando la BD LIBROS obtener las siguientes consultas (realizar también</h4>
+<p>las consultas que se consideren necesarias para obtener lo que se pide)</p>
+<h3>1. Los datos de los libros que se compraron entre el 95 y el 97 incluidos, y</h3>
+<p>la editorial que contenga la letra W, en el nombre, visualizar Título de libro, autor y editorial.</p>
+<ul>
+<li>Media de precio, de aquellos libros cuyo precio sea distinto de 0.</li>
+</ul>
+<h3>3. Número de libros por tema, visualizar el nombre del TEMA, y el número</h3>
+<p>de libros.</p>
+<h4>4.2. Utilizando la BD ALUMNOS obtener las siguientes consultas (realizar</h4>
+<p>también las consultas que se consideren necesarias para obtener lo que se pide)</p>
+<h3>1. La nota máxima de los alumnos de la localidad de ALCALÁ DE</h3>
+<p>HENARES, visualizar el nombre de alumno, el nombre de la asignatura y la nota máxima.</p>
+<h3>2. La nota media por asignatura, de aquellas cuyo nombre contenga una</h3>
+<p>‘O’, visualizar el nombre y la nota media.</p>
+<h3>3. La nota media por curso, de aquellos que tengan alumnos en la</h3>
+<p>localidad de GUADALAJARA y el turno sea DIURNO, obtener el código de curso, la descripción y la nota media.</p>
+<h3>4. Los nombres de los delegados de los cursos con turno VESPERTINO,</h3>
+<p>visualizar el código del curso, la descripción y el nombre de delegado.</p>
+<h3>5. Los cursos con alumnos matriculados en asignaturas de un TIPO de</h3>
+<p>asignatura leído de teclado, visualizar código del curso, la descripción y el tipo de asignatura.</p>
+<h4>4.3. Utilizando la BD VENTAS obtener las siguientes consultas (realizar</h4>
+<p>también las consultas que se consideren necesarias para obtener lo que se pide)</p>
+<h3>1. La suma de unidades vendidas de cada producto que se haya vendido a</h3>
+<p>clientes de Toledo. Visualizar el nombre de producto, la suma de unidades vendidas, las unidades en almacén y el stock actual, que será las unidades de almacén menos la suma de unidades vendidas.</p>
+<h3>2. La factura total de cada cliente, es decir el nombre de cliente, y la suma</h3>
+<p>de las ventas, es decir suma de unidades vendidas por precio unidad.</p>
+<hr/>
+<h2 id="ut1604">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</h2>
+
+<p>Tema 4</p>
+<p>EJERCICIOS</p>
+<p>BDA-Relacionales. CONSULTAS (Ej. 1 y 2)</p>
+<p>2 parte (B2)</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>A partir de la base de datos mundo.mdb generar las siguientes consultas. Como nombre de la consulta, llámalas Consulta1, Consulta2, Consulta3, ....</p>
+<ul>
+<li>Nombre de país, capital, superficie y población de todos los países.</li>
+</ul>
+<ul>
+<li>Países de habla inglesa.</li>
+</ul>
+<ul>
+<li>Países de Europa de habla inglesa.</li>
+</ul>
+<ul>
+<li>Países de América de habla inglesa.</li>
+</ul>
+<h3>5. Países de habla hispana cuya población sea superior a 100000</h3>
+<p>habitantes y tengan una mortalidad superior a 100.</p>
+<ul>
+<li>Países de religión musulmana.</li>
+</ul>
+<h3>7. Países de religión católica o musulmana que tengan una población</h3>
+<p>superior a 1000000 habitantes.</p>
+<ul>
+<li>Países con mortalidad infantil superior a 100.</li>
+</ul>
+<ul>
+<li>Países de Europa con mortalidad infantil superior a 100.</li>
+</ul>
+<ul>
+<li>Países de habla inglesa o hispana.</li>
+</ul>
+<ul>
+<li>Países de habla inglesa o hispana que sean de América.</li>
+</ul>
+<p>12.Países de Europa ordenados por orden ascendente de población.</p>
+<h3>13. Países de de religión católica ordenados en orden descendente por</h3>
+<p>mortalidad.</p>
+<h3>14. Crea una consulta de resumen que muestre el número de países de</h3>
+<p>cada continente.</p>
+<p>EJERCICIO 1 – CONSULTAS DE SELECCIÓN</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<h3>15. Países con esperanza de vida superior a 70 años en orden descendente</h3>
+<p>indicando el continente.</p>
+<h3>16. Países cuya capital se denomine igual que el país</h3>
+<h3>17. Crea una consulta de resumen que muestre el promedio de la población</h3>
+<p>por continentes.</p>
+<h3>18. Resumen de número de países y suma de población para cada una de</h3>
+<p>las religiones, ordenado por número de países por religión.</p>
+<h3>19. Promedio del PNB per cápita en dólares para cada uno de los</h3>
+<p>continentes.</p>
+<h3>20. Resumen de número de países y suma de la población para cada una</h3>
+<p>de las lenguas.</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<h3>21. Nombre de los países cuya primera letra sea ʻMʼ. 22.Nombre de los países que</h3>
+<p>terminan por la letra ʻOʼ.</p>
+<ul>
+<li>Nombre de los países de Europa que contengan una "A" en el nombre del país.</li>
+</ul>
+<p>EJERCICIO 2</p>
+<p>A partir de la base de datos mundo.mdb crear las siguientes consultas.</p>
+<h3>24. Consulta de creación de tabla con todos los campos para los países de</h3>
+<p>Asia.</p>
+<p>25.Consulta de creación de tabla con todos los campos para los países de América.</p>
+<p>26.De la tabla de los países americanos, elimina los de habla española. 27.Anexa a la tabla obtenida en 35 los países africanos.</p>
+<h3>28. Realiza una tabla de referencias cruzadas con el campo Religión como</h3>
+<p>cabecera de las filas y el campo Continente en las columnas. En la intersección de las filas y columnas se debe mostrar el número de países que hablan cada religión.</p>
+<p>29 Países cuya esperanza de vida esté entre 70 y 75, en orden descendente por esperanza de vida.</p>
+<h3>30. Crea una consulta de actualización que incremente en 100000 la</h3>
+<p>población de los países de Europa.</p>
+<h3>31. Crea una consulta parametrizada para obtener los países que hablen</h3>
+<p>una determinada lengua.</p>
+<h3>32. Crea una consulta parametrizada para obtener los países que</h3>
+<p>practiquen una determinada religión y tengan una población mayor de 1000000.</p>
+<hr/>
+<h2 id="ut1605">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</h2>
+
+<p>Tema 4</p>
+<p>EJERCICIOS</p>
+<p>BDA-Relacionales. CONSULTAS (completo)</p>
+<p>2 parte (B2)</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>A partir de la base de datos mundo.mdb generar las siguientes consultas.</p>
+<ul>
+<li>Nombre de país, capital, superficie y población de todos los países.</li>
+</ul>
+<ul>
+<li>Países de habla inglesa.</li>
+</ul>
+<ul>
+<li>Países de Europa de habla inglesa.</li>
+</ul>
+<ul>
+<li>Países de América de habla inglesa.</li>
+</ul>
+
+<p>habitantes y tengan una mortalidad superior a 100.</p>
+<ul>
+<li>Países de religión musulmana.</li>
+</ul>
+
+<p>superior a 1000000 habitantes.</p>
+<ul>
+<li>Países con mortalidad infantil superior a 100.</li>
+</ul>
+<ul>
+<li>Países de Europa con mortalidad infantil superior a 100.</li>
+</ul>
+<ul>
+<li>Países de habla inglesa o hispana.</li>
+</ul>
+<ul>
+<li>Países de habla inglesa o hispana que sean de América.</li>
+</ul>
+<p>12.Países de Europa ordenados por orden ascendente de población.</p>
+
+<p>mortalidad.</p>
+
+<p>cada continente.</p>
+<p>EJERCICIO 1 – CONSULTAS DE SELECCIÓN</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+
+<p>indicando el continente.</p>
+
+
+<p>por continentes.</p>
+
+<p>las religiones, ordenado por número de países por religión.</p>
+
+<p>continentes.</p>
+
+<p>de las lenguas.</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<ul>
+<li>Nombre de los países cuya primera letra sea ʻMʼ.</li>
+</ul>
+<p>22.Nombre de los países que terminan por la letra ʻOʼ.</p>
+<h3>23. Nombre de los países de Europa que contengan una</h3>
+<p>del país.</p>
+<p>ʻAʼ en el nombre</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>A partir de la base de datos zoo.mdb crear las siguientes consultas.</p>
+<ul>
+<li>Animales de tierra.</li>
+<li>Animales de alimentación omnívora.</li>
+</ul>
+<p>26.Animales con respiración pulmonar.</p>
+<h3>27. Resumen de número de animales y promedio de patas para cada clase</h3>
+<p>de animal.</p>
+<h3>28. Promedio del número de ojos y suma de patas de los animales según su</h3>
+<p>recubrimiento.</p>
+<ul>
+<li>Animales de sangre fría y respiración pulmonar.</li>
+</ul>
+<p>30.Animales de sangre fría o respiración pulmonar.</p>
+<ul>
+<li>Resumen del número de animales para cada tipo de alimentación.</li>
+</ul>
+<h3>32. Nombre de cada animal y nombre del cuidador que cuida del animal (no</h3>
+<p>deben aparecer los animales que no tienen cuidador ni los cuidadores que cuidan a ningún animal).</p>
+<h3>33. Nombre de cada animal y nombre del cuidador que cuida del animal. En</h3>
+<p>la consulta deben aparecer también aquellos animales que no tienen ningún cuidador.</p>
+<ul>
+<li>Nombre de los animales que tienen una ʻAʼ en la segunda posición.</li>
+</ul>
+<p>EJERCICIO 2 – CONSULTAS DE SELECCIÓN</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>EJERCICIO 3</p>
+<p>A partir de la base de datos mundo.mdb crear las siguientes consultas.</p>
+<h3>35. Consulta de creación de tabla con todos los campos para los países de</h3>
+<p>Asia.</p>
+<h3>36. Consulta de creación de tabla con todos los campos para los países de</h3>
+<p>América.</p>
+<ul>
+<li>De la tabla de los países americanos, elimina los de habla española.</li>
+</ul>
+<p>38.Anexa a la tabla obtenida en 35 los países africanos.</p>
+<h3>39. Realiza una tabla de referencias cruzadas con el campo Religión como</h3>
+<p>cabecera de las filas y el campo Continente en las columnas. En la intersección de las filas y columnas se debe mostrar el número de países que hablan cada religión.</p>
+<h3>40. Países</h3>
+<p>cuya esperanza de vida esté entre 70 y 75, en orden descendente por esperanza de vida.</p>
+<h3>41. Crea una consulta de actualización que incremente en 100000 la</h3>
+<p>población de los países de Europa.</p>
+<h3>42. Crea una consulta parametrizada para obtener los países que hablen</h3>
+<p>una determinada lengua.</p>
+<h3>43. Crea una consulta parametrizada para obtener los países que practiquen</h3>
+<p>una determinada religión y tengan una población mayor de 1000000.</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>EJERCICIO 4</p>
+<p>A partir de la base de datos zoo.mdb crear las siguientes consultas.</p>
+<h3>44. Consulta de creación de tabla con todos los mamíferos cuyo medio sea</h3>
+<p>agua.</p>
+<ul>
+<li>Consulta de creación de tabla con todos los insectos.</li>
+</ul>
+<h3>46. Consulta de eliminación que elimine de la tabla obtenida en 44 los</h3>
+<p>animales que tengan piel.</p>
+<h3>47. Obtener el nombre de animal y el nombre de su cuidador y turno de</h3>
+<p>cada uno de los animales.</p>
+<ul>
+<li>Obtener el número de animales que cuida cada cuidador.</li>
+</ul>
+<h3>49. Consulta de actualización que aumente en un 10% el salario de todos</h3>
+<p>los cuidadores.</p>
+<h3>50. Realiza una consulta de referencias cruzadas que muestre en las filas el</h3>
+<p>tipo de alimentación y en las columnas el tipo de recubrimiento.</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>EJERCICIO 5</p>
+<p>Partiendo de la tabla Inventario de la base de datos Tecnología.mdb realizar las siguientes consultas</p>
+<h3>51. Objetos adquiridos a lo largo del año 2001, ordenado en orden</h3>
+<p>ascendente de fecha.</p>
+<h3>52. Una consulta parametrizada que pregunte por la Categoría y realice la</h3>
+<p>consulta para mostrar los objetos de la categoría introducida.</p>
+<h3>53. Una consulta parametrizada que pregunte por la Situación y realice la</h3>
+<p>consulta para mostrar los objetos allí situados.</p>
+<h3>54. Una consulta de referencias cruzadas que tome como entradas</h3>
+<p>Categoría y Situación tomando como valor Unidades.</p>
+<h3>55. Una consulta de creación de tabla para generar la tabla Herramientas</h3>
+<p>conteniendo las mismas.</p>
+<h3>56. Sobre la tabla Herramientas creada, genera una consulta que anexe los</h3>
+<p>Engranajes.</p>
+<h3>57. Sobre la tabla anterior, crear una consulta de eliminación que borre los</h3>
+<p>objetos situados en Armario 5.</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>EJERCICIO 6</p>
+<p>Partiendo de la tabla Provincias de la base de datos Provincias.mdb realizar las siguientes consultas</p>
+<h3>58. Nombre de las provincias cuya comunidad autónoma es Castilla La</h3>
+<p>Mancha, ordenado en orden ascendente por nombre de provincia.</p>
+<ul>
+<li>Nombre de las provincias que sean capitales de provincia.</li>
+</ul>
+<h3>60. Nombre de las provincias cuya población supere los 200000 habitantes y</h3>
+<p>que tengan una superficie mayor de 5000 km2.</p>
+<h3>61. Nombre de las provincias de la Comunidad Valenciana o Andalucía que</h3>
+<p>tengan un PIB mayor de 500000.</p>
+<h3>62. Crea una consulta de resumen que muestre el número de provincias de</h3>
+<p>cada comunidad, ordenado en orden descendente por número de provincias. Nota: deben salir los encabezados que se muestran en la siguiente imagen.</p>
+<h3>63. Crea una consulta de resumen que muestre el promedio de habitantes y</h3>
+<p>la suma del PIB de cada comunidad.</p>
+<h3>64. Consulta de creación de tabla con todas las provincias de Andalucía. En</h3>
+<p>la nueva tabla deben aparecer los campos Provincia, Comunidad Autónoma, Capital, PoblaciyónSuperficie.</p>
+<h3>65. Anexa a la tabla obtenida en la consulta anterior todas las provincias de</h3>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>Cataluña.</p>
+<h3>66. Crea una consulta parametrizada que pregunte por la comunidad y</h3>
+<p>muestre el nombre de provincia, capital y población de esa comunidad.</p>
+<h3>67. Elimina de la tabla obtenida en 64 todas aquellas provincias cuya</h3>
+<p>población sea menor de 50000 habitantes.</p>
+<h3>68. Consulta de actualización que incremente en un 10% la población de</h3>
+<p>todas las provincias de Cataluña.</p>
+<h3>69. Crea una consulta parametrizada que pregunte por la comunidad</h3>
+<p>autónoma e incremente en 10000 la población de las provincias de esa comunidad.</p>
+<h3>70. Crea una consulta parametrizada que pregunte por la comunidad</h3>
+<p>autónoma y elimine las provincias de esa comunidad. 71. Nombre de las provincias que empiezan por ʻAʼ y terminan en ʻS ʼ.</p>
+<ul>
+<li>Nombre de las provincias de Andalucía que no empiezan por ʻAʼ.</li>
+</ul>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>EJERCICIO 7</p>
+<p>Abre la base de datos cine.mdb y estudia el contenido de la base de datos. Presta especial atención a las relaciones entre las tablas. A continuación realiza las siguientes consultas.</p>
+<h3>73. Consulta que devuelva las películas españolas</h3>
+<ul>
+<li>Consulta que devuelva las películas estrenadas en el año 2000.</li>
+</ul>
+<p>75.Películas de aventuras estrenadas en el año 2005. 76.Películas estrenadas en la década de los 90. 77.Películas españolas estrenadas en la década de los 90.</p>
+<h3>78. Películas cuyo género sea “Drama” y se hayan estrenado en el año 2000</h3>
+<p>o 2001.</p>
+<ul>
+<li>Nombre de las películas que no empiezan por la letra ʻEʼ.</li>
+</ul>
+<p>80.Películas realizadas por el director “Santiago Segura”.</p>
+<h3>81. Listado de directores españoles que hayan nacido en la década de los</h3>
+<p>70.</p>
+<h3>82. Nombre de los actores que participan en la película “El Señor de los</h3>
+<p>Anillos”</p>
+<h3>83. Nombre de los actores que participan en películas estrenadas en el año</h3>
+<p>2000.</p>
+<h3>84. Consulta de resumen que muestre el número de películas estrenadas de</h3>
+<p>cada nacionalidad.</p>
+<h3>85. Consulta de resumen que muestre el promedio de la taquilla de cada</h3>
+<p>año en orden descendente de promedio de taquilla.</p>
+<h3>86. Consulta de resumen que muestre el número de películas estrenadas de</h3>
+<p>cada género y el promedio de taquilla, ordenadas por número de películas estrenadas.</p>
+<h3>87. Crea una consulta de creación de tabla con los datos de las películas</h3>
+<p>españolas.</p>
+<h3>88. Anexa a la tabla anterior las películas de Estados Unidos estrenadas en</h3>
+<p>el año 2001.</p>
+<h3>89. Crea una consulta parametrizada que pregunte por la nacionalidad y</h3>
+<p>muestre los datos de las películas de esa nacionalidad.</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<h3>90. Crea una consulta parametrizada que pregunte por el nombre de un</h3>
+<p>actor y muestre el nombre de las películas de ese actor.</p>
+<h3>91. Crea una consulta parametrizada que pregunte en primer lugar por la</h3>
+<p>nacionalidad y después el año de estreno de la película.</p>
+<h3>92. Con una consulta de actualización incrementa en un 10% la taquilla de</h3>
+<p>las películas españolas.</p>
+<h3>93. Crea una consulta de actualización que incremente en 10 minutos la</h3>
+<p>duración de las películas que tengan menos de 100 minutos.</p>
+<h3>94. Crea una consulta de eliminación que elimine de la tabla de películas</h3>
+<p>españolas (creada en el ejercicio 79), las películas estrenadas en Estados Unidos.</p>
+<h3>95. Elimina de la tabla de películas aquellas películas que no hayan</h3>
+<p>obtenido ninguna recaudación.</p>
+<ul>
+<li>Elimina las películas españolas estrenadas en el año 2005.</li>
+</ul>
+<h3>97. Realiza una consulta de referencias cruzadas que muestre en las filas el</h3>
+<p>año de estreno de las películas y en las columnas la nacionalidad. En la intersección de filas y columnas se debe mostrar el número de películas estrenadas en cada año y en cada país.</p>
+<p>Aplicaciones Ofimáticas Base de datos Tema 04: Base de Datos RELACIONALES. CONSULTAS (B2)</p>
+<p>EJERCICIO 8</p>
+<p>Abre la base de datos notasprofesor.mdb y crea las siguientes consultas. 98.Crea una consulta que muestre un listado de notas de los alumnos de 2º de ESI. En el listado debe aparecer el nombre del alumno, el nombre del módulo y la nota que ha sacado en cada módulo.</p>
+<h3>99. Crea una consulta que muestre el promedio de notas de cada alumno en</h3>
+<p>orden descendente de nota.</p>
+<h3>100. Crea una consulta que muestre un listado de notas del módulo</h3>
+<p>“Formación y Orientación laboral”.</p>
+<ul>
+<li>Crea una consulta de creación de tabla con los alumnos de 2º de ESI.</li>
+</ul>
+<p>102.Anexa a la tabla anterior los alumnos de 1º de ESI.</p>
+<h3>103. Crea una consulta de eliminación que elimine de la tabla de módulos</h3>
+<p>aquellos módulos que tienen 90 horas.</p>
+<h3>104. Crea una consulta de actualización que incremente en 10 horas</h3>
+<p>aquellos módulos que tienen menos de 100 horas.</p>
+<h3>105. Crea una consulta de referencias cruzadas que muestre en las filas el</h3>
+<p>nombre de cada alumno y en las columnas aquellos módulos en los que se ha examinado el alumno. En la intersección de cada fila y columna debe aparecer la nota que ha sacado cada alumno en cada módulo.</p>
+<h3>106. Crea una consulta que muestre un listado de aquellos alumnos que han</h3>
+<p>suspendido algún examen. En el listado debe aparecer el nombre del alumno, el nombre del módulo y la nota.</p>
+<h3>107. Con una consulta obtén la media de las notas del examen de</h3>
+<p>“Formación y Orientación Laboral”.</p>
+<hr/>
+<h2 id="ut16actividades">✍️ Activitats pràctiques UT16</h2>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 16.1 — BDA VENTAS PER A EXAMEN</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut15/ut1506.html">⬅️ 15.6 B2-EXERCICIS BDA-Creació de Taules</a>
+<a class="page-nav-btn" href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

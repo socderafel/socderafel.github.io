@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT8 — Contratos pretesting — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🕵️ Hacking Ètic i Auditoria de Seguretat — CE Ciberseguretat (CETI)</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Hacking Ètic i Auditoria de Seguretat</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Chat general</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Programación del módulo</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Contenidos y criterios de evaluación</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Presentación del módulo</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Accesibilidad</a></li>
+<li><a href="../ut00/ut0006.html">0.6 guia para aprender a programar</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Primera evaluación</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Segunda evaluación</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Tercera evaluación</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Elementos esenciales del HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 HE 1</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Prácticas tema 1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 tema1</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 tema2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Auditories</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Material adicional</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Material adicional 2</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Footprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Footprinting con Google</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Footprinting con Bing</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Footprinting con Shodan</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Footprint</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Fingerprint</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Introducción al Fingerprinting</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Nmap</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Fingerprinting</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Presentación fingerprint</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Enumeración con nmap</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Scripts amb nmap</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Auditorias de seguridad con Wireshark</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Wireshark</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Auditorias de seguridad utilizando hping</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Auditorias utilizando hping3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT8 — Contratos pretesting</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Creación de contratos</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Fase de análisis</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 analisi</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Nessus</a></li>
+<li><a href="../ut09/ut0903.html">9.3 practiques</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Ejercicios Fingerprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Ingenieria social</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Ingenieria social</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Introducción</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Pentesting web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Pentesting web</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Robots de Búsquedas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Continguts i Recursos</a></li>
+<li><a href="../ut14/ut14actividades.html">✍️ Activitats pràctiques UT14</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Riesgos laborales en el entorno de HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut15actividades.html">✍️ Activitats pràctiques UT15</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Explotación</a></li>
+<li><a href="../ut16/ut1602.html">16.2 Metasploit</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — -------</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut17actividades.html">✍️ Activitats pràctiques UT17</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE Ciberseguretat (CETI) · UT8 Completa</span>
+<h1>📘 UT8 — Contratos pretesting (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0801"><strong>8.1 Creación de contratos</strong></a> (o <a href="./ut0801.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut08actividades"><strong>✍️ Activitats pràctiques UT8</strong></a> (o <a href="./ut08actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0801">8.1 Creación de contratos</h2>
+<h3>📊 1. Documentaciónpentesting |auditoria</h3>
+<ul><li>CET HE</li></ul>
+<h3>📊 2. INTRODUCCIÓN</h3>
+<ul><li>Estas pruebas pueden tener riesgos tanto a nivel legal como a nivel operativo.</li><li>En el contrato debemos distinguir las cuestiones técnicas y las legales.</li><li>Cualquier servicio de pentesting, aunque cada empresa lo preste con sus particularidades y adaptado al caso concreto, tiene una serie de fases comunes que deben conocerse y pactarse de antemano entre las partes.</li></ul>
+<h3>📊 3. POSEER ESTA DOCUMENTACIÓN PERMITE</h3>
+<ul><li>Determinar la posibilidad de éxito de un ataque.</li><li>Identificar vulnerabilidades de alto riesgo que resultan de una combinación de vulnerabilidades de menor riesgo.</li></ul>
+<h3>📊 4. FORMALIDADES</h3>
+<ul><li>Identificación de las partes</li><li>• Su capacidad• Objetivo del contrato• Precio• Formas de pago(detallado)</li><li>• Causas de extinción• Legislación aplicable</li></ul>
+<h3>📊 5. FORMALIDADES</h3>
+<ul><li>Cualquier servicio de pentesting, aunque cada empresa lo preste con sus particularidades y adaptado al caso concreto, tiene una serie de fases comunes que deben conocerse y pactarse de antemano entre las partes.</li></ul>
+<h3>📊 6. PREPARACIÓN</h3>
+<ul><li>SE DEBE acordar la cantidad de información disponible y el tipo de intrusión o modelo de amenaza pactada</li><li>pactar la información que dispone el auditor.</li><li>Según la cantidad de datos se parecerá más o menos a un hacker real.</li><li>Según la cantidad de información SUMINISTRADA ,TENDREMOS AUDITORIAS de caja blanca, de caja gris y de caja negra.</li></ul>
+<h3>📊 7. PREPARACIÓN DEL TEST</h3>
+<ul><li>Sera legalmente imprescindible identificar los equipos y que las entidades auditadas demuestren la titularidad de los mismos</li><li>El sector ha estandarizado las siguientes metodologías: ISSAF (Information Systems Security Assessment Framework), PCI DSS (Payment Card Industry Data Security Standard), PTES (Penetration Testing Execution Standard) y OSSTMM (Manual de la Metodología Abierta de Testeo de Seguridad)</li></ul>
+<h3>📊 8. CREACIÓN DEL INFORME</h3>
+<ul><li>Para terminar se deberá recopilar y estructurar la información recogida.</li><li>Debe llegarse a un acuerdo sobre quien tendrá acceso y a quien se le entregará.</li><li>Todo lo realizado debe ser confidencial debido a los datos con los que trabajamos.</li></ul>
+<h3>📊 9. CREACIÓN DE INFORMES</h3>
+<ul><li>Disponer de la debida autorización de la empresa auditada</li><li>No obtener provecho de la información accedida</li><li>No causar perjuicio con la información descubierta</li><li>Destruir la que no sea necesaria para la prestación del servicio</li><li>Conservar de manera segura la que sea necesaria para el servicio</li><li>No divulgar nada de lo averiguado o accedido</li></ul>
+<hr/>
+<h2 id="ut08actividades">✍️ Activitats pràctiques UT8</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 8.1 — Ejemplo de contrato pentesting</p><p dir="ltr" style="text-align: left;">Basándose en el siguiente documento crear un contrato pretesting entre tu empresa y la empresa sobre la que se va a realizar el estudio</p>
+<p>Formulario de autorización de Pentesting</p>
+<p>SERVICIO AUDITORIA Roommate</p>
+<p>i</p>
+<p>Contenidos</p>
+<p>1. Formulario de autorización de Pentesting .................................................................. 2 2. Tipos de pruebas (Pentesting.) ................................................................................... 3 2.1. Restricciones y conformidades .......................................................................... 3 3.</p>
+<p>ACUERDO DE CONFIDENCIALIDAD ........................................................................... 5 3.1. Obligaciones Ibermatica .................................................................................... 5 3.2. Exclusiones ....................................................................................................... 5 3.3.</p>
+<p>Derechos de propiedad ..................................................................................... 5 3.4. Vigencia ............................................................................................................ 6 3.5. Legislación aplicable. ........................................................................................ 6</p>
+<p>SERVICIO AUDITORIA Roommate</p>
+<h3>1. Formulario de autorización de Pentesting</h3>
+<p>Cliente: (FAD) Fundación de Ayuda contra la Drogadicción Nombre:Beatriz Martín Padura Puesto: Directora General Fecha: 9 de julio de 2019</p>
+<p>Autoriza a IBÉRMÁTICA para llevar a cabo las actividades de verificación de seguridad de la aplicación(es) y sistema (s) que se describe(n) a continuación, según las siguientes condiciones:  Ámbito de las pruebas (Activos autorizados): https://www.fad.es</p>
+<p> Condiciones: o Las pruebas serán externas e internas y se realizarán desde fuera y dentro de la red del cliente utilizando Internet y para acceder a los activos incluidos en el alcance. o Se realizarán un único TEST de penetración:  Caja negra.  Planificación temporal</p>
+<p>o Fechas: Del 10 de julio al 19 de julio 2019. Días laborables comprendidos entre el L-V. o Horario: Preferiblemente de 8.00h a 13.00h</p>
+<p> Teléfonos de soporte en caso de caída de servicio: o Por parte del equipo de producto o cliente:  Nombre: LARA RODRÍGUEZ RUIBAL  Teléfono: 91 766 47 91  Email: lrodriguezruibal@fad.es</p>
+<p>o Auditor(IBERMATICA):  Nombre: Fernando Aranda Sánchez  Teléfono: 689450328  Email: f.aranda@ibermatica.com</p>
+<p>SERVICIO AUDITORIA Roommate</p>
+<h3>2. Tipos de pruebas (Pentesting.)</h3>
+<p>El servicio de tests de intrusión nos permite testear la fortaleza de la infraestructura IT para medir su nivel de seguridad técnico y si cumple los niveles requeridos por la política organizativa. Estos tests son realizados por expertos en seguridad sobre todos los servicios expuestos a internet y aquellos que puedan accederse remotamente.</p>
+<p>Se pueden realizar dos tipos distintos de Tests de Intrusión, Externo o Interno dependiendo desde dónde se lancen los ataques.  El Test de Intrusión Externo: se realiza desde internet sobre la infraestructura del cliente, más concretametne, sobre aquellos dispositivos de la organización que están expuestos a internet, por ejemplo, router, firewall, servidor web, servidor de correo, DNS, etc.</p>
+<p> El Test de Intrusión Interno: se realiza desde dentro de la red del cliente desde donde pueden localizarse más problemas de seguridad que desde fuera.  Propósito del pentest:Comprobar el estado de las vulnerabilidades que presenta la aplicación web objeto del mismo.</p>
+<p>Se pueden realizar dos tipos distintos de Tests de Intrusión, Externo o Interno dependiendo desde dónde se lancen los ataques.  Tests de Intrusión de Caja Negra: este es un tipo de test de intrusión externo, sin información o solo con muy poca información del objetivo (solo lo que debe ser auditado). Por ejemplo, dada una web o portal publicado, intentar atacarlo desde una red externa sólo a partir de información básica disponible, desconociendo información relativa a arquitectura, usuarios, etc.</p>
+<p> Test de Intrusión de Caja Gris: este tipo de test puede ser interno o externo, poseyendo solo información limitada sobre el objetivo como, por ejemplo, credenciales de autenticación básicas.  Test de Intrusión de Caja Blanca: este tipo de test es interno, accediendo a la red desde un punto de acceso y teniendo el diagrama de red, las plataformas, los servicios principales, y varios perfiles con distintas credenciales y privilegios, etc.</p>
+<p>Dada la naturaleza de los trabajos a realizar cabe la posibilidad de que, de forma no intencionada, se produjese algún efecto colateral indeseado. Si así fuese, el Auditorde IBERMATICA lo notificaría inmediatamente al Teléfono de soporte correspondiente o se pondría a disposición del cliente para aportar la información requerida sobre las acciones realizadas.</p>
+<h4>2.1. Restricciones y conformidades</h4>
+<p>Las siguientes restricciones se aplicarán a esta autorización:  Esta autorización estará vigente desde el 10 de julio de 2019 hasta el 19 de julio de 2019, ambos inclusive.</p>
+<p>De conformidad con la concesión de esta autorización, el Cliente declara que:  El cliente es dueño de los sistemas donde se realiza la auditoria de vulnerabilidades y el suscrito tiene la autoridad adecuada para poder llevar a cabo las actividades de verificación de seguridad de aplicaciones.</p>
+<p> El cliente ha creado una copia de seguridad completa de todos los sistemas dentro del ámbito de las pruebas de vulnerabilidades, y se ha comprobado que el procedimiento de copia de seguridad permitirá al cliente restaurar los sistemas a su estado pre-test.</p>
+<p>SERVICIO AUDITORIA Roommate</p>
+<p> El servicio implica necesariamente el uso de herramientas y técnicas diseñadas para detectar las vulnerabilidades de seguridad, y que es imposible identificar y eliminar todos los riesgos que implica el uso de estas herramientas y técnicas.  El cliente se compromete a no modificar el sistema o aplicativo durante la ejecución del pentesting. Si esto sucediera se entenderá como un cambio de alcance, de tal modo que el pentesting se dará por finalizado y se entregará el informe al cliente con los resultados obtenidos hasta ese momento, con lo que el Auditor cumplirá totalmente con el alcance inicialmente acordado. Si el cliente desea realizar un pentesting al sistema o aplicativo que ha modificado deberá volver a negociarlo con IBERMATICA considerándose en todo caso como el encargo de un nuevo trabajo.</p>
+<p>Cualquier cambio a las limitaciones y condiciones descritas deberá realizarse por escrito y ser aceptado por ambas partes.</p>
+<p>SERVICIO AUDITORIA Roommate</p>
+<h3>3. ACUERDO DE CONFIDENCIALIDAD</h3>
+<p>Será considerada como “Información Confidencial” toda aquella información, ya sea técnica, financiera, comercial o de cualquier otro carácter, suministrada y divulgada por la empresa cliente a IBERMATICA en relación con el alcance del contrato, mediante cualquier tipo de soporte, tangible o intangible, actualmente conocido o que posibilite el estado de la técnica en el futuro (papel, informático, etc.) o de forma verbal.</p>
+<h4>3.1. Obligaciones Ibermatica</h4>
+<p>Nada más recibir la Información Confidencial, IBERMATICA la mantendrá en estricta confidencialidad, la utilizará solamente en relación con las pruebas del alcance, no la revelará a una tercera parte sin el previo consentimiento escrito de la empresa cliente y sólo podrá revelar dicha Información Confidencial a los empleados de su compañía o que tengan necesidad expresa de conocerla en relación con las pruebas contratadas.</p>
+<p>IBERMATICA no podrá copiar ni reproducir la Información Confidencial suministrada por la otra Parte en formato o soporte alguno, excepto si ello fuera preciso con arreglo a lo previsto en el párrafo anterior. Toda copia o reproducción que se haga deberá contener el mismo sello, marca o leyenda que su original.</p>
+<h4>3.2. Exclusiones</h4>
+<p>Las Partes acuerdan que las obligaciones contenidas en este Acuerdo no se aplicarán respecto de aquella información que: • esté, sea o llegue a ser de público conocimiento sin mediar acto proveniente de IBERMATICA en contravención de los términos de este Compromiso; • deba ser difundida por imperativo de una disposición legal, contractual o judicial; • sea explícitamente identificada, de conformidad con este Compromiso, como Información No Confidencial; • cuya comunicación o uso sin restricciones haya sido aprobada por la empresa cliente; • sea independientemente generada por IBERMATICA sin hacer uso de la Información Confidencial; • haya sido requerida a la Parte receptora mediante una resolución firme por Autoridades Administrativas o Judiciales competentes. En este caso deberá notificarse inmediatamente esta circunstancia a la empresa cliente sobre el requerimiento recibido, siempre que no exista obligación de guardar secreto sobre el mismo por mandato legal, administrativo o judicial. Asimismo, IBERMATICA sólo revelará aquella parte de la Información que sea requerida.</p>
+<h4>3.3. Derechos de propiedad</h4>
+<p>Este Acuerdo no supone la concesión, expresa o implícita, de derecho alguno sobre la Información Confidencial que la empresa cliente suministre, salvo el que en cada caso sea otorgado expresamente en relación con el Alcance del presente contrato.</p>
+<p>SERVICIO AUDITORIA Roommate</p>
+<p>En consecuencia, el suministro de dicha Información no podrá entenderse, en ningún caso, como concesión de patente, licencia o cualquier otro derecho de propiedad intelectual y/o industrial alguno, considerándose que aquella permanecerá en todo momento en el ámbito de propiedad de la empresa cliente o del tercero a quien pertenezca.</p>
+<h4>3.4. Vigencia</h4>
+<p>Las obligaciones previstas en la cláusula 2 permanecerán en vigor hasta que hayan transcurrido 3 años contados a partir de la fecha de entrega del informe de resultados del presente contrato. 3.5. Legislación aplicable. Este Compromiso se interpretará de conformidad con las leyes españolas.</p>
+<p>Si alguna de las Partes es objeto de una fusión u otro tipo de reorganización societaria, se acuerda que este Compromiso será vinculante para el que le suceda de acuerdo con la ley aplicable.</p>
+<p>POR EL CLIENTE: Auditor(IBERMATICA): Fdo: Beatriz Martín Padura Fecha: 25junio 2019 Fdo: Fernando Aranda Sánchez Fecha: 8 julio 2019</p>
+<p>SERVICIO AUDITORIA Roommate</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut07/ut0701.html">⬅️ 7.1 Auditorias utilizando hping3</a>
+<a class="page-nav-btn" href="../ut08/ut0801.html">8.1 Creación de contratos ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

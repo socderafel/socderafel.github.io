@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>0.1 Guia didàctica — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔐 Seguretat i Alta Disponibilitat — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Seguretat i Alta Disponibilitat</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut00/ut0001.html">0.1 Guia didàctica</a></li>
+<li><a href="../ut00/ut0002.html">0.2 DOSSIER SEMIPRESENCIAL</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Setmanes (1-2) del 11 al 24 de setembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Presentació mòdul SAD</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Com fer un treball</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Document: Aforismes en SI</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Document: Introducció. Conceptes inicials</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Elements vulnerables</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Setmanes (3-4) del 25 de setembre al 8 d'octubre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Biometria - Seguretat Física - Còpies de Seguret</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Concienciació en ciberseguretat</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Preparació Màquines Virtuals per a pràctiques po</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Setmanes (5-6) del 9 al 22 d'octubre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Contrasenyes</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Anàlisi Forense</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Setmanes (7-8) del 23 d'octubre al 5 de novembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Clau simètrica i Hash</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Esteganografia</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Setmanes (9-10) del 6 al 19 de novembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Criptografia de clau pública</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Setmana d'exàmens. Del 20 al 26 de Novembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Continguts i Recursos</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Setmanes (11-12) del 27 de novembre al 10 de desembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C</a></li>
+<li><a href="../ut07/ut0702.html">7.2 UD5-1 Tipus de malware</a></li>
+<li><a href="../ut07/ut0703.html">7.3 UD5-2 Programari anti malware</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Setmanes (13-14) Del 11 al 22 de Desembre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Segurertat en xarxes corporatives</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Seguretat en xarxes sense fil</a></li>
+<li><a href="../ut08/ut0803.html">8.3 VPN</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Setmanes Del 8 al 21 de Gener</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Firewall_i_Proxy</a></li>
+<li><a href="../ut09/ut0902.html">9.2 HA - Alta_Disponibilitat</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Setmanes Del 22 de Gener al 4 de Febrer</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Esciptoris_remots(kali)</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Setmanes Del 5 al 12 de Febrer</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Legislació en Ciberseguretat</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — ENQUESTA DE VALORACIÓ DEL PROFESORAT</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Setmana d'examens 2on Trimestre (Del 12 al 18 de Febrer)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Continguts i Recursos</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Setmana d'examens Convocatoria Ordinaria (Del 19 al 25 de Febrer)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Continguts i Recursos</a></li>
+<li><a href="../ut14/ut14actividades.html">✍️ Activitats pràctiques UT14</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Setmana d'examens Convocatoria Extraordinaria (Del 10 al 16 de Juny)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Continguts i Recursos</a></li>
+<li><a href="../ut15/ut15actividades.html">✍️ Activitats pràctiques UT15</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT0 — Unitat Didàctica 0</span>
+<h1>0.1 Guia didàctica</h1>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h1 style="color:blue"> MÒDUL Seguretat i Alta Disponibilitat (SAD)</h1></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 style="text-align: left;background-color:powderblue; font-family: verdana;"><span>PROFESSOR/TUTOR</span></h4>
+<div class="editor-indent" style="margin-left: 30px;"><strong style="font-size: 0.9375rem;">Enrique Iborra Sanjaime</strong></div><div class="editor-indent" style="margin-left: 30px;"><strong style="font-size: 0.9375rem;">C/E: </strong><span style="font-size: 0.9375rem;">em.iborrasanjaime@edu.gva.es</span></div><div class="editor-indent" style="margin-left: 30px;"><br/></div>
+
+<div class="editor-indent" style="margin-left: 30px;">
+
+</div>
+<h4 style="text-align: left;background-color:powderblue; font-family: verdana;"><span>TUTORIES COL·LECTIVES<br/></span></h4>
+<div>
+
+<ul>
+<li><strong>MATÍ</strong>: Dimarts de 9:50 a 10:45 </li>
+<li><strong>VESPRADA</strong>: Dijous de 18:30 a 19:25</li>
+</ul><p><span style="background-color: powderblue; color: rgb(51, 51, 51); font-family: verdana; font-size: 1.18835rem;">TUTORIES INDIVIDUALS ONLINE/PRESENCIAL</span><br/></p>
+<ul>
+<li><strong>MATÍ</strong>: Dimecres de 8:55 a 9:50</li><li><strong style="font-size: calc(0.90375rem + 0.045vw);">VESPRADA</strong><span style="font-size: calc(0.90375rem + 0.045vw);">: Divendres de 14:30 a 15:25</span></li>
+<li> <strong>TELÈFON DE TUTORIES: 962 45 78 20</strong></li>
+</ul>
+</div></div>
+<p>📎 <strong>Material de laboratori (CALENDARI EXAMENS 2n ASIX):</strong> <code>examensSAD.png</code></p>
+<hr/>
+<p>GUIA DIDÀCTICA MÒDUL : SEGURETAT I ALTA DISPONIBILITAT MODALITAT: SEMIPRESENCIAL</p>
+<ul>
+<li>Presentació.</li>
+</ul>
+<p>Objectius (en el RD)</p>
+<h3>10. Seleccionar sistemes de protecció i recuperació, analitzant les seves</h3>
+<p>característiques funcionals, per a posar en marxa solucions d'alta disponibilitat.</p>
+<h3>11. Identificar condicions d'equips i instal·lacions, interpretant plans de seguretat i</h3>
+<p>especificacions de fabricant, per a supervisar la seguretat física.</p>
+<h3>12. Aplicar tècniques de protecció contra amenaces externes, tipificant-les i avaluant</h3>
+<p>les per a assegurar el sistema.</p>
+<h3>13. Aplicar tècniques de protecció contra pèrdues d'informació, analitzant plans de</h3>
+<p>seguretat i necessitats d'ús per a assegurar les dades.</p>
+<h3>14. Assignar els accessos i recursos del sistema, aplicant</h3>
+<ul>
+<li>Característiques del mòdul professional.</li>
+</ul>
+<p>Dedicació recomanada segons crèdits europeus Equivalència en crèdits ECTS: 6 (6x25=150h, /20sem = 7,5h /sem )</p>
+<ul>
+<li>Seqüenciació i distribució de les tutories i aules: horari de cadascuna de les tutories (amb</li>
+</ul>
+<p>indicació de les que siguen presencials) i horari d’ocupació de les aules. Tutoria Col·lectiva: Dimarts, 9:50 – 10:45 Aula B24 Dijous, 18:30 – 19:25 Aula B24 Tutoria individuals: Dimecres, 8:55 – 9:50 en Departament Informàtica Divendres, 14:30 – 15:25 en Departament Informàtica</p>
+<ul>
+<li>Metodologia.</li>
+</ul>
+<p>Per a tots els alumnes, acudisquen o no a les tutories grupals i/o individuals, es penjarà en Aules la següent informació. De cada Unitat Didàctica i cada 15 dies: ● Es penjaran els continguts desenvolupats de forma teòrica. ● Es publicaran exercicis pràctics resolts, per a que els alumnes assolisquen els continguts pràctics ● Es posaran exercicis pràctics per a entregar a través de la plataforma aules. Estos exercicis podran ser opcionals i contar per a la nota.</p>
+<p>●Podran haver exercicis pràctics obligatoris, els quals s’avaluaran a l’examen mitjançant una prova de validació. S'intentarà que les ferramentes de programari utilitzades per a realitzar les pràctiques estiguen basades tant en programari comercial com en programari lliure o gratuït.</p>
+<p>Al ser modalitat semipresencial la metodologia de les tutories serà la següent: En les tutories grupals s’explicarà el contingut més important de la Unitat, es resoldran dubtes de la Unitat anterior, i es faran exercicis pràctics si dona temps. El professor podrà gravar la classe en vídeo per proporcionar-la als alumnes que no hagen pogut assistir.</p>
+<p>També es podrà permetre que es connecten a la classe de manera telemàtica per si volen seguir-la en directe. En les tutories individuals els alumnes tindran a disposició al professor per atendre’ls via telemàtica, telefònica o presencialment al centre.</p>
+<ul>
+<li>Atenció tutorial del grup: informació de contacte del professor o professora.</li>
+</ul>
+<p>Es disposen els canals Aules. Fòrum i xat d’aules Email de edu.gva: em.iborrasanjaime @ edu.gva.es Telèfon del centre educatiu (en hores d’atenció) Teams (en hores d’atenció)</p>
+<ul>
+<li>Continguts del mòdul professional i activitats que ha de fer l’alumnat (avaluables i</li>
+</ul>
+<p>autoavaluables). Continguts: Adopció de pautes de seguretat informàtica: − Fiabilitat, confidencialitat, integritat i disponibilitat. − Elements vulnerables en el sistema informàtic: maquinari, programari i dades. − Anàlisi de les principals vulnerabilitats d’un sistema informàtic.</p>
+<p>− Amenaces. Tipus: − Amenaces físiques. − Amenaces lògiques. − Exemples d’amenaces. − Seguretat física i ambiental: − Ubicació i protecció física dels equips i servidors. − Fonts d’alimentació redundants. − Sistemes d’alimentació ininterrompuda. − Grups electrògens. − Seguretat lògica</p>
+<p>− Criptografia. Clau simètrica i pública. − Firma digital. − Certificats digitals. − Llistes de control d’accés. − Establiment de polítiques de contrasenyes. − Utilització de sistemes biomètrics d’identificació. − Polítiques d’emmagatzemament. − Còpies de seguretat i imatges de suport.</p>
+<p>− Mitjans d’emmagatzemament. Recuperació de dades. − Realització d’auditories de seguretat. − Anàlisi forense en sistemes informàtics: − Objectiu de l’anàlisi forense. − Recollida i anàlisi d’evidències. − Ferramentes d’anàlisi. Implantació de mecanismes de seguretat activa</p>
+<p>− Atacs i contramesures en sistemes personals: − Classificació dels atacs. − Anatomia d’atacs i anàlisi de programari maliciós. − Correu electrònic: correu brossa, pesca i falsa alarma, entre altres. − Ferramentes preventives. Instal·lació i configuració. − Ferramentes pal·liatives. Instal·lació i configuració.</p>
+<p>− Actualització de sistemes i aplicacions. − Seguretat en la connexió amb xarxes públiques. − Pautes i pràctiques segures. Seguretat en la xarxa corporativa: − Monitoratge del trànsit en xarxes: − Aplicacions per a la captura i l’anàlisi del trànsit. − Aplicacions per al monitoratge de xarxes i equips.</p>
+<p>− Seguretat en els protocols per a comunicacions sense fil. − Riscos potencials dels servicis de xarxa. − Intents de penetració: − Violació de contrasenyes per diccionari i força bruta. − Forçament de recursos. − Portes del darrere i exploits. − Utilització de sistemes de detecció i prevenció d’intrusos.</p>
+<p>− Manual de seguretat i plans de contingència. Implantació de tècniques d’accés remot. Seguretat perimetral: − Elements bàsics de la seguretat perimetral: − Encaminador de frontera. − Tallafocs. − Concentradors de xarxes privades virtuals. − Perímetres de xarxa. Zones desmilitaritzades.</p>
+<p>− Arquitectura dèbil de subxarxa protegida. − Arquitectura forta de subxarxa protegida. − Xarxes privades virtuals VPN. − Beneficis i desavantatges de les VPN respecte a les línies dedicades. − Tipus de VPN: dial-up i site-to-site. − VPN d’enllaç: PPTP, L2TP, L2FP, entre altres.</p>
+<p>− VPN de xarxa. IPsec. − VPN d’aplicació. SSL i SSH. − Servidors d’accés remot: − Protocols d’autenticació. − Autenticació, autorització i comptabilitat d’accessos (AAA). − Configuració de paràmetres d’accés. − Servidors d’autenticació. Tipus. Instal·lació i configuració de tallafocs</p>
+<p>− Característiques i funcions principals. − Utilització de tallafocs. − Filtratge de paquets de dades. − Tipus de tallafocs: − Tallafocs personals i perimetrals. − Tallafocs sense estat: filtratge de paquets. − Tallafocs amb estat (SPI). − Passarel·les de nivell d’aplicació.</p>
+<p>− Instal·lació de tallafocs. Ubicació. − Regles de filtratge de tallafocs. − Proves de funcionament. Sondeig. − Registres de successos d’un tallafoc. − Tallafocs lliures i propietaris. − Distribucions lliures per a implementar tallafocs en màquines dedicades. − Tallafocs maquinari.</p>
+<p>− Gestió unificada d’amenaces (UTM). − Documentació de les configuracions establides. Instal·lació i configuració de servidors intermediaris: − Característiques i funcions d’un servidor intermediari. − Tipus de servidors intermediaris: directe, transparent, invers i en cascada, entre altres.</p>
+<p>− Instal·lació de servidors intermediaris. − Instal·lació i configuració de clients de servidors intermediaris. − Configuració de l’emmagatzemament en la memòria cau d’un servidor intermediari. − Configuració de filtres i llistes de control d’accés. − Gestió de llistes negres d’URL.</p>
+<p>− Mètodes d’autenticació en un servidor intermediari. − Ferramentes d’administració gràfica. − Diagnòstic i resolució d’incidències. − Ferramentes d’anàlisi de registres. − Documentació de les configuracions establides.</p>
+<p>Implantació de solucions d’alta disponibilitat: − Definició i objectius. − Anàlisi de configuracions d’alta disponibilitat: − Funcionament ininterromput. − Integritat de dades i recuperació de servici. − Servidors redundants. − Sistemes de clústers. − Balancejadors de càrrega.</p>
+<p>− Protocols de redundància en encaminadors. − Instal·lació i configuració de solucions d’alta disponibilitat. − Virtualització de sistemes. Tipus de virtualització. − Possibilitats de la virtualització de sistemes. − Ferramentes per a la virtualització: − Entorns personals.</p>
+<p>− Entorns empresarials. − Configuració i utilització de màquines virtuals. − Alta disponibilitat i virtualització. − Simulació de servicis amb virtualització. − Servicis reals amb virtualització. − Anàlisi de l’activitat del sistema virtualitzat. Legislació i normes sobre seguretat</p>
+<p>− Legislació sobre protecció de dades. − Legislació sobre els servicis de la societat de la informació i correu electrònic. − Centres d’informació i resposta contra amenaces i incidències de seguretat (CERT, CSIRT, entre altres). Activitats: -Obtenció i utilització de signatura electrònica -Pitjors incidents de 2022 -Calculadora CVSS -Preparació de MV -Disseny de CPD -Programari de Còpies de Seguretat -Criptografia amb programari Veracrypt -Programari de HASH -Activitat amb Hash Suite -Antivirus Live -Vacunació Pendrive -Activitat amb Nmap -Pràctica amb Firewalls -Wifi Radius WPA2 Corporatiu -VPN amb accés anònim -Desplegar un accés Roadwarrior -Pràctica d’alta disponibilitat amb Proxmox</p>
+<ul>
+<li>Continguts mínims i criteris d’avaluació.</li>
+<li>Adopta pautes i pràctiques de tractament segur de la informació, reconeixent les vulnerabilitats d'un sistema informàtic i la</li>
+</ul>
+<p>necessitat d'assegurar-lo.</p>
+<ul>
+<li>S'ha valorat la importància d'assegurar la privacitat, coherència i disponibilitat de la informació en els sistemes</li>
+</ul>
+<p>informàtics.</p>
+<ul>
+<li>S'han descrit les diferències entre seguretat física i lògica.</li>
+<li>S'han classificat les principals vulnerabilitats d'un sistema informàtic, segons la seua tipologia i origen.</li>
+<li>S'ha contrastat la incidència de les tècniques d'enginyeria social en els fraus informàtics.</li>
+<li>S'han adoptat polítiques de contrasenyes.</li>
+<li>S'han valorat els avantatges que suposa la utilització de sistemes biomètrics</li>
+<li>S'han aplicat tècniques criptogràfiques en l'emmagatzematge i transmissió de la informació.</li>
+<li>S'ha reconegut la necessitat d'establir un pla integral de protecció perimetral, especialment en sistemes connectats a</li>
+</ul>
+<p>xarxes públiques.</p>
+<ul>
+<li>S'han identificat les fases de l'anàlisi forense davant atacs a un sistema.</li>
+</ul>
+<ul>
+<li>Implanta mecanismes de seguretat activa, seleccionant i executant contramesures davant amenaces o atacs al</li>
+</ul>
+<p>sistema.</p>
+<ul>
+<li>S'han classificat els principals tipus d'amenaces lògiques contra un sistema informàtic.</li>
+<li>S'ha verificat l'origen i l'autenticitat de les aplicacions instal·lades en un equip, així com l'estat d'actualització del</li>
+</ul>
+<p>sistema operatiu.</p>
+<ul>
+<li>S'han identificat l'anatomia dels atacs més habituals, així com les mesures preventives i pal·liatives disponibles.</li>
+<li>S'han analitzat diversos tipus d'amenaces, atacs i programari maliciós, en entorns d'execució controlats.</li>
+<li>S'han implantat aplicacions específiques per a la detecció d'amenaces i l'eliminació de programari maliciós.</li>
+<li>S'han utilitzat tècniques de xifratge, signatures i certificats digitals en un entorn de treball basat en l'ús de xarxes</li>
+</ul>
+<p>públiques.</p>
+<ul>
+<li>S'han avaluat les mesures de seguretat dels protocols usats en xarxes sense fils.</li>
+<li>S'ha reconegut la necessitat d'inventariar i controlar els serveis de xarxa que s'executen en un sistema.</li>
+<li>S'han descrit els tipus i característiques dels sistemes de detecció d'intrusions.</li>
+<li>Implanta tècniques segures d'accés remot a un sistema informàtic, interpretant i aplicant el pla de seguretat.</li>
+<li>S'han descrit escenaris típics de sistemes amb connexió a xarxes públiques en els quals es requereix fortificar la</li>
+</ul>
+<p>xarxa interna.</p>
+<ul>
+<li>S'han classificat les zones de risc d'un sistema, segons criteris de seguretat perimetral.</li>
+<li>S'han identificat els protocols segurs de comunicació i els seus àmbits d'utilització.</li>
+<li>S'han configurat xarxes privades virtuals mitjançant protocols segurs a diferents nivells.</li>
+<li>S'ha implantat un servidor com a passarel·la d'accés a la xarxa interna des d'ubicacions remotes.</li>
+<li>S'han identificat i configurat els possibles mètodes d'autenticació en l'accés d'usuaris remots a través de la</li>
+</ul>
+<p>passarel·la.</p>
+<ul>
+<li>S'ha instal·lat, configurat i integrat en la passarel·la un servidor remot d'autenticació.</li>
+</ul>
+<h3>4. Implanta tallafocs per a assegurar un sistema informàtic, analitzant les seues</h3>
+<p>prestacions i controlant el trànsit cap a la xarxa interna.</p>
+<ul>
+<li>S'han descrit les característiques, tipus i funcions dels tallafocs.</li>
+<li>S'han classificat els nivells en els quals es realitza el filtrat de trànsit</li>
+<li>S'ha planificat la instal·lació de tallafocs per a limitar els accessos a determinades zones de la xarxa.</li>
+<li>S'han configurat filtres en un tallafocs a partir d'un llistat de regles de filtrat.</li>
+<li>S'han revisat els registres de successos de tallafocs, per a verificar que les regles s'apliquen correctament.</li>
+<li>S'han provat diferents opcions per a implementar tallafocs, tant programari com maquinari.</li>
+<li>S'han diagnosticat problemes de connectivitat en els clients provocats pels tallafocs.</li>
+<li>S'ha elaborat documentació relativa a la instal·lació, configuració i ús de tallafocs.</li>
+<li>Implanta servidors «proxy», aplicant criteris de configuració que garantisquen el funcionament segur del servei.</li>
+<li>S'han identificat els tipus de «proxy», les seues característiques i funcions principals.</li>
+<li>S'ha instal·lat i configurat un servidor «proxy-cache».</li>
+<li>S'han configurat els mètodes d'autenticació en el «proxy».</li>
+<li>S'ha configurat un «proxy» en manera transparent.</li>
+<li>S'ha utilitzat el servidor «proxy» per a establir restriccions d'accés Web.</li>
+<li>S'han solucionat problemes d'accés des dels clients al «proxy».</li>
+<li>S'han realitzat proves de funcionament del «proxy», monitorant la seua activitat amb eines gràfiques.</li>
+<li>S'ha configurat un servidor «proxy» en manera inversa.</li>
+<li>S'ha elaborat documentació relativa a la instal·lació, configuració i ús de servidors «proxy».</li>
+<li>Implanta solucions d'alta disponibilitat emprant tècniques de virtualització i configurant els entorns de prova.</li>
+<li>S'han analitzat supòsits i situacions en les quals es fa necessari implementar solucions d'alta disponibilitat.</li>
+<li>S'han identificat soluciones maquinari per a assegurar la continuïtat en el funcionament d'un sistema.</li>
+<li>S'han avaluat les possibilitats de la virtualització de sistemes per a implementar solucions d'alta disponibilitat.</li>
+<li>S'ha implantat un servidor redundant que garantisca la continuïtat de serveis en casos de caiguda del servidor</li>
+</ul>
+<p>principal.</p>
+<ul>
+<li>S'ha implantat un balancejador de càrrega a l'entrada de la xarxa interna.</li>
+<li>S'han implantat sistemes d'emmagatzematge redundant sobre servidors i dispositius específics.</li>
+<li>S'ha avaluat la utilitat dels sistemes de «clústers» per a augmentar la fiabilitat i productivitat del sistema.</li>
+<li>S'han analitzat solucions de futur per a un sistema amb demanda creixent.</li>
+<li>S'han esquematitzat i documentat solucions per a diferents suposats amb necessitats d'alta disponibilitat.</li>
+<li>Reconeix la legislació i normativa sobre seguretat i protecció de dades valorant la seua importància.</li>
+<li>S'ha descrit la legislació sobre protecció de dades de caràcter personal.</li>
+<li>S'ha determinat la necessitat de controlar l'accés a la informació personal emmagatzemada.</li>
+<li>S'han identificat les figures legals que intervenen en el tractament i manteniment dels fitxers de dades.</li>
+<li>S'ha contrastat el deure de posar a la disposició de les persones les dades personals que els concerneixen.</li>
+<li>S'ha descrit la legislació actual sobre els serveis de la societat de la informació i comerç electrònic.</li>
+<li>S'han contrastat les normes sobre gestió de seguretat de la informació.</li>
+<li>S'ha comprés la necessitat de conéixer i respectar la normativa legal aplicable.</li>
+</ul>
+<ul>
+<li>Calendari d’exàmens del mòdul professional, amb indicació expressa de la data, l’hora i l’aula de</li>
+</ul>
+<p>cadascun dels exàmens. 1er parcial: 21/11/2023 10:00 2on parcial: 15/02/2024 16:25 Convocatòria Ordinària: 20/02/2024 10:00 Convocatòria Extraordinària:: 13/06/2024 16:25</p>
+<ul>
+<li>Instruments d’avaluació.</li>
+</ul>
+<p>Tests de teoria -Exercicis pràctics -Exercicis de prova de validació -Proves teòriques i pràctiques</p>
+<ul>
+<li>Solucionari de les activitats autoavaluables.</li>
+<li>Enllaços d’internet recomanats.</li>
+</ul>
+<p>Incibe.es atenea.ccn-cert.cni.es unaaldia.hispasec.com/</p>
+<ul>
+<li>Bibliografia recomanada.</li>
+</ul>
+<p>Apunts i presentacions del professor pujats a Aules Ignacio Triviño Mosquera. Seguridad y Alta Disponibilidad. Editorial Sintesis ISBN: 9788491713593 Fecha de publicación: 13/05/2019 ISBN Digital: 9788491718482 Elvira Mifsud. Seguridad y alta disponibilidad. Libro digital interactivo. Editorial McGrawHill ISBN: 9788448626686 Publicado: 14 de Octubre de 2022 Alfredo Abad. Seguridad y Alta Disponibilidad. Editorial Garceta ISBN: 978-84-1728-930-0 Fecha: 2018</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/index.html">⬅️ 📘 UT0 Completa</a>
+<a class="page-nav-btn" href="../ut00/ut0002.html">0.2 DOSSIER SEMIPRESENCIAL ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

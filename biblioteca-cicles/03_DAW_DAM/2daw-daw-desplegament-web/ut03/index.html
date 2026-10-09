@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT3 — Ordinària — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🚀 Desplegament d'Aplicacions Web — 2n DAW · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Desplegament d'Aplicacions Web</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 CALENDARI EXAMENS 2n DAW</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Extraordinària</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Problemas 2, 3 y 4</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Hoja de respuestas.</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Ordinària</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Problemas 2 y 3</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Hoja de respuestas.</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Examen 2 Quadrimestre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Problema 2 y 3</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Hoja de respuestas.</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Examen 1 Quadrimestre</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Enunciado problema 2</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Hoja de respuestas.</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — ANUNCIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Documentació i control de versions</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 UT 5.4 Documentació i control de versions - GitH</a></li>
+<li><a href="../ut07/ut0702.html">7.2 UT 5.3 Documentació i control de versions - Git</a></li>
+<li><a href="../ut07/ut0703.html">7.3 UT 5.2 Documentació i control de versions - phpD</a></li>
+<li><a href="../ut07/ut0704.html">7.4 UT 5.1 Documentació i control de versions - Java</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Administració de servidors web.</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 UT 4.2 Administració de servidors web - Seguritz</a></li>
+<li><a href="../ut08/ut0802.html">8.2 UT 4.1 Administració de servidors web - Instal·l</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Arquitectura web.</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 UT 3.4 Arquitectures web</a></li>
+<li><a href="../ut09/ut0902.html">9.2 UT 3.3 Arquitectures web</a></li>
+<li><a href="../ut09/ut0903.html">9.3 UT 3.2 Arquitectures web</a></li>
+<li><a href="../ut09/ut0904.html">9.4 UT 3.1 Arquitectures web</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Administració de servidors d’arxius</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 UT 2.2 Introducció - Creació servidor FTP amb SF</a></li>
+<li><a href="../ut10/ut1002.html">10.2 UT 2.1 Introducció - Creació servidor FTP amb VS</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Servicis de xarxa implicats en el desplegament</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 UT 1.3 Preparación del servidor de directorios L</a></li>
+<li><a href="../ut11/ut1102.html">11.2 UT 1.2 Servicio de directorios LDAP</a></li>
+<li><a href="../ut11/ut1103.html">11.3 UT 1.1 Servicios de Red</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Presentació / introducció</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Introducció</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Calendari mòdul Desplegament d'Aplicacions Web</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Unitat Didàctica 13</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 UT 2.1 Introducció - Creació servidor FTP (còpia</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n DAW · Grau Superior · UT3 Completa</span>
+<h1>📘 UT3 — Ordinària (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0301"><strong>3.1 Problemas 2 y 3</strong></a> (o <a href="./ut0301.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0302"><strong>3.2 Hoja de respuestas.</strong></a> (o <a href="./ut0302.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0303"><strong>3.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese</strong></a> (o <a href="./ut0303.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut03actividades"><strong>✍️ Activitats pràctiques UT3</strong></a> (o <a href="./ut03actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0301">3.1 Problemas 2 y 3</h2>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p>
+<h4><span class="" style="background-color: rgb(125, 159, 211);">Examen</span></h4></div>
+
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p>
+<h4>Primera parte</h4><hr style="display: block; height: 1px; border: 0; border-top: 1px solid #4c8171; margin: 1em 0;"/>
+</div>
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p>
+<h4><strong>Segunda parte</strong></h4><hr style="display: block; height: 1px; border: 0; border-top: 1px solid #4c8171; margin: 1em 0;"/>
+</div>
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 dir="ltr" style="text-align: left;">Enquesta d'assitència a l'examen</h4><h4 dir="ltr" style="text-align: left;">Desplegament d'Aplicacions Web. <br/></h4></div>
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 dir="ltr" style="text-align: left;"><strong>Data de l'examen:</strong> 19/02/2024 (dilluns)</h4><p dir="ltr" style="text-align: left;"><strong>Horari</strong>: 18:30-20:20 <br/></p><p dir="ltr" style="text-align: left;"><strong>Aula:</strong> C15</p><p dir="ltr" style="text-align: left;"><strong>Idioma</strong>: Castellà / Valencià. <br/></p></div>
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4><strong>Examen teòric / pràctic.</strong></h4><p dir="ltr" style="text-align: left;"><br/><strong><u>La part teòrica</u></strong><span><span> </span></span><span><span>ti</span></span>ndrà una durada de 30 minuts, durant la qual no es podrà accedir a l'ordinador ni a cap documentació..<br/><br/><u><strong>La part pràctica</strong></u> versarà sobre instal·lacions d'aplicacions ja fetes durant el quadrimestre (amb petites variacions). Per a aquesta segona part es podrà accedir als apunts de classe.<br/></p></div>
+
+<hr/>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Evaluación Ordinaria recuperación 2º cuadrimestre. Unidades de trabajo evaluadas</p>
+<h3>UT 4 .- Administración de servidores web</h3>
+<h3>UT 5.- Control de versiones</h3>
+<p>Despliegue de Aplicaciones Web CFGS DAW Nombre y apellidos. DNI.</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Problema 1: ADMINISTRACIÓN DE SERVIDORES WEB OBJETIVO Tenéis disponible un servicio virtualizado en vuestro ordenador sobre el cual encontrareis la máquina con SO Linux Mint. Usuario de la máquina: alumno Contraseña del servidor: alumno El objetivo de este ejercicio será la puesta en marcha de un servidor web tipo Tomcat sobre una máquina Linux Mint.</p>
+<p>Notas importantes</p>
+<ul>
+<li>El servidor se encuentra instalado, actualizado y funcionando correctamente.</li>
+</ul>
+<p>Para los ejercicios del examen deberéis configurarlo.</p>
+<ul>
+<li>El el directorio raíz de la página web se encuentra el fichero index.html (no es</li>
+</ul>
+<p>necesario crearlo).</p>
+<ul>
+<li>El directorio /var/www/alumno/ se ha creado y tiene los permisos necesarios de</li>
+</ul>
+<p>la aplicación.</p>
+<ul>
+<li>El directorio /var/www/alumno/privado se ha creado así como el archivo</li>
+</ul>
+<p>secreto.html</p>
+<ul>
+<li>El directorio /var/www/alumno/privado se ha creado así como el archivo</li>
+</ul>
+<p>secreto.html</p>
+<ul>
+<li>El directorio /etc/apache2/certs se ha creado. Tampoco es necesario crearlo.</li>
+</ul>
+<p>2 / 6</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ACTIVIDAD 1 Limitar el acceso a la carpeta /var/www/alumno/privado a solo usuarios autorizados mediante un archivo .htaccess . Condiciones para la entrega. Para demostrar que el ejercicio se ha realizado correctamente, se deberá adjuntar a este documento capturas donde se vea</p>
+<ul>
+<li>El contenido del archivo de configuración de la paǵina web</li>
+</ul>
+<p>(alumno.conf).</p>
+<ul>
+<li>El contenido del archivo .htaccess .</li>
+<li>Una captura de pantalla donde se vea el control de acceso.</li>
+</ul>
+<p>ACTIVIDAD 2 Implementar una conexión segura al servidor mediante protocolo https y SSL. Condiciones para la entrega. Para demostrar que el ejercicio se ha realizado correctamente, se deberá adjuntar a este documento capturas donde se vea</p>
+<ul>
+<li>El contenido del archivo de configuración de la página web</li>
+</ul>
+<p>(alumno.conf).</p>
+<ul>
+<li>Una captura de pantalla donde se vea la conexión a la página web</li>
+</ul>
+<p>mediante https. En caso de no poder completar las actividades, documentar mediante capturas o por escrito en qué punto os habéis quedado, el problema encontrado y las soluciones propuestas. En relación al punto anterior, recordad que las evaluaciones tratan de evaluar el dominio del alumnado sobre la materia y su capacidad para adaptarse a circunstancias imprevisibles. No por no completar el ejercicio, se puntuará negativamente el mismo.</p>
+<p>3 / 6</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Problema 2: CONTROL DE VERSIONES En la máquina virtual disponéis del IDE Netbeans con el que deberéis realizar lo siguiente.</p>
+<h3>1. Descargar el proyecto “Despliegue” desde la siguiente ubicación</h3>
+<p>URL: https://github.com/javieregeablasco/MiPrimerRepositorio.git Password: ghp_TOKEN_EXEMPLE_OCULT</p>
+<h3>2. Modificar el archivo index.html, por ejemplo, cambiar el nombre y realizar un</h3>
+<p>commit.</p>
+<ul>
+<li>Subir de nuevo el proyecto al repositorio.</li>
+</ul>
+<p>Nota importante. Es muy probable que os salga un error. Realizar una captura de pantalla del error. Nota: Documentar el problema con las capturas de pantalla suficientes para la correcta valoración del ejercicio. 4 / 6</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Documentación del problema 1 5 / 6</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Documentación del problema 2 6 / 6</p>
+<hr/>
+<h2 id="ut0302">3.2 Hoja de respuestas.</h2>
+<p>Evaluación Ordinaria</p>
+<p>recuperación 2º cuadrimestre.</p>
+<p>Unidades de trabajo evaluadas</p>
+
+
+<p>Despliegue de Aplicaciones Web</p>
+<p>CFGS DAW</p>
+<p>Nombre y apellidos.</p>
+<p>DNI.</p>
+<p>Documentación del problema 1</p>
+<p>Documentación del problema 2</p>
+<hr/>
+<h2 id="ut0303">3.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese</h2>
+
+<p>d’Algemesí Butlletí Informatiu CFGS DAW Modalitat Semipresencial</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial Índex</p>
+<p>CFGS DAW Semipresencial ........................................................................................................................... 3 Accés ........................................................................................................................................................... 3 Què vaig a aprendre i fer? ........................................................................................................................... 3 Eixides Professionals ................................................................................................................................... 4 Mòduls Professionals .................................................................................................................................. 4 Mòduls de Primer Curs (960 hores) ........................................................................................................ 4 Mòduls de Segon Curs (1040 hores) ....................................................................................................... 5 Més informació............................................................................................................................................ 5 Organització del Cicle Formatiu ..................................................................................................................... 6 Modalitat Semipresencial ............................................................................................................................ 6 Formació en centres de treball (FCT) .......................................................................................................... 6 Mòdul de Projecte ....................................................................................................................................... 7 Modalitat FP Dual ....................................................................................................................................... 7 Web Família ITACA ................................................................................................................................... 7 Avaluació .................................................................................................................................................... 8 Calendari Escolar ........................................................................................................................................ 9 1r Curs ..................................................................................................................................................... 9 2n Curs .................................................................................................................................................. 10 Horari de tutories col·lectives ................................................................................................................... 11 Horari de tutories individuals .................................................................................................................... 11 Exàmens .................................................................................................................................................... 12 1r Curs ................................................................................................................................................... 12 2n Curs .................................................................................................................................................. 12</p>
+<p>Parc Salvador Castell, 16 - Algemesí CP 46680 Algemesí Tel: 962457820 Fax: 962457821 https://portal.edu.gva.es/iessantvicent</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial CFGS DAW Semipresencial El Cicle Formatiu de Grau Superior de Desenvolupament d’Aplicacions Web té una durada de dos cursos acadèmics amb un total de 2000 hores de formació i acredita, en acabar el cicle, el títol oficial de “Tècnic Superior de Desenvolupament d’Aplicacions Web”. Aquest ensenyament no precisa de cap coneixement específic previ de l’especialitat i està focalitzat a impartir i reforçar els aspectes pràctics partint d’una consolidació de conceptes necessaris. Després de cursar els mòduls ordinaris, l’alumne accedeix durant un trimestre a la Formació en Centres de Treball.</p>
+<p>Accés Pots optar per l’accés directe si tens alguna de les següents titulacions: Batxillerat, COU, Tècnic CFGM, Tècnic Superior CFGS, Titulació Universitària. Què vaig a aprendre i fer? En acabar els estudis de DAW, l’alumne serà capaç de</p>
+<p>• Configurar i explotar sistemes informàtics, adaptant la configuració lògica del sistema segons les necessitats d’ús i els criteris establerts. • Aplicar tècniques i procediments relacionats amb la seguretat en sistemes, serveis i aplicacions, complint el pla de seguretat.</p>
+<p>• Gestionar servidors d’aplicacions adaptant la seua configuració en cada cas per permetre el desplegament d’aplicacions web. • Gestionar bases de dades, interpretant el seu disseny lògic i verificant integritat, consistència, seguretat i accessibilitat de les dades.</p>
+<p>• Desenvolupar aplicacions web amb accés a bases de dades utilitzant llenguatges, objectes d’accés i eines de mapeig adequats a les especificacions. • Integrar continguts en la lògica d’una aplicació web, desenvolupant components d’accés a dades adequades a les especificacions.</p>
+<p>• Desenvolupar interfícies en aplicacions web d’acord amb un manual d’estil, utilitzant llenguatges de marques i estàndards web. • Desenvolupar components multimèdia per a la seua integració en aplicacions web, utilitzant eines específiques i seguint les especificacions establertes.</p>
+<p>• Integrar components multimèdia en la interfície d’una aplicació web, realitzant l’anàlisi d’interactivitat, accessibilitat i usabilitat de l’aplicació. • Desenvolupar i integrar components programari en l’entorn del servidor web, emprant eines i llenguatges específics, per complir les especificacions de l’aplicació.</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial • Desenvolupar serveis per integrar les seues funcions en altres aplicacions web, assegurant la seua funcionalitat. • Integrar serveis i continguts distribuïts en aplicacions web, assegurant la seua funcionalitat.</p>
+<p>Eixides Professionals Entre les principals eixides professionals podem mencionar</p>
+<p>• Programador web. • Programador Multimèdia. • Desenvolupador d’aplicacions en entorns web. Mòduls Professionals Mòduls de Primer Curs (960 hores)</p>
+<p>• Sistemes informàtics (160h, 5 sessions setmanals) [SI] o En aquest mòdul es tractarà la instal·lació, configuració bàsica i explotació de sistemes operatius, així com la configuració bàsica i la gestió de xarxes d'àrea local. • Bases de dades (160h + 96h, 5+3 sessions setmanals) [BD + Anglès] o En aquest mòdul s'aprendrà a dissenyar una base de dades, inserir i manipular dades mitjançant el llenguatge SQL, realitzar consultes, utilitzant entorns com SQL Server, MySql i Oracle. Aquest mòdul portarà associades les hores reservades per a l'ensenyament en anglès.</p>
+<p>• Programació (256h, 8 sessions setmanals) [PRO] o En aquest mòdul s'aprendrà a programar des del nivell més bàsic fins a la realització d'aplicacions completes de gestió: POO, declaració de dades, estructures de control, entrada i sortida, estructures internes de dades, funcions i procediments, control d'errors, obtenció de llistats, fitxers, etc.</p>
+<p>• Llenguatges de marques i sistemes de gestió d’informació (96h, 3 sessions setmanals) [LMSGI] o En aquest mòdul es tractaran les característiques dels llenguatges de marques i la seua utilització en un entorn web mitjançant XHTML i CSS. Així mateix, es veuran diferents aplicacions de XML per a la creació de documents i gramàtiques, validació i conversió de documents, etc.</p>
+<p>• Entorns de desenvolupament (96h, 3 sessions setmanals) [EDE] o En aquest mòdul s'estudiarà el procés complet seguit fins a l'elaboració d'una aplicació informàtica, utilitzant les eines programari disponibles per a l'elaboració de documentació interna i tècnica de l'aplicació, l'elaboració i execució de proves i l'optimització de codi.</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial • Formació i orientació laboral (96h, 3 sessions setmanals) [FOL] o En aquest mòdul es proporcionarà als alumnes la formació necessària per a resoldre les diverses situacions que se'ls poguessen plantejar al llarg de la seua vida laboral. A més, permetrà obtenir el títol de Prevenció de Riscos Laborals en el seu nivell bàsic.</p>
+<p>Mòduls de Segon Curs (1040 hores)</p>
+<p>• Desenvolupament web en entorn Client (140h, 7 sessions setmanals) [DWEC] o En aquest mòdul s'aprendrà a desenvolupar la part client de les aplicacions web, és a dir, la que s'executa al navegador. Per a això s'utilitzarà el llenguatge de programació JavaScript, integrat de manera nativa en tots els navegadors, comunicant-se amb el servidor mitjançant AJAX, i s'aprendrà a utilitzar frameworks per crear codi d'una manera més ràpida i fluïda.</p>
+<p>• Desenvolupament web en entorn servidor (160h+40h, 8+2 sessions setmanals) [DWES+Anglés] o En aquest mòdul es desenvoluparan aplicacions web en entorn servidor, és a dir, s'estudiarà un llenguatge de programació com PHP, Java o .Net, que s'executen en el servidor i que generen les pàgines que es lliuren a el navegador web de client. Aquest mòdul portarà associades les hores reservades per a l'ensenyament en anglès.</p>
+<p>• Desplegament d’aplicacions web (80h, 4 sessions setmanals) [DAW] o En aquest mòdul s'abordarà la instal·lació i configuració de servidors web, d'aplicacions i arxius, així com la implantació i administració d'aplicacions web. • Disseny d’interfícies WEB (120h, 6 sessions setmanals) [DIW] o En aquest mòdul s'estudiarà la planificació de la interfície web de les aplicacions d'acord amb especificacions de disseny, la creació i manteniment dels elements de la interfície aplicant guies d'estil i usant criteris d'accessibilitat i usabilitat.</p>
+<p>• Empresa i iniciativa emprenedora Emprenedora (60h, 3 sessions setmanals) [EIE] o Aquest mòdul tindrà com a objectiu principal donar una informació, de forma senzilla, del camí que l'emprenedor segueix des que té una idea de negoci fins que acaba el pla empresarial necessari per convertir-la en una realitat.</p>
+<p>• Formació en centres de treball (400h) [FCT] • Projecte de desenvolupament d’aplicacions web (40h) [PRJ] Més informació http://www.ceice.gva.es/va/web/formacion-profesional/publicador-ciclos/- /asset_publisher/FRACVC0hANWa/content/ciclo-formativo-desarrollo-de-aplicaciones-web</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial Organització del Cicle Formatiu Modalitat Semipresencial En semipresencial, els alumnes es matriculen per mòduls, que poden ser tant de primer curs com de segon curs. Per motius organitzatius, qualsevol alumne matriculat en almenys un mòdul de 2n serà considerat alumne de 2n i com a tal estarà associat a la tutoria de 2n. Els alumnes matriculats en només mòduls de primer estaran associats a la tutoria de primer.</p>
+<p>Els ensenyaments semipresencials es fonamenten en l’autoaprenentatge, guiat i assessorat per el professor de cada mòdul. En aquesta modalitat d’ensenyament té una gran importància metodològica l’ús de les diferents tecnologies de la informació i de la comunicació, dels diferents recursos que proporciona Internet, així com de la utilització de materials didàctics específics per a l’autoaprenentatge.</p>
+<p>La Conselleria d’Educació disposa de la plataforma Aules, basada en Moodle (https://aules.edu.gva.es). El portal serà la via principal de comunicació entre alumnes i professors. Al portal, el professor posarà a disposició de l’alumne materials, activitats, exercicis, etc., així com fòrums, correu electrònic i missatgeria instantània per facilitar la comunicació.</p>
+<p>La Formació Professional, en la modalitat semipresencial, inclourà activitats d’autoaprenentatge de l’alumnat i activitats presencials de formació en el centre docent (tutories col·lectives). A més, es garanteix l’atenció tutorial de l’alumnat a través de l’equip educatiu que imparteix aquests ensenyaments.</p>
+<p>Formació en centres de treball (FCT) Una vegada superats la resta de mòduls, els alumnes hauran de confirmar la seua matrícula en el mòdul de FCT per poder realitzar-lo.</p>
+<p>Els alumnes que per la seua experiència laboral relacionada amb els continguts del cicle tinguen superats, en termes de capacitats terminals, els objectius del mòdul de FCT, hauran de matricular-se per sol·licitar la seua exempció, en les condicions que per a cada curs acadèmic s'estableixen.</p>
+<p>En el mòdul de FCT un alumne només es pot matricular un màxim de dues convocatòries. La qualificació de les FCT és APTE / NO APTE.</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial Mòdul de Projecte El mòdul professional de Projecte consistirà en la realització individual d'un projecte de caràcter integrador i complementari de la resta dels mòduls que componen el cicle formatiu, que es presentarà i defensarà davant d'un tribunal format per professors de l'equip docent del cicle formatiu.</p>
+<p>Modalitat FP Dual La FP dual té per objecte la qualificació professional dels estudiants, combinant la formació rebuda en un centre educatiu amb l'activitat formativa en un centre de treball més enllà del que s'adquireix tradicionalment amb la Formació en Centres de Treball. És una formació principalment orientada a l'ocupació, amb participació activa de les empreses. Pretén adaptar la formació de l'alumne a les necessitats del mercat laboral.</p>
+<p>Característiques</p>
+<p>• Els alumnes hauran de cursar part de la seua formació en un lloc de treball i per tant aquesta formació cursada a l'empresa es realitza en modalitat presencial, tenint l'alumne la resta de formació en modalitat semipresencial. • L'FP dual és una modalitat d'estudis que tria l'alumne i conviuen en el mateix grup alumnes de FP dual amb alumnes que segueixen el sistema tradicional de formació.</p>
+<p>• La formació de cada alumne és personalitzada i per tant els continguts que es cursen en el centre i els que es cursen a l'empresa dependrà de cada lloc. • Cada grup tindrà assignat un tutor de FP dual que realitzarà el seguiment dels alumnes en l'empresa i coordinarà la seua avaluació.</p>
+<p>• L'alumne disposarà d'un instructor a l'empresa que ha de ser el responsable de la seua formació mentre l'alumne estigui en la mateixa i ha de controlar el progrés de l'alumne. • La formació rebuda a l'empresa inclou el mòdul de Formació en Centres de Treball. Web Família ITACA L'alumnat té a la seua disposició la web família ITACA (https://familia.edu.gva.es). En ella, tindrà accés a les seues notes.</p>
+<p>Així mateix, podrà comprovar de quina mòduls està matriculat. El fet que tingui visible un mòdul a l'aula virtual no implica que estigui matriculat en el dit mòdul. Per això, recomanem que la comprovació es faça a través de Web Família.</p>
+<p>Tot l'alumnat ha estat donat d'alta i ha d'haver rebut un correu electrònic per completar el registre d'alta.</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial Avaluació El primer curs del cicle està dividit en tres trimestres i el segon curs del cicle està dividit en dos trimestres.</p>
+<p>Per poder organitzar adequadament les aules d'examen, els alumnes hauran d'informar prèviament de la seua intenció d'assistir a l'examen a través de les consultes que cada professor estableixi a l'Aula Virtual.</p>
+<p>En l'última setmana de cada trimestre es realitzaran els exàmens parcials de cada mòdul. No existiran recuperacions d'aquests exàmens. En l'última setmana del període lectiu es realitzaran els exàmens de la convocatòria ordinària. Amb posterioritat, es realitzarà la convocatòria extraordinària.</p>
+<p>Els alumnes hauran de presentar-se a tots els exàmens degudament identificats (DNI, passaport, etc.) i podran sol·licitar un justificant d'assistència als exàmens.</p>
+<p>El professorat podrà realitzar Proves de Validació (PV) d’activitats o pràctiques, marcades com d’entrega obligatòria, que haja demanat durant el curs. Té com a objectiu la validació de la nota obtinguda per l’estudiant en eixes activitats. Es realitzarà el mateix dia de l'examen, i consistirà en preguntes, clarificacions o modificacions sobre el treball demanat. Contarà per a nota de l’examen, segons indique el professor amb anterioritat.</p>
+<p>La normativa permet un màxim de tres matrícules per mòdul i un màxim de quatre convocatòries per mòdul. La matriculació en un mòdul suposa poder presentar-se a dues convocatòries: convocatòria ordinària i convocatòria extraordinària. Per això s'aconsella als alumnes que no vagen a examinar-se d'algun mòdul, sempre que siga per causes justificades i dins dels terminis permesos, renuncien a una o ambdues convocatòries o bé anul·len la matrícula d'aquest mòdul. També hi ha l'opció d'anul·lar la matrícula del curs complet, perdent en aquest cas la seua plaça en el centre.</p>
+<p>En cap cas es repetiran els exàmens als alumnes que, per qualsevol motiu, no puguen assistir a les dates oficials de les convocatòries.</p>
+<p>Cal tenir en compte, que si la intenció és presentar-se a les PAU, l’alumnat deuria cursar eixe any únicament mòduls de 2n curs. D’aquesta manera, podria examinar-se de Projecte i titularia en temps i forma per realitzar la inscripció a les PAU.</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial Calendari Escolar 1r Curs Mes Setmana Dl Dm Dm Dj Dv Ds Dm Activitat Setembre</p>
+
+<p>S01 Sessió Acollida</p>
+<p>S02</p>
+<p>S03</p>
+<p>Octubre S04</p>
+<p>S05</p>
+<p>S06</p>
+<p>S07</p>
+<p>Novembre S08</p>
+<p>S09</p>
+<p>S10</p>
+<p>EX-Parcial Exàmens 1er Parcial</p>
+<p>S11</p>
+<p>Desembre S12</p>
+<p>S13</p>
+<p>S14</p>
+
+<p>Gener</p>
+<p>S15</p>
+<p>S16</p>
+<p>S17</p>
+<p>Febrer S18</p>
+<p>S19</p>
+<p>S20</p>
+<p>S21</p>
+<p>EX-Parcial Exàmens 2n Parcial Març S22</p>
+<p>S23</p>
+<p>S24</p>
+<p>S25-A</p>
+<p>Abril</p>
+<p>S25-B</p>
+<p>S26</p>
+<p>S27</p>
+<p>Maig S28</p>
+<p>S29</p>
+<p>S30</p>
+<p>S31</p>
+<p>S32</p>
+<p>Juny EX-Parcial Exàmens 3r Parcial</p>
+<p>EX-ORD Conv. Ordinària</p>
+<p>EX-EXTRA Conv. Extraordinària</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial 2n Curs</p>
+<p>Mes Setmana Dl Dm Dm Dj Dv Ds Dm Activitat Setembre</p>
+
+<p>S01 Sessió Acollida</p>
+<p>S02</p>
+<p>S03</p>
+<p>Octubre S04</p>
+<p>S05</p>
+<p>S06</p>
+<p>S07</p>
+<p>Novembre S08</p>
+<p>S09</p>
+<p>S10</p>
+<p>EX-Parcial Exàmens 1er Parcial</p>
+<p>S11</p>
+<p>Desembre S12</p>
+<p>S13</p>
+<p>S14</p>
+
+<p>Gener</p>
+<p>S15</p>
+<p>S16</p>
+<p>S17</p>
+<p>Febrer S18</p>
+<p>S19</p>
+<p>EX-Parcial Exàmens 2n Parcial</p>
+<p>EX-ORD Conv. Ordinària</p>
+<p>PROJ</p>
+<p>Març FCT1</p>
+<p>FCT2</p>
+<p>FCT3</p>
+<p>FCT4-A</p>
+<p>Abril</p>
+<p>FCT4-B</p>
+<p>FCT5</p>
+<p>FCT6</p>
+<p>Maig FCT7</p>
+<p>FCT8</p>
+<p>FCT9</p>
+<p>FC10</p>
+<p>FCT11</p>
+<p>Juny FCT12</p>
+<p>EX-EXTRA Conv. Extraordinària</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial Horari de tutories col·lectives Les tutories col·lectives són les accions tutorials necessàries per a la consecució dels objectius formatius que necessiten desenvolupar processos d'ensenyament i aprenentatge, per als que són necessaris la intervenció directa i presencial de professor. Aquest tipus de tutoria té com a objectiu orientar l'alumnat en l'estudi dels continguts curriculars programats.</p>
+<p>A la tutoria col·lectiva, el professorat exposarà els continguts fonamentals del tema, orientarà el treball que ha de realitzar l'alumnat (lectures, exercicis, entre d'altres) i aclarirà les qüestions més importants o de més difícil comprensió. En aquestes sessions, també es podran planificar pràctiques al taller d’informàtica.</p>
+<p>Hora Dilluns Dimarts Dimecres Dijous Divendres 8:00-8:55</p>
+<p>DIW SI</p>
+<p>8:55-9:50</p>
+<p>DWEC PRO</p>
+<p>9:50-10:45</p>
+<p>DWEC PRO</p>
+<p>10:45-11:15</p>
+<p>11:15-12:10</p>
+<p>DWES+Anglés BD+Anglés</p>
+<p>12:10-13:05</p>
+<p>DWES+Anglés BD+Anglés 13:05-14:00</p>
+<p>DAW LMSGI</p>
+<p>14:00-14:35</p>
+<p>14:35-15:30 DWEC EDE</p>
+<p>EIE 15:30-16:25 DWEC SI</p>
+<p>DWES+Anglés 16:25-17:20 DWES+Anglés PRO</p>
+<p>DWES+Anglés 17:20-18:15 DWES+Anglés PRO</p>
+<p>18:15-18:30</p>
+<p>18:30-19:25 DAW BD+Anglés</p>
+<p>19:25-20:20 DIW BD+Anglés</p>
+<p>20:20-21:15 FOL</p>
+<p>Horari de tutories individuals S'establiran tutories individuals que permeten atendre l'orientació personal i el suport acadèmic de l'alumnat per a possibilitar el desenvolupament de determinades capacitats terminals mitjançant l'autoaprenentatge.</p>
+<p>Aquesta tutoria es realitza preferentment de forma telemàtica online, encara que també podrà ser presencial o telefònica. Cada professor posarà a la plataforma el seu horari setmanal de tutories individuals, així com la seua organització i funcionament.</p>
+<p>d’Algemesí</p>
+<p>Butlletí Informatiu CFGS DAW Modalitat Semipresencial Exàmens 1r Curs</p>
+<p>1r Parcial</p>
+<p>21/11/2023</p>
+<p>23/11/2023</p>
+<p>3r Parcial</p>
+<p>04/06/2024</p>
+<p>06/06/2024</p>
+<p>Extraordinària</p>
+<p>25/06/2024</p>
+<p>27/06/2024</p>
+<p>Hora Dilluns Dimarts Dimecres Dijous Divendres</p>
+<p>8:00-9:50</p>
+<p>SI</p>
+<p>10:00-11:50</p>
+<p>PRO</p>
+<p>12:10-14:00</p>
+<p>FOL</p>
+<p>14:25-16:15</p>
+<p>EDE</p>
+<p>16:25-18:15</p>
+<p>LMSGI</p>
+<p>18:30-20:20</p>
+<p>BD+Anglés</p>
+<p>2n Parcial</p>
+<p>27/02/2024</p>
+<p>29/02/2024</p>
+<p>Ordinària</p>
+<p>18/06/2024</p>
+<p>20/06/2024</p>
+<p>Hora Dilluns Dimarts Dimecres Dijous Divendres</p>
+<p>8:00-9:50</p>
+<p>LMSGI</p>
+<p>10:00-11:50</p>
+<p>BD+Anglés</p>
+<p>12:10-14:00</p>
+<p>EDE</p>
+<p>14:25-16:15</p>
+<p>SI</p>
+<p>16:25-18:15</p>
+<p>PRO</p>
+<p>18:30-20:20</p>
+<p>FOL</p>
+<p>2n Curs</p>
+<p>1r Parcial 20/11/2023</p>
+<p>22/11/2023</p>
+<p>Ordinària 19/02/2024</p>
+<p>21/02/2024</p>
+<p>Hora Dilluns Dimarts Dimecres Dijous Divendres 8:00-9:50</p>
+<p>DIW</p>
+<p>10:00-11:50</p>
+<p>DWEC</p>
+<p>12:10-14:00</p>
+<p>EIE</p>
+<p>14:25-16:15</p>
+<p>16:25-18:15 DWES</p>
+<p>18:30-20:20 DAW</p>
+<p>2n Parcial 12/02/2024</p>
+<p>14/02/2024</p>
+<p>Extraordinària 10/06/2024</p>
+<p>05/06/2024</p>
+<p>Hora Dilluns Dimarts Dimecres Dijous Divendres 8:00-9:50</p>
+<p>10:00-11:50</p>
+<p>DWES</p>
+<p>12:10-14:00</p>
+<p>DAW</p>
+<p>14:25-16:15 DWEC</p>
+<p>16:25-18:15 EIE</p>
+<p>18:30-20:20 DIW</p>
+<hr/>
+<h2 id="ut03actividades">✍️ Activitats pràctiques UT3</h2>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.1 — Condiciones realización del examen - Recuperación 2º cuatrimetre</p><p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Evaluación continua Ordinaria recuperación 2º cuadrimestre. Unidades de trabajo evaluadas</p>
+<h3>UT 4 .- Servidores de aplicaciones</h3>
+<h3>UT 5.- Documentación y control de versiones</h3>
+<p>Despliegue de Aplicaciones Web CFGS DAW Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web A. BAREMO: Este examen se compone de 2 problemas: Unidades de Trabajo Nota Tiempo recomendado Problema 1 4-5 3,0 30min Problema 2 4-5 5,0 1h15min Problema 3 4-5 2,0 15min Tiempo total 2.0h B. CONDICIONES DE REALIZACIÓN DEL EXAMEN</p>
+<p>El problema 1 del examen es teórico y se realizará en papel. Durante el tiempo de realización de esta parte del examen no se podrá consultar ningún tipo de documentación. La primera parte del examen se entregará al finalizar el tiempo asignado a la misma, sin poder volver a ella, durante el resto del examen.</p>
+<p>Los problemas 2 y 3 del examen son totalmente prácticos y se realizarán en ordenador. Durante esta segunda parte, se permitirá consultar los recursos disponibles en AULES o buscar recursos en internet. No obstante, el evaluador podrá realizar un test adicional para asegurarse que el alumno es capaz de argumentar la solución propuesta.</p>
+<p>Si en algún momento se consulta el móvil o cualquier tipo de chat del ordenador el candidato será automáticamente expulsado del examen y su nota será un 0. Se recomienda apagar el móvil o como mínimo ponerlo en modo avión. En casos extremos que requieran estar localizable, el móvil se depositará antes del examen en la mesa del profesor, en modo silencio.</p>
+<p>Es obligatorio mostrar el DNI o cualquier documento (NIE, Carnet de conducir, etc) que permita comprobar la identidad del candidato. Al finalizar la evaluación, las soluciones a los problemas se subirán a una tarea disponible en AULES. Esa tarea solo estará disponible durante el tiempo de la prueba, así que se recomienda gestionar correctamente el tiempo disponible.</p>
+<p>2 / 6</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web PROBLEMA 1 El problema es de tipo test. Son 18 preguntas (3 puntos) referidas a las actividades de evaluación continua donde</p>
+<ul>
+<li>Cada acierto suma el 100% de los puntos de la pregunta.</li>
+<li>Cada fallo resta el 25% de los puntos.</li>
+<li>Todas las preguntas tienen el mismo peso.</li>
+</ul>
+<p>El cuestionario será disponible el día del examen durante el tiempo estipulado. El cuestionario se realizará online en la plataforma AULES. Una vez el cuestionario enviado, ya no será posible volver a él. En caso de imprevistos el examen se podrá realizar en papel. Si se llega a ese extremo y debido a la necesidad de realizar fotocopias y para no perjudicar al alumnado, se pasará a realizar el problema 2 y luego se realizará el problema 1.</p>
+<p>Condiciones del problema 1 si se realiza en papel. Puedes seleccionar las soluciones con lápiz, pero para la entrega del examen deberás repasarlas con bolígrafo. En caso de cambiar una respuesta después de usar el bolígrafo usa las siguientes instrucciones para modificar tu elección</p>
+<p>En caso de agotar todas las posibilidades, escribe a mano la respuesta o un comentario a la izquierda de la pregunta. Valora no contestar a alguna pregunta si no sabes seguro su respuesta. Tienes 30 minutos para realizar el cuestionario. 3 / 6 Respuesta correcta (A) Respuesta correcta (B) Respuesta correcta (C)</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web PROBLEMAS 2 y 3 El enunciado del mismo será disponible el tiempo del examen. El examen es práctico pero se deberá documentar. Las respuestas al examen se adjuntarán a un documento de libreoffice disponible el día del examen.</p>
+<p>El documento se subirá a la plataforma AULES en la tarea correspondiente al examen. 4 / 6</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web C. DATOS DEL ALUMNADO QUE SE PRESENTA AL EXAMEN: Nombre y apellidos. DNI. Firma. 5 / 6</p>
+<p>DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web Nombre y apellidos. DNI. Firma. 6 / 6</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.2 — Problema 1</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.3 — Subir hoja de respuestas.</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.4 — Assistència a l'examen.</p><p dir="ltr" style="text-align: left;">Empleneu l'enquesta per a fer una previsió d'ordinadors.<br/></p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut02actividades.html">⬅️ ✍️ Activitats pràctiques UT2</a>
+<a class="page-nav-btn" href="../ut03/ut0301.html">3.1 Problemas 2 y 3 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

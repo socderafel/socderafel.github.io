@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔧 Muntatge i Manteniment d'Equips — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Muntatge i Manteniment d'Equips</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 - P1 | P2 | P3 - CONTINGUTS</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut02/ut0201.html">2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 - P2 - PROCESADOR Y MEMORIA</a></li>
+<li><a href="../ut02/ut0203.html">2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0204.html">2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0205.html">2.5 U2 - P3 - Perifèrics i Communications</a></li>
+<li><a href="../ut02/ut0206.html">2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE</a></li>
+<li><a href="../ut02/ut0207.html">2.7 DISCOS DUROS CHS ECHS LBA</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 5</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U5 - P1 P2 P3 - PDF CONTINGUTS</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U6 - RGPD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U6 - COPIAS DE SEGURIDAD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U6 - CLASIF INFORMACION - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U6 - P1 P2 P3 PRESENTACIÓ CONTINGUTS</a></li>
+<li><a href="../ut04/ut0405.html">4.5 U6 - P1 P2 P3 - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0406.html">4.6 U6 - P1 P2 P3 - PRESENTACIÓ</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — FINAL DE CURSO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT2 — Unitat Didàctica 2</span>
+<h1>2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS</h1>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Top 6: Best Gaming SSD For 2022</p><p><a href="https://www.youtube.com/watch?v=B71gcWBR24M" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=B71gcWBR24M) ↗️</strong></a></p></div>
+<p>📎 <strong>Material de laboratori (U2 - P4 - COMPONENTS ADICIONALS):</strong> <code>U2 - P4 - Graficas, Tarjetas Expansión, Multimedia.pdf</code></p>
+<hr/>
+<p>Muntatge d’un equip microinformàtic Joan Alfred Noll Obiol Muntatge i manteniment d’equips</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Índex Introducció Resultats d’aprenentatge Disseny d’un equip informàtic. Prestacions, informació tècnica 1.1 Cicle de vida d’un sistema informàtic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.2 Anàlisi i deﬁnició dels requeriments de l’equip . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.1 Anàlisi de requeriments . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2.2 Deﬁnició dels requeriments. Potència de l’equip . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.3 Disseny de l’equip. Perﬁl segons requeriments . . . . . . . . . . . . . . . . . . . . . . . . . 1.4 Especiﬁcació de components. Tria segons requeriments . . . . . . . . . . . . . . . . . . . . . 1.4.1 Processador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.4.2 Placa base . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.3 Memòria de treball (memòria interna) . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.4 Mitjans d’emmagatzematge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.4.5 Targeta gràﬁca i targeta de so . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.6 Caixa i font d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.4.7 Perifèrics bàsics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>1.5 Model d’equip. Llista de components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.5.1 Components OEM i retail (al detall) . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.5.2 Proveïdors dels components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>Muntatge d’un equip 2.1 Procediments per a la instal·lació de maquinari . . . . . . . . . . . . . . . . . . . . . . . . . 2.2 Normativa de seguretat sobre la instal·lació de components . . . . . . . . . . . . . . . . . . . 2.3 Eines necessàries per al muntatge i manteniment d’equips informàtics . . . . . . . . . . . . .</p>
+<p>2.4 Manuals de muntatge de components . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5 Procés de muntatge de la unitat central de procés . . . . . . . . . . . . . . . . . . . . . . . . 2.5.1 Caixa i font d’alimentació . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.5.2 Memòria RAM . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5.3 Processador i ventilador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5.4 Placa base i connectors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.5.5 Unitats d’emmagatzematge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5.6 Targetes d’expansió . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2.6 Connexió dels dispositius perifèrics externs . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>2.7 Engegada de l’equip. Codis POST . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . Conﬁguració, proves i documentació del muntatge 3.1 Conﬁguració del maquinari . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.1 Els jumpers o ponts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.1.2 La BIOS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.1.3 Proves de funcionament i rendiment. Veriﬁcació del procés de muntatge. . . . . . . . 3.1.4 Instal·lació bàsica del Windows . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.1.5 Programes de "benchmark" en entorn Windows . . . . . . . . . . . . . . . . . . . . .</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic 3.1.6 Arrencada amb un CD autònom GNU/Linux . . . . . . . . . . . . . . . . . . . . . . 3.1.7 Eines de "benchmark" en l’entorn GNU/Linux . . . . . . . . . . . . . . . . . . . . . 3.2 Procés de documentació del muntatge . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>3.2.1 Documentació per al tècnic . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.2 Documentació per a l’usuari . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.2.3 Característiques de la documentació . . . . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Introducció Quan a l’agost de 1981 va sortir al mercat el primer IBM PC, es tractava d’un equip de baix cost destinat al mercat domèstic, nascut en resposta a l’èxit dels models Apple, i amb un enfocament corporatiu heretat de l’entorn empresarial de l’època. És a dir, cada fabricant d’ordinadors s’encarregava de tots els components de maquinari d’aquest, tant interns com perifèrics.</p>
+<p>Els altres fabricants de l’època o anteriors tenien una ﬁlosoﬁa similar. Tant Apple, com tots els productors d’ordinadors de 8 bits que havien comportat la primera onada informàtica al mercat domèstic venien solucions completes (ﬁns i tot de programari), encara que en alguns casos calia connectar l’ordinador a un televisor convencional.</p>
+<p>La decisió d’IBM de permetre la creació de clònics d’altres empreses, com Columbia o Compaq, i la popularització de MS-DOS com sistema operatiu d’aquests equips va provocar amb els anys la popularització de la plataforma de maquinari i programari que ha vingut en anomenar-se Wintel. Amb el temps, aquest nínxol de mercat s’ha obert a altres participants: les plataformes basades en AMD han tingut un cert èxit i cada cop és més habitual trobar PCs amb altres sistemes operatius instal·lats en lloc de Windows (com és el cas de Linux) pero al mateix temps ha aconseguit expandir-se més enllà del mercat domèstic (per exemple al sector servidors) i fer desaparèixer altres plataformes, com poden ser les basades en arquitectura PowerPC (ﬁns i tot els Apple actuals es basen en arquitectura Intel).</p>
+<p>La generalització d’un sol tipus de maquinari compatible ha fet que aparegués un actiu i populós mercat de fabricants de recanvis i actualitzacions que poden instal·lar-se en qualsevol d’aquests equips hereus del primer IBM PC. A més es tracta d’equips que, en molts casos, encara són capaços d’executar aplicacions creades en les primeres generacions de l’estàndard, trenta anys enllà.</p>
+<p>Aquesta varietat de maquinari que podem trobar al mercat avui dia permet que, amb els coneixements apropiats sobre components bàsics, de seguretat i sobre l’electricitat, puguem assemblar el nostre propi equip informàtic utilitzant components compatibles. En aquest unitat formativa veurem el procés a realitzar per realitzar aquest muntatge, des de la deﬁnició d’un projecte de muntatge, passant per la implementació de l’equip ﬁns a les proves i documentació d’aquest.</p>
+<p>A l’apartat “Disseny d’un equip informàtic. Prestacions, informació tècnica” podeu aprendre les etapes del cicle de vida d’un sistema informàtic. Aquestes comprenen l’ anàlisi de requeriments i deﬁnició de la potència necessària per a l’equip, el disseny de l’equip situant-lo en un perﬁl de treball, i l’ especiﬁcació de components , que inclou processador, placa Base , memòria RAM , mitjans d’emmagatzematge , targeta gràﬁca i de so , caixa i font d’alimentació , així com perifèrics bàsics . Un cop disposem del model d’equip, veureu els tipus de</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic components utilitzables, i els proveïdors a que podem acudir per comprar-los. L’apartat “Muntatge d’un equip” desenvolupa un projecte de muntatge comentant- ne tots els passos per tal de ser el més genèric possible. S’expliquen els conei- xements de muntatge necessaris, com procediments de muntatge , normatives de seguretat o eines i lloc de treball . També es descriu pas a pas el muntatge d’un equip, component a component i amb l’ajuda de ﬁgures que il·lustren els passos més importants. Es parla també de la conveniència de la utilització dels manuals de perifèrics. Així mateix, veureu com comprovar la connexió correcta dels components en engegar l’equip, i interpretar els codis d’error (POST) que ens indiquen la fallada o mala connexió d’algun component de maquinari.</p>
+<p>L’apartat “Conﬁguració, proves i documentació del muntatge” parteix de la base que disposem d’un equip ja muntat correctament i volem avaluar-ne el rendiment adequat i documentar el muntatge realitzat. Per a això cal que conﬁgureu correctament tot el maquinari instal·lat, sigui mitjançant jumpers (ponts) o amb el programa de la BIOS per tot seguit passar a realitzar els tests.</p>
+<p>Aquesta comprovació de rendiment o benchmarks es pot realitzar en entorn GNU/Linux o Windows , depenent de la destinació de l’equip i de les nostres capacitats tècniques. Veureu el funcionament de diverses eines destinades a cadascun dels sistemes operatius. També coneixereu el procés de documentació del muntatge realitzat, que inclou documentació per al tècnic i per a l’ usuari i aprendreu les característiques d’una documentació de qualitat.</p>
+<p>La present unitat té un contingut procedimental molt gran, ja que es basa en la realització d’un projecte de muntatge d’un equip. Cal tenir coneixements previs sobre maquinari per aproﬁtar-la completament, encara que se’n dóna una visió general que permet realitzar-la igualment. El fet de realitzar un disseny d’equip, segons els requeriments que ens vinguin donats, farà que a l’hora de muntar-lo ens assegurem un funcionament més acurat d’aquest. Quant a les habilitats manuals que requireix el muntatge d’un equip es donen indicacions sobre la forma de realitzar-lo amb cura i la qualitat requerida pels components electrònics. El procés de proves necessita la utilització d’un sistema operatiu, encara que els suports d’arranc en viu ens donen una eina molt adequada per provar l’equip abans de la instal·lació deﬁnitiva. Per últim, la documentació és un punt molts cops oblidat que cal conèixer i utilitzar per aproﬁtar la feina feta per altres i aconseguir que la que fem nosaltres també tingui una vida més llarga.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Resultats d’aprenentatge En ﬁnalitzar aquesta unitat l’alumne/a</p>
+<h3>1. Acobla un equip microinformàtic, interpretant plans i instruccions del</h3>
+<p>fabricant, i aplicant tècniques de muntatge.</p>
+<ul>
+<li>Selecciona les eines i estris necessaris per al muntatge d’equips</li>
+</ul>
+<p>microinformàtics.</p>
+<ul>
+<li>Interpreta la documentació tècnica de tots els components a acoblar.</li>
+<li>Determina el sistema d’obertura/tancament del xassís i els diferents</li>
+</ul>
+<p>sistemes de ﬁxació per a acoblar-desacoblar els elements de l’equip.</p>
+<ul>
+<li>Acobla diferents conjunts de placa base, microprocessador i elements</li>
+</ul>
+<p>de refrigeració en diferents models de xassís, segons les especiﬁcaci- ons donades.</p>
+<ul>
+<li>Acobla els mòduls de memòria RAM, els discos ﬁxos, les unitats</li>
+</ul>
+<p>de lectura/enregistrament en suports de memòria auxiliar i altres components.</p>
+<ul>
+<li>Conﬁgura paràmetres bàsics del conjunt accedint a la conﬁguració de</li>
+</ul>
+<p>la placa base.</p>
+<ul>
+<li>Executa utilitats de revisió i diagnòstic per a veriﬁcar les prestacions</li>
+</ul>
+<p>del conjunt acoblat.</p>
+<ul>
+<li>Realitza un informe de muntatge, especiﬁcant tots els detalls del</li>
+</ul>
+<p>procés.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<h3>1. Disseny d’un equip informàtic. Prestacions, informació tècnica</h3>
+<p>El fet de dissenyar i muntar un ordinador (o equip informàtic) pot estar motivat bàsicament per dos raons, relacionades amb la persona o persones que hagin de fer tot aquest procés. En primer lloc, un usuari domèstic té diverses possibilitats a l’hora d’adquirir un ordinador personal.</p>
+<p>Una d’elles és comprar-ne un de premuntat en una botiga informàtica o ﬁns i tot en una gran superfície. En aquests casos només cal anar a la botiga, recollir- lo i endollar-lo a casa (o demanar que ens ho facin els de la botiga). Però una bona raó per a muntar el propi equip és el fet que ens costarà més barat.</p>
+<p>Encara que els components microelectrònics han baixat molt de preu continua essent més econòmic fer part de la feina un mateix. D’altra banda, el fet de triar els components un per un ens donarà la llibertat de realment escollir quins components són els que volem muntar, sense haver de plegar-nos a allò que ens volen vendre.</p>
+<p>L’altra raó té més a veure amb la creació d’una petita empresa, en què podríem muntar i vendre la nostra pròpia línia d’ordinadors personals. Moltes franquícies informàtiques fan aquest tipus de negoci. Venen ordinadors amb la seva marca, els quals simplement han estat dissenyats segons una idea inicial, però en lloc de muntar-ne només un en faran sèries que es vendran a les seves botigues.</p>
+<p>Un sistema informàtic és un conjunt de parts que funcionen relacionant- se entre elles amb un objectiu precís. Les seves parts són les següents: maquinari, programari i les persones que l’utilitzen. Per exemple, un ordinador, els seus dispositius i la persona que els maneja poden constituir un sistema informàtic.</p>
+<p>Un sistema informàtic pot formar part d’un sistema d’informació; en aquest últim la informació, ús i accés a aquesta no necessàriament ha d’estar informatitzada. Per exemple, el sistema d’arxiu de llibres d’una biblioteca i la seva activitat en general és un sistema d’informació. Si dins del sistema d’informació hi ha ordinadors que ajuden en la tasca d’organitzar la biblioteca, llavors aquest és un sistema informàtic.</p>
+<p>Un ordinador es deﬁneix com una màquina programable que és capaç de respondre a un conjunt d’instruccions d’una manera predeﬁnida. Els ordinadors actuals són capaços de realitzar una innumerable quantitat de tasques que han simpliﬁcat en gran manera la feina de processament d’informació i han entrat amb força en el món de l’entreteniment. Vegeu en la ﬁgura 1.1 l’esquema bàsic d’un ordinador o equip informàtic.</p>
+<p>L’empresa de mobles IKEA ha adoptat una ﬁlosoﬁa semblant a la del mercat de components informàtics: compra les peces i monta-ho tu mateix!</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic No tots els equips informàtics estan destinats al mateix ús: hi ha equips destinats a un ús personal, i ﬁns i tot lúdic, d’altres de destinats a un ús d’una estació de treball que només utilitza un conjunt molt restringit de programes, d’altres de destinats a servidors de dades de volum considerable i uns altres de destinats a funcionar, potser, com a estacions gràﬁques de producció d’animacions.</p>
+<p>Figura 1.1. Esquema bàsic d’un equip informàtic Aquestes diferències fan que les prestacions que s’han de mesurar segons les necessitats d’ús dels ordinadors siguin diferents i prou importants per a tenir-les en compte. A grans trets, la informació tècnica necessària per a determinar les prestacions d’un equip informàtic passarà per conèixer-ne la potència de treball en diferents àmbits: el de procés, el d’emmagatzematge, el gràﬁc i el de comunicació.</p>
+<p>El procés de disseny i muntatge d’un equip o conjunt d’equips seguint uns paràmetres de qualitat adequats hauria d’incloure els passos bàsics que s’indiquen per al cicle de vida d’un sistema informàtic: estudi de viabilitat, anàlisi de requeriments, disseny, implementació, validació/prova i operació/manteniment.</p>
+<p>1.1 Cicle de vida d’un sistema informàtic El cicle de vida d’un equip informàtic és el temps que “viu” des que es dissenya sobre paper ﬁns que es rebutja o recicla. El cicle de vida de desenvolupament de sistemes informàtics es pot dividir en activitats o fases que, en general, s’ajusten a l’esquema que es mostra en la ﬁgura</p>
+<h4>1.2. Aquest esquema és el cicle de vida típic, ja que hi ha una gran quantitat</h4>
+<p>de variants que depenen de l’organització, del tipus de sistema que es realitzarà, de les preferències dels administradors, dels temps d’entrega, etc. Per exemple, en cas d’haver de muntar un sol equip informàtic no es farà la part de creació de prototipus, mentre que pot ser necessari fer-la si s’han de muntar un nombre elevat de màquines iguals per a una empresa.</p>
+<p>Les activitats típiques del cicle de vida són</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<h3>1. Estudi de viabilitat</h3>
+<h3>2. Anàlisi de requeriments</h3>
+<h3>3. Disseny</h3>
+<h4>4.1. Creació de prototipus</h4>
+<h4>4.2. Implementació</h4>
+<h3>5. Validació i prova</h3>
+<h3>6. Operació i manteniment</h3>
+<p>Figura 1.2. Cicle de vida d’un equip informàtic Fer el disseny d’un equip és complicat, ja que hi ha molts paràmetres en joc. La utilització de l’anàlisi estructurada té com a objectiu reduir aquestes diﬁcultats mitjançant la subdivisió del sistema en els components que el formen i la deﬁnició d’un model de l’equip.</p>
+<p>Aquest mètode es pot integrar en les etapes inicials del cicle de vida de l’equip, que comporten elements d’anàlisi i disseny. L’anàlisi estructurada se centra en l’especiﬁcació d’allò que es requereix que faci el sistema i després d’això es podrà elaborar un disseny físic que especiﬁqui els components per al seu ús previst.</p>
+<p>Per tant, en aquest apartat ens centrarem en el procés de disseny de l’equip, des de l’anàlisi de requeriments ﬁns al disseny. En l’etapa d’estudi de viabilitat es vol assegurar que el projecte serà realitzable i tindrà una bona rendibilitat econòmica. En el cas del muntatge d’un ordinador no és necessari fer un estudi, ja que es tracta d’un projecte aïllat, però si es vol fabricar el mateix ordinador en cadena, caldrà realitzar-lo per tal de garantir-ne l’èxit, ja que ens permetrà deﬁnir els requisits, i a partir d’aquests avaluar la relació entre beneﬁcis i costos.</p>
+<p>Consulteu en l’apartat de “Recursos de contingut” dels materials web el procés per a realitzar un estudi de viabilitat.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic L’anàlisi estructurada és una eina molt utilitzada en la creació de programari, i també per al disseny de sistemes informàtics. El model essencial forma part de l’anàlisi estructurada per a l’anàlisi de sistemes.</p>
+<p>Es pot utilitzar com a sinònim de model lògic. 1.2 Anàlisi i deﬁnició dels requeriments de l’equip Els equips informàtics estan constituïts per un conjunt de components compatibles. Per a cada component es pot trobar molta varietat de tipus i de prestacions. Tot i que per a fer certes tasques es necessita un “equip a mida”, no sempre és possible trobar-lo entre els equips comercials que hi ha en el mercat. Llavors cal cercar un equip amb unes prestacions superiors a les que es necessiten o bé cercar un equip de prestacions inferiors i acoblar-hi nous components o substituir els que no compleixen els requisit, o bé muntar l’equip que es vol a partir de components de mercat combinats adequadament. Per a dissenyar aquest equip, caldrà fer una anàlisi i deﬁnició dels seus requeriments funcionals i tècnics, a ﬁde deﬁnir els components que formaran el sistema.</p>
+<p>Un cop deﬁnits els requeriments del nostre sistema informàtic, es pot deﬁnir un model essencial que ens donarà les característiques bàsiques que ha de tenir. El model essencial reﬂecteix què ha de fer el sistema per a satisfer els requeriments de l’usuari, sense especiﬁcar com s’implementarà, és a dir, no especiﬁca com es duen a terme les funcions, ni on ni què o qui les fa.</p>
+<p>Els components d’un model essencial, tal com el deﬁneix l’anàlisi estructurada, són</p>
+<ul>
+<li>Model ambiental: deﬁneix la frontera entre el sistema i el món exterior.</li>
+<li>Model de comportament: deﬁneix les funcions del sistema perquè interactuï</li>
+</ul>
+<p>amb èxit amb l’ambient. El model ambiental deﬁneix la frontera entre el sistema i el món exterior. En altres paraules, diu què forma part del sistema i què no. Concretament, podem dir que allò que deﬁneix el model ambiental és</p>
+<ul>
+<li>Fronteres: determinen ﬁns on arriba el sistema.</li>
+<li>Ambient: grup de sistemes, persones o organitzacions amb els quals un</li>
+</ul>
+<p>sistema interactua.</p>
+<ul>
+<li>Interfícies: mostra l’intercanvi de dades entre el sistema i l’ambient.</li>
+<li>Esdeveniments: determina els esdeveniments que ocorren en l’ambient als</li>
+</ul>
+<p>quals el sistema ha de reaccionar. Per la seva banda, el model de comportament és el conjunt de models que reﬂecteixen què ha de fer el sistema i com ho ha de fer.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En un model aplicat al món del maquinari, podem considerar que el model de comportament ens dirà quin tipus d’ordinador muntem (oﬁmàtic, de jocs, etc.), mentre que el model ambiental dirà quin maquinari utilitzem i quines connexions tenen uns components o uns altres, segons els requeriments.</p>
+<p>1.2.1 Anàlisi de requeriments Aquesta etapa centra l’atenció en la interacció dels usuaris amb el sistema. Els passos a seguir són</p>
+<ul>
+<li>Obtenció de requeriments: cerca i obtenció dels requeriments consultant els</li>
+</ul>
+<p>usuaris.</p>
+<ul>
+<li>Anàlisi: comprovació de la consistència i completesa dels requeriments.</li>
+<li>Veriﬁcació: constatació que els requeriments especiﬁcats són correctes.</li>
+</ul>
+<p>En l’etapa d’anàlisi de requeriments l’analista s’encarregarà de deﬁnir els requeriments del sistema. Hem de tenir en compte que, perquè els requeriments siguin realment funcionals, cal que compleixin una sèrie de característiques, que són</p>
+<ul>
+<li>Actual: el requeriment no s’ha de tornar obsolet amb el pas del temps.</li>
+<li>Cohesió: el requeriment s’ha de dirigir a una única cosa.</li>
+<li>Complet: el requeriment ha d’estar completament declarat en un únic lloc,</li>
+</ul>
+<p>sense que falti informació.</p>
+<ul>
+<li>Consistent: el requeriment no ha de contradir cap altre requeriment i ha de</li>
+</ul>
+<p>ser completament coherent amb tota la documentació.</p>
+<ul>
+<li>Correcte/necessari: el requeriment ha de complir amb la necessitat declara</li>
+</ul>
+<p>da pels interessats en el sistema/programari.</p>
+<ul>
+<li>Factible/viable: el requeriment s’ha de poder implementar.</li>
+<li>No ambigu: el requeriment ha d’estar declarat concisament; ha d’expressar</li>
+</ul>
+<p>fets objectius, no opinions; s’ha de poder interpretar d’una única manera.</p>
+<ul>
+<li>Obligatori: el requeriment ha de representar una característica deﬁnida pel</li>
+</ul>
+<p>grup interessat en el desenvolupament del sistema/programari, i la seva absència no es pot reemplaçar.</p>
+<ul>
+<li>Observador extern: el requeriment ha d’especiﬁcar una característica obser</li>
+</ul>
+<p>vable externa o experimentada per l’usuari del producte. Adequar els components de l’equip També pot passar que es disposi d’un equip d’unes prestacions determinades que es vol utilitzar per a fer una tasca per a la qual no és del tot adequat. Cal, doncs, actualitzar aquest equip amb la substitució d’algun component per un altre d’adequat o bé afegir els components que calen per a obtenir les prestacions necessàries.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Veriﬁcable/demostrable: la implementació del requeriment s’ha de poder</li>
+</ul>
+<p>resoldre amb el mètode d’inspecció, anàlisi, demostració o prova. Es considera un requeriment (tant en enginyeria del programari com en desenvolupament de sistemes) una necessitat documentada sobre el contingut, forma o funcionalitat d’un producte o servei, en aquest cas un equip informàtic.</p>
+<p>Per a analitzar els requeriments del nostre equip, caldrà determinar-ne la potència necessària a partir de les especiﬁcacions de l’equip a muntar. Per a això, s’han de contestar les preguntes següents</p>
+<ul>
+<li>S’han de fer càlculs gaire complexos i repetitius?</li>
+</ul>
+<p>Si la resposta a aquesta pregunta és positiva, vol dir que es necessita un processador força potent i amb força memòria cau. Els requeriments del processador s’avaluen a partir d’aquesta resposta.</p>
+<ul>
+<li>Quanta memòria requereixen el sistema, els programes que s’utilitzaran i</li>
+</ul>
+<p>les dades que han de restar permanentment en la memòria? Depenent de la resposta, caldrà una quantitat de memòria més o menys gran. Els requeriments de memòria s’avaluen a partir d’aquesta resposta.</p>
+<ul>
+<li>Quin volum de dades s’ha de manipular? És gaire gran?</li>
+</ul>
+<p>Aquí es podran determinar la velocitat dels busos i la capacitat d’emmagatzemat- ge.</p>
+<ul>
+<li>Quin volum d’informació s’espera obtenir? És gaire gran?</li>
+</ul>
+<p>Amb aquesta pregunta es vol valorar la capacitat d’emmagatzematge i possible- ment la capacitat de comunicació, i si cal o no un sistema d’emmagatzematge extern. Els requeriments de velocitat dels busos de la placa base i el model d’interfície amb els sistemes d’emmagatzematge s’avaluen a partir de la resposta a aquesta pregunta i a l’anterior.</p>
+<ul>
+<li>Quants programes s’han d’emmagatzemar? Quin volum aproximat tenen?</li>
+</ul>
+<p>També són vàlides per a determinar la capacitat d’emmagatzematge que caldrà. Els requeriments de capacitat i de velocitat dels sistemes d’emmagatzematge s’avaluen a partir de la resposta a aquesta pregunta i a les anteriors.</p>
+<ul>
+<li>Es treballarà amb informació gràﬁca? Quina deﬁnició es necessita?</li>
+</ul>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Valen per a determinar la resolució tant del monitor, com de la memòria i resolució de la targeta gràﬁca.</p>
+<ul>
+<li>Es treballarà amb animacions gràﬁques? Amb quina deﬁnició? Quants</li>
+</ul>
+<p>quadres per segon? Amb aquestes preguntes es pot valorar si és necessària una targeta amb processa- dor gràﬁc i amb una extensió de memòria gran i les seves característiques. Els requeriments de la targeta gràﬁca es determinen a partir de la resposta a aquesta pregunta i a l’anterior.</p>
+<ul>
+<li>Cal comunicar-se amb l’exterior?</li>
+</ul>
+<p>Quin sistema de comunicacions es necessita? Amb quins tipus de mitjans s’ha de connectar? Per a determinar quins mitjans de comunicació seran necessaris.</p>
+<ul>
+<li>Quin volum de dades s’han de rebre/enviar? En quant de temps?</li>
+</ul>
+<p>Per a determinar la velocitat dels mitjans de comunicació. Els requeriments de tipus de connexió i velocitat es determinen a partir de la resposta a aquesta pregunta i a l’anterior. De la resposta d’aquestes preguntes, n’ha de sortir el perﬁl de les prestacions que ha de tenir l’equip i, en conseqüència, de les característiques que han de tenir els components amb què s’ha de construir.</p>
+<p>Després cal seleccionar el material necessari per a la composició de l’equip que compleixi els requeriments mínims, i es pot elaborar el pressupost del cost. 1.2.2 Deﬁnició dels requeriments. Potència de l’equip Un cop recollida tota la informació sobre què volem que faci el sistema i com ho volem, hem acabat el procés d’anàlisi de requeriments i tenim la informació necessària sobre el funcionament de l’equip a dissenyar.</p>
+<p>El pas següent serà la deﬁnició de requeriments. Els requeriments són declaracions que identiﬁquen atributs, capacitats, característiques i/o qualitats que ha de complir un sistema perquè tingui utilitat per a l’usuari. En altres paraules, els requeriments mostren quins elements i funcions són necessàries per a l’equip.</p>
+<p>Per tant, per a disposar d’un equip que tingui les prestacions exigides per les tasques que ha de realitzar, s’han de triar els components que donin la potència necessària a l’equip. Per a això, caldrà esbrinar quines seran les necessitats de cada</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En l’Unix, Linux... ...la mesura de potència que s’utilitza són els bogoMIPS, és a dir, els falsos MIPS, que és la mesura que fa servir el nucli d’aquests sistemes operatius per a calcular els cicles morts de procés. Es podria deﬁnir com els milions de vegades per segon en què el processador no pot fer res.</p>
+<p>Podeu cercar programes de benchmark a Internet. N’hi ha força de gratuïts i per a diferents usos. una de les àrees: la de procés, la d’emmagatzematge, la gràﬁca i la de comunicació. Trobareu una esquematització d’aquest procés en la ﬁgura 1.3. Figura 1.3. Requeriments tècnics a partir de la deﬁnició de la potència necessària per a l’equip.</p>
+<p>Potència de procés La potència de procés d’un ordinador es pot mesurar en MIPS (milions d’instruc- cions per segon), però aquesta mesura només permet comparar processadors d’un mateix tipus d’arquitectura de processament i de potència d’instrucció. La mesura de la potència de procés es determina per la quantitat d’instruccions per segon que és capaç d’executar un ordinador amb un model determinat de programa que té en compte la majoria de situacions que es poden produir.</p>
+<p>Els programes per a mesurar la potència de procés s’anomenen programes de benchmark. El benchmark és una tècnica utilitzada per a mesurar el rendiment d’un sistema o una part d’un sistema, sovint comparant-lo amb algun paràmetre de referència. La tècnica consisteix en l’execució d’un programa o d’un conjunt de programes en la màquina objecte de l’estudi, amb la ﬁnalitat de fer una estimació del rendiment d’un element o d’un conjunt d’elements concrets per a comparar els resultats amb els d’altres màquines semblants.</p>
+<p>La tasca d’executar un benchmark, originalment, es reduïa a estimar el temps de procés que tarda l’execució d’un programa que executa un nombre d’instruccions conegut (mesurat en milers o milions d’operacions per segon). Més endavant, en millorar els compiladors i amb la gran varietat d’arquitectures i situacions diferents, s’ha fet d’aquesta tècnica tota una especialitat. Els diferents tipus de sistemes i les diferents situacions de treball fan que la tasca de comparar dos o més sistemes sigui força complicada. A més, les comparacions possibles de temps d’e- xecució tracten sobre tasques molt especíﬁques i l’ús per part d’aquestes tasques dels recursos, com pot ser quantitat de memòria usada, quantitat d’accessos als recursos i temps d’utilització dels busos entre altres.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Per tant, per a determinades aplicacions, pot ser que el rendiment d’un sistema quant a potència de procés no estigui determinat tan sols per la freqüència del processador o processadors, sinó també per la quantitat i nivell de memòria cau, la memòria de treball de què disposa o el model d’accés als busos del sistema.</p>
+<p>Vegeu en la ﬁgura 1.4 un exemple de processador Intel. Figura 1.4. Processador Intel Core 2 Quad 6600 El processador és el màxim responsable de la potència de procés, però cal que l’acompanyin components adequats. Potència d’emmagatzematge Molt sovint, en treballs informàtics, cal processar una gran quantitat de dades, o el resultat d’un procés pot donar una gran quantitat d’informació o, ﬁns i tot, pot ser que mentre dura un determinat procés es necessiti tenir a l’abast del sistema un espai de reserva per a desar temporalment una gran quantitat de dades intermèdies.</p>
+<p>També pot ser necessari tenir reservada una gran quantitat d’informació o de programes per a l’ús del mateix sistema, o perquè el sistema és un servidor de dades o d’aplicacions. En aquests casos, el fet de disposar en l’ordinador de força espai d’emmagatzematge dóna una potència d’emmagatzematge alta, però s’ha de poder accedir a aquesta informació en un temps raonable per als processos.</p>
+<p>La potència d’emmagatzematge es mesura tenint en compte la capacitat d’emmagatzemar informació i el temps d’accés a aquesta informació. Els programes de benchmark mesuren la velocitat d’accés a les dades emmagatze- mades i donen el rendiment del dispositiu. Potència gràﬁca En alguns casos, els sistemes han de ser capaços de generar i mostrar imatges molt complexes -com és el cas de sistemes de modelatge o de disseny gràﬁc- o bé de generar i mostrar imatges molt detallades amb una cadència elevada -com pot ser el cas de les animacions cinematogràﬁques o dels videojocs d’alta deﬁnició.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Clúster d’ordinador El terme clúster s’aplica als conjunts o conglomerats d’ordinadors que treballen de manera cooperativa, construïts amb components de maquinari comuns i programari lliure que permeten obtenir una potència de procés molt gran a partir de sistemes reduïts.</p>
+<p>Un perﬁl d’ordinador oﬁmàtic pot utilitzar ﬁns i tot un processador pensat per a un ordinador portàtil, malgrat que el seu rendiment és inferior. En aquests casos, les targetes gràﬁques tenen un paper molt important, ja que la seva resolució, la quantitat de memòria disponible per a intercanviar imatges i la presència en la mateixa targeta d’un o més processadors gràﬁcs -que poden substituir amb avantatge el processador del sistema en les tasques dels càlculs de projecció geomètrica i d’il·luminació- pot fer que el sistema es pugui considerar com una estació gràﬁca prou potent.</p>
+<p>La potència gràﬁca es mesura tenint en compte la resolució màxima que és capaç de donar, la quantitat de memòria que explicitarà quantes imatges amb la màxima resolució pot emmagatzemar (frame buﬀer) i la potència del processador gràﬁc incorporat. Molts dels programes de benchmark també mesuren aquesta potència gràﬁca.</p>
+<p>Potència de comunicació Actualment, l’ordinador no és un element aïllat, sinó que moltes vegades està connectat a una xarxa o bé forma part d’un sistema més gran. Cal, doncs, que disposi de capacitat per a comunicar-se amb una o més xarxes -com podria ser el cas d’un sistema que fes les funcions d’un encaminador-, o amb altres sistemes dels quals forma part com, per exemple, un clúster d’ordinadors.</p>
+<p>La potència de comunicació es mesura tenint en compte la quantitat d’enllaços de dades del sistema i la velocitat de transferència conjunta de tots ells. La potència de comunicació es pot mesurar amb programes d’anàlisi de comuni- cacions. 1.3 Disseny de l’equip. Perﬁl segons requeriments Un cop coneguts els requeriments cal deﬁnir el model a partir del qual muntarem el nostre equip. En aquest cas el model essencial dependrà del tipus d’utilització que tindrà el nostre ordinador. Per a aquest projecte limitarem al muntatge d’un equip de sobretaula destinat a l’ús domèstic com a estació de treball. En aquest sentit farem una divisió, de les moltes possibles, dels diferents tipus d’ordinadors que es podrien muntar</p>
+<ul>
+<li>Ordinador oﬁmàtic: es tracta d’un ordinador que s’utilitzarà com a “mà</li>
+</ul>
+<p>quina d’escriure”; en general no necessitarà components d’altes prestacions. – Potència de procés: per tal fer servir processadors de textos o fulls de càlcul no es farà ús d’una potència de procés alta.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic – Potència d’emmagatzematge: els documents oﬁmàtics ocupen molt poc i, per tant, aquesta també serà baixa. – Potència gràﬁca: el monitor haurà de ser d’una mida adequada per a no cansar la vista de l’usuari, però no farà falta un resolució gaire alta ni capacitat de modelat 3D.</p>
+<p>Potència de comunicació: l’ordinador ha d’estar connectat a Internet, però no necessitarà una connexió de banda ampla si només s’utilitza el correu electrònic i programes navegadors web.</p>
+<ul>
+<li>Ordinador lúdic-multimèdia. En aquest cas pot ser un ordinador dedicat</li>
+</ul>
+<p>a la reproducció d’arxius multimèdia o a la utilització de jocs en entorn gràﬁc. En els dos casos els components hauran de tenir unes prestacions elevades per a funcionar adequadament amb els programes corresponents. Com podeu veure en la ﬁgura 1.5, la carcassa d’aquest tipus d’ordinadors pot ser molt semblant a un aparell hi-ﬁ.</p>
+<p>Potència de procés. Encara que molt del processat en el cas de les imatges estarà realitzat per la targeta gràﬁca, cal un processador de gamma alta per a donar el rendiment adequat amb els programes d’última generació. – Potència d’emmagatzematge. Els arxius multimèdia, sobretot els vídeos, i també els jocs d’última generació necessiten molt d’espai en el disc dur, de manera que caldrà un espai d’emmagatzematge gran i amb una bona velocitat de lectura/escriptura.</p>
+<p>Potència gràﬁca. És un dels punts més importants d’un ordinador d’aquest tipus. Cal que porti una targeta gràﬁca de qualitat, capaç de generar textures i polígons 3D en temps real. Els jocs d’última generació requereixen una gran capacitat de processament que ha produït una carrera espectacular en el món de les targetes gràﬁques. El cas d’un reproductor de vídeo no necessita una potència tan elevada, però no totes les targetes integrades reproduiran vídeos d’alta deﬁnició en bones condicions.</p>
+<p>Potència de comunicació. Malgrat el fet que ﬁns fa uns quants anys els ordinadors multimèdia no havien d’estar necessàriament connectats en xarxa, avui dia és molt habitual descarregar continguts multimèdia d’Internet, i ﬁns i tot veure’ls directament en la xarxa mitjançant la reproducció en temps real o streaming. En el cas dels jocs, n’hi ha diversos que requereixen connexions a la xarxa per a partides en grup, encara que en aquest cas els requeriments de velocitat de transferència de dades no són tan elevats.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic La deﬁnició de la connectivitat de l’equip i dels perifèrics necessaris ens descriu el seu model ambiental. Podem deﬁnir un perﬁl d’altes prestacions, que agafaria els valors de potència més elevats dels tres perﬁls que hem vist.</p>
+<p>S’utilitza habitualment com a estació de jocs o per a editar vídeos. Figura 1.5. Ordinador amb capacitats multimèdia (Home Thea- ter PC) Aquest tipus d’equip es pot encabir en una caixa de tipus bastidor o “rack” per a utilitzar-lo a la sala d’estar. Observeu els connectors frontals i el teclat sense ﬁl que hi ha a sobre de l’aparell.</p>
+<ul>
+<li>Ordinador servidor SOHO (small oﬃce home oﬃce server): es tractaria</li>
+</ul>
+<p>d’un ordinador que s’encarregués de fer de servidor (de ﬁtxers, d’Internet, proxy, etc.); en aquest cas la potència no seria un factor crític sempre que no estigués donant servei a molts clients.; a més, ﬁns i tot es podria tractar d’un equip sense monitor al qual s’accedís mitjançant una connexió remota.</p>
+<p>Potència de procés: podria ser una potència de procés mitjana/alta, capaç de treballar amb algunes connexions simultànies. – Potència d’emmagatzematge: depenent de l’ús que s’hi donés podria ser el punt crucial de l’equip; en el cas d’utilitzar-se com a servidor de ﬁtxers hauria de tenir una bona capacitat d’emmagatzematge i també tenir en compte la seguretat, implementant, per exemple, RAID 0 per a assegurar més les dades.</p>
+<p>Potència gràﬁca: no és un factor crucial. Una targeta gràﬁca integrada seria suﬁcient, i no tindria necessitat d’una gran resolució; ﬁns i tot en cas d’instal·lar un servidor Linux en mode text no faria falta entorn gràﬁc. – Potència de comunicació: un ordinador destinat a fer de servidor hauria de tenir una bona connexió de banda ampla, i també la xarxa interna hauria de complir requeriments de velocitat de transferència elevats.</p>
+<p>Evidentment hi ha altres tipus d’ordinadors, però aquests tres representen prou adequadament els perﬁls d’els que es munten en caixes ATX, les quals són l’objectiu del nostre projecte de muntatge. Per tant, l’anàlisi dels requeriments de cadascun d’aquests equips ens permetrà una tria acurada dels components que haurem d’utilitzar per a ajustar-nos en prestacions i preu a allò que volem aconseguir.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic 1.4 Especiﬁcació de components. Tria segons requeriments El conjunt d’elements que constitueixen un ordinador i que són físicament palpa- bles és el que s’anomena components físics. En el cas d’un projecte de muntatge també podrem parlar de components comercials, ja que evidentment ens trobem limitats als dispositius que puguem trobar en el mercat.</p>
+<p>Per a fer una tria dels components que formaran part del nostre sistema informàtic, caldrà que en coneguem a bastament les característiques tècniques, que escollim els components segons un compromís entre la qualitat i el preu, i que ens assegurem que són adequats per a la tasca que hauran de realitzar.</p>
+<p>La varietat dels components físics fa que en primera instància en fem una classiﬁcació segons la tasca que realitzen i on estan situats. Alguns dels components estaran determinats per la tria d’un component previ. Per exemple, si escollim una placa base determinada a partir de les seves prestacions quant a connexionat, estem escollint implícitament un joc de xips o chipset, i una gamma de processadors que poden funcionar en aquesta placa base.</p>
+<p>En aquest projecte ens centrarem bàsicament en el muntatge de la CPU (unitat central de procés), però també trobareu una sèrie d’indicacions per a la tria dels perifèrics adequats, que només caldrà connectar un cop muntat l’equip. 1.4.1 Processador La tria del processador és un dels punts crucials a l’hora de determinar el rendiment del nostre sistema.</p>
+<p>Malgrat que hi ha diversos fabricants que fan processadors (ARM, VIA, etc.), en el mercat domèstic i de sobretaula es tracta d’una guerra entre dos: Intel i AMD. Alguns contendents van caure pel camí, com Cyrix o Motorola, però durant molt de temps la major part del pastís se l’han repartit aquests dos contendents. Per a ser més exactes, Intel ha anat generalment per davant, però AMD ha aconseguit tenir una part important del mercat malgrat la superioritat econòmica del seu adversari.</p>
+<p>L’un i l’altre fabricant intenten a cada moment treure al mercat nous processadors que aportin alguna millora als seus predecessors: més velocitat, una velocitat de bus més alta, nous jocs d’instruccions, més nuclis, etc. En tot cas es tracta d’un món en moviment en què un processador comprat avui probablement serà antiquat l’any que ve. Llavors, se’ns pot plantejar la pregunta: quin processador m’he de comprar?</p>
+<p>La resposta, malgrat no ser única, es pot concretar en la següent: compreu el processador més nou i avançat que us pugueu permetre. En l’apartat 1 de la unitat “Components d’un equip microinformàtic” d’aquest mateix mòdul, podeu trobar una visió aprofundida dels components que formen un ordinador: tot allò que es refereix a la UCP, que incorpora el sistema bàsic d’un ordinador, és a dir, el processador, la memòria principal, la unitat de control, els busos i els canals o dispositius de comunicació entre els diferents perifèrics.</p>
+<p>Altres fabricants ARM fabrica sobretot processadors per a dispositius tipus PDA i mòbil, i també per a encaminadors o routers. Els processadors VIA estan enfocats als ultraportàtils i ordinadors de baix consum. En els dos casos es tracta de processadors integrats en la placa base. Els models enfocats als ultraportàtils són competència directa del processador Intel Atom.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Això pot semblar una obvietat, però l’explicació més detallada és la següent: l’últim processador que hagi sortit al mercat serà caríssim, mentre que el que va sortir fa sis mesos i que probablement no té tantes grans diferències amb el que acaba de treure Intel o AMD segurament val la meitat o la quarta part dels cents d’euros que costava quan va sortit al mercat; per tant, l’habitual per a un ordinador domèstic serà comprar aquest penúltim model que donarà un rendiment fantàstic a un preu acceptable.</p>
+<p>En quins casos ens decantarem per un processador més avançat? Evidentment quan necessitem la màxima potència de processament possible, com en el cas de voler muntar un equip per a l’última generació de jocs, o quan es tracti d’un equip que hagi de fer edició de vídeo.</p>
+<p>I en l’extrem oposat, quan ens conformarem amb un processador menys potent? Es donarà el cas quan només necessitem poca potència, com en el cas d’un equip destinat a usos oﬁmàtics. La tria d’un determinat processador determina quines plaques podrem utilitzar al nostre sistema i l’arquitectura del sistema.</p>
+<p>Característiques d’un processador</p>
+<ul>
+<li>Sòcol (socket). Es refereix al tipus de connector amb la placa base. El</li>
+</ul>
+<p>sòcol del processador també està determinat pel fabricant que hàgim triat. Hem de tenir en compte que busquem processadors per a muntar un equip de sobretaula. Per tant, en el cas del processador Intel podem trobar-ne de sòcol LGA478 (Pentium4), LGA775 (Pentium4, Celeron, Core 2, Xeon), LGA771 (Core 2 Extreme, Xeon), LGA1366 (Core i7) o LGA1156 (Core i7, i5) . Quant a models AMD, el mercat ofereix sòcol AM2 (Athlon 64 X2, Sempron, Opteron, Phenom), AM2+ (Athlon, Opteron, Phenom, Phenom II) o AM3 (Athlon II, Phenom II, Sempron). Aquesta llista no és exhaustiva, ja que cada sòcol ha estat capaç d’acollir diversos tipus de processador, però com la major part de components informàtics, aquest també evoluciona de manera molt ràpida.</p>
+<ul>
+<li>Freqüència. Quan parlem de la freqüència d’un processador ens referim a</li>
+</ul>
+<p>la seva velocitat de rellotge. Aquest paràmetre indica amb quina rapidesa la CPU és capaç d’executar les seves instruccions. Suposant que s’executa una instrucció per cicle de rellotge, com més ràpid vagi aquest més ràpid serà el nostre ordinador. Hem de tenir en compte, però, que l’increment d’aquesta freqüència també comporta un increment de la dissipació de calor a la nostra màquina, que se soluciona afegint-hi dissipadors i ventiladors cada cop més eﬁcients. El nivell actual d’aquest paràmetre està entorn de 2GHz o 3 GHz.</p>
+<ul>
+<li>FSB (front side bus). Del bus ens interessa sobretot la velocitat. Aquesta</li>
+</ul>
+<p>dada es refereix a la velocitat de transferència amb què la CPU es comunica amb els altres components. Tant la CPU com la placa base han de funcionar a la mateixa velocitat de transferència de dades. Encara que no és una relació</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic lineal, com més alta és aquesta velocitat, millor és el rendiment del nostre ordinador. La freqüència de l’FSB serà un submúltiple de la velocitat del processador. De manera que fFSB x multiplicador = fCPU. Actualment la freqüència és de prop de 1.000 MHz, mentre que la velocitat de transferència serà més alta perquè es transmet més d’una dada per cicle.</p>
+<ul>
+<li>Memòria cau (cache). La memòria de treball actua com un espai de treball</li>
+</ul>
+<p>d’alta velocitat per a la nostra CPU, i desa les dades amb què aquesta treballa en un moment donat. Amb això s’aconsegueix que el processador no hagi de fer càlculs amb dades desades en la RAM (molt més lenta). Com major sigui la memòria cache, més ràpidament i eﬁcientment funcionarà el processador.</p>
+<p>Actualment els processadors AMD arriben a tenir ﬁns a tres nivells de memòria cache (L1,L2 i L3). Habitualment la cache de nivell 1 es divideix en dos (una de dades i una d’instruccions). Les capacitats són d’entre 64 KB i 128 KB (L1), 512 KB i 1 MB (L2) i 4 MB (L3). Quant als models Intel s’utilizen dos nivells de cache, en què les capacitats són de prop de 4 x 8 / 16 KB en les L1 i 2 x 4 MB en les L2.</p>
+<ul>
+<li>Longitud de paraula. Entre 32 bits i 64 bits. Es refereix a la mida de les</li>
+</ul>
+<p>instruccions de treball de la CPU. En processadors de sobretaula actuals la pràctica totalitat de tenen una longitud de paraula de 64 bits, de manera que seria aconsellable utilitzar sistemes operatius també de 64 bits. Només en el cas de processadors d’equip portàtil o de baix consum encara s’utilitzen processadors de 32 bits, com és el cas de l’Intel Atom.</p>
+<ul>
+<li>Tecnologies incloses. Aquest punt es refereix als jocs d’instruccions que</li>
+</ul>
+<p>inclou el processador, i que van des de les ja venerables MMX (multimedia extensions) d’Intel o el seu equivalent 3DNow d’AMD, passant per les SSE/SSE2/SSE3/SSE4 (que han afegit noves instruccions progressivament) ﬁns als jocs d’instruccions de 64 bits (EM64T d’Intel o AMD64 d’AMD).</p>
+<ul>
+<li>Consum energètic. Aquest paràmetre deriva de la freqüència de treball,</li>
+</ul>
+<p>com també de la tecnologia de fabricació i el voltatge del nucli. Depenent del consum del nostre equip també ens variarà el grau de soroll que genera, ja que un dels components que en genera més és el ventilador del processador (com més potent sigui més soroll produirà).</p>
+<p>Cal tenir clars aquests paràmetres per a saber comparar els processadors i triar-ne un determinat model amb coneixement de causa. 1.4.2 Placa base La placa base és el circuit imprès fonamental del nostre sistema. De fet podríeu pensar que aquest és el processador, però heu de tenir en compte que la tria de placa base ens determina quins processadors (també de quina marca) podem instal·lar.</p>
+<p>També ens marca quina connectivitat tindrà el nostre equip, i evidentment ens limita la grandària mínima que podrà tenir la nostra màquina. En els recursos de contingut del web d’aquest mòdul podeu consultar un complet article sobre la despesa energètica d’un ordinador, amb diverses maneres de calcular-la.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En la unitat 1 d’aquest mòdul podeu trobar més informació sobre la font d’alimentació i el seu connexionat. A la placa base es connecten tota la resta de components: el processador, la memòria de treball, les targetes d’expansió i els dispositius d’emmagatzematge.</p>
+<p>Per a triar bé la placa base, cal que coneguem quines característiques hem de tenir en compte per a comparar unes plaques amb les altres</p>
+<ul>
+<li>Sòcol del processador. Es tracta d’un dels punts més importants, ja que</li>
+</ul>
+<p>ens indicarà quin tipus de processadors podem utilitzar en el nostre equip. Es tracta bàsicament d’un connector amb cents de contactes que ens permet connectar el processador. En alguns equips el processador es troba integrat a la placa base. Això té sentit si el sistema no ha de ser actualitzat, com pot ser el cas d’un sistema integrat o un telèfon mòbil, però en cas d’equips de sobretaula actualment sempre tindrem la possibilitat de substituir el nostre processador si s’ha avariat o si volem més prestacions a l’equip. La placa també limita quins processadors és capaç de suportar.</p>
+<ul>
+<li>Sòcol de memòria. La memòria de treball del nostre equip estarà inserida</li>
+</ul>
+<p>en aquestes ranures. Actualment es tracta de sockets DIMM (DDR2 o DDR3). Les especiﬁcacions de la placa base ens indicaran quina freqüència es capaç de suportar la nostra placa per a col·locar-hi la RAM adequada. Actualment la memòria DDR2 encara dóna molt bon rendiment a preus baixos, encara que això està canviant de manera molt ràpida.</p>
+<p>Si la placa suporta la tecnologia dual channel això comporta un increment del rendiment en l’accés a la memòria, ja que s’accedeix simultàniament a dos blocs de memòria (es fa a blocs de 128 bits en lloc dels tradicionals 64).</p>
+<ul>
+<li>Connexions d’energia.</li>
+</ul>
+<p>Generalment les plaques actuals disposen de connectors ATX 2.2 de 24 pius amb suport per a dispositius PCI-Express i un connector ATX12V dedicat al processador (des del Pentium 4), encara que podeu trobar alguna placa que només tingui un connector de 20 pius juntament al connector ATX12V.</p>
+<ul>
+<li>Joc de xips o chipset . El conjunt de xips controladors no són actualitzables</li>
+</ul>
+<p>i depenen en tot cas de la placa base que hàgim triat. Habitualment se subdivideix la seva funcionalitat en dues parts: north bridge (amb un ventilador), que controla els dispositius més ràpids, com la memòria, i south bridge, que s’encarrega de les funcions d’entrada i sortida i, per tant, dels dispositius més lents. Aquesta és una subdivisió que utilitza Intel, ja que els processadors AMD de fet fa molt temps que tenen el controlador de memòria integrat al processador. També podem trobar sistemes en què el joc de xips és un sol xip o són més de dos. Fins i tot alguns sistemes compactes tenen el processador i el joc de xips tot integrat en un sol xip.</p>
+<ul>
+<li>BIOS i pila. El model de BIOS de què disposi la placa base és un apartat</li>
+</ul>
+<p>important a l’hora de saber com interaccionarà amb els components de la placa. D’altra banda, depenent del fabricant del xip tindrà millor o pitjor suport a l’hora d’actualitzar-ne el microprogramari o ﬁrmware. La pila inclosa ha de permetre el funcionament de la BIOS sense connexió elèctrica.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Dispositius integrats. Una de les característiques que hem de conèixer és</li>
+</ul>
+<p>quins dispositius ja porta integrats, que poden ser la targeta gràﬁca, la de so o la de xarxa, entre d’altres.</p>
+<ul>
+<li>Ranures o slots d’expansió. Un dels punts importants a l’hora de triar la</li>
+</ul>
+<p>placa serà veure si és extensible fàcilment. Per a això disposarem d’una sèrie de connectors que permetran la connexió de dispositius addicionals. – Ranures PCI. Una de les ranures d’expansió més utilitzades i des de fa més temps. Encara té utilitat per a dispositius que no requereixin una gran velocitat de transferència de dades, com pot ser una targeta sense ﬁl.</p>
+<p>Ranures PCI-Express. Utilitzades inicialment per a l’adaptador gràﬁc, s’han convertit en un connector per a tot tipus de perifèrics interns. Cal saber quantes ranures té la placa base i de quin tipus són, ja que depenent del nombre de canals la velocitat és més o menys gran.</p>
+<p>Ranura AGP. La podem trobar encara en algunes plaques antigues. Utilitzada per a connectar la targeta gràﬁca. – Connectors IDE. Cada cop menys utilitzats, però la major part de plaques encara en porten un o dos per a connectar discos d’aquesta tecnologia (dos per connector).</p>
+<p>Connectors de disquet. De la mateixa manera, es conserva per raons de compatibilitat (en alguns casos és necessari per a l’actualització de BIOS o instal·lació de drivers de la placa base). – Connectors S-ATA. Els dispositius que s’hi connecten donen una velocitat de transferència de dades molt més alta que els dispositius IDE. Només se’n pot posar un per connector, de manera que és preferible tenir-ne almenys quatre.</p>
+<ul>
+<li>Connexionat. El nombre de ports USB i Firewire que permeti connectar</li>
+</ul>
+<p>la placa base ens limitarà el nombre de sortides a l’exterior que té el nostre equip. Com més elevat sigui el nombre més possibilitats de connexió de perifèrics tindrem. Han de permetre posar en funcionament els connectors del tauler frontal de la caixa, com també els del tauler posterior.</p>
+<ul>
+<li>Altres connectors. Malgrat que ja no s’utilitzen gaire, encara podem trobar</li>
+</ul>
+<p>plaques base que inclouen ports en paral·lel i en sèrie, en cas de necessitar- los per a connectar algun component antic. El factor de forma és un conjunt d’indicacions que mostren als fabricants com han de construir o muntar un component físicament i elèctricament perquè sigui compatible amb altres del mateix factor de forma.</p>
+<p>Habitualment en una caixa ATX podem instal·lar una placa ATX o microATX. Evidentment en una caixa microATX no podrem instal·lar una placa ATX. La font serà del tipus ATX2.2, amb suport per a dispositius PCI-E. Altres factors de forma. En ordinadors actuals hi ha altres formats utilitzats com el mini-ITX que té una mida molt reduïda (17cm x 17cm).</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic 1.4.3 Memòria de treball (memòria interna) L’altre component fonamental del sistema és la memòria de treball, que usual- ment s’anomena memòria RAM. La quantitat i tipus de memòria que tingui el nostre equip n’afectarà molt el rendiment, ja que es tracta del lloc en què es desen els programes i les dades mentre s’estan utilitzant, de manera que com més ràpidament s’hi pugui accedir millor.</p>
+<p>Consulteu la ﬁgura 1.6 per veure esquematitzada l’arquitectura d’un ordinador, en què s’indiquen tots els nivells de memòria (registre, memòria interna i externa). Les característiques bàsiques que deﬁneixen la memòria RAM són</p>
+<ul>
+<li>Capacitat. Els mòduls de memòria RAM es poden trobar en mides diverses,</li>
+</ul>
+<p>que van des de 128 Mb ﬁns a mòduls de 4 Gg o 8 Gg. En equips antics podem trobar mòduls de mides més reduïdes. La capacitat de la memòria és important per a aconseguir un bon rendiment en un ordinador. Es pot trobar RAM en paquets o packs que ens asseguren que tots els mòduls són de la mateixa sèrie.</p>
+<ul>
+<li>Mètode d’accés. La memòria RAM actual és en tot cas SDRAM (synchro</li>
+</ul>
+<p>nous dinamic random access memory), en la qual els accessos a la memòria se sincronitzen amb el rellotge del sistema. La tecnologia anterior era asíncrona i, per tant, no esperava el rellotge per enviar o rebre dades.</p>
+<ul>
+<li>Velocitat d’accés. A més de la velocitat de rellotge, les noves tecnologies</li>
+</ul>
+<p>(DDR, DDR2, DDR3, etc.) permeten que cada cop s’enviï més informació per cada cicle de rellotge, de manera que com més nova sigui la tecnologia de memòria més ràpida podrà ser enviant i rebent les dades al processador.</p>
+<ul>
+<li>Tipus de mòdul.</li>
+</ul>
+<p>Ens indica el format físic dels mòduls de memòria (actualment el format DIMM). Coincideix amb la tecnologia emprada, de manera que resulta impossible connectar mòduls de memòria en sòcols que no siguin compatibles (per exemple, un mòdul DDR2 no encaixa en un sòcol DDR3).</p>
+<p>Encara que les memòries actuals tenen velocitats de rellotge molt elevades, continuen sense poder competir amb la que tenen els processadors, de manera que aquests encara necessiten “sales d’espera” com són les memòries cau L1, L2 i L3, que permeten minimitzar el temps que el processador ha d’esperar que la memòria li enviï les dades que necessita a cada moment.</p>
+<p>La tria de la memòria RAM depèn un altre cop de quina memòria suporti la placa base. En resum caldrà triar entre memòria DDR2 i DDR3. La quantitat de memòria que necessitarem dependrà de l’ús que vulguem donar al sistema i, en gran mesura, de quin sistema operatiu vulguem instal·lar.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En general els sistemes operatius Windows necessiten més memòria que els equivalents d’escriptori de la rama GNU/Linux. Un equip amb 1 GB de RAM podrà fer córrer bé un sistema Windows XP o Linux 9.04, mentre que per a utilitzar Windows Vista sense problemes d’alentiment s’aconsella un mínim de 2 GB (encara que és molt millor si són 4 GB). Les versions del Windows 7 que s’han provat ﬁns ara prometen funcionar sense tants requeriments de memòria, encara que 2 GB pot ser una bona mida per a començar.</p>
+<p>S’ha de tenir en compte que els sistemes operatius de 32 bits d’escriptori no seran capaços en principi d’encaminar més de 4 GB, de manera que no té sentit posar més RAM en l’ordinador si no s’ha d’utilitzar un sistema de 64 bits. Malgrat que encara es poden trobar SIMM de memòria DDR, per a actualitzar equips antics, la gran majoria de plaques actuals funcionen amb memòria DDR2, mentre que cada cop més trobarem sistemes que aproﬁten les millors prestacions de velocitat ofertes pels mòduls DDR3.</p>
+<p>És recomanable comprar parells de mòduls de memòria, encara que la placa base no suporti dual channel (la majoria ho fan). D’aquesta manera, encara que un dels mòduls deixés de funcionar, el sistema podria continuar funcionant amb l’altre i, d’altra banda, ens resultarà més econòmic per a la mateixa quantitat de memòria.</p>
+<p>L’inconvenient és que ens serà més complicat ampliar la memòria de l’ordinador, ja que tindrem més ranures ocupades. Figura 1.6. Esquema d’un ordinador amb èmfasi en les memòries (interna i externa)Figura 1.4.4 Mitjans d’emmagatzematge Si observeu l’esquema bàsic d’un ordinador (ﬁgura 1.6) recordareu que la me- mòria principal és l’encarregada de fer les operacions que es produeixen en un moment determinat. Però hi ha una sèrie de dades que no s’estan utilitzant i que cal tenir desades. Aquesta tasca és de la memòria externa o secundària, que</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Els dispositius external-SATA funcionen a les mateixes velocitats que els SATA interns, i són competència directa dels USB i Firewire. Els discos durs d’estat sòlid (utilitzen memòria ﬂaix per a emmagatzemar les dades) són cada cop més populars per la seva rapidesa i poca despesa energètica malgrat el seu preu elevat.</p>
+<p>Tingueu en compte que els fabricants de discos durs utilitzen els bytes decimals i no binaris. Així un disc dur que es ven com a disc de 500 GB és realment de 500.000.000 bytes = 476,84 GB. habitualment és el disc dur. També es troben incloses en aquesta categoria les unitats òptiques, els lectors de targetes ﬂaix, etc.</p>
+<p>Les interfícies de connexió d’aquests dispositius són actualment</p>
+<ul>
+<li>EIDE (enhanced integrated drive electronics).</li>
+</ul>
+<p>És un format en què el dispositiu té integrada tota l’electrònica que antigament calia posar a una targeta ampliadora del PC. Els dispositius també s’anomenen P-ATA (o parallel advanced technology attachment referint-se al tipus de connector) i es connecten mitjançant un cable de tipus cinta on poden anar dues unitats, una conﬁgurada com a master (mestre) i l’altra com a slave (esclau).</p>
+<ul>
+<li>SATA. S’anomenen serial ATA (utilitzen transferència de dades serial)</li>
+</ul>
+<p>en contraposició als dispositius ATA anteriors que usaven la transferència paral·lela. Només es connecta una unitat per cable, però els cables són menys voluminosos i permeten una organització millor de la caixa i també una circulació millor de l’aire per aquesta. La transferència de dades també és molt més ràpida en les unitats S-ATA. Actualment hi ha una connexió per a dispositius externs anomenada external SATA (eSATA), que permet connectar dispositius SATA (com discos durs) directament a l’exterior de la caixa.</p>
+<ul>
+<li>SCSI. Acrònim anglès de small computers system interface (sistema d’in</li>
+</ul>
+<p>terfície per a petits ordinadors). Per poder muntar-lo és necessari que tant el dispositiu com la placa base disposin de controlador SCSI. S’havia utilitzat freqüentment en tot tipus d’ordinadors, però avui dia només continua essent popular en llocs de treball d’alt rendiment, servidors i perifèrics de gamma alta.</p>
+<ul>
+<li>USB/Firewire. Aquest tipus de dispositius estan pensats per a ser con</li>
+</ul>
+<p>nectats de manera externa a la caixa, de manera que es poden transportar fàcilment d’un ordinador a un altre. Es poden connectar “en calent” a l’equip. Hi ha una àmplia gamma de mides i capacitats, tant de discos durs com d’unitats òptiques externes. Disc dur A part de la diferència de concepte entre memòria principal i secundària, els discos durs són diferents de la RAM en el fet que es tracta d’una altra tecnologia.</p>
+<p>Els discos durs actuals utilitzen discos magnètics per a emmagatzemar les dades, en front de la memòria RAM que utilitza transistors per a desar els uns i zeros. Per a escollir un disc dur per al nostre equip també haurem de conèixer les característiques principals que el deﬁneixen</p>
+<ul>
+<li>Capacitat. Podem resumir aquest punt en la pregunta següent: “quanta</li>
+</ul>
+<p>informació hi puc posar?” Els discos durs actuals es mesuren en gigabytes, encara que comencen a ser comuns els mesurats en terabytes. Sempre que puguem escollir, és interessant tenir un disc dur tan gran com sigui possible.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Velocitat de rotació. Indica amb quina velocitat giren els discos situats dins</li>
+</ul>
+<p>el disc dur. Com més ràpid ho facin més eﬁcientment es localitzaran les dades adequades. Les velocitats són aproximadament de 7.200 rpm, 10.000 rpm, etc.</p>
+<ul>
+<li>Temps de cerca (seek time). Indica com de ràpid un disc dur pot localitzar</li>
+</ul>
+<p>una dada determinada. Es mesura en mil·lisegons (ms). Depenent de la gamma, els valors es poden trobar entre 5 ms i 10 ms.</p>
+<ul>
+<li>Buﬀer. El buﬀer d’un disc dur funciona com la memòria cau de la CPU.</li>
+</ul>
+<p>S’encarrega d’“avançar” dades que encara no s’han demanat de manera que n’incrementa el rendiment. Els valors del mercat estan entre 32 Mb i 64 Mb en discos destinats al consum domèstic.</p>
+<ul>
+<li>Mida física. La majoria de discos durs són de 3,5 polzades, de manera que</li>
+</ul>
+<p>encaixaran en un compartiment estàndard d’aquesta mida. La major part de caixes ATX tenen diversos compartiments disponibles per a aquest tipus d’unitats. Els discos de 2,5 polzades s’utilitzen a ordinadors portàtils. Tant una mida com l’altra es poden utilitzar com a unitats externes, i encabir-los en una caixa amb adaptador SATA-USB de la mida adequada.</p>
+<p>Unitat òptica Les unitats òptiques han estat durant anys el mitjà per excel·lència per a transpor- tar dades d’un sistema a un altre utilitzant un suport físic. A més, el mercat musical i de pel·lícules ha estat dominat per aquest format gràcies als CD i DVD. Els ordinadors personals amb una unitat òptica permeten llegir i enregistrar suports òptics amb facilitat. Malgrat que encara són molt utilitzats, la popularització dels suports USB i les targetes de memòria, i també els continguts en línia, estan fent baixar la utilització d’aquest mitjà. Sigui com sigui avui dia encara us serà necessari instal·lar una unitat òptica, i per a això cal conèixer-les una mica millor.</p>
+<p>Les característiques principals seran semblants a les dels discos durs: temps de cerca, velocitat de transferència de dades, velocitat de ràfega, etc.</p>
+<ul>
+<li>El temps de cerca aleatòria representa el temps que costa al capçal del disc</li>
+</ul>
+<p>arribar ﬁns a una dada concreta. Els temps són de prop de 100 ms. Com més petit sigui aquest temps més ràpid accedirem a una dada.</p>
+<ul>
+<li>La taxa de transferència de dades sostinguda indica amb quina rapidesa</li>
+</ul>
+<p>la unitat pot transferir dades sense modiﬁcar la velocitat. Són valors normals entre 2.000 Kbps i 20.000 Kbps.</p>
+<ul>
+<li>La taxa de ràfaga ens diu la velocitat de pic que pot donar una unitat.</li>
+</ul>
+<p>Aquesta pot ser d’uns 33,3 Mbps per a un dispositiu ultraDMA. Malgrat que hi ha molts formats de suport òptic —CD-ROM, CD-RW, DVD-RW, DVD-RAM, DVD-R, etc.—, avui dia és aconsellable instal·lar una unitat que sigui capaç de treballar amb tots aquests formats. També hem de tenir en compte la possibilitat de posar a l’equip una unitat de blueray, amb capacitats de ﬁns a 50</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic GB per disc en front dels 9,4 GB d’un DVD de doble capa i doble cara. Com a similituds entre els dos formats d’alta deﬁnició trobem que tots dos es basen en el làser blau, utilitzen el mateix format de compressió de vídeo i la mateixa mida que un CD/DVD, és a dir, 12 cm de diàmetre. Les diferèncieses deuen sobretot a la capacitat d’emmagatzematge (en el blueray és més gran i, per tant, té un preu més elevat). Malgrat que va sorgir com un format per a reproductors de vídeo domèstic, com sempre van acabar sorgint les unitats reproductores i enregistradores compatibles amb ordinadors personals.</p>
+<p>La batalla del làser blau. Blueray enfront d’HD DVD La guerra per succeir el DVD va durar diversos anys i encara que un dels dos formats en disputa sembla que ha guanyat la batalla, el format antic es resisteix a morir. El blueray és un format de disc òptic pensat per a emmagatzemar vídeo d’alta qualitat i dades. Per al seu desenvolupament es va crear la BDA, en què es troben, entre d’altres, Sony o Phillips. El model bàsic, d’una cara i una capa, pot emmagatzemar uns 25 GB, però també hi ha models de ﬁns a 50 GB amb doble capa.</p>
+<p>L’HD DVD fou l’altre gran candidat per a succeir el DVD, amb un model d’alta deﬁnició. Va rebre el suport de companyies de la talla de NEC, Toshiba, Sanyo i Microsoft, però això no fou suﬁcient per a imposar-se. El model bàsic té una capacitat d’emmagatzematge de 15 GB, que es tradueixen en 30 GB en cas d’utilitzar doble capa.</p>
+<p>Durant un quant temps, l’HD DVD tingué una gran acceptació, però la utilització del BlueRay a les cònsoles PlayStation3 va representar un cop molt dur per als competidors i va conduir a la supremacia de BlueRay, malgrat el preu més elevat i el fet que Microsoft muntava lectors HD DVD a les seves cònsoles XBox 360. En aquest cas, Sony va sortir guanyador de la cursa, al contrari de com havia passat amb la guerra de les cintes de vídeo, en què el format VHS va superar el Betamax impulsat per Sony.</p>
+<p>Altres dispositius Els lectors de targetes s’han convertit en el substitut de facto de les unitats de disc ﬂexible, encara que aquestes es continuen muntant als ordinadors de sobretaula actuals, en el model estàndard. A més, els lectors també es podrien convertir en substituts de les unitats òptiques (de fet alguns ordinadors com, per exemple, els UMPC ja les han descartat a favor d’altres tipus de connectivitat).</p>
+<p>Per a triar un lector de targetes cal ﬁxar-se sobretot en les velocitats de transferència de dades i també en la quantitat de tipus de targetes que sigui capaç de llegir. De fet, quan comprem un d’aquests dispositius podem llegir que es tracta, per exemple, d’un dispositiu 16x1. Amb això el fabricant ens indica que podem llegir setze tipus diferents de targetes ﬂaix amb un sol dispositiu adaptador. En la ﬁgura 1.7 s’aprecia el frontal d’un ordinador amb un lector de targetes conjuntament amb una unitat de disc ﬂexible.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 1.7. Els lectors de targetes encara conviuen amb les unitats de disquets o “ﬂoppy” 1.4.5 Targeta gràﬁca i targeta de so A l’hora de triar la targeta gràﬁca cal conèixer també què és tot el que el mercat té per oferir-nos. Primer que res cal conèixer quines són les característiques més importants que deﬁneixen aquest dispositiu</p>
+<ul>
+<li>GPU (graphics processing unit)</li>
+<li>Quantitat de memòria</li>
+<li>Interfície de la memòria</li>
+<li>Freqüència de rellotge</li>
+<li>Freqüència de la memòria</li>
+</ul>
+<p>El primer pas per a triar serà conèixer si la nostra placa base porta incorporada una targeta gràﬁca integrada. En cas aﬁrmatiu, és possible que aquesta targeta sigui suﬁcient per a les nostres necessitats gràﬁques. Habitualment això passarà si no necessitem una targeta amb grans capacitats de processament o de modelatge 3D.</p>
+<p>En cas contrari, o si igualment volem afegir-la, seguirem el procés següent. En primer lloc, triarem quina GPU volem, basant-nos en les característiques que realment ens són necessàries. Després d’això buscarem una targeta que inclogui aquesta GPU ﬁxant-nos en el preu. Algunes de les companyies que fabriquen GPU són ATI (actualment, propietat d’AMD), Nvidia, Intel o S3 Graphics (propietat de VIA Technologies).</p>
+<p>La GPU (processador gràﬁc) és el processador de la targeta gràﬁca, que descarrega el processador de l’ordinador de les tasques relacionades amb el vídeo. Podem trobar GPU d’una àmplia gama de preus, entre les quals les més cares estan destinades als PC de més rendiment (en molts casos, ordinadors destinats als jocs Consulteu algunes pàgines que us ajudaran a triar una GPU adequada en la secció “Annexos” del web del mòdul.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En la secció “Adreces d’interès” del web del mòdul podeu consultar informació ampliada sobre targetes de so y a la de “Recursos de contingut” una llista de marques. Un targeta de so per a un sistema d’altaveus 5+1 requeriria cinc connectors (un per a cada canal d’audio).</p>
+<p>3D). La gamma mitjana és adequada com a reproductor multimèdia, mentre que la gamma baixa és suﬁcient per a tasques oﬁmàtiques. En cas d’haver d’instal·lar una targeta gràﬁca a l’equip, aquesta ha de ser compatible amb el bus de gràﬁcs de la placa base. En alguns casos, sobretot si estem reaproﬁtant una placa, encara podem trobar el bus AGP, encara que a les plaques actuals ha guanyat la competició el bus PCI-Express.</p>
+<p>Hi ha molts fabricants de targetes gràﬁques malgrat els pocs que hi ha de GPU. Habitualment els fabricants de GPU són molt exigents quant a les especiﬁcacions que han de complir les targetes, de manera que és prou segur comprar qualsevol marca basant-se en el preu un cop trobades les característiques que es buscaven.</p>
+<p>En el moment de triar la targeta de so ens trobem en un cas semblant al de la targeta gràﬁca. Moltes plaques base actuals porten integrada una targeta de so que serà suﬁcient per a la major part de tasques de reproducció de so. Almenys, però, hauríem de tenir en compte si la targeta té els connectors adequats per al sistema d’altaveus que vulguem instal·lar. Si ens conformem amb un sistema de dos altaveus estèreo i només necessitem reproduir àudio d’una bona qualitat, qualsevol targeta (incloent-hi les integrades) serà suﬁcient.</p>
+<p>Si no disposem d’una targeta de so integrada o volem ampliar-ne les capacitats, podem optar per un model amb connexió al port PCI o ﬁns i tot PCI-Express. 1.4.6 Caixa i font d’alimentació Malgrat no ser un component informàtic, la caixa és indispensable per a contenir tots els nostres components. Caldrà triar-la atentament perquè s’ajusti als nostres requeriments, tant de connexionat com d’espai que ocuparà o, ﬁns i tot, de l’aspecte que ha de tenir el nostre ordinador.</p>
+<p>Una caixa estàndard és un xassís habitualment fet de metall (que resulta un bon lloc per a fer de presa de terra dels components i de l’electricitat estàtica que portem al damunt). Les plaques que tanquen el xassís habitualment també són de metall, però de vegades n’hi ha de plàstic. La placa frontal -on trobem el botó d’engegada i els indicadors de funcionament (LED) entre altres coses- és habitualment de plàstic.</p>
+<p>Malgrat que hi ha diversos tipus de caixes, ens concentrarem en les caixes ATX, tal com ja hem fet amb les fonts d’alimentació. Es tracta del tipus més comú de caixes i, per tant, són les més fàcils de trobar i de poder escollir entre diversos models. Hi ha altres factors de forma, com les caixes de mida petita (per exemple, mini-ITX) que no permeten una instal·lació i actulització fàcil per la falta d’espai, encara que tenen altres avantatges, o les caixes de tipus “torre” que habitualment s’utilitzen per a servidors de mida gran que necessiten una gran quantitat d’unitats d’emmagatzematge o equips de refrigeració líquids que ocupen més espai que els que funcionen per aire.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic De fet, la caixa pot ser de la mida microATX o ATX, encara que ens decantarem per models ATX, ja que ens donen més capacitat de maniobra i comoditat en el muntatge de components per a la mida més gran.</p>
+<p>Quant als components, totes dues tindran bàsicament els mateixos, que inclouran connectors PS/2; USB; components d’àudio, de xarxa i, ﬁns i tot, connectors en paral·lel i en sèrie, malgrat que ja no s’utilitzen. Un altre dels paràmetres a tenir en compte serà el nombre de compartiments (espai destinat a unitats d’emmagatzematge) de 3,5 o 5,25 polzades de què disposa la caixa. N’hi ha tant d’externes com d’internes.</p>
+<p>Una altra de les característiques de la caixa és el nombre de compartiments de què disposa. Els compartiments són espais de mida estàndard pensats per a situar-hi components informàtics a dins d’una caixa d’ordinador. En general es troben a dins de la caixa, i poden ser interns o externs, entenent com a externs els que ens permeten l’accés al component des de l’exterior de la caixa (com, per exemple, en el cas d’una unitat de CD). Usualment els compartiments s’utilitzen per a unitats d’emmagatzematge, encara que hi podem posar altres dispositius com ports USB, lectors de targetes, pantalles LCD d’estat de l’ordinador, i altres.</p>
+<p>Moltes caixes porten integrada la font d’alimentació, però probablement ens interessarà muntar la que hàgim escollit nosaltres. Per a tenir un equip realment estable, necessitem posar-hi una font d’alimentació que sigui suﬁcient per a tots els components que hi muntem i amb una ﬁabilitat adequada perquè no falli en moments inadequats. Per a saber de quina potència (en watts) hem de posar la nostra font tenim una manera senzilla de fer-ho</p>
+<ul>
+<li>Consultarem els components a muntar per veure quins requeriments de</li>
+</ul>
+<p>potència tenen (en alguns casos els trobarem en volts × amperes, que haurem de multiplicar per a trobar els watts).</p>
+<ul>
+<li>Sumarem les potències de tots els dispositius per saber quin serà el consum</li>
+</ul>
+<p>màxim de la nostra font.</p>
+<ul>
+<li>Escollirem una font que superi amb escreix la suma de les potències que</li>
+</ul>
+<p>hem vist abans. I per què hauríem de triar una font més gran que el que aparentment ens fa falta? És molt senzill: és molt habitual que el nostre ordinador hagi de ser actualitzat en qualsevol moment, i cada un dels components que hi afegim se sumarà a la potència incial que havíem calculat; i, d’altra banda, si la font està treballant sense haver d’arribar ﬁns als seus límits, amb això també aconseguim que la potència subministrada sigui molt més estable que amb una font que estigui treballant “forçada”.</p>
+<p>1.4.7 Perifèrics bàsics El projecte de muntatge no comporta el muntatge dels perifèrics, ja que aquests ja venen muntats a l’hora de comprar-los i només caldrà connectar-los. De totes La potència d’una font... ...ha de ser suﬁcient per a alimentar tots els components que hàgim muntat al nostre ordinador personal.</p>
+<p>Consulteu una calculadora de potència per a la vostra font en els “Recursos de contingut” al web d’aquest mòdul.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Trobareu informació aprofundida sobre perifèrics en l’apartat “Manteniment de perifèrics” de la unitat formativa “Manteniment d’equips microinformàtics”. En la secció “Adreces d’interès” de la web del mòdul, consulteu comparatives de components de maquinari actual.</p>
+<p>Dins un disseny basat en l’anàlisi estructurada, la llista de components a muntar es podria considerar com el model essencial del nostre sistema informàtic. maneres els hem d’incloure en el projecte de creació del sistema informàtic, ja que sense aquests no hi podria haver interacció entre l’usuari i el seu ordinador.</p>
+<p>De manera que en aquest apartat veurem com s’escullen els perifèrics bàsics que ens han de permetre comunicar-nos amb el nostre equip. Necessitarem tant perifèrics d’entrada (teclat i ratolí) com de sortida (monitor).</p>
+<ul>
+<li>Monitor. Malgrat que encara podem trobar en el mercat alguns monitors</li>
+</ul>
+<p>CRT, el mercat actual ja està dominat per les pantalles LCD. Es tracta de dues tecnologies molt diferents, però allò en què ens afecten més, ara que els monitors LCD han arribat a la maduresa, és en el fet que aquests ocupen molt menys! Per a comprar-ne un o un altre ens haurem de ﬁxar en la mida, el factor de forma i la resolució màxima. Els connectors que podem utilitzar són el venerable connector VGA, i el connector DVI, encara que moltes targetes de vídeo porten altres connectors com l’S-vídeo, que permetran connectar l’ordinador a un televisor amb aquest connector integrat (també pot ser que tingui entrada DVI).</p>
+<ul>
+<li>Teclat. El teclat per a un ordinador domèstic pot ser un teclat estàndard de</li>
+</ul>
+<p>cent quatre tecles, que inclou les dedicades al sistema operatiu Windows, o també pot ser un teclat multimèdia, que afegeix tecles amb funcions especials: accés al reproductor multimèdia, llançament de programes, etc. La interfície amb el PC pot ser del tipus PS/2, USB o sense ﬁl. La més utilitzada en els ordinadors actuals és la USB, encara que podem trobar dispositius dels altres tipus sense problemes.</p>
+<ul>
+<li>Ratolí. Tots els sistemes operatius actuals (amb entorn gràﬁc) necessiten</li>
+</ul>
+<p>un ratolí (mouse) perquè l’usuari interaccioni amb l’entorn de ﬁnestres. Sens dubte, el ratolí serà del tipus amb almenys dos botons i rodeta de desplaçament. La connectivitat del mouse serà per al mateix tipus de ports que la del teclat, i també és molt comú el connector USB.</p>
+<p>A part d’aquests perifèrics bàsics, qualsevol ordinador actual en necessitarà d’altres que faran la feina més productiva o més agradable, com poden ser la impressora, escàner (també els equips multifuncionals), equips d’altaveus, comandaments per a jocs, etc. 1.5 Model d’equip. Llista de components Ja coneixem tots els components. Ara és el moment de decidir quins haurem de posar al nostre sistema. Amb aquest conjunt de components podem crear un model essencial del nostre equip que inclourà totes les peces que hi instal·larem, els connexionats, i les característiques bàsiques dels components.</p>
+<p>En aquest esquema s’inclouran tots els components de la llista següent, que caldrà comprar o reaproﬁtar. La llista hauria d’incloure</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Una caixa o xassís del factor de forma adequat.</li>
+<li>Una font d’alimentació que encaixi amb el factor de forma de la placa base</li>
+</ul>
+<p>i la caixa.</p>
+<ul>
+<li>Una placa base amb el factor de forma adequat i que suporti la CPU</li>
+</ul>
+<p>escollida.</p>
+<ul>
+<li>Un processador que funcioni amb la nostra placa base.</li>
+<li>Una memòria que funcioni amb la nostra placa base i processador.</li>
+<li>Una targeta gràﬁca que pugui funcionar amb la placa base (pot ser integra</li>
+</ul>
+<p>da).</p>
+<ul>
+<li>Una targeta de so que funcioni amb la placa base (també pot ser integrada).</li>
+<li>Un disc dur (SATA o IDE).</li>
+<li>Una unitat òptica (també SATA o IDE).</li>
+<li>Una unitat de disquet.</li>
+<li>Uns altaveus.</li>
+<li>Un teclat.</li>
+<li>Un ratolí.</li>
+<li>Un monitor.</li>
+</ul>
+<p>També és important disposar d’una llibreta de muntatge en què anotarem els components que s’han d’instal·lar. Aquesta documentació serà molt útil durant el procés, ja que la podrem actualitzar amb totes les incidències que es produeixin durant el muntatge o actualització de l’equip.</p>
+<p>Segons els tres models escollits anteriorment, els següents són un exemple de conﬁguració per als components bàsics de cada gamma (vegeu les taules 1, 2, 3 i 4). S’ha considerat que els equips poden funcionar amb monitor, caixa, teclat i ratolí estàndard, encara que es podrien modiﬁcar per a adaptar-los encara més a l’equip dissenyat. Els components que s’han personalitzat (processador, placa base i memòria RAM) es consideren els bàsics per a un ordinador quant a capacitat de processament i prestacions. Els components triats, en conﬁguració Intel i AMD, serien</p>
+<p>Taula 1.1. Ordinador oﬁmàtic Processador Placa base RAM Intel® Procesador Celeron S 440 Boxed, FC-LGA4, “Conroe-L” Gigabyte GA-EP31-DS3L amb so, Gigabit-LAN, SATAII Buffalo DIMM 2 GB DDR2-800 FSX800D2B-2GJ, Firestix AMD Athlon64 X2 5200+ Boxed, OPGA, “Brisbane” ASRock N68-S µATX amb so, VGA, LAN, SATAII-RAID Buffalo DIMM 2 GB DDR2-800 FireStix Heat En aquest cas (taula 1.1), l’ordinador porta totes els controladors integrats en la placa base i no té una gran potència de processament. El preu dels components</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic El muntatge en RAID-1 comporta un disc de suport per cada un que tinguem de dades, ja que tota la informació es desarà dos cops. És aconsellable que el RAID sigui implementat pel maquinari per a aconseguir un rendiment millor.</p>
+<p>respecte a l’ordinador sencer és d’aproximadament el 40%. Només caldrà afegir- hi un disc dur IDE o SATA de gamma baixa. Taula 1.2. Ordinador lúdic/multimèdia Processador Placa base RAM Intel® Core™2 Duo E8400 Boxed, FC-LGA4, “Wolfdale” ASRock P45XE-WiFiN amb so, 2x GLAN, WLAN, SATAII-RAID, eSATA Corsair Kit DIMM 4 GB DDR2-1066 Dominator AMD Phenom II X2 550 Boxed, OPGA, “Callisto” Asus M4A78T-E amb so, HDMI, DVI, G-LAN, FW, RAID, eSATA Corsair Kit DIMM 4 GB DDR3-1333 En aquest cas (taula 1.2) caldria afegir</p>
+<ul>
+<li>Un disc dur SATA-II</li>
+<li>Sintonitzador de televisió</li>
+</ul>
+<p>Els components fonamentals es troben en un rang de preus i prestacions mitjà. En aquest cas el preu dels components bàsics ja comporta un pes aproximat del 60% del total. Taula 1.3. Ordinador servidor Processador Placa base RAM Intel Xeon E5410 Harpertown 2.33 GHz 12 MB L2 Cache LGA 771 80 W Quad-Core ASUS DSBV-DX Dual LGA 771 Intel 5.000 V SSI CEB 1.1 Dual Intel Xeon Server 2x G.Skill Kit DIMM 4 GB DDR2-1066 AMD Opteron 2360SE Barcelona 2.5 GHz Socket F 105W Quad-Core TYAN S3970G2NR-E Tomcat h1000E Dual 1207(F) Broadcom BCM-5785 ATX Dual AMD 45nm Quad-Core Opteron 2300 Series Processors (Barcelona/Shanghai) Server 2x G.Skill Kit DIMM 4 GB DDR2-1000 Per a completar l’equip (taula 1.3) caldria afegir-hi</p>
+<ul>
+<li>Almenys dos discos durs SCSI per a muntar-los en RAID (depenent de la</li>
+</ul>
+<p>conﬁguració de RAID implementada). Als tres models ja vistos, podem afegir un model d’“altes prestacions” (taula 1.4), que s’utilitzaria en tasques que requerissin la màxima potència en totes les seves variants. Això es produirà sobretot en equips destinats a l’edició de vídeo i a funcionar com a estació de jocs d’última generació.</p>
+<p>Per tant, aquest tipus d’ordinador té algunes particularitats quant a potència de processament i qualitat dels components que augmenten el preu. Els components fonamentals ja són de qualitat molt elevada i, per tant, comporten aproximadament un 80% del total del preu de l’equip.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Taula 1.4. Ordinador gamer / edició de vídeo Processador Placa base RAM Intel® Core™i7-975 4x 3333 MHz, 4x 256 kByte, 6400 MT/s, Bloomﬁeld Asus Rampage II Extreme Intel® X58 Express, 6.400 MT/s, 3 PCIe 2.0 x16, SLI, Crossﬁre, Socket 1366 2x Kingston ValueRAM Tri-Kit DIMM 6 GB DDR3-1066 AMD Phenom II X4 965 Deneb 3.4 GHz 4 x 512 KB L2 Cache 6 MB L3 Cache Socket AM3 140 W Quad-Core ASUS M4A79T Deluxe AM3 DDR3 AMD 790FX ATX AMD 2x Kingston HyperX Kit DIMM 4 GB DDR2-800 En aquest cas caldria afegir</p>
+<ul>
+<li>Dos discos durs SATA-II Hitachi HDT721010SLA360 1 TB per a muntar</li>
+</ul>
+<p>los en RAID-1 (mirall).</p>
+<ul>
+<li>Targeta gràﬁca d’altes prestacions, si és possible que suporti SLI o Crossﬁre.</li>
+<li>Targeta de so de gamma alta.</li>
+<li>Sistema de refrigeració per aire de gamma alta o líquid.</li>
+</ul>
+<p>Aquest perﬁl d’ordinador representa la gamma més alta en el mercat de consum domèstic. El preu per als components bàsics és alt, ja que es tracta dels més avançats que es poden trobar. De la mateixa manera que en el cas de l’ordinador servidor, els components fonamentals tindran molt pes en el preu, i aquest es pot moure entre el 80% i el 90% del total de l’equip depenent de si el muntem amb components AMD o Intel.</p>
+<p>1.5.1 Components OEM i retail (al detall) A l’hora de comprar els components d’un sistema PC, a part de tots els detalls tècnics que hem tingut en compte a l’hora de triar el component (atributs, característiques, limitacions i costos), també hauríem de valorar quin tipus de component compraem. Molts components de PC estan disponibles en dues formes similars, però diferents: al detall o OEM. Les unitats poden semblar gairebé iguals però poden ser molt diferents a l’interior, o en com el fabricant les tracta després de la venda. Aquest és un tema molt important en el mercat dels PC d’avui, així que cal tenir-lo en compte.</p>
+<p>Una de les claus per a l’èxit de la plataforma de PC fou l’aparició del mercat de fabricació casolana i el PC fet a mida. Això és possible perquè la majoria de components són estàndard i intercanviables. No fou ﬁns fa pocs anys que l’usuari ﬁnal va poder comprar els components interns, ja que primer només es venien a fabricants ﬁnals. El mercat va madurar i els “clons” van començar a dominar el mercat amb l’aparició de gran quantitat de marques i models. Això va permetre a l’usuari l’actualització de la seva màquina i la construcció de PC a mida.</p>
+<p>En entreveure aquest nou mercat, els fabricants van començar a fabricar versions comercials empaquetades dels components interns, amb manuals SLI i Crossﬁre: Són les tecnologies de NVIDIA i ATI, respectivament, que permeten connectar dues targetes gràﬁques al mateix ordinador, utilitzant bus PCIe, per a augmentar el rendiment gràﬁc.</p>
+<p>Els components de PC... ...es van començar a fer compatibles força d’hora en la història dels ordinadors PC compatibles - ﬁns i tot les màquines més antigues es poden actualitzar d’una manera o altra.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic L’estat actual del mercat és, doncs, que gairebé qualsevol component intern del PC es pot comprar en la versió minorista o de l’OEM. D’una banda, això és bo, ja que es poden aconseguir components a preu més baix, però l’usuari ha d’entendre quines són les diferències entre components OEM i comercials per a poder prendre una decisió meditada.</p>
+<p>Un fabricant de components ven peces al detall suposant que seran adquirits pels usuaris ﬁnals, i les peces OEM per a fabricants a gran escala d’usuari, programari de suport i, evidentment, amb un preu superior que el que tenien els que ja estaven muntats. Els fabricants continuaven venent components “a l’engròs” per als fabricants de PC (o muntadors). Són els anomenats components OEM, en referència a un terme comú per a un constructor d’equip gran: fabricant d’equips originals (original equipment manufacturer). Finalment, a mitjan anys noranta els fabricants van començar a vendre els seus excedents de components OEM a particulars o petites empreses, principalment per correu o canals d’Internet. Després d’un quant temps, els venedors van començar a demanar els components OEM especíﬁcament per a la revenda als usuaris ﬁnals, sense necessitat de vendre’ls amb l’equip ja muntat.</p>
+<p>Cal comprar components OEM assumint-ne les responsabilitats, ja que són components pensats per a fabricants a gran escala. Diferències entre peces OEM retail</p>
+<ul>
+<li>Embalatge i contingut. Normalment, els components al detall són envasats</li>
+</ul>
+<p>amb tots els materials de suport que l’usuari ﬁnal haurà d’instal·lar i conﬁ- gurar. Les parts OEM solen ser més simples: el component es proporciona només amb els elements de suport que un fabricant necessita per a instal·lar el dispositiu. Generalment s’inclou el component en un mínim d’embalatge -potser només una bossa antiestàtica- i potser alguns jumpers i un disc de controladors (vegeu-ne un exemple en la ﬁgura 1.8). Normalment, no tindrà un manual a tot color, una caixa de luxe, accessoris de muntatge, cables i altres accessoris. Això estalvia molts diners al fabricant.</p>
+<ul>
+<li>Personalització. Quan un fabricant d’ordinadors grans vol signar un con</li>
+</ul>
+<p>tracte amb un fabricant de targetes per a comprar quantitats molt elevades, generalment pot fer alguns “ajustaments” al producte per a reduir-ne els costos o canviar-ne les característiques. Una vegada més, això estalvia els diners d’OEM, i en última instància, estalvia als usuaris ﬁnals dels seus equips. Però per al comprador de components, això signiﬁca que potser no compra exactament el que pensa que necessita.</p>
+<p>Figura 1.8. Un component OEM ve dins una bossa antiestàtica i molts cops només inclou el disc de controladors</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Els components retail són pensats per al mercat de consum i inclouen tots els manuals, garanties i discos de controladors oferts pel fabricant. Per exemple, una targeta de vídeo té memòria de vídeo més lenta, o els proces- sadors OEM sovint no tenen ventiladors de CPU, perquè els fabricants d’equips utilitzen la seva pròpia solució de refrigeració. D’altra banda, alguns components poden ser exactament el mateix, però amb menys embalatge.</p>
+<ul>
+<li>Garantia.</li>
+</ul>
+<p>Aquest és potser el problema més gran de tots quan es trac- ta de components OEM: els fabricants de components solen negar-se a proporcionar-los la mateixa garantia. Això es deu al fet que són productes destinats al muntatge en grans quantitats, de manera que la garantia la donaria el fabricant de l’equip.</p>
+<ul>
+<li>Suport tècnic. De manera similar a la qüestió de la garantia, les peces OEM</li>
+</ul>
+<p>es venen normalment als fabricants d’equips sense cost addicional per a cobrir els previstos de suport tècnic. El fabricant de components sovint no donarà suport a l’usuari ﬁnal. Els components OEM estan pensats inicialment per a grans majoristes, i generalment només inclouen el component en una bossa antiestàtica i un disc de controladors.</p>
+<p>Els punts anteriors no han de ser motiu per a evitar els components OEM, sinó que cal saber de quin peu calcen perquè no ens agaﬁde sorpresa. Si la rebaixa en el preu (que ﬁns i tot pot ser del 20%) ens compensa les limitacions de la peça OEM, la comprarem sense cap problema, sempre sabent a què ens exposem.</p>
+<p>1.5.2 Proveïdors dels components Per a cada component hauríem de saber clarament quines característiques neces- sitem i assegurar-nos que és compatible amb la resta de components del sistema. Per exemple, no utilitzarem un disc dur IDE si la nostra placa base ja no porta aquest conector.</p>
+<p>En aquest punt caldria deﬁnir especíﬁcament quins són els components que volem muntar. Podem comprar les peces a diversos llocs, segons les nostres possibilitats</p>
+<ul>
+<li>Distribuidor físic.</li>
+</ul>
+<p>Es tracta de botigues d’informàtica que venen tant components com ordinadors muntats. És útil en cas que tinguem problemes en els processos d’instal·lació, ja que podem acudir al servei tècnic de la botiga, que ens ajudarà per un preu acordat.</p>
+<ul>
+<li>Distribuidor amb espai de muntatge. Algunes botigues permeten comprar</li>
+</ul>
+<p>tots els components i ofereixen un espai perquè l’usuari es munti l’equip. L’ajuda del tècnic de la botiga és opcional i, evidentment, de pagament. Les peces OEM de vegades són lleugerament diferents de les versions al detall. Algunes personalitzacions són relativament poc importants, però d’altres poden ser més signiﬁcatives.</p>
+<p>Si compareu el cost dels components d’na quantitat de proveïdors diferents i alguns els venen per molt menys que altres, hi ha moltes possibilitats que es tracti de peces OEM. Assegureu-vos de preguntar de manera explícita. Els fraus... ...de vegades es produeixen en la compra de components en línia i, per tant, sempre cal comprar en botigues de reputació garantida.</p>
+<p>Les cases de subhastes en línia tenen programes de protecció del consumidor. En les “Adreces d’interès” del web del mòdul podeu trobar pàgines en què s’avaluen els components segons l’opinió dels usuaris o de l’editor de la pàgina.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Botiga en línia. En aquest cas podem comprar els components i ens els</li>
+</ul>
+<p>enviaran a casa a canvi del pagament de les despeses d’enviament. Habitu- alment el preu serà més baix que en una botiga física, ja que s’estalvien les despeses del distribuïdor, encara que no tenim la possibilitat de consultar el servei tècnic de manera presencial, i en cas d’haver de retornar algun producte gairebé sempre haurem de tornar a pagar les despeses d’enviament.</p>
+<p>La botiga pot ser nacional o internacional. El fet de comprar en botigues internacionals afegeix el problema de la distància i en molts casos dels impostos de duana, que s’afegeixen al preu del producte si aquest ve de fora de la Comunitat Europea. D’altra banda, també pot ser que la botiga en línia tingui associades botigues físiques, de manera que tindrem un lloc on anar a presentar reclamacions si escau, o que es tracti només d’un magatzem de distribució, de manera que només el podrem utilitzar per a comunicar-nos per telèfon o Internet.</p>
+<ul>
+<li>Pàgines de subastes.</li>
+</ul>
+<p>És habitual comprar components electrònics en pàgines de subastes (com eBay). En alguns casos es tracta de components posats a la venda per botigues i, en altres, per particulars. Malgrat que no tots els venedors tenen la mateixa garantia, molts cops les empreses de subhastes tenen assegurances que protegeixen el consumidor en cas d’estafa.</p>
+<p>Tant si volem comprar els components a una botiga física o en alguna botiga en línia, és interessant que busquem exemples dels components que ens anírien bé per a tenir més clar què és el que hem de comprar. Per a això podem buscar diverses pàgines en què trobarem els models que hi ha en el mercat dels components desitjats. Aquest tipus de pàgines ens ofereixen comparatives, notícies sobre els components més actuals, consells d’instal·lació, etc. En ﬁ, tota classe d’informació perquè puguem escollir i muntar els nostres components amb garanties.</p>
+<p>Una altra possibilitat és la compra d’equips premuntats, que cada cop es troben a un preu més baix, i que podem actualitzar al nostre gust afegint els components adequats. En aquest moment, al model essencial del nostre equip i més concretament a la llista de components, podem afegir la marca i model de cada component que volem muntar, com també algun component de reserva per si no trobem la nostra primera opció.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<h3>2. Muntatge d’un equip</h3>
+<p>Un cop es disposa dels components que hauran de formar part de l’equip, és el moment de muntar-lo. Els components s’han triat per les seves característiques i tenint en compte que siguin compatibles. Per tant, el muntatge hauria de ser un procés senzill i sense problemes posteriors. Malgrat això, un cop muntat l’equip caldrà assegurar-se que els components funcionen com se suposa que ho han de fer (complint les especiﬁcacions de funcionament).</p>
+<p>Una vegada muntat l’equip, se n’ha de veriﬁcar el bon funcionament. Per a això seran vàlides les eines de benchmark, per a assegurar-se que compleix els requeriments que es van deﬁnir en el seu moment. En l’etapa d’implementació haureu d’assemblar els components escollits anteriorment, seguint els procediments adequats i assegurant-ne una bona connexió i funcionament.</p>
+<p>En aquest apartat veureu en detall el procés de muntatge d’un equip. Malgrat que el fet de muntar uns components o uns altres marca algunes diferències a l’hora d’assemblar els components, es tracta d’un procediment molt similar, de manera que l’apartat us serà útil per a conèixer els procediments generals de muntatge, veient en aquest cas un exemple concret.</p>
+<p>2.1 Procediments per a la instal·lació de maquinari Moltes vegades, en la nostra vida laboral, ens trobarem amb la necessitat d’ins- tal·lar un sistema informàtic, d’haver-lo de reparar o d’ampliar. En funció dels components del sistema informàtic en qüestió, haurem de procedir de manera diferent.</p>
+<p>Però, en tot cas, serà necessari observar les indicacions següents</p>
+<h4>1) Determinar quina operació cal realitzar</h4>
+<h4>2) Disposar de tota la documentació tècnica necessària</h4>
+<h4>3) Planiﬁcar l’operació</h4>
+<h4>4) Prendre les mesures de seguretat adequades (en l’àmbit elèctric i físic)</h4>
+<h4>5) Realitzar l’operació</h4>
+<h4>6) Comprovar el funcionament correcte del canvi realitzat</h4>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Vegeu l’apartat “Conﬁguració, proves i documentació del muntatge” d’aquesta unitat per a una explicació més extensa sobre els codis POST.</p>
+<h4>7) Anotar o registrar les operacions realitzades</h4>
+<p>Un dels punts més importants i al qual caldrà dedicar més esforços serà, doncs, la interpretació eﬁcient i correcta de la documentació tècnica de cada component dels ordinadors. Excepte si es tracta de dispositius que es poden connectar i desconnectar en calent (hot plug), és a dir, sense apagar l’ordinador, per a realitzar les operacions amb seguretat caldrà observar els passos següents</p>
+<h4>1) Apagar l’ordinador</h4>
+<h4>2) Desconnectar l’ordinador de la xarxa elèctrica</h4>
+<h4>3) Connectar-hi o desconnectar-hi el dispositiu</h4>
+<h4>4) Connectar l’ordinador a la xarxa elèctrica</h4>
+<h4>5) Engegar l’ordinador</h4>
+<h4>6) Reconﬁgurar el sistema, tant si s’ha instal·lat com desinstal·lat un dispositiu,</h4>
+<p>mitjançant les utilitats proporcionades pel sistema operatiu La majoria de dispositius i sistemes operatius actuals suporten el Plug and Play (o PnP), un sistema que autoconﬁgura els paràmetres de funcionament intern del dispositiu, com ara el número d’IRQ (interrupt request) o les adreces d’entrada/sortida. Això facilita la conﬁguració dels dispositius i evita problemes com la duplicitat de valors per a diferents dispositius.</p>
+<p>Sovint, la instal·lació o canvi estaran forçats pel mal funcionament d’algun dels components del sistema. En aquests casos, serà útil conèixer el sistema d’autodiagnòstic d’arrencada(power on self test) de la placa base, que amb diferents combinacions de tons llargs o curts (beep), codiﬁca el problema detectat.</p>
+<p>Són els anomenats codis POST. N’hi ha diverses versions, depenent dels fabricants, per això és important consultar el manual tècnic de la placa base amb què treballem. 2.2 Normativa de seguretat sobre la instal·lació de components De la mateixa manera que la majoria d’elements que trobem al nostre voltant, els PC estan subjectes a la normativa internacional. Des de la mida d’un full de paper ﬁns a la mida de les ﬁnestres, tot està perfectament mesurat i calibrat per a obtenir un equilibri entre ergonomia i rendiment econòmic. Aquesta estandardització porta a unir esforços que redunden en beneﬁci de tots. Malgrat que les normatives són diverses —n’hi ha de nacionals, internacionals, de la Unió Europea...—, cada cop es tendeix més a la uniformització d’aquestes.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Normativa en els sistemes informàtics En l’actualitat, els equips microinformàtics han de complir uns requisits que afecten fonamentalment dos aspectes: emissió d’interferències i seguretat en la manipulació interna dels equips. El control de l’emissió té com a ﬁnalitat evitar que els ordinadors generin interferències en altres dispositius, a més de protegir el medi ambient de l’usuari. La seguretat en la manipulació respon a unes normes bàsiques que ajudin a prevenir accidents fonamentalment derivats de la manipulació elèctrica, encara que també se’n produeixen per la manipulació mecànica dels components.</p>
+<p>Hi ha diverses agències que s’encarreguen de certiﬁcar el maquinari des d’aquest punt de vista de seguretat. Les més importants són la FCC i la TÜV, cadascuna en el seu departament dedicat especíﬁcament al tema. Només entitats de solvència internacional poden garantir una normativa adequada.</p>
+<p>Logo de l’entitat certiﬁcadora Communications Comission del govern federal dels EUA</p>
+<ul>
+<li>La FCC (Federal Communications Commission) és una agència indepen</li>
+</ul>
+<p>dent del govern dels EUA que dóna cobertura a cinquanta estats i informa directament al Congrés americà. Fou establerta l’any 1934 i és responsable de la regulació de les comunicacions per radio, TV, cablejades i per satèl·lit, tant nacionals com internacionals.</p>
+<ul>
+<li>La TÜV (Technischer Überwachungs-Verein) desenvolupa serveis d’inspec</li>
+</ul>
+<p>ció, control, auditoria tècnica i certiﬁcació en tots els àmbits: qualitat, medi ambient, prevenció de riscos laborals, seguretat industrial i alimentària, instal·lacions i obra civil, incloent-hi seguretat vial amb el servei ITV. Hi ha dues normatives que regulen la certiﬁcació d’equips microinformàtics segons les dues organitzacions esmentades. Les normatives són la FCC, part 15 EMI Certiﬁcation i la UL/CSA/TÜV Safety Certiﬁcation.</p>
+<p>L’FCC, part 15, s’encarrega de certiﬁcar els sistemes complets i no els compo- nents individuals. A partir de la ﬁnalitat d’aquests equips hi ha establertes dues categories amb diferents requeriments: les classes A i B. La classe A regula tots els sistemes que tindran l’entorn de treball en un ambient comercial. Aquesta normativa té uns requeriments menys estrictes que la classe B, que regula els sistemes que treballaran en un entorn domèstic. El procés de certiﬁcació és senzill.</p>
+<p>Cada component (targetes, perifèrics, etc.) té la seva pròpia certiﬁcació FCC, de manera que es podrà vendre independentment. Si un sistema sencer ha passat la certiﬁcació FCC, l’assemblador pot modiﬁcar o afegir targetes i perifèrics que tinguin la seva pròpia certiﬁcació FCC, de manera que es continuarà mantenint la conformitat amb la norma.</p>
+<p>Alguns dels requisits que ha de complir un equip per a no contradir la normativa són</p>
+<ul>
+<li>No es pot substituir la placa base, font d’alimentació o caixa sense tornar a</li>
+</ul>
+<p>certiﬁcar l’equip (vegeu l’esquema en la ﬁgura 2.1).</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Entitats certiﬁcadores Hi ha altres agències certiﬁcadores, nacionals com AENOR (Associació Espanyola de Normalització i Certiﬁcació) o internacionals com ISO (Organització Internacional per a la Normalització) o ETSI (Institut Europeu d’Estandardització de les Telecomunicacions).</p>
+<ul>
+<li>Els teclats i ratolins no requereixen una certiﬁcació independent si es</li>
+</ul>
+<p>venen com a part integrant d’un sistema, encara que la majoria de vegades compleixen la normativa sense problemes. Els monitors, impressores i perifèrics externs amb alimentació han de tenir cadascun la seva pròpia certiﬁcació. Figura 2.1. L’actualització d’un equip comporta tornar a certiﬁcar que compleix la normativa Pel que fa a la UL/ETL/CSA/TÜV, les sigles corresponen a Underwriters Laboratories / Electronic Testing Laboratories / Canadian Santdards Association / German Safety Agency, i és un recull de normatives d’agències esteses per tot el món. Els equips de prestacions elevades compleixen la normativa UL/CSA/TÜV.</p>
+<p>Una llista de requisits d’un equip per a complir aquesta normativa són</p>
+<ul>
+<li>L’usuari no pot tenir accés a les altes tensions de l’equip (per exemple, els</li>
+</ul>
+<p>connectors de la font d’alimentació). No totes les fonts superen aquestes especiﬁcacions.</p>
+<ul>
+<li>Tots els perifèrics alimentats des del PC han de tenir fusibles a les línies de</li>
+</ul>
+<p>corrent (ﬁns i tot en casos en què no semblaria necessari pel baix consum de corrent, com és el cas de ratolins o teclats).</p>
+<ul>
+<li>Les bateries de liti de la màquina (portàtils) han d’estar protegides doble</li>
+</ul>
+<p>ment quan es produeix el procés de càrrega per part del sistema.</p>
+<ul>
+<li>Tots els connectors d’alimentació, fusibles i terminals d’interruptors, polsa</li>
+</ul>
+<p>dors i commutadors han d’estar clarament etiquetats.</p>
+<ul>
+<li>Els perifèrics han de disposar de la pròpia certiﬁcació.</li>
+<li>Un test de dits (ﬁnger test) ha de garantir que l’usuari no pot tocar parts</li>
+</ul>
+<p>mòbils del sistema com, per exemple, ventiladors.</p>
+<ul>
+<li>L’equip ha de funcionar correctament amb totes les targetes i perifèrics</li>
+</ul>
+<p>connectats que generarien un consum equivalent al d’un usuari perquè la certiﬁcació sigui vàlida.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Els components plàstics han de tenir la seva certiﬁcació independent quant</li>
+</ul>
+<p>a la inﬂamabilitat i toxicitat del material.</p>
+<ul>
+<li>Les torres o caixes també han d’estar certiﬁcades quant al disseny, vigilant</li>
+</ul>
+<p>l’estabilitat i un bon sistema d’evacuació d’aire.</p>
+<ul>
+<li>El sistema ha de tenir en un lloc visible els adhesius i etiquetes que indiquen</li>
+</ul>
+<p>el compliment de normatives. 2.3 Eines necessàries per al muntatge i manteniment d’equips informàtics Primer que res, i encara que no es tracta exactament d’una eina, assegureu-vos que teniu espai suﬁcient per a treballar amb comoditat, i que la il·luminació és adequada. A més comproveu un altre cop que teniu tots els components a mà i que no heu oblidat res de necessari per al vostre equip.</p>
+<p>Tot seguit, malgrat que sembli sorprenent, les eines que ens faran falta per a muntar o reparar equips informàtics són molt bàsiques</p>
+<ul>
+<li>Cal disposar d’un tornavís d’estrella també conegut com a tornavís Philips,</li>
+</ul>
+<p>si és possible magnetitzat, que utilitzarem per a ﬁxar tots els components de l’equip, tant els panells de la caixa, com la placa base o tots els dispositius d’emmagatzematge.</p>
+<ul>
+<li>És convenient utilitzar també unes pinces que ens permetran arribar a punts</li>
+</ul>
+<p>on ens sigui més complicat amb les mans, moure components de mida menuda com jumpers, etc.</p>
+<ul>
+<li>També seran útils unes alicates, que ens poden servir per a treure els panells</li>
+</ul>
+<p>metàl·lics que té la caixa quan encara no s’han instal·lat els dispositius corresponents. Es pot fer amb les mans però pot resultar perillós, ja que molts cops els acabats de les caixes tenen vores tallants. Si hem de tallar brides o algun paquet “rebel” ens faran molt servei unes alicates de tall.</p>
+<ul>
+<li>Ens farà molt servei una llanterna. La nostra àrea de treball ha d’estar</li>
+</ul>
+<p>ben il·luminada, però les caixes d’ordinador poden tenir zones fosques on és complicat veure què fem. Una bona llanterna ens pot ajudar a il·luminar aquestes àrees. Podem utilitzar una caixa d’eines com la de la ﬁgura 2.2 o similar, on disposem de totes les eines necessàries i algunes de més per si es presenta algun problema.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.2. Caixa d’eines per a utilitzar en el muntatge Quants als visos que utilitzarem per a connectar els components la major part de vegades vénen inclosos amb la caixa o amb el dispositiu que volem connectar, però en cas contrari són molt fàcils de trobar a qualsevol establiment de tipus ferreteria.</p>
+<p>Utilitzeu classiﬁcadors o caixes per a emmagatzemar aquestes peces menudes com cargols o brides. Alguns models de caixa pensats per a ser modiﬁcats fàcilment tenen la particulari- tat que ni tan sols necessiten aquestes eines per a muntar i desmuntar dispositius, ja que disposen de mecanismes i ﬁxacions lliscants que no utilitzen cargols.</p>
+<p>A part de les eines, tingueu a mà la documentació dels components adquirits: manuals, conﬁguracions, etc. El braçalet antiestàtic sol anar acompanyat d’un manual d’utilització. A més, durant el procés de muntatge és molt aconsellable que compliu aquestes senzilles regles</p>
+<ul>
+<li>Tracteu els components amb compte.</li>
+<li>No doblegueu mai una placa de circuit imprès.</li>
+<li>Assegureu-vos que els cables que utilitzeu estan en perfecte estat.</li>
+<li>No forceu els components. Si alguna cosa sembla que no encaixa,</li>
+</ul>
+<p>comproveu que l’esteu col·locant al lloc adequat. També cal utilitzar un braçalet antiestàtic que es connecta a la carcassa metàl·lica de l’ordinador, per a evitar danyar els components electrònics amb l’electricitat estàtica que s’acumula als nostres cossos (ﬁgura 2.3). La seva utilització només comporta</p>
+<ul>
+<li>Ajustar l’extrem del braçalet al nostre canell.</li>
+<li>Connectar la pinça inclosa en la carcassa de l’ordinador.</li>
+<li>Manipular els components electrònics amb el braçalet posat.</li>
+</ul>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.3. Utilització del braçalet antiestàtic Mentre no hàgiu comprovat l’equip, deseu també totes les caixes i rebuts dels components per si heu de fer ús de la garantia. 2.4 Manuals de muntatge de components Els manuals tècnics dels components són una font indispensable d’informació per a conèixer el funcionament i les instruccions d’instal·lació dels components que formen part del nostre equip informàtic. Hi ha diversos tipus de documents tècnics que ens donen tot tipus d’informació sobre cadascun dels components (processador, memòria RAM, placa base, etc.).</p>
+<p>Generalment, a l’hora de comprar un component aquest inclou el manual d’es- peciﬁcacions tècniques i les instruccions d’instal·lació (vegeu-ne una mostra en la ﬁgura 2.4), encara que cada cop és més freqüent que només trobem un full d’instal·lació i una referència a la pàgina web del fabricant.</p>
+<p>La documentació que ens ofereixen els fabricants en la seva pàgina de suport tècnic inclou normalment</p>
+<ul>
+<li>Especiﬁcacions tècniques</li>
+<li>Característiques del producte</li>
+<li>Manuals d’instal·lació</li>
+</ul>
+<p>El manual d’instal·lació és indispensable per a conèixer totes les particularitats d’un determinat component de maquinari i instal·lar-lo correctament. Per exemple, en el cas d’un processador, aquest manual inclou tots els passos per</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic a ﬁxar el processador al seu sòcol, i també per a la col·locació del seu dissipador- ventilador, especíﬁcament per al model que s’hagi adquirit. Tot el procés es troba exempliﬁcat amb croquis o imatges.</p>
+<p>Figura 2.4. Els manuals inclosos amb els components de l’ordinadors són fonamentals per a conèixer-ne les característiques tècniques i muntar-los de manera correcta. Malgrat que tots els components disposen de documentació tècnica, hem de tenir en compte sobretot la que es refereix a la placa base i al processador, ja que es tracta dels dispositius més complexos i que requereixen més habilitat per a instal·lar-los. Quant a altres components com la memòria RAM o les unitats d’emmagatzematge, en tenim prou de conèixer-ne les característiques bàsiques per a saber-ne la compatibilitat.</p>
+<p>2.5 Procés de muntatge de la unitat central de procés L’Apple I de 1976 es venia com un conjunt de peces per muntar i ﬁns i tot construir-ne la caixa El muntatge d’un ordinador personal comporta bàsicament l’assemblatge dels components que trobem dins la CPU (unitat central de procés) comunament coneguda com la caixa. A partir d’aquí només cal que connecteu una sèrie de perifèrics que ja vénen totalment muntats comercialment.</p>
+<p>Fent la connexió correcta de la placa base amb tots els components necessaris (processador, unitats d’emmagatzematge, memòria RAM i connectors d’expansió) disposarem d’un equip preparat per a instal·lar un sistema operatiu. 2.5.1 Caixa i font d’alimentació En aquest projecte de muntatge utilitzarem una caixa ATX. Malgrat que es tracta d’un format que ja fa anys que és en el mercat, s’ha imposat als altres i molt probablement és el que utilitzeu (si no és un portàtil!). Hi ha altres tipus de caixes que es podrien utilitzar (com les caixes microATX), però són més complicades</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic d’ampliar i disposen de menys espai per a instal·lar els components amb comoditat. Arribats en aquest punt, el primer pas a l’hora de muntar l’equip serà l’assemblatge de la caixa i la font d’alimentació.</p>
+<p>Cal posar la caixa en posició horitzontal sobre una superfície estable i neta (per exemple, una taula de taller). D’aquesta manera podrem treballar en el muntatge sense perill que ens caigui i en una posició ergonòmicament còmoda per a nosaltres. Normalment, en el moment de comprar-les, les caixes ja vénen muntades, però en alguns casos els haurem d’acabar de donar els detalls ﬁnals, com pot ser muntar els peus de goma que els donaran estabilitat (ﬁgura 2.5).</p>
+<p>Figura 2.5. Col·locació dels suports de goma de la torre En alguns casos la font d’alimentació ja ve muntada al xassís, però, si hem triat un model que no en porti o volem canviar la de sèrie per un model amb més prestacions o més silenciosa, també haurem de fer aquest pas (ﬁgura 2.6).</p>
+<p>Figura 2.6. Col·locació i ajustament de la font d’alimentació Un cop presentada la font en la seva posició, hem de cargolar quatre visos que deixaran la font ajustada i preparada per a alimentar el nostre equip. El fet de El primer pas... en el muntatge implica treure la caixa del seu embalatge de cartró, amb cura de no donar-hi cops.</p>
+<p>Complements necessaris En molts casos les caixes inclouen els visos necessaris per al muntatge de dispositius i també els peus de goma i brides per a subjectar els cables.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic La tecnologia de memòria Dual-Channel... permet un increment del rendiment gràcies a l’accés simultani a dos mòduls de memòria (en blocs de 128 bits en lloc de 64 bits com anteriorment). col·locar la font abans que cap altre component no és imprescindible, però ens permetrà col·locar la resta de components amb comoditat si ho fem a posteriori.</p>
+<p>2.5.2 Memòria RAM Els DIMM de memòria RAM només encaixen en una posició Per tal de col·locar la memòria en la placa base localitzeu els sòcols corresponents i assegureu-vos que podeu col·locar la memòria sense problemes. A continuació feu els passos següents</p>
+<ul>
+<li>Observeu el mòdul de memòria i tot seguit el sòcol. Veureu que la memòria</li>
+</ul>
+<p>té una osca clau que encaixa amb un sortint del sòcol, de manera que és impossible connectar-la malament.</p>
+<ul>
+<li>Trobeu i obriu els clips que hi ha a cada costat del sòcol.</li>
+<li>Alineeu el mòdul de memòria amb el sòcol, amb l’ajut de la marca que hem</li>
+</ul>
+<p>vist abans.</p>
+<ul>
+<li>Feu lliscar la memòria dins el sòcol de manera perpendicular ﬁns a l’interior.</li>
+<li>Trobareu una certa resistència que haureu de vèncer fent pressió al llarg del</li>
+</ul>
+<p>mòdul.</p>
+<ul>
+<li>Notareu com el DIMM encaixa. Els clips dels cantons s’haurien de tancar</li>
+</ul>
+<p>sols.</p>
+<ul>
+<li>Assegureu-vos que la memòria no balla i està ben connectada.</li>
+</ul>
+<p>Caldrà que repetiu el procés per a cada mòdul de memòria de què disposeu. Podeu veure els passos principals en la ﬁgura 2.7. Figura 2.7. Procés d’instal·lació d’un mòdul de memòria RAM</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En cas que la placa suporti Dual-Channel, haureu de col·locar els mòduls que heu comprat en parelles de manera que el color coincideixi per a cada parella. 2.5.3 Processador i ventilador En una superfície plana col·loqueu la placa base per posar-hi el processador.</p>
+<p>Aquest pas també es podria fer un cop instal·lada la placa a la caixa, i de fet si volem actualitzar el processador habitualment ho farem així. Però, en aquest cas i atès que estem fent la instal·lació des de zero, és aconsellable col·locar-lo d’aquesta manera, cosa que ens evita treballar amb obstacles i ens facilita el procés d’assemblatge.</p>
+<p>Com ja sabeu, els dos fabricants que s’han de tenir en compte per a triar un processador són Intel i AMD. Els següents són els passos bàsics que heu de fer per a muntar un processador d’una de les dues grans marques. Els passos que heu de fer per a instal·lar un processador Intel són els següents</p>
+<ul>
+<li>Obriu la tapa protectora del sòcol.</li>
+<li>Traieu la tapa protectora del processador.</li>
+<li>Comproveu l’orientació del processador a partir de la marca triangular que</li>
+</ul>
+<p>té a un cantó (també la trobareu al sòcol).</p>
+<ul>
+<li>Col·loqueu el processador al seu lloc de manera vertical i pressioneu-lo</li>
+</ul>
+<p>lleugerament per ajustar-lo.</p>
+<ul>
+<li>Tanqueu la tapa protectora i accioneu la palanca d’ajustament (vegeu la</li>
+</ul>
+<p>ﬁgura 2.8). Figura 2.8. Col·locació del processador al seu sòcol Processador AMD 64 x2 Dual Core Observeu els pius de connexió i la marca triangular que té a un cantó per a col·locar-lo al seu sòcol correctament. No toqueu en cap cas els connectors del sòcol ni els contactes del processador.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En la secció “Recursos de contingut” del web del mòdul podeu consultar els manuals en vídeo de l’empresa AMD sobre el mètode d’instal·lació dels seus processadors. En comprar un dissipador/ventilador, normalment aquest disposarà d’una capa de pasta tèrmica ja preparada de fàbrica que ajuda a la dissipació correcta de la calor. En cas de no tenir aquesta capa n’haurem de posar una manualment.</p>
+<p>Donades les altes velocitats a què treballen els processadors actuals, caldrà instal·lar-hi un sistema de refrigeració. Hi ha diversos sistemes per a refrigerar la caixa, però el més utilitzat és el que inclou un, dos o més ventiladors per a ajudar a la dissipació de la calor (un situat a sobre del dissipador del processador, i un que habitualment inclou la caixa a la part posterior).</p>
+<p>Figura 2.9. Ajusteu el dissipador i el ventilador per aconseguir el rendiment tèrmic màxim del processador Un mal funcionament del ventilador redueix el rendiment de l’equip i pot arribar a provocar danys en el processador, de manera que cal assegurar-ne un funcionament adequat Els processadors in a box es venen directament amb un ventilador compatible (ﬁgura 2.9) per a instal·lar-lo a la vegada a la placa base.</p>
+<p>Així, el ventilador que ve amb la CPU serà suﬁcient per a un ús habitual de l’ordinador. En obrir la capsa i observar el processador veureu que a la part inferior hi ha una làmina adhesiva que cal treure abans d’instal·lar-lo al seu lloc. Es tracta d’una protecció per al material tèrmic que permetrà una dissipació millor de la calor del processador. Hi ha diferents models de ventiladors, encara que en general seran compatibles amb Intel o AMD. La instal·lació estarà detallada per a cada model, però en general només haureu de fer els passos següents</p>
+<p>El ventilador del processador té la pròpia connexió d’alimentació situada a la placa base.</p>
+<ul>
+<li>Col·locar el dissipador/ventilador a sobre del processador.</li>
+<li>Assegurar-vos que la pasta tèrmica fa un bon contacte entre el dissipador i</li>
+</ul>
+<p>el ventilador.</p>
+<ul>
+<li>Fer encaixar els enganxalls en la placa base, de manera que quedi ﬁx a sobre.</li>
+</ul>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Connectar l’alimentació del ventilador a la placa base.</li>
+</ul>
+<p>Si seguim correctament els passos ens assegurarem que aquest serà capaç de refrescar al màxim el processador durant el seu funcionament i aconseguir-ne, per tant, un bon rendiment. Al seu torn, la major part de les caixes disposen d’un ventilador per a treure a l’exterior l’aire calent. Com podeu veure en la ﬁgura 2.10, per a alimentar aquest ventilador hem de connectar-lo a un dels connectors Molex de la font d’alimentació.</p>
+<p>Figura 2.10. Ajustament del cable d’alimentació del ventilador de la caixa 2.5.4 Placa base i connectors El fet d’escollir la placa base determinarà molts de la resta de components del sistema. De fet, les plaques base estan dissenyades per a un tipus de processador.</p>
+<p>Malgrat que històricament hi ha hagut diversos fabricants, per al tipus de muntatge que ens ocupa (un equip estàndard amb caixa ATX) només hi ha dues opcions possibles (processador Intel o AMD). Abans de col·locar ﬁnalment la placa base, cal acabar de preparar la caixa, que en molts casos disposa d’un embellidor per a les connexions que no ha de coincidir necessàriament amb el que encaixa amb la nostra placa base. Per tant, haurem de fer els passos que segueixen (els podeu veure en la ﬁgura 2.11).</p>
+<ul>
+<li>Descargoleu l’embellidor de la caixa i deseu-lo si no encaixa amb la placa</li>
+</ul>
+<p>a instal·lar.</p>
+<ul>
+<li>Traieu les plaques metàl·liques que necessiteu de l’embellidor de la placa</li>
+</ul>
+<p>per deixar pas als connectors d’aquesta. Utilitzeu unes alicates si cal.</p>
+<ul>
+<li>Encaixeu l’embellidor al seu lloc. Pot anar amb cargols o simplement entrar</li>
+</ul>
+<p>a pressió.</p>
+<ul>
+<li>Situeu la placa base al seu lloc, comprovant que podeu encabir-la bé i que</li>
+</ul>
+<p>tots els connectors són fàcilment accessibles des de l’exterior. Podeu consultar els manuals d’instal·lació de processadors Intel a la secció “Recursos de contingut” del web del mòdul. Els dispositius com el PC ultraportàtil o ultra-mobile PC o el PC de butxaca o pocket PC utilitzen processadors integrats com l’Intel Atom, el VIA C7 o l’ARM XScale.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Un cop fet això podeu passar a cargolar la placa al seu lloc com veureu en</li>
+</ul>
+<p>els passos següents . Per a ﬁxar la placa al seu lloc els passos a seguir són</p>
+<ul>
+<li>Presenteu la placa base a la caixa i localitzeu els punts on cal posar un cargol</li>
+</ul>
+<p>per a ﬁxar-la.</p>
+<ul>
+<li>Marqueu aquests punts amb un retolador o recordeu-los .</li>
+<li>Poseu un suport per a la placa base a cada un d’aquests punts.</li>
+<li>Col·loqueu la làmina de connexions corresponent a la placa al seu lloc de la</li>
+</ul>
+<p>caixa.</p>
+<ul>
+<li>Situeu la placa al seu lloc i poseu un cargol per a cadascun dels suports</li>
+</ul>
+<p>que heu posat anteriorment. En cap cas cal forçar la placa. És aconsellable col·locar els cargols amb cura i no cargolar-los del tot ﬁns assegurar-nos que ho podem fer amb tots (ﬁgura 2.11).</p>
+<ul>
+<li>Comproveu la col·locació correcta de la placa (ﬁgura 2.12).</li>
+</ul>
+<p>Figura 2.11. Col·loqueu l’embellidor per als connectors i encaixeu-hi la placa base.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.12. Fixació dels cargols de la placa base Connexió dels cables frontals i USB Connector USB situat al seu lloc Per a acabar la connexió de la placa base, caldrà situar el cablejat del frontal de la placa base, com també l’altaveu intern o PC-speaker.</p>
+<p>Encaix del cable d’àudio frontal</p>
+<ul>
+<li>El connector d’àudio serveix per a connectar l’àudio frontal (entrada i</li>
+</ul>
+<p>sortida) i també el PC-speaker.</p>
+<ul>
+<li>Els USB frontals també tenen la seva connexió pròpia, que pot variar</li>
+</ul>
+<p>depenent del fabricant. Si teniu dubtes sobre la posició del connector veriﬁqueu-la en el manual .</p>
+<ul>
+<li>Per acabar, caldrà connectar la resta de cablejat frontal, que inclou els botons</li>
+</ul>
+<p>d’engegada (Power On) i reinicialització (Reset), com també els indicadors lluminosos de funcionament de l’ordinador i el disc dur. Consulteu el manual de la placa base per assegurar-vos de la posició d’aquests cables, ja que és molt fàcil posar-los en la posició incorrecta. En la ﬁgura 2.13 teniu un exemple de la col·locació d’aquests connectors.</p>
+<p>Figura 2.13. Consulteu el manual de la placa base per comprovar la connexió correcta dels cables frontals.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Connecteu els cables d’alimentació de la placa base (en la ﬁgura 2.14 veiem</li>
+</ul>
+<p>la placa amb només el connexionat de dades). Cal comprovar que s’han realitzat bé totes les connexions prèvies. Això implica: – Revisar el funcionament correcte dels botons d’engegada i reset. – Comprovar el funcionament correcte del LED d’engegada. – Veure que l’engegada de l’equip fa funcionar correctament els ventila- dors.</p>
+<p>Un cop hàgim acabat de connectar els dispositius d’emmagatzematge, també comprovarem que el LED del disc dur s’engega. Figura 2.14. Placa base amb tot el connexionat de dades. Només falta connectar l’alimentació. 2.5.5 Unitats d’emmagatzematge El muntatge de la unitat òptica no comporta diﬁcultats. Utilitzarem una unitat de 5,25 polzades muntada en un dels compartiments exteriors de la caixa. Vegeu-ne un resum en la ﬁgura 2.15. Els passos a seguir són</p>
+<ul>
+<li>Trieu un compartiment exterior lliure.</li>
+<li>Traieu un dels embellidors plàstics de la torre per a donar sortida a la unitat a</li>
+</ul>
+<p>l’exterior. Utilitzeu alguna eina per a treure-la si teniu problemes. En alguns casos haureu de treure una placa metàl·lica interior. Aneu amb compte, ja que tenen vores tallants.</p>
+<ul>
+<li>Munteu la unitat òptica al compartiment escollit.</li>
+<li>Fixeu la unitat amb cargols als dos costats com heu fet amb el disc dur.</li>
+<li>Connecteu el cable d’alimentació a la part posterior de la unitat i a un dels</li>
+</ul>
+<p>cables corresponents de la font d’alimentació.</p>
+<ul>
+<li>Connecteu també el cable de dades a la unitat i la placa base.</li>
+</ul>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Comproveu la bona connexió de tot el cablatge.</li>
+</ul>
+<p>Algunes fonts no disposen de connector d’alimentació SATA o no en tenen suﬁcients. Hi ha adaptadors que corregeixen aquest problema. Figura 2.15. Fixeu la unitat al seu compartiment i connecteu els cables d’alimentació i dades a la part posterior i a la placa base. Al llarg del temps, el muntatge d’un disc dur ha estat un dels procediments més senzills de realitzar, i la generalització de les unitats SATA ha simpliﬁcat encara més el procès. Instal·larem una unitat de 3,5 polzades amb interfície SATA. La ﬁgura 2.16 ens mostra els passos principals. El procediment és el següent</p>
+<ul>
+<li>Munteu el disc dur en un dels compartiments lliures de 3,5 polzades.</li>
+<li>Fixeu el disc dur amb dos cargols per costat (per a fer això haureu de treure</li>
+</ul>
+<p>les tapes dels dos costats de la caixa). El disc dur queda prou ben ﬁxat amb cargols només a un costat, però és convenient muntar-lo de manera adequada si no s’ha de desmuntar el disc durant molt de temps, ja que això evitarà vibracions en la unitat i, per tant, pot evitar avaries degudes a aquest fet.</p>
+<ul>
+<li>Connecteu el cable d’alimentació a la part posterior del disc dur i a un</li>
+</ul>
+<p>connector adequat de la font d’alimentació.</p>
+<ul>
+<li>Connecteu el cable de dades SATA a la part posterior del disc dur i al</li>
+</ul>
+<p>connector de la placa base.</p>
+<ul>
+<li>Assegureu-vos que els connectors han quedat ben ﬁxats.</li>
+</ul>
+<p>Els compartiments exteriors de 3,5 permeten la col·locació d’unitats de la mida adequada, com unitats de disc ﬂexible, o lectors de targetes de memòria. Consulteu la instal·lació d’una conﬁguració mestre/esclau de dos discos durs IDE en els “Recursos de contingut” del web del mòdul.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 2.16. Un cop ﬁxat el disc dur, connecteu l’alimentació, i el cable de dades SATA al disc i la placa base. Malgrat que cada cop s’utilitza menys la unitat de disc ﬂexible, en muntarem una, ja que pot ser necessària per a l’actualització de la BIOS o la instal·lació d’un equip Windows amb sistema RAID. El muntatge d’aquesta unitat comporta</p>
+<ul>
+<li>Escollir un compartiment exterior de 3,5 polzades on situar la unitat.</li>
+<li>Treure l’embellidor plàstic que donarà sortida a la unitat de disc ﬂexible a</li>
+</ul>
+<p>l’exterior.</p>
+<ul>
+<li>Muntar la unitat al seu lloc i ﬁxar-la mitjançant cargols als dos costats.</li>
+<li>Connectar el cable de dades al port corresponent de la placa base i a la part</li>
+</ul>
+<p>posterior de la unitat.</p>
+<ul>
+<li>Alimentar el dispositiu amb el cable que va de la seva part posterior al</li>
+</ul>
+<p>connector corresponent de la font d’alimentació.</p>
+<ul>
+<li>Comprovar que tot el cablatge fa bona connexió.</li>
+</ul>
+<p>Per acabar, connectarem un lector de targetes, ja que és un dispositiu que s’utilitza molt per a llegir dades provinents de càmeres fotogràﬁques, de vídeo, telèfons mòbils, etc. El procés és molt semblant als anteriors i comporta els passos següents: En acabar, recolliu tots el cablatges (tant d’alimentació com de dades) amb "brides". Aconseguireu millorar l’aspecte interior de la caixa, però sobretot la ventilació d’aquesta.</p>
+<ul>
+<li>Escollir un altre compartiment exterior de 3,5 polzades. En cas de només</li>
+</ul>
+<p>tenir-ne una hauríem d’escollir si volem muntar el lector de targetes o la unitat de disc ﬂexible.</p>
+<ul>
+<li>Treure l’embellidor plàstic per a donar sortida a la unitat a l’exterior.</li>
+</ul>
+<p>És habitual que almenys un dels compartiments de 3,5 també tingui una</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic protecció interior metàl·lica que caldrà treure amb molta cura. Utilitzeu unes alicates per a fer-lo girar a un costat i a l’altre ﬁns que se solti, ja que les vores són tallants.</p>
+<ul>
+<li>Cargolar la unitat al seu lloc pels dos costats.</li>
+<li>En molts casos els lectors de targetes aproﬁten els connectors USB per</li>
+</ul>
+<p>funcionar. Per tant, haureu de triar un d’aquests connectors per a fer la instal·lació.</p>
+<ul>
+<li>Connectar el cable integrat al lector al port USB escollit de la placa base. En</li>
+</ul>
+<p>aquest cas no cal connectar un cable addicional per a l’alimentació, ja que el mateix cable transporta les dades i la potència necessària per al dispositiu. En cas de no tenir prou ports USB a la placa base, haureu d’escollir quines sortides USB de la torre (davanteres, posteriors, lector de targetes) voleu que estiguin operatives.</p>
+<p>2.5.6 Targetes d’expansió Un cop fets tots els passos anteriors el muntatge de la CPU es podria donar per acabat, però és possible que calgui instal·lar algun dispositiu com una expansió de l’ordinador. La targeta gràﬁca o la targeta de so són habitualment ampliacions que podem fer al nostre equip si no estem satisfets amb les que vénen integrades en la placa base. El procés d’instal·lació és molt senzill. En el cas de la targeta gràﬁca, la interfície utilitzada seria un port PCI-Express, mentre que la targeta de so sol utilitzar un port PCI o PCI-Express.</p>
+<p>En veurem un exemple amb la instal·lació d’una targeta sense ﬁl, que ampliarà les opcions de comunicació de la nostra màquina. Malgrat que l’equip ja té connectivitat amb l’exterior integrada, en la targeta de xarxa, és molt convenient poder accedir també a xarxes sense ﬁl, l’ús de les quals s’ha generalitzat molt.</p>
+<p>El procés de muntatge d’una targeta sense ﬁl PCI requereix els passos següents (podeu veure els principals en la ﬁgura 2.17)</p>
+<ul>
+<li>Escollir un ranura PCI lliure per a instal·lar el dispositiu.</li>
+<li>Treure l’embellidor metàl·lic de la caixa per a donar sortida a l’exterior</li>
+</ul>
+<p>al dispositiu. En alguns casos, per a una caixa de gamma baixa haureu d’utilitzar unes alicates per a desenganxar la plaqueta metàlica (que després no es pot tornar a col·locar). En caixes de més qualitat els embellidors es poden posar i treure, mitjançant cargols o de vegades amb mecanismes senzills a pressió que faciliten la instal·lació i desinstal·lació de dispositius.</p>
+<ul>
+<li>Situar la targeta a sobre de la ranura i encaixar-la al seu lloc verticalment</li>
+</ul>
+<p>fent la pressió necessària.</p>
+<ul>
+<li>Cargolar la targeta a la caixa comprovant abans que es troba en posició</li>
+</ul>
+<p>correcta.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En els “Recursos de contingut” del web del mòdul, podeu trobar un enllaç a altres programes d’aprenentatge amb tot el procés de muntatge d’un ordinador fotograﬁat pas a pas.</p>
+<ul>
+<li>Un cop ajustada la targeta, col·locar l’antena exterior i posar-la en posició</li>
+</ul>
+<p>vertical per a assegurar una recepció correcta de les ones. Figura 2.17. Un cop tret l’embellidor, heu de col·locar i cargolar la targeta en la seva ranura o “slot” (en aquest cas PCI). 2.6 Connexió dels dispositius perifèrics externs Els dispositius bàsics com són el teclat i el monitor només necessiten ser connectats per a funcionar, però alguns dispositius no seran reconeguts pel sistema ﬁns que tingui instal·lat un sistema operatiu, i de vegades ﬁns que no s’instal·lin els controladors corresponents.</p>
+<p>De totes maneres, la connexió de dispositius externs és simple pel disseny. Només s’ha de connectar el dispositiu i més endavant, si cal, instal·lar els drivers. Podeu veure un resum dels connectors de cada dispositiu en la taula 2.1. Alguns equipaments, com els ratolins i teclats PS/2, els monitors o les impressores connectades al port en paral·lel, s’han d’instal·lar amb l’ordinador apagat. Quan s’engegui el sistema es podrà passar als controladors. Per exemple, els teclats de cent quatre tecles no necessiten controladors, però els teclats multimèdia amb tecles addicionals sí que en necessiten. Els ratolins normalment funcionaran amb el controlador genèric (tant en el Windows com en el GNU/Linux o d’altres), però en cas de botons addicionals també necessitaran el seu programari especíﬁc.</p>
+<p>Els dispositius connectables en calent (amb l’ordinador en marxa), com poden ser els components amb connectivitat USB o Firewire, es poden endollar amb el sistema en funcionament. El primer cop que el sistema els detecta mira d’esbrinar quins dispositius són i d’instal·lar els controladors adequats. Alguns dispositius</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic com discos durs externs o càmares digitals són detectats directament pel sistema i tractats com a unitats d’emmagatzematge sense necessitat d’afegir cap controlador al sistema. Taula 2.1. Resum de perifèrics externs i del connector més utilitzat corresponent Dispositiu Connector Teclat PS/2 o USB Monitor VGA o DVI Ratolí PS/2 o USB Impressora USB Escàner USB Altaveus connector mini o minijack Els sistemes operatius actuals inclouen una gran quantitat de controladors per a simpliﬁcar el procés d’instal·lació de qualsevol perifèric nou.</p>
+<p>Figura 2.18. Visió del panell posterior de la caixa amb els perifèrics externs connectats El tauler de connexions -que podeu veure en la ﬁgura 2.18- ha de ser accessible per a connectar els perifèrics imprescindibles (monitor, teclat i ratolí) i els auxiliars, com pot ser la impressora, l’escàner o els altaveus.</p>
+<p>2.7 Engegada de l’equip. Codis POST Per comprovar la connexió adequada de l’alimentació dels dispositius, connecteu el cable d’alimentació de la caixa i polseu el botó d’engegada. Si s’engega l’indicador lluminós d’engegada i el ventilador del processador comença a girar, l’alimentació és correcta. Si, en canvi, el ventilador no començar a girar, apagueu l’equip ràpidament per evitar danys al processador, encara que molts processadors actuals porten proteccions que l’apaguen si la temperatura és massa alta.</p>
+<p>Consulteu la unitat formativa “Instal·lació de programari” per aprendre com s’instal·la i preinstal·la el programari base.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Plaques de diagnòstic... dónen informació sobre els problemes trobats en l’equip sense haver de consultar les llistes de codis d’error. Un beep es la denominació anglesa d’un so electrònic generat per l’altaveu del PC.</p>
+<p>És una sinusoide pura generalment de to molt agut. En l’apartat “Adreces d’interès” del material web, podeu consultar pàgines amb el signiﬁcat d’alguns conjunts de codis POST. Si hem connectat tots els components i perifèrics correctament, el nostre equip ja està llest per a instal·lar-hi un sistema operatiu. Si hi ha hagut algun problema, la nostra feina no ha fet més que començar!</p>
+<p>Una ajuda que tenim a l’hora de detectar alguns dels problemes que s’hagin pogut produir són els codis d’error que ens ofereix l’ordinador a l’hora d’engegar- se. Quan un ordinador compatible IBM s’engega, el maquinari fa un test dels components connectats, anomenat POST (power on self test). Si es troba algun error durant aquest test, es pot conèixer habitualment mitjançant un so de l’altaveu intern del PC (sempre que l’hàgim connectat!). També es mostrarà l’error amb un codi numèric en la pantalla de l’ordinador, sempre que no hi hagi cap problema gràﬁc.</p>
+<p>Els codis sonors permeten conèixer exactament quin tipus de problema hi ha encara que no funcioni la pantalla o la targeta gràﬁca, i es poden distingir per la llargada i nombre de beeps que sonen. Taula 2.2. Codis orginals del procès POST d’IBM Codi sonor Problema trobat 1 beep curt POST normal - el sistema està correcte.</p>
+<p>2 beep curt Error de POST - es mostra el codi d’error per pantalla. Cap beep Problema amb la font d’alimentació o la placa base. 1 Beep continu Problema amb la font d’alimentació, la placa base o el teclat. Diversos Beeps curts repetits Problema amb la font d’alimentació o la placa base.</p>
+<p>1 beep llarg i 1 de curt Problema amb la placa base o system board problem 1 beep llarg i 2 de curts Problema amb el dispositiu de gràﬁcs (MDA, CGA). 1 beep llarg i 3 de curts Problema amb el dispositiu de gràﬁcs (EGA). 3 beeps llargs Error en la targeta de teclat 3270.</p>
+<p>Molts codis POST es consideren greus, ja que el procés POST s’encarrega de revisar components vitals del sistema. Un error greu d’aquest tipus causarà una aturada del sistema, que no arribarà a arrancar. La taula 2.2 ens mostra els codis originals que es van introduir en els models d’IBM PC. És molt interessant que la BIOS tingui un conjunt el més ampli possible d’errors POST, ja que això ens pot donar molta informació del problema que s’ha produït en el nostre equip. En aquest sentit, BIOS més actuals com, per exemple, la Phoenix BIOS Q3.07 o 4.X arriben a tenir prop de cent deu codis diferents.</p>
+<p>Si heu arribat a aquest punt i l’ordinador s’engega sense problemes, ja podeu posar les tapes de la caixa amb els cargols corresponents, encara que no els colleu gaire! De ben segur que l’haureu d’obrir més d’una vegada per a ampliar l’equip o comprovar alguna connexió.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<h3>3. Conﬁguració, proves i documentació del muntatge</h3>
+<p>La conﬁguració, proves i documentació del muntatge és l’últim pas que cal fer, però marcarà el rendiment adequat de l’equip. D’una banda, cal conﬁgurar els dispositius de maquinari perquè funcionin correctament, en tots els casos en què la conﬁguració no sigui automàtica, utilitzant diverses eines com són la conﬁguració directa del maquinari (jumpers) o l’ajustament del programa BIOS, que s’encarrega de la comunicació bàsica amb els components de maquinari.</p>
+<p>D’altra banda, cal documentar adequadament tot el muntatge realitzat per tal d’entregar l’equip al destinatari amb tota la informació necessària que li permeti tenir un bon coneixement de la màquina, i també més facilitat a l’hora de reparar-la si es dóna el cas. En darrer lloc realitzarem una sèrie de proves de rendiment o benchmarks, que més enllà del funcionament correcte o no dels dispositius ens dirà si el funcionament és òptim o si alguns components no estan completament acoblats i, per tant, caldria optimitzar la conﬁguració de l’equip.</p>
+<p>En l’etapa de validació de l’equip haureu de conﬁgurar els dispositius, documentar el muntatge realitzat i comprovar-ne el bon rendiment mitjançant proves comparatives. 3.1 Conﬁguració del maquinari Quan ja s’ha muntat i veriﬁcat, i abans d’instal·lar qualsevol sistema operatiu, cal conﬁgurar el maquinari per a adaptar-ne les característiques a allò que es necessita, com poden ser tipus de perifèrics detectables, estat del teclat en arrencar, dispositiu d’arrencada primari, i totes les característiques que permetin un ús més acurat del maquinari i més adaptat a la ﬁnalitat de l’equip.</p>
+<p>El procés inclou la conﬁguració directa del maquinari mitjançant ponts físics o jumpers, la modiﬁcació si escau del setup de la BIOS (programa de conﬁguració bàsic), i també la instal·lació i conﬁguració posterior dels controladors de dispositiu, que dependran del sistema operatiu que s’hagi instal·lat.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic La posició del pont en un disc dur IDE determina si funciona com a mestre, esclau o cable select. En els equips més moderns, l’ús més comú dels ponts és en la conﬁguració del mode de funcionament de les unitats IDE/ATA (mestre, esclau o cable select).</p>
+<p>3.1.1 Els jumpers o ponts En l’electrònica i en particular la informàtica, un pont és un tram curt de conductor que s’utilitza per a tancar un circuit elèctric. Els ponts se solen utilitzar per a conﬁgurar o ajustar circuits impresos, com ara plaques base, targetes gràﬁques o discos durs.</p>
+<p>Jumpers Les primeres generacions d’ordinadors personals en general feien servir molt els ponts per a la seva conﬁguració, encara que sovint la conﬁguració no estava ben documentada i, per tant, es feia difícil d’establir-la correctament. Per exemple, una placa base del principi del 386 d’Intel podia tenir ﬁns a trenta o quaranta ponts de conﬁguració. Típicament, a cada pont s’assigna una etiqueta amb un nombre, que està documentada en una llista d’instrucció impresa en la placa base o en el manual.</p>
+<p>La tendència recent ha estat la de tractar d’eliminar per complet els ponts dels dis- positius del maquinari en favor de l’autoconﬁguració o del control per programari de conﬁguració. Les conﬁguracions poden ser emmagatzemades en la NVRAM, carregades per un processador o negociades en el moment d’inicialització del sistema. En alguns casos, els dispositius connectables en calent són capaços de negociar la seva conﬁguració mentre el sistema està funcionant. Els dissenys amb ponts tenen l’avantatge que solen ser ràpids i fàcils de conﬁgurar, sovint requereixen pocs coneixements tècnics, i es poden ajustar sense tenir accés físic al circuit imprès (però sí, al component).</p>
+<p>En canvi, els sistemes que utilitzen targetes amb els ponts físics tendeixen a ser conﬁgurats correctament pels usuaris ﬁnals, ja que en general les persones no tècniques estan menys disposades a modiﬁcar físicament la conﬁguració del maquinari que experimentaran amb la conﬁguració del teclat.</p>
+<p>També tenen l’avantatge que en general només s’han de ﬁxar una vegada, mentre que la conﬁguració del microprogramari o ﬁrmware pot ser fàcilment perduda o danyada per un usuari descuidat, un virus o un error d’energia. L’única manera de modiﬁcar una conﬁguració correcta del pont és canviant això físicament.</p>
+<p>Una utilitat important dels ponts en les plaques base actuals és que es pot esborrar la informació de la memòria CMOS quan volem restaurar la conﬁguració de la BIOS. Això permet arrencar l’equip amb la conﬁguració inicial en cas que doni problemes d’arrencada o que hàgim oblidat la contrasenya del setup de la BIOS.</p>
+<p>També s’utilitzen en la conﬁguració de discos IDE com a mestre/esclau, depenent de les indicacions del fabricant (ﬁgura 3.1). En unitats de disc SATA2, els ponts poden servir per a ajustar el funcionament del dispositiu a velocitats corresponents a SATA1 si el controlador només suporta aquest mode de funcionament.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 3.1. Consulteu el propi disc IDE per saber la posició correcta de ponts segons la conﬁguració desitjada. 3.1.2 La BIOS El nom BIOS és l’acrònim anglès de basic input-output system, que podem traduir com sistema bàsic d’entrada/sortida.</p>
+<p>El BIOS és un subsistema de l’ordinador ubicat en un xip de la placa base. Aquest xip conté microprogramari (ﬁrmware, en anglès) allotjat bàsicament en memòria EPROM (erasable programmable read only memory) i memòria de tipus ﬂaix (ﬂash memory) no volàtil, que pot ser esborrable i reprogramable elèctricament.</p>
+<p>El BIOS s’encarrega, en primera instància, de detectar i comprovar tots els components connectats a l’ordinador per oferir connexió d’aquests cap al sistema operatiu. Aquest procés s’anomena POST (power-on self-test). La conﬁguració del BIOS es pot realitzar per mitjà d’una interfície d’aplicació no visual que es pot carregar en iniciar l’ordinador, normalment prement una tecla.</p>
+<p>La majoria de sistemes usen Esc, Del, F1, F2, Ctrl-Esc o Ctrl-Alt-Esc per a entrar en el setup. Habitualment podreu veure una línia de text en la part baixa de la pantalla en engegar el sistema, que us indicarà ”Press ___ to Enter Setup”. Heu d’estar atents a aquest missatge si no coneixeu la combinació de tecles correcta.</p>
+<p>Les funcionalitats més habituals i útils són les següents (ﬁgura 3.2)</p>
+<ul>
+<li>Canviar la data i hora del sistema.</li>
+<li>Visualitzar i conﬁgurar els dispositius d’emmagatzematge (disquets, discos</li>
+</ul>
+<p>durs, CD, DVD, etc.).</p>
+<ul>
+<li>Canviar la contrasenya d’accés al BIOS.</li>
+<li>Conﬁguració de dispositius tipus teclat.</li>
+</ul>
+<p>Fabricants de BIOS Els productors més importants actualment són American Megatrends (AMI), Insyde Software i Phoenix Technologies. Podeu consultar el procés POST en l’apartat “Muntatge d’un equip” d’aquesta unitat.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Podeu consultar els webs d’alguns dels fabricants principals de BIOS en l’apartat “Adreces d’interès” del web del mòdul. Per la seva poca despesa d’energia..., una petita bateria de liti o níquel-cadmi pot proveir energia suﬁcient per a guardar la data i la conﬁguració de la BIOS durant anys.</p>
+<ul>
+<li>Plug and Play: canviar la conﬁguració de l’estàndard d’autodetecció de</li>
+</ul>
+<p>dispositius; ha d’estar en yes si l’ordinador i el sistema operatiu ho suporten.</p>
+<ul>
+<li>Conﬁguració dels ports i dispositius PCI, USB, etc.</li>
+<li>Conﬁguració de paràmetres avançats, com ara de freqüència del processa</li>
+</ul>
+<p>dor, memòria, actualització del BIOS, etc.</p>
+<ul>
+<li>Conﬁguració de sistemes d’estalvi d’energia (per a monitor i discos).</li>
+<li>Seqüència de dispositius d’arrencada o boot (ordre en què s’iniciarà la</li>
+</ul>
+<p>càrrega del sistema). Se sol deixar en primer lloc la disquetera, si n’hi ha - per a introduir un disquet de recuperació en cas necessari-, disc dur principal -per a carregar, per defecte, el sistema operatiu que té instal·lat- i unitat de CD.</p>
+<ul>
+<li>Desar o no els canvis realitzats.</li>
+</ul>
+<p>Figura 3.2. El menú principal (“main”) del programa de conﬁguració del BIOS permet accedir a la informació del sistema i la conﬁguració dels dispositius d’emmagatzematge. En sortir de l’aplicació de conﬁguració del BIOS, es poden acceptar i emmagat- zemar els canvis introduïts o bé sortir sense gravar-los. En cas de no estar segurs dels canvis introduïts, la millor opció és deixar la conﬁguració inicial.</p>
+<p>En l’aplicació de conﬁguració del BIOS, es pot introduir una contrasenya perquè usuaris no autoritzats no la puguin reconﬁgurar. També des del BIOS es pot establir una contrasenya d’accés a l’ordinador. Actualment, també, els fabricants permeten actualitzar el programari del BIOS per obtenir noves funcionalitats o controls. L’actualització del BIOS és un procés delicat perquè una mala conﬁguració podria deixar l’ordinador sense funcionar.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Assegureu-vos que la BIOS està conﬁgurada amb el dispositiu d’arrencada correcte, o és possible que l’ordinador no es posi en funcionament adequadament. Cal anar amb compte a l’hora de fer canvis en la conﬁguració de la BIOS. El fet d’equivocar-se en els paràmetres pot fer que l’ordinador deixi d’arrencar. Quan acabeu de fer els canvis en la conﬁguració, recordeu triar l’opció per a desar els canvis realitzats: Save changes abans de sortir. Llavors la BIOS reiniciarà l’ordinador de manera que els canvis realitzats tinguin efecte en el sistema.</p>
+<p>EFI davant BIOS L’estàndard BIOS no és l’únic sistema d’entrada/sortida que ha existit, i donat els anys que es troba en funcionament han aparegut candidats a substituir-lo. Un d’aquests ha estat EFI (Extensible Firmware Interface). Es tracta d’una especiﬁcació que deﬁneix una interfície de programari entre un sistema operatiu i una plataforma ﬁrmware. L’EFI és molt més gran i complex que BIOS i potser per això no ha aconseguit ser majoritari en el mercat.</p>
+<p>L’especiﬁcació EFI inicial fou desenvolupada per Intel, però ha estat assumida a dia d’avui per l’Uniﬁed EFI Forum. Va sorgir per superar les superacions de la BIOS (mode de 16 bits, només 1 MB d’espai adreçable, etc.). Diverses platafor- mes de maquinari han adoptat l’estàndard, des dels primers Intel Itanium en què es va desenvolupar. Avui dia es pot trobar en equips Apple Macintosh basats en la plataforma Intel, a la major part de plaques base Intel (poden actualitzar-se a un microprogramari EFI, encara que moltes es venen amb microprogramari BIOS) o a servidors IBM System o Dell PowerEdge.</p>
+<p>Hi ha diversos sistemes operatius que són capaços d’arrencar des de (U)EFI, com són el Linux, HP-UX, HP OpenVMS, MacOSX 10.4 i 10.5, o algunes versions del Windows de 32 bits i 64 bits. 3.1.3 Proves de funcionament i rendiment. Veriﬁcació del procés de muntatge. L’últim procés, un cop ja hem instal·lat i conﬁgurat el maquinari, consistirà a veriﬁcar-ne el bon funcionament.</p>
+<p>Aquesta acció esdevé de vital importància per a assegurar-nos que el sistema dóna el rendiment màxim possible per a les seves característiques i prestacions. Per a realitzar aquestes proves necessitarem instal·lar en la màquina algun sistema operatiu que pugui utilitzar eines de diagnosi i benchmarking, de manera que es pugui veure el funcionament de tots els components interaccionant amb el programari que en farà ús o un de molt similar.</p>
+<p>En la unitat formativa “Manteniment d’equips microinformàtics” d’aquest mòdul s’explica el procés d’actualització del BIOS.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic El benchmarking es basa en la realització de comparatives d’uns components amb altres per a avaluar-ne la qualitat relativa. Per a comprovar el funcionament del sistema assemblat, caldrà utilitzar-lo amb un sistema operatiu instal·lat i amb els drivers (o controladors) corresponents.</p>
+<p>L’últim punt de la conﬁguració també depèn del sistema operatiu que s’hagi instal·lat i de la utilització dels controladors de dispositiu. Importància del "benchmarking" El sentit de fer una operació de benchmarking es pot donar sobretot quan ens trobem en el moment de consolidar una decisió de muntatge, per exemple: hem muntat un prototipus i hem de decidir si el volem passar a la producció en cadena.</p>
+<p>També pot servir per a comprovar el funcionament de l’equip, encara que això no comporti canvis posteriors en el disseny</p>
+<ul>
+<li>Com maximitzem el rendiment dins d’un preu donat.</li>
+<li>Com minimitzem els costos per arribar a un rendiment mínim.</li>
+<li>Com obtenim la millor ràtio rendiment/cost (dins uns requeriments de preu</li>
+</ul>
+<p>o rendiment). La realització de proves de rendiment pren el màxim sentit durant un procés de decisió, és a dir: si hem de triar un component entre dues o més alternatives. Consideracions que cal descartar a l’hora de valorar un component de maquinari</p>
+<h3>1. Reputació del fabricant (no mesurable i realment no signiﬁcant)</h3>
+<h3>2. Participació de mercat omarket share del fabricant (no mesurable i realment</h3>
+<p>no signiﬁcant).</p>
+<h3>3. Paràmetres irracionals (per exemple, prejudicis com que no ens agradi el</h3>
+<p>color de la targeta gràﬁca).</p>
+<h3>4. Valor percebut (no mesurable i irracional, per exemple, que porti imatges</h3>
+<p>d’un personatge de Disney no és important!)</p>
+<ul>
+<li>Quantitat de màrqueting que ha tingut el producte: els logos, publicitat, etc.</li>
+</ul>
+<p>no garanteixen el millor funcionament.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Procediments de //benchmarking// o comparació i interpretació dels resultats</p>
+<h3>1. Primer que res, cal identiﬁcar els nostres objectius de comparació. Què</h3>
+<p>volem comprovar exactament? De quina manera ens ajudarà el procés de benchmarking a prendre decisions? Quant temps i recursos estem disposats a posar en aquest procés?</p>
+<ul>
+<li>Utilitzeu eines estàndard, ben comprovades i en versions actualitzades.</li>
+</ul>
+<h3>3. Feu les proves component a component i comparant-los amb dispositius</h3>
+<p>coneguts.</p>
+<h3>4. Veriﬁqueu els resultats obtinguts sempre que sigui possible. Feu les proves</h3>
+<p>més d’una vegada i comproveu els resultats de conﬁguracions similars.</p>
+<h3>5. Si obteniu resultats que semblen fora de lloc, proveu de demanar ajuda o</h3>
+<p>comprovar que heu fet tots els passos correctament. Eines de veriﬁcació/diagnòstic A l’hora de fer una anàlisi del nostre ordinador i obtenir el màxim d’informació, disposem d’una sèrie d’eines. Aquest tipus de programari ens permet generar diversos resums, en què es detallen les característiques dels sistemes operatius instal·lats, dels programes, dels components de maquinari (memòria, CPU, targe- tes), dels controladors,etc.</p>
+<p>Alguns d’aquests programes de diagnòstic també ens permeten fer comparatives entre el nostre ordinador i d’altres equips amb determinades prestacions -placa base, disc dur, etc.- i també mesurar el rendiment i veriﬁcar que el maquinari funciona de manera òptima. Aquest tipus de programari s’anomenen eines de benchmark. En general, són programes que s’instal·len com una aplicació clàssica.</p>
+<p>Normalment generen una sèrie de tests, que poden ser individuals o bé de grup, per exemple, velocitat d’escriptura en memòria, velocitat de CPU, nombre d’imatges per segon,etc. Per tant, és molt important l’ús d’aquest tipus d’eines per a comprovar que el nostre equip funciona correctament i conèixer els detalls dels components que en formen part.</p>
+<p>Els programes de diagnòstic són eines que permeten analitzar diferents aspectes de l’ordinador, tant del programari com del maquinari. Així, per exemple, permeten veure amb detall la conﬁguració de la placa base, del sistema operatiu, del programari instal·lat, etc.</p>
+<p>Aquest tipus de programes poden tenir diversos enfocaments, però en general disposen de la possibilitat de realitzar comparatives de components quan es tracta de maquinari i donar una puntuació per al component mesurat que ens donarà una idea del seu valor respecte a altres.</p>
+<p>Entre els programes de diagnòstic més coneguts hi ha l’Everest Home, SiSoft Sandra, etc.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic En el subapartat “La BIOS” s’explica la conﬁguració bàsica de la BIOS. Els bechmarks sintètics (syntethic benchmarks) mesuren la capacitat màxima d’aspectes especíﬁcs d’un sistema mitjançant càlculs o proves repetitives, mentre que els benchmarks d’aplicacions (application benchmarks) mesuren el rendiment de programes reals.</p>
+<p>Algunes eines en entorn Windows</p>
+<ul>
+<li>Administrador de dispositius del Windows</li>
+<li>Everest (antic AIDA32)</li>
+<li>SiSoftSandra</li>
+<li>BurnInTest</li>
+<li>Dr Hardware</li>
+<li>3DMark</li>
+</ul>
+<p>Altres eines en entorn Linux</p>
+<ul>
+<li>Phoronix Test Suite</li>
+<li>Paquet Hardinfo</li>
+<li>LBT: Linux Benchmarking Toolkit</li>
+</ul>
+<p>3.1.4 Instal·lació bàsica del Windows La conﬁguració ﬁnal dels dispositius s’ha de realitzar un cop tenim un sistema operatiu instal·lat en l’ordinador ja muntat. Això ens permetrà comprovar el funcionament correcte de tots els dispositius en conjunt, i també realitzar proves de rendiment.</p>
+<p>La conﬁguració del dispositiu serà diferent depenent del sistema operatiu que uti- litzem. Tot seguit disposeu del procés bàsic d’instal·lació d’un sistema Windows XP per a poder realitzar les proves de funcionament dels nostres dispositius (la ﬁgura 3.3 us mostra algunes pantalles del procés).</p>
+<p>Abans de començar la instal·lació assegureu-vos que disposeu del següent</p>
+<ul>
+<li>El CD original d’instal·lació del Windows XP SP2 o SP3 (per a assegurar</li>
+</ul>
+<p>nos el màxim suport de dispositius SATA).</p>
+<ul>
+<li>La clau d’activació del producte, que es troba inclosa en el CD.</li>
+<li>El sistema completament muntat, incloent-hi els perifèrics externs.</li>
+<li>CD de controladors de tot el maquinari muntat.</li>
+</ul>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Figura 3.3. Instal·lació d’un sistema XP Cal assegurar-se que el sistema compleix els requisits mínims d’instal·lació, encara que qualsevol equip actual serà capaç d’executar un sistema operatiu Windows XP, sempre que disposi de controladors per a tot el maquinari (per exemple, la RAM recomanada per a funcionar és de 128 MB).</p>
+<ul>
+<li>Assegureu-vos que el vostre sistema es troba conﬁgurat per a arrencar des de</li>
+</ul>
+<p>CD. D’aquesta manera el sistema podrà accedir als ﬁtxers d’intal·lació que es troben en suport òptic. Pitgeu una tecla si us demana fer-ho per arrancar des de CD.</p>
+<ul>
+<li>Trieu l’opció Install Windows XP i accepteu l’acord de llicència de Micro</li>
+</ul>
+<p>soft.</p>
+<ul>
+<li>Atès que esteu treballant amb un disc encara no inicialitzat, podeu triar</li>
+</ul>
+<p>l’opció que us permet instal·lar el sistema en tot el disc dur (Unpartitioned space). Tingueu en compte que estem fent una instal·lació bàsica que ens permetrà fer comprovacions del rendiment del maquinari. Formateu el disc amb el sistema d’arxius NTFS.</p>
+<ul>
+<li>En aquest punt el programa d’instal·lació dóna format al disc dur i hi copia</li>
+</ul>
+<p>els arxius d’instal·lació. Pot tardar uns minuts a fer aquesta operació.</p>
+<ul>
+<li>L’equip es reinicia i a partir d’ara podreu utilitzar el ratolí. Trieu les opcions</li>
+</ul>
+<p>de llenguatge i regió adequades, i podeu afegir el vostre nom i empresa, abans d’introduir el número de sèrie (tingueu en compte que si no escriviu el número correcte no podreu avançar!).</p>
+<ul>
+<li>El programa us demanarà una contrasenya d’administrador, que podeu</li>
+</ul>
+<p>deixar en blanc si el sistema no s’ha d’utilitzar un cop fetes les proves amb</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Consulteu en l’apartat “Recursos de contingut” del web del mòdul el manual d’instal·lació del Windows XP en un equip nou, ubicat en la mateixa pàgina de Microsoft. Coneixeu, en els “Recursos de contingut” del web del mòdul, altres eines de diagnòstic presents en l’entorn Windows.</p>
+<p>CPU-z També es pot descarregar lliurement i dóna informació detallada sobre la placa base (incloent-hi la BIOS), el processador i la memòria RAM. aquesta instal·lació. Deixeu les opcions de xarxa per defecte, ja que en principi no necessiteu connectar l’ordinador a una xarxa.</p>
+<ul>
+<li>En aquest punt, i un cop li heu dit que no necessiteu actualitzacions</li>
+</ul>
+<p>automàtiques, podeu saltar la resta de passos (skip) i iniciar el sistema en Windows per primer cop. Instal·lació dels controladors de dispositiu Un cop heu arrencat l’equip, alguns components de maquinari (com la targeta gràﬁca) estaran funcionant en mode bàsic, ja que el sistema encara no disposa dels controladors de dispositius ajustats al maquinari muntat. Per això ara haureu d’utilitzar els discos compactes amb els controladors que venien amb el maquinari connectat.</p>
+<p>Encara que cada fabricant ofereix un programa d’instal·lació personalitzat, el procés bàsic per a instal·lar qualsevol perifèric és el següent</p>
+<ul>
+<li>Introduïu el disc que conté els controladors en la unitat lectora.</li>
+<li>Executeu el programa d’instal·lació del dispositiu adequat.</li>
+<li>Connecteu el dispositiu en acabar la instal·lació si el programa no us</li>
+</ul>
+<p>ha demanat fer-ho abans (evidentment, els dispositius interns ja estaran connectats ).</p>
+<ul>
+<li>En alguns casos haureu de reiniciar l’equip perquè el sistema carregui els</li>
+</ul>
+<p>controladors en el nucli del sistema operatiu.</p>
+<ul>
+<li>Conﬁgureu el dispositiu si és necessari. Per exemple, en el cas de la targeta</li>
+</ul>
+<p>gràﬁca probablement haureu de modiﬁcar la resolució d’aquesta, perquè s’adapti al vostre monitor, i la profunditat de color que us sigui necessària. 3.1.5 Programes de "benchmark" en entorn Windows Hi ha moltes eines de diagnòstic que funcionen sobre un entorn Windows a causa de la seva popularitat. Tot seguit podeu veure la descripció del funcionament i possibilitats d’anàlisi de dues d’aquestes eines.</p>
+<p>La major part d’eines de diagnòstic permeten descarregar de la xarxa una versió de prova o avaluació, freqüentment amb funcionalitats limitades. Everest Home (Antic AIDA32) Ens mostra, de manera detallada, la conﬁguració del nostre sistema. És un programari que ens dóna molta informació, però que és relativament senzill d’utilitzar. La pantalla, tal com podeu veure en la ﬁgura 3.4, ens apareix dividida</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic en dos apartats. El de l’esquerra, ens mostra els elements a examinar, i si en seleccionem un ens mostra tots els elements que formen part d’aquest grup. Figura 3.4. Detall dels elements del nostre sistema Les seccions principals d’aquest programari són les següents</p>
+<ul>
+<li>Ordinador, en el qual destacaríem dues seccions</li>
+</ul>
+<p>La primera seria el resum que mostra detalladament les característi- ques del sistema operatiu, les dades de la placa base, les unitats d’em- magatzematge, les particions, les targetes de xarxa, etc. Normalment, també apareix un vincle en la pàgina web del proveïdor del component, que ens permetrà, si escau, actualitzar els controladors o drivers.</p>
+<p>L’altra secció seria la DMI. En aquesta secció, s’aprofundeix més en els aspectes de maquinari. Per exemple, dóna més informació sobre el BIOS, sobre els mòduls de memòria (indica de quin tipus són, el nombre de mòduls solts, si estan ocupats o no), el tipus de processador, les ranures de les targetes del sistema, etc.</p>
+<ul>
+<li>Placa mare. Dóna informació detallada en les seves seccions corresponents.</li>
+</ul>
+<p>Així, proporciona informació sobre el tipus de memòria instal·lada, la placa base, el processador, la informació física sobre la CPU, etc.</p>
+<ul>
+<li>Sistema operatiu.</li>
+</ul>
+<p>Mostra de manera detallada els elements principals que hi tinguem instal·lats, juntament amb informació sobre la llicència, els processos actius i els serveis activats.</p>
+<ul>
+<li>Servidor.</li>
+</ul>
+<p>Mostra les carpetes compartides, les dades del domini i del servidor, els usuaris de l’equip i la connexió actual.</p>
+<ul>
+<li>Monitor. Dóna tota la informació sobre aquest dispositiu de sortida. Mos</li>
+</ul>
+<p>tra informació sobre la targeta gràﬁca, les fonts instal·lades i les propietats de la conﬁguració de l’escriptori.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic El programa Sisoft Sandra disposa de versions d’escriptori per al Windows (XP, Vista, Server 2008, etc.)i també per a dispositius mòbils (Windows Mobile) sobre processadors ARM.</p>
+<ul>
+<li>Multimèdia. Dóna diverses informacions sobre els dispositius d’àudio.</li>
+<li>Emmagatzematge. Dóna informació detallada sobre els dispositius d’em</li>
+</ul>
+<p>magatzematge del nostre ordinador: capacitat, controladors, canals IDE, IRQ, fabricants,etc.</p>
+<ul>
+<li>DirectX. Aquesta tecnologia potencia l’ús multimèdia del PC en vídeo,</li>
+</ul>
+<p>música i so. Dóna informació sobre els controladors DirectX, sobre el rendiment i sobre la detecció de problemes en els components del sistema.</p>
+<ul>
+<li>Perifèrics. Detallen tota la informació sobre els diferents dispositius: els</li>
+</ul>
+<p>recursos (IRQ, DMA, memòria), les impressores, els controladors, etc.</p>
+<ul>
+<li>Programari. Indica els programes que s’han carregat quan el programari</li>
+</ul>
+<p>instal·lat ha iniciat les tasques planiﬁcades, les actualitzacions del Windows i els antivirus instal·lats.</p>
+<ul>
+<li>Conﬁguració.</li>
+</ul>
+<p>Mostra els arxius de sistema (ﬁgura 3.5), les variables d’entorn, la carpeta del sistema i la conﬁguració regional (idioma, país, moneda). Figura 3.5. Conﬁguració dels ﬁtxers de sistema</p>
+<ul>
+<li>Comparacions.</li>
+</ul>
+<p>En aquest últim apartat, trobarem diferències entre el nostre equip i altres de diferents característiques a l’hora d’escriure i llegir en memòria. SiSoftSandra És una utilitat que, a part d’informar-nos sobre els diferents components del sistema, insisteix més en l’anàlisi del rendiment del maquinari, fa comparatives amb altres sistemes, avisa sobre millores del sistema i permet obtenir una sèrie d’informes.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic És un programa que disposa d’un nombre molt important de possibles proves. En total, el programa disposa de cinc apartats</p>
+<ul>
+<li>Wizard modules</li>
+<li>Information modules</li>
+<li>Benchmarking modules</li>
+<li>Testing/diagnostic modules</li>
+<li>Listing modules</li>
+</ul>
+<h4>1) Wizard modules</h4>
+<p>Són una sèrie de mòduls que ens permeten utilitzar diferents tipus d’assistents.</p>
+<ul>
+<li>Add New Module.</li>
+</ul>
+<p>Permet seleccionar més mòduls. Per defecte, ens apareixen per pantalla.</p>
+<ul>
+<li>Combined Performance Index Wizard. Ens permet seleccionar diferents</li>
+</ul>
+<p>tipus d’anàlisi -sobre CPU, memòria, disc dur, targeta de xarxa i, també, realitzar comparatives amb altres sistemes. El resultat es reﬂecteix amb una ﬁgura geomètrica, en concret amb un pentàgon. Cada component es reﬂecteix en una superfície concreta de la ﬁgura. Si surt de color blau, ens indica que les prestacions del sistema que estem comparant són superiors a les del nostre; en cas contrari, ens pintaria la superfície de color vermell.</p>
+<p>En la ﬁgura 3.6 veureu que, en general, els elements que estem comparant tenen un resultat superior al nostre sistema. Figura 3.6. Comparativa de diferents elements del sistema Sandra Lite La versió Lite és gratuita i es pot descarregar lliurement per a ús personal o educatiu, encara que té limitacions d’ús i de funcionalitats.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Burn-In Wizard. Aquest assistent permet realitzar una prova d’estrès sobre</li>
+</ul>
+<p>els diferents components; és a dir, permet sotmetre’ls a una sèrie de proves basades en la realització de càlculs numèrics que els facin treballar al màxim. Per exemple, la ﬁgura 3.7 mostra una sessió de prova de la CPU amb un resultat correcte. Figura 3.7. Prova d’estrès sobre el nostre equip</p>
+<ul>
+<li>WebUpdate Wizard. Permet baixar les últimes actualitzacions del programa.</li>
+<li>Performance Tune-up Wizard. Fa una anàlisi completa del nostre PC i ens</li>
+</ul>
+<p>mostra, si convé, una sèrie d’avisos per a millorar el nostre sistema. Les maneres de desar un informe són diverses: per pantalla, per impressora o per fax.</p>
+<ul>
+<li>Create a Report Wizard.</li>
+</ul>
+<p>Permet realitzar diversos informes sobre els mòduls que escollim. També permet desar la conﬁguració d’aquests mòduls per poder-los utilitzar posteriorment.</p>
+<h4>2) Information modules</h4>
+<p>Donen una llista de cada component de l’ordinador. En seleccionar-lo amb el ratolí, automàticament ens dóna informació detallada de la CPU, el BIOS, la targeta de vídeo, la targeta de so, la CMOS, les fonts instal·lades, el teclat, el ratolí, etc.</p>
+<h4>3) Benchmarking modules</h4>
+<p>En aquest apartat, podrem realitzar una sèrie de proves comparatives entre diferents components, per exemple, entre les unitats d’emmagatzematge, l’ALU,</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic la memòria, la connexió a Internet, la connexió a la xarxa local, la CPU, etc. En la ﬁgura 3.8, apareixen les característiques principals del ratolí. Figura 3.8. Característiques especíﬁques sobre un dispositiu: el ratolí</p>
+<h4>4) Testing/diagnostic modules</h4>
+<p>Mostren detalls sobre diferents components</p>
+<ul>
+<li>Hardware Irq Settings. Mostren una llista de les interrupcions del sistema</li>
+</ul>
+<p>associada al component que s’hi ha assignat.</p>
+<ul>
+<li>DMA Channel Setting. Mostra una llista dels dispositius que poden accedir</li>
+</ul>
+<p>a memòria mitjançant un canal directe.</p>
+<ul>
+<li>I/O Port Setting. Mostra la llista de ports d’entrada i de sortida, associats</li>
+</ul>
+<p>als components corresponents.</p>
+<ul>
+<li>Memory Resource. Ens envia la informació dels components i de l’adreça</li>
+</ul>
+<p>de memòria que s’hi ha assignat.</p>
+<ul>
+<li>Plug &amp; Play Enumerator. Mostra la llista de classes de dispositius: targetes</li>
+</ul>
+<p>de xarxes, controladors IDE, impressores, ratolí, monitor, etc. En cas que tinguem més d’una opció -per exemple, si tenim dues impressores instal·lades-, un cop tenim seleccionat el tipus, caldrà escollir un dels components.</p>
+<h4>5) Listing modules</h4>
+<p>En aquest apartat, es dóna informació sobre la conﬁguració del sistema: progra- mes instal·lats, variables d’entorn, ﬁtxers del sistema com autoexec.bat, boot.ini, win.ini, o system.ini (ﬁgura 3.9).</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic Algunes distribucions Linux en CD autònom que inclouen eines de diagnòstic són SoL-diag, Stresslinux o Mutagenix. Consulteu, en les “Adreces d’interès” del web del mòdul, un enllaç a les distribucions del Linux existents amb les seves característiques especiﬁcades.</p>
+<p>Figura 3.9. Detall sobre el ﬁtxer boot.ini Des del menú Tools (Eines), podem realitzar diferents tasques que ens ajudaran en el manteniment del nostre equip, i que són pròpies del sistema operatiu Windows. Entre les opcions principals, cal destacar les següents</p>
+<ul>
+<li>Accés a Panel de control</li>
+<li>Compactació del disc dur</li>
+<li>Realització de còpies de seguretat del disc dur</li>
+<li>Obtenció d’informació sobre el rendiment del sistema</li>
+<li>Utilització de l’editor de conﬁguració del sistema</li>
+<li>Realització d’un scandisk del disc dur</li>
+</ul>
+<p>3.1.6 Arrencada amb un CD autònom GNU/Linux Per a realitzar proves de rendiment sense necessitat d’instal·lar un sistema de proves es pot utilitzar un CD autònom o live CD del GNU/Linux (ﬁgura 3.10). En principi, aquest tipus de sistema operatiu està pensat per a provar un sistema operatiu Linux sense necessitat d’instal·lar-lo, però una altra utilitat també pot ser la que ens ocupa: fer proves del rendiment a l’equip instal·lat recentment. Els passos que haureu de fer són</p>
+<ul>
+<li>Assegureu-vos que el sistema es troba conﬁgurat per arrencar des de CD i</li>
+</ul>
+<p>que tots els dispositius estan connectats i alimentats.</p>
+<ul>
+<li>Introduïu un disc autònom en la unitat lectora i trieu l’opció que permeti</li>
+</ul>
+<p>utilitzar el sistema sense necessitat d’instal·lar-lo.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic</p>
+<ul>
+<li>Si esteu utilitzant un CD pensat especíﬁcament per a fer diagnòstics, podeu</li>
+</ul>
+<p>executar directament els programes adequats. En cas contrari, abans de continuar haureu d’instal·lar els programes que vulgueu utilitzar per a fer les proves. De la mateixa manera que amb un CD, els sistemes Linux actuals vénen preparats per a arrencar-se des d’una unitat USB. Per tant, és molt interessant tenir un llapis USB autoarrencable, on podem instal·lar els nostres programes sense necessitat de repetir el procés cada cop que arrenquem un sistema.</p>
+<p>Figura 3.10. Arrencada amb un sistema GNU-Linux en viu. Un cop el sistema es troba en funcionament es pot conﬁgurar la connexió a la xarxa i instal·lar-hi qualsevol programa de diagnòstic que vulguem utilitzar. 3.1.7 Eines de "benchmark" en l’entorn GNU/Linux L’entorn Linux, malgrat la diﬁcultat d’ús aparentment superior, disposa d’algunes eines de diagnòstic amb interfície d’usuari gràﬁca que faciliten la feina als menys familiaritzats amb l’entorn de consola.</p>
+<p>Paquet Hardinfo Una manera senzilla de fer comprovacions de rendiment d’un ordinador amb el GNU/Linux és utilitzar el paquet de programari Hardinfo. Aquest és capaç donar un perﬁl del nostre equip que ens permeti comparar-lo amb altres i fer-ne proves de rendiment o benchmarks. Les seves funcionalitats inclouen recollir informació Vegeu, en els “Recursos de contingut” del web del mòdul, un programa d’aprenentatge d’instal·lació de programes en entorn GNU/Linux.</p>
+<p>En la unitat formativa “Instal·lació de programari”, podeu consultar el procés per a passar un CD del Linux a un llapis USB autoarrencable. Vegeu, en els “Recursos de contingut” del web del mòdul, un enllaç a un manual d’instruccions de consola GNU/Linux, amb l’explicació d’ordres relacionades amb la informació de maquinari, com lshw, lspci o lsusb, entre altres.</p>
+<p>Muntatge i manteniment d’equips Muntatge d’un equip microinformàtic sobre el nostre ordinador i sistema operatiu, realitzar diversos benchmarks i exportar les dades a format HTML. Un cop engegat el programa des de Sistema\Preferències \Syste proﬁler and benchmark, la manera més senzilla de recórrer els informes és posar-los en funcionament de manera que generin una pàgina HTML. Per a fer això només cal clicar en el botó Report en la barra de tasques, i seleccionar-hi la informació que volem incloure i també la destinació de ﬁtxer. La generació d’un informe, incloent- hi els benchmarks, pot tardar uns minuts depenent de la rapidesa de l’ordinador (ﬁgura 3.11).</p>
+<p>Figura 3.11. Generació d’informes mitjançant l’eina HardInfo Els benchmarks que es poden realitzar, relacionats amb el rendiment de la CPU i l’FPU (unitat de coma ﬂotant), són</p>
+<ul>
+<li>CPU ZLib</li>
+<li>CPU Fibonacci</li>
+<li>CPU MD5</li>
+<li>CPU SHA1</li>
+<li>CPU Blowﬁsh</li>
+<li>FPU Raytracing</li>
+</ul>
+<p>El paquet Hardinfo es troba en els repositoris de programari de l’Ubuntu i també es pot instal·lar manualment en qualsevol sistema Linux.</p>
+<div class="admonition tip"><p class="admonition-title">📚 Document extens (85 pàgines)</p><p>S'han mostrat les primeres 80 pàgines completes del manual.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/index.html">⬅️ 📘 UT2 Completa</a>
+<a class="page-nav-btn" href="../ut02/ut0202.html">2.2 U2 - P2 - PROCESADOR Y MEMORIA ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

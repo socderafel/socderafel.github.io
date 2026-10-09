@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT4 — Unit 4 Content Management Systems — Aplicacions Web | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>💻 Aplicacions Web — 2n SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Web</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unit 0: Introduction</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Reference Material</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Presentation Folder</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Activities</a></li>
+<li><a href="../ut00/ut0004.html">0.4 EN Article- Recovery Dossier</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unit 1: Technologies for Web Development</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Resources: Example of HTML+CSS</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Resources: CSS Template Collection</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Resources: Reference Links</a></li>
+<li><a href="../ut01/ut0104.html">1.4 HTML Example</a></li>
+<li><a href="../ut01/ut0105.html">1.5 HTML Example</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Cheatsheet HTML (Manz)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Cheatsheet CSS (Manz)</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unit 2: Desktop Web Applications</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Resources: Reference Links</a></li>
+<li><a href="../ut02/ut0202.html">2.2 EN Article: How Web Operating Systems Work</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unit 3: Deploying a web server</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Resources: Reference Links</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Taller AWS-ASIX2023</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Unit 4 Content Management Systems</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Resources: Reference Links</a></li>
+<li><a href="../ut04/ut0402.html">4.2 CMS Correction Form</a></li>
+<li><a href="../ut04/ut0403.html">4.3 WordpressEvaluation Template</a></li>
+<li><a href="../ut04/ut0404.html">4.4 WordpressEvaluation Template (WORD)</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Wordpress Practical Exam Example</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Unit 5 Web File Management and Web Office</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Resources: Reference Links</a></li>
+<li><a href="../ut05/ut0502.html">5.2 EN Article: Battle of the Clouds</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Unit 6: Distance Learning Managers</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Resources: Reference Links</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unit 7: JS Programming Introduction</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Plantilla: Joc JS amb processing.js</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Recuperació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Continguts i Recursos</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n SMX · Grau Mitjà · UT4 Completa</span>
+<h1>📘 UT4 — Unit 4 Content Management Systems (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0401"><strong>4.1 Resources: Reference Links</strong></a> (o <a href="./ut0401.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0402"><strong>4.2 CMS Correction Form</strong></a> (o <a href="./ut0402.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0403"><strong>4.3 WordpressEvaluation Template</strong></a> (o <a href="./ut0403.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0404"><strong>4.4 WordpressEvaluation Template (WORD)</strong></a> (o <a href="./ut0404.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0405"><strong>4.5 Wordpress Practical Exam Example</strong></a> (o <a href="./ut0405.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut04actividades"><strong>✍️ Activitats pràctiques UT4</strong></a> (o <a href="./ut04actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0401">4.1 Resources: Reference Links</h2>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: EN Video - BBPress Wordpress Tutorial - Set up a Forum in Wordpress using bbPress plugin</p><p><a href="https://www.youtube.com/watch?v=BmtFh-pb7F8" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=BmtFh-pb7F8) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: EN Video - What is WooCommerce?</p><p><a href="https://www.youtube.com/watch?v=1KahlicghaE" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=1KahlicghaE) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: EN Video - Woocommerce Tutorial: Part 1 - Installation, Setup and Adding Your First Product</p><p><a href="https://www.youtube.com/watch?v=jfMBEXLTxgQ" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=jfMBEXLTxgQ) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: EN Video - Woocommerce Tutorial Part 2 - Adding &amp; Configuring Products</p><p><a href="https://www.youtube.com/watch?v=9m4D8R9z8vg" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=9m4D8R9z8vg) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: EN Video - Woocommerce Tutorial Part 3: Product Variations and Product Attributes</p><p><a href="https://www.youtube.com/watch?v=IJjoJ408Gag" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=IJjoJ408Gag) ↗️</strong></a></p></div>
+<hr/>
+<p>05 - Referencias</p>
+<p>OpenSourceCMS - <a href="http://www.opensourcecms.com">http://www.opensourcecms.com</a><br/>CMSmatrix - <a href="http://www.cmsmatrix.org">http://www.cmsmatrix.org</a><br/>Licencias Creative Commons - <a href="http://es.creativecommons.org">http://es.creativecommons.org</a><br/>Servidor en 1&amp;1 - <a href="http://www.1and1.es/ServerPremium?linkId=hd.subnav.dedicatedservers">http://www.1and1.es/ServerPremium?linkId=hd.subnav.dedicatedservers</a><br/>Servidor dedicado en Arsys - <a href="http://www.arsys.es/servidores/dedicados">http://www.arsys.es/servidores/dedicados</a><br/>Servidor dedicado en OVH - <a href="http://www.ovh.es/servidores_dedicados">http://www.ovh.es/servidores_dedicados</a><br/>Servidor dedicado en Aruba - <a href="http://serverdedicati.aruba.it">http://serverdedicati.aruba.it</a><br/>CMS joomla - <a href="http://www.joomla.org">http://www.joomla.org</a><br/>CMS Wordpress - <a href="http://wordpress.org">http://wordpress.org</a><br/>Foros phpBB - <a href="https://www.phpbb.com">https://www.phpbb.com</a><br/>mediaWiki - <a href="http://www.mediawiki.org/wiki/MediaWiki">http://www.mediawiki.org/wiki/MediaWiki</a><br/>Coppermine Gallery - <a href="http://coppermine-gallery.net">http://coppermine-gallery.net</a><br/>Comercio electrónico Prestashop - <a href="http://www.prestashop.com/es/">http://www.prestashop.com/es/</a><br/>Motor de plantillas Smarty - <a href="http://www.smarty.net">http://www.smarty.net</a></p>
+<hr/>
+<h2 id="ut0402">4.2 CMS Correction Form</h2>
+<p>Plantilla de Corrección CMS</p>
+<hr/>
+<h2 id="ut0403">4.3 WordpressEvaluation Template</h2>
+<p>GRUPO: G1 G2 G3 G4 G5 G6 G7 Categorías Conceptos a Valorar 10 2 Aspecto Formal Portada (Tema/Autor/Fecha) Índice de contenidos Maquetación Clara y Ordenada 3 Requisitos Version de Wordpress Version PHP Versión BD: MySQL 15 5 Justificación Tema Reparto de tareas Elecciones realizadas 20 3 Personalización Tema Visual Distribución de Widgets Logotipos Licencia Idioma Redes sociales 15 3 Estructura Categorias Menú Pàginas Sobre Nosotros Créditos / Referencias Entradas (Contenidos) 15 5 Complementos Extensiones Problemas Solucionados Ampliaciones Futuras 20 4 Exposición Fluidez de argumentos Orden de ideas Aporta valor a las diapositivas Utilidad de los comentarios Conclusión</p>
+<hr/>
+<h2 id="ut0404">4.4 WordpressEvaluation Template (WORD)</h2>
+<table><thead><tr><th></th><th></th><th>GRUPO:</th><th></th><th>A1</th><th>A2</th><th>A3</th><th>A4</th><th>A5</th><th>A6</th><th>A7</th><th>A8</th></tr></thead><tbody><tr><td></td><td></td><td>Categorías</td><td>Conceptos a Valorar</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>10</td><td>2</td><td>Aspecto Formal</td><td>Portada (Tema/Autor/Fecha)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>3</td><td></td><td>Índice de contenidos</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td>Maquetación Clara y Ordenada</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>5</td><td>3</td><td>Requisitos</td><td>Version de Wordpress</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>1</td><td></td><td>Version PHP</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>1</td><td></td><td>Versión BD: MySQL</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>15</td><td>5</td><td>Justificación</td><td>Tema</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td>Reparto de tareas</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td>Elecciones realizadas</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>20</td><td>3</td><td>Personalización</td><td>Tema Visual</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td>Distribución de Widgets</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>3</td><td></td><td>Logotipos</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td>Licencia</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td>Idioma</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td>Redes sociales</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>15</td><td>3</td><td>Estructura</td><td>Categorias</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td>Menú</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>3</td><td></td><td>Pàginas</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td>Sobre Nosotros</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>2</td><td></td><td>Créditos / Referencias</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>3</td><td></td><td>Entradas (Contenidos)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>15</td><td>5</td><td>Complementos</td><td>Extensiones</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td>Problemas Solucionados</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>5</td><td></td><td>Ampliaciones Futuras</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>20</td><td>4</td><td>Exposición</td><td>Fluidez de argumentos</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>4</td><td></td><td>Orden de ideas</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>4</td><td></td><td>Aporta valor a las diapositivas</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>4</td><td></td><td>Utilidad de los comentarios</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>4</td><td></td><td>Conclusión</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<hr/>
+<h2 id="ut0405">4.5 Wordpress Practical Exam Example</h2>
+<p>Exemple Pràctic Wordpress</p>
+<p>Exercici pràctic amb Wordpress</p>
+<p>El punt de partida de l’examen és una instal·lació neta de Wordpress sobre Bitnami. 1.- Instal·lació de Wordpress. ● Fes una nova instal·lació de Wordpress neta al mateix espai web per a que el Frontend aparega en una ruta concreta. ● Gasta la mateixa base de dades que la instal·lació base però amb prefix de taula “ex_” per separar les taules del sistema per defecte i el sistema de l’examen.</p>
+<p>● Defineix com usuari administrador “webmaster” amb contrasenya “lliurex” i el teu correu electrònic.</p>
+<p>2.- Configura idiomes addicionals. ● Prepara el sistema per a poder gastar com a idiomes de la interfície: Espanyol, Català i Anglès. ● Configura per defecte el idioma “Català” per al Frontend.</p>
+<p>3.- Aparença. ● Instal·la i predetermina un tema del repositori de Wordpress que siga de la gama de Verds, amb amplada de fulla fluida i que permeta personalitzar la capçalera. A més, ha de permetre posar widgets a una barra lateral i al peu de pàgina. ● Posiciona a la barra lateral els widgets: Requadre de cerca, Últimes Entrades (3), Últims Comentaris (4) i un bloc personalitzat amb un banner de 320px d’ample amb un link textual a http://www.compraypaga.edu ● Posiciona al peu els widgets: Arxiu en forma de desplegable, Meta, Núvol d’etiquetes i Arbre de Categories amb comptador d’entrades.</p>
+<p>4.- Continguts. ● Crea entrades que incorporen els següents elements: Article amb entrada i “llegir més”, article amb imatge destacada, article amb estils (alineació esquerra, cita, llista numerada i text justificat), article amb galería de fotos d’ordinadors de 2 línies i 4 columnes, article amb un vídeo de Youtube incrustat, article amb un arxiu PDF vinculat a través d’un hipervincle del sistema, article programat per ser publicat el 13/12/2015, article amb protecció d’accés per contrasenya “hola”, article en obres deixat com esborrany, article que no deixe fer comentaris.</p>
+<p>● Crea pàgines que incorporen els següents elements: Pàgina de presentació amb un text introductori i una imatge centrada, pàgina de contacte amb un formulari, pàgina de “qui som” amb un text d’ubicació i un mapa incrustat de Google Maps.</p>
+<p>5.- Classificació de Continguts. ● Configura una jerarquia de categories en dos nivells: Notícies (actualitat, novetats, ofertes), Hardware (pc, impresora, monitor, perifèric), Software (windows, linux, mac) ● Afegeix les etiquetes: pc, impresora, monitor, actualitat, novetats, ofertes, windows, linux, mac.</p>
+<p>● Classifica les entrades realitzades per ajustar-se al sistema de classificació d’etiquetes i categories creades anteriorment.</p>
+<p>6.- Menús. ● Crea la següent estructura de menús multinivell: Inici, Notícies (actualitat, novetats, ofertes), Hardware (pc, impresora, monitor, perifèric), Software (windows, linux, mac), Qui som, Contacte, Enllaç extern (http://www.pelechano.com), Login.</p>
+<p>7.- Usuaris. ● Crea els següents usuaris al sistema (nom, user, password, mail, rol): Alejandro Pardo - Alex - 1234 - alex@notengo.com - Autor Boro Camarasa - Boro - 1234 - boro@notengo.com - Editor Andoni Martinez - Andoni - 1234 - andoni@notengo.com - Administrador</p>
+<p>8.- Configuració. ● Configura el sistema per a que la pàgina d’inici siga una pàgina fixa de presentació. La secció de blog deu mostrar 5 entrades i el RSS sols 3. La moderació de comentaris ha d’estar activa per les entrades i desactivada per les pàgines. Els usuaris registrats publiquen automàticament comentaris. Les entrades més antigues de 66 dies ja no es poden comentar. Configura les URLS per a que apareguen en format de data i nom d’article al Slug.</p>
+<p>9.- Plugins. ● Instal·la i configura adequadament un plugin per crear formularis de contacte. ● Instal·la i configura adequadament un plugin per controlar estadístiques d’accés. ● Instal·la i configura adequadament un plugin per a que els usuaris puguen valorar les entrades publicades com si fora un rànking.</p>
+<p>10.- Backup. ● Genera un backup complet de la web realitzada.</p>
+<hr/>
+<h2 id="ut04actividades">✍️ Activitats pràctiques UT4</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.1 — 04.01 - Activity: Initial Concepts</p><p>Una empresa quiere incorporar a su página corporativa un apartado de noticias multimedia y, siguiendo el consejo de un Técnico de Sistemas Microinformáticos y Redes, ha decidido instalar un gestor de contenidos. Los gestores de contenidos son aplicaciones informáticas que sirven para crear, gestionar y publicar información en Internet, de manera que la información presentada se genera dinámicamente consultando los ficheros y las bases de datos. Existe una gran variedad de gestores de contenidos. Se pueden clasificar por la licencia que tienen: licencia de código abierto, propietaria... Otra clasificación es por el uso y también se pueden clasificar por el lenguaje en el que estan programados. A veces es difícil decantarse por un gestor de contenidos en concreto. El técnico está familiarizado con el gestor de contenidos Wordpress, desarrollado en PHP y MySQL bajo licencia GPL. En principio, las necesidades que tiene la empresa estarían cubiertas con Wordpress.<br/><br/>1.- ¿Qué es un gestor de contenidos?<br/>2.- ¿Para qué sirve un gestor de contenidos?<br/>3.- ¿Qué es un gestor genérico?<br/>4.- ¿Qué tipos de gestores de contenidos existen?<br/>5.- ¿Qué es una licencia de código abierto?<br/>6.- ¿Qué es una licencia de código propietario?<br/>7.- ¿Qué usos se le puede dar a un gestor de contenidos?<br/>8.- ¿Qué es Wordpress?</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.2 — 04.02 - Activity: Glossary</p><p>Realiza un pequeño glosario con los conceptos más importantes de la unidad dónde se ofrezca una definición corta de los términos utilizados: CMS, frontend, backend, Creative Commons, CC-by, CC-nc, CC-sa, CC-nd, SaaS, Cloud Computing, Servidor Dedicado, VPS.</p>
+<ul>
+<li><span style="text-decoration: underline;">Joomla</span>: LTS, ACL, plugin, componente, módulo, plantilla.</li>
+<li><span style="text-decoration: underline;">Wordpress</span>: Etiquetas, categorías, suscriptor, colaborador, autor, editor, administrador, trackbak, pingback.</li>
+<li><span style="text-decoration: underline;">phpBB:</span> bbCode, emoticono, moderador, reflote, flooding, trolleo.</li>
+<li><span style="text-decoration: underline;">mediaWiki</span>: wiki, historial</li>
+<li><span style="text-decoration: underline;">Coppermine</span>: thumbnail, GD, ImageMagick.</li>
+<li><span style="text-decoration: underline;">Prestashop</span>: Pasarela de pago, Smarty.</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.3 — 04.03 - Activity: Review Content</p><ol>
+<li>Dibuja un diagrama en el que se observe el funcionamiento genérico de un CMS y explicalo brevemente.</li>
+<li>Comenta las principales ventajas y desventajas de las soluciones de código abierto.</li>
+<li>Comenta las principales ventajas y desventajas de las soluciones de código propietario.</li>
+<li>Menciona los principales criterios que debemos considerar en la elección de un CMS concreto.</li>
+</ol></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.4 — 04.04 - Activity: Press Article</p><h2><b>El listado de Verificación e Infografía para un CMS amigable al SEO</b></h2>
+<p><b></b>Publicada el 26-02-2012, por Aleyda Solis</p>
+<p><a href="http://www.aleydasolis.com/seo/listado-verificacion-cms-amigable-seo/" target="_blank">http://www.aleydasolis.com/seo/listado-verificacion-cms-amigable-seo/</a><br/><br/>Algunas de las restricciones y obstáculos técnicos más importantes en un proceso SEO son causados por el gestor de contenidos en uso: Desde la limpieza del código, pasado por la flexibilidad de optimizar elementos específicos, las opciones para organizar su estructura, hasta su escalabilidad. Es por ello fundamental la selección de un CMS que sea efectivo en proveer una solución para las necesidades presentes y posibles en un futuro cercano del sitio, dependiendo de sus características, mientras además asegura que es amigable al SEO. Por supuesto, más allá de la capacidad del propio gestor de contenidos está el conocimiento sobre qué optimizar y cómo hacerlo, que es vital, de otra forma podríamos terminar teniendo una gran plataforma que no ha sido efectivamente optimizada -lo cual desafortunadamente también ocurre frecuentamente-. Para evitar estos problemas he compilado un listado de los aspectos SEO más importantes a tomar en consideración al elegir un CMS, que podrá ayudarte a que las tareas de optimización del día de día de tu Web se faciliten. [...]<br/><br/><b><b>1.- ¿Te parece importante posicionar bien tu gestor de contenidos en internet?<br/>2.- Destaca aquellos aspectos más importantes respecto al posicionamiento de tu gestor de contenidos.</b><br/></b></p>
+</div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.5 — 04.05 - Practice: Evaluating CMS with OpenSourceCMS ***</p><p>Selecciona un CMS disponible en la web de OpenSourceCMS para realizar una evaluación de sus prestaciones tanto en la parte de frontend como en la de backend.</p>
+<ol>
+<li>Justifica la elección del CMS que realizas.</li>
+<li>Documenta adecuadamente la revisión realizada.</li>
+<li>Valora las prestaciones y funcionalidades que has podido observar.</li>
+</ol>
+<p><a href="http://www.opensourcecms.com/">http://www.opensourcecms.com/</a><br/><br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.6 — 04.06 - Practice: Joomla Corporate Web Development (optional)</p><p>Realiza una página web completa en Joomla que refleje los principales requerimientos de la empresa "Lopez Asesores". La entrega debe consistir en la exportación de la base de datos, la carpeta de ficheros de Joomla y un documento explicativo dónde se muestre el proceso realizado y las funcionalidades implementadas. Intenta utilizar las herramientas adecuadas y crea todos los contenidos que consideres necesarios ello. Además, contesta a las siguientes cuestiones referidas al entorno de Joomla</p>
+<ol>
+<li>Preparar Entorno: Comprueba que la instalación del CMS Joomla funciona adecuadamente en tu servidor. Destaca los requisitos mínimos de instalación que necesitan las versiones más importantes de Joomla y las diferencias fundamentales que existe entre ellas.</li>
+<li>Configuración básica: Establece y documenta los principales parámetros del Panel de Control y Ajustes Globales de tu página en Joomla, explicando los motivos que determinan su uso.</li>
+<li>Planificación: Realiza una planificación inicial de los contenidos y temática de tu portal Joomla. Determina cómo vas a organizar las categorías, los menús y los principales componentes que piensas utilizar.</li>
+<li>Contenidos: Crea contenidos iniciales organizados por categorías para tu portal de Joomla siguiendo la planifición propuesta anteriormente. Utiliza diferentes elementos del editor Wysiwyg introduce elementos multimedia enlazados y subidos a través del Gestor Multimedia.</li>
+<li>Módulos y Menús: Crea un módulo de menús para hacer accesibles las diferentes categorías de contenido definidas. Crea un módulo de menú para que los usuarios con permisos puedan crear nuevos artículos y editar su perfil. Organiza diferentes módulos apropiadamente para ofrecer mejor servicio en tu portal Joomla.</li>
+<li>Componentes: Busca información sobre componentes adicionales que resulten de utilidad en tu portal Joomla. Instala aquellos que consideres adecuados explicando la utilidad principal que te ofrece.</li>
+<li>Extensiones: Prepara el entorno de Joomla para un sistema bilingüe utilizando el gestor de Extensiones. Añade las extensiones más interesantes para complementar la funcionalidad de tu portal Joomla.</li>
+<li>Plantillas: Instala una plantilla personalizada en tu portal Joomla.</li>
+<li>Usuarios: Crea diferentes perfiles de usuarios en tu portal Joomla mostrando las diferentes opciones de administración que cada uno de ellos tiene habilitada tanto a través del backend como del frontend.</li>
+</ol>
+</div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.7 — 04.07 - Practice: Wordpress Corporate Web Development</p><p>Realiza una página web completa en Wordpress que refleje los principales requerimientos de la empresa "Lopez Asesores". La entrega debe consistir en la exportación de la base de datos, la carpeta de ficheros de Wordpress y un documento explicativo dónde se muestre el proceso realizado y las funcionalidades implementadas. Intenta utilizar las herramientas adecuadas y crea todos los contenidos que consideres necesarios ello. Además, contesta a las siguientes cuestiones referidas al entorno de Wordpress</p>
+<ol>
+<li>Instalar Wordpress: Documenta la instalación de Wordpress sobre un servidor. Presenta capturas del frontend y backend por defecto.</li>
+<li>Entradas y páginas: Enuncia las principales diferencias entre las entradas y las páginas en Wordpress. Presenta la utilidad principal de cada uno de estos elementos.</li>
+<li>Etiquetas y Categorías: Enuncia los principales medios de clasificación de contenidos disponibles en Wordpress y sus características principales. Explica cómo puede un usuario utilizar la clasificación para llegar al contenido deseado.</li>
+<li>Opciones de Publicación: Explica en detalle las opciones que tenemos disponibles en el módulo de publicación de una entrada. Profundiza en la utilidad que proporcionan a los usuarios finales las opciones de "Estado", "Visibilidad" y "Fecha".</li>
+<li>Elementos Multimedia: Explica y documenta la manera de insertar/enlazar en una entrada objetos multimedia de tipo: imagen, audio, video y documento. Construye una galería de imágenes y explica las opciones que tienes disponible para ello.</li>
+<li>Comentarios y Moderación: Explica los diferentes modelos de moderación de comentarios que tenemos disponibles. Incide en las ventajas y desventajas que proporciona cada uno de ellos. Justifica cual de ellos elegirías para tu blog.</li>
+<li>Personalización de plantilla: Elige un tema que se adapte a tus necesidades y configúralo adecuadamente. Documenta la instalación y configuración del tema. Detalla las características principales y licencia del tema elegido. Justifica la elección de widgets y su ubicación en el frontend.</li>
+<li>Usuarios: Explica los diferentes roles de usuario que permite utilizar Wordpress detallando los permisos que tienen asociados. Planifica una organización de roles para una empresa informática destinada a la venta de Hardware y Software.</li>
+<li>Plugins y Configuración General: Examina el repositorio de plugins e indica los que consideras esenciales para tu blog. Explica y documenta su instalación detallando la utilidad que te proporciona una vez instalado. Por otro lado, detalla las principales opciones de configuración generales que configurarías en tu blog justificando las elecciones realizadas.</li>
+</ol>
+</div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.8 — 04.08 - Practice: CMS Presentation</p><p>Selecciona un CMS de propósito específico que funcione sobre el servidor de prácticas (galerías de fotos, foros, wikis, ecommerce, soporte o groupware). Realiza una página web sobre el CMS elegido que refleje los principales requerimientos de la empresa "Lopez Asesores" sobre las prestaciones básicas y funcionalidades del gestor de contenidos específicos utilizado.Se debe entregar un manual y una presentación.</p>
+<ul>
+<li><strong><strong>PRESENTACIÓN:</strong> </strong>Se debe realizar una exposición pública del trabajo (realizado mediante una presentación digital) incidiendo en los aspectos relevantes y problemáticos que se han presentado durante el trabajo, con el objetivo de ofrecer una visión de conjunto del CMS, sus peculiaridades y procesos específicos a tener en cuenta por un usuario novel.</li>
+<li><strong>MANUAL:</strong> Se debe elaborar un documento PDF a modo de manual en el que se explicite los procedimientos básicos utilizados para realizar la web. Dicho manual se valorará por la utilidad práctica que ofrece a un usuario novel en la implantación del CMS a producción. Al menos, se deberían abordar los siguientes aspectos:<br/>
+<ul>
+<li>Funcionalidades</li>
+<li>Instalación (Requisitos)</li>
+<li>Personalización del entorno (Apariencia, idiomas... )</li>
+<li>Flujos de trabajo específicos (p.e. proceso de compra, gestión de tíquets de soporte...)</li>
+<li>Generación y clasificación de contenidos</li>
+<li>Gestión de Usuarios, Grupos y Permisos</li>
+<li>Complementos (plugins, funciones añadidas...)</li>
+<li>Integración con otras herramientas (compatibilidad, integración...)</li>
+<li>Interés y rentabilidad empresarial (por qué y para qué lo usaria la empresa? Qué aporta?)</li>
+<li>Adaptación para el caso de empresa de "Lopez Asesores"</li>
+<li>Valoración personal del CMS y de su utilidad empresarial</li>
+<li>Referencias y ampliación de contenidos (referencias, documentación)</li>
+</ul>
+</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.9 — 04.09 Practice: CMS Manual</p><p>05.09 Práctica: Manual CMS</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.10 — 04.09 - Practice: Web Menu, structure and content ***</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.11 — 04.10 - Practice: Final Presentation Websalpunt ***</p><p>Realiza la presentación del trabajo realizado.<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.12 — 04.11 Multimedia Tutorial: How To Wordpress ***</p><p>Realizar un video tutorial (breve 3-5 minutos) sobre un tema del Core y uno avanzado (Advanced/plugin/Panel). Utiliza: <a href="https://obsproject.com/">https://obsproject.com/</a><br/><br/>----- Wordpress Core -----<br/>Editor Gutemberg ( Andreu/Pedro)<br/>Crear y organizar entradas (Carles/Andrés)<br/>Crear y organizar páginas (Raquel/Israel)<br/>Categorias y widget de categorias (Maria/Antón)<br/>Etiquetas y widget de etiquetas (Diego/Ruben)<br/>Opciones de publicación de entradas (Jordi Camarasa/Kevin)<br/>Crear una galeria de imagenes (Adan/Goren)<br/>Incrustar videos de Youtube / Mapas de Google (Javi/Salvatore)<br/>Pàgina de inicio Estática o Blog (Jose Alfonso/) <br/>Comentarios y Moderación (Pau/Jordi)<br/>Instalar y administrar plantillas (Alex/Cristian)<br/>Widgets y distribución en pantalla (Josep/)<br/>Configurar menus personalizados (Adrián/Javier)<br/>Enlaces permanentes, slugs y SEO (Elena/)<br/>Personalizar plantilla de tema (David/Alejandro)<br/><br/>----- Wordpress Core Advanced -----<br/>Wordpress Multisite (Jaume/)<br/>Permisos de usuario (Andreu/Cristian)<br/>Edición de ficheros de idioma Poedit (David/Javier)<br/>Gravatar (Alex/Kevin)<br/>Backup de ficheros y BD (Carles/Jordi)<br/>RSS y Widget RSS externos (Adan/)<br/>Herramientas Importación / Exportación (Javi/Antón)<br/><br/>----- Plugins -----<br/>Contact Form 7: Formulario de contacto (Elena/Ruben)<br/>Jetpack: Estadísticas (Jose Alfonso/Goren)<br/>Jetpack: Social networks (Maria/Andrés)<br/>Jetpack: Widgets adicionales (Jordi Camarasa/Salvatore)<br/>Google Traductor (Diego/Alejandro)<br/>bbPress (Adrián/)<br/><br/>---- Panel Control Dinahosting -----<br/>Crear wordpress automático (Pau/Israel)<br/>Administración de ficheros web y FTP (Josep/Pedro)<br/>Crear wordpress manual (Raquel/)<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.13 — Web - Mutual Evaluation</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.14 — Practical Exam Units 1-2-3-4-5</p><p>05 - Examen Pràctic</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut03/ut03actividades.html">⬅️ ✍️ Activitats pràctiques UT3</a>
+<a class="page-nav-btn" href="../ut04/ut0401.html">4.1 Resources: Reference Links ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

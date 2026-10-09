@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.1 U2 DNS — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>☁️ Serveis de Xarxa i Internet — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Serveis de Xarxa i Internet</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Welcome SXI</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unit 1 - DHCP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 DHCP</a></li>
+<li><a href="../ut01/ut0102.html">1.2 U1 P1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 U1 P2</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unit 2 - DNS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut02/ut0201.html">2.1 U2 DNS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 P1</a></li>
+<li><a href="../ut02/ut0203.html">2.3 U2 P2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unit 3 - HTTP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U3 HTTP</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Grups Treball</a></li>
+<li><a href="../ut03/ut0303.html">3.3 U3 A3 Windows Group</a></li>
+<li><a href="../ut03/ut0304.html">3.4 U3 P1</a></li>
+<li><a href="../ut03/ut0305.html">3.5 U3 P2</a></li>
+<li><a href="../ut03/ut0306.html">3.6 U3 P3</a></li>
+<li><a href="../ut03/ut0307.html">3.7 U3 P4</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unit 4 - FTP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U4 FTP</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Grups</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U4 P1</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U4 P2</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Unit 5 - SSH</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 U5 SSH</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U5 P1</a></li>
+<li><a href="../ut05/ut0503.html">5.3 U5 P2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Unit 6 - Email</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U6 Email</a></li>
+<li><a href="../ut06/ut0602.html">6.2 U6P1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unit 7 - Audio and Video</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U7 Audio and Video</a></li>
+<li><a href="../ut07/ut0702.html">7.2 U7 P1</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT2 — Unit 2 - DNS</span>
+<h1>2.1 U2 DNS</h1>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 style="text-align: left;"><strong>Resources</strong></h4></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 style="text-align: left;"><strong>Tasks</strong></h4></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 style="text-align: left;"><strong>Practices</strong></h4></div>
+<hr/>
+<p>SXI / NSI - UNIT 2 - DNS 2nd ASIX</p>
+<p>2 ASIX - SXI Why do we need DNS?</p>
+<ul>
+<li>IP’s are used to identify machines in TCP/IP networks.</li>
+<li>Is not easy to memorize the IP’s of all the machines</li>
+<li>From your local network</li>
+<li>From all around Internet</li>
+<li>We can assign a name to our machine</li>
+<li>Then we need a mechanism to map from the name to the IP.</li>
+<li>The most important (and more used) mechanism is DNS.</li>
+</ul>
+<p>2 ASIX - SXI Why do we need DNS?</p>
+<ul>
+<li>DNS service provides independency of the name from possible</li>
+</ul>
+<p>changes in the IP Address of the machine.</p>
+<ul>
+<li>Even it’s possible to map a name to more than one IP’s.</li>
+<li>Geolocating</li>
+<li>In case of failure</li>
+<li>Load balancing</li>
+<li>We can check the IP of a URL by ping it through a terminal.</li>
+</ul>
+<p>2 ASIX - SXI Why do we need DNS?</p>
+<ul>
+<li>In ARPANET already existed a mechanism to identify machines in the</li>
+</ul>
+<p>network through a centralized file with all the machine names and their identifications.</p>
+<ul>
+<li>This file was hosts.txt, already known in GNU/Linux systems as</li>
+</ul>
+<p>/etc/hosts</p>
+<p>2 ASIX - SXI Why do we need DNS?</p>
+<ul>
+<li>This is useful for a specific machine, but if we need it in all our</li>
+</ul>
+<p>network, we’d need to copy the file in every machine.</p>
+<ul>
+<li>Difficult to maintain. Not even possible for Internet.</li>
+<li>In Microsoft, also exists NetBIOS.</li>
+</ul>
+<p>2 ASIX - SXI What is DNS?</p>
+<ul>
+<li>DNS is a service born in 1983.</li>
+<li>Contains associations between hosts (machines) names to IP</li>
+</ul>
+<p>addresses.</p>
+<ul>
+<li>Client-Server model</li>
+<li>Server contains the service (or app) to resolve the name. Name server.</li>
+<li>Client usually doesn’t need a specific app.</li>
+<li>Dialog through DNS protocol.</li>
+</ul>
+<p>2 ASIX - SXI What is DNS?</p>
+<ul>
+<li>Is a distributed database</li>
+<li>Info not in central repository, distributed through different DNS servers.</li>
+<li>Is hierarchical.</li>
+<li>Organized in a domain structures, which can be composed by subdomains,</li>
+</ul>
+<p>which can also be composed by more subdomains and so until 127 levels.</p>
+<ul>
+<li>Each domain is managed by a DNS server (in charge of a zone)</li>
+<li>miPc.aula3.vicentFerrer.algemesi</li>
+</ul>
+<p>2 ASIX - SXI What can resolve DNS?</p>
+<ul>
+<li>Local hosts</li>
+<li>We used to connect other machines through their names: pcGames, pcMaria,</li>
+</ul>
+<p>impresoraEpson…</p>
+<ul>
+<li>Local domains (not in Internet)</li>
+<li>aula34, ficheros.servidorEmpresa…</li>
+<li>Internet domains</li>
+<li>gmail.com, youtube.com…</li>
+</ul>
+<p>2 ASIX - SXI What types of DNS exist?</p>
+<ul>
+<li>Local DNS</li>
+<li>It’s in our local network. As DNS servers have a cache with previous queries,</li>
+</ul>
+<p>can avoid traffic to outside our local network.</p>
+<ul>
+<li>Remote DNS</li>
+<li>When your Local DNS doesn’t have the resolution of the name, you can</li>
+</ul>
+<p>access to remote DNS.</p>
+<p>2 ASIX - SXI What types of DNS exist?</p>
+<ul>
+<li>The fastest we can resolve a name, the fastest Internet is.</li>
+</ul>
+<p>2 ASIX - SXI DNS components</p>
+<ul>
+<li>Resolver: Client part. It sends the request through UDP, if doesn’t get</li>
+</ul>
+<p>answer, it sends it through TCP.</p>
+<ul>
+<li>Name Server: Server part. It processes the requests of the resolvers and</li>
+</ul>
+<p>returns the IP, a pointer to other server or an error. It has the DB.</p>
+<ul>
+<li>Domain Namespace: Set of names which can be used to identify machines.</li>
+<li>DNS protocol: Set of rules used by client and server to negotiate.</li>
+</ul>
+<p>2 ASIX - SXI Domain Namespace</p>
+<ul>
+<li>Distributed DNS database consists in domain names.</li>
+<li>Each domain name is a inverted tree named domain namespace.</li>
+<li>Hierarchical names are composed by different values.</li>
+<li>The “tree” of names is very similar to a filesystem tree.</li>
+</ul>
+<p>2 ASIX - SXI Domain Namespace</p>
+<p>2 ASIX - SXI Domain Namespace</p>
+<ul>
+<li>Tree has a unique root node, represented by ”.”</li>
+<li>Each node of the tree can be ramified in any number of nodes in the lower</li>
+</ul>
+<p>levels.</p>
+<ul>
+<li>Tree depth is limited to 127 levels. Normal is 5.</li>
+<li>Each tree, 63 chars. All domain, 255.</li>
+<li>Examples: google.com, pc01.xarxes.asix.es…</li>
+</ul>
+<p>2 ASIX - SXI Domain Namespace</p>
+<p>2 ASIX - SXI Domain Namespace</p>
+<p>2 ASIX - SXI Domain Namespace</p>
+<ul>
+<li>This way, each node specifies unambiguously its location at the</li>
+</ul>
+<p>hierarchy.</p>
+<ul>
+<li>This absolute domain name is called FQDN (Fully Qualified Domain</li>
+</ul>
+<p>Name).</p>
+<ul>
+<li>All FQDN includes a . at the end (root node). If not, we are writing a</li>
+</ul>
+<p>relative domain. pc22.asix.iesvf.com.</p>
+<p>2 ASIX - SXI Domain Namespace</p>
+<p>2 ASIX - SXI What’s a domain?</p>
+<ul>
+<li>Any subtree of the domain namespace. Each domain, can contain</li>
+</ul>
+<p>more domains.</p>
+<ul>
+<li>iesvf.com is a domain and can contain subdomains asix, daw and</li>
+</ul>
+<p>these can contain the hosts pc11,pc22, etc.</p>
+<ul>
+<li>These names are stored in resources registers, inside DNS servers</li>
+</ul>
+<p>2 ASIX - SXI How is organized?</p>
+<ul>
+<li>Root domain: Represented by the . All domain names starts in here.</li>
+<li>Top Level domain (TLD): Direct descendants of the root. .com, .es,</li>
+</ul>
+<p>.org, etc.</p>
+<ul>
+<li>ICANN is the organization in charge of the management of TLD and</li>
+</ul>
+<p>root domains. In Spain, ESNIC.</p>
+<p>2 ASIX - SXI How is organized?</p>
+<p>2 ASIX - SXI How is organized?</p>
+<ul>
+<li>Second Level: Descendants of TLD.</li>
+<li>google.com, iesvf.es, etc.</li>
+<li>Others: From here, each level can generate as many levels as it needs.</li>
+<li>mail.google.com , maps.google.com, asix.iesvf.es, etc.</li>
+<li>At the end of the tree, usually we find the hosts that offer a service</li>
+</ul>
+<p>like WWW, FTP or SMTFP. www.google.com</p>
+<p>2 ASIX - SXI What’s delegation?</p>
+<ul>
+<li>One of the main objectives of DNS is the decentralized management.</li>
+</ul>
+<p>We need to delegate to achieve it.</p>
+<ul>
+<li>A domain can be delegate or not.</li>
+<li>If a domain is delegated, is its responsibility to maintain updated the</li>
+</ul>
+<p>data (resource registers) of the subdomain/s</p>
+<p>2 ASIX - SXI What’s delegation?</p>
+<ul>
+<li>asix.iesvf.es</li>
+<li>.es domain is managed by an entity (ICAAN).</li>
+<li>This domain contain subdomain iesvf.es and it has delegated the</li>
+</ul>
+<p>management to iesvf.</p>
+<ul>
+<li>iesvf can also delegate the management of the domain asix.iesvf.es</li>
+</ul>
+<p>2 ASIX - SXI What’s delegation?</p>
+<ul>
+<li>Delegation does not mean independence but coordination.</li>
+<li>If a superior level is queried about one of its subdomains, this has the</li>
+</ul>
+<p>task of query its subdomains.</p>
+<ul>
+<li>&gt; delegate, &gt; efficient, &gt; speed.</li>
+</ul>
+<p>2 ASIX - SXI What’s delegation?</p>
+<p>2 ASIX - SXI What’s delegation?</p>
+<ul>
+<li>Delegation does not mean independence but coordination.</li>
+<li>If a superior level is queried about one of its subdomains, this has the</li>
+</ul>
+<p>task of query its subdomains.</p>
+<ul>
+<li>&gt; delegate, &gt; efficient, &gt; speed.</li>
+</ul>
+<p>2 ASIX - SXI What’s a zone?</p>
+<ul>
+<li>Part of the domain namespace managed by one or more DNS servers.</li>
+<li>When a DNS server contains a zone its called authoritative for that</li>
+</ul>
+<p>zone.</p>
+<ul>
+<li>Authoritative zone is the part of the domain namespace where a DNS</li>
+</ul>
+<p>server is responsible. At least a domain and can include subdomains, but it’s better to delegate in other servers.</p>
+<p>2 ASIX - SXI What’s a zone?</p>
+<ul>
+<li>4 zones, 14 domains.</li>
+</ul>
+<p>2 ASIX - SXI What’s a zone?</p>
+<ul>
+<li>A DNS server can has zones</li>
+<li>Primary: Read and write</li>
+<li>Secondary: Read</li>
+<li>Integrated in AD. Any DNS server can work as primary or secondary.</li>
+</ul>
+<p>2 ASIX - SXI What’s a zone?</p>
+<ul>
+<li>Integrated zones in AD</li>
+<li>We “only” need a primary DNS server. Info is replied in AD.</li>
+<li>Everything act as a primary DNS server.</li>
+</ul>
+<p>2 ASIX - SXI Standard zone vs integrated zone</p>
+<p>2 ASIX - SXI Recap</p>
+<ul>
+<li>A domain is the tree of name space that include a node and its</li>
+</ul>
+<p>descendants.</p>
+<ul>
+<li>A zone is the part of the tree managed by a DNS server.</li>
+<li>Zone database consist of files storing infor about machines of the zone.</li>
+<li>Delegation means to delegate the task of manage a subdomain to other</li>
+</ul>
+<p>DNS.</p>
+<p>2 ASIX - SXI Recap</p>
+<p>2 ASIX - SXI Primary and secondary name servers</p>
+<ul>
+<li>DNS standard stablish a minimum of two authoritative servers per zone.</li>
+<li>Their names are primary server and secondary server.</li>
+<li>The reason is to provide redundancy, robustness, performance and backup.</li>
+<li>A server can be at the same time primary for a zone and secondary for</li>
+</ul>
+<p>another zone.</p>
+<p>2 ASIX - SXI Primary name servers</p>
+<ul>
+<li>Also called master server.</li>
+<li>Store information about its zone in a local database</li>
+<li>Are responsible of keep the info updated and any change has to be notified to</li>
+</ul>
+<p>this server</p>
+<ul>
+<li>If a client or other DNS server ask about a domain that he is authoritative, he’ll</li>
+</ul>
+<p>check the files and will answer. If he doesn’t know about it, will have to look for the info in other servers (or return null).</p>
+<p>2 ASIX - SXI Secondary name servers</p>
+<ul>
+<li>Also called slave servers</li>
+<li>The main difference with the primary if that he gets the zone files from another</li>
+</ul>
+<p>server through a process called zone transfer.</p>
+<ul>
+<li>Zone transfer is the process through which DNS interact to maintain and</li>
+</ul>
+<p>synchronize data. Incremental or complete.</p>
+<ul>
+<li>These files in the secondary are read-only. Modification will be done in the</li>
+</ul>
+<p>primary server.</p>
+<p>2 ASIX - SXI Caching-only servers</p>
+<ul>
+<li>No authoritative.</li>
+<li>Only connect to other servers to resolve the client DNS request.</li>
+<li>Store a cache with previous request during a period of time (TTL)</li>
+</ul>
+<p>2 ASIX - SXI DNS protocol</p>
+<ul>
+<li>Application level</li>
+<li>Usually use UDP but if the information is large, will use TCP.</li>
+<li>Port 53</li>
+</ul>
+<p>2 ASIX - SXI DNS dabatase</p>
+<ul>
+<li>The “database” in the DNS server is just a file text.</li>
+<li>To resolve names, DNS servers check the zones, where they have the</li>
+</ul>
+<p>RR (resource registers).</p>
+<ul>
+<li>Each RR describes the DNS domain.</li>
+</ul>
+<p>2 ASIX - SXI DNS dabatase</p>
+<ul>
+<li>Each RR has the following format</li>
+<li>Owner [TTL] Class Type Rdata</li>
+</ul>
+<p>obelix.asir.es 7200 IN A 193.100.200.101</p>
+<ul>
+<li>Owner: can be the name of the machine/domain, the @ symbol</li>
+</ul>
+<p>(representing the zone) or a empty string meaning is the same than the previous RR.</p>
+<p>2 ASIX - SXI DNS dabatase</p>
+<ul>
+<li>TTL: optional fields. Indicates how many time a register can be stored</li>
+</ul>
+<p>in the cache. Can be expressed in days (d), hours (h), minutes(m) or seconds (s). If not, in seconds.</p>
+<ul>
+<li>Class: Define the family of protocols in use. Always ”IN” (Internet)</li>
+</ul>
+<p>representing TCP/IP network.</p>
+<p>2 ASIX - SXI DNS dabatase</p>
+<ul>
+<li>Type: Identifies the register type. Most common are</li>
+<li>SOA, NS, A, PTR, MX, CNAME…</li>
+<li>RDATA: Specific information of the resource type. It depends on the</li>
+</ul>
+<p>type.</p>
+<ul>
+<li>i.e. A IN register with type A, this fields specifies the IP address.</li>
+</ul>
+<p>2 ASIX - SXI Register types in RR: SOA</p>
+<ul>
+<li>Start Of Authority</li>
+<li>Identifies the authoritative server in the zone and its configuration</li>
+</ul>
+<p>parameters.</p>
+<ul>
+<li>Configuration in each zone begins with this RR.</li>
+</ul>
+<p>2 ASIX - SXI Register types in RR: SOA</p>
+<ul>
+<li>Fields in this type of register are</li>
+<li>MNAME: FQDN of the master server of the domain.</li>
+<li>RNAME of contact: mail of the responsible. Uses . instead of @</li>
+<li>Serial: Version of the zone file. This is the field queried by secondary servers</li>
+</ul>
+<p>for checking if the zone has changed to begin with the zone transfer.</p>
+<ul>
+<li>Refresh: Time between queries from the secondary server.</li>
+<li>Retry: If the zone transfer has failed, time to wait until next try.</li>
+<li>Expire: If the secondary does not get a response from primary for this amount</li>
+</ul>
+<p>of time, it should stop responding queries for the zone.</p>
+<ul>
+<li>TTL: Number of seconds a register is stored in the cache.</li>
+</ul>
+<p>2 ASIX - SXI Register types in RR: SOA @ uses the zone name or the declared in the $origin var</p>
+<p>2 ASIX - SXI Register types in RR: SOA</p>
+<p>2 ASIX - SXI Register types in RR: SOA</p>
+<p>2 ASIX - SXI Register types in RR: NS</p>
+<ul>
+<li>Name Server.</li>
+<li>Define the authoritative name servers for a zone.</li>
+<li>Each zone has to have, at least, one NS register.</li>
+</ul>
+<p>2 ASIX - SXI Register types in RR: NS</p>
+<ul>
+<li>Are also used to indicate which are the authoritative name servers in</li>
+</ul>
+<p>delegate subdomains so each zone will have at least one NS register per delegate subdomain.</p>
+<p>2 ASIX - SXI Register types in RR: A</p>
+<ul>
+<li>Adress</li>
+<li>Assign an IP address to a FQDN.</li>
+</ul>
+<p>2 ASIX - SXI Register types in RR: PTR</p>
+<ul>
+<li>PoinTeR</li>
+<li>Contrary to A. Assign a FQDN to an IP address</li>
+</ul>
+<p>2 ASIX - SXI Register types in RR: CNAME</p>
+<ul>
+<li>Canonical Name.</li>
+<li>Allows us to create alias for domains specified in A registers.</li>
+</ul>
+<p>2 ASIX - SXI Register types in RR: MX</p>
+<ul>
+<li>Mail eXchange</li>
+<li>We can add a MX register per mail server but is not mandatory.</li>
+<li>Are used by transport agents as SMTP.</li>
+<li>As a domain can has many mail servers, we can also include a numeric value</li>
+</ul>
+<p>to indicate the order of “priority”</p>
+<p>2 ASIX - SXI DNS queries</p>
+<ul>
+<li>As we’ve studied, both clients and servers asks (query) other server so resolve name</li>
+</ul>
+<p>domains.</p>
+<ul>
+<li>Clients (resolvers) ask servers and server response with the IP (and we don’t mind</li>
+</ul>
+<p>how he has got that IP) in a transparent way.</p>
+<ul>
+<li>Server not only has the power of resolve domains in its zone but also can resolve</li>
+</ul>
+<p>queries about others zones where he is not authoritative</p>
+<ul>
+<li>Different types of queries.</li>
+<li>By query mode: iterative or recursive</li>
+<li>By query type: direct or reverse</li>
+</ul>
+<p>2 ASIX - SXI Query types - By mode - Recursive</p>
+<ul>
+<li>A client queries something and when it does, in the query includes which</li>
+</ul>
+<p>mode want to use.</p>
+<ul>
+<li>If the server hasn’t got the response in local cache or in RR, he will ask to</li>
+</ul>
+<p>other DNS servers until it gets a response.</p>
+<ul>
+<li>At the end, it will always give a positive or negative response.</li>
+</ul>
+<p>2 ASIX - SXI Query types - By mode - Recursive</p>
+<ul>
+<li>Example: a client queries the domain www.inf.iesvf.com</li>
+<li>If the first server does not know the domain, it will try to contact with the inf.iesvf.com</li>
+</ul>
+<p>server name.</p>
+<ul>
+<li>If inf.iesvf.com does not know the domain, it will try to contact with iesvf.com domain</li>
+</ul>
+<p>name server.</p>
+<ul>
+<li>If iesvf.com does not know the domain, it will try to contact with .com domain name</li>
+</ul>
+<p>server.</p>
+<ul>
+<li>If .com does not know the domain, it will try to contact with root name servers. Once</li>
+</ul>
+<p>there, it will try to search for them descending through the domain tree</p>
+<p>2 ASIX - SXI Query types - By mode - Iterative</p>
+<ul>
+<li>When a client queries something, the server tries to find the response in its</li>
+</ul>
+<p>local info (RR and cache).</p>
+<ul>
+<li>It never asks more servers. Returns a positive response with the info, a</li>
+</ul>
+<p>negative response or a list of servers</p>
+<ul>
+<li>Usually, recursive and iterative modes are used together.</li>
+<li>Client to server recursive and server to server iterative.</li>
+<li>Avoid many queries in root nodes.</li>
+</ul>
+<p>2 ASIX - SXI Query types - By type - Direct</p>
+<ul>
+<li>Client ask for a IP resolution from an URL (FQDN)</li>
+</ul>
+<p>2 ASIX - SXI Query types - By type - Reverse</p>
+<ul>
+<li>From an IP, get a FQDN.</li>
+<li>Used to resolve network problems, detect spam in mail servers, look for the</li>
+</ul>
+<p>trace of an attack, etc.</p>
+<p>2 ASIX - SXI DDNS</p>
+<ul>
+<li>Dynamic DNS</li>
+<li>Until now, DNS registers are not supposed to change but now, DHCP is used</li>
+</ul>
+<p>even in servers.</p>
+<ul>
+<li>What happens when a machine changes its IP?</li>
+<li>We’d need to update all RR with the new value</li>
+<li>DDNS is a service that synchronize DHCP and DNS</li>
+</ul>
+<p>2 ASIX - SXI DDNS</p>
+<p>2 ASIX - SXI Questions?</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/index.html">⬅️ 📘 UT2 Completa</a>
+<a class="page-nav-btn" href="../ut02/ut0202.html">2.2 U2 P1 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

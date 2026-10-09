@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>6.1 presentació DHCP — Serveis en Xarxa | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Serveis en Xarxa</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Exámenes</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Escenario general</a></li>
+<li><a href="../ut00/ut0003.html">0.3 rúbrica presentacions</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Enquesta de Serveis en Xarxa (SeX)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — U6: Servicio de Transferencia de ficheros (FTP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 FTP</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — U5: Servici de Correu</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Presentació</a></li>
+<li><a href="../ut03/ut0302.html">3.2 El correu electrònic</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Les Guest additions</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — U4: Servici de Web (HTTP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Recursos Escenario U3</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Introducción virtual hosting</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Configuración Virtual hosting</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Ips clients</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Recuperació_prova de validació_Apache</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — U2: Servici de Resolució de Noms (DNS)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 UD3 Servidor de Nombres de Dominio SMX</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Presentació Victor i Javier</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut06/ut0601.html">6.1 presentació DHCP</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Presentació DHCP. Visió general</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Servei DHCP</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Servidor DHCP</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Presentació SX20-U1-E3 "Bronx"</a></li>
+<li><a href="../ut06/ut0606.html">6.6 Qüestionari DHCP</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — U1: SSH. Secure Shell</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Plantilla qüestionari d'avaluació</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — U0: Virtualización y repaso de conceptos previos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Repàs Interconnexió de Xarxes</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Plantilla qüestionai d'avaluació</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n SMX · Grau Mitjà · UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)</span>
+<h1>6.1 presentació DHCP</h1>
+<div class="admonition tip"><p class="admonition-title">📌 Introducció de la Unitat</p><h3><b>U2: Servei d'Assignació Dinàmica d'Adreces (DHCP) <br/></b></h3><b><br/></b><div><b>Durada</b>: Del 19 d'Octubre al 2 de Novembre</div><div><h4><span class="" style="color: rgb(239, 69, 64);">Qüestionari d'avaluació dimecres 4 de novembre.</span></h4><div><h4><span class="" style="color: rgb(239, 69, 64);">Presentacions dimarts 3 de novembre.</span></h4><br/></div><span class="" style="color: rgb(239, 69, 64);"></span></div><br/><b>Guia d'estudi</b>:
+<br/>
+<span style="color: rgb(0, 0, 0); font-family: 'times new roman'; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; font-size: medium;"><b id="internal-source-marker_0.07053086743690073" style="font-weight: normal; color: rgb(0, 0, 0); font-family: 'times new roman'; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"><span id="internal-source-marker_0.1839646459557116" style="color: rgb(0, 0, 0); font-family: 'times new roman'; font-size: medium; line-height: normal; orphans: 2; text-align: start; widows: 2;"><span style="font-size: 13px; font-family: arial; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"><span style="color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px;"><span style="font-size: 10pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">El servei d'“assignació dinàmica d'adreces” (DHCP) s'ha de coneixer del curs passat al haver abordat el mòdul de “Xarxes d'Àrea Local” (XAL). En aquesta unitat didàctica anem a profunditzar en les peculiaritats de la seua configuració i funcionament, principalment en sistemes oberts bassats en GNU/Linux, però també privatius com Windows.</span></span></span></span></b></span>
+<br/><br/><b>Organització las sessions (cada grup les adaptarà al seu ritme):</b><br id="docs-internal-guid-633c319f-bd24-9705-a1e4-c2610a91b256"/><div dir="ltr" style="margin-left:0pt;"><table style="border:none;border-collapse:collapse"><colgroup><col width="84"/><col width="515"/></colgroup><tbody><tr style="height:0px"><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;text-align: center;"><span style="font-size:13.333333333333332px;font-family:Ubuntu;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">Sessió </span></p></td><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><p dir="ltr" style="line-height:1.2;margin-top:0pt;margin-bottom:0pt;text-align: center;"><span style="font-size:13.333333333333332px;font-family:Ubuntu;color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">Contingut</span></p></td></tr><tr style="height:0px"><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><br/></td><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align: center;">Formació d'equips<br/></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align: center;"><span style="font-size:13.333333333333332px;font-family:Ubuntu;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">Repartició de rols</span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align: center;"><span style="font-size:13.333333333333332px;font-family:Ubuntu;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;">Acta Inicial<br/></span></p></td></tr><tr style="height:0px"><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><br/></td><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align: center;"><span style="font-size:13.333333333333332px;font-family:Ubuntu;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><a href="#">Pràctica 1</a><br/></span></p></td></tr><tr style="height:0px"><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><br/></td><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align: center;"><span style="font-size:13.333333333333332px;font-family:Ubuntu;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><a href="#"> <span> Pràctica 2</span></a><br/></span></p></td></tr><tr style="height:0px"><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><br/></td><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align: center;"><span style="font-size:13.333333333333332px;font-family:Ubuntu;color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;"><a href="#"><span> Pràctica 2</span></a><br/></span></p></td></tr><tr style="height:0px"><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><br/></td><td style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; vertical-align: top; padding: 7px; text-align: center;"><a href="#">Pràctica 3</a><br/></td></tr><tr style="height:0px"><td style="border-left:solid #000000 1px;border-right:solid #000000 1px;border-bottom:solid #000000 1px;border-top:solid #000000 1px;vertical-align:top;padding:7px 7px 7px 7px"><br/></td><td style="border-color: rgb(0, 0, 0); border-style: solid; border-width: 1px; vertical-align: top; padding: 7px; text-align: center;"><a href="#">Pràctica 3</a><br/></td></tr></tbody></table></div><br/><br/><div style="background-color: transparent;"><p dir="ltr" style="font-family: 'times new roman'; font-size: medium; white-space: normal; text-align: justify; margin-top: 0pt; margin-bottom: 0pt;">Objectius</p><span style="font-size: 10pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;"></span> <ul style="font-family: 'times new roman'; font-size: medium; white-space: normal;"> <li style="list-style-type: disc; font-size: 11pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"> <p dir="ltr" style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 10pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">conèixer els fonaments i peculiaritats generals associades al funcionament del servei DHCP.</span></p></li> <li style="list-style-type: disc; font-size: 11pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"> <p dir="ltr" style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 10pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">aprendre a instal·lar i configurar el servici DHCP tant sistemes oberts i lliures com en sistemes propietaris i privatius.</span></p></li> <li style="list-style-type: disc; font-size: 11pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"> <p dir="ltr" style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 10pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">desenvolupar habilitats de recerca i obtenció d'informació específica per al seu posterior aplicació a les situacions diverses que et pots trobar a la vida real.</span></p></li> <li style="list-style-type: disc; font-size: 11pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; background-color: transparent;"> <p dir="ltr" style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 10pt; font-family: arial; color: rgb(0, 0, 0); font-weight: normal; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent;">participar en la resolució col·lectiva de problemes tècnics.</span></p></li> </ul></div><br/><span style="font-family: 'times new roman';"><p dir="ltr" style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;">Activitats</p></span><br/></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h3><b>Presentació</b><br/></h3></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Instruccions i informació</p><p><a href="https://docs.google.com/document/d/e/2PACX-1vTGjkXNquQiiwZLDL9e8rT2-QtIz_nhxHPNLVg0kBedlM-_NxzI5m3YLLmBl9y6hgm5G4BmaHl7Vusf/pub" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://docs.google.com/document/d/e/2PACX-1vTGjkXNquQiiwZLDL9e8rT2-QtIz_nhxHPNLVg0kBedlM-_NxzI5m3YLLmBl9y6hgm5G4BmaHl7Vusf/pub) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Pràctica 1</p><p><a href="https://drive.google.com/file/d/1NZ8yG_1cGImYDCkbGZmeM5iBw6rELNKk/view?usp=sharing" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/file/d/1NZ8yG_1cGImYDCkbGZmeM5iBw6rELNKk/view?usp=sharing) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Pràctica 2</p><p><a href="https://drive.google.com/file/d/16deyxqWZ8HliKTEgMSrWvx04qmmXAZ9j/view?usp=sharing" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/file/d/16deyxqWZ8HliKTEgMSrWvx04qmmXAZ9j/view?usp=sharing) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Pràctica 3. Repàs</p><p><a href="https://docs.google.com/document/d/e/2PACX-1vTf7HLZ9bontl6ZQlb5ca_g0ZmxgoWqsdb1FNILyCmibsV7Iq_qbQ05a9nGguutZg/pub" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://docs.google.com/document/d/e/2PACX-1vTf7HLZ9bontl6ZQlb5ca_g0ZmxgoWqsdb1FNILyCmibsV7Iq_qbQ05a9nGguutZg/pub) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Pràctica 3. Ampliació</p><p><a href="https://drive.google.com/file/d/1Hw7024qg8wQMHPGm-2OeUuSX_eoZswNY/view?usp=sharing" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/file/d/1Hw7024qg8wQMHPGm-2OeUuSX_eoZswNY/view?usp=sharing) ↗️</strong></a></p></div>
+
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Carpeta Drive: U1-DHCP</p><p><a href="https://drive.google.com/drive/folders/1wjOGrwCN9aAbw9nrx2x_OVahJH687otP?usp=sharing" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1wjOGrwCN9aAbw9nrx2x_OVahJH687otP?usp=sharing) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 3.0-Introduccion-DHCP</p><p><a href="https://drive.google.com/file/d/0B4LlvGqxqWsOaGpjRlZQbTI4U0U/view?usp=sharing" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/file/d/0B4LlvGqxqWsOaGpjRlZQbTI4U0U/view?usp=sharing) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 3.1-dhcp3-server-options</p><p><a href="https://drive.google.com/file/d/0B4LlvGqxqWsOcFVPbGcxWHQ3Qlk/view?usp=sharing" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/file/d/0B4LlvGqxqWsOcFVPbGcxWHQ3Qlk/view?usp=sharing) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: SX20-U1-E1</p><p><a href="https://drive.google.com/drive/folders/1KjTVU94zd9_lmdU9AgKYboU8hHE8qhcy" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1KjTVU94zd9_lmdU9AgKYboU8hHE8qhcy) ↗️</strong></a></p><p><a data-saferedirecturl="https://www.google.com/url?q=https://drive.google.com/drive/folders/1KjTVU94zd9_lmdU9AgKYboU8hHE8qhcy?usp%3Dsharing_eil%26ts%3D5d9ae56b&amp;source=gmail&amp;ust=1571218290850000&amp;usg=AFQjCNF5uvncNZWDE0C6L5QlP7yPAZ_uPQ" href="https://drive.google.com/drive/folders/1KjTVU94zd9_lmdU9AgKYboU8hHE8qhcy?usp=sharing_eil&amp;ts=5d9ae56b" target="_blank">SX20-U1-E1</a> - Alexis - Alex - Samuel - Miguel Angel<br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: SX20-U1-E2</p><p><a href="https://drive.google.com/drive/folders/1SLs-r5L7wnfS_myfWoAJ8XUlFzKdTRBv" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1SLs-r5L7wnfS_myfWoAJ8XUlFzKdTRBv) ↗️</strong></a></p><p><a data-saferedirecturl="https://www.google.com/url?q=https://drive.google.com/drive/folders/1SLs-r5L7wnfS_myfWoAJ8XUlFzKdTRBv?usp%3Dsharing_eil%26ts%3D5d9ae41d&amp;source=gmail&amp;ust=1571218291483000&amp;usg=AFQjCNGmw6pOvBMq8VrThSqLsIb-DY-Lzg" href="https://drive.google.com/drive/folders/1SLs-r5L7wnfS_myfWoAJ8XUlFzKdTRBv?usp=sharing_eil&amp;ts=5d9ae41d" target="_blank">SX20-U1-E2 (5) Robert, Cristian, Sandra, Adria i Attila</a><br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: SX20-U1-E3</p><p><a href="https://drive.google.com/drive/folders/1b_MTXSd-zbk2chr9eKQl0T7CpkQb9FyM" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://drive.google.com/drive/folders/1b_MTXSd-zbk2chr9eKQl0T7CpkQb9FyM) ↗️</strong></a></p><p><a data-saferedirecturl="https://www.google.com/url?q=https://drive.google.com/drive/folders/1b_MTXSd-zbk2chr9eKQl0T7CpkQb9FyM?usp%3Dsharing_eil%26ts%3D5d9ae5ed&amp;source=gmail&amp;ust=1571218290841000&amp;usg=AFQjCNFjw0IWO11AOjnisRdG1N94Yr0M3Q" href="https://drive.google.com/drive/folders/1b_MTXSd-zbk2chr9eKQl0T7CpkQb9FyM?usp=sharing_eil&amp;ts=5d9ae5ed" target="_blank">SX20-U1-E3 (4) Victor, Rene, Raul i Pau</a><br/></p></div>
+<hr/>
+<p dir="ltr" style="text-align: left;">presentació DHCP<br/></p>
+<p>SINTESIS DHCP 2º SMR SERVICIOS EN RED Tema 3: Servicio DHCP</p>
+<p>DHCP Servicio TCP/IP que asigna direcciones IP de forma dinámica a los equipos conectados a una red. RFC2131 v4 Cliente DHCP RFC2132 v4 Servidor DHCP RFC3315 v6 Servicio DHCP</p>
+<p>ASIGNACION IP Los valores TCP/IP han de introducirse en cada equipo previamente, uno a uno. Existe posibilidad de equivocación y tener que volver a reconfigurar los valores TCP/IP. Habrá que dedicar más tiempo (configuración manual) y podrá tener más fallos la red.</p>
+<p>Debe cambiarse la IP de forma manual cada vez que se reubica un equipo. MANUAL</p>
+<p>ASIGNACION IP Los valores TCP/IP son asignados cuando arranca el cliente sin necesidad de intervención del administrador. Se centraliza la información de manera que una vez configurado y probado, no puede haber equivocaciones. Se ahorra tiempo y esfuerzo de administración.</p>
+<p>En una red permite la movilidad de los equipos entre sus diferentes subredes. Se evitan colisiones de dirs IP y se optimiza el consumo de éstas. AUTOMATICA O DINAMICA</p>
+<p>Elementos del servicio Cliente (puerto 68 UDP) Servidor (puerto 67 UDP) El servidor DHCP permite configurar de forma automática: Dirección IP Máscara subred Tiempo de concesión (lease time) Tiempo de renovación (renewal time) Tiempo de reconexión (rebinding time)</p>
+<p>Elementos del servicio (2) De forma opcional puede configurar: Puerta enlace Servidores DNS Nombre del dominio DNS En redes Windows (Tipo de nodo WINS y servidor WINS).</p>
+<p>Tipos de asignación Dinámica e ilimitada. Asigna una IP de forma permanente a una máquina cliente la primera vez que hace la solicitud al servidor DHCP y hasta que el cliente la libera. Se usa cuando el nº clientes no varia demasiado. Dinámica y limitada: se cede una IP libre de manera temporal, como si se racionase su uso.</p>
+<p>Tiempo: 10 a 15 minutos. Es habitual en compañías proveedoras de acceso a internet. Dinámica con reserva: asigna la misma IP a un ordenador concreto, en función de su MAC. Ej: servidores.</p>
+<p>PROTOCOLO DHCP: Función Este protocolo regula la manera como un cliente DHCP obtiene una configuración IP válida y el orden en qué debe hacerlo. Cada red debe tener un servidor DHCP configurado y activo para atender las solicitudes de los clientes, ofreciéndoles una IP válida durante un tiempo determinado (tiempo de concesión).</p>
+<p>Cuando el cliente libera esa conexión, se lo comunica al servidor y la IP quedará libre para cualquier otro dispositivo que la necesite.</p>
+<p>PROTOCOLO DHCP: Elementos Cliente configurado de forma automática. Servidor configurado correctamente. Escenario: CLIENTE UDP 68 SERVIDOR UDP 67 1 DHCP Discover 2 DHCP Offer 3 DHCP Request 7 DHCP Release 4 DHCP ACK 5 DHCP Renew 6 DHCP ACK</p>
+<p>PROTOCOLO DHCP: Ordenes CLIENTE DHCP DISCOVER DHCP REQUEST DHCP DECLINE DHCP RELEASE DHCP INFORM DHCP RENEW SERVER DHCP OFFER DHCP ACK DHCP NAK</p>
+<p>PROTOCOLO DHCP: Negociación Negociación = orden en el que se envían los mensajes anteriores y su contenido</p>
+<ul>
+<li>Hay un servidor DHCP configurado y esperando a recibir peticiones.</li>
+</ul>
+<h4>2) Cuando un cliente DHCP se conecta a la red, envía un mensaje de broadcast</h4>
+<h4>3) Todos los servidores DHCP que han recibido la solicitud responden al cliente</h4>
+<p>proponiéndole una IP.</p>
+<ul>
+<li>El cliente acepta una de ellas y se lo comunica al servidor elegido.</li>
+</ul>
+<h4>5) El servidor le contesta con un mensaje que incluye la MAC de cli, la IP y máscara</h4>
+<p>de subred asignadas, la IP del servidor y el período de validez de la dirección IP.</p>
+<h4>6) Esta información permanece asociada al cliente mientras éste no desactive su</h4>
+<p>interfaz de red o finalice el plazo del ”contrato”. NOTA: El plazo del contrato o alquiler es el tiempo en que un cliente DHCP mantiene como propios los datos que le asignó un servidor.</p>
+<p>PROTOCOLO DHCP: Negociación</p>
+<h4>7) Una vez vencido el plazo del contrato, el servidor puede</h4>
+<ul>
+<li>renovar la información del cliente (la dir. IP), y asignarle otra nueva</li>
+<li>ampliar el plazo (manteniendo la misma información).</li>
+</ul>
+<h4>8) Antes de que sea consumido el período de validez, el cliente envía una</h4>
+<p>solicitud de renovación al servidor, que será atendida o no.</p>
+<h4>9) Si llega a expirar completamente el tiempo de validez, tiene que pedir</h4>
+<p>una nueva. NOTA: El cliente sabe que una respuesta es para él, por la MAC que lleva incorporada el mensaje del servidor y le contesta.</p>
+<p>DHCP: Proceso de asignación de IPs Es necesario conocer dos conceptos: Direcciones disponibles: rangos de direcciones a asignar a los clientes y que está configurado en el servidor DHCP. Intervalo de exclusión: Algunas direcciones que no se desea que sean asignadas a clientes, ejemplo: direcciones de servidores, que son estáticas.</p>
+<p>Se van concediendo direcciones del rango que tiene configurado hasta que se agotan, si alguna es liberada, pasa a estar disponible.</p>
+<p>CLIENTE DHCP Función → obtener IP automáticamente Negociación de órdenes → Ver mensajes anteriores Configuración del cliente → Windows / Ubuntu</p>
+<ul>
+<li>Cambiar las propiedades de la interfaz: Manual</li>
+</ul>
+<p>por Configurar de forma automática (DHCP).</p>
+<ul>
+<li>Desactivar y activar el interfaz para que nos</li>
+</ul>
+<p>concedan una nueva dirección.</p>
+<p>SERVIDOR DHCP Definición: proporciona un mecanismo rápido de configuración de red para el cliente. Función: optimizar proceso asignación. Estructura del archivo de configuración Archivo de texto que recoge una serie de entradas (# comentarios) compuestas por Parametros y declaraciones.</p>
+<p>Ej: [option] &lt;nombre_parámetro&gt; [valores]; Dispositivos que ofrecen el servicio DHCP (routers o servidores) Problemas del servicio DHCP (más de un servidor DHCP activo, falten direcciones, etc.)</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut06/index.html">⬅️ 📘 UT6 Completa</a>
+<a class="page-nav-btn" href="../ut06/ut0602.html">6.2 Presentació DHCP. Visió general ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

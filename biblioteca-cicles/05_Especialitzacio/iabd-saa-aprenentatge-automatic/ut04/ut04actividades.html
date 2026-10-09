@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT4 — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🤖 Sistemes d'Aprenentatge Automàtic (Machine Learning) — CE IA i Big Data</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Sistemes d'Aprenentatge Automàtic (Machine Learning)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Xarxes neuronals</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Continguts i Recursos</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Sistemes d'aprenentatge no supervisat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Sistemes d'aprenentatge supervisat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 UT 5.4. Aprenentatge supervisat. Tractament de d</a></li>
+<li><a href="../ut04/ut0402.html">4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r</a></li>
+<li><a href="../ut04/ut0403.html">4.3 UT 5.2. Aprenentatge supervisat. Models de regre</a></li>
+<li><a href="../ut04/ut0404.html">4.4 UT 5.1. Aprenentatge supervisat. Models de regre</a></li>
+<li><a href="../ut04/ut0405.html">4.5 UT 5. Aprenentatge supervisat. Introducció.</a></li>
+<li><a class="active" href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Sistemes d'aprenentatge automàtic</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 UT 4 . Eines d'aprenentatge automàtic</a></li>
+<li><a href="../ut05/ut0502.html">5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto</a></li>
+<li><a href="../ut05/ut0503.html">5.3 UT 2 . Caracterització de sistemes d'aprenentatg</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Caracterització de IA forta i dèbil</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 UT 1. Caracterització de IA forta I dèbil usos i</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Presentació del mòdul</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Introducció</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Continguts i Recursos</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE IA i Big Data · UT4 — Sistemes d'aprenentatge supervisat</span>
+<h1>✍️ Activitats pràctiques UT4</h1>
+
+
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.3 — Tasca 4 - Preprocessat de dades amb scikit learn</p>
+<div class="admonition tip"><p class="admonition-title">📦 Contingut del paquet comprimit (Tarea4.zip)</p><ul><li><code>CE IABD SAA Tarea4.ipynb</code></li><li><code>CarPrice.csv</code></li><li><code>Lexico_CarPrices3.xlsx</code></li></ul></div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.4 — Tasca 3 - Preprocessat de dades duplicades</p>
+<h3>📄 valores.csv</h3>
+<p>A,B,C,D,E 84,32,21,87,46 51,71,59,93,52 52,39,18,84,3 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 71,94,25,94,91 44,67,4,36,55 77,62,19,91,40 39,95,5,70,1 25,77,2,60,86 23,42,45,21,50 84,59,40,46,45 95,70,14,38,53 88,74,6,99,13 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 69,29,8,70,9 44,37,19,35,66 87,62,52,27,41 5,25,11,77,46 12,53,24,8,68 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 30,29,87,40,96 8,67,40,97,47 38,85,87,40,25 56,84,46,6,40 58,53,42,95,1 26,16,82,7,92 89,17,14,6,60 85,43,45,71,61 56,61,46,26,74 87,28,14,74,63 15,26,63,8,33 43,99,58,75,25 55,79,45,49,47 23,33,81,13,34 66,97,11,43,98 39,8,52,8,69 74,16,8,98,30 54,65,85,48,24 79,84,31,71,73 44,93,75,17,20 87,5,1,77,90 80,3,52,74,97 23,26,93,84,78 9,26,61,35,77 76,91,42,58,71 21,79,63,27,54 21,45,37,41,16 32,98,15,53,8 38,35,70,58,38 74,55,60,90,30 10,86,40,11,98 20,30,79,71,97 80,90,8,49,76 31,92,14,92,75 87,43,33,92,66 32,71,32,74,53 27,41,65,94,84 41,46,7,56,26 44,50,34,11,36 21,44,34,68,66 4,63,72,6,48 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 63,19,3,48,78 4,17,64,58,41 8,65,59,4,21 92,96,25,19,60 28,78,48,24,96 14,8,17,43,11 23,25,93,83,26 58,53,42,95,1 26,16,82,7,92 89,17,14,6,60 85,43,45,71,61 56,61,46,26,74 87,28,14,74,63 57,24,87,69,93 18,43,9,34,21 23,26,93,84,78 9,26,61,35,77 76,91,42,58,71 21,79,63,27,54 21,45,37,41,16 87,62,52,27,41 5,25,11,77,46 12,53,24,8,68 86,56,57,11,82 45,45,23,38,15 35,60,15,18,54 69,29,8,70,9 44,37,19,35,66 24,29,47,4,57 74,44,66,19,84 68,54,11,22,6 64,32,30,56,63 44,67,4,36,55 77,62,19,91,40 59,30,1,5,35 4,17,64,58,41 30,29,87,40,96 8,67,40,97,47 38,85,87,40,25 56,84,46,6,40 8,81,39,18,22 69,98,44,57,13 47,81,61,13,43 83,88,54,48,65 25,22,1,5,56 78,78,11,71,25 44,34,31,38,74 78,8,54,48,71 12,3,10,95,10 78,36,52,21,58 72,87,68,99,29 50,47,62,70,92 92,96,25,19,60 28,78,48,24,96 14,8,17,43,11 23,25,93,83,26 57,24,87,69,93 34,6,39,82,39 80,26,40,70,23 74,44,66,19,84 68,54,11,22,6 64,32,30,56,63 44,67,4,36,55 77,62,19,91,40 39,95,5,70,1 25,77,2,60,86 23,42,45,21,50 84,59,40,46,45 66,26,29,70,22 11,66,44,22,80 44,67,4,36,55 77,62,19,91,40 11,66,44,22,80</p>
+<h3>📄 IA BD SAA Tarea 3. Componentes de Azure.pdf</h3>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Tarea 3. Preprocesado de datos duplicados en Azure. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Taula de continguts Ejercicio 1..................................................................................................................................................3 Ejercicio 2..................................................................................................................................................3 2 / 3</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. EJERCICIO 1. Cargar en Azure el archivo car-duplicados.csv Realizar una previsualización de los datos. Eliminar las filas duplicadas. Convertir el archivo a formato *.csv EJERCICIO 2.</p>
+<p>Cargar en Azure el archivo valores.csv Realizar una previsualización de los datos. Eliminar las filas duplicadas. 3 / 3</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.5 — Tasca 2 - Optimització d'un model de regressió linear</p>
+<h3>📄 clipvalues CSV.csv</h3>
+<p>indices,sin outliers,con outliers 1,53,46 2,57,58 3,43,44 4,52,53 5,44,5 6,49,55 7,47,60 8,44,56 9,54,60 10,54,50 11,47,10 12,52,46 13,58,53 14,44,45 15,45,45 16,48,44 17,52,43 18,52,25 19,56,58 20,45,56 21,44,40 22,60,52 23,43,42 24,53,56 25,56,85 26,44,56 27,52,51 28,58,58 29,45,53 30,56,53 31,57,90 32,50,53 33,50,52 34,51,42 35,55,59 36,47,41 37,48,55 38,51,50 39,44,60 40,60,22 41,53,58 42,56,42 43,52,49 44,42,52 45,51,47 46,46,46 47,44,74 48,43,49 49,54,56 50,58,40 51,54,53 52,52,44 53,53,41 54,54,10 55,60,48 56,40,43 57,46,45 58,52,54 59,47,56 60,55,87 61,60,49 62,53,50 63,46,49 64,56,47 65,42,42 66,59,91 67,56,59 68,60,45 69,45,41 70,42,40 71,46,58 72,46,14 73,53,56 74,51,45 75,43,53 76,57,58 77,44,58 78,46,47 79,54,52 80,53,22 81,49,58 82,45,44 83,40,53 84,45,56 85,41,55 86,58,45 87,41,45 88,42,52 89,56,11 90,54,45 91,55,52 92,54,40 93,56,58 94,56,48 95,43,48 96,42,42 97,56,96 98,47,60 99,55,52 100,53,59</p>
+<h3>📄 clipvalues.ipynb</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">clipvalues.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import style
+from matplotlib.ticker import MultipleLocator
+from pathlib import Path
+data_path = Path("G:\\Modulos\\IA y BD\\IA y BD Aprendizaje Auto\\presentaciones\\ejemplos para azure")
+import matplotlib.patches as mpatches
+import matplotlib.image as mpimg
+import seaborn as sns
+import plotly.express as px
+
+import warnings #avisos al usuario sobre ejecucion de un programa. 
+warnings.filterwarnings('ignore')
+
+#para que plt funcione en jupyter
+%matplotlib inline</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">clipvalues.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>serie_1 = pd.read_csv(data_path/ "clipvalues CSV.csv")
+print(serie_1.describe())
+nueva_serie = serie_1.drop(["indices"], axis=1)
+px.box(nueva_serie)</code></pre>
+</div>
+<h3>📄 IA BD SAA Tarea 2. Aprendizaje Supervisado Azure.pdf</h3>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Tarea 2. Aprendizaje supervisado con Azure ML. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Taula de continguts Ejercicio 1..................................................................................................................................................3 Ejercicio 2..................................................................................................................................................3 Ejercicio 3..................................................................................................................................................3 2 / 4</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. EJERCICIO 1. Diseñar un modelo de ML que use el algoritmo de regresión linear para evaluar el dataset disponible en la biblioteca de Azure ML: Nota 1: Usar una separación entre datos de entrenamiento y validación de 0,75.</p>
+<p>Nota 2: No realizar ningún tratamiento sobre los datos del dataset. Adjuntar un pantallazo de las métricas del modelo. EJERCICIO 2. Visualizar en excel o libreoffice calc los datos del dataset “clipvalues CSV.odt”. Visualizar los datos en jupyter usando el archivo: “clipvalues.ipynb” Adjuntar un pantallazo de las gráficas.</p>
+<p>Comparar e interpretar las gráficas. EJERCICIO 3. Cargar en Azure el dataset “clipvalues CSV.csv”. Desarrollar un pipeline (simple) que permita</p>
+<ul>
+<li>Seleccionar la columna “con outliers”.</li>
+<li>Reemplazar los valores atípicos por el máximo (o mínimo) del conjunto de datos.</li>
+</ul>
+<p>En el caso del máximo (valores &gt; 60) reemplazar por 60. En el caso del mínimo (valores &lt; 40) reemplazar por 40.</p>
+<ul>
+<li>Crear un archivo en formato *.csv para poder recuperar el dataset corregido y</li>
+</ul>
+<p>visualizarlo (en excel / libre office / jupyter). 3 / 4</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 4 / 4</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.6 — Tasca 1 - Model de regressió linear</p>
+<h3>📄 IA BD SAA Tarea 1. Aprendizaje Supervisado Regresión linear.pdf</h3>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Tarea 1. Aprendizaje supervisado con Azure ML. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Taula de continguts Ejercicio 1..................................................................................................................................................3 Ejercicio 2..................................................................................................................................................3 2 / 3</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. EJERCICIO 1. Diseñar un modelo de ML que use el algoritmo de regresión linear para evaluar el dataset “datasetx2.csv”. Observar las métricas (adjuntar pantallazos) y sacar conclusiones.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ EJERCICIO 2. Desarrollar un modelo de ML que use los algoritmos B</p><p>EJERCICIO 2. Desarrollar un modelo de ML que use los algoritmos Boosted Decision Tree Regression y Decision Forest Regression. Entrenarlo con el dataset “datasetx2.csv”. Diseñar el modelo de tal manera que se puedan visualizar las métricas de los algoritmos. Observar las métricas (adjuntar pantallazos) y sacar conclusiones.</p></div>
+<p>3 / 3</p>
+<h3>📄 datasetx2.csv</h3>
+<p>valores de X,valores teoricos,ruido,valores de salida -2,15,-0.3,14.7 -1.98,14.7612,-0.4,14.3612 -1.96,14.5248,0.1,14.6248 -1.94,14.2908,0.3,14.5908 -1.92,14.0592,-0.8,13.2592 -1.9,13.83,0.6,14.43 -1.88,13.6032,0.3,13.9032 -1.86,13.3788,0.4,13.7788 -1.84,13.1568,0.1,13.2568 -1.82,12.9372,-0.7,12.2372 -1.8,12.72,0.8,13.52 -1.78,12.5052,0.8,13.3052 -1.76,12.2928,0,12.2928 -1.74,12.0828,0.9,12.9828 -1.72,11.8752,0.3,12.1752 -1.7,11.67,-0.3,11.37 -1.68,11.4672,0.2,11.6672 -1.66,11.2668,0.5,11.7668 -1.64,11.0688,-0.3,10.7688 -1.62,10.8732,-0.8,10.0732 -1.6,10.68,-0.2,10.48 -1.58,10.4892,-0.7,9.7892 -1.56,10.3008,-0.8,9.50079999999999 -1.54,10.1148,-0.4,9.7148 -1.52,9.9312,0.9,10.8312 -1.5,9.75,0.6,10.35 -1.48,9.5712,-0.7,8.8712 -1.46,9.3948,0.6,9.9948 -1.44,9.2208,0.2,9.4208 -1.42,9.0492,-0.1,8.9492 -1.4,8.88,-0.7,8.18 -1.38,8.7132,-0.1,8.6132 -1.36,8.5488,0.9,9.4488 -1.34,8.38679999999999,0.2,8.58679999999999 -1.32,8.2272,0.7,8.9272 -1.3,8.07,-0.1,7.97 -1.28,7.9152,-0.6,7.3152 -1.26,7.7628,0.1,7.8628 -1.24,7.6128,-0.8,6.8128 -1.22,7.4652,-0.3,7.1652 -1.2,7.32,0.4,7.72 -1.18,7.1772,-0.5,6.6772 -1.16,7.0368,-0.4,6.6368 -1.14,6.89879999999999,-0.4,6.49879999999999 -1.12,6.76319999999999,-0.1,6.66319999999999 -1.1,6.62999999999999,-0.9,5.72999999999999 -1.08,6.4992,-0.6,5.8992 -1.06,6.3708,-0.1,6.2708 -1.04,6.24479999999999,0.6,6.84479999999999 -1.02,6.12119999999999,-0.3,5.8212 -0.999999999999999,6,-0.3,5.7 -0.979999999999999,5.88119999999999,0.3,6.18119999999999 -0.959999999999999,5.7648,-0.6,5.1648 -0.939999999999999,5.6508,0.4,6.0508 -0.919999999999999,5.5392,0.2,5.7392 -0.899999999999999,5.42999999999999,0.7,6.12999999999999 -0.879999999999999,5.32319999999999,0.3,5.62319999999999 -0.859999999999999,5.21879999999999,-0.8,4.4188 -0.839999999999999,5.11679999999999,0.1,5.21679999999999 -0.819999999999999,5.0172,0.7,5.7172 -0.799999999999999,4.91999999999999,0.8,5.71999999999999 -0.779999999999999,4.8252,0.3,5.1252 -0.759999999999999,4.7328,0.9,5.6328 -0.739999999999999,4.6428,-0.5,4.1428 -0.719999999999999,4.5552,0.4,4.9552 -0.699999999999999,4.47,-0.9,3.57 -0.679999999999999,4.3872,-0.4,3.9872 -0.659999999999999,4.3068,-0.3,4.0068 -0.639999999999999,4.2288,0.1,4.3288 -0.619999999999999,4.1532,-0.4,3.7532 -0.599999999999999,4.08,0.1,4.18 -0.579999999999999,4.0092,0.4,4.4092 -0.559999999999999,3.9408,-0.6,3.3408 -0.539999999999999,3.8748,-0.2,3.6748 -0.519999999999999,3.8112,0.4,4.2112 -0.499999999999999,3.75,0.6,4.35 -0.479999999999999,3.6912,0.9,4.5912 -0.459999999999999,3.6348,-0.1,3.5348 -0.439999999999999,3.5808,0.3,3.8808 -0.419999999999999,3.5292,0.8,4.3292 -0.399999999999999,3.48,-0.4,3.08 -0.379999999999999,3.4332,0.6,4.0332 -0.359999999999999,3.3888,0.4,3.7888 -0.339999999999999,3.3468,-0.4,2.9468 -0.319999999999998,3.3072,-0.8,2.5072 -0.299999999999998,3.27,0.2,3.47 -0.279999999999998,3.2352,0.8,4.0352 -0.259999999999998,3.2028,-0.6,2.6028 -0.239999999999998,3.1728,0.8,3.9728 -0.219999999999998,3.1452,-0.5,2.6452 -0.199999999999998,3.12,0.2,3.32 -0.179999999999999,3.0972,-0.7,2.3972 -0.159999999999999,3.0768,-0.7,2.3768 -0.139999999999999,3.0588,0.2,3.2588 -0.119999999999999,3.0432,-0.9,2.1432 -0.0999999999999985,3.03,-0.6,2.43 -0.0799999999999985,3.0192,-0.2,2.8192 -0.0599999999999985,3.0108,-0.2,2.8108 -0.0399999999999985,3.0048,0.5,3.5048 -0.0199999999999985,3.0012,0.9,3.9012 1.50573997714787E-15,3,-0.7,2.3 0.0200000000000015,3.0012,-0.7,2.3012 0.0400000000000015,3.0048,0.7,3.7048 0.0600000000000015,3.0108,-0.9,2.1108 0.0800000000000015,3.0192,0,3.0192 0.100000000000002,3.03,-0.9,2.13 0.120000000000002,3.0432,-0.9,2.1432 0.140000000000002,3.0588,0.6,3.6588 0.160000000000002,3.0768,0.7,3.7768 0.180000000000002,3.0972,-0.1,2.9972 0.200000000000001,3.12,0.5,3.62 0.220000000000001,3.1452,0.5,3.6452 0.240000000000001,3.1728,-0.6,2.5728 0.260000000000001,3.2028,-0.3,2.9028 0.280000000000001,3.2352,0.7,3.9352 0.300000000000001,3.27,-0.2,3.07 0.320000000000001,3.3072,-0.3,3.0072 0.340000000000001,3.3468,0.9,4.2468 0.360000000000002,3.3888,0.6,3.9888 0.380000000000002,3.4332,-0.7,2.7332 0.400000000000002,3.48,-0.7,2.78 0.420000000000002,3.5292,0.3,3.8292 0.440000000000002,3.5808,-0.9,2.6808 0.460000000000002,3.6348,0,3.6348 0.480000000000002,3.6912,-0.8,2.8912 0.500000000000002,3.75,0.7,4.45 0.520000000000002,3.81120000000001,0.9,4.71120000000001 0.540000000000002,3.87480000000001,-0.2,3.67480000000001 0.560000000000002,3.94080000000001,-0.1,3.84080000000001 0.580000000000002,4.00920000000001,0.3,4.30920000000001 0.600000000000002,4.08000000000001,-0.5,3.58000000000001 0.620000000000002,4.15320000000001,0.6,4.75320000000001 0.640000000000002,4.22880000000001,0.5,4.72880000000001 0.660000000000002,4.30680000000001,-0.8,3.50680000000001 0.680000000000002,4.38720000000001,0.9,5.28720000000001 0.700000000000002,4.47000000000001,0.6,5.07000000000001 0.720000000000002,4.55520000000001,-0.9,3.65520000000001 0.740000000000002,4.64280000000001,0.4,5.04280000000001 0.760000000000002,4.73280000000001,0.6,5.33280000000001 0.780000000000002,4.82520000000001,0.9,5.72520000000001 0.800000000000002,4.92000000000001,0.2,5.12000000000001 0.820000000000002,5.01720000000001,0.4,5.41720000000001 0.840000000000002,5.11680000000001,-0.9,4.21680000000001 0.860000000000002,5.21880000000001,0.9,6.11880000000001 0.880000000000002,5.32320000000001,0.8,6.12320000000001 0.900000000000002,5.43000000000001,0.4,5.83000000000001 0.920000000000002,5.53920000000001,-0.9,4.63920000000001 0.940000000000002,5.65080000000001,0.4,6.05080000000001 0.960000000000002,5.76480000000001,0.8,6.56480000000001 0.980000000000002,5.88120000000001,-0.7,5.18120000000001 1,6.00000000000001,-0.6,5.40000000000001 1.02,6.12120000000001,0.8,6.92120000000001 1.04,6.24480000000001,0.4,6.64480000000001 1.06,6.37080000000001,-0.4,5.97080000000001 1.08,6.49920000000001,-0.8,5.69920000000001 1.1,6.63000000000001,-0.2,6.43000000000001 1.12,6.76320000000001,0.4,7.16320000000002 1.14,6.89880000000001,-0.7,6.19880000000001 1.16,7.03680000000002,0.4,7.43680000000002 1.18,7.17720000000002,0.3,7.47720000000002 1.2,7.32000000000002,-0.7,6.62000000000002 1.22,7.46520000000002,-0.5,6.96520000000002 1.24,7.61280000000002,-0.8,6.81280000000002 1.26,7.76280000000002,0.9,8.66280000000002 1.28,7.91520000000002,0.6,8.51520000000002 1.3,8.07000000000002,0.9,8.97000000000002 1.32,8.22720000000002,0.1,8.32720000000002 1.34,8.38680000000002,-0.3,8.08680000000002 1.36,8.54880000000002,-0.4,8.14880000000002 1.38,8.71320000000002,0.7,9.41320000000002 1.4,8.88000000000002,0.5,9.38000000000002 1.42,9.04920000000002,-0.7,8.34920000000002 1.44,9.22080000000002,-0.4,8.82080000000002 1.46,9.39480000000002,0.5,9.89480000000002 1.48,9.57120000000002,0,9.57120000000002 1.5,9.75000000000002,-0.3,9.45000000000002 1.52,9.93120000000002,-0.4,9.53120000000002 1.54,10.1148,0.7,10.8148 1.56,10.3008,-0.8,9.50080000000002 1.58,10.4892,0.1,10.5892 1.6,10.68,0.2,10.88 1.62,10.8732,-0.3,10.5732 1.64,11.0688,-0.4,10.6688 1.66,11.2668,-0.8,10.4668 1.68,11.4672,-0.4,11.0672 1.7,11.67,0.2,11.87 1.72,11.8752,-0.2,11.6752 1.74,12.0828,0.4,12.4828 1.76,12.2928,0.4,12.6928 1.78,12.5052,0.4,12.9052 1.8,12.72,0.1,12.82 1.82,12.9372,-0.6,12.3372 1.84,13.1568,0.9,14.0568 1.86,13.3788,-0.7,12.6788 1.88,13.6032,-0.9,12.7032 1.9,13.83,-0.8,13.03 1.92,14.0592,0.7,14.7592 1.94,14.2908,0.5,14.7908 1.96,14.5248,-0.6,13.9248 1.98,14.7612,-0.7,14.0612 2,15,-0.1,14.9</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/ut0405.html">⬅️ 4.5 UT 5. Aprenentatge supervisat. Introducció.</a>
+<a class="page-nav-btn" href="../ut05/index.html">📘 UT5 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT3 — Unit 3 - HTTP — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>☁️ Serveis de Xarxa i Internet — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Serveis de Xarxa i Internet</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Welcome SXI</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unit 1 - DHCP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 DHCP</a></li>
+<li><a href="../ut01/ut0102.html">1.2 U1 P1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 U1 P2</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unit 2 - DNS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U2 DNS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 P1</a></li>
+<li><a href="../ut02/ut0203.html">2.3 U2 P2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Unit 3 - HTTP</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U3 HTTP</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Grups Treball</a></li>
+<li><a href="../ut03/ut0303.html">3.3 U3 A3 Windows Group</a></li>
+<li><a href="../ut03/ut0304.html">3.4 U3 P1</a></li>
+<li><a href="../ut03/ut0305.html">3.5 U3 P2</a></li>
+<li><a href="../ut03/ut0306.html">3.6 U3 P3</a></li>
+<li><a href="../ut03/ut0307.html">3.7 U3 P4</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unit 4 - FTP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U4 FTP</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Grups</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U4 P1</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U4 P2</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Unit 5 - SSH</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 U5 SSH</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U5 P1</a></li>
+<li><a href="../ut05/ut0503.html">5.3 U5 P2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Unit 6 - Email</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U6 Email</a></li>
+<li><a href="../ut06/ut0602.html">6.2 U6P1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unit 7 - Audio and Video</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U7 Audio and Video</a></li>
+<li><a href="../ut07/ut0702.html">7.2 U7 P1</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT3 Completa</span>
+<h1>📘 UT3 — Unit 3 - HTTP (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0301"><strong>3.1 U3 HTTP</strong></a> (o <a href="./ut0301.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0302"><strong>3.2 Grups Treball</strong></a> (o <a href="./ut0302.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0303"><strong>3.3 U3 A3 Windows Group</strong></a> (o <a href="./ut0303.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0304"><strong>3.4 U3 P1</strong></a> (o <a href="./ut0304.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0305"><strong>3.5 U3 P2</strong></a> (o <a href="./ut0305.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0306"><strong>3.6 U3 P3</strong></a> (o <a href="./ut0306.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0307"><strong>3.7 U3 P4</strong></a> (o <a href="./ut0307.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut03actividades"><strong>✍️ Activitats pràctiques UT3</strong></a> (o <a href="./ut03actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0301">3.1 U3 HTTP</h2>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 style="text-align: left;"><strong>Resources</strong></h4></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 style="text-align: left;"><strong>Tasks</strong></h4></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 style="text-align: left;"><strong>Practices</strong></h4></div>
+<hr/>
+<p>SXI / NSI - UNIT 3 - HTTP 2nd ASIX</p>
+<p>2 ASIX - SXI Why do we need HTTP?</p>
+<ul>
+<li>Most common method in Internet to share information.</li>
+<li>One of the first Internet services designed.</li>
+<li>Offer the possibility of view information hosted in servers around the world in a friendly</li>
+</ul>
+<p>manner.</p>
+<ul>
+<li>This information, known as Webpages, is usually formatted using markup language in</li>
+</ul>
+<p>conjunction with a script language programming.</p>
+<ul>
+<li>Hypertext Transfer Protocol. Created in 1990 in the CERN (Conseil Européen pour la</li>
+</ul>
+<p>Recherche Nucléaire) as a way of sharing scientific data around the world quickly and cheap.</p>
+<p>2 ASIX - SXI What is HTTP?</p>
+<ul>
+<li>Hypertext is the content of the webpages. HTML (HyperText Markup</li>
+</ul>
+<p>Language).</p>
+<ul>
+<li>World Wide Web (www) allow to visualize hypertext, multimedia and more</li>
+</ul>
+<p>data. Also developed by CERN and standardized by W3C.</p>
+<ul>
+<li>There is a secure version of HTTP named HTTPS that allows to cypher the</li>
+</ul>
+<p>information between client and server (if both allows).</p>
+<ul>
+<li>Transfer protocol is the set of rules through request are sent for accessing a</li>
+</ul>
+<p>web and the consequent response.</p>
+<p>2 ASIX - SXI HTTP protocol</p>
+<ul>
+<li>Application layer protocol designed to transfer information through the</li>
+</ul>
+<p>network.</p>
+<ul>
+<li>Client-Server model.</li>
+<li>Stateless protocol and not-connection oriented. Packets are processed in</li>
+</ul>
+<p>the client as individual elements. Each request, connection is opened and closed.</p>
+<ul>
+<li>Communications through port 80 and using TCP.</li>
+</ul>
+<p>2 ASIX - SXI Concepts: URI. Uniform Resource Identifier</p>
+<ul>
+<li>Text string that identifies a network resource (text file, audio,</li>
+</ul>
+<p>webpage, etc).</p>
+<ul>
+<li>Protocol://HostName/DirectoryName/FileName</li>
+<li>When accessing through URI, some values can be optionals.</li>
+</ul>
+<p>2 ASIX - SXI Concepts: URL. Uniform Resource Locator</p>
+<ul>
+<li>Text string that identifies the location of a resource in Internet.</li>
+<li>Type of URI but with no optional values.</li>
+<li>If some value is omitted, default value is taken.</li>
+</ul>
+<p>2 ASIX - SXI Concepts: URN. Uniform Resource Name</p>
+<ul>
+<li>Text string that identifies a resource but without specify where is</li>
+</ul>
+<p>hosted.</p>
+<p>2 ASIX - SXI HTTP protocol. How it works?</p>
+<ul>
+<li>Request-Response paradigm.</li>
+<li>Client sends a request to the server and server responses with a</li>
+</ul>
+<p>status code with the result and, optionally, the info with it (HTML webpage, txt document, audio, etc).</p>
+<ul>
+<li>We know the type of info attached because of the specification</li>
+</ul>
+<p>MIME.</p>
+<p>2 ASIX - SXI HTTP protocol. How it works?</p>
+<ul>
+<li>After accessing through the web client (browser) to a URL, a DNS</li>
+</ul>
+<p>query is carried using UDP protocol to resolve the destination IP.</p>
+<ul>
+<li>Once resolved, the protocol starts with a TCP connection to ask the</li>
+</ul>
+<p>resource. This is called a handshake where origin and destination ports are negotiated. Once established, this connection is named Socket.</p>
+<ul>
+<li>Once the connection is established, the information swapping begins</li>
+</ul>
+<p>and when is finished the connection will close.</p>
+<p>2 ASIX - SXI HTTP protocol. How it works?</p>
+<p>2 ASIX - SXI HTTP protocol. How it works?</p>
+<ul>
+<li>If we need more than a resource, all steps from 4 will be repeated.</li>
+<li>Nowadays, there is a parameter named http keep alive that allows to</li>
+</ul>
+<p>keep the connection opened to transfer more than a single file in each connection.</p>
+<ul>
+<li>This has to be configured in the server.</li>
+</ul>
+<p>2 ASIX - SXI HTTP Request</p>
+<ul>
+<li>Message formed by: Command, Header and Body</li>
+<li>Different command methods. Most used</li>
+<li>GET: used to request the server to send a web resource to the client.</li>
+<li>POST: used to send to the server data collected in the client (through a form,</li>
+</ul>
+<p>for example).</p>
+<ul>
+<li>We also indicate in the same line the resource and the version of http</li>
+</ul>
+<p>to be used.</p>
+<p>2 ASIX - SXI HTTP Request</p>
+<ul>
+<li>Header: Expressed in parameter:value pairs. We have different</li>
+</ul>
+<p>categories of headers with different type of information.</p>
+<ul>
+<li>Body: Usually, with get there is no body and with POST the body are</li>
+</ul>
+<p>the values sent.</p>
+<p>2 ASIX - SXI HTTP response</p>
+<ul>
+<li>Response message is formed by: status line, header and body.</li>
+<li>Status line has the protocol version and the code of the response.</li>
+<li>The code is formed by a integer number and its value says the type of</li>
+</ul>
+<p>response the server has returned..</p>
+<ul>
+<li>1XX: Informative messages. Not used (yet).</li>
+<li>2XX: OK messages.</li>
+<li>3XX: Redirection messages.</li>
+<li>4XX: Client errors.</li>
+<li>5XX: Server errors</li>
+</ul>
+<p>2 ASIX - SXI HTTP response</p>
+<p>2 ASIX - SXI HTTP response</p>
+<ul>
+<li>The header contains info useful for the client.</li>
+<li>The body contains the response itself (like the webpage)</li>
+</ul>
+<p>2 ASIX - SXI Web Server</p>
+<ul>
+<li>Web service used the client-server model.</li>
+</ul>
+<p>2 ASIX - SXI Web Server</p>
+<p>2 ASIX - SXI Web Server</p>
+<ul>
+<li>Most important web servers are Apache and Internet Information</li>
+</ul>
+<p>Server (IIS) de Microsoft.</p>
+<ul>
+<li>Others: Tomcat, nginx, AOLServer, SunOne, Zeus, etc.</li>
+<li>Apache: market leader. Open source.</li>
+<li>SO: All.</li>
+<li>Advantages: cheap, powerful, secure, robust, modular, etc.</li>
+<li>Disadvantages: Maintenance, not so easy as IIS</li>
+</ul>
+<p>2 ASIX - SXI Web Server</p>
+<ul>
+<li>IIS: Internet Information Server</li>
+<li>SO: Windows Server</li>
+<li>Advantages: Easy management, powerful, robust, lots of monitoring tools, etc</li>
+<li>Disadvantages: Only Windows, not cheap.</li>
+</ul>
+<p>2 ASIX - SXI Apache files</p>
+<ul>
+<li>After installing Apache, you will find the important directories and</li>
+</ul>
+<p>files in /etc/apache2.</p>
+<ul>
+<li>apache2.conf is one of the most important files. Is where the</li>
+</ul>
+<p>configuration directives are.</p>
+<ul>
+<li>Some of them are commented and others are not included.</li>
+</ul>
+<p>2 ASIX - SXI apache2.conf</p>
+<ul>
+<li>ServerRoot: main directory where all the service, errors and log files are</li>
+</ul>
+<p>stored.</p>
+<ul>
+<li>Timeout: limit time in seconds between client request and server response.</li>
+<li>KeepAlive: maintain TCP connections opened.</li>
+<li>ErrorLog: file where the log is stored.</li>
+<li>LogLevel: especifies the severity of events that will be logged.</li>
+<li>Include: used to include content from another files. i.e. if we include</li>
+</ul>
+<p>ports.conf, it’s like we have include all the content from the file.</p>
+<ul>
+<li>LogFormat: defines the format in the log file.</li>
+<li>ErrorDocument: define personalized webpage for error messages.</li>
+</ul>
+<p>2 ASIX - SXI Apache configuration</p>
+<ul>
+<li>By default, after installation, Apache is configured for working with a single</li>
+</ul>
+<p>site.</p>
+<ul>
+<li>And the configuration file for this default site is located in /etc/apache2/sites</li>
+</ul>
+<p>available/000-default.conf</p>
+<ul>
+<li>This file defines several directives. Most important are</li>
+<li>ServerName: FQDN used by visitors to visit web resources.</li>
+<li>ServerAdmin: webmaster mail.</li>
+<li>DocumentRoot: directory where resources are stored. By default /var/www/html/</li>
+<li>But usually, we need more than a site in a single server.</li>
+<li>This will be done using virtual hosts where each virtual host will represent</li>
+</ul>
+<p>a site, with independent configuration.</p>
+<p>2 ASIX - SXI Apache modules</p>
+<ul>
+<li>Apache includes a set of modules to increase the functionality of the</li>
+</ul>
+<p>web service.</p>
+<ul>
+<li>These are called modules and some of them are included and</li>
+</ul>
+<p>disabled by default.</p>
+<ul>
+<li>They are located in /etc/apache2/mods-available</li>
+</ul>
+<p>2 ASIX - SXI Virtual Hosts</p>
+<ul>
+<li>If we need different sites (with different index) in a single server, we’d</li>
+</ul>
+<p>need to create different directories per each site and then generate the files in each directory.</p>
+<p>2 ASIX - SXI Virtual Hosts</p>
+<ul>
+<li>Using this, different sites will be stored in the same physical server</li>
+</ul>
+<p>but giving the sensation of being in different servers.</p>
+<ul>
+<li>There are also virtual host based on IP. The server has different IP</li>
+</ul>
+<p>addresses and each virtual host will attend request in a different IP.</p>
+<ul>
+<li>We need different network cards (one per IP) or assign virtual</li>
+</ul>
+<p>interfaces to our network card.</p>
+<p>2 ASIX - SXI Authentication and access control</p>
+<ul>
+<li>Consists in limit the access to the subdirectories included under the public</li>
+</ul>
+<p>directory /var/www/html of the Apache Server.</p>
+<ul>
+<li>If the resource is requested, a emergent prompt will be shown to login.</li>
+<li>Very used at the beginning but very limited now. Passwords are encrypted</li>
+</ul>
+<p>but when the users log in, the credentials are sent in plain text.</p>
+<ul>
+<li>One of the modules in charge of the authentication is auth_basic and it’s</li>
+</ul>
+<p>necessary to enable it.</p>
+<p>2 ASIX - SXI Authentication and access control</p>
+<ul>
+<li>On of the tools for management the module is htpasswd.</li>
+<li>Htpasswd –c &lt;user/password file&gt; &lt;user&gt; : This option creates the file with</li>
+</ul>
+<p>the name specified in the first parameters and includes the user specified in the second parameter. Password will be set afterwards.</p>
+<ul>
+<li>Htpasswd -D&lt;user/password file&gt; &lt;user&gt; : This option deletes the user from</li>
+</ul>
+<p>the file</p>
+<ul>
+<li>sudo a2enmod auth_basic</li>
+<li>sudo htpasswd –c credenciales.htpasswd sistemas</li>
+</ul>
+<p>2 ASIX - SXI Authentication and access control</p>
+<ul>
+<li>Once the credentials are created (authentication), we must configure</li>
+</ul>
+<p>the directory (or file) to be protected (access control).</p>
+<ul>
+<li>We need to modify the config file for the virtual host</li>
+</ul>
+<p>(/etc/apache2/sites-available), including the Location directive.</p>
+<p>2 ASIX - SXI Authentication and access control</p>
+<ul>
+<li>Where</li>
+<li>Location: subdirectory into the DocumentRoot we want to protect.</li>
+<li>AuthType: authentication type</li>
+<li>AuthName: Name for the prompt</li>
+<li>AuthUserFile: File where the credentials have been created</li>
+<li>Require can be used to indicate which users can access</li>
+<li>Require user valid-user à a logged user</li>
+<li>Require user &lt;user1&gt;&lt;user2&gt;&lt;usern&gt; à one of the users</li>
+<li>Remember ALWAYS to restart the server when a config file is modified.</li>
+</ul>
+<p>2 ASIX - SXI Questions?</p>
+<hr/>
+<h2 id="ut0302">3.2 Grups Treball</h2>
+<p>GRUP 1 6 - Ana 8 - Mompo</p>
+<h4>12- Sergi</h4>
+<p>GRUP 2 2 - Arce</p>
+<h4>11- Vicent</h4>
+<h4>10- Raga</h4>
+<p>Quique</p>
+<p>GRUP 3 1 - Alexis</p>
+<h4>13- Abel</h4>
+<p>4 - Francisco</p>
+<p>GRUP 4 7 - Gvidas 5 - Alex 9 - Attila</p>
+<ul>
+<li>Dani</li>
+</ul>
+<hr/>
+<h2 id="ut0303">3.3 U3 A3 Windows Group</h2>
+<p>Unit 3 – HTTP</p>
+<p>U3 – A3</p>
+<p>In groups, prepare a presentation of one of these topics about IIS</p>
+<ul>
+<li>How to install and configure SSL certificate and use it in IIS.</li>
+<li>How to create virtual hosts in IIS.</li>
+</ul>
+<h3>3. IIS AD Group permission – Setting it up in Windows Server</h3>
+<h3>4. How to allow/restrict connections from an IP address to a website in IIS</h3>
+<p>on Windows Server.</p>
+<p>Each group have to prepare a presentation to explain its topic. Each group can use as many tools as needed during the presentation.</p>
+<p>The duration of the presentation will be 10 minutes as maximum.</p>
+<p>Questions at the end can be asked to any member of the group, regardless the part of presentation he/she has presented.</p>
+<p>The following rubric will be used to evaluate</p>
+<p>EXCEL·LENT MOLT BÉ SUFICIENT INSUFICIENT</p>
+<h3>1. Presentació del</h3>
+<p>projecte El ponent es presenta, planteja el tema del projecte i les parts que desenvoluparà. Resumeix les diferents parts del treball. El ponent es presenta, però no desenvolupa completament la resta d’aspectes. No es presenten el ponent o el projecte, ni es fa un resum de les diferents parts del treball.</p>
+<p>Es presenta de manera inadequada. 2.- Veu El volum i l’entonació són els adequats, la veu clara i la vocalització bona. El volum és prou alt bona part bona part del temps, la veu clara i la vocalització bona. Costa entendre alguns fragments, i el nivell és baix en la claredat o vocalització.</p>
+<p>El volum és dèbil com per a ser escoltat per tota la classe. Molts fragments no s’entenen.</p>
+<h3>3. Postura del cos,</h3>
+<p>gestualitat i contacte visual Té bona postura i els moviments que fa són naturals. Realitza gestos per a facilitar la comprensió del discurs. Estableix contacte visual amb la resta de companys. En general té bona, realitza gestos per a facilitar la comprensió del discurs i estableix contacte visual amb la resta de companys.</p>
+<p>En moltes ocasions els moviments que fa no són naturals, no realitza gestos o no en fa amb la finalitat adequada i no estableix contacte visual. Té una postura rígida. No usa gestos adequats. No estableix contacte visual amb la resta de l’alumnat durant la presentació.</p>
+<p>Unit 3 – HTTP</p>
+<h3>4. Discurs i</h3>
+<p>vocabulari El seu discurs és molt clar, sense incorreccions gramaticals, amb un lèxic ric i s’ajusta al tema. Adequa el seu registre a la situació comunicativa. El seu discurs és correcte¡ i té cura de tots els aspectes. Utilitza paraules pròpies sense barbarismes. Parla sense abusar de repeticions i/o tics lingüístics.</p>
+<p>Respecta el registre. El seu discurs presenta bastants incorreccions, però en general el llenguatge és clar i usa un lèxic adequat al tema. No respecta en tot moment el registre. Discurs pobre. Ple d’incorreccions. El lèxic no és l’adequat al tema. Usa un registre inapropiat.</p>
+<h3>5. Temps</h3>
+<p>La durada de la intervenció és l’adequada al contingut exposat.</p>
+<p>La durada de la intervenció és quasi l’adequada al contingut exposat.</p>
+<p>La durada de la intervenció és excessivament llarga o ha faltat temps. Ha acabat molt ràpidament o ha utilitzat molt més temps del previst.</p>
+<h3>6. Atenció i interés</h3>
+<p>Capta l’atenció en tot moment. Quasi sempre capta l’atenció. Quasi mai capta l’atenció. No capta l’atenció de l’alumnat.</p>
+<h3>7. Preparació prèvia</h3>
+<p>S’ho ha preparat molt bé. No necessita llegir el suport material que l’acompanya.</p>
+<p>Bastant preparat. Algunes vegades llegeix l’esquema.</p>
+<p>En alguns moments no llegeix, es nota que algunes parts les porta més preparades. No és capaç d’exposar sense llegir el paper.</p>
+<h3>8. Contingut</h3>
+<p>Entén el que explica. El contingut és ampli.</p>
+<p>Quasi sempre entén el que explica. El contingut està treballat.</p>
+<p>En moltes ocasions no entén el que explica. Apareixen contingutssobrers i inadequats o en falten. No entén el que explica. El contingut no està treballat</p>
+<h3>9. Material de suport</h3>
+<p>El material de suport (pòsters, murals, vídeos, etc.) és creatiu i útil per a la comprensió de l’exposició.</p>
+<p>En general el material de suport acompleix els requisits i ajuda a la comprensió de l’exposició.</p>
+<p>El material de suport no és creatiu,però ajuda a la comprensió de l’exposició.</p>
+<p>Ni la creativitat del material de suport és l’adequada ni aconsegueix l’objectiu d’ajudar en la comprensió de l’exposició.</p>
+<h3>10. Domini del tema</h3>
+<p>(i resolució de dubtes) Respon les preguntes que li plantegen després de l’exposició, resol dubtes. Respon quasi totes les preguntes plantejades. Respon alguna pregunta, no domina suficientment el tema. No sap respondre les preguntes plantejades, no té domini del tema.</p>
+<hr/>
+<h2 id="ut0304">3.4 U3 P1</h2>
+<p>Unit 3 – HTTP</p>
+<p>U3 – P1</p>
+<p>Instructions</p>
+<ul>
+<li>Remember to copy both, questions and answers.</li>
+<li>Deliver the document in .pdf</li>
+<li>Send the document through the task in Aules.</li>
+</ul>
+<p>Installing and configuring Apache</p>
+<p>First of all, we need install apache using apt.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>apt-get update
+apt-get install apache2</code></pre>
+</div>
+<p>We’ll use the following command to start/stop the apache service</p>
+<p>/etc/init.d/apache2 {start|stop|restart|status}</p>
+<p>We must check if the server is up and running using the following command</p>
+<p>/etc/init.d/apache2 status</p>
+<p>We can also use</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>service apache2 status</code></pre>
+</div>
+<p>And something like this must be shown</p>
+<p>Unit 3 – HTTP</p>
+<p>You can also check if the server is up and running by accessing through the browser to</p>
+<p>http://localhost</p>
+<p>And the default apache webpage should be displayed.</p>
+<p>Add a screenshot of the result of status command and a screenshot of the webpage working on your browser</p>
+<p>Now, go to /etc/apache2 and explain with your own words what’s the content or purpose of each directory.</p>
+<hr/>
+<h2 id="ut0305">3.5 U3 P2</h2>
+<p>Unit 3 – HTTP</p>
+<p>U3 – P2</p>
+<p>Changing the default webpage</p>
+<p>As we’ve studied, default webpage in our Apache server is a file named index.html or index.php in /var/www/html.</p>
+<p>You must modify it and leave it like follows</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Main webpage&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Main webpage&lt;/h1&gt;
+        &lt;p&gt;Your name and surname&lt;/p&gt;
+    &lt;/body&gt;</code></pre>
+</div>
+<p>&lt;/html&gt;</p>
+<p>You can check if everything is right by accessing through the browser to</p>
+<p>http://localhost</p>
+<p>Now, we are going to change the name to indice.html and try to access again</p>
+<p>http://localhost</p>
+<p>As you can see, now the webpage is not displayed because the server is configured to have the default webpage as index.html.</p>
+<p>Modify the apache configuration (apache2.conf) to change the default webpage for this server. Remember to restart the server after apply the changes to the configuration file.</p>
+<p>Unit 3 – HTTP</p>
+<p>Changing the default error webpages</p>
+<p>If we try to access to a non-existent webpage, a default 404 error webpage will be displayed.</p>
+<p>As you know, we can personalize these error webpages by creating our own html webpage and modifying the apache2.conf.</p>
+<p>Create a file in /var/www/html/ named miError404.html and add a your name and an image that represents “not found”.</p>
+<p>Now we need to add the ErrorDocument directive into apache2.conf like follows.</p>
+<p>ErrorDocument 404 /miError404.html</p>
+<p>After restarting, this webpage must be displayed in every 404 error.</p>
+<p>Create your own file for the error 500 and configure it in the server.</p>
+<p>Installing new modules</p>
+<p>As we’ve studied, Apache offers us the possibility of installing new modules to increase the functionality of the server. One of the most popular modules to install the php and mysql module that allow the server to work with php and mysql in conjunction.</p>
+<p>To install the modules we’ll follow these steps</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>apt install php libapache2-mod-php
+apt install php-cli
+apt install php-cgi
+apt install php-mysql</code></pre>
+</div>
+<p>Once everything is successfully installed create a file named myphp.php file into the /var/www/html with the following content</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>&lt;?php
+phpinfo();
+?&gt;</code></pre>
+</div>
+<p>And when accessing to http://localhost/myphp.php a table with information about the php version should be displayed.</p>
+<hr/>
+<h2 id="ut0306">3.6 U3 P3</h2>
+<p>Unit 3 – HTTP</p>
+<p>U3 – P3</p>
+<p>Configuring virtualhosts by name</p>
+<p>In a server, we can host different webpages, not only one. In order to do that, we need to configure different virtual host.</p>
+<p>We are going to need to host these 3 different webpages</p>
+<ul>
+<li>www.namesurname1.com</li>
+<li>www.namesurname2.com</li>
+<li>www.namesurname3.com</li>
+</ul>
+<p>As we don’t have a DNS server working (nor Internet), we need to modify our local file /etc/hosts to map the domains to our server.</p>
+<p>10.10.0.1 www.namesurname1.com www.namesurname2.com www.namesurname3.com</p>
+<p>Create in the following paths the index.html of each webpage</p>
+<ul>
+<li>/var/www/html/name1/</li>
+<li>/var/www/html/name2/</li>
+<li>/var/www/html/name3/</li>
+</ul>
+<p>And the content of each index file will be as follows</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Main webpage X&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Main webpage X&lt;/h1&gt;
+        &lt;p&gt;Your name and surname X&lt;/p&gt;
+    &lt;/body&gt;</code></pre>
+</div>
+<p>&lt;/html&gt; Where X is the number.</p>
+<p>Unit 3 – HTTP</p>
+<p>Then we need to create an individual config file for each webpage</p>
+<ul>
+<li>/etc/apache2/sites-available/name1.conf</li>
+<li>/etc/apache2/sites-available/name2.conf</li>
+<li>/etc/apache2/sites-available/name3.conf</li>
+</ul>
+<p>And the content of each file will be as follows</p>
+<p>&lt;VirtualHost *:80&gt; ServerName www.namesurname1.com DocumentRoot /var/www/html/name1 &lt;/VirtualHost&gt;</p>
+<p>Now we only need to enable the virtualhosts by using the a2ensite command.</p>
+<p>a2ensite [nameOfConfigFile]</p>
+<p>For example, for the first virtualhost we’ll use</p>
+<p>a2ensite name1</p>
+<p>Every time we change a conf file, we need to restart the server to apply the changes successfully.</p>
+<p>a2ensite command is used to enable the virtualhosts. If we need to disable, we just need to use the command a2dissite.</p>
+<p>Create two more virtual hosts as practicaNombreApellidos1.com and practicaNombreApellidos2.com</p>
+<p>Create the users professor alumne1 and alumne2 and set them the passwords.</p>
+<p>Create the folder privado into the practicaNombreApellidos1 site. This folder be accessed only by professor and alumne1.</p>
+<hr/>
+<h2 id="ut0307">3.7 U3 P4</h2>
+<p>IIS on WINDOWS SERVER 2016 Previously: – Virtual machine with Microsoft’s Windows Server 2016 operating system. – DNS Service installed – Primary Forward lookup zone created with a Host and an Alias, for your domain. How to Install IIS on Windows Server 2016 https://www.rootusers.com/how-to-install-iis-in-windows-server-2016/ Objectives</p>
+<p>How to install the Internet Information Services (IIS) web server version 10.0 in Microsoft’s Windows Server 2016 operating system. If your server has the graphical user interface component installed you can also install IIS by following these steps.</p>
+<ul>
+<li>Open Server Manager, this can be found in the start menu. If it’s not there simply type</li>
+</ul>
+<p>“Server Manager” with the start menu open and it should be found in the search.</p>
+<ul>
+<li>Click the “Add roles and features” text.</li>
+<li>On the “Before you begin” window, simply click the Next button.</li>
+</ul>
+<ul>
+<li>On the “Select installation type” window, leave “Role-based or feature-based installation”</li>
+</ul>
+<p>selected and click Next.</p>
+<ul>
+<li>As we’re installing to our local machine, leave “Select a server from the server pool” with</li>
+</ul>
+<p>the current machine selected and click Next. Alternatively you can select another server that you are managing from here, or a VHD.</p>
+<ul>
+<li>From the “Select server roles” window, check the box next to “Web Server (IIS)”. Doing this</li>
+</ul>
+<p>may open up a new window advising that additional features are required, simply click the “Add Features” button to install these as well. Click Next back on the Select server roles menu once this is complete.</p>
+<ul>
+<li>We will not be installing any additional features at this stage, so simply click Next on the</li>
+</ul>
+<p>“Select features” window.</p>
+<ul>
+<li>Click Next on the “Web Server Role (IIS)” window after reading the information provided.</li>
+<li>At this point on the “Select role services” window you can install additional services for IIS</li>
+</ul>
+<p>if required. You don’t have to worry about this now as you can always come back and add more later, so just click Next for now to install the defaults.</p>
+<p>10.Finally on the “Confirm installation selections” window , review the items that are to be installed and click Install when you’re ready to proceed with installing the IIS web server. No reboot should be required with a standard IIS installation, however if you remove the role a reboot will be needed.</p>
+<p>11.Once the installation has succeeded, click the close button. At this point IIS should be running on port 80 by default with the firewall rule “World Wide Web Services (HTTP Traffic-In)” enabled in Windows firewall automatically. 12.We can perform a simple test by opening up a web browser and browsing to the server that we have installed IIS on. You should see the default IIS page.</p>
+<p>As you can hopefully see, it’s quite a lot faster to use PowerShell to perform the same task.</p>
+<p>How to create website on IIS in Windows Server 2016 Previously: Create your website on C:/inetpub/wwwroot/ In left side base expand the tree and select Sites option. Right click on sites and select Add Website… option like the following image.</p>
+<p>This will open a popup to input new website details. Input the following details in pop-up box. • Site name: Name of website to be appeared in IIS listing. • Application pool: Select an application pool or keep is the default to create new application pool same name as sitename.</p>
+<p>• Physical path: Enter the location of website pages on system. • Binding: • Type: Select protocol to configure (eg: http or https) •</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>IP address: Select ip address from drop list to set dedicated ip for site or keep is the</code></pre>
+</div>
+<p>default to use shared ip. • Port: Enter port on which site will be accessible for users. • Host name: Enter the alias for the domain name: www.tecadmin.net • IMPORTANT: Physical path: Enter the location of website pages on system: C:/inetpub/wwwroot/ • Start Website immediately: keep this box checked to start site.</p>
+<p>Step 4 – Verify Configuration To verify configuration you can simply access the site in a web browser. If your domain is not pointed to this server do host file entry and check.</p>
+<hr/>
+<h2 id="ut03actividades">✍️ Activitats pràctiques UT3</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.1 — U3 A1</p><p>Unit 3 – HTTP</p>
+<p>U3 – A1</p>
+<p>Instructions</p>
+<ul>
+<li>Remember to copy both, questions and answers.</li>
+<li>Deliver the document in .pdf</li>
+<li>Send the document through the task in Aules.</li>
+</ul>
+<h3>1. Using Wireshark and a browser, capture the request and the response of</h3>
+<p>accessing to the following URL.</p>
+<ul>
+<li>www.comillas.com</li>
+<li>www.iana.org</li>
+<li>www.google.com</li>
+<li>www.google2.com</li>
+<li>www.uca.es/myindex.html</li>
+</ul>
+<p>Use the “http” filter to catch the dialog between client and server and write the response codes for each webpage.</p>
+<h3>2. Complete the practice 1. The activity inside the practice will count to</h3>
+<p>calculate the mark of this activity.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.2 — U3 A2</p><p>Unit 3 – HTTP</p>
+<p>U3 – A2</p>
+<p>Instructions</p>
+<ul>
+<li>Remember to copy both, questions and answers.</li>
+<li>Deliver the document in .pdf</li>
+<li>Send the document through the task in Aules.</li>
+</ul>
+<h3>1. In case we need to check the Apache logs. Where are these stored?</h3>
+<p>Explain how we can configure it. What is the main problem of logging every event in the server? Where is it useful to do it?</p>
+<h3>2. Go to OpenWebinars and access to the “Apache Web Server” course</h3>
+<p>(https://openwebinars.net/academia/portada/servidor-apache/). Go to section “Seguridad” and after watching the videos, write a “Tutorial” with text and images with at least the following points</p>
+<ul>
+<li>What’s HTTPS?</li>
+<li>Certificates in HTTPS</li>
+<li>Configuring HTTPS</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.3 — Presentacions treball</p><p dir="ltr" style="text-align: left;">juanraprofesor@gmail.com</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut02actividades.html">⬅️ ✍️ Activitats pràctiques UT2</a>
+<a class="page-nav-btn" href="../ut03/ut0301.html">3.1 U3 HTTP ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

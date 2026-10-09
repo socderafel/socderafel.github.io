@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.10 Tema 3. IMATGES — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a class="active" href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT2 — Processador de text (I)</span>
+<h1>2.10 Tema 3. IMATGES</h1>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Insertando una imagen desde un archivo Para insertar una imagen desde un archivo debes situar el punto de inserción donde deseas insertarla. A continuación, selecciona la opción desde el menú Insertar &gt; Imagen &gt; A partir de archivo.... También se puede acceder desde el botón A partir de archivo de la barra de herramientas de dibujo. OpenOffice Writer presenta el cuadro de diálogo Insertar imagen.</p>
+<p>Al pie de la ventana de dialogo se muestran dos opciones interesantes</p>
+<p>Previsualizar: Nos permite examinar a la derecha en un tamaño mayor la imagen que deseamos insertar en el documento</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Vincular: No inserta la imagen, sino un vínculo a ésta. Si se produce una modificación en el archivo de origen, dicha modificación se vera reflejada en el documento. Si deseas introducir una imagen mediante el escáner selecciona la opción Insertar &gt; Imagen &gt; Escanear. Utiliza la opción Seleccionar fuente para seleccionar de qué escáner procederá la imagen.</p>
+<p>Utiliza la opción Solicitar... para acceder a la ventana de escaneo.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Insertar una imagen prediseñada en OpenOffice Writer Las imágenes prediseñadas son una colección de imágenes y sonidos que se pueden utilizar como fondos de página, viñetas, límites, etc., y que se instalan con el paquete OpenOffice quedando disponibles para el usuario, y que se pueden ampliar mediante la instalación de extensiones.</p>
+<p>Para insertar las imagenes prediseñadas disponibles en la Galería de OpenOffice debes activar previamente ésta herramienta: • Con el botón Galería de la Barra de Herramientas Estándar • Desde el menú Herramientas &gt; Galería • Desde el panel lateral, activando la ficha Galería Tras activar una de las dos primeras opciones se mostrará la ventana de OpenOffice Writer dividida en dos zonas. En la parte superior podrás ver la ventana de la galería, con un aspecto similar al que aquí te presento</p>
+<p>Si desde el panel lateral activas la ficha Galería dispondrás de los mismos recursos que en los casos anteriores, pero dentro del panel lateral, lo que te permite tener una zona mayor de tu documento practicable.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Activa de entre los temas disponibles aquel que consideres más adecuado, y luego navega buscando la imagen más adecuada. • Haz un doble clic sobre la imagen para previsualizarla a mayor tamaño. • Haz un clic con el botón secundario del ratón sobre la imagen deseada para presentar su menú contextual. Selecciona Añadir &gt; Copia o Añadir &gt; Vínculo 1 para insertar la imagen en el documento. Selecciona Añadir &gt; Fondo &gt; Párrafo o Añadir &gt; Fondo &gt; Página para insertar la imagen como fondo del párrafo o de la página, respectivamente.</p>
+<p>• O simplemente, arrastra la imagen sobre el lugar donde deseas insertarla en tu documento. Para cerrar la galería de imágenes, vuelve a hacer clic sobre el icono Galería . En el panel de herramientas lateral no es necesario cerrarla, pero puedes activar otra ficha cualquiera.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Modificación de las propiedades de la imagen en OpenOffice Writer Al insertar una imagen podemos notar que aparece junto a ella un icono con un ancla, que identifica la forma en que nuestra imagen se encuentra insertada dentro del texto. Si deseas modificar las propiedades de imágenes tienes varias opciones</p>
+<p>• Desde el menú Formato &gt; Imagen • Haciendo doble clic sobre la imagen • Haciendo clic con el botón secundario del ratón y seleccionando Imagen del menú contextual En cualquier caso OpenOffice Writer presenta el cuadro de dialogo de Imagen. Veamos las propiedades más interesantes que puedes modificar</p>
+<p>• La pestaña Tipo • La pestaña Opciones • La pestaña Ajuste • La pestaña Hiperenlace • La pestaña Imagen • La pestaña Recortar • La pestaña Borde • La pestaña Fondo</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de la imagen - La pestaña Tipo Desde la pestaña Tipo del diálogo Imagen de OpenOffice Writer podemos modificar el tamaño en ancho y alto de la imagen, así como su posición y el modo de anclaje al texto. En este diálogo se muestra una previsualización a la derecha de la ventana, donde el rectángulo verde refleja en miniatura los cambios introducidos.</p>
+<p>Redimensionar la imagen Si activas la opción Relativo podrás especificar el tamaño como un porcentaje del área de texto de la página (por ejemplo, 50% significa 8cm si el espacio disponible entre márgenes es de 16cm.). Marcando Mantener proporciones, cualquier cambio del tamaño se realizará manteniendo la relación (proporción) entre alto y ancho de la imagen.</p>
+<p>Tamaño original restablece el tamaño de la imagen. Modificar el anclaje El anclaje define el modo en que la imagen se une a un elemento de tu documento, de forma que si este elemento se mueve porque añadimos o eliminamos texto situado entre éste y el principio del documento, la imagen se moverá con él.</p>
+<p>El anclaje puede ser: • A la página: la imagen se mantiene unida a la página actual. Si la página cambia de posición (por que se agregan o quitan páginas anteriores), la imagen se mueve con la página. • Al Párrafo: la imagen se mantiene unida al párrafo actual. Si el párrafo cambia de posición, la imagen se moverá con el párrafo.</p>
+<p>• Al carácter: la imagen se mantiene unida al carácter actual. Si éste cambia de posición, la imagen se moverá con el carácter. • Como carácter: aquí la imagen se comporta como un carácter más de la línea de texto en el que se inserta. La altura de ésta se ajustará al tamaño de la imagen.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>El anclaje también puede ser modificado desde el menú Formato &gt; Ancla, desde la Barra de herramientas formato utilizando el icono o desde el menú contextual de la imagen, opción Anclaje. Modificar la posición En función del anclaje seleccionado, Writer asigna unas referencias que permiten posicionar la imagen en el documento. Desde estas opciones puedes modificar tanto las referencias como los valores numéricos que definen la posición.</p>
+<p>Por ejemplo, podrás fácilmente situar una imagen en el mismo centro del área de un párrafo, bien en la horizontal o en la vertical, si la imagen ha sido anclada a uno. Si ha sido anclada a la página, también podrás situarla fácilmente en el centro horizontal o vertical de la misma fácilmente, o definir su posición desde los bordes de la página, etc...</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de imagen - La pestaña Opciones Desde la pestaña Opciones del diálogo Imagen de OpenOffice Writer podemos asignar varias propiedades muy importantes</p>
+<p>Nombres Al asignar un Nombre a la imagen podremos: • Hacer referencia a ella de un modo más humano en los índices y tablas de contenido • Encontrarla fácilmente en documentos largos al utilizar el Navegador • Compondrá el nombre de la imagen si exportamos el documento en formato HTML para la Web o la intranet.</p>
+<p>Desde la opción Alternativo (solo texto) podremos indicar el texto que se mostrará en el explorador mientras carga la imagen o para ayudar a personas discapacitadas. Esto es aplicable para el caso de exportar el documento en formato HTML u otros formatos para la Web.</p>
+<p>Proteger Desde Proteger podremos activar las siguientes opciones de seguridad: • Contenido: no se podrá cambiar la imagen • Posición: impide que se cambie la posición de la imagen. Evita también posteriores cambios involuntarios. • Tamaño: impide que se cambie el tamaño de la imagen. Evita también posteriores cambios involuntarios.</p>
+<p>Imprimir Si desactivamos la opción Imprimir, la imagen no será incluida al imprimir el documento, ni tampoco al exportarlo en formato PDF.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de imagen - La pestaña Ajuste Desde la pestaña Ajuste del diálogo Imagen de OpenOffice Writer podemos modificar la posición de la imagen respecto al texto del documento.</p>
+<p>Predeterminaciones Puedes elegir entre varios ajustes predeterminados, que son: Ninguno</p>
+<p>El texto fluye por arriba y por debajo de la imagen Antes</p>
+<p>El texto fluye por encima, por el lado izquierdo y por debajo de la imagen. Podemos definir las opciones Primer párrafo y Contorno.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Después</p>
+<p>El texto fluye por encima, por el lado derecho y por debajo de la imagen. Podemos definir las opciones Primer párrafo y Contorno. Paralelo</p>
+<p>El texto fluye rodeando por todos los lados la imagen. Podemos definir las opciones Primer párrafo y Contorno. Continuo</p>
+<p>Se coloca la imagen delante del texto. Podemos definir las opciones Primer párrafo y en el fondo para que se coloque por detrás del texto. Dinámico</p>
+<p>Se ajusta el texto automática-mente a la imagen siempre que la distancia entre ésta y el margen de la página sea de al menos de 2 cm. Podemos definir las opciones Primer párrafo y Contorno.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Espacios Desde estos controles puedes definir también el espacio (margen) que deseas guarde el texto respecto de la imagen por sus cuatro lados de forma independiente. Opciones Veamos el significado del bloque Opciones: • Primer Párrafo: inicia un nuevo párrafo debajo de la imagen tras pulsar la tecla Intro . El espacio entre los párrafos lo determina el tamaño de la imagen.</p>
+<p>• En el fondo, mueve el objeto seleccionado al fondo. • Contorno: ajusta el texto siguiendo la forma externa de la imagen, si tiene definidas áreas en blanco o transparentes. • Sólo en el exterior: ajusta el texto sólo alrededor de contorno de la imagen y no en zonas vacías o abiertas dentro del objeto. Se activa tras seleccionar Contorno.</p>
+<p>Paralelo</p>
+<p>Con la opción Contorno activada. Continuo</p>
+<p>Con la opción En el fondo activada.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Editar Contorno</p>
+<p>Con la opción Contorno activada y Sólo en el exterior desactivado. Estas opciones pueden ser modificadas desde el menú Formato &gt; Ajuste o desde el menú contextual de imagen con la opción Ajuste, si bien en este caso disponemos de algunas opciones nuevas.</p>
+<p>Las correspondencias son: Menú Cuadro de dialogo Sin ajuste Ninguna Ajuste de página Paralelo Ajuste de página dinámico Dinámico Continuo Continuo En el fondo Continuo en el fondo Contorno Activada sólo si Editar contorno... se utilizó Editar contorno... Nueva opción Primer párrafo Cualquiera + Primer párrafo La opción “extra” que aparece cuando aplicamos el ajuste con el menú contextual o desde el menú Formato &gt; Ajuste nos permite definir las áreas de la imagen en donde el texto será aceptado o repelido. Combinando con la opción Contorno activada y la opción Sólo en el exterior podemos conseguir efectos como el representado más arriba con el nombre Editar Contorno.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de imagen - La pestaña Hiperenlace Desde la pestaña Hiperenlace del diálogo Imagen de OpenOffice Writer' podemos asignar propiedades de Hiperenlace a la imagen, de forma que al hacer clic sobre ella podamos saltar a la página web o al archivo o documento que indiquemos como dirección URL.</p>
+<p>Escribe en URL: • la ruta completa del archivo, documento o carpeta que deseas abrir; la ruta debe estar en formato URL, válido para cualquier sistema operativo. • la dirección Web a la que enlaza la imagen (anteponiendo en este caso http:// para páginas Web, o ftp:// para lugares Ftp, etc.).</p>
+<p>En Nombre indica el nombre que deseas asignar al hipervínculo. En Marco indica el marco de destino donde quieres que se abra el hipervínculo. Se aplica si se exporta el documento en formato HTML para la Web. Déjalo en blanco, o utiliza una de las siguientes opciones</p>
+<p>• _self: Al hacer clic sobre la imagen, se abrirá el hiperenlace sustituyendo la página actual. • _blank: Al hacer clic sobre la imagen, se abrirá el hiperenlace en una nueva página. • _parent: Al hacer clic sobre la imagen, se abrirá el hiperenlace sustituyendo a la página desde la que se invocó a la imagen. De no existir tal página, se abre sustituyendo a la actual.</p>
+<p>• _top: Al hacer clic sobre la imagen, se abrirá el hiperenlace en la ventana de mayor jerarquía.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de imagen - La pestaña Imagen Desde la pestaña Imagen del diálogo Imagen de OpenOffice Writer podemos reflejar la imagen en la vertical o en la horizontal.</p>
+<p>Si has insertado la imagen en un encabezado o pié de la página de tu documento, o la pegas en varias páginas, podrás aprovechar este efecto para hacer que se refleje horizontalmente y de forma automática en todas las páginas o sólo en las pares o impares.</p>
+<p>Lo más importante de esta pestaña es la sección Vínculo, donde se define el vínculo de la imagen con el archivo origen correspondiente. Haciendo clic en el botón , puedes cambiar la imagen modificando el vínculo.</p>
+<p>Las imagenes vinculadas no se incluyen en el documento; si tienes que enviar el documento por correo, o copiarlo a un pen, o grabarlo en un CD, necesitarás adjuntar las imágenes junto al documento, ! y con la misma estructura de subdirectorios ! Eliminando el texto del vínculo fuerzas a que la imagen quede embebida en el documento (se inserte una copia de la imagen en el documento)</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de imagen - La pestaña Recortar Desde la pestaña Recortar del diálogo Imagen de OpenOffice Writer puedes recortar o escalar la imagen seleccionada, o agregar espacio en blanco alrededor de ella.</p>
+<p>Recortar</p>
+<p>Comentemos las opciones con un ejemplo. La primera imagen a la izquierda de estas líneas es la imagen original, a la que recortaremos 2 cm por cada lado utilizando los dos métodos posibles (En ambos casos deberás utilizar los valores de Izquierda, Arriba, Derecha o Abajo con números positivos para indicar las dimensiones a recortar, o con números negativos para agregar espacio en blanco a la imagen)</p>
+<p>• Método 1: Si activas Mantener la escala fuerzas a que se conserve la escala de la imagen al ser recortada, de forma que se modificará el tamaño de la misma. El equivalente "físico" es recortar con las tijeras los lados de una foto. La imagen resultante mantiene la escala, pero es más pequeña, pues le hemos cortado trozos a la foto. Éste es el método normal de recortar una imagen, y se corresponde con la segunda imagen a la izquierda.</p>
+<p>• Método 2: Si activas Mantener el tamaño, fuerzas a que se conserve el tamaño de la imagen al ser recortada, de forma que se modificará la escala de la misma. El equivalente "físico" es recortar con las tijeras los lados de una foto, y luego, estirar la imagen resultante para que siga ocupando el mismo espacio.</p>
+<p>La imagen resultante aumenta la escala, manteniendo el tamaño. En nuestro ejemplo se corresponde con la tercera imagen a la izquierda.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Escala y Tamaño de la imagen Utiliza las secciones Escala o Tamaño para modificar estas sin recortar la imagen. A diferencia de la propiedad Relativo de la pestaña Tipo de este mismo diálogo, Escala ser refiere al porcentaje con respecto al tamaño original de la imagen. Así, si una imagen tiene un tamano de 8x15 cm, al 50% se mostrará a 4x7,5 cm.</p>
+<p>El botón Tamaño original elimina todas las modificaciones realizadas en los controles Escala y Tamaño, restableciendo el tamaño de la imagen, pero no afecta a las opciones de Recortar.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de imagen - La pestaña Borde Desde la pestaña Borde del diálogo Imagen de OpenOffice Writer puedes agregar a la imagen bordes de diferentes estilos y colores, indicando incluso la distancia del borde al margen de la imagen.</p>
+<p>Puedes utilizar los estilos Predeterminados o bien seleccionar en el control Definido por el usuario a qué bordes deseas aplicar los estilos y colores con tan sólo hacer un clic en la línea que deseas activar o desactivar.</p>
+<p>Activa Sincronizar para modificar todos los controles de Distancia al contenido a la vez.</p>
+<p>También puedes añadir una Sombra a la imagen, definir su distancia y el color de la misma.</p>
+<p>Al aplicar el efecto sombra, la imagen se reduce para representar este efecto</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Propiedades de imagen - La pestaña Fondo Desde la pestaña Fondo del diálogo Imagen de OpenOffice Writer podemos asignar un color de fondo a una imagen. Ésto quizás te parezca extraño, así que mejor, lo explicamos con un ejemplo.</p>
+<p>Algunas imágenes con fondo blanco o transparente permiten que cambies este color de fondo por otro, el que tú quieras. Selecciona Sin relleno para hacer que el fondo sea transparente y se muestre lo que hay debajo de la imagen.</p>
+<p>La misma imagen, que hemos situado sobre un rectángulo rojo oscuro; una sin relleno (se ve el rectángulo situado debajo), y la otra con fondo verde (oculta lo que haya debajo).</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Modificación de atributos avanzados de imagen en Writer Cuando en OpenOffice Writer seleccionamos una imagen se activa la Barra de Herramientas Imagen, a la que podremos acceder también desde el menú Ver &gt; Barra de Herramientas &gt; Imagen. Desde esta barra de herramientas dispones de botones para modificar propiedades de la imagen, como brillo, contraste, nitidez, transparencia, color (ajustando la gama o los porcentajes de color rojo, verde y azul), o reflejar la imagen en vertical u horizontal.</p>
+<p>• Filtros de imagen • Modo gráfico • Control de color • Control de transparencia • Otros controles</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Atributos de imagen - Filtros de imagen</p>
+<p>Haciendo clic sobre el botón Filtro de la barra de herramientas Imagen de OpenOffice Writer se desplegará el recuadro mostrado a la derecha de estas líneas con los filtros que detallamos a continuación : Original Invertir</p>
+<p>Los diferentes filtros se verán aplicados sobre esta Imagen de referencia. Los efectos sólo se han aplicado una vez en cada imagen.</p>
+<p>Invierte los valores de color de una imagen en color o los valores de brillo de una imagen en escala de grises Suavizar Aumentar nitidez</p>
+<p>Suaviza el contraste de una imagen aplicando un filtro de baja frecuencia, efecto conocido también como desenfocar.</p>
+<p>Aumenta la nitidez de una imagen aplicando un filtro de alta frecuencia, efecto conocido también como enfocar.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Eliminar interferencias Solarización</p>
+<p>Borra pixels individuales de una imagen, efecto conocido también como quitar ruido</p>
+<p>Efecto que imita lo que puede suceder si durante el revelado de una fotografía la luz es excesiva. Mediante un cuadro de diálogo define el grado porcentual de brillo por encima del cuál se deben solarizar los pixels. Selecciona Invertir para especificar si los pixels que se deben solarizar también han de invertirse</p>
+<p>Envejecer Póster</p>
+<p>Todos los pixels se establecen en sus valores grises, entonces los canales de color verde y azul se reducen en la cantidad especificada. El canal de color rojo no se cambia. Abre un diálogo para indicar el porcentaje de envejecimiento.</p>
+<p>Abre un cuadro de diálogo para determinar el número de colores del póster. Este efecto se basa en la reducción del número de colores. Hace que las fotos tengan aspecto de cuadros. Especifica el número de colores a los que se reducirá la imagen</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Pop-art Dibujo al carboncillo</p>
+<p>Convierte una imagen en formato pop-art. Mediante la aplicación de alineación de colores, la imagen adquiere un carácter completamente nuevo. Esta función se puede aplicar a la imagen entera o a partes de ella</p>
+<p>Muestra la imagen como si fuese un dibujo al carboncillo. Los contornos de la imagen se dibujan en color negro y los colores originales se suprimen. Esta función se puede aplicar a la imagen entera o a partes de ella Relieve Mosaico</p>
+<p>Muestra un cuadro de diálogo para la creación de relieves. Se puede elegir la posición de la fuente de luz imaginaria que determina el tipo de sombra creado y el aspecto de la imagen en relieve Fuente de luz: Especifica la posición de la fuente de luz.</p>
+<p>Combina grupos pequeños de pixels en áreas rectangulares del mismo color. Cuanto mayores sean los rectángulos individuales, menor es el detalle de la imagen</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Atributos de imagen - Modo gráfico Podemos cambiar el modo de gráficos utilizando el selector Modo gráfico de la barra de herramientas Imagen de OpenOffice Writer. Con este selector podemos convertir la imagen a escala de grises, blanco y negro o filigrana. Predeterminado Escala de grises</p>
+<p>La visualización del objeto gráfico no se modifica. Utiliza este modo para restaurar la imagen.</p>
+<p>Imagen en Escala de grises. Puedes utilizar los deslizadores de color para aplicar un color uniforme a la imagen.</p>
+<p>Blanco y Negro Filigrana</p>
+<p>Los valores de brillo inferiores al 50% se mostrarán en negro y los superiores al 50%, en blanco.</p>
+<p>Más conocida como Marca de agua. Se aumenta el brillo y se reduce el contraste del objeto gráfico, a fin de poder usarlo en el fondo.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Atributos de imagen - Control de color</p>
+<p>El botón Color de la barra de herramientas Imagen de OpenOffice Writer permite cambiar los atributos de color, brillo, contraste y gamma de una imagen. Haciendo clic sobre él, se desplegará un cuadro como el que vemos a la derecha de estas líneas. • Podemos definir la proporción del componente de cada uno de los colores para el modelo RGB (Rojo, verde y azul), con valores desde -100% (ausencia) hasta el 100% (saturado).</p>
+<p>• El nivel de Brillo puede ser variado desde -100% (sólo negro) hasta el 100% (sólo blanco) • El nivel de Contraste puede variar desde -100% (sin contraste) hasta el 100% (contraste total) • El control de Gamma establece el valor para ver el objeto seleccionado, el cual afecta los valores del brillo del medio tono. Son posibles valores desde 0.10 (Gamma mínima) hasta 10 (Gamma máxima).</p>
+<p>•</p>
+<p>Original Rojo al 50%</p>
+<p>Los cambios se verán aplicados sobre esta Imagen de referencia. Se han aplicado una vez en cada imagen.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Verde al 50% Azul al 50%</p>
+<p>Brillo al 20%</p>
+<p>Contraste al 20%</p>
+<p>Brillo al -20%</p>
+<p>Contraste al -20%</p>
+<p>Gamma al 1,20 Gamma al 0,80</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Atributos de imagen - Control de transparencia Desde la barra de herramientas Imagen de OpenOffice Writer contamos con el botón Transparencia desde el que puedes aplicar un porcentaje de transparencia a la imagen. Son posibles valores desde 0% (completamente opaco) hasta +100% (completamente transparente).</p>
+<p>En el siguiente ejemplo podrás ver el efecto aplicando 0%, 20%, 40% y 60% de porcentaje de transparencia a la misma imagen, con un rectángulo rojo al fondo.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Atributos de imagen - Otros controles En la barra de herramientas Imagen de OpenOffice Writer disponemos de botones que permiten reflejar la imagen tanto horizontalmente como verticalmente , y también editar las propiedades del marco en caso de tenerlo.</p>
+<p>Imagen original Reflejar Horizontalmente</p>
+<p>Reflejar Verticalmente</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Eliminar una imagen En OpenOffice Writer, puedes eliminar una imagen seleccionándola y presionando a continuación: la tecla o la tecla retroceso</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>El editor de contornos en OpenOffice Writer El editor de contornos de OpenOffice Writer permite modificar el contorno utilizado para determinar las opciones de ajuste de texto de la imagen seleccionada (ver [Ajuste de contorno de texto]). Cuando aplicamos la opción Ajuste a una imagen y posteriormente activamos la propiedad Contorno, podemos personalizar el contorno de ésta desde el menú contextual de la imagen, seleccionando la opción Ajuste &gt; Editar contorno.... Writer presenta una ventana como la siguiente</p>
+<p>Inicialmente se presenta la imagen con los contornos que automáticamente ha detectado el editor. El contorno lo forman las líneas finas que ves en la imagen, y queda delimitado por los manejadores de color verde. Estos contornos pueden ser modificados para adaptar el ajuste del texto a nuestras necesidades.</p>
+<p>Veamos como podemos conseguir esto. Para este ejemplo consideremos que deseamos ajustar el texto alrededor de la imagen, ajustada a su contorno, pero también por su interior, en las zonas en blanco. Guardaremos una distancia prudencial de las líneas negras. Observa la barra de herramientas del editor de contornos. Vamos a ver como utilizarla.</p>
+<p>Borrar el contorno actual Para ello pulsaremos la tecla suprimir con el contorno seleccionado. Si no lo estuviera, podemos seleccionarlo utilizando el botón con Selección</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Definir el Área de trabajo: para ello utilizaremos el botón , dibujando una zona rectangular que defina el área donde vamos a dibujar el contorno. La zona excluida de la imagen quedará marcada en rojo. Presta atención al botón Área de trabajo . Éste permite crear una nueva área de trabajo borrando el contorno que estés creando. Así que cuidado con él.</p>
+<p>En esta imagen se ha dejado más zona roja de la que debemos. Ajusta el Área de trabajo al máximo a la imagen, pues las zonas rojas no se visualizarán después.</p>
+<p>Definir las áreas internas que contendrán texto: Para conseguir esto dibujaremos siempre de dentro hacia fuera, definiendo las zonas internas primero y luego las zonas externas.</p>
+<p>Puedes utilizar la herramienta polígono , elipse o rectángulo</p>
+<p>Empecemos por la zona interior de la cabeza.</p>
+<p>Para dibujar un polígono, haz clic en el punto de inicio y arrastra dibujando una línea, que finalizas con un clic. Ahora, sigue marcando puntos del polígono haciendo nuevos clics. Para finalizar el polígono, haz un doble clic en el último punto.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Dibujamos otra zona interna: el interior del cuerpo. Puedes utilizar la herramienta polígono . Si quieres afinar el diseño puedes editar las áreas creadas activando la herramienta modificar puntos . Ahora puedes mover , agregar o quitar puntos.</p>
+<p>Para dibujar un cuadrado o un círculo, mantén pulsada la tecla mayúsculas al arrastrar. Cuando dibujes polígonos, puedes forzar ángulos múltiplos de 45º manteniendo pulsada la tecla mayúsculas al hacer clic. Dibujamos la última zona, la más externa. Por motivos didácticos no me he ajustado mucho a las líneas del dibujo, pero por supuesto que tu puedes afinar mucho más en la composición de tu diseño.</p>
+<p>Finalmente, haremos clic en el botón cerrar de la ventana del editor de contornos. Responde Si para guardar tu nuevo diseño.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Y éste es el resultado.</p>
+<p>Ten cuidado, pues puedes eliminar el diseño del contorno con cualquier cambio en las propiedades de ajuste de texto.</p>
+<p>Otras herramientas disponibles en el editor de contornos son: Contorno automático</p>
+<p>crea automáticamente un contorno nuevo. Pipeta</p>
+<p>selecciona un color para la creación del nuevo contorno. Tolerancia de color permite aumentar el área de colores que la pipeta selecciona. Aplicar el contorno</p>
+<p>a la imagen sin salir del editor de contornos. Utilizalo para hacer una vista previa. Deshacer / Restaurar</p>
+<p>deshace o restaura las últimas acciones ejecutadas.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>La Galería en OpenOffice Writer La Galería es una colección de imágenes y sonidos que el usuario puede insertar en sus documentos de OpenOffice, tanto en Writer como en las otras aplicaciones de la suite. Pero realmente la Galería es algo más. Es un completo contenedor-organizador de recursos multimedia para insertar en tus documentos.</p>
+<p>Mostrar la Galería Puedes activar la galería: • Desde el botón de la Barra de Herramientas Estándar • Seleccionando el menú Herramientas &gt; Galería Tras activar alguna de estas dos opciones la ventana de Writer se muestra dividida en dos zonas. En la parte superior podrás ver la ventana de la galería, con un aspecto similar al que aquí te presento</p>
+<p>La ventana galería aparece a su vez dividida en dos zonas. La de la izquierda contiene el selector de temas. A la derecha, podemos visualizar las miniaturas de las imagenes contenidas en el tema seleccionado.</p>
+<p>Puedes cambiar el espacio dedicado a cada zona situando el cursor del ratón sobre la barra que divide a ambas. Verás que el cursor cambia de forma, tal y como muestra la imagen a la derecha. Haz clic y arrastra hasta configurar la división según tus necesidades. Desde la versión 4.0 tampien podemos acceder a la Galería desde el panel lateral, haciendo clic sobre la ficha Galería</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Previsualizar una imagen o archivo multimedia Puedes previsualizar una imagen haciendo doble clic sobre ella. Si es un elemento multimedia, se mostrará una ventana y se reproducirá el elemento, siempre que tu equipo disponga de los codecs adecuados para la reproducción.</p>
+<p>Al previsualizar un elemento multimedia se queda abierto el reproductor de medios. Para cerrarlo, haz clic sobre la opción Herramientas &gt; Reproductor de medios. Si ocultaste el reproductor, es posible que no puedas previsualizar otros elementos ya que quedó oculto pero activado. Ciérralo haciendo clic sobre la opción Herramientas &gt; Reproductor de medios y ya podrás previsualizar nuevos elementos.</p>
+<p>Insertar una imagen o archivo multimedia en el documento Si deseas insertar una imagen o elemento multimedia al texto desde la galería, sitúa previamente el punto de inserción en el lugar del texto donde quieres insertarlo. Después activa el menú contextual de la miniatura haciendo clic secundario sobre ella y selecciona Añadir &gt; Copia o Añadir &gt; Vínculo.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>También puedes hacer clic y arrastrar sobre la miniatura hasta la posición que deseas ocupe en el texto. Si se trata de una imagen puedes insertarla también como un fondo de página o de párrafo. En este caso, desde le menú contextual de la miniatura selecciona Añadir &gt; Fondo &gt; Párrafo o Añadir &gt; Fondo &gt; Página.</p>
+<p>Modificar título - Eliminar elemento Desde el menú contextual del archivo podrás también agregar o modificar su Título, así como Eliminar el elemento del tema al que pertenece. Eliminar un elemento, o modificar su título, sólo afecta a la galería. El archivo original permanecerá sin modificaciones en su lugar original.</p>
+<p>Opciones de vista de la Galería Los botones que se presentan en la zona superior de la ventana galería sirven para gestionar el contenido de la misma, y el modo en que se presentan los archivos en la zona derecha. • El botón muestra los archivos como vistas en miniatura.</p>
+<p>• El botón muestra los archivos en modo lista, con una miniatura más pequeña a su izquierda. Crear nuevos temas (clip-art) Si deseas crear tu propio tema (clip-art) puedes utilizar el botón Nuevo tema.... Writer presentará el diálogo Propiedades de Nuevo tema</p>
+<p>Desde la pestaña General podrás definir el Nombre que deseas aplicar al nuevo tema. Puedes observar en Ubicación donde van a almacenarse los archivos que agregues a este tema de la Galería. Agregar nuevas imágenes o archivos multimedia a un tema • Si creaste un nuevo tema, tras definir el Nombre, haz clic sobre la pestaña Archivos.</p>
+<p>• Si el tema fué creado previamente, haz clic secundario sobre el mismo, y selecciona la opción Propiedades. Haz clic sobre la pestaña Archivos.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Desde esta pestaña podremos hacer clic en el botón Buscar archivos... que presentará un diálogo desde el que podremos seleccionar la carpeta en la que se encuentran los nuevos archivos a agregar. Los archivos encontrados se mostrarán en la lista de la izquierda.</p>
+<p>Desde el desplegable Tipo de archivo podemos filtrar los archivos presentados en la lista por su extensión (tipo). Puedes seleccionar un archivo, y activando la casilla Previsualización obtener una vista preliminar en el espacio que hay justo debajo. Puedes hacer clic sobre el botón Añadir todos para cargar los archivos en la galería, o clic en Añadir para cargar sólo los seleccionados. Para seleccionar los archivos puedes utilizar las teclas Mayúsc para seleccionar varios archivos contiguos, o la tecla Ctrl para seleccionar varios archivos no contiguos.</p>
+<p>Finalizada la importación de archivos podremos hacer clic sobre el botón Aceptar .</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Si creaste un nuevo tema se agregará a la galería y mostrará los nuevos elementos; si agregaste nuevos elementos a un tema existente, se mostrará actualizado. Agregar tus propias creaciones a un tema en la Galería Si has creado tus propios diseños desde Draw, puedes incorporarlos fácilmente a un tema de la Galería.</p>
+<p>Es recomendable que previamente agrupes los distintos elementos que forman la imagen. Agregarla a un tema es tan sencillo como seleccionar la imagen con un clic largo y arrastrarla dentro del tema. Transcurridos unos segundos, se habrá incorporado al tema. Recuerda que los temas creados en el momento de la instalación no pueden ser modificados, pero todos los demás, sí.</p>
+<p>Crear temas personalizados con elementos de otros temas Crear tus temas personalizados utilizando elementos de otros temas no es difícil. Tan sólo necesitas crear tu nuevo tema, y arrastrar uno a uno los elementos desde el tema origen al tema destino. En la versión 4.0 es muy fácil. Abre la Galería desde el botón de la barra de herramientas, y activa la Galería en el panel. Selecciona el tema origen en una de ellas, y el tema destino en la otra. Ahora ya puedes arrastrar los elementos de una a la otra.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>En versiones anteriores no es más complicado. Debes abrir dos documentos (en blanco también sirve), mostrar ambos en tu pantalla utilizando las utilidades de tu sistema operativo 1, y activar en ambos la Galería. Selecciona el tema origen en una de ellas, y el tema destino en la otra. Ahora ya puedes arrastrar los elementos de una a la otra.</p>
+<p>Recuerda que los temas creados en el momento de la instalación no pueden ser modificados, pero todos los demás, sí. Cerrar la Galería Para cerrar la Galería, vuelve a hacer clic sobre el icono . Si estás utilizando el panel lateral, no es necesario que cierres la Galería, pero puedes hacer clic sobre otra ficha para que no se muestre (por ejemplo, sobre la ficha Propiedades).</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Tipos de archivos multimedia soportados Estos son los formatos de archivo multimedia soportados por la Galería de OpenOffice. Puedes insertar todos estos tipos de archivo en tus documentos Writer, Calc, Draw e Impress. Tipo Descripción Extensión Imagen Windows bitmap bmp AutoCad interchange format dxf Enhanced metafile emf Encapsulated postscript eps Graphics interchange format gif Joint photographic experts group jpeg OS/2 metafile met Portable bitmap pbm Kodak photo CD 768x512 pcd Mac pict pict Zsoft paintbrush pcx Portable graymap pgm Portable network graphic png Portable pixelmap ppm Adobe photoshop psd Sun raster image ras StarWriter graphics format sgf StarDraw 2.0 sqv StarView metafile svm Truevision targa tga Tagged image file format tif, tiff Windows metafile wmf X bitmap xbm X pixMap xpm</p>
+<p>Tipo Descripción Extensión</p>
+<p>Audio Audio AIF aif, aiff</p>
+<p>Audio AU au</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>CD Audio</code></pre>
+</div>
+<p>cda</p>
+<p>MIDI Audio mid, midi</p>
+<p>MPEG Audio mp2, mp3, mpa,</p>
+<p>Ogg bitstream ogg</p>
+<p>Wave Audio wav</p>
+<p>Video AVI avi</p>
+<p>MPEG Video mpg, mpeg, mpv, mp4</p>
+<p>Quicktime Video mov</p>
+<p>Vivo video viv</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Insertar vídeos y sonidos</p>
+<p>Desde la Galería podrás insertar vídeos y sonidos 1 previamente cargados en ella. Además, Writer permite insertar vídeos y sonidos en nuestros documentos desde el menú Insertar &gt; Vídeo y sonido. También puedes hacerlo desde el menú Insertar &gt; Objeto &gt; Vídeo o Insertar &gt; Objeto &gt; Sonido, si bien es posible que estas opciones las tengas permanentemente desactivadas.</p>
+<p>Una tercera forma es desde la barra de herramientas Reproducción de medios, haciendo clic en el botón Vídeo y sonido . En los tres últimos casos presentará un cuadro de diálogo desde donde podrás seleccionar el archivo a insertar. Haciendo clic en tipo podrás ver los tipos de archivo soportados.</p>
+<p>El archivo se insertará en la posición que ocupe el punto de inserción dentro del documento. Una vez insertado, si es un sonido, se representa por una imagen como la que ves sobre estas líneas. Si es un vídeo, se mostrará el primer cuadro del archivo. En éste caso, si sólo es soportado el códec de audio, se mostrará la misma imagen que para un archivo de audio.</p>
+<p>Para seleccionar el archivo podrás utilizar la combinación Ctrl + Clic. Para deseleccionar el archivo podrás hacer clic en cualquier zona del texto. Otra forma de seleccionar el archivo es con el botón Seleccionar de la barra de herramientas Dibujo. Tendrás que trazar un rectángulo que abarque la imagen del archivo para seleccionarlo. Para deseleccionar, haz clic de nuevo sobre el botón y un clic sobre cualquier zona del texto.</p>
+<p>Cuando el archivo está seleccionado se muestra la barra de herramientas Reproducción de medios.</p>
+<p>Tema 03. Gráficos. Autoformas. WordArt.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Los botones que presenta esta barra tienen la siguientes funciones: Botón Acción Botón Acción</p>
+<p>Insertar archivo de vídeo o sonido en el documento</p>
+<p>Control deslizante de la posición actual de la reproducción</p>
+<p>Iniciar reproducción</p>
+<p>Contador tiempo actual / tiempo total de la reproducción</p>
+<p>Pausar reproducción</p>
+<p>Silenciar</p>
+<p>Detener reproducción</p>
+<p>Control deslizante de volumen</p>
+<p>Repetir reproducción (bucle)</p>
+<p>Si es un vídeo, selector del nivel de zoom</p>
+<p>Si el archivo está seleccionado puedes activar su menú contextual, desde el cual podrás definir: Seleccionando Posición y tamaño... el anclaje, posición y tamaño de la imagen que representa el archivo. Desde la opción Descripción...: • Título: nombre corto visible como una etiqueta alternativa en formato HTML. Las herramientas de accesibilidad pueden leer este texto.</p>
+<p>• Descripción: La descripción extendida se puede introducir para describir objetos o grupos de objetos para usuarios con un software de lectura de pantallas (screen readers). La descripción es visible como una etiqueta alternativa por sus herramientas de accesibilidad.</p>
+<p>Desde la opción Nombre... un nombre visible desde el navegador de Writer. Para reproducir el archivo multimedia deberás seleccionarlo previamente y utilizar la barra de herramientas Reproducción de medios.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0209.html">⬅️ 2.9 Pràctiques Tema 2 (Taules)</a>
+<a class="page-nav-btn" href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges) ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔧 Muntatge i Manteniment d'Equips — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Muntatge i Manteniment d'Equips</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 - P1 | P2 | P3 - CONTINGUTS</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U2 - P1 | P2 | P3 - TEXT CONTINGUTS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 - P2 - PROCESADOR Y MEMORIA</a></li>
+<li><a class="active" href="../ut02/ut0203.html">2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0204.html">2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS</a></li>
+<li><a href="../ut02/ut0205.html">2.5 U2 - P3 - Perifèrics i Communications</a></li>
+<li><a href="../ut02/ut0206.html">2.6 U2 - P3 - UNITATS D'EMMAGATZENATGE</a></li>
+<li><a href="../ut02/ut0207.html">2.7 DISCOS DUROS CHS ECHS LBA</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 5</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U5 - P1 P2 P3 - PDF CONTINGUTS</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U5 - P1 P2 P3 - PRESENTACIÓ CLASSE</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U6 - RGPD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U6 - COPIAS DE SEGURIDAD - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U6 - CLASIF INFORMACION - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U6 - P1 P2 P3 PRESENTACIÓ CONTINGUTS</a></li>
+<li><a href="../ut04/ut0405.html">4.5 U6 - P1 P2 P3 - CONTINGUTS</a></li>
+<li><a href="../ut04/ut0406.html">4.6 U6 - P1 P2 P3 - PRESENTACIÓ</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — FINAL DE CURSO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT2 — Unitat Didàctica 2</span>
+<h1>2.3 U2 - P2 - CONT3 - AMD NOMENCLATURA PROCESADORS</h1>
+<p>COMPONENTES INTERNOS</p>
+<p>Procesadores AMD Nomencaltura</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>Procesador AMD: modelos, como identificarlos y sus usos</p>
+<p>1.-¿Qué es una CPU, y una APU?</p>
+<p>2.-Generaciones y cómo identificar un procesador AMD</p>
+<p>3.-AMD Ryzen Threadripper</p>
+<p>3.1.-Usos</p>
+<p>4.-AMD Ryzen de escritorio</p>
+<p>4.1.-Uso</p>
+<p>5.-APU AMD Ryzen para escritorio</p>
+<p>5.1.-Uso</p>
+<p>5.2.-APU Ryzen para portátiles</p>
+<p>6.-APU AMD Athlon y Serie A</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>Procesador AMD: modelos, como identificarlos y sus usos</p>
+<p>1.-¿Qué es una CPU, y una APU?</p>
+<p>Seguramente todos sabréis que CPU significa en español Unidad Central de Procesamiento (Central Processing Unit). Se trata de un chip de silicio compuesto por una serie circuitos integrados llamados núcleos que son capaces de procesar la información que circula a través de nuestro ordenador. Además de los núcleos, una CPU tiene un controlador de memoria para comunicarse con la RAM, memoria caché y controladores de entrada/salida. Estos permiten comunicar la CPU con los carriles PCIe, en donde normalmente tenemos una tarjeta gráfica instada.</p>
+<p>En el caso de una APU (Accelerated Processor Unit) no solo disponemos de estos elementos, sino que además el fabricante incorpora una o varias unidades de procesamiento para gráficos. Esto significa que no necesitaríamos una tarjeta gráfica dedicada.</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>Procesador AMD: modelos, como identificarlos y sus usos</p>
+<p>2.-Generaciones y cómo identificar un procesador AMD</p>
+<p>Aquí encontramos las siguientes familias</p>
+<p>AMD Threadripper</p>
+<p>AMD Ryzen para escritorio y portátiles</p>
+<p>APU AMD Ryzen</p>
+<p>APU AMD Athlon</p>
+<p>AMD Ryzen y Athlon para portátiles</p>
+<p>Vamos a obviar las anteriores generaciones de AMD como los Bulldozer y los FX por carecer de sentido en la época actual.</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>3.-AMD Ryzen Threadripper</p>
+<p>No disponen de gráficos integrados y todos ellos cuenta con el socket sTR4 en formato LGA y un puente sur constituido por el chipset AMD X399. Estas CPU consisten básicamente en dos CPU Ryzen unidas entre sí físicamente con la arquitectura AMD Whiteheaven en 1ª generación y Pinnacle Ridge en la segunda. Cuentan con hasta 64 líneas PCIe, memoria caché de entre 16 y 64 MB, y soporte para 8 canales de memoria (128 GB DDR4).Todos ellos llevan el carácter “X” al final del modelo, indicando que son de alto rendimiento. En el caso de “WX” significa que además están orientados a Workstation.</p>
+<p>El primer número indica la generación, y actualmente tenemos dos arquitecturas</p>
+<p>Zen (Whitehaven) con proceso de 14 nm,</p>
+<p>Zen+ (Pinnacle Ridge) con proceso de 12 nm.</p>
+<p>Pronto aparecerá la 3ª generación, y aquí veremos un 3. Respecto al segundo número, todos los TR lleva el 9 en el distintivo.</p>
+<p>El tercer y cuarto número indican en número de núcleos del procesador AMD</p>
+<p>00: 8 núcleos</p>
+<p>20: 12 núcleos</p>
+<p>50: 16 núcleos</p>
+<p>70: 24 núcleos</p>
+<p>90: 32 núcleos</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>4.-AMD Ryzen de escritorio</p>
+<p>Actualmente encontramos en el mercado tres generaciones de estos procesadores la serie 1000 de 14 nm, 2000 de 12nm y 3000 de 7 nm que ha salido este mismo año 2019.</p>
+<p>Un aspecto positivo es que todos ellos funcionan bajo el socket PGA AM4, y contamos con los chipsets A320, B350, B450, X370, X470 y X570. Los más recomendables son el B450 como gama media, y los X470 y X570 como gama alta, especialmente el X570 para Ryzen de 2ª y 3ª generación.</p>
+<p>El primer número vendría a ser la gama, y es muy similar a lo que hace Intel con sus Core iX. De esta forma tenemos cuatro segmentos distintos en la actualidad, y en cada uno de ellos un determinado recuento de núcleos, salvo algunos casos.</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>Cuatro segmentos distintos en la actualidad;</p>
+<p>Ryzen 9: gama entusiasta (12 y 16 núcleos)</p>
+<p>Ryzen 7: gama alto rendimiento (8 núcleos)</p>
+<p>Ryzen 5: gama alta (6 o 4 núcleos)</p>
+<p>Ryzen 3: gama media (4 núcleos)</p>
+<p>El segundo número está claro, y es la generación. Actualmente tenemos 3</p>
+<p>1: primera generación Zen (Summit Ridge) de 14 nm</p>
+<p>2: segunda generación Zen+ (Pinnacle Ridge) de 12 nm</p>
+<p>3: tercera generación Zen 2 (Matisse) de 7 nm</p>
+<p>El siguiente número nos informa del rendimiento del procesador, se puede identificar también con la frecuencia;</p>
+<p>7, 8, 9: Alto rendimiento y entusiasta</p>
+<p>4, 5, 6: Medio y alto rendimiento</p>
+<p>El tercer y cuarto número aportan más detalles acerca del modelo de procesador y de su sku. En la mayoría de casos simplemente es “00”, pero podemos encontrar 20 o 50 para referirnos a variantes con distinta cantidad de núcleos o frecuencia. Mientras más alto sea el número, mayor será el rendimiento.</p>
+<p>Y finalizamos con el carácter “X, G, T o S” que indica las características especiales</p>
+<p>X: alto rendimiento con la tecnología XFR (Los procesadores podrán superar su velocidad turbo cuando la refrigeración los mantenga suficientemente fríos, de forma automática)</p>
+<p>G: procesador con: gráficos integrados</p>
+<p>T: procesador de bajo consumo</p>
+<p>S: procesador de bajo consumo con GFX (Graphic Effects – Efectos Gráficos)</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>5.-APU AMD Ryzen para escritorio</p>
+<p>El aspecto fundamental será su configuración gráfica en la que encontramos dos variantes.</p>
+<p>En los modelos inferiores (2200G, 2200GE y 3200G) tenemos gráficos Radeon Vega 8, con 8 núcleos gráficos a 1250/1000 MHz y 512 shaders.</p>
+<p>Y en los modelos superiores (3400G y 2400G) tenemos AMD Radeon RX Vega 11, con 11 núcleos gráficos a 1400/1250 MHz y 704 shaders con capacidad de overclocking.</p>
+<p>El primero indica en este caso el número de núcleos y segmento, y en consecuencia la disponibilidad de tecnología multihilo o no</p>
+<p>Ryzen 3: procesador AMD de rendimiento medio, 4 núcleos y 4 hilos + gráficos Radeon Vega 8</p>
+<p>Ryzen 5: alto rendimiento 4 núcleos y 8 hilos + Gráficos Radeon RX Vega 11</p>
+<p>En cuanto al segundo número, nos indica la generación, aunque deberíamos de restarle -1 para no equivocarnos.</p>
+<p>si tenemos “2” pertenecerá a la 1ª generación Zen (Raven Ridge) de 14 nm,</p>
+<p>mientras que el “3” representará la 2ª generación Zen+ (Picasso) a 12 nm.</p>
+<p>El tercer número hace de nuevo referencia a su rendimiento:, así que será distintivo de la frecuencia de la APU principalmente.</p>
+<p>El “2” para APU con menos de 3,8 GHz y</p>
+<p>El “4”, para APU de más de 3,8 GHz.</p>
+<p>Los números utilizados para el modelo todos son “00”.</p>
+<p>El último carácter que representa el rendimiento del procesador,</p>
+<p>más concretamente su TDP, y tenemos dos variantes</p>
+<p>G: alto rendimiento (65W TDP)</p>
+<p>GE: bajo rendimiento (35W TDP)</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>5.2.-APU Ryzen para portátiles</p>
+<p>Llevan gráficos Radeon Vega de 3, 6, 8 y 10 núcleos, y RX Vega de 10 núcleos para los modelos más potentes.</p>
+<p>La nomenclatura para el procesador AMD Ryzen de portátiles es exactamente la misma que la usada en los de escritorio, aunque debemos de tener en cuenta los siguientes cambios</p>
+<p>Generación: los procesadores de 1ª generación Zen y 14 nm serán la serie 2000, mientras que los de 2ª generación Zen+ y 12 nm, serían la serie 3000.</p>
+<p>TDP y rendimiento: ahora además se introducen dos letras más, la “U”, para referirse a procesadores de 15W TDP (bajo consumo), y la “H”, para referirse a los de alto consumo (35W).</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>6.-APU AMD Athlon y Serie A</p>
+<p>Tres subfamilias</p>
+<p>AMD Athlon con gráficos integrados</p>
+<p>AMD Athlon sin gráficos integrados</p>
+<p>AMD Serie A</p>
+<p>En primer lugar, tenemos el distintivo Ax que se usa para el recuento de núcleos y la versión de los gráficos integrados</p>
+<p>A6 e inferiores: Dos núcleos y Radeon R5 Series con 384 Sahders a 800 MHz en el mejor de los casos.</p>
+<p>A8 y superiores: 4 núcleos con gráficos Radeon R7 Series. Parten de los 384 Shaders a 900 MHz del A8-9600, hasta los 512 Shaders y 1108 MHz del A12-9800.</p>
+<p>El primer número de código representa la generación del procesador, y tenemos las siguientes</p>
+<p>6000: 5ª generación, arquitectura Piledriver</p>
+<p>7000: 6º generación, arquitectura Steamroller</p>
+<p>8000: 6ª generación, arquitectura Excavator</p>
+<p>9000: 7ª generación, arquitectura Excavator V2</p>
+<p>Con el segundo número:frecuencia de trabajo, y con los dos números siguientes al número de modelo. De nuevo distinguiremos modelos 00, 20, 50, y así sucesivamente en función de sus prestaciones.</p>
+<p>Finalmente tenemos la letra final, y su presencia nos indica la función de su rendimiento. En la generación actual tan solo encontramos</p>
+<p>la letra “E”, si la APU es de 35W, o</p>
+<p>su ausencia, si es de 65W. Pero</p>
+<p>en generaciones anteriores también se utilizaba la letra “K” para indicar que era una APU con el multiplicador desbloqueado.</p>
+<p>&lt;número&gt;</p>
+<p>COMPONENTES INTERNOS1. PROCESADORES AMD</p>
+<p>Hablaremos de las novedades de la tercera generación de 7 nm de Ryzen sin olvidarnos aún de la generación anterior y las APUs. AMD está en un momento dulce y sus Ryzen 3000 son las CPU de mayor rendimiento disponibles en el mercado para montar un equipo gaming. Si aún no conoces estos procesadores, aquí te aclararemos las dudas.</p>
+<p>Fuente;</p>
+<p>https://www.profesionalreview.com//26/procesador-amd-modelos/</p>
+<p>https://www.opirata.com/blog/tipos-de-procesadores-amd/</p>
+<p>https://www.muycomputer.com//22/procesadores-amd-guia/</p>
+<p>&lt;número&gt;</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0202.html">⬅️ 2.2 U2 - P2 - PROCESADOR Y MEMORIA</a>
+<a class="page-nav-btn" href="../ut02/ut0204.html">2.4 U2 - P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

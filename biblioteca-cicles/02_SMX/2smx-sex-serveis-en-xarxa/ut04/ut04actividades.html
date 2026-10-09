@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT4 — Serveis en Xarxa | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Serveis en Xarxa</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Exámenes</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Escenario general</a></li>
+<li><a href="../ut00/ut0003.html">0.3 rúbrica presentacions</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Enquesta de Serveis en Xarxa (SeX)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — U6: Servicio de Transferencia de ficheros (FTP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 FTP</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — U5: Servici de Correu</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Presentació</a></li>
+<li><a href="../ut03/ut0302.html">3.2 El correu electrònic</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Les Guest additions</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — U4: Servici de Web (HTTP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Recursos Escenario U3</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Introducción virtual hosting</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Configuración Virtual hosting</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Ips clients</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Recuperació_prova de validació_Apache</a></li>
+<li><a class="active" href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — U2: Servici de Resolució de Noms (DNS)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 UD3 Servidor de Nombres de Dominio SMX</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Presentació Victor i Javier</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 presentació DHCP</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Presentació DHCP. Visió general</a></li>
+<li><a href="../ut06/ut0603.html">6.3 Servei DHCP</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Servidor DHCP</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Presentació SX20-U1-E3 "Bronx"</a></li>
+<li><a href="../ut06/ut0606.html">6.6 Qüestionari DHCP</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — U1: SSH. Secure Shell</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Plantilla qüestionari d'avaluació</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — U0: Virtualización y repaso de conceptos previos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Repàs Interconnexió de Xarxes</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Plantilla qüestionai d'avaluació</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n SMX · Grau Mitjà · UT4 — U4: Servici de Web (HTTP)</span>
+<h1>✍️ Activitats pràctiques UT4</h1>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.1 — Práctica toma de contacto</p><p dir="ltr" style="text-align: left;"><a href="https://docs.google.com/document/d/e/2PACX-1vSgqxPm1cT_VkXCgwwVnqrsY4ipwoeIdE-PnrXu2GuF9e8eVVfKovneCW_0F698_vbVfl_oqnOvGZQL/pub">Práctica introductoria</a><br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 4.2 — Prova validació HTTP</p><p dir="ltr" style="text-align: left;">Prova validació HTTP<br/></p>
+<p>Prova de validació HTTP-Apache</p>
+<h3>1. Configurar apache per a usar hosting virtual basat en noms</h3>
+<p>permetent crear dos llocs web independents.</p>
+<ul>
+<li>El primer host virtual ha de respondre amb un missatge de</li>
+</ul>
+<p>benvinguda en rebre una petició http://www.XXX.edu/hola.htm Ampliació-&gt; En cas que s'indique la següent petició http://www.XXX.edu/iessantvicent/ mostrar la web https://portal.edu.gva.es/iessantvicent/</p>
+<ul>
+<li>El segon host virtual davant la següent petició</li>
+</ul>
+<p>http://www.privatXXX.edu/ ha d'autenticar l'usuari (prova) i la contrasenya (prova) i respondre amb el text “He demostrat que sé fer- ho!!”. Autenticació digest. Ampliació-&gt;En cas que no s'indique arxiu en la petició mostrar l'arxiu prova.htm amb el text “servidor segur”</p>
+<h3>2. Configurar el servidor segur SSL per a peticions</h3>
+<p>https://www.bancaXXX.edu Bateria de proves. http://www.XXX.edu/hola.htm http://www.privatXXX.edu/prova.htm http://www.privatXXX.edu/ http://www.XXX.edu/iessantvicent/ https://www.bancaXXX.edu Linares 10.0.55.201 http://www.Linares.edu/hola.htm http://www.privatLinares.edu/prova.htm http://www.privatLinares.edu/</p>
+<p>http://www.Linares.edu/iessantvicent/ https://www.bancaLinares.edu Piles 10.0.55.202 http://www.Piles.edu/hola.htm http://www.privatPiles.edu/prova.htm http://www.privatPiles.edu/ http://www.Piles.edu/iessantvicent/ https://www.bancaPiles.edu Natalia 10.0.55.203 http://www.Natalia.edu/hola.htm http://www.privatNatalia.edu/prova.htm http://www.privatNatalia.edu/ http://www.Natalia.edu/iessantvicent/ https://www.bancaNatalia.edu Aitor 10.0.55.204 http://www.Aitor.edu/hola.htm http://www.privatAitor.edu/prova.htm http://www.privatAitor.edu/ http://www.Aitor.edu/iessantvicent/ https://www.bancaAitor.edu Carlos 10.0.55.205 http://www.Carlos.edu/hola.htm http://www.privatCarlos.edu/prova.htm http://www.privatCarlos.edu/ http://www.Carlos.edu/iessantvicent/ https://www.bancaCarlos.edu Manel 10.0.55.206 http://www.Manel.edu/hola.htm</p>
+<p>http://www.privatManel.edu/prova.htm http://www.privatManel.edu/ http://www.Manel.edu/iessantvicent/ https://www.bancaManel.edu Zapata 10.0.55.207 http://www.Zapata.edu/hola.htm http://www.privatZapata.edu/prova.htm http://www.privatZapata.edu/ http://www.Zapata.edu/iessantvicent/ https://www.bancaZapata.edu Climent 10.0.55.208 http://www.Climent.edu/hola.htm http://www.privatCliment.edu/prova.htm http://www.privatCliment.edu/ http://www.Climent.edu/iessantvicent/ https://www.bancaCliment.edu Joel 10.0.55.209 http://www.Joel.edu/hola.htm http://www.privatJoel.edu/prova.htm http://www.privatJoel.edu/ http://www.Joel.edu/iessantvicent/ https://www.bancaJoel.edu JavierF 10.0.55.210 http://www.JavierF.edu/hola.htm http://www.privatJavierF.edu/prova.htm http://www.privatJavierF.edu/ http://www.JavierF.edu/iessantvicent/ https://www.bancaJavierF.edu</p>
+<p>Alvaro 10.0.55.211 http://www.Alvaro.edu/hola.htm http://www.privatAlvaro.edu/prova.htm http://www.privatAlvaro.edu/ http://www.Alvaro.edu/iessantvicent/ https://www.bancaAlvaro.edu Juan 10.0.55.212 http://www.Juan.edu/hola.htm http://www.privatJuan.edu/prova.htm http://www.privatJuan.edu/ http://www.Juan.edu/iessantvicent/ https://www.bancaJuan.edu Carrasco 10.0.55.213 http://www.Carrasco.edu/hola.htm http://www.privatCarrasco.edu/prova.htm http://www.privatCarrasco.edu/ http://www.Carrasco.edu/iessantvicent/ https://www.bancaCarrasco.edu Arnau 10.0.55.213 http://www.Arnau.edu/hola.htm http://www.privatArnau.edu/prova.htm http://www.privatArnau.edu/ http://www.Arnau.edu/iessantvicent/ https://www.bancaArnau.edu</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.3 — Memoria UD4</p><p dir="ltr" style="text-align: left;">Memoria UD4<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 4.4 — Presentació UD4</p><p dir="ltr" style="text-align: left;">Presentació UD4<br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 4.5 — Activitat FTP</p><p dir="ltr" style="text-align: left;">Activitat FTP<br/></p>
+<p>ESCENARIO PARA LA ACTIVIDAD GRUPAL (Unidad 5)</p>
+<p>Índice</p>
+<ul>
+<li>​Enunciado</li>
+</ul>
+<ul>
+<li>​Orientaciones para la implementación</li>
+</ul>
+<ul>
+<li>​Restricciones técnicas en la implementación</li>
+</ul>
+<ul>
+<li>​Tareas</li>
+</ul>
+<ul>
+<li>​Recursos básicos</li>
+</ul>
+<h3>1. Enunciado</h3>
+<p>En esta unidad nos vamos a ocupar de una parte importante del escenario basado en la empresa</p>
+<p>“Traductores.net” que hemos ido cubriendo a lo largo del curso: la del servicio FTP. En este caso,</p>
+<p>nuestro objetivo es posibilitar que los trabajadores puedan compartir documentación sobre su trabajo</p>
+<p>diario.</p>
+<p>Como sabemos, la empresa “Traductores S.L” se dedica al sector de traducciones de varios idiomas y</p>
+<p>ofrece servicios a todas las empresas que necesiten disponer de documentos en diferentes lenguas. Si</p>
+<p>uno visita su web (ficticia) “​www.traductores.net​”, puede observar que actualmente ofrecen servicio de</p>
+<p>traducción del español hacia 3 idiomas, Inglés, Alemán y Chino. La empresa cuenta con ​3 equipos de</p>
+<p>traductores especializados para cada uno de esos idiomas, con ​2 miembros en cada equipo​, lo cual hace</p>
+<p>un total de 6 trabajadores. Estos traductores a veces acuden a las oficinas de la empresa, pero en otras</p>
+<p>ocasiones trabajan desde casa, revisando las ofertas de trabajo que la empresa comunica y enviando</p>
+<p>sus traducciones a ésta una vez las tienen terminados. Además de los equipos con los traductores, la</p>
+<p>empresa cuenta con un equipo de intérpretes para esos 3 idiomas, que cubren trabajos de, por un lado,</p>
+<p>interpretación simultánea en congresos, y por otro, traducción de eventos y locuciones y doblaje de</p>
+<p>contenido audiovisual (películas, canciones, …). Finalmente, el personal de la empresa incluye la figura</p>
+<p>del director, el contable y el jefe de marketing.</p>
+<p>El director de la empresa ha encomendado a tu equipo la tarea de proporcionar soporte tecnológico a</p>
+<p>sus necesidades, que básicamente tiene que ver con la organización de toda la documentación que</p>
+<p>manejan los traductores en torno a sus trabajos.</p>
+<p>Los traductores realizan habitualmente dos tipos de trabajos diferentes</p>
+<p>● traducciones simples​, realizadas por un traductor en particular, del español a cualquier de los 3</p>
+<p>idiomas referidos arriba, según su especialidad. Son trabajos que corresponden a ofertas que</p>
+<p>no necesitan más de un traductor trabajando a la vez (es decir, un documento en español se</p>
+<p>traduce a inglés, chino o alemán, o viceversa). ● proyectos​, realizados por equipos multi-idioma, lo que significa que en la práctica cada</p>
+<p>documento original proporcionado por el cliente (de la empresa) debe ser traducido al menos a</p>
+<p>otros 2 idiomas de entre los previamente indicados.</p>
+<p>Actualmente la empresa está gestionando la siguiente lista de trabajos​ 1​</p>
+<p>○ proyecto “ASEAT León”​: traducción de manual de este modelo de coche nuevo al chino</p>
+<p>y al alemán. ○ proyecto “Mercamujer”​: traducción de los productos de importación al inglés y al</p>
+<p>alemán. ○ traducción simple “Restaurante Asador Socarrat”​: traducción de la carta que ofrece el</p>
+<p>restaurante al inglés. ○ traducción simple “Inmobiliaria Gran Burbuja”​: traducción de su web en español al</p>
+<p>alemán. ○ traducción simple “Gran muralla”​: traducción al español del etiquetado de diferentes</p>
+<p>1 ​Estos trabajos serán en nuestro caso ficheros de tipo documento de texto. Su contenido, como es obvio, es lo de menos.</p>
+<p>productos de importación de una compañía de alimentación china.</p>
+<p>Después de valorar las opciones disponibles, se ha optado por usar el servicio de FTP para organizar los</p>
+<p>ficheros con las traducciones. Vuestra tarea como equipo técnico será ​planificar e implementar una</p>
+<p>estructura de servidores FTP que permita organizar tanto el conjunto de información referente a los</p>
+<p>trabajos de traducción que va a manejar la empresa como aquella que es exclusiva del director, el</p>
+<p>contable y el jefe de marketing​.</p>
+<h3>2. Orientaciones para la implementación</h3>
+<p>Tened en cuenta las siguientes observaciones en la solución que debéis proponer</p>
+<p>● aprovechando que contáis con 3 servidores por equipo, una medida de seguridad a implantar</p>
+<p>puede ser la de descentralizar el almacenaje de la información relativa a los proyectos y</p>
+<p>traducciones, además de aquella propia del resto de personal de la empresa, de forma que los</p>
+<p>posibles problemas técnicos o pérdidas de información por caída eventual de cualquiera de los</p>
+<p>servidores en producción no afecte al resto de la infraestructura.</p>
+<p>● todos los traductores, independientemente del idioma o proyecto en el que trabajan,</p>
+<p>comparten cierta información, en este caso, las ofertas de trabajo de las que mensualmente la</p>
+<p>empresa informa a sus empleados a través de un documento de texto llamado</p>
+<p>“ofertas_nombre_mes.odt” que resulta accesible desde cualquier puesto (PC) en la empresa (o</p>
+<p>fuera de ella). El resto de personal de la empresa que no sea el conjunto de traductores y el</p>
+<p>director no tendrán acceso a las ofertas.</p>
+<p>● ya que la confidencialidad en este sector profesional es crucial, los traductores que trabajan en</p>
+<p>traducciones simples no deben tener acceso a documentación de los trabajos de otros</p>
+<p>compañeros. Igualmente, y como es esperable, sólo los participantes en cada proyecto tendrán</p>
+<p>acceso a la documentación del mismo.</p>
+<h3>3. Restricciones técnicas en la implementación</h3>
+<p>Además de los condicionantes anteriores, vuestra propuesta debe tener en cuenta lo siguiente</p>
+<p>● como contamos con 3 servidores de FTP, ​cada uno de ellos utilizará versiones de servidor FTP</p>
+<p>diferentes, todas ellas basadas en Linux​: el primer servidor implementado funcionará con</p>
+<p>“VSFTPD”, el segundo mediante “ProFTP” y el tercero mediante “PureFTP”.</p>
+<p>● a fin de depurar el funcionamiento de cada servidor, deberán configurarse los siguientes</p>
+<p>parámetros</p>
+<p>○ no se permitirá el acceso de 4 usuarios simultáneamente. ○ el tiempo máximo de conexión (sin actividad) será de 30 segundos. ○ los diferentes usuarios no podrán tener acceso a áreas del sistema de ficheros más allá</p>
+<p>que no sean el de su propio espacio de trabajo​ 2​. ○ todos aquellos usuarios en cada servidor que no sean los definidos como traductores o</p>
+<p>personal específico no podrán abrir una sesión en el sistema operativo. ○ se mostrará un mensaje de bienvenida mostrando el nombre de la empresa y el</p>
+<p>cometido del servidor en particular.</p>
+<p>● normalmente, en los servidores de FTP, al igual que en los de Web, se define una carpeta en el</p>
+<p>sistema de ficheros como punto de acceso de los usuarios al servidor. Como medida de</p>
+<p>seguridad, cabrá cambiar la ubicación de la/s carpeta/s creada/s en relación a la documentación</p>
+<p>de traducciones y proyectos.</p>
+<p>● conseguir que los accesos desde el cliente al servidor se hagan en un entorno seguro basado en</p>
+<p>el uso de certificados digitales (SSL/TLS) añadirá puntuación extra.</p>
+<p>● cada servidor será identificado por su propio FQHN a partir del dominio “traductores.net​ 3​”.</p>
+<h3>4. Tareas</h3>
+<p>● cada grupo deberá organizar el trabajo dentro del grupo, repartiendo funciones técnicas y</p>
+<p>grupales, y entregando las actas correspondientes en los plazos marcados.</p>
+<p>● al término de la implementación cada grupo deberá entregar un documento de resumen que</p>
+<p>incluya los siguientes aspectos</p>
+<h3>1. Descripción del problema​</h3>
+<h3>2. Desarrollo técnico​</h3>
+<h3>3. Evaluación versiones de FTP​</h3>
+<h3>4. Problemas técnicos encontrados​</h3>
+<h3>5. Webgrafía</h3>
+<p>2 ​Este ajuste corresponde a la técnica llamada “enjaulamiento”. Averigua cómo implementarla en el servidor en el</p>
+<p>que te encuentres. 3 ​El uso de un servidor DNS tendrá mayor valoración que el de identificar a cada servidor mediante el fichero “/etc/hosts”. 4 ​Supone describir qué se os pedía en el enunciado de partida y qué solución habéis dado (número de servidores usado, función de cada uno dentro del conjunto, etc.) 5 Aquí cabe incluir los detalles de configuración, dando una explicación sobre los mismos.</p>
+<p>6 ​En este apartado, tenéis que exponer los pros y los contras de cada versión de FTP usada (facilidad de configuración y puesta en marcha, aspectos que podían implementarse y cuáles no, etc.). 7 ​Cabe referir los errores más comunes y apuntar su solución.</p>
+<h3>5. Recursos básicos</h3>
+<p>¿Qué es el FTP?</p>
+<p>● Definición, tipos de usuarios, modos activo/pasivo ○ http://es.wikipedia.org/wiki/File_Transfer_Protocol ○ http://etwiki.cpanel.net/twiki/bin/view/11_36/Es/WHMDocsEs/FTPPassiveModeEs</p>
+<p>Gestión de permisos</p>
+<p>● En Linux se pueden definir ACLs a nivel de Sistema de Ficheros. ○ http://www.alcancelibre.org/staticpages/index.php/uso-getfacl-getfacl</p>
+<p>● ACLs - Listas de control de acceso ○ http://es.wikipedia.org/wiki/Lista_de_control_de_acceso</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/ut0405.html">⬅️ 4.5 Recuperació_prova de validació_Apache</a>
+<a class="page-nav-btn" href="../ut05/index.html">📘 UT5 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

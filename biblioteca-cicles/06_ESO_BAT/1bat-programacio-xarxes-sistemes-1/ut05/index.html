@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT5 — Sistemes de fitxers Linux — Programació, Xarxes i Sistemes Informàtics I | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>💻 Programació, Xarxes i Sistemes Informàtics I — 1r Batxillerat</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació, Xarxes i Sistemes Informàtics I</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Programació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 01_Conceptos básicos</a></li>
+<li><a href="../ut01/ut0102.html">1.2 02_Condicionales</a></li>
+<li><a href="../ut01/ut0103.html">1.3 03_Listas y tuplas</a></li>
+<li><a href="../ut01/ut0104.html">1.4 04_Bucles</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Tasca Projecte hardware amb Word</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Xarxes</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Introducció</a></li>
+<li><a href="../ut03/ut0302.html">3.2 TCP-IP</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Maquinari</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Projecte hardware Excel</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Guía projecte pressupost</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — Sistemes de fitxers Linux</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Sistema d'arxius</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Gestió de Fitxers</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Permisos</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r Batxillerat · UT5 Completa</span>
+<h1>📘 UT5 — Sistemes de fitxers Linux (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0501"><strong>5.1 Sistema d'arxius</strong></a> (o <a href="./ut0501.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0502"><strong>5.2 Gestió de Fitxers</strong></a> (o <a href="./ut0502.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0503"><strong>5.3 Permisos</strong></a> (o <a href="./ut0503.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut05actividades"><strong>✍️ Activitats pràctiques UT5</strong></a> (o <a href="./ut05actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0501">5.1 Sistema d'arxius</h2>
+<p>Classe 1: Estructura del sistema d’arxius en Linux Objectiu Comprendre l’organització del sistema d’arxius en Linux, identificar els princi- pals directoris i entendre el concepte de rutes absolutes i relatives. Teoria El sistema d’arxius de Linux s’organitza en forma d’arbre jeràrquic que comença en el directori arrel, representat per /. Tots els fitxers i directoris del sistema pengen d’aquest punt únic.</p>
+<p>A diferència d’altres sistemes operatius, Linux integra tots els dispositius (discos durs, USB, etc.) dins d’aquest arbre, mitjançant punts de muntatge, que són directoris on es connecten aquests dispositius. Principals directoris del sistema (segons l’estàndard FHS)</p>
+<ul>
+<li>/ – Arrel del sistema.</li>
+<li>/home – Directoris personals dels usuaris.</li>
+<li>/bin – Programes i ordres bàsiques accessibles a tots els usuaris.</li>
+<li>/sbin – Ordres d’administració del sistema.</li>
+<li>/etc – Fitxers de configuració del sistema.</li>
+<li>/usr – Programes, llibreries i documentació addicional.</li>
+<li>/lib – Llibreries essencials pel sistema i programes.</li>
+<li>/var – Dades variables: registres (logs), cues d’impressió, etc.</li>
+<li>/tmp – Fitxers temporals.</li>
+<li>/root – Directori personal de l’usuari administrador (root).</li>
+<li>/media i /mnt – Punts de muntatge per a dispositius externs.</li>
+</ul>
+<p>Rutes en Linux Ruta absoluta: comença sempre per / i indica el camí complet fins al fitxer o directori. Exemple: /home/alumne/Documents/text.txt. Ruta relativa: indica el camí respecte del directori actual. Exemples: - . és el directori actual. - .. és el directori pare. - ~/Documents fa referència al directori Documents de l’usuari actual.</p>
+<p>Ordres bàsiques de navegació</p>
+<ul>
+<li>pwd – mostra el directori actual.</li>
+<li>ls – llista el contingut.</li>
+</ul>
+<ul>
+<li>cd – canvia de directori.</li>
+<li>tree – mostra l’estructura jeràrquica d’un directori.</li>
+</ul>
+<p>Pràctica + entregable (AULES)</p>
+<h3>1. Navegació bàsica</h3>
+<p>pwd</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>cd /</code></pre>
+</div>
+<p>ls</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>cd /home
+cd ~</code></pre>
+</div>
+<h3>2. Creació d’una estructura de projecte</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>mkdir -p ~/ProjecteLinux/imatges
+mkdir ~/ProjecteLinux/textos
+mkdir ~/ProjecteLinux/docs</code></pre>
+</div>
+<h3>3. Creació d’un document de teoria</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>nano ~/ProjecteLinux/docs/rutes_linux.txt</code></pre>
+</div>
+<p>Contingut mínim (escrit per l’alumne): - Definició de ruta absoluta amb almenys 2 exemples propis. - Definició de ruta relativa amb almenys 2 exemples propis. - Breu explicació de què són /, /home i /etc.</p>
+<h3>4. Informe d’estructura</h3>
+<p>tree ~/ProjecteLinux &gt; ~/ProjecteLinux/docs/estructura_projecte.txt Entregable per pujar a AULES Comprimir la carpeta docs en un ZIP des de dins de ~/ProjecteLinux</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>cd ~/ProjecteLinux</code></pre>
+</div>
+<p>zip -r projecte_linux_nom_cognom.zip docs Pujar a AULES el fitxer projecte_linux_nom_cognom.zip, que ha de con- tindre: - rutes_linux.txt - estructura_projecte.txt Durada de la classe: 50 minuts Material necessari: Terminal de LliureX, editor de text (nano o similar)</p>
+<hr/>
+<h2 id="ut0502">5.2 Gestió de Fitxers</h2>
+<p>Classe 2: Gestió de fitxers i directoris Objectiu Dominar les ordres fonamentals per crear, copiar, moure, visualitzar i eliminar fitxers i directoris. Teoria En Linux, la major part d’operacions es poden fer des de la línia d’ordres, la qual cosa permet automatitzar tasques i treballar de manera eficient.</p>
+<p>Ordres principals de gestió</p>
+<ul>
+<li>mkdir nom – crea un directori.</li>
+<li>rmdir nom – elimina un directori buit.</li>
+<li>cp origen destí – copia fitxers o directoris.</li>
+<li>mv origen destí – mou o canvia el nom.</li>
+<li>rm fitxer – elimina fitxers.</li>
+<li>rm -r directori – elimina directoris i el seu contingut (ús amb precau</li>
+</ul>
+<p>ció).</p>
+<ul>
+<li>touch fitxer – crea un fitxer buit o actualitza la marca de temps.</li>
+<li>cat fitxer – mostra el contingut complet del fitxer.</li>
+<li>more / less – mostren el contingut de manera paginada.</li>
+<li>man ordre – mostra el manual d’una ordre.</li>
+</ul>
+<p>Comodins (metacaràcters)</p>
+<ul>
+<li>* – qualsevol seqüència de caràcters.</li>
+</ul>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Exemple: rm *.txt elimina tots els .txt del directori actual.</p></div>
+<ul>
+<li>? – exactament un caràcter.</li>
+</ul>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Exemple: cp foto?.jpg /backup copia foto1.jpg, foto2.jpg, etc. Opcions d’ordres Moltes ordres permeten opcions per modificar el seu comportament</p></div>
+<ul>
+<li>ls -l – llistat llarg amb permisos i propietaris.</li>
+<li>cp -r dir1 dir2 – còpia recursiva de directoris.</li>
+<li>rm -i fitxer – demana confirmació abans d’esborrar.</li>
+</ul>
+<p>Pràctica + entregable (AULES)</p>
+<h3>1. Crear directori de pràctica</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>mkdir ~/GestioFitxers
+cd ~/GestioFitxers</code></pre>
+</div>
+<h3>2. Crear fitxers i carpetes</h3>
+<p>touch informe1.txt informe2.txt prova.dat notes.md</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>mkdir originals copies</code></pre>
+</div>
+<h3>3. Organitzar fitxers</h3>
+<p>mv informe1.txt informe2.txt originals/ cp originals/informe1.txt copies/informe1_copia.txt</p>
+<h3>4. Afegir contingut als fitxers</h3>
+<p>echo "Resum de la sessió 2 de Linux" &gt; originals/informe1.txt echo "Proves amb ordres cp, mv i rm" &gt; originals/informe2.txt echo "Notes de l'alumne sobre gestió de fitxers" &gt; notes.md</p>
+<h3>5. Consultar contingut</h3>
+<p>cat originals/informe1.txt less originals/informe2.txt</p>
+<h3>6. Registrar les ordres utilitzades</h3>
+<p>history | tail -n 50 &gt; historial_brut.txt</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>nano comandes_utilitzades.txt</code></pre>
+</div>
+<p>En comandes_utilitzades.txt, l’alumne ha de copiar només les ordres rela- cionades amb l’activitat i afegir un comentari breu a cada línia (en valencià) descrivint què fa l’ordre. Exemple de línia: cp originals/informe1.txt copies/informe1_copia.txt</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code># còpia un fitxer d'originals a copies</code></pre>
+</div>
+<p>Entregable per pujar a AULES Des de ~/GestioFitxers, comprimir els fitxers requerits: zip gestio_fitxers_nom_cognom.zip comandes_utilitzades.txt notes.md</p>
+<p>Pujar a AULES el fitxer gestio_fitxers_nom_cognom.zip, que ha de contin- dre: - comandes_utilitzades.txt (llistat d’ordres + comentaris). - notes.md (almenys 5 línies explicant què han aprés sobre cp, mv, rm, mkdir i ls). Durada de la classe: 50 minuts Material necessari: Terminal de LliureX, editor de text (nano o similar)</p>
+<hr/>
+<h2 id="ut0503">5.3 Permisos</h2>
+<p>Classe 3: Permisos i propietaris Objectiu Comprendre el sistema de permisos i propietats dels fitxers i directoris en Linux i aprendre a modificar-los. Teoria Cada fitxer o directori té associats</p>
+<ul>
+<li>Un usuari propietari.</li>
+<li>Un grup de pertinença.</li>
+<li>Tres conjunts de permisos (usuari, grup, altres).</li>
+</ul>
+<p>Permisos possibles</p>
+<ul>
+<li>r (read) – lectura del fitxer o llistat del directori.</li>
+<li>w (write) – escriptura/modificació del fitxer o del contingut del directori.</li>
+<li>x (execute) – execució d’un fitxer o accés al directori.</li>
+</ul>
+<p>Visualització de permisos Quan es mostra un llistat detallat amb ls -l, apareix una línia similar a: -rwxr-xr-- Interpretació</p>
+<ul>
+<li>El primer caràcter indica el tipus</li>
+</ul>
+<p>fitxer normal. – d directori. – l enllaç simbòlic.</p>
+<ul>
+<li>Els següents tres caràcters (rwx) són els permisos de l’usuari propietari.</li>
+<li>Els següents tres (r-x) són els permisos del grup.</li>
+<li>Els últims tres (r--) són els permisos per a la resta d’usuaris.</li>
+</ul>
+<p>Permisos en mode numèric Cada permís té un valor</p>
+<ul>
+<li>r = 4</li>
+<li>w = 2</li>
+<li>x = 1</li>
+</ul>
+<p>La suma defineix els permisos per a cada rol</p>
+<ul>
+<li>7 = 4+2+1 = rwx</li>
+<li>6 = 4+2 = rw</li>
+</ul>
+<ul>
+<li>5 = 4+1 = r-x</li>
+<li>4 = 4 = r</li>
+</ul>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Exemple</p></div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>chmod 755 fitxer</code></pre>
+</div>
+<ul>
+<li>Usuari: 7 →rwx</li>
+<li>Grup: 5 →r-x</li>
+<li>Altres: 5 →r-x</li>
+</ul>
+<p>Ordres principals de permisos</p>
+<ul>
+<li>ls -l – mostra permisos, propietari i grup.</li>
+<li>chmod – modifica permisos.</li>
+<li>chown – canvia el propietari.</li>
+<li>chgrp – canvia el grup.</li>
+</ul>
+<p>Exemples d’ús de chmod Mode simbòlic: - chmod u+x script.sh – afegeix execució a l’usuari. - chmod g-w document.txt – lleva escriptura al grup. - chmod o-r fitxer.txt – lleva lectura als altres. Mode numèric: - chmod 600 fitxer.txt – només l’usuari pot llegir i escriure.</p>
+<ul>
+<li>chmod 644 fitxer.txt – l’usuari pot llegir i escriure, la resta només llegir.</li>
+</ul>
+<p>Pràctica + entregable (AULES)</p>
+<h3>1. Preparar directori</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>mkdir ~/PermisosLinux
+cd ~/PermisosLinux</code></pre>
+</div>
+<p>touch fitxer_privats fitxer_public fitxer_lectura</p>
+<h3>2. Assignar permisos inicials</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>chmod 700 fitxer_privats
+# només l'usuari pot tot
+chmod 644 fitxer_lectura
+# lectura per a tots
+chmod 766 fitxer_public
+# usuari: rwx, grup: rwx, altres: rw-</code></pre>
+</div>
+<h3>3. Guardar l’estat inicial</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>ls -l &gt; informe_permisos_inicials.txt</code></pre>
+</div>
+<h3>4. Modificar permisos</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>chmod g-w fitxer_public
+chmod o-r fitxer_lectura
+chmod u+x fitxer_privats</code></pre>
+</div>
+<h3>5. Guardar l’estat final</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>ls -l &gt; informe_permisos_finals.txt</code></pre>
+</div>
+<h3>6. Fitxer d’explicació</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>nano explicacio_permisos.txt</code></pre>
+</div>
+<p>Contingut mínim: - Descripció en text dels permisos inicials i finals de cada fitxer (fitxer_privats, fitxer_public, fitxer_lectura). - Explicació del significat de r, w, x.</p>
+<ul>
+<li>Explicació del significat de 7, 6 i 4 en el context de</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>chmod (mode numèric). - Un exemple addicional inventat, per exemple chmod</code></pre>
+</div>
+<p>754 script.sh, explicant què pot fer l’usuari, el grup i els altres. Entregable per pujar a AULES Des de ~/PermisosLinux: zip permisos_linux_nom_cognom.zip informe_permisos_inicials.txt informe_permisos_finals.txt Pujar a AULES el fitxer permisos_linux_nom_cognom.zip, que ha de con- tindre</p>
+<ul>
+<li>informe_permisos_inicials.txt</li>
+<li>informe_permisos_finals.txt</li>
+<li>explicacio_permisos.txt</li>
+</ul>
+<p>Durada de la classe: 50 minuts Material necessari: Terminal de LliureX, editor de text (nano o similar)</p>
+<hr/>
+<h2 id="ut05actividades">✍️ Activitats pràctiques UT5</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 5.1 — Tasca Sistema d'arxius</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 5.2 — Tasca Gestió de Fitxers</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 5.3 — Tasca Permisos</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/ut04actividades.html">⬅️ ✍️ Activitats pràctiques UT4</a>
+<a class="page-nav-btn" href="../ut05/ut0501.html">5.1 Sistema d'arxius ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

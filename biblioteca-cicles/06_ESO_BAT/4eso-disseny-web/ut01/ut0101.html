@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>1.1 Sessio 1 — Disseny Web amb HTML5, CSS i WordPress | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🕸️ Disseny Web amb HTML5, CSS i WordPress — 4t ESO</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Disseny Web amb HTML5, CSS i WordPress</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT1 — HTML</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut01/ut0101.html">1.1 Sessio 1</a></li>
+<li><a href="../ut01/ut0102.html">1.2 1_Introducción</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Act1_Solución</a></li>
+<li><a href="../ut01/ut0104.html">1.4 2_Estructura básica</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Act2_Solución</a></li>
+<li><a href="../ut01/ut0106.html">1.6 3_Etiquetas para estructurar el texto</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Act3_Solución</a></li>
+<li><a href="../ut01/ut0108.html">1.8 4_Etiquetas básicas de marcado</a></li>
+<li><a href="../ut01/ut0109.html">1.9 Act4_Sol</a></li>
+<li><a href="../ut01/ut0110.html">1.10 5_listas</a></li>
+<li><a href="../ut01/ut0111.html">1.11 6_enlaces</a></li>
+<li><a href="../ut01/ut0112.html">1.12 7_Tablas</a></li>
+<li><a href="../ut01/ut0113.html">1.13 8_Formularios</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — WORDPRESS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Alan Turing</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">4t ESO · UT1 — HTML</span>
+<h1>1.1 Sessio 1</h1>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Introducción a los lenguajes de marcas</p><p><a href="https://www.eniun.com/introduccion-lenguajes-de-marcado/" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.eniun.com/introduccion-lenguajes-de-marcado/) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Editor HTML online</p><p><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_default" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_default) ↗️</strong></a></p></div>
+<hr/>
+<div class="doc">
+<!-- Pàgina 1: Portada -->
+<section class="page">
+<div class="splash">
+<span class="pill purple">Bloc 1 · Sessió 1</span>
+<h1>Què és Internet, la Web i el Disseny Web?</h1>
+<h3 class="muted">Presentació visual per a l’alumnat</h3>
+<div class="tags">
+<span class="pill green">📱 Apps i Web</span>
+<span class="pill orange">🌍 Internet</span>
+<span class="pill blue">🖥️ Navegadors</span>
+<span class="pill purple">🎨 Disseny</span>
+</div>
+</div>
+</section>
+<!-- Pàgina 2: Internet vs Web -->
+<section class="page">
+<h2>Internet vs. World Wide Web</h2>
+<p><strong>Internet</strong> és la xarxa mundial de connexions. La <strong>Web</strong> és el conjunt de pàgines que hi viuen.</p>
+<div class="grid cols-2">
+<div class="card">
+<h3>🛣️ Internet</h3>
+<ul>
+<li>Xarxa de <em>cables, antenes i routers</em>.</li>
+<li>Permet que les dades viatgen arreu del món.</li>
+<li>Exemple mental: la <strong>carretera</strong>.</li>
+</ul>
+</div>
+<div class="card">
+<h3>🚗 Web</h3>
+<ul>
+<li>Conjunt de <strong>pàgines i llocs web</strong>.</li>
+<li>Les visites amb un <strong>navegador</strong>.</li>
+<li>Exemple mental: els <strong>cotxes</strong> que circulen.</li>
+</ul>
+</div>
+</div>
+<div class="cur" style="margin-top:10px">🔎 <strong>Curiositat:</strong> 1969 començà amb 4 ordinadors connectats (ARPANET).</div>
+</section>
+<!-- Pàgina 3: Navegador vs Buscador -->
+<section class="page">
+<h2>🖥️ Navegador vs 🔍 Buscador</h2>
+<div class="grid cols-2">
+<div class="card">
+<h3>🖥️ Navegador (Chrome, Safari, Firefox, Edge)</h3>
+<ul>
+<li>Programa que <strong>obre i mostra webs</strong>.</li>
+<li>Interpreta HTML, CSS i JS.</li>
+<li>Exemple d’ús: escriure una <span class="kbd">URL</span> i entrar directament.</li>
+</ul>
+</div>
+<div class="card">
+<h3>🔍 Buscador (Google, Bing, DuckDuckGo)</h3>
+<ul>
+<li>Pàgina que <strong>troba webs</strong> segons paraules clau.</li>
+<li>Funciona <em>dins del navegador</em>.</li>
+<li>Exemple d’ús: buscar “vídeos gats divertits” i fer clic al resultat.</li>
+</ul>
+</div>
+</div>
+<div class="hint" style="margin-top:10px">💡 <strong>Diferència clau:</strong> el <em>navegador</em> és l’eina; el <em>buscador</em> és una <u>web</u> dins d’eixa eina.</div>
+</section>
+<!-- Pàgina 4: Pàgina web -->
+<section class="page">
+<h2>📄 Què és una pàgina web?</h2>
+<ul>
+<li>Document digital: <strong>text</strong>, <strong>imatges</strong>, <strong>vídeos</strong>, <strong>enllaços</strong>.</li>
+<li>Pot enllaçar-se amb moltes altres pàgines (hipervincles).</li>
+<li>Exemples: escola, botiga, xarxes socials, diaris…</li>
+</ul>
+<div class="cur">🧭 <strong>Primera web (1991):</strong> <a href="https://info.cern.ch">https://info.cern.ch</a></div>
+</section>
+<!-- Pàgina 5: Objectius -->
+<section class="page">
+<h2>🎯 Objectius d’una pàgina web</h2>
+<div class="grid cols-3">
+<div class="card"><strong>📰 Informar</strong><br/>diaris, blogs</div>
+<div class="card"><strong>🎥 Entretenir</strong><br/>YouTube, TikTok</div>
+<div class="card"><strong>🛒 Vendre</strong><br/>botigues en línia</div>
+<div class="card"><strong>📚 Educar</strong><br/>Moodle, recursos</div>
+<div class="card"><strong>💬 Comunicar</strong><br/>xarxes, fòrums</div>
+<div class="card"><strong>🏫 Institucional</strong><br/>centres, tràmits</div>
+</div>
+</section>
+<!-- Pàgina 6: Característiques -->
+<section class="page">
+<h2>✨ Característiques d’una web</h2>
+<ul>
+<li>🖱️ <strong>Interactiva</strong>: clics, formularis, navegació.</li>
+<li>🔗 <strong>Connectada</strong>: enllaços cap a altres pàgines.</li>
+<li>⚡ <strong>Dinàmica</strong>: el contingut canvia sovint (ex: Instagram).</li>
+<li>🏪 <strong>Estàtica</strong>: canvia poc (ex: menú d’un restaurant).</li>
+<li>🎧 <strong>Multimèdia</strong>: text, àudio, vídeo, imatge.</li>
+<li>📱💻 <strong>Responsive</strong>: s’adapta a mòbil i ordinador.</li>
+<li>♿ <strong>Accessible</strong>: pensada per a tothom.</li>
+</ul>
+</section>
+<!-- Pàgina 7: Web vs App -->
+<section class="page">
+<h2>📱 Web vs App</h2>
+<div class="grid cols-2">
+<div class="card">
+<h3>🌐 Web</h3>
+<ul>
+<li>Funciona al navegador; no cal instal·lar res.</li>
+<li>Universal: qualsevol dispositiu amb Internet.</li>
+</ul>
+</div>
+<div class="card">
+<h3>📱 App</h3>
+<ul>
+<li>Es descarrega (Play Store / App Store).</li>
+<li>Més ràpida i integrada amb el mòbil (càmera, GPS...).</li>
+</ul>
+</div>
+</div>
+<div class="hint" style="margin-top:10px">💡 Moltes apps modernes utilitzen tecnologia web per dins.</div>
+</section>
+<!-- Pàgina 8: Passos servidor -->
+<section class="page">
+<h2>🖥️ Com funciona un servidor web</h2>
+<ol>
+<li>Escrius l’adreça: <span class="kbd">www.youtube.com</span>.</li>
+<li>El navegador envia una <strong>petició</strong> per Internet.</li>
+<li>El <strong>servidor web</strong> busca la informació.</li>
+<li>El servidor envia la <strong>resposta</strong> (HTML, CSS, imatges…).</li>
+<li>El navegador ho mostra en pantalla.</li>
+</ol>
+<div class="cur">⚡ Encara que el servidor estiga a milers de km, la resposta sol arribar en menys d’un segon.</div>
+</section>
+<!-- Pàgina 9: Diagrama SVG -->
+<section class="page">
+<h2>📊 Diagrama — Navegador ↔ Internet ↔ Servidor</h2>
+<svg aria-label="Diagrama de comunicació entre navegador, Internet i servidor" class="diagram" role="img" viewbox="0 0 760 270" xmlns="http://www.w3.org/2000/svg">
+<!-- Nodes -->
+<defs>
+<filter height="140%" id="soft" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="3" flood-color="#000" flood-opacity="0.12" stddeviation="6"></fedropshadow>
+</filter>
+</defs>
+<!-- Navegador -->
+<g filter="url(#soft)">
+<rect fill="#40bd71" height="80" rx="14" ry="14" width="220" x="30" y="60"></rect>
+<text fill="#fff" font-family="Segoe UI, Arial" font-size="18" text-anchor="middle" x="140" y="108">👩‍💻 Navegador</text>
+</g>
+<!-- Internet núvol -->
+<g filter="url(#soft)">
+<ellipse cx="380" cy="100" fill="#4e8de6" rx="120" ry="50"></ellipse>
+<text fill="#fff" font-family="Segoe UI, Arial" font-size="18" text-anchor="middle" x="380" y="105">🌍 Internet</text>
+</g>
+<!-- Servidor -->
+<g filter="url(#soft)">
+<rect fill="#845ec2" height="110" rx="10" ry="10" width="160" x="560" y="45"></rect>
+<text fill="#fff" font-family="Segoe UI, Arial" font-size="18" text-anchor="middle" x="640" y="85">🖥️ Servidor</text>
+<text fill="#e9dcff" font-family="Segoe UI, Arial" font-size="13" text-anchor="middle" x="640" y="108">(on viu la pàgina)</text>
+</g>
+<!-- Fletxes d'anada (petició) -->
+<g fill="none" marker-end="url(#arrow)" stroke="#ff9442" stroke-width="3">
+<path d="M250,100 L260,100 C290,100 320,100 350,100"></path>
+<path d="M500,100 L520,100 C530,100 540,95 560,95"></path>
+</g>
+<!-- Fletxes de tornada (resposta) -->
+<g fill="none" marker-end="url(#arrow)" stroke="#40bd71" stroke-width="3">
+<path d="M560,125 L540,125 C520,125 510,130 500,130"></path>
+<path d="M350,130 L320,130 C300,130 280,130 260,130 L250,130"></path>
+</g>
+<!-- Marcadors de fletxa -->
+<defs>
+<marker id="arrow" markerheight="10" markerunits="strokeWidth" markerwidth="10" orient="auto" refx="10" refy="3">
+<path d="M0,0 L10,3 L0,6 Z" fill="currentColor"></path>
+</marker>
+</defs>
+<!-- Etiquetes -->
+<text fill="#ff9442" font-family="Segoe UI, Arial" font-size="12" x="300" y="92">1) Petició (URL)</text>
+<text fill="#ff9442" font-family="Segoe UI, Arial" font-size="12" x="610" y="90">2) Cerca dades</text>
+<text fill="#40bd71" font-family="Segoe UI, Arial" font-size="12" x="520" y="138">3) Resposta (HTML/CSS)</text>
+<text fill="#40bd71" font-family="Segoe UI, Arial" font-size="12" x="185" y="138">4) Mostra la pàgina</text>
+</svg>
+<div class="hint">👉 Llegeix el flux: <strong>navegador</strong> → Internet → <strong>servidor</strong> → Internet → <strong>navegador</strong>.</div>
+</section>
+<!-- Pàgina 10: Activitat final -->
+<section class="page">
+<h2>🧩 Activitat final (grups)</h2>
+<ol>
+<li>Entra a <strong>Instagram.com</strong> (web) i després obri l’<strong>app</strong>.</li>
+<li>Compara: què tenen en comú? quines diferències?</li>
+<li>Què t’agrada més de cada una? Per què?</li>
+<li>Quin objectiu té Instagram?</li>
+</ol>
+<div class="cur">✏️ Apunteu les conclusions del grup en 4–5 frases clares.</div>
+</section>
+<!-- Pàgina 11: Resum -->
+<section class="page">
+<h2>📌 Resum de la sessió</h2>
+<ul>
+<li>🌍 <strong>Internet</strong> és la xarxa · 📄 la <strong>Web</strong> són les pàgines.</li>
+<li>🖥️ <strong>Navegador</strong> ≠ 🔍 <strong>Buscador</strong>.</li>
+<li>🎯 Una web té <strong>objectius</strong> i <strong>característiques</strong> (dinàmica/estàtica, responsive, accessible…).</li>
+<li>📱 Web i App són <strong>complementàries</strong>.</li>
+<li>🎨 El disseny web defineix l’<strong>experiència d’usuari</strong>.</li>
+</ul>
+<p class="muted">*Recorda: el web no només es consumeix, també es pot crear.* 💻</p>
+</section>
+<p class="no-print" style="text-align:center;color:var(--muted);margin:20px 0 40px">Per exportar a PDF: <strong>Imprimeix</strong> (Ctrl/Cmd + P) → Destinació: <em>Desa com a PDF</em> → Mides: <em>A4</em> → Marges: <em>Predeterminats</em>.</p>
+</div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut01/index.html">⬅️ 📘 UT1 Completa</a>
+<a class="page-nav-btn" href="../ut01/ut0102.html">1.2 1_Introducción ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

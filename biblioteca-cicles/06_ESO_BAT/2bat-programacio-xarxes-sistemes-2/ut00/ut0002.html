@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>0.2 Elementos de un programa — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔐 Programació, Xarxes i Sistemes Informàtics II — 2n Batxillerat</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació, Xarxes i Sistemes Informàtics II</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació</a></li>
+<li><a class="active" href="../ut00/ut0002.html">0.2 Apunts sistemes de numeració</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — Introducció a la programació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 UD1. Introducció a la programació</a></li>
+<li><a class="active" href="../ut00/ut0002.html">0.2 UD1. Introducció a la programació Part 2</a></li>
+<li><a href="../ut00/ut0003.html">0.3 UD1. Introducció a la programació Part 3</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — Introducción a Phyton</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Introducció a Python</a></li>
+<li><a class="active" href="../ut00/ut0002.html">0.2 Elementos de un programa</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Tipos de datos</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Funciones integradas</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Módulos, paquetes y namespaces</a></li>
+<li><a href="../ut00/ut0006.html">0.6 Estructuras de control</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Tipos de datos complejos</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Funciones</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Errores y excepciones</a></li>
+<li><a href="../ut00/ut0010.html">0.10 Ficheros</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Xarxes Locals</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Introducción a las redes locales</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Mapa físico y lógico</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Arquitecturas de red</a></li>
+<li><a href="../ut01/ut0104.html">1.4 MODELO OSI</a></li>
+<li><a href="../ut01/ut0105.html">1.5 MODELO TCP/IP</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Tipos de cableado</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Págines Web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 CheatSheet HTML5</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CheatSheet CSS3</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Seguridad</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n Batxillerat · UT0 — Introducción a Phyton</span>
+<h1>0.2 Elementos de un programa</h1>
+<p>ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Elementos de un programa Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.</p>
+<p>Autora: María Paz Segura Valero (mpazprofe@gmail.com)</p>
+<p>Escuela de programación - Python Elementos de un programa CONTENIDO</p>
+<ul>
+<li>Estructura de un programa...............................................................................................................2</li>
+<li>Comentarios.....................................................................................................................................3</li>
+<li>Palabras reservadas..........................................................................................................................4</li>
+<li>Identificadores.................................................................................................................................4</li>
+<li>Literales, variables y expresiones....................................................................................................5</li>
+</ul>
+<p>5.1. Literales...................................................................................................................................5 5.2. Variables...................................................................................................................................8 5.3. Expresiones............................................................................................................................10 5.3.1. Operadores.....................................................................................................................11</p>
+<ul>
+<li>Fuentes de información.................................................................................................................12</li>
+</ul>
+<p>Escuela de programación - Python Elementos de un programa</p>
+<h3>1. Estructura de un programa</h3>
+<p>En este documento presentaremos las características básicas de los programas escritos en el lenguaje de programación Python. • Un programa Python, como en la mayoría de lenguajes de programación, está compuesto por líneas. • Cada línea suele corresponder a una instrucción que acaba con un salto de línea y nada más. Es decir, no existe un símbolo especial que indique el final de una instrucción como en otros lenguajes de programación.</p>
+<p>• Si una instrucción es muy larga, podemos separarla en varias líneas incluyendo un símbolo «\» al final. suma = 1111 + 222 + 333 + 4444444 + \ 55555 + 6666 + 7777 • Dentro de una misma línea podemos escribir varias instrucciones separadas por «;» pero esto puede restar legibilidad al programa así que su uso no se recomienda, excepto en casos especiales.</p>
+<p>mes = 4; print(mes) • Es recomendable separar los elementos de las expresiones por un espacio, para que sean más sencillas de leer. suma = numero + 10 • Habitualmente, las instrucciones empiezan en la primera columna (sin dejar espacios) excepto que formen parte del cuerpo de otra instrucción como pueden ser las estructuras de control, funciones, definiciones de clases, etc. En ese caso, hay que indentarlas con un tabulador o un conjunto de espacios.</p>
+<p>◦En un mismo programa no se puede mezclar el uso de los tabuladores y espacios para indentar líneas. Hay que elegir sólo uno de ellos. if valor1 == valor2: print(“iguales”) else: print(“distintas”)</p>
+<p>Escuela de programación - Python Elementos de un programa • Un error muy típico al escribir programas en Python son los errores de indentación: Figura 1: Error de indentación Si te interesa conocer la guía de estilo de los programas Python, puedes visitar las siguientes páginas web</p>
+<p>• Página oficial (en inglés): https://www.python.org/dev/peps/pep-0008/ • Recursos Python (en castellano): http://recursospython.com/pep8es.pdf</p>
+<h3>2. Comentarios</h3>
+<p>Para facilitar la lectura de los programas es recomendable incluir comentarios que faciliten la comprensión del código, sin abusar de su uso. El símbolo «#» es el encargado de marcar un comentario en Python. Lo podemos utilizar al principio de una línea, enmedio o al final. En cualquier caso, el intérprete de Python ignorará el contenido que aparezca a la derecha del «#».</p>
+<p>Figura 2: Uso de comentarios La indentación es uno de los aspectos más importantes a tener en cuenta en Python, ya que es el mecanismo por el que se determina la estructura de los programas y la relación de sus elementos entre sí.</p>
+<p>Escuela de programación - Python Elementos de un programa</p>
+<h3>3. Palabras reservadas</h3>
+<p>Las palabras reservadas son aquellas que no pueden utilizarse para nombrar otros elementos del programa porque ya tienen un significado y utilidad definidos en Python. Para acceder a la lista actualizada de palabras reservadas de Python, sigue estos pasos</p>
+<h3>1. Abre el intérprete de comandos de Python. Por ejemplo el online</h3>
+<p>https://www.python.org/shell/</p>
+<h3>2. Ejecuta el comando help y podrás acceder al manual de ayuda incluido en el</h3>
+<p>intérprete de Python.</p>
+<ul>
+<li>Ejecuta el comando keywords.</li>
+</ul>
+<p>Figura 3: Palabras reservadas de Python Todas las palabras reservadas deben escribirse tal cual aparecen en el listado anterior, ya que Python tiene en cuenta las diferencias entre mayúsculas y minúsculas.</p>
+<h3>4. Identificadores</h3>
+<p>Un identificador es un nombre definido por un/a programador/a para representar un elemento nuevo. Por ejemplo, una variable, una función, una clase, un módulo, etc. A la hora de crear identificadores, debemos seguir unas normas básicas: • Puedes utilizar letras mayúsculas y minúsculas, números y el guión bajo (_).</p>
+<p>◦No se pueden utilizar símbolos especiales: [‘.’, ‘!’, ‘@’, ‘#’, ‘$’, ‘%’] • Los identificadores no pueden empezar por un número. • Los identificadores pueden empezar por un guión bajo (_) pero es recomendable reservar esta característica para la programación orientada a objetos, ya que tienen un uso muy característico en dicho caso.</p>
+<p>• No se pueden utilizar las palabras reservadas como identificadores.</p>
+<p>Escuela de programación - Python Elementos de un programa • Las variables suelen nombrarse en minúsculas y las constantes en mayúsculas. Para comprobar si un nombre es adecuado debemos hacer dos cosas</p>
+<h3>1. Asegurarnos de que no se trata de una palabra reservada utilizando la función</h3>
+<p>keyword.iskeyword(“nombre_identificador”) así: Figura 4: Preguntando si es una palabra reservada</p>
+<ul>
+<li>Comprobar si el nombre del identificador cumple con las restricciones de Python.</li>
+</ul>
+<p>Para ello utilizaremos la función str.isidentifier() como en los siguientes ejemplos: Figura 5: Preguntando si cumple las normas</p>
+<h3>5. Literales, variables y expresiones</h3>
+<p>Los literales, variables y expresiones son los elementos básicos con los que podemos empezar a construir instrucciones en Python. Veámoslos con detalle.</p>
+<h4>5.1. Literales</h4>
+<p>Un literal o constante es la representación de un valor que no cambia con el tiempo. El número 5 es un literal que siempre valdrá 5 y la palabra “hola” siempre tendrá el mismo valor. Existen distintos tipos de literales: Necesitamos importar el módulo keyword, ya que iskeyword() es una de sus funciones. Más adelante hablaremos de esto.</p>
+<p>Escribimos entre comillas y paréntesis el nombre que queremos comprobar. Escribimos el nombre entre comillas (dobles o simples) seguida de la llamada a la función. Lo veremos con más detalle más adelante. El nombre “try” está bien construido aunque se trate de una palabra reservada.</p>
+<p>Escuela de programación - Python Elementos de un programa • Literales numéricos</p>
+<p>◦Podemos representar números enteros en representación decimal, binaria (anteponiendo un 0b), octal (anteponiendo un 0o) o hexadecimal (anteponiendo un 0x). Por ejemplo: 345, 0b101001001, 0o546, 0xf9af9d. ◦Podemos representar números reales (con decimales) separando la parte entera de la parte decimal con un punto “.”. Por ejemplo: 123.50, 0.56 o .56, 12. o 12.00.</p>
+<p>◦También podemos representar números complejos (con parte real y parte imaginaria) acabando el número con una “j” o una “J”, indistintamente. Por ejemplo: 1+2j, 8+15J. • Literales textuales o cadenas</p>
+<p>permiten representar texto que puede contener números y caracteres especiales. ◦Las cadenas deben escribirse entre comillas simples, dobles o triples. ◦Las comillas triples sirven para construir cadenas que contienen saltos de línea. Un salto de línea en Python se representa con el carácter \n. Este tipo de comillas suele utilizarse para documentar funciones, clases, métodos y módulos en un programa.</p>
+<p>Figura 6: Escribiendo cadenas de texto Podemos incluir números que se considerarán caracteres de texto. Podemos utilizar comillas simples o dobles para representar cadenas. Usaremos triples comillas dobles o triples comillas simples para crear cadenas multilíneas (con saltos de línea).</p>
+<p>Podemos incluir unos tipos de comillas dentro de otras.</p>
+<p>Escuela de programación - Python Elementos de un programa ◦Podemos incluir caracteres especiales en las cadenas utilizando el símbolo “\”, similar a como ocurre con el carácter de salto de línea. Se les conoce con el nombre de secuencias de escape y a continuación se recogen algunos de ellos.</p>
+<p>En los ejemplos utilizamos la función predefinida print() para mostrar por pantalla el valor de la cadena. La estudiaremos con detalle más adelante. Secuencia Descripción Ejemplo \\ Barra invertida \’ Comilla simple \” Comilla doble \b Retroceso (borramos el carácter anterior) \t Tabulador horizontal \v Tabulador vertical El identificador de un elemento/objeto se puede obtener utilizando la función predefinida id(). Veamos algunos ejemplos</p>
+<p>Figura 7: Identificadores para literales En Python todos los elementos son objetos, incluso los literales. Así que cuando vamos a utilizar un literal en un programa, Python crea un objeto al que asocia un identificador único, un tipo y un valor. Podemos ver que todos los valores tienen identificadores diferentes.</p>
+<p>Escuela de programación - Python Elementos de un programa</p>
+<h4>5.2. Variables</h4>
+<p>Una variable representa una entidad que puede cambiar de valor a lo largo del tiempo. Con otras palabras, una variable referencia a un valor en un momento determinado de la ejecución de un programa pero puede referenciar a otro valor distinto en otro momento. Incluso, distintas variables pueden referenciar al mismo valor en el mismo momento.</p>
+<p>Algunas características de las variables en Python son las siguientes: • Para que una variable referencie un valor, se utiliza un operador de asignación como “=” u otros similares que veremos más adelante. • No es necesario declararlas ya que el tipo de la variable se determina en tiempo de ejecución, según el tipo del valor al que está referenciando.</p>
+<p>◦Ejemplos de tipos de datos: int (enteros), float (reales), bool (lógicos), cadenas de texto (str). ◦La función predefinida type() nos indica el tipo de un elemento. Figura 8: Tipo variable "numero" Figura 9: Tipo variable "otra" • A lo largo del tiempo, la misma variable puede referenciar a distintos tipos de datos.</p>
+<p>Por ejemplo, primero a un número y luego a una cadena de texto. tiempo = 2 numero digito numero tiempo = 1 digito tiempo = 2 hola numero hola numero tiempo = 1 hola numero otra La variable numero será de tipo int. La variable otra será de tipo str.</p>
+<p>Escuela de programación - Python Elementos de un programa Figura 10: Cambia el tipo • Una variable debe referenciar a un valor antes de ser utilizada o Python dará error. Figura 11: Informar valor antes de utilizar una variable Para que nos resulte más fácil de entender, podemos ver una variable como una etiqueta que hace referencia a un valor o como una etiqueta que “guarda” la referencia a un objeto (valor) y no el valor en sí mismo.</p>
+<p>Así, cuando asociamos un valor a una variable, ¿qué es lo que está pasando?</p>
+<ul>
+<li>Python crea un objeto para el valor y le asigna un identificador.</li>
+<li>Si la variable (etiqueta) aún no existe, la crea.</li>
+</ul>
+<h3>3. Python asocia la variable al objeto creado, es decir, “guarda” el identificador del</h3>
+<p>valor en la variable. Figura 12: Variable y valor Vamos a ver algunos ejemplos para intentar clarificar estos conceptos. Podemos pensar que guardamos el número 5 en la variable numero, pero lo cierto es que... … realmente, el objeto 5 está almacenado en la dirección de memoria 10915872 y el identificador de la variable numero es exactamente el del objeto al que hace referencia.</p>
+<p>Como vemos, el tipado de las variables es dinámico y depende del tipo de valor al que referencian.</p>
+<p>Escuela de programación - Python Elementos de un programa Ejemplo 1: Si dos variables tienen el mismo valor (referencian al mismo objeto), la función id() nos devolverá el mismo valor ya que se corresponderá con el identificador del objeto al que referencian. Figura 13: Dos variables referencian a un mismo valor Ejemplo 2: Si cambia el valor de una variable (referenciamos a otro objeto), el identificador de la variable cambiará porque será el del nuevo objeto al que referencia.</p>
+<p>Figura 14: Cambiamos el valor Existen más peculiaridades de las variables relacionadas con tipos de datos mutables, aquellos que pueden cambiar a lo largo de tiempo, pero lo veremos con detalle en su momento.</p>
+<h4>5.3. Expresiones</h4>
+<p>Una expresión es una combinación de números, cadenas de texto, funciones, otros objetos y operadores que al evaluarla devuelve un valor de un tipo determinado. Para crear una expresión podemos valernos del uso de literales y/o variables. ((5 + 70) * 30) / (2 * numero) El número 5 sigue almacenado en la misma dirección de memoria.</p>
+<p>La variable numero ahora hace referencia al objeto 6. Las variables numero y digito hacen referencia al objeto creado para almacenar el valor 5.</p>
+<p>Escuela de programación - Python Elementos de un programa La función predefinida eval() evalúa una expresión y obtiene su valor. Figura 15: Ejemplo de uso de eval()</p>
+<h4>5.3.1. Operadores</h4>
+<p>Los operadores, al igual que en matemáticas, son símbolos del lenguaje que nos permiten realizar operaciones con uno o más datos. Existen distintos tipos de operadores con los que podemos trabajar. Utilizar unos u otros dependerá del tipo de los datos con los que vayamos a operar.</p>
+<p>Figura 16: Ejemplo del uso de operadores Aquí puedes ver una lista de los tipos de operadores de Python: • Operadores aritméticos. Ejemplos: +, -, *, /. • Operadores de asignación. Ejemplos: =, +=, *=. • Operadores de comparación. Ejemplos: &gt;, &gt;=, &lt;=, !=. • Operadores lógicos o booleanos. Ejemplos: and, or, not.</p>
+<p>• Operadores de cadenas. Ejemplos: +, -, *. • Operadores a nivel de bit: &gt;&gt;, xor. • Operadores de pertenencia: in, not in. • Operadores de identidad: is, is not. A lo largo del curso iremos conociendo muchos de los operadores que ofrece Python. Por último, cabe resaltar que ciertas expresiones pueden resultar ambiguas, por ello existe un orden de precedencia entre los tipos de operadores que indica qué operación debe ser evaluada antes que el resto.</p>
+<p>Escuela de programación - Python Elementos de un programa De mayor a menor precedencia encontramos el siguiente orden: operadores aritméticos, operadores a nivel de bit, operadores de pertenencia, operadores de identidad, operadores de comparación, operadores booleanos y operadores de asignación.</p>
+<p>Dentro de cada tipo de operadores también existe un orden de precedencia con respecto a sus operadores.</p>
+<h3>6. Fuentes de información</h3>
+<p>• Página oficial del lenguaje Python: https://www.python.org/ • Curso de Python 3 de José Domingo Muñoz: https://plataforma.josedomingo.org/pledin/cursos/python3/ • Curso de Python de Teachbeamers: https://www.techbeamers.com/ • Introducción a la programación con Python de Bartolomé Sintes Marco</p>
+<p>https://www.mclibre.org/consultar/python • Tipos de operadores en Python: https://j2logo.com/python/tutorial/operadores-en- python/ • «Curso de Programación en Python», José Luis Tomás Navarro.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/ut0001.html">⬅️ 0.1 Introducció a Python</a>
+<a class="page-nav-btn" href="../ut00/ut0003.html">0.3 Tipos de datos ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

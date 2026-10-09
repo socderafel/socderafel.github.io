@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>17.1 Tema 5. FORMULARIS — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT17 — BDA. Base de Datos. FORMULARIS</span>
+<h1>17.1 Tema 5. FORMULARIS</h1>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(239, 69, 64);">TEMA 5. FORMULARIS</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">TEMA</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">EXERCICIS FORMULARIS</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">VIDEOS</span></b><br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 11.1. Crear formularis</p><p><a href="https://www.youtube.com/watch?v=MB48IM9f9mI" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=MB48IM9f9mI) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 11.2. Controls en formularis</p><p><a href="https://www.youtube.com/watch?v=YeNYibwUZzo" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=YeNYibwUZzo) ↗️</strong></a></p></div>
+<hr/>
+<p>Tema 5</p>
+<p>M i c r o s o f t A C C E S S</p>
+<p>F O R M U L A R I O S</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Índice</p>
+<h4>CAPÍTULO 9: LOS FORMULARIOS</h4>
+<p>CREAR FORMULARIOS</p>
+<p>EL ASISTENTE PARA FORMULARIOS</p>
+<p>EDITAR DATOS DE UN FORMULARIO</p>
+<p>LA VISTA DISEÑO DE FORMULARIO</p>
+<p>LA PESTAÑA DISEÑO DE FORMULARIO</p>
+<p>TEMAS</p>
+<p>EL GRUPO CONTROLES</p>
+<p>SUBFORMULARIOS</p>
+<p>TRABAJAR CON CONTROLES</p>
+<p>ORGANIZAR Y AJUSTAR CONTROLES</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Capítulo 9: Los formularios</p>
+<p>Los formularios sirven para definir pantallas generalmente para editar los registros de una tabla o consulta.</p>
+<p>En esta unidad veremos cómo crear un formulario, manejarlo para la edición de registros y cambiar su diseño.</p>
+<p>Crear formularios</p>
+<p>Para crear un formulario tenemos varias opciones. Podemos acceder a todas ellas desde la pestaña Crear</p>
+<p> Formulario consiste en crear automáticamente un nuevo formulario que contiene todos los datos de la tabla, consulta o informe seleccionado en el Panel de Navegación.</p>
+<p> Diseño del formulario abre un formulario en blanco en la Vista Diseño y tenemos que ir incorporando los distintos objetos que queremos aparezcan en él. Este método no se suele utilizar ya que en la mayoría de los casos es más cómodo y rápido crear un autoformulario o utilizar el asistente y después sobre el formulario creado modificar el diseño para ajustar el formulario a nuestras necesidades. En esta unidad veremos más adelante cómo modificar el diseño de un formulario.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p> Formulario en blanco consiste en crear un nuevo formulario sin contenido, pero en vez de abrirse en Vista Diseño como la anterior opción, se abrirá en Vista Presentación. Esta vista ofrece ventajas, como poder incorporar datos simplemente arrastrando el objeto (consulta, informe, tabla...) desde el Panel de Navegación.</p>
+<p> Asistente para formularios utiliza un asistente que nos va guiando paso por paso en la creación del formulario.</p>
+<p> Navegación te permite crear un formulario dedicado a la navegación, que simula la estructura típica de menús de una página web. Podrás elegir entre seis diseños distintos.</p>
+<p> Más formularios despliega un menú con otros tipos de formularios disponibles, como gráfico dinámico, tabla dinámica, hoja de datos o el formulario dividido.</p>
+<p>El asistente para formularios</p>
+<p>Esta es la modalidad más sencilla y dirigida de creación de formularios.</p>
+<p>El asistente se inicia desde la pestaña Crear &gt; grupo Formularios &gt; botón Asistente para formulario. Esta es la primera ventana</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>En ella elegimos en qué tabla o consulta se basará el formulario y los campos que queremos incluir en él.</p>
+<p>Para elegir el origen (tabla o consulta), lo seleccionamos del desplegable superior. Si queremos sacar datos de más de una tabla lo mejor es crear una consulta previamente que convine los datos y luego crear el formulario sobre ella.</p>
+<p>A continuación seleccionamos los campos a incluir en el formulario haciendo clic sobre el campo y pulsando el botón o simplemente haciendo doble clic sobre el campo.</p>
+<p>Si nos hemos equivocado de campo pulsamos el botón y el campo se quita de la lista de campos seleccionados.</p>
+<p>Podemos seleccionar todos los campos a la vez haciendo clic sobre el botón o deseleccionar todos los campos a la vez haciendo clic sobre el botón .</p>
+<p>Una vez seleccionada la distribución que nos interesa pulsamos el botón Siguiente y aparece la siguiente pantalla</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>En esta pantalla elegimos la distribución de los datos dentro del formulario. Al seleccionar una opción de formato aparecerá a su izquierda el aspecto que tendrá el formulario con esa distribución. A continuación pulsamos el botón Siguiente&gt; y aparece la ventana que puedes ver a continuación...</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>En esta ventana el asistente nos pregunta el título del formulario, este título también será el nombre asignado al formulario.</p>
+<p>En anteriores versiones disponíamos de un paso previo que nos permitía incorporar cierto estilo utilizando las distintas opciones de diseño disponibles. En Office 2010 se opta por eliminar este aspecto estético en la propia creación del formulario. Será más adelante cuando lo manipularemos para incorporar estilos, utilizando los temas disponibles.</p>
+<p>Antes de pulsar el botón Finalizar podremos elegir entre</p>
+<p> Abrir el formulario para ver o introducir información en este caso veremos el resultado del formulario preparado para la edición de registros.</p>
+<p> o bien, Modificar el diseño del formulario, si seleccionamos esta opción aparecerá la vista Diseño de formulario donde podremos modificar el aspecto del formulario.</p>
+<p>Editar datos de un formulario</p>
+<p>Para editar datos de una tabla utilizando un formulario, debemos abrirlo haciendo doble clic en él, desde el Panel de navegación. También lo puedes abrir con el botón derecho del ratón, Seleccionando en el menú contextual.</p>
+<p>El formulario que has creado mostrará sus datos en la Vista Formulario.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Podemos a continuación buscar datos, reemplazar valores, modificarlos como si estuviéramos en la vista Hoja de datos de una tabla, desplazarnos a lo largo de la tabla utilizando la barra de desplazamiento por los registros que ya conocemos, lo único que cambia es el aspecto de la pantalla.</p>
+<p>La Vista Diseño de formulario</p>
+<p>La vista diseño es la que nos permite definir el formulario, en ella le indicamos a Access cómo debe presentar los datos del origen del formulario, para ello nos servimos de los controles que veremos más adelante.</p>
+<p>Para entrar en la vista diseño debemos buscar el formulario en el Panel de Navegación y hacer clic derecho sobre él para seleccionar la opción en el menú contextual. O bien abrirlo y luego cambiar la vista desde el botón que ya conocemos de la pestaña Inicio.</p>
+<p>Nos aparece la ventana Diseño de formulario</p>
+<p>El área de diseño consta de tres secciones</p>
+<p> La sección Encabezado de formulario, en ella ponemos lo que queremos que aparezca al principio del formulario.</p>
+<p> La sección Detalle, en ella aparecerán los registros del origen del formulario, o varios registros o uno</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>sólo por pantalla según el tipo de formulario. Aunque se visualicen varios registros en una pantalla, debemos indicar en la sección Detalle el diseño correspondiente a un sólo registro.</p>
+<p> La sección Pie de formulario, en ella ponemos lo que queremos aparezca al final del formulario.</p>
+<p>Podemos mostrar u ocultar el encabezado o el pie desde la opción Encabezado o Pie del formulario del menú contextual de los mismos.</p>
+<p>Alrededor del área de diseño tenemos unas reglas que nos permiten medir las distancias y los controles, también disponemos de una cuadrícula que nos ayuda a colocar los controles dentro del área de diseño.</p>
+<p>Para ver u ocultar las reglas o la cuadrícula tenemos las opciones Regla y Cuadrícula respectivamente, que también puedes ver en la imagen anterior del menú contextual del formulario.</p>
+<p>La pestaña Diseño de formulario</p>
+<p>En este apartado veremos las opciones más interesantes de la pestaña de Diseño que aparece cuando entramos en la Vista Diseño del formulario.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p> El primer botón que vemos está localizado en el grupo Vistas, y nos permite pasar de una vista a otra. Lo utilizaremos mucho.</p>
+<p>Si lo desplegamos podemos elegir entre Vista Diseño (la que estamos describiendo ahora) y laVista Formulario que nos presenta los datos del origen del formulario tal como lo tenemos definido en la vista diseño.</p>
+<p>Además disponemos de la Vista Presentación que nos permite trabajar casi del mismo modo en que lo hacemos con la Vista Diseño pero con las ventajas de la Vista Formulario, pues nos muestra a tiempo real los datos del formulario para que nos hagamos una idea aproximada de cómo será su aspecto final.</p>
+<p>También podremos acceder a las vistas Tabla dinámica, Hoja de datos y Gráfico dinámico, que ya hemos comentado.</p>
+<p> En el grupo Temas encontrarás herramientas para dar un estilo homogéneo al formulario. Lo veremos más adelante.</p>
+<p> En la parte central puedes ver el grupo Controles en el que aparecen todos los tipos de controles para que sea más cómodo añadirlos en el área de diseño como veremos más adelante. También encontramos algunos elementos que podemos incluir en el encabezado y pie de página.</p>
+<p> En el grupo Herramientas podrás encontrar el botón Agregar campos existentes entre otros, que hace aparecer y desaparecer el cuadro Lista de campos en el que aparecen todos los campos del origen de datos para que sea más cómodo añadirlos en el área de diseño como veremos más adelante.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Todo formulario tiene asociada una página de código en la que podemos programar ciertas acciones utilizando el lenguaje VBA (Visual Basic para Aplicaciones), se accede a esta página de código haciendo clic sobre el botón</p>
+<p>Temas</p>
+<p>Un tema es un conjunto de formatos que conforman el estilo general que presenta un formulario. Engloba los colores, la fuente y los distintos efectos que utilizará por defecto. Si cambias el tema, no lo cambiarás únicamente al formulario en cuestión, sino a todos ellos. Ésto no implica que no se pueda personalizar alguno de sus elementos de forma independiente, de hecho podemos hacerlo con las herramientas de la pestaña Formato.</p>
+<p>Para cambiar el tema nos situaremos en la pestaña Diseño de lasHerramientas de diseño de formulario, en el grupo Temas.</p>
+<p>Desde el botón Temas, podremos seleccionar de una amplia lista el que más nos guste.</p>
+<p>En anteriores versiones no existían los temas, sino que en el momento de la creación del formulario se utilizaban unas plantillas con un estilo determinado. El concepto es similar, con la ventaja de que los temas son más flexibles.</p>
+<p>Si habilitamos las actualizaciones de contenido de Office.com, Access se conectará con la página web de Microsoft para adquirir más temas cuando éstos estén disponibles.</p>
+<p>Podemos crear nuestro propio tema. Si establecemos los estilos con los colores de nuestra empresa, por ejemplo, podemos pulsar Guardar tema actual... para conservarlo y utilizarlo en otros formularios. Para recuperar un tema personalizado y aplicarlo a nuestro libro, haremos clic en Buscar temas... y lo buscaremos entre las carpetas de nuestro equipo, allá donde lo hayamos guardado.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Si hay un tema que se aproxima a lo que buscas, pero no es exactamente lo que desearías, puedes cambiar alguno de sus aspectos mediante los botones Colores y Fuentes.</p>
+<p>El grupo Controles</p>
+<p>Para definir qué información debe aparecer en el formulario y con qué formato, se utilizan lo que llamamos controles. Un control no es más que un objeto que muestra datos, realiza acciones o se utiliza como decoración. Por ejemplo, podemos utilizar un cuadro de texto para mostrar datos, un botón de comando para abrir otro formulario o informe, o una línea o un rectángulo para separar y agrupar controles con el fin de hacerlos más legibles.</p>
+<p>En el grupo Controles de la pestaña Diseño tenemos un botón por cada tipo de controles que se pueden añadir al formulario. Puedes verlos todos pulsando la flecha inferior derecha del recuadro que los contiene</p>
+<p>Cuando queremos crear varios controles del mismo tipo podemos bloquear el control haciendo clic con el botón secundario del ratón sobre él. En el menú contextual elegiremos Colocar varios controles.</p>
+<p>A partir de ese momento se podrán crear todos los controles que queramos de este tipo sin necesidad de hacer clic sobre el botón correspondiente cada vez. Para quitar el bloqueo hacemos clic sobre el botón o volvemos a seleccionar la opción del menú contextual para desactivarla.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>El botón activará o desactivará la Ayuda a los controles. Si lo tenemos activado (como en la imagen) al crear determinados controles se abrirá un asistente para guiarnos.</p>
+<p>Tipos de controles</p>
+<p>Icono Control Descripción</p>
+<p>Seleccionar Vuelve a dar al cursor la funcionalidad de selección, anulando cualquier otro control que hubiese seleccionado.</p>
+<p>Cuadro de texto Se utiliza principalmente para presentar un dato almacenado en un campo del origen del formulario. Puede ser de dos tipos: dependiente o independiente.</p>
+<p>El cuadro de texto dependiente depende de los datos de un campo y si modificamos el contenido del cuadro en la vista Formulario estaremos cambiando el dato en el origen. Su propiedadOrigen del control suele ser el nombre del campo a la que está asociado. - El cuadro de texto independiente permite por ejemplo presentar los resultados de un cálculo o aceptar la entrada de datos. Modificar el dato de este campo no modifica su tabla origen. Su propiedad Origen del control será la fórmula que calculará el valor a mostrar, que siempre irá precedida por el signo =.</p>
+<p>Etiqueta Sirve para visualizar un texto literal, que escribiremos directamente en el control o en su propiedadTítulo.</p>
+<p>Botón Al pulsarlo se ejecutará la acción que se le indique,tanto acciones personalizadas como acciones predefinidas de entre las más de 30 disponibles en su asistente.</p>
+<p>Control depestaña Permite organizar la información a mostrar enpestañas distintas.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Hipervínculo Para incluir un enlace a una página web, un correo electrónico o un programa.</p>
+<p>Control de explorador web Permite incrustar una página web en el formulario, indicando su dirección.</p>
+<p>Control de navegación Inserta en el formulario un objeto que facilita la navegación por él. Tiene el mismo efecto que crear directamente un formulario de tipo Navegación.</p>
+<p>Grupo de opciones Permite delimitar una serie de opciones disponiblesque guardan una relación entre sí. Por ejemplo el grupo Género que podría englobar las opciones Hombre y Mujer. Se recomienda utilizarlo cuando no haya muchas opciones. Si son más es preferible ahorrar espacio con cuadros de lista o combinados.</p>
+<p>Se definen sus opciones mediante un asistente.</p>
+<p>Insertar salto de línea No tiene efecto en la Vista Formulario pero sí en la Vista Preliminar y a la hora de imprimir.</p>
+<p>Cuadro combinado Es una lista de posibilidades entre las que el usuario puede escoger si la despliega. Se definen sus opciones mediante un asistente.</p>
+<p>Gráfico Representación gráfica de datos que ayuda a su interpretación de forma visual.</p>
+<p>Línea Permite dibujar líneas en el formulario, para ayudar a organizar la información.</p>
+<p>Botón de alternar Se suele utilizar para añadir una nueva opción a un grupo de opciones ya creado. También se puede utilizar para presentar un campo de tipo Sí/No, si el campo contiene el valor Sí, el botón aparecerá presionado.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Cuadro de lista A diferencia del cuadro combinado, la lista de valores aparece desplegada en todo momento. Esto favorece la posibilidad de seleccionar más de una opción a la vez. Al igual que los cuadros combinados un cuadro de lista puede tener una o más columnas, que pueden aparecer con o sin encabezados. Se define mediante un asistente.</p>
+<p>Rectángulo Permite dibujar rectángulos en el formulario, paraayudar a organizar la información.</p>
+<p>Casilla de verificación Se suele utilizar para añadir una nueva opción a un grupo de opciones ya creado, o para presentar un campo de tipo Sí/No. Si el campo contiene el valor Sí, la casilla tendrá este aspecto , sino este otro .</p>
+<p>Marco de objeto independiente Para insertar archivos como un documento Word, una hoja de cálculo, etc. No varian cuando cambiamos de registro (independientes), y no están en ninguna tabla de la base.</p>
+<p>Datos adjuntos Esta es la forma más moderna y óptima de incluir archivos en un formulario. Equivale a los marcos de objeto, solo que Datos adjuntos está disponible para las nuevas bases hechas en Access 2007 o versiones superiores (.accdb) y los marcos pertenecen a las versiones anteriores (.mdb).</p>
+<p>Botón de opción Se suele utilizar para añadir una nueva opción a un grupo de opciones ya creado, o para presentar un campo de tipo Sí/No. Si el campo contiene el valor Sí, el botón tendrá este aspecto , sino, este otro .</p>
+<p>Subformulario/ Subinforme Para incluir un subformulario o subinforme dentro del formulario. Un asistente te permitirá elegirlo. En versiones anteriores un formulario no podía incluir un subinforme, en este aspecto se ha mejorado.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Marco de objeto dependiente Para insertar archivos como un documento Word, una hoja de cálculo, etc. Varian cuando cambiamos de registro (dependientes), porque se encuentran en una tabla de la base. Ejemplos: La foto o el currículum de una persona, las ventas de un empleado, etc.</p>
+<p>Imagen Permite insertar imágenes en el formulario, que no dependerán de ningún registro. Por ejemplo, el logo de la empresa en la zona superior.</p>
+<p>Por último podemos añadir más controles, controles más complejos con el botón</p>
+<p>Subformularios</p>
+<p>Como hemos visto, existe un control para insertar un subformulario dentro del formulario principal . Una combinación formulario/subformulario se llama a menudo formulario jerárquico, formulario principal/detalle o formulario principal/secundario.</p>
+<p>Los subformularios son muy eficaces cuando se desea mostrar datos de tablas o consultas con una relación uno a varios. Por ejemplo, podemos crear un formulario para mostrar los datos de la tabla Cursos con un subformulario para mostrar los alumnos matriculados en cada curso.</p>
+<p>El formulario principal y subformulario de este tipo de formularios están vinculados para que el subformulario presente sólo los registros que están relacionados con el registro actual del formulario principal (que el subformulario presente sólo los alumnos matriculados en el curso activo).</p>
+<p>Trabajar con controles</p>
+<p>Seleccionar controles Para seleccionar un control basta hacer clic sobre él. Cuando un control está seleccionado aparece rodeado de cuadrados que llamaremos controladores de movimiento (los más grandes) y controladores de tamaño (los más pequeños) como vemos en la siguiente imagen</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>A veces puede resultar un poco complicado seleccionar controles porque, o bien son demasiado pequeños o finos (como en el caso de las líneas), o porque se encuentran solapados. En estos casos es muy útil utilizar la lista desplegable de selección de controlesque se encuentra en la parte superior de la Hoja de Propiedades que puedes mostrar haciendo clic en el botón Hoja de Propiedades en la pestaña Diseño.</p>
+<p>Seleccionar un control de esta forma es muy sencillo, solo tienes que desplegar la lista y seleccionar el control que te interesa.</p>
+<p>Para seleccionar varios controles, mantener pulsada la tecla CTRL y hacer clic en cada uno de los controles a seleccionar sobre el formulario.</p>
+<p>Si queremos seleccionar varios controles contiguos hay una forma más rápida: pulsar el botón izquierdo del ratón sobre el fondo del área de diseño y sin soltarlo arrastrarlo, vemos que aparece dibujado en el área de diseño un cuadrado, cuando soltemos el botón del ratón, todos los controles que entren en ese cuadrado quedarán seleccionados (no hace falta que el control se encuentre completamente dentro del cuadrado).</p>
+<p>Añadir controles Para añadir al formulario un nuevo campo del origen, deberás abrir la Lista de campos haciendo clic en el botón Agregar campos existentes en la pestaña Diseño.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>En esta ventana aparecen todos los campos del origen del formulario. A continuación hacer clic sobre el campo a añadir y sin soltar el botón del ratón arrastrar el campo en el área del formulario hasta el lugar donde queremos que aparezca el campo. Access creará automáticamente una etiqueta con el nombre del campo, y un cuadro de texto asociado al campo.</p>
+<p>También podremos añadir campos de otras tablas distintas a la de origen.</p>
+<p>Si queremos añadir otro tipo de control, como por ejemplo una imagen, utiliza la sección Controles y campos que hemos visto en el apartado anterior, lo encontrarás en la pestaña Diseño. Haz clic sobre el tipo de control que queremos añadir, verás que el cursor ha tomado otra forma, ahora nos posicionamos en el área del formulario donde queremos definir el control, apretamos el botón izquierdo del ratón y manteniéndolo apretado arrastramos el ratón hasta dejar el control del tamaño deseado.</p>
+<p>Copiar controles</p>
+<p>Copiar controles es muy rápido y útil si deseas introducir varios contorles de un mismo tipo. Sólo tienes que seleccionar el control a duplicar y hacer clic en el botón Copiar de la pestaña Inicio (también puedes utilizar la combinación de teclas Ctrl+C). Luegopégalos en el formulario utilizando el botón Pegar de la pesaña Inicio o la combinación de teclas Ctrl+V.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Este método te ayudará a crear rápidamente varios controles de un mismo tipo. Es especialmente útil si ya le has dado un tamaño personalizado al control y quieres que el resto sean idénticos.</p>
+<p>Ten en cuenta que cuando un control es duplicado, su copia aparece con un nombre diferente. Puedes modificar este nombre desde sus Propiedades, si tienes abierto el panel o desde su menú contextual.</p>
+<p>Mover un control Para mover un control de sitio, haz clic sobre él para seleccionarlo y arrástralo. Deberás hacerlo cuando el cursor tenga la siguiente forma: . De esa forma moverás tanto el propio control como su etiqueta asociada. Si lo que quieres hacer es mover únicamente un elemento (bien la etiqueta, bien el control que representa el dato) deberás hacer lo mismo pero situándote justo sobre el cuadro gris de la esquina superior izquierda.Así, lo moverás de forma independiente.</p>
+<p>Para mover varios controles a la vez, seleccionarlos y mover uno de ellos: se moverán todos.</p>
+<p>Cambiar el tamaño de los controles. Para cambiar el tamaño de un control hay que seleccionarlo para que aparezcan los controladores de tamaño. A continuación mover el ratón encima de uno de los controladores de tamaño, cuando el puntero toma la forma de una flecha doble pulsar el botón izquierdo del ratón y sin soltarlo arrastrarlo hasta que el control tome el tamaño deseado.</p>
+<p>Para cambiar el tamaño de varios controles a la vez, seleccionarlos y cambiar el tamaño de uno de ellos, se cambiarán todos.</p>
+<p>Organizar y ajustar controles</p>
+<p>Hemos visto cómo cambiar el tamaño y mover los controles de forma manual, pero existen otras formas de hacerlo.</p>
+<p>Vamos a ver las opciones disponibles en la pestaña Organizar.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p>Elegir la distribución de los datos</p>
+<p>Desde el grupo Tabla, podemos elegir si queremos que el formulario organice sus controles de forma apilada o tabular. Para poder utilizar los botones, deberás seleccionar previamente los controles a los que quieras aplicar la distribución. Normalmente serán todos ellos.</p>
+<p> Apilado coloca un campo bajo el otro, con la etiqueta a la izquierda y el dato a la derecha. Por lo tanto, cada registro estará en una página independiente y tendremos que ir utilizando los botones para ir atrás y adelante en los registros.</p>
+<p> Tabular, en cambio, coloca las etiquetas en la zona superior y bajo ella todos los campos organizados por columnas, de forma que cada fila es un registro distinto.</p>
+<p>Al utilizar estas distribuciones, los controles quedan bloqueados. No podrás moverlos a placer o cambiar su tamaño de forma individualizada. Estas restricciones nos aseguran que no romperemos el esquema perfectamente alineado que Access crea. Si quieres ser libre de modificarlo, deberás pulsar el botón Quitar diseño.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p> Para alinear varios controles, podemos moverlos uno a uno guiándonos por la cuadrícula, pero tenemos una opción que nos permite realizar de forma más cómoda esta tarea</p>
+<p>Seleccionamos los controles a alinear y, en el grupo Tamaño y orden, pulsamos sobre Alinear. Se desplegará un menú con distintas opciones</p>
+<p> A la cuadrícula alineará los controles seleccionados en el formulario guiándose por la cuadrícula. Es decir, podremos alinear un único control o varios a la vez.</p>
+<p>Izquierda, derecha, arriba y abajo, alineará los controles de forma relativa. Es decir, si seleccionamos por ejemplo dos controles situados a distinta altura y pulsamos Arriba, ambos se situarán a la misma altura que el más alto de ellos. Por ello, no se pueden utilizar estas opciones si hay un único control seleccionado.</p>
+<p>Desde los botones Traer al frente y Enviar al fondo podemos controlar la situación del control en términos de profundidad. Por ejemplo, si incluimos un control de imagen, podríamos situarla detrás de (al fondo) otros controles, como un botón o una etiqueta.</p>
+<p>Utiliza las opciones del grupo Tamaño y orden para ajustar el tamaño y espaciado de los controles.</p>
+<p>Se procede de la misma forma que para alinear controles, seleccionamos los controles que queremos ajustar y pulsamos Tamaño y espacio. Luego, hay que elegir la opción que más nos interesa</p>
+<p>Con respecto al Tamaño de cada uno de los controles</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p> Ajustar, hace el control lo suficientemente grande para que quepa todo su contenido.  A la cuadrícula: ajusta a la cuadrícula.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<p> Ajustar al más alto, al más corto, al más ancho y al más estrecho: todos los controles toman la altura del más o menos alto, o la anchura del más o menos ancho, respectivamente. Con respecto al Espaciado que existe entre un control y otro</p>
+<p> Igualar horizontal e Igualar vertical: mantiene la misma separación, ya sea horizontal o vertical, entre los controles. Para que esto tenga sentido, deberá haber seleccionados como mínimo tres controles, de modo que si A y B tienen un espaciado determinado, B y C tengan el mismo.</p>
+<p> Aumentar horizontal, Disminuir horizontal y sus homólogos para el vertical, lo que hacen es ir haciendo mayor o menor el espaciado de todos los controles seleccionados. Cuando queremos alinear y dejarlos del mismo tamaño es preferible primero ajustar el tamaño y después alinearlos porque a veces al cambiar la anchura se pierde la alineación.</p>
+<p>En el grupo Posición se puede ajustar el margen de los controles que seleccionamos.</p>
+<p>Desde la opción Márgenes de control, podremos elegir entre unos márgenes predefinidos: Ninguno, Estrecha, Medio, Ancha.</p>
+<p>Utiliza la opción Delimitación para enlazar dos controles diferentes, de modo que si modificas uno el otro se actualice para cuadrar con el primero.</p>
+<p>Además de todas estas opciones, tenemos que tener en cuenta que Access 2010 incorpora una plantilla que facilita la colocación de los controles. Al arrastrar un control, éste tenderá a autoajustarse. Ésto significa que mantendrá la separación entre controles, posición, tamaño y espaciado adecuados al formulario.</p>
+<p>Si movemos el control de una columna a otra, se coloreará el espacio que va a ocupar</p>
+<p>Y si tratamos de intercalar el control entre otros controles ya existentes, una línea mostrará su nueva localización y al soltar se ajustará la estructura.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: Hemos ocultado la cuadrícula para que el ejemplo ...</p><p>Nota: Hemos ocultado la cuadrícula para que el ejemplo sea más claro, pero evidentemente estamos en la Vista Diseño.</p></div>
+<p>En ocasiones no te interesará que se coloque donde Access elige, en tal caso elige Quitar diseño y colócalo a tu gusto, a mano o con las opciones vistas anteriormente.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut17/index.html">⬅️ 📘 UT17 Completa</a>
+<a class="page-nav-btn" href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

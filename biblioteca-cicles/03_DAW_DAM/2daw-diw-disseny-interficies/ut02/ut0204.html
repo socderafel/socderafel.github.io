@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.4 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE — Disseny d'Interfícies Web | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🎨 Disseny d'Interfícies Web — 2n DAW · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Disseny d'Interfícies Web</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació del curs</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 DIAPOSITIVAS SECCIÓN 1: ELEMENTOS DEL DISEÑO</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Enlaces interesantes UD1 Sección 1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 !! ACTUALIZACIÓN!! DIAPOSITIVAS SECCIÓN 1: ELEME</a></li>
+<li><a href="../ut01/ut0104.html">1.4 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB</a></li>
+<li><a href="../ut01/ut0105.html">1.5 DIAPOSITIVAS UD 1 SECCIÓN 3</a></li>
+<li><a href="../ut01/ut0106.html">1.6 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — USO DE ESTILOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A</a></li>
+<li><a href="../ut02/ut0202.html">2.2 DIW: SOLUCIONES EJERCICIOS PLANTEADOS EN LAS DIA</a></li>
+<li><a href="../ut02/ut0203.html">2.3 TEORÍA CSS PROPIEDAD DISPLAY</a></li>
+<li><a class="active" href="../ut02/ut0204.html">2.4 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE</a></li>
+<li><a href="../ut02/ut0205.html">2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO</a></li>
+<li><a href="../ut02/ut0206.html">2.6 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — EXAMEN 1ª AVALUACIÓ UD1 UD2</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — ACCESIBILIDAD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1</a></li>
+<li><a href="../ut04/ut0402.html">4.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — BOOTSTRAP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 DIW INTRODUCCIÓN A BOOTSTRAP5</a></li>
+<li><a href="../ut05/ut0502.html">5.2 PROPIEDAD FLEX DE BOOTSTRAP5</a></li>
+<li><a href="../ut05/ut0503.html">5.3 FICHERO INDEX_EJ6</a></li>
+<li><a href="../ut05/ut0504.html">5.4 FICHERO BASE DISEÑO TARJETAS BOOTSTRAP5</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — IMPLANTACIÓN DE CONTENIDO MULTIMEDIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 SECCIÓN 1: IMÁGENES Y LA LEY DE PROPIEDAD INTELE</a></li>
+<li><a href="../ut06/ut0602.html">6.2 DIW: Conceptos básicos de fotografía digital</a></li>
+<li><a href="../ut06/ut0603.html">6.3 SECCIÓN 2: SONIDO Y VÍDEO</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — USABILIDAD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n DAW · Grau Superior · UT2 — USO DE ESTILOS</span>
+<h1>2.4 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE</h1>
+<p>Docente: Marc Salom SECCIÓN 1: INTRODUCCIÓN A CSS SECCIÓN 2: PROPIEDADES DE FUENTE Y TEXTO SECCIÓN 3: LOS COLORES Y LOS FONDOS SECCIÓN 4: FLOTAR Y POSICIONAR SECCIÓN 5: TABLAS</p>
+<h3>UNIDAD 2: USO DE ESTILOS</h3>
+<p>S2. PROPIEDADES DE FUENTE Y TEXTO</p>
+<h3>1. Medidas</h3>
+<h3>2. Propiedades de fuente</h3>
+<h3>3. Propiedades de texto</h3>
+<p>Absolutas: su valor no depende de otro valor de referencia.</p>
+<ul>
+<li>in, pulgadas ("inches", en inglés). Una pulgada equivale a</li>
+</ul>
+<p>2.54 centímetros.</p>
+<ul>
+<li>cm, centímetros.</li>
+<li>mm, milímetros.</li>
+<li>pt, puntos. Un punto equivale a 1 pulgada/72, es decir, unos</li>
+</ul>
+<p>0.35 milímetros.</p>
+<ul>
+<li>pc, picas. Una pica equivale a 12 puntos, es decir, unos</li>
+</ul>
+<p>4.23 milímetros. S2. PROPIEDADES DE FUENTE</p>
+
+<p>Unidades de TICsc</p>
+<p>Relativas: no están completamente definidas, ya que su valor siempre está referenciado respecto a otro valor.</p>
+<ul>
+<li>em, relativa al font-size del elemento</li>
+<li>px, (píxel) relativa respecto de la resolución de la pantalla</li>
+</ul>
+<p>del dispositivo en el que se visualiza la página HTML. La unidad em y rem hace referencia al tamaño en puntos de la letra que se está utilizando. Si se utiliza una tipografía de 12 puntos, 1em equivale a 12 puntos. En una pagina html el font-size por defecto es de 16px.</p>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<ul>
+<li>rem, relativa al font-size del root element</li>
+</ul>
+<p>Porcentajes: Un porcentaje está formado por un valor numérico seguido del símbolo % y siempre está referenciado a otra medida. Los porcentajes se pueden utilizar por ejemplo para establecer el valor del tamaño de letra de los elementos: html { font-size: 62.5%; } o html {font-size: 100%}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">HTML</span>
+</div>
+</div>
+<pre><code>1 rem=10px;
+1 rem=16px;
+1.5 rem= 15px;
+1.5 rem= 24px;</code></pre>
+</div>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>Unidades de TICsc</p>
+<p>Las propiedades de las fuentes en CSS son usadas para configurar la apariencia deseada para el texto de un documento.</p>
+<ul>
+<li>font-family</li>
+<li>font-size</li>
+<li>font-weight</li>
+<li>font-style</li>
+<li>font-variant</li>
+</ul>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>Font-family: se utiliza para indicar el tipo de letra con el que se muestra el texto. El tipo de letra del texto se puede indicar de dos formas diferentes</p>
+<ul>
+<li>Mediante el nombre de una familia tipográfica: "Arial",</li>
+</ul>
+<p>"Verdana", “Garamond"</p>
+<ul>
+<li>Mediante el nombre genérico de una familia tipográfica: serif</li>
+</ul>
+<p>(tipo de letra similar a Times New Roman), sans-serif (tipo Arial), cursive (tipo Comic Sans), fantasy (tipo Impact) y monospace (tipo Courier New) —&gt;“Utiliza la fuente que más se parezca a la seleccionada de todas las que tiene instaladas el usuario" CSS permite indicar en la propiedad font-family más de un tipo de letra.</p>
+<p>El navegador probará en primer lugar con el primer tipo de letra indicado. S2. PROPIEDADES DE FUENTE</p>
+
+<p>Font-family: S2. PROPIEDADES DE FUENTE</p>
+
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>Font-family: Las listas de tipos de letra más utilizadas son las siguientes: font-family: Arial, Helvetica, sans-serif; font-family: "Times New Roman", Times, serif; font-family: "Courier New", Courier, monospace; font-family: Georgia, "Times New Roman", Times, serif; font-family: Verdana, Arial, Helvetica, sans-serif;</p>
+<p>Font size: CSS permite utilizar una serie de palabras clave para indicar el tamaño de letra del texto: CSS recomienda indicar el tamaño del texto</p>
+<ul>
+<li>en la unidad rem</li>
+<li>en porcentaje (%)</li>
+</ul>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>Font-weight: Controla la anchura de la letra. Los valores que normalmente se utilizan son normal (el valor por defecto) y bold para los textos en negrita. S2. PROPIEDADES DE FUENTE</p>
+
+<p>#especial em { font-weight: bold; } #especial strong { font-weight: normal; background-color: #FFFF66; padding: 2px; }</p>
+<p>Font-style: Normalmente se emplea para mostrar un texto en cursiva mediante el valor italic. S2. PROPIEDADES DE FUENTE</p>
+
+<p>#especial strong { font-weight: normal; font-style: italic; background-color:#FFFF66; padding: 2px; }</p>
+<p>Font-variant Este tipo de fuente convierte todas las letras de minúsculas a mayúsculas, aunque establece un tamaño de letra mayúscula de menor tamaño que el original. S2. PROPIEDADES DE FUENTE</p>
+
+<p>Las propiedades de texto permiten aplicar estilos a los textos espaciando sus palabras o sus letras, decorándolo, alineándolo, o transformándolo. Algunas de estas propiedades son</p>
+<ul>
+<li>text-align</li>
+<li>line-height</li>
+<li>text-decoration</li>
+<li>text-transform</li>
+<li>text-indent</li>
+<li>letter-spacing</li>
+</ul>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>text-align: Es la propiedad que define la alineación del texto. Los valores tradicionales: a la izquierda (left), a la derecha (right), centrado (center) y justificado (justify). S2. PROPIEDADES DE FUENTE</p>
+
+<p>line-height: Es la propiedad que permite controlar la altura ocupada por cada línea de texto: Se puede utilizar unidades de medida, uso de porcentajes e indicar un número sin unidades (se interpreta como el múltiplo del tamaño de letra del elemento) para asignarle un valor a la propiedad.</p>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>p { line-height: 1.2; font-size: 1em } p { line-height: 1.2em; font-size: 1em } p { line-height: 120%; font-size: 1em }</p>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>line-height</p>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>line-height</p>
+<p>text-decoration: Esta propiedad puede tomar los siguientes valores</p>
+<ul>
+<li>underline subraya el texto</li>
+<li>overline: añade una línea en la parte superior del texto</li>
+<li>line-through: muestra el texto tachado con una línea</li>
+</ul>
+<p>continua</p>
+<ul>
+<li>blink: muestra el texto parpadeante</li>
+</ul>
+<p>S2. PROPIEDADES DE FUENTE</p>
+
+<p>text-transform: Esta propiedad permite mostrar el texto original transformado en un texto</p>
+<ul>
+<li>completamente en mayúsculas (uppercase)</li>
+<li>minúsculas (lowercase)</li>
+<li>con la primera letra de cada palabra en mayúscula</li>
+</ul>
+<p>(capitalize) S2. PROPIEDADES DE FUENTE</p>
+
+<p>text-indent: Esta propiedad permite tabular la primera línea de cada párrafo para facilitar su lectura. Se puede especificar con una unidad de medida o con un porcentaje. S2. PROPIEDADES DE FUENTE</p>
+
+<p>text-indent: S2. PROPIEDADES DE FUENTE</p>
+
+<p>letter-spacing y word-spacing: Permiten controlar la separación entre las letras que forman las palabras y la separación entre las palabras que forman los textos. S2. PROPIEDADES DE FUENTE</p>
+
+<p>.especial h1 { letter-spacing: .2em; } .especial p { word-spacing: .5em; }</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0203.html">⬅️ 2.3 TEORÍA CSS PROPIEDAD DISPLAY</a>
+<a class="page-nav-btn" href="../ut02/ut0205.html">2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

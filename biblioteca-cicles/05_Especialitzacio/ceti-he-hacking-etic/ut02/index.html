@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT2 — Unitat Didàctica 2 — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🕵️ Hacking Ètic i Auditoria de Seguretat — CE Ciberseguretat (CETI)</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Hacking Ètic i Auditoria de Seguretat</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Chat general</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Programación del módulo</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Contenidos y criterios de evaluación</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Presentación del módulo</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Accesibilidad</a></li>
+<li><a href="../ut00/ut0006.html">0.6 guia para aprender a programar</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Primera evaluación</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Segunda evaluación</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Tercera evaluación</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Elementos esenciales del HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 HE 1</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Prácticas tema 1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 tema1</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 tema2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Auditories</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Material adicional</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Material adicional 2</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Footprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Footprinting con Google</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Footprinting con Bing</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Footprinting con Shodan</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Footprint</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Fingerprint</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Introducción al Fingerprinting</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Nmap</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Fingerprinting</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Presentación fingerprint</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Enumeración con nmap</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Scripts amb nmap</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Auditorias de seguridad con Wireshark</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Wireshark</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Auditorias de seguridad utilizando hping</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Auditorias utilizando hping3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Contratos pretesting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Creación de contratos</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Fase de análisis</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 analisi</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Nessus</a></li>
+<li><a href="../ut09/ut0903.html">9.3 practiques</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Ejercicios Fingerprinting</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Ingenieria social</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Ingenieria social</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Introducción</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Pentesting web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Pentesting web</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Robots de Búsquedas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Continguts i Recursos</a></li>
+<li><a href="../ut14/ut14actividades.html">✍️ Activitats pràctiques UT14</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Riesgos laborales en el entorno de HE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut15actividades.html">✍️ Activitats pràctiques UT15</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — Explotación de vulnerabilidades</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Explotación</a></li>
+<li><a href="../ut16/ut1602.html">16.2 Metasploit</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — -------</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut17actividades.html">✍️ Activitats pràctiques UT17</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE Ciberseguretat (CETI) · UT2 Completa</span>
+<h1>📘 UT2 — Unitat Didàctica 2 (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0201"><strong>2.1 tema2</strong></a> (o <a href="./ut0201.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut02actividades"><strong>✍️ Activitats pràctiques UT2</strong></a> (o <a href="./ut02actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0201">2.1 tema2</h2>
+<div class="admonition tip"><p class="admonition-title">📌 Introducció de la Unitat</p><p dir="ltr">Donats els següents conceptes</p><ol><li>Hacking</li><li>Hacker ètic</li><li>Pentesting</li><li>Hacktivisme</li></ol><div>Realitza les següents activitats:</div><div><ol><li>Defineix els termes</li><li>Quina diferència hi ha entre els diferents termes</li><li>Creus que tots els termes anteriors estan relacionats amb la informàtica o la cibertecnologia?</li></ol></div><br/></div>
+<hr/>
+<p>Determinació de les eines de monitorització per detectar vulnerabilitats Tema 2.- Proves de penetració i hacktivisme Alicia Ferrando Tamarit Introducció Podem anomenar “pentest” o test d’intrusió a una prova de seguretat ofensiva que simula un ciber atac real en un entorn controlat.</p>
+<p>L’objectiu principal d’este tipus de proves es identificar les posibles fallades en la seguretat d’un sistema de manera que, al simular el comportament dels atacants reals, podrem descubrir vulnerabilitats i forats de seguretat que necessiten ser corregíts per a que no siguen explotats per part d’atacants reals, A l’hora de buscar vulnerabilitats durant un pentest cal cobrir totes les parts posibles d’un sistema tenint en compte quins métodes d’intrusió van a emprar els atacants.</p>
+<p>Els métodes d’intrusió més habituals emprats pels atacants sòn: ✓Instalació de malware, virus, troians o keyloggers ✓Explotació de portes traseres ✓Accés als sistemes aprofitant una mala configuració ✓Emprar tècniques d’ingenieria social per colar arxius no desitjats o obrir portes traseres Els test d’intrusió sòn la forma de hacking ètic en la que no s’actua al marge de la lei ja que hi ha llimits legals que son pactats entre la entitat u organització que solicita este tipus de servici i la empresa que els realitza.</p>
+<p>L’objectiu d’un pentester és coneixer tota la infraestructura de la empresa, de tal manera que pugam mostrar tot el mal que els ciberdelincuents podrien arribar a causar a la companyia i arreglar estes vies d’entrada per a que no passe. Principalment este fet és el que distingueix un Pentest d’una auditoria.</p>
+<p>El pentesting no sols detecta les fallades en la seguretat o les corresponents vulnerabilitats, sino que les explota Mostra les posibles formes d’accés a una companyia dent-se passar com a ciberdelincuents per poder corregir les fallades trovades i explotades. És imprescindible estar al dia en questions tecnològiques.</p>
+<p>Un pentest és una terapia de xoc a les companyies per a que puguen entendre millor la situació actual del seu negoci i el que poden arribar a pedre si el atac fora real. És important invertir en un test d’intrusió programat ja que, com es sol dir, les auditories o les fas o te les fan..</p>
+<p>Fases d’un pentesting (1) Reconeiximent Fase principal en la que recollim tota la informació posible, emprant diferents tècniques com: ✓Recopilació de dominios / IPs/ ports/ servicis ✓Recopilació de metadades ✓Ús de Google Doks ✓Recopilació d’informació gràcies a servicis de tercers (2) Anàlisi de vulnerabilitats En esta fase analitzarem la informació recopilada en la fase anterior i el descubriment de les vulnerabilitats.</p>
+<p>Amb la informació que tenim, intentarem buscar CVEs (Common Vulnerabilities and Exposures) coneguts i/o fàcils d’explotar (3) Explotació La fase d’explotació consisteix en realitzar totes les accions que puguen comprometre al sistema auditat, als usuaris o a la informació que utilitza.</p>
+<p>Generalment es comprova que no es puguen realitzar atacs dels següents tipus</p>
+<p>✓Injecció de codi ✓Inclusió de arxius locals o remots ✓Evasió d’autentificació ✓Carència de controls d’autorització ✓Execució de comandaments en el servidor ✓Atacs tipus Cross Site Request Forgery ✓Control d’errors ✓Gestió de sessions ✓Fugues d’informació ✓Secuestros de sessió ✓Comprovació de les condicions per realitzar una denegació de servici ✓Càrrega de arxius maliciosos Estos tipus d’atac es realitzen adaptant totes les técniques i tecnologies .</p>
+<p>(4) Post explotació En el cas de trovar una vulnerabilitat que permeta realitzar altres accions en el sistema o en el seu entorn, es realitzaran controls adicionals amb l’objectiu de comprobar el nivell de perillositat. Atenent a una vulnerabilitat concreta i les posibilitats que esta permeta, s’intentara realitzar les següents accions post-explotació</p>
+<p>✓Obtindre informació confidencial ✓Evasió de mecanismes d’autentificació ✓Realitzar accions com usuari ✓Realitzar accions o ejecutar comandaments en el servidor on esta la aplicació ✓Accés al servidor i us dels seus privilegis</p>
+<p>✓Accedir a altres sistemes o servicis accesibles des d’una aplicació compromesa ✓Posibilitat d’impersonalització de l’usuari ✓Realitzar accions amb el consentiment i sense el consentiment dels usuaris La posibilitat d’encadenar distintes vulnerabilitats per a conseguir un accés de major nivell o per a evadir els controls de seguretat també caldrà que es valore a l’hora de realitzar un Anàlisi de riscos..</p>
+<p>(5) Informes L’última part d’un test d’intrusió sera realitzar un resumen informatiu, és a dir, un document de com ha anat el test d’intrusió), on s’inclouran totes les vulnerabilitats trovades i tot allò que podríen aprofitar els atacants. També cal incloure un document on es recopile tota la informació recopilada en la prova. Ho podem considerar com una prova de tota la informació que podría recopilar un atacant.</p>
+<p>Per últim, si s’ha pactat, cal incloure un informe amb les contramesures per a resoldre o mitigar els problemes.. Modalidades de Pentest Caja Negra En esta modalitat no es te coneiximent de la infraestructura del client. Es simula un atac des d’el exterior per part d’un atacant sense coneiximent sobre el sistema a atacar.</p>
+<p>Caja Blanca Abans de començar el test d’intrusió la entitat ens suministra amb detall totes les tecnologies que empra, el codi font de les aplicacions, comptes d’usuari de tot tipus o nivell, arquitectures i tots els detalls organitzatius de l’objectiu. Esta modalitat és la que simula un atac intern per part d’un membre de l’entitat que coneix a la perfecció com esta estructurat el sistema objectiu..</p>
+<p>Caja Gris En esta modalitat, és dispondrá de cierta informació parcial de l’objectiu, com pot ser informació d’algunes tecnologies que caldrà avaluar, informació de compters legitims o qualsevol tipus d’informació valuosa que ens proporcione la companyia. Es diferencia amb la modalitat de la Caixa Blanca en el nivell de coneiximent i/o profunditat que proporciona l’entitat, Esta modalitat híbrida és la que simula un atac amb un coneiximent relatiu de la situació, com el que podrien fer un client o un competidor..</p>
+<p>Metodologies utilitzades Una de les tecnologies més emprades en el sector és OWASP TOP 10 –2021, OSINT, OSSTMM. Open Web Application Security Project (OWASP) és una organització sense ànim de lucre a nivell mundial dedicada a millorar la seguretat de les aplicacions i del software en general.</p>
+<p>La metodología OWASP es divideix en 2 fases: Una fase passiva on es realitzen proves fins entendre la lògica de l’aplicació que està en fase d’auditoria. Avaluar si hi ha elements que comporten vulnerabilitats obertes per analitzarlos amb profunditat. Una fase activa on l’auditor prova tots els procediments recomanats en la metodología seguint una metodología estandard de hacking ètic.</p>
+<p>El actual OWASP TOP 10 –2021 estableix els següents riscs com els més greus diantre de les aplicacions i serán provats en l’auditoria.</p>
+<p>En esta imatge podem vore l’evolució de la metodología al llarg dels anys. Actualment la implementada pel organisme OWASP és la segúent</p>
+<ul>
+<li>A1: control d’accesos destruits</li>
+</ul>
+<p>✓ Accesos donats amb permisos a usuaris que no deurien</p>
+<ul>
+<li>A2: Falles criptográfiques</li>
+</ul>
+<p>✓Devilitats en xifrats de dades fácilment calculables per part dels atacants ✓Errors de xifrat que deixen dades en text pla i per tant de fácil lectura ✓Exposició de dades quan es donen determinades operacions de transit entre les distintes entitats o persones</p>
+<ul>
+<li>A3: Injecció</li>
+</ul>
+<p>✓Atac a base de dades amb la inclusió de comandaments o consultes executades en l’interpret, com resultat obtindrem dades que no deurien ser publics ni visibles des de l’exterior.</p>
+<ul>
+<li>A4: Disseny insegur</li>
+</ul>
+<p>✓Disseny d’arquitectures i infraestructures inadecuades a nivell de hardware, posible generació de túnels directes a les xarxes internes.</p>
+<ul>
+<li>A5: Desconfiguració de la seguretat</li>
+</ul>
+<p>✓La configuració no correcta de les politiques de premisos comporta la exposició de finestres i registres d’informació a l’exterior</p>
+<ul>
+<li>A6: Components vulnerables i obsolets</li>
+</ul>
+<p>✓Es recomanable coneixer si hi ha actualitzacions per als nostres dispositius electrónics per corregir posibles bretxes generiques que poden ser facilment correguides si es manté una política d’actualització de software i firmware al dia.</p>
+<ul>
+<li>A7: Falles d’identificació i autentificació</li>
+</ul>
+<p>✓Esta categoría esta relacionada directament amb la criptografía A2</p>
+<p>✓Atacs automatitzats de força bruta per diccionari ✓Exposició de contrassenyes febles ✓Fallades per no implementar factors de doble autentificació</p>
+<ul>
+<li>A8: Fallades d’integritat de software i dades</li>
+</ul>
+<p>✓Aplicacions o pàgines web que no utilitzen certificats oficials o be no aprovats per empreses certificadores oficials ✓Cal establir una cadena d’integritat del producte que permitísca des de la primera execució d’una aplicació o codi la imposibilítat d’execució de malware o scripts en segon pla</p>
+<ul>
+<li>A9: Fallades en el registre i supervisió de la seguretat</li>
+</ul>
+<p>✓Emprar politiques i ferramentes preventives a nivell intern que permitisquen no detectar heines per tant de monitoritzar vulnerabilitats dins d’una organització o empresa</p>
+<ul>
+<li>A10: Server-Side Request Forgey</li>
+</ul>
+<p>✓Estes amenaces sòn factibles degut a la no utilització de protocols HTTPS, DNS i URLs no segures ✓Amb politiques correctes en el firewall (tallafocs) des de la capa de xarxa podem mitigar este tipus d’amenaça. Estratègies de la prova de penetració Els provadors de penetració normalment usen un o més dels cinc mètodes disponibles per a atacar un sistema i identificar vulnerabilitats.</p>
+<p>Les estrategies de prova de penetració sòn: ✓Proves orientades a un objectiu ✓Comprovació externa ✓Proves internes ✓Proves a cegues</p>
+<p>✓Proves doble cega Anem a voreles amb més detall. Proves orientades a un objectiu Estes proves sel·lectivas o dirigides fan en conjunt per l’èquip de IT de l’organització i l’èquip de proves de penetració . Qualsevol pot vore les proves que s’est-on realitzant. En este mètode de prova de penetració, els hackers de barret blanc i els equips de seguretat verifiquen de manera coherent la competència, atenció i abast de la millora dels altres membres de la companyia; aquest tipus de proves de penetració brinda informació en temps real sobre les possibles vulnerabilitats que pot trobar un pirata informàtic.</p>
+<p>Comprovació externa Aquest tipus de prova de penetració es dirigeix als servidors o dispositius de la companyia que són visibles externament, incloent servidors de noms de domini (DNS), servidors de correu electrònic, servidors web o firewalls. L'objectiu és esbrinar si un atacant extern pot entrar i fins a on pot arribar una vegada que ha obtingut accés.</p>
+<p>En les proves de penetració externa, el provador localitza i avalua les febleses per a comprovar que probabilitats té un delinqüent remot d'accedir als teus sistemes i atacar-los; la prova es duu a terme fent perquisicions amb informació disponible de manera pública, que és fàcilment accessible per a un estrany.</p>
+<p>Proves internes Aquesta prova simula un atac intern darrere del firewall per un usuari autoritzat, amb privilegis d'accés estàndard. Aquest tipus de prova és útil per a estimar la quantitat de mal que un empleat descontent podria causar. Una prova de penetració interna es realitza després de la prova de penetració externa; ací, els experts descobreixen quins elements podrien ser atacats, alterats, eliminats o modificats per un</p>
+<p>membre del personal de la teua empresa o un proveïdor extern que tinga accés al teu sistema, per la qual cosa entre les etapes d’esta prova de penetració s'inclou la verificació de ports oberts i la detecció d'hostes actius. Proves a cegues Una estratègia de prova a cegues simula les accions i procediments d'un atacant real, limitant severament la informació donada per endavant a la persona o equip que està realitzant la prova.</p>
+<p>En general, només se'ls pot donar el nom de l'empresa. Pel fet que aquest tipus de prova pot requerir una quantitat considerable de temps per al reconeixement, pot ser costosa. Amb el mètode de prova de penetració cega, no es proporciona cap informació als hackers ètics que intenten ingressar en un sistema, només el nom de l'organització, per a així avaluar què tan lluny es pot arribar sense privilegis Proves doble cega Les proves de doble cec prenen la prova a cegues i la porten un pas més enllà.</p>
+<p>En esta mena de prova de penetració, només una o dues persones de l'organització poden ser conscients que s'està realitzant una prova. Les proves de doble cec poden ser útils per a provar el monitoratge de seguretat i la identificació d'incidents de l'organització, així com els seus procediments de resposta En les proves de penetració doble cegues, els empleats no saben que esdevé un simulacre de prova de penetració, la qual cosa permet verificar les respostes dels empleats i avaluar el seu nivell de preparació; si la resposta no és l'esperada, els empleats passen a rebre capacitació per al maneig i reacció adequades davant tals situacions.</p>
+<p>Àrees de prova de penetració A continuació, presentem ràpidament les sis diferents àrees principals on es pot dur a terme una prova de penetració concorde als objectius que es busque solucionar. ✓Xarxa: en esta àrea, els experts en proves de penetració se centren en proves de seguretat de xarxes locals i basades en el núvol, la qual cosa es fa mitjançant la</p>
+<p>identificació de vulnerabilitats internes i externes en diferents servidors, encaminadors, commutadors i hosts de xarxa. ✓ Aplicació web: ací el probador de penetració intenta situar punts d'entrada i bretxes de seguretat en bases de dades, codificació font, xarxes de back-end, i altres, que poden obstaculitzar el funcionament segur d'una aplicació web.</p>
+<p>✓Aplicació mòbil: ací s'usen tant proves manuals automatitzades com proves esteses per a identificar qualsevol problema relacionat amb la gestió de sessions, encriptat, autenticació i autorització d'un sistema. ✓Costat del client: les proves del "costat del client" serveixen per a ressaltar qualsevol cosa que succeeix en l'extrem de l'aplicació que aborda l'usuari mitjà (sense importar si el "client" és un client que paga o un empleat que usa una aplicació web patentada); les proves de penetració en aquesta àrea s'enfoquen a buscar vulnerabilitats.</p>
+<p>✓Sense fil: ací s'examinen diversos aspectes com ara configuració, APIs, encriptat, emmagatzematge i controls de seguretat formen part d'aquest exercici de prova de penetració. ✓Enginyeria social: en esta àrea els provadors de penetració ací es fan passar per pirates informàtics amb la finalitat d’ingressar al sistema d'una empresa a través d'un atac d'enginyeria social, la qual cosa serveix per a comprovar l'enfocament de detecció i reacció dels membres del personal; aquesta prova generalment es realitza per a verificar quines mesures de seguretat requereixen canvis o millores Tècniques de les proves de penetració Per a les empreses, l'objectiu de les proves de penetració és reconéixer fallades en la seua infraestructura i prendre mesures per a millorar la seguretat dels seus sistemes, depenent de qui realitze la prova, l'estructura, el pressupost i l'avaluació de riscos, els tipus de proves de penetració són els següents</p>
+<p>✓Manuals ✓Automatitzades ✓Combinades</p>
+<p>Proves manuals Este mètode de confiança permet al probador validar el rendiment general de l'estructura del sistema que està avaluant; este procés comença amb la recopilació de dades, com ara noms de taules, versions de bases de dades, configuració de dispositius i complements de tercers (de ser corresponent).</p>
+<p>Després d'una búsqueda exhaustiva per a trobar portes d'accés o llacunes, es dona inici a un atac simulat que revela que críticament poden veure's afectats els teus sistemes en cas d'un atac cibernètic real. Proves automatitzades Les proves manuals revelen problemes bàsics, però no poden trobar totes les vulnerabilitats, per la qual cosa es fa necessari usar tècniques de proves automatitzades per a tancar totes les bretxes que deixa la prova de penetració manual.</p>
+<p>Les proves de penetració automatitzades també ajuden a erradicar amenaces, en escanejar regularment, qualsevol element sospitós o susceptible, addicionalment cal ressaltar que aquest tipus de prova no requereix cap programari addicional, per la qual cosa una sola eina de prova de penetració automatitzada s'encarrega de tot el procés.</p>
+<p>Les proves de penetració automatitzades són ràpides, exhaustives i rendibles. Proves combinades La combinació de proves de penetració manuals i automatitzades és un enfocament integral i receptiu per a la seguretat dels actius de la teua empresa. Malgrat treballar amb mecanismes diferents, les proves de penetració manual i automàtica s'ocupen de complementar-se una a l'altra, emplenant diverses clivelles que no toca un tipus de prova específica; cal delimitar que aquest tipus de prova pot ser més costós que qualsevol de les quals es prenen per separat, però la inversió val la pena al llarg termini.</p>
+<p>Hacktivisme Podem considerar-lo com hacking per una causa, però hem de recordar que hi ha accions que es consideren un delicte, tinguen o no una justificació política i/o ideològica És el compromís polític o social del hacking Per exemple, atacar o alterar llocs web per raons polítiques, atacar lllocs web del govern o de grups contraris a la seua ideologia</p>
+<hr/>
+<h2 id="ut02actividades">✍️ Activitats pràctiques UT2</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.1 — tema2</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut01/ut01actividades.html">⬅️ ✍️ Activitats pràctiques UT1</a>
+<a class="page-nav-btn" href="../ut02/ut0201.html">2.1 tema2 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

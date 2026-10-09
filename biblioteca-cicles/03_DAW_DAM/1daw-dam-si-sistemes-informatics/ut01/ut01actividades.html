@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT1 — Sistemes Informàtics | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖥️ Sistemes Informàtics — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Sistemes Informàtics</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 SI: LLIBRE QUE ANEM A SEGUIR EN LES CLASES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 TRANSPARÈNCIES UNITAT 1</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Exercisis conversió binari - decimal I</a></li>
+<li><a href="../ut00/ut0003.html">0.3 SI: ENLLAÇ RENDIMENT CPU</a></li>
+<li><a href="../ut00/ut0004.html">0.4 DIASPOSITIVES UD1 PART 1</a></li>
+<li><a href="../ut00/ut0005.html">0.5 SI: TAULA DE TOPOLOGIES LAN</a></li>
+<li><a href="../ut00/ut0006.html">0.6 SI: TEORIA XARXES UD1</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT1 — INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a class="active" href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 LA SHELL DE LINUX</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D</a></li>
+<li><a href="../ut02/ut0203.html">2.3 ENLLAÇOS DURS I SIMBÓLICS</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TEORIA XARXES</a></li>
+<li><a href="../ut03/ut0302.html">3.2 TEORIA SUBNETTING</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — GESTIÓ DE LA INFORMACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 GUIA DE LA UNITAT 5</a></li>
+<li><a href="../ut04/ut0402.html">4.2 TEORIA UNITAT 5 PART 1</a></li>
+<li><a href="../ut04/ut0403.html">4.3 TEORIA UNITAT 5 PART 2</a></li>
+<li><a href="../ut04/ut0404.html">4.4 TEORIA UNITAT 5 PART 3</a></li>
+<li><a href="../ut04/ut0405.html">4.5 TEORIA UNITAT 5 PART 4</a></li>
+<li><a href="../ut04/ut0406.html">4.6 TEORIA UNITAT 5 PART 5</a></li>
+<li><a href="../ut04/ut0407.html">4.7 TEORIA UNITAT 5 PART 6</a></li>
+<li><a href="../ut04/ut0408.html">4.8 TEORIA UNITAT 5 PART 7</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 TEORIA UNITAT 6 PART 1</a></li>
+<li><a href="../ut05/ut0502.html">5.2 TEORIA UNITAT 6 PART 2</a></li>
+<li><a href="../ut05/ut0503.html">5.3 TEORIA UNITAT 6 PART 3</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — SEGURETAT, RENDIMENT I RECURSOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 TEORIA UNITAT 7 PART1</a></li>
+<li><a href="../ut06/ut0602.html">6.2 TEORIA UNITAT 7 PART 2</a></li>
+<li><a href="../ut06/ut0603.html">6.3 TEORIA UNITAT 7 PART 3</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — TALLER HARDWARE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Manual placa base taller</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Teoria Components Hardware</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT1 — INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</span>
+<h1>✍️ Activitats pràctiques UT1</h1>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.1 — SI UD2: SOFTWARE LLIURE O PRIVATIU? QUE DEFENSES?</p><p dir="ltr" style="text-align: left;">SW LLIURE SÍ O NO? DESPRÉS DE VEURE EL VÍDEO DE RICHARD STALLMAN, ET PAREIX UNA BONA MANERA DE GESTIONAR EL TREBALL DE UN PROGRAMADOR O CREUS QUE ES MILLOR FUNCIONAR COM FUNCIONA MICROSOFT?</p><p dir="ltr" style="text-align: left;">ESCRIU UNA REDACCIÓ DE MÀXIM 2 CARES, ON JUSTIFIQUES LA TEUA OPINIÓ AL RESPECTE I TREGUES UNA CONCLUSIÓ DE SI ESTÀS O NO A FAVOR DEL SW LLIURE.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.2 — SI ACTIVITAT 1 INSTAL.LACIÓ D'UN SISTEMA OPERATIU LLIURE</p><p>ACTIVIDAD 1: INSTALAR UBUNTU 20 DESKTOP EN VIRTUAL BOX</p>
+<p>En esta práctica debes investigar como instalar una máquina virtual Ubuntu en el entorno de virtualización Oracle VirtualBox.</p>
+<p>Para que te sirva de referencia y te facilite la práctica, aquí tienes el siguiente enlace de YouTube</p>
+<p>https://www.youtube.com/watch?v=GEx046EHphI</p>
+<p>Para descargar la iso de Ubuntu, te dejamos aquí el siguiente enlace</p>
+<p>https://ubuntu.com/download/desktop</p>
+<p>Cosas a tener en cuenta para la correcta realización de la práctica</p>
+<p>Documenta el proceso de instalación mediante pantallazos y así poder mostrar al profesor que has realizado correctamente la práctica.</p>
+<p>Las fases que debe de contener y debes mostrar son las siguientes</p>
+<ul><li>Creación de la máquina virtual</li></ul>
+<p>Indica en la práctica cómo has configurado la máquina virtual o guest. (RAM, Disco Duro, etc).</p>
+<ul><li>Proceso de instalación de Ubuntu 20.</li></ul>
+<ul><li>Arranque de Ubuntu 20 una vez finalizada la instalación para confirmar el correcto funcionamiento.</li></ul>
+<table><thead><tr><th>UD2: INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.3 — SI ACTIVITAT 2 INSTAL.LACIÓ D'UN SISTEMA OPERATIU DE PROPIETAT</p><p>PRÀCTICA 2: INSTALAR WINDOWS 10 EN VIRTUAL BOX</p>
+<p>En esta práctica debes investigar como instalar una máquina virtual Windows 10 en el entorno de virtualización Oracle VirtualBox.</p>
+<p>Para que te sirva de referencia y te facilite la práctica, aquí tienes el siguiente enlace de YouTube</p>
+<p>https://www.youtube.com/watch?v=jH1Fz0yXSuE</p>
+<p>Para descargar la iso de Windows 10, os he mandado el enlace por correo.</p>
+<p>Cosas a tener en cuenta para la correcta realización de la práctica</p>
+<p>Documenta el proceso de instalación mediante pantallazos y así poder mostrar al profesor que has realizado correctamente la práctica.</p>
+<p>Las fases que debe de contener y debes mostrar son las siguientes</p>
+<ul><li>Creación de la máquina virtual</li></ul>
+<ul><li>Proceso de instalación de Windows 10.</li></ul>
+<ul><li>Arranque de Windows 10.</li></ul>
+<table><thead><tr><th>UD2: INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.4 — SI ACTIVITAT 3 COMPLETA LES SEGUENTS PREGUNTES</p><p>NOMBRE</p>
+<p>ACTIVIDAD 3: ASPECTOS TEÓRICOS A TENER EN CUENTA</p>
+<p>En base a los conceptos que podéis leer en el apartado 1.1 y 1.2 del libro, responded a estas preguntas una vez comprendáis los conceptos.</p>
+<p>Consultad al profesor ante cualquier duda.</p>
+<ul><li>INSTALACIÓN DE SISTEMAS OPERATIVOS LIBRES.</li></ul>
+<p>Responde a las siguientes cuestiones</p>
+<ul><li>¿Cuál es la diferencia entre copyright y copyleft?</li></ul>
+<ul><li>¿Cuál es la diferència entre código abierto y programa libre?</li></ul>
+<ul><li>¿Qué es una distribución de software? ¿En que formato se distribuyen los sistemas operativos?</li></ul>
+<ul><li>¿Qué es el sistema de archivos?</li></ul>
+<ul><li>Realiza una tabla de compatibilidades entre los distintos sistemas de archivos siguientes: NTFS, EXT4, FAT32, exFAT, HFS.</li></ul>
+<ul><li>Marca con una X, si son compatibles entre ellos. En este punto, podéis buscar las compatibilidades en Internet.</li></ul>
+<ul><li>¿Puedes elegir una distribución de 32 bits e instalarla en un pc con un sistema de 64 bits? Justifica la respuesta.</li></ul>
+<p>¿Y al revés?</p>
+<table><thead><tr><th>UD2: INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</th></tr></thead><tbody></tbody></table>
+<table><thead><tr><th>SISTEMA</th><th>NTFS</th><th>EXT4</th><th>FAT32</th><th>exFAT</th><th>HFS+</th></tr></thead><tbody><tr><td>NTFS</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>EXT4</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>FAT32</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>exFAT</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>HFS+</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.5 — SI ACTIVITAT 4 CREACIÓ D'UN USB D'ARRANC</p><p dir="ltr" style="text-align: left;">TANTO EN S.O LINUX COMO WINDOWS</p>
+<p>ACTIVITAT 4: CREAR UN USB CON LA IMAGEN ISO DE UN SISTEMA OPERATIVO</p>
+<p>En esta práctica vamos a trabajar cómo crear una unidad USB booteable o de arranque.</p>
+<p>Estas unidades booteables o de arranque son capaces de ejecutarse automáticamente en un ordenador sin necesidad de que tenga un sistema operativo instalado, y sirven para instalar un sistema operativo en una máquina o realizar operaciones con otras herramientas.</p>
+<p>Con la aplicación Rufus que veremos a continuación, puedes crear un medio de instalación de un sistema operativo mediante su imagen ISO. En este caso nos centraremos en Windows10 por ser el sistema operativo mayoritario.</p>
+<p>Los archivos ISO son un tipo de archivo que se utiliza para almacenar una copia exacta de un sistema de ficheros de una unidad óptica. Esto quiere decir que, si copias un CD, DVD o Bluray utilizando este formato, la copia resultante será un clon exacto de esa unidad óptica, y cuando lo montes en el ordenador será como si estuvieses utilizando el disco original.</p>
+<p>Mediante la aplicación Rufus, y a partir de un archivo ISO que contiene el sistema operativo Windows 10, crearemos una unidad USB de arranque.</p>
+<p>Para iniciar esta práctica necesitaremos los siguientes elementos</p>
+<ul><li>Una unidad USB vacía porque todos lo que incluya se va a perder y preferiblemente de 8GB o 16GB. De menor tamaño no.</li></ul>
+<ul><li>Software Rufus que se puede descargar desde https://rufus.ie/es/. La versión disponible actual es la 3.17.</li></ul>
+<ul><li>Una ISO de Windows 10.</li></ul>
+<p>Para poder iniciar la creación del USB booteable, hay que seguir los siguientes pasos</p>
+<ul><li>Seleccionar la ISO del sistema operativo que queramos aplicar.</li></ul>
+<ul><li>Conectar la memoria USB extraíble al ordenador y que la detecte el programa Rufus.</li></ul>
+<ul><li>Seleccionar la opción adecuada en cuanto al esquema de partición y al sistema de archivos.</li></ul>
+<ul><li>En cuanto al sistema de archivos en Windows 10 será NTFS, pero para seleccionar la opción adecuada en cuanto al esquema de partición, te será útil este enlace para poder averiguar cual es el esquema de partición de tu pc</li></ul>
+<ul><li>https://comofriki.com/saber-que-tipo-de-particion-tiene-mi-disco-duro/</li></ul>
+<ul><li>Una vez ya tengas claros los apartados anteriores ya solo queda pulsar Start. Y así se creará en el USB el fichero de arranque.</li></ul>
+<p>Una vez creado el USB bootable, nos quedaría probar de arrancar el sistema operativo incluido en el USB desde cualquier equipo.</p>
+<p>Para presentar correctamente la práctica, incluye imágenes del proceso llevado a cabo.</p>
+<table><thead><tr><th>UD2: INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.6 — SI ACTIVITAT 5 PARTICIONAT DE DISCOS MBR O GPT</p><p>NOMBRE</p>
+<p>ACTIVIDAD 5: PARTICIONADO DE DISCOS MBR O GPT</p>
+<p>Para poder utilizar un disco duro en nuestro ordenador por primera vez, lo primero que hay que hacer con él es crearle las particiones internas. Si no se crean éstas, la unidad de almacenamiento no podrá almacenar nada en su interior. Cuando lo vayamos a hacer, Windows nos preguntará si queremos que la tabla de particiones sea de tipo MBR o GPT. Ambos tipos de tablas tienen sus características particulares, las cuales veremos ahora.</p>
+<ul><li>MBR (Master Boot Record) vs GPT (GUI Partition Table)</li></ul>
+<ul><li>EL MBR es un tipo de tabla es la que se comenzó a emplear hacia el año 1983. Como tal, y dada su antigüedad, presenta bastantes limitaciones, si la comparamos con la más moderna GPT.</li></ul>
+<ul><li>Por principio, y esto es probable que os haya pasado a alguno de vosotros, la información sobre las particiones lógicas de la unidad de almacenamiento se almacena en un único sitio. Esto lo deja muy expuesto a que, si por algún motivo se corrompe el MBT (o un virus lo infecta), la recuperación de los datos de la unidad es prácticamente imposible. Por contra, el tipo GPT distribuye copias de estos datos por todas las particiones. De esta manera, si una de las particiones se corrompe, puede usar la información de otra para restablecerse.</li></ul>
+<ul><li>También está el tema de la capacidad de la unidad de almacenamiento. El MBR solo permite hasta 32 bits por cada sector de la unidad de almacenamiento, lo cual acaba limitando el tamaño máximo de estas unidades a los 2 TB. Sin embargo, el GPT permite un máximo de 64 bit por sector, lo que se traduce en que es capaz de ser empleado con unidades de 9,4 ZB. Pensad que cada Zettabyte equivale a mil billones de Gigabytes, por lo que se podrían decir que no tiene ningún tipo de límite físico en las unidades.</li></ul>
+<ul><li>Otra limitación que tiene el MBR es que solo permite un máximo de cuatro particiones por cada disco duro, cosa que no sucede con el GPT, cuyo límite es de 128 particiones (este límite lo marca el propio Windows).</li></ul>
+<ul><li>Con todo lo dicho, está claro que, si empleáis una versión de Windows moderna, la tabla de particiones que más os conviene tener en vuestras unidades de almacenamiento es la GPT frente a la MBR. Salvo que vuestro sistema operativo sea antiguo o vuestra unidad de almacenamiento sea de un tamaño inferior a los 2 TB, en cuyo caso podéis elegir el sistema que prefiráis. Siempre que tengáis en cuenta lo siguiente</li></ul>
+<ul><li>Para arrancar desde un partición GPT, se debe de tener una versión de 64 bits de Windows Vista, 7, 8/8.1 o 10 y la BIOS de la placa base debe de ser UEFI.</li></ul>
+<ul><li>Si tenemos la versión de 32 bits de Windows 10 y 8/8.1, también será necesario que la BIOS sea del tipo UEFI si queremos arrancar desde ella.</li></ul>
+<ul><li>Si la versión del sistema operativo es la de 32 bits de Windows Vista y 7, no podremos arrancar desde una partición GPT.</li></ul>
+<ul><li>Cualquier versión de estos sistemas operativos (32 o 64 bits) es capaz de leer y almacenar datos en las unidades GPT.</li></ul>
+<p>Por cierto, podéis saber con facilidad qué tipo de tabla de partición emplea vuestra unidad de almacenamiento. Para ello, no tenéis más que hacer clic con el botón derecho encima del icono «Este Equipo» y seleccionar «Administrar«. Luego debéis de seleccionar la opción «Almacenamiento» y, luego, «Adminsitrador de discos«. En la pantalla que se abrirá, haciendo clic derecho en el nombre de la unidad, en el menú que se abrirá seleccionaremos «Propiedades» y luego, la pestaña «Volúmenes«.</p>
+<ul><li>Ahora lee el siguiente artículo</li></ul>
+<p>https://hardzone.es/reportajes/comparativas/mbr-gpt-diferencias-rendimiento-ssd/</p>
+<p>Responde a las siguientes preguntas</p>
+<ul><li>¿Cuántas particiones primarias se pueden montar en MBR?</li></ul>
+<ul><li>¿Cómo podemos crear más particiones lógicas en un disco duro con MBR?</li></ul>
+<ul><li>¿Qué limitación tiene una partición extendida?</li></ul>
+<ul><li>¿Cuántas particiones primarias se pueden montar en GPT?</li></ul>
+<ul><li>¿Qué limitación tiene el configurar un SSD en MBR?</li></ul>
+<ul><li>¿Qué ventaja tiene a la hora de recuperar un disco en formato GPT respecto a MBR?</li></ul>
+<ul><li>¿Puedes ejecutar un S.O Windows antiguo en un disco SSD montado en MBR?</li></ul>
+<table><thead><tr><th>UD2: INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.7 — SI ACTIVITAT 6 INSTAL·LAR LES GUEST ADDITIONS</p><p>ACTIVIDAD 5: INSTALAR LAS GUEST ADDITIONS DE ORACLE VM VIRTUAL BOX PARA CONSEGUIR IMPORTANTES FUNCIONALIDADES</p>
+<p>Durante el transcurso de esta unidad, ya hemos visto como habilitar los puertos USB en una máquina virtual de Oracle VM Virtual Box.</p>
+<p>Ahora, vamos a ver que son las Guest Additions y aprenderemos a instalarlas en cualquier máquina virtual que dispongamos.</p>
+<p>Las Guest Additions son un paquete de software que forma parte de Virtutal Box y que se debe instalar en cada una de las máquinas virtuales para mejorar el rendimiento y añadir nuevas e importantes funciones a dicha máquina virtual. Consiste en una serie de drivers y aplicaciones para el sistema virtualizado que lo optimizan para un mejor uso y mejora de las prestaciones.</p>
+<p>Las Guest Additions se encuentran disponibles en una imagen CD-ROM con el nombre VBoxGuestAdditions_versionX.iso que debemos montar en nuestra máquina virtual como una unidad de CD e instalarlas a partir de ella.</p>
+<p>Las Guest Additions nos ofrecen las siguientes características</p>
+<p>Integración del cursor del ratón. Esto implica que podemos mover el ratón libremente entre la máquina virtual y la real sin necesidad de pulsar ninguna tecla para capturarlo/liberarlo. Hace que sea mucho más cómodo el usar la máquina virtual.</p>
+<p>Mejor soporte de vídeo. En principio el controlador de vídeo virtual que utiliza VirtualBox para cualquier sistema operativo virtualizado proporciona solamente funciones básicas. Sin embargo, el driver de vídeo que se instala con las Guest Additions nos ofrece no sólo una buena aceleración de vídeo, sino también resoluciones más altas.</p>
+<p>Sincronización horaria. Gracias a las Guest Additions, VirtualBox se asegura de que la hora del sistema virtualizado esté mejor sincronizada.</p>
+<p>Carpetas compartidas. Una de las características más importantes es la de las carpetas compartidas porque es una forma fácil de poder intercambiar archivos entre el sistema real y el virtualizado.</p>
+<p>Ventanas sin costuras. Esta característica consiste en mostrar una ventana del sistema virtualizado como si formara parte de nuestro sistema real.</p>
+<p>Portapapeles compartido. Al igual que las carpetas compartidas el poder compartir el portapapeles es de gran utilidad. Gracias a esta característica podemos copiar y pegar independientemente de que estemos en la máquina virtual o real.</p>
+<p>TRABAJO A REALIZAR EN ESTA ACTIVIDAD</p>
+<ul><li>Exporta las máquinas virtuales y así disponer de una copia de restauración.</li></ul>
+<ul><li>Instala las guest addition tanto en tu máquina virtual Linux, ya sea Ubuntu o Linux Mint y también instálalas en tu Windows 10.</li></ul>
+<ul><li>Es decir, debéis instalarlas en las dos máquinas virtuales que hemos trabajado durante esta unidad 2.</li></ul>
+<ul><li>Comparte una carpeta de tu máquina virtual (guest OS) con tu máquina real (host).</li></ul>
+<ul><li>Habilita la función “arrastra y soltar” entre la maquina real y la máquina virtual en los dos sentidos.</li></ul>
+<ul><li>Nota: en todos los ejercicios que se piden, mostradme con imágenes que habéis realizado los trabajos.</li></ul>
+<table><thead><tr><th>UD2: INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 1.8 — SI ACTIVITAT 7: GESTIÓ DE PARTICIONS I INSTAL·LACIÓ DE APLICACIONS</p><ul><li>MANEJO DE PARTICIONES</li></ul>
+<p>Preparación del disco duro para la instalación.</p>
+<p>Para instalar un sistema operativo lo único que se necesita es una parte del disco libre.</p>
+<p>Si asignamos un espacio libre en el ordenador, el instalador lo detectará y hará una propuesta de partición que se debe de aceptar y se instalará.</p>
+<p>El problema viene cuando no hay un espacio libre con particiones y entonces, se debe de crear.</p>
+<p>Es recomendable hacer esta partición antes de realizar la instalación.</p>
+<p>Para ello usaremos la herramienta Gparted que nos permitirá redimensionar particiones existentes para poder adecuarlas a nuestras necesidades.</p>
+<p>Para instalar Gparted en Linux Mint o en Ubuntu, debes de ir la web de Gparted y ver como se instala. (No debes de descargar ningún fichero)</p>
+<p>Ejercicio 1: Dime que instrucción has indicado para poder instalar Gparted en tu distribución de Linux.</p>
+<p>Ejercicio 2: Abre la aplicación Gparted y muestra con una imagen el esquema de particiones que dispones en tu Linux.</p>
+<p>Para utilizar Gparted en Windows 10, debes de bajarte la iso de gparted y después arrancar el ordenador desde la ISO descargada.</p>
+<p>Ejercicio 3: Abre la aplicación Gparted y muestra con una imagen el esquema de particiones que dispones en tu máquina virtual con sistema operativo Windows.</p>
+<p>Otra manera de poder manipular las particiones para instalar el sistema operativo que queramos, es como se muestra en este video. En él, se muestra cómo se puede mediante una instalación de Ubuntu que ya dispone de una partición con un sistema operativo Windows 10, crear una partición nueva para este nuevo sistema operativo.</p>
+<p>Este video no maneja máquinas virtuales, sino que opera sobre la máquina real.</p>
+<p>https://www.youtube.com/watch?v=6-rUBlTj0yI</p>
+<p>Preguntas tras ver el video</p>
+<ul><li>¿Qué opciones de instalación ofrece a la hora de instalar Ubuntu?</li></ul>
+<ul><li>¿Qué particiones se crean para poder instalar Ubuntu tras disponer de un sistema operativo Windows previamente instalado? (Indica también el formato de fichero de estas nuevas particiones)</li></ul>
+<ul><li>¿Sobre qué partición se instala el sistema operativo Ubuntu?</li></ul>
+<p>Como verás en el video, al instalar Ubuntu, instala una nueva entrada en el gestor de arranque, Grub, y así detecta tanto el Windows 10 como el Ubuntu.</p>
+<p>De este modo, debes tener claro que es Grub el que se encarga de gestionar que sistemas operativos tiene disponibles nuestro equipo.</p>
+<p>Un gestor de arranque es un programa ubicado en el MBR (Master Boot Record) del disco duro. Este programa permite definir un menú para elegir que sistemas operativos tiene la máquina instalados y poder arrancarlos.</p>
+<p>Hay que tener en cuenta que una instalación de Windows elimina cualquier gestor de arranque que haya en el MBR, por ello, como has visto en el video, al hacer una instalación como la del video, primero se instala Windows y después Linux, siendo este ultimo el que instala el gestor de arranque para elegir que sistema operativo queremos utilizar.</p>
+<ul><li>INSTALACIÓN DE APLICACIONES EN DISTRIBUCIONES LINUX</li></ul>
+<ul><li>En este ejercicio de investigación quiero que instales la aplicación WineHQ en tu sistema operativo Linux.</li></ul>
+<p>Sigue la guía de instalación que hay en la página web de WineHQ. Recuerda que un Linux Mint es como un Ubuntu a nivel de distribución.</p>
+<p>Indica los pasos que has seguido y muestra al final que ha quedado correctamente instalado.</p>
+<p>https://wiki.winehq.org/</p>
+<ul><li>Instala la aplicación Microsoft Teams.</li></ul>
+<p>Indica los pasos que has seguido y muestra al final que ha quedado correctamente instalado con imágenes que lo clarifiquen.</p>
+<ul><li>Instala Google Chrome e indica los pasos que has seguido y muestra con imágenes que se ha instalado correctamente.</li></ul>
+<ul><li>Instala la aplicación anaconda e indica los pasos que has seguido y muestra con imágenes que se ha instalado correctamente.</li></ul>
+<table><thead><tr><th>UD2: INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</th></tr></thead><tbody></tbody></table></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut01/ut0101.html">⬅️ 1.1 Continguts i Recursos</a>
+<a class="page-nav-btn" href="../ut02/index.html">📘 UT2 Completa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

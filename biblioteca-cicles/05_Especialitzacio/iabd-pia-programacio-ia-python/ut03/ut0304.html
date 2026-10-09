@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>3.4 UT 3.3 Biblioteca matplotlib — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🐍 Programació d'Intel·ligència Artificial amb Python — CE IA i Big Data</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació d'Intel·ligència Artificial amb Python</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Redes Neuronales</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Continguts i Recursos</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Scikit Learn</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de</a></li>
+<li><a href="../ut03/ut0302.html">3.2 UT 3.5 Biblioteca plotly</a></li>
+<li><a href="../ut03/ut0303.html">3.3 UT 3.4 Biblioteca seaborn</a></li>
+<li><a class="active" href="../ut03/ut0304.html">3.4 UT 3.3 Biblioteca matplotlib</a></li>
+<li><a href="../ut03/ut0305.html">3.5 UT 3.2 Biblioteca Pandas</a></li>
+<li><a href="../ut03/ut0306.html">3.6 UT 3.1 Biblioteca Numpy</a></li>
+<li><a href="../ut03/ut0307.html">3.7 UT 3.0 Presentació unitat</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Housing</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Primeros pasos con Python</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Python apuntes de clase</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Python para todos (libro).</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Ejercicios</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Creación entorno de trabajo</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Instalación entorno de trabajo.</a></li>
+<li><a href="../ut05/ut0502.html">5.2 SO LINUX MINT MATE</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Presentación del módulo</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Presentación.</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">CE IA i Big Data · UT3 — Scikit Learn</span>
+<h1>3.4 UT 3.3 Biblioteca matplotlib</h1>
+<h3>📄 IA BD PIA UT 3.3 Biblioteca Matplotlib.pdf</h3>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT 3.3 Programación de ML en Python. Biblioteca matplotlib Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Taula de continguts</p>
+<ul>
+<li>Matplotlib..............................................................................................................................................4</li>
+</ul>
+<p>1.1. Descripción.....................................................................................................................................4 1.2. Enlaces de interés:..........................................................................................................................4 1.3. Instalación.......................................................................................................................................4 1.4. Motivación......................................................................................................................................4 1.5. Tipos de representaciones gráficas.................................................................................................5 1.6. Librerías..........................................................................................................................................6 1.7. Gráficos de lineas...........................................................................................................................6 1.7.1. Representar un gráfico de lineas.............................................................................................6 1.7.2. Estilo de lineas........................................................................................................................7 1.7.3. Más de un gráfico en un mismo marco...................................................................................9 1.7.4. Insertar, títulos, ejes, etc.......................................................................................................10 1.7.5. Estilo del marco....................................................................................................................11 1.7.6. Estilo de leyendas, títulos, ejes, etc......................................................................................13 1.7.7. Gráfica con doble eje (twinx)...............................................................................................15 1.7.8. Insertar leyendas...................................................................................................................17 1.7.8.1. Insertar leyendas definiendo fuente y posición dentro del cuadro................................17 1.7.8.2. Insertar leyendas en cualquier posición........................................................................18 1.7.8.3. Personalizar leyendas....................................................................................................19 1.8. Diagramas de barras.....................................................................................................................20 1.8.1. Configurando estilos.............................................................................................................21 1.9. Histograma...................................................................................................................................22 1.10. Scatter.........................................................................................................................................23 1.10.1. Variación del color de los puntos........................................................................................24 1.10.2. Añadir leyendas, etc............................................................................................................25 1.10.3. Variación del tamaño de los puntos....................................................................................26 1.11. Tartas...........................................................................................................................................27 1.11.1. Leyendas.............................................................................................................................28 1.11.2. Descomponer la tarta..........................................................................................................28 1.12. Mapa de calor.............................................................................................................................29 1.13. Representación en 3D.................................................................................................................30 1.13.1. Configurando una representación en 3D............................................................................31 1.14. Diagramas de caja.......................................................................................................................32 1.15. Violines.......................................................................................................................................34 1.16. Imágenes.....................................................................................................................................35 1.16.1. Recortar imágenes..............................................................................................................36 1.16.2. Cambio de color..................................................................................................................37 1.17. Varios marcos.............................................................................................................................38 1.17.1. Identificación de los marcos...............................................................................................38 2 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático.</p>
+<h3>1. MATPLOTLIB</h3>
+<h4>1.1. Descripción</h4>
+<p>Matplotlib (biblioteca) produce figuras con calidad de publicación en una variedad de formatos impresos y entornos interactivos en todas las plataformas.</p>
+<h4>1.2. Enlaces de interés</h4>
+<p>https://matplotlib.org/ https://anaconda.org/anaconda/matplotlib https://matplotlib.org/stable/users/index https://python-charts.com/es/ https://claudiovz.github.io/scipy-lecture-notes-ES/intro/matplotlib/matplotlib.html</p>
+<h4>1.3. Instalación</h4>
+<p>Para instalar SciPy en anaconda: conda install -c anaconda matplotlib</p>
+<h4>1.4. Motivación</h4>
+<p>Una imagen vale más que 1000 palabras... 3 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.5. Tipos de representaciones gráficas.</p>
+<ul>
+<li>Diagramas de barras</li>
+<li>Histograma</li>
+<li>Diagramas de sectores</li>
+<li>Diagramas de caja y bigotes</li>
+<li>Diagramas de violín</li>
+<li>Diagramas de dispersión o puntos</li>
+<li>Diagramas de lineas</li>
+<li>Diagramas de áreas</li>
+<li>Diagramas de contorno</li>
+<li>Mapas de color</li>
+<li>Imágenes</li>
+</ul>
+<p>4 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.6. Librerías. Importar la biblioteca matplotlib: import matplotlib.pyplot as plt Nota: Para que la librería matplotlib se ejecute en jupyter es necesario escribir en la hoja: %matplotlib inline 1.7. Gráficos de lineas.</p>
+<p>1.7.1. Representar un gráfico de lineas. Para crear nuestro primer gráfico debemos pasar al método .plot una lista con los valores de x, y. 5 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.2. Estilo de lineas. Para cambiar la representación del gráfico pasar argumentos adicionales a .plot(): 6 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Ejemplo donde se pasa el marker el color y el estilo de linea de unión entre los puntos. 7 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.3. Más de un gráfico en un mismo marco. Simplemente pasar los datos a .plot en tantas lineas como graficas tenemos que representar. 8 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.4. Insertar, títulos, ejes, etc. Para añadir el titulo y la definición de los ejes usar title(), xlabel() y ylabel(). Para insertar una leyenda usar .legend (previamente se debe haber definido los labels.</p>
+<p>Para poder ver la gráfica por completo deberemos usar .figure y pasarle el tamaño deseado. En jupyter vienen por defecto un tamaño de 6”x4”, con una resolución de 640x480 y un dpi=75. En el ejemplo tenemos un figsize de 5”x3”. 9 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.5. Estilo del marco. Se puede definir un estilo de fondo pasando el valor adecuado a .use() 10 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Nota: Para saber los estilos disponibles usar plt.style.available 11 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.6. Estilo de leyendas, títulos, ejes, etc. Para poder mejorar el aspecto de nuestro gráfico tendremos que usar el método. subplots que, entre otros, permite crear un objeto Figure y un objeto Axes.</p>
+<p>El método .subplots() se usa principalmente para definir cuantos marcos y figuras queremos en nuestra representación. En este caso le pasaremos (1,1) ya que solo queremos un marco y una figura (se puede obviar). 12 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Resultado de la configuración anterior. 13 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.7. Gráfica con doble eje (twinx). Puede darse el caso de representar 2 gráficas con unos valores muy diferentes. El resultado será una mala visualización de una de ellas.</p>
+<p>14 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Para evitar ese inconveniente podemos usar el método .twinx() 15 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.8. Insertar leyendas. Cuanto más gráficas en una representación, más difícil resultará entender los datos. Aparte del nombre de los ejes x, y también resultará necesario aportar información (en forma de leyendas) sobre las gráficas.</p>
+<p>1.7.8.1. Insertar leyendas definiendo fuente y posición dentro del cuadro. 16 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.8.2. Insertar leyendas en cualquier posición. Para poner leyendas en cualquier posición, se puede usar bbox_to_anchor(a,b,c,d). 17 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.7.8.3. Personalizar leyendas. Para crear leyendas a medida se puede usar la extensión patches de matplotlib. Nota: Para definir la posición se puede usar loc con los valores “best”, “upper left”, “lower right”, …” o bbox_to_anchor + tupla de 4 elementos (a, b, c, d).</p>
+<p>18 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.8. Diagramas de barras. Los diagramas de barras se usan para representar la magnitud de datos categóricos. Ejemplo de los datos a representar. Representación en diagrama de barras instanciando .bar(), definiendo el indice (index), la altura (height) y el ancho de la barra 19 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.8.1. Configurando estilos. En esta figura vemos que el eje de x solo representa los valores pares de x. Para tener una representación de todos los valores usar el método .set_xticks().</p>
+<p>También podemos usar .set_xticklabels() para rotar la información representada. También vemos que hay una gran disparidad de magnitudes entre valores máximos y mínimos lo que hace que apenas se vean representados los valores más bajos. Para ello podemos usar una representación logarítmica del eje y.</p>
+<p>20 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático.</p>
+<h4>1.9. Histograma</h4>
+<p>Los histogramas se usan para representar las magnitudes en datos continuos para el eje x. En este ejemplo, también se usa una escala logarítmica para el eje y. 21 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático.</p>
+<h4>1.10. Scatter</h4>
+<p>Estos diagramas se utilizan para analizar la relación o correlación entre dos variables o entre dos conjuntos de datos. 22 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.10.1. Variación del color de los puntos. Siempre con la finalidad de mejor la legibilidad de los datos, se pueden establecer reglas de colores sobre los puntos. 23 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.10.2. Añadir leyendas, etc. 24 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.10.3. Variación del tamaño de los puntos. Para variar el tamaño de los puntos podemos pasar una regla al parámetro s. Por ejemplo: s=(precio)**.6/100 25 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático.</p>
+<h4>1.11. Tartas</h4>
+<p>Una gráfica de tarta es una gráfica circular dividida en sectores, que ilustran magnitudes o frecuencias relativas. Ejemplo: 26 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático.</p>
+<h4>1.11.1. Leyendas</h4>
+<p>1.11.2. Descomponer la tarta. Como se puede ver los datos pequeños no resaltan o directamente se sobre escriben los unos a los otros. Para evitar ese problema podemos descomponer la tarta jugando con los valores del parámetro explode. 27 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.12. Mapa de calor. Permite visualizar en una cuadricula datos asignándoles un color en función de su magnitud. Para el ejemplo, usaremos el método .corr() de la biblioteca Pandas que permite establecer la correlación entre variables.</p>
+<p>28 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.13. Representación en 3D. 29 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.13.1. Configurando una representación en 3D. 30 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.14. Diagramas de caja. Muy utilizado en ciencia de datos, el diagrama de caja tiene también como gran ventaja hacer resaltar los outliers dentro de una distribución de datos.</p>
+<p>Para el ojo entrenado permite visualizar rápidamente la distribución de los valores. Con biblioteca Matplotlib. Ejemplo. Tenemos la siguiente distribución de las edades de un grupo de personas. 31 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Si añadimos personas con edades muy diferentes del grupo inicial (p.e. 78, 85) obtendremos la siguiente gráfica. Con biblioteca Seaborn 32 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Con biblioteca Plotly 1.15. Violines. Un diagrama de violín se utiliza para visualizar la distribución de los datos y su densidad de probabilidad. 33 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.16. Imágenes. Las forma más habitual de mostrar imágenes es con el método .imshow. 34 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático.</p>
+<h4>1.16.1. Recortar imágenes</h4>
+<p>Para recortar la imagen hay que pasar una lista con los pixeles que deseamos recortar. 35 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.16.2. Cambio de color. 36 / 37</p>
+<p>Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. 1.17. Varios marcos. En muchas circunstancias, será necesario representar varias graficas con distintos datos. Para estos casos, usaremos de nuevo subplots y le pasaremos una matriz de graficas a representar (nrows y ncolumns).</p>
+<p>1.17.1. Identificación de los marcos. 37 / 37</p>
+<h3>📄 x2 y x3 CSV.csv</h3>
+<p>valores de X,valores teoricos,ruido,valores de salida,valores teoricos2 -2,15,"0,6","15,6",700 "-1,98","14,7612","-0,8","13,9612","678,67907632" "-1,96","14,5248","-0,9","13,6248","657,90944512" "-1,94","14,2908","0,6","14,8908","637,68089392" "-1,92","14,0592","0,7","14,7592","617,98331392" "-1,9","13,83","0,4","14,23","598,8067" "-1,88","13,6032","0,3","13,9032","580,14115072" "-1,86","13,3788","0,8","14,1788","561,97686832" "-1,84","13,1568","0,8","13,9568","544,30415872" "-1,82","12,9372","-0,9","12,0372","527,11343152" "-1,8","12,72","-0,8","11,92","510,3952" "-1,78","12,5052","-0,8","11,7052","494,14008112" "-1,76","12,2928","-0,4","11,8928","478,33879552" "-1,74","12,0828","0,1","12,1828","462,98216752" "-1,72","11,8752","-0,5","11,3752","448,06112512" "-1,7","11,67","0,8","12,47","433,5667" "-1,68","11,4672",0,"11,4672","419,49002752" "-1,66","11,2668","-0,7","10,5668","405,82234672" "-1,64","11,0688","-0,9","10,1688","392,55500032" "-1,62","10,8732","0,1","10,9732","379,67943472" "-1,6","10,68","0,2","10,88","367,1872" "-1,58","10,4892",0,"10,4892","355,06994992" "-1,56","10,3008","0,3","10,6008","343,31944192" "-1,54","10,1148","-0,6","9,5148","331,92753712" "-1,52","9,9312","0,8","10,7312","320,88620032" "-1,5","9,75","0,7","10,45","310,1875" "-1,48","9,5712","-0,3","9,2712","299,82360832" "-1,46","9,3948","-0,1","9,2948","289,78680112" "-1,44","9,2208","-0,1","9,1208","280,06945792" "-1,42","9,0492","0,2","9,2492","270,66406192" "-1,4","8,88","-0,6","8,28","261,5632" "-1,38","8,7132",0,"8,7132","252,75956272" "-1,36","8,5488","0,9","9,4488","244,24594432" "-1,34","8,38679999999999","-0,5","7,88679999999999","236,01524272" "-1,32","8,2272","0,2","8,4272","228,06045952" "-1,3","8,07","-0,6","7,47","220,3747" "-1,28","7,9152",0,"7,9152","212,95117312" "-1,26","7,7628","-0,3","7,4628","205,78319152" "-1,24","7,6128","-0,1","7,5128","198,86417152" "-1,22","7,4652","0,4","7,8652","192,18763312" "-1,2","7,32","0,2","7,52","185,7472" "-1,18","7,1772","-0,1","7,0772","179,53659952" "-1,16","7,0368","0,6","7,6368","173,54966272" "-1,14","6,89879999999999","0,5","7,39879999999999","167,78032432" "-1,12","6,76319999999999","-0,6","6,16319999999999","162,22262272" "-1,1","6,63","0,2","6,83","156,8707" "-1,08","6,4992","-0,9","5,59919999999999","151,71880192" "-1,06","6,3708","-0,6","5,7708","146,76127792" "-1,04","6,24479999999999","-0,9","5,34479999999999","141,99258112" "-1,02","6,1212","-0,6","5,5212","137,40726832" "-0,999999999999999",6,"0,7","6,7",133 "-0,979999999999999","5,88119999999999","-0,3","5,5812","128,76554032" "-0,959999999999999","5,7648","-0,8","4,9648","124,69875712" "-0,939999999999999","5,6508","0,2","5,8508","120,79462192" "-0,919999999999999","5,5392","-0,9","4,63919999999999","117,04820992" "-0,899999999999999","5,42999999999999","-0,9","4,52999999999999","113,4547" "-0,879999999999999","5,3232","0,2","5,5232","110,00937472" "-0,859999999999999","5,21879999999999","0,8","6,01879999999999","106,70762032" "-0,839999999999999","5,11679999999999","-0,2","4,91679999999999","103,54492672" "-0,819999999999999","5,0172","-0,2","4,8172","100,51688752" "-0,799999999999999","4,92","-0,3","4,62","97,6191999999998" "-0,779999999999999","4,8252","-0,1","4,7252","94,8476651199999" "-0,759999999999999","4,7328","-0,5","4,2328","92,1981875199999" "-0,739999999999999","4,6428","0,9","5,5428","89,6667755199999" "-0,719999999999999","4,5552","-0,9","3,6552","87,2495411199999" "-0,699999999999999","4,47","-0,5","3,97","84,9426999999999" "-0,679999999999999","4,3872","0,9","5,2872","82,7425715199999" "-0,659999999999999","4,3068","-0,7","3,6068","80,6455787199999" "-0,639999999999999","4,2288","0,1","4,3288","78,6482483199999" "-0,619999999999999","4,1532",0,"4,1532","76,7472107199999" "-0,599999999999999","4,08","0,9","4,98","74,9391999999999" "-0,579999999999999","4,0092","-0,2","3,8092","73,2210539199999" "-0,559999999999999","3,9408","-0,1","3,8408","71,5897139199999" "-0,539999999999999","3,8748",0,"3,8748","70,0422251199999" "-0,519999999999999","3,8112","-0,5","3,3112","68,5757363199999" "-0,499999999999999","3,75","0,6","4,35","67,1874999999999" "-0,479999999999999","3,6912","0,3","3,9912","65,8748723199999" "-0,459999999999999","3,6348","-0,6","3,0348","64,6353131199999" "-0,439999999999999","3,5808","-0,4","3,1808","63,4663859199999" "-0,419999999999999","3,5292","0,4","3,9292","62,3657579199999" "-0,399999999999999","3,48","-0,8","2,68","61,3311999999999" "-0,379999999999999","3,4332","-0,8","2,6332","60,3605867199999" "-0,359999999999999","3,3888","0,7","4,0888","59,4518963199999" "-0,339999999999999","3,3468","0,7","4,0468","58,6032107199999" "-0,319999999999999","3,3072","-0,6","2,7072","57,8127155199999" "-0,299999999999999","3,27","0,3","3,57","57,0787" "-0,279999999999999","3,2352","0,4","3,6352","56,39955712" "-0,259999999999998","3,2028","-0,3","2,9028","55,77378352" "-0,239999999999998","3,1728","0,9","4,0728","55,19997952" "-0,219999999999998","3,1452","0,5","3,6452","54,67684912" "-0,199999999999998","3,12","0,2","3,32","54,2032" "-0,179999999999999","3,0972","0,6","3,6972","53,77794352" "-0,159999999999999","3,0768","-0,5","2,5768","53,40009472" "-0,139999999999999","3,0588","0,3","3,3588","53,06877232" "-0,119999999999999","3,0432","-0,6","2,4432","52,78319872" "-0,0999999999999985","3,03","0,9","3,93","52,5427" "-0,0799999999999985","3,0192","-0,9","2,1192","52,34670592" "-0,0599999999999985","3,0108","0,9","3,9108","52,19474992" "-0,0399999999999985","3,0048",0,"3,0048","52,08646912" "-0,0199999999999985","3,0012","0,5","3,5012","52,02160432" "1,50573997714787E-15",3,"0,8","3,8",52 "0,0200000000000015","3,0012","-0,4","2,6012","52,02160432" "0,0400000000000015","3,0048","0,2","3,2048","52,08646912" "0,0600000000000015","3,0108","-0,9","2,1108","52,19474992" "0,0800000000000015","3,0192","0,5","3,5192","52,34670592" "0,100000000000002","3,03","-0,7","2,33","52,5427" "0,120000000000002","3,0432","0,8","3,8432","52,78319872" "0,140000000000002","3,0588","-0,8","2,2588","53,06877232" "0,160000000000002","3,0768","0,4","3,4768","53,40009472" "0,180000000000002","3,0972","-0,1","2,9972","53,77794352" "0,200000000000001","3,12",0,"3,12","54,2032" "0,220000000000001","3,1452",0,"3,1452","54,67684912" "0,240000000000001","3,1728","0,4","3,5728","55,19997952" "0,260000000000001","3,2028","-0,6","2,6028","55,77378352" "0,280000000000001","3,2352","0,5","3,7352","56,3995571200001" "0,300000000000002","3,27",0,"3,27","57,0787000000001" "0,320000000000002","3,3072","0,8","4,1072","57,8127155200001" "0,340000000000002","3,3468","0,2","3,5468","58,6032107200001" "0,360000000000002","3,3888","0,2","3,5888","59,4518963200001" "0,380000000000002","3,4332","0,6","4,0332","60,3605867200001" "0,400000000000002","3,48","0,5","3,98","61,3312000000001" "0,420000000000002","3,5292","-0,8","2,7292","62,3657579200001" "0,440000000000002","3,5808","0,8","4,3808","63,4663859200001" "0,460000000000002","3,6348","0,2","3,83480000000001","64,6353131200001" "0,480000000000002","3,6912","0,6","4,2912","65,8748723200001" "0,500000000000002","3,75000000000001","-0,7","3,05000000000001","67,1875000000001" "0,520000000000002","3,81120000000001","-0,1","3,71120000000001","68,5757363200001" "0,540000000000002","3,87480000000001","-0,1","3,77480000000001","70,0422251200001" "0,560000000000002","3,94080000000001","-0,5","3,44080000000001","71,5897139200001" "0,580000000000002","4,00920000000001","-0,1","3,90920000000001","73,2210539200001" "0,600000000000002","4,08000000000001","0,6","4,68000000000001","74,9392000000002" "0,620000000000002","4,15320000000001","-0,1","4,05320000000001","76,7472107200002" "0,640000000000002","4,22880000000001","0,8","5,02880000000001","78,6482483200002" "0,660000000000002","4,30680000000001","-0,3","4,00680000000001","80,6455787200002" "0,680000000000002","4,38720000000001","-0,4","3,98720000000001","82,7425715200002" "0,700000000000002","4,47000000000001","0,2","4,67000000000001","84,9427000000002" "0,720000000000002","4,55520000000001",0,"4,55520000000001","87,2495411200002" "0,740000000000002","4,64280000000001","0,4","5,04280000000001","89,6667755200002" "0,760000000000002","4,73280000000001","-0,5","4,23280000000001","92,1981875200002" "0,780000000000002","4,82520000000001","0,5","5,32520000000001","94,8476651200002" "0,800000000000002","4,92000000000001","0,6","5,52000000000001","97,6192000000003" "0,820000000000002","5,01720000000001","-0,6","4,41720000000001","100,51688752" "0,840000000000002","5,11680000000001","-0,1","5,01680000000001","103,54492672" "0,860000000000002","5,21880000000001",0,"5,21880000000001","106,70762032" "0,880000000000002","5,32320000000001","0,5","5,82320000000001","110,00937472" "0,900000000000002","5,43000000000001","-0,1","5,33000000000001","113,4547" "0,920000000000002","5,53920000000001","0,8","6,33920000000001","117,04820992" "0,940000000000002","5,65080000000001","-0,5","5,15080000000001","120,79462192" "0,960000000000002","5,76480000000001","-0,1","5,66480000000001","124,69875712" "0,980000000000002","5,88120000000001","-0,2","5,68120000000001","128,76554032" 1,"6,00000000000001","0,3","6,30000000000001",133 "1,02","6,12120000000001","0,2","6,32120000000001","137,40726832" "1,04","6,24480000000001","0,6","6,84480000000001","141,992581120001" "1,06","6,37080000000001",0,"6,37080000000001","146,761277920001" "1,08","6,49920000000001","-0,8","5,69920000000001","151,718801920001" "1,1","6,63000000000001","-0,3","6,33000000000001","156,870700000001" "1,12","6,76320000000001","-0,4","6,36320000000001","162,222622720001" "1,14","6,89880000000001","-0,7","6,19880000000001","167,780324320001" "1,16","7,03680000000002","0,7","7,73680000000002","173,549662720001" "1,18","7,17720000000002","-0,5","6,67720000000002","179,536599520001" "1,2","7,32000000000002","0,7","8,02000000000002","185,747200000001" "1,22","7,46520000000002","-0,9","6,56520000000002","192,187633120001" "1,24","7,61280000000002","0,3","7,91280000000002","198,864171520001" "1,26","7,76280000000002","0,5","8,26280000000002","205,783191520001" "1,28","7,91520000000002","0,3","8,21520000000002","212,951173120001" "1,3","8,07000000000002","-0,6","7,47000000000002","220,374700000001" "1,32","8,22720000000002",0,"8,22720000000002","228,060459520001" "1,34","8,38680000000002","-0,6","7,78680000000002","236,015242720001" "1,36","8,54880000000002","-0,2","8,34880000000002","244,245944320001" "1,38","8,71320000000002","-0,6","8,11320000000002","252,759562720001" "1,4","8,88000000000002",0,"8,88000000000002","261,563200000001" "1,42","9,04920000000002","-0,5","8,54920000000002","270,664061920001" "1,44","9,22080000000002","0,5","9,72080000000002","280,069457920001" "1,46","9,39480000000002","-0,7","8,69480000000002","289,786801120001" "1,48","9,57120000000002","-0,9","8,67120000000002","299,823608320001" "1,5","9,75000000000002","-0,8","8,95000000000002","310,187500000001" "1,52","9,93120000000002","0,6","10,5312","320,886200320001" "1,54","10,1148","-0,2","9,91480000000002","331,927537120001" "1,56","10,3008","-0,5","9,80080000000002","343,319441920001" "1,58","10,4892","0,5","10,9892","355,069949920002" "1,6","10,68",0,"10,68","367,187200000002" "1,62","10,8732","-0,7","10,1732","379,679434720002" "1,64","11,0688",0,"11,0688","392,555000320002" "1,66","11,2668","0,6","11,8668","405,822346720002" "1,68","11,4672","-0,6","10,8672","419,490027520002" "1,7","11,67","-0,4","11,27","433,566700000002" "1,72","11,8752","0,3","12,1752","448,061125120002" "1,74","12,0828","-0,5","11,5828","462,982167520002" "1,76","12,2928","-0,9","11,3928","478,338795520002" "1,78","12,5052","-0,6","11,9052","494,140081120002" "1,8","12,72","-0,9","11,82","510,395200000002" "1,82","12,9372","-0,1","12,8372","527,113431520002" "1,84","13,1568","-0,6","12,5568","544,304158720002" "1,86","13,3788","0,2","13,5788","561,976868320003" "1,88","13,6032","-0,8","12,8032","580,141150720003" "1,9","13,83","-0,9","12,93","598,806700000003" "1,92","14,0592","0,6","14,6592","617,983313920003" "1,94","14,2908",0,"14,2908","637,680893920003" "1,96","14,5248","0,1","14,6248","657,909445120003" "1,98","14,7612","-0,5","14,2612","678,679076320003" 2,15,"-0,1","14,9","700,000000000003"</p>
+<h3>📄 IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</h3>
+<p>## Librerias</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import style
+from matplotlib.ticker import MultipleLocator
+from pathlib import Path
+data_path = Path("C:\\Users\\Javier\\Jupyter\\matplotlib")
+import matplotlib.patches as mpatches
+import matplotlib.image as mpimg
+import seaborn as sns
+
+import warnings #avisos al usuario sobre ejecucion de un programa. 
+warnings.filterwarnings('ignore')
+
+#para que plt funcione en jupyter
+%matplotlib inline</code></pre>
+</div>
+<p>## Gráfico de lineas.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Definir valores de x, y 
+y = np.random.randint(0, 10, 10)
+x = np.arange(10)
+
+plt.plot(x,y)</code></pre>
+</div>
+<p>### Cambiar estilos de lineas.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>plt.plot(x,y, marker="o", color="b", linestyle="--")</code></pre>
+</div>
+<p>### Varias gráficas en un mismo cuadro.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>y1 = np.random.randint(0, 10, 10)
+y2 = np.random.randint(0, 10, 10)
+y3 = np.random.randint(0, 10, 10)
+x = np.arange(10)
+
+plt.plot(x,y1, marker="*", color="b", linestyle="-")
+plt.plot(x,y2, marker="D", color="g", linestyle="")
+plt.plot(x,y3, marker="8", color="r", linestyle="-.")</code></pre>
+</div>
+<p>### Insertar leyendas.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>y1 = np.random.randint(0, 10, 10)
+y2 = np.random.randint(0, 10, 10)
+y3 = np.random.randint(0, 10, 10)
+x = np.arange(10)
+
+# ajustamos tamaño de la gráfica
+plt.figure(figsize=(5, 3))
+
+plt.plot(x,y1, marker="*", color="b", linestyle="-",label="y1")
+plt.plot(x,y2, marker="D", color="g", linestyle="",label="y2")
+plt.plot(x,y3, marker="8", color="r", linestyle="-.",label="y3")
+plt.legend()
+plt.title("Gráfico")
+plt.xlabel("Eje x")
+plt.ylabel("Eje y")</code></pre>
+</div>
+<p>### Estilos de marcos predefinidos (fondo).</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>from matplotlib import style
+
+y1 = np.random.randint(0, 10, 10)
+y2 = np.random.randint(0, 10, 10)
+y3 = np.random.randint(0, 10, 10)
+x = np.arange(10)
+
+# ajustamos tamaño de la gráfica
+plt.figure(figsize=(5, 3))
+
+# seleccionamos un estilo
+style.use("ggplot") 
+
+plt.plot(x,y1, marker="*", color="b", linestyle="-",label="y1")
+plt.plot(x,y2, marker="D", color="g", linestyle="",label="y2")
+plt.plot(x,y3, marker="8", color="r", linestyle="-.",label="y3")
+plt.legend()
+plt.title("Gráfico")
+plt.xlabel("Eje x")
+plt.ylabel("Eje y")</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>plt.style.available</code></pre>
+</div>
+<p>### Configurar estilos de leyendas, títulos, ejes, marcos, etc.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>y1 = np.random.randint(0, 10, 10)
+x = np.arange(10)
+
+# creamos los objetos figure y axes.
+fig, ax = plt.subplots(1, 1, figsize=(6,4))
+
+# declaramos los ejes
+ax.xaxis.grid(True)
+ax.yaxis.grid(True)
+# ax.grid(true) # declarar los 2 ejes a la vez.
+
+# titulo de los ejes
+ax.set(xlabel="valores de x", ylabel="valores de y", title="Gráfico")
+
+# marcas mayores de los ejes
+ax.xaxis.set_major_locator(MultipleLocator(1))   # X: separación cada 0.5 unidades
+ax.yaxis.set_major_locator(MultipleLocator(2))  # Y: separación cada 0.25 unidades
+# estilos marcas mayores
+ax.xaxis.grid(which='major', linestyle='dashed', color='gray')
+ax.yaxis.grid(which='major', linestyle='dashed', color='lightskyblue')
+
+# marcas menores de los ejes.
+from matplotlib.ticker import MultipleLocator
+ax.xaxis.set_minor_locator(MultipleLocator(0.5))   # X: separación cada 0.5 unidades
+ax.yaxis.set_minor_locator(MultipleLocator(0.25))  # Y: separación cada 0.25 unidades
+# estilos marcas menores
+ax.xaxis.grid(which='minor', linestyle='dashdot', color='yellow')
+
+# formato marcas ejes x, y
+# Eje X
+ax.xaxis.set_minor_formatter('{x:.1f}')
+ax.tick_params(axis='x', which='minor', labelsize=8, labelcolor='gray')
+# Eje Y
+ax.yaxis.set_minor_formatter('{x:.2f}')
+ax.tick_params(axis='y', which='minor', labelsize=4, labelcolor='lightskyblue')
+
+# color de fondo
+ax.set_facecolor("m")
+
+# pintar grafico
+ax.plot(x,y1); # puntoycoma permite eliminar el out[]</code></pre>
+</div>
+<p>### Doble eje.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Abrir archivo con datos.
+dataframe = pd.read_csv(data_path/"x2 y x3 CSV.csv", sep = ",", decimal=",")
+
+x = dataframe.iloc[:,0].tolist()
+y1 = dataframe.iloc[:,1].tolist()
+y2 = dataframe.iloc[:,4].tolist()
+
+# pintar grafico.
+fig, ax = plt.subplots()
+ax.plot(x,y1, marker="*", color="b", linestyle="-")
+ax.plot(x,y2, marker="D", color="g", linestyle="-")
+plt.show()</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Abrir archivo con datos.
+dataframe = pd.read_csv(data_path/"x2 y x3 CSV.csv", sep = ",", decimal=",")
+
+x = dataframe.iloc[:,0].tolist()
+y1 = dataframe.iloc[:,1].tolist()
+y2 = dataframe.iloc[:,4].tolist()
+
+# pintar grafico.
+fig, ax = plt.subplots()
+ax.plot(x,y1, marker="*", color="b", linestyle="-")
+ax1 = ax.twinx()
+ax1.plot(x,y2, marker="D", color="g", linestyle="-")
+plt.show()</code></pre>
+</div>
+<p>### Insertar leyendas.</p>
+<p>#### Insertar leyendas 1</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># pintar graficas insertar leyendas para distinguir una grafica de la otra.
+
+fig, ax = plt.subplots()
+ax.plot(x,y1, marker=" ", color="b", linestyle="-", label = "curva_1")
+ax1 = ax.twinx()
+ax1.plot(x,y2, marker=" ", color="g", linestyle="-", label = "curva_2")
+
+# insertar leyendas definiendo fuente y posición.
+ax.legend(loc="upper left", fontsize = 8)
+ax1.legend(loc="upper right", fontsize= 8)
+plt.show()</code></pre>
+</div>
+<p>#### Insertar leyendas 2</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># pintar graficas insertar leyendas para distinguir una grafica de la otra.
+
+fig, ax = plt.subplots()
+ax.plot(x, y1, marker=" ", color="b", linestyle="-", label = "curva_1")
+
+# insertar leyenda fuera de la caja 
+plt.legend(bbox_to_anchor=(0., 1.005, 1., .102), loc="lower left",
+           ncol=2, mode="expand", borderaxespad=0.)
+
+ax1 = ax.twinx()
+ax1.plot(x, y2, marker=" ", color="g", linestyle="-", label = "curva_2")
+# insertar leyenda fuera de la caja
+plt.legend(bbox_to_anchor=(0.32, 0.5, 1., .102), loc="upper right",
+           ncol=2, mode= None, borderaxespad=0.);</code></pre>
+</div>
+<p>#### Insertar leyendas 3</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import matplotlib.patches as mpatches
+# pintar graficas insertar leyendas para distinguir una grafica de la otra.
+
+fig, ax = plt.subplots()
+ax.plot(x, y1, marker=" ", color="b", linestyle="-")
+
+ax1 = ax.twinx()
+ax1.plot(x, y2, marker=" ", color="g", linestyle="-", label = "curva_2")
+
+curva_1 = mpatches.Patch(color='blue', label='Gráfica curva_1')
+curva_2 = mpatches.Patch(color='orange', label='Gráfica curva_2')
+#plt.legend(handles=[curva_1, curva_2], title = 'Gráficas', loc = "best")
+plt.legend(handles=[curva_1, curva_2], title = 'Gráficas', bbox_to_anchor = (0.42, 0.5, 1., .102));</code></pre>
+</div>
+<p>## Gráfico de barras.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import style
+from matplotlib.ticker import MultipleLocator
+import warnings #avisos al usuario sobre ejecucion de un programa. 
+from pathlib import Path
+
+warnings.filterwarnings('ignore')
+
+#para que plt funcione en jupyter
+%matplotlib inline</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+dataframe.head(10)
+
+# Datos a representar.
+datos = dataframe.groupby(["Rooms"])
+habitaciones = datos["Rooms"].value_counts()</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Representacion en diagrama de barras
+fig, ax = plt.subplots(figsize = (6,3.5))
+ax.bar(x = habitaciones.index.values, height = habitaciones.values, width=0.50, align="center");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Representacion en diagrama de barras
+fig, ax = plt.subplots(figsize = (6,3.5))
+ax.bar(x = habitaciones.index.values, height = habitaciones.values, width=0.50, align="center");
+
+#Configuracion de labels de x
+ax.set_xticks(habitaciones.index.values);
+ax.set_xticklabels(habitaciones.index.values, rotation=90);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Representacion en diagrama de barras
+fig, ax = plt.subplots(figsize = (6,3.5))
+ax.bar(x = habitaciones.index.values, height = habitaciones.values, width=0.50, align="center");
+
+#Configuracion de labels de x
+ax.set_xticks(habitaciones.index.values);
+ax.set_xticklabels(habitaciones.index.values, rotation=90);
+
+#Configuracion de y
+ax.set_yscale("log")
+ax.set_ylabel("Habitaciones")</code></pre>
+</div>
+<p>## Histogramas.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+
+datos = dataframe.groupby(["Price"])
+precios = datos["Price"].value_counts()</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Representacion en diagrama de barras
+fig, ax = plt.subplots(figsize = (6,3.5))
+ax.hist(precios, bins= 10);
+ax.set_yscale("log")
+
+#Configuracion de labels de x</code></pre>
+</div>
+<p>## Scatter (dispersión).</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+
+# Scatter.
+habitaciones = dataframe["Rooms"]
+precio = dataframe["Price"]
+fig, ax = plt.subplots(figsize = (6,3.5))
+ax.scatter(x = habitaciones , y = precio);</code></pre>
+</div>
+<p>### Variacion color de los puntos.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+
+# Scatter.
+habitaciones = dataframe["Rooms"]
+precio = dataframe["Price"]
+fig, ax = plt.subplots(figsize = (6,3.5))
+scatter = ax.scatter(x = habitaciones , y = precio,
+           s=30, # tamaño de puntos
+           c=precio, cmap='RdBu_r',  # colores
+           vmin=precio.min(), vmax=precio.max(), # normalización de colores
+           alpha=0.7, #transparencia de los valores
+           edgecolors='none' );
+
+# Leyendas
+cb = fig.colorbar(scatter, ax=ax, label='Precio', extend='max')
+# Lineas exteriores de la leyenda no visible.
+cb.outline.set_visible(False)
+# Nombre de los ejes
+ax.set_xlabel('Habitaciones')
+ax.set_ylabel('Precios')
+# Lineas derecha y superior del marco no visibles.
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+# No representar todos los puntos de la leyenda.
+fig.tight_layout()</code></pre>
+</div>
+<p>### Variacion tamaño de los puntos.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+
+# Scatter.
+habitaciones = dataframe["Rooms"]
+precio = dataframe["Price"]
+fig, ax = plt.subplots(figsize = (6,3.5))
+scatter = ax.scatter(x = habitaciones , y = precio,
+           s=(precio)**.6/100, # tamaño de puntos
+           c=precio, cmap='RdBu_r',  # colores
+           vmin=precio.min(), vmax=precio.max(), # normalización de colores
+           alpha=0.7, #transparencia de los valores
+           edgecolors='none' );
+
+# Leyendas
+cb = fig.colorbar(scatter, ax=ax, label='Precio', extend='max')
+# Lineas exteriores de la leyenda no visible.
+cb.outline.set_visible(False)
+# Nombre de los ejes
+ax.set_xlabel('Habitaciones')
+ax.set_ylabel('Precios')
+# Lineas derecha y superior del marco no visibles.
+ax.spines['right'].set_visible(False)
+ax.spines['top'].set_visible(False)
+# No representar todos los puntos de la leyenda.
+fig.tight_layout()</code></pre>
+</div>
+<p>## Tartas (camembert).</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+habitaciones = dataframe["Rooms"].value_counts(normalize=False)</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Tarta
+fig, ax = plt.subplots(figsize = (6,6))
+ax.pie(habitaciones);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Tarta
+fig, ax = plt.subplots(figsize = (4,4))
+ax.pie(habitaciones, labels=habitaciones.index, # indice
+      autopct="%1.1f%%"); # añadir % de cada porción</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Tarta
+fig, ax = plt.subplots(figsize = (4,4))
+
+# parametro explode.
+descomponer = [0, 0, 0, 0, 0.1, 0.75, 1.75, 2.75, 3.75]
+
+ax.pie(habitaciones, labels=habitaciones.index, # indice
+       explode= descomponer, # parametros de explode
+     #  shadow= True, # sombrear las porciones
+       autopct="%1.1f%%", # añadir % de cada porción
+     #  startangle=45, # giro de la tarta.
+       );</code></pre>
+</div>
+<p>## Mapa de calor</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+#dataframe.head()
+dataframe1 = dataframe[["Price","Rooms","Distance","Postcode","Bathroom","Landsize"]]
+#dataframe1.dropna
+dataframe1.corr()</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Datos "bulk"
+data_path = Path("C:/Users/Javier")
+dataframe = pd.read_csv(data_path / "melb_data.csv")
+#dataframe.head()
+dataframe1 = dataframe[["Price","Rooms","Distance","Postcode","Bathroom","Landsize"]]
+#dataframe1.dropna
+dataframe1.corr()
+
+# diagrama de calor.
+fig, ax = plt.subplots(figsize= (4,4))
+ax.pcolormesh([1,2,3,4,5,6],[1,2,3,4,5,6], dataframe1.corr().values);</code></pre>
+</div>
+<p>## Representación en 3D</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>from mpl_toolkits.mplot3d import Axes3D
+# Datos de muestra
+X, Y = np.meshgrid(np.linspace(-8, 8), 
+                   np.linspace(-8, 8))
+R = np.sqrt(X**2 + Y**2)
+Z = np.sin(R) / R
+
+fig = plt.figure()
+ax = fig.add_subplot(projection = '3d')
+
+# Superficie 3D
+ax.plot_surface(X, Y, Z);
+
+# plt.show()</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>from mpl_toolkits.mplot3d import Axes3D
+# Datos de muestra
+X, Y = np.meshgrid(np.linspace(-8, 8), 
+                   np.linspace(-8, 8))
+R = np.sqrt(X**2 + Y**2)
+Z = np.sin(R) / R
+
+fig = plt.figure()
+ax = fig.add_subplot(projection = '3d')
+
+# Superficie 3D
+plot = ax.plot_surface(X, Y, Z, cmap = 'Spectral_r')
+fig.colorbar(plot, ax = ax, shrink = 0.5, aspect = 10)
+
+# plt.show()
+
+# Etiquetas de los ejes
+ax.set_xlabel("Etiqueta del eje X")
+ax.set_ylabel("Etiqueta del eje Y")
+ax.set_zlabel("Etiqueta del eje Z")
+
+# Título
+plt.title("Superficie 3D");</code></pre>
+</div>
+<p>## Cajas</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>serie_1 = pd.Series([36, 25, 37, 24, 39, 20, 36, 45, 31, 31, 39, 24, 29, 23, 41, 40, 33, 24, 34, 40])
+print(serie_1.describe())
+
+fig ,ax = plt.subplots()
+ax.boxplot(serie_1);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Añadimos puntos sigulares (outliers)
+serie_1 = pd.Series([36, 25, 37, 24, 39, 20, 36, 45, 31, 31, 39, 24, 29, 23, 41, 40, 33, 24, 34, 40, 78, 85])
+print(serie_1.describe())
+
+fig ,ax = plt.subplots()
+ax.boxplot(serie_1);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Cambiamos de biblioteca para representacion # SEABORN
+import seaborn as sns
+serie_1 = pd.Series([36, 25, 37, 24, 39, 20, 36, 45, 31, 31, 39, 24, 29, 23, 41, 40, 33, 24, 34, 40])
+print(serie_1.describe())
+
+sns.boxplot(serie_1);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># Cambiamos de biblioteca para representacion # Plotly
+import plotly.express as px
+serie_1 = pd.Series([36, 25, 37, 24, 39, 20, 36, 45, 31, 31, 39, 24, 29, 23, 41, 40, 33, 24, 34, 40])
+print(serie_1.describe())
+
+fig = px.box(serie_1)
+px.box(serie_1)</code></pre>
+</div>
+<p>## Diagrama de violín</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>#x = np.random.power(5,100)
+#x = np.random.pareto(5,100)
+#print (x)
+
+# Datos
+x = np.random.normal(5, 1, 100) 
+# Gráfico de violín
+fig, ax = plt.subplots()
+violin = ax.violinplot(x)
+
+
+for pc in violin["bodies"]:
+    pc.set_facecolor("#D43F3A")
+    pc.set_edgecolor("black")
+    pc.set_alpha(0.5) #permite ajustar la transparencia</code></pre>
+</div>
+<p>## Imágenes `imshow`</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import matplotlib.image as mpimg
+image = mpimg.imread(data_path / "jupyter.jpg")
+plt.imshow(image);</code></pre>
+</div>
+<p>### Recortar imágenes `</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import matplotlib.image as mpimg
+image = mpimg.imread(data_path / "jupyter.jpg")
+print(image.shape) # recuperar las medidas de la imagen
+#print(image)
+image_recortada = image[140:-170, :, :]
+plt.imshow(image_recortada)
+print(image_recortada.shape)</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>import matplotlib.image as mpimg
+image = mpimg.imread(data_path / "jupyter.jpg")
+print(image.shape) # recuperar las medidas de la imagen
+#print(image)
+image_recortada = image[140:-170, 50:-50, 1]
+plt.imshow(image_recortada)
+print(image_recortada.shape)</code></pre>
+</div>
+<p>## Varios marcos.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># varios marcos.
+fig, ax = plt.subplots(nrows =2, ncols = 3);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">IA BD PIA UT 3.3 Biblioteca Matplotlib Gráficas.ipynb</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code># varios marcos.
+fig, ax = plt.subplots(nrows =2, ncols = 3);
+
+for i in range(2):
+    for j in range(3):
+        ax[i,j].set_title(f"Marco ({i},{j})")
+
+fig.tight_layout(pad=1)  # sólo para que no se solapen los títulos</code></pre>
+</div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut03/ut0303.html">⬅️ 3.3 UT 3.4 Biblioteca seaborn</a>
+<a class="page-nav-btn" href="../ut03/ut0305.html">3.5 UT 3.2 Biblioteca Pandas ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

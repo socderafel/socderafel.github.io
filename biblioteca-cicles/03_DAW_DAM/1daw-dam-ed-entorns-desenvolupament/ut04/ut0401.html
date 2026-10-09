@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>4.1 U5 - Diagramas de clase — Entorns de Desenvolupament | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>⚙️ Entorns de Desenvolupament — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Entorns de Desenvolupament</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guía del estudiante</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — Introducción al desarrollo de software</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 U1 - Intr. al desarrollo de SW</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Especificaciones requisitos IEEE380_ejemplo</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Especificaciones requisitos software_ejemplo</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — IDE's y estilo de programación</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U2 - IDEs. Estilos de programación</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Control de versiones</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U3 - Control de versiones</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Git Cheat Sheet</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Crear alias para log con ramas</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Material-Heroes</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Actividades de clase</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Debugging y testing</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U4 - Debugging y testing</a></li>
+<li><a href="../ut03/ut0302.html">3.2 EjercicioGrafo2</a></li>
+<li><a href="../ut03/ut0303.html">3.3 EjercicioGrafo3</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Códigos debugging</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT4 — Diagramas de clase</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut04/ut0401.html">4.1 U5 - Diagramas de clase</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U5 - Diagramas de clase profe</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Actividades de clase</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Diagramas de comportamiento</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Diagramas de casos de uso</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U6.2 - Diagramas de estado</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Actividades de clase</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Refactorización, optimización y documentación</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U7. Refactorización</a></li>
+<li><a href="../ut06/ut0602.html">6.2 U7.2 - Documentación</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Metodologías ágiles</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U8. Metodologías ágiles</a></li>
+<li><a href="../ut07/ut0702.html">7.2 U8.1 - Planificación de proyectos</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Poker planning</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT4 — Diagramas de clase</span>
+<h1>4.1 U5 - Diagramas de clase</h1>
+
+
+<hr/>
+<p>Diagrama de Clases</p>
+<p>ÍNDICE 1. Qué es UML 2. Diagramas de Clases 3. Clases 4. Atributos 5. Métodos 6. Relaciones</p>
+<h3>1. Asociación. El concepto de Navegabilidad</h3>
+<h3>2. Clase Asociación</h3>
+<h3>3. Herencia</h3>
+<h3>4. Composición</h3>
+<h3>5. Agregación</h3>
+<h3>6. Realización</h3>
+<h3>7. Dependencia</h3>
+<p>UML</p>
+<ul>
+<li>UML (Unified Modeling Languaje) [Lenguaje de Modelado Unificado]</li>
+<li>Lenguaje de modelado basado en diagramas que sirve para expresar</li>
+</ul>
+<p>modelos en Diseño Orientado a Objetos.</p>
+<ul>
+<li>Un modelo es una representación de la realidad donde se ignoran</li>
+</ul>
+<p>detalles de menor importancia</p>
+<ul>
+<li>Se ha convertido en el estándar de facto de la mayor parte de las</li>
+</ul>
+<p>metodologías de desarrollo oo de la actualidad.</p>
+<ul>
+<li>UML define 9 tipos de diagramas</li>
+<li>Cada uno representa el sistema desde un punto de vista</li>
+<li>Los más usados son</li>
+<li>Diagrama de Casos de Uso: usado durante la recopilación de requisitos</li>
+<li>Diagrama de Clases: es un diagrama estático que muestra las distintas clases</li>
+</ul>
+<p>que conforman un sistema y cómo se relacionan entre ellas. Se parece mucho al diagrama ER que dibujamos en BBDD</p>
+<p>Diagramas de UML 1.5 •(1)Diagrama de Casos de Uso</p>
+<ul>
+<li>(2) Diagrama de Clases</li>
+</ul>
+<p>•(3) Diagrama de Objetos Diagramas de Comportamiento</p>
+<ul>
+<li>(4) Diagrama de Estados</li>
+<li>(5) Diagrama de Actividad</li>
+</ul>
+<p>Diagramas de Interacción</p>
+<ul>
+<li>(6) Diagrama de Secuencia</li>
+<li>(7) Diagrama de Colaboración</li>
+</ul>
+<p>Diagramas de implementación</p>
+<ul>
+<li>(8) Diagrama de Componentes</li>
+<li>(9) Diagrama de Despliegue</li>
+</ul>
+<p>DIAGRAMA DE CLASES</p>
+<ul>
+<li>Compuesto por</li>
+<li>Clases: atributos, métodos y la visibilidad de estos.</li>
+<li>Atributos: variables.</li>
+<li>Métodos: operaciones. Cómo interactúa el objeto con su entorno.</li>
+<li>Relaciones: asociación (relación), herencia, agregación, composición,</li>
+</ul>
+<p>realización y dependencia</p>
+<p>CLASE</p>
+<ul>
+<li>Unidad básica que encapsula la i de un Objeto.</li>
+<li>Un objeto es una instancia de una clase.</li>
+<li>A través de ella podemos modelar el entorno de estudio (un</li>
+</ul>
+<p>empleado, un departamento, una cc, un artículo,…)</p>
+<ul>
+<li>En UML una clase se representa así</li>
+<li>Podemos omitir atributos y métodos al representar una clase.</li>
+</ul>
+<p>ATRIBUTO</p>
+<ul>
+<li>Representa una propiedad de la Clase que se encuentra en todas las instancias de</li>
+</ul>
+<p>la clase.</p>
+<ul>
+<li>Se representa mostrando su nombre y si quieres también su tipo y valor por</li>
+</ul>
+<p>defecto.</p>
+<ul>
+<li>Los tipos básicos en UML son: Integer, String y Boolean.</li>
+<li>Al crear el atributo indicarás su visibilidad en el entorno.</li>
+<li>Su visibilidad es</li>
+<li>Public: se representa con el símbolo “+”. Visible desde todas partes del programa</li>
+<li>Private: “-”. Visible solo desde dentro de la Clase, es decir, que solo sus Métodos pueden</li>
+</ul>
+<p>acceder al Atributo. Los atributos de una clase por defecto son Private</p>
+<ul>
+<li>Protected: “#”. NO accesible desde fuera de la Clase.</li>
+</ul>
+<p>SÍ accesible por los Métodos de la propia Clase y de las subclases que de él deriven.</p>
+<ul>
+<li>Pakage: “~”. Visible a las clases del mismo paquete</li>
+</ul>
+<p>MÉTODO</p>
+<ul>
+<li>Implementa un servicio de la clase que muestra un comportamiento</li>
+</ul>
+<p>común a todos los objetos.</p>
+<ul>
+<li>Define la forma de cómo la clase interactúa con su entorno.</li>
+<li>Visibilidad</li>
+<li>Public: “+”. Método visible desde todas partes del programa.</li>
+</ul>
+<p>Los métodos de una clase por defecto son Public</p>
+<ul>
+<li>Private: “-”. Accesible solo por los Métodos de la Clase.</li>
+<li>Protected: “#”. Accesible por los Métodos de la propia Clase y por Métodos de las</li>
+</ul>
+<p>subclases que de él deriven.</p>
+<ul>
+<li>Pakage: “~”. Visible a las Clases del mismo paquete</li>
+</ul>
+<p>RELACIONES (también llamadas ASOCIACIONES)</p>
+<ul>
+<li>Las relaciones tienen un NOMBRE</li>
+<li>MULTIPLICIDAD: Es como la CARDINALIDAD del modelo ER que</li>
+</ul>
+<p>usábamos en BD y se lee en el mismo sentido. Es el número de instancias de una clase que se representan con otra clase. Indicamos la multiplicidad mínima y la máxima</p>
+<ul>
+<li>Ejemplo de 2 asociaciones con sus multiplicidades</li>
+<li>Dependiendo de la herramienta de modelado que usemos, las multiplicidades destino &gt;1 se</li>
+</ul>
+<p>implementan con un atributo del tipo array, colección o set.</p>
+<ul>
+<li>Tipos de Relaciones</li>
+</ul>
+<h3>1. Asociación</h3>
+
+<h3>3. Herencia (Generalización y Especialización)</h3>
+
+
+
+
+<p>1-ASOCIACIÓN</p>
+<ul>
+<li>Puede ser bidireccional o unidireccional, dependiendo de si ambas</li>
+</ul>
+<p>conocen de la existencia de la otra o no.</p>
+<ul>
+<li>Cada Clase juega un rol que se indica en la flecha.</li>
+<li>Además, la asociación también tiene nombre</li>
+</ul>
+<p>MULTIPLICIDAD</p>
+<p>JAVA</p>
+<ul>
+<li>Si conviertes a Java 2 clases unidas por una asociación…</li>
+<li>Bidireccional</li>
+<li>Cada clase tendrá un objeto (1) o un set de objetos (*), dependiendo de la multiplicidad</li>
+</ul>
+<p>entre ellas.</p>
+<ul>
+<li>Unidireccional</li>
+<li>La clase destino no sabrá de la existencia de la clase origen.</li>
+</ul>
+<p>En el ejemplo: Zonas no sabe nada de la clase Almacén.</p>
+<ul>
+<li>La clase origen contendrá un objeto (1) o set de objetos (*) de la clase destino.</li>
+</ul>
+<p>NAVEGABILIDAD entre clases</p>
+<ul>
+<li>Muestra que es posible pasar de un objeto de la clase origen a uno o</li>
+</ul>
+<p>más objetos de la clase destino, dependiendo de la Multiplicidad.</p>
+<ul>
+<li>Unidireccional: la navegabilidad va en un solo sentido, de origen a destino.</li>
+</ul>
+<p>El destino no es navegable al origen.</p>
+<ul>
+<li>Ambas clases son navegables</li>
+<li>La asociación es unidireccional</li>
+</ul>
+<p>solo la clase origen Almacén conoce la existencia de la clase destino Zonas. Almacen a Zonas es navegable pero no al contrario.</p>
+<p>NOTA</p>
+<ul>
+<li>NO todas las herramientas usan la misma notación para expresar la</li>
+</ul>
+<p>Navegabilidad.</p>
+<ul>
+<li>En UML2 existen varias notaciones para expresar la navegabilidad, en</li>
+</ul>
+<p>la práctica más estándar se usa esta notación</p>
+<p>ASOCIACIONES REFLEXIVAS</p>
+<ul>
+<li>Una clase puede asociarse consigo misma creando una asociación</li>
+</ul>
+<p>reflexiva como ocurría en el Diagram ER que vimos en BD.</p>
+<ul>
+<li>Ejemplo1: un alumno es delegado de muchos alumnos</li>
+<li>Ejmeplo2: un empleado-jefe es jefe de muchos empleados.</li>
+</ul>
+<p>2-CLASE ASOCIACION</p>
+<ul>
+<li>Una asociación entre dos clases puede llevar información necesaria</li>
+</ul>
+<p>para esta asociación. A eso se le llama Clase Asociación.</p>
+<ul>
+<li>Es como cuando surgían atributos en una relación N:M en el ER.</li>
+<li>La nueva clase asociación…</li>
+<li>Recibe el estatus de Clase</li>
+<li>Sus instancias son elementos de la asociación.</li>
+<li>Pueden estar dotadas de Atributos y Operaciones</li>
+<li>Pueden estar vinculadas a otras Clases a través de ASOCIACIONES.</li>
+</ul>
+<p>EJEMPLO CLASE ASOCIACION</p>
+<ul>
+<li>Un cliente compra muchos artículos</li>
+<li>Un artículo es comprado por muchos clientes</li>
+<li>De la relación compra se necesita saber la fecha en que de produjo y</li>
+</ul>
+<p>las unidades adquiridas.</p>
+<ul>
+<li>Fíjate que la relación ya no tiene nombre, se lo ha quedado la propia Clase</li>
+</ul>
+<p>Asociación.</p>
+<p>3-HERENCIA /GENERALIZACIÓN /ESPECIALIZACIÓN (las 3 son lo mismo)</p>
+<ul>
+<li>La clase hija hereda los atributos y métodos de la padre.</li>
+<li>Se representa mediante una flecha de este tipo</li>
+</ul>
+<p>donde la punta de la flecha apunta a la superclase o clase padre.</p>
+<ul>
+<li>Ejemplo: todas estas clases</li>
+</ul>
+<p>comparten los atributos de la clase Persona</p>
+<ul>
+<li>El código JAVA generado para estas clases sería el siguiente</li>
+</ul>
+<p>4-COMPOSICIÓN</p>
+<ul>
+<li>Representa un objeto compuesto por otros objetos.</li>
+<li>Asocia un objeto complejo con los objetos que lo constituyen, sus</li>
+</ul>
+<p>componentes.</p>
+<ul>
+<li>Hay 2 formas de composición</li>
+<li>Fuerte: composición (es la que explicamos ahora)</li>
+<li>Débil: agregación (es el tipo de Asociación del punto 5-AGREGACION)</li>
+</ul>
+<ul>
+<li>Los componentes constituyen una parte del objeto compuesto y estos</li>
+</ul>
+<p>no pueden ser compartidos por varios objetos compuestos.</p>
+<ul>
+<li>Por tanto, la cardinalidad máxima es 1</li>
+<li>La supresión del objeto compuesto, comporta la supresión de los</li>
+</ul>
+<p>componentes</p>
+<ul>
+<li>Se representa con una línea con un</li>
+</ul>
+<p>rombo relleno</p>
+<ul>
+<li>Ejemplo: el PC se compone de una</li>
+</ul>
+<p>Placa Base, Una o varias Memorias, un Teclado y uno o varios HD.</p>
+<ul>
+<li>Código JAVA generado para la clase Ordenador</li>
+</ul>
+<p>5-AGREGACIÓN</p>
+<ul>
+<li>Es la composición débil, como hemos dicho antes.</li>
+<li>Los componentes pueden ser compartidos por varios compuestos</li>
+<li>La destrucción del compuesto no implica la destrucción de los</li>
+</ul>
+<p>componentes</p>
+<ul>
+<li>Se da con más frecuencia que la COMPOSICIÓN en las primeras fases</li>
+</ul>
+<p>del modelado. Es posible usar solo la agregación y determinar más adelante qué Asociaciones son Compomposiciones.</p>
+<ul>
+<li>Se representa con un rombo vacío</li>
+<li>Ejemplo: un equipo está compuesto por jugadores, pero el jugador</li>
+</ul>
+<p>puede jugar a su vez en otros equipos. Si desaparece el Equipo, el Jugador no desaparece.</p>
+<p>DIFERENCIAS ENTRE AGREGRACIÓN Y COMPOSICIÓN</p>
+<p>6-REALIZACIÓN</p>
+<ul>
+<li>Relación de herencia que existe entre una Clase Interfaz y la Subclase</li>
+</ul>
+<p>que implementa esta interfaz.</p>
+<ul>
+<li>Una Interfaz es una Clase totalmente Abstracta, es decir, que no tiene</li>
+</ul>
+<p>Atributos y todos sus Métodos son Abstractos y Públicos, sin desarrollar. Estas Clases no desarrollan ningún Método. Gráficamente se representan como una Clase con el estereotipo &lt;&lt;interface&gt;&gt;.</p>
+<ul>
+<li>Se representa así</li>
+</ul>
+<ul>
+<li>EJEMPLO: Esta imagen muestra una Asociación de Realización entre</li>
+</ul>
+<p>una Clase Interfaz Animal y las Clases Perro, Gallina y Calamar. SE considera que cualquier animal come, se comunica y se reproduce, sin embargo cada tipo de animal lo hace de diferente manera. Cada Subclase implementará los métodos de la interfaz.</p>
+<ul>
+<li>Código JAVA generado</li>
+</ul>
+<p>7-DEPENDENCIA</p>
+<ul>
+<li>Relación que se establece entre dos clases cuando una clase usa la</li>
+</ul>
+<p>otra, es decir, que la necesita para su cometido. Las instancias de la Clase se crean y se emplean cuando se necesitan.</p>
+<ul>
+<li>Se representa: - - - - - - - -&gt;</li>
+</ul>
+<p>desde la Clase utilizadora a la utilizada.</p>
+<ul>
+<li>Un cambio en la Clase Utilizada puede afectar al funcionamiento de la</li>
+</ul>
+<p>Clase Utilizadora, pero no al contrario.</p>
+<ul>
+<li>Ejemplo1: Clase Impresora y Clase Documento. La impresora imprime</li>
+</ul>
+<p>documentos, por tanto necesita el documento para imprimirlo.</p>
+<ul>
+<li>Ejemplo2: El viajero necesita su equipaje para viajar. El viajero</li>
+</ul>
+<p>depende de la Clase Equipaje porque la necesita.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut04/index.html">⬅️ 📘 UT4 Completa</a>
+<a class="page-nav-btn" href="../ut04/ut0402.html">4.2 U5 - Diagramas de clase profe ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

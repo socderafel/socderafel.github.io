@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>5.1 TEORIA UNITAT 6 PART 1 — Sistemes Informàtics | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖥️ Sistemes Informàtics — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Sistemes Informàtics</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 SI: LLIBRE QUE ANEM A SEGUIR EN LES CLASES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 TRANSPARÈNCIES UNITAT 1</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Exercisis conversió binari - decimal I</a></li>
+<li><a href="../ut00/ut0003.html">0.3 SI: ENLLAÇ RENDIMENT CPU</a></li>
+<li><a href="../ut00/ut0004.html">0.4 DIASPOSITIVES UD1 PART 1</a></li>
+<li><a href="../ut00/ut0005.html">0.5 SI: TAULA DE TOPOLOGIES LAN</a></li>
+<li><a href="../ut00/ut0006.html">0.6 SI: TEORIA XARXES UD1</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 LA SHELL DE LINUX</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D</a></li>
+<li><a href="../ut02/ut0203.html">2.3 ENLLAÇOS DURS I SIMBÓLICS</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TEORIA XARXES</a></li>
+<li><a href="../ut03/ut0302.html">3.2 TEORIA SUBNETTING</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — GESTIÓ DE LA INFORMACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 GUIA DE LA UNITAT 5</a></li>
+<li><a href="../ut04/ut0402.html">4.2 TEORIA UNITAT 5 PART 1</a></li>
+<li><a href="../ut04/ut0403.html">4.3 TEORIA UNITAT 5 PART 2</a></li>
+<li><a href="../ut04/ut0404.html">4.4 TEORIA UNITAT 5 PART 3</a></li>
+<li><a href="../ut04/ut0405.html">4.5 TEORIA UNITAT 5 PART 4</a></li>
+<li><a href="../ut04/ut0406.html">4.6 TEORIA UNITAT 5 PART 5</a></li>
+<li><a href="../ut04/ut0407.html">4.7 TEORIA UNITAT 5 PART 6</a></li>
+<li><a href="../ut04/ut0408.html">4.8 TEORIA UNITAT 5 PART 7</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut05/ut0501.html">5.1 TEORIA UNITAT 6 PART 1</a></li>
+<li><a href="../ut05/ut0502.html">5.2 TEORIA UNITAT 6 PART 2</a></li>
+<li><a href="../ut05/ut0503.html">5.3 TEORIA UNITAT 6 PART 3</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — SEGURETAT, RENDIMENT I RECURSOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 TEORIA UNITAT 7 PART1</a></li>
+<li><a href="../ut06/ut0602.html">6.2 TEORIA UNITAT 7 PART 2</a></li>
+<li><a href="../ut06/ut0603.html">6.3 TEORIA UNITAT 7 PART 3</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — TALLER HARDWARE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Manual placa base taller</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Teoria Components Hardware</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT5 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI</span>
+<h1>5.1 TEORIA UNITAT 6 PART 1</h1>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4><span class="" style="background-color: rgb(125, 159, 211);">APUNTS I FÒRUM </span></h4><br/></div>
+
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h5 style="text-align: left;">ACTIVITATS EVALUABLES</h5></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h5 style="text-align: left;">ACTIVITATS NO EVALUABLES</h5></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h5 style="text-align: left;">ACTIVITATS DE REFORÇ</h5></div>
+<hr/>
+<p>Unidad 6: Administración del acceso al dominio</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<ul>
+<li>Términos de Active Directory que se deben de entender para una correcta administración de un dominio.</li>
+</ul>
+<p>• Active Directory (AD): Es un servicio de directorio que gestiona una base de datos organizada de modo jerárquico con el objetivo de administrar de una manera sencilla los recursos de una red, almacenando información de cada elemento de la red de manera estructurada, lo que permite facilitar el proceso de búsqueda de los recursos y de autenticación dentro de la red.</p>
+<p>• Objetos del Directorio Activo: El Directorio Activo es una implementación concreta del protocolo LDAP. Este protocolo trata los elementos de la red como objetos. Los tipos de objetos básicos que existen en el Directorio Activo son: Usuarios, Grupos, Equipos, Impresoras, Unidades Organizativas.</p>
+<p>• LDAP: Son las siglas de Protocolo Ligero de Acceso a Directorio. Se trata de un conjunto de protocolos de licencia abierta que son utilizados para acceder a la información que está almacenada de forma centralizada en una red. Se usa junto con AD. • En resumen : LDAP es un protocolo de acceso a la información, permitiendo autenticar y autorizar el acceso granular a los recursos de TI, mientras que Active Directory es una base de datos de información de usuarios y grupos.</p>
+<p>• Un esquema de Active Directory sería como se muestra a continuación: Todas las relaciones que se establecen entre el AD y los objetos que forman parte de AD se basan en LDAP.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Dominio de Windows: un Dominio Windows es una forma de administración centralizada de los distintos recursos disponibles en una red (usuarios, equipos, servidores, impresoras, etc.).</p>
+<p>• Controlador de dominio: Un controlador de dominio es un ordenador (Equipo o PC) que tiene instalado un S.O. Windows Server, que cuenta con la función de servidor de dominio instalada. Cada controlador de dominio almacena una copia de la base de datos de Active Directory, que contiene información sobre todos los objetos dentro del mismo dominio, por tanto es el equipo que tiene instalado el servicio de directorio activo.</p>
+<p>• Nombre Dominio: es lo que permite identificar y agrupar todos los recursos de una red Windows. • Servicio DNS: es un servicio de Internet y de red local Windows que traduce los nombres de los dominios en direcciones IP. • Árbol de dominios: Es una agrupación lógica de un conjunto de dominios. Por ejemplo: Dominio Principal instituto.ies, subdominios secretaria.instituto.ies y departamentos.instituto.ies • Bosque de dominios: Es una agrupación lógica de árboles de dominios. A lo anterior se le añade un nuevo árbol de dominio. Por ejemplo: extensión.ies y clases.extension.ies.</p>
+<p>• Nombre NetBios: El nombre NetBIOS es un valor único dado al equipo o computadora. El nombre de dominio NetBIOS es el subdominio del nombre de dominio DNS. Por ejemplo en el dominio instituto.ies, el nombre netbios es instituto. • Usuarios locales: Son los que forman parte de los equipos de forma independiente y se usan para administrar y proteger estos equipos, no forman parte del dominio, suelen estar en los equipos clientes.</p>
+<p>• Usuarios del dominio: Son los usuarios creados en el servidor en el directorio activo, registran toda la información necesaria para la definición de los datos propios incluyendo su nombre de usuario y contraseña.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<ul>
+<li>Añadir máquinas cliente al dominio.</li>
+</ul>
+<p>• Para incluir en el dominio los equipos que actuarán como cliente hay que configurar las propiedades de TCP/IP de cada una de las máquinas que vamos a unir al dominio, teniendo en cuenta que: • La dirección del controlador de dominio (que implementa funciones de DNS) es la del servidor de dominio.</p>
+<p>• Una vez te logas con un usuario configurado en AD ya te aparecerá en los equipos del dominio. • Para poder conectar un equipo al dominio, te debe contestar el ping al dominio creado en el controlador de dominio. • Si responde al ping, ya podremos unir el la máquina al dominio usando la cuenta de Administrador del AD o bien, un usuario configurado en el dominio.</p>
+<p>• En las propiedades del equipo podremos comprobar que estamos adheridos al dominio.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • También, desde el servidor, si accedemos a : Servidor –Herramientas – Usuarios y equipos de AD</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Accediendo al dominio y a “Computers”, aparecerá el equipo.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<ul>
+<li>Eliminar clientes de un dominio.</li>
+</ul>
+<p>• Desde el equipo que estamos conectados al dominio, entramos con la cuenta de administrador del dominio, y encontraremos la opción de “Desconectar del dominio”.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>4. Crear y configurar usuarios por la interfaz gráfica</h3>
+<p>• Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Crear usuarios</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Eliminar/Deshabilitar cuentas de usuario: cada cuenta de usuario asocia un SID (identificador de seguridad). Si eliminamos la cuenta, y después volvemos a crearla, el identificador SID será diferente. Por ello, no se podrán recuperar los permisos y privilegios de la cuenta eliminada.</p>
+<p>• Si creemos que volveremos a necesitar la cuenta, es mejor deshabilitarla. Si no la volveremos a usar, mejor eliminarla. • Se puede visualizar en la propia herramienta, con el símbolo de usuario con una flecha hacia abajo, si está deshabilitado.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Configurar la cuenta de usuarios: las propiedades más importantes a tener en cuenta son • General: Se puede modificar el Nombre, Apellido, etc. y además modificar información administrativa como la descripción, oficina, teléfono, email y página web.</p>
+<p>• Cuenta: Se puede configurar algunas características de la contraseña de usuario, las horas de inicio de sesión, la caducidad de la cuenta, desbloquear cuenta, etc. • Perfil: En esta ficha se pueden editar aspectos importantes como son la ubicación física del perfil del usuario y el fichero de comandos de inicio de sesión.</p>
+<p>• Miembro de: Se muestra el listado de grupos a los que el usuario pertenece.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>5. Crear y configurar grupos por la interfaz gráfica</h3>
+<p>• Desde la misma utilidad “Usuarios y equipos de AD” podemos: • Grupos en AD. • Los grupos son un tipo de contenedor que permiten definir conjuntos de usuarios y definir permisos basándonos en esa pertenencia al grupo, en lugar de hacerlo de modo individual, usuario por usuario, facilitando la administración.</p>
+<p>• Existen dos grandes tipos de grupos en el Directorio Activo de Windows: • Grupos de seguridad: este tipo de grupos permite definir permisos para recursos del dominio. Son los utilizados en las listas de control de accesos (ACLs) . Este tipo de grupos son los que se utilizarán en la administración de la red.</p>
+<p>• Grupos de distribución: no poseen características de seguridad, únicamente son un listado de usuarios para mensajería. • Dentro de los grupos de seguridad existen: • Grupo Universal: es un grupo cuyos permisos se extienden a diversos dominios. Además este tipo de grupos puede estar formado por usuarios o grupos de usuarios de diferentes dominios.</p>
+<p>• Grupo Global: es muy similar a los grupos universales, es decir pueden permitir el acceso a recursos de cualquiera de los dominios del árbol del Directorio Activo, pero con la salvedad de que todos los miembros del grupo deben pertenecer al mismo dominio. • Grupo Local del Dominio: es un grupo creado en un dominio con miembros que pueden provenir de otros dominios y que únicamente puede tener acceso a recursos dentro de su dominio.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Grupos predefinidos: • Los grupos predefinidos son grupos que ya están generados previamente por el sistema y no por los administradores y disponen de unos permisos acordes a las funciones asignadas.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Crear grupos usando la interfaz gráfica. • Por defecto, globales y de seguridad. • Se pueden añadir usuarios a los grupos, añadiéndoles como miembros del grupo.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>6. Crear y configurar unidades organizativas</h3>
+<p>• Una unidad organizativa es un contenedor de objetos(usuarios, grupos, equipos, etc) pertenecientes a un mismo dominio. • Son útiles para reproducir la estructura de la empresa donde se halle el dominio. Si por ejemplo, tenemos 3 departamentos en una empresa, es útil, crear una unidad por departamento.</p>
+<p>• Se usa para dos aspectos fundamentales: • Para establecer directivas de seguridad. • Dentro de una unidad organizativa, se pueden incluir otras unidades organizativas. Y sin hacer falta crear más dominios o subdominios. • Se crea una unidad organizativa: • Se pueden añadir elementos como usuarios y grupos, simplemente, arrastrando los elementos a la unidad organizativa.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Para eliminar unidades organizativas, habrá que ir a Ver -&gt; características avanzadas. • Y desmarcar la opción “Proteger objecto contra eliminación accidental”</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>7. Búsquedas y consultas de objetos en Windows Server</h3>
+<p>• Permite buscar todo tipo de objeto: cuentas de usuario, impresoras, equipos, incluso carpetas compartidas.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Búsquedas mediante consultas comunes: • Las opciones avanzadas de las consultas comunes te abren un abanico de posibilidades buscando por usuario, grupo o contacto.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Uso de consultas guardadas: • Usuarios y equipos de Active Directory cuenta con una carpeta Consultas guardadas en la que puede crear, editar, guardar y organizar consultas guardadas.</p>
+<p>• Las consultas guardadas utilizan cadenas LDAP predefinidas para buscar sólo en las particiones de dominio especificadas</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>8. Permisos en Windows Server</h3>
+<p>• Los sistemas operativos de la familia Windows poseen dos niveles de permisos para los recursos compartidos. • Permisos para carpetas compartidas: se aplican cada vez que un usuario quiere acceder a un archivo o carpeta de la red. • Permisos para archivos y carpetas (NTFS): se aplican sobre dispositivos con formato NTFS parar definir en mayor detalle las acciones permitidas.</p>
+<p>• De este modo, cuando accedemos en modo local a los archivos o carpetas sólo intervienen los permisos asociados al sistema de ficheros, en este caso NTFS. • Si se accede a través de la red se aplican los dos niveles de permiso. • En caso de conflicto o que hayan inconsistencias entre los permisos de cada tipo, se aplicarán los más restrictivos.</p>
+<p>• ¿Qué pasaría si el volumen estuviera formateado en FAT? Solo se aplican los permisos definidos para las carpetas compartidas en caso de que fuera compartido en red. Si hubiese que acceder en local, no habría ninguna restric- ción. Es decir, no se podría permitir o denegar el acceso.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>9. Permisos de recursos compartidos</h3>
+<p>• En Windows server 2019, disponemos de la consola de administración del servidor, donde podemos encontrar el acceso a los recursos compartidos. • Para visualizar los permisos de cada recurso compartido, se debe hacer clic con el botón secundario del ratón y seleccionando propiedades.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Si pulsamos sobre “Personalizar permisos” accedemos permisos tanto NTFS (locales) como permisos de compartir.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • En la segunda pestaña se encuentran los permisos de “Recursos compartidos” y los asignados. • Si pulsamos sobre el botón “Editar” veremos que pueden “Permitir” o “Denegar” con el siguiente detalle: Control Total(cambiar, leer, modificar permisos sobre el recurso compartido), cambiar(crear carpetas y archivos además de modificar y borrar los archivos y directorios existentes), leer (lectura de archivos y la ejecución de archivos ejecutables que se hallen dentro del recurso compartido).</p>
+<p>• Los permisos de recursos compartidos solamente se pueden aplicar sobre carpetas, no sobre ficheros.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>10. Permisos NTFS</h3>
+<p>• Los permisos NTFS complementan y amplían los permisos de recursos compartidos, siendo efectivo el más restrictivo. • Todos los archivos y carpetas de un volumen NTFS tienen asociada una ACL o lista de control de acceso que fija el nivel de acceso de un usuario o grupo que pretenda acceder al recurso.</p>
+<p>• Los permisos NTFS pueden ser aplicados a nivel de archivo, a diferencia de los permisos de recursos compartidos, los cuales únicamente pueden aplicarse a nivel de carpeta. • Al aplicar los permisos NTFS aparece un concepto: la herencia, la cual determina los permisos que se reciben sobre un determinado recurso provenientes de un nivel superior.</p>
+<p>• Se gestionan seleccionando el archivo o carpeta, y botón derecho, Propiedades, y seleccionando la pestaña “Seguridad”. • Los permisos que se pueden aplicar son: • Control total. • Cambiar. • Leer y ejecutar. • Mostrar el contenido de la carpeta. • Leer. • Escribir. • Lo que significa cada permiso queda más detallado en la siguiente imagen.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Los permisos específicos que aparecen en la primera columna, pueden editarse/consultarse individualmente. • Es importante entender que los permisos predeterminados, en realidad corresponden a unas combinaciones de permisos específicos, siendo estos últimos con lo que se trabaja, cuando se gestionan listas de control de acceso por línea de comandos.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Asignación de permisos NTFS • Al definir un permiso este puede ser permitido o denegado. • ¿Qué significa que los permisos son ACUMULATIVOS? Se evalúan los permisos otorgados al usuario y los otorgados a los grupos a los que pertenece el usuario. Si hay alguna incompatibilidad, prevalecerá la opción más restrictiva: Denegar (si está definido expli- citamente).</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Después tenemos que darle a la opción “Editar” y pestaña “Seguridad” del recurso compartido.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Permisos explícitos e implícitos ¿Qué es un permiso explícito? En la imagen siguiente, el grupo Ventas no tiene definidos permisos de escritura. A eso se denomina que el permiso de escritura está denegado implícitamente.</p>
+<p>El error que aparecería si un usuario del grupo Ventas quisiera crear un archivo en la carpeta</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Sin embargo, si añadimos un un usuario en la ficha permisos y le otorgamos el permiso explícito de escritura veremos que efectivamente puede escribir en el recurso , ya que la definición explícita del permiso para escribir prevalece sobre la denegación implícita del permiso escribir.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Si explicitamos la denegación del permiso de escritura para el usuario, podremos comprobar que efectivamente no puede escribir en la carpeta. • Se recomienda evitar el uso explícito de la denegación de permisos salvo que se considere que no existe otro modo para obtener un nivel específico de permiso para un determinado grupo.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW</p>
+<h3>11. Herencia</h3>
+<p>• Al crear un archivo o carpeta en un volumen NTFS ese objeto hereda automáticamente los permisos de su carpeta contenedora, y a la inversa: cuando asignamos permisos a una carpeta contenedora, los permisos se propagan automáticamente hacia los archivos y subcarpetas contenidas en el recurso.</p>
+<p>• La utilidad de la herencia de permisos radica en: • el administrador no tiene que asignar manualmente los permisos a los archivos y subcarpetas que haya contenidas dentro del recurso principal, y que fácilmente pueden ser miles. • el aumento de la seguridad al descartar posibles errores de asignación de permisos realizados manualmente.</p>
+<p>• Ejemplo de cambio de permisos de un objeto hijo: • En primer lugar vamos a modificar los permisos de seguridad de la carpeta “compartir” asignándole al grupo alumnos específicamente el permiso de modificar.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • A continuación, creamos una subcarpeta en “Compartir” • Si observamos los permisos de un objeto que está heredando permisos, veremos que las casillas de verificación están (completa o parcialmente) inaccesibles. En este caso la subcarpeta que hereda los permisos, hereda también los permisos del grupo alumnos</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Como primer método para deshabilitar la herencia, se puede denegar explícitamente los permisos. Si el permiso heredado es de concesión, la denegación está habilitada. Para este caso, podemos denegar el permiso heredado de escritura.</p>
+<p>Unidad 6: Administración del acceso al dominio Sistemes Informàtics: 1er DAW • Como segundo método, se puede eliminar la herencia del recurso del nivel superior. • En este caso, vemos que la carpeta C:\compartir hereda los permiso de C:\. • Para eliminar la herencia, debemos hacer clic en “Deshabilitar herencia” y nos aparecerá un diálogo para dejar los permisos explícitos o bien para eliminar todos los permisos.</p>
+<p>• Como norma general, elegiremos la primera opción: convertirlos en permisos explícitos.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut05/index.html">⬅️ 📘 UT5 Completa</a>
+<a class="page-nav-btn" href="../ut05/ut0502.html">5.2 TEORIA UNITAT 6 PART 2 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

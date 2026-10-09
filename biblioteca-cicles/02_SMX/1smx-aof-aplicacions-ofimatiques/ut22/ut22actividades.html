@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>✍️ Activitats pràctiques UT22 — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a class="active" href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT22 — GIMP</span>
+<h1>✍️ Activitats pràctiques UT22</h1>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 22.1 — Tema 2. Pràctica 1 Inkscape</p><p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE INKSCAPE – USO DE HERRAMIENTAS</p>
+<h3>1. Crea una forma de Rectángulo. Cambia el color del relleno</h3>
+<p>(147,160,0,245), el color (observa imagen de la derecha RGBA d9aea7ff) y estilo del trazo (Ancho: 9,40, unión cuadrada, inglete 0, guiones tamaño 10 y forma ­ ­ ­ y una opacidad del 72).</p>
+<h3>2. Crea un círculo y cambia el color de relleno y el trazo. Trata de que ambos se</h3>
+<p>encuentren en el vértice inferior derecho del rectángulo. Utilizando el botón de selección (F1) selecciona ambos objetos. En la Barra de Menú / Trazo aplica las diversas opciones que te mostramos en la imagen: unión, diferencia, intersección, exclusión, etc. En la imagen de la izquierda podrás observar el resultado de exclusión.</p>
+<ul>
+<li>Procede a deshacer todo lo realizado y vuelve el dibujo al punto 2. Observarás que puedes</li>
+</ul>
+<p>movilizar cada objeto por separado. Seleeciona, nuevamente, ambos objetos y en Objeto / agrupar te convierte ambos en uno sólo. Utiliza Objeto / Desagrupar para dividir ambos objetos.</p>
+<h3>4. Haz clic dos veces en el cuadrado observa que te aparecen unas flechas</h3>
+<p>en forma redondeada. Esto permite, en cualquiera de ellos, bien deformar la imagen, bien rotarla. Si haces un solo clic te permite ampliarla a lo ancho y en lo alto. Comprueba su utilidad. El resto de las propiedades las encuentras en la barra de herramientas (rotar, mirror, enviar al fondo, a delante, etc).</p>
+<ul>
+<li>Genera una estrella con las características de la imagen: 6 esquinas, radio:0,33. Modifica la</li>
+</ul>
+<p>redondez y el aleatorio y te encontrarás con verdaderas figuras. Igualmente, baja la longitud © Jo.R.C.A. TEMA 2: IMAGEN DIGITAL Práctica 2-B-1 Uso de Herramientas del Inkscape Página: 1/6</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE de radio (0,01) y aumenta las esquinas(32). Observa posibles figuras.</p>
+<h3>6. Escribe un texto. Modifica el tipo de letra por Domestic Manners,</h3>
+<p>tamaño 72</p>
+<h3>1. Utiliza un degradado en el color y un trazo</h3>
+<p>degradado, igualmente, y con un ancho de 2 mm. Observa la calidad del texto.</p>
+<h3>7. Selecciona dicho texto. Edición / clonar</h3>
+<p>2.Haz clic en el texto y muévelo. Observa que tienes dos. Selecciona el original. Cambia el color o el degradado. Qué ocurre con el segundo texto? Todos los cambios que hagas en el original ocurren en el clonado. 7.1.Puedes seleccionar el texto original y edición / desconectar clon. Aplica cambios al original. Observarás que ya son dos objetos independientes.</p>
+<h4>7.2. Selecciona un objeto cualquiera (ejemplo la</h4>
+<p>estrella de muchas puntas) y Edición / clones en mosaico. Modifica aspectos de las diferentes pestaña</p>
+<ul>
+<li>simetría: P1, Desplazamiento: 4 filas y 4</li>
+</ul>
+<p>columnas, en escalar reduce porcentualmente los valores (10 a 15%), rotación y opacidad a tu gusto. Observa el resultado.</p>
+<ul>
+<li>Crea una imagen nueva de tamaño A4. Importemos una imagen de nuestra</li>
+</ul>
+<p>carpeta personal. Utiliza en botón oscuro de tu barra de herramientas. Selecciona la imagen y acepta. Tienes una imagen en tu página Recursos Didácticos. Selecciona el tipo de letra y aplicar para que surja efecto Puedes utilizar el botón respectivo de la barra de herramientas © Jo.R.C.A. TEMA 2: IMAGEN DIGITAL Práctica 2-B-1 Uso de Herramientas del Inkscape Página: 2/6</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<h4>8.1. Abre la imagen linux4.jpg</h4>
+<h3>3. Muestra la rejilla</h3>
+<p>4 y utilizaremos las guías para una mayor precisión en nuestros dibujos. Observa las zonas marcadas en rojo para arrastrar las guías. Puedes arrastrar cuantas requieras.</p>
+<h3>9. Selecciona la imagen y utiliza Trazo / vectorizar un map</h3>
+<p>a de bits. Vectorizar no es reproducir un duplicado exacto de la imágen original; la idea es interpreta mapas de bits blanco y negro y producir un set de curvas. El usuario observará las tres opciones de filtro disponibles: Luminosidad de la imágen, Detección de bordes óptima y reducción. Las últimas versiones se ayudan de otro apartado que son las pasadas múltiples.</p>
+<p>La encontrarás en Recursos Didácticos Ver / Rejilla. Para usar las guías pincha en la zona superior e izquierda de tu zona de diseño y arrastra las mismas hasta la posición que desees. © Jo.R.C.A. TEMA 2: IMAGEN DIGITAL Práctica 2-B-1 Uso de Herramientas del Inkscape Página: 3/6</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<h4>9.1. Luminosidad de imagen</h4>
+<p>5: Esta usa realmente la suma del rojo, verde y azul (o escala de grises) de un pixel como un indicador de si este puede ser considerado blanco o negro. La luminosidad</p>
+<p>puede</p>
+<p>ser configurada desde 0.0 (blanco) a 1.0 (negro). a)Aplica una luminosidad de 0,5. Dale a vista preliminar y aceptar. Utiliza la herramienta de seleccionar para mover el nuevo dibujo vectorizado hacia un lado. Prueba con otras luminosidades. Observa el resultado en la imagen de la derecha.</p>
+<h4>9.2. Detección de bordes óptima: Este filtro</h4>
+<p>usa el algoritmo de detección de bordes desarrollado por J. Canny y se basa en la búsqueda rápida de contrastes similares. Observa el resultado de los diversos niveles.</p>
+<h4>9.3. Reducción de colores: esta buscará los</h4>
+<p>bordes donde los colores cambian, uniformemente igual a brillo y contraste. Las opciones de configuración aquí son: Número de colores (2 a 64), decide cuantos colores de salida pueden haber, si el mapa de bits intermedio era de color. Este entonces decide blanco/negro según si el color ha sido uniforme o posee un indice raro.</p>
+<p>a)Si usas la reducción a 2 colores (mínimo) verás todo blanco, mientras que si usas 64 colores (máximo) veras una imagen casi difuminada tal como te mostramos en la imagen.</p>
+<h4>9.4. Pasadas múltiples: Dispone de tres</h4>
+<p>opciones, Luminosidad, color y monocromo. Las pasadas van desde 2 hasta 64. Si utilizas el color con un suavizado, apilado, 64 pasadas, obtendrás una figura con un aspecto difuminado. Si utilizas la luminosidad con las mismas características http://www.inkscape.org/doc/tracing/tutorial­tracing.es.html</p>
+<p>© Jo.R.C.A. TEMA 2: IMAGEN DIGITAL Práctica 2-B-1 Uso de Herramientas del Inkscape Página: 4/6</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<h3>10. Selecciona varios objetos que hayas realizado. Archivo / exportar</h3>
+<p>mapa de bits / Selecciona la carpeta en la que guardar la imagen y su nombre (1) y exportar (2). Tienes un fichero png en tu carpeta con la imagen vectorial generada en inkscape. Puedes modificar los dpi 6 de la imagen.</p>
+<h3>11. Otros aspectos a utilizar: Crear espirales, dibujar a mano alzada,</h3>
+<p>dibujar curvas Bézier y líneas rectas y Líneas caligráficas. 11.1. Crea una espiral de 5,50 vueltas con una divergencia de 0,5 y un radio interior de 0. a)Repite el proceso anterior pero con una divergencia de 1,5. Qué diferencia encuentras? Observa la espiral derecha con los valores por defecto.</p>
+<p>b)Selecciona una de tus espirales y Objeto / Relleno y borde y aplica un color o degradado a la misma. Aplica, igualmente, un color de trazo y de ancho 3mm.</p>
+<ul>
+<li>Aplica un degradado a tu espiral</li>
+</ul>
+<p>8. 11.2.Utiliza el botón de dibujar a mano alzada y dibuja curvas y rectas con las Bézier. Selecciona dichos objetos y aplica cambios como estilo y colores del trazado, tamaños, etc. a)Utilizando tu imaginación genera curvas bezier 9.</p>
+<h4>11.3. Uno de los botones que le puedes sacar mucho partido son las líneas caligráficas</h4>
+<p>simulan la escritura a pluma. dot per inch (píxeles por pulgada) La divergencia hace que la esperial sea uniforme con 1. Selecciona un color, aplica un degradado y aplica que el degradadado sea reflejado Si deseas generar curvas has de hacer clic al dibujar el trazo y sin soltar hacer otro clic © Jo.R.C.A. TEMA 2: IMAGEN DIGITAL Práctica 2-B-1 Uso de Herramientas del Inkscape Página: 5/6</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<ul>
+<li>Escribe tu nombre con los siguientes valores en los controles de las líneas caligráficas</li>
+</ul>
+<p>• ancho (0,25), adelgazar (0,20), ángulo (25), fijación (0,80), Masa (0,10) y resistencia (0,50) b)Modifica la resistencia a un valor inferior. Seguro que te resulta más complicado escribir. Y aplicando una cercana al 1? simula un marcador de punta gruesa difícil de llevar en la escritura.</p>
+<ul>
+<li>Modifica la masa. Pon un valor cercano a uno y otro cercano a cero e intenta escribir el</li>
+</ul>
+<p>mismo texto. Adelgazar puede tomar valores entre ­1 y 1. Prueba con las diversas opciones.</p>
+<h4>11.4. Para utilizar el seleccionador de colores y aplicar un color a un objeto debes</h4>
+<p>realizar los siguientes pasos: a)Selecciona el objeto a cambiar el color</p>
+<ul>
+<li>Haz clic en El botón de la izquierda y haz clic en el color que desees. Observa que el</li>
+</ul>
+<p>objeto seleccionado cambia de color.</p>
+<h4>11.5. Selecciona un objeto, pulsa F2 y te permite realizar múltiples</h4>
+<p>operaciones con los tiradores. Ejemplo: Realiza un cuadrado. Selecciona el mismo. F2 y aplica el último trazo. Selecciona el vértice derecho y tira hacia el centro. Observa el efecto.</p>
+<h4>11.6. Mayor información sobre las diversas opciones del Inkscape en http://inkscape.org/doc/</h4>
+<p>10 Parámetro adelgazar puede tomar valores entre ­1 y 1; cero significa que el ancho es independiente a la velocidad, valores positivos hacen los trazos rápidos más delgados, valores negativos hacen los trazos rápidos más amplios © Jo.R.C.A. TEMA 2: IMAGEN DIGITAL Práctica 2-B-1 Uso de Herramientas del Inkscape Página: 6/6</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 22.2 — Tema 2. Pràctica 2 Inkscape</p><p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE CARTEL PUBLICITARIO La idea de esta práctica es utilizar este programa para generar un cartel o lámina anunciando un concurso matemático en nuestro centro. Las imágenes utilizadas para el mismo las puedes encontrar en el apartado de Recursos Didácticos de este apartado.</p>
+<h3>1. Conociendo el Entorno</h3>
+<p>En el manual de http://joaclintistgud.files.wordpress.com//logo_a_logo.pdf econtrarás la definición de cada uno de los apartados. 2. Fase Inicial. Definiendo los aspectos generales. ● Abrimos el programa. ● Indicamos que nuestro cartel lo vamos a diseñar apaisado. Utilizaremos los milímetros y el tamaño será un A4. Debemos ir a Archivo / Propiedades del documento.</p>
+<p>© Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 1/8</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE ○ En la pestaña página modificamos en (A) las unidades con las que vamos a trabajar (mm). ○ En formato (B) indicamos el A4 y en orientación del papel (C) indicamos horizontal. ○ En la pestaña Rejillas/Guías le indicamos que queremos mostrar la rejilla. Las unidades de medida indicamos, igualmente, que son mm.</p>
+<p>El resto de los aspectos los dejamos para esta práctica los que tiene por defecto. ● En este cartel utilizaremos dos capas. Esto nos permitirá en siguiente curso sólo modificar aquellos objetos que cambien. Para ello definiremos una capa fondo y una capa annual. ● Por defecto existe la capa 1 (ver zona inferior izquierda de nuestro documento activo).</p>
+<p>● Modificamos el nombre de la capa por fondo. Capa / Renombrar capa. © Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 2/8</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE ● Crearemos una nueva capa. Capa / Añadir capa. Por defecto la posición es encima de la actual. ● Activamos la capa fondo. La capa que tenga el punto a la izquierda es la capa activa.</p>
+<ul>
+<li>Iniciando el Cartel.</li>
+</ul>
+<p>Vamos a detallar en el cartel todos los elementos que son comunes de un curso a otro: Concurso Matemático, El nombre del Instituto, el mes de noviembre, El lugar de exposición de trabajos y las imágenes comunes (instituto). ● Seleccionamos el botón crear y editar textos de la caja de herramientas del lateral izquierdo de nuestro documento. Haz clic en la zona superior derecha (no importa el tamaño ni el tipo de letra) y escribe “Concurso Matemático” ● Utilizando la herramienta seleccionar objetos podremos desplazar nuestro objeto texto hacia el lugar adecuado.</p>
+<p>● Utilizando la tecla seleccionar tipos de texto (icono de la barra de comandos zona superior) modificamos las propiedades del mismo. Elige la pestaña tipografía, Modifica la letra por URW Chancery L, el estilo (B) Bold, el tamaño (C) 56 y aplica (D). Con la mano desplaza el texto hacia la zona superior derecha del borde de nuestro documento.</p>
+<p>● Agregaremos una imagen. Archivo / importar y selecciona la imagen a importar. © Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 3/8</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE ● Podemos escalar la imagen de varias maneras: ○ Utilizando los tiradores de las esquinas (poco recomendable) ○ Selecciona la imagen, Botón derecho / Propiedades de la Imagen. Modifica el ancho y alto de los píxeles de la imagen (400 x 300 en nuestro caso) ○ Si nuestra imagen opaca demasiado nuestro cartel podemos disminuir su opacidad. Selecciona la imagen. Haz clic en la barra de comandos en la herramienta de editar estilo de objeto o en la barra de menú Objeto / Propiedades del Objeto.</p>
+<p>Disminuye la opacidad al 86%. Ubica dicha imagen en la esquina inferior derecha de la imagen. ● Importaremos una imagen para poner como fondo. ○ Archivo / importar / matémáticas.gif ○ Ubica la imagen en la zona del cartel que indicamos. Cambia sus propiedades a una opacidad del 40%.</p>
+<p>Utilizando los tiradores deja el resultado como mostramos</p>
+<p>a</p>
+<p>tu derecha. ○ Para que no moleste a futuros objetos que ubiquemos en nuestro cartel en el menú Objeto / bajar al fondo. ● Activamos la Capa annual. ○ Utilizando herramienta de caligrafía realizamos el dibujo de 4 (en números romanos IV). © Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 4/8</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE ○ Seleccionemos, con la herramienta respectiva, todos los elementos que componen el número y los agruparemos como un sólo elemento. Ve a Objeto / agrupar. ○ Cambia el color de la letra. Selecciona el nuevo objeto (IV) y, en la paleta, de la zona inferior, elige un color diferente. Observa el resultado.</p>
+<p>● Para asegurarte que trabajas con la capa adecuada, pasa a invisible la capa no utilizada, en este caso fondo. Sólo debes hacer clic en el ojo en la barra de estado. Otra forma de realizarlo es utilizar el candado. Si bloqueas el candado de una capa no permite trabajar sobre ella, pero si permite ver lo que hay en la otra capa.</p>
+<p>● Vamos a utilizar relleno y bordes. ○ Utilizando la herramienta de texto, teclea Salvador Gadea. elige el tipo de letra que desees. Estira, con los tiradores, de tal forma que sea del mismo tamaño que lo que hayas realizado con la Estilográfica (IES). Observa la Imagen.</p>
+<p>○ Ahora vamos a aplicar un degradado a la parte de relleno de las letras. Selecciona el texto, selecciona en la barra de herramientas la de relleno y bordes. ○ Selecciona (A) el relleno, si deseamos degrado lienal (B), para modificar el degradado (c) editar y desenfocamos (d) algo el objeto texto.</p>
+<p>© Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 5/8</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE ○ Al Editar (C) nos aparece otra pantalla. Para crear un degradado propio. Vamos seleccionando un color en la rueda (E), añadimos parada (F) y así hasta finalizar (G). Puede que no se vean bien las letras. Lo vamos a solucionar.</p>
+<p>○ Color del trazo. En la imagen anterior habíamos elegido el relleno, ahora usaremos la pestaña de color de trazo. Esto es el color o aureola que sobresale externamente al objeto. en el caso que te mostramos hemos elegido un color azul sin degradado.</p>
+<p>○ Estilo del trazo. Las líneas que llevan las letras en su exterior. Es decir, aquello que remarca las mismas. En (1) indicas el ancho. Utiliza las flechas para subir y bajar y observa el resultado. En (2) el estilo de las uniones, en (5) el tipo de línea. Haz una prueba probando cada una de las opciones y elige la que te guste.</p>
+<p>● Rellena con textos y, utilizando, el resto de herramientas de tu panel realiza la composición. Cambia tipos de letra y rellenos. Inserta alguna imagen más. © Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 6/8</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<ul>
+<li>Contenidos de las Capas.</li>
+</ul>
+<p>Según hemos realizado el ejercicio la capa fondo contiene La capa annual contiene lo siguiente: Es decir, esta capa contiene todos los elementos que pueden cambiar de un ejercicio a otro. La base siempre la tendremos en fondo.</p>
+<ul>
+<li>Exportar nuestro Cartel Publicitario.</li>
+</ul>
+<p>En muchas ocasiones nuestros carteles se llevan a una litográfica para que, utilizando máquinas adecuadas, nos realicen el trabajo de impresión. Igualmente, podemos colocar el cartel como imagen en nuestra web del centro. ● Primero, guardamos nuestro cartel, con su formato nativo (extensión svg), antes de realizar procesos de exportación. De esta forma podemos recuperar nuestras capas originales.</p>
+<p>© Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 7/8</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE ● Exportar a mapa de bits: Archivo / Exportar mapa de bits. Por defecto tiene el formato png. Cambia el nombre y la extensión en nombre de archivo. Desde el Gimp podemos abrirlo y exportarlo con cualesquiera de otros formatos (ejemplo: jpg) ○Nota: Como no hemos puesto ningún color de fondo la imagen, donde no tenemos objetos, es totalmente transparente.</p>
+<p>● Exportar</p>
+<p>en Formato</p>
+<p>PDF. Archivo / Guardar como e indicar nombre del fichero (A), y en (B) el tipo de fichero (PDF). Nota: Si tienes alguna capa invisible en el resultado final no aparecerá el contenido de la misma. © Jo.R.C.A. Práctica 2-B-2 CREAR CARTEL PUBLICITARIO Aspectos Básicos de Edición Vectorial Página: 8/8</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 22.3 — Tema 2. Pràctica 3 Inkscape</p><p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE CREAR ICONOS Muchas veces requerimos diseñar iconos, bien para la web 2.0, como para personalizar nuestras carpetas en nuestro Sistema Operativo. Hay infinidad de programas que permite realizar esta tarea. En esta práctica vamos a descubrir una de ellas y muy sencilla.</p>
+<h3>1. Abrimos nuestro programa Inkscape</h3>
+<p>(Aplicaciones / Gráficos / Inkscape1).</p>
+<h3>2. Por defecto siempre tendremos un</h3>
+<p>tamañoA4. Selecciona en Archivo / nuevo / icon_64x64. Con ello tenemos un formato de icono.</p>
+<ul>
+<li>Ya tenemos nuestra zona de trabajo habilitada para crear nuestro icono.</li>
+</ul>
+<h3>4. Nuestro icono no queremos</h3>
+<p>que sea transparente. Utilizando la</p>
+<p>herramienta</p>
+<p>cuadrado, rellenamos la zona de trabajo con un color (amarillo). Utiliza , en la parte superior, la Barra de comandos el editar estilo de objeto / relleno / color uniforme / selecciona un color en la rueda. Deja la opacidad al 100%</p>
+<ul>
+<li>Vamos a pintar una estrella “especial”.</li>
+</ul>
+<p>Dibuja la estrella en el centro de la zona de trabajo. Pon un color azul a la estrella utilizando la paleta en la zona inferior (barra de estado). Este programa existe en multiplataforma, por consiguiente lo podrías utilizar en Windows © Jo.R.C.A. Práctica 2-B-3 CREAR ICONOS Aspectos Básicos de Edición Vectorial – Página: 1/4</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<h3>6. Modifica los valores en la zona superior por las que mostramos en la imagen</h3>
+<p>Esquinas 5, longitud del radio 0,50, redondez 1,50 y aleatorio 0,07. Observa el resultado de nuestra estrella.</p>
+<h3>7. En Edición / Clonar / Crear clon. Con ello creamos una copia</h3>
+<p>clonada de nuestra estrella. Utilizando la flecha de seleccionar desplaza hacia zonas opuestas ambas estrellas.</p>
+<h3>8. Selecciona la estrella superior. En trazo / Objeto a trazo y</h3>
+<p>convertimos nuestra estrella en puntos de rectificación o nodos.</p>
+<h3>9. Utilizando nuestro editor de nodos, modifica a tu</h3>
+<p>gusto, estirando los puntos o nodos. Observa, como teníamos un clon, lo que hacemos con la estrella original se reproduce en la inferior. © Jo.R.C.A. Práctica 2-B-3 CREAR ICONOS Aspectos Básicos de Edición Vectorial – Página: 2/4</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<h3>10. Aplica un degradado a tu gusto. Haz</h3>
+<p>clic en la herramienta de Editar Estilo del Objeto. Selecciona (A) el degradado lineal. Edita (B) y elige colores (C) con la opacidad que desees (D) y ve añadiendo paradas (E) (diferentes colores en el degradado).</p>
+<h3>11. Crea un texto en la zona central Aplica el</h3>
+<p>color y la letra que gustes. En mi caso Castle Dracusteín, color negro.</p>
+<h3>12. Utiliza la herramienta crear y editar gradientes. En la zona superior elige el</h3>
+<p>gradiente y edita para el color del gradiente. Estira la herramienta editar gradiente en el texto y el efecto puede ser como este.</p>
+<ul>
+<li>Utilizando dibujar líneas a mano alzada, dibuja una línea.</li>
+</ul>
+<p>Convierte el objeto a trazo. Aplica un degradado. El resultado podría ser.</p>
+<h3>14. Eso podría ser nuestro icono. Guarda, antes de proceder</h3>
+<p>a exportar, tu imagen vectorial como icono_personal.svg (formato propio del inkscape): Archivo / guardar como. © Jo.R.C.A. Práctica 2-B-3 CREAR ICONOS Aspectos Básicos de Edición Vectorial – Página: 3/4</p>
+<p>INTRODUCCIÓ A LA CREACIÓ DE MATERIALS DIDÀCTICS MULTIMÈDIA AMB SOFTWARE LLIURE</p>
+<h3>15. Exportar nuestro icono a mapa de bits (png). Archivo /</h3>
+<p>Exportar mapa de bits. Indica la carpeta y el nombre del fichero. El fichero que hemos exportado es de formato png.</p>
+<h3>16. Abre con el gimp dicho fichero (png). Ve Archivo /</h3>
+<p>Guardar como e indicar como fichero extensión ico. El sistema te solicita información detallada del icono. Elige las características que desees y ya tienes el icono listo para su utilización © Jo.R.C.A. Práctica 2-B-3 CREAR ICONOS Aspectos Básicos de Edición Vectorial – Página: 4/4</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut22/ut2203.html">⬅️ 22.3 Tema 2. Recursos per a pràctiques</a>
+<a class="page-nav-btn" href="../references.html">📂 Índex de Documents ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

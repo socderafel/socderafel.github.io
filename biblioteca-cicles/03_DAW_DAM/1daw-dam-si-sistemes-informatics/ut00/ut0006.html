@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>0.6 SI: TEORIA XARXES UD1 — Sistemes Informàtics | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖥️ Sistemes Informàtics — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Sistemes Informàtics</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 SI: LLIBRE QUE ANEM A SEGUIR EN LES CLASES</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 TRANSPARÈNCIES UNITAT 1</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Exercisis conversió binari - decimal I</a></li>
+<li><a href="../ut00/ut0003.html">0.3 SI: ENLLAÇ RENDIMENT CPU</a></li>
+<li><a href="../ut00/ut0004.html">0.4 DIASPOSITIVES UD1 PART 1</a></li>
+<li><a href="../ut00/ut0005.html">0.5 SI: TAULA DE TOPOLOGIES LAN</a></li>
+<li><a class="active" href="../ut00/ut0006.html">0.6 SI: TEORIA XARXES UD1</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 LA SHELL DE LINUX</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D</a></li>
+<li><a href="../ut02/ut0203.html">2.3 ENLLAÇOS DURS I SIMBÓLICS</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TEORIA XARXES</a></li>
+<li><a href="../ut03/ut0302.html">3.2 TEORIA SUBNETTING</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — GESTIÓ DE LA INFORMACIÓ</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 GUIA DE LA UNITAT 5</a></li>
+<li><a href="../ut04/ut0402.html">4.2 TEORIA UNITAT 5 PART 1</a></li>
+<li><a href="../ut04/ut0403.html">4.3 TEORIA UNITAT 5 PART 2</a></li>
+<li><a href="../ut04/ut0404.html">4.4 TEORIA UNITAT 5 PART 3</a></li>
+<li><a href="../ut04/ut0405.html">4.5 TEORIA UNITAT 5 PART 4</a></li>
+<li><a href="../ut04/ut0406.html">4.6 TEORIA UNITAT 5 PART 5</a></li>
+<li><a href="../ut04/ut0407.html">4.7 TEORIA UNITAT 5 PART 6</a></li>
+<li><a href="../ut04/ut0408.html">4.8 TEORIA UNITAT 5 PART 7</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 TEORIA UNITAT 6 PART 1</a></li>
+<li><a href="../ut05/ut0502.html">5.2 TEORIA UNITAT 6 PART 2</a></li>
+<li><a href="../ut05/ut0503.html">5.3 TEORIA UNITAT 6 PART 3</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — SEGURETAT, RENDIMENT I RECURSOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 TEORIA UNITAT 7 PART1</a></li>
+<li><a href="../ut06/ut0602.html">6.2 TEORIA UNITAT 7 PART 2</a></li>
+<li><a href="../ut06/ut0603.html">6.3 TEORIA UNITAT 7 PART 3</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — TALLER HARDWARE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Manual placa base taller</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Teoria Components Hardware</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ</span>
+<h1>0.6 SI: TEORIA XARXES UD1</h1>
+<p dir="ltr" style="text-align: left;">ATENCIÓ: D'ESTE DOCUMENT PDF NOMÉS VEUREM EN ESTA UNITAT FINS ON POSA "SUBREDES IP". ÉS A DIR, ESTUDIEU ESTE DOCUMENT PERÒ NOMÉS FINS ON POSA "SUBREDES IP". A PARTIR DE AHÍ JA NO HO VOREM EN ESTA UNITAT.</p>
+<p>Direccionamiento IP Dirección IP La dirección IP es el número que identifica a un ordenador en la red. Está formado por 32 bits (4 bytes). Se escribe como 4 números, de 0 a 255, separados por puntos. Cada uno de los números sería 1 byte de la dirección IP. Ejemplo: 192.168.0.5 10.0.2.168 1.2.3.4 Para conocer nuestra dirección IP debemos abrir una ventana de interfaz de comandos (Ejecutar&gt;cmd) y escribir ipconfig.</p>
+<p>En linux deberemos abrir un terminal y escribir ifconfig. Clases de direcciones IP Según los primeros bits de la dirección IP, se diferencian los siguientes tipos o clases</p>
+<p>CLASE A • El primer bit de la parte de la red es siempre un 0. • Los posibles valores de la parte de la red van de 0 a 127, si bien los extremos, 0 y 127, están reservados. • Se utilizan en redes muy grandes, con muchísimos hosts (hasta 224 = 16 millones). Los últimos 24 bits (o los correspondientes 3 últimos números decimales) identifican el host.</p>
+<p>CLASE B • Los dos primeros bits de la parte de la red son 10. • Los posibles valores de la parte de la red van de 128.0 a 191.255 (214 = 16.384 redes). • Se utilizan en redes grandes con muchos hosts (hasta 216 = 65.536 hosts). CLASE C • Los posibles valores de la parte de la red van de 192.0.0 a 223.255.255 (221 = 2.097.152 redes).</p>
+<p>• Se utiliza en redes pequeñas, con pocos hosts (hasta 28 = 256 hosts) CLASE D • Son direcciones especiales utilizadas para enviar un datagrama IP a un grupo de hosts. • Los posibles valores van de 224.0.0.0 a 239.255.255.255 Cabe decir que, las direcciones de clase E (aunque su utilización será futura) comprenden el rango desde 240.0.0.0 hasta el 247.255.255.255.</p>
+<p>Direcciones con significado especial Cuando en una dirección IP, la parte de la red o la parte del host están compuestas por todo ceros o</p>
+<p>por todo unos, esa dirección se interpreta de una manera especial. La utilización de todo ceros para la red sólo está permitida durante el procedimiento de iniciación de la máquina. Permite que una máquina se comunique temporalmente. Una vez que la máquina “aprende” su red y dirección IP correctas, no debe utilizar la red 0.</p>
+<p>Las direcciones 127.x.y.z están reservadas para “loopback testing” (para testear comunicaciones entre procesos dentro de la misma máquina). Los paquetes direccionados 127.x.y.z no se envían realmente, sino que son procesados localmente y tratados como paquetes entrantes.</p>
+<p>Por otra parte, existen una serie de direcciones IP reservadas para definir redes TCP/IP aisladas, es decir, no conectadas a Internet. Por último, hay que saber que, por convención, no se asigna a ninguna máquina una dirección IP con número de host 0. Máscara de subred Los ordenadores forman redes. Todos los ordenadores que están dentro de una red comparten parte de la dirección IP. Lo más habitual es que los tres primeros números de la dirección sean iguales y varíe el último, pero no siempre es así. Para saber la parte fija se utiliza la máscara de subred.</p>
+<p>La máscara de subred es un número de 32 bits, como la dirección IP, con la particularidad de que todos los 1s están juntos a la izquierda y los 0s a la derecha. Los 1s nos indican la parte fija de la dirección IP. Es decir, si una máscara tiene 18 unos y 14 ceros, las direcciones IP de esa red tendrán los primeros 18 números obligatoriamente iguales, mientras que el resto podrán ser distintos.</p>
+<p>La máscara de subred se escribe, igual que la dirección IP, como 4 números separados por punto, aunque sólo son válidos algunos números (los que en binario cumplan la condición de unos y ceros anteriormente explicada). Según la clase de la red, tendremos las siguientes máscaras</p>
+<p>• Clase A: 255.0.0.0 /8 • Clase B: 255.255.0.0 /16</p>
+<p>• Clase C: 255.255.255.0 /24 Por ejemplo, una máscara de subred podría ser 255.255.255.0, que en binario se escribe (11111111 11111111 11111111 00000000); o por ejemplo 255.240.0.0 (11111111 11110000 00000000 00000000). Sin embargo no sería válida esta máscara 255.255.244.0 (1111111 1111111 11110100</p>
+<ul>
+<li>ya que hay un 1 intercalado entre ceros.</li>
+</ul>
+<p>Para saber si un ordenador está en nuestra red, tenemos que pasar a binario nuestra dirección, nuestra máscara de subred, y la dirección IP que queremos comparar. Una vez en binario, debemos comprobar si la parte de la máscara con unos es igual en ambas direcciones o no. Si es igual, estrará en nuestra red.</p>
+<p>Para conocer nuestra máscara de subred se debe utilizar el mismo comando que se usa para saber cuál es nuestra dirección IP (Ejecutar&gt;cmd y luego escribir ipconfig). Ejemplo: mi IP: 192.168.12.10; mi máscara 255.255.254.0; la dirección IP que quiero saber si está en mi red 192.168.13.5. Debemos pasar los 3 números a binario, comprobar que la máscara de subred sea válida, y comparar.</p>
+<p>192.168.12.10 → 11000000 10101000 00001100 00001010 255.255.254.0 → 11111111 11111111 11111110 00000000 → Es válida 192.168.13.5 → 11000000 10101000 00001101 00000101 Vemos que la parte de la máscara con unos (los primeros 23 bits) es común en ambas direcciones, por lo que los ordenadores estarán en la misma subred.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Ejercicio: comprueba en cada caso si los ordenadores pertenecen a</p><p>Ejercicio: comprueba en cada caso si los ordenadores pertenecen a la misma subred o no. (Ayuda: cuando las máscaras son todo 255 ó 0 no hace falta pasar a binario porque se pueden comparar directamente los números de la dirección IP. Es decir, sólo habría que pasar a binario el octeto de la IP y máscara que no tenga ese valor).</p></div>
+<p>Mi IP: 158.42.4.23 Mi máscara: 255.255.0.0 IP1: 158.42.4.22 IP2: 158.43.41.19 IP3: 159.42.4.23 Mi IP: 10.2.65.1 Mi máscara: 255.255.248.0 IP1: 10.2.66.23 IP2: 10.2.64.12 IP3: 10.2.71.248 Dirección de red y de broadcast Dentro de las direcciones posibles de una red hay 2 que son especiales: la primera y la última. Estas direcciones no se pueden utilizar en ningún ordenador o máquina de la red.</p>
+<p>La primera dirección es la dirección de red. Identifica a toda la red, no a un ordenador en particular. La dirección de nuestra red tendrá los primeros bits iguales a la nuestra (los que coincidan con los unos de la máscara) y los últimos iguales a cero. Ejemplo: Mi IP: 10.10.15.16 → 00001010 00001010 00001111 00010000 Mi máscara: 255.255.255.192 → 11111111 11111111 11111111 11000000 La dirección de la red será → 00001010 00001010 00001111 00000000 → 10.10.15.0 (Fijaos que los bytes de máscara con 255 se quedan igual, y si hubiera alguno con 0 se pondría 0 directamente en la dirección de red).</p>
+<p>La dirección de broadcast (o difusión) es la última dirección de la red. Se utiliza para enviar información a todos los ordenadores a la vez. Como en el caso anterior, la dirección de broadcast red tendrá los primeros bits iguales a la nuestra (los que coincidan con los unos de la máscara), pero ahora los últimos iguales a uno.</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo: Mi IP: 10.10.15.16 → 00001010 00001010 00001111 00010000 Mi máscara: 255.255.255.192 → 11111111 11111111 11111111 11000000 La dirección de la red será → 00001010 00001010 00001111 001111111 → 10.10.15.31 (Fijaos que ahora los bytes de máscara con 255 se quedan igual, y si hubiera alguno con 0 se pondría 255 directamente en la dirección de broadcast).</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Ejercicio: escribe la dirección de red y de broadcast de las sigu</p><p>Ejercicio: escribe la dirección de red y de broadcast de las siguientes combinaciones de IP y máscara. IP: 54.65.158.3 Máscara: 255.255.0.0 IP: 154.198.26.123 Máscara: 255.255.248.0 IP: 9.87.54.16 Máscara: 255.254.0.0 Direcciones públicas y privadas Las direcciones IP, como identifican a un ordenador, no se pueden repetir. Así que una dirección de un servidor web no podrá ser igual a la de ningún otro ordenador de Internet. Para conseguirlo hay una organización (ICANN) que reparte las direcciones entre las empresas u organismos a los que les hace falta.</p></div>
+<p>Sin embargo, sería absurdo que si queremos hacer una red en nuestra casa tuviéramos que pedir una dirección para que nadie más la pueda utilizar. Para ello se han reservado algunas direcciones IP, que se han llamado direcciones privadas (el resto se llaman direcciones públicas), para que cualquiera pueda utilizarlas dentro de su casa o empresa, con la condición que no se usen en a Internet (al salir de nuestra red, el router la cambia par una dirección pública). Esto también sirve para ahorrar direcciones IP (por ejemplo todos los ordenadores de nuestra casa tienen la misma dirección después de pasar por el router cuando nos conectamos a Internet).</p>
+<p>Los rangos de direcciones IP privadas son</p>
+<p>Clase Direcciones de red reservadas A 10.0.0.0 B 172.16.0.0 a 172.31.255.255 C 192.168.0.0 a 192.168.255.255 Ejercicio: escribe la primera y última dirección IP de los rangos privados Ejercicio 2: indica cuál de las siguientes direcciones IP se podría utilizar en Internet (es pública) 1.2.3.4 192.168.2.36 172.28.15.16 10.22.3.65 172.35.62.119 192.169.13.32 Subredes IP Al principio las direcciones IP se asignaban a las organizaciones según se pedían sin tener en cuenta las necesidades reales.</p>
+<p>La máscara de subred fue pensada como la solución para aprovechar mejor las direcciones de clase A y B. La máscara de subred parte una única red clase A, B o C en trozos más pequeños. A través de la manipulación de las máscaras de subred, podemos personalizar el espacio de direcciones para configurar la red de acuerdo con nuestras necesidades.</p>
+<p>Los hosts utilizan las máscaras de subred para determinar la parte de una dirección IP que se considera como el ID de red. Las direcciones de clase A, B y C utilizan máscaras de subred que cubren los primeros 8, 16 y 24 bits, respectivamente, de direcciones de 32 bits. La red lógica que se define a través de una máscara de subred se conoce como una subred.</p>
+<p>Las máscaras de subred predeterminadas se utilizan en redes que no necesitan ser subdivididas. Por ejemplo, en una red formada por 100 ordenadores conectados exclusivamente a través de tarjetas Gigabit Ethernet, cables y conmutadores, los hosts se podrán comunicar unos con otros a través de la red local. No se necesita un enrutador para proteger la red de excesivos mensajes de difusión o para conectar hosts situados en segmentos físicos separados. Para estos sencillos requerimientos, un ID de red de clase C, como la mostrada en la imagen siguente, es suficiente.</p>
+<p>Dividir en subredes una red es la práctica de subdividir de forma lógica el espacio de direcciones de una red, extendiendo la cadena de bits iguales a 1, utilizada en la máscara de subred de una red. Esta extensión permite crear múltiples subredes dentro del espacio de direcciones de la red original.</p>
+<p>Veamos un ejemplo donde dividiremos una red de clase B, cuya máscara de subred predeterminada es 255.255.0.0. Extenderemos la máscara de subred a 255.255.255.0. Mientras que el espacio de direcciones de clase B está formado por una única subred formada por 65.534 hosts, con la nueva máscara de subred configurada se subdivide el espacio original en 256 subredes, con un máximo de 254 hosts permitidos en cada una de ellas.</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>EJEMPLO: Imaginemos una red, 130.252.0.0,(10000010.11111100.00000000.00000000 por el valor de su primer número (130), podemos deducir que se trata de una red de Clase B. Los dos últimos octetos están dedicados a numerar los host conectados a la red, hasta 65534 host, ya que el 1º y el último octeto no se utilizan, que serían los dos últimos octetos a 0 y a 1 respectivamente.</p></div>
+<p>Por lo tanto la mascara de entrada será 255.255.0.0 (11111111.11111111.00000000.00000000) Si nos interesa de forma lógica dividir esta única red en subredes para mejor aprovechamiento, podemos hacerlo dedicando a nombrar subredes parte de los octetos dedicados a nombrar host. Por ejemplo utilizamos el tercer octeto para nombrar subredes y nos quedará el último octeto para nombrar host. De esta manera podremos tener 28 -2 host (254) y el 256 redes.</p>
+<p>Para diferenciar esta situación de la inicial, lo que hacemos es modificar la máscara de entrada 255.255.0.0 que es la máscara para redes de clase B, por la 255.255.255.0 ya que ponemos a 1 todos los bits que dedicamos tanto a nombrar redes como a nombrar subredes, los 3 primeros octetos.</p>
+<p>De esta manera algunas de las primeras subredes válidas serían: 10000010.11111100.00000000.00000000 130.152.0.0</p>
+<p>10000010.11111100.00000001.00000000 130.152.1.0 10000010.11111100.00000010.00000000 130.152.2.0 Y así sucesivamente. Algunos host válidos para algunas de estas redes serían: 10000010.11111100.00000000.00000001 Host 130.252.0.1 Pertenece a 130.252.0.0 10000010.11111100.00000001.00000001 Host 130.252.1.1 Pertenece a 130. 252.1.0 Y así sucesivamente Cuando la máscara de subred predeterminada 255.255.0.0 se utiliza para los host de una red de clase B, como por ejemplo, 129.12.0.0, las direcciones IP 129.12.10.1 y 129.12.11.1 se encuentran dentro de la misma subred, y estos hosts se comunican entre ellos utilizando mensajes de difusión.</p>
+<p>Sin embargo, si extendemos la máscara de subred a 255.255.255.0, las direcciones 129.12.10.1 y 129.12.11.1 pertenecen a distintas subredes. Para comunicar un host con otro, los hosts con direcciones 129.12.10.1 y 129.12.11.1 deben enviar paquetes IP a la puerta de enlace predeterminada, la cual es responsable de enrutar el datagrama hacia la subred de destino. Los hosts externos a la red continúan usando la máscara de subred predeterminada para comunicarse con los hosts pertenecientes a la red.</p>
+<p>Las siguientes imágenes muestran las dos versiones de esta red. En las imágenes se puede diferenciar 192.12.0.0/16, donde /16 indica que se utilizan 16 bits para nombrar redes y 192.12.10.0/24 donde se utilizan 24 bits para nombrar redes.</p>
+<p>Número de hosts en una red Para una dirección de red específica, podemos determinar la cantidad de direcciones de hosts disponibles dentro de la red elevando 2 a la potencia del número de bits existentes en el ID de hosts y restando 2. Por ejemplo, la dirección de red 192.168.0.0/24 reserva 8 bits para el ID de host. Por tanto, puede determinar el número de hosts calculando 28 – 2 que es igual a 254.</p>
+<p>El valor 2 elevado a x nos da el número total de posibles combinaciones de bits para un número binario formado por x bits, incluyendo la combinación de todo 0 y todo 1. Ahora bien, todas las combinaciones no pueden ser asignadas a los hosts debido a que algunas direcciones están reservadas</p>
+<ul>
+<li>El ID de host igual a 0 se utiliza para especificar una red y no un host dentro de la red.</li>
+<li>El ID de host con todos los bits a 1 se utiliza para difundir un mensaje (broadcast) a todos los host</li>
+</ul>
+<p>de la red. Por este motivo, a la hora de calcular la capacidad de hosts de una red, debemos restar dos a 2x.</p>
+<p>Número de subredes en un espacio de direcciones Cuando extendemos la máscara de subred con una cadena de bits igual a 1 para crear varias subredes dentro de un espacio de direcciones, determinaremos el número de subredes disponibles, simplemente calculando 2y, donde y es igual al número de bits existentes en el ID de subred.</p>
+<p>Por ejemplo, cuando el espacio de direcciones de la red 129.12.10.0/16 se divide en /24, se reservan 8 bits para el ID de subred. Por tanto, el número de subredes disponibles es igual a 28, ó 256. En este caso no es necesario restar 2 a esta cantidad debido a que los enrutadores modernos (entre los que incluimos el servicio de Enrutamiento y acceso remoto de Windows 2000 Server y Windows Server 2003) aceptan un ID de subred con todos los bits asignados a 0 ó a 1.</p>
+<p>Normalmente, cuando estemos configurado un espacio de direcciones y una máscara de subred para satisfacer las necesidades de nuestra red, sabremos cuantas subredes necesitaremos crear y deberemos averiguar el número de bits suficiente para el ID de subred de manera que pueda incluir todas las subredes.</p>
+<p>Hosts por subredes EL cálculo del número posible de ID de host por subred es el mismo que el que se utiliza para calcular el número de ID de host por red. Cuando se ha dividido en subredes el espacio de direcciones de la red, el valor 2x – 2 (donde x es igual al número de bits presentes en el ID de host) nos da el número de hosts, por subred.</p>
+<p>Por ejemplo, debido a que el espacio de direcciones 129.12.10.0/24 reserva 8 bits para el ID de host, el número de hosts disponibles por subred es igual a 28 – 2 ó 254. Para calcular el número de hosts disponibles en toda la red, simplemente multiplicamos este valor por el número de subredes disponibles. Siguiendo con el ejemplo, el espacio de direcciones 129.12.0.0/24 nos da 254 x 256, ó 65.024 hosts en total.</p>
+<p>Ejemplos de subredes En el ejemplo anterior, el espacio de direcciones original 129.12.0.0/16 fue dividido extendiendo la máscara de subred a 255.255.255.0. En la práctica, la cadena de bits iguales a 1 dentro de una máscara de subred puede ser extendida en cualquier número de bits, no solamente en un número equivalente a un octeto.</p>
+<p>Dependiendo del número de subredes requeridas, el administrador extenderá la máscara de subred. La siguiente tabla muestra las posibles subredes de una red de clase B. Número de subredes requeridas Número bits extendidos Máscara de Subred Número de host por subred 1-2 255.255.128.0 ó /17 32.766 3-4 255.255.192.0 ó /18 16.382 5-8 255.255.224.0 ó /19 8.190 9-16 255.255.240.0 ó /20 4.094 17-32 255.255.248.0 ó /21 2.046 33-64 255.255.252.0 ó /22 1.022</p>
+<p>65-128 255.255.254.0 ó /23 129-256 255.255.255.0 ó /24 257-512 255.255.255.128 ó /25 513-1.024 255.255.255.192 ó /26 1.025-2.048 255.255.255.224 ó /27 2.049-4.096 255.255.255.240 ó /28 4.097-8.192 255.255.255.248 ó /29 8.193-16.384 255.255.255.252 ó /30 En la tabla anterior, se muestra como una red de clase B junto con la máscara de subred personalizada 255.255.248.0 ó /21, resultado de extender la máscara de subred predeterminada en 5 bits, nos permite configurar hasta 32 subredes con hasta 2.046 host cada una.</p>
+<p>Supongamos que nuestro proveedor de acceso a Internet (ISP) nos ha asignado la dirección de red 210.25.2.0 (Clase C). Si expresamos nuestra dirección de red en binario tendremos: 210.25.2.0 = 11010010.00011001.00000010.00000000 Con lo que tenemos 24 bits para identificar la red (en rojo) y 8 bits para identificar los host (en azul).</p>
+<p>La máscara de red será</p>
+<ul>
+<li>en binario : 11111111.11111111.11111111.00000000</li>
+<li>en decimal: 255.255.255.0</li>
+<li>en notación prefijo de red: /24</li>
+</ul>
+<p>Para crear subredes a partir de una dirección IP de red padre, la idea es "robar" bits a los host, pasándolos a los de identificación de red. ¿Cuántos? Bueno, depende de las subredes que queramos obtener, teniendo en cuenta que cuántos más bits robemos, más subredes obtendremos, pero con menos host cada una. Por lo tanto, el número de bits a robar dependerá de las necesidades de funcionamiento de la red final.</p>
+<p>Supongamos que necesitamos 6 subredes. Necesitaremos pasar 3 bits de los hosts a la identificación de la red. 11010010.00011001.00000010.rrr00000 (red en rojo, hosts en azul) Ahora la máscara de red será</p>
+<ul>
+<li>en binario : 11111111.11111111.11111111.11100000</li>
+<li>en decimal: 255.255.255.224</li>
+<li>en notación prefijo de red: /27</li>
+</ul>
+<p>podremos tener hasta 8 subredes (23) y hasta 30 hosts por subred (25 – 2) Subred Rango IPs hosts Broadcast 210.25.2.0 210.25.2.1 - 210.25.2.30 210.25.2.31 210.25.2.32 210.25.2.33 - 210.25.2.62 210.25.2.63 210.25.2.64 210.25.2.65 - 210.25.2.94 210.25.2.95 210.25.2.96 210.25.2.97 - 210.25.2.126 210.25.2.127</p>
+<p>210.25.2.128 210.25.2.129 - 210.25.2.158 210.25.2.159 210.25.2.160 210.25.2.161 - 210.25.2.190 210.25.2.191 210.25.2.192 210.25.2.193 - 210.25.2.222 210.25.2.223 210.25.2.224 210.25.2.225 - 210.25.2.254 210.25.2.255</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/ut0005.html">⬅️ 0.5 SI: TAULA DE TOPOLOGIES LAN</a>
+<a class="page-nav-btn" href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

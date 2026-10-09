@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>6.1 Entrada y salida de información — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>☕ Programació en Java (1r DAW / DAM) — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació en Java (1r DAW / DAM)</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — PRESENTACIÓN DEL MÓDULO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guia Didàctica</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Criterios de calificación</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Poema Ítaca (Konstantino Kavafis)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — EJERCICIOS: JUECES ONLINE</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Ejercicios JOEL</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Cómo resolver los problemas de ProgramaMe</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Guía de Compilación y Pruebas</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Ejercicios entrenamiento ProgramaMe - vol.1</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Chuletas</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Cuadernillo completo ProgramaMe Navidad 2024</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Ideas para resolver los problemas</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Chuletas</a></li>
+<li><a href="../ut01/ut0109.html">1.9 EjemploTreeMap</a></li>
+<li><a href="../ut01/ut0110.html">1.10 Soluciones Concurso Navidad</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — EJERCICIOS DE REPASO</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 bloque01 - ud01 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0202.html">2.2 bloque01 - ud02 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0203.html">2.3 RB102Soluciones</a></li>
+<li><a href="../ut02/ut0204.html">2.4 bloque01 - ud03 - Ejercicios repaso</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Ejercicios - BLOQUE 2</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Repaso POO: Juego de Cartas (ENTREGABLE)</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — EXÁMENES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 TestFotografia</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Principal.java</a></li>
+<li><a href="../ut03/ut0303.html">3.3 CodigoBASIC.bas</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Principal</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Principal</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Principal</a></li>
+<li><a href="../ut03/ut0307.html">3.7 TiendaTest</a></li>
+<li><a href="../ut03/ut0308.html">3.8 TableroTest</a></li>
+<li><a href="../ut03/ut0309.html">3.9 ficheroExamen</a></li>
+<li><a href="../ut03/ut0310.html">3.10 ExamenPRG</a></li>
+<li><a href="../ut03/ut0311.html">3.11 fichero2</a></li>
+<li><a href="../ut03/ut0312.html">3.12 fichero1</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — PROYECTOS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Hundir La Flota</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Reversi (Othello)</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Proyecto 2: Calculadora FX</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Proyecto AEMET</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Iconos.png</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Estados del cielo.txt</a></li>
+<li><a href="../ut04/ut0407.html">4.7 diccionario24.csv</a></li>
+<li><a href="../ut04/ut0408.html">4.8 parsear-xml-aemet</a></li>
+<li><a href="../ut04/ut0409.html">4.9 InternacionalizacionFX</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Introducción a la programación con Java</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 01a - Introducción a la Programacion</a></li>
+<li><a href="../ut05/ut0502.html">5.2 01b - Algoritmos</a></li>
+<li><a href="../ut05/ut0503.html">5.3 01c - Introduccion a Java</a></li>
+<li><a href="../ut05/ut0504.html">5.4 01a - Ejercicios</a></li>
+<li><a href="../ut05/ut0505.html">5.5 01a - Soluciones</a></li>
+<li><a href="../ut05/ut0506.html">5.6 01c - Ejercicios</a></li>
+<li><a href="../ut05/ut0507.html">5.7 01c - Soluciones</a></li>
+<li><a href="../ut05/ut0508.html">5.8 Ejercicios - AyR</a></li>
+<li><a href="../ut05/ut0509.html">5.9 01d - Estilo de codificacion</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT6 — Entrada y salida de información</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut06/ut0601.html">6.1 Entrada y salida de información</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Colores</a></li>
+<li><a href="../ut06/ut0603.html">6.3 ClasePrintf</a></li>
+<li><a href="../ut06/ut0604.html">6.4 Ejercicios</a></li>
+<li><a href="../ut06/ut0605.html">6.5 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Estructuras de control</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Uso de estructuras de control</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Ejercicios</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Ejercicios AyR - Condicionales Parte 1</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Ejercicios AyR - Condicionales Parte 2</a></li>
+<li><a href="../ut07/ut0705.html">7.5 Ejercicios AyR - Estructrura repetitiva while do</a></li>
+<li><a href="../ut07/ut0706.html">7.6 Ejercicios AyR - Estructura repetitiva for - mis</a></li>
+<li><a href="../ut07/ut0707.html">7.7 Ejercicios AyR - Mortadelo y Filemon</a></li>
+<li><a href="../ut07/ut0708.html">7.8 Ejercicios - AyR</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Programación Estructurada y Modular</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 04a - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0802.html">8.2 04b - Programación estructurada y modular</a></li>
+<li><a href="../ut08/ut0803.html">8.3 04a - Ejercicios</a></li>
+<li><a href="../ut08/ut0804.html">8.4 04b - Ejercicios</a></li>
+<li><a href="../ut08/ut0805.html">8.5 Ejercicios - Diagrama de flujo a Java (para algo</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Estructuras datos estáticas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 05a - Estructuras de datos estáticas</a></li>
+<li><a href="../ut09/ut0902.html">9.2 05b - Estructuras de datos estaticas</a></li>
+<li><a href="../ut09/ut0903.html">9.3 Código en el aula</a></li>
+<li><a href="../ut09/ut0904.html">9.4 05b - Ejercicios</a></li>
+<li><a href="../ut09/ut0905.html">9.5 05a - Ejercicios ampliación</a></li>
+<li><a href="../ut09/ut0906.html">9.6 05b - Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Estructuras de datos dinámicas</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 06a - Estructuras de datos dinámicas</a></li>
+<li><a href="../ut10/ut1002.html">10.2 06b - Estructuras de datos dinamicas</a></li>
+<li><a href="../ut10/ut1003.html">10.3 Código de aula</a></li>
+<li><a href="../ut10/ut1004.html">10.4 06a - Ejercicios</a></li>
+<li><a href="../ut10/ut1005.html">10.5 06b - Ejercicios</a></li>
+<li><a href="../ut10/ut1006.html">10.6 Ejercicios de Repaso: Estructuras de datos dinám</a></li>
+<li><a href="../ut10/ut1007.html">10.7 SolucionesEjerciciosRepaso</a></li>
+<li><a href="../ut10/ut1008.html">10.8 EjercicioVuelosPythonJava</a></li>
+<li><a href="../ut10/ut1009.html">10.9 06b - Recursividad</a></li>
+<li><a href="../ut10/ut1010.html">10.10 06b - Ejercicios básicos de recursividad</a></li>
+<li><a href="../ut10/ut1011.html">10.11 06b - Ejercicios Recursividad</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Programación orientada a objetos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Programación Orientada a Objetos</a></li>
+<li><a href="../ut11/ut1102.html">11.2 EstructuraClase</a></li>
+<li><a href="../ut11/ut1103.html">11.3 Ejercicios (I)</a></li>
+<li><a href="../ut11/ut1104.html">11.4 Cafetera</a></li>
+<li><a href="../ut11/ut1105.html">11.5 TestCafetera</a></li>
+<li><a href="../ut11/ut1106.html">11.6 Fraccion</a></li>
+<li><a href="../ut11/ut1107.html">11.7 TestFraccion</a></li>
+<li><a href="../ut11/ut1108.html">11.8 Main Fraccion (.java)</a></li>
+<li><a href="../ut11/ut1109.html">11.9 Pizza</a></li>
+<li><a href="../ut11/ut1110.html">11.10 TestPizza</a></li>
+<li><a href="../ut11/ut1111.html">11.11 Moneda</a></li>
+<li><a href="../ut11/ut1112.html">11.12 EurocoinMain - 1</a></li>
+<li><a href="../ut11/ut1113.html">11.13 Main Eurocoin - 2 (.java)</a></li>
+<li><a href="../ut11/ut1114.html">11.14 Main Eurocoin - 3 (.java)</a></li>
+<li><a href="../ut11/ut1115.html">11.15 Ejercicios (II)</a></li>
+<li><a href="../ut11/ut1116.html">11.16 Soluciones ejercicios ii</a></li>
+<li><a href="../ut11/ut1117.html">11.17 Ejercicios - AyR</a></li>
+<li><a href="../ut11/ut1118.html">11.18 Circulo</a></li>
+<li><a href="../ut11/ut1119.html">11.19 Cuadrado</a></li>
+<li><a href="../ut11/ut1120.html">11.20 Punto</a></li>
+<li><a href="../ut11/ut1121.html">11.21 Programación orientada a objetos (versión extend</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — Utilización avanzada de clases</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 08b - Utilizacion avanzada de clases</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Códigos de classe</a></li>
+<li><a href="../ut12/ut1203.html">12.3 08a - Ejercicios I (Relaciones entre clases)</a></li>
+<li><a href="../ut12/ut1204.html">12.4 08b - Ejercicios II</a></li>
+<li><a href="../ut12/ut1205.html">12.5 Ejercicios III (Herencia)</a></li>
+<li><a href="../ut12/ut1206.html">12.6 08a - Utilización avanzada de clases (Versión ex</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — Gestión de excepciones</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Gestión de excepciones</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Códigos de clase</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Ejercicios A</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Ejercicios B</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — Lectura y escritura de ficheros</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Lectura y escritura de información en ficheros</a></li>
+<li><a href="../ut14/ut1402.html">14.2 Códigos de clase</a></li>
+<li><a href="../ut14/ut1403.html">14.3 Ejercicios A</a></li>
+<li><a href="../ut14/ut1404.html">14.4 Ejercicios B</a></li>
+<li><a href="../ut14/ut1405.html">14.5 numeros</a></li>
+<li><a href="../ut14/ut1406.html">14.6 alumnos notas</a></li>
+<li><a href="../ut14/ut1407.html">14.7 Ejercicios C</a></li>
+<li><a href="../ut14/ut1408.html">14.8 Ejercicios D</a></li>
+<li><a href="../ut14/ut1409.html">14.9 Ejercicios - AyR</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — Interacción con bases de datos</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Interacción con bases de datos</a></li>
+<li><a href="../ut15/ut1502.html">15.2 bdpersonas</a></li>
+<li><a href="../ut15/ut1503.html">15.3 mysql-connector-java-8.0.19</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — Interfaces gráficas de usuario</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Código de clase</a></li>
+<li><a href="../ut16/ut1602.html">16.2 JavaFX</a></li>
+<li><a href="../ut16/ut1603.html">16.3 JavaFX</a></li>
+<li><a href="../ut16/ut1604.html">16.4 ContadorSimpleFX mejorado</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — Proyecto Integrador</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Proyectos a elegir</a></li>
+<li><a href="../ut17/ut1702.html">17.2 AjedrezFX</a></li>
+<li><a href="../ut17/ut1703.html">17.3 ClaseFX</a></li>
+<li><a href="../ut17/ut1704.html">17.4 controlsfx-8.40.11</a></li>
+<li><a href="../ut17/ut1705.html">17.5 Introducción a Canvas</a></li>
+<li><a href="../ut17/ut1706.html">17.6 Introducción a AnimationTimer en JavaFX</a></li>
+<li><a href="../ut17/ut1707.html">17.7 compartirDatos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT6 — Entrada y salida de información</span>
+<h1>6.1 Entrada y salida de información</h1>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 dir="ltr" style="text-align: left;">Contenido de la unidad<br/></h4></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Tabla código ASCII</p><p><a href="https://concepto.de/ascii/" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://concepto.de/ascii/) ↗️</strong></a></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 dir="ltr" style="text-align: left;">Prácticas de aula<br/></h4></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 dir="ltr" style="text-align: left;">Ampliación y refuerzo<br/></h4></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 dir="ltr" style="text-align: left;">Otros Recursos<br/></h4></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Web Baeldung: Uso de printf (Inglés)</p><p><a href="https://www.baeldung.com/java-printstream-printf" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.baeldung.com/java-printstream-printf) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: UC3M: Uso de printf (Castellano)</p><p><a href="https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Caracteres UNICODE: Box Drawing (para crear tablas)</p><p><a href="https://en.wikipedia.org/wiki/Box_Drawing" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://en.wikipedia.org/wiki/Box_Drawing) ↗️</strong></a></p></div>
+<hr/>
+<p>Programación</p>
+<h3>UD 2: Entrada y salida de información</h3>
+<p>Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web Jose Chamorro Molina Actualizado por: José Ramón Simó</p>
+<p>Programación</p>
+
+<p>ORDEN 60/2012, de 25 de septiembre, de la Conselleria de Educación, Formación y Empleo por la que se establece para la Comunitat Valenciana el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web. [2012/9149] Contenidos</p>
+<p>5.- Lectura y escritura de información: 5.1.− Programación de la consola: entrada y salida de información. 5.2.− Concepto de flujo. 5.3.− Tipos de flujos. Flujos de bytes y de caracteres. 5.4.− Flujos predefinidos. 5.5.− Clases relativas a flujos. 5.6.− Utilización de flujos.</p>
+<p>5.7.− Entrada desde teclado. 5.8.− Salida a pantalla. Real Decreto 686/2010, de 20 de mayo, por el que se establece el título de Técnico Superior en Desarrollo de Aplicaciones Web y se fijan sus enseñanzas mínimas. Resultados de aprendizaje</p>
+<ul>
+<li>Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.</li>
+</ul>
+<p>Criterios de evaluación: 5.a) Se ha utilizado la consola para realizar operaciones de entrada y salida de información. 5.b) Se han aplicado formatos en la visualización de la información. 5.c) Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.</p>
+<p>Competencias profesionales, personales y sociales</p>
+<ul>
+<li>Adaptarse a las nuevas situaciones laborales, manteniendo actualizados los conocimientos científicos, técnicos y tecnológicos relativos a</li>
+</ul>
+<p>su entorno profesional, gestionando su formación y los recursos existentes en el aprendizaje a lo largo de la vida y utilizando las tecnologías de la información y la comunicación. Entrada y salida de información</p>
+<p>Programación</p>
+
+<p>Entrada y salida de información 1.− Programación de la consola: entrada y salida de información 2.− Concepto de flujo 3.− Tipos de flujos. Flujos de bytes y de caracteres 4.− Flujos predefinidos 5.− Clases relativas a flujos 6.− Utilización de flujos 7.− Entrada desde teclado 8.− Salida a pantalla</p>
+<p>1.− Programación de la consola Programación</p>
+
+<p>1.− Programación de la consola Una aplicación de consola es un programa informático diseñado para ser utilizado a través de una interfaz de solo texto, como un terminal de texto, la interfaz de línea de comando de algunos sistemas operativos (Unix, DOS, etc.), o la consola Win32 en Microsoft Windows y la terminal en MacOS.</p>
+<p>Un usuario generalmente interactúa con una aplicación de consola usando solo un teclado y una pantalla, a diferencia de las aplicaciones de IGU, que normalmente requieren el uso de un mouse u otro dispositivo señalador. Muchas aplicaciones de consola, como los intérpretes de línea de comandos, son herramientas de línea de comandos, pero también existen numerosos programas de interfaz de usuario basada en texto.</p>
+<p>Programación</p>
+
+<p>1.− Programación de la consola A medida que la velocidad y la facilidad de uso de las aplicaciones de IGU han mejorado con el tiempo, el uso de las aplicaciones de consola ha disminuido en gran medida, pero no ha desaparecido. Algunos usuarios simplemente prefieren las aplicaciones basadas en consola, mientras que algunas organizaciones aún dependen de las aplicaciones de consola existentes para manejar las tareas clave de procesamiento de datos.</p>
+<p>Programación</p>
+
+<p>1.− Programación de la consola La capacidad de crear aplicaciones de consola se mantiene como una característica de los entornos de programación modernos porque simplifica enormemente el proceso de aprendizaje de un nuevo lenguaje de programación al eliminar la complejidad de una interfaz gráfica de usuario.</p>
+<p>Para tareas de procesamiento de datos y administración de computadoras, es posible que no haya necesidad de una interfaz de usuario bastante gráfica, dejando la aplicación más ágil, más rápida y más fácil de mantener. Coloreado de texto El texto que se muestra por pantalla se puede colorear (únicamente en un terminal de Linux), para ello es necesario insertar unas secuencias de caracteres - que indican el color con el que se quiere escribir – justo antes del propio texto.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String rojo    = "\033[31m";
+String verde   = "\033[32m";
+String naranja = "\033[33m";
+String azul    = "\033[34m";
+System.out.print(rojo + " rojo " + verde + " verde");
+System.out.print(naranja + " naranja " + azul + " azul");</code></pre>
+</div>
+<p>Programación</p>
+
+<p>2.− Concepto de flujo Programación</p>
+
+<p>2.− Concepto de flujo ✓ En Java se define la abstracción de stream (flujo) para tratar la comunicación de información entre el programa y el exterior.</p>
+<ul>
+<li>Entre una fuente y un destino fluye una secuencia de datos .</li>
+</ul>
+<p>✓ Los flujos actúan como interfaz con el dispositivo o clase asociada.</p>
+<ul>
+<li>Operación independiente del tipo de datos y del dispositivo.</li>
+</ul>
+<ul>
+<li>Mayor flexibilidad (p.e. redirección, combinación).</li>
+</ul>
+<ul>
+<li>Diversidad de dispositivos (fichero, pantalla, teclado, red, ...).</li>
+</ul>
+<ul>
+<li>Diversidad de formas de comunicación</li>
+</ul>
+<ul>
+<li>Modo de acceso: secuencial, aleatorio</li>
+</ul>
+<ul>
+<li>Información intercambiada: binaria, caracteres, líneas</li>
+</ul>
+<p>Programación</p>
+
+<p>2.− Concepto de flujo Programación</p>
+
+<p>3.− Tipos de flujos: Flujos de bytes y de caracteres. Programación</p>
+
+<p>3.− Tipos de flujos java.io Flujos de bytes</p>
+<p>clases InputStream y OutputStream Flujos de caracteres</p>
+<p>clases Reader y Writer Se puede pasar de un flujo de bytes a uno de caracteres con InputStreamReader y OutputStreamWriter Programación</p>
+
+<p>4.− Flujos predefinidos Programación</p>
+
+<p>4.− Flujos predefinidos System.in Instancia de la clase InputStream: flujo de bytes de entrada Métodos</p>
+<ul>
+<li>read() permite leer un byte de la entrada como entero</li>
+</ul>
+<ul>
+<li>skip(n ) ignora n bytes de la entrada</li>
+</ul>
+<ul>
+<li>available() número de bytes disponibles para leer en la entrada</li>
+</ul>
+<p>System.out Instancia de la clase PrintStream: flujo de bytes de salida Métodos para impresión de datos</p>
+<ul>
+<li>print(), println(), printf()</li>
+</ul>
+<ul>
+<li>flush() vacía el buffer de salida escribiendo su contenido</li>
+</ul>
+<p>System.err Funcionamiento similar a System.out Se utiliza para enviar mensajes de error (por ejemplo a un fichero de log o a la consola) Programación</p>
+
+<p>5.− Clases relativas a flujos Programación</p>
+
+<p>5.− Clases relativas a flujos Las clases del paquete java.io relativas a flujos: BufferedInputStream: permite leer datos a través de un flujo con un buffer intermedio. BufferedOutputStream: implementa los métodos para escribir en un flujo a través de un buffer. FileInputStream: permite leer bytes de un fichero.</p>
+<p>FileOutputStream: permite escribir bytes en un fichero o descriptor. StreamTokenizer: esta clase recibe un flujo de entrada, lo analiza (parse) y divide en diversos pedazos (tokens), permitiendo leer uno en cada momento. StringReader: es un flujo de caracteres cuya fuente es una cadena de caracteres o string.</p>
+<p>StringWriter: es un flujo de caracteres cuya salida es un buffer de cadena de caracteres, que puede utilizarse para construir un string. Programación</p>
+
+<p>5.− Clases relativas a flujos Flujos de bytes Programación</p>
+
+<p>5.− Clases relativas a flujos Flujos de caracteres Programación</p>
+
+<p>6.− Utilización de flujos Programación</p>
+
+<p>6.− Utilización de flujos Lectura</p>
+<h3>1. Abrir un flujo a una fuente de datos (creación del objeto stream)</h3>
+<ul>
+<li>Teclado</li>
+</ul>
+<ul>
+<li>Fichero</li>
+</ul>
+<ul>
+<li>Socket remoto</li>
+</ul>
+<h3>2. Mientras existan datos disponibles</h3>
+<ul>
+<li>Leer datos</li>
+</ul>
+<h3>3. Cerrar el flujo (método close)</h3>
+<p>Escritura</p>
+
+<ul>
+<li>Pantalla</li>
+</ul>
+<ul>
+<li>Fichero</li>
+</ul>
+<ul>
+<li>Socket local</li>
+</ul>
+
+<ul>
+<li>Escribir datos</li>
+</ul>
+
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: para los flujos estándar ya se encarga el sistema...</p><p>Nota: para los flujos estándar ya se encarga el sistema de abrirlos y cerrarlos Programación</p></div>
+
+<p>6.− Utilización de flujos Ejemplo: try {</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>BufferedReader reader = new BufferedReader(new FileReader("nombrefichero"));
+String linea = reader.readLine();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>while(linea != null) {</code></pre>
+</div>
+<p>// procesar el texto de la línea</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>linea = reader.readLine();
+}
+reader.close();
+}
+catch(FileNotFoundException e) {</code></pre>
+</div>
+<p>// no se encontró el fichero }</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>catch(IOException e) {</code></pre>
+</div>
+<p>// algo fue mal al leer o cerrar el fichero } *Este punto se verá de manera más detallada en la UD10 - Lectura y escritura de información Programación</p>
+
+<p>7.− Entrada desde teclado Programación</p>
+
+<p>7.− Entrada desde teclado La clase Scanner de Java provee métodos para leer valores de entrada de varios tipos y está localizada en el paquete java.util. Los valores de entrada pueden venir de varias fuentes, incluyendo valores que se entren por el teclado o datos almacenados en un archivo.</p>
+<p>Tenemos que crear un objeto de la clase Scanner asociado al dispositivo de entrada. Si el dispositivo de entrada es el teclado escribiremos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Scanner teclado = new Scanner(System.in);</code></pre>
+</div>
+<p>Se ha creado el objeto teclado asociado al teclado representado por System.in Una vez hecho esto podemos leer datos por teclado. Programación</p>
+
+<p>7.− Entrada desde teclado Programación</p>
+
+<p>Principales constructores y métodos de la clase Scanner public Scanner (InputStream source) Crea un nuevo Scanner a partir de un flujo de entrada de datos como es el caso de System.in (para poder leer desde teclado).</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public String next ()
+public String next (String pattern)</code></pre>
+</div>
+<p>Obtiene el siguiente elemento leído del teclado como un String (si coincide con el patrón especificado). Lanza NoSuchElementException si no quedan más elementos por leer.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public String nextLine ()</code></pre>
+</div>
+<p>Se lee el resto de línea completa, descartando el salto de línea. Devuelve el resultado como un String. Lanza NoSuchElementException si no quedan más elementos por leer.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public int nextInt ()</code></pre>
+</div>
+<p>public long nextLong () public short nextShort () public byte nextByte () public float nextFloat () public double nextDouble ()</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public boolean nextBoolean ()</code></pre>
+</div>
+<p>Devuelve el siguiente elemento como un int siempre que se trate de un int. Ídem para long, short, byte, float, double y boolean. Lanza InputMismatchException en caso de no poder obtener un valor del tipo apropiado. Lanza NoSuchElementException si no quedan más elementos por leer.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public boolean hasNext ()</code></pre>
+</div>
+<p>Devuelve true si queda algún elemento por leer.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public boolean hasNextLine ()</code></pre>
+</div>
+<p>Devuelve true si queda alguna línea por leer.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public boolean hasNextInt ()
+public boolean hasNextLong ()
+public boolean hasNextShort ()
+public boolean hasNextByte ()
+public boolean hasNextFloat ()
+public boolean hasNextDouble ()
+public boolean hasNextBoolean ()</code></pre>
+</div>
+<p>Devuelve true si el siguiente elemento a obtener se puede interpretar como un int. Ídem para long, short, byte, float, double y boolean. public Scanner useLocale (Locale l) Establece la configuración local del Scanner a la configuración especificada por el Locale l.</p>
+<p>7.− Entrada desde teclado Ejemplo</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Scanner sc = new Scanner(System.in);
+int numClase;
+String nombre;</code></pre>
+</div>
+<p>double nota;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("Introduce el número de clase:");
+numClase = sc.nextInt();</code></pre>
+</div>
+<p>//NOTA: esta línea es para capturar el retorno de carro</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>sc.nextLine();
+System.out.println("Introduce el nombre del alumno:");
+nombre = sc.nextLine();
+System.out.println("Introduce la nota del exámen:");
+nota = sc.nextDouble();</code></pre>
+</div>
+<p>Programación</p>
+
+<p>8.− Salida a pantalla Programación</p>
+
+<p>8.− Salida a pantalla Salida por pantalla</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.print</code></pre>
+</div>
+<p>Salida por pantalla formateada</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf</code></pre>
+</div>
+<p>Programación</p>
+
+<p>8.− Salida a pantalla Imprimir números enteros con System.out.printf</p>
+<p>…</p>
+<p>//Declaración de variables</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int a = 8;
+int b = 3;
+int resultado = 0;</code></pre>
+</div>
+<p>//%d se sustituye por la variable entera, resultado //%n indica un salto de línea</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>resultado = (a + b);
+System.out.printf(“La suma es: %d %n”, resultado);
+resultado = (a - b);
+System.out.printf("La resta es: %d %n", resultado);</code></pre>
+</div>
+<p>… Programación</p>
+
+<p>8.− Salida a pantalla Imprimir números decimales con System.out.printf</p>
+<p>…</p>
+<p>//%f se sustituye por la variable decimal, res //2.6666666666666667</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>res = (double) a / b;
+System.out.printf("La división es: %f\n", res);</code></pre>
+</div>
+<p>//Se pueden imprimir diferentes variables en una misma instrucción</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("La división entre %d y %d es igual a %f \n", a, b, res);</code></pre>
+</div>
+<p>//2,67</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%.2f %n",  res);</code></pre>
+</div>
+<p>// 2,67</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%5.2f %n", res);</code></pre>
+</div>
+<p>// 2,667</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%7.3f %n", res);</code></pre>
+</div>
+<p>//002,667</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%07.3f %n", res);</code></pre>
+</div>
+<p>// 2,6667</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%10.4f %n", res);</code></pre>
+</div>
+<p>//2,667</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf ("%5.3f %n", res);</code></pre>
+</div>
+<p>// 2,66667</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf ("%10.5f %n", res);</code></pre>
+</div>
+<p>//0000000003</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%010.0f %n", res);</code></pre>
+</div>
+<p>… Programación</p>
+
+<p>8.− Salida a pantalla Imprimir texto con System.out.printf</p>
+<p>…</p>
+<p>//%s se sustituye por la variable de texto, imprime en minúsculas //%S se sustituye por la variable de texto, imprime en mayúsculas //El salto de línea se puede indicar con \n o %n</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String texto = "Mayor";</code></pre>
+</div>
+<p>//Imprime: El resultado es Mayor</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("El resultado es: %s \n", texto);</code></pre>
+</div>
+<p>//Imprime: El resultado es MAYOR</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("El resultado es: %S %n", texto);</code></pre>
+</div>
+<p>… Programación</p>
+
+<p>8.− Salida a pantalla Uso de la clase DecimalFormat</p>
+<p>…</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>DecimalFormat formateador = new DecimalFormat("####.####");</code></pre>
+</div>
+<p>//Imprime el número pasado como parámetro con cuatro decimales, es decir: 7,1234</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(formateador.format(7.12342383));
+formateador = new DecimalFormat("0000.0000");</code></pre>
+</div>
+<p>//Imprime con 4 cifras enteras y 4 decimales: 0001,8200</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println(formateador.format (1.82));</code></pre>
+</div>
+<p>//Redondeo</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>double aa = 1.2345;
+double bb = 1.2356;
+formateador = new DecimalFormat(“#.##”);
+System.out.println(formateador.format( aa ));   // La salida es 1,23
+System.out.println(formateador.format( bb ));   // La salida es 1,24</code></pre>
+</div>
+<p>//Porcentajes</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>formateador = new DecimalFormat(“###.##%”);</code></pre>
+</div>
+<p>// Imprime: 68,44%</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println (formateador.format(0.6844));</code></pre>
+</div>
+<p>//Simbolos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>DecimalFormatSymbols simbolos = new DecimalFormatSymbols();
+simbolos.setDecimalSeparator(‘.’);
+formateador = new DecimalFormat(“####.####”, simbolos);</code></pre>
+</div>
+<p>// Imprime: 3.4324</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println (formateador.format (3.43242383));</code></pre>
+</div>
+<p>… Programación</p>
+
+<p>Bibliografía Programación</p>
+
+<p>Bibliografía ✓ Aprende JAVA con ejercicios. Edición 2018. Luis José Sánchez. ✓ Empezar a programar usando Java. 2ª edición. Universitat Politècnica de València ✓ Apuntes de la asignatura Ingeniería del Software de la Universitat Politècnica de València. ✓ https://github.com/statickidz/TemarioDAW ✓ https://es.stackoverflow.com ✓ https://en.wikipedia.org/wiki/Console_application Programación</p>
+
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut06/index.html">⬅️ 📘 UT6 Completa</a>
+<a class="page-nav-btn" href="../ut06/ut0602.html">6.2 Colores ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>5.1 Pràctiques Impress — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT5 — Impress</span>
+<h1>5.1 Pràctiques Impress</h1>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Webinar "Diseñar diapositivas impactantes de aspecto profesional"</p><p><a href="https://www.youtube.com/watch?v=I0RkdZGD5hk" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=I0RkdZGD5hk) ↗️</strong></a></p></div>
+<hr/>
+<h3>📄 7-Tablas.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 7: Tablas</p><p>Pràctica 7: Tablas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Utilizar tablas para clasificar información.</p>
+<ul>
+<li>Personalizar las tablas con efectos y colores.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Tablas</h3>
+<p>Impress también dispone de tablas para insertar en la presentación, y además el funcionamiento es muy similar al de Writer.</p>
+<h4>1.1. Crear tablas</h4>
+<p>Hay 2 formas de crear una tabla</p>
+<h4>1.1.1. Menú</h4>
+<p>Para insertar una tabla iremos al menú Insertar → Tabla. Al seleccionar esta opción se abre una ventana que nos pregunta cuántas columnas y cuántas filas deseamos para nuestra tabla. Una vez especificado el número de filas y columnas, pulsaremos Aceptar.</p>
+<h4>1.1.2. Icono tabla</h4>
+<p>Utilizaremos el botón Tabla de la barra de herramientas Estándar . Al pulsar en él se despliega y aparece un cuadro como el que se muestra. Los cuadros azules indican el número de filas y columnas que tendrá la tabla. En el ejemplo de la imagen, se crearía una tabla con 3 filas (horizontal) y 3 columnas (vertical).</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 7: Tablas</p><p>Pràctica 7: Tablas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 1 Crear tabla • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio • Sitúate en la última diapositiva. • Crea una nueva diapositiva en blanco. En el panel lateral derecho de Disposiciones, elige el tipo Solo título. • Selecciona la nueva diapositiva.</p>
+<p>• Haz clic en el título y escribe el texto “Tabla de objetos del Friki”. • Personaliza el cuadro de texto con el tipo de letra, colores y efectos que desees. • Personaliza el color de fondo de la diapositiva. • Crea una tabla con 2 columnas y 8 filas. Ve al menú Insertar → Tabla o haz clic en el icono Tabla .</p>
+<p>• Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 7: Tablas</p><p>Pràctica 7: Tablas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>1.2. Modificar una tabla. Escribir texto</h4>
+<p>Para insertar texto en la tabla nos situamos en el recuadro (celda) donde queremos escribir, el cursor se convertirá en un punto de inserción y podremos empezar a escribir. Podemos aplicar al texto de las celdas las distintas opciones de formato vistas anteriormente: subrayar, cambiar su tamaño, el color de la fuente, justificar al centro, etc.</p>
+<p>Para cambiar de celda podemos hacerlo con las flechas o con la tecla de Tabulador.</p>
+<p>Ejercicio 2</p>
+<p>Modificar tamaño • Haz clic en la tabla. • Modifica el tamaño de la primera columna para hacerla más pequeña. Para ello, haz clic con el ratón en los puntos que aparecen y muévelo para cambiar el tamaño. • Por ejemplo</p>
+<p>Escribir texto • Escribe los siguientes textos en cada una de las celdas correspondientes. • Aplica alineación centrada al texto de la primera columna. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 7: Tablas</p><p>Pràctica 7: Tablas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>1.3. Propiedades de tabla. Efectos y colores</h4>
+<p>La tabla puede personalizarse por medio de las distintas opciones de la barra de herramientas: color de fondo, tipo de letra, centrado en la celda, tamaño, etc. Para modificar las propiedades de una tabla haremos clic sobre ella y con el botón derecho del ratón elegimos la opción Propiedades de la tabla.</p>
+<p>También podemos hacer uso de la barra de herramientas Tabla. Si no está visible la barra de herramientas, iremos al menú Ver → Barras de herramientas → Tabla.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 7: Tablas</p><p>Pràctica 7: Tablas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 3</p>
+<p>Efectos y colores • Haz clic en la tabla. • Con el botón derecho del ratón elige la opción Propiedades de la tabla o utiliza los iconos de la barra de herramientas.</p>
+<p>• Personaliza los bordes y colores de la tabla. Pon el tipo de letra y color que quieras. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 7: Tablas</p><p>Pràctica 7: Tablas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>1.4. Filas y columnas. Añadir y eliminar</h4>
+<p>La barra de herramientas Tabla dispone de las funciones necesarias para añadir y eliminar filas y columnas.</p>
+<h4>1.4.1. Eliminar filas y columnas</h4>
+<p>Para eliminar una fila nos situamos en alguna de las celdas de la fila a eliminar y en la barra de herramientas seleccionamos la opción Eliminar fila. Para eliminar una columna nos situamos en una de las celdas que pertenezcan a la columna que quiere eliminarse y en la barra de herramientas seleccionamos la opción Eliminar columna.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 7: Tablas</p><p>Pràctica 7: Tablas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>1.4.2. Insertar filas o columnas</h4>
+<p>Al igual que podemos eliminar filas y columnas también podemos insertar nuevas filas o columnas en una tabla que ya tenemos creada y que por cualquier motivo tenemos que ampliar. Nos situaremos en alguna celda de la fila más próxima al lugar donde queremos insertar la nueva fila.</p>
+<p>Por último nos queda seleccionar Insertar fila. Para insertar una nueva columna el proceso es similar: nos situamos en la columna más cercana al lugar donde queremos insertar la nueva columna y hacemos clic en el icono Insertar columna.</p>
+<p>Para eliminar una tabla haremos clic sobre uno de los bordes de la tabla para seleccionarla y pulsaremos la tecla Supr.</p>
+<p>Ejercicio 4 Añadir una fila • Haz clic en la tabla, en la última fila. • Añade una fila.</p>
+<p>• Escribe el texto siguiente: o En objeto: 8 o En descripción: Videoconsola Friki Gamer</p>
+<ul>
+<li>Guarda la presentación con el nombre Friki.odp</li>
+</ul>
+<h3>📄 6-ImageneRotulosArtisticos.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Insertar imágenes. • Aplicar efectos sobre imágenes: rotación, recorte y filtros.</p>
+<ul>
+<li>Conocer y utilizar rótulos artísticos.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Inserción de imágenes</h3>
+<p>Para insertar una imagen en una diapositiva iremos al menú Insertar → Imagen o haremos clic en el icono correspondiente de la barra de herramientas Dibujo.</p>
+<p>Ejercicio 1</p>
+<p>Insertar imagen • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio • Ve a la última diapositiva. • Crea una nueva diapositiva en blanco. En el panel lateral derecho de Disposiciones, elige el tipo Solo título.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Selecciona la nueva diapositiva. • Haz clic en el título y escribe el texto “Foto Friki”. • Personaliza el cuadro de texto con el tipo de letra, colores y efectos que desees. • Descarga de la carpeta recursos, la primera imagen friki 061Imagen • Inserta la imagen en la diapositiva.</p>
+<p>• Personaliza el color de fondo de la diapositiva. • Por ejemplo</p>
+<p>Para dimensionar la imagen haz clic en la propia imagen y estira con el ratón donde aparezcan los círculos. Para arrastrar la imagen basta con hacer clic y moverla manteniendo apretado el botón izquierdo del ratón.</p>
+<h3>2. Retoque de imágenes</h3>
+<p>Para retocar las imágenes en Impress haremos clic sobre cualquier imagen y utilizaremos la barra de herramientas Imagen, que nos permitirá realizar cualquier operación sobre nuestra imagen. Si no está visible la barra de herramientas, iremos al menú Ver → Barras de herramientas → Imagen.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>2.1. Girar (rotación)</h4>
+<p>Para girar las imágenes haremos clic sobre ellas. Con el botón derecho del ratón elegimos la opción Posición y tamaño, pestaña Rotación. También pueden girarse las imágenes con el icono Rotación de la barra de herramientas.</p>
+<p>Ejercicio 2</p>
+<p>Rotar imagen • Ve a la diapositiva 5, que es la que contiene la foto. • Haz clic en la imagen. • Haz clic en el icono de giro . • Gira la imagen como quieras.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Por ejemplo</p>
+<p>Al igual que en otras aplicaciones, si nos hemos equivocado podemos revertir los cambios con el menú Editar → Deshacer o mediante la combinación de teclas Ctrl+Z.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>2.2. Recortar</h4>
+<p>La imagen también se puede recortar y añadir un margen en blanco utilizando el icono de la barra de herramientas Imagen o . Para guiarnos en esta operación es aconsejable el tener a la vista la regla mediante el menú Ver → Reglas.</p>
+<p>Ejercicio 3</p>
+<p>Recortar una imagen • Ve a la última diapositiva. • Descarga de la carpeta recursos la segunda imagen friki 062Imagen. • Inserta la imagen en la diapositiva.</p>
+<p>• Redimensiona la imagen para hacerla más grande. Sitúala a la derecha de la diapositiva. • Desplaza la foto anterior hacia la izquierda. • Por ejemplo</p>
+<p>• Haz clic en la imagen.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Haz clic en el icono de recorte o .</p>
+<p>• Recorta la imagen para dejar sólo a la persona de la izquierda. Recuerda que puedes deshacer los cambios si no te gusta cómo queda el recorte.</p>
+<p>• Haz clic fuera de la imagen. Desplaza la imagen hacia la derecha.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Comprueba el resultado final. Por ejemplo</p>
+<h4>2.3. Filtros y efectos</h4>
+<p>La barra de herramientas Imagen dispone de diversos efectos que pueden aplicarse sobre la imagen seleccionada.</p>
+<p>El significado de cada una de las opciones es el siguiente: • Filtros. Permite aplicar diversos filtros sobre la imagen. • Modo gráfico. Se utiliza para cambiar los atributos de la imagen a blanco y negro y escala de grises. • Color. Sirve para variar las tonalidades de la imagen.</p>
+<p>• Transparencia. Establece la transparencia en el objeto gráfico. Oscila desde 0% (completamente opaco) hasta +100% (completamente transparente).</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>En el panel lateral derecho tenemos desglosados los efectos de modo gráfico, color y transparencia.</p>
+<p>Ejercicio 4</p>
+<p>Aplicar filtros • Ve a la última diapositiva. • Crea una nueva diapositiva en blanco. En el panel lateral derecho de Disposiciones, elige el tipo Solo título. • Selecciona la nueva diapositiva. • Haz clic en el título y escribe el texto “Foto Friki con filtros y efectos”.</p>
+<p>• Personaliza el cuadro de texto con el tipo de letra, colores y efectos que desees. • Descarga de la carpeta recursos la tercera imagen friki 063Imagen • Inserta la imagen en la diapositiva.</p>
+<p>• Personaliza el color de fondo de la diapositiva. • Haz clic en la imagen. • Aplica los efectos que quieras. En el ejemplo hemos seleccionado Aumentar nitidez y Solarización.</p>
+<p>• Cambia la transparencia y/o el color si lo deseas. En el ejemplo hemos puesto una transparencia del 15%.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Por ejemplo</p>
+<h3>3. Imágenes prediseñadas</h3>
+<p>Impress dispone de una galería de imágenes predefinidas para añadir en nuestras diapositivas. El funcionamiento es idéntico al del procesador de textos Writer.</p>
+<p>Para abrir la galería usaremos el icono Galería o de la barra de herramientas de Dibujo.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 5</p>
+<p>Insertar imagen prediseñada • Ve a la última diapositiva. • Inserta la imagen prediseñada que desees. • Personaliza los efectos de la imagen insertada. En el ejemplo se ha utilizado un filtro de Envejecer y se ha variado el brillo y contraste. • Por ejemplo</p>
+<h3>4. Rótulos artísticos</h3>
+<p>Al igual que sucede con Writer, Impress permite personalizar nuestros títulos con rótulos artísticos. Para ello iremos al menú Insertar → Fontwork o haremos clic en el icono Galería de Fontwork de la barra de herramientas de dibujo.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 6: Imágenes y rótulos artísticos</p><p>Pràctica 6: Imágenes y rótulos artísticos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Las opciones y la forma de operar es la misma que en Writer, por lo que, en caso de duda, se recomienda revisar la práctica correspondiente.</p>
+<p>Ejercicio 6</p>
+<p>Añadir rótulo artístico • Ve a la primera diapositiva. • Añade un rótulo artístico con el texto "Enciclopedia del friki". • Personaliza el formato del rótulo. En el ejemplo, hemos hecho clic sobre el rótulo y con el botón derecho del ratón hemos elegido la opción Relleno para cambiar el fondo de las letras.</p>
+<p>• Sitúa el rótulo debajo del título principal de la diapositiva. Desplaza los otros cuadros de texto hacia la parte inferior. • Por ejemplo</p>
+<p>• Guarda la presentación con el nombre Friki.odp</p>
+<ul>
+<li>Cierra la presentación.</li>
+</ul>
+<h3>📄 5-PlantillasFondosImaganes.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Conocer y utilizar las plantillas prediseñadas para diapositivas. • Personalizar el fondo y los colores de las diapositivas.</p>
+<ul>
+<li>Establecer imágenes de fondo en las diapositivas.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Plantillas. Patrones</h3>
+<p>Impress permite definir el estilo de página de nuestra presentación, ya que dispone de plantillas predefinidas o fondos de presentación. Por defecto, todas las diapositivas tienen fondo blanco, como el tipo Predeterminado, pero el resto tienen un fondo con diseños vistosos. Impress incluye una galería de fondos ilustrados de diversos colores que podemos aplicar sobre las diapositivas.</p>
+<p>Para mostrar las plantillas predefinidas haremos clic en el icono Patrones del panel lateral derecho.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 1</p>
+<p>Aplicar plantilla de fondo • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio • Ve a la primera diapositiva.</p>
+<p>• Haz clic en el icono Patrones del panel lateral derecho.</p>
+<p>• Elige la plantilla predefinida que desees. Sitúate encima y con el botón derecho del ratón elige la opción Aplicar a las diapositivas seleccionadas. De este modo, sólo aplicamos la plantilla a la diapositiva actual.</p>
+<p>Si elegimos la opción Aplicar a todas las diapositivas, entonces el diseño de plantilla se aplicará a todas las diapositivas de nuestra presentación.</p>
+<p>•</p>
+<p>Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h3>2. Fondos y colores</h3>
+<p>Además de la utilidad de plantillas predefinidas, Impress permite personalizar los colores de las diapositivas, pudiendo sustituir el color blanco por defecto. De este modo, podemos crear nuestro propio estilo de diseño. Para personalizar los fondos y colores de una diapositiva, iremos al menú Diapositiva → Propiedades de diapositiva. También podemos hacer clic con el botón derecho del ratón en un espacio libre de la diapositiva, es decir, donde no haya ningún texto o elemento. En el menú contextual que se abre, elegimos la opción Propiedades de diapositiva.</p>
+<p>En la pestaña Fondo podemos elegir los colores y efectos para el relleno de la diapositiva. Si desplegamos la lista aparecerá una lista de opciones</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Opciones Descripción Ninguno. Deja la diapositiva con el color por defecto, que es el blanco. Color. Permite seleccionar un color de la muestra y aplicarlo de modo uniforme a todo el fondo. Degradado. Dispone de efectos de colores con degradados, brillos y contrastes, logrando resultados más estéticos.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Entramado. Pone como fondo de la diapositiva el diseño geométrico que seleccionemos. Además, podemos añadir un color de fondo para el diseño elegido. Mapa de bits. Establece como fondo la textura (material o elemento) que seleccionemos.</p>
+<p>Ejercicio 2</p>
+<p>Rellenar fondo. Diapositiva 2 • Ve a la diapositiva 2. • Ve al menú Diapositiva → Propiedades de diapositiva o haz clic con el botón derecho del ratón en un espacio libre de la diapositiva y elige la opción Propiedades de diapositiva. • Haz clic en la pestaña Fondo. • Elige el color, degradado o mapa de bits que desees.</p>
+<p>• Para finalizar, pulsa el botón Aceptar. • En el cuadro de diálogo que aparece, haz clic en el botón NO. De este modo, aplicaremos el fondo sólo a la diapositiva en la que estamos situados.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Si hacemos clic en el botón Sí, entonces el color de fondo se aplicará a todas las diapositivas de nuestra presentación, incluyendo aquellas que están todavía por insertar.</p>
+<p>•</p>
+<p>Por ejemplo</p>
+<p>Rellenar fondo. Diapositiva 3 • Ve a la diapositiva 3. • Establece otro color o efecto de fondo. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h3>3. Imagen como fondo</h3>
+<p>En ocasiones necesitaremos establecer una imagen de fondo que ocupe toda la diapositiva. Impress nos permite confeccionar este diseño de forma fácil. Para ello, seguiremos los siguientes pasos: • Situarnos en la diapositiva que queramos. • Ir al menú Diapositiva → Establecer imagen de fondo. También podemos hacer clic con el botón derecho del ratón en un espacio libre de la diapositiva, es decir, que no tenga elementos. En el menú contextual que se abre, elegir la opción Establecer imagen de fondo.</p>
+<p>• Elegir la foto que se desee. • Por último, pulsar el botón Abrir.</p>
+<ul>
+<li>Si sólo queremos aplicar la imagen de fondo a la diapositiva actual, hacer clic en el botón</li>
+</ul>
+<p>NO del cuadro de diálogo que se muestra.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 3</p>
+<p>Poner imagen como fondo • Descarga de la carpeta recursos la imagen del gato 05Imagen • Ve a la última diapositiva. • Crea una nueva diapositiva en blanco. En el panel lateral derecho de Disposiciones, elige el tipo Diapositiva vacía.</p>
+<p>• Ve al menú Diapositiva → Establecer imagen de fondo o haz clic con el botón derecho del ratón sobre la nueva diapositiva y elige la opción Establecer imagen de fondo. • Busca y selecciona la foto que te has descargado anteriormente. • Para finalizar, pulsa el botón Abrir.</p>
+<p>• En el cuadro de diálogo que se muestra, haz clic en el botón NO. De este modo, aplicaremos la imagen de fondo sólo a la diapositiva en la que estamos situados.</p>
+<p>Si hacemos clic en el botón Sí, entonces la imagen se aplicará como fondo a todas las diapositivas de nuestra presentación, incluyendo aquellas que están todavía por insertar. Cuadro de texto • Inserta un cuadro de texto en la diapositiva.</p>
+<p>• Escribe el texto "Gato Jedi". Personaliza los colores y efectos del cuadro. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p><p>Pràctica 5: Plantillas. Fondos e imágenes de fondo.</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<ul>
+<li>Guarda la presentación con el nombre Friki.odp</li>
+</ul>
+<h3>📄 4-Diapositivas.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Conocer las diferentes formas de insertar diapositivas. • Conocer y cambiar los diferentes diseños de diapositivas. • Realizar operaciones básicas con diapositivas. • Utilizar formatos de carácter y párrafo.</p>
+<ul>
+<li>Usar el modo presentación.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Inserción de diapositivas</h3>
+<p>Para elaborar una presentación es necesario definir todas las diapositivas, por lo que el primer paso debe ser la inserción de las diapositivas necesarias. A la hora de insertarlas, Impress nos ofrece diferentes formas de hacerlo: • Diapositiva sin estilo: inserta una diapositiva en blanco sin ningún tipo de estilo • Diapositiva con diseño predeterminado: permite seleccionar el estilo que se aplicará</p>
+<h4>1.1. Diapositiva sin estilo</h4>
+<p>La primera opción consiste en la creación de una diapositiva en blanco sin estilo. Tenemos 3 formas distintas de realizarlo: 1.1.1 Menú principal • Seleccionar el menú Diapositiva → Diapositiva nueva. • Se insertará una diapositiva a continuación de la seleccionada.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>1.1.2. Menú contextual</h4>
+<p>• Pulsar el botón derecho del ratón sobre el panel izquierdo de diapositivas y elegir la opción Diapositiva nueva.</p>
+<p>• Se insertará una diapositiva a continuación de la seleccionada.</p>
+<h4>1.1.3. Icono de la barra de herramientas</h4>
+<p>• Hacer clic en el icono Diapositiva nueva de la barra de herramientas. Si desplegamos la flecha negra, podemos elegir el tipo de diseño de la nueva diapositiva. • Se insertará una diapositiva a continuación de la seleccionada.</p>
+<h4>1.2. Diapositiva con diseño predeterminado</h4>
+<p>La segunda opción consiste en la creación de una diapositiva con unas características especiales. Para ello tendremos que seguir los siguientes pasos</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• En el panel lateral derecho, hacer clic en el icono Propiedades.</p>
+<p>• Situarnos sobre alguno de los estilos del panel de tareas.</p>
+<p>• Pulsar el botón derecho del ratón y seleccionar la opción Insertar diapositiva.</p>
+<ul>
+<li>Se insertará una diapositiva, a continuación de la seleccionada, con el estilo que se haya</li>
+</ul>
+<p>seleccionado.</p>
+<p>Ejercicio 1</p>
+<p>Crear nueva diapositiva • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio • Crea una nueva diapositiva. Ve al menú Diapositiva → Diapositiva nueva o haz clic en el icono de la barra de herramientas. • En el panel lateral derecho, haz clic en el icono Propiedades.</p>
+<p>• Haz clic en el diseño de tipo Página de título.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Título. Escribe el texto "Reglas para ser un friki". • Subtítulo. Teclea el texto que se muestra más adelante, aplicando los colores que desees. Cambia el tipo de letra de las frases por el que quieras. • Personaliza los cuadros de texto con el tipo de letra, efectos y colores que desees.</p>
+<p>• Por ejemplo</p>
+<p>Poner viñetas • Ve a la diapositiva 2. • Haz clic en el cuadro de texto del subtítulo, es decir, el que contiene todas las características del friki. • Selecciona todas las frases. • Ve al menú Formato → Numeración y viñetas o haz clic en el icono del panel lateral de Propiedades, opción Más viñetas.</p>
+<p>• Ve a la pestaña Imagen. Elige la viñeta que desees.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Por ejemplo</p>
+<p>Modificar la sangría de las viñetas • Haz clic en el cuadro de texto del subtítulo, es decir, el que contiene todas las características del friki. • Selecciona todas las frases. • Ve al menú Formato → Numeración y viñetas, pestaña Posición. Marca la casilla Relativo y establece una sangría de 1,50 cm.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Haz clic en Aceptar. Ahora podemos comprobar que las frases junto con las viñetas se han desplazado hacia la derecha 1,5 cm. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h3>2. Modificación del estilo</h3>
+<p>En ocasiones necesitaremos cambiar el estilo de una diapositiva, una vez la hemos creado. Si no tiene contenido será fácil borrarla y crearla de nuevo, pero si tiene contenido puede conllevar problemas. Para cambiar el estilo de una diapositiva ya creada deberemos seguir los siguientes pasos</p>
+<p>• Nos situamos sobre la diapositiva que queremos modificar. • Vamos al panel lateral derecho, opción Propiedades o con el botón derecho del ratón sobre ella seleccionamos la opción Disposición de diapositiva. • A continuación, en el panel lateral de Disposiciones seleccionamos el estilo que queremos.</p>
+<ul>
+<li>En el momento de hacer clic en el diseño, éste se modificará automáticamente en la</li>
+</ul>
+<p>diapositiva seleccionada.</p>
+<p>Ejercicio 2 Vamos a duplicar la diapositiva 2 y cambiar su estilo para ver diferentes diseños. • Ve a la diapositiva 2. • Ve al menú Diapositiva → Duplicar diapositiva o haz clic en el icono Duplicar diapositiva de la barra de herramientas. También podemos pulsar el botón derecho del ratón y elegir la opción Duplicar diapositiva. Acabamos de crear una nueva diapositiva (la tercera) que es una réplica exacta de la segunda.</p>
+<p>• En el panel lateral derecho, haz clic en el icono Propiedades.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• En el panel lateral de Disposiciones, elige el tipo Título y contenido 2.</p>
+<p>• Comprueba que el diseño de la diapositiva 3 ha cambiado, aunque se mantienen los textos que ya hemos introducido</p>
+<p>• En el panel izquierdo de Diapositivas debemos tener las 3 que componen nuestra presentación</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<ul>
+<li>Guarda los cambios.</li>
+</ul>
+<h3>3. Modo Presentación</h3>
+<p>El modo presentación reproduce la presentación desde el inicio o a partir de la diapositiva seleccionada. Con este tipo de vista realizaremos un pase de las diapositivas de nuestra presentación. Opciones Descripción</p>
+<p>Reproduce la presentación desde la diaspositiva inicial, es decir, desde el inicio.</p>
+<p>También podemos ir al menú Presentación → Iniciar la presentación o pulsar la</p>
+<p>tecla F5.</p>
+<p>Reproduce la presentación desde la diaspositiva actual, es decir, desde la</p>
+<p>diapositiva en la que nos encontramos en ese momento. También podemos ir al</p>
+<p>menú Presentación → Iniciar desde la diaspotiva actual o pulsar las teclas</p>
+<p>Mayús+F5. Para salir del modo presentación pulsaremos la tecla ESC.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 4: Diapositivas. Operaciones y presentación</p><p>Pràctica 4: Diapositivas. Operaciones y presentación</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 3 Presentación • Sitúate en la primera diapositiva. • Inicia el modo Presentación. • Haz clic con el ratón o pulsa la tecla Intro para ir pasando cada una de las diapositivas.</p>
+<ul>
+<li>Cuando hagas clic en la última diapositiva, saldrás automáticamente del modo</li>
+</ul>
+<p>presentación.</p>
+<h3>4. Ocultar diapositivas</h3>
+<p>La función de ocultar diapositivas se puede utilizar para reducir una presentación por problema de tiempo pero sin que perdamos las diapositivas que hemos creado. Para ocultar las diapositivas seleccionamos la diapositiva a ocultar y después vamos al menú Diapositiva → Ocultar diapositiva o pulsamos el botón derecho del ratón y elegimos la opción Ocultar diapositiva.</p>
+<p>Ejercicio 4</p>
+<p>Ocultar diapositiva • Ve a la diapositiva 3. • Oculta la diapositiva. Ve al menú Diapositiva → Ocultar diapositiva o pulsa el botón derecho del ratón y elige la opción Ocultar diapositiva. • En el panel lateral izquierdo podemos ver que la diapositiva se muestra con barras grises inclinadas, indicando que está oculta.</p>
+<p>• Visualiza la presentación y comprueba que no se muestra la diapositiva ocultada.</p>
+<ul>
+<li>Vuelva a mostrarla y guarda los cambios, con el nombre Friki.odp</li>
+</ul>
+<h3>📄 3-Textos.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Escribir textos en las presentaciones.</p>
+<ul>
+<li>Personalizar los textos con tipos de letra, colores y efectos.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Escribir textos</h3>
+<p>A diferencia del procesador de textos Writer, en Impress no es posible teclear un texto directamente sobre la diapositiva. De este modo, primero hemos de dibujar un cuadro de texto y después escribir nuestro texto dentro de él. Para escribir un texto haremos clic en el icono de la barra de herramientas de Dibujo y dibujaremos un cuadro de texto.</p>
+<p>Si no está visible la barra de herramientas Dibujo, ve al menú Ver → Barras de herramientas → Dibujo.</p>
+<h3>2. Propiedades de carácter</h3>
+<p>Cuando escribimos un texto en Impress, en el panel lateral derecho se muestran las principales propiedades que podemos modificar. Al igual que sucede en Writer, podemos cambiar el tipo de letra, tamaño, color, espaciado entre caracteres, aplicar formato superíndice y subíndice, aplicar negrita, cursiva y subrayado, etc.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Las opciones del panel lateral son: Opciones Descripción Permite cambiar el tipo de letra y tamaño.</p>
+<p>Efectos de letra: negrita, cursiva, subrayado, tachado y</p>
+<p>sombra.</p>
+<p>Color de letra y color de resalte (color de fondo de la letra).</p>
+<p>Permite cambiar el espacio entre caracteres.</p>
+<p>Permite establecer texto en superíndice o subíndice.</p>
+<p>Para tener acceso a todas las propiedades del texto, iremos al menú Formato → Carácter o haremos clic en el icono situado a la derecha del panel lateral.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h3>3. Propiedades de párrafo</h3>
+<p>Al igual que en el apartado anterior, en el panel lateral también se muestran las principales opciones para cambiar las propiedades de párrafo.</p>
+<p>Las opciones del panel lateral son: Opciones Descripción</p>
+<p>Alinear un párrafo es distribuir las líneas que lo componen respecto a los</p>
+<p>márgenes del cuadro del texto. El funcionamiento es como en Writer. Hay 4</p>
+<p>tipos de alineación: • Izquierda. Sitúa al texto lo más cerca del margen izquierdo del cuadro de texto. • Derecha. Sitúa al texto lo más cerca del margen derecho del cuadro de texto. • Centrada. Centra el texto en el cuadro. • Justificada. Acopla el texto al ancho del cuadro de texto</p>
+<p>Permite situar el texto en la parte superior, en el centro o en la parte</p>
+<p>inferior del cuadro de texto.</p>
+<p>Permite poner numeración y viñetas a las líneas de texto. También</p>
+<p>podemos ir al menú Formato → Numeración y viñetas.</p>
+<p>Permite cambiar el espacio entre las líneas del parráfo.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Permite establecer sangrías al párrafo. Una sangría es el desplazamiento</p>
+<p>hacia la derecha de un párrafo. El funcionamiento es como en Writer.</p>
+<p>Para tener acceso a todas las propiedades del párrafo, iremos al menú Formato → Párrafo o haremos clic en el icono situado a la derecha del panel lateral.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 1</p>
+<p>En las prácticas siguientes vamos a trabajar sobre la misma presentación, añadiendo los elementos que se pidan. • Abre Impress. • Crea una nueva presentación vacía. • Guarda la presentación como Friki.odp • Puede utilizarse los efectos y colores que se desee. • En el panel lateral derecho, elige la opción Disposiciones. Haz clic en el tipo Página de título.</p>
+<p>• Selecciona la diapositiva. • Haz clic en el título y escribe el texto “Enciclopedia del Friki”. • Haz clic en el subtítulo y escribe el texto “Producciones El Raro”. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h3>4. Efectos de cuadros de texto</h3>
+<p>Impress permite personalizar cualquier cuadro de texto con colores, degradados, fondos, líneas del borde, etc. La barra de herramientas Formato contiene las principales funciones para personalizar un cuadro de texto de la forma más sencilla posible.</p>
+<p>Opciones Descripción</p>
+<p>Permite cambiar el tipo línea, tamaño, color, etc. También podemos modificar las opciones de línea en el</p>
+<p>panel lateral derecho.</p>
+<p>Permite cambiar el color de fondo. También podemos modificar las opciones de color de fondo</p>
+<p>(área) en el panel lateral derecho. En el campo Relleno</p>
+<p>tenemos las distintas opciones de colores y degradados.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 2</p>
+<p>Vamos a personalizar los textos de la diapositiva. Título • Haz clic en el borde del cuadro de título. • Rellena el fondo con el color que desees. Haz clic en el icono de la barra de herramientas de formato , ve al panel lateral derecho opción Área o con el botón derecho del ratón elige la opción Relleno.</p>
+<p>• Selecciona las letras y ponlas en el color que quieras, efecto negrita.</p>
+<p>Subtítulo • Pon el subtítulo en color diferente del negro. • Aplica espacio entre caracteres muy amplio. Haz clic en el icono del panel lateral . • Haz clic en el borde del cuadro de texto. • Reduce el tamaño vertical.</p>
+<p>Cuadro de texto • Crea un cuadro de texto (icono ) y colócalo en la parte inferior de la diapositiva, debajo del subtítulo.</p>
+<p>• Teclea tu nombre y apellidos. • Personaliza con distintos efectos el cuadro de texto.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 3: Textos</p><p>Pràctica 3: Textos</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Por ejemplo</p>
+<ul>
+<li>Guarda los cambios (Friki.odp).</li>
+</ul>
+<p>IMPORTANTE</p>
+<p>En las prácticas siguientes vamos a trabajar sobre el mismo fichero "friki", rellenándolo con los datos y elementos que se pidan. Cuando terminemos la práctica de "transiciones y animaciones", subiremos el archivo a la plataforma.</p>
+<p>.</p>
+<h3>📄 1-EntornoDeTrabajo.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Conocer el concepto de las presentaciones digitales. • Conocer los elementos que componen las presentaciones digitales. • Conocer el entorno de trabajo de Impress. • Conocer los elementos que componen Impress.</p>
+<ul>
+<li>Guardar una presentación en Impress.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Presentaciones digitales</h3>
+<p>Las presentaciones digitales constituyen un elemento imprescindible y actual, siendo muy utilizadas en todo tipo de ámbitos: académico, profesional, personal, etc. Todos hemos recibido alguna vez un correo con presentaciones graciosas, o hemos asistido a una conferencia en la que el ponente ha expuesto mediante presentaciones, o hemos estado en clase y el profesor ha usado una presentación para ayudar a entender lo que estaba explicando.</p>
+<p>Las presentaciones digitales son archivos multimedia constituidos por páginas especiales denominadas diapositivas, que pueden contener diversa información, como textos, gráficos, fotografías, música y vídeo. Su finalidad es la de ayudar a la exposición de un tema o idea ante un grupo de personas de modo que ésta sea más amena y participativa.</p>
+<h4>1.1. Proyectores de diapositivas antiguos</h4>
+<p>Las presentaciones digitales tienen su origen en las antiguas diapositivas (también llamadas transparencias o filminas), que son fotografías positivas creadas en un soporte transparente por</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>medios foto químicos y miniaturizadas. Un aparato proyector se encargaba de pasar las distintas diapositivas de forma automática o manual, siendo proyectadas sobre un lienzo o pared blanca.</p>
+<h4>1.2. Proyección de presentaciones digitales</h4>
+<p>Las presentaciones están pensadas para ser mostradas ante un público numeroso. A la hora de proyectar una presentación tenemos 2 posibilidades: • Video-proyector. Es un aparato que proyecta la pantalla del ordenador sobre una pared o superficie blanca.</p>
+<p>• Pizarra digital. Además de proyectar la pantalla del ordenador, permite interactuar sobre la pizarra como si tuviéramos una pantalla táctil.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>1.3. Características principales</h4>
+<p>Las presentaciones digitales poseen un conjunto de características que las hacen muy útiles y versátiles, especialmente frente a las presentaciones tradicionales: • Limitan el uso de los apuntes "en vivo", es decir, el método tradicional de apuntes en papel. De esta forma, los apuntes pasan a ser elementos digitales.</p>
+<p>• Proveen de una estructura fácil de seguir, ya que contienen elementos como índices y/o plantillas. • Constituyen un mecanismo que facilita recordar, puesto que el material audiovisual tiene la función de retener aquellos elementos que permiten recordar la información.</p>
+<p>• Facilitan la actualización y ampliación del contenido de forma sencilla y rápida, puesto que son elementos digitales.</p>
+<h3>2. Elementos</h3>
+<p>Las presentaciones digitales se componen de una serie de elementos diferentes, aunque los 3 más importantes son los siguientes</p>
+<h4>2.1. Diapositivas</h4>
+<p>Se refieren a cada una de las páginas que componen una presentación. Su origen viene de las antiguas diapositivas (también llamadas transparencias o filminas), como hemos explicado anteriormente.</p>
+<h4>2.2. Títulos</h4>
+<p>Es un elemento fundamental en toda presentación, ya que identifica el motivo o tema de ésta. El título ha de tener un conjunto de características fundamentales, entre las que se encuentran</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Ha de ser identificativo • No tiene que ser muy largo. Si cuesta leerlo, se pierde el el impacto inicial y disminuye el interés • No ha de llevar a equívocos, es decir, debe estar muy claro y definido • Ha de estar resaltado frente a los demás elementos (mayor tamaño de letra) • Es recomendable que esté en negrita • Se tiene que mostrar en la primera diapositiva</p>
+<h4>2.3. Fondo</h4>
+<p>También llamado en inglés background, constituye un elemento muy importante, puesto que se repetirá a lo largo de toda la presentación. Al igual que el título, tiene un conjunto de normas a seguir: • Usar colores suaves y evitar los colores muy llamativos • Usar fondos claros con letra oscura o viceversa (se recomienda el primero) • Es recomendable que el fondo incluya elementos gráficos que ayuden a situar el contexto de la presentación • Evitar el uso de texturas, ya que dificultan la visualización de las diapositivas • Usar preferentemente colores planos y evitar degradados chillones</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 1</p>
+<p>Temáticas y titulares Ahora vamos a practicar poniendo título a presentaciones con las temáticas indicadas. • Descarga el cuestionario de preguntas, 01presentaciones.odt • Renombra el archivo descargado como "Presentaciones_Tu_Nombre". • Contesta a las cuestiones que se plantean.</p>
+<p>• Guarda los cambios, en el mismo documento. • Cierra el documento de texto.</p>
+<h3>3. El creador de presentaciones Impress</h3>
+<p>Impress es una herramienta de vanguardia para crear presentaciones multimedia efectivas que incluyan elementos como imágenes prediseñadas en 2D y 3D, efectos especiales y estilos de transición, animaciones y herramientas de dibujo de alto impacto. Forma parte de la suite LibreOffice y permite guardar las presentaciones en formato OpenDocument, el nuevo estándar internacional para documentos.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Otro aspecto importante de compatibilidad es que puede abrir archivos de Microsoft PowerPoint y guardar el trabajo en formato nativo de PowerPoint. De este modo, aquellas personas que utilizan el software de Microsoft pueden seguir trabajando con él. Entre sus funcionalidades se encuentran</p>
+<p>• Diferentes opciones de visualización (vistas) • Soporte de múltiples monitores • Amplia gama de herramientas de dibujo • Multitud de animaciones y efectos</p>
+<ul>
+<li>Variedad de formatos de almacenamiento</li>
+</ul>
+<p>Ejercicio 2</p>
+<p>Crear acceso directo • Ve al menú de Lliurex (parte inferior izquierda de la pantalla) Aplicaciones → Oficina → LibreOffice, presentaciones y, manteniendo presionado el botón izquierdo del ratón, arrastra la opción de menú al escritorio. Acabamos de crear un acceso directo en el escritorio de Lliurex.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Abrir el programa • Abre el programa Impress. Tenemos 2 métodos: o Haz doble clic sobre el acceso directo con el botón izquierdo del ratón o Ve al menú Aplicaciones → Oficina → LibreOffice, presentaciones.</p>
+<ul>
+<li>Por defecto, se crea una presentación vacía llamado Sin título 1.</li>
+</ul>
+<h3>4. Pantalla principal</h3>
+<p>Una vez dentro del programa, nos aparecerá una ventana con el aspecto de la figura siguiente (puede ser que lo que vemos en el ordenador no coincida exactamente con la imagen adjunta, pero eso es debido a que el aspecto del programa Impress puede ser diferente para cada usuario).</p>
+<h4>4.1. Título</h4>
+<p>Aparecerá el nombre del archivo del documento. Si todavía no lo hemos guardado, aparecerá la expresión Sin título 1 (o cualquier otro número).</p>
+<h4>4.2. Menú</h4>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>En cada una de las opciones del menú se despliegan otros submenús que nos mostrarán todas las herramientas y utilidades de las que podemos hacer uso.</p>
+<h4>4.3. Barras de herramientas</h4>
+<p>Están formadas por botones que nos permiten un acceso rápido a las mismas herramientas que se encuentran en el menú. Las barras de herramientas se pueden personalizar, de forma que sólo estén a la vista los botones que se usen frecuentemente. Las barras de herramientas pueden mostrarse u ocultarse según se necesite. Para mostrar u ocultar una barra de herramientas tendremos que ir al menú Ver → Barras de herramientas y elegir las barras que deseemos ver del menú emergente.</p>
+<p>Entre las principales barras de herramientas encontramos dos que se encuentran seleccionadas por defecto: • Estándar: reúne los botones más utilizados para mayor comodidad. • Formato: se incluyen los botones que permiten realizar las operaciones más frecuentes relativas al formato del texto y de los objetos que se incluyen en las diapositivas.</p>
+<p>• Dibujo: es muy similar a la del procesador de textos Writer, si bien tiene más funcionalidades. Para mostrarla, iremos al menú Ver → Barras de herramientas → Dibujo.</p>
+<h4>4.4. Barra de estado</h4>
+<p>En la barra de estado se muestra información complementaria, como el número de página en la que nos encontramos y cuántas páginas tiene nuestra presentación, además del porcentaje de zoom de la pantalla.</p>
+<h4>4.5. Barras de desplazamiento</h4>
+<p>Las barras de desplazamiento nos permiten movernos arriba y abajo, a izquierda y derecha, cuando nuestro documento es más grande que la pantalla. En la barra vertical existen dos botones que nos permiten avanzar de página en página.</p>
+<h4>4.6. Zona central. Documento de texto</h4>
+<p>La zona blanca central es la diapositiva de la presentación y en ella insertaremos cuadros de texto y otros elementos multimedia como imágenes, figuras, etc.</p>
+<h4>4.7. Panel de diapositivas</h4>
+<p>Contiene imágenes en miniatura de las diapositivas de la presentación, en el orden en el que se mostrarán (salvo que cambie el orden). En este panel se pueden realizar operaciones con una o más diapositivas</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Agregar nuevas diapositivas en cualquier punto de la presentación posterior a la primera diapositiva. • Marcar una diapositiva como oculta, de modo que no se muestre durante la presentación. • Borrar una diapositiva que ya no se necesite. • Cambiar el nombre de una diapositiva.</p>
+<p>• Copiar o mover el contenido de una diapositiva a otra (copiar y pegar, o cortar y pegar, respectivamente). • Cambiar la transición de la diapositiva siguiente a la diapositiva seleccionada, o tras cada diapositiva de un grupo de diapositivas. • Cambiar la secuencia de las diapositivas en la presentación.</p>
+<p>• Cambiar el diseño de diapositiva. • Cambiar simultáneamente el diseño de un grupo de diapositivas.</p>
+<h4>4.8. Panel de tareas</h4>
+<p>El panel contiene cinco secciones</p>
+<h4>4.8.1. Propiedades. Diseños</h4>
+<p>Se muestran 12 diseños predefinidos para las diapositivas. Se puede elegir uno y usarlo tal como está, o modificarlo según las necesidades. En la actualidad no es posible crear diseños personalizados.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>4.8.2. Páginas maestras</h4>
+<p>Aquí podemos definir el estilo de página de nuestra presentación. Impress contiene distintas Páginas maestras predefinidas (patrones de diapositiva). Una de ellas, el tipo Predeterminada, está en blanco y el resto tienen un fondo.</p>
+<h4>4.8.3. Animación personalizada</h4>
+<p>Muestra distintas animaciones para los elementos seleccionados de una diapositiva. Se puede agregar una animación a la diapositiva, pero también puede cambiarse o quitarse.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>4.8.4. Transición de diapositivas</h4>
+<p>Se dispone de multitud de transiciones diferentes, incluyendo Sin transición. Se puede seleccionar la velocidad de transición (lenta, media, rápida) y también elegir entre una transición automática o manual, o cuánto tiempo deseamos que se muestre la diapositiva.</p>
+<h3>5. Ayuda de Impress</h3>
+<p>El programa Impress dispone de un amplio soporte de ayuda para resolver cualquier duda o problema dentro del menú Ayuda.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 3</p>
+<p>Usar ayuda • Ve al menú Ayuda → Ayuda de LibreOffice F1. • Busca el término Ayuda.</p>
+<ul>
+<li>Haz clic con el ratón a la izquierda en la palabra “Ayuda”.</li>
+<li>Cierra la ayuda del programa.</li>
+</ul>
+<h3>6. Crear una presentación nueva</h3>
+<p>Al abrir el programa Impress, se crea una presentación nueva por defecto.</p>
+<p>Ejercicio 4</p>
+<p>Crear carpeta de prácticas • Ve a tu carpeta personal de documentos. Crea una nueva carpeta llamada “IMPRESS”. Crear presentación nueva • Abre el programa LibreOffice Impress. • Haz clic sobre el título de la diapositiva (el que pone "Pulse para añadir un título"). • Escribe el siguiente texto</p>
+<p>Mi primera diapositiva • Haz clic sobre el texto principal de la diapositiva (el que pone "Pulse para añadir texto"). • Escribe tu nombre y apellidos: Nombre y Apellidos • El resultado puede ser como el que se muestra a continuación</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h3>7. Abrir una presentación</h3>
+<p>Existen 2 maneras diferentes para abrir una presentación de Impress almacenada en el disco duro o en cualquier otro dispositivo.</p>
+<ul>
+<li>La primera es abrir el programa Impress. Una vez abierto el programa vamos al menú Archivo →</li>
+</ul>
+<p>Abrir. Se nos desplegará una ventana parecida a la que usamos para guardar la presentación. Buscamos nuestra carpeta, seleccionamos nuestro archivo y pulsamos el botón Abrir. También podemos utilizar el icono de la barra de herramientas.</p>
+<ul>
+<li>La segunda forma consiste en buscar primero nuestra presentación desde el Explorador de</li>
+</ul>
+<p>Lliurex. Una vez localizado el archivo, haremos doble clic sobre él con el ratón, con lo que se abrirá nuestra presentación dentro del programa Impress.</p>
+<h3>8. Formas de guardar una presentación</h3>
+<p>Una vez que hemos terminado una presentación (o si no nos ha dado tiempo y pensamos continuar más adelante) debemos guardarla. Para guardar una presentación procederemos de idéntico modo al que hacemos en Writer o Calc.</p>
+<p>En el menú Archivo tenemos 2 opciones</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>8.1. Guardar</h4>
+<p>Permite guardar una presentación en la carpeta que se desee y con el nombre que se desee. La primera vez que se guarda una presentación nos preguntará por el nombre y directorio destino. El resto de veces, el ordenador no pregunta nada y guarda la presentación en el mismo sitio y con el mismo nombre, sustituyendo la vieja por la nueva.</p>
+<h4>8.2. Guardar como</h4>
+<p>Esta opción sirve para replicar presentaciones. Por ejemplo, si queremos modificar un archivo y guardarlo con otro nombre.</p>
+<p>Ejercicio 5</p>
+<p>Modificar texto • Haz clic en el cuadro de texto que contiene tu nombre y apellidos. • Añade el curso y grupo en el que estudias: Curso y grupo • El resultado final puede ser como el siguiente</p>
+<p>Guardar presentación • Ve al menú Archivo → Guardar o haz clic en el botón Guardar.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 1: Entorno trabajo Impress</p><p>Pràctica 1: Entorno trabajo Impress</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Pon un nombre significativo a la presentación. En este caso la llamaremos 01-Inicial.odp • Nos aseguramos de que en la opción de Tipo pone Presentación ODF (.odp). Por defecto es así. • Haz clic en la opción Buscar en otras carpetas. Busca tu unidad personal. Selecciona la carpeta "IMPRESS".</p>
+<p>• Pulsa el botón Guardar. A partir de ese momento podemos cerrar sin peligro tanto la presentación como el programa. • Por último, cierra el fichero con el menú Archivo → Cerrar.</p>
+<h3>📄 14-PresentacionConcesionario.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos</p>
+<ul>
+<li>Repasar todos los conceptos vistos anteriormente.</li>
+</ul>
+<p>Ejercicio</p>
+<h3>1. Crear presentación</h3>
+<p>Vamos a crear una presentación de un concesionario de vehículos usados, empleando todas las utilidades vistas en las prácticas anteriores. • Crea una nueva presentación vacía. • Guarda la presentación como 14-Concesionario.odp • Puede utilizarse los efectos y colores que se desee.</p>
+<h3>2. Diapositivas</h3>
+<h4>2.1. Diapositiva 1. Principal</h4>
+<p>• Aplica una plantilla predefinida. • Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras. • Inserta un rótulo artístico con el texto "Fórmula 1". • Inserta la imagen prediseñada que quieras. • Inserta un cuadro de texto con tu nombre y apellidos.</p>
+<p>• Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Guarda los cambios.</p>
+<h4>2.2. Diapositiva 2. Vehículos usados</h4>
+<p>Insertar vídeo • Descarga de la carpeta recursos, el vídeo del coche estacionando 14Estacionar.wav. • Inserta el vídeo descargado. Sitúalo en la parte inferior de la diapositiva. Textos • Aplica una plantilla predefinida. • En el título, escribe el texto "¿Necesita un vehículo usado?".</p>
+<p>• Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Guarda los cambios.</p>
+<h4>2.3. Diapositiva 3. Oferta del mes</h4>
+<p>Textos e imagen • En el título, escribe el texto "¡Oferta del mes!". • Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees. • Inserta un rótulo artístico con el texto "300 €". Personaliza el rótulo con los colores y efectos que desees. Aplica un efecto de giro.</p>
+<p>• Descarga de la carpeta recursos, la imagen del Seat 600, 141Imagen-seat • Inserta la imagen descargada. Pon borde con línea.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Enlaces a Internet . Vamos a crear vínculos a Internet en la diapositiva.</p>
+<p>• Inserta un hiperenlace con las siguientes características: o Destino: http://es.wikipedia.org/wiki/SEAT_600 o Marco: _blank. De este modo, cuando hagamos clic en el enlace, éste se abrirá en una nueva pestaña del explorador de Internet. o Formulario: texto. o Texto: Wikipedia Seat 600.</p>
+<p>o Nombre: Enlace600wiki. • Inserta otro hiperenlace debajo del anterior: o Destino: http://www.seat600.info/ o Marco: _blank. o Formulario: texto. o Texto: Club 600. o Nombre: Enlace600club. • Inserta una imagen prediseñada con el símbolo de información (o la que quieras) y sitúala a la izquierda de los hiperenlaces.</p>
+<p>• Por ejemplo</p>
+<p>• Guarda los cambios.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>2.4. Diapositiva 4. Deportivos de lujo</h4>
+<p>Textos e imagen • Crea un cuadro de texto con efecto 3D. Escribe el texto "Deportivos de lujo". • Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees.</p>
+<p>• Descarga de la carpeta recursos, la imagen del Ford Mustang 142Imagen-ford • Inserta la imagen descargada. Pon borde con línea. Aplica un efecto de giro. Enlaces a Internet • Inserta un hiperenlace con las siguientes características: o Destino: http://es.wikipedia.org/wiki/Ford_Mustang o Marco: _blank.</p>
+<p>o Formulario: texto. o Texto: Wikipedia Ford Mustang. o Nombre: EnlaceMustangwiki. • Inserta una imagen prediseñada con el símbolo de información (o la que quieras) y sitúala a la izquierda del hiperenlace. • Por ejemplo</p>
+<p>• Guarda los cambios.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>2.5. Diapositiva 5. Coches clásicos</h4>
+<p>Textos e imagen • Aplica una plantilla predefinida. • En el título, escribe el texto "Coches clásicos". • Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees.</p>
+<p>• Descarga de la carpeta recursos, la imagen del Ford T, 143Imagen-fordT • Inserta la imagen descargada. Pon borde con línea. Enlaces a Internet • Inserta un hiperenlace con las siguientes características: o Destino: http://es.wikipedia.org/wiki/Ford_T o Marco: _blank.</p>
+<p>o Formulario: texto. o Texto: Wikipedia Ford T. o Nombre: EnlaceFordTwiki. • Inserta una imagen prediseñada con el símbolo de información (o la que quieras) y sitúala a la izquierda del hiperenlace. • Por ejemplo</p>
+<p>• Guarda los cambios.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>2.6. Diapositiva 6. Vehículos de ocasión</h4>
+<p>Título y fondo de página • Descarga de la carpeta recursos, la imagen del museo de coches 144Imagen • Establece la imagen descargada como fondo de página. • En el título, escribe el texto "Vehículos de ocasión". Moto. Imagen y textos • Crea los cuadros de texto correspondientes.</p>
+<p>• Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees. • Descarga de la carpeta recursos, la imagen del sidecar 145Imagen • Inserta la imagen descargada. Pon borde con línea. Coches deportivos. Imagen y textos • Crea los cuadros de texto correspondientes.</p>
+<p>• Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees. • Descarga de la carpeta recursos, la imagen de los coches deportivos 146Imagen • Inserta la imagen descargada. Pon borde con línea.</p>
+<p>• Crea una tabla e introduce los textos correspondientes. • Personaliza la tabla con los efectos y colores que desees. Autoformas • Dibuja una autoforma y colócala como una barra vertical para separar el sidecar de los coches deportivos. Interacciones • Descarga de la carpeta recursos, la imagen del símbolo de la casa 147Imagen • Inserta la imagen descargada. Sitúala en la parte superior derecha de la diapositiva.</p>
+<p>• Haz clic en la imagen y establece la acción Ir a la primera diapositiva.</p>
+<p>• Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Guarda los cambios.</p>
+<h4>2.7. Transiciones de diapositivas</h4>
+<p>• Aplica efectos de transición sobre todas y cada una de las diapositivas de la presentación.</p>
+<p>• Elige los efectos que desees. • Guarda los cambios. Ver la presentación • Visualiza la presentación y comprueba que se reproducen las transiciones añadidas a las diapositivas. Menú Presentación → Iniciar la presentación, icono o pulsa la tecla F5. • Pulsa la tecla ESC para salir del modo de presentación.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 14: Preentación CONCESIONARIO</p><p>Pràctica 14: Preentación CONCESIONARIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>2.8. Animaciones personalizadas</h4>
+<p>• Aplica efectos de animación sobre todos los elementos de la primera diapositiva: títulos, subtítulos, rótulos artísticos, imágenes, etc.</p>
+<p>• Elige los efectos que desees, pero que sean diferentes para cada elemento. • Ordena, según tu criterio, los diferentes efectos de animación creados anteriormente. • Guarda los cambios. Ver la presentación • Ve a la primera diapositiva. • Visualiza la presentación desde la diapositiva actual y comprueba que se reproducen las animaciones añadidas a los objetos. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<p>• Pulsa la tecla ESC para salir del modo de presentación. Guardar la presentación • Guarda los cambios presentación 14-Concesionario.odp. • Cierra la presentación.</p>
+<h3>📄 13-PresentacionGimnasio.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 13: Presentación GIMNASIO</p><p>Pràctica 13: Presentación GIMNASIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos</p>
+<ul>
+<li>Repasar todos los conceptos vistos anteriormente.</li>
+</ul>
+<p>Contenidos</p>
+<p>Enunciado Vamos a crear una presentación de un gimnasio en una diapositiva, empleando las utilidades explicadas en las prácticas anteriores.</p>
+<p>El ejemplo ocupa una sola diapositiva, pero podemos utilizar más de una si no nos caben todos los elementos.</p>
+<p>Ejercicio</p>
+<p>Crear presentación • Crea una nueva presentación vacía. • Guarda la presentación como 13-Gimnasio.odp • Puede utilizarse los efectos y colores que se desee. Formato diapositiva • En el panel lateral derecho, elige la opción Disposiciones. Haz clic en el tipo Diapositiva vacía.</p>
+<p>• Aplica una plantilla a la diapositiva o el degradado que desees.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 13: Presentación GIMNASIO</p><p>Pràctica 13: Presentación GIMNASIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Insertar objetos • Inserta un rótulo artístico con el texto "Centro deportivo No te canses". • Personaliza el rótulo artístico con los colores y efectos que quieras. • Crea un cuadro de texto con efecto 3D. Introduce el texto “Abierto 4 días al mes”. • Personaliza el cuadro de texto con los colores y efectos que quieras.</p>
+<p>Insertar imagen • Descarga de la carpeta recursos la imagen de la atleta 13Imagen • Inserta la imagen en la diapositiva en la parte lateral derecha. • Dibuja un círculo alrededor de la imagen. Pon relleno “ninguno” para que se vea la imagen. Crear diagrama • Crea un diagrama con las distintas actividades del gimnasio.</p>
+<p>• Une las distintas formas mediante conectores. • Personaliza las figuras con los colores y efectos que quieras. Insertar objetos • Crea un cuadro de texto para el precio. Escribe el texto que se muestra debajo. • Crear un cuadro de texto con el lema del gimnasio. • Personaliza los cuadros de texto con los colores y efectos que quieras.</p>
+<p>• Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 13: Presentación GIMNASIO</p><p>Pràctica 13: Presentación GIMNASIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Aplicar efectos de animación • En el panel lateral derecho, haz clic en el icono Animación personalizada . • Aplica efectos de animación sobre el rótulo artístico, el cuadro 3D superior (texto "Abierto 4 días al mes"), la imagen de la atleta y los cuadros de texto de "precio popular" y "nuestro lema".</p>
+<ul>
+<li>Elige los efectos que desees.</li>
+</ul>
+<p>Sugerencias</p>
+<ul>
+<li>Prueba efectos de rutas de movimiento, de énfasis, de salida y de entrada.</li>
+</ul>
+<p>Ordenar efectos de animación • Ordena, según tu criterio, los diferentes efectos de animación creados anteriormente.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 13: Presentación GIMNASIO</p><p>Pràctica 13: Presentación GIMNASIO</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación y comprueba que se reproducen las animaciones añadidas a los objetos. Menú Presentación → Iniciar la presentación, icono o pulsa la tecla F5. • Pulsa la tecla ESC para salir del modo de presentación. • Guarda los cambios en la presentación • Cierra la presentación.</p>
+<h3>📄 12-MusicaFondo-Bazar.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Establecer música de fondo para toda la presentación.</p>
+<ul>
+<li>Repasar todos los conceptos vistos anteriormente.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Establecer sonido de fondo</h3>
+<p>Tal y como vimos en prácticas anteriores , Impress permite añadir sonidos y efectos diversos mediante 3 formas diferentes: insertar sonido en la diapositiva, insertarlo en la transición entre diapositivas y asociarlo a un objeto. Sin embargo, en ocasiones necesitaremos que el sonido se reproduzca durante toda la presentación como música de fondo. Para ello, insertaremos el sonido mediante la pestaña Transición de diapositivas.</p>
+<p>Pasos a seguir: • Ir a la primera diapositiva. • Ir al menú Diapositiva → Transición entre diapositivas o hacer clic en el icono Transición de diapositiva del panel lateral. • Elegir una transición para la diapositiva. • En el apartado Modificar transición, campo Sonido, elegir el archivo de sonido que se desea.</p>
+<p>• Marcar la casilla de verificación Repetir hasta el próximo sonido. De este modo, este sonido se repetirá hasta que en otra diapositiva fijemos la reproducción de otro sonido. El funcionamiento es sencillo: cuando entramos en modo de presentación, se activa el sonido que parará de sonar cuando llegue a la diapositiva que tenga desactivado el sonido. Por defecto, al activar el sonido de esta forma, este sonido no cesa hasta llegar a otra diapositiva que tenga el sonido desactivado. Para desactivar el sonido procedemos de la misma manera, pero señalando la opción “Sin sonido” en la pestaña.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio</p>
+<h3>2. Crear presentación</h3>
+<p>Vamos a crear una presentación de un bazar de artículos variados, empleando todas las utilidades vistas en las prácticas anteriores. • Crea una nueva presentación vacía. • Guarda la presentación como 12-Bazar.odp • Puede utilizarse los efectos y colores que se desee. •</p>
+<h3>3. Diapositivas</h3>
+<h4>3.1. Diapositiva 1. Principal</h4>
+<p>Título y fondo de página • Descarga de la carpeta recursos, la imagen de las fallas 121Imagen-fallas • Establece la imagen descargada como fondo de página. • Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras.</p>
+<p>• Inserta un rótulo artístico con el texto "Bazar todo a 100 €". • Inserta un cuadro de texto con tu nombre y apellidos. Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>3.2. Diapositiva 2. Catálogo</h4>
+<p>Fondo de página • Aplica un fondo con textura. Textos • Crea los cuadros de texto correspondientes. Aplica efecto 3D al de catálogo. • Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees.</p>
+<p>• Inserta 3 autoformas para simular botones. • Por ejemplo</p>
+<p>• Guarda los cambios.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+
+<p>Textos e imagen • Aplica una plantilla predefinida en la diapositiva. • En el título, escribe el texto "¡Oferta del mes!". • Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras. • Aplica formato de numeración y viñetas. Elige el estilo que desees.</p>
+<p>• Inserta un rótulo artístico con el texto "0,99 €". Personaliza el rótulo con los colores y efectos que desees. Aplica un efecto de giro. • Descarga de la carpeta recursos, la imagen de la bombilla 122Imagen-bombilla • Inserta la imagen descargada. Pon borde con línea.</p>
+<p>Enlaces a Internet</p>
+<p>• Selecciona el texto "tecnología LED". • Inserta un hiperenlace que se abra en una nueva página con destino https://es.wikipedia.org/wiki/Led. Interacciones</p>
+<p>• Inserta una autoforma de flecha orientada a la derecha. Sitúala en la parte superior derecha de la diapositiva. • Haz clic en la imagen y establece la acción Ir a la página siguiente. • Inserta una autoforma de flecha orientada a la izquierda. Sitúala a la izquierda de la flecha anterior.</p>
+<p>• Haz clic en la imagen y establece la acción Ir a página anterior. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Guarda los cambios.</p>
+<h4>2.4. Diapositiva 4. Oferta 3x2</h4>
+<p>Textos e imagen • Aplica una plantilla predefinida en la diapositiva. • En el título, escribe el texto "Oferta 3x2 = 6". • Crea un cuadro de texto con efecto 3D. Escribe el texto "Decoración del hogar". • Crea los cuadros de texto correspondientes. • Personaliza los cuadros de texto con los colores y efectos que quieras.</p>
+<p>• Aplica formato de numeración y viñetas. Elige el estilo que desees. • Descarga de la carpeta recursos, la imagen del jarrón 123Imagen-jarron • Inserta la imagen descargada. Sitúala a la derecha de la diapositiva. Enlaces a Internet • Selecciona la imagen del jarrón.</p>
+<p>• Inserta un hiperenlace que se abra en una nueva página con destino https://es.wikipedia.org/wiki/Jarr%C3%B3n.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Interacciones • Inserta una autoforma de flecha orientada a la derecha. Sitúala en la parte superior derecha de la diapositiva. • Haz clic en la imagen y establece la acción Ir a la página siguiente. • Inserta una autoforma de flecha orientada a la izquierda. Sitúala a la izquierda de la flecha anterior.</p>
+<p>• Haz clic en la imagen y establece la acción Ir a página anterior. • Por ejemplo</p>
+<p>• Guarda los cambios.</p>
+<h4>2.5. Diapositiva 5. Ofertas exclusivas</h4>
+<p>Título y fondo de página • En el título, escribe el texto "Otras ofertas exclusivas". • Aplica una plantilla predefinida para la diapositiva y/o establece un color de fondo para la página.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Tabla de artículos • Crea una tabla e introduce los textos correspondientes. • Personaliza la tabla con los efectos y colores que desees. • Descarga de la carpeta recursos, la imagen de la varita mágica 124Imagen. • Descarga de la carpeta recursos, la imagen de la pica 125Imagen.</p>
+<p>• Descarga de la carpeta recursos, la imagen del reloj de arena 126Imagen. • Descarga de la carpeta recursos, la imagen de la cámara fotográfica 127Imagen. • Inserta las imágenes en la tabla según se muestra más abajo. Autoformas • Crea un cuadro de texto y sitúalo a la derecha de la tabla. Escribe el texto "REGALOS".</p>
+<p>Colócalo las letras en vertical (escriba una, pulsa la tecla Intro y así sucesivamente). • Personaliza el cuadro de texto con los colores y efectos que quieras. • Inserta la autoforma de caja de regalos y sitúala debajo del cuadro de texto. Enlaces a Internet • Selecciona el texto "Baraja española".</p>
+<p>• Inserta un hiperenlace que se abra en una nueva página con destino https://es.wikipedia.org/wiki/Baraja_espa%C3%B1ola. Interacciones • Descarga de la carpeta recursos, la imagen del símbolo de la casa 128Imagen • Inserta la imagen descargada. Sitúala en la parte superior derecha de la diapositiva.</p>
+<p>• Haz clic en la imagen y establece la acción Ir a la primera diapositiva. • Inserta una autoforma de flecha orientada a la izquierda. Sitúala a la izquierda del icono de la casa. • Haz clic en la imagen y establece la acción Ir a página anterior. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Guarda los cambios.</p>
+<h4>2.6. Vincular diapositivas</h4>
+<p>Ahora vamos a enlazar los botones de la página del catálogo con las diapositivas correspondientes. • Ve a la segunda diapositiva. • Haz clic en el botón "Oferta del mes" y establece la acción Ir a página u objeto diapositiva 3. • Haz clic en el botón "Oferta 3x2" y establece la acción Ir a página u objeto diapositiva 4.</p>
+<p>• Haz clic en el botón "Otras ofertas" y establece la acción Ir a página u objeto diapositiva 5.</p>
+<h4>2.7. Insertar sonido de fondo</h4>
+<p>Vamos a introducir música de fondo para nuestra presentación. • Descarga de la carpeta recursos, la canción 12sarabande.mp3. • Ve a la primera diapositiva. • Ve al menú Diapositiva → Transición entre diapositivas o haz clic en el icono Transición de diapositiva del panel lateral.</p>
+<p>• Elige una transición para la diapositiva.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 12: Música de fondo</p><p>Pràctica 12: Música de fondo</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• En el apartado Modificar transición, campo Sonido, elige el archivo de sonido descargado anteriormente. • Marca la casilla de verificación Repetir hasta el próximo sonido. • Guarda los cambios. Ver la presentación • Visualiza la presentación y comprueba que la música suena durante toda la presentación.</p>
+<p>Menú Presentación → Iniciar la presentación, icono o pulsa la tecla F5. • Pulsa la tecla ESC para salir del modo de presentación.</p>
+<h4>2.8. Transiciones de diapositivas</h4>
+<p>• Aplica efectos de transición sobre todas y cada una de las diapositivas de la presentación.</p>
+<p>• Elige los efectos que desees. • Guarda los cambios. Ver la presentación • Visualiza la presentación y comprueba que se reproducen las transiciones añadidas a las diapositivas. Menú Presentación → Iniciar la presentación, icono o pulsa la tecla F5. • Pulsa la tecla ESC para salir del modo de presentación.</p>
+<h4>2.9. Animaciones personalizadas</h4>
+<p>• Aplica efectos de animación sobre todos los elementos de la primera diapositiva: títulos, subtítulos, rótulos artísticos, imágenes, etc.</p>
+<p>• Elige los efectos que desees, pero que sean diferentes para cada elemento. • Ordena, según tu criterio, los diferentes efectos de animación creados anteriormente. • Guarda los cambios. Ver la presentación • Ve a la primera diapositiva. • Visualiza la presentación desde la diapositiva actual y comprueba que se reproducen las animaciones añadidas a los objetos. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<p>• Pulsa la tecla ESC para salir del modo de presentación. Guardar la presentación • Guarda los cambios. • Cierra la presentación.</p>
+<h3>📄 11-Interactividad.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Conocer qué son y cómo utilizar las interacciones.</p>
+<ul>
+<li>Conocer la forma de insertar interacciones en los elementos: salto de diapositivas y sonidos.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Asignar acciones a los elementos</h3>
+<p>Los elementos incluidos en las diapositivas suelen ser estáticos, a excepción de aquellos que se pueden reproducir (vídeos, sonidos, etc.). Impress nos ofrece la posibilidad de asignar acciones a los elementos para convertirlos en interactivos y para que al pulsar con el ratón sobre ellos se realice una determinada acción de entre las múltiples que ofrece.</p>
+<p>Para asignar una interacción a un elemento seguiremos los siguientes pasos: • Seleccionar el elemento. • Ir al menú Formato → Interacción. • Se mostrará una ventana en la que elegiremos la interacción a aplicar.</p>
+<p>• Por último, pulsaremos Aceptar.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Una vez insertada la acción no se mostrará ningún cambio a nivel visual, ya que únicamente se podrá observar la ejecución de la acción cuando se produzca la visualización de la presentación.</p>
+<h3>2. Tipos de acciones</h3>
+<p>Impress dispone de distintos tipos de acciones.</p>
+<h4>2.1. Desplazamiento interno</h4>
+<p>Estas acciones nos permiten desplazarnos a cualquier lugar de nuestra presentación actual, tanto a una diapositiva como un elemento en concreto. • Ir a página anterior: permite situarnos en la diapositiva anterior a la actual. • Ir a la página siguiente: permite situarnos en la diapositiva siguiente a la actual.</p>
+<p>• Ir a la primera diapositiva: permite situarnos en la primera diapositiva de la presentación. • Ir a la última página: permite situarnos en la última diapositiva de la presentación. • Ir a página u objeto: permite seleccionar, de entre las diapositivas de la presentación, el elemento al que se dirigirá.</p>
+<h4>2.2. Desplazamiento externo</h4>
+<p>Estas acciones nos permiten desplazarnos a cualquier documento u objeto fuera de nuestra presentación actual, es decir, externo a la misma.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Ir al documento: permite el acceso a un determinado documento que seleccionaremos de entre los disponibles.</p>
+<h4>2.3. Reproducción de sonido</h4>
+<p>Otra posibilidad consiste en asociar un sonido a un objeto, bien sea una imagen o un elemento de texto. En este caso, el sonido se reproduce al pinchar con el ratón sobre dicho elemento. Esta asociación de sonidos a objetos no permite controlarlos ni en cuanto a volumen ni en cuanto a duración o repetición de los sonidos. Una vez se visualice la diapositiva a pantalla completa, al pasar el ratón por encima, se mostrará una mano que indica que al pulsar se reproducirá el sonido seleccionado.</p>
+<p>• Reproducir audio: permite reproducir un fichero de audio que seleccionaremos de entre los disponibles.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 1</p>
+<p>Abrir y guardar presentación • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio Ir a la diapositiva inicial • Ve a la última diapositiva de "Multimedia Friki". • Descarga de la carpeta recursos la imagen de la casa, 111Imagen-casa • Inserta la imagen descargada. Coloca la imagen en la parte inferior derecha de la diapositiva.</p>
+<p>• Haz clic en la casa. • Ve al menú Formato → Interacción. • Elige la acción Ir a la primera diapositiva. Haz clic en Aceptar. • Guarda los cambios. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación desde la diapositiva actual y comprueba que al hacer clic sobre el icono de la casa, saltamos directamente a la primera diapositiva. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<p>• Pulsa la tecla ESC para salir del modo de presentación. Ir a la diapositiva anterior • Ve a la última diapositiva de "Multimedia Friki". • Descarga de la carpeta recursos la imagen de la flecha 112Imagen-flecha • Inserta la imagen descargada. Coloca la imagen a la izquierda de la casa.</p>
+<p>• Haz clic en el icono de la flecha. • Ve al menú Formato → Interacción. • Elige la acción Ir a página anterior. Haz clic en Aceptar. • Guarda los cambios. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación desde la diapositiva actual y comprueba que al hacer clic sobre el icono de flecha, saltamos directamente a la diapositiva anterior. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<p>• Pulsa la tecla ESC para salir del modo de presentación. Reproducir sonido Vamos a insertar un sonido asociado a una imagen que representa un altavoz. • Ve a la última diapositiva de "Multimedia Friki". • Descarga de la carpeta recursos el sonido del gong 11Gongo.wav • Descarga de la carpeta recursos la imagen del icono del altavoz 113Imagen-altavoz • Inserta la imagen descargada. Coloca la imagen a la izquierda de la flecha.</p>
+<p>• Haz clic en el icono del altavoz. • Ve al menú Formato → Interacción. • Elige la acción Reproducir sonido. • Selecciona el archivo de sonido del gong descargado anteriormente. • Haz clic en Aceptar. • Guarda los cambios. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación desde la diapositiva actual y comprueba que al hacer clic sobre el icono del altavoz, se reproduce el sonido asociado. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<ul>
+<li>Pulsa la tecla ESC para salir del modo de presentación.</li>
+</ul>
+<h3>3. Inserción de hipervínculos</h3>
+<p>Los hiperenlaces constituyen otros elementos interactivos que pueden utilizarse en las presentaciones, los cuales tienen una función idéntica a la de los enlaces o vínculos de las páginas web. Los hiperenlaces permiten, de este modo, introducir un elemento nuevo, cuya función es la de conectar con otro elemento, ya sea una página web, una cuenta de correo, un objeto o diapositiva en nuestra presentación o fuera de ella o, incluso, un documento que se cree cuando se presione el enlace. Es decir, permite al orador un mayor grado de interactividad añadido al de las transiciones y animaciones.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>La inserción de un hipervínculo es sencilla y se puede realizar siguiendo los pasos que se indican a continuación: • Ir al menú Insertar → Hiperenlace o hacer clic en el icono de la barra de herramientas . • Se mostrará una ventana con diferentes opciones. Seleccionaremos el tipo de hiperenlace y rellenaremos los parámetros de éste.</p>
+<p>• Por último, pulsar Aplicar. • Se mostrará un enlace que permitirá ir a la página o elemento indicado.</p>
+<h3>4. Tipos de hipervínculos</h3>
+<p>Como hemos podido observar, en la parte izquierda de la ventana se muestra un listado de los diferentes hipervínculos que podemos configurar</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>4.1. Internet</h4>
+<p>Permite insertar un enlace a una página/recurso web o recurso FTP. Para ello, ofrece un conjunto de elementos como son</p>
+<p>• Tipo de hiperenlace. Ofrece la posibilidad de utilizar el protocolo HTTP (web) o FTP (transmisión de ficheros). • URL. El lugar donde insertaremos la dirección de destino. • Marco. En este cuadro de lista podemos seleccionar el tipo de marco en el que deseamos abrir el hiperenlace. Si no es ninguno de los marcos que muestra la lista podemos escribir nosotros el nombre del marco deseado.</p>
+<p>• Formulario. Nos permite elegir si queremos que el vínculo aparezca como un texto o en forma de botón. • Texto: en este campo podemos escribir el texto que queremos que se muestre como enlace o el título del botón. • Nombre: en esta casilla podemos escribir un nombre para el hiperenlace que hemos creado. LibreOffice se encargará de agregar la correspondiente etiqueta en html.</p>
+<h4>4.2. Correo electrónico</h4>
+<p>Permite realizar un envío de correo electrónico. Ofrece un conjunto de elementos</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Destinatario. Utilizaremos este cuadro de lista para escribir la dirección de correo electrónico a la que queremos mandar el mensaje. Después, al hacer clic sobre este enlace se abrirá el gestor de correo (o dirección del servidor de noticias) para que escribamos el cuerpo del mensaje.</p>
+<p>• Asunto. En este cuadro de texto escribimos el asunto del mensaje que después aparecerá automáticamente en el gestor de correo.</p>
+<h4>4.3. Documento</h4>
+<p>Esta opción ofrece dos posibilidades: definir un enlace externo o bien uno interno. Como enlace externo, nos permite abrir cualquier tipo de documento con el que enlacemos abriendo previamente su aplicación correspondiente. Como enlace interno, nos permite saltar a un punto determinado del propio documento.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Ruta. Es el lugar donde se encuentra el documento que queremos abrir. Si no la sabemos podemos hacer clic en el botón Abrir archivo que aparece a la derecha y en el cuadro de diálogo abrir buscamos el archivo, lo seleccionamos y hacemos clic en el botón Abrir con lo que la ruta aparecerá en el cuadro de lista Ruta.</p>
+<p>• Destino. En esta segunda sección podemos indicar en qué parte del documento debe situarse después de abrirlo o bien a qué parte del propio documento debemos saltar.</p>
+<h4>4.4. Documento nuevo</h4>
+<p>Podemos crear un hiperenlace a un documento nuevo y crear dicho documento al mismo tiempo. También dispone de un conjunto de opciones como</p>
+<p>• Opción de editar. Permite editar el documento al pulsar el botón Aplicar o editarlo más tarde. • Archivo. En este cuadro de texto tenemos que escribir la ruta en la que se guardará el nuevo archivo que se cree y su nombre (no es necesario poner la extensión ya que se la asignará automáticamente la aplicación que elijamos).</p>
+<ul>
+<li>Tipo de archivo. Este cuadro de lista muestra los tipos de aplicaciones que podemos utilizar</li>
+</ul>
+<p>para crear ese nuevo documento, para que seleccionemos la que nos interese.</p>
+<p>Ejercicio 2 Enlace botón a Internet Vamos a crear un hipervínculo, para que al hacer clic, vayamos a la página web de la Frikipedia. • Ve a la última diapositiva de "Multimedia Friki". • Crea un cuadro en 3D con el texto "FRIKIPEDIA". Personaliza los colores y efectos como desees. Colócalo debajo de la imagen de Goku.</p>
+<p>• Haz clic en el cuadro.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Ve al menú Insertar → Hiperenlace o haz clic en el icono de la barra de herramientas . • Establece las siguientes opciones: o Destino: http://inciclopedia.wikia.com/wiki/Frikipedia o Marco: _blank. De este modo, cuando hagamos clic en el enlace, éste se abrirá en una nueva pestaña del explorador de Internet.</p>
+<p>o Formulario: botón. o Nombre: EnlaceFrikipedia.</p>
+<p>• Haz clic en Aplicar. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación desde la diapositiva actual y comprueba que al hacer clic sobre el cuadro (botón) creado, se abre una nueva pestaña en el navegador de Internet y nos situamos directamente en el portal de la Frikipedia. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<p>• Pulsa la tecla ESC para salir del modo de presentación. Enlace texto a Internet Vamos a crear un hipervínculo de texto, para que al hacer clic, vayamos a la página web de la enciclopedia friki. • Ve a la primera diapositiva de la presentación. • Ve al menú Insertar → Hiperenlace o haz clic en el icono de la barra de herramientas .</p>
+<p>• Establece las siguientes opciones: o Destino: http://inciclopedia.wikia.com/wiki/Friki o Marco: _blank. De este modo, cuando hagamos clic en el enlace, éste se abrirá en una nueva pestaña del explorador de Internet. o Formulario: texto. o Texto: Enciclopedia Friki.</p>
+<p>o Nombre: EnlaceEnciclopedia.</p>
+<p>• Haz clic en Aplicar. • Haz clic sobre el texto con el botón derecho del ratón (para evitar saltar al hiperenlace). Sitúa el texto en la parte superior derecha. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación desde la diapositiva actual y comprueba que al hacer clic sobre el texto, se abre una nueva pestaña en el navegador de Internet y nos situamos directamente en el portal de la Enciclopedia Friki. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<p>• Pulsa la tecla ESC para salir del modo de presentación. Enlace a documento de texto Vamos a crear un hipervínculo para enlazar a un documento de texto que contiene las reglas frikis. • Descarga de la carpeta recursos el documento de texto de las reglas frikis 11ReglasFrikis.odt • Guarda el fichero en tu carpeta Impress.</p>
+<p>• Ve a la segunda diapositiva de "Reglas para ser un friki". • Crea un cuadro de texto con el texto "Reglas Frikis". Personaliza el cuadro con los efectos y colores que desees. • Sitúa el cuadro de texto en la parte inferior de la diapositiva, aproximadamente en el centro.</p>
+<p>• Haz clic en el cuadro de texto.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Ve al menú Insertar → Hiperenlace o haz clic en el icono de la barra de herramientas . • Establece las siguientes opciones: o Ruta: elige el fichero descargado en la carpeta Documentos. o Marco: _blank. De este modo, cuando hagamos clic en el enlace, éste se abrirá en una nueva pestaña del explorador de Internet.</p>
+<p>o Formulario: botón. o Texto: Reglas Frikis. o Nombre: EnlaceReglas.</p>
+<p>• Haz clic en Aplicar. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 11: Interactividad</p><p>Pràctica 11: Interactividad</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación desde la diapositiva actual y comprueba que al hacer clic sobre el texto, se abre el documento de texto de las reglas frikis en el procesador de textos Writer. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5.</p>
+<p>• Pulsa la tecla ESC para salir del modo de presentación. Guardar la presentación • Guarda la presentación con el mismo nombre que le has dado al principio del documento. • Cierra la presentación.</p>
+<h3>📄 10-ObjetosMultimedia.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Conocer las diferentes formas de insertar objetos multimedia.</p>
+<ul>
+<li>Inserción de imágenes, sonidos y vídeos.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Insertar imágenes</h3>
+<p>La inserción de imágenes en una presentación es un elemento fundamental de cara a la exposición de ésta ya que tienen un gran valor aclaratorio. Impress ofrece dos formas sencillas de insertarlas en las diapositivas, aunque los pasos que en cada una se darán son distintos</p>
+<ul>
+<li>A partir de una diapositiva con estilo. En este caso la propia diapositiva llevará integrados los</li>
+</ul>
+<p>espacios prediseñados para la rápida inserción de imágenes.</p>
+<ul>
+<li>A partir de una diapositiva sin marcos. En este caso deberemos insertarlas manualmente y</li>
+</ul>
+<p>ubicarlas en los lugares correspondientes. Esto no se va a explicar en esta práctica, ya que se realizó anteriormente.</p>
+<h4>1.1. A partir de una diapositiva con estilo</h4>
+<p>Impress ofrece un conjunto de estilos de diapositiva que contienen espacios prediseñados para la inserción de imágenes de manera fácil. Para insertarla deberemos seguir los siguientes pasos: • Seleccionar la diapositiva en la que queremos insertar la imagen o imágenes.</p>
+<p>• Pulsar el botón Propiedades del panel lateral derecho. • En el panel de tareas se mostrará la pestaña de opción Diseño de diapositiva en la que podremos observar los diseños disponibles. • Seleccionaremos alguno de los que integren imágenes. Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• La diapositiva se mostrará con el nuevo diseño.</p>
+<p>• Una vez hecho esto, deberemos pulsar el icono en el que se indica Insertar imagen.</p>
+<p>• Se abrirá una ventana para seleccionar la imagen que queremos incluir. La seleccionamos y pulsamos el botón Abrir.</p>
+<ul>
+<li>Se insertará la imagen en el cuadro que hayamos seleccionado.</li>
+</ul>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 1</p>
+<p>Crear diapositiva multimedia • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio • Ve a la última diapositiva. • Crea una nueva diapositiva en blanco. En el panel lateral derecho de Disposiciones, elige el tipo Título y contenido 2.</p>
+<p>• Haz clic en el título y escribe el texto “Multimedia Friki”. • Personaliza el color de fondo de la diapositiva. Insertar imagen • Descarga de la carpeta recursos la imagen de Goku, 10Imagen-goku • En el cuadro de texto de la izquierda, pulsa el botón en el que se indica Insertar imagen .</p>
+<p>• Selecciona e inserta la imagen descargada. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<ul>
+<li>Guarda los cambios.</li>
+</ul>
+<h3>2. Insertar sonidos</h3>
+<p>Otro elemento interesante en las diapositivas son los sonidos. En impress es posible insertar audio que tengamos almacenado en archivos del ordenador. Existen dos maneras de insertar sonido: insertarlo directamente en la diapositiva o insertarlo en la transición entre diapositivas. Vamos a ver cada una de ellas.</p>
+<h4>2.1. Insertar sonido en la diapositiva</h4>
+<p>La primera opción permite insertar archivos de sonido para que se puedan reproducir durante la presentación en alguna de las diapositivas. La música comenzará a sonar cuando visualicemos a pantalla completa la diapositiva y finalizará cuando termine de reproducirse el archivo o al pasar a la siguiente diapositiva. Tenemos 3 ventajas: es posible controlar el sonido insertado en la diapositiva indicando en qué instante de tiempo deseamos que empiece a sonar, el volumen y si deseamos que se repita indefinidamente mientras proyectemos dicha diapositiva.</p>
+<p>Los pasos a seguir son los siguientes: • Seleccionar el menú Insertar → Audio o vídeo. • Se abrirá una ventana para seleccionar el archivo de sonido que queramos incluir. Lo seleccionamos y pulsamos el botón Abrir.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Se insertará un icono de un altavoz en la diapositiva.</p>
+<h4>2.2. Minimizar el icono de sonido</h4>
+<p>El icono que se muestra suele ser grande y no se puede ocultar, aunque podemos solucionar este problema mediante la minimización de su tamaño para que ocupe lo mínimo posible. Para ello: • Pulsamos en el icono con el botón derecho del ratón y seleccionamos la opción Posición y tamaño.</p>
+<p>• Se mostrará una ventana en la que seleccionaremos la pestaña Posición y tamaño. • Fijaremos el valor del tamaño (tanto ancho como alto) a 0,01cm.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Comprobamos que el tamaño se habrá reducido de manera considerable hasta el punto de dejar de verlo (en la imagen el cuadro de color verde).</p>
+<p>Ejercicio 2 Insertar sonidos. Comecocos • Descarga de la carpeta recursos el sonido del comecocos, 10comecocos.mp3 • Ve a la diapositiva de "Dibujos frikis". • Inserta el sonido del comecocos.</p>
+<p>• Sitúa el icono del sonido en la parte inferior derecha de la diapositiva. • Redimensiona el icono para que sea más pequeño. Si quieres que quede invisible, redimensiona el icono para que ocupe 0,01cm x 0,01cm. • Por ejemplo</p>
+<p>Ver la presentación</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Visualiza la presentación desde la diapositiva actual y comprueba que se reproduce el sonido. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5. • Pulsa la tecla ESC para salir del modo de presentación.</p>
+<ul>
+<li>Guarda los cambios.</li>
+</ul>
+<h4>2.3. Insertar sonido en las transiciones</h4>
+<p>La segunda opción permite insertar archivos de sonido a la hora de producirse las transiciones. Los pasos a seguir son los siguientes: • Seleccionar la diapositiva. • Ir al menú Diapositiva → Transición entre diapositivas o hacer clic en el icono Transición de diapositiva del panel lateral.</p>
+<p>• En el panel lateral derecho de tareas se mostrará activa la pestaña Transición de diapositiva con todas las opciones que podemos configurar. • En el apartado de Modificar transición abriremos el desplegable de sonidos. Tenemos 2 opciones: o Insertar un sonido desde archivo. Seleccionaremos la opción Otro sonido. Se abrirá una ventana donde seleccionaremos el archivo a reproducir y pulsaremos Abrir.</p>
+<p>o Insertar un sonido predefinido. Impress dispone de efectos de sonido predefinidos. En este caso basta con seleccionar uno de los que se muestran en el desplegable.</p>
+<p>• Ahora se mostrará, en el desplegable, el nuevo sonido para reproducir. Por ejemplo, la imagen muestra un nuevo sonido añadido llamado "gong".</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 3</p>
+<p>Insertar sonidos en las transiciones Vamos a insertar una sonido para cada una de las transiciones de diapositiva de la presentación. • Descarga de la carpeta recursos el fichero con sonidos 10Sonidos.zip • Descomprime el fichero en tu carpeta personal "IMPRESS".</p>
+<p>• Ve a la primera diapositiva. • Ve al menú Diapositiva → Transición entre diapositivas o haz clic en el icono Transición de diapositiva del panel lateral. • En el panel lateral derecho de tareas se mostrará activa la pestaña Transición de diapositiva con todas las opciones que podemos configurar.</p>
+<p>• En el apartado de Modificar transición abre el desplegable de sonidos y selecciona el que quieras.</p>
+<p>• Repite el mismo proceso para el resto de transiciones de cada una de las diapositivas. • Guarda los cambios. Ver la presentación • Visualiza la presentación y comprueba que que al pasar cada diapositiva, se produce una transición con sonido. Menú Presentación → Iniciar la presentación, icono o pulsa la tecla F5.</p>
+<ul>
+<li>Pulsa la tecla ESC para salir del modo de presentación.</li>
+</ul>
+<h3>3. Insertar vídeos</h3>
+<p>Los vídeos son otros elementos que dan mayor intensidad a las presentaciones y que ofrecen la posibilidad de aumentar la atención de los oyentes. Es importante remarcar que no todos los formatos están soportados, ya que Impress sólo puede mostrar ficheros de tipo</p>
+<p>• ASF • AVI • MOV (Quicktime) • MPEG</p>
+<ul>
+<li>WMV (Microsoft vídeo)</li>
+</ul>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Es decir, formatos tan utilizados como MP4 o FLV no se podrán reproducir y tendrán que convertirse a los soportados.</p>
+<p>La inserción de vídeo se realiza de manera similar a la del sonido. Pasos a seguir: • Iremos al menú Insertar → Audio o vídeo. o haremos clic en el icono de la barra de herramientas. • Se abrirá una ventana para seleccionar el archivo de vídeo que queramos incluir. Lo seleccionamos y pulsamos el botón Abrir.</p>
+<p>• Se insertará un icono con la primera imagen del vídeo.</p>
+<h3>4. Barra Reproductor de medios</h3>
+<p>Tanto en la inserción del vídeo como del sonido se observará que, en la parte inferior de la pantalla, se mostrará una barra con diferentes herramientas para controlar el objeto</p>
+<p>Entre los elementos tenemos: • Insertar sonido y vídeo: permite la inserción de un objeto de sonido o de vídeo de forma sencilla. • Botones de control: son tres y permiten iniciar/continuar, pausar y parar la reproducción. • Repetir: permite la reproducción cíclica del elemento.</p>
+<p>• Barra de progreso: permite situarnos en un determinado punto de la reproducción.</p>
+<ul>
+<li>Sonido: el botón permite silenciar y la barra permite subir/bajar el nivel de volumen.</li>
+</ul>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 4</p>
+<p>Insertar vídeo • Descarga de la carpeta recursos el vídeo de Curro, 10Curro.avi • Ve a la última diapositiva de "Multimedia Friki". • En el cuadro de texto de la derecha, pulsa el botón en el que se indica Insertar película.</p>
+<p>• Inserta el vídeo descargado. • Guarda los cambios. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 10: Inserción de objetos multimedia</p><p>Pràctica 10: Inserción de objetos multimedia</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ver la presentación • Visualiza la presentación desde la diapositiva actual y comprueba que se reproduce el vídeo. Menú Presentación → Iniciar desde la diapositiva actual, icono o pulsa la tecla Mayús+F5. • Pulsa la tecla ESC para salir del modo de presentación. Ver vídeo sin presentación Podemos ver el vídeo que hemos insertado sin necesidad de reproducir la presentación.</p>
+<p>• Haz clic en el vídeo. • Ve a la barra multimedia para reproducir el vídeo.</p>
+<p>• Reproduce el vídeo y comprueba que se ve directamente.</p>
+<ul>
+<li>Guarda la presentación con el nombre Friki.odp</li>
+</ul>
+<h3>📄 9-TransicionesAnimaciones.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Conocer qué son y cómo utilizar las transiciones.</p>
+<ul>
+<li>Conocer la forma de animar los elementos de las diapositivas.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Transiciones entre diapositivas</h3>
+<p>Es posible configurar las diapositivas para que aparezcan de diferentes formas con el fin de tener al público atento y amenizar el paso de una a otra. Las transiciones se definen como la forma animada en la que una diapositiva da paso a la siguiente. Dicho de otro modo, la transición de diapositivas permite establecer los efectos que se producirán en cada diapositiva al avanzar en la presentación.</p>
+<p>No hay que confundirlas con las animaciones de las que hablaremos posteriormente.</p>
+<h3>2. Insertar un efecto de transición</h3>
+<p>Para insertar un efecto de transición entre diapositivas seguiremos los pasos que se indican a continuación: • Seleccionar la diapositiva. • Ir al menú Diapositiva → Transición entre diapositivas o hacer clic en el icono Transición de diapositiva del panel lateral. • En el panel lateral derecho de tareas se mostrará activa la pestaña Transición de diapositiva con todas las opciones que podemos configurar. La primera lista muestra todos los efectos disponibles en Impress.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• Elegimos la transición que queramos insertar y ésta quedará aplicada, de forma que en la diapositiva se mostrará automáticamente el efecto seleccionado.</p>
+<h3>3. Personalizar un efecto de transición</h3>
+<p>Adicionalmente podemos seleccionar otras opciones que permitirán flexibilizar la configuración</p>
+<h4>3.1. Opciones de modificación de transición</h4>
+<p>Permiten ajustar la dirección, duración, así como el sonido que se reproducirá cuando se ejecute la transición.</p>
+<p>• Variante. Permite establecer la dirección de la transición: arriba, abajo, derecha e izquierda. • Duración. Podemos establecer la duración en segundos con la que queremos que se produzca el efecto elegido. • Sonido. Puede incluirse un efecto sonoro de los predefinidos en Impress. Además, permite que pueda seleccionarse cualquier otro fichero de sonido.</p>
+<p>A la hora de seleccionar una transición hay que tener en cuenta su duración, ya que si ésta requiere algo más de tiempo que las demás deberemos ajustar la velocidad para que se haga de manera más rápida.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>3.2. Opciones de avance de diapositiva</h4>
+<p>La opción Avanzar diapositiva establece el modo en el que se avanzará la propia diapositiva. Permite ajustar el evento con el que se avanzará a la siguiente diapositiva (mediante clic del ratón o automáticamente después de un número determinado de segundos). Por defecto está marcado “Al pulsar con el ratón”, por lo que la diapositiva dará paso a la siguiente al hacer clic sobre ella con el ratón. Si se elige la opción “Automáticamente después de” el programa nos permitirá poner un intervalo de tiempo durante el cual se mostrará la diapositiva.</p>
+<p>Transcurrido ese intervalo, se avanzará automáticamente hacia la siguiente diapositiva.</p>
+<h4>3.3. Ámbito de aplicación</h4>
+<p>En la parte inferior de la pestaña Transición de diapositiva existen tres botones</p>
+<h4>3.3.1. Aplicar transición a todas las diapositivas</h4>
+<p>Pulsando este botón se aplicará la transición seleccionada a todas las diapositivas con la comodidad que supone no ir fijando la transición una por una.</p>
+<h4>3.3.2. Reproducir</h4>
+<p>Permite la reproducción de la transición de la diapositiva con el fin de que el usuario pueda verla y decidirse.</p>
+<p>Ejercicio 1</p>
+<p>Añadir transiciones Vamos a practicar todo lo que hemos visto en el apartado de transiciones. • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• En el panel lateral derecho, haz clic en el icono Transición de diapositiva.</p>
+<p>• Aplica efectos de transición sobre todas y cada una de las diapositivas de la presentación.</p>
+<ul>
+<li>Elige los efectos que desees.</li>
+</ul>
+<p>Sugerencias •</p>
+<p>Transición de tipo cuña, velocidad rápida, sonido applause y al hacer clic con el mouse (ratón) • Transición de tipo desvanecer suavemente, velocidad lenta, sonido drama y automáticamente después de 3s • Transición de tipo cortar en negro, velocidad media, sonido train y automáticamente después de 2s • Transición de tipo forma de rombo, velocidad rápida, sin sonido y al hacer clic con el mouse (ratón)</p>
+<ul>
+<li>Etc.</li>
+</ul>
+<p>Ver la presentación • Visualiza la presentación y comprueba que se reproducen las transiciones añadidas a las diapositivas. Menú Presentación → Iniciar la presentación, icono o pulsa la tecla F5. • Pulsa la tecla ESC para salir del modo de presentación.</p>
+<ul>
+<li>Guarda los cambios.</li>
+</ul>
+<h3>4. Animaciones de elementos</h3>
+<p>Además de transiciones y efectos sobre las diapositivas, Impress permite establecer animaciones personalizadas para cada uno de los elementos presentes en cada diapositiva, lo que multiplica enormemente las posibilidades visuales de nuestra presentación. Los efectos de animación son similares a las transiciones pero se aplican a los elementos individuales de las diapositivas, es decir, se pueden definir como acciones que realizarán los elementos de la diapositiva a los que se aplican y que permitirán captar la atención del público para centrarse únicamente en lo que nos interesa.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h4>4.1. Tipos de animaciones</h4>
+<p>Los efectos de animación pueden clasificarse en los siguientes grupos: Opciones Descripción Entrada. Cuando el elemento aparece por pantalla. Agrega</p>
+<p>un efecto que introduce el texto o el objeto en la</p>
+<p>presentación con diapositivas.</p>
+<p>Énfasis. Cambio de un elemento para resaltarlo. Agrega un</p>
+<p>efecto al texto o al objeto para lograr que resalte mucho</p>
+<p>más.</p>
+<p>Salida. Cuando el elemento desaparece de la pantalla.</p>
+<p>Agrega un efecto que saca el texto o el objeto de la</p>
+<p>diapositiva en algún momento.</p>
+<p>Trayectorias. Cambio de posición de un elemento para</p>
+<p>resaltarlo. Agrega un efecto que mueve un objeto en la</p>
+<p>trama especificada. A su vez, cada uno de ellos ofrece un conjunto de características que flexibilizan la realización de la presentación.</p>
+<h4>4.2. Insertar y eliminar animaciones</h4>
+<p>Para insertar efectos en Impress seguiremos los siguientes pasos: • Seleccionamos el elemento al que queremos aplicar la animación. • Hacemos clic en el botón Animación personalizada del panel lateral derecho.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>• En el panel de tareas se mostrará activa la pestaña Animación personalizada. En la parte inferior aparece habilitado el botón Añadir un efecto . Si pulsamos este botón, se mostrará una ventana con todos los efectos posibles organizados en categorías.</p>
+<p>• Seleccionamos uno de ellos y la animación se añade automáticamente. • En el panel lateral de tareas se mostrará la animación con los parámetros por defecto. Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Para eliminar una animación, basta con seleccionarla en el panel lateral derecho y pulsar el botón Quitar el efecto.</p>
+<h4>4.3. Personalizar animaciones</h4>
+<p>Como se puede observar, existen tres elementos configurables en el efecto: 4.3.1 Inicio Permite fijar la manera de iniciar la animación (al pulsar con el ratón, con el anterior, después del anterior). Tiene predeterminada la opción “Al pulsar con el ratón”, lo que significa que el efecto se aplicará cuando hagamos clic en la diapositiva.</p>
+<h4>4.3.2. Dirección</h4>
+<p>Indica la dirección hacia la que se dirigirá la animación, es decir, establece el sentido en el que se aplicará el efecto sobre el objeto (horizontal, vertical).</p>
+<h4>4.3.3. Duración</h4>
+<p>Iindica la duración (rapidez) en segundos con la que se reproducirá la animación.</p>
+<h4>4.4. Ordenar animaciones</h4>
+<p>En caso de haber varias animaciones aplicados sobre distintos elementos, se mostrarán en el panel de tareas con un determinado orden que podremos cambiar.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Para cambiar el orden de una animación seleccionamos la transición a mover y pulsamos los botones Subir y Bajar que se mostrarán bajo la lista de efectos. De este modo, moveremos hacia arriba o abajo el orden de aplicación de los efectos de la diapositiva.</p>
+<p>Ejercicio 2</p>
+<p>Aplicar efectos de animación Vamos a practicar todo lo que hemos visto en el apartado de animaciones. • Ve a la primera diapositiva. • En el panel lateral derecho, haz clic en el icono Animación personalizada.</p>
+<p>• Aplica efectos de animación sobre todos y cada uno de los elementos de la diapositiva: título, subtítulo, cuadro de texto con nombre y apellidos y rótulo artístico.</p>
+<ul>
+<li>Elige los efectos que desees.</li>
+</ul>
+<p>Sugerencias •</p>
+<p>Añade un efecto de entrada de tipo Barrido, cuyo inicio sea al hacer clic, la dirección desde arriba y velocidad rápido • Añade un efecto de salida de tipo Rueda, cuyos radios sean 8 y cuya velocidad sea muy rápida • Para el rótulo artístico: o Añade un efecto de entrada de tipo Zoom, cuyo inicio sea después de la anterior, el zoom fuera y y de velocidad rápido</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 9: Transiciones y animaciones</p><p>Pràctica 9: Transiciones y animaciones</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>o Añade un efecto de salida de tipo Ascender, cuya velocidad sea muy rápida o Añade un efecto de énfasis de tipo Parpadeo cuyo inicio sea al hacer clic, color verde y de velocidad media</p>
+<ul>
+<li>Etc.</li>
+</ul>
+<p>Ordenar efectos de animación • Ordena, según tu criterio, los diferentes efectos de animación creados anteriormente. Utiliza los iconos Subir y Bajar .</p>
+<p>Ver la presentación • Visualiza la presentación y comprueba que se reproducen las animaciones añadidas a los objetos. Menú Presentación → Iniciar la presentación, icono o pulsa la tecla F5. • Pulsa la tecla ESC para salir del modo de presentación. • Guarda la presentación con el nombre Friki.odp</p>
+<h3>📄 8-AutoformasDiagramas.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 8: Autoformas y diagramas</p><p>Pràctica 8: Autoformas y diagramas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Objetivos • Conocer y crear autoformas. • Aplicar efectos sobre las autoformas.</p>
+<ul>
+<li>Crear diagramas de información.</li>
+</ul>
+<p>Contenidos</p>
+<h3>1. Autoformas</h3>
+<p>En algunas presentaciones sólo se consigue clarificar su contenido gracias a la introducción de figuras y elementos gráficos que facilitan la exposición de los conceptos, haciéndolas más claras y agradables. Con Impress podemos incorporar fácilmente dibujos tales como rectángulos, círculos, líneas, flechas, formas prediseñadas, etcétera. Además, se permite moverlas, rotarlas, alinearlas, o cambiarlas de color, para que se adapten totalmente a nuestro gusto.</p>
+<h4>1.1. Barra de herramientas Dibujo</h4>
+<p>Esta barra nos permite dibujar e insertar todo tipo de imágenes en las diapositivas: líneas , flechas, rectángulos, elipses, cuadros de texto, etc.</p>
+<p>Para cambiar el aspecto de las líneas disponemos de los iconos de la barra Formato , con los que podemos modificar el color y el tipo de la línea (de puntos, discontinua, etc.) y los finales de línea (por ejemplo, añadir puntas de flecha).</p>
+<h4>1.2. Dibujar autoformas</h4>
+<p>Para dibujar una autoforma en una diapositiva, haremos clic en el tipo que deseemos. Cuando coloquemos el puntero en cualquier lugar de la diapositiva, el cursor adoptará la forma de una pequeña cruz. La utilizaremos para delimitar el área de la figura. Sólo tendremos que pinchar y arrastrar mientras se mantiene pulsado el botón izquierdo del ratón. Lo soltaremos cuando el tamaño sea el adecuado.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 8: Autoformas y diagramas</p><p>Pràctica 8: Autoformas y diagramas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Alrededor de la figura aparecen los cuadros de selección laterales que indican que el objeto está seleccionado. Si situamos el puntero en uno de ellos, tomará forma de doble flecha. Si en ese momento pinchamos y arrastramos, podrá aumentarse o disminuirse su tamaño.</p>
+<h4>1.3. Personalizar autoformas</h4>
+<p>Al crear la figura, ésta ha tomado, por defecto, el color que la plantilla reserva para este tipo de objetos. Para cambiarlo debemos, manteniendo seleccionada la figura, pulsar el botón derecho del ratón y elegir la opción Relleno o hacer clic en los botones de la barra de herramientas Formato .</p>
+<h4>1.3.1. Efectos 3D</h4>
+<p>El botón Objetos 3D aplica un volumen tridimensional para los objetos.</p>
+<h4>1.4. Alinear autoformas</h4>
+<p>Aunque podemos pinchar y arrastrar las figuras para situarlas en el lugar adecuado, Impress dispone de una opción más profesional, que nos permitirá alinear los objetos según una línea invisible, horizontal, que pasa por el centro de ellos. Para conseguirlo, hacemos clic en el primero y, manteniendo pulsada la tecla Mayús (Shift), pinchamos sobre el segundo. Ambos quedarán seleccionados. En este momento, hacemos clic en el icono Alinear y elegimos el tipo que queramos.</p>
+<h4>1.5. Agregar Texto</h4>
+<p>Podemos agregar texto a algunas autoformas. Para ello, pulsamos sobre la autoforma y hacemos doble clic con el botón izquierdo del ratón. A partir de ese momento se podrá insertar texto en la autoforma como si fuera un cuadro de texto. El texto queda vinculado a la autoforma, de manera que si giramos o movemos la autoforma, el texto girará y se moverá con ella.</p>
+<p>Para finalizar pulsamos la tecla ESC o fuera de la autoforma.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 8: Autoformas y diagramas</p><p>Pràctica 8: Autoformas y diagramas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>Ejercicio 1 Dibujar autoformas • Abre la presentación Friki.odp de la práctica anterior, y continua con el ejercicio • Sitúate en la última diapositiva. • Crea una nueva diapositiva en blanco. En el panel lateral derecho de Disposiciones, elige el tipo Solo título. • Selecciona la nueva diapositiva.</p>
+<p>• Haz clic en el título y escribe el texto “Dibujos frikis”. • Inserta las autoformas que se muestran en la imagen inferior. • Crea una autoforma con el texto: COMECOCOS (PACMAN). • Personaliza las autoformas con el tipo de letra, colores y efectos que desees. • Alinea y gira las figuras para que queden como se muestran en la imagen inferior.</p>
+<p>• Personaliza el color de fondo de la diapositiva. • Por ejemplo</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 8: Autoformas y diagramas</p><p>Pràctica 8: Autoformas y diagramas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<h3>2. Diagramas de información</h3>
+<p>Impress ofrece la posibilidad de crear diagramas de forma sencilla e intuitiva. Un diagrama permite representar de forma gráfica las relaciones existentes entre objetos o personas, por lo que resulta un medio muy práctico para simplificar y estructurar la información, ya que la hace llegar a los asistentes de un modo claro y visual. Los organigramas representan relaciones jerárquicas entre objetos o personas.</p>
+<p>Para generar diagramas de información debemos de utilizar dos tipos de autoformas: la primera son las figuras típicas del diagrama (cuadros, círculos, etc.); y la segunda son los conectores (flechas y líneas), que nos permitirán conectar las autoformas del diagrama.</p>
+<p>Para crear un organigrama utilizaremos la barra de herramientas Dibujo e iremos añadiendo las distintas figuras y conectores.</p>
+<h4>2.1. Líneas y conectores</h4>
+<p>Además de poder dibujar líneas y flechas, Impress permite utilizar conectores para unir autoformas entre sí. La ventaja de los conectores frente a las flechas convencionales es que los conectores modifican su posición cuando movemos alguna de las figuras del diagrama a las que están conectadas, cosa que no ocurre con las flechas convencionales.</p>
+<p>Para dibujar conectores haremos clic en el icono Conector de la barra de herramientas Dibujo. Tenemos varios tipos de conectores</p>
+<h4>2.2. Dibujar un conector entre 2 figuras</h4>
+<p>Hacemos clic en el icono Conector . Para trazar el conector, situamos el puntero en la primera autoforma. Podremos ver unos pequeños puntos azules. Nos situamos en uno de ellos y pinchamos y arrastramos hasta la segunda autoforma. Al llegar a ella aparecerán, en sus vértices, los mismos puntos. Nos colocamos</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 8: Autoformas y diagramas</p><p>Pràctica 8: Autoformas y diagramas</p></div>
+<p>Fuente: www.tuinstitutoonline.com</p>
+<p>sobre uno y soltamos el ratón. Lo que hasta ahora era una línea discontinua se ha convertido en un conector real. Pinchamos fuera para ver el resultado definitivo.</p>
+<p>Ejercicio 2</p>
+<p>Crear un diagrama • Sitúate en la última diapositiva. • Crea una nueva diapositiva en blanco. En el panel lateral derecho de Disposiciones, elige el tipo Solo título. • Selecciona la nueva diapositiva. • Haz clic en el título y escribe el texto “Diagrama de lo friki”. • Inserta las autoformas y textos que se muestran en la imagen inferior.</p>
+<p>• Personaliza las autoformas con el tipo de letra, colores y efectos que desees. • Utiliza conectores para unir las distintas figuras. • Personaliza el color de fondo de la diapositiva. • Por ejemplo</p>
+<ul>
+<li>Guarda la presentación con el nombre Friki.odp</li>
+</ul>
+<h3>📄 2-CreacionPresentacionesTipos.pdf</h3>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 2: Creación de presentaciones. Tipos</p><p>Pràctica 2: Creación de presentaciones. Tipos</p></div>
+<p>Fuente: www tuinstitutoonline com</p>
+<p>Objetivos  Conocer las diferentes formas de crear presentaciones.  Conocer la creación de presentaciones mediante plantillas.</p>
+<p>Contenidos</p>
+<h3>1. Creación de presentaciones</h3>
+<p>A la hora de crear una presentación Impress nos ofrece 3 diferentes formas de hacerlo: Tipos</p>
+<p>Características Presentación en blanco</p>
+<p>Crea una presentación vacía. Presentación a partir de una plantilla Podremos elegir una plantilla que se aplicará a todas</p>
+<p>las diapositivas. Presentación con un fondo</p>
+<p>Podremos seleccionar un fondo con el que comenzar a</p>
+<p>trabajar.</p>
+<h3>2. Presentación en blanco</h3>
+<p>La primera opción consiste en la creación de una presentación vacía en la que únicamente se generará una diapositiva sin ningún tipo de estilo ni color. Podremos hacerlo de dos formas distintas.</p>
+<h4>2.1. Presentación sin asistente</h4>
+<p>La primera será sin asistente y debemos:  Abrir Impress.  Seleccionar el menú Archivo → Nuevo → Presentación.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 2: Creación de presentaciones. Tipos</p><p>Pràctica 2: Creación de presentaciones. Tipos</p></div>
+<p>Fuente: www tuinstitutoonline com</p>
+<h4>2.2. Presentación con asistente</h4>
+<p>La segunda consiste en utilizar el asistente:  Abrir Impress.  Seleccionar el menú Archivo → Asistentes  Aparecen diferentes opciones para crear una plantilla.</p>
+<p> Seleccionar la opción que se desee.</p>
+<h3>3. Presentación a partir de una plantilla</h3>
+<p>La segunda opción consiste en la creación de una presentación ayudándonos con el asistente, el cuál nos irá guiando en todos los pasos con el fin de configurar toda la presentación. Para ello:  Abrimos Impress.  Seleccionamos el menú Archivo → Nuevo → Plantillas.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 2: Creación de presentaciones. Tipos</p><p>Pràctica 2: Creación de presentaciones. Tipos</p></div>
+<p>Fuente: www tuinstitutoonline com</p>
+<p> Se abrirá una ventana con las plantillas que tengamos. Seleccionamos la que deseemos</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Pràctica 2: Creación de presentaciones. Tipos</p><p>Pràctica 2: Creación de presentaciones. Tipos</p></div>
+<p>Fuente: www tuinstitutoonline com</p>
+<p>Ejercicio 1</p>
+<p>Vamos a practicar todo lo que hemos visto en el apartado anterior, creando una presentación con el asistente.  Abre Impress.  Ve al menú Archivo → Nuevo → Plantillas.  Elige la opción Desde plantilla que desees para escribir 2 campos.  Rellena los siguientes datos: o Campo 1. Escribe tu nombre y apellidos.</p>
+<p>o Campo 2. Escribe el texto "Prácticas de presentaciones".  Debe quedar algo parecido</p>
+<p>Guardar presentación  Guarda la presentación como 02-Plantilla.odp  Cierra la presentación.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut05/index.html">⬅️ 📘 UT5 Completa</a>
+<a class="page-nav-btn" href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

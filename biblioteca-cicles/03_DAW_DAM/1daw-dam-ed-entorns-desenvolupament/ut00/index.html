@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT0 — Introducción al desarrollo de software — Entorns de Desenvolupament | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>⚙️ Entorns de Desenvolupament — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Entorns de Desenvolupament</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guía del estudiante</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — Introducción al desarrollo de software</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 U1 - Intr. al desarrollo de SW</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Especificaciones requisitos IEEE380_ejemplo</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Especificaciones requisitos software_ejemplo</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — IDE's y estilo de programación</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U2 - IDEs. Estilos de programación</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Control de versiones</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U3 - Control de versiones</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Git Cheat Sheet</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Crear alias para log con ramas</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Material-Heroes</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Actividades de clase</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Debugging y testing</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U4 - Debugging y testing</a></li>
+<li><a href="../ut03/ut0302.html">3.2 EjercicioGrafo2</a></li>
+<li><a href="../ut03/ut0303.html">3.3 EjercicioGrafo3</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Códigos debugging</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Diagramas de clase</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U5 - Diagramas de clase</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U5 - Diagramas de clase profe</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Actividades de clase</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Diagramas de comportamiento</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Diagramas de casos de uso</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U6.2 - Diagramas de estado</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Actividades de clase</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Refactorización, optimización y documentación</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U7. Refactorización</a></li>
+<li><a href="../ut06/ut0602.html">6.2 U7.2 - Documentación</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Metodologías ágiles</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U8. Metodologías ágiles</a></li>
+<li><a href="../ut07/ut0702.html">7.2 U8.1 - Planificación de proyectos</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Poker planning</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT0 Completa</span>
+<h1>📘 UT0 — Introducción al desarrollo de software (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0001"><strong>0.1 U1 - Intr. al desarrollo de SW</strong></a> (o <a href="./ut0001.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0002"><strong>0.2 Especificaciones requisitos IEEE380_ejemplo</strong></a> (o <a href="./ut0002.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0003"><strong>0.3 Especificaciones requisitos software_ejemplo</strong></a> (o <a href="./ut0003.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut00actividades"><strong>✍️ Activitats pràctiques UT0</strong></a> (o <a href="./ut00actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0001">0.1 U1 - Intr. al desarrollo de SW</h2>
+
+
+<hr/>
+<p>ED - Introducció al desenvolupament de software 1er DAW</p>
+<p>Objectius</p>
+<ul>
+<li>Què es necessita per a programar una aplicació?</li>
+<li>Quins passos cal seguir per programar?</li>
+<li>Qui intervé en el procés de desenvolupament?</li>
+<li>Totes les aplicacions estan programades amb el mateix llenguatge?</li>
+</ul>
+<p>Índex</p>
+<h3>1. Introducció</h3>
+<h3>2. El SW del ordinador</h3>
+<h3>3. Llenguatges de programació</h3>
+<h3>4. El procés de desenvolupament</h3>
+<h3>5. Rols que intervenen al desenvolupament</h3>
+<p>Introducció</p>
+<ul>
+<li>Ordinador format per dos parts. Hardware (HW) i Software (SW).</li>
+<li>Hardware són components físics.</li>
+<li>Software components. lògics</li>
+</ul>
+<p>El SW del ordinador</p>
+<ul>
+<li>SW es lògic.</li>
+<li>El SW es desenvolupa, no es fabrica.</li>
+<li>El SW no es fa malbé amb el temps (o sí).</li>
+<li>El SW es pot fer a mida.</li>
+</ul>
+<p>El SW del ordinador</p>
+<ul>
+<li>“Ahora, el único límite es tu imaginación. Puedes conseguir que un</li>
+</ul>
+<p>ordenador haga cosas que antes eran imposibles. Es lo más parecido a tener superpoderes.”</p>
+<ul>
+<li>Drew Houston, fundador de Dropbox</li>
+</ul>
+<p>El SW del ordinador</p>
+<ul>
+<li>"Los programadores del mañana son los magos del futuro. Programar</li>
+</ul>
+<p>es crear algo completamente nuevo desde cero."</p>
+<ul>
+<li>Mark Zuckerberg, fundador de Facebook</li>
+</ul>
+<p>El SW del ordinador</p>
+<ul>
+<li>“Creo que todos en este país deberían aprender a programar un</li>
+</ul>
+<p>ordenardor, ya que te enseña a pensar.”</p>
+<ul>
+<li>Steve Jobs, fundador de Apple</li>
+</ul>
+<p>Llenguatges de programació</p>
+<ul>
+<li>Llenguatge artificial creat per i per a programadors.</li>
+<li>Permeten traduir les instruccions d’un programa a codi comprensible</li>
+</ul>
+<p>per l’ordinador.</p>
+<ul>
+<li>Són llenguatges que s’apropen més al llenguatge humà que al</li>
+</ul>
+<p>llenguatge màquina (1 i 0).</p>
+<p>Llenguatges de programació</p>
+<ul>
+<li>Han evolucionat molt en les últimes dècades.</li>
+<li>Ara més fàcils per als programadors, a l’hora de programar i de trobar</li>
+</ul>
+<p>errors.</p>
+<ul>
+<li>Existeixen molts: Java, C#, PHP, JavaScript, Python, etc.</li>
+</ul>
+<p>Llenguatges de programació</p>
+<ul>
+<li>Els llenguatges que en insteressen a nosaltres</li>
+</ul>
+<p>son els anomenats llenguatges d’alt nivell, es a dir, llenguatges comprensibles pel programador però que cal traduir per a que el ordinador el comprenga.</p>
+<ul>
+<li>Al procés de traducció a llenguatge màquina se li</li>
+</ul>
+<p>anomena compilació.</p>
+<ul>
+<li>Activitat llenguatges</li>
+</ul>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>El procés de desenvolupament passa per diferents etapes.</li>
+<li>Quines etapes són?</li>
+<li>DES DE la necessitat de crear un SW</li>
+<li>FINS que està preparat per ser utilitzat per l’usuari final</li>
+<li>Una bona definició de desenvolupament de SW podria ser “procés</li>
+</ul>
+<p>des de que es pensa la idea fins que el programat es implementat i utilitzat per l’usuari”.</p>
+<p>El procés de desenvolupament</p>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>No tots els programes tenen ni cal seguir fidelment les mateixes</li>
+</ul>
+<p>etapes, però és un bon punt de partida.</p>
+<ul>
+<li>Existeixen més models de Cicles de Vida del SW (iteratiu, en espiral,</li>
+</ul>
+<p>basat en prototips, en proves, etc). El que estudiem es el model en cascada.</p>
+<ul>
+<li>No cal cenyir-se a un model, es poden mesclar.</li>
+</ul>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>Segons estimacions, el 26% dels projectes SW fracasen, el 48% es</li>
+</ul>
+<p>modifiquen dràsticament i sols el 26% són un èxit.</p>
+<ul>
+<li>Per què creus que existeix tant de fracàs al desenvolupament de SW?</li>
+</ul>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>Etapa de planificació</li>
+<li>Estableixen objectius del projecte, planificació legal, econòmica i tècnica.</li>
+<li>Etapa d’anàlisi</li>
+<li>Es defineixen els requisits SW del que es va a desenvolupar.</li>
+<li>Entrevistes amb el client. Important deixar-ho per escrit.</li>
+<li>El client no es informàtic.</li>
+<li>Cal reconèixer els requisits complets, ambigus, contradictoris i necessaris</li>
+</ul>
+<p>(aquells que no ens han dit, però que sabem que necessitaran).</p>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>Etapa d’anàlisi</li>
+<li>Important comunicació bilateral.</li>
+<li>No sempre es coneix el context o l’àmbit d’aplicació.</li>
+<li>El document que es crea a aquesta etapa es el FSD (Functional Specification</li>
+</ul>
+<p>Document) o especificació de requisits.</p>
+<ul>
+<li>Sol fer-la un analiste o un desarrollador amb experiència.</li>
+<li>Una de les etapa més important de totes.</li>
+</ul>
+<p>Revisar FSD a Aules</p>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>Etapa de disseny</li>
+<li>En base als requisits funcionals, es determina com es va a resoldre el</li>
+</ul>
+<p>problema.</p>
+<ul>
+<li>Es defineixen les estructures de dades, arquitectura SW, interfície de d’usuari,</li>
+</ul>
+<p>el llenguatge de programació, la BBDD.</p>
+<ul>
+<li>Totes les decisions tècniques es prenen en aqueta etapa.</li>
+<li>Tot queda reflectat al TSD (Technical Specifications Document) que serà</li>
+</ul>
+<p>utilitzat pels programadors a la següent etapa.</p>
+<ul>
+<li>Aquesta fase la solen fer els analistes-programadors o programadors amb</li>
+</ul>
+<p>experiència. També solen estar presents els arquitectes de HW.</p>
+<ul>
+<li>Etapa molt important.</li>
+</ul>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>Etapa de codificació</li>
+<li>S’implementa tot allò que ve especificat al document de requisits tècnics que</li>
+</ul>
+<p>s’ha creat en base al anàlisi.</p>
+<ul>
+<li>Quan més detallat i exhaustiu siguen les fases anteriors, més senzilla la tasca</li>
+</ul>
+<p>de codificació.</p>
+<ul>
+<li>En aquesta etapa ja es genera documentació al codi.</li>
+</ul>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>Etapa de proves</li>
+<li>Sol fer-se durant la codificació.</li>
+<li>Es busca comprovar que el codi generat torna els resultats esperats.</li>
+<li>Idíl·lica ment, cal que el realitze personal diferent al que ha desenvolupat</li>
+</ul>
+<p>l’aplicació.</p>
+<ul>
+<li>Les proves han de quedar documentades.</li>
+</ul>
+<p>El procés de desenvolupament</p>
+<ul>
+<li>Etapa de manteniment</li>
+<li>S’ha de assegurar que el sistema puga adaptar-se als canvis i als possibles</li>
+</ul>
+<p>errors.</p>
+<ul>
+<li>S’ha de desenvolupar SW pensant en que en un futur, per remot que parega,</li>
+</ul>
+<p>va a tindre’s que seguir desenvolupant i per tant, és impot important fer-lo mantenible.</p>
+<ul>
+<li>Activitat</li>
+</ul>
+<p>Rols que intervenen al desenvolupament</p>
+<ul>
+<li>Al llarg del procés de desenvolupament, son moltes i diferents</li>
+</ul>
+<p>tasques les que s’han de realitzar.</p>
+<ul>
+<li>El personal que les fa, també sol ser diferent, encara que en empreses</li>
+</ul>
+<p>més xicotetes és habitual que una mateixa persona diversos rols.</p>
+<ul>
+<li>A continuació estudiarem alguns dels més habituals</li>
+</ul>
+<p>Rols que intervenen al desenvolupament</p>
+<ul>
+<li>Arquitecte de software (Tech Leader, Software Arch, ...)</li>
+<li>Pren decisions sobre aspectes tècnics del projecte.</li>
+<li>Té un ampli coneixement de les tecnologies, frameworks, etc.</li>
+<li>Decideix i forma els recursos d’un projecte</li>
+</ul>
+<p>Rols que intervenen al desenvolupament</p>
+<ul>
+<li>Analista funcional (Funcional Analyst)</li>
+<li>Analitza funcionalment el problema que afronten.</li>
+<li>Entén les necessitats del client.</li>
+<li>Sol ser persona amb coneixements del camp de treball del projecte</li>
+<li>Analista programador (Funcional Analyst)</li>
+<li>A caball entre el funcional i l’equip de desenvolupament.</li>
+<li>Entén les necessitats que li indica el funcional i les escriu per a que els</li>
+</ul>
+<p>desarrolladors les entenguen.</p>
+<ul>
+<li>Sol ser un programador amb experiència.</li>
+</ul>
+<p>Rols que intervenen al desenvolupament</p>
+<ul>
+<li>Jefe de projecte (Project Manager)</li>
+<li>Dirigeix el curs del projecte</li>
+<li>Sol ser un analista amb experiència o un arquitecte amb experiència.</li>
+<li>Gestiona l’equip i els tempos. Contacta amb client.</li>
+</ul>
+<p>Rols que intervenen al desenvolupament</p>
+<ul>
+<li>Programador (Developer)</li>
+<li>Cal que conega les tecnologies en les que treballen.</li>
+<li>Codifica les tasquen encomendades pels analistes als documents</li>
+</ul>
+<p>d’especificació.</p>
+<ul>
+<li>Tester</li>
+<li>És habitual que siga els propi programador.</li>
+<li>S’encarrega d’executar la pila de proves planificades per als mòduls</li>
+</ul>
+<p>programats.</p>
+<p>Rols que intervenen al desenvolupament</p>
+<p>Dubtes?</p>
+<hr/>
+<h2 id="ut0002">0.2 Especificaciones requisitos IEEE380_ejemplo</h2>
+<p>Especiﬁcaci´on de Requisitos seg´un el est´andar de IEEE 830 IEEE Std. 830-1998 22 de Octubre de 2008 Resumen Este documento presenta, en castellano, el formato de Especiﬁca- ci´on de Requisitos Software (ERS) seg´un la ´ultima versi´on del est´andar IEEE 830. Seg´un IEEE, un buen Documento de Requisitos, pese a no ser obligatorio que siga estrictamente la organizaci´on y el formato da- dos en el est´andar 830, s´ı deber´a incluir, de una forma o de otra, toda la informaci´on presentada en dicho est´andar. El est´andar de IEEE 830 no est´a libre de defectos ni de prejuicios, y por ello ha sido jus- tamente criticado por m´ultiples autores y desde m´ultiples puntos de vista, lleg´andose a cuestionar incluso si es realmente un est´andar en el sentido habitual que tiene el t´ermino en otras ingenier´ıas. El presente documento no pretende pronunciarse ni a favor ni en contra de unos u otros: tan s´olo reproduce, con prop´ositos fundamentalmente docentes, c´omo se organizar´ıa un Documento de Requisitos seg´un el est´andar IEEE 830.</p>
+<p>´INDICE ´Indice</p>
+<h3>1. Introducci´on</h3>
+<h4>1.1. Prop´osito</h4>
+<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.2. ´Ambito del Sistema . . . . . . . . . . . . . . . . . . . . . . . . 1.3. Deﬁniciones, Acr´onimos y Abreviaturas . . . . . . . . . . . . .</p>
+<h4>1.4. Referencias</h4>
+<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . 1.5. Visi´on General del Documento . . . . . . . . . . . . . . . . . .</p>
+<h3>2. Descripci´on General</h3>
+<p>2.1. Perspectiva del Producto . . . . . . . . . . . . . . . . . . . . . 2.2. Funciones del Producto . . . . . . . . . . . . . . . . . . . . . . 2.3. Caracter´ısticas de los Usuarios . . . . . . . . . . . . . . . . . .</p>
+<h4>2.4. Restricciones</h4>
+<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . 2.5. Suposiciones y Dependencias . . . . . . . . . . . . . . . . . . .</p>
+<h4>2.6. Requisitos Futuros</h4>
+<p>. . . . . . . . . . . . . . . . . . . . . . . .</p>
+<h3>3. Requisitos Espec´ıﬁcos</h3>
+<p>3.1. Interfaces Externas . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<h4>3.2. Funciones</h4>
+<p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3.3. Requisitos de Rendimiento . . . . . . . . . . . . . . . . . . . . 3.4. Restricciones de Dise˜no . . . . . . . . . . . . . . . . . . . . . . 3.5. Atributos del Sistema . . . . . . . . . . . . . . . . . . . . . . .</p>
+<h4>3.6. Otros Requisitos</h4>
+<p>. . . . . . . . . . . . . . . . . . . . . . . . .</p>
+<h3>4. Ap´endices</h3>
+<p>INTRODUCCI ´ON 1. Introducci´on En esta secci´on se proporcionar´a una introducci´on a todo el documento de Especiﬁcaci´on de Requisitos Software(ERS). Consta de varias subsecciones: prop´osito, ambito del sistema, deﬁniciones, referencias y visi´on general del documento.</p>
+<p>1.1. Prop´osito En esta subsecci´on se deﬁnir´a el prop´osito del documento ERS y se espe- ciﬁcar´a a qui´en va dirigido el documento. 1.2. ´Ambito del Sistema En esta subsecci´on: Se podr´a dar un nombre al futuro sistema (p.ej. MiSistema) Se explicar´a lo que el sistema har´a y lo que no har´a.</p>
+<p>Se describir´an los beneﬁcios, objetivos y metas que se espera alcanzar con el futuro sistema. Se referenciar´an todos aquellos documentos de nivel superior (p.e. en In- genier´ıa de Sistemas, que incluyen Hardware y Software, deber´ıa man- tenerse la consistencia con el documento de especiﬁcaci´on de requisitos globales del sistema, si existe).</p>
+<p>1.3. Deﬁniciones, Acr´onimos y Abreviaturas En esta subsecci´on se deﬁnir´an todos los t´erminos, acr´onimos y abrevia- turas utilizadas en la ERS. 1.4. Referencias En esta subsecci´on se mostrar´a una lista completa de todos los documen- tos referenciados en la ERS.</p>
+<p>DESCRIPCI ´ON GENERAL 1.5. Visi´on General del Documento Esta subsecci´on describe brevemente los contenidos y la organizaci´on del resto de la ERS. 2. Descripci´on General En esta secci´on se describen todos aquellos factores que afectan al pro- ducto y a sus requisitos. No se describen los requisitos, sino su contexto. Esto permitir´a deﬁnir con detalle los requisitos en la secci´on 3, haciendo que sean m´as f´aciles de entender.</p>
+<p>Normalmente, esta secci´on consta de las siguientes subsecciones: Pers- pectiva del producto, funciones del producto, caracter´ısticas de los usuarios, restricciones, factores que se asumen y futuros requisitos. 2.1. Perspectiva del Producto Esta subsecci´on debe relacionar el futuro sistema (producto software) con otros productos. Si el producto es totalemente independiente de otros pro- ductos, tambi´en debe especiﬁcarse aqu´ı. Si la ERS deﬁne un producto que es parte de un sistema mayor, esta subsecci´on relacionar´a los requisitos del sistema mayor con la funcionalidad del producto descrito en la ERS, y se identiﬁcar´an las interfaces entre el producto mayor y el producto aqu´ı des- crito. Se recomienda utilizar diagramas de bloques.</p>
+<p>2.2. Funciones del Producto En esta subsecci´on de la ERS se mostrar´a un resumen, a grandes rasgos, de las funciones del futuro sistema. Por ejemplo, en una ERS para un pro- grama de contabilidad, esta subsecci´on mostrar´a que el sistema soportar´a el mantenimiento de cuentas, mostrar´a el estado de las cuentas y facilitar´a la facturaci´on, sin mencionar el enorme detalle que cada una de estas funciones requiere.</p>
+<p>Las funciones deber´an mostrarse de forma organizada, y pueden utili- zarse gr´aﬁcos, siempre y cuando dichos gr´aﬁcos reﬂejen las relaciones entre funciones y no el dise˜no del sistema.</p>
+<p>DESCRIPCI ´ON GENERAL 2.3. Caracter´ısticas de los Usuarios Esta subsecci´on describir´a las caracter´ısticas generales de los usuarios del producto, incluyendo nivel educacional, experiencia y experiencia t´ecnica. 2.4. Restricciones Esta subsecci´on describir´a aquellas limitaciones que se imponen sobre los desarrolladores del producto Pol´ıticas de la empresa Limitaciones del hardware Interfaces con otras aplicaciones Operaciones paralelas Funciones de auditor´ıa Funciones de control Lenguaje(s) de programacion Protocolos de comunicaci´on Requisitos de habilidad Criticalidad de la aplicaci´on Consideraciones acerca de la seguridad 2.5.</p>
+<p>Suposiciones y Dependencias Esta subsecci´on de la ERS describir´a aquellos factores que, si cambian, pueden afectar a los requisitos. Por ejemplo, los requisitos pueden presu- poner una cierta organizaci´on de ciertas unidades de la empresa, o pueden presuponer que el sistema correr´a sobre cierto sistema operativo. Si cambian dichos detalles en la organizaci´on de la empresa, o si cambian ciertos detalles t´ecnicos, como el sistema operativo, puede ser necesario revisar y cambiar los requisitos.</p>
+<p>REQUISITOS ESPEC´IFICOS 2.6. Requisitos Futuros Esta subsecci´on esbozar´a futuras mejoras al sistema, que podr´an anali- zarse e implementarse en un futuro. 3. Requisitos Espec´ıﬁcos Esta secci´on contiene los requisitos a un nivel de detalle suﬁciente como para permitir a los dise˜nadores dise˜nar un sistema que satisfaga estos requi- sitos, y que permita al equipo de pruebas planiﬁcar y realizar las pruebas que demuestren si el sistema satisface, o no, los requisitos. Todo requisito aqu´ı es- peciﬁcado describir´a comportamientos externos del sistema, perceptibles por parte de los usuarios, operadores y otros sistemas. Esta es la secci´on m´as larga e importante de la ERS. Deber´an aplicarse los siguientes principios</p>
+<p>El documento deber´ıa ser perfectamente legible por personas de muy distintas formaciones e intereses. Deber´an referenciarse aquellos documentos relevantes que poseen algu- na inﬂuencia sobre los requisitos. Todo requisito deber´a ser un´ıvocamente identiﬁcable mediante alg´un c´odigo o sistema de numeraci´on adecuado.</p>
+<p>Lo ideal, aunque en la pr´actica no siempre realizable, es que los requi- sitos posean las siguientes caracter´ısticas</p>
+<ul>
+<li>Correccion: La ERS es correcta si y s´olo si todo requisito que</li>
+</ul>
+<p>ﬁgura aqu´ı (y que ser´a implementado en el sistema) reﬂeja alguna necesidad real. La correcci´on de la ERS implica que el sistema implementado ser´a el sistema deseado.</p>
+<ul>
+<li>No ambiguos: Cada requisito tiene una sola interpretaci´on. Para</li>
+</ul>
+<p>eliminar la ambig¨uedad inherente a los requisitos expresados en lenguaje natural, se deber´an utilizar gr´aﬁcos o notaciones forma- les. En el caso de utilizar t´erminos que, habitualmente, poseen m´as de una interpretaci´on, se deﬁnir´an con precisi´on en el glosario.</p>
+<ul>
+<li>Completos: Todos los requisitos relevantes han sido incluidos en</li>
+</ul>
+<p>la ERS. Conviene incluir todas las posibles respuestas del sistema a los datos de entrada, tanto v´alidos como no v´alidos.</p>
+<p>REQUISITOS ESPEC´IFICOS</p>
+<ul>
+<li>Consistentes: Los requisitos no pueden ser contradictorios. Un con</li>
+</ul>
+<p>junto de requisitos contradictorio no es implementable.</p>
+<ul>
+<li>Clasiﬁcados: Normalmente, no todos los requisitos son igual de</li>
+</ul>
+<p>importantes. Los requisitos pueden clasiﬁcarse por importancia (esenciales, condicionales u opcionales) o por estabilidad (cam- bios que se espera que afecten al requisito). Esto sirve, ante todo, para no emplear excesivos recursos en implementar requisitos no esenciales.</p>
+<ul>
+<li>Veriﬁcables: La ERS es veriﬁcable si y s´olo si todos sus requisitos</li>
+</ul>
+<p>son veriﬁcables. Un requisito es veriﬁcable (testeable) si existe un proceso ﬁnito y no costoso para demostrar que el sistema cumple con el requisito. Un requisito ambiguo no es, en general, veriﬁ- cable. Expresiones como a veces, bien, adecuado, etc. introducen ambig¨uedad en los requisitos. Requisitos como “en caso de acci- dente la nube t´oxica no se extender´a m´as all´a de 25Km” no es veriﬁcable por el alto costo que conlleva.</p>
+<ul>
+<li>Modiﬁcables: La ERS es modiﬁcable si y s´olo si se encuentra es</li>
+</ul>
+<p>tructurada de forma que los cambios a los requisitos pueden rea- lizarse de forma f´acil, completa y consistente. La utilizaci´on de herramientas autom´aticas de gesti´on de requisitos (por ejemplo RequisitePro o Doors) facilitan enormemente esta tarea.</p>
+<ul>
+<li>Trazables: La ERS es trazable si se conoce el origen de cada requi</li>
+</ul>
+<p>sito y se facilita la referencia de cada requisito a los componentes del dise˜no y de la implementaci´on. La trazabilidad hacia atr´as indica el origen (documento, persona, etc.) de cada requisito. La trazabilidad hacia delante de un requisito R indica qu´e compo- nentes del sistema son los que realizan el requisito R.</p>
+<p>3.1. Interfaces Externas Se describir´an los requisitos que afecten a la interfaz de usuario, interfaz con otros sistemas (hardware y software) e interfaces de comunicaciones. 3.2. Funciones Esta subsecci´on (quiz´a la m´as larga del documento) deber´a especiﬁcar todas aquellas acciones (funciones) que deber´a llevar a cabo el software. Nor</p>
+<p>REQUISITOS ESPEC´IFICOS malmente (aunque no siempre), son aquellas acciones expresables como “el sistema deber´a . . . ”. Si se considera necesario, podr´an utilizarse notaciones gr´aﬁcas y tablas, pero siempre supeditadas al lenguaje natural, y no al rev´es. Es importante tener en cuenta que, en 1983, el Est´andar de IEEE 830 establec´ıa que las funciones deber´ıan expresarse como una jerarqu´ıa funcional (en paralelo con los DFDs propuestos por el an´alisis estructurado). Pero el Est´andar de IEEE 830, en sus ´ultimas versiones, ya permite organizar esta subsecci´on de m´ultiples formas, y sugiere, entre otras, las siguientes</p>
+<p>Por tipos de usuario: Distintos usuarios poseen distintos requisitos. Pa- ra cada clase de usuario que exista en la organizaci´on, se especiﬁcar´an los requisitos funcionales que le afecten o tengan mayor relaci´on con sus tareas. Por objetos: Los objetos son entidades del mundo real que ser´an reﬂe- jadas en el sistema. Para cada objeto, se detallar´an sus atributos y sus funciones. Los objetos pueden agruparse en clases. Esta organizaci´on de la ERS no quiere decir que el dise˜no del sistema siga el paradigma de Orientaci´on a Objetos.</p>
+<p>Por objetivos: Un objetivo es un servicio que se desea que ofrezca el sistema y que requiere una determinada entrada para obtener su resul- tado. Para cada objetivo o subobjetivo que se persiga con el sistema, se detallar´an las funciones que permitan llevarlo a cabo.</p>
+<p>Por est´ımulos: Se especiﬁcar´an los posibles est´ımulos que recibe el sis- tema y las funciones relacionadas con dicho est´ımulo. Por jerarqu´ıa funcional: Si ninguna de las anteriores alternativas resulta de ayuda, la funcionalidad del sistema se especiﬁcar´a como una jerar- qu´ıa de funciones que comparten entradas, salidas o datos internos. Se detallar´an las funciones (entrada, proceso, salida) y las subfunciones del sistema. Esto no implica que el dise˜no del sistema deba realizarse seg´un el paradigma de Dise˜no Estructurado.</p>
+<p>Para organizar esta subsecci´on de la ERS se elegir´a alguna de las ante- riores alternativas, o incluso alguna otra que se considere m´as conveniente. Deber´a, eso s´ı, justiﬁcarse el porqu´e de tal elecci´on.</p>
+<p>AP´ENDICES 3.3. Requisitos de Rendimiento Se detallar´an los requisitos relacionados con la carga que se espera tenga que soportar el sistema. Por ejemplo, el n´umero de terminales, el n´umero esperado de usuarios simultaneamente conectados, n´umero de transacciones por segundo que deber´a soportar el sistema, etc.</p>
+<p>Tambi´en, si es necesario, se especiﬁcar´an lo requisitos de datos, es decir, aquellos requisitos que afecten a la informaci´on que se guardar´a en la base de datos. Por ejemplo, la frecuencia de uso, las capacidades de acceso y la cantidad de registros que se espera almacenar (decenas, cientos, miles o millones).</p>
+<p>3.4. Restricciones de Dise˜no Todo aquello que restrinja las decisiones relativas al dise˜no de la aplica- ci´on: Restricciones de otros est´andares, limitaciones del hardware, etc. 3.5. Atributos del Sistema Se detallar´an los atributos de calidad (las “ilities”) del sistema: Fiabilidad, mantenibilidad, portabilidad, y, muy importante, la seguridad. Deber´a espe- ciﬁcarse qu´e tipos de usuario est´an autorizados, o no, a realizar ciertas tareas, y c´omo se implementar´an los mecanismos de seguridad (por ejemplo, por me- dio de un login y una password).</p>
+<p>3.6. Otros Requisitos Cualquier otro requisito que no encaje en otra secci´on. 4. Ap´endices Pueden contener todo tipo de informaci´on relevante para la ERS pero que, propiamente, no forme parte de la ERS. Por ejemplo</p>
+<ul>
+<li>Formatos de entrada/salida de datos, por pantalla o en listados.</li>
+<li>Resultados de an´alisis de costes.</li>
+<li>Restricciones acerca del lenguaje de programaci´on.</li>
+</ul>
+<hr/>
+<h2 id="ut0003">0.3 Especificaciones requisitos software_ejemplo</h2>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 1</p>
+<p>Especificación de requisitos de software</p>
+<p>Proyecto: SISCOOP Revisión 1.0</p>
+<p>Abril</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 2</p>
+<p>Ficha del documento</p>
+<p>Fecha Revisión Autor Verificado dep. calidad. 12/04/2010 1.0 Angel Cobo, Holger Morales</p>
+<p>Documento validado por las partes en fecha: 12/04/2010</p>
+<p>Por el cliente Por la empresa suministradora</p>
+<p>Fdo. D./ Dña Gonzalo Rodriguez Fdo. D./Dña Morales&amp;Cobos Asociados</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 3</p>
+<p>Descripción de requisitos del sofware Contenido FICHA DEL DOCUMENTO .......................................................................................................... 3 CONTENIDO ................................................................................................................................ 4 1 INTRODUCCIÓN ....................................................................................................................... 6 1.1 Propósito ................................................................................................................................ 6 1.2 Alcance ................................................................................................................................... 6 1.3 Personal involucrado ............................................................................................................ 6 1.4 Definiciones, acrónimos y abreviaturas ............................................................................. 6 1.5 Referencias ............................................................................................................................ 6 1.6 Resumen ................................................................................................................................ 6 2 DESCRIPCIÓN GENERAL ........................................................................................................ 7 2.1 Perspectiva del producto ..................................................................................................... 7 2.2 Funcionalidad del producto ................................................................................................. 7 2.3 Características de los usuarios ........................................................................................... 7 2.4 Restricciones ......................................................................................................................... 7 2.5 Suposiciones y dependencias ............................................................................................. 7 2.6 Evolución previsible del sistema ......................................................................................... 7 3 REQUISITOS ESPECÍFICOS .................................................................................................... 7 3.1 Requisitos comunes de los interfaces ................................................................................ 8 3.1.1 Interfaces de usuario ............................................................................................................ 8 3.1.2 Interfaces de hardware ......................................................................................................... 8 3.1.3 Interfaces de software ........................................................................................................... 8 3.1.4 Interfaces de comunicación .................................................................................................. 8 3.2 Requisitos funcionales ......................................................................................................... 8 3.2.1 Requisito funcional 1 ............................................................................................................. 9 3.2.2 Requisito funcional 2 ............................................................................................................. 9 3.2.3 Requisito funcional 3 ............................................................................................................. 9 3.2.4 Requisito funcional n ............................................................................................................. 9 3.3 Requisitos no funcionales .................................................................................................... 9 3.3.1 Requisitos de rendimiento .................................................................................................... 9 3.3.2 Seguridad .............................................................................................................................. 9 3.3.3 Fiabilidad ............................................................................................................................... 9 3.3.4 Disponibilidad ........................................................................................................................ 9 3.3.5 Mantenibilidad ..................................................................................................................... 10 3.3.6 Portabilidad ......................................................................................................................... 10</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 4</p>
+<p>3.4 Otros requisitos ................................................................................................................... 10 4 APÉNDICES............................................................................................................................. 10</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 5</p>
+<p>1 Introducción La presente Especificación de requerimientos de software (SRS) del sistema a construir surge para ser un conjunto de información necesaria que ayuda a los desarrolladores del software a analizar y entender todos los requisitos y requerimientos que nuestro cliente desea , de la misma forma como este constituye un informe útil para que el cliente del producto final describa lo que el realmente desea obtener, y de esta manera lograr tener un documento necesario cuya información en el futuro servirá para el desarrollo del software, es decir en la codificación correcta del mismo.</p>
+<p>Se describirá en forma detallada las interfaces de usuario, de software, del hardware y comunicaciones, así como de los requerimientos del cliente, atributos del sistema entre otros.</p>
+<p>1.1 Propósito ◦ Permitir establecer las bases de acuerdo entre usuarios en lo que al proyecto de software se refiere.</p>
+<ul>
+<li>Ayudar a los usuarios finales del software a entender exactamente que es lo que el</li>
+</ul>
+<p>cliente de software desea. 1.2 Alcance • Identificación del producto de software “SISCOOP” • Objetivos del Sistema ◦ Permitir la gestión de usuarios, clientes y socios ◦ Apertura de libretas de ahorro ◦ Realizar créditos y depósitos ahorros ◦ Emitir informes cuando los usuarios o directivos lo necesiten (diarios, semanales, quincenales, etc.)</p>
+<p>1.3 Personal involucrado Nombre Holger Morales Rol Programador Categoría profesional Analista Responsabilidad es Programar los módulos del sistema Información de contacto holger_morales@hotmail.com Aprobación</p>
+<p>Nombre Angel Cobo Rol Gestor de proyecto Categoría profesional Analista Responsabilidad es Diseño de la arquitectura del sistema Información de contacto coboangel210@gmail.com Aprobación</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 6</p>
+<p>Nombre Luis Lema Rol Diseñador de base de datos Categoría profesional Analista Responsabilidad es Diseño de la base de datos Información de contacto luislema3015@yahoo.es Aprobación</p>
+<p>Nombre Jose Manzano Rol Analista de requerimientos Categoría profesional Analista Responsabilidad es Analisis y especificación de requerimientos Información de contacto manzanojl@hotmail.com Aprobación</p>
+<p>Nombre Oljer Cando Rol Programador Categoría profesional Analista Responsabilidad es Programación de los módulos Información de contacto candooljer@yahoo.es Aprobación</p>
+<p>Nombre Tania Aguirre Rol Analista de requerimientos Categoría profesional Analista Responsabilidad es Análisis y especificación de requerimientos Información de contacto tamiaaguirre@hotmail.com Aprobación</p>
+<p>Nombre Eduardo Bustillos Rol Analista de requerimientos Categoría profesional Analista Responsabilidad es Análisis y especificación de requerimientos Información de contacto manzanojl@hotmail.com Aprobación</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 7</p>
+<p>1.4 Definiciones, acrónimos y abreviaturas DEFINICIONES Actualización.- Insertar, eliminar, modificar los registros de los usuarios (Profesores). Almacenamiento.- En relación con ordenadores o computadoras, cualquier dispositivo capaz de almacenar información procedente de un sistema informático.</p>
+<p>Backup.- Las copias de seguridad en un sistema informático tienen por objetivo el mantener cierta capacidad de recuperación de la información ante posibles pérdidas. Esta capacidad puede llegar a ser algo muy importante, incluso crítico, para las empresas. Se han dado casos de empresas que han llegado a desaparecer ante la imposibilidad de recuperar sus sistemas al estado anterior a que se produjese un incidente de seguridad grave.</p>
+<p>Base de Datos.- Cualquier conjunto de datos organizados para su almacenamiento en la memoria de un ordenador o computadora, diseñado para facilitar su mantenimiento y acceso de una forma estándar. La información se organiza en campos y registros. Un campo se refiere a un tipo o atributo de información, y un registro, a toda la información sobre un individuo.</p>
+<p>Botón.- Es un objeto tangible que realiza un evento tras su activación. Conexión.- Comunicación entre dos entes que tienen características similares de comunicación. Interfaz.- Medio que permite la comunicación entre el usuario y el sistema. Internet.- interconexión de redes informáticas que permite a los ordenadores o computadoras conectadas comunicarse directamente, es decir, cada ordenador de la red puede conectarse a cualquier otro ordenador de la red. El término suele referirse a una interconexión en particular, de carácter planetario y abierto al público, que conecta redes informáticas de organismos oficiales, educativos y empresariales.</p>
+<p>Login.- Nombre o alias que se le da a una persona para permitirle el acceso al sistema siempre y cuando estén registrados. PASSWORD.- Contraseña o clave para autentificar el ingreso a un lugar o sitio. Periférico.- En informática, término utilizado para dispositivos, como unidades de disco, impresoras, módem que están conectados a un ordenador o computadora y son controlados por su microprocesador.</p>
+<p>Protocolo.- Señal mediante la cual se reconoce que puede tener lugar la comunicación o la transferencia de información. Servidor.- Computadora conectada a una red que pone sus recursos a disposición del resto de los integrantes de la red. Suele utilizarse para mantener datos centralizados o para gestionar recursos compartidos.</p>
+<p>Servidor de archivos.- Dispositivo de almacenamiento de archivos en una red de área local, o en Internet, al que los distintos usuarios de la red pueden acceder, en función de los privilegios que les hayan sido dados por parte del administrador.</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 8</p>
+<p>Sistema Operativo.- Software básico que controla una computadora. El sistema operativo tiene tres grandes funciones: coordina y manipula el hardware del ordenador o computadora, como la memoria, las impresoras, las unidades de disco, el teclado o el mouse; organiza los archivos en diversos dispositivos de almacenamiento, como discos flexibles, discos duros, discos compactos o cintas magnéticas, y gestiona los errores de hardware y la pérdida de datos.</p>
+<p>Sitio Web.- Se canaliza a través del URL o identificador único de cada página de contenidos. Este sistema permite a los usuarios iniciar una solicitud de trámite y a los funcionarios del Agua Potable atender las solicitudes e ingresar datos de las inspecciones realizadas.</p>
+<p>POSTGRESQL- Lenguaje de consulta estructurado, en informática, un lenguaje utilizado en bases de datos para consultar, actualizar y manejar bases de datos relacionales. Tabla.- Entidad que posee campos físicos primarios secundarios</p>
+<p>ACRÓNIMOS DBA.- Es aquella persona que tiene el control central del sistema de base de datos. DBMS.- Sistema de Administración de base de datos, El software que permite la creación, administración e implementación de la base de datos. “SYSBALANCE”.- Sistema de “DOSIFICACION DE BALANCEADOS”</p>
+<p>GUI o acrónimo de Graphical User Interface.- En informática, tipo de entorno que permite al usuario elegir comandos, iniciar programas, ver listas de archivos y otras opciones utilizando las representaciones visuales (iconos) y las listas de elementos del menú. Las selecciones pueden activarse bien a través del teclado o con el ratón.</p>
+<p>ODBC.- Herramienta que conecta la base de datos con la interfaz. SRS.- Acrónimo de Software Requeriments Specifications (Especificación de Requerimientos de Software) TCP/IP.- Acrónimo de Transmisión Control Protocol/Internet Protocol (protocolo de control de transmisiones/protocolo de Internet), protocolos usados para el control de la transmisión en Internet. Permite que diferentes tipos de ordenadores o computadoras se comuniquen a través de redes heterogéneas.</p>
+<p>URL.- Un URL es una cadena de caracteres que identifica el tipo de documento, la computadora, el directorio y los subdirectorios en donde se encuentra el documento y su nombre.</p>
+<p>ABREVIATURAS HW: Hardware SW: Software Sr. Señor Sra. Señora Ing. Ingeniero(a) Dr. Doctor(a)</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 9</p>
+<p>1.5 Referencias Referencia Titulo Ruta Fecha Autor [Ref.] [Título] [Ruta] [Fecha] [Autor]</p>
+<p>1.6 Resumen El SRS está compuesto de la siguiente manera  Introducción: En ésta sección se detalla los objetivos que tiene el SRS y de nuestro sistema en forma general.  Descripción General: Describe una perspectiva general del producto a desarrollarse, como también las características del usuario y las limitaciones que podría tener.</p>
+<p> Requerimientos Específicos: Muestra paso a paso todos los requerimientos que el usuario desea en el producto final. Para el cual se ha utilizado el “Prototipo 2 del Estándar IEEE 380”. 2 Descripción general 2.1 Perspectiva del producto El sistema que se va ha desarrollar es independiente, y tendrá un diseño modular para gestionar las diferentes áreas dentro de una cooperativa</p>
+<p>2.2 Funcionalidad del producto</p>
+<p>2.3 Características de los usuarios Tipo de usuario Cajera Formación Conocimientos básicos de contabilidad Habilidades Manejo de computadores y sistemas de contabilidad Actividades Realizar operaciones de depósitos y retiros</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 10</p>
+<p>Tipo de usuario Asesor de crédito Formación Conocimientos sólidos de contabilidad (tercer nivel) Habilidades Manejo de computadores y sistemas de contabilidad Actividades Realizar los análisis de los clientes para los creditos, liquida créditos</p>
+<p>Tipo de usuario Gerente Formación Conocimientos sólidos de contabilidad (tercer nivel) Habilidades Manejo de computadores y sistemas de contabilidad Actividades Generar, analizar y tomar decisiones en función de los reportes que genere el sistema</p>
+<p>Tipo de usuario Técnico en sistemas Formación Analista en sistemas Informáticos Habilidades Conocimientos básicos de bases de datos, hardware de computador, redes LAN Actividades Mantenimiento de los equipos, revisar y mantener la red</p>
+<p>2.4 Restricciones El sistema será desarrollado en JAVA un lenguaje con una orientación a objetos del 97%, el motor de la base de datos es PostgreSql 8.4 de tecnología Objeto-Relacional, la metodología para el desarrollo se basara en las mejores características de las metodologías tradicionales(evolutivas) y ágiles como MSF.</p>
+<p>2.5 Suposiciones y dependencias Ninguno. 2.6 Evolución previsible del sistema Trabajar con base de datos distribuidas, Inteligencia de negocios. 3 Requisitos específicos R1: Permitir la autenticación de los usuarios. R2: Permitir la gestión (crear, modificar, eliminar) de usuarios, clientes y socios.</p>
+<p>R3: Aperturar libretas de ahorro. R4: Realizar operaciones de depósitos(ahorros). R5: Realizar operaciones de créditos.</p>
+<p>3.1 Requisitos comunes de los interfaces 3.1.1 Interfaces de usuario Las interfaces de usuario están relacionadas con las pantallas, ventanas (formularios) que debe manipular el usuario para realizar una operación determinada. Dicha manipulación el usuario la realizará por medio del teclado y el Mouse (ratón).</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 11</p>
+<p>Es importante mencionar que las interfaces de usuario también abarcan las ayudas correspondientes en cada uno de los procesos que realice el sistema.</p>
+<p>Las interfaces de usuario ayudaran al usuario final trabajando en un ambiente Form, por lo que se dichas interfaces incluirán: • Botones • Menús despegables • Mensajes informativos • Mensajes de error • Cuadros de diálogo • Formularios para el ingreso, modificación, actualización y eliminación de datos. Así como para las operaciones y las ayudas que se mencionó anteriormente.</p>
+<p>• Otros</p>
+<p>A continuación se muestra una previa de lo que será las interfaces de usuario. El usuario previamente debe tener su cuenta de usuario en el sistema para poder acceder.</p>
+<p>En caso de que no ingrese correctamente el USUARIO o el PASSWORD se desplegara un mensaje de datos incorrectos. Como a continuación se muestra.</p>
+<p>3.1.2 Interfaces de hardware La pantalla del monitor.- el software deberá mostrar información al usuario a través de la pantalla del monitor.</p>
+<p>Ratón.- el software debe interactuar con el movimiento del ratón y los botones del ratón. El ratón se activan las zonas de entrada de datos, botones de comando y seleccione las opciones de los menús.</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 12</p>
+<p>Teclado.- el software deberán interactuar con las pulsaciones del teclado. El teclado de entrada de datos en el área activa de la base de datos. Impresora.- el software impimira los reportes en la impresora instalada. 3.1.3 Interfaces de software Ninguno.</p>
+<p>3.1.4 Interfaces de comunicación La interfaz de comunicación entre el servidor de base de datos PostgreSQL y la aplicación desarrollada en JAVA se lo realiza mediante JDBC. 3.2 Requisitos funcionales 3.2.1 Requisito funcional 1</p>
+<p>Número de requisito RF1 Nombre de requisito Permitir la autenticación de los usuarios. Tipo Requisito Restricción Fuente del requisito BD Tabla: Usuario Campos: user y password Prioridad del requisito Alta/Esencial Media/Deseado Baja/ Opcional</p>
+<p>INTRODUCCION El sistema debe permitir el ingreso del nombre y password del usuario para realizar las diferentes funciones que tendrá cada uno.</p>
+<p>ENTRADAS Cedula, Nombres, Apellidos, Contraseña, Tipo de Usuario (Técnico, Cajero, Gerente). PROCESOS El sistema pedirá la correspondiente identificación como administrador. Nos ubicamos en la parte de Administrar del menú principal y escogemos Usuario El sistema pedirá los correspondientes datos del nuevo usuario luego verificara que no haya espacios en blanco, en el caso de ningún error guardara los datos del nuevo usuario.</p>
+<p>SALIDAS Las salidas van dirigidas a: Administrador (Gerente). Mensaje de error en el caso de no haber llenado algún campo. Mensaje de error en el caso de ingresar un numero de cedula ya existente en la base de datos Mensaje de error en casos de ingresar incorrectamente los datos es decir que el formato de los datos sea incorrecto.</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 13</p>
+<p>3.2.2 Requisito funcional 2 Número de requisito RF2 Nombre de requisito Permitir la gestión (crear, modificar, eliminar) de usuarios, clientes y socios. Tipo Requisito Restricción Fuente del requisito BD Tabla: Usuario, Clientes, Socios Prioridad del requisito Alta/Esencial Media/Deseado Baja/ Opcional INTRODUCCION El sistema debe permitir gestionar es decir crear, modificar y eliminar las cuentas de usuarios, clientes y socios.</p>
+<p>ENTRADAS Cedula, Nombres, Apellidos, Tipo de Usuario (Técnico, Cajero, Gerente), Dirección, Teléfono. PROCESOS Para cumplir con este requerimiento se le presentara una sola pantalla donde el sistema pedirá la correspondiente identificación como administrador. Nos ubicamos en la parte de Administrar del menú principal y escogemos Usuario El sistema pedirá los correspondientes datos del nuevo usuario, cliente o socio luego verificara que no haya espacios en blanco, en el caso de ningún error guardara los datos del nuevo usuario. En este mismo formulario podrá crear, modificar y guardar.</p>
+<p>SALIDAS Las salidas van dirigidas a: Administrador (Gerente). Mensaje de error en el caso de no haber llenado algún campo. Mensaje de error en el caso de ingresar un numero de cedula ya existente o mal ingresada en la base de datos. Mensaje de error en casos de ingresar incorrectamente los datos es decir que el formato de los datos sea incorrecto.</p>
+<p>Mensaje de error al eliminar una cuenta, ya que no se permite eliminaciones en cascada.</p>
+<p>3.2.3 Requisito funcional 3 Número de requisito RF3 Nombre de requisito Aperturar libretas de ahorro. Tipo Requisito Restricción Fuente del requisito BD Tabla: Cuenta, Ahorro, CertificadoAportacion Prioridad del requisito Alta/Esencial Media/Deseado Baja/ Opcional</p>
+<p>INTRODUCCION El sistema debe permitir gestionar las libretas de ahorro es decir crear, modificar y eliminar las cuentas de ahorro.</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 14</p>
+<p>ENTRADAS Número de cuenta, Cedula, Nombres, Apellidos, Dirección, Teléfono. PROCESOS Para cumplir con este requerimiento se le presentara una sola pantalla donde el sistema pedirá la correspondiente identificación como administrador para efectuar la tarea. Nos ubicamos en la parte de Administrar cuentas de ahorro. El sistema pedirá los correspondientes datos al cliente o socio para la apertura de la libreta, el mismo que verificara los datos ingresados a la base de datos. En el caso de modificar los datos tiene que hacerlo mediante el número de cuenta. No se podrá eliminar las cuentas de ahorro, simplemente en caso de que así lo desee a la cuenta de ahorro se le pasara a un estado inactivo.</p>
+<p>SALIDAS Las salidas van dirigidas a: Administrador (Gerente), Cajero. Mensaje de error en el caso de no haber llenado algún campo. Mensaje de error en el caso de ingresar un número de cuenta ya existente o mal ingresada en la base de datos. Mensaje de error en casos de ingresar incorrectamente los datos es decir que el formato de los datos sea incorrecto.</p>
+<p>Mensaje de error al eliminar una cuenta de ahorro (libreta), ya que no se permite eliminaciones en cascada.</p>
+<p>3.2.4 Requisito funcional 4 Número de requisito RF4 Nombre de requisito Realizar operaciones de depósitos (ahorros). Tipo Requisito Restricción Fuente del requisito BD Tabla: Cuenta, Ahorro, CertificadoAportacion, Creditos Prioridad del requisito Alta/Esencial Media/Deseado Baja/ Opcional</p>
+<p>INTRODUCCION El sistema debe permitir realizar las operaciones de depósitos (ahorros).</p>
+<p>ENTRADAS Número de cuenta, Cedula, Valor dinero. PROCESOS Para cumplir con este requerimiento se le presentara una sola pantalla donde el sistema pedirá la correspondiente identificación como administrador para efectuar la tarea. Nos ubicamos en la parte de Administrar “Depósitos” Para realizar esta operación debe ingresar el número de cuenta y la cantidad a depositar, y dicha operación será registrada en la base de datos.</p>
+<p>SALIDAS Las salidas van dirigidas a: Administrador (Gerente), Cajero. Mensaje de aviso: operaciones efectuadas satisfactoriamente. Mensaje de error: en el caso de no haber llenado algún campo.</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 15</p>
+<p>Mensaje de error: en casos de ingresar incorrectamente los datos es decir que el formato de los datos sea incorrecto.</p>
+<p>3.2.5 Requisito funcional 5 Número de requisito RF5 Nombre de requisito Realizar operaciones de créditos. Tipo Requisito Restricción Fuente del requisito BD Tabla: Cuenta, Ahorro, CertificadoAportacion, Creditos Prioridad del requisito Alta/Esencial Media/Deseado Baja/ Opcional INTRODUCCION El sistema debe permitir realizar las operaciones de créditos (retiros o salida de dinero).</p>
+<p>ENTRADAS Número de cuenta, Cedula, Valor dinero. PROCESOS Para cumplir con este requerimiento se le presentara una sola pantalla donde el sistema pedirá la correspondiente identificación como administrador para efectuar la tarea. Nos ubicamos en la parte de Administrar “Creditos” Para realizar esta operación debe ingresar el número de cuenta y la cantidad a retirar, y dicha operación será registrada en la base de datos.</p>
+<p>SALIDAS Las salidas van dirigidas a: Administrador (Gerente), Cajero. Mensaje de aviso: operaciones efectuadas satisfactoriamente. Mensaje de error: en el caso de no haber llenado algún campo. Mensaje de error: en casos de ingresar incorrectamente los datos es decir que el formato de los datos sea incorrecto.</p>
+<p>Mensaje de error: en el caso de que no tenga suficiente saldo para efectuar dicho retiro.</p>
+<p>3.2.6 Requisito funcional 6 Número de requisito RF6 Nombre de requisito Emitir reportes de: Tablas de amortización, cotizaciones. Tipo Requisito Restricción Fuente del requisito BD Tabla: Cuenta, Ahorro, CertificadoAportacion, Creditos Prioridad del requisito Alta/Esencial Media/Deseado Baja/ Opcional</p>
+<p>INTRODUCCION El sistema debe emitir reportes de Tablas de amortización y Tablas de cotizaciones.</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 16</p>
+<p>ENTRADAS Número de crédito, Cedula, Valor dinero. PROCESOS Para cumplir con este requerimiento se le presentara una sola pantalla donde el sistema pedirá la correspondiente identificación como administrador para efectuar la tarea. Nos ubicamos en la parte de “Reportes”. Para realizar esta operación debe ingresar el número de crédito. La salida de los reportes es en los siguientes formatos pdf, html, cvs. Y con opción a imprimir.</p>
+<p>SALIDAS Las salidas van dirigidas a: Administrador (Gerente), Cajero. Mensaje de aviso: operaciones efectuadas satisfactoriamente. Mensaje de error: en el caso de no haber llenado algún campo. Mensaje de error: en casos de ingresar incorrectamente los datos es decir que el formato de los datos sea incorrecto.</p>
+<p>3.3 Requisitos no funcionales 3.3.1 Requisitos de rendimiento La infraestructura de red, así como sus terminales deben cumplir con normas según la IEEE en la forma de conexión a los equipos, para tener tiempos de respuesta mínimos.</p>
+<p>o Numero de terminales a manejar</p>
+<p>Se contará con un servidor de base de datos en la matriz de la cooperativa.</p>
+<p>o Número de usuarios simultáneos</p>
+<p>El número de usuarios que interactuaran simultáneamente con nuestro sistema es de 3 usuarios.</p>
+<p>o Numero de transacciones a manejar dentro de ciertos periodos de tiempo</p>
+<p>Se estima que se manejará alrededor 30 transacciones durante el día, tomando en cuenta que la cajera realiza aproximadamente 20 operaciones diarias, como ahorros y retiros y el resto lo hace el gerente y la secretaria tareas propias.</p>
+<p>El servidor de base de datos, deberá tener un respaldo apropiado, así como personal técnico listo para cualquier eventualidad.</p>
+<p>3.3.2 Seguridad La seguridad del sistema es por:  Uso de contraseñas para cada usuario (administrador, cajera, oficial de crédito). Esto permitirá que tengan acceso al sistema solo las personas que tienen autorización.</p>
+<p>SISCOOP Especificación de requisitos de software Rev. 1.0 Pág. 17</p>
+<p> Registros de ingreso al sistema.  Creación de roles y asignarlos a cada usuario dependiendo su funcionalidad. 3.3.3 Fiabilidad Es uno de los factores que dará confianza al cliente, para lo cual el sistema está controlando todo tipo de transacción y esta apto a responde todo tipo de incidente.</p>
+<p>3.3.4 Disponibilidad El sistema ha sido desarrollado tomando en cuenta las necesidades, requerimientos, reglas, política, misión, objetivos etc. De la cooperativa, por lo que se encuentra disponible el 80% del tiempo del día tomando en cuenta que el día tiene 24 horas; mientras que el 20% del tiempo es para tareas administrativas sobre el sistema.</p>
+<p>3.3.5 Mantenibilidad El sistema cuenta con características parametrizables lo que permitirá futuros mantenimientos. Es decir cada tres meses se va a realizar un mantenimiento preventivo, encargado de hacerlo están los desarrolladores. Se realizara el mantenimiento dos veces sin ningún recargo económico, pasados estas dos revisiones tendrán costos adicionales.</p>
+<p>3.3.6 Portabilidad Una de las ventajas de utilizar herramientas y lenguajes basados en sw libre estamos garantizando la portabilidad. De esta manera:  99.9% es portable la aplicación por el simple hecho de utilizar el lenguaje y plataforma JAVA.  99% es portable la base de datos, PostgreSQL es decir puedo tenerlo en Windows o Linux.</p>
+<p>3.4 Otros requisitos PROPIEDAD INTELECTUAL El costo de licencia de producto será valorado por el número de usuarios que se conecten. 4 Apéndices</p>
+<hr/>
+<h2 id="ut00actividades">✍️ Activitats pràctiques UT0</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 0.1 — U1 A1</p><p>Unitat 1 – Introducció al desenvolupament de SW</p>
+<p>U1 – A1</p>
+<p>En aquest exercici realitzaràs una línia temporal online, de forma que podràs inserta tant fotografies com vídeos relacionats amb l’evolució del software des dels seus inicis fins a l’actualitat.</p>
+<p>Per a la línia temporal, pots fer ús de qualsevol de les ferramentes que trobaràs en aquesta Web o bé qualsevol altra (Word, Canva, Powerpoint, etc).</p>
+<p>https://www.educaciontrespuntocero.com/recursos/herramientas-crear- lineas-tiempo/</p>
+<p>La línia temporal no té un mínim ni un màxim d’esdeveniments. La recomanació es llegir tot i indicar els que et pareguen més importants.</p>
+<p>Com a tip, la línia de temps deuria incloure noms com Alan Turing, Ada Lovelace o John W. Tukey.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 0.2 — U1 A2</p><p>Unitat 1 – Introducció al desenvolupament de SW</p>
+<p>U1 – A2</p>
+<p>Instruccions</p>
+<ul>
+<li>Recorda copiar tant enunciats com les respostes.</li>
+<li>Entrega el document en format PDF a la tasca d’aules creada per a tal</li>
+</ul>
+<p>fi.</p>
+<ul>
+<li>No còpies i pegues. Gasta les teues paraules.</li>
+<li>Les activitats del 1 a la 4 tenen un pes del 50%.</li>
+<li>L’activitat 5 té un pes del 50%</li>
+</ul>
+<h3>1. Què és el desenvolupament de software?</h3>
+<h3>2. Quines etapes formen el cicle de vida del software de forma genèrica?</h3>
+<p>Existeixen altres etapes?</p>
+<h3>3. En què consisteix l’etapa d’anàlisi? Creus que el desarrollador final deu</h3>
+<p>estar present? Per què?</p>
+<h3>4. Què es el quadern de càrrega? Busca informació a Internet i explica-ho</h3>
+<p>breument amb les teues paraules.</p>
+<h3>5. Busca 5 cicles de software actuals i fes una breu explicació de cadascun</h3>
+<p>d’ells.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/ut00actividades.html">⬅️ ✍️ Activitats pràctiques UT0</a>
+<a class="page-nav-btn" href="../ut00/ut0001.html">0.1 U1 - Intr. al desarrollo de SW ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

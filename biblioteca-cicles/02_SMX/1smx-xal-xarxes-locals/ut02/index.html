@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT2 — Unitat Didàctica 2 — Xarxes Locals | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🖧 Xarxes Locals — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Xarxes Locals</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Sistemes Microinformàtics i Xarxes</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Avaluació</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unitat Didàctica 1</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Continguts i Recursos</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unitat Didàctica 2</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Solución: Proyecto de Instalación LAN</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unitat Didàctica 3</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Recursos: Ejercicios de Direccionamiento IP</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 4</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — i 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Continguts i Recursos</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Final de Curs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Dossier de Recuperació</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unitat Didàctica 7</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Unitat Didàctica 8</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Unitat Didàctica 9</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT2 Completa</span>
+<h1>📘 UT2 — Unitat Didàctica 2 (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0201"><strong>2.1 Solución: Proyecto de Instalación LAN</strong></a> (o <a href="./ut0201.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut02actividades"><strong>✍️ Activitats pràctiques UT2</strong></a> (o <a href="./ut02actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0201">2.1 Solución: Proyecto de Instalación LAN</h2>
+<div class="admonition tip"><p class="admonition-title">📌 Introducció de la Unitat</p><p><span style="font-weight: bold;">Muntatge de Xarxes [63]<br/></span>2.1.- Transmissió de dades<br/>2.2.- Cablatge estructurat<br/>2.3.- Normes de seguretat i riscos<br/><span style="font-weight: bold;"><br/></span></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Proveedor LANShack</p><p><a href="http://www.lanshack.com/" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.lanshack.com/) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Proveedor MOD-PC</p><p><a href="http://www.mod-pc.com/modules.php?name=Tienda&amp;op=vcat&amp;cat=WN" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.mod-pc.com/modules.php?name=Tienda&amp;op=vcat&amp;cat=WN) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Planificación de Proyectos con Gantt Project 2.0.10</p><p><a href="http://www.ganttproject.biz/download" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.ganttproject.biz/download) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Herramientas de redes</p><p><a href="http://www.pelechano.com/2010/10/pack-de-herramientas-de-redes/" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.pelechano.com//pack-de-herramientas-de-redes/) ↗️</strong></a></p>Herramientas de redes</div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Video de Crimpar UTP</p><p><a href="http://www.youtube.com/watch?v=LJWLiYQoxzc&amp;feature=player_embedded" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.youtube.com/watch?v=LJWLiYQoxzc&amp;feature=player_embedded) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Construir Cable UTP Cruzado</p><p><a href="http://www.pasarlascanutas.com/cable_cruzado/cable_cruzado.htm" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.pasarlascanutas.com/cable_cruzado/cable_cruzado.htm) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Video de Punching UTP</p><p><a href="http://youtu.be/Sw1XRffMry0" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://youtu.be/Sw1XRffMry0) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: Elementos CPD</p><p><a href="http://www.seguridadcpd.com" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.seguridadcpd.com) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Enlace: CPD Desastre</p><p><a href="http://www.pelechano.com/2010/10/cpd-desastre/" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (http://www.pelechano.com//cpd-desastre/) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: 02 - Extra: Internet Submarino</p><p><a href="https://www.youtube.com/watch?v=5F_zGcNIi9E" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=5F_zGcNIi9E) ↗️</strong></a></p><p>Documental</p></div>
+<hr/>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Proyecto de implantación Red Local "Pepe Consultores" 03 de Noviembre de 2009</p>
+<p>Pelechano Soluciones http://www.pelechano.com</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Tabla de contenidos Especificaciones ................................................................................................................................................... 3 Propuesta técnica ................................................................................................................................................ 5 Medios de transmisión ................................................................................................................................ 5 Topología ..................................................................................................................................................... 5 Esquema de cableado .................................................................................................................................. 6 Etiquetado ................................................................................................................................................... 7 Centro de Proceso de Datos ........................................................................................................................ 8 Servicios ..................................................................................................................................................... 10 Presupuesto ....................................................................................................................................................... 11 Planificación temporal ....................................................................................................................................... 12 Diagramas de instalación................................................................................................................................... 13 Diagramas de instalación................................................................................................................................... 13</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Especificaciones La empresa "Pepe Consultores" se dedica a la Gestión Laboral y Contable de PYMEs, ofreciendo servicios de consultoría, asesoramiento legal y externalización de la contabilidad a empresas y autónomos de la localidad. Ante la necesidad de montar la infraestructura de red, Pepe quiere añadir a su plantilla a un profesional informático que seleccionará mediante el propio proyecto de implantación, con la idea en mente de ofrecer a sus clientes también un servicio de Atención Informática. En total, trabajarán en la empresa 6 personas</p>
+<p>• Un abogado, encargado de los aspectos legales que resulta ser el propio Pepe que también se encarga de la gestión de la empresa. • Una diplomada en Relaciones Laborales, encargada de la asesoría. • Una economista, encargada de aspectos contables de la empresa y de las subcontratas.</p>
+<p>• Un técnico superior en Administración y Finanzas, encargado de auxiliar a la economista. • Una técnico de Gestión Administrativa, encargada de labores de recepción. • Un técnico de Sistemas Microinformáticos y Redes, encargado de montar y mantener la red y la dotación informática de la empresa.</p>
+<p>Ilustración 1 Distribución en planta</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>La distribución pensada por el Gestor para la empresa es la que figura en el plano mostrado, siendo el uso previsto de las diferentes estancias el siguiente: • Sala 1: Técnico SMR. Taller de reparación de equipos. • Sala 2: Economista. Técnico Superior en Administración y Finanzas. Pequeño archivo de documentación.</p>
+<p>• Sala 3: Relaciones Laborales. Las acometidas de comunicaciones llegan por esta estancia al local. • Sala 4: Recepción. Servicio de impresión común y fotocopiadora. • Sala 5: Abogado/Gestor, con pequeña sala de reuniones. • Sala 6: Sala de reuniones con clientes. • Otras: Existe un aseo y una pequeña cocina para empleados dónde tomar café.</p>
+<p>Las necesidades de la empresa se basan en un acceso fiable a Internet y teléfono para cada uno de los puestos de trabajo mediante el uso de una centralita, uso de una red local para compartir datos con seguridad y se desea un sistema de copias de seguridad en los datos contables, disponer de Wifi en la recepción y en la sala de reuniones para los clientes, sistema de vigilancia a través de vídeo por red en la entrada de la empresa, fotocopiadora con red en la recepción. Se valorarán los proyectos que prevean la posibilidad de ampliar el personal de la empresa en un momento dado con la inclusión de nuevos puestos de trabajo y aquellos que presenten servicios de valor añadido para el buen funcionamiento de la empresa. La implantación del proyecto será de 2 meses tras su aprobación, siendo el presupuesto y la solución técnica presentada determinantes en la obtención del mismo.</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Propuesta técnica Realizaremos un proyecto de implantación de cableado estructurado en la oficina para aprovechar las características de flexibilidad que nos ofrece y las ventajas que aporta en el crecimiento de la red junto con su facilidad de administración. Medios de transmisión Usaremos como medio de transmisión cable UTP Categoría 6, tanto para la transmisión de datos como para la de voz. De esta manera dispondremos de un cableado adecuado para transmisiones de alta velocidad con Gigabit Ethernet 1000BaseTX (1000 Mbps) sin pérdidas de rendimiento y ofreciendo una gran compatibilidad con los dispositivos de alta velocidad. Las rosetas serán dobles y los conectores hembra universales permitirán la conexión de latiguillos macho acabados tanto en RJ45 (transmisión de datos) como en RJ11 (transmisión de voz).</p>
+<p>Ilustración 2 Roseta doble Ilustración 3 UTP Cat 6</p>
+<p>Ilustración 4 Conector RJ45 Macho</p>
+<p>Ilustración 5 Conector RJ11 Macho</p>
+<p>Ilustración 6 Conector RJ45 Hembra Topología Desplegaremos una red basada en topología en estrella siendo el Centro de Proceso de Datos el elemento central privilegiado que aúne las comunicaciones de la infraestructura a través de un Switch de 24 puertos para la red de datos y uno para la de voz. Usaremos el estándar IEEE 802.3 Ethernet en su variante Giga Ethernet 1000 Base TX para el despliegue de la topología en estrella.</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Dicha instalación permitirá añadir nuevos equipos o reconfigurar con facilidad el diseño de la red. Además, es un sistema que facilita la detección y corrección de errores y averías, simplificando las labores de mantenimiento y minimizando el tiempo de resolución de las mismas.</p>
+<p>Ilustración 7 Red en Estrella Ilustración 8 Switch de 24 puertos Esquema de cableado Es esquema de cableado se basará en el estándar EIA/TIA-568A estableciendo una conexión entre el Patch Panel situado en el Armario de Comunicaciones y cada una de las rosetas dobles situadas en las diferentes estancias. De la roseta a cada equipo terminal usaremos latiguillos de 3 metros que permita cierta movilidad dentro de la estancia y de igual modo usaremos latiguillos de 0,5 metros para la conexión del Patch Panel con el Switch.</p>
+<p>Ilustración 9 Esquema de cableado</p>
+<p>Ilustración 10 Conexión de pins en RJ45</p>
+<p>Ilustración 11 Latiguillo UTP</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>La canalización en superficie se realizará por el falso techo agrupando los cables UTP en bridas y separándolos en los puntos de derivación correspondientes indicados en el diagrama de instalación. Para la bajada del techo a la roseta se ocultarán dichos cables en canaletas blancas autoadhesivas colocadas en vertical.</p>
+<p>Ilustración 12 Falso Techo</p>
+<p>Ilustración 13 Canaleta Autoadhesiva Etiquetado Para el etiquetado e instalación de los diferentes equipos usaremos el siguiente esquema de instalación de rosetas que será convenientemente etiquetado, probado y certificado para su óptimo funcionamiento. El criterio de etiquetado corresponde con la siguiente leyenda</p>
+<p>Origen (sala y roseta) - Destino (patch panel) Ejemplo: S3RS1A-PPA1 correspondería a la "Roseta 1A situada en la sala 3" que conecta con la "toma 1 del Patch panel A". Usamos S como abreviatura de Sala, RS como Roseta y PP como Patch Panel. Para el etiquetado se utilizan marcadores adhesivos con cobertura plástica de protección que colocados en ambos extremos del cable nos indiquen la referencia correspondiente tanto de origen como de destino.</p>
+<p>Ilustración 14 Etiquetas Adhesivas</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Se han asignado las rosetas correspondientes a los servicios mínimos demandados en las necesidades, pero dejando el resto de tomas libres preparadas y funcionales para ser utilizadas de forma inmediata ante cualquier eventualidad futura o ampliación de personal o servicios.</p>
+<p>Roseta RJ45 Etiqueta UTP Canaleta Sala Equipo RS1 A S3RS1A-PPA1 PC-1 RS1 B S3RS1B-PPB1 TELF-1 RS2 A S3RS2A-PPA2 TALLER RS2 B S3RS2B-PPB2</p>
+<p>RS3 A S3RS3A-PPA3</p>
+<p>RS3 B S3RS3B-PPB3</p>
+<p>RS4 A S2RS4A-PPA4 PC-2 RS4 B S2RS4B-PPB4 TELF-2 RS5 A S2RS5A-PPA5</p>
+<p>RS5 B S2RS5B-PPB5</p>
+<p>RS6 A S1RS6A-PPA6 PC-3 RS6 B S1RS6B-PPB6 TELF-3 RS7 A S1RS7A-PPA7</p>
+<p>RS7 B S1RS7B-PPB7</p>
+<p>RS8 A S5RS8A-PPA8 PC-4 RS8 B S5RS8B-PPB8 TELF-4 RS9 A S5RS9A-PPA9 IMP-1 RS9 B S5RS9B-PPB9</p>
+<p>RS10 A S5RS10A-PPA10</p>
+<p>RS10 B S5RS10B-PPB10</p>
+<p>RS11 A S6RS11A-PPA11</p>
+<p>RS11 B S6RS11B-PPB11</p>
+<p>RS12 A S6RS12A-PPA12</p>
+<p>RS12 B S6RS12B-PPB12</p>
+<p>Roseta RJ45 Etiqueta UTP Canaleta Sala Equipo RS13 A S6RS13A-PPA13</p>
+<p>RS13 B S6RS13B-PPB13</p>
+<p>RS14 A S6RS14A-PPA14</p>
+<p>RS14 B S6RS14B-PPB14</p>
+<p>RS15 A S6RS15A-PPA15</p>
+<p>RS15 B S6RS15B-PPB15</p>
+<p>RS16 A S4RS16A-PPA16 PC-5 RS16 B S4RS16B-PPB16 TELF-5 RS17 A S4RS17A-PPA17</p>
+<p>RS17 B S4RS17B-PPB17</p>
+<p>RS18 A S4RS18A-PPA18 CAM-1 RS18 B S4RS18B-PPB18</p>
+<p>RS19 A S4RS19A-PPA19</p>
+<p>RS19 B S4RS19B-PPB19</p>
+<p>RS20 A S4RS20A-PPA20 CAM-2 RS20 B S4RS20B-PPB20</p>
+<p>RS21 A S4RS21A-PPA21</p>
+<p>RS21 B S4RS21B-PPB21</p>
+<p>RS22 A S4RS22A-PPA22 IMP-2 RS22 B S4RS22B-PPB22</p>
+<p>RS23 A S4RS23A-PPA23 CAM-3 RS23 B S4RS23B-PPB23</p>
+<p>RS24 A S4RS24A-PPA24 CAM-4 RS24 B S4RS24B-PPB24</p>
+<p>Centro de Proceso de Datos El Centro de proceso de Datos lo situaremos en la estancia 3 dado que las acometidas del proveedor de datos tienen entrada al local por dicha estancia. Por ello, y con la finalidad de minimizar el impacto al resto de profesionales de la empresa ante incidencias que requieran la administración o mantenimiento de dichos equipos, recomendamos cambiar la ubicación del Técnico de Sistemas Microinformáticos y Redes a esta estancia. Con esta medida, minimizamos el coste de la instalación rentabilizando el cableado en estrella y separamos las infraestructuras críticas del riesgo de inundaciones producidas por las canalizaciones de agua cercanas a la estancia 1.</p>
+<p>El Centro de Proceso de Datos se separará del puesto de trabajo del Técnico por un muro aislante con vitrina, que permita la colocación de los dispositivos en un entorno refrigerado (Aire acondicionado) adecuadamente y la instalación de un sistema de alimentación ininterrumpida (SAI) que estabilice el</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>flujo eléctrico y evite caídas y picos de tensión. Adicionalmente, también restringimos el acceso a los servidores y armario de cableado a personal no autorizado o competente. Ilustración 15 SAI</p>
+<p>Ilustración 16 pared de cristal CPD</p>
+<p>Ilustración 17 Armario de Comunicaciones</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Servicios Los servicios compartidos requieren el uso de impresoras con conexión IP gestionados por un equipo servidor situado en el rack que controle el volumen de impresión de cada usuario con permisos. Adicionalmente, se gestionarán en el mismo servidor un sistema de carpetas compartidas que delimiten y separen los datos de la empresa en ámbitos diferenciados, de manera que cada usuario tenga acceso únicamente a la información que necesite. tanto dichas carpetas de datos como los datos de contabilidad contarán con un sistema de copias de seguridad periódicas sobre disco duro externo para asegurar la integridad de los datos. Finalmente, se asegura la máxima protección de dicho servidor con el uso de un sistema de alimentación ininterrumpida que protege de picos de tensión y posibles caídas o fallos de la red eléctrica.</p>
+<p>Asimismo, para la gestión de los servicios de voz, se colocará una centralita digital en el Armario de Comunicaciones que permita la optimización de dos líneas de telefonía básica contratadas y la posibilidad de comunicación interna. En el tema de seguridad se plantea la instalación de cuatro cámaras IP que controlen los accesos y recintos comunes de la empresa, de modo que a través de cualquier equipo de la red el usuario determinado con pueda controlar el local.</p>
+<p>Para atender a las necesidades de acceso a Internet se plantea la contratación de dos líneas independientes de ADSL: una de 6 Mbps destinada a proporcionar una conexión inalámbrica en el local con posibilidad de acceso de los clientes y otra línea de 20 Mbps destinada a la red física distribuida en los diferentes puestos de trabajo. Con esta medida independizamos las redes de Clientes de la red de Gestión ofreciendo seguridad añadida a los datos de la empresa sin perder funcionalidad. La conexión de las acometidas correspondientes se muestran en el diagrama de Acometidas del Centro de Proceso de Datos.</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Presupuesto Se incluyen en el siguiente presupuesto únicamente los materiales genéricos correspondientes al coste material de los elementos de la infraestructura general de cableado estructurado. Los equipos informáticos, impresoras y otros componentes informáticos son facilitados directamente por otro proveedor de la empresa y por tanto quedan excluidos de la presente propuesta de proyecto. de la misma manera, la instalación de aire acondicionado para el Centro de Proceso de Datos y la pared de cristal corre a cargo de otro proveedor. Asimismo, las cuotas mensuales asociadas a las líneas de datos y voz contratadas quedan deliberadamente excluidas. Todos los precios indicados sin IVA.</p>
+<p>Producto Unidades Precio Caja de cable UTP Cat 6 305 metros 205,88 € RJ45 Hembra AMP UTP Cat 6 42,72 € Embellecedor RJ45 de 2 conectores 12,24 € RJ11 Macho 3,90 € Caja Universal Mixta 13,68 € Latiguillo UTP Cat 6 de 0,5 metros 32,16 € Latiguillo UTP Cat 6 de 3 metros 97,44 € Patch Panel 24 puertos UTP Cat 6 55,90 € Switch 24 puertos 10/100/1000 Base-T 424,14 € Armario Rack de 32 U 389,25 € Pack 4 Cámaras IP 403,90 € Canaleta 2 metros Blanca 21 x 11,5 Adhesiva 179,40 € SAI 1500 VA 199,95 € Router Wifi 802.11 b/g/n 113,51 € 2.174,07 € Los costes asociados a la mano de obra de las diferentes tareas que requiere la instalación de la infraestructura de red se detallan en la presente tabla. Todos los precios indicados son IVA.</p>
+<p>Tarea Horas Precio Elaboración del proyecto técnico 500,00 € Gestión con proveedores 150,00 € Montaje del Centro de Proceso de Datos 500,00 € Instalación de cableado, canaletas y rosetas 600,00 € Pruebas y certificación de la instalación 400,00 € Elaboración de la documentación 150,00 € 2.300,00 €</p>
+<p>Los costes totales del proyecto ascienden a 4.474,07 €</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Planificación temporal La instalación completa del proyecto se realizará en 12 días laborables siendo la planificación detallada de las tareas a realizar o contratar en proveedores adicionales las que siguen y figuran a continuación en los diagramas de Gantt y de Pert.</p>
+<p>Ilustración 18 Diagrama de Gantt</p>
+<p>Ilustración 19 Diagrama de Pert</p>
+<p>Proyecto de Implantación de Red Local: "Pepe Consultores"</p>
+<p>Diagramas de instalación</p>
+<hr/>
+<h2 id="ut02actividades">✍️ Activitats pràctiques UT2</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.1 — 02 - Actividad 01: Inventario de Materiales ***</p><div align="justify">Realiza en una hoja de cálculo un inventario de materiales de red (cableado, conectores,...) que te permita identificar: proveedor, precio y componente. Ajusta la hoja de cálculo para poder realizar un informe por categorías de componentes con subtotales y totales económicos para un futuro presupuesto. Puedes usar como referencia la web de <a href="http://www.lanshack.com/" target="_blank" title="LAN Shack">http://www.lanshack.com/</a></div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.2 — 02 - Actividad 02: Diagrama de Etiquetado de Cableado ***</p><div align="justify">Utiliza DIA para construir un croquis aproximado de una hipotética oficina de varias estancias. Elige una de ellas para situar un armario de comunicaciones. En el resto de las estancias diseña una distribución de mesas de trabajo para los oficinistas. Dibújalos cables de conexión de estos puestos con el armario, en dónde se situaría un switch. Después numera las estancias y etiqueta apropiadamente cada uno de los cables.</div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.3 — 02 - Actividad 03: Planificación de Proyecto ***</p><div align="justify">Realiza una planificación de proyecto para la implantación de una LAN en un bajo comercial de un futuro cibercafé mediante la herramienta Gantt Project. <br/><br/>Considera (al menos) las siguientes <span style="font-weight: bold;">tareas </span>a realizar: Instalar tomas de corriente, Instalar rosetas, Tendido de cableado, Conectorización, Prueba de cableado, Etiquetado de cableado, Conexión de NICs, Configuración SW.<br/><br/>Y los <span style="font-weight: bold;">recursos</span>: Proveedor PCs, Electricista y Técnico XAL.</div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.4 — 02 - Actividad 04: Conectorización de Cableado ***</p><div align="justify">Construir cable UTP normal, uno cruzado y realizar el puching de dos rosetas. Validar con el Tester que funcionan adecuadamente. Realizar un montaje completo con corrugado y canaletas. Etiquetar adecuadamente y documentar los procesos y pruebas realizadas.<br/></div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.5 — 02 - Actividad 05: Proyecto de Instalación LAN ***</p><div align="justify" style="text-align: justify;">Prepara un proyecto completo de implantación de una LAN para una pequeña empresa que incluya los siguientes elementos en base a los requerimientos detallados al final de esta actividad:<br/></div>
+<div align="justify">
+<ol>
+<li>Propuesta técnica detallada<br/></li>
+<li>Fortalezas de la propuesta presentada y posibles mejoras</li>
+<li>Inventario de materiales utilizados</li>
+<li>Diagrama de instalación de equipos y cableado</li>
+<li>Presupuesto completo indicando proveedores<br/></li>
+<li>Planificación temporal del proyecto mediante diagrama de Gantt</li>
+</ol><span style="font-weight: bold;">Requerimientos:</span><br/></div>
+<div align="justify" style="text-align: justify;">La empresa "Pepe Consultores" se dedica a la Gestión Laboral y Contable de PYMEs, ofreciendo servicios de consultoría, asesoramiento legal y externalización de la contabilidad a empresas y autónomos de la localidad. Ante la necesidad de montar la infraestructura de red, Pepe quiere añadir a su plantilla a un profesional informático que seleccionará mediante el propio proyecto de implantación, con la idea en mente de ofrecer a sus clientes también un servicio de Atención Informática.<br/><br/>En total, trabajarán en la empresa 6 personas:<br/>
+<ul>
+<li>Un abogado, encargado de los aspectos legales que resulta ser el propio Pepe que también se encarga de la gestión de la empresa.</li>
+<li>Una diplomada en Relaciones Laborales, encargada de la asesoría.</li>
+<li>Una economista, encargada de aspectos contables tanto de la empresa como de las subcontratas.</li>
+<li>Un técnico superior en Administración y Finanzas, encargado de auxiliar a la economista.</li>
+<li>Una técnico de Gestión Administrativa, encargada de labores de recepción.</li>
+<li>Un técnico de Sistemas Microinformáticos y Redes, encargado de montar y mantener la red y la dotación informática de la empresa.</li>
+</ul>La distribución pensada por el Gestor para la empresa es la que figura en el plano mostrado a continuación siendo el uso previsto de las diferentes estancias el siguiente:<br/>
+<ul>
+<li>Sala 1: Técnico SMR. Taller de reparación de equipos.<br/></li>
+<li>Sala 2: Economista. Técnico Superior en Administración y Finanzas. Pequeño archivo de documentación.<br/></li>
+<li>Sala 3: Relaciones Laborales. Las acometidas de comunicaciones llegan por esta estancia al local.<br/></li>
+<li>Sala 4: Recepción. Servicio de impresión común y fotocopiadora.<br/></li>
+<li>Sala 5: Abogado/Gestor, con pequeña sala de reuniones. <br/></li>
+<li>Sala 6: Sala de reuniones con clientes. </li>
+<li>Otras: Existe un aseo y una pequeña cocina para empleados dónde tomar las dosis de café.<br/></li>
+</ul></div>
+<div align="justify" style="text-align: center;"><p>🖼️ [Imatge / Esquema: planos]</p><br/></div>
+<div align="justify"><br/>Las <span style="text-decoration: underline;">necesidades</span> de la empresa se basan en un acceso fiable a Internet y teléfono para cada uno de los puestos de trabajo mediante el uso de una centralita, uso de una red local para compartir datos con seguridad y se desea un sistema de copias de seguridad en los datos contables, disponer de Wifi en la recepción y en la sala de reuniones para los clientes, sistema de vigilancia a través de vídeo por red en la entrada de la empresa, fotocopiadora con red en la recepción. <br/><br/>Se valorarán los proyectos que prevean la posibilidad de ampliar el personal de la empresa en un momento dado con la inclusión de nuevos puestos de trabajo y aquellos que presenten servicios de valor añadido para el buen funcionamiento de la empresa. La implantación del proyecto será de 2 meses tras su aprobación, siendo el presupuesto y la solución técnica presentada determinantes en la obtención del mismo.</div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.6 — 02 - Activitat: Glossari (Llibreta) ***</p><p>Realitza un glossari de termes tècnics relatius als continguts estudiats a la unitat on oferisques una definició curta dels mateixos: Simplex, duplex, bps, STP, UTP, ScTP, Impedancia, RG58, BNC, Connector T, RJ45, Patch pannel, puncher, crimper, tester, rack, DB9, DB25, LED, LAser, reflexió interna total, atenuació, WLAN, Cablatge estructurat, CPD, SAI, EPI, Ergonomia, RAEE<br/><br/></p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.7 — 02 - Activitat: Revisió de Continguts (Llibreta) ***</p><p>1.- Diferència els mitjans de transmissió guiats dels no guiats.<br/>2.- Diferència els models de transmissió de senyals simplex i duplex.<br/>3.- Diferència els tipus de senyals analògics dels digitals.<br/>4.- Defineix amplada de banda i comenta les unitats en que es mesura.<br/>5.- Ilustra les parts d'un cable coaxial i comenta les seves principals característiques.<br/>6.- Ilustra les parts d'un UTP i comenta les seves principals característiques.<br/>7.- Ilustra les parts d'un STP i comenta les seves principals característiques.<br/>8.- Ilustra les parts d'un ScTP i comenta les seves principals característiques.<br/>9.- Explica els connector de cable de parell trenats més utilitzats.<br/>10.- Explica les diferents maneres de conectoritzar els RJ45.<br/>11.- Ilustra les parts d'un cable de fibra òptica i comenta les seves principals característiques.<br/>12.- Compara la fibra monomode en la fibra multimode.<br/>13.- Quan gastaries cables de parells UTP i quan STP? <br/>14.- Quines avantatges i inconvenients tindria substituis STP per sibra òptica?<br/>15.- Explica quins són els connectors més utilitzats en cables de fibra òptica i les seves característiques mecàniques.<br/>16.- Comenta les principals ferramentes de xarxes i la seva funció.<br/>17.- Comenta els avantatges i desavantatges principals de les tecnologies inalàmbriques.<br/>18.- Enumera estàndards 802.11 especificant freqüència i velocitats a les que funcionen.<br/>19.- Menciona avantatges i característiques del cablatge estructurat.<br/>20.- Ilustra i comenta els subsistemes del cablatge estructurat.<br/>21.- Enumera els principals processos o tasques d'un projecte de cablatge i verificació.<br/>22.- Menciona les bones pràctiques i elements que conformen un CPD.<br/>23.- Enumera els perills que afecten a un CPD i com es tracten d'evitar.<br/>24.- Què és una U en un armari de comunicacions?<br/>25.- Quin és el codi de colors per la connectorització de RJ45 segons la norma T568B?<br/>26.- Quina norma regula l'etiquetat i com es conforma l'etiqueta?<br/>27.- Quins instrument s'han de gastar per certificar el cablejat?<br/>28.- Diferència testejar i certificar.<br/>29.- Enumera els tipus de riscos més habituals.<br/>30.- Comenta les causes dels accidents.<br/>31.- Enumera els factors que condicionen la gravetat en els riscos elèctrics.<br/>32.- Diferència les mesures informatives i protectores.<br/>33.- Diferència transmissió de calor per conducció i per convecció.<br/>34.- Enumera sistemes de protecció contra incendis.<br/>35.- Comenta el procediment d'evacuació i la seva senyalítica normativa.<br/>36.- Enumera els principals perills de les màquines.<br/>37.- Explica com es classifiquen els tipus de senyals de seguretat.<br/>38.- Comenta les principals recomanacions d'ergonomia en lloc de treball amb suport informàtic.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.8 — 02 - Activitat: Casos Pràctics (Llibreta) ***</p><p>1.- Declara com a veritables o falses les afirmacions següents:<br/> a. El cablejat vertical o de backbone sempre es tendeix des de les plantes superiors a les inferiors o viceversa.<br/> b. El subsistema de campus sempre es correspon amb una xarxa MAN.<br/> c. Els cables de xarxa pertanyen al cablejat estructurat.<br/> d. Els armaris de comunicacions no pertanyen al cablejat estructurat.<br/> e. Un cable UTP no pot superar els 100 metres d'extrems a extrem.<br/> f. La màxima distància permesa per un cable UTP és de 90 m sense comptar els cables de connexió en els extrems.<br/><br/>2.- Declara com a veritables o falses les afirmacions següents:<br/> a. L'accés al CPD ha de ser sempre restringit.<br/> b. Han de certificar-tots els cables estesos, però no els cables de xarxa.<br/> c. L'aire condicionat d'un CPD ha de ser redundant.<br/> d. És important que el CPD es mantingui a una temperatura baixa, però no importa la humitat.<br/> e. Els cables han d'arribar al CPD per fals terra o per fals sostre.<br/> f. Els equips del CPD han d'estar protegits contra pujades de tensió.<br/><br/>3.- Analitza si són vertaderes o falses les següents afirmacions :<br/> a . Un espai de xarxa de cablejat estructurat és qualsevol ubicació on arribi un cable de la xarxa.<br/> b . Els cables de xarxa formen part del sistema d'estructuració del cable .<br/> c . En cada quart de comunicacions ha d'haver almenys un commutador i un encaminador de xarxa.<br/> d. El CPD sempre és un espai de xarxa privilegiat del cablejat estructurat.<br/> e. Les canalitzacions de cables sempre han d'estar embotides en tubs .</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.9 — 02 - Test de Repaso</p><div align="justify">Realiza el <a href="$@FILEPHP@$$@SLASH@$testrepaso$@SLASH@$02-Test.jpg" target="_blank">Test de Repaso de la Unidad 2</a> justificando las respuestas elegidas e indicando la razón o motivo que las hace correctas e incorrectas.</div></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 2.10 — 02 - Autoevaluación</p><p>Realitza l'activitat pràctica seguint les indicacions de l'apartat.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 2.11 — 02 - Examen Unidad</p>Examen Unidad 2</div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut01/ut01actividades.html">⬅️ ✍️ Activitats pràctiques UT1</a>
+<a class="page-nav-btn" href="../ut02/ut0201.html">2.1 Solución: Proyecto de Instalación LAN ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

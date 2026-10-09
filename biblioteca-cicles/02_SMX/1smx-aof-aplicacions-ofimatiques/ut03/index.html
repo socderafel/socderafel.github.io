@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT3 — Processador de text (II) — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT3 Completa</span>
+<h1>📘 UT3 — Processador de text (II) (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0301"><strong>3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </strong></a> (o <a href="./ut0301.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0302"><strong>3.2 Recursos Pràctiques Tema 6</strong></a> (o <a href="./ut0302.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0303"><strong>3.3 Tema 7. COMBINAR CORRESPONDENCIA</strong></a> (o <a href="./ut0303.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0304"><strong>3.4 Exemple Combinar correspondència</strong></a> (o <a href="./ut0304.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0305"><strong>3.5 Pràctiques Tema 7 (Combinar correspondència)</strong></a> (o <a href="./ut0305.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0306"><strong>3.6 Recursos Pràctiques Tema 7</strong></a> (o <a href="./ut0306.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0307"><strong>3.7 Pràctiques Tema 8 (Hipervincles)</strong></a> (o <a href="./ut0307.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0308"><strong>3.8 Recursos Pràctiques Tema 8</strong></a> (o <a href="./ut0308.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0309"><strong>3.9 Tema 9. PLANTILLES</strong></a> (o <a href="./ut0309.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0310"><strong>3.10 Pràctiques Tema 9 (Plantilles)</strong></a> (o <a href="./ut0310.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0311"><strong>3.11 Pràctiques Tema 10 (Imprimir) - En CASA</strong></a> (o <a href="./ut0311.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut03actividades"><strong>✍️ Activitats pràctiques UT3</strong></a> (o <a href="./ut03actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0301">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </h2>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p dir="ltr" style="text-align: left;"><strong>Pràctiques tema 6: CAPÇALERES I PEUS DE PÀGINA</strong><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p dir="ltr" style="text-align: left;"><strong>Pràctiques tema 7: COMBINAR CORRESPONDÈNCIA</strong><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p dir="ltr" style="text-align: left;"><strong>Pràctiques tema 8: HIPERVINCLES</strong><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p dir="ltr" style="text-align: left;"><strong>Pràctiques tema 9: PLANTILLES</strong><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p dir="ltr" style="text-align: left;"><strong>Pràctiques tema 10: IMPRIMIR</strong><br/></p></div>
+<hr/>
+<p>1º SMX.</p>
+<p>Tema 06. Encabezado y Pie de página. Notas al pie.</p>
+<p>EJERCICIO 37</p>
+<p>Crea un documento llamado Ejercicio37.odt con los siguientes encabezados y pies de página. La fuente base del documento será tamaño 10, Normal. La información que aparece entre ángulos &lt; &gt; debe ser sustituida por los autotextos correspondientes.</p>
+<p>Encabezado</p>
+<p>Pie de Página</p>
+<p>1º SMX.</p>
+<p>Tema 06. Encabezado y Pie de página. Notas al pie.</p>
+<p>EJERCICIO 38</p>
+<p>Crea un documento y realiza las acciones que se van indicando. Cuando acabes guarda el documento como Ejercicio38.odt.</p>
+<ul>
+<li>La fuente base del documento será tamaño 10, Normal. La información que aparece entre</li>
+</ul>
+<p>ángulos &lt; &gt; debe ser sustituida por los autotextos correspondientes.</p>
+<ul>
+<li>Crea un documento de texto que tenga 2 páginas.</li>
+</ul>
+<ul>
+<li>Los encabezados y pies de página serán de 10 puntos.</li>
+</ul>
+<h3>3. Crea el siguiente encabezado en las páginas impares</h3>
+<h3>4. Crea el siguiente pie en las páginas impares</h3>
+<h3>5. En las páginas pares crea el siguiente encabezado</h3>
+<h3>6. Crea este pie también en las páginas pares</h3>
+<p>1º SMX.</p>
+<p>Tema 06. Encabezado y Pie de página. Notas al pie.</p>
+<p>EJERCICIO 39</p>
+<p>Abre el Ejercicio38.odt (ejercicio anterior), añade una nueva página y guárdalo como Ejercicio39.odt. Haz que la primera página del documento no contenga ni encabezado ni pie de página manteniéndolos en la segunda y tercera página.</p>
+<p>1º SMX.</p>
+<p>Tema 06: Encabezado y Pie de página. Notas al pie.</p>
+<p>EJERCICIO 40</p>
+<p>Crea un nuevo documento llamado Ejercicio40.odt y añade las notas al pie que se indican. Debes respetar el formato del documento</p>
+<p>• Título 1: tamaño 18 puntos, negrita, color blanco. Borde con Sombra de 1½ ptos y relleno color azul claro. • Título 2: tamaño 14 puntos, negrita. Borde solo en la parte inferior. • El resto del texto tamaño 11 puntos.</p>
+<p>1º SMX.</p>
+<p>Tema 06: Encabezado y Pie de página. Notas al pie. EJERCICIO 41 Crea un nuevo documento de texto, y guardalo con el nombre Ejercicio41.odt. Puede utilizarse el tipo de letra y colores que se desee. Aplica las características que se indican a continuación.</p>
+<p>Orientación de página • Cambia la orientación de la página. Menú Formato → Página, pestaña Página. Elige la opción Horizontal. Título principal • Sitúate al principio del documento. • Escribe el texto “Boutique El Chollo”. • Pon resaltado y estilo con sombreado o relieve. Pon borde de carácter de 3 pt. con sombra.</p>
+<p>Insertar autoformas • Si no está visible, muestra la barra de herramientas Dibujo con el menú Ver → Barras de herramientas → Dibujo o haz clic en el icono correspondiente. • Añade una autoforma y agrega el texto “SÚPER REBAJAS”. Pon color de área degradado. • Añade una autoforma y agrega el texto “Telf: 963000000”. Pon color de área degradado o el que desees.</p>
+<p>Contenido de texto • Introduce el resto del texto como se muestra más abajo. • Añade un borde de página para la hoja de línea doble de 4 pt. Pon un color de fondo a la página. Menú Formato → Página, pestaña Área. En la lista desplegable Relleno, elige la opción Color.</p>
+<p>• El resultado puede ser como el que se muestra a continuación</p>
+<p>1º SMX.</p>
+<p>Tema 06: Encabezado y Pie de página. Notas al pie.</p>
+<p>1º SMX.</p>
+<p>Tema 06. Ejercicio FORMATO PAGINA</p>
+<p>EJERCICIO 42</p>
+<p>Crea un nuevo documento de texto, y guardalo con el nombre Ejercicio42.odt. Puede utilizarse el tipo de letra y colores que se desee. Aplica las características que se indican a continuación.</p>
+<p>Documento de texto</p>
+<ul>
+<li>Descarga el archivo de texto para el ejercicio R-Ejerc42-barigudo.odt.</li>
+<li>Puede utilizarse el tipo de letra y colores que se desee.</li>
+</ul>
+<p>Título, autoformas, formatos y numeración</p>
+<ul>
+<li>Inserta un rótulo artístico con Fontwork. Escribe el texto “Bar Igudo”.</li>
+</ul>
+<p>Elige el estilo y color que desees. Aplica efecto 3D.</p>
+<ul>
+<li>Añade una autoforma y agrega el texto “MENÚ DIARIO”. Rellena con un</li>
+</ul>
+<p>gradiente.</p>
+<ul>
+<li>Introduce el texto como se muestra debajo, poniendo viñetas, colores y</li>
+</ul>
+<p>efectos donde corresponda. Aplica espacio debajo del párrafo de 0,3 cm.</p>
+<ul>
+<li>Inserta un cuadro de texto para el precio del menú. Aplica formato</li>
+</ul>
+<p>subíndice para el asterisco. Pon color de fondo y un estilo de línea discontinuo.</p>
+<ul>
+<li>Añade un borde de página para la hoja. Elige el que quieras. Aplica</li>
+</ul>
+<p>espaciado al contenido.</p>
+<ul>
+<li>El resultado puede ser como el que se muestra a continuación</li>
+</ul>
+<p>1º SMX.</p>
+<p>Tema 06. Ejercicio FORMATO PAGINA</p>
+<p>1º SMX.</p>
+<p>Tema 06. Ejercicio FORMATO PAGINA</p>
+<p>EJERCICIO 43</p>
+<p>Crea un nuevo documento de texto, y guardalo con el nombre Ejercicio43.odt. Puede utilizarse el tipo de letra y colores que se desee. Aplica las características que se indican a continuación.</p>
+<p>Documento base.</p>
+<p>Descarga el archivo R-Ejerc43-pag_encpie para el ejercicio, y aplica las características de formato necesarias para que el resultado sea como aparece en la siguiente imagen.</p>
+<p>Encabezado</p>
+<ul>
+<li>Añade un encabezado al documento.</li>
+<li>Escribe el texto “Manual de Ventanucos para torpes”.</li>
+<li>Establece el formato del texto del encabezado: alineación centrada, letra</li>
+</ul>
+<p>cursiva, tamaño 10, color que se quiera. Pon un borde inferior de 0,5 pt de grosor. Pie de página</p>
+<ul>
+<li>Añade un pie de página al documento.</li>
+<li>Escribe el texto “(CC)" seguido por tu nombre y apellidos.</li>
+<li>Establece el formato del texto del pie: alineación derecha, letra normal,</li>
+</ul>
+<p>tamaño 10, color que se quiera. Numeración de páginas</p>
+<ul>
+<li>Añade un pie de página al texto.</li>
+<li>Inserta la numeración de páginas. Elige la fuente que desees, tamaño 9.</li>
+</ul>
+<p>Sitúa la numeración a la izquierda del pie de página y desplaza con la barra espaciadora el número hasta ponerlo más o menos en el centro.</p>
+<ul>
+<li>Por ejemplo</li>
+</ul>
+<p>1º SMX.</p>
+<p>Tema 06. Ejercicio FORMATO PAGINA</p>
+<p>Vamos a aplicar diversos formatos al texto. Título</p>
+<ul>
+<li>Características: fuente la que se quiera, tamaño 20, negrita, color azul.</li>
+</ul>
+<p>Pon alineación centrada. Aplica borde de cuadro de doble línea con grosor 2 pt, sombreado y color de fondo amarillo. Imagen</p>
+<ul>
+<li>Descarga del portal la imagen del emoticono R-Ejerc43-imagen</li>
+<li>Inserta la imagen descargada debajo del título y antes del resto del</li>
+</ul>
+<p>texto.</p>
+<ul>
+<li>Establece el ajuste y la alineación que desees.</li>
+</ul>
+<p>Línea 2</p>
+<ul>
+<li>Características: fuente la que se quiera, tamaño 14, subrayado, color</li>
+</ul>
+<p>rojo. Texto de instrucciones</p>
+<ul>
+<li>Selecciona todo el texto de instrucciones.</li>
+<li>Aplica numeración y viñetas. Elige formato número.</li>
+<li>Selecciona todo el texto de instrucciones.</li>
+<li>Aplica un espaciado debajo del párrafo de 0,20 cm.</li>
+<li>Resalta el texto donde corresponda. Características: fuente la que se</li>
+</ul>
+<p>quiera, tamaño 14, negrita, color azul oscuro, color de fondo azul claro. Formato de página</p>
+<ul>
+<li>Pon color de fondo a la página. Elige el que desees y aplica el efecto</li>
+</ul>
+<p>que quieras: degradado, transparencia, etc. Nota a pie de página Vamos a añadir una nota a pie de página al final de la primera frase.</p>
+<ul>
+<li>Sitúa el cursor al final de la primera frase, es decir, no al final de la</li>
+</ul>
+<p>página sino a la derecha de la palabra donde aparecerá la referencia a la nota.</p>
+<ul>
+<li>Ve al menú Insertar → Nota al pie y final → Nota al pie. Haz clic en</li>
+</ul>
+<p>Aceptar. Al final de la página aparecerá el número de la nota.</p>
+<ul>
+<li>Escribe el texto de la nota a continuación del número: "En caso de duda,</li>
+</ul>
+<p>hacer un viaje de peregrinación al Camino de Santiago y pedir un milagro al Santo".</p>
+<p>1º SMX.</p>
+<p>Tema 06. Ejercicio FORMATO PAGINA</p>
+<hr/>
+<h2 id="ut0302">3.2 Recursos Pràctiques Tema 6</h2>
+<h4>📦 R-Ejerc42-barigudo.odt</h4>
+<p>PRIMEROS PLATOS</p>
+<p>Paella de marisco manchego</p>
+<p>Macarrones con salsa de leche condensada</p>
+<p>Incluye guarnición de criadillas de gorrión de mar</p>
+<p>Mirindunguillos de ave césar al vapor</p>
+<p>SEGUNDOS PLATOS</p>
+<p>Solomillo de gamba congelada (del año pasado) con patatas chachis</p>
+<p>Merluza de Albacete en salsa montañera</p>
+<p>Incluye guarnición de algas terrestres con sabor a jamón</p>
+<p>Caldereta de higadillos de calamar de campo</p>
+<p>POSTRES</p>
+<p>Fruta de temporada liguera</p>
+<p>Arroz con leche hidratante</p>
+<p>Sorbete de ajos tiernos mañaneros</p>
+<ul>
+<li>(PAN, BEBIDA Y CAFÉ LOS PAGA EL DE AL LADO)</li>
+</ul>
+<p>PROMOCIÓN ESPECIAL: te invitamos a un chupito, pero lo pagas tú.</p>
+<hr/>
+<h4>📦 R-Ejerc43-pag_encpie.odt</h4>
+<p>Manual de instrucciones de Ventanucos 4.0</p>
+<p>Se recomienda seguir los pasos que se detallan a continuación en estricto orden.</p>
+<p>Conectar el ordenador a la corriente. Si no hay corriente, comprobar si el vecino tiene electricidad. Si no tiene vecinos, llamar a la compañía eléctrica. Si no sabe cuál es, desconectar el ordenador e ir al paso 10.</p>
+<p>Pulsar el botón de encendido. Si no aparece nada en la pantalla, pulsar el botón de encendido del monitor. Si la cosa sigue sin ir, comprobar si nos hemos saltado el paso 1. Si no va nada, ir al paso 10.</p>
+<p>Esperar pacientemente a que Ventanucos se cargue. Como sugerencia se recomienda tomar un café, té o infusión. También podemos leer el Quijote.</p>
+<p>Si después de 10 minutos persiste la ventana de “Cargando Ventanucos”, apretar el botón de encendido 4 segundos. El ordenador se reinicia. Ir al paso 3 y rezar. Si es la 5ª vez que lo intenta, ir al paso 5.</p>
+<p>¿Se ha cargado Ventanucos? En caso contrario, ir al paso 10.</p>
+<p>Una vez entramos en Ventanucos, se mostrará una pantalla de bienvenida que no sirve para nada. La cerramos y pasamos de ella.</p>
+<p>Si todavía no hace nada el ordenador es porque aún no se ha cargado el antivirus. Como sugerencia se recomienda tomar un café, té o infusión. También podemos leer el Quijote.</p>
+<p>Si continúa sin responder a nuestros requerimientos, ir al paso 4.</p>
+<p>¿Funciona? Enhorabuena, la paciencia es una virtud. Ahora ya sabe que Ventanucos 3.0 hace lo mismo y va mucho más rápido. Desinstalar Ventanucos 4.0 e instalar la versión 3.0. Ir al paso 11.</p>
+<p>Abrir el libro “La cría del champiñón en España”, relajarnos y pensar que la informática es la ciencia que resuelve los problemas que no existirían si no hubiera ordenadores.</p>
+<p>Tener en cuenta las leyes de Murphy: “¿Es usted feliz? Tranquilo, ya se le pasará”.</p>
+<hr/>
+<h2 id="ut0303">3.3 Tema 7. COMBINAR CORRESPONDENCIA</h2>
+<p>Tema 07. Combinar Correspondencia.</p>
+<p>Cómo combinar correspondencia en Writer de LibreOffice</p>
+<p>Índice</p>
+<ul>
+<li>Abrimos Writer y redactamos la carta que enviaremos a nuestros destinatarios.</li>
+</ul>
+<h4>2) Seleccionamos la base de datos de nuestros destinatarios</h4>
+<h4>3) Insertaremos los campos de nuestra tabla de datos (Calc) en nuestra carta</h4>
+<h4>4) Combinamos todo y lo guardamos en un archivo (después podremos imprimirlo)</h4>
+<p>Tema 07. Combinar Correspondencia.</p>
+<p>Cómo combinar correspondencia en Writer de LibreOffice</p>
+<p>A continuación vamos a combinar correspondencia en Writer en 4 sencillos pasos</p>
+<h3>1. Abrimos Writer y redactamos la carta que</h3>
+<p>enviaremos a nuestros destinatarios.</p>
+<p>Debemos dejar espacio para los campos de la base de datos.</p>
+<h3>2. Seleccionamos la base de datos de</h3>
+<p>nuestros destinatarios. Clic sobre el menú Insertar → Campos → Otros</p>
+<p>Tema 07. Combinar Correspondencia.</p>
+<p>A continuación seleccionamos la ficha “Base de datos” y después un clic sobre el botón “Examinar”.</p>
+<p>En el siguiente cuadro contextual seleccionamos el archivo de Calc donde tenemos la información de los destinatarios y después clic sobre el botón “Abrir”.</p>
+<p>Seguidamente haremos un clic sobre los símbolos “+” destacados.</p>
+<p>Tema 07. Combinar Correspondencia.</p>
+<h3>3. Insertaremos los campos de nuestra tabla</h3>
+<p>de datos (Calc) en nuestra carta. Primero seleccionamos la ubicación del campo en la carta, en este ejemplo seleccionamos donde irá el “Nombre” del alumno.</p>
+<p>Y después insertamos el campo de la hoja Calc, mediante doble clic izquierdo sobre el apartado correspondiente.</p>
+<p>Repetimos la anterior operación para todos los campos…</p>
+<p>Una vez que tengamos todos los campos insertados.</p>
+<p>Tema 07. Combinar Correspondencia.</p>
+<p>Cerraremos el cuadro contextual mediante un clic izquierdo sobre el aspa destacada.</p>
+<h3>4. Combinamos todo y lo guardamos en un</h3>
+<p>archivo (después podremos imprimirlo)</p>
+<p>Clic en Archivo → Imprimir.</p>
+<p>En el siguiente cuadro contextual haremos un clic sobre el botón “Sí”</p>
+<p>Tema 07. Combinar Correspondencia.</p>
+<p>En el siguiente cuadro contextual seleccionaremos la opción de “Archivo”, después lo guardaremos todo en un documento “Guardar como un documento” y para finalizar clic sobre el botón “Aceptar”.</p>
+<p>Después le damos un nombre al archivo y clic sobre el botón “Guardar”.</p>
+<hr/>
+<h2 id="ut0304">3.4 Exemple Combinar correspondència</h2>
+<h3>📄 Carta_Notes_1.odt</h3>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de &lt;Nombre padre/madre&gt;,</p>
+<p>pare de l’alumne &lt;ALUMNO&gt;</p>
+<p>&lt;Dirección&gt;</p>
+<p>&lt;CP&gt;- &lt;Poblacion&gt;</p>
+<p>L’alumne &lt;ALUMNO&gt;, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:&lt;Aplicaciones Ofimácas&gt;</p>
+<p>REDES&lt;Redes&gt;</p>
+<p>TALLER&lt;Taller&gt;</p>
+<p>SOM&lt;SOM&gt;</p>
+<p>FOL&lt;FOL&gt;</p>
+<h3>📄 Carta_Notes.odt</h3>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de NOM PARE/MARE,</p>
+<p>pare de l’alumne NOM ALUMNE</p>
+<p>DIRECCIÓ</p>
+<p>CP- POBLACIÓ</p>
+<p>L’alumne NOM ALUMNE, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:NOTA_OFI</p>
+<p>REDESNOTA_REDES</p>
+<p>TALLERNOTA_TALLER</p>
+<p>SOMNOTA_SOM</p>
+<p>FOLNOTA_FOL</p>
+<h3>📄 Carta_Notes.pdf</h3>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de NOM PARE/MARE, pare de l’alumne NOM ALUMNE</p>
+<p>DIRECCIÓ CP- POBLACIÓ</p>
+<p>L’alumne NOM ALUMNE, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES: NOTA_OFI</p>
+<p>REDES</p>
+<p>NOTA_REDES</p>
+<p>TALLER</p>
+<p>NOTA_TALLER</p>
+<p>SOM</p>
+<p>NOTA_SOM</p>
+<p>FOL</p>
+<p>NOTA_FOL</p>
+<h3>📄 Carta_Notes_Combinada.pdf</h3>
+<p>CERTIFICAT DE NOTES A l’atenció de Maria, pare de l’alumne CASTILLO SÁEZ, JUAN RAMÓN c/alicante n 10</p>
+<h4>46789- POBLACION 1</h4>
+<p>L’alumne CASTILLO SÁEZ, JUAN RAMÓN, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Luis, pare de l’alumne LÓPEZ VERA, JOSE c/madrid n23 3 piso</p>
+<h4>46789- POBLACION 2</h4>
+<p>L’alumne LÓPEZ VERA, JOSE, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Alejando, pare de l’alumne DOMEC SÁNCHEZ, JAIME c/la vall n 41</p>
+<h4>46552- POBLACION 3</h4>
+<p>L’alumne DOMEC SÁNCHEZ, JAIME, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Antonio, pare de l’alumne FERNÁNDEZ RUIZ, PEDRO c/valencia n21</p>
+<h4>46521- POBLACION 4</h4>
+<p>L’alumne FERNÁNDEZ RUIZ, PEDRO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Ramon, pare de l’alumne GÓMEZ BLAZQUEZ, ANTONIO parque salvador s 56</p>
+<h4>46852- POBLACION 5</h4>
+<p>L’alumne GÓMEZ BLAZQUEZ, ANTONIO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Patricia, pare de l’alumne JIMÉNEZ MENDEZ, EVA c/alicante n 10</p>
+<h4>46855- POBLACION 6</h4>
+<p>L’alumne JIMÉNEZ MENDEZ, EVA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Eva, pare de l’alumne LIS SANZ, BLANCA c/vega n67</p>
+<h4>46856- POBLACION 7</h4>
+<p>L’alumne LIS SANZ, BLANCA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Luis, pare de l’alumne JUÁREZ GIL, PATRICIA c/roble n 44</p>
+<h4>46740- POBLACION 8</h4>
+<p>L’alumne JUÁREZ GIL, PATRICIA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Alejandro, pare de l’alumne LAX HERMIDA, CARLOS c/velazquez n77</p>
+<h4>46899- POBLACION 9</h4>
+<p>L’alumne LAX HERMIDA, CARLOS, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Jorge, pare de l’alumne LUCAS SEGURA, JORGE c/goya n 11</p>
+<h4>46988- POBLACION 10</h4>
+<p>L’alumne LUCAS SEGURA, JORGE, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Carlos, pare de l’alumne LLUC CABALLERO, PABLO c/picaso n88</p>
+<h4>46855- POBLACION 11</h4>
+<p>L’alumne LLUC CABALLERO, PABLO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Pedro, pare de l’alumne PARDO SANZ, ANTONIO c/calvario n 21</p>
+<h4>46899- POBLACION 12</h4>
+<p>L’alumne PARDO SANZ, ANTONIO, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<p>CERTIFICAT DE NOTES A l’atenció de Maria, pare de l’alumne RODRÍGUEZ SÁEZ, GLORIA c/murillo n 77</p>
+<h4>46001- POBLACION 13</h4>
+<p>L’alumne RODRÍGUEZ SÁEZ, GLORIA, té les següents notes: APLICACIONS OFIMÀTIQUES: REDES TALLER SOM FOL</p>
+<h3>📄 Carta_Notes_Combinada.odt</h3>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Maria,</p>
+<p>pare de l’alumne CASTILLO SÁEZ, JUAN RAMÓN</p>
+<p>c/alicante n 10</p>
+
+<p>L’alumne CASTILLO SÁEZ, JUAN RAMÓN, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:7</p>
+<p>REDES7</p>
+<p>TALLER5</p>
+<p>SOM4</p>
+<p>FOL8</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Luis,</p>
+<p>pare de l’alumne LÓPEZ VERA, JOSE</p>
+<p>c/madrid n23 3 piso</p>
+
+<p>L’alumne LÓPEZ VERA, JOSE, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:7</p>
+<p>REDES3</p>
+<p>TALLER9</p>
+<p>SOM8</p>
+<p>FOL7</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Alejando,</p>
+<p>pare de l’alumne DOMEC SÁNCHEZ, JAIME</p>
+<p>c/la vall n 41</p>
+
+<p>L’alumne DOMEC SÁNCHEZ, JAIME, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:8</p>
+<p>REDES8</p>
+<p>TALLER8</p>
+<p>SOM8</p>
+<p>FOL6</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Antonio,</p>
+<p>pare de l’alumne FERNÁNDEZ RUIZ, PEDRO</p>
+<p>c/valencia n21</p>
+
+<p>L’alumne FERNÁNDEZ RUIZ, PEDRO, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:9</p>
+<p>REDES4</p>
+<p>TALLER6</p>
+<p>SOM6</p>
+<p>FOL6</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Ramon,</p>
+<p>pare de l’alumne GÓMEZ BLAZQUEZ, ANTONIO</p>
+<p>parque salvador s 56</p>
+
+<p>L’alumne GÓMEZ BLAZQUEZ, ANTONIO, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:4</p>
+<p>REDES6</p>
+<p>TALLER9</p>
+<p>SOM6</p>
+<p>FOL9</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Patricia,</p>
+<p>pare de l’alumne JIMÉNEZ MENDEZ, EVA</p>
+<p>c/alicante n 10</p>
+
+<p>L’alumne JIMÉNEZ MENDEZ, EVA, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:8</p>
+<p>REDES6</p>
+<p>TALLER9</p>
+<p>SOM7</p>
+<p>FOL7</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Eva,</p>
+<p>pare de l’alumne LIS SANZ, BLANCA</p>
+<p>c/vega n67</p>
+
+<p>L’alumne LIS SANZ, BLANCA, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:7</p>
+<p>REDES5</p>
+<p>TALLER7</p>
+<p>SOM4</p>
+<p>FOL5</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Luis,</p>
+<p>pare de l’alumne JUÁREZ GIL, PATRICIA</p>
+<p>c/roble n 44</p>
+
+<p>L’alumne JUÁREZ GIL, PATRICIA, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:7</p>
+<p>REDES4</p>
+<p>TALLER7</p>
+<p>SOM8</p>
+<p>FOL6</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Alejandro,</p>
+<p>pare de l’alumne LAX HERMIDA, CARLOS</p>
+<p>c/velazquez n77</p>
+
+<p>L’alumne LAX HERMIDA, CARLOS, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:2</p>
+<p>REDES2</p>
+<p>TALLER8</p>
+<p>SOM7</p>
+<p>FOL5</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Jorge,</p>
+<p>pare de l’alumne LUCAS SEGURA, JORGE</p>
+<p>c/goya n 11</p>
+
+<p>L’alumne LUCAS SEGURA, JORGE, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:4</p>
+<p>REDES5</p>
+<p>TALLER7</p>
+<p>SOM4</p>
+<p>FOL6</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Carlos,</p>
+<p>pare de l’alumne LLUC CABALLERO, PABLO</p>
+<p>c/picaso n88</p>
+
+<p>L’alumne LLUC CABALLERO, PABLO, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:4</p>
+<p>REDES6</p>
+<p>TALLER7</p>
+<p>SOM8</p>
+<p>FOL1</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Pedro,</p>
+<p>pare de l’alumne PARDO SANZ, ANTONIO</p>
+<p>c/calvario n 21</p>
+
+<p>L’alumne PARDO SANZ, ANTONIO, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:7</p>
+<p>REDES5</p>
+<p>TALLER6</p>
+<p>SOM4</p>
+<p>FOL1</p>
+<p>CERTIFICAT DE NOTES</p>
+<p>A l’atenció de Maria,</p>
+<p>pare de l’alumne RODRÍGUEZ SÁEZ, GLORIA</p>
+<p>c/murillo n 77</p>
+
+<p>L’alumne RODRÍGUEZ SÁEZ, GLORIA, té les següents notes</p>
+<p>APLICACIONS OFIMÀTIQUES:4</p>
+<p>REDES3</p>
+<p>TALLER5</p>
+<p>SOM7</p>
+<p>FOL6</p>
+<h3>📄 Carta_Notes_1.pdf</h3>
+<p>CERTIFICAT DE NOTES A l’atenció de &lt;Nombre padre/madre&gt;, pare de l’alumne &lt;ALUMNO&gt; &lt;Dirección&gt; &lt;CP&gt;- &lt;Poblacion&gt; L’alumne &lt;ALUMNO&gt;, té les següents notes: APLICACIONS OFIMÀTIQUES: &lt;Aplicaciones Ofimácas&gt; REDES &lt;Redes&gt; TALLER &lt;Taller&gt; SOM &lt;SOM&gt; FOL &lt;FOL&gt;</p>
+<hr/>
+<h2 id="ut0305">3.5 Pràctiques Tema 7 (Combinar correspondència)</h2>
+<p>1º SMX.</p>
+<p>Tema 07. Combinar correspondencia</p>
+<p>EJERCICIO 44</p>
+<p>Transportes Urgensur S.L. va a abrir una nueva tienda y quiere invitar a todos sus clientes a la inauguración. Quieren utilizar la herramienta combinar correspondencia para el envio de las cartas de invitación.</p>
+<p>En primer lugar, crea una tabla en el procesador de textos, que te servirá como base de datos para combinar. La tabla, que será la lista origen con los datos, tendrá como mínimo los campos nombre, dirección, código postal, población, provincia. Debes añadir como mínimo 5 clientes, tres de ellos, que sean de Madrid El documento con la lista origen, se llamará Ejercicio44_lista.odt.</p>
+<p>Después, redacta la carta de invitación, escribiendo un breve texto en el que se le invita al cliente a la inauguración de la tienda, indicando también el domicilio de la nueva tienda, la fecha de inauguración. En la parte superior de la carta, debe aparecer el nombre completo del cliente, la dirección el código postal, la población y la provincia (son los datos que se tienen que combinar con la lista origen).</p>
+<p>Guarda la carta como Ejercicio44_principal.odt</p>
+<p>Cuando combines el documento, generarás un documento con tantas cartas como registros hayas creado en la lista origen. Guarda el documento combinado como Ejercicio44_combinado.odt</p>
+<p>EJERCICIO 45</p>
+<p>Transportes Urgensur S.L. quiere crear las cartas de invitación solamente para los clientes que tengan su domicilio en la provincia de Madrid. Para realizar esto, debes modificar el ejercicio anterior, para aplicar los filtros corespondientes. Guarda el documento combinado como Ejercicio45_combinado.odt</p>
+<p>EJERCICIO 46</p>
+<p>La empresa Seguros Rosales S.L ha incrementado en un 7% de valor de las pólizas de sus clientes. Por este motivo, deben enviar una carta a sus clientes informándoles de dicha modificación.</p>
+<p>Para realizar esta actividad, dispones de la carta (R-Ejercicio46_principal.odt) y el archivo de datos (R-Ejercicio46_datos.odt). Genera un nuevo documento combinado a partir de éstos llamado Ejercicio46_combinado.odt.</p>
+<p>1º SMX.</p>
+<p>Tema 07. Combinar correspondencia</p>
+<p>EJERCICIO 47</p>
+<p>El banco VVBB va a enviar una carta a sus clientes para ofrecerles un préstamo. Para esta tarea quieren utilizar la herramienta combinar correspondencia.</p>
+<p>En primer lugar debes realizar la carta, guárdala como Ejercicio47_principal.odt. En segundo lugar, guarda los datos de los clientes en una tabla de un documento de calc (Ejercicio47_datos.ods).</p>
+<p>Por último, genera dos documentos combinados a partir de los documentos anteriores. El primero con todos los clientes (Ejercicio47_combinado1.odt), y el segundo solo para préstamos superiores a 10.000 euros. Guarda este último documento como Ejercicio47_combinado2.odt.</p>
+<p>1º SMX.</p>
+<p>Tema 07. Combinar correspondencia</p>
+<p>EJERCICIO 48</p>
+<p>El banco VVBB quiere crear sobres con los datos de sus empleados. Los sobres deben incluir únicamente el nombre y los apellidos de los empleados. Inserta los campos combinados en una hoja orientada horizontalmente, simulando un sobre (tamaño de letra grande, y centrado).</p>
+<p>Realiza distintos documentos combinados, a partir de los datos del documento R- Ejercicio48_datos.xls, que cumplan los siguientes criterios</p>
+<ul>
+<li>Personas que ganen más de 1200 euros (Ejercicio48_combinado1.odt).</li>
+<li>Personas que residan en Las Palmas (Ejercicio48_combinado2.odt).</li>
+<li>Personas que ganen 1000 euros o menos (Ejercicio48_combinado3.odt).</li>
+</ul>
+<h3>4. Personas que ganen más de 1200 euros y residan en Las Palmas</h3>
+<p>(Ejercicio48_combinado4.odt).</p>
+<h3>5. Personas que ganen más de 1000 o residan en Las Palmas</h3>
+<p>(Ejercicio48_combinado5.odt).</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: Si no funciona, asegúrate de que en la hoja de cá...</p><p>Nota: Si no funciona, asegúrate de que en la hoja de cálculo, la celda A1 empiece con los datos (tendrás que eliminar la columna/s fila/s en blanco)</p></div>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: el proceso de filtrado lo tienes que realizar en ...</p><p>Nota: el proceso de filtrado lo tienes que realizar en el paso de Herramientas- Asistente para combinar correspondencia-Insertar bloque de dirección (botón Seleccionar lista de direcciones)</p></div>
+<p>1º SMX.</p>
+<p>Tema 07. Combinar correspondencia</p>
+<p>EJERCICIO 49 (OPCIONAL)</p>
+<p>Realiza la siguiente actividad para combinar correspondencia. En primer lugar debes crear el documento principal (carta) y el archivo de datos. Debes tener en cuenta el valor del campo Tratamiento para dirigirte al cliente como Señor (tratamiento=1), Señora (tratamiento=2).</p>
+<p>Guarda el documento principal como Ejercicio49_principal.odt y el documento combinado como Ejercicio49_combinado.odt.</p>
+<p>1º SMX.</p>
+<p>Tema 07. Combinar correspondencia</p>
+<p>Etiquetas Fichero | Nuevo | Etiquetas se abre el asistente que facilitará la definición de etiquetas, y terminará generando un documento de texto del OpenOffice.org Writer.</p>
+<p>• Selecciona la pestaña Formato e introduce las características físicas de las etiquetas que quieres utilizar.</p>
+<p>• En la pestaña Opciones, asegúrate de tener marcada la opción Toda la página.</p>
+<p>1º SMX.</p>
+<p>Tema 07. Combinar correspondencia</p>
+<p>• En la pestaña Etiquetas, en caso de tener definidas y guardadas las características físicas, las puedes recuperar en la zona de Formato. • En la pestaña Etiquetas, selecciona la Base de datos que corresponda • Selecciona, también, la tabla de la base de datos. • Ve seleccionando los campos de la tabla que necesites y ves introduciéndolo en el cuadro Texto de la etiqueta. Si quieres escribir texto fijo (comas, espacios…), hazlo en este momento.</p>
+<p>• Cuando termines, clic en el botón Documento nuevo.</p>
+<p>• Guarda el documento que habéis generando.</p>
+<hr/>
+<h2 id="ut0306">3.6 Recursos Pràctiques Tema 7</h2>
+<h4>📦 R-Ejercicio46_datos.odt</h4>
+<p>Nombre</p>
+<p>Póliza</p>
+<p>Euros</p>
+<p>Fernando García Ramiro</p>
+<p>1.579.986</p>
+<p>2.500</p>
+<p>Ramiro de Maeztu López</p>
+<p>1.654.987</p>
+<p>2.456</p>
+<p>Josefa del Pozo Masueco</p>
+<p>6.543.218</p>
+<p>3.250</p>
+<p>José Conde Rascón</p>
+<p>32.5878.988</p>
+<p>5.500</p>
+<p>Pablo Pompeo Fabra</p>
+<p>34.654.879</p>
+<p>6.000</p>
+<p>Francisco de Asís Castro</p>
+<p>10.111.487</p>
+<p>10.450</p>
+<p>Mariano de la Calle Hernández</p>
+<p>11.211.322</p>
+<p>8.460</p>
+<hr/>
+<h4>📦 R-Ejercicio46_principal.odt</h4>
+<p>SEGUROS ROSALESFREGENAL DE LA SIERRA(BADAJOZ)</p>
+<p>SEGUROS ROSALES</p>
+<p>FREGENAL DE LA SIERRA</p>
+<p>(BADAJOZ)</p>
+<p>NOMBRE</p>
+<p>El motivo de la presente es comunicarle que la póliza nº POLIZA, por un importe mensual de EUROS euros, se verá incrementada en un 7%, a partir de próximo día 1 de julio, en aplicación del Decreto 4568/98, de fecha 12/06/09, que regula las nuevas tarifas de aplicación al tipo de póliza que tiene subscrita con nosotros.</p>
+<p>Reciba un cordial saludo</p>
+<p>Fdo.: León González Gómez</p>
+<p>Administrador Gral. de Seguros Rosales</p>
+<hr/>
+<h2 id="ut0307">3.7 Pràctiques Tema 8 (Hipervincles)</h2>
+<p>1º SMX.</p>
+<p>Tema 08. Hipervinculos.</p>
+<p>EJERCICIO 50</p>
+<p>Crear hipervínculos. Guarda el ejercicio como Ejercicio50.odt .</p>
+<p>Definición: Los hipervínculos son elementos de un documento que permiten acceder directa- mente a otros documentos o a determinado(s) punto(s) de un documento.</p>
+<p>La navegación en INTERNET se realiza principalmente a través de hipervínculos; son esenciales en la construcción de Páginas WEB.</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ ACTIVIDAD 1: Crear en la primera hoja del documento, 4 hipervínc</p><p>ACTIVIDAD 1: Crear en la primera hoja del documento, 4 hipervínculos que abran los 4 prime- ros ejercicios de Writer que has creado ( ejercicio1 a ejercicio 4). Cuando se abran los docu- mentos el cursor deberá quedar situado al inicio del documento. El nombre del hipervínculo en este ejercicio se llamara igual que el nombre del ejercicio a abrir, es decir, ejercicio1, ejercicio2, etc…</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ ACTIVIDAD 2: Crear en la segunda hoja del documento, 2 hipervínc</p><p>ACTIVIDAD 2: Crear en la segunda hoja del documento, 2 hipervínculos que abran los ejerci- cios 5 y 6. Cuando se abran los documentos el cursor deberá quedar situado al final del do- cumento.</p></div>
+<p>1º SMX.</p>
+<p>Tema 08. Hipervinculos.</p>
+<p>EJERCICIO 51</p>
+<p>Crea el siguiente ejercicio, con las especificaciones que se indican, y guárdalo como Ejercicio51.odt</p>
+<p>Documento de texto • Descarga del portal el archivo de texto para el ejercicio R-Ejercicio51-hiperenlaces. • Guarda el fichero descargado como Ejercicio51.odt. • Puede utilizarse el tipo de letra y colores que se desee. Página • Aplica un formato de página horizontal. • Establece un color de fondo con un degradado con transparencia.</p>
+<p>Encabezado • Añade un encabezado. Escribe el texto “Librería Leoleo. Catálogo de libros”. • Establece el formato del texto del encabezado: alineación centrada, fuente la que se quiera, tamaño 9, negrita. • Pon un borde inferior de grosor 1 pt. Pie de página • Añade un pie de página al texto. Añade la numeración de páginas. Elige la fuente que desees, tamaño 10.</p>
+<p>• Escribe tu nombre y apellidos a la derecha del número de página. Inserta espacios en blanco para que el número de página quede centrado. Rótulo artístico • Crea un rótulo artístico con efecto 3D. Escribe el texto "Librería Leoleo". Imagen prediseñada • Inserta la imagen prediseñada de los libros. Aplica los ajustes necesarios y sitúala a la derecha del rótulo artístico.</p>
+<p>Tabla • Crea una tabla de 4 columnas y 3 filas. Utiliza el formato y color que desees. Modifica el color y grosor de los bordes de la tabla. Copia y pega los textos correspondientes dentro de la tabla. Ajusta el ancho de las columnas. • Fila 1. Color de fondo azul, letra tamaño 14, negrita, color blanco.</p>
+<p>• Descarga del portal la imagen de la novela Roma Nova R-Ejercicio51-romananova.jpg. • Descarga del portal la imagen del logo de Xecball R-Ejercicio51-xecball.</p>
+<p>1º SMX.</p>
+<p>Tema 08. Hipervinculos. • Fila 2, columna 1. Inserta la imagen de la novela. Aplica los ajustes necesarios. • Fila 3, columna 1. Inserta la imagen del Xecball. Aplica los ajustes necesarios. • Por ejemplo</p>
+<p>Enlace texto a Internet. Roma Nova Vamos a crear un hipervínculo de texto, para que al hacer clic, vayamos a la página web de la novela Roma Nova. • Ve a la tabla, fila 2, columna 4. • Ve al menú Insertar → Hiperenlace o haz clic en el icono de la barra de herramientas .</p>
+<p>• Establece las siguientes opciones: o URL: http://www.iberlibro.com/ROMA-NOVA-ORIGEN-CARLOS-ANGULO- NAVAS/15170884760/bd o Marco: _blank. De este modo, cuando hagamos clic en el enlace, éste se abrirá en una nueva pestaña del explorador de Internet. o Formulario: texto.</p>
+<p>o Texto: Ir a Romanova. o Nombre: TxtRomanova.</p>
+<p>1º SMX.</p>
+<p>Tema 08. Hipervinculos.</p>
+<p>• Haz clic en Aceptar.</p>
+<p>Enlace texto a Internet. Xecball Ahora vamos a crear otro hipervínculo de texto, para que al hacer clic, vayamos a la página web del Xecball. • Ve a la tabla, fila 3, columna 4. • Ve al menú Insertar → Hiperenlace o haz clic en el icono de la barra de herramientas . • Establece las siguientes opciones</p>
+<p>o URL: http://www.xecball.es o Marco: _blank. De este modo, cuando hagamos clic en el enlace, éste se abrirá en una nueva pestaña del explorador de Internet. o Formulario: texto. o Texto: Ir a Xecball. o Nombre: TxtXecball. • Haz clic en Aceptar. • Comprueba que al hacer clic sobre los enlaces de texto, se abre una nueva pestaña en el na- vegador de Internet y nos situamos directamente en el portal correspondiente, es decir, en la novela Roma Nova o en Xecball.</p>
+<p>Texto Roma Nova (descargar documento R-Ejercicio51-hiperenlaces.) • Título. Fuente que se desee, tamaño 14, negrita, espaciado expandido de 3 ptos. Formato de párrafo con bordes de doble línea de 3 ptos de grosor. • Párrafos. Aplica sangría izquierda 1 cm, derecha 1 cm, primera línea 1 cm. Establece alinea- ción justificada, interlineado doble y espacio bajo el párrafo de 0,5 cm.</p>
+<p>• Letra capital. En el primer párrafo, establece letra capital, espacio hasta el texto de 0,5 cm. • Hiperenlace. Ve al final del segundo párrafo. Aprieta la tecla Intro para dejar una línea en blanco. Crea un hipervínculo a la página "https://es-es.facebook.com/pages/Roma-Nova- Origen/323220827800926" con el texto "Página de Facebook de Roma Nova".</p>
+<p>1º SMX.</p>
+<p>Tema 08. Hipervinculos.</p>
+<p>Texto Xecball • Título. Fuente que se desee, tamaño 12, negrita. Formato de párrafo con bordes de línea dis- continua de 3 ptos de grosor. • Párrafos. Establece alineación justificada, interlineado de 1,5 líneas y espacio sobre el párrafo de 0,5 cm. • Letra capital. En el primer párrafo, establece letra capital, líneas 4, espacio hasta el texto de 0,5 cm.</p>
+<p>• Hiperenlace. Ve al final del segundo párrafo. Aprieta la tecla Intro para dejar una línea en blanco. Crea un hipervínculo a la página "http://www.chessmagic.net/ajedrez_st/doc/Nro_1_Ajedrez_social_y_terapeutico_2013_oct.pdf " con el texto "Artículo Xecball". • Por ejemplo</p>
+<hr/>
+<h2 id="ut0308">3.8 Recursos Pràctiques Tema 8</h2>
+<h4>📦 R-Ejercicio51-hiperenlaces.odt</h4>
+<p>Roma Nova. Origen</p>
+<p>Carlos Angulo Navas</p>
+<p>Xecball: deporte, ajedrez y educación física en la escuela</p>
+<p>Gustavo Martínez Serrano</p>
+<p>Roma Nova. Origen. © Carlos Angulo Navas</p>
+<p>Una fuerte crisis económica asola el mundo, ya al borde del colapso. Bajo la presión existente en el seno del marco laboral, el drama del paro de larga duración, y los violentos enfrentamientos con las fuerzas de seguridad del Estado, la sociedad valenciana trata de adaptarse y atrapar los escasos efluvios de esperanza que logran escaparse de un mundo encumbrado en la frialdad, la dureza y la crueldad. Una familia de clase media próxima al deshaucio, un grupo de jóvenes idealistas que lucha en el último reducto de lo que fue el 15M, y un sacerdote que sufre la crisis de Fe de un cristianismo que se apaga, serán, entre otros, los personajes que pronto verán cambiar sus vidas.</p>
+<p>En medio de los turbulentos enfrentamientos políticos, sociales y religiosos, aparecerá César: un enigmático hombre que conseguirá negarse a sí mismo. Desde lo más profundo del raciocinio, creerá desentrañar el foco de todos los males que acechan a las sociedades, y llegará a una conclusión que le hará romper encarnizadamente consigo mismo: sacrificar cuanto tiene por un pedazo de tierra a orillas del Mediterráneo. Allí fundará la ciudad de Roma Nova, un lugar alejado de todo lo conocido que acunará el nacimiento de un nuevo mundo. Todo regresará a la naturaleza; todo volverá al origen.</p>
+<p>XECBALL: AJEDREZ MOTRIZ. Innovación educativa en el área de Educación Física. © Gustavo Martínez Serrano</p>
+<p>La educación física, como contexto educativo para introducir el ajedrez, constituye uno de los frutos de la evolución del ajedrez en la escuela. Aceptamos el principio fundamental que diferencia la educación física del resto de las disciplinas y abre las posibilidades de un universo de naturaleza motriz. Al lado de otros deportes practicados tradicionalmente en el colegio, hemos introducido el ajedrez, que por sus características constituye una modalidad con baja participación motora.</p>
+<p>Es necesario, por tanto, que el contacto inicial con este deporte, así como el aprendizaje de nociones elementales de ajedrez, pueda ser experimentado a través de propuestas educativas innovadoras que enriquezcan la práctica educativa. Desde esta premisa surge el Xecball, que se concibe como un juego de invasión que utiliza la metáfora del ajedrez, fundamentalmente en las posiciones, los movimientos y los tipos de jugadores que intervienen en su dinámica general. El concepto del Xecball se compone de dos palabras que definen la propuesta en sí misma.</p>
+<p>La primera es “Xec”, que significa jaque en la lengua valenciana, y la segunda palabra es “ball”, vocablo de origen inglés que designa balón o móvil. Por tanto, el Xecball o la bola de jaque es la unión entre el ajedrez, y la amenaza del rey por parte de alguna de las piezas rivales, y el móvil o balón, uno de los recursos materiales que más se utilizan en el área de educación física.</p>
+<p>El ajedrez es un deporte que por norma general no exige mucho movimiento y rendimiento físico, motivo por el cual el Xecball propone una innovación educativa en el modo de introducir el ajedrez en la escuela, en la búsqueda de una propuesta de mayor valor motriz que la mostrada en la enseñanza tradicional, utilizando el contexto de la materia de educación física, y generando múltiples respuestas corporales y motrices.</p>
+<hr/>
+<h2 id="ut0309">3.9 Tema 9. PLANTILLES</h2>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Dónde se almacenan las plantillas en OpenOffice Writer Las plantillas se almacenan en las carpetas donde se instala la suite o en el perfil del usuario. Todas estas carpetas o bien son del sistema o bien están ocultas, por lo que no es sencillo acceder a ellas. Si están en carpetas poco accesibles es por un motivo. Así que no conviene hurgar en ellas, salvo que sepas muy bien lo que haces.</p>
+<p>Más adelante te mostramos como crear tu propia carpeta de plantillas personalizada, para que te sea más sencillo gestionar tus plantillas. Plantillas entregadas con la instalación Tras instalar Apache OpenOffice disponemos de un número reducido de plantillas que se almacenan en la carpeta del programa.</p>
+<p>En entornos Windows, la carpeta donde se encuentran las plantillas es</p>
+<ul>
+<li>OpenOffice 4.0</li>
+</ul>
+<p>C:\Archivos de programa\OpenOffice 4\share\template\</p>
+<ul>
+<li>Versiones anteriores 3.x</li>
+</ul>
+<p>C:\Archivos de programa\OpenOffice.org 3\share\template\ En esta carpeta encontraremos las plantillas distribuidas por varias subcarpetas, y también hallarás las plantillas utilizadas por los asistentes (en las subcarpetas llamadas wizard). Plantillas personales Además, se habilita en la carpeta perfil del usuario de OpenOffice una carpeta para almacenar las plantillas personales.</p>
+<p>carpeta perfil del usuario\user\template Plantillas de extensiones Si has instalado extensiones que incorporan plantillas (como por ejemplo Professional Template Pack II - Spanish) las plantillas se almacenan también en el perfil del usuario, pero en la subcarpeta donde se instala la extensión. Estas subcarpetas (a las que se les asigna un nombre completamente aleatorio) se encuentran en la ruta</p>
+<p>carpeta perfil del usuario\uno_packages\cache\uno_packages</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Para acceder a la carpeta perfil del usuario en OpenOffice (carpeta oculta), puedes utilizar este sencillo truco: La carpeta de usuario se encuentra (según versión) en: C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice.org\3</p>
+<p>C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice\4 Para llegar fácilmente a ella</p>
+<ul>
+<li>Desde el botón Inicio de Windows haz clic sobre Buscar</li>
+</ul>
+<p>programas y archivos</p>
+<ul>
+<li>Teclea %AppData% y pulsa Intro</li>
+</ul>
+<p>Ya estás dentro de la carpeta oculta AppData y ahora puedes seguir navegando sin problemas hasta la carpeta de usuario.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Configurar el acceso a las plantillas en OpenOffice Writer OpenOffice te permite definir la localización de las distintas carpetas en donde se almacenen las plantillas desde el menú Herramientas &gt; Opciones &gt; OpenOffice &gt; Rutas.</p>
+<p>El acceso a las carpetas donde se encuentran plantillas no resulta sencillo, como vimos en el apartado anterior; quizás te resulte más interesante crear una carpeta personal en donde almacenar las plantillas que vayas creando o que te descargues de la Web. Al editar la ruta Plantillas se muestra un diálogo como este</p>
+<p>Consideramos que una carpeta en Mis Documentos llamada Plantillas Personales siempre resultará mucho más accesible para cualquier usuario. En el siguiente tema te mostramos cómo crearla y configurarla en OpenOffice.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Crear mi carpeta de plantillas personal en OpenOffice Writer Crea una carpeta llamada Plantillas Personales dentro de la carpeta Mis Documentos. A su vez, crear dentro una estructura de carpetas para organizarlas por categorías (personales, oficina, calendarios, tarjetas...) o por aplicación (Writer, Calc, Draw, Impress), como tu prefieras.</p>
+<p>Tras agregar la nueva carpeta en la configuración de las rutar de plantillas, todas las subcarpetas que contiene se agregarán también de forma automática. Para agregar la nueva carpeta y sus subcarpetas selecciona desde el menú Herramientas &gt; Opciones &gt; OpenOffice &gt; Rutas.</p>
+<p>En la lista Rutas que utiliza OpenOffice selecciona Plantillas, y haz clic en el botón Editar. En el diálogo Editar rutas: Plantillas, haz clic en el botón Añadir....</p>
+<p>En el diálogo Seleccionar ruta haz clic sobre la carpeta Plantillas Personales creada dentro de la carpeta Mis Documentos y luego haz clic sobre el botón Aceptar.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Si deseas que la nueva carpeta sea considerada por OpenOffice la predeterminada para las nuevas plantillas, activa el botón que precede a su ruta como ves en la imagen.</p>
+<p>La nueva ruta se agregará a las rutas de plantillas disponibles para todas las aplicaciones de OpenOffice y por lo tanto para Writer.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Crear nuevo documento desde plantilla en OpenOffice Writer En OpenOffice Writer puedes crear nuevos documentos a partir de las plantillas existentes desde el menú Archivo &gt; Nuevo &gt; Plantillas y documentos.</p>
+<p>El diálogo Plantillas y documentos – Plantillas te presentará todas las carpetas en donde existen plantillas, según la configuración de rutas para plantillas definida que vimos en Configurar el acceso a las plantillas y en Crear mi carpeta de plantillas personal.</p>
+<p>En la imagen presentada más arriba hemos añadio unas flechas que apuntan a las distintas carpetas</p>
+<ul>
+<li>Las flechas verdes apuntan a la carpeta de plantillas almacenadas en el perfil de usuario</li>
+</ul>
+<p>de OpenOffice, que se presenta como Mis plantillas. Cualquier carpeta contenida en ella se mostrará también aquí, como es el caso de la carpeta Otras, que hemos creado para ilustrar el ejemplo.</p>
+<ul>
+<li>Las flechas rojas apuntan a las carpetas creadas dentro de Plantillas Personales creada</li>
+</ul>
+<p>en el apartado Crear mi carpeta de plantillas personal y que también hemos creado para ilustrar el ejemplo.</p>
+<ul>
+<li>Las flechas azules apuntan a dos carpetas propias de OpenOffice, que contienen</li>
+</ul>
+<p>plantillas de presentaciones y de fondos de presentación para Impress. Haz doble clic en la carpeta donde tengas almacenada la plantilla que deseas utilizar para abrir esa carpeta. Utiliza los botones situados justo encima para volver atrás o volver al inicio. Al abrir una carpeta se mostrarán las plantillas que contiene. Haciendo un clic sobre la plantilla elegida puedes ver información o una previsualización de la misma en el panel situado a la derecha de la lista de plantillas.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Haciendo clic sobre el botón puedes ver información sobre la plantilla seleccionada.</p>
+<p>Haciendo clic sobre el botón puedes ver una previsualización de la plantilla seleccionada. Si no tienes plantillas instaladas, puedes consultar el punto Agregar nuevas plantillas desde la Web. Una vez seleccionada la plantilla, haz doble clic sobre su nombre, o clic en el botón Abrir. OpenOffice Writer creará un nuevo documento copia de la plantilla.</p>
+<p>Este nuevo documento será creado con un nombre neutro (del tipo Sin título X, donde X es un número). Puedes modificar el nuevo documento a tu gusto, y asignarle un nombre cuando lo guardes.</p>
+<p>La plantilla permanecerá intacta para que crees nuevos documentos cuando tú quieras, cuantas veces quieras.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Crear una nueva plantilla en OpenOffice Writer En realidad una plantilla es un documento normal que ha sido guardado no como un documento, sino como una plantilla. Por lo tanto, para crear una plantilla debemos seguir exactamente el mismo procedimiento que con cualquier documento, salvo a la hora de guardarlo.</p>
+<p>Por ese mismo motivo, cualquier documento de los que ya tienes creado en OpenOffice Writer puedes convertirlo fácilmente en plantilla. La idea, lo importante, es que la plantilla creada sea como el esqueleto que conformará tus nuevos documentos. Esos nuevos documentos creados tomando como modelo la plantilla son los que posteriormente completarás con nuevos textos, imágenes y contenidos.</p>
+<p>A la hora de crear una nueva plantilla, sencillamente crea un nuevo documento.</p>
+<p>Pero también puedes utilizar un documento ya creado. En este caso, crea primero una copia del documento, y luego, elimina todo el contenido que no sea necesario, dejando sólo la estructura que consideres oportuna Si en tu trabajo o en el hogar utilizas Writer para escribir cartas, informes, memorandums, y ya los tienes creados, puedes crear fácilmente una plantilla con ellos.</p>
+<ul>
+<li>Crea primero una copia del documento.</li>
+<li>Edita la copia, y elimina aquellos elementos que no sean comunes en los diferentes</li>
+</ul>
+<p>documentos que vas crear a partir de la nueva plantilla.</p>
+<ul>
+<li>Permanecerán por tanto los elementos comunes, como el encabezado de página, el pie</li>
+</ul>
+<p>de página, la firma, el fondo de la página, el saludo inicial, un modelo de las tablas que incorporas, los estilos creados, etc.</p>
+<ul>
+<li>Avanzado: Puedes incorporar campos especiales para que automáticamente muestren</li>
+</ul>
+<p>la fecha, o la carpeta donde se almacena el documento, el autor, etc.</p>
+<ul>
+<li>Avanzado: Puedes editar el estilo Predeterminado para cambiar el formato por defecto</li>
+</ul>
+<p>del texto, el idioma, etc., y personalizar los distintos estilos utilizados en el documento.</p>
+<ul>
+<li>Avanzado: Puedes modificar el estilo de la página para cambiar los márgenes, la</li>
+</ul>
+<p>orientación de página, los encabezados, pies, etc.</p>
+<ul>
+<li>Finalmente, tan sólo quedará guardar el documento como plantilla.</li>
+</ul>
+<p>Para guardar el documento como plantilla, sigue los pasos indicados en el punto Cómo y dónde guardar las plantillas.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Cómo y dónde guardar las plantillas en OpenOffice Writer OpenOffice Writer permite que las plantillas se almacenen en una o varias carpetas (configurable desde Herramientas &gt; Opciones &gt; OpenOffice &gt; Rutas). Las carpetas por defecto no son fácilmente accesibles por el usuario, ya que están situadas en la carpeta que contiene su perfil 2.</p>
+<p>El usuario también puede añadir o modificar la ruta de las plantillas a otros en lugares más accesibles , lo que hemos venido a llamar en este manual carpeta personal de plantillas. En cualquier caso podemos almacenar las plantillas en sus carpetas por dos métodos: utilizando el administrador de plantillas, o simplemente, arrastrándolas al interior de las carpetas correspondientes.</p>
+<p>Guardar con el administrador de plantillas Para guardar el documento que has creado o modificado en OpenOffice Writer como una plantilla tan sólo tienes que seguir los siguientes pasos</p>
+<ul>
+<li>Selecciona desde el menú Archivo &gt; Plantilla &gt; Guardar...</li>
+<li>En el diálogo Plantilla de documento selecciona la carpeta donde quieres almacenar la</li>
+</ul>
+<p>plantilla desde la lista Categorías 1.</p>
+<ul>
+<li>Escribe el nombre de tu nueva plantilla en el cuadro Nueva plantilla</li>
+<li>Haz clic en Aceptar</li>
+</ul>
+<p>Guardar en nuestra carpeta personal de plantillas Alternativamente, puedes guardar la plantilla en la carpeta personal de plantillas que creamos en el apartado Crear mi carpeta de plantillas personal mediante este procedimiento</p>
+<ul>
+<li>Si...</li>
+<li>... creaste un documento nuevo para la plantilla, clic en Archivo &gt; Guardar.</li>
+<li>... estás modificando un documento existente para crear la plantilla, clic en Archivo &gt;</li>
+</ul>
+<p>Guardar como....</p>
+<ul>
+<li>Escribe el nombre de la plantilla</li>
+</ul>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<ul>
+<li>En Tipo, selecciona Plantilla de documento de texto ODF (.ott)</li>
+<li>Navega hasta la carpeta Mis documentos/Plantillas personales</li>
+<li>Haz clic en Guardar</li>
+</ul>
+<p>Como ves, salvo seleccionar en Tipo guardar como plantilla, el procedimiento es el mismo que Guardar o Guardar como... para un documento. Notas 1 ↑ En versiones anteriores a la 4.0 la lista Categorías se mostraba como Área. 2 ↑</p>
+<p>Para acceder a la carpeta perfil del usuario en OpenOffice (carpeta oculta), puedes utilizar este sencillo truco: Windows Vista y Windows 7 La carpeta de usuario se encuentra (según versión) en: C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice.org\3 C:\Users\Tu nombre de usuario\AppData\Roaming\OpenOffice\4 Para llegar fácilmente a ella</p>
+<ul>
+<li>Desde el botón Inicio de Windows haz clic sobre Buscar</li>
+</ul>
+<p>programas y archivos</p>
+<ul>
+<li>Teclea %AppData% y pulsa Intro</li>
+</ul>
+<p>Ya estás dentro de la carpeta oculta AppData y ahora puedes seguir navegando sin problemas hasta la carpeta de usuario.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Modificar una plantilla existente en OpenOffice Writer El método más sencillo para modificar una plantilla existente es</p>
+<ul>
+<li>Crear un nuevo documento a partir de la plantilla</li>
+<li>Modificar el documento</li>
+<li>Guardar el documento como plantilla de nuevo, sustituyendo a la anterior</li>
+</ul>
+<p>Modificar una plantilla desde el Administrador de plantillas Puedes modificar la plantilla abriéndola desde el Administrador de plantillas.</p>
+<ul>
+<li>Abre el Administrador de plantillas desde el menú Archivo &gt; Plantilla... &gt; Administrar...</li>
+<li>Recorre las carpertas mostradas en el panel de la izquierda hasta encontra la plantilla</li>
+</ul>
+<p>a editar.</p>
+<ul>
+<li>Selecciona la plantilla</li>
+<li>Selecciona desde su menú contextual Editar</li>
+</ul>
+<ul>
+<li>O desde el botón Comandos... selecciona la opción Editar</li>
+</ul>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Modificar una plantilla almacenada en nuestra carpeta personal de plantillas Alternativamente, si la plantilla está almacenada en la carpeta personal de plantillas que creamos en el apartado Crear mi carpeta de plantillas personal puedes editarla mediante este procedimiento</p>
+<ul>
+<li>Selecciona Archivo &gt; Plantilla &gt; Editar</li>
+<li>Navega hasta la carpeta Mis documentos/Plantillas personales</li>
+<li>Selecciona la plantilla y haz clic en Abrir</li>
+</ul>
+<p>Guardar la plantilla modificada Guarda como cualquier otro documento, por ejemplo, haciendo clic sobre el botón Guardar. Guardar una copia u otra versión de la plantilla Para guardar una copia u otra versión de la plantilla, deberás asignarle otro nombre al guardarla siguiendo el procedimiento que vimos en Cómo y dónde guardar las plantillas.</p>
+<p>Para guardar la plantilla modificada, tan sólo deberás hacer clic en el botón Guardar</p>
+<p>Puedes guardar una copia u otra versión con otro nombre siguiendo los pasos indicados en el punto Cómo y dónde guardar las plantillas</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Cambiar la plantilla predeterminada en OpenOffice Writer Cuando en OpenOffice Writer creas un nuevo documento desde el menú Archivo &gt; Nuevo &gt; Documento de texto o haciendo clic sobre el botón Nuevo se crea un nuevo documento vacío basado en la plantilla predeterminada de Writer (plantilla por defecto para documentos nuevos).</p>
+<p>Pero quizás desees que utilizar otra plantilla para crear tus nuevos documentos; por ejemplo, con estilos, encabezado y pie de página personalizados. Si deseas utilizar otra plantilla como la plantilla predeterminada deberás seguir los siguientes pasos</p>
+<ul>
+<li>1 Selecciona el menú Archivo &gt; Plantillas &gt; Administrar</li>
+<li>2 En la lista de la izquierda selecciona la plantilla que deseas configurar como</li>
+</ul>
+<p>predeterminada (en nuestro ejemplo, vamos a utilizar una plantilla que hemos guardado como Mi plantilla Normal en la carpeta Writer, dentro de nuestra carpeta de Plantillas Personal) y …</p>
+<ul>
+<li>Haz clic sobre su nombre con el botón secundario del ratón para abrir su menú</li>
+</ul>
+<p>contextual</p>
+<p>o …</p>
+<ul>
+<li>Despliega el submenú del botón Comandos</li>
+</ul>
+<ul>
+<li>3 Selecciona la opción Definir como plantilla predeterminada.</li>
+</ul>
+<p>La próxima y sucesivas veces que crees un nuevo documento de texto, Writer utilizará la nueva plantilla predeterminada.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Restablecer la plantilla predeterminada en OpenOffice Writer Si quieres restablecer la plantilla predeterminada de OpenOffice Writer a la plantilla predeterminada original</p>
+<ul>
+<li>Selecciona el comando Archivo &gt; Plantillas &gt; Administrar.</li>
+<li>Selecciona desde el botón Comandos la opción Restaurar plantilla predeterminada &gt;</li>
+</ul>
+<p>Documento de texto</p>
+<ul>
+<li>O haz clic secundario sobre cualquier elemento de la lista de la izquierda y selecciona</li>
+</ul>
+<p>la opción Restaurar plantilla predeterminada &gt; Documento de texto</p>
+<p>La próxima vez que crees un nuevo documento de texto, volverá a utilizarse la plantilla predeterminada original de OpenOffice.org para documentos de texto.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Agregar nuevas plantillas desde la Web en OpenOffice Writer En la instalación por defecto de Apache OpenOffice hay muy pocas plantillas, y las pocas que hay son todas para Impress. Pero dispones de miles de plantillas que puedes descargar desde la Web. A continuación relacionamos algunos sitios desde los que puedes descargar plantillas en español</p>
+<ul>
+<li>Web oficial de OpenOffice para plantillas en español</li>
+<li>Professional Template Pack II - Spanish</li>
+<li>Professional Template Pack I - Spanish</li>
+<li>Plantilla de factura para Writer</li>
+<li>Calendario 2012 para Writer</li>
+</ul>
+<p>Otros sitios desde donde descargar más plantillas (no necesariamente en español)</p>
+<ul>
+<li>Plantillas para etiquetas adhesivas</li>
+<li>OO Extras</li>
+<li>OxygenOffice Profesional</li>
+</ul>
+<p>En algunos casos las plantillas se agregarán como una extensión (ver Administrar extensiones en Writer) y, probablemente, creará su propia estructura de carpetas. En otras ocasiones, se tratará sencillamente de descargar y guardar un archivo que podrás almacenar en tu propia carpeta de plantillas. Puedes consultar este minitutorial de nuestro blog si no sabes como hacerlo: Cómo copiar las plantillas descargadas al almacén de plantillas de OpenOffice.</p>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>El administrador de plantillas de OpenOffice Writer En este manual te hemos sugerido una forma alternativa de administrar tus plantillas para Writer, consistente en crear una carpeta llamada Plantillas Personales en tu carpeta Mis Documentos. Posteriormente te hemos explicado como agregar esa carpeta en la ruta de plantillas de OpenOffice.</p>
+<p>Te hemos sugerido también que las diferentes categorías de plantillas las organices dentro de esa carpeta, en forma de subcarpetas. Consideramos que es un sistema cómodo, fácil y al alcance de cualquier usuario. El motivo es por que consideramos que el sistema de administrar plantillas de OpenOffice Writer es un poco confuso para usuarios noveles. Pero no es más que una opinión.</p>
+<p>OpenOffice dispone de su propio sistema de gestión de plantillas. Para activarlo, selecciona desde el menú Archivo &gt; Plantilla &gt; Administrar.</p>
+<p>El administrador muestra dos listas y una serie de botones. Las listas pueden presentar bien la estructura de plantillas, o documentos que previamente deben de ser seleccionados mediante el botón Archivo..., que se activa si haces clic en la lista Documentos. El botón Comandos te presentará una serie de opciones en función del elemento que tengas seleccionado.</p>
+<p>Si seleccionas una categoría (carpeta) de las plantillas de usuario podrás</p>
+<ul>
+<li>Agregar una nueva categoría seleccionando</li>
+</ul>
+<p>Nuevo</p>
+<ul>
+<li>Eliminar una categoría</li>
+<li>Importar una plantilla a la categoría</li>
+<li>Invocar la Configuración de la impresora</li>
+<li>Refrescar la lista seleccionando Actualizar</li>
+</ul>
+<p>Tema 09. Plantillas.</p>
+<p>Fuente: https://wiki.open-office.es/Manejo_de_imagenes_en_OpenOffice_Writer</p>
+<p>Si seleccionas una plantilla podrás</p>
+<ul>
+<li>Editar la plantilla</li>
+<li>Eliminar la plantilla</li>
+<li>Importar una plantilla</li>
+<li>Exportar la plantilla</li>
+<li>Invocar la Configuración de la impresora</li>
+<li>Refrescar la lista seleccionando Actualizar</li>
+<li>Definir como plantilla predeterminada la</li>
+</ul>
+<p>plantilla seleccionada</p>
+<p>Si no existe ningún elemento seleccionado podrás</p>
+<ul>
+<li>Invocar la Configuración de la impresora</li>
+<li>Refrescar la lista seleccionando Actualizar</li>
+</ul>
+<p>Finalmente, el botón Libreta de direcciones... te permite establecer un vínculo entre una fuente de datos (por ejemplo, la libreta de direcciones de tu sistema operativo ( la libreta de direcciones de Windows o la de MS Outlook para usuarios de Windows) y la base de datos que automáticamente creará OpenOffice y que te permitirá disponer de los campos de tu libreta de direcciones para agregarlos con facilidad a tus documentos y plantillas.</p>
+<hr/>
+<h2 id="ut0310">3.10 Pràctiques Tema 9 (Plantilles)</h2>
+<p>1º SMX.</p>
+<p>Tema 09. Plantillas</p>
+<p>EJERCICIO 52</p>
+<p>Escribe la siguiente carta con ayuda de la plantilla Carta moderna (o parecida). Guarda el documento como Ejercicio52.odt</p>
+<p>1º SMX.</p>
+<p>Tema 09. Plantillas EJERCICIO 53</p>
+<p>El jefe de personal de una empresa debe realizar un certificado de retenciones a cuenta del IRPF para cada uno de los empleados. Realiza una plantilla similar a la siguiente y guárdala como Plantilla (en tu disco duro), con el nombre Ejercicio53-Certificado de retenciones.ott</p>
+<p>A partir de la plantilla Certificado de retenciones creada, elabora un certificado para cada uno de los siguientes empleados con los datos que se indican</p>
+<p>• Marta García Aleada. NIF 12345678A. Retribución íntegra: 9900€. Retención a cuenta del IRPF: 901€. Deducción para las cuotas de la Seguridad Social: 435€. • María Pérez López. NIF 87654321Z. Retribución íntegra: 12620€. Retención a cuenta del IRPF: 1051€. Deducción para las cuotas de la Seguridad Social: 493€.</p>
+<p>• Luis Badea García. NIF 11223344F. Retribución íntegra: 8114€. Retención a cuenta del IRPF: 594€. Deducción para las cuotas de la Seguridad Social: 392€.</p>
+<p>Para realizar esto, sigue el siguiente orden</p>
+<ul>
+<li>Crear</li>
+</ul>
+<p>primero el documento como plantilla (Ejercicio53-Certificado de retenciones.ott)</p>
+<ul>
+<li>Abrir un nuevo documento basado en la plantilla anterior, y rellena los datos</li>
+</ul>
+<p>anteriores. Ves guardando los documentos con los nombres: uarda el documento como Ejercicio53-a.odt (en el caso de Marta), Ejercicio53-b.odt (en el caso de María) y Ejercicio53-c.odt (en el caso de Luis)</p>
+<p>1º SMX.</p>
+<p>Tema 09. Plantillas</p>
+<p>EJERCICIO 54</p>
+<p>Crea una plantilla para realizar pedidos a los proveedores. Dale forma de una carta comercial de pedido. Utiliza las herramientas de formato de Writer para hacer que el membrete de la empresa sea lo más profesional posible y utiliza todo lo aprendido en la parte dedicada a gráficos para crear el logotipo de la empresa (barra de herramientas dibujo, autoformas, FontWork...). Guarda la plantilla con el nombre de Ejercicio54-Pedido.ott. Los datos de la empresa con los siguientes</p>
+<p>ASER, S.L. Av. Gran Vía, 23 28080 MADRID Tel.: 91 524 70102 Fax.: 91 524 71331</p>
+<p>Suponiendo que trabajas en la empresa ASER, S.L., dedicada a asesorar y gestionar empresas, realiza un pedido a un proveedor solicitando los siguientes artículos</p>
+<ul>
+<li>2 cartuchos de tinta para impresora HP 600, a 22 € la unidad.</li>
+<li>1 cartucho de tóner para impresora láser HP, a 70 €</li>
+<li>10 paquetes de 500 folios DIN A-4, a 2€ la unidad</li>
+<li>1 caja de bolígrafos Bic de 50 unidades, varios colores, a 0,5€ la unidad.</li>
+</ul>
+<p>Datos del proveedor: Papelería Ortiz, S.L. C/ Huertas, 2 (Madrid).</p>
+<p>Los precios de estos artículos son los que se indican. El plazo de entrega, inmediato.</p>
+<p>Utiliza la plantilla Pedido que acabas de crear, para rellenar los datos. Guarda el documento como Ejercicio54.odt.</p>
+<hr/>
+<h2 id="ut0311">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</h2>
+<p>1º SMX.</p>
+<p>Tema 10. Imprimir</p>
+<p>EJERCICIO 55</p>
+<p>EN CASA: Accede a la dirección http://www.cutepdf.com. Descarga para Windows el archivo de instalación de este simulador de impresora pdf. Una vez efectuada la descarga, instala Cutepdf en Windows.</p>
+<p>Crea un documento llamado Ejercicio55.odt , y describe los pasos realizados para instalar esta impresora pdf (incluye pantallas, si lo consideras necesario). A partir del archivo Ejercicio33.doc, genera un archivo llamado Ejercicio55.pdf.</p>
+<p>PDFCreator</p>
+<p>EJERCICIO 56</p>
+<p>EN CASA: Usando el simulador de impresora Cutepdf y a partir de un fichero de texto, que contenga como mínimo 4 páginas, genera un documento llamado Ejercicio56.pdf, que contendrá únicamente 1 página (configurar impresión 4 páginas por hoja).</p>
+<p>EJERCICIO 57</p>
+<p>EN CASA: Usando el simulador de impresora Cutepdf y a partir de un archivo de texto que tengas de 4 páginas, genera un documento llamado Ejercicio57.pdf, que contendrá un total de 8 páginas (2 copias de cada una).</p>
+<hr/>
+<h2 id="ut03actividades">✍️ Activitats pràctiques UT3</h2>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.1 — Pràctica guiada combinar correspondència</p><h3>📄 writer_laformafacildecombinarcorrespondencia.pdf</h3>
+<p>La forma fácil de combinar correspondencia 7 de noviembre de 2020 AUTOR: LUIS ALEJANDRO BERNAL ROMERO Esta guía te enseña a combinar correspondencia con Writer de LibreOffice. No utiliza el asistente de combinación de corrrespondencia, sino que utiliza campos junto con la impresión en serie, lo que hace muy fácil hacer combinación de correspondencia.</p>
+<p>Palabras clave: combinar correspondencia, Writer, LibreOffice, OpenOffice, campos, correspondencia, combinar Esta obra está licenciada bajo la Licencia Creative Commons Atribución-CompartirIgual 3.0 Unported. Para ver una copia de esta licencia, visita http://creativecommons.org/licenses/by-sa/3.0/.</p>
+<p>Lamentablemente las guías que se encuentran en Internet de como combinar correspondencia con Writer de LibreOffice enseñan de una forma muy complicada a hacer esta que debería ser una tarea muy sencilla. Esto es debido a que usan el Asistente de combinación de correspondencia que con ánimos de generalizar complica mucho las cosas. Por ello, he escrito esta guía que te enseña una forma fácil, ridículamente fácil, de hacer la combinación de correspondencia. Esta forma se basa en el uso de campos y la característica de impresión en serie.</p>
+<p>Lo primero es crear una base de datos con las personas y sus direcciones en la hoja de cálculo Calc, algo así como: Nom bre Dirección Fernando Luna Calle 17 34-8 Offray Castro Carrera 8 56-80 Apartamento 1008 María del Pilar Jaramillo Calle 8 este 103-72 Apartamento 3 Juan Fernando Saenz Avenida 34 300-76 Si tienes pereza o unas ganas que no te aguantas de saber como se hace, no pierdas tiempo y baja el archivo de base de datos que te he preparado para esta guía: ListaInvitados.xls.</p>
+<p>Ahora prepara la carta en Writer y deja en blanco los espacios del nombre y la dirección. Igual si tienes pereza o afán he preparado una carta de invitación. Así que no pierdas el tiempo y descargala de la plataforma: CartaInvitacion.odt. Ábrela en Writer, debes ver lo siguiente</p>
+<p>Ahora pon el cursor al frente de donde dice Señor(a). Ahora ve el menú Insertar → Campos → Otros. Debe salir algo como: La forma fácil de combinar correspondencia</p>
+<p>Has clic en la pestaña Bases de datos. Ahora clic el botón Examinar. La forma fácil de combinar correspondencia</p>
+<p>Selecciona el archivo ListaInvitados.xls. Debe quedar de la siguiente forma: Ahora has clic en el triángulo de la izquierda de ListaInvitados. Has lo mismo con el triángulo de Hoja1. La forma fácil de combinar correspondencia</p>
+<p>En este momento te deben salir los títulos de columna de la hoja de cálculo: Nombre y Dirección. Ahora has clic en Nombre. Clic en el botón Insertar. La forma fácil de combinar correspondencia</p>
+<p>¡NO cierres la ventana todavía! Si pones la ventana a un lado podrás ver como ya está insertado el campo &lt;Nombre&gt;. Ahora, sin cerrar la ventana, has clic debajo de esa línea para ubicar el cursor. Y has doble clic en el campo Dirección. La forma fácil de combinar correspondencia</p>
+<p>De la misma forma puedes insertar todos los campos que quieras en el documento. Ahora si puedes cerrar el ventana haciendo clic en el botón Cerrar. Ahora clic en Archivo → Imprimir. Debe salir lo siguiente: La forma fácil de combinar correspondencia</p>
+<p>Y es en esta ventana donde está el truco. Clic en el botón Si. Y sale le ventana de Impresión en serie. Simplemente le das clic en el botón Aceptar: Sale la ventana de Impresión: La forma fácil de combinar correspondencia</p>
+<p>Y clic en el botón Imprimir. Y listo, debe estar imprimiendo en este momento todas las invitaciones. La forma fácil de combinar correspondencia</p>
+<h3>📄 cartainvitacion.odt</h3>
+<p>Madrid, sábado 7 de noviembre de 2020</p>
+<p>Señor(a)</p>
+<p>La ciudad.</p>
+<p>Por medio de la presente estoy invitando a usted al taller de Estilos en Writer de LibreOffice. Los estilos son una herramienta muy poderosa del procesador de palabra Writer, pues permiten marcar texto indicando “que es”: esto es un título, esto es un subtítulo, esto en una cita, este es el destinatario, etc. Consiguiendo de esa forma una escritura basado en el fondo y no en la forma. Y en la práctica, automatizando tareas como: la generación de índices de contenido, numeración de títulos; y cambiando el formato de párrafos y caracteres de una manera fácil y consistente a lo largo de todo el texto. Por ello, los estilos son una herramienta que ahorra mucho trabajo en el día a día.</p>
+<p>Esta taller se impartirá de manera gratuita el día sábado 27 de julio de 10 de la mañana a 12 del medio día, en las instalaciones de HackBo, Calle 44 No 8-50 oficina 201 Barrio Javeriana, Madrid.</p>
+<p>El taller tiene un cupo máximo de diez participantes, que serán estrictamente seleccionados en orden de llegada (es de anotar que HackBo se reserva el derecho de admisión)</p>
+<p>Atentamente,</p>
+<p>Msc. Luis Alejandro Bernal Romero</p>
+<p>Consultor en Software Libre y</p>
+<p>Instructor de taller</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0218.html">⬅️ 2.18 curiosidades en Writer</a>
+<a class="page-nav-btn" href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina.  ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

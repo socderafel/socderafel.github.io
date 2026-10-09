@@ -1,0 +1,2079 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>5.8 Solucions a pl/sql — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🗄️ Administració de Sistemes Gestors de Bases de Dades — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Administració de Sistemes Gestors de Bases de Dades</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació Mòdul ASGBD</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Com fer un treball de classe</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Com fer un treball de classe (conclusions)</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Beques OpenWebinars</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Instal·lació d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Preparació de l'entorn</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Instal·lació d'un SGBD</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Videos d'instal·lació</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Primers passos. Ordres bàsiques</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Arquitectura BBDD's en Oracle</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Configuració d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Configuració d'un SGBD</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tablespaces i datafiles</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Us d'SQL*Plus</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Solucions errors de connexió amb SQLDeveloper</a></li>
+<li><a href="../ut02/ut0205.html">2.5 primers pasos - sol</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Usuaris i permisos. Seguretat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Usuaris i permisos</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Connectar a SGBD Oracle des d'altra màquina</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Usuaris NO admin en Windows</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Permisos d'Update i Delete + Select</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Seguretat en un SGBD</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Primera avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT5 — Automatització de tasques</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Enquesta valoració docent. 1er trimestre</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Repàs: PL/SQL</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Repàs: PL/SQL (II)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Repàs: PL/SQL (II) _ SOLUCIONS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Automatització de tasques</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Butlletí procediments i funcions</a></li>
+<li><a href="../ut05/ut0507.html">5.7 Butlletí triggers</a></li>
+<li><a class="active" href="../ut05/ut0508.html">5.8 Solucions a pl/sql</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Optimització de l'SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Optimització de l'SGBD</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Disponibilitat d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Disponibilitat d'un SGBD</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Segona Avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Enquesta valoració docent. 2on trimestre</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Convocatoria Ordinaria</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Continguts i Recursos</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Programa de recuperació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Dates en Oracle</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Convocatòria extraordinaria ASGBD - curs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Continguts i Recursos</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT5 — Automatització de tasques</span>
+<h1>5.8 Solucions a pl/sql</h1>
+<h3>📄 32 Activitat triggers_III_SOL.pdf</h3>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Activitat Crear (2) triggers amb pl/sql Per realitzar esta pràctica, utilitzarem la mv Windows 10 i Oracle SQL Developer Amb usuari system en pdb1, Crear usuari usuari13 (donar-li contrasenya i permisos de connexió i creació de triggers) Dona-li permisos de crear taules i assigna quota (10M) en el tablespace per defecte.</p>
+<p>Connecta a pdb1 amb l’usuari creat (usuari13) Realitza els següents exercicis i practica : 0.- Crea la taula llibres i ompli-la (5 files)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DROP TABLE llibres;
+CREATE TABLE llibres(  codi NUMBER(6) PRIMARY KEY, titol VARCHAR2(50) NOT NULL,</code></pre>
+</div>
+<p>autor VARCHAR2(30) , editorial VARCHAR2(40), impressor VARCHAR2(40),</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>preu number(8,2) , datadalta date );</code></pre>
+</div>
+<p>Crea la taula control_llibres</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DROP TABLE control_llibres;
+CREATE TABLE control_llibres(  data_canvi DATE,  usuari VARCHAR2(10),</code></pre>
+</div>
+<p>codi_llibre NUMBER(6), preu_abans NUMBER(8,2), preu_despres NUMBER(8,2),</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>operacio_denegada VARCHAR2(50)  );</code></pre>
+</div>
+<ul>
+<li>Crear un disparador (nom: canvi_preus) que guarde quan i qui canvia un preu de la taula llibres,</li>
+</ul>
+<p>el preu nou i el vell. En la exploració dels resultats, que informació te el camp ‘DATA_CANVI’ ? Es pot vore l’hora i minuts del canvi de preu ?</p>
+<ul>
+<li>Crea un disparador (nom: horari_laboral) que no ens permeta dur a terme operacions amb</li>
+</ul>
+<p>llibres si no estem en la jornada laboral. (8h – 20h) Dilluns a Divendres, i a més a més, guarde els intents en la taula control_llibres. En tots els exercicis, documenta les proves necessàries i els resultats. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Solucionari 1) create or replace trigger canvi_preus before update of preu on llibres for each row begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>insert into control_llibres values (sysdate, user, :old.codi, :old.preu, :new.preu,'update');</code></pre>
+</div>
+<p>end; 2) create or replace trigger horari_laboral before update or insert or delete on llibres for each row declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v_dia number := to_char(sysdate,'D');
+   v_hora number := to_char(sysdate,'HH24') ;</code></pre>
+</div>
+<p>begin if (v_dia=6 or v_dia=7 or v_hora&lt;8 or v_hora&gt;19) then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>insert into control_llibres values (sysdate,user,0,0,0,'ForaHorari');
+       -- el insert es farà i es desfarà per el rollback del ERROR
+      RAISE_APPLICATION_ERROR(-20011, 'No se puede operar fuera de horario');
+    end if;</code></pre>
+</div>
+<p>end;</p>
+<h3>📄 10 procediment_v2_SOL.pdf</h3>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Crear procediment emmagatzemat en Oracle Esta pràctica no funciona molt bé ... Esbrina perquè i fes les modificacions oportunes per a que funcione.</p>
+<p>Per realitzar esta pràctica, utilitzarem la mv Windows 10 amb Oracle SQL Developer Amb usuari system en pdb1: Crear usuari usuari1 (donar-li contrasenya i permisos de connexió, crear taules, crear procediments) connectar com a system</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>create user usuari1 identified by 1234 quota 10M on users;
+grant connect,create table, create procedure to usuari1;</code></pre>
+</div>
+<p>Crear usuari usuari2 (donar-li contrasenya i permisos de connexió )</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>create user usuari2 identified by 1234;
+grant connect to usuari2;</code></pre>
+</div>
+<p>Amb usuari1 en pdb1: Crear taula llibres3</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE llibres3(  codi NUMBER(6) PRIMARY KEY,</code></pre>
+</div>
+<p>titol VARCHAR2(30) NOT NULL, editorial VARCHAR2(30),</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>preu NUMBER(8,2),  datadalta date );</code></pre>
+</div>
+<p>Crear un procediment (nom amay) que pose totes les dades de la taula en majúscules</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>create procedure amay</code></pre>
+</div>
+<p>as begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>update llibres3 set titol=upper(titol), editorial=upper(editorial);</code></pre>
+</div>
+<p>commit; end; Donar-li a usuari2 permís d’execució del procediment creat. Des de system, no des de usuari1</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>grant execute on usuari1.amay to usuari2;</code></pre>
+</div>
+<p>Inserir 3 files amb dades en majúscules i minúscules *si no funciona, falta quota 2M on users, o falta connectar amb usuari1. Llistar dades de la taula</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select * from llibres3;</code></pre>
+</div>
+<p>Amb usuari2 en pdb1: executar procediment (execute usuari1.amay;) explorar resultats (llistar dades) -- (comenta que succeeix i perquè) no es pot, no te permís per a llistar (select). S’ha de fer des de usuari1. si amay no te commit, tampoc s’actualitza ( està canviat, però no s’actualitza) Inserir 2 files més amb dades en majúscules i minúscules (comenta que succeeix i perquè) no es pot des de usuari2, si des de usuari1 explorar resultats (comenta que succeeix i perquè). Si no està en majúscules, es per que falta un commit; Com podríem solucionar-ho posar un commit dins del procediment</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Des d’usuari1, crea un procediment que inserisca llibres de la editorial ‘Sintesis’ , anomenat inserixSintesis , on se li pase com a paràmetre, el nom del llibre i el preu.</p>
+<p>El procediment buscará l’úlim codi de la taula, l’incrementarà en 1 per a donar de alta el nou registre connectar amb usuari1 create or replace procedure inserixSintesis (pnom varchar2, ppreu number ) as vultim number; begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select max(codi) into vultim from llibres3;
+  vultim := vultim + 1;
+  insert into llibres3 values ( vultim, pnom, 'sintesis', ppreu, sysdate);</code></pre>
+</div>
+<p>commit; end; Dona permís a usuari2 per executar el nou procediment i prova’l des d’usuari2 des de usuari1, grant execute on inserixSintesis to usuari2;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>des de usuari2 .   exec usuari1.inserixSintesis (‘titol4’,50);</code></pre>
+</div>
+<p>Documentar el procés Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF ---------------------------------------- Taula Llibres3</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE llibres3(  codi NUMBER(6) PRIMARY KEY,</code></pre>
+</div>
+<p>titol VARCHAR2(30) NOT NULL, editorial VARCHAR2(30),</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>preu NUMBER(8,2),  datadalta date );</code></pre>
+</div>
+<h3>📄 06 butlleti repas_1.pdf</h3>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Butlletí repàs PL/SQL Connecta amb SYSTEM a pdb1 Crea usuari usuari1 Donar permisos a usuari1 Connecta amb usuari1 en pdb1 Tasca 1 Crea un bloc anònim que demane dos números (utilitza dos variables de substitució) i diga la suma, la multiplicació, la resta, la divisió dels números.</p>
+<p>Tasca 2 Càlcul de la superfície de diverses figures geomètriques. (utilitza tres variables de substitució) Rectangle base*altura Quadrat base Triangle (base*altura) / 2 Cercle ∏*radi Tasca 3 Crea un fragment de codi que donat un mes de l’any en número (de 1 a 12), i a continuació, que mostre el nom del mes. (utilitza variables de substitució) Tasca 4 Fes un altre fragment que donat un mes (utilitza variables de substitució), en lloc de mostrar el nom del mes, mostre els dies que té. (Considerem que febrer sempre té 28 dies).</p>
+<p>Tasca 5 un altre fragment que donat un dia de la setmana en número (d’1 a 7) i, a continuació que mostre si el dia introduït és entre setmana o cap de setmana. (utilitza variables de substitució) Tasca 6 un bloc anònim que reba una cadena i la visualitze a l'inrevés. (utilitza variables de substitució).</p>
+<p>Transforma el bloc anònim en un procediment. Tasca 7 una fragment de codi que retorne el nombre d'anys complets que hi ha entre dues dates que es passen com a strings. Transforma el bloc anònim en una funció. Tasca 8 un bloc anònim que retorne solament caràcters alfabètics substituint qualsevol altre caràcter per blancs a partir d'una cadena que es passarà en una variable de substitució TIPS: Pots utilitzar funcions predefinides de PL/SQL round( n) trunc( n) mod(n,m ) floor(n ) Ceil(n ) Length( s) Lower(s ) Upper(s ) Ascii(s ) Chr(n ) Substr(s,n [,l]) trim(s) instr(c,s) || initcap(s) replace(s,s1,s2) Data2 – data1 : resultat , num de dies entre les dos dates Data1 + num : resultat , data de ‘num’ de dies més que Data1</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Ajuda: Solució 1 declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v1 number := &amp;numero1;
+    v2 number := &amp;numero2;</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line(' la suma es : ' || (v1 + v2) );
+    -- les altres operacions, igual però amt  * /  -</code></pre>
+</div>
+<p>end; Solució 2 declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vbase number := &amp;base;
+    valtura number := &amp;altura;
+    vradi number := &amp;radi;</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line(' area de rectangle  es : ' || (vbase *  valtura) );
+    --  Igual en el quadrat, triangle i cercle.</code></pre>
+</div>
+<p>end; Solució 3 declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vmes number := &amp;mes;</code></pre>
+</div>
+<p>begin if (vmes = 1) then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line(' El mes es Gener ');
+    end if;
+    --   del 2 al 12 , igual, canviant el nom.</code></pre>
+</div>
+<p>end; Solució 4 -- igual qu el 3, pero escrivint els nombre de dies Solució 5 declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vdiasem number := &amp;dia_de_la_setmana;</code></pre>
+</div>
+<p>begin if (vdiasem &gt;= 1) and (vdiasem &lt;= 5) then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line(' El dia es entre setmana ');
+    else dbms_output.put_line(' El dia es cap de setmana ');
+    end if;
+    --</code></pre>
+</div>
+<p>end; Solució 6 declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vcad varchar2(19) := '&amp;cadena';
+    vlong number;</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vlong := length(vcad);
+    -- dbms_output.put_line(' Longitud ' || vlong);
+    -- potser ara falta un FOR
+    for contador in reverse 1..vlong loop
+         dbms_output.put_line( substr(vcad, contador, 1 ) );
+    end loop;</code></pre>
+</div>
+<p>end; Solució 7 declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vd1 date := '&amp;data1';
+    vd2 date := '&amp;data2';</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line(' Anys entre dates ' || trunc((vd2 - vd1)/365) );</code></pre>
+</div>
+<p>end;</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Solució 8 declare</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vcad varchar2(30) := '&amp;dame_cadena';
+    vcad2 varchar2(30) := '';</code></pre>
+</div>
+<p>begin for contador in 1..length(vcad) loop if substr(vcad,contador,1) between 'a' and 'z' then</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vcad2 := vcad2 || substr(vcad,contador,1);
+       elsif  substr(vcad,contador,1) between 'A' and 'Z' then
+          vcad2 := vcad2 || substr(vcad,contador,1);
+       else
+          vcad2 := vcad2 || ' ';
+       end if;
+    end loop;
+    dbms_output.put_line(vcad2);</code></pre>
+</div>
+<p>end;</p>
+<h3>📄 15 butlleti proc i funcs pl-sql-solucionari.pdf</h3>
+<p>Solucionari : Crear procediments amb pl/sql Per realitzar esta pràctica, utilitzarem la mv Windows 10 i Oracle SQL Developer Amb usuari sys en pdb1, Crear usuari usuari3 (donar-li contrasenya i permisos de connexió i creació de procediments i funcions) Dona-li permisos de crear taules i assigna quota (10M) en el tablespace per defecte.</p>
+<p>Amb usuari sys alter database pdb1 open;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>create user usuari3 identified by 1234;
+grant create session to usuari3;
+grant create procedure, create trigger to usuari3;
+grant create table to usuari3;</code></pre>
+</div>
+<p>alter user usuari3 quota 10M on USERS;</p>
+<p>Connecta a pdb1 amb l’usuari creat (usuari3) Realitza els següents exercicis i practica : 0.- Crea la taula llibres i ompli-la (5 files)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE llibres(</code></pre>
+</div>
+<p>codi NUMBER(6) PRIMARY KEY, titol VARCHAR2(50) NOT NULL, autor VARCHAR2(30), editorial VARCHAR2(40), preu number (8,2)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>);
+insert into llibres values (1,’Bases de datos relacionales’,’Mota’,’Pearson’,50);
+insert into llibres values (2 ,’El lenguaje de programacion C’,’Kernigan’,’Prentice
+Hall’,60);
+insert into llibres values (3 ,’Fundamentos de JAVA’,’Schildt’,’Mc GrawHill’,55);
+insert into llibres values (4 ,’Redes de Computadoras’,’Kurose’,’Pearson’,70);
+insert into llibres values (5 ,’Sistemas Operativos’,’Tanenbaum’,’Prentice
+Hall’,60);</code></pre>
+</div>
+<p>1.- Escriure un bloc PL/SQL que escriga el text ‘Hola’ SQL&gt; SET SERVEROUTPUT ON; SQL&gt; BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>2 DBMS_OUTPUT.PUT_LINE('HOLA');</code></pre>
+</div>
+<p>3 END; 4 /</p>
+<p>2.- Escriure un bloc PL/SQL que compte el nombre de files que hi ha en la taula llibres, deposita el resultat en la variable v_num, i visualitza el seu contingut. SQL&gt;DECLARE 2 v_num NUMBER; 3 BEGIN 4 SELECT count(*) INTO v_num 5 FROM llibres;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>6 DBMS_OUTPUT.PUT_LINE(v_num);</code></pre>
+</div>
+<p>7 END; 8 / 2.1 – Guardar el bloc en un fitxer anomenat PROG01.SQL en c:\users\asix\Documents 3.- Carregar i executar el bloc guardat en l'arxiu PROG01.SQL de c:\users\asix\Documents SQL&gt; START c:\users\asix\Documents\PROG01.SQL O també: SQL&gt; GET c:\users\asix\Documents\PROG01.SQL SQL&gt; RUN</p>
+<p>4)Escriure un procediment que reba dos números i visualitze la seua suma. CREATE OR REPLACE PROCEDURE sumar_numeros ( num1 NUMBER, num2 NUMBER) IS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>suma NUMBER(6);</code></pre>
+</div>
+<p>BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>suma := num1 + num2;
+DBMS_OUTPUT.PUT_LINE('Suma: '|| suma);</code></pre>
+</div>
+<p>END sumar_numeros;</p>
+<ul>
+<li>Codificar un procediment que reba una cadena i la visualitze a l'inrevés.</li>
+</ul>
+<p>CREATE OR REPLACE PROCEDURE cadena_reves( vcadena VARCHAR2) AS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vcad_reves VARCHAR2(80);</code></pre>
+</div>
+<p>BEGIN FOR i IN REVERSE 1..LENGTH(vcadena) LOOP</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>vcad_reves := vcad_reves || SUBSTR(vcadena,i,1);</code></pre>
+</div>
+<p>END LOOP;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_OUTPUT.PUT_LINE(vcad_reves);</code></pre>
+</div>
+<p>END cadena_reves;</p>
+<ul>
+<li>Escriure una funció que reba una data i retorne l'any, en número, corresponent a aqueixa data.</li>
+</ul>
+<p>CREATE OR REPLACE FUNCTION any ( fecha DATE) RETURN NUMBER AS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v_any NUMBER(4);</code></pre>
+</div>
+<p>BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v_any := TO_NUMBER(TO_CHAR(fecha, 'YYYY'));</code></pre>
+</div>
+<p>RETURN v_any; END any;</p>
+<ul>
+<li>Escriure un bloc PL/SQL que faça ús de la funció anterior.</li>
+</ul>
+<p>DECLARE</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>n NUMBER(4);</code></pre>
+</div>
+<p>BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>n := any(SYSDATE);
+DBMS_OUTPUT.PUT_LINE('AÑO : '|| n);</code></pre>
+</div>
+<p>END;</p>
+<h4>8) Donat el següent procediment</h4>
+<p>Detecta els errors i corregix-los (compila i executa primer ) CREATE OR REPLACE PROCEDURE crear_llibre ( v_num llibres.codi%TYPE, v_titol llibres.titol%TYPE default 'sense titol', v_autor llibes.autor%TYPE DEFAULT 'anònim') IS BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>INSERT INTO llibres
+VALUES (v_num , v_titol, v_autor, null , null);</code></pre>
+</div>
+<p>END crear_llibre; ------ Indicar quins de les següents cridades al procediment són correctes i quins incorrectes (i perquè), en aquest últim cas escriure la crida correcta usant la notació posicional (en els casos que es puga): 1º. crear_llibre;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>2º. crear_llibre(50);
+3º. crear_llibre('Hackers');
+4º. crear_llibre(50,'Hackers');
+5º. crear_llibre('Hackers', 50);
+6º. crear_llibre('Hackers', 'McClure');
+7º. crear_llibre(50, 'Hackers', 'McClure');
+8º. crear_llibre('Hackers', 50, 'McClure');
+9º. crear_llibre('McClure', ‘Hackers’);
+10º. crear_llibre('McClure', 50);</code></pre>
+</div>
+<p>1r Incorrecta: cal passar almenys el codi. 2n Correcta. 3r Incorrecta: cal passar també el codi. 4t Correcta 5é Incorrecta: els arguments estan en ordre invers. Solució</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>crear_llibre(50, 'Hackers');</code></pre>
+</div>
+<p>6é Incorrecta: cal passar també el codi. 7é Correcta. 8é Incorrecta: l'ordre dels arguments és incorrecte.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Solució: crear_llibre(50, 'Hackers', 'McClure');</code></pre>
+</div>
+<p>9é Incorrecta: cal passar també el codi. 10é Incorrecta: els arguments estan en ordre invers i .</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Solució:    execute crear_llibre(50, NULL, 'McClure');</code></pre>
+</div>
+<h4>9) Desenvolupar una funció que retorne el nombre d'anys complets que hi ha entre</h4>
+<p>dues dates que es passen com a arguments. CREATE OR REPLACE FUNCTION anys_dif ( fecha1 DATE, fecha2 DATE) RETURN NUMBER AS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v_anys_dif NUMBER(6);</code></pre>
+</div>
+<p>BEGIN v_anys_dif := ABS(TRUNC(MONTHS_BETWEEN(fecha2,fecha1)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>/ 12));</code></pre>
+</div>
+<p>RETURN v_anys_dif; END anys_dif; Fes servir la funció amb un exemple.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SELECT anys_dif (‘1/1/2005’,’5/7/2022’)  from dual;</code></pre>
+</div>
+<ul>
+<li>Escriure una funció que, fent ús de la funció anterior retorne els triennis que hi ha entre dues</li>
+</ul>
+<p>dates. (Un trienni són tres anys complets). CREATE OR REPLACE FUNCTION trienios ( fecha1 DATE, fecha2 DATE) RETURN NUMBER AS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v_trienios NUMBER(6);</code></pre>
+</div>
+<p>BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v_trienios := TRUNC(anios_dif(fecha1,fecha2) / 3);</code></pre>
+</div>
+<p>RETURN v_trienios; END; Fes servir la funció amb un exemple.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SELECT trienios (‘1/1/2005’,’5/7/2022’)  from dual;</code></pre>
+</div>
+<ul>
+<li>Codificar un procediment que reba una llista de fins a 5 números i visualitze la seua suma.</li>
+</ul>
+<p>CREATE OR REPLACE PROCEDURE sumar_5numeros ( Num1 NUMBER DEFAULT 0, Num2 NUMBER DEFAULT 0, Num3 NUMBER DEFAULT 0, Num4 NUMBER DEFAULT 0, Num5 NUMBER DEFAULT 0) AS BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_OUTPUT.PUT_LINE(Num1 + Num2 + Num3 + Num4 + Num5);</code></pre>
+</div>
+<p>END sumar_5numeros; Fes servir el procediment amb un exemple.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>execute sumar_5numeros ( 4,7,2,6,31);
+execute sumar_5numeros ( 2, 6, 31);</code></pre>
+</div>
+<ul>
+<li>Escriure una funció que retorne solament caràcters alfabètics substituint qualsevol altre</li>
+</ul>
+<p>caràcter per blancs a partir d'una cadena que es passarà en la crida. CREATE OR REPLACE FUNCTION sust_por_blancos( cad VARCHAR2) RETURN VARCHAR2 AS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>nueva_cad VARCHAR2(30);</code></pre>
+</div>
+<p>car CHARACTER; BEGIN FOR i IN 1..LENGTH(cad) LOOP</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>car:=SUBSTR(cad,i,1);</code></pre>
+</div>
+<p>IF (ASCII(car) NOT BETWEEN 65 AND 90) AND (ASCII(car) NOT BETWEEN 97 AND 122) THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>car :=' ';</code></pre>
+</div>
+<p>END IF;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>nueva_cad := nueva_cad || car;</code></pre>
+</div>
+<p>END LOOP; RETURN nueva_cad; END sust_por_blancos; Fes servir la funció amb un exemple.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SELECT sust_por_blancos (‘en?un$lugar%de)la@mancha’)  from dual;</code></pre>
+</div>
+<ul>
+<li>Implementar un procediment que reba un import i visualitze el desglossament del canvi en</li>
+</ul>
+<p>unitats monetàries de 1c ,2c, 5c, 10c, 20c, 50c, 1€, 2€, 5€, 10€, 20€, 50€, 100€, 200€, 500€ en ordre invers al que apareixen ací enumerades. CREATE OR REPLACE PROCEDURE desglose_cambio( importe NUMBER) AS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>cambio NATURAL := importe;</code></pre>
+</div>
+<p>moneda NATURAL; v_uni_moneda NATURAL; BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_OUTPUT.PUT_LINE('***** DESGLOSE DE: ' || importe );</code></pre>
+</div>
+<p>WHILE cambio &gt; 0 LOOP IF cambio &gt;= 500 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 500;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 200 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 200;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 100 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 100;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 50 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 50;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 20 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 20;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 10 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 10;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 5 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 5;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 2 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 2;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 1 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 1;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 0,50 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 0,50;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 0,25 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 0,25;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 0,10 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 0,10;</code></pre>
+</div>
+<p>ELSIF cambio &gt;= 0,05 THEN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 0,05;</code></pre>
+</div>
+<p>ELSE</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>moneda := 0,01;</code></pre>
+</div>
+<p>END IF;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>v_uni_moneda := TRUNC(cambio / moneda);</code></pre>
+</div>
+<p>DBMS_OUTPUT.PUT_LINE(v_uni_moneda ||</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>' Unidades de: ' || moneda || ' € ');
+cambio := MOD(cambio, moneda);</code></pre>
+</div>
+<p>END LOOP; END desglose_cambio;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Fes servir el procediment amb un exemple.  -&gt;    execute desglose_cambio (1543);</code></pre>
+</div>
+<ul>
+<li>Codificar un procediment que permeta esborrar un llibre el número(id) del qual es passarà en la</li>
+</ul>
+<p>cridada al procediment. CREATE OR REPLACE PROCEDURE borrar_llibre( num_id llibre.llibreid%TYPE) AS BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DELETE FROM llibre WHERE emp_no = num_id;</code></pre>
+</div>
+<p>END borrar_llibre; Nota: El procediment anterior retornarà el missatge &lt;&lt; Procedimiento PL/SQL terminado con éxito &gt;&gt; encara que no existisca el número i, per tant , no s'esborre el llibre. Pots fer que s’informe d’aquesta situació que es produeixca ? Fes servir el procediment amb un exemple.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Execute borrar_llibre ( 50);</code></pre>
+</div>
+<h4>15) Escriure un procediment que modifique el títol d’un llibre. El procediment rebrà com a</h4>
+<p>paràmetres el número del llibre i el títol nou. CREATE OR REPLACE PROCEDURE modificar_llibre( num_id NUMBER, noutitol VARCHAR2) AS BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>UPDATE llibres  SET titol = noutitol
+WHERE llibreid = num_id;</code></pre>
+</div>
+<p>END modificar_llibre; Nota: L'indicat en la nota de l'exercici anterior es pot aplicar també a aquest.</p>
+<ul>
+<li>Visualitzar tots els procediments i funcions de l'usuari emmagatzemats en la base de dades i la</li>
+</ul>
+<p>seua situació (valid o invalid). SELECT OBJECT_NAME, OBJECT_TYPE, STATUS FROM USER_OBJECTS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>WHERE OBJECT_TYPE IN ('PROCEDURE','FUNCTION');</code></pre>
+</div>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: També es pot utilitzar la vista ALL_OBJECTS....</p><p>Nota: També es pot utilitzar la vista ALL_OBJECTS.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut05/ut0507.html">⬅️ 5.7 Butlletí triggers</a>
+<a class="page-nav-btn" href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

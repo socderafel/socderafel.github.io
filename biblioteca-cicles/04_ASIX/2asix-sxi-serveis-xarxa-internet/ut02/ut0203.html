@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.3 U2 P2 — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>☁️ Serveis de Xarxa i Internet — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Serveis de Xarxa i Internet</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Welcome SXI</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Unit 1 - DHCP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U1 DHCP</a></li>
+<li><a href="../ut01/ut0102.html">1.2 U1 P1</a></li>
+<li><a href="../ut01/ut0103.html">1.3 U1 P2</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Unit 2 - DNS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U2 DNS</a></li>
+<li><a href="../ut02/ut0202.html">2.2 U2 P1</a></li>
+<li><a class="active" href="../ut02/ut0203.html">2.3 U2 P2</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Unit 3 - HTTP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U3 HTTP</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Grups Treball</a></li>
+<li><a href="../ut03/ut0303.html">3.3 U3 A3 Windows Group</a></li>
+<li><a href="../ut03/ut0304.html">3.4 U3 P1</a></li>
+<li><a href="../ut03/ut0305.html">3.5 U3 P2</a></li>
+<li><a href="../ut03/ut0306.html">3.6 U3 P3</a></li>
+<li><a href="../ut03/ut0307.html">3.7 U3 P4</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unit 4 - FTP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U4 FTP</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Grups</a></li>
+<li><a href="../ut04/ut0403.html">4.3 U4 P1</a></li>
+<li><a href="../ut04/ut0404.html">4.4 U4 P2</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Unit 5 - SSH</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 U5 SSH</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U5 P1</a></li>
+<li><a href="../ut05/ut0503.html">5.3 U5 P2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Unit 6 - Email</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U6 Email</a></li>
+<li><a href="../ut06/ut0602.html">6.2 U6P1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Unit 7 - Audio and Video</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U7 Audio and Video</a></li>
+<li><a href="../ut07/ut0702.html">7.2 U7 P1</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT2 — Unit 2 - DNS</span>
+<h1>2.3 U2 P2</h1>
+<p>DNS Service Practices</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>Service DNS Installation (Ubuntu 18.04)</code></pre>
+</div>
+<p>Observations: – DNS service in Ubuntu is named Bind9 – The machine must be in bridge mode – First you must see the ip the dhcp offers you, and then put it manually in the server, to be able to navigate and to receive external requests – The configuration files for this service are in: /etc/bind (/ slash and \ back slash ) Change DNS in Ubuntu and Derivatives Important note about DNS in Ubuntu</p>
+<p>Until 16 version: Source: http://sobrebits.com/cambiar-dns-en-ubuntu-12-04-y-posteriores/ In Ubuntu from version 12.04 if we try to make changes to our DNS configuration we will see how they are reversed after a while, always assigning us a DNS: 127.0.0.1 (for 12.04 and derived versions) or 127.0.1.1 (for 12.10 and derived versions).</p>
+<p>Why can not we change</p>
+<p>DNS</p>
+<p>in Ubuntu and derivatives? This is not an error, that is obvious, since we can navigate perfectly, so down there is something resolving names. This is dnsmasq a lightweight DNS server managed by Network Manager (the connection manager that incorporates the distribution). It is for this reason that our DNS configuration will point to our own machine, because we ourselves are "resolving" names.</p>
+<p>This is fine, for the home user should not have more inconvenience, in fact this function was implemented to improve the speeds in name resolution VPN connections, since traffic is saved by that channel, which can be reduced width band. The problem comes when in our local network there is a DNS server that we want / must use.</p>
+<p>Network Manager will automatically overwrite the DHCP-assigned DNS configuration or manually by the addresses 127.0.0.1 or 127.0.1.1. If we want to use another DNS server before we must make Network Manager no longer use their own. Disable dnsmasq in</p>
+<p>Network</p>
+<p>Manager After the theory we go to the practical part, which is very simple. Network Services</p>
+<p>DNS Service Practices To change the DNS in Ubuntu 12.04 and later we must edit the Network Manager configuration file</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>$ sudo nano /etc/NetworkManager/NetworkManager.conf</code></pre>
+</div>
+<p>And comment on the corresponding line</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code># dns=dnsmasq</code></pre>
+</div>
+<p>Ctrl + O to save changes and Ctrl + X to exit Now, we must restart the PC or restart the Network Manager</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>$ sudo restart network-manager</code></pre>
+</div>
+<p>Once this is done, our system will start receiving the DNS in the usual way. Ubuntu 18 version: Step 1: Install a package resolvconf, which will modify the way /etc/resolv.conf is built up at system boot.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo apt install resolvconf</code></pre>
+</div>
+<p>Create or modify a file with tail name</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo nano /etc/resolvconf/resolv.conf.d/tail</code></pre>
+</div>
+<p>Write this line: nameserver 8.8.8.8 Then this line will be added at the end of /run/resolvconf/resolv.conf at boot. /etc/resolv.conf will now be a symbolic link to this file. Step 2: in /etc/systemd/resolved.conf setting DNSStubListener=no and then restart the systemd- resolved service. It will then start without binding to port 53, allowing dnsmasq to bind instead.</p>
+<p>Network Services</p>
+<p>DNS Service Practices Server Installation</p>
+<ul>
+<li>Make sure you have the updated package database.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code># sudo apt-get update</code></pre>
+</div>
+<ul>
+<li>Install DNS service in your virtual machine.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code># sudo apt-get install bind9</code></pre>
+</div>
+<h4>3) To start the service execute the command</h4>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code># sudo /etc/init.d/bind9 start</code></pre>
+</div>
+<p>With Stop or Restart you can start or restart NOTE: Actually you don't have the service configurated. It's only installed. Network Services</p>
+<p>DNS Service Practices Primary DNS Service Configuration (Ubuntu 16.04). Install WEBMIN tool – Source: http://www.unixmen.com/install-webmin-ubuntu-14-04/ – Definition: Webmin is an open source, web based system administration tool for Unix/Linux. Using Webmin, you can setup and configure all services such as DNS, DHCP, Apache, NFS, and Samba etc via any modern web browsers. So, you don’t have to remember all commands or edit any configuration files manually.</p>
+<p>Installation Add the webmin official repository: Edit file /etc/apt/sources.list,</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo nano /etc/apt/sources.list</code></pre>
+</div>
+<p>Add the following lines: deb http://download.webmin.com/download/repository sarge contrib deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib – Add the GPG key</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo wget http://www.webmin.com/jcameron-key.asc
+sudo apt-key add jcameron-key.asc</code></pre>
+</div>
+<p>Update the sources list</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo apt-get update</code></pre>
+</div>
+<p>Install webmin using the following command</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo apt-get install webmin</code></pre>
+</div>
+<p>Allow the webmin default port “10000” via firewall, if you want to access the webmin console from a remote system.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo ufw allow 10000</code></pre>
+</div>
+<p>Access webmin: Open up your browser and navigate to the URL https://your-ip-address:10000 (or localhost) Network Services</p>
+<p>DNS Service Practices If you want to change Language to Spanish: You should click “Configuration Language” Button, “Change Language” and Refresh Browser. Primary server configuration In the left menu you see "Servers". There must be access to the DNS server. If it is not displayed press the "Refresh Modules" option.</p>
+<p>In the left menu of the screen select "DNS Server Bind". It should show something similar to the following image. Network Services</p>
+<p>DNS Service Practices From the main screen, select the "Create a new master zone" option.</p>
+<ul>
+<li>Make sure the "Forwarding (Names to addresses)" option is selected.</li>
+<li>Set it as the name of the zone "aula52&lt;your_name&gt;.com”.</li>
+<li>In "Master Server" type the name of your PC followed by the domain name.</li>
+<li>“Mail address”, write for example: admin@ aula52&lt;your_name&gt;.com</li>
+</ul>
+<p>Once you have entered the correct configuration, click on the "Create" button. The following screen shows the configuration records for the DNS server forward lookup zone. Network Services</p>
+<p>DNS Service Practices Note that we have already configured the SOA record and the NS record. To see the configuration information make click on “Edit DNS Records File”. In order for the DNS server to work, we need at least to add a record A to have the association Computer name -&gt; IP address. Select 'Add records to zones'</p>
+<p>Select "Address" and complete the fields with the name of your computer followed by the domain you are configuring and the static IP assigned to your machine. The end point is added only if you forget it. Click on the button “Crear”. Network Services</p>
+<p>DNS Service Practices On the primary server we will create a CNAME record to include the alias of the computer "profesr_VirtualBox".</p>
+<ul>
+<li>Click on “Alias de Nombre”.</li>
+<li>As we want the name of the computer that is shown on the Internet is "www", in "Alias</li>
+</ul>
+<p>name" we will write: "www. aula52 &lt;your_name&gt; .com ". The DNS configuration file should contain information similar to the one shown in the following image. After the creation of the zone, apply the changes. Note: Change in the “tail” file the name server with your IP Address You only need to verify the operation of the zone by executing the command dig, for example: (for more information on commands see annexe at the end of the Unit)</p>
+<p>dig google.es dig @192.168.1.99 google.es where @192.168.1.99 indicates the DNS server IP Network Services</p>
+<p>DNS Service Practices Or the command “nslookup”, for instance: nslookup google.es nslookup google.es 192.168.1.99 where @192.168.1.99 indicates the DNS server IP Create reverse lookup zone</p>
+<ul>
+<li>Set PTR record for reverse resolution.</li>
+</ul>
+<p>First create the reverse resolution zone by selecting the "Create a new master zone" option from the main menu of the DNS server. When creating the reverse zone you must select the option "Reverse (Addresses to Names)". Note that in this case we no longer indicate the domain name but the network.</p>
+<p>Once completed the fields click on "Create". A new zone has been created, but now it will resolved from IP to name. Network Services</p>
+<p>DNS Service Practices If you click on "Name Servers" of the registers of the reverse resolution zone, you can see something similar to... Now add the address registers for the reverse resolution by selecting the "Reverse address" option from the reverse resolution zone registers, to add the DNS server address.</p>
+<p>The following register will be created. In case of having more servers in our network, we would add their IP address and computer name. When configuring the reverse zone, the file for this zone has been created, /var/lib/bind/192.168.1.rev, with the following information</p>
+<p>Network Services</p>
+<p>DNS Service Practices Now, you must apply changes. To verify the operation of the zone, you can execute the command dig, for example: dig -x google.es Choose one of the addresses shown, for example, 173.194.45.163 and run the following command: host 173.194.45.163 Where 173.194.45.163 is the IP address we want to solve, You should see something similar to the following image</p>
+<p>In case of error, you should check that the DNS server is active, to do this</p>
+<ul>
+<li>You can verify that it is running. You should get a result like the following</li>
+</ul>
+<p>profesr@profesr-VirtualBox:~$ sudo /etc/init.d/bind9 status [sudo] password for profesr</p>
+<ul>
+<li>bind9 is running</li>
+<li>Or check that you are listening for the correct port, that is, port 53. To do this use the following</li>
+</ul>
+<p>command and look the first line. Network Services</p>
+<p>DNS Service Practices Note that the result indicates that the server is listening on port 53 and is therefore active. Network Services</p>
+<p>DNS Service Practices Secondary DNS Server Configuration (Ubuntu 18.04). Observations – You can work on your computer with your domain and cloning the machine that contains the primary domain: • /etc/resolv.conf in the Primary DNS server must be the ip address of the Primary machine • /etc/resolv.conf in the Secondary DNS server must be the ip address of the Primary machine. And the static IP address configuration must include the ip address of the Primary machine as the DNS – Change the IP address in the secondary and Delete both primary zones: forward and reverse.</p>
+<p>Change the computer name Secondary server configuration</p>
+<h4>1) Access to webmin in the secondary server computer</h4>
+<ul>
+<li>First of all create slave zone.</li>
+</ul>
+<p>Select option “Crear una nueva zona subordinada”: Network Services</p>
+<p>DNS Service Practices You can check the file /etc/bind/named.conf.local where the secondary zone has been added.</p>
+<h4>3) Get on the PC that acts as primary DNS server</h4>
+<p>In the "/etc/bind/named.conf.options" file on the primary server, add the line: allow-transfer { Secondary_DNS_Server_IP; }; before the last symbol “}” For instance: allow-transfer { 192.168.1.98; };</p>
+<h4>4) Add in the primary server, the secondary server as a name server</h4>
+<h4>5) Add in the primary server, the secondary DNS server IP(as an address)</h4>
+<p>Network Services</p>
+<p>DNS Service Practices</p>
+<ul>
+<li>Apply changes in both servers and restart service.</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">BASH</span>
+</div>
+</div>
+<pre><code>sudo service bind9 restart</code></pre>
+</div>
+<ul>
+<li>In the secondary server click “Realizar test de transferencia de zona”.</li>
+</ul>
+<p>Note the registers from the primary zone are tranfered to the secondary zone</p>
+<ul>
+<li>Check the operation of the secondary server using the command dig or nslookup.</li>
+</ul>
+<p>dig @192.168.1.98 google.es NOTE: Replace the IP of the example, by the IP of the secondary DNS server.</p>
+<ul>
+<li>Configure a client to use the primary and secondary server. Make sure it has an Internet</li>
+</ul>
+<p>connection. Network Services</p>
+<p>DNS Service Practices EXERCISE: Do the same to create a new reverse slave zone. In this case, you have to create two records in the primary reverse zone: a NS record and a PTR record, corresponding to the secondary server. Network Services</p>
+<p>DNS Service Practices COMMANDS DNS ANNEX dig It is a very useful name resolution tool in Linux environments. For ex: Dig google.es In this case we are performing a recursive query of the domain google.es, so the server will forward the query, and then collect the information and show it.</p>
+<p>You can see in the following image the addresses of the servers that have been used to consult the desired information about the domain name "google.es". And at the end you can also see the address of the server that responds with the information obtained after forwarding the query (192.168.1.94).</p>
+<p>dig -x 192.168.1.220 With this we get the reverse resolution. That is, we will resolve the domain name from the IP. I remind you that the queries are by default recursive (the server asks the DNS and returns the desired information). But with this command: Network Services</p>
+<p>DNS Service Practices -dig google.es +trace We can observe an example of an iterative query, that is, it returns the available information about our query and a list of servers that can complete the desired information. Network Services</p>
+<p>DNS Service Practices nslookup It also allows queries about DNS. It has 2 modes: Interactive mode and non-interactive mode. The non-interactive mode is executed like this: nslookup nombre_de_dominio for instance: nslookup google.es nslookup eltallerdelbit.com The result of a query will be something like</p>
+<p>The interactive mode consists in execute: nslookup And then the cursor will change and we can enter domain names and ip's one after another. Network Services</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0202.html">⬅️ 2.2 U2 P1</a>
+<a class="page-nav-btn" href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2 ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

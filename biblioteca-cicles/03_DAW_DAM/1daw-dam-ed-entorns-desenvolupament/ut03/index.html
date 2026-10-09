@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT3 — Debugging y testing — Entorns de Desenvolupament | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>⚙️ Entorns de Desenvolupament — 1r DAW / DAM · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Entorns de Desenvolupament</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Guía del estudiante</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT0 — Introducción al desarrollo de software</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 U1 - Intr. al desarrollo de SW</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Especificaciones requisitos IEEE380_ejemplo</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Especificaciones requisitos software_ejemplo</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — IDE's y estilo de programación</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 U2 - IDEs. Estilos de programación</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Control de versiones</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U3 - Control de versiones</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Git Cheat Sheet</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Crear alias para log con ramas</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Material-Heroes</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Actividades de clase</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Debugging y testing</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U4 - Debugging y testing</a></li>
+<li><a href="../ut03/ut0302.html">3.2 EjercicioGrafo2</a></li>
+<li><a href="../ut03/ut0303.html">3.3 EjercicioGrafo3</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Códigos debugging</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Diagramas de clase</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U5 - Diagramas de clase</a></li>
+<li><a href="../ut04/ut0402.html">4.2 U5 - Diagramas de clase profe</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Actividades de clase</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Diagramas de comportamiento</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Diagramas de casos de uso</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U6.2 - Diagramas de estado</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Actividades de clase</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Refactorización, optimización y documentación</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U7. Refactorización</a></li>
+<li><a href="../ut06/ut0602.html">6.2 U7.2 - Documentación</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Metodologías ágiles</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U8. Metodologías ágiles</a></li>
+<li><a href="../ut07/ut0702.html">7.2 U8.1 - Planificación de proyectos</a></li>
+<li><a href="../ut07/ut0703.html">7.3 Poker planning</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r DAW / DAM · Grau Superior · UT3 Completa</span>
+<h1>📘 UT3 — Debugging y testing (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut0301"><strong>3.1 U4 - Debugging y testing</strong></a> (o <a href="./ut0301.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0302"><strong>3.2 EjercicioGrafo2</strong></a> (o <a href="./ut0302.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0303"><strong>3.3 EjercicioGrafo3</strong></a> (o <a href="./ut0303.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut0304"><strong>3.4 Códigos debugging</strong></a> (o <a href="./ut0304.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut03actividades"><strong>✍️ Activitats pràctiques UT3</strong></a> (o <a href="./ut03actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut0301">3.1 U4 - Debugging y testing</h2>
+
+
+<hr/>
+<p>U4 - Debugging y testing 1º DAW</p>
+<p>Introducción</p>
+<ul>
+<li>La prueba del software es un elemento crítico para la garantía de la calidad</li>
+</ul>
+<p>del software y representa una revisión final de las especificaciones, del diseño y de la codificación.</p>
+<ul>
+<li>La prueba de software es un elemento que a menudo se le conoce como</li>
+</ul>
+<p>verificación y validación (V &amp; V).</p>
+<ul>
+<li>Bohem lo define</li>
+<li>Verificación: ¿Estamos construyendo el software correctamente?</li>
+<li>Validación: ¿Estamos construyendo el producto correcto?</li>
+</ul>
+<p>Objetivos de la prueba</p>
+<ul>
+<li>La prueba es un proceso de ejecución de un programa con la intención de</li>
+</ul>
+<p>descubrir un error.</p>
+<ul>
+<li>Buen caso de prueba: aquel que tiene una alta probabilidad de mostrar un</li>
+</ul>
+<p>error no descubierto hasta entonces.</p>
+<ul>
+<li>Éxito de una prueba: si descubre un error no detectado hasta entonces.</li>
+</ul>
+<p>“La prueba no puede asegurar la ausencia de defectos, sólo puede demostrar que existen defectos en el software”.</p>
+<p>Principios de la prueba</p>
+<ul>
+<li>Las pruebas deberán planificarse mucho antes de que empiecen para</li>
+</ul>
+<p>garantizar la calidad de acuerdo a lo establecido en el ciclo de vida.</p>
+<ul>
+<li>Las pruebas deberán empezar por lo pequeño y progresar hacia lo grande.</li>
+<li>No son posibles las pruebas exhaustivas.</li>
+<li>Para ser más efectivas, las pruebas deberán ser conducidas por un equipo</li>
+</ul>
+<p>independiente.</p>
+<p>Pruebas de caja blanca</p>
+<ul>
+<li>Se comprueban los caminos lógicos del software proponiendo casos de prueba que</li>
+</ul>
+<p>ejerciten conjuntos específicos de condiciones y/o bucles.</p>
+<ul>
+<li>Se puede examinar el estado del programa en varios puntos para determinar si el estado</li>
+</ul>
+<p>real coincide con el esperado.</p>
+<ul>
+<li>Mediante los métodos de prueba de caja blanca, el ingeniero del software puede</li>
+</ul>
+<p>obtener casos de prueba que: 1. Garanticen que se ejercita por lo menos una vez todos los caminos independientes de cada módulo. 2. Ejerciten todas las decisiones lógicas en sus vertientes verdadera y falsa. 3. Ejecuten todos los bucles en sus límites y con sus límites operacionales.</p>
+<p>4. Ejerciten las estructuras internas de datos para asegurar su validez.</p>
+<p>Pruebas de caja blanca</p>
+<ul>
+<li>La prueba de caja blanca denominada a veces prueba de caja de cristal se</li>
+</ul>
+<p>examina de forma detallada la arquitectura de la aplicación.</p>
+<ul>
+<li>Emplean análisis del código fuente.</li>
+<li>Suelen requerir herramientas especializadas para realizar la prueba.</li>
+</ul>
+<p>Pruebas de caja negra</p>
+<ul>
+<li>También se le conoce como prueba de comportamiento.</li>
+<li>Se realiza sobre la interfaz sin necesidad de conocer la estructura</li>
+</ul>
+<p>interna del programa ni cómo está implementado.</p>
+<ul>
+<li>Se busca conocer si las funciones del software son operativas (las que</li>
+</ul>
+<p>se esperan).</p>
+<p>Pruebas de caja negra</p>
+<ul>
+<li>Se buscan errores de interfaz, en el acceso a los datos, por ejemeplo.</li>
+<li>Funcionalidades erróneas en el inicio o la finalización del programa.</li>
+<li>Algunas de las técnicas más utilizadas para este tipo de pruebas son</li>
+</ul>
+<p>clases de equivalencia, análisis de valores límites, pruebas de comparación, etc.</p>
+<p>Tipos de pruebas</p>
+<ul>
+<li>En los módulos, Pruebas de unidad o unitarias.</li>
+<li>En la unión de los módulos, Pruebas de integración.</li>
+<li>Cuando tenemos todos unidos, Prueba de validación.</li>
+<li>Cuando el sistema está funcionando, Prueba de sistema.</li>
+</ul>
+<p>Tipos de pruebas</p>
+<p>Pruebas de unidad o unitarias</p>
+<ul>
+<li>Se suelen realizar durante las fases de desarrollo.</li>
+<li>La prueba de unidad centra el proceso de verificación en la menor unidad</li>
+</ul>
+<p>del diseño del software: “el módulo”.</p>
+<ul>
+<li>Se pueden paralelizar varias pruebas unitarias.</li>
+<li>Algunas herramientas para realizar estas pruebas son Junit, PHPUnit, etc.</li>
+</ul>
+<p>Pruebas de integración</p>
+<ul>
+<li>Se comprobará la interacción de los distintos módulos del programa.</li>
+<li>La integración puede ser</li>
+<li>Súbita: Se comprueban los módulos de forma separada y después se prueba</li>
+</ul>
+<p>de forma conjunta. Puede dar lugar a muchos errores difíciles de corregir.</p>
+<ul>
+<li>Incremental: Se va creando e integrando poco a poco. Puede ser de dos</li>
+</ul>
+<p>formas</p>
+<ul>
+<li>Ascendente: Se empieza por los módulos más pequeños hasta integrarse con el más</li>
+</ul>
+<p>grande.</p>
+<ul>
+<li>Descendente: Desde el más grande, se van integrando los módulos más pequeños.</li>
+</ul>
+<p>Pruebas de validación</p>
+<ul>
+<li>La prueba de validación se lleva a cabo para verificar que el programa</li>
+</ul>
+<p>funciona de acuerdo a las expectativas y requisitos del cliente.</p>
+<ul>
+<li>Estas pruebas pueden ser de dos formas</li>
+<li>Alfa: realizada por el cliente o usuario en el lugar de desarrollo, de forma</li>
+</ul>
+<p>controlada, anotando todas las acciones realizadas por éste.</p>
+<ul>
+<li>Beta: se reparte una versión del programa a los usuarios finales con la</li>
+</ul>
+<p>finalidad que las prueben y informen de los errores.</p>
+<p>Pruebas de sistema</p>
+<ul>
+<li>Pruebas para ver cuan estable es nuestro programa respecto a su</li>
+</ul>
+<p>ejecución en diferentes sistemas.</p>
+<ul>
+<li>Se realizan pruebas de diferentes tipos</li>
+<li>Recuperación: se fuerza fallo de software y se comprueba como se recupera</li>
+</ul>
+<p>de éste</p>
+<ul>
+<li>Seguridad: se comprueba que está protegido frente acciones ilegales.</li>
+<li>Resistencia: Se realizan acciones que requieran de una gran cantidad de</li>
+</ul>
+<p>recursos.</p>
+<p>Prueba del camino básico</p>
+<ul>
+<li>La prueba del camino básico es una técnica de prueba de caja blanca</li>
+</ul>
+<p>propuesta inicialmente por Tom McCabe.</p>
+<ul>
+<li>Esta técnica permite al diseñador de casos de prueba obtener una</li>
+</ul>
+<p>medida de la complejidad de nuestro sistema.</p>
+<ul>
+<li>Para obtener esta medida de complejidad, utilizaremos la técnica de</li>
+</ul>
+<p>representación de grafo de flujo.</p>
+<p>Prueba del camino básico</p>
+<ul>
+<li>Notación del grafo de flujo</li>
+<li>Cada círculo denominado nodo del grafo de flujo, representa una o más sentencias procedimentales.</li>
+<li>Un solo nodo puede corresponder a una secuencia de cuadros de proceso y a un rombo de decisión.</li>
+<li>Las flechas del grafo denominadas aristas o enlaces, representan flujo de control. Una arista</li>
+</ul>
+<p>debe terminar en un nodo, incluso aunque el nodo no represente ninguna sentencia procedimental.</p>
+<ul>
+<li>Las áreas delimitadas por aristas y nodos de denominan regiones. Cuando contabilizamos las</li>
+</ul>
+<p>regiones incluimos el área exterior del grafo, contando como otra región más.</p>
+<ul>
+<li>El nodo que contiene una condición se llama nodo predicado y se caracteriza porque de él</li>
+</ul>
+<p>salen dos o más aristas.</p>
+<p>Pruebas de caja blanca: Prueba del camino básico</p>
+<p>Prueba del camino básico: Complejidad ciclomática (VG)</p>
+<ul>
+<li>Define el número de caminos independientes del conjunto básico de un programa y nos da un límite inferior para el</li>
+</ul>
+<p>número de pruebas que se deben realizar para asegurar que se ejecuta cada sentencia al menos una vez.</p>
+<ul>
+<li>Un camino independiente es cualquier camino del programa que introduce por lo menos un nuevo conjunto de</li>
+</ul>
+<p>sentencias de procesamiento o una nueva condición. En términos del grafo de flujo, un camino independiente se debe mover por lo menos por una arista que no haya sido recorrida anteriormente a la definición de un camino.</p>
+<ul>
+<li>La complejidad ciclomática V(G) se puede calcular de tres formas</li>
+<li>1. El número de regiones del grafo de flujo coincide con la complejidad ciclomática.</li>
+<li>2. Aristas - Nodos + 2, es decir V (G) = A – N + 2.</li>
+<li>3. Nodos Predicado + 1 (un nodo predicado es el que representa una condicional if o case, es decir, que de él salen</li>
+</ul>
+<p>varios caminos).</p>
+<ul>
+<li>Por tanto se deben preparar los casos de prueba que forzarán la ejecución de cada camino del conjunto básico.</li>
+</ul>
+<p>Prueba del camino básico</p>
+<p>Prueba del camino básico</p>
+<p>Prueba del camino básico</p>
+<ul>
+<li>Diseñar el conjunto de casos de prueba mediante el método de la</li>
+</ul>
+<p>complejidad ciclomática para el siguiente código</p>
+<p>Prueba del camino básico</p>
+<ul>
+<li>1. Conversión al grafo</li>
+</ul>
+<p>Prueba del camino básico</p>
+<ul>
+<li>2. Cálculo de la complejidad ciclomática</li>
+<li>V(G) = 3 regiones = 3</li>
+<li>V(G) = 7A – 6N + 2 = 3</li>
+<li>V(G) = 2NP + 1 = 3</li>
+</ul>
+<p>Prueba del camino básico</p>
+<ul>
+<li>3. Conjunto de caminos básicos (pruebas básicas)</li>
+</ul>
+<p>JUnit</p>
+<ul>
+<li>Junit es una herramienta para realizar pruebas unitarias</li>
+</ul>
+<p>automatizadas.</p>
+<ul>
+<li>Está integrada en la gran mayoría de ED (eclipse incluido).</li>
+</ul>
+<p>JUnit</p>
+<ul>
+<li>Las pruebas unitarias se realizan sobre una clase para probar su</li>
+</ul>
+<p>comportamiento de modo aislado independientemente del resto de clases de la aplicación.</p>
+<ul>
+<li>Ejercicio: Crea una clase llamada Calculadora cuyo constructor reciba</li>
+</ul>
+<p>los dos números a utilizar y que tenga 4 métodos, suma(), resta(), multiplica() y divide() que devuelvan el resultado de aplicar la operación sobre los números pasados en el constructor.</p>
+<p>JUnit</p>
+<ul>
+<li>Para crear la clase de prueba sobre esta clase, seleccionamos con el</li>
+</ul>
+<p>botón derecho la clase a probar (en este caso Calculadora) y pulsamos en New-&gt;Junit Test Case y le llamaremos CalculadoraTest.</p>
+<ul>
+<li>Seleccionamos los métodos que queremos probar y y finalizamos.</li>
+<li>La clase de prueba se generará con los métodos dentro. Cada método</li>
+</ul>
+<p>tendrá el mismo nombre que el método original precedido de la palabra test.</p>
+<p>JUnit</p>
+<ul>
+<li>Además, como cabecera del método aparecerá la palabra @Test que</li>
+</ul>
+<p>indica al compilador que es un método de prueba.</p>
+<ul>
+<li>Cada método de prueba tiene una llamada al método fail para forzar</li>
+</ul>
+<p>que la prueba falle con el mensaje que no está implementado todavía</p>
+<p>JUnit</p>
+<ul>
+<li>Ahora es momento de preparar cada uno de los test.</li>
+<li>Para ello hay que indicar que es lo que esperamos de la ejecución de</li>
+</ul>
+<p>una serie de instrucciones (valor esperado del caso de prueba).</p>
+<ul>
+<li>Los métodos que podemos utilizar son los que se encuentran en la</li>
+</ul>
+<p>infografía de la siguiente diapositiva</p>
+<p>JUnit Método Descripción assertTrue([mensaje], condición booleana) Comprueba que la condición sea verdadera. assertFalse([mensaje], condición booleana) Comprueba que la condición sea falsa. assertEquals([mensaje], valor esperado, valor actual) Comprueba que dos valores sean iguales. Nota: en arrays comprueba su referencia, no el contenido!) assertSame([mensaje], valor esperado, valor actual) Comprueba que ambos parámetros sean el mismo objeto.</p>
+<p>assertNotSame([mensaje], valor esperado, valor actual) Comprueba que ambos parámetros no sean el mismo objeto. assertNull([mensaje], objeto) Comprueba que el objeto sea nulo. assertNotNull([mensaje], objeto) Comprueba que el objeto no sea nulo. fail([mensaje]) Hace que el método falle. Debería ser utilizado solo para comprobar que una parte del código de test no se ejecute o para hacer fallar un test no implementado.</p>
+<p>JUnit</p>
+<ul>
+<li>Si queremos definir un test unitario para el método suma, deberemos</li>
+</ul>
+<p>llamar al método, recoger su resultado y comprobar mediante un “assert” que el valor esperado es correcto.</p>
+<p>JUnit</p>
+<ul>
+<li>Podemos ejecutar la clase de prueba o bien mediante la opción “Run</li>
+</ul>
+<p>as Junit Test”.</p>
+<ul>
+<li>Se abrirá una pestaña con los resultados de las pruebas.</li>
+<li>Se puede forzar la prueba de los errores mediante fail, por ejemplo,</li>
+</ul>
+<p>muy utilizado para testear las excepciones</p>
+<p>Debuggeando código</p>
+<ul>
+<li>El debugging de código en Java es el proceso de encontrar y corregir</li>
+</ul>
+<p>errores en un programa Java usando una herramienta llamada depurador.</p>
+<ul>
+<li>Un depurador te permite ejecutar tu programa paso a paso, ver el valor de</li>
+</ul>
+<p>las variables, establecer puntos de interrupción y evaluar expresiones.</p>
+<ul>
+<li>El debugging te ayuda a entender mejor el flujo de tu programa y a</li>
+</ul>
+<p>resolver los problemas que puedan surgir.</p>
+<p>Testing vs Debugging</p>
+<ul>
+<li>El testing consiste en verificar y validar que un software o aplicación</li>
+</ul>
+<p>funciona correctamente, cumple los requisitos técnicos y satisface las necesidades de los usuarios.</p>
+<ul>
+<li>El debugging consiste en encontrar y corregir los defectos o errores</li>
+</ul>
+<p>que se detectan en el testing, con el objetivo de eliminar los problemas y asegurar el buen funcionamiento del software.</p>
+<p>Debuggeando código</p>
+<ul>
+<li>Punto de interrupción: Mediante doble click en la parte izquierda de</li>
+</ul>
+<p>la línea añadiremos lo que se llama breakpoint o punto de ruptura que sirve para indicarle al debugguer que cuando se ejecute, tiene que detener ahí la ejecución para poder “observar” los diferentes valores</p>
+<p>Debuggeando código</p>
+<ul>
+<li>Para lanzar la ejecución del programa en modo debug pulsaremos el</li>
+</ul>
+<p>botón a la izquierda del ejecutar con un símbolo de un bicho.</p>
+<ul>
+<li>Tras pulsar en este botón, el programa se ejecutará con normalidad</li>
+</ul>
+<p>hasta que encuentre el punto de ruptura o interrupción, donde se parará.</p>
+<p>Debuggeando código</p>
+<p>Debuggeando código</p>
+<ul>
+<li>Al abrir la perspectiva “Debug” podemos observar los valores de las</li>
+</ul>
+<p>variables de nuestro programa en ese momento en el que se ha “pausado” la ejecución del programa.</p>
+<p>Debuggeando código</p>
+<ul>
+<li>Estos valores se pueden modificar en tiempo de ejecución para poder</li>
+</ul>
+<p>realizar pruebas con los valores que nosotros deseemos sin tener que estar modificando el código</p>
+<p>Debuggeando código</p>
+<ul>
+<li>Una vez inspeccionado todo lo que necesitamos en nuestro</li>
+</ul>
+<p>breakpoint podemos navegar a la siguiente instrucción en una ejecución paso a paso o bien decirle que siga sin parar otra vez (salgo que tenga otro breakpoint).</p>
+<ul>
+<li>Para ello, utilizaremos los botones de navegación de debug.</li>
+</ul>
+<p>Debuggeando código</p>
+<ul>
+<li>También se pueden incluir puntos de ruptura condicionales. Es decir,</li>
+</ul>
+<p>la ejecución parará en el punto de interrupción si una condición dada se cumple.</p>
+<ul>
+<li>Para ello, desde la pestaña de breakpoints se seleccionará el</li>
+</ul>
+<p>breakpoint al cual queremos incluir la condición y se indica como si fuera parte de un if normal.</p>
+<p>Debuggeando código</p>
+<p>Debuggeando código</p>
+<ul>
+<li>Por último, se puede añadir una vista más llamada expresiones donde</li>
+</ul>
+<p>se puede evaluar (ejecutar) en tiempo de ejecución expresiones como añadir un nuevo valor a un array o pasar a string un objeto.</p>
+<p>¿Dudas?</p>
+<hr/>
+<h2 id="ut0302">3.2 EjercicioGrafo2</h2>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">EjercicioGrafo2.java</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>package U03EstructurasDeControl;
+
+public class Ejercicio02 {
+
+	public static void main(String[] args) {
+
+		int x  = -10;
+		char c = 'd';
+
+		if (x&lt;0 &amp;&amp; c=='x')       System.out.println("Caso 1");
+		else if (x&lt;0 &amp;&amp; c!='x')  System.out.println("Caso 2");
+		else if (x&gt;=0 &amp;&amp; c=='y') System.out.println("Caso 3");
+		else if (x&gt;=0 &amp;&amp; c!='y') System.out.println("Caso 4");
+
+		if ( x &lt; 0 ) {
+			if (c=='x') {
+				System.out.println("Caso 1");
+			}
+			else {
+				System.out.println("Caso 2");
+			}
+		}
+		else {
+			if (c=='y') {
+				System.out.println("Caso 3");
+			}
+			else {
+				System.out.println("Caso 4");
+			}
+		}
+	}
+
+}</code></pre>
+</div>
+<hr/>
+<h2 id="ut0303">3.3 EjercicioGrafo3</h2>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">Ejercicio10.java</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>package U03EstructurasDeControl;
+
+public class Ejercicio10 {
+
+	public static void main(String[] args) {
+
+		int n = 7;
+
+		//******************************
+		System.out.println("Primer bucle: ");
+		int i = 3;
+		while (i&lt;=n) {
+			System.out.println(i);
+			i = i+3;
+		}
+		//******************************
+		System.out.println("Segundo bucle: ");
+		i = 0;
+		while (i&lt;n) {
+			i = i+3;
+			System.out.println(i);
+		}
+		//******************************
+	}
+
+}</code></pre>
+</div>
+<hr/>
+<h2 id="ut0304">3.4 Códigos debugging</h2>
+<h3>📄 Test06Arrays.java</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">Test06Arrays.java</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>package ud05EstructurasEstaticasDeDatos;
+
+import java.util.Scanner;
+
+public class Test06Arrays {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		final int MAX_ALUMNOS = 20;
+		
+		int[] notas = new int[20];
+		
+		// Pedir las notas al usuario y guardalas en el array
+		for(int i = 0; i &lt; notas.length; i++) {
+			notas[i] = sc.nextInt();
+		}
+		
+		for(int i = 0; i &lt; notas.length; i++) {
+			if (notas[i] &gt;= 0 &amp;&amp; notas[i] &lt;= 10) {
+				if (notas[i] &gt;= 5) {
+					System.out.println("Aprovado");
+				} else if (notas[i] &lt; 5) {
+					System.out.println("Suspendido");
+			} else {
+					System.out.println("No válido");
+			}
+		}
+	}
+		
+	}
+}</code></pre>
+</div>
+<h3>📄 Rectangulo.java</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title">Rectangulo.java</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>import java.util.Scanner;
+
+public class Rectangulo {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce la longitud del rectángulo:");
+        double longitud = sc.nextDouble();
+        System.out.println("Introduce la anchura del rectángulo:");
+        double anchura = sc.nextDouble();
+        double area = calcularArea(longitud, anchura);
+        double perimetro = calcularPerimetro(longitud, anchura);
+        System.out.println("El área del rectángulo es " + area);
+        System.out.println("El perímetro del rectángulo es " + perimetro);
+    }
+
+    public static double calcularArea(double longitud, double anchura) {
+        double area = longitud / anchura; 
+        return area;
+    }
+
+    public static double calcularPerimetro(double longitud, double anchura) {
+        double perimetro = 2 * (longitud + anchura);
+        return perimetro;
+    }
+}</code></pre>
+</div>
+<hr/>
+<h2 id="ut03actividades">✍️ Activitats pràctiques UT3</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.1 — U4 A1</p><p>Unidad 4 – Testing y debugging</p>
+<p>U4 – A1</p>
+<p>Instrucciones</p>
+<ul>
+<li>Entrega el documento en formato PDF a la tarea de Aules creada para</li>
+</ul>
+<p>tal fin.</p>
+<ul>
+<li>En cada paso, adjunta una captura de pantalla de la terminal donde</li>
+</ul>
+<p>se vea la instrucción ejecutada y el resultado obtenido.</p>
+<ul>
+<li>Asegúrate que la imagen se vea correctamente.</li>
+<li>No copies y pegues. Utiliza tus palabras</li>
+</ul>
+<p>1. ¿Por qué crees importante la realización de las pruebas en los programas? ¿Cuánto tiempo del total (en porcentaje) crees que se debería dedicar a las pruebas? ¿Por qué?</p>
+<p>2. Si pasamos todas las pruebas, ¿implica que nuestro código sea correcto y libre de errores?</p>
+<p>3. Investiga un poco más sobre las pruebas de caja blanca y pruebas de caja negra y escribe con tus palabras cuales son las principales características, similitudes y diferencias entre ambas.</p>
+<p>4. De forma general, ¿qué tipo de pruebas existen? Enlázalas con las diferentes fases de desarrollo de un proyecto.</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.2 — Actividad propuesta 2</p><p>Actividad propuesta 2</p>
+<p>Analiza el siguiente fragmento en pseudocódigo y, a partir del grafo de flujo debes calcular</p>
+<ul>
+<li>La complejidad ciclomática de McCabe V(G) de las tres formas posible.</li>
+</ul>
+<h3>2. El conjunto de caminos independientes</h3>
+<h3>3. Obtención de los casos de pueba</h3></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.3 — Actividad propuesta 2 SOLUCIÓN</p><p>Actividad propuesta 2: Analiza el siguiente fragmento en pseudocódigo y, a partir del grafo de flujo debes calcular</p>
+<ul>
+<li>La complejidad ciclomática de McCabe V(G) de las tres formas posible.</li>
+</ul>
+
+
+<p>SOLUCIÓN</p>
+<h3>1. Calculamos la complejidad ciclomática de las tres formas posibles</h3>
+<ul>
+<li>Número de regiones:= 3</li>
+</ul>
+<ul>
+<li>Nodos predicado +1= 3</li>
+</ul>
+<ul>
+<li>Aristas-nodos+2= 8-7+2= 3</li>
+</ul>
+<h3>2. Conjunto de caminos independientes</h3>
+<p>Camino 1: 1 - 2 - 3 - 7</p>
+<p>Camino 2: 1 - 2 - 4 - 6 - 7</p>
+<p>Camino 3: 1 - 2 - 4 - 5 - 7</p>
+<h3>3. Obtención de los casos de prueba</h3>
+<p>Camino Caso de prueba Resultado esperado Cantidad &gt;1000 cant= 2000, pvp= 125 Visualizar el importeTotal 225000 Cantidad &lt;=1000 y cantidad &lt;=100 cant= 5, pvp= 125 Visualizar el importeTotal 625 Cantidad &lt;=1000 y cant idad &gt;101 cant= 200, pvp= 125 Visualizar el importeTotal 23750</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 3.4 — U4 A2</p><p>Pruebas de software............................................................................................Ejercicios</p>
+<p>Ejercicios de Pruebas de Software</p>
+<p>Ejercicio1 : Dado el siguiente programa en java</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>import java.util.Scanner;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public class Maximo {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public static void main(String[] args) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int a = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int b = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int c = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int max = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Scanner sc = new Scanner(System.in);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("Introducir valor de A: ");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>a = sc.nextInt();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("Introducir valor de B: ");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>b = sc.nextInt();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("Introducir valor de C: ");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>c = sc.nextInt();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if ((a&gt;b) &amp;&amp; (a&gt;c)){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>max = a;</code></pre>
+</div>
+<p>}</p>
+<p>else{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if (c&gt;b){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>max = c;</code></pre>
+</div>
+<p>}</p>
+<p>else{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>max = b;</code></pre>
+</div>
+<p>}</p>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println ("El máximo es: " + max);</code></pre>
+</div>
+<p>} }</p>
+<p>Se pide</p>
+<ul>
+<li>Obtener el grafo de flujo</li>
+<li>Calcular la complejidad ciclomática de McCabe V(G)</li>
+<li>Definir conjuntos de caminos básicos y realización de las pruebas mínimas.</li>
+</ul>
+<p>Pruebas de software............................................................................................Ejercicios</p>
+<div class="admonition exercise"><p class="admonition-title">✍️ Ejercicio 2: Dado el siguiente fragmento de programa en java</p><p>Ejercicio 2: Dado el siguiente fragmento de programa en java</p></div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>x = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if ((a&gt;1) || (b&gt;5) || (c&lt;2)){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>x = x + 1;</code></pre>
+</div>
+<p>}else{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>x = x - 1;</code></pre>
+</div>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println ("El valor de x es: " + x);</code></pre>
+</div>
+<p>Se pide</p>
+<ul>
+<li>Obtener el grafo de flujo</li>
+<li>Calcular la complejidad ciclomática de McCabe V(G)</li>
+<li>Definir conjuntos de caminos básicos y realización de las pruebas mínimas.</li>
+</ul>
+<p>Pruebas de software............................................................................................Ejercicios</p>
+<p>Ejercicio 3 : Dado el siguiente programa en java</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public class NumeroPrimo {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>public static void main(String[] args) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int i = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int n = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>String op = "s";</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>boolean primo = true;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Scanner sc = new Scanner(System.in);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>while (op.equals("s")){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("Introduce un número: ");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>n = sc.nextInt();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if (n &gt; 1){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>primo = true;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>i = 2;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>while((i&lt;n) &amp;&amp; (primo)){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if (n%i==0){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>primo = false;</code></pre>
+</div>
+<p>}</p>
+<p>i++;</p>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if(primo){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("SI PRIMO");</code></pre>
+</div>
+<p>}</p>
+<p>else{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("NO PRIMO");</code></pre>
+</div>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("¿Otro número? (s/n)");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>sc.nextLine();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>op = sc.nextLine();</code></pre>
+</div>
+<p>}</p>
+<p>else{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("El número debe ser mayor que 1");</code></pre>
+</div>
+<p>}</p>
+<p>}</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("FIN DEL PROGRAMA !!!");</code></pre>
+</div>
+<p>} }</p>
+<p>Se pide</p>
+<ul>
+<li>Obtener el grafo de flujo</li>
+<li>Calcular la complejidad ciclomática de McCabe V(G)</li>
+</ul>
+<p>Pruebas de software............................................................................................Ejercicios</p>
+<p>Ejercicio 4 : Dado el siguiente programa en java</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>Scanner sc = new Scanner(System.in);
+System.out.println("Escoja una opción");</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int opcion = sc.nextInt();</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>switch (opcion) {</code></pre>
+</div>
+<p>case 1</p>
+<p>{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int multi = 1;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int total = 0;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>while (total&lt;100) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>total = 11 * multi;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if (total &lt;= 100) {</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%d %n", total);</code></pre>
+</div>
+<p>}</p>
+<p>multi++;</p>
+<p>}</p>
+<p>break;</p>
+<p>}</p>
+<p>case 2</p>
+<p>{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>int cont = 1;</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>for (int i=2; i&lt;=1000; i++){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if ( esPrimo(i) ){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>if (cont&lt;5){</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%5d", i);</code></pre>
+</div>
+<p>cont++;</p>
+<p>}</p>
+<p>else{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.printf("%5d%n", i);</code></pre>
+</div>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>cont = 1;</code></pre>
+</div>
+<p>}</p>
+<p>}</p>
+<p>}</p>
+<p>break;</p>
+<p>}</p>
+<p>case 3</p>
+<p>{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("Este caso parece fácil, pero tiene trampa...");</code></pre>
+</div>
+<p>}</p>
+<p>default</p>
+<p>{</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("Opción incorrecta");</code></pre>
+</div>
+<p>break;</p>
+<p>} }</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>System.out.println("FIN del programa.");</code></pre>
+</div>
+<p>Se pide: Obtener el grafo de flujo y Calcular la complejidad ciclomática de McCabe V(G)</p>
+<p>Pruebas de software............................................................................................Ejercicios</p>
+<p>NOTA IMPORTANTE: Debido a que las sentencias tipo CASE pueden convertirse en IFs encadenados, hay que tener en cuenta cómo se calcula la complejidad ciclomática contando nodos predicados: Cada valor con el que se compara la variable es equivalente a un nodo predicado ("default" no se cuenta como opción).</p>
+<p>Sea el siguiente fragmento de código</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">JAVA</span>
+</div>
+</div>
+<pre><code>switch (opcion) {</code></pre>
+</div>
+<p>case 1:{</p>
+<p>break;</p>
+<p>}</p>
+<p>case 2:{</p>
+<p>break;</p>
+<p>}</p>
+<p>case 3:{</p>
+<p>break;</p>
+<p>}</p>
+<p>default:{</p>
+<p>break;</p>
+<p>} }</p>
+<p>V(G) = Nodos Predicados + 1 = 3 + 1 = 4</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.5 — Actividad propuesta JUnit 1</p><p>Actividad propuesta: Un alumno quiere realizar una clase que convierta grados Fahrenheit a Celsius, y viceversa. Conoce la fórmula y quiere implementar dos métodos en la clase fahrenheittocelsius() y celsiustofahrenheit() que conviertan grados de una unidad a otra, y viceversa.</p>
+<p>Además, quiere testear que conviertan los métodos correctamente los valores -5, 0, 15 y 32. ¿Puedes ayudarlo a crear la clase y el test con JUnit 5? Para facilitarte la tarea te facilitamos el código de la clase que convierte los grados fahrenheit a celsius y viceversa</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.6 — Actividad propuesta JUnit 2</p><p>Actividad propuesta 2: El alumno se ha animado y, dentro del mismo proyecto, quiere realizar una clase que convierta dólares a euros y viceversa (métodos dollar2euro y euro2dollar), también con sus test en JUnit que testeen 10,5 dólares y 20,20 euros. Primero deberás elaborar el código de la clase que convierte los dólares a euros y viceversa, y a continuación el test con JUnit.</p></div>
+<div class="admonition exercise"><p class="admonition-title">📋 Exercici / Qüestionari 3.7 — Actividad propuesta JUnit 3</p><p>Última actividad propuesta Realiza un clase que se llame FiguraGeométrica e implementa tres funciones, una que calcule el área del rectángulo, otra que calcule el área del círculo y otra que calcule el área del triángulo. Para facilitarte la tarea te proporcionaremos las cabeceras de las tres funciones</p>
+<p>public double areaRectangulo(double base, double altura) public double areaCirculo(double radio) public double areaTriangulo(double base, double altura) A continuación genera la clase Test con JUnit y prueba el método assertEquals.</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut02actividades.html">⬅️ ✍️ Activitats pràctiques UT2</a>
+<a class="page-nav-btn" href="../ut03/ut0301.html">3.1 U4 - Debugging y testing ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

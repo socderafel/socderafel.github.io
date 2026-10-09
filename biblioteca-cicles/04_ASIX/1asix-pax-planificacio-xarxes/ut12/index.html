@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT12 — U11 - Encaminament — Planificació i Administració de Xarxes | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📡 Planificació i Administració de Xarxes — 1r ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Planificació i Administració de Xarxes</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — General PAX</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Continguts i Recursos</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Tutoria 1ASIX</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Horari 1ASIX</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Calendari 21 22</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Plànol IES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — U1 - Caracterització de les xarxes</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 U1. Caracterització de les xarxes</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — U2 - Arquitectura de xarxa</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 U2 Arquitectura de xarxa</a></li>
+<li><a href="../ut03/ut0302.html">3.2 U2.1 IPs</a></li>
+<li><a href="../ut03/ut0303.html">3.3 U2 P1 ES</a></li>
+<li><a href="../ut03/ut0304.html">3.4 U2 P1 EN</a></li>
+<li><a href="../ut03/ut0305.html">3.5 U2 E1</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — U3 - Xarxes d'àrea local</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 U3 Xarxes àrea local</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — U4 - Nivell físic</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 U4 Nivell físic</a></li>
+<li><a href="../ut05/ut0502.html">5.2 U4 P1</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — U5 - Cablejat estructurat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 U5 Cablejat Estructurat</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Cablejat Casa de l'Alumne UPV</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — U6 - Nivell d'enllaç</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 U6 - Nivell d'enllaç</a></li>
+<li><a href="../ut07/ut0702.html">7.2 Trama PPP</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — U7 - El switch</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 U7 El switch</a></li>
+<li><a href="../ut08/ut0802.html">8.2 Cisco IOS</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — U8 - VLAN</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 U8 VLAN</a></li>
+<li><a href="../ut09/ut0902.html">9.2 Comandos Cisco VLAN</a></li>
+<li><a href="../ut09/ut0903.html">9.3 U8E1</a></li>
+<li><a href="../ut09/ut0904.html">9.4 U8E2</a></li>
+<li><a href="../ut09/ut0905.html">9.5 VTP, DTP i Capa 3</a></li>
+<li><a href="../ut09/ut0906.html">9.6 Colisió i difusió</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — U9 - Nivell de xarxa. El router</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 U9 Nivell de xarxa. El Router</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — U10 - Adreçament IP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 U10 Adreçament IP</a></li>
+<li><a href="../ut11/ut1102.html">11.2 Exercicis classe subnetting</a></li>
+<li><a href="../ut11/ut1103.html">11.3 Taula A2</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT12 — U11 - Encaminament</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 U11 Enrutament</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Exemple Enrutament Estàtic</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — U12 - Capa de transport i aplicació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 U12 Nivell de Transport i Aplicació</a></li>
+<li><a href="../ut13/ut13actividades.html">✍️ Activitats pràctiques UT13</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r ASIX · Grau Superior · UT12 Completa</span>
+<h1>📘 UT12 — U11 - Encaminament (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut1201"><strong>12.1 U11 Enrutament</strong></a> (o <a href="./ut1201.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut1202"><strong>12.2 Exemple Enrutament Estàtic</strong></a> (o <a href="./ut1202.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut12actividades"><strong>✍️ Activitats pràctiques UT12</strong></a> (o <a href="./ut12actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut1201">12.1 U11 Enrutament</h2>
+
+
+<p>📎 <strong>Material de laboratori (U11A2 Act2. Solució):</strong> <code>Solucio U11 A2-2.png</code></p>
+
+<hr/>
+<p>PAX - U11 – Enrutament 1er ASIX</p>
+<p>1 ASIX - PAX Concepte</p>
+<ul>
+<li>En una xarxa és molt important que existeixen diferents rutes per aplegar a</li>
+</ul>
+<p>un mateix destí. Amb açò</p>
+<ul>
+<li>Cap equip queda aïllat si es produeix una fallada a l’enllaç.</li>
+<li>Possibilita la selecció de rutes alternatives en cas de saturació de tràfic.</li>
+<li>En una xarxa, es necessari que existisca alguna forma d’establir quina és la</li>
+</ul>
+<p>ruta més adequada, que deuen seguir els paquets en cada moment per aplegar al seu destí.</p>
+<ul>
+<li>Aquest mecanisme encarregar de seleccionar la ruta més adequada es</li>
+</ul>
+<p>l’anomenat enrutament o encaminament.</p>
+<p>1 ASIX - PAX Concepte</p>
+<ul>
+<li>Nivell de xarxa.</li>
+<li>Per a que aquesta tasca es puga dur a terme, es necessari haver</li>
+</ul>
+<p>identificat els equips de forma única. És per això que en la unitat anterior s’ha estudiant el direccionalment IP.</p>
+<ul>
+<li>L’enrutament el fan els routers. Quan reben un paquet per un dels</li>
+</ul>
+<p>seus ports, examinen la direcció de destí i executen l’algoritme d’enrutament que tenen programar per reenviar el paquet pel port adequat.</p>
+<p>1 ASIX - PAX Tipus: Enrutament estàtic</p>
+<ul>
+<li>Depenent de la forma que el router “aprén” la ubicació de les</li>
+</ul>
+<p>direccions, es a dir, en quin port li correspon cada direcció, es pot classificar l’enrutament en dos grans tipus. Estàtic i dinàmic.</p>
+<ul>
+<li>Enrutament estàtic</li>
+<li>Requereixen que la tabla d’enrutament siga construïda manualment per</li>
+</ul>
+<p>l’administrador de la xarxa.</p>
+<ul>
+<li>Es creen quan sols existein una única ruta cap al destí i aquesta no va a</li>
+</ul>
+<p>canviar.</p>
+<ul>
+<li>Alta velocitat de decisió però no auto-aprén si hi ha canvis.</li>
+</ul>
+<p>1 ASIX - PAX Tipus: Enrutament dinàmic</p>
+<ul>
+<li>Enrutament dinàmic</li>
+<li>Consisteix en activar algun protocol d’enrutament dinàmic que permeta</li>
+</ul>
+<p>l’intercanvi de informació entre els routers per crear dinàmicament la taula d’Enrutament.</p>
+<ul>
+<li>Son capaços d’apendre per ells mateixos la topologia de xarxa sense</li>
+</ul>
+<p>intervenció humana. Per tant, més flexibles que estàtics, però menor rendiment.</p>
+<ul>
+<li>És habitual configurar un enrutament dinàmic amb algunes entrades</li>
+</ul>
+<p>estàtiques a la taula.</p>
+<p>1 ASIX - PAX Tipus: Enrutament dinàmic</p>
+<ul>
+<li>Els principals objectius de l’enrutament dinàmic son</li>
+<li>Millor ruta: objectiu primordial i va a dependre del criteri escollit (distància,</li>
+</ul>
+<p>tràfic, capacitat dels enllaços, etc)</p>
+<ul>
+<li>Simplicitat: aquest objectiu pretén que l’algoritme triat no consumisca grans</li>
+</ul>
+<p>recursos.</p>
+<ul>
+<li>Robustesa: el protocol d’enrutament deu contindre mecanismes que eviten el</li>
+</ul>
+<p>bloqueig davant qualsevol falla.</p>
+<ul>
+<li>Rapidessa d’aprenentatge: quan es produeix un canvi en la xarxa, tots els</li>
+</ul>
+<p>routers deuen conèixer quan mes prompte millor i modificar les seus taules.</p>
+<p>1 ASIX - PAX Enrutament estàtic</p>
+<ul>
+<li>Cada estació de xarxa, té una direcció IP única en la seua xarxa.</li>
+<li>Cada encaminador, a més, té una direcció única per a cadascuna de</li>
+</ul>
+<p>les xarxes que te connectades.</p>
+<p>1 ASIX - PAX Enrutament estàtic</p>
+<ul>
+<li>Cada router disposa d’una tabla amb els possibles destinataris(per</li>
+</ul>
+<p>xarxa) dels paquets.</p>
+<ul>
+<li>Sol contindre les següents columnes</li>
+<li>Direcció IP de la xarxa destí.</li>
+<li>Màscara de xarxa del destí</li>
+<li>Continua...</li>
+</ul>
+<p>1 ASIX - PAX Enrutament estàtic</p>
+<ul>
+<li>Següent bot (next hop). Ací tenim dues possibilitats</li>
+<li>La direcció IP del port del router pel que s’entregarà el paquet, si la xarxa de</li>
+</ul>
+<p>destí està directament conectada (a routers cisco posarem la 0.0.0.0)</p>
+<ul>
+<li>La direcció IP del port d’entrada del següent router, si la red de destí NO està</li>
+</ul>
+<p>directament conectada.</p>
+<ul>
+<li>Interfície: Nom o direcció IP del router pel que s’entregarà el paquet.</li>
+<li>Mètrica: Nombre de routers intermedis que es necessari travessar o</li>
+</ul>
+<p>qualsevol altre paràmetre que especifique el cost del camí.</p>
+<p>1 ASIX - PAX Enrutament estàtic</p>
+<ul>
+<li>Coses a tindre en compte amb les taules estàtiques</li>
+<li>Es deuen incloure totes les xarxes de destí existents.</li>
+<li>En una taula d’encaminament pot aparèixer més d’una fila amb la mateixa</li>
+</ul>
+<p>xarxa de destí. Açò pot ocórrer quan existeixen diferents rutes per a aplegar a la citada xarxa.</p>
+<ul>
+<li>Si la xarxa té accés a Internet, cal incloure una entrada per fer referència a</li>
+</ul>
+<p>Internet i que posarem com xarxa destí 0.0.0.0/0</p>
+<ul>
+<li>Les columnes Xarxa destí i següent bot són columnes obligatòries.</li>
+</ul>
+<p>1 ASIX - PAX Enrutament estàtic a PT</p>
+<ul>
+<li>Per configurar l’encaminament a Packet Tracer és molt senzill.</li>
+<li>Entrarem en mode configuració al router i l’ordre per indicar-li una fila</li>
+</ul>
+<p>d’encaminament és la següent</p>
+<ul>
+<li>ip route IP_DESTÍ MÀSCARA [SEGÜENT/INTERFÍCIE] [DISTÀNCIA]</li>
+<li>Si la xarxa no està directament connectada</li>
+<li>ip route XARXA_DESTÍ MÁSCARA_DESTÍ IP_SEGÜENT_BOT [DISTÀNCIA]</li>
+<li>Desde Router 4, per configurar la xarxa 192.168.1.0</li>
+<li>ip route 192.168.1.0 255.255.255.0 10.0.0.2</li>
+</ul>
+<p>1 ASIX - PAX Enrutament estàtic a PT</p>
+<ul>
+<li>Quan la xarxa de destí està directament connectada al router, l’ordre canvia ja</li>
+</ul>
+<p>que canviem el següent bot per el nom de la interfície a la que està connectada.</p>
+<ul>
+<li>ip route IP_DESTÍ MÀSCARA INTERFÍCIE [DISTÀNCIA]</li>
+<li>Per exemple, per configurar la xarxa 10.0.0.0 al Router 4 executaríem</li>
+<li>ip route 10.0.0.0 255.255.255.0 g0/0</li>
+</ul>
+<p>1 ASIX - PAX Enrutament estàtic a PT</p>
+<ul>
+<li>Quan es vol configurar una ruta per defecte (default), es gastarà com a IP de destí</li>
+</ul>
+<p>i com a màscara la direcció 0.0.0.0.</p>
+<ul>
+<li>S’intentarà especificar sempre que siga possible la distància o mètrica. Si no es</li>
+</ul>
+<p>proporciona, PT per defecte agafarà com a valor predeterminat 0 si la xarxa està directament connectada i 1 si no.</p>
+<ul>
+<li>Si es vol configurar l’encaminament amb IPv6 es gastarà la mateixa sintaxi que per a ipv4 amb la</li>
+</ul>
+<p>diferència de la paraula clau.</p>
+<ul>
+<li>Ipv6 route IP_DESTÍ/MÀSCARA [SEGÜENT/INTERFÍCIE] [DISTÀNCIA]</li>
+</ul>
+<p>1 ASIX - PAX show ip route</p>
+<ul>
+<li>Per a vore la taula d’encaminament del router executarem la següent</li>
+</ul>
+<p>instrucció</p>
+<ul>
+<li>show ip route</li>
+<li>Amb aquesta instrucció vorem tant les rutes apreses dinàmicament com les</li>
+</ul>
+<p>apreses estàticament.</p>
+<ul>
+<li>L’eixida del comandament dona molta informació útil per als</li>
+</ul>
+<p>administradors de la xarxa.</p>
+<p>1 ASIX - PAX show ip route</p>
+<p>1 ASIX - PAX show ip route Indica que la ruta per defecte no está configurada Indica que la xarxa 172.16.0.0/16 ha estat dividida amb diferents màscares Indica que la xarxa 172.16.40.0 ha estat apresa mitjançant protocol RIP, a la qual s’accedeix pel bot 172.16.20.2 per la interfície Serial10/0/1 i que aquesta Informació ha estat actualitzada fa 18 segons</p>
+<p>1 ASIX - PAX show ip route Indica que la xarxa 172.16.30.0/24 está directament conectada per l’interfície GigabitEthernet 0/0 Representa la propia interfície del dispositiu. La màscara 32 així ho indica.</p>
+<p>1 ASIX - PAX show ip route</p>
+<ul>
+<li>El propi comandament té variacions</li>
+<li>show ip route 172.16.40.0</li>
+<li>Es mostra solament la informació referida a eixa xarxa en concret</li>
+<li>show ip route static</li>
+<li>Mostra solament les rutes estàtiques de la taula</li>
+<li>show ip route connected</li>
+<li>Mostra solament les rutes directament connectades de la taula</li>
+<li>show ip route osfp 1</li>
+<li>Mostra solament les rutes apreses mitjançant el protocol dinàmic especificat. En aquest cas, l’1</li>
+</ul>
+<p>indica el id del procés. Cada protocol té unes característiques especials.</p>
+<p>1 ASIX - PAX Enrutament dinàmic</p>
+<ul>
+<li>Per a que siga possible, els routers tenen que mantenir per un costat les</li>
+</ul>
+<p>taules d’enrutament i d’altra banda l’enviament d’informació entre ells per a poder modificar les taules i actualitzar-les en base a l’estat actual de la xarxa.</p>
+<ul>
+<li>Per a que eixe intercanvi d’informació siga possible, es necessario definir</li>
+</ul>
+<p>quin protocol d’enrutament dinàmic es gastarà.</p>
+<p>1 ASIX - PAX Enrutament dinàmic: característiques</p>
+<ul>
+<li>Algunes de les característiques que tenen en compte els protocols</li>
+</ul>
+<p>d’enrutament dinàmics i que cal conèixer son</p>
+<ul>
+<li>Mètrica: Pot ser tan senzill com contar el nombre de routers entre origen i destí o es pot complicar fins</li>
+</ul>
+<p>a tindre en compte aspectes com la velocitat de transmissió i el grau de congestió.</p>
+<ul>
+<li>Equilibrat de càrrega: Consisteix en que els protocols dinàmics inclous varies entrades en les seues</li>
+</ul>
+<p>taules d’encaminament al mateix destí per així tindre varies rutes. • Maximum-paths número</p>
+<ul>
+<li>Bucles d’enrutament: En ocasions, es poden donar bucles a la xarxa i els protocols intenten evitar-los</li>
+<li>Distàncies administratives: Es comú trobar diversos protocols d’enrutament en la mateixa xarxa. No hi</li>
+</ul>
+<p>ha cap que siga ideal. Es probable que en un mateix router també treballe amb diferents protocols i per tant cadascun manté les seues taules. Per decidir a qui fer cas, es gasta la distància administrativa, que és el valor de fiabilitat d’un protocol.</p>
+<p>1 ASIX - PAX Enrutament dinàmic: característiques</p>
+<p>1 ASIX - PAX Protocols d’enrutament</p>
+<ul>
+<li>Depenent de si el protocol funciona dins d’un àmbit “privat” o fora d’ell es</li>
+</ul>
+<p>pot classificar en dos tipus</p>
+<ul>
+<li>IGP (Internet Gateway Protocol): Encaminen la informació dins de l’àmbit privat. RIP1, RIP2, IGRP,</li>
+</ul>
+<p>EIGRP, OSPF, IS-IS.</p>
+<ul>
+<li>EGP (Exterior Gateway Protocol): Encaminen entre els àmbits privats. BGP.</li>
+</ul>
+<p>1 ASIX - PAX Enrutament per vector-distància</p>
+<ul>
+<li>En aquesta aproximació cada router es preocupa solament d’enviar els missatges</li>
+</ul>
+<p>als veïns de forma periòdica i no coneix amb detall la topologia de la resta de la xarxa.</p>
+<ul>
+<li>Per a obtenir aquesta informació, cada encaminador necessita rebre solament la</li>
+</ul>
+<p>informació d’encaminament dels seus veïns.</p>
+<ul>
+<li>RIP1, RIP2 i IGRP.</li>
+</ul>
+<p>1 ASIX - PAX Enrutament basat en l’estat dels enllaços</p>
+<ul>
+<li>Aquests protocols es caracteritzen per ser més complexos al emmagatzemar informació</li>
+</ul>
+<p>de tota la xarxa, no sols dels veïns.</p>
+<ul>
+<li>Cada router, a partir de la informació facilitada pels demés, construeix un arbre jeràrquic</li>
+</ul>
+<p>amb els possibles destins i routers intermedis.</p>
+<ul>
+<li>A partir d’aquest arbre, determina quines poden ser les millors rutes.</li>
+<li>Acò necessita major capacitat de processament i memòria.</li>
+<li>OSPF</li>
+</ul>
+<p>1 ASIX - PAX Enrutament RIP: Característiques</p>
+<ul>
+<li>Un dels protocols d’enrutament dinàmic més utilitzat, sobretot als inicis</li>
+</ul>
+<p>d’Internet.</p>
+<ul>
+<li>Protocol de vector distància (sentit + distància) que utilitza el comptatge de salts</li>
+</ul>
+<p>per determina la millor ruta al destí.</p>
+<ul>
+<li>El valor màxim d’aquest comptatge és 15.</li>
+<li>16 indica distancia infinita (destí inassolible)</li>
+<li>No tenen en compte la velocitat de transmissió dels enllaços, pel que pot</li>
+</ul>
+<p>determinar la ruta més lenta com la millor.</p>
+<p>1 ASIX - PAX Enrutament RIP: Característiques</p>
+<ul>
+<li>Inclou la direcció IP del següent router en l’actualització d’enrutament.</li>
+<li>Un router envia, cada 30 segons, informació d’actualització de les taules als seus</li>
+</ul>
+<p>veïns.</p>
+<ul>
+<li>Quan existeixen varies rutes al mateix destí, es triat la de menys salts.</li>
+<li>Si existeixen varies rutes al mateix destí amb el mateix nombre de salts, el</li>
+</ul>
+<p>protocol realitza un balanç de càrrega. Açò implica enviar els missatges alternativament entre les diferents rutes.</p>
+<p>1 ASIX - PAX Enrutament RIP: Característiques</p>
+<p>1 ASIX - PAX Enrutament RIP: Característiques</p>
+<ul>
+<li>Existeixen 2 versions en l’actualitat del protocol RIP. RIPv1 i RIPv2.</li>
+<li>RIPv1 està en desús ja que té algunes deficiències que corregeix RIPv2, entre les</li>
+</ul>
+<p>que es troben</p>
+<ul>
+<li>No envia informació sobre la màscara de xarxa, per tant no suporta subxarxes.</li>
+<li>Incrementa el tràfic de xarxa al enviar les actualitzacions per un missatge de difusió.</li>
+<li>No té en compte la seguretat i permet que persones no autoritzades puguen enviar</li>
+</ul>
+<p>informació d’enrutament falsa.</p>
+<ul>
+<li>Tots estos problemes són solucionats per RIPv2</li>
+</ul>
+<p>1 ASIX - PAX Enrutament RIPv2: Configuració</p>
+<ul>
+<li>Per a configurar l’encaminament dinàmic RIPv2 als routers CISCO (o Packet Tracer) cal</li>
+</ul>
+<p>utilitzar la següent sintaxi</p>
+<ul>
+<li>router protocol [opciones]</li>
+<li>On protocol especifica el nom del protocol a gastar, en aquest cas RIP i a continuació cal</li>
+</ul>
+<p>especificar de forma explícita que es va a utilitzar la versió 2 de RIP.</p>
+<ul>
+<li>version 2</li>
+<li>També es necessari especificar les interfícies per les que s’envia i es rep la informació per</li>
+</ul>
+<p>actualitzar les taules d’enrutament, es a dir, les xarxes conectades directament</p>
+<ul>
+<li>network direcció_de_xarxa</li>
+</ul>
+<p>1 ASIX - PAX Enrutament RIPv2: Configuració</p>
+<p>1 ASIX - PAX Enrutament RIPv2: Configuració</p>
+<p>1 ASIX - PAX Enrutament RIPv2: Configuració</p>
+<ul>
+<li>Es poden definir altres paràmetres relacionats amb el comportament de</li>
+</ul>
+<p>l’algoritme.</p>
+<ul>
+<li>update-timer: valor en segons de l’interval d’enviament de taules d’enrutament.</li>
+<li>neighbor: direcció IP del router veí al que es va a enviar la taula d’enrutament.</li>
+<li>passive-interface: interfície de xarxa per la que es van a enviar les actualitzacions de les taules d’enrutament</li>
+<li>Per a obtenir la relació dels protocols d’enrutament que hi ha actius al dispositiu es pot gastar el</li>
+</ul>
+<p>comandament</p>
+<ul>
+<li>show ip protocols</li>
+</ul>
+<p>1 ASIX - PAX Enrutament EIGRP: Característiques</p>
+<ul>
+<li>Versió millorada de IGRP. Al igual que RIP, suporta subxarxes i millora algoritme.</li>
+<li>Desarrollat per Cisco.</li>
+<li>Protocol de vector distància que utilitza diferents valors de l’estat dels enllaços per</li>
+</ul>
+<p>determina la millor ruta al destí com l’ample de banda, retràs, carrega i fiabilitat.</p>
+<ul>
+<li>Inclou la direcció IP del següent router en l’actualització d’enrutament.</li>
+<li>Un router envia, cada 90 segons, informació d’actualització de les taules als seus veïns.</li>
+</ul>
+<p>1 ASIX - PAX Enrutament EIGRP: Característiques</p>
+<ul>
+<li>La fórmula que gasta EIGRP per calcular la mètrica de cada ruta és la següent</li>
+<li>V és la velocitat de l’enllaç</li>
+<li>C és el grau de congestió</li>
+<li>R és el retard</li>
+<li>F és la fiabilitat</li>
+<li>Les K’s són valors constants que es poden modificar per definir una mètrica personalitzada. Per defecte</li>
+</ul>
+<p>son 1, 0, 1, 0, 0.</p>
+<p>1 ASIX - PAX Enrutament EIGRP : Configuració</p>
+<ul>
+<li>La configuració EIGRP és molt semblant a la de RIP</li>
+<li>Per a configurar l’encaminament dinàmic EIGRP als routers CISCO (o Packet Tracer) cal</li>
+</ul>
+<p>utilitzar la següent sintaxi</p>
+<ul>
+<li>router protocol [opciones]</li>
+<li>On protocol especifica el nom del protocol a gastar, en aquest cas eigrp i a continuació</li>
+</ul>
+<p>cal especificar el nombre del sistema autònom (un valor comprés entre 1 i 65.535. Podem gastar sempre 1)</p>
+<ul>
+<li>També es necessari especificar les interfícies per les que s’envia i es rep la informació per</li>
+</ul>
+<p>actualitzar les taules d’enrutament, es a dir, les xarxes conectades directament</p>
+<ul>
+<li>network direcció_de_xarxa</li>
+</ul>
+<p>1 ASIX - PAX Enrutament OSPF : Característiques</p>
+<ul>
+<li>L’algoritme està basat en l’enviament d’informació sobre l’estat dels enllaços als routers</li>
+</ul>
+<p>veïns (es a dir, aquells que estan connectats directament).</p>
+<ul>
+<li>Com a mètrica gasta la velocitat de transmissió i el cost dels enllaços.</li>
+<li>Quan un router rep la informació per un dels seus ports, afegeix la informació del seus</li>
+</ul>
+<p>propis enllaços i reenvia la informació per inundació a la resta (tots els ports menys 1)</p>
+<ul>
+<li>Per a que no es congestione la xarxa amb aquest tipus de tràfic, el protocol assigna als</li>
+</ul>
+<p>routers diferents funcions i prioritats.</p>
+<p>1 ASIX - PAX Enrutament OSPF : Característiques</p>
+<ul>
+<li>Els routers es divideixen en</li>
+<li>DR (Designated Router) – Son els designats per a rebre la informació de l’estat dels enllaços i difondre-la a la</li>
+</ul>
+<p>resta dels routers.</p>
+<ul>
+<li>BDR (Backup Designated Router) – Routers que poden assumir el rol de DR en cas que aquestos fallen.</li>
+<li>Quan tots els routers reben la informació sobre l’estat dels enllaços, aleshores executen</li>
+</ul>
+<p>l’algoritme per determina les millors rutes als possibles destins i construir així les seues taules d’encaminament.</p>
+<ul>
+<li>Quan tots els equips tenen les taules amb la informació, es diu que la xarxa aconsegueix el seu</li>
+</ul>
+<p>estat de convergència.</p>
+<ul>
+<li>Quan es produeix algun canvi a la xarxa (a nivell d’estat o d’equip que es connecta/desconnecta),</li>
+</ul>
+<p>el router directament connectat envia un missatge de difusió per advertir de la situació i es torna a repetir el procés fins que s’aconsegueix l’estat de convergència de nou.</p>
+<p>1 ASIX - PAX Enrutament OSPF : Configuració</p>
+<ul>
+<li>El primer que cal fer és assignar una direcció i màscara a la interfície de bucle (loopback) del</li>
+</ul>
+<p>router. Aquesta l’utilitza OSPF per establit l’identificador del router.</p>
+<ul>
+<li>interface loopback0</li>
+<li>ip address direccion 255.255.255.255</li>
+<li>Activar l’encaminament OSPF al router.</li>
+<li>router ospf identificador</li>
+<li>Identificador especifica el nombre del procés associat (podem posar qualsevol entre 1 i 65535).</li>
+<li>Al igual que en altres protocols, també hi ha que identificar les xarxes directament conectades</li>
+<li>network direcció wildcard area número</li>
+<li>El wildcard és lo contrari a la direcció de xarxa. 0.0.0.255. els bits que estan a 0 son els que identifiquen la</li>
+</ul>
+<p>xarxa.</p>
+<ul>
+<li>El número es l`àrea a la que pertany la interfície del router. Nosaltres sempre la 0 perquè sols configurarem</li>
+</ul>
+<p>una àrea.</p>
+<p>1 ASIX - PAX Dubtes?</p>
+<hr/>
+<h2 id="ut1202">12.2 Exemple Enrutament Estàtic</h2>
+<div class="admonition warning"><p class="admonition-title">📄 Document Escanejat / Visual (Exemple_Enrutament_Estàtic.pdf)</p><p>Aquest document PDF (1 pàgines) està compost principalment per esquemes o imatges escanejades.</p></div>
+<hr/>
+<h2 id="ut12actividades">✍️ Activitats pràctiques UT12</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.1 — U11A1</p><p>Unitat 11 – Enrutament U11 – A1</p>
+<p>Instruccions</p>
+<ul>
+<li>Recorda copiar tant l’enunciat com les respostes.</li>
+<li>Entrega el document en format .pdf.</li>
+</ul>
+<h3>1. Crea la taula de forwarding (enrutament o encaminament) per a la següent</h3>
+<p>topologia</p>
+<p>Recorda que la taula ha de contindre com a mínim les següent columnes</p>
+<p>Xarxa destí Màscara (format puntejat) Next Hop Métrica</p>
+<p>Unitat 11 – Enrutament</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.2 — U11A2</p><p>1ºASIX Forwarding A partir de esta tabla de subnetting: Red N.º Hosts (+2) B it s d e H o s t Mascara Direccion de red IP Inicial IP Final Broadca st RA-RB 2+2 2 255.255.255.252 /30 200.0.0.0/30 200.0.0.1 200.0.0.2/30 200.0.0.3/ RA-RF 2+2 2 255.255.255.252 /30 200.0.0.4/30 200.0.0.5/30 200.0.0.6/30 200.0.0.7/ RA-RD 2+2 2 255.255.255.252 /30 200.0.0.8/30 200.0.0.9/30 200.0.0.10/30 200.0.0.1 1/30 RD-RC 2+2 2 255.255.255.252 /30 200.0.0.12/30 200.0.0.13/30 200.0.0.14/30 200.0.0.1 5/30 RD-RE 2+2 2 255.255.255.252 /30 200.0.0.16/30 200.0.0.17/30 200.0.0.18/30 200.0.0.1</p>
+<p>1ºASIX Forwarding 9/30 Malaga 4+2 3 255.255.255.248 /29 200.0.0.24/29 200.0.0.25/29 200.0.0.30/29 200.0.0.3 1/29 Santander 4+2 3 255.255.255.248 /29 200.0.0.32/29 200.0.0.33/29 200.0.0.38/29 200.0.0.3 9/29 Madrid 10+2 4 255.255.255.240 /28 200.0.0.48/28 200.0.0.49/28 200.0.0.62/28 200.0.0.6 3/28 Barcelona 10+2 4 255.255.255.240 /28 200.0.0.64/28 200.0.0.65/28 200.0.0.78/28 200.0.0.7 9/28 VLC Central 25+2 5 255.255.255.224 /27 200.0.0.96/27 200.0.0.97/27 200.0.0.126/27 200.0.0.1 27/27 Fabrica 126+2 7 255.255.255.128 /25 200.0.0.128/25 200.0.0.129/28 200.0.0.254/25 200.0.0.2 55/25</p>
+<ul>
+<li>Construye la tabla de forwarding (tabla de enrutamiento) del router RA indicando</li>
+</ul>
+<p>Máscara Dirección de red Siguiente Salto Interfaz Debe especificarse la máscara que hay que aplicar a la dirección IP destino del datagrama para contrastar con la dirección de red almacenada en la tabla. Dirección IP que se contrasta para verificar la salida correspondiente Si se trata de encaminamiento directo se especifica la dirección propia del router en esa red. Si es indirecto se especifica la dirección IP del siguiente router.</p>
+<p>Número de interfaz por el que sale el router. Las tablas han de tener el MÍNIMO número de entradas necesarias para alcanzar cualquier destino.</p>
+<ul>
+<li>Indica cual sería el siguiente salto para los paquetes cuyas direcciones IP destino fueran</li>
+</ul>
+<p>200.0.0.70 200.0.0.8 200.0.0.127 200.0.0.40 156.7.1.34 2.- Dada la siguiente distribución de redes de clase C en la que los switches se han obviado</p>
+<p>1ºASIX Forwarding</p>
+<ul>
+<li>Construye la tabla de enrutamiento</li>
+</ul>
+<p>a1) Router R1 a2) Router R2 a3) Router R3 ROUTER X Máscara Dirección de red Interfaz de salida Siguiente Salto</p>
+<ul>
+<li>Explica la ruta de un paquete enviado por el ordenador 1 de la subred 150.72.3.0 con destino el</li>
+</ul>
+<p>servidor de YouTube (216.58.201.174)</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.3 — U11 Grupal</p><p>Unitat 11 – Encaminaments dinàmics</p>
+<p>U11 – Grupal</p>
+<p>En grups, prepara una presentació sobre un dels següents protocols d’encaminament dinàmics (els triem a classe)</p>
+<ul>
+<li>RIP</li>
+<li>OSPF</li>
+<li>EIGRP</li>
+</ul>
+<p>Cada grup prepararà una presentació per explicar el protocol. Per fer-ho pot fer servir tantes ferramentes com necessite, sent obligatori una part de configuració del protocol amb Packet Tracer.</p>
+<p>La duració de la presentació no deu excedir els 10 minuts aproximadament i tots els membres de l’equip deuen estar un temps equitatiu exposant.</p>
+<p>Al finalitzar l’exposició, tant els companys com el professor podran realitzar preguntes a qualsevol membre del grup sobre qualsevol tema de l’exposició (no necessàriament el que ha exposat).</p>
+<p>La rubrica que es gastarà per avaluar és la següent</p>
+<p>EXCEL·LENT MOLT BÉ SUFICIENT INSUFICIENT</p>
+<h3>1. Presentació del</h3>
+<p>projecte El ponent es presenta, planteja el tema del projecte i les parts que desenvoluparà. Resumeix les diferents parts del treball. El ponent es presenta, però no desenvolupa completament la resta d’aspectes. No es presenten el ponent o el projecte, ni es fa un resum de les diferents parts del treball.</p>
+<p>Es presenta de manera inadequada. 2.- Veu El volum i l’entonació són els adequats, la veu clara i la vocalització bona. El volum és prou alt bona part bona part del temps, la veu clara i la vocalització bona. Costa entendre alguns fragments, i el nivell és baix en la claredat o vocalització.</p>
+<p>El volum és dèbil com per a ser escoltat per tota la classe. Molts fragments no s’entenen.</p>
+<h3>3. Postura del cos,</h3>
+<p>gestualitat i contacte visual Té bona postura i els moviments que fa són naturals. Realitza gestos per a facilitar la comprensió del discurs. Estableix contacte visual amb la resta de companys. En general té bona, realitza gestos per a facilitar la comprensió del discurs i estableix contacte visual amb la resta de companys.</p>
+<p>En moltes ocasions els moviments que fa no són naturals, no realitza gestos o no en fa amb la finalitat adequada i no estableix contacte visual. Té una postura rígida. No usa gestos adequats. No estableix contacte visual amb la resta de l’alumnat durant la presentació.</p>
+<p>Unitat 11 – Encaminaments dinàmics</p>
+<h3>4. Discurs i</h3>
+<p>vocabulari El seu discurs és molt clar, sense incorreccions gramaticals, amb un lèxic ric i s’ajusta al tema. Adequa el seu registre a la situació comunicativa. El seu discurs és correcte¡ i té cura de tots els aspectes. Utilitza paraules pròpies sense barbarismes. Parla sense abusar de repeticions i/o tics lingüístics.</p>
+<p>Respecta el registre. El seu discurs presenta bastants incorreccions, però en general el llenguatge és clar i usa un lèxic adequat al tema. No respecta en tot moment el registre. Discurs pobre. Ple d’incorreccions. El lèxic no és l’adequat al tema. Usa un registre inapropiat.</p>
+<h3>5. Temps</h3>
+<p>La durada de la intervenció és l’adequada al contingut exposat.</p>
+<p>La durada de la intervenció és quasi l’adequada al contingut exposat.</p>
+<p>La durada de la intervenció és excessivament llarga o ha faltat temps. Ha acabat molt ràpidament o ha utilitzat molt més temps del previst.</p>
+<h3>6. Atenció i interés</h3>
+<p>Capta l’atenció en tot moment. Quasi sempre capta l’atenció. Quasi mai capta l’atenció. No capta l’atenció de l’alumnat.</p>
+<h3>7. Preparació prèvia</h3>
+<p>S’ho ha preparat molt bé. No necessita llegir el suport material que l’acompanya.</p>
+<p>Bastant preparat. Algunes vegades llegeix l’esquema.</p>
+<p>En alguns moments no llegeix, es nota que algunes parts les porta més preparades. No és capaç d’exposar sense llegir el paper.</p>
+<h3>8. Contingut</h3>
+<p>Entén el que explica. El contingut és ampli.</p>
+<p>Quasi sempre entén el que explica. El contingut està treballat.</p>
+<p>En moltes ocasions no entén el que explica. Apareixen contingutssobrers i inadequats o en falten. No entén el que explica. El contingut no està treballat</p>
+<h3>9. Material de suport</h3>
+<p>El material de suport (pòsters, murals, vídeos, etc.) és creatiu i útil per a la comprensió de l’exposició.</p>
+<p>En general el material de suport acompleix els requisits i ajuda a la comprensió de l’exposició.</p>
+<p>El material de suport no és creatiu,però ajuda a la comprensió de l’exposició.</p>
+<p>Ni la creativitat del material de suport és l’adequada ni aconsegueix l’objectiu d’ajudar en la comprensió de l’exposició.</p>
+<h3>10. Domini del tema</h3>
+<p>(i resolució de dubtes) Respon les preguntes que li plantegen després de l’exposició, resol dubtes. Respon quasi totes les preguntes plantejades. Respon alguna pregunta, no domina suficientment el tema. No sap respondre les preguntes plantejades, no té domini del tema.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.4 — Auto i Co-Avaluació Grupal</p><h3>📄 Auto_CoAvaluació.pdf</h3>
+
+<p>PAX</p>
+<p>Auto-Avaluació I Co-Avaluació</p>
+<p>Has acabat la feina. Com passa a les grans empreses, alguna gent contribueix més que altra. Ara és el moment d’avaluar-la.</p>
+<p>Instruccions</p>
+<ul>
+<li>Tens un nombre màxim de punts que pots distribuir entre tots</li>
+</ul>
+<p>els membres de l’equip. Aquest nombre màxim de punts és 25.</p>
+<ul>
+<li>Pots assignar un màxim de 10 punts a cada company.</li>
+<li>No es obligatori gastar els 25 punts.</li>
+<li>El comentari és obligatori.</li>
+<li>Tu també tens que avaluar-te.</li>
+</ul>
+<p>NAME MARK COMMENT</p>
+<h3>📄 Auto_CoAvaluació.docx</h3>
+<p>Auto-Avaluació I Co-Avaluació</p>
+<p>Has acabat la feina. Com passa a les grans empreses, alguna gent contribueix més que altra. Ara és el moment d’avaluar-la.</p>
+<p>Instruccions</p>
+<ul><li>Tens un nombre màxim de punts que pots distribuir entre tots els membres de l’equip. Aquest nombre màxim de punts és 25.</li></ul>
+<ul><li>Pots assignar un màxim de 10 punts a cada company.</li></ul>
+<ul><li>No es obligatori gastar els 25 punts.</li></ul>
+<ul><li>El comentari és obligatori.</li></ul>
+<ul><li>Tu també tens que avaluar-te.</li></ul>
+<table><thead><tr><th>NOM</th><th>NOTA</th><th>COMENTARI</th></tr></thead><tbody></tbody></table></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.5 — U11A3</p><p>Unitat 11 – Enrutament U11 – A3</p>
+<p>Instruccions</p>
+<ul>
+<li>Recorda copiar tant l’enunciat com les respostes.</li>
+<li>Entrega el document en format .pdf.</li>
+</ul>
+<h3>1. Estableix la configuració d’enrutament amb RIPv2 per als tots els routers</h3>
+<p>de la següent imatge. Recorda que cal configurar prèviament les direccions IP’s i que no existeixen rutes estàtiques definides.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.6 — U11A4</p><p>Unitat 11 – Enrutament U11 – A4</p>
+<p>Instruccions</p>
+<ul>
+<li>Recorda copiar tant l’enunciat com les respostes.</li>
+<li>Entrega el document en format .pdf.</li>
+</ul>
+<h3>1. Estableix la configuració d’enrutament amb EIGRP per als tots els routers</h3>
+<p>de la següent imatge. Recorda que cal configurar prèviament les direccions IP’s i que no existeixen rutes estàtiques definides.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.7 — U11A5</p><p>Unitat 11 – Enrutament U11 – A5</p>
+<p>Instruccions</p>
+<ul>
+<li>Recorda copiar tant l’enunciat com les respostes.</li>
+<li>Entrega el document en format .pdf.</li>
+</ul>
+<h3>1. Estableix la configuració d’enrutament amb OSPF per als tots els routers</h3>
+<p>de la següent imatge. Recorda que cal configurar prèviament les direccions IP’s i que no existeixen rutes estàtiques definides.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.8 — U11P1</p><p>Unitat 11 – Enrutament U11 – P1</p>
+<p>Instruccions</p>
+<ul>
+<li>Recorda copiar tant l’enunciat com les respostes.</li>
+<li>Entrega el document en format .pdf.</li>
+</ul>
+<ul>
+<li>Implementa la solució del exercici 2 de l’activitat U11A2 a Packet Tracer.</li>
+</ul>
+<p>Cal que tots els routers tinguen configurades correctament les taules d’encaminament i que hagen estat configurades mitjançant la terminal. Entrega el fitxer Packet Tracer i recorda incloure el teu nom amb una etiqueta a la solució.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.9 — U11P2</p><p>© 2014 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. Packet Tracer: comparación de la selección de rutas RIP y EIGRP Topología</p>
+<p>Objetivos Parte 1: predecir la ruta Parte 2: rastrear la ruta Parte 3: preguntas de reflexión Situación La PCA y la PCB necesitan comunicarse. La ruta que toman los datos entre estas terminales puede recorrer el R1, el R2 y el R3, o bien el R4 y el R5. El proceso por el cual los routers seleccionan la mejor ruta depende del protocolo de routing. Examinaremos el comportamiento de dos protocolos de routing vector distancia: el protocolo de routing de gateway interior mejorado (EIGRP) y el protocolo de información de routing versión 2 (RIPv2).</p>
+<p>Parte 1: predecir la ruta Las métricas son factores que se pueden medir. En el diseño de cada protocolo de routing se tienen en cuenta las diferentes métricas en el momento de considerar cuál es la mejor ruta para enviar datos. Estas métricas incluyen el conteo de saltos, el ancho de banda, el retraso, la confiabilidad y el costo de la ruta, entre otros factores.</p>
+<p>Parte 1: considerar las métricas de EIGRP.</p>
+<ul>
+<li>El EIGRP puede considerar muchas métricas. Sin embargo, las métricas que utiliza de manera</li>
+</ul>
+<p>predeterminada para determinar la selección de la mejor ruta son el ancho de banda y el retraso.</p>
+<ul>
+<li>Sobre la base de las métricas, ¿qué ruta cree que seguirán los datos desde la PCA hasta la PCB?</li>
+</ul>
+<p>____________________________________________________________________________________</p>
+<p>Packet Tracer: comparación de la selección de rutas RIP y EIGRP © 2014 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco. Parte 2: considerar las métricas de RIP.</p>
+<ul>
+<li>¿Qué métricas utiliza el protocolo RIP? __________________</li>
+<li>Sobre la base de las métricas, ¿qué ruta cree que seguirán los datos desde la PCA hasta la PCB?</li>
+</ul>
+<p>____________________________________________________________________________________ Parte 2: rastrear la ruta Parte 1: examinar la ruta EIGRP.</p>
+<ul>
+<li>En el RA, utilice el comando adecuado para ver la tabla de routing. ¿Qué códigos de protocolo se indican</li>
+</ul>
+<p>en la tabla y qué protocolos representan? ________________________________________________</p>
+<ul>
+<li>Rastree la ruta de la PCA a la PCB.</li>
+</ul>
+<p>¿Qué ruta siguen los datos? ___________________________________________________________ ¿A cuántos saltos está el destino? __________________ ¿Cuál es el ancho de banda mínimo en la ruta? __________________ Parte 2: examinar la ruta RIPv2. Es posible que haya advertido que, mientras se configura RIPv2, los routers omiten las rutas que genera, porque prefieren el EIGRP. Los routers Cisco utilizan una escala llamada “distancia administrativa”, y es necesario cambiar ese número para que RIPv2 en el RA haga que el router prefiera el protocolo.</p>
+<ul>
+<li>Para fines de referencia, utilice el comando adecuado para mostrar la tabla de routing del RA. ¿Cuál es</li>
+</ul>
+<p>el primer número entre corchetes de cada entrada de ruta EIGRP? __________________</p>
+<ul>
+<li>Establezca la distancia administrativa de RIPv2 con los siguientes comandos. Esto hace que el RA elija</li>
+</ul>
+<p>las rutas RIP por sobre las rutas EIGRP. RA(config)# router rip RA(config-router)# distance 89</p>
+<ul>
+<li>Espere un minuto y muestre la tabla de routing nuevamente. ¿Qué códigos de protocolo se indican en la</li>
+</ul>
+<p>tabla y qué protocolos representan? ____________________________________</p>
+<ul>
+<li>Rastree la ruta de la PCA a la PCB.</li>
+</ul>
+<p>¿Qué ruta siguen los datos? ___________________________________________________________ ¿A cuántos saltos está el destino? __________________ ¿Cuál es el ancho de banda mínimo en la ruta? __________________</p>
+<ul>
+<li>¿Cuál es el primer número entre corchetes de cada entrada de ruta RIP? __________________</li>
+</ul>
+<p>Parte 3: Preguntas de reflexión</p>
+<ul>
+<li>¿Qué métricas omite el protocolo de routing RIPv2? ____________________________________________</li>
+</ul>
+<p>¿Cómo podría afectar su rendimiento? _______________________________________________________________________________________</p>
+<ul>
+<li>¿Qué métricas omite el protocolo de routing EIGRP? __________________</li>
+</ul>
+<p>¿Cómo podría afectar su rendimiento? _______________________________________________________________________________________</p>
+<p>Packet Tracer: comparación de la selección de rutas RIP y EIGRP © 2014 Cisco y/o sus filiales. Todos los derechos reservados. Este documento es información pública de Cisco.</p>
+<ul>
+<li>Para acceder a Internet, ¿prefiere menos saltos o más ancho de banda? __________________</li>
+<li>¿Es adecuado un solo protocolo de routing para todas las aplicaciones? ¿Por qué?</li>
+</ul>
+<p>_______________________________________________________________________________________ _______________________________________________________________________________________ _______________________________________________________________________________________ Tabla de calificación sugerida Sección de la actividad Ubicación de la pregunta Puntos posibles Puntos obtenidos Parte 1: predecir la ruta Paso 1-b</p>
+<p>Paso 2-a</p>
+<p>Paso 2-b</p>
+<p>Total de la parte 1</p>
+<p>Parte 2: rastrear la ruta Paso 1-a</p>
+<p>Paso 1-b</p>
+<p>Paso 2-a</p>
+<p>Paso 2-c</p>
+<p>Paso 2-d</p>
+<p>Paso 2-e</p>
+<p>Total de la parte 2</p>
+<p>Parte 3: preguntas de reflexión</p>
+<p>Total de la parte 3</p>
+<p>Puntuación total</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 12.10 — U11P3</p><p>Packet Tracer: Configuración de OSPFv3 básico en un área única Topología</p>
+<p>Tabla de direccionamiento Dispositivo Interfaz Dirección/Prefijo IPv6 Gateway predeterminado R1 G0/0 2001:db8:cafe:1::1/64 N/D S0/0/0 2001:db8:cafe:a001::1/64 N/D S0/0/1 2001:db8:cafe:a003::1/64 N/D R2 G0/0 2001:db8:cafe:2::1/64 N/D S0/0/0 2001:db8:cafe:a001::2/64 N/D S0/0/1 2001:db8:cafe:a002::1/64 N/D R3 G0/0 2001:db8:cafe:3::1/64 N/D S0/0/0 2001:db8:cafe:a003::264 N/D S0/0/1 2001:db8:cafe:a002::2/64 N/D PC1 NIC 2001:db8:cafe:1::10/64 fe80::1 PC2 NIC 2001:db8:cafe:2::10/64 fe80::2 PC3 NIC 2001:db8:cafe:3::10/64 fe80::3 Objetivos Parte 1: Configurar el routing OSPFv3 Parte 2: Verificar la conectividad</p>
+<p>Packet Tracer: Configuración de OSPFv3 básico en un área única</p>
+<p>Aspectos básicos En esta actividad, el direccionamiento IPv6 ya está configurado. Usted es responsable de configurar la topología de tres routers con OSPFv3 básico de área única y, a continuación, de verificar la conectividad entre las terminales. Parte 1: Configurar el routing OSPFv3 Paso 1</p>
+<p>Configurar OSPFv3 en R1, R2 y R3. Utilice los siguientes requisitos para configurar el routing OSPF en los tres routers: -Habilitación del routing IPv6 -ID de proceso 10 -ID del router para cada router: R1 = 1.1.1.1; R2 = 2.2.2.2; R3 = 3.3.3.3 -Habilitación de OSPFv3 en cada interfaz Nota: la versión 6.0.1 de Packet Tracer no admite el comando auto-cost reference-bandwidth, por lo que no se ajustan los costos de ancho de banda en esta actividad.</p>
+<p>Paso 2: Verificar que el routing OSPF funcione. Verifique que todos los routers hayan establecido adyacencia con los otros dos routers. Verifique que en la tabla de routing haya una ruta a cada red de la topología. Parte 2: Verificar la conectividad Cada computadora debe poder hacer ping a las otras dos computadoras. De lo contrario, revise las configuraciones.</p>
+<div class="admonition warning"><p class="admonition-title">⚠️ Nota: esta actividad se califica únicamente con pruebas...</p><p>Nota: esta actividad se califica únicamente con pruebas de conectividad. En la ventana de instrucciones no se mostrará su puntuación. Para ver su puntuación, haga clic en Check Results (Verificar resultados) &gt; Assessment Items (Elementos de evaluación). Para ver los resultados de una prueba de conectividad específica, haga clic en Check Results &gt; Connectivity Tests (Pruebas de conectividad).</p></div></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut11/ut11actividades.html">⬅️ ✍️ Activitats pràctiques UT11</a>
+<a class="page-nav-btn" href="../ut12/ut1201.html">12.1 U11 Enrutament ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

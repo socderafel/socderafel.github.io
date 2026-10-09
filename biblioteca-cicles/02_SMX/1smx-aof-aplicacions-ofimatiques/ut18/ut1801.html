@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>18.1 Tema 6. INFORMES — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT18 — BDA. Base de Datos. INFORMES</span>
+<h1>18.1 Tema 6. INFORMES</h1>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(239, 69, 64);">TEMA 6. INFORMES </span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">TEMA</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">EXERCICIS INFORMES</span></b><br/></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><p><b><span class="" style="color: rgb(125, 159, 211);">VIDEOS</span></b><br/></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 12.1. Crear informes</p><p><a href="https://www.youtube.com/watch?v=v-96yHvlu-c" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=v-96yHvlu-c) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 12.2. Agrupar dades en formularis</p><p><a href="https://www.youtube.com/watch?v=e3O4F42Bq_g" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=e3O4F42Bq_g) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 13.1. Controls de formularis</p><p><a href="https://www.youtube.com/watch?v=C4d1ECkDsBY" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=C4d1ECkDsBY) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Video 13.2. Controls de formularis (2 part)</p><p><a href="https://www.youtube.com/watch?v=ug4efae60AA" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=ug4efae60AA) ↗️</strong></a></p></div>
+<hr/>
+<p>Tema 6</p>
+<p>M i c r o s o f t A C C E S S</p>
+<p>I N F O R M E S</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Índice</p>
+<h4>CAPÍTULO 10: LOS INFORMES</h4>
+<p>INTRODUCCIÓN</p>
+<p>CREAR UN INFORME</p>
+<p>EL ASISTENTE PARA INFORMES</p>
+<p>LA VISTA DISEÑO DE INFORME</p>
+<p>LA PESTAÑA DISEÑO DE INFORME</p>
+<p>EL GRUPO CONTROLES</p>
+<p>AGRUPAR Y ORDENAR</p>
+<p>IMPRIMIR UN INFORME</p>
+<p>LA VENTANA VISTA PRELIMINAR</p>
+<h4>CAPÍTULO 11: LOS CONTROLES DE FORMULARIO E INFORME</h4>
+<p>11.1 PROPIEDADES GENERALES DE LOS CONTROLES</p>
+<h4>11.2. ETIQUETAS Y CUADROS DE TEXTO</h4>
+<p>CUADRO COMBINADO Y CUADRO DE LISTA</p>
+<p>GRUPO DE OPCIONES</p>
+<p>CONTROL DE PESTAÑA</p>
+<p>IMÁGENES</p>
+<p>DATOS ADJUNTOS Y MARCOS DE OBJETOS5</p>
+<p>EL BOTÓN</p>
+<p>CONTROLES ACTIVEX</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Capítulo 10: Los informes</p>
+<p>Introducción</p>
+<p>Los informes sirven para presentar los datos de una tabla o consulta, generalmente para imprimirlos. La diferencia básica con los formularios es que los datos que aparecen en el informe sólo se pueden visualizar o imprimir (no se pueden modificar) y en los informes se puede agrupar más facilmente la información y sacar totales por grupos.</p>
+<p>En esta unidad veremos cómo crear un informe utilizando el asistente y cómo cambiar su diseño una vez creado.</p>
+<p>Crear un informe</p>
+<p>Para crear un informe podemos utilizar las opciones del grupo Informes, en la pestaña Crear</p>
+<p> Informe consiste en crear automáticamente un nuevo informe que contiene todos los datos de la tabla o consulta seleccionada en el Panel de Navegación.  ・ Diseño de informe abre un informe en blanco en la vista diseño y tenemos que ir incorporando los distintos objetos que queremos aparezcan en él. Este método no se suele utilizar ya que en la mayoría de los casos es más cómodo y rápido crear un autoinforme o utilizar el asistente y después sobre el resultado modificar el diseño para ajustar el informe a nuestras necesidades.</p>
+<p> Informe en blanco abre un informe en blanco en vista Presentación.   Asistente para informes utiliza un asistente que nos va guiando paso por paso en la creación del informe. Lo veremos en detalle en el siguiente apartado.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p> El asistente para informes</p>
+<p>En la pestaña Crear, grupo Informes, iniciaremos el asistente pulsando el botón .</p>
+<p>Esta es la primera ventana que veremos </p>
+<p>En esta ventana nos pide introducir los campos a incluir en el informe.</p>
+<p>Primero seleccionamos la tabla o consulta de donde cogerá los datos del cuadro Tablas/Consultas este será el origen del informe. Si queremos sacar datos de varias tablas lo mejor será crear una consulta para obtener esos datos y luego elegir como origen del informe esa consulta.</p>
+<p>A continuación seleccionamos los campos haciendo clic sobre el campo para seleccionarlo y clic sobre el botón o simplemente doble clic sobre el campo.</p>
+<p>Si nos hemos equivocado de campo pulsamos el botón y el campo se quita de la lista de campos seleccionados.</p>
+<p>Podemos seleccionar todos los campos a la vez haciendo clic sobre el botón o deseleccionar todos los campos a la vez haciendo clic sobre el botón .</p>
+<p>Luego, pulsamos el botón Siguiente &gt; y aparece la siguiente ventana</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>En esta pantalla elegimos los niveles de agrupamiento dentro del informe. Podemos agrupar los registros que aparecen en el informe por varios conceptos y para cada concepto añadir una cabecera y pie de grupo, en el pie de grupo normalmente se visualizarán totales de ese grupo.</p>
+<p>Para añadir un nivel de agrupamiento, en la lista de la izquierda, hacer clic sobre el campo por el cual queremos agrupar y hacer clic sobre el botón (o directamente hacer doble clic sobre el campo).</p>
+<p>En la parte de la derecha aparece un dibujo que nos indica la estructura que tendrá nuestro informe, en la zona central aparecen los campos que se visualizarán para cada registro, en nuestro ejemplo, encima aparece un grupo por código de curso.</p>
+<p>Para quitar un nivel de agrupamiento, hacer clic sobre la cabecera correspondiente al grupo para seleccionarlo y pulsar el botón . Si queremos cambiar el orden de los grupos definidos utilizamos los botones , la flecha hacia arriba sube el grupo seleccionado un nivel, la flecha hacia abajo baja el grupo un nivel.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Con el botón podemos refinar el agrupamiento. Haciendo clic en ese botón aparecerá el siguiente cuadro de diálogo</p>
+<p>Para cada campo por el que se va a agrupar la información del informe podremos elegir su intervalo de agrupamiento. En el desplegable debemos indicar que utilice un intervalo en función de determinados valores, que utilice las iniciales, etc. Las opciones de intervalo variarán en función del tipo de datos y los valores que contenga. Después de pulsar el botón Aceptar volvemos a la ventana anterior.</p>
+<p>Una vez tenemos los niveles de agrupamiento definidos hacemos clic en el botón Siguiente &gt; y pasamos a la siguiente ventana que verás en la siguiente página...</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>En esta pantalla podemos elegir cómo ordenar los registros. Seleccionamos el campo por el que queremos ordenar los registros que saldrán en el informe, y elegimos si queremos una ordenación ascendente o descendente. Por defecto indica Ascendente, pero para cambiarlo sólo deberemos pulsar el botón y cambiará a Descendente. Como máximo podremos ordenar por 4 criterios (campos) distintos.</p>
+<p>Para seguir con el asistente, pulsamos el botón Siguiente &gt; y aparece la siguiente ventana</p>
+<p>En esta pantalla elegimos la distribución de los datos dentro del informe. Seleccionando una distribución aparece en el dibujo de la izquierda el aspecto que tendrá el informe con esa distribución.</p>
+<p>En el cuadro Orientación podemos elegir entre impresión Vertical u Horizontal (apaisado).</p>
+<p>Con la opción Ajustar el ancho del campo de forma que quepan todos los campos en una página, se supone que el asistente generará los campos tal como lo dice la opción.</p>
+<p>A continuación pulsamos el botón Siguiente &gt; y aparece la última ventana</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>En esta ventana el asistente nos pregunta el título del informe, este título también será el nombre asignado al informe.</p>
+<p>Antes de pulsar el botón Finalizar podemos elegir entre</p>
+<p> Vista previa del informe en este caso veremos el resultado del informe preparado para la impresión  Modificar el diseño del informe, si seleccionamos esta opción aparecerá la ventana Diseño de informe donde podremos modificar el aspecto del informe.</p>
+<p>La vista diseño de informe</p>
+<p>La vista diseño es la que nos permite definir el informe, en ella le indicamos a Access cómo debe presentar los datos del origen del informe, para ello nos servimos de los controles que veremos más adelante de la misma forma que definimos un formulario.</p>
+<p>Para abrir un informe en la vista diseño debemos seleccionarlo en el Panel de navegación y pulsar en su menú contextual o en la Vista de la pestaña Inicio.</p>
+<p>Nos aparece la ventana diseño</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>El área de diseño consta normalmente de cinco secciones</p>
+<p> El Encabezado del informe contendrá la información que se ha de indicar únicamente al principio del informe, como su título.   El Encabezado de página contendrá la información que se repetirá al principio de cada página, como los encabezados de los registros, el logo, etc.   Detalle contiene los registros. Deberemos organizar los controles para un único registro, y el informe será el que se encargue de crear una fila para cada uno de los registros.   El Pie de página contendrá la información que se repetirá al final de cada página, como la fecha del informe, el número de página, etc.   El Pie de informe contendrá la información que únicamente aparecerá al final del informe, como el nombre o firma de quien lo ha generado.  Podemos eliminar los encabezados y pies con las opciones encabezado o pie de página y encabezado o pie de página del informe que encontrarás en el menú contextual del informe. Al hacerlo, se eliminarán todos los controles definidos en ellas. Para recuperarlos se ha de seguir el mismo proceso que para eliminarlos.</p>
+<p>Si no quieres eliminar los controles, pero quieres que en una determinada impresión del informe no aparezca una de las zonas, puedes ocultar la sección. Para hacerlo deberás acceder a la Hoja de propiedades, desde su botón en la pestaña Diseño &gt; grupo Herramientas. Luego, en el desplegable, elige la sección (Encabezado, Detalle, o la que quieras) y cambia su propiedad Visible a</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Sí o a No según te convenga. Los cambios no se observarán directamente en la vista diseño, sino en la Vista preliminar de la impresión o en la Vista informes.</p>
+<p>Alrededor del área de diseño tenemos las reglas que nos permiten medir las distancias y los controles, también disponemos de una cuadrícula que nos ayuda a colocar los controles dentro del área de diseño.</p>
+<p>Podemos ver u ocultar las reglas o cuadrícula desde el menú contextual del informe.</p>
+<p>La pestaña Diseño de informe</p>
+<p>Si has entrado en diseño de informe podrás ver la pestaña de Diseño que muestra las siguientes opciones</p>
+<p>Esta barra la recuerdas seguro, es muy parecida a la que estudiamos en los formularios. A continuación describiremos los distintos botones que pertenecen a esta barra.</p>
+<p>El botón Ver del grupo Vistas nos permite pasar de una vista a otra, si lo desplegamos podemos elegir entre Vista Diseño la que estamos describiendo ahora, la Vista Presentación que muestra una mezlca de la vista Informes y Diseño y finalmente la Vista Informes que muestra el informe en pantalla.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>La Vista Preliminar nos permite ver cómo quedará la impresión antes de mandar el informe a impresora.</p>
+<p> En el grupo Temas encontrarás herramientas para dar un estilo homogéneo al informe. No entraremos en detalle, porque funciona igual que los temas de los formularios.  ・ El botón Agrupar y ordenar del grupo Agrupación y totales permite modificar los niveles de agrupamiento como veremos más adelante.</p>
+<p>・ En la parte central puedes ver el grupo Controles en el que aparecen todos los tipos de controles para que sea más cómodo añadirlos en el área de diseño como veremos más adelante. También encontramos algunos elementos que podemos incluir en el encabezado y pie de página.</p>
+<p> En el grupo Herramientas podrás encontrar el botón Agregar campos existentes entre otros, que hace aparecer y desaparecer el cuadro Lista de campos en el que aparecen todos los campos del origen de datos para que sea más cómodo añadirlos en el área de diseño como veremos más adelante.  Todo informe tiene asociada una página de código en la que podemos programar ciertas acciones utilizando el lenguaje VBA (Visual Basic para Aplicaciones), se accede a esa página de código haciendo clic sobre el botón .</p>
+<p>Con el botón hacemos aparecer y desaparecer el cuadro Propiedades del control seleccionado. Las propiedades del informe son parecidas a las de un formulario. Recuerda que siempre podemos acceder a la ayuda de Access haciendo clic en el botón .</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>El grupo Controles</p>
+<p>Para definir qué información debe aparecer en el informe y con qué formato, se pueden utilizar los mismos controles que en los formularios aunque algunos son más apropiados para formularios como por ejemplo los botones de comando.</p>
+<p>En la pestaña Diseño encontrarás los mismo controles que vimos en el tema anterior</p>
+<p>Cuando queremos crear varios controles del mismo tipo podemos bloquear el control haciendo clic con el botón secundario del ratón sobre él. En el menú contextualelegiremos Colocar varios controles.</p>
+<p>A partir de ese momento se podrán crear todos los controles que queramos de este tipo sin necesidad de hacer clic sobre el botón correspondiente cada vez. Para quitar el bloqueo hacemos clic sobre el botón o volvemos a seleccionar la opción del menú contextual para desactivarla.</p>
+<p>El botón activará o desactivará la Ayuda a los controles. Si lo tenemos activado (como en la imagen) al crear determinados controles se abrirá un asistente para guiarnos.</p>
+<p>Ahora vamos a ver uno por uno los tipos de controles disponibles</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Icono Control Descripción</p>
+<p>Seleccionar Vuelve a dar al cursor la funcionalidad de selección, anulando cualquier otro control que hubiese seleccionado.</p>
+<p>Cuadro de texto Se utiliza principalmente para presentar un dato almacenado en un campo del origen del informe. Puede ser de dos tipos: dependiente o independiente.</p>
+<p>El cuadro de texto dependiente depende de los datos de un campo y si modificamos el contenido del cuadro en la vista Informes estaremos cambiando el dato en el origen. Su propiedad Origen del control suele ser el nombre del campo a la que está asociado. - El cuadro de texto independiente permite por ejemplo presentar los resultados de un cálculo o aceptar la entrada de datos. Modificar el dato de este campo no modifica su tabla origen. Su propiedad Origen del control será la fórmula que calculará el valor a mostrar, que siempre irá precedida por el signo =.</p>
+<p>Etiqueta Sirve para visualizar un texto literal, que escribiremos directamente en el control o en su propiedad Título.</p>
+<p>Hipervínculo Para incluir un enlace a una página web, un correo electrónico o un programa.</p>
+<p>Insertar salto de línea No tiene efecto en la Vista Formulario pero sí en la Vista Preliminar y a la hora de imprimir.</p>
+<p>Gráfico Representación gráfica de datos que ayuda a su interpretación de forma visual.</p>
+<p>Línea Permite dibujar líneas en el formulario, para ayudar a organizar la información.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Botón de alternar Se suele utilizar para añadir una nueva opción a un grupo de opciones ya creado. También se puede utilizar para presentar un campo de tipo Sí/No, si el campo contiene el valor Sí, el botón aparecerá presionado.</p>
+<p>Rectángulo Permite dibujar rectángulos en el formulario, paraayudar a organizar la información.</p>
+<p>Casilla de verificación Se suele utilizar para añadir una nueva opción a un grupo de opciones ya creado, o para presentar un campo de tipo Sí/No. Si el campo contiene el valor Sí, la casilla tendrá este aspecto , sino este otro .</p>
+<p>Marco de objeto independiente Para insertar archivos como un documento Word, una hoja de cálculo, etc. No varian cuando cambiamos de registro (independientes), y no están en ninguna tabla de la base.</p>
+<p>Datos adjuntos Esta es la forma más moderna y óptima de incluir archivos en un formulario. Equivale a los marcos de objeto, solo que Datos adjuntos está disponible para las nuevas bases hechas en Access 2007 o versiones superiores (.accdb) y los marcos pertenecen a las versiones anteriores (.mdb).</p>
+<p>Botón de opción Se suele utilizar para añadir una nueva opción a un grupo de opciones ya creado, o para presentar un campo de tipo Sí/No. Si el campo contiene el valor Sí, el botón tendrá este aspecto , sino, este otro .</p>
+<p>Subformulario/ Subinforme Para incluir un subformulario o subinforme dentro del formulario. Un asistente te permitirá elegirlo.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Marco de objeto dependiente Para insertar archivos como un documento Word, una hoja de cálculo, etc. Varian cuando cambiamos de registro (dependientes), porque se encuentran en una tabla de la base. Ejemplos: La foto o el currículum de una persona, las ventas de un empleado, etc.</p>
+<p>Imagen Permite insertar imágenes en el formulario, que no dependerán de ningún registro. Por ejemplo, el logo de la empresa en la zona superior.</p>
+<p>También incluye los siguientes controles, aunque no se suelen utilizar en informes, sino más bien en formularios</p>
+<p>Icono Control</p>
+<p>Botón</p>
+<p>Control de pestaña</p>
+<p>Grupo de opciones</p>
+<p>Cuadro combinado</p>
+<p>Cuadro de lista</p>
+<p>Puedes ver su descripción en el tema de Formularios.</p>
+<p>Por último podemos añadir más controles, más complejos con el botón .</p>
+<p>Puesto que el manejo de los controles en informes es idéntico al de los controles de un formulario, si tienes alguna duda sobre cómo añadir un control, cómo moverlo de sitio, copiarlo, cambiar su tamaño, cómo ajustar el tamaño o la alineación de varios controles, repasa la unidad anterior.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Agrupar y ordenar</p>
+<p>Cuando ya hemos visto con el asistente, en un informe se pueden definir niveles de agrupamiento lo que permite agrupar los registros del informe y sacar por cada grupo una cabecera especial o una línea de totales. También podemos definir una determinada ordenación para los registros que aparecerán en el informe.</p>
+<p>Para definir la ordenación de los registros, crear un nuevo nivel de agrupamiento o modificar los niveles que ya tenemos definidos en un informe que ya tenemos definido</p>
+<p>Abrir el informe en Vista Diseño. En la pestaña Diseño &gt; grupo Agrupación y totales &gt; pulsar Agrupar y ordenar . Se abrirá un panel en la zona inferior, bajo el informe, llamado Agrupación, orden y total</p>
+<p>Puedes añadir un grupo de ordenación haciendo clic en Agregar un grupo. Del mismo modo, haciendo clic en Agregar un orden establaceremos un orden dentro de ese grupo.</p>
+<p>Utiliza las flechas desplegables para seleccionar diferentes modos de ordenación dentro de un grupo. Puedes hacer clic en el vínculo Más para ver más opciones de ordenación y agrupación. Con las flechas puedes mover las agrupaciones arriba y abajo.</p>
+<p>Imprimir un informe</p>
+<p>Para imprimir un informe, lo podemos hacer de varias formas y desde distintos puntos dentro de Access.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Imprimir directamente</p>
+<ul>
+<li>Hacer clic sobre el nombre del informe que queremos imprimir en el Panel de Navegación para</li>
+</ul>
+<p>seleccionarlo.</p>
+<ul>
+<li>Despliega la pestaña Archivo y pulsa Imprimir. A la derecha aparecerán más opciones, escoger</li>
+</ul>
+<p>Impresión Rápida.</p>
+<p>Si es la primera vez que imprimes el informe, no es conveniente que utilices esta opción. Sería recomendable ejecutar las opciones Imprimir y Vista preliminar, para asegurarnos de que el aspecto del informe es el esperado y que se va a imprimir por la impresora y con la configuración adecuadas.</p>
+<p>Abrir el cuadro de diálogo Imprimir</p>
+<ul>
+<li>Hacer clic sobre el nombre del informe que queremos imprimir para seleccionarlo.</li>
+</ul>
+<ul>
+<li>Despliega la pestaña Archivo y pulsa Imprimir. A la derecha aparecerán más opciones, escoger</li>
+</ul>
+<p>Imprimir.</p>
+<ul>
+<li>Se abrirá el cuadro de diálogo Imprimir en el que podrás cambiar algunos parámetros de impresión</li>
+</ul>
+<p>como te explicaremos a continuación</p>
+<p>Si tenemos varias impresoras conectadas al ordenador, suele ocurrir cuando están instaladas en red, desplegando el cuadro combinado Nombre: podemos elegir la impresora a la que queremos enviar la impresión.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>En el recuadro Intervalo de impresión, podemos especificar si queremos imprimir Todo el informe o bien sólo algunas páginas.</p>
+<p> Si queremos imprimir unas páginas, en el recuadro desde especificar la página inicial del intervalo a imprimir y en el recuadro hasta especificar la página final.   Si tenemos registros seleccionados cuando abrimos el cuadro de diálogo, podremos activar la opción Registros seleccionados para imprimir únicamente esos registros.  En el recuadro Copias, podemos especificar el número de copias a imprimir. Si la opción Intercalar no está activada, imprime una copia entera y después otra copia, mientras que si activamos Intercalarimprime todas las copias de cada página juntas.</p>
+<p>La opción Imprimir a archivo permite enviar el resultado de la impresión a un archivo del disco en vez de mandarlo a la impresora.</p>
+<p>Con el botón Propiedades accedemos a la ventana Propiedades de la impresora, esta ventana cambiará según el modelo de nuestra impresora pero nos permite definir el tipo de impresión por ejemplo en negro o en color, en alta calidad o en borrador, el tipo de papel que utilizamos, etc.</p>
+<p>Con el botón Configurar... podemos configurar la página, cambiar los márgenes, impresión a varias columnas, etc.</p>
+<p>Por último pulsamos el botón Aceptar y se inicia la impresión. Si cerramos la ventana sin aceptar o pulsamos Cancelar no se imprime nada.</p>
+<p>Abrir el informe en Vista preliminar</p>
+<p>Para comprobar que la impresión va a salir bien es conveniente abrir una vista preliminar del informe en pantalla para luego si nos parece bien ordenar la impresión definitiva. Hay varias formas de abrir la Vista Preliminar</p>
+<p> Con el objeto Informe seleccionado, desplegar la pestaña Archivo, pulsar Imprimir y seleccionar Vista previa. </p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p> También puedes hacer clic derecho sobre el Informe en el Panel de Navegación y seleccionar la opción en el menú contextual.    O, si ya lo tienes abierto, pulsar Ver &gt; Vista preliminar en el grupo Vistas de la pestaña Diseño o Inicio.</p>
+<p>La ventana Vista preliminar</p>
+<p>En esta ventana vemos el informe tal como saldrá en la impresora. Observa cómo se distingue la agrupación por código de curso.</p>
+<p>Para pasar por las distintas páginas tenemos en la parte inferior izquierda una barra de desplazamiento por los registros con los botones que ya conocemos para ir a la primera página, a la página anterior, a una página concreta, a la página siguiente o a la última página.</p>
+<p>En la parte superior tenemos una nueva y única pestaña, la pestaña Vista preliminar, con iconos que nos ayudarán a ejecutar algunas acciones</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Es posible que veas los botones de forma distinta, ya que cambian de tamaño dependiendo del tamaño de que disponga la ventana de Access.</p>
+<p> Los botones del grupo Zoom permiten, tanto aproximar y alejar el informe, como elegir cuántas páginas quieres ver a la vez: Una página, Dos páginas , una junta a la otra; o Más páginas , pudiendo elegir entre las opciones 4, 8 o 12. Cuantas más páginas visualices, más pequeñas se verán, pero te ayudará a hacerte una idea del resultado final.   El grupo Diseño de página permite cambiar la orientación del papel para la impresión y acceder a la configuración de la página.    Las opciones de Datos las veremos más adelante. Permiten la exportación de datos a otros formatos como Excel, PDF o XPS.  Ya sólo nos queda elegir si queremos Imprimir o si queremos Cerrar la vista preliminar para continuar editando el informe.</p>
+<p>Recuerda que la Vista preliminar es muy importante. No debes comprobar únicamente la primera página, sino también las siguientes. Esto cobra especial importancia en caso de que nuestro informe sea demasiado ancho, ya que el resultado podría ser similar al que se muestra en la imagen</p>
+<p>Si un registro es demasiado ancho, nuestro informe requerirá el doble de folios y será menos legible. En esos casos, deberemos valorar si es necesario utilizar una orientación Horizontal de la hoja o si es más conveniente estrechar la superfície del informe o sus controles.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Cuando, como en la imagen, nuestros registros realmente no ocupen mucho y lo que se vaya de madre sea uno de los controles que introduce Access automáticamente (como el contador de páginas), lo más sencillo es mover o reducir el control. También será conveniente estrechar controles cuando veamos que realmente se les ha asignado un espacio que no utilizarán nunca (por ejemplo si el código de cliente está limitado a 5 caracteres y se le dedica un espacio en que caben 30).</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Capítulo 11: Los controles de formulario e informe</p>
+<p>Propiedades generales de los controles</p>
+<p>En temas anteriores vimos cómo crear formularios e informes utilizando el asistente, también hemos aprendido a manejar los controles para copiarlos, moverlos, ajustarlos, alinearlos, etc. En este tema vamos a repasar los diferentes tipos de controles y estudiar sus propiedades para conseguir formularios e informes más completos.</p>
+<p>Empezaremos por estudiar las propiedades comunes a muchos de ellos</p>
+<p> Nombre: Aquí indicaremos el nombre del control. Puedes darle el nombre que tú quieras, pero asegúrate de que es lo suficientemente descriptivo como para poder reconocerlo más tarde. Un buen método sería asignarle el nombre del control más una coletilla indicando de qué control se trata. Por ejemplo, imagina que tenemos dos controles para el campo Curso, una etiqueta y un cuadro de texto. Podríamos llamar a la etiqueta curso_eti y al campo de texto curso_txt. De este modo facilitamos el nombre de dos controles que referencian a un mismo campo.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p> Visible: Si la propiedad se establece a No el control será invisible en el formulario. Por el contrario, si lo establecemos a Sí el control sí que será visible.</p>
+<p>Su uso parece obvio, pero nos puede ser muy útil para cargar información en el formulario que no sea visible para el usuario pero sin embargo sí sea accesible desde el diseño. También podemos utilizar esta propiedad para ocultar controles, para mostrarlos pulsando, por ejemplo, un botón.</p>
+<p> Mostrar cuando: Utilizaremos esta propiedad para establecer cuándo un control debe mostrarse.</p>
+<p>De este modo podemos hacer que se muestre únicamente cuando se muestre en pantalla y esconderlo a la hora de imprimir (muy útil por ejemplo para los botones de un formulario que no queremos que aparezcan en el formulario impreso).</p>
+<p> Izquierda y Superior: Estas dos propiedades de los controles hacen referencia a su posición. Respectivamente a la distancia del borde izquierdo del formulario o informe y de su borde superior. Normalmente sus unidades deberán ser introducidas en centímetros. Si utilizas otras unidades de medida, como el píxel, Access tomará ese valor y lo convertirá en centímetros.</p>
+<p> Ancho y Alto: Establecen el tamaño del control indicando su anchura y altura. De nuevo la unidad de medida utilizada es el centímetro.</p>
+<p> Color del fondo: Puedes indicar el color de fondo del control para resaltarlo más sobre el resto del formulario. Para cambiar el color, teclea el número del color si lo conoces o bien coloca el cursor en el recuadro de la propiedad y pulsa el botón que aparecerá a la izquierda.</p>
+<p>Entonces se abrirá el cuadro de diálogo que ya conoces desde donde podrás seleccionar el color que prefieras.</p>
+<p> Estilo de los bordes: Cambia el estilo en el que los bordes del control se muestran.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p> Color y Ancho de los bordes: Establece el color del borde del control y su ancho en puntos.</p>
+<p> Efecto especial: Esta propiedad modifica la apariencia del control y le hace tomar una forma predefinida por Access.</p>
+<p>Al modificar esta propiedad algunos de los valores introducidos en las propiedades Color del fondo, Estilo de los bordes, Color de los bordes o Ancho de los bordes se verán invalidadas debido a que el efecto elegido necesitará unos valores concretos para estas propiedades.</p>
+<p>Del mismo modo si modificamos alguna de las propiedades citadas anteriormente el Efecto especial dejará de aplicarse para tomarse el nuevo valor introducido en la propiedad indicada.</p>
+<p> Nombre y Tamaño de la fuente: Establece el tipo de fuente que se utilizará en el control y su tamaño en puntos.</p>
+<p> Espesor de la fuente, Fuente en Cursiva y Fuente subrayada: Estas propiedades actúan sobre el aspecto de la fuente modificando, respectivamente, su espesor (de delgado a grueso), si debe mostrarse en cursiva o si se le añadirá un subrayado.</p>
+<p> Texto de Ayuda del control: Aquí podremos indicar el texto que queremos que se muestre como ayuda contextual a un control.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p> Texto de la barra de estado: Aquí podremos indicar el texto que queremos que se muestre en la barra de estado cuando el usuario se encuentre sobre el control.</p>
+<p>Un ejemplo muy claro de su uso sería que cuando el usuario se encontrase sobre el campo Nombre en la barra de estado se pudiera leer Introduzca aquí su nombre.</p>
+<p> Índice de tabulación: Una de las propiedades más interesantes de los controles. Te permite establecer en qué orden saltará el cursor por los controles del formulario/informe cuando pulses la tecla TAB. El primer elemento deberá establecerse a 0, luego el salto se producirá al control que tenga un valor inmediatamente superior.</p>
+<p>Aparecerá el siguiente cuadro de diálogo</p>
+<p>En él aparecen todos los controles ordenados por su orden de tabulación. Puedes arrastrar y colocar los controles en el orden que prefieras, de esta forma, las propiedades Índice de tabulación de los controles se configurarán de forma automática.</p>
+<p>También accedemos a este cuadro pulsando el icono en el grupo Herramientas de la pestaña Organizar.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Etiquetas y Cuadros de Texto</p>
+<p>Ya hemos visto cómo insertar un campo en el origen de datos, este campo, la mayoría de las veces estará representado por un cuadro de texto y una etiqueta asociada.</p>
+<p>Las etiquetas se utilizan para representar valores fijos como los encabezados de los campos y los títulos, mientras que el cuadro de texto se utiliza para representar un valor que va cambiando, normalmente será el contenido de un campo del origen de datos.</p>
+<p> La propiedad que indica el contenido de la etiqueta es la propiedad Título.  La propiedad que le indica a Access qué valor tiene que aparecer en el cuadro de texto, es la propiedad Origen del control.</p>
+<p>Si en esta propiedad tenemos el nombre de un campo del origen de datos, cuando el usuario escriba un valor en el control, estará modificando el valor almacenado en la tabla, en el campo correspondiente del registro activo.</p>
+<p>Cuando queremos utilizar el control para que el usuario introduzca un valor que luego utilizaremos, entonces no pondremos nada en el origen del control y el cuadro de texto se convertirá en independiente.</p>
+<p>También podemos utilizar un cuadro de texto para presentar campos calculados, en este caso debemos escribir en la propiedad Origen del control la expresión que permitirá a Access calcular el valor a visualizar, precedida del signo igual =.</p>
+<p>Por ejemplo para calcular el importe si dentro de la tabla sólo tenemos precio unitario y cantidad.</p>
+<p>En el ejemplo anterior hemos creado un campo calculado utilizando valores que extraíamos de otros campos (en el ejemplo los campos precio y cantidad). También es posible realizar cálculos con constantes, por lo que nuestro origen de datos podría ser =[precio]*0.1 para calcular el 10% de un campo o incluso escribir =2+2 para que se muestre en el campo el resultado de la operación.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Cuadro combinado y Cuadro de lista Estos controles sirven para mostrar una lista de valores en la cual el usuario puede elegir uno o varios de los valores.</p>
+<p>El cuadro de lista permanece fijo y desplegado mientras que el cuadro combinado aparece como un cuadro de texto con un triángulo a la derecha que permite desplegar el conjunto de los valores de la lista.</p>
+<p>Una de las formas más sencillas para crear un control de este tipo es utilizando el Asistente para controles. Su uso es muy sencillo, sólo tendrás que activar el asistente antes de crear el control sobre el formulario o informe haciendo clic en su icono en la pestaña Diseño.</p>
+<p>Una vez activado el Asistente, cuando intentes crear un control de Cuadro de lista o Cuadro combinado se lanzará un generador automático del control que, siguiendo unos cuantos pasos sencillos, cumplimentará las propiedades del control para que muestre los datos que desees.</p>
+<p>En el tema de creación de tablas ya tuvimos nuestro primer contacto con los cuadros combinados y de lista (con el asistente para búsquedas). Veamos sus propiedades más importantes.</p>
+<p> Tipo de origen de la fila: En esta propiedad indicaremos de qué tipo será la fuente de donde sacaremos los datos de la lista.</p>
+<p>Podemos seleccionar Tabla/Consulta si los datos se van a extraer de una tabla o de una consulta. Si seleccionamos Lista de valores el control mostrará un listado de unos valores fijos que nosotros habremos introducido. La opción Lista de campos permite que los valores de la lista sean los nombres de los campos pertenecientes a una tabla o consulta.</p>
+<p>En cualquier caso se deberán indicar qué campos o valores serán mostrados con la siguiente</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>propiedad</p>
+<p> Origen de la fila: En esta propiedad estableceremos los datos que se van a mostrar en el control. Si en la propiedad Tipo de origen de la fila seleccionamos Tabla/Consulta deberemos indicar el nombre de una tabla o consulta o también podremos escribir una sentencia SQL que permita obtener los valores de la lista.</p>
+<p>Si en la propiedad Tipo de origen de la fila seleccionamos Lista de campos deberemos indicar el nombre de una tabla o consulta.</p>
+<p>Si, por el contrario, habíamos elegido Lista de valores, deberemos introducir todos los valores que queremos que aparezcan en el control entre comillas y separados por puntos y comas:"valor1";"valor2";"valor3";"valor4"...</p>
+<p> Columna dependiente: Podemos definir la lista como una lista con varias columnas, en este caso la columna dependiente nos indica qué columna se utiliza para rellenar el campo. Lo que indicamos es el número de orden de la columna.</p>
+<p> Encabezados de columna: Indica si en la lista desplegable debe aparecer una primera línea con encabezados de columna. Si cambiamos esta propiedad a Sí, cogerá la primera fila de valores como fila de encabezados.</p>
+<p> Ancho de columnas: Permite definir el ancho que tendrá cada columna en la lista. Si hay varias columnas se separan los anchos de las diferentes columnas por un punto y coma.</p>
+<p> Ancho de la lista: Indica el ancho total de la lista.</p>
+<p> Limitar a lista: Si cambiamos esta propiedad a No podremos introducir en el campo un valor que no se encuentra en la lista, mientras que si seleccionamos Sí obligamos a que el valor sea uno de los de la lista. Si el usuario intenta introducir un valor que no está en la lista, Access devuelve un mensaje de error y no deja almacenar este valor.</p>
+<p> Filas en lista: Indica cuántas filas queremos que se visualicen cuando se despliega la lista. Esta propiedad sólo se muestra para el control Cuadro combinado.</p>
+<p> Selección múltiple: Esta propiedad puede tomar tres valores, Ninguna, Simple y Extendida.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Si seleccionamos Ninguna el modo de selección de la lista será único, es decir sólo podremos seleccionar un valor.</p>
+<p>Si seleccionamos Simple permitiremos la selección múltiple y todos los elementos sobre los que hagas clic se seleccionarán. Para deseleccionar un elemento vuelve a hacer clic sobre él.</p>
+<p>Seleccionando Extendida permitiremos la selección múltiple, pero para seleccionar más de un elemento deberemos mantener pulsada la tecla CTRL. Si seleccionamos un elemento, pulsamos la tecla MAYUS y dejándola pulsada seleccionamos otro elemento, todos los elementos entre ellos serán seleccionados.</p>
+<p>Esta propiedad sólo se muestra para el control Cuadro de lista.</p>
+<p>Una vez incluido el control sobre el formulario o informe podremos alternar entre estos dos tipos haciendo clic derecho sobre él y seleccionando la opción Cambiar a...</p>
+<p>Este es un modo de transformar un control de un tipo de una clase a otra manteniendo prácticamente todas sus propiedades intactas, sobre todo aquellas relativas a los orígenes de datos.</p>
+<p>Esta opción también está disponible en el menú contextual de los cuadros de texto.</p>
+<p>Grupo de Opciones</p>
+<p>El Grupo de opciones permite agrupar controles de opción por Botones de opción, Casillas de verificación o Botones de alternar. Esto es útil para facilitar al usuario la elección, distinguiendo cada uno de los conjuntos limitado de alternativas.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>La mayor ventaja del grupo de opciones es que hace fácil seleccionar un valor, ya que el usuario sólo tiene que hacer clic en el valor que desee y sólo puede elegir una opción cada vez de entre el grupo de opciones.</p>
+<p>En este control deberemos de tratar el Origen del control de una forma especial.</p>
+<p>El control Grupo de opciones deberemos vincularlo en su propiedad Origen del control al campo que queremos que se encuentre vinculado en la tabla.</p>
+<p>Los controles de opción que se encuentren dentro del grupo tienen una propiedad llamada Valor de la opción, que será el valor que se almacene en la tabla al seleccionarlos.</p>
+<p>Por tanto, deberás establecer la propiedad Valor de la opción para cada uno de los controles de opción de forma que al seleccionarlos su valor sea el que se vaya a almacenar en el campo que indiquemos en el Origen del control del control Grupo de opciones.</p>
+<p>La propiedad Valor de la opción sólo admite un número, no podrás introducir texto por lo que este tipo de controles unicamente se utilizan para asociarlos con campos numéricos.</p>
+<p>En un formulario o infirme, un grupo de opciones puede ser declarado como independiente y por lo tanto no estar sujeto a ningún campo.</p>
+<p>Por ejemplo, se puede utilizar un grupo de opciones independiente en un cuadro de diálogo personalizado para aceptar la entrada de datos del usuario y llevar a cabo a continuación alguna acción basada en esa entrada.</p>
+<p>La propiedad Valor de la opción sólo está disponible cuando el control se coloca dentro de un control de grupo de opciones. Cuando una casilla de verificación, un botón de alternar o un botón de opción no está en un grupo de opciones, el control no tiene la propiedad Valor de la opción. En su lugar, el control tiene la propiedad Origen del control y deberá establecerse para un campo de tipo Sí/No, modificando el registro dependiendo de si el control es activado o desactivado por el usuario.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Del mismo modo que vimos con los controles de lista, es aconsejable crear estos controles con la opción de Asistente para controles activada.</p>
+<p>Así, al intentar introducir un Grupo de opciones en el formulario o informe se lanzará el generador y con un par de pasos podrás generar un grupo de controles de forma fácil y rápida.</p>
+<p>Si no quieres utilizar el asistente, primero crea el grupo de opciones arrastrándolo sobre el área de diseño, a continuación arrastra sobre él los controles de opción, y finalmente tendrás que rellenar la propiedadValor de la opción de cada control de opción y la propiedad Origen del control del grupo de opciones.</p>
+<p>Control de Pestaña</p>
+<p>Cuando tenemos una gran cantidad de información que presentar, se suele organizar esa información en varias pestañas para no recargar demasiado las pantallas. Para ello utilizaremos el control Pestaña</p>
+<p>Un control Pestaña es un contenedor que contiene una colección de objetos Página. De esta forma cuando el usuario elige una página, ésta se vuelve Activa y los controles que contiene susceptibles de cambios.</p>
+<p>Al tratarse de elementos independientes deberemos tratar cada página individualmente.</p>
+<p>Una vez insertado el control Pestaña deberemos hacer clic sobre el título de una de las Páginas para</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>modificar sus propiedades. El título de la página se podrá modificar a través de la propiedad Nombre.</p>
+<p> Para insertar elementos dentro de una página deberemos crearlo dentro de ella. Una vez hayas seleccionado en el Cuadro de herramientas el control que quieres insertar, solamente deberás colocar el cursor sobre la página hasta que quede sombreada y entonces dibujar el control</p>
+<p>Cuando termines sólo tendrás que cambiar de página haciendo clic sobre su título y rellenarla del mismo modo.</p>
+<p>Es posible añadir nuevas Páginas o eliminarlas, para ello sólo tienes que hacer clic derecho sobre el control Pestaña y seleccionar Insertar página para añadir una nueva página o hacer clic en Eliminar página para eliminar la página activa.</p>
+<p>Si tienes más de una página incluida en el control Pestaña deberás utilizar la opción Orden de las páginas... en el menú contextual para cambiar su disposición. Aparecerá el siguiente cuadro de diálogo</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Utiliza los botones Subir y Hacia abajo para cambiar el orden y disposición de la página seleccionada de modo que la que se encuentra en la parte superior de la lista estará situada más a la izquierda y, al contrario, la que se encuentre en la parte inferior estará situada más hacia la derecha.</p>
+<p>Cuando hayas terminado pulsa el botón Aceptar y podrás ver el control Pestaña con las Páginas ordenadas.</p>
+<p>Las herramientas de dibujo</p>
+<p>Nuestro siguiente paso será echarle un vistazo a dos de los controles que nos ayudarán a mejorar el diseño de los formularios o informes que creemos: las Líneas y los Rectángulos.</p>
+<p>En ambos casos su creación es la misma (e igual también para el resto de los controles). Basta con seleccionar el control o y luego dibujarlo en el formulario o informe. Para ello sólo tienes que hacer clic en el punto en el que quieras que empiece el control, y sin soltar el botón del ratón, desplazamos el cursor hasta que el control alcance el tamaño deseado.</p>
+<p>En el caso del control Línea la tecla MAYUS nos será de mucha utilidad. Si mantenemos esta tecla de nuestro teclado pulsada mientras realizamos las acciones anteriores podremos crear líneas sin inclinación, es decir, completamente horizontales o verticales.</p>
+<p>Estos controles deberán ser utilizados sobre todo para separar elementos y marcar secciones en nuestros documentos. De esta forma alcanzaremos diseños más limpios y organizados, lo cual, además de causar que el usuario se sienta más cómodo trabajando con el formulario o informe, hará que realice su trabajo de una forma más rápida y óptima.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Las propiedades de estos controles son practicamente todas las que vimos en el primer punto de este tema y que son comunes a todos los controles.</p>
+<p>Lo único que añadiremos es que si bien su uso es muy aconsejado para lo mencionado anteriormente, un diseño cargado con demasiados controles Línea y Rectángulo al final resultan difíciles de trabajar tanto desde el punto de vista del usuario como de la persona que está realizando el diseño, tú.</p>
+<p>Imágenes</p>
+<p>El control Imagen permite mostrar imágenes en un formulario o informe de Access. Para utilizarlo sólo tendrás que seleccionarlo y hacer clic donde quieras situarlo. Se abrirá un cuadro de diálogo donde tendrás que seleccionar la imagen</p>
+<p>Al Aceptar, verás que aparece enmarcada en el cuadro del control y ya podremos acceder a sus propiedades. Veámoslas</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p> Imagen indicará la ruta de la imagen en nuestro disco duro.</p>
+<p> Modo de cambiar el tamaño: En esta propiedad podremos escoger entre tres opciones, Recortar, Extender y Zoom.</p>
+<p> Si seleccionamos la opción Recortar sólo se mostrará un trozo de la imagen que estará limitado por el tamaño del control Imagen. Si hacemos más grande el control se mostrará más parte de la imagen.</p>
+<p> Seleccionando la opción Extender hará que la imagen se muestre completa dentro del espacio delimitado por el control. Esta opción deforma la imagen para que tome exactamente las dimensiones del control.</p>
+<p> Con la opción Zoom podremos visualizar la imagen completa y con sus proporciones originales. El tamaño de la imagen se verá reducido o aumentado para que quepa dentro del control.</p>
+<p>Distribución de la imagen: Esta propiedad nos permitirá escoger la alineación de la imagen dentro del control.</p>
+<p>Puede tomar los valores Esquina superior izquierda, Esquina superior derecha, Centro, Esquina inferior izquierda o Esquina inferior derecha. Esta opción es más útil cuando mostramos la imagen en modo Recortar.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Mosaico de imágenes: Puede tomar los valores Sí y No. En el modo Zoom utilizaremos esta opción para que se rellenen los espacios vacíos que se crean al ajustar la imagen con copias de esta.</p>
+<p>Dirección de hipervínculo: Puedes incluir una dirección a un archivo o página web para que se abra al hacer clic sobre el control.</p>
+<p>Por último hablaremos de la propiedad más interesante del control Imagen: Tipo de imagen. Puede ser de dos tipos, incrustado y vinculado</p>
+<p>Insertado: Se hace una copia de la imagen en la base de datos, de forma que si realizamos cambios sobre ella no se modificará el original. Hay que tener en cuenta que el espacio que ocupará la base de datos será mayor si se incrustan muchas imágenes en ella y eso puede hacer que vaya más lenta.</p>
+<p>Compartidas: Al igual que Insertado, la imagen se guarda en la propia base de datos. Esta opción se ha introducido como novedad en Access 2010, precisamente para evitar el problema de espacio. Al definir una imagen como compartida, ésta estará disponible para todos los objetos de la base de datos, que la referenciarán y de esa forma no será necesario guardar una copia por cada instancia utilizada. Por ejemplo, si quieres que todos tus formularios e informes incluyan un membrete y un logotipo, sólo será necesario que la base lo guarde una vez. Si un día cambiáramos el logotipo de la empresa, tan solo con modificar la imagen compartida se modificaría en todos los objetos.</p>
+<p>Vinculadas: La imagen no está en la propia base, simplemente apunta a un archivo externo. Al modificar la imagen desde fuera de la base de datos, la de la base se verá afectada, y viceversa. Hay que tener en cuenta que, si cambias la imagen de carpeta, la base no la encontrará y dejará de mostrarse, exactamente igual que si tratas de cambiar la base a otro ordenador en que no tienes copiados los recursos externos. Su principal ventaja es que mantiene las imágenes actualizadas, de modo que es adecuado para fotografías que vayamos a ir renovando.</p>
+<p>Elegir el tipo depende de las necesidades del proyecto y la aplicación práctica de cada caso.</p>
+<p>Datos adjuntos y Marcos de objetos</p>
+<p>Al igual que Access permite incluir imágenes en sus formularios o informes, también permite la visualización e inclusión de documentos que se han generado en otros programas (como archivos de Excel, Word, PowerPoint, PDF's, etc.).</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Existen dos formas de incluirlos</p>
+<p>1. Independiente a los datos de los registros, para incluir objetos de caracter general, como un documento de ayuda sobre cómo utilizar el formulario o informe. Para ello se utiliza el Marco de objeto independiente.</p>
+<p>Aquí se nos presentan dos opciones. Podemos crear un archivo nuevo (en blanco) y modificarlo desde cero, o seleccionar la opción Crear desde archivo y se nos dará la opción de seleccionar un archivo ya existente. En cualquier caso desde el listado podremos elegir el tipo de objeto que queremos insertar, de los que Access admite.</p>
+<p>Si activamos la casilla Mostrar como icono, el objeto se mostrará como el icono de la aplicación que lo abre, por ejemplo si el objeto es un archivo de Word, se mostrará con el icono del programa Microsoft Word. Aunque siempre podremos pulsar Cambiar icono... si queremos asignarle una imagen distinta a la que se muestra por defecto.</p>
+<p>Si dejamos la casilla desmarcada, el objeto se mostrará con una pequeña previsualización que podremos tratar como hacemos con el control Imagen.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>2. Dependiente a los datos de los registros, para incluir documentos que están vinculados a un registro en concreto, como el currículum de un determinado candidato a empleado, la foto de un cliente o de un producto, etc. Para ello se puede utilizar el control Datos adjuntos o bien el Marco de objeto dependiente. Vamos a ver las características de ambos.</p>
+<p>Característica Datos adjuntos Marco de objeto dependiente Versiones Access que lo soportan Desde 2007, en bases .accdb Todas, incluidas las bases .mdb El campo de origen debeser de tipo... Datos adjuntos Objeto OLE El control más adecuado es Datos adjuntos, porque el tipo de datos datos adjuntos es más flexible (permite introducir y gestionar varios adjuntos en el mismo campo) y está más optimizado (los objetos OLE están obsoletos porque funcionan de forma poco eficaz).</p>
+<p>Entonces, ¿cuándo deberíamos utilizar un Marco de objeto dependiente? Principalmente cuando utilicemos una base que haya sido creada con versiones anteriores, utilizando el tipo de datos objeto OLE en los campos de sus tablas.</p>
+<p>La principal propiedad de ambos (datos adjuntos y marco dependiente) es el Origen del control, en que se especifica en qué campo de qué tabla se encuentran los objetos. Por lo demás, el marco dependiente comparte la mayoría de propiedades con el marco independiente. Veamos cuáles son</p>
+<p> Tipo de presentación: Escoge entre Contenido para previsualizar parte del archivo, o Icono para que se muestre el icono de la aplicación encargada de abrir el archivo.</p>
+<p> Activación automática: Aquí podremos seleccionar el modo en el que queremos que se abra el archivo contenido en el marco. Podemos elegir entre Doble clic, Manual y Recibir enfoque.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Normalmente las dos últimas opciones requerirán de un trabajo de programación adicional, pero al encontrarse fuera del ámbito de este curso pasaremos a ver directamente la primera opción.</p>
+<p>Si seleccionamos la opción Doble clic podremos abrir el archivo haciendo doble clic sobre el control o, con este seleccionado, pulsando la combinación de teclas CTRL+ENTER.</p>
+<p> Activado: Selecciona Sí o No. Esta propiedad permite que el control pueda abrirse o no.</p>
+<p> Bloqueado: Si cambiamos esta propiedad a Sí, el objeto se abrirá en modo de sólo lectura. Podrá ser modificado, pero sus cambios no serán guardados.</p>
+<p>Esta función es muy útil para mostrar información que sólo queremos que sea leída. Nosotros como administradores de la base de datos tendremos la posibilidad de acceder al objeto y actualizarlo a nuestro gusto.</p>
+<p> Por último la propiedad Tipo OLE nos indica si el archivo está siendo tratado como un archivo vinculado o incrustado. Esta propiedad es de sólo lectura y se nos muestra a título informativo, no podremos modificarla.</p>
+<p>En un principio los archivos insertados mediante un Marco se incrustan directamente en la base de datos para mayor comodidad. Sólo existe un modo de que, al insertar el objeto, éste quede vinculado y es insertando un archivo ya existente y activando la casilla Vincular.</p>
+<p>El Botón</p>
+<p>En este apartado hablaremos de los Botones, que son controles capaces de ejecutar comandos cuando son pulsados.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Los usuarios avanzados de Access son capaces de concentrar muchísimas acciones en un solo botón gracias a la integración de este programa con el lenguaje de programación Visual Basic y al uso de macros. Pero nosotros nos centraremos en el uso de este control a través del Asistente para controles .</p>
+<p>Cuando, teniendo el asistente activado, intentamos crear un Botón nos aparece una cuadro de diálogo. Veremos paso a paso cómo deberemos seguirlo para conseguir nuestro objetivo.</p>
+<p>En la primera pantalla podremos elegir entre diferentes acciones a realizar cuando se pulse el botón. Como puedes ver en la imagen estas acciones se encuentran agrupadas en Categorías.</p>
+<p> Navegación de registros te permite crear botones para moverte de forma rápida por todos los datos del formulario, buscando registros o desplazándote directamente a alguno en particular.</p>
+<p> Operaciones con registros te permite añadir funciones como añadir nuevos, duplicarlos, eliminarlos, guardarlos o imprimirlos.</p>
+<p> También podrás añadir un botón para abrir, cerrar o imprimir informes, formularios y consultas, etc.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Selecciona la Categoría que creas que se ajusta más a lo que quieres realizar y luego selecciona la Acción en la lista de la derecha.</p>
+<p>Pulsa Siguiente para continuar.</p>
+<p>Ahora podrás modificar el aspecto del botón. Puedes elegir entre mostrar un Texto en el botón, o mostrar una Imagen.</p>
+<p>En el caso de escoger Imagen, podrás seleccionar una entre las que Access te ofrece. Marca la casilla Mostrar todas las imágenes para ver todas las imágenes que Access tiene disponible para los botones.</p>
+<p>También podrías hacer clic en el botón Examinar para buscar una imagen en tu disco duro.</p>
+<p>Cuando hayas terminado pulsa Siguiente para continuar. Verás una última ventana en que podrás escoger el nombre del botón y Finalizar.</p>
+<p>Aplicaciones Ofimáticas Base de Datos Tema 06.MS-Access. INFORMES</p>
+<p>Controles ActiveX</p>
+<p>Access también nos ofrece la posibilidad de añadir un sinfín de controles que podrás encontrar haciendo clic en el botón Controles ActiveX en la pestaña Diseño.</p>
+<p>Debido a que existen muchísimos de estos controles, y a que sus propiedades son prácticamente únicas en cada caso, simplemente comentaremos que puedes acceder a ellas igual que con el resto de controles, desde la hoja de propiedades.</p>
+<p>Si habías trabajado con versiones anteriores de Access, es posible que utilizaras el control de calendario alguna vez, presente en el listado de controles ActiveX. En Access 2010 ya no existe el control calendario, puesto que los campos de tipo fecha lo muestran automáticamente junto a la caja de texto, al hacer clic sobre ella para introducir un valor.</p>
+<p>En caso de que no aparezca, asegúrate de que hay suficiente espacio junto a la caja de texto para que se visualice correctamente y de que la propiedad Mostrar el selector de fecha del control se encuentra establecido como Para fechas.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut18/index.html">⬅️ 📘 UT18 Completa</a>
+<a class="page-nav-btn" href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

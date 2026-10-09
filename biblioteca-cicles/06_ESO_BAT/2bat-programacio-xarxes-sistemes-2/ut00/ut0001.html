@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>0.1 Introducció a Python — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🔐 Programació, Xarxes i Sistemes Informàtics II — 2n Batxillerat</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Programació, Xarxes i Sistemes Informàtics II</strong></a></li></ul>
+<details class="nav-unit" open="">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut00/ut0001.html">0.1 Presentació</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Apunts sistemes de numeració</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — Introducció a la programació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut00/ut0001.html">0.1 UD1. Introducció a la programació</a></li>
+<li><a href="../ut00/ut0002.html">0.2 UD1. Introducció a la programació Part 2</a></li>
+<li><a href="../ut00/ut0003.html">0.3 UD1. Introducció a la programació Part 3</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT0 — Introducción a Phyton</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut00/ut0001.html">0.1 Introducció a Python</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Elementos de un programa</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Tipos de datos</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Funciones integradas</a></li>
+<li><a href="../ut00/ut0005.html">0.5 Módulos, paquetes y namespaces</a></li>
+<li><a href="../ut00/ut0006.html">0.6 Estructuras de control</a></li>
+<li><a href="../ut00/ut0007.html">0.7 Tipos de datos complejos</a></li>
+<li><a href="../ut00/ut0008.html">0.8 Funciones</a></li>
+<li><a href="../ut00/ut0009.html">0.9 Errores y excepciones</a></li>
+<li><a href="../ut00/ut0010.html">0.10 Ficheros</a></li>
+<li><a href="../ut00/ut00actividades.html">✍️ Activitats pràctiques UT0</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Xarxes Locals</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Introducción a las redes locales</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Mapa físico y lógico</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Arquitecturas de red</a></li>
+<li><a href="../ut01/ut0104.html">1.4 MODELO OSI</a></li>
+<li><a href="../ut01/ut0105.html">1.5 MODELO TCP/IP</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Tipos de cableado</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Págines Web</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 CheatSheet HTML5</a></li>
+<li><a href="../ut02/ut0202.html">2.2 CheatSheet CSS3</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Seguridad</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Unitat Didàctica 6</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n Batxillerat · UT0 — Introducción a Phyton</span>
+<h1>0.1 Introducció a Python</h1>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Link Live Share (Visual Studio)</p><p><a href="https://prod.liveshare.vsengsaas.visualstudio.com/join?5C6C46257593E3A0BC1B4F43C334F53944A4" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://prod.liveshare.vsengsaas.visualstudio.com/join?5C6C46257593E3A0BC1B4F43C334F53944A4) ↗️</strong></a></p></div>
+<div class="admonition"><p class="admonition-title">🏷️ Apunt de la Unitat</p><h4 dir="ltr" style="text-align: left;"><span>PROGRAMACIÓ DE VIDEOJOCS</span><br/></h4></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Curs de Pygame</p><p><a href="https://www.youtube.com/watch?v=5v_Jl6tMU68&amp;list=PLVzwufPir356RMxSsOccc38jmxfxqfBdp" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://www.youtube.com/watch?v=5v_Jl6tMU68&amp;list=PLVzwufPir356RMxSsOccc38jmxfxqfBdp) ↗️</strong></a></p></div>
+<div class="admonition tip"><p class="admonition-title">🔗 Recurs Web: Projecte: Joc avió</p><p><a href="https://realpython-com.translate.goog/pygame-a-primer/?_x_tr_sl=auto&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp" rel="noopener" target="_blank"><strong>🌐 Obrir recurs extern (https://realpython-com.translate.goog/pygame-a-primer/?_x_tr_sl=auto&amp;_x_tr_tl=es&amp;_x_tr_hl=es&amp;_x_tr_pto=wapp) ↗️</strong></a></p><ul dir="ltr"><li style="text-align: left;">Has de seguir pas a pas el tutorial per desenvolupar el joc.</li><li style="text-align: left;">Modificar el joc base per adaptarlo al teu gust.</li><li style="text-align: left;">Mostrarás al professor/a el resultat del teu joc.</li></ul></div>
+<hr/>
+<p>ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Introducción al lenguaje de programación Python Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.</p>
+<p>Autora: María Paz Segura Valero (mpazprofe@gmail.com)</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python CONTENIDO</p>
+<ul>
+<li>Introducción.....................................................................................................................................2</li>
+</ul>
+<p>1.1. Principales características de Python.......................................................................................2 1.2. Versiones de Python.................................................................................................................3</p>
+<ul>
+<li>Cómo trabajar con Python...............................................................................................................4</li>
+</ul>
+<p>2.1. El intérprete de comandos........................................................................................................4 2.1.1. IPython3: un intérprete de comandos avanzado...............................................................5 2.2. Editores de texto......................................................................................................................6 2.3. Entornos de desarrollo integrados............................................................................................7 2.4. Editores on-line........................................................................................................................8 2.4.1. Ejemplo de uso del editor “OnlineGDB”.........................................................................9</p>
+<ul>
+<li>Instalación de Python....................................................................................................................15</li>
+</ul>
+<p>3.1. Lliurex....................................................................................................................................15 3.1.1. Cómo ejecutar una versión de Python............................................................................15 3.1.2. Instalar una nueva versión de Python.............................................................................16 3.1.3. Instalar el intérprete IPython3........................................................................................18 3.2. Windows y Mac OS...............................................................................................................19 3.3. Otros sistemas operativos......................................................................................................19</p>
+<ul>
+<li>Mi primer programa en Python.....................................................................................................19</li>
+<li>Fuentes de información.................................................................................................................20</li>
+</ul>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python</p>
+<h3>1. Introducción</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python es un lenguaje de programación que fue creado a finales de</code></pre>
+</div>
+<p>los ochenta por Guido van Rossum en el Centro para las Matemáticas y la Informática (CWI, Centrum Wiskunde &amp; Informatica) de los Países Bajos. Guido es un gran admirador del grupo humorístico británico Monty</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python y decidió bautizar al nuevo lenguaje inspirándose en el</code></pre>
+</div>
+<p>nombre de dicho grupo. Según su página oficial (https://www.python.org/), “Python es un lenguaje de programación que te permite trabajar rápido e integrar sistemas de una manera más efectiva”. Lo cierto es que Python tiene fama de ser fácil de leer y de aprender. Y es uno de los lenguajes de programación más populares en los últimos tiempos1.</p>
+<p>Pero, ¿qué otras características tiene Python?</p>
+<h4>1.1. Principales características de Python</h4>
+<p>• Es un lenguaje de alto nivel ya que se encuentra más cercano al lenguaje natural, la manera en la que hablamos los humanos, que al lenguaje máquina. • Se trata de un lenguaje multiparadigma porque soporta programación imperativa, programación orientada a objetos y programación funcional.</p>
+<p>• Es un lenguaje interpretado ya que no necesita un proceso de compilación para generar el código ejecutable. • Se trata de un lenguaje multiplataforma porque el mismo código fuente, sin ninguna adaptación especial, puede ser ejecutado en distintos sistemas operativos.</p>
+<p>• Es fácilmente extensible ya que permite utilizar módulos nuevos creados en</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python e incluso en C y C++.</code></pre>
+</div>
+<p>Fuente: https://cipsa.net/lenguajes-programacion-mas-populares--ranking-tiobe/ El intérprete de Python traduce a código máquina las instrucciones que va necesitando en tiempo de ejecución, sólo ellas, y no como lo haría un compilador que traduciría el código fuente completo a código ejecutable, tanto si se van a ejecutar todas las instrucciones como si no.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python</p>
+<h4>1.2. Versiones de Python</h4>
+<p>A día de hoy disponemos de la versión 3.9.1 de Python tanto para Linux/Unix como para Windows o Mac OS. Este documento está basado en la versión 3.8.5. En su página oficial (https://www.python.org/downloads/) podemos encontrar esta versión e incluso versiones anteriores o versiones específicas para otras plataformas como AIX, IBM i, iOS, iPadOS, Solaris, etc .</p>
+<p>Es importante resaltar que entre la versión 2 y la 3 existen diferencias sustanciales y podemos encontrar algunas incompatibilidades entre versiones. Para saber un poco más, puedes visitar la página web: https://www.programaenpython.com/miscelanea/diferencias- entre-python-2-y-3/ En este curso nos centraremos en el aprendizaje de Python 3.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python</p>
+<h3>2. Cómo trabajar con Python</h3>
+<p>Existen multitud de formas para crear y probar programas en Python. Desde utilizar el intérprete de comandos que incorpora la instalación básica del lenguaje hasta usar plataformas on-line donde podemos olvidarnos completamente de cualquier tarea de instalación. Cada opción tiene sus ventajas e inconvenientes, así que la elección de una u otra dependerá de tus necesidades y recursos. Para ayudarte a elegir, aquí te contamos algunas de ellas.</p>
+<h4>2.1. El intérprete de comandos</h4>
+<p>Cuando instalamos Python 3 en nuestra máquina (en el apartado siguiente se indica cómo) podemos utilizar el intérprete de comandos que lleva incorporado para probar instrucciones de programas sueltas o, incluso, ejecutar programas escritos en ficheros con extensión “.py”.</p>
+<p>Figura 1: El intérprete de comandos de Python 3 ejecutado en Windows Figura 2: El intérprete de comandos de Python 3 ejecutado en Lliurex En el caso de Lliurex, debemos escribir el nombre de la versión porque el sistema operativo lleva preinstalada la versión 2 de Python y se ejecutaría dicha versión, cosa que no nos interesa porque ya hemos explicado anteriormente que tienen ciertas incompatibilidades.</p>
+<div class="admonition tip"><p class="admonition-title">💡 Apunt Tècnic</p><p>Ejemplo: En la siguiente imagen se puede ver el uso del intérprete para calcular la suma de dos valores enteros. Figura 3: Ejemplo Para ejecutar una instrucción, pulsamos la tecla Intro/Enter. Cuando queramos salir del intérprete, pulsaremos las teclas Control + Z y volveremos al prompt del sistema operativo.</p></div>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python</p>
+<h4>2.1.1. IPython3: un intérprete de comandos avanzado</h4>
+<p>Existe un intérprete de comandos más potente para Python 3 llamado IPython 3 que añade funcionalidad extra al intérprete básico que incluye Python, como el resaltado de errores. Lo primero que llama la atención al abrirlo es que IPython numera las líneas de instrucciones que vamos escribiendo y que utiliza colores para diferenciar las líneas que introduce el usuario de las que muestran los resultados.</p>
+<p>Figura 4: Intérprete IPython 3 ejecutado en Lliurex Además de esto, permite ejecutar comandos del sistema operativo sin salir del intérprete. Algo que puede ser muy útil en determinados momentos. Figura 5: Ejecución de comandos del sistema operativo en IPython 3 También podemos utilizar el tabulador para autocompletar el nombre de variables u otros elementos del sistema, así como conocer las funciones y/o métodos que puedan utilizarse con él.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Figura 6: Lista de funciones que podemos utilizar para el elemento "numeros" Esta utilidad era exclusiva del editor avanzado pero la última versión del intérprete de comandos básico también lo incorpora.</p>
+<h4>2.2. Editores de texto</h4>
+<p>Cuando nos surge la necesidad de escribir un programa de cierta envergadura el uso del intérprete puede ser un poco incómodo, así que podemos pasar a utilizar editores de texto plano. Cualquier editor de texto plano que utilices habitualmente te servirá para editar programas en Python. Ejemplos: Bloc de notas o Notepad++ en Windows, Pluma o Gedit en Lliurex.</p>
+<p>La mayoría de editores de texto plano reconocen la sintaxis del lenguaje Python y colorean las instrucciones para que sea más sencilla la lectura del programa. Además, suelen numerar las líneas para que resulte más sencillo detectar los errores. Pulsando la tecla TABULADOR después del punto, podremos ver la lista de funciones disponibles para el elemento correspondiente.</p>
+<p>Utilizar cualquiera de estos intérpretes es muy útil y recomendable cuando estamos empezando con Python ya que, de una manera sencilla, podemos probar el efecto de determinadas instrucciones y puede ayudarnos a resolver dudas básicas.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Puedes ver una lista de los editores reconocidos por la organización de Python en el siguiente enlace: https://wiki.python.org/moin/PythonEditors También puedes visitar esta página web para ver una descripción (en castellano) de algunos de ellos: https://python3.es/ide-y-editores-de-codigo-en-pyhton-guia</p>
+<h4>2.3. Entornos de desarrollo integrados</h4>
+<p>¿Y si necesito algo más? ¿Y si un editor de texto no es suficiente para mí? Entonces puedes elegir un Entorno de Desarrollo Integrado o IDE (Integrated Development Environment en inglés). Figura 7: Programa Python abierto con el editor “Pluma” de Lliurex Si vas a utilizar Windows puede ser una buena idea que instales el editor gratuito Notepad++ ya que el Bloc de notas muestra todo el código en color negro.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Un IDE es una aplicación pensada para facilitar el trabajo de los programadores o desarrolladores de software. Estas aplicaciones suelen incluir editores de texto plano potentes, autocompletado inteligente de código, depurador y compiladores/intérpretes de distintos lenguajes de programación.</p>
+<p>Existen algunos IDE completamente gratuitos y otros en los que hay que pagar una cuota según el plan de uso seleccionado. Para saber más sobre los IDEs disponibles para programar con Python, puedes visitar la siguiente página web: https://wiki.python.org/moin/IntegratedDevelopmentEnvironments También puedes visitar esta página web para ver una descripción (en castellano) de algunos de ellos: https://python3.es/ide-y-editores-de-codigo-en-pyhton-guia</p>
+<h4>2.4. Editores on-line</h4>
+<p>Otra opción para trabajar con Python puede ser utilizar un editor on-line pero hay que tener cuidado porque no todos ofrecen la misma funcionalidad. En la siguiente tabla se pueden ver algunos ejemplos. Editor on-line Descripción</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python Shell</code></pre>
+</div>
+<p>(https://www.python.org/shell/) Se trata de una versión del intérprete de comandos de Python. Puede ser útil para empezar con Python sin tener que instalarlo en nuestro ordenador pero no permite importar módulos creados por nosotros mismos. Pynative (https://pynative.com/online- python-code-editor-to-execute- python-code/) Permite subir y descargar programas desde/hacia tu ordenador.</p>
+<p>La principal pega es que si el programa solicita datos al usuario, hay que introducirlos todos previamente y no de forma interactiva como sucedería con una ejecución “normal” del programa. Puede ser útil para probar programas científicos que no requieren mucha interacción con el usuario.</p>
+<p>OnlineGDB (https://www.onlinegdb.com/ online_python_compiler) Permite ejecutar programas de muchos lenguajes de programación, entre ellos, Python. Así que si ya lo has utilizado alguna vez, puede ser una buena opción. Permite subir y descargar programas desde/hacia tu ordenador y Aprender a utilizar un IDE puede requerir más tiempo que manejarse con un editor de texto. Así que, a no ser que vayas a embarcarte en proyectos más complejos, es una buena idea empezar a crear programas con un editor más sencillo para que puedas concentrar todos tus esfuerzos en aprender Python.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python es adecuado para programas que interaccionan con el usuario. Un inconveniente de esta opción es que no puedes ejecutar tus programas directamente sino que hay que importarlos desde el programa main() que ofrece el editor. En el siguiente apartado se puede ver cómo solventar este pequeño obstáculo.</p>
+<h4>2.4.1. Ejemplo de uso del editor “OnlineGDB”</h4>
+<p>En este apartado se explican los pasos que se deberían seguir para ejecutar un programa subido desde nuestro ordenador.</p>
+<h3>1. Abre tu navegador web favorito y conéctate a la página del editor</h3>
+<p>https://www.onlinegdb.com/online_python_compiler. Aparecerá esta ventana: Figura 8: Ventana principal del editor "onlinegdb"</p>
+<h3>2. Por defecto se muestra un programa llamado “main.py” que imprime el famoso</h3>
+<p>saludo “Hello word”.</p>
+<h3>3. A la izquierda puedes ver un menú con opciones. Si queremos disponer de más</h3>
+<p>espacio para el código, podemos plegar el menú presionando el elemento “&lt;” marcada por la flecha amarilla.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Figura 9: Plegar el menú izquierdo El aspecto final sería el siguiente: Figura 10: Menú plegado Para volver a ver el menú desplegado, simplemente hay que pulsar el icono del rayo que hay arriba a la izquierda de la ventana.</p>
+<ul>
+<li>Asegúrate de que el lenguaje seleccionado en el campo “Language” es “Python 3”.</li>
+</ul>
+<p>Si no es así, selecciona la flecha de su derecha y elige la opción correcta.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Figura 11: Elegir el lenguaje "Python 3" para trabajar</p>
+<h3>5. El editor siempre muestra un programa principal llamado “main.py”. Este programa</h3>
+<p>no se puede eliminar, así que tenemos dos opciones</p>
+<ul>
+<li>Borrar el contenido del programa “main.py” y sustituirlo por nuestro código.</li>
+</ul>
+<p>Esto puede venir bien para poder hacer algunas pruebas pero, a la larga, puede ser un engorro.</p>
+<ul>
+<li>Subir nuestros programas y ejecutarlos desde el programa “main.py”. Esta</li>
+</ul>
+<p>opción es mucho más cómoda ya que podremos descargar nuevas versiones de nuestros programas sin estar copiando y pegando en “main.py”.</p>
+<ul>
+<li>Para subir un programa al editor, pulsa el icono de la nube.</li>
+</ul>
+<p>Figura 12: Subir fichero desde el ordenador</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Figura 13: Programa subido desde el ordenador</p>
+<h3>7. Selecciona el programa que quieres subir al editor. Aparecerá una pestaña nueva</h3>
+<p>con el código de tu programa.</p>
+<h3>8. Selecciona la pestaña “main.py” e importa tu programa. Esto se hace utilizando la</h3>
+<p>instrucción import nombre_programa donde nombre_programa no debe incluir la extensión “.py”. Figura 14: Importamos el programa que queremos probar</p>
+<ul>
+<li>Cuando pulsemos el botón “Run” se ejecutará el código de nuestro programa.</li>
+</ul>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Figura 15: Ejecución del programa Lo habitual será importar sólo un programa cada vez pero si necesitamos concatenar la ejecución de varios programas o incluso seleccionar entre varios programas dependiendo de una elección del usuario, podremos adaptar el programa “main.py” para ello.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Ejemplo 1: Concatenar la ejecución de varios programas. Figura 16: Ejemplo de concatenar ejecuciones de programas Ejemplo 2: El usuario selecciona qué programa quiere ejecutar. Figura 17: Ejemplo de selección de programas según selección del usuario</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python</p>
+<h3>3. Instalación de Python</h3>
+<p>En este apartado tienes algunas orientaciones para poder instalar Python en distintos sistemas operativos. Si, finalmente, has decidido utilizar una versión on-line para trabajar, no será necesario que realices ninguna de las tareas que te contamos aquí.</p>
+<h4>3.1. Lliurex</h4>
+<p>La versión 16 de Lliurex y otras distribuciones de Linux ya vienen con Python preinstalado, tanto la versión 2.7 como la 3.5. De hecho, se suelen tener varias versiones de Python instaladas porque algunas aplicaciones requieren una versión específica del mismo. En este apartado te explicamos cómo averiguar las versiones de Python que tienes instaladas en Lliurex, cómo ejecutar cada una de ellas y cómo instalar una nueva versión.</p>
+<h4>3.1.1. Cómo ejecutar una versión de Python</h4>
+<p>Para conocer las versiones de Python que tienes instaladas en tu ordenador, abre un terminal de comandos y ejecuta el siguiente comando: ls -l /usr/bin/python* Después de ejecutar el comando, obtendremos una lista similar a la siguiente: En este caso tenemos instaladas las versiones 2.7 y 3.5. Fíjate que para ejecutar distintas versiones de Python deberemos ejecutar distintos comandos o enlaces simbólicos</p>
+<p>• Si ejecutamos python o python2, estaremos arrancando la versión 2.7 de Python. • Si ejecutamos python3 estaremos ejecutando la versión 3.5 de Python. Figura 18: Versiones de Python instaladas en Lliurex Para abrir el terminal de comandos, tienes varias opciones</p>
+<ul>
+<li>Pulsar la combinación de teclas Control + Alt + T</li>
+<li>Pulsar el botón derecho del ratón sobre el escritorio y elegir la opción Abrir en el terminal</li>
+<li>Seleccionar la opción del menú principal de Lliurex Accesorios / Terminal del MATE</li>
+</ul>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python • Y, evidentemente, si ejecutamos los comandos python2.7 y python3.5 estaremos arrancando las versiones 2.7 y 3.5 respectivamente. Podemos comprobarlo en la siguiente imagen: Figura 19: Ejecución de distintas versiones de Python en Lliurex Por último, para conocer la información completa de una versión instalada, podemos ejecutar el comando pythonX.X -V con cada una de las versiones.</p>
+<p>Figura 20: Subversiones de Python</p>
+<h4>3.1.2. Instalar una nueva versión de Python</h4>
+<p>Para seguir este curso es suficiente con utilizar la versión 3.5 preinstalada en Lliurex pero si quieres tener la última versión de Python, aquí te contamos cómo conseguirlo.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python</p>
+<h3>1. Antes de nada, asegúrate de tener actualizada tu versión de Lliurex para evitar</h3>
+<p>posibles problemas. En la Wiki de Lliurex (http://wiki.lliurex.net/tiki-index.php? page=Lliurex+Up+en+LliureX+16) puedes encontrar una explicación de cómo hacerlo.</p>
+<h3>2. Actualizamos la lista de paquetes e instalamos los prerrequisitos</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>$ sudo apt update
+$ sudo apt install software-properties-common</code></pre>
+</div>
+<h3>3. El paquete python3.8 no se encuentra en los repositorios estándar de Lliurex ni</h3>
+<p>Ubuntu, así que hay que añadir el repositorio deadsnakes a la lista de repositorios del sistema ex profeso</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>$ sudo add-apt-repository ppa:deadsnakes/ppa</code></pre>
+</div>
+<p>Pulsa la tecla Intro/Enter cuando te lo soliciten, así confirmaremos la inserción del repositorio.</p>
+<h3>4. Actualiza otra vez la lista de paquetes para asegurarnos de que el repositorio se</h3>
+<p>activa correctamente</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>$ sudo apt update</code></pre>
+</div>
+<h3>5. Instalamos el paquete python3.8</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>$ sudo apt install python3.8</code></pre>
+</div>
+<p>Comprueba las versiones de Python instaladas en el equipo. Debería aparecer una más: Figura 21: python3.8 ya está instalado Para ejecutar esta versión, deberás utilizar su nombre completo: python3.8</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Figura 22: Ejecutar python3.8</p>
+<h4>3.1.3. Instalar el intérprete IPython3</h4>
+<p>Existen versiones del intérprete IPython tanto para Python 2 como para Python 3. En este apartado vamos a explicar la instalación del último de ellos: IPython3.</p>
+<h3>1. Primero debemos asegurarnos de que tenemos activo el repositorio universe y</h3>
+<p>actualizar el índice de paquetes del mismo</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>$ sudo add-apt-repository universe
+$ sudo apt update</code></pre>
+</div>
+<h3>2. Instalaremos el paquete de IPython3</h3>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>$ sudo apt-get install ipython3</code></pre>
+</div>
+<p>Para ejecutar el intérprete recién instalado sólo hay que ejecutar el comando ipython3, tal y como se puede ver a continuación: Figura 23: Ejecución del intérprete IPython3 Para salir del intérprete de comandos, deberemos ejecutar la combinación de teclas Control + Z.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python</p>
+<h4>3.2. Windows y Mac OS</h4>
+<p>Las versiones de Windows no suelen traer instalada ninguna veresión de Python. Sin embargo, los ordenadores con Mac OS sí suelen tener alguna versión, aunque no suele ser la más nueva. A continuación tienes el enlace a un tutorial donde se explica cómo instalar Python 3 en estos sistemas operativos. Aunque en el tutorial se habla de la versión 3.7.1, puedes seguir los mismos pasos teniendo en cuenta que tú deberás instalar la versión 3.8.5.</p>
+<p>https://justcodeit.io/aprende-a-instalar-python-en-tu-ordenador/</p>
+<h4>3.3. Otros sistemas operativos</h4>
+<p>Si dispones de un sistema operativo distinto de los vistos anteriormente, puedes buscar información de cómo instalar Python 3 en la siguiente página web: https://tutorial.djangogirls.org/es/python_installation/#instalación-de-python</p>
+<h3>4. Mi primer programa en Python</h3>
+<p>Para crear un programa en Python podemos utilizar cualquier de los editores que hemos visto en este documento y tener en cuenta lo siguiente: Para ejecutar un programa de Python puedes seguir alguna de estas alternativas</p>
+<ul>
+<li>Ejecutar en un editor on-line: En el apartado 2.4.1Ejemplo de uso del editor</li>
+</ul>
+<p>“OnlineGDB” tienes un ejemplo de uso explicado paso a paso.</p>
+<ul>
+<li>Ejecutar desde la línea de comandos de tu sistema operativo</li>
+</ul>
+<p>Simplemente, escribe el nombre de intérprete de Python, tal y como hemos visto en el apartado 3.1.2 Instalar una nueva versión de Python seguido del nombre del programa. Figura 24: Ejecutar programa desde línea de comandos Si el programa se encuentra en una carpeta diferente, deberás escribir la ruta para acceder hasta él.</p>
+<p>Todos los programas de Python se almacenan en ficheros de texto plano con extensión .py.</p>
+<p>Escuela de programación - Python Introducción al lenguaje de programación Python Figura 25: Usando la ruta del programa</p>
+<h3>5. Fuentes de información</h3>
+<p>• Página oficial del lenguaje Python: https://www.python.org/ • Descargas en la página oficial de Python: https://www.python.org/downloads/ • Qué es Python: https://es.wikipedia.org/wiki/Python • Programar en Python: https://www.programaenpython.com/ •</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">PYTHON</span>
+</div>
+</div>
+<pre><code>Python tutorials: https://www.tutorialsteacher.com/python</code></pre>
+</div>
+<p>• Instalación de Python: https://linuxize.com/post/how-to-install-python-3-8-on- ubuntu-18-04/ • «Curso de Programación en Python», José Luis Tomás Navarro.</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut00/index.html">⬅️ 📘 UT0 Completa</a>
+<a class="page-nav-btn" href="../ut00/ut0002.html">0.2 Elementos de un programa ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

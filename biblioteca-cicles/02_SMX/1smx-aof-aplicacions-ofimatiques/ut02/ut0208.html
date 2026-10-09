@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>2.8 Tema 2. Taules — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>📊 Aplicacions Ofimàtiques — 1r SMX · Grau Mitjà</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Aplicacions Ofimàtiques</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT1 — TUTORIA 1 SMX B</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Calendari escolar</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Plànol del centre</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Horari Grup 1 SMX B</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Permis Eixida</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Justificació de faltes</a></li>
+<li><a href="../ut01/ut0106.html">1.6 Beques Ministeri (Valencià)</a></li>
+<li><a href="../ut01/ut0107.html">1.7 Becas Ministerio (Castellano)</a></li>
+<li><a href="../ut01/ut0108.html">1.8 Beques (Cartell inforamtiu)</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT2 — Processador de text (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Tema 0. Suites Ofimàtiques</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tema 0. Writer</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Mapa conceptual WRITER</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Pràctiques Tema 1 (1ª part-Format)</a></li>
+<li><a href="../ut02/ut0205.html">2.5 Recursos Pràctiques Tema 1 (1ª part)</a></li>
+<li><a href="../ut02/ut0206.html">2.6 Pràctiques Tema 1 (2ª part-Format)</a></li>
+<li><a href="../ut02/ut0207.html">2.7 Recursos Pràctiques Tema 1 (2ª part)</a></li>
+<li><a class="active" href="../ut02/ut0208.html">2.8 Tema 2. Taules</a></li>
+<li><a href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules)</a></li>
+<li><a href="../ut02/ut0210.html">2.10 Tema 3. IMATGES</a></li>
+<li><a href="../ut02/ut0211.html">2.11 Pràctiques Tema 3 (Imatges)</a></li>
+<li><a href="../ut02/ut0212.html">2.12 Recursos Pràctiques Tema 3</a></li>
+<li><a href="../ut02/ut0213.html">2.13 Pràctiques Tema 4 (Columnes i Tabulacions)</a></li>
+<li><a href="../ut02/ut0214.html">2.14 Recursos Pràctiques Tema 4</a></li>
+<li><a href="../ut02/ut0215.html">2.15 Pràctiques Tema 5 (Numeració i Vinyetes)</a></li>
+<li><a href="../ut02/ut0216.html">2.16 Recursos Pràctiques Tema 5</a></li>
+<li><a href="../ut02/ut0217.html">2.17 Exemple Numeració i Vinyetes</a></li>
+<li><a href="../ut02/ut0218.html">2.18 curiosidades en Writer</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Processador de text (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. </a></li>
+<li><a href="../ut03/ut0302.html">3.2 Recursos Pràctiques Tema 6</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Tema 7. COMBINAR CORRESPONDENCIA</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Exemple Combinar correspondència</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Pràctiques Tema 7 (Combinar correspondència)</a></li>
+<li><a href="../ut03/ut0306.html">3.6 Recursos Pràctiques Tema 7</a></li>
+<li><a href="../ut03/ut0307.html">3.7 Pràctiques Tema 8 (Hipervincles)</a></li>
+<li><a href="../ut03/ut0308.html">3.8 Recursos Pràctiques Tema 8</a></li>
+<li><a href="../ut03/ut0309.html">3.9 Tema 9. PLANTILLES</a></li>
+<li><a href="../ut03/ut0310.html">3.10 Pràctiques Tema 9 (Plantilles)</a></li>
+<li><a href="../ut03/ut0311.html">3.11 Pràctiques Tema 10 (Imprimir) - En CASA</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Processador de text (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Tema 11. Document writer per a practicar Index e</a></li>
+<li><a href="../ut04/ut0402.html">4.2 Tema 11. Index de continguts, figures i alfabèti</a></li>
+<li><a href="../ut04/ut0403.html">4.3 Tema 11. Pràctiques Tema 11 (Index i Taules de C</a></li>
+<li><a href="../ut04/ut0404.html">4.4 Recursos Pràctiques Tema 11</a></li>
+<li><a href="../ut04/ut0405.html">4.5 Pràctiques Tema 12 (Crear Formularis)</a></li>
+<li><a href="../ut04/ut0406.html">4.6 Pràctiques Tema 12 (Formularis-Voluntari)</a></li>
+<li><a href="../ut04/ut0407.html">4.7 Tema 13. Treballar amb documents llargs</a></li>
+<li><a href="../ut04/ut0408.html">4.8 Pràctiques Tema 13 (Documents llargs - I )</a></li>
+<li><a href="../ut04/ut0409.html">4.9 Pràctiques Tema 14 (Documents llargs - II)-VOLUN</a></li>
+<li><a href="../ut04/ut0410.html">4.10 Pràctiques Tema 15 (Repàs final)</a></li>
+<li><a href="../ut04/ut0411.html">4.11 Recursos Pràctiques Tema 15</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Impress</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Recursos Pràctiques Impress</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Resultat final pràctiques Impress (Friki)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Treball Impress: Un joc senzill amb IMPRESS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Calc Mòdul 1 (I)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Manual bàsic CALC</a></li>
+<li><a href="../ut06/ut0602.html">6.2 Pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut0603.html">6.3 RECURSOS pràctiques MÒDUL 1</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Calc Mòdul 2 (II)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0702.html">7.2 RECURSOS pràctiques MÒDUL 2</a></li>
+<li><a href="../ut07/ut0703.html">7.3 DIAGRAMA DE GANTT (1)</a></li>
+<li><a href="../ut07/ut0704.html">7.4 Diagrama de Gantt (2)</a></li>
+<li><a href="../ut07/ut07actividades.html">✍️ Activitats pràctiques UT7</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Calc Mòdul 3 (III)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut0802.html">8.2 RECURSOS pràctiques MÒDUL 3</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Calc Mòdul 4 (IV)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut0902.html">9.2 RECURSOS pràctiques MÒDUL 4</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Calc Mòdul 5 Pràctiques EXTRA (V)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Mòdul 5 - Pràctiques Extra</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Calc. Qüestionaris i treballs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Preguntes qüestionari (Alumnes)</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT12 — BDA. SISTEMES GESTORS BASE DE DADES (SGBD)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut12/index.html">📘 UT12 Completa (1 pàgina)</a></li>
+<li><a href="../ut12/ut1201.html">12.1 Tema 0. Introducció a les base de dades.</a></li>
+<li><a href="../ut12/ut1202.html">12.2 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1203.html">12.3 Tema 1. Sistemas Gestores de Base de Datos (vers</a></li>
+<li><a href="../ut12/ut1204.html">12.4 Tema 1. EXERCICIS SGBD</a></li>
+<li><a href="../ut12/ut12actividades.html">✍️ Activitats pràctiques UT12</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT13 — BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut13/index.html">📘 UT13 Completa (1 pàgina)</a></li>
+<li><a href="../ut13/ut1301.html">13.1 Exemple_inicial_Classe_ER</a></li>
+<li><a href="../ut13/ut1302.html">13.2 Tema 2. Model Entitat-Relació (COMPLET)</a></li>
+<li><a href="../ut13/ut1303.html">13.3 Tema 2. Model Entitat-Relació (RESUMEN)</a></li>
+<li><a href="../ut13/ut1304.html">13.4 Tema 2. Model Entitat-Relació (2 vers)</a></li>
+<li><a href="../ut13/ut1305.html">13.5 B1-EXERCICIS Model Entitat-Relació</a></li>
+<li><a href="../ut13/ut1306.html">13.6 B2-EXERCICIS Model Entitat-Relació</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT14 — BDA. Model RELACIONAL (Segona part)</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut14/index.html">📘 UT14 Completa (1 pàgina)</a></li>
+<li><a href="../ut14/ut1401.html">14.1 Tema 2. Model Relacional (2ª part)</a></li>
+<li><a href="../ut14/ut1402.html">14.2 B1-EXERCICIS Model Relacional</a></li>
+<li><a href="../ut14/ut1403.html">14.3 B2-EXERCICIS Model Relacional</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT15 — BDA. Base de Datos. TAULES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut15/index.html">📘 UT15 Completa (1 pàgina)</a></li>
+<li><a href="../ut15/ut1501.html">15.1 Tema 3. TAULES ACCESS</a></li>
+<li><a href="../ut15/ut1502.html">15.2 Tema 3. Integridad Referencial</a></li>
+<li><a href="../ut15/ut1503.html">15.3 DEFINICION Mascara entrada_Regla validación</a></li>
+<li><a href="../ut15/ut1504.html">15.4 Ejemplos reglas de validación</a></li>
+<li><a href="../ut15/ut1505.html">15.5 B1-EXERCICIS BDA-Creació de Taules</a></li>
+<li><a href="../ut15/ut1506.html">15.6 B2-EXERCICIS BDA-Creació de Taules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT16 — BDA. Base de Datos. CONSULTES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut16/index.html">📘 UT16 Completa (1 pàgina)</a></li>
+<li><a href="../ut16/ut1601.html">16.1 Tema 4. CONSULTES</a></li>
+<li><a href="../ut16/ut1602.html">16.2 RESUMEN CONSULTES</a></li>
+<li><a href="../ut16/ut1603.html">16.3 B1-EXERCICIS BDA-CONSULTES</a></li>
+<li><a href="../ut16/ut1604.html">16.4 B2-EXERCICIS BDA-CONSULTES (Ex 1)</a></li>
+<li><a href="../ut16/ut1605.html">16.5 B2-EXERCICIS BDA-CONSULTES (Complet)</a></li>
+<li><a href="../ut16/ut16actividades.html">✍️ Activitats pràctiques UT16</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT17 — BDA. Base de Datos. FORMULARIS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut17/index.html">📘 UT17 Completa (1 pàgina)</a></li>
+<li><a href="../ut17/ut1701.html">17.1 Tema 5. FORMULARIS</a></li>
+<li><a href="../ut17/ut1702.html">17.2 B1-EXERCICIS BDA-FORMULARIS</a></li>
+<li><a href="../ut17/ut1703.html">17.3 B2-EXERCICIS BDA-FORMULARIS (Ex 1 a 8)</a></li>
+<li><a href="../ut17/ut1704.html">17.4 B2-EXERCICIS BDA-FORMULARIS (Complet)</a></li>
+<li><a href="../ut17/ut1705.html">17.5 B2-BDA concesionario</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT18 — BDA. Base de Datos. INFORMES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut18/index.html">📘 UT18 Completa (1 pàgina)</a></li>
+<li><a href="../ut18/ut1801.html">18.1 Tema 6. INFORMES</a></li>
+<li><a href="../ut18/ut1802.html">18.2 B1-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1803.html">18.3 B2-EXERCICIS BDA-INFORMES</a></li>
+<li><a href="../ut18/ut1804.html">18.4 B2-BDA per a exercicis de INFORMES</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT19 — BDA. Base de Datos. MACROS</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut19/index.html">📘 UT19 Completa (1 pàgina)</a></li>
+<li><a href="../ut19/ut1901.html">19.1 Tema 7. MACROS</a></li>
+<li><a href="../ut19/ut1902.html">19.2 Abrir Form sin Abrir Access</a></li>
+<li><a href="../ut19/ut1903.html">19.3 B1-EXERCICIS BDA-MACROS</a></li>
+<li><a href="../ut19/ut1904.html">19.4 B2-EXERCICIS BDA MACROS</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT20 — TREBALL FINAL BASE DE DADES</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut20/index.html">📘 UT20 Completa (1 pàgina)</a></li>
+<li><a href="../ut20/ut2001.html">20.1 Treball Final Base de dades</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut21/index.html">📘 UT21 Completa (1 pàgina)</a></li>
+<li><a href="../ut21/ut2101.html">21.1 Practiques_Pendents</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT22 — GIMP</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut22/index.html">📘 UT22 Completa (1 pàgina)</a></li>
+<li><a href="../ut22/ut2201.html">22.1 Tema 1: Imatge Digital</a></li>
+<li><a href="../ut22/ut2202.html">22.2 Tema 2. Imatge vectorial (Inkscape)</a></li>
+<li><a href="../ut22/ut2203.html">22.3 Tema 2. Recursos per a pràctiques</a></li>
+<li><a href="../ut22/ut22actividades.html">✍️ Activitats pràctiques UT22</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">1r SMX · Grau Mitjà · UT2 — Processador de text (I)</span>
+<h1>2.8 Tema 2. Taules</h1>
+<p>Tema 2. Tablas</p>
+<p>Creación de tablas Para insertar una tabla en LibreOffice Writer disponemos de varias opciones: • Desde el menú Tabla &gt; Insertar tabla. • Pulsando la combinación de teclas Ctrl+F12. • Haciendo clic sobre el icono Insertar tabla de la barra de herramientas Estándar.</p>
+<p>Botón Insertar tabla en la barra de herramientas Estándar En este caso se muestra un pequeño cuadro con el que podremos definir las filas y columnas de la tabla a insertar.</p>
+<p>Botón Insertar tabla desplegado Pulsando el botón Más Opciones, o utilizando los otros dos métodos, se presentará el cuadro de diálogo Insertar tabla.</p>
+<p>Diálogo Insertar tabla • Nombre permite definir un nombre identificativo para la tabla. • Columnas y Filas permite definir el número de columnas y filas que conforman la tabla. • En la sección Opciones podemos activar la opción Título. ¡Imprescindible para mantener la accesibilidad! En este caso la primera fila toma el estilo Encabezado de tabla (alineación centrado, fuente negrita), mientras que el resto de filas toman el estilo Contenido de la tabla (alineación izquierda).</p>
+<p>• Si la tabla ocupa más de una página el título se repetirá automáticamente en cada página en la parte superior de la tabla activando Repetir filas de título en página nuevas. ¡Imprescindible para mantener la accesibilidad! • Podemos definir el número de filas que se repetirán como título en Filas de título • Activando No dividir la tabla en varias páginas evitamos que la tabla se divida por un salto de página o columna.</p>
+<p>• Si activamos la opción Borde, la tabla se dibujará con un borde de línea fina alrededor de todas las celdas. • Desde el botón Formato automático activamos el cuadro de diálogo Formato automático, en el que podremos seleccionar entre varios diseños de tabla predefinidos.</p>
+<p>Tema 2. Tablas</p>
+<p>Barra de herramientas Tabla Cuando hacemos clic sobre cualquier celda de una tabla se muestra la barra de herramientas Tabla, por defecto, anclada en el área inferior de la ventana.</p>
+<p>Barra de herramientas Tabla</p>
+<p>Seleccionar celdas, filas, columnas y tablas</p>
+<p>Seleccionar varias celdas • haremos clic en la primera de ellas y arrastraremos hasta seleccionar la última. • nos situaremos en la primera de ellas, y manteniendo pulsada la tecla Mayúsc, nos desplazamos con las flechas del cursor. Seleccionar una celda • Para seleccionar una celda, haremos clic sobre ella y seleccionaremos desde el menú Tabla &gt; Seleccionar &gt; Celda.</p>
+<p>• También podemos utilizar el botón Celda de la barra de herramientas Tabla. Seleccionar una o varias filas Para seleccionar una sola fila podemos hacer clic sobre una celda cualquiera de la misma y... • Desde el menú Tabla &gt; Seleccionar &gt; Fila, o • Desde la barra de herramientas tabla utilizando el botón Seleccionar la fila (botón no visible por defecto), o...</p>
+<p>• Situando el ratón a la izquierda de la fila, en la posición en que toma la forma de una gruesa flecha negra. Haremos clic para seleccionar la fila, o clic y arrastrar para seleccionar varias.</p>
+<p>Seleccionar fila de tabla Seleccionar una o varias columnas Para seleccionar una sola columna podemos hacer clic sobre una celda cualquiera de la columna y... • Desde el menú Tabla &gt; Seleccionar &gt; Columna, o... • Desde la barra de herramientas tabla utilizando el botón Seleccionar la columna (botón no visible por defecto), o...</p>
+<p>• Situando el ratón encima de la columna, en la posición en que toma la forma de una gruesa flecha negra. Haremos clic para seleccionar la columna, o clic y arrastrar para seleccionar varias.</p>
+<p>Seleccionar columna de tabla</p>
+<p>Tema 2. Tablas</p>
+<p>Seleccionar la tabla • Desde el menú Tabla &gt; Seleccionar &gt; Tabla, o... • Desde la barra de herramientas tabla utilizando el botón Tabla, o... • Situando el justo en la esquina superior izquierda de la tabla, en la posición en que toma la forma de una gruesa flecha negra inclinada hacia el vértice de la tabla. Haremos clic para seleccionar la tabla.</p>
+<p>Seleccionar tabla completa</p>
+<p>¡NO LO OLVIDES! Sugerencias de accesibilidad En relación a la creación de documentos con tablas debemos respetar las siguientes consideraciones en el momento de considerar su accesibilidad: • Las tablas tendrán un nombre significativo. • Jamás se anidará tablas (una tabla insertada en una celda de otra tabla).</p>
+<p>• Se evitarán las celdas combinadas. • Si una tabla tiene una estructura especialmente compleja, mejor subdividirla en diferentes tablas. • Se aplicarán correctamente los estilos Título de tabla y Contenido de tabla. • Se activará siempre la repetición de filas de título, aunque ningún salto de página corte la tabla.</p>
+<p>• No se deben dividir las filas por saltos de página. Otras recomendaciones generales de accesibilidad incluyen: • Cuando el color sea significativo, el propio texto deberá ser explicativo o se establecerá algún tipo de marca especial interpretable con dispositivos lectores. Por ejemplo, "las respuestas correctas tienen un asterisco a la izquierda" (además de estar en color verde).</p>
+<p>• Los colores de texto y fondo deben estar suficientemente contrastados. • El tamaño mínimo recomendable para la tipografía debe ser de 12 puntos. Nunca usar tipografías de tamaño inferior a 10 puntos. • Uso de tipografías sans serif (sin remate) habituales. Arial o Verdana son muy buenas elecciones.</p>
+<p>• Evitar el uso de variantes thin, light o narrow de las tipografías (variantes más estrechas de los tipos de letra) • Precaución con el uso de las negritas, cursivas o subrayados. • Evitar el uso de efectos de contorno o intermitencias. • Evitar el uso de características incompatibles con otros formatos de documento (suprarayados, por ejemplo) • No usar párrafos vacíos para crear las separaciones entre párrafos. Para eso usaremos el espaciado encima y debajo del párrafo.</p>
+<p>• El interlineado simple no facilita la lectura; casi siempre será más apropiado un interlineado proporcional del 120% como mínimo. • Evitar el uso de características incompatibles con otros formatos de documento (rellenos degradados o de imagen, por ejemplo)</p>
+<p>Tema 2. Tablas</p>
+<p>Formato básico de tablas LibreOffice Writer presenta múltiples opciones para formatear una tabla. Algunas de las modificaciones se pueden realizar directamente con el ratón. En otras ocasiones, deberemos utilizar el menú Tabla, la barra de herramientas Tabla o el menú contextual de la tabla.</p>
+<p>El menú Tabla Al desplegar el menú Tabla de LibreOffice Writer disponemos diferentes opciones</p>
+<p>La barra de herramientas tabla En LibreOffice Writer, si hacemos clic sobre cualquier celda de la tabla, o seleccionamos una fila, una columna o la tabla, inmediatamente aparecerá en escena la barra de herramientas Tabla, por defecto anclada en la zona inferior al área de trabajo.</p>
+<p>Barra de herramientas Tabla El menú contextual Tabla Al hacer clic con el botón secundario del ratón sobre cualquier zona de la tabla invocamos el menú contextual Tabla, que si se encuentra seleccionada al menos una celda, fila o columna muestra además la opción Combinar celdas.</p>
+<p>Menú contextual de tabla con selección de al menos una celda Veamos como podemos insertar y eliminar filas, columnas e incluso tablas en una tabla de LibreOffice Writer.</p>
+<p>Insertar filas</p>
+<p>Insertar una nueva fila Para insertar una nueva fila, nos situamos con un clic en la celda sobre o tras la cual queremos insertar la nueva fila, o seleccionamos una fila sobre o tras la cual queremos insertar la nueva fila y... • Hacemos clic en el icono Filas encima o Filas debajo de la barra de herramientas Tabla.</p>
+<p>• Seleccionamos la opción desde el menú Tabla &gt; Insertar &gt; Filas encima o Filas debajo. • Seleccionamos la opción desde el menú contextual Tabla &gt; Insertar &gt; Filas encima o Filas debajo.</p>
+<p>Tema 2. Tablas</p>
+<p>Insertar varias filas Para insertar más de una fila, seleccionamos el mismo número de celdas en fila • Hacemos clic en el icono Filas encima o Filas debajo de la barra de herramientas Tabla. • Seleccionamos la opción desde el menú Tabla &gt; Insertar &gt; Filas encima o Filas debajo.</p>
+<p>• Seleccionamos la opción desde el menú contextual Tabla &gt; Insertar &gt; Filas encima o Filas debajo.</p>
+<p>Insertar columnas en una tabla Insertar una nueva columna • Hacemos clic en el icono Columnas a la izquierda o Columnas a la derecha de la barra de herramientas Tabla, o... • Seleccionamos la opción desde el menú Tabla &gt; Insertar &gt; Columnas a la izquierda oColumnas a la derecha o...</p>
+<p>• Seleccionamos la opción desde el menú contextual Tabla &gt; Insertar &gt; Columnas a la izquierda oColumnas a la derecha. Insertar varias columnas Para insertar más de una columna, seleccionamos el mismo número de celdas en columna • Hacemos clic en el icono Columnas a la izquierda o Columnas a la derecha de la barra de herramientas Tabla, o...</p>
+<p>• Seleccionamos la opción desde el menú Tabla &gt; Insertar &gt; Columnas a la izquierda oColumnas a la derecha o... • Seleccionamos la opción desde el menú contextual Tabla &gt; Insertar &gt; Columnas a la izquierda o Columnas a la derecha.</p>
+<p>Insertar tablas en una tabla Podemos insertar una tabla en el interior de la celda de otra tabla. Es lo que se conoce como anidar tablas. • Utilizaremos el botón Tabla de la barra de herramientas Estándar • Utilizaremos la opción desde el menú Tabla &gt; Insertar tabla.</p>
+<p>• Utilizaremos la combinación de teclas Ctrl+F12 Ejemplo de tabla anidada</p>
+<p>Tabla anidada Eliminar filas en una tabla • Hacemos clic sobre el botón Filas de la barra de herramientas Tabla. • Desde el menú Tabla &gt; Eliminar &gt; Filas. • Desde el menú contextual Tabla seleccionando Eliminar &gt; Filas.</p>
+<p>Tema 2. Tablas</p>
+<p>Eliminar columnas en una tabla • Hacemos clic sobre el botón Columnas de la barra de herramientas Tabla. • Desde el menú Tabla &gt; Eliminar &gt; Columnas. • Desde el menú contextual Tabla seleccionando Eliminar &gt; Columnas. Eliminar una tabla • Hacemos clic sobre el botón Tabla de la barra de herramientas Tabla.</p>
+<p>• Activamos desde el menú Tabla &gt; Eliminar &gt; Tabla. • Desde el menú contextual Tabla seleccionando Eliminar &gt; Tabla. También podemos seleccionar toda la tabla y luego hacer clic en los botones Filas o</p>
+<p>Columnas de la barra de herramientas Tabla.</p>
+<p>Modificar la anchura de columna y la altura de fila Con el ratón • Para modificar el ancho de una columna con el ratón • Para modificar el alto de una fila con el ratón</p>
+<p>Con el teclado • Para modificar el ancho de una columna con el teclado, nos situamos en una celda cualquiera de la misma y pulsaremos la combinación Alt + → o Alt + ← • Para modificar el alto de una fila con el teclado 2 , nos situamos en una celda cualquiera de la misma y pulsaremos la combinación Alt+ ↑ o Alt + ↓</p>
+<p>Desde los menús • El menú Tabla &gt; Tamaño &gt; Anchura de columna. • El menú contextual Tamaño &gt; Anchura de columna. Diálogo Anchura de columna • Desde el menú Tabla &gt; Tamaño &gt; Altura de fila. • Desde el menú contextual Tamaño &gt; Altura de fila. Diálogo Altura de fila</p>
+<p>Ajuste dinámico de la altura de fila El Ajuste dinámico realiza un ajuste automático de la altura de las filas para ajustarlas automaticamente a su contenido. Si está activado podemos definir una altura mayor que la precisada por la fila, pero no menor que el alto mínimo necesario para garantizar que todo el contenido se muestre.</p>
+<p>El alto mínimo de una fila viene definido por el mayor de los siguientes factores: • el mayor de los tamaños de fuente de sus celdas (si están vacías) • el mayor de los tamaños del contenido de sus celdas, sea texto o gráficos Desactivaremos Alto dinámico si queremos forzar un alto menor de fila que el alto mínimo necesario, si bien en este caso no se mostrará todo el contenido.</p>
+<p>El ajuste dinámico también se puede activar desde el menú contextual Tamaño &gt; Altura óptima de filas, o desde el menú Tabla &gt; Tamaño &gt; Altura óptima de filas, que sólo se muestra si la altura de la fila ha sido cambiada.</p>
+<p>Tema 2. Tablas</p>
+<p>Altura óptima de filas También desde el botón Optimizar tamaño &gt; Altura óptima de filas de la barra de herramientas Tabla.</p>
+<p>Botón Optimizar tamaño &gt; Altura óptima de filas</p>
+<p>Ajuste asistido del alto de filas o del ancho de columnas</p>
+<p>LibreOffice Writer pone a nuestra disposición dos métodos para hacernos más fácil la tarea de ajustar el alto de filas y el ancho de columnas. Podemos hacer que dos o más filas (incluso todas) se distribuyan equitativamente en relación a la altura total que ocupan.</p>
+<p>Para ello seleccionamos las filas o seleccionamos al menos una celda de cada una de las filas y: • Seleccionamos desde el menú Tabla &gt; Tamaño &gt; Distribuir filas uniformemente. • Desde el menú contextual Tamaño &gt; Distribuir filas uniformemente. • Desde la barra de herramientas Tabla, clic en el botón Optimizar tamaño &gt; Distribuir filas uniformemente.</p>
+<p>Botón Optimizar tamaño &gt; Distribuir filas uniformemente</p>
+<p>De la misma forma, podemos hacer que dos o más columnas (incluso todas) se distribuyan equitativamente en relación al ancho total que ocupan. Para ello seleccionamos las columnas o seleccionamos al menos una celda de cada una de las columnas y: • Seleccionamos desde el menú Tabla &gt; Tamaño &gt; Distribuir columnas uniformemente.</p>
+<p>• Desde el menú contextual Tamaño &gt; Distribuir columnas uniformemente. • Desde la barra de herramientas Tabla, clic en el botón Optimizar tamaño &gt; Distribuir columnas uniformemente.</p>
+<p>Botón Optimizar tamaño &gt; Distribuir columnas uniformemente</p>
+<p>Tema 2. Tablas</p>
+<p>Otras propiedades de tablas</p>
+<p>• Desde el menú Tabla &gt; Propiedades. • Desde el menú contextual Tabla &gt; Propiedades de tabla. • Desde el botón Propiedades de la tabla de la barra de herramientas Tabla.</p>
+<p>Diálogo Formato de tabla La pestaña Tabla La imagen anterior corresponde a la pestaña Tabla del diálogo Formato de tabla de Writer. Desde la sección Propiedades podemos definir el Nombre de la tabla, que nos permite encontrarla rápidamente en la ventana Navegador. También se utilizará si creamos un índice de tablas.</p>
+<p>Si la tabla no ocupa todo el espacio entre el margen izquierdo y el derecho de la página o de la columna donde está insertada, podremos definir su Anchura. Si queremos indicar el ancho como un porcentaje del espacio disponible, debemos activar la opción Relativo.</p>
+<p>Si la tabla ya ocupa el espacio máximo entre márgenes no estarán activadas las opciones Anchura y Relativo. Si cambiamos la opción Alineación a cualquiera distinta de Automática se activarán estas propiedades y podremos modificarlas. Desde ésta sección Alineación podemos definir la posición y el comportamiento de la tabla con respecto a los márgenes de la página</p>
+<p>• Seleccionamos Automática para que la la tabla crezca o decrezca horizontalmente respecto a los márgenes izquierdo y derecho de la página. Esta configuración se recomienda en las tablas de los documentos que queremos crear o exportar en HTML. De esta forma, si el documento HTML se muestras en distintos dispositivos, la tabla se adaptará al ancho disponible.</p>
+<p>o En la sección Espacio se activan sólo las opciones Hacia arriba y Abajo, que permiten definir un espaciado por encima y/o por debajo de la tabla.</p>
+<p>Tabla sin espaciado</p>
+<p>Tema 2. Tablas</p>
+<p>Tabla con espaciado Hacia arriba y abajo • Seleccionamos Izquierda para que la tabla quede alineada al margen izquierdo de la página. o En la sección Espacio se activan la opción Derecha, que permite definir la distancia de la tabla al margen derecho.</p>
+<p>Tabla con alineación izquierda y espaciado por la derecha • Si seleccionamos De izquierda podremos definir el espacio entre el lado izquierdo de la tabla respecto al margen izquierdo de la página, sin ajustar el lado derecho de la tabla al margen derecho (el ancho no se reduce automáticamente al aumentar el margen izquierdo), que es posible que lo sobrepase.</p>
+<p>o En la sección Espacio se activa la opción Izquierda, que permite definir la distancia de la tabla al margen izquierdo.</p>
+<p>Tabla alineada de izquierda con espaciado por la izquierda • Selecciona Derecha para alinear el borde derecho de la tabla con el margen derecho de la página. o En la sección Espacio se activa la opción Izquierda, que permite definir la distancia de la tabla al margen izquierdo.</p>
+<p>Tabla alineada a la derecha con espaciado por la izquierda</p>
+<p>Tema 2. Tablas</p>
+<p>• Seleccionando Centro la tabla se centrará horizontalmente en la página, de forma equidistante a los márgenes. o En la sección Espacio se activa la opción Izquierda, que permite definir a un tiempo la distancia de la tabla al margen izquierdo y al derecho, que cambian en igual magnitud.</p>
+<p>• Al seleccionar Manual se alineará horizontalmente la tabla según los valores que indiquemos en los cuadros Izquierda y Derecha de la sección Espacio. Writer ajusta automáticamente el ancho de la tabla.</p>
+<p>La pestaña Borde Si deseamos aplicar alguna característica a una sola celda, debemos seleccionarla. No basta con hacer clic sobre ella</p>
+<p>Pestaña Borde del diálogo Formato de tabla</p>
+<p>Al activar Fusionar los estilos de línea adyacentes cuando dos celdas tengan distinto estilo de línea se muestra sóla la línea de la celda predominante. En caso contrario, cada celda muestra sus propias líneas.</p>
+<p>Fusionar los estilos de línea adyacentes activado</p>
+<p>Fusionar los estilos de línea adyacentes desactivado En caso de fusión, la regla es: el valor mayor predomina. Si una celda tiene borde de 1 punto y la adyacente de 2 puntos, la que predomina es la de 2 puntos. A igualdad de valores, excepto color, el borde común toma el color de la celda situada encima o a la derecha, excepto en los vértices de la celda.</p>
+<p>Tema 2. Tablas</p>
+<p>La pestaña Fondo Desde la pestaña Fondo del diálogo Formato de tabla podemos personalizar el fondo de celdas, filas o de toda la tabla. Al ser una propiedad de celda, deberemos seleccionar previamente aquellas a las que queramos aplicar la propiedad. Si sólo hicimos clic dentro de la tabla, se aplica a toda la tabla.</p>
+<p>Si deseamos aplicar alguna característica a una sola celda, debemos seleccionarla. No basta con hacer clic sobre ella.</p>
+<p>Permite aplicar tanto un efecto de color como una imagen de fondo. En caso de que apliquemos estos efectos tanto a celdas como a filas y/o tabla, el efecto se visualizará en ese orden. Prevalece el asignado a la celda sobre la fila, y éstos prevalecen sobre el que apliquemos a la tabla.</p>
+<p>Para aplicar un fondo seleccionamos en el desplegable Como el estilo de fondo a aplicar: Color o Imagen. Seleccionaremos después en Para a qué elementos aplicaremos el efecto: a las celdas seleccionadas, a las filas seleccionadas, o a toda la tabla.</p>
+<p>Pestaña Fondo como Color del diálogo Formato de tabla Desde Color de fondo seleccionaremos el color deseado. Sin relleno eliminará el color de fondo o imagen previamente aplicados. Si seleccionamos Imagen se presentan las siguientes opciones en el diálogo</p>
+<p>Pestaña Fondo como Imagen del diálogo Formato de tabla</p>
+<p>Haciendo clic en el botón Examinar podremos elegir la imagen a aplicar al fondo. Marcando la opción Enlazar la imagen no se inserta en el documento, sino que queda vinculada. Desde la sección Tipo podemos elegir: • Posición: inserta la imagen y la alinea en la posición que marcaremos en la ventana a su derecha.</p>
+<p>La imagen debe ser menor que la celda/fila/tabla que la contiene para poder apreciar el efecto.</p>
+<p>Tema 2. Tablas</p>
+<p>• Área: la imagen se extiende por toda la zona a afectar. • Mosaico:para que la imagen se repita ocupando toda la zona a afectar. La imagen debe ser menor que la celda/fila/tabla que la contiene para poder apreciar el efecto.</p>
+<p>Es recomendable ajustar previamente el tamaño de la imagen según el diseño que deseamos obtener, así como ajustar su nivel de transparencia o aplicar un filtro de “marca de agua” para conseguir un efecto óptimo. Mostramos a continuación una imagen como fondo de una celda o de una tabla</p>
+<p>Tabla con imagen de fondo en una celda</p>
+<p>Ejemplo de tabla con imagen de fondo</p>
+<p>Mostrar u ocultar los límites de la tabla Tras insertar una tabla en el documento, es bastante probable que de forma predeterminada se hayan dibujado los bordes de la misma. Quizás no deseamos que estos bordes se muestren impresos, pero necesitamos una guía visual para ubicar correctamente las filas, columnas y celdas de la tabla. Por tanto, necesitamos visualizar los límites de la tabla.</p>
+<p>Activando o desactivando la opción del menú Ver &gt; Límites de la tabla haremos que Writer muestre o no unas finas líneas de color gris que nos permiten mostrar los límites de las celdas de las tablas en el caso de que éstas carezcan de bordes. En la siguiente imagen vemos una tabla que tiene los bordes dibujados parcialmente, y el aspecto que presenta en la pantalla con esta opción desactivada (arriba) o activada (abajo).</p>
+<p>Tabla con límites ocultos</p>
+<p>Tabla con límites visibles</p>
+<p>Tema 2. Tablas</p>
+<p>La pestaña Flujo de texto Desde la pestaña Flujo del texto del diálogo Formato de tabla podemos definir el comportamiento de la tabla con respecto al texto que la rodea, y cómo debe reaccionar si se encuentra con un salto de página o columna.</p>
+<p>Pestaña Flujo de texto en el formato de tabla • Activando Quebrar definimos el tipo de salto que deseamos asociar con la tabla. o Activando Página insertamos un salto de página Delante o Detrás de la tabla. o Activando Columna insertamos un salto de columna Delante o Detrás de la tabla.</p>
+<p>o Activando Con estilo de página seleccionamos el estilo que se aplicará a la primera página que sigue al salto. Desde Nº de página definiremos la numeración de la página a partir de ese salto. • Para definir el comportamiento de la tabla si se encuentra con un salto de página o columna podemos activar o desactivar Permitir división de tabla en páginas y columnas. Activándolo permitimos que la parte de la tabla que supera la capacidad de la página o columna actual se separe y pase a la página o columna siguiente, manteniendo las filas completas. Desactivando esta opción, la tabla no podrá repartirse entre las páginas o columnas. Pasará completa a la página o columna siguiente. Esta opción también la podemos encontrar en el menú Tabla &gt; Dividir entre páginas.</p>
+<p>• Si activamos Permitir división de fila entre páginas y columnas Writer podrá ejecutar el salto de página o de columna dentro de una fila de la tabla. Por accesibilidad, EVITAR el uso de esta opción. • Si deseamos que la tabla y el párrafo que la sigue se mantengan juntos cuando se encuentren con un salto de página o columna, debemos activar Mantener párrafos juntos.</p>
+<p>• En caso de permitir la división de la tabla en páginas y columnas, podemos activar Repetir título. ¡Imprescindible para mantener la accesibilidad! De esta forma, en la parte de la tabla que pase a la página o columna siguiente se repetirán automáticamente la fila o filas que forman los títulos de la misma. Si está formado por varias filas, lo indicaremos desde Las primeras N filas.</p>
+<p>Ésta opción también se encuentra en el menú Tabla &gt; Repetir filas de cabecera. ¡Imprescindible para mantener la accesibilidad! Para utilizar esta opción desde el menú debemos seleccionar previamente las filas que forman el título. • Podemos especificar la Orientación del texto dentro de la tabla, si bien al ser una característica de celda, debemos seleccionar previamente toda la tabla o las celdas a las que queremos afectar.</p>
+<p>Las opciones posibles son</p>
+<p>Tema 2. Tablas</p>
+<p>o Horizontal: es la forma habitual o Vertical: el texto aparece escrito en ángulo de 90º. Si se elije la forma vertical, la barra de herramientas Formato cambia la orientación de los botones de Alineación, Numeración, Viñetas y de Sangrías.</p>
+<p>Celdas con orientación vertical o Utilizar la configuración del objeto superior. Es la opción por defecto. Sigue automáticamente la dirección del texto que le precede. • Podemos definir la Alineación vertical de los objetos contenidos en las celdas, eligiendo entre Arriba, Centrado o Abajo. Ésta propiedad también es una característica de celda, por lo que debemos seleccionar previamente toda la tabla o las celdas a las que queremos afectar.</p>
+<p>Alineación vertical de celdas La Alineación vertical de celdas también se puede definir desde la barra de herramientas Tabla seleccionando los botones Arriba, Centrado o Abajo.</p>
+<p>Tema 2. Tablas</p>
+<p>Ordenar los datos en las tablas</p>
+<p>Ordenar los datos de las tablas • En primer lugar, hay que seleccionar sólo las celdas con datos (no los encabezados de los mismos), pues la ordenación afectará sólo a las celdas seleccionadas y a todas ellas. Consecuentemente, si seleccionásemos también los títulos o encabezados de filas o de las columnas, serían tratadas como un dato más.</p>
+<p>• Desde el menú Tabla &gt; Ordenar o desde el botón Ordenar de la barra de herramientas Tabla activaremos el diálogo Ordenar.</p>
+<p>Dialogo Ordenar Este diálogo nos permitirá activar hasta tres criterios de ordenación (Clave1, Clave2 y Clave3), especificando el número de Columna que deseamos ordenar, si la ordenación es Alfanumérica o Numérica y si el orden es Ascendente o Descendente.</p>
+<p>Desde el diálogo Ordenar no tan sólo se pueden ordenar datos en tablas. Si seleccionamos párrafos de texto, también tendremos la posibilidad de ordenarlos alfabéticamente. Asimismo si tenemos texto separado por tabuladores u otro carácter.</p>
+<p>Algunas opciones especiales que nos ofrece el diálogo Ordenar: • Dirección nos permite ordenar por columnas en lugar de por filas, es decir, no tan sólo podemos ordenar de arriba a abajo, sino también de izquierda a derecha. • Separador permite especificar el carácter que identificará la separación entre columnas si estamos ordenando párrafos de texto en lugar de datos de tabla.</p>
+<p>• Idioma permite seleccionar el idioma, dado que los criterios de ordenación pueden variar en función de éste. • Distinguir mayúsculas y minúsculas permite refinar la ordenación en función de la capitalización de los textos; a igualdad de términos, la ordenación ascendente pone en primer lugar los escritos en minúsculas.</p>
+<p>Unir y dividir celdas y tablas Es posible que necesitemos que dos o más celdas contiguas se unan formando una sola celda. Para conseguirlo, seleccionaremos las celdas contiguas que deseamos unir, y procederemos de alguna de las siguientes maneras</p>
+<p>Tema 2. Tablas</p>
+<p>• Seleccionaremos desde el menú Tabla &gt; Combinar celdas. • Seleccionaremos desde el menú contextual de tabla, la opción Combinar celdas. • Desde la barra de herramientas Tabla haremos clic en el botón Combinar celdas. En el siguiente ejemplo, combinamos las cuatro celdas centrales en una sola.</p>
+<p>Celdas seleccionadas antes de unirlas</p>
+<p>Después de unir celdas</p>
+<p>Si deseamos separar celdas que unimos previamente, o queremos subdividir una celda en dos o más celdas, podemos conseguirlo seleccionando la celda y: • Seleccionamos desde el menú Tabla &gt; Dividir Celdas. • En la barra de herramientas Tabla haremos clic sobre el botón Dividir Celdas.</p>
+<p>Se muestra el diálogo Dividir celdas</p>
+<p>Diálogo Dividir celdas • En Dividir la celda en podemos obtener el número de divisiones que deseamos obtener • En la sección Dirección, indicamos si deseamos dividirla Horizontalmente o Verticalmente. • Sólo para la división horizontal, activaremos A proporciones iguales si queremos que la división reparta de forma equitativa el espacio de celda entre las subdivisiones.</p>
+<p>La celda resultante de la unión anterior, ahora la hemos dividido en 5 celdas verticales</p>
+<p>Celda antes de ser dividida</p>
+<p>Celda después de dividirla</p>
+<p>Tema 2. Tablas</p>
+<p>Dividir una tabla Al igual que hicimos con las celdas, las tablas se pueden dividir o unir fácilmente en Writer. En ambos casos, la acción se realiza por filas, y no por columnas. Podemos dividir una tabla en dos tablas separadas, tras seleccionar la fila o hacer clic en una celda cualquiera de la misma fila, de las siguientes maneras</p>
+<p>• Seleccionamos desde el menú Tabla &gt; Dividir tabla. • Desde la barra de herramientas Tabla hacemos clic sobre el botón Dividir tabla En ambos casos se muestra el diálogo Dividir tabla</p>
+<p>Diálogo Dividir tabla • Copiar título copiará el título de la tabla original como encabezado de la segunda tabla. • Título personalizado (aplicar estilo) insertará en la segunda tabla una primera fila, en blanco, pero con los estilos de la primera fila de la tabla original.</p>
+<p>• Título personalizado simplemente agrega una nueva fila en blanco a la segunda tabla. • Sin título divide las tablas y no agrega encabezado a la segunda tabla.</p>
+<p>Unir dos tablas en una sola Para unir dos tablas en una sola necesitamos previamente quitar todas las líneas que existan entre ellas. Cuando las tablas se muestren juntas, haremos clic en una de ellas y: • Seleccionamos desde el menú Tabla &gt; Unir Tabla</p>
+<p>Formatos numéricos y calculos en tablas De forma predeterminada, cuando introducimos fechas, horas, números o monedas en las tablas, Writer formatea automáticamente las celdas de acuerdo con la configuración regional definida en el sistema operativo. Éste comportamiento se puede activar o desactivar a voluntad mediante uno de estos dos procedimientos</p>
+<p>• Desde el menú Tabla &gt; Reconocimiento de número. • Desde la configuración de opciones en Herramientas &gt; Opciones &gt; LibreOffice Writer &gt; Tabla. En la sección Entrada en tablas, activamos o desactivamos Reconocer los números. También podemos activar la opción Reconocer los formatos numéricos y que asigne automáticamente la Alineación.</p>
+<p>Tema 2. Tablas</p>
+<p>Configuración de opciones de reconocimiento de números</p>
+<p>Aplicar formato de número en las celdas Como si de una hoja de cálculo se tratase, Writer permite aplicar formatos numéricos a celdas con valores. Estos formatos son Moneda, Fecha, Hora, Ciencia, Fracción, Valor lógico y Texto. Para aplicar alguno de estos formatos, tras seleccionar el rango de celdas, efectuaremos alguna de las siguientes operaciones</p>
+<p>• Seleccionamos desde el menú Tabla &gt; Formato numérico. • Hacemos clic desde la barra de herramientas Tabla sobre el botón Formato numérico. • Desde el menú contextual de la tabla la opción Formato numérico. Se presenta el diálogo Formato de números.</p>
+<p>Diálogo Formato de números Seleccionaremos primero la Categoría deseada. En la lista Formato, seleccionamos la opción que más se adecue a nuestras necesidades, e indicamos el Idioma a atribuir al texto formateado (importante si queremos mostrar fechas con nombres de mes o de días de la semana).</p>
+<p>Desde Opciones se muestran diferentes opciones según la categoría elegida para que personalicemos más el formato numérico. Y para usuarios avanzados, desde el cuadro Código del formato se pueden personalizar y almacenar formatos propios para posteriores usos.</p>
+<p>Tema 2. Tablas</p>
+<p>Insertar fórmulas en celdas Writer puede mostrar capacidades similares a las de una hoja de cálculo, ya que permite insertar fórmulas que operen con las celdas de las tablas. Para insertar una fórmula en una celda, nos situamos en la celda y: • Pulsamos la tecla tecla de función F2.</p>
+<p>• Pulsamos la tecla =. • Desde el menú Tabla seleccionamos la opción Fórmula. • Desde la barra de herramientas Tabla hacemos clic sobre el botón Fórmula. • Activamos la opción desde el menú Ver &gt; Barras de herramientas &gt; Fórmula. Tras activar la opción Fórmula por cualquiera de estos métodos se muestra la barra de Fórmulas</p>
+<p>Barra de fórmulas Aprendamos a utilizar esta herramienta con uno de los casos más habituales: queremos sumar de forma automática todos los valores que aparecen en las celdas de una columna, o en una fila. Las tablas, por similitud con las hojas de cálculo, están formadas por celdas que tienen un nombre. El nombre de la celda también se llama referencia.</p>
+<p>Al igual que el juego de los barcos, las celdas se llaman A1, B18, J7, etcétera. La letra se corresponde con la columna, y el número, con la fila. La primera celda de una tabla (situada en el extremo superior izquierdo) siempre será la celda A1. A la hora de operar con esas celdas (sumarlas o restarlas, entre otras operaciones) debemos introducir en la fórmula su referencia.</p>
+<p>De todas formas, las celdas se pueden introducir en los cálculos haciendo clic en ellas y Writer se ocupará de escribir la referencia correcta por nosotros.</p>
+<p>Cálculos en tablas</p>
+<p>Introducir una fórmula que opere con celdas Supongamos que en la tabla de la figura superior, en su última fila, queremos sumar la columna de números bajo el título Cantidad Los pasos a seguir son: • Nos situamos en la celda donde deseamos efectuar el cálculo (C7). • Pulsamos la tecla F2 (o utilizamos cualquiera de los métodos alternativos para mostrar la barra de fórmulas).</p>
+<p>• Hacemos clic sobre la primera celda a sumar (C2) y escribimos el operador +. • Repetimos el proceso con el resto de las celdas hasta obtener la fórmula =&lt;C2&gt;+&lt;C3&gt;+&lt;C4&gt;+&lt;C5&gt;+&lt;C6&gt;.</p>
+<p>Tema 2. Tablas</p>
+<p>• Validamos la fórmula pulsando Intro o haciendo clic sobre el botón Aplicar. La celda mostrará el resultado de sumar las celdas situadas por debajo de la etiqueta Cantidad.</p>
+<p>Introducir una función en la fórmula El editor de fórmulas nos permite insertar funciones que facilitan la definición de los cálculos. Un método alternativo para resolver este ejemplo sería utilizar la función Suma en la fórmula. En ese caso los pasos a seguir habrían sido</p>
+<p>• Nos situamos en la celda donde deseamos efectuar el cálculo (C7). • Pulsamos la tecla F2 (o utilizamos cualquiera de los métodos alternativos para mostrar la barra de fórmulas). • Desplegamos la lista de funciones disponibles desde la barra de formulas, pulsando sobre el botón Funciones.</p>
+<p>• Seleccionamos la función SUMA (en la fórmula se mostrará =sum ). Insertando la función suma en la fórmula • Seguidamente seleccionamos las celdas a sumar bajo la etiqueta Cantidad (en la fórmula se mostrará =sum &lt;C2:C6&gt; ). • Validamos la fórmula pulsando Intro o haciendo clic sobre el botón Aplicar.</p>
+<p>La celda mostrará el resultado de sumar las celdas situadas por debajo de la etiqueta Cantidad.</p>
+<p>Tabla con cálculos Al situar el puntero del ratón sobre una celda que contiene una fórmula, ésta se muestra en una etiqueta emergente.</p>
+<p>Tema 2. Tablas</p>
+<p>Operar con celdas de otras tablas</p>
+<p>Writer permite efectuar cálculos sobre valores que hay en celdas de otras tablas. Siguiendo con el ejemplo anterior imaginemos que, en otra tabla, hemos de calcular el importe de un impuesto para incrementarlo al total.</p>
+<p>Calculando con celdas de otras tablas Seguiremos los siguientes pasos: • Nos situamos en la celda de la segunda tabla donde deseamos efectuar el cálculo (C1). • Pulsamos la tecla F2 (o utilizamos cualquiera de los métodos alternativos para mostrar la barra de fórmulas).</p>
+<p>o haremos clic en la celda B1 de la segunda tabla, tecleamos el operador * y hacemos clic sobre el importe Total de la tabla anterior. o La barra de fórmulas mostrará =&lt;B1&gt;*&lt;Tabla1.E7&gt; (donde Tabla1 es el nombre de la tabla referida). o Validamos la fórmula pulsando Intro o haciendo clic sobre el botón Aplicar.</p>
+<p>El resultado final será como sigue</p>
+<p>Calculando con celdas de otras tablas Si modificamos cualquiera de los valores de las celdas que intervienen en las fórmulas, se recalcularán las celdas con fórmulas y se mostrarán los valores actualizados.</p>
+<p>Tema 2. Tablas</p>
+<p>Protección de celdas Cuando tenemos fórmulas en las celdas de una tabla, puede resultar muy recomendable proteger las celdas para evitar modificaciones indeseadas. Tras seleccionar las celdas a proteger, lo podemos efectuar de dos maneras: • Activamos la opción desde el menú Tabla &gt; Proteger celda.</p>
+<p>• Hacemos clic desde la barra de herramientas Tabla sobre el botón Proteger celda. Las celdas quedarán protegidas y cualquier intento de escribir en ellas mostrará un mensaje de protección.</p>
+<p>Alerta celda protegida Hay que tener presente que esta protección está orientada tan sólo a evitar modificaciones por error, pues no se puede aplicar ninguna contraseña y, consecuentemente, cualquiera con acceso al documento puede desproteger las celdas. Para desproteger celdas protegidas, tras seleccionarlas, bastará con desactivar la opción desde el menú Tabla &gt; Desproteger, o haciendo clic desde la barra de herramientas Tabla sobre el botón</p>
+<p>Desproteger.</p>
+<p>Operaciones soportadas por el editor de Fórmulas Las operaciones soportadas son: • Operador + para realizar la operación Suma. Ejemplo: =100+&lt;B2&gt; • Operador - para realizar la operación Resta. Ejemplo: =100-&lt;B2&gt; • Operador * para realizar la operación Multiplicación. Ejemplo: =100*&lt;B2&gt; • Operador / para realizar la operación División. Ejemplo: =100/&lt;B2&gt; • Operador ^ para realizar la operación Potenciación. Ejemplo: =&lt;B2&gt;^3 • Operador SQRT para calcular la operación Raíz cuadrada. Ejemplo: =&lt;B2&gt;*SQRT 12 • Paréntesis ( ) Establecen la prioridad de las operaciones. Ejemplo: =(100-&lt;B2&gt;)*(100+&lt;B2&gt;) • Operador % Divide por 100 el número que le precede. Ejemplo: =&lt;B2&gt;*21% Prioridad de los operadores Los operadores realizan cálculos con la siguiente prioridad, de mayor a menor</p>
+<ul>
+<li>( ) Resuelve los paréntesis</li>
+<li>^ Potenciación</li>
+<li>% Porcentaje</li>
+<li>/ División</li>
+<li>* Multiplicación</li>
+<li>Restar</li>
+<li>+ Sumar</li>
+</ul>
+<p>Tema 2. Tablas</p>
+<p>Funciones y expresiones soportadas por el editor de Fórmulas de Writer Funciones matemáticas • SUM() Suma el rango de celdas SUM(&lt;A1:B15&gt;) o SUM &lt;A1:B15&gt; o SUM(&lt;A1&gt; | &lt;A3&gt; | &lt;B15&gt;) • ROUND() Calcula el redondeo hasta el número especificado de decimales &lt;B15&gt; ROUND 2 Funciones estadísticas • SUM() Suma el rango de celdas SUM(&lt;A1:B15&gt;) o SUM &lt;A1:B15&gt; o SUM(&lt;A1&gt; | &lt;A3&gt; | &lt;B15&gt;) • MEAN() Calcula el promedio del rango de celdas MEAN(&lt;A1:B15&gt;) • MIN() Valor mínimo del rango de celdas MIN(&lt;A1:B15&gt;) • MAX() Valor máximo del rango de celdas MAX(&lt;A1:B15&gt;) Operadores • AND Comprueba el Y lógico.</p>
+<p>• OR Comprueba el O lógico • NOT Comprueba el No lógico • | Separador de lista: separa los valores de una lista • == Verifica si los valores son iguales • != Verifica si los valores no son iguales • &lt;, &lt;=, &gt;=, &gt; Menor, menor o igual, mayor, mayor o igual Valores • PI El número Pi 3,1415...</p>
+<p>• E Número de Euler 2,71828... • TRUE Verdadero • FALSE Falso Funciones trigonometricas • SIN Calcula el seno en radianes • COS Calcula el coseno en radianes • TAN Calcula la tangente en radianes • ASIN Calcula el arcoseno en radianes • ACOS Calcula el arcocoseno en radianes • ATAN Calcula la arcotangente en radianes</p>
+<p>Tema 2. Tablas</p>
+<p>Convertir texto en tabla y tabla en texto</p>
+<p>Convertir tabla en texto Writer permite convertir tanto una tabla a texto como un texto a tabla. Es más, podemos indicar qué carácter se emplea para separar los campos (celdas), e incluso que carácter se emplea para delimitar los registros (filas). Tras seleccionar una tabla, podemos convertir una tabla en texto desde el menú Tabla &gt; Convertir &gt; Tabla en texto.</p>
+<p>Se presentará el siguiente diálogo: Diálogo Convertir tabla en texto • Indicaremos que tipo de carácter separador para los campos deseamos utilizar. Podemos seleccionar Tabulador, Punto y coma, marca de Párrafo o, marcando Otros, especificar el carácter que precisemos.</p>
+<p>• Tras pulsar sobre el botón Aceptar, la tabla se convertirá en texto. En la siguiente imagen mostramos una tabla y su conversión a texto delimitado por tabuladores</p>
+<p>Antes de convertir a texto</p>
+<p>Después de convertir a texto Obsérvese que: • Se ha activado Mostrar caracteres no imprimibles para mostrar los tabuladores que separan el texto • La conversión respeta los atributos de carácter del texto: negritas, color de letra, etc.</p>
+<p>Tema 2. Tablas</p>
+<p>• Las celdas combinadas (fila de total) se mantienen combinadas al convertir, por eso el importe total se muestra encolumnado bajo las ciudades. Bastará con limpiar el formato y personaliar las posiciones de tabulación para que el resultado luzca mejor aspecto</p>
+<p>Tabla convertida a texto formateada Convertir un texto en tabla Para convertir un texto delimitado a tabla, el proceso es igual de sencillo. Tras seleccionar el texto que deseamos convertir, activamos el menú Tabla &gt; Convertir &gt; Texto en tabla. Se mostrará entonces el siguiente cuadro de diálogo</p>
+<p>Diálogo Convertir texto en tabla • Deberemos especificar el carácter que se ha utilizado como Separador en el texto de campos. • Si el carácter de separación es el tabulador, podremos desmarcar Misma anchura para todas las columnas si así interesa. En cualquier otro caso, Writer distribuye el espacio disponible para la tabla entre las columnas que se precisen crear.</p>
+<p>• Desde la sección Opciones podremos definir si la primera línea del texto formará el Título de la tabla, si deseamos activar Repetir título en caso de salto de páginas o columnas, y el número de filas que lo conforman desde El primero X filas. • Podremos definir también si permitimos o No dividir la tabla en caso de salto de páginas o columnas, así como si deseamos que se le asigne un Borde simple.</p>
+<p>• Finalmente, desde el botón Formato automático... podremos seleccionar uno de los formatos automáticos de tabla disponibles para que se aplique a la nueva tabla. Mostramos el resultado de convertir a tabla el texto del ejemplo anterior, separado por tabuladores. Se ha utilizado un Formato automático personalizado que definimos en un apartado anterior.</p>
+<p>Tema 2. Tablas</p>
+<p>Texto con tabuladores convertido a tabla nuevamente Obsérvese que al crear la tabla, se ha extendido la anchura de la última columna hasta completar la totalidad del ancho de la página.</p>
+<p>Formato automático de tablas Writer posee una herramienta muy potente para aplicar formatos muy vistosos y elaborados a las tablas en pocos clics. Ésta herramienta es el Formato automático de tablas. Para activarla, haremos clic sobre la tabla a la que deseamos aplicar el formato y...</p>
+<p>• Seleccionamos desde el menú Tabla &gt; Estilos de formato automático..., o... • Haremos clic en el botón Estilos de formato Automático... de la barra de herramientas Tabla La aplicación mostrará el diálogo Formato automático.</p>
+<p>Diálogo Formato automático de tabla</p>
+<p>• Desde la lista de Formato permite seleccionar uno entre los diferentes diseños disponibles. • Las casillas de verificación en el área Formato permiten seleccionar las diferentes opciones que se aplicarán a la tabla. En este contexto, Patrón se refiere a los fondos de color de las celdas.</p>
+<p>• La vista previa muestra como va a quedar formateada la tabla. Para finalizar, pulsaremos sobre Aceptar.</p>
+<p>Tema 2. Tablas</p>
+<p>Crear un formato automático de tabla personalizado La herramienta permite definir nuestros propios diseños de formato de tabla y añadirlos a la galería de Writer. Si en nuestro entorno corporativo disponemos de una guía de estilo que define la forma en que debemos aplicar tipografías, colores y bordes a nuestros documentos. Eso puede ser de aplicación también a las tablas que utilicemos en los mismos. Y será estupendo poder usar la herramienta Formato automático para dar formato rápidamente a nuestras tablas.</p>
+<p>Para crear un Formato automático personalizado: • Seleccionamos la tabla (debe tener un tamaño mínimo de 4 filas por 4 columnas) cuyo formato queremos guardar en la galería de Formatos automáticos. • Activamos el diálogo Formato automático. • Hacemos clic sobre el botón Añadir.</p>
+<p>• Asignamos un nombre al nuevo estilo y hacemos clic sobre Aceptar.</p>
+<p>Creando un formato automático personalizado</p>
+<p>A patir de este momento el formato automático personalizado ya está disponible para ser aplicado a cualquier otra tabla.</p>
+<p>Tema 2. Tablas</p>
+<p>Formato personalizado en la galería de Formatos automáticos</p>
+<p>Se almacenarán las definiciones de borde, fondo, tipo y estilo de letras, alineaciones y también los formatos numéricos que se hayan aplicado a las celdas.</p>
+<p>Tabla antes de aplicar el estilo Mi Formato automático</p>
+<p>Tabla después de aplicar el estilo Mi Formato automático</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut02/ut0207.html">⬅️ 2.7 Recursos Pràctiques Tema 1 (2ª part)</a>
+<a class="page-nav-btn" href="../ut02/ut0209.html">2.9 Pràctiques Tema 2 (Taules) ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

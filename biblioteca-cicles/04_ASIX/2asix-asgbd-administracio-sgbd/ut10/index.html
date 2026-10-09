@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>UT10 — Programa de recuperació — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🗄️ Administració de Sistemes Gestors de Bases de Dades — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Administració de Sistemes Gestors de Bases de Dades</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació Mòdul ASGBD</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Com fer un treball de classe</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Com fer un treball de classe (conclusions)</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Beques OpenWebinars</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Instal·lació d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Preparació de l'entorn</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Instal·lació d'un SGBD</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Videos d'instal·lació</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Primers passos. Ordres bàsiques</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Arquitectura BBDD's en Oracle</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Configuració d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Configuració d'un SGBD</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tablespaces i datafiles</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Us d'SQL*Plus</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Solucions errors de connexió amb SQLDeveloper</a></li>
+<li><a href="../ut02/ut0205.html">2.5 primers pasos - sol</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT3 — Usuaris i permisos. Seguretat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a href="../ut03/ut0301.html">3.1 Usuaris i permisos</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Connectar a SGBD Oracle des d'altra màquina</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Usuaris NO admin en Windows</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Permisos d'Update i Delete + Select</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Seguretat en un SGBD</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Primera avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Automatització de tasques</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Enquesta valoració docent. 1er trimestre</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Repàs: PL/SQL</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Repàs: PL/SQL (II)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Repàs: PL/SQL (II) _ SOLUCIONS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Automatització de tasques</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Butlletí procediments i funcions</a></li>
+<li><a href="../ut05/ut0507.html">5.7 Butlletí triggers</a></li>
+<li><a href="../ut05/ut0508.html">5.8 Solucions a pl/sql</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Optimització de l'SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Optimització de l'SGBD</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Disponibilitat d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Disponibilitat d'un SGBD</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Segona Avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Enquesta valoració docent. 2on trimestre</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Convocatoria Ordinaria</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Continguts i Recursos</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT10 — Programa de recuperació</summary>
+<ul>
+<li><a class="unit-full-link active" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Dates en Oracle</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Convocatòria extraordinaria ASGBD - curs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Continguts i Recursos</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT10 Completa</span>
+<h1>📘 UT10 — Programa de recuperació (Unitat Completa)</h1>
+<div class="admonition tip"><p class="admonition-title">📑 Índex d'Apartats d'aquesta Unitat</p><ul><li><a href="#ut1001"><strong>10.1 Dates en Oracle</strong></a> (o <a href="./ut1001.html">obrir en pàgina individual ➡️</a>)</li><li><a href="#ut10actividades"><strong>✍️ Activitats pràctiques UT10</strong></a> (o <a href="./ut10actividades.html">obrir en pàgina individual ➡️</a>)</li></ul></div>
+<hr/>
+<h2 id="ut1001">10.1 Dates en Oracle</h2>
+
+<h3>UNITAT 04 Automatització de tasques</h3>
+<p>Automatització de tasques DATES</p>
+
+
+<p>2- Tipus</p>
+<ul>
+<li>DATE</li>
+<li>TIMESTAMP</li>
+<li>TIMESTAMP WITH TIME ZONE</li>
+<li>TIMESTAMP WITH LOCAL TIME ZONE</li>
+<li>INTERVAL</li>
+</ul>
+<p>INTERVAL YEAR TO MONTH INTERVAL DAY TO SECOND</p>
+
+
+<p>3- Presentació</p>
+<ul>
+<li>funció sysdate -&gt; torna tipus date</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select sysdate from dual;
+select to_char(sysdate,'dd-mm-yyyy hh:mi:ss') from dual;
+select to_char(sysdate,'dd-mm-yyyy hh:mi:ss am') from dual;
+select to_char(sysdate,'dd-mm-yyyy hh24:mi:ss am') from dual;
+alter session set nls_date_format='dd-mm-yyyy hh:mi';
+select sysdate from dual;</code></pre>
+</div>
+
+
+<p>4- Presentació</p>
+<ul>
+<li>funció sysdate -&gt; torna tipus date</li>
+</ul>
+<p>set SERVEROUTPUT on begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line(sysdate);
+   dbms_output.put_line(to_char(sysdate,'dd-mm-yyyy hh:mi:ss'));
+   dbms_output.put_line(to_char(sysdate,'dd-mm-yyyy hh:mi:ss am'));
+   dbms_output.put_line(to_char(sysdate,'dd'));
+   dbms_output.put_line(to_char(sysdate,'d'));
+   dbms_output.put_line(to_char(sysdate,'ddd'));</code></pre>
+</div>
+<p>end;</p>
+
+
+<p>5- Presentació</p>
+<ul>
+<li>funció sysdate -&gt; torna tipus date</li>
+</ul>
+<p>set SERVEROUTPUT on begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line(to_char(sysdate,'dd-mm-yyyy hh:mi:ss'));
+   dbms_output.put_line(to_char(sysdate,'dd/mm/yyyy hh:mi:ss'));
+   dbms_output.put_line(to_char(sysdate,'dd.mm.yyyy hh:mi:ss'));
+   dbms_output.put_line(to_char(sysdate,'dd mm yyyy hh_mi-ss'));</code></pre>
+</div>
+<p>end;</p>
+
+
+<p>6- Operacions</p>
+<ul>
+<li>funció sysdate -&gt; torna tipus date</li>
+</ul>
+<p>set SERVEROUTPUT on</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>alter session set nls_date_format='dd-mm-yyyy hh24:mi:ss';
+declare    f1 date:= '31/01/2024';  f2 date;</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>f2:=sysdate;
+   dbms_output.put_line( f1);
+   dbms_output.put_line( f2);
+   dbms_output.put_line( f2+1);
+   dbms_output.put_line( f2 - f1);
+   if f2&gt;f1 then dbms_output.put_line('hui es després del '||f1);</code></pre>
+</div>
+<p>end if;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line( f2 - 1);
+   dbms_output.put_line( f2 + 2/24);</code></pre>
+</div>
+<p>end;</p>
+
+
+<p>7- Conversions</p>
+
+
+<p>8- Conversions set SERVEROUTPUT on begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line( 5 + '6' );
+   dbms_output.put_line( '5' + '6' );
+   dbms_output.put_line(' ');
+   dbms_output.put_line( '3' || 7 );
+   dbms_output.put_line( 35 || 8 );</code></pre>
+</div>
+<p>end; Explícita Implícita</p>
+
+
+<p>9- Conversió set SERVEROUTPUT on</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>alter session set nls_date_format='mm-dd-yyyy hh24:mi:ss';
+declare    f1 date:= '1/31/2024 5:4:5';</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dbms_output.put_line( f1);
+   f1:= to_date ('31/3/2025','dd-mm-yyyy');
+   dbms_output.put_line( f1);</code></pre>
+</div>
+<p>end;</p>
+
+
+<p>10- Extracció d’informació set SERVEROUTPUT on</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>alter session set nls_date_format='dd-mm-yyyy hh24:mi:ss';
+declare    f1 date:= sysdate;  dia number; mes number;</code></pre>
+</div>
+<p>begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dia := to_char(f1,'dd');  mes := to_char(f1,'mm');
+   dbms_output.put_line( f1 );
+   dbms_output.put_line( dia );
+   dbms_output.put_line( mes );</code></pre>
+</div>
+<p>end;</p>
+
+
+<p>11- Composició de dates set SERVEROUTPUT on</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>alter session set nls_date_format='dd-mm-yyyy hh24:mi:ss';</code></pre>
+</div>
+<p>declare f1 date; dia number; mes number; anys number; begin</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>dia := 4 ;   mes := 6 ; anys :=2026;
+   f1 := to_date ( dia||'-'||mes||'-'||anys, 'dd-mm-yyyy');
+   dbms_output.put_line( f1 );</code></pre>
+</div>
+<p>end;</p>
+<hr/>
+<h2 id="ut10actividades">✍️ Activitats pràctiques UT10</h2>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.1 — Instal·lar Oracle 21c</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Instal·lar Oracle21c en Windows 10 professional. Partint d’una MV amb W10 profesional, (prèviament instal·lat en la pràctica anterior) Crear un usuari anomenat oracle i donar-li permisos d’administrador.</p>
+<p>Utilitzar este usuari per a realitzar les pràctiques. Requisits • 4 o més GB memòria RAM, 2 o 4 cpu, 100 GB o més de SSD • Visual C++ Redistributable para Visual Studio . Instal·lar • java runtime Instal·lar i reiniciar (verificar amb java -version en un cmd ) *Comprovar requisits de la màquina on es va a instal·lar (HW i SW) ( --Si falta algun, posa’l--) Baixar l’ instal·lador versió 21c ( fitxer zip 3GB aproxim ) d’oracle.com Descomprimir ( utilitzar 7zip, serà mes ràpid) Està ja fet en la ova Crear carpetes d'instal·lació amb OFA (i moure l’instal·lador dins ) *Instal·lar sols el software de l’SGBD ( Executar setup.exe (executar com administrador) ) A partir d’ací ... ¡¡ No esborrar ni moure la carpeta de l’instal·lador !!</p>
+<p>Si no funciona, comprovar que no hi ha espais en el nom de la carpeta que conte l’instal·lador Instal·lar el listener (i configurar) Reiniciar màquina Instal·lar la primera bd Multitenant. (The non-CDB architecture is desupported in Oracle 21c ) nom CDB ribera nom PDB santvi Anotar contrasenya (de sys i system) !</p>
+<p>*En acabar , comprovar que funciona amb el sql*Plus , des d’un CMD sqlplus / as sysdba show user show con_name sqlplus system show user show con_name sqlplus / AS SYSDBA show pdbs Reiniciar maquina sqlplus / AS SYSDBA show pdbs Busca i explica els resultats, abans i després de reiniciar *On esta el log de la instal·lació ? Indica el lloc i adjunta una còpia del fitxer del log al treball Baixar i Instal·lar SQL-Developer (última versió per a Windows) Executar SQL-developer (com administrador) Crear una connexió per a sys i per a system a la CDB i provar-les.</p>
+<p>Crear una connexió per a sys i per a system a la PDB i provar-les.</p>
+<ul>
+<li>En la mateixa màquina, instal·la altra bd multitenant, nom CDB costera nom PDB simarro</li>
+</ul>
+<p>Documentar el procés. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada. Entregar treball en PDF. Molt Important !</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.2 — Crear PDBs addicionals</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Crear una nova PDB Utilitzant la mv de W10 amb Oracle instal·lat. Utilitza dbca (comando) o Assistent: (executa com administrador) Estudia detingudament el procés.</p>
+<p>*Crear una nova PDB (Base de Dades de connexió) (Pluggable Data Base) dins de la CDB de ribera Anomena-la com a Guinovart Crea altra PDB dins de la CDB de costera Anomena-la com a Josep Mostra les opcions emprades. *Estudia detingudament el procés anterior, i contesta a les preguntes següents Quines dades necessita dbca ?</p>
+<p>Que signifiquen ? Quina informació demana que en la primera PDB no va demanar? Com queda el registre de windows ? (entrades relacionades amb l’SGBD oracle) Com queden els serveis de windows ? (serveis relacionat amb l’SGBD oracle) *Crea una nova PDB sense utilitzar el dbca. Fes-ho amb comando d’sql*plus (mira apunts) Anomena-la com a SoleriGodes Mira si esta oberta o no. Configura per a que quan se reinicie Windows, s'òbriga automàticament Prova que funciona i explica com es fa.</p>
+<p>Documentar tot el procés Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.3 — Primers passos en l'administració d'Oracle</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Primers passos en l'administració d’Oracle Restaura la ova de windowsOracle3 Des del Sistema Operatiu Localitza el valor de les variables ORACLE_SID , ORACLE_HOME i ORACLE_BASE Localitza els fitxers listener.ora, sqlnet.ora i tnsnames.ora Localitza el fitxer SPFILE. Quin nom té? On està ubicat?</p>
+<p>Utilitzem SQL Developer Realitza connexió amb el servidor oracle21c amb l’usuari administador d’Oracle (sys) Mostra els registres (els noms) de la vista del DD que conte els tablespaces creats en la instal·lació Crea un nou tablespace simple T1 de 10 Mbytes Crea un nou tablespace T2 autoextensible de 20 Mbytes Afegix un datafile al tablespace T1 Crea un nou tablespace temporal T3_temp de 30 Mbytes On s’han creat els tablespaces ( CDB o PDB ?? , posa el nom de CDB o PDB) Mostra els registres (amb dades) de la vista del DD que conte els tablespaces creats Mostra els registres (amb dades) de la vista del DD que conte els datafiles creats Localitza el fitchers startup.log i listener.log Para la bbdd de manera «immediata» Arranca la bbdd en l’estat NOMOUNT (mostra resultats) Passa a l’estat OPEN (mostra resultats) Eixim de SQL Developer.</p>
+<p>Utilitzem ara SQL*Plus Connecta com a sys i esbrina el nom de la CDB$ROOT i de la primera PDB Connecta com a sys a la primera PDB Crear quatre taules (DDL). Baix tens dos exemples. Inserir dades en les taules creades. Dos files per taula creada. Explorar les taules creades al DD. Descriu les vistes del DD utilitzades Mostra els registres (amb dades) de la vista del DD que conte les taules creades Documentar el procés. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF Exemples Taules Alumnes Nia Nom Adreça Telefon Email dataAlta Modul CodModul NomModul Cicle Curs Hores</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.4 — Investigació d'un SGBD</p><div class="admonition exercise"><p class="admonition-title">✍️ Pràctica : Investigació d’un SGBD En esta pràctica, es facilitarà</p><p>Pràctica : Investigació d’un SGBD En esta pràctica, es facilitarà una màquina virtual amb un SGBD instal·lat Es demana Restaura/Importa la OVA Arranca la màquina i entra en l’usuari del S.O. admin/1234 Contesta abans d’obrir sql*plus o sql developer Contesta i justifica</p></div>
+<ul>
+<li>Quants i quins usuaris té el sistema operatiu?. Qui ha instal·lat el SGBD ?</li>
+<li>Quantes BBDD hi ha instal·lades ?</li>
+<li>De quin tipus son ? ( tradicionals / multitenant )</li>
+<li>Quin nom tenen les BBDD instal·lades ?</li>
+<li>Quin és el valor de: ORACLE_SID, ORACLE_BASE, ORACLE_HOME, NLS_LANG,</li>
+</ul>
+<p>ORACLE_BUNDLE_NAME</p>
+<ul>
+<li>Obri un cmd i busca en el PATH alguna ruta de l’SGBD. Indica les que trobes.</li>
+<li>Quants listeners hi han ? (noms i ports)</li>
+<li>Localitza els fitxers de log de operació. Adjunta l’últim a esta pràctica.</li>
+</ul>
+<p>A partir d’ací, en sql developer ( o en sql*plus ) Contesta i justifica</p>
+<ul>
+<li>Nom de totes les CDB i de les PDB’s</li>
+<li>En quin estat estan ? ( parades, muntades, obertes .... )</li>
+<li>Obri les que estiguen parades. (mostra com ho fas)</li>
+<li>Configura per a que s'òbriguen automàticament la pròxima arrancada de l’SGBD</li>
+<li>Hi ha algun Tablespace apart dels Tablespaces del sistema(creats en la instal·lació) ?</li>
+<li>Quin nom tenen ?</li>
+<li>Quins 'datafiles' tenen associats cadascun ?</li>
+<li>Explora tots els tablespaces de la/les CDB i de les PDBs corresponents. ¿quins noms tenen els</li>
+</ul>
+<p>'datafiles' i on estan emmagatzemats? (mostra ruta/rutes)</p>
+<ul>
+<li>Para la BBDD de forma immediata.</li>
+</ul>
+<p>============================== Documentar el procés. I no oblides seguir les indicacions del document de Aules “Com fer un treball”. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.5 — Limitacions amb perfils</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Limitacions amb perfils Per realitzar esta pràctica, utilitza la màquina windowsOracle3 Connecta amb l’usuari system a la primera PDB Crea un usuari amb el nom prova1 i password secreta i privilegis per connectar i crear recursos amb quota. Força que es canvie la contrasenya en la primera connexió.</p>
+<p>Visualitza els límits actuals del perfil DEFAULT Modifica el perfil DEFAULT per a que els usuaris que l’utilitzen: • Sols puguen fallar 3 vegades fins que es bloquege l’accés. • El bloqueig dure 9 dies • El password s’haja de canviar cada 4 mesos • El temps de que deixa canviar la password una vegada caducat siga 10 dies Visualitza els límits nous del perfil DEFAULT Desconnecta a system Visualitza l’estat de l’usuari prova1, abans i després de connectar. (ACCOUNT_STATUS, data de bloqueig, etc...) Connecta amb l’usuari prova1, comprova que demana canviar la contrasenya. Canvia-la i entra.</p>
+<p>Desconnecta Intenta connectar a l’usuari prova1 posant malament la password més de tres vegades. Comprova que l’usuari es bloqueja i no pot connectar Connecta amb l’usuari system a la primera PDB Comprova l’estat de l’usuari prova1 (ACCOUNT_STATUS, data de bloqueig, etc...) Desbloqueja l’usuari prova1.</p>
+<p>Desconnecta a system Comprova que l’usuari prova1 pot connectar. Comprova la data del pròxim canvi de contrasenya i el temps de gràcia Canvia la data del sistema operatiu per vore que passa quan es caduca la contrasenya Comprova l’estat de l’usuari prova1 (ACCOUNT_STATUS, data de bloqueig, etc...) Canvia la data del S.O. per vore que passa quan es caduca la contrasenya + temps de gràcia Comprova l’estat de l’usuari prova1 (ACCOUNT_STATUS, data de bloqueig, etc...) Documentar el procés. I no oblides seguir les indicacions del document de Aules “Com fer un treball”. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.6 — Còpia de Seguretat amb expdp</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Oracle expdp Per realitzar esta pràctica, utilitza sql*plus en la màquina servidor i el cmd per llançar la còpia Mostra i explica els passos realitzats En la primera PDB de la CDB de l’ORACLE_SID</p>
+<p>Crea l’usuari client01 i dona-li els permisos necessaris per connectar, crear recursos i quotes Connecta amb l’usuari (client01). Crear una taula festius amb els camps mes, dia, nom-festa Pobla la taula amb 5 registres/files (tot sants 1/11 , Nadal 25/12, cap d’any 31/12, i algun més) Ix de sql*plus Des de cmd, crea una carpeta amb el teu nom , per fer les còpies (en la màquina servidor) Connecta com a SYS defineix la carpeta dins de l’SGBD amb (CREATER DIRECTORY .....) i dona-li permisos si cal.</p>
+<p>Ix de sql*plus Des de cmd, crea un fitxer de paràmetres parametres1.txt dins de la carpeta abans definida, indicant que es farà còpia dels objectes del esquema (schemas) de client01 Crea un fitxer de paràmetres parametres2.txt dins de la carpeta abans definida, indicant que es farà còpia dels objectes del tablespace (tablespaces) de users Dona-li permisos a client01 per poder llançar expdp (grant DBA to ....) Fes una copia amb la utilitat expdp d’Oracle (des de cmd i utilitza l’opció parfile , ) Llança expdp per l’usuari system amb parametres1.txt Llança expdp per l’usuari client01 amb parametres2.txt</p>
+<p>Documentar el procés. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF ----------------------------------------------------------------------------------------------------------------- Taula FESTIUS</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE FESTIUS( Dia es num, Mes es num, nom_festa es text)</code></pre>
+</div></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.7 — Funcions i procediments</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Crear procediments amb pl/sql Per realitzar esta pràctica, utilitzarem la mv Windows 10 i Oracle SQL Developer Amb l’usuari system, connectat en la primera pdb, Crear usuari usuari3 (donar-li contrasenya i permisos de connexió i creació de procediments i funcions) Dona-li permisos de crear taules i assigna quota (10M) en el tablespace per defecte.</p>
+<p>Connecta a la primera pdb amb l’usuari creat (usuari3) Realitza els següents exercicis i practica : 0.- Crea la taula llibres i ompli-la (5 files)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>drop table llibres;
+CREATE TABLE llibres(</code></pre>
+</div>
+<p>codi NUMBER(6) PRIMARY KEY, titol VARCHAR2(50) NOT NULL, autor VARCHAR2(30), editorial VARCHAR2(40), preu number(8,2),</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>datadalta date  );</code></pre>
+</div>
+<h4>1) Escriure un bloc anònim PL/SQL que escriga el text ‘HOLA’</h4>
+<p>SET SERVEROUTPUT ON BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DBMS_OUTPUT.PUT_LINE('HOLA');</code></pre>
+</div>
+<p>END;</p>
+<ul>
+<li>Escriure un bloc PL/SQL que compte el nombre de files que hi ha en la taula llibres, deposita el</li>
+</ul>
+<p>resultat en la variable v_num, i visualitza el seu contingut. 2.1 – Guardar el bloc en un fitxer anomenat PROG01.SQL en c:\users\oracle\Documents</p>
+<h4>3) Carregar i executar el bloc guardat en l'arxiu PROG01.SQL de c:\users\oracle\Documents</h4>
+<p>4)Escriure un procediment anomenat ‘suma2n’ que reba dos números i visualitze la seua suma. =========================================================================</p>
+<ul>
+<li>Codificar un procediment ‘inreves’ que reba una cadena i la visualitze a l'inrevés.</li>
+</ul>
+<p>Hola &gt; aloH</p>
+<ul>
+<li>Escriure una funció que reba una data i retorne l'any, en número, corresponent a aqueixa data.</li>
+</ul>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD</p>
+<h4>7) Escriure un bloc PL/SQL que faça ús de la funció anterior. Guarda el</h4>
+<p>bloc en un fitxer prog02.sql</p>
+<h4>8) Donat el següent procediment, basat en la taula abans creada</h4>
+<p>CREATE OR REPLACE PROCEDURE alta_llibre ( v_num llibres.llibreid%TYPE, v_titol llibres.titol%TYPE default 'sense titol', v_autor llibes.autor%TYPE DEFAULT 'anònim') IS BEGIN</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>INSERT INTO llibres
+VALUES (v_num , v_titol, v_autor);</code></pre>
+</div>
+<p>END crear_llibre; ------ Detecta els errors i corregix-los (compila i executa primer ) Indicar quins de les següents cridades al procediment són correctes i quins incorrectes, en aquest últim cas escriure la crida correcta usant la notació posicional (en els casos que es puga)</p>
+<p>1º. crear_llibre;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>2º. crear_llibre(50);
+3º. crear_llibre('Hackers');
+4º. crear_llibre(50,'Hackers');
+5º. crear_llibre('Hackers', 50);
+6º. crear_llibre('Hackers', 'McClure');
+7º. crear_llibre(50, 'Hackers', 'McClure');
+8º. crear_llibre('Hackers', 50, 'McClure');
+9º. crear_llibre('McClure', ‘Hackers’);
+10º. crear_llibre('McClure', 50);</code></pre>
+</div>
+<h4>9) Desenvolupar una funció que retorne el nombre d'anys complets que hi ha entre</h4>
+<p>dues dates que es passen com a arguments. Fes servir la funció amb un exemple.</p>
+<ul>
+<li>Escriure una funció que, fent ús de la funció anterior retorne els triennis que hi ha entre dues</li>
+</ul>
+<p>dates. (Un trienni són tres anys complets). Fes servir la funció amb un exemple.</p>
+<ul>
+<li>Codificar un procediment que reba una llista de fins a 5 números i visualitze la seua suma.</li>
+</ul>
+<p>Fes servir el procediment amb un exemple.</p>
+<ul>
+<li>Escriure una funció que retorne solament caràcters alfabètics substituint qualsevol altre</li>
+</ul>
+<p>caràcter per blancs a partir d'una cadena que es passarà en la crida. Fes servir la funció amb un exemple.</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD</p>
+<ul>
+<li>Implementar un procediment que reba un import i visualitze el desglossament del canvi en</li>
+</ul>
+<p>unitats monetàries de 1c ,2c, 5c, 10c, 20c, 50c, 1€, 2€, 5€, 10€, 20€, 50€, 100€, 200€, 500€ en ordre invers al que apareixen ací enumerades. Fes servir el procediment amb un exemple.</p>
+<ul>
+<li>Codificar un procediment que permeta esborrar un llibre el número(id) del qual es passarà en la</li>
+</ul>
+<p>cridada al procediment. Nota: El procediment anterior retornarà el missatge &lt;&lt; Procedimiento PL/SQL terminado con éxito &gt;&gt; encara que no existisca el número i, per tant , no s'esborre el llibre. Pots fer que s’informe d’aquesta situació quan es produeixca ?</p>
+<h4>15) Escriure un procediment que modifique el títol d’un llibre. El procediment rebrà com a</h4>
+<p>paràmetres el número del llibre i el títol nou. Nota: L'indicat en la nota de l'exercici anterior es pot aplicar també a aquest.</p>
+<ul>
+<li>Utilitzant el DD ( Diccionari de Dades d’Oracle ) Visualitzar tots els procediments i funcions de</li>
+</ul>
+<p>l'usuari (el que s’està utilitzant per fer els problemes del butlletí) emmagatzemats en la base de dades i la seua situació (vàlid o invalid). &lt;================================================&gt; Documentar el procés Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.8 — Connexió usuaris</p><p dir="ltr" style="text-align: left;">Per realitzar esta pràctica, utilitza la .ova facilitada en classe. (windowsOracle7.ova)<br/></p><p dir="ltr" style="text-align: left;">*Vos passe el text en classe.</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.9 — Procediments i Funcions en PL/SQL (II)</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Crear procediments amb pl/sql (II) Per realitzar esta pràctica, utilitzarem la mv Windows 10 i Oracle SQL Developer Amb usuari system en pdb1, Crear usuari usuari3 (donar-li contrasenya i permisos de connexió i creació de procediments i funcions) Dona-li permisos de crear taules i assigna quota (10M) en el tablespace per defecte.</p>
+<p>Connecta a pdb1 amb l’usuari creat (usuari3), realitza els següents exercicis i practica : 0.- Crea la taula llibres i ompli-la (5 files)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>DROP TABLE llibres;
+CREATE TABLE llibres(</code></pre>
+</div>
+<p>codi NUMBER(6) PRIMARY KEY, titol VARCHAR2(50) NOT NULL, autor VARCHAR2(30), editorial VARCHAR2(40), preu number(8,2)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>);
+insert into llibres values (1,'Bases de datos relacionales','Mota','Pearson'’,50);
+insert into llibres values (2 ,'El lenguaje de programacion C’,’Kernigan’,’Prentice Hall’,60);
+insert into llibres values (3 ,'Fundamentos de JAVA’,’Schildt’,’Mc GrawHill’,55);
+insert into llibres values (4 ,'Redes de Computadoras’,’Kurose’,’Pearson’,70);
+insert into llibres values (5 ,'Sistemas Operativos’,’Tanenbaum’,’Prentice Hall’,60);
+insert into llibres values (6 ,'Multitenant for Beginners','Kumar','Adison',12);
+insert into llibres values (7 ,'OSINT para analistas','Yaiza','Adison',27);
+insert into llibres values (8 ,'La revolucion cuantica','Alberto','Sinequanon',12);</code></pre>
+</div>
+<p>1)Escriure un procediment(nom es_parell) que reba un número i visualitze si es parell o imparell. Ajuda: funció mod(x) torna la resta de la divisió. 2)Escriure un procediment(nom son_divisibles) que reba dos números i visualitze si un es divisible per l’altre. Ajuda: funció mod(x) torna el residu de la divisió.</p>
+<ul>
+<li>Escriure un procediment(nom major_de_tres) que reba tres números i visualitze el major.</li>
+</ul>
+<p>Ajuda: sentència IF anidada</p>
+<ul>
+<li>Escriure un procediment(nom ordena_3num) que reba tres números i els visualitze ordenats de</li>
+</ul>
+<p>major a menor. Ajuda: sentència IF anidada</p>
+<ul>
+<li>Escriure una funció(nom calcula_irpf) que, donat un sou, un núm de fills menors , calcule irpf</li>
+</ul>
+<p>( amb reducció ) , sabent que irpf=15% i cada fill (max 5 ) redueix un 10% de la quota.</p>
+<p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD</p>
+<h4>6) Escriure una funció(nom notaenlletra) que, donat una qualificació, la</h4>
+<p>torne en lletres segons la taula següent: &lt;5 No aprovat &gt;=5 , &lt;6 Aprovat &gt;=6 , &lt;7 Bé &gt;=7 , &lt;9 Notable &gt;=9 , &lt;=10 Excel·lent Ajuda: sentència IF o CASE</p>
+<ul>
+<li>Escriure una funció(nom capicua) que, donat una número, torne si es cap-i-cua (true, false)</li>
+</ul>
+<p>Ajuda: sentència de bucle</p>
+<h4>8) Escriure un procediment(nom mostra_imparells) que, donat una número, mostre tots el</h4>
+<p>imparells de l’1 al N. Ajuda: sentència de bucle</p>
+<ul>
+<li>Escriure un procediment(nom escriu_taula) que, donat una número (1-10) , mostre la seua taula</li>
+</ul>
+<p>de multiplicar. Ajuda: sentència de bucle</p>
+<ul>
+<li>Escriure un procediment(nom dibuixaQuadrat) que, donat un número N dibuixe un quadrat de</li>
+</ul>
+<p>costat N utilitzant * (Ajuda: sentència de bucle)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Exemple: per a n=4 ==&gt;    execute dibuixaQuadrat(4);</code></pre>
+</div>
+<ul>
+<li>* * *</li>
+<li>* * *</li>
+<li>* * *</li>
+<li>* * *</li>
+</ul></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.10 — Funcions en Diccionari de Dades</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Butlletí repàs 80</p>
+<h3>1. Fes una funció (nom: numTriggers )que torne quants triggers té (pertanyen</h3>
+<ul>
+<li>un usuari</li>
+</ul>
+<h3>2. Fes una funció (nom: numTriggersActius) que torne quants triggers actius</h3>
+<p>te la BD actual</p>
+<h3>3. Fes un procediment (nom: escriuTriggersBiE) que escriga tots els triggers</h3>
+<p>de tipus BEFORE que estiguen actius (ENABLED)</p>
+<h3>4. Fes una funció (nom: numTaules) que torne quantes taules te un usuari</h3>
+<h3>5. Fes un procediment (nom: escriuUsuarisRecents) que escriga els usuaris</h3>
+<p>creats des de fa una setmana</p>
+<h3>6. Fes un procediment (nom: esborraTau) al qual se li passe un usuari, i</h3>
+<p>escriga totes les DDL d’esborrar les seues taules.</p>
+<h3>7. Fes un procediment (nom: arrancaPDBs) que, des de la cdb$root, pose en</h3>
+<p>estat read/write totes les pdbs que no ho estiguen.</p>
+<h3>8. Fes un procediment (nom: refesInd) al qual se li passe un usuari, i</h3>
+<p>escriga totes les DDL de reconstruir tots els index de les seues taules.</p>
+<h3>9. Fes un procediment (nom: ampliaA50) al qual se li passe una taula, i</h3>
+<p>amplie totes les columnes de la taula del tipus varchar2, a 50. Ajuda: Taules de DD. dba_triggers dba_tables dba_tab_columns dba_indexes dba_users dba_sys_privs dba_role_privs dba_directories dba_sequences dba_tablespaces dba_data_files TIPS: Pots utilitzar funcions predefinides de PL/SQL round( n) trunc( n) mod(n,m ) floor(n ) Ceil(n ) Length( s) Lower(s ) Upper(s ) Ascii(s ) Chr(n ) Substr(s,n [,l]) trim(s) instr(c,s) || initcap(s) replace(s,s1,s2) Data2 – data1 : num de dies entre les dos dates :: Data1 + num : data de ‘num’ de dies més que Data1</p></div>
+<div class="admonition exercise"><p class="admonition-title">✍️ Activitat Pràctica 10.11 — Triggers</p><p>CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD BUTLLETÍ TRIGGERS</p>
+<h3>0. Crea un usuari (usuari4) amb permisos per fer les operacions</h3>
+<p>necessàries d’esta pràctica. Connecta amb l’usuari. Crea les taules EMP, ALUMNES, NOTES (esquema de baix) i pobla-les</p>
+<ul>
+<li>Fes un trigger que només permeta als venedors (CARREC=VENEDOR) tindre comissions.</li>
+</ul>
+<h3>2. Registrar totes les operacions realitzades per l’usuari BERNAT sobre la taula EMP, en</h3>
+<p>una taula anomenada AUDIT_EMP on es guarde: usuari, data i tipus d'operació.</p>
+<h3>3. Fes un trigger que controle que els sous estan en els següents rangs</h3>
+<p>AUXILIAR: 800 – 1100 ANALISTA: 1200 – 1600 CAP:1800 – 2000 ((Si un empleat té uns altres al seu càrrec o el seu CÀRREC no és un dels anteriors, no s'apliquen els límits.))</p>
+<ul>
+<li>JOAN treballa en una empresa multinacional, amb delegacions en molts pobles.</li>
+</ul>
+<p>JOAN es el cap de la delegació de SUECA. Fes un trigger que impedisca a l'usuari JOAN que canvie el sou dels empleats que treballen fora de SUECA.</p>
+<h3>5. Fes un trigger que puge un 10% el sou als empleats quan canvia la localitat on</h3>
+<p>treballen.</p>
+<h3>6. Dissenya un trigger que impedisca la introducció de registres en la taula Alumnes si</h3>
+<p>contenen algun caràcter numèric o algun caràcter de puntuació en el camp Apenom. Taules EMP DNI (pk) NOMCOMPLET NO NULL ADRESS CITY CP NSS CARREC NO NULL SOU_MES NO NULL SOU_EXTRA NO NULL COMISSIO NO NULL POB_TREBALL NO NULL CAP (fk , dni-&gt;emp) ALUMNES NIA (pk) APENOM ADRESS CITY CP TELEF EMAIL NOTA_MITJANA NOTES NIA (fk, nia-&gt;alumnes) MODUL NOTA (pk) NIA , MODUL</p></div>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut09/ut09actividades.html">⬅️ ✍️ Activitats pràctiques UT9</a>
+<a class="page-nav-btn" href="../ut10/ut1001.html">10.1 Dates en Oracle ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

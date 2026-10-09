@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>3.1 Usuaris i permisos — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&amp;display=fallback" rel="stylesheet"/>
+<style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 1.95rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.42rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.2rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning { border-left-color: #ff9100; background-color: #fffbf0; }
+    .admonition.warning .admonition-title { color: #b75e00; background-color: #fff3d6; }
+    .admonition.tip { border-left-color: #00bfa5; background-color: #f0faf8; }
+    .admonition.tip .admonition-title { color: #004d40; background-color: #e0f5f2; }
+    .admonition.exercise { border-left-color: #00c853; background-color: #f2faf4; }
+    .admonition.exercise .admonition-title { color: #1b5e20; background-color: #e2f7e7; }
+    .admonition.danger { border-left-color: #ff1744; background-color: #fff5f7; }
+    .admonition.danger .admonition-title { color: #b71c1c; background-color: #ffe0e6; }
+    [data-theme="dark"] .admonition.warning,
+    [data-theme="dark"] .admonition.tip,
+    [data-theme="dark"] .admonition.exercise,
+    [data-theme="dark"] .admonition.danger { background-color: #0f172a; }
+    [data-theme="dark"] .admonition.warning .admonition-title,
+    [data-theme="dark"] .admonition.tip .admonition-title,
+    [data-theme="dark"] .admonition.exercise .admonition-title,
+    [data-theme="dark"] .admonition.danger .admonition-title { background-color: #1e293b; color: #f8fafc; }
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots { display: flex; gap: 6px; align-items: center; width: 65px; }
+    .terminal-dots .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions { display: flex; align-items: center; gap: 8px; }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .terminal-box code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover { background: var(--code-bg); text-decoration: none; }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+<div class="brand">
+<span>🗄️ Administració de Sistemes Gestors de Bases de Dades — 2n ASIX · Grau Superior</span>
+<a href="../index.html">📚 Índex del Mòdul</a>
+<a href="../../../index.html">🗂️ Biblioteca Cicles</a>
+<a href="../../../../">🏠 Portal Docent</a>
+</div>
+<div class="actions">
+<button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+</div>
+</header>
+<div class="layout">
+<aside class="sidebar">
+<input class="sidebar-search" oninput="filterSidebar(this)" placeholder="🔍 Filtrar apartats..." type="text"/>
+<ul><li><a href="../index.html">🏠 <strong>Inici Administració de Sistemes Gestors de Bases de Dades</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UT0 — Unitat Didàctica 0</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut00/index.html">📘 UT0 Completa (1 pàgina)</a></li>
+<li><a href="../ut00/ut0001.html">0.1 Presentació Mòdul ASGBD</a></li>
+<li><a href="../ut00/ut0002.html">0.2 Com fer un treball de classe</a></li>
+<li><a href="../ut00/ut0003.html">0.3 Com fer un treball de classe (conclusions)</a></li>
+<li><a href="../ut00/ut0004.html">0.4 Beques OpenWebinars</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT1 — Instal·lació d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut01/index.html">📘 UT1 Completa (1 pàgina)</a></li>
+<li><a href="../ut01/ut0101.html">1.1 Preparació de l'entorn</a></li>
+<li><a href="../ut01/ut0102.html">1.2 Instal·lació d'un SGBD</a></li>
+<li><a href="../ut01/ut0103.html">1.3 Videos d'instal·lació</a></li>
+<li><a href="../ut01/ut0104.html">1.4 Primers passos. Ordres bàsiques</a></li>
+<li><a href="../ut01/ut0105.html">1.5 Arquitectura BBDD's en Oracle</a></li>
+<li><a href="../ut01/ut01actividades.html">✍️ Activitats pràctiques UT1</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT2 — Configuració d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut02/index.html">📘 UT2 Completa (1 pàgina)</a></li>
+<li><a href="../ut02/ut0201.html">2.1 Configuració d'un SGBD</a></li>
+<li><a href="../ut02/ut0202.html">2.2 Tablespaces i datafiles</a></li>
+<li><a href="../ut02/ut0203.html">2.3 Us d'SQL*Plus</a></li>
+<li><a href="../ut02/ut0204.html">2.4 Solucions errors de connexió amb SQLDeveloper</a></li>
+<li><a href="../ut02/ut0205.html">2.5 primers pasos - sol</a></li>
+<li><a href="../ut02/ut02actividades.html">✍️ Activitats pràctiques UT2</a></li>
+</ul>
+</details>
+<details class="nav-unit" open="">
+<summary>UT3 — Usuaris i permisos. Seguretat</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut03/index.html">📘 UT3 Completa (1 pàgina)</a></li>
+<li><a class="active" href="../ut03/ut0301.html">3.1 Usuaris i permisos</a></li>
+<li><a href="../ut03/ut0302.html">3.2 Connectar a SGBD Oracle des d'altra màquina</a></li>
+<li><a href="../ut03/ut0303.html">3.3 Usuaris NO admin en Windows</a></li>
+<li><a href="../ut03/ut0304.html">3.4 Permisos d'Update i Delete + Select</a></li>
+<li><a href="../ut03/ut0305.html">3.5 Seguretat en un SGBD</a></li>
+<li><a href="../ut03/ut03actividades.html">✍️ Activitats pràctiques UT3</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT4 — Primera avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut04/index.html">📘 UT4 Completa (1 pàgina)</a></li>
+<li><a href="../ut04/ut0401.html">4.1 Continguts i Recursos</a></li>
+<li><a href="../ut04/ut04actividades.html">✍️ Activitats pràctiques UT4</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT5 — Automatització de tasques</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut05/index.html">📘 UT5 Completa (1 pàgina)</a></li>
+<li><a href="../ut05/ut0501.html">5.1 Enquesta valoració docent. 1er trimestre</a></li>
+<li><a href="../ut05/ut0502.html">5.2 Repàs: PL/SQL</a></li>
+<li><a href="../ut05/ut0503.html">5.3 Repàs: PL/SQL (II)</a></li>
+<li><a href="../ut05/ut0504.html">5.4 Repàs: PL/SQL (II) _ SOLUCIONS</a></li>
+<li><a href="../ut05/ut0505.html">5.5 Automatització de tasques</a></li>
+<li><a href="../ut05/ut0506.html">5.6 Butlletí procediments i funcions</a></li>
+<li><a href="../ut05/ut0507.html">5.7 Butlletí triggers</a></li>
+<li><a href="../ut05/ut0508.html">5.8 Solucions a pl/sql</a></li>
+<li><a href="../ut05/ut05actividades.html">✍️ Activitats pràctiques UT5</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT6 — Optimització de l'SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut06/index.html">📘 UT6 Completa (1 pàgina)</a></li>
+<li><a href="../ut06/ut0601.html">6.1 Optimització de l'SGBD</a></li>
+<li><a href="../ut06/ut06actividades.html">✍️ Activitats pràctiques UT6</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT7 — Disponibilitat d'un SGBD</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut07/index.html">📘 UT7 Completa (1 pàgina)</a></li>
+<li><a href="../ut07/ut0701.html">7.1 Disponibilitat d'un SGBD</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT8 — Segona Avaluació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut08/index.html">📘 UT8 Completa (1 pàgina)</a></li>
+<li><a href="../ut08/ut0801.html">8.1 Enquesta valoració docent. 2on trimestre</a></li>
+<li><a href="../ut08/ut08actividades.html">✍️ Activitats pràctiques UT8</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT9 — Convocatoria Ordinaria</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut09/index.html">📘 UT9 Completa (1 pàgina)</a></li>
+<li><a href="../ut09/ut0901.html">9.1 Continguts i Recursos</a></li>
+<li><a href="../ut09/ut09actividades.html">✍️ Activitats pràctiques UT9</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT10 — Programa de recuperació</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut10/index.html">📘 UT10 Completa (1 pàgina)</a></li>
+<li><a href="../ut10/ut1001.html">10.1 Dates en Oracle</a></li>
+<li><a href="../ut10/ut10actividades.html">✍️ Activitats pràctiques UT10</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UT11 — Convocatòria extraordinaria ASGBD - curs</summary>
+<ul>
+<li><a class="unit-full-link" href="../ut11/index.html">📘 UT11 Completa (1 pàgina)</a></li>
+<li><a href="../ut11/ut1101.html">11.1 Continguts i Recursos</a></li>
+<li><a href="../ut11/ut11actividades.html">✍️ Activitats pràctiques UT11</a></li>
+</ul>
+</details>
+<ul><li><a href="../references.html">📂 <strong>Índex de Documents i Recursos</strong></a></li></ul>
+</aside>
+<main class="content">
+<span class="up-badge">2n ASIX · Grau Superior · UT3 — Usuaris i permisos. Seguretat</span>
+<h1>3.1 Usuaris i permisos</h1>
+
+<h3>UNITAT 03 Gestió d’usuaris i permisos. Seguretat</h3>
+<p>Gestió d’usuaris i permisos</p>
+
+
+<p>Definir i eliminar comptes d'usuari. -Crear sinònims de taules i vistes. -Identificar els privilegis sobre les bases de dades i els seus elements. -Agrupar i desagrupar privilegis. -Assignar i eliminar privilegis a usuaris. -Assignar i eliminar grups de privilegis a usuaris.</p>
+<p>Crear vistes personalitzades per a cada tipus d'usuari. -Garantir el compliment dels requisits de seguretat.</p>
+
+
+<p>Usuaris Permisos Grups / Rols Quotes Perfils Vistes Esquemes / Sinònims</p>
+
+
+<p>Seguretat Control d’accés Identificació Autenticació Permisos Autenticitat No repudi + Autorització Comptabilitat</p>
+
+
+<p>Usuaris Identifica a un actor físic o digital que ha de realitzar accions en la BBDD. Un usuari necessita una contrasenya per garantir autentificació Accions amb usuaris ✔Alta d’usuaris ✔Modificació d’usuaris ✔Consulta d’usuaris ✔Baixa d’usuaris ✔Boquejar / desbloquejar usuaris ✔Forçar a usuari a canviar contrasenya També es gestiona</p>
+<p>Comptabilitat i No repudi</p>
+
+
+<p>Permisos / privilegis De sistema: Connectar Crear objectes Consultar Realitzar tasques d’Administració Sobre objectes: SELECT, INSERT, UPDATE, DELETE ALTER EXECUTE INDEX ✔Permisos de sistema ✔Permisos sobre objectes Defineixen que pot fer o que no pot fer un usuari S’utilitzen per garantir confidencialitat</p>
+
+
+<p>Permisos / privilegis ✔Permisos de sistema ✔Permisos sobre objectes Accions amb privilegis ✔Donar privilegi a usuari ✔Llevar privilegi a usuari ✔Permetre propagar privilegi a usuari</p>
+
+
+<p>Rols Un rol de treball defineix la funció en el negoci d'un usuari com, per exemple, Vicepresident de vendes, Analista de recursos humans o Responsable de compres També podem definir un rol com un conjunt de privilegis Un rol pot abastar diversos usuaris Un usuari por tindre diversos rols Un usuari por canviar de rol Els rols faciliten molt el treball del DBA e.g.</p>
+
+
+<p>Rols Accions amb rols ✔Crear ROL ✔Esborrar ROL ✔Assignar privilegi a ROL / Llevar privilegi a ROL ✔Assignar ROL a usuari / Llevar ROL a usuari ✔Assignar ROL a altre ROL / Llevar ROL a altre ROL ✔Activar / desactivar ROL ✔Consultar ROL ✔Consultar assignacions de ROLs (privilegis i rols)</p>
+
+
+<p>Rols Per facilitar l’administració, els SGBD solen disposar d’alguns rols predefinits -DBA -Manteniment -Gestor BD -Backup -etc En ORACLE estan els rols CONNECT , RESOURCE i DBA No confondre amb els privilegis SYSDBA i SYSOPER, que no son ROLS</p>
+
+
+<p>Usuaris, Permisos, Rols, Perfils, Vistes Tots els usuaris, rols i permisos, quotes, vistes, etc. que creem seran objectes del SGBD pel que s'emmagatzemaren en el diccionari de dades i podran ser consultats amb posterioritat per a la correcta administració del SGBD, comprovació, operació, etc.</p>
+
+
+<p>Quotes i Perfils Els perfils permeten especificar dos tipus de restriccions sobre usuaris -Limitacions d’ús de recursos (cpu, quotes de disc, connexions, etc.) -Característiques que deuen complir les contrasenyes per garantir la seguretat</p>
+
+
+<p>Vistes Una vista és una consulta emmagatzemada a la qual se li assigna un nom a fi d'utilitzar-la tantes vegades com es desitge. Una vista no conté dades sinó la instrucció SELECT necessària per a crear la vista, això assegura que les dades siguen coherents en utilitzar les dades emmagatzemades en les taules.</p>
+<p>Les vistes s'empren per a: -Realitzar consultes complexes més fàcilment, -Proporcionar taules amb dades resultants de formatar o realitzar càlculs sobre les dades originals -Proporcionar formes personalitzades i més comprensibles de les dades -Ocultar l'emmagatzematge intrínsec de la base de dades i aconseguir una major independència de les dades respecte a la resta d'elements de la base de dades.</p>
+<p>Ser utilitzades com a cursors de dades en els llenguatges procedimentals (com PL/SQL) -Restringir l'accés a les dades originals</p>
+
+
+<p>Vistes Tipus de vistes</p>
+<ul>
+<li>Vistes horitzontals .....</li>
+<li>Vistes verticals .....................................</li>
+<li>Vistes mixtes ....................................................................</li>
+</ul>
+<p>CREATE [OR REPLACE] VIEW nom_vista AS SELECT ..... ; DROP VIEW nom_vista ;</p>
+<p>Usuaris i permisos en ORACLE .........................................................................................</p>
+
+
+<p>Usuaris Alta Usuaris</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE USER svf IDENTIFIED BY password ;   en oracle
+     (els usuaris es creen sense privilegis.....)</code></pre>
+</div>
+<p>Modificació Usuaris ALTER USER svf IDENTIFIED BY password ; en oracle Baixa Usuaris DROP USER svf ; en oracle Consulta Usuaris (DD)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select * from DBA_USERS;</code></pre>
+</div>
+<p>Sols poden crear usuaris els administradors O un usuari amb permisos especials dba_users</p>
+
+
+<p>Usuaris en ORACLE Oracle permet crear USUARIS propis amb credencials emmagatzemades en el SGBD o utilitzar USUARIS externs (LDAP, Kerberos o Radius). Diferència: Autenticació. Arquitectura Multitenant de Oracle. Contenidor principal CDB que conté: CDB&amp;ROOT PDB1 (Pluggable Data Base) PDB2 (Pluggable Data Base) PDB3 (Pluggable Data Base) ....................</p>
+
+
+<p>Usuaris en ORACLE Dins del CDB hi han dos tipus d’usuaris</p>
+<ul>
+<li>Usuaris locals ( als respectius PDBs)</li>
+</ul>
+<p>SQL&gt; CONNECT sys@loclahost/PDB1 as SYSDBA SQL&gt; create user usuari1 identified by ‘1234’; SQL&gt; CONNECT sys@loclahost/PDB2 as SYSDBA SQL&gt; create user usuari1 identified by ‘1234’;</p>
+<ul>
+<li>Usuaris comuns (a totes les BD’s) built-in sys, system ...</li>
+</ul>
+<p>sqlplus system@loclahost/ORCL Es poden crear usuaris comuns a totes les pdbs amb el prefix C##</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SQL&gt; create user C##&lt;nom-usuari-comu&gt; identified by ‘1234’ CONTAINER=ALL;</code></pre>
+</div>
+<p>Com saber el prefixe de l’usuari comú (estant connectats al contenidor principal) SQL&gt; show parameter common oracle recomana NO utilitzar-los en producció!!</p>
+
+
+<p>Usuaris en ORACLE Usuaris predefinits SYS -&gt; Pot fer-ho tot. No es recomana utilitzar-lo si no és necessari i no es recomana crear objectes en el seu esquema. SYSTEM -&gt; Pot fer-ho tot menys Actualitzar BD i funcions de Backup i Restore. No es recomana utilitzar-lo si no és necessari i no es recomana crear objectes en el seu esquema.</p>
+<p>SYSBACKUP -&gt; Usuari amb permisos de Backup i Restore</p>
+
+
+<p>Usuaris en ORACLE Connexió d’usuaris nous a la bbdd Abans de connectar s’ha de donar permís de connexió a l’usuari Des de sys en pdb1 -&gt; SQL&gt; grant create session to usuari1; Connectar Indicant la contrasenya C:\Users\usuari1&gt; sqlplus usuari1/1234@localhost/pdb1 SQL&gt; CONNECT usuari1/1234@loclahost/PDB1 ; Connectar No indicant la contrasenya, després la demana C:\Users\usuari1&gt; sqlplus usuari1@localhost/pdb1 SQL&gt; CONNECT usuari1@loclahost/PDB1 ; L’usuari ja pot connectar, però de moment, res més ...</p>
+<p>usuari1 ha d’estar creat i existir</p>
+
+
+<p>Usuaris en ORACLE Sintaxis de create user SQL&gt; CREATE USER sidney IDENTIFIED BY contrasenya DEFAULT TABLESPACE example QUOTA 10M ON example TEMPORARY TABLESPACE temp QUOTA 5M ON system PROFILE app_user ; ALTER USER sidney IDENTIFIED BY second_2nd_pwd DEFAULT TABLESPACE example2 QUOTA UNLIMITED ON example2; DROP USER sidney [CASCADE]; * oracle no esborra usuaris connectats Si no s'especifica un tablespace, oracle li assignarà el tablespace USERS Un esquema "schema" d’Oracle conté tots els objectes creats per un usuari de base de dades específic. Quan es crea un usuari, es crea automàticament un esquema amb el seu nom Sense quota !!</p>
+
+
+<p>Usuaris en ORACLE Crear un usuari operatiu Des de sys SQL&gt; CREATE USER enric IDENTIFIED BY secret; SQL&gt; GRANT CONNECT, RESOURCE TO enric; ===================================== SQL&gt; ALTER USER enric QUOTA 20M ON users; o SQL&gt; ALTER USER enric QUOTA UNLIMITED ON users; ==&gt; L’usuari està preparat per connectar i crear objectes en el seu esquema Es el TABLESPACE per defecte RESOURCE</p>
+<p>CREATE TYPE</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE</code></pre>
+</div>
+<p>CREATE CLUSTER</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TRIGGER</code></pre>
+</div>
+<p>CREATE OPERATOR CREATE SEQUENCE CREATE INDEXTYPE</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE PROCEDURE</code></pre>
+</div>
+
+
+<p>Usuaris en ORACLE Crear un usuari operatiu, recomanable utilitzar una tablespace diferent. Des de sys SQL&gt; CREATE USER enric IDENTIFIED BY secret DEFAULT TABLESPACE tab_app QUOTA UNLIMITED ON tab_app PASSWORD EXPIRE ; SQL&gt; GRANT CONNECT, RESOURCE TO enric; Utilitzar un (o més) TABLESPACE per cada aplicació Forçar a l’usuari a canviar la password en la primera connexió</p>
+
+
+<p>Usuaris en ORACLE Altres possibilitats Des de l’usuari vicent ALTER USER vicent IDENTIFIED BY novapass REPLACE passvella; Des de l’usuari sys ALTER USER vicent PASSWORD EXPIRE ; ALTER USER vicent ACCOUNT LOCK; ALTER USER vicent ACCOUNT UNLOCK;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SELECT USERNAME, ACCOUNT_STATUS FROM DBA_USERS WHERE USERNAME = 'VICENT';</code></pre>
+</div>
+<p>Un usuari no administrador sols pot canviar la seua contrasenya i sols d’esta manera Amb: password verify function dba_users</p>
+
+
+<p>Usuaris en ORACLE DD en Usuaris describe dba_users</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select * from dba_users;        *vore usuaris
+select user from dual;
+select username, password, default_tablespace, created from dba_users;</code></pre>
+</div>
+<p>dba_users dual</p>
+
+
+<p>Permisos / privilegis Concedir permisos / privilegis (de sistema)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT privilegi TO user [WITH ADMIN OPTION];   en oracle</code></pre>
+</div>
+<p>(sobre objectes)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT privilegi ON prop.objecte TO user [WITH GRANT OPTION];</code></pre>
+</div>
+<p>Revocar permisos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>REVOKE privilegi FROM user;   en oracle
+REVOKE privilegi ON prop.objecte FROM user;</code></pre>
+</div>
+<p>[WITH ADMIN OPTION] i [WITH GRANT OPTION] vol dir que el permís que rep l'usuari, eixe usuari pot concedir-lo a un altre usuari El [WITH ADMIN OPTION] sols s’utilitza per a privilegis de sistema (no de objectes) ✔Permisos de sistema ✔Permisos sobre objectes</p>
+
+
+<p>Permisos en ORACLE Permisos de sistema CREATE SESSION (connectar)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLE, CREATE ANY TABLE</code></pre>
+</div>
+<p>= amb ALTER... DROP...</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE USER  DROP USER</code></pre>
+</div>
+<p>SELECT ANY TABLE, UPDATE ANY TABLE, INSERT ANY TABLE .....</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE TABLESPACES</code></pre>
+</div>
+<p>ALL PRIVILEGES..... més [usuario | rol | PUBLIC] [WITH ADMIN OPTION] ✔Permisos de sistema ✔Permisos sobre objectes Exemple</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>grant create table, create view</code></pre>
+</div>
+<p>to joan, anna;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT privilegio1 [,privilegio2[,</code></pre>
+</div>
+<p>…]] TO [usuario | rol | PUBLIC] [WITH ADMIN OPTION];</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>REVOKE privilegio1 [,privilegio2 [,</code></pre>
+</div>
+<p>…]] FROM usuario; PRIVILEGES en ORACLE</p>
+
+
+<p>Permisos en ORACLE ✔Permisos de sistema ✔Permisos sobre objectes Exemple</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>create user joan identified by 1234 quota unlimited on users;
+grant connect to joan;
+grant create table to joan;</code></pre>
+</div>
+<ul>
+<li>Joan pot crear taules en el seu SCHEMA</li>
+<li>A més a més, joan podrà inserir, modificar, esborrar files de dades de les seues taules.</li>
+<li>A més a més, joan podrà modificar la estructura de les seues taules</li>
+<li>Joan també pot esborrar la taula (drop)</li>
+</ul>
+<p>Però Joan no pot ..crear vistes,( ni modificar ni esborrar), Ni crear index, ni roles, ni usuaris, etc... PRIVILEGES en ORACLE Quan es crea un usuari, al mateix temps es crea un SCHEMA amb el seu nom</p>
+
+
+<p>Permisos en ORACLE Permisos sobre objectes SELECT INSERT UPDATE DELETE EXECUTE INDEX ALL.................més [WITH GRANT OPTION] Igual que els usuaris, els permisos poden ser comuns i locals, segons ens connectem i ho indiquem amb CONTAINER=ALL, o CONTAINER=CURRENT (&lt;-per defecte) ✔ Permisos de sistema ✔ Permisos sobre objectes Exemple SQL&gt; GRANT SELECT,INSERT,UPDATE,DELETE ON venta TO mgarcia WITH GRANT OPTION;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT {privilegio [(listaColumnas)] [,privilegio</code></pre>
+</div>
+<p>[(listaColumnas)] [,…]] | ALL [PRIVILEGES]} ON [esquema.]objeto TO {usuario | rol | PUBLIC} [,{usuario | rol | PUBLIC} [,…]] [WITH GRANT OPTION]</p>
+
+
+<p>Permisos en ORACLE ✔ Permisos de sistema ✔ Permisos sobre objectes Exemple (estem connectats com joan)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>create table ejemplo ( id number primary key, nombre varchar2(40) );</code></pre>
+</div>
+<p>La taula ejemplo pertany a joan I joan li pot donar permís a pere per vore, inserir, modificar o eborrar files.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>grant select,insert,update,delete on ejemplo to pere;</code></pre>
+</div>
+<p>O si estem connectats com System o SYS podria fer</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>grant select,insert,update,delete on joan.ejemplo to pere;</code></pre>
+</div>
+
+
+<p>Permisos en ORACLE DD en Permisos</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select * from dba_sys_privs where grantee = 'ANNA';  *vore privilegis d’un usuari
+select * FROM USER_SYS_PRIVS;   *de sistema
+SELECT * FROM USER_TAB_PRIVS;   *sobre objectes
+select grantee, privilege from dba_sys_privs where GRANTEE='ANNA';</code></pre>
+</div>
+<p>✔ Permisos de sistema ✔ Permisos sobre objectes permisos dba_sys_privs user_sys_privs user_tab_privs</p>
+
+
+<p>Rols Crear rol CREATE ROLE nom_rol ; en oracle Esborrar rol DROP ROLE nom_rol ; Activar / Desactivar rols SET ROLE {nom_rol} | ALL [EXCEPT {rol}]} | NONE ; Consultar Rols definits (DD)</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select role from dba_roles;</code></pre>
+</div>
+<p>dba_roles</p>
+
+
+<p>Rols Assignar privilegis a un rol</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT privilegis [ON obj] TO nom_rol  ;   en oracle</code></pre>
+</div>
+<p>[WITH GRANT OPTION] Revocar privilegis a un rol</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>REVOKE privilegis FROM nom_rol;</code></pre>
+</div>
+<p>Assignar un rol a un usuari o a altre rol</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>GRANT nom_rol TO { usuari | nom_rol };
+REVOKE DROP ANY TABLE  FROM hr, oe;</code></pre>
+</div>
+<p>Els usuaris hr i oe no poden borrar taules en esquemes que no siguen els seus.</p>
+
+
+<p>Rols DD en Rols</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Select * from dba_roles;        *vore rols
+SELECT * FROM USER_ROLE_PRIVS;  *rols assignats a usuaris
+select * from dba_role_privs where granted_role='DBA'
+select * from dba_sys_privs where grantee = 'RESOURCE';  *vore privilegis d’un rol
+select * from role_sys_privs where role = 'RESOURCE';    *vore privilegis d’un rol</code></pre>
+</div>
+<p>Consultar els rols assignats a un rol</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select role, granted_role from role_role_privs;</code></pre>
+</div>
+<p>dba_roles dba_role_privs dba_sys_privs role_sys_privs role_role_privs</p>
+
+
+<p>Rols en ORACLE Dins del CDB hi han dos tipus de rols</p>
+<ul>
+<li>Rols locals ( als respectius PDBs)</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SQL&gt; create rol &lt;nomrol&gt; [CONTAINER=CURRENT];</code></pre>
+</div>
+<ul>
+<li>Rols comuns (a totes les BD’s)</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>create rol C##&lt;nomrol&gt;  CONTAINER=ALL;
+grant &lt;priv&gt; to C##&lt;nomrol&gt; CONTAINER=ALL;
+revoke &lt;priv&gt; from C##&lt;nomrol&gt;;
+grant &lt;nomrol&gt; to [usuario | nomrol2];
+revoke &lt;nomrol&gt; from [usuario | nomrol2];</code></pre>
+</div>
+<p>drop role &lt;nomrol&gt;; DD</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>select * from dba_roles ;</code></pre>
+</div>
+<p>Use the DROP ROLE statement to remove a role from the database. When you drop a role, Oracle Database revokes it from all users and roles to whom it has been granted and removes it from the database. User sessions in which the role is already enabled are not affected</p>
+
+
+<p>Rols en ORACLE VISTA Que conté DBA_ROLES Muestra todos los roles de la base de datos DBA_ROLES_PRIVS Roles asignados a los usuarios ROLE_ROLE_PRIVS Roles asignados a otros roles DBA_SYS_PRIVS Privilegios de sistema asignados a usuarios y roles ROLE_SYS_PRIVS Privilegios de sistema asignados a roles ROLE_TAB_PRIVS Privilegios de objeto concedidos a roles SESSION_ROLES Roles en activo para el usuario actual</p>
+
+
+<p>Perfils en ORACLE Quan es crea un usuari, se li assigna un perfil per defecte -&gt; DEFAULT</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SQL&gt; select * from dba_profiles where profile=’DEFAULT’;</code></pre>
+</div>
+<p>CREATE PROFILE nom_perfil LIMIT { } ... ; ALTER USER usuari PROFILE nom_perfil; ALTER USER usuari PROFILE DEFAULT; ALTER PROFILE nom_perfil LIMIT {parametro [valor |UNLIMITED] } ; DROP PROFILE nom_perfil [CASCADE]; Specify CASCADE to deassign the profile from any users to whom it is assigned.</p>
+<p>Oracle Database automatically assigns the DEFAULT profile to such users. You must specify this clause to drop a profile that is currently assigned to users</p>
+
+
+<p>Perfils en ORACLE Exemple creació d’un nou perfil SQL&gt; CREATE PROFILE administrador LIMIT SESSIONS_PER_USER 5 CONNECT_TIME 120 IDLE_TIME 30 FAILED_LOGIN_ATTEMPTS 4 PASSWORD_LIFE_TIME 165; SQL&gt; ALTER PROFILE administrador LIMIT PASSWORD_LOCK_TIME 5; SQL&gt; ALTER USER admin PROFILE administrador; *assignació de perfil a usuari Els paràmetres no definits en un perfil, agafaran el valor definit en el perfil DEFAULT</p>
+
+
+<p>Perfils en ORACLE Paràmetres de limitacions de recursos Oracle no porta els límits dels recursos activats per defecte.</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>Hem de activar-los amb:  ALTER SYSTEM SET RESOURCE_LIMIT=TRUE;</code></pre>
+</div>
+<p>SESSIONS PER USER (per defecte unlimited en el perfil DEFAULT) CONNECT_TIME (per defecte unlimited , en minuts en el perfil DEFAULT) IDLE_TIME (per defecte unlimited , en minuts en el perfil DEFAULT) CPU_PER_SESSION , en centèsimes de segon en el perfil DEFAULT) CPU_PER_CALL , en centèsimes de segon en el perfil DEFAULT) LOGICAL_READS_PER_SESSION , en blocs en el perfil DEFAULT) LOGICAL_READS_PER_CALL , en blocs en el perfil DEFAULT) PRIVATE_SGA COMPOSITE_LIMIT</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SQL&gt; select * from dba_profiles where resource_type=’KERNEL’;</code></pre>
+</div>
+<p>dba_profiles</p>
+
+
+<p>Perfils en ORACLE Paràmetres de limitacions de contrasenyes Sols tenen efecte sobre usuaris validats per el sistema gestor (els externs no estan afectats) FAILED_LOGIN_ATTEMPTS (per defecte 10 en el perfil DEFAULT) PASSWORD_LIFE_TIME (per defecte 180 dies en el perfil DEFAULT) PASSWORD_REUSE_TIME (per defecte unlimited en el perfil DEFAULT) PASSWORD_REUSE_MAX (per defecte unlimited en el perfil DEFAULT) PASSWORD_LOCK_TIME (per defecte 1 dia en el perfil DEFAULT) PASSWORD_GRACE_TIME (per defecte 7 dies en el perfil DEFAULT) PASSWORD_VERIFY_FUNCTION (per defecte NULL en el perfil DEFAULT) SQL&gt; select distinct profile from dba_profiles; SQL&gt; select * from dba_profiles order by profile;</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SQL&gt; select * from dba_profiles where resource_type=’PASSWORD’;
+SQL&gt; select * from dba_users where username=’USU1’;</code></pre>
+</div>
+<p>dba_users dba_profiles</p>
+
+
+<p>usuari rol Privilegi de sistema Privilegi sobre objecte perfil dba_users dba_roles user_role_privs dba_sys_privs dba_tab_privs role_role_privs role_tab_privs role_sys_privs dba_profiles dba_users resource_type=’PASSWORD’ resource_type=’KERNEL’ Un usuari sols pot tindre un perfil Un usuari pot tindre molts privilegis Un usuari pot tindre molts rols</p>
+
+
+<p>Esquemes externs És mes potent assignar permisos sobre vistes (usuaris o rols sobre vistes) I limitar(canviar) més tard les vistes Quan necessitem crear una BBDD, el més habitual serà -Crear un usuari propietari -Crear un usuari per cada aplicació que haga d’accedir a les dades (convidats) No s'han de confondre usuaris de bases de dades amb usuaris d'aplicació Si una organització té 100 empleats, no és necessari crear 100 usuaris de base de dades, sinó un usuari que usarà l'aplicació per a connectar-se a la base de dades.</p>
+
+
+<p>Esquemes externs Usarem vistes i sinònims. Avantatges</p>
+<ul>
+<li>Seguretat</li>
+<li>Facilitat d’us</li>
+<li>Homogeneïtat</li>
+</ul>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE VIEW vista_dept_201</code></pre>
+</div>
+<p>AS (SELECT emp_id,name,department,hire_date) FROM empleats</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>WHERE department = 201;</code></pre>
+</div>
+<p>CREATE [OR REPLACE] SYNONYM nom_sinonim FOR esquema.vista ; dba_views</p>
+
+
+<p>Resum D. Dades Usuaris xxx_users Permisos xxx_sys_privs Permisos xxx_tab_privs Rols xxx_roles Rols a usu xxx_role_privs Perfils xxx_profiles Vistes xxx_views Rols de la sessió actual session_roles On xxx = dba all user role Vista auxiliar dual dictionary v$database i database_properties v$pdbs = show pdbs v$parameter v$instance v$session v$sga = show sga xxx_tablespaces o v$tablespace xxx_data_files o v$datafile xxx_free_space v$log v$logfile tabs = xxx_tables xxx_tab_columns</p>
+<p>Usuaris i permisos en PostgreSQL .........................................................................................</p>
+
+
+<p>Usuaris en PostgreSQL Els usuaris, grups i rols són el mateix en PostgreSQL, i l'única diferència és que els usuaris tenen permís per a iniciar sessió de manera predeterminada</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>CREATE USER myuser WITH PASSWORD 'secret_passwd';</code></pre>
+</div>
+<p>== CREATE ROLE myuser WITH LOGIN PASSWORD 'secret_passwd'; Tots els nous usuaris i rols hereten els permisos del rol public</p>
+
+
+<p>Usuaris en PostgreSQL El mètode recomanat per a configurar un control d'accés detallat en PostgreSQL és el següent</p>
+
+
+<p>Usuaris en PostgreSQL Existeix una aplicació en la carpeta de binaris de postgres que es diu createuser. Amb aquest comando podràs crear de manera molt senzilla un nou ROL amb permisos d'accés en la teva base de dades Per a poder crear un usuari (ROL) és necessari tenir permisos de super usuari createuser --interactive nouusuari Connectar</p>
+<p>psql -d facturas -U nouusuari</p>
+
+
+<p>Rols en PostgreSQL (també s’anomenen grups) Vore rols amb Comando: \du \dg</p>
+<div class="terminal-box">
+<div class="terminal-bar">
+<div class="terminal-dots">
+<span class="dot dot-red"></span>
+<span class="dot dot-yellow"></span>
+<span class="dot dot-green"></span>
+</div>
+<div class="terminal-title"> Codi / Comandes</div>
+<div class="terminal-actions">
+<button class="btn-copy" onclick="copyCode(this)" title="Copiar codi">📋 Copiar</button>
+<span class="terminal-lang">SQL</span>
+</div>
+</div>
+<pre><code>SELECT rolname FROM pg_roles;</code></pre>
+</div>
+<p>CREATE ROLE name; DROP ROLE name; «-- rol o grup CREATE ROLE name [ WITH ] LOGIN; «--usuari CREATE ROLE name SUPERUSER; CREATE ROLE name CREATEDB; CREATE ROLE name CREATEROLE; CREATE ROLE name REPLICATION LOGIN; CREATE ROLE name [ ENCRYPTED ] PASSWORD 'string'; ALTER ROLE name PASSWORD 'string' | PASSWORD NULL ; ALTER ROLE name VALID UNTIL 'May 4 12:00:00 2023 +1'; ALTER ROLE name VALID UNTIL 'infinity'; SUPERUSER NOSUPERUSER CREATEDB NOCREATEDB CREATEROLE NOCREATEROLE INHERIT NOINHERIT LOGIN NOLOGIN REPLICATION NOREPLICATION BYPASSRLS NOBYPASSRLS CONNECTION LIMIT connlimit [ ENCRYPTED ] PASSWORD 'password' PASSWORD NULL VALID UNTIL 'timestamp'</p>
+
+
+<p>PERFILS en PostgreSQL Postgres no utilitza este mecanisme SINÒNIMS en PostgreSQL Postgres no utilitza este mecanisme</p>
+<div class="page-nav-footer">
+<a class="page-nav-btn" href="../ut03/index.html">⬅️ 📘 UT3 Completa</a>
+<a class="page-nav-btn" href="../ut03/ut0302.html">3.2 Connectar a SGBD Oracle des d'altra màquina ➡️</a>
+</div>
+</main>
+</div>
+<script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiat';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
