@@ -2,7 +2,7 @@
 
 # UT1 - Introducció als Serveis en Xarxa
 
-## 1. Comprovació de la configuració de xarxa en Linux (Debian / LliureX)
+        ## 1.  Comprovació de la configuració de xarxa en Linux (Debian / LliureX)
 
 Abans de desplegar qualsevol servei de xarxa, és obligatori verificar la interfície i l'adreçament IP de la màquina servidora.
 

@@ -1,24 +1,42 @@
-# 💻 Portal Docent d'Informàtica
+# 💻 Portal Docent d'Informàtica i Comunicacions
 
-Benvinguts al repositori central de documentació tècnica, pràctiques i recursos dels mòduls de Formació Professional.
+Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de laboratori i activitats avaluables:
+
+<div class="module-grid">
+  <div class="module-card smx">
+    <div>
+      <span class="module-badge">2n SMX · Grau Mitjà</span>
+      <h3>🌐 Serveis en Xarxa</h3>
+      <p>Configuració de xarxa, DHCP, DNS, HTTP, transferència FTP/FTPS i accés remot SSH/SFTP en Windows Server i Ubuntu sobre AWS.</p>
+    </div>
+    <a href="./serveis-en-xarxa/" class="module-btn">Entrar a Serveis en Xarxa →</a>
+  </div>
+
+  <div class="module-card prog">
+    <div>
+      <span class="module-badge">DAW / DAM · Grau Superior</span>
+      <h3>☕ Programació (Java)</h3>
+      <p>Desenvolupament d'aplicacions en Java amb VSCode, tipus de dades, estructures de control, POO i col·leccions.</p>
+    </div>
+    <a href="./programacio/" class="module-btn">Entrar a Programació →</a>
+  </div>
+
+  <div class="module-card inter">
+    <div>
+      <span class="module-badge">2n FPB · Informàtica d'Oficina</span>
+      <h3>🚀 Projecte Intermodular</h3>
+      <p>Creació d'una empresa informàtica: identitat corporativa, LibreOffice (Writer, Calc, Impress), PRL, RAEE i Fira Comercial.</p>
+    </div>
+    <a href="./projecte-intermodular/" class="module-btn">Entrar al Projecte →</a>
+  </div>
+</div>
 
 ---
 
-## 📚 Mòduls i Assignatures
+## 🛠️ Eines i Recursos Transversals
 
-Selecciona el teu mòdul per accedir als apunts, guies de laboratori i activitats:
-
-| Mòdul | Cicle | Continguts principals | Accés |
-| :--- | :---: | :--- | :---: |
-| 🌐 **Serveis en Xarxa** | 2n SMX | Configuració de xarxa, DHCP, DNS, HTTP, FTP/FTPS, SSH/SFTP en AWS i encaminament. | [Entrar al mòdul](./serveis-en-xarxa/) |
-| ☕ **Programació** | DAW / DAM | Desenvolupament en Java, algoritmes, POO i estructures de dades. | [Entrar al mòdul](./programacio/) |
-| 🚀 **Projecte Intermodular** | 2n FPB | Creació d'una empresa de serveis informàtics, identitat corporativa, LibreOffice (Writer, Calc, Impress), PRL, RAEE i Fira Comercial. | [Entrar al mòdul](./projecte-intermodular/) |
-
----
-
-## 🛠️ Eines Transversals Recomanades
-
-* **Suite Ofimàtica i Disseny Lliure:** [LibreOffice](https://es.libreoffice.org/) (*Writer, Calc, Impress, Draw*) i [GIMP](https://www.gimp.org/)
-* **Editor de codi:** [Visual Studio Code](https://code.visualstudio.com/) + *Extension Pack for Java*
-* **Control de versions:** [Git](https://git-scm.com/) i [GitHub Education](https://education.github.com/)
-* **Plataforma de lliurament oficial:** [Aules GVA](https://aules.edu.gva.es/fp/)
+| Àmbit | Eina / Plataforma | Descripció i Accés |
+| :--- | :--- | :--- |
+| **Plataforma Oficial** | **Aules GVA (FP)** | Entrega oficial de tasques, qüestionaris i qualificacions: [Obrir Aules FP](https://aules.edu.gva.es/fp/) |
+| **Desenvolupament i Codi** | **VSCode + Git** | [Visual Studio Code](https://code.visualstudio.com/) · [Git SCM](https://git-scm.com/) · [GitHub Education](https://education.github.com/) |
+| **Ofimàtica i Disseny** | **LibreOffice + GIMP** | [LibreOffice Suite](https://es.libreoffice.org/) (*Writer, Calc, Impress, Draw*) · [GIMP](https://www.gimp.org/) |

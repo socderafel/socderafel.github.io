@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="ca" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guia Professorat: Tasques Aules (HTML) — Projecte Intermodular (2n FPB)</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%233f51b5'/%3E%3Cstop offset='100%25' stop-color='%23157878'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23bg)'/%3E%3Cpath d='M16 22 L28 32 L16 42' fill='none' stroke='%23ffffff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='32' y1='42' x2='48' y2='42' stroke='%234ade80' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700%7CRoboto+Mono:400,600&display=fallback">
+  <style>
+    :root {
+      --bg-body: #f5f7fa;
+      --bg-card: #ffffff;
+      --bg-sidebar: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #374151;
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --border: #e5e7eb;
+      --code-bg: #f1f5f9;
+      --header-bg: #1e3a8a;
+      --md-code-font: "Roboto Mono", SFMono-Regular, Consolas, Menlo, monospace;
+    }
+    [data-theme="dark"] {
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-sidebar: #1e293b;
+      --text-main: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --primary: #60a5fa;
+      --primary-dark: #93c5fd;
+      --border: #334155;
+      --code-bg: #0f172a;
+      --header-bg: #0f172a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: "Roboto", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      margin: 0;
+      line-height: 1.65;
+    }
+    header.top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .top-bar .brand {
+      font-weight: 700;
+      font-size: 1.08rem;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .top-bar .brand a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 400;
+    }
+    .top-bar .brand a:hover { text-decoration: underline; color: #fff; }
+    .top-bar .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-toggle {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.84rem;
+      font-weight: 500;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-toggle:hover { background: rgba(255,255,255,0.25); }
+    .layout {
+      max-width: 1380px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    @media (max-width: 980px) {
+      .layout { grid-template-columns: 1fr; }
+      aside.sidebar { position: static; max-height: none; }
+    }
+    aside.sidebar {
+      position: sticky;
+      top: 72px;
+      background: var(--bg-sidebar);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      max-height: calc(100vh - 96px);
+      overflow-y: auto;
+    }
+    .sidebar-search {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 14px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: var(--bg-body);
+      color: var(--text-main);
+      font-size: 0.85rem;
+    }
+    aside.sidebar details.nav-unit {
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    aside.sidebar details.nav-unit summary {
+      cursor: pointer;
+      font-size: 0.83rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--primary);
+      padding: 4px 2px;
+      user-select: none;
+    }
+    aside.sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 6px 0 4px 0;
+    }
+    aside.sidebar li { margin-bottom: 3px; }
+    aside.sidebar a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      display: block;
+      padding: 5px 8px;
+      border-radius: 5px;
+      transition: all 0.15s;
+      line-height: 1.35;
+    }
+    aside.sidebar a:hover, aside.sidebar a.active {
+      background: var(--code-bg);
+      color: var(--primary);
+      font-weight: 600;
+    }
+    aside.sidebar a.unit-full-link {
+      font-weight: 600;
+      color: var(--primary-dark);
+      background: rgba(37, 99, 235, 0.08);
+      margin-bottom: 4px;
+    }
+    main.content {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 42px 52px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      min-width: 0;
+    }
+    @media (max-width: 640px) {
+      main.content { padding: 24px 18px; }
+    }
+    h1 { font-size: 2rem; margin-top: 0; color: var(--text-main); letter-spacing: -0.02em; }
+    h2 {
+      font-size: 1.45rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 8px;
+      margin-top: 2.4rem;
+    }
+    h3 { font-size: 1.15rem; margin-top: 1.6rem; color: var(--text-main); }
+    h4 { font-size: 1rem; margin-top: 1.2rem; color: var(--text-muted); }
+    p, li { color: var(--text-muted); font-size: 0.96rem; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: 0; height: 1px; background: var(--border); margin: 2.2rem 0; }
+    .up-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    [data-theme="dark"] .up-badge {
+      background: #1e3a8a;
+      color: #bfdbfe;
+    }
+    /* Tablas */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.4rem 0;
+      font-size: 0.9rem;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+    th {
+      background-color: var(--code-bg);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    /* Admonitions Material */
+    .admonition, details.admonition {
+      margin: 1.4rem 0;
+      padding: 0 1.2rem 0.7rem 1.2rem;
+      border-left: 4px solid #448aff;
+      border-radius: 6px;
+      background-color: #f0f7ff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    [data-theme="dark"] .admonition, [data-theme="dark"] details.admonition {
+      background-color: #172554;
+    }
+    .admonition-title, details.admonition > summary {
+      font-weight: 700;
+      margin: 0 -1.2rem 0.7rem -1.2rem;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.92rem;
+      color: #0d47a1;
+      background-color: #e3effd;
+      display: block;
+      cursor: pointer;
+    }
+    [data-theme="dark"] .admonition-title, [data-theme="dark"] details.admonition > summary {
+      background-color: #1e3a8a;
+      color: #dbeafe;
+    }
+    .admonition.warning, details.admonition.warning {
+      border-left-color: #ff9100;
+      background-color: #fffbf0;
+    }
+    .admonition.warning .admonition-title, details.admonition.warning > summary {
+      color: #b75e00;
+      background-color: #fff3d6;
+    }
+    .admonition.tip, .admonition.ayuda, details.admonition.tip, details.admonition.ayuda {
+      border-left-color: #00bfa5;
+      background-color: #f0faf8;
+    }
+    .admonition.tip .admonition-title, .admonition.ayuda .admonition-title,
+    details.admonition.tip > summary, details.admonition.ayuda > summary {
+      color: #004d40;
+      background-color: #e0f5f2;
+    }
+    .admonition.exercise, .admonition.question, .admonition.solución,
+    details.admonition.exercise, details.admonition.question, details.admonition.solución {
+      border-left-color: #00c853;
+      background-color: #f2faf4;
+    }
+    .admonition.exercise .admonition-title, .admonition.question .admonition-title, .admonition.solución .admonition-title,
+    details.admonition.exercise > summary, details.admonition.question > summary, details.admonition.solución > summary {
+      color: #1b5e20;
+      background-color: #e2f7e7;
+    }
+    .admonition.danger, details.admonition.danger {
+      border-left-color: #ff1744;
+      background-color: #fff5f7;
+    }
+    .admonition.danger .admonition-title, details.admonition.danger > summary {
+      color: #b71c1c;
+      background-color: #ffe0e6;
+    }
+    [data-theme="dark"] .admonition.warning, [data-theme="dark"] details.admonition.warning,
+    [data-theme="dark"] .admonition.tip, [data-theme="dark"] details.admonition.tip,
+    [data-theme="dark"] .admonition.exercise, [data-theme="dark"] details.admonition.exercise,
+    [data-theme="dark"] .admonition.question, [data-theme="dark"] details.admonition.question,
+    [data-theme="dark"] .admonition.solución, [data-theme="dark"] details.admonition.solución,
+    [data-theme="dark"] .admonition.danger, [data-theme="dark"] details.admonition.danger {
+      background-color: #0f172a;
+    }
+    [data-theme="dark"] .admonition.warning .admonition-title, [data-theme="dark"] details.admonition.warning > summary,
+    [data-theme="dark"] .admonition.tip .admonition-title, [data-theme="dark"] details.admonition.tip > summary,
+    [data-theme="dark"] .admonition.exercise .admonition-title, [data-theme="dark"] details.admonition.exercise > summary,
+    [data-theme="dark"] .admonition.question .admonition-title, [data-theme="dark"] details.admonition.question > summary,
+    [data-theme="dark"] .admonition.solución .admonition-title, [data-theme="dark"] details.admonition.solución > summary,
+    [data-theme="dark"] .admonition.danger .admonition-title, [data-theme="dark"] details.admonition.danger > summary {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    /* Bloques de código tipo Terminal elegante (Formato Pepe) */
+    .terminal-box {
+      background-color: #1e1e2e;
+      border: 1px solid #313244;
+      border-radius: 8px;
+      margin: 1.3rem 0;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+    .terminal-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #181825;
+      padding: 8px 14px;
+      border-bottom: 1px solid #313244;
+      user-select: none;
+    }
+    .terminal-dots {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      width: 65px;
+    }
+    .terminal-dots .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot-red { background-color: #ff5f56; }
+    .dot-yellow { background-color: #ffbd2e; }
+    .dot-green { background-color: #27c93f; }
+    .terminal-title {
+      font-family: var(--md-code-font);
+      color: #cdd6f4;
+      font-size: 0.78rem;
+      font-weight: 500;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-copy {
+      background: #313244;
+      color: #cdd6f4;
+      border: 1px solid #45475a;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      font-family: var(--md-code-font);
+    }
+    .btn-copy:hover { background: #45475a; }
+    .terminal-lang {
+      font-family: var(--md-code-font);
+      background-color: #313244;
+      color: #a6adc8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .terminal-box pre {
+      margin: 0;
+      padding: 14px 18px;
+      background-color: transparent;
+      color: #cdd6f4;
+      font-family: var(--md-code-font);
+      font-size: 0.88rem;
+      line-height: 1.55;
+      overflow-x: auto;
+    }
+    .terminal-box code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      font-size: inherit;
+    }
+    .tok-cmd { color: #89b4fa; font-weight: 600; }
+    .tok-string { color: #a6e3a1; }
+    .tok-comment { color: #6c7086; font-style: italic; }
+    .tok-key { color: #cba6f7; font-weight: 600; }
+    .tok-bool { color: #fab387; font-weight: 600; }
+    code {
+      font-family: var(--md-code-font);
+      font-size: 0.87em;
+      background-color: var(--code-bg);
+      color: var(--primary-dark);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    img {
+      border: 2px dashed #94a3b8;
+      background-color: #f8fafc;
+      padding: 8px;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+    }
+    .page-nav-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .page-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-body);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .page-nav-btn:hover {
+      background: var(--code-bg);
+      text-decoration: none;
+    }
+</style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <span>🚀 Projecte Intermodular — 2n FPB (IES Mestre Ramón Esteve)</span>
+      <a href="./index.html">📚 Índex Projecte Intermodular</a>
+      <a href="../">🏠 Portal Docent</a>
+    </div>
+    <div class="actions">
+      <button class="btn-toggle" onclick="toggleTheme()">🌓 Mode Fosc / Clar</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <input type="text" class="sidebar-search" placeholder="🔍 Filtrar apartats..." oninput="filterSidebar(this)">
+<ul><li><a href="./index.html">🏠 <strong>Inici Projecte Intermodular</strong></a></li></ul>
+<details class="nav-unit">
+<summary>UP1 — Creació de la Marca: Naming i Logotip Digital</summary>
+<ul>
+<li><a href="./up01/index.html" class="unit-full-link">📘 UP1 Completa (1 pàgina)</a></li>
+<li><a href="./up01/up01ras.html">1.0 RA i Criteris d'Avaluació</a></li>
+<li><a href="./up01/up0101.html">1.1 El Naming Comercial i la Paleta de Colors TIC</a></li>
+<li><a href="./up01/up0102.html">1.2 Isotip, Logotip i el Format .PNG Transparent</a></li>
+<li><a href="./up01/up0103.html">1.3 Guia Pràctica Pas a Pas (Paper i Digitalització)</a></li>
+<li><a href="./up01/up01actividades.html">Activitat i Entrega Tasca 1 en Aules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UP2 — Identitat Corporativa i Paper de Carta amb Writer</summary>
+<ul>
+<li><a href="./up02/index.html" class="unit-full-link">📘 UP2 Completa (1 pàgina)</a></li>
+<li><a href="./up02/up02ras.html">2.0 RA i Criteris d'Avaluació</a></li>
+<li><a href="./up02/up0201.html">2.1 Configuració de Pàgina (2 cm) i Estils Corporatius</a></li>
+<li><a href="./up02/up0202.html">2.2 Encapçalament, Peu de Pàgina i Plantilla (.ott)</a></li>
+<li><a href="./up02/up0203.html">2.3 Carta de Serveis i Model de Taula de Pressupost</a></li>
+<li><a href="./up02/up02actividades.html">Activitat i Entrega Tasca 2 en Aules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UP3 — Manual Bàsic de Prevenció de Riscos Laborals (PRL)</summary>
+<ul>
+<li><a href="./up03/index.html" class="unit-full-link">📘 UP3 Completa (1 pàgina)</a></li>
+<li><a href="./up03/up03ras.html">3.0 RA i Criteris d'Avaluació</a></li>
+<li><a href="./up03/up0301.html">3.1 Ergonomia Postural davant Pantalles (PVD)</a></li>
+<li><a href="./up03/up0302.html">3.2 Riscos Elèctrics i Redacció del Manual en Writer</a></li>
+<li><a href="./up03/up03actividades.html">Activitat i Entrega Tasca 3 en Aules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UP4 — Defensa Oral Inicial de la Marca en Impress</summary>
+<ul>
+<li><a href="./up04/index.html" class="unit-full-link">📘 UP4 Completa (1 pàgina)</a></li>
+<li><a href="./up04/up04ras.html">4.0 RA i Criteris d'Avaluació</a></li>
+<li><a href="./up04/up0401.html">4.1 Disseny Visual de Diapositives en LibreOffice Impress</a></li>
+<li><a href="./up04/up0402.html">4.2 Estructura de les 4 Diapositives i Defensa de 5 Minuts</a></li>
+<li><a href="./up04/up04actividades.html">Activitat i Entrega Tasca 4 en Aules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UP5 — Gestió Econòmica i Pressupostos en LibreOffice Calc</summary>
+<ul>
+<li><a href="./up05/index.html" class="unit-full-link">📘 UP5 Completa (1 pàgina)</a></li>
+<li><a href="./up05/up05ras.html">5.0 RA i Criteris d'Avaluació</a></li>
+<li><a href="./up05/up0501.html">5.1 Costos d'un Taller: Base Imposable, IVA (21%) i Fórmules</a></li>
+<li><a href="./up05/up0502.html">5.2 Full d'Inventari i Plantilla de Pressupost Automatitzada</a></li>
+<li><a href="./up05/up0503.html">5.3 Simulació Pràctica: Resolució de 2 Casos de Clients</a></li>
+<li><a href="./up05/up05actividades.html">Activitat i Entrega Tasca 5 en Aules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UP6 — Seguretat al Taller de Muntatge i Gestió RAEE</summary>
+<ul>
+<li><a href="./up06/index.html" class="unit-full-link">📘 UP6 Completa (1 pàgina)</a></li>
+<li><a href="./up06/up06ras.html">6.0 RA i Criteris d'Avaluació</a></li>
+<li><a href="./up06/up0601.html">6.1 Seguretat Física en el Muntatge i Protecció ESD</a></li>
+<li><a href="./up06/up0602.html">6.2 Classificació de Residus Electrònics (RAEE) i Ecoparc</a></li>
+<li><a href="./up06/up06actividades.html">Activitat i Entrega Tasca 6 en Aules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UP7 — Catàleg de Serveis, Full d'Incidències i Atenció al Client</summary>
+<ul>
+<li><a href="./up07/index.html" class="unit-full-link">📘 UP7 Completa (1 pàgina)</a></li>
+<li><a href="./up07/up07ras.html">7.0 RA i Criteris d'Avaluació</a></li>
+<li><a href="./up07/up0701.html">7.1 Disseny del Catàleg Comercial amb Packs a Preu Tancat</a></li>
+<li><a href="./up07/up0702.html">7.2 Full de Recepció d'Incidències (RMA), Targetes i Rètol</a></li>
+<li><a href="./up07/up07actividades.html">Activitat i Entrega Tasca 7 en Aules</a></li>
+</ul>
+</details>
+<details class="nav-unit">
+<summary>UP8 — Fira Comercial Tecnològica i Defensa Final</summary>
+<ul>
+<li><a href="./up08/index.html" class="unit-full-link">📘 UP8 Completa (1 pàgina)</a></li>
+<li><a href="./up08/up08ras.html">8.0 RA i Criteris d'Avaluació Globals</a></li>
+<li><a href="./up08/up0801.html">8.1 Presentació Final de 6 Diapositives en Impress</a></li>
+<li><a href="./up08/up0802.html">8.2 Muntatge d'Estand, Atenció Comercial i Resolució en Viu</a></li>
+<li><a href="./up08/up08actividades.html">Entrega Portfolio Final Tasca 8 en Aules</a></li>
+</ul>
+</details>
+<ul>
+<li><a href="./tasques-aules.html" class="active">📋 <strong>Tasques Aules (Professorat)</strong></a></li>
+<li><a href="./references.html">📂 <strong>Recursos i Documents Oficials</strong></a></li>
+</ul>
+    </aside>
+
+    <main class="content">
+      <span class="up-badge">Recurs Docent · Codi HTML per a Aules GVA · Tasques 1 a 8</span>
+      <h1>📋 Guia del Professorat: Textos i Codi HTML per a Aules (Tasques 1 a 8)</h1>
+<p>Aquesta pàgina recull els <strong>8 enunciats oficials maquetats en HTML</strong> per a les activitats de tipus <em>"Tasca"</em> en <strong>Aules GVA</strong>. Prem el botó <strong><code>📋 Copiar</code></strong> de qualsevol tasca i apega-ho directament dins del mode codi <code>&lt;&gt;</code> de l'editor d'Aules.</p>
+<h2>1️⃣ UP1 — Creació de la Marca: Naming i Logotip Digital</h2>
+<span class="up-badge">1a Avaluació · RA1 (a-f) · 8 hores · 15% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 1 (UP1) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;🎨 FASE 1: Creació de la Marca (Naming i Logotip)&lt;/h3&gt;
+  &lt;p&gt;Abans de començar a reparar cap ordinador ni atendre clients al teu taller informàtic, necessites saber qui eres! En aquesta primera tasca dissenyaràs el &lt;strong&gt;nom comercial&lt;/strong&gt;, els &lt;strong&gt;colors corporatius&lt;/strong&gt; i el &lt;strong&gt;logotip 100% original&lt;/strong&gt; de la teua empresa.&lt;/p&gt;
+  &lt;hr style=&quot;border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;&quot;&gt;
+  &lt;h4 style=&quot;color: #0369a1;&quot;&gt;🎯 Què has de fer? (Pas a pas)&lt;/h4&gt;
+  &lt;ol style=&quot;padding-left: 20px;&quot;&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Pas 1.1 - Pluja d&#x27;idees (A mà):&lt;/strong&gt; En un full en blanc, escriu &lt;strong&gt;10 possibles noms&lt;/strong&gt; curts, professionals i tecnològics per a la teua empresa. Tria&#x27;n els &lt;strong&gt;3 millors&lt;/strong&gt; i valida el definitiu amb el professor.&lt;/li&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Pas 1.2 - Esbossos del Logotip (A mà):&lt;/strong&gt; Dibuixa en paper &lt;strong&gt;3 propostes diferents&lt;/strong&gt; utilitzant elements informàtics clars (pantalles, teclats, tornavís, xarxes o inicials) i anota els teus &lt;strong&gt;2 o 3 colors corporatius&lt;/strong&gt;.&lt;/li&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Pas 1.3 - Digitalització a l&#x27;ordinador:&lt;/strong&gt; Obre &lt;em&gt;LibreOffice Draw&lt;/em&gt; o &lt;em&gt;GIMP&lt;/em&gt;, dibuixa el teu esbós definitiu aplicant figures geomètriques, el nom comercial i els teus colors, i exporta&#x27;l en format &lt;strong&gt;.PNG amb fons transparent&lt;/strong&gt;.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Quins 3 fitxers has de pujar a Aules?&lt;/strong&gt;
+    &lt;ol style=&quot;margin: 5px 0 0 15px; padding: 0;&quot;&gt;
+      &lt;li&gt;&lt;code&gt;Esbossos_Marca_ElTeuNom.jpg&lt;/code&gt; (o &lt;code&gt;.pdf&lt;/code&gt; amb la foto del full amb els 10 noms i els 3 dibuixos a mà)&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;Logotip_Editable_ElTeuNom.odg&lt;/code&gt; (o &lt;code&gt;.xcf&lt;/code&gt;, l&#x27;arxiu de treball)&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;Logotip_Final_ElTeuNom.png&lt;/code&gt; (la imatge final amb fons transparent)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<h2>2️⃣ UP2 — Identitat Corporativa i Paper de Carta amb Writer</h2>
+<span class="up-badge">1a Avaluació · RA2 (a-f) · 8 hores · 15% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 2 (UP2) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;🏢 FASE 2: La Documentació Oficial de la teua Empresa Informàtica&lt;/h3&gt;
+  &lt;p&gt;En la tasca anterior vas crear el nom i el logotip de la teua empresa. Ara és el moment de dissenyar la &lt;strong&gt;papereria corporativa i la plantilla oficial&lt;/strong&gt; que farem servir per a emetre pressupostos i documents comercials amb &lt;strong&gt;LibreOffice Writer&lt;/strong&gt;.&lt;/p&gt;
+  &lt;hr style=&quot;border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;&quot;&gt;
+  &lt;h4 style=&quot;color: #0369a1;&quot;&gt;🎯 Què has de fer? (Pas a pas)&lt;/h4&gt;
+  &lt;ol style=&quot;padding-left: 20px;&quot;&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Configuració del full:&lt;/strong&gt; Obre LibreOffice Writer i posa els marges a &lt;strong&gt;2 cm&lt;/strong&gt; (Format &amp;gt; Estil de pàgina).&lt;/li&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Estils de text:&lt;/strong&gt; Modifica l&#x27;estil &lt;em&gt;Títol 1&lt;/em&gt; amb lletra clara (mida 18-20, negreta) i el color del teu logotip.&lt;/li&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Paper de carta:&lt;/strong&gt; Activa l&#x27;encapçalament (logo .PNG de 2-3 cm a l&#x27;esquerra i nom d&#x27;empresa a la dreta) i el peu de pàgina (adreça, telèfon i correu). Guarda aquest full buit com a &lt;strong&gt;plantilla&lt;/strong&gt; (&lt;em&gt;Plantilla_PaperCarta_ElTeuNom.ott&lt;/em&gt;).&lt;/li&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Carta i Model de pressupost:&lt;/strong&gt; Redacta la carta de presentació i crea una taula de &lt;strong&gt;4 columnes&lt;/strong&gt; (&lt;em&gt;Quantitat, Descripció, Preu Unitari €, Total €&lt;/em&gt;) amb la capçalera pintada del color corporatiu.&lt;/li&gt;
+    &lt;li style=&quot;margin-bottom: 8px;&quot;&gt;&lt;strong&gt;Exporta a PDF:&lt;/strong&gt; Revisa l&#x27;ortografia (F7) i exporta el document final a PDF.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Quins 2 fitxers has de pujar a Aules?&lt;/strong&gt;
+    &lt;ol style=&quot;margin: 5px 0 0 15px; padding: 0;&quot;&gt;
+      &lt;li&gt;&lt;code&gt;Plantilla_PaperCarta_ElTeuNom.ott&lt;/code&gt; (o &lt;code&gt;.odt&lt;/code&gt;)&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;Model_Pressupost_ElTeuNom.pdf&lt;/code&gt; (arxiu final exportat)&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<h2>3️⃣ UP3 — Manual Bàsic de Prevenció de Riscos Laborals (PRL)</h2>
+<span class="up-badge">1a Avaluació · RA4 (a,b,c,e,f) · 4 hores · 5% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 3 (UP3) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;🛡️ FASE 3: Manual Bàsic de Prevenció de Riscos Laborals (PRL) a l&#x27;Oficina&lt;/h3&gt;
+  &lt;p&gt;Utilitzant la teua &lt;strong&gt;plantilla corporativa de Writer&lt;/strong&gt;, redactaràs el Manual de Bones Pràctiques i Ergonomia de la teua empresa.&lt;/p&gt;
+  &lt;ol style=&quot;padding-left: 20px;&quot;&gt;
+    &lt;li&gt;&lt;strong&gt;Introducció pròpia:&lt;/strong&gt; Explica amb les teues paraules per què és important asseure&#x27;s bé i cuidar la vista davant de l&#x27;ordinador.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Decàleg d&#x27;Ergonomia (Llista numerada):&lt;/strong&gt; 5 normes fonamentals d&#x27;ergonomia davant del PC + 1 imatge il·lustrativa.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Riscos Elèctrics (Llista amb vinyetes):&lt;/strong&gt; 3 riscos elèctrics o d&#x27;ordre al taller i com prevenir-los.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Fitxer a pujar a Aules:&lt;/strong&gt; &lt;code&gt;Manual_PRL_Oficina_ElTeuNom.pdf&lt;/code&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<h2>4️⃣ UP4 — Defensa Oral Inicial de la Marca en Impress</h2>
+<span class="up-badge">Final 1a Avaluació · RA5 (a,b,c) · 4 hores · 5% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 4 (UP4) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;🎤 FASE 4: Presentació de la teua Marca en Impress (Final 1a Avaluació)&lt;/h3&gt;
+  &lt;p&gt;Crea una presentació en &lt;strong&gt;LibreOffice Impress&lt;/strong&gt; de &lt;strong&gt;4 diapositives&lt;/strong&gt; per a la teua defensa oral de 5 minuts:&lt;/p&gt;
+  &lt;ol style=&quot;padding-left: 20px;&quot;&gt;
+    &lt;li&gt;&lt;strong&gt;Diapositiva 1:&lt;/strong&gt; Logotip en gran, nom de l&#x27;empresa i el teu nom com a CEO.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Diapositiva 2:&lt;/strong&gt; Per què has triat eixe nom i eixos colors corporatius.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Diapositiva 3:&lt;/strong&gt; Captura del teu paper de carta i model de pressupost.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Diapositiva 4:&lt;/strong&gt; Resum visual de les normes del teu Manual de PRL.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Fitxers a pujar a Aules:&lt;/strong&gt; &lt;code&gt;Presentacio_Marca_ElTeuNom.odp&lt;/code&gt; i &lt;code&gt;Presentacio_Marca_ElTeuNom.pdf&lt;/code&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<h2>5️⃣ UP5 — Gestió Econòmica i Pressupostos en LibreOffice Calc</h2>
+<span class="up-badge">2a Avaluació · RA3 (a-f) · 8 hores · 15% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 5 (UP5) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;📊 FASE 5: Gestió Econòmica i Pressupostos Automatitzats amb Calc&lt;/h3&gt;
+  &lt;p&gt;Crea un llibre en &lt;strong&gt;LibreOffice Calc&lt;/strong&gt; amb 3 fulls per automatitzar els pressupostos de la teua empresa:&lt;/p&gt;
+  &lt;ol style=&quot;padding-left: 20px;&quot;&gt;
+    &lt;li&gt;&lt;strong&gt;Full 1 (Inventari_i_Tarifes):&lt;/strong&gt; 6 components de maquinari i 4 tarifes de mà d&#x27;obra amb format moneda (€).&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Full 2 (Plantilla_Pressupost):&lt;/strong&gt; Taula de 4 columnes amb fórmules automàtiques (&lt;code&gt;=A10*C10&lt;/code&gt;), Base Imposable (&lt;code&gt;=SUMA(...)&lt;/code&gt;), IVA 21% i Total.&lt;/li&gt;
+    &lt;li&gt;&lt;strong&gt;Full 3 (Casos_Practics_Clients):&lt;/strong&gt; Resolució dels 2 pressupostos simulats de clients.&lt;/li&gt;
+  &lt;/ol&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Fitxers a pujar a Aules:&lt;/strong&gt; &lt;code&gt;Pressupostos_Calc_ElTeuNom.ods&lt;/code&gt; (amb fórmules!) i &lt;code&gt;Pressupostos_Calc_ElTeuNom.pdf&lt;/code&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<h2>6️⃣ UP6 — Seguretat al Taller de Muntatge i Gestió RAEE</h2>
+<span class="up-badge">2a Avaluació · RA4 (c,d,e,f) · 4 hores · 5% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 6 (UP6) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;♻️ FASE 6: Seguretat al Taller de Muntatge i Gestió Ambiental (RAEE)&lt;/h3&gt;
+  &lt;p&gt;Redacta en la teua plantilla corporativa de Writer el &lt;strong&gt;Protocol de Muntatge Segur al Taller (ESD)&lt;/strong&gt; i la &lt;strong&gt;Taula de Classificació de Residus Electrònics (RAEE)&lt;/strong&gt; per a l&#x27;Ecoparc.&lt;/p&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Fitxer a pujar a Aules:&lt;/strong&gt; &lt;code&gt;Protocol_Taller_RAEE_ElTeuNom.pdf&lt;/code&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<h2>7️⃣ UP7 — Catàleg de Serveis, Full d'Incidències i Atenció al Client</h2>
+<span class="up-badge">2a Avaluació · RA2 (e,f) i RA5 (d) · 6 hores · 10% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 7 (UP7) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;🛍️ FASE 7: Catàleg Comercial, Full d&#x27;Incidències i Targetes de Visita&lt;/h3&gt;
+  &lt;p&gt;Dissenya els 3 materials d&#x27;atenció al client per a l&#x27;estand de la teua empresa: el &lt;strong&gt;Catàleg Comercial amb 4 Packs a preu tancat&lt;/strong&gt;, el &lt;strong&gt;Full de Recepció d&#x27;Incidències Tècniques&lt;/strong&gt; i les &lt;strong&gt;Targetes de Visita + Rètol&lt;/strong&gt;.&lt;/p&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Fitxers a pujar a Aules:&lt;/strong&gt; &lt;code&gt;Cataleg_Serveis_ElTeuNom.pdf&lt;/code&gt;, &lt;code&gt;Full_Incidencies_ElTeuNom.pdf&lt;/code&gt; i &lt;code&gt;Targetes_i_Retol_ElTeuNom.pdf&lt;/code&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+<h2>8️⃣ UP8 — Fira Comercial Tecnològica i Defensa Final</h2>
+<span class="up-badge">Avaluació Final de Març · RA1 a RA5 · 10 hores · 30% de la nota</span>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Tasca 8 (UP8) — Codi HTML per a Aules</div>
+    <div class="terminal-actions">
+      <button class="btn-copy" onclick="copyCode(this)">📋 Copiar</button>
+      <span class="terminal-lang">html</span>
+    </div>
+  </div>
+  <pre><code>&lt;div style=&quot;background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;&quot;&gt;
+  &lt;h3 style=&quot;color: #1e3a8a; margin-top: 0;&quot;&gt;🏆 FASE 8: Fira Comercial Tecnològica i Portfolio Final&lt;/h3&gt;
+  &lt;p&gt;Cloenda del projecte abans d&#x27;iniciar la &lt;strong&gt;Formació en Empresa&lt;/strong&gt;! Munta el teu estand demostratiu a l&#x27;aula, presenta les 6 diapositives finals en Impress, resol una assistència tècnica en viu i lliura el Portfolio unificat.&lt;/p&gt;
+  &lt;div style=&quot;background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;&quot;&gt;
+    &lt;strong&gt;📦 Fitxers finals a pujar a Aules:&lt;/strong&gt; &lt;code&gt;Portfolio_Empresa_ElTeuNom.pdf&lt;/code&gt; i &lt;code&gt;Defensa_Final_Fira_ElTeuNom.odp&lt;/code&gt; (i &lt;code&gt;.pdf&lt;/code&gt;)
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+
+      <div class="page-nav-footer">
+<a class="page-nav-btn" href="./up08/up08actividades.html">⬅️ Entrega Tasca 8 en Aules</a>
+<a class="page-nav-btn" href="./references.html">📂 Recursos i Documents Oficials ➡️</a>
+</div>
+    </main>
+  </div>
+  
+  <script>
+    (function() {
+      const saved = localStorage.getItem('portal-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('portal-theme', next);
+    }
+    function copyCode(btn) {
+      const pre = btn.closest('.terminal-box').querySelector('pre');
+      if (!pre) return;
+      navigator.clipboard.writeText(pre.innerText).then(() => {
+        const orig = btn.innerText;
+        btn.innerText = '✅ Copiado';
+        setTimeout(() => { btn.innerText = orig; }, 1600);
+      });
+    }
+    function filterSidebar(input) {
+      const q = input.value.toLowerCase().trim();
+      const details = document.querySelectorAll('aside.sidebar details.nav-unit');
+      details.forEach(d => {
+        const items = d.querySelectorAll('li');
+        let anyVisible = false;
+        items.forEach(li => {
+          const match = !q || li.innerText.toLowerCase().includes(q);
+          li.style.display = match ? '' : 'none';
+          if (match) anyVisible = true;
+        });
+        if (q) {
+          d.open = anyVisible;
+          d.style.display = anyVisible ? '' : 'none';
+        } else {
+          d.style.display = '';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

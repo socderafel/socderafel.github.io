@@ -312,9 +312,83 @@
       font-weight: 500;
       color: #1e3a8a;
     }
+
+    /* Barra superior compacta estilo MkDocs Material */
+    .md-header {
+      background-color: var(--md-primary-fg-color);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      margin: -40px -20px 28px -20px;
+    }
+    .md-header-inner {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .md-header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-weight: 700;
+      font-size: 1.02rem;
+      white-space: nowrap;
+    }
+    .md-header-brand svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+    .md-header-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+    }
+    .md-header-nav a {
+      color: rgba(255, 255, 255, 0.88) !important;
+      text-decoration: none !important;
+      font-size: 0.86rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background-color 0.15s ease;
+      white-space: nowrap;
+    }
+    .md-header-nav a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff !important;
+    }
   </style>
 </head>
 <body>
+  <header class="md-header">
+    <div class="md-header-inner">
+      <a href="../../" class="md-header-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <rect width="64" height="64" rx="14" fill="rgba(255,255,255,0.18)"/>
+          <path d="M16 22 L28 32 L16 42" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap='round' stroke-linejoin='round'/>
+          <line x1="32" y1="42" x2="48" y2="42" stroke="#4ade80" stroke-width="5" stroke-linecap='round'/>
+        </svg>
+        <span>Portal Docent d'Informàtica</span>
+      </a>
+      <nav class="md-header-nav">
+        <a href="../../">🏠 Inici</a>
+        <a href="../">🌐 Serveis en Xarxa</a>
+        <a href="../../programacio/">☕ Programació</a>
+        <a href="../../projecte-intermodular/">🚀 Projecte Intermodular</a>
+      </nav>
+    </div>
+  </header>
   <div class="page-container">
     <h1>Servicios de transferencia de ficheros</h1>
 <div class="admonition note">
