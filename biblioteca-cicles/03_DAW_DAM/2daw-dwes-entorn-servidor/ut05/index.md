@@ -459,10 +459,8 @@ controller by using the function validate
 value attribute of the input element the following
 
 ```php
-• {{old(‘nameOfTheInput’)}}
+{% raw %}{{ old('nameOfTheInput') }}{% endraw %}
 ```
-
-2 DAW - DWES Questions?
 
 ---
 

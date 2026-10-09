@@ -1435,7 +1435,7 @@ Arrays.fill(v, val) rellena el vector v con el valor val. Arrays.toString(v) dev
 4.- Arrays multidimensionales //Declarar una matriz int[][] matriz; //Declarar e Inicializar una matriz
 
 ```java
-int[][] miMatriz = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+int[][] miMatriz = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
 ```
 
 //Obtener el número de filas y columnas de la Matriz int filas
