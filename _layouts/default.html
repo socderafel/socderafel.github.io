@@ -823,7 +823,7 @@
       if (sidebar) {
         const root = sidebar.getAttribute('data-course-root') || '.';
         const prefix = root === '.' ? './' : root + '/';
-        fetch(prefix + 'sidebar.json')
+        fetch(prefix + 'sidebar.json?v=3', { cache: 'no-store' })
           .then(r => r.json())
           .then(data => {
             const container = document.getElementById('sidebar-nav-content');
