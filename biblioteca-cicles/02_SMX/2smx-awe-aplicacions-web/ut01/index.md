@@ -3,8 +3,8 @@ layout: default
 title: "UT1 — Unit 1: Technologies for Web Development — Aplicacions Web | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT1 Completa"
-prev_url: "../ut00/ut00actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT0"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 Resources: Example of HTML+CSS ➡️"
 ---

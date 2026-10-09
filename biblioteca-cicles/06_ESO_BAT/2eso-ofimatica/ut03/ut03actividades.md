@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT3 — Taller d'Ofimàtica: Writer, Calc 
 course_root: ".."
 badge: "2n ESO · UT3 — Calc"
 prev_url: "../ut03/index.html"
-prev_label: "⬅️ 📘 UT3 Completa"
+prev_label: "⬅️ 📘 UT3 Completa (1 pàgina)"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

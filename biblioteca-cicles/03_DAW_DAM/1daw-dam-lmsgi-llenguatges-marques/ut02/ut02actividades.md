@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT2 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Grau Superior · UT2 — Unidad 7"
+badge: "1r DAW / DAM / ASIX · Grau Superior · UD7 — Programació amb JavaScript i DOM"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 Ejercicios JavaScript Solucionados"
-next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_url: "../ut01/index.html"
+next_label: "📘 UD8 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

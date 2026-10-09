@@ -1,28 +1,32 @@
 ---
 layout: default
-title: "UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP) — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+title: "U2 — Assignació Dinàmica d'Adreces (DHCP) · Unitat Completa"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT6 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut07/ut07actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
 next_url: "../ut06/ut0601.html"
 next_label: "6.1 presentació DHCP ➡️"
 ---
 
-# 📘 UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP) (Unitat Completa)
+# 📘 U2 — Assignació Dinàmica d'Adreces (DHCP) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**6.1 presentació DHCP**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
-> - [**6.2 Presentació DHCP. Visió general**](#ut0602) (o [obrir en pàgina individual ➡️](./ut0602.md) )
-> - [**6.3 Servei DHCP**](#ut0603) (o [obrir en pàgina individual ➡️](./ut0603.md) )
-> - [**6.4 Servidor DHCP**](#ut0604) (o [obrir en pàgina individual ➡️](./ut0604.md) )
-> - [**6.5 Presentació SX20-U1-E3 "Bronx"**](#ut0605) (o [obrir en pàgina individual ➡️](./ut0605.md) )
-> - [**6.6 Qüestionari DHCP**](#ut0606) (o [obrir en pàgina individual ➡️](./ut0606.md) )
-> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 presentació DHCP**](./ut0601.md)
+- [**6.2 Presentació DHCP. Visió general**](./ut0602.md)
+- [**6.3 Servei DHCP**](./ut0603.md)
+- [**6.4 Servidor DHCP**](./ut0604.md)
+- [**6.5 Presentació SX20-U1-E3 "Bronx"**](./ut0605.md)
+- [**6.6 Qüestionari DHCP**](./ut0606.md)
+- [**✍️ Activitats pràctiques UT6**](./ut06actividades.md)
 
 ---
 
-## 6.1 presentació DHCP
+# 6.1 presentació DHCP
 
 > **📌 Introducció de la Unitat**
 > ### **U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)**
@@ -186,7 +190,7 @@ SERVIDOR DHCP Definición: proporciona un mecanismo rápido de configuración
 
 ---
 
-## 6.2 Presentació DHCP. Visió general
+# 6.2 Presentació DHCP. Visió general
 
 De Cristian i Robert
 
@@ -214,7 +218,7 @@ Conﬁguración del Servidor DHCP
 
 ---
 
-## 6.3 Servei DHCP
+# 6.3 Servei DHCP
 
 SINTESIS DHCP 2º SMR SERVICIOS EN RED Tema 3: Servicio DHCP
 
@@ -248,20 +252,34 @@ PROTOCOLO DHCP: Negociación Negociación = orden en el que se envían los mensa
 
 - Hay un servidor DHCP configurado y esperando a recibir peticiones.
 
+#### 2) Cuando un cliente DHCP se conecta a la red, envía un mensaje de broadcast
+
+#### 3) Todos los servidores DHCP que han recibido la solicitud responden al cliente
+
 proponiéndole una IP.
 
 - El cliente acepta una de ellas y se lo comunica al servidor elegido.
 
+#### 5) El servidor le contesta con un mensaje que incluye la MAC de cli, la IP y máscara
+
 de subred asignadas, la IP del servidor y el período de validez de la dirección IP.
+
+#### 6) Esta información permanece asociada al cliente mientras éste no desactive su
 
 interfaz de red o finalice el plazo del ”contrato”. NOTA: El plazo del contrato o alquiler es el tiempo en que un cliente DHCP mantiene como propios los datos que le asignó un servidor.
 
 PROTOCOLO DHCP: Negociación
 
+#### 7) Una vez vencido el plazo del contrato, el servidor puede
+
 - renovar la información del cliente (la dir. IP), y asignarle otra nueva
 - ampliar el plazo (manteniendo la misma información).
 
+#### 8) Antes de que sea consumido el período de validez, el cliente envía una
+
 solicitud de renovación al servidor, que será atendida o no.
+
+#### 9) Si llega a expirar completamente el tiempo de validez, tiene que pedir
 
 una nueva. NOTA: El cliente sabe que una respuesta es para él, por la MAC que lleva incorporada el mensaje del servidor y le contesta.
 
@@ -285,7 +303,7 @@ SERVIDOR DHCP Definición: proporciona un mecanismo rápido de configuración
 
 ---
 
-## 6.4 Servidor DHCP
+# 6.4 Servidor DHCP
 
 Instalación del servidor DHCP ●Podemos hacerlo desde la línea de comandos con derechos de administrador: # apt­get install dhcp3­server ●o bien desde Synaptic buscando dhcp3­server
 
@@ -333,7 +351,7 @@ sudo /etc/init.d/dhcp­server restart
 
 ---
 
-## 6.5 Presentació SX20-U1-E3 "Bronx"
+# 6.5 Presentació SX20-U1-E3 "Bronx"
 
 Presentació SX20-U1-E3 "Bronx"
 
@@ -393,7 +411,7 @@ Fin
 
 ---
 
-## 6.6 Qüestionari DHCP
+# 6.6 Qüestionari DHCP
 
 Qüestionari DHCP
 
@@ -453,7 +471,7 @@ Rang de IP = 192.168.254.[ 10 - 50 ] i Porta de enllaç 192.168.254.8
 
 ---
 
-## ✍️ Activitats pràctiques UT6
+# ✍️ Activitats pràctiques UT6
 
 > **✍️ Activitat Pràctica 6.1 — Entrega Acta Inicial**
 > Entrega Acta Inicial
@@ -493,3 +511,5 @@ Rang de IP = 192.168.254.[ 10 - 50 ] i Porta de enllaç 192.168.254.8
 
 > **✍️ Activitat Pràctica 6.8 — Nota UD2**
 > Nota UD2
+
+---

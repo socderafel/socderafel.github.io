@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT13 — U12 - Capa de transport i aplicaci�
 prev_url: "../ut13/ut1301.html"
 prev_label: "⬅️ 13.1 U12 Nivell de Transport i Aplicació"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT13

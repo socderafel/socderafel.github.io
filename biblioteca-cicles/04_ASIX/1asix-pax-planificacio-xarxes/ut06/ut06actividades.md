@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT6 — U5 - Cablejat estructurat"
 prev_url: "../ut06/ut0602.html"
 prev_label: "⬅️ 6.2 Cablejat Casa de l'Alumne UPV"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

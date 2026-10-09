@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT4 — Unit 4 - FTP"
 prev_url: "../ut04/ut0404.html"
 prev_label: "⬅️ 4.4 U4 P2"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

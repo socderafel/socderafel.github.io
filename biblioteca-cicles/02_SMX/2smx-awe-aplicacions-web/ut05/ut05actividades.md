@@ -6,7 +6,7 @@ badge: "2n SMX · Grau Mitjà · UT5 — Unit 5 Web File Management and Web Offi
 prev_url: "../ut05/ut0502.html"
 prev_label: "⬅️ 5.2 EN Article: Battle of the Clouds"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

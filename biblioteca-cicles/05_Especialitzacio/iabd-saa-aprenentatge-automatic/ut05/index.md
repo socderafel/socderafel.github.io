@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT5 — Sistemes d'aprenentatge automàtic — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
+title: "UD2 — Sistemes, Algorismes i Eines d'Aprenentatge Automàtic · Unitat Completa"
 course_root: ".."
 badge: "CE IA i Big Data · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut06/ut0601.html"
+prev_label: "⬅️ 6.1 UT 1. Caracterització de IA forta I dèbil usos i"
 next_url: "../ut05/ut0501.html"
 next_label: "5.1 UT 4 . Eines d'aprenentatge automàtic ➡️"
 ---
 
-# 📘 UT5 — Sistemes d'aprenentatge automàtic (Unitat Completa)
+# 📘 UD2 — Sistemes, Algorismes i Eines d'Aprenentatge Automàtic (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 UT 4 . Eines d'aprenentatge automàtic**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto**](#ut0502) (o [obrir en pàgina individual ➡️](./ut0502.md) )
-> - [**5.3 UT 2 . Caracterització de sistemes d'aprenentatg**](#ut0503) (o [obrir en pàgina individual ➡️](./ut0503.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 UT 4 . Eines d'aprenentatge automàtic**](./ut0501.md)
+- [**5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto**](./ut0502.md)
+- [**5.3 UT 2 . Caracterització de sistemes d'aprenentatg**](./ut0503.md)
 
 ---
 
-## 5.1 UT 4 . Eines d'aprenentatge automàtic
+# 5.1 UT 4 . Eines d'aprenentatge automàtic
 
 ---
 
@@ -124,7 +128,7 @@ Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Apre
 
 ---
 
-## 5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto
+# 5.2 UT 3 . Algorismes aplicats a l'aprenentatge auto
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT3. Algoritmos aplicados al aprendizaje automático. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -461,7 +465,7 @@ https://ml-playground.com/ https://mlplaygrounds.com/ https://playground.tensorf
 
 ---
 
-## 5.3 UT 2 . Caracterització de sistemes d'aprenentatg
+# 5.3 UT 2 . Caracterització de sistemes d'aprenentatg
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT2. Caracterización de sistemas de aprendizaje automático. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -571,3 +575,5 @@ Esto se conoce como entrenamiento de la red. Cuando la red prácticamente aciert
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. Al igual que para los modelos de aprendizaje automático, el aprendizaje de una red neuronal puede ser supervisado o no supervisado. En un aprendizaje supervisado se conocen los resultados correctos a ciertos problemas y estos valores son proporcionados a la red neuronal durante el entrenamiento. Una vez que la red ha sido entrenada, se comprueba su eficacia usando un nuevo conjunto de entradas y comprobando que los resultados que proporciona se corresponden con los resultados correctos.
 
 En el aprendizaje no supervisado, el resultado de la tarea no viene dado, sino que el sistema lo averigua exclusivamente a partir de la información de entrada. 12 / 12
+
+---

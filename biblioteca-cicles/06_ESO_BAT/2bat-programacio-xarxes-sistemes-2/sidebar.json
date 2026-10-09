@@ -6,55 +6,7 @@
   },
   "units": [
     {
-      "summary": "UT0 — Unitat Didàctica 0",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Presentació",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "0.2 Apunts sistemes de numeració",
-          "href": "ut00/ut0002.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT0",
-          "href": "ut00/ut00actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT0 — Introducció a la programació",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 UD1. Introducció a la programació",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "0.2 UD1. Introducció a la programació Part 2",
-          "href": "ut00/ut0002.html"
-        },
-        {
-          "label": "0.3 UD1. Introducció a la programació Part 3",
-          "href": "ut00/ut0003.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT0",
-          "href": "ut00/ut00actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT0 — Introducción a Phyton",
+      "summary": "UT0 — Introducció a Python",
       "items": [
         {
           "label": "📘 UT0 Completa (1 pàgina)",

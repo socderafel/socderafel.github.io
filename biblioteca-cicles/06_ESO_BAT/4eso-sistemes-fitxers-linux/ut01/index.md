@@ -4,7 +4,7 @@ title: "UT1 — Sistemes de Fitxers Linux — Sistemes de Fitxers i Permisos en 
 course_root: ".."
 badge: "4t ESO · UT1 Completa"
 prev_url: "../index.html"
-prev_label: "⬅️ Inici Sistemes de Fitxers i Permisos en Linux"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 Sistema d'arxius ➡️"
 ---

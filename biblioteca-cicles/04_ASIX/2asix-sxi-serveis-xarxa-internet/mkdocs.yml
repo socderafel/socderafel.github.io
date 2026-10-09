@@ -4,10 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Welcome SXI": ut00/ut0001.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
   - "UT1 — Unit 1 - DHCP":
       - "📘 UT1 Completa (1 pàgina)": ut01/index.md
       - "1.1 U1 DHCP": ut01/ut0101.md
@@ -23,7 +19,6 @@ nav:
   - "UT3 — Unit 3 - HTTP":
       - "📘 UT3 Completa (1 pàgina)": ut03/index.md
       - "3.1 U3 HTTP": ut03/ut0301.md
-      - "3.2 Grups Treball": ut03/ut0302.md
       - "3.3 U3 A3 Windows Group": ut03/ut0303.md
       - "3.4 U3 P1": ut03/ut0304.md
       - "3.5 U3 P2": ut03/ut0305.md
@@ -33,7 +28,6 @@ nav:
   - "UT4 — Unit 4 - FTP":
       - "📘 UT4 Completa (1 pàgina)": ut04/index.md
       - "4.1 U4 FTP": ut04/ut0401.md
-      - "4.2 Grups": ut04/ut0402.md
       - "4.3 U4 P1": ut04/ut0403.md
       - "4.4 U4 P2": ut04/ut0404.md
       - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md

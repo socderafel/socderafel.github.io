@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT4 — Processador de text (III)"
 prev_url: "../ut04/ut0411.html"
 prev_label: "⬅️ 4.11 Recursos Pràctiques Tema 15"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

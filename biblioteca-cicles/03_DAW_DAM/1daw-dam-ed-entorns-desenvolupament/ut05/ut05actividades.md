@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT5 — Diagramas de comportamiento"
 prev_url: "../ut05/ut0503.html"
 prev_label: "⬅️ 5.3 Actividades de clase"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

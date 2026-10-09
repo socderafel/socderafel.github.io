@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT2 — ADMINISTRACIÓ DE PROGRAMARI DE
 prev_url: "../ut02/ut0203.html"
 prev_label: "⬅️ 2.3 ENLLAÇOS DURS I SIMBÓLICS"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

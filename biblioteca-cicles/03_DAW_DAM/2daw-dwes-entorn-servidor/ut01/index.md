@@ -3,8 +3,8 @@ layout: default
 title: "UT1 — Unit 1 - Server-side development — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT1 Completa"
-prev_url: "../ut00/ut0001.html"
-prev_label: "⬅️ 0.1 Continguts i Recursos"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 U1 Server-Side Development ➡️"
 ---

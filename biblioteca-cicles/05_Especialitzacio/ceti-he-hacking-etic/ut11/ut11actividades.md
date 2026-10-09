@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT11 — Ingenieria social"
 prev_url: "../ut11/ut1101.html"
 prev_label: "⬅️ 11.1 Ingenieria social"
 next_url: "../ut12/index.html"
-next_label: "📘 UT12 Completa ➡️"
+next_label: "📘 UT12 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT11

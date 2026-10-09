@@ -6,7 +6,7 @@ badge: "2n SMX · Grau Mitjà · UT2 — Criptografia"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 Continguts i Recursos"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

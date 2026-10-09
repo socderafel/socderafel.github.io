@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT4 — Unit 4 - FTP — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca"
+title: "UT4 — Unit 4 - FTP · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT4 Completa"
 prev_url: "../ut03/ut03actividades.html"
@@ -11,16 +11,19 @@ next_label: "4.1 U4 FTP ➡️"
 
 # 📘 UT4 — Unit 4 - FTP (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 U4 FTP**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**4.2 Grups**](#ut0402) (o [obrir en pàgina individual ➡️](./ut0402.md) )
-> - [**4.3 U4 P1**](#ut0403) (o [obrir en pàgina individual ➡️](./ut0403.md) )
-> - [**4.4 U4 P2**](#ut0404) (o [obrir en pàgina individual ➡️](./ut0404.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 U4 FTP**](./ut0401.md)
+- [**4.3 U4 P1**](./ut0403.md)
+- [**4.4 U4 P2**](./ut0404.md)
+- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
 
 ---
 
-## 4.1 U4 FTP
+# 4.1 U4 FTP
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### **Resources**
@@ -282,21 +285,7 @@ the port 21.
 
 ---
 
-## 4.2 Grups
-
-Raga Attila Sergi
-
-Quique Ana Mompo
-
-Alexis Gvidas Arce
-
-Vicent Alex Francisco
-
-Abel Dani
-
----
-
-## 4.3 U4 P1
+# 4.3 U4 P1
 
 Unit 4 – FTP
 
@@ -312,7 +301,7 @@ Allow anonymous users to upload files. Check it.
 
 ---
 
-## 4.4 U4 P2
+# 4.4 U4 P2
 
 Install IIS and FTP Server using Server Manager Go to Server Manager, and then select Add roles and features: Click Next, then, we'll have "Select installation type" dialog
 
@@ -391,7 +380,7 @@ Select the second option to isolate ftp users. Test your ftp client: Now that we
 
 ---
 
-## ✍️ Activitats pràctiques UT4
+# ✍️ Activitats pràctiques UT4
 
 > **✍️ Activitat Pràctica 4.1 — U4 A1**
 > Unit 4 – FTP
@@ -562,3 +551,5 @@ Select the second option to isolate ftp users. Test your ftp client: Now that we
 > ### 10. Domini del tema
 >
 > (i resolució de dubtes) Respon les preguntes que li plantegen després de l’exposició, resol dubtes. Respon quasi totes les preguntes plantejades. Respon alguna pregunta, no domina suficientment el tema. No sap respondre les preguntes plantejades, no té domini del tema.
+
+---

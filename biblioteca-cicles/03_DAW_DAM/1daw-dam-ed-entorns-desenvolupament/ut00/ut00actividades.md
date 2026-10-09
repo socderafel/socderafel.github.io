@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT0 — Introducción al desarrollo de 
 prev_url: "../ut00/ut0003.html"
 prev_label: "⬅️ 0.3 Especificaciones requisitos software_ejemplo"
 next_url: "../ut01/index.html"
-next_label: "📘 UT1 Completa ➡️"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT0

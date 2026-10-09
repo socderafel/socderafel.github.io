@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT6 — Optimització de l'SGBD"
 prev_url: "../ut06/ut0601.html"
 prev_label: "⬅️ 6.1 Optimització de l'SGBD"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

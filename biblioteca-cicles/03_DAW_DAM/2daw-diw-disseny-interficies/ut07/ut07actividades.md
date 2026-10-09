@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT7 — USABILIDAD"
 prev_url: "../ut07/ut0701.html"
 prev_label: "⬅️ 7.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

@@ -3,8 +3,8 @@ layout: default
 title: "Índex — Disseny d'Interfícies Web — Disseny d'Interfícies Web | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "2n DAW · Grau Superior · FP Grau Superior — DAW i DAM (Desenvolupament d'Aplicacions)"
-next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_url: "./ut01/index.html"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # 🎨 Disseny d'Interfícies Web
@@ -12,30 +12,20 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Disseny d'Interfícies Web** (2n DAW · Grau Superior).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT7)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **Unitat Didàctica 0** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **PLANIFICACIÓN DE INTERFACES GRÁFICAS** | 7 apartats · 13 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **USO DE ESTILOS** | 7 apartats · 8 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **EXAMEN 1ª AVALUACIÓ UD1 UD2** | 1 apartats · 1 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut03actividades.md) |
-| **UT4** | **ACCESIBILIDAD** | 3 apartats · 2 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **BOOTSTRAP** | 5 apartats · 7 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UT6** | **IMPLANTACIÓN DE CONTENIDO MULTIMEDIA** | 4 apartats · 2 activitats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UT7** | **USABILIDAD** | 2 apartats · 1 activitats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
-
-## UT0 — Unitat Didàctica 0
-
-`2n DAW · Grau Superior · UT0 · 1 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Presentació del curs**](./ut00/ut0001.md)
+| **UT1** | **PLANIFICACIÓN DE INTERFACES GRÁFICAS** | 7 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT2** | **USO DE ESTILOS** | 7 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UT4** | **ACCESIBILIDAD** | 3 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **BOOTSTRAP** | 5 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UT6** | **IMPLANTACIÓN DE CONTENIDO MULTIMEDIA** | 4 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
+| **UT7** | **USABILIDAD** | 2 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
 
 ## UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS
 
@@ -64,14 +54,6 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 - [**2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO**](./ut02/ut0205.md)
 - [**2.6 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI**](./ut02/ut0206.md)
 - [**✍️ Activitats pràctiques UT2**](./ut02/ut02actividades.md)
-
-## UT3 — EXAMEN 1ª AVALUACIÓ UD1 UD2
-
-`2n DAW · Grau Superior · UT3 · 1 apartats`
-
-[**📘 Obrir UT3 Completa en una sola pàgina**](./ut03/index.md)
-
-- [**✍️ Activitats pràctiques UT3**](./ut03/ut03actividades.md)
 
 ## UT4 — ACCESIBILIDAD
 

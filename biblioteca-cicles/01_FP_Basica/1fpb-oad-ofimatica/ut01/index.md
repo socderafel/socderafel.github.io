@@ -1,25 +1,28 @@
 ---
 layout: default
-title: "UT1 — COMUNICACIONS INTERNES I EXTERNES — Ofimàtica i Arxiu de Documents | Portal Docent Pepe Cuenca"
+title: "UT1 — COMUNICACIONS INTERNES I EXTERNES · Unitat Completa"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UT1 Completa"
-prev_url: "../ut00/ut00actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT0"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 Comunicacions internes i externes ➡️"
 ---
 
 # 📘 UT1 — COMUNICACIONS INTERNES I EXTERNES (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**1.1 Comunicacions internes i externes**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
-> - [**1.2 Guia estudi**](#ut0102) (o [obrir en pàgina individual ➡️](./ut0102.md) )
-> - [**1.3 Xat Comunicacions Internes i Externes**](#ut0103) (o [obrir en pàgina individual ➡️](./ut0103.md) )
-> - [**✍️ Activitats pràctiques UT1**](#ut01actividades) (o [obrir en pàgina individual ➡️](./ut01actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 Comunicacions internes i externes**](./ut0101.md)
+- [**1.2 Guia estudi**](./ut0102.md)
+- [**✍️ Activitats pràctiques UT1**](./ut01actividades.md)
 
 ---
 
-## 1.1 Comunicacions internes i externes
+# 1.1 Comunicacions internes i externes
 
 El correo electrónico es una herramienta fundamental tanto para la comunicación interna como para la externa en una empresa. .
 
@@ -59,20 +62,14 @@ Consideraciones Adicionales
 
 ---
 
-## 1.2 Guia estudi
+# 1.2 Guia estudi
 
 > **📄 Document Escanejat / Visual (OAD 02.pdf)**
 > Aquest document PDF (15 pàgines) està compost principalment per esquemes o imatges escanejades.
 
 ---
 
-## 1.3 Xat Comunicacions Internes i Externes
-
-Xat per a tractar les activitats de Comunicacions Internes i Externes
-
----
-
-## ✍️ Activitats pràctiques UT1
+# ✍️ Activitats pràctiques UT1
 
 > **✍️ 📋 Exercici / Qüestionari 1.1 — Examen comunicacions internes i Externes**
 > Examen Ofimàtica
@@ -138,3 +135,5 @@ Xat per a tractar les activitats de Comunicacions Internes i Externes
 
 > **✍️ 📋 Exercici / Qüestionari 1.9 — Recuperació Comunicacions**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+---

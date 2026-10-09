@@ -4,18 +4,7 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Presentació": ut00/ut0001.md
-      - "0.2 Apunts sistemes de numeració": ut00/ut0002.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
-  - "UT0 — Introducció a la programació":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 UD1. Introducció a la programació": ut00/ut0001.md
-      - "0.2 UD1. Introducció a la programació Part 2": ut00/ut0002.md
-      - "0.3 UD1. Introducció a la programació Part 3": ut00/ut0003.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
-  - "UT0 — Introducción a Phyton":
+  - "UT0 — Introducció a Python":
       - "📘 UT0 Completa (1 pàgina)": ut00/index.md
       - "0.1 Introducció a Python": ut00/ut0001.md
       - "0.2 Elementos de un programa": ut00/ut0002.md

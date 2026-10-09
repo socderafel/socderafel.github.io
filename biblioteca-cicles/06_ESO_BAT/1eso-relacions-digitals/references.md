@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Taller de Relacions Digitals Responsables — Taller de Relacions Digitals Responsables | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "1r ESO · Documentació i Recursos"
-prev_url: "./ut09/ut09actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT9"
+prev_url: "./ut07/ut07actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

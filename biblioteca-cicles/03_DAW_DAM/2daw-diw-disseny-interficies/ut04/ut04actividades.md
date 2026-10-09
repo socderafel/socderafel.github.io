@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT4 — ACCESIBILIDAD"
 prev_url: "../ut04/ut0402.html"
 prev_label: "⬅️ 4.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

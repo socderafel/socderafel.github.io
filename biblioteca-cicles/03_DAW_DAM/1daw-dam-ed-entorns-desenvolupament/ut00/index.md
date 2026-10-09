@@ -3,8 +3,8 @@ layout: default
 title: "UT0 — Introducción al desarrollo de software — Entorns de Desenvolupament | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT0 Completa"
-prev_url: "../ut00/ut00actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT0"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut00/ut0001.html"
 next_label: "0.1 U1 - Intr. al desarrollo de SW ➡️"
 ---

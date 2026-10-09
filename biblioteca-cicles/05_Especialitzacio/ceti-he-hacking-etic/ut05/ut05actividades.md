@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT5 — Fingerprint"
 prev_url: "../ut05/ut0506.html"
 prev_label: "⬅️ 5.6 Scripts amb nmap"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

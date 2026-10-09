@@ -3,8 +3,8 @@ layout: default
 title: "Índex — Programació, Xarxes i Sistemes Informàtics I — Programació, Xarxes i Sistemes Informàtics I | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "1r Batxillerat · Secundària (ESO) i Batxillerat"
-next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_url: "./ut01/index.html"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # 💻 Programació, Xarxes i Sistemes Informàtics I
@@ -12,28 +12,19 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Programació, Xarxes i Sistemes Informàtics I** (1r Batxillerat).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT5)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **Unitat Didàctica 0** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **Programació** | 5 apartats · 14 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **Tasca Projecte hardware amb Word** | 1 apartats · 1 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut02actividades.md) |
-| **UT3** | **Xarxes** | 4 apartats · 5 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **Projecte hardware Excel** | 2 apartats · 1 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **Sistemes de fitxers Linux** | 4 apartats · 3 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-
-## UT0 — Unitat Didàctica 0
-
-`1r Batxillerat · UT0 · 1 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Continguts i Recursos**](./ut00/ut0001.md)
+| **UT1** | **Programació** | 5 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT2** | **Tasca Projecte hardware amb Word** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut02actividades.md) |
+| **UT3** | **Xarxes** | 4 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UT4** | **Projecte hardware Excel** | 2 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **Sistemes de fitxers Linux** | 4 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
 
 ## UT1 — Programació
 

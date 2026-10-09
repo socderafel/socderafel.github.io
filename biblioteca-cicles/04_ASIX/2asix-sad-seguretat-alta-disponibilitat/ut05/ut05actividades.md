@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT5 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT5 — Setmanes (9-10) del 6 al 19 de novembre"
+badge: "2n ASIX · Grau Superior · UD5 — Criptografia de Clau Pública i Certificats Digitals"
 prev_url: "../ut05/ut0501.html"
 prev_label: "⬅️ 5.1 Criptografia de clau pública"
-next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_url: "../ut07/index.html"
+next_label: "📘 UD6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

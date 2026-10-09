@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Desenvolupament Web en Entorn Servidor (PHP i Laravel) — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "2n DAW · Grau Superior · Documentació i Recursos"
-prev_url: "./ut10/ut1003.html"
-prev_label: "⬅️ 10.3 Laravel ex U6"
+prev_url: "./ut09/ut09actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT9"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

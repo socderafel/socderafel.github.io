@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT6 — Calc Mòdul 1 (I)"
 prev_url: "../ut06/ut0603.html"
 prev_label: "⬅️ 6.3 RECURSOS pràctiques MÒDUL 1"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT7 — Unit 7 - Web Services"
 prev_url: "../ut07/ut0702.html"
 prev_label: "⬅️ 7.2 U7 Class exercises"
 next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_label: "📘 UT8 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT12 — U11 - Encaminament"
 prev_url: "../ut12/ut1202.html"
 prev_label: "⬅️ 12.2 Exemple Enrutament Estàtic"
 next_url: "../ut13/index.html"
-next_label: "📘 UT13 Completa ➡️"
+next_label: "📘 UT13 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT12

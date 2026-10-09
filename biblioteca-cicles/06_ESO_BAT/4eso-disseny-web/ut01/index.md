@@ -3,8 +3,8 @@ layout: default
 title: "UT1 — HTML — Disseny Web amb HTML5, CSS i WordPress | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "4t ESO · UT1 Completa"
-prev_url: "../ut00/ut0001.html"
-prev_label: "⬅️ 0.1 Continguts i Recursos"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 Sessio 1 ➡️"
 ---

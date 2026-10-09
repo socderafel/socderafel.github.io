@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT8 — U7 - El switch"
 prev_url: "../ut08/ut0802.html"
 prev_label: "⬅️ 8.2 Cisco IOS"
 next_url: "../ut09/index.html"
-next_label: "📘 UT9 Completa ➡️"
+next_label: "📘 UT9 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

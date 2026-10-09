@@ -6,46 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — General PAX",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Continguts i Recursos",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT0",
-          "href": "ut00/ut00actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT1 — Tutoria 1ASIX",
-      "items": [
-        {
-          "label": "📘 UT1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "1.1 Horari 1ASIX",
-          "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Calendari 21 22",
-          "href": "ut01/ut0102.html"
-        },
-        {
-          "label": "1.3 Plànol IES",
-          "href": "ut01/ut0103.html"
-        }
-      ]
-    },
-    {
       "summary": "UT2 — U1 - Caracterització de les xarxes",
       "items": [
         {

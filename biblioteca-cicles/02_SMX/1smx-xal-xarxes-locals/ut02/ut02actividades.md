@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT2 — Unitat Didàctica 2"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 Solución: Proyecto de Instalación LAN"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

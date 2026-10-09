@@ -5,8 +5,8 @@ course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT7 — Unit 7: JS Programming Introduction"
 prev_url: "../ut07/ut0701.html"
 prev_label: "⬅️ 7.1 Plantilla: Joc JS amb processing.js"
-next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

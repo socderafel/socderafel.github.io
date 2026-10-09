@@ -13,14 +13,7 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 
 | Format | Document / Material Integrat | Apartat del Curs | Mida |
 | --- | --- | --- | --- |
-| `PDF` | **21-22_Calendari_Escolar_def.pdf** | Calendari escolar | 217.2 KB |
-| `PDF` | **21-22_Planol_Centre_def.pdf** | Plànol del centre | 125.4 KB |
-| `PDF` | **21-22_Horari_1SMXB.pdf** | Horari Grup 1 SMX B | 59.4 KB |
-| `PDF` | **21-22_Permis_Eixida.pdf** | Permis Eixida | 302.8 KB |
 | `PDF` | **21-22_Justificacio_Faltes.pdf** | Justificació de faltes | 625.8 KB |
-| `PDF` | **BEQUES 2022 2023. DOCUMENT INFORMATIU_VAL.pdf** | Beques Ministeri (Valencià) | 1375.5 KB |
-| `PDF` | **BECAS 2022 2023. DOCUMENTO INFORMATIVO_CAS.pdf** | Becas Ministerio (Castellano) | 1335.2 KB |
-| `PDF` | **CARTEL INFORMATIVO NUEVO PLAZO.pdf** | Beques (Cartell inforamtiu) | 290.1 KB |
 | `PDF` | **Tema1_Suites Ofimaticas.pdf** | Tema 0. Suites Ofimàtiques | 5861.8 KB |
 | `PDF` | **Tema2_Writer.pdf** | Tema 0. Writer | 5027.6 KB |
 | `PDF` | **Mapa conceptual WRITER_Al.pdf** | Mapa conceptual WRITER | 169.0 KB |
@@ -273,7 +266,6 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 | `PDF` | **Tema_07_EXERCICIS_BDA_MACROS_Paraninfo_.pdf** | B1-EXERCICIS BDA-MACROS | 1656.0 KB |
 | `PDF` | **B2_Tema_7_Macros Access _original_.pdf** | B2-EXERCICIS BDA MACROS | 8902.8 KB |
 | `PDF` | **ejercicio_final_BDA.pdf** | Treball Final Base de dades | 127.6 KB |
-| `ZIP` | **Pràctiques_Pendents_Alumnes.zip** | Practiques_Pendents | 10450.3 KB |
 | `PDF` | **TEMA1_TEORIA_IMAGEN_DIGITAL.pdf** | Tema 1: Imatge Digital | 540.5 KB |
 | `PDF` | **TEMA2_Imagen_Vectorial_Teoria_basica_Inkscape.pdf** | Tema 2. Imatge vectorial (Inkscape) | 660.0 KB |
 | `PDF` | **TEMA2_practicaB_1_Uso_herramientas_basicas_inkscape.pdf** | Tema 2. Pràctica 1 Inkscape | 1054.6 KB |

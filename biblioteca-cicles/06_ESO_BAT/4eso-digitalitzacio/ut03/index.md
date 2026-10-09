@@ -3,8 +3,8 @@ layout: default
 title: "UT3 — Procesadores de Texto — Digitalització | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "4t ESO · UT3 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut01/ut01actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 Continguts i Recursos ➡️"
 ---

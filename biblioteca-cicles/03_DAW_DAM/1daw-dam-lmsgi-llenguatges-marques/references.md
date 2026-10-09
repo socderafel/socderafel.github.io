@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Llenguatges de Marques i Sistemes de Gestió d'Informació — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "1r DAW / DAM / ASIX · Grau Superior · Documentació i Recursos"
-prev_url: "./ut08/ut08actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
+prev_url: "./ut01/ut01actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT7 — Metodologías ágiles"
 prev_url: "../ut07/ut0703.html"
 prev_label: "⬅️ 7.3 Poker planning"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT5 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT5 — U2: Servici de Resolució de Noms (DNS)"
-prev_url: "../ut05/ut0502.html"
-prev_label: "⬅️ 5.2 Presentació Victor i Javier"
-next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+badge: "2n SMX · Grau Mitjà · U3 — Sistema de Noms de Domini (DNS)"
+prev_url: "../ut05/ut0501.html"
+prev_label: "⬅️ 5.1 UD3 Servidor de Nombres de Dominio SMX"
+next_url: "../ut04/index.html"
+next_label: "📘 U4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT6 — Unit 6 - Email"
 prev_url: "../ut06/ut0602.html"
 prev_label: "⬅️ 6.2 U6P1"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

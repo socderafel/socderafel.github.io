@@ -6,52 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — Unitat Didàctica 0",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Chat general",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "0.2 Programación del módulo",
-          "href": "ut00/ut0002.html"
-        },
-        {
-          "label": "0.3 Contenidos y criterios de evaluación",
-          "href": "ut00/ut0003.html"
-        },
-        {
-          "label": "0.4 Presentación del módulo",
-          "href": "ut00/ut0004.html"
-        },
-        {
-          "label": "0.5 Accesibilidad",
-          "href": "ut00/ut0005.html"
-        },
-        {
-          "label": "0.6 guia para aprender a programar",
-          "href": "ut00/ut0006.html"
-        },
-        {
-          "label": "0.7 Primera evaluación",
-          "href": "ut00/ut0007.html"
-        },
-        {
-          "label": "0.8 Segunda evaluación",
-          "href": "ut00/ut0008.html"
-        },
-        {
-          "label": "0.9 Tercera evaluación",
-          "href": "ut00/ut0009.html"
-        }
-      ]
-    },
-    {
       "summary": "UT1 — Elementos esenciales del HE",
       "items": [
         {
@@ -376,20 +330,6 @@
         {
           "label": "16.2 Metasploit",
           "href": "ut16/ut1602.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT17 — -------",
-      "items": [
-        {
-          "label": "📘 UT17 Completa (1 pàgina)",
-          "href": "ut17/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT17",
-          "href": "ut17/ut17actividades.html"
         }
       ]
     }

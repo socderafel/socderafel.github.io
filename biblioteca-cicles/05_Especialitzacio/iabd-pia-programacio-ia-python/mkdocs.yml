@@ -4,15 +4,19 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Continguts i Recursos": ut00/ut0001.md
-  - "UT2 — Redes Neuronales":
-      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Continguts i Recursos": ut02/ut0201.md
-      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — Scikit Learn":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
+  - "UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python)":
+      - "📘 UD1 Completa (1 pàgina)": ut05/index.md
+      - "5.1 Instalación entorno de trabajo.": ut05/ut0501.md
+      - "5.2 SO LINUX MINT MATE": ut05/ut0502.md
+      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
+  - "UD2 — Fonaments de Programació en Python":
+      - "📘 UD2 Completa (1 pàgina)": ut04/index.md
+      - "4.1 Python apuntes de clase": ut04/ut0401.md
+      - "4.2 Python para todos (libro).": ut04/ut0402.md
+      - "4.3 Ejercicios": ut04/ut0403.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn":
+      - "📘 UD3 Completa (1 pàgina)": ut03/index.md
       - "3.1 UT 3.6 Biblioteca scikit learn - Preprocesado de": ut03/ut0301.md
       - "3.2 UT 3.5 Biblioteca plotly": ut03/ut0302.md
       - "3.3 UT 3.4 Biblioteca seaborn": ut03/ut0303.md
@@ -22,19 +26,8 @@ nav:
       - "3.7 UT 3.0 Presentació unitat": ut03/ut0307.md
       - "3.8 Housing": ut03/ut0308.md
       - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "UT4 — Primeros pasos con Python":
-      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 Python apuntes de clase": ut04/ut0401.md
-      - "4.2 Python para todos (libro).": ut04/ut0402.md
-      - "4.3 Ejercicios": ut04/ut0403.md
-      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
-  - "UT5 — Creación entorno de trabajo":
-      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 Instalación entorno de trabajo.": ut05/ut0501.md
-      - "5.2 SO LINUX MINT MATE": ut05/ut0502.md
-      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "UT6 — Presentación del módulo":
-      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Presentación.": ut06/ut0601.md
-      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
+  - "UD4 — Xarxes Neuronals i Deep Learning":
+      - "📘 UD4 Completa (1 pàgina)": ut02/index.md
+      - "2.1 Continguts i Recursos": ut02/ut0201.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
   - "📂 Índex de Documents i Recursos": references.md

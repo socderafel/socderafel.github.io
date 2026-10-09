@@ -4,9 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Presentació del curs": ut00/ut0001.md
   - "UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS":
       - "📘 UT1 Completa (1 pàgina)": ut01/index.md
       - "1.1 DIAPOSITIVAS SECCIÓN 1: ELEMENTOS DEL DISEÑO": ut01/ut0101.md
@@ -25,9 +22,6 @@ nav:
       - "2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO": ut02/ut0205.md
       - "2.6 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI": ut02/ut0206.md
       - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — EXAMEN 1ª AVALUACIÓ UD1 UD2":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
   - "UT4 — ACCESIBILIDAD":
       - "📘 UT4 Completa (1 pàgina)": ut04/index.md
       - "4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1": ut04/ut0401.md

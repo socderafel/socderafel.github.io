@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT3 — Setmanes (5-6) del 9 al 22 d'octubre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD3 — Gestió de Contrasenyes i Anàlisi Forense · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT3 Completa"
 prev_url: "../ut02/ut02actividades.html"
@@ -9,16 +9,20 @@ next_url: "../ut03/ut0301.html"
 next_label: "3.1 Contrasenyes ➡️"
 ---
 
-# 📘 UT3 — Setmanes (5-6) del 9 al 22 d'octubre (Unitat Completa)
+# 📘 UD3 — Gestió de Contrasenyes i Anàlisi Forense (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 Contrasenyes**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
-> - [**3.2 Anàlisi Forense**](#ut0302) (o [obrir en pàgina individual ➡️](./ut0302.md) )
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 Contrasenyes**](./ut0301.md)
+- [**3.2 Anàlisi Forense**](./ut0302.md)
+- [**✍️ Activitats pràctiques UT3**](./ut03actividades.md)
 
 ---
 
-## 3.1 Contrasenyes
+# 3.1 Contrasenyes
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### UD 2 Mecanismes de seguretat
@@ -178,7 +182,7 @@ RESUM Considera la utilització d'eines d'esborrat segur Considera l'ús d
 
 ---
 
-## 3.2 Anàlisi Forense
+# 3.2 Anàlisi Forense
 
 INFORMÀTICA FORENSE
 
@@ -318,7 +322,7 @@ Elaboració d’un pla de seguretat Etapes • Revisió / auditoria de seguretat
 
 ---
 
-## ✍️ Activitats pràctiques UT3
+# ✍️ Activitats pràctiques UT3
 
 > **✍️ Activitat Pràctica 3.1 — Copia de seguretat amb Cobian**
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: Cobian Backup 11 Utilitza una maquina virtual amb W10 Profesional 64bits. Crea una carpeta en l'escriptori Prepara 4 carpetes dins de la carpeta creada. (Crida-les: UNA, DOS, TRES, QUATRE) Prepara 2 fitxers de text amb contingut en cada carpeta, crida'ls com tu vulgues.
@@ -407,3 +411,5 @@ Elaboració d’un pla de seguretat Etapes • Revisió / auditoria de seguretat
 > ### 6. Porta a l’extrem la prova, esborrant la carpeta del sistema
 >
 > operatiu, i reinicia el sistema Documentar tot el procés en un document. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”
+
+---

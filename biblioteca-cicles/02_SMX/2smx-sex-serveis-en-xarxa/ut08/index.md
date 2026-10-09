@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT8 — U0: Virtualización y repaso de conceptos previos — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+title: "U0 — Virtualització i Repàs de Conceptes Previs · Unitat Completa"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT8 Completa"
-prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut08/ut0801.html"
 next_label: "8.1 Repàs Interconnexió de Xarxes ➡️"
 ---
 
-# 📘 UT8 — U0: Virtualización y repaso de conceptos previos (Unitat Completa)
+# 📘 U0 — Virtualització i Repàs de Conceptes Previs (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**8.1 Repàs Interconnexió de Xarxes**](#ut0801) (o [obrir en pàgina individual ➡️](./ut0801.md) )
-> - [**8.2 Plantilla qüestionai d'avaluació**](#ut0802) (o [obrir en pàgina individual ➡️](./ut0802.md) )
-> - [**✍️ Activitats pràctiques UT8**](#ut08actividades) (o [obrir en pàgina individual ➡️](./ut08actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 Repàs Interconnexió de Xarxes**](./ut0801.md)
+- [**8.2 Plantilla qüestionai d'avaluació**](./ut0802.md)
+- [**✍️ Activitats pràctiques UT8**](./ut08actividades.md)
 
 ---
 
-## 8.1 Repàs Interconnexió de Xarxes
+# 8.1 Repàs Interconnexió de Xarxes
 
 > **📌 Introducció de la Unitat**
 > ### **U0: Virtualizació i repas de conceptes previs de xarxes**
@@ -87,7 +91,7 @@ WEBGRAFIA https://www.econectia.com/blog/tipos-de-conexiones-a-internet-cual-te-
 
 ---
 
-## 8.2 Plantilla qüestionai d'avaluació
+# 8.2 Plantilla qüestionai d'avaluació
 
 Plantilla qüestionai d'avaluació
 
@@ -153,7 +157,7 @@ Resposta
 
 ---
 
-## ✍️ Activitats pràctiques UT8
+# ✍️ Activitats pràctiques UT8
 
 > **✍️ 📋 Exercici / Qüestionari 8.1 — Pràctica Virtualització. Part 1**
 > Pràctica Virtualització. Part 1
@@ -267,3 +271,5 @@ Resposta
 
 > **✍️ Activitat Pràctica 8.9 — Nota UD0**
 > Nota UD0
+
+---

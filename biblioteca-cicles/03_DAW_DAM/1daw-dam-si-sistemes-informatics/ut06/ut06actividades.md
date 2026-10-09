@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT6 — SEGURETAT, RENDIMENT I RECURSOS
 prev_url: "../ut06/ut0603.html"
 prev_label: "⬅️ 6.3 TEORIA UNITAT 7 PART 3"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

@@ -1,25 +1,29 @@
 ---
 layout: default
-title: "UT7 — Unidad 2 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD2 — Llenguatge XML · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut08/ut08actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
 next_url: "../ut07/ut0701.html"
 next_label: "7.1 UD 2 - XML ➡️"
 ---
 
-# 📘 UT7 — Unidad 2 (Unitat Completa)
+# 📘 UD2 — Llenguatge XML (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**7.1 UD 2 - XML**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
-> - [**7.2 Ejemplos en XML**](#ut0702) (o [obrir en pàgina individual ➡️](./ut0702.md) )
-> - [**7.3 Soluciones ejercicios Tema 2**](#ut0703) (o [obrir en pàgina individual ➡️](./ut0703.md) )
-> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**7.1 UD 2 - XML**](./ut0701.md)
+- [**7.2 Ejemplos en XML**](./ut0702.md)
+- [**7.3 Soluciones ejercicios Tema 2**](./ut0703.md)
+- [**✍️ Activitats pràctiques UT7**](./ut07actividades.md)
 
 ---
 
-## 7.1 UD 2 - XML
+# 7.1 UD 2 - XML
 
 > **🔗 Recurs Web: Tutorial de xml estructuras de datos - Etiquetas (Elementos) y Atributos**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=cQ5xECYH760) ↗️**](https://www.youtube.com/watch?v=cQ5xECYH760)
@@ -191,7 +195,7 @@ Ejemplo 2.7 Supongamos que creamos un documento que contiene las transparencias 
 
 ---
 
-## 7.2 Ejemplos en XML
+# 7.2 Ejemplos en XML
 
 Ejemplos en XML de un correo electrónico, de dos libros y un menú.
 
@@ -202,7 +206,7 @@ Ejemplos en XML de un correo electrónico, de dos libros y un menú.
 
 ---
 
-## 7.3 Soluciones ejercicios Tema 2
+# 7.3 Soluciones ejercicios Tema 2
 
 Aquí tenéis las soluciones de los ejercicios del tema 2 "Documentos bien formados XML" y "Ejercicios_tema_2".
 **Recordad que estas soluciones no son únicas, pueden estar resultas de alguna otra manera.**
@@ -227,7 +231,7 @@ Documento XML
 
 ---
 
-## ✍️ Activitats pràctiques UT7
+# ✍️ Activitats pràctiques UT7
 
 > **✍️ Activitat Pràctica 7.1 — Ejercicios de XML tema 2**
 > Instrucciones sobre el documento " Ejercicios_tema_2.pdf" :
@@ -251,3 +255,5 @@ Documento XML
 > Ej1. Documentos bien formados. Encontrar los errores <?xml version="1.0" encoding="UTF-8"?> <deportistas> <deportista> <deporte Atletismo /> <nombre>Jesse Owens</nombre> <deportista> <deporte Natación /> <nombre>Mark Spitz</nombre> </deportista> </deportistas> <?xml version="1.0" encoding="UTF-8"?> <pelicula> <titulo>Con faldas y a lo loco</titulo> <director>Billy Wilder</director> </pelicula> <pelicula> <director>Leo McCarey</director> <titulo>Sopa de ganso</titulo> </pelicula> <autor />barto</autor> <?xml version="1.0" encoding="UTF-8"?> <texto> <Titulo>XML explicado a los niños</titulo> <párrafo>El <abreviatura>XML</abreviatura>define cómo crear lenguajes de marcas.</párrafo> <párrafo>Las marcas se añaden a un documento de texto para añadir información.</párrafo> <http://>www.example.org</http://> </texto> <?xml version="1.0" encoding="UTF-8"?> <geografia mundial> <pais> <pais>España</pais> <continente>Europa</continente> <capital></capital nombre="Madrid"> </pais> </geografia mundial>
 >
 > Ej1. Documentos bien formados. Encontrar los errores <?xml version="1.0" encoding="UTF-8"?> <programas> <programa nombre="Firefox" licencia="GPL" licencia="MPL" /> <programa nombre="LibreOffice" licencia="LGPL" /> <programa nombre="Inkscape" licencia=GPL /> </programas> <?xml version="1.0" encoding="UTF-8"?> <mundiales-de-futbol> <mundial> <pais="España" /> <1982 /> </mundial> </mundiales-de-futbol> <?xml version="1.0" encoding="UTF-8"?> <mediosDeTransporte> <bicicleta velocidad="v<100km/h" /> <patinete velocidad maxima="50 km/h" </mediosDeTransporte>
+
+---

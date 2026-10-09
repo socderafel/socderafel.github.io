@@ -4,7 +4,7 @@ title: "Índex — Programació, Xarxes i Sistemes Informàtics II — Programac
 course_root: "."
 badge: "2n Batxillerat · Secundària (ESO) i Batxillerat"
 next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_label: "📘 UT0 Completa (1 pàgina) ➡️"
 ---
 
 # 🔐 Programació, Xarxes i Sistemes Informàtics II
@@ -12,44 +12,21 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Programació, Xarxes i Sistemes Informàtics II** (2n Batxillerat).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT4)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **Unitat Didàctica 0** | 3 apartats · 2 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT0** | **Introducció a la programació** | 4 apartats · 3 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT0** | **Introducción a Phyton** | 11 apartats · 10 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **Xarxes Locals** | 7 apartats · 12 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **Págines Web** | 3 apartats · 6 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **Seguridad** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **Unitat Didàctica 6** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT0** | **Introducció a Python** | 11 apartats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
+| **UT1** | **Xarxes Locals** | 7 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT2** | **Págines Web** | 3 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UT3** | **Seguridad** | 1 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UT4** | **Unitat Didàctica 6** | 1 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
 
-## UT0 — Unitat Didàctica 0
-
-`2n Batxillerat · UT0 · 3 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Presentació**](./ut00/ut0001.md)
-- [**0.2 Apunts sistemes de numeració**](./ut00/ut0002.md)
-- [**✍️ Activitats pràctiques UT0**](./ut00/ut00actividades.md)
-
-## UT0 — Introducció a la programació
-
-`2n Batxillerat · UT0 · 4 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 UD1. Introducció a la programació**](./ut00/ut0001.md)
-- [**0.2 UD1. Introducció a la programació Part 2**](./ut00/ut0002.md)
-- [**0.3 UD1. Introducció a la programació Part 3**](./ut00/ut0003.md)
-- [**✍️ Activitats pràctiques UT0**](./ut00/ut00actividades.md)
-
-## UT0 — Introducción a Phyton
+## UT0 — Introducció a Python
 
 `2n Batxillerat · UT0 · 11 apartats`
 

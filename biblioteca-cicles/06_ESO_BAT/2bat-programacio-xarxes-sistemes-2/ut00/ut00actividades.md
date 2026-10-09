@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT0 — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n Batxillerat · UT0 — Introducción a Phyton"
+badge: "2n Batxillerat · UT0 — Introducció a Python"
 prev_url: "../ut00/ut0010.html"
 prev_label: "⬅️ 0.10 Ficheros"
 next_url: "../ut01/index.html"
-next_label: "📘 UT1 Completa ➡️"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT0

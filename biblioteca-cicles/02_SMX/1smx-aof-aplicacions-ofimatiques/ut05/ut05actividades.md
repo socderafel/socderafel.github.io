@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT5 — Impress"
 prev_url: "../ut05/ut0505.html"
 prev_label: "⬅️ 5.5 Treball 2 Impress: Un joc senzill amb POWERPOINT"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

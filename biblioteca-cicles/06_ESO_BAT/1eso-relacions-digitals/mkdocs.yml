@@ -4,12 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Presentació - 1er ESO":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Qüestionari inicial": ut00/ut0001.md
-      - "0.2 Presentación": ut00/ut0002.md
-      - "0.3 Enquesta valoració de l'alumnat": ut00/ut0003.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
   - "UT1 — L'ordinador i els seus components i els sistemes operatius":
       - "📘 UT1 Completa (1 pàgina)": ut01/index.md
       - "1.1 UD1 - L'ordinador i els seus components": ut01/ut0101.md
@@ -40,12 +34,4 @@ nav:
       - "📘 UT7 Completa (1 pàgina)": ut07/index.md
       - "7.1 Continguts i Recursos": ut07/ut0701.md
       - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
-  - "UT8 — RECUPERACIONS PER AVALUACIÓ":
-      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
-      - "8.1 Continguts i Recursos": ut08/ut0801.md
-      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
-  - "UT9 — RECUPERACIÓ FINAL":
-      - "📘 UT9 Completa (1 pàgina)": ut09/index.md
-      - "9.1 Continguts i Recursos": ut09/ut0901.md
-      - "✍️ Activitats pràctiques UT9": ut09/ut09actividades.md
   - "📂 Índex de Documents i Recursos": references.md

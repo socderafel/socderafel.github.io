@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT2 — Unit 2 - DNS"
 prev_url: "../ut02/ut0203.html"
 prev_label: "⬅️ 2.3 U2 P2"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

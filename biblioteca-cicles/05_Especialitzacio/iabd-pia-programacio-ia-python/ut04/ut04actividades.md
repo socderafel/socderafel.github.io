@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT4 — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "CE IA i Big Data · UT4 — Primeros pasos con Python"
+badge: "CE IA i Big Data · UD2 — Fonaments de Programació en Python"
 prev_url: "../ut04/ut0403.html"
 prev_label: "⬅️ 4.3 Ejercicios"
-next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_url: "../ut03/index.html"
+next_label: "📘 UD3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

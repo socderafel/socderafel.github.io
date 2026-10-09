@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT8 — Administració de servidors web. — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca"
+title: "UD4 — Administració i Segurització de Servidors Web · Unitat Completa"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT8 Completa"
-prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_url: "../ut09/ut09actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT9"
 next_url: "../ut08/ut0801.html"
 next_label: "8.1 UT 4.2 Administració de servidors web - Seguritz ➡️"
 ---
 
-# 📘 UT8 — Administració de servidors web. (Unitat Completa)
+# 📘 UD4 — Administració i Segurització de Servidors Web (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**8.1 UT 4.2 Administració de servidors web - Seguritz**](#ut0801) (o [obrir en pàgina individual ➡️](./ut0801.md) )
-> - [**8.2 UT 4.1 Administració de servidors web - Instal·l**](#ut0802) (o [obrir en pàgina individual ➡️](./ut0802.md) )
-> - [**✍️ Activitats pràctiques UT8**](#ut08actividades) (o [obrir en pàgina individual ➡️](./ut08actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 UT 4.2 Administració de servidors web - Seguritz**](./ut0801.md)
+- [**8.2 UT 4.1 Administració de servidors web - Instal·l**](./ut0802.md)
+- [**✍️ Activitats pràctiques UT8**](./ut08actividades.md)
 
 ---
 
-## 8.1 UT 4.2 Administració de servidors web - Seguritz
+# 8.1 UT 4.2 Administració de servidors web - Seguritz
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Setmana del 18/12/23 al 22/12/23
@@ -291,7 +295,7 @@ No obstant aquesta notificació també pot ser útil si canviem un domini (p.e d
 
 ---
 
-## 8.2 UT 4.1 Administració de servidors web - Instal·l
+# 8.2 UT 4.1 Administració de servidors web - Instal·l
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web
 
@@ -850,7 +854,7 @@ A contin 35 / 35
 
 ---
 
-## ✍️ Activitats pràctiques UT8
+# ✍️ Activitats pràctiques UT8
 
 > **✍️ Activitat Pràctica 8.1 — Tasca 4 UT4**
 > ##### Data de venciment : 5/2/24
@@ -882,3 +886,5 @@ A contin 35 / 35
 > - Captura de pantalla del arxiu .htaccess que situareu al directori amb restricció
 >
 > d’accés. 2 / 2
+
+---

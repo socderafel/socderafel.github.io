@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Hacking Ètic i Auditoria de Seguretat — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "CE Ciberseguretat (CETI) · Documentació i Recursos"
-prev_url: "./ut17/ut17actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT17"
+prev_url: "./ut16/ut1602.html"
+prev_label: "⬅️ 16.2 Metasploit"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

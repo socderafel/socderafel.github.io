@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT7 — Calc Mòdul 2 (II)"
 prev_url: "../ut07/ut0704.html"
 prev_label: "⬅️ 7.4 Diagrama de Gantt (2)"
 next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_label: "📘 UT8 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

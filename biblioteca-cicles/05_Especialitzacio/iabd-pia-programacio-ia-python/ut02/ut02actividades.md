@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT2 — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "CE IA i Big Data · UT2 — Redes Neuronales"
+badge: "CE IA i Big Data · UD4 — Xarxes Neuronals i Deep Learning"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 Continguts i Recursos"
-next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

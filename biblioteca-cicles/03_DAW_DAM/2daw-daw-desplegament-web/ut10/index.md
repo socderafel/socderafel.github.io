@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT10 — Administració de servidors d’arxius — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca"
+title: "UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP) · Unitat Completa"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT10 Completa"
-prev_url: "../ut09/ut09actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT9"
+prev_url: "../ut11/ut1103.html"
+prev_label: "⬅️ 11.3 UT 1.1 Servicios de Red"
 next_url: "../ut10/ut1001.html"
 next_label: "10.1 UT 2.2 Introducció - Creació servidor FTP amb SF ➡️"
 ---
 
-# 📘 UT10 — Administració de servidors d’arxius (Unitat Completa)
+# 📘 UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**10.1 UT 2.2 Introducció - Creació servidor FTP amb SF**](#ut1001) (o [obrir en pàgina individual ➡️](./ut1001.md) )
-> - [**10.2 UT 2.1 Introducció - Creació servidor FTP amb VS**](#ut1002) (o [obrir en pàgina individual ➡️](./ut1002.md) )
-> - [**✍️ Activitats pràctiques UT10**](#ut10actividades) (o [obrir en pàgina individual ➡️](./ut10actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**10.1 UT 2.2 Introducció - Creació servidor FTP amb SF**](./ut1001.md)
+- [**10.2 UT 2.1 Introducció - Creació servidor FTP amb VS**](./ut1002.md)
+- [**✍️ Activitats pràctiques UT10**](./ut10actividades.md)
 
 ---
 
-## 10.1 UT 2.2 Introducció - Creació servidor FTP amb SF
+# 10.1 UT 2.2 Introducció - Creació servidor FTP amb SF
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Quinzena del 09/10/23 al 21/10/23
@@ -87,7 +91,7 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 
 ---
 
-## 10.2 UT 2.1 Introducció - Creació servidor FTP amb VS
+# 10.2 UT 2.1 Introducció - Creació servidor FTP amb VS
 
 DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions Web
 
@@ -216,7 +220,7 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 
 ---
 
-## ✍️ Activitats pràctiques UT10
+# ✍️ Activitats pràctiques UT10
 
 > **✍️ Activitat Pràctica 10.1 — Tasca 1 UT2**
 > ##### Data de venciment : 16/10/23
@@ -247,3 +251,5 @@ DAW: Desenrotllament d’Aplicacions Web Mòdul: Desplegament d’Aplicacions We
 > Configura el client per a connectar amb la màquina del núvol (o una en local, si així ho has decidit). Connecta i edita el fitxer de la pàgina principal del nostre servidor web. Prova a baixar el fitxer, editar en local i tornar a pujar (comprova els canvis). Prova a editar-lo directament amb l’opció del client Filezilla (comprova els canvis).
 >
 > Entrega de la tasca Tot el procés s’ha de documentar amb un processador de text i entregar en format PDF. 2 / 2
+
+---

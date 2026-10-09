@@ -6,7 +6,7 @@ badge: "4t ESO · UT4 — Hojas de cálculo"
 prev_url: "../ut04/ut0401.html"
 prev_label: "⬅️ 4.1 Continguts i Recursos"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT10 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT10 — Setmanes Del 22 de Gener al 4 de Febrer"
+badge: "2n ASIX · Grau Superior · UD9 — Escriptoris Remots i Accés Segur (Kali Linux)"
 prev_url: "../ut10/ut1001.html"
 prev_label: "⬅️ 10.1 Esciptoris_remots(kali)"
 next_url: "../ut11/index.html"
-next_label: "📘 UT11 Completa ➡️"
+next_label: "📘 UD10 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT10

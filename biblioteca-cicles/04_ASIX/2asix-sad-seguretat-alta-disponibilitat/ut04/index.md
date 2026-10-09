@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT4 — Setmanes (7-8) del 23 d'octubre al 5 de novembre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT4 Completa"
 prev_url: "../ut03/ut03actividades.html"
@@ -9,16 +9,20 @@ next_url: "../ut04/ut0401.html"
 next_label: "4.1 Clau simètrica i Hash ➡️"
 ---
 
-# 📘 UT4 — Setmanes (7-8) del 23 d'octubre al 5 de novembre (Unitat Completa)
+# 📘 UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 Clau simètrica i Hash**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**4.2 Esteganografia**](#ut0402) (o [obrir en pàgina individual ➡️](./ut0402.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 Clau simètrica i Hash**](./ut0401.md)
+- [**4.2 Esteganografia**](./ut0402.md)
+- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
 
 ---
 
-## 4.1 Clau simètrica i Hash
+# 4.1 Clau simètrica i Hash
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### UD 3 Criptografia. Clau simètrica
@@ -155,7 +159,7 @@ FUNCIONS HASH Pràctica Calcula HASHes en Windows Instal·la i utilitza el progr
 
 ---
 
-## 4.2 Esteganografia
+# 4.2 Esteganografia
 
 CFGS Administració de Sistemes Informàtics en Xarxa Mòdul Seguretat i Alta disponibilitat UD3.2 Esteganografia UD3.2. Esteganografia La esteganografia tracta l'estudi i aplicació de tècniques que permeten ocultar missatges o objectes, dins d'uns altres, anomenats portadors, per a ser enviats i de manera que no es perceba el fet. És a dir, procura ocultar missatges dins d'altres objectes i d'aquesta manera establir un canal encobert de comunicació, de manera que el propi acte de la comunicació passe inadvertit per a observadors que tenen accés a aqueix canal.
 
@@ -181,7 +185,7 @@ Tècniques mes utilitzades en esteganografia. • En documents • En imatges �
 
 ---
 
-## ✍️ Activitats pràctiques UT4
+# ✍️ Activitats pràctiques UT4
 
 > **✍️ Activitat Pràctica 4.1 — (SAD) Activitat HASH**
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: hash En aquesta activitat es practica amb els algorismes de hash Hash des de Windows Programes : HashGenerator, CriptoRes (espanyol), QuickHash, MD5 & SHA Checksum Utility, HashMyFiles, HashTab Hash des de Linux Des de terminal: sha256sum nomfitxer md5sum , sha1sum , sha512sum Des d'entorn gràfic: GtkHash Exercici 1. Comprovar que amb diferents programes (utilitzant la mateixa funció hash), s'obté el mateix (codi)hash per a un mateix fitxer. Prova amb fitxers xicotets, amb una sola lletra. Prova amb fitxers grans.
@@ -194,3 +198,5 @@ Tècniques mes utilitzades en esteganografia. • En documents • En imatges �
 > Prenem un fitxer gran. Fem una còpia, li canviem el nom. Comprovem el hash dels dos fitxers. (ha de coincidir) Prenem el segon fitxer i amb un editor hexadecimal li canviem un sol bit. Comprovem ara els hash. Observar com ha canviat el hash. Exemple editor per a windows: Editors per a linux: Ghex, wxHexEditor ...
 >
 > Des de línia de comandos, hexedit, Hexyl, xxd, Hexcurse, Hexer Documenta tot el procés i lliura un document en format PDF. Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”
+
+---

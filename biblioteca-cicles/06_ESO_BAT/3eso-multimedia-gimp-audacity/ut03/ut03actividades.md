@@ -6,7 +6,7 @@ badge: "3r ESO · UT3 — Audacity"
 prev_url: "../ut03/ut0301.html"
 prev_label: "⬅️ 3.1 Continguts i Recursos"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

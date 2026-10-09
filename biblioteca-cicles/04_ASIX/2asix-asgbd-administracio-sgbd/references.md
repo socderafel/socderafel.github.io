@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Administració de Sistemes Gestors de Bases de Dades — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "2n ASIX · Grau Superior · Documentació i Recursos"
-prev_url: "./ut11/ut11actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT11"
+prev_url: "./ut07/ut0701.html"
+prev_label: "⬅️ 7.1 Disponibilitat d'un SGBD"
 ---
 
 # 📂 Índex de Materials i Documents Integrats
@@ -16,7 +16,6 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 | `PDF` | **Presentacio ASGBD-.pdf** | Presentació Mòdul ASGBD | 1324.9 KB |
 | `PDF` | **Com fer un treball de classe i.pdf** | Com fer un treball de classe | 86.1 KB |
 | `PDF` | **Com fer un treball de classe ii -conclusio.pdf** | Com fer un treball de classe (conclusions) | 49.6 KB |
-| `PDF` | **Beques Openwebinars.pdf** | Beques OpenWebinars | 203.5 KB |
 | `PDF` | **ASGBD-UD1.0 Preparacio entorn.pdf** | Preparació de l'entorn | 875.8 KB |
 | `PDF` | **01 instalar w10prof.pdf** | Activitat: preparació mv W10prof | 77.0 KB |
 | `PDF` | **ASGBD-UD1.1 Instalacio.pdf** | Instal·lació d'un SGBD | 3370.8 KB |
@@ -57,8 +56,6 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 | `PDF` | **10 particionament.pdf** | (ASGBD) Particionament | 94.6 KB |
 | `PDF` | **ASGBD-UD6 Disponibilitat del SGBD.pdf** | Disponibilitat d'un SGBD | 1804.3 KB |
 | `PDF` | **examen ASGBD 2trim - P 2024_v2.pdf** | Examen 2on Trimestre. Part Pràctica | 181.1 KB |
-| `PDF` | **examen ASGBD Ordinaria -1t P 2024.pdf** | Part pràctica 1er Trimestre | 140.3 KB |
-| `PDF` | **examen ASGBD Ordinaria -2t P 2024.pdf** | Part pràctica 2on Trimestre | 129.7 KB |
 | `PDF` | **02 instalar oracle 21c en W10prof_extr24.pdf** | Instal·lar Oracle 21c | 90.6 KB |
 | `PDF` | **10 crear una nova PDB.pdf** | Crear PDBs addicionals | 85.4 KB |
 | `PDF` | **15 primers pasos_extr24.pdf** | Primers passos en l'administració d'Oracle | 78.0 KB |
@@ -70,4 +67,3 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 | `PDF` | **16 butlleti proc i funcs pl-sql-(II).pdf** | Procediments i Funcions en PL/SQL (II) | 104.2 KB |
 | `PDF` | **80 func-proc-DD.pdf** | Funcions en Diccionari de Dades | 73.5 KB |
 | `PDF` | **30 Butlleti Triggers 2023.pdf** | Triggers | 123.2 KB |
-| `PDF` | **examen ASGBD extraOrdinaria- P 2024.pdf** | Examen. Part Pràctica | 189.1 KB |

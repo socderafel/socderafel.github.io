@@ -6,48 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT1 — TUTORIA 1 SMX B",
-      "items": [
-        {
-          "label": "📘 UT1 Completa (1 pàgina)",
-          "href": "ut01/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "1.1 Calendari escolar",
-          "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Plànol del centre",
-          "href": "ut01/ut0102.html"
-        },
-        {
-          "label": "1.3 Horari Grup 1 SMX B",
-          "href": "ut01/ut0103.html"
-        },
-        {
-          "label": "1.4 Permis Eixida",
-          "href": "ut01/ut0104.html"
-        },
-        {
-          "label": "1.5 Justificació de faltes",
-          "href": "ut01/ut0105.html"
-        },
-        {
-          "label": "1.6 Beques Ministeri (Valencià)",
-          "href": "ut01/ut0106.html"
-        },
-        {
-          "label": "1.7 Becas Ministerio (Castellano)",
-          "href": "ut01/ut0107.html"
-        },
-        {
-          "label": "1.8 Beques (Cartell inforamtiu)",
-          "href": "ut01/ut0108.html"
-        }
-      ]
-    },
-    {
       "summary": "UT2 — Processador de text (I)",
       "items": [
         {
@@ -658,20 +616,6 @@
         {
           "label": "20.1 Treball Final Base de dades",
           "href": "ut20/ut2001.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA",
-      "items": [
-        {
-          "label": "📘 UT21 Completa (1 pàgina)",
-          "href": "ut21/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "21.1 Practiques_Pendents",
-          "href": "ut21/ut2101.html"
         }
       ]
     },

@@ -3,8 +3,8 @@ layout: default
 title: "UT1 — Elementos esenciales del HE — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT1 Completa"
-prev_url: "../ut00/ut0009.html"
-prev_label: "⬅️ 0.9 Tercera evaluación"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 HE 1 ➡️"
 ---

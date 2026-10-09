@@ -2,14 +2,14 @@
 layout: default
 title: "Programació en Java (1r DAW) — Portal Docent — Programació (1r DAW)"
 course_root: "."
-badge: "Codi 0485 · 1r DAW · IES Mestre Ramón Esteve"
+badge: "Codi 0485 · 1r DAW"
 next_url: "./ut00/ut0001.html"
 next_label: "0.1 Introducción ➡️"
 ---
 
 # ☕ Programació en Java — 1r DAW
 
-Benvinguts al repositori central d'apunts, exemples guiats, reptes i activitats pràctiques del mòdul de **Programació (Codi 0485)** de 1r curs del Grau Superior de **Desenvolupament d'Aplicacions Web (DAW)** en l'**IES Mestre Ramón Esteve (Catadau)**.
+Benvinguts al repositori central d'apunts, exemples guiats, reptes i activitats pràctiques del mòdul de **Programació (Codi 0485)** de 1r curs del Grau Superior de **Desenvolupament d'Aplicacions Web (DAW)**.
 
 > **🛠️ Stack Tecnològic i Flujo de Treball del Mòdul**
 > - **Llenguatge i JDK:** Java (convencions *Clean Code* : classes en `PascalCase` , variables i mètodes en `camelCase` , constants en `UPPER_SNAKE_CASE` ).

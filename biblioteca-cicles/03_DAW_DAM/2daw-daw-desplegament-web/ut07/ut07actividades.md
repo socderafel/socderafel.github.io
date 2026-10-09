@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT7 — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT7 — Documentació i control de versions"
+badge: "2n DAW · Grau Superior · UD5 — Documentació i Control de Versions (Git, GitHub, Javadoc, phpDocumentor)"
 prev_url: "../ut07/ut0704.html"
 prev_label: "⬅️ 7.4 UT 5.1 Documentació i control de versions - Java"
-next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

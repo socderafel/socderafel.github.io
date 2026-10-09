@@ -6,7 +6,7 @@ badge: "4t ESO · UT6 — Redes"
 prev_url: "../ut06/ut0603.html"
 prev_label: "⬅️ 6.3 Criteris Avaluació Presentació Redes"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

@@ -3,8 +3,8 @@ layout: default
 title: "Índex — Desenvolupament Web en Entorn Servidor (PHP i Laravel) — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "2n DAW · Grau Superior · FP Grau Superior — DAW i DAM (Desenvolupament d'Aplicacions)"
-next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_url: "./ut01/index.html"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # 🐘 Desenvolupament Web en Entorn Servidor (PHP i Laravel)
@@ -12,43 +12,23 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Desenvolupament Web en Entorn Servidor (PHP i Laravel)** (2n DAW · Grau Superior).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT10)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **Unitat Didàctica 0** | 2 apartats · 6 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT0** | **General** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **Unit 1 - Server-side development** | 4 apartats · 2 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **Unit 2 - Basic PHP** | 4 apartats · 1 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **Unit 3 - Advanced PHP** | 4 apartats · 4 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **Unit 4 - Data access** | 4 apartats · 4 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **Unit 5 - Introduction to frameworks. Laravel I** | 4 apartats · 1 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UT6** | **Unit 6 - Laravel II** | 5 apartats · 2 activitats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UT7** | **Unit 7 - Web Services** | 3 apartats · 3 activitats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
-| **UT8** | **Unit 8 - Hybrid Applications** | 2 apartats · 1 activitats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
-| **UT9** | **Annual Project** | 8 apartats · 3 activitats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
-| **UT10** | **3rd Quarter** | 3 apartats · 0 activitats | [**📘 Unitat Completa**](./ut10/index.md) \| [Apartat 1 ➡️](./ut10/ut1001.md) |
-
-## UT0 — Unitat Didàctica 0
-
-`2n DAW · Grau Superior · UT0 · 2 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Student Guide**](./ut00/ut0001.md)
-- [**✍️ Activitats pràctiques UT0**](./ut00/ut00actividades.md)
-
-## UT0 — General
-
-`2n DAW · Grau Superior · UT0 · 1 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Continguts i Recursos**](./ut00/ut0001.md)
+| **UT1** | **Unit 1 - Server-side development** | 4 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT2** | **Unit 2 - Basic PHP** | 4 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UT3** | **Unit 3 - Advanced PHP** | 4 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UT4** | **Unit 4 - Data access** | 4 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **Unit 5 - Introduction to frameworks. Laravel I** | 4 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UT6** | **Unit 6 - Laravel II** | 5 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
+| **UT7** | **Unit 7 - Web Services** | 3 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
+| **UT8** | **Unit 8 - Hybrid Applications** | 2 apartats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
+| **UT9** | **Annual Project** | 8 apartats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
 
 ## UT1 — Unit 1 - Server-side development
 
@@ -150,13 +130,3 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 - [**9.6 bandaw.sql 1st quarter**](./ut09/ut0906.md)
 - [**9.7 bandaw.sql 2nd quarter**](./ut09/ut0907.md)
 - [**✍️ Activitats pràctiques UT9**](./ut09/ut09actividades.md)
-
-## UT10 — 3rd Quarter
-
-`2n DAW · Grau Superior · UT10 · 3 apartats`
-
-[**📘 Obrir UT10 Completa en una sola pàgina**](./ut10/index.md)
-
-- [**10.1 Welcome 2nd attempt**](./ut10/ut1001.md)
-- [**10.2 3rd quarter exercises**](./ut10/ut1002.md)
-- [**10.3 Laravel ex U6**](./ut10/ut1003.md)

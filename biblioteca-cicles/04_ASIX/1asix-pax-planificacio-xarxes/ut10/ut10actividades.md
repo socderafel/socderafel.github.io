@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT10 — U9 - Nivell de xarxa. El router"
 prev_url: "../ut10/ut1001.html"
 prev_label: "⬅️ 10.1 U9 Nivell de xarxa. El Router"
 next_url: "../ut11/index.html"
-next_label: "📘 UT11 Completa ➡️"
+next_label: "📘 UT11 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT10

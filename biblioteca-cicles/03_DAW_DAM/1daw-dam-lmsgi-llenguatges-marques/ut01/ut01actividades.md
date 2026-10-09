@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT1 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Grau Superior · UT1 — Unidad 8"
+badge: "1r DAW / DAM / ASIX · Grau Superior · UD8 — Sistemes Empresarials de Gestió d'Informació (ERP)"
 prev_url: "../ut01/ut0102.html"
 prev_label: "⬅️ 1.2 UD 8 - Sistemas empresariales de gestión de info"
-next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

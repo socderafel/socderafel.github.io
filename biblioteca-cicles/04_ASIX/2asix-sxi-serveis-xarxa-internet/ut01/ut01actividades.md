@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT1 — Unit 1 - DHCP"
 prev_url: "../ut01/ut0103.html"
 prev_label: "⬅️ 1.3 U1 P2"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

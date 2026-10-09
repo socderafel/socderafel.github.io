@@ -5,8 +5,8 @@ course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT5 — i 6"
 prev_url: "../ut05/ut0501.html"
 prev_label: "⬅️ 5.1 Continguts i Recursos"
-next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_url: "../ut07/index.html"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

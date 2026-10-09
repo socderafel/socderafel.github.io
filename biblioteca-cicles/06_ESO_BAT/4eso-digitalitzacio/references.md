@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Digitalització — Digitalització | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "4t ESO · Documentació i Recursos"
-prev_url: "./ut08/ut0801.html"
-prev_label: "⬅️ 8.1 Continguts i Recursos"
+prev_url: "./ut07/ut07actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
 ---
 
 # 📂 Índex de Materials i Documents Integrats
@@ -18,7 +18,6 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 | `PDF` | **Maquinari.pdf** | Teoria sobre maquinari (hardware) | 881.5 KB |
 | `DOCX` | **Apuntes Sistemas de numeracion (1).docx** | Apuntes de sistemas de numeración | 70.1 KB |
 | `DOCX` | **Actividad sistemas de numeracion.docx** | Actividades Sistemas de Numeración | 19.4 KB |
-| `PDF` | **Tutorial-Canva-Castellano.pdf** | Tutorial Canva | 25022.9 KB |
 | `DOCX` | **BasesParticipación_Concurso017.docx** | Bases del concurso | 348.5 KB |
 | `DOCX` | **Ficha de análisis.docx** | Ficha de análisis | 245.3 KB |
 | `ODT` | **ex02viajeroma.odt** | Sube el Examen | 16.7 KB |

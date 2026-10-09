@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT9 — Fase de análisis"
 prev_url: "../ut09/ut0903.html"
 prev_label: "⬅️ 9.3 practiques"
 next_url: "../ut10/index.html"
-next_label: "📘 UT10 Completa ➡️"
+next_label: "📘 UT10 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT9

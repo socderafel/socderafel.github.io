@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT7 — Unit 7 - Audio and Video"
 prev_url: "../ut07/ut0702.html"
 prev_label: "⬅️ 7.2 U7 P1"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT8 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT8 — U0: Virtualización y repaso de conceptos previos"
+badge: "2n SMX · Grau Mitjà · U0 — Virtualització i Repàs de Conceptes Previs"
 prev_url: "../ut08/ut0802.html"
 prev_label: "⬅️ 8.2 Plantilla qüestionai d'avaluació"
-next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_url: "../ut07/index.html"
+next_label: "📘 U1 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

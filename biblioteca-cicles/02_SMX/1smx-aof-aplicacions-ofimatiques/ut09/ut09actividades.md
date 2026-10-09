@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT9 — Calc Mòdul 4 (IV)"
 prev_url: "../ut09/ut0902.html"
 prev_label: "⬅️ 9.2 RECURSOS pràctiques MÒDUL 4"
 next_url: "../ut10/index.html"
-next_label: "📘 UT10 Completa ➡️"
+next_label: "📘 UT10 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT9

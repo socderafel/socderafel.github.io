@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT11 — Servicis de xarxa implicats en el desplegament — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca"
+title: "UD1 — Serveis de Xarxa Implicats en el Desplegament (DNS i LDAP) · Unitat Completa"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT11 Completa"
-prev_url: "../ut10/ut10actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT10"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut11/ut1101.html"
 next_label: "11.1 UT 1.3 Preparación del servidor de directorios L ➡️"
 ---
 
-# 📘 UT11 — Servicis de xarxa implicats en el desplegament (Unitat Completa)
+# 📘 UD1 — Serveis de Xarxa Implicats en el Desplegament (DNS i LDAP) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**11.1 UT 1.3 Preparación del servidor de directorios L**](#ut1101) (o [obrir en pàgina individual ➡️](./ut1101.md) )
-> - [**11.2 UT 1.2 Servicio de directorios LDAP**](#ut1102) (o [obrir en pàgina individual ➡️](./ut1102.md) )
-> - [**11.3 UT 1.1 Servicios de Red**](#ut1103) (o [obrir en pàgina individual ➡️](./ut1103.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**11.1 UT 1.3 Preparación del servidor de directorios L**](./ut1101.md)
+- [**11.2 UT 1.2 Servicio de directorios LDAP**](./ut1102.md)
+- [**11.3 UT 1.1 Servicios de Red**](./ut1103.md)
 
 ---
 
-## 11.1 UT 1.3 Preparación del servidor de directorios L
+# 11.1 UT 1.3 Preparación del servidor de directorios L
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Quinzena del 25/09/23 al 08/10/23
@@ -118,7 +122,7 @@ DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web  Com
 
 ---
 
-## 11.2 UT 1.2 Servicio de directorios LDAP
+# 11.2 UT 1.2 Servicio de directorios LDAP
 
 DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
 
@@ -241,7 +245,7 @@ Ya tenemos instalado el servicio de directorio LDAP. Para iniciarlo o pararlo, e
 
 ---
 
-## 11.3 UT 1.1 Servicios de Red
+# 11.3 UT 1.1 Servicios de Red
 
 DAW: Desarrollo de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web
 
@@ -404,3 +408,5 @@ DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢Conf
 Copiamos el archivo db.127 y creamos el db.192. Una vez creado el archivo db.192 lo editamos con la siguiente informacion: ➢Verificamos la sintaxis del archivo db.192 (En el ejemplo la IP del servidor DNS es 192.168.231.130). 13 / 14
 
 DAM: Diseño de Aplicaciones Web Módulo: Despliegue de Aplicaciones Web ➢Reiniciamos el servidor DNS con Bind: ➢Si la ejecución del servicio es correcta, la respuesta debería ser: 14 / 14
+
+---

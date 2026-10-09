@@ -1,25 +1,29 @@
 ---
 layout: default
-title: "UT3 — U5: Servici de Correu — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+title: "U5 — Servei de Correu Electrònic · Unitat Completa"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT3 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut04/ut04actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 Presentació ➡️"
 ---
 
-# 📘 UT3 — U5: Servici de Correu (Unitat Completa)
+# 📘 U5 — Servei de Correu Electrònic (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 Presentació**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
-> - [**3.2 El correu electrònic**](#ut0302) (o [obrir en pàgina individual ➡️](./ut0302.md) )
-> - [**3.3 Les Guest additions**](#ut0303) (o [obrir en pàgina individual ➡️](./ut0303.md) )
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 Presentació**](./ut0301.md)
+- [**3.2 El correu electrònic**](./ut0302.md)
+- [**3.3 Les Guest additions**](./ut0303.md)
+- [**✍️ Activitats pràctiques UT3**](./ut03actividades.md)
 
 ---
 
-## 3.1 Presentació
+# 3.1 Presentació
 
 > **📌 Introducció de la Unitat**
 > ### **U5: Servici de Correu**
@@ -61,7 +65,7 @@ https://www.rincondelemail.es/pop-imap-smtp/
 
 ---
 
-## 3.2 El correu electrònic
+# 3.2 El correu electrònic
 
 El correu elctrònic
 
@@ -173,9 +177,15 @@ es descarreguin en l’ordinador del client directament i no quedin emmagatzemat
 
 Arran d'aquestes necessitats, han sorgit sistemes que permeten xifrar, desxifrar, crear signatures digitals, etc. de forma ràpida, senzilla i segura. Un d'aquests sistemes és PGP (​Pretty Good Privacy​), que permet la confidencialitat, autenticació i integració del correu electrònic. És un programa gratuït independent del client de correu que s'utilitzi i compta amb versions per a Windows, Linux i Mac Os.
 
+### 1. Correu brossa
+
 Uns altres dels problemes que ens trobem en l'ús diari del correu electrònic és el correu brossa (​spam​), que és aquell correu electrònic normalment de publicitat, que arriba al nostre correu sense haver-lo sol·licitat. Per tant, a l'hora d'escollir un client de correu o un altre ens haurem d'assabentar quins tipus de filtre contra el correu brossa posseeixen, quin grau de confidencialitat, etc. Avui dia, la majoria de clients de correu tenen con aquestes opcions per garantir la seguretat i confidencialitat del correu electrònic dels seus usuaris.
 
+### 2. Phishing
+
 Phishing​, conegut com suplantació d'identitat o simplement suplantador, és un terme informàtic que denomina un model d'abús informàtic i que es comet mitjançant l'ús d'un tipus d'enginyeria social, caracteritzat per intentar adquirir informació confidencial de forma fraudulenta (com pot ser una contrasenya, informació detallada sobre targetes de crèdit o una altra informació bancària). El cibercriminal, conegut com ​phisher​, es fa passar per una persona o empresa de confiança en una aparent comunicació oficial electrònica, comunament un correu electrònic, o algun sistema de missatgeria instantània o fins i tot utilitzant també cridades telefòniques.
+
+### 3. Bulos (Hoax) i cadenes
 
 És un missatge de correu electrònic amb contingut fals o enganyós i atraient. Normalment és distribuït en cadena pels seus successius receptors a causa del seu contingut impactant que sembla provenir d'una font seriosa i fiable, o perquè el mateix missatge demana ser reenviat.
 
@@ -189,7 +199,7 @@ https://www.youtube.com/watch?v=kWNyiZfTp4E
 
 ---
 
-## 3.3 Les Guest additions
+# 3.3 Les Guest additions
 
 les Guest additions de virtualbox no s'instal·len correctament a les màquines Linux.
 Per tant, es necessari instal·lar a la màquina **sudo apt install build-essential linux-headers-$(uname -r)**
@@ -197,10 +207,12 @@ d'aquesta manera al reinstal·lar les Guest additions ja no donarà l'error de q
 
 ---
 
-## ✍️ Activitats pràctiques UT3
+# ✍️ Activitats pràctiques UT3
 
 > **✍️ Activitat Pràctica 3.1 — tasca postfix i dovecot**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
 
 > **✍️ Activitat Pràctica 3.2 — Prova de validació**
 > Prova de validació
+
+---

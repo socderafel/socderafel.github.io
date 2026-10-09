@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT6 — Unidad 3 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD3 — Validació amb DTD (Document Type Definition) · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT6 Completa"
-prev_url: "../ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "../ut07/ut07actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
 next_url: "../ut06/ut0601.html"
 next_label: "6.1 UD3-DTD (Document Type Definition) ➡️"
 ---
 
-# 📘 UT6 — Unidad 3 (Unitat Completa)
+# 📘 UD3 — Validació amb DTD (Document Type Definition) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**6.1 UD3-DTD (Document Type Definition)**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
-> - [**6.2 Soluciones Ejercicios Tema 3**](#ut0602) (o [obrir en pàgina individual ➡️](./ut0602.md) )
-> - [**✍️ Activitats pràctiques UT6**](#ut06actividades) (o [obrir en pàgina individual ➡️](./ut06actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 UD3-DTD (Document Type Definition)**](./ut0601.md)
+- [**6.2 Soluciones Ejercicios Tema 3**](./ut0602.md)
+- [**✍️ Activitats pràctiques UT6**](./ut06actividades.md)
 
 ---
 
-## 6.1 UD3-DTD (Document Type Definition)
+# 6.1 UD3-DTD (Document Type Definition)
 
 > **🔗 Recurs Web: Document Type Definition (DTD) (parte 1)**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=jlls7U3Jn04) ↗️**](https://www.youtube.com/watch?v=jlls7U3Jn04)
@@ -152,7 +156,7 @@ Ejemplo 3.4 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE fecha [ <!ENTITY co
 
 ---
 
-## 6.2 Soluciones Ejercicios Tema 3
+# 6.2 Soluciones Ejercicios Tema 3
 
 Aquí tenéis un pdf con las soluciones de los ejercicios del tema 3.
 
@@ -188,7 +192,7 @@ a)Una DTD en la que no haya atributos, si no únicamente etiquetas. b)Una DTD en
 
 ---
 
-## ✍️ Activitats pràctiques UT6
+# ✍️ Activitats pràctiques UT6
 
 > **✍️ Activitat Pràctica 6.1 — Ejercicios XML DTD**
 > Fecha de entrega el 19 de Noviembre a las 00 horas.
@@ -220,3 +224,5 @@ a)Una DTD en la que no haya atributos, si no únicamente etiquetas. b)Una DTD en
 > Nottingham Presa: 0 - Inter de Mitente: 1 Vodka Juniors: 3 - Sparta da Risa: 3 Water de Munich: 4 - Esteaua es del grifo: 2 Cada documento incluirá un DTD diferente para representar ese lenguaje de marcas: a)Una DTD en la que no haya atributos, si no únicamente etiquetas.
 >
 > b)Una DTD en la que los goles sean atributos. c)Una DTD en la toda la información se guarde en forma de atributos.
+
+---

@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT1 — INSTAL·LACIÓ DE PROGRAMARI DE
 prev_url: "../ut01/ut0101.html"
 prev_label: "⬅️ 1.1 Continguts i Recursos"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

@@ -3,8 +3,8 @@ layout: default
 title: "UT7 — Unitat Didàctica 7 — Xarxes Locals | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut05/ut05actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
 next_url: "../ut07/ut0701.html"
 next_label: "7.1 Continguts i Recursos ➡️"
 ---

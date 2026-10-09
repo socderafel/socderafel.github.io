@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT3 — Processador de text (II)"
 prev_url: "../ut03/ut0311.html"
 prev_label: "⬅️ 3.11 Pràctiques Tema 10 (Imprimir) - En CASA"
 next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_label: "📘 UT4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

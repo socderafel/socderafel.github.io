@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT8 — Seguretat Informàtica | Portal Do
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT8 — Atacs i contramesures"
 prev_url: "../ut08/index.html"
-prev_label: "⬅️ 📘 UT8 Completa"
+prev_label: "⬅️ 📘 UT8 Completa (1 pàgina)"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

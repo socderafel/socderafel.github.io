@@ -4,10 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Guía del estudiante": ut00/ut0001.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
   - "UT0 — Introducción al desarrollo de software":
       - "📘 UT0 Completa (1 pàgina)": ut00/index.md
       - "0.1 U1 - Intr. al desarrollo de SW": ut00/ut0001.md

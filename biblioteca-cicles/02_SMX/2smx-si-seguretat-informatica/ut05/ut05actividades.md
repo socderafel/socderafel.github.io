@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT5 — Seguretat Informàtica | Portal Do
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT5 — Seguretat activa: sistema operatiu i aplicacions"
 prev_url: "../ut05/index.html"
-prev_label: "⬅️ 📘 UT5 Completa"
+prev_label: "⬅️ 📘 UT5 Completa (1 pàgina)"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

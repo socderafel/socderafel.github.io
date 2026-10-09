@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT5 — Unidad 4 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD4 — Validació amb XSD (XML Schema Definition) · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../ut06/ut06actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
 next_url: "../ut05/ut0501.html"
 next_label: "5.1 UD4-XSD (XML Schema Definition) ➡️"
 ---
 
-# 📘 UT5 — Unidad 4 (Unitat Completa)
+# 📘 UD4 — Validació amb XSD (XML Schema Definition) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 UD4-XSD (XML Schema Definition)**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**5.2 Ejercicios resueltos XML Schema**](#ut0502) (o [obrir en pàgina individual ➡️](./ut0502.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 UD4-XSD (XML Schema Definition)**](./ut0501.md)
+- [**5.2 Ejercicios resueltos XML Schema**](./ut0502.md)
+- [**✍️ Activitats pràctiques UT5**](./ut05actividades.md)
 
 ---
 
-## 5.1 UD4-XSD (XML Schema Definition)
+# 5.1 UD4-XSD (XML Schema Definition)
 
 > **🔗 Recurs Web: XML Schema: Introducción**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=O28ZrZTCAA4) ↗️**](https://www.youtube.com/watch?v=O28ZrZTCAA4)
@@ -127,7 +131,7 @@ Ejemplo 4.16 (cont) <xs:element name="alumno" > <xs:complexType> <xs:sequence> <
 
 ---
 
-## 5.2 Ejercicios resueltos XML Schema
+# 5.2 Ejercicios resueltos XML Schema
 
 El ultimo ejercicio el de complejo1, es un enunciado muy abierto y se podía interpretar de muchas maneras. A la hora de corregir lo tuve en cuenta.
 
@@ -169,7 +173,7 @@ Ejercicio complejo1 Crear el documento complejo.xsd para validar el siguiente do
 
 ---
 
-## ✍️ Activitats pràctiques UT5
+# ✍️ Activitats pràctiques UT5
 
 > **✍️ Activitat Pràctica 5.1 — Ejercicios XML Schema**
 > Las respuestas de los ejercicios tanto los XML como los XSDs tienen que estar en un documento pdf en el mismo orden que las preguntas.
@@ -189,3 +193,5 @@ Ejercicio complejo1 Crear el documento complejo.xsd para validar el siguiente do
 > Validar el documento xml escribiendo números incorrectos y que no se adapten al patrón. Ejercicio restricciones4 Modificar restriccion3.xsd aplicando restricciones sobre la longitud de los elementos. Lo guardamos como restriccion4.xsd. Por ejemplo el DNI estará formado por un máximo de 8 dígitos y una letra y el teléfono lo escribiremos con mayor y menor longitud Validar el documento xml escribiendo números de DNI o el teléfono.
 >
 > Ejercicio complejo1 Crear el documento complejo.xsd para validar el siguiente documento .xml <?xml version="1.0" encoding="UTF-8"?> <alumno dni="11111111" xmlns:xsi="http://www.w3.org/2001/XMLSchema- instance" xsi:noNamespaceSchemaLocation="complejo1.xsd"> <nombre>Lorenzo Pérez</nombre> <direccion> <calle>Banderas</calle> <numero>7</numero> <ciudad>Alfafar</ciudad> <cp>46910</cp> <provincia>Valencia</provincia> </direccion> <telefono>961555555</telefono> </alumno>
+
+---

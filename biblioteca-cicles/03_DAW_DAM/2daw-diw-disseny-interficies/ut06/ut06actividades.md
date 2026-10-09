@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT6 — IMPLANTACIÓN DE CONTENIDO MULTIMEDIA
 prev_url: "../ut06/ut0603.html"
 prev_label: "⬅️ 6.3 SECCIÓN 2: SONIDO Y VÍDEO"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

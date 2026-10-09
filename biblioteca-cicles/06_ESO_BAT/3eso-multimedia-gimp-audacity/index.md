@@ -3,8 +3,8 @@ layout: default
 title: "Índex — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity — Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "3r ESO · Secundària (ESO) i Batxillerat"
-next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_url: "./ut01/index.html"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # 🎬 Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity
@@ -12,26 +12,17 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Multimèdia: Edició d'Imatge i Àudio amb GIMP i Audacity** (3r ESO).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT3)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **Unitat Didàctica 0** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **GIMP** | 3 apartats · 12 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **Herramientas Microsoft** | 1 apartats · 4 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut02actividades.md) |
-| **UT3** | **Audacity** | 2 apartats · 14 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-
-## UT0 — Unitat Didàctica 0
-
-`3r ESO · UT0 · 1 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Continguts i Recursos**](./ut00/ut0001.md)
+| **UT1** | **GIMP** | 3 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT2** | **Herramientas Microsoft** | 1 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut02actividades.md) |
+| **UT3** | **Audacity** | 2 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
 
 ## UT1 — GIMP
 

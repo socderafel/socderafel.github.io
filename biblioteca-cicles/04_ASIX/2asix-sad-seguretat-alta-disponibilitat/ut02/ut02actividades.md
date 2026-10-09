@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT2 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT2 — Setmanes (3-4) del 25 de setembre al 8 d'octubre"
+badge: "2n ASIX · Grau Superior · UD2 — Biometria, Seguretat Física i Còpies de Seguretat"
 prev_url: "../ut02/ut0203.html"
 prev_label: "⬅️ 2.3 Preparació Màquines Virtuals per a pràctiques po"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UD3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

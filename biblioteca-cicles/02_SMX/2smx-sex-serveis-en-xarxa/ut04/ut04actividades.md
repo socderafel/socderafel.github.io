@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT4 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT4 — U4: Servici de Web (HTTP)"
-prev_url: "../ut04/ut0405.html"
-prev_label: "⬅️ 4.5 Recuperació_prova de validació_Apache"
-next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+badge: "2n SMX · Grau Mitjà · U4 — Servidor Web (HTTP / Virtual Hosting)"
+prev_url: "../ut04/ut0404.html"
+prev_label: "⬅️ 4.4 Ips clients"
+next_url: "../ut03/index.html"
+next_label: "📘 U5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

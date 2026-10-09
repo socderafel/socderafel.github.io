@@ -6,7 +6,7 @@ badge: "1r Batxillerat · UT1 — Programació"
 prev_url: "../ut01/ut0104.html"
 prev_label: "⬅️ 1.4 04_Bucles"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

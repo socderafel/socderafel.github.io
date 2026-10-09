@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Sistemes d'Aprenentatge Automàtic (Machine Learning) — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "CE IA i Big Data · Documentació i Recursos"
-prev_url: "./ut08/ut08actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
+prev_url: "./ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT4 — Footprinting"
 prev_url: "../ut04/ut0404.html"
 prev_label: "⬅️ 4.4 Footprint"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

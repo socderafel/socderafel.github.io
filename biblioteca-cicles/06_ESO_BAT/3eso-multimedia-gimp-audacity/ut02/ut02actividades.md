@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT2 — Multimèdia: Edició d'Imatge i À
 course_root: ".."
 badge: "3r ESO · UT2 — Herramientas Microsoft"
 prev_url: "../ut02/index.html"
-prev_label: "⬅️ 📘 UT2 Completa"
+prev_label: "⬅️ 📘 UT2 Completa (1 pàgina)"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

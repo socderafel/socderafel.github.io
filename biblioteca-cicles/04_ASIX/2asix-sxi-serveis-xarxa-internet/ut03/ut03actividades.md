@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT3 — Unit 3 - HTTP"
 prev_url: "../ut03/ut0307.html"
 prev_label: "⬅️ 3.7 U3 P4"
 next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_label: "📘 UT4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

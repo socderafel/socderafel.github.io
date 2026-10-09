@@ -6,7 +6,7 @@ badge: "2n ASIX · Grau Superior · UT1 — Instal·lació d'un SGBD"
 prev_url: "../ut01/ut0105.html"
 prev_label: "⬅️ 1.5 Arquitectura BBDD's en Oracle"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

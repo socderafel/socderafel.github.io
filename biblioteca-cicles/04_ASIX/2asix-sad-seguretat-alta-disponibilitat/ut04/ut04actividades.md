@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT4 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT4 — Setmanes (7-8) del 23 d'octubre al 5 de novembre"
+badge: "2n ASIX · Grau Superior · UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia"
 prev_url: "../ut04/ut0402.html"
 prev_label: "⬅️ 4.2 Esteganografia"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UD5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

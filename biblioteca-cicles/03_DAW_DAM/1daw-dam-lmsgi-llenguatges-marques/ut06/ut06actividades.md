@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT6 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Grau Superior · UT6 — Unidad 3"
+badge: "1r DAW / DAM / ASIX · Grau Superior · UD3 — Validació amb DTD (Document Type Definition)"
 prev_url: "../ut06/ut0602.html"
 prev_label: "⬅️ 6.2 Soluciones Ejercicios Tema 3"
-next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_url: "../ut05/index.html"
+next_label: "📘 UD4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

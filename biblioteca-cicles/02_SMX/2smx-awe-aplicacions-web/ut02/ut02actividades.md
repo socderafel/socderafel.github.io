@@ -6,7 +6,7 @@ badge: "2n SMX · Grau Mitjà · UT2 — Unit 2: Desktop Web Applications"
 prev_url: "../ut02/ut0202.html"
 prev_label: "⬅️ 2.2 EN Article: How Web Operating Systems Work"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

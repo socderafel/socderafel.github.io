@@ -1,23 +1,27 @@
 ---
 layout: default
-title: "UT8 — Unidad 1 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD1 — Introducció als Llenguatges de Marques · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT8 Completa"
-prev_url: "../ut07/ut07actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT7"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut08/ut0801.html"
 next_label: "8.1 UD1 Introducción a los Lenguajes de Marcas ➡️"
 ---
 
-# 📘 UT8 — Unidad 1 (Unitat Completa)
+# 📘 UD1 — Introducció als Llenguatges de Marques (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**8.1 UD1 Introducción a los Lenguajes de Marcas**](#ut0801) (o [obrir en pàgina individual ➡️](./ut0801.md) )
-> - [**✍️ Activitats pràctiques UT8**](#ut08actividades) (o [obrir en pàgina individual ➡️](./ut08actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 UD1 Introducción a los Lenguajes de Marcas**](./ut0801.md)
+- [**✍️ Activitats pràctiques UT8**](./ut08actividades.md)
 
 ---
 
-## 8.1 UD1 Introducción a los Lenguajes de Marcas
+# 8.1 UD1 Introducción a los Lenguajes de Marcas
 
 Lenguajes de Marcas
 
@@ -186,7 +190,7 @@ Lenguajes de Marcas
 
 ---
 
-## ✍️ Activitats pràctiques UT8
+# ✍️ Activitats pràctiques UT8
 
 > **✍️ Activitat Pràctica 8.1 — Ejercicios unidad 1**
 > Ejercicios teóricos sobre los Lenguajes de Marcas. Fecha máxima de entrega viernes 15 de octubre del 2021.
@@ -208,3 +212,5 @@ Lenguajes de Marcas
 > Ejercicio4 ¿Qué características tienen los Lenguajes de Marcas?
 >
 > Ejercicio5¿Son lo mismo un Lenguaje de Marcas y un Lenguaje de Programación? Justifica tu respuesta.¿Se pueden combinar?, si se pueden combinar, ¿Puedes decir algunos ejemplos? Para este último ejercicio se puede consultar en internet
+
+---

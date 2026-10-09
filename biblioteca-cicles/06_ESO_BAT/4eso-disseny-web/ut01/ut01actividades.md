@@ -6,7 +6,7 @@ badge: "4t ESO · UT1 — HTML"
 prev_url: "../ut01/ut0113.html"
 prev_label: "⬅️ 1.13 8_Formularios"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

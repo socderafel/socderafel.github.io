@@ -5,8 +5,8 @@ course_root: ".."
 badge: "4t ESO · UT7 — Páginas Web"
 prev_url: "../ut07/ut0702.html"
 prev_label: "⬅️ 7.2 CSS3"
-next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

@@ -3,8 +3,8 @@ layout: default
 title: "UT0 — U1. Introducció a la informática — Digitalització | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "4t ESO · UT0 Completa"
-prev_url: "../ut00/ut00actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT0"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut00/ut0001.html"
 next_label: "0.1 Teoria sobre maquinari (hardware) ➡️"
 ---

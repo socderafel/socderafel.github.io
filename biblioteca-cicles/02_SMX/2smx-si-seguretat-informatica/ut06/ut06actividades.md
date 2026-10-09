@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT6 — Seguretat Informàtica | Portal Do
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT6 — Seguretat activa: Accés a xarxes"
 prev_url: "../ut06/index.html"
-prev_label: "⬅️ 📘 UT6 Completa"
+prev_label: "⬅️ 📘 UT6 Completa (1 pàgina)"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

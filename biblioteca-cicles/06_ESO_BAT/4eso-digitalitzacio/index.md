@@ -4,7 +4,7 @@ title: "Índex — Digitalització — Digitalització | Portal Docent Pepe Cuen
 course_root: "."
 badge: "4t ESO · Secundària (ESO) i Batxillerat"
 next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_label: "📘 UT0 Completa (1 pàgina) ➡️"
 ---
 
 # 🌐 Digitalització
@@ -12,43 +12,21 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Digitalització** (4t ESO).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT8)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **Unitat Didàctica 0** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT0** | **Presentación asignatura** | 3 apartats · 3 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT0** | **U1. Introducció a la informática** | 3 apartats · 2 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **Canva** | 2 apartats · 9 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **CONCURSO INCIBE** | 2 apartats · 2 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **Procesadores de Texto** | 2 apartats · 11 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **Hojas de cálculo** | 2 apartats · 25 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **Bases de Datos** | 2 apartats · 9 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UT6** | **Redes** | 4 apartats · 4 activitats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UT7** | **Páginas Web** | 3 apartats · 12 activitats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
-| **UT8** | **Concurs** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
-
-## UT0 — Unitat Didàctica 0
-
-`4t ESO · UT0 · 1 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Continguts i Recursos**](./ut00/ut0001.md)
-
-## UT0 — Presentación asignatura
-
-`4t ESO · UT0 · 3 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Presentació asignatura**](./ut00/ut0001.md)
-- [**0.2 Exportar les activitats a pdf**](./ut00/ut0002.md)
-- [**✍️ Activitats pràctiques UT0**](./ut00/ut00actividades.md)
+| **UT0** | **U1. Introducció a la informática** | 3 apartats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
+| **UT1** | **Canva** | 2 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT3** | **Procesadores de Texto** | 2 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UT4** | **Hojas de cálculo** | 2 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **Bases de Datos** | 2 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UT6** | **Redes** | 4 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
+| **UT7** | **Páginas Web** | 3 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
 
 ## UT0 — U1. Introducció a la informática
 
@@ -68,15 +46,6 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 
 - [**1.1 Tutorial Canva**](./ut01/ut0101.md)
 - [**✍️ Activitats pràctiques UT1**](./ut01/ut01actividades.md)
-
-## UT2 — CONCURSO INCIBE
-
-`4t ESO · UT2 · 2 apartats`
-
-[**📘 Obrir UT2 Completa en una sola pàgina**](./ut02/index.md)
-
-- [**2.1 Bases del concurso**](./ut02/ut0201.md)
-- [**✍️ Activitats pràctiques UT2**](./ut02/ut02actividades.md)
 
 ## UT3 — Procesadores de Texto
 
@@ -125,11 +94,3 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 - [**7.1 HTML5**](./ut07/ut0701.md)
 - [**7.2 CSS3**](./ut07/ut0702.md)
 - [**✍️ Activitats pràctiques UT7**](./ut07/ut07actividades.md)
-
-## UT8 — Concurs
-
-`4t ESO · UT8 · 1 apartats`
-
-[**📘 Obrir UT8 Completa en una sola pàgina**](./ut08/index.md)
-
-- [**8.1 Continguts i Recursos**](./ut08/ut0801.md)

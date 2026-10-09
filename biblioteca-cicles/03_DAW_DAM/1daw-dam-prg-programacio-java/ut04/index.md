@@ -3,8 +3,8 @@ layout: default
 title: "UT4 — PROYECTOS — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 Hundir La Flota ➡️"
 ---

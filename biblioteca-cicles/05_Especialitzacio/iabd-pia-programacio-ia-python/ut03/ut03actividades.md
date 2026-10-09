@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT3 — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "CE IA i Big Data · UT3 — Scikit Learn"
+badge: "CE IA i Big Data · UD3 — Ciència de Dades: NumPy, Pandas, Matplotlib, Seaborn i Scikit-Learn"
 prev_url: "../ut03/ut0308.html"
 prev_label: "⬅️ 3.8 Housing"
-next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_url: "../ut02/index.html"
+next_label: "📘 UD4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

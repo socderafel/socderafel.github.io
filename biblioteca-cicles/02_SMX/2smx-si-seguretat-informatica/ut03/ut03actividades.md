@@ -6,7 +6,7 @@ badge: "2n SMX · Grau Mitjà · UT3 — Seguretat passiva: Equips"
 prev_url: "../ut03/ut0301.html"
 prev_label: "⬅️ 3.1 PDF: Consum i sel·lecció de SAI"
 next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_label: "📘 UT4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

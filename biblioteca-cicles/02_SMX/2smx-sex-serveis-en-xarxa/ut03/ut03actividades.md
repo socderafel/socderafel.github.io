@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT3 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT3 — U5: Servici de Correu"
+badge: "2n SMX · Grau Mitjà · U5 — Servei de Correu Electrònic"
 prev_url: "../ut03/ut0303.html"
 prev_label: "⬅️ 3.3 Les Guest additions"
-next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_url: "../ut02/index.html"
+next_label: "📘 U6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

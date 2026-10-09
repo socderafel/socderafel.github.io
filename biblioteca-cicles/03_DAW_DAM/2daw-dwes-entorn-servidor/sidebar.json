@@ -6,38 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — Unitat Didàctica 0",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Student Guide",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT0",
-          "href": "ut00/ut00actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT0 — General",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Continguts i Recursos",
-          "href": "ut00/ut0001.html"
-        }
-      ]
-    },
-    {
       "summary": "UT1 — Unit 1 - Server-side development",
       "items": [
         {
@@ -276,28 +244,6 @@
         {
           "label": "✍️ Activitats pràctiques UT9",
           "href": "ut09/ut09actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT10 — 3rd Quarter",
-      "items": [
-        {
-          "label": "📘 UT10 Completa (1 pàgina)",
-          "href": "ut10/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "10.1 Welcome 2nd attempt",
-          "href": "ut10/ut1001.html"
-        },
-        {
-          "label": "10.2 3rd quarter exercises",
-          "href": "ut10/ut1002.html"
-        },
-        {
-          "label": "10.3 Laravel ex U6",
-          "href": "ut10/ut1003.html"
         }
       ]
     }

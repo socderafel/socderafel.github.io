@@ -6,7 +6,7 @@ badge: "1r ESO · UT1 — L'ordinador i els seus components i els sistemes opera
 prev_url: "../ut01/ut0103.html"
 prev_label: "⬅️ 1.3 UD2. Sistemes operatius"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

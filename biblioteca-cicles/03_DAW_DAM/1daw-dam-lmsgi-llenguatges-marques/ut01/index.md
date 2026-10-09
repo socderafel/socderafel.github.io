@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT1 — Unidad 8 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD8 — Sistemes Empresarials de Gestió d'Informació (ERP) · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT1 Completa"
-prev_url: "../index.html"
-prev_label: "⬅️ Inici Llenguatges de Marques i Sistemes de Gestió d'Informació"
+prev_url: "../ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 UD 8 - Sistemas empresariales de gestión de info ➡️"
 ---
 
-# 📘 UT1 — Unidad 8 (Unitat Completa)
+# 📘 UD8 — Sistemes Empresarials de Gestió d'Informació (ERP) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**1.1 UD 8 - Sistemas empresariales de gestión de info**](#ut0101) (o [obrir en pàgina individual ➡️](./ut0101.md) )
-> - [**1.2 UD 8 - Sistemas empresariales de gestión de info**](#ut0102) (o [obrir en pàgina individual ➡️](./ut0102.md) )
-> - [**✍️ Activitats pràctiques UT1**](#ut01actividades) (o [obrir en pàgina individual ➡️](./ut01actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**1.1 UD 8 - Sistemas empresariales de gestión de info**](./ut0101.md)
+- [**1.2 UD 8 - Sistemas empresariales de gestión de info**](./ut0102.md)
+- [**✍️ Activitats pràctiques UT1**](./ut01actividades.md)
 
 ---
 
-## 1.1 UD 8 - Sistemas empresariales de gestión de info
+# 1.1 UD 8 - Sistemas empresariales de gestión de info
 
 Este tema es muy diferente a lo que hemos dado durante el curso, es un tema teórico, he dividido en dos el pdf porque quedaba muy largo. La Unidad 8 constara de dos partes, que contara como un tema cada parte.
 
@@ -148,7 +152,7 @@ Ciclo Formativo de Grado Superior ERP (continuación) Comunicaciones entre proce
 
 ---
 
-## 1.2 UD 8 - Sistemas empresariales de gestión de info
+# 1.2 UD 8 - Sistemas empresariales de gestión de info
 
 Vicent Gómez Gimeno Ciclo Formativo de Grado Superior Tema 8: Sistemas empresariales de gestión de información Parte 2
 
@@ -287,7 +291,7 @@ Ciclo Formativo de Grado Superior Fuentes https://ioc.xtec.cat/educacio/ https:/
 
 ---
 
-## ✍️ Activitats pràctiques UT1
+# ✍️ Activitats pràctiques UT1
 
 > **✍️ 📋 Exercici / Qüestionari 1.1 — Ejercicio Parte 1**
 > El cuestionario consiste en 10 preguntas sencillas, recordar que solo se tiene una oportunidad para realizarlo.
@@ -311,3 +315,5 @@ Ciclo Formativo de Grado Superior Fuentes https://ioc.xtec.cat/educacio/ https:/
 > Alta de usuarios.
 >
 > Instalación de módulos (Un mínimo de 3, a elegir ). El manual sera en formato pdf, con portada, indice y sus respectivas capturas con sus explicaciones. La fecha para entregar el ejercicio sera el miércoles 1 de Junio a las 00 horas. PD: No perdáis el tiempo configurando el correo, no es complicado, pero es un proceso largo en Youtube hay un vídeo que explica como hacerlo con una cuenta gmail. Se llama "✅ 🔥 (GMAIL cambiÓ 2021) Configurar Correo Entrada Salida Odoo 14 15"
+
+---

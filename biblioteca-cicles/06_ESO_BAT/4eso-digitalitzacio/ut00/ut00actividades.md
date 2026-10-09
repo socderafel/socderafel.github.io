@@ -6,7 +6,7 @@ badge: "4t ESO · UT0 — U1. Introducció a la informática"
 prev_url: "../ut00/ut0002.html"
 prev_label: "⬅️ 0.2 Apuntes de sistemas de numeración"
 next_url: "../ut01/index.html"
-next_label: "📘 UT1 Completa ➡️"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT0

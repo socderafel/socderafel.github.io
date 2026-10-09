@@ -1,23 +1,27 @@
 ---
 layout: default
-title: "UT7 — U1: SSH. Secure Shell — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+title: "U1 — Accés Remot Segur (SSH) · Unitat Completa"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "../ut08/ut08actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
 next_url: "../ut07/ut0701.html"
 next_label: "7.1 Plantilla qüestionari d'avaluació ➡️"
 ---
 
-# 📘 UT7 — U1: SSH. Secure Shell (Unitat Completa)
+# 📘 U1 — Accés Remot Segur (SSH) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**7.1 Plantilla qüestionari d'avaluació**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
-> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**7.1 Plantilla qüestionari d'avaluació**](./ut0701.md)
+- [**✍️ Activitats pràctiques UT7**](./ut07actividades.md)
 
 ---
 
-## 7.1 Plantilla qüestionari d'avaluació
+# 7.1 Plantilla qüestionari d'avaluació
 
 > **📌 🏷️ Apunt de la Unitat**
 > ### **Presentació**
@@ -99,7 +103,7 @@ se debe copiar la clave pública y privada en el servidor
 
 ---
 
-## ✍️ Activitats pràctiques UT7
+# ✍️ Activitats pràctiques UT7
 
 > **✍️ Activitat Pràctica 7.1 — Entrega Acta Inicial**
 > Entrega Acta Inicial
@@ -124,3 +128,5 @@ se debe copiar la clave pública y privada en el servidor
 
 > **✍️ Activitat Pràctica 7.6 — Nota UD1**
 > Nota UD1
+
+---

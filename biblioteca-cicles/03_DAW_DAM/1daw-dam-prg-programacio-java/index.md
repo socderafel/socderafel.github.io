@@ -3,54 +3,39 @@ layout: default
 title: "Índex — Programació en Java (1r DAW / DAM) — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "1r DAW / DAM · Grau Superior · FP Grau Superior — DAW i DAM (Desenvolupament d'Aplicacions)"
-next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_url: "./ut01/index.html"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # ☕ Programació en Java (1r DAW / DAM)
 
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Programació en Java (1r DAW / DAM)** (1r DAW / DAM · Grau Superior).
 
-> **💡 ☕ Accés al Temari Principal de Programació (UT0–UT7)**
-> Aquest curs conté el repositori complet de **12 Unitats Didàctiques** (incloent Interfícies Gràfiques amb Swing i reptes de *ProgramaMe / JO-EL*). Pots accedir també al [**Portal Principal de Programació 1r DAW (UT0 a UT7) fent clic ací ➡️**](../../../programacio/index.md).
-
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT17)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **PRESENTACIÓN DEL MÓDULO** | 3 apartats · 0 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **EJERCICIOS: JUECES ONLINE** | 10 apartats · 0 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **EJERCICIOS DE REPASO** | 7 apartats · 1 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **EXÁMENES** | 13 apartats · 32 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **PROYECTOS** | 10 apartats · 6 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **Introducción a la programación con Java** | 9 apartats · 0 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UT6** | **Entrada y salida de información** | 5 apartats · 0 activitats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UT7** | **Estructuras de control** | 9 apartats · 1 activitats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
-| **UT8** | **Programación Estructurada y Modular** | 5 apartats · 0 activitats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
-| **UT9** | **Estructuras datos estáticas** | 6 apartats · 0 activitats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
-| **UT10** | **Estructuras de datos dinámicas** | 11 apartats · 0 activitats | [**📘 Unitat Completa**](./ut10/index.md) \| [Apartat 1 ➡️](./ut10/ut1001.md) |
-| **UT11** | **Programación orientada a objetos** | 21 apartats · 0 activitats | [**📘 Unitat Completa**](./ut11/index.md) \| [Apartat 1 ➡️](./ut11/ut1101.md) |
-| **UT12** | **Utilización avanzada de clases** | 6 apartats · 0 activitats | [**📘 Unitat Completa**](./ut12/index.md) \| [Apartat 1 ➡️](./ut12/ut1201.md) |
-| **UT13** | **Gestión de excepciones** | 4 apartats · 0 activitats | [**📘 Unitat Completa**](./ut13/index.md) \| [Apartat 1 ➡️](./ut13/ut1301.md) |
-| **UT14** | **Lectura y escritura de ficheros** | 9 apartats · 0 activitats | [**📘 Unitat Completa**](./ut14/index.md) \| [Apartat 1 ➡️](./ut14/ut1401.md) |
-| **UT15** | **Interacción con bases de datos** | 3 apartats · 0 activitats | [**📘 Unitat Completa**](./ut15/index.md) \| [Apartat 1 ➡️](./ut15/ut1501.md) |
-| **UT16** | **Interfaces gráficas de usuario** | 4 apartats · 0 activitats | [**📘 Unitat Completa**](./ut16/index.md) \| [Apartat 1 ➡️](./ut16/ut1601.md) |
-| **UT17** | **Proyecto Integrador** | 7 apartats · 0 activitats | [**📘 Unitat Completa**](./ut17/index.md) \| [Apartat 1 ➡️](./ut17/ut1701.md) |
-
-## UT0 — PRESENTACIÓN DEL MÓDULO
-
-`1r DAW / DAM · Grau Superior · UT0 · 3 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Guia Didàctica**](./ut00/ut0001.md)
-- [**0.2 Criterios de calificación**](./ut00/ut0002.md)
-- [**0.3 Poema Ítaca (Konstantino Kavafis)**](./ut00/ut0003.md)
+| **UT1** | **EJERCICIOS: JUECES ONLINE** | 10 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT2** | **EJERCICIOS DE REPASO** | 7 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UT4** | **PROYECTOS** | 10 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **Introducción a la programación con Java** | 9 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UT6** | **Entrada y salida de información** | 5 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
+| **UT7** | **Estructuras de control** | 9 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
+| **UT8** | **Programación Estructurada y Modular** | 5 apartats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
+| **UT9** | **Estructuras datos estáticas** | 6 apartats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
+| **UT10** | **Estructuras de datos dinámicas** | 11 apartats | [**📘 Unitat Completa**](./ut10/index.md) \| [Apartat 1 ➡️](./ut10/ut1001.md) |
+| **UT11** | **Programación orientada a objetos** | 21 apartats | [**📘 Unitat Completa**](./ut11/index.md) \| [Apartat 1 ➡️](./ut11/ut1101.md) |
+| **UT12** | **Utilización avanzada de clases** | 6 apartats | [**📘 Unitat Completa**](./ut12/index.md) \| [Apartat 1 ➡️](./ut12/ut1201.md) |
+| **UT13** | **Gestión de excepciones** | 4 apartats | [**📘 Unitat Completa**](./ut13/index.md) \| [Apartat 1 ➡️](./ut13/ut1301.md) |
+| **UT14** | **Lectura y escritura de ficheros** | 9 apartats | [**📘 Unitat Completa**](./ut14/index.md) \| [Apartat 1 ➡️](./ut14/ut1401.md) |
+| **UT15** | **Interacción con bases de datos** | 3 apartats | [**📘 Unitat Completa**](./ut15/index.md) \| [Apartat 1 ➡️](./ut15/ut1501.md) |
+| **UT16** | **Interfaces gráficas de usuario** | 4 apartats | [**📘 Unitat Completa**](./ut16/index.md) \| [Apartat 1 ➡️](./ut16/ut1601.md) |
+| **UT17** | **Proyecto Integrador** | 7 apartats | [**📘 Unitat Completa**](./ut17/index.md) \| [Apartat 1 ➡️](./ut17/ut1701.md) |
 
 ## UT1 — EJERCICIOS: JUECES ONLINE
 
@@ -82,26 +67,6 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 - [**2.5 Ejercicios - BLOQUE 2**](./ut02/ut0205.md)
 - [**2.6 Repaso POO: Juego de Cartas (ENTREGABLE)**](./ut02/ut0206.md)
 - [**✍️ Activitats pràctiques UT2**](./ut02/ut02actividades.md)
-
-## UT3 — EXÁMENES
-
-`1r DAW / DAM · Grau Superior · UT3 · 13 apartats`
-
-[**📘 Obrir UT3 Completa en una sola pàgina**](./ut03/index.md)
-
-- [**3.1 TestFotografia**](./ut03/ut0301.md)
-- [**3.2 Principal.java**](./ut03/ut0302.md)
-- [**3.3 CodigoBASIC.bas**](./ut03/ut0303.md)
-- [**3.4 Principal**](./ut03/ut0304.md)
-- [**3.5 Principal**](./ut03/ut0305.md)
-- [**3.6 Principal**](./ut03/ut0306.md)
-- [**3.7 TiendaTest**](./ut03/ut0307.md)
-- [**3.8 TableroTest**](./ut03/ut0308.md)
-- [**3.9 ficheroExamen**](./ut03/ut0309.md)
-- [**3.10 ExamenPRG**](./ut03/ut0310.md)
-- [**3.11 fichero2**](./ut03/ut0311.md)
-- [**3.12 fichero1**](./ut03/ut0312.md)
-- [**✍️ Activitats pràctiques UT3**](./ut03/ut03actividades.md)
 
 ## UT4 — PROYECTOS
 

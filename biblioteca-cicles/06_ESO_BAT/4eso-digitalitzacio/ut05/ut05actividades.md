@@ -6,7 +6,7 @@ badge: "4t ESO · UT5 — Bases de Datos"
 prev_url: "../ut05/ut0501.html"
 prev_label: "⬅️ 5.1 BBDD"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

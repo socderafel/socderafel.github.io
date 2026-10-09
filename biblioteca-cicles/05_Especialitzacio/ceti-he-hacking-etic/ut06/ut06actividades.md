@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT6 — Auditorias de seguridad con Wireshar
 prev_url: "../ut06/ut0601.html"
 prev_label: "⬅️ 6.1 Wireshark"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

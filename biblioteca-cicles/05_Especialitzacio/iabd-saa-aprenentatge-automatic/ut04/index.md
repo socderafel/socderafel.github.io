@@ -1,27 +1,31 @@
 ---
 layout: default
-title: "UT4 — Sistemes d'aprenentatge supervisat — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
+title: "UD3 — Aprenentatge Supervisat: Regressió, Classificació i Preprocessament · Unitat Completa"
 course_root: ".."
 badge: "CE IA i Big Data · UT4 Completa"
-prev_url: "../ut03/ut0301.html"
-prev_label: "⬅️ 3.1 Continguts i Recursos"
+prev_url: "../ut05/ut0503.html"
+prev_label: "⬅️ 5.3 UT 2 . Caracterització de sistemes d'aprenentatg"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 UT 5.4. Aprenentatge supervisat. Tractament de d ➡️"
 ---
 
-# 📘 UT4 — Sistemes d'aprenentatge supervisat (Unitat Completa)
+# 📘 UD3 — Aprenentatge Supervisat: Regressió, Classificació i Preprocessament (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 UT 5.4. Aprenentatge supervisat. Tractament de d**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r**](#ut0402) (o [obrir en pàgina individual ➡️](./ut0402.md) )
-> - [**4.3 UT 5.2. Aprenentatge supervisat. Models de regre**](#ut0403) (o [obrir en pàgina individual ➡️](./ut0403.md) )
-> - [**4.4 UT 5.1. Aprenentatge supervisat. Models de regre**](#ut0404) (o [obrir en pàgina individual ➡️](./ut0404.md) )
-> - [**4.5 UT 5. Aprenentatge supervisat. Introducció.**](#ut0405) (o [obrir en pàgina individual ➡️](./ut0405.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 UT 5.4. Aprenentatge supervisat. Tractament de d**](./ut0401.md)
+- [**4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r**](./ut0402.md)
+- [**4.3 UT 5.2. Aprenentatge supervisat. Models de regre**](./ut0403.md)
+- [**4.4 UT 5.1. Aprenentatge supervisat. Models de regre**](./ut0404.md)
+- [**4.5 UT 5. Aprenentatge supervisat. Introducció.**](./ut0405.md)
+- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
 
 ---
 
-## 4.1 UT 5.4. Aprenentatge supervisat. Tractament de d
+# 4.1 UT 5.4. Aprenentatge supervisat. Tractament de d
 
 > **🔗 Recurs Web: UT 5.6. Aprenentatge supervisat components de classificació plataforma Azure**
 > [**🌐 Obrir recurs extern (https://drive.google.com/file/d/14kMBdgTgM6rgXItNt9UKWxxy3QxyteW3/view?usp=sharing) ↗️**](https://drive.google.com/file/d/14kMBdgTgM6rgXItNt9UKWxxy3QxyteW3/view?usp=sharing)
@@ -240,7 +244,7 @@ ser muy negativos será conveniente descartarlos. 16 / 16
 
 ---
 
-## 4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r
+# 4.2 UT 5.3. Aprenentatge supervisat. Algorismes de r
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT5.3. Aprendizaje supervisado. Cloud computing con la plataforma Azure. Aplicación a modelos de ML de regresión. Algoritmos de regresión de Azure. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -476,7 +480,7 @@ reproducibilidad en ejecuciones que tienen los mismos datos y parámetros. 15 / 
 
 ---
 
-## 4.3 UT 5.2. Aprenentatge supervisat. Models de regre
+# 4.3 UT 5.2. Aprenentatge supervisat. Models de regre
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT5.2. Aprendizaje supervisado. Cloud computing con la plataforma Azure. Aplicación a modelos de ML de regresión. Creación de un primer modelo de regresión. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -641,7 +645,7 @@ Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Apre
 
 ---
 
-## 4.4 UT 5.1. Aprenentatge supervisat. Models de regre
+# 4.4 UT 5.1. Aprenentatge supervisat. Models de regre
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT5.1. Aprendizaje supervisado. Modelos de regresión.
 
@@ -745,7 +749,7 @@ Más información. 6 / 6
 
 ---
 
-## 4.5 UT 5. Aprenentatge supervisat. Introducció.
+# 4.5 UT 5. Aprenentatge supervisat. Introducció.
 
 Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático. UT5. Aprendizaje supervisado. Introducción a los modelos de aprendizaje supervisado. Curso de especialización en Inteligencia Artificial y Big Data Sistemas de Aprendizaje Automático Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -849,7 +853,7 @@ Esos datos pueden estar etiquetados o no. Si son etiquetados los usaremos para v
 
 ---
 
-## ✍️ Activitats pràctiques UT4
+# ✍️ Activitats pràctiques UT4
 
 > **✍️ Activitat Pràctica 4.3 — Tasca 4 - Preprocessat de dades amb scikit learn**
 > > **💡 📦 Contingut del paquet comprimit (Tarea4.zip)**
@@ -946,3 +950,5 @@ Esos datos pueden estar etiquetados o no. Si son etiquetados los usaremos para v
 > ### 📄 datasetx2.csv
 >
 > valores de X,valores teoricos,ruido,valores de salida -2,15,-0.3,14.7 -1.98,14.7612,-0.4,14.3612 -1.96,14.5248,0.1,14.6248 -1.94,14.2908,0.3,14.5908 -1.92,14.0592,-0.8,13.2592 -1.9,13.83,0.6,14.43 -1.88,13.6032,0.3,13.9032 -1.86,13.3788,0.4,13.7788 -1.84,13.1568,0.1,13.2568 -1.82,12.9372,-0.7,12.2372 -1.8,12.72,0.8,13.52 -1.78,12.5052,0.8,13.3052 -1.76,12.2928,0,12.2928 -1.74,12.0828,0.9,12.9828 -1.72,11.8752,0.3,12.1752 -1.7,11.67,-0.3,11.37 -1.68,11.4672,0.2,11.6672 -1.66,11.2668,0.5,11.7668 -1.64,11.0688,-0.3,10.7688 -1.62,10.8732,-0.8,10.0732 -1.6,10.68,-0.2,10.48 -1.58,10.4892,-0.7,9.7892 -1.56,10.3008,-0.8,9.50079999999999 -1.54,10.1148,-0.4,9.7148 -1.52,9.9312,0.9,10.8312 -1.5,9.75,0.6,10.35 -1.48,9.5712,-0.7,8.8712 -1.46,9.3948,0.6,9.9948 -1.44,9.2208,0.2,9.4208 -1.42,9.0492,-0.1,8.9492 -1.4,8.88,-0.7,8.18 -1.38,8.7132,-0.1,8.6132 -1.36,8.5488,0.9,9.4488 -1.34,8.38679999999999,0.2,8.58679999999999 -1.32,8.2272,0.7,8.9272 -1.3,8.07,-0.1,7.97 -1.28,7.9152,-0.6,7.3152 -1.26,7.7628,0.1,7.8628 -1.24,7.6128,-0.8,6.8128 -1.22,7.4652,-0.3,7.1652 -1.2,7.32,0.4,7.72 -1.18,7.1772,-0.5,6.6772 -1.16,7.0368,-0.4,6.6368 -1.14,6.89879999999999,-0.4,6.49879999999999 -1.12,6.76319999999999,-0.1,6.66319999999999 -1.1,6.62999999999999,-0.9,5.72999999999999 -1.08,6.4992,-0.6,5.8992 -1.06,6.3708,-0.1,6.2708 -1.04,6.24479999999999,0.6,6.84479999999999 -1.02,6.12119999999999,-0.3,5.8212 -0.999999999999999,6,-0.3,5.7 -0.979999999999999,5.88119999999999,0.3,6.18119999999999 -0.959999999999999,5.7648,-0.6,5.1648 -0.939999999999999,5.6508,0.4,6.0508 -0.919999999999999,5.5392,0.2,5.7392 -0.899999999999999,5.42999999999999,0.7,6.12999999999999 -0.879999999999999,5.32319999999999,0.3,5.62319999999999 -0.859999999999999,5.21879999999999,-0.8,4.4188 -0.839999999999999,5.11679999999999,0.1,5.21679999999999 -0.819999999999999,5.0172,0.7,5.7172 -0.799999999999999,4.91999999999999,0.8,5.71999999999999 -0.779999999999999,4.8252,0.3,5.1252 -0.759999999999999,4.7328,0.9,5.6328 -0.739999999999999,4.6428,-0.5,4.1428 -0.719999999999999,4.5552,0.4,4.9552 -0.699999999999999,4.47,-0.9,3.57 -0.679999999999999,4.3872,-0.4,3.9872 -0.659999999999999,4.3068,-0.3,4.0068 -0.639999999999999,4.2288,0.1,4.3288 -0.619999999999999,4.1532,-0.4,3.7532 -0.599999999999999,4.08,0.1,4.18 -0.579999999999999,4.0092,0.4,4.4092 -0.559999999999999,3.9408,-0.6,3.3408 -0.539999999999999,3.8748,-0.2,3.6748 -0.519999999999999,3.8112,0.4,4.2112 -0.499999999999999,3.75,0.6,4.35 -0.479999999999999,3.6912,0.9,4.5912 -0.459999999999999,3.6348,-0.1,3.5348 -0.439999999999999,3.5808,0.3,3.8808 -0.419999999999999,3.5292,0.8,4.3292 -0.399999999999999,3.48,-0.4,3.08 -0.379999999999999,3.4332,0.6,4.0332 -0.359999999999999,3.3888,0.4,3.7888 -0.339999999999999,3.3468,-0.4,2.9468 -0.319999999999998,3.3072,-0.8,2.5072 -0.299999999999998,3.27,0.2,3.47 -0.279999999999998,3.2352,0.8,4.0352 -0.259999999999998,3.2028,-0.6,2.6028 -0.239999999999998,3.1728,0.8,3.9728 -0.219999999999998,3.1452,-0.5,2.6452 -0.199999999999998,3.12,0.2,3.32 -0.179999999999999,3.0972,-0.7,2.3972 -0.159999999999999,3.0768,-0.7,2.3768 -0.139999999999999,3.0588,0.2,3.2588 -0.119999999999999,3.0432,-0.9,2.1432 -0.0999999999999985,3.03,-0.6,2.43 -0.0799999999999985,3.0192,-0.2,2.8192 -0.0599999999999985,3.0108,-0.2,2.8108 -0.0399999999999985,3.0048,0.5,3.5048 -0.0199999999999985,3.0012,0.9,3.9012 1.50573997714787E-15,3,-0.7,2.3 0.0200000000000015,3.0012,-0.7,2.3012 0.0400000000000015,3.0048,0.7,3.7048 0.0600000000000015,3.0108,-0.9,2.1108 0.0800000000000015,3.0192,0,3.0192 0.100000000000002,3.03,-0.9,2.13 0.120000000000002,3.0432,-0.9,2.1432 0.140000000000002,3.0588,0.6,3.6588 0.160000000000002,3.0768,0.7,3.7768 0.180000000000002,3.0972,-0.1,2.9972 0.200000000000001,3.12,0.5,3.62 0.220000000000001,3.1452,0.5,3.6452 0.240000000000001,3.1728,-0.6,2.5728 0.260000000000001,3.2028,-0.3,2.9028 0.280000000000001,3.2352,0.7,3.9352 0.300000000000001,3.27,-0.2,3.07 0.320000000000001,3.3072,-0.3,3.0072 0.340000000000001,3.3468,0.9,4.2468 0.360000000000002,3.3888,0.6,3.9888 0.380000000000002,3.4332,-0.7,2.7332 0.400000000000002,3.48,-0.7,2.78 0.420000000000002,3.5292,0.3,3.8292 0.440000000000002,3.5808,-0.9,2.6808 0.460000000000002,3.6348,0,3.6348 0.480000000000002,3.6912,-0.8,2.8912 0.500000000000002,3.75,0.7,4.45 0.520000000000002,3.81120000000001,0.9,4.71120000000001 0.540000000000002,3.87480000000001,-0.2,3.67480000000001 0.560000000000002,3.94080000000001,-0.1,3.84080000000001 0.580000000000002,4.00920000000001,0.3,4.30920000000001 0.600000000000002,4.08000000000001,-0.5,3.58000000000001 0.620000000000002,4.15320000000001,0.6,4.75320000000001 0.640000000000002,4.22880000000001,0.5,4.72880000000001 0.660000000000002,4.30680000000001,-0.8,3.50680000000001 0.680000000000002,4.38720000000001,0.9,5.28720000000001 0.700000000000002,4.47000000000001,0.6,5.07000000000001 0.720000000000002,4.55520000000001,-0.9,3.65520000000001 0.740000000000002,4.64280000000001,0.4,5.04280000000001 0.760000000000002,4.73280000000001,0.6,5.33280000000001 0.780000000000002,4.82520000000001,0.9,5.72520000000001 0.800000000000002,4.92000000000001,0.2,5.12000000000001 0.820000000000002,5.01720000000001,0.4,5.41720000000001 0.840000000000002,5.11680000000001,-0.9,4.21680000000001 0.860000000000002,5.21880000000001,0.9,6.11880000000001 0.880000000000002,5.32320000000001,0.8,6.12320000000001 0.900000000000002,5.43000000000001,0.4,5.83000000000001 0.920000000000002,5.53920000000001,-0.9,4.63920000000001 0.940000000000002,5.65080000000001,0.4,6.05080000000001 0.960000000000002,5.76480000000001,0.8,6.56480000000001 0.980000000000002,5.88120000000001,-0.7,5.18120000000001 1,6.00000000000001,-0.6,5.40000000000001 1.02,6.12120000000001,0.8,6.92120000000001 1.04,6.24480000000001,0.4,6.64480000000001 1.06,6.37080000000001,-0.4,5.97080000000001 1.08,6.49920000000001,-0.8,5.69920000000001 1.1,6.63000000000001,-0.2,6.43000000000001 1.12,6.76320000000001,0.4,7.16320000000002 1.14,6.89880000000001,-0.7,6.19880000000001 1.16,7.03680000000002,0.4,7.43680000000002 1.18,7.17720000000002,0.3,7.47720000000002 1.2,7.32000000000002,-0.7,6.62000000000002 1.22,7.46520000000002,-0.5,6.96520000000002 1.24,7.61280000000002,-0.8,6.81280000000002 1.26,7.76280000000002,0.9,8.66280000000002 1.28,7.91520000000002,0.6,8.51520000000002 1.3,8.07000000000002,0.9,8.97000000000002 1.32,8.22720000000002,0.1,8.32720000000002 1.34,8.38680000000002,-0.3,8.08680000000002 1.36,8.54880000000002,-0.4,8.14880000000002 1.38,8.71320000000002,0.7,9.41320000000002 1.4,8.88000000000002,0.5,9.38000000000002 1.42,9.04920000000002,-0.7,8.34920000000002 1.44,9.22080000000002,-0.4,8.82080000000002 1.46,9.39480000000002,0.5,9.89480000000002 1.48,9.57120000000002,0,9.57120000000002 1.5,9.75000000000002,-0.3,9.45000000000002 1.52,9.93120000000002,-0.4,9.53120000000002 1.54,10.1148,0.7,10.8148 1.56,10.3008,-0.8,9.50080000000002 1.58,10.4892,0.1,10.5892 1.6,10.68,0.2,10.88 1.62,10.8732,-0.3,10.5732 1.64,11.0688,-0.4,10.6688 1.66,11.2668,-0.8,10.4668 1.68,11.4672,-0.4,11.0672 1.7,11.67,0.2,11.87 1.72,11.8752,-0.2,11.6752 1.74,12.0828,0.4,12.4828 1.76,12.2928,0.4,12.6928 1.78,12.5052,0.4,12.9052 1.8,12.72,0.1,12.82 1.82,12.9372,-0.6,12.3372 1.84,13.1568,0.9,14.0568 1.86,13.3788,-0.7,12.6788 1.88,13.6032,-0.9,12.7032 1.9,13.83,-0.8,13.03 1.92,14.0592,0.7,14.7592 1.94,14.2908,0.5,14.7908 1.96,14.5248,-0.6,13.9248 1.98,14.7612,-0.7,14.0612 2,15,-0.1,14.9
+
+---

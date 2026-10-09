@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Seguretat i Alta Disponibilitat — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "2n ASIX · Grau Superior · Documentació i Recursos"
-prev_url: "./ut15/ut15actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT15"
+prev_url: "./ut11/ut1101.html"
+prev_label: "⬅️ 11.1 Legislació en Ciberseguretat"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

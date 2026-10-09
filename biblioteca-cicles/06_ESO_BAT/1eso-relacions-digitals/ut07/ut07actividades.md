@@ -5,8 +5,8 @@ course_root: ".."
 badge: "1r ESO · UT7 — SCRATCH BÁSICO"
 prev_url: "../ut07/ut0701.html"
 prev_label: "⬅️ 7.1 Continguts i Recursos"
-next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

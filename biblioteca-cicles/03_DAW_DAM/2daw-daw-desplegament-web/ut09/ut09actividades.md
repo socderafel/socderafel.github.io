@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT9 — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT9 — Arquitectura web."
+badge: "2n DAW · Grau Superior · UD3 — Arquitectures Web i Servidors d'Aplicacions"
 prev_url: "../ut09/ut0904.html"
 prev_label: "⬅️ 9.4 UT 3.1 Arquitectures web"
-next_url: "../ut10/index.html"
-next_label: "📘 UT10 Completa ➡️"
+next_url: "../ut08/index.html"
+next_label: "📘 UD4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT9

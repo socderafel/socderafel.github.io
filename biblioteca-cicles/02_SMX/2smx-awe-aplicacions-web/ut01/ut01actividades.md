@@ -6,7 +6,7 @@ badge: "2n SMX · Grau Mitjà · UT1 — Unit 1: Technologies for Web Developmen
 prev_url: "../ut01/ut0107.html"
 prev_label: "⬅️ 1.7 Cheatsheet CSS (Manz)"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

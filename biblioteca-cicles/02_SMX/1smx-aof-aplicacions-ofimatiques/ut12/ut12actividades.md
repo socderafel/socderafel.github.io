@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT12 — BDA. SISTEMES GESTORS BASE DE DADES (S
 prev_url: "../ut12/ut1204.html"
 prev_label: "⬅️ 12.4 Tema 1. EXERCICIS SGBD"
 next_url: "../ut13/index.html"
-next_label: "📘 UT13 Completa ➡️"
+next_label: "📘 UT13 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT12

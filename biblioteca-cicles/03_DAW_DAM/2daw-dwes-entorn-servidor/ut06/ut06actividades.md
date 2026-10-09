@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT6 — Unit 6 - Laravel II"
 prev_url: "../ut06/ut0604.html"
 prev_label: "⬅️ 6.4 U6 Class exercises"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

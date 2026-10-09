@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT11 — Calc. Qüestionaris i treballs"
 prev_url: "../ut11/ut1101.html"
 prev_label: "⬅️ 11.1 Preguntes qüestionari (Alumnes)"
 next_url: "../ut12/index.html"
-next_label: "📘 UT12 Completa ➡️"
+next_label: "📘 UT12 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT11

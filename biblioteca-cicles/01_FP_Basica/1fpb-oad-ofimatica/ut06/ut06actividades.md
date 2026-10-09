@@ -6,7 +6,7 @@ badge: "1r FPB · Grau Bàsic · UT6 — GIMP"
 prev_url: "../ut06/ut0601.html"
 prev_label: "⬅️ 6.1 Continguts i Recursos"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

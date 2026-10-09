@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT10 — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT10 — Administració de servidors d’arxius"
+badge: "2n DAW · Grau Superior · UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP)"
 prev_url: "../ut10/ut1002.html"
 prev_label: "⬅️ 10.2 UT 2.1 Introducció - Creació servidor FTP amb VS"
-next_url: "../ut11/index.html"
-next_label: "📘 UT11 Completa ➡️"
+next_url: "../ut09/index.html"
+next_label: "📘 UD3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT10

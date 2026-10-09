@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT11 — Setmanes Del 5 al 12 de Febrer — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD10 — Legislació i Normativa en Ciberseguretat · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT11 Completa"
 prev_url: "../ut10/ut10actividades.html"
@@ -9,14 +9,18 @@ next_url: "../ut11/ut1101.html"
 next_label: "11.1 Legislació en Ciberseguretat ➡️"
 ---
 
-# 📘 UT11 — Setmanes Del 5 al 12 de Febrer (Unitat Completa)
+# 📘 UD10 — Legislació i Normativa en Ciberseguretat (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**11.1 Legislació en Ciberseguretat**](#ut1101) (o [obrir en pàgina individual ➡️](./ut1101.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**11.1 Legislació en Ciberseguretat**](./ut1101.md)
 
 ---
 
-## 11.1 Legislació en Ciberseguretat
+# 11.1 Legislació en Ciberseguretat
 
 LEGISLACIÓ i NORMATIVA CIBERSEGURETAT
 
@@ -43,3 +47,5 @@ Responsable de la protecció de la informació. DPO Punt centralitzat (tractar n
 GDPR Drets del subjecte de la informació • Accés (gratuït i delimitat en el temps, Max 40 dies) • Esborrat. Dret a l'oblit. • Avaluació de perfils automàticament. • Portabilitat de les dades. • Objecció
 
 COMPLIANCE (Compliment) La reforma del nostre Codi Penal de 2010 (Llei orgànica 5/2010 de la Reforma del Codi Penal).. Article únic quart (modifica article 31). s'introdueix per primera vegada la responsabilitat penal de les persones jurídiques El «Corporate Compliance» és un conjunt de procediments i bones pràctiques adoptats per les organitzacions per a identificar i classificar els riscos operatius i legals als quals s'enfronten i establir mecanismes interns de prevenció, gestió, control i reacció enfront d'aquests.
+
+---

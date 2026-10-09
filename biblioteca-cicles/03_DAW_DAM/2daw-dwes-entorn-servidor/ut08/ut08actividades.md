@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT8 — Unit 8 - Hybrid Applications"
 prev_url: "../ut08/ut0801.html"
 prev_label: "⬅️ 8.1 U8 - Hybrid applications"
 next_url: "../ut09/index.html"
-next_label: "📘 UT9 Completa ➡️"
+next_label: "📘 UT9 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

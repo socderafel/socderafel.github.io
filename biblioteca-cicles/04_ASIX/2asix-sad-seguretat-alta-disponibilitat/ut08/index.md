@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT8 — Setmanes (13-14) Del 11 al 22 de Desembre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT8 Completa"
 prev_url: "../ut07/ut07actividades.html"
@@ -9,17 +9,21 @@ next_url: "../ut08/ut0801.html"
 next_label: "8.1 Segurertat en xarxes corporatives ➡️"
 ---
 
-# 📘 UT8 — Setmanes (13-14) Del 11 al 22 de Desembre (Unitat Completa)
+# 📘 UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**8.1 Segurertat en xarxes corporatives**](#ut0801) (o [obrir en pàgina individual ➡️](./ut0801.md) )
-> - [**8.2 Seguretat en xarxes sense fil**](#ut0802) (o [obrir en pàgina individual ➡️](./ut0802.md) )
-> - [**8.3 VPN**](#ut0803) (o [obrir en pàgina individual ➡️](./ut0803.md) )
-> - [**✍️ Activitats pràctiques UT8**](#ut08actividades) (o [obrir en pàgina individual ➡️](./ut08actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**8.1 Segurertat en xarxes corporatives**](./ut0801.md)
+- [**8.2 Seguretat en xarxes sense fil**](./ut0802.md)
+- [**8.3 VPN**](./ut0803.md)
+- [**✍️ Activitats pràctiques UT8**](./ut08actividades.md)
 
 ---
 
-## 8.1 Segurertat en xarxes corporatives
+# 8.1 Segurertat en xarxes corporatives
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### UD 6 Accés remot
@@ -130,7 +134,7 @@ Consells finals Protegir la xarxa. STP, Link Aggregation, Port Security, VLAN
 
 ---
 
-## 8.2 Seguretat en xarxes sense fil
+# 8.2 Seguretat en xarxes sense fil
 
 XARXES SENSE FIL
 
@@ -464,7 +468,7 @@ Analitzar periòdicament els clients connectats per a comprovar que estan
 
 ---
 
-## 8.3 VPN
+# 8.3 VPN
 
 XARXES PRIVADES VIRTUALS
 
@@ -818,7 +822,7 @@ Software per implementar Roadwarrior ● LogMeIn Hamachi ● Radmin VPN ● Soft
 
 ---
 
-## ✍️ Activitats pràctiques UT8
+# ✍️ Activitats pràctiques UT8
 
 > **✍️ Activitat Pràctica 8.1 — (SAD) Descobreix xarxes amb nmap**
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: nmap Nmap és un dels millors escàners de ports que podem trobar en la xarxa, des de la seua primera versió ha sabut madurar i mantindre's, convertint- se en una eina imprescindible per a un administrador de xarxa o un auditor de seguretat.
@@ -834,3 +838,5 @@ Software per implementar Roadwarrior ● LogMeIn Hamachi ● Radmin VPN ● Soft
 > Detectar vulnerabilitats. Per a realitzar aquest apartat, necessitarem una màquina amb alguna vulnerabilitat que puga ser detectada. Per a això utilitzarem una màquina metasploitable . La baixem de : https://sourceforge.net/projects/metasploitable/ La importem i posem la xarxa en adaptador pont.
 >
 > Arranquem la màquina metasploitable. Utilitzant nmap: Descobreix que màquina de la xarxa és metasploitable (la seua ip) Descobreix que Sistema operatiu és i que versió Descobreix que ports té oberts Descobreix que vulnerabilitats té Comenta els resultats ! Documentar tot el procés en un document. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada. Entregar el document en format PDF. Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”
+
+---

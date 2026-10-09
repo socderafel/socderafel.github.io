@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT15 — Hacking Ètic i Auditoria de Segu
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT15 — Riesgos laborales en el entorno de HE"
 prev_url: "../ut15/index.html"
-prev_label: "⬅️ 📘 UT15 Completa"
+prev_label: "⬅️ 📘 UT15 Completa (1 pàgina)"
 next_url: "../ut16/index.html"
-next_label: "📘 UT16 Completa ➡️"
+next_label: "📘 UT16 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT15

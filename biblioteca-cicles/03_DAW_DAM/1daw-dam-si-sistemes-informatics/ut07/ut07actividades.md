@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT7 — TALLER HARDWARE"
 prev_url: "../ut07/ut0702.html"
 prev_label: "⬅️ 7.2 Teoria Components Hardware"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

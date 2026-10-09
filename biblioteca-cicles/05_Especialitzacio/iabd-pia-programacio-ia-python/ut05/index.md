@@ -1,24 +1,28 @@
 ---
 layout: default
-title: "UT5 — Creación entorno de trabajo — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca"
+title: "UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python) · Unitat Completa"
 course_root: ".."
 badge: "CE IA i Big Data · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut05/ut0501.html"
 next_label: "5.1 Instalación entorno de trabajo. ➡️"
 ---
 
-# 📘 UT5 — Creación entorno de trabajo (Unitat Completa)
+# 📘 UD1 — Creació i Configuració de l'Entorn de Treball (Linux i Python) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 Instalación entorno de trabajo.**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**5.2 SO LINUX MINT MATE**](#ut0502) (o [obrir en pàgina individual ➡️](./ut0502.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 Instalación entorno de trabajo.**](./ut0501.md)
+- [**5.2 SO LINUX MINT MATE**](./ut0502.md)
+- [**✍️ Activitats pràctiques UT5**](./ut05actividades.md)
 
 ---
 
-## 5.1 Instalación entorno de trabajo.
+# 5.1 Instalación entorno de trabajo.
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Materiales.
@@ -127,7 +131,7 @@ Anaconda Navigator es una interfaz gráfica de usuario (GUI) incluida en Anacond
 
 ---
 
-## 5.2 SO LINUX MINT MATE
+# 5.2 SO LINUX MINT MATE
 
 **Instalación del sistema operativo Linux MINT MATE**
 **y comandos básicos de Linux para poder usarlo.**
@@ -224,10 +228,12 @@ Anaconda Navigator es una interfaz gráfica de usuario (GUI) incluida en Anacond
 
 ---
 
-## ✍️ Activitats pràctiques UT5
+# ✍️ Activitats pràctiques UT5
 
 > **✍️ Activitat Pràctica 5.1 — Tasca 1 UD1 (còpia)**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
 
 > **✍️ Activitat Pràctica 5.2 — Tasca 3 UD1 (còpia)**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+---

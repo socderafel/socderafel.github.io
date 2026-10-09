@@ -6,7 +6,7 @@ badge: "4t ESO · UT1 — Sistemes de Fitxers Linux"
 prev_url: "../ut01/ut0103.html"
 prev_label: "⬅️ 1.3 Permisos"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

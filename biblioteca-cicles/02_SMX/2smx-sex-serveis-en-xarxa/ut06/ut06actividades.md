@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT6 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT6 — U2: Servei d'Assignació Dinàmica d'Adreces (DHCP)"
+badge: "2n SMX · Grau Mitjà · U2 — Assignació Dinàmica d'Adreces (DHCP)"
 prev_url: "../ut06/ut0606.html"
 prev_label: "⬅️ 6.6 Qüestionari DHCP"
-next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_url: "../ut05/index.html"
+next_label: "📘 U3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

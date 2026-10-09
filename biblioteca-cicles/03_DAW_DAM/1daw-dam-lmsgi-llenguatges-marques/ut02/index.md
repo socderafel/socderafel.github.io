@@ -1,23 +1,27 @@
 ---
 layout: default
-title: "UT2 — Unidad 7 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD7 — Programació amb JavaScript i DOM · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut03/ut03actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 Ejercicios JavaScript Solucionados ➡️"
 ---
 
-# 📘 UT2 — Unidad 7 (Unitat Completa)
+# 📘 UD7 — Programació amb JavaScript i DOM (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**2.1 Ejercicios JavaScript Solucionados**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 Ejercicios JavaScript Solucionados**](./ut0201.md)
+- [**✍️ Activitats pràctiques UT2**](./ut02actividades.md)
 
 ---
 
-## 2.1 Ejercicios JavaScript Solucionados
+# 2.1 Ejercicios JavaScript Solucionados
 
 > **🔗 Recurs Web: UD7- JavaScript**
 > [**🌐 Obrir recurs extern (https://www.w3schools.com/js/default.asp) ↗️**](https://www.w3schools.com/js/default.asp)
@@ -130,7 +134,7 @@ Número
 
 ---
 
-## ✍️ Activitats pràctiques UT2
+# ✍️ Activitats pràctiques UT2
 
 > **✍️ Activitat Pràctica 2.1 — Ejercicios JavaScript**
 > Os adjunto dos pdfs uno con los ejercicios y otro con **un ejemplo** de como podría ser la web.
@@ -167,6 +171,8 @@ Número
 > Entendiendo los ejercicios 1 y el extra es suficiente para resolver el resto.
 >
 > Nota: Si una función de JS tiene un error el resto de funciones dejan de funcionar. Os podéis encontrar que al principio las funciones os funcionan y seguidamente hacéis una función nueva y dejan de funcionar todas las funciones. Mi consejo es que hagas otro JS solo con la función que no funcione, buscas el error y lo vuelves a copiar a tu JS original.
+>
+> #### 📦 ejercicios1-6.html
 >
 > # Ejercicios 1-6 JavaScript
 > ## Ejercicio 1
@@ -232,3 +238,5 @@ Número
 > **1º ASIX**
 > **IES Sant Vicent Ferrer**
 > **Lenguajes de Marcas**
+
+---

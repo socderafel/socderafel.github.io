@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT4 — PROYECTOS"
 prev_url: "../ut04/ut0409.html"
 prev_label: "⬅️ 4.9 InternacionalizacionFX"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

@@ -1,23 +1,27 @@
 ---
 layout: default
-title: "UT4 — Unidad 5 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD5 — Desenvolupament Web amb HTML5 i CSS · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut05/ut05actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 U5-HTML5 ➡️"
 ---
 
-# 📘 UT4 — Unidad 5 (Unitat Completa)
+# 📘 UD5 — Desenvolupament Web amb HTML5 i CSS (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 U5-HTML5**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 U5-HTML5**](./ut0401.md)
+- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
 
 ---
 
-## 4.1 U5-HTML5
+# 4.1 U5-HTML5
 
 Introducción al HTML.
 El contenido lo he sacado de la web https://www.w3schools.com/html/, en esta web podéis probar todo lo que hay en las diapositivas con el editor que hay online para cada ejemplo. 
@@ -130,7 +134,7 @@ Ciclo Formativo de Grado Superior Webgrafía https://www.w3schools.com/html/
 
 ---
 
-## ✍️ Activitats pràctiques UT4
+# ✍️ Activitats pràctiques UT4
 
 > **✍️ Activitat Pràctica 4.1 — Ejercicio HTML**
 > Crear una página web básica
@@ -175,3 +179,5 @@ Ciclo Formativo de Grado Superior Webgrafía https://www.w3schools.com/html/
 > Fecha de entrega 14-02-2022 a las 00 horas.**
 >
 > Saludos.
+
+---

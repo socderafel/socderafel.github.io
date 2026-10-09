@@ -1,27 +1,30 @@
 ---
 layout: default
-title: "UT4 — U4: Servici de Web (HTTP) — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+title: "U4 — Servidor Web (HTTP / Virtual Hosting) · Unitat Completa"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut05/ut05actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 Recursos Escenario U3 ➡️"
 ---
 
-# 📘 UT4 — U4: Servici de Web (HTTP) (Unitat Completa)
+# 📘 U4 — Servidor Web (HTTP / Virtual Hosting) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 Recursos Escenario U3**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**4.2 Introducción virtual hosting**](#ut0402) (o [obrir en pàgina individual ➡️](./ut0402.md) )
-> - [**4.3 Configuración Virtual hosting**](#ut0403) (o [obrir en pàgina individual ➡️](./ut0403.md) )
-> - [**4.4 Ips clients**](#ut0404) (o [obrir en pàgina individual ➡️](./ut0404.md) )
-> - [**4.5 Recuperació_prova de validació_Apache**](#ut0405) (o [obrir en pàgina individual ➡️](./ut0405.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 Recursos Escenario U3**](./ut0401.md)
+- [**4.2 Introducción virtual hosting**](./ut0402.md)
+- [**4.3 Configuración Virtual hosting**](./ut0403.md)
+- [**4.4 Ips clients**](./ut0404.md)
+- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
 
 ---
 
-## 4.1 Recursos Escenario U3
+# 4.1 Recursos Escenario U3
 
 > **📌 Introducció de la Unitat**
 > ### **U3: Servici de Web (HTTP)**
@@ -295,7 +298,7 @@ mail: clientes@traductores.net
 
 ---
 
-## 4.2 Introducción virtual hosting
+# 4.2 Introducción virtual hosting
 
 Introducción virtual hosting
 
@@ -307,7 +310,7 @@ APACHE 2.4 Virtual Hosting
 
 ---
 
-## 4.3 Configuración Virtual hosting
+# 4.3 Configuración Virtual hosting
 
 Configuración Virtual hosting
 
@@ -337,7 +340,7 @@ Activamos la configuración a2ensite apache1 a2ensite apache2 Creamos los Docume
 
 ---
 
-## 4.4 Ips clients
+# 4.4 Ips clients
 
 Ips clients
 
@@ -347,35 +350,7 @@ Linares 10.0.55.101 Piles 10.0.55.102 Natalia 10.0.55.103 Aitor 10.0.55.104 Carl
 
 ---
 
-## 4.5 Recuperació_prova de validació_Apache
-
-Recuperació_prova de validació_Apache
-
-Prova de validació HTTP-Apache
-
-### 1. Configurar apache per a usar hosting virtual basat en noms
-
-permetent crear dos llocs web independents.
-
-- El primer host virtual ha de respondre amb un missatge de
-
-benvinguda en rebre una petició http://www.XXX.edu/saludos.htm Ampliació-> En cas que s'indique la següent petició http://www.XXX.edu/iessantvicent/ mostrar la web https://portal.edu.gva.es/iessantvicent/
-
-- El segon host virtual davant la següent petició
-
-http://www.privatXXX.edu/ ha d'autenticar l'usuari (admin) i la contrasenya (admin) i respondre amb el text “He demostrat que sé fer-ho!!”. Autenticació digest. Ampliació->En cas que no s'indique arxiu en la petició mostrar l'arxiu prova.htm amb el text “servidor segur”
-
-### 2. Configurar el servidor segur SSL per a peticions
-
-https://www.bancaXXX.edu Bateria de proves. http://www.XXX.edu/saludos.htm http://www.privatXXX.edu/prova.htm http://www.privatXXX.edu/ http://www.XXX.edu/iessantvicent/ https://www.bancaXXX.edu
-
-Linares 10.0.55.133 http://www.133.edu/saludos.htm http://www.privat133.edu/prova.htm http://www.privat133.edu/ http://www.133.edu/iessantvicent/ https://www.banca133.edu Zapata 10.0.55.177 http://www.177.edu/saludos.htm http://www.privat177.edu/prova.htm http://www.privat177.edu/ http://www.177.edu/iessantvicent/ https://www.banca177.edu Climent 10.0.55.166 http://www.166.edu/saludos.htm http://www.privat166.edu/prova.htm http://www.privat166.edu/ http://www.166.edu/iessantvicent/ https://www.banca166.edu Joel 10.0.55.199 http://www.199.edu/saludos.htm http://www.privat199.edu/prova.htm http://www.privat199.edu/ http://www.199.edu/iessantvicent/ https://www.banca199.edu Carrasco 10.0.55.222 http://www.222.edu/saludos.htm
-
-http://www.privat222.edu/prova.htm http://www.privat222.edu/ http://www.222.edu/iessantvicent/ https://www.banca222.edu Arnau 10.0.55.233 http://www.233.edu/saludos.htm http://www.privat233.edu/prova.htm http://www.privat233.edu/ http://www.233.edu/iessantvicent/ https://www.banca233.edu
-
----
-
-## ✍️ Activitats pràctiques UT4
+# ✍️ Activitats pràctiques UT4
 
 > **✍️ Activitat Pràctica 4.1 — Práctica toma de contacto**
 > [Práctica introductoria](https://docs.google.com/document/d/e/2PACX-1vSgqxPm1cT_VkXCgwwVnqrsY4ipwoeIdE-PnrXu2GuF9e8eVVfKovneCW_0F698_vbVfl_oqnOvGZQL/pub)
@@ -384,6 +359,8 @@ http://www.privat222.edu/prova.htm http://www.privat222.edu/ http://www.222.edu/
 > Prova validació HTTP
 >
 > Prova de validació HTTP-Apache
+>
+> ### 1. Configurar apache per a usar hosting virtual basat en noms
 >
 > permetent crear dos llocs web independents.
 >
@@ -394,6 +371,8 @@ http://www.privat222.edu/prova.htm http://www.privat222.edu/ http://www.222.edu/
 > - El segon host virtual davant la següent petició
 >
 > http://www.privatXXX.edu/ ha d'autenticar l'usuari (prova) i la contrasenya (prova) i respondre amb el text “He demostrat que sé fer- ho!!”. Autenticació digest. Ampliació->En cas que no s'indique arxiu en la petició mostrar l'arxiu prova.htm amb el text “servidor segur”
+>
+> ### 2. Configurar el servidor segur SSL per a peticions
 >
 > https://www.bancaXXX.edu Bateria de proves. http://www.XXX.edu/hola.htm http://www.privatXXX.edu/prova.htm http://www.privatXXX.edu/ http://www.XXX.edu/iessantvicent/ https://www.bancaXXX.edu Linares 10.0.55.201 http://www.Linares.edu/hola.htm http://www.privatLinares.edu/prova.htm http://www.privatLinares.edu/
 >
@@ -613,3 +592,5 @@ http://www.privat222.edu/prova.htm http://www.privat222.edu/ http://www.222.edu/
 > ● En Linux se pueden definir ACLs a nivel de Sistema de Ficheros. ○ http://www.alcancelibre.org/staticpages/index.php/uso-getfacl-getfacl
 >
 > ● ACLs - Listas de control de acceso ○ http://es.wikipedia.org/wiki/Lista_de_control_de_acceso
+
+---

@@ -3,8 +3,8 @@ layout: default
 title: "UT2 — Processador de text (I) — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT2 Completa"
-prev_url: "../ut01/ut0108.html"
-prev_label: "⬅️ 1.8 Beques (Cartell inforamtiu)"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 Tema 0. Suites Ofimàtiques ➡️"
 ---

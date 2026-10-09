@@ -4,71 +4,33 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 CALENDARI EXAMENS 2n DAW": ut00/ut0001.md
-  - "UT2 — Extraordinària":
-      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Problemas 2, 3 y 4": ut02/ut0201.md
-      - "2.2 Hoja de respuestas.": ut02/ut0202.md
-      - "2.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese": ut02/ut0203.md
-      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — Ordinària":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Problemas 2 y 3": ut03/ut0301.md
-      - "3.2 Hoja de respuestas.": ut03/ut0302.md
-      - "3.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese": ut03/ut0303.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "UT4 — Examen 2 Quadrimestre":
-      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 Problema 2 y 3": ut04/ut0401.md
-      - "4.2 Hoja de respuestas.": ut04/ut0402.md
-      - "4.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese": ut04/ut0403.md
-      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
-  - "UT5 — Examen 1 Quadrimestre":
-      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 Enunciado problema 2": ut05/ut0501.md
-      - "5.2 Hoja de respuestas.": ut05/ut0502.md
-      - "5.3 Butlletí Informatiu CFGS DAW Modalitat Semiprese": ut05/ut0503.md
-      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "UT6 — ANUNCIS":
-      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Continguts i Recursos": ut06/ut0601.md
-  - "UT7 — Documentació i control de versions":
-      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
-      - "7.1 UT 5.4 Documentació i control de versions - GitH": ut07/ut0701.md
-      - "7.2 UT 5.3 Documentació i control de versions - Git": ut07/ut0702.md
-      - "7.3 UT 5.2 Documentació i control de versions - phpD": ut07/ut0703.md
-      - "7.4 UT 5.1 Documentació i control de versions - Java": ut07/ut0704.md
-      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
-  - "UT8 — Administració de servidors web.":
-      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
-      - "8.1 UT 4.2 Administració de servidors web - Seguritz": ut08/ut0801.md
-      - "8.2 UT 4.1 Administració de servidors web - Instal·l": ut08/ut0802.md
-      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
-  - "UT9 — Arquitectura web.":
-      - "📘 UT9 Completa (1 pàgina)": ut09/index.md
+  - "UD1 — Serveis de Xarxa Implicats en el Desplegament (DNS i LDAP)":
+      - "📘 UD1 Completa (1 pàgina)": ut11/index.md
+      - "11.1 UT 1.3 Preparación del servidor de directorios L": ut11/ut1101.md
+      - "11.2 UT 1.2 Servicio de directorios LDAP": ut11/ut1102.md
+      - "11.3 UT 1.1 Servicios de Red": ut11/ut1103.md
+  - "UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP)":
+      - "📘 UD2 Completa (1 pàgina)": ut10/index.md
+      - "10.1 UT 2.2 Introducció - Creació servidor FTP amb SF": ut10/ut1001.md
+      - "10.2 UT 2.1 Introducció - Creació servidor FTP amb VS": ut10/ut1002.md
+      - "✍️ Activitats pràctiques UT10": ut10/ut10actividades.md
+  - "UD3 — Arquitectures Web i Servidors d'Aplicacions":
+      - "📘 UD3 Completa (1 pàgina)": ut09/index.md
       - "9.1 UT 3.4 Arquitectures web": ut09/ut0901.md
       - "9.2 UT 3.3 Arquitectures web": ut09/ut0902.md
       - "9.3 UT 3.2 Arquitectures web": ut09/ut0903.md
       - "9.4 UT 3.1 Arquitectures web": ut09/ut0904.md
       - "✍️ Activitats pràctiques UT9": ut09/ut09actividades.md
-  - "UT10 — Administració de servidors d’arxius":
-      - "📘 UT10 Completa (1 pàgina)": ut10/index.md
-      - "10.1 UT 2.2 Introducció - Creació servidor FTP amb SF": ut10/ut1001.md
-      - "10.2 UT 2.1 Introducció - Creació servidor FTP amb VS": ut10/ut1002.md
-      - "✍️ Activitats pràctiques UT10": ut10/ut10actividades.md
-  - "UT11 — Servicis de xarxa implicats en el desplegament":
-      - "📘 UT11 Completa (1 pàgina)": ut11/index.md
-      - "11.1 UT 1.3 Preparación del servidor de directorios L": ut11/ut1101.md
-      - "11.2 UT 1.2 Servicio de directorios LDAP": ut11/ut1102.md
-      - "11.3 UT 1.1 Servicios de Red": ut11/ut1103.md
-  - "UT12 — Presentació / introducció":
-      - "📘 UT12 Completa (1 pàgina)": ut12/index.md
-      - "12.1 Introducció": ut12/ut1201.md
-      - "12.2 Calendari mòdul Desplegament d'Aplicacions Web": ut12/ut1202.md
-  - "UT13 — Unitat Didàctica 13":
-      - "📘 UT13 Completa (1 pàgina)": ut13/index.md
-      - "13.1 UT 2.1 Introducció - Creació servidor FTP (còpia": ut13/ut1301.md
-      - "✍️ Activitats pràctiques UT13": ut13/ut13actividades.md
+  - "UD4 — Administració i Segurització de Servidors Web":
+      - "📘 UD4 Completa (1 pàgina)": ut08/index.md
+      - "8.1 UT 4.2 Administració de servidors web - Seguritz": ut08/ut0801.md
+      - "8.2 UT 4.1 Administració de servidors web - Instal·l": ut08/ut0802.md
+      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
+  - "UD5 — Documentació i Control de Versions (Git, GitHub, Javadoc, phpDocumentor)":
+      - "📘 UD5 Completa (1 pàgina)": ut07/index.md
+      - "7.1 UT 5.4 Documentació i control de versions - GitH": ut07/ut0701.md
+      - "7.2 UT 5.3 Documentació i control de versions - Git": ut07/ut0702.md
+      - "7.3 UT 5.2 Documentació i control de versions - phpD": ut07/ut0703.md
+      - "7.4 UT 5.1 Documentació i control de versions - Java": ut07/ut0704.md
+      - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
   - "📂 Índex de Documents i Recursos": references.md

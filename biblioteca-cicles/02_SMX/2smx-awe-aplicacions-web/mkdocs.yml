@@ -4,13 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unit 0: Introduction":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Reference Material": ut00/ut0001.md
-      - "0.2 Presentation Folder": ut00/ut0002.md
-      - "0.3 Activities": ut00/ut0003.md
-      - "0.4 EN Article- Recovery Dossier": ut00/ut0004.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
   - "UT1 — Unit 1: Technologies for Web Development":
       - "📘 UT1 Completa (1 pàgina)": ut01/index.md
       - "1.1 Resources: Example of HTML+CSS": ut01/ut0101.md
@@ -52,8 +45,4 @@ nav:
       - "📘 UT7 Completa (1 pàgina)": ut07/index.md
       - "7.1 Plantilla: Joc JS amb processing.js": ut07/ut0701.md
       - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
-  - "UT8 — Recuperació":
-      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
-      - "8.1 Continguts i Recursos": ut08/ut0801.md
-      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
   - "📂 Índex de Documents i Recursos": references.md

@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT4 — Seguretat Informàtica | Portal Do
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT4 — Seguretat passiva: Emmagatzemament"
 prev_url: "../ut04/index.html"
-prev_label: "⬅️ 📘 UT4 Completa"
+prev_label: "⬅️ 📘 UT4 Completa (1 pàgina)"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

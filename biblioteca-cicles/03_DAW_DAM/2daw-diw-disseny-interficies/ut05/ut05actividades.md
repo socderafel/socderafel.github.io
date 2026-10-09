@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT5 — BOOTSTRAP"
 prev_url: "../ut05/ut0504.html"
 prev_label: "⬅️ 5.4 FICHERO BASE DISEÑO TARJETAS BOOTSTRAP5"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

@@ -120,20 +120,6 @@
           "href": "ut04/ut04actividades.html"
         }
       ]
-    },
-    {
-      "summary": "UT5 — FINAL DE CURSO",
-      "items": [
-        {
-          "label": "📘 UT5 Completa (1 pàgina)",
-          "href": "ut05/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT5",
-          "href": "ut05/ut05actividades.html"
-        }
-      ]
     }
   ],
   "footer": [

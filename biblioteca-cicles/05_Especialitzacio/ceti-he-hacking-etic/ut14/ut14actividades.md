@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT14 — Robots de Búsquedas"
 prev_url: "../ut14/ut1401.html"
 prev_label: "⬅️ 14.1 Continguts i Recursos"
 next_url: "../ut15/index.html"
-next_label: "📘 UT15 Completa ➡️"
+next_label: "📘 UT15 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT14

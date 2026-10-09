@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT5 — Unit 5 - Introduction to frameworks. 
 prev_url: "../ut05/ut0503.html"
 prev_label: "⬅️ 5.3 U5 Class exercises"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT3 — Debugging y testing"
 prev_url: "../ut03/ut0304.html"
 prev_label: "⬅️ 3.4 Códigos debugging"
 next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_label: "📘 UT4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Muntatge i Manteniment d'Equips — Muntatge i Manteniment d'Equips | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "1r SMX · Grau Mitjà · Documentació i Recursos"
-prev_url: "./ut05/ut05actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+prev_url: "./ut04/ut04actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

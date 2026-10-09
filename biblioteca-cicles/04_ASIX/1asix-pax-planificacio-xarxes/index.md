@@ -3,8 +3,8 @@ layout: default
 title: "Índex — Planificació i Administració de Xarxes — Planificació i Administració de Xarxes | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "1r ASIX · Grau Superior · FP Grau Superior — ASIX (Administració de Sistemes i Xarxes)"
-next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_url: "./ut02/index.html"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # 📡 Planificació i Administració de Xarxes
@@ -12,47 +12,26 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Planificació i Administració de Xarxes** (1r ASIX · Grau Superior).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT13)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **General PAX** | 2 apartats · 2 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **Tutoria 1ASIX** | 3 apartats · 0 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **U1 - Caracterització de les xarxes** | 2 apartats · 3 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **U2 - Arquitectura de xarxa** | 6 apartats · 4 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **U3 - Xarxes d'àrea local** | 2 apartats · 2 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **U4 - Nivell físic** | 3 apartats · 2 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UT6** | **U5 - Cablejat estructurat** | 3 apartats · 4 activitats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UT7** | **U6 - Nivell d'enllaç** | 3 apartats · 2 activitats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
-| **UT8** | **U7 - El switch** | 3 apartats · 9 activitats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
-| **UT9** | **U8 - VLAN** | 7 apartats · 12 activitats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
-| **UT10** | **U9 - Nivell de xarxa. El router** | 2 apartats · 4 activitats | [**📘 Unitat Completa**](./ut10/index.md) \| [Apartat 1 ➡️](./ut10/ut1001.md) |
-| **UT11** | **U10 - Adreçament IP** | 4 apartats · 8 activitats | [**📘 Unitat Completa**](./ut11/index.md) \| [Apartat 1 ➡️](./ut11/ut1101.md) |
-| **UT12** | **U11 - Encaminament** | 3 apartats · 10 activitats | [**📘 Unitat Completa**](./ut12/index.md) \| [Apartat 1 ➡️](./ut12/ut1201.md) |
-| **UT13** | **U12 - Capa de transport i aplicació** | 2 apartats · 3 activitats | [**📘 Unitat Completa**](./ut13/index.md) \| [Apartat 1 ➡️](./ut13/ut1301.md) |
-
-## UT0 — General PAX
-
-`1r ASIX · Grau Superior · UT0 · 2 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Continguts i Recursos**](./ut00/ut0001.md)
-- [**✍️ Activitats pràctiques UT0**](./ut00/ut00actividades.md)
-
-## UT1 — Tutoria 1ASIX
-
-`1r ASIX · Grau Superior · UT1 · 3 apartats`
-
-[**📘 Obrir UT1 Completa en una sola pàgina**](./ut01/index.md)
-
-- [**1.1 Horari 1ASIX**](./ut01/ut0101.md)
-- [**1.2 Calendari 21 22**](./ut01/ut0102.md)
-- [**1.3 Plànol IES**](./ut01/ut0103.md)
+| **UT2** | **U1 - Caracterització de les xarxes** | 2 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UT3** | **U2 - Arquitectura de xarxa** | 6 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UT4** | **U3 - Xarxes d'àrea local** | 2 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **U4 - Nivell físic** | 3 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UT6** | **U5 - Cablejat estructurat** | 3 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
+| **UT7** | **U6 - Nivell d'enllaç** | 3 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
+| **UT8** | **U7 - El switch** | 3 apartats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
+| **UT9** | **U8 - VLAN** | 7 apartats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
+| **UT10** | **U9 - Nivell de xarxa. El router** | 2 apartats | [**📘 Unitat Completa**](./ut10/index.md) \| [Apartat 1 ➡️](./ut10/ut1001.md) |
+| **UT11** | **U10 - Adreçament IP** | 4 apartats | [**📘 Unitat Completa**](./ut11/index.md) \| [Apartat 1 ➡️](./ut11/ut1101.md) |
+| **UT12** | **U11 - Encaminament** | 3 apartats | [**📘 Unitat Completa**](./ut12/index.md) \| [Apartat 1 ➡️](./ut12/ut1201.md) |
+| **UT13** | **U12 - Capa de transport i aplicació** | 2 apartats | [**📘 Unitat Completa**](./ut13/index.md) \| [Apartat 1 ➡️](./ut13/ut1301.md) |
 
 ## UT2 — U1 - Caracterització de les xarxes
 

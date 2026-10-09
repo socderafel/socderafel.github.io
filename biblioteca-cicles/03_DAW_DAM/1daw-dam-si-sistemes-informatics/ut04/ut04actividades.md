@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT4 — GESTIÓ DE LA INFORMACIÓ"
 prev_url: "../ut04/ut0408.html"
 prev_label: "⬅️ 4.8 TEORIA UNITAT 5 PART 7"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

@@ -4,7 +4,7 @@ title: "UT1 — Unitat Didàctica 1 — Muntatge i Manteniment d'Equips | Portal
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT1 Completa"
 prev_url: "../index.html"
-prev_label: "⬅️ Inici Muntatge i Manteniment d'Equips"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 U1 - P1 | P2 | P3 - CONTINGUTS ➡️"
 ---

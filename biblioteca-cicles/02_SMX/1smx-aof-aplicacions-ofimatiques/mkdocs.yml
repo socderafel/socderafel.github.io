@@ -4,16 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT1 — TUTORIA 1 SMX B":
-      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 Calendari escolar": ut01/ut0101.md
-      - "1.2 Plànol del centre": ut01/ut0102.md
-      - "1.3 Horari Grup 1 SMX B": ut01/ut0103.md
-      - "1.4 Permis Eixida": ut01/ut0104.md
-      - "1.5 Justificació de faltes": ut01/ut0105.md
-      - "1.6 Beques Ministeri (Valencià)": ut01/ut0106.md
-      - "1.7 Becas Ministerio (Castellano)": ut01/ut0107.md
-      - "1.8 Beques (Cartell inforamtiu)": ut01/ut0108.md
   - "UT2 — Processador de text (I)":
       - "📘 UT2 Completa (1 pàgina)": ut02/index.md
       - "2.1 Tema 0. Suites Ofimàtiques": ut02/ut0201.md
@@ -158,9 +148,6 @@ nav:
   - "UT20 — TREBALL FINAL BASE DE DADES":
       - "📘 UT20 Completa (1 pàgina)": ut20/index.md
       - "20.1 Treball Final Base de dades": ut20/ut2001.md
-  - "UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA":
-      - "📘 UT21 Completa (1 pàgina)": ut21/index.md
-      - "21.1 Practiques_Pendents": ut21/ut2101.md
   - "UT22 — GIMP":
       - "📘 UT22 Completa (1 pàgina)": ut22/index.md
       - "22.1 Tema 1: Imatge Digital": ut22/ut2201.md

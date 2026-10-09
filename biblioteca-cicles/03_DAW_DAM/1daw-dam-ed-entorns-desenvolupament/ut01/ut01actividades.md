@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT1 — IDE's y estilo de programación
 prev_url: "../ut01/ut0101.html"
 prev_label: "⬅️ 1.1 U2 - IDEs. Estilos de programación"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

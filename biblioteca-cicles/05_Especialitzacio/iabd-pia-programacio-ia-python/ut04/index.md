@@ -1,25 +1,29 @@
 ---
 layout: default
-title: "UT4 — Primeros pasos con Python — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca"
+title: "UD2 — Fonaments de Programació en Python · Unitat Completa"
 course_root: ".."
 badge: "CE IA i Big Data · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut05/ut05actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 Python apuntes de clase ➡️"
 ---
 
-# 📘 UT4 — Primeros pasos con Python (Unitat Completa)
+# 📘 UD2 — Fonaments de Programació en Python (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**4.1 Python apuntes de clase**](#ut0401) (o [obrir en pàgina individual ➡️](./ut0401.md) )
-> - [**4.2 Python para todos (libro).**](#ut0402) (o [obrir en pàgina individual ➡️](./ut0402.md) )
-> - [**4.3 Ejercicios**](#ut0403) (o [obrir en pàgina individual ➡️](./ut0403.md) )
-> - [**✍️ Activitats pràctiques UT4**](#ut04actividades) (o [obrir en pàgina individual ➡️](./ut04actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**4.1 Python apuntes de clase**](./ut0401.md)
+- [**4.2 Python para todos (libro).**](./ut0402.md)
+- [**4.3 Ejercicios**](./ut0403.md)
+- [**✍️ Activitats pràctiques UT4**](./ut04actividades.md)
 
 ---
 
-## 4.1 Python apuntes de clase
+# 4.1 Python apuntes de clase
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### Materiales.
@@ -591,7 +595,7 @@ Curso de especialización en Inteligencia Artificial y Big Data Programación de
 
 ---
 
-## 4.2 Python para todos (libro).
+# 4.2 Python para todos (libro).
 
 Python PARA TODOS Raúl González Duque
 
@@ -1830,7 +1834,7 @@ En la segunda línea, vemos cómo se puede pasar más de un valor a sustituir, p
 
 ---
 
-## 4.3 Ejercicios
+# 4.3 Ejercicios
 
 Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial. Ejercicios de la UT 2 Programación en Python. Curso de especialización en Inteligencia Artificial y Big Data Programación de Inteligencia Artificial Licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual CC BY-NC-SA: No se permite un uso comercia de la obra original ni de las posibles obras derivadas, la distribución de la cuales se debe hace con una licencia igual a la obra regula la obra original.
 
@@ -1910,7 +1914,7 @@ Si queréis, podéis redondear la cifras a 2 decimales. Ejemplo: 9 / 9
 
 ---
 
-## ✍️ Activitats pràctiques UT4
+# ✍️ Activitats pràctiques UT4
 
 > **✍️ Activitat Pràctica 4.1 — Tarea 4 - Trabajando con clases y ficheros**
 > Escribir un programa que permita crear y (re)leer un archivo de texto. El programa pedirá al usuario que ingrese el nombre del archivo. Luego propondrá la opción de grabar nuevas líneas de texto o mostrar el contenido del archivo. El usuario podrá ingresar líneas sucesivas de texto simplemente usando la tecla <Enter>.
@@ -1971,3 +1975,5 @@ Si queréis, podéis redondear la cifras a 2 decimales. Ejemplo: 9 / 9
 > - Sus notas. Para finalizar de introducir las notas si introducirá un número
 >
 > negativo. Después de introducir los alumnos y las notas, el programa mostrará la lista de alumnos y la nota media obtenida por cada uno de ellos. 4 / 4
+
+---

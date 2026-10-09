@@ -4,41 +4,41 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT1 — Unidad 8":
-      - "📘 UT1 Completa (1 pàgina)": ut01/index.md
-      - "1.1 UD 8 - Sistemas empresariales de gestión de info": ut01/ut0101.md
-      - "1.2 UD 8 - Sistemas empresariales de gestión de info": ut01/ut0102.md
-      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
-  - "UT2 — Unidad 7":
-      - "📘 UT2 Completa (1 pàgina)": ut02/index.md
-      - "2.1 Ejercicios JavaScript Solucionados": ut02/ut0201.md
-      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — Unidad 6":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 Continguts i Recursos": ut03/ut0301.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
-  - "UT4 — Unidad 5":
-      - "📘 UT4 Completa (1 pàgina)": ut04/index.md
-      - "4.1 U5-HTML5": ut04/ut0401.md
-      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
-  - "UT5 — Unidad 4":
-      - "📘 UT5 Completa (1 pàgina)": ut05/index.md
-      - "5.1 UD4-XSD (XML Schema Definition)": ut05/ut0501.md
-      - "5.2 Ejercicios resueltos XML Schema": ut05/ut0502.md
-      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "UT6 — Unidad 3":
-      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 UD3-DTD (Document Type Definition)": ut06/ut0601.md
-      - "6.2 Soluciones Ejercicios Tema 3": ut06/ut0602.md
-      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
-  - "UT7 — Unidad 2":
-      - "📘 UT7 Completa (1 pàgina)": ut07/index.md
+  - "UD1 — Introducció als Llenguatges de Marques":
+      - "📘 UD1 Completa (1 pàgina)": ut08/index.md
+      - "8.1 UD1 Introducción a los Lenguajes de Marcas": ut08/ut0801.md
+      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
+  - "UD2 — Llenguatge XML":
+      - "📘 UD2 Completa (1 pàgina)": ut07/index.md
       - "7.1 UD 2 - XML": ut07/ut0701.md
       - "7.2 Ejemplos en XML": ut07/ut0702.md
       - "7.3 Soluciones ejercicios Tema 2": ut07/ut0703.md
       - "✍️ Activitats pràctiques UT7": ut07/ut07actividades.md
-  - "UT8 — Unidad 1":
-      - "📘 UT8 Completa (1 pàgina)": ut08/index.md
-      - "8.1 UD1 Introducción a los Lenguajes de Marcas": ut08/ut0801.md
-      - "✍️ Activitats pràctiques UT8": ut08/ut08actividades.md
+  - "UD3 — Validació amb DTD (Document Type Definition)":
+      - "📘 UD3 Completa (1 pàgina)": ut06/index.md
+      - "6.1 UD3-DTD (Document Type Definition)": ut06/ut0601.md
+      - "6.2 Soluciones Ejercicios Tema 3": ut06/ut0602.md
+      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
+  - "UD4 — Validació amb XSD (XML Schema Definition)":
+      - "📘 UD4 Completa (1 pàgina)": ut05/index.md
+      - "5.1 UD4-XSD (XML Schema Definition)": ut05/ut0501.md
+      - "5.2 Ejercicios resueltos XML Schema": ut05/ut0502.md
+      - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
+  - "UD5 — Desenvolupament Web amb HTML5 i CSS":
+      - "📘 UD5 Completa (1 pàgina)": ut04/index.md
+      - "4.1 U5-HTML5": ut04/ut0401.md
+      - "✍️ Activitats pràctiques UT4": ut04/ut04actividades.md
+  - "UD6 — Transformació i Cerca en Documents XML":
+      - "📘 UD6 Completa (1 pàgina)": ut03/index.md
+      - "3.1 Continguts i Recursos": ut03/ut0301.md
+      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
+  - "UD7 — Programació amb JavaScript i DOM":
+      - "📘 UD7 Completa (1 pàgina)": ut02/index.md
+      - "2.1 Ejercicios JavaScript Solucionados": ut02/ut0201.md
+      - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
+  - "UD8 — Sistemes Empresarials de Gestió d'Informació (ERP)":
+      - "📘 UD8 Completa (1 pàgina)": ut01/index.md
+      - "1.1 UD 8 - Sistemas empresariales de gestión de info": ut01/ut0101.md
+      - "1.2 UD 8 - Sistemas empresariales de gestión de info": ut01/ut0102.md
+      - "✍️ Activitats pràctiques UT1": ut01/ut01actividades.md
   - "📂 Índex de Documents i Recursos": references.md

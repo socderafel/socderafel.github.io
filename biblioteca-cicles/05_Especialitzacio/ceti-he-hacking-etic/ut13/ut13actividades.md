@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT13 — Pentesting web"
 prev_url: "../ut13/ut1301.html"
 prev_label: "⬅️ 13.1 Pentesting web"
 next_url: "../ut14/index.html"
-next_label: "📘 UT14 Completa ➡️"
+next_label: "📘 UT14 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT13

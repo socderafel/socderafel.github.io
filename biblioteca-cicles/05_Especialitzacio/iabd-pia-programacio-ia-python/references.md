@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Programació d'Intel·ligència Artificial amb Python — Programació d'Intel·ligència Artificial amb Python | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "CE IA i Big Data · Documentació i Recursos"
-prev_url: "./ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
+prev_url: "./ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
 ---
 
 # 📂 Índex de Materials i Documents Integrats

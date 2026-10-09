@@ -6,28 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — PRESENTACIÓN DEL MÓDULO",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Guia Didàctica",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "0.2 Criterios de calificación",
-          "href": "ut00/ut0002.html"
-        },
-        {
-          "label": "0.3 Poema Ítaca (Konstantino Kavafis)",
-          "href": "ut00/ut0003.html"
-        }
-      ]
-    },
-    {
       "summary": "UT1 — EJERCICIOS: JUECES ONLINE",
       "items": [
         {
@@ -112,68 +90,6 @@
         {
           "label": "✍️ Activitats pràctiques UT2",
           "href": "ut02/ut02actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT3 — EXÁMENES",
-      "items": [
-        {
-          "label": "📘 UT3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "3.1 TestFotografia",
-          "href": "ut03/ut0301.html"
-        },
-        {
-          "label": "3.2 Principal.java",
-          "href": "ut03/ut0302.html"
-        },
-        {
-          "label": "3.3 CodigoBASIC.bas",
-          "href": "ut03/ut0303.html"
-        },
-        {
-          "label": "3.4 Principal",
-          "href": "ut03/ut0304.html"
-        },
-        {
-          "label": "3.5 Principal",
-          "href": "ut03/ut0305.html"
-        },
-        {
-          "label": "3.6 Principal",
-          "href": "ut03/ut0306.html"
-        },
-        {
-          "label": "3.7 TiendaTest",
-          "href": "ut03/ut0307.html"
-        },
-        {
-          "label": "3.8 TableroTest",
-          "href": "ut03/ut0308.html"
-        },
-        {
-          "label": "3.9 ficheroExamen",
-          "href": "ut03/ut0309.html"
-        },
-        {
-          "label": "3.10 ExamenPRG",
-          "href": "ut03/ut0310.html"
-        },
-        {
-          "label": "3.11 fichero2",
-          "href": "ut03/ut0311.html"
-        },
-        {
-          "label": "3.12 fichero1",
-          "href": "ut03/ut0312.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },

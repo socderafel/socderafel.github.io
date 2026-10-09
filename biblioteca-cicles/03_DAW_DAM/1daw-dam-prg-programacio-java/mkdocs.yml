@@ -4,11 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — PRESENTACIÓN DEL MÓDULO":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Guia Didàctica": ut00/ut0001.md
-      - "0.2 Criterios de calificación": ut00/ut0002.md
-      - "0.3 Poema Ítaca (Konstantino Kavafis)": ut00/ut0003.md
   - "UT1 — EJERCICIOS: JUECES ONLINE":
       - "📘 UT1 Completa (1 pàgina)": ut01/index.md
       - "1.1 Ejercicios JOEL": ut01/ut0101.md
@@ -30,21 +25,6 @@ nav:
       - "2.5 Ejercicios - BLOQUE 2": ut02/ut0205.md
       - "2.6 Repaso POO: Juego de Cartas (ENTREGABLE)": ut02/ut0206.md
       - "✍️ Activitats pràctiques UT2": ut02/ut02actividades.md
-  - "UT3 — EXÁMENES":
-      - "📘 UT3 Completa (1 pàgina)": ut03/index.md
-      - "3.1 TestFotografia": ut03/ut0301.md
-      - "3.2 Principal.java": ut03/ut0302.md
-      - "3.3 CodigoBASIC.bas": ut03/ut0303.md
-      - "3.4 Principal": ut03/ut0304.md
-      - "3.5 Principal": ut03/ut0305.md
-      - "3.6 Principal": ut03/ut0306.md
-      - "3.7 TiendaTest": ut03/ut0307.md
-      - "3.8 TableroTest": ut03/ut0308.md
-      - "3.9 ficheroExamen": ut03/ut0309.md
-      - "3.10 ExamenPRG": ut03/ut0310.md
-      - "3.11 fichero2": ut03/ut0311.md
-      - "3.12 fichero1": ut03/ut0312.md
-      - "✍️ Activitats pràctiques UT3": ut03/ut03actividades.md
   - "UT4 — PROYECTOS":
       - "📘 UT4 Completa (1 pàgina)": ut04/index.md
       - "4.1 Hundir La Flota": ut04/ut0401.md

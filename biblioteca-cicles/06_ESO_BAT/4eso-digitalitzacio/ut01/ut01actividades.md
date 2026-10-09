@@ -5,8 +5,8 @@ course_root: ".."
 badge: "4t ESO · UT1 — Canva"
 prev_url: "../ut01/ut0101.html"
 prev_label: "⬅️ 1.1 Tutorial Canva"
-next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_url: "../ut03/index.html"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

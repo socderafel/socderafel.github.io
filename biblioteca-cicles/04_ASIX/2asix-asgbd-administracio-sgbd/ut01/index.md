@@ -3,8 +3,8 @@ layout: default
 title: "UT1 — Instal·lació d'un SGBD — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT1 Completa"
-prev_url: "../ut00/ut0004.html"
-prev_label: "⬅️ 0.4 Beques OpenWebinars"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 Preparació de l'entorn ➡️"
 ---

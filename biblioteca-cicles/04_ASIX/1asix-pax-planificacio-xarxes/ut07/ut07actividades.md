@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT7 — U6 - Nivell d'enllaç"
 prev_url: "../ut07/ut0702.html"
 prev_label: "⬅️ 7.2 Trama PPP"
 next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_label: "📘 UT8 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

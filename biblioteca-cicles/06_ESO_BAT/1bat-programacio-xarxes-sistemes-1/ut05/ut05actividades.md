@@ -6,7 +6,7 @@ badge: "1r Batxillerat · UT5 — Sistemes de fitxers Linux"
 prev_url: "../ut05/ut0503.html"
 prev_label: "⬅️ 5.3 Permisos"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

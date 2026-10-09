@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT10 — Hacking Ètic i Auditoria de Segu
 course_root: ".."
 badge: "CE Ciberseguretat (CETI) · UT10 — Ejercicios Fingerprinting"
 prev_url: "../ut10/index.html"
-prev_label: "⬅️ 📘 UT10 Completa"
+prev_label: "⬅️ 📘 UT10 Completa (1 pàgina)"
 next_url: "../ut11/index.html"
-next_label: "📘 UT11 Completa ➡️"
+next_label: "📘 UT11 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT10

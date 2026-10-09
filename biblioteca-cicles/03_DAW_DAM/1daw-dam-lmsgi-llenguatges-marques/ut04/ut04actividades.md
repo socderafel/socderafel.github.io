@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT4 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Grau Superior · UT4 — Unidad 5"
+badge: "1r DAW / DAM / ASIX · Grau Superior · UD5 — Desenvolupament Web amb HTML5 i CSS"
 prev_url: "../ut04/ut0401.html"
 prev_label: "⬅️ 4.1 U5-HTML5"
-next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_url: "../ut03/index.html"
+next_label: "📘 UD6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

@@ -6,32 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — Presentació - 1er ESO",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Qüestionari inicial",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "0.2 Presentación",
-          "href": "ut00/ut0002.html"
-        },
-        {
-          "label": "0.3 Enquesta valoració de l'alumnat",
-          "href": "ut00/ut0003.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT0",
-          "href": "ut00/ut00actividades.html"
-        }
-      ]
-    },
-    {
       "summary": "UT1 — L'ordinador i els seus components i els sistemes operatius",
       "items": [
         {
@@ -162,42 +136,6 @@
         {
           "label": "✍️ Activitats pràctiques UT7",
           "href": "ut07/ut07actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT8 — RECUPERACIONS PER AVALUACIÓ",
-      "items": [
-        {
-          "label": "📘 UT8 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "8.1 Continguts i Recursos",
-          "href": "ut08/ut0801.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT8",
-          "href": "ut08/ut08actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT9 — RECUPERACIÓ FINAL",
-      "items": [
-        {
-          "label": "📘 UT9 Completa (1 pàgina)",
-          "href": "ut09/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "9.1 Continguts i Recursos",
-          "href": "ut09/ut0901.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT9",
-          "href": "ut09/ut09actividades.html"
         }
       ]
     }

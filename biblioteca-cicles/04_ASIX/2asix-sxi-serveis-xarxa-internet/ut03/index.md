@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT3 — Unit 3 - HTTP — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca"
+title: "UT3 — Unit 3 - HTTP · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT3 Completa"
 prev_url: "../ut02/ut02actividades.html"
@@ -11,19 +11,22 @@ next_label: "3.1 U3 HTTP ➡️"
 
 # 📘 UT3 — Unit 3 - HTTP (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 U3 HTTP**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
-> - [**3.2 Grups Treball**](#ut0302) (o [obrir en pàgina individual ➡️](./ut0302.md) )
-> - [**3.3 U3 A3 Windows Group**](#ut0303) (o [obrir en pàgina individual ➡️](./ut0303.md) )
-> - [**3.4 U3 P1**](#ut0304) (o [obrir en pàgina individual ➡️](./ut0304.md) )
-> - [**3.5 U3 P2**](#ut0305) (o [obrir en pàgina individual ➡️](./ut0305.md) )
-> - [**3.6 U3 P3**](#ut0306) (o [obrir en pàgina individual ➡️](./ut0306.md) )
-> - [**3.7 U3 P4**](#ut0307) (o [obrir en pàgina individual ➡️](./ut0307.md) )
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 U3 HTTP**](./ut0301.md)
+- [**3.3 U3 A3 Windows Group**](./ut0303.md)
+- [**3.4 U3 P1**](./ut0304.md)
+- [**3.5 U3 P2**](./ut0305.md)
+- [**3.6 U3 P3**](./ut0306.md)
+- [**3.7 U3 P4**](./ut0307.md)
+- [**✍️ Activitats pràctiques UT3**](./ut03actividades.md)
 
 ---
 
-## 3.1 U3 HTTP
+# 3.1 U3 HTTP
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### **Resources**
@@ -346,33 +349,7 @@ the directory (or file) to be protected (access control).
 
 ---
 
-## 3.2 Grups Treball
-
-GRUP 1 6 - Ana 8 - Mompo
-
-#### 12- Sergi
-
-GRUP 2 2 - Arce
-
-#### 11- Vicent
-
-#### 10- Raga
-
-Quique
-
-GRUP 3 1 - Alexis
-
-#### 13- Abel
-
-4 - Francisco
-
-GRUP 4 7 - Gvidas 5 - Alex 9 - Attila
-
-- Dani
-
----
-
-## 3.3 U3 A3 Windows Group
+# 3.3 U3 A3 Windows Group
 
 Unit 3 – HTTP
 
@@ -465,7 +442,7 @@ Ni la creativitat del material de suport és l’adequada ni aconsegueix l’obj
 
 ---
 
-## 3.4 U3 P1
+# 3.4 U3 P1
 
 Unit 3 – HTTP
 
@@ -516,7 +493,7 @@ Now, go to /etc/apache2 and explain with your own words what’s the content or 
 
 ---
 
-## 3.5 U3 P2
+# 3.5 U3 P2
 
 Unit 3 – HTTP
 
@@ -596,7 +573,7 @@ And when accessing to http://localhost/myphp.php a table with information about 
 
 ---
 
-## 3.6 U3 P3
+# 3.6 U3 P3
 
 Unit 3 – HTTP
 
@@ -669,7 +646,7 @@ Create the folder privado into the practicaNombreApellidos1 site. This folder be
 
 ---
 
-## 3.7 U3 P4
+# 3.7 U3 P4
 
 IIS on WINDOWS SERVER 2016 Previously: – Virtual machine with Microsoft’s Windows Server 2016 operating system. – DNS Service installed – Primary Forward lookup zone created with a Host and an Alias, for your domain. How to Install IIS on Windows Server 2016 https://www.rootusers.com/how-to-install-iis-in-windows-server-2016/ Objectives
 
@@ -725,7 +702,7 @@ Step 4 – Verify Configuration To verify configuration you can simply access th
 
 ---
 
-## ✍️ Activitats pràctiques UT3
+# ✍️ Activitats pràctiques UT3
 
 > **✍️ Activitat Pràctica 3.1 — U3 A1**
 > Unit 3 – HTTP
@@ -779,3 +756,5 @@ Step 4 – Verify Configuration To verify configuration you can simply access th
 
 > **✍️ Activitat Pràctica 3.3 — Presentacions treball**
 > juanraprofesor@gmail.com
+
+---

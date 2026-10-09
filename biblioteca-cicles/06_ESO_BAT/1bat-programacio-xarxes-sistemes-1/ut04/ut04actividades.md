@@ -6,7 +6,7 @@ badge: "1r Batxillerat · UT4 — Projecte hardware Excel"
 prev_url: "../ut04/ut0401.html"
 prev_label: "⬅️ 4.1 Guía projecte pressupost"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

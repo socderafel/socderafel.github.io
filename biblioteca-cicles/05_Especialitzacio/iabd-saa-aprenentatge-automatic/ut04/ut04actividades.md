@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT4 — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "CE IA i Big Data · UT4 — Sistemes d'aprenentatge supervisat"
+badge: "CE IA i Big Data · UD3 — Aprenentatge Supervisat: Regressió, Classificació i Preprocessament"
 prev_url: "../ut04/ut0405.html"
 prev_label: "⬅️ 4.5 UT 5. Aprenentatge supervisat. Introducció."
-next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_url: "../ut03/index.html"
+next_label: "📘 UD4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

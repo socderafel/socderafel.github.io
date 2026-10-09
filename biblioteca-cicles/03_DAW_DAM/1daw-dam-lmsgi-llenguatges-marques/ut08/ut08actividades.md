@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT8 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Grau Superior · UT8 — Unidad 1"
+badge: "1r DAW / DAM / ASIX · Grau Superior · UD1 — Introducció als Llenguatges de Marques"
 prev_url: "../ut08/ut0801.html"
 prev_label: "⬅️ 8.1 UD1 Introducción a los Lenguajes de Marcas"
-next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_url: "../ut07/index.html"
+next_label: "📘 UD2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

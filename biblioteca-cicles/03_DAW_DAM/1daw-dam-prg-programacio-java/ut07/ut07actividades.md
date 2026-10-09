@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT7 — Estructuras de control"
 prev_url: "../ut07/ut0708.html"
 prev_label: "⬅️ 7.8 Ejercicios - AyR"
 next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_label: "📘 UT8 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

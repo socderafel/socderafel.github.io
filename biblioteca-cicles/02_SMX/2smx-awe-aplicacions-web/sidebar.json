@@ -6,36 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — Unit 0: Introduction",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Reference Material",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "0.2 Presentation Folder",
-          "href": "ut00/ut0002.html"
-        },
-        {
-          "label": "0.3 Activities",
-          "href": "ut00/ut0003.html"
-        },
-        {
-          "label": "0.4 EN Article- Recovery Dossier",
-          "href": "ut00/ut0004.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT0",
-          "href": "ut00/ut00actividades.html"
-        }
-      ]
-    },
-    {
       "summary": "UT1 — Unit 1: Technologies for Web Development",
       "items": [
         {
@@ -210,24 +180,6 @@
         {
           "label": "✍️ Activitats pràctiques UT7",
           "href": "ut07/ut07actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT8 — Recuperació",
-      "items": [
-        {
-          "label": "📘 UT8 Completa (1 pàgina)",
-          "href": "ut08/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "8.1 Continguts i Recursos",
-          "href": "ut08/ut0801.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT8",
-          "href": "ut08/ut08actividades.html"
         }
       ]
     }

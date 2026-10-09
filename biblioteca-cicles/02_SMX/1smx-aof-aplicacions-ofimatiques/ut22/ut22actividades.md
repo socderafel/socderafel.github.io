@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT22 — GIMP"
 prev_url: "../ut22/ut2203.html"
 prev_label: "⬅️ 22.3 Tema 2. Recursos per a pràctiques"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT22

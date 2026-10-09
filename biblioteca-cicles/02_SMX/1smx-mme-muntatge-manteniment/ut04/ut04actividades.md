@@ -5,8 +5,8 @@ course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT4 — Unitat Didàctica 6"
 prev_url: "../ut04/ut0406.html"
 prev_label: "⬅️ 4.6 U6 - P1 P2 P3 - PRESENTACIÓ"
-next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

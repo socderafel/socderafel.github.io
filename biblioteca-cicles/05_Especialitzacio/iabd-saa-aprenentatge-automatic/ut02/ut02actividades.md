@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT2 — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "CE IA i Big Data · UT2 — Xarxes neuronals"
+badge: "CE IA i Big Data · UD5 — Xarxes Neuronals Artificials"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 Continguts i Recursos"
-next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

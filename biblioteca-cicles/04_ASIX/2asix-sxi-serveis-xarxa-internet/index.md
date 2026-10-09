@@ -3,8 +3,8 @@ layout: default
 title: "Índex — Serveis de Xarxa i Internet — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "2n ASIX · Grau Superior · FP Grau Superior — ASIX (Administració de Sistemes i Xarxes)"
-next_url: "./ut00/index.html"
-next_label: "📘 UT0 Completa ➡️"
+next_url: "./ut01/index.html"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # ☁️ Serveis de Xarxa i Internet
@@ -12,31 +12,21 @@ next_label: "📘 UT0 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Serveis de Xarxa i Internet** (2n ASIX · Grau Superior).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT0 a UT7)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT0** | **Unitat Didàctica 0** | 2 apartats · 1 activitats | [**📘 Unitat Completa**](./ut00/index.md) \| [Apartat 1 ➡️](./ut00/ut0001.md) |
-| **UT1** | **Unit 1 - DHCP** | 4 apartats · 4 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **Unit 2 - DNS** | 4 apartats · 4 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **Unit 3 - HTTP** | 8 apartats · 3 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **Unit 4 - FTP** | 5 apartats · 4 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **Unit 5 - SSH** | 3 apartats · 0 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UT6** | **Unit 6 - Email** | 3 apartats · 2 activitats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UT7** | **Unit 7 - Audio and Video** | 3 apartats · 1 activitats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
-
-## UT0 — Unitat Didàctica 0
-
-`2n ASIX · Grau Superior · UT0 · 2 apartats`
-
-[**📘 Obrir UT0 Completa en una sola pàgina**](./ut00/index.md)
-
-- [**0.1 Welcome SXI**](./ut00/ut0001.md)
-- [**✍️ Activitats pràctiques UT0**](./ut00/ut00actividades.md)
+| **UT1** | **Unit 1 - DHCP** | 4 apartats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
+| **UT2** | **Unit 2 - DNS** | 4 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UT3** | **Unit 3 - HTTP** | 7 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UT4** | **Unit 4 - FTP** | 4 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **Unit 5 - SSH** | 3 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UT6** | **Unit 6 - Email** | 3 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
+| **UT7** | **Unit 7 - Audio and Video** | 3 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
 
 ## UT1 — Unit 1 - DHCP
 
@@ -62,12 +52,11 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 
 ## UT3 — Unit 3 - HTTP
 
-`2n ASIX · Grau Superior · UT3 · 8 apartats`
+`2n ASIX · Grau Superior · UT3 · 7 apartats`
 
 [**📘 Obrir UT3 Completa en una sola pàgina**](./ut03/index.md)
 
 - [**3.1 U3 HTTP**](./ut03/ut0301.md)
-- [**3.2 Grups Treball**](./ut03/ut0302.md)
 - [**3.3 U3 A3 Windows Group**](./ut03/ut0303.md)
 - [**3.4 U3 P1**](./ut03/ut0304.md)
 - [**3.5 U3 P2**](./ut03/ut0305.md)
@@ -77,12 +66,11 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 
 ## UT4 — Unit 4 - FTP
 
-`2n ASIX · Grau Superior · UT4 · 5 apartats`
+`2n ASIX · Grau Superior · UT4 · 4 apartats`
 
 [**📘 Obrir UT4 Completa en una sola pàgina**](./ut04/index.md)
 
 - [**4.1 U4 FTP**](./ut04/ut0401.md)
-- [**4.2 Grups**](./ut04/ut0402.md)
 - [**4.3 U4 P1**](./ut04/ut0403.md)
 - [**4.4 U4 P2**](./ut04/ut0404.md)
 - [**✍️ Activitats pràctiques UT4**](./ut04/ut04actividades.md)

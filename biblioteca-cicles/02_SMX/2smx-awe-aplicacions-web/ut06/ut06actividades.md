@@ -6,7 +6,7 @@ badge: "2n SMX · Grau Mitjà · UT6 — Unit 6: Distance Learning Managers"
 prev_url: "../ut06/ut0601.html"
 prev_label: "⬅️ 6.1 Resources: Reference Links"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

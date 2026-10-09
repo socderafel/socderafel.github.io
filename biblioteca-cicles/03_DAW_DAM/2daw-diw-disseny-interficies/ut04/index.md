@@ -3,8 +3,8 @@ layout: default
 title: "UT4 — ACCESIBILIDAD — Disseny d'Interfícies Web | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "2n DAW · Grau Superior · UT4 Completa"
-prev_url: "../ut03/ut03actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+prev_url: "../ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
 next_url: "../ut04/ut0401.html"
 next_label: "4.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1 ➡️"
 ---

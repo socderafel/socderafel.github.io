@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT7 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT7 — Setmanes (11-12) del 27 de novembre al 10 de desembre"
+badge: "2n ASIX · Grau Superior · UD6 — Tipus de Malware i Programari Antimalware"
 prev_url: "../ut07/ut0703.html"
 prev_label: "⬅️ 7.3 UD5-2 Programari anti malware"
 next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_label: "📘 UD7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

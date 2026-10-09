@@ -6,7 +6,7 @@ badge: "2n DAW · Grau Superior · UT2 — Unit 2 - Basic PHP"
 prev_url: "../ut02/ut0203.html"
 prev_label: "⬅️ 2.3 Images exercise 2"
 next_url: "../ut03/index.html"
-next_label: "📘 UT3 Completa ➡️"
+next_label: "📘 UT3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

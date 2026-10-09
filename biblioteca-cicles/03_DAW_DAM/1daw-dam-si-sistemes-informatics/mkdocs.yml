@@ -4,9 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 SI: LLIBRE QUE ANEM A SEGUIR EN LES CLASES": ut00/ut0001.md
   - "UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ":
       - "📘 UT0 Completa (1 pàgina)": ut00/index.md
       - "0.1 TRANSPARÈNCIES UNITAT 1": ut00/ut0001.md

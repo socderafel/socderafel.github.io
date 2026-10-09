@@ -3,8 +3,8 @@ layout: default
 title: "UT0 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ — Sistemes Informàtics | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT0 Completa"
-prev_url: "../ut00/ut0001.html"
-prev_label: "⬅️ 0.1 SI: LLIBRE QUE ANEM A SEGUIR EN LES CLASES"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut00/ut0001.html"
 next_label: "0.1 TRANSPARÈNCIES UNITAT 1 ➡️"
 ---

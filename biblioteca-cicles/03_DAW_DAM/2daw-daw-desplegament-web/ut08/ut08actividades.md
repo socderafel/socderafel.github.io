@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT8 — Desplegament d'Aplicacions Web | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n DAW · Grau Superior · UT8 — Administració de servidors web."
+badge: "2n DAW · Grau Superior · UD4 — Administració i Segurització de Servidors Web"
 prev_url: "../ut08/ut0802.html"
 prev_label: "⬅️ 8.2 UT 4.1 Administració de servidors web - Instal·l"
-next_url: "../ut09/index.html"
-next_label: "📘 UT9 Completa ➡️"
+next_url: "../ut07/index.html"
+next_label: "📘 UD5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

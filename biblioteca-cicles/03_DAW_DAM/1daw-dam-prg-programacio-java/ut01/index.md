@@ -3,8 +3,8 @@ layout: default
 title: "UT1 — EJERCICIOS: JUECES ONLINE — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UT1 Completa"
-prev_url: "../ut00/ut0003.html"
-prev_label: "⬅️ 0.3 Poema Ítaca (Konstantino Kavafis)"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 Ejercicios JOEL ➡️"
 ---

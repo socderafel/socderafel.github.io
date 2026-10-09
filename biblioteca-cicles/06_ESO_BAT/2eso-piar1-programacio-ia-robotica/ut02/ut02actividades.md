@@ -6,7 +6,7 @@ badge: "2n ESO · UT2 — Robòtica"
 prev_url: "../ut02/ut0201.html"
 prev_label: "⬅️ 2.1 Continguts i Recursos"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT2

@@ -1,40 +1,33 @@
 ---
 layout: default
-title: "UT5 — Automatització de tasques — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca"
+title: "UT5 — Automatització de tasques · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT5 Completa"
-prev_url: "../ut04/ut04actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
-next_url: "../ut05/ut0501.html"
-next_label: "5.1 Enquesta valoració docent. 1er trimestre ➡️"
+prev_url: "../ut03/ut03actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
+next_url: "../ut05/ut0502.html"
+next_label: "5.2 Repàs: PL/SQL ➡️"
 ---
 
 # 📘 UT5 — Automatització de tasques (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 Enquesta valoració docent. 1er trimestre**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**5.2 Repàs: PL/SQL**](#ut0502) (o [obrir en pàgina individual ➡️](./ut0502.md) )
-> - [**5.3 Repàs: PL/SQL (II)**](#ut0503) (o [obrir en pàgina individual ➡️](./ut0503.md) )
-> - [**5.4 Repàs: PL/SQL (II) _ SOLUCIONS**](#ut0504) (o [obrir en pàgina individual ➡️](./ut0504.md) )
-> - [**5.5 Automatització de tasques**](#ut0505) (o [obrir en pàgina individual ➡️](./ut0505.md) )
-> - [**5.6 Butlletí procediments i funcions**](#ut0506) (o [obrir en pàgina individual ➡️](./ut0506.md) )
-> - [**5.7 Butlletí triggers**](#ut0507) (o [obrir en pàgina individual ➡️](./ut0507.md) )
-> - [**5.8 Solucions a pl/sql**](#ut0508) (o [obrir en pàgina individual ➡️](./ut0508.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.2 Repàs: PL/SQL**](./ut0502.md)
+- [**5.3 Repàs: PL/SQL (II)**](./ut0503.md)
+- [**5.4 Repàs: PL/SQL (II) _ SOLUCIONS**](./ut0504.md)
+- [**5.5 Automatització de tasques**](./ut0505.md)
+- [**5.6 Butlletí procediments i funcions**](./ut0506.md)
+- [**5.7 Butlletí triggers**](./ut0507.md)
+- [**5.8 Solucions a pl/sql**](./ut0508.md)
+- [**✍️ Activitats pràctiques UT5**](./ut05actividades.md)
 
 ---
 
-## 5.1 Enquesta valoració docent. 1er trimestre
-
-Com és preceptiu, vos passe una enquesta de seguiment docent per a poder realitzar una autoavaluació i buscar punts de millora en el procés educatiu.
-
-Totes les respostes seran ANÒNIMES.
-
-Esta enquesta fa referència al mòdul i al docent d'ASGBD
-
----
-
-## 5.2 Repàs: PL/SQL
+# 5.2 Repàs: PL/SQL
 
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Bloc anònim en Oracle La sentència de bloc anònim PL/SQL és una sentència executable que pot contindre sentències de control PL/SQL i sentències SQL Per realitzar esta pràctica, utilitzarem la mv Windows 10 amb Oracle SQL Developer En SQL Developer podem guardar un script amb ctrl-s o Archivo-guardar o En SQL Developer podem recuperar un script amb ctrl-o o Archivo-abrir o En SQL Developer podem executar un script amb F5 Activar l’exida => set serveroutput on Connecta amb SYSTEM a pdb1 Crea usuari usuari1 Donar permisos a usuari1 Connecta amb usuari1 en pdb1 Tasca 1 Declaracions => Indica quines declaracions donarien error i perquè. Després prova-les en sql-developer SET SERVEROUTPUT ON DECLARE
 
@@ -103,7 +96,7 @@ values ('EL ARTE DE LA INVISIBILIDAD','KEVIN MITNICK','4/10/2018',28.44, sysdate
 
 ---
 
-## 5.3 Repàs: PL/SQL (II)
+# 5.3 Repàs: PL/SQL (II)
 
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Butlletí repàs PL/SQL Connecta amb SYSTEM a pdb1 Crea usuari usuari1 Donar permisos a usuari1 Connecta amb usuari1 en pdb1 Tasca 1 Crea un bloc anònim que demane dos números (utilitza dos variables de substitució) i diga la suma, la multiplicació, la resta, la divisió dels números.
 
@@ -115,7 +108,7 @@ Transforma el bloc anònim en un procediment. Tasca 7 una fragment de codi que r
 
 ---
 
-## 5.4 Repàs: PL/SQL (II) _ SOLUCIONS
+# 5.4 Repàs: PL/SQL (II) _ SOLUCIONS
 
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Butlletí repàs PL/SQL Connecta amb SYSTEM a pdb1 Crea usuari usuari1 Donar permisos a usuari1 Connecta amb usuari1 en pdb1 Tasca 1 Crea un bloc anònim que demane dos números (utilitza dos variables de substitució) i diga la suma, la multiplicació, la resta, la divisió dels números.
 
@@ -240,7 +233,7 @@ end;
 
 ---
 
-## 5.5 Automatització de tasques
+# 5.5 Automatització de tasques
 
 ### UNITAT 04 Automatització de tasques
 
@@ -847,7 +840,7 @@ Triggers en postgres Segon pas - Definició del trigger CREATE [ OR REPLACE ] TR
 
 ---
 
-## 5.6 Butlletí procediments i funcions
+# 5.6 Butlletí procediments i funcions
 
 > **✍️ Pràctica : Crear procediments amb pl/sql Per realitzar esta pràct**
 > Pràctica : Crear procediments amb pl/sql Per realitzar esta pràctica, utilitzarem la mv Windows 10 i Oracle SQL Developer Amb usuari sys en pdb1, Crear usuari usuari3 (donar-li contrasenya i permisos de connexió i creació de procediments i funcions) Dona-li permisos de crear taules i assigna quota (10M) en el tablespace per defecte.
@@ -945,7 +938,7 @@ seua situació (vàlid o invalid). Documentar el procés Documentar els errors o
 
 ---
 
-## 5.7 Butlletí triggers
+# 5.7 Butlletí triggers
 
 CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD BUTLLETÍ TRIGGERS
 
@@ -981,7 +974,7 @@ actualitze una columna anomenada NOTA_MITJANA en la taula ALUMNES però sols en 
 
 ---
 
-## 5.8 Solucions a pl/sql
+# 5.8 Solucions a pl/sql
 
 ### 📄 32 Activitat triggers_III_SOL.pdf
 
@@ -1372,6 +1365,8 @@ DBMS_OUTPUT.PUT_LINE('AÑO : '|| n);
 
 END;
 
+#### 8) Donat el següent procediment
+
 Detecta els errors i corregix-los (compila i executa primer ) CREATE OR REPLACE PROCEDURE crear_llibre ( v_num llibres.codi%TYPE, v_titol llibres.titol%TYPE default 'sense titol', v_autor llibes.autor%TYPE DEFAULT 'anònim') IS BEGIN
 
 ```sql
@@ -1410,6 +1405,8 @@ Solució: crear_llibre(50, 'Hackers', 'McClure');
 ```sql
 Solució:    execute crear_llibre(50, NULL, 'McClure');
 ```
+
+#### 9) Desenvolupar una funció que retorne el nombre d'anys complets que hi ha entre
 
 dues dates que es passen com a arguments. CREATE OR REPLACE FUNCTION anys_dif ( fecha1 DATE, fecha2 DATE) RETURN NUMBER AS
 
@@ -1627,6 +1624,8 @@ END borrar_llibre; Nota: El procediment anterior retornarà el missatge << Proce
 Execute borrar_llibre ( 50);
 ```
 
+#### 15) Escriure un procediment que modifique el títol d’un llibre. El procediment rebrà com a
+
 paràmetres el número del llibre i el títol nou. CREATE OR REPLACE PROCEDURE modificar_llibre( num_id NUMBER, noutitol VARCHAR2) AS BEGIN
 
 ```sql
@@ -1649,7 +1648,7 @@ WHERE OBJECT_TYPE IN ('PROCEDURE','FUNCTION');
 
 ---
 
-## ✍️ Activitats pràctiques UT5
+# ✍️ Activitats pràctiques UT5
 
 > **✍️ Activitat Pràctica 5.1 — (ASGBD) Procediments en Oracle**
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: PRESENCIAL 46680 Algemesí MÒDUL: ASGBD Pràctica : Crear procediment emmagatzemat en Oracle Esta pràctica no funciona molt bé ... Esbrina perquè i fes les modificacions oportunes per a que funcione. Per realitzar esta pràctica, utilitzarem la mv Windows 10 amb Oracle SQL Developer Amb usuari system en pdb1
@@ -1734,3 +1733,5 @@ WHERE OBJECT_TYPE IN ('PROCEDURE','FUNCTION');
 
 > **✍️ 📋 Exercici / Qüestionari 5.4 — Qüestionari Repàs de classe (UD4)**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+---

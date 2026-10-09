@@ -1,22 +1,26 @@
 ---
 layout: default
-title: "UT6 — Caracterització de IA forta i dèbil — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
+title: "UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil · Unitat Completa"
 course_root: ".."
 badge: "CE IA i Big Data · UT6 Completa"
-prev_url: "../ut05/ut0503.html"
-prev_label: "⬅️ 5.3 UT 2 . Caracterització de sistemes d'aprenentatg"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut06/ut0601.html"
 next_label: "6.1 UT 1. Caracterització de IA forta I dèbil usos i ➡️"
 ---
 
-# 📘 UT6 — Caracterització de IA forta i dèbil (Unitat Completa)
+# 📘 UD1 — Caracterització de la Intel·ligència Artificial Forta i Dèbil (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**6.1 UT 1. Caracterització de IA forta I dèbil usos i**](#ut0601) (o [obrir en pàgina individual ➡️](./ut0601.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**6.1 UT 1. Caracterització de IA forta I dèbil usos i**](./ut0601.md)
 
 ---
 
-## 6.1 UT 1. Caracterització de IA forta I dèbil usos i
+# 6.1 UT 1. Caracterització de IA forta I dèbil usos i
 
 ---
 
@@ -163,3 +167,5 @@ A raíz de esa necesidad de desarrollar algoritmos de deep learning con redes ne
 - Nube Génesis
 
 13 / 13
+
+---

@@ -3,8 +3,8 @@ layout: default
 title: "UT1 — Unit 1 - DHCP — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT1 Completa"
-prev_url: "../ut00/ut00actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT0"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut01/ut0101.html"
 next_label: "1.1 U1 DHCP ➡️"
 ---

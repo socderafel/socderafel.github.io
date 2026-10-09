@@ -6,24 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — Unitat Didàctica 0",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Welcome SXI",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT0",
-          "href": "ut00/ut00actividades.html"
-        }
-      ]
-    },
-    {
       "summary": "UT1 — Unit 1 - DHCP",
       "items": [
         {
@@ -88,10 +70,6 @@
           "href": "ut03/ut0301.html"
         },
         {
-          "label": "3.2 Grups Treball",
-          "href": "ut03/ut0302.html"
-        },
-        {
           "label": "3.3 U3 A3 Windows Group",
           "href": "ut03/ut0303.html"
         },
@@ -128,10 +106,6 @@
         {
           "label": "4.1 U4 FTP",
           "href": "ut04/ut0401.html"
-        },
-        {
-          "label": "4.2 Grups",
-          "href": "ut04/ut0402.html"
         },
         {
           "label": "4.3 U4 P1",

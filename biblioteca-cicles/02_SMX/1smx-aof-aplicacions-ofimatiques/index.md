@@ -3,8 +3,8 @@ layout: default
 title: "Índex — Aplicacions Ofimàtiques — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "1r SMX · Grau Mitjà · FP Grau Mitjà — SMX (Sistemes Microinformàtics i Xarxes)"
-next_url: "./ut01/index.html"
-next_label: "📘 UT1 Completa ➡️"
+next_url: "./ut02/index.html"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # 📊 Aplicacions Ofimàtiques
@@ -12,51 +12,34 @@ next_label: "📘 UT1 Completa ➡️"
 Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de laboratori i activitats del mòdul de **Aplicacions Ofimàtiques** (1r SMX · Grau Mitjà).
 
 > **🛠️ Metodologia i Navegació del Curs**
-> - **Temari Complet Integrat:** Cada unitat de treball ( `UT` ) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
+> - **Temari Complet Integrat:** Cada unitat de treball (`UT`) disposa d'una vista **📘 Unitat Completa en 1 sola pàgina** i d'apartats individuals navegables des del menú lateral esquerre.
 > - **Cercador Ràpid i Mode Fosc:** Utilitza el filtre `🔍 Filtrar apartats...` de la barra lateral per localitzar qualsevol concepte i el botó `🌓 Mode Fosc / Clar` segons la teua preferència visual.
 > - **Caixes de Codi i Comandes:** Tots els blocs de codi i comandes de terminal incorporen el botó `📋 Copiar` en un clic.
 
-## 📊 Estructura d'Unitats de Treball (UT1 a UT22)
+## 📊 Estructura d'Unitats de Treball
 
 | Unitat | Títol de la Unitat Didàctica | Continguts | Accés Directe |
 | --- | --- | --- | --- |
-| **UT1** | **TUTORIA 1 SMX B** | 8 apartats · 0 activitats | [**📘 Unitat Completa**](./ut01/index.md) \| [Apartat 1 ➡️](./ut01/ut0101.md) |
-| **UT2** | **Processador de text (I)** | 18 apartats · 0 activitats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
-| **UT3** | **Processador de text (II)** | 12 apartats · 1 activitats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
-| **UT4** | **Processador de text (III)** | 12 apartats · 7 activitats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
-| **UT5** | **Impress** | 6 apartats · 1 activitats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
-| **UT6** | **Calc Mòdul 1 (I)** | 4 apartats · 11 activitats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
-| **UT7** | **Calc Mòdul 2 (II)** | 5 apartats · 11 activitats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
-| **UT8** | **Calc Mòdul 3 (III)** | 3 apartats · 11 activitats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
-| **UT9** | **Calc Mòdul 4 (IV)** | 3 apartats · 19 activitats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
-| **UT10** | **Calc Mòdul 5 Pràctiques EXTRA (V)** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut10/index.md) \| [Apartat 1 ➡️](./ut10/ut1001.md) |
-| **UT11** | **Calc. Qüestionaris i treballs** | 2 apartats · 2 activitats | [**📘 Unitat Completa**](./ut11/index.md) \| [Apartat 1 ➡️](./ut11/ut1101.md) |
-| **UT12** | **BDA. SISTEMES GESTORS BASE DE DADES (SGBD)** | 5 apartats · 1 activitats | [**📘 Unitat Completa**](./ut12/index.md) \| [Apartat 1 ➡️](./ut12/ut1201.md) |
-| **UT13** | **BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)** | 6 apartats · 0 activitats | [**📘 Unitat Completa**](./ut13/index.md) \| [Apartat 1 ➡️](./ut13/ut1301.md) |
-| **UT14** | **BDA. Model RELACIONAL (Segona part)** | 3 apartats · 0 activitats | [**📘 Unitat Completa**](./ut14/index.md) \| [Apartat 1 ➡️](./ut14/ut1401.md) |
-| **UT15** | **BDA. Base de Datos. TAULES** | 6 apartats · 0 activitats | [**📘 Unitat Completa**](./ut15/index.md) \| [Apartat 1 ➡️](./ut15/ut1501.md) |
-| **UT16** | **BDA. Base de Datos. CONSULTES** | 6 apartats · 1 activitats | [**📘 Unitat Completa**](./ut16/index.md) \| [Apartat 1 ➡️](./ut16/ut1601.md) |
-| **UT17** | **BDA. Base de Datos. FORMULARIS** | 5 apartats · 0 activitats | [**📘 Unitat Completa**](./ut17/index.md) \| [Apartat 1 ➡️](./ut17/ut1701.md) |
-| **UT18** | **BDA. Base de Datos. INFORMES** | 4 apartats · 0 activitats | [**📘 Unitat Completa**](./ut18/index.md) \| [Apartat 1 ➡️](./ut18/ut1801.md) |
-| **UT19** | **BDA. Base de Datos. MACROS** | 4 apartats · 0 activitats | [**📘 Unitat Completa**](./ut19/index.md) \| [Apartat 1 ➡️](./ut19/ut1901.md) |
-| **UT20** | **TREBALL FINAL BASE DE DADES** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut20/index.md) \| [Apartat 1 ➡️](./ut20/ut2001.md) |
-| **UT21** | **PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA** | 1 apartats · 0 activitats | [**📘 Unitat Completa**](./ut21/index.md) \| [Apartat 1 ➡️](./ut21/ut2101.md) |
-| **UT22** | **GIMP** | 4 apartats · 3 activitats | [**📘 Unitat Completa**](./ut22/index.md) \| [Apartat 1 ➡️](./ut22/ut2201.md) |
-
-## UT1 — TUTORIA 1 SMX B
-
-`1r SMX · Grau Mitjà · UT1 · 8 apartats`
-
-[**📘 Obrir UT1 Completa en una sola pàgina**](./ut01/index.md)
-
-- [**1.1 Calendari escolar**](./ut01/ut0101.md)
-- [**1.2 Plànol del centre**](./ut01/ut0102.md)
-- [**1.3 Horari Grup 1 SMX B**](./ut01/ut0103.md)
-- [**1.4 Permis Eixida**](./ut01/ut0104.md)
-- [**1.5 Justificació de faltes**](./ut01/ut0105.md)
-- [**1.6 Beques Ministeri (Valencià)**](./ut01/ut0106.md)
-- [**1.7 Becas Ministerio (Castellano)**](./ut01/ut0107.md)
-- [**1.8 Beques (Cartell inforamtiu)**](./ut01/ut0108.md)
+| **UT2** | **Processador de text (I)** | 18 apartats | [**📘 Unitat Completa**](./ut02/index.md) \| [Apartat 1 ➡️](./ut02/ut0201.md) |
+| **UT3** | **Processador de text (II)** | 12 apartats | [**📘 Unitat Completa**](./ut03/index.md) \| [Apartat 1 ➡️](./ut03/ut0301.md) |
+| **UT4** | **Processador de text (III)** | 12 apartats | [**📘 Unitat Completa**](./ut04/index.md) \| [Apartat 1 ➡️](./ut04/ut0401.md) |
+| **UT5** | **Impress** | 6 apartats | [**📘 Unitat Completa**](./ut05/index.md) \| [Apartat 1 ➡️](./ut05/ut0501.md) |
+| **UT6** | **Calc Mòdul 1 (I)** | 4 apartats | [**📘 Unitat Completa**](./ut06/index.md) \| [Apartat 1 ➡️](./ut06/ut0601.md) |
+| **UT7** | **Calc Mòdul 2 (II)** | 5 apartats | [**📘 Unitat Completa**](./ut07/index.md) \| [Apartat 1 ➡️](./ut07/ut0701.md) |
+| **UT8** | **Calc Mòdul 3 (III)** | 3 apartats | [**📘 Unitat Completa**](./ut08/index.md) \| [Apartat 1 ➡️](./ut08/ut0801.md) |
+| **UT9** | **Calc Mòdul 4 (IV)** | 3 apartats | [**📘 Unitat Completa**](./ut09/index.md) \| [Apartat 1 ➡️](./ut09/ut0901.md) |
+| **UT10** | **Calc Mòdul 5 Pràctiques EXTRA (V)** | 1 apartats | [**📘 Unitat Completa**](./ut10/index.md) \| [Apartat 1 ➡️](./ut10/ut1001.md) |
+| **UT11** | **Calc. Qüestionaris i treballs** | 2 apartats | [**📘 Unitat Completa**](./ut11/index.md) \| [Apartat 1 ➡️](./ut11/ut1101.md) |
+| **UT12** | **BDA. SISTEMES GESTORS BASE DE DADES (SGBD)** | 5 apartats | [**📘 Unitat Completa**](./ut12/index.md) \| [Apartat 1 ➡️](./ut12/ut1201.md) |
+| **UT13** | **BDA. Model ENTITAT-RELACIÓ (E-R) (Primera part)** | 6 apartats | [**📘 Unitat Completa**](./ut13/index.md) \| [Apartat 1 ➡️](./ut13/ut1301.md) |
+| **UT14** | **BDA. Model RELACIONAL (Segona part)** | 3 apartats | [**📘 Unitat Completa**](./ut14/index.md) \| [Apartat 1 ➡️](./ut14/ut1401.md) |
+| **UT15** | **BDA. Base de Datos. TAULES** | 6 apartats | [**📘 Unitat Completa**](./ut15/index.md) \| [Apartat 1 ➡️](./ut15/ut1501.md) |
+| **UT16** | **BDA. Base de Datos. CONSULTES** | 6 apartats | [**📘 Unitat Completa**](./ut16/index.md) \| [Apartat 1 ➡️](./ut16/ut1601.md) |
+| **UT17** | **BDA. Base de Datos. FORMULARIS** | 5 apartats | [**📘 Unitat Completa**](./ut17/index.md) \| [Apartat 1 ➡️](./ut17/ut1701.md) |
+| **UT18** | **BDA. Base de Datos. INFORMES** | 4 apartats | [**📘 Unitat Completa**](./ut18/index.md) \| [Apartat 1 ➡️](./ut18/ut1801.md) |
+| **UT19** | **BDA. Base de Datos. MACROS** | 4 apartats | [**📘 Unitat Completa**](./ut19/index.md) \| [Apartat 1 ➡️](./ut19/ut1901.md) |
+| **UT20** | **TREBALL FINAL BASE DE DADES** | 1 apartats | [**📘 Unitat Completa**](./ut20/index.md) \| [Apartat 1 ➡️](./ut20/ut2001.md) |
+| **UT22** | **GIMP** | 4 apartats | [**📘 Unitat Completa**](./ut22/index.md) \| [Apartat 1 ➡️](./ut22/ut2201.md) |
 
 ## UT2 — Processador de text (I)
 
@@ -296,14 +279,6 @@ Benvinguts al curs complet d'apunts teòrics, exemples guiats, pràctiques de la
 [**📘 Obrir UT20 Completa en una sola pàgina**](./ut20/index.md)
 
 - [**20.1 Treball Final Base de dades**](./ut20/ut2001.md)
-
-## UT21 — PRACTIQUES DE PENDENTS. CONVOCATÒRIA ORDINÀRIA/EXTRAORDINARIA
-
-`1r SMX · Grau Mitjà · UT21 · 1 apartats`
-
-[**📘 Obrir UT21 Completa en una sola pàgina**](./ut21/index.md)
-
-- [**21.1 Practiques_Pendents**](./ut21/ut2101.md)
 
 ## UT22 — GIMP
 

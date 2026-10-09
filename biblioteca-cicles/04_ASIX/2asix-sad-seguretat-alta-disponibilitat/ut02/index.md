@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT2 — Setmanes (3-4) del 25 de setembre al 8 d'octubre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD2 — Biometria, Seguretat Física i Còpies de Seguretat · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT2 Completa"
 prev_url: "../ut01/ut01actividades.html"
@@ -9,17 +9,21 @@ next_url: "../ut02/ut0201.html"
 next_label: "2.1 Biometria - Seguretat Física - Còpies de Seguret ➡️"
 ---
 
-# 📘 UT2 — Setmanes (3-4) del 25 de setembre al 8 d'octubre (Unitat Completa)
+# 📘 UD2 — Biometria, Seguretat Física i Còpies de Seguretat (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**2.1 Biometria - Seguretat Física - Còpies de Seguret**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
-> - [**2.2 Concienciació en ciberseguretat**](#ut0202) (o [obrir en pàgina individual ➡️](./ut0202.md) )
-> - [**2.3 Preparació Màquines Virtuals per a pràctiques po**](#ut0203) (o [obrir en pàgina individual ➡️](./ut0203.md) )
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 Biometria - Seguretat Física - Còpies de Seguret**](./ut0201.md)
+- [**2.2 Concienciació en ciberseguretat**](./ut0202.md)
+- [**2.3 Preparació Màquines Virtuals per a pràctiques po**](./ut0203.md)
+- [**✍️ Activitats pràctiques UT2**](./ut02actividades.md)
 
 ---
 
-## 2.1 Biometria - Seguretat Física - Còpies de Seguret
+# 2.1 Biometria - Seguretat Física - Còpies de Seguret
 
 ---
 
@@ -105,7 +109,7 @@ CPD Segons ANSI, TIA ( TIA-942-Standard_OnePager-110220.pdf ) ● Tipus – Rate
 
 ---
 
-## 2.2 Concienciació en ciberseguretat
+# 2.2 Concienciació en ciberseguretat
 
 AVL hacker [hákeɾ] [angl.] m. i f. INFORM. Persona que té un gran coneixement de les xarxes i els sistemes informàtics i un viu interés per explorar-ne les característiques i detectar- ne les vulnerabilitats.
 
@@ -215,7 +219,7 @@ creative commons MOLTES GRÀCIES PER LA VOSTRA ATENCIÓ Presentació elaborada p
 
 ---
 
-## 2.3 Preparació Màquines Virtuals per a pràctiques po
+# 2.3 Preparació Màquines Virtuals per a pràctiques po
 
 En esta activitat no cal entregar document, però servirà de preparació per a futurs treballs
 
@@ -243,9 +247,11 @@ Posteriorment, en començar una pràctica, tornarem a l'estat inicial, amb la m�
 
 ---
 
-## ✍️ Activitats pràctiques UT2
+# ✍️ Activitats pràctiques UT2
 
 > **✍️ Activitat Pràctica 2.1 — Calculadora CVSS del Nist**
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: Calculadora CVSS del NIST Busca la pàgina del projecte CVSS del NIST ¿Que es el NIST? ¿Que es CVSS? ¿Que son les versions del CVSS? ¿Quants grups de mètriques existeixen?
 >
 > ¿Que mesura la següent mètrica? Calcula les Mètriques de Base per a un atac Ransomware. Documenta tot el procés en un pdf Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”
+
+---

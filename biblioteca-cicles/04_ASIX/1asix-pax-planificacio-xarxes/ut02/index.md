@@ -3,8 +3,8 @@ layout: default
 title: "UT2 — U1 - Caracterització de les xarxes — Planificació i Administració de Xarxes | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r ASIX · Grau Superior · UT2 Completa"
-prev_url: "../ut01/ut0103.html"
-prev_label: "⬅️ 1.3 Plànol IES"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 U1. Caracterització de les xarxes ➡️"
 ---

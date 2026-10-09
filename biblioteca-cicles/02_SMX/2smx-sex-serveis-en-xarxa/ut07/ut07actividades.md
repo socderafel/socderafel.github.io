@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT7 — Serveis en Xarxa | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UT7 — U1: SSH. Secure Shell"
+badge: "2n SMX · Grau Mitjà · U1 — Accés Remot Segur (SSH)"
 prev_url: "../ut07/ut0701.html"
 prev_label: "⬅️ 7.1 Plantilla qüestionari d'avaluació"
-next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_url: "../ut06/index.html"
+next_label: "📘 U2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

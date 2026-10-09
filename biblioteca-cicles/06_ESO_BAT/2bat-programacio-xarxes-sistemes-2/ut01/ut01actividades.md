@@ -6,7 +6,7 @@ badge: "2n Batxillerat · UT1 — Xarxes Locals"
 prev_url: "../ut01/ut0106.html"
 prev_label: "⬅️ 1.6 Tipos de cableado"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

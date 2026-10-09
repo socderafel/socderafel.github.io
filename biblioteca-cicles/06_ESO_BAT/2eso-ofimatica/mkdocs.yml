@@ -4,9 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Continguts i Recursos": ut00/ut0001.md
   - "UT1 — Conceptes bàsics":
       - "📘 UT1 Completa (1 pàgina)": ut01/index.md
       - "1.1 Gestió d'arxius": ut01/ut0101.md

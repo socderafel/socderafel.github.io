@@ -6,7 +6,7 @@ badge: "1r ESO · UT5 — Programació Visual amb Scratch"
 prev_url: "../ut05/ut0501.html"
 prev_label: "⬅️ 5.1 Continguts i Recursos"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT1 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT1 — Setmanes (1-2) del 11 al 24 de setembre"
+badge: "2n ASIX · Grau Superior · UD1 — Introducció a la Seguretat i Elements Vulnerables"
 prev_url: "../ut01/ut0105.html"
 prev_label: "⬅️ 1.5 Elements vulnerables"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UD2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

@@ -1,40 +1,28 @@
 ---
 layout: default
-title: "UT7 — Setmanes (11-12) del 27 de novembre al 10 de desembre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD6 — Tipus de Malware i Programari Antimalware · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT7 Completa"
-prev_url: "../ut06/ut06actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT6"
-next_url: "../ut07/ut0701.html"
-next_label: "7.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C ➡️"
+prev_url: "../ut05/ut05actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT5"
+next_url: "../ut07/ut0702.html"
+next_label: "7.2 UD5-1 Tipus de malware ➡️"
 ---
 
-# 📘 UT7 — Setmanes (11-12) del 27 de novembre al 10 de desembre (Unitat Completa)
+# 📘 UD6 — Tipus de Malware i Programari Antimalware (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**7.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C**](#ut0701) (o [obrir en pàgina individual ➡️](./ut0701.md) )
-> - [**7.2 UD5-1 Tipus de malware**](#ut0702) (o [obrir en pàgina individual ➡️](./ut0702.md) )
-> - [**7.3 UD5-2 Programari anti malware**](#ut0703) (o [obrir en pàgina individual ➡️](./ut0703.md) )
-> - [**✍️ Activitats pràctiques UT7**](#ut07actividades) (o [obrir en pàgina individual ➡️](./ut07actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
 
----
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-## 7.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C
-
-> **📌 🏷️ Apunt de la Unitat**
-> #### UD 5 Seguretat activa
+- [**7.2 UD5-1 Tipus de malware**](./ut0702.md)
+- [**7.3 UD5-2 Programari anti malware**](./ut0703.md)
+- [**✍️ Activitats pràctiques UT7**](./ut07actividades.md)
 
 ---
 
-Com és preceptiu, us passe una enquesta de seguiment docent per a poder realitzar una autoavaluació i buscar els punts de millora en el procés educatiu.
-
-Totes les respostes seran ANÒNIMES.
-
-Esta enquesta fa referència al mòdul i al docent de SAD
-
----
-
-## 7.2 UD5-1 Tipus de malware
+# 7.2 UD5-1 Tipus de malware
 
 TIPUS DE MALWARE
 
@@ -106,7 +94,7 @@ Com es pot eliminar la INFECCIÓ ✔ Us de programes antivirus / antimalware d'e
 
 ---
 
-## 7.3 UD5-2 Programari anti malware
+# 7.3 UD5-2 Programari anti malware
 
 PROGRAMARI ANTIMALWARE
 
@@ -204,7 +192,7 @@ APT (Advanced Persistent Threat)
 
 ---
 
-## ✍️ Activitats pràctiques UT7
+# ✍️ Activitats pràctiques UT7
 
 > **✍️ Activitat Pràctica 7.1 — (SAD) Antivirus Live**
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat: Antivirus Live També coneguts com antivirus usb, o antivirus portable
@@ -220,3 +208,5 @@ APT (Advanced Persistent Threat)
 > Necessitarem arrancar un ordinador des d’un USB Les captures de la pràctica en este moment podem fer-les amb fotos de la càmera del mòbil. Documentar tot el procés Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada Entregar el document en format PDF.
 >
 > Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de *Aules “Com fer un treball”
+
+---

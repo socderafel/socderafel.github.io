@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT3 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT3 — Setmanes (5-6) del 9 al 22 d'octubre"
+badge: "2n ASIX · Grau Superior · UD3 — Gestió de Contrasenyes i Anàlisi Forense"
 prev_url: "../ut03/ut0302.html"
 prev_label: "⬅️ 3.2 Anàlisi Forense"
 next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_label: "📘 UD4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

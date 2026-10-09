@@ -1,23 +1,27 @@
 ---
 layout: default
-title: "UT2 — U6: Servicio de Transferencia de ficheros (FTP) — Serveis en Xarxa | Portal Docent Pepe Cuenca"
+title: "U6 — Servei de Transferència de Fitxers (FTP) · Unitat Completa"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT2 Completa"
-prev_url: "../ut01/ut01actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT1"
+prev_url: "../ut03/ut03actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT3"
 next_url: "../ut02/ut0201.html"
 next_label: "2.1 FTP ➡️"
 ---
 
-# 📘 UT2 — U6: Servicio de Transferencia de ficheros (FTP) (Unitat Completa)
+# 📘 U6 — Servei de Transferència de Fitxers (FTP) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**2.1 FTP**](#ut0201) (o [obrir en pàgina individual ➡️](./ut0201.md) )
-> - [**✍️ Activitats pràctiques UT2**](#ut02actividades) (o [obrir en pàgina individual ➡️](./ut02actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**2.1 FTP**](./ut0201.md)
+- [**✍️ Activitats pràctiques UT2**](./ut02actividades.md)
 
 ---
 
-## 2.1 FTP
+# 2.1 FTP
 
 > **📌 🏷️ Apunt de la Unitat**
 > ### **U6: Servicio de Transferencia de ficheros (FTP)**
@@ -157,7 +161,7 @@ Tema 6: Servicio FTP Límites suaves (soft): Pueden excederse por un período de
 
 ---
 
-## ✍️ Activitats pràctiques UT2
+# ✍️ Activitats pràctiques UT2
 
 > **✍️ Activitat Pràctica 2.1 — Prova Validació FTP**
 > Prova Validació FTP
@@ -167,3 +171,5 @@ Tema 6: Servicio FTP Límites suaves (soft): Pueden excederse por un período de
 
 > **✍️ Activitat Pràctica 2.3 — Memoria FTP**
 > Memoria FTP en PDF
+
+---

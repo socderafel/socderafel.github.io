@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT5 — Setmanes (9-10) del 6 al 19 de novembre — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD5 — Criptografia de Clau Pública i Certificats Digitals · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT5 Completa"
 prev_url: "../ut04/ut04actividades.html"
@@ -9,15 +9,19 @@ next_url: "../ut05/ut0501.html"
 next_label: "5.1 Criptografia de clau pública ➡️"
 ---
 
-# 📘 UT5 — Setmanes (9-10) del 6 al 19 de novembre (Unitat Completa)
+# 📘 UD5 — Criptografia de Clau Pública i Certificats Digitals (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**5.1 Criptografia de clau pública**](#ut0501) (o [obrir en pàgina individual ➡️](./ut0501.md) )
-> - [**✍️ Activitats pràctiques UT5**](#ut05actividades) (o [obrir en pàgina individual ➡️](./ut05actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**5.1 Criptografia de clau pública**](./ut0501.md)
+- [**✍️ Activitats pràctiques UT5**](./ut05actividades.md)
 
 ---
 
-## 5.1 Criptografia de clau pública
+# 5.1 Criptografia de clau pública
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### UD 4 Criptografia. Clau asimètrica. Clau pública
@@ -176,7 +180,7 @@ CERTIFICATS DIGITALS Pràctica Obtenir un certificat digital que acredite la nos
 
 ---
 
-## ✍️ Activitats pràctiques UT5
+# ✍️ Activitats pràctiques UT5
 
 > **✍️ Activitat Pràctica 5.1 — (SAD) Hack a doble signatura**
 > ### 📄 activitat hack doble signatura en PDF.pdf
@@ -231,3 +235,5 @@ CERTIFICATS DIGITALS Pràctica Obtenir un certificat digital que acredite la nos
 > - Comunicar als servidors que la nostra clau ja no es vàlida
 >
 > gpg --keyserver NombreDelServidor --send-key ClaveID ----------------------------------------------------------------------------------------------- Xifrar documents Encriptar un fitxer amb la clau pública d’un destinatari: gpg --encrypt --recipient claveID documento.txt Desencriptar un fitxer dirigit a nosaltres amb la clave privada nostra gpg -d documento.txt.gpg gpg -d documento.txt.gpg > document_en_clar.txt ----------------------------------------------------------------------------------------------- Signar documents Signar un fitxer amb la clau privada gpg --output fichero.firmado –sign fichero.txt Verificar de qui és el fitxer signat gpg --verify fichero.firmado Desxifrar fitxer signat gpg --output fichero.txt –decrypt fichero.firmado Signar un fitxer amb la clau privada, i deixant el text llegible gpg --output fichero.firmado –clearsign fichero.txt
+
+---

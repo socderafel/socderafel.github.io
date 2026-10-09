@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT9 — U8 - VLAN"
 prev_url: "../ut09/ut0906.html"
 prev_label: "⬅️ 9.6 Colisió i difusió"
 next_url: "../ut10/index.html"
-next_label: "📘 UT10 Completa ➡️"
+next_label: "📘 UT10 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT9

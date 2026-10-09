@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT3 — Disseny Web amb HTML5, CSS i WordP
 course_root: ".."
 badge: "4t ESO · UT3 — Alan Turing"
 prev_url: "../ut03/index.html"
-prev_label: "⬅️ 📘 UT3 Completa"
+prev_label: "⬅️ 📘 UT3 Completa (1 pàgina)"
 next_url: "../references.html"
-next_label: "📂 Índex de Documents ➡️"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

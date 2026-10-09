@@ -5,8 +5,8 @@ course_root: ".."
 badge: "2n ASIX · Grau Superior · UT3 — Usuaris i permisos. Seguretat"
 prev_url: "../ut03/ut0305.html"
 prev_label: "⬅️ 3.5 Seguretat en un SGBD"
-next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_url: "../ut05/index.html"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

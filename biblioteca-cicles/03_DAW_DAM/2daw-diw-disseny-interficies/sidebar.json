@@ -6,20 +6,6 @@
   },
   "units": [
     {
-      "summary": "UT0 — Unitat Didàctica 0",
-      "items": [
-        {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Presentació del curs",
-          "href": "ut00/ut0001.html"
-        }
-      ]
-    },
-    {
       "summary": "UT1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS",
       "items": [
         {
@@ -92,20 +78,6 @@
         {
           "label": "✍️ Activitats pràctiques UT2",
           "href": "ut02/ut02actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT3 — EXAMEN 1ª AVALUACIÓ UD1 UD2",
-      "items": [
-        {
-          "label": "📘 UT3 Completa (1 pàgina)",
-          "href": "ut03/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT3",
-          "href": "ut03/ut03actividades.html"
         }
       ]
     },

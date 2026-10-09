@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT6 — Refactorización, optimización
 prev_url: "../ut06/ut0602.html"
 prev_label: "⬅️ 6.2 U7.2 - Documentación"
 next_url: "../ut07/index.html"
-next_label: "📘 UT7 Completa ➡️"
+next_label: "📘 UT7 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT6

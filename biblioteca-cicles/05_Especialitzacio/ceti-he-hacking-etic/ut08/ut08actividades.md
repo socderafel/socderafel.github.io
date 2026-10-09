@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT8 — Contratos pretesting"
 prev_url: "../ut08/ut0801.html"
 prev_label: "⬅️ 8.1 Creación de contratos"
 next_url: "../ut09/index.html"
-next_label: "📘 UT9 Completa ➡️"
+next_label: "📘 UT9 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

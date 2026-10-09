@@ -6,7 +6,7 @@ badge: "1r DAW / DAM · Grau Superior · UT0 — INTRODUCCIÓ AL PROGRAMARI BASE
 prev_url: "../ut00/ut0006.html"
 prev_label: "⬅️ 0.6 SI: TEORIA XARXES UD1"
 next_url: "../ut01/index.html"
-next_label: "📘 UT1 Completa ➡️"
+next_label: "📘 UT1 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT0

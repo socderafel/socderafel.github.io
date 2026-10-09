@@ -6,38 +6,12 @@
   },
   "units": [
     {
-      "summary": "UT0 — Unitat Didàctica 0",
+      "summary": "UD1 — Introducció a la Seguretat i Elements Vulnerables",
       "items": [
         {
-          "label": "📘 UT0 Completa (1 pàgina)",
-          "href": "ut00/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "0.1 Guia didàctica",
-          "href": "ut00/ut0001.html"
-        },
-        {
-          "label": "0.2 DOSSIER SEMIPRESENCIAL",
-          "href": "ut00/ut0002.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT1 — Setmanes (1-2) del 11 al 24 de setembre",
-      "items": [
-        {
-          "label": "📘 UT1 Completa (1 pàgina)",
+          "label": "📘 UD1 Completa (1 pàgina)",
           "href": "ut01/index.html",
           "class": "unit-full-link"
-        },
-        {
-          "label": "1.1 Presentació mòdul SAD",
-          "href": "ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Com fer un treball",
-          "href": "ut01/ut0102.html"
         },
         {
           "label": "1.3 Document: Aforismes en SI",
@@ -58,10 +32,10 @@
       ]
     },
     {
-      "summary": "UT2 — Setmanes (3-4) del 25 de setembre al 8 d'octubre",
+      "summary": "UD2 — Biometria, Seguretat Física i Còpies de Seguretat",
       "items": [
         {
-          "label": "📘 UT2 Completa (1 pàgina)",
+          "label": "📘 UD2 Completa (1 pàgina)",
           "href": "ut02/index.html",
           "class": "unit-full-link"
         },
@@ -84,10 +58,10 @@
       ]
     },
     {
-      "summary": "UT3 — Setmanes (5-6) del 9 al 22 d'octubre",
+      "summary": "UD3 — Gestió de Contrasenyes i Anàlisi Forense",
       "items": [
         {
-          "label": "📘 UT3 Completa (1 pàgina)",
+          "label": "📘 UD3 Completa (1 pàgina)",
           "href": "ut03/index.html",
           "class": "unit-full-link"
         },
@@ -106,10 +80,10 @@
       ]
     },
     {
-      "summary": "UT4 — Setmanes (7-8) del 23 d'octubre al 5 de novembre",
+      "summary": "UD4 — Criptografia de Clau Simètrica, Hash i Esteganografia",
       "items": [
         {
-          "label": "📘 UT4 Completa (1 pàgina)",
+          "label": "📘 UD4 Completa (1 pàgina)",
           "href": "ut04/index.html",
           "class": "unit-full-link"
         },
@@ -128,10 +102,10 @@
       ]
     },
     {
-      "summary": "UT5 — Setmanes (9-10) del 6 al 19 de novembre",
+      "summary": "UD5 — Criptografia de Clau Pública i Certificats Digitals",
       "items": [
         {
-          "label": "📘 UT5 Completa (1 pàgina)",
+          "label": "📘 UD5 Completa (1 pàgina)",
           "href": "ut05/index.html",
           "class": "unit-full-link"
         },
@@ -146,34 +120,12 @@
       ]
     },
     {
-      "summary": "UT6 — Setmana d'exàmens. Del 20 al 26 de Novembre",
+      "summary": "UD6 — Tipus de Malware i Programari Antimalware",
       "items": [
         {
-          "label": "📘 UT6 Completa (1 pàgina)",
-          "href": "ut06/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "6.1 Continguts i Recursos",
-          "href": "ut06/ut0601.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT6",
-          "href": "ut06/ut06actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT7 — Setmanes (11-12) del 27 de novembre al 10 de desembre",
-      "items": [
-        {
-          "label": "📘 UT7 Completa (1 pàgina)",
+          "label": "📘 UD6 Completa (1 pàgina)",
           "href": "ut07/index.html",
           "class": "unit-full-link"
-        },
-        {
-          "label": "7.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C",
-          "href": "ut07/ut0701.html"
         },
         {
           "label": "7.2 UD5-1 Tipus de malware",
@@ -190,10 +142,10 @@
       ]
     },
     {
-      "summary": "UT8 — Setmanes (13-14) Del 11 al 22 de Desembre",
+      "summary": "UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN",
       "items": [
         {
-          "label": "📘 UT8 Completa (1 pàgina)",
+          "label": "📘 UD7 Completa (1 pàgina)",
           "href": "ut08/index.html",
           "class": "unit-full-link"
         },
@@ -216,10 +168,10 @@
       ]
     },
     {
-      "summary": "UT9 — Setmanes Del 8 al 21 de Gener",
+      "summary": "UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA)",
       "items": [
         {
-          "label": "📘 UT9 Completa (1 pàgina)",
+          "label": "📘 UD8 Completa (1 pàgina)",
           "href": "ut09/index.html",
           "class": "unit-full-link"
         },
@@ -238,10 +190,10 @@
       ]
     },
     {
-      "summary": "UT10 — Setmanes Del 22 de Gener al 4 de Febrer",
+      "summary": "UD9 — Escriptoris Remots i Accés Segur (Kali Linux)",
       "items": [
         {
-          "label": "📘 UT10 Completa (1 pàgina)",
+          "label": "📘 UD9 Completa (1 pàgina)",
           "href": "ut10/index.html",
           "class": "unit-full-link"
         },
@@ -256,84 +208,16 @@
       ]
     },
     {
-      "summary": "UT11 — Setmanes Del 5 al 12 de Febrer",
+      "summary": "UD10 — Legislació i Normativa en Ciberseguretat",
       "items": [
         {
-          "label": "📘 UT11 Completa (1 pàgina)",
+          "label": "📘 UD10 Completa (1 pàgina)",
           "href": "ut11/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "11.1 Legislació en Ciberseguretat",
           "href": "ut11/ut1101.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT12 — ENQUESTA DE VALORACIÓ DEL PROFESORAT",
-      "items": [
-        {
-          "label": "📘 UT12 Completa (1 pàgina)",
-          "href": "ut12/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "12.1 VALORACIÓ DEL PROFESORAT I ALTRES ASPECTES DEL C",
-          "href": "ut12/ut1201.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT13 — Setmana d'examens 2on Trimestre (Del 12 al 18 de Febrer)",
-      "items": [
-        {
-          "label": "📘 UT13 Completa (1 pàgina)",
-          "href": "ut13/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "13.1 Continguts i Recursos",
-          "href": "ut13/ut1301.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT13",
-          "href": "ut13/ut13actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT14 — Setmana d'examens Convocatoria Ordinaria (Del 19 al 25 de Febrer)",
-      "items": [
-        {
-          "label": "📘 UT14 Completa (1 pàgina)",
-          "href": "ut14/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "14.1 Continguts i Recursos",
-          "href": "ut14/ut1401.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT14",
-          "href": "ut14/ut14actividades.html"
-        }
-      ]
-    },
-    {
-      "summary": "UT15 — Setmana d'examens Convocatoria Extraordinaria (Del 10 al 16 de Juny)",
-      "items": [
-        {
-          "label": "📘 UT15 Completa (1 pàgina)",
-          "href": "ut15/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "15.1 Continguts i Recursos",
-          "href": "ut15/ut1501.html"
-        },
-        {
-          "label": "✍️ Activitats pràctiques UT15",
-          "href": "ut15/ut15actividades.html"
         }
       ]
     }

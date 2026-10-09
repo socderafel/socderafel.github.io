@@ -1,32 +1,36 @@
 ---
 layout: default
-title: "UT0 — Introducción a Phyton — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca"
+title: "UT0 — Introducció a Python · Unitat Completa"
 course_root: ".."
 badge: "2n Batxillerat · UT0 Completa"
-prev_url: "../ut00/ut00actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT0"
+prev_url: "../index.html"
+prev_label: "⬅️ 🏠 Inici del Mòdul"
 next_url: "../ut00/ut0001.html"
 next_label: "0.1 Introducció a Python ➡️"
 ---
 
-# 📘 UT0 — Introducción a Phyton (Unitat Completa)
+# 📘 UT0 — Introducció a Python (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**0.1 Introducció a Python**](#ut0001) (o [obrir en pàgina individual ➡️](./ut0001.md) )
-> - [**0.2 Elementos de un programa**](#ut0002) (o [obrir en pàgina individual ➡️](./ut0002.md) )
-> - [**0.3 Tipos de datos**](#ut0003) (o [obrir en pàgina individual ➡️](./ut0003.md) )
-> - [**0.4 Funciones integradas**](#ut0004) (o [obrir en pàgina individual ➡️](./ut0004.md) )
-> - [**0.5 Módulos, paquetes y namespaces**](#ut0005) (o [obrir en pàgina individual ➡️](./ut0005.md) )
-> - [**0.6 Estructuras de control**](#ut0006) (o [obrir en pàgina individual ➡️](./ut0006.md) )
-> - [**0.7 Tipos de datos complejos**](#ut0007) (o [obrir en pàgina individual ➡️](./ut0007.md) )
-> - [**0.8 Funciones**](#ut0008) (o [obrir en pàgina individual ➡️](./ut0008.md) )
-> - [**0.9 Errores y excepciones**](#ut0009) (o [obrir en pàgina individual ➡️](./ut0009.md) )
-> - [**0.10 Ficheros**](#ut0010) (o [obrir en pàgina individual ➡️](./ut0010.md) )
-> - [**✍️ Activitats pràctiques UT0**](#ut00actividades) (o [obrir en pàgina individual ➡️](./ut00actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**0.1 Introducció a Python**](./ut0001.md)
+- [**0.2 Elementos de un programa**](./ut0002.md)
+- [**0.3 Tipos de datos**](./ut0003.md)
+- [**0.4 Funciones integradas**](./ut0004.md)
+- [**0.5 Módulos, paquetes y namespaces**](./ut0005.md)
+- [**0.6 Estructuras de control**](./ut0006.md)
+- [**0.7 Tipos de datos complejos**](./ut0007.md)
+- [**0.8 Funciones**](./ut0008.md)
+- [**0.9 Errores y excepciones**](./ut0009.md)
+- [**0.10 Ficheros**](./ut0010.md)
+- [**✍️ Activitats pràctiques UT0**](./ut00actividades.md)
 
 ---
 
-## 0.1 Introducció a Python
+# 0.1 Introducció a Python
 
 > **🔗 Recurs Web: Link Live Share (Visual Studio)**
 > [**🌐 Obrir recurs extern (https://prod.liveshare.vsengsaas.visualstudio.com/join?5C6C46257593E3A0BC1B4F43C334F53944A4) ↗️**](https://prod.liveshare.vsengsaas.visualstudio.com/join?5C6C46257593E3A0BC1B4F43C334F53944A4)
@@ -352,7 +356,7 @@ Python tutorials: https://www.tutorialsteacher.com/python
 
 ---
 
-## 0.2 Elementos de un programa
+# 0.2 Elementos de un programa
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Elementos de un programa Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -513,7 +517,7 @@ https://www.mclibre.org/consultar/python • Tipos de operadores en Python: http
 
 ---
 
-## 0.3 Tipos de datos
+# 0.3 Tipos de datos
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Tipos de datos Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -534,6 +538,8 @@ Escuela de programación - Python Tipos de datos CONTENIDO
 - Fuentes de información.................................................................................................................24
 
 Escuela de programación - Python Tipos de datos
+
+### 1. Introducción
 
 En este documento hablaremos de los tipos de datos en Python y presentaremos las características de los más usuales y sencillos: números enteros, números reales y booleanos. Como ya dijimos anteriormente, en Python las variables no hace falta declararlas antes de ser utilizadas. Es decir, no hace falta indicar el tipo de dato que van a contener antes de asignarles un valor.
 
@@ -752,11 +758,13 @@ Figura 37: No es un cero Esto es sólo una pequeña introducción a la conversi�
 
 Escuela de programación - Python Tipos de datos
 
+### 5. Fuentes de información
+
 • Página oficial del lenguaje Python: https://www.python.org/ • Curso de Python 3 de José Domingo Muñoz: https://plataforma.josedomingo.org/pledin/cursos/python3/ • Curso de Python de Teachbeamers: https://www.techbeamers.com/ • Tipos de operadores en Python: https://j2logo.com/python/tutorial/operadores-en- python/ • Programación en Python: https://entrenamiento-python-basico.readthedocs.io • «Curso de Programación en Python», José Luis Tomás Navarro.
 
 ---
 
-## 0.4 Funciones integradas
+# 0.4 Funciones integradas
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Funciones integradas Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -779,6 +787,8 @@ Escuela de programación - Python Funciones integradas CONTENIDO
 - Fuentes de información.................................................................................................................13
 
 Escuela de programación - Python Funciones integradas
+
+### 1. Introducción
 
 El intérprete de Python dispone de funciones integradas o predefinidas que podemos utilizar en cualquiera de nuestros programas y sin necesidad de importar ningún módulo extra. En inglés se les conoce como “Built-in Functions” y son las que aparecen en la siguiente tabla
 
@@ -929,7 +939,7 @@ Figura 31: Indicamos el formato del número real Para conocer más sobre este ti
 
 ---
 
-## 0.5 Módulos, paquetes y namespaces
+# 0.5 Módulos, paquetes y namespaces
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Módulos, paquetes y namespaces Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -1022,13 +1032,15 @@ También es posible importar todos los elementos de un módulo sin necesidad de 
 
 No obstante, puede ser muy útil a la hora de hacer pruebas de funciones u otros elementos de un módulo desde el intérprete de Python. Para conocer más sobre los módulos, paquetes y namespaces, puedes visitar la siguiente página web: https://docs.python.org/3/tutorial/modules.html ç
 
+### 6. Fuentes de información
+
 • Página oficial del lenguaje Python: https://www.python.org/ • Módulos: https://docs.python.org/3/tutorial/modules.html • Módulos, paquetes y namespaces: https://uniwebsidad.com/libros/python/capitulo
 
 Escuela de programación - Python Módulos, paquetes y namespaces • El Zen de Python explicado: https://pybaq.co/blog/el-zen-de-python-explicado/ • «Curso de Programación en Python», José Luis Tomás Navarro.
 
 ---
 
-## 0.6 Estructuras de control
+# 0.6 Estructuras de control
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Estructuras de control Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -1050,6 +1062,8 @@ Escuela de programación - Python Estructuras de control CONTENIDO
 - Fuentes de información.................................................................................................................14
 
 Escuela de programación - Python Estructuras de control
+
+### 1. Introducción
 
 Hasta el momento hemos estado trabajando con bloques de instrucciones que se ejecutaban todas y cada una de ellas y, además, en el mismo orden en el que estaban escritas.
 
@@ -1196,13 +1210,15 @@ Escuela de programación - Python Estructuras de control Hay que tener en cuenta
 
 EJECUCIÓN DEL PROGRAMA
 
+### 6. Fuentes de información
+
 • Página oficial del lenguaje Python: https://www.python.org/ • Sentencias compuestas: https://docs.python.org/es/3/reference/compound_stmts.html • Curso de Python 3 de José Domingo Muñoz: https://plataforma.josedomingo.org/pledin/cursos/python3/ • «Curso de Programación en Python», José Luis Tomás Navarro.
 
 Figura 21: Sentencia "if" anidada dentro de un "while"
 
 ---
 
-## 0.7 Tipos de datos complejos
+# 0.7 Tipos de datos complejos
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Tipos de datos complejos Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -1223,6 +1239,8 @@ Escuela de programación - Python Tipos de datos complejos CONTENIDO
 - Fuentes de información.................................................................................................................26
 
 Escuela de programación - Python Tipos de datos complejos
+
+### 1. Introducción
 
 Hasta el momento hemos estado trabajando con tipos de datos básicos como los números, los valores booleanos/lógicos y las cadenas de texto pero existen tipos de datos más complejos que aportan mayor funcionalidad al lenguaje. En este documento nos centraremos en dos de ellos: las listas y los diccionarios. El primero de ellos pertenece a los tipos de datos secuencia y el segundo a los tipos de datos mapa.
 
@@ -1505,13 +1523,15 @@ Escuela de programación - Python Tipos de datos complejos La solución pasa por
 
 • Diccionarios en Python (en castellano): https://j2logo.com/python/tutorial/tipo-dict- python/ • Tipo diccionarios (en castellano): https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion3/ tipo_diccionarios.html
 
+### 5. Fuentes de información
+
 • Página oficial del lenguaje Python: https://www.python.org/ • Curso de Python 3 de José Domingo Muñoz: https://plataforma.josedomingo.org/pledin/cursos/python3/ • Lists and tuples in Python: https://realpython.com/python-lists-tuples/ • Diccionarios: https://docs.python.org/es/3/tutorial/datastructures.html#dictionaries • Diccionarios en Python: https://j2logo.com/python/tutorial/tipo-dict-python/ • Tipo diccionarios
 
 https://entrenamiento-python-basico.readthedocs.io/es/latest/leccion3/ tipo_diccionarios.html • «Curso de Programación en Python», José Luis Tomás Navarro.
 
 ---
 
-## 0.8 Funciones
+# 0.8 Funciones
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Funciones Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -1535,6 +1555,8 @@ Escuela de programación - Python Funciones CONTENIDO
 - Fuentes de información.................................................................................................................15
 
 Escuela de programación - Python Funciones
+
+### 1. Introducción
 
 Hasta el momento hemos estado creando módulos (ficheros .py) que utilizaban tres estructuras básicas de control: secuencias de instrucciones, sentencias alternativas (if) y sentencias repetitivas (while, for). Además, hemos utilizado funciones estándar de Python, o creadas por terceros, que realizaban tareas concretas por nosotros.
 
@@ -1728,7 +1750,7 @@ La función filter() devuelve un objeto de tipo filtro, así que lo convertimos 
 
 ---
 
-## 0.9 Errores y excepciones
+# 0.9 Errores y excepciones
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Errores y excepciones Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -1744,6 +1766,8 @@ Escuela de programación - Python Errores y excepciones CONTENIDO
 - Fuentes de información...................................................................................................................7
 
 Escuela de programación - Python Errores y excepciones
+
+### 1. Introducción
 
 Existen varios puntos en la vida de un programa en los que se pueden producir errores. Por ejemplo: • En la fase de análisis del problema si no hemos sido capaces de entender los requisitos necesarios para su resolución. Podríamos llegar a resolver correctamente un problema equivocado.
 
@@ -1815,7 +1839,7 @@ Si quieres ampliar la información sobre excepciones, puedes visitar la siguient
 
 ---
 
-## 0.10 Ficheros
+# 0.10 Ficheros
 
 ESCUELA DE PROGRAMACIÓN (20CT47ES006 – CEFIRE CTEM) PYTHON Ficheros Esta obra está sujeta a la licencia Reconocimiento-NoComercial- CompartirIgual 4.0 Internacional de Creative Commons. Para ver una copia de esta licencia, visitad http://creativecommons.org/licenses/by-nc-sa/4.0/.
 
@@ -1835,6 +1859,8 @@ Escuela de programación - Python Ficheros CONTENIDO
 - Fuentes de información.................................................................................................................15
 
 Escuela de programación - Python Ficheros
+
+### 1. Introducción
 
 Hasta el momento todos los datos que manejábamos en nuestros programas desaparecían una vez que acababa su ejecución. Dicho con otras palabras, cuando volvíamos a ejecutar el programa no quedaba ni rastro de las modificaciones que había hecho el usuario. Conforme vayamos haciendo programas más complejos, lo habitual será que nos interese almacenar de forma persistente los cálculos que hacemos para utilizarlos en otro momento. Es decir, almacenar la información que generan nuestros programas en el disco duro del ordenador, móvil, etc.
 
@@ -2007,13 +2033,15 @@ mi_fichero.open(nombre_fichero, modo) try: #instrucciones de lectura/escritura f
 
 • Leyendo y escribiendo ficheros (en castellano): https://docs.python.org/es/3/tutorial/inputoutput.html#reading-and-writing-files • Reading and writing files in Python: https://realpython.com/read-write-files- python/
 
+### 7. Fuentes de información
+
 • Página oficial del lenguaje Python: https://www.python.org/ • Reading and writing files in Python: https://realpython.com/read-write-files-python/
 
 Escuela de programación - Python Ficheros • Curso de Python 3 de José Domingo Muñoz: https://plataforma.josedomingo.org/pledin/cursos/python3/ • Manejo de ficheros de Hektor Profe: https://docs.hektorprofe.net/python/manejo- de-ficheros/ • «Curso de Programación en Python», José Luis Tomás Navarro.
 
 ---
 
-## ✍️ Activitats pràctiques UT0
+# ✍️ Activitats pràctiques UT0
 
 > **✍️ Activitat Pràctica 0.1 — Exercici Python**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
@@ -2082,6 +2110,8 @@ Escuela de programación - Python Ficheros • Curso de Python 3 de José Doming
 > 3.1. Imprimir todos los vuelos........................................................................................................4 3.2. Buscar un número de vuelo.....................................................................................................5 3.3. Buscar vuelo por clave.............................................................................................................6 3.4. Añadir vuelo nuevo..................................................................................................................7 3.5. Borrar vuelo por número..........................................................................................................7
 >
 > Escuela de programación - Python Módulos, estructuras y tipos de datos: ejercicio obligatorio
+>
+> ### 1. Introducción
 >
 > En este documento puedes encontrar el ejercicio obligatorio de esta unidad. Es imprescindible entregarlo en tiempo y forma para superar esta parte del curso. Tendrás la oportunidad de realizar la entrega de varias versiones del ejercicio hasta que consigas superarlo y la profesora te indicará en cada corrección las mejoras necesarias.
 >
@@ -2578,3 +2608,5 @@ Escuela de programación - Python Ficheros • Curso de Python 3 de José Doming
 
 > **✍️ Activitat Pràctica 0.10 — Entregable: Projecte Videojoc**
 > Realitza l'activitat pràctica seguint les indicacions de l'apartat.
+
+---

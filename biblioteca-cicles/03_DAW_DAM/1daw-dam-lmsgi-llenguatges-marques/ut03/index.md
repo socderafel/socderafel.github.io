@@ -1,23 +1,27 @@
 ---
 layout: default
-title: "UT3 — Unidad 6 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
+title: "UD6 — Transformació i Cerca en Documents XML · Unitat Completa"
 course_root: ".."
 badge: "1r DAW / DAM / ASIX · Grau Superior · UT3 Completa"
-prev_url: "../ut02/ut02actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
+prev_url: "../ut04/ut04actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT4"
 next_url: "../ut03/ut0301.html"
 next_label: "3.1 Continguts i Recursos ➡️"
 ---
 
-# 📘 UT3 — Unidad 6 (Unitat Completa)
+# 📘 UD6 — Transformació i Cerca en Documents XML (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**3.1 Continguts i Recursos**](#ut0301) (o [obrir en pàgina individual ➡️](./ut0301.md) )
-> - [**✍️ Activitats pràctiques UT3**](#ut03actividades) (o [obrir en pàgina individual ➡️](./ut03actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**3.1 Continguts i Recursos**](./ut0301.md)
+- [**✍️ Activitats pràctiques UT3**](./ut03actividades.md)
 
 ---
 
-## 3.1 Continguts i Recursos
+# 3.1 Continguts i Recursos
 
 > **🔗 Recurs Web: UD6 - CSS 3**
 > [**🌐 Obrir recurs extern (https://www.w3schools.com/css/) ↗️**](https://www.w3schools.com/css/)
@@ -62,7 +66,7 @@ next_label: "3.1 Continguts i Recursos ➡️"
 
 ---
 
-## ✍️ Activitats pràctiques UT3
+# ✍️ Activitats pràctiques UT3
 
 > **✍️ Activitat Pràctica 3.1 — Ejercicio CSS**
 > Consiste en crear una sencilla web html donde i**mporte el diseño con css**desdeun archivo externo. La web debe tener la mayoría (no todas) de las secciones de la unidad 6 y si alguien quiere añadir algo más también se puede.
@@ -73,3 +77,5 @@ next_label: "3.1 Continguts i Recursos ➡️"
 > Subir el proyecto comprimido y recordar que tiene que funcionar en cualquier ordenador no solo en el vuestro.
 >
 > Fecha de entrega el 28-2-2022 a las 0h.
+
+---

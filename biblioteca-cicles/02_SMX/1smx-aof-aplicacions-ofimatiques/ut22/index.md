@@ -3,8 +3,8 @@ layout: default
 title: "UT22 — GIMP — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UT22 Completa"
-prev_url: "../ut21/ut2101.html"
-prev_label: "⬅️ 21.1 Practiques_Pendents"
+prev_url: "../ut20/ut2001.html"
+prev_label: "⬅️ 20.1 Treball Final Base de dades"
 next_url: "../ut22/ut2201.html"
 next_label: "22.1 Tema 1: Imatge Digital ➡️"
 ---

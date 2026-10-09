@@ -2,14 +2,14 @@
 layout: default
 title: "Projecte Intermodular (2n FPB) — Portal Docent — Projecte Intermodular (2n FPB)"
 course_root: "."
-badge: "2n FPB Informàtica d'Oficina · 44 Hores · IES Mestre Ramón Esteve"
+badge: "2n FPB Informàtica d'Oficina · 44 Hores"
 next_url: "./up01/up01ras.html"
 next_label: "1.0 RA i Criteris d'Avaluació ➡️"
 ---
 
 # 🚀 Projecte Intermodular — 2n FP Bàsica (Informàtica d'Oficina)
 
-Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats pràctiques del mòdul de **Projecte Intermodular** de 2n curs del Cicle Formatiu de Grau Bàsic en **Informàtica d'Oficina** en l'**IES Mestre Ramón Esteve (Catadau)**.
+Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats pràctiques del mòdul de **Projecte Intermodular** de 2n curs del Cicle Formatiu de Grau Bàsic en **Informàtica d'Oficina**.
 
 > **🛠️ El Repte del Curs i Rutina Estricta d'Aula-Taller (Sessions de 2 hores)**
 > - **Objectiu Pràctic:** Fundar i gestionar des de zero la teua pròpia **empresa de serveis i manteniment informàtic** abans d'iniciar la fase de **Formació en Empresa** al mes de març.

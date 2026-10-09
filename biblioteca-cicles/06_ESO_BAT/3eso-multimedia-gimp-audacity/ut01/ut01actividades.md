@@ -6,7 +6,7 @@ badge: "3r ESO · UT1 — GIMP"
 prev_url: "../ut01/ut0102.html"
 prev_label: "⬅️ 1.2 Dosier de actividades"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

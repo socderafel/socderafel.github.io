@@ -4,9 +4,9 @@ title: "✍️ Activitats pràctiques UT7 — Seguretat Informàtica | Portal Do
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UT7 — Seguretat activa: Control de xarxes"
 prev_url: "../ut07/index.html"
-prev_label: "⬅️ 📘 UT7 Completa"
+prev_label: "⬅️ 📘 UT7 Completa (1 pàgina)"
 next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_label: "📘 UT8 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

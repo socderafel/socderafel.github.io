@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT3 Completa"
 prev_url: "../ut02/ut0218.html"
 prev_label: "⬅️ 2.18 curiosidades en Writer"
 next_url: "../ut03/ut0301.html"
-next_label: "3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina.  ➡️"
+next_label: "3.1 Pràctiques Tema 6 (Capçaleres i Peus de pàgina. ➡️"
 ---
 
 # 📘 UT3 — Processador de text (II) (Unitat Completa)

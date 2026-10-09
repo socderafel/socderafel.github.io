@@ -3,10 +3,10 @@ layout: default
 title: "✍️ Activitats pràctiques UT1 — Ofimàtica i Arxiu de Documents | Portal Docent Pepe Cuenca"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UT1 — COMUNICACIONS INTERNES I EXTERNES"
-prev_url: "../ut01/ut0103.html"
-prev_label: "⬅️ 1.3 Xat Comunicacions Internes i Externes"
+prev_url: "../ut01/ut0102.html"
+prev_label: "⬅️ 1.2 Guia estudi"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

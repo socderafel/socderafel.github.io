@@ -6,7 +6,7 @@ badge: "1r Batxillerat · UT3 — Xarxes"
 prev_url: "../ut03/ut0303.html"
 prev_label: "⬅️ 3.3 Maquinari"
 next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_label: "📘 UT4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3

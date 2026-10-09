@@ -6,7 +6,7 @@ badge: "2n SMX · Grau Mitjà · UT4 — Unit 4 Content Management Systems"
 prev_url: "../ut04/ut0405.html"
 prev_label: "⬅️ 4.5 Wordpress Practical Exam Example"
 next_url: "../ut05/index.html"
-next_label: "📘 UT5 Completa ➡️"
+next_label: "📘 UT5 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT4

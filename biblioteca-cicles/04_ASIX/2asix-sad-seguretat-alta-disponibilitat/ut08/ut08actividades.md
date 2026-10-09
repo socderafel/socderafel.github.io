@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT8 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT8 — Setmanes (13-14) Del 11 al 22 de Desembre"
+badge: "2n ASIX · Grau Superior · UD7 — Seguretat en Xarxes Corporatives, Sense Fil i VPN"
 prev_url: "../ut08/ut0803.html"
 prev_label: "⬅️ 8.3 VPN"
 next_url: "../ut09/index.html"
-next_label: "📘 UT9 Completa ➡️"
+next_label: "📘 UD8 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

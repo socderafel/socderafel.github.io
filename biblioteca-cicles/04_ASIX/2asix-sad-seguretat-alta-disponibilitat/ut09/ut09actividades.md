@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT9 — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "2n ASIX · Grau Superior · UT9 — Setmanes Del 8 al 21 de Gener"
+badge: "2n ASIX · Grau Superior · UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA)"
 prev_url: "../ut09/ut0902.html"
 prev_label: "⬅️ 9.2 HA - Alta_Disponibilitat"
 next_url: "../ut10/index.html"
-next_label: "📘 UT10 Completa ➡️"
+next_label: "📘 UD9 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT9

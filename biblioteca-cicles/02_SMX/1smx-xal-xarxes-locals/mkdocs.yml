@@ -4,11 +4,6 @@ theme:
   language: ca
 nav:
   - Inici: index.md
-  - "UT0 — Unitat Didàctica 0":
-      - "📘 UT0 Completa (1 pàgina)": ut00/index.md
-      - "0.1 Sistemes Microinformàtics i Xarxes": ut00/ut0001.md
-      - "0.2 Avaluació": ut00/ut0002.md
-      - "✍️ Activitats pràctiques UT0": ut00/ut00actividades.md
   - "UT1 — Unitat Didàctica 1":
       - "📘 UT1 Completa (1 pàgina)": ut01/index.md
       - "1.1 Continguts i Recursos": ut01/ut0101.md
@@ -29,10 +24,6 @@ nav:
       - "📘 UT5 Completa (1 pàgina)": ut05/index.md
       - "5.1 Continguts i Recursos": ut05/ut0501.md
       - "✍️ Activitats pràctiques UT5": ut05/ut05actividades.md
-  - "UT6 — Final de Curs":
-      - "📘 UT6 Completa (1 pàgina)": ut06/index.md
-      - "6.1 Dossier de Recuperació": ut06/ut0601.md
-      - "✍️ Activitats pràctiques UT6": ut06/ut06actividades.md
   - "UT7 — Unitat Didàctica 7":
       - "📘 UT7 Completa (1 pàgina)": ut07/index.md
       - "7.1 Continguts i Recursos": ut07/ut0701.md

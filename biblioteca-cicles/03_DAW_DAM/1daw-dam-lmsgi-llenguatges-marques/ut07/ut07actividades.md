@@ -2,11 +2,11 @@
 layout: default
 title: "✍️ Activitats pràctiques UT7 — Llenguatges de Marques i Sistemes de Gestió d'Informació | Portal Docent Pepe Cuenca"
 course_root: ".."
-badge: "1r DAW / DAM / ASIX · Grau Superior · UT7 — Unidad 2"
+badge: "1r DAW / DAM / ASIX · Grau Superior · UD2 — Llenguatge XML"
 prev_url: "../ut07/ut0703.html"
 prev_label: "⬅️ 7.3 Soluciones ejercicios Tema 2"
-next_url: "../ut08/index.html"
-next_label: "📘 UT8 Completa ➡️"
+next_url: "../ut06/index.html"
+next_label: "📘 UD3 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT7

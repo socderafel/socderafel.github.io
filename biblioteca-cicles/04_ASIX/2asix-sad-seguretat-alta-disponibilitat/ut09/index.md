@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "UT9 — Setmanes Del 8 al 21 de Gener — Seguretat i Alta Disponibilitat | Portal Docent Pepe Cuenca"
+title: "UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA) · Unitat Completa"
 course_root: ".."
 badge: "2n ASIX · Grau Superior · UT9 Completa"
 prev_url: "../ut08/ut08actividades.html"
@@ -9,16 +9,20 @@ next_url: "../ut09/ut0901.html"
 next_label: "9.1 Firewall_i_Proxy ➡️"
 ---
 
-# 📘 UT9 — Setmanes Del 8 al 21 de Gener (Unitat Completa)
+# 📘 UD8 — Tallafocs (Firewall), Proxy i Alta Disponibilitat (HA) (Unitat Completa)
 
-> **💡 📑 Índex d'Apartats d'aquesta Unitat**
-> - [**9.1 Firewall_i_Proxy**](#ut0901) (o [obrir en pàgina individual ➡️](./ut0901.md) )
-> - [**9.2 HA - Alta_Disponibilitat**](#ut0902) (o [obrir en pàgina individual ➡️](./ut0902.md) )
-> - [**✍️ Activitats pràctiques UT9**](#ut09actividades) (o [obrir en pàgina individual ➡️](./ut09actividades.md) )
+> **💡 Vista unificada de la unitat**
+> Aquesta pàgina integra tots els apartats teòrics, recursos i activitats pràctiques de la unitat en una sola lectura contínua.
+
+## 📑 Índex d'Apartats d'aquesta Unitat
+
+- [**9.1 Firewall_i_Proxy**](./ut0901.md)
+- [**9.2 HA - Alta_Disponibilitat**](./ut0902.md)
+- [**✍️ Activitats pràctiques UT9**](./ut09actividades.md)
 
 ---
 
-## 9.1 Firewall_i_Proxy
+# 9.1 Firewall_i_Proxy
 
 > **📌 🏷️ Apunt de la Unitat**
 > #### UD 7 Firewall i Proxy
@@ -83,7 +87,7 @@ Consells finals Protegir la xarxa. STP, Link Aggregation, Port Security, VLAN
 
 ---
 
-## 9.2 HA - Alta_Disponibilitat
+# 9.2 HA - Alta_Disponibilitat
 
 ALTA DISPONIBILITAT
 
@@ -251,7 +255,7 @@ On trobem ALTA DISPONIBILITAT
 
 ---
 
-## ✍️ Activitats pràctiques UT9
+# ✍️ Activitats pràctiques UT9
 
 > **✍️ Activitat Pràctica 9.1 — (SAD) Activitat: IPFIRE**
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Activitat IPFIRE IPFire és una distribució de Linux, de codi obert reforçada que funciona principalment com un encaminador i un tallafocs. Un sistema de firewall independent amb una consola d'administració basada en web per a la configuració.
@@ -267,3 +271,5 @@ On trobem ALTA DISPONIBILITAT
 > CICLE: ASIX Parc Salvador Castell, 16 MODALITAT: SEMIPRESENCIAL 46680 Algemesí MÒDUL: SAD Contesta a les preguntes: -Des d’on se configura el ipfire per primera vegada ? -Quin sistema d’arxius recomana el manual ? -Quina adreça d’accés indica l’instal·lador abans del primer re-inici?
 >
 > Quin adaptador s’usa per defecte per accedir a l’administració web ? -Quantes contrasenyes ens demana que registrem per primera vegada, i per a que serviran? -Com podem identificar les targetes de xarxa de la màquina en el moment d’assignar-es a les interfícies? Esquema de xarxa Documentar tot el procés en un document. Documentar els errors o dificultats trobades i documentar-les explicant la solució adoptada. Entregar el document en format PDF. Signa’l amb el teu certificat digital. I no oblidis seguir les indicacions del document de Aules “Com fer un treball”
+
+---

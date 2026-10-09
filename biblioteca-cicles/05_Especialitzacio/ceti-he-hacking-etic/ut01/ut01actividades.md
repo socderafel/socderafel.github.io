@@ -6,7 +6,7 @@ badge: "CE Ciberseguretat (CETI) · UT1 — Elementos esenciales del HE"
 prev_url: "../ut01/ut0103.html"
 prev_label: "⬅️ 1.3 tema1"
 next_url: "../ut02/index.html"
-next_label: "📘 UT2 Completa ➡️"
+next_label: "📘 UT2 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT1

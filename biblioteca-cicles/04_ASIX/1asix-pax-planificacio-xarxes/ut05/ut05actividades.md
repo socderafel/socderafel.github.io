@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT5 — U4 - Nivell físic"
 prev_url: "../ut05/ut0502.html"
 prev_label: "⬅️ 5.2 U4 P1"
 next_url: "../ut06/index.html"
-next_label: "📘 UT6 Completa ➡️"
+next_label: "📘 UT6 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT5

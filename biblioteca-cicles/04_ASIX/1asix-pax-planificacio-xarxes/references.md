@@ -13,8 +13,6 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 
 | Format | Document / Material Integrat | Apartat del Curs | Mida |
 | --- | --- | --- | --- |
-| `PDF` | **Horari-1ASIX.pdf** | Horari 1ASIX | 38.3 KB |
-| `PDF` | **Calendari_21_22.pdf** | Calendari 21 22 | 372.3 KB |
 | `PDF` | **Plànol.pdf** | Plànol IES | 324.4 KB |
 | `PDF` | **U1_Carac_xarxes.pdf** | U1. Caracterització de les xarxes | 756.9 KB |
 | `PDF` | **U1_A1.pdf** | U1 A1 | 96.8 KB |

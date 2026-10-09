@@ -3,8 +3,8 @@ layout: default
 title: "Recursos — Serveis en Xarxa — Serveis en Xarxa | Portal Docent Pepe Cuenca"
 course_root: "."
 badge: "2n SMX · Grau Mitjà · Documentació i Recursos"
-prev_url: "./ut08/ut08actividades.html"
-prev_label: "⬅️ ✍️ Activitats pràctiques UT8"
+prev_url: "./ut02/ut02actividades.html"
+prev_label: "⬅️ ✍️ Activitats pràctiques UT2"
 ---
 
 # 📂 Índex de Materials i Documents Integrats
@@ -35,7 +35,6 @@ Relació de tots els manuals, dossiers teòrics, presentacions i enunciats pràc
 | `PDF` | **IPs Clients.pdf** | Ips clients | 24.9 KB |
 | `PDF` | **prova_validació HTTP.pdf** | Prova validació HTTP | 33.8 KB |
 | `PDF` | **U5-FTP_Escenario_para_la_actividad_grupal.docx.pdf** | Activitat FTP | 100.2 KB |
-| `PDF` | **UD4_http_PROVA_VALIDACIÓ_PRÁCTICA_RECUPERACIO.pdf** | Recuperació_prova de validació_Apache | 26.5 KB |
 | `PDF` | **UD3 Servidor de Nombres de Dominio SMX.pdf** | UD3 Servidor de Nombres de Dominio SMX | 163.2 KB |
 | `PDF` | **PRESENTACIO DNS.pdf** | Presentació Victor i Javier | 2629.6 KB |
 | `PDF` | **3.0-Introduccion-DHCP-1-15.pdf** | presentació DHCP | 70.6 KB |

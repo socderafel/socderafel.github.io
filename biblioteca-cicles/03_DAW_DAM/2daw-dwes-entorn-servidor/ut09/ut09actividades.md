@@ -5,8 +5,8 @@ course_root: ".."
 badge: "2n DAW · Grau Superior · UT9 — Annual Project"
 prev_url: "../ut09/ut0907.html"
 prev_label: "⬅️ 9.7 bandaw.sql 2nd quarter"
-next_url: "../ut10/index.html"
-next_label: "📘 UT10 Completa ➡️"
+next_url: "../references.html"
+next_label: "📂 Índex de Documents i Recursos ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT9

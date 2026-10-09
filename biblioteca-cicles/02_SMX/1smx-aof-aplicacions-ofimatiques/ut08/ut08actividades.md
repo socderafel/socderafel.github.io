@@ -6,7 +6,7 @@ badge: "1r SMX · Grau Mitjà · UT8 — Calc Mòdul 3 (III)"
 prev_url: "../ut08/ut0802.html"
 prev_label: "⬅️ 8.2 RECURSOS pràctiques MÒDUL 3"
 next_url: "../ut09/index.html"
-next_label: "📘 UT9 Completa ➡️"
+next_label: "📘 UT9 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT8

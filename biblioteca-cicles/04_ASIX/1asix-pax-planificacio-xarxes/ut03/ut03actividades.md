@@ -6,7 +6,7 @@ badge: "1r ASIX · Grau Superior · UT3 — U2 - Arquitectura de xarxa"
 prev_url: "../ut03/ut0305.html"
 prev_label: "⬅️ 3.5 U2 E1"
 next_url: "../ut04/index.html"
-next_label: "📘 UT4 Completa ➡️"
+next_label: "📘 UT4 Completa (1 pàgina) ➡️"
 ---
 
 # ✍️ Activitats pràctiques UT3
