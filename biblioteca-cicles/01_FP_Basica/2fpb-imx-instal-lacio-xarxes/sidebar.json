@@ -1,12 +1,12 @@
 {
   "title": "🔌 Instal·lació i Manteniment de Xarxes per a Transmissió de Dades — 2n FPB · Grau Bàsic",
   "home": {
-    "label": "🏠 Inici Instal·lació i Manteniment de Xarxes per a Transmissió de Dades",
+    "label": "🏠 Inici Instal·lació i Manteniment de Xarxes",
     "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — Unitat 1",
+      "summary": "UD1 — Fonaments de les Xarxes de Dades i Comunicació",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
@@ -14,73 +14,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 Dijous 05 d'octubre examen Tema 1",
+          "label": "1.1 Què és una xarxa informàtica i classificació segons l'abast",
           "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 Presentació Tema 1",
+          "label": "1.2 Topologies físiques i lògiques de xarxa",
           "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 Tipos de redes - Esquema",
+          "label": "1.3 Arquitectura en capes: models OSI i TCP/IP",
           "href": "./ut01/ut0103.md"
         },
         {
-          "label": "1.4 Topología de red - Esquema",
+          "label": "1.4 Normes i estàndards de comunicació (IEEE 802.3 i 802.11)",
           "href": "./ut01/ut0104.md"
         },
         {
-          "label": "1.5 Activitat 1",
+          "label": "1.5 Pràctica de laboratori: Identificació i esquema d'una xarxa local",
           "href": "./ut01/ut0105.md"
-        },
-        {
-          "label": "1.6 Activitat 2",
-          "href": "./ut01/ut0106.md"
-        },
-        {
-          "label": "1.7 Activitat 3",
-          "href": "./ut01/ut0107.md"
-        },
-        {
-          "label": "1.8 Activitat 4",
-          "href": "./ut01/ut0108.md"
-        },
-        {
-          "label": "1.9 Activitat 5",
-          "href": "./ut01/ut0109.md"
-        },
-        {
-          "label": "1.10 Test 29-09",
-          "href": "./ut01/ut0110.md"
-        },
-        {
-          "label": "1.11 Activitat 6",
-          "href": "./ut01/ut0111.md"
-        },
-        {
-          "label": "1.12 Video - Com fer un cable LAN",
-          "href": "./ut01/ut0112.md"
-        },
-        {
-          "label": "1.13 URL Video cable LAN",
-          "href": "./ut01/ut0113.md"
-        },
-        {
-          "label": "1.14 Video Cable LAN 2",
-          "href": "./ut01/ut0114.md"
-        },
-        {
-          "label": "1.15 Activitat - Cable LAN",
-          "href": "./ut01/ut0115.md"
-        },
-        {
-          "label": "1.16 Examen Tema 1 - Part 1",
-          "href": "./ut01/ut0116.md"
         }
       ]
     },
     {
-      "summary": "UD2 — Unitat 1 - Part 2",
+      "summary": "UD2 — Medis de Transmissió: Cablejat de Parell Trenat",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
@@ -88,45 +44,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 Divendres 3 de novembre examen Tema 1 Part 2",
+          "label": "2.1 Tipus de cables de parell trenat i categories",
           "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 Presentació Tema 1 - Part 2",
+          "label": "2.2 Connectors RJ45 i codis de colors T568A i T568B",
           "href": "./ut02/ut0202.md"
         },
         {
-          "label": "2.3 Activitat 7",
+          "label": "2.3 Eines de taller per a cablejat de dades",
           "href": "./ut02/ut0203.md"
         },
         {
-          "label": "2.4 Activitat 8",
+          "label": "2.4 Pràctica pas a pas: Construcció d'un cable directe T568B",
           "href": "./ut02/ut0204.md"
         },
         {
-          "label": "2.5 Activitat 10",
+          "label": "2.5 Diagnòstic de fallades habituals en el conectoritzat",
           "href": "./ut02/ut0205.md"
-        },
-        {
-          "label": "2.6 Activitat 9",
-          "href": "./ut02/ut0206.md"
-        },
-        {
-          "label": "2.7 Activitat 11",
-          "href": "./ut02/ut0207.md"
-        },
-        {
-          "label": "2.8 Examen Tema 1 Part 2",
-          "href": "./ut02/ut0208.md"
-        },
-        {
-          "label": "2.9 Activitat final",
-          "href": "./ut02/ut0209.md"
         }
       ]
     },
     {
-      "summary": "UD3 — Unitat 2",
+      "summary": "UD3 — Fibra Òptica i Comunicacions Sense Fil (Wi-Fi)",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
@@ -134,61 +74,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Divendres 1 de desembre examen Tema 2",
+          "label": "3.1 Fonaments de la fibra òptica: monomode vs multimode",
           "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 Presentació Tema 2 - EXAMEN",
+          "label": "3.2 Seguretat i precaucions laborals amb fibra òptica",
           "href": "./ut03/ut0302.md"
         },
         {
-          "label": "3.3 Presentació Tema 2 - Sessió 1",
+          "label": "3.3 Xarxes sense fil Wi-Fi: freqüències, canals i cobertura",
           "href": "./ut03/ut0303.md"
         },
         {
-          "label": "3.4 Test Tema 2 - Sessió 1",
+          "label": "3.4 Seguretat en Wi-Fi: SSID, filtratge MAC, WPA2 i WPA3",
           "href": "./ut03/ut0304.md"
         },
         {
-          "label": "3.5 Presentació Tema 2 - Sessió 2",
+          "label": "3.5 Pràctica: Anàlisi d'espectre Wi-Fi i configuració d'un AP",
           "href": "./ut03/ut0305.md"
-        },
-        {
-          "label": "3.6 Activitat 2",
-          "href": "./ut03/ut0306.md"
-        },
-        {
-          "label": "3.7 Presentació Tema 2 - Sessió 3",
-          "href": "./ut03/ut0307.md"
-        },
-        {
-          "label": "3.8 Activitat 3",
-          "href": "./ut03/ut0308.md"
-        },
-        {
-          "label": "3.9 Presentació Tema 2 - Sessió 4",
-          "href": "./ut03/ut0309.md"
-        },
-        {
-          "label": "3.10 Activitat 4",
-          "href": "./ut03/ut0310.md"
-        },
-        {
-          "label": "3.11 Presentació Tema 2 - Sessió 5",
-          "href": "./ut03/ut0311.md"
-        },
-        {
-          "label": "3.12 Activitat 5",
-          "href": "./ut03/ut0312.md"
-        },
-        {
-          "label": "3.13 Examen unitat 2",
-          "href": "./ut03/ut0313.md"
         }
       ]
     },
     {
-      "summary": "UD4 — Unitat 3",
+      "summary": "UD4 — Dispositius d'Interconnexió de Xarxa",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
@@ -196,69 +104,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 Dimarts 16 de gener examen Unitat 3",
+          "label": "4.1 Targetes de xarxa (NIC) i l'adreça física MAC",
           "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 Presentació Unitat 3",
+          "label": "4.2 Concentradors (Hub) vs Commutadors (Switch) i la taula CAM",
           "href": "./ut04/ut0402.md"
         },
         {
-          "label": "4.3 Presentació Unitat 3 - Sessió 1",
+          "label": "4.3 Encaminadors (Routers): interconnexió de xarxes",
           "href": "./ut04/ut0403.md"
         },
         {
-          "label": "4.4 Activitat 1",
+          "label": "4.4 Dispositius auxiliars: repetidors, adaptadors PLC i PoE",
           "href": "./ut04/ut0404.md"
         },
         {
-          "label": "4.5 Presentació Unitat 3 - Sessió 2",
+          "label": "4.5 Pràctica: Muntatge d'una xarxa commutada d'aula",
           "href": "./ut04/ut0405.md"
-        },
-        {
-          "label": "4.6 Activitat 2",
-          "href": "./ut04/ut0406.md"
-        },
-        {
-          "label": "4.7 Presentació Unitat 3 - Sessió 3",
-          "href": "./ut04/ut0407.md"
-        },
-        {
-          "label": "4.8 Activitat 3",
-          "href": "./ut04/ut0408.md"
-        },
-        {
-          "label": "4.9 Presentació Unitat 3 - Sessió 4-NO",
-          "href": "./ut04/ut0409.md"
-        },
-        {
-          "label": "4.10 Activitat 4-NO",
-          "href": "./ut04/ut0410.md"
-        },
-        {
-          "label": "4.11 Presentació Unitat 3 - Sessió 5-NO",
-          "href": "./ut04/ut0411.md"
-        },
-        {
-          "label": "4.12 Activitat 5-NO",
-          "href": "./ut04/ut0412.md"
-        },
-        {
-          "label": "4.13 Presentació Unitat 3 - Sessió 4",
-          "href": "./ut04/ut0413.md"
-        },
-        {
-          "label": "4.14 Activitat 4",
-          "href": "./ut04/ut0414.md"
-        },
-        {
-          "label": "4.15 Examen unitat 3",
-          "href": "./ut04/ut0415.md"
         }
       ]
     },
     {
-      "summary": "UD5 — Capítol 1 - netacad -  L'ha fet Belen",
+      "summary": "UD5 — Cablejat Estructurat i Infraestructura Física",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
@@ -266,29 +134,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 Resum capítol 1",
+          "label": "5.1 Concepte i subsistemes de cablejat estructurat",
           "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 Pràctica 1",
+          "label": "5.2 L'armari de telecomunicacions (Rack de 19 polzades)",
           "href": "./ut05/ut0502.md"
         },
         {
-          "label": "5.3 Pràctica 2",
+          "label": "5.3 Canalitzacions, canaletes, caixes i rosetes de paret",
           "href": "./ut05/ut0503.md"
         },
         {
-          "label": "5.4 Prova pràctica 1",
+          "label": "5.4 Prevenció de Riscos Laborals (PRL) en instal·lacions",
           "href": "./ut05/ut0504.md"
         },
         {
-          "label": "5.5 Cuestionari 1",
+          "label": "5.5 Pràctica de taller: Muntatge de canaleta, roseta i patch panel",
           "href": "./ut05/ut0505.md"
         }
       ]
     },
     {
-      "summary": "UD6 — Capítol 3 - netacad",
+      "summary": "UD6 — Configuració d'Equips i Adreçament IPv4",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
@@ -296,53 +164,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 Dimarts 13 de febrer, examen Capítol 3",
+          "label": "6.1 L'adreça IPv4: estructura, classes i adreces privades",
           "href": "./ut06/ut0601.md"
         },
         {
-          "label": "6.2 Activitat 1",
+          "label": "6.2 Màscara de subxarxa, porta d'enllaç i difusió",
           "href": "./ut06/ut0602.md"
         },
         {
-          "label": "6.3 Activitat 2",
+          "label": "6.3 Servidors DNS i servei d'assignació automàtica DHCP",
           "href": "./ut06/ut0603.md"
         },
         {
-          "label": "6.4 Activitat 2.2",
+          "label": "6.4 Ordres bàsiques de diagnòstic de xarxa en consola",
           "href": "./ut06/ut0604.md"
         },
         {
-          "label": "6.5 Activitat 3",
+          "label": "6.5 Pràctica: Configuració manual d'IPs i resolució de conflictes",
           "href": "./ut06/ut0605.md"
-        },
-        {
-          "label": "6.6 Activitat 4",
-          "href": "./ut06/ut0606.md"
-        },
-        {
-          "label": "6.7 Activitat 5",
-          "href": "./ut06/ut0607.md"
-        },
-        {
-          "label": "6.8 Activitat 6",
-          "href": "./ut06/ut0608.md"
-        },
-        {
-          "label": "6.9 Cuestionari 3",
-          "href": "./ut06/ut0609.md"
-        },
-        {
-          "label": "6.10 Examen pràctic",
-          "href": "./ut06/ut0610.md"
-        },
-        {
-          "label": "6.11 Activitat repàs",
-          "href": "./ut06/ut0611.md"
         }
       ]
     },
     {
-      "summary": "UD7 — Capítol 5 - netacad",
+      "summary": "UD7 — Compartició de Recursos i Serveis Locals",
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
@@ -350,45 +194,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 Activitat 1",
+          "label": "7.1 Compartició de carpetes i fitxers: permisos de xarxa vs NTFS",
           "href": "./ut07/ut0701.md"
         },
         {
-          "label": "7.2 Pràctica 1",
+          "label": "7.2 Mapejat d'unitats de xarxa en Windows",
           "href": "./ut07/ut0702.md"
         },
         {
-          "label": "7.3 Activitat 2",
+          "label": "7.3 Instal·lació i compartició d'impressores de xarxa",
           "href": "./ut07/ut0703.md"
         },
         {
-          "label": "7.4 Activitat 3",
+          "label": "7.4 Compartició en xarxes heterogènies: Linux i el protocol Samba",
           "href": "./ut07/ut0704.md"
         },
         {
-          "label": "7.5 Activitat 4",
+          "label": "7.5 Pràctica: Creació d'un recurs compartit amb permisos diferenciats",
           "href": "./ut07/ut0705.md"
-        },
-        {
-          "label": "7.6 Pràctica 2",
-          "href": "./ut07/ut0706.md"
-        },
-        {
-          "label": "7.7 Cuestionari 5",
-          "href": "./ut07/ut0707.md"
-        },
-        {
-          "label": "7.8 Examen pràctic",
-          "href": "./ut07/ut0708.md"
-        },
-        {
-          "label": "7.9 Definicions",
-          "href": "./ut07/ut0709.md"
         }
       ]
     },
     {
-      "summary": "UD8 — Capítol 7 - netacad",
+      "summary": "UD8 — Manteniment, Diagnòstic i Seguretat en Xarxa",
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
@@ -396,37 +224,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 Activitat 1",
+          "label": "8.1 Tipus d'avaries en xarxa: fallades físiques vs lògiques",
           "href": "./ut08/ut0801.md"
         },
         {
-          "label": "8.2 Activitat 2",
+          "label": "8.2 Metodologia de resolució d'avaries pas a pas (de baix a dalt)",
           "href": "./ut08/ut0802.md"
         },
         {
-          "label": "8.3 Activitat 3",
+          "label": "8.3 Seguretat bàsica perimetral: el tallafocs (Firewall)",
           "href": "./ut08/ut0803.md"
         },
         {
-          "label": "8.4 Activitat 4",
+          "label": "8.4 Manteniment preventiu: neteja, etiquetatge i còpies de suport",
           "href": "./ut08/ut0804.md"
         },
         {
-          "label": "8.5 Definicions",
+          "label": "8.5 Pràctica: Resolució de supòsits d'incidències en xarxa",
           "href": "./ut08/ut0805.md"
-        },
-        {
-          "label": "8.6 Test netacad",
-          "href": "./ut08/ut0806.md"
-        },
-        {
-          "label": "8.7 Examen pràctic",
-          "href": "./ut08/ut0807.md"
         }
       ]
     },
     {
-      "summary": "UD9 — Repàs",
+      "summary": "UD9 — Projecte Integrador: Muntatge d'una Xarxa per a Petita Oficina",
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
@@ -434,60 +254,24 @@
           "class": "unit-full-link"
         },
         {
-          "label": "9.1 Capítol 3",
+          "label": "9.1 Anàlisi de requisits i plànol de distribució",
           "href": "./ut09/ut0901.md"
         },
         {
-          "label": "9.2 Mode provar 3",
+          "label": "9.2 Pressupost i llista de materials",
           "href": "./ut09/ut0902.md"
         },
         {
-          "label": "9.3 Mode aprender 3",
+          "label": "9.3 Desplegament del cablejat físic i canalitzacions",
           "href": "./ut09/ut0903.md"
         },
         {
-          "label": "9.4 Examen 3",
+          "label": "9.4 Connexió al rack, switch i configuració de xarxa",
           "href": "./ut09/ut0904.md"
         },
         {
-          "label": "9.5 __________________________________________________...",
+          "label": "9.5 Verificació, proves de rendiment i memòria final",
           "href": "./ut09/ut0905.md"
-        },
-        {
-          "label": "9.6 Capítol 5",
-          "href": "./ut09/ut0906.md"
-        },
-        {
-          "label": "9.7 Mode provar 5",
-          "href": "./ut09/ut0907.md"
-        },
-        {
-          "label": "9.8 Mode aprender 5",
-          "href": "./ut09/ut0908.md"
-        },
-        {
-          "label": "9.9 Examen 5",
-          "href": "./ut09/ut0909.md"
-        },
-        {
-          "label": "9.10 __________________________________________________... (còpia)",
-          "href": "./ut09/ut0910.md"
-        },
-        {
-          "label": "9.11 Capítol 7",
-          "href": "./ut09/ut0911.md"
-        },
-        {
-          "label": "9.12 Mode provar 7",
-          "href": "./ut09/ut0912.md"
-        },
-        {
-          "label": "9.13 Mode aprender 7",
-          "href": "./ut09/ut0913.md"
-        },
-        {
-          "label": "9.14 Examen 7",
-          "href": "./ut09/ut0914.md"
         }
       ]
     }
