@@ -6,7 +6,7 @@
   },
   "units": [
     {
-      "summary": "UD1 — UD 1 - NUMEROS NATURALES (MATEMÁTICAS)",
+      "summary": "UD1 — Els Nombres Naturals (Matemàtiques)",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
@@ -14,28 +14,24 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 UD 1 - NUMEROS NATURALES",
+          "label": "1.1 El Sistema de Numeració Decimal",
           "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 La Historia de los Números",
+          "label": "1.2 Nombres Naturals i Operacions Bàsiques",
           "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 BOLETIN DE EJERCICIOS NÚMEROS NATURALES",
+          "label": "1.3 Propietats i Jerarquia d'Operacions",
           "href": "./ut01/ut0103.md"
         },
         {
-          "label": "1.4 Mapa Mental",
+          "label": "1.4 Potències de Nombres Naturals i Propietats",
           "href": "./ut01/ut0104.md"
         },
         {
-          "label": "1.5 Matemáticas: Conceptos Fundamentales y Operaciones",
+          "label": "1.5 Butlletí d'Exercicis i Problemes",
           "href": "./ut01/ut0105.md"
-        },
-        {
-          "label": "1.6 Guía de Estudio Detallada: Números Naturales y Potencias",
-          "href": "./ut01/ut0106.md"
         }
       ]
     },

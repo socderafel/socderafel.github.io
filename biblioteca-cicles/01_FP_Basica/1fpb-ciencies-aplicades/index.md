@@ -13,7 +13,7 @@ Aquest temari didàctic està organitzat en unitats de treball (`UD`) estructura
 
 | Unitat Didàctica | Títol del Bloc Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **UD1** | UD 1 - NUMEROS NATURALES (MATEMÁTICAS) | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
+| **UD1** | Els Nombres Naturals (Matemàtiques) | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
 | **UD2** | UD 2 - NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN (BIO y GEO) | [**📘 Entrar a la Unitat →**](./ut02/index.md) |
 | **UD3** | UD 3 - NÚMEROS ENTEROS (MATEMÁTICAS) | [**📘 Entrar a la Unitat →**](./ut03/index.md) |
 | **UD4** | UD4 - MATEMÁTICAS: MCM Y MCD | [**📘 Entrar a la Unitat →**](./ut04/index.md) |
