@@ -36,7 +36,7 @@
       ]
     },
     {
-      "summary": "UD2 — UD 2 - NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN (BIO y GEO)",
+      "summary": "UD2 — Organització de la Matèria i la Nutrició (Biologia)",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
@@ -44,21 +44,25 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN",
+          "label": "2.1 Nivells d'Organització, Cèl·lula i Teixits",
           "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 TEST 1 - UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN",
+          "label": "2.2 Funció de Nutrició i Aparell Digestiu",
           "href": "./ut02/ut0202.md"
         },
         {
-          "label": "2.3 UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN II",
+          "label": "2.3 Aparells Respiratori, Circulatori i Limfàtic",
           "href": "./ut02/ut0203.md"
+        },
+        {
+          "label": "2.4 Aparell Excretor, Hàbits i Activitats",
+          "href": "./ut02/ut0204.md"
         }
       ]
     },
     {
-      "summary": "UD3 — UD 3 - NÚMEROS ENTEROS (MATEMÁTICAS)",
+      "summary": "UD3 — Els Nombres Enters (Matemàtiques)",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
@@ -66,133 +70,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Infografia 3",
+          "label": "3.1 El Conjunt dels Enters i Contextos Reals",
           "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 El Mundo de los Enteros - Video",
+          "label": "3.2 Suma i Resta de Nombres Enters",
           "href": "./ut03/ut0302.md"
         },
         {
-          "label": "3.3 UD3 -  LOS NUMEROS ENTEROS - Presentación",
+          "label": "3.3 Multiplicació, Divisió i Jerarquia",
           "href": "./ut03/ut0303.md"
         },
         {
-          "label": "3.4 UD3 - PRESENTACIÓN - ALTERNATIVA",
+          "label": "3.4 Potències i Arrels Quadrades",
           "href": "./ut03/ut0304.md"
         },
         {
-          "label": "3.5 Guía de ESTUDIO",
+          "label": "3.5 Problemes Reals i Butlletí d'Exercicis",
           "href": "./ut03/ut0305.md"
-        },
-        {
-          "label": "3.6 Guia Interactiva - Números Enteros",
-          "href": "./ut03/ut0306.md"
-        },
-        {
-          "label": "3.7 UD3 -  LOS NUMEROS ENTEROS",
-          "href": "./ut03/ut0307.md"
-        },
-        {
-          "label": "3.8 EJERCICIOS CLASE",
-          "href": "./ut03/ut0308.md"
-        },
-        {
-          "label": "3.9 EXPONENTE",
-          "href": "./ut03/ut0309.md"
-        },
-        {
-          "label": "3.10 factores",
-          "href": "./ut03/ut0310.md"
-        },
-        {
-          "label": "3.11 mcd",
-          "href": "./ut03/ut0311.md"
-        },
-        {
-          "label": "3.12 mcm",
-          "href": "./ut03/ut0312.md"
-        },
-        {
-          "label": "3.13 MCM Y MCD",
-          "href": "./ut03/ut0313.md"
-        },
-        {
-          "label": "3.14 FICHA PDF",
-          "href": "./ut03/ut0314.md"
-        },
-        {
-          "label": "3.15 SOLUCIÓN FICHA",
-          "href": "./ut03/ut0315.md"
-        },
-        {
-          "label": "3.16 NOTA FICHA",
-          "href": "./ut03/ut0316.md"
-        },
-        {
-          "label": "3.17 Números enteros en situaciones reales",
-          "href": "./ut03/ut0317.md"
-        },
-        {
-          "label": "3.18 Ordenar y comparar números enteros",
-          "href": "./ut03/ut0318.md"
-        },
-        {
-          "label": "3.19 Valor absoluto y opuesto",
-          "href": "./ut03/ut0319.md"
-        },
-        {
-          "label": "3.20 Sumas, restas, multiplicaciones y divisiones",
-          "href": "./ut03/ut0320.md"
-        },
-        {
-          "label": "3.21 Problemas de aplicación",
-          "href": "./ut03/ut0321.md"
-        },
-        {
-          "label": "3.22 Potencias de números enteros",
-          "href": "./ut03/ut0322.md"
-        },
-        {
-          "label": "3.23 Criterios de divisibilidad",
-          "href": "./ut03/ut0323.md"
-        },
-        {
-          "label": "3.24 Múltiplos, divisores y números primos",
-          "href": "./ut03/ut0324.md"
-        },
-        {
-          "label": "3.25 EXTRA",
-          "href": "./ut03/ut0325.md"
-        },
-        {
-          "label": "3.26 PROBLEMAS EXTRA INFO",
-          "href": "./ut03/ut0326.md"
-        },
-        {
-          "label": "3.27 PROBLEMAS EXTRA",
-          "href": "./ut03/ut0327.md"
-        },
-        {
-          "label": "3.28 PROBLEMAS EXTRA - SOLUCIÓN",
-          "href": "./ut03/ut0328.md"
-        },
-        {
-          "label": "3.29 PROBLEMAS LARGOS INFO",
-          "href": "./ut03/ut0329.md"
-        },
-        {
-          "label": "3.30 PROBLEMAS LARGOS",
-          "href": "./ut03/ut0330.md"
-        },
-        {
-          "label": "3.31 PROBLEMAS LARGOS - SOLUCIÓN",
-          "href": "./ut03/ut0331.md"
         }
       ]
     },
     {
-      "summary": "UD4 — UD4 - MATEMÁTICAS: MCM Y MCD",
+      "summary": "UD4 — Divisibilitat, MCM i MCD (Matemàtiques)",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
@@ -200,21 +100,25 @@
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 Àrea de text i multimèdia",
+          "label": "4.1 Múltiples, Divisors i Criteris",
           "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 SusiProfe",
+          "label": "4.2 Nombres Primers i Descomposició",
           "href": "./ut04/ut0402.md"
         },
         {
-          "label": "4.3 EJERCICIOS",
+          "label": "4.3 Màxim Comú Divisor i Mínim Comú Múltiple",
           "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 Problemes Reals d'MCD i MCM",
+          "href": "./ut04/ut0404.md"
         }
       ]
     },
     {
-      "summary": "UD5 — UD5 - MATEMÁTICAS: FRACCIONES",
+      "summary": "UD5 — Les Fraccions (Matemàtiques)",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
@@ -222,37 +126,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 Àrea de text i multimèdia",
+          "label": "5.1 Concepte de Fracció i Equivalències",
           "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 VIDEO - FRACCIONES",
+          "label": "5.2 Suma i Resta de Fraccions",
           "href": "./ut05/ut0502.md"
         },
         {
-          "label": "5.3 PRESENTACIÓN",
+          "label": "5.3 Multiplicació i Divisió de Fraccions",
           "href": "./ut05/ut0503.md"
         },
         {
-          "label": "5.4 Ejercicios Fracciones Resueltos",
+          "label": "5.4 Operacions Combinades i Jerarquia",
           "href": "./ut05/ut0504.md"
         },
         {
-          "label": "5.5 Ficha Fracciones - Parte 1",
+          "label": "5.5 Problemes Reals amb Fraccions",
           "href": "./ut05/ut0505.md"
-        },
-        {
-          "label": "5.6 Ficha Fracciones - Parte 2",
-          "href": "./ut05/ut0506.md"
-        },
-        {
-          "label": "5.7 Nota Ficha Clase",
-          "href": "./ut05/ut0507.md"
         }
       ]
     },
     {
-      "summary": "UD6 — LA TIERRA Y EL UNIVERSO (BIOLOGÍA Y GEOLOGÍA)",
+      "summary": "UD6 — La Terra i l'Univers (Biologia i Geologia)",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
@@ -260,49 +156,25 @@
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 INFO 1",
+          "label": "6.1 L'Origen de l'Univers i els Components Còsmics",
           "href": "./ut06/ut0601.md"
         },
         {
-          "label": "6.2 PDF FICHA",
+          "label": "6.2 Els Astres i les Distàncies a l'Univers",
           "href": "./ut06/ut0602.md"
         },
         {
-          "label": "6.3 SOLUCIÓN FICHA",
+          "label": "6.3 El Sistema Solar: El Sol i els Planetes",
           "href": "./ut06/ut0603.md"
         },
         {
-          "label": "6.4 PRESENTACIÓN",
+          "label": "6.4 L'Exploració Espacial i Activitats",
           "href": "./ut06/ut0604.md"
-        },
-        {
-          "label": "6.5 NOTA FICHA",
-          "href": "./ut06/ut0605.md"
-        },
-        {
-          "label": "6.6 ----- EXAMEN 4 -----",
-          "href": "./ut06/ut0606.md"
-        },
-        {
-          "label": "6.7 Àrea de text i multimèdia",
-          "href": "./ut06/ut0607.md"
-        },
-        {
-          "label": "6.8 Repaso Examen",
-          "href": "./ut06/ut0608.md"
-        },
-        {
-          "label": "6.9 El Universo y el Sistema Solar",
-          "href": "./ut06/ut0609.md"
-        },
-        {
-          "label": "6.10 EXAMEN",
-          "href": "./ut06/ut0610.md"
         }
       ]
     },
     {
-      "summary": "UD7 — UD2 - LA TIERRA (BIOLOGÍA Y GEOLOGÍA)",
+      "summary": "UD7 — El Planeta Terra: Geosfera i Moviments (Biologia)",
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
@@ -310,37 +182,25 @@
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 INFO 1",
+          "label": "7.1 La Terra: Planeta Únic per a la Vida",
           "href": "./ut07/ut0701.md"
         },
         {
-          "label": "7.2 PDF FICHA",
+          "label": "7.2 Els Moviments de la Terra i les Estacions",
           "href": "./ut07/ut0702.md"
         },
         {
-          "label": "7.3 SOLUCIÓN FICHA",
+          "label": "7.3 La Lluna, Eclipsis i Marees",
           "href": "./ut07/ut0703.md"
         },
         {
-          "label": "7.4 PRESENTACIÓN",
+          "label": "7.4 La Geosfera i Activitats",
           "href": "./ut07/ut0704.md"
-        },
-        {
-          "label": "7.5 Video",
-          "href": "./ut07/ut0705.md"
-        },
-        {
-          "label": "7.6 NOTA FICHA",
-          "href": "./ut07/ut0706.md"
-        },
-        {
-          "label": "7.7 EXAMEN",
-          "href": "./ut07/ut0707.md"
         }
       ]
     },
     {
-      "summary": "UD8 — UD3 - LA ATMÓSFERA TERRESTRE",
+      "summary": "UD8 — L'Atmosfera Terrestre (Biologia i Geologia)",
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
@@ -348,37 +208,25 @@
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 INFO 1",
+          "label": "8.1 L'Atmosfera i la Composició de l'Aire",
           "href": "./ut08/ut0801.md"
         },
         {
-          "label": "8.2 PDF FICHA",
+          "label": "8.2 Les Capes de l'Atmosfera",
           "href": "./ut08/ut0802.md"
         },
         {
-          "label": "8.3 SOLUCIÓN FICHA",
+          "label": "8.3 Fonaments de Meteorologia i Clima",
           "href": "./ut08/ut0803.md"
         },
         {
-          "label": "8.4 VIDEO - LA ATMÓSFERA",
+          "label": "8.4 Contaminació Atmosfèrica i Activitats",
           "href": "./ut08/ut0804.md"
-        },
-        {
-          "label": "8.5 QUESTIONARIO - LA ATMÓSFERA",
-          "href": "./ut08/ut0805.md"
-        },
-        {
-          "label": "8.6 PRESENTACIÓN",
-          "href": "./ut08/ut0806.md"
-        },
-        {
-          "label": "8.7 NOTA FICHA 3 BIOLOGIA",
-          "href": "./ut08/ut0807.md"
         }
       ]
     },
     {
-      "summary": "UD9 — UD4 - Hidrosfera: El Motor Azul del Planeta",
+      "summary": "UD9 — La Hidrosfera Terrestre (Biologia i Geologia)",
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
@@ -386,40 +234,20 @@
           "class": "unit-full-link"
         },
         {
-          "label": "9.1 Àrea de text i multimèdia",
+          "label": "9.1 La Hidrosfera i Distribució de l'Aigua",
           "href": "./ut09/ut0901.md"
         },
         {
-          "label": "9.2 PDF FICHA",
+          "label": "9.2 Aigües Marines i Continentals",
           "href": "./ut09/ut0902.md"
         },
         {
-          "label": "9.3 PRESENTACIÓ",
+          "label": "9.3 El Cicle Hidrològic de l'Aigua",
           "href": "./ut09/ut0903.md"
         },
         {
-          "label": "9.4 1. El agua de la Tierra",
+          "label": "9.4 Gestió Sostenible de l'Aigua i Activitats",
           "href": "./ut09/ut0904.md"
-        },
-        {
-          "label": "9.5 2. El agua de los océanos",
-          "href": "./ut09/ut0905.md"
-        },
-        {
-          "label": "9.6 3. El agua de los continentes",
-          "href": "./ut09/ut0906.md"
-        },
-        {
-          "label": "9.7 4. El ciclo del agua",
-          "href": "./ut09/ut0907.md"
-        },
-        {
-          "label": "9.8 5. El agua que necesitamos",
-          "href": "./ut09/ut0908.md"
-        },
-        {
-          "label": "9.9 Resumen",
-          "href": "./ut09/ut0909.md"
         }
       ]
     }
