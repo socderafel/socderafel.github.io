@@ -1,94 +1,30 @@
 ---
 layout: default
-title: "Ofimàtica i Arxiu de Documents — UD5 Gimp"
+title: "UT05: Comunicació Digital, Correu Electrònic i Netiqueta — Ofimàtica i Arxiu de Documents"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UD5"
 ---
 
-# UD5 — Gimp
+# 📁 UT05: Comunicació Digital, Correu Electrònic i Netiqueta
 
-
-
----
-
-## 📌 5.1 Pràctica 1
-
-Continguts i activitats didàctiques de **Pràctica 1**.
+Aquesta unitat tracta la comunicació professional per correu electrònic: adreces, camps Per a/CC/CCO (amb especial èmfasi en la privacitat RGPD), redacció formal, gestió d'adjunts, signatura automàtica i les normes de netiqueta.
 
 ---
 
-## 📌 5.2 Pràctica 2
+## 📑 Apartats de la Unitat Didàctica
 
-Continguts i activitats didàctiques de **Pràctica 2**.
-
----
-
-## 📌 5.3 Pràctica 2b
-
-Continguts i activitats didàctiques de **Pràctica 2b**.
-
----
-
-## 📌 5.4 Pràctica 3
-
-Continguts i activitats didàctiques de **Pràctica 3**.
+| Apartat | Títol de la Secció Didàctica | Enllaç Directe |
+| :---: | :--- | :---: |
+| **5.1** | Estructura d'un compte de correu i adreces electròniques | [**📘 Llegir Apartat 5.1 →**](./ut0501.md) |
+| **5.2** | Camps de destinataris: Per a, Còpia (CC) i Còpia Oculta (CCO) | [**📘 Llegir Apartat 5.2 →**](./ut0502.md) |
+| **5.3** | Redacció professional: Assumpte, cos del missatge i signatura | [**📘 Llegir Apartat 5.3 →**](./ut0503.md) |
+| **5.4** | Gestió d'arxius adjunts i límits de capacitat | [**📘 Llegir Apartat 5.4 →**](./ut0504.md) |
+| **5.5** | Normes de Netiqueta i protocol digital laboral | [**📘 Llegir Apartat 5.5 →**](./ut0505.md) |
 
 ---
 
-## 📌 5.5 Pràctica 4
-
-Continguts i activitats didàctiques de **Pràctica 4**.
-
----
-
-## 📌 5.6 Pràctica 5
-
-Continguts i activitats didàctiques de **Pràctica 5**.
-
----
-
-## 📌 5.7 Pràctica 6
-
-Continguts i activitats didàctiques de **Pràctica 6**.
-
----
-
-## 📌 5.8 Pràctica 7
-
-Continguts i activitats didàctiques de **Pràctica 7**.
-
----
-
-## 📌 5.9 Pràctica 8
-
-Continguts i activitats didàctiques de **Pràctica 8**.
-
----
-
-## 📌 5.10 Pràctica 9
-
-Continguts i activitats didàctiques de **Pràctica 9**.
-
----
-
-## 📌 5.11 Pràctica 10
-
-Continguts i activitats didàctiques de **Pràctica 10**.
-
----
-
-## 📌 5.12 Pràctica 11
-
-Continguts i activitats didàctiques de **Pràctica 11**.
-
----
-
-## 📌 5.13 Pràctica 12
-
-Continguts i activitats didàctiques de **Pràctica 12**.
-
----
-
-## 📌 5.14 Gimp
-
-Hi ha més pràctiques en la carpeta de 1 ESO (23-24)
+## 📌 Resum Didàctic i Idees Clau
+1. Parts de l'adreça: usuari@domini.extensio.
+2. El camp CCO és obligatori en enviaments massius per complir la llei de protecció de dades.
+3. L'assumpte ha de ser clar i concís; mai escriure el text tot en majúscules.
+4. La netiqueta garanteix el respecte mutu en la comunicació laboral escrita.

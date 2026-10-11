@@ -1,106 +1,30 @@
 ---
 layout: default
-title: "Ofimàtica i Arxiu de Documents — UD4 Full de càlcul - RA4"
+title: "UT04: Disseny Gràfic i Edició d'Imatges (GIMP i Canva) — Ofimàtica i Arxiu de Documents"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UD4"
 ---
 
-# UD4 — Full de càlcul - RA4
+# 📁 UT04: Disseny Gràfic i Edició d'Imatges (GIMP i Canva)
 
-
-
----
-
-## 📌 4.1 Pràctica 1
-
-Continguts i activitats didàctiques de **Pràctica 1**.
+Aquesta unitat cobreix la imatge digital: píxels, resolució DPI, formats JPG/PNG, l'ús de GIMP (vareta màgica, seleccions, capes transparents, clonat i retall) i el disseny ràpid de cartells i presentacions amb Canva.
 
 ---
 
-## 📌 4.2 Pràctica 1.2
+## 📑 Apartats de la Unitat Didàctica
 
-Continguts i activitats didàctiques de **Pràctica 1.2**.
-
----
-
-## 📌 4.3 Pràctica 2
-
-Continguts i activitats didàctiques de **Pràctica 2**.
-
----
-
-## 📌 4.4 Pràctica 3
-
-Continguts i activitats didàctiques de **Pràctica 3**.
+| Apartat | Títol de la Secció Didàctica | Enllaç Directe |
+| :---: | :--- | :---: |
+| **4.1** | Fonaments de la imatge digital: Píxels, resolució i formats | [**📘 Llegir Apartat 4.1 →**](./ut0401.md) |
+| **4.2** | L'entorn de treball de GIMP i les eines de selecció | [**📘 Llegir Apartat 4.2 →**](./ut0402.md) |
+| **4.3** | Treball amb capes a GIMP: Creació, ordre i màscares | [**📘 Llegir Apartat 4.3 →**](./ut0403.md) |
+| **4.4** | Retoc d'imatge bàsic: Escala, retall, clonat i ajust de color | [**📘 Llegir Apartat 4.4 →**](./ut0404.md) |
+| **4.5** | Disseny ràpid de presentacions i cartelleria amb Canva | [**📘 Llegir Apartat 4.5 →**](./ut0405.md) |
 
 ---
 
-## 📌 4.5 Pràctica 3.2
-
-Continguts i activitats didàctiques de **Pràctica 3.2**.
-
----
-
-## 📌 4.6 Pràctica 4
-
-Continguts i activitats didàctiques de **Pràctica 4**.
-
----
-
-## 📌 4.7 Pràctica 4.2
-
-Continguts i activitats didàctiques de **Pràctica 4.2**.
-
----
-
-## 📌 4.8 Pràctica 5
-
-Continguts i activitats didàctiques de **Pràctica 5**.
-
----
-
-## 📌 4.9 Pràctica 5.2
-
-Continguts i activitats didàctiques de **Pràctica 5.2**.
-
----
-
-## 📌 4.10 Pràctica 6
-
-Continguts i activitats didàctiques de **Pràctica 6**.
-
----
-
-## 📌 4.11 Pràctica 6.2
-
-Continguts i activitats didàctiques de **Pràctica 6.2**.
-
----
-
-## 📌 4.12 Pràctica 7
-
-Continguts i activitats didàctiques de **Pràctica 7**.
-
----
-
-## 📌 4.13 Pràctica 7.2
-
-Continguts i activitats didàctiques de **Pràctica 7.2**.
-
----
-
-## 📌 4.14 Pràctica 8
-
-Continguts i activitats didàctiques de **Pràctica 8**.
-
----
-
-## 📌 4.15 Pràctica 9
-
-Continguts i activitats didàctiques de **Pràctica 9**.
-
----
-
-## 📌 4.16 Pràctica 10
-
-Continguts i activitats didàctiques de **Pràctica 10**.
+## 📌 Resum Didàctic i Idees Clau
+1. Mapa de bits (píxels) vs Vectorial (corbes matemàtiques).
+2. Format JPG per a fotos; format PNG per a fons transparents.
+3. Les capes permeten editar elements de forma independent sense danyar el fons.
+4. Canva facilita la creació de cartells corporatius a partir de plantilles.

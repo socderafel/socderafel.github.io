@@ -1,46 +1,30 @@
 ---
 layout: default
-title: "Ofimàtica i Arxiu de Documents — UD6 Fake news"
+title: "UT06: Seguretat Digital, Privacitat i Pensament Crític — Ofimàtica i Arxiu de Documents"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UD6"
 ---
 
-# UD6 — Fake news
+# 📁 UT06: Seguretat Digital, Privacitat i Pensament Crític
 
-
-
----
-
-## 📌 6.1 Presentació
-
-Continguts i activitats didàctiques de **Presentació**.
+Aquesta unitat desenvolupa el pensament crític i la ciberseguretat: identificació de Fake News, prevenció d'enginyeria social i Phishing, creació de contrasenyes robustes amb 2FA, protecció de la petjada digital a xarxes i recursos d'ajuda (017 INCIBE).
 
 ---
 
-## 📌 6.2 Teoria resumida
+## 📑 Apartats de la Unitat Didàctica
 
-Continguts i activitats didàctiques de **Teoria resumida**.
-
----
-
-## 📌 6.3 Exemples
-
-Continguts i activitats didàctiques de **Exemples**.
-
----
-
-## 📌 6.4 Activitats
-
-Continguts i activitats didàctiques de **Activitats**.
+| Apartat | Títol de la Secció Didàctica | Enllaç Directe |
+| :---: | :--- | :---: |
+| **6.1** | Identificació de Fake News, faules i notícies falses | [**📘 Llegir Apartat 6.1 →**](./ut0601.md) |
+| **6.2** | Enginyeria social i pesca electrònica (Phishing) | [**📘 Llegir Apartat 6.2 →**](./ut0602.md) |
+| **6.3** | Gestió de contrasenyes segures i doble factor (2FA) | [**📘 Llegir Apartat 6.3 →**](./ut0603.md) |
+| **6.4** | Privacitat i petjada digital a les xarxes socials | [**📘 Llegir Apartat 6.4 →**](./ut0604.md) |
+| **6.5** | Riscos digitals: Ciberassetjament, grooming i frau en línia | [**📘 Llegir Apartat 6.5 →**](./ut0605.md) |
 
 ---
 
-## 📌 6.5 Resposta activitats
-
-Continguts i activitats didàctiques de **Resposta activitats**.
-
----
-
-## 📌 6.6 Solucions
-
-Continguts i activitats didàctiques de **Solucions**.
+## 📌 Resum Didàctic i Idees Clau
+1. Desconfiar de titulars sensacionalistes i verificar sempre les fonts amb Fact-Checkers.
+2. El Phishing suplanta bancs o empreses per robar dades personals.
+3. Crear contrasenyes de més de 12 caràcters i activar l'autenticació en dos passos (2FA).
+4. Cuidar la petjada digital a les xarxes socials: configurar perfils privats i consultar el 017 d'INCIBE.

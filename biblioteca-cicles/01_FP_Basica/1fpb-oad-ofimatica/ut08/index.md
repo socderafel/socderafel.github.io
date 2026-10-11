@@ -1,152 +1,30 @@
 ---
 layout: default
-title: "Ofimàtica i Arxiu de Documents — UD8 Correu electrònic"
+title: "UT08: Pensament Computacional i Programació per Blocs — Ofimàtica i Arxiu de Documents"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UD8"
 ---
 
-# UD8 — Correu electrònic
+# 📁 UT08: Pensament Computacional i Programació per Blocs
 
-
-
----
-
-## 📌 8.1 Act 1 - Interfaç GMAIL_FET
-
-Continguts i activitats didàctiques de **Act 1 - Interfaç GMAIL_FET**.
+Aquesta unitat introdueix el pensament computacional, els algorismes, l'entorn de programació per blocs de Scratch (escenari, personatges, coordenades X/Y, bucles i condicionals) i la robòtica bàsica amb MakeCode i micro:bit.
 
 ---
 
-## 📌 8.2 Act 2 - Correu GMAIL_FET
+## 📑 Apartats de la Unitat Didàctica
 
-1. Crea un documento explicando, punto por punto y con capturas de pantalla de los pasos, como crear una cuenta de correo de google (GMAIL)
-
-2. Envia un correo a tu profesora (
-
-anaasins@iesmre.com
-
-).
-
-El correo debe contener:
-
-Un saludo
-
-Parráfo del correo dónde expliques punto por punto cómo crear una nueva cuenta de correo electrónico (sin capturas).
-
-Este debe de tener un tipo de fente Comic Sans, tamaño Grande y color Rojo
-
-Parráfo donde expliques las ventajas de usar correo electrónico
-
-Este debe tener tipo de fuente Georgia, tamaño pequeño, cursiva y color verde.
-
-El archivo creado en el punto 1 adjunto.
-
-Despedida
-
-Firma
+| Apartat | Títol de la Secció Didàctica | Enllaç Directe |
+| :---: | :--- | :---: |
+| **8.1** | Introducció al pensament computacional: Algorismes i patrons | [**📘 Llegir Apartat 8.1 →**](./ut0801.md) |
+| **8.2** | L'entorn de treball de Scratch: Personatges, escenaris i coordenades | [**📘 Llegir Apartat 8.2 →**](./ut0802.md) |
+| **8.3** | Blocs d'esdeveniments, moviment i aspecte | [**📘 Llegir Apartat 8.3 →**](./ut0803.md) |
+| **8.4** | Estructures de control a Scratch: Bucles i condicionals | [**📘 Llegir Apartat 8.4 →**](./ut0804.md) |
+| **8.5** | Introducció a MakeCode i la placa micro:bit | [**📘 Llegir Apartat 8.5 →**](./ut0805.md) |
 
 ---
 
-## 📌 8.3 Act 1.2 - Interfaç OUTLOOK_FET
-
-Continguts i activitats didàctiques de **Act 1.2 - Interfaç OUTLOOK_FET**.
-
----
-
-## 📌 8.4 Act 2.2 - Correu OUTLOOK_FET
-
-1. Accede a tu correo del instituto (OUTLOOK).
-
-2. Envia un correo a tu profesora (
-
-a.asinsaleixandre@edu.gva.es
-
-).
-
-El correo debe contener:
-
-Un saludo
-
-Parráfo del correo dónde expliques porque es importante sasber mandar correos a tus profesores.
-
-Este debe de tener un tipo de fente Comic Sans, tamaño Grande y color Rojo
-
-Parráfo donde expliques las ventajas de usar correo electrónico frente a las cartas.
-
-Este debe tener tipo de fuente Georgia, tamaño pequeño, cursiva y color verde.
-
-Una imágen de tu artista favorito.
-
-Despedida
-
-Firma
-
----
-
-## 📌 8.5 Vídeo netiqueta_FET
-
-Continguts i activitats didàctiques de **Vídeo netiqueta_FET**.
-
----
-
-## 📌 8.6 Act 3 - Netiqueta_FET
-
-Continguts i activitats didàctiques de **Act 3 - Netiqueta_FET**.
-
----
-
-## 📌 8.7 Act 4 - Netiqueta_FET
-
-Continguts i activitats didàctiques de **Act 4 - Netiqueta_FET**.
-
----
-
-## 📌 8.8 Act 5 - Netiqueta_FET
-
-Continguts i activitats didàctiques de **Act 5 - Netiqueta_FET**.
-
----
-
-## 📌 8.9 Ciberatacs
-
-Continguts i activitats didàctiques de **Ciberatacs**.
-
----
-
-## 📌 8.10 Seguretat al correu
-
-Continguts i activitats didàctiques de **Seguretat al correu**.
-
----
-
-## 📌 8.11 Act 6 - Ciberatacs
-
-Busca en Internet información sobre diferentes ataques que podemos sufrir a través del correo electrónico.
-
-Crea un canva que incluya, almenos, 7 de ellos con su descripción.
-
----
-
-## 📌 8.12 Vídeo malware
-
-Continguts i activitats didàctiques de **Vídeo malware**.
-
----
-
-## 📌 8.13 Act 7 - Seguretat
-
-Crea un poster online (canva, genially, etc) con consejos a seguir para no sufrir ataques mientras usamos el correo electrónico.
-
----
-
-## 📌 8.14 Comprova si t'han hackejat
-
-Adjunta en un documento de texto las capturas de pantalla con el resultado del apartado 1 y 2.  y una reflexión analizando los resultados obtenidos en ambos análisis.
-
-1.- Para saber si has sido hackeado
-
-https://haveibeenpwned.com/
-
-2.- Para saber la fiabilidad de tu contraseña
-
-https://www.internautas.org/compruebapassword.html
+## 📌 Resum Didàctic i Idees Clau
+1. Pensament computacional: descomposició, patrons, abstracció i algorismes.
+2. Scratch utilitza coordenades (X, Y) per posicionar personatges a l'escenari.
+3. Els blocs d'esdeveniments activen instruccions; els bucles i condicionals controlen la lògica.
+4. MakeCode i micro:bit permeten aplicar la programació per blocs a sensors i components físics.

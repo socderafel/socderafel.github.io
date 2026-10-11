@@ -1,94 +1,30 @@
 ---
 layout: default
-title: "Ofimàtica i Arxiu de Documents — UD3 Processador de text - RA3"
+title: "UT03: Full de Càlcul (LibreOffice Calc / Excel) — Ofimàtica i Arxiu de Documents"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UD3"
 ---
 
-# UD3 — Processador de text - RA3
+# 📁 UT03: Full de Càlcul (LibreOffice Calc / Excel)
 
-
-
----
-
-## 📌 3.1 Pràctica 1
-
-Continguts i activitats didàctiques de **Pràctica 1**.
+Aquesta unitat aborda el funcionament dels fulls de càlcul: cel·les, files, columnes, formats de moneda/data, fórmules aritmètiques bàsiques, referències absolutes amb dòlar, funcions SUMA, MITJANA, MAX, MIN, SI condicional i generació de gràfics.
 
 ---
 
-## 📌 3.2 Pràctica 2
+## 📑 Apartats de la Unitat Didàctica
 
-Continguts i activitats didàctiques de **Pràctica 2**.
-
----
-
-## 📌 3.3 Pràctica 3
-
-Continguts i activitats didàctiques de **Pràctica 3**.
-
----
-
-## 📌 3.4 Pràctica 4
-
-Continguts i activitats didàctiques de **Pràctica 4**.
+| Apartat | Títol de la Secció Didàctica | Enllaç Directe |
+| :---: | :--- | :---: |
+| **3.1** | Estructura d'un full de càlcul: Cel·les, files, columnes i formats de dades | [**📘 Llegir Apartat 3.1 →**](./ut0301.md) |
+| **3.2** | Fórmules aritmètiques i referències de cel·la | [**📘 Llegir Apartat 3.2 →**](./ut0302.md) |
+| **3.3** | Funcions estadístiques i matemàtiques: SUMA, MITJANA, MAX, MIN i CONTAR | [**📘 Llegir Apartat 3.3 →**](./ut0303.md) |
+| **3.4** | La funció condicional SI (IF) i formats condicionals | [**📘 Llegir Apartat 3.4 →**](./ut0304.md) |
+| **3.5** | Creació i interpretació de gràfics en fulls de càlcul | [**📘 Llegir Apartat 3.5 →**](./ut0305.md) |
 
 ---
 
-## 📌 3.5 Pràctica 5
-
-Continguts i activitats didàctiques de **Pràctica 5**.
-
----
-
-## 📌 3.6 Pràctica 6
-
-Continguts i activitats didàctiques de **Pràctica 6**.
-
----
-
-## 📌 3.7 Pràctica 7
-
-Continguts i activitats didàctiques de **Pràctica 7**.
-
----
-
-## 📌 3.8 Pràctica 8
-
-Continguts i activitats didàctiques de **Pràctica 8**.
-
----
-
-## 📌 3.9 Pràctica 9
-
-Continguts i activitats didàctiques de **Pràctica 9**.
-
----
-
-## 📌 3.10 Pràctica 10
-
-Continguts i activitats didàctiques de **Pràctica 10**.
-
----
-
-## 📌 3.11 Pràctica 11
-
-Continguts i activitats didàctiques de **Pràctica 11**.
-
----
-
-## 📌 3.12 Pràctica 12
-
-Continguts i activitats didàctiques de **Pràctica 12**.
-
----
-
-## 📌 3.13 Pràctica 13
-
-Continguts i activitats didàctiques de **Pràctica 13**.
-
----
-
-## 📌 3.14 Pràctica 14
-
-Continguts i activitats didàctiques de **Pràctica 14**.
+## 📌 Resum Didàctic i Idees Clau
+1. Tota fórmula comença amb el signe =.
+2. La referència $A$1 bloqueja la cel·la perquè no canvie en arrossegar.
+3. Les funcions (SUMA, MITJANA, MAX, MIN) operen sobre rangs (A1:A10).
+4. La funció SI permet assignar valors condicionals segons una prova lògica.
