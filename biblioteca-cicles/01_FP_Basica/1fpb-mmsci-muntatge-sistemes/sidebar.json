@@ -6,7 +6,7 @@
   },
   "units": [
     {
-      "summary": "UD1 — ORDINARIA",
+      "summary": "UD1 — Elements Elèctrics i Electrònics Bàsics i Seguretat",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
@@ -14,53 +14,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 Temario del examen",
+          "label": "1.1 Fonaments d'electricitat i Llei d'Ohm",
           "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 Apuntes a revisar",
+          "label": "1.2 Corrent continu, altern i components passius",
           "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 Elementos básicos eléctricos y electrónicos",
+          "label": "1.3 Circuits en sèrie, paral·lel i càlculs",
           "href": "./ut01/ut0103.md"
         },
         {
-          "label": "1.4 La placa base de  un ordenador",
+          "label": "1.4 Aparells de mesura: El polímetre digital",
           "href": "./ut01/ut0104.md"
         },
         {
-          "label": "1.5 Componentes internos de un ordenador",
+          "label": "1.5 Eines de taller, protecció ESD i seguretat",
           "href": "./ut01/ut0105.md"
-        },
-        {
-          "label": "1.6 Conectores y cableado",
-          "href": "./ut01/ut0106.md"
-        },
-        {
-          "label": "1.7 Periféricos",
-          "href": "./ut01/ut0107.md"
-        },
-        {
-          "label": "1.8 Consumibles",
-          "href": "./ut01/ut0108.md"
-        },
-        {
-          "label": "1.9 Gestión logística",
-          "href": "./ut01/ut0109.md"
-        },
-        {
-          "label": "1.10 Enunciado",
-          "href": "./ut01/ut0110.md"
-        },
-        {
-          "label": "1.11 Enunciado",
-          "href": "./ut01/ut0111.md"
         }
       ]
     },
     {
-      "summary": "UD2 — EXTRAORDINARIA",
+      "summary": "UD2 — Unitats Funcionals de l'Ordinador",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
@@ -68,53 +44,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 Temario del examen",
+          "label": "2.1 Model i arquitectura de Von Neumann",
           "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 Apuntes a revisar",
+          "label": "2.2 La Unitat Central de Processament (CPU)",
           "href": "./ut02/ut0202.md"
         },
         {
-          "label": "2.3 Elementos básicos eléctricos y electrónicos",
+          "label": "2.3 Jerarquia de memòria: Cau, RAM i ROM",
           "href": "./ut02/ut0203.md"
         },
         {
-          "label": "2.4 La placa base de  un ordenador",
+          "label": "2.4 Subsistema d'E/S i busos del sistema",
           "href": "./ut02/ut0204.md"
         },
         {
-          "label": "2.5 Componentes internos de un ordenador",
+          "label": "2.5 El cicle d'execució d'una instrucció",
           "href": "./ut02/ut0205.md"
-        },
-        {
-          "label": "2.6 Conectores y cableado",
-          "href": "./ut02/ut0206.md"
-        },
-        {
-          "label": "2.7 Periféricos",
-          "href": "./ut02/ut0207.md"
-        },
-        {
-          "label": "2.8 Consumibles",
-          "href": "./ut02/ut0208.md"
-        },
-        {
-          "label": "2.9 Gestión logística",
-          "href": "./ut02/ut0209.md"
-        },
-        {
-          "label": "2.10 Enunciado",
-          "href": "./ut02/ut0210.md"
-        },
-        {
-          "label": "2.11 Enunciado",
-          "href": "./ut02/ut0211.md"
         }
       ]
     },
     {
-      "summary": "UD3 — UT. 0 - Presentación del módulo.",
+      "summary": "UD3 — La Placa Base de l'Ordinador",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
@@ -122,17 +74,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 UT.0 - Presentación del módulo.",
+          "label": "3.1 Funció, estructura i factors de forma",
           "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 UT2 -&gt; RA1CEe, RA1CEf ------ UT3 -&gt; RA1CEg, RA1CEh ---- UT3 -&gt; RA1CEi",
+          "label": "3.2 El sòcol del microprocessador (Sockets LGA/PGA)",
           "href": "./ut03/ut0302.md"
+        },
+        {
+          "label": "3.3 El chipset i fases d'alimentació VRM",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Zòcols de memòria RAM i ranures PCIe",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 El firmware: BIOS, UEFI, CMOS i pila CR2032",
+          "href": "./ut03/ut0305.md"
         }
       ]
     },
     {
-      "summary": "UD4 — UT. 1 - Elementos básicos eléctricos y electrónicos",
+      "summary": "UD4 — Components Interns de l'Ordinador",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
@@ -140,61 +104,33 @@
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 UT11 - Elementos básicos eléctricos y electrónicos",
+          "label": "4.1 La caixa o xassís i el flux d'aire",
           "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 UT12 - Corriente alterna y corriente contínua",
+          "label": "4.2 La font d'alimentació ATX (80 PLUS)",
           "href": "./ut04/ut0402.md"
         },
         {
-          "label": "4.3 UT13 - Riesgos electricos",
+          "label": "4.3 Microprocessadors i sistemes de refrigeració",
           "href": "./ut04/ut0403.md"
         },
         {
-          "label": "4.4 UT14 - Aparatos de medición",
+          "label": "4.4 Memòria RAM: DDR4/DDR5 i Dual Channel",
           "href": "./ut04/ut0404.md"
         },
         {
-          "label": "4.5 UT14.1 - Como usar un polímetro",
+          "label": "4.5 Dispositius d'emmagatzematge: HDD vs SSD NVMe",
           "href": "./ut04/ut0405.md"
         },
         {
-          "label": "4.6 UT15 - Herramientas comunes para el mantenimiento de ordenadores",
+          "label": "4.6 Targetes d'expansió: Gràfiques (GPU)",
           "href": "./ut04/ut0406.md"
-        },
-        {
-          "label": "4.7 UT16 - Tornillos habituales en el mantenimiento de ordenadores",
-          "href": "./ut04/ut0407.md"
-        },
-        {
-          "label": "4.8 UT14 - Componentes de un PC",
-          "href": "./ut04/ut0408.md"
-        },
-        {
-          "label": "4.9 RA1 CEa-1",
-          "href": "./ut04/ut0409.md"
-        },
-        {
-          "label": "4.10 RA1 CEa-2",
-          "href": "./ut04/ut0410.md"
-        },
-        {
-          "label": "4.11 RA1 CEb-1",
-          "href": "./ut04/ut0411.md"
-        },
-        {
-          "label": "4.12 RA1 CEc",
-          "href": "./ut04/ut0412.md"
-        },
-        {
-          "label": "4.13 RA1 CEcd",
-          "href": "./ut04/ut0413.md"
         }
       ]
     },
     {
-      "summary": "UD5 — UT. 2 - Unidades funcionales de un ordenador",
+      "summary": "UD5 — Connectors i Cablejat",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
@@ -202,37 +138,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 UT2 - Unidades funcionales de un ordenador",
+          "label": "5.1 Pins, contactes i tipus de connectors",
           "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 UT2 - Presentaciones unidades funcionales de un ordenador",
+          "label": "5.2 Connectors d'alimentació interns de la font ATX",
           "href": "./ut05/ut0502.md"
         },
         {
-          "label": "5.3 UT2 - Resumen unidad funcional",
+          "label": "5.3 Cables de dades SATA i panell frontal",
           "href": "./ut05/ut0503.md"
         },
         {
-          "label": "5.4 Guía sobre los componentes  de un ordenador",
+          "label": "5.4 Ports de comunicació externs (USB i RJ-45)",
           "href": "./ut05/ut0504.md"
         },
         {
-          "label": "5.5 RA1 CEe - Test sobre los componentes  de un ordenador",
+          "label": "5.5 Connectors de vídeo i àudio (HDMI, DisplayPort)",
           "href": "./ut05/ut0505.md"
-        },
-        {
-          "label": "5.6 RA1 CEe",
-          "href": "./ut05/ut0506.md"
-        },
-        {
-          "label": "5.7 RA1 CEf",
-          "href": "./ut05/ut0507.md"
         }
       ]
     },
     {
-      "summary": "UD6 — UT. 3 - La placa base de un ordenador",
+      "summary": "UD6 — Perifèrics de l'Ordinador",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
@@ -240,45 +168,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 UT3 - La placa base de  un ordenador",
+          "label": "6.1 Concepte i classificació de perifèrics",
           "href": "./ut06/ut0601.md"
         },
         {
-          "label": "6.2 UT3 - Presentaciones La Placa Base De Un Ordenador",
+          "label": "6.2 Perifèrics d'entrada: Teclat, ratolí i escàner",
           "href": "./ut06/ut0602.md"
         },
         {
-          "label": "6.3 RA1 CEg",
+          "label": "6.3 Perifèrics d'eixida: Monitors i pantalles",
           "href": "./ut06/ut0603.md"
         },
         {
-          "label": "6.4 RA1 CEg - 1",
+          "label": "6.4 Impressores i equips multifunció",
           "href": "./ut06/ut0604.md"
         },
         {
-          "label": "6.5 RA1 CEh",
+          "label": "6.5 Instal·lació física i controladors (Drivers)",
           "href": "./ut06/ut0605.md"
-        },
-        {
-          "label": "6.6 RA1 CEh-1",
-          "href": "./ut06/ut0606.md"
-        },
-        {
-          "label": "6.7 RA1 CEh-2",
-          "href": "./ut06/ut0607.md"
-        },
-        {
-          "label": "6.8 RA1 CEhi",
-          "href": "./ut06/ut0608.md"
-        },
-        {
-          "label": "6.9 RA1 CEi",
-          "href": "./ut06/ut0609.md"
         }
       ]
     },
     {
-      "summary": "UD7 — UT. 4 - Componentes internos de un ordenador.",
+      "summary": "UD7 — Consumibles Informàtics, Neteja i Residus",
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
@@ -286,85 +198,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 UT4 - Componentes internos de un ordenador",
+          "label": "7.1 Consumibles d'impressió: Tinta, tòner i paper",
           "href": "./ut07/ut0701.md"
         },
         {
-          "label": "7.2 UT 4 - Presentaciones componentes internos de un ordenador",
+          "label": "7.2 Consumibles d'energia: Piles i bateries",
           "href": "./ut07/ut0702.md"
         },
         {
-          "label": "7.3 RA2 CEa-1",
+          "label": "7.3 Neteja preventiva dels equips al taller",
           "href": "./ut07/ut0703.md"
         },
         {
-          "label": "7.4 RA2 CEa-2",
+          "label": "7.4 Substitució segura de consumibles",
           "href": "./ut07/ut0704.md"
         },
         {
-          "label": "7.5 RA2 CEa-3",
+          "label": "7.5 Gestió ambiental i residus RAEE",
           "href": "./ut07/ut0705.md"
-        },
-        {
-          "label": "7.6 RA2 CEb-1",
-          "href": "./ut07/ut0706.md"
-        },
-        {
-          "label": "7.7 RA2 CEb-2",
-          "href": "./ut07/ut0707.md"
-        },
-        {
-          "label": "7.8 RA2 CEb-3",
-          "href": "./ut07/ut0708.md"
-        },
-        {
-          "label": "7.9 RA2 CEb-4",
-          "href": "./ut07/ut0709.md"
-        },
-        {
-          "label": "7.10 RA2 CEb-5",
-          "href": "./ut07/ut0710.md"
-        },
-        {
-          "label": "7.11 RA2 CEb-6",
-          "href": "./ut07/ut0711.md"
-        },
-        {
-          "label": "7.12 RA2 CEb-7",
-          "href": "./ut07/ut0712.md"
-        },
-        {
-          "label": "7.13 RA2 CEb-8",
-          "href": "./ut07/ut0713.md"
-        },
-        {
-          "label": "7.14 RA2 CEb-9",
-          "href": "./ut07/ut0714.md"
-        },
-        {
-          "label": "7.15 RA2 CEb-10",
-          "href": "./ut07/ut0715.md"
-        },
-        {
-          "label": "7.16 RA2 CEb-11",
-          "href": "./ut07/ut0716.md"
-        },
-        {
-          "label": "7.17 RA2 CEb-12",
-          "href": "./ut07/ut0717.md"
-        },
-        {
-          "label": "7.18 RA2 CEb-13",
-          "href": "./ut07/ut0718.md"
-        },
-        {
-          "label": "7.19 RA2 CEc",
-          "href": "./ut07/ut0719.md"
         }
       ]
     },
     {
-      "summary": "UD8 — UT. 5 - Conectores y cableado",
+      "summary": "UD8 — Gestió Logística, Inventari i Embalatge",
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
@@ -372,53 +228,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 UT5 - Conectores y cableado",
+          "label": "8.1 Sistemes d'etiquetatge (Barres, QR i RFID)",
           "href": "./ut08/ut0801.md"
         },
         {
-          "label": "8.2 UT5 - Presentaciones conectores y cableado",
+          "label": "8.2 Eines, impressores i programari d'inventari",
           "href": "./ut08/ut0802.md"
         },
         {
-          "label": "8.3 RA2 CEd-1",
+          "label": "8.3 Embalatge i protecció antiestàtica (ESD)",
           "href": "./ut08/ut0803.md"
         },
         {
-          "label": "8.4 RA2 CEd-2",
+          "label": "8.4 Recepció, magatzem i control d'estoc",
           "href": "./ut08/ut0804.md"
         },
         {
-          "label": "8.5 RA2 CEd-3",
+          "label": "8.5 Trasllat i transport segur d'equips",
           "href": "./ut08/ut0805.md"
-        },
-        {
-          "label": "8.6 RA2 CEd-4",
-          "href": "./ut08/ut0806.md"
-        },
-        {
-          "label": "8.7 RA2 CEe-1",
-          "href": "./ut08/ut0807.md"
-        },
-        {
-          "label": "8.8 RA2 CEf-1",
-          "href": "./ut08/ut0808.md"
-        },
-        {
-          "label": "8.9 RA2 CEf-2",
-          "href": "./ut08/ut0809.md"
-        },
-        {
-          "label": "8.10 RA2 CEf-4",
-          "href": "./ut08/ut0810.md"
-        },
-        {
-          "label": "8.11 RA2 CEf-5",
-          "href": "./ut08/ut0811.md"
         }
       ]
     },
     {
-      "summary": "UD9 — UT. 6 - Periféricos",
+      "summary": "UD9 — Banc de Proves Pràctiques de Taller",
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
@@ -426,156 +258,28 @@
           "class": "unit-full-link"
         },
         {
-          "label": "9.1 UT6 - Periféricos",
+          "label": "9.1 Prova 1: Electricitat, circuits i polímetre",
           "href": "./ut09/ut0901.md"
         },
         {
-          "label": "9.2 UT6 - Presentaciones periféricos",
+          "label": "9.2 Prova 2: Placa base, sockets i memòria RAM",
           "href": "./ut09/ut0902.md"
         },
         {
-          "label": "9.3 RA5 CEa-1",
+          "label": "9.3 Prova 3: Cables, tensions ATX i panell frontal",
           "href": "./ut09/ut0903.md"
         },
         {
-          "label": "9.4 RA5 CEa-2",
+          "label": "9.4 Prova 4: Muntatge de CPU, refrigeració i discs",
           "href": "./ut09/ut0904.md"
         },
         {
-          "label": "9.5 RA5 CEa-3",
+          "label": "9.5 Prova 5: Manteniment, consumibles i RAEE",
           "href": "./ut09/ut0905.md"
         },
         {
-          "label": "9.6 RA5 CEa-4",
+          "label": "9.6 Prova 6: Logística, inventari i embalatge ESD",
           "href": "./ut09/ut0906.md"
-        }
-      ]
-    },
-    {
-      "summary": "UD10 — UT. 7 - Consumibles",
-      "items": [
-        {
-          "label": "📘 UD10 Completa (1 pàgina)",
-          "href": "./ut10/index.md",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "10.1 UT7 - Consumibles",
-          "href": "./ut10/ut1001.md"
-        },
-        {
-          "label": "10.2 UT7 - Presentaciones consumibles",
-          "href": "./ut10/ut1002.md"
-        },
-        {
-          "label": "10.3 RA5 CEb-1",
-          "href": "./ut10/ut1003.md"
-        },
-        {
-          "label": "10.4 RA5 CEb-2",
-          "href": "./ut10/ut1004.md"
-        },
-        {
-          "label": "10.5 RA5 CEb-3",
-          "href": "./ut10/ut1005.md"
-        },
-        {
-          "label": "10.6 RA5 CEb-4",
-          "href": "./ut10/ut1006.md"
-        },
-        {
-          "label": "10.7 RA5 CEc-1",
-          "href": "./ut10/ut1007.md"
-        },
-        {
-          "label": "10.8 RA5 CEc-2",
-          "href": "./ut10/ut1008.md"
-        },
-        {
-          "label": "10.9 RA5 CEc-3",
-          "href": "./ut10/ut1009.md"
-        },
-        {
-          "label": "10.10 RA5 CEc-4",
-          "href": "./ut10/ut1010.md"
-        },
-        {
-          "label": "10.11 RA5 CEd-1",
-          "href": "./ut10/ut1011.md"
-        },
-        {
-          "label": "10.12 RA5 CEd-2",
-          "href": "./ut10/ut1012.md"
-        },
-        {
-          "label": "10.13 RA5 CEd-3",
-          "href": "./ut10/ut1013.md"
-        },
-        {
-          "label": "10.14 RA5 CEe-1",
-          "href": "./ut10/ut1014.md"
-        },
-        {
-          "label": "10.15 RA5 CEe-2",
-          "href": "./ut10/ut1015.md"
-        },
-        {
-          "label": "10.16 RA5 CEe-3",
-          "href": "./ut10/ut1016.md"
-        },
-        {
-          "label": "10.17 RA5 CEf-1",
-          "href": "./ut10/ut1017.md"
-        },
-        {
-          "label": "10.18 RA5 CEf-2",
-          "href": "./ut10/ut1018.md"
-        },
-        {
-          "label": "10.19 RA5 CEg-1",
-          "href": "./ut10/ut1019.md"
-        },
-        {
-          "label": "10.20 RA5 CEg-2",
-          "href": "./ut10/ut1020.md"
-        }
-      ]
-    },
-    {
-      "summary": "UD11 — UT. 8 - Gestión logística",
-      "items": [
-        {
-          "label": "📘 UD11 Completa (1 pàgina)",
-          "href": "./ut11/index.md",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "11.1 UT8 - Gestión logística",
-          "href": "./ut11/ut1101.md"
-        },
-        {
-          "label": "11.2 UT8 - Presentaciones gestión logística",
-          "href": "./ut11/ut1102.md"
-        },
-        {
-          "label": "11.3 RA6 CEa-1",
-          "href": "./ut11/ut1103.md"
-        },
-        {
-          "label": "11.4 RA6 CEa-2",
-          "href": "./ut11/ut1104.md"
-        },
-        {
-          "label": "11.5 RA6 CEb-1",
-          "href": "./ut11/ut1105.md"
-        },
-        {
-          "label": "11.6 RA6 CEb-2",
-          "href": "./ut11/ut1106.md"
-        },
-        {
-          "label": "11.7 RA6 CEc-1",
-          "href": "./ut11/ut1107.md"
         }
       ]
     }

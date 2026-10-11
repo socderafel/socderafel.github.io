@@ -1,106 +1,45 @@
 ---
 layout: default
-title: "Muntatge i Manteniment de Sistemes i Components — UD2 EXTRAORDINARIA"
+title: "UD2: Unitats Funcionals de l'Ordinador — Muntatge i Manteniment de Sistemes i Components"
 course_root: ".."
 badge: "1r FPB · Grau Bàsic · UD2"
 ---
 
-# UD2 — EXTRAORDINARIA
+# 🧠 UD2: Unitats Funcionals de l'Ordinador (Arquitectura de Sistemes)
 
-
-
----
-
-## 📌 2.1 Temario del examen
-
-Temario del examen
-
-- Fonaments d'electricitat.
-
-- Components interns d'un ordinador.
-
-- Ports i connectors dels ordinadors.
-
-- Consumibles i perifèrics.
+Benvingut/da a la **Unitat Didàctica 2** de MMSCI. En aquest bloc temàtic aprofundirem en l'arquitectura de Von Neumann, coneixerem la composició de la CPU (Unitat de Control, ALU i registres), aprendrem com s'organitza la piràmide de memòria (des de la memòria cau fins als discs) i analitzarem com viatja la informació a través dels busos de dades, adreces i control.
 
 ---
 
-## 📌 2.2 Apuntes a revisar
+## 📑 Apartats de la Unitat Didàctica
 
-Apuntes a revisar
-
-En este caso para la extraordinaria, os paso unos enlaces de youtube con los contenidos a estudiar.
-
-Destornilladores y puntas de destornilladores:
-
-https://www.youtube.com/watch?v=nkIZOicgZp0
-
-Placas base, elementos y zócalos:
-
-https://www.youtube.com/watch?v=1jbFYAO_Gw4
-
-Cableado y conectores de fuentes de alimentación y ordenadores:
-
-https://www.youtube.com/watch?v=ii4nxwGIOxI
-
-Cableado y tensiones de las fuentes de alimentación:
-
-https://www.youtube.com/shorts/s4gH05b_fSQ
-
-Periféricos, impresoras y test de cabezales de impresión:
-
-https://www.youtube.com/watch?v=U4Q0KYvcYGU
+| Apartat | Títol de la Secció Didàctica | Enllaç Directe |
+| :---: | :--- | :---: |
+| **2.1** | Model i arquitectura de Von Neumann | [**📘 Llegir Apartat 2.1 →**](./ut0201.md) |
+| **2.2** | La Unitat Central de Processament (CPU): UC, ALU i registres | [**📘 Llegir Apartat 2.2 →**](./ut0202.md) |
+| **2.3** | La jerarquia de memòria de l'ordinador (Registres, Cau L1/L2/L3, RAM i ROM) | [**📘 Llegir Apartat 2.3 →**](./ut0203.md) |
+| **2.4** | El subsistema d'entrada/eixida i els busos de comunicació (Dades, adreces i control) | [**📘 Llegir Apartat 2.4 →**](./ut0204.md) |
+| **2.5** | El cicle d'execució d'una instrucció (Fetch, Decode, Execute) | [**📘 Llegir Apartat 2.5 →**](./ut0205.md) |
 
 ---
 
-## 📌 2.3 Elementos básicos eléctricos y electrónicos
+## 🎯 Resultats d'Aprenentatge Treballats
 
-Continguts i activitats didàctiques de **Elementos básicos eléctricos y electrónicos**.
-
----
-
-## 📌 2.4 La placa base de  un ordenador
-
-Continguts i activitats didàctiques de **La placa base de  un ordenador**.
+- **RA 1:** Selecciona els components i elements que configuren els equips microinformàtics, descrivint les seues característiques i relacions de compatibilitat.
+  - *CE a:* S'han descrit els blocs funcionals d'un ordinador segons el model de Von Neumann.
+  - *CE c:* S'ha diferenciat el paper de la CPU, la memòria principal i el subsistema d'E/S.
+  - *CE e:* S'ha explicat la jerarquia de memòria i la necessitat de la memòria cau.
 
 ---
 
-## 📌 2.5 Componentes internos de un ordenador
-
-Continguts i activitats didàctiques de **Componentes internos de un ordenador**.
-
----
-
-## 📌 2.6 Conectores y cableado
-
-Continguts i activitats didàctiques de **Conectores y cableado**.
-
----
-
-## 📌 2.7 Periféricos
-
-Continguts i activitats didàctiques de **Periféricos**.
-
----
-
-## 📌 2.8 Consumibles
-
-Continguts i activitats didàctiques de **Consumibles**.
-
----
-
-## 📌 2.9 Gestión logística
-
-Continguts i activitats didàctiques de **Gestión logística**.
-
----
-
-## 📌 2.10 Enunciado
-
-Enunciado
-
----
-
-## 📌 2.11 Enunciado
-
-Continguts i activitats didàctiques de **Enunciado**.
+## 📌 Resum Didàctic de la Unitat
+1. **Model de Von Neumann:** Programa i dades emmagatzemats en una mateixa memòria. 4 blocs: CPU, Memòria, E/S i Busos.
+2. **CPU:** 
+   - **UC (Unitat de Control):** Coordina i descodifica instruccions.
+   - **ALU (Unitat Aritmeticològica):** Realitza càlculs matemàtics i comparacions lògiques.
+   - **Registres:** Memòria ultra-ràpida interna (PC, IR, ACC).
+3. **Jerarquia de Memòria:** Com més ràpida és una memòria, més cara és i menor capacitat té (Registres > Cau L1/L2/L3 > RAM > SSD/HDD).
+4. **Busos:** 
+   - **Dades:** Bidireccional (transporta informació).
+   - **Adreces:** Unidireccional des de la CPU (indica la posició de memòria).
+   - **Control:** Bidireccional (ordres de lectura/escriptura i sincronització).
