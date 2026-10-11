@@ -2,185 +2,434 @@
   "title": "🖥️ Sistemes Informàtics — 1r DAW / DAM · Grau Superior",
   "home": {
     "label": "🏠 Inici Sistemes Informàtics",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — INTRODUCCIÓ AL PROGRAMARI BASE I A LA VIRTUALITZACIÓ",
+      "summary": "UD1 — UT1. Elaborar documentacion con aplicaciones de propósito general",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 TRANSPARÈNCIES UNITAT 1",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 Àrea de text i multimèdia",
+          "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 SI: ENLLAÇ RENDIMENT CPU",
-          "href": "./ut01/ut0102.html"
+          "label": "1.2 Resources",
+          "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 DIASPOSITIVES UD1 PART 1",
-          "href": "./ut01/ut0103.html"
+          "label": "1.3 1.1 - 1.4: Aplicaciones de uso general",
+          "href": "./ut01/ut0103.md"
         },
         {
-          "label": "1.4 SI: TEORIA XARXES UD1",
-          "href": "./ut01/ut0104.html"
+          "label": "1.4 1.5 Búsqueda de Información y Servicios de Internet",
+          "href": "./ut01/ut0104.md"
+        },
+        {
+          "label": "1.5 1.6 Aplicaciones de Transferencia de Archivos",
+          "href": "./ut01/ut0105.md"
+        },
+        {
+          "label": "1.6 Classroom exercices",
+          "href": "./ut01/ut0106.md"
+        },
+        {
+          "label": "1.7 Actividad 1.2 Licencias a)",
+          "href": "./ut01/ut0107.md"
+        },
+        {
+          "label": "1.8 Actividad Excel g)",
+          "href": "./ut01/ut0108.md"
+        },
+        {
+          "label": "1.9 Actividad Procesador de textos g) d)",
+          "href": "./ut01/ut0109.md"
+        },
+        {
+          "label": "1.10 Excel Solucions",
+          "href": "./ut01/ut0110.md"
+        },
+        {
+          "label": "1.11 1.5 Activitat de Búsqueda de informació f)",
+          "href": "./ut01/ut0111.md"
+        },
+        {
+          "label": "1.12 1.6 Activitat de Transferencia de fitxers e)",
+          "href": "./ut01/ut0112.md"
+        },
+        {
+          "label": "1.13 Activitat 1.7: Utilització Microsoft Forms",
+          "href": "./ut01/ut0113.md"
+        },
+        {
+          "label": "1.14 Resources",
+          "href": "./ut01/ut0114.md"
         }
       ]
     },
     {
-      "summary": "UD2 — INSTAL·LACIÓ DE PROGRAMARI DE BASE LLIURE I DE PROPIETAT",
+      "summary": "UD2 — UT2. Componentes y Características de los sistemas informáticos",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 Continguts Teòrics i Recursos",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 Resources",
+          "href": "./ut02/ut0201.md"
+        },
+        {
+          "label": "2.2 2.1 - 2.2 Componentes Hardware",
+          "href": "./ut02/ut0202.md"
+        },
+        {
+          "label": "2.3 2.3 Puesta en marcha de un ordenador",
+          "href": "./ut02/ut0203.md"
+        },
+        {
+          "label": "2.4 2.4 Clasificación, Instalación y Configuración de Dispositivos Periféricos",
+          "href": "./ut02/ut0204.md"
+        },
+        {
+          "label": "2.5 2.5 Tipos de Redes y Sistemas de Comunicación",
+          "href": "./ut02/ut0205.md"
+        },
+        {
+          "label": "2.6 2.6 Componentes de una Red Informática",
+          "href": "./ut02/ut0206.md"
+        },
+        {
+          "label": "2.7 2.7 Mapas de una Red Informática",
+          "href": "./ut02/ut0207.md"
+        },
+        {
+          "label": "2.8 Classroom exercices",
+          "href": "./ut02/ut0208.md"
+        },
+        {
+          "label": "2.9 Actividad 2.1 Componentes hardware a) b)",
+          "href": "./ut02/ut0209.md"
+        },
+        {
+          "label": "2.10 Activitat 2.3 Puesta en marcha c)",
+          "href": "./ut02/ut0210.md"
+        },
+        {
+          "label": "2.11 2.3 Problemes en perifèrics",
+          "href": "./ut02/ut0211.md"
+        },
+        {
+          "label": "2.12 Actividad 2.4: Instalacion de perifericos d)",
+          "href": "./ut02/ut0212.md"
+        },
+        {
+          "label": "2.13 Actividad 2.5: Direccionamiento IP - e)",
+          "href": "./ut02/ut0213.md"
+        },
+        {
+          "label": "2.14 2.6 Subnetting",
+          "href": "./ut02/ut0214.md"
+        },
+        {
+          "label": "2.15 Actividad 2.7 Packet Tracer",
+          "href": "./ut02/ut0215.md"
         }
       ]
     },
     {
-      "summary": "UD3 — ADMINISTRACIÓ DE PROGRAMARI DE BASE LLIURE",
+      "summary": "UD3 — UT3: Instalación de sistemas operativos",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 LA SHELL DE LINUX",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 UT3: Instalación de sistemas operativos",
+          "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 CONFIGURANT LA XARXA AMB NETPLAN. INSTRUCCIONS D",
-          "href": "./ut03/ut0302.html"
+          "label": "3.2 Activitats",
+          "href": "./ut03/ut0302.md"
         },
         {
-          "label": "3.3 ENLLAÇOS DURS I SIMBÓLICS",
-          "href": "./ut03/ut0303.html"
+          "label": "3.3 Actividad 3.1: Elementos funcionales de un SO",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Actividad 3.2: Comparación de SSOO",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 Actividad 3: Clasificación de los SSOO",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Actividad 3.1 Presentación",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 Actividad 4",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 Actividad 5",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 Actividad 6",
+          "href": "./ut03/ut0309.md"
+        },
+        {
+          "label": "3.10 Actividad 7",
+          "href": "./ut03/ut0310.md"
+        },
+        {
+          "label": "3.11 Actividad 8",
+          "href": "./ut03/ut0311.md"
+        },
+        {
+          "label": "3.12 Actividades de Revisión",
+          "href": "./ut03/ut0312.md"
         }
       ]
     },
     {
-      "summary": "UD4 — ADMINISTRACIÓ DE PROGRAMARI DE BASE PROPIETARI",
+      "summary": "UD4 — UT4. Gestión de la información y sistemas de archivo",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 TEORIA XARXES",
-          "href": "./ut04/ut0401.html"
+          "label": "4.1 Àrea de text i multimèdia",
+          "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 TEORIA SUBNETTING",
-          "href": "./ut04/ut0402.html"
+          "label": "4.2 Apuntes UT4",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 Activitats",
+          "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 Actividad 4.1 - Presentación de Sistemas de Archivos",
+          "href": "./ut04/ut0404.md"
+        },
+        {
+          "label": "4.5 Actividad 4.4 Búsqueda de información",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 Actividad 4.5 Copias de Seguridad",
+          "href": "./ut04/ut0406.md"
+        },
+        {
+          "label": "4.7 Actividad 4.5.1 Copias de seguridad - Cifrado",
+          "href": "./ut04/ut0407.md"
+        },
+        {
+          "label": "4.8 Actividad 4.6 - Automatizacion de Tareas",
+          "href": "./ut04/ut0408.md"
+        },
+        {
+          "label": "4.9 Actividad 4.7 Herramientas de gestion de la informacion",
+          "href": "./ut04/ut0409.md"
+        },
+        {
+          "label": "4.10 Instalación de SSOO y creación de particiones",
+          "href": "./ut04/ut0410.md"
         }
       ]
     },
     {
-      "summary": "UD5 — GESTIÓ DE LA INFORMACIÓ",
+      "summary": "UD5 — UT5. Interconnecta sistemas en red configurando dispositivos y protocolos.",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "5.1 GUIA DE LA UNITAT 5",
-          "href": "./ut05/ut0501.html"
+          "label": "5.1 RA5",
+          "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 TEORIA UNITAT 5 PART 1",
-          "href": "./ut05/ut0502.html"
+          "label": "5.2 UT5.1 Protocolo TCP/IP",
+          "href": "./ut05/ut0502.md"
         },
         {
-          "label": "5.3 TEORIA UNITAT 5 PART 2",
-          "href": "./ut05/ut0503.html"
+          "label": "5.3 UT5.6. Configuración y gestión de los puertos de comunicación - CE5.f)",
+          "href": "./ut05/ut0503.md"
         },
         {
-          "label": "5.4 TEORIA UNITAT 5 PART 3",
-          "href": "./ut05/ut0504.html"
+          "label": "5.4 UT5.7: Herramientas y comandos de red - CE5.g)",
+          "href": "./ut05/ut0504.md"
         },
         {
-          "label": "5.5 TEORIA UNITAT 5 PART 4",
-          "href": "./ut05/ut0505.html"
+          "label": "5.5 UT5.8: Protocolos de comunicación seguros SSH - CE5.h))",
+          "href": "./ut05/ut0505.md"
         },
         {
-          "label": "5.6 TEORIA UNITAT 5 PART 5",
-          "href": "./ut05/ut0506.html"
+          "label": "5.6 Activitats",
+          "href": "./ut05/ut0506.md"
         },
         {
-          "label": "5.7 TEORIA UNITAT 5 PART 6",
-          "href": "./ut05/ut0507.html"
+          "label": "5.7 Actividad 1: Protocolo TCP/IP",
+          "href": "./ut05/ut0507.md"
         },
         {
-          "label": "5.8 TEORIA UNITAT 5 PART 7",
-          "href": "./ut05/ut0508.html"
+          "label": "5.8 Actividad 2: Redes de área local",
+          "href": "./ut05/ut0508.md"
+        },
+        {
+          "label": "5.9 Actividad 5.3: configuración de redes WIFI",
+          "href": "./ut05/ut0509.md"
+        },
+        {
+          "label": "5.10 Actividad 5.4: Protocolos de red",
+          "href": "./ut05/ut0510.md"
+        },
+        {
+          "label": "5.11 Actividad 5.5: Configuración de la conexión WAN",
+          "href": "./ut05/ut0511.md"
+        },
+        {
+          "label": "5.12 Actividad 5.6: Puertos de comunicación",
+          "href": "./ut05/ut0512.md"
+        },
+        {
+          "label": "5.13 Actividad 5.7: Herramientas y comandos de red",
+          "href": "./ut05/ut0513.md"
+        },
+        {
+          "label": "5.14 Actividad 5.8: Protocolos de comunicación segura",
+          "href": "./ut05/ut0514.md"
         }
       ]
     },
     {
-      "summary": "UD6 — ADMINISTRACIÓ DEL ACCÉS AL DOMINI",
+      "summary": "UD6 — UT6. Opera sistemas en red gestionando sus recursos e identificando las estricciones de seguridad existentes",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html"
+          "href": "./ut06/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "6.1 TEORIA UNITAT 6 PART 1",
-          "href": "./ut06/ut0601.html"
+          "label": "6.1 Àrea de text i multimèdia",
+          "href": "./ut06/ut0601.md"
         },
         {
-          "label": "6.2 TEORIA UNITAT 6 PART 2",
-          "href": "./ut06/ut0602.html"
+          "label": "6.2 6.1 Sistemas operativos de red",
+          "href": "./ut06/ut0602.md"
         },
         {
-          "label": "6.3 TEORIA UNITAT 6 PART 3",
-          "href": "./ut06/ut0603.html"
+          "label": "6.3 6.3 Dominios",
+          "href": "./ut06/ut0603.md"
+        },
+        {
+          "label": "6.4 6.4 Usuarios y grupos",
+          "href": "./ut06/ut0604.md"
+        },
+        {
+          "label": "6.5 Activitats (còpia)",
+          "href": "./ut06/ut0605.md"
+        },
+        {
+          "label": "6.6 Actividad 6.1 Instalacion de servidores (Windows y Ubuntu)",
+          "href": "./ut06/ut0606.md"
+        },
+        {
+          "label": "6.7 Actividad 6.2: Conexión a escritorio remoto",
+          "href": "./ut06/ut0607.md"
+        },
+        {
+          "label": "6.8 Actividad 6.3: Configuración de dominios",
+          "href": "./ut06/ut0608.md"
+        },
+        {
+          "label": "6.9 Actividad 6.4 Gestión de grupos y usuarios",
+          "href": "./ut06/ut0609.md"
+        },
+        {
+          "label": "6.10 Actividad 6.5: Permisos y directivas",
+          "href": "./ut06/ut0610.md"
+        },
+        {
+          "label": "6.11 Actividad 6.6: Carpetas y perfiles",
+          "href": "./ut06/ut0611.md"
+        },
+        {
+          "label": "6.12 Preguntas de la unidad",
+          "href": "./ut06/ut0612.md"
+        },
+        {
+          "label": "6.13 Enlaces de interés",
+          "href": "./ut06/ut0613.md"
         }
       ]
     },
     {
-      "summary": "UD7 — SEGURETAT, RENDIMENT I RECURSOS",
+      "summary": "UD7 — UT7. Gestiona sistemas operativos utilitzando comandos y herramientas gráficas y evaluando las necessitades del sistema.",
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.html"
+          "href": "./ut07/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "7.1 TEORIA UNITAT 7 PART1",
-          "href": "./ut07/ut0701.html"
+          "label": "7.1 Àrea de text i multimèdia",
+          "href": "./ut07/ut0701.md"
         },
         {
-          "label": "7.2 TEORIA UNITAT 7 PART 2",
-          "href": "./ut07/ut0702.html"
+          "label": "7.2 U7.2. Comandos básicos en GNU-Linux - CE4.e)",
+          "href": "./ut07/ut0702.md"
         },
         {
-          "label": "7.3 TEORIA UNITAT 7 PART 3",
-          "href": "./ut07/ut0703.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD8 — TALLER HARDWARE",
-      "items": [
-        {
-          "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.html"
+          "label": "7.3 UT7.3. Cuentas de usuario y grupos - CE4.a)",
+          "href": "./ut07/ut0703.md"
         },
         {
-          "label": "8.1 Manual placa base taller",
-          "href": "./ut08/ut0801.html"
+          "label": "7.4 UT7.5. Gestión de procesos y redes - CE4.c)",
+          "href": "./ut07/ut0704.md"
         },
         {
-          "label": "8.2 Teoria Components Hardware",
-          "href": "./ut08/ut0802.html"
+          "label": "7.5 Activitats (còpia) (còpia)",
+          "href": "./ut07/ut0705.md"
+        },
+        {
+          "label": "7.6 Actividad 7.2: comandos básicos (e)",
+          "href": "./ut07/ut0706.md"
+        },
+        {
+          "label": "7.7 Actividad 7.3: cuentas de usuario y grupos (a-b)",
+          "href": "./ut07/ut0707.md"
+        },
+        {
+          "label": "7.8 Actividad 7.5: gestión de procesos y redes (c)",
+          "href": "./ut07/ut0708.md"
+        },
+        {
+          "label": "7.9 Actividad 7.6: Permisos (d)",
+          "href": "./ut07/ut0709.md"
+        },
+        {
+          "label": "7.10 Actividad 7.7. Logs y herramientas de monitorización (f)",
+          "href": "./ut07/ut0710.md"
+        },
+        {
+          "label": "7.11 Actividad 7.8: Instalación y uso de utilidades de mantenimiento (g)",
+          "href": "./ut07/ut0711.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }

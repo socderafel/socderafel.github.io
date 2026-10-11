@@ -1,59 +1,32 @@
 ---
 layout: default
-title: "UD4 — Unit 4 Content Management Systems · Temari Complet"
+title: "Aplicacions Web — UD4 Tema 2: Aplicaciones web de escritorio"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD4 — Unit 4 Content Management Systems"
-prev_url: "../ut03/ut0302.html"
-prev_label: "⬅️ 3.2 Taller AWS-AWS"
-next_url: "../ut04/ut0401.html"
-next_label: "4.1 Resources: Reference Links ➡️"
+badge: "2n SMX · Grau Mitjà · UD4"
 ---
 
-# 📘 UD4 — Unit 4 Content Management Systems (Unitat Completa)
+# UD4 — Tema 2: Aplicaciones web de escritorio
 
-> **💡 Temari Complet de la Unitat**
-> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
-
-- [**4.1 Resources: Reference Links**](./ut0401.md)
 
 ---
 
-# 4.1 Resources: Reference Links
+## 📌 4.1 CA5.a: Descripción y análisis de aplicaciones web de escritorio
 
-> **🔗 Recurs Web: EN Video - BBPress Wordpress Tutorial - Set up a Forum in Wordpress using bbPress plugin**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=BmtFh-pb7F8) ↗️**](https://www.youtube.com/watch?v=BmtFh-pb7F8)
+El nombre de la tarea debe ser T2_Tarea1.
 
-> **🔗 Recurs Web: EN Video - What is WooCommerce?**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=1KahlicghaE) ↗️**](https://www.youtube.com/watch?v=1KahlicghaE)
-
-> **🔗 Recurs Web: EN Video - Woocommerce Tutorial: Part 1 - Installation, Setup and Adding Your First Product**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=jfMBEXLTxgQ) ↗️**](https://www.youtube.com/watch?v=jfMBEXLTxgQ)
-
-> **🔗 Recurs Web: EN Video - Woocommerce Tutorial Part 2 - Adding & Configuring Products**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=9m4D8R9z8vg) ↗️**](https://www.youtube.com/watch?v=9m4D8R9z8vg)
-
-> **🔗 Recurs Web: EN Video - Woocommerce Tutorial Part 3: Product Variations and Product Attributes**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=IJjoJ408Gag) ↗️**](https://www.youtube.com/watch?v=IJjoJ408Gag)
+Se debe entregar en pdf
 
 ---
 
-05 - Referencias
+## 📌 4.2 Tema 2: Aplicaciones Web de escritorio
 
-OpenSourceCMS - [http://www.opensourcecms.com](http://www.opensourcecms.com)
-CMSmatrix - [http://www.cmsmatrix.org](http://www.cmsmatrix.org)
-Licencias Creative Commons - [http://es.creativecommons.org](http://es.creativecommons.org)
-Servidor en 1&1 - [http://www.1and1.es/ServerPremium?linkId=hd.subnav.dedicatedservers](http://www.1and1.es/ServerPremium?linkId=hd.subnav.dedicatedservers)
-Servidor dedicado en Arsys - [http://www.arsys.es/servidores/dedicados](http://www.arsys.es/servidores/dedicados)
-Servidor dedicado en OVH - [http://www.ovh.es/servidores_dedicados](http://www.ovh.es/servidores_dedicados)
-Servidor dedicado en Aruba - [http://serverdedicati.aruba.it](http://serverdedicati.aruba.it)
-CMS joomla - [http://www.joomla.org](http://www.joomla.org)
-CMS Wordpress - [http://wordpress.org](http://wordpress.org)
-Foros phpBB - [https://www.phpbb.com](https://www.phpbb.com)
-mediaWiki - [http://www.mediawiki.org/wiki/MediaWiki](http://www.mediawiki.org/wiki/MediaWiki)
-Coppermine Gallery - [http://coppermine-gallery.net](http://coppermine-gallery.net)
-Comercio electrónico Prestashop - [http://www.prestashop.com/es/](http://www.prestashop.com/es/)
-Motor de plantillas Smarty - [http://www.smarty.net](http://www.smarty.net)
+Continguts i activitats didàctiques de **Tema 2: Aplicaciones Web de escritorio**.
 
 ---
+
+## 📌 4.3 Trabajo RA5
+
+Se debe realizar un trabajo completo y entregar en pdf
+
+El nombre debe ser RA5_NOMBRE_APELLIDO.pdf

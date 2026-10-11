@@ -52,7 +52,9 @@
       color: var(--text-main);
       margin: 0;
       padding: 0;
-      line-height: 1.65;
+    html, body {
+      overflow-x: hidden;
+      max-width: 100vw;
     }
 
     /* Barra superior compacta estilo MkDocs Material (sin scrollbar nunca) */
@@ -63,6 +65,12 @@
       position: sticky;
       top: 0;
       z-index: 200;
+      overflow-x: hidden !important;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .md-header::-webkit-scrollbar {
+      display: none;
     }
 
     .md-header-inner {
@@ -75,6 +83,12 @@
       justify-content: space-between;
       gap: 12px;
       flex-wrap: wrap;
+      overflow-x: hidden !important;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .md-header-inner::-webkit-scrollbar {
+      display: none;
     }
 
     .md-header-brand {
@@ -101,7 +115,12 @@
       align-items: center;
       gap: 4px;
       flex-wrap: wrap;
-      overflow: visible;
+      overflow-x: hidden !important;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .md-header-nav::-webkit-scrollbar {
+      display: none;
     }
 
     .md-header-nav a {

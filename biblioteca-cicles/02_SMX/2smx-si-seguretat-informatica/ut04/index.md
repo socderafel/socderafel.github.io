@@ -1,48 +1,60 @@
 ---
 layout: default
-title: "UD4 — Seguretat Passiva: Emmagatzematge i Còpies de Seguretat · Temari Complet"
+title: "Seguretat Informàtica — UD4 1ª Eval - RA_1 UT.3 - Seguridad Pasiva en SI"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD4 — Seguretat Passiva: Emmagatzematge i Còpies de Seguretat"
-prev_url: "../ut03/ut0302.html"
-prev_label: "⬅️ 3.2 Especificació de potència, consum i selecció d'un SAI"
-next_url: "../ut04/ut0401.html"
-next_label: "4.1 Estratègies d'emmagatzematge, redundància RAID, NAS/SAN i polítiques de backup ➡️"
+badge: "2n SMX · Grau Mitjà · UD4"
 ---
 
-# 📘 UD4 — Seguretat Passiva: Emmagatzematge i Còpies de Seguretat (Unitat Completa)
+# 1ª Eval - RA_1 UT.3 - Seguridad Pasiva en SI
 
-> **💡 Temari Complet de la Unitat**
-> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
-
-- [**4.1 Estratègies d'emmagatzematge, redundància RAID, NAS/SAN i polítiques de backup**](./ut0401.md)
 
 ---
 
-# 4.1 Estratègies d'emmagatzematge, redundància RAID, NAS/SAN i polítiques de backup
+## 📌 4.1 Contenidos
 
-### Seguretat Informàtica
-
-- 04 – Seguretat Passiva: Emmagatzemament
-
-### Continguts
-
-- 14
-- hores
-- Unitat 4
-- Seguretat passiva: Emmagatzemament
-
-### Estratègies d'emmagatzemament
-
-### Rendiment i Redundància: RAID
-
-- RAID = Redundant Array of Independent Disks
-
-### Emmagatzemament en xarxa
-
-### Backup vs Imatge de Sistema
-
-### Imatge de Sistema
+Contenidos
 
 ---
+
+## 📌 4.2 UT. 3 - Seguridad pasiva de los equipos - Almacenamiento
+
+UT. 3 - Seguridad pasiva de los equipos - Almacenamiento
+
+---
+
+## 📌 4.3 Enlaces de interés
+
+Continguts i activitats didàctiques de **Enlaces de interés**.
+
+---
+
+## 📌 4.4 Contenidos (còpia)
+
+Tareas
+
+---
+
+## 📌 4.5 UT. 3 - Tarea 1 - RA2 CE A
+
+S'ha interpretat la documentació tècnica relativa a la política d'emmagatzematge.
+
+Actividad:
+
+“¿Qué consecuencias tendría perder toda la base de datos de clientes de una empresa?
+
+Buscar cuantos tipos diferentes de sistemas RAID disponemos.
+
+Cuadro comparativo de tipos de RAID: número mínimo de discos, ventajas y desventajas.
+
+---
+
+## 📌 4.6 linea (còpia)
+
+Continguts i activitats didàctiques de **linea (còpia)**.
+
+---
+
+## 📌 4.7 Contenidos
+
+Enlaces de interés

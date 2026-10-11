@@ -1,100 +1,130 @@
 ---
 layout: default
-title: "UD3 — Seguretat Passiva: Equips i CPD · Temari Complet"
+title: "Seguretat Informàtica — UD3 1ª Eval - RA_1 UT. 2 - Medidas de seguridad pasiva"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD3 — Seguretat Passiva: Equips i CPD"
-prev_url: "../ut02/ut0201.html"
-prev_label: "⬅️ 2.1 Criptografia simètrica, asimètrica, funcions hash i certificats digitals"
-next_url: "../ut03/ut0301.html"
-next_label: "3.1 Seguretat física, Centre de Processament de Dades (CPD) i protecció elèctrica ➡️"
+badge: "2n SMX · Grau Mitjà · UD3"
 ---
 
-# 📘 UD3 — Seguretat Passiva: Equips i CPD (Unitat Completa)
+# 1ª Eval - RA_1 UT. 2 - Medidas de seguridad pasiva
 
-> **💡 Temari Complet de la Unitat**
-> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
-
-- [**3.1 Seguretat física, Centre de Processament de Dades (CPD) i protecció elèctrica**](./ut0301.md)
-- [**3.2 Especificació de potència, consum i selecció d'un SAI**](./ut0302.md)
 
 ---
 
-# 3.1 Seguretat física, Centre de Processament de Dades (CPD) i protecció elèctrica
+## 📌 3.1 Contenidos
 
-### Seguretat Informàtica
-
-- 03 – Seguretat Passiva: Equips
-
-### Continguts
-
-- 14
-- hores
-- Unitat 3
-- Seguretat Passiva: Equips
-
-### CPD I
-
-- Pla de recuperació front desastres
-- Actualitzat!
-- Avantatges de Centralitzar
-
-### CPD II
-
-### Ubicació del CPD
-
-### Centre de Backup
-
-### SAI/UPS
+Contenidos
 
 ---
 
-# 3.2 Especificació de potència, consum i selecció d'un SAI
+## 📌 3.2 UT. 2 - Medidas de seguridad pasiva
 
-> **🔗 Recurs Web: VIDEO: Inside a Google data center**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=XZmGGAbHqa0) ↗️**](https://www.youtube.com/watch?v=XZmGGAbHqa0)
-
-> **🔗 Recurs Web: VIDEO: Construcción del data center de DKV Seguros - caso de éxito de ABAST**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=fyU8ihDru3k) ↗️**](https://www.youtube.com/watch?v=fyU8ihDru3k)
-
-> **🔗 Recurs Web: VIDEO: Construccion de CPD modular**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=MISllfWnOrs) ↗️**](https://www.youtube.com/watch?v=MISllfWnOrs)
+UT. 2 - Medidas de seguridad pasiva
 
 ---
 
-Consumo de equipos y selección de SAI José Domingo Muñoz Seguridad Informática - Seguridad Física Octubre 2018
+## 📌 3.3 Enlaces de interés
 
-¿Cuánto consume un ordenador? (Gama alta)
-
-¿Cuánto consume un ordenador? (Gama medio -alta)
-
-¿Cuánto consume un ordenador? (Gama media)
-
-¿Cuánto consume un ordenador? (Gama baja) 1 kwh aprox. 0,15 € (sin impuestos) ¿Cuanto cuesta tener encendido un ordenador que consume 200 w durante 24h? 200 w *24 horas / 1000 = 4,8 kwh * 0,15 = 72 céntimos 262,8 € al año !!!
-
-Los vatios, los voltioamperios y el factor de potencia La potencia real consumida por un determinado equipo electrónico en vatios (W) es el resultado de multiplicar la tensión (en voltios, V) y la corriente instantánea (amperios, A). No obstante, existen otras formas de expresar la potencia consumida. Una de ellas se ha hecho muy popular en la descripción de las características técnicas de los equipos informáticos y los SAIs. Es la denominada potencia aparente consumida, que se expresa en voltiamperios (VA).
-
-VA >= W la relación entre ellos es el factor de potencia. FP=VA/W; su valor es siempre menor o igual que 1 (100%) FP=1 100 W 100 VA Power Factor Corrected Sin PFC FP 60% o menos Con PFC pasivo FP 70-85% Con PFC activo FP 95%. Ejemplo: FP=70% 500 VA 350 W
-
-Especificación de potencia en un SAI Los SAI (Sistemas de Alimentación Ininterrumpida) nacieron con el objetivo de proporcionar al administrador el tiempo suficiente para guardar los datos y apagar el equipo de forma ordenada cuando se producía un apagón. En sus hojas técnicas, los SAIs reflejan los valores nominales máximos que son capaces de entregar a su salida, expresados en vatios (W) y voltiamperios (VA).
-
-Recuerda que, para no quemar tu sistema de alimentación ininterrumpida, no debes sobrepasar dichos valores nominales máximos bajo ningún concepto. Generalmente el factor de potencia de un SAI ronda el 60% (0,6). https://qloudea.com/sai https://www.salicru.com/
-
-Supuestos prácticos Ejemplo 1 Considere el caso de un SAI de 1000 VA. El usuario quiere alimentar 9 lámparas incandescentes de 100 watios (total 900 watios). Las lámparas tienen un consumo de 900 W ó 900 VA, ya que su factor de potencia es 1. ¿Puede nuestro SAI alimentar las 9 bombillas? Razona la respuesta.
-
-Ejemplo 2 Considere el caso de un SAI de 1000 VA. El usuario quiere alimentar un servidor de 900 VA con el SAI. El servidor tiene una fuente de alimentación con factor de potencia corregido, y por lo tanto tiene un consumo de 900 watios ó 900 VA. ¿Puede nuestro SAI alimentar el servidor? Razona la respuesta.
-
-Ejemplo 3 ¿Cuántos VA tiene que suministrar un SAI para poder dar servicio a un ordenador con una fuente de alimentación que consume 350 W y tiene un factor de potencia del 70 %?
-
-Calcular el tiempo de un SAI en modo baterías El tiempo de duración de un SAI en modo baterías es muy relativo, no se puede decir un tiempo exacto porque siempre dependerá de varios valores. Pero si conocemos las especificaciones de las baterías podemos afirmar lo siguiente
-
-Tiempo en min. de duración SAI = ((N x V x AH x Eff ) / VA ) x 60 N = numero de baterías en el SAI V = voltaje de las baterías AH = Amperios-Hora de las baterías Eff = eficiencia del SAI VA = Volti-Amperios del SAI
-
-Ejemplo Vamos a calcular el tiempo de duración del SAI: https://qloudea.com/cyberpower-cp1500epfclcd N = numero de baterías en el SAI = 2 V = voltaje de las baterías = 12 AH = Amperios-Hora de las baterías = 8.5 Eff = 900 w/1500 VA = 0,6 (60 %) VA = Volti-Amperios del SAI = 1500 Duración del SAI a carga máxima = ((2 x 12 x 8,5 x 0.6))/1500) x 60 = 4,89 minutos Sabemos que aproximadamente, un SAI de 1500VA nos proporciona unos 900W por lo que si pusiéramos el SAI de 1500VA con una carga de exactamente 900W continuamente, obtendríamos unos 4,89 minutos de tiempo hasta que se apague el SAI.
-
-Duración del SAI según de la potencia consumida Veamos un gráfico que nos muestra la duración del SAI según la carga conectada a el. El SAI tiene una potencia de 1000 Vatios / 1500 VA. ¿Cuál es su factor de potencia?
-
-Supuestos prácticos Ejemplo 1 Calcula la duración aproximada del SAI que puedes encontrar en https://www.pccomponentes.com/l-link-ll5707-interactive-sai-700va con un ordenador conectado a él que consume 200 W. Ejemplo 2 El SAI que tenemos en el departamento es el siguiente, tenemos varios servidores que consumen 1000 W, ¿cuánto tiempo aproximadamente puede alimentarlo el SAI sabiendo que el valor de N*V*Ah=480?
+Continguts i activitats didàctiques de **Enlaces de interés**.
 
 ---
+
+## 📌 3.4 Contenidos (còpia)
+
+Tareas
+
+---
+
+## 📌 3.5 UT. 2 - Tarea 1 - RA1 CE Actividad 1
+
+Actividad 1:
+
+Para comprender mejor los protocolos de acceso para personas, imagina que tienes que crear un protocolo de acceso seguro para una empresa a las afueras de Valencia.
+
+Redactar los pasos necesarios para el protocolo.
+
+---
+
+## 📌 3.6 UT. 2 - Tarea 2 - RA1 CE Actividad 2
+
+Actividad 2:
+
+En caso de limitar el acceso a las personas a las instalaciones por un sistema de control biométrico buscar información sobre las características biométricas que debe usar para minimizar el riesgo
+
+---
+
+## 📌 3.7 UT. 2 - Tarea 4 - RA2 CE - Actividad 4
+
+Diseñar un plan de emplazamiento y protección física de los equipos informáticos, identificando riesgos y aplicando medidas de seguridad adecuadas.
+
+Entrega
+
+Documento escrito con todas las respuestas y justificaciones (1-2 páginas).
+
+Plano o esquema de la sala con la ubicación propuesta de los equipos y elementos de seguridad (puede ser dibujo a mano o digital).
+
+---
+
+## 📌 3.8 UT. 2 - Tarea 1 - RA2 CEa
+
+Continguts i activitats didàctiques de **UT. 2 - Tarea 1 - RA2 CEa**.
+
+---
+
+## 📌 3.9 UT. 2 - Tarea 2 - RA1 CEb
+
+Continguts i activitats didàctiques de **UT. 2 - Tarea 2 - RA1 CEb**.
+
+---
+
+## 📌 3.10 UT. 2 - Tarea 3 - RA1 CEc
+
+Continguts i activitats didàctiques de **UT. 2 - Tarea 3 - RA1 CEc**.
+
+---
+
+## 📌 3.11 UT. 2 - Tarea 4 - RA1 CEd
+
+Continguts i activitats didàctiques de **UT. 2 - Tarea 4 - RA1 CEd**.
+
+---
+
+## 📌 3.12 UT. 2 - Tarea 5 - RA1 CEe
+
+Consultar catalogos de fabricantes de SAI y buscar e identificar los 3 tipos de SAIs disponibles en el
+
+mercado.
+
+Recopilar sus principales caracteristicas.
+
+Subir la tarea a AULES en: UT. 2 - Tarea 3
+
+---
+
+## 📌 3.13 UT. 2 - Tarea 6- RA2 CEf
+
+Continguts i activitats didàctiques de **UT. 2 - Tarea 6- RA2 CEf**.
+
+---
+
+## 📌 3.14 UT. 2 - Tarea 7 - RA2 CEh
+
+Continguts i activitats didàctiques de **UT. 2 - Tarea 7 - RA2 CEh**.
+
+---
+
+## 📌 3.15 UT. 2 - Tarea 8- RA2 CEi
+
+Continguts i activitats didàctiques de **UT. 2 - Tarea 8- RA2 CEi**.
+
+---
+
+## 📌 3.16 linea (còpia)
+
+Continguts i activitats didàctiques de **linea (còpia)**.
+
+---
+
+## 📌 3.17 Contenidos
+
+Enlaces de interés

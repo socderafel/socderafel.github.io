@@ -1,48 +1,70 @@
 ---
 layout: default
-title: "UD5 — Seguretat Activa: Sistema Operatiu i Aplicacions · Temari Complet"
+title: "Seguretat Informàtica — UD5 1ª Eval - RA_3 UT. 4 - Política de contraseñas."
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD5 — Seguretat Activa: Sistema Operatiu i Aplicacions"
-prev_url: "../ut04/ut0401.html"
-prev_label: "⬅️ 4.1 Estratègies d'emmagatzematge, redundància RAID, NAS/SAN i polítiques de backup"
-next_url: "../ut05/ut0501.html"
-next_label: "5.1 Control d'accés, autenticació, permisos, quotes i auditoria del sistema ➡️"
+badge: "2n SMX · Grau Mitjà · UD5"
 ---
 
-# 📘 UD5 — Seguretat Activa: Sistema Operatiu i Aplicacions (Unitat Completa)
+# 1ª Eval - RA_3 UT. 4 - Política de contraseñas.
 
-> **💡 Temari Complet de la Unitat**
-> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
-
-- [**5.1 Control d'accés, autenticació, permisos, quotes i auditoria del sistema**](./ut0501.md)
 
 ---
 
-# 5.1 Control d'accés, autenticació, permisos, quotes i auditoria del sistema
+## 📌 5.1 Contenidos
 
-### Seguretat Informàtica
-
-- 05 - Seguretat activa: sistema operatiu i aplicacions
-
-### Continguts
-
-- 14
-- hores
-- Unitat 5
-- Seguretat activa: sistema operatiu i aplicacions
-
-### Carrera d'obstacles
-
-- Accés Físic = Es pot fer qualsevol cosa amb ella
-
-### Autenticació
-
-### Consideracions I
-
-### Consideracions II
-
-- Administrar parc d’ordinadors
+Contenidos
 
 ---
+
+## 📌 5.2 UT. 4 - Política de contraseñas
+
+UT. 4 - Política de contraseñas
+
+---
+
+## 📌 5.3 Enlaces de interés
+
+Continguts i activitats didàctiques de **Enlaces de interés**.
+
+---
+
+## 📌 5.4 Contenidos (còpia)
+
+Tareas
+
+---
+
+## 📌 5.5 linea (còpia)
+
+Continguts i activitats didàctiques de **linea (còpia)**.
+
+---
+
+## 📌 5.6 Contenidos
+
+Enlaces de interés
+
+---
+
+## 📌 5.7 Hiren's Boot Sesion 1
+
+Continguts i activitats didàctiques de **Hiren's Boot Sesion 1**.
+
+---
+
+## 📌 5.8 Hiren's Boot Sesion 2
+
+Continguts i activitats didàctiques de **Hiren's Boot Sesion 2**.
+
+---
+
+## 📌 5.9 Hiren's Boot Sesion 3
+
+Continguts i activitats didàctiques de **Hiren's Boot Sesion 3**.
+
+---
+
+## 📌 5.10 Hiren's Boot Sesion 4
+
+Continguts i activitats didàctiques de **Hiren's Boot Sesion 4**.

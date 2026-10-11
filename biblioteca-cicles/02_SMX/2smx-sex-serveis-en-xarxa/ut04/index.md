@@ -1,64 +1,84 @@
 ---
 layout: default
-title: "UD4 — Servidor Web (HTTP / Virtual Hosting) · Temari Complet"
+title: "Serveis en Xarxa — UD4 (RA05) Unidad 4. Servicio HTTP"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD4 — Servidor Web (HTTP / Virtual Hosting)"
-prev_url: "../ut03/ut0301.html"
-prev_label: "⬅️ 3.1 UD3 Servidor de Nombres de Dominio SMX"
-next_url: "../ut04/ut0401.html"
-next_label: "4.1 Introducción virtual hosting ➡️"
+badge: "2n SMX · Grau Mitjà · UD4"
 ---
 
-# 📘 UD4 — Servidor Web (HTTP / Virtual Hosting) (Unitat Completa)
+# UD4 — (RA05) Unidad 4. Servicio HTTP
 
-> **💡 Temari Complet de la Unitat**
-> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
-
-- [**4.1 Introducción virtual hosting**](./ut0401.md)
-- [**4.2 Configuración Virtual hosting**](./ut0402.md)
 
 ---
 
-# 4.1 Introducción virtual hosting
+## 📌 4.1 UT04 Recursos label
 
-Introducción virtual hosting
-
-APACHE 2.4 Virtual Hosting
-
-¿Qué es Virtual Hosting? El término Hosting Virtual se refiere a hacer funcionar más de un sitio web (tales como www.pagina1.com y www.pagina2.com) en una sola máquina. Los sitios web virtuales pueden estar: ●"basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente ●"basados en nombres diferentes", lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres (de dominio).
-
-/etc/apache2/sites-available/000-default.conf <VirtualHost *:80> #ServerName www.example.com ServerAdmin webmaster@localhost DocumentRoot /var/www/html ErrorLog ${APACHE_LOG_DIR}/error.log CustomLog ${APACHE_LOG_DIR}/access.log combined </VirtualHost>
+Recursos
 
 ---
 
-# 4.2 Configuración Virtual hosting
+## 📌 4.2 UT04. Servicios HTTP
 
-Configuración Virtual hosting
-
-APACHE 2.4 Configuración de Virtual Hosting
-
-Configuración del virtualhost Cada sitio web tendrá nombres distintos. Cada sitio web compartirán la misma dirección IP y el mismo puerto (80).
-
-Configuración del virtualhost apache1.openwebinars.net (/var/www/apache1) apache1.openwebinars.net (/var/www/apache2)
-
-Creamos ficheros de configuración
-
-```bash
-cd /etc/apache2/sites-available
-```
-
-cp 000-default.conf apache1.conf cp 000-default.conf apache2.conf Modificamos ficheros de configuración DocumentRoot, ServerName ErrorLog,CustomLog
-
-Activamos la configuración a2ensite apache1 a2ensite apache2 Creamos los DocumentRoot y le damos propietarios adecuados
-
-```bash
-# chown -R www-data:www-data /var/www/apache1
-# chown -R www-data:www-data /var/www/apache2
-```
-
-> **💡 Apunt Tècnic**
-> Ejemplo: apache1.conf <VirtualHost *:80> ServerName apache1.openwebinars.net ServerAdmin webmaster@localhost DocumentRoot /var/www/html/apache1 ErrorLog ${APACHE_LOG_DIR}/error_apache1.log CustomLog ${APACHE_LOG_DIR}/access_apache1.log combined </VirtualHost>
+Teoría completa
 
 ---
+
+## 📌 4.3 UT04 Actividades label
+
+Actividades
+
+---
+
+## 📌 4.4 UT04. Instalación y configuración HTTP en Windows Server 2022
+
+Debéis realizar un documento en .pdf con el nombre:
+
+UT4HTTP
+
+WS_Tunombre.pdf
+
+junto con las capturas y explicación de cada apartado para instalar, configurar y comprobar el servicio HTTP en vuestro Servidor y Cliente Windows.
+
+---
+
+## 📌 4.5 UT04. Instalación y configuración Apache Ubuntu Server
+
+Instalación y configuración DHCP en Ubuntu Server
+
+Debéis realizar un documento en .pdf con el nombre:
+
+UT4HTTP
+
+UbuntuS_Tunombre.pdf
+
+junto con las capturas y explicación de cada apartado para instalar, configurar y comprobar el servicio HTTP en vuestro Servidor y cliente Ubuntu.
+
+---
+
+## 📌 4.6 UT04. Encriptación GPG
+
+Debes realizar la tarea en Ubuntu Cliente.
+
+Cuando lo tengas finalizado, sube el archivo con el nombre:
+
+UT04Encriptacion_tunombre.pdf
+
+---
+
+## 📌 4.7 UT04 Enlaces label (copia)
+
+Enlaces
+
+---
+
+## 📌 4.8 UT04 Exámenes label (copia)
+
+Exámenes
+
+---
+
+## 📌 4.9 Examen UT04. Servicios HTTP.
+
+Debes subir el archivo
+
+PEval4HTTPA_Tunombre.pdf con las capturas y texto correspondiente al ejercicio 6.

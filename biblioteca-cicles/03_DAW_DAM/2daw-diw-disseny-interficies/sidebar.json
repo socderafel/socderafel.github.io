@@ -2,135 +2,912 @@
   "title": "🎨 Disseny d'Interfícies Web — 2n DAW · Grau Superior",
   "home": {
     "label": "🏠 Inici Disseny d'Interfícies Web",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — PLANIFICACIÓN DE INTERFACES GRÁFICAS",
+      "summary": "UD1 — Extraordinaria",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 Enlaces interesantes UD1 Sección 1",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 Examen",
+          "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 DIAPOSITIVAS SECCIÓN 1: ELEME",
-          "href": "./ut01/ut0102.html"
-        },
-        {
-          "label": "1.3 DIAPOSITIVAS UNIDAD 1 SECCIÓN 2: INTERFACES WEB",
-          "href": "./ut01/ut0103.html"
-        },
-        {
-          "label": "1.4 DIAPOSITIVAS UD 1 SECCIÓN 3",
-          "href": "./ut01/ut0104.html"
-        },
-        {
-          "label": "1.5 DIW: DIAPOSITIVAS UD 1 SECCIÓN 4",
-          "href": "./ut01/ut0105.html"
+          "label": "1.2 Extraordinaria",
+          "href": "./ut01/ut0102.md"
         }
       ]
     },
     {
-      "summary": "UD2 — USO DE ESTILOS",
+      "summary": "UD2 — Ordinaria",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 DIW: DIAPOSITIVAS UD 2 SECCIÓN 1: INTRODUCCIÓN A",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 Examen",
+          "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 TEORÍA CSS PROPIEDAD DISPLAY",
-          "href": "./ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 DIW: DIAPOSITIVAS UD 2 SECCIÓN 2: PROPIEDADES DE",
-          "href": "./ut02/ut0203.html"
-        },
-        {
-          "label": "2.4 DIW DIAPOSITIVAS UD 2 SECCIÓN 3: COLORES Y FONDO",
-          "href": "./ut02/ut0204.html"
-        },
-        {
-          "label": "2.5 DIW DIAPOSITIVAS UD 2 SECCIÓN 4: FLOTAR Y POSICI",
-          "href": "./ut02/ut0205.html"
+          "label": "2.2 Recuperación RA2 - RA4",
+          "href": "./ut02/ut0202.md"
         }
       ]
     },
     {
-      "summary": "UD3 — ACCESIBILIDAD",
+      "summary": "UD3 — UT. 7 - Testing, depuración y validación",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 DIW: DIAPOSITIVAS UD3 SECCIÓN 1",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 contenidos (còpia)",
+          "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 DIW DIAPOSITIVAS UD3 SECCIÓN 2",
-          "href": "./ut03/ut0302.html"
+          "label": "3.2 presentacions (còpia) (còpia)",
+          "href": "./ut03/ut0302.md"
+        },
+        {
+          "label": "3.3 presentacions (còpia)",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Àrea de text i multimèdia (còpia)",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 Tareas (còpia)",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Enlaces de interes",
+          "href": "./ut03/ut0306.md"
         }
       ]
     },
     {
-      "summary": "UD4 — BOOTSTRAP",
+      "summary": "UD4 — UT. 6 - Accesibilidad web",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 DIW INTRODUCCIÓN A BOOTSTRAP5",
-          "href": "./ut04/ut0401.html"
+          "label": "4.1 contenidos (còpia)",
+          "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 PROPIEDAD FLEX DE BOOTSTRAP5",
-          "href": "./ut04/ut0402.html"
+          "label": "4.2 presentacions (còpia) (còpia)",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 UT. 6 - Accesibilidad web",
+          "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 presentacions (còpia)",
+          "href": "./ut04/ut0404.md"
+        },
+        {
+          "label": "4.5 UD. 6.1 - Accesibilidad web",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 UD. 6.2 - World Accessibility Initiative (WAI)",
+          "href": "./ut04/ut0406.md"
+        },
+        {
+          "label": "4.7 UD. 6.3 - Guía para la creación de sitios web accesibles",
+          "href": "./ut04/ut0407.md"
+        },
+        {
+          "label": "4.8 Tareas (còpia)",
+          "href": "./ut04/ut0408.md"
+        },
+        {
+          "label": "4.9 Tarea RA5 CEcd",
+          "href": "./ut04/ut0409.md"
+        },
+        {
+          "label": "4.10 Examen",
+          "href": "./ut04/ut0410.md"
+        },
+        {
+          "label": "4.11 Nota Examen",
+          "href": "./ut04/ut0411.md"
+        },
+        {
+          "label": "4.12 Tarea RA5 CEfgh",
+          "href": "./ut04/ut0412.md"
+        },
+        {
+          "label": "4.13 Enlaces de interes",
+          "href": "./ut04/ut0413.md"
         }
       ]
     },
     {
-      "summary": "UD5 — IMPLANTACIÓN DE CONTENIDO MULTIMEDIA",
+      "summary": "UD5 — UT. 5 - Preprocesadores y Bootstrap",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "5.1 SECCIÓN 1: IMÁGENES Y LA LEY DE PROPIEDAD INTELE",
-          "href": "./ut05/ut0501.html"
+          "label": "5.1 Àrea de text i multimèdia",
+          "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 DIW: Conceptos básicos de fotografía digital",
-          "href": "./ut05/ut0502.html"
+          "label": "5.2 Nota Examen Sass",
+          "href": "./ut05/ut0502.md"
         },
         {
-          "label": "5.3 SECCIÓN 2: SONIDO Y VÍDEO",
-          "href": "./ut05/ut0503.html"
+          "label": "5.3 contenidos (còpia)",
+          "href": "./ut05/ut0503.md"
+        },
+        {
+          "label": "5.4 presentacions (còpia) (còpia)",
+          "href": "./ut05/ut0504.md"
+        },
+        {
+          "label": "5.5 Àrea de text i multimèdia",
+          "href": "./ut05/ut0505.md"
+        },
+        {
+          "label": "5.6 UT. 5.1 - Preprocesador Sass",
+          "href": "./ut05/ut0506.md"
+        },
+        {
+          "label": "5.7 Àrea de text i multimèdia",
+          "href": "./ut05/ut0507.md"
+        },
+        {
+          "label": "5.8 UT. 5.2 - Práctica RA3-CEh",
+          "href": "./ut05/ut0508.md"
+        },
+        {
+          "label": "5.9 Àrea de text i multimèdia",
+          "href": "./ut05/ut0509.md"
+        },
+        {
+          "label": "5.10 UT. 5.3 - Sprites con Sass",
+          "href": "./ut05/ut0510.md"
+        },
+        {
+          "label": "5.11 presentacions (còpia)",
+          "href": "./ut05/ut0511.md"
+        },
+        {
+          "label": "5.12 UT. 5.1 - Preprocesador Sass",
+          "href": "./ut05/ut0512.md"
+        },
+        {
+          "label": "5.13 UD. 5.2 - SASS Práctica evaluable",
+          "href": "./ut05/ut0513.md"
+        },
+        {
+          "label": "5.14 UD. 5.3 - Sprites con Sass",
+          "href": "./ut05/ut0514.md"
+        },
+        {
+          "label": "5.15 UT. 5.4 - Bootstrap",
+          "href": "./ut05/ut0515.md"
+        },
+        {
+          "label": "5.16 UT. 5.5 - Bootstrap, personalización con Sass",
+          "href": "./ut05/ut0516.md"
+        },
+        {
+          "label": "5.17 Tareas (còpia)",
+          "href": "./ut05/ut0517.md"
+        },
+        {
+          "label": "5.18 Tarea RA2 CEj",
+          "href": "./ut05/ut0518.md"
+        },
+        {
+          "label": "5.19 TAREA - SOLUCIÓN",
+          "href": "./ut05/ut0519.md"
+        },
+        {
+          "label": "5.20 Tarea RA2 CEj - SOLUCIÓN",
+          "href": "./ut05/ut0520.md"
+        },
+        {
+          "label": "5.21 Práctica RA3 CEh",
+          "href": "./ut05/ut0521.md"
+        },
+        {
+          "label": "5.22 Solución RA3",
+          "href": "./ut05/ut0522.md"
+        },
+        {
+          "label": "5.23 Tarea RA2 CEj-2",
+          "href": "./ut05/ut0523.md"
+        },
+        {
+          "label": "5.24 Tarea RA3 CEd",
+          "href": "./ut05/ut0524.md"
+        },
+        {
+          "label": "5.25 Tarea RA3 CEe",
+          "href": "./ut05/ut0525.md"
+        },
+        {
+          "label": "5.26 Tarea RA4 CEab",
+          "href": "./ut05/ut0526.md"
+        },
+        {
+          "label": "5.27 Tarea RA4 CEcd",
+          "href": "./ut05/ut0527.md"
+        },
+        {
+          "label": "5.28 Tarea RA4 CEefg",
+          "href": "./ut05/ut0528.md"
+        },
+        {
+          "label": "5.29 Práctica RA5 CEab",
+          "href": "./ut05/ut0529.md"
+        },
+        {
+          "label": "5.30 Práctica RA5 CEe",
+          "href": "./ut05/ut0530.md"
+        },
+        {
+          "label": "5.31 Enlaces de interes",
+          "href": "./ut05/ut0531.md"
         }
       ]
     },
     {
-      "summary": "UD6 — USABILIDAD",
+      "summary": "UD6 — UT. 4 - Contenido multimedia",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html"
+          "href": "./ut06/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "6.1 DIAPOSITIVAS UNIDAD 6: USABILIDAD",
-          "href": "./ut06/ut0601.html"
+          "label": "6.1 Nota Examen Multimedia",
+          "href": "./ut06/ut0601.md"
+        },
+        {
+          "label": "6.2 contenidos (còpia)",
+          "href": "./ut06/ut0602.md"
+        },
+        {
+          "label": "6.3 presentacions (còpia) (còpia)",
+          "href": "./ut06/ut0603.md"
+        },
+        {
+          "label": "6.4 rejilla",
+          "href": "./ut06/ut0604.md"
+        },
+        {
+          "label": "6.5 UT. 4.1 - Licencias y derechos del autor",
+          "href": "./ut06/ut0605.md"
+        },
+        {
+          "label": "6.6 UT. 4.2 - Formatos de imagen audio y vídeo",
+          "href": "./ut06/ut0606.md"
+        },
+        {
+          "label": "6.7 presentacions (còpia)",
+          "href": "./ut06/ut0607.md"
+        },
+        {
+          "label": "6.8 info 1",
+          "href": "./ut06/ut0608.md"
+        },
+        {
+          "label": "6.9 Derechos de Autor para Creadores Digitales",
+          "href": "./ut06/ut0609.md"
+        },
+        {
+          "label": "6.10 UT. 4.1 - Licencias y derechos de autor en el uso de material multimedia",
+          "href": "./ut06/ut0610.md"
+        },
+        {
+          "label": "6.11 info 2",
+          "href": "./ut06/ut0611.md"
+        },
+        {
+          "label": "6.12 Kit Multimedia Diseño Web",
+          "href": "./ut06/ut0612.md"
+        },
+        {
+          "label": "6.13 UT. 4.2 - Formatos de imagen, audio y vídeo",
+          "href": "./ut06/ut0613.md"
+        },
+        {
+          "label": "6.14 info 3",
+          "href": "./ut06/ut0614.md"
+        },
+        {
+          "label": "6.15 Dominando SVG Forma y Animación",
+          "href": "./ut06/ut0615.md"
+        },
+        {
+          "label": "6.16 UT. 4.3 - Imágenes SVG",
+          "href": "./ut06/ut0616.md"
+        },
+        {
+          "label": "6.17 Àrea de text i multimèdia (còpia)",
+          "href": "./ut06/ut0617.md"
+        },
+        {
+          "label": "6.18 Tareas (còpia)",
+          "href": "./ut06/ut0618.md"
+        },
+        {
+          "label": "6.19 Tarea 1",
+          "href": "./ut06/ut0619.md"
+        },
+        {
+          "label": "6.20 Tarea 2",
+          "href": "./ut06/ut0620.md"
+        },
+        {
+          "label": "6.21 Tarea 3",
+          "href": "./ut06/ut0621.md"
+        },
+        {
+          "label": "6.22 Tarea 4",
+          "href": "./ut06/ut0622.md"
+        },
+        {
+          "label": "6.23 Tarea 4 - RA3-CEd",
+          "href": "./ut06/ut0623.md"
+        },
+        {
+          "label": "6.24 Tarea 5 - RA3-CEf",
+          "href": "./ut06/ut0624.md"
+        },
+        {
+          "label": "6.25 Enlaces de interes",
+          "href": "./ut06/ut0625.md"
+        },
+        {
+          "label": "6.26 Enlaces de interés 2",
+          "href": "./ut06/ut0626.md"
+        },
+        {
+          "label": "6.27 SVG - Documentación oficial",
+          "href": "./ut06/ut0627.md"
+        },
+        {
+          "label": "6.28 Tutoriales SVG",
+          "href": "./ut06/ut0628.md"
+        },
+        {
+          "label": "6.29 Diseño gráfico en SVG",
+          "href": "./ut06/ut0629.md"
+        },
+        {
+          "label": "6.30 Enlaces de interés 1",
+          "href": "./ut06/ut0630.md"
+        },
+        {
+          "label": "6.31 Formatos de imágenes: Guía para optimizar imágenes",
+          "href": "./ut06/ut0631.md"
+        },
+        {
+          "label": "6.32 Formatos de imágenes: Guía para reducir imágenes",
+          "href": "./ut06/ut0632.md"
+        },
+        {
+          "label": "6.33 Formatos de audio: Todo lo que deberías saber",
+          "href": "./ut06/ut0633.md"
+        },
+        {
+          "label": "6.34 Formatos de audio: Guía de optimización",
+          "href": "./ut06/ut0634.md"
+        },
+        {
+          "label": "6.35 Formatos de video: Todo lo que deberías saber",
+          "href": "./ut06/ut0635.md"
+        },
+        {
+          "label": "6.36 Formatos de video: Guía de optimización",
+          "href": "./ut06/ut0636.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD7 — UT. 3 - Frameworks CSS",
+      "items": [
+        {
+          "label": "📘 UD7 Completa (1 pàgina)",
+          "href": "./ut07/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 EXAMEN UD3",
+          "href": "./ut07/ut0701.md"
+        },
+        {
+          "label": "7.2 EXAMEN TAILWIND",
+          "href": "./ut07/ut0702.md"
+        },
+        {
+          "label": "7.3 contenidos (còpia)",
+          "href": "./ut07/ut0703.md"
+        },
+        {
+          "label": "7.4 presentacions (còpia) (còpia)",
+          "href": "./ut07/ut0704.md"
+        },
+        {
+          "label": "7.5 info",
+          "href": "./ut07/ut0705.md"
+        },
+        {
+          "label": "7.6 presentacions (còpia)",
+          "href": "./ut07/ut0706.md"
+        },
+        {
+          "label": "7.7 Tailwind CSS ¿avance o deuda técnica?",
+          "href": "./ut07/ut0707.md"
+        },
+        {
+          "label": "7.8 TailWind - CSS",
+          "href": "./ut07/ut0708.md"
+        },
+        {
+          "label": "7.9 PRESENTACIÓN TAILWIND CSS - RESUMEN",
+          "href": "./ut07/ut0709.md"
+        },
+        {
+          "label": "7.10 UT. 3 - TailwindCSS",
+          "href": "./ut07/ut0710.md"
+        },
+        {
+          "label": "7.11 Index",
+          "href": "./ut07/ut0711.md"
+        },
+        {
+          "label": "7.12 Ejemplo 6.1",
+          "href": "./ut07/ut0712.md"
+        },
+        {
+          "label": "7.13 Àrea de text i multimèdia (còpia)",
+          "href": "./ut07/ut0713.md"
+        },
+        {
+          "label": "7.14 Tareas (còpia)",
+          "href": "./ut07/ut0714.md"
+        },
+        {
+          "label": "7.15 Tarea - Adam Wathan - RA2 CEi",
+          "href": "./ut07/ut0715.md"
+        },
+        {
+          "label": "7.16 Ejercicio 2.1: Crea tu Página de Presentación Personal",
+          "href": "./ut07/ut0716.md"
+        },
+        {
+          "label": "7.17 Ejercicio 3.1: Practicar Nomenclatura y Espaciado",
+          "href": "./ut07/ut0717.md"
+        },
+        {
+          "label": "7.18 Ejercicio 3.4.1: Sistema de Alertas Completo con Colores",
+          "href": "./ut07/ut0718.md"
+        },
+        {
+          "label": "7.19 Ejercicio 4.1: Crear un Sistema de Cards con Flexbox",
+          "href": "./ut07/ut0719.md"
+        },
+        {
+          "label": "7.20 Ejercicio 5.1: Dashboard con Grid",
+          "href": "./ut07/ut0720.md"
+        },
+        {
+          "label": "7.21 Ejercicio 6.1: Landing Page Responsive",
+          "href": "./ut07/ut0721.md"
+        },
+        {
+          "label": "7.22 Ejercicio 7.1: Botón con Efectos Profesionales",
+          "href": "./ut07/ut0722.md"
+        },
+        {
+          "label": "7.23 Ejercicio 8.1: Card Interactiva Completa",
+          "href": "./ut07/ut0723.md"
+        },
+        {
+          "label": "7.24 Proyecto Final: Plataforma Web Completa \"DevHub\"",
+          "href": "./ut07/ut0724.md"
+        },
+        {
+          "label": "7.25 Enlaces de interes",
+          "href": "./ut07/ut0725.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD8 — UT. 2 - Guías de estilo y lenguaje de marcas",
+      "items": [
+        {
+          "label": "📘 UD8 Completa (1 pàgina)",
+          "href": "./ut08/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 contenidos",
+          "href": "./ut08/ut0801.md"
+        },
+        {
+          "label": "8.2 presentacions",
+          "href": "./ut08/ut0802.md"
+        },
+        {
+          "label": "8.3 UT. 2.1 - Repaso de HTML",
+          "href": "./ut08/ut0803.md"
+        },
+        {
+          "label": "8.4 UT. 2.2 - Repaso de CSS",
+          "href": "./ut08/ut0804.md"
+        },
+        {
+          "label": "8.5 UT. 2.3 - Modelo de cajas",
+          "href": "./ut08/ut0805.md"
+        },
+        {
+          "label": "8.6 UT. 2.3 - Modelo de cajas (còpia)",
+          "href": "./ut08/ut0806.md"
+        },
+        {
+          "label": "8.7 UT. 2.4 - Posicionamiento de elementos",
+          "href": "./ut08/ut0807.md"
+        },
+        {
+          "label": "8.8 UT. 2.5 - Diseño responsivo",
+          "href": "./ut08/ut0808.md"
+        },
+        {
+          "label": "8.9 Àrea de text i multimèdia",
+          "href": "./ut08/ut0809.md"
+        },
+        {
+          "label": "8.10 Ejemplo 1 de la UD. 2.4",
+          "href": "./ut08/ut0810.md"
+        },
+        {
+          "label": "8.11 Ejemplo 2 de la UT. 2.4",
+          "href": "./ut08/ut0811.md"
+        },
+        {
+          "label": "8.12 Ejemplo 3 de la UT. 2.4",
+          "href": "./ut08/ut0812.md"
+        },
+        {
+          "label": "8.13 Ejemplo 4 de la UT. 2.4",
+          "href": "./ut08/ut0813.md"
+        },
+        {
+          "label": "8.14 Ejemplo 5 de la UT. 2.4",
+          "href": "./ut08/ut0814.md"
+        },
+        {
+          "label": "8.15 Ejemplo 6 de la UT. 2.4",
+          "href": "./ut08/ut0815.md"
+        },
+        {
+          "label": "8.16 Ejemplo 7 de la UT. 2.4",
+          "href": "./ut08/ut0816.md"
+        },
+        {
+          "label": "8.17 Ejemplo 8 de la UT. 2.4",
+          "href": "./ut08/ut0817.md"
+        },
+        {
+          "label": "8.18 Ejemplo 9 de la UT. 2.4",
+          "href": "./ut08/ut0818.md"
+        },
+        {
+          "label": "8.19 Ejemplo 10 de la UT. 2.4",
+          "href": "./ut08/ut0819.md"
+        },
+        {
+          "label": "8.20 Ejemplo 11 de la UT. 2.4",
+          "href": "./ut08/ut0820.md"
+        },
+        {
+          "label": "8.21 Ejemplo 12 de la UT. 2.4",
+          "href": "./ut08/ut0821.md"
+        },
+        {
+          "label": "8.22 presentacions",
+          "href": "./ut08/ut0822.md"
+        },
+        {
+          "label": "8.23 html5-cheatsheet-2019",
+          "href": "./ut08/ut0823.md"
+        },
+        {
+          "label": "8.24 CSS3 - cheatsheet",
+          "href": "./ut08/ut0824.md"
+        },
+        {
+          "label": "8.25 CSS3 - cheatsheet lite",
+          "href": "./ut08/ut0825.md"
+        },
+        {
+          "label": "8.26 espai en blanc",
+          "href": "./ut08/ut0826.md"
+        },
+        {
+          "label": "8.27 Tareas",
+          "href": "./ut08/ut0827.md"
+        },
+        {
+          "label": "8.28 Tarea 1",
+          "href": "./ut08/ut0828.md"
+        },
+        {
+          "label": "8.29 Tarea 2",
+          "href": "./ut08/ut0829.md"
+        },
+        {
+          "label": "8.30 Tarea 3",
+          "href": "./ut08/ut0830.md"
+        },
+        {
+          "label": "8.31 Tarea 4",
+          "href": "./ut08/ut0831.md"
+        },
+        {
+          "label": "8.32 Tarea 5",
+          "href": "./ut08/ut0832.md"
+        },
+        {
+          "label": "8.33 Tarea 6",
+          "href": "./ut08/ut0833.md"
+        },
+        {
+          "label": "8.34 Tarea 7",
+          "href": "./ut08/ut0834.md"
+        },
+        {
+          "label": "8.35 Tarea 8",
+          "href": "./ut08/ut0835.md"
+        },
+        {
+          "label": "8.36 Tarea 9",
+          "href": "./ut08/ut0836.md"
+        },
+        {
+          "label": "8.37 Tarea 10",
+          "href": "./ut08/ut0837.md"
+        },
+        {
+          "label": "8.38 Tarea 11",
+          "href": "./ut08/ut0838.md"
+        },
+        {
+          "label": "8.39 Tarea 12",
+          "href": "./ut08/ut0839.md"
+        },
+        {
+          "label": "8.40 Tarea 13",
+          "href": "./ut08/ut0840.md"
+        },
+        {
+          "label": "8.41 Tarea 14",
+          "href": "./ut08/ut0841.md"
+        },
+        {
+          "label": "8.42 Ejercicio 14",
+          "href": "./ut08/ut0842.md"
+        },
+        {
+          "label": "8.43 Tarea 15",
+          "href": "./ut08/ut0843.md"
+        },
+        {
+          "label": "8.44 Tarea 16",
+          "href": "./ut08/ut0844.md"
+        },
+        {
+          "label": "8.45 Tarea 17",
+          "href": "./ut08/ut0845.md"
+        },
+        {
+          "label": "8.46 Tarea 18",
+          "href": "./ut08/ut0846.md"
+        },
+        {
+          "label": "8.47 Tarea 19",
+          "href": "./ut08/ut0847.md"
+        },
+        {
+          "label": "8.48 Actividades de clase",
+          "href": "./ut08/ut0848.md"
+        },
+        {
+          "label": "8.49 Actividad de clase 13",
+          "href": "./ut08/ut0849.md"
+        },
+        {
+          "label": "8.50 Actividad de clase 14",
+          "href": "./ut08/ut0850.md"
+        },
+        {
+          "label": "8.51 Actividad de clase 16",
+          "href": "./ut08/ut0851.md"
+        },
+        {
+          "label": "8.52 Actividad de clase 17",
+          "href": "./ut08/ut0852.md"
+        },
+        {
+          "label": "8.53 Actividad de clase 18",
+          "href": "./ut08/ut0853.md"
+        },
+        {
+          "label": "8.54 Actividad de clase 19",
+          "href": "./ut08/ut0854.md"
+        },
+        {
+          "label": "8.55 Actividad de clase 20",
+          "href": "./ut08/ut0855.md"
+        },
+        {
+          "label": "8.56 Actividad de clase 21",
+          "href": "./ut08/ut0856.md"
+        },
+        {
+          "label": "8.57 Actividad de clase 22",
+          "href": "./ut08/ut0857.md"
+        },
+        {
+          "label": "8.58 espai en blanc (còpia)",
+          "href": "./ut08/ut0858.md"
+        },
+        {
+          "label": "8.59 Enlaces de interes (còpia)",
+          "href": "./ut08/ut0859.md"
+        },
+        {
+          "label": "8.60 HTML: HyperText Markup Language",
+          "href": "./ut08/ut0860.md"
+        },
+        {
+          "label": "8.61 CSS: Cascading Style Sheets",
+          "href": "./ut08/ut0861.md"
+        },
+        {
+          "label": "8.62 Markup Validation Service",
+          "href": "./ut08/ut0862.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD9 — UT. 1 - Diseño de interfaces web",
+      "items": [
+        {
+          "label": "📘 UD9 Completa (1 pàgina)",
+          "href": "./ut09/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 contenidos",
+          "href": "./ut09/ut0901.md"
+        },
+        {
+          "label": "9.2 presentacions (còpia)",
+          "href": "./ut09/ut0902.md"
+        },
+        {
+          "label": "9.3 UT.1.1 - Elements del disseny web",
+          "href": "./ut09/ut0903.md"
+        },
+        {
+          "label": "9.4 UT.1.2 - Interficies web",
+          "href": "./ut09/ut0904.md"
+        },
+        {
+          "label": "9.5 UT.1.1 - Elements del disseny web",
+          "href": "./ut09/ut0905.md"
+        },
+        {
+          "label": "9.6 UT.1.2 - Creación de guias de estilos y prototipado web con Figma",
+          "href": "./ut09/ut0906.md"
+        },
+        {
+          "label": "9.7 UT. 1.3 - Vida pagina web",
+          "href": "./ut09/ut0907.md"
+        },
+        {
+          "label": "9.8 UT. 1.4 - layouts",
+          "href": "./ut09/ut0908.md"
+        },
+        {
+          "label": "9.9 presentacions",
+          "href": "./ut09/ut0909.md"
+        },
+        {
+          "label": "9.10 UT.1 - Interficies web",
+          "href": "./ut09/ut0910.md"
+        },
+        {
+          "label": "9.11 espai en blanc",
+          "href": "./ut09/ut0911.md"
+        },
+        {
+          "label": "9.12 Tareas",
+          "href": "./ut09/ut0912.md"
+        },
+        {
+          "label": "9.13 Tarea RA1-CEa",
+          "href": "./ut09/ut0913.md"
+        },
+        {
+          "label": "9.14 Tarea RA1-CEc",
+          "href": "./ut09/ut0914.md"
+        },
+        {
+          "label": "9.15 Tarea RA1-CEd - Creación de una plantilla de guía de estilo con Figma",
+          "href": "./ut09/ut0915.md"
+        },
+        {
+          "label": "9.16 Tarea RA1 CEe",
+          "href": "./ut09/ut0916.md"
+        },
+        {
+          "label": "9.17 Tarea RA1-CEf",
+          "href": "./ut09/ut0917.md"
+        },
+        {
+          "label": "9.18 Tarea 1 (còpia)",
+          "href": "./ut09/ut0918.md"
+        },
+        {
+          "label": "9.19 Tarea 2 (còpia)",
+          "href": "./ut09/ut0919.md"
+        },
+        {
+          "label": "9.20 Tarea 3",
+          "href": "./ut09/ut0920.md"
+        },
+        {
+          "label": "9.21 espai en blanc (còpia)",
+          "href": "./ut09/ut0921.md"
+        },
+        {
+          "label": "9.22 Enlaces de interes",
+          "href": "./ut09/ut0922.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD10 — UT. 0 - Presentación del módulo.",
+      "items": [
+        {
+          "label": "📘 UD10 Completa (1 pàgina)",
+          "href": "./ut10/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "10.1 UT. 0 - Presentación del módulo.",
+          "href": "./ut10/ut1001.md"
+        },
+        {
+          "label": "10.2 Tutoria 2025/26",
+          "href": "./ut10/ut1002.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }

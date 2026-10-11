@@ -1,57 +1,28 @@
 ---
 layout: default
-title: "UD1 — Conceptes sobre Seguretat Informàtica · Temari Complet"
+title: "Seguretat Informàtica — UD1 Presentación del módulo Seguridad Informática."
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD1 — Conceptes sobre Seguretat Informàtica"
-prev_url: "../index.html"
-prev_label: "⬅️ 🏠 Inici del Mòdul"
-next_url: "../ut01/ut0101.html"
-next_label: "1.1 Principis de seguretat, amenaces, vulnerabilitats i anàlisi de riscos ➡️"
+badge: "2n SMX · Grau Mitjà · UD1"
 ---
 
-# 📘 UD1 — Conceptes sobre Seguretat Informàtica (Unitat Completa)
+# UD1 — Presentación del módulo Seguridad Informática.
 
-> **💡 Temari Complet de la Unitat**
-> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
-
-- [**1.1 Principis de seguretat, amenaces, vulnerabilitats i anàlisi de riscos**](./ut0101.md)
 
 ---
 
-# 1.1 Principis de seguretat, amenaces, vulnerabilitats i anàlisi de riscos
+## 📌 1.1 Contenidos
 
-### Seguretat Informàtica
-
-- 01 – Conceptes sobre seguretat informàtica
-
-### Continguts
-
-- 13
-- hores
-- Unitat 1
-- Conceptes sobre seguretat informàtica
-
-### Per què i què protegir?
-
-### Definicions I
-
-### Definicions II
-
-### Definicions III
-
-### Tipus d’atacs
-
-### Bones pràctiques
-
-### Legislació
+Contenidos
 
 ---
 
-### Recursos Complementaris
+## 📌 1.2 Presentació Inici de Curs
 
-> **🔗 Recurs Web: Documental RTVE — Ciberterrorisme, el costat fosc de la xarxa**
-> [**🌐 Obrir recurs extern (http://www.rtve.es/alacarta/videos/informe-semanal/informe-semanal-ciberterrorismo-lado-oscuro-red/798175/) ↗️**](http://www.rtve.es/alacarta/videos/informe-semanal/informe-semanal-ciberterrorismo-lado-oscuro-red/798175/)
+Continguts i activitats didàctiques de **Presentació Inici de Curs**.
 
 ---
+
+## 📌 1.3 Qúestionari Inici de Curs amb respostes
+
+Continguts i activitats didàctiques de **Qúestionari Inici de Curs amb respostes**.

@@ -2,145 +2,1244 @@
   "title": "⚙️ Entorns de Desenvolupament — 1r DAW / DAM · Grau Superior",
   "home": {
     "label": "🏠 Inici Entorns de Desenvolupament",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — Introducción al desarrollo de software",
+      "summary": "UD1 — Unitat 1 - Desenvolupament de software",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 Intr. al desarrollo de SW",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 Etiqueta (còpia)",
+          "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 Especificaciones requisitos IEEE380_ejemplo",
-          "href": "./ut01/ut0102.html"
+          "label": "1.2 Temari (còpia)",
+          "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 Especificaciones requisitos software_ejemplo",
-          "href": "./ut01/ut0103.html"
+          "label": "1.3 Unitat de Treball 1",
+          "href": "./ut01/ut0103.md"
+        },
+        {
+          "label": "1.4 Unitat de Treball 1 CAST",
+          "href": "./ut01/ut0104.md"
+        },
+        {
+          "label": "1.5 principis metodologia àgil",
+          "href": "./ut01/ut0105.md"
+        },
+        {
+          "label": "1.6 què és l'agilitat?",
+          "href": "./ut01/ut0106.md"
+        },
+        {
+          "label": "1.7 scrum-kanban",
+          "href": "./ut01/ut0107.md"
+        },
+        {
+          "label": "1.8 lean",
+          "href": "./ut01/ut0108.md"
+        },
+        {
+          "label": "1.9 Diapositivas - Unidad 1",
+          "href": "./ut01/ut0109.md"
+        },
+        {
+          "label": "1.10 Unidad 1-Desarrollo de software",
+          "href": "./ut01/ut0110.md"
+        },
+        {
+          "label": "1.11 Activitats",
+          "href": "./ut01/ut0111.md"
+        },
+        {
+          "label": "1.12 Clasificación de lenguajes",
+          "href": "./ut01/ut0112.md"
+        },
+        {
+          "label": "1.13 Activitat 1",
+          "href": "./ut01/ut0113.md"
+        },
+        {
+          "label": "1.14 Activitat 2",
+          "href": "./ut01/ut0114.md"
+        },
+        {
+          "label": "1.15 Activitat 3A",
+          "href": "./ut01/ut0115.md"
+        },
+        {
+          "label": "1.16 Activitat 3B",
+          "href": "./ut01/ut0116.md"
+        },
+        {
+          "label": "1.17 Activitat 4",
+          "href": "./ut01/ut0117.md"
+        },
+        {
+          "label": "1.18 Activitat Avaluació d'eines",
+          "href": "./ut01/ut0118.md"
+        },
+        {
+          "label": "1.19 Exercici - Anàlisi de requisits",
+          "href": "./ut01/ut0119.md"
+        },
+        {
+          "label": "1.20 Exercici - Anàlisi de requisits II",
+          "href": "./ut01/ut0120.md"
+        },
+        {
+          "label": "1.21 Activitats resoltes",
+          "href": "./ut01/ut0121.md"
+        },
+        {
+          "label": "1.22 Activitat 1 (còpia)",
+          "href": "./ut01/ut0122.md"
+        },
+        {
+          "label": "1.23 Análisis de requisitosPre-examen\n    \n\n...",
+          "href": "./ut01/ut0123.md"
+        },
+        {
+          "label": "1.24 Etiqueta (còpia)",
+          "href": "./ut01/ut0124.md"
+        },
+        {
+          "label": "1.25 &nbsp;Prácticas",
+          "href": "./ut01/ut0125.md"
+        },
+        {
+          "label": "1.26 Práctica P01 - Unidad 1 - Desarrollo de software",
+          "href": "./ut01/ut0126.md"
+        },
+        {
+          "label": "1.27 Etiqueta (còpia) (còpia)",
+          "href": "./ut01/ut0127.md"
+        },
+        {
+          "label": "1.28 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut01/ut0128.md"
+        },
+        {
+          "label": "1.29 Unidad 1 - Desarrollo de software (Sin nota)",
+          "href": "./ut01/ut0129.md"
+        },
+        {
+          "label": "1.30 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut01/ut0130.md"
+        },
+        {
+          "label": "1.31 &nbsp;Enlaces de interés",
+          "href": "./ut01/ut0131.md"
         }
       ]
     },
     {
-      "summary": "UD2 — IDE's y estilo de programación",
+      "summary": "UD2 — Unitat 2 - Instal·lació i utilització d'entorns de desenvolupament",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 IDEs. Estilos de programación",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 Temari",
+          "href": "./ut02/ut0201.md"
+        },
+        {
+          "label": "2.2 Unitat de Treball 2",
+          "href": "./ut02/ut0202.md"
+        },
+        {
+          "label": "2.3 Activitats (còpia)",
+          "href": "./ut02/ut0203.md"
+        },
+        {
+          "label": "2.4 Activitat 1",
+          "href": "./ut02/ut0204.md"
+        },
+        {
+          "label": "2.5 Activitat 2",
+          "href": "./ut02/ut0205.md"
+        },
+        {
+          "label": "2.6 &nbsp;Unidad 2 - Diapositivas",
+          "href": "./ut02/ut0206.md"
+        },
+        {
+          "label": "2.7 &nbsp;Netbeans I",
+          "href": "./ut02/ut0207.md"
+        },
+        {
+          "label": "2.8 Etiqueta (còpia) (còpia)",
+          "href": "./ut02/ut0208.md"
+        },
+        {
+          "label": "2.9 Ejercicios de aula (còpia)",
+          "href": "./ut02/ut0209.md"
+        },
+        {
+          "label": "2.10 Ejercicio 1 -  Entornos en la nube",
+          "href": "./ut02/ut0210.md"
+        },
+        {
+          "label": "2.11 Ejercicio 2 - Instalación de Netbeans",
+          "href": "./ut02/ut0211.md"
+        },
+        {
+          "label": "2.12 Etiqueta (còpia) (còpia)",
+          "href": "./ut02/ut0212.md"
+        },
+        {
+          "label": "2.13 &nbsp;Prácticas (còpia)",
+          "href": "./ut02/ut0213.md"
+        },
+        {
+          "label": "2.14 Descargar ISO Ubuntu 22.04.3 LTS Desktop.",
+          "href": "./ut02/ut0214.md"
+        },
+        {
+          "label": "2.15 Práctica 1: Primer entorno de desarrollo",
+          "href": "./ut02/ut0215.md"
+        },
+        {
+          "label": "2.16 Práctica 2 - NetBeans: personalizando el entorno",
+          "href": "./ut02/ut0216.md"
+        },
+        {
+          "label": "2.17 Práctica 3 - NetBeans: Depuración",
+          "href": "./ut02/ut0217.md"
+        },
+        {
+          "label": "2.18 Práctica 4 - NetBeans: Depuración II",
+          "href": "./ut02/ut0218.md"
+        },
+        {
+          "label": "2.19 EXTRA Práctica - Eclipse",
+          "href": "./ut02/ut0219.md"
+        },
+        {
+          "label": "2.20 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut02/ut0220.md"
+        },
+        {
+          "label": "2.21 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut02/ut0221.md"
+        },
+        {
+          "label": "2.22 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut02/ut0222.md"
+        },
+        {
+          "label": "2.23 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut02/ut0223.md"
         }
       ]
     },
     {
-      "summary": "UD3 — Control de versiones",
+      "summary": "UD3 — Unitat 3 - Diagrames de classe",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 Control de versiones",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 Temari",
+          "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 Git Cheat Sheet",
-          "href": "./ut03/ut0302.html"
+          "label": "3.2 Unitat de Treball 3",
+          "href": "./ut03/ut0302.md"
         },
         {
-          "label": "3.3 Crear alias para log con ramas",
-          "href": "./ut03/ut0303.html"
+          "label": "3.3 SESSIÓ GRAVADA ED",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Activitats (còpia)",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 enllaç a programa per dibuixar diagrama de classes",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Unitat 3 - Activitat 1 -",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 Unitat 3 - Activitat 2 -",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 Unitat 3 - Activitat 4 - (CA5.e - 5%)",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 RESERVA DE VUELOS PAS A PAS",
+          "href": "./ut03/ut0309.md"
         }
       ]
     },
     {
-      "summary": "UD4 — Debugging y testing",
+      "summary": "UD4 — Unitat 4 - Diagrames de comportament",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 Debugging y testing",
-          "href": "./ut04/ut0401.html"
+          "label": "4.1 Temari",
+          "href": "./ut04/ut0401.md"
+        },
+        {
+          "label": "4.2 Unitat de Treball 4",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 UML",
+          "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 Activitats (còpia)",
+          "href": "./ut04/ut0404.md"
+        },
+        {
+          "label": "4.5 Activitat 1",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 Activitat 2",
+          "href": "./ut04/ut0406.md"
+        },
+        {
+          "label": "4.7 Activitat 3",
+          "href": "./ut04/ut0407.md"
         }
       ]
     },
     {
-      "summary": "UD5 — Diagramas de clase",
+      "summary": "UD5 — Unitat 5 - Disseny i realització de proves",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "5.1 Diagramas de clase",
-          "href": "./ut05/ut0501.html"
+          "label": "5.1 Temari",
+          "href": "./ut05/ut0501.md"
+        },
+        {
+          "label": "5.2 Unitat de Treball 5",
+          "href": "./ut05/ut0502.md"
+        },
+        {
+          "label": "5.3 Activitats (còpia)",
+          "href": "./ut05/ut0503.md"
+        },
+        {
+          "label": "5.4 Activitat 1",
+          "href": "./ut05/ut0504.md"
+        },
+        {
+          "label": "5.5 Activitat 2",
+          "href": "./ut05/ut0505.md"
+        },
+        {
+          "label": "5.6 Activitat 3",
+          "href": "./ut05/ut0506.md"
+        },
+        {
+          "label": "5.7 Recursos",
+          "href": "./ut05/ut0507.md"
+        },
+        {
+          "label": "5.8 Cómo crear el grafo de flujo de un programa",
+          "href": "./ut05/ut0508.md"
+        },
+        {
+          "label": "5.9 Complejidad ciclomática: Cómo calcularla",
+          "href": "./ut05/ut0509.md"
+        },
+        {
+          "label": "5.10 Pruebas de caja blanca. Técnica del camino básico",
+          "href": "./ut05/ut0510.md"
+        },
+        {
+          "label": "5.11 Pruebas de caja blanca. Técnica del camino básico II",
+          "href": "./ut05/ut0511.md"
+        },
+        {
+          "label": "5.12 Grafo de flujo de un programa. Ejemplo complejo",
+          "href": "./ut05/ut0512.md"
+        },
+        {
+          "label": "5.13 Pruebas de caja negra. Técnica de partición equivalente",
+          "href": "./ut05/ut0513.md"
+        },
+        {
+          "label": "5.14 Ejemplo de técnica de partición equivalente +AVL",
+          "href": "./ut05/ut0514.md"
+        },
+        {
+          "label": "5.15 Tests Funcionales. Clases de equivalencia y valores límite",
+          "href": "./ut05/ut0515.md"
+        },
+        {
+          "label": "5.16 ejercicio caja blanca",
+          "href": "./ut05/ut0516.md"
         }
       ]
     },
     {
-      "summary": "UD6 — Diagramas de comportamiento",
+      "summary": "UD6 — Unitat 6 - Optimització i documentació",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html"
+          "href": "./ut06/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "6.1 Diagramas de casos de uso",
-          "href": "./ut06/ut0601.html"
+          "label": "6.1 Temari",
+          "href": "./ut06/ut0601.md"
         },
         {
-          "label": "6.2 Diagramas de estado",
-          "href": "./ut06/ut0602.html"
+          "label": "6.2 Activitats (còpia)",
+          "href": "./ut06/ut0602.md"
+        },
+        {
+          "label": "6.3 TASCA UNITAT 6",
+          "href": "./ut06/ut0603.md"
         }
       ]
     },
     {
-      "summary": "UD7 — Refactorización, optimización y documentación",
+      "summary": "UD7 — Act2_Examen",
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.html"
+          "href": "./ut07/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "7.1 Refactorización",
-          "href": "./ut07/ut0701.html"
-        },
-        {
-          "label": "7.2 Documentación",
-          "href": "./ut07/ut0702.html"
+          "label": "7.1 Act2_Examen",
+          "href": "./ut07/ut0701.md"
         }
       ]
     },
     {
-      "summary": "UD8 — Metodologías ágiles",
+      "summary": "UD8 — primera",
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.html"
+          "href": "./ut08/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "8.1 Metodologías ágiles",
-          "href": "./ut08/ut0801.html"
+          "label": "8.1 Examen primera evaluación - TEST",
+          "href": "./ut08/ut0801.md"
         },
         {
-          "label": "8.2 Planificación de proyectos",
-          "href": "./ut08/ut0802.html"
+          "label": "8.2 Examen primera evaluación - Ejercicios",
+          "href": "./ut08/ut0802.md"
         },
         {
-          "label": "8.3 Poker planning",
-          "href": "./ut08/ut0803.html"
+          "label": "8.3 Examen primera evaluación.",
+          "href": "./ut08/ut0803.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD9 — Segunda evaluación",
+      "items": [
+        {
+          "label": "📘 UD9 Completa (1 pàgina)",
+          "href": "./ut09/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 Tareas pendientes",
+          "href": "./ut09/ut0901.md"
+        },
+        {
+          "label": "9.2 Examen segunda evaluación - TEST",
+          "href": "./ut09/ut0902.md"
+        },
+        {
+          "label": "9.3 Examen segunda evaluación - Ejercicios",
+          "href": "./ut09/ut0903.md"
+        },
+        {
+          "label": "9.4 Examen segunda evaluación.",
+          "href": "./ut09/ut0904.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD10 — Unidad 3 -  Control de versiones",
+      "items": [
+        {
+          "label": "📘 UD10 Completa (1 pàgina)",
+          "href": "./ut10/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "10.1 Etiqueta (còpia)",
+          "href": "./ut10/ut1001.md"
+        },
+        {
+          "label": "10.2 &nbsp;Temario (còpia)",
+          "href": "./ut10/ut1002.md"
+        },
+        {
+          "label": "10.3 UD.3 - Control de versiones.",
+          "href": "./ut10/ut1003.md"
+        },
+        {
+          "label": "10.4 Etiqueta (còpia) (còpia)",
+          "href": "./ut10/ut1004.md"
+        },
+        {
+          "label": "10.5 Ejercicios de aula (còpia)",
+          "href": "./ut10/ut1005.md"
+        },
+        {
+          "label": "10.6 Introducción Git",
+          "href": "./ut10/ut1006.md"
+        },
+        {
+          "label": "10.7 Ejercicio - Terminología",
+          "href": "./ut10/ut1007.md"
+        },
+        {
+          "label": "10.8 Etiqueta (còpia) (còpia)",
+          "href": "./ut10/ut1008.md"
+        },
+        {
+          "label": "10.9 &nbsp;Prácticas (còpia)",
+          "href": "./ut10/ut1009.md"
+        },
+        {
+          "label": "10.10 Práctica 01 - Primeros pasos con Git",
+          "href": "./ut10/ut1010.md"
+        },
+        {
+          "label": "10.11 Práctica 02 - Ramas GIT",
+          "href": "./ut10/ut1011.md"
+        },
+        {
+          "label": "10.12 Práctica 03 - Trabajo remoto",
+          "href": "./ut10/ut1012.md"
+        },
+        {
+          "label": "10.13 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut10/ut1013.md"
+        },
+        {
+          "label": "10.14 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut10/ut1014.md"
+        },
+        {
+          "label": "10.15 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut10/ut1015.md"
+        },
+        {
+          "label": "10.16 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut10/ut1016.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD11 — Unidad 4 - Diseño y realización de pruebas",
+      "items": [
+        {
+          "label": "📘 UD11 Completa (1 pàgina)",
+          "href": "./ut11/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "11.1 Etiqueta (còpia)",
+          "href": "./ut11/ut1101.md"
+        },
+        {
+          "label": "11.2 &nbsp;Temario (còpia)",
+          "href": "./ut11/ut1102.md"
+        },
+        {
+          "label": "11.3 UD.4 Diseño y realización de pruebas",
+          "href": "./ut11/ut1103.md"
+        },
+        {
+          "label": "11.4 Etiqueta (còpia) (còpia)",
+          "href": "./ut11/ut1104.md"
+        },
+        {
+          "label": "11.5 Ejercicios de aula (còpia)",
+          "href": "./ut11/ut1105.md"
+        },
+        {
+          "label": "11.6 Primeros casos de prueba",
+          "href": "./ut11/ut1106.md"
+        },
+        {
+          "label": "11.7 Etiqueta (còpia) (còpia)",
+          "href": "./ut11/ut1107.md"
+        },
+        {
+          "label": "11.8 &nbsp;Prácticas (còpia)",
+          "href": "./ut11/ut1108.md"
+        },
+        {
+          "label": "11.9 Ejercicios de caja negra",
+          "href": "./ut11/ut1109.md"
+        },
+        {
+          "label": "11.10 Ejercicios caja blanca I",
+          "href": "./ut11/ut1110.md"
+        },
+        {
+          "label": "11.11 Ejercicios de caja blanca I - (resto)",
+          "href": "./ut11/ut1111.md"
+        },
+        {
+          "label": "11.12 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut11/ut1112.md"
+        },
+        {
+          "label": "11.13 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut11/ut1113.md"
+        },
+        {
+          "label": "11.14 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut11/ut1114.md"
+        },
+        {
+          "label": "11.15 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut11/ut1115.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD12 — Tercera evaluación",
+      "items": [
+        {
+          "label": "📘 UD12 Completa (1 pàgina)",
+          "href": "./ut12/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "12.1 Tareas pendientes",
+          "href": "./ut12/ut1201.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD13 — Unidad 4.1 - JUnit",
+      "items": [
+        {
+          "label": "📘 UD13 Completa (1 pàgina)",
+          "href": "./ut13/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "13.1 Etiqueta (còpia)",
+          "href": "./ut13/ut1301.md"
+        },
+        {
+          "label": "13.2 &nbsp;Temario (còpia)",
+          "href": "./ut13/ut1302.md"
+        },
+        {
+          "label": "13.3 UD.4.1 JUnit 4",
+          "href": "./ut13/ut1303.md"
+        },
+        {
+          "label": "13.4 Ampliación página 24.",
+          "href": "./ut13/ut1304.md"
+        },
+        {
+          "label": "13.5 Ampliación página 32.",
+          "href": "./ut13/ut1305.md"
+        },
+        {
+          "label": "13.6 Ampliación página 35 y 24.",
+          "href": "./ut13/ut1306.md"
+        },
+        {
+          "label": "13.7 Código/Proyecto ejercicios resueltos calculadora.",
+          "href": "./ut13/ut1307.md"
+        },
+        {
+          "label": "13.8 Código/Proyecto ejercicios resueltos MayorNúmero.",
+          "href": "./ut13/ut1308.md"
+        },
+        {
+          "label": "13.9 Etiqueta (còpia) (còpia)",
+          "href": "./ut13/ut1309.md"
+        },
+        {
+          "label": "13.10 Ejercicios de aula (còpia)",
+          "href": "./ut13/ut1310.md"
+        },
+        {
+          "label": "13.11 Seguimiento de la clase - I",
+          "href": "./ut13/ut1311.md"
+        },
+        {
+          "label": "13.12 Calculadora",
+          "href": "./ut13/ut1312.md"
+        },
+        {
+          "label": "13.13 Seguimiento de la clase - I I",
+          "href": "./ut13/ut1313.md"
+        },
+        {
+          "label": "13.14 Etiqueta (còpia) (còpia)",
+          "href": "./ut13/ut1314.md"
+        },
+        {
+          "label": "13.15 &nbsp;Prácticas (còpia)",
+          "href": "./ut13/ut1315.md"
+        },
+        {
+          "label": "13.16 Práctica 1",
+          "href": "./ut13/ut1316.md"
+        },
+        {
+          "label": "13.17 Práctica 2",
+          "href": "./ut13/ut1317.md"
+        },
+        {
+          "label": "13.18 &nbsp; Solución del ejercicio 1 de la práctica 2.&...",
+          "href": "./ut13/ut1318.md"
+        },
+        {
+          "label": "13.19 Práctica 2 RECUPERACIÓN.",
+          "href": "./ut13/ut1319.md"
+        },
+        {
+          "label": "13.20 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut13/ut1320.md"
+        },
+        {
+          "label": "13.21 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut13/ut1321.md"
+        },
+        {
+          "label": "13.22 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut13/ut1322.md"
+        },
+        {
+          "label": "13.23 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut13/ut1323.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD14 — Unidad 6 - Optimización y documentación",
+      "items": [
+        {
+          "label": "📘 UD14 Completa (1 pàgina)",
+          "href": "./ut14/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "14.1 Etiqueta (còpia)",
+          "href": "./ut14/ut1401.md"
+        },
+        {
+          "label": "14.2 &nbsp;Temario (còpia)",
+          "href": "./ut14/ut1402.md"
+        },
+        {
+          "label": "14.3 UD.5 Optimización y documentación.",
+          "href": "./ut14/ut1403.md"
+        },
+        {
+          "label": "14.4 Etiqueta (còpia) (còpia)",
+          "href": "./ut14/ut1404.md"
+        },
+        {
+          "label": "14.5 Ejercicios de aula (còpia)",
+          "href": "./ut14/ut1405.md"
+        },
+        {
+          "label": "14.6 Javadoc",
+          "href": "./ut14/ut1406.md"
+        },
+        {
+          "label": "14.7 Documentación con Javadoc",
+          "href": "./ut14/ut1407.md"
+        },
+        {
+          "label": "14.8 Etiqueta (còpia) (còpia)",
+          "href": "./ut14/ut1408.md"
+        },
+        {
+          "label": "14.9 &nbsp;Prácticas (còpia)",
+          "href": "./ut14/ut1409.md"
+        },
+        {
+          "label": "14.10 Ejercicios de refactorización",
+          "href": "./ut14/ut1410.md"
+        },
+        {
+          "label": "14.11 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut14/ut1411.md"
+        },
+        {
+          "label": "14.12 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut14/ut1412.md"
+        },
+        {
+          "label": "14.13 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut14/ut1413.md"
+        },
+        {
+          "label": "14.14 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut14/ut1414.md"
+        },
+        {
+          "label": "14.15 Refactorizar.\n\n    &nbsp;Refactoring Guru.\n  ...",
+          "href": "./ut14/ut1415.md"
+        },
+        {
+          "label": "14.16 Patrones de Refactorización. (copia)",
+          "href": "./ut14/ut1416.md"
+        },
+        {
+          "label": "14.17 Etiqueta",
+          "href": "./ut14/ut1417.md"
+        },
+        {
+          "label": "14.18 Tutorial super rápido de refactorización Java en N...",
+          "href": "./ut14/ut1418.md"
+        },
+        {
+          "label": "14.19 Tutorial super rápido de refactorización Java en N... (copia)",
+          "href": "./ut14/ut1419.md"
+        },
+        {
+          "label": "14.20 Documentación.\nEl siguiente enlace nos muestra ...",
+          "href": "./ut14/ut1420.md"
+        },
+        {
+          "label": "14.21 &nbsp;Como Utilizar Javadoc",
+          "href": "./ut14/ut1421.md"
+        },
+        {
+          "label": "14.22 Generar documentación.",
+          "href": "./ut14/ut1422.md"
+        },
+        {
+          "label": "14.23 Curso de Java Netbeans.",
+          "href": "./ut14/ut1423.md"
+        },
+        {
+          "label": "14.24 Tutorial super rápido de refactorización Java en N...",
+          "href": "./ut14/ut1424.md"
+        },
+        {
+          "label": "14.25 Como generar JavaDoc con Netbeans.",
+          "href": "./ut14/ut1425.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD15 — Unidad 6 - Elaboración de diagramas",
+      "items": [
+        {
+          "label": "📘 UD15 Completa (1 pàgina)",
+          "href": "./ut15/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "15.1 Etiqueta (còpia)",
+          "href": "./ut15/ut1501.md"
+        },
+        {
+          "label": "15.2 &nbsp;Temario (còpia)",
+          "href": "./ut15/ut1502.md"
+        },
+        {
+          "label": "15.3 &nbsp;UD.6 - Elaboración de diagramas.",
+          "href": "./ut15/ut1503.md"
+        },
+        {
+          "label": "15.4 Etiqueta (còpia) (còpia)",
+          "href": "./ut15/ut1504.md"
+        },
+        {
+          "label": "15.5 Ejercicios de aula (còpia)",
+          "href": "./ut15/ut1505.md"
+        },
+        {
+          "label": "15.6 Tipos de diagrama",
+          "href": "./ut15/ut1506.md"
+        },
+        {
+          "label": "15.7 Práctica 1 - Ejemplo resuelto",
+          "href": "./ut15/ut1507.md"
+        },
+        {
+          "label": "15.8 Etiqueta (còpia) (còpia)",
+          "href": "./ut15/ut1508.md"
+        },
+        {
+          "label": "15.9 &nbsp;Prácticas (còpia)",
+          "href": "./ut15/ut1509.md"
+        },
+        {
+          "label": "15.10 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut15/ut1510.md"
+        },
+        {
+          "label": "15.11 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut15/ut1511.md"
+        },
+        {
+          "label": "15.12 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut15/ut1512.md"
+        },
+        {
+          "label": "15.13 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut15/ut1513.md"
+        },
+        {
+          "label": "15.14 &nbsp;Diagrama de clases.",
+          "href": "./ut15/ut1514.md"
+        },
+        {
+          "label": "15.15 &nbsp;Diagrama de secuencia.",
+          "href": "./ut15/ut1515.md"
+        },
+        {
+          "label": "15.16 &nbsp;Diagrama de actividad.",
+          "href": "./ut15/ut1516.md"
+        },
+        {
+          "label": "15.17 Etiqueta (còpia) (copia)",
+          "href": "./ut15/ut1517.md"
+        },
+        {
+          "label": "15.18 &nbsp;Diagrama de Clases UML.",
+          "href": "./ut15/ut1518.md"
+        },
+        {
+          "label": "15.19 &nbsp;¿Cómo construir un diagrama de secuencia? Ej...",
+          "href": "./ut15/ut1519.md"
+        },
+        {
+          "label": "15.20 &nbsp;Diagrama De Secuencias UML - Explicación Ráp...",
+          "href": "./ut15/ut1520.md"
+        },
+        {
+          "label": "15.21 &nbsp;Diagramas de secuencia ¿Qué son? elementos, ...",
+          "href": "./ut15/ut1521.md"
+        },
+        {
+          "label": "15.22 &nbsp;¿Cómo construir un diagrama de secuencia? Ej...",
+          "href": "./ut15/ut1522.md"
+        },
+        {
+          "label": "15.23 &nbsp;Diagramas UML Estructurales para la Ingenier...",
+          "href": "./ut15/ut1523.md"
+        },
+        {
+          "label": "15.24 &nbsp;Curso UML.",
+          "href": "./ut15/ut1524.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD16 — Proyecto interdisciplinar.",
+      "items": [
+        {
+          "label": "📘 UD16 Completa (1 pàgina)",
+          "href": "./ut16/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "16.1 Enunciado del proyecto.",
+          "href": "./ut16/ut1601.md"
+        },
+        {
+          "label": "16.2 Tutorial de Jira.",
+          "href": "./ut16/ut1602.md"
+        },
+        {
+          "label": "16.3 Tutorial de acceso a GitHub Classroom.",
+          "href": "./ut16/ut1603.md"
+        },
+        {
+          "label": "16.4 Flujo de trabajo con Git para tareas en grupo.",
+          "href": "./ut16/ut1604.md"
+        },
+        {
+          "label": "16.5 Documentar con JavaScript.",
+          "href": "./ut16/ut1605.md"
+        },
+        {
+          "label": "16.6 La entrega de la documentación y ficheros se hará ...",
+          "href": "./ut16/ut1606.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD17 — Proyecto",
+      "items": [
+        {
+          "label": "📘 UD17 Completa (1 pàgina)",
+          "href": "./ut17/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "17.1 Etiqueta (còpia)",
+          "href": "./ut17/ut1701.md"
+        },
+        {
+          "label": "17.2 Calificaciones",
+          "href": "./ut17/ut1702.md"
+        },
+        {
+          "label": "17.3 Entrega final",
+          "href": "./ut17/ut1703.md"
+        },
+        {
+          "label": "17.4 Autoevaluación",
+          "href": "./ut17/ut1704.md"
+        },
+        {
+          "label": "17.5 Coevaluación",
+          "href": "./ut17/ut1705.md"
+        },
+        {
+          "label": "17.6 Presentación",
+          "href": "./ut17/ut1706.md"
+        },
+        {
+          "label": "17.7 Etiqueta (còpia) (còpia)",
+          "href": "./ut17/ut1707.md"
+        },
+        {
+          "label": "17.8 &nbsp;Clasificación",
+          "href": "./ut17/ut1708.md"
+        },
+        {
+          "label": "17.9 Etiqueta",
+          "href": "./ut17/ut1709.md"
+        },
+        {
+          "label": "17.10 Etiqueta (còpia) (còpia)",
+          "href": "./ut17/ut1710.md"
+        },
+        {
+          "label": "17.11 &nbsp;Equipos",
+          "href": "./ut17/ut1711.md"
+        },
+        {
+          "label": "17.12 &nbsp;Entregas (còpia) (còpia)",
+          "href": "./ut17/ut1712.md"
+        },
+        {
+          "label": "17.13 Etiqueta",
+          "href": "./ut17/ut1713.md"
+        },
+        {
+          "label": "17.14 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut17/ut1714.md"
+        },
+        {
+          "label": "17.15 Diagramas",
+          "href": "./ut17/ut1715.md"
+        },
+        {
+          "label": "17.16 &nbsp;Plantilla para la entrega final",
+          "href": "./ut17/ut1716.md"
+        },
+        {
+          "label": "17.17 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut17/ut1717.md"
+        },
+        {
+          "label": "17.18 &nbsp;Cuestionarios",
+          "href": "./ut17/ut1718.md"
+        },
+        {
+          "label": "17.19 &nbsp;Puntuación previa - JSON",
+          "href": "./ut17/ut1719.md"
+        },
+        {
+          "label": "17.20 Acceso al siguiente cuestionario",
+          "href": "./ut17/ut1720.md"
+        },
+        {
+          "label": "17.21 &nbsp;Puntuación previa - Documentación",
+          "href": "./ut17/ut1721.md"
+        },
+        {
+          "label": "17.22 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut17/ut1722.md"
+        },
+        {
+          "label": "17.23 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut17/ut1723.md"
+        },
+        {
+          "label": "17.24 &nbsp;Diagrama de actividad (copia)",
+          "href": "./ut17/ut1724.md"
+        },
+        {
+          "label": "17.25 &nbsp;Diagrama de secuencia (copia)",
+          "href": "./ut17/ut1725.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD18 — Repaso",
+      "items": [
+        {
+          "label": "📘 UD18 Completa (1 pàgina)",
+          "href": "./ut18/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "18.1 Etiqueta (còpia)",
+          "href": "./ut18/ut1801.md"
+        },
+        {
+          "label": "18.2 &nbsp;Temario (còpia)",
+          "href": "./ut18/ut1802.md"
+        },
+        {
+          "label": "18.3 Etiqueta (còpia) (còpia)",
+          "href": "./ut18/ut1803.md"
+        },
+        {
+          "label": "18.4 Ejercicios de aula (còpia)",
+          "href": "./ut18/ut1804.md"
+        },
+        {
+          "label": "18.5 Etiqueta (còpia) (còpia)",
+          "href": "./ut18/ut1805.md"
+        },
+        {
+          "label": "18.6 &nbsp;Prácticas (còpia)",
+          "href": "./ut18/ut1806.md"
+        },
+        {
+          "label": "18.7 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut18/ut1807.md"
+        },
+        {
+          "label": "18.8 &nbsp;Cuestionarios (còpia)",
+          "href": "./ut18/ut1808.md"
+        },
+        {
+          "label": "18.9 Repaso - Examen primera evaluación - TEST",
+          "href": "./ut18/ut1809.md"
+        },
+        {
+          "label": "18.10 Repaso - Examen primera evaluación - Ejercicios",
+          "href": "./ut18/ut1810.md"
+        },
+        {
+          "label": "18.11 Repaso - Examen segunda evaluación - TEST",
+          "href": "./ut18/ut1811.md"
+        },
+        {
+          "label": "18.12 Repaso - Examen segunda evaluación - Ejercicios",
+          "href": "./ut18/ut1812.md"
+        },
+        {
+          "label": "18.13 Etiqueta (còpia) (còpia) (còpia) (còpia)",
+          "href": "./ut18/ut1813.md"
+        },
+        {
+          "label": "18.14 &nbsp;Enlaces de interés (còpia)",
+          "href": "./ut18/ut1814.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD19 — Convocatoria ordinaria",
+      "items": [
+        {
+          "label": "📘 UD19 Completa (1 pàgina)",
+          "href": "./ut19/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "19.1 Examen evaluación ordinaria trimestres 1 y 2.",
+          "href": "./ut19/ut1901.md"
+        },
+        {
+          "label": "19.2 Examen evaluación ordinaria trimestres 1, 2 y 3.",
+          "href": "./ut19/ut1902.md"
+        },
+        {
+          "label": "19.3 Etiqueta (còpia)",
+          "href": "./ut19/ut1903.md"
+        },
+        {
+          "label": "19.4 &nbsp;Primera evaluación",
+          "href": "./ut19/ut1904.md"
+        },
+        {
+          "label": "19.5 ORD - Examen primera evaluación - TEST",
+          "href": "./ut19/ut1905.md"
+        },
+        {
+          "label": "19.6 ORD - Primera evaluación - Práctico",
+          "href": "./ut19/ut1906.md"
+        },
+        {
+          "label": "19.7 Etiqueta (còpia) (còpia)",
+          "href": "./ut19/ut1907.md"
+        },
+        {
+          "label": "19.8 Segunda evaluación",
+          "href": "./ut19/ut1908.md"
+        },
+        {
+          "label": "19.9 Etiqueta (còpia) (còpia)",
+          "href": "./ut19/ut1909.md"
+        },
+        {
+          "label": "19.10 &nbsp;Tercera evaluación",
+          "href": "./ut19/ut1910.md"
+        },
+        {
+          "label": "19.11 Etiqueta (còpia) (còpia) (còpia)",
+          "href": "./ut19/ut1911.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD20 — Convocatoria extraordinaria",
+      "items": [
+        {
+          "label": "📘 UD20 Completa (1 pàgina)",
+          "href": "./ut20/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "20.1 Examen evaluación extraordinaria trimestres 1, 2 y 3.",
+          "href": "./ut20/ut2001.md"
+        },
+        {
+          "label": "20.2 Extraordinaria",
+          "href": "./ut20/ut2002.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }

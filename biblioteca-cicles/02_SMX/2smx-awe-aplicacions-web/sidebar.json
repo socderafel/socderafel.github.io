@@ -2,119 +2,346 @@
   "title": "💻 Aplicacions Web — 2n SMX · Grau Mitjà",
   "home": {
     "label": "🏠 Inici Aplicacions Web",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — Technologies for Web Development",
+      "summary": "UD1 — Tema 5: Servicios de gestión de archivos web",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 Resources: Example of HTML+CSS",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 Tema 5",
+          "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 Resources: Reference Links",
-          "href": "./ut01/ut0102.html"
+          "label": "1.2 Práctica_5a",
+          "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 HTML Example",
-          "href": "./ut01/ut0103.html"
+          "label": "1.3 Práctica_5b",
+          "href": "./ut01/ut0103.md"
         },
         {
-          "label": "1.4 HTML Example",
-          "href": "./ut01/ut0104.html"
+          "label": "1.4 NextCloud_Debian",
+          "href": "./ut01/ut0104.md"
         },
         {
-          "label": "1.5 Cheatsheet HTML (Manz)",
-          "href": "./ut01/ut0105.html"
+          "label": "1.5 Practica_Instalación",
+          "href": "./ut01/ut0105.md"
         },
         {
-          "label": "1.6 Cheatsheet CSS (Manz)",
-          "href": "./ut01/ut0106.html"
+          "label": "1.6 Instalación NextCloud",
+          "href": "./ut01/ut0106.md"
+        },
+        {
+          "label": "1.7 Actividad_Usuarios",
+          "href": "./ut01/ut0107.md"
+        },
+        {
+          "label": "1.8 Practica_5e",
+          "href": "./ut01/ut0108.md"
+        },
+        {
+          "label": "1.9 Practica_5e_Samuel",
+          "href": "./ut01/ut0109.md"
+        },
+        {
+          "label": "1.10 Práctica_5f_g_Samuel",
+          "href": "./ut01/ut0110.md"
+        },
+        {
+          "label": "1.11 Práctica_5f_g",
+          "href": "./ut01/ut0111.md"
+        },
+        {
+          "label": "1.12 Practica_5h",
+          "href": "./ut01/ut0112.md"
         }
       ]
     },
     {
-      "summary": "UD2 — Desktop Web Applications",
+      "summary": "UD2 — Tema 4: Implantación, administración y gestión segura de recursos en Moodle",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 Resources: Reference Links",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 info",
+          "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 EN Article: How Web Operating Systems Work",
-          "href": "./ut02/ut0202.html"
+          "label": "2.2 ra",
+          "href": "./ut02/ut0202.md"
+        },
+        {
+          "label": "2.3 Àrea de text i multimèdia",
+          "href": "./ut02/ut0203.md"
+        },
+        {
+          "label": "2.4 relación tareas con RA2 y RA3",
+          "href": "./ut02/ut0204.md"
+        },
+        {
+          "label": "2.5 RA2 y RA3",
+          "href": "./ut02/ut0205.md"
+        },
+        {
+          "label": "2.6 Sistemas de Gestión de Aprendizaje Guía para Administradores (RA2)",
+          "href": "./ut02/ut0206.md"
+        },
+        {
+          "label": "2.7 Gestión de archivos (RA3)",
+          "href": "./ut02/ut0207.md"
+        },
+        {
+          "label": "2.8 4.1.- Actividad_Instalar moddle",
+          "href": "./ut02/ut0208.md"
+        },
+        {
+          "label": "2.9 OVA CON WINDOWS 10 Y MODDLE Y XAMPP",
+          "href": "./ut02/ut0209.md"
+        },
+        {
+          "label": "2.10 Construyendo Tu Moodle Guía Práctica",
+          "href": "./ut02/ut0210.md"
+        },
+        {
+          "label": "2.11 4.2.- Actividad_Jerarquia",
+          "href": "./ut02/ut0211.md"
+        },
+        {
+          "label": "2.12 De Genérico a Genial Personalización Moodle",
+          "href": "./ut02/ut0212.md"
+        },
+        {
+          "label": "2.13 4.3.- Actividad_Personalizar_CSS",
+          "href": "./ut02/ut0213.md"
+        },
+        {
+          "label": "2.14 Dominando Moodle Gestión Estratégica de Usuarios",
+          "href": "./ut02/ut0214.md"
+        },
+        {
+          "label": "2.15 4.4.- Actividad_usuarios",
+          "href": "./ut02/ut0215.md"
+        },
+        {
+          "label": "2.16 Silencio a Dinamismo Comunicación Moodle",
+          "href": "./ut02/ut0216.md"
+        },
+        {
+          "label": "2.17 SGA Backups y Restauración Plan de Contingencia",
+          "href": "./ut02/ut0217.md"
+        },
+        {
+          "label": "2.18 Análisis de Datos El Administrador Estratega",
+          "href": "./ut02/ut0218.md"
+        },
+        {
+          "label": "2.19 Seguridad Integridad Datos SGA",
+          "href": "./ut02/ut0219.md"
+        },
+        {
+          "label": "2.20 4.6.- Actividad_Copia_Seguridad",
+          "href": "./ut02/ut0220.md"
+        },
+        {
+          "label": "2.21 Dominio del Flujo de Contenidos Moodle",
+          "href": "./ut02/ut0221.md"
+        },
+        {
+          "label": "2.22 Test_SGA",
+          "href": "./ut02/ut0222.md"
+        },
+        {
+          "label": "2.23 ---- MATERIAL COMPLEMENTARI -----",
+          "href": "./ut02/ut0223.md"
+        },
+        {
+          "label": "2.24 Tema 4: Sistemas de gestión de aprendizaje a distancia",
+          "href": "./ut02/ut0224.md"
+        },
+        {
+          "label": "2.25 Actividad_Personalizar_Temas",
+          "href": "./ut02/ut0225.md"
         }
       ]
     },
     {
-      "summary": "UD3 — Deploying a web server",
+      "summary": "UD3 — Tema 3: Gestor de Contenidos y Archivos",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 Resources: Reference Links",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 Infografia",
+          "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 Taller AWS-AWS",
-          "href": "./ut03/ut0302.html"
+          "label": "3.2 NoteBookLM",
+          "href": "./ut03/ut0302.md"
+        },
+        {
+          "label": "3.3 How to Install WordPress on Ubuntu 24.04 or 22.04 LTS Server",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Instalación",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 Tarea_CA1.a Instalación Wordpress",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Tema 3: Gestor de contenidos",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 CMS",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 Tema 3 interactivo",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 De lienzo en blanco a hogar digital",
+          "href": "./ut03/ut0309.md"
+        },
+        {
+          "label": "3.10 WordPress de Cero a Profesional",
+          "href": "./ut03/ut0310.md"
+        },
+        {
+          "label": "3.11 https://tudominio.com/login https://tudominio.com/...",
+          "href": "./ut03/ut0311.md"
+        },
+        {
+          "label": "3.12 Tarea_CA1.a",
+          "href": "./ut03/ut0312.md"
+        },
+        {
+          "label": "3.13 Gestion de usuarios y roles---",
+          "href": "./ut03/ut0313.md"
+        },
+        {
+          "label": "3.14 Gestion de usuarios y roles",
+          "href": "./ut03/ut0314.md"
+        },
+        {
+          "label": "3.15 Actividad_1_c - Tema Wordpress",
+          "href": "./ut03/ut0315.md"
+        },
+        {
+          "label": "3.16 Guia Wordpress",
+          "href": "./ut03/ut0316.md"
+        },
+        {
+          "label": "3.17 https://wordpress.com/es/support/menus/",
+          "href": "./ut03/ut0317.md"
+        },
+        {
+          "label": "3.18 CSS",
+          "href": "./ut03/ut0318.md"
+        },
+        {
+          "label": "3.19 Chuleta_CSS",
+          "href": "./ut03/ut0319.md"
+        },
+        {
+          "label": "3.20 Tarea_Extra_CSS",
+          "href": "./ut03/ut0320.md"
+        },
+        {
+          "label": "3.21 Actividad_Actualizar CA1_E",
+          "href": "./ut03/ut0321.md"
+        },
+        {
+          "label": "3.22 Actividad CA1.f: Instalación y Configuración de Módulos Avanzados y Menús en WordPress",
+          "href": "./ut03/ut0322.md"
+        },
+        {
+          "label": "3.23 Actividad_1_f",
+          "href": "./ut03/ut0323.md"
+        },
+        {
+          "label": "3.24 Actividad CA1_g: Activación y Configuración de Mecanismos de Seguridad en WordPress",
+          "href": "./ut03/ut0324.md"
+        },
+        {
+          "label": "3.25 Actividad_CA1_g",
+          "href": "./ut03/ut0325.md"
+        },
+        {
+          "label": "3.26 Actividad CA1_j: Realización de Copias de Seguridad de los Contenidos en WordPress",
+          "href": "./ut03/ut0326.md"
+        },
+        {
+          "label": "3.27 Actividad_Copia_Seguridad",
+          "href": "./ut03/ut0327.md"
         }
       ]
     },
     {
-      "summary": "UD4 — Unit 4 Content Management Systems",
+      "summary": "UD4 — Tema 2: Aplicaciones web de escritorio",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 Resources: Reference Links",
-          "href": "./ut04/ut0401.html"
+          "label": "4.1 CA5.a: Descripción y análisis de aplicaciones web de escritorio",
+          "href": "./ut04/ut0401.md"
+        },
+        {
+          "label": "4.2 Tema 2: Aplicaciones Web de escritorio",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 Trabajo RA5",
+          "href": "./ut04/ut0403.md"
         }
       ]
     },
     {
-      "summary": "UD5 — Unit 5 Web File Management and Web Office",
+      "summary": "UD5 — Tema 1: Aplicaciones de ofimática web",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "5.1 Resources: Reference Links",
-          "href": "./ut05/ut0501.html"
+          "label": "5.1 Tema 1: Aplicaciones Web",
+          "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 EN Article: Battle of the Clouds",
-          "href": "./ut05/ut0502.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD6 — Distance Learning Managers",
-      "items": [
-        {
-          "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html"
+          "label": "5.2 TEMA 1 PRESENTACIÓN",
+          "href": "./ut05/ut0502.md"
         },
         {
-          "label": "6.1 Resources: Reference Links",
-          "href": "./ut06/ut0601.html"
+          "label": "5.3 Tarea 1",
+          "href": "./ut05/ut0503.md"
+        },
+        {
+          "label": "5.4 Tarea 2",
+          "href": "./ut05/ut0504.md"
+        },
+        {
+          "label": "5.5 Tarea 3",
+          "href": "./ut05/ut0505.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }

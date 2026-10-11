@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Cloud Computing i Desplegament en AWS — UD6 UT. 4 - Infraestruturas en AWS"
+course_root: ".."
+badge: "2n DAW · Grau Superior · UD6"
+---
+
+# UT. 4 - Infraestruturas en AWS
+
+
+
+---
+
+## 📌 6.1 Creació de VPC i subxarxes a AWS
+
+Continguts i activitats didàctiques de **Creació de VPC i subxarxes a AWS**.
+
+---
+
+## 📌 6.2 Creación de una VPC con acceso a internet
+
+Realiza la siguiente
+
+tarea
+
+y adjunta capturas de pantalla (espacio dedireccionamiento, mapa de recursos, etc ) del resultado obtenido.
+
+Como veis en la imagen, tenéis que crear un VPC i dos subredes con el espacio de direcciones proporcionado.
+
+La red pública tendrá un gateway internet que le dará conexión hacia/desde internet con una tabla de rutas propia.
+
+La red privada no tendrá conexión a internet.
+
+Para probar el funcionamiento de esta VPC, crea una instáncia de EC2 en la red pública y verifica su conexión a internet. En cambio, si creamos una instáncia en la red privada solo podremos hacer ping desde el ordenador que está en la red pública.

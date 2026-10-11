@@ -2,87 +2,556 @@
   "title": "📄 Ofimàtica i Arxiu de Documents — 1r FPB · Grau Bàsic",
   "home": {
     "label": "🏠 Inici Ofimàtica i Arxiu de Documents",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — COMUNICACIONS INTERNES I EXTERNES",
+      "summary": "UD1 — ESTUDI EXAMEN",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 Comunicacions internes i externes",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 El temari a estudiar per a l'examen és el següent:",
+          "href": "./ut01/ut0101.md"
+        },
+        {
+          "label": "1.2 Teoria arxius - RA3",
+          "href": "./ut01/ut0102.md"
+        },
+        {
+          "label": "1.3 A més, haurieu de ser capaços de fer les següent p...",
+          "href": "./ut01/ut0103.md"
+        },
+        {
+          "label": "1.4 Pràctica Word - RA3",
+          "href": "./ut01/ut0104.md"
+        },
+        {
+          "label": "1.5 Pràctica Excel - RA4",
+          "href": "./ut01/ut0105.md"
         }
       ]
     },
     {
-      "summary": "UD2 — REPROGRAFIA i ENQUADERNACIÓ",
+      "summary": "UD2 — Arxius - RA3",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 Temari",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 Teoria arxius",
+          "href": "./ut02/ut0201.md"
+        },
+        {
+          "label": "2.2 Activitat Julen",
+          "href": "./ut02/ut0202.md"
+        },
+        {
+          "label": "2.3 Test Arxius",
+          "href": "./ut02/ut0203.md"
         }
       ]
     },
     {
-      "summary": "UD3 — CALC BÀSIC",
+      "summary": "UD3 — Processador de text - RA3",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 Continguts Teòrics i Recursos",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 Pràctica 1",
+          "href": "./ut03/ut0301.md"
+        },
+        {
+          "label": "3.2 Pràctica 2",
+          "href": "./ut03/ut0302.md"
+        },
+        {
+          "label": "3.3 Pràctica 3",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Pràctica 4",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 Pràctica 5",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Pràctica 6",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 Pràctica 7",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 Pràctica 8",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 Pràctica 9",
+          "href": "./ut03/ut0309.md"
+        },
+        {
+          "label": "3.10 Pràctica 10",
+          "href": "./ut03/ut0310.md"
+        },
+        {
+          "label": "3.11 Pràctica 11",
+          "href": "./ut03/ut0311.md"
+        },
+        {
+          "label": "3.12 Pràctica 12",
+          "href": "./ut03/ut0312.md"
+        },
+        {
+          "label": "3.13 Pràctica 13",
+          "href": "./ut03/ut0313.md"
+        },
+        {
+          "label": "3.14 Pràctica 14",
+          "href": "./ut03/ut0314.md"
         }
       ]
     },
     {
-      "summary": "UD4 — CALC MITJÀ",
+      "summary": "UD4 — Full de càlcul - RA4",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 Continguts Teòrics i Recursos",
-          "href": "./ut04/ut0401.html"
+          "label": "4.1 Pràctica 1",
+          "href": "./ut04/ut0401.md"
+        },
+        {
+          "label": "4.2 Pràctica 1.2",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 Pràctica 2",
+          "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 Pràctica 3",
+          "href": "./ut04/ut0404.md"
+        },
+        {
+          "label": "4.5 Pràctica 3.2",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 Pràctica 4",
+          "href": "./ut04/ut0406.md"
+        },
+        {
+          "label": "4.7 Pràctica 4.2",
+          "href": "./ut04/ut0407.md"
+        },
+        {
+          "label": "4.8 Pràctica 5",
+          "href": "./ut04/ut0408.md"
+        },
+        {
+          "label": "4.9 Pràctica 5.2",
+          "href": "./ut04/ut0409.md"
+        },
+        {
+          "label": "4.10 Pràctica 6",
+          "href": "./ut04/ut0410.md"
+        },
+        {
+          "label": "4.11 Pràctica 6.2",
+          "href": "./ut04/ut0411.md"
+        },
+        {
+          "label": "4.12 Pràctica 7",
+          "href": "./ut04/ut0412.md"
+        },
+        {
+          "label": "4.13 Pràctica 7.2",
+          "href": "./ut04/ut0413.md"
+        },
+        {
+          "label": "4.14 Pràctica 8",
+          "href": "./ut04/ut0414.md"
+        },
+        {
+          "label": "4.15 Pràctica 9",
+          "href": "./ut04/ut0415.md"
+        },
+        {
+          "label": "4.16 Pràctica 10",
+          "href": "./ut04/ut0416.md"
         }
       ]
     },
     {
-      "summary": "UD5 — BASE",
+      "summary": "UD5 — Gimp",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "5.1 Continguts Teòrics i Recursos",
-          "href": "./ut05/ut0501.html"
+          "label": "5.1 Pràctica 1",
+          "href": "./ut05/ut0501.md"
+        },
+        {
+          "label": "5.2 Pràctica 2",
+          "href": "./ut05/ut0502.md"
+        },
+        {
+          "label": "5.3 Pràctica 2b",
+          "href": "./ut05/ut0503.md"
+        },
+        {
+          "label": "5.4 Pràctica 3",
+          "href": "./ut05/ut0504.md"
+        },
+        {
+          "label": "5.5 Pràctica 4",
+          "href": "./ut05/ut0505.md"
+        },
+        {
+          "label": "5.6 Pràctica 5",
+          "href": "./ut05/ut0506.md"
+        },
+        {
+          "label": "5.7 Pràctica 6",
+          "href": "./ut05/ut0507.md"
+        },
+        {
+          "label": "5.8 Pràctica 7",
+          "href": "./ut05/ut0508.md"
+        },
+        {
+          "label": "5.9 Pràctica 8",
+          "href": "./ut05/ut0509.md"
+        },
+        {
+          "label": "5.10 Pràctica 9",
+          "href": "./ut05/ut0510.md"
+        },
+        {
+          "label": "5.11 Pràctica 10",
+          "href": "./ut05/ut0511.md"
+        },
+        {
+          "label": "5.12 Pràctica 11",
+          "href": "./ut05/ut0512.md"
+        },
+        {
+          "label": "5.13 Pràctica 12",
+          "href": "./ut05/ut0513.md"
+        },
+        {
+          "label": "5.14 Gimp",
+          "href": "./ut05/ut0514.md"
         }
       ]
     },
     {
-      "summary": "UD6 — GIMP",
+      "summary": "UD6 — Fake news",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html"
+          "href": "./ut06/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "6.1 Continguts Teòrics i Recursos",
-          "href": "./ut06/ut0601.html"
+          "label": "6.1 Presentació",
+          "href": "./ut06/ut0601.md"
+        },
+        {
+          "label": "6.2 Teoria resumida",
+          "href": "./ut06/ut0602.md"
+        },
+        {
+          "label": "6.3 Exemples",
+          "href": "./ut06/ut0603.md"
+        },
+        {
+          "label": "6.4 Activitats",
+          "href": "./ut06/ut0604.md"
+        },
+        {
+          "label": "6.5 Resposta activitats",
+          "href": "./ut06/ut0605.md"
+        },
+        {
+          "label": "6.6 Solucions",
+          "href": "./ut06/ut0606.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD7 — Canva - RA5",
+      "items": [
+        {
+          "label": "📘 UD7 Completa (1 pàgina)",
+          "href": "./ut07/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Entrega canva lliure",
+          "href": "./ut07/ut0701.md"
+        },
+        {
+          "label": "7.2 Entrega meme",
+          "href": "./ut07/ut0702.md"
+        },
+        {
+          "label": "7.3 Canva IA",
+          "href": "./ut07/ut0703.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD8 — Correu electrònic",
+      "items": [
+        {
+          "label": "📘 UD8 Completa (1 pàgina)",
+          "href": "./ut08/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Act 1 - Interfaç GMAIL_FET",
+          "href": "./ut08/ut0801.md"
+        },
+        {
+          "label": "8.2 Act 2 - Correu GMAIL_FET",
+          "href": "./ut08/ut0802.md"
+        },
+        {
+          "label": "8.3 Act 1.2 - Interfaç OUTLOOK_FET",
+          "href": "./ut08/ut0803.md"
+        },
+        {
+          "label": "8.4 Act 2.2 - Correu OUTLOOK_FET",
+          "href": "./ut08/ut0804.md"
+        },
+        {
+          "label": "8.5 Vídeo netiqueta_FET",
+          "href": "./ut08/ut0805.md"
+        },
+        {
+          "label": "8.6 Act 3 - Netiqueta_FET",
+          "href": "./ut08/ut0806.md"
+        },
+        {
+          "label": "8.7 Act 4 - Netiqueta_FET",
+          "href": "./ut08/ut0807.md"
+        },
+        {
+          "label": "8.8 Act 5 - Netiqueta_FET",
+          "href": "./ut08/ut0808.md"
+        },
+        {
+          "label": "8.9 Ciberatacs",
+          "href": "./ut08/ut0809.md"
+        },
+        {
+          "label": "8.10 Seguretat al correu",
+          "href": "./ut08/ut0810.md"
+        },
+        {
+          "label": "8.11 Act 6 - Ciberatacs",
+          "href": "./ut08/ut0811.md"
+        },
+        {
+          "label": "8.12 Vídeo malware",
+          "href": "./ut08/ut0812.md"
+        },
+        {
+          "label": "8.13 Act 7 - Seguretat",
+          "href": "./ut08/ut0813.md"
+        },
+        {
+          "label": "8.14 Comprova si t'han hackejat",
+          "href": "./ut08/ut0814.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD9 — Scratch",
+      "items": [
+        {
+          "label": "📘 UD9 Completa (1 pàgina)",
+          "href": "./ut09/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 Apren la programació per blocs",
+          "href": "./ut09/ut0901.md"
+        },
+        {
+          "label": "9.2 Registre",
+          "href": "./ut09/ut0902.md"
+        },
+        {
+          "label": "9.3 Posicions i direccions",
+          "href": "./ut09/ut0903.md"
+        },
+        {
+          "label": "9.4 Activitat 1",
+          "href": "./ut09/ut0904.md"
+        },
+        {
+          "label": "9.5 Activitat 2",
+          "href": "./ut09/ut0905.md"
+        },
+        {
+          "label": "9.6 Activitat 3",
+          "href": "./ut09/ut0906.md"
+        },
+        {
+          "label": "9.7 Activitat 4",
+          "href": "./ut09/ut0907.md"
+        },
+        {
+          "label": "9.8 Activitat 5",
+          "href": "./ut09/ut0908.md"
+        },
+        {
+          "label": "9.9 Activitat 6",
+          "href": "./ut09/ut0909.md"
+        },
+        {
+          "label": "9.10 Activitat 7",
+          "href": "./ut09/ut0910.md"
+        },
+        {
+          "label": "9.11 Activitat 8",
+          "href": "./ut09/ut0911.md"
+        },
+        {
+          "label": "9.12 Activitat 9",
+          "href": "./ut09/ut0912.md"
+        },
+        {
+          "label": "9.13 Activitat 10",
+          "href": "./ut09/ut0913.md"
+        },
+        {
+          "label": "9.14 Activitat 11",
+          "href": "./ut09/ut0914.md"
+        },
+        {
+          "label": "9.15 Activitat 12",
+          "href": "./ut09/ut0915.md"
+        },
+        {
+          "label": "9.16 PacMan amb Scratch",
+          "href": "./ut09/ut0916.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD10 — Xarxes socials",
+      "items": [
+        {
+          "label": "📘 UD10 Completa (1 pàgina)",
+          "href": "./ut10/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "10.1 Canva",
+          "href": "./ut10/ut1001.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD11 — Dispositius digitals",
+      "items": [
+        {
+          "label": "📘 UD11 Completa (1 pàgina)",
+          "href": "./ut11/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "11.1 Presentació",
+          "href": "./ut11/ut1101.md"
+        },
+        {
+          "label": "11.2 Qüestionari",
+          "href": "./ut11/ut1102.md"
+        },
+        {
+          "label": "11.3 Activitat parts ordinador",
+          "href": "./ut11/ut1103.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD12 — MakeCode",
+      "items": [
+        {
+          "label": "📘 UD12 Completa (1 pàgina)",
+          "href": "./ut12/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "12.1 Enllaç web",
+          "href": "./ut12/ut1201.md"
+        },
+        {
+          "label": "12.2 Activitat guiada 1",
+          "href": "./ut12/ut1202.md"
+        },
+        {
+          "label": "12.3 Activitat guiada 2",
+          "href": "./ut12/ut1203.md"
+        },
+        {
+          "label": "12.4 Activitat guiada 3",
+          "href": "./ut12/ut1204.md"
+        },
+        {
+          "label": "12.5 Activitat guiada 4",
+          "href": "./ut12/ut1205.md"
+        },
+        {
+          "label": "12.6 Dossier 2",
+          "href": "./ut12/ut1206.md"
+        },
+        {
+          "label": "12.7 Dossier 3",
+          "href": "./ut12/ut1207.md"
+        },
+        {
+          "label": "12.8 Dossier 4",
+          "href": "./ut12/ut1208.md"
+        },
+        {
+          "label": "12.9 Dossier 5",
+          "href": "./ut12/ut1209.md"
+        },
+        {
+          "label": "12.10 Dossier 6",
+          "href": "./ut12/ut1210.md"
+        },
+        {
+          "label": "12.11 Dossier 7",
+          "href": "./ut12/ut1211.md"
+        },
+        {
+          "label": "12.12 Dossier 8",
+          "href": "./ut12/ut1212.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }

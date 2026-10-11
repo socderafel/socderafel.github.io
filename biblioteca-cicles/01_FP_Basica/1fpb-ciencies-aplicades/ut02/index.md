@@ -1,0 +1,28 @@
+---
+layout: default
+title: "Ciències Aplicades I — UD2 UD 2 - NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN (BIO y GEO)"
+course_root: ".."
+badge: "1r FPB · Grau Bàsic · UD2"
+---
+
+# UD 2 - NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN (BIO y GEO)
+
+
+
+---
+
+## 📌 2.1 UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN
+
+Continguts i activitats didàctiques de **UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN**.
+
+---
+
+## 📌 2.2 TEST 1 - UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN
+
+Continguts i activitats didàctiques de **TEST 1 - UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN**.
+
+---
+
+## 📌 2.3 UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN II
+
+Continguts i activitats didàctiques de **UD 2 – NIVELES DE ORGANIZACIÓN DE LA MATERIA. LA FUNCIÓN DE NUTRICIÓN II**.

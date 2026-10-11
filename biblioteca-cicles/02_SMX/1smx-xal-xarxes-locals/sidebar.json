@@ -2,74 +2,440 @@
   "title": "🖧 Xarxes Locals — 1r SMX · Grau Mitjà",
   "home": {
     "label": "🏠 Inici Xarxes Locals",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — Teoria i Arquitectura de Xarxes",
+      "summary": "UD1 — UT01 - Introducció a les xarxes locals, característiques, entorns d’aplicació i components.",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 Sistemes de comunicació, arquitectures i topologia de xarxes",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 UT01 - Introducció a les Xarxes",
+          "href": "./ut01/ut0101.md"
+        },
+        {
+          "label": "1.2 Vocabulari de xarxes",
+          "href": "./ut01/ut0102.md"
+        },
+        {
+          "label": "1.3 Classificació xarxes",
+          "href": "./ut01/ut0103.md"
+        },
+        {
+          "label": "1.4 classificació xarxes",
+          "href": "./ut01/ut0104.md"
+        },
+        {
+          "label": "1.5 Classificació xarxes 2",
+          "href": "./ut01/ut0105.md"
+        },
+        {
+          "label": "1.6 Associacions d'estandards",
+          "href": "./ut01/ut0106.md"
+        },
+        {
+          "label": "1.7 Diagrama de xarxa",
+          "href": "./ut01/ut0107.md"
+        },
+        {
+          "label": "1.8 Topologies de xarxa",
+          "href": "./ut01/ut0108.md"
+        },
+        {
+          "label": "1.9 Funcionament topologia bus i en anell",
+          "href": "./ut01/ut0109.md"
+        },
+        {
+          "label": "1.10 Components de les xarxes locals",
+          "href": "./ut01/ut0110.md"
+        },
+        {
+          "label": "1.11 Treball d'investigació CSMA/CD CSMA/CA",
+          "href": "./ut01/ut0111.md"
+        },
+        {
+          "label": "1.12 Treball xarxes alternatives",
+          "href": "./ut01/ut0112.md"
+        },
+        {
+          "label": "1.13 Mitjans de transmissió I",
+          "href": "./ut01/ut0113.md"
+        },
+        {
+          "label": "1.14 solucio",
+          "href": "./ut01/ut0114.md"
+        },
+        {
+          "label": "1.15 Mitjans de transmissió II",
+          "href": "./ut01/ut0115.md"
+        },
+        {
+          "label": "1.16 Mitjans de transmissió III",
+          "href": "./ut01/ut0116.md"
+        },
+        {
+          "label": "1.17 Qüestionari RA1",
+          "href": "./ut01/ut0117.md"
+        },
+        {
+          "label": "1.18 Recuperació UT1",
+          "href": "./ut01/ut0118.md"
+        },
+        {
+          "label": "1.19 Esquema UT1",
+          "href": "./ut01/ut0119.md"
+        },
+        {
+          "label": "1.20 Qüestionari recuperació",
+          "href": "./ut01/ut0120.md"
         }
       ]
     },
     {
-      "summary": "UD2 — Muntatge de Xarxes Locals",
+      "summary": "UD2 — UT02 Desplegament i muntatge de cablejat d’una xarxa local",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 Mitjans de transmissió, cablejat estructurat i connectorització",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 Arquitectura de Xarxa: models i protocols",
+          "href": "./ut02/ut0201.md"
+        },
+        {
+          "label": "2.2 Model per capes i estàndards",
+          "href": "./ut02/ut0202.md"
+        },
+        {
+          "label": "2.3 Arquitectura de Xarxa: Models ISO/OSI i TCP/IP",
+          "href": "./ut02/ut0203.md"
+        },
+        {
+          "label": "2.4 Capes del Model OSI",
+          "href": "./ut02/ut0204.md"
+        },
+        {
+          "label": "2.5 Ordre de les capes",
+          "href": "./ut02/ut0205.md"
+        },
+        {
+          "label": "2.6 Qüestionari model ISO y TCP",
+          "href": "./ut02/ut0206.md"
+        },
+        {
+          "label": "2.7 Test Model OSI",
+          "href": "./ut02/ut0207.md"
+        },
+        {
+          "label": "2.8 Models TCP/IP i ISO/OSI en acció",
+          "href": "./ut02/ut0208.md"
+        },
+        {
+          "label": "2.9 Jocs Model ISO/OSI",
+          "href": "./ut02/ut0209.md"
+        },
+        {
+          "label": "2.10 Jocs arquitectura de xarxa: Funcions de les capes ISO/OSI",
+          "href": "./ut02/ut0210.md"
+        },
+        {
+          "label": "2.11 Jocs arquitectura de xarxa:  Laberinto iso/osi",
+          "href": "./ut02/ut0211.md"
+        },
+        {
+          "label": "2.12 Jocs arquitectura de xarxa:  Capas del modelo ISO/OSI",
+          "href": "./ut02/ut0212.md"
+        },
+        {
+          "label": "2.13 Jocs arquitectura de xarxa: Diagrama con etiquetas",
+          "href": "./ut02/ut0213.md"
+        },
+        {
+          "label": "2.14 Jocs arquitectura de xarxa: Modelo ISO/OSI",
+          "href": "./ut02/ut0214.md"
+        },
+        {
+          "label": "2.15 Jocs arquitectura de xarxa: Parejas OSI",
+          "href": "./ut02/ut0215.md"
+        },
+        {
+          "label": "2.16 Jocs arquitectura de xarxa: Capas y modelos OSI",
+          "href": "./ut02/ut0216.md"
+        },
+        {
+          "label": "2.17 Jocs arquitectura de xarxa: Què es OSI",
+          "href": "./ut02/ut0217.md"
+        },
+        {
+          "label": "2.18 Repàs conceptes fonamentals",
+          "href": "./ut02/ut0218.md"
+        },
+        {
+          "label": "2.19 Desplegament i muntatge (còpia)",
+          "href": "./ut02/ut0219.md"
+        },
+        {
+          "label": "2.20 Muntatge de xarxes d'àrea local / Montage de redes de área local",
+          "href": "./ut02/ut0220.md"
+        },
+        {
+          "label": "2.21 Trasparències muntatge de xarxes d'àrea local / Trasparencias montaje de redes de área local",
+          "href": "./ut02/ut0221.md"
+        },
+        {
+          "label": "2.22 Activitat 2.1: Preguntes tipus cablejat Ethernet",
+          "href": "./ut02/ut0222.md"
+        },
+        {
+          "label": "2.23 Activitat 2.2 Xarxa d'institut",
+          "href": "./ut02/ut0223.md"
+        },
+        {
+          "label": "2.24 Activitat 2.3: Subsistemes i elements d'una xarxa estructurada",
+          "href": "./ut02/ut0224.md"
+        },
+        {
+          "label": "2.25 Activitat 2.4",
+          "href": "./ut02/ut0225.md"
+        },
+        {
+          "label": "2.26 Activitats de repàs desplegament i muntatge",
+          "href": "./ut02/ut0226.md"
+        },
+        {
+          "label": "2.27 Activitat 2.3: Qüestionari muntatge de xarxes locals",
+          "href": "./ut02/ut0227.md"
+        },
+        {
+          "label": "2.28 Preguntes curtes muntatge i desplegament",
+          "href": "./ut02/ut0228.md"
+        },
+        {
+          "label": "2.29 Activitats Packet Tracer",
+          "href": "./ut02/ut0229.md"
+        },
+        {
+          "label": "2.30 Hub vs Swicht",
+          "href": "./ut02/ut0230.md"
+        },
+        {
+          "label": "2.31 Hub en packet tracer",
+          "href": "./ut02/ut0231.md"
+        },
+        {
+          "label": "2.32 Switch en packet tracer",
+          "href": "./ut02/ut0232.md"
+        },
+        {
+          "label": "2.33 Col·lisions en un hub",
+          "href": "./ut02/ut0233.md"
+        },
+        {
+          "label": "2.34 Packet tracer: connectant una xarxa sense fil",
+          "href": "./ut02/ut0234.md"
+        },
+        {
+          "label": "2.35 Disseny estructurat I",
+          "href": "./ut02/ut0235.md"
+        },
+        {
+          "label": "2.36 Disseny estructurat II",
+          "href": "./ut02/ut0236.md"
+        },
+        {
+          "label": "2.37 examen UT2",
+          "href": "./ut02/ut0237.md"
         }
       ]
     },
     {
-      "summary": "UD3 — Interconnexió d'Equips en Xarxa",
+      "summary": "UD3 — UT 3 INTERCONNEXIÓ DE LA XARXA",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 Adreçament físic (MAC), lògic (IPv4/IPv6) i protocols IEEE 802",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 UT3 iNTERCONNEXIÓ D'EQUIPS EN XARXES LOCALS",
+          "href": "./ut03/ut0301.md"
+        },
+        {
+          "label": "3.2 Activitat 3.1: conversión binario decimal",
+          "href": "./ut03/ut0302.md"
+        },
+        {
+          "label": "3.3 Activitat 3.2: classificació de xarxes",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Activitat 3.3: Xarxes en Packet Tracer",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 Activitat 3.4: Qüestionari classificació adreces IP",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Activitat 3.5: adreçament de xarxa",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 Activitat 3.6: Ejercicios repaso direccionamiento IP",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 Examen adreçament resolt",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 Activitat 3.7: Subnetting",
+          "href": "./ut03/ut0309.md"
+        },
+        {
+          "label": "3.10 Activitat 3.8: Subnetting 1",
+          "href": "./ut03/ut0310.md"
+        },
+        {
+          "label": "3.11 Activitat 3.7: Subnetting 2",
+          "href": "./ut03/ut0311.md"
+        },
+        {
+          "label": "3.12 Activitat 3.8: subnetting en la empresa 1",
+          "href": "./ut03/ut0312.md"
+        },
+        {
+          "label": "3.13 Activitat 3.9: subentting en la empresa 2",
+          "href": "./ut03/ut0313.md"
+        },
+        {
+          "label": "3.14 Activitat 3.10: Activitat de recuperació Subnetting 1",
+          "href": "./ut03/ut0314.md"
+        },
+        {
+          "label": "3.15 Activitat 3.11: Activitat de recuperació Subnetting 2",
+          "href": "./ut03/ut0315.md"
+        },
+        {
+          "label": "3.16 ---------------------------------------------------------------",
+          "href": "./ut03/ut0316.md"
+        },
+        {
+          "label": "3.17 Guia subnetting classe C",
+          "href": "./ut03/ut0317.md"
+        },
+        {
+          "label": "3.18 Ejercicios_Subnetting_ClaseC",
+          "href": "./ut03/ut0318.md"
+        },
+        {
+          "label": "3.19 Test recuperació RA3",
+          "href": "./ut03/ut0319.md"
         }
       ]
     },
     {
-      "summary": "UD4 — Configuració de Dispositius de Xarxa",
+      "summary": "UD4 — UT04. Instal·lació d’equips en xarxa",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 Commutadors (Switches), VLANs, Spanning Tree, Encaminadors i Wi-Fi",
-          "href": "./ut04/ut0401.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD5 — Monitoratge, Diagnosi i Resolució d'Incidències",
-      "items": [
-        {
-          "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
+          "label": "4.1 UT04. Desplegament i muntatge de cablejat d’una xarxa local",
+          "href": "./ut04/ut0401.md"
         },
         {
-          "label": "5.1 Verificació, manteniment i diagnosi d'incidències en xarxes locals",
-          "href": "./ut05/ut0501.html"
+          "label": "4.2 Activitat 4.1: Configuració bàsica xarxa Wireless",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 Activitat 4.2: xarxa simple i completa en Packet Tracer",
+          "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 Activitat 4.3: Modes de funcionament d'una xarxa inalàmbrica",
+          "href": "./ut04/ut0404.md"
+        },
+        {
+          "label": "4.5 Activitat 4.4: Instal·lació d'adaptadors",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 Activitat 4.5: Configuració d'un router Soho",
+          "href": "./ut04/ut0406.md"
+        },
+        {
+          "label": "4.7 Activitat 4.6: Configuració d'un router soho II",
+          "href": "./ut04/ut0407.md"
+        },
+        {
+          "label": "4.8 Activitat 4.7: Configuració de la seguretat en xarxes sense fil",
+          "href": "./ut04/ut0408.md"
+        },
+        {
+          "label": "4.9 Activitat 4.8: Configuració de la seguretat en xarxes sense fil II",
+          "href": "./ut04/ut0409.md"
+        },
+        {
+          "label": "4.10 Activitat 4.9: Introducció a les VLAN",
+          "href": "./ut04/ut0410.md"
+        },
+        {
+          "label": "4.11 Activitat 4.10: VLAN 1",
+          "href": "./ut04/ut0411.md"
+        },
+        {
+          "label": "4.12 Activitat 4.10: VLAN 2",
+          "href": "./ut04/ut0412.md"
+        },
+        {
+          "label": "4.13 Qüestionari UT4",
+          "href": "./ut04/ut0413.md"
+        },
+        {
+          "label": "4.14 Preguntes curtes UT4",
+          "href": "./ut04/ut0414.md"
+        },
+        {
+          "label": "4.15 Activitat 4.11: VLAN 3",
+          "href": "./ut04/ut0415.md"
+        },
+        {
+          "label": "4.16 Activitat 4.12. Configuració inicial d'un router",
+          "href": "./ut04/ut0416.md"
+        },
+        {
+          "label": "4.17 Examen packet tracer",
+          "href": "./ut04/ut0417.md"
+        },
+        {
+          "label": "4.18 Activitat 4.13. VLAN's",
+          "href": "./ut04/ut0418.md"
+        },
+        {
+          "label": "4.19 Activitat 4.14. VLAN's i routers",
+          "href": "./ut04/ut0419.md"
+        },
+        {
+          "label": "4.20 Examen recuperació practic",
+          "href": "./ut04/ut0420.md"
+        },
+        {
+          "label": "4.21 Activitat recuperació 1",
+          "href": "./ut04/ut0421.md"
+        },
+        {
+          "label": "4.22 Examen extraordinari",
+          "href": "./ut04/ut0422.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }

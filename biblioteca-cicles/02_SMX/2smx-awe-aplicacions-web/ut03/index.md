@@ -1,136 +1,188 @@
 ---
 layout: default
-title: "UD3 — Deploying a web server · Temari Complet"
+title: "Aplicacions Web — UD3 Tema 3: Gestor de Contenidos y Archivos"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD3 — Deploying a web server"
-prev_url: "../ut02/ut0202.html"
-prev_label: "⬅️ 2.2 EN Article: How Web Operating Systems Work"
-next_url: "../ut03/ut0301.html"
-next_label: "3.1 Resources: Reference Links ➡️"
+badge: "2n SMX · Grau Mitjà · UD3"
 ---
 
-# 📘 UD3 — Deploying a web server (Unitat Completa)
+# UD3 — Tema 3: Gestor de Contenidos y Archivos
 
-> **💡 Temari Complet de la Unitat**
-> Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
-
-- [**3.1 Resources: Reference Links**](./ut0301.md)
-- [**3.2 Taller AWS-AWS**](./ut0302.md)
 
 ---
 
-# 3.1 Resources: Reference Links
+## 📌 3.1 Infografia
 
-> **🔗 Recurs Web: EN Video - Cpanel Tutorial - Cpanel help for beginners**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=QgmsoIGAeiM) ↗️**](https://www.youtube.com/watch?v=QgmsoIGAeiM)
-
-> **🔗 Recurs Web: EN Video - cPanel beginner tutorial 2 - introduction to cPanel**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=yM733VRy87s) ↗️**](https://www.youtube.com/watch?v=yM733VRy87s)
+Continguts i activitats didàctiques de **Infografia**.
 
 ---
 
-04 - Recursos: Referencias
+## 📌 3.2 NoteBookLM
 
-Apache - [http://httpd.apache.org](http://httpd.apache.org)
-Internet Information Services -[http://www.iis.net](http://www.iis.net)
-Lighttpd - [http://www.lighttpd.net](http://www.lighttpd.net)
-nginx - [http://nginx.org](http://nginx.org)
-Apache Tomcat - [http://tomcat.apache.org](http://tomcat.apache.org)
-cPanel - [https://cpanel.net/](https://cpanel.net/)
-Fantastico - [https://netenberg.com/fantastico.php](https://netenberg.com/fantastico.php)
-ISPConfig - [http://www.ispconfig.org/](http://www.ispconfig.org/)
-1&1 - [http://www.1and1.es/](http://www.1and1.es/)
-Aruba - [http://hosting.aruba.it/index.asp?Lang=ES](http://hosting.aruba.it/index.asp?Lang=ES)
-OVH - [http://www.ovh.es/](http://www.ovh.es/)
-XAMPP - [http://www.apachefriends.org/es/xampp.html](http://www.apachefriends.org/es/xampp.html)
-Bitnami- [http://bitnami.com](http://bitnami.com)
+Continguts i activitats didàctiques de **NoteBookLM**.
 
 ---
 
-# 3.2 Taller AWS-AWS
+## 📌 3.3 How to Install WordPress on Ubuntu 24.04 or 22.04 LTS Server
 
-Taller AWS: WebServer 1R ASIX - 2023
-
-Infraestructura TI vs AWS
-
-Infraestructura https://aws.amazon.com/es/about-aws/global-infrastructure/?hp=tile&tile=map Administrar AWS •Consola (web) •AWS CLI (terminal) •SDK Características •Elástica y escalable •Tolerancia a errores •Alta disponibilidad
-
-EC2 Elastic Compute Cloud Imagen de Amazon Machine (AMI) proporciona la información necesaria para lanzar una instancia EC2
-
-- Capacidad para aumentar o reducir
-
-fácilmente la cantidad de servidores y sus recursos Elastic
-
-- Alojar aplicaciones en ejecución o
-
-procesar datos CPU + RAM Compute
-
-- Las instancias EC2 ejecutadas se alojan
-
-en la nube Cloud
-
-AWS Learner Lab SSH Keys (PEM + PPK) AWS Console (GUI web) EC2
-
-AWS Web Console
-
-Servicio SSH Accessing EC2 Instances When launching EC2 instances in the default us-east-1 Region in this environment, choose the option to use the existing key pair named vockey at the time of launch. Then: Choose the AWS Details link above these instructions. ◦ If you are using a Windows desktop or laptop, choose the Download PPK button and save the labsuser.ppk file. You can use this file to connect via SSH to a Linux EC2 instance or Windows EC2 instance, typically using a tool such as PuTTY.
-
-◦ If you are using a MacOS desktop or laptop, choose the Download PEM button and save the labsuser.pem file. You can use this file to connect via SSH to a Linux EC2 instance or Windows EC2 instance, typically using a terminal window. ◦ To connect using SSH to a Linux instance  SSH access to an EC2 Instance you launch  The steps below describe how to use the SSH key to connect to your instance.
-
- Tip: Assuming you launched the instance with the vockey key pair, and that you have opened TCP port 22 in the instance's security group, you can also SSH to an EC2 instance by using the terminal to the side of these instructions. The terminal already has the key pair available to it. Simply enter the command  ssh -i ~/.ssh/labsuser.pem ec2-user@<public-ip> where <public-ip> is the actual IPv4 public address of the instance.
-
-Crear instancia EC2 + IP elástica 1. Red y Seguridad – Direcciones IP Elásticas – Asignar la dirección IP Elástica – Asignar ◦ Name: IP-WebServer-ASIX 2. Instancias - Lanzar una instancia ◦ Name: WebServer-ASIX ◦ Amazon Machine Image: Ubuntu – Ubuntu Server 22.04 LTS -64 bits x86 ◦ Tipo de instancia: t2.micro ◦ Par de claves: vockey ◦ Configuraciones de red – Crear grupo de seguridad – Firewall  Permitir SSH desde Cualquier lugar  Permitir HTTPS desde Internet  Permitir HTTP desde Internet ◦ Configurar almacenamiento  1x 8GiB gp2 3.
-
-Instancias – Estado de la instancia – Detener 4. Panel de EC2 – Direcciones IP Elásticas – Seleccionar IP – Acciones – Asociar la dirección IP 4 Elástica  Instancias – Elegir WebServer-ASIX 5. Instancias – Estado de la instancia – Iniciar 6. Credenciales SSH – AWS Details – Descargar PEM ◦
-
-```html
-chmod 400 labsuser.pem
-```
-
-◦ ssh -i labsuser.pem ubuntu@<public-ip> 7. Instalar servicio web ◦
-
-```html
-sudo apt update –y
-```
-
-◦
-
-```html
-sudo apt install apache2
-```
-
-◦
-
-```html
-sudo apt install unzip
-```
-
-◦
-
-```html
-sudo apt install mc
-```
-
-◦
-
-```html
-sudo systemctl enable apache2
-```
-
-8. Copiar información ◦ scp -i myAmazonKey.pem filetoupload ubuntu@<public-ip>:~/. ◦
-
-```html
-sudo cp -R /home/ubuntu/filetoupload /var/www/html
-```
-
-◦
-
-```html
-sudo chown -R www-data:www-data /var/www/html
-```
-
-44.215.86.116 IP Elástica Instancia EC2 Asociar IP Conectar SSH Instalación Copiar Info Preparar màquina en el Cloud Gestionar e instalar servicios https://html5up.net/paradigm-shift/download
+Continguts i activitats didàctiques de **How to Install WordPress on Ubuntu 24.04 or 22.04 LTS Server**.
 
 ---
+
+## 📌 3.4 Instalación
+
+Continguts i activitats didàctiques de **Instalación**.
+
+---
+
+## 📌 3.5 Tarea_CA1.a Instalación Wordpress
+
+Continguts i activitats didàctiques de **Tarea_CA1.a Instalación Wordpress**.
+
+---
+
+## 📌 3.6 Tema 3: Gestor de contenidos
+
+Continguts i activitats didàctiques de **Tema 3: Gestor de contenidos**.
+
+---
+
+## 📌 3.7 CMS
+
+Continguts i activitats didàctiques de **CMS**.
+
+---
+
+## 📌 3.8 Tema 3 interactivo
+
+Continguts i activitats didàctiques de **Tema 3 interactivo**.
+
+---
+
+## 📌 3.9 De lienzo en blanco a hogar digital
+
+@@PLUGINFILE@@/De_lienzo_en_blanco_a_hogar_digital.mp4
+
+---
+
+## 📌 3.10 WordPress de Cero a Profesional
+
+Continguts i activitats didàctiques de **WordPress de Cero a Profesional**.
+
+---
+
+## 📌 3.11 https://tudominio.com/login https://tudominio.com/...
+
+https://tudominio.com/
+
+login
+
+https://tudominio.com/
+
+admin
+
+https://tudominio.com/
+
+wp-login.php
+
+https://tudominio.com/
+
+wp-login/
+
+---
+
+## 📌 3.12 Tarea_CA1.a
+
+Se debe entregar en formato pdf y el nombre de la tarea debe ser:
+
+Nombre_CA1_a
+
+---
+
+## 📌 3.13 Gestion de usuarios y roles---
+
+Continguts i activitats didàctiques de **Gestion de usuarios y roles---**.
+
+---
+
+## 📌 3.14 Gestion de usuarios y roles
+
+Continguts i activitats didàctiques de **Gestion de usuarios y roles**.
+
+---
+
+## 📌 3.15 Actividad_1_c - Tema Wordpress
+
+Se debe entregar una captura de la página y se mostrará al profesor como ha quedado el sitio web, para que lo pueda evaluar.
+
+---
+
+## 📌 3.16 Guia Wordpress
+
+Continguts i activitats didàctiques de **Guia Wordpress**.
+
+---
+
+## 📌 3.17 https://wordpress.com/es/support/menus/
+
+https://wordpress.com/es/support/menus/
+
+---
+
+## 📌 3.18 CSS
+
+Continguts i activitats didàctiques de **CSS**.
+
+---
+
+## 📌 3.19 Chuleta_CSS
+
+Continguts i activitats didàctiques de **Chuleta_CSS**.
+
+---
+
+## 📌 3.20 Tarea_Extra_CSS
+
+Continguts i activitats didàctiques de **Tarea_Extra_CSS**.
+
+---
+
+## 📌 3.21 Actividad_Actualizar CA1_E
+
+Entregar en pdf
+
+---
+
+## 📌 3.22 Actividad CA1.f: Instalación y Configuración de Módulos Avanzados y Menús en WordPress
+
+Continguts i activitats didàctiques de **Actividad CA1.f: Instalación y Configuración de Módulos Avanzados y Menús en WordPress**.
+
+---
+
+## 📌 3.23 Actividad_1_f
+
+Se debe realizar antes de la clase del /2024
+
+---
+
+## 📌 3.24 Actividad CA1_g: Activación y Configuración de Mecanismos de Seguridad en WordPress
+
+Continguts i activitats didàctiques de **Actividad CA1_g: Activación y Configuración de Mecanismos de Seguridad en WordPress**.
+
+---
+
+## 📌 3.25 Actividad_CA1_g
+
+Se revisará el lunes /2024
+
+---
+
+## 📌 3.26 Actividad CA1_j: Realización de Copias de Seguridad de los Contenidos en WordPress
+
+Continguts i activitats didàctiques de **Actividad CA1_j: Realización de Copias de Seguridad de los Contenidos en WordPress**.
+
+---
+
+## 📌 3.27 Actividad_Copia_Seguridad
+
+Continguts i activitats didàctiques de **Actividad_Copia_Seguridad**.

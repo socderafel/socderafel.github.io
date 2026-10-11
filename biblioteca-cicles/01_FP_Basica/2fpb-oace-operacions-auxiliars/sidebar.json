@@ -1,0 +1,357 @@
+{
+  "title": "💻 Operacions Auxiliars de Configuració i Explotació — 2n FPB · Grau Bàsic",
+  "home": {
+    "label": "🏠 Inici Operacions Auxiliars de Configuració i Explotació",
+    "href": "index.md"
+  },
+  "units": [
+    {
+      "summary": "UD1 — Miscelanea",
+      "items": [
+        {
+          "label": "📘 UD1 Completa (1 pàgina)",
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "1.1 Película Ex Machina",
+          "href": "./ut01/ut0101.md"
+        },
+        {
+          "label": "1.2 Repaso Kahoot: Bases de datos",
+          "href": "./ut01/ut0102.md"
+        },
+        {
+          "label": "1.3 Repaso Kahoot: Multimedia",
+          "href": "./ut01/ut0103.md"
+        },
+        {
+          "label": "1.4 Repaso Kahoot: Windows",
+          "href": "./ut01/ut0104.md"
+        },
+        {
+          "label": "1.5 Repaso Kahoot: Seguridad informática",
+          "href": "./ut01/ut0105.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD2 — Tema 2. Aplicaciones ofimáticas",
+      "items": [
+        {
+          "label": "📘 UD2 Completa (1 pàgina)",
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "2.1 Hoja de cálculo: Segundos vividos",
+          "href": "./ut02/ut0201.md"
+        },
+        {
+          "label": "2.2 Hojas de cálculo: Deudas",
+          "href": "./ut02/ut0202.md"
+        },
+        {
+          "label": "2.3 Hoja de cálculo: Mi moto",
+          "href": "./ut02/ut0203.md"
+        },
+        {
+          "label": "2.4 Hoja de cálculo: Comercial",
+          "href": "./ut02/ut0204.md"
+        },
+        {
+          "label": "2.5 Hoja de cálculo: Funciones",
+          "href": "./ut02/ut0205.md"
+        },
+        {
+          "label": "2.6 Borja: Hoja de cálculo",
+          "href": "./ut02/ut0206.md"
+        },
+        {
+          "label": "2.7 Bases de datos: Concesionario (Entrega I)",
+          "href": "./ut02/ut0207.md"
+        },
+        {
+          "label": "2.8 Base de datos: Concesionario (Entrega II Tutorial)",
+          "href": "./ut02/ut0208.md"
+        },
+        {
+          "label": "2.9 Base de datos: Concesionario (Entrega III Tutorial)",
+          "href": "./ut02/ut0209.md"
+        },
+        {
+          "label": "2.10 Base de datos: Concesionario (Entrega IV Tutorial)",
+          "href": "./ut02/ut0210.md"
+        },
+        {
+          "label": "2.11 Base de datos: Concesionario (Entrega V Tutorial)",
+          "href": "./ut02/ut0211.md"
+        },
+        {
+          "label": "2.12 Base de datos: Concesionario (Entrega VI)",
+          "href": "./ut02/ut0212.md"
+        },
+        {
+          "label": "2.13 Base de datos: Concesionario (Entrega VII)",
+          "href": "./ut02/ut0213.md"
+        },
+        {
+          "label": "2.14 Base de datos: Concesionario (Entrega VIII)",
+          "href": "./ut02/ut0214.md"
+        },
+        {
+          "label": "2.15 Examen Base de datos",
+          "href": "./ut02/ut0215.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD3 — Tema 4. Servicios avanzados de Internet",
+      "items": [
+        {
+          "label": "📘 UD3 Completa (1 pàgina)",
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "3.1 Creación online de recursos: Kahoot de Base de datos",
+          "href": "./ut03/ut0301.md"
+        },
+        {
+          "label": "3.2 Sitios web: Preparando información para tu sitio web personal",
+          "href": "./ut03/ut0302.md"
+        },
+        {
+          "label": "3.3 Sitios web: Preparando información para tu sitio web personal (Tarea)",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Sitios web: Preparando información para tu sitio web personal (Rúbrica)",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 Sitios web: Registrando tu sitio web personal",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Sitios web: Diseñando tu sitio web personal y sus páginas",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 Sitios web: WordPress Entrega 1 (Captura de curriculum)",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 Sitios web: Estableciendo la navegación y publicando",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 Sitios web:  Mi sitio web personal con WordPress",
+          "href": "./ut03/ut0309.md"
+        },
+        {
+          "label": "3.10 Sitios web: Rellena el cuestionario para que tu sitio web sea evaluable",
+          "href": "./ut03/ut0310.md"
+        },
+        {
+          "label": "3.11 Sitios web: Puntuación del sitio web WordPress",
+          "href": "./ut03/ut0311.md"
+        },
+        {
+          "label": "3.12 Presencia en la web con WordPress: Creación de cuenta",
+          "href": "./ut03/ut0312.md"
+        },
+        {
+          "label": "3.13 WordPress: Confirma tu cuenta",
+          "href": "./ut03/ut0313.md"
+        },
+        {
+          "label": "3.14 Curso online de WordPress",
+          "href": "./ut03/ut0314.md"
+        },
+        {
+          "label": "3.15 Guía para diseñar nuestro portfolio con WordPress",
+          "href": "./ut03/ut0315.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD4 — Tema 5. Instalación de sistemas operativos",
+      "items": [
+        {
+          "label": "📘 UD4 Completa (1 pàgina)",
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "4.1 Instalación de un sistema operativo: Ubuntu",
+          "href": "./ut04/ut0401.md"
+        },
+        {
+          "label": "4.2 Instalación de un sistema operativo: Windows",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 Tutorial Máquinas Virtuales (Entrega I)",
+          "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 Tutorial Máquinas Virtuales (Entrega II)",
+          "href": "./ut04/ut0404.md"
+        },
+        {
+          "label": "4.5 Tutorial Máquinas Virtuales (Entrega III)",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 Tutorial Máquinas Virtuales (Entrega IV)",
+          "href": "./ut04/ut0406.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD5 — Tema 6. El sistema operativo Windows",
+      "items": [
+        {
+          "label": "📘 UD5 Completa (1 pàgina)",
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 Tutorial de Windows 10 (Primera parte)",
+          "href": "./ut05/ut0501.md"
+        },
+        {
+          "label": "5.2 Tutorial de Windows 10 (Segunda parte)",
+          "href": "./ut05/ut0502.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD6 — Tema 7. El sistema operativo Linux",
+      "items": [
+        {
+          "label": "📘 UD6 Completa (1 pàgina)",
+          "href": "./ut06/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 Explotación de distribuciones de Linux:  Ubuntu",
+          "href": "./ut06/ut0601.md"
+        },
+        {
+          "label": "6.2 Examen MV y Ubuntu",
+          "href": "./ut06/ut0602.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD7 — Tema 9. Seguridad informática",
+      "items": [
+        {
+          "label": "📘 UD7 Completa (1 pàgina)",
+          "href": "./ut07/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Protégete en la red: Interland",
+          "href": "./ut07/ut0701.md"
+        },
+        {
+          "label": "7.2 Interland: Reino 1 (Entrega I)",
+          "href": "./ut07/ut0702.md"
+        },
+        {
+          "label": "7.3 Interland: Reino 2 y 3 (Entrega II)",
+          "href": "./ut07/ut0703.md"
+        },
+        {
+          "label": "7.4 Interland: Reino 4 (Entrega III)",
+          "href": "./ut07/ut0704.md"
+        },
+        {
+          "label": "7.5 Protégete en la red: Space Shelter (Refugio en el espacio)",
+          "href": "./ut07/ut0705.md"
+        },
+        {
+          "label": "7.6 Entrega de Space Shelter",
+          "href": "./ut07/ut0706.md"
+        },
+        {
+          "label": "7.7 Protégete en la red: Cyberscouts",
+          "href": "./ut07/ut0707.md"
+        },
+        {
+          "label": "7.8 Cyberscouts (Entrega)",
+          "href": "./ut07/ut0708.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD8 — Tema 10. Multimedia",
+      "items": [
+        {
+          "label": "📘 UD8 Completa (1 pàgina)",
+          "href": "./ut08/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 1. Recurso: Pista de video (entrevista)",
+          "href": "./ut08/ut0801.md"
+        },
+        {
+          "label": "8.2 2. Multimedia: Incorporar subtítulos a un vídeo",
+          "href": "./ut08/ut0802.md"
+        },
+        {
+          "label": "8.3 2. Multimedia: Incorporar subtítulos a un vídeo (Entrega)",
+          "href": "./ut08/ut0803.md"
+        },
+        {
+          "label": "8.4 2. Multimedia: Puntuación del subtitulado",
+          "href": "./ut08/ut0804.md"
+        },
+        {
+          "label": "8.5 3. Preparando nuestro estudio de grabación de audio",
+          "href": "./ut08/ut0805.md"
+        },
+        {
+          "label": "8.6 4.  Recurso: Pista de audio (entrevista)",
+          "href": "./ut08/ut0806.md"
+        },
+        {
+          "label": "8.7 5. Multimedia: Edición de audio con Audacity",
+          "href": "./ut08/ut0807.md"
+        },
+        {
+          "label": "8.8 6. Multimedia: Edición de audio con Audacity (Entrega)",
+          "href": "./ut08/ut0808.md"
+        },
+        {
+          "label": "8.9 7. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 1 y 2)",
+          "href": "./ut08/ut0809.md"
+        },
+        {
+          "label": "8.10 7. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 1 y 2) Entrega",
+          "href": "./ut08/ut0810.md"
+        },
+        {
+          "label": "8.11 8. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 3)",
+          "href": "./ut08/ut0811.md"
+        },
+        {
+          "label": "8.12 8. Multimedia: Edición de imagen vectorial con Draw Ejercicio 3 (Entrega)",
+          "href": "./ut08/ut0812.md"
+        },
+        {
+          "label": "8.13 9. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 4)",
+          "href": "./ut08/ut0813.md"
+        },
+        {
+          "label": "8.14 9. Multimedia: Edición de imagen vectorial con Draw Ejercicio 4 (Entrega)",
+          "href": "./ut08/ut0814.md"
+        }
+      ]
+    }
+  ]
+}

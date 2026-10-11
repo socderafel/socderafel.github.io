@@ -2,101 +2,362 @@
   "title": "🔧 Muntatge i Manteniment d'Equips — 1r SMX · Grau Mitjà",
   "home": {
     "label": "🏠 Inici Muntatge i Manteniment d'Equips",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — Components d'un Equip Microinformàtic",
+      "summary": "UD1 — UT1 - Representació de la informació",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 P1 | P2 | P3 - CONTINGUTS",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 Presentació",
+          "href": "./ut01/ut0101.md"
         }
       ]
     },
     {
-      "summary": "UD2 — Muntatge d'Equips, Processadors i Emmagatzematge",
+      "summary": "UD2 — UT2 - Fonaments de l'electricitat",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 P1 | P2 | P3 - TEXT CONTINGUTS",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 RA's",
+          "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 P2 - PROCESADOR Y MEMORIA",
-          "href": "./ut02/ut0202.html"
+          "label": "2.2 Resum de continguts de la unitat",
+          "href": "./ut02/ut0202.md"
         },
         {
-          "label": "2.3 P2 - CONT3 - AMD NOMENCLATURA PROCESADORS",
-          "href": "./ut02/ut0203.html"
+          "label": "2.3 Presentacions dels alumnes",
+          "href": "./ut02/ut0203.md"
         },
         {
-          "label": "2.4 P2 - CONT3 - INTEL NOMENCLATURA PROCESADORS",
-          "href": "./ut02/ut0204.html"
+          "label": "2.4 UT2: La Font d'alimentació (FA)",
+          "href": "./ut02/ut0204.md"
         },
         {
-          "label": "2.5 P3 - UNITATS D'EMMAGATZENATGE",
-          "href": "./ut02/ut0205.html"
+          "label": "2.5 Classroom exercices",
+          "href": "./ut02/ut0205.md"
         },
         {
-          "label": "2.6 DISCOS DUROS CHS ECHS LBA",
-          "href": "./ut02/ut0206.html"
+          "label": "2.6 Treball en grups d'investigació",
+          "href": "./ut02/ut0206.md"
+        },
+        {
+          "label": "2.7 Presentació per parelles",
+          "href": "./ut02/ut0207.md"
+        },
+        {
+          "label": "2.8 Activitat 2.2: Entrega activitats de repas (per grups)",
+          "href": "./ut02/ut0208.md"
+        },
+        {
+          "label": "2.9 Activitat 2.3: La font d'alimentació",
+          "href": "./ut02/ut0209.md"
+        },
+        {
+          "label": "2.10 Practica RA3 f): mesurar valors de la FA",
+          "href": "./ut02/ut0210.md"
+        },
+        {
+          "label": "2.11 Qüestionari final UT2",
+          "href": "./ut02/ut0211.md"
+        },
+        {
+          "label": "2.12 Control RA3",
+          "href": "./ut02/ut0212.md"
         }
       ]
     },
     {
-      "summary": "UD3 — Manteniment, Diagnosi i Perifèrics",
+      "summary": "UD3 — UT3.1 - Components d'un equip microinformàtic",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 P1 P2 P3 - PDF CONTINGUTS",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 RA1MME",
+          "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 P1 P2 P3 - PRESENTACIÓ CLASSE",
-          "href": "./ut03/ut0302.html"
+          "label": "3.2 RA's (còpia)",
+          "href": "./ut03/ut0302.md"
+        },
+        {
+          "label": "3.3 Apunts 1 - CE1a, CE1b, CE1d, CE1g",
+          "href": "./ut03/ut0303.md"
+        },
+        {
+          "label": "3.4 Classroom exercices",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 Activitats 1: Estructura d'una computadora",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 Activitats 2: CPU i Memories",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 Activitats 3: Periferics",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 Activitats 4: Placa base",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 Control - - CE1a, CE1b, CE1d",
+          "href": "./ut03/ut0309.md"
         }
       ]
     },
     {
-      "summary": "UD4 — Seguretat, Còpies de Seguretat i Implantació de Programari",
+      "summary": "UD4 — UT3.2 - La placa base, el processador i perifèrics",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 RGPD - CONTINGUTS",
-          "href": "./ut04/ut0401.html"
+          "label": "4.1 RA's (còpia) (còpia)",
+          "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 COPIAS DE SEGURIDAD - CONTINGUTS",
-          "href": "./ut04/ut0402.html"
+          "label": "4.2 Apunts 2 - La placa base i el processador - (CE1.c, CE1.e, CE1.f)",
+          "href": "./ut04/ut0402.md"
         },
         {
-          "label": "4.3 CLASIF INFORMACION - CONTINGUTS",
-          "href": "./ut04/ut0403.html"
+          "label": "4.3 Classroom exercices (còpia)",
+          "href": "./ut04/ut0403.md"
         },
         {
-          "label": "4.4 P1 P2 P3 PRESENTACIÓ CONTINGUTS",
-          "href": "./ut04/ut0404.html"
+          "label": "4.4 Activitat 1: La placa base",
+          "href": "./ut04/ut0404.md"
         },
         {
-          "label": "4.5 P1 P2 P3 - CONTINGUTS",
-          "href": "./ut04/ut0405.html"
+          "label": "4.5 Activitat 2 - El processador",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 Activitat  3: Manual Placa Base",
+          "href": "./ut04/ut0406.md"
+        },
+        {
+          "label": "4.7 Activitat 4: Pràctica BIOS",
+          "href": "./ut04/ut0407.md"
+        },
+        {
+          "label": "4.8 Actividad 5: Instalación de Periféricos",
+          "href": "./ut04/ut0408.md"
+        },
+        {
+          "label": "4.9 Actividades de repaso UT3.2",
+          "href": "./ut04/ut0409.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD5 — UT4 - Manteniment d'equips informàtics",
+      "items": [
+        {
+          "label": "📘 UD5 Completa (1 pàgina)",
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "5.1 RA's",
+          "href": "./ut05/ut0501.md"
+        },
+        {
+          "label": "5.2 Àrea de text i multimèdia",
+          "href": "./ut05/ut0502.md"
+        },
+        {
+          "label": "5.3 Apunts",
+          "href": "./ut05/ut0503.md"
+        },
+        {
+          "label": "5.4 Classroom exercices",
+          "href": "./ut05/ut0504.md"
+        },
+        {
+          "label": "5.5 Activitats CE4a",
+          "href": "./ut05/ut0505.md"
+        },
+        {
+          "label": "5.6 Activitats CE4b y CE4c",
+          "href": "./ut05/ut0506.md"
+        },
+        {
+          "label": "5.7 Activitats CE4d, CE4e y Ce4f",
+          "href": "./ut05/ut0507.md"
+        },
+        {
+          "label": "5.8 Activitats CE4g",
+          "href": "./ut05/ut0508.md"
+        },
+        {
+          "label": "5.9 Mapa mental",
+          "href": "./ut05/ut0509.md"
+        },
+        {
+          "label": "5.10 Activitats CE4g - 2",
+          "href": "./ut05/ut0510.md"
+        },
+        {
+          "label": "5.11 Pràctica final",
+          "href": "./ut05/ut0511.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD6 — UT5 - Manteniment de perifèrics",
+      "items": [
+        {
+          "label": "📘 UD6 Completa (1 pàgina)",
+          "href": "./ut06/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 RA7",
+          "href": "./ut06/ut0601.md"
+        },
+        {
+          "label": "6.2 Apunts",
+          "href": "./ut06/ut0602.md"
+        },
+        {
+          "label": "6.3 Classroom exercices (còpia) (còpia) (còpia)",
+          "href": "./ut06/ut0603.md"
+        },
+        {
+          "label": "6.4 Actividad 0 - Introducción",
+          "href": "./ut06/ut0604.md"
+        },
+        {
+          "label": "6.5 Activitats CE7abf",
+          "href": "./ut06/ut0605.md"
+        },
+        {
+          "label": "6.6 Activitats CE7cdef",
+          "href": "./ut06/ut0606.md"
+        },
+        {
+          "label": "6.7 Esquema RA7",
+          "href": "./ut06/ut0607.md"
+        },
+        {
+          "label": "6.8 Limpieza de periféricos",
+          "href": "./ut06/ut0608.md"
+        },
+        {
+          "label": "6.9 RA7 Actividades de revisión",
+          "href": "./ut06/ut0609.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD7 — UT6 - Instal·la programari utlilitzant una imatge",
+      "items": [
+        {
+          "label": "📘 UD7 Completa (1 pàgina)",
+          "href": "./ut07/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Àrea de text i multimèdia",
+          "href": "./ut07/ut0701.md"
+        },
+        {
+          "label": "7.2 Apuntes RA5",
+          "href": "./ut07/ut0702.md"
+        },
+        {
+          "label": "7.3 Actividades de la unidad",
+          "href": "./ut07/ut0703.md"
+        },
+        {
+          "label": "7.4 Instalación de 2 sistemas operativos",
+          "href": "./ut07/ut0704.md"
+        },
+        {
+          "label": "7.5 Creación y restauración de imégenes com Clonezilla",
+          "href": "./ut07/ut0705.md"
+        },
+        {
+          "label": "7.6 Creación de particiones",
+          "href": "./ut07/ut0706.md"
+        },
+        {
+          "label": "7.7 Actividades de revisión de la unidad UT6",
+          "href": "./ut07/ut0707.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD8 — UT7 - Noves tendències",
+      "items": [
+        {
+          "label": "📘 UD8 Completa (1 pàgina)",
+          "href": "./ut08/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Àrea de text i multimèdia",
+          "href": "./ut08/ut0801.md"
+        },
+        {
+          "label": "8.2 Proyectos RA6",
+          "href": "./ut08/ut0802.md"
+        },
+        {
+          "label": "8.3 Actividades de la unidad (recopilación)",
+          "href": "./ut08/ut0803.md"
+        },
+        {
+          "label": "8.4 Projectes",
+          "href": "./ut08/ut0804.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD9 — Projecte",
+      "items": [
+        {
+          "label": "📘 UD9 Completa (1 pàgina)",
+          "href": "./ut09/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 Pràctica 1 - Muntatge",
+          "href": "./ut09/ut0901.md"
+        },
+        {
+          "label": "9.2 Excel 16-05",
+          "href": "./ut09/ut0902.md"
+        },
+        {
+          "label": "9.3 Pràctica 2 - Clonezilla",
+          "href": "./ut09/ut0903.md"
+        },
+        {
+          "label": "9.4 Pràctica 3 - Manteniment",
+          "href": "./ut09/ut0904.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }

@@ -2,114 +2,638 @@
   "title": "🚀 Desplegament d'Aplicacions Web — 2n DAW · Grau Superior",
   "home": {
     "label": "🏠 Inici Desplegament d'Aplicacions Web",
-    "href": "index.html"
+    "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — Serveis de Xarxa Implicats en el Desplegament (DNS i LDAP)",
+      "summary": "UD1 — UP0. Presentación",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html"
+          "href": "./ut01/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "1.1 3 Preparación del servidor de directorios L",
-          "href": "./ut01/ut0101.html"
+          "label": "1.1 Anuncios",
+          "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 2 Servicio de directorios LDAP",
-          "href": "./ut01/ut0102.html"
+          "label": "1.2 UP0. Presentacion",
+          "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 1 Servicios de Red",
-          "href": "./ut01/ut0103.html"
+          "label": "1.3 Criterios de realización de actividades",
+          "href": "./ut01/ut0103.md"
         }
       ]
     },
     {
-      "summary": "UD2 — Administració de Servidors de Transferència d'Arxius (FTP / SFTP)",
+      "summary": "UD2 — UP1. Implementación de arquitecturas web - RA1",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html"
+          "href": "./ut02/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "2.1 2 Introducció - Creació servidor FTP amb SF",
-          "href": "./ut02/ut0201.html"
+          "label": "2.1 Teoría",
+          "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 1 Introducció - Creació servidor FTP amb VS",
-          "href": "./ut02/ut0202.html"
+          "label": "2.2 UP1.1. Aspectos generales de las arquitecturas web - CE1.a)",
+          "href": "./ut02/ut0202.md"
+        },
+        {
+          "label": "2.3 UP1.2. Fundamentos y protocolos de servidores web - CE1.b)",
+          "href": "./ut02/ut0203.md"
+        },
+        {
+          "label": "2.4 UP1.3. Estructura y recursos de aplicaciones web - CE1.g)",
+          "href": "./ut02/ut0204.md"
+        },
+        {
+          "label": "2.5 UP1.4. Requisitos del proceso de implementación de aplicaciones web - CE1.h)",
+          "href": "./ut02/ut0205.md"
+        },
+        {
+          "label": "2.6 UP1.5. Instalación y configuración de servidores web - CE1.c)",
+          "href": "./ut02/ut0206.md"
+        },
+        {
+          "label": "2.7 UP1.6. Instalación y configuración de servidores de aplicaciones - CE1.d)",
+          "href": "./ut02/ut0207.md"
+        },
+        {
+          "label": "2.8 Actividades y tests",
+          "href": "./ut02/ut0208.md"
+        },
+        {
+          "label": "2.9 📚TEST📚 UP1.1. Aspectos generales de las arquitecturas web - CE1.a)",
+          "href": "./ut02/ut0209.md"
+        },
+        {
+          "label": "2.10 📚TEST📚 UP1.2. Fundamentos y protocolos de servidores web - CE1.b)",
+          "href": "./ut02/ut0210.md"
+        },
+        {
+          "label": "2.11 📚TEST📚 UP1.3. Estructura y recursos de aplicaciones web - CE1.g)",
+          "href": "./ut02/ut0211.md"
+        },
+        {
+          "label": "2.12 📚TEST📚 UP1.4. Requisitos del proceso de implementación de aplicaciones web - CE1.h)",
+          "href": "./ut02/ut0212.md"
+        },
+        {
+          "label": "2.13 📤ENTREGA📤 UP1.5. Instalación y configuración de servidores web - CE1.c)",
+          "href": "./ut02/ut0213.md"
+        },
+        {
+          "label": "2.14 📤ENTREGA📤 UP1.6. Instalación y configuración de servidores de aplicaciones - CE1.d)",
+          "href": "./ut02/ut0214.md"
+        },
+        {
+          "label": "2.15 📝RÚBRICA DE EVALUACIÓN📝 Documentación de los procesos de instalación y configuración (UP1.5 y UP1.6) - CE1.i)",
+          "href": "./ut02/ut0215.md"
+        },
+        {
+          "label": "2.16 👁️OBSERVACIÓN👁️ Actividad UP1.7. Instalación y configuración de Docker - CE1.e)",
+          "href": "./ut02/ut0216.md"
+        },
+        {
+          "label": "2.17 👁️OBSERVACIÓN👁️ Actividad UP1.8. Instalación y configuración de servidores web en Docker - CE1.f)",
+          "href": "./ut02/ut0217.md"
+        },
+        {
+          "label": "2.18 Recursos",
+          "href": "./ut02/ut0218.md"
+        },
+        {
+          "label": "2.19 Ubuntu Server 24.04.3 LTS",
+          "href": "./ut02/ut0219.md"
+        },
+        {
+          "label": "2.20 💻 Install GNOME in Ubuntu Server 24.04 ➜ sudo apt...",
+          "href": "./ut02/ut0220.md"
+        },
+        {
+          "label": "2.21 Docker",
+          "href": "./ut02/ut0221.md"
         }
       ]
     },
     {
-      "summary": "UD3 — Arquitectures Web i Servidors d'Aplicacions",
+      "summary": "UD3 — UP2. Administración y configuración de servidores web - RA2",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html"
+          "href": "./ut03/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "3.1 4 Arquitectures web",
-          "href": "./ut03/ut0301.html"
+          "label": "3.1 Teoría",
+          "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 3 Arquitectures web",
-          "href": "./ut03/ut0302.html"
+          "label": "3.2 UP2.1. Parámetros del servidor web - CE2.a)",
+          "href": "./ut03/ut0302.md"
         },
         {
-          "label": "3.3 2 Arquitectures web",
-          "href": "./ut03/ut0303.html"
+          "label": "3.3 UP2.2. Activación y configuración de módulos - CE2.b)",
+          "href": "./ut03/ut0303.md"
         },
         {
-          "label": "3.4 1 Arquitectures web",
-          "href": "./ut03/ut0304.html"
+          "label": "3.4 UP2.3. Creación y configuración de virtual hosts - CE2.c)",
+          "href": "./ut03/ut0304.md"
+        },
+        {
+          "label": "3.5 UP2.4. Configuración de mecanismos de autenticación y control de acceso al servidor - CE2.d)",
+          "href": "./ut03/ut0305.md"
+        },
+        {
+          "label": "3.6 UP2.5. Obtención e instalación de certificados digitales - CE2.e)",
+          "href": "./ut03/ut0306.md"
+        },
+        {
+          "label": "3.7 UP2.6. Mecanismos de seguridad en las comunicaciones web - CE2.f)",
+          "href": "./ut03/ut0307.md"
+        },
+        {
+          "label": "3.8 UP2.7. Herramientas de generación de logs - CE2.j)",
+          "href": "./ut03/ut0308.md"
+        },
+        {
+          "label": "3.9 Actividades y tests",
+          "href": "./ut03/ut0309.md"
+        },
+        {
+          "label": "3.10 📚TEST📚 UP2.1. Parámetros del servidor web - CE2.a)",
+          "href": "./ut03/ut0310.md"
+        },
+        {
+          "label": "3.11 📤ENTREGA📤 Actividad UP2.2. Activación y configuración de módulos - CE2.b)",
+          "href": "./ut03/ut0311.md"
+        },
+        {
+          "label": "3.12 📤ENTREGA📤 Actividad UP2.3. Creación y configuración de virtual hosts - CE2.c)",
+          "href": "./ut03/ut0312.md"
+        },
+        {
+          "label": "3.13 📤ENTREGA📤 Actividad UP2.4. Configuración de mecanismos de autenticación y control de accesos al servidor - CE2.d)",
+          "href": "./ut03/ut0313.md"
+        },
+        {
+          "label": "3.14 📤ENTREGA📤 Actividad UP2.5 y UP2.6. Obtención e instalación de certificados digitales y mecanismos de seguridad en las comunicaciones web - CE2.e) y CE2.f)",
+          "href": "./ut03/ut0314.md"
+        },
+        {
+          "label": "3.15 📈CALIFICACIÓN📈 Actividad UP2.6. Mecanismos de seguridad en las comunicaciones web - CE2.f)",
+          "href": "./ut03/ut0315.md"
+        },
+        {
+          "label": "3.16 📝RÚBRICA DE EVALUACIÓN📝 Documentación relacionada con la configuración, administración segura y recomendaciones para el uso del servidor (UP2.2, UP2.3, UP2.4 y UP2.5) - CE2.g)",
+          "href": "./ut03/ut0316.md"
+        },
+        {
+          "label": "3.17 📤ENTREGA📤 Actividad UP2.7. Herramientas de gestión de logs - CE2.j)",
+          "href": "./ut03/ut0317.md"
+        },
+        {
+          "label": "3.18 🧑‍🏫PRESENTACIÓN Y ENTREGA🧑‍🏫 Actividad UP2.8. Instalación y configuración de módulos en Docker - CE2.i)",
+          "href": "./ut03/ut0318.md"
+        },
+        {
+          "label": "3.19 📎ENTREGA PROYECTO📎 Ajustes de la implementación de la aplicación en el servidor web - CE2.h)",
+          "href": "./ut03/ut0319.md"
         }
       ]
     },
     {
-      "summary": "UD4 — Administració i Segurització de Servidors Web",
+      "summary": "UD4 — UP3. Administración de servidores de aplicaciones - RA3",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html"
+          "href": "./ut04/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "4.1 2 Administració de servidors web - Seguritz",
-          "href": "./ut04/ut0401.html"
+          "label": "4.1 Teoría",
+          "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 1 Administració de servidors web - Instal·l",
-          "href": "./ut04/ut0402.html"
+          "label": "4.2 UP3.1. Servicios del servidor de aplicaciones - CE3.a)",
+          "href": "./ut04/ut0402.md"
+        },
+        {
+          "label": "4.3 UP3.2. Archivos de configuración y bibliotecas compartidas - CE3.b)",
+          "href": "./ut04/ut0403.md"
+        },
+        {
+          "label": "4.4 UP3.3. Despliegue de la aplicación web en servidor de aplicaciones - CE3.c)",
+          "href": "./ut04/ut0404.md"
+        },
+        {
+          "label": "4.5 UP3.4. Mecanismos de seguridad del servidor de aplicaciones - CE3.d)",
+          "href": "./ut04/ut0405.md"
+        },
+        {
+          "label": "4.6 UP3.5. Componentes web del servidor de aplicaciones - CE3.e)",
+          "href": "./ut04/ut0406.md"
+        },
+        {
+          "label": "4.7 Actividades y tests",
+          "href": "./ut04/ut0407.md"
+        },
+        {
+          "label": "4.8 📚TEST📚 UP3.1. Servicios del servidor de aplicaciones - CE3.a)",
+          "href": "./ut04/ut0408.md"
+        },
+        {
+          "label": "4.9 📤 ENTREGA 📤 Actividad UP3.2. Archivos de configuración - CE3.b)",
+          "href": "./ut04/ut0409.md"
+        },
+        {
+          "label": "4.10 📤ENTREGA📤 Actividad UP3.3. Despliegue de aplicaciones web en el servidor de aplicaciones - CE3.c)",
+          "href": "./ut04/ut0410.md"
+        },
+        {
+          "label": "4.11 📤ENTREGA📤 Actividad UP3.4. Mecanismos de seguridad del servidor de aplicaciones - CE3.d)",
+          "href": "./ut04/ut0411.md"
+        },
+        {
+          "label": "4.12 📝RÚBRICA DE EVALUACIÓN📝 Documentación sobre administración de servidores de aplicaciones y recomendaciones de uso (UP3.3 y UP3.4) - CE3.h)",
+          "href": "./ut04/ut0412.md"
+        },
+        {
+          "label": "4.13 📚TEST📚 UP3.5. Componentes web del servidor de aplicaciones - CE3.e)",
+          "href": "./ut04/ut0413.md"
+        },
+        {
+          "label": "4.14 🧑‍🏫PRESENTACIÓN Y ENTREGA🧑‍🏫 Actividad UP3.6. Integración de Tomcat y Apache HTTP Server en Docker - CE3.f) y CE3.i)",
+          "href": "./ut04/ut0414.md"
+        },
+        {
+          "label": "4.15 📈CALIFICACIÓN📈 UP3.6. Integración de Tomcat y Apache HTTP Server en Docker - CE3.i)",
+          "href": "./ut04/ut0415.md"
+        },
+        {
+          "label": "4.16 📎ENTREGA PROYECTO📎 Pruebas funcionales y de rendimiento de la aplicación web implementada - CE3.g)",
+          "href": "./ut04/ut0416.md"
         }
       ]
     },
     {
-      "summary": "UD5 — Documentació i Control de Versions (Git, GitHub, Javadoc, phpDocumentor)",
+      "summary": "UD5 — UP4. Documentación, control de versiones y sistemas de integración continua - RA6",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html"
+          "href": "./ut05/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "5.1 4 Documentació i control de versions - GitH",
-          "href": "./ut05/ut0501.html"
+          "label": "5.1 Teoría",
+          "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 3 Documentació i control de versions - Git",
-          "href": "./ut05/ut0502.html"
+          "label": "5.2 UP4.1. Herramientas para generar documentación - CE6.a)",
+          "href": "./ut05/ut0502.md"
         },
         {
-          "label": "5.3 2 Documentació i control de versions - phpD",
-          "href": "./ut05/ut0503.html"
+          "label": "5.3 UP4.2. Documentación de PHP - CE6.b)",
+          "href": "./ut05/ut0503.md"
         },
         {
-          "label": "5.4 1 Documentació i control de versions - Java",
-          "href": "./ut05/ut0504.html"
+          "label": "5.4 UP4.3. Documentación del proyecto - CE6.c) y CE6.d)",
+          "href": "./ut05/ut0504.md"
+        },
+        {
+          "label": "5.5 UP4.4. Control de versiones con Git - CE6.e) y CE6.g)",
+          "href": "./ut05/ut0505.md"
+        },
+        {
+          "label": "5.6 UP4.5. Accesibilidad y seguridad del control de versiones - CE6.f)",
+          "href": "./ut05/ut0506.md"
+        },
+        {
+          "label": "5.7 UP4.6. Repositorio GitHub - CE6.h)",
+          "href": "./ut05/ut0507.md"
+        },
+        {
+          "label": "5.8 Actividades y tests",
+          "href": "./ut05/ut0508.md"
+        },
+        {
+          "label": "5.9 📚TEST📚 UP4.1. Herramientas para generar documentación - CE6.a)",
+          "href": "./ut05/ut0509.md"
+        },
+        {
+          "label": "5.10 📎ENTREGA PROYECTO📎 Actividad UP4.2. Documentación PHP - CE6.b)",
+          "href": "./ut05/ut0510.md"
+        },
+        {
+          "label": "5.11 📎ENTREGA PROYECTO📎 Actividad UP4.3. Documentación del proyecto - CE6.c) y CE6.d)",
+          "href": "./ut05/ut0511.md"
+        },
+        {
+          "label": "5.12 📈CALIFICACIÓN📈 Documentación del proyecto - CE6.d)",
+          "href": "./ut05/ut0512.md"
+        },
+        {
+          "label": "5.13 📎ENTREGA PROYECTO📎 Actividad UP4.4. Control de versiones de Git - CE6.e) y CE6.g)",
+          "href": "./ut05/ut0513.md"
+        },
+        {
+          "label": "5.14 📈CALIFICACIÓN📈 Control de versiones de Git - CE6.g)",
+          "href": "./ut05/ut0514.md"
+        },
+        {
+          "label": "5.15 📎ENTREGA PROYECTO📎 Actividad UP4.5. Control de versiones, accesibilidad y seguridad - CE6.f)",
+          "href": "./ut05/ut0515.md"
+        },
+        {
+          "label": "5.16 📎ENTREGA PROYECTO📎 Actividad UP4.6. Repositorio de GitHub - CE6.h)",
+          "href": "./ut05/ut0516.md"
+        },
+        {
+          "label": "5.17 Recursos",
+          "href": "./ut05/ut0517.md"
+        },
+        {
+          "label": "5.18 Learn Git Branching",
+          "href": "./ut05/ut0518.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD6 — UP5. Instalación y administración de servidores de transferencia de archivos - RA4",
+      "items": [
+        {
+          "label": "📘 UD6 Completa (1 pàgina)",
+          "href": "./ut06/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "6.1 Teoría",
+          "href": "./ut06/ut0601.md"
+        },
+        {
+          "label": "6.2 UP5.1. Instalación y configuración del servidor de transferencia de archivos - CE4.a)",
+          "href": "./ut06/ut0602.md"
+        },
+        {
+          "label": "6.3 UP5.2. Creación de usuarios para acceso remoto al servidor FTP - CE4.b)",
+          "href": "./ut06/ut0603.md"
+        },
+        {
+          "label": "6.4 UP5.3. Acceso al servidor en modo activo y pasivo - CE4.c)",
+          "href": "./ut06/ut0604.md"
+        },
+        {
+          "label": "6.5 UP5.4. Pruebas de cliente FTP - CE4.d)",
+          "href": "./ut06/ut0605.md"
+        },
+        {
+          "label": "6.6 UP5.5. Instalación, configuración y conexión de SFTP - CE4.e)",
+          "href": "./ut06/ut0606.md"
+        },
+        {
+          "label": "6.7 UP5.6. Servicios de transferencia de archivos integrados en servidores web - CE4.f)",
+          "href": "./ut06/ut0607.md"
+        },
+        {
+          "label": "6.8 Actividades",
+          "href": "./ut06/ut0608.md"
+        },
+        {
+          "label": "6.9 📤ENTREGA📤 Actividad UP5.1. Instalación y configuración del servidor de transferencia de archivos - CE4.a)",
+          "href": "./ut06/ut0609.md"
+        },
+        {
+          "label": "6.10 📤ENTREGA📤 Actividad UP5.2. Creación de usuarios para acceso remoto al servidor FTP - CE4.b)",
+          "href": "./ut06/ut0610.md"
+        },
+        {
+          "label": "6.11 📤ENTREGA📤 Actividad UP5.3. Acceso al servidor en modo activo y pasivo - CE4.c)",
+          "href": "./ut06/ut0611.md"
+        },
+        {
+          "label": "6.12 📤ENTREGA📤 Actividad UP5.4. Pruebas de cliente FTP/SFTP - CE4.d)",
+          "href": "./ut06/ut0612.md"
+        },
+        {
+          "label": "6.13 📤ENTREGA📤 Actividad UP5.5. Instalación, configuración y conexión de SFTP - CE4.e)",
+          "href": "./ut06/ut0613.md"
+        },
+        {
+          "label": "6.14 📤ENTREGA📤 Actividad UP5.6. Servicios de transferencia de archivos integrados en servidores web - CE4.f)",
+          "href": "./ut06/ut0614.md"
+        },
+        {
+          "label": "6.15 📝RÚBRICA DE EVALUACIÓN📝 Documentación de la configuración y administración del servicio de transferencia de archivos (UP5.1, UP5.2, UP5.5 y UP5.6) - CE4.g)",
+          "href": "./ut06/ut0615.md"
+        },
+        {
+          "label": "6.16 🧑‍🏫PRESENTACIÓN Y ENTREGA🧑‍🏫 Actividad UP5.7 - Instalación y configuración de servicios de transferencia de archivos en Docker - CE4.h)",
+          "href": "./ut06/ut0616.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD7 — UP6. Servicios de red involucrados en el despliegue de aplicaciones web - RA5",
+      "items": [
+        {
+          "label": "📘 UD7 Completa (1 pàgina)",
+          "href": "./ut07/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "7.1 Teoría",
+          "href": "./ut07/ut0701.md"
+        },
+        {
+          "label": "7.2 UP6.1. Estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos - CE5.a)",
+          "href": "./ut07/ut0702.md"
+        },
+        {
+          "label": "7.3 UP6.2. Función, elementos y estructuras lógicas del servicio de directorio - CE5.c)",
+          "href": "./ut07/ut0703.md"
+        },
+        {
+          "label": "7.4 UP6.3. Instalación y configuración del servidor DNS - CE5.b)",
+          "href": "./ut07/ut0704.md"
+        },
+        {
+          "label": "7.5 UP6.4. Instalación y configuración de OpenLDAP - CE5.d)",
+          "href": "./ut07/ut0705.md"
+        },
+        {
+          "label": "7.6 UP6.5. Servicio de directorio para autenticación centralizada - CE5.e)",
+          "href": "./ut07/ut0706.md"
+        },
+        {
+          "label": "7.7 UP6.5. Configuración de autenticación OpenLDAP - CE5.f)",
+          "href": "./ut07/ut0707.md"
+        },
+        {
+          "label": "7.8 Actividades y tests",
+          "href": "./ut07/ut0708.md"
+        },
+        {
+          "label": "7.9 📚TEST📚 UP6.1. Estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos - CE5.a)",
+          "href": "./ut07/ut0709.md"
+        },
+        {
+          "label": "7.10 📚TEST📚 UP6.2. Función, elementos y estructuras lógicas del servicio de directorio - CE5.c)",
+          "href": "./ut07/ut0710.md"
+        },
+        {
+          "label": "7.11 📤ENTREGA📤 Actividad UP6.3. Instalación y configuración del servidor DNS - CE5.b)",
+          "href": "./ut07/ut0711.md"
+        },
+        {
+          "label": "7.12 📤ENTREGA📤 Actividad UP6.4. Instalación y configuración de OpenLDAP - CE5.d)",
+          "href": "./ut07/ut0712.md"
+        },
+        {
+          "label": "7.13 📤ENTREGA📤 Actividad UP6.5. Configuración de autenticación OpenLDAP - CE5.e) y CE5.f)",
+          "href": "./ut07/ut0713.md"
+        },
+        {
+          "label": "7.14 📈CALIFICACIÓN📈 Configuración de autenticación OpenLDAP - CE5.f)",
+          "href": "./ut07/ut0714.md"
+        },
+        {
+          "label": "7.15 📝RÚBRICA DE EVALUACIÓN📝 Documentación de configuración y administración de servicios de red (UP6.3 y UP6.4) - CE5.g)",
+          "href": "./ut07/ut0715.md"
+        },
+        {
+          "label": "7.16 🧑‍🏫PRESENTACIÓN Y ENTREGA🧑‍🏫 Actividad UP6.6. Instalación y configuración de los servicios DNS y LDAP en Docker - CE5.h)",
+          "href": "./ut07/ut0716.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD8 — 🔔🔔Examen ordinaria🔔🔔",
+      "items": [
+        {
+          "label": "📘 UD8 Completa (1 pàgina)",
+          "href": "./ut08/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "8.1 Theory exam",
+          "href": "./ut08/ut0801.md"
+        },
+        {
+          "label": "8.2 Theory RA2-RA5",
+          "href": "./ut08/ut0802.md"
+        },
+        {
+          "label": "8.3 📈GRADE📈 Theory ordinary",
+          "href": "./ut08/ut0803.md"
+        },
+        {
+          "label": "8.4 Practic exam",
+          "href": "./ut08/ut0804.md"
+        },
+        {
+          "label": "8.5 RA2 ordinary (còpia)",
+          "href": "./ut08/ut0805.md"
+        },
+        {
+          "label": "8.6 2️⃣ RA2 practic ordinary 2️⃣",
+          "href": "./ut08/ut0806.md"
+        },
+        {
+          "label": "8.7 Ordinary RA3",
+          "href": "./ut08/ut0807.md"
+        },
+        {
+          "label": "8.8 3️⃣ RA3 practic ordinary 3️⃣",
+          "href": "./ut08/ut0808.md"
+        },
+        {
+          "label": "8.9 Ordinary RA4",
+          "href": "./ut08/ut0809.md"
+        },
+        {
+          "label": "8.10 4️⃣ RA4 practic ordinary 4️⃣",
+          "href": "./ut08/ut0810.md"
+        },
+        {
+          "label": "8.11 Ordinary RA5",
+          "href": "./ut08/ut0811.md"
+        },
+        {
+          "label": "8.12 5️⃣ RA5 practic ordinary 5️⃣",
+          "href": "./ut08/ut0812.md"
+        },
+        {
+          "label": "8.13 Ordinary RA6",
+          "href": "./ut08/ut0813.md"
+        },
+        {
+          "label": "8.14 6️⃣ RA6 practic ordinary 6️⃣",
+          "href": "./ut08/ut0814.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD9 — 🔔🔔Examen extraordinaria🔔🔔",
+      "items": [
+        {
+          "label": "📘 UD9 Completa (1 pàgina)",
+          "href": "./ut09/index.md",
+          "class": "unit-full-link"
+        },
+        {
+          "label": "9.1 Theory exam",
+          "href": "./ut09/ut0901.md"
+        },
+        {
+          "label": "9.2 Theory RA2-RA5",
+          "href": "./ut09/ut0902.md"
+        },
+        {
+          "label": "9.3 📈GRADE📈 Theory extraordinary",
+          "href": "./ut09/ut0903.md"
+        },
+        {
+          "label": "9.4 Practic exam",
+          "href": "./ut09/ut0904.md"
+        },
+        {
+          "label": "9.5 RA2 ordinary (còpia)",
+          "href": "./ut09/ut0905.md"
+        },
+        {
+          "label": "9.6 2️⃣ RA2 practic extraordinary 2️⃣",
+          "href": "./ut09/ut0906.md"
+        },
+        {
+          "label": "9.7 Ordinary RA3",
+          "href": "./ut09/ut0907.md"
+        },
+        {
+          "label": "9.8 3️⃣ RA3 practic extraordinary 3️⃣",
+          "href": "./ut09/ut0908.md"
+        },
+        {
+          "label": "9.9 Ordinary RA4",
+          "href": "./ut09/ut0909.md"
+        },
+        {
+          "label": "9.10 4️⃣ RA4 practic extraordinary 4️⃣",
+          "href": "./ut09/ut0910.md"
+        },
+        {
+          "label": "9.11 Ordinary RA6",
+          "href": "./ut09/ut0911.md"
+        },
+        {
+          "label": "9.12 6️⃣ RA6 practic extraordinary 6️⃣",
+          "href": "./ut09/ut0912.md"
         }
       ]
     }
-  ],
-  "footer": []
+  ]
 }
