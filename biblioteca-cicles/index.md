@@ -10,11 +10,12 @@ Selecciona qualsevol mòdul per accedir al seu **temari complet navegable** (amb
 
 | Cicle / Nivell | Mòdul / Assignatura | Unitats (`UT`) | Pàgines Web | Accés al Curs Complet |
 | :---: | :--- | :---: | :---: | :---: |
-| **FP Grau Bàsic (Informàtica d'Oficina)** | 🔬 Ciències Aplicades I | `9 UD` | `93 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-ciencies-aplicades/) |
-| **FP Grau Bàsic (Informàtica d'Oficina)** | 🛠️ Muntatge i Manteniment de Sistemes i Components | `11 UD` | `128 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-mmsci-muntatge-sistemes/) |
-| **FP Grau Bàsic (Informàtica d'Oficina)** | 📄 Ofimàtica i Arxiu de Documents | `12 UD` | `120 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-oad-ofimatica/) |
-| **FP Grau Bàsic (Informàtica d'Oficina)** | 🔌 Instal·lació i Manteniment de Xarxes per a Transmissió de Dades | `9 UD` | `109 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/2fpb-imx-instal-lacio-xarxes/) |
-| **FP Grau Bàsic (Informàtica d'Oficina)** | 💻 Operacions Auxiliars de Configuració i Explotació | `8 UD` | `76 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/2fpb-oace-operacions-auxiliars/) |
+| **FP Grau Bàsic (1r Curs)** | 🔬 Ciències Aplicades I | `9 UD` | `50 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-ciencies-aplicades/) |
+| **FP Grau Bàsic (1r Curs)** | 🛠️ Muntatge i Manteniment de Sistemes i Components (MMSCI) | `9 UD` | `58 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-mmsci-muntatge-sistemes/) |
+| **FP Grau Bàsic (1r Curs)** | 📄 Ofimàtica i Arxiu de Documents (OAD) | `9 UD` | `56 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/1fpb-oad-ofimatica/) |
+| **FP Grau Bàsic (2n Curs)** | 🔌 Instal·lació i Manteniment de Xarxes (IMX) | `9 UD` | `56 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/2fpb-imx-instal-lacio-xarxes/) |
+| **FP Grau Bàsic (2n Curs)** | 💻 Operacions Auxiliars de Configuració i Explotació (OACE) | `9 UD` | `56 pàgs` | [**📘 Entrar al Curs →**](./01_FP_Basica/2fpb-oace-operacions-auxiliars/) |
+| **FP Grau Bàsic (2n Curs)** | 🚀 Projecte Intermodular (Empresa Informàtica i Fira) | `8 UP` | `35 pàgs` | [**📘 Entrar al Projecte →**](../projecte-intermodular/) |
 
 ## 📁 FP Grau Mitjà — SMX (Sistemes Microinformàtics i Xarxes)
 
