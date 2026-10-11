@@ -1,12 +1,12 @@
 {
   "title": "💻 Operacions Auxiliars de Configuració i Explotació — 2n FPB · Grau Bàsic",
   "home": {
-    "label": "🏠 Inici Operacions Auxiliars de Configuració i Explotació",
+    "label": "🏠 Inici Operacions Auxiliars",
     "href": "index.md"
   },
   "units": [
     {
-      "summary": "UD1 — Miscelanea",
+      "summary": "UD1 — Introducció als Sistemes Operatius i la Virtualització",
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
@@ -14,29 +14,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "1.1 Película Ex Machina",
+          "label": "1.1 Què és un sistema operatiu? Funcions bàsiques",
           "href": "./ut01/ut0101.md"
         },
         {
-          "label": "1.2 Repaso Kahoot: Bases de datos",
+          "label": "1.2 Sistemes propietaris vs lliures: Windows, Linux i macOS",
           "href": "./ut01/ut0102.md"
         },
         {
-          "label": "1.3 Repaso Kahoot: Multimedia",
+          "label": "1.3 Arquitectures de maquinari: 32 bits vs 64 bits",
           "href": "./ut01/ut0103.md"
         },
         {
-          "label": "1.4 Repaso Kahoot: Windows",
+          "label": "1.4 Concepte de màquina virtual i hipervisors",
           "href": "./ut01/ut0104.md"
         },
         {
-          "label": "1.5 Repaso Kahoot: Seguridad informática",
+          "label": "1.5 Pràctica: Instal·lació de VirtualBox i creació d'una MV",
           "href": "./ut01/ut0105.md"
         }
       ]
     },
     {
-      "summary": "UD2 — Tema 2. Aplicaciones ofimáticas",
+      "summary": "UD2 — Instal·lació i Particionament de Sistemes Operatius",
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
@@ -44,69 +44,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "2.1 Hoja de cálculo: Segundos vividos",
+          "label": "2.1 Estructures de disc i taules de particions: MBR vs GPT",
           "href": "./ut02/ut0201.md"
         },
         {
-          "label": "2.2 Hojas de cálculo: Deudas",
+          "label": "2.2 Sistemes de fitxers més comuns: NTFS, ext4, FAT32 i exFAT",
           "href": "./ut02/ut0202.md"
         },
         {
-          "label": "2.3 Hoja de cálculo: Mi moto",
+          "label": "2.3 Preparació de memòries USB arrancables amb Rufus i Ventoy",
           "href": "./ut02/ut0203.md"
         },
         {
-          "label": "2.4 Hoja de cálculo: Comercial",
+          "label": "2.4 Pràctica: Instal·lació pas a pas de Windows 10/11",
           "href": "./ut02/ut0204.md"
         },
         {
-          "label": "2.5 Hoja de cálculo: Funciones",
+          "label": "2.5 Pràctica: Instal·lació d'Ubuntu Desktop / LliureX",
           "href": "./ut02/ut0205.md"
-        },
-        {
-          "label": "2.6 Borja: Hoja de cálculo",
-          "href": "./ut02/ut0206.md"
-        },
-        {
-          "label": "2.7 Bases de datos: Concesionario (Entrega I)",
-          "href": "./ut02/ut0207.md"
-        },
-        {
-          "label": "2.8 Base de datos: Concesionario (Entrega II Tutorial)",
-          "href": "./ut02/ut0208.md"
-        },
-        {
-          "label": "2.9 Base de datos: Concesionario (Entrega III Tutorial)",
-          "href": "./ut02/ut0209.md"
-        },
-        {
-          "label": "2.10 Base de datos: Concesionario (Entrega IV Tutorial)",
-          "href": "./ut02/ut0210.md"
-        },
-        {
-          "label": "2.11 Base de datos: Concesionario (Entrega V Tutorial)",
-          "href": "./ut02/ut0211.md"
-        },
-        {
-          "label": "2.12 Base de datos: Concesionario (Entrega VI)",
-          "href": "./ut02/ut0212.md"
-        },
-        {
-          "label": "2.13 Base de datos: Concesionario (Entrega VII)",
-          "href": "./ut02/ut0213.md"
-        },
-        {
-          "label": "2.14 Base de datos: Concesionario (Entrega VIII)",
-          "href": "./ut02/ut0214.md"
-        },
-        {
-          "label": "2.15 Examen Base de datos",
-          "href": "./ut02/ut0215.md"
         }
       ]
     },
     {
-      "summary": "UD3 — Tema 4. Servicios avanzados de Internet",
+      "summary": "UD3 — Administració i Configuració del Sistema Operatiu Windows",
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
@@ -114,69 +74,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "3.1 Creación online de recursos: Kahoot de Base de datos",
+          "label": "3.1 L'entorn gràfic de Windows: Escriptori, barra de tasques i configuració",
           "href": "./ut03/ut0301.md"
         },
         {
-          "label": "3.2 Sitios web: Preparando información para tu sitio web personal",
+          "label": "3.2 Controladors de dispositius (*Drivers*) i Administrador de dispositius",
           "href": "./ut03/ut0302.md"
         },
         {
-          "label": "3.3 Sitios web: Preparando información para tu sitio web personal (Tarea)",
+          "label": "3.3 Gestió de comptes d'usuari locals i control UAC",
           "href": "./ut03/ut0303.md"
         },
         {
-          "label": "3.4 Sitios web: Preparando información para tu sitio web personal (Rúbrica)",
+          "label": "3.4 Gestió d'arxius, carpetes, atributs i cerca avançada",
           "href": "./ut03/ut0304.md"
         },
         {
-          "label": "3.5 Sitios web: Registrando tu sitio web personal",
+          "label": "3.5 Pràctica: Instal·lació i desinstal·lació neta d'aplicacions",
           "href": "./ut03/ut0305.md"
-        },
-        {
-          "label": "3.6 Sitios web: Diseñando tu sitio web personal y sus páginas",
-          "href": "./ut03/ut0306.md"
-        },
-        {
-          "label": "3.7 Sitios web: WordPress Entrega 1 (Captura de curriculum)",
-          "href": "./ut03/ut0307.md"
-        },
-        {
-          "label": "3.8 Sitios web: Estableciendo la navegación y publicando",
-          "href": "./ut03/ut0308.md"
-        },
-        {
-          "label": "3.9 Sitios web:  Mi sitio web personal con WordPress",
-          "href": "./ut03/ut0309.md"
-        },
-        {
-          "label": "3.10 Sitios web: Rellena el cuestionario para que tu sitio web sea evaluable",
-          "href": "./ut03/ut0310.md"
-        },
-        {
-          "label": "3.11 Sitios web: Puntuación del sitio web WordPress",
-          "href": "./ut03/ut0311.md"
-        },
-        {
-          "label": "3.12 Presencia en la web con WordPress: Creación de cuenta",
-          "href": "./ut03/ut0312.md"
-        },
-        {
-          "label": "3.13 WordPress: Confirma tu cuenta",
-          "href": "./ut03/ut0313.md"
-        },
-        {
-          "label": "3.14 Curso online de WordPress",
-          "href": "./ut03/ut0314.md"
-        },
-        {
-          "label": "3.15 Guía para diseñar nuestro portfolio con WordPress",
-          "href": "./ut03/ut0315.md"
         }
       ]
     },
     {
-      "summary": "UD4 — Tema 5. Instalación de sistemas operativos",
+      "summary": "UD4 — Administració i Comandes Bàsiques en Linux (Ubuntu/LliureX)",
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
@@ -184,33 +104,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "4.1 Instalación de un sistema operativo: Ubuntu",
+          "label": "4.1 L'entorn gràfic en Linux (GNOME/MATE) i l'explorador Nautilus",
           "href": "./ut04/ut0401.md"
         },
         {
-          "label": "4.2 Instalación de un sistema operativo: Windows",
+          "label": "4.2 La consola de terminal: per què és tan potent?",
           "href": "./ut04/ut0402.md"
         },
         {
-          "label": "4.3 Tutorial Máquinas Virtuales (Entrega I)",
+          "label": "4.3 Comandes bàsiques de navegació i gestió de fitxers",
           "href": "./ut04/ut0403.md"
         },
         {
-          "label": "4.4 Tutorial Máquinas Virtuales (Entrega II)",
+          "label": "4.4 Usuaris, permisos (chmod/chown) i el comandament sudo",
           "href": "./ut04/ut0404.md"
         },
         {
-          "label": "4.5 Tutorial Máquinas Virtuales (Entrega III)",
+          "label": "4.5 Pràctica: Gestió de paquets i programari amb apt",
           "href": "./ut04/ut0405.md"
-        },
-        {
-          "label": "4.6 Tutorial Máquinas Virtuales (Entrega IV)",
-          "href": "./ut04/ut0406.md"
         }
       ]
     },
     {
-      "summary": "UD5 — Tema 6. El sistema operativo Windows",
+      "summary": "UD5 — Manteniment Preventiu, Rendiment i Actualitzacions",
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
@@ -218,17 +134,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "5.1 Tutorial de Windows 10 (Primera parte)",
+          "label": "5.1 Neteja i alliberament d'espai en disc",
           "href": "./ut05/ut0501.md"
         },
         {
-          "label": "5.2 Tutorial de Windows 10 (Segunda parte)",
+          "label": "5.2 Manteniment d'unitats SSD (TRIM) vs HDD (Desfragmentació)",
           "href": "./ut05/ut0502.md"
+        },
+        {
+          "label": "5.3 Monitorització de recursos: Administrador de tasques i htop",
+          "href": "./ut05/ut0503.md"
+        },
+        {
+          "label": "5.4 Gestió d'aplicacions d'inici i serveis del sistema",
+          "href": "./ut05/ut0504.md"
+        },
+        {
+          "label": "5.5 Gestió d'actualitzacions: Windows Update i pegats de seguretat",
+          "href": "./ut05/ut0505.md"
         }
       ]
     },
     {
-      "summary": "UD6 — Tema 7. El sistema operativo Linux",
+      "summary": "UD6 — Còpies de Seguretat, Imatges de Disc i Clonat",
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
@@ -236,17 +164,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "6.1 Explotación de distribuciones de Linux:  Ubuntu",
+          "label": "6.1 La importància del backup: la regla 3-2-1 de seguretat",
           "href": "./ut06/ut0601.md"
         },
         {
-          "label": "6.2 Examen MV y Ubuntu",
+          "label": "6.2 Tipus de còpies de seguretat: completa, incremental i diferencial",
           "href": "./ut06/ut0602.md"
+        },
+        {
+          "label": "6.3 Punts de restauració del sistema en Windows",
+          "href": "./ut06/ut0603.md"
+        },
+        {
+          "label": "6.4 Concepte de clonat de disc i imatges de sistema",
+          "href": "./ut06/ut0604.md"
+        },
+        {
+          "label": "6.5 Pràctica de taller: Creació i restauració d'imatge amb Clonezilla",
+          "href": "./ut06/ut0605.md"
         }
       ]
     },
     {
-      "summary": "UD7 — Tema 9. Seguridad informática",
+      "summary": "UD7 — Programari d'Utilitat, Eines de Suport i Assistència Remota",
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
@@ -254,41 +194,29 @@
           "class": "unit-full-link"
         },
         {
-          "label": "7.1 Protégete en la red: Interland",
+          "label": "7.1 Compressió i protecció de fitxers amb 7-Zip",
           "href": "./ut07/ut0701.md"
         },
         {
-          "label": "7.2 Interland: Reino 1 (Entrega I)",
+          "label": "7.2 Gestió de documents PDF: visors, lectors i impressió virtual",
           "href": "./ut07/ut0702.md"
         },
         {
-          "label": "7.3 Interland: Reino 2 y 3 (Entrega II)",
+          "label": "7.3 Eines d'inventari i informació de maquinari (CPU-Z, HWMonitor)",
           "href": "./ut07/ut0703.md"
         },
         {
-          "label": "7.4 Interland: Reino 4 (Entrega III)",
+          "label": "7.4 Eines d'assistència i control remot: RDP, AnyDesk i TeamViewer",
           "href": "./ut07/ut0704.md"
         },
         {
-          "label": "7.5 Protégete en la red: Space Shelter (Refugio en el espacio)",
+          "label": "7.5 Pràctica: Sessió de suport tècnic remot entre equips d'aula",
           "href": "./ut07/ut0705.md"
-        },
-        {
-          "label": "7.6 Entrega de Space Shelter",
-          "href": "./ut07/ut0706.md"
-        },
-        {
-          "label": "7.7 Protégete en la red: Cyberscouts",
-          "href": "./ut07/ut0707.md"
-        },
-        {
-          "label": "7.8 Cyberscouts (Entrega)",
-          "href": "./ut07/ut0708.md"
         }
       ]
     },
     {
-      "summary": "UD8 — Tema 10. Multimedia",
+      "summary": "UD8 — Tractament de Recursos Multimèdia (So, Imatge i Vídeo)",
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
@@ -296,60 +224,54 @@
           "class": "unit-full-link"
         },
         {
-          "label": "8.1 1. Recurso: Pista de video (entrevista)",
+          "label": "8.1 Formats d'àudio digital, taxa de mostreig i compressió",
           "href": "./ut08/ut0801.md"
         },
         {
-          "label": "8.2 2. Multimedia: Incorporar subtítulos a un vídeo",
+          "label": "8.2 Edició d'àudio amb Audacity: gravació i eliminació de soroll",
           "href": "./ut08/ut0802.md"
         },
         {
-          "label": "8.3 2. Multimedia: Incorporar subtítulos a un vídeo (Entrega)",
+          "label": "8.3 Imatge de mapa de bits vs vectorial: formats i resolució",
           "href": "./ut08/ut0803.md"
         },
         {
-          "label": "8.4 2. Multimedia: Puntuación del subtitulado",
+          "label": "8.4 Disseny gràfic bàsic i edició vectorial (Draw / Canva)",
           "href": "./ut08/ut0804.md"
         },
         {
-          "label": "8.5 3. Preparando nuestro estudio de grabación de audio",
+          "label": "8.5 Tractament de vídeo bàsic i subtitulat (.SRT)",
           "href": "./ut08/ut0805.md"
+        }
+      ]
+    },
+    {
+      "summary": "UD9 — Seguretat Informàtica, Protecció i Projecte d'Explotació",
+      "items": [
+        {
+          "label": "📘 UD9 Completa (1 pàgina)",
+          "href": "./ut09/index.md",
+          "class": "unit-full-link"
         },
         {
-          "label": "8.6 4.  Recurso: Pista de audio (entrevista)",
-          "href": "./ut08/ut0806.md"
+          "label": "9.1 Amenaces de seguretat: virus, ransomware i phishing",
+          "href": "./ut09/ut0901.md"
         },
         {
-          "label": "8.7 5. Multimedia: Edición de audio con Audacity",
-          "href": "./ut08/ut0807.md"
+          "label": "9.2 Protecció activa: l'antivirus Windows Defender",
+          "href": "./ut09/ut0902.md"
         },
         {
-          "label": "8.8 6. Multimedia: Edición de audio con Audacity (Entrega)",
-          "href": "./ut08/ut0808.md"
+          "label": "9.3 Gestió de contrasenyes robustes i autenticació 2FA",
+          "href": "./ut09/ut0903.md"
         },
         {
-          "label": "8.9 7. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 1 y 2)",
-          "href": "./ut08/ut0809.md"
+          "label": "9.4 Navegació segura, certificats web i descàrregues fiables",
+          "href": "./ut09/ut0904.md"
         },
         {
-          "label": "8.10 7. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 1 y 2) Entrega",
-          "href": "./ut08/ut0810.md"
-        },
-        {
-          "label": "8.11 8. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 3)",
-          "href": "./ut08/ut0811.md"
-        },
-        {
-          "label": "8.12 8. Multimedia: Edición de imagen vectorial con Draw Ejercicio 3 (Entrega)",
-          "href": "./ut08/ut0812.md"
-        },
-        {
-          "label": "8.13 9. Multimedia: Edición de imagen vectorial con Draw (Ejercicio 4)",
-          "href": "./ut08/ut0813.md"
-        },
-        {
-          "label": "8.14 9. Multimedia: Edición de imagen vectorial con Draw Ejercicio 4 (Entrega)",
-          "href": "./ut08/ut0814.md"
+          "label": "9.5 Projecte integrador d'explotació i posada a punt",
+          "href": "./ut09/ut0905.md"
         }
       ]
     }

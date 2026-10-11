@@ -7,24 +7,29 @@ badge: "2n FPB · Grau Bàsic"
 
 # 💻 Operacions Auxiliars de Configuració i Explotació
 
-Benvingut/da al curs complet de **Operacions Auxiliars de Configuració i Explotació** corresponent al cicle formatiu **2n FPB · Grau Bàsic**.
+Benvingut/da al curs complet de **Operacions Auxiliars de Configuració i Explotació (OACE)** corresponent al cicle formatiu **2n FPB · Grau Bàsic** (Informàtica d'Oficina / Informàtica i Comunicacions).
 
-Aquest temari didàctic està organitzat en unitats de treball (`UD`) estructurades de forma progressiva per facilitar l'aprenentatge autònom i les sessions de classe:
+Aquest temari didàctic està organitzat en unitats de treball (`UD`) estructurades de forma progressiva per aprendre a preparar, instal·lar, administrar i mantenir sistemes operatius i aplicacions d'explotació en equips informàtics:
 
 | Unitat Didàctica | Títol del Bloc Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **UD1** | Miscelanea | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
-| **UD2** | Tema 2. Aplicaciones ofimáticas | [**📘 Entrar a la Unitat →**](./ut02/index.md) |
-| **UD3** | Tema 4. Servicios avanzados de Internet | [**📘 Entrar a la Unitat →**](./ut03/index.md) |
-| **UD4** | Tema 5. Instalación de sistemas operativos | [**📘 Entrar a la Unitat →**](./ut04/index.md) |
-| **UD5** | Tema 6. El sistema operativo Windows | [**📘 Entrar a la Unitat →**](./ut05/index.md) |
-| **UD6** | Tema 7. El sistema operativo Linux | [**📘 Entrar a la Unitat →**](./ut06/index.md) |
-| **UD7** | Tema 9. Seguridad informática | [**📘 Entrar a la Unitat →**](./ut07/index.md) |
-| **UD8** | Tema 10. Multimedia | [**📘 Entrar a la Unitat →**](./ut08/index.md) |
+| **UD1** | **Introducció als Sistemes Operatius i la Virtualització** | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
+| **UD2** | **Instal·lació i Particionament de Sistemes Operatius** | [**📘 Entrar a la Unitat →**](./ut02/index.md) |
+| **UD3** | **Administració i Configuració del Sistema Operatiu Windows** | [**📘 Entrar a la Unitat →**](./ut03/index.md) |
+| **UD4** | **Administració i Comandes Bàsiques en Linux (Ubuntu/LliureX)** | [**📘 Entrar a la Unitat →**](./ut04/index.md) |
+| **UD5** | **Manteniment Preventiu, Rendiment i Actualitzacions** | [**📘 Entrar a la Unitat →**](./ut05/index.md) |
+| **UD6** | **Còpies de Seguretat, Imatges de Disc i Clonat** | [**📘 Entrar a la Unitat →**](./ut06/index.md) |
+| **UD7** | **Programari d'Utilitat, Eines de Suport i Assistència Remota** | [**📘 Entrar a la Unitat →**](./ut07/index.md) |
+| **UD8** | **Tractament de Recursos Multimèdia (So, Imatge i Vídeo)** | [**📘 Entrar a la Unitat →**](./ut08/index.md) |
+| **UD9** | **Seguretat Informàtica, Protecció i Projecte d'Explotació** | [**📘 Entrar a la Unitat →**](./ut09/index.md) |
 
 ---
 
-### 📌 Metodologia i Treball Pràctic
-- **Teoria i Fonaments:** Cada unitat conté explicacions conceptuals clares.
-- **Pràctiques guiades:** Procediments pas a pas i comandaments per a taller i laboratori.
-- **Navegació ràpida:** Utilitza la barra lateral esquerra per saltar directament a qualsevol apartat o consultar la unitat sencera en una sola pàgina.
+### 📌 Metodologia i Continguts Pràctics
+- **Sistemes Operatius i Virtualització:** Fonaments de sistemes Windows i Linux (Ubuntu/LliureX), arquitectures de maquinari i ús de màquines virtuals (VirtualBox).
+- **Instal·lació i Particionament:** Creació de memòries USB d'arrencada (Rufus/Ventoy), taules MBR/GPT, sistemes de fitxers (NTFS, ext4, FAT32) i procediment d'instal·lació pas a pas.
+- **Administració Pràctica:** Gestió de controladors de maquinari, comptes d'usuari locals, permisos de seguretat, comandes essencials de terminal en Linux i gestió de programari amb `apt`.
+- **Manteniment Preventiu i Diagnòstic:** Neteja de disc, monitorització de rendiment (Administrador de tasques, `htop`), gestió d'aplicacions d'inici i actualitzacions de seguretat.
+- **Còpies de Seguretat i Imatges de Disc:** Punts de restauració del sistema, regla 3-2-1 del backup i clonat professional d'equips amb **Clonezilla**.
+- **Utilitats i Multimèdia:** Eines de compressió (7-Zip), documents PDF, assistència remota (AnyDesk), àudio digital amb Audacity, edició d'imatge i subtítols.
+- **Ciberseguretat i Posada a Punt:** Bones pràctiques en Internet, defensa contra malware i projecte integrador final de posada a punt d'un ordinador de taller.
