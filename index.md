@@ -33,15 +33,15 @@ Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de l
 
 ---
 
-## 📚 Biblioteca General de Cicles, Mòduls i Assignatures (31 Cursos)
+## 📚 Biblioteca General de Cicles, Mòduls i Assignatures (+40 Cursos)
 
-Accés directe al repositori de temaris complets i apunts teòrics classificats per etapa educativa (sense duplicats, versió més actual de cada mòdul):
+Accés directe al repositori de temaris complets i apunts teòrics classificats per etapa educativa (sense duplicats, actualitzats a la versió 2025/2026):
 
 | Etapa / Cicle Formatiu | Mòduls i Assignatures Disponibles | Accés Directe |
 | :--- | :--- | :---: |
-| **1. FP Grau Bàsic (CFGB)** | *Ofimàtica i Arxiu de Documents (1r FPB)* i *Projecte Intermodular (2n FPB)* | [Ver Mòduls FPB →](./biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina) |
-| **2. FP Grau Mitjà (SMX)** | *Aplicacions Ofimàtiques (AOF), Muntatge (MME), Xarxes Locals (XAL), Serveis en Xarxa (SeX), Aplicacions Web (AWE) i Seguretat (SI)* | [Ver Mòduls SMX →](./biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes) |
-| **3. FP Grau Superior (DAW / DAM)** | *Programació Java (UD1-12), Entorns (ED), Sistemes Informàtics (SI), Marques (LMSGI), Servidor (DWES), Desplegament (DAW) i Disseny (DIW)* | [Ver Mòduls DAW/DAM →](./biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions) |
+| **1. FP Grau Bàsic (CFGB)** | *Ciències Aplicades I, Muntatge i Manteniment (MMSCI), Ofimàtica i Arxiu (OAD), Xarxes (IMX), Operacions Auxiliars (OACE) i Projecte Intermodular* | [Ver Mòduls FPB →](./biblioteca-cicles/#-fp-grau-bàsic-informàtica-doficina) |
+| **2. FP Grau Mitjà (SMX)** | *SOM, SOX, XAL, MME, AOF, SeX, AWE, Seguretat (SI) i Sostenibilitat LOMLOE* | [Ver Mòduls SMX →](./biblioteca-cicles/#-fp-grau-mitjà--smx-sistemes-microinformàtics-i-xarxes) |
+| **3. FP Grau Superior (DAW / DAM)** | *Programació Java, Bases de Dades (BBDD), DWEC (Client), DWES (Servidor), Entorns (ED), Sistemes (SI), Marques (LMSGI), Desplegament (DAW), Disseny (DIW), AWS Cloud i Digitalització LOMLOE* | [Ver Mòduls DAW/DAM →](./biblioteca-cicles/#-fp-grau-superior--daw-i-dam-desenvolupament-daplicacions) |
 | **4. FP Grau Superior (ASIX)** | *Planificació i Admin de Xarxes (PAX), Serveis de Xarxa i Internet (SXI), Admin d'SGBD (ASGBD) i Seguretat i Alta Disponibilitat (SAD)* | [Ver Mòduls ASIX →](./biblioteca-cicles/#-fp-grau-superior--asix-administració-de-sistemes-i-xarxes) |
 | **5. Especialització (IABD / CETI)** | *Programació d'IA amb Python (PIA), Sistemes d'Aprenentatge Automàtic (SAA) i Hacking Ètic (HE)* | [Ver Màsters FP →](./biblioteca-cicles/#-cursos-despecialització-ia--big-data--ciberseguretat) |
 | **6. ESO i Batxillerat** | *Digitalització 4t ESO, Linux, Disseny Web, Multimèdia, Ofimàtica, PIAR I i II (2n/3r ESO) i Programació i Xarxes I i II (1r/2n BAT)* | [Ver ESO i BAT →](./biblioteca-cicles/#-secundària-eso-i-batxillerat) |
