@@ -9,6 +9,9 @@ badge: "1r FPB · Grau Bàsic · UD3"
 
 Benvingut/da a la **Unitat Didàctica 3** de MMSCI. La placa base és la columna vertebral de qualsevol equip informàtic. En aquesta unitat coneixeràs els seus factors de forma físics, els tipus de sòcols de processador (LGA i PGA), el paper del chipset i les fases VRM, la disposició de ranures de memòria RAM i busos PCIe/M.2, i aprendràs a configurar i resoldre fallades amb la BIOS/UEFI i la memòria CMOS.
 
+![Estructura d'una placa base ATX](../img/placa_base_components.jpg)
+*Figura: Anatomia d'una placa base estàndard ATX amb la identificació dels seus 6 components fonamentals.*
+
 ---
 
 ## 📑 Apartats de la Unitat Didàctica
