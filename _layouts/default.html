@@ -10,8 +10,24 @@
   <!-- KaTeX per a fórmules matemàtiques clares i accessibles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="window.renderMathPortal && window.renderMathPortal()"></script>
   <script>
+    function renderMathPortal() {
+      if (window.renderMathInElement && document.body) {
+        window.renderMathInElement(document.body, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '\\[', right: '\\]', display: true },
+            { left: '$', right: '$', display: false },
+            { left: '\\(', right: '\\)', display: false }
+          ],
+          ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+          throwOnError: false
+        });
+      }
+    }
+    document.addEventListener('DOMContentLoaded', renderMathPortal);
+    window.addEventListener('load', renderMathPortal);
     (function() {
       const saved = localStorage.getItem('portal-theme');
       if (saved) document.documentElement.setAttribute('data-theme', saved);
@@ -357,6 +373,17 @@
       height: 1px;
       background: var(--border);
       margin: 2rem 0;
+    }
+
+    .katex-display {
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0.6rem 0;
+      margin: 1.2rem 0;
+    }
+
+    .katex {
+      font-size: 1.08em;
     }
 
     .up-badge {
@@ -891,6 +918,7 @@
             if (container) container.innerHTML = '';
           });
       }
+      if (window.renderMathPortal) window.renderMathPortal();
     });
   </script>
 </body>
