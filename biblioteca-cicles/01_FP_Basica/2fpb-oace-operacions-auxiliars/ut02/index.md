@@ -3,7 +3,7 @@ layout: default
 title: "UD2: Instal·lació i Particionament de Sistemes Operatius — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD2"
-next_url: "ut0201.md"
+next_url: "ut0201.html"
 next_label: "2.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Estructures de disc i taules de particions MBR vs GPT, sistemes de fitxers (NTFS
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **2.1** | **Estructures de disc i taules de particions: MBR vs GPT** | [**Llegir apartat →**](./ut0201.md) |
-| **2.2** | **Sistemes de fitxers més comuns: NTFS, ext4, FAT32 i exFAT** | [**Llegir apartat →**](./ut0202.md) |
-| **2.3** | **Preparació de memòries USB arrancables amb Rufus i Ventoy** | [**Llegir apartat →**](./ut0203.md) |
-| **2.4** | **Pràctica: Instal·lació pas a pas de Windows 10/11** | [**Llegir apartat →**](./ut0204.md) |
-| **2.5** | **Pràctica: Instal·lació d'Ubuntu Desktop / LliureX** | [**Llegir apartat →**](./ut0205.md) |
+| **2.1** | **Estructures de disc i taules de particions: MBR vs GPT** | [**Llegir apartat →**](./ut0201.html) |
+| **2.2** | **Sistemes de fitxers més comuns: NTFS, ext4, FAT32 i exFAT** | [**Llegir apartat →**](./ut0202.html) |
+| **2.3** | **Preparació de memòries USB arrancables amb Rufus i Ventoy** | [**Llegir apartat →**](./ut0203.html) |
+| **2.4** | **Pràctica: Instal·lació pas a pas de Windows 10/11** | [**Llegir apartat →**](./ut0204.html) |
+| **2.5** | **Pràctica: Instal·lació d'Ubuntu Desktop / LliureX** | [**Llegir apartat →**](./ut0205.html) |
 
 ---
 

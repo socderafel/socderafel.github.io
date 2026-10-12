@@ -716,12 +716,12 @@
       {% if page.prev_url or page.next_url %}
       <div class="page-nav-footer">
         {% if page.prev_url %}
-        <a class="page-nav-btn" href="{{ page.prev_url }}">{{ page.prev_label }}</a>
+        <a class="page-nav-btn" href="{{ page.prev_url | replace: '.md', '.html' }}">{{ page.prev_label }}</a>
         {% else %}
         <span></span>
         {% endif %}
         {% if page.next_url %}
-        <a class="page-nav-btn" href="{{ page.next_url }}">{{ page.next_label }}</a>
+        <a class="page-nav-btn" href="{{ page.next_url | replace: '.md', '.html' }}">{{ page.next_label }}</a>
         {% endif %}
       </div>
       {% endif %}
@@ -846,7 +846,8 @@
       if (sidebar) {
         const root = sidebar.getAttribute('data-course-root') || '.';
         const prefix = root === '.' ? './' : root + '/';
-        fetch(prefix + 'sidebar.json?v=3', { cache: 'no-store' })
+        const toHtmlHref = url => (!url ? '' : url.replace(/\.md(#|$)/, '.html$1'));
+        fetch(prefix + 'sidebar.json?v=4', { cache: 'no-store' })
           .then(r => r.json())
           .then(data => {
             const container = document.getElementById('sidebar-nav-content');
@@ -854,7 +855,7 @@
             const currentPath = window.location.pathname;
             let html = '';
             if (data.home) {
-              const homeHref = prefix + data.home.href;
+              const homeHref = toHtmlHref(prefix + data.home.href);
               const isHome = currentPath.endsWith('/') || (currentPath.endsWith('/index.html') && root === '.');
               html += '<ul><li><a href="' + homeHref + '"' + (isHome ? ' class="active"' : '') + '>' + data.home.label + '</a></li></ul>';
             }
@@ -862,8 +863,8 @@
               let unitActive = false;
               let itemsHtml = '';
               (unit.items || []).forEach(item => {
-                const itemHref = prefix + item.href;
-                const cleanHref = item.href.replace(/^\.\//, '');
+                const itemHref = toHtmlHref(prefix + item.href);
+                const cleanHref = toHtmlHref(item.href.replace(/^\.\//, ''));
                 const isItemActive = currentPath.endsWith('/' + cleanHref) ||
                   (cleanHref.endsWith('/index.html') && currentPath.endsWith('/' + cleanHref.replace(/index\.html$/, '')));
                 if (isItemActive) unitActive = true;
@@ -876,8 +877,9 @@
             if (data.footer && data.footer.length) {
               html += '<ul>';
               data.footer.forEach(f => {
-                const fHref = prefix + f.href;
-                const isFActive = currentPath.endsWith('/' + f.href);
+                const fHref = toHtmlHref(prefix + f.href);
+                const cleanFHref = toHtmlHref(f.href.replace(/^\.\//, ''));
+                const isFActive = currentPath.endsWith('/' + cleanFHref);
                 html += '<li><a href="' + fHref + '"' + (isFActive ? ' class="active"' : '') + '>' + f.label + '</a></li>';
               });
               html += '</ul>';

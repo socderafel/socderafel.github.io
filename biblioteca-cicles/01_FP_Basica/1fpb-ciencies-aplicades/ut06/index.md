@@ -3,9 +3,9 @@ layout: default
 title: "UD6: La Terra i l'Univers — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD6"
-prev_url: "../ut05/index.md"
+prev_url: "../ut05/index.html"
 prev_label: "⬅️ UD5 Les Fraccions"
-next_url: "../ut07/index.md"
+next_url: "../ut07/index.html"
 next_label: "UD7 El Planeta Terra ➡️"
 ---
 

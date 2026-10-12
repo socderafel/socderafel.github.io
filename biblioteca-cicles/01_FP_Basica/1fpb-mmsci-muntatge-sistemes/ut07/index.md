@@ -15,11 +15,11 @@ Benvingut/da a la **Unitat Didàctica 7** de MMSCI. En aquest bloc aprendràs a 
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **7.1** | Tipus de consumibles d'impressió: Tinta, tòner, tambors i paper | [**📘 Llegir Apartat 7.1 →**](./ut0701.md) |
-| **7.2** | Consumibles d'energia i suport: Piles, bateries i mitjans d'emmagatzematge | [**📘 Llegir Apartat 7.2 →**](./ut0702.md) |
-| **7.3** | Neteja i manteniment físic preventiu dels equips (IPA 99%, aire comprimit) | [**📘 Llegir Apartat 7.3 →**](./ut0703.md) |
-| **7.4** | Procediment operatiu de substitució segura de consumibles (Tòner, tinta, CR2032) | [**📘 Llegir Apartat 7.4 →**](./ut0704.md) |
-| **7.5** | Gestió ambiental i reciclatge de residus RAEE (Normativa i Ecoparcs) | [**📘 Llegir Apartat 7.5 →**](./ut0705.md) |
+| **7.1** | Tipus de consumibles d'impressió: Tinta, tòner, tambors i paper | [**📘 Llegir Apartat 7.1 →**](./ut0701.html) |
+| **7.2** | Consumibles d'energia i suport: Piles, bateries i mitjans d'emmagatzematge | [**📘 Llegir Apartat 7.2 →**](./ut0702.html) |
+| **7.3** | Neteja i manteniment físic preventiu dels equips (IPA 99%, aire comprimit) | [**📘 Llegir Apartat 7.3 →**](./ut0703.html) |
+| **7.4** | Procediment operatiu de substitució segura de consumibles (Tòner, tinta, CR2032) | [**📘 Llegir Apartat 7.4 →**](./ut0704.html) |
+| **7.5** | Gestió ambiental i reciclatge de residus RAEE (Normativa i Ecoparcs) | [**📘 Llegir Apartat 7.5 →**](./ut0705.html) |
 
 ---
 

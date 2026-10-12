@@ -3,9 +3,9 @@ layout: default
 title: "UD2: Nivells d'Organització de la Matèria i la Funció de Nutrició — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD2"
-prev_url: "../ut01/index.md"
+prev_url: "../ut01/index.html"
 prev_label: "⬅️ UD1 Els Nombres Naturals"
-next_url: "../ut03/index.md"
+next_url: "../ut03/index.html"
 next_label: "UD3 Els Nombres Enters ➡️"
 ---
 

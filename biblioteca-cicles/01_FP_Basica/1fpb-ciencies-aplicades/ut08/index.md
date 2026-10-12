@@ -3,9 +3,9 @@ layout: default
 title: "UD8: L'Atmosfera Terrestre — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD8"
-prev_url: "../ut07/index.md"
+prev_url: "../ut07/index.html"
 prev_label: "⬅️ UD7 El Planeta Terra"
-next_url: "../ut09/index.md"
+next_url: "../ut09/index.html"
 next_label: "UD9 La Hidrosfera Terrestre ➡️"
 ---
 

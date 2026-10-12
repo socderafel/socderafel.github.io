@@ -3,7 +3,7 @@ layout: default
 title: "UD4: Dispositius d'Interconnexió de Xarxa — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD4"
-next_url: "ut0401.md"
+next_url: "ut0401.html"
 next_label: "4.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Targetes de xarxa (NIC) i adreces físiques MAC, concentradors (Hub) vs commutad
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **4.1** | **Targetes de xarxa (NIC) i l'adreça física MAC** | [**Llegir apartat →**](./ut0401.md) |
-| **4.2** | **Concentradors (Hub) vs Commutadors (Switch) i la taula CAM** | [**Llegir apartat →**](./ut0402.md) |
-| **4.3** | **Encaminadors (Routers): interconnexió de xarxes** | [**Llegir apartat →**](./ut0403.md) |
-| **4.4** | **Dispositius auxiliars: repetidors, adaptadors PLC i PoE** | [**Llegir apartat →**](./ut0404.md) |
-| **4.5** | **Pràctica: Muntatge d'una xarxa commutada d'aula** | [**Llegir apartat →**](./ut0405.md) |
+| **4.1** | **Targetes de xarxa (NIC) i l'adreça física MAC** | [**Llegir apartat →**](./ut0401.html) |
+| **4.2** | **Concentradors (Hub) vs Commutadors (Switch) i la taula CAM** | [**Llegir apartat →**](./ut0402.html) |
+| **4.3** | **Encaminadors (Routers): interconnexió de xarxes** | [**Llegir apartat →**](./ut0403.html) |
+| **4.4** | **Dispositius auxiliars: repetidors, adaptadors PLC i PoE** | [**Llegir apartat →**](./ut0404.html) |
+| **4.5** | **Pràctica: Muntatge d'una xarxa commutada d'aula** | [**Llegir apartat →**](./ut0405.html) |
 
 ---
 

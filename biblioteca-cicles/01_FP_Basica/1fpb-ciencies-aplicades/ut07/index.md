@@ -3,9 +3,9 @@ layout: default
 title: "UD7: El Planeta Terra — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD7"
-prev_url: "../ut06/index.md"
+prev_url: "../ut06/index.html"
 prev_label: "⬅️ UD6 La Terra i l'Univers"
-next_url: "../ut08/index.md"
+next_url: "../ut08/index.html"
 next_label: "UD8 L'Atmosfera Terrestre ➡️"
 ---
 

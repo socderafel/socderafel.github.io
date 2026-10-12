@@ -17,11 +17,11 @@ Pots accedir directament a cada apartat o consultar el resum complet més avall:
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **1.1** | Fonaments d'electricitat, magnituds elèctriques i Llei d'Ohm | [**📘 Llegir Apartat 1.1 →**](./ut0101.md) |
-| **1.2** | Corrent continu (DC), corrent altern (AC) i components passius (Resistències, Codi de colors i SMD) | [**📘 Llegir Apartat 1.2 →**](./ut0102.md) |
-| **1.3** | Circuits en sèrie, paral·lel i mixtos: Càlculs i aplicació en informàtica | [**📘 Llegir Apartat 1.3 →**](./ut0103.md) |
-| **1.4** | L'aparell de mesura: El polímetre / multímetre digital (Mesura de tensions i continuïtat) | [**📘 Llegir Apartat 1.4 →**](./ut0104.md) |
-| **1.5** | Eines de taller de maquinari, protecció antiestàtica (ESD) i seguretat elèctrica | [**📘 Llegir Apartat 1.5 →**](./ut0105.md) |
+| **1.1** | Fonaments d'electricitat, magnituds elèctriques i Llei d'Ohm | [**📘 Llegir Apartat 1.1 →**](./ut0101.html) |
+| **1.2** | Corrent continu (DC), corrent altern (AC) i components passius (Resistències, Codi de colors i SMD) | [**📘 Llegir Apartat 1.2 →**](./ut0102.html) |
+| **1.3** | Circuits en sèrie, paral·lel i mixtos: Càlculs i aplicació en informàtica | [**📘 Llegir Apartat 1.3 →**](./ut0103.html) |
+| **1.4** | L'aparell de mesura: El polímetre / multímetre digital (Mesura de tensions i continuïtat) | [**📘 Llegir Apartat 1.4 →**](./ut0104.html) |
+| **1.5** | Eines de taller de maquinari, protecció antiestàtica (ESD) i seguretat elèctrica | [**📘 Llegir Apartat 1.5 →**](./ut0105.html) |
 
 ---
 

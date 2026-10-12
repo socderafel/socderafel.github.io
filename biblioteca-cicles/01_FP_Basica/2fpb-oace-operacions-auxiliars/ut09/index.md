@@ -3,7 +3,7 @@ layout: default
 title: "UD9: Seguretat Informàtica, Protecció i Projecte d'Explotació — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD9"
-next_url: "ut0901.md"
+next_url: "ut0901.html"
 next_label: "9.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Principals amenaces de seguretat (virus, ransomware, phishing), protecció antiv
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **9.1** | **Amenaces de seguretat: virus, ransomware i phishing** | [**Llegir apartat →**](./ut0901.md) |
-| **9.2** | **Protecció activa: l'antivirus Windows Defender** | [**Llegir apartat →**](./ut0902.md) |
-| **9.3** | **Gestió de contrasenyes robustes i autenticació 2FA** | [**Llegir apartat →**](./ut0903.md) |
-| **9.4** | **Navegació segura, certificats web i descàrregues fiables** | [**Llegir apartat →**](./ut0904.md) |
-| **9.5** | **Projecte integrador d'explotació i posada a punt** | [**Llegir apartat →**](./ut0905.md) |
+| **9.1** | **Amenaces de seguretat: virus, ransomware i phishing** | [**Llegir apartat →**](./ut0901.html) |
+| **9.2** | **Protecció activa: l'antivirus Windows Defender** | [**Llegir apartat →**](./ut0902.html) |
+| **9.3** | **Gestió de contrasenyes robustes i autenticació 2FA** | [**Llegir apartat →**](./ut0903.html) |
+| **9.4** | **Navegació segura, certificats web i descàrregues fiables** | [**Llegir apartat →**](./ut0904.html) |
+| **9.5** | **Projecte integrador d'explotació i posada a punt** | [**Llegir apartat →**](./ut0905.html) |
 
 ---
 

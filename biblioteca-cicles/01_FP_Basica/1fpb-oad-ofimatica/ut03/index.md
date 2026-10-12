@@ -15,11 +15,11 @@ Aquesta unitat aborda el funcionament dels fulls de càlcul: cel·les, files, co
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **3.1** | Estructura d'un full de càlcul: Cel·les, files, columnes i formats de dades | [**📘 Llegir Apartat 3.1 →**](./ut0301.md) |
-| **3.2** | Fórmules aritmètiques i referències de cel·la | [**📘 Llegir Apartat 3.2 →**](./ut0302.md) |
-| **3.3** | Funcions estadístiques i matemàtiques: SUMA, MITJANA, MAX, MIN i CONTAR | [**📘 Llegir Apartat 3.3 →**](./ut0303.md) |
-| **3.4** | La funció condicional SI (IF) i formats condicionals | [**📘 Llegir Apartat 3.4 →**](./ut0304.md) |
-| **3.5** | Creació i interpretació de gràfics en fulls de càlcul | [**📘 Llegir Apartat 3.5 →**](./ut0305.md) |
+| **3.1** | Estructura d'un full de càlcul: Cel·les, files, columnes i formats de dades | [**📘 Llegir Apartat 3.1 →**](./ut0301.html) |
+| **3.2** | Fórmules aritmètiques i referències de cel·la | [**📘 Llegir Apartat 3.2 →**](./ut0302.html) |
+| **3.3** | Funcions estadístiques i matemàtiques: SUMA, MITJANA, MAX, MIN i CONTAR | [**📘 Llegir Apartat 3.3 →**](./ut0303.html) |
+| **3.4** | La funció condicional SI (IF) i formats condicionals | [**📘 Llegir Apartat 3.4 →**](./ut0304.html) |
+| **3.5** | Creació i interpretació de gràfics en fulls de càlcul | [**📘 Llegir Apartat 3.5 →**](./ut0305.html) |
 
 ---
 

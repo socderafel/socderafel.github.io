@@ -3,7 +3,7 @@ layout: default
 title: "UD3: Administració i Configuració del Sistema Operatiu Windows — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD3"
-next_url: "ut0301.md"
+next_url: "ut0301.html"
 next_label: "3.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ L'entorn gràfic de Windows, gestió de controladors de dispositius (*device dri
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **3.1** | **L'entorn gràfic de Windows: Escriptori, barra de tasques i configuració** | [**Llegir apartat →**](./ut0301.md) |
-| **3.2** | **Controladors de dispositius (*Drivers*) i Administrador de dispositius** | [**Llegir apartat →**](./ut0302.md) |
-| **3.3** | **Gestió de comptes d'usuari locals i control UAC** | [**Llegir apartat →**](./ut0303.md) |
-| **3.4** | **Gestió d'arxius, carpetes, atributs i cerca avançada** | [**Llegir apartat →**](./ut0304.md) |
-| **3.5** | **Pràctica: Instal·lació i desinstal·lació neta d'aplicacions** | [**Llegir apartat →**](./ut0305.md) |
+| **3.1** | **L'entorn gràfic de Windows: Escriptori, barra de tasques i configuració** | [**Llegir apartat →**](./ut0301.html) |
+| **3.2** | **Controladors de dispositius (*Drivers*) i Administrador de dispositius** | [**Llegir apartat →**](./ut0302.html) |
+| **3.3** | **Gestió de comptes d'usuari locals i control UAC** | [**Llegir apartat →**](./ut0303.html) |
+| **3.4** | **Gestió d'arxius, carpetes, atributs i cerca avançada** | [**Llegir apartat →**](./ut0304.html) |
+| **3.5** | **Pràctica: Instal·lació i desinstal·lació neta d'aplicacions** | [**Llegir apartat →**](./ut0305.html) |
 
 ---
 

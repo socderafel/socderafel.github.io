@@ -13,15 +13,15 @@ Aquest temari didàctic està organitzat en **9 Unitats Didàctiques** que combi
 
 | Unitat Didàctica | Bloc Temàtic | Continguts Destacats | Accés Directe |
 | :---: | :--- | :--- | :---: |
-| **UD1** | **Elements Elèctrics i Electrònics Bàsics i Seguretat al Taller** | Llei d'Ohm, corrent continu/altern, codi de colors de resistències, mesura amb polímetre i protecció ESD. | [**📘 Entrar a la UD1 →**](./ut01/index.md) |
-| **UD2** | **Unitats Funcionals de l'Ordinador** | Model de Von Neumann, CPU (UC i ALU), jerarquia de memòries (cau L1/L2/L3, RAM/ROM) i busos del sistema. | [**📘 Entrar a la UD2 →**](./ut02/index.md) |
-| **UD3** | **La Placa Base de l'Ordinador** | Factors de forma (ATX, Micro-ATX, Mini-ITX), sòcols de CPU (LGA/PGA), chipset PCH, ranures PCIe i BIOS/UEFI. | [**📘 Entrar a la UD3 →**](./ut03/index.md) |
-| **UD4** | **Components Interns de l'Ordinador** | Xassís i ventilació, font ATX (80 PLUS), processadors, pasta tèrmica, memòria RAM Dual-Channel i discs SSD NVMe. | [**📘 Entrar a la UD4 →**](./ut04/index.md) |
-| **UD5** | **Connectors i Cablejat** | Alimentació ATX/EPS/PCIe, cables SATA, connexió del panell frontal (Power, LEDs), ports USB-C i vídeo HDMI/DisplayPort. | [**📘 Entrar a la UD5 →**](./ut05/index.md) |
-| **UD6** | **Perifèrics de l'Ordinador** | Teclats de membrana/mecànics, ratolins òptics, monitors IPS/VA, impressores d'injecció/làser i gestió de drivers. | [**📘 Entrar a la UD6 →**](./ut06/index.md) |
-| **UD7** | **Consumibles Informàtics, Neteja i Residus RAEE** | Tòner, tinta CMYK, pila CR2032, neteja amb alcohol isopropílic i aire comprimit, i reciclatge mediambiental. | [**📘 Entrar a la UD7 →**](./ut07/index.md) |
-| **UD8** | **Gestió Logística, Inventari i Embalatge** | Etiquetatge (codis de barres, QR, RFID), lectors, bosses antiestàtiques de blindatge ESD, recepció i transport d'equips. | [**📘 Entrar a la UD8 →**](./ut08/index.md) |
-| **UD9** | **Banc de Proves Pràctiques i Avaluació Global de Taller** | Banc complet de proves d'avaluació de taller per a la convocatòria ordinària i extraordinària (RA1 al RA6). | [**📘 Entrar a la UD9 →**](./ut09/index.md) |
+| **UD1** | **Elements Elèctrics i Electrònics Bàsics i Seguretat al Taller** | Llei d'Ohm, corrent continu/altern, codi de colors de resistències, mesura amb polímetre i protecció ESD. | [**📘 Entrar a la UD1 →**](./ut01/index.html) |
+| **UD2** | **Unitats Funcionals de l'Ordinador** | Model de Von Neumann, CPU (UC i ALU), jerarquia de memòries (cau L1/L2/L3, RAM/ROM) i busos del sistema. | [**📘 Entrar a la UD2 →**](./ut02/index.html) |
+| **UD3** | **La Placa Base de l'Ordinador** | Factors de forma (ATX, Micro-ATX, Mini-ITX), sòcols de CPU (LGA/PGA), chipset PCH, ranures PCIe i BIOS/UEFI. | [**📘 Entrar a la UD3 →**](./ut03/index.html) |
+| **UD4** | **Components Interns de l'Ordinador** | Xassís i ventilació, font ATX (80 PLUS), processadors, pasta tèrmica, memòria RAM Dual-Channel i discs SSD NVMe. | [**📘 Entrar a la UD4 →**](./ut04/index.html) |
+| **UD5** | **Connectors i Cablejat** | Alimentació ATX/EPS/PCIe, cables SATA, connexió del panell frontal (Power, LEDs), ports USB-C i vídeo HDMI/DisplayPort. | [**📘 Entrar a la UD5 →**](./ut05/index.html) |
+| **UD6** | **Perifèrics de l'Ordinador** | Teclats de membrana/mecànics, ratolins òptics, monitors IPS/VA, impressores d'injecció/làser i gestió de drivers. | [**📘 Entrar a la UD6 →**](./ut06/index.html) |
+| **UD7** | **Consumibles Informàtics, Neteja i Residus RAEE** | Tòner, tinta CMYK, pila CR2032, neteja amb alcohol isopropílic i aire comprimit, i reciclatge mediambiental. | [**📘 Entrar a la UD7 →**](./ut07/index.html) |
+| **UD8** | **Gestió Logística, Inventari i Embalatge** | Etiquetatge (codis de barres, QR, RFID), lectors, bosses antiestàtiques de blindatge ESD, recepció i transport d'equips. | [**📘 Entrar a la UD8 →**](./ut08/index.html) |
+| **UD9** | **Banc de Proves Pràctiques i Avaluació Global de Taller** | Banc complet de proves d'avaluació de taller per a la convocatòria ordinària i extraordinària (RA1 al RA6). | [**📘 Entrar a la UD9 →**](./ut09/index.html) |
 
 ---
 

@@ -15,11 +15,11 @@ Benvingut/da a la **Unitat Didàctica 6** de MMSCI. Els perifèrics són la fine
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **6.1** | Concepte, arquitectura i classificació de perifèrics | [**📘 Llegir Apartat 6.1 →**](./ut0601.md) |
-| **6.2** | Perifèrics d'entrada: Teclat, ratolí, escàner i càmera web | [**📘 Llegir Apartat 6.2 →**](./ut0602.md) |
-| **6.3** | Perifèrics d'eixida: Monitors i pantalles (Panells IPS, VA, TN) | [**📘 Llegir Apartat 6.3 →**](./ut0603.md) |
-| **6.4** | Perifèrics d'eixida: Impressores i equips multifunció (Injecció vs Làser) | [**📘 Llegir Apartat 6.4 →**](./ut0604.md) |
-| **6.5** | Instal·lació física, connexió i gestió de controladors (*Drivers*) | [**📘 Llegir Apartat 6.5 →**](./ut0605.md) |
+| **6.1** | Concepte, arquitectura i classificació de perifèrics | [**📘 Llegir Apartat 6.1 →**](./ut0601.html) |
+| **6.2** | Perifèrics d'entrada: Teclat, ratolí, escàner i càmera web | [**📘 Llegir Apartat 6.2 →**](./ut0602.html) |
+| **6.3** | Perifèrics d'eixida: Monitors i pantalles (Panells IPS, VA, TN) | [**📘 Llegir Apartat 6.3 →**](./ut0603.html) |
+| **6.4** | Perifèrics d'eixida: Impressores i equips multifunció (Injecció vs Làser) | [**📘 Llegir Apartat 6.4 →**](./ut0604.html) |
+| **6.5** | Instal·lació física, connexió i gestió de controladors (*Drivers*) | [**📘 Llegir Apartat 6.5 →**](./ut0605.html) |
 
 ---
 

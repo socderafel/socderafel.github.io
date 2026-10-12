@@ -15,11 +15,11 @@ Aquesta unitat tracta els dispositius digitals (ordinadors, mòbils, tauletes), 
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **7.1** | Tipus de dispositius digitals i els seus sistemes operatius | [**📘 Llegir Apartat 7.1 →**](./ut0701.md) |
-| **7.2** | Sistemes d'emmagatzematge al núvol: Google Drive i OneDrive | [**📘 Llegir Apartat 7.2 →**](./ut0702.md) |
-| **7.3** | Compartició de fitxers i gestió de permisos | [**📘 Llegir Apartat 7.3 →**](./ut0703.md) |
-| **7.4** | Treball col·laboratiu en temps real sobre documents | [**📘 Llegir Apartat 7.4 →**](./ut0704.md) |
-| **7.5** | Sincronització de dispositius mòbils amb l'ordinador | [**📘 Llegir Apartat 7.5 →**](./ut0705.md) |
+| **7.1** | Tipus de dispositius digitals i els seus sistemes operatius | [**📘 Llegir Apartat 7.1 →**](./ut0701.html) |
+| **7.2** | Sistemes d'emmagatzematge al núvol: Google Drive i OneDrive | [**📘 Llegir Apartat 7.2 →**](./ut0702.html) |
+| **7.3** | Compartició de fitxers i gestió de permisos | [**📘 Llegir Apartat 7.3 →**](./ut0703.html) |
+| **7.4** | Treball col·laboratiu en temps real sobre documents | [**📘 Llegir Apartat 7.4 →**](./ut0704.html) |
+| **7.5** | Sincronització de dispositius mòbils amb l'ordinador | [**📘 Llegir Apartat 7.5 →**](./ut0705.html) |
 
 ---
 

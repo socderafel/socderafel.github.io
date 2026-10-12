@@ -3,9 +3,9 @@ layout: default
 title: "UD3: Els Nombres Enters — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD3"
-prev_url: "../ut02/index.md"
+prev_url: "../ut02/index.html"
 prev_label: "⬅️ UD2 Matèria i Nutrició"
-next_url: "../ut04/index.md"
+next_url: "../ut04/index.html"
 next_label: "UD4 Divisibilitat, MCM i MCD ➡️"
 ---
 

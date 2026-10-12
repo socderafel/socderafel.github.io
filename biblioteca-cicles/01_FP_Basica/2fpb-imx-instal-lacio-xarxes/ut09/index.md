@@ -3,7 +3,7 @@ layout: default
 title: "UD9: Projecte Integrador: Muntatge d'una Xarxa per a Petita Oficina — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD9"
-next_url: "ut0901.md"
+next_url: "ut0901.html"
 next_label: "9.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Projecte complet de final de mòdul: anàlisi de necessitats i plànol d'ubicaci
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **9.1** | **Anàlisi de requisits i plànol de distribució** | [**Llegir apartat →**](./ut0901.md) |
-| **9.2** | **Pressupost i llista de materials** | [**Llegir apartat →**](./ut0902.md) |
-| **9.3** | **Desplegament del cablejat físic i canalitzacions** | [**Llegir apartat →**](./ut0903.md) |
-| **9.4** | **Connexió al rack, switch i configuració de xarxa** | [**Llegir apartat →**](./ut0904.md) |
-| **9.5** | **Verificació, proves de rendiment i memòria final** | [**Llegir apartat →**](./ut0905.md) |
+| **9.1** | **Anàlisi de requisits i plànol de distribució** | [**Llegir apartat →**](./ut0901.html) |
+| **9.2** | **Pressupost i llista de materials** | [**Llegir apartat →**](./ut0902.html) |
+| **9.3** | **Desplegament del cablejat físic i canalitzacions** | [**Llegir apartat →**](./ut0903.html) |
+| **9.4** | **Connexió al rack, switch i configuració de xarxa** | [**Llegir apartat →**](./ut0904.html) |
+| **9.5** | **Verificació, proves de rendiment i memòria final** | [**Llegir apartat →**](./ut0905.html) |
 
 ---
 

@@ -15,11 +15,11 @@ Benvingut/da a la **Unitat Didàctica 3** de MMSCI. La placa base és la columna
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **3.1** | Funció, estructura i factors de forma (ATX, Micro-ATX, Mini-ITX) | [**📘 Llegir Apartat 3.1 →**](./ut0301.md) |
-| **3.2** | El sòcol del microprocessador (Sockets LGA, PGA i BGA) i compatibilitat | [**📘 Llegir Apartat 3.2 →**](./ut0302.md) |
-| **3.3** | El chipset i controladors integrats (PCH i fases d'alimentació VRM) | [**📘 Llegir Apartat 3.3 →**](./ut0303.md) |
-| **3.4** | Zòcols de memòria RAM (DIMM) i ranures d'expansió (PCIe x16, x1 i M.2) | [**📘 Llegir Apartat 3.4 →**](./ut0304.md) |
-| **3.5** | El firmware del sistema: BIOS, UEFI, memòria CMOS i la pila CR2032 | [**📘 Llegir Apartat 3.5 →**](./ut0305.md) |
+| **3.1** | Funció, estructura i factors de forma (ATX, Micro-ATX, Mini-ITX) | [**📘 Llegir Apartat 3.1 →**](./ut0301.html) |
+| **3.2** | El sòcol del microprocessador (Sockets LGA, PGA i BGA) i compatibilitat | [**📘 Llegir Apartat 3.2 →**](./ut0302.html) |
+| **3.3** | El chipset i controladors integrats (PCH i fases d'alimentació VRM) | [**📘 Llegir Apartat 3.3 →**](./ut0303.html) |
+| **3.4** | Zòcols de memòria RAM (DIMM) i ranures d'expansió (PCIe x16, x1 i M.2) | [**📘 Llegir Apartat 3.4 →**](./ut0304.html) |
+| **3.5** | El firmware del sistema: BIOS, UEFI, memòria CMOS i la pila CR2032 | [**📘 Llegir Apartat 3.5 →**](./ut0305.html) |
 
 ---
 

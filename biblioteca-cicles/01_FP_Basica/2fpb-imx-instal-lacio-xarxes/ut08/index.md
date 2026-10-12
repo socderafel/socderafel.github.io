@@ -3,7 +3,7 @@ layout: default
 title: "UD8: Manteniment, Diagnòstic i Seguretat en Xarxa — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD8"
-next_url: "ut0801.md"
+next_url: "ut0801.html"
 next_label: "8.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Avaries físiques i lògiques, metodologia sistemàtica de resolució per capes,
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **8.1** | **Tipus d'avaries en xarxa: fallades físiques vs lògiques** | [**Llegir apartat →**](./ut0801.md) |
-| **8.2** | **Metodologia de resolució d'avaries pas a pas (de baix a dalt)** | [**Llegir apartat →**](./ut0802.md) |
-| **8.3** | **Seguretat bàsica perimetral: el tallafocs (Firewall)** | [**Llegir apartat →**](./ut0803.md) |
-| **8.4** | **Manteniment preventiu: neteja, etiquetatge i còpies de suport** | [**Llegir apartat →**](./ut0804.md) |
-| **8.5** | **Pràctica: Resolució de supòsits d'incidències en xarxa** | [**Llegir apartat →**](./ut0805.md) |
+| **8.1** | **Tipus d'avaries en xarxa: fallades físiques vs lògiques** | [**Llegir apartat →**](./ut0801.html) |
+| **8.2** | **Metodologia de resolució d'avaries pas a pas (de baix a dalt)** | [**Llegir apartat →**](./ut0802.html) |
+| **8.3** | **Seguretat bàsica perimetral: el tallafocs (Firewall)** | [**Llegir apartat →**](./ut0803.html) |
+| **8.4** | **Manteniment preventiu: neteja, etiquetatge i còpies de suport** | [**Llegir apartat →**](./ut0804.html) |
+| **8.5** | **Pràctica: Resolució de supòsits d'incidències en xarxa** | [**Llegir apartat →**](./ut0805.html) |
 
 ---
 

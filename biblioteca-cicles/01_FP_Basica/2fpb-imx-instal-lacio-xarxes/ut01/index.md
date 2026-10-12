@@ -3,7 +3,7 @@ layout: default
 title: "UD1: Fonaments de les Xarxes de Dades i Comunicació — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD1"
-next_url: "ut0101.md"
+next_url: "ut0101.html"
 next_label: "1.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Concepte de xarxa informàtica, classificació segons l'abast geogràfic, topolo
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **1.1** | **Què és una xarxa informàtica i classificació segons l'abast** | [**Llegir apartat →**](./ut0101.md) |
-| **1.2** | **Topologies físiques i lògiques de xarxa** | [**Llegir apartat →**](./ut0102.md) |
-| **1.3** | **Arquitectura en capes: models OSI i TCP/IP** | [**Llegir apartat →**](./ut0103.md) |
-| **1.4** | **Normes i estàndards de comunicació (IEEE 802.3 i 802.11)** | [**Llegir apartat →**](./ut0104.md) |
-| **1.5** | **Pràctica de laboratori: Identificació i esquema d'una xarxa local** | [**Llegir apartat →**](./ut0105.md) |
+| **1.1** | **Què és una xarxa informàtica i classificació segons l'abast** | [**Llegir apartat →**](./ut0101.html) |
+| **1.2** | **Topologies físiques i lògiques de xarxa** | [**Llegir apartat →**](./ut0102.html) |
+| **1.3** | **Arquitectura en capes: models OSI i TCP/IP** | [**Llegir apartat →**](./ut0103.html) |
+| **1.4** | **Normes i estàndards de comunicació (IEEE 802.3 i 802.11)** | [**Llegir apartat →**](./ut0104.html) |
+| **1.5** | **Pràctica de laboratori: Identificació i esquema d'una xarxa local** | [**Llegir apartat →**](./ut0105.html) |
 
 ---
 

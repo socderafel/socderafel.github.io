@@ -15,11 +15,11 @@ Benvingut/da a la **Unitat Didàctica 5** de MMSCI. En aquest mòdul aprendràs 
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **5.1** | Principis de connexió: Pins, contactes, connectors mascle/femella i adaptadors | [**📘 Llegir Apartat 5.1 →**](./ut0501.md) |
-| **5.2** | Connectors d'alimentació interns de la font ATX (ATX 24p, EPS, PCIe, SATA, Molex) | [**📘 Llegir Apartat 5.2 →**](./ut0502.md) |
-| **5.3** | Connectors de dades interns (SATA) i cablejat del panell frontal (Power SW, Reset, LEDs) | [**📘 Llegir Apartat 5.3 →**](./ut0504.md) |
-| **5.4** | Connectors i ports de comunicació externs (USB Tipus A/C, RJ-45) | [**📘 Llegir Apartat 5.4 →**](./ut0504.md) |
-| **5.5** | Connectors multimèdia de vídeo i àudio (HDMI, DisplayPort, VGA i Jacks 3,5 mm) | [**📘 Llegir Apartat 5.5 →**](./ut0505.md) |
+| **5.1** | Principis de connexió: Pins, contactes, connectors mascle/femella i adaptadors | [**📘 Llegir Apartat 5.1 →**](./ut0501.html) |
+| **5.2** | Connectors d'alimentació interns de la font ATX (ATX 24p, EPS, PCIe, SATA, Molex) | [**📘 Llegir Apartat 5.2 →**](./ut0502.html) |
+| **5.3** | Connectors de dades interns (SATA) i cablejat del panell frontal (Power SW, Reset, LEDs) | [**📘 Llegir Apartat 5.3 →**](./ut0504.html) |
+| **5.4** | Connectors i ports de comunicació externs (USB Tipus A/C, RJ-45) | [**📘 Llegir Apartat 5.4 →**](./ut0504.html) |
+| **5.5** | Connectors multimèdia de vídeo i àudio (HDMI, DisplayPort, VGA i Jacks 3,5 mm) | [**📘 Llegir Apartat 5.5 →**](./ut0505.html) |
 
 ---
 

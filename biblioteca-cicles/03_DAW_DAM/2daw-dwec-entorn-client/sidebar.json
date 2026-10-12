@@ -2,7 +2,7 @@
   "title": "⚡ Desenvolupament Web en Entorn Client — 2n DAW · Grau Superior",
   "home": {
     "label": "🏠 Inici Desenvolupament Web en Entorn Client",
-    "href": "index.md"
+    "href": "index.html"
   },
   "units": [
     {
@@ -10,48 +10,48 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.md",
+          "href": "./ut01/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "1.1 UP 01 – Fundamentos Del Desarrollo Web en el Cliente",
-          "href": "./ut01/ut0101.md"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Píldora Teórica UP 01",
-          "href": "./ut01/ut0102.md"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 UP 01 –  Fundamentos Del Desarrollo Web en el Cliente",
-          "href": "./ut01/ut0103.md"
+          "href": "./ut01/ut0103.html"
         },
         {
           "label": "1.4 <hr style=\"width:40%;border:0.75px solid;\" />",
-          "href": "./ut01/ut0104.md"
+          "href": "./ut01/ut0104.html"
         },
         {
           "label": "1.5 Evaluación RA1.a",
-          "href": "./ut01/ut0105.md"
+          "href": "./ut01/ut0105.html"
         },
         {
           "label": "1.6 Evaluación RA1.b",
-          "href": "./ut01/ut0106.md"
+          "href": "./ut01/ut0106.html"
         },
         {
           "label": "1.7 Evaluación RA1.c",
-          "href": "./ut01/ut0107.md"
+          "href": "./ut01/ut0107.html"
         },
         {
           "label": "1.8 Evaluación RA1.d",
-          "href": "./ut01/ut0108.md"
+          "href": "./ut01/ut0108.html"
         },
         {
           "label": "1.9 Evaluación RA1.e",
-          "href": "./ut01/ut0109.md"
+          "href": "./ut01/ut0109.html"
         },
         {
           "label": "1.10 Evaluación RA1.f",
-          "href": "./ut01/ut0110.md"
+          "href": "./ut01/ut0110.html"
         }
       ]
     },
@@ -60,64 +60,64 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.md",
+          "href": "./ut02/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "2.1 UT02 - Contenidos y RA-CA",
-          "href": "./ut02/ut0201.md"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 UP 02 - Sintaxis y estructuras básicas en JS",
-          "href": "./ut02/ut0202.md"
+          "href": "./ut02/ut0202.html"
         },
         {
           "label": "2.3 Píldora Teórica UP 02",
-          "href": "./ut02/ut0203.md"
+          "href": "./ut02/ut0203.html"
         },
         {
           "label": "2.4 Actividades repaso:",
-          "href": "./ut02/ut0204.md"
+          "href": "./ut02/ut0204.html"
         },
         {
           "label": "2.5 Ejercicios de Repaso básico JS",
-          "href": "./ut02/ut0205.md"
+          "href": "./ut02/ut0205.html"
         },
         {
           "label": "2.6 Evaluación:",
-          "href": "./ut02/ut0206.md"
+          "href": "./ut02/ut0206.html"
         },
         {
           "label": "2.7 Evaluación RA2.a",
-          "href": "./ut02/ut0207.md"
+          "href": "./ut02/ut0207.html"
         },
         {
           "label": "2.8 Evaluación RA2.b",
-          "href": "./ut02/ut0208.md"
+          "href": "./ut02/ut0208.html"
         },
         {
           "label": "2.9 Evaluación RA2.c",
-          "href": "./ut02/ut0209.md"
+          "href": "./ut02/ut0209.html"
         },
         {
           "label": "2.10 Evaluación RA2.d",
-          "href": "./ut02/ut0210.md"
+          "href": "./ut02/ut0210.html"
         },
         {
           "label": "2.11 Evaluación RA2.e",
-          "href": "./ut02/ut0211.md"
+          "href": "./ut02/ut0211.html"
         },
         {
           "label": "2.12 Evaluación RA2.f",
-          "href": "./ut02/ut0212.md"
+          "href": "./ut02/ut0212.html"
         },
         {
           "label": "2.13 Evaluación RA2.g",
-          "href": "./ut02/ut0213.md"
+          "href": "./ut02/ut0213.html"
         },
         {
           "label": "2.14 Evaluación RA2.h",
-          "href": "./ut02/ut0214.md"
+          "href": "./ut02/ut0214.html"
         }
       ]
     },
@@ -126,52 +126,52 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.md",
+          "href": "./ut03/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "3.1 UP03 - Contenidos y RA-CA",
-          "href": "./ut03/ut0301.md"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 UP 03 - Objetos nativos, DOM básico e introducción a Vue.JS",
-          "href": "./ut03/ut0302.md"
+          "href": "./ut03/ut0302.html"
         },
         {
           "label": "3.3 Píldora Teórica UP 03",
-          "href": "./ut03/ut0303.md"
+          "href": "./ut03/ut0303.html"
         },
         {
           "label": "3.4 Actividades repaso:",
-          "href": "./ut03/ut0304.md"
+          "href": "./ut03/ut0304.html"
         },
         {
           "label": "3.5 Ejercicio básico VUE.Js",
-          "href": "./ut03/ut0305.md"
+          "href": "./ut03/ut0305.html"
         },
         {
           "label": "3.6 Actividades repaso DOM básico",
-          "href": "./ut03/ut0306.md"
+          "href": "./ut03/ut0306.html"
         },
         {
           "label": "3.7 Evaluación:",
-          "href": "./ut03/ut0307.md"
+          "href": "./ut03/ut0307.html"
         },
         {
           "label": "3.8 Prueba de Aula - RA3.a - RA3.b",
-          "href": "./ut03/ut0308.md"
+          "href": "./ut03/ut0308.html"
         },
         {
           "label": "3.9 Evaluación Examen RA3.cde",
-          "href": "./ut03/ut0309.md"
+          "href": "./ut03/ut0309.html"
         },
         {
           "label": "3.10 Evaluación Examen RA3.f",
-          "href": "./ut03/ut0310.md"
+          "href": "./ut03/ut0310.html"
         },
         {
           "label": "3.11 Evaluación Examen RA3.gh",
-          "href": "./ut03/ut0311.md"
+          "href": "./ut03/ut0311.html"
         }
       ]
     },
@@ -180,32 +180,32 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.md",
+          "href": "./ut04/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "4.1 UP04 - Contenidos y RA-CE",
-          "href": "./ut04/ut0401.md"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 UP 04 - Funciones, arrays, POO y componentes",
-          "href": "./ut04/ut0402.md"
+          "href": "./ut04/ut0402.html"
         },
         {
           "label": "4.3 Píldora Teórica UP 04",
-          "href": "./ut04/ut0403.md"
+          "href": "./ut04/ut0403.html"
         },
         {
           "label": "4.4 Actividades repaso:",
-          "href": "./ut04/ut0404.md"
+          "href": "./ut04/ut0404.html"
         },
         {
           "label": "4.5 Evaluación:",
-          "href": "./ut04/ut0405.md"
+          "href": "./ut04/ut0405.html"
         },
         {
           "label": "4.6 Evaluación RA4.ijk",
-          "href": "./ut04/ut0406.md"
+          "href": "./ut04/ut0406.html"
         }
       ]
     },
@@ -214,44 +214,44 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.md",
+          "href": "./ut05/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "5.1 UP05 - Contenidos y RA-CE",
-          "href": "./ut05/ut0501.md"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 UP 05 - Eventos y validaciones",
-          "href": "./ut05/ut0502.md"
+          "href": "./ut05/ut0502.html"
         },
         {
           "label": "5.3 Actividades repaso:",
-          "href": "./ut05/ut0503.md"
+          "href": "./ut05/ut0503.html"
         },
         {
           "label": "5.4 Actividades repaso Componentes II: Reloj",
-          "href": "./ut05/ut0504.md"
+          "href": "./ut05/ut0504.html"
         },
         {
           "label": "5.5 Actividad repaso Emits - Props I: Carrito Compra",
-          "href": "./ut05/ut0505.md"
+          "href": "./ut05/ut0505.html"
         },
         {
           "label": "5.6 Actividad repaso Emits - Props II: Registro usuario",
-          "href": "./ut05/ut0506.md"
+          "href": "./ut05/ut0506.html"
         },
         {
           "label": "5.7 Evaluación:",
-          "href": "./ut05/ut0507.md"
+          "href": "./ut05/ut0507.html"
         },
         {
           "label": "5.8 Evaluació RA5.defgh",
-          "href": "./ut05/ut0508.md"
+          "href": "./ut05/ut0508.html"
         },
         {
           "label": "5.9 Evaluació Alan",
-          "href": "./ut05/ut0509.md"
+          "href": "./ut05/ut0509.html"
         }
       ]
     },
@@ -260,64 +260,64 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.md",
+          "href": "./ut06/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "6.1 UP06 - Contenidos y RA-CE",
-          "href": "./ut06/ut0601.md"
+          "href": "./ut06/ut0601.html"
         },
         {
           "label": "6.2 UP 06 - DOM avanzado, Pinia y VUE Router",
-          "href": "./ut06/ut0602.md"
+          "href": "./ut06/ut0602.html"
         },
         {
           "label": "6.3 Actividades repaso:",
-          "href": "./ut06/ut0603.md"
+          "href": "./ut06/ut0603.html"
         },
         {
           "label": "6.4 Actividad repaso Store Pattern: Carrito Compra",
-          "href": "./ut06/ut0604.md"
+          "href": "./ut06/ut0604.html"
         },
         {
           "label": "6.5 Actividad repaso Pinia: Registro usuario",
-          "href": "./ut06/ut0605.md"
+          "href": "./ut06/ut0605.html"
         },
         {
           "label": "6.6 Evaluación:",
-          "href": "./ut06/ut0606.md"
+          "href": "./ut06/ut0606.html"
         },
         {
           "label": "6.7 Ejercicio evaluable Router VUE",
-          "href": "./ut06/ut0607.md"
+          "href": "./ut06/ut0607.html"
         },
         {
           "label": "6.8 Evaluación RA6.abc",
-          "href": "./ut06/ut0608.md"
+          "href": "./ut06/ut0608.html"
         },
         {
           "label": "6.9 Evaluació RA6.d",
-          "href": "./ut06/ut0609.md"
+          "href": "./ut06/ut0609.html"
         },
         {
           "label": "6.10 Evaluació RA6.e",
-          "href": "./ut06/ut0610.md"
+          "href": "./ut06/ut0610.html"
         },
         {
           "label": "6.11 Evaluación RA6.abcde - Olivia",
-          "href": "./ut06/ut0611.md"
+          "href": "./ut06/ut0611.html"
         },
         {
           "label": "6.12 Evaluació RA6.f",
-          "href": "./ut06/ut0612.md"
+          "href": "./ut06/ut0612.html"
         },
         {
           "label": "6.13 Evaluación RA6.f - Sergio",
-          "href": "./ut06/ut0613.md"
+          "href": "./ut06/ut0613.html"
         },
         {
           "label": "6.14 Evaluació RA6.g",
-          "href": "./ut06/ut0614.md"
+          "href": "./ut06/ut0614.html"
         }
       ]
     },
@@ -326,48 +326,48 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.md",
+          "href": "./ut07/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "7.1 UP07 - Contenidos y RA-CE",
-          "href": "./ut07/ut0701.md"
+          "href": "./ut07/ut0701.html"
         },
         {
           "label": "7.2 UP 07 - Comunicación asíncrona y proyecto final",
-          "href": "./ut07/ut0702.md"
+          "href": "./ut07/ut0702.html"
         },
         {
           "label": "7.3 Actividades repaso:",
-          "href": "./ut07/ut0703.md"
+          "href": "./ut07/ut0703.html"
         },
         {
           "label": "7.4 Evaluación:",
-          "href": "./ut07/ut0704.md"
+          "href": "./ut07/ut0704.html"
         },
         {
           "label": "7.5 Evaluación RA7.a",
-          "href": "./ut07/ut0705.md"
+          "href": "./ut07/ut0705.html"
         },
         {
           "label": "7.6 Evaluación RA7.b",
-          "href": "./ut07/ut0706.md"
+          "href": "./ut07/ut0706.html"
         },
         {
           "label": "7.7 Evaluación RA7.c",
-          "href": "./ut07/ut0707.md"
+          "href": "./ut07/ut0707.html"
         },
         {
           "label": "7.8 Evaluación RA7.d",
-          "href": "./ut07/ut0708.md"
+          "href": "./ut07/ut0708.html"
         },
         {
           "label": "7.9 Evaluación RA7.e",
-          "href": "./ut07/ut0709.md"
+          "href": "./ut07/ut0709.html"
         },
         {
           "label": "7.10 Evaluación RA7.f",
-          "href": "./ut07/ut0710.md"
+          "href": "./ut07/ut0710.html"
         }
       ]
     }

@@ -15,11 +15,11 @@ Aquesta unitat tracta la comunicació professional per correu electrònic: adrec
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **5.1** | Estructura d'un compte de correu i adreces electròniques | [**📘 Llegir Apartat 5.1 →**](./ut0501.md) |
-| **5.2** | Camps de destinataris: Per a, Còpia (CC) i Còpia Oculta (CCO) | [**📘 Llegir Apartat 5.2 →**](./ut0502.md) |
-| **5.3** | Redacció professional: Assumpte, cos del missatge i signatura | [**📘 Llegir Apartat 5.3 →**](./ut0503.md) |
-| **5.4** | Gestió d'arxius adjunts i límits de capacitat | [**📘 Llegir Apartat 5.4 →**](./ut0504.md) |
-| **5.5** | Normes de Netiqueta i protocol digital laboral | [**📘 Llegir Apartat 5.5 →**](./ut0505.md) |
+| **5.1** | Estructura d'un compte de correu i adreces electròniques | [**📘 Llegir Apartat 5.1 →**](./ut0501.html) |
+| **5.2** | Camps de destinataris: Per a, Còpia (CC) i Còpia Oculta (CCO) | [**📘 Llegir Apartat 5.2 →**](./ut0502.html) |
+| **5.3** | Redacció professional: Assumpte, cos del missatge i signatura | [**📘 Llegir Apartat 5.3 →**](./ut0503.html) |
+| **5.4** | Gestió d'arxius adjunts i límits de capacitat | [**📘 Llegir Apartat 5.4 →**](./ut0504.html) |
+| **5.5** | Normes de Netiqueta i protocol digital laboral | [**📘 Llegir Apartat 5.5 →**](./ut0505.html) |
 
 ---
 

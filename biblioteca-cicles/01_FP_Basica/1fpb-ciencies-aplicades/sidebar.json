@@ -2,7 +2,7 @@
   "title": "🔬 Ciències Aplicades I — 1r FPB · Grau Bàsic",
   "home": {
     "label": "🏠 Inici Ciències Aplicades I",
-    "href": "index.md"
+    "href": "index.html"
   },
   "units": [
     {
@@ -10,28 +10,28 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.md",
+          "href": "./ut01/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "1.1 El Sistema de Numeració Decimal",
-          "href": "./ut01/ut0101.md"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Nombres Naturals i Operacions Bàsiques",
-          "href": "./ut01/ut0102.md"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Propietats i Jerarquia d'Operacions",
-          "href": "./ut01/ut0103.md"
+          "href": "./ut01/ut0103.html"
         },
         {
           "label": "1.4 Potències de Nombres Naturals i Propietats",
-          "href": "./ut01/ut0104.md"
+          "href": "./ut01/ut0104.html"
         },
         {
           "label": "1.5 Butlletí d'Exercicis i Problemes",
-          "href": "./ut01/ut0105.md"
+          "href": "./ut01/ut0105.html"
         }
       ]
     },
@@ -40,24 +40,24 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.md",
+          "href": "./ut02/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "2.1 Nivells d'Organització, Cèl·lula i Teixits",
-          "href": "./ut02/ut0201.md"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 Funció de Nutrició i Aparell Digestiu",
-          "href": "./ut02/ut0202.md"
+          "href": "./ut02/ut0202.html"
         },
         {
           "label": "2.3 Aparells Respiratori, Circulatori i Limfàtic",
-          "href": "./ut02/ut0203.md"
+          "href": "./ut02/ut0203.html"
         },
         {
           "label": "2.4 Aparell Excretor, Hàbits i Activitats",
-          "href": "./ut02/ut0204.md"
+          "href": "./ut02/ut0204.html"
         }
       ]
     },
@@ -66,28 +66,28 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.md",
+          "href": "./ut03/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "3.1 El Conjunt dels Enters i Contextos Reals",
-          "href": "./ut03/ut0301.md"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 Suma i Resta de Nombres Enters",
-          "href": "./ut03/ut0302.md"
+          "href": "./ut03/ut0302.html"
         },
         {
           "label": "3.3 Multiplicació, Divisió i Jerarquia",
-          "href": "./ut03/ut0303.md"
+          "href": "./ut03/ut0303.html"
         },
         {
           "label": "3.4 Potències i Arrels Quadrades",
-          "href": "./ut03/ut0304.md"
+          "href": "./ut03/ut0304.html"
         },
         {
           "label": "3.5 Problemes Reals i Butlletí d'Exercicis",
-          "href": "./ut03/ut0305.md"
+          "href": "./ut03/ut0305.html"
         }
       ]
     },
@@ -96,24 +96,24 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.md",
+          "href": "./ut04/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "4.1 Múltiples, Divisors i Criteris",
-          "href": "./ut04/ut0401.md"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 Nombres Primers i Descomposició",
-          "href": "./ut04/ut0402.md"
+          "href": "./ut04/ut0402.html"
         },
         {
           "label": "4.3 Màxim Comú Divisor i Mínim Comú Múltiple",
-          "href": "./ut04/ut0403.md"
+          "href": "./ut04/ut0403.html"
         },
         {
           "label": "4.4 Problemes Reals d'MCD i MCM",
-          "href": "./ut04/ut0404.md"
+          "href": "./ut04/ut0404.html"
         }
       ]
     },
@@ -122,28 +122,28 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.md",
+          "href": "./ut05/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "5.1 Concepte de Fracció i Equivalències",
-          "href": "./ut05/ut0501.md"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 Suma i Resta de Fraccions",
-          "href": "./ut05/ut0502.md"
+          "href": "./ut05/ut0502.html"
         },
         {
           "label": "5.3 Multiplicació i Divisió de Fraccions",
-          "href": "./ut05/ut0503.md"
+          "href": "./ut05/ut0503.html"
         },
         {
           "label": "5.4 Operacions Combinades i Jerarquia",
-          "href": "./ut05/ut0504.md"
+          "href": "./ut05/ut0504.html"
         },
         {
           "label": "5.5 Problemes Reals amb Fraccions",
-          "href": "./ut05/ut0505.md"
+          "href": "./ut05/ut0505.html"
         }
       ]
     },
@@ -152,24 +152,24 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.md",
+          "href": "./ut06/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "6.1 L'Origen de l'Univers i els Components Còsmics",
-          "href": "./ut06/ut0601.md"
+          "href": "./ut06/ut0601.html"
         },
         {
           "label": "6.2 Els Astres i les Distàncies a l'Univers",
-          "href": "./ut06/ut0602.md"
+          "href": "./ut06/ut0602.html"
         },
         {
           "label": "6.3 El Sistema Solar: El Sol i els Planetes",
-          "href": "./ut06/ut0603.md"
+          "href": "./ut06/ut0603.html"
         },
         {
           "label": "6.4 L'Exploració Espacial i Activitats",
-          "href": "./ut06/ut0604.md"
+          "href": "./ut06/ut0604.html"
         }
       ]
     },
@@ -178,24 +178,24 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.md",
+          "href": "./ut07/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "7.1 La Terra: Planeta Únic per a la Vida",
-          "href": "./ut07/ut0701.md"
+          "href": "./ut07/ut0701.html"
         },
         {
           "label": "7.2 Els Moviments de la Terra i les Estacions",
-          "href": "./ut07/ut0702.md"
+          "href": "./ut07/ut0702.html"
         },
         {
           "label": "7.3 La Lluna, Eclipsis i Marees",
-          "href": "./ut07/ut0703.md"
+          "href": "./ut07/ut0703.html"
         },
         {
           "label": "7.4 La Geosfera i Activitats",
-          "href": "./ut07/ut0704.md"
+          "href": "./ut07/ut0704.html"
         }
       ]
     },
@@ -204,24 +204,24 @@
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.md",
+          "href": "./ut08/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "8.1 L'Atmosfera i la Composició de l'Aire",
-          "href": "./ut08/ut0801.md"
+          "href": "./ut08/ut0801.html"
         },
         {
           "label": "8.2 Les Capes de l'Atmosfera",
-          "href": "./ut08/ut0802.md"
+          "href": "./ut08/ut0802.html"
         },
         {
           "label": "8.3 Fonaments de Meteorologia i Clima",
-          "href": "./ut08/ut0803.md"
+          "href": "./ut08/ut0803.html"
         },
         {
           "label": "8.4 Contaminació Atmosfèrica i Activitats",
-          "href": "./ut08/ut0804.md"
+          "href": "./ut08/ut0804.html"
         }
       ]
     },
@@ -230,24 +230,24 @@
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "./ut09/index.md",
+          "href": "./ut09/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "9.1 La Hidrosfera i Distribució de l'Aigua",
-          "href": "./ut09/ut0901.md"
+          "href": "./ut09/ut0901.html"
         },
         {
           "label": "9.2 Aigües Marines i Continentals",
-          "href": "./ut09/ut0902.md"
+          "href": "./ut09/ut0902.html"
         },
         {
           "label": "9.3 El Cicle Hidrològic de l'Aigua",
-          "href": "./ut09/ut0903.md"
+          "href": "./ut09/ut0903.html"
         },
         {
           "label": "9.4 Gestió Sostenible de l'Aigua i Activitats",
-          "href": "./ut09/ut0904.md"
+          "href": "./ut09/ut0904.html"
         }
       ]
     }

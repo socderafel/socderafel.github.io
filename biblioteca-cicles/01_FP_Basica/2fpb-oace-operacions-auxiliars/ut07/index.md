@@ -3,7 +3,7 @@ layout: default
 title: "UD7: Programari d'Utilitat, Eines de Suport i Assistència Remota — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD7"
-next_url: "ut0701.md"
+next_url: "ut0701.html"
 next_label: "7.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Compressió i descompressió de fitxers amb 7-Zip, gestió de documents PDF, ein
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **7.1** | **Compressió i protecció de fitxers amb 7-Zip** | [**Llegir apartat →**](./ut0701.md) |
-| **7.2** | **Gestió de documents PDF: visors, lectors i impressió virtual** | [**Llegir apartat →**](./ut0702.md) |
-| **7.3** | **Eines d'inventari i informació de maquinari (CPU-Z, HWMonitor)** | [**Llegir apartat →**](./ut0703.md) |
-| **7.4** | **Eines d'assistència i control remot: RDP, AnyDesk i TeamViewer** | [**Llegir apartat →**](./ut0704.md) |
-| **7.5** | **Pràctica: Sessió de suport tècnic remot entre equips d'aula** | [**Llegir apartat →**](./ut0705.md) |
+| **7.1** | **Compressió i protecció de fitxers amb 7-Zip** | [**Llegir apartat →**](./ut0701.html) |
+| **7.2** | **Gestió de documents PDF: visors, lectors i impressió virtual** | [**Llegir apartat →**](./ut0702.html) |
+| **7.3** | **Eines d'inventari i informació de maquinari (CPU-Z, HWMonitor)** | [**Llegir apartat →**](./ut0703.html) |
+| **7.4** | **Eines d'assistència i control remot: RDP, AnyDesk i TeamViewer** | [**Llegir apartat →**](./ut0704.html) |
+| **7.5** | **Pràctica: Sessió de suport tècnic remot entre equips d'aula** | [**Llegir apartat →**](./ut0705.html) |
 
 ---
 

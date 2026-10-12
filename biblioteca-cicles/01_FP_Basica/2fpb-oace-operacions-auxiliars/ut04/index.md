@@ -3,7 +3,7 @@ layout: default
 title: "UD4: Administració i Comandes Bàsiques en Linux (Ubuntu/LliureX) — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD4"
-next_url: "ut0401.md"
+next_url: "ut0401.html"
 next_label: "4.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ L'entorn gràfic en Linux, la consola de terminal, comandes essencials de navega
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **4.1** | **L'entorn gràfic en Linux (GNOME/MATE) i l'explorador Nautilus** | [**Llegir apartat →**](./ut0401.md) |
-| **4.2** | **La consola de terminal: per què és tan potent?** | [**Llegir apartat →**](./ut0402.md) |
-| **4.3** | **Comandes bàsiques de navegació i gestió de fitxers** | [**Llegir apartat →**](./ut0403.md) |
-| **4.4** | **Usuaris, permisos (chmod/chown) i el comandament sudo** | [**Llegir apartat →**](./ut0404.md) |
-| **4.5** | **Pràctica: Gestió de paquets i programari amb apt** | [**Llegir apartat →**](./ut0405.md) |
+| **4.1** | **L'entorn gràfic en Linux (GNOME/MATE) i l'explorador Nautilus** | [**Llegir apartat →**](./ut0401.html) |
+| **4.2** | **La consola de terminal: per què és tan potent?** | [**Llegir apartat →**](./ut0402.html) |
+| **4.3** | **Comandes bàsiques de navegació i gestió de fitxers** | [**Llegir apartat →**](./ut0403.html) |
+| **4.4** | **Usuaris, permisos (chmod/chown) i el comandament sudo** | [**Llegir apartat →**](./ut0404.html) |
+| **4.5** | **Pràctica: Gestió de paquets i programari amb apt** | [**Llegir apartat →**](./ut0405.html) |
 
 ---
 

@@ -15,11 +15,11 @@ Benvingut/da a la **Unitat Didàctica 8** de MMSCI. En aquest bloc temàtic apre
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **8.1** | Finalitats i sistemes d'etiquetatge (Codis de barres 1D, QR i RFID) | [**📘 Llegir Apartat 8.1 →**](./ut0801.md) |
-| **8.2** | Eines, impressores d'etiquetes i programari d'inventari (GLPI, Snipe-IT) | [**📘 Llegir Apartat 8.2 →**](./ut0802.md) |
-| **8.3** | Embalatge i protecció de components sensibles (Bosses ESD platejades) | [**📘 Llegir Apartat 8.3 →**](./ut0803.md) |
-| **8.4** | Recepció de mercaderies, emmagatzematge i control d'estoc (Albarans, FIFO) | [**📘 Llegir Apartat 8.4 →**](./ut0804.md) |
-| **8.5** | Precaucions i procediments en el trasllat i transport d'equips | [**📘 Llegir Apartat 8.5 →**](./ut0805.md) |
+| **8.1** | Finalitats i sistemes d'etiquetatge (Codis de barres 1D, QR i RFID) | [**📘 Llegir Apartat 8.1 →**](./ut0801.html) |
+| **8.2** | Eines, impressores d'etiquetes i programari d'inventari (GLPI, Snipe-IT) | [**📘 Llegir Apartat 8.2 →**](./ut0802.html) |
+| **8.3** | Embalatge i protecció de components sensibles (Bosses ESD platejades) | [**📘 Llegir Apartat 8.3 →**](./ut0803.html) |
+| **8.4** | Recepció de mercaderies, emmagatzematge i control d'estoc (Albarans, FIFO) | [**📘 Llegir Apartat 8.4 →**](./ut0804.html) |
+| **8.5** | Precaucions i procediments en el trasllat i transport d'equips | [**📘 Llegir Apartat 8.5 →**](./ut0805.html) |
 
 ---
 

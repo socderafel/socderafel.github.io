@@ -13,15 +13,15 @@ Aquest temari didàctic està organitzat en unitats de treball (`UD`) estructura
 
 | Unitat Didàctica | Títol del Bloc Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **UD1** | **Fonaments de les Xarxes de Dades i Comunicació** | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
-| **UD2** | **Medis de Transmissió: Cablejat de Parell Trenat** | [**📘 Entrar a la Unitat →**](./ut02/index.md) |
-| **UD3** | **Fibra Òptica i Comunicacions Sense Fil (Wi-Fi)** | [**📘 Entrar a la Unitat →**](./ut03/index.md) |
-| **UD4** | **Dispositius d'Interconnexió de Xarxa** | [**📘 Entrar a la Unitat →**](./ut04/index.md) |
-| **UD5** | **Cablejat Estructurat i Infraestructura Física** | [**📘 Entrar a la Unitat →**](./ut05/index.md) |
-| **UD6** | **Configuració d'Equips i Adreçament IPv4** | [**📘 Entrar a la Unitat →**](./ut06/index.md) |
-| **UD7** | **Compartició de Recursos i Serveis Locals** | [**📘 Entrar a la Unitat →**](./ut07/index.md) |
-| **UD8** | **Manteniment, Diagnòstic i Seguretat en Xarxa** | [**📘 Entrar a la Unitat →**](./ut08/index.md) |
-| **UD9** | **Projecte Integrador: Muntatge d'una Xarxa per a Petita Oficina** | [**📘 Entrar a la Unitat →**](./ut09/index.md) |
+| **UD1** | **Fonaments de les Xarxes de Dades i Comunicació** | [**📘 Entrar a la Unitat →**](./ut01/index.html) |
+| **UD2** | **Medis de Transmissió: Cablejat de Parell Trenat** | [**📘 Entrar a la Unitat →**](./ut02/index.html) |
+| **UD3** | **Fibra Òptica i Comunicacions Sense Fil (Wi-Fi)** | [**📘 Entrar a la Unitat →**](./ut03/index.html) |
+| **UD4** | **Dispositius d'Interconnexió de Xarxa** | [**📘 Entrar a la Unitat →**](./ut04/index.html) |
+| **UD5** | **Cablejat Estructurat i Infraestructura Física** | [**📘 Entrar a la Unitat →**](./ut05/index.html) |
+| **UD6** | **Configuració d'Equips i Adreçament IPv4** | [**📘 Entrar a la Unitat →**](./ut06/index.html) |
+| **UD7** | **Compartició de Recursos i Serveis Locals** | [**📘 Entrar a la Unitat →**](./ut07/index.html) |
+| **UD8** | **Manteniment, Diagnòstic i Seguretat en Xarxa** | [**📘 Entrar a la Unitat →**](./ut08/index.html) |
+| **UD9** | **Projecte Integrador: Muntatge d'una Xarxa per a Petita Oficina** | [**📘 Entrar a la Unitat →**](./ut09/index.html) |
 
 ---
 

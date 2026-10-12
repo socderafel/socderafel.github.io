@@ -15,12 +15,12 @@ Benvingut/da a la **Unitat Didàctica 4** de MMSCI. En aquesta unitat coneixerem
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **4.1** | La caixa o xassís de l'ordinador i el flux d'aire (*Airflow*) | [**📘 Llegir Apartat 4.1 →**](./ut0401.md) |
-| **4.2** | La font d'alimentació ATX (Potència, rails de tensió i segell 80 PLUS) | [**📘 Llegir Apartat 4.2 →**](./ut0402.md) |
-| **4.3** | El microprocessador (CPU), dissipadors i pasta tèrmica | [**📘 Llegir Apartat 4.3 →**](./ut0403.md) |
-| **4.4** | La memòria RAM: DDR4 vs DDR5 i configuració Dual-Channel | [**📘 Llegir Apartat 4.4 →**](./ut0404.md) |
-| **4.5** | Dispositius d'emmagatzematge massiu: HDD mecànics vs SSD NVMe M.2 | [**📘 Llegir Apartat 4.5 →**](./ut0405.md) |
-| **4.6** | Targetes d'expansió: Targetes gràfiques (GPU) i adaptadors | [**📘 Llegir Apartat 4.6 →**](./ut0406.md) |
+| **4.1** | La caixa o xassís de l'ordinador i el flux d'aire (*Airflow*) | [**📘 Llegir Apartat 4.1 →**](./ut0401.html) |
+| **4.2** | La font d'alimentació ATX (Potència, rails de tensió i segell 80 PLUS) | [**📘 Llegir Apartat 4.2 →**](./ut0402.html) |
+| **4.3** | El microprocessador (CPU), dissipadors i pasta tèrmica | [**📘 Llegir Apartat 4.3 →**](./ut0403.html) |
+| **4.4** | La memòria RAM: DDR4 vs DDR5 i configuració Dual-Channel | [**📘 Llegir Apartat 4.4 →**](./ut0404.html) |
+| **4.5** | Dispositius d'emmagatzematge massiu: HDD mecànics vs SSD NVMe M.2 | [**📘 Llegir Apartat 4.5 →**](./ut0405.html) |
+| **4.6** | Targetes d'expansió: Targetes gràfiques (GPU) i adaptadors | [**📘 Llegir Apartat 4.6 →**](./ut0406.html) |
 
 ---
 

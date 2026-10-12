@@ -3,7 +3,7 @@ layout: default
 title: "UD6: Còpies de Seguretat, Imatges de Disc i Clonat — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD6"
-next_url: "ut0601.md"
+next_url: "ut0601.html"
 next_label: "6.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ La regla 3-2-1 de seguretat de dades, tipus de còpies (completa, incremental, d
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **6.1** | **La importància del backup: la regla 3-2-1 de seguretat** | [**Llegir apartat →**](./ut0601.md) |
-| **6.2** | **Tipus de còpies de seguretat: completa, incremental i diferencial** | [**Llegir apartat →**](./ut0602.md) |
-| **6.3** | **Punts de restauració del sistema en Windows** | [**Llegir apartat →**](./ut0603.md) |
-| **6.4** | **Concepte de clonat de disc i imatges de sistema** | [**Llegir apartat →**](./ut0604.md) |
-| **6.5** | **Pràctica de taller: Creació i restauració d'imatge amb Clonezilla** | [**Llegir apartat →**](./ut0605.md) |
+| **6.1** | **La importància del backup: la regla 3-2-1 de seguretat** | [**Llegir apartat →**](./ut0601.html) |
+| **6.2** | **Tipus de còpies de seguretat: completa, incremental i diferencial** | [**Llegir apartat →**](./ut0602.html) |
+| **6.3** | **Punts de restauració del sistema en Windows** | [**Llegir apartat →**](./ut0603.html) |
+| **6.4** | **Concepte de clonat de disc i imatges de sistema** | [**Llegir apartat →**](./ut0604.html) |
+| **6.5** | **Pràctica de taller: Creació i restauració d'imatge amb Clonezilla** | [**Llegir apartat →**](./ut0605.html) |
 
 ---
 

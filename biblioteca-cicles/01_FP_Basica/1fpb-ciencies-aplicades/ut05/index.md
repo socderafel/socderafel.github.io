@@ -3,9 +3,9 @@ layout: default
 title: "UD5: Les Fraccions — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD5"
-prev_url: "../ut04/index.md"
+prev_url: "../ut04/index.html"
 prev_label: "⬅️ UD4 Divisibilitat, MCM i MCD"
-next_url: "../ut06/index.md"
+next_url: "../ut06/index.html"
 next_label: "UD6 La Terra i l'Univers ➡️"
 ---
 

@@ -15,11 +15,11 @@ Aquesta unitat cobreix la imatge digital: píxels, resolució DPI, formats JPG/P
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **4.1** | Fonaments de la imatge digital: Píxels, resolució i formats | [**📘 Llegir Apartat 4.1 →**](./ut0401.md) |
-| **4.2** | L'entorn de treball de GIMP i les eines de selecció | [**📘 Llegir Apartat 4.2 →**](./ut0402.md) |
-| **4.3** | Treball amb capes a GIMP: Creació, ordre i màscares | [**📘 Llegir Apartat 4.3 →**](./ut0403.md) |
-| **4.4** | Retoc d'imatge bàsic: Escala, retall, clonat i ajust de color | [**📘 Llegir Apartat 4.4 →**](./ut0404.md) |
-| **4.5** | Disseny ràpid de presentacions i cartelleria amb Canva | [**📘 Llegir Apartat 4.5 →**](./ut0405.md) |
+| **4.1** | Fonaments de la imatge digital: Píxels, resolució i formats | [**📘 Llegir Apartat 4.1 →**](./ut0401.html) |
+| **4.2** | L'entorn de treball de GIMP i les eines de selecció | [**📘 Llegir Apartat 4.2 →**](./ut0402.html) |
+| **4.3** | Treball amb capes a GIMP: Creació, ordre i màscares | [**📘 Llegir Apartat 4.3 →**](./ut0403.html) |
+| **4.4** | Retoc d'imatge bàsic: Escala, retall, clonat i ajust de color | [**📘 Llegir Apartat 4.4 →**](./ut0404.html) |
+| **4.5** | Disseny ràpid de presentacions i cartelleria amb Canva | [**📘 Llegir Apartat 4.5 →**](./ut0405.html) |
 
 ---
 

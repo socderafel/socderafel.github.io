@@ -15,11 +15,11 @@ Aquesta unitat final agrupa el projecte integrador d'ofimàtica que avalua de ma
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **9.1** | Projecte Integrador 1: Organització de l'arxiu d'una empresa simulada | [**📘 Llegir Apartat 9.1 →**](./ut0901.md) |
-| **9.2** | Projecte Integrador 2: Redacció d'una memòria professional amb Writer | [**📘 Llegir Apartat 9.2 →**](./ut0902.md) |
-| **9.3** | Projecte Integrador 3: Full de càlcul de pressupost i facturació amb Calc | [**📘 Llegir Apartat 9.3 →**](./ut0903.md) |
-| **9.4** | Projecte Integrador 4: Elaboració d'un fullet publicitari amb GIMP i Canva | [**📘 Llegir Apartat 9.4 →**](./ut0904.md) |
-| **9.5** | Projecte Integrador 5: Comunicació oficial del projecte per correu i presentació | [**📘 Llegir Apartat 9.5 →**](./ut0905.md) |
+| **9.1** | Projecte Integrador 1: Organització de l'arxiu d'una empresa simulada | [**📘 Llegir Apartat 9.1 →**](./ut0901.html) |
+| **9.2** | Projecte Integrador 2: Redacció d'una memòria professional amb Writer | [**📘 Llegir Apartat 9.2 →**](./ut0902.html) |
+| **9.3** | Projecte Integrador 3: Full de càlcul de pressupost i facturació amb Calc | [**📘 Llegir Apartat 9.3 →**](./ut0903.html) |
+| **9.4** | Projecte Integrador 4: Elaboració d'un fullet publicitari amb GIMP i Canva | [**📘 Llegir Apartat 9.4 →**](./ut0904.html) |
+| **9.5** | Projecte Integrador 5: Comunicació oficial del projecte per correu i presentació | [**📘 Llegir Apartat 9.5 →**](./ut0905.html) |
 
 ---
 

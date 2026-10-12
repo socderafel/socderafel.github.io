@@ -3,7 +3,7 @@ layout: default
 title: "UD3: Fibra Òptica i Comunicacions Sense Fil (Wi-Fi) — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD3"
-next_url: "ut0301.md"
+next_url: "ut0301.html"
 next_label: "3.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Transmissió per fibra òptica (monomode vs multimode, connectors SC/LC/ST), seg
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **3.1** | **Fonaments de la fibra òptica: monomode vs multimode** | [**Llegir apartat →**](./ut0301.md) |
-| **3.2** | **Seguretat i precaucions laborals amb fibra òptica** | [**Llegir apartat →**](./ut0302.md) |
-| **3.3** | **Xarxes sense fil Wi-Fi: freqüències, canals i cobertura** | [**Llegir apartat →**](./ut0303.md) |
-| **3.4** | **Seguretat en Wi-Fi: SSID, filtratge MAC, WPA2 i WPA3** | [**Llegir apartat →**](./ut0304.md) |
-| **3.5** | **Pràctica: Anàlisi d'espectre Wi-Fi i configuració d'un AP** | [**Llegir apartat →**](./ut0305.md) |
+| **3.1** | **Fonaments de la fibra òptica: monomode vs multimode** | [**Llegir apartat →**](./ut0301.html) |
+| **3.2** | **Seguretat i precaucions laborals amb fibra òptica** | [**Llegir apartat →**](./ut0302.html) |
+| **3.3** | **Xarxes sense fil Wi-Fi: freqüències, canals i cobertura** | [**Llegir apartat →**](./ut0303.html) |
+| **3.4** | **Seguretat en Wi-Fi: SSID, filtratge MAC, WPA2 i WPA3** | [**Llegir apartat →**](./ut0304.html) |
+| **3.5** | **Pràctica: Anàlisi d'espectre Wi-Fi i configuració d'un AP** | [**Llegir apartat →**](./ut0305.html) |
 
 ---
 

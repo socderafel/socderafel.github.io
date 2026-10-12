@@ -15,12 +15,12 @@ Benvingut/da a la **Unitat Didàctica 9** de MMSCI. Aquest bloc recull el banc c
 
 | Prova | Bloc Temàtic Avaluat | Enllaç Directe |
 | :---: | :--- | :---: |
-| **9.1** | Prova 1: Fonaments d'electricitat, codi de colors i mesures amb polímetre (UD1) | [**📘 Anar a la Prova 9.1 →**](./ut0901.md) |
-| **9.2** | Prova 2: Identificació de placa base, sòcols, ranures i memòria RAM (UD2 i UD3) | [**📘 Anar a la Prova 9.2 →**](./ut0902.md) |
-| **9.3** | Prova 3: Comprovació de cablejat, tensions ATX i connectors del panell frontal (UD5) | [**📘 Anar a la Prova 9.3 →**](./ut0903.md) |
-| **9.4** | Prova 4: Muntatge de components, refrigeració i emmagatzematge massiu (UD4) | [**📘 Anar a la Prova 9.4 →**](./ut0904.md) |
-| **9.5** | Prova 5: Manteniment, substitució de consumibles i gestió ambiental RAEE (UD6 i UD7) | [**📘 Anar a la Prova 9.5 →**](./ut0905.md) |
-| **9.6** | Prova 6: Logística, disseny d'etiquetes d'inventari i embalatge antiestàtic ESD (UD8) | [**📘 Anar a la Prova 9.6 →**](./ut0906.md) |
+| **9.1** | Prova 1: Fonaments d'electricitat, codi de colors i mesures amb polímetre (UD1) | [**📘 Anar a la Prova 9.1 →**](./ut0901.html) |
+| **9.2** | Prova 2: Identificació de placa base, sòcols, ranures i memòria RAM (UD2 i UD3) | [**📘 Anar a la Prova 9.2 →**](./ut0902.html) |
+| **9.3** | Prova 3: Comprovació de cablejat, tensions ATX i connectors del panell frontal (UD5) | [**📘 Anar a la Prova 9.3 →**](./ut0903.html) |
+| **9.4** | Prova 4: Muntatge de components, refrigeració i emmagatzematge massiu (UD4) | [**📘 Anar a la Prova 9.4 →**](./ut0904.html) |
+| **9.5** | Prova 5: Manteniment, substitució de consumibles i gestió ambiental RAEE (UD6 i UD7) | [**📘 Anar a la Prova 9.5 →**](./ut0905.html) |
+| **9.6** | Prova 6: Logística, disseny d'etiquetes d'inventari i embalatge antiestàtic ESD (UD8) | [**📘 Anar a la Prova 9.6 →**](./ut0906.html) |
 
 ---
 

@@ -3,9 +3,9 @@ layout: default
 title: "UD4: Divisibilitat, Màxim Comú Divisor i Mínim Comú Múltiple — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD4"
-prev_url: "../ut03/index.md"
+prev_url: "../ut03/index.html"
 prev_label: "⬅️ UD3 Els Nombres Enters"
-next_url: "../ut05/index.md"
+next_url: "../ut05/index.html"
 next_label: "UD5 Les Fraccions ➡️"
 ---
 

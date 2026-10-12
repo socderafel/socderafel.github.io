@@ -2,7 +2,7 @@
   "title": "💻 Operacions Auxiliars de Configuració i Explotació — 2n FPB · Grau Bàsic",
   "home": {
     "label": "🏠 Inici Operacions Auxiliars",
-    "href": "index.md"
+    "href": "index.html"
   },
   "units": [
     {
@@ -10,28 +10,28 @@
       "items": [
         {
           "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.md",
+          "href": "./ut01/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "1.1 Què és un sistema operatiu? Funcions bàsiques",
-          "href": "./ut01/ut0101.md"
+          "href": "./ut01/ut0101.html"
         },
         {
           "label": "1.2 Sistemes propietaris vs lliures: Windows, Linux i macOS",
-          "href": "./ut01/ut0102.md"
+          "href": "./ut01/ut0102.html"
         },
         {
           "label": "1.3 Arquitectures de maquinari: 32 bits vs 64 bits",
-          "href": "./ut01/ut0103.md"
+          "href": "./ut01/ut0103.html"
         },
         {
           "label": "1.4 Concepte de màquina virtual i hipervisors",
-          "href": "./ut01/ut0104.md"
+          "href": "./ut01/ut0104.html"
         },
         {
           "label": "1.5 Pràctica: Instal·lació de VirtualBox i creació d'una MV",
-          "href": "./ut01/ut0105.md"
+          "href": "./ut01/ut0105.html"
         }
       ]
     },
@@ -40,28 +40,28 @@
       "items": [
         {
           "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.md",
+          "href": "./ut02/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "2.1 Estructures de disc i taules de particions: MBR vs GPT",
-          "href": "./ut02/ut0201.md"
+          "href": "./ut02/ut0201.html"
         },
         {
           "label": "2.2 Sistemes de fitxers més comuns: NTFS, ext4, FAT32 i exFAT",
-          "href": "./ut02/ut0202.md"
+          "href": "./ut02/ut0202.html"
         },
         {
           "label": "2.3 Preparació de memòries USB arrancables amb Rufus i Ventoy",
-          "href": "./ut02/ut0203.md"
+          "href": "./ut02/ut0203.html"
         },
         {
           "label": "2.4 Pràctica: Instal·lació pas a pas de Windows 10/11",
-          "href": "./ut02/ut0204.md"
+          "href": "./ut02/ut0204.html"
         },
         {
           "label": "2.5 Pràctica: Instal·lació d'Ubuntu Desktop / LliureX",
-          "href": "./ut02/ut0205.md"
+          "href": "./ut02/ut0205.html"
         }
       ]
     },
@@ -70,28 +70,28 @@
       "items": [
         {
           "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.md",
+          "href": "./ut03/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "3.1 L'entorn gràfic de Windows: Escriptori, barra de tasques i configuració",
-          "href": "./ut03/ut0301.md"
+          "href": "./ut03/ut0301.html"
         },
         {
           "label": "3.2 Controladors de dispositius (*Drivers*) i Administrador de dispositius",
-          "href": "./ut03/ut0302.md"
+          "href": "./ut03/ut0302.html"
         },
         {
           "label": "3.3 Gestió de comptes d'usuari locals i control UAC",
-          "href": "./ut03/ut0303.md"
+          "href": "./ut03/ut0303.html"
         },
         {
           "label": "3.4 Gestió d'arxius, carpetes, atributs i cerca avançada",
-          "href": "./ut03/ut0304.md"
+          "href": "./ut03/ut0304.html"
         },
         {
           "label": "3.5 Pràctica: Instal·lació i desinstal·lació neta d'aplicacions",
-          "href": "./ut03/ut0305.md"
+          "href": "./ut03/ut0305.html"
         }
       ]
     },
@@ -100,28 +100,28 @@
       "items": [
         {
           "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.md",
+          "href": "./ut04/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "4.1 L'entorn gràfic en Linux (GNOME/MATE) i l'explorador Nautilus",
-          "href": "./ut04/ut0401.md"
+          "href": "./ut04/ut0401.html"
         },
         {
           "label": "4.2 La consola de terminal: per què és tan potent?",
-          "href": "./ut04/ut0402.md"
+          "href": "./ut04/ut0402.html"
         },
         {
           "label": "4.3 Comandes bàsiques de navegació i gestió de fitxers",
-          "href": "./ut04/ut0403.md"
+          "href": "./ut04/ut0403.html"
         },
         {
           "label": "4.4 Usuaris, permisos (chmod/chown) i el comandament sudo",
-          "href": "./ut04/ut0404.md"
+          "href": "./ut04/ut0404.html"
         },
         {
           "label": "4.5 Pràctica: Gestió de paquets i programari amb apt",
-          "href": "./ut04/ut0405.md"
+          "href": "./ut04/ut0405.html"
         }
       ]
     },
@@ -130,28 +130,28 @@
       "items": [
         {
           "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.md",
+          "href": "./ut05/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "5.1 Neteja i alliberament d'espai en disc",
-          "href": "./ut05/ut0501.md"
+          "href": "./ut05/ut0501.html"
         },
         {
           "label": "5.2 Manteniment d'unitats SSD (TRIM) vs HDD (Desfragmentació)",
-          "href": "./ut05/ut0502.md"
+          "href": "./ut05/ut0502.html"
         },
         {
           "label": "5.3 Monitorització de recursos: Administrador de tasques i htop",
-          "href": "./ut05/ut0503.md"
+          "href": "./ut05/ut0503.html"
         },
         {
           "label": "5.4 Gestió d'aplicacions d'inici i serveis del sistema",
-          "href": "./ut05/ut0504.md"
+          "href": "./ut05/ut0504.html"
         },
         {
           "label": "5.5 Gestió d'actualitzacions: Windows Update i pegats de seguretat",
-          "href": "./ut05/ut0505.md"
+          "href": "./ut05/ut0505.html"
         }
       ]
     },
@@ -160,28 +160,28 @@
       "items": [
         {
           "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.md",
+          "href": "./ut06/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "6.1 La importància del backup: la regla 3-2-1 de seguretat",
-          "href": "./ut06/ut0601.md"
+          "href": "./ut06/ut0601.html"
         },
         {
           "label": "6.2 Tipus de còpies de seguretat: completa, incremental i diferencial",
-          "href": "./ut06/ut0602.md"
+          "href": "./ut06/ut0602.html"
         },
         {
           "label": "6.3 Punts de restauració del sistema en Windows",
-          "href": "./ut06/ut0603.md"
+          "href": "./ut06/ut0603.html"
         },
         {
           "label": "6.4 Concepte de clonat de disc i imatges de sistema",
-          "href": "./ut06/ut0604.md"
+          "href": "./ut06/ut0604.html"
         },
         {
           "label": "6.5 Pràctica de taller: Creació i restauració d'imatge amb Clonezilla",
-          "href": "./ut06/ut0605.md"
+          "href": "./ut06/ut0605.html"
         }
       ]
     },
@@ -190,28 +190,28 @@
       "items": [
         {
           "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.md",
+          "href": "./ut07/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "7.1 Compressió i protecció de fitxers amb 7-Zip",
-          "href": "./ut07/ut0701.md"
+          "href": "./ut07/ut0701.html"
         },
         {
           "label": "7.2 Gestió de documents PDF: visors, lectors i impressió virtual",
-          "href": "./ut07/ut0702.md"
+          "href": "./ut07/ut0702.html"
         },
         {
           "label": "7.3 Eines d'inventari i informació de maquinari (CPU-Z, HWMonitor)",
-          "href": "./ut07/ut0703.md"
+          "href": "./ut07/ut0703.html"
         },
         {
           "label": "7.4 Eines d'assistència i control remot: RDP, AnyDesk i TeamViewer",
-          "href": "./ut07/ut0704.md"
+          "href": "./ut07/ut0704.html"
         },
         {
           "label": "7.5 Pràctica: Sessió de suport tècnic remot entre equips d'aula",
-          "href": "./ut07/ut0705.md"
+          "href": "./ut07/ut0705.html"
         }
       ]
     },
@@ -220,28 +220,28 @@
       "items": [
         {
           "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.md",
+          "href": "./ut08/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "8.1 Formats d'àudio digital, taxa de mostreig i compressió",
-          "href": "./ut08/ut0801.md"
+          "href": "./ut08/ut0801.html"
         },
         {
           "label": "8.2 Edició d'àudio amb Audacity: gravació i eliminació de soroll",
-          "href": "./ut08/ut0802.md"
+          "href": "./ut08/ut0802.html"
         },
         {
           "label": "8.3 Imatge de mapa de bits vs vectorial: formats i resolució",
-          "href": "./ut08/ut0803.md"
+          "href": "./ut08/ut0803.html"
         },
         {
           "label": "8.4 Disseny gràfic bàsic i edició vectorial (Draw / Canva)",
-          "href": "./ut08/ut0804.md"
+          "href": "./ut08/ut0804.html"
         },
         {
           "label": "8.5 Tractament de vídeo bàsic i subtitulat (.SRT)",
-          "href": "./ut08/ut0805.md"
+          "href": "./ut08/ut0805.html"
         }
       ]
     },
@@ -250,28 +250,28 @@
       "items": [
         {
           "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "./ut09/index.md",
+          "href": "./ut09/index.html",
           "class": "unit-full-link"
         },
         {
           "label": "9.1 Amenaces de seguretat: virus, ransomware i phishing",
-          "href": "./ut09/ut0901.md"
+          "href": "./ut09/ut0901.html"
         },
         {
           "label": "9.2 Protecció activa: l'antivirus Windows Defender",
-          "href": "./ut09/ut0902.md"
+          "href": "./ut09/ut0902.html"
         },
         {
           "label": "9.3 Gestió de contrasenyes robustes i autenticació 2FA",
-          "href": "./ut09/ut0903.md"
+          "href": "./ut09/ut0903.html"
         },
         {
           "label": "9.4 Navegació segura, certificats web i descàrregues fiables",
-          "href": "./ut09/ut0904.md"
+          "href": "./ut09/ut0904.html"
         },
         {
           "label": "9.5 Projecte integrador d'explotació i posada a punt",
-          "href": "./ut09/ut0905.md"
+          "href": "./ut09/ut0905.html"
         }
       ]
     }

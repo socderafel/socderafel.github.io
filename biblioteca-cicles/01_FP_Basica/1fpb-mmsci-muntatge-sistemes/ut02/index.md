@@ -15,11 +15,11 @@ Benvingut/da a la **Unitat Didàctica 2** de MMSCI. En aquest bloc temàtic apro
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **2.1** | Model i arquitectura de Von Neumann | [**📘 Llegir Apartat 2.1 →**](./ut0201.md) |
-| **2.2** | La Unitat Central de Processament (CPU): UC, ALU i registres | [**📘 Llegir Apartat 2.2 →**](./ut0202.md) |
-| **2.3** | La jerarquia de memòria de l'ordinador (Registres, Cau L1/L2/L3, RAM i ROM) | [**📘 Llegir Apartat 2.3 →**](./ut0203.md) |
-| **2.4** | El subsistema d'entrada/eixida i els busos de comunicació (Dades, adreces i control) | [**📘 Llegir Apartat 2.4 →**](./ut0204.md) |
-| **2.5** | El cicle d'execució d'una instrucció (Fetch, Decode, Execute) | [**📘 Llegir Apartat 2.5 →**](./ut0205.md) |
+| **2.1** | Model i arquitectura de Von Neumann | [**📘 Llegir Apartat 2.1 →**](./ut0201.html) |
+| **2.2** | La Unitat Central de Processament (CPU): UC, ALU i registres | [**📘 Llegir Apartat 2.2 →**](./ut0202.html) |
+| **2.3** | La jerarquia de memòria de l'ordinador (Registres, Cau L1/L2/L3, RAM i ROM) | [**📘 Llegir Apartat 2.3 →**](./ut0203.html) |
+| **2.4** | El subsistema d'entrada/eixida i els busos de comunicació (Dades, adreces i control) | [**📘 Llegir Apartat 2.4 →**](./ut0204.html) |
+| **2.5** | El cicle d'execució d'una instrucció (Fetch, Decode, Execute) | [**📘 Llegir Apartat 2.5 →**](./ut0205.html) |
 
 ---
 

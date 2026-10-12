@@ -3,7 +3,7 @@ layout: default
 title: "UD6: Configuració d'Equips i Adreçament IPv4 — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD6"
-next_url: "ut0601.md"
+next_url: "ut0601.html"
 next_label: "6.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ L'adreça IPv4 (estructura de 32 bits, classes, públiques vs privades), màscar
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **6.1** | **L'adreça IPv4: estructura, classes i adreces privades** | [**Llegir apartat →**](./ut0601.md) |
-| **6.2** | **Màscara de subxarxa, porta d'enllaç i difusió** | [**Llegir apartat →**](./ut0602.md) |
-| **6.3** | **Servidors DNS i servei d'assignació automàtica DHCP** | [**Llegir apartat →**](./ut0603.md) |
-| **6.4** | **Ordres bàsiques de diagnòstic de xarxa en consola** | [**Llegir apartat →**](./ut0604.md) |
-| **6.5** | **Pràctica: Configuració manual d'IPs i resolució de conflictes** | [**Llegir apartat →**](./ut0605.md) |
+| **6.1** | **L'adreça IPv4: estructura, classes i adreces privades** | [**Llegir apartat →**](./ut0601.html) |
+| **6.2** | **Màscara de subxarxa, porta d'enllaç i difusió** | [**Llegir apartat →**](./ut0602.html) |
+| **6.3** | **Servidors DNS i servei d'assignació automàtica DHCP** | [**Llegir apartat →**](./ut0603.html) |
+| **6.4** | **Ordres bàsiques de diagnòstic de xarxa en consola** | [**Llegir apartat →**](./ut0604.html) |
+| **6.5** | **Pràctica: Configuració manual d'IPs i resolució de conflictes** | [**Llegir apartat →**](./ut0605.html) |
 
 ---
 

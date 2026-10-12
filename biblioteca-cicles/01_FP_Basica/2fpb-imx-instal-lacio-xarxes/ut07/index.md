@@ -3,7 +3,7 @@ layout: default
 title: "UD7: Compartició de Recursos i Serveis Locals — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD7"
-next_url: "ut0701.md"
+next_url: "ut0701.html"
 next_label: "7.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Compartició de carpetes i fitxers en xarxa Windows, permisos de recurs vs segur
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **7.1** | **Compartició de carpetes i fitxers: permisos de xarxa vs NTFS** | [**Llegir apartat →**](./ut0701.md) |
-| **7.2** | **Mapejat d'unitats de xarxa en Windows** | [**Llegir apartat →**](./ut0702.md) |
-| **7.3** | **Instal·lació i compartició d'impressores de xarxa** | [**Llegir apartat →**](./ut0703.md) |
-| **7.4** | **Compartició en xarxes heterogènies: Linux i el protocol Samba** | [**Llegir apartat →**](./ut0704.md) |
-| **7.5** | **Pràctica: Creació d'un recurs compartit amb permisos diferenciats** | [**Llegir apartat →**](./ut0705.md) |
+| **7.1** | **Compartició de carpetes i fitxers: permisos de xarxa vs NTFS** | [**Llegir apartat →**](./ut0701.html) |
+| **7.2** | **Mapejat d'unitats de xarxa en Windows** | [**Llegir apartat →**](./ut0702.html) |
+| **7.3** | **Instal·lació i compartició d'impressores de xarxa** | [**Llegir apartat →**](./ut0703.html) |
+| **7.4** | **Compartició en xarxes heterogènies: Linux i el protocol Samba** | [**Llegir apartat →**](./ut0704.html) |
+| **7.5** | **Pràctica: Creació d'un recurs compartit amb permisos diferenciats** | [**Llegir apartat →**](./ut0705.html) |
 
 ---
 

@@ -13,15 +13,15 @@ Aquest temari didàctic està organitzat en unitats de treball (`UD`) estructura
 
 | Unitat Didàctica | Títol del Bloc Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **UD1** | **Introducció als Sistemes Operatius i la Virtualització** | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
-| **UD2** | **Instal·lació i Particionament de Sistemes Operatius** | [**📘 Entrar a la Unitat →**](./ut02/index.md) |
-| **UD3** | **Administració i Configuració del Sistema Operatiu Windows** | [**📘 Entrar a la Unitat →**](./ut03/index.md) |
-| **UD4** | **Administració i Comandes Bàsiques en Linux (Ubuntu/LliureX)** | [**📘 Entrar a la Unitat →**](./ut04/index.md) |
-| **UD5** | **Manteniment Preventiu, Rendiment i Actualitzacions** | [**📘 Entrar a la Unitat →**](./ut05/index.md) |
-| **UD6** | **Còpies de Seguretat, Imatges de Disc i Clonat** | [**📘 Entrar a la Unitat →**](./ut06/index.md) |
-| **UD7** | **Programari d'Utilitat, Eines de Suport i Assistència Remota** | [**📘 Entrar a la Unitat →**](./ut07/index.md) |
-| **UD8** | **Tractament de Recursos Multimèdia (So, Imatge i Vídeo)** | [**📘 Entrar a la Unitat →**](./ut08/index.md) |
-| **UD9** | **Seguretat Informàtica, Protecció i Projecte d'Explotació** | [**📘 Entrar a la Unitat →**](./ut09/index.md) |
+| **UD1** | **Introducció als Sistemes Operatius i la Virtualització** | [**📘 Entrar a la Unitat →**](./ut01/index.html) |
+| **UD2** | **Instal·lació i Particionament de Sistemes Operatius** | [**📘 Entrar a la Unitat →**](./ut02/index.html) |
+| **UD3** | **Administració i Configuració del Sistema Operatiu Windows** | [**📘 Entrar a la Unitat →**](./ut03/index.html) |
+| **UD4** | **Administració i Comandes Bàsiques en Linux (Ubuntu/LliureX)** | [**📘 Entrar a la Unitat →**](./ut04/index.html) |
+| **UD5** | **Manteniment Preventiu, Rendiment i Actualitzacions** | [**📘 Entrar a la Unitat →**](./ut05/index.html) |
+| **UD6** | **Còpies de Seguretat, Imatges de Disc i Clonat** | [**📘 Entrar a la Unitat →**](./ut06/index.html) |
+| **UD7** | **Programari d'Utilitat, Eines de Suport i Assistència Remota** | [**📘 Entrar a la Unitat →**](./ut07/index.html) |
+| **UD8** | **Tractament de Recursos Multimèdia (So, Imatge i Vídeo)** | [**📘 Entrar a la Unitat →**](./ut08/index.html) |
+| **UD9** | **Seguretat Informàtica, Protecció i Projecte d'Explotació** | [**📘 Entrar a la Unitat →**](./ut09/index.html) |
 
 ---
 

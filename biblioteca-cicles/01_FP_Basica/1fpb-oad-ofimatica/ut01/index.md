@@ -15,11 +15,11 @@ Aquesta unitat tracta sobre els fonaments de la gestió d'arxius, carpetes, estr
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **1.1** | Concepte d'arxiu, directori i estructura en arbre | [**📘 Llegir Apartat 1.1 →**](./ut0101.md) |
-| **1.2** | Nomenclatura i bones pràctiques d'organització documental | [**📘 Llegir Apartat 1.2 →**](./ut0102.md) |
-| **1.3** | Extensions de fitxer més comunes i el seu significat | [**📘 Llegir Apartat 1.3 →**](./ut0103.md) |
-| **1.4** | Compressió d'arxius (ZIP, 7z) i enviament de fitxers | [**📘 Llegir Apartat 1.4 →**](./ut0104.md) |
-| **1.5** | Còpies de seguretat (Backup) i la Regla 3-2-1 | [**📘 Llegir Apartat 1.5 →**](./ut0105.md) |
+| **1.1** | Concepte d'arxiu, directori i estructura en arbre | [**📘 Llegir Apartat 1.1 →**](./ut0101.html) |
+| **1.2** | Nomenclatura i bones pràctiques d'organització documental | [**📘 Llegir Apartat 1.2 →**](./ut0102.html) |
+| **1.3** | Extensions de fitxer més comunes i el seu significat | [**📘 Llegir Apartat 1.3 →**](./ut0103.html) |
+| **1.4** | Compressió d'arxius (ZIP, 7z) i enviament de fitxers | [**📘 Llegir Apartat 1.4 →**](./ut0104.html) |
+| **1.5** | Còpies de seguretat (Backup) i la Regla 3-2-1 | [**📘 Llegir Apartat 1.5 →**](./ut0105.html) |
 
 ---
 

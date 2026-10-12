@@ -3,7 +3,7 @@ layout: default
 title: "UD1: Introducció als Sistemes Operatius i la Virtualització — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD1"
-next_url: "ut0101.md"
+next_url: "ut0101.html"
 next_label: "1.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Concepte i funcions bàsiques d'un sistema operatiu, comparativa de sistemes pro
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **1.1** | **Què és un sistema operatiu? Funcions bàsiques** | [**Llegir apartat →**](./ut0101.md) |
-| **1.2** | **Sistemes propietaris vs lliures: Windows, Linux i macOS** | [**Llegir apartat →**](./ut0102.md) |
-| **1.3** | **Arquitectures de maquinari: 32 bits vs 64 bits** | [**Llegir apartat →**](./ut0103.md) |
-| **1.4** | **Concepte de màquina virtual i hipervisors** | [**Llegir apartat →**](./ut0104.md) |
-| **1.5** | **Pràctica: Instal·lació de VirtualBox i creació d'una MV** | [**Llegir apartat →**](./ut0105.md) |
+| **1.1** | **Què és un sistema operatiu? Funcions bàsiques** | [**Llegir apartat →**](./ut0101.html) |
+| **1.2** | **Sistemes propietaris vs lliures: Windows, Linux i macOS** | [**Llegir apartat →**](./ut0102.html) |
+| **1.3** | **Arquitectures de maquinari: 32 bits vs 64 bits** | [**Llegir apartat →**](./ut0103.html) |
+| **1.4** | **Concepte de màquina virtual i hipervisors** | [**Llegir apartat →**](./ut0104.html) |
+| **1.5** | **Pràctica: Instal·lació de VirtualBox i creació d'una MV** | [**Llegir apartat →**](./ut0105.html) |
 
 ---
 

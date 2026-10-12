@@ -3,7 +3,7 @@ layout: default
 title: "UD5: Manteniment Preventiu, Rendiment i Actualitzacions — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD5"
-next_url: "ut0501.md"
+next_url: "ut0501.html"
 next_label: "5.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Alliberament d'espai en disc i fitxers temporals, manteniment d'unitats SSD (TRI
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **5.1** | **Neteja i alliberament d'espai en disc** | [**Llegir apartat →**](./ut0501.md) |
-| **5.2** | **Manteniment d'unitats SSD (TRIM) vs HDD (Desfragmentació)** | [**Llegir apartat →**](./ut0502.md) |
-| **5.3** | **Monitorització de recursos: Administrador de tasques i htop** | [**Llegir apartat →**](./ut0503.md) |
-| **5.4** | **Gestió d'aplicacions d'inici i serveis del sistema** | [**Llegir apartat →**](./ut0504.md) |
-| **5.5** | **Gestió d'actualitzacions: Windows Update i pegats de seguretat** | [**Llegir apartat →**](./ut0505.md) |
+| **5.1** | **Neteja i alliberament d'espai en disc** | [**Llegir apartat →**](./ut0501.html) |
+| **5.2** | **Manteniment d'unitats SSD (TRIM) vs HDD (Desfragmentació)** | [**Llegir apartat →**](./ut0502.html) |
+| **5.3** | **Monitorització de recursos: Administrador de tasques i htop** | [**Llegir apartat →**](./ut0503.html) |
+| **5.4** | **Gestió d'aplicacions d'inici i serveis del sistema** | [**Llegir apartat →**](./ut0504.html) |
+| **5.5** | **Gestió d'actualitzacions: Windows Update i pegats de seguretat** | [**Llegir apartat →**](./ut0505.html) |
 
 ---
 

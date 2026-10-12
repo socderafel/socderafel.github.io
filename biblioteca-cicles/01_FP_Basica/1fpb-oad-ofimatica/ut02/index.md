@@ -15,11 +15,11 @@ Aquesta unitat proporciona el domini pràctic del processador de textos: interf�
 
 | Apartat | Títol de la Secció Didàctica | Enllaç Directe |
 | :---: | :--- | :---: |
-| **2.1** | Interfície de treball, creació i desat de documents | [**📘 Llegir Apartat 2.1 →**](./ut0201.md) |
-| **2.2** | Format de caràcter i paràgraf (Tipografies, sagnies i interlineat) | [**📘 Llegir Apartat 2.2 →**](./ut0202.md) |
-| **2.3** | Llistes numerades, vinyetes i tabulacions | [**📘 Llegir Apartat 2.3 →**](./ut0203.md) |
-| **2.4** | Inserció i disseny de taules i imatges | [**📘 Llegir Apartat 2.4 →**](./ut0204.md) |
-| **2.5** | Disseny de pàgina, encapçalaments, peus de pàgina i plantilles | [**📘 Llegir Apartat 2.5 →**](./ut0205.md) |
+| **2.1** | Interfície de treball, creació i desat de documents | [**📘 Llegir Apartat 2.1 →**](./ut0201.html) |
+| **2.2** | Format de caràcter i paràgraf (Tipografies, sagnies i interlineat) | [**📘 Llegir Apartat 2.2 →**](./ut0202.html) |
+| **2.3** | Llistes numerades, vinyetes i tabulacions | [**📘 Llegir Apartat 2.3 →**](./ut0203.html) |
+| **2.4** | Inserció i disseny de taules i imatges | [**📘 Llegir Apartat 2.4 →**](./ut0204.html) |
+| **2.5** | Disseny de pàgina, encapçalaments, peus de pàgina i plantilles | [**📘 Llegir Apartat 2.5 →**](./ut0205.html) |
 
 ---
 

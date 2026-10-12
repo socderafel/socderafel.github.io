@@ -3,9 +3,9 @@ layout: default
 title: "UD1: Els Nombres Naturals — Ciències Aplicades I"
 course_root: ".."
 badge: "1r FPB · Ciències Aplicades I · UD1"
-prev_url: "../index.md"
+prev_url: "../index.html"
 prev_label: "⬅️ Tornar al Curs"
-next_url: "../ut02/index.md"
+next_url: "../ut02/index.html"
 next_label: "UD2 La Matèria i Nutrició ➡️"
 ---
 

@@ -3,7 +3,7 @@ layout: default
 title: "UD8: Tractament de Recursos Multimèdia (So, Imatge i Vídeo) — Operacions Auxiliars de Configuració i Explotació"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD8"
-next_url: "ut0801.md"
+next_url: "ut0801.html"
 next_label: "8.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Formats digitals d'àudio i vídeo, edició d'àudio amb Audacity (gravació, ne
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **8.1** | **Formats d'àudio digital, taxa de mostreig i compressió** | [**Llegir apartat →**](./ut0801.md) |
-| **8.2** | **Edició d'àudio amb Audacity: gravació i eliminació de soroll** | [**Llegir apartat →**](./ut0802.md) |
-| **8.3** | **Imatge de mapa de bits vs vectorial: formats i resolució** | [**Llegir apartat →**](./ut0803.md) |
-| **8.4** | **Disseny gràfic bàsic i edició vectorial (Draw / Canva)** | [**Llegir apartat →**](./ut0804.md) |
-| **8.5** | **Tractament de vídeo bàsic i subtitulat (.SRT)** | [**Llegir apartat →**](./ut0805.md) |
+| **8.1** | **Formats d'àudio digital, taxa de mostreig i compressió** | [**Llegir apartat →**](./ut0801.html) |
+| **8.2** | **Edició d'àudio amb Audacity: gravació i eliminació de soroll** | [**Llegir apartat →**](./ut0802.html) |
+| **8.3** | **Imatge de mapa de bits vs vectorial: formats i resolució** | [**Llegir apartat →**](./ut0803.html) |
+| **8.4** | **Disseny gràfic bàsic i edició vectorial (Draw / Canva)** | [**Llegir apartat →**](./ut0804.html) |
+| **8.5** | **Tractament de vídeo bàsic i subtitulat (.SRT)** | [**Llegir apartat →**](./ut0805.html) |
 
 ---
 

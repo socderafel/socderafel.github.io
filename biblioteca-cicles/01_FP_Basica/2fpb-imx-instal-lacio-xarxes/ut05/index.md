@@ -3,7 +3,7 @@ layout: default
 title: "UD5: Cablejat Estructurat i Infraestructura Física — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD5"
-next_url: "ut0501.md"
+next_url: "ut0501.html"
 next_label: "5.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Concepte de cablejat estructurat i subsistemes, l'armari de telecomunicacions (R
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **5.1** | **Concepte i subsistemes de cablejat estructurat** | [**Llegir apartat →**](./ut0501.md) |
-| **5.2** | **L'armari de telecomunicacions (Rack de 19 polzades)** | [**Llegir apartat →**](./ut0502.md) |
-| **5.3** | **Canalitzacions, canaletes, caixes i rosetes de paret** | [**Llegir apartat →**](./ut0503.md) |
-| **5.4** | **Prevenció de Riscos Laborals (PRL) en instal·lacions** | [**Llegir apartat →**](./ut0504.md) |
-| **5.5** | **Pràctica de taller: Muntatge de canaleta, roseta i patch panel** | [**Llegir apartat →**](./ut0505.md) |
+| **5.1** | **Concepte i subsistemes de cablejat estructurat** | [**Llegir apartat →**](./ut0501.html) |
+| **5.2** | **L'armari de telecomunicacions (Rack de 19 polzades)** | [**Llegir apartat →**](./ut0502.html) |
+| **5.3** | **Canalitzacions, canaletes, caixes i rosetes de paret** | [**Llegir apartat →**](./ut0503.html) |
+| **5.4** | **Prevenció de Riscos Laborals (PRL) en instal·lacions** | [**Llegir apartat →**](./ut0504.html) |
+| **5.5** | **Pràctica de taller: Muntatge de canaleta, roseta i patch panel** | [**Llegir apartat →**](./ut0505.html) |
 
 ---
 

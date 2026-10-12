@@ -3,7 +3,7 @@ layout: default
 title: "UD2: Medis de Transmissió: Cablejat de Parell Trenat — Instal·lació i Manteniment de Xarxes"
 course_root: ".."
 badge: "2n FPB · Grau Bàsic · UD2"
-next_url: "ut0201.md"
+next_url: "ut0201.html"
 next_label: "2.1 ➡️"
 ---
 
@@ -14,11 +14,11 @@ Tipus de cables (UTP, FTP, STP), categories (Cat 5e, 6, 6a), connectors RJ45 i k
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **2.1** | **Tipus de cables de parell trenat i categories** | [**Llegir apartat →**](./ut0201.md) |
-| **2.2** | **Connectors RJ45 i codis de colors T568A i T568B** | [**Llegir apartat →**](./ut0202.md) |
-| **2.3** | **Eines de taller per a cablejat de dades** | [**Llegir apartat →**](./ut0203.md) |
-| **2.4** | **Pràctica pas a pas: Construcció d'un cable directe T568B** | [**Llegir apartat →**](./ut0204.md) |
-| **2.5** | **Diagnòstic de fallades habituals en el conectoritzat** | [**Llegir apartat →**](./ut0205.md) |
+| **2.1** | **Tipus de cables de parell trenat i categories** | [**Llegir apartat →**](./ut0201.html) |
+| **2.2** | **Connectors RJ45 i codis de colors T568A i T568B** | [**Llegir apartat →**](./ut0202.html) |
+| **2.3** | **Eines de taller per a cablejat de dades** | [**Llegir apartat →**](./ut0203.html) |
+| **2.4** | **Pràctica pas a pas: Construcció d'un cable directe T568B** | [**Llegir apartat →**](./ut0204.html) |
+| **2.5** | **Diagnòstic de fallades habituals en el conectoritzat** | [**Llegir apartat →**](./ut0205.html) |
 
 ---
 
