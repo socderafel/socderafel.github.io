@@ -1,306 +1,69 @@
 ---
 layout: default
-title: "Xarxes Locals — UD1 UT01 - Introducció a les xarxes locals, característiques, entorns d’aplicació i components."
+title: "UD1 — Introducció a les Xarxes Locals, Topologies i Mitjans de Transmissió"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD1"
 ---
 
-# UT01 - Introducció a les xarxes locals, característiques, entorns d’aplicació i components.
+# 📘 UD1 — Introducció a les Xarxes Locals, Topologies i Mitjans de Transmissió
 
-
-
----
-
-## 📌 1.1 UT01 - Introducció a les Xarxes
-
-Continguts i activitats didàctiques de **UT01 - Introducció a les Xarxes**.
+La **Unitat Didàctica 1** estableix els fonaments teòrics i físics de les telecomunicacions i la informàtica de xarxa. S'hi analitzen les formes en què els equips s'organitzen espacialment i lògicament, així com els mitjans guiats (coure i fibra) i no guiats (ones electromagnètiques) utilitzats per transportar la informació binària.
 
 ---
 
-## 📌 1.2 Vocabulari de xarxes
+## 🖼️ Infografia Tècnica: Topologies de Xarxa i Mitjans de Transmissió
 
-Continguts i activitats didàctiques de **Vocabulari de xarxes**.
+L'esquema següent sintetitza les principals topologies físiques d'interconnexió i els mitjans de transmissió utilitzats en el desplegament de xarxes corporatives:
 
----
+![Topologies de Xarxa i Mitjans Físics de Transmissió](../img/topologies_xarxa_mitjans.jpg)
 
-## 📌 1.3 Classificació xarxes
+### 🔍 Llegenda Tècnica i Desglossament de l'Esquema:
 
-Continguts i activitats didàctiques de **Classificació xarxes**.
-
----
-
-## 📌 1.4 classificació xarxes
-
-completa aquesta presentació
-
----
-
-## 📌 1.5 Classificació xarxes 2
-
-Activitat Blink | BlinkLearning
-
----
-
-## 📌 1.6 Associacions d'estandards
-
-Ompliu per parelles (o de manera individual) la descripció i la url de la web on es descriu a que es dedica cadascun dels següents organismes d'estandarització. Haureu de googlejar cada organisme i
-
-cercar a la seua web
-
-un apartat on explique
-
-a què es dedica
-
-(sol ser l'apartat
-
-about,
-
-però en algunes potser no estiga allí)
-
-Després classifiqueu-los segons siguen organismes internacionals, europeus o espanyols.
-
-Si ho feu per parelles, poseu el nom dels dos participants.
+#### 1. Topologies de Xarxa (*Network Topologies* - Panell Esquerre)
+1. **Topologia en Estrella (*Star Topology* - 1):**
+   - Tots els dispositius (ordinadors, portàtils, impressores) es connecten directament a un punt central d'interconnexió (un *switch* o commutador de xarxa).
+   - **Avantatge clau:** Si falla un cable individual o un equip client, la resta de la xarxa continua funcionant sense cap afectació.
+   - **Desavantatge:** Si falla l'equip central (el switch), tota la xarxa s'atura (*Single Point of Failure*). És la topologia hegemònica a les xarxes Ethernet modernes.
+2. **Topologia en Bus (*Bus Topology* - 2):**
+   - Els equips es connecten a un únic cable troncal compartit (*backbone*). Als dos extrems del cable cal instal·lar **terminadors resistius de 50 $\Omega$** per absorbir el senyal elèctric i evitar rebots.
+   - **Desavantatge crític:** Si el cable es talla en qualsevol punt, tota la xarxa queda inoperativa. Freqüents col·lisions de dades.
+3. **Topologia en Anell (*Ring Topology* - 3):**
+   - Cada node es connecta exactament a altres dos nodes veïns formant un bucle tancat.
+   - La informació viatja en un únic sentit mitjançant un testimoni especial (**Token Passing** com a IBM Token Ring). Només pot transmetre l'equip que té la possessió del testimoni, eliminant completament les col·lisions.
+4. **Topologia en Malla (*Mesh Topology* - 4):**
+   - Tots els nodes estan connectats directament entre ells (malla completa) o amb múltiples camins alternatius (malla parcial).
+   - **Fórmula de connexions en malla completa:** Per a $N$ nodes es requereixen:
+     $$C = \frac{N(N-1)}{2} \text{ enllaços físics}$$
+   - **Avantatge:** Màxima redundància i tolerància a fallades. Ús típic: Troncal d'Internet, xarxes militars i interconnexió de CPDs.
 
 ---
 
-## 📌 1.7 Diagrama de xarxa
-
-Utilitzant un editor de diagrama online (smartdraw, lucidchart, etc) crea un diagrama de xarxa de la teua fila.
-
-Has de indicar com a mínim els següents elements.
-
-Topologia física i lògica
-
-Elements de la xarxa
-
-Mitjà de transmissió
-
----
-
-## 📌 1.8 Topologies de xarxa
-
-Utilitza un editor de diagrames
-
-visio
-
-per a dibuixar les distintes topologies de xarxa que hem estudiat.
-
-Aplica els noms als principals elements de la xarxa (node, switch, etc.).
-
-Després, fent servir els diagrames que has creat, realitza  una presentació amb
-
-Sway
-
-on has d'afegir els avantatges i desavantatges de cada tipologia de xarxa.
-
-Per última, comparteix amb mi l'enllaç de la presentació
+#### 2. Mitjans Físics de Transmissió (*Physical Transmission Media* - Panell Dret)
+1. **Cable de Parell Trenat de Coure (*Twisted Pair Copper Cable* - 1):**
+   - Format per 4 parells de fils de coure aïllats i trenats entre si per cancel·lar les interferències electromagnètiques (EMI) i la diafonia (*crosstalk*).
+   - Utilitza connectors registrats **RJ-45** (8P8C).
+   - **Categories habituals:** Cat 5e (100 MHz, 1 Gbps a 100 m), **Cat 6** (250 MHz, 1 Gbps / 10 Gbps fins a 55 m), **Cat 6A** (500 MHz, 10 Gbps a 100 m garantits).
+   - Tipus de blindatge: **UTP** (sense apantallament), **FTP** (pantalla global de paper d'alumini), **STP/S-FTP** (mallat metàl·lic i blindatge individual per parell).
+2. **Cable de Fibra Òptica (*Fiber Optic Cable* - 2):**
+   - Transmet polsos de llum a través d'un nucli de silici o vidre ultra-pur, sent completament immune a les interferències elèctriques.
+   - **Fibra Monomode (SMF - Jaqueta groga):** Nucli ultra-estret ($\approx 9\,\mu\text{m}$). Utilitza làser per transmetre un únic feix de llum rectilini. Abast de desenes de quilòmetres.
+   - **Fibra Multimode (MMF - Jaqueta taronja o turquesa aqua OM3/OM4):** Nucli més ample ($50\,\mu\text{m}$ o $62,5\,\mu\text{m}$). Utilitza fonts LED. Abast típic fins a 300-550 metres.
+   - Connectors habituals: **LC** (*Lucent Connector* - compacte de petjada xicoteta), **SC** (*Subscriber Connector* - quadrat d'inserció ràpida) i **ST** (baioneta rodona).
+3. **Transmissió Sense Fil (*Wireless Transmission* - 3):**
+   - Propagació d'ones de ràdio en l'espai mitjançant el protocol IEEE 802.11 (Wi-Fi).
+   - Bandes de freqüència:
+     - **2.4 GHz:** Major abast i millor penetració en parets, però només 3 canals no solapats (1, 6, 11) i molta saturació.
+     - **5 GHz:** Gran amplada de banda, menor interferència, però menor abast davant obstacles.
+     - **6 GHz (Wi-Fi 6E / Wi-Fi 7):** Màxima velocitat d'alta densitat sense congestió de dispositius antics.
 
 ---
 
-## 📌 1.9 Funcionament topologia bus i en anell
-
-https://i.makeagif.com/media/9-22-2024/hsRhGZ.mp4
-
----
-
-## 📌 1.10 Components de les xarxes locals
-
-Imagina que has de muntar una xarxa des de 0 per a 30 ordinadors, un servidor i 5 portàtils.
-
-Elabora un pressupost amb un full de càlcul amb tots els dispositius de xarxa necessaris (punt d'accés, switch, router, 100 metres de cable Ethernet, i 30 connectors rj-45)
-
-Has d'especificar el seu nom, la seua funció, característiques, preu i url
-
----
-
-## 📌 1.11 Treball d'investigació CSMA/CD CSMA/CA
-
-Realitza una investigació del protocol CSMA/CD  i respon a aquestes preguntes
-
-Què és?
-
-Com funciona?
-
-On s'utilitza?
-
-Fica exemples, imatges, vídeos etc.
-
-Fes el mateix amb el protocol CSMA/CA
-
----
-
-## 📌 1.12 Treball xarxes alternatives
-
-Continguts i activitats didàctiques de **Treball xarxes alternatives**.
-
----
-
-## 📌 1.13 Mitjans de transmissió I
-
-Mira el següent
-
-vídeo
-
-i contesta les preguntes adjuntes
-
-1. ¿Qué tipo de canales se mencionan en el video?
-
-a. Solo guiados
-
-b. Solo no guiados
-
-c. Guiados y no guiados
-
-d. Solo aéreos
-
-2. ¿Cuál es la principal función de los medios de transmisión?
-
-a. Almacenar información
-
-b. Permitir el envío de información
-
-c. Proteger la información
-
-d. Aumentar la velocidad de procesamiento
-
-3. ¿Qué tipo de cable se usa comúnmente para conectar un router con un ordenador?
-
-a. Cable coaxial
-
-b. Par trenzado
-
-c. Fibra óptica
-
-d. Cable de alimentación
-
-4. ¿Cuál de los siguientes es un medio de transmisión no guiado?
-
-a. Cable de fibra óptica
-
-b. Ondas de radio
-
-c. Cable coaxial
-
-d. Par trenzado
-
-5. ¿Qué se utiliza para proteger las ondas en una guía de onda?
-
-a. Cables de cobre
-
-b. Aire
-
-c. Tubos huecos
-
-d. Plástico
-
-6. ¿Qué tipo de señal se transmite a través de la fibra óptica?
-
-a. Electricidad
-
-b. Sonido
-
-c. Luz
-
-d. Datos digitales
-
-7. ¿Qué tipo de medios de transmisión requieren más potencia para transmitir?
-
-a. Guiados
-
-b. No guiados
-
-c. Ambos tipos
-
-d. Ninguno
-
-8. ¿Cuál es la frecuencia típica de los ultrasonidos?
-
-a. Menos de 20 KHz
-
-b. Entre 20 KHz y 40 KHz
-
-c. Más de 40 KHz
-
-d. Exactamente 50 KHz
-
-9. ¿Qué pregunta se plantea sobre el teléfono móvil en el video?
-
-a. Si es un medio guiado o no guiado
-
-b. Si es eléctrico o no eléctrico
-
-c. Si es un dispositivo antiguo
-
-d. Si está conectado a Internet
-
-10. ¿Qué pregunta se hace al final del video?
-
-a. Si los ultrasonidos son útiles
-
-b. Si el espectro de frecuencias es amplio
-
-c. Si el espectador se suscribirá al canal
-
-d. Si el video fue interesante
-
----
-
-## 📌 1.14 solucio
-
-c (1:00)
-
-b (1:10)
-
-b (2:15)
-
-b (2:50)
-
-c (3:30)
-
-c (4:00)
-
-b (4:45)
-
-c (5:15)
-
-a (5:50)
-
-c (6:20)
-
----
-
-## 📌 1.15 Mitjans de transmissió II
-
-Completa el document adjunt
-
----
-
-## 📌 1.16 Mitjans de transmissió III
-
-Continguts i activitats didàctiques de **Mitjans de transmissió III**.
-
----
-
-## 📌 1.17 Qüestionari RA1
-
-Continguts i activitats didàctiques de **Qüestionari RA1**.
-
----
-
-## 📌 1.18 Recuperació UT1
-
-Recuperació UT1
-
----
-
-## 📌 1.19 Esquema UT1
-
-Realitza un esquema (escrit per tu mateix) de la Unitat de Treball 1.
-
-L'esquema ha d'ocupar tota la cara d'un full i ha de contindre els apartats més importants de la unitat.
-
----
-
-## 📌 1.20 Qüestionari recuperació
-
-Continguts i activitats didàctiques de **Qüestionari recuperació**.
+## 📑 Continguts i Apartats de la Unitat
+
+| Apartat | Títol | Descripció |
+| :---: | :--- | :--- |
+| **[1.1](./ut0101.md)** | **Introducció a les Xarxes Locals** | Definició, beneficis de la compartició de recursos i components bàsics. |
+| **[1.3](./ut0103.md)** | **Classificació de les Xarxes** | Abast geogràfic (PAN, LAN, CAN, MAN, WAN) i relació funcional (Client-Servidor vs P2P). |
+| **[1.8](./ut0108.md)** | **Topologies Físiques i Lògiques** | Arquitectures d'interconnexió, mètodes d'accés al medi (CSMA/CD vs CSMA/CA). |
+| **[1.10](./ut0110.md)** | **Components de les Xarxes Locals** | Targetes de xarxa (NICs), adreces físiques MAC de 48 bits, i equips de xarxa. |
+| **[1.13](./ut0113.md)** | **Mitjans de Transmissió Físics** | Paràmetres del coure UTP, estàndards TIA-568A/B, fibra òptica i atenuació. |
