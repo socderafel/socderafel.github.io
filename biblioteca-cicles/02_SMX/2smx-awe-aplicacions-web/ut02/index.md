@@ -1,174 +1,120 @@
 ---
 layout: default
-title: "Aplicacions Web — UD2 Tema 4: Implantación, administración y gestión segura de recursos en Moodle"
+title: "Aplicacions Web — UT02 Sistemes Gestors de Continguts (CMS): WordPress"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD2"
+badge: "2n SMX · Grau Mitjà · UT02"
 ---
 
-# UD2 — Tema 4: Implantación, administración y gestión segura de recursos en Moodle
+# UT02 — Sistemes de Gestió de Continguts (CMS): WordPress
 
-
-
----
-
-## 📌 2.1 info
-
-Continguts i activitats didàctiques de **info**.
+Un **Sistema de Gestió de Continguts (CMS - *Content Management System*)** és una plataforma web que permet crear, editar, organitzar i publicar contingut digital a Internet sense que els usuaris o editors necessiten coneixements avançats de programació web o llenguatge SQL.
 
 ---
 
-## 📌 2.2 ra
+## 📌 1. Arquitectura i Separació de Capes d'un CMS
 
-Continguts i activitats didàctiques de **ra**.
+El gran avantatge d'un CMS modern respecte a un lloc web estàtic tradicional és la **desconnexió absoluta entre el contingut, el disseny i la lògica**:
 
----
-
-## 📌 2.3 Àrea de text i multimèdia
-
-Continguts i activitats didàctiques de **Àrea de text i multimèdia**.
-
----
-
-## 📌 2.4 relación tareas con RA2 y RA3
-
-Continguts i activitats didàctiques de **relación tareas con RA2 y RA3**.
-
----
-
-## 📌 2.5 RA2 y RA3
-
-Continguts i activitats didàctiques de **RA2 y RA3**.
+```mermaid
+graph TD
+    subgraph "🏛️ ARQUITECTURA MODULAR DE WORDPRESS"
+        CNT["📄 Contingut Pur<br/>(Articles, pàgines, comentaris)<br/>Desat a la Base de Dades MariaDB"]
+        DIS["🎨 Disseny i Estil Visual<br/>(Fitxers CSS, plantilles PHP)<br/>Controlat pel TEMA (Theme)"]
+        FUN["🧩 Funcionalitats Especials<br/>(Formularis, botigues, seguretat)<br/>Aportades pels CONNECTORS (Plugins)"]
+    end
+    CNT --> WEB["🌐 Pàgina Web Generada Dinàmicament per a l'Usuari"]
+    DIS --> WEB
+    FUN --> WEB
+```
 
 ---
 
-## 📌 2.6 Sistemas de Gestión de Aprendizaje Guía para Administradores (RA2)
+## 📌 2. Creació de la Base de Dades i Usuari a MariaDB
 
-Continguts i activitats didàctiques de **Sistemas de Gestión de Aprendizaje Guía para Administradores (RA2)**.
+Abans de llançar l'assistent d'instal·lació de WordPress, cal crear una base de dades buida amb codificació UTF-8 completa (`utf8mb4`) i un usuari amb permisos exclusius:
 
----
+```sql
+-- Accedir a la consola de MariaDB com a root
+sudo mysql
 
-## 📌 2.7 Gestión de archivos (RA3)
+-- 1. Crear la base de dades
+CREATE DATABASE db_wordpress CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-Continguts i activitats didàctiques de **Gestión de archivos (RA3)**.
+-- 2. Crear l'usuari amb contrasenya robusta
+CREATE USER 'wp_user'@'localhost' IDENTIFIED BY 'ClauMoltSegura2026!';
 
----
+-- 3. Concedir privilegis totals exclusivament sobre aquesta base de dades
+GRANT ALL PRIVILEGES ON db_wordpress.* TO 'wp_user'@'localhost';
 
-## 📌 2.8 4.1.- Actividad_Instalar moddle
-
-WINDOWS 11
-
-https://software.download.prss.microsoft.com/dbazure/Win11_25H2_Spanish_x64.iso?t=94658296-1cac-40ca-b4ce-0671a9d84c9d&P1=1767975393&P2=601&P3=2&P4=Cdre5yzbRqF5q8Sa9NfWlYGrPXwvIsmmYtX%2b3Pj%2fOOLQtKGSG0beOzQQ6Jhmxl10oey2bbmK5cMYFL%2fNoTBrbvpr6tqaK4YNtjC6tF9abaQIScTNHHFiLIFaTeR4s5iWnlVPKS8uXA%2btqtN1yGfD7dqnqP459iFoCQnYtTYj%2f64sbvG3HXXxyc647hEyvfkC2jogAFgn7n9ZktrMuEvvHXOmZkiJL2Qq1ulXU2eCxk3AmgLfT5XHMsPW7bgl%2fQ054%2fV9mKUBYhrUroijDu0e%2fMG4pkJaA24%2bLIF3jEZYvNDf%2fJvGMZ1jFTPfXguLE0NXR72uFyBTZsRvnbdUupMdpQ%3d%3d
-
-https://software.download.prss.microsoft.com/dbazure/Win10_22H2_Spanish_x64v1.iso?t=b10e67df-9363-4265-ae5c-c5f15c3219ff&P1=1767978028&P2=601&P3=2&P4=PZ9sl7KSbl2M%2ffi%2bsV4vYUto0HN%2fU1dQIWcc4hrXW2Lugd0%2bYV0Rf5gB9yuC1Pc0%2b5etZ22Ww5yFCj005H7UKn6o6LaDvoSee8KwSDOJEjERHlSQ5ufgEZwDIPVlygLpFX1SLAn465a79fhfW1rQUJ8LPPdKV3ZH7cMmAb15l%2bv1AuW476liW%2fthp0C0BDtmkuEYToLta1x6UxFr9RoP6IU2MMnY0wNr61u43u4hdspqRfa0DfLNgC6uTaCAzGLp6o2BZyZzhe1EE8BnR%2bDj1xPTAcG4N0BYpVMrsVcO3tvaYQPli9Jwg3GyD%2felhWN7u9PlZeyVG6nrDisVsKBCFA%3d%3d
-
-XAMP
-
-https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe
-
-MODDLE
-
-https://download.moodle.org/releases/latest/
-
-VERSIÓN UBUNTU
+-- 4. Aplicar canvis i sortir
+FLUSH PRIVILEGES;
+EXIT;
+```
 
 ---
 
-## 📌 2.9 OVA CON WINDOWS 10 Y MODDLE Y XAMPP
+## 📌 3. Desplegament de Fitxers i Permisos del Sistema
 
-Continguts i activitats didàctiques de **OVA CON WINDOWS 10 Y MODDLE Y XAMPP**.
+```bash
+# 1. Descarregar l'última versió en català/valencià
+cd /tmp
+wget https://ca.wordpress.org/latest-ca.tar.gz
 
----
+# 2. Descomprimir i moure a l'arrel de publicació d'Apache
+tar -xzvf latest-ca.tar.gz
+sudo mv wordpress /var/www/wordpress
 
-## 📌 2.10 Construyendo Tu Moodle Guía Práctica
+# 3. Assignar la propietat a l'usuari del servidor web (www-data)
+sudo chown -R www-data:www-data /var/www/wordpress
 
-Continguts i activitats didàctiques de **Construyendo Tu Moodle Guía Práctica**.
+# 4. Establir permisos segurs (directoris 755, fitxers 644)
+sudo find /var/www/wordpress/ -type d -exec chmod 755 {} \;
+sudo find /var/www/wordpress/ -type f -exec chmod 644 {} \;
+```
 
----
+### Configuració del Virtual Host a `/etc/apache2/sites-available/wordpress.conf`:
+```apache
+<VirtualHost *:80>
+    ServerName wordpress.internal
+    DocumentRoot /var/www/wordpress
 
-## 📌 2.11 4.2.- Actividad_Jerarquia
+    <Directory /var/www/wordpress>
+        Options FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
 
-Continguts i activitats didàctiques de **4.2.- Actividad_Jerarquia**.
+    ErrorLog ${APACHE_LOG_DIR}/wordpress_error.log
+    CustomLog ${APACHE_LOG_DIR}/wordpress_access.log combined
+</VirtualHost>
+```
 
----
+```bash
+# Habilitar el mòdul de reescriptura d'URLs, el lloc i reiniciar Apache
+sudo a2enmod rewrite
+sudo a2ensite wordpress.conf
+sudo systemctl restart apache2
+```
 
-## 📌 2.12 De Genérico a Genial Personalización Moodle
-
-Continguts i activitats didàctiques de **De Genérico a Genial Personalización Moodle**.
-
----
-
-## 📌 2.13 4.3.- Actividad_Personalizar_CSS
-
-Continguts i activitats didàctiques de **4.3.- Actividad_Personalizar_CSS**.
-
----
-
-## 📌 2.14 Dominando Moodle Gestión Estratégica de Usuarios
-
-Continguts i activitats didàctiques de **Dominando Moodle Gestión Estratégica de Usuarios**.
-
----
-
-## 📌 2.15 4.4.- Actividad_usuarios
-
-Continguts i activitats didàctiques de **4.4.- Actividad_usuarios**.
-
----
-
-## 📌 2.16 Silencio a Dinamismo Comunicación Moodle
-
-Continguts i activitats didàctiques de **Silencio a Dinamismo Comunicación Moodle**.
-
----
-
-## 📌 2.17 SGA Backups y Restauración Plan de Contingencia
-
-Continguts i activitats didàctiques de **SGA Backups y Restauración Plan de Contingencia**.
+Un cop configurat, s'accedeix amb el navegador a `http://wordpress.internal/` i s'omple l'assistent web introduint el nom de la base de dades (`db_wordpress`), usuari (`wp_user`) i contrasenya. Aquest procés crea automàticament el fitxer clau **`wp-config.php`** i les 12 taules originals a la base de dades.
 
 ---
 
-## 📌 2.18 Análisis de Datos El Administrador Estratega
+## 📌 4. Gestió d'Usuaris, Rols i Permisos
 
-Continguts i activitats didàctiques de **Análisis de Datos El Administrador Estratega**.
+WordPress disposa d'un sistema de control d'accés basat en rols (*RBAC - Role-Based Access Control*):
 
----
-
-## 📌 2.19 Seguridad Integridad Datos SGA
-
-Continguts i activitats didàctiques de **Seguridad Integridad Datos SGA**.
-
----
-
-## 📌 2.20 4.6.- Actividad_Copia_Seguridad
-
-Continguts i activitats didàctiques de **4.6.- Actividad_Copia_Seguridad**.
+| Rol d'Usuari | Capacitats i Permisos | Ús Habitual |
+| :--- | :--- | :--- |
+| **Administrador** | Accés complet a tots els paràmetres, usuaris, temes i connectors. | Tècnics de sistemes i administradors web. |
+| **Editor** | Pot escriure, revisar, publicar i esborrar continguts de **qualsevol usuari**. | Caps de redacció o professors responsables. |
+| **Autor** | Pot redactar, pujar imatges i publicar **només els seus propis articles**. | Redactors i periodistes de la plantilla. |
+| **Col·laborador** | Pot escriure i editar els seus propis articles, però **no pot publicar-los** (requereix revisió prèvia d'un editor). | Col·laboradors externs puntuals. |
+| **Subscriptor** | Només pot consultar continguts privats i modificar el seu propi perfil. | Clients o alumnes registrats. |
 
 ---
 
-## 📌 2.21 Dominio del Flujo de Contenidos Moodle
+## 📌 5. Diferència Didàctica: Entrades (*Posts*) vs Pàgines (*Pages*)
 
-Continguts i activitats didàctiques de **Dominio del Flujo de Contenidos Moodle**.
-
----
-
-## 📌 2.22 Test_SGA
-
-Continguts i activitats didàctiques de **Test_SGA**.
-
----
-
-## 📌 2.23 ---- MATERIAL COMPLEMENTARI -----
-
----- MATERIAL COMPLEMENTARI -----
-
----
-
-## 📌 2.24 Tema 4: Sistemas de gestión de aprendizaje a distancia
-
-Continguts i activitats didàctiques de **Tema 4: Sistemas de gestión de aprendizaje a distancia**.
-
----
-
-## 📌 2.25 Actividad_Personalizar_Temas
-
-Continguts i activitats didàctiques de **Actividad_Personalizar_Temas**.
+- **Entrades (*Posts*):** Són continguts dinàmics associats a una data de publicació, autor i categories. Apareixen al blog ordenades en ordre cronològic invers i admeten comentaris dels lectors.
+- **Pàgines estàtiques (*Pages*):** Són continguts atemporals i jeràrquics (poden tindre pàgines mare i filles). S'utilitzen per a la pàgina d'Inici (*Landing Page*), Qui som, On som o Avís Legal.

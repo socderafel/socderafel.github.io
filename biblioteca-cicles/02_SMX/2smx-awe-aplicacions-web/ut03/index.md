@@ -1,188 +1,107 @@
 ---
 layout: default
-title: "Aplicacions Web — UD3 Tema 3: Gestor de Contenidos y Archivos"
+title: "Aplicacions Web — UT03 Plataformes de Formació Virtual (LMS): Moodle"
 course_root: ".."
-badge: "2n SMX · Grau Mitjà · UD3"
+badge: "2n SMX · Grau Mitjà · UT03"
 ---
 
-# UD3 — Tema 3: Gestor de Contenidos y Archivos
+# UT03 — Plataformes de Formació Virtual (LMS): Moodle
 
-
-
----
-
-## 📌 3.1 Infografia
-
-Continguts i activitats didàctiques de **Infografia**.
+Un **Sistema de Gestió de l'Aprenentatge (LMS - *Learning Management System*)** és una aplicació web dissenyada per a administrar, distribuir i avaluar processos formatius en línia o com a suport docent presencial. La plataforma més estesa en l'àmbit educatiu mundial i a la Comunitat Valenciana (a través del portal oficial *Aules*) és **Moodle**.
 
 ---
 
-## 📌 3.2 NoteBookLM
+## 📌 1. Arquitectura Tècnica Específica de Moodle
 
-Continguts i activitats didàctiques de **NoteBookLM**.
+A diferència d'un CMS com WordPress on tot s'ubica sota l'arrel web, Moodle imposa una arquitectura de fitxers estricta per a protegir la privadesa de les dades dels alumnes:
 
----
+```mermaid
+graph TD
+    subgraph "SERVER FILESYSTEM"
+        PUB["📂 /var/www/moodle (Arrel Pública Web)<br/>Fitxers PHP de la plataforma (index.php, admin, mod)<br/>Accessible des d'Internet"]
+        DATA["🔒 /var/moodledata (Directori de Dades Privat)<br/>Tasques pujades, còpies de seguretat, sessions<br/>TOTALMENT PROHIBIT l'accés directe des del navegador!"]
+    end
+    AP["🖥️ Servidor Apache"] --> PUB
+    PUB -->|Llegeix/Escriu internament| DATA
+```
 
-## 📌 3.3 How to Install WordPress on Ubuntu 24.04 or 22.04 LTS Server
-
-Continguts i activitats didàctiques de **How to Install WordPress on Ubuntu 24.04 or 22.04 LTS Server**.
-
----
-
-## 📌 3.4 Instalación
-
-Continguts i activitats didàctiques de **Instalación**.
-
----
-
-## 📌 3.5 Tarea_CA1.a Instalación Wordpress
-
-Continguts i activitats didàctiques de **Tarea_CA1.a Instalación Wordpress**.
+> [!CAUTION]
+> El directori **`moodledata` mai s'ha d'ubicar dins de `/var/www/html`**. Si fóra accessible per HTTP, qualsevol persona podria descarregar exàmens confidencials o documents personals d'altres usuaris sense autenticar-se.
 
 ---
 
-## 📌 3.6 Tema 3: Gestor de contenidos
+## 📌 2. Requisits Prèvis i Creació de la Base de Dades
 
-Continguts i activitats didàctiques de **Tema 3: Gestor de contenidos**.
+Moodle requereix mòduls PHP addicionals d'internacionalització i tractament XML:
 
----
+```bash
+# Instal·lar extensions indispensables per a Moodle
+sudo apt update && sudo apt install php-intl php-soap php-xmlrpc php-gd php-zip php-xml php-mbstring -y
+```
 
-## 📌 3.7 CMS
+### Creació de la Base de Dades a MariaDB:
+```sql
+sudo mysql
 
-Continguts i activitats didàctiques de **CMS**.
+-- Crear base de dades amb format UTF-8 complet
+CREATE DATABASE db_moodle CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
----
+-- Crear usuari i concedir privilegis
+CREATE USER 'moodle_user'@'localhost' IDENTIFIED BY 'MoodleClau2026!';
+GRANT ALL PRIVILEGES ON db_moodle.* TO 'moodle_user'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
 
-## 📌 3.8 Tema 3 interactivo
+### Configuració de Directoris i Permisos:
+```bash
+# Crear el directori de dades fora de l'arrel web i donar permisos a Apache
+sudo mkdir -p /var/moodledata
+sudo chown -R www-data:www-data /var/moodledata
+sudo chmod -R 775 /var/moodledata
 
-Continguts i activitats didàctiques de **Tema 3 interactivo**.
-
----
-
-## 📌 3.9 De lienzo en blanco a hogar digital
-
-@@PLUGINFILE@@/De_lienzo_en_blanco_a_hogar_digital.mp4
-
----
-
-## 📌 3.10 WordPress de Cero a Profesional
-
-Continguts i activitats didàctiques de **WordPress de Cero a Profesional**.
-
----
-
-## 📌 3.11 https://tudominio.com/login https://tudominio.com/...
-
-https://tudominio.com/
-
-login
-
-https://tudominio.com/
-
-admin
-
-https://tudominio.com/
-
-wp-login.php
-
-https://tudominio.com/
-
-wp-login/
+# Descarregar i descomprimir Moodle a /var/www/moodle
+sudo chown -R www-data:www-data /var/www/moodle
+```
 
 ---
 
-## 📌 3.12 Tarea_CA1.a
+## 📌 3. Estructura Acadèmica: Categories i Cursos
 
-Se debe entregar en formato pdf y el nombre de la tarea debe ser:
+A Moodle la informació s'organitza en una jerarquia d'arbres acadèmics:
 
-Nombre_CA1_a
-
----
-
-## 📌 3.13 Gestion de usuarios y roles---
-
-Continguts i activitats didàctiques de **Gestion de usuarios y roles---**.
-
----
-
-## 📌 3.14 Gestion de usuarios y roles
-
-Continguts i activitats didàctiques de **Gestion de usuarios y roles**.
+```mermaid
+graph TD
+    CAT1["🏫 Categoria: Cicles Formatius"] --> CAT2["📂 Subcategoria: Grau Mitjà SMX"]
+    CAT2 --> CURS1["📘 Curs: Aplicacions Web (2SMX)"]
+    CAT2 --> CURS2["📘 Curs: Serveis en Xarxa (2SMX)"]
+    CURS1 --> SEC1["📌 Tema 1: Pila LAMP"]
+    CURS1 --> SEC2["📌 Tema 2: WordPress"]
+    CURS1 --> SEC3["📌 Tema 3: Moodle"]
+```
 
 ---
 
-## 📌 3.15 Actividad_1_c - Tema Wordpress
+## 📌 4. Recursos vs Activitats Avaluables
 
-Se debe entregar una captura de la página y se mostrará al profesor como ha quedado el sitio web, para que lo pueda evaluar.
+Dins d'un curs de Moodle, el professorat pot afegir dos tipus d'elements:
 
----
-
-## 📌 3.16 Guia Wordpress
-
-Continguts i activitats didàctiques de **Guia Wordpress**.
-
----
-
-## 📌 3.17 https://wordpress.com/es/support/menus/
-
-https://wordpress.com/es/support/menus/
+| Tipus d'Element | Descripció Didàctica | Exemples Clau |
+| :--- | :--- | :--- |
+| **Recursos (*Resources*)** | Elements passius d'estudi que l'alumnat consulta, llegeix o descarrega. No generen nota numèrica directa. | **Fitxer (PDF/Word)**, **Carpeta de documents**, **Etiqueta informativa**, **Pàgina web** i **Enllaç URL**. |
+| **Activitats (*Activities*)** | Elements interactius on l'alumnat participa i que es connecten automàticament al **Llibre de Qualificacions (*Gradebook*)**. | **Tasca (*Assignment*)** (lliurament d'arxius), **Qüestionari (*Quiz*)** (autoavaluació tipus test), **Fòrum**, **Glossari**. |
 
 ---
 
-## 📌 3.18 CSS
+## 📌 5. Mètodes de Matrícula i Rols en Moodle
 
-Continguts i activitats didàctiques de **CSS**.
+### Rols Principals:
+- **Administrador del Lloc:** Gestió global de servidors, connectors i comptes.
+- **Professor:** Pot afegir recursos, crear tasques, matricular estudiants i posar notes.
+- **Professor sense permís d'edició:** Pot avaluar estudiants però no pot canviar l'estructura del curs.
+- **Estudiant:** Pot accedir als materials i enviar tasques.
 
----
-
-## 📌 3.19 Chuleta_CSS
-
-Continguts i activitats didàctiques de **Chuleta_CSS**.
-
----
-
-## 📌 3.20 Tarea_Extra_CSS
-
-Continguts i activitats didàctiques de **Tarea_Extra_CSS**.
-
----
-
-## 📌 3.21 Actividad_Actualizar CA1_E
-
-Entregar en pdf
-
----
-
-## 📌 3.22 Actividad CA1.f: Instalación y Configuración de Módulos Avanzados y Menús en WordPress
-
-Continguts i activitats didàctiques de **Actividad CA1.f: Instalación y Configuración de Módulos Avanzados y Menús en WordPress**.
-
----
-
-## 📌 3.23 Actividad_1_f
-
-Se debe realizar antes de la clase del /2024
-
----
-
-## 📌 3.24 Actividad CA1_g: Activación y Configuración de Mecanismos de Seguridad en WordPress
-
-Continguts i activitats didàctiques de **Actividad CA1_g: Activación y Configuración de Mecanismos de Seguridad en WordPress**.
-
----
-
-## 📌 3.25 Actividad_CA1_g
-
-Se revisará el lunes /2024
-
----
-
-## 📌 3.26 Actividad CA1_j: Realización de Copias de Seguridad de los Contenidos en WordPress
-
-Continguts i activitats didàctiques de **Actividad CA1_j: Realización de Copias de Seguridad de los Contenidos en WordPress**.
-
----
-
-## 📌 3.27 Actividad_Copia_Seguridad
-
-Continguts i activitats didàctiques de **Actividad_Copia_Seguridad**.
+### Mètodes de Matrícula:
+1. **Matrícula manual:** El docent afegeix els estudiants un a un o mitjançant fitxer massiu CSV.
+2. **Autoinscripció amb clau:** L'estudiant s'inscriu introduint una contrasenya de curs proporcionada pel docent el primer dia de classe.
+3. **Sincronització externa LDAP / Active Directory:** Els usuaris es validen automàticament contra el servidor corporatiu del centre educatiu sense duplicar contrasenyes.
