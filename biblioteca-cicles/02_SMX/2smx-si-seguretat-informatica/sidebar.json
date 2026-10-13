@@ -1,527 +1,527 @@
-{
-  "title": "🛡️ Seguretat Informàtica — 2n SMX · Grau Mitjà",
-  "home": {
-    "label": "🏠 Inici Seguretat Informàtica",
-    "href": "index.html"
-  },
-  "units": [
-    {
-      "summary": "UD1 — Presentación del módulo Seguridad Informática.",
-      "items": [
-        {
-          "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "1.1 Contenidos",
-          "href": "./ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Presentació Inici de Curs",
-          "href": "./ut01/ut0102.html"
-        },
-        {
-          "label": "1.3 Qúestionari Inici de Curs amb respostes",
-          "href": "./ut01/ut0103.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD2 — UT. 1 - Introducción a la seguridad Informática",
-      "items": [
-        {
-          "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "2.1 Contenidos",
-          "href": "./ut02/ut0201.html"
-        },
-        {
-          "label": "2.2 Enlaces de interés",
-          "href": "./ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 UT. 1 - Introducción a la seguridad informática",
-          "href": "./ut02/ut0203.html"
-        },
-        {
-          "label": "2.4 Contenidos (còpia)",
-          "href": "./ut02/ut0204.html"
-        },
-        {
-          "label": "2.5 Tasca 1 - RA1 CE (A, B, C, D)",
-          "href": "./ut02/ut0205.html"
-        },
-        {
-          "label": "2.6 Tasca 2 - RA1 CE (E, F, G, H, I)",
-          "href": "./ut02/ut0206.html"
-        },
-        {
-          "label": "2.7 Autoevaluacion - incibe",
-          "href": "./ut02/ut0207.html"
-        },
-        {
-          "label": "2.8 Preguntas tipo test - kahoot",
-          "href": "./ut02/ut0208.html"
-        },
-        {
-          "label": "2.9 linea (còpia)",
-          "href": "./ut02/ut0209.html"
-        },
-        {
-          "label": "2.10 Contenidos (còpia) (còpia)",
-          "href": "./ut02/ut0210.html"
-        },
-        {
-          "label": "2.11 Incibe",
-          "href": "./ut02/ut0211.html"
-        },
-        {
-          "label": "2.12 ¿Qué es incibe?",
-          "href": "./ut02/ut0212.html"
-        },
-        {
-          "label": "2.13 CSIRT-CV",
-          "href": "./ut02/ut0213.html"
-        },
-        {
-          "label": "2.14 ¿Qué es CSIRT-CV?",
-          "href": "./ut02/ut0214.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD3 — 1ª Eval - RA_1 UT. 2 - Medidas de seguridad pasiva",
-      "items": [
-        {
-          "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "3.1 Contenidos",
-          "href": "./ut03/ut0301.html"
-        },
-        {
-          "label": "3.2 UT. 2 - Medidas de seguridad pasiva",
-          "href": "./ut03/ut0302.html"
-        },
-        {
-          "label": "3.3 Enlaces de interés",
-          "href": "./ut03/ut0303.html"
-        },
-        {
-          "label": "3.4 Contenidos (còpia)",
-          "href": "./ut03/ut0304.html"
-        },
-        {
-          "label": "3.5 UT. 2 - Tarea 1 - RA1 CE Actividad 1",
-          "href": "./ut03/ut0305.html"
-        },
-        {
-          "label": "3.6 UT. 2 - Tarea 2 - RA1 CE Actividad 2",
-          "href": "./ut03/ut0306.html"
-        },
-        {
-          "label": "3.7 UT. 2 - Tarea 4 - RA2 CE - Actividad 4",
-          "href": "./ut03/ut0307.html"
-        },
-        {
-          "label": "3.8 UT. 2 - Tarea 1 - RA2 CEa",
-          "href": "./ut03/ut0308.html"
-        },
-        {
-          "label": "3.9 UT. 2 - Tarea 2 - RA1 CEb",
-          "href": "./ut03/ut0309.html"
-        },
-        {
-          "label": "3.10 UT. 2 - Tarea 3 - RA1 CEc",
-          "href": "./ut03/ut0310.html"
-        },
-        {
-          "label": "3.11 UT. 2 - Tarea 4 - RA1 CEd",
-          "href": "./ut03/ut0311.html"
-        },
-        {
-          "label": "3.12 UT. 2 - Tarea 5 - RA1 CEe",
-          "href": "./ut03/ut0312.html"
-        },
-        {
-          "label": "3.13 UT. 2 - Tarea 6- RA2 CEf",
-          "href": "./ut03/ut0313.html"
-        },
-        {
-          "label": "3.14 UT. 2 - Tarea 7 - RA2 CEh",
-          "href": "./ut03/ut0314.html"
-        },
-        {
-          "label": "3.15 UT. 2 - Tarea 8- RA2 CEi",
-          "href": "./ut03/ut0315.html"
-        },
-        {
-          "label": "3.16 linea (còpia)",
-          "href": "./ut03/ut0316.html"
-        },
-        {
-          "label": "3.17 Contenidos",
-          "href": "./ut03/ut0317.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD4 — 1ª Eval - RA_1 UT.3 - Seguridad Pasiva en SI",
-      "items": [
-        {
-          "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "4.1 Contenidos",
-          "href": "./ut04/ut0401.html"
-        },
-        {
-          "label": "4.2 UT. 3 - Seguridad pasiva de los equipos - Almacenamiento",
-          "href": "./ut04/ut0402.html"
-        },
-        {
-          "label": "4.3 Enlaces de interés",
-          "href": "./ut04/ut0403.html"
-        },
-        {
-          "label": "4.4 Contenidos (còpia)",
-          "href": "./ut04/ut0404.html"
-        },
-        {
-          "label": "4.5 UT. 3 - Tarea 1 - RA2 CE A",
-          "href": "./ut04/ut0405.html"
-        },
-        {
-          "label": "4.6 linea (còpia)",
-          "href": "./ut04/ut0406.html"
-        },
-        {
-          "label": "4.7 Contenidos",
-          "href": "./ut04/ut0407.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD5 — 1ª Eval - RA_3 UT. 4 - Política de contraseñas.",
-      "items": [
-        {
-          "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "5.1 Contenidos",
-          "href": "./ut05/ut0501.html"
-        },
-        {
-          "label": "5.2 UT. 4 - Política de contraseñas",
-          "href": "./ut05/ut0502.html"
-        },
-        {
-          "label": "5.3 Enlaces de interés",
-          "href": "./ut05/ut0503.html"
-        },
-        {
-          "label": "5.4 Contenidos (còpia)",
-          "href": "./ut05/ut0504.html"
-        },
-        {
-          "label": "5.5 linea (còpia)",
-          "href": "./ut05/ut0505.html"
-        },
-        {
-          "label": "5.6 Contenidos",
-          "href": "./ut05/ut0506.html"
-        },
-        {
-          "label": "5.7 Hiren's Boot Sesion 1",
-          "href": "./ut05/ut0507.html"
-        },
-        {
-          "label": "5.8 Hiren's Boot Sesion 2",
-          "href": "./ut05/ut0508.html"
-        },
-        {
-          "label": "5.9 Hiren's Boot Sesion 3",
-          "href": "./ut05/ut0509.html"
-        },
-        {
-          "label": "5.10 Hiren's Boot Sesion 4",
-          "href": "./ut05/ut0510.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD6 — 1ª Eval - RA_5 Gestión de Almacenamiento",
-      "items": [
-        {
-          "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "6.1 Contenidos",
-          "href": "./ut06/ut0601.html"
-        },
-        {
-          "label": "6.2 UT. 5 - Sistemas de almacenamiento.",
-          "href": "./ut06/ut0602.html"
-        },
-        {
-          "label": "6.3 Enlaces de interés",
-          "href": "./ut06/ut0603.html"
-        },
-        {
-          "label": "6.4 Contenidos (còpia)",
-          "href": "./ut06/ut0604.html"
-        },
-        {
-          "label": "6.5 UT. 5 - Tarea 1 - RA2 CEg - Captures UD 05",
-          "href": "./ut06/ut0605.html"
-        },
-        {
-          "label": "6.6 Presentació RA_5 Copias de Seguridad",
-          "href": "./ut06/ut0606.html"
-        },
-        {
-          "label": "6.7 UT. 5 - Tarea 2 - RA2 CEj",
-          "href": "./ut06/ut0607.html"
-        },
-        {
-          "label": "6.8 linea (còpia)",
-          "href": "./ut06/ut0608.html"
-        },
-        {
-          "label": "6.9 Contenidos",
-          "href": "./ut06/ut0609.html"
-        },
-        {
-          "label": "6.10 RAID",
-          "href": "./ut06/ut0610.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD7 — 2ª Eval - RA_2 - Mecanismos de seguridad activa",
-      "items": [
-        {
-          "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "7.1 Contenidos",
-          "href": "./ut07/ut0701.html"
-        },
-        {
-          "label": "7.2 UT. 6 - Seguridad activa",
-          "href": "./ut07/ut0702.html"
-        },
-        {
-          "label": "7.3 UT. 6.1 - Planes de contingencia y medidas ante fallos de seguridad",
-          "href": "./ut07/ut0703.html"
-        },
-        {
-          "label": "7.4 UT. 6.2 - Política de aplicaciones permitidas",
-          "href": "./ut07/ut0704.html"
-        },
-        {
-          "label": "7.5 Enlaces de interés",
-          "href": "./ut07/ut0705.html"
-        },
-        {
-          "label": "7.6 Contenidos (còpia)",
-          "href": "./ut07/ut0706.html"
-        },
-        {
-          "label": "7.7 UT. 6 - Tarea 1 - RA3 CEa",
-          "href": "./ut07/ut0707.html"
-        },
-        {
-          "label": "7.8 UT. 6 - Tarea 2 - RA3 CEb",
-          "href": "./ut07/ut0708.html"
-        },
-        {
-          "label": "7.9 UT. 6 - Tarea 3 - RA3 CEc",
-          "href": "./ut07/ut0709.html"
-        },
-        {
-          "label": "7.10 UT. 6 - Tarea 4 - RA3 CEd",
-          "href": "./ut07/ut0710.html"
-        },
-        {
-          "label": "7.11 UT. 6 - Tarea 5 - RA3 CEe",
-          "href": "./ut07/ut0711.html"
-        },
-        {
-          "label": "7.12 UT. 6 - Tarea 6 - RA3 CEf",
-          "href": "./ut07/ut0712.html"
-        },
-        {
-          "label": "7.13 linea (còpia)",
-          "href": "./ut07/ut0713.html"
-        },
-        {
-          "label": "7.14 Contenidos",
-          "href": "./ut07/ut0714.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD8 — 2ª Eval - RA_3 - Seguridad en redes",
-      "items": [
-        {
-          "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "8.1 Contenidos",
-          "href": "./ut08/ut0801.html"
-        },
-        {
-          "label": "8.2 UT. 7 - Criptografía",
-          "href": "./ut08/ut0802.html"
-        },
-        {
-          "label": "8.3 Enlaces de interés",
-          "href": "./ut08/ut0803.html"
-        },
-        {
-          "label": "8.4 Contenidos (còpia)",
-          "href": "./ut08/ut0804.html"
-        },
-        {
-          "label": "8.5 UT. 7 - Tarea 1 - RA4 CEa",
-          "href": "./ut08/ut0805.html"
-        },
-        {
-          "label": "8.6 UT. 7 - Tarea 2 - RA4 CEd",
-          "href": "./ut08/ut0806.html"
-        },
-        {
-          "label": "8.7 UT. 7 - Tarea 3 - RA4 CEc",
-          "href": "./ut08/ut0807.html"
-        },
-        {
-          "label": "8.8 UT. 7 - Tarea 4 - RA4 CEfg",
-          "href": "./ut08/ut0808.html"
-        },
-        {
-          "label": "8.9 Qüestionari - RA4 CEfg",
-          "href": "./ut08/ut0809.html"
-        },
-        {
-          "label": "8.10 UT. 7 - Tarea 5 - RA4 CEb",
-          "href": "./ut08/ut0810.html"
-        },
-        {
-          "label": "8.11 UT. 7 - Tarea 6 - RA4 CEh",
-          "href": "./ut08/ut0811.html"
-        },
-        {
-          "label": "8.12 Qüestionari - RA4 CEh",
-          "href": "./ut08/ut0812.html"
-        },
-        {
-          "label": "8.13 UT. 7 - Tarea 7 - RA4 CEe",
-          "href": "./ut08/ut0813.html"
-        },
-        {
-          "label": "8.14 linea (còpia)",
-          "href": "./ut08/ut0814.html"
-        },
-        {
-          "label": "8.15 Contenidos",
-          "href": "./ut08/ut0815.html"
-        },
-        {
-          "label": "8.16 Wireshark hoja de comandos",
-          "href": "./ut08/ut0816.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD9 — 3ª Eval - RA_4 UT. 8 - Legislación y normativa",
-      "items": [
-        {
-          "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "./ut09/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "9.1 Contenidos",
-          "href": "./ut09/ut0901.html"
-        },
-        {
-          "label": "9.2 Enlaces de interés",
-          "href": "./ut09/ut0902.html"
-        },
-        {
-          "label": "9.3 Contenidos (còpia)",
-          "href": "./ut09/ut0903.html"
-        },
-        {
-          "label": "9.4 UT. 8  - Tarea 1 - RA5 CEab",
-          "href": "./ut09/ut0904.html"
-        },
-        {
-          "label": "9.5 Presentación - Tarea 1",
-          "href": "./ut09/ut0905.html"
-        },
-        {
-          "label": "9.6 UT. 8  - Tarea 2 - RA5 CEcd",
-          "href": "./ut09/ut0906.html"
-        },
-        {
-          "label": "9.7 Presentación - Tarea 2",
-          "href": "./ut09/ut0907.html"
-        },
-        {
-          "label": "9.8 UT. 8  - Tarea 3 - RA5 CEe",
-          "href": "./ut09/ut0908.html"
-        },
-        {
-          "label": "9.9 Presentación - Tarea 3",
-          "href": "./ut09/ut0909.html"
-        },
-        {
-          "label": "9.10 Cuestionario - Tareas 1,2,3",
-          "href": "./ut09/ut0910.html"
-        },
-        {
-          "label": "9.11 UT. 8  - Tarea 4 - RA5 CEf",
-          "href": "./ut09/ut0911.html"
-        },
-        {
-          "label": "9.12 linea (còpia)",
-          "href": "./ut09/ut0912.html"
-        },
-        {
-          "label": "9.13 Contenidos",
-          "href": "./ut09/ut0913.html"
-        },
-        {
-          "label": "9.14 Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.",
-          "href": "./ut09/ut0914.html"
-        },
-        {
-          "label": "9.15 REGLAMENTO (UE) 2016/679  General de Protección de Datos",
-          "href": "./ut09/ut0915.html"
-        },
-        {
-          "label": "9.16 Ley de Servicios de la Sociedad de la Información",
-          "href": "./ut09/ut0916.html"
-        }
-      ]
-    }
-  ]
+﻿{
+    "title":  "🛡️ Seguretat Informàtica — 2n SMX · Grau Mitjà",
+    "home":  {
+                 "label":  "🏠 Inici Seguretat Informàtica",
+                 "href":  "index.html"
+             },
+    "units":  [
+                  {
+                      "summary":  "UD1 — Presentació i Fonaments del Mòdul",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD1 Completa (1 pÃ gina)",
+                                        "href":  "./ut01/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "1.1 Contenidos",
+                                        "href":  "./ut01/ut0101.html"
+                                    },
+                                    {
+                                        "label":  "1.2 PresentaciÃ³ Inici de Curs",
+                                        "href":  "./ut01/ut0102.html"
+                                    },
+                                    {
+                                        "label":  "1.3 QÃºestionari Inici de Curs amb respostes",
+                                        "href":  "./ut01/ut0103.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD2 — Principis de Seguretat i Gestió de Riscos",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD2 Completa (1 pÃ gina)",
+                                        "href":  "./ut02/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "2.1 Contenidos",
+                                        "href":  "./ut02/ut0201.html"
+                                    },
+                                    {
+                                        "label":  "2.2 Enlaces de interÃ©s",
+                                        "href":  "./ut02/ut0202.html"
+                                    },
+                                    {
+                                        "label":  "2.3 UT. 1 - IntroducciÃ³n a la seguridad informÃ¡tica",
+                                        "href":  "./ut02/ut0203.html"
+                                    },
+                                    {
+                                        "label":  "2.4 Contenidos (cÃ²pia)",
+                                        "href":  "./ut02/ut0204.html"
+                                    },
+                                    {
+                                        "label":  "2.5 Tasca 1 - RA1 CE (A, B, C, D)",
+                                        "href":  "./ut02/ut0205.html"
+                                    },
+                                    {
+                                        "label":  "2.6 Tasca 2 - RA1 CE (E, F, G, H, I)",
+                                        "href":  "./ut02/ut0206.html"
+                                    },
+                                    {
+                                        "label":  "2.7 Autoevaluacion - incibe",
+                                        "href":  "./ut02/ut0207.html"
+                                    },
+                                    {
+                                        "label":  "2.8 Preguntas tipo test - kahoot",
+                                        "href":  "./ut02/ut0208.html"
+                                    },
+                                    {
+                                        "label":  "2.9 linea (cÃ²pia)",
+                                        "href":  "./ut02/ut0209.html"
+                                    },
+                                    {
+                                        "label":  "2.10 Contenidos (cÃ²pia) (cÃ²pia)",
+                                        "href":  "./ut02/ut0210.html"
+                                    },
+                                    {
+                                        "label":  "2.11 Incibe",
+                                        "href":  "./ut02/ut0211.html"
+                                    },
+                                    {
+                                        "label":  "2.12 Â¿QuÃ© es incibe?",
+                                        "href":  "./ut02/ut0212.html"
+                                    },
+                                    {
+                                        "label":  "2.13 CSIRT-CV",
+                                        "href":  "./ut02/ut0213.html"
+                                    },
+                                    {
+                                        "label":  "2.14 Â¿QuÃ© es CSIRT-CV?",
+                                        "href":  "./ut02/ut0214.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD3 — Seguretat Física i Protecció de les Instal·lacions",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD3 Completa (1 pÃ gina)",
+                                        "href":  "./ut03/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "3.1 Contenidos",
+                                        "href":  "./ut03/ut0301.html"
+                                    },
+                                    {
+                                        "label":  "3.2 UT. 2 - Medidas de seguridad pasiva",
+                                        "href":  "./ut03/ut0302.html"
+                                    },
+                                    {
+                                        "label":  "3.3 Enlaces de interÃ©s",
+                                        "href":  "./ut03/ut0303.html"
+                                    },
+                                    {
+                                        "label":  "3.4 Contenidos (cÃ²pia)",
+                                        "href":  "./ut03/ut0304.html"
+                                    },
+                                    {
+                                        "label":  "3.5 UT. 2 - Tarea 1 - RA1 CE Actividad 1",
+                                        "href":  "./ut03/ut0305.html"
+                                    },
+                                    {
+                                        "label":  "3.6 UT. 2 - Tarea 2 - RA1 CE Actividad 2",
+                                        "href":  "./ut03/ut0306.html"
+                                    },
+                                    {
+                                        "label":  "3.7 UT. 2 - Tarea 4 - RA2 CE - Actividad 4",
+                                        "href":  "./ut03/ut0307.html"
+                                    },
+                                    {
+                                        "label":  "3.8 UT. 2 - Tarea 1 - RA2 CEa",
+                                        "href":  "./ut03/ut0308.html"
+                                    },
+                                    {
+                                        "label":  "3.9 UT. 2 - Tarea 2 - RA1 CEb",
+                                        "href":  "./ut03/ut0309.html"
+                                    },
+                                    {
+                                        "label":  "3.10 UT. 2 - Tarea 3 - RA1 CEc",
+                                        "href":  "./ut03/ut0310.html"
+                                    },
+                                    {
+                                        "label":  "3.11 UT. 2 - Tarea 4 - RA1 CEd",
+                                        "href":  "./ut03/ut0311.html"
+                                    },
+                                    {
+                                        "label":  "3.12 UT. 2 - Tarea 5 - RA1 CEe",
+                                        "href":  "./ut03/ut0312.html"
+                                    },
+                                    {
+                                        "label":  "3.13 UT. 2 - Tarea 6- RA2 CEf",
+                                        "href":  "./ut03/ut0313.html"
+                                    },
+                                    {
+                                        "label":  "3.14 UT. 2 - Tarea 7 - RA2 CEh",
+                                        "href":  "./ut03/ut0314.html"
+                                    },
+                                    {
+                                        "label":  "3.15 UT. 2 - Tarea 8- RA2 CEi",
+                                        "href":  "./ut03/ut0315.html"
+                                    },
+                                    {
+                                        "label":  "3.16 linea (cÃ²pia)",
+                                        "href":  "./ut03/ut0316.html"
+                                    },
+                                    {
+                                        "label":  "3.17 Contenidos",
+                                        "href":  "./ut03/ut0317.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD4 — Protecció Elèctrica (SAI) i Plans de Continuïtat",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD4 Completa (1 pÃ gina)",
+                                        "href":  "./ut04/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "4.1 Contenidos",
+                                        "href":  "./ut04/ut0401.html"
+                                    },
+                                    {
+                                        "label":  "4.2 UT. 3 - Seguridad pasiva de los equipos - Almacenamiento",
+                                        "href":  "./ut04/ut0402.html"
+                                    },
+                                    {
+                                        "label":  "4.3 Enlaces de interÃ©s",
+                                        "href":  "./ut04/ut0403.html"
+                                    },
+                                    {
+                                        "label":  "4.4 Contenidos (cÃ²pia)",
+                                        "href":  "./ut04/ut0404.html"
+                                    },
+                                    {
+                                        "label":  "4.5 UT. 3 - Tarea 1 - RA2 CE A",
+                                        "href":  "./ut04/ut0405.html"
+                                    },
+                                    {
+                                        "label":  "4.6 linea (cÃ²pia)",
+                                        "href":  "./ut04/ut0406.html"
+                                    },
+                                    {
+                                        "label":  "4.7 Contenidos",
+                                        "href":  "./ut04/ut0407.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD5 — Autenticació i Polítiques de Contrasenyes",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD5 Completa (1 pÃ gina)",
+                                        "href":  "./ut05/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "5.1 Contenidos",
+                                        "href":  "./ut05/ut0501.html"
+                                    },
+                                    {
+                                        "label":  "5.2 UT. 4 - PolÃ­tica de contraseÃ±as",
+                                        "href":  "./ut05/ut0502.html"
+                                    },
+                                    {
+                                        "label":  "5.3 Enlaces de interÃ©s",
+                                        "href":  "./ut05/ut0503.html"
+                                    },
+                                    {
+                                        "label":  "5.4 Contenidos (cÃ²pia)",
+                                        "href":  "./ut05/ut0504.html"
+                                    },
+                                    {
+                                        "label":  "5.5 linea (cÃ²pia)",
+                                        "href":  "./ut05/ut0505.html"
+                                    },
+                                    {
+                                        "label":  "5.6 Contenidos",
+                                        "href":  "./ut05/ut0506.html"
+                                    },
+                                    {
+                                        "label":  "5.7 Hiren\u0027s Boot Sesion 1",
+                                        "href":  "./ut05/ut0507.html"
+                                    },
+                                    {
+                                        "label":  "5.8 Hiren\u0027s Boot Sesion 2",
+                                        "href":  "./ut05/ut0508.html"
+                                    },
+                                    {
+                                        "label":  "5.9 Hiren\u0027s Boot Sesion 3",
+                                        "href":  "./ut05/ut0509.html"
+                                    },
+                                    {
+                                        "label":  "5.10 Hiren\u0027s Boot Sesion 4",
+                                        "href":  "./ut05/ut0510.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD6 — Emmagatzematge Segur, Còpies i Destrucció de Dades",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD6 Completa (1 pÃ gina)",
+                                        "href":  "./ut06/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "6.1 Contenidos",
+                                        "href":  "./ut06/ut0601.html"
+                                    },
+                                    {
+                                        "label":  "6.2 UT. 5 - Sistemas de almacenamiento.",
+                                        "href":  "./ut06/ut0602.html"
+                                    },
+                                    {
+                                        "label":  "6.3 Enlaces de interÃ©s",
+                                        "href":  "./ut06/ut0603.html"
+                                    },
+                                    {
+                                        "label":  "6.4 Contenidos (cÃ²pia)",
+                                        "href":  "./ut06/ut0604.html"
+                                    },
+                                    {
+                                        "label":  "6.5 UT. 5 - Tarea 1 - RA2 CEg - Captures UD 05",
+                                        "href":  "./ut06/ut0605.html"
+                                    },
+                                    {
+                                        "label":  "6.6 PresentaciÃ³ RA_5 Copias de Seguridad",
+                                        "href":  "./ut06/ut0606.html"
+                                    },
+                                    {
+                                        "label":  "6.7 UT. 5 - Tarea 2 - RA2 CEj",
+                                        "href":  "./ut06/ut0607.html"
+                                    },
+                                    {
+                                        "label":  "6.8 linea (cÃ²pia)",
+                                        "href":  "./ut06/ut0608.html"
+                                    },
+                                    {
+                                        "label":  "6.9 Contenidos",
+                                        "href":  "./ut06/ut0609.html"
+                                    },
+                                    {
+                                        "label":  "6.10 RAID",
+                                        "href":  "./ut06/ut0610.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD7 — Seguretat Activa, Malware i Antivirus",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD7 Completa (1 pÃ gina)",
+                                        "href":  "./ut07/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "7.1 Contenidos",
+                                        "href":  "./ut07/ut0701.html"
+                                    },
+                                    {
+                                        "label":  "7.2 UT. 6 - Seguridad activa",
+                                        "href":  "./ut07/ut0702.html"
+                                    },
+                                    {
+                                        "label":  "7.3 UT. 6.1 - Planes de contingencia y medidas ante fallos de seguridad",
+                                        "href":  "./ut07/ut0703.html"
+                                    },
+                                    {
+                                        "label":  "7.4 UT. 6.2 - PolÃ­tica de aplicaciones permitidas",
+                                        "href":  "./ut07/ut0704.html"
+                                    },
+                                    {
+                                        "label":  "7.5 Enlaces de interÃ©s",
+                                        "href":  "./ut07/ut0705.html"
+                                    },
+                                    {
+                                        "label":  "7.6 Contenidos (cÃ²pia)",
+                                        "href":  "./ut07/ut0706.html"
+                                    },
+                                    {
+                                        "label":  "7.7 UT. 6 - Tarea 1 - RA3 CEa",
+                                        "href":  "./ut07/ut0707.html"
+                                    },
+                                    {
+                                        "label":  "7.8 UT. 6 - Tarea 2 - RA3 CEb",
+                                        "href":  "./ut07/ut0708.html"
+                                    },
+                                    {
+                                        "label":  "7.9 UT. 6 - Tarea 3 - RA3 CEc",
+                                        "href":  "./ut07/ut0709.html"
+                                    },
+                                    {
+                                        "label":  "7.10 UT. 6 - Tarea 4 - RA3 CEd",
+                                        "href":  "./ut07/ut0710.html"
+                                    },
+                                    {
+                                        "label":  "7.11 UT. 6 - Tarea 5 - RA3 CEe",
+                                        "href":  "./ut07/ut0711.html"
+                                    },
+                                    {
+                                        "label":  "7.12 UT. 6 - Tarea 6 - RA3 CEf",
+                                        "href":  "./ut07/ut0712.html"
+                                    },
+                                    {
+                                        "label":  "7.13 linea (cÃ²pia)",
+                                        "href":  "./ut07/ut0713.html"
+                                    },
+                                    {
+                                        "label":  "7.14 Contenidos",
+                                        "href":  "./ut07/ut0714.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD8 — Criptografia, Certificats Digitals i Tallafocs",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD8 Completa (1 pÃ gina)",
+                                        "href":  "./ut08/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "8.1 Contenidos",
+                                        "href":  "./ut08/ut0801.html"
+                                    },
+                                    {
+                                        "label":  "8.2 UT. 7 - CriptografÃ­a",
+                                        "href":  "./ut08/ut0802.html"
+                                    },
+                                    {
+                                        "label":  "8.3 Enlaces de interÃ©s",
+                                        "href":  "./ut08/ut0803.html"
+                                    },
+                                    {
+                                        "label":  "8.4 Contenidos (cÃ²pia)",
+                                        "href":  "./ut08/ut0804.html"
+                                    },
+                                    {
+                                        "label":  "8.5 UT. 7 - Tarea 1 - RA4 CEa",
+                                        "href":  "./ut08/ut0805.html"
+                                    },
+                                    {
+                                        "label":  "8.6 UT. 7 - Tarea 2 - RA4 CEd",
+                                        "href":  "./ut08/ut0806.html"
+                                    },
+                                    {
+                                        "label":  "8.7 UT. 7 - Tarea 3 - RA4 CEc",
+                                        "href":  "./ut08/ut0807.html"
+                                    },
+                                    {
+                                        "label":  "8.8 UT. 7 - Tarea 4 - RA4 CEfg",
+                                        "href":  "./ut08/ut0808.html"
+                                    },
+                                    {
+                                        "label":  "8.9 QÃ¼estionari - RA4 CEfg",
+                                        "href":  "./ut08/ut0809.html"
+                                    },
+                                    {
+                                        "label":  "8.10 UT. 7 - Tarea 5 - RA4 CEb",
+                                        "href":  "./ut08/ut0810.html"
+                                    },
+                                    {
+                                        "label":  "8.11 UT. 7 - Tarea 6 - RA4 CEh",
+                                        "href":  "./ut08/ut0811.html"
+                                    },
+                                    {
+                                        "label":  "8.12 QÃ¼estionari - RA4 CEh",
+                                        "href":  "./ut08/ut0812.html"
+                                    },
+                                    {
+                                        "label":  "8.13 UT. 7 - Tarea 7 - RA4 CEe",
+                                        "href":  "./ut08/ut0813.html"
+                                    },
+                                    {
+                                        "label":  "8.14 linea (cÃ²pia)",
+                                        "href":  "./ut08/ut0814.html"
+                                    },
+                                    {
+                                        "label":  "8.15 Contenidos",
+                                        "href":  "./ut08/ut0815.html"
+                                    },
+                                    {
+                                        "label":  "8.16 Wireshark hoja de comandos",
+                                        "href":  "./ut08/ut0816.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD9 — Legislació, RGPD i Gestió d\u0027Incidents",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD9 Completa (1 pÃ gina)",
+                                        "href":  "./ut09/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "9.1 Contenidos",
+                                        "href":  "./ut09/ut0901.html"
+                                    },
+                                    {
+                                        "label":  "9.2 Enlaces de interÃ©s",
+                                        "href":  "./ut09/ut0902.html"
+                                    },
+                                    {
+                                        "label":  "9.3 Contenidos (cÃ²pia)",
+                                        "href":  "./ut09/ut0903.html"
+                                    },
+                                    {
+                                        "label":  "9.4 UT. 8  - Tarea 1 - RA5 CEab",
+                                        "href":  "./ut09/ut0904.html"
+                                    },
+                                    {
+                                        "label":  "9.5 PresentaciÃ³n - Tarea 1",
+                                        "href":  "./ut09/ut0905.html"
+                                    },
+                                    {
+                                        "label":  "9.6 UT. 8  - Tarea 2 - RA5 CEcd",
+                                        "href":  "./ut09/ut0906.html"
+                                    },
+                                    {
+                                        "label":  "9.7 PresentaciÃ³n - Tarea 2",
+                                        "href":  "./ut09/ut0907.html"
+                                    },
+                                    {
+                                        "label":  "9.8 UT. 8  - Tarea 3 - RA5 CEe",
+                                        "href":  "./ut09/ut0908.html"
+                                    },
+                                    {
+                                        "label":  "9.9 PresentaciÃ³n - Tarea 3",
+                                        "href":  "./ut09/ut0909.html"
+                                    },
+                                    {
+                                        "label":  "9.10 Cuestionario - Tareas 1,2,3",
+                                        "href":  "./ut09/ut0910.html"
+                                    },
+                                    {
+                                        "label":  "9.11 UT. 8  - Tarea 4 - RA5 CEf",
+                                        "href":  "./ut09/ut0911.html"
+                                    },
+                                    {
+                                        "label":  "9.12 linea (cÃ²pia)",
+                                        "href":  "./ut09/ut0912.html"
+                                    },
+                                    {
+                                        "label":  "9.13 Contenidos",
+                                        "href":  "./ut09/ut0913.html"
+                                    },
+                                    {
+                                        "label":  "9.14 Ley OrgÃ¡nica 3/2018, de 5 de diciembre, de ProtecciÃ³n de Datos Personales y garantÃ­a de los derechos digitales.",
+                                        "href":  "./ut09/ut0914.html"
+                                    },
+                                    {
+                                        "label":  "9.15 REGLAMENTO (UE) 2016/679  General de ProtecciÃ³n de Datos",
+                                        "href":  "./ut09/ut0915.html"
+                                    },
+                                    {
+                                        "label":  "9.16 Ley de Servicios de la Sociedad de la InformaciÃ³n",
+                                        "href":  "./ut09/ut0916.html"
+                                    }
+                                ]
+                  }
+              ]
 }

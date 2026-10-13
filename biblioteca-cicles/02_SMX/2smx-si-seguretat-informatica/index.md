@@ -5,27 +5,49 @@ course_root: "."
 badge: "2n SMX · Grau Mitjà"
 ---
 
-# 🛡️ Seguretat Informàtica
+# 🛡️ Seguretat Informàtica (2SMX)
 
-Benvingut/da al curs complet de **Seguretat Informàtica** corresponent al cicle formatiu **2n SMX · Grau Mitjà**.
+Benvingut/da al curs complet de **Seguretat Informàtica (Codi Oficial: 0228)** del cicle formatiu de grau mitjà **Sistemes Microinformàtics i Xarxes (SMX)**.
 
-Aquest temari didàctic està organitzat en unitats de treball (`UD`) estructurades de forma progressiva per facilitar l'aprenentatge autònom i les sessions de classe:
-
-| Unitat Didàctica | Títol del Bloc Temàtic | Accés Directe |
-| :---: | :--- | :---: |
-| **UD1** | Presentación del módulo Seguridad Informática. | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
-| **UD2** | UT. 1 - Introducción a la seguridad Informática | [**📘 Entrar a la Unitat →**](./ut02/index.md) |
-| **UD3** | 1ª Eval - RA_1 UT. 2 - Medidas de seguridad pasiva | [**📘 Entrar a la Unitat →**](./ut03/index.md) |
-| **UD4** | 1ª Eval - RA_1 UT.3 - Seguridad Pasiva en SI | [**📘 Entrar a la Unitat →**](./ut04/index.md) |
-| **UD5** | 1ª Eval - RA_3 UT. 4 - Política de contraseñas. | [**📘 Entrar a la Unitat →**](./ut05/index.md) |
-| **UD6** | 1ª Eval - RA_5 Gestión de Almacenamiento | [**📘 Entrar a la Unitat →**](./ut06/index.md) |
-| **UD7** | 2ª Eval - RA_2 - Mecanismos de seguridad activa | [**📘 Entrar a la Unitat →**](./ut07/index.md) |
-| **UD8** | 2ª Eval - RA_3 - Seguridad en redes | [**📘 Entrar a la Unitat →**](./ut08/index.md) |
-| **UD9** | 3ª Eval - RA_4 UT. 8 - Legislación y normativa | [**📘 Entrar a la Unitat →**](./ut09/index.md) |
+Aquest mòdul professional capacita l'alumnat per a planificar, implantar i mantenir la seguretat en sistemes informàtics i xarxes corporatives, garantint la disponibilitat, integritat i confidencialitat de les dades segons la normativa vigent.
 
 ---
 
-### 📌 Metodologia i Treball Pràctic
-- **Teoria i Fonaments:** Cada unitat conté explicacions conceptuals clares.
-- **Pràctiques guiades:** Procediments pas a pas i comandaments per a taller i laboratori.
-- **Navegació ràpida:** Utilitza la barra lateral esquerra per saltar directament a qualsevol apartat o consultar la unitat sencera en una sola pàgina.
+## 🎯 Resultats d'Aprenentatge Oficials (RAs)
+
+Segons el currículum oficial del cicle (Reial Decret 1691/2007 i Decret 81/2010 CV), el mòdul s'estructura al voltant dels següents Resultats d'Aprenentatge:
+
+- **RA 1:** Aplica mesures de **seguretat passiva** en sistemes informàtics, descrivint les característiques d'entorns d'instal·lació, protecció elèctrica i ambiental, i dimensionant sistemes d'alimentació ininterrompuda (SAI).
+- **RA 2:** Aplica mecanismes de **seguretat activa**, identificant amenaces de programari maliciós (malware), analitzant vulnerabilitats i implementant eines antivirus i de desinfecció.
+- **RA 3:** Assegura la **privadesa i integritat de la informació** transmesa en xarxes locals i perimetrals mitjançant criptografia, certificats digitals, tallafocs (firewalls) i xarxes privades virtuals (VPN).
+- **RA 4:** Assegura el compliment de la **legislació vigent en matèria de protecció de dades** (RGPD, LOPD-GDD) i seguretat de la informació (ENS, ISO/IEC 27001), gestionant protocols de notificació d'incidents.
+- **RA 5:** Gestiona **dispositius d'emmagatzematge i plans de còpies de seguretat**, aplicant polítiques de salvaguarda (regla 3-2-1), redundància i protocols de destrucció segura de dades.
+
+---
+
+## 📚 Mapa Didàctic del Curs
+
+El temari s'organitza en **9 Unitats de Treball (UT)** progressives amb contingut teòric, procediments de configuració pràctica pas a pas, esquemes d'arquitectura i fórmules de càlcul:
+
+| Unitat Didàctica | Títol del Bloc Temàtic | Resultats d'Aprenentatge | Accés Directe |
+| :---: | :--- | :---: | :---: |
+| **UT 01** | Presentació i Fonaments del Mòdul Professional | RA1 – RA5 | [**📘 Entrar a la Unitat →**](./ut01/index.md) |
+| **UT 02** | Principis de Seguretat: Tríada CIA i Gestió de Riscos | RA1, RA2 | [**📘 Entrar a la Unitat →**](./ut02/index.md) |
+| **UT 03** | Seguretat Física: CPD, Condicions Ambientals i Control d'Accés | RA1 | [**📘 Entrar a la Unitat →**](./ut03/index.md) |
+| **UT 04** | Protecció Elèctrica: SAIs i Plans de Continuïtat de Negoci | RA1 | [**📘 Entrar a la Unitat →**](./ut04/index.md) |
+| **UT 05** | Autenticació, Polítiques de Contrasenyes i Control d'Accés Lògic | RA3 | [**📘 Entrar a la Unitat →**](./ut05/index.md) |
+| **UT 06** | Emmagatzematge Segur, Còpies de Seguretat i Destrucció de Dades | RA5 | [**📘 Entrar a la Unitat →**](./ut06/index.md) |
+| **UT 07** | Seguretat Activa, Malware i Eines de Protecció Antivirus | RA2 | [**📘 Entrar a la Unitat →**](./ut07/index.md) |
+| **UT 08** | Seguretat en Xarxes: Criptografia, Certificats i Tallafocs | RA3 | [**📘 Entrar a la Unitat →**](./ut08/index.md) |
+| **UT 09** | Legislació, Protecció de Dades (RGPD) i Gestió d'Incidents | RA4 | [**📘 Entrar a la Unitat →**](./ut09/index.md) |
+
+---
+
+## 🛠️ Entorn de Pràctiques i Laboratori
+
+Durant el curs es realitzen pràctiques en entorns de laboratori tant virtualitzats com reals:
+
+1. **Sistemes Operatius de Servidor:** Ubuntu Server 24.04 LTS i Windows Server 2022.
+2. **Eines d'Administració:** PowerShell 7, Bash, OpenSSH, UFW, ClamAV, OpenSSL, GnuPG.
+3. **Monitorització i Diagnòstic:** Wireshark, Nmap, eines d'auditoria de contrasenyes i gestors de registres (Syslog, Event Viewer).
+4. **Resolució de Problemes:** Càlcul de potències i autonomies de bateries per a SAIs, configuració de directives de grup (GPO) i scripts automatitzats de còpies de seguretat amb `rsync`.
