@@ -14,19 +14,135 @@ next_label: "10.1 Tema 5. FORMULARIS ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
+## 🖥️ Disseny d'Interfícies d'Usuari: Formularis i Subformularis
 
-- [**10.1 Tema 5. FORMULARIS**](./ut1001.md)
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Arquitectura de Formularis: Seccions, Controls i Vinculació Mestre-Detall</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Estructuració visual, orígens de control, sincronització 1:N en subformularis i botons d'ordre operatius</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU10SecGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU10CtrlGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU10SubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU10ActGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Seccions del Formulari -->
+    <rect x="20" y="20" width="190" height="255" rx="8" fill="url(#aofU10SecGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">📑 SECCIONS ESTRUCTURALS</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Anatomia de Pantalla</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Capçalera de Formulari:</tspan></text>
+    <text x="42" y="93" fill="#cbd5e1" font-size="8">- Títol, logotip de taller, data</text>
+    <text x="42" y="105" fill="#cbd5e1" font-size="8">- Fixa a la part superior</text>
+    <text x="32" y="122" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Secció Detall:</tspan></text>
+    <text x="42" y="135" fill="#cbd5e1" font-size="8">- Camps del registre actual</text>
+    <text x="42" y="147" fill="#cbd5e1" font-size="8">- Es refresca a cada navegació</text>
+    <text x="32" y="164" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Peu de Formulari:</tspan></text>
+    <text x="42" y="177" fill="#cbd5e1" font-size="8">- Botons de comandament globals</text>
+    <text x="42" y="189" fill="#cbd5e1" font-size="8">- Totals acumulats de sessió</text>
+    <rect x="35" y="202" width="160" height="35" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="115" y="217" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">Vistes: Formulari / Disseny</text>
+    <text x="115" y="229" fill="#94a3b8" font-size="7.5" text-anchor="middle">Vista Presentació (Layout)</text>
+    <text x="115" y="258" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Ergonomia Visual</text>
+
+    <!-- Bloc 2: Tipus de Controls -->
+    <rect x="230" y="20" width="190" height="255" rx="8" fill="url(#aofU10CtrlGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="325" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">🎛️ CONTROLS I ENLLAÇ</text>
+    <text x="325" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Elements Interactius</text>
+    <line x1="240" y1="63" x2="410" y2="63" stroke="#334155"/>
+    <text x="242" y="80" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Quadre de Text (TextBox):</tspan></text>
+    <text x="252" y="93" fill="#cbd5e1" font-size="8">- Enllaçat directament a la taula</text>
+    <text x="242" y="110" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Etiqueta (Label):</tspan></text>
+    <text x="252" y="123" fill="#cbd5e1" font-size="8">- Text estàtic no modificable</text>
+    <text x="242" y="140" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Quadre Combinat (ComboBox):</tspan></text>
+    <text x="252" y="153" fill="#cbd5e1" font-size="8">- Desplegable per a triar FK</text>
+    <text x="252" y="165" fill="#34d399" font-size="8">  Ex: Llista de Tècnics disponibles</text>
+    <text x="242" y="182" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Casella de Verificació (CheckBox):</tspan></text>
+    <text x="252" y="195" fill="#cbd5e1" font-size="8">- Camps booleans (Sí/No)</text>
+    <rect x="245" y="210" width="160" height="26" rx="4" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="325" y="227" fill="#34d399" font-size="8" font-weight="bold" text-anchor="middle">Origen del Control (ControlSource)</text>
+    <text x="325" y="258" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Entrada Validada</text>
+
+    <!-- Bloc 3: Subformularis -->
+    <rect x="440" y="20" width="190" height="255" rx="8" fill="url(#aofU10SubGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="535" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">📦 SUBFORMULARIS 1:N</text>
+    <text x="535" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Mestre - Detall</text>
+    <line x1="450" y1="63" x2="620" y2="63" stroke="#334155"/>
+    <text x="452" y="80" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Arquitectura Mestre-Detall:</tspan></text>
+    <text x="462" y="93" fill="#cbd5e1" font-size="8">- Formulari pare: <tspan fill="#38bdf8" font-weight="bold">CLIENTS (1)</tspan></text>
+    <text x="462" y="105" fill="#cbd5e1" font-size="8">- Subformulari: <tspan fill="#c084fc" font-weight="bold">EQUIPS (N)</tspan></text>
+    <text x="452" y="122" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Propietats de Sincronització:</tspan></text>
+    <text x="462" y="135" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">LinkMasterFields:</tspan> id_client</text>
+    <text x="462" y="147" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">LinkChildFields:</tspan> id_client_fk</text>
+    <text x="452" y="164" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Comportament Dinàmic:</tspan></text>
+    <text x="462" y="177" fill="#cbd5e1" font-size="8">- En avançar de client,</text>
+    <text x="462" y="189" fill="#cbd5e1" font-size="8">  els equips es filtren a l'instant.</text>
+    <rect x="455" y="205" width="160" height="35" rx="4" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+    <text x="535" y="220" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">Format Full de Dades</text>
+    <text x="535" y="232" fill="#cbd5e1" font-size="7.5" text-anchor="middle">o Formularis Continús</text>
+    <text x="535" y="258" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Sincronització Automàtica</text>
+
+    <!-- Bloc 4: Botons i Automatització -->
+    <rect x="650" y="20" width="190" height="255" rx="8" fill="url(#aofU10ActGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="745" y="42" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">🔘 BOTONS I NAVEGACIÓ</text>
+    <text x="745" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Assistents i Macros</text>
+    <line x1="660" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="662" y="80" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Navegació de Registres:</tspan></text>
+    <text x="672" y="93" fill="#cbd5e1" font-size="8">- Primer | Anterior | Següent | Últim</text>
+    <text x="672" y="105" fill="#cbd5e1" font-size="8">- Cercar registre</text>
+    <text x="662" y="122" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Operacions amb Registres:</tspan></text>
+    <text x="672" y="135" fill="#cbd5e1" font-size="8">- Afegir nou registre (*)</text>
+    <text x="672" y="147" fill="#cbd5e1" font-size="8">- Guardar registre</text>
+    <text x="672" y="159" fill="#f87171" font-size="8">- Eliminar registre</text>
+    <text x="662" y="176" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Operacions de Formulari:</tspan></text>
+    <text x="672" y="189" fill="#cbd5e1" font-size="8">- Imprimir formulari o informe</text>
+    <text x="672" y="201" fill="#cbd5e1" font-size="8">- Tancar formulari</text>
+    <rect x="665" y="215" width="160" height="22" rx="4" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="745" y="230" fill="#fbbf24" font-size="8" font-weight="bold" text-anchor="middle">Ordre de Tabulació (TabIndex)</text>
+    <text x="745" y="258" fill="#fbbf24" font-size="8.5" text-anchor="middle" font-weight="bold">Flux de Treball Fluid</text>
+  </svg>
+</div>
+
+### 📋 Classificació de Controls i Propietats en Formularis SGBD
+
+| Tipus de Control | Origen de les Dades | Propietat Clau | Funció Tècnica | Exemple en Taller Microinformàtic |
+| :--- | :--- | :--- | :--- | :--- |
+| **Quadre de Text Enllaçat** | Camp de taula o consulta | `ControlSource = "nom"` | Lligam bidireccional; les edicions es guarden al disc. | Edició del número de sèrie de l'equip o DNI del client. |
+| **Quadre de Text Calculat** | Expressió formulada | `ControlSource = "=[Hores]*[Preu]"` | Càlcul automàtic en memòria que s'actualitza en temps real. | Totalitzador del cost de mà d'obra i recanvis. |
+| **Quadre Combinat (ComboBox)** | Consulta o taula externa | `RowSource = "SELECT id, nom FROM TECNICS"` | Facilita la tria de claus foranes mostrant text comprensible. | Assignar el tècnic responsable sense recordar el seu ID numèric. |
+| **Subformulari Mestre-Detall** | Taula filla o consulta 1:N | `LinkMasterFields` / `LinkChildFields` | Incrusta una llista interactiva vinculada al registre pare actual. | Llista de peces o actuacions vinculades a una ordre de reparació. |
+| **Botó de Comandament** | Esdeveniment / Macro | `OnClick = [Macro d'Acció]` | Executa ordres automatitzades guiades per l'assistent. | Botó per imprimir l'albarà o tancar la fitxa tècnica. |
 
 ---
 
-# 10.1 Tema 5. FORMULARIS
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-> **🔗 Recurs Web: Video 11.1. Crear formularis**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=MB48IM9f9mI) ↗️**](https://www.youtube.com/watch?v=MB48IM9f9mI)
+- [**10.1 Disseny de Formularis i Controls Interactius**](./ut1001.md)
 
-> **🔗 Recurs Web: Video 11.2. Controls en formularis**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=YeNYibwUZzo) ↗️**](https://www.youtube.com/watch?v=YeNYibwUZzo)
+---
+
+# 10.1 Disseny de Formularis i Controls Interactius
+
+> **📺 Recursos Audiovisuals de Referència**
+> - [**Creació de Formularis i Assistent Guiat ↗️**](https://www.youtube.com/watch?v=MB48IM9f9mI): Disseny ràpid de formularis monoregistre i tabulars.
+> - [**Gestió de Controls i Propietats en Formularis ↗️**](https://www.youtube.com/watch?v=YeNYibwUZzo): Ajust de quadres de text, etiquetes i desplegables.
+
 
 ---
 
@@ -396,3 +512,84 @@ Aplicaciones Ofimáticas Base de Datos Tema 05.MS-Access. FORMULARIOS
 En ocasiones no te interesará que se coloque donde Access elige, en tal caso elige Quitar diseño y colócalo a tu gusto, a mano o con las opciones vistas anteriormente.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 🎯 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Activitat 1: Tipologia de Controls i Gestió de l'Estat del Registre
+En el disseny d'una interfície gràfica de base de dades per a la gestió d'entrades de taller microinformàtic, es diferencien tres categories essencials de controls:
+1. **Classificació Conceptual:** Definiu la diferència operativa entre:
+   - **Control Enllaçat (*Bound Control*):** Té com a propietat `Origen del Control` (*ControlSource*) un camp d'una taula física o consulta.
+   - **Control Independent (*Unbound Control*):** No està associat a cap camp de la base de dades i s'utilitza per a emmagatzemar variables temporals de sessió o criteris de cerca.
+   - **Control Calculat (*Calculated Control*):** Conté una fórmula que comença pel signe igual (`=`) i referencia altres controls del formulari.
+2. **Impacte en Disc:** Donat un formulari amb 15 controls:
+   - 10 controls enllaçats a columnes de la taula `EQUIPS`.
+   - 2 controls independents (filtre de data d'inici i data de fi de cerca).
+   - 3 controls calculats (Total hores, Import IVA i Import Total amb IVA).
+   - Quins d'aquests controls ocupen espai addicional físic al fitxer de base de dades quan es fa clic al botó de guardar? Quins s'alliberen de memòria en tancar la finestra?
+3. **Bloqueig i Protecció d'Integritat:** Per què els camps calculats s'han de configurar obligatòriament amb les propietats `Bloquejat = Sí` (*Locked*) i `Activat = No` (*Enabled = False*) per a impedir que l'usuari manipule les xifres fiscals manualment?
+
+#### Activitat 2: Sincronització de Subformularis Mestre-Detall (1:N)
+En una empresa d'assistència tècnica es construeix un formulari mestre basat en la taula `ORDRES_REPARACIO` (1) que incrusta un subformulari basat en la taula `ORDRES_PECES` (N):
+1. **Mecanisme de Vinculació:** Expliqueu com funcionen les propietats de sincronització:
+   - `Enllaçar camps primaris` (*LinkMasterFields*): Camp clau del formulari pare (`id_ordre`).
+   - `Enllaçar camps secundaris` (*LinkChildFields*): Camp clau estrangera del subformulari (`id_ordre_fk`).
+2. **Traducció a SQL Intern:** Cada vegada que el tècnic prem el botó "Següent Registre" al formulari pare i es visualitza l'ordre amb `id_ordre = 42`, quina sentència `SELECT` executa internament el motor de formularis per omplir les files del subformulari?
+3. **Inserció Automàtica de Claus:** Si el tècnic afegeix una fila nova directament al subformulari escrivint un codi de peça i una quantitat, quin valor assigna automàticament el SGBD al camp `id_ordre_fk` sense necessitat que el tècnic l'escriga a mà?
+
+#### Activitat 3: Usabilitat, Ergonomia i Ordre de Tabulació (*TabIndex*)
+Un operari del servei tècnic ha d'introduir fins a 80 fitxes d'equips diàriament i es queixa que en prémer la tecla `Tab` el cursor fa salts desordenats per la pantalla:
+1. **Ordre de Tabulació:** Com s'ordenen les propietats d'índex de tabulació (`Índex de tabulació` / `TabIndex` començant des de 0) per garantir que el cursor seguisca una seqüència lògica de dalt a baix i d'esquerra a dreta?
+2. **Omissió de Tabulació:** Si tenim un camp autonumèric (`id_equip`) que es genera de forma automàtica pel sistema, quina propietat de tabulació cal activar (`Parada de tabulació = No`) perquè el cursor salte directament al camp de número de sèrie sense aturar-se a la clau primària?
+3. **Disseny d'un Quadre Combinat (*ComboBox*) amb Columna Oculta:** Per assignar el tècnic responsable, volem que l'usuari veja un desplegable amb el `Nom del Tècnic`, però que el formulari guarde l'`id_tecnic` (enter). Com es configuren les propietats:
+   - `Número de columnes`: `2`
+   - `Amplades de columna`: `0cm; 5cm`
+   - `Columna vinculada`: `1`
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació d'un Formulari Mestre de Clients amb Subformulari d'Equips
+1. Obriu **LibreOffice Base** o **Microsoft Access** amb la base de dades del taller.
+2. Utilitzeu l'**Assistent per a Formularis**:
+   - Taula principal: `CLIENTS_TALLER` (Afegiu tots els camps: `id_client`, `nif`, `nom`, `cognoms`, `telefon`).
+   - Activeu la casella per afegir **Subformulari basat en una relació existent**.
+   - Taula secundària: `EQUIPS_CLIENT` (Afegiu `num_serie`, `marca`, `model`, `cost_pressupost`).
+   - Format visual del subformulari: **Full de dades** o **Taula**.
+3. Guardeu el formulari amb el nom `F_Clients_i_Equips`.
+4. Passeu a la **Vista Formulari** i navegueu entre els registres de client comprovant com el subformulari inferior mostra exclusivament els ordinadors propietat del client actiu.
+
+#### Repte 2: Configuració de Quadre Combinat (*ComboBox*) per a Selecció de Tècnic
+1. Creeu un formulari en **Vista Disseny** anomenat `F_Nova_Ordre_Reparacio` basat en la taula `ORDRES`.
+2. Afegiu els camps bàsics d'ordre (`id_ordre`, `num_serie_fk`, `data_entrada`, `estat`).
+3. Per al camp `id_tecnic_fk`, elimineu el quadre de text simple i afegiu un **Quadre Combinat**:
+   - A l'assistent del quadre combinat, seleccioneu: *"Vull que el quadre combinat busque els valors en una altra taula"*.
+   - Taula d'origen: `TECNICS`.
+   - Camps a mostrar: `id_tecnic` i `nom`.
+   - Ordeneu la llista alfabèticament pel camp `nom`.
+   - Oculteu la columna de clau primària (`0 cm`).
+   - Seleccioneu l'opció *"Emmagatzemar el valor al camp: id_tecnic_fk"*.
+4. Proveu el formulari seleccionant diferents tècnics des del menú desplegable i comproveu que a la taula subjacent s'emmagatzema el valor numèric correcte.
+
+#### Repte 3: Inserció de Botons d'Ordre i Automatització de Pantalla
+1. En el formulari `F_Nova_Ordre_Reparacio`, aneu a la secció **Peu de Formulari**.
+2. Afegiu 4 botons d'ordre utilitzant l'assistent:
+   - Botó 1 (Navegació): Categoria *Navegació de registres*, Acció *Anar al registre següent*.
+   - Botó 2 (Operacions amb registres): Categoria *Operacions amb registres*, Acció *Afegir un nou registre*.
+   - Botó 3 (Operacions amb registres): Categoria *Operacions amb registres*, Acció *Guardar el registre*.
+   - Botó 4 (Operacions amb formularis): Categoria *Operacions amb formularis*, Acció *Tancar el formulari*.
+3. Apliqueu icones gràfiques o text clar a cadascun dels botons.
+4. Ajusteu l'alineació i l'espaiat dels botons amb les eines d'alineació de la barra d'eines.
+5. Proveu el flux complet: obriu el formulari, feu clic al botó d'afegir nou registre, ompliu les dades, guardeu el registre i tanqueu la finestra amb el botó dedicat.
+
+---
+
+### 📋 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Arquitectura de Controls i Orígens de Dades** | Distingeix amb precisió controls enllaçats, independents i calculats, protegint els càlculs i optimitzant l'ordre de tabulació. | Utilitza correctament els diferents tipus de controls amb xicotets oblits en la protecció de camps calculats. | Utilitza quadres de text bàsics però té dificultats per a configurar controls calculats o ajustar el `TabIndex`. | No sap com connectar un control visual amb una columna de la base de dades. |
+| **Sincronització de Subformularis 1:N** | Configura subformularis Mestre-Detall amb enllaç de camps impecable, verificant la concordança de claus foranes i el filtratge dinàmic. | Crea el subformulari correctament mitjançant assistent amb supervisió mínima en l'ajust de camps vinculats. | Aconsegueix incrustar el subformulari però oblida vincular els camps primaris i secundaris (mostrant tots els registres desconnectats). | Incapaç de crear o configurar un subformulari relacionat. |
+| **Quadres Combinats i Botons d'Acció** | Construeix desplegables amb columnes ocultes vinculades a FKs i incorpora botons d'ordre funcionals que faciliten el flux de treball. | Implementa el quadre combinat i els botons operatius amb xicotets desajustos estètics o d'alineació. | Afegeix botons amb l'assistent però no aconsegueix configurar el desplegable amb columna de clau oculta. | No sap utilitzar assistents de controls ni afegir botons de comandament al formulari. |

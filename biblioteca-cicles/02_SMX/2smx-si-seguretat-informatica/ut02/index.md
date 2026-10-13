@@ -125,3 +125,87 @@ Davant d'un risc calculat, la direcció pot optar per 4 estratègies:
 4. **Pla de mitigació:** 
    - Canviar la contrasenya per una clau de 16 caràcters amb autenticació de doble factor (MFA).
    - Instal·lar un SAI On-line de 1500 VA amb connexió USB de gestió automàtica d'apagada.
+
+---
+
+## 🎨 Infografia Tècnica: La Tríada CIA
+
+<div style="text-align: center; margin: 25px 0;">
+<svg viewBox="0 0 840 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="max-width: 840px; border-radius: 16px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); font-family: system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="gradCIA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cardConf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="cardInteg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="cardDisp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+  </defs>
+  <rect width="840" height="260" rx="16" fill="url(#gradCIA)" />
+  <text x="420" y="38" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="bold" letter-spacing="1">🏛️ LA TRÍADA CIA EN SEGURETAT INFORMÀTICA</text>
+  <text x="420" y="60" text-anchor="middle" fill="#94a3b8" font-size="13">Els tres pilars essencials per a la gestió de riscos i la protecció d'actius TIC</text>
+
+  <!-- Card 1: Confidencialitat -->
+  <g transform="translate(30, 80)">
+    <rect width="240" height="150" rx="12" fill="url(#cardConf)" fill-opacity="0.2" stroke="#3b82f6" stroke-width="2" />
+    <circle cx="120" cy="35" r="22" fill="#3b82f6" />
+    <text x="120" y="42" text-anchor="middle" font-size="20" fill="#ffffff">🔒</text>
+    <text x="120" y="75" text-anchor="middle" fill="#60a5fa" font-size="16" font-weight="bold">CONFIDENCIALITAT</text>
+    <text x="120" y="98" text-anchor="middle" fill="#e2e8f0" font-size="12">Només personal autoritzat</text>
+    <text x="120" y="118" text-anchor="middle" fill="#94a3b8" font-size="11">Xifratge AES-256 · TLS 1.3</text>
+    <text x="120" y="134" text-anchor="middle" fill="#94a3b8" font-size="11">Control d'Accés · ACLs</text>
+  </g>
+
+  <!-- Card 2: Integritat -->
+  <g transform="translate(300, 80)">
+    <rect width="240" height="150" rx="12" fill="url(#cardInteg)" fill-opacity="0.2" stroke="#10b981" stroke-width="2" />
+    <circle cx="120" cy="35" r="22" fill="#10b981" />
+    <text x="120" y="42" text-anchor="middle" font-size="20" fill="#ffffff">🛡️</text>
+    <text x="120" y="75" text-anchor="middle" fill="#34d399" font-size="16" font-weight="bold">INTEGRITAT</text>
+    <text x="120" y="98" text-anchor="middle" fill="#e2e8f0" font-size="12">Dades exactes sense alteració</text>
+    <text x="120" y="118" text-anchor="middle" fill="#94a3b8" font-size="11">Funcions Hash SHA-256</text>
+    <text x="120" y="134" text-anchor="middle" fill="#94a3b8" font-size="11">Signatures Digitals X.509</text>
+  </g>
+
+  <!-- Card 3: Disponibilitat -->
+  <g transform="translate(570, 80)">
+    <rect width="240" height="150" rx="12" fill="url(#cardDisp)" fill-opacity="0.2" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="120" cy="35" r="22" fill="#f59e0b" />
+    <text x="120" y="42" text-anchor="middle" font-size="20" fill="#ffffff">⚡</text>
+    <text x="120" y="75" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="bold">DISPONIBILITAT</text>
+    <text x="120" y="98" text-anchor="middle" fill="#e2e8f0" font-size="12">Accés garantit quan calgui</text>
+    <text x="120" y="118" text-anchor="middle" fill="#94a3b8" font-size="11">Redundància RAID · SAIs</text>
+    <text x="120" y="134" text-anchor="middle" fill="#94a3b8" font-size="11">Clústers HA · Còpies 3-2-1</text>
+  </g>
+</svg>
+</div>
+
+---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Qüestions de Comprensió i Fonaments
+1. **Diferenciació de conceptes:** Explica amb un exemple de la vida real d'un taller informàtic la diferència entre un **actiu**, una **amenaça**, una **vulnerabilitat** i un **impacte**.
+2. **La paradoxa de la disponibilitat:** Per què augmentar la seguretat de vegades pot perjudicar la disponibilitat o usabilitat del sistema per als usuaris? Com pot un administrador trobar el punt d'equilibri?
+3. **Càlcul de Matriu de Riscos:** Un hospital té un servidor d'historials mèdics amb la vulnerabilitat que no està protegit contra ransomware. La probabilitat d'infecció és Alta (3) i l'impacte en la salut dels pacients és Alt (3).
+   - Quin és el nivell de risc inicial segons la fórmula $Risc = P \times I$?
+   - Si s'aplica una política de còpies de seguretat diàries aïllades en fred (*air-gapped*), com canvia l'impacte i el risc residual?
+
+### Bloc B: Repte Pràctic de Taller — Auditoria d'una Pime
+Una gestoria amb 8 ordinadors i 1 servidor local de dades et demana fer una avaluació de riscos bàsica:
+- Identifica **5 vulnerabilitats típiques** que solen trobar-se en aquests entorns (ex: contrasenyes en post-its, ús de comptes amb permisos d'administrador, sistemes operatius sense actualitzar, falta de còpies de seguretat fora de l'oficina, ús de xarxa Wi-Fi oberta sense segmentar).
+- Dissenya una taula d'actius, probabilitat, impacte i proposa **3 mesures de mitigació immediates a cost zero o molt baix**.
+
+### Bloc C: Llista d'Autoavaluació de l'Alumnat
+- [ ] Sé identificar quin pilar de la tríada CIA es veu afectat davant d'un incident concret.
+- [ ] Sé utilitzar la matriu de risc $3 \times 3$ per a calcular i prioritzar amenaces.
+- [ ] Sé redactar un pla d'acció amb mesures preventives de mitigació.

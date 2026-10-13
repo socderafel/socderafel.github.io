@@ -14,44 +14,137 @@ next_label: "9.1 Tema 4. CONSULTES ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
+## 🔍 Disseny de Consultes, Càlculs i Llenguatge SQL (QBE)
 
-- [**9.1 Tema 4. CONSULTES**](./ut0901.md)
-- [**9.2 RESUMEN CONSULTES**](./ut0902.md)
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Arquitectura de Consultes en SGBD: De la Quadrícula QBE a SQL ANSI</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Selecció, filtres booleans, camps calculats, agrupaments estadístics i consultes d'acció modificadores de dades</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU9SelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU9CalcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU9GrpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU9ActGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b91c1c" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Consultes de Selecció -->
+    <rect x="20" y="20" width="190" height="255" rx="8" fill="url(#aofU9SelGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">🎯 CONSULTES DE SELECCIÓ</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Filtratge i Projecció</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Criteris de Comparació:</tspan></text>
+    <text x="42" y="93" fill="#cbd5e1" font-size="8">- &gt;, &lt;, &gt;=, &lt;=, &lt;&gt; (Diferent)</text>
+    <text x="42" y="105" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">ENTRE</tspan> 50 <tspan font-weight="bold">I</tspan> 200 (Interval tancat)</text>
+    <text x="42" y="117" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">EN</tspan> ('València', 'Alacant')</text>
+    <text x="32" y="134" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Comodins de Text (LIKE):</tspan></text>
+    <text x="42" y="147" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">*</tspan> o <tspan font-weight="bold">%</tspan>: Cadena de caràcters</text>
+    <text x="42" y="159" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">?</tspan> o <tspan font-weight="bold">_</tspan>: Caràcter individual</text>
+    <text x="42" y="171" fill="#cbd5e1" font-size="8">- <tspan fill="#fbbf24">COM "V*"</tspan> / <tspan fill="#fbbf24">LIKE 'V%'</tspan></text>
+    <rect x="35" y="190" width="160" height="40" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="115" y="206" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">ÉsNul / És No Nul</text>
+    <text x="115" y="220" fill="#cbd5e1" font-size="7.5" text-anchor="middle">IS NULL / IS NOT NULL</text>
+    <text x="115" y="258" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Àlgebra: σ (Selecció) i π (Projecció)</text>
+
+    <!-- Bloc 2: Camps Calculats -->
+    <rect x="230" y="20" width="190" height="255" rx="8" fill="url(#aofU9CalcGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="325" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">⚡ CAMPS CALCULATS</text>
+    <text x="325" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Expressions i Funcions</text>
+    <line x1="240" y1="63" x2="410" y2="63" stroke="#334155"/>
+    <text x="242" y="80" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Sintaxi de Columna:</tspan></text>
+    <text x="252" y="93" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Àlies:</tspan> [Camp1] * [Camp2]</text>
+    <text x="252" y="105" fill="#34d399" font-size="8">Total: [Preu] * [Unitats] * 1.21</text>
+    <text x="242" y="122" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Funcions Integrades:</tspan></text>
+    <text x="252" y="135" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Data():</tspan> Data actual del sistema</text>
+    <text x="252" y="147" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Any([Data]):</tspan> Extracció de l'any</text>
+    <text x="252" y="159" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Majúsc([Text]):</tspan> UPPER() en SQL</text>
+    <rect x="245" y="175" width="160" height="55" rx="4" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="325" y="193" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">Consultes amb Paràmetres</text>
+    <text x="325" y="207" fill="#34d399" font-size="7.5" text-anchor="middle">[Introdueix la ciutat a cercar:]</text>
+    <text x="325" y="221" fill="#cbd5e1" font-size="7.5" text-anchor="middle">Genera diàleg emergent</text>
+    <text x="325" y="258" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">No Ocupen Espai al Disc</text>
+
+    <!-- Bloc 3: Consultes de Resum -->
+    <rect x="440" y="20" width="190" height="255" rx="8" fill="url(#aofU9GrpGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="535" y="42" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">📊 RESUM I TOTALS</text>
+    <text x="535" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Agrupament de Dades</text>
+    <line x1="450" y1="63" x2="620" y2="63" stroke="#334155"/>
+    <text x="452" y="80" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Clàusula GROUP BY:</tspan></text>
+    <text x="462" y="93" fill="#cbd5e1" font-size="8">- Agrupa files per categories</text>
+    <text x="452" y="110" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Funcions d'Agregació:</tspan></text>
+    <text x="462" y="123" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">SUMA():</tspan> Total monetari acumulat</text>
+    <text x="462" y="135" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">PROMEDIO():</tspan> AVG() mitjana</text>
+    <text x="462" y="147" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">COMPTE():</tspan> COUNT() nombre files</text>
+    <text x="462" y="159" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">MÀX / MÍN:</tspan> Valors extrems</text>
+    <rect x="455" y="175" width="160" height="55" rx="4" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="535" y="193" fill="#fbbf24" font-size="8" font-weight="bold" text-anchor="middle">Filtre HAVING vs WHERE</text>
+    <text x="535" y="207" fill="#f8fafc" font-size="7.5" text-anchor="middle">WHERE filtra abans d'agrupar</text>
+    <text x="535" y="221" fill="#cbd5e1" font-size="7.5" text-anchor="middle">HAVING filtra sobre la funció agregada</text>
+    <text x="535" y="258" fill="#fbbf24" font-size="8.5" text-anchor="middle" font-weight="bold">Analítica Empresarial</text>
+
+    <!-- Bloc 4: Consultes d'Acció -->
+    <rect x="650" y="20" width="190" height="255" rx="8" fill="url(#aofU9ActGrad)" stroke="#f87171" stroke-width="1.5"/>
+    <text x="745" y="42" fill="#f87171" font-size="10.5" font-weight="bold" text-anchor="middle">⚠️ CONSULTES D'ACCIÓ</text>
+    <text x="745" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Mutació de Registres</text>
+    <line x1="660" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="662" y="80" fill="#f87171" font-size="8.5">• <tspan font-weight="bold">Actualització (UPDATE):</tspan></text>
+    <text x="672" y="93" fill="#cbd5e1" font-size="8">- Modifica valors en massa</text>
+    <text x="672" y="105" fill="#f87171" font-size="8">  Ex: Pujar preus un 5%</text>
+    <text x="662" y="122" fill="#f87171" font-size="8.5">• <tspan font-weight="bold">Eliminació (DELETE):</tspan></text>
+    <text x="672" y="135" fill="#cbd5e1" font-size="8">- Esborra files segons criteri</text>
+    <text x="662" y="152" fill="#f87171" font-size="8.5">• <tspan font-weight="bold">Dades Annexades (INSERT):</tspan></text>
+    <text x="672" y="165" fill="#cbd5e1" font-size="8">- Afegeix registres a una taula</text>
+    <text x="662" y="182" fill="#f87171" font-size="8.5">• <tspan font-weight="bold">Creació de Taula:</tspan></text>
+    <text x="672" y="195" fill="#cbd5e1" font-size="8">- SELECT INTO taula nova</text>
+    <rect x="665" y="210" width="160" height="26" rx="4" fill="#0f172a" stroke="#f87171" stroke-width="1"/>
+    <text x="745" y="227" fill="#f87171" font-size="8" font-weight="bold" text-anchor="middle">Operacions No Reversibles</text>
+    <text x="745" y="258" fill="#f87171" font-size="8.5" text-anchor="middle" font-weight="bold">Requereixen Confirmació</text>
+  </svg>
+</div>
+
+### 📋 Comparativa entre Llenguatge QBE Gràfic i Sintaxi SQL Estàndard
+
+| Concepte / Tipus de Consulta | Element en Disseny Gràfic (QBE) | Clàusula SQL ANSI Equivalent | Comportament Tècnic |
+| :--- | :--- | :--- | :--- |
+| **Projecció de Columnes** | Casella de verificació "Mostrar" marcada | `SELECT columna1, columna2` | Determina quins camps viatgen al conjunt de resultats (*Recordset*). |
+| **Filtratge de Files** | Fila "Criteris" (Ex: `>100 I <500`) | `WHERE preu > 100 AND preu < 500` | Avalua cada tupla en el disc abans d'incorporar-la al resultat. |
+| **Camps Calculats** | Nova columna: `Subtotal: [Preu]*[Quant]` | `SELECT (preu * quantitat) AS subtotal` | Es computa en temps d'execució en memòria RAM sense ocupar disc físic. |
+| **Connexió Multitaula** | Línia d'unió entre taules a la finestra | `INNER JOIN Taula2 ON Taula1.id = Taula2.id_fk` | Combina registres coincidents en el valor de clau d'ambdues taules. |
+| **Agrupament Estadístic** | Fila "Totals": Agrupar per / Suma / Compte | `GROUP BY camp HAVING SUM(preu) > 1000` | Condensa múltiples tuples en un únic registre resum per clau d'agrupació. |
+| **Consulta d'Actualització** | Fila "Actualitzar a" amb expressió de canvi | `UPDATE Taula SET preu = preu * 1.05 WHERE estat = 1` | Modifica físicament i de forma permanent els registres que acompleixen el filtre. |
 
 ---
 
-# 9.1 Tema 4. CONSULTES
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-> **🔗 Recurs Web: Video 7.1. Crear una consulta**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=cl5_kYw2EjE) ↗️**](https://www.youtube.com/watch?v=cl5_kYw2EjE)
+- [**9.1 Disseny de Consultes de Selecció, Càlculs i QBE**](./ut0901.md)
+- [**9.2 Guia Ràpida de Sintaxi i Criteris de Consulta**](./ut0902.md)
 
-> **🔗 Recurs Web: Video 7.2. Ordenar i filtrar**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=Od1TqvibVqM) ↗️**](https://www.youtube.com/watch?v=Od1TqvibVqM)
+---
 
-> **🔗 Recurs Web: Video 7.3. Consultes multitaula**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=OHrcy9X5JsY) ↗️**](https://www.youtube.com/watch?v=OHrcy9X5JsY)
+# 9.1 Disseny de Consultes de Selecció, Càlculs i QBE
 
-> **🔗 Recurs Web: Video 8. Consultes de resumen en ACCESS 2016**
-> [**🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p08_consulta_resumen_yt.htm) ↗️**](https://www.aulaclic.es/access-2016/secuencias/p08_consulta_resumen_yt.htm)
->
-> En este vídeo voreu com crear consultes de resumen en ACCESS 2016
+> **📺 Recursos Audiovisuals de Referència**
+> - [**Creació de Consultes de Selecció en QBE ↗️**](https://www.youtube.com/watch?v=cl5_kYw2EjE): Vista Disseny de consultes, selecció de camps i ordenació.
+> - [**Filtres Booleans i Criteris Avançats ↗️**](https://www.youtube.com/watch?v=Od1TqvibVqM): Ús d'operadors lògics (I, O), comodins i intervals.
+> - [**Consultes Multitaula i Combinacions (JOIN) ↗️**](https://www.youtube.com/watch?v=OHrcy9X5JsY): Extracció de dades relacionades de múltiples taules.
+> - [**Consultes de Resum i Funcions d'Agregació ↗️**](https://www.aulaclic.es/access-2016/secuencias/p08_consulta_resumen_yt.htm): Agrupaments amb SUM, AVG i COUNT.
+> - [**Consultes d'Acció (Actualització, Annexió i Eliminació) ↗️**](https://www.youtube.com/watch?v=lKsi_HD9j4A): Modificacions massives de registres sota criteris de seguretat.
 
-> **🔗 Recurs Web: Video 9. Consultes referències creuades**
-> [**🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p09_consulta_ref_cruzadas_yt.htm) ↗️**](https://www.aulaclic.es/access-2016/secuencias/p09_consulta_ref_cruzadas_yt.htm)
->
-> En este video voreu com crear consultes de referències creuades en ACCESS 2016
-
-> **🔗 Recurs Web: Video 10.1. Consultes d'actualització**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=lKsi_HD9j4A) ↗️**](https://www.youtube.com/watch?v=lKsi_HD9j4A)
-
-> **🔗 Recurs Web: Video 10.2. Consultes de datos anexados**
-> [**🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p10_consulta_anexados_yt.htm) ↗️**](https://www.aulaclic.es/access-2016/secuencias/p10_consulta_anexados_yt.htm)
->
-> En este video voreu consultes de datos anexados en ACCESS 2016
-
-> **🔗 Recurs Web: Video 10.3. Consultes d'eliminació**
-> [**🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p10_consulta_eliminacion_yt.htm) ↗️**](https://www.aulaclic.es/access-2016/secuencias/p10_consulta_eliminacion_yt.htm)
 
 ---
 
@@ -621,3 +714,122 @@ EMPLEADOS_NUEVOS.
 NOMBRE_DEPARTAMENTO, LOCALIDAD.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 🎯 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Activitat 1: Àlgebra Relacional, Composició Booleana i Traducció QBE a SQL ANSI
+En un sistema de gestió d'un taller microinformàtic disposem de les taules relacionades:
+- `CLIENTS` ($\underline{\text{id\_client}}$, nom, ciutat, telefon)
+- `EQUIPS` ($\underline{\text{num\_serie}}$, marca, model, id\_client\_fk)
+- `ORDRES` ($\underline{\text{id\_ordre}}$, num\_serie\_fk, data\_entrada, cost\_total, estat)
+
+1. **Traducció d'Operacions d'Àlgebra Relacional:** Expresseu les següents operacions en termes d'àlgebra relacional teòrica (mitjançant els operadors $\sigma$ per a selecció, $\pi$ per a projecció i $\bowtie$ per a reunió natural / *join*):
+   - Seleccionar els clients que resideixen a la ciutat de 'València' o 'Gandia'.
+   - Mostrar el nom del client, la marca de l'equip i el cost total de les ordres amb estat 'Reparat'.
+2. **Equivalència SQL ANSI:** Escriviu la consulta SQL equivalent exacta per a cadascuna de les operacions anteriors:
+   ```sql
+   -- Consulta 1: Selecció de clients per ciutat
+   SELECT nom, ciutat, telefon 
+   FROM CLIENTS 
+   WHERE ciutat = 'València' OR ciutat = 'Gandia';
+
+   -- Consulta 2: Multitaula amb INNER JOIN
+   SELECT C.nom, E.marca, E.model, O.cost_total
+   FROM CLIENTS C
+   INNER JOIN EQUIPS E ON C.id_client = E.id_client_fk
+   INNER JOIN ORDRES O ON E.num_serie = O.num_serie_fk
+   WHERE O.estat = 'Reparat';
+   ```
+3. **Anàlisi de Predicats Booleans i Comodins:** Analitzeu el comportament dels següents criteris escrits a la fila "Criteris" d'una quadrícula QBE:
+   - Camp `ciutat`: `COM "V*"` vs `COM "*a"` vs `COM "*castell*"`
+   - Camp `cost_total`: `ENTRE 150 I 450`
+   - Camp `data_entrada`: `< #01/01/2026# I (estat = 'Pendent' O estat = 'En diagnòstic')`
+
+#### Activitat 2: Agrupaments Estadístics i Diferenciació Crítica: WHERE vs HAVING
+Analitzeu la necessitat d'extreure mètriques de rendiment econòmic del taller:
+1. **Diferència entre WHERE i HAVING:** Expliqueu per què la següent consulta SQL provoca un error fatal de compilació en el motor de base de dades i corregiu-la adequadament:
+   ```sql
+   -- Consulta Erronia:
+   SELECT ciutat, AVG(cost_total) AS cost_mig
+   FROM CLIENTS C
+   INNER JOIN EQUIPS E ON C.id_client = E.id_client_fk
+   INNER JOIN ORDRES O ON E.num_serie = O.num_serie_fk
+   WHERE AVG(cost_total) > 200
+   GROUP BY ciutat;
+   ```
+2. **Càlcul d'Agregats:** Donada una taula amb 12 ordres de reparació distribuïdes entre 3 tècnics:
+   - Tècnic 1: 5 ordres (costos: 50 €, 120 €, 80 €, 200 €, 150 €).
+   - Tècnic 2: 4 ordres (costos: 300 €, 450 €, 150 €, 100 €).
+   - Tècnic 3: 3 ordres (costos: 40 €, 60 €, 80 €).
+   - Calculeu manualment el resultat de les funcions `COUNT(*)`, `SUM(cost_total)`, `AVG(cost_total)` i `MAX(cost_total)` per a cadascun dels tècnics.
+3. **Filtre de Grup:** Quins tècnics apareixeran si afegim el criteri `HAVING SUM(cost_total) >= 1000`?
+
+#### Activitat 3: Camps Calculats Financers amb Lògica Condicional
+En la facturació de serveis es requereix generar les dades fiscals en temps d'execució sense guardar redundància al disc:
+1. **Fórmules de Camp:** Escriviu les expressions per a la quadrícula QBE (i SQL) que defineixin les següents columnes derivades:
+   - `Base_Imposable: [Hores_Treball]*[Preu_Hora] + [Cost_Materials]`
+   - `Descompte_Comercial: IIf([Base_Imposable] > 300; [Base_Imposable] * 0.05; 0)`
+   - `Base_Liquidada: [Base_Imposable] - [Descompte_Comercial]`
+   - `Import_IVA: [Base_Liquidada] * 0.21`
+   - `Total_Factura: [Base_Liquidada] + [Import_IVA]`
+2. **Justificació d'Eficiència:** Per què és una bona pràctica d'enginyeria de bases de dades no crear columnes físiques per a `Base_Liquidada` ni `Total_Factura` a les taules i calcular-les mitjançant consultes?
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació Guiada d'una Consulta Multitaula a la Quadrícula QBE
+1. Obriu **LibreOffice Base** o **Microsoft Access** sobre la base de dades de taller creada en les unitats anteriors.
+2. Creeu una nova consulta en **Vista Disseny (QBE)**.
+3. Afegiu les taules `CLIENTS`, `EQUIPS` i `ORDRES`. Comproveu que les línies de relació 1:N apareixen automàticament entre les claus.
+4. Afegiu a la quadrícula els camps:
+   - `CLIENTS.nom` (Ordenació: Ascendent)
+   - `CLIENTS.telefon`
+   - `EQUIPS.marca`
+   - `EQUIPS.model`
+   - `ORDRES.data_entrada`
+   - `ORDRES.cost_total` (Criteri: `> 100`)
+   - `ORDRES.estat` (Criteri: `'Reparat'`)
+5. Executeu la consulta fent clic a **Executa la consulta (F5)** o el botó d'exclamació (!).
+6. Canvieu a la **Vista SQL** i examineu la sentència `SELECT ... INNER JOIN ... WHERE` generada pel motor gràfic.
+
+#### Repte 2: Consulta Paramètrica per a Filtratge Interactiu
+1. En una consulta de selecció nova sobre la taula `ORDRES`, volem que l'usuari puga buscar feines pendents segons la data d'entrada sense haver de modificar el disseny de la consulta.
+2. Al camp `data_entrada`, escriviu a la fila de Criteris:
+   ```text
+   >= [Introdueix la data mínima (DD/MM/AAAA):] I <= [Introdueix la data màxima:]
+   ```
+3. Al camp `estat`, escriviu:
+   ```text
+   [Introdueix l'estat a filtrar (Pendent / Reparat / Tots):]
+   ```
+4. Guardeu la consulta amb el nom `Cerca_Ordres_Per_Data_i_Estat`.
+5. Feu doble clic per obrir-la, responeu als quadres de diàleg emergents i comproveu que la consulta filtra exactament els registres que coincideixen amb els paràmetres introduïts per teclat.
+
+#### Repte 3: Creació i Execució Segura d'una Consulta d'Actualització i Archivament
+1. **Consulta de Creació de Taula / Archivament:** Creeu una consulta per a copiar a una taula històrica totes les reparacions finalitzades fa més d'un any:
+   ```sql
+   -- Sintaxi en SQL per crear taula d'arxiu
+   CREATE TABLE HISTORIC_ORDRES AS
+   SELECT * FROM ORDRES
+   WHERE estat = 'Lliurat' AND data_entrada < '2025-01-01';
+   ```
+2. **Consulta d'Actualització en Massa (UPDATE):** Suposem que a causa d'un increment de l'IPC cal incrementar el preu/hora de mà d'obra un 4,5% per a tots els tècnics de la categoria 'Sènior':
+   ```sql
+   UPDATE TECNICS
+   SET preu_hora = preu_hora * 1.045
+   WHERE categoria = 'Sènior';
+   ```
+3. A la interfície de consultes d'acció, observeu el missatge d'avís de confirmació abans de mutar les dades físiques i verifiqueu a la taula que els nous preus s'han gravat correctament.
+
+---
+
+### 📋 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Domini de Criteris i Àlgebra Relacional** | Construeix criteris booleans complexos amb comodins, intervals i tradueix amb exactitud entre quadrícula QBE i SQL ANSI. | Aplica correctament la majoria de criteris i operadors lògics, amb xicotets dubtes en comodins de text o delimitadors de dates (#). | Configura filtres senzills (igualtats i comparacions bàsiques) però es bloqueja amb expressions booleanes compostes (I/O). | No sap com afegir criteris a una consulta ni interpretar el funcionament d'un filtre. |
+| **Camps Calculats i Funcions d'Agregació** | Formula camps calculats financers amb condicions lògiques i distingeix amb claredat absoluta l'ús de `WHERE` i `HAVING`. | Construeix camps calculats funcionals i consultes de resum amb `GROUP BY`, amb dubtes menors en la sintaxi de funcions condicionals. | Aconsegueix fer càlculs senzills (suma o multiplicació de dos camps) però confon filtres individuals amb filtres de grup. | Incapaç de crear un camp calculat o utilitzar funcions d'agrupament com SUM o COUNT. |
+| **Consultes Multitaula i Consultes d'Acció** | Enllaça múltiples taules amb combinacions correctes i executa consultes d'acció (actualització/arxiu) amb verificació prèvia de seguretat. | Crea consultes multitaula funcionals i executa consultes d'actualització amb supervisió mínima. | Enllaça taules a la quadrícula però obté productes cartesians si les relacions no estan ben definides prèviament. | No comprèn el funcionament de les consultes d'unió multitaula ni les consultes d'acció. |

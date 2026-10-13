@@ -14,6 +14,122 @@ next_label: "2.1 Tema 7. COMBINAR CORRESPONDENCIA ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
+## ✉️ Cicle de Combinació de Correspondència i Gestió de Plantilles
+
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Flux de Treball: De la Font de Dades a la Generació de Documents Massius</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Integració de taules Calc/Base amb cartes model, fusió de camps i exportació personalitzada</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU2DadesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU2CartaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU2FusioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU2EixidaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Font de Dades -->
+    <rect x="20" y="20" width="190" height="210" rx="8" fill="url(#aofU2DadesGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">📋 1. FONT DE DADES</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Orígens de Registres</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Full Calc</tspan> (`.ods` / `.xlsx`)</text>
+    <text x="32" y="98" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Base de Dades</tspan> (`.odb` Base)</text>
+    <text x="32" y="116" fill="#cbd5e1" font-size="8.5">• Fitxer CSV delimitat</text>
+    <text x="32" y="136" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Fila 1 = Encapçalaments:</tspan></text>
+    <text x="42" y="150" fill="#94a3b8" font-size="8">Nom, Cognoms, Adreça, CP, Saldo</text>
+    <text x="32" y="170" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Tecla F4:</tspan> Visualitzador de</text>
+    <text x="42" y="183" fill="#94a3b8" font-size="8">fonts de dades en Writer</text>
+    <text x="115" y="218" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Dades Estructurades</text>
+
+    <!-- Fletxa 1 -> 2 -->
+    <path d="M 210 115 L 235 115" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Bloc 2: Document Model -->
+    <rect x="240" y="20" width="190" height="210" rx="8" fill="url(#aofU2CartaGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="335" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">📄 2. DOCUMENT MODEL</text>
+    <text x="335" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Carta o Plantilla `.ott`</text>
+    <line x1="250" y1="63" x2="420" y2="63" stroke="#334155"/>
+    <text x="252" y="80" fill="#cbd5e1" font-size="8.5">• Text estàtic corporatiu comú</text>
+    <text x="252" y="100" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Camps de Combinació:</tspan></text>
+    <rect x="252" y="112" width="165" height="32" rx="4" fill="#1e293b" stroke="#c084fc" stroke-width="1"/>
+    <text x="335" y="125" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle">&lt;Nom&gt; &lt;Cognoms&gt;</text>
+    <text x="335" y="137" fill="#38bdf8" font-size="7.5" text-anchor="middle">Deute: &lt;Saldo&gt; €</text>
+    <text x="252" y="162" fill="#cbd5e1" font-size="8.5">• Plantilles reutilitzables (`.ott`)</text>
+    <text x="252" y="180" fill="#cbd5e1" font-size="8.5">• Caps de pàgina corporatius</text>
+    <text x="252" y="196" fill="#94a3b8" font-size="8">Formatació única centralitzada</text>
+    <text x="335" y="218" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Model Base Únic</text>
+
+    <!-- Fletxa 2 -> 3 -->
+    <path d="M 430 115 L 455 115" stroke="#c084fc" stroke-width="2"/>
+
+    <!-- Bloc 3: Fusió i Filtratge -->
+    <rect x="460" y="20" width="190" height="210" rx="8" fill="url(#aofU2FusioGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="555" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">⚙️ 3. FUSIÓ I FILTRES</text>
+    <text x="555" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Assistent de Correspondència</text>
+    <line x1="470" y1="63" x2="640" y2="63" stroke="#334155"/>
+    <text x="472" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Assistent de combinació:</tspan></text>
+    <text x="482" y="93" fill="#94a3b8" font-size="8">Menú Eines > Assistent</text>
+    <text x="472" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Vista Prèvia de Registres:</tspan></text>
+    <text x="482" y="125" fill="#94a3b8" font-size="8">Navegació registre a registre</text>
+    <text x="472" y="144" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Filtres de selecció:</tspan></text>
+    <text x="482" y="157" fill="#94a3b8" font-size="8">Ex: Només clients amb Saldo &gt; 0</text>
+    <text x="472" y="176" fill="#cbd5e1" font-size="8.5">• Exclusió de registres buits</text>
+    <text x="472" y="194" fill="#cbd5e1" font-size="8.5">• Bloques d'adreces automàtics</text>
+    <text x="555" y="218" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Control de Qualitat</text>
+
+    <!-- Fletxa 3 -> 4 -->
+    <path d="M 650 115 L 675 115" stroke="#34d399" stroke-width="2"/>
+
+    <!-- Bloc 4: Eixida Combinada -->
+    <rect x="680" y="20" width="160" height="210" rx="8" fill="url(#aofU2EixidaGrad)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="760" y="42" fill="#f59e0b" font-size="10.5" font-weight="bold" text-anchor="middle">🖨️ 4. EIXIDA FUSIÓ</text>
+    <text x="760" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Generació de Resultats</text>
+    <line x1="690" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="692" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Imprimir directament:</tspan></text>
+    <text x="700" y="93" fill="#94a3b8" font-size="8">Trameses físiques</text>
+    <text x="692" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Fitxer Únic:</tspan> Document</text>
+    <text x="700" y="125" fill="#94a3b8" font-size="8">amb 1 pàgina per destinatari</text>
+    <text x="692" y="144" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Fitxers Individuals:</tspan></text>
+    <text x="700" y="157" fill="#94a3b8" font-size="8">Un PDF per client amb nom</text>
+    <text x="692" y="176" fill="#cbd5e1" font-size="8.5">• Enviament per correu (SMTP)</text>
+    <text x="692" y="194" fill="#cbd5e1" font-size="8.5">• Sobres i Etiquetes A4</text>
+    <text x="760" y="218" fill="#f59e0b" font-size="8.5" text-anchor="middle" font-weight="bold">Trameses Personalitzades</text>
+
+    <!-- Peu informatiu -->
+    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Regla d'Or de la Combinació: <tspan fill="#34d399" font-weight="bold">Mai s'envia o imprimeix una tirada massiva sense haver revisat la Vista Prèvia de Registres.</tspan></text>
+    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">Un camp de combinació mal vinculat o un error de format pot malgastar centenars de fulls de paper o transmetre dades confidencials errònies.</text>
+  </svg>
+</div>
+
+---
+
+## 📊 Comparativa de Destinacions d'Eixida en Combinar Correspondència
+
+| Destinació d'Eixida | Format de Sortida | Avantatge Principal | Inconvenient / Precaució | Cas d'Ús Recomanat |
+| :--- | :--- | :--- | :--- | :--- |
+| **Imprimir Directament** | Impressora física o cua d'impressió. | Estalvia espai a disc; procés immediat. | Si la impressora s'encalla a la meitat, és difícil reprendre des del registre exacte. | Trameses postals d'oficina quan la impressora és ràpida i fiable. |
+| **Desar com a Document Únic** | Fitxer `.odt` o `.pdf` amb totes les pàgines. | Permet una darrera revisió visual de totes les cartes abans d'imprimir o arxivar. | El fitxer resultant pot ocupar molts megabytes si inclou imatges pesades. | **El mètode més segur i recomanat per a principiants i auditories.** |
+| **Desar com a Documents Individuals**| Múltiples fitxers independents (`Carta_Client1.pdf`, `Carta_Client2.pdf`). | Cada arxiu conté exclusivament les dades d'un únic destinatari. | Requereix una columna amb el nom de fitxer desitjat a la font de dades. | Generació de nòmines, informes mèdics o certificats acadèmics. |
+| **Enviament per Correu Electrònic** | Missatges de correu via protocol SMTP. | Comunicació digital instantània i ecològica (zero paper). | Risc que els servidors de correu bloquegen l'enviament per considerar-lo correu brossa (*Spam*). | Circulars informatives a clients o comunitats educatives. |
+
+---
+
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**2.1 Tema 7. COMBINAR CORRESPONDENCIA**](./ut0201.md)
@@ -856,3 +972,71 @@ Si no existe ningún elemento seleccionado podrás
 Finalmente, el botón Libreta de direcciones... te permite establecer un vínculo entre una fuente de datos (por ejemplo, la libreta de direcciones de tu sistema operativo ( la libreta de direcciones de Windows o la de MS Outlook para usuarios de Windows) y la base de datos que automáticamente creará OpenOffice y que te permitirá disponer de los campos de tu libreta de direcciones para agregarlos con facilidad a tus documentos y plantillas.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 📋 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+1. **Càlcul de Temps i Consum d'Impressió Massiva de Correspondència:**
+   - Un departament d'administració ha d'imprimir una tramesa de notificacions personalitzades a $640\text{ clients}$.
+   - Cada carta consta exactament de $2\text{ pàgines}$ (anvers i revers imprés en dúplex).
+   - La impressora làser de departament té una velocitat d'impressió efectiva de $24\text{ pàgines per minut}$ (PPM) en mode doble cara.
+   - **Preguntes de dimensionament:**
+     - Quantes pàgines totals i quants fulls de paper físics A4 es consumiran en la tirada completa?
+     - Quant de temps en minuts trigarà la impressora a completar la feina si no es produeix cap encallament de paper?
+     - Si el tòner negre té una capacitat nominal de $3.000\text{ pàgines}$ al $5\%$ de cobertura estàndard i aquestes cartes tenen una cobertura del $8\%$ (consum proporcional: $3.000 \times \frac{5}{8} = 1.875\text{ pàgines}$ reals), quin percentatge del cartutx de tòner es gastarà en aquesta única feina?
+
+2. **Dimensionament de Fulls d'Etiquetes Postals Adhesives:**
+   - Es disposa de paquets de fulls DIN A4 d'etiquetes adhesives comercials (format estàndard: 3 columnes $\times$ 7 files = $21\text{ etiquetes per full}$).
+   - La base de dades conté $380\text{ adreces postals}$ validades.
+   - **Preguntes de càlcul:**
+     - Quants fulls d'etiquetes A4 sencers caldrà alimentar a la safata d'impressió per cobrir tots els destinataris?
+     - Quantes etiquetes romandran en blanc sense utilitzar a l'últim full imprès?
+     - Si s'aplica un filtre de selecció per imprimir exclusivament els clients de la província de València (`Provincia = "València"`) que representen el $60\%$ del total (228 clients), quants fulls s'utilitzaran en eixe cas?
+
+3. **Formatació de Camps Crítics en la Font de Dades:**
+   - En vincular un full de càlcul Calc com a font de dades per a combinar correspondència, un tècnic observa que:
+     - El codi postal `03001` apareix a la carta combinada com `3001` (sense el zero inicial).
+     - Una data de venciment `15/04/2026` apareix com un nombre enter `46127`.
+     - Un saldo pendent `1250,5` apareix sense el símbol d'euro ni els dos decimals estàndard (`1250.5`).
+   - **Preguntes d'anàlisi:**
+     - Explica per quina raó tècnica el zero inicial desapareix quan una columna d'identificador o codi postal s'ha definit amb format numèric en lloc de format **Text**.
+     - Per quina raó les dates es transformen en enters (sistema de recompte de dies des del punt zero d'origen)?
+     - Com es corregeix la presentació de monedes directament a Writer mitjançant la propietat de format del camp de combinació sense haver d'alterar les dades originals del full de càlcul?
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació d'una Font de Dades Calc i Registre en LibreOffice
+1. Obre LibreOffice Calc i crea un fitxer anomenat `destinataris_taller.ods`.
+2. Defineix a la fila 1 els camps: `ID`, `Nom`, `Cognoms`, `Empresa`, `Adreca`, `CodiPostal`, `Poblacio`, `Deute_Euros`.
+3. Introdueix 5 registres complets amb dades fictícies (assegura't que la columna `CodiPostal` estiga formatada explícitament com a Text per mantindre els zeros a l'esquerra).
+4. Obre LibreOffice Writer i prem `F4` per visualitzar el panell de fonts de dades.
+5. Registra la font de dades mitjançant `Fitxer > Nou > Base de dades > Connecta amb una base de dades existent > Full de càlcul` i enllaça el fitxer `.ods`.
+
+#### Repte 2: Redacció de la Carta Model i Inserció de Camps
+1. Redacta a Writer una carta formal de notificació de servei tècnic amb capçalera corporativa.
+2. Arrossega des del panell de dades superior (`F4`) o mitjançant `Insereix > Camp > Més camps (Ctrl+F2) > Base de dades` els camps:
+   - `<Nom> <Cognoms>`
+   - `<Empresa>`
+   - `<Adreca>, <CodiPostal> - <Poblacio>`
+3. Al cos de la carta, insereix la frase condicional: *"Us informem que el vostre saldo pendent de regularització és de `<Deute_Euros> €`."*
+4. Guarda el document com a plantilla de document de text de LibreOffice amb extensió `.ott`.
+
+#### Repte 3: Generació de la Tramesa Combinada i Filtres de Selecció
+1. Executa l'assistent de combinar correspondència o prem la icona **Imprimeix**.
+2. Davant el missatge *"El document conté camps de base de dades. Voleu imprimir una carta en sèrie?"*, selecciona **Sí**.
+3. Aplica un filtre a la finestra emergent: selecciona únicament els registres on `Deute_Euros > 0`.
+4. Comprova la vista prèvia dels registres filtrats verificant que cap camp apareix buit ni amb caràcters estranys.
+5. Selecciona com a eixida **Desar com a document únic** i genera el fitxer final `Cartes_Finals.odt`. Comprova que conté tantes pàgines com clients complien la condició de filtre.
+
+---
+
+### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
+| :--- | :--- | :--- | :--- |
+| **Font de Dades i Integritat de Camps** | Modela el full de càlcul amb capçaleres correctes, formats de text per a codis postals i vincula la font mitjançant F4 sense errors. | Crea la font de dades però oblida el format de text per als codis postals perdent el zero inicial dels registres. | No sap com vincular un full de càlcul amb Writer i intenta copiar i apegar les dades manualment carta per carta. |
+| **Carta Model, Camps de Fusió i Plantilles** | Dissenya una carta corporativa neta, insereix camps amb espaiats correctes i l'emmagatzema com a plantilla reusable `.ott`. | Insereix els camps de combinació però deixa espais dobles o no sap guardar el document en format de plantilla. | Escriu els noms dels camps entre signes `< >` a mà en lloc d'inserir camps dinàmics reals de base de dades. |
+| **Filtratge, Vista Prèvia i Eixida de Fusió** | Aplica filtres SQL/lògics avançats, comprova la vista prèvia de registres i genera documents únics o individuals en PDF. | Executa la combinació de correspondència amb èxit però no sap aplicar filtres de selecció de registres. | Imprimeix directament sense revisar la vista prèvia generant documents en blanc o amb dades corruptes. |

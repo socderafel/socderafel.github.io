@@ -14,25 +14,136 @@ next_label: "11.1 Tema 6. INFORMES ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
+## 📑 Disseny d'Informes, Agrupaments i Subtotals
 
-- [**11.1 Tema 6. INFORMES**](./ut1101.md)
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Estructura de Bandes d'Informe: Agrupaments, Jerarquies i Àmbits de Càlcul</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Organització de seccions impreses, càlcul de subtotals de grup, gran total acumulador i maquetació professional A4</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU11BndGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU11GrpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU11TotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU11ImpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#c084fc" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Jerarquia de Bandes -->
+    <rect x="20" y="20" width="190" height="255" rx="8" fill="url(#aofU11BndGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">📑 BANDES D'INFORME</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Seqüència d'Impressió</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">1. Capçalera d'Informe:</tspan></text>
+    <text x="42" y="93" fill="#cbd5e1" font-size="8">- Només a la primera pàgina</text>
+    <text x="32" y="110" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">2. Capçalera de Pàgina:</tspan></text>
+    <text x="42" y="123" fill="#cbd5e1" font-size="8">- A dalt de totes les pàgines</text>
+    <text x="32" y="140" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">3. Capçalera de Grup:</tspan></text>
+    <text x="42" y="153" fill="#cbd5e1" font-size="8">- Títol de cada categoria</text>
+    <text x="32" y="170" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">4. Detall:</tspan> 1 fila per registre</text>
+    <text x="32" y="187" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">5. Peu de Grup:</tspan> Subtotals</text>
+    <rect x="35" y="202" width="160" height="35" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="115" y="217" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">6. Peu de Pàgina | 7. Peu Informe</text>
+    <text x="115" y="229" fill="#94a3b8" font-size="7.5" text-anchor="middle">Numeració / Gran Total Final</text>
+    <text x="115" y="258" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Composició Paginada</text>
+
+    <!-- Bloc 2: Agrupament i Ordenació -->
+    <rect x="230" y="20" width="190" height="255" rx="8" fill="url(#aofU11GrpGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="325" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">📂 AGRUPAMENT I ORDRE</text>
+    <text x="325" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Estructura Jeràrquica</text>
+    <line x1="240" y1="63" x2="410" y2="63" stroke="#334155"/>
+    <text x="242" y="80" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Nivells d'Agrupament:</tspan></text>
+    <text x="252" y="93" fill="#cbd5e1" font-size="8">- Nivell 1: Per Client / Tècnic</text>
+    <text x="252" y="105" fill="#cbd5e1" font-size="8">- Nivell 2: Per Tipus d'Equip</text>
+    <text x="242" y="122" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Criteris d'Ordenació:</tspan></text>
+    <text x="252" y="135" fill="#cbd5e1" font-size="8">- Ascendent (A-Z) / Descendent</text>
+    <text x="252" y="147" fill="#cbd5e1" font-size="8">- Ordre cronològic per Data</text>
+    <text x="242" y="164" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Control de Seccions:</tspan></text>
+    <text x="252" y="177" fill="#cbd5e1" font-size="8">- Amb capçalera / Amb peu</text>
+    <text x="252" y="189" fill="#34d399" font-size="8">- Mantenir el grup junt (No dividir)</text>
+    <rect x="245" y="205" width="160" height="32" rx="4" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="325" y="220" fill="#34d399" font-size="8" font-weight="bold" text-anchor="middle">Salts de Pàgina per Categoria</text>
+    <text x="325" y="258" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Claredat Documental</text>
+
+    <!-- Bloc 3: Càlculs i Totals -->
+    <rect x="440" y="20" width="190" height="255" rx="8" fill="url(#aofU11TotGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="535" y="42" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">🧮 CÀLCULS I TOTALS</text>
+    <text x="535" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Àmbits d'Execució</text>
+    <line x1="450" y1="63" x2="620" y2="63" stroke="#334155"/>
+    <text x="452" y="80" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">A la Secció Detall:</tspan></text>
+    <text x="462" y="93" fill="#cbd5e1" font-size="8">- =[Hores] * [Preu_Hora]</text>
+    <text x="462" y="105" fill="#94a3b8" font-size="7.5">  (Calcula el valor del registre)</text>
+    <text x="452" y="122" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Al Peu de Grup (Subtotal):</tspan></text>
+    <text x="462" y="135" fill="#cbd5e1" font-size="8">- =Suma([Cost_Total])</text>
+    <text x="462" y="147" fill="#fbbf24" font-size="8">  Suma sols les files d'aquell grup</text>
+    <text x="452" y="164" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Al Peu d'Informe (Gran Total):</tspan></text>
+    <text x="462" y="177" fill="#cbd5e1" font-size="8">- =Suma([Cost_Total])</text>
+    <text x="462" y="189" fill="#f8fafc" font-size="8">  Suma total de tot el document</text>
+    <rect x="455" y="205" width="160" height="32" rx="4" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="535" y="220" fill="#fbbf24" font-size="8" font-weight="bold" text-anchor="middle">Total Acumulat: Sí / No</text>
+    <text x="535" y="258" fill="#fbbf24" font-size="8.5" text-anchor="middle" font-weight="bold">Mètriques Agregades</text>
+
+    <!-- Bloc 4: Distribució i Sortida -->
+    <rect x="650" y="20" width="190" height="255" rx="8" fill="url(#aofU11ImpGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="745" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">🖨️ DISTRIBUCIÓ I PDF</text>
+    <text x="745" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Format de Sortida</text>
+    <line x1="660" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="662" y="80" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Configuració de Pàgina:</tspan></text>
+    <text x="672" y="93" fill="#cbd5e1" font-size="8">- Mida paper: DIN A4</text>
+    <text x="672" y="105" fill="#cbd5e1" font-size="8">- Orientació: Vertical / Apaïsat</text>
+    <text x="672" y="117" fill="#cbd5e1" font-size="8">- Marges: 15 mm simètrics</text>
+    <text x="662" y="134" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Paginació Automàtica:</tspan></text>
+    <text x="672" y="147" fill="#cbd5e1" font-size="8">- ="Pàgina " &amp; [Pàgina] &amp; " de " &amp; [Pàgines]</text>
+    <text x="662" y="164" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Exportació Multiformat:</tspan></text>
+    <text x="672" y="177" fill="#cbd5e1" font-size="8">- PDF / XPS (No editable)</text>
+    <text x="672" y="189" fill="#cbd5e1" font-size="8">- Full de càlcul (Excel / Calc)</text>
+    <rect x="665" y="205" width="160" height="32" rx="4" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+    <text x="745" y="220" fill="#c084fc" font-size="8" font-weight="bold" text-anchor="middle">Vista Prèvia d'Impressió</text>
+    <text x="745" y="258" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Presentació Comercial</text>
+  </svg>
+</div>
+
+### 📋 Comparativa de Bandes d'Informe, Freqüència de Repetició i Àmbits de Càlcul
+
+| Banda d'Informe | On es visualitza / Imprimeix | Contingut Típic | Funció Agregada Admesa (`SUM`) | Exemple Microinformàtic |
+| :--- | :--- | :--- | :--- | :--- |
+| **Capçalera d'Informe** | Una única vegada, a la primera pàgina de l'informe | Portada, títol del dossier, logotip de l'empresa | No aplica | Logotip del SAT i títol "Resum Anual de Facturació 2026". |
+| **Capçalera de Pàgina** | A la part superior de cada pàgina impresa | Nom de les columnes de la taula, data actual | No aplica | Capçaleres de columna: "Codi", "Data", "Avaria", "Import". |
+| **Capçalera de Grup** | Cada vegada que canvia el valor del camp d'agrupament | Dades del client, departament o tècnic | No aplica | Nom del client: `=[Nom_Client] & " (" & [DNI] & ")"`. |
+| **Detall** | Es repeteix tantes vegades com registres tinga la consulta | Valors individuals de cada actuació o peça | Càlcul de fila (sense `SUM`) | `[Num_Serie]`, `[Descripcio_Avaria]`, `=[Hores]*[Preu]`. |
+| **Peu de Grup** | Al final de tots els registres que pertanyen a un grup | Subtotal acumulat del client o categoria | `=Suma([Import])` (Subtotal de grup) | Subtotal de reparacions per a un client determinat. |
+| **Peu de Pàgina** | A la part inferior de cada pàgina física | Paginació dinàmica, peu legal confidencial | No admesa | `="Pàgina " & [Page] & " de " & [Pages]`. |
+| **Peu d'Informe** | Una única vegada, a l'última pàgina de l'informe | Gran total general, resum global de mètriques | `=Suma([Import])` (Gran total general) | Gran total facturat per tot el taller durant el període. |
 
 ---
 
-# 11.1 Tema 6. INFORMES
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-> **🔗 Recurs Web: Video 12.1. Crear informes**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=v-96yHvlu-c) ↗️**](https://www.youtube.com/watch?v=v-96yHvlu-c)
+- [**11.1 Disseny d'Informes, Agrupaments i Informes Resum**](./ut1101.md)
 
-> **🔗 Recurs Web: Video 12.2. Agrupar dades en formularis**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=e3O4F42Bq_g) ↗️**](https://www.youtube.com/watch?v=e3O4F42Bq_g)
+---
 
-> **🔗 Recurs Web: Video 13.1. Controls de formularis**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=C4d1ECkDsBY) ↗️**](https://www.youtube.com/watch?v=C4d1ECkDsBY)
+# 11.1 Disseny d'Informes, Agrupaments i Informes Resum
 
-> **🔗 Recurs Web: Video 13.2. Controls de formularis (2 part)**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=ug4efae60AA) ↗️**](https://www.youtube.com/watch?v=ug4efae60AA)
+> **📺 Recursos Audiovisuals de Referència**
+> - [**Creació d'Informes amb Assistent i Vista Disseny ↗️**](https://www.youtube.com/watch?v=v-96yHvlu-c): Configuració de fonts de dades i ordenació.
+> - [**Agrupament de Dades i Càlcul de Subtotals ↗️**](https://www.youtube.com/watch?v=e3O4F42Bq_g): Inserció de capçaleres i peus de grup per categories.
+> - [**Disseny i Format Avançat de Seccions d'Informe ↗️**](https://www.youtube.com/watch?v=C4d1ECkDsBY): Ajust de marges, línies i totals generals.
+> - [**Paginació i Exportació a Format PDF ↗️**](https://www.youtube.com/watch?v=ug4efae60AA): Preparació per a impressió comercial i distribució digital.
+
 
 ---
 
@@ -723,3 +834,91 @@ Si habías trabajado con versiones anteriores de Access, es posible que utilizar
 En caso de que no aparezca, asegúrate de que hay suficiente espacio junto a la caja de texto para que se visualice correctamente y de que la propiedad Mostrar el selector de fecha del control se encuentra establecido como Para fechas.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 🎯 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Activitat 1: Àmbits d'Avaluació de les Funcions Agregades en Seccions d'Informe
+En un informe corporatiu de facturació del servei tècnic es vol mostrar el volum de diners ingressats per reparacions, peces i mà d'obra.
+1. **Comportament Segons la Banda d'Ubicació:** Expliqueu detalladament quin càlcul realitza el motor de bases de dades quan la fórmula `=Suma([Cost_Total])` s'ubica en cadascuna de les següents seccions:
+   - **Peu de Grup `Client`:** Suma exclusivament les reparacions que pertanyen al client del bloc actiu.
+   - **Peu de Grup `Estat` (agrupament secundari):** Suma les reparacions amb aquell mateix estat dins del client.
+   - **Peu d'Informe (*Report Footer*):** Suma totes les reparacions de tots els clients del document complet (Gran Total).
+2. **Diagnòstic d'Errades Freqüents:** Un tècnic novell col·loca el control amb la fórmula `=Suma([Cost_Total])` dins de la banda **Capçalera de Pàgina** i dins de la banda **Detall**.
+   - Quin error o comportament anòmal es produeix en la vista prèvia d'impressió en cadascun dels dos casos?
+   - Per què la banda Capçalera de Pàgina no admet funcions agregades com `Suma()` o `Promedio()`?
+3. **Càlcul de Mitjanes i Percentatges de Contribució:** Escriviu la fórmula que cal situar al Peu de Grup per calcular el percentatge que representa la facturació d'un client concret respecte al total facturat per tot el taller:
+   $$P_{\text{client}} = \frac{\text{Suma}([Cost\_Total])}{\text{[Gran\_Total\_Taller]}} \times 100$$
+
+#### Activitat 2: Paginació Matemàtica i Dimensionament d'Espai en Format DIN A4
+En maquetar un informe per a impressió en paper o exportació a PDF es treballa sobre el format estàndard DIN A4 ($210\text{ mm} \times 297\text{ mm}$ en orientació vertical):
+- Marges superior i inferior: $15\text{ mm}$ cadascun.
+- Alçada total disponible per al contingut: $H_{\text{paper}} = 297 - (15 + 15) = 267\text{ mm}$.
+- Capçalera de pàgina (logotip i columnes): $22\text{ mm}$.
+- Peu de pàgina (numeració i avís legal): $15\text{ mm}$.
+- Alçada útil per a dades a cada full: $H_{\text{útil}} = 267 - 22 - 15 = 230\text{ mm}$.
+- Cada fila de la secció **Detall** ocupa exactament una alçada de $h_{\text{detall}} = 8\text{ mm}$.
+- La **Capçalera de Grup** (canvi de client) mesura $h_{\text{cap\_grup}} = 14\text{ mm}$.
+- El **Peu de Grup** (subtotal del client) mesura $h_{\text{peu\_grup}} = 12\text{ mm}$.
+
+1. **Càlcul de Capacitat Màxima:** Quantes línies de reparació caben com a màxim en una pàgina que continga les dades d'un únic client (amb la seua capçalera i peu de grup)?
+   $$N_{\text{reg}} = \left\lfloor \frac{H_{\text{útil}} - h_{\text{cap\_grup}} - h_{\text{peu\_grup}}}{h_{\text{detall}}} \right\rfloor$$
+2. **Prevenció de Grups Orfes (*KeepTogether*):** Si un client té 2 reparacions i el seu peu de grup queda separat a la pàgina següent a causa de la manca d'espai, quina propietat d'agrupament s'ha d'activar (`Mantenir el grup junt = Sí`) per a evitar que el subtotal quede desconnectat dels seus registres associats?
+3. **Numeració Dinàmica:** Escriviu l'expressió que cal posar en el quadre de text del Peu de Pàgina perquè mostre el format: `"Full 3 de 12 pàgines - Generat el 13/10/2026"`.
+
+#### Activitat 3: Format Condicional i Comunicació Tècnica
+En el seguiment de les garanties del taller, es vol que l'informe destaque visualment les incidències crítiques sense intervenció humana:
+1. **Regla de Format Condicional 1:** Si el camp `Dies_En_Taller` és superior a 10 dies laborables, el fons del quadre de text ha de canviar a color taronja d'advertència amb lletra negra en negreta.
+2. **Regla de Format Condicional 2:** Si el camp `Cost_Peces` supera els 500 €, el text ha d'aparèixer en color roig intens (`#dc2626`).
+3. **Regla per a Estats:** Si el camp `Estat` és igual a `'Reparat'`, el text ha de mostrar-se en verd fosc (`#16a34a`).
+Expliqueu com s'apliquen aquestes tres regles utilitzant l'eina de **Format Condicional** del dissenyador d'informes.
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació d'un Informe de Reparacions Agrupat per Tècnic amb l'Assistent
+1. Obriu **LibreOffice Base** o **Microsoft Access**.
+2. Activeu l'**Assistent per a Informes**:
+   - Taula / Consulta d'origen: Seleccioneu una consulta que continga el nom del tècnic, la marca de l'equip, la data d'entrada, l'avaria i el cost total.
+   - Nivell d'agrupament: Agrupar pel camp `Nom_Tecnic`.
+   - Criteri d'ordenació: Ordenar pel camp `Data_Entrada` en sentit ascendent.
+   - Opcions de resum: Activeu la casella **Calcular Suma** i **Calcular Promedio** sobre el camp `Cost_Total`.
+   - Distribució visual: Seleccioneu format en **Bloc** o **Esquema**, orientació **Vertical (Portret)**.
+3. Guardeu l'informe amb el nom `R_Facturacio_Per_Tecnic`.
+4. Obriu la **Vista Prèvia d'Impressió** i comproveu com les dades apareixen ordenades per tècnic amb els seus respectius subtotals.
+
+#### Repte 2: Maquetació Avançada a la Vista Disseny i Gran Total Final
+1. Obriu l'informe `R_Facturacio_Per_Tecnic` en **Vista Disseny**.
+2. A la **Capçalera d'Informe**:
+   - Inseriu un control d'imatge amb el logotip del taller tècnic.
+   - Afegiu una etiqueta amb text de mida 18 pt en negreta: *"INFORME RESUM DE RENDIMENT TÈCNIC I FACTURACIÓ"*.
+3. A la **Capçalera de Pàgina**:
+   - Dibuixeu una línia horitzontal de separació de color gris fosc (`#475569`) per davall dels títols de columna.
+4. Al **Peu de Grup `Nom_Tecnic`**:
+   - Ajusteu el format del quadre calculat de subtotal a estil de moneda (`Moneda` o `2 decimals amb símbol €`).
+   - Afegiu l'etiqueta: `="Subtotal Facturat per " & [Nom_Tecnic] & ":"`.
+5. Al **Peu d'Informe**:
+   - Creeu un quadre de text calculat amb la fórmula: `=Suma([Cost_Total])`.
+   - Apliqueu fons blau marí (`#1e293b`), text blanc en negreta de 12 pt i vora doble de tancament comptable.
+   - Afegiu a l'esquerra l'etiqueta: *"GRAN TOTAL TALLER ACUMULAT:"*.
+
+#### Repte 3: Exportació Oficial a PDF i Verificació de Compliment
+1. Des de la Vista Prèvia d'Impressió, feu clic a l'opció **PDF o XPS** (Access) o **Exporta a PDF** (LibreOffice Base).
+2. Deseu el document com a `informe_taller_oficial_2026.pdf`.
+3. Obriu el fitxer PDF resultant amb el visor del navegador o Adobe Acrobat.
+4. Verifiqueu els següents punts de control de qualitat tècnica:
+   - Capçalera i peu de pàgina es repeteixen de manera idèntica a totes les pàgines.
+   - Cap text no queda truncat amb símbols de coixinet (`###`) a causa d'amplada insuficient del control.
+   - No s'ha generat cap pàgina en blanc supèrflua al final (evitant que l'amplada de l'informe supere els $210\text{ mm} - 30\text{ mm} = 180\text{ mm}$).
+
+---
+
+### 📋 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Estructuració de Bandes i Seccions d'Informe** | Organitza les 7 seccions amb precisió impecable, respectant jerarquies, ordenacions i eliminant pàgines en blanc supèrflues. | Dissenya l'informe amb totes les seccions necessàries amb xicotets desajustos d'alineació o marges. | Utilitza l'assistent per a generar l'informe però té dificultats per a modificar les bandes manualment en vista disseny. | No distingeix entre capçalera d'informe, capçalera de pàgina i capçalera de grup. |
+| **Càlcul de Subtotals i Grans Totals Agregats** | Formula subtotals de grup i totals generals utilitzant la sintaxi correcta a la secció adequada sense generar errors `#Error`. | Configura la suma al peu de grup i al peu d'informe amb guia mínima en el format de moneda o etiquetes. | Aconsegueix mostrar el total general però falla en la configuració dels subtotals per categories de grup. | Incapaç d'aplicar funcions de resum com `=Suma()` en un informe. |
+| **Maquetació Professional i Exportació a PDF** | Aplica format condicional avançat, paginació dinàmica i exporta a PDF amb acabat corporatiu lliure de truncaments. | Exporta a PDF amb bona presència visual i paginació correcta, amb xicotets detalls d'espaiat o contrast. | L'informe és llegible però presenta errades de maquetació (alguns camps apareixen retallats o surt una pàgina en blanc al final). | No sap com configurar la pàgina d'impressió ni exportar l'informe a format PDF. |

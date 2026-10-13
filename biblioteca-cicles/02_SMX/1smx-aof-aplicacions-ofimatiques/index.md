@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Aplicacions Ofimàtiques — Aplicacions Ofimàtiques | Portal Docent Pepe Cuenca"
+title: "Índex — Aplicacions Ofimàtiques — Aplicacions Ofimàtiques | Portal Docent d'Informàtica"
 course_root: "."
 badge: "1r SMX · Grau Mitjà · FP Grau Mitjà — SMX (Sistemes Microinformàtics i Xarxes)"
 next_url: "./ut01/index.html"

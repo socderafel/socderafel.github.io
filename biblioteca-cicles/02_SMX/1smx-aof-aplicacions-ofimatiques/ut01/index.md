@@ -14,6 +14,122 @@ next_label: "1.1 Tema 0. Suites Ofimàtiques ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
+## 🖋️ Arquitectura del Processador de Text: Nivells de Format, Estils i Objectes
+
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Jerarquia de Format: Del Caràcter al Document i Integració d'Objectes</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Nivells estructurals de formatació, herència d'estils i models d'ancoratge en LibreOffice Writer</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU1ParagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU1EstilsGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU1TaulesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU1ImatgesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Caràcter i Paràgraf -->
+    <rect x="20" y="20" width="190" height="210" rx="8" fill="url(#aofU1ParagGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">🔤 CARÀCTER I PARÀGRAF</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Format de Text Bàsic</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Caràcter:</tspan> Font, mida (pt)</text>
+    <text x="42" y="93" fill="#94a3b8" font-size="8">Negreta, cursiva, color, kerning</text>
+    <text x="32" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Paràgraf:</tspan> Alineació</text>
+    <text x="42" y="125" fill="#94a3b8" font-size="8">Esquerra, dreta, centrat, justificat</text>
+    <text x="32" y="144" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Sagnats:</tspan> 1a línia i francès</text>
+    <text x="32" y="162" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Interlineat:</tspan> Simple / 1,5 / Doble</text>
+    <text x="32" y="180" fill="#cbd5e1" font-size="8.5">• Tabuladors amb caràcter farcit</text>
+    <text x="32" y="196" fill="#cbd5e1" font-size="8.5">• Llistes numerades i vinyetes</text>
+    <text x="115" y="218" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Estructura Tipogràfica</text>
+
+    <!-- Fletxa 1 -> 2 -->
+    <path d="M 210 115 L 235 115" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Bloc 2: Estils i Jerarquia -->
+    <rect x="240" y="20" width="190" height="210" rx="8" fill="url(#aofU1EstilsGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="335" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">🎨 ESTILS I HERÈNCIA</text>
+    <text x="335" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Maquetació Professional</text>
+    <line x1="250" y1="63" x2="420" y2="63" stroke="#334155"/>
+    <text x="252" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Estils de Paràgraf:</tspan></text>
+    <text x="262" y="93" fill="#94a3b8" font-size="8">Cos de text, Predefinit</text>
+    <text x="252" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Estils de Títol:</tspan></text>
+    <text x="262" y="125" fill="#38bdf8" font-size="8">Títol 1, Títol 2, Títol 3</text>
+    <text x="262" y="137" fill="#94a3b8" font-size="8">Generen Índex de Continguts (TOC)</text>
+    <text x="252" y="156" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Estils de Pàgina:</tspan></text>
+    <text x="262" y="169" fill="#94a3b8" font-size="8">A4, marges, orientació vertical/horiz</text>
+    <text x="252" y="188" fill="#cbd5e1" font-size="8.5">• Modificació centralitzada única</text>
+    <text x="335" y="218" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Consistència Visual</text>
+
+    <!-- Fletxa 2 -> 3 -->
+    <path d="M 430 115 L 455 115" stroke="#c084fc" stroke-width="2"/>
+
+    <!-- Bloc 3: Taules i Estructures -->
+    <rect x="460" y="20" width="190" height="210" rx="8" fill="url(#aofU1TaulesGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="555" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">📊 TAULES EN WRITER</text>
+    <text x="555" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Organització de Dades</text>
+    <line x1="470" y1="63" x2="640" y2="63" stroke="#334155"/>
+    <text x="472" y="80" fill="#cbd5e1" font-size="8.5">• Coordenades de cel·la (ex: A1, B2)</text>
+    <text x="472" y="98" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Combinació i Divisió</tspan> de cel·les</text>
+    <text x="472" y="116" fill="#cbd5e1" font-size="8.5">• Alineació vertical (Superior, Mig)</text>
+    <text x="472" y="134" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Fórmules simples:</tspan> `=sum(<A1:A5>)`</text>
+    <text x="472" y="152" fill="#cbd5e1" font-size="8.5">• Vores, línies i fons de colors</text>
+    <text x="472" y="170" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Repetició de capçalera</tspan> en salt</text>
+    <text x="472" y="188" fill="#cbd5e1" font-size="8.5">• Conversió de text a taula</text>
+    <text x="555" y="218" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Presentació Impecable</text>
+
+    <!-- Fletxa 3 -> 4 -->
+    <path d="M 650 115 L 675 115" stroke="#34d399" stroke-width="2"/>
+
+    <!-- Bloc 4: Imatges i Ancoratge -->
+    <rect x="680" y="20" width="160" height="210" rx="8" fill="url(#aofU1ImatgesGrad)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="760" y="42" fill="#f59e0b" font-size="10.5" font-weight="bold" text-anchor="middle">🖼️ IMATGES I AJUST</text>
+    <text x="760" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Objectes Flotants</text>
+    <line x1="690" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="692" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Modes d'Ancoratge:</tspan></text>
+    <text x="700" y="93" fill="#38bdf8" font-size="8">Al paràgraf / A la pàgina</text>
+    <text x="700" y="105" fill="#38bdf8" font-size="8">Com a caràcter / Al caràcter</text>
+    <text x="692" y="124" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Ajust de Text (Wrap):</tspan></text>
+    <text x="700" y="137" fill="#94a3b8" font-size="8">Òptim, Paral·lel, Continu, Cap</text>
+    <text x="692" y="156" fill="#cbd5e1" font-size="8.5">• Retall i proporcions bloquejades</text>
+    <text x="692" y="174" fill="#cbd5e1" font-size="8.5">• Peus d'imatge automàtics</text>
+    <text x="692" y="192" fill="#cbd5e1" font-size="8.5">• Compressió per a documents lleugers</text>
+    <text x="760" y="218" fill="#f59e0b" font-size="8.5" text-anchor="middle" font-weight="bold">Composició Editorial</text>
+
+    <!-- Peu informatiu -->
+    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Regla d'Or del Maquetador: <tspan fill="#34d399" font-weight="bold">Mai s'utilitzen espais en blanc consecutius per alinear ni múltiples "Intros" per canviar de pàgina.</tspan></text>
+    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">Aplica sempre Salts de Pàgina (Ctrl + Retorn), tabuladors amb farciment i estils jeràrquics per a garantir un document robust i editable.</text>
+  </svg>
+</div>
+
+---
+
+## 📊 Nivells de Jerarquia de Format en LibreOffice Writer / MS Word
+
+| Nivell de Format | Abast d'Aplicació | Elements Configurables | Comanda / Accés Ràpid | Bones Pràctiques Professionals |
+| :--- | :--- | :--- | :--- | :--- |
+| **Format de Caràcter** | Text seleccionat individualment. | Tipografia, mida (pt), estils (negreta, cursiva, subratllat), superíndex, color, kerning. | `Ctrl + B` (Negreta), `Ctrl + I` (Cursiva) | Evitar abusar de canvis manuals; utilitzar *Estils de Caràcter* per a paraules clau. |
+| **Format de Paràgraf** | Tot el paràgraf des de l'inici fins a la tecla `Intro`. | Alineació (justificada, centrada), interlineat, espaiat abans/després, sagnat de 1a línia, tabuladors. | `F11` (Panell d'Estils), `Ctrl + J` (Justificar) | Utilitzar l'espaiat posterior de paràgraf en lloc de prémer dos cops la tecla `Intro`. |
+| **Format de Taula** | Estructura de files i columnes. | Amplada de columnes en cm o %, vores, fons de cel·la, alineació vertical de text, divisió entre pàgines. | Menú `Taula > Propietats` | Activar sempre "Repetir fila de capçalera a la pàgina següent" per a taules llargues. |
+| **Format de Pàgina** | Tot el document o secció actual. | Mida de paper (A4), orientació (vertical/horitzontal), marges (superior, inferior, esquerre, dret), capçaleres/peus. | Menú `Format > Pàgina` | Utilitzar *Salts Manuals amb canvi d'estil de pàgina* per a alternar pàgines apaïsades i verticals. |
+
+---
+
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**1.1 Tema 0. Suites Ofimàtiques**](./ut0101.md)
@@ -2188,3 +2304,72 @@ Para eliminarlos pondremos el símbolo \n en el campo “Buscar” y después cl
 Aquí lo tenemos
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 📋 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+1. **Càlcul de Caixa Tipogràfica i Marges en DIN A4:**
+   - Un document tècnic corporatiu s'ha de maquetar en paper estàndard **DIN A4** (dimensions exactes: $210\text{ mm} \times 297\text{ mm}$).
+   - Es defineixen els següents marges de pàgina a l'estil de pàgina:
+     - Marge esquerre: $30\text{ mm}$ (inclou marge d'enquadernació).
+     - Marge dret: $20\text{ mm}$.
+     - Marge superior: $25\text{ mm}$ (amb una capçalera de $10\text{ mm}$ i un espaiat de $5\text{ mm}$).
+     - Marge inferior: $25\text{ mm}$.
+   - **Preguntes de dimensionament:**
+     - Quina és l'amplada útil de text (caixa d'escriptura) disponible en mil·límetres i en centímetres?
+     - Quina és l'alçada útil neta disponible per al cos de paràgraf a cada pàgina?
+     - Si s'utilitza una tipografia proporcional a $11\text{ pt}$ amb una mitjana de $2{,}4\text{ caràcters per centímetre}$, quantes paraules aproximades (a una mitjana de 6 caràcters per paraula) cabran en una línia completa justificada?
+
+2. **Dimensionament de Taules i Distribució Proporcional de Columnes:**
+   - Es dissenya una taula d'inventari informàtic que ha d'ocupar exactament el $100\%$ de l'amplada de la caixa de text ($160\text{ mm}$).
+   - La taula consta de 4 columnes:
+     - Columna 1: Codi de l'equip (ocupa el $15\%$).
+     - Columna 2: Descripció del maquinari (ocupa el $50\%$).
+     - Columna 3: Data d'adquisició (ocupa el $20\%$).
+     - Columna 4: Estat funcional (ocupa el $15\%$).
+   - **Preguntes de càlcul:**
+     - Calcula l'amplada física exacta en mil·límetres que ha de tindre cadascuna de les 4 columnes a les propietats de la taula.
+     - Si s'afigen $1\text{ mm}$ de marge intern de cel·la (*padding*) a l'esquerra i a la dreta, quant d'espai net d'escriptura resta a la Columna 1?
+
+3. **Càlcul de Resolució d'Imatge (DPI) i Mida de Fitxer en Documents:**
+   - S'insereix una fotografia d'un rack de servidors a una amplada maquetada de $10\text{ cm} \times 15\text{ cm}$.
+   - **Preguntes d'anàlisi:**
+     - Si el document està destinat a impressió comercial d'alta qualitat a $300\text{ DPI}$ (*dots per inch*, recordant que $1\text{ polzada} = 2{,}54\text{ cm}$): quants píxels d'amplada i alçada ha de tindre la imatge original per no patir pixelat?
+     - Si la imatge s'ha capturat amb una càmera de 24 Megapixels ($6000 \times 4000\text{ px}$ en format PNG pesat de $18\text{ MB}$), quin impacte té sobre la mida del fitxer `.odt` o `.docx` si no es comprimeix? Per quina raó un tècnic ha d'optimitzar les imatges abans d'enviar el document per correu electrònic?
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Maquetació d'una Guia Tècnica amb Estils Jeràrquics i Salts de Pàgina
+1. Obre LibreOffice Writer i crea un nou document basat en el format estàndard ISO/IEC.
+2. Defineix els següents estils de títol des del panell d'estils (`F11`):
+   - **Títol 1:** Font Liberation Sans, $18\text{ pt}$, Negreta, color Blau marí (`#1e3a8a`), espaiat posterior $0{,}50\text{ cm}$, amb salt de pàgina anterior automàtic.
+   - **Títol 2:** Font Liberation Sans, $14\text{ pt}$, Negreta, color Gris pissarra (`#334155`), espaiat posterior $0{,}30\text{ cm}$.
+   - **Cos de text:** Font Liberation Serif, $11\text{ pt}$, alineació justificada, interlineat $1{,}15$ línies, espaiat posterior de paràgraf $0{,}25\text{ cm}$ (sense usar salts d'intro buits).
+3. Redacta una estructura de 3 capítols i comprova com els salts de pàgina es mantenen immutables en afegir o llevar paràgrafs.
+
+#### Repte 2: Disseny d'una Taula de Pressupost Tècnic amb Fórmules Internes
+1. Insereix una taula de 5 columnes $\times$ 6 files: `Concepte`, `Quantitat`, `Preu Unitari (€)`, `IVA (21%)`, `Subtotal (€)`.
+2. Omple les dades de 3 components de maquinari a les files 2, 3 i 4.
+3. Utilitza la barra de fórmules de Writer (`F2`) per a calcular automàticament els valors a les cel·les:
+   - A la columna de Subtotal calcula el producte: `=<B2>*<C2>*1.21`.
+   - A la fila inferior de Total General, aplica la funció de suma de rang: `=sum(<E2:E4>)`.
+4. Formata les cel·les numèriques amb format de moneda `#.##0,00 €`. Modifica el preu d'un component i prem `F9` per actualitzar els camps de càlcul.
+
+#### Repte 3: Inserció, Posicionament i Ancoratge d'Imatges Corporatives
+1. Insereix una imatge corporativa d'un logotip a la part superior de la pàgina.
+2. Configura el mode d'ancoratge **Al paràgraf** i ajust de text **Paral·lel (Wrap)** amb un marge de separació de $0{,}50\text{ cm}$ respecte al text perimetral.
+3. Insereix una segona icona xicoteta de $16 \times 16\text{ mm}$ ancorada **Com a caràcter** directament dins d'una frase d'alerta. Comprova com la icona es desplaça de manera solidària amb el text com si fóra una lletra més.
+4. Exporta el document final a format **PDF/A** (arxiu de conservació a llarg termini) des del menú `Fitxer > Exporta com a PDF`.
+
+---
+
+### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
+| :--- | :--- | :--- | :--- |
+| **Jerarquia d'Estils i Tipografia** | Utilitza estils de paràgraf i títol jeràrquics per a tot el document; zero salts d'intro buits; marges i espaiats mil·limètrics. | Aplica estils bàsics però modifica formats manualment o utilitza intros buits ocasionals per separar capítols. | Aplica tot el format de manera manual seleccionant text amb el ratolí sense utilitzar mai el panell d'estils. |
+| **Estructures de Taules i Càlcul** | Dissenya taules amb percentatges exactes, vores professionals, capçaleres repetides automàticament i fórmules de suma integrades. | Construeix la taula correctament però introdueix els càlculs numèrics a mà sense utilitzar fórmules internes. | Té dificultats per combinar o dividir cel·les i les taules es desborden fora dels marges del document. |
+| **Ancoratge d'Imatges i Exportació PDF** | Domina els quatre modes d'ancoratge (paràgraf, pàgina, caràcter), ajustos de text amb marges i exporta en format PDF/A optimitzat. | Insereix imatges però té problemes quan el text es mou o no sap configurar el marge de separació de l'ajust. | Insereix imatges que tapen el text o que es descol·loquen completament a l'atzar en afegir noves línies. |

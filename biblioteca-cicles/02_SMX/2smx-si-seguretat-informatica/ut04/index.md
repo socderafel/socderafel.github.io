@@ -115,3 +115,89 @@ sequenceDiagram
 - **Hot Site:** Centre idèntic en funcionament paral·lel permanent. Sincronització de dades en temps real. $\text{RTO} \to 0$, cost molt elevat.
 - **Warm Site:** Centre amb els servidors físics preparats però cal descarregar i bolcar la darrera còpia de seguretat. $\text{RTO} \approx \text{unes poques hores}$.
 - **Cold Site:** Espai físic amb alimentació i refrigeració, però sense maquinari preinstal·lat. $\text{RTO} \approx \text{dies o setmanes}$, cost reduït.
+
+---
+
+## 🎨 Infografia Tècnica: RPO vs RTO en Plans de Continuïtat
+
+<div style="text-align: center; margin: 25px 0;">
+<svg viewBox="0 0 840 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="max-width: 840px; border-radius: 16px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); font-family: system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgDRP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="gradRPO" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#ef4444" />
+    </linearGradient>
+    <linearGradient id="gradRTO" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <rect width="840" height="260" rx="16" fill="url(#bgDRP)" />
+  <text x="420" y="32" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="bold" letter-spacing="1">⏱️ PLANS DE CONTINUÏTAT: METRIQUES RPO vs RTO</text>
+  <text x="420" y="52" text-anchor="middle" fill="#94a3b8" font-size="12">Com mesurar la tolerància a la pèrdua de dades i el temps d'inactivitat davant un desastre</text>
+
+  <!-- Línia temporal base -->
+  <line x1="80" y1="130" x2="760" y2="130" stroke="#475569" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Punt Darrera Còpia -->
+  <circle cx="220" cy="130" r="14" fill="#3b82f6" stroke="#ffffff" stroke-width="3" />
+  <text x="220" y="95" text-anchor="middle" fill="#60a5fa" font-size="13" font-weight="bold">💾 DARRERA CÒPIA</text>
+  <text x="220" y="112" text-anchor="middle" fill="#94a3b8" font-size="11">Backup efectuat</text>
+
+  <!-- Zona RPO -->
+  <rect x="235" y="145" width="170" height="45" rx="6" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1.5" />
+  <text x="320" y="165" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="bold">RPO (Dades Perdudes)</text>
+  <text x="320" y="180" text-anchor="middle" fill="#f87171" font-size="10">Quantitat de dades no salvades</text>
+  <line x1="225" y1="130" x2="410" y2="130" stroke="url(#gradRPO)" stroke-width="6" />
+
+  <!-- Punt Desastre -->
+  <circle cx="420" cy="130" r="18" fill="#ef4444" stroke="#ffffff" stroke-width="3" />
+  <text x="420" y="137" text-anchor="middle" font-size="16" fill="#ffffff">💥</text>
+  <text x="420" y="90" text-anchor="middle" fill="#f87171" font-size="14" font-weight="bold">DESASTRE / CAIGUDA</text>
+  <text x="420" y="106" text-anchor="middle" fill="#fca5a5" font-size="11">Incident greu o incendi</text>
+
+  <!-- Zona RTO -->
+  <rect x="435" y="145" width="170" height="45" rx="6" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.5" />
+  <text x="520" y="165" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="bold">RTO (Temps d'Aturada)</text>
+  <text x="520" y="180" text-anchor="middle" fill="#34d399" font-size="10">Temps fins a restablir servei</text>
+  <line x1="430" y1="130" x2="615" y2="130" stroke="url(#gradRTO)" stroke-width="6" />
+
+  <!-- Punt Recuperació -->
+  <circle cx="620" cy="130" r="14" fill="#10b981" stroke="#ffffff" stroke-width="3" />
+  <text x="620" y="95" text-anchor="middle" fill="#34d399" font-size="13" font-weight="bold">✅ RESTAURACIÓ</text>
+  <text x="620" y="112" text-anchor="middle" fill="#94a3b8" font-size="11">Sistemes operatius de nou</text>
+
+  <!-- Taula Resum Inferior -->
+  <rect x="80" y="210" width="680" height="32" rx="6" fill="#1e293b" />
+  <text x="420" y="231" text-anchor="middle" fill="#94a3b8" font-size="11">Com més propers a 0 siguin el RPO i el RTO, més alta disponibilitat i major inversió requerida (Hot Site vs Cold Site).</text>
+</svg>
+</div>
+
+---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Càlculs Tècnics de Dimensionament
+1. **Dimensionament de SAI per a una botiga online:**
+   - La botiga disposa de 2 servidors de $400\text{ W}$ cadascun amb $\text{FP} = 0,9$, un switch de $50\text{ W}$ amb $\text{FP} = 0,8$ i un rúter de $30\text{ W}$ amb $\text{FP} = 0,7$.
+   - Calcula la potència aparent total ($S_{\text{total}}$ en VA).
+   - Aplica el marge de seguretat del $25\%$.
+   - Quin model comercial de Salicru o APC seleccionaries (1500 VA, 2000 VA o 3000 VA)?
+2. **Càlcul d'Autonomia:**
+   - Si el SAI de 2000 VA conté 4 bateries de $12\text{ V}$ i $9\text{ Ah}$ connectades en sèrie ($V_{\text{banc}} = 48\text{ V}$, capacitat $= 9\text{ Ah}$), i el consum continu és de $880\text{ W}$ amb un rendiment de l'inversor $\eta = 0,85$:
+   - Quants minuts d'autonomia real suportarà el sistema abans d'apagar-se?
+
+### Bloc B: Anàlisi d'Escenari DRP
+Un despatx d'advocats fa còpies de seguretat només cada diumenge a la nit. Dimecres a les 18:00h un ransomware xifra tot el servidor de fitxers.
+- Quin és el RPO que ha patit el client en hores de feina perduda?
+- Si el tècnic tarda 48 hores a reinstal·lar els sistemes i bolcar les dades antigues, quin és el RTO?
+- Com redueix la regla 3-2-1 i les instantànies cada 2 hores aquestes xifres?
+
+### Bloc C: Llista d'Autoavaluació de Qualitat
+- [ ] Domini de les fórmules de potència aparent (VA), factor de potència i autonomia.
+- [ ] Comprensió de la diferència clau entre un SAI Line-Interactive i un On-line Doble Conversió.
+- [ ] Capacitat per a definir els valors de RTO i RPO en un pla de continuïtat de negoci.

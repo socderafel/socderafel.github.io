@@ -14,27 +14,138 @@ next_label: "6.1 Exemple_inicial_Classe_ER ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
+## 🧩 Fonaments del Model Entitat-Relació (E-R)
 
-- [**6.1 Exemple_inicial_Classe_ER**](./ut0601.md)
-- [**6.2 Tema 2. Model Entitat-Relació (COMPLET)**](./ut0602.md)
-- [**6.3 Tema 2. Model Entitat-Relació (RESUMEN)**](./ut0603.md)
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Model Conceptual Entitat-Relació: Components, Cardinalitats i Notacions</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Formalització de requisits d'informació, restriccions d'integritat estructural i comparativa Chen vs Crow's Foot</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU6EntGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU6CardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#7e22ce" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU6GrauGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU6NotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Entitats i Atributs -->
+    <rect x="20" y="20" width="190" height="255" rx="8" fill="url(#aofU6EntGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">📦 ENTITATS I ATRIBUTS</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Blocs de Construcció</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Entitat (Rectangle):</tspan></text>
+    <text x="42" y="93" fill="#cbd5e1" font-size="8">- Objecte real o abstracte</text>
+    <text x="42" y="105" fill="#cbd5e1" font-size="8">- Conjunt d'ocurrències</text>
+    <text x="32" y="122" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Atributs (El·lipse):</tspan></text>
+    <text x="42" y="135" fill="#cbd5e1" font-size="8">- <tspan fill="#fbbf24">Clau Primària (PK)</tspan>: Únic</text>
+    <text x="42" y="147" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Compost</tspan>: Adreça (carrer, CP)</text>
+    <text x="42" y="159" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Multivaluat</tspan>: Telèfons (doble línia)</text>
+    <text x="42" y="171" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Derivat</tspan>: Edat (línia discontínua)</text>
+    <rect x="35" y="190" width="160" height="40" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="115" y="206" fill="#f8fafc" font-size="8.5" font-weight="bold" text-anchor="middle">Ex: ALUMNE [NIA, Nom]</text>
+    <text x="115" y="220" fill="#94a3b8" font-size="7.5" text-anchor="middle">NIA identifica unívocament</text>
+    <text x="115" y="258" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Identificació Única</text>
+
+    <!-- Bloc 2: Cardinalitats -->
+    <rect x="230" y="20" width="190" height="255" rx="8" fill="url(#aofU6CardGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="325" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">🔗 CARDINALITATS</text>
+    <text x="325" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Tipus d'Associació</text>
+    <line x1="240" y1="63" x2="410" y2="63" stroke="#334155"/>
+    <text x="242" y="80" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Un a Un (1:1):</tspan></text>
+    <text x="252" y="93" fill="#cbd5e1" font-size="8">- 1 Ciutadà &lt;&gt; 1 DNI</text>
+    <text x="252" y="105" fill="#cbd5e1" font-size="8">- Propagació clau en qualsevol sentit</text>
+    <text x="242" y="122" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Un a Molts (1:N):</tspan></text>
+    <text x="252" y="135" fill="#cbd5e1" font-size="8">- 1 Departament &lt;&gt; N Empleats</text>
+    <text x="252" y="147" fill="#cbd5e1" font-size="8">- Clau de l'1 viatja com FK a l'N</text>
+    <text x="242" y="164" fill="#c084fc" font-size="8.5">• <tspan font-weight="bold">Molts a Molts (M:N):</tspan></text>
+    <text x="252" y="177" fill="#cbd5e1" font-size="8">- N Alumnes &lt;&gt; M Mòduls</text>
+    <text x="252" y="189" fill="#cbd5e1" font-size="8">- Requereix Taula Intermèdia</text>
+    <rect x="245" y="202" width="160" height="35" rx="4" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+    <text x="325" y="217" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">Mínima / Màxima (min, max)</text>
+    <text x="325" y="229" fill="#cbd5e1" font-size="7.5" text-anchor="middle">Participació total (1,1) o opcional (0,N)</text>
+    <text x="325" y="258" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Restriccions Estructurals</text>
+
+    <!-- Bloc 3: Grau i Dependència -->
+    <rect x="440" y="20" width="190" height="255" rx="8" fill="url(#aofU6GrauGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="535" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">📐 GRAU I DEPENDÈNCIA</text>
+    <text x="535" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Classificació Avançada</text>
+    <line x1="450" y1="63" x2="620" y2="63" stroke="#334155"/>
+    <text x="452" y="80" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Grau de la Relació:</tspan></text>
+    <text x="462" y="93" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Binària (grau 2)</tspan>: La més comuna</text>
+    <text x="462" y="105" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Reflexiva (grau 1)</tspan>: Cap &gt; Empleat</text>
+    <text x="462" y="117" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Ternària (grau 3)</tspan>: Metge-Pacient-Fàrmac</text>
+    <text x="452" y="134" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Entitats Dèbils:</tspan></text>
+    <text x="462" y="147" fill="#cbd5e1" font-size="8">- Doble rectangle</text>
+    <text x="462" y="159" fill="#cbd5e1" font-size="8">- No tenen clau primària pròpia</text>
+    <text x="462" y="171" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Dèbil per identificació</tspan>: Línia de factura</text>
+    <text x="462" y="183" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Dèbil per existència</tspan>: Fill d'empleat</text>
+    <rect x="455" y="196" width="160" height="38" rx="4" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="535" y="211" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">Discriminador / Clau Parcial</text>
+    <text x="535" y="225" fill="#cbd5e1" font-size="7.5" text-anchor="middle">Línia puntejada sota l'atribut</text>
+    <text x="535" y="258" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Integritat Referencial Forçada</text>
+
+    <!-- Bloc 4: Chen vs Crow's Foot -->
+    <rect x="650" y="20" width="190" height="255" rx="8" fill="url(#aofU6NotGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="745" y="42" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">📊 NOTACIONS GRÀFIQUES</text>
+    <text x="745" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Chen vs Crow's Foot</text>
+    <line x1="660" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="662" y="80" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Notació Chen (1976):</tspan></text>
+    <text x="672" y="93" fill="#cbd5e1" font-size="8">- Rombe per a relacions</text>
+    <text x="672" y="105" fill="#cbd5e1" font-size="8">- El·lipses per a atributs</text>
+    <text x="672" y="117" fill="#cbd5e1" font-size="8">- Cardinalitat a l'extrem oposat</text>
+    <text x="662" y="134" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Crow's Foot (Pota de Gall):</tspan></text>
+    <text x="672" y="147" fill="#cbd5e1" font-size="8">- Línies directes amb símbols:</text>
+    <text x="672" y="159" fill="#cbd5e1" font-size="8">  • || : Exactament un (1,1)</text>
+    <text x="672" y="171" fill="#cbd5e1" font-size="8">  • O| : Zero o un (0,1)</text>
+    <text x="672" y="183" fill="#cbd5e1" font-size="8">  • |&lt; : Un o molts (1,N)</text>
+    <text x="672" y="195" fill="#cbd5e1" font-size="8">  • O&lt; : Zero o molts (0,N)</text>
+    <rect x="665" y="206" width="160" height="30" rx="4" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="745" y="224" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">Mermaid &amp; CASE moderns</text>
+    <text x="745" y="258" fill="#fbbf24" font-size="8.5" text-anchor="middle" font-weight="bold">Estàndard Industrial</text>
+  </svg>
+</div>
+
+### 📋 Matriu Comparativa de Components i Notacions en el Model E-R
+
+| Concepte E-R | Representació Chen Tradicional | Representació Crow's Foot (Pota de Gall) | Exemple Microinformàtic | Restricció d'Integritat Associada |
+| :--- | :--- | :--- | :--- | :--- |
+| **Entitat Forta** | Rectangle simple | Caixa amb capçalera i llista de camps | `CLIENT`, `ORDINADOR` | Té un identificador únic independent (`DNI`, `Num_Serie`). |
+| **Entitat Dèbil** | Rectangle doble | Caixa amb vora doble o clau estrangera com a PK parcial | `LINEA_COMANDA`, `MÀQUINA_VIRTUAL` | Depèn d'una entitat forta; s'elimina en cascada si aquesta desapareix. |
+| **Atribut Identificador (PK)** | El·lipse amb text subratllat | Atribut marcat amb icona de clau o etiqueta `PK` | `id_reparacio`, `adreca_mac` | Unicitat obligatòria i no nul·la (*Entity Integrity Rule*). |
+| **Atribut Multivaluat** | El·lipse doble | Taula secundària 1:N o array | `telefons_contacte` | Ha de descompondre's en primera forma normal (1FN). |
+| **Relació 1:N** | Rombe connectat amb etiquetes 1 i N | Línia amb barra simple a un extrem i forqueta a l'altre | `DEPARTAMENT` 1:N `TECNICS` | La clau del costat 1 es propaga al costat N com a Clau Forana (FK). |
+| **Relació M:N** | Rombe amb etiquetes M i N | Dues línies 1:N cap a una entitat associativa | `ORDRE_TREBALL` M:N `PECES_RECANVI` | Requereix obligatòriament una taula intermèdia en el model relacional. |
 
 ---
 
-# 6.1 Exemple_inicial_Classe_ER
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-> **🔗 Recurs Web: Video 1. Model Entitat-Relacio**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=MRmmPJId5-k) ↗️**](https://www.youtube.com/watch?v=MRmmPJId5-k)
->
-> Video on explica el model Entitat-Relació. Interesant. Mireu-lo.
->
-> La notació o representació és diferent a la explicada en els temes, pero son equivalents. Hi han diferents maneres de representar, i aci fan una diferent a la explicada en els temes. Pero podreu seguir-ho igual. Anim
+- [**6.1 Exemple Inicial del Model Entitat-Relació**](./ut0601.md)
+- [**6.2 Model Entitat-Relació (Desenvolupament Teòric Complet)**](./ut0602.md)
+- [**6.3 Model Entitat-Relació (Guia de Referència Ràpida)**](./ut0603.md)
 
-> **🔗 Recurs Web: Video 2. Model Entitat-Relació**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=G--gVr9eEcA) ↗️**](https://www.youtube.com/watch?v=G--gVr9eEcA)
->
-> Altre video que vos pot aclarir els conceptes del model entitat-relacio
+---
+
+# 6.1 Exemple Inicial del Model Entitat-Relació
+
+> **📺 Recursos Multimèdia Recomanats**
+> - [**Fonaments del Model Entitat-Relació (Vídeo Explicatiu) ↗️**](https://www.youtube.com/watch?v=MRmmPJId5-k): Exposició conceptual de les entitats, atributs i relacions bàsiques.
+> - [**Construcció de Diagrames E-R Pas a Pas ↗️**](https://www.youtube.com/watch?v=G--gVr9eEcA): Resolució guiada de supòsits pràctics i anàlisi de cardinalitats.
+
 
 ---
 
@@ -465,3 +576,122 @@ Ternarias (grado 3): son relaciones donde participan tres entidades.
 Es posible que haya atributos que cuelguen de las relaciones. Vamos a ver un ejemplo
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 🎯 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Activitat 1: Disseny Conceptual del Model E-R per a un Servei d'Assistència Tècnica (SAT)
+Una empresa de reparació i manteniment microinformàtic vol informatitzar la gestió del seu taller tècnic. Després d'entrevistar els responsables de servei, s'extreuen els següents requeriments:
+- Cada **Client** té un codi de client únic (`id_client`), NIF/NIE, nom complet, telèfon de contacte, adreça composta (carrer, número, codi postal i ciutat) i correu electrònic.
+- Els clients porten un o diversos **Equips** informàtics per a reparar. De cada equip es registra el número de sèrie (`num_serie`, identificador únic), marca, model, tipus d'equip (Torre, Portàtil, Servidor, TPV) i contrasenya d'accés BIOS/SO si en té.
+- Quan un equip entra al taller, s'obri una **Ordre de Reparació** (`id_ordre`, identificador únic), amb data d'entrada, descripció detallada de l'avaria comunicada pel client, estat actual (Pendent, En diagnòstic, Esperant peces, Reparat, Lliurat) i data de devolució.
+- Al taller treballen diversos **Tècnics** (`id_tecnic`, NIF, nom, especialitat de maquinari/programari i data de contractació). Cada ordre de reparació és assignada a un únic tècnic responsable, tot i que un tècnic pot tenir assignades diverses ordres simultàniament.
+- Durant la reparació es poden utilitzar diverses **Peces de Recanvi** (`codi_peca`, descripció, fabricant, preu de cost i estoc disponible). En una mateixa ordre es poden fer servir diverses peces diferents, i de cada peça emprada cal registrar la **quantitat** utilitzada i el **preu de venda** aplicat en aquell moment.
+
+1. **Identificació d'Entitats i Atributs:** Elaboreu una taula amb les 5 entitats principals, indicant per a cadascuna:
+   - Atribut identificador principal (Clau Primària conceptual).
+   - Tipus de cadascun dels atributs (simple, compost, derivat, no nul).
+2. **Cardinalitats Estructurals:** Determineu la cardinalitat de cada relació en format Chen ($1:1$, $1:N$, $M:N$) i en format de rangs de participació mínima i màxima $(\text{min}, \text{max})$:
+   - Client - Equip
+   - Equip - Ordre de Reparació
+   - Ordre de Reparació - Tècnic
+   - Ordre de Reparació - Peça de Recanvi
+3. **Localització d'Atributs de Relació:** Justifiqueu raonadament per què els atributs `quantitat` i `preu_venda_aplicat` no poden pertànyer ni a l'entitat `Ordre de Reparació` ni a l'entitat `Peça de Recanvi`, i han d'estar associats directament a la relació $M:N$.
+
+#### Activitat 2: Matriu de Connectivitat i Restriccions de Participació (Total vs Parcial)
+Analitzeu el comportament de les instàncies en l'esquema conceptual del taller:
+1. **Participació Total vs Parcial:**
+   - Una ordre de reparació pot existir sense un equip associat? Quina és la seua participació $(\text{min}, \text{max})$?
+   - Un equip que s'acaba de donar d'alta a la base de dades ha de tenir necessàriament una ordre de reparació immediata? Quina és la seua participació?
+   - Un client pot estar registrat a la base de dades abans d'haver portat cap equip físic (per exemple, per una consulta telefònica prèvia)?
+2. **Matriu de Cardinalitats:** Construïu una matriu de connectivitat en format taula creuant les 5 entitats, indicant quines es comuniquen directament entre si mitjançant relacions i amb quina cardinalitat.
+
+#### Activitat 3: Modelització d'Entitats Dèbils i Descomposició de Jerarquies
+En l'evolució del sistema del taller, es decideix que cada ordre de reparació pot tindre múltiples **Intervencions Tècniques Parcials** (per exemple: Intervenció 1 = Neteja de pols i canvi de pasta tèrmica; Intervenció 2 = Clonatge de disc SSD; Intervenció 3 = Actualització de firmware).
+- Cada intervenció té un número seqüencial de línia dins de l'ordre (1, 2, 3...), data i hora d'inici, duració en minuts i comentaris del procediment.
+1. Justifiqueu per què l'entitat `INTERVENCIO` és una **Entitat Dèbil per Identificació**.
+2. Indiqueu quina és la seua **Clau Parcial** o discriminador i com es formarà la seua clau única quan es transforme al model relacional.
+3. Dibuixeu la representació gràfica d'aquesta entitat dèbil tant en notació Chen (doble rectangle i doble rombe) com en Mermaid.
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Sintaxi Mermaid per al Model Conceptual de Taller Microinformàtic
+1. Obriu un editor de text amb previsualització Markdown o la plataforma interactiva [Mermaid Live Editor](https://mermaid.live).
+2. Construïu el diagrama complet del taller microinformàtic utilitzant la sintaxi d'Entity-Relationship de Mermaid amb notació Crow's Foot:
+   ```mermaid
+   erDiagram
+       CLIENT ||--o{ EQUIP : posseeix
+       EQUIP ||--o{ ORDRE_REPARACIO : objecte_de
+       TECNIC ||--o{ ORDRE_REPARACIO : atén
+       ORDRE_REPARACIO ||--|{ ORDRE_PECA : utilitza
+       PECA_RECANVI ||--o{ ORDRE_PECA : s'utilitza_en
+       ORDRE_REPARACIO ||--o{ INTERVENCIO : desglossa
+
+       CLIENT {
+           int id_client PK
+           string dni UK
+           string nom
+           string telefon
+       }
+       EQUIP {
+           string num_serie PK
+           string marca
+           string model
+       }
+       ORDRE_REPARACIO {
+           int id_ordre PK
+           date data_entrada
+           string estat
+       }
+       ORDRE_PECA {
+           int id_ordre PK,FK
+           string codi_peca PK,FK
+           int quantitat
+           decimal preu_venda
+       }
+       PECA_RECANVI {
+           string codi_peca PK
+           string descripcio
+           int estoc
+       }
+       INTERVENCIO {
+           int id_ordre PK,FK
+           int num_linia PK
+           datetime data_hora
+           int duracio_min
+       }
+   ```
+3. Valideu que les cardinalitats `||--o{` (un a zero o molts) i `||--|{` (un a un o molts) reflecteixen estrictament els requeriments definits.
+
+#### Repte 2: Resolució de Relacions Reflexives (Jerarquia d'Equip Tècnic)
+1. Al taller s'incorpora un cap de laboratori que supervisa la tasca dels altres tècnics. Cada tècnic de plantilla té un únic supervisor directe, mentre que el cap de laboratori pot supervisar diversos tècnics (o no ser supervisat per ningú).
+2. Dissenyeu la relació reflexiva (grau 1) sobre l'entitat `TECNIC`:
+   - Nom de la relació: `Supervisa`
+   - Rols: `Supervisor` i `Supervisat`
+   - Cardinalitats als extrems en Chen i Crow's Foot: $(0,1)$ per al rol supervisat i $(0,N)$ per al rol supervisor.
+3. Expresseu en sintaxi Mermaid com s'afegeix aquesta auto-relació:
+   ```mermaid
+   erDiagram
+       TECNIC ||--o{ TECNIC : supervisa
+   ```
+
+#### Repte 3: Auditoria i Detecció d'Errades en Esquemes E-R
+Analitzeu el següent fragment de disseny erroni proposat per un tècnic novell:
+- *"Posem l'atribut `adreca_mac` directament dins de l'entitat `CLIENT`, i creem una relació directa entre `CLIENT` i `PECA_RECANVI` anomenada `compra_directa` a més de la relació existent a través d'ordre de reparació."*
+1. Identifiqueu les 2 errades conceptuals greus d'aquest plantejament:
+   - Violació d'abstracció d'atribut (on ha d'anar realment l'adreça MAC?).
+   - Redundància i inconsistència de camins entre entitats (cicles no desitjats).
+2. Proposeu la correcció tècnica formal mantenint l'esquema net i coherent.
+
+---
+
+### 📋 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Abstracció Conceptual d'Entitats i Atributs** | Identifica sense fissures totes les entitats, claus primàries i classifica atributs compostos, multivaluats i derivats amb rigor. | Defineix correctament les entitats i claus, amb lleugeres omissions en atributs multivaluats o compostos. | Identifica les entitats bàsiques però té dificultats en ubicar correctament els atributs o les claus primàries. | No distingeix entre entitat, atribut i instància en un enunciat tècnic. |
+| **Determinació de Cardinalitats i Rols** | Resol amb precisió matemàtica les cardinalitats (1:1, 1:N, M:N) i els rangs de participació (min, max), justificant relacions dèbils i reflexives. | Determina correctament les cardinalitats bàsiques però dubta en la participació total/parcial o en relacions dèbils. | Assigna cardinalitats amb errades parcials (confon 1:N amb M:N en algun cas) però entén el sentit de la relació. | Incapaç de determinar cardinalitats o associar correctament entitats relacionades. |
+| **Notació Gràfica i Sintaxi Mermaid/CASE** | Construeix diagrames E-R sintàcticament impecables en Mermaid i Chen, utilitzant la simbologia Crow's Foot amb màxima claredat. | Construeix el diagrama correctament amb xicotets detalls de format o simbologia secundària. | El diagrama és intel·ligible però conté errades de sintaxi o connexió entre entitats. | No sap expressar un model conceptual en diagrama gràfic ni en sintaxi estructurada. |

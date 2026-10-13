@@ -14,31 +14,122 @@ next_label: "4.1 Manual bàsic CALC ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 🖼️ Infografia Tècnica: Conceptes de Full de Càlcul, Adreçament i Funcions
+## 📊 Arquitectura del Full de Càlcul, Adreçament i Funcions Essencials
 
-![Conceptes de Full de Càlcul, Adreçament de Cel·les i Funcions Essencials](../img/full_calcul_referencies_funcions.jpg)
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Anatomia del Full de Càlcul: Referències, Lògica Condicional i Cerca</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Coordenades de cel·la, bloqueig amb signe dòlar ($), funcions analítiques i automatització a Calc</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU4RefGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU4MatGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU4LogGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU4VisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
 
-### 🔍 Llegenda Tècnica i Fonaments d'Ofimàtica:
+    <!-- Bloc 1: Adreçament i Referències -->
+    <rect x="20" y="20" width="190" height="210" rx="8" fill="url(#aofU4RefGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">🎯 1. ADREÇAMENT CEL·LES</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Relatives, Absolutes i Mixtes</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Relativa (`A1`):</tspan></text>
+    <text x="42" y="93" fill="#94a3b8" font-size="8">Es desplaça en copiar la fórmula</text>
+    <text x="32" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Absoluta (`$A$1`):</tspan></text>
+    <text x="42" y="125" fill="#94a3b8" font-size="8">Bloqueig total Columna + Fila ($)</text>
+    <text x="42" y="137" fill="#34d399" font-size="8">Ideal per a IVA, descomptes constants</text>
+    <text x="32" y="156" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Mixta (`$A1` / `A$1`):</tspan></text>
+    <text x="42" y="169" fill="#94a3b8" font-size="8">`$A1`: Columna fixa / Fila lliure</text>
+    <text x="42" y="181" fill="#94a3b8" font-size="8">`A$1`: Columna lliure / Fila fixa</text>
+    <text x="32" y="198" fill="#cbd5e1" font-size="8.5">• Drecera: Tecla `Shift + F4` / `F4`</text>
+    <text x="115" y="218" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Control de Coordenades</text>
 
-#### 1. Anatomia del Full de Càlcul i Adreçament de Cel·les (*Panell Esquerre*)
-- **Estructura Matricial:** Organitzada en files numèriques (1, 2, 3...) i columnes identificades per lletres de l'alfabet (A, B, C... Z, AA, AB...). La intersecció entre una columna i una fila és una **cel·la** (ex: `B2`).
-- **1. Referència Relativa (`A1`):**
-  - Quan s'escriu una fórmula com `=A1+B1` i s'arrossega cap a la dreta o cap avall, les coordenades es desplacen automàticament seguint el moviment del punter (passa a `=A2+B2`, `=A3+B3`).
-- **2. Referència Absoluta (`$A$1`):**
-  - El símbol del dòlar `$` bloqueja tant la columna com la fila. Quan la fórmula es copia o s'arrossega a qualsevol altra cel·la del full, **la referència roman sempre fixa i invariable** apuntant exactament a `$A$1` (ideal per a tipus d'IVA, percentatges de descompte o cel·les constants).
-- **3. Referència Mixta (`$A1` o `A$1`):**
-  - `$A1` bloqueja exclusivament la columna A mentre que la fila és lliure de variar.
-  - `A$1` bloqueja exclusivament la fila 1 mentre que la columna és lliure de variar (imprescindible per a taules de doble entrada o matrius creuades).
+    <!-- Fletxa 1 -> 2 -->
+    <path d="M 210 115 L 235 115" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Bloc 2: Matemàtiques i Estadístiques -->
+    <rect x="240" y="20" width="190" height="210" rx="8" fill="url(#aofU4MatGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="335" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">🧮 2. FUNCIONS DE RANG</text>
+    <text x="335" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Càlcul Numèric Empresarial</text>
+    <line x1="250" y1="63" x2="420" y2="63" stroke="#334155"/>
+    <text x="252" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Suma de rang:</tspan></text>
+    <text x="262" y="93" fill="#38bdf8" font-size="8">`=SUMA(B2:B20)`</text>
+    <text x="252" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Mitjana aritmètica:</tspan></text>
+    <text x="262" y="125" fill="#38bdf8" font-size="8">`=MITJANA(C2:C50)`</text>
+    <text x="252" y="144" fill="#cbd5e1" font-size="8.5">• Extrems: `=MAX(...)` / `=MIN(...)`</text>
+    <text x="252" y="162" fill="#cbd5e1" font-size="8.5">• Recompte: `=COMPTA(A1:A30)`</text>
+    <text x="252" y="180" fill="#cbd5e1" font-size="8.5">• Condicional: `=SUMA.SI(...)`</text>
+    <text x="252" y="196" fill="#94a3b8" font-size="8">Suma segons criteri de text o valor</text>
+    <text x="335" y="218" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Agregació Eficient</text>
+
+    <!-- Fletxa 2 -> 3 -->
+    <path d="M 430 115 L 455 115" stroke="#c084fc" stroke-width="2"/>
+
+    <!-- Bloc 3: Lògica i Cerca (BUSCAV) -->
+    <rect x="460" y="20" width="190" height="210" rx="8" fill="url(#aofU4LogGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="555" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">🔍 3. LÒGICA I CERCA</text>
+    <text x="555" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">SI Condicional i BUSCAV</text>
+    <line x1="470" y1="63" x2="640" y2="63" stroke="#334155"/>
+    <text x="472" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Funció SI:</tspan></text>
+    <text x="482" y="93" fill="#38bdf8" font-size="7.5">`=SI(Nota>=5; "Apte"; "No apte")`</text>
+    <text x="472" y="112" fill="#cbd5e1" font-size="8.5">• Operadors lògics: `=I(...)` / `=O(...)`</text>
+    <text x="472" y="130" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">BUSCAV / CERCAV:</tspan></text>
+    <text x="482" y="143" fill="#cbd5e1" font-size="7.5">`=BUSCAV(codi; taula; col; FALS)`</text>
+    <text x="472" y="162" fill="#cbd5e1" font-size="8.5">• Paràmetre <tspan fill="#ef4444" font-weight="bold">FALS (0):</tspan></text>
+    <text x="482" y="175" fill="#94a3b8" font-size="8">Coincidència exacta obligatòria</text>
+    <text x="472" y="194" fill="#cbd5e1" font-size="8.5">• Enllaç automàtic entre fulls</text>
+    <text x="555" y="218" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Automatització Empresarial</text>
+
+    <!-- Fletxa 3 -> 4 -->
+    <path d="M 650 115 L 675 115" stroke="#34d399" stroke-width="2"/>
+
+    <!-- Bloc 4: Format Condicional i Gràfics -->
+    <rect x="680" y="20" width="160" height="210" rx="8" fill="url(#aofU4VisGrad)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="760" y="42" fill="#f59e0b" font-size="10.5" font-weight="bold" text-anchor="middle">📈 4. GRÀFICS I FORMAT</text>
+    <text x="760" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Visualització de Dades</text>
+    <line x1="690" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="692" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Format Condicional:</tspan></text>
+    <text x="700" y="93" fill="#94a3b8" font-size="8">Escales de color, barres</text>
+    <text x="700" y="105" fill="#94a3b8" font-size="8">Ressaltar valors negatius</text>
+    <text x="692" y="124" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Tipus de Gràfics:</tspan></text>
+    <text x="700" y="137" fill="#94a3b8" font-size="8">Columnes / Barres (comparació)</text>
+    <text x="700" y="149" fill="#94a3b8" font-size="8">Línies (evolució temporal)</text>
+    <text x="700" y="161" fill="#94a3b8" font-size="8">Sectors circulars (proporcions)</text>
+    <text x="692" y="180" fill="#cbd5e1" font-size="8.5">• Sèries i etiquetes de dades</text>
+    <text x="692" y="196" fill="#cbd5e1" font-size="8.5">• Taules dinàmiques bàsiques</text>
+    <text x="760" y="218" fill="#f59e0b" font-size="8.5" text-anchor="middle" font-weight="bold">Anàlisi Visual Immediata</text>
+
+    <!-- Peu informatiu -->
+    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Regla d'Or del Full de Càlcul: <tspan fill="#34d399" font-weight="bold">Tota fórmula comença obligatòriament pel signe igual (=).</tspan></text>
+    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">Aplica el paràmetre FALS a BUSCAV per evitar coincidències aproximades errònies, i fixa amb $ les cel·les que no han de moure's.</text>
+  </svg>
+</div>
 
 ---
 
-#### 2. Funcions Empresarials Essencials (*Panell Dret*)
-1. **Suma d'un Rang:**
-   `=SUMA(B2:B10)` — Suma de forma automàtica tots els valors numèrics compresos entre la cel·la B2 i la cel·la B10.
-2. **Funció Lògica Condicional:**
-   `=SI(C2>=5; "Aprovat"; "Suspès")` — Avalua una condició booleana. Si es compleix retorna el primer argument ("Aprovat"), i si no es compleix retorna el segon ("Suspès").
-3. **Funció de Cerca Vertical:**
-   `=BUSCAV(valor_cercat; matriu_taula; índex_columna; FALS)` — Cerca un codi o nom a la primera columna d'una taula i extreu el valor corresponent a la columna indicada amb coincidència exacta.
+## 📊 Comparativa de Tipus de Referències de Cel·la en Fulls de Càlcul
+
+| Tipus de Referència | Sintaxi d'Exemple | Comportament en Arrossegar Cap Avall ($\downarrow$) | Comportament en Arrossegar Cap a la Dreta ($\rightarrow$) | Cas d'Ús Recomanat |
+| :--- | :---: | :--- | :--- | :--- |
+| **Referència Relativa** | `B2` | La fila s'incrementa automàticament (`B3`, `B4`...). | La columna s'incrementa automàticament (`C2`, `D2`...). | Operacions fila a fila (ex: Preu $\times$ Quantitat de cada article). |
+| **Referència Absoluta** | `$B$2` | **Invariable:** Roman exactament en `$B$2`. | **Invariable:** Roman exactament en `$B$2`. | Valors fixos i constants de tot el full (ex: Tipus d'IVA general en `%`, IRPF, canvi de divisa). |
+| **Referència Mixta (Fila Fixa)** | `B$2` | **Fila bloquejada:** Manté la fila 2 (`B$2`, `B$2`...). | La columna s'incrementa lliurement (`C$2`, `D$2`...). | Taules de càlcul amb capçaleres de columna a la fila 2. |
+| **Referència Mixta (Columna Fixa)**| `$B2` | La fila s'incrementa lliurement (`$B3`, `$B4`...). | **Columna bloquejada:** Manté la columna B (`$B2`, `$B2`...). | Taules de doble entrada o matrius creuades (ex: taules de multiplicar o tarifes creuades). |
 
 ---
 
@@ -920,3 +1011,86 @@ Manual de Usuario LibreOffice - CALC Pag. 45 de 40
 Abre el cuadro de diálogo Atributos de texto. Inserta el número total de páginas. Inserta el campo Nombre de archivo. Inserta el campo Fecha. Inserta el campo Nombre de hoja. Inserta el campo Hora. Inserta el número actual de página.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 📋 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+1. **Anàlisi Matemàtica de Desplaçament de Fórmules Relatives i Absolutes:**
+   - A la cel·la `D3` d'un full de càlcul s'introdueix la següent fórmula mixta:
+     $$=\text{B}\$2 * \$C3$$
+   - **Preguntes de desplaçament:**
+     - Si s'arrossega o copia la cel·la `D3` cap a la cel·la `E5` (desplaçament de $+1\text{ columna}$ i $+2\text{ files}$): quina serà la fórmula resultant exacta a `E5`? Explica com afecta el signe dòlar `$` a cada coordenada.
+     - Si s'arrossega `D3` cap a l'esquerra fins a `C2` (desplaçament de $-1\text{ columna}$ i $-1\text{ fila}$): quina serà la fórmula resultant?
+     - Si la cel·la `$C3$ conté un percentatge de descompte que s'ha d'aplicar a una matriu de 10 productes per 4 trimestres, quina cel·la ha de ser absolutament fixa (`$X$Y`) i quina mixta?
+
+2. **Càlcul d'Estructura de Cerca Vertical amb BUSCAV / CERCAV:**
+   - Una empresa informàtica té una taula de tarifes a les cel·les `A2:D50` del full anomenat `Tarifes`:
+     - Columna A: Codi de producte (ex: `P-101`).
+     - Columna B: Descripció (ex: `SSD NVMe 1TB`).
+     - Columna C: Preu majorista (ex: `54,00 €`).
+     - Columna D: Stock disponible (ex: `18`).
+   - Al full `Factura`, a la cel·la `B5` s'introdueix un codi de producte manualment.
+   - **Preguntes de disseny de fórmula:**
+     - Escriu la fórmula exacta que s'ha de col·locar a la cel·la `C5` per recuperar automàticament la descripció del producte utilitzant `BUSCAV`.
+     - Escriu la fórmula per recuperar el preu majorista a la cel·la `D5`.
+     - Què passarà si un usuari introdueix un codi inexistent (com `P-999`) si no s'utilitza una funció de control d'errors com `=SI.ERROR(BUSCAV(...); "Codi No Trobat")`?
+     - Per quina raó tècnica és fonamental que el quart argument de `BUSCAV` siga sempre `FALS` ($0$)?
+
+3. **Diagnòstic d'Errors Comuns en Fulls de Càlcul:**
+   - Identifica el motiu exacte pel qual el motor de càlcul de Calc o Excel retorna els següents codis d'error i com ha de solucionar-los el tècnic:
+     - Error `###`: Per què apareix a cel·les numèriques o de data i com es corregeix immediatament?
+     - Error `#DIV/0!`: Quina condició matemàtica no permesa s'està produint?
+     - Error `#VALOR!`: Què passa si s'intenta sumar un text a un número amb l'operador `+` (ex: `="Hola" + 5`)?
+     - Error `#REF!`: Què s'ha esborrat físicament al full de càlcul per provocar aquest error?
+     - Error `#NOM?`: Quin error de sintaxi o tipogràfic ha comès l'usuari en escriure la funció?
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació d'un Full de Facturació amb Càlculs d'IVA i Descomptes Absoluts
+1. Obre LibreOffice Calc i crea un full anomenat `Factura_Taller`.
+2. A les cel·les de capçalera superior col·loca les constants:
+   - `B1`: Tipus d'IVA general $\rightarrow$ escriu `21%` (format percentatge).
+   - `B2`: Descompte per pagament immediat $\rightarrow$ escriu `5%`.
+3. Construeix una taula d'articles a partir de la fila 5 amb les columnes: `Ref`, `Descripció`, `Quantitat`, `Preu_Unitari`, `Import_Brut`, `Descompte`, `Base_Imposable`.
+4. Introdueix 4 línies d'articles i programa les fórmules:
+   - `Import_Brut`: `=C6*D6` (referència relativa).
+   - `Descompte`: `=E6*$B$2` (utilitzant referència **absoluta** a la cel·la de descompte).
+   - `Base_Imposable`: `=E6-F6`.
+5. A sota, calcula el `Total IVA` multiplicant la suma de bases imposables per `$B$1`, i el `Total Factura`. Comprova que si modifiques el valor de `B1` del 21% al 10%, tot el full s'actualitza instantàniament.
+
+#### Repte 2: Implementació de Funcions Condicionals Imbricades i Estadístiques
+1. En un nou full `Notes_Taller`, introdueix un llistat de 10 alumnes amb 3 qualificacions parcials: `Pràctica 1` (30%), `Pràctica 2` (30%), `Examen` (40%).
+2. Calcula la nota final ponderada mitjançant fórmula: `=(B2*0,3) + (C2*0,3) + (D2*0,4)`.
+3. A la columna `Qualificació_Text`, empra la funció `SI` imbricada per assignar automàticament:
+   - Si la nota és $< 5$: `"Suspès"`
+   - Si la nota és $< 7$: `"Aprovat"`
+   - Si la nota és $< 9$: `"Notable"`
+   - Si la nota és $\ge 9$: `"Excel·lent"`
+   ```text
+   =SI(E2<5; "Suspès"; SI(E2<7; "Aprovat"; SI(E2<9; "Notable"; "Excel·lent")))
+   ```
+4. A la part inferior, calcula mitjançant funcions estadístiques: la `Nota Mitjana` del grup (`=MITJANA`), la nota més alta (`=MAX`), la més baixa (`=MIN`) i el nombre total d'alumnes que han aprovat utilitzant `=COMPTA.SI(E2:E11; ">=5")`.
+
+#### Repte 3: Cerca Vertical amb BUSCAV i Format Condicional de Dades
+1. Crea un full anomenat `Inventari` amb una llista de 15 components microinformàtics (Codi, Nom, Categoria, Preu, Stock).
+2. En un altre full `Vendes`, crea una graella on l'operador només introduïsca el codi del producte (ex: `C-01`) i la quantitat venuda:
+   - Utilitza `=BUSCAV(A2; Inventari.$A$2:$E$16; 2; FALS)` per omplir el nom de l'article automàticament.
+   - Utilitza `=BUSCAV(A2; Inventari.$A$2:$E$16; 4; FALS)` per carregar el preu unitari.
+3. Aplica **Format Condicional** a la columna d'Stock del full Inventari:
+   - Si l'Stock és $< 5$: Cel·la amb fons vermell clar i text vermell fosc (Alerta de reposició urgent).
+   - Si l'Stock està entre $5$ i $15$: Fons groc clar (Stock mitjà).
+   - Si l'Stock és $> 15$: Fons verd clar (Stock òptim).
+4. Insereix un gràfic de columnes 3D que represente l'stock de cada component i personalitza els títols dels eixos i la llegenda.
+
+---
+
+### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
+| :--- | :--- | :--- | :--- |
+| **Adreçament de Cel·les Relatiu, Absolut i Mixt** | Domina l'ús del signe $ per bloquejar files i columnes en fórmules que s'arrosseguen sobre matrius sense cap error de referència. | Entén la referència absoluta per a una cel·la fixa però té dificultats per dissenyar referències mixtes (`$A1` o `A$1`). | Utilitza únicament referències relatives i les fórmules es trenquen en arrossegar-les cap a altres cel·les. |
+| **Funcions Analítiques, Lògiques i BUSCAV** | Construeix funcions condicionals imbricades complexes, cerca dades entre fulls amb BUSCAV exacte i controla errors amb SI.ERROR. | Utilitza la funció SI simple i funcions estadístiques bàsiques però no sap combinar SI amb I/O o omet el paràmetre FALS a BUSCAV. | Confon la funció SUMA amb un sumatori manual o no sap com estructurar els arguments d'una funció. |
+| **Format Condicional i Gràfics Empresarials** | Aplica regles de format condicional multicriteri i dissenya gràfics analítics (barres, sectors, línies) amb etiquetes clares. | Genera un gràfic bàsic però no sap canviar les sèries de dades ni configurar regles de color automàtiques. | No sap generar gràfics a partir de rangs de dades ni interpretar missatges d'error com `#DIV/0!` o `###`. |

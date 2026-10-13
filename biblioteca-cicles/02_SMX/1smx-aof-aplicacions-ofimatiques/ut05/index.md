@@ -14,6 +14,124 @@ next_label: "5.1 Tema 0. Introducció a les base de dades. ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
+## 🗄️ Arquitectura dels Sistemes Gestors de Bases de Dades (SGBD)
+
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Fonaments de SGBD: Arquitectura ANSI-SPARC, Independència i Llenguatges</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Transició de fitxers plans a bases de dades relacionals, nivells d'abstracció i motor de persistència</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU5FitxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b91c1c" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU5AnsiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU5IndepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU5MotorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Fitxers Plans vs SGBD -->
+    <rect x="20" y="20" width="190" height="210" rx="8" fill="url(#aofU5FitxGrad)" stroke="#f87171" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#f87171" font-size="10.5" font-weight="bold" text-anchor="middle">📁 FITXERS VS SGBD</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Limitacions Històriques</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#f87171" font-size="8.5">• <tspan font-weight="bold">Fitxers Tradicionals:</tspan></text>
+    <text x="42" y="93" fill="#cbd5e1" font-size="8">- Redundància massiva de dades</text>
+    <text x="42" y="105" fill="#cbd5e1" font-size="8">- Inconsistència de registres</text>
+    <text x="42" y="117" fill="#cbd5e1" font-size="8">- Dependència codi-fitxer</text>
+    <text x="42" y="129" fill="#cbd5e1" font-size="8">- Dificultat d'accés concurrent</text>
+    <text x="32" y="148" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Model SGBD Modern:</tspan></text>
+    <text x="42" y="161" fill="#cbd5e1" font-size="8">- Dades compartides úniques</text>
+    <text x="42" y="173" fill="#cbd5e1" font-size="8">- Integritat i seguretat central</text>
+    <text x="42" y="185" fill="#cbd5e1" font-size="8">- Control transaccional ACID</text>
+    <text x="115" y="218" fill="#f87171" font-size="8.5" text-anchor="middle" font-weight="bold">Ruptura del Model Pla</text>
+
+    <!-- Fletxa 1 -> 2 -->
+    <path d="M 210 115 L 235 115" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Bloc 2: Arquitectura ANSI-SPARC -->
+    <rect x="240" y="20" width="190" height="210" rx="8" fill="url(#aofU5AnsiGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="335" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">🏛️ NIVELLS ANSI-SPARC</text>
+    <text x="335" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">3 Nivells d'Abstracció</text>
+    <line x1="250" y1="63" x2="420" y2="63" stroke="#334155"/>
+    <text x="252" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Nivell Extern (Vistes):</tspan></text>
+    <text x="262" y="93" fill="#94a3b8" font-size="8">Percepció de cada usuari/app</text>
+    <text x="252" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Nivell Conceptual:</tspan></text>
+    <text x="262" y="125" fill="#94a3b8" font-size="8">Esquema global lògic de la BD</text>
+    <text x="262" y="137" fill="#94a3b8" font-size="8">Entitats, relacions, restriccions</text>
+    <text x="252" y="156" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Nivell Intern (Físic):</tspan></text>
+    <text x="262" y="169" fill="#94a3b8" font-size="8">Estructures d'emmagatzematge</text>
+    <text x="262" y="181" fill="#94a3b8" font-size="8">Fitxers a disc, índexs B-Tree</text>
+    <text x="335" y="218" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Separació d'Esquemes</text>
+
+    <!-- Fletxa 2 -> 3 -->
+    <path d="M 430 115 L 455 115" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Bloc 3: Independència de Dades -->
+    <rect x="460" y="20" width="190" height="210" rx="8" fill="url(#aofU5IndepGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="555" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">🔓 INDEPENDÈNCIA</text>
+    <text x="555" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Aïllament de Modificacions</text>
+    <line x1="470" y1="63" x2="640" y2="63" stroke="#334155"/>
+    <text x="472" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Independència Lògica:</tspan></text>
+    <text x="482" y="93" fill="#94a3b8" font-size="8">Capacitat de modificar l'esquema</text>
+    <text x="482" y="105" fill="#94a3b8" font-size="8">conceptual (afegir taules/camps)</text>
+    <text x="482" y="117" fill="#34d399" font-size="8">sense alterar les vistes externes</text>
+    <text x="472" y="138" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Independència Física:</tspan></text>
+    <text x="482" y="151" fill="#94a3b8" font-size="8">Capacitat de canviar el maquinari,</text>
+    <text x="482" y="163" fill="#94a3b8" font-size="8">organització de fitxers o índexs</text>
+    <text x="482" y="175" fill="#34d399" font-size="8">sense canviar l'esquema lògic</text>
+    <text x="555" y="218" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Desacoblament Total</text>
+
+    <!-- Fletxa 3 -> 4 -->
+    <path d="M 650 115 L 675 115" stroke="#c084fc" stroke-width="2"/>
+
+    <!-- Bloc 4: Components i Llenguatges -->
+    <rect x="680" y="20" width="160" height="210" rx="8" fill="url(#aofU5MotorGrad)" stroke="#10b981" stroke-width="1.5"/>
+    <text x="760" y="42" fill="#10b981" font-size="10.5" font-weight="bold" text-anchor="middle">⚙️ MOTOR &amp; LLENGUATGES</text>
+    <text x="760" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Eines del SGBD</text>
+    <line x1="690" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="692" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">DDL (Definició):</tspan></text>
+    <text x="700" y="93" fill="#94a3b8" font-size="8">CREATE, ALTER, DROP</text>
+    <text x="692" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">DML (Manipulació):</tspan></text>
+    <text x="700" y="125" fill="#94a3b8" font-size="8">SELECT, INSERT, UPDATE</text>
+    <text x="692" y="144" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Diccionari de dades:</tspan></text>
+    <text x="700" y="157" fill="#94a3b8" font-size="8">Metadades de la BD</text>
+    <text x="692" y="176" fill="#cbd5e1" font-size="8.5">• Motor de consultes SQL</text>
+    <text x="692" y="194" fill="#cbd5e1" font-size="8.5">• Gestor de seguretat i rols</text>
+    <text x="760" y="218" fill="#10b981" font-size="8.5" text-anchor="middle" font-weight="bold">Control i Persistència</text>
+
+    <!-- Peu informatiu -->
+    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Regla d'Or dels SGBD: <tspan fill="#34d399" font-weight="bold">La independència de dades separa la lògica del negoci de l'emmagatzematge físic en disc.</tspan></text>
+    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">Permet que els administradors optimitzen índexs o amplien taules sense haver de reescriure el codi ni els formularis de les aplicacions d'usuari.</text>
+  </svg>
+</div>
+
+---
+
+## 📊 Fitxers Tradicionals enfront de Sistemes Gestors de Bases de Dades (SGBD)
+
+| Característica | Sistema Basat en Fitxers Tradicionals | Sistema Gestor de Bases de Dades (SGBD) | Avantatge Professional del SGBD |
+| :--- | :--- | :--- | :--- |
+| **Redundància de Dades** | Elevada; les dades es repeteixen en múltiples fitxers de cada departament. | **Controlada i mínima**; les dades s'emmagatzemen en un únic repositori central. | Estalvi d'espai a disc i eliminació d'inconsistències per actualitzacions parcials. |
+| **Independència de Dades**| Inexistent; si canvia el format del fitxer, cal reprogramar l'aplicació. | **Doble independència:** Lògica (esquema conceptual) i Física (estructures de disc). | Els canvis de maquinari o noves columnes no trenquen els programes existents. |
+| **Seguretat i Accés** | Bàsica (permisos de fitxer del sistema operatiu). | **Control granular per usuaris, rols i vistes** mitjançant permisos SQL (GRANT/REVOKE). | Protecció estricta de dades confidencials segons el perfil de l'usuari. |
+| **Concurrència i Transaccions**| Bloqueig de fitxer complet; risc de sobreescriptura de canvis simultanis. | **Control de concurrència avançat** amb bloqueig a nivell de fila i propietats ACID. | Múltiples usuaris poden llegir i escriure alhora sense pèrdua d'informació. |
+
+---
+
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**5.1 Tema 0. Introducció a les base de dades.**](./ut0501.md)
@@ -23,12 +141,12 @@ next_label: "5.1 Tema 0. Introducció a les base de dades. ➡️"
 
 # 5.1 Tema 0. Introducció a les base de dades.
 
-En este tema, vorem una introducció a les base de dades. Estarà dividit en dos parts. Una primera part, el tema 0, que serà una introducció, i una segona part, el tema 1, on vorem conceptes generals de base de dades.
+En aquest tema analitzarem els fonaments dels sistemes de bases de dades, dividit en dos blocs: una introducció als conceptes bàsics d'informació estructurada i un estudi aprofundit de l'arquitectura dels SGBD.
 
-> **🔗 Recurs Web: Video 1. Introducció a les Base de Dades**
+> **🔗 Recurs Web: Vídeo 1. Introducció a les Bases de Dades**
 > [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=yoeV4Ex8C8U) ↗️**](https://www.youtube.com/watch?v=yoeV4Ex8C8U)
 >
-> Vos deixe un vídeo, on explica QUÈ és una Base de Dades, per si és del vostre interés
+> Recurs audiovisual explicatiu sobre la definició i avantatges dels sistemes de bases de dades enfront dels fitxers plans.
 
 ---
 
@@ -448,3 +566,103 @@ suele diseñar en UML y el lógico actualmente en ODMG (Object Data Management G
  Objeto-relacionales. Tratan de ser un híbrido entre el modelo relacional y el orientado a objetos. En las bases de datos objeto-relacionales se intenta conseguir una compatibilidad relacional dando la posibilidad de integrar mejoras de la orientación a objetos. Se basan en el estándar SQL 99, que añade a las bases relacionales la posibilidad de almacenar procedimientos de usuario, triggers, tipos definidos por el usuario, consultas recursivas, etc. Las últimas versiones de la mayoría de las grandes bases de datos relacionales (Oracle, SQL Server, Informix, ...) son objeto-relacionales.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 🎯 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Activitat 1: Càlcul de Redundància i Sobrecost d'Emmagatzematge en Fitxers Plans vs Model Relacional
+En un departament d'assistència tècnica informàtica s'utilitza històricament un fitxer pla CSV per a registrar les reparacions d'ordinadors. Cada línia conté tota la informació del client, l'equip i l'actuació tècnica:
+- `DNI_Client` (9 B), `Nom_Client` (40 B), `Telefon` (12 B), `Adreca` (60 B), `Poblacio` (30 B).
+- `Num_Serie_PC` (20 B), `Marca_Model` (35 B), `Data_Entrada` (10 B), `Avaria` (120 B), `Hores_Treball` (4 B), `Preu_Hora` (4 B).
+- Longitud total per registre pla: $S_{\text{pla}} = 9 + 40 + 12 + 60 + 30 + 20 + 35 + 10 + 120 + 4 + 4 = 344\text{ bytes}$.
+
+El servei compta amb $N_{\text{cli}} = 800\text{ clients}$ diferents. Al cap d'un any s'han registrat $N_{\text{rep}} = 4.800\text{ reparacions}$ en total (una mitjana de 6 reparacions per client).
+
+1. **Càlcul de volum en fitxer pla:** Calculeu la mida total del fitxer pla en kilobytes ($1\text{ KB} = 1.024\text{ bytes}$):
+   $$V_{\text{pla}} = N_{\text{rep}} \times S_{\text{pla}}$$
+2. **Càlcul de volum en model relacional normalitzat:** Si dividim les dades en dues taules relacionades per `DNI_Client` (Clau Forana):
+   - Taula `CLIENTS`: `DNI_Client` (9 B), `Nom_Client` (40 B), `Telefon` (12 B), `Adreca` (60 B), `Poblacio` (30 B) $\rightarrow S_{\text{cli}} = 151\text{ bytes}$. ($800\text{ registres}$).
+   - Taula `REPARACIONS`: `ID_Reparacio` (4 B clau primària), `DNI_Client` (9 B FK), `Num_Serie_PC` (20 B), `Marca_Model` (35 B), `Data_Entrada` (10 B), `Avaria` (120 B), `Hores_Treball` (4 B), `Preu_Hora` (4 B) $\rightarrow S_{\text{rep}} = 206\text{ bytes}$. ($4.800\text{ registres}$).
+   - Calculeu el volum total de dades en el model relacional:
+   $$V_{\text{rel}} = (N_{\text{cli}} \times S_{\text{cli}}) + (N_{\text{rep}} \times S_{\text{rep}})$$
+3. **Estalvi i Anomalies:** Determineu el percentatge d'estalvi d'espai obtingut amb la normalització i descriviu quants canvis de línies caldria fer en el fitxer pla si un client que ha vingut 15 vegades canvia de número de telèfon (anomalia de modificació), enfront d'una única modificació en la taula `CLIENTS`.
+
+#### Activitat 2: Arquitectura ANSI-SPARC i Aïllament dels Tres Nivells d'Abstracció
+Analitzeu l'arquitectura de 3 nivells ANSI-SPARC (Extern, Conceptual i Intern) davant dels següents escenaris de canvi en una empresa de serveis microinformàtics:
+1. **Canvi 1:** L'administrador de sistemes decideix moure les dades d'un disc dur HDD mecànic a una cabina SAN de discos NVMe d'alta velocitat i canvia l'índex clau de taula d'un arbre B-Tree a una taula de Hash a nivell físic. Quin nivell es veu afectat? Afecta aquesta modificació el codi de les aplicacions d'ofimàtica que consulten les dades? Quin principi d'independència es compleix?
+2. **Canvi 2:** S'afegeix un camp nou `Correu_Electronic` a la taula `CLIENTS`. El formulari que empra el departament de comptabilitat (nivell extern) no necessita aquest camp i continua funcionant sense canvis. Quin principi d'independència de dades es manifesta aquí?
+3. **Canvi 3:** Dibuixeu un esquema esquemàtic mostrant com dues vistes externes diferents (Vista Tècnic de Taller vs Vista Facturació) comparteixen el mateix model conceptual però oculten camps sensibles (com dades de pagament o diagnòstics interns de garantia).
+
+#### Activitat 3: Classificació de Sentències en Subllenguatges SQL i Garanties ACID
+Els sistemes gestors de bases de dades relacionals garanteixen la consistència mitjançant el motor transaccional.
+1. **Classificació de sentències:** Classifiqueu cadascuna de les següents instruccions SQL en el seu subconjunt corresponent (DDL - *Data Definition Language*, DML - *Data Manipulation Language*, DCL - *Data Control Language*, o TCL - *Transaction Control Language*):
+   - `CREATE TABLE Ordinadors (id_pc INT PRIMARY KEY, marca VARCHAR(30));`
+   - `SELECT nom, telefon FROM Clients WHERE ciutat = 'València';`
+   - `GRANT SELECT, UPDATE ON Reparacions TO tecnic_junior;`
+   - `UPDATE Ordinadors SET estat = 'Reparat' WHERE id_pc = 104;`
+   - `COMMIT;`
+   - `ALTER TABLE Reparacions ADD COLUMN cost_peces DECIMAL(8,2);`
+   - `ROLLBACK;`
+2. **Garantia ACID en una reparació amb cobrament:** Una botiga processa una transacció que implica dues operacions: (a) Descomptar 1 placa base de l'estoc de magatzem i (b) Registrar el cobrament de 120 € en caixa. Si es produeix un tall de subministrament elèctric just després de l'operació (a) però abans de l'operació (b), quin mecanisme del SGBD s'activa? Com intervé la propietat d'**Atomicitat** i el fitxer de registre de transaccions (*journal/transaction log*) per evitar que la placa base desaparega sense haver estat cobrada?
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació d'una Base de Dades Relacional en LibreOffice Base i Anàlisi del Motor HSQLDB/Firebird
+1. Obriu **LibreOffice Base**.
+2. En l'assistent de bases de dades, seleccioneu l'opció **Crear una nova base de dades** utilitzant el motor predeterminat (Firebird incrustat o HSQLDB incrustat). Guardeu el fitxer amb el nom `taller_microinformatica.odb`.
+3. Creeu mitjançant la vista de disseny una taula anomenada `TECNICS` amb els camps:
+   - `ID_Tecnic`: Enter (INTEGER), Clau Primària, Autonumèric.
+   - `Nom`: Text [VARCHAR], mida 50 caràcters, Entrada requerida: Sí.
+   - `Especialitat`: Text [VARCHAR], mida 40 caràcters.
+   - `Data_Incorporacio`: Data [DATE].
+4. Introduïu almenys 4 registres manuals a la taula.
+5. Comproveu la mida del fitxer `.odb` generat al vostre explorador d'arxius. Descomprimiu el fitxer `.odb` (canviant l'extensió a `.zip`) i identifiqueu a l'interior l'estructura de fitxers XML de definició i el directori `database` on es guarden les dades binàries.
+
+#### Repte 2: Exploració del Diccionari de Dades mitjançant Comandes SQL Directes
+1. A LibreOffice Base, aneu al menú **Eines > SQL...** per obrir la finestra d'execució directa de consultes al motor.
+2. Si esteu utilitzant el motor HSQLDB o Firebird, executeu una consulta de metadades per a inspeccionar el catàleg del sistema:
+   ```sql
+   -- Consulta de taules d'usuari existents en el sistema
+   SELECT TABLE_NAME, TABLE_TYPE 
+   FROM INFORMATION_SCHEMA.SYSTEM_TABLES 
+   WHERE TABLE_TYPE = 'TABLE';
+   ```
+3. Executeu una sentència DDL directa per crear una segona taula associada:
+   ```sql
+   CREATE TABLE DISPOSITIUS (
+       id_disp INT GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+       num_serie VARCHAR(30) NOT NULL,
+       marca VARCHAR(25) NOT NULL,
+       id_tecnic_assignat INT
+   );
+   ```
+4. Aneu al menú **Visualitza > Refresca les taules** de LibreOffice Base i comproveu com la nova taula creada mitjançant DDL apareix automàticament a la interfície d'usuari.
+
+#### Repte 3: Comparativa Pràctica d'Accés per Fitxer Pla CSV vs Taula Indexada
+1. Creeu un fitxer de text pla anomenat `components.csv` amb un editor de text o PowerShell:
+   ```powershell
+   # Creació de registres simulats en fitxer pla mitjançant PowerShell
+   1..1000 | ForEach-Object {
+       "$($_),Component_$_,$((Get-Random -Minimum 10 -Maximum 500)),$((Get-Random -Minimum 1 -Maximum 50))"
+   } | Out-File -Encoding utf8 components.csv
+   ```
+2. Obriu el fitxer `components.csv` amb Calc i cerqueu el registre amb ID `782` observant el comportament del cercador lineal.
+3. Importeu les dades a LibreOffice Base mitjançant l'assistent de còpia i definició de clau primària sobre la columna ID.
+4. Executeu una cerca per Clau Primària:
+   ```sql
+   SELECT * FROM COMPONENTS WHERE ID = 782;
+   ```
+5. Redacteu un breu informe comparatiu explicant per què l'índex basat en clau primària proporciona una cerca en temps logarítmic $O(\log n)$ enfront del recorregut seqüencial $O(n)$ del fitxer de text pla.
+
+---
+
+### 📋 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Arquitectura ANSI-SPARC i Normalització** | Resol amb precisió matemàtica el càlcul de redundància i justifica amb solidesa la independència física i lògica dels 3 nivells d'abstracció. | Calcula el volum de dades i diferencia correctament la independència lògica i física, amb xicotets desajustos numèrics o justificacions breus. | Identifica la diferència entre fitxer pla i SGBD, però té dificultats en calcular l'estalvi d'espai o diferenciar independència lògica i física. | No comprèn els nivells de l'arquitectura ANSI-SPARC ni sap calcular el volum d'emmagatzematge. |
+| **Llenguatges SGBD (DDL, DML, DCL, TCL)** | Classifica sense cap errada totes les sentències SQL i explica amb precisió el funcionament del registre de transaccions i les garanties ACID. | Classifica correctament la gran majoria de sentències i descriu les propietats bàsiques de les transaccions sense aprofundir en el journal. | Confon algunes sentències DDL i DML i comprèn de forma parcial la necessitat del control transaccional ACID. | Incapaç de distingir entre sentències de creació d'estructures (DDL) i de consulta/modificació de dades (DML). |
+| **Destresa en Laboratori amb LibreOffice Base** | Crea i configura taules relacionals, clau primària autonumèrica i executa consultes DDL directes verificant el diccionari de dades sense assistència. | Crea les taules i la clau primària amb solvència a la interfície gràfica i executa consultes SQL bàsiques amb guia puntual. | Crea la base de dades i defineix camps bàsics, però comet errades en la definició de tipus de dades o claus primàries. | No aconsegueix crear la base de dades funcional ni configurar la clau primària al motor relacional. |

@@ -14,6 +14,123 @@ next_label: "3.1 Tema 11. Index de continguts, figures i alfabèti ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
+## 📖 Arquitectura de Documents Llargs, Índexs Automàtics i Seccions
+
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Gestió Avançada: Estils de Títol, Taules de Contingut, Salts de Secció i Índexs</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Foliació independent, desvinculació de capçaleres i estructuració de manuals de gran extensió</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU3TitolGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU3TocGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#6d28d9" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU3PagGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU3IdxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Estils Jeràrquics -->
+    <rect x="20" y="20" width="190" height="210" rx="8" fill="url(#aofU3TitolGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">📑 1. ESTILS DE TÍTOL</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Esquema del Document</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Títol 1:</tspan> Capítols principals</text>
+    <text x="42" y="93" fill="#94a3b8" font-size="8">Nivell d'esquema 1</text>
+    <text x="32" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Títol 2:</tspan> Subapartats de bloc</text>
+    <text x="42" y="125" fill="#94a3b8" font-size="8">Nivell d'esquema 2</text>
+    <text x="32" y="144" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Títol 3:</tspan> Punts específics</text>
+    <text x="32" y="164" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Navegador (F5):</tspan></text>
+    <text x="42" y="177" fill="#94a3b8" font-size="8">Arbre de navegació en directe</text>
+    <text x="32" y="196" fill="#cbd5e1" font-size="8.5">• Reorganització d'apartats ràpida</text>
+    <text x="115" y="218" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Esquelet Estructural</text>
+
+    <!-- Fletxa 1 -> 2 -->
+    <path d="M 210 115 L 235 115" stroke="#38bdf8" stroke-width="2"/>
+
+    <!-- Bloc 2: Taula de Continguts (TOC) -->
+    <rect x="240" y="20" width="190" height="210" rx="8" fill="url(#aofU3TocGrad)" stroke="#c084fc" stroke-width="1.5"/>
+    <text x="335" y="42" fill="#c084fc" font-size="10.5" font-weight="bold" text-anchor="middle">📖 2. TAULA CONTINGUT</text>
+    <text x="335" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Generació Automàtica (TOC)</text>
+    <line x1="250" y1="63" x2="420" y2="63" stroke="#334155"/>
+    <text x="252" y="80" fill="#cbd5e1" font-size="8.5">• Menú `Insereix > Índex...`</text>
+    <text x="252" y="98" fill="#cbd5e1" font-size="8.5">• Llegeix automàticament Títols</text>
+    <text x="252" y="118" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Hipervincles natius:</tspan></text>
+    <text x="262" y="131" fill="#94a3b8" font-size="8">Salt directe al capítol (Ctrl+Clic)</text>
+    <text x="252" y="150" fill="#cbd5e1" font-size="8.5">• Puntuació de farciment (`...`)</text>
+    <text x="252" y="168" fill="#cbd5e1" font-size="8.5">• Números de pàgina automàtics</text>
+    <text x="252" y="188" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Actualització:</tspan> Clic dret</text>
+    <text x="262" y="200" fill="#94a3b8" font-size="7.5">> Actualitza l'índex</text>
+    <text x="335" y="218" fill="#c084fc" font-size="8.5" text-anchor="middle" font-weight="bold">Zero Errors de Pàgina</text>
+
+    <!-- Fletxa 2 -> 3 -->
+    <path d="M 430 115 L 455 115" stroke="#c084fc" stroke-width="2"/>
+
+    <!-- Bloc 3: Seccions i Estils de Pàgina -->
+    <rect x="460" y="20" width="190" height="210" rx="8" fill="url(#aofU3PagGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="555" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">📄 3. ESTILS DE PÀGINA</text>
+    <text x="555" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Salts Manuals i Foliació</text>
+    <line x1="470" y1="63" x2="640" y2="63" stroke="#334155"/>
+    <text x="472" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Portada:</tspan> Sense encapçalament</text>
+    <text x="472" y="98" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Preliminars:</tspan> Nombres romans</text>
+    <text x="482" y="111" fill="#94a3b8" font-size="8">(i, ii, iii, iv per a índexs)</text>
+    <text x="472" y="130" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Cos Principal:</tspan> Aràbic (1, 2, 3)</text>
+    <text x="482" y="143" fill="#94a3b8" font-size="8">Reinici de numeració a 1</text>
+    <text x="472" y="162" fill="#cbd5e1" font-size="8.5">• <tspan fill="#c084fc" font-weight="bold">Pàgines Apaïsades:</tspan></text>
+    <text x="482" y="175" fill="#94a3b8" font-size="8">Format horitzontal per a taules</text>
+    <text x="472" y="194" fill="#cbd5e1" font-size="8.5">• Desvinculació de capçaleres</text>
+    <text x="555" y="218" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Seccions Independents</text>
+
+    <!-- Fletxa 3 -> 4 -->
+    <path d="M 650 115 L 675 115" stroke="#34d399" stroke-width="2"/>
+
+    <!-- Bloc 4: Índexs Especials i Mestre -->
+    <rect x="680" y="20" width="160" height="210" rx="8" fill="url(#aofU3IdxGrad)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="760" y="42" fill="#f59e0b" font-size="10.5" font-weight="bold" text-anchor="middle">📚 4. ÍNDEXS &amp; MESTRE</text>
+    <text x="760" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Obres de Gran Volum</text>
+    <line x1="690" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="692" y="80" fill="#cbd5e1" font-size="8.5">• <tspan fill="#f59e0b" font-weight="bold">Índex Alfabètic:</tspan></text>
+    <text x="700" y="93" fill="#94a3b8" font-size="8">Termes tècnics i conceptes</text>
+    <text x="692" y="112" fill="#cbd5e1" font-size="8.5">• <tspan fill="#38bdf8" font-weight="bold">Taula de Figures:</tspan></text>
+    <text x="700" y="125" fill="#94a3b8" font-size="8">Llista automàtica d'imatges</text>
+    <text x="692" y="144" fill="#cbd5e1" font-size="8.5">• Taula de Taules</text>
+    <text x="692" y="162" fill="#cbd5e1" font-size="8.5">• <tspan fill="#34d399" font-weight="bold">Document Mestre:</tspan></text>
+    <text x="700" y="175" fill="#94a3b8" font-size="8">Format `.odm` multi-arxiu</text>
+    <text x="692" y="194" fill="#cbd5e1" font-size="8.5">• Enllaç de subdocuments</text>
+    <text x="760" y="218" fill="#f59e0b" font-size="8.5" text-anchor="middle" font-weight="bold">Publicació Editorial</text>
+
+    <!-- Peu informatiu -->
+    <rect x="20" y="242" width="820" height="42" rx="6" fill="#1e293b" stroke="#334155"/>
+    <text x="430" y="261" fill="#cbd5e1" font-size="10" text-anchor="middle">Regla d'Or dels Documents Extensos: <tspan fill="#34d399" font-weight="bold">Mai s'escriu un índex manualment teclejant punts i números de pàgina.</tspan></text>
+    <text x="430" y="275" fill="#94a3b8" font-size="9" text-anchor="middle">Aplica sempre Estils de Títol jeràrquics i genera la Taula de Continguts de forma automàtica; s'actualitzarà sola amb un sol clic davant qualsevol canvi.</text>
+  </svg>
+</div>
+
+---
+
+## 📊 Gestió d'Estils de Pàgina i Salts de Secció en Documents Extensos
+
+| Secció del Document | Estil de Pàgina Recomanat | Encapçalament / Capçalera | Peu de Pàgina / Foliació | Tipus de Salt Previ |
+| :--- | :--- | :--- | :--- | :--- |
+| **Portada del Projecte** | **Primera Pàgina (*First Page*)** | Desactivada completament. | Desactivat (sense cap número de pàgina). | Cap (inici del document). |
+| **Pàgina de Resum / Índexs** | **Preliminars / Índex** | Títol del projecte i versió. | Nombres romans en minúscula (**i, ii, iii, iv**). | Salt manual amb canvi d'estil de pàgina; sense reinici de foliació. |
+| **Cos Principal (Capítols)** | **Predeterminat (*Default Page Style*)** | Títol del Capítol actiu (camp dinàmic). | Nombres aràbics (**1, 2, 3...**) amb reinici a pàgina 1. | **Salt manual de pàgina amb canvi d'estil i número de pàgina = 1.** |
+| **Annexos / Taules Amples** | **Horitzontal (*Landscape*)** | Títol de l'Annex. | Nombres aràbics continuats (ex: 45, 46). | Salt manual amb canvi d'estil a format Horitzontal (apaisat). |
+
+---
+
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**3.1 Tema 11. Index de continguts, figures i alfabèti**](./ut0301.md)
@@ -1046,3 +1163,71 @@ AGÓN
 Personificación simbólica de las luchas atléticas y de los concursos de todo género. Era representado de diversas formas, pero una de las más conocidas se refería a un joven dios atleta desnudo, con un gallo en las manos.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 📋 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+1. **Planificació de Foliació i Seccions en Documents Editorials:**
+   - Un projecte fi de cicle de 80 pàgines requereix l'estructura formal següent:
+     - Secció 1: Portada i contraportada (2 pàgines sense capçalera, sense peu ni número visible).
+     - Secció 2: Aprovacions legals, pròleg i Taula de Continguts (4 pàgines foliades en nombres romans en minúscula: `i, ii, iii, iv`).
+     - Secció 3: Cos de l'estudi tècnic (comença físicament a la pàgina 7 del document imprès, però el peu de pàgina ha de reiniciar-se i mostrar "Pàgina 1 de 68").
+     - Secció 4: Plànol de xarxa i gran taula de costos (2 pàgines en format horitzontal/apaïsat DIN A4 continuant la numeració: 69 i 70).
+   - **Preguntes de disseny:**
+     - Quants estils de pàgina diferents cal crear o configurar a LibreOffice Writer?
+     - Quants salts manuals de pàgina amb canvi d'estil i desvinculació de capçalera cal inserir?
+     - A quina secció exacta cal activar l'opció *"Reinicia la numeració de pàgina a 1"*?
+
+2. **Dimensionament d'un Document Mestre (`.odm`):**
+   - Un servei tècnic elabora el manual de seguretat informàtica corporatiu integrat per 6 capítols redactats per diferents autors:
+     - Capítol 1: $35\text{ pàgines}$.
+     - Capítol 2: $48\text{ pàgines}$.
+     - Capítol 3: $62\text{ pàgines}$.
+     - Capítol 4: $55\text{ pàgines}$.
+     - Capítol 5: $40\text{ pàgines}$.
+     - Capítol 6: $30\text{ pàgines}$.
+   - **Preguntes d'anàlisi:**
+     - Si es treballa amb un únic fitxer `.odt` gegant de 270 pàgines amb desenes d'imatges incrustades, quins problemes de corrupció de fitxer, lentitud de desat i bloquejos de programari es poden produir?
+     - Com resol el format **Document Mestre (`.odm`)** la col·laboració en equip permetent que cada tècnic edite el seu subdocument `.odt` de forma aïllada mentre el mestre genera la taula de continguts global unificada?
+
+3. **Càlcul de Resolució i Coordenades d'Índex Alfabètic de Conceptes:**
+   - En maquetar un glossari tècnic alfabètic al final d'un llibre de text:
+   - S'etiqueten 120 termes tècnics com a entrades d'índex analític.
+   - **Preguntes de format:**
+     - Quina diferència funcional hi ha entre una entrada d'índex principal i una entrada secundària o subentrada?
+     - Si el terme "Encaminador" apareix referenciat a les pàgines 12, 13, 14 i 45, com ha de mostrar la concordança l'índex analític (ex: `Encaminador, 12-14, 45`)?
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Configuració d'Estils de Títol i Generació de la Taula de Continguts (TOC)
+1. Obre LibreOffice Writer i redacta un document d'assaig amb 3 capítols i 2 subapartats per capítol.
+2. Aplica l'estil **Títol 1** als títols de capítol i l'estil **Títol 2** als subapartats.
+3. Vés a l'inici del document (pàgina 2), situa el cursor i selecciona `Insereix > Índex de contingut i taules > Índex de contingut, índex o bibliografia...`.
+4. A la pestanya **Entrades**, comprova que el nivell d'esquema inclou els elements hiperenllaçats (`EH` Inici d'hiperenllaç, `T` Text d'entrada, `HT` Fi d'hiperenllaç, `#` Número de pàgina).
+5. Accepta la creació de l'índex. Fes `Ctrl + Clic` sobre un títol de l'índex i comprova que el cursor salta directament a la pàgina del capítol.
+
+#### Repte 2: Disseny de Seccions amb Portada, Paginació Romana i Reinici Aràbic
+1. A la primera pàgina, dissenya una portada formal i aplica-li l'estil de pàgina **Primera Pàgina**.
+2. Al final de la portada, insereix un salt manual: `Insereix > Més salts > Salt manual > Salt de pàgina`, triant l'estil de pàgina **Índex**.
+3. A la secció d'índex, activa el peu de pàgina, insereix el camp de número de pàgina (`Insereix > Camp > Número de pàgina`) i canvia el format de número a romans en minúscula (`i, ii, iii`).
+4. Al final de la secció d'índex, insereix un altre salt manual cap a l'estil de pàgina **Predeterminat**, marcant la casella **Canvia el número de pàgina** i establint el valor a `1`.
+5. Comprova que la portada no té número, l'índex té nombres romans i el cos comença de nou a la pàgina 1.
+
+#### Repte 3: Inserció d'Entrades per a Índex Alfabètic de Termes
+1. Al cos del document, selecciona paraules clau com `Ethernet`, `TCP/IP`, `Firewall`, `Memòria RAM`.
+2. Per a cada paraula seleccionada, prem `Insereix > Índex de contingut i taules > Entrada d'índex...` (o drecera de teclat) i assigna-la a l'índex de tipus **Índex alfabètic**.
+3. Al final del document, insereix un nou salt de pàgina i afegeix l'índex alfabètic triant el tipus **Índex alfabètic** amb 2 columnes.
+4. Comprova com els termes apareixen ordenats de la A a la Z amb els seus números de pàgina associats.
+
+---
+
+### 🎯 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Nivell Assolit (Excel·lent: 9-10) | Nivell Mitjà (Notable: 7-8) | Nivell Inicial (Aprovat: 5-6) |
+| :--- | :--- | :--- | :--- |
+| **Estils de Títol i Taula de Continguts (TOC)** | Estructura el document amb estils Títol 1/2/3, genera la TOC hiperenllaçada automàticament i l'actualitza amb 1 clic. | Genera la TOC automàtica però no sap activar els hipervincles de navegació ràpida. | Escriu l'índex teclejant el text i els números de pàgina manualment sense utilitzar estils de títol. |
+| **Gestió de Seccions i Estils de Pàgina** | Configura seccions amb portada neta, índex en romans, cos amb reinici a pàgina 1 i pàgines apaïsades sense barrejar capçaleres. | Aconsegueix numerar pàgines però no sap reiniciar la foliació a la pàgina 1 ni ocultar el número a la portada. | No sap utilitzar estils de pàgina i totes les pàgines del document tenen obligatòriament el mateix format. |
+| **Índexs Alfabètics i Documents Mestres** | Etiqueta termes per a índexs analítics de dues columnes i comprèn la gestió modular de documents mestres `.odm`. | Afegeix entrades a l'índex alfabètic però no sap com filtrar-les o modificar-les posteriorment. | Desconeix la funció d'un índex alfabètic o d'una taula de figures en manuals extensos. |

@@ -114,3 +114,91 @@ auth required pam_faillock.so preauth silent deny=5 unlock_time=900
 auth [default=die] pam_faillock.so authfail deny=5 unlock_time=900
 ```
 Això bloqueja l'usuari durant **900 segons (15 minuts)** després de 5 intents d'autenticació fallits per SSH o consola local.
+
+---
+
+## 🎨 Infografia Tècnica: Entropia de Contrasenyes i Força Bruta
+
+<div style="text-align: center; margin: 25px 0;">
+<svg viewBox="0 0 840 260" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg" style="max-width: 840px; border-radius: 16px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); font-family: system-ui, sans-serif;">
+  <defs>
+    <linearGradient id="bgEnt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1e38" />
+    </linearGradient>
+    <linearGradient id="cardWeak" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <linearGradient id="cardMid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="cardStrong" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="840" height="260" rx="16" fill="url(#bgEnt)" />
+  <text x="420" y="32" text-anchor="middle" fill="#f8fafc" font-size="18" font-weight="bold" letter-spacing="1">🔑 ENTROPIA I RESISTÈNCIA DAVANT FORÇA BRUTA</text>
+  <text x="420" y="52" text-anchor="middle" fill="#94a3b8" font-size="12">Fórmula: E = L · log₂(R) bits — Per què la longitud supera la complexitat artificial</text>
+
+  <!-- Card 1: Dèbil -->
+  <g transform="translate(30, 75)">
+    <rect width="240" height="160" rx="12" fill="url(#cardWeak)" fill-opacity="0.18" stroke="#ef4444" stroke-width="2" />
+    <text x="120" y="35" text-anchor="middle" font-size="22">⚠️</text>
+    <text x="120" y="62" text-anchor="middle" fill="#fca5a5" font-size="15" font-weight="bold">DÈBIL COMÚ</text>
+    <rect x="25" y="75" width="190" height="26" rx="4" fill="#1e293b" />
+    <text x="120" y="93" text-anchor="middle" fill="#ef4444" font-family="monospace" font-size="13" font-weight="bold">admin123</text>
+    <text x="120" y="120" text-anchor="middle" fill="#e2e8f0" font-size="12">L = 8 caràcters</text>
+    <text x="120" y="136" text-anchor="middle" fill="#ef4444" font-size="12" font-weight="bold">E ≈ 47 bits (Instantani)</text>
+    <text x="120" y="152" text-anchor="middle" fill="#94a3b8" font-size="10">Craqueig en &lt; 1 segon</text>
+  </g>
+
+  <!-- Card 2: Complexa Curta -->
+  <g transform="translate(300, 75)">
+    <rect width="240" height="160" rx="12" fill="url(#cardMid)" fill-opacity="0.18" stroke="#f59e0b" stroke-width="2" />
+    <text x="120" y="35" text-anchor="middle" font-size="22">🔤</text>
+    <text x="120" y="62" text-anchor="middle" fill="#fde68a" font-size="15" font-weight="bold">COMPLEXA CURTA</text>
+    <rect x="25" y="75" width="190" height="26" rx="4" fill="#1e293b" />
+    <text x="120" y="93" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="bold">P@ssw0rd!#</text>
+    <text x="120" y="120" text-anchor="middle" fill="#e2e8f0" font-size="12">L = 10 caràcters</text>
+    <text x="120" y="136" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="bold">E ≈ 65 bits (Vulnerable)</text>
+    <text x="120" y="152" text-anchor="middle" fill="#94a3b8" font-size="10">Craqueig en hores (GPU RT)</text>
+  </g>
+
+  <!-- Card 3: Passphrase Llarga -->
+  <g transform="translate(570, 75)">
+    <rect width="240" height="160" rx="12" fill="url(#cardStrong)" fill-opacity="0.18" stroke="#10b981" stroke-width="2" />
+    <text x="120" y="35" text-anchor="middle" font-size="22">🛡️</text>
+    <text x="120" y="62" text-anchor="middle" fill="#a7f3d0" font-size="15" font-weight="bold">PASSPHRASE LLARGA</text>
+    <rect x="15" y="75" width="210" height="26" rx="4" fill="#1e293b" />
+    <text x="120" y="93" text-anchor="middle" fill="#34d399" font-family="monospace" font-size="11" font-weight="bold">cavall-taronja-piano</text>
+    <text x="120" y="120" text-anchor="middle" fill="#e2e8f0" font-size="12">L = 20 caràcters</text>
+    <text x="120" y="136" text-anchor="middle" fill="#34d399" font-size="12" font-weight="bold">E ≈ 130 bits (Infranquejable)</text>
+    <text x="120" y="152" text-anchor="middle" fill="#94a3b8" font-size="10">Milions d'anys per a trencar</text>
+  </g>
+</svg>
+</div>
+
+---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments de Criptografia i Credencials
+1. **Càlcul d'Entropia:**
+   - Calcula l'entropia en bits d'un PIN bancari de 4 dígits ($L=4, R=10$).
+   - Calcula l'entropia d'una contrasenya de 10 caràcters amb lletres majúscules, minúscules, números i símbols ($L=10, R=94$).
+   - Quina de les dues ofereix una barrera matemàtica superior davant de força bruta?
+2. **2FA Autèntic vs Fals 2FA:** Explica per què un sistema que et demana la contrasenya del compte i a continuació et demana el teu PIN de targeta NO està implementant autenticació de doble factor (2FA). Què faria falta afegir-hi?
+3. **El perill del reciclatge de claus:** Per què un usuari que utilitza la mateixa contrasenya per a la botiga de sabates i per al correu de la feina posa en perill tota la infraestructura de la seua empresa?
+
+### Bloc B: Repte Pràctic de Taller — Bastionat de PAM en Ubuntu
+1. Configura a la teua màquina virtual de taller el fitxer `/etc/security/pwquality.conf` perquè rebutge qualsevol clau menor de 14 caràcters.
+2. Comprova amb el comandament `passwd alumne` que en introduir claus senzilles com `123456` o `password` el sistema genera un error explicatiu i impedeix el canvi.
+3. Configura `pam_faillock` a `/etc/pam.d/common-auth` amb límit de 3 intents i verifica que després de 3 intents erronis per consola el compte queda congelat.
+
+### Bloc C: Llista d'Autoavaluació de Qualitat
+- [ ] Sé calcular l'entropia matemàtica d'una clau segons el conjunt de caràcters.
+- [ ] Entenc el funcionament dels tokens temporals TOTP i el secret compartit.
+- [ ] Sé configurar directives de contrasenyes tant en Windows GPO com en Linux PAM.

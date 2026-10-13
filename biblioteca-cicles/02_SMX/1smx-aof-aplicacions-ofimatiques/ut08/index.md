@@ -14,63 +14,137 @@ next_label: "8.1 Tema 3. TAULES ACCESS ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
+## 🗄️ Disseny Físic de Taules, Tipus de Dades i Integritat
 
-- [**8.1 Tema 3. TAULES ACCESS**](./ut0801.md)
-- [**8.2 Tema 3. Integridad Referencial**](./ut0802.md)
-- [**8.3 DEFINICION Mascara entrada_Regla validación**](./ut0803.md)
-- [**8.4 Ejemplos reglas de validación**](./ut0804.md)
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Arquitectura de Taules Relacionals: Tipus de Dades, Validació i Relacions</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Parametrització de camps, màscares d'entrada, regles de validació i integritat referencial amb actualització/esborrat en cascada</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU8TipGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU8PropGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU8ValGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU8IntGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#be185d" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Tipus de Dades -->
+    <rect x="20" y="20" width="190" height="255" rx="8" fill="url(#aofU8TipGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">💾 TIPUS DE DADES</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Motors Access / Base</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Text Curt (VARCHAR):</tspan></text>
+    <text x="42" y="93" fill="#cbd5e1" font-size="8">- Fins a 255 caràcters</text>
+    <text x="32" y="110" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Numèric (INTEGER/DECIMAL):</tspan></text>
+    <text x="42" y="123" fill="#cbd5e1" font-size="8">- Byte (0-255) / Enter (16-bit)</text>
+    <text x="42" y="135" fill="#cbd5e1" font-size="8">- Enter Llarg (32-bit per a FK)</text>
+    <text x="32" y="152" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Autonumèric (IDENTITY):</tspan></text>
+    <text x="42" y="165" fill="#cbd5e1" font-size="8">- Generador seqüencial de PK</text>
+    <text x="32" y="182" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Data/Hora i Moneda:</tspan></text>
+    <text x="42" y="195" fill="#cbd5e1" font-size="8">- Precisió de 8 bytes / 4 decimals</text>
+    <rect x="35" y="210" width="160" height="26" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="115" y="227" fill="#fbbf24" font-size="8" font-weight="bold" text-anchor="middle">Sí/No: Booleà (1 bit)</text>
+    <text x="115" y="258" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Eficiència en Disc</text>
+
+    <!-- Bloc 2: Propietats de Camp -->
+    <rect x="230" y="20" width="190" height="255" rx="8" fill="url(#aofU8PropGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="325" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">⚙️ PROPIETATS DE CAMP</text>
+    <text x="325" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Control de Domini</text>
+    <line x1="240" y1="63" x2="410" y2="63" stroke="#334155"/>
+    <text x="242" y="80" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Mida del Camp:</tspan></text>
+    <text x="252" y="93" fill="#cbd5e1" font-size="8">- Ajustar caràcters (Ex: DNI = 9)</text>
+    <text x="242" y="110" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Requerit (NOT NULL):</tspan></text>
+    <text x="252" y="123" fill="#cbd5e1" font-size="8">- Prohibeix valors buits</text>
+    <text x="242" y="140" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Permetre Longitud Zero:</tspan></text>
+    <text x="252" y="153" fill="#cbd5e1" font-size="8">- Distingir cadena buida de nul</text>
+    <text x="242" y="170" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">Indexat:</tspan></text>
+    <text x="252" y="183" fill="#cbd5e1" font-size="8">- Sí (Sense duplicats = UNIQUE)</text>
+    <text x="252" y="195" fill="#cbd5e1" font-size="8">- Sí (Amb duplicats = B-Tree)</text>
+    <rect x="245" y="210" width="160" height="26" rx="4" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="325" y="227" fill="#34d399" font-size="8" font-weight="bold" text-anchor="middle">Valor Predeterminat (DEFAULT)</text>
+    <text x="325" y="258" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Optimització de Consultes</text>
+
+    <!-- Bloc 3: Màscares i Regles -->
+    <rect x="440" y="20" width="190" height="255" rx="8" fill="url(#aofU8ValGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="535" y="42" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">🛡️ MÀSCARES I REGLES</text>
+    <text x="535" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Filtres d'Entrada</text>
+    <line x1="450" y1="63" x2="620" y2="63" stroke="#334155"/>
+    <text x="452" y="80" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Màscara d'Entrada:</tspan></text>
+    <text x="462" y="93" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">0</tspan>: Dígit obligatori (0-9)</text>
+    <text x="462" y="105" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">9</tspan>: Dígit opcional</text>
+    <text x="462" y="117" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">L</tspan>: Lletra obligatòria (A-Z)</text>
+    <text x="462" y="129" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">&gt;</tspan>: Converteix a MAJÚSCULES</text>
+    <text x="462" y="141" fill="#cbd5e1" font-size="8">- DNI: <tspan fill="#fbbf24">00000000-&gt;L</tspan></text>
+    <text x="452" y="158" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Regla de Validació:</tspan></text>
+    <text x="462" y="171" fill="#cbd5e1" font-size="8">- Condició lògica booleana</text>
+    <text x="462" y="183" fill="#cbd5e1" font-size="8">- Preu: <tspan fill="#fbbf24">&gt; 0 I &lt;= 3000</tspan></text>
+    <text x="462" y="195" fill="#cbd5e1" font-size="8">- Data: <tspan fill="#fbbf24">&lt;= Data()</tspan></text>
+    <rect x="455" y="210" width="160" height="26" rx="4" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="535" y="227" fill="#f8fafc" font-size="8" font-weight="bold" text-anchor="middle">Text de Validació d'Error</text>
+    <text x="535" y="258" fill="#fbbf24" font-size="8.5" text-anchor="middle" font-weight="bold">Qualitat i Fiabilitat</text>
+
+    <!-- Bloc 4: Integritat Referencial -->
+    <rect x="650" y="20" width="190" height="255" rx="8" fill="url(#aofU8IntGrad)" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="745" y="42" fill="#f472b6" font-size="10.5" font-weight="bold" text-anchor="middle">🔒 INTEGRITAT REFERENCIAL</text>
+    <text x="745" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Protecció de Relacions</text>
+    <line x1="660" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="662" y="80" fill="#f472b6" font-size="8.5">• <tspan font-weight="bold">Exigir Integritat:</tspan></text>
+    <text x="672" y="93" fill="#cbd5e1" font-size="8">- Impedeix registres orfes a la FK</text>
+    <text x="672" y="105" fill="#cbd5e1" font-size="8">- Mateix tipus de dades a PK i FK</text>
+    <text x="662" y="122" fill="#f472b6" font-size="8.5">• <tspan font-weight="bold">Actualització en Cascada:</tspan></text>
+    <text x="672" y="135" fill="#cbd5e1" font-size="8">- Si canvia la PK, s'actualitzen</text>
+    <text x="672" y="147" fill="#cbd5e1" font-size="8">  automàticament totes les FKs.</text>
+    <text x="662" y="164" fill="#f472b6" font-size="8.5">• <tspan font-weight="bold">Eliminació en Cascada:</tspan></text>
+    <text x="672" y="177" fill="#cbd5e1" font-size="8">- Si s'esborra la fila pare,</text>
+    <text x="672" y="189" fill="#f87171" font-size="8">  s'esborren els fills vinculats.</text>
+    <rect x="665" y="210" width="160" height="26" rx="4" fill="#0f172a" stroke="#f472b6" stroke-width="1"/>
+    <text x="745" y="227" fill="#f472b6" font-size="8" font-weight="bold" text-anchor="middle">Finestra de Relacions</text>
+    <text x="745" y="258" fill="#f472b6" font-size="8.5" text-anchor="middle" font-weight="bold">Consistència Relacional</text>
+  </svg>
+</div>
+
+### 📋 Taula de Propietats, Màscares i Regles de Validació en SGBD d'Escriptori
+
+| Categoria | Propietat / Paràmetre | Valors / Caràcters Clau | Comportament Tècnic | Exemple Microinformàtic |
+| :--- | :--- | :--- | :--- | :--- |
+| **Tipus Numèrics** | Mida del Camp Numèric | Byte (1 B), Enter (2 B), Enter Llarg (4 B), Simple, Doble | Determina el rang i la compatibilitat amb claus autonumèriques. | `id_client_fk` en taula filla ha de ser **Enter Llarg** (4 bytes). |
+| **Màscara de Dades** | Caràcters de Màscara | `0` (dígit obligat.), `9` (dígit opc.), `L` (lletra oblig.), `?` (lletra opc.), `>` (majúsc.) | Força un patró de tecleig estricte en temps real durant l'entrada de dades. | `>LL-0000-LL` (Matrícula antiga) o `00000000->L` (DNI). |
+| **Regla de Validació** | Condició Lògica de Camp | Operadors `<`, `>`, `<=`, `>=`, `<>`, `ENTRE ... I ...`, `EN(...)` | Expressió booleana avaluada en guardar el camp; rebutja l'entrada si és falsa. | `>0 I <= 1000` (Preu de mà d'obra) o `>= Data()` (Termini d'entrega). |
+| **Integritat Referencial** | Restriccions de Clau Forana | Exigir Integritat, Actualitzar en Cascada, Eliminar en Cascada | Garanteix que no existeixin fills sense pare i propaga canvis d'identificador. | Esborrar una factura elimina en cascada les seues línies de detall associades. |
 
 ---
 
-# 8.1 Tema 3. TAULES ACCESS
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-> **🔗 Recurs Web: Tamaño campos en access**
-> [**🌐 Obrir recurs extern (https://support.microsoft.com/es-es/office/configurar-el-tama%C3%B1o-de-campo-ba65e5a7-2e6f-4737-8e72-36b93f966a33) ↗️**](https://support.microsoft.com/es-es/office/configurar-el-tama%C3%B1o-de-campo-ba65e5a7-2e6f-4737-8e72-36b93f966a33)
+- [**8.1 Disseny de Taules i Propietats de Camp en SGBD**](./ut0801.md)
+- [**8.2 Integritat Referencial i Finestra de Relacions**](./ut0802.md)
+- [**8.3 Màscares d'Entrada i Formats de Camp**](./ut0803.md)
+- [**8.4 Regles de Validació i Missatges d'Error**](./ut0804.md)
 
-> **🔗 Recurs Web: Reglas de validación**
-> [**🌐 Obrir recurs extern (https://support.microsoft.com/es-es/office/crear-una-regla-de-validaci%C3%B3n-para-validar-los-datos-de-un-campo-b91c6b15-bcd3-42c1-90bf-e3a0272e988d) ↗️**](https://support.microsoft.com/es-es/office/crear-una-regla-de-validaci%C3%B3n-para-validar-los-datos-de-un-campo-b91c6b15-bcd3-42c1-90bf-e3a0272e988d)
+---
 
-> **🔗 Recurs Web: Video 1. Entorn de treball ACCESS 2016**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=M0zLry1XeYE) ↗️**](https://www.youtube.com/watch?v=M0zLry1XeYE)
->
-> Este vídeo explica l'entorn de treball de ACCESS 2016. Es curtet, el podeu vore complet.
+# 8.1 Disseny de Taules i Propietats de Camp en SGBD
 
-> **🔗 Recurs Web: Video 2. Crear una base de datos en ACCESS 2016**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=CwWK5n1R3VQ) ↗️**](https://www.youtube.com/watch?v=CwWK5n1R3VQ)
->
-> En este vídeo, voreu com crear una base de datos en ACCESS 2016
+> **📺 Recursos Audiovisuals de Referència**
+> - [**Creació i Disseny de Taules en SGBD Relacionals ↗️**](https://www.youtube.com/watch?v=TyV3S4Y4yWU): Vista Disseny, definició de tipus de dades i assignació de Clau Primària.
+> - [**Format de Camps i Màscares d'Entrada ↗️**](https://www.aulaclic.es/access-2016/secuencias/p05_formato_mascara_yt.htm): Configuració de filtres per a NIF, telèfons i codis postals.
+> - [**Regles de Validació i Integritat de Domini ↗️**](https://www.youtube.com/watch?v=z9Oe-eJL5hY): Expressions booleanes per a impedir entrades errònies.
+> - [**Integritat Referencial i Relacions entre Taules ↗️**](https://www.aulaclic.es/access-2016/secuencias/p06_relaciones_yt.htm): Vincular taules 1:N i activar actualització/eliminació en cascada.
 
-> **🔗 Recurs Web: Video 3. Crear taules en ACCESS 2016**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=TyV3S4Y4yWU) ↗️**](https://www.youtube.com/watch?v=TyV3S4Y4yWU)
->
-> En este video voreu com crear taules en ACCESS 2016
-
-> **🔗 Recurs Web: Video 4.1. Vista Hoja de Datos en ACCESS 2016**
-> [**🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p04_hoja_datos_yt.htm) ↗️**](https://www.aulaclic.es/access-2016/secuencias/p04_hoja_datos_yt.htm)
->
-> En este video voreu la Vista Hoja de datos en Access 2016
-
-> **🔗 Recurs Web: Video 4.2. Buscar i reemplaçar**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=4ntmg-d_5ww) ↗️**](https://www.youtube.com/watch?v=4ntmg-d_5ww)
-
-> **🔗 Recurs Web: Video 5.1. Format i màscares en ACCESS 2016**
-> [**🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p05_formato_mascara_yt.htm) ↗️**](https://www.aulaclic.es/access-2016/secuencias/p05_formato_mascara_yt.htm)
->
-> En este vídeo voreu com aplicar formats i màscares
-
-> **🔗 Recurs Web: Video 5.2. Validació de dades**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=z9Oe-eJL5hY) ↗️**](https://www.youtube.com/watch?v=z9Oe-eJL5hY)
-
-> **🔗 Recurs Web: Video 5.3. Indices (OPCIONAL)**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=tgdHRNiLQUw) ↗️**](https://www.youtube.com/watch?v=tgdHRNiLQUw)
->
-> Video de com crear index. Es opcional, doncs no anem a vore indexs.
-
-> **🔗 Recurs Web: Video 6. Relacions en ACCESS 2016**
-> [**🌐 Obrir recurs extern (https://www.aulaclic.es/access-2016/secuencias/p06_relaciones_yt.htm) ↗️**](https://www.aulaclic.es/access-2016/secuencias/p06_relaciones_yt.htm)
->
-> En este vídeo voreu com crear relacions
 
 ---
 
@@ -801,3 +875,106 @@ Ejemplos de validación de datos Regla de validación Descripción <100 Debe ser
 <= Fecha () Debe ser la fecha de hoy o antes. “Negocio” o “placer” u “otro” Debe ser “Negocios” o “Placer” u “Otro”. Me gusta “??” Debe tener dos personajes. Me gusta “####” Debe tener cuatro números.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 🎯 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Activitat 1: Càlcul de Petjada d'Emmagatzematge per Fila i Dimensionament de Taules
+En el disseny físic d'una base de dades per a un centre de distribució tecnològica, un tècnic novell ha definit tots els camps de text amb la mida per defecte de 255 caràcters i tots els valors numèrics com a nombres de coma flotant de doble precisió (Doble, 8 bytes).
+Analitzeu l'impacte d'aquesta decisió sobre la taula `ARTICLES_INFORMATICA`, dissenyada amb les següents especificacions reals:
+- `Codi_Article`: Text de 10 caràcters alfanumèrics (PK).
+- `Nom_Article`: Text de 45 caràcters.
+- `Familia`: Text de 20 caràcters.
+- `Estoc_Unitats`: Enter que mai supera les 30.000 unitats (Enter curt, 2 bytes vs Doble, 8 bytes).
+- `Estoc_Minim`: Enter (2 bytes vs Doble, 8 bytes).
+- `Preu_Cost`: Moneda / Decimal precisió fixa (4 bytes vs Doble, 8 bytes).
+- `Preu_Venda`: Moneda / Decimal precisió fixa (4 bytes vs Doble, 8 bytes).
+- `Descatalogat`: Sí/No (Booleà, 1 bit / 1 byte físic vs Text de 255 caràcters).
+
+La base de dades conté $N = 150.000\text{ articles}$.
+
+1. **Càlcul de mida per registre sense optimitzar:** Si cada camp de text s'emmagatzema reservant l'espai màxim assignat o la capçalera de pàgina assigna per defecte la mida teòrica:
+   - Text per defecte (4 camps $\times 255\text{ bytes} = 1.020\text{ bytes}$).
+   - Nombres en doble precisió (4 camps $\times 8\text{ bytes} = 32\text{ bytes}$).
+   - Descatalogat com a text (255 bytes).
+   - Mida total per registre sense optimitzar: $S_{\text{brut}} = 1.020 + 32 + 255 = 1.307\text{ bytes}$.
+   - Calculeu el volum total de la taula:
+   $$V_{\text{brut}} = N \times S_{\text{brut}}$$
+2. **Càlcul de mida per registre optimitzat:** Calculeu la mida exacta ajustant les propietats dels camps:
+   - $S_{\text{opt}} = 10 + 45 + 20 + 2 + 2 + 4 + 4 + 1 = 88\text{ bytes}$.
+   - Calculeu el volum total de la taula optimitzada:
+   $$V_{\text{opt}} = N \times S_{\text{opt}}$$
+3. **Anàlisi d'Eficiència en Memòria RAM i Disc:** Calculeu l'estalvi d'espai en megabytes ($1\text{ MB} = 1.024\text{ KB} = 1.048.576\text{ bytes}$) i justifiqueu per què reduir la mida de fila multiplica la velocitat de les consultes en augmentar el nombre de registres per pàgina de memòria cau (*Buffer Pool*).
+
+#### Activitat 2: Enginyeria de Màscares d'Entrada per a Formats Específics
+Dissenyeu les cadenes formals de màscara d'entrada per a SGBD (Access i LibreOffice Base) per als següents camps d'un sistema tècnic, utilitzant els caràcters de control estàndard (`0`: dígit obligatori, `9`: dígit opcional, `L`: lletra majúscula/minúscula obligatòria, `?`: lletra opcional, `>`: converteix a majúscules, `<`: converteix a minúscules, `\`: caràcter d'escapament):
+1. **NIF/DNI espanyol:** 8 dígits obligatoris, guió separador literal i lletra final obligatòria convertida automàticament a majúscula.
+2. **Número de telèfon mòbil nacional:** Format amb prefix opcional de país entre parèntesis `(+34)` seguit d'un espai, 3 dígits inicials, un guió i 6 dígits separats de dos en dos.
+3. **Codi Postal d'Espanya:** Exactament 5 dígits obligatoris (restringint que no puguin ser lletres).
+4. **Matrícula de vehicle (Format Europeu vigent):** 4 dígits obligatoris seguits d'un espai i 3 lletres en majúscula obligatòries.
+5. **Adreça MAC de targeta de xarxa:** 12 caràcters hexadecimals agrupats de dos en dos separats per dos punts, forçats a majúscules.
+
+#### Activitat 3: Formulació de Regles de Validació Complexes i Textos d'Error
+En una taula de reparacions microinformàtiques anomenada `REPARACIONS_TALLER`, escriviu la sintaxi exacta de la **Regla de Validació** i el corresponent **Text de Validació** per als següents camps:
+1. **Camp `Hores_Facturades`:** El valor ha de ser estrictament superior a 0 i no pot superar un màxim de 40 hores per a una mateixa actuació.
+   - *Regla de validació:* `> 0 I <= 40`
+   - *Text de validació d'error:* *"El nombre d'hores de feina ha d'estar comprés entre 0,5 i 40 hores."*
+2. **Camp `Estat_Reparacio`:** Només s'admeten els valors: `'Pendent'`, `'Diagnòstic'`, `'Peces'`, `'Reparat'` o `'Entregat'`.
+3. **Camp `Descompte_Percentual`:** El percentatge aplicat ha d'estar entre el 0% i el 25% (valors numèrics decimals entre `0` i `0.25`).
+4. **Regla a nivell de registre (comparativa de dates):** La `Data_Lliurament` ha de ser igual o posterior a la `Data_Entrada` (`>= [Data_Entrada]`). Què passaria si intentàrem posar aquesta expressió a la regla de validació d'un sol camp en lloc de la regla de la taula completa?
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació Guiada de Taules amb Tipus Ajustats i Màscares en LibreOffice Base / Access
+1. Obriu el vostre programari de base de dades (LibreOffice Base o Microsoft Access).
+2. Creeu una nova taula en **Vista Disseny** anomenada `CLIENTS_TALLER` amb els següents camps:
+   - `id_client`: Autonumèric / Enter, Clau Primària.
+   - `nif`: Text, Mida: 9, Requerit: Sí, Indexat: Sí (Sense duplicats), Màscara d'entrada: `00000000->L;;_`.
+   - `nom`: Text, Mida: 35, Requerit: Sí.
+   - `cognoms`: Text, Mida: 45, Requerit: Sí.
+   - `telefon`: Text, Mida: 15, Màscara d'entrada: `\+34\ 000\ 000\ 000;;_`.
+   - `data_registre`: Data/Hora, Valor per defecte: `=Data()` o `CURRENT_DATE`.
+3. Creeu una segona taula anomenada `EQUIPS_CLIENT`:
+   - `num_serie`: Text, Mida: 30, Clau Primària.
+   - `id_client_fk`: Numèric (Enter llarg en Access o INTEGER en Base), Requerit: Sí.
+   - `marca`: Text, Mida: 25.
+   - `model`: Text, Mida: 35.
+   - `cost_pressupost`: Moneda / Decimal(7,2), Regla de validació: `>= 0`.
+4. Guardeu ambdues taules i passeu a la vista de full de dades per comprovar el comportament de les màscares en introduir un nou registre.
+
+#### Repte 2: Configuració de la Finestra de Relacions i Integritat Referencial
+1. Aneu al menú **Eines > Relacions** (LibreOffice Base) o pestanya **Eines de base de dades > Relacions** (Access).
+2. Afegiu les dues taules creades: `CLIENTS_TALLER` i `EQUIPS_CLIENT`.
+3. Arrossegueu el camp `id_client` (PK) de `CLIENTS_TALLER` damunt del camp `id_client_fk` (FK) de `EQUIPS_CLIENT`.
+4. A la finestra emergent de configuració de relació:
+   - Activeu la casella **Exigir integritat referencial**.
+   - Activeu **Actualitzar en cascada els camps relacionats**.
+   - Activeu **Eliminar en cascada els registres relacionats**.
+5. Observeu com s'afegeixen els símbols `1` i `∞` (infinit) als dos extrems de la línia de relació, certificant que és una relació $1:N$ forçada per integritat referencial.
+
+#### Repte 3: Bateria de Proves de Caixa Negra i Verificació de Restriccions
+1. **Prova de Màscara d'Entrada:**
+   - Intenteu escriure lletres en els primers 8 caràcters del camp NIF. Comproveu que el cursor no avança i impedeix l'escriptura.
+   - Introduïu la lletra final en minúscula `a`. Comproveu que el sistema la converteix automàticament a `A`.
+2. **Prova de Regla de Validació:**
+   - En el camp `cost_pressupost`, introduïu el valor `-25`.
+   - Premeu la tecla de tabulació per intentar canviar de camp.
+   - Verifiqueu que apareix la finestra emergent amb el text de validació d'error personalitzat i s'impedeix guardar el registre.
+3. **Prova d'Integritat Referencial:**
+   - Inseriu un client amb `id_client = 1`.
+   - Inseriu dos equips assignats al client 1.
+   - Esborreu el client 1 de la taula `CLIENTS_TALLER`.
+   - Aneu a la taula `EQUIPS_CLIENT` i comproveu com els dos equips han sigut eliminats automàticament pel mecanisme d'eliminació en cascada.
+
+---
+
+### 📋 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Dimensionament Físic i Tipus de Dades** | Calcula amb precisió matemàtica la mida de les taules i tria els tipus numèrics i de text més òptims per a reduir l'ús de memòria i disc. | Tria els tipus de dades adequats i calcula el volum de dades amb xicotetes desviacions en unitats o capçaleres. | Defineix tipus correctes per a cada camp però abusa de tipus per defecte (text de 255) sense optimitzar la mida. | Assigna tipus de dades incoherents (per exemple, text per a dates o dobles per a claus autonumèriques). |
+| **Màscares d'Entrada i Regles de Validació** | Construeix màscares d'entrada complexes amb caràcters de control i regles de validació lògiques impecables amb missatges d'error clars. | Dissenya màscares i regles funcionals per a la majoria de patrons, amb xicotets detalls en caràcters opcionals o d'escapament. | Configura màscares senzilles però té dificultats amb la sintaxi booleana de les regles de validació. | Incapaç de crear una màscara d'entrada o escriure una expressió lògica de validació. |
+| **Finestra de Relacions i Integritat Referencial** | Configura relacions 1:N a la interfície gràfica verificant el tipus de dades de la FK, activant la integritat referencial i demostrant la cascada. | Estableix relacions amb integritat referencial correctament amb ajuda mínima en la coincidència de tipus de camp. | Estableix la relació entre taules però comet l'errada de tipus discordant entre PK i FK (per exemple, autonumèric vs text). | No sap utilitzar la finestra de relacions ni activar les restriccions d'integritat referencial. |

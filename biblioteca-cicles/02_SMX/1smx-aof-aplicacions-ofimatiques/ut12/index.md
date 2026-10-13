@@ -14,35 +14,132 @@ next_label: "12.1 Tema 7. MACROS ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
-## 📑 Índex d'Apartats d'aquesta Unitat
+## ⚡ Automatització, Esdeveniments i Macros
 
-- [**12.1 Tema 7. MACROS**](./ut1201.md)
-- [**12.2 Abrir Form sin Abrir Access**](./ut1202.md)
+<div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; padding: 20px; margin: 25px 0; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); border: 1px solid #334155;">
+  <div style="text-align: center; margin-bottom: 15px;">
+    <span style="background: #38bdf8; color: #0f172a; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 9999px;">Infografia Tècnica</span>
+    <h3 style="color: #f8fafc; margin: 10px 0 5px 0; font-size: 1.25rem;">Arquitectura d'Esdeveniments i Automatització mitjançant Macros</h3>
+    <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;">Disparadors en temps d'execució, control de flux condicional, accions de navegació i arrencada amb AutoExec</p>
+  </div>
+  <svg viewBox="0 0 860 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="display: block; font-family: system-ui, -apple-system, sans-serif;">
+    <defs>
+      <linearGradient id="aofU12EvtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU12ActGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#047857" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU12CndGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#b45309" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="aofU12SecGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#be185d" stop-opacity="0.1"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Bloc 1: Model d'Esdeveniments -->
+    <rect x="20" y="20" width="190" height="255" rx="8" fill="url(#aofU12EvtGrad)" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="115" y="42" fill="#38bdf8" font-size="10.5" font-weight="bold" text-anchor="middle">⚡ ESDEVENIMENTS (TRIGGERS)</text>
+    <text x="115" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Disparadors d'Interfície</text>
+    <line x1="30" y1="63" x2="200" y2="63" stroke="#334155"/>
+    <text x="32" y="80" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Al fer clic (OnClick):</tspan></text>
+    <text x="42" y="93" fill="#cbd5e1" font-size="8">- Botons de comandament</text>
+    <text x="32" y="110" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Abans d'actualitzar (BeforeUpdate):</tspan></text>
+    <text x="42" y="123" fill="#cbd5e1" font-size="8">- Validació abans de gravar</text>
+    <text x="42" y="135" fill="#f87171" font-size="8">- Admet cancel·lació (Cancel = True)</text>
+    <text x="32" y="152" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Al carregar (OnLoad):</tspan></text>
+    <text x="42" y="165" fill="#cbd5e1" font-size="8">- Inicialització del formulari</text>
+    <text x="32" y="182" fill="#38bdf8" font-size="8.5">• <tspan font-weight="bold">Al tancar (OnClose / Unload):</tspan></text>
+    <text x="42" y="195" fill="#cbd5e1" font-size="8">- Confirmació de sortida</text>
+    <rect x="35" y="210" width="160" height="26" rx="4" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="115" y="227" fill="#fbbf24" font-size="8" font-weight="bold" text-anchor="middle">Programació per Esdeveniments</text>
+    <text x="115" y="258" fill="#38bdf8" font-size="8.5" text-anchor="middle" font-weight="bold">Fil d'Execució Reactiu</text>
+
+    <!-- Bloc 2: Accions de Macro -->
+    <rect x="230" y="20" width="190" height="255" rx="8" fill="url(#aofU12ActGrad)" stroke="#34d399" stroke-width="1.5"/>
+    <text x="325" y="42" fill="#34d399" font-size="10.5" font-weight="bold" text-anchor="middle">🛠️ ACCIONS PRINCIPALS</text>
+    <text x="325" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Ordres Predefinides</text>
+    <line x1="240" y1="63" x2="410" y2="63" stroke="#334155"/>
+    <text x="242" y="80" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">ObrirFormulari / Informe:</tspan></text>
+    <text x="252" y="93" fill="#cbd5e1" font-size="8">- Obre objectes en mode diàleg</text>
+    <text x="242" y="110" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">ExecutarConsulta:</tspan></text>
+    <text x="252" y="123" fill="#cbd5e1" font-size="8">- Llança consultes d'acció</text>
+    <text x="242" y="140" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">AplicarFiltre (ApplyFilter):</tspan></text>
+    <text x="252" y="153" fill="#cbd5e1" font-size="8">- Filtra dades en pantalla</text>
+    <text x="242" y="170" fill="#34d399" font-size="8.5">• <tspan font-weight="bold">QuadreDeMissatge (MsgBox):</tspan></text>
+    <text x="252" y="183" fill="#cbd5e1" font-size="8">- Alertes i confirmacions</text>
+    <rect x="245" y="205" width="160" height="32" rx="4" fill="#0f172a" stroke="#34d399" stroke-width="1"/>
+    <text x="325" y="220" fill="#34d399" font-size="8" font-weight="bold" text-anchor="middle">AnarARegistre (GoToRecord)</text>
+    <text x="325" y="258" fill="#34d399" font-size="8.5" text-anchor="middle" font-weight="bold">Sense Escriure Codi</text>
+
+    <!-- Bloc 3: Lògica Condicional -->
+    <rect x="440" y="20" width="190" height="255" rx="8" fill="url(#aofU12CndGrad)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="535" y="42" fill="#fbbf24" font-size="10.5" font-weight="bold" text-anchor="middle">🔀 CONTROL DE FLUX</text>
+    <text x="535" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Blocs Condicionals</text>
+    <line x1="450" y1="63" x2="620" y2="63" stroke="#334155"/>
+    <text x="452" y="80" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Estructura Si...Llavors:</tspan></text>
+    <text x="462" y="93" fill="#cbd5e1" font-size="8">- <tspan font-weight="bold">Si</tspan> [Preu] &lt;= 0 <tspan font-weight="bold">Llavors</tspan></text>
+    <text x="462" y="105" fill="#f87171" font-size="8">  • QuadreDeMissatge "Preu invàlid"</text>
+    <text x="462" y="117" fill="#f87171" font-size="8">  • Cancel·larEsdeveniment</text>
+    <text x="452" y="134" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">Sino (Else):</tspan></text>
+    <text x="462" y="147" fill="#cbd5e1" font-size="8">- Camí alternatiu d'execució</text>
+    <text x="452" y="164" fill="#fbbf24" font-size="8.5">• <tspan font-weight="bold">AturarMacro (StopMacro):</tspan></text>
+    <text x="462" y="177" fill="#cbd5e1" font-size="8">- Interromp la seqüència</text>
+    <rect x="455" y="205" width="160" height="32" rx="4" fill="#0f172a" stroke="#fbbf24" stroke-width="1"/>
+    <text x="535" y="220" fill="#fbbf24" font-size="8" font-weight="bold" text-anchor="middle">Submacros Agrupades</text>
+    <text x="535" y="258" fill="#fbbf24" font-size="8.5" text-anchor="middle" font-weight="bold">Bifurcació Lògica</text>
+
+    <!-- Bloc 4: AutoExec i Seguretat -->
+    <rect x="650" y="20" width="190" height="255" rx="8" fill="url(#aofU12SecGrad)" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="745" y="42" fill="#f472b6" font-size="10.5" font-weight="bold" text-anchor="middle">🔒 AUTOEXEC I SEGURETAT</text>
+    <text x="745" y="56" fill="#94a3b8" font-size="8.5" text-anchor="middle">Arrencada de l'App</text>
+    <line x1="660" y1="63" x2="830" y2="63" stroke="#334155"/>
+    <text x="662" y="80" fill="#f472b6" font-size="8.5">• <tspan font-weight="bold">Macro AutoExec:</tspan></text>
+    <text x="672" y="93" fill="#cbd5e1" font-size="8">- S'executa en obrir el fitxer .accdb</text>
+    <text x="672" y="105" fill="#34d399" font-size="8">  Obre el Panell de Control Principal</text>
+    <text x="662" y="122" fill="#f472b6" font-size="8.5">• <tspan font-weight="bold">Centre de Confiança:</tspan></text>
+    <text x="672" y="135" fill="#cbd5e1" font-size="8">- Ubicacions de confiança</text>
+    <text x="672" y="147" fill="#cbd5e1" font-size="8">- Bloqueig per ciberseguretat</text>
+    <text x="662" y="164" fill="#f472b6" font-size="8.5">• <tspan font-weight="bold">Mode Autònom:</tspan></text>
+    <text x="672" y="177" fill="#cbd5e1" font-size="8">- Ocultació de cintes d'opcions</text>
+    <rect x="665" y="205" width="160" height="32" rx="4" fill="#0f172a" stroke="#f472b6" stroke-width="1"/>
+    <text x="745" y="220" fill="#f472b6" font-size="8" font-weight="bold" text-anchor="middle">Interfície d'Usuari Final</text>
+    <text x="745" y="258" fill="#f472b6" font-size="8.5" text-anchor="middle" font-weight="bold">Desplegament Professional</text>
+  </svg>
+</div>
+
+### 📋 Taula de Disparadors d'Esdeveniments, Accions de Macro i Equivalència en Codi
+
+| Esdeveniment / Disparador | Moment d'Activació | Acció de Macro Típica | Objectiu Operatiu | Equivalència VBA |
+| :--- | :--- | :--- | :--- | :--- |
+| **Al fer clic (`OnClick`)** | L'usuari prem un botó amb el ratolí | `ObrirFormulari` / `ObrirInforme` | Navegar a un altre mòdul o obrir diàleg de cerca. | `DoCmd.OpenForm "NomForm"` |
+| **Abans d'actualitzar (`BeforeUpdate`)** | Abans que el registre modificat es guarde al disc | `Si [Total] <= 0 Llavors Cancel·larEsdeveniment` | Impedeix gravar dades incoherents o negatives. | `Cancel = True` |
+| **Al carregar (`OnLoad`)** | Quan el formulari s'ha creat a la memòria | `MaximitzarFinestra` / `AplicarFiltre` | Prepara la interfície amb les dimensions i filtres requerits. | `DoCmd.Maximize` |
+| **Macro `AutoExec`** | A l'obertura del fitxer de base de dades | `ObrirFormulari "Menú Principal"` | Carrega l'aplicació corporativa i oculta eines de disseny. | Procediment `Sub Main()` |
+| **Al canviar de registre (`OnCurrent`)** | En moure el cursor d'un registre a un altre | `Reconsultar (Requery)` | Actualitza subformularis o sincronitza totals en pantalla. | `Me.Requery` |
 
 ---
 
-# 12.1 Tema 7. MACROS
+## 📑 Índex d'Apartats d'aquesta Unitat
 
-> **🔗 Recurs Web: Video 14.1. Crear una macro**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=2j3eNgV_t-Y) ↗️**](https://www.youtube.com/watch?v=2j3eNgV_t-Y)
+- [**12.1 Automatització amb Macros i Control d'Esdeveniments**](./ut1201.md)
+- [**12.2 Desplegament de Formularis en Mode Independent**](./ut1202.md)
 
-> **🔗 Recurs Web: Video 14.2. Macros condicionals**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=XL4UCkKIWB8) ↗️**](https://www.youtube.com/watch?v=XL4UCkKIWB8)
+---
 
-> **🔗 Recurs Web: Video 15.1. Personalitzar barra d'acces ràpid**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=ALD6QP6olgM) ↗️**](https://www.youtube.com/watch?v=ALD6QP6olgM)
+# 12.1 Automatització amb Macros i Control d'Esdeveniments
 
-> **🔗 Recurs Web: Video 15.2. Opcions de la base de datos**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=JwuCGzR_rXg) ↗️**](https://www.youtube.com/watch?v=JwuCGzR_rXg)
+> **📺 Recursos Audiovisuals de Referència**
+> - [**Creació de Macros Bàsiques en SGBD ↗️**](https://www.youtube.com/watch?v=2j3eNgV_t-Y): Dissenyador d'accions i catàleg d'ordres.
+> - [**Macros Condicionals i Validació ↗️**](https://www.youtube.com/watch?v=XL4UCkKIWB8): Blocs `Si...Llavors` per a regles de negoci.
+> - [**Panell de Control i Menú Principal ↗️**](https://www.youtube.com/watch?v=vRuR1OMhJG0): Creació de quadres de comandament corporatius.
+> - [**Opcions d'Inici i Seguretat de Macros ↗️**](https://www.youtube.com/watch?v=JwuCGzR_rXg): Macro AutoExec i protecció contra contingut no segur.
 
-> **🔗 Recurs Web: Video 15.3. El panel de control**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=vRuR1OMhJG0) ↗️**](https://www.youtube.com/watch?v=vRuR1OMhJG0)
-
-> **🔗 Recurs Web: Video 16. Analitzar taules**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=cXvIMW4eGbM) ↗️**](https://www.youtube.com/watch?v=cXvIMW4eGbM)
-
-> **🔗 Recurs Web: Video 17. Importar dades**
-> [**🌐 Obrir recurs extern (https://www.youtube.com/watch?v=3YwTd8VkUmY) ↗️**](https://www.youtube.com/watch?v=3YwTd8VkUmY)
 
 ---
 
@@ -318,30 +415,144 @@ http://www.aulaclic.es/access-2010/t_14_1.htm
 
 ---
 
-# 12.2 Abrir Form sin Abrir Access
+# 12.2 Desplegament de Formularis en Mode Independent i Ocultació d'Entorn
 
-FORM-UNLOAD
+En solucions corporatives microinformàtiques per a usuaris finals, és habitual voler presentar l'aplicació de gestió (per exemple, el menú del Taller SAT) com si fos una aplicació d'escriptori nativa independent, ocultant la finestra mare de Microsoft Access o LibreOffice.
 
-Option Explicit Const SW_HIDE = 0 Const SW_NORMAL = 1 Const SW_MINIMIZED = 2 Const SW_MAXIMIZED = 3
+Per aconseguir aquest comportament avançat mitjançant crides a la API de Windows (Win32), s'utilitzen procediments vinculats als esdeveniments d'obertura (`Form_Open`) i descàrrega (`Form_Unload`):
 
-```bash
-Private Declare Function ShowWindow Lib "user32" _
-```
+```vba
+' Declaració de crida a la llibreria d'interfície de Windows
+Option Explicit
 
-(ByVal hwnd As Long, ByVal nCmdShow As Long) As Long
+#If VBA7 Then
+    Private Declare PtrSafe Function ShowWindow Lib "user32" (ByVal hwnd As LongPtr, ByVal nCmdShow As Long) As Long
+#Else
+    Private Declare Function ShowWindow Lib "user32" (ByVal hwnd As Long, ByVal nCmdShow As Long) As Long
+#EndIf
 
-```bash
-Private Sub Form_Open(cancel As Integer)
-```
+Const SW_HIDE = 0
+Const SW_MAXIMIZED = 3
 
-Call ShowWindow(hWndAccessApp, SW_HIDE) DoCmd.OpenForm "MENU", windowmode:=acDialog End Sub
-
-```bash
-Private Sub form_Unload(cancel As Integer)
-```
-
-Dim IngRetCode As Long IngRetCode = ShowWindow(hWnAccessApp, SW_MAXIMIZED)
-
+' Esdeveniment al carregar el menú principal: oculta la finestra mare d'Access
+Private Sub Form_Open(Cancel As Integer)
+    Call ShowWindow(hWndAccessApp, SW_HIDE)
+    DoCmd.OpenForm "MENU_PRINCIPAL", WindowMode:=acDialog
 End Sub
 
+' Esdeveniment al tancar el menú: restaura la finestra del sistema abans de sortir
+Private Sub Form_Unload(Cancel As Integer)
+    Call ShowWindow(hWndAccessApp, SW_MAXIMIZED)
+End Sub
+```
+
+> **🔒 Nota de Seguretat:** Per mantenir la base de dades administrable, és imprescindible tindre sempre una drecera o combinació de tecles (com prémer la tecla `Shift` en arrencar) que impedisca l'execució automàtica de la macro `AutoExec`, permetent accedir a la vista de disseny de taules i consultes.
+
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### 🎯 Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Activitat 1: Cicle de Vida dels Esdeveniments i Validació d'Integritat
+En la captura de dades d'una reparació, el tècnic pot cometre errades greus (com no introduir el client o assignar un pressupost negatiu):
+1. **Diferència Crítica: `BeforeUpdate` vs `AfterUpdate`:**
+   - Expliqueu per què qualsevol validació de dades s'ha d'executar obligatòriament a l'esdeveniment **Abans d'actualitzar (*BeforeUpdate*)** i mai a **Després d'actualitzar (*AfterUpdate*)**.
+   - Com s'utilitza l'argument `Cancel·larEsdeveniment` (*Cancel = True*) per a mantindre el cursor al camp erroni i impedir que el registre s'escriga al disc?
+2. **Ordre Cronològic d'Esdeveniments:** Ordeneu cronològicament la seqüència d'esdeveniments que es disparen quan un usuari obri un formulari, fa clic en un quadre de text, escriu un número i tanca la finestra:
+   - `Al carregar (OnLoad)`
+   - `Al tancar (OnClose)`
+   - `Al rebre l'enfocament (OnGotFocus)`
+   - `Abans d'actualitzar (BeforeUpdate)`
+   - `Després d'actualitzar (AfterUpdate)`
+   - `Al fer clic (OnClick)`
+3. **Esdeveniment `OnCurrent`:** Per què l'esdeveniment `Al canviar de registre` (*OnCurrent*) és el lloc idoni per habilitar o inhabilitar un botó d'impressió si la reparació encara no està finalitzada?
+
+#### Activitat 2: Arquitectura de Seguretat i Ciberseguretat en Macros
+Les macros i el codi incrustat han estat històricament un vector d'atac de programari maliciós (*malware*):
+1. **Centre de Confiança (*Trust Center*):** Quina diferència hi ha entre:
+   - *Deshabilitar totes les macros sense notificació.*
+   - *Deshabilitar totes les macros amb notificació.*
+   - *Habilitar totes les macros (no recomanat per motius de seguretat).*
+2. **Ubicacions de Confiança:** Com es configura un directori de la xarxa corporativa (`C:\GestioTaller\` o recurs SMB) com a "Ubicació de confiança" per a permetre que les macros s'executin sense advertències de seguretat grogues?
+3. **Protecció contra Bloqueig (*Lockout*):** Si configurem una macro que inhabilita totes les barres d'eines i tanca l'aplicació en prémer la tecla Escape, com pot un administrador recuperar l'accés complet de disseny prement la tecla `Shift` en obrir el fitxer?
+
+#### Activitat 3: Control de Flux Condicional amb Macros
+Dissenyeu en pseudocodi la seqüència lògica d'una macro anomenada `mcr_Finalitzar_Ordre`:
+1. Comprova si el camp `Diagnòstic_Tecnic` és buit (`ÉsNul([Diagnòstic_Tecnic])`).
+   - Si és buit: Mostra un missatge d'avís (`QuadreDeMissatge`), situa el cursor al camp (`AnarAControl`) i atura la macro (`AturarMacro`).
+2. Comprova si el `Cost_Total` és igual a 0.
+   - Si és igual a 0: Demana confirmació a l'usuari amb un diàleg: *"L'import és 0 €. Voleu tancar l'ordre com a intervenció en garantia?"*.
+3. Si l'usuari accepta: Canvia l'estat a `'Tancat'` i obre l'informe d'entrega (`ObrirInforme "R_Albara_Garantia"`).
+
+---
+
+### 💻 Bloc B: Reptes Pràctics de Laboratori i Comandes / Taller
+
+#### Repte 1: Creació d'un Panell de Control i Macro d'Inici `AutoExec`
+1. Creeu un formulari anomenat `F_Menu_Principal` amb disseny net:
+   - Capçalera: Nom de l'empresa ("Servei Tècnic Informàtic - Gestió Global").
+   - Cos del formulari: 4 botons grans d'ordre:
+     - Botó 1: Obre el formulari `F_Clients_i_Equips`.
+     - Botó 2: Obre el formulari `F_Nova_Ordre_Reparacio`.
+     - Botó 3: Obre la vista prèvia de l'informe `R_Facturacio_Per_Tecnic`.
+     - Botó 4: Surt de l'aplicació (`SortirDeAccess`).
+2. Aneu a la pestanya **Crea > Macro**.
+3. Afegiu l'acció:
+   - Acció: `ObrirFormulari`
+   - Nom del formulari: `F_Menu_Principal`
+   - Mode de la finestra: `Normal` o `Diàleg`
+4. Deseu la macro amb el nom exacte **`AutoExec`**.
+5. Tanqueu la base de dades completament i torneu-la a obrir des de l'explorador de fitxers comprovant com el menú principal es carrega automàticament sense intervenció de l'usuari.
+
+#### Repte 2: Macro Condicional de Validació de Dates
+1. Obriu el formulari `F_Nova_Ordre_Reparacio` en Vista Disseny.
+2. Seleccioneu el camp `data_entrada` i aneu a la pestanya **Esdeveniments** de la finestra de propietats.
+3. A la propietat **Abans d'actualitzar**, feu clic al botó dels punts suspensius (...) i trieu **Generador de macros**.
+4. Construïu el bloc condicional:
+   ```text
+   Si [data_entrada] > Data() Llavors
+       QuadreDeMissatge
+           Missatge: "La data d'entrada no pot ser posterior a la data d'avui!"
+           Tipus: Advertència
+           Títol: "Error de Data"
+       Cancel·larEsdeveniment
+   Fi Si
+   ```
+5. Deseu la macro incrustada i comproveu el comportament en introduir una data futura.
+
+#### Repte 3: Script de Còpia de Seguretat Automàtica en PowerShell
+Per a complir els procediments d'administració de sistemes de l'SMX, automatitzeu la còpia de seguretat periòdica del fitxer de base de dades del taller:
+1. Creeu un script de PowerShell anomenat `backup_basedades.ps1`:
+   ```powershell
+   # Script de còpia de seguretat amb segell temporal
+   $Origen = "C:\GestioTaller\taller_microinformatica.accdb"
+   $DestiDir = "C:\Backups\BaseDades"
+   $Data = Get-Date -Format "yyyyMMdd_HHmmss"
+   $DestiFitxer = "$DestiDir\taller_backup_$Data.accdb"
+
+   if (-not (Test-Path $DestiDir)) {
+       New-Item -ItemType Directory -Path $DestiDir | Out-Null
+   }
+
+   # Verificació que el fitxer no estiga bloquejat per un usuari (.laccdb)
+   $LockFile = "C:\GestioTaller\taller_microinformatica.laccdb"
+   if (Test-Path $LockFile) {
+       Write-Warning "La base de dades està oberta per un usuari. S'efectua còpia en calent."
+   }
+
+   Copy-Item -Path $Origen -Destination $DestiFitxer
+   Write-Host "Còpia de seguretat completada amb èxit a: $DestiFitxer" -ForegroundColor Green
+   ```
+2. Executeu l'script i verifiqueu que la còpia amb marca de temps es genera al directori de seguretat.
+
+---
+
+### 📋 Bloc C: Llista de Verificació i Rúbrica d'Avaluació
+
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Model d'Esdeveniments i Validació** | Domina la diferència entre `BeforeUpdate` i `AfterUpdate`, cancel·lant esdeveniments i protegint la integritat de la informació. | Configura esdeveniments de forma correcta per a la majoria d'accions amb xicotets dubtes en el flux de cancel·lació. | Entén que una macro s'activa amb un botó però no comprèn els esdeveniments de camp abans de gravar. | No distingeix entre un esdeveniment de ratolí i un esdeveniment de dades del motor. |
+| **Macros Condicionals i AutoExec** | Construeix macros amb lògica Si...Llavors complexes, gestionant aturades, missatges informatius i arrencada corporativa amb AutoExec. | Implementa la macro AutoExec i condicions senzilles amb supervisió mínima en la sintaxi de paràmetres. | Crea la macro AutoExec bàsica per obrir un formulari però no sap implementar condicions lògiques. | Incapaç de crear una macro ni configurar l'inici automàtic de l'aplicació. |
+| **Seguretat i Còpia de Seguretat de Dades** | Justifica les polítiques de ciberseguretat del Centre de Confiança i implementa procediments automatitzats de còpia de seguretat. | Configura ubicacions de confiança i executa procediments de suport amb èxit seguint la guia tècnica. | Coneix l'existència del Centre de Confiança però no sap com desbloquejar l'execució de macros de forma segura. | Ignora els riscos de ciberseguretat associats a les macros o com efectuar una còpia de seguretat. |
+
