@@ -1,72 +1,28 @@
 ---
 layout: default
-title: "Muntatge i Manteniment d'Equips — UD4 UT3.2 - La placa base, el processador i perifèrics"
+title: "Muntatge i Manteniment d'Equips — UD4 La Placa Base, el Processador i la Memòria RAM"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD4"
 ---
 
-# UT3.2 - La placa base, el processador i perifèrics
+# UT4 - La Placa Base, el Processador (CPU) i la Memòria RAM
 
-
-
----
-
-## 📌 4.1 RA's (còpia) (còpia)
-
-RA1.
-
-Selecciona els components d'integració d'un equip microinformàtic estàndard,
-
-descrivint les seues funcions i comparant prestacions de diferents
-
-fabricants.
-
-15%
+En aquesta unitat es detalla el nucli de processament i comunicació d'un equip microinformàtic: l'anatomia completa de la placa base, els tipus de sòcol (LGA, PGA, BGA), el chipset i els busos de comunicació, l'arquitectura de memòria RAM (DDR4 vs DDR5, Dual Channel) i la configuració avançada del microprogramari UEFI.
 
 ---
 
-## 📌 4.2 Apunts 2 - La placa base i el processador - (CE1.c, CE1.e, CE1.f)
+## 📑 Continguts de la Unitat
 
-Continguts i activitats didàctiques de **Apunts 2 - La placa base i el processador - (CE1.c, CE1.e, CE1.f)**.
-
----
-
-## 📌 4.3 Classroom exercices (còpia)
-
-Classroom exercices
+| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
+| :---: | :--- | :--- | :---: |
+| **4.1** | **Resultats d'Aprenentatge (RA)** | Objectius curriculars de selecció de components i comparació de prestacions de fabricants | [**📘 Llegir Apartat →**](./ut0401.md) |
+| **4.2** | [**La Placa Base, el Processador i la RAM**](./ut0402.md) | Infografia de la placa base (sockets, PCIe, M.2, chipset), factors de forma (ATX/mATX/ITX), DDR4 vs DDR5, Dual Channel, UEFI, Secure Boot i Clear CMOS | [**🧠 Estudiar Teoria →**](./ut0402.md) |
 
 ---
 
-## 📌 4.4 Activitat 1: La placa base
-
-Continguts i activitats didàctiques de **Activitat 1: La placa base**.
-
----
-
-## 📌 4.5 Activitat 2 - El processador
-
-Continguts i activitats didàctiques de **Activitat 2 - El processador**.
-
----
-
-## 📌 4.6 Activitat  3: Manual Placa Base
-
-Continguts i activitats didàctiques de **Activitat  3: Manual Placa Base**.
-
----
-
-## 📌 4.7 Activitat 4: Pràctica BIOS
-
-Continguts i activitats didàctiques de **Activitat 4: Pràctica BIOS**.
-
----
-
-## 📌 4.8 Actividad 5: Instalación de Periféricos
-
-Continguts i activitats didàctiques de **Actividad 5: Instalación de Periféricos**.
-
----
-
-## 📌 4.9 Actividades de repaso UT3.2
-
-Continguts i activitats didàctiques de **Actividades de repaso UT3.2**.
+## 🎯 Resultats d'Aprenentatge Vinculats
+- **RA1:** Selecciona els components d'integració d'un equip microinformàtic estàndard, descrivint les seues funcions i comparant prestacions de diferents fabricants.
+- **Criteris d'Avaluació:**
+  - S'ha identificat el paper del sòcol de CPU i el chipset en la compatibilitat de components.
+  - S'ha configurat la memòria RAM en mode de doble canal aprofitant el màxim ample de banda.
+  - S'ha navegat pel menú de configuració de la UEFI per a gestionar paràmetres de seguretat i arrencada.

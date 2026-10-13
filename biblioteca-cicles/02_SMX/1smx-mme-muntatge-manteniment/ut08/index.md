@@ -1,34 +1,26 @@
 ---
 layout: default
-title: "Muntatge i Manteniment d'Equips — UD8 UT7 - Noves tendències"
+title: "Muntatge i Manteniment d'Equips — UD8 Noves Tendències Tecnològiques"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD8"
 ---
 
-# UT7 - Noves tendències
+# UT8 - Noves Tendències en Arquitectura i Maquinari Microinformàtic
 
-
-
----
-
-## 📌 8.1 Àrea de text i multimèdia
-
-Continguts i activitats didàctiques de **Àrea de text i multimèdia**.
+Aquesta unitat analitza les innovacions disruptives del sector del maquinari: la transició cap a arquitectures híbrides (nuclis P i E), l'expansió d'ARM en l'escriptori i portàtils, les unitats de processament neuronal (NPU) per a IA local, els nous estàndards de memòria com CAMM2 i el moviment pel dret a reparar i la sostenibilitat tecnològica.
 
 ---
 
-## 📌 8.2 Proyectos RA6
+## 📑 Continguts de la Unitat
 
-Continguts i activitats didàctiques de **Proyectos RA6**.
-
----
-
-## 📌 8.3 Actividades de la unidad (recopilación)
-
-Continguts i activitats didàctiques de **Actividades de la unidad (recopilación)**.
+| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
+| :---: | :--- | :--- | :---: |
+| **8.1** | [**Noves Tendències en Arquitectura**](./ut0801.md) | Nuclis P i E, CISC (x86-64) vs RISC (ARM64), NPUs i mesura TOPS per a IA local, memòria CAMM2, PCIe 5.0/6.0 i dret a reparar | [**🚀 Estudiar Tendències →**](./ut0801.md) |
 
 ---
 
-## 📌 8.4 Projectes
-
-Continguts i activitats didàctiques de **Projectes**.
+## 🎯 Resultats d'Aprenentatge Vinculats
+- **RA1:** Reconeix les noves tecnologies i tendències en la fabricació d'equips microinformàtics, descrivint les seues aplicacions i avantatges.
+- **Criteris d'Avaluació:**
+  - S'ha analitzat la integració de xips d'acceleració d'IA (NPU) en el maquinari d'usuari final.
+  - S'han comparat els avantatges d'eficiència energètica de les arquitectures ARM enfront de x86 tradicional.

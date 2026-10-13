@@ -1,78 +1,28 @@
 ---
 layout: default
-title: "Muntatge i Manteniment d'Equips — UD3 UT3.1 - Components d'un equip microinformàtic"
+title: "Muntatge i Manteniment d'Equips — UD3 Components del PC: Caixes, Refrigeració i Emmagatzematge"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD3"
 ---
 
-# UT3.1 - Components d'un equip microinformàtic
+# UT3 - Components del PC: Caixes, Refrigeració i Emmagatzematge
 
-
-
----
-
-## 📌 3.1 RA1MME
-
-Continguts i activitats didàctiques de **RA1MME**.
+En aquesta unitat s'estudien els components essencials de l'estructura i emmagatzematge d'un ordinador: els factors de forma de xassís i caixes, les solucions de ventilació i refrigeració per aire o líquida, i la comparativa tècnica completa entre discs durs magnètics (HDD) i unitats d'estat sòlid (SSD SATA i NVMe M.2).
 
 ---
 
-## 📌 3.2 RA's (còpia)
+## 📑 Continguts de la Unitat
 
-RA1.
-
-Selecciona els components d'integració d'un equip microinformàtic estàndard,
-
-descrivint les seues funcions i comparant prestacions de diferents
-
-fabricants.
-
-15%
+| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
+| :---: | :--- | :--- | :---: |
+| **3.1** | **El Xassís o Caixa del PC** | Factors de forma (Torre, Semitorre, Micro-ATX, Mini-ITX), gestió de cablejat, badies d'expansió | [**📘 Llegir Apartat →**](./ut0301.md) |
+| **3.2** | **Refrigeració i Ventilació** | Flux d'aire (pressió positiva vs negativa), refrigeració per aire (dissipadors i heatpipes), refrigeració líquida AIO | [**❄️ Estudiar Refrigeració →**](./ut0302.md) |
+| **3.3** | [**Dispositius d'Emmagatzematge**](./ut0303.md) | Comparativa HDD vs SSD SATA vs M.2 NVMe, arquitectura de cel·les NAND Flash (TLC/QLC), velocitats, latències i fiabilitat TBW | [**💾 Veure Comparativa →**](./ut0303.md) |
 
 ---
 
-## 📌 3.3 Apunts 1 - CE1a, CE1b, CE1d, CE1g
-
-CE1.a) S'han descrit els blocs que componen un equip microinformàtic i les seues funcions.
-
-CE1.b) S'ha reconegut l'arquitectura de busos.
-
-CE1.g) S'han identificat i manipulat els components bàsics (mòduls de memòria, discos fixos i les seues controladores, suports de memòries auxiliars, entre altres).
-
-CE1.i) S'han identificat i manipulat diferents adaptadors (gràfics, LAN, mòdems, entre altres).
-
----
-
-## 📌 3.4 Classroom exercices
-
-Classroom exercices
-
----
-
-## 📌 3.5 Activitats 1: Estructura d'una computadora
-
-Continguts i activitats didàctiques de **Activitats 1: Estructura d'una computadora**.
-
----
-
-## 📌 3.6 Activitats 2: CPU i Memories
-
-Continguts i activitats didàctiques de **Activitats 2: CPU i Memories**.
-
----
-
-## 📌 3.7 Activitats 3: Periferics
-
-Continguts i activitats didàctiques de **Activitats 3: Periferics**.
-
----
-
-## 📌 3.8 Activitats 4: Placa base
-
-Continguts i activitats didàctiques de **Activitats 4: Placa base**.
-
----
-
-## 📌 3.9 Control - - CE1a, CE1b, CE1d
-
-Continguts i activitats didàctiques de **Control - - CE1a, CE1b, CE1d**.
+## 🎯 Resultats d'Aprenentatge Vinculats
+- **RA1:** Reconeix els blocs funcionals d'un equip microinformàtic i les seues funcions.
+- **Criteris d'Avaluació:**
+  - S'han identificat i comparat els diferents suports d'emmagatzematge secundari fix i extraïble.
+  - S'ha avaluat l'impacte de la refrigeració i el flux d'aire en la vida útil i rendiment dels components.

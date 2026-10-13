@@ -1,52 +1,26 @@
 ---
 layout: default
-title: "Muntatge i Manteniment d'Equips — UD7 UT6 - Instal·la programari utlilitzant una imatge"
+title: "Muntatge i Manteniment d'Equips — UD7 Desplegament de Programari amb Imatges de Disc"
 course_root: ".."
 badge: "1r SMX · Grau Mitjà · UD7"
 ---
 
-# UT6 - Instal·la programari utlilitzant una imatge
+# UT7 - Desplegament de Programari mitjançant Imatges de Disc
 
-
-
----
-
-## 📌 7.1 Àrea de text i multimèdia
-
-Continguts i activitats didàctiques de **Àrea de text i multimèdia**.
+Aquesta unitat tracta la instal·lació i desplegament massiu de sistemes operatius i programari en entorns corporatius i educatius mitjançant la creació de mitjans d'arrencada (Rufus, Ventoy), l'ús de l'eina de generalització Microsoft Sysprep per evitar conflictes de SID en xarxa i la clonació ràpida amb Clonezilla.
 
 ---
 
-## 📌 7.2 Apuntes RA5
+## 📑 Continguts de la Unitat
 
-Continguts i activitats didàctiques de **Apuntes RA5**.
-
----
-
-## 📌 7.3 Actividades de la unidad
-
-Continguts i activitats didàctiques de **Actividades de la unidad**.
+| Apartat | Títol del Tema | Continguts Clau | Accés Directe |
+| :---: | :--- | :--- | :---: |
+| **7.1** | [**Imatges de Disc, Clonezilla i Sysprep**](./ut0701.md) | Concepte d'imatge de disc, mitjans d'arrencada amb Ventoy i Rufus, resolució de conflictes de SID amb Sysprep, modalitats de clonació amb Clonezilla | [**💿 Estudiar Clonació →**](./ut0701.md) |
 
 ---
 
-## 📌 7.4 Instalación de 2 sistemas operativos
-
-Continguts i activitats didàctiques de **Instalación de 2 sistemas operativos**.
-
----
-
-## 📌 7.5 Creación y restauración de imégenes com Clonezilla
-
-Continguts i activitats didàctiques de **Creación y restauración de imégenes com Clonezilla**.
-
----
-
-## 📌 7.6 Creación de particiones
-
-Continguts i activitats didàctiques de **Creación de particiones**.
-
----
-
-## 📌 7.7 Actividades de revisión de la unidad UT6
-
-Continguts i activitats didàctiques de **Actividades de revisión de la unidad UT6**.
+## 🎯 Resultats d'Aprenentatge Vinculats
+- **RA6:** Instal·la programari en un equip microinformàtic utilitzant imatges de disc, justificant el procediment triat segons les característiques del parc d'equips.
+- **Criteris d'Avaluació:**
+  - S'ha utilitzat programari de clonació de discos creant imatges funcionals i arrencables.
+  - S'han preparat les imatges mestres eliminant identificadors únics de seguretat abans de la seua distribució.
