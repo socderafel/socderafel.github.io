@@ -1,293 +1,271 @@
----
+﻿---
 layout: default
-title: "UD8: Programació de Bases de Dades (Procediments, Funcions, Triggers i Cursors) — Bases de Dades"
+title: "UD8: Bases de Dades No Relacionals (NoSQL) i Tendències — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD8"
-next_url: "ut0801.html"
-next_label: "8.1 ➡️"
+badge: "1r DAW / DAM · Grau Superior · UD9"
 ---
 
-# UD8: Programació de Bases de Dades (Procediments, Funcions, Triggers i Cursors)
+# UD8: Bases de Dades No Relacionals (NoSQL) i Tendències
 
 <div style="text-align: center; margin: 1.5rem 0;">
 <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
   <defs>
-    <linearGradient id="bg-grad-db8" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg-grad-db9" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="g-prc" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-nos" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-ctl" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-cap" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-cur" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-mng" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-trg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-new" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db8)"/>
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db9)"/>
 
   <!-- Capçalera -->
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">PROGRAMACIÓ PROCEDURAL AL SERVIDOR DE BASES DE DADES</text>
-  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Procediments emmagatzemats, funcions definides per l'usuari, cursors, control d'errors i disparadors (Triggers)</text>
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">BASES DE DADES NO RELACIONALS (NoSQL) I TENDÈNCIES MODERNES</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Paradigmes NoSQL, Teorema CAP &amp; Model BASE, MongoDB CRUD, Redis i persistència políglota</text>
 
-  <!-- Bloc 1: Rutines Emmagatzemades -->
+  <!-- Bloc 1: Paradigmes NoSQL -->
   <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-prc)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-nos)" stroke="#38bdf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">⚙️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Rutines Servidor</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Procediments &amp; Funcions</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• CREATE PROCEDURE (acció)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• CREATE FUNCTION (retorn)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Paràmetres IN, OUT, INOUT</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Menor trànsit de xarxa</text>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🌐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Famílies NoSQL</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Models de Dades</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Documentals: MongoDB, BSON</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Clau-Valor: Redis en RAM</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Columnars: Cassandra</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Grafs: Neo4j &amp; Cypher</text>
   </g>
 
-  <!-- Bloc 2: Estructures de Control -->
+  <!-- Bloc 2: Teorema CAP & BASE -->
   <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-ctl)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-cap)" stroke="#818cf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🔄</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Lògica Procedural</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Flux d'Execució</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Condicionals IF / THEN / ELSE</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Bifurcacions CASE / WHEN</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Bucles WHILE, LOOP &amp; FOR</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Variables locals (DECLARE)</text>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">📐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Teorema CAP</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Sistemes Distribuïts</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Consistència (C) en xarxa</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Disponibilitat (A) alta</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Partició (P) inevitable</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Model BASE vs Model ACID</text>
   </g>
 
-  <!-- Bloc 3: Cursors i Excepcions -->
+  <!-- Bloc 3: MongoDB & BSON -->
   <g transform="translate(435, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-cur)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-mng)" stroke="#34d399" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📑</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Cursors &amp; Errors</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Processament Fila a Fila</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Cursors: DECLARE, OPEN</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• FETCH tupla a tupla</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Gestió d'errors i HANDLERS</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Excepcions i RAISE / SIGNAL</text>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🍃</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Entorn MongoDB</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">BBDD Documental</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Col·leccions i Documents</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• CRUD: find, insert, update</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Subdocuments &amp; Arrays</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Aggregation Framework</text>
   </g>
 
-  <!-- Bloc 4: Disparadors (Triggers) -->
+  <!-- Bloc 4: Tendències & NewSQL -->
   <g transform="translate(640, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-trg)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-new)" stroke="#f59e0b" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">⚡</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Disparadors</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Automatització DML</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• BEFORE / AFTER (Ins/Up/Del)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• FOR EACH ROW a nivell de fila</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Taules especials OLD i NEW</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Pistas d'auditoria automàtiques</text>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">🚀</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Noves Tendències</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Políglota &amp; Escala</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Persistència Políglota</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• NewSQL: CockroachDB</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• BBDD Vectorials per a IA</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• pgvector &amp; Embeddings</text>
   </g>
 </svg>
 </div>
 
-Fonaments de la programació del costat del servidor de bases de dades, sintaxi procedural en PL/pgSQL i MySQL, procediments emmagatzemats, funcions escalars i de taula, estructures de control de flux, cursors per al processament fila a fila, gestió d'excepcions i disseny de disparadors (Triggers) per a l'auditoria i compliment de regles de negoci.
+Evolució de les bases de dades no relacionals (NoSQL: Not Only SQL), escalabilitat horitzontal (*scale-out*), Teorema CAP de sistemes distribuïts, model BASE i consistència eventual, tipologia NoSQL (documentals, clau-valor, columnars i grafs), ús pràctic de MongoDB i Redis, i tendències modernes com la persistència políglota i bases de dades vectorials per a IA.
 
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **8.1** | **Fonaments de la lògica emmagatzemada i dialectes procedurals** | [**Llegir apartat →**](./ut0801.html) |
-| **8.2** | **Funcions i procediments emmagatzemats: paràmetres IN, OUT i INOUT** | [**Llegir apartat →**](./ut0802.html) |
-| **8.3** | **Estructures de control de flux: condicionals i bucles** | [**Llegir apartat →**](#83-estructures-de-control-de-flux-condicionals-i-bucles) |
-| **8.4** | **Cursors i gestió d'excepcions** | [**Llegir apartat →**](#84-cursors-i-gestió-dexcepcions) |
-| **8.5** | **Disparadors (Triggers): automatització d'esdeveniments i auditoria** | [**Llegir apartat →**](#85-disparadors-triggers-automatització-desdeveniments-i-auditoria) |
+| **9.1** | **Motius de l'aparició de NoSQL i escalabilitat horitzontal** | [**Llegir apartat →**](./ut0901.html) |
+| **9.2** | **El Teorema CAP i el model BASE enfront d'ACID** | [**Llegir apartat →**](./ut0902.html) |
+| **9.3** | **Famílies de SGBD NoSQL: documentals, clau-valor, columnars i grafs** | [**Llegir apartat →**](#93-famílies-de-sgbd-nosql-documentals-clau-valor-columnars-i-grafs) |
+| **9.4** | **Bases de dades documentals: arquitectura i operacions a MongoDB** | [**Llegir apartat →**](#94-bases-de-dades-documentals-arquitectura-i-operacions-a-mongodb) |
+| **9.5** | **Tendències de futur: persistència políglota, NewSQL i bases de dades vectorials** | [**Llegir apartat →**](#95-tendències-de-futur-persistència-políglota-newsql-i-bases-de-dades-vectorials) |
 
 ---
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 8.1 Fonaments de la lògica emmagatzemada i dialectes procedurals
+## 9.1 Motius de l'aparició de NoSQL i escalabilitat horitzontal
 
-Mentre que l'SQL estàndard és un llenguatge **declaratiu** (li diem al SGBD *què* volem obtenir, però no pas *com* calcular-ho pas a pas), certes regles de negoci requereixen lògica seqüencial, condicional i iterativa. Els motors relacionals incorporen extensions **procedurals** que s'executen directament dins del nucli del servidor.
-
-### Avantatges d'executar codi al servidor de bases de dades:
-1. **Reducció dràstica del trànsit de xarxa:** En lloc d'enviar 10.000 files a l'aplicació web (Node.js o Java) perquè faça un càlcul i torne a enviar les actualitzacions, el procediment s'executa localment en memòria del servidor de dades.
-2. **Encapsulació i seguretat:** Es pot prohibir als usuaris web modificar directament les taules i concedir-los permís exclusiu per executar procediments verificats.
-3. **Mantenibilitat compartida:** La mateixa regla de negoci és utilitzada per la web, l'app mòbil i l'eina d'escriptori de l'empresa sense duplicar codi.
+Durant dècades, els SGBD relacionals van ser l'única opció per a qualsevol sistema d'informació. Tanmateix, amb l'explosió de la web 2.0, les xarxes socials i el comerç electrònic global a principis dels anys 2000, gegants com Google, Amazon i Facebook es van enfrontar a problemes que l'arquitectura relacional clàssica no podia resoldre fàcilment: les **3 V del Big Data**:
+1. **Volum:** Petabytes de dades que no caben en un sol disc ni en un sol servidor físic.
+2. **Velocitat:** Centenars de milers de peticions d'escriptura per segon procedents de milions d'usuaris concurrents.
+3. **Varietat:** Dades semiestructurades, heterogènies o amb esquemes en evolució constant (documents JSON, logs, missatges, feeds).
 
 ---
 
-### Principals dialectes procedurals del mercat:
-- **PL/pgSQL:** Llenguatge procedural natiu de **PostgreSQL**.
-- **MySQL / MariaDB Stored Programs:** Sintaxi procedural de MySQL.
-- **PL/SQL:** El llenguatge pioner d'**Oracle Database**.
-- **T-SQL (Transact-SQL):** Dialecte de **Microsoft SQL Server**.
+### Escalabilitat Vertical (*Scale-Up*) vs Escalabilitat Horitzontal (*Scale-Out*)
+- **Escalabilitat Vertical (*Scale-Up* - RDBMS clàssic):**
+  - Consisteix a comprar un servidor més gran: més CPU, més RAM, discos NVMe més ràpids.
+  - *Límit:* Té un sostre físic insuperable i un cost econòmic exponencialment astronòmic.
+- **Escalabilitat Horitzontal (*Scale-Out* - NoSQL):**
+  - Consisteix a afegir desenes o centenars de servidors estàndard barats (*nodes commodity*) connectats en xarxa formant un clúster.
+  - Les dades es reparteixen entre els servidors mitjançant tècniques de particionament horitzontal (**Sharding**).
 
 ---
 
-## 8.2 Funcions i procediments emmagatzemats: paràmetres IN, OUT i INOUT
-
-### Diferència clau entre Procediment i Funció
-- **Procediment (`PROCEDURE`):**
-  - Es crida amb la comanda `CALL nom_procediment(arguments);`.
-  - Està pensat per executar accions que modifiquen la base de dades (insercions, actualitzacions, manteniment).
-  - No retorna cap valor mitjançant la paraula `RETURN` (però pot retornar dades mitjançant paràmetres `OUT`).
-- **Funció (`FUNCTION`):**
-  - Es crida integrada dins d'una sentència SQL: `SELECT nom_funcio(arguments);`.
-  - Ha de retornar **obligatòriament** un valor escalar (`RETURNS INTEGER`, `RETURNS NUMERIC`) o un conjunt de taula (`RETURNS TABLE(...)`).
-  - Té restriccions estrictes sobre modificacions de dades en alguns SGBDs per evitar efectes secundaris no desitjats.
+### Esquema rígid (*Schema-on-Write*) vs Esquema dinàmic (*Schema-on-Read*)
+- **RDBMS Relacional:** Exigeix definir l'estructura de taules amb `CREATE TABLE` abans d'inserir la primera dada (*Schema-on-Write*). Canviar l'esquema d'una taula amb 100 milions de files requereix bloquejos que aturen el servei.
+- **NoSQL:** Permet desar documents amb estructures i camps diferents dins de la mateixa col·lecció (*Schema-on-Read*), facilitant el desenvolupament àgil i el desplegament continu.
 
 ---
 
-### Tipus de Paràmetres:
-- **`IN` (per defecte):** Paràmetre de només lectura. El valor es passa des de la crida cap a la rutina.
-- **`OUT`:** Paràmetre de sortida. La rutina li assigna un valor que serà retornat a qui ha fet la crida.
-- **`INOUT`:** Paràmetre bidireccional. Entra amb un valor inicial i la rutina el pot modificar per retornar el resultat.
+## 9.2 El Teorema CAP i el model BASE enfront d'ACID
 
-#### Exemple en PostgreSQL (PL/pgSQL):
-```sql
-CREATE OR REPLACE FUNCTION fn_calcular_descompte(p_import NUMERIC, p_percentatge NUMERIC)
-RETURNS NUMERIC AS $$
-BEGIN
-    RETURN p_import * (1 - (p_percentatge / 100));
-END;
-$$ LANGUAGE plpgsql;
+Proposat pel científic Eric Brewer el 2000 i demostrat matemàticament el 2002 per Seth Gilbert i Nancy Lynch, el **Teorema CAP** afirma que en qualsevol sistema informàtic distribuït que comparteix dades per xarxa, **només es poden garantir simultàniament dues de les tres propietats següents**:
 
--- Invocació:
-SELECT fn_calcular_descompte(150.00, 20); -- Retorna 120.00
+```
+                             [C] Consistència
+                                  /\
+                                 /  \
+                       RDBMS    /    \   MongoDB (CP)
+                      (CA local)/      \
+                               /________\
+         [A] Disponibilitat  (AP: Cassandra)  [P] Tolerància a la Partició
 ```
 
----
+1. **Consistència (C - *Consistency*):** Tota lectura rep l'escriptura més recent o bé un error. Tots els nodes mostren la mateixa dada al mateix instant.
+2. **Disponibilitat (A - *Availability*):** Cada petició no fallida rep una resposta vàlida, sense garantia que continga l'última versió.
+3. **Tolerància a la Partició (P - *Partition Tolerance*):** El sistema continua funcionant fins i tot si es perden missatges o falla la connexió de xarxa entre servidors del clúster.
 
-## 8.3 Estructures de control de flux: condicionals i bucles
-
-El codi procedural permet utilitzar la lògica habitual de programació estructurada:
-
-### 1. Condicional `IF ... ELSIF ... ELSE`
-```sql
-IF p_saldo < 0 THEN
-    v_estat := 'Morós';
-ELSIF p_saldo = 0 THEN
-    v_estat := 'Al corrent';
-ELSE
-    v_estat := 'Positiu';
-END IF;
-```
+> [!IMPORTANT]
+> A les xarxes reals, les fallades de comunicació són inevitables. Per tant, **en sistemes distribuïts la propietat P és obligatòria**. Això obliga els dissenyadors a triar entre:
+> - **Sistemes CP (Consistència + Tolerància):** Sacrifiquen disponibilitat (si hi ha partició, bloquegen el node desactualitzat abans de donar dades errònies). Ex. MongoDB, HBase.
+> - **Sistemes AP (Disponibilitat + Tolerància):** Sacrifiquen consistència immediata (responen sempre amb les dades locals disponibles, encara que estiguen desactualitzades). Ex. Apache Cassandra, DynamoDB, CouchDB.
 
 ---
 
-### 2. Estructures Iteratives (Bucles)
-```sql
--- Bucle WHILE
-WHILE v_comptador <= 10 LOOP
-    v_total := v_total + v_comptador;
-    v_comptador := v_comptador + 1;
-END LOOP;
-
--- Bucle FOR amb rang
-FOR i IN 1..10 LOOP
-    INSERT INTO TaulaLog (num_iteracio) VALUES (i);
-END LOOP;
-```
+### El Model BASE (L'alternativa NoSQL a ACID)
+Mentre que els RDBMS s'aferren a l'estricte model **ACID**, molts sistemes NoSQL adopten el model **BASE**:
+- **B**asically **A**vailable (Bàsicament disponible: el sistema respon sempre, encara que siga parcialment).
+- **S**oft State (Estat flexible: les dades poden canviar amb el temps sense intervenció de noves entrades).
+- **E**ventual Consistency (Consistència eventual: si no es fan noves escriptures, tots els nodes del clúster acabaran sincronitzant-se i convergint en el mateix estat).
 
 ---
 
-## 8.4 Cursors i gestió d'excepcions
+## 9.3 Famílies de SGBD NoSQL: documentals, clau-valor, columnars i grafs
 
-Normalment, les consultes SQL processen totes les dades alhora com un **conjunt**. Tanmateix, quan cal aplicar una lògica de negoci complexa que requereix analitzar o transformar cada fila de manera independent, s'utilitza un **cursor**.
-
-### Cicle de vida d'un cursor:
-1. **`DECLARE`:** Es defineix la consulta associada al cursor.
-2. **`OPEN`:** El motor executa la consulta i posiciona un punter abans de la primera fila.
-3. **`FETCH`:** Recupera la fila actual, assigna els seus valors a variables locals i avança el punter a la següent tupla.
-4. **`CLOSE`:** Allibera els recursos de memòria associats a la consulta.
-
-```sql
-DO $$
-DECLARE
-    rec_client RECORD;
-    cur_clients CURSOR FOR SELECT id_client, nom, email FROM Clients WHERE actiu = TRUE;
-BEGIN
-    OPEN cur_clients;
-    LOOP
-        FETCH cur_clients INTO rec_client;
-        EXIT WHEN NOT FOUND;
-        -- Processament individual de cada client
-        RAISE NOTICE 'Processant client: % amb email %', rec_client.nom, rec_client.email;
-    END LOOP;
-    CLOSE cur_clients;
-END $$;
-```
+| Model NoSQL | Unitat d'Emmagatzematge | Estructura de Dades | SGBD Destacats | Cas d'Ús Recomanat |
+| :--- | :--- | :--- | :--- | :--- |
+| **Documental** | Document | JSON / BSON amb claus i valors niats | **MongoDB**, CouchDB | Catàlegs d'e-commerce, CMS, perfils d'usuari, dades d'APIs REST. |
+| **Clau-Valor** | Par Clau $\to$ Valor | Cadena o hash indexat en memòria RAM | **Redis**, Memcached, DynamoDB | Memòria cau d'alta velocitat (*cache*), sessions d'usuari web, carrets de compra temporals. |
+| **Columnar (Wide-Column)** | Família de columnes | Files amb milers de columnes dinàmiques | **Apache Cassandra**, ScyllaDB | Sèries temporals, registre massiu de sensors IoT, telemetria d'infraestructures. |
+| **Grafs** | Nodes i Arestes | Xarxes de nodes connectats amb propietats | **Neo4j**, Amazon Neptune | Xarxes socials (amics, seguidors), motors de recomanació, detecció de frau financer. |
 
 ---
 
-### Gestió d'Excepcions
-Permet interceptar errors de sistema o de restriccions (per exemple, intent de dividir per zero o clau duplicada) evitant que la transacció aborte de forma descontrolada:
+## 9.4 Bases de dades documentals: arquitectura i operacions a MongoDB
 
-```sql
-BEGIN
-    INSERT INTO Clients (id_client, nom) VALUES (1, 'Duplicat');
-EXCEPTION
-    WHEN unique_violation THEN
-        RAISE WARNING 'Intent d''inserir una clau duplicada per al client 1!';
-END;
-```
+**MongoDB** és el SGBD NoSQL més popular del món. Emmagatzema la informació en format **BSON** (*Binary JSON*), una representació binària de documents JSON que afegeix tipus de dades avançats (com dates natives i enters de 64 bits).
 
----
-
-## 8.5 Disparadors (Triggers): automatització d'esdeveniments i auditoria
-
-Un **disparador (*Trigger*)** és un bloc de codi procedural que **s'executa automàticament com a reacció a un esdeveniment DML** (`INSERT`, `UPDATE` o `DELETE`) sobre una taula concreta.
-
-### Components d'un Trigger:
-1. **Moment d'execució:**
-   - **`BEFORE`:** S'executa abans que la modificació s'aplique físicament a la taula. Ideal per validar regles, calcular camps automàticament o cancel·lar l'operació llançant una excepció.
-   - **`AFTER`:** S'executa després que la modificació s'ha aplicat. Ideal per actualitzar taules d'auditoria o estadístiques en altres taules.
-2. **Nivell d'execució:**
-   - **`FOR EACH ROW`:** S'executa una vegada per a cada fila afectada.
-   - **`FOR EACH STATEMENT`:** S'executa una única vegada per a tota la sentència SQL, independentment del nombre de files afectades.
-3. **Variables especials `OLD` i `NEW`:**
-
-| Operació DML | Variable `OLD` disponible? | Variable `NEW` disponible? |
-| :---: | :---: | :---: |
-| **`INSERT`** | No (`NULL`) | **Sí** (la fila que s'està inserint) |
-| **`UPDATE`** | **Sí** (valors abans del canvi) | **Sí** (valors després del canvi) |
-| **`DELETE`** | **Sí** (la fila que s'està esborrant) | No (`NULL`) |
+### Equivalència de conceptes: RDBMS vs MongoDB
+| Model Relacional SQL | Model Documental MongoDB |
+| :--- | :--- |
+| **Base de Dades** | **Base de Dades** |
+| **Taula** | **Col·lecció (*Collection*)** |
+| **Fila / Tupla** | **Document BSON** |
+| **Columna / Camp** | **Camp (*Field*)** |
+| **Clau Primària (PK)** | **Camp identificador `_id` (`ObjectId`)** |
+| **JOIN entre taules** | **Documents embeguts (*Embedded*) o `$lookup`** |
 
 ---
 
-### Exemple complet d'Auditoria amb Trigger en PostgreSQL:
-```sql
--- 1. Taula de registre d'auditoria
-CREATE TABLE HistoricAuditoria (
-    id_log SERIAL PRIMARY KEY,
-    nom_taula VARCHAR(50),
-    operacio VARCHAR(10),
-    usuari VARCHAR(50),
-    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    dades_velles TEXT,
-    dades_noves TEXT
+### Operacions CRUD a MongoDB Shell (`mongosh`):
+
+```javascript
+// 1. Inserir un document amb camps niats i arrays
+db.productes.insertOne({
+    codi: "PRD-201",
+    nom: "Auriculars Inalàmbrics",
+    preu: 59.90,
+    etiquetes: ["audio", "bluetooth", "gaming"],
+    especificacions: {
+        bateria_hores: 30,
+        cancel_soroll: true
+    }
+});
+
+// 2. Consulta amb operadors de comparació ($gt, $in)
+db.productes.find({
+    preu: { $gte: 50 },
+    "especificacions.cancel_soroll": true
+});
+
+// 3. Modificació atòmica amb operadors ($set, $inc)
+db.productes.updateOne(
+    { codi: "PRD-201" },
+    { $set: { preu: 54.90 }, $inc: { estoc: 10 } }
 );
 
--- 2. Funció associada al trigger
-CREATE OR REPLACE FUNCTION trg_auditoria_productes()
-RETURNS TRIGGER AS $$
-BEGIN
-    INSERT INTO HistoricAuditoria (nom_taula, operacio, usuari, dades_velles, dades_noves)
-    VALUES ('Productes', TG_OP, CURRENT_USER, ROW(OLD.*)::TEXT, ROW(NEW.*)::TEXT);
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
--- 3. Definició del trigger sobre la taula
-CREATE TRIGGER tr_auditoria_prod
-AFTER UPDATE OR DELETE ON Productes
-FOR EACH ROW EXECUTE FUNCTION trg_auditoria_productes();
+// 4. Eliminació de documents
+db.productes.deleteOne({ codi: "PRD-201" });
 ```
+
+---
+
+### Pipeline d'Agregació (*Aggregation Framework*)
+L'equivalent a `GROUP BY` i `HAVING` en MongoDB és el **Pipeline d'Agregació**, on els documents travessen una seqüència d'etapes de processament:
+
+```javascript
+db.comandes.aggregate([
+    // Etapa 1: Filtrar comandes pagades ($match equivalent a WHERE)
+    { $match: { estat: "Pagada" } },
+    
+    // Etapa 2: Agrupar per client i sumar imports ($group equivalent a GROUP BY)
+    { $group: {
+        _id: "$id_client",
+        despesa_total: { $sum: "$import" },
+        num_comandes: { $sum: 1 }
+    }},
+    
+    // Etapa 3: Filtrar clients amb despesa > 500 € ($match equivalent a HAVING)
+    { $match: { despesa_total: { $gt: 500 } } },
+    
+    // Etapa 4: Ordenar de major a menor despesa ($sort equivalent a ORDER BY)
+    { $sort: { despesa_total: -1 } }
+]);
+```
+
+---
+
+## 9.5 Tendències de futur: persistència políglota, NewSQL i bases de dades vectorials
+
+En l'actualitat, la discussió *"SQL vs NoSQL"* ha quedat superada: els sistemes empresarials moderns combinen ambdós paradigmes.
+
+1. **Persistència Políglota (*Polyglot Persistence*):**
+   - Una mateixa aplicació web utilitza diferents tecnologies de bases de dades segons les necessitats de cada subsistema:
+     - **PostgreSQL (RDBMS):** Per a facturació, transaccions monetàries i comptes d'usuari (ACID estricte).
+     - **MongoDB (Documental):** Per al catàleg de productes amb atributs variables per categoria.
+     - **Redis (Clau-Valor):** Per a la gestió de sessions d'usuari en memòria i carrets de compra volàtils.
+     - **Neo4j (Grafs):** Per al motor de recomanació de productes relacionats.
+2. **Motors NewSQL (CockroachDB, Google Cloud Spanner):**
+   - Sistemes moderns que ofereixen **escalabilitat horitzontal massiva NoSQL** distribuïda per continents mantenint la **garantia ACID estricta i el llenguatge SQL estàndard**.
+3. **Bases de Dades Vectorials (Milvus, Pinecone, extensió `pgvector` de PostgreSQL):**
+   - La revolució de la Intel·ligència Artificial i els models LLM.
+   - Emmagatzemen vectors d'incrustació numèrics multidimensionals (*embeddings*) que representen text, àudio o imatges, i executen cerques de semblança per proximitat (com la distància de cosinus).
 
 ---
 
@@ -295,111 +273,115 @@ FOR EACH ROW EXECUTE FUNCTION trg_auditoria_productes();
 
 ### Bloc A: Fonaments, Dimensionament i Anàlisi de Rendiment
 
-#### Exercici 1: Disseny d'un procediment de bonificació amb paràmetres INOUT
-Es demana dissenyar la lògica d'un procediment procedural `pr_aplicar_bonificacio` que rep:
-- `p_id_emp`: enter (`IN`).
-- `p_percentatge`: numèric (`IN`).
-- `p_nou_salari`: numèric (`OUT`).
+#### Exercici 1: Classificació de SGBDs segons el Teorema CAP
+Completa la següent taula classificant els sistemes segons el parell de característiques del Teorema CAP que prioritzen davant d'una fallada de xarxa i justifica la decisió de disseny:
 
-1. Escriu el pseudocodi o codi procedural que:
-   - Consulta el salari actual de l'empleat.
-   - Si l'empleat té una antiguitat superior a 5 anys, suma un 2% addicional al percentatge de bonificació.
-   - Actualitza el camp `salari` de la taula `Empleats`.
-   - Retorna a `p_nou_salari` el valor final actualitzat.
-2. Traça el comportament del procediment per a un empleat amb salari actual de $2.000\text{ €}$, antiguitat de 6 anys i percentatge inicial sol·licitat del $10\%$.
+| Sistema Gestor | Tipus CAP (CP o AP) | Què prioritza davant una partició de xarxa? | Cas d'ús empresarial idoni |
+| :--- | :---: | :--- | :--- |
+| **MongoDB** | **CP** | Rebutja escriptures si no hi ha majoria de rèpliques; garanteix dades exactes | Gestió de catàlegs i registres financers NoSQL |
+| **Apache Cassandra** | **AP** | Accepta sempre escriptures en qualsevol node local; garanteix disponibilitat 24/7 | Monitorització d'IoT i xarxes socials |
+| **Redis (Sentinel)** | **CP** | Prioritza consistència promovent una nova rèplica mestre | Memòria cau d'alta fidelitat i sessions |
+| **CouchDB** | **AP** | Replicació eventual bidireccional sense bloquejos | Aplicacions mòbils amb treball fora de línia |
 
-#### Exercici 2: Matriu de disponibilitat de dades en Triggers
-Completa la següent taula indicant quins valors prenen `OLD.preu` i `NEW.preu` per a un article que tenia un preu de $100\text{ €}$:
+#### Exercici 2: Modelatge documental: documents embeguts vs referències
+Es dissenya la base de dades d'una plataforma de cursos en línia a MongoDB. Es dubta entre dues estratègies per relacionar els `Cursos` i les seues `Lliçons`:
+- **Opció A (Embeguda / *Embedded*):** Un document per curs que conté un array de subdocuments amb les 15 lliçons dins.
+- **Opció B (Referenciada / *Normalized*):** Una col·lecció de `Cursos` i una col·lecció independent de `Lliçons` amb el camp `id_curs`.
 
-| Esdeveniment Executat | `OLD.preu` | `NEW.preu` | Acció típica d'un Trigger BEFORE |
-| :--- | :---: | :---: | :--- |
-| `INSERT INTO Articles (preu) VALUES (150);` | | | Validar que el preu siga estrictament positiu |
-| `UPDATE Articles SET preu = 120 WHERE id = 1;` | | | Comprovar que el nou preu no supere el 50% de l'antic |
-| `DELETE FROM Articles WHERE id = 1;` | | | Impedir l'esborrat si l'article té comandes històriques |
+1. Quins avantatges de rendiment té l'Opció A a l'hora de mostrar tota la informació d'un curs a la web en una sola petició?
+2. Quin límit físic de mida de document imposa el format BSON a MongoDB (pista: $16\text{ MB}$)? Podria ser aquest límit un problema si un curs tinguera $50.000$ comentaris d'alumnes embeguts a dins?
+3. Quina regla de disseny s'extreu per triar entre embotir (*Embedding*) o referenciar (*Referencing*)?
 
-#### Exercici 3: Anàlisi d'impacte en rendiment de Triggers vs Operacions Masives
-Un procés d'importació bancària nocturna insereix $500.000$ registres d'apunts comptables:
-1. Si s'activa un trigger `AFTER INSERT FOR EACH ROW` que fa un `INSERT` addicional a una taula d'auditoria, quantes escriptures a disc en total generarà l'operació?
-2. Per què els DBAs acostumen a desactivar els triggers (`ALTER TABLE ... DISABLE TRIGGER ALL`) abans d'una càrrega massiva de dades i revaliden la coherència posteriorment?
+#### Exercici 3: Comparativa de latències: memòria RAM vs disc SSD
+Un servei web d'autenticació ha de validar un testimoni (*token*) de sessió a cada petició HTTP.
+- Consulta en memòria RAM (Redis): latència mitjana $t_{\text{RAM}} = 0{,}15\text{ ms}$ ($150\text{ }\mu\text{s}$).
+- Consulta a taula de base de dades a disc SSD (RDBMS): latència mitjana $t_{\text{disc}} = 4\text{ ms}$.
+
+1. Si la plataforma rep $10.000$ peticions concurrents per segon, quant de temps de CPU/I/O total consumirà validar les sessions a través de Redis enfront de consultar directament la base de dades relacional a disc?
+2. Justifica per què la persistència políglota utilitza Redis com a capa de memòria cau frontal (*Cache*) per davant del SGBD relacional.
 
 ---
 
 ### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Creació d'una funció amb comprovació condicional
-- **Objectiu:** Crear una funció que classifique l'estat d'estoc d'un magatzem.
+#### Repte 1: Desplegament de MongoDB i operacions CRUD bàsiques
+- **Objectiu:** Desplegar un servidor MongoDB mitjançant contenidor Docker i executar consultes d'inserció i filtratge a la shell `mongosh`.
 - **Procediment de taller:**
-  1. Crea la funció `fn_estat_estoc(p_estoc INT, p_minim INT) RETURNS VARCHAR`:
-     ```sql
-     CREATE OR REPLACE FUNCTION fn_estat_estoc(p_estoc INT, p_minim INT)
-     RETURNS VARCHAR(20) AS $$
-     BEGIN
-         IF p_estoc <= 0 THEN
-             RETURN 'Esgotat';
-         ELSIF p_estoc < p_minim THEN
-             RETURN 'Crític';
-         ELSE
-             RETURN 'Normal';
-         END IF;
-     END;
-     $$ LANGUAGE plpgsql;
+  1. Executa el contenidor oficial de MongoDB:
+     ```bash
+     docker run --name mongo-taller -p 27017:27017 -d mongo:7
      ```
-  2. Executa una consulta `SELECT` que utilitze la funció sobre tots els registres de la taula `Productes`:
-     ```sql
-     SELECT codi_prod, nom, estoc, fn_estat_estoc(estoc, estoc_minim) AS estat
-     FROM Productes;
+  2. Connecta't a la consola interactiva:
+     ```bash
+     docker exec -it mongo-taller mongosh
+     ```
+  3. Crea la base de dades del taller i insereix tres documents de clients:
+     ```javascript
+     use taller_daw;
+     db.clients.insertMany([
+         { nif: "11111111A", nom: "Sofia Pla", ciutat: "València", compres: 12 },
+         { nif: "22222222B", nom: "Lluís Martí", ciutat: "Castelló", compres: 3 },
+         { nif: "33333333C", nom: "Mireia Soler", ciutat: "València", compres: 25 }
+     ]);
+     ```
+  4. Executa una cerca que trobe els clients de València amb més de 10 compres:
+     ```javascript
+     db.clients.find({ ciutat: "València", compres: { $gt: 10 } });
      ```
 
-#### Repte 2: Trigger de validació BEFORE (Lògica de negoci)
-- **Objectiu:** Evitar que s'introdueixin sous inferiors al salari mínim o increments superiors al 100%.
+#### Repte 2: Pipeline d'Agregació en MongoDB
+- **Objectiu:** Processar mètriques de vendes calculant la mitjana de compres per ciutat.
 - **Procediment de taller:**
-  1. Crea la funció de validació:
-     ```sql
-     CREATE OR REPLACE FUNCTION trg_validar_salari()
-     RETURNS TRIGGER AS $$
-     BEGIN
-         IF NEW.salari < 1134.00 THEN
-             RAISE EXCEPTION 'El salari (%.2f €) no pot ser inferior al Salari Mínim Interprofessional!', NEW.salari;
-         END IF;
-         IF TG_OP = 'UPDATE' AND NEW.salari > OLD.salari * 2 THEN
-             RAISE EXCEPTION 'No es permet duplicar el salari d''un empleat en una sola revisió!';
-         END IF;
-         RETURN NEW;
-     END;
-     $$ LANGUAGE plpgsql;
+  1. A la mateixa col·lecció de clients, executa el següent pipeline d'agregació:
+     ```javascript
+     db.clients.aggregate([
+         { $group: {
+             _id: "$ciutat",
+             total_clients: { $sum: 1 },
+             mitjana_compres: { $avg: "$compres" }
+         }},
+         { $sort: { total_clients: -1 } }
+     ]);
      ```
-  2. Crea el trigger:
-     ```sql
-     CREATE TRIGGER tr_valida_salari_emp
-     BEFORE INSERT OR UPDATE ON Empleats
-     FOR EACH ROW EXECUTE FUNCTION trg_validar_salari();
-     ```
-  3. Intenta inserir un empleat amb salari de $800\text{ €}$ i comprova que el trigger bloqueja l'operació emetent el missatge d'error configurat.
+  2. Documenta el resultat obtingut i compara la sintaxi JSON d'etapes enfront del `GROUP BY` i `ORDER BY` tradicional d'SQL.
 
-#### Repte 3: Processament per cursor explícit
-- **Objectiu:** Recórrer una taula de comandes per calcular i mostrar comissions individuals.
+#### Repte 3: Memòria cau en memòria RAM amb Redis
+- **Objectiu:** Experimentar amb claus temporals amb temps de vida (TTL) a Redis.
 - **Procediment de taller:**
-  1. Escriu un bloc procedural anònim en PL/pgSQL que òbriga un cursor sobre totes les comandes no liquidades, calcule una comissió del 3% per a cadascuna i mostre per consola (*RAISE NOTICE*) el codi de comanda i la comissió resultant.
-  2. Comprova la sortida al panell de missatges de DBeaver o pgAdmin.
+  1. Desplega un contenidor de Redis:
+     ```bash
+     docker run --name redis-taller -p 6379:6379 -d redis:alpine
+     ```
+  2. Obre la consola `redis-cli`:
+     ```bash
+     docker exec -it redis-taller redis-cli
+     ```
+  3. Desa una sessió d'usuari amb expiració automàtica de 30 segons:
+     ```bash
+     SETEX session_token_usr99 30 "user_id:99;role:editor"
+     ```
+  4. Consulta el valor amb `GET session_token_usr99` i comprova el temps restant amb `TTL session_token_usr99`.
+  5. Espera que transcórreguen els 30 segons i torna a executar el `GET`: comprova que Redis retorna `(nil)` en haver destruït la clau automàticament de la memòria RAM.
 
 ---
 
 ### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 #### Llista de comprovació per a l'alumnat
-- [ ] He explicat els avantatges d'executar procediments al servidor de bases de dades en lloc de l'aplicació client.
-- [ ] He diferenciat clarament un procediment (`CALL`) d'una funció (`SELECT ... RETURNS`).
-- [ ] He utilitzat paràmetres `IN`, `OUT` i `INOUT` en rutines emmagatzemades.
-- [ ] He utilitzat estructures de control de flux (`IF/THEN/ELSE`, bucles `WHILE` i `FOR`).
-- [ ] He implementat cursors per processar registres fila a fila amb instruccions `FETCH`.
-- [ ] He diferenciat els triggers `BEFORE` (validació/modificació) dels triggers `AFTER` (auditoria).
-- [ ] He utilitzat correctament les variables pseudo-registre `OLD` i `NEW` segons l'operació DML.
+- [ ] He explicat les causes de l'aparició de NoSQL davant les limitacions d'escalabilitat vertical dels RDBMS.
+- [ ] He diferenciat l'escalabilitat vertical (*Scale-Up*) de l'escalabilitat horitzontal (*Scale-Out*).
+- [ ] He descrit el Teorema CAP (Consistència, Disponibilitat, Tolerància a la Partició) i la seua aplicació pràctica.
+- [ ] He comparat les garanties del model ACID amb la consistència eventual del model BASE.
+- [ ] He classificat els SGBD NoSQL en les 4 famílies: documentals, clau-valor, columnars i grafs.
+- [ ] He executat operacions CRUD bàsiques i pipelines d'agregació a MongoDB en format BSON.
+- [ ] He definit el concepte de persistència políglota i la integració de bases de dades vectorials per a IA.
 
 #### Rúbrica d'avaluació d'aprenentatge
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Rutines Servidor (Procediments i Funcions)** | Construeix funcions escalars i procediments modulars amb paràmetres IN/OUT i gestió d'errors impecable. | Implementa funcions que retornen valors i procediments funcionals amb sintaxi correcta. | Crea funcions senzilles amb suport de plantilles però confon paràmetres IN amb OUT. | Incapaç de crear una funció o confon el llenguatge procedural amb consultes SQL pures. |
-| **Lògica de Control i Variables** | Utilitza variables locals, condicionals imbricats i bucles iteratius resolent algorismes de negoci complexos. | Aplica estructures IF i bucles per controlar el flux del programa sense bloquejos infinits. | Utilitza condicionals bàsics però comet errors en la sintaxi de tancament (END IF/END LOOP). | Codi procedural desestructurat o crea bucles infinits que col·lapsen la connexió. |
-| **Ús de Cursors i Excepcions** | Domina el cicle complet de cursors (DECLARE, OPEN, FETCH, CLOSE), gestiona excepcions amb handlers i evita fugides de recursos. | Recorre conjunts de dades amb cursors assignant valors a variables amb èxit. | Obre i tanca cursors bàsics però té dificultats per controlar la condició de finalització (NOT FOUND). | Desconeix el propòsit d'un cursor o deixa cursors oberts consumint recursos del servidor. |
-| **Disparadors (Triggers) i Auditoria** | Dissenya triggers BEFORE per a validacions complexes i triggers AFTER per a sistemes complets d'auditoria amb variables OLD/NEW. | Configura triggers a nivell de fila per validar dades i registrar operacions senzilles. | Crea un trigger bàsic seguint la guia però confon l'ús de les variables OLD i NEW. | Provoca bucles infinits de triggers (un trigger que es dispara a ell mateix) o no entén quan s'activen. |
-| **Optimització i Seguretat de Rutines** | Justifica la reducció de trànsit de xarxa, avalua l'impacte d'índexs en triggers i blinda la seguretat amb permisos d'execució. | Comprèn els beneficis d'eficiència i seguretat d'encapsular codi al SGBD. | Sap que el codi s'executa al servidor però no sap mesurar l'impacte en temps de resposta. | Creu que és millor fer tota la lògica al client web sense aprofitar les capacitats del SGBD. |
+| **Fonaments NoSQL i Escalabilitat** | Justifica amb rigor el canvi de paradigma, diferenciant l'escalabilitat horitzontal per sharding de l'escalabilitat vertical de maquinari. | Comprèn les limitacions de volum i concurrència dels RDBMS i per què NoSQL utilitza esquemes flexibles. | Identifica NoSQL com a bases de dades sense taules però té dubtes sobre com s'escalen en clúster. | Creu que NoSQL substitueix completament a SQL per a qualsevol projecte informàtic. |
+| **Teorema CAP i Model BASE** | Analitza el Teorema CAP, classifica sistemes CP vs AP davant particions de xarxa i compara ACID amb la consistència eventual BASE. | Explica les tres sigles de CAP i per què no es poden complir totes tres alhora en sistemes distribuïts. | Sap que el Teorema CAP parla de consistència i disponibilitat però confon els termes. | Desconeix el Teorema CAP o creu que un sistema distribuït pot ser 100% consistent i disponible sempre. |
+| **Famílies NoSQL i Selecció de Model** | Compara detalladament els quatre paradigmes NoSQL (documentals, clau-valor, columnars, grafs) seleccionant el motor òptim segons el problema. | Identifica MongoDB per a documents, Redis per a memòria cau i Neo4j per a grafs amb exemples d'ús. | Coneix MongoDB i Redis però confon les bases de dades columnars amb les relacionals. | Incapaç de distingir una base de dades documental d'un magatzem clau-valor. |
+| **Operacions CRUD i Agregació a MongoDB** | Construeix consultes complexes amb operadors de comparació, arrays niats i pipelines d'agregació ($match, $group) impecables. | Executa insercions, consultes find() i actualitzacions a MongoDB amb sintaxi JSON correcta. | Realitza cerques senzilles a MongoDB seguint la guia però comet errors en filtrar per camps niats. | Errors constants de sintaxi BSON a la consola mongosh o no sap com consultar una col·lecció. |
+| **Persistència Políglota i Tendències (IA)** | Dissenya arquitectures que integren harmònicament RDBMS, Redis i bases de dades vectorials (pgvector/embeddings) per a aplicacions modernes. | Explica com combinar un SGBD relacional per a facturació amb Redis per a sessions i MongoDB per a catàleg. | Comprèn que es poden utilitzar dues bases de dades a la vegada però no sap com repartir les dades. | Rebutja la coexistència de tecnologies i intenta resoldre tot el programari amb un sol motor inadequat. |
+

@@ -1,240 +1,244 @@
----
+﻿---
 layout: default
-title: "UD2: Emmagatzematge de la Informació, Models de Dades i Introducció al Model Relacional — Bases de Dades"
+title: "UD2: Disseny Conceptual. El Model Entitat-Relació (E/R) i E/R Estès — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD2"
-next_url: "ut0201.html"
-next_label: "2.1 ➡️"
+badge: "1r DAW / DAM · Grau Superior · UD3"
+next_url: "../ut03/index.html"
+next_label: "UD3: Disseny LÃ²gic i NormalitzaciÃ³ âž¡ï¸"
 ---
 
-# UD2: Emmagatzematge de la Informació, Models de Dades i Introducció al Model Relacional
+# UD2: Disseny Conceptual. El Model Entitat-Relació (E/R) i E/R Estès
 
 <div style="text-align: center; margin: 1.5rem 0;">
 <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
   <defs>
-    <linearGradient id="bg-grad-db2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg-grad-db3" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="g-mod" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-ent" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-rel" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-car" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-key" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-eer" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-int" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-met" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db2)"/>
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db3)"/>
 
   <!-- Capçalera -->
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">MODELS DE DADES I FONAMENTS DEL MODEL RELACIONAL DE CODD</text>
-  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Models conceptuals vs lògics, relacions, tuples, dominis, superclaus i integritat d'entitat i referencial</text>
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">DISSENY CONCEPTUAL: MODEL ENTITAT-RELACIÓ (E/R) I EXTÈS (EER)</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Entitats fortes i febles, atributs compostos/multivalorats, cardinalitats (min, max) i jerarquies d'herència</text>
 
-  <!-- Bloc 1: Models de Dades -->
+  <!-- Bloc 1: Entitats i Atributs -->
   <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-mod)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-ent)" stroke="#38bdf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">📊</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Models de Dades</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Nivells d'Abstracció</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Model Conceptual (E/R)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Model Lògic (Relacional)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Model Físic (Índexs/Disc)</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Estructura, operacions, regles</text>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">📦</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Entitats &amp; Camps</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Blocs Fonamentals</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Entitat forta (autònoma)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Entitat feble (dependent)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Atributs simples/compostos</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Multivalorats &amp; Derivats</text>
   </g>
 
-  <!-- Bloc 2: El Model Relacional -->
+  <!-- Bloc 2: Relacions i Cardinalitat -->
   <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-rel)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-car)" stroke="#818cf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">📐</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Model Relacional</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Teoria de Conjunts</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Relació = Taula matemàtica</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Tupla = Fila / Registre</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Atribut = Columna / Camp</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Grau (cols) &amp; Cardinalitat</text>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🔗</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Relacions &amp; Rols</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Semàntica d'Enllaç</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Tipus: 1:1, 1:N i M:N</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Cardinalitat (min, max)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Relacions reflexives (unàries)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Relacions ternàries (n-àries)</text>
   </g>
 
-  <!-- Bloc 3: Claus i Identificadors -->
+  <!-- Bloc 3: Model E/R Estès -->
   <g transform="translate(435, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-key)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-eer)" stroke="#34d399" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🔑</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Teoria de Claus</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Identificació Única</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Superclau &amp; Claus candidates</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Clau primària (PK triada)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Claus alternatives / secundàries</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Clau forana (FK referència)</text>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🧬</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Model EER Estès</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Jerarquies d'Herència</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Superclasse &amp; Subclasses</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Disjunció: Exclusiva vs Solap</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Completesa: Total vs Parcial</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Herència d'atributs i claus</text>
   </g>
 
-  <!-- Bloc 4: Regles d'Integritat -->
+  <!-- Bloc 4: Metodologia de Disseny -->
   <g transform="translate(640, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-int)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-met)" stroke="#f59e0b" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">🛡️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Regles Integritat</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Consistència Codd</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Integritat de Domini (tipus)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Integritat d'Entitat (PK != NULL)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Integritat Referencial (FK)</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Tractament de valors NULL</text>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">📐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Metodologia CASE</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Requisits a Diagrama</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Anàlisi del discurs del client</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Detecció d'entitats i verbs</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Paranys: Fan &amp; Chasm Trap</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Validació del model semàntic</text>
   </g>
 </svg>
 </div>
 
-Models de dades i nivells d'abstracció, teoria formal del model relacional d'Edgar F. Codd, conceptes de relació, atribut, domini i tupla, teoria de claus (superclaus, candidates, primàries i foranes), restriccions d'integritat i tractament de valors nuls en lògica trivaluada.
+Fases del cicle de vida del disseny de bases de dades, el model conceptual Entitat-Relació (Peter Chen), tipus d'entitats i atributs, cardinalitats estructurals $(min, max)$, relacions reflexives i d'ordre superior, model Entitat-Relació Estès (EER) amb jerarquies d'especialització i resolució de paranys de connexió.
 
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **2.1** | **Concepte i classificació dels models de dades** | [**Llegir apartat →**](./ut0201.html) |
-| **2.2** | **Fonaments matemàtics del model relacional** | [**Llegir apartat →**](./ut0202.html) |
-| **2.3** | **Teoria de claus: superclaus, candidates i claus primàries** | [**Llegir apartat →**](#23-teoria-de-claus-superclaus-candidates-i-claus-primàries) |
-| **2.4** | **Regles d'integritat del model relacional** | [**Llegir apartat →**](#24-regles-dintegritat-del-model-relacional) |
-| **2.5** | **El valor nul (NULL) i la lògica trivaluada (3VL)** | [**Llegir apartat →**](#25-el-valor-nul-null-i-la-lògica-trivaluada-3vl) |
+| **3.1** | **Fases metodològiques del disseny de bases de dades** | [**Llegir apartat →**](./ut0301.html) |
+| **3.2** | **El Model Entitat-Relació: entitats i tipologia d'atributs** | [**Llegir apartat →**](./ut0302.html) |
+| **3.3** | **Relacions, rols i cardinalitats estructurals** | [**Llegir apartat →**](#33-relacions-rols-i-cardinalitats-estructurals) |
+| **3.4** | **El Model Entitat-Relació Estès (EER): jerarquies d'herència** | [**Llegir apartat →**](#34-el-model-entitat-relació-estès-eer-jerarquies-dherència) |
+| **3.5** | **Paranys semàntics de connexió: Fan Trap i Chasm Trap** | [**Llegir apartat →**](#35-paranys-semàntics-de-connexió-fan-trap-i-chasm-trap) |
 
 ---
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 2.1 Concepte i classificació dels models de dades
+## 3.1 Fases metodològiques del disseny de bases de dades
 
-Un **model de dades** és una col·lecció d'eines conceptuals i matemàtiques que s'utilitzen per descriure les dades, les seues relacions mútues, la seua semàntica i les condicions de consistència que han de complir en tot moment.
+El disseny professional d'una base de dades no comença mai obrint una consola SQL per escriure sentències `CREATE TABLE`. Per garantir que el sistema siga robust, escalable i sense redundàncies, es segueix un procés estructurat en **tres fases successives d'abstracció**:
 
-Tot model de dades formal està compost per tres elements fonamentals:
-1. **Part estructural:** Defineix com s'organitzen les dades (entitats, atributs, taules, arbres, grafs).
-2. **Part manipulativa / operacions:** Conjunt d'operacions permeses per consultar, inserir, modificar i eliminar dades (àlgebra relacional, càlcul relacional, SQL, mètodes NoSQL).
-3. **Part d'integritat:** Conjunt de regles que garanteixen que les dades reflecteixen un estat vàlid i coherent del món real.
+```
++-----------------------------------------------------------+
+|               1. DISSENY CONCEPTUAL                       |
+|   Objectiu: Comprendre el negoci sense pensar en el SGBD  |
+|   Eina: Model Entitat-Relació (E/R / EER)                 |
++-----------------------------------------------------------+
+                             |
+                             v  Regles de Transformació Relacional
++-----------------------------------------------------------+
+|               2. DISSENY LÒGIC                            |
+|   Objectiu: Adaptar l'esquema al model del SGBD triat     |
+|   Eines: Esquema Relacional (Taules, PK, FK) + 3FN/BCNF   |
++-----------------------------------------------------------+
+                             |
+                             v  Optimització d'Emmagatzematge
++-----------------------------------------------------------+
+|               3. DISSENY FÍSIC                            |
+|   Objectiu: Rendiment físic en maquinari concret          |
+|   Eines: SQL DDL, Índexs B-Tree, Particionament, Discs    |
++-----------------------------------------------------------+
+```
 
----
-
-### Classificació dels models segons el nivell d'abstracció
-1. **Models Conceptuals (Alt nivell):**
-   - Propers a la visió dels usuaris de negoci. Representen la realitat independentment de quin programari o SGBD s'utilitze posteriorment.
-   - El model de referència internacional és el **Model Entitat-Relació (E/R)** de Peter Chen.
-2. **Models Lògics (Nivell intermedi):**
-   - Implementables directament en un SGBD comercial o de codi obert, però encara independents de l'estructura física de discs.
-   - Principals paradigmes històrics i actuals:
-     - **Model Relacional:** Basat en taules bidimensionals i teoria matemàtica de conjunts. L'estàndard dominant des dels anys 80.
-     - **Model Jeràrquic:** Organització en arbre estricte pare-fill (ex. IBM IMS).
-     - **Model en Xarxa (CODASYL):** Permet grafs arbitraris amb múltiples pares.
-     - **Model NoSQL (Documental, Clau-Valor, Columnar, Graf):** Models moderns per a escalabilitat horitzontal i esquemes flexibles.
-3. **Models Físics (Baix nivell):**
-   - Descriuen com s'ordenen els registres als sectors del disc, formats de blocatge, agrupaments (*clusters*) i estructures d'índexs (arbres B+Tree, taules hash).
-
----
-
-## 2.2 Fonaments matemàtics del model relacional
-
-El **Model Relacional** va ser proposat el juny de 1970 pel matemàtic britànic **Edgar Frank Codd** en el seu article fundacional *"A Relational Model of Data for Large Shared Data Banks"*, publicat a la revista *Communications of the ACM*. Codd va demostrar que les dades es podien gestionar amb rigor matemàtic recolzant-se en la **teoria de conjunts** i la **lògica de predicats de primer ordre**.
-
-### Nomenclatura matemàtica formal vs Terminologia SQL pràctica
-| Concepte Formal (Codd) | Concepte Pràctic (SQL / Taules) | Concepte Físic (Fitxers) |
-| :--- | :--- | :--- |
-| **Relació (*Relation*)** | **Taula (*Table*)** | Fitxer de dades |
-| **Tupla (*Tuple*)** | **Fila (*Row*) / Registre** | Registre físic (*Record*) |
-| **Atribut (*Attribute*)** | **Columna (*Column*) / Camp** | Camp físic (*Field*) |
-| **Domini (*Domain*)** | **Tipus de dades i restriccions** | Format de dades (VARCHAR, INT) |
-| **Grau d'una relació** | **Nombre de columnes** | Ample del registre |
-| **Cardinalitat d'una relació** | **Nombre de files** | Nombre de registres del fitxer |
+1. **Disseny Conceptual:**
+   - Analitza els requeriments del món real (entrevistes amb clients, formularis en paper, processos d'empresa) i els plasma en un diagrama gràfic independent de la tecnologia.
+2. **Disseny Lògic:**
+   - Transforma el diagrama conceptual en estructures admeses pel paradigma del SGBD escollit (en el cas relacional: taules, claus primàries i claus foranes) i aplica la **Teoria de la Normalització** per depurar redundàncies.
+3. **Disseny Físic:**
+   - Especifica com s'implementarà l'esquema lògic en el maquinari i SGBD específic (PostgreSQL, MySQL, Oracle): tipus de dades concrets, índexs d'accés, estratègies de particionament i volumetria de memòria cau.
 
 ---
 
-### Definicions formals clau
-1. **Domini ($D$):**
-   - Conjunt de valors atòmics (indivisibles) vàlids que pot prendre un determinat atribut. Per exemple:
-     $$D_{\text{Edat}} = \{x \in \mathbb{N} \mid 0 \le x \le 120\}$$
-2. **Relació ($R$):**
-   - Formalment, un esquema de relació $R(A_1, A_2, \dots, A_n)$ es defineix com un subconjunt del producte cartesià dels dominis dels seus atributs:
-     $$R \subseteq D(A_1) \times D(A_2) \times \dots \times D(A_n)$$
-   - Una relació és un **conjunt de tuples**, la qual cosa implica dues propietats matemàtiques essencials:
-     - **No hi ha tuples duplicades:** En un conjunt matemàtic, dos elements no poden ser idèntics. Cada fila ha de ser distingible de les altres mitjançant una clau.
-     - **L'ordre de les tuples és irrellevant:** Els conjunts no tenen ordre intrínsec; la fila 1 és igualment accessible que la fila 500.
-     - **L'ordre dels atributs és irrellevant:** Cada columna s'identifica pel seu nom, no per la seua posició numèrica.
-     - **Valors atòmics (1FN):** Cada cel·la de la taula només pot contenir un únic valor simple, mai llistes, arrays ni subtaules imbricades.
+## 3.2 El Model Entitat-Relació: entitats i tipologia d'atributs
+
+El **Model Entitat-Relació (E/R)** va ser formulat per **Peter Chen** el 1976 i s'ha convertit en l'estàndard gràfic universal per al disseny conceptual de bases de dades.
+
+### 1. Entitats
+Una **entitat** és qualsevol objecte o concepte del món real que és distingible de tots els altres i sobre el qual l'organització vol recollir informació:
+- **Entitats Físiques / Concretes:** Tenen existència material (ex. `Client`, `Vehicle`, `Producte`).
+- **Entitats Abstractes / Conceptuals:** Existeixen com a esdeveniments o conceptes legals/administratius (ex. `Comanda`, `Contracte`, `Vol`, `Matrícula`).
+- **Entitat Forta (*Regular Entity*):** Té existència pròpia independent a la base de dades i conté un atribut identificador únic propi (ex. `Client` amb el seu `nif`).
+- **Entitat Feble (*Weak Entity*):** La seua existència depèn obligatòriament d'una altra entitat (anomenada *entitat propietària*).
+  - *Dependència d'existència:* Si s'esborra l'entitat forta, l'entitat feble deixa de tindre sentit (ex. `LíniaFactura` respecte a `Factura`).
+  - *Dependència d'identificació:* No té prou atributs per formar una clau pròpia; necessita la clau de l'entitat forta més un **discriminador parcial** (ex. `número_línia` dins de cada factura).
 
 ---
 
-## 2.3 Teoria de claus: superclaus, candidates i claus primàries
-
-Com que en una relació no poden existir dues tuples idèntiques, és necessari establir mecanismes matemàtics per identificar unívocament cada fila:
-
-1. **Superclau (*Superkey*):**
-   - Qualsevol conjunt d'un o més atributs que permet identificar de manera única cada tupla dins d'una relació.
-   - Exemple a la taula `Alumnes(dni, nia, nom, cognoms, email)`:
-     - `{dni}` és superclau.
-     - `{nia}` és superclau.
-     - `{dni, nom}` també és superclau (identifica unívocament, tot i que té atributs redundants).
-2. **Clau Candidata (*Candidate Key*):**
-   - És una **superclau mínima**: un conjunt d'atributs que identifica unívocament cada fila tal que, si s'elimina qualsevol atribut del conjunt, deixa de ser superclau.
-   - Seguint l'exemple: `{dni}`, `{nia}` i `{email}` són claus candidates independents.
-3. **Clau Primària (PK - *Primary Key*):**
-   - És la clau candidata triada pel dissenyador de la base de dades com a identificador principal i oficial de la relació.
-   - Criteris de selecció: ha de ser immutable (que mai canvie), curta (preferiblement numèrica per a índexs ràpids) i mai podrà acceptar valors nuls (`NOT NULL`).
-4. **Clau Alternativa (*Alternate Key*):**
-   - Qualsevol clau candidata que no ha sigut escollida com a clau primària. En SQL es protegeix amb la restricció `UNIQUE NOT NULL`.
-5. **Clau Forana / Estrangera (FK - *Foreign Key*):**
-   - Un o més atributs d'una relació $R_1$ que fan referència directa a la clau primària d'una altra relació $R_2$ (o de la mateixa relació en cas de relació reflexiva).
-   - És el mecanisme fonamental per establir relacions lògiques entre taules sense duplicar informació.
+### 2. Atributs
+Propietats o característiques que descriuen una entitat:
+- **Atribut Simple / Atòmic:** No es pot subdividir en parts més petites amb significat propi (ex. `edat`, `preu`).
+- **Atribut Compost:** Es pot descompondre en components més petits (ex. `adreça` es descompon en `carrer`, `número`, `codi_postal` i `ciutat`).
+- **Atribut Monovalorat:** Només pot prendre un únic valor per a cada instància d'entitat (ex. `data_naixement`).
+- **Atribut Multivalorat:** Pot prendre diversos valors simultàniament per a la mateixa instància (ex. `telèfons` o `idiomes_parlats`). En notació E/R es representa amb una doble línia.
+- **Atribut Derivat / Calculat:** El seu valor no s'emmagatzema directament, sinó que es pot deduir a partir d'altres dades existents (ex. `edat` derivada de la `data_naixement` i la data actual).
+- **Atribut Identificador / Clau:** Atribut els valors del qual són únics per a cada instància (ex. `codi_producte`).
 
 ---
 
-## 2.4 Regles d'integritat del model relacional
+## 3.3 Relacions, rols i cardinalitats estructurals
 
-El model relacional imposa un conjunt de restriccions que el SGBD ha de validar abans d'acceptar qualsevol operació de creació o modificació (`INSERT`, `UPDATE`, `DELETE`):
-
-### 1. Integritat de Domini
-- El valor de cada atribut ha de pertànyer obligatòriament al domini definit (tipus de dades enter, cadena, data) i complir les restriccions de rang (`CHECK`).
-
-### 2. Integritat d'Entitat (*Entity Integrity*)
-- **Cap atribut que forme part de la Clau Primària pot ser mai nul (`NULL`)**:
-  $$\forall t \in R, \quad t[PK] \neq \text{NULL}$$
-- Raonament: Si una clau primària fóra nul·la, no es podria identificar unívocament eixa fila ni referenciar-la des d'altres taules.
-
-### 3. Integritat Referencial (*Referential Integrity*)
-- Si una relació $R_1$ té una clau forana $FK$ que apunta a la clau primària $PK$ de la relació $R_2$:
-  - Cada valor de $FK$ a $R_1$ ha de coincidir exactament amb un valor existent de $PK$ a $R_2$, o bé ha de ser completament `NULL` (si la regla de negoci permet que no hi haja associació).
-- **Polítiques de manteniment davant esborrats i modificacions a la taula mestre ($R_2$):**
-  - **`ON DELETE RESTRICT` / `NO ACTION` (per defecte):** Impedeix esborrar la fila pare si té files filles que la referencien.
-  - **`ON DELETE CASCADE`:** Si s'esborra el pare, s'esborren automàticament totes les files filles relacionades en cascada.
-  - **`ON DELETE SET NULL`:** Si s'esborra el pare, la clau forana de les files filles passa a tindre valor `NULL`.
+Una **relació** és una associació semàntica o correspondència lògica entre dues o més entitats:
+- **Grau de la relació:** El nombre d'entitats que participen en la relació:
+  - *Unària / Reflexiva (grau 1):* Una entitat es relaciona amb ella mateixa (ex. `Empleat` *supervisa a* altres `Empleats`). Requereix especificar **rols** (*cap* i *subordinat*).
+  - *Binària (grau 2):* Dues entitats participants (el cas més habitual: `Client` *realitza* `Comanda`).
+  - *Ternària (grau 3):* Tres entitats connectades simultàniament (ex. `Metge` recepta `Medicament` a `Pacient`).
 
 ---
 
-## 2.5 El valor nul (NULL) i la lògica trivaluada (3VL)
+### Connectivitat i Cardinalitat Estructural $(min, max)$
+La semàntica d'una relació binària es defineix mitjançant el parell de valors **$(min, max)$** amb què cada entitat participa en la relació:
+- **Cardinalitat mínima ($min$):** Nombre mínim d'instàncies d'una entitat que han de participar en la relació ($0$ indica participació opcional; $1$ indica participació obligatòria).
+- **Cardinalitat màxima ($max$):** Nombre màxim d'instàncies que poden participar ($1$ o $N$).
 
-En bases de dades relacionals, el valor **`NULL`** no és el número zero (`0`) ni una cadena de text buida (`""`). Representa l'**absència de valor**, que pot correspondre a dues situacions:
-1. **Valor desconegut:** L'atribut té un valor en la realitat, però encara no es coneix (per exemple, el telèfon d'un client nou).
-2. **Valor inaplicable:** L'atribut no té sentit per a eixa tupla (per exemple, la data de carnet de conduir per a una persona que no condueix).
+### Tipus de relacions binàries segons la connectivitat màxima:
+1. **Un a Un ($1:1$):**
+   - Cada instància d'A es relaciona com a màxim amb una instància de B, i viceversa.
+   - Exemple: `Ciutadà` $(0,1)$ --- *posseeix* --- $(1,1)$ `Passaport`.
+2. **Un a Molts ($1:N$):**
+   - Cada instància d'A es pot relacionar amb múltiples instàncies de B, però cada instància de B només es relaciona amb una d'A.
+   - Exemple: `Departament` $(1,n)$ --- *té* --- $(1,1)$ `Empleat`.
+3. **Molts a Molts ($M:N$):**
+   - Una instància d'A es pot relacionar amb múltiples instàncies de B, i cada instància de B es pot relacionar amb múltiples d'A.
+   - Exemple: `Estudiant` $(1,n)$ --- *es matricula en* --- $(0,n)$ `Assignatura`.
 
-### La lògica trivaluada (*Three-Valued Logic* - 3VL)
-Com que `NULL` representa una incògnita, qualsevol comparació aritmètica o lògica amb `NULL` no avalua ni a `TRUE` ni a `FALSE`, sinó a **`UNKNOWN`** (desconegut):
+---
 
-| Operació | Expressió SQL | Resultat Booleà |
-| :--- | :--- | :---: |
-| Comparació d'igualtat | `salari = NULL` | **`UNKNOWN`** (Mai serà TRUE!) |
-| Comprovació correcta | `salari IS NULL` | **`TRUE`** (si el camp és nul) |
-| Negació correcta | `salari IS NOT NULL` | **`TRUE`** (si el camp té valor) |
-| Operació lògica AND | `TRUE AND UNKNOWN` | **`UNKNOWN`** |
-| Operació lògica AND | `FALSE AND UNKNOWN` | **`FALSE`** |
-| Operació lògica OR | `TRUE OR UNKNOWN` | **`TRUE`** |
-| Operació lògica OR | `FALSE OR UNKNOWN` | **`UNKNOWN`** |
+## 3.4 El Model Entitat-Relació Estès (EER): jerarquies d'herència
 
-> [!IMPORTANT]
-> A les consultes SQL amb clàusula `WHERE`, **només es retornen les files la condició de les quals avalua a `TRUE`**. Les files que avaluen a `FALSE` o a `UNKNOWN` queden automàticament descartades!
+Quan el modelatge del món real requereix representar conceptes orientats a objectes (generalització i especialització), s'utilitza el **Model Entitat-Relació Estès (EER)**.
+
+### Conceptes de Superclasse i Subclasse
+- **Superclasse:** Entitat genèrica que conté atributs comuns a tots els subtipus (ex. `Persona`).
+- **Subclasse:** Entitat específica que hereta tots els atributs i relacions de la superclasse, i afegeix atributs específics propis (ex. `Alumne`, `Professor`).
+
+---
+
+### Restriccions d'especialització
+Tota jerarquia d'herència es caracteritza per dues dimensions independents:
+
+#### 1. Restricció de Disjunció (Solapament):
+- **Disjunta / Exclusiva (`d` - *Disjoint*):** Una instància de la superclasse només pot pertànyer a **un sol subtipus** simultàniament.
+  - Exemple: Un `Vehicle` és `Turisme` o és `Camió`, però mai pot ser tots dos alhora.
+- **Solapada (`o` - *Overlapping*):** Una instància pot pertànyer a **múltiples subtipus** alhora.
+  - Exemple: En una universitat, una `Persona` pot ser simultàniament `Estudiant` i `Investigador`.
+
+#### 2. Restricció de Completesa (Participació):
+- **Total (Doble línia):** Tota instància de la superclasse ha de pertànyer **obligatòriament a almenys un subtipus**.
+  - Exemple: Tot `CompteBancari` ha de ser o bé `CompteCorrent` o bé `DipòsitEstalvi`.
+- **Parcial (Línia simple):** Poden existir instàncies de la superclasse que no pertanyen a cap de les subclasses definides.
+  - Exemple: Un `Empleat` pot no ser ni `Enginyer` ni `Comercial` (podria ser administratiu).
+
+---
+
+## 3.5 Paranys semàntics de connexió: Fan Trap i Chasm Trap
+
+Un dels errors més greus en el disseny conceptual és crear estructures de relacions que semblen correctes visualment però que provoquen ambigüitats en navegar entre dades:
+
+### 1. Parany de Ventilador (*Fan Trap*)
+- Es produeix quan un model representa una relació entre entitats, però la ruta entre elles és ambigua a causa de l'orientació de dues relacions $1:N$ que divergeixen d'una entitat central.
+- Estructura: $B \leftarrow (1:N) \leftarrow A \rightarrow (1:N) \rightarrow C$.
+- Problema: És impossible determinar quin registre de $B$ està associat amb un registre concret de $C$ sense informació addicional.
+- Solució: Reestructurar la jerarquia perquè la relació flueixi linealment ($A \rightarrow B \rightarrow C$).
+
+### 2. Parany de Buit / Fenedura (*Chasm Trap*)
+- Es produeix quan el camí entre dues entitats passa per una relació amb **participació opcional (cardinalitat mínima 0)**.
+- Problema: Si les instàncies intermediàries no existeixen, es trenca el camí lògic i no es pot consultar la connexió entre les entitats dels extrems.
 
 ---
 
@@ -242,125 +246,111 @@ Com que `NULL` representa una incògnita, qualsevol comparació aritmètica o l�
 
 ### Bloc A: Fonaments, Dimensionament i Anàlisi de Rendiment
 
-#### Exercici 1: Càlcul de grau, cardinalitat i combinatòria de producte cartesià
-Es disposa de dues relacions en una base de dades universitària:
-- Relació $R_1$: `Estudiants(nia, nom, cognoms, data_naixement, codi_grau)`
-  - Grau: $\text{Grau}(R_1) = 5$ atributs.
-  - Cardinalitat: $|R_1| = 2.400$ tuples.
-- Relació $R_2$: `Assignatures(codi_asig, nom_asig, credits)`
-  - Grau: $\text{Grau}(R_2) = 3$ atributs.
-  - Cardinalitat: $|R_2| = 180$ tuples.
+#### Exercici 1: Anàlisi de cardinalitats i participacions $(min, max)$ en un centre mèdic
+Analitza la descripció textual del funcionament d'un centre sanitari i dedueix el parell $(min, max)$ per a cadascuna de les entitats participants:
+1. *"Un pacient pot tindre registrat cap o diversos ingressos hospitalaris al llarg de la seua vida. Tot ingrés hospitalari correspon exactament a un únic pacient registrat."*
+   - Determina: $\text{Pacient} \rightarrow (min, max)$ i $\text{Ingrés} \rightarrow (min, max)$.
+2. *"A cada habitació de la planta es poden assignar entre 1 i 2 llits. Cada llit està ubicat obligatòriament en una única habitació concreta."*
+   - Determina: $\text{Habitació} \rightarrow (min, max)$ i $\text{Llit} \rightarrow (min, max)$.
+3. *"Un metge pot atendre molts pacients, i un pacient pot ser tractat per diversos metges especialistes al llarg del seu tractament. Un metge recent contractat podria no tindre cap pacient assignat encara."*
+   - Determina el tipus de connectivitat ($1:1$, $1:N$ o $M:N$) i les cardinalitats estructurals completes.
 
-1. Si un desenvolupador executa per error una consulta SQL que enllaça ambdues taules sense clàusula `WHERE` ni condició de combinació (generant un **Producte Cartesià** $R_1 \times R_2$):
-   - Calcula el grau resultant de la relació generada:
-     $$\text{Grau}(R_1 \times R_2) = \text{Grau}(R_1) + \text{Grau}(R_2) = \dots$$
-   - Calcula el nombre total de tuples que intentarà generar el motor SGBD:
-     $$|R_1 \times R_2| = |R_1| \cdot |R_2| = 2.400 \times 180 = \dots \text{ tuples}$$
-2. Si cada registre resultant del producte cartesià té una amplada mitjana en memòria de $120\text{ bytes}$, calcula quant espai de memòria RAM o fitxers temporals de disc consumirà la consulta i explica per què un producte cartesià no controlat pot col·lapsar un servidor de producció.
+#### Exercici 2: Matriu de combinatòria de jerarquies EER
+Completa la següent matriu classificant els 4 tipus teòrics de jerarquies d'especialització en el model EER i proposa un exemple real de modelatge per a cadascuna:
 
-#### Exercici 2: Identificació formal de superclaus i claus candidates
-Es defineix l'esquema de relació per a la matriculació de vehicles:
-$$\text{Vehicles}(matrícula, número\_bastidor, marca, model, nif\_propietari, telèfon\_propietari)$$
-Se sap per la legislació de trànsit que:
-- La matrícula és única per a cada vehicle nacional.
-- El número de bastidor (VIN) és únic a escala mundial per a cada vehicle fabricat.
-- El NIF identifica unívocament una persona, però una persona pot posseir diversos vehicles.
+| Dimensió de Completesa | Dimensió de Disjunció | Notació EER | Comportament Semàntic | Cas d'Ús Recomanat |
+| :--- | :--- | :---: | :--- | :--- |
+| **Total** | **Disjunta (Exclusiva)** | Total / `d` | Tota instància pertany obligatòriament a exactament 1 subtipus | |
+| **Total** | **Solapada** | Total / `o` | Tota instància pertany obligatòriament a 1 o diversos subtipus | |
+| **Parcial** | **Disjunta (Exclusiva)** | Parcial / `d` | Una instància pot no pertànyer a cap subtipus o com a màxim a 1 | |
+| **Parcial** | **Solapada** | Parcial / `o` | Una instància pot no pertànyer a cap subtipus o a diversos alhora | |
 
-1. Llista 3 superclaus formades per un únic atribut.
-2. Llista 3 superclaus que continguin atributs redundants (és a dir, que siguen superclaus però no mínimes).
-3. Identifica formalment quines són totes les **claus candidates** de la relació.
-4. Quina clau candidata recomanaries com a **Clau Primària (PK)** i per quines raons tècniques de disseny?
+#### Exercici 3: Diagnòstic i correcció d'un parany Fan Trap
+Es presenta el següent esquema conceptual per a una divisió d'empreses:
+- Entitat `Departament` $(1,n)$ --- *té* --- $(1,1)$ `Divisió`
+- Entitat `Departament` $(1,n)$ --- *ocupa* --- $(1,1)$ `Empleat`
 
-#### Exercici 3: Avaluació de condicions en lògica trivaluada (3VL)
-Donada una taula `Empleats` amb les següents dades:
-
-| id_emp | nom | departament | comissio |
-| :---: | :--- | :--- | :---: |
-| 1 | Marc | Vendes | 500 |
-| 2 | Anna | Informàtica | NULL |
-| 3 | Carles | Vendes | 0 |
-| 4 | Elena | Vendes | NULL |
-
-Determina quines tuples seran retornades en cadascuna de les següents consultes SQL avaluant la condició lógica per a cada fila (`TRUE`, `FALSE` o `UNKNOWN`):
-1. `SELECT * FROM Empleats WHERE comissio > 0;`
-2. `SELECT * FROM Empleats WHERE comissio = 0 OR comissio IS NULL;`
-3. `SELECT * FROM Empleats WHERE NOT (comissio > 0);` *(Atenció a la negació d'un valor UNKNOWN!)*
-4. Explica per què la fila d'Anna i la d'Elena no apareixen a la consulta 1 ni tampoc a la consulta 3.
+1. Explica per què si es vol consultar *"En quina divisió treballa l'empleat Marc?"*, aquest disseny produeix un **Fan Trap**.
+2. Dibuixa la reorganització semàntica correcta de les tres entitats per garantir que la relació siga no ambigua.
 
 ---
 
 ### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Creació d'esquema relacional amb restriccions d'integritat
-- **Objectiu:** Crear dues taules relacionades forçant integritat d'entitat i integritat referencial amb polítiques d'esborrat en cascada.
+#### Repte 1: Modelatge conceptual d'un comerç electrònic amb Mermaid
+- **Objectiu:** Elaborar el diagrama Entitat-Relació complet d'una botiga online utilitzant sintaxi estàndard Mermaid.
+- **Requisits del sistema:**
+  - `Client` (nif [PK], nom, email, adreça [carrer, cp, ciutat]).
+  - `Comanda` (id_comanda [PK], data, estat).
+  - `Producte` (id_prod [PK], descripció, preu_unitari, estoc).
+  - Un client pot realitzar múltiples comandes, però cada comanda pertany a un sol client.
+  - Una comanda pot incloure múltiples productes i un producte pot aparèixer en múltiples comandes (amb la quantitat d'unitats demanades en la relació).
 - **Procediment de taller:**
-  1. Obre el client SQL (DBeaver, pgAdmin o terminal de consola) i crea la taula pare:
-     ```sql
-     CREATE TABLE Departaments (
-         id_dept INT PRIMARY KEY,
-         nom_dept VARCHAR(50) NOT NULL UNIQUE,
-         pressupost NUMERIC(10, 2) CHECK (pressupost >= 0)
-     );
+  1. Redacta el diagrama de classes/ER en Mermaid:
+     ```mermaid
+     erDiagram
+         CLIENT ||--o{ COMANDA : "realitza"
+         COMANDA ||--|{ LINIA_COMANDA : "conté"
+         PRODUCTE ||--o{ LINIA_COMANDA : "apareix_en"
+         CLIENT {
+             string nif PK
+             string nom
+             string email
+         }
+         COMANDA {
+             int id_comanda PK
+             date data
+             string estat
+         }
+         LINIA_COMANDA {
+             int quantitat
+             float preu_aplicat
+         }
+         PRODUCTE {
+             int id_prod PK
+             string nom
+             float preu
+         }
      ```
-  2. Crea la taula filla vinculada mitjançant clau forana:
-     ```sql
-     CREATE TABLE Empleats (
-         id_emp INT PRIMARY KEY,
-         nom VARCHAR(100) NOT NULL,
-         id_dept INT,
-         CONSTRAINT fk_empleat_dept 
-             FOREIGN KEY (id_dept) REFERENCES Departaments(id_dept)
-             ON DELETE CASCADE
-     );
-     ```
-  3. Insereix dos departaments i tres empleats associats.
-  4. Executa `DELETE FROM Departaments WHERE id_dept = 1;` i comprova com el motor elimina automàticament els empleats vinculats per la clau forana en cascada.
+  2. Valida la coherència del model comprovant que la quantitat és un atribut de la relació $M:N$ i no pertany a l'entitat `Producte`.
 
-#### Repte 2: Comprovació pràctica de violació d'integritat
-- **Objectiu:** Experimentar com el SGBD protegeix la base de dades bloquejant instruccions que violen les regles del model relacional.
+#### Repte 2: Disseny d'un model amb entitat feble per identificació
+- **Objectiu:** Modelar una factura legal i les seues línies de detall associades.
 - **Procediment de taller:**
-  1. **Violació d'Integritat d'Entitat:** Intenta inserir una fila amb clau primària duplicada o nul·la:
-     ```sql
-     INSERT INTO Departaments (id_dept, nom_dept, pressupost) VALUES (NULL, 'Logística', 20000);
-     INSERT INTO Departaments (id_dept, nom_dept, pressupost) VALUES (2, 'Departament Duplicat', 15000);
-     ```
-     - Documenta el codi d'error emès pel SGBD (`duplicate key value violates unique constraint` o similar).
-  2. **Violació d'Integritat Referencial:** Intenta inserir un empleat assignat a un departament que no existeix:
-     ```sql
-     INSERT INTO Empleats (id_emp, nom, id_dept) VALUES (99, 'Vicent Test', 999);
-     ```
-     - Comprova el missatge d'error de violació de clau forana (`violates foreign key constraint`).
+  1. Identifica l'entitat forta `Factura` amb atributs `num_factura` (PK), `data_emissio` i `nif_client`.
+  2. Identifica l'entitat feble `LiniaFactura` amb els atributs `num_ordre` (discriminador parcial), `concepte`, `quantitat` i `preu_unitari`.
+  3. Dibuixa el diagrama marcant la doble caixa a l'entitat feble i el rombe de doble línia a la relació identificadora `es_composta_de`.
+  4. Justifica per què dues línies de factures diferents poden tindre el mateix `num_ordre = 1` sense entrar en conflicte de clau primària.
 
-#### Repte 3: Inspecció de metadades de claus i restriccions
-- **Objectiu:** Auditar mitjançant consultes a les taules de metadades quines claus foranes i primàries estan actives a la base de dades.
+#### Repte 3: Modelatge d'una jerarquia d'herència per a una flota de vehicles
+- **Objectiu:** Modelar un sistema de lloguer de transports utilitzant el model EER.
 - **Procediment de taller:**
-  1. En PostgreSQL, executa la comanda `\d Empleats` per veure les restriccions associades a la taula.
-  2. Consulta la vista estàndard ANSI `information_schema.table_constraints`:
-     ```sql
-     SELECT constraint_name, table_name, constraint_type
-     FROM information_schema.table_constraints
-     WHERE table_name IN ('departaments', 'empleats');
-     ```
-  3. Identifica les files corresponents a `PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE` i `CHECK`.
+  1. Defineix la superclasse `Vehicle` amb els atributs comuns: `matricula` (PK), `marca`, `model`, `preu_dia`.
+  2. Defineix les subclasses:
+     - `Turisme`: nombre_places, volum_maleter.
+     - `Furgoneta`: capacitat_carrega_kg, pma.
+     - `Motocicleta`: cilindrada_cc, tipus_carnet.
+  3. Classifica la jerarquia: és Total o Parcial? És Disjunta (`d`) o Solapada (`o`)? Justifica la resposta tenint en compte que un vehicle no pot ser simultàniament turisme i moto.
 
 ---
 
 ### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 #### Llista de comprovació per a l'alumnat
-- [ ] He definit els tres elements d'un model de dades: estructura, operacions i regles d'integritat.
-- [ ] He traduït correctament els termes formals de Codd (relació, tupla, atribut, domini) a la nomenclatura SQL (taula, fila, columna, tipus).
-- [ ] He calculat el grau i la cardinalitat d'una relació i el seu producte cartesià.
-- [ ] He diferenciat clarament una superclau d'una clau candidata i he seleccionat una clau primària adequada.
-- [ ] He justificat per què una clau primària no pot contenir valors nuls segons la regla d'integritat d'entitat.
-- [ ] He explicat el funcionament de la integritat referencial i les polítiques `ON DELETE CASCADE` i `RESTRICT`.
-- [ ] He resolt condicions lògiques que involucren valors `NULL` utilitzant la lògica trivaluada (3VL).
+- [ ] He distingit les tres fases del disseny: conceptual, lògic i físic.
+- [ ] He diferenciat una entitat forta d'una entitat feble (per existència i per identificació).
+- [ ] He classificat els atributs en simples, compostos, monovalorats, multivalorats i derivats.
+- [ ] He determinat les cardinalitats $(min, max)$ d'una relació a partir d'un text de requisits.
+- [ ] He dissenyat relacions reflexives indicant clarament els rols de cada extrem.
+- [ ] He definit jerarquies d'herència EER classificant les restriccions de disjunció (`d`/`o`) i completesa (total/parcial).
+- [ ] He detectat i resolt paranys semàntics de tipus *Fan Trap* i *Chasm Trap*.
 
 #### Rúbrica d'avaluació d'aprenentatge
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Model Relacional i Formalisme de Codd** | Domina la teoria matemàtica de conjunts, el concepte de relació i calcula graus i cardinalitats amb precisió analítica. | Relaciona correctament els conceptes teòrics de relació, tupla i atribut amb taules, files i columnes d'SQL. | Reconeix els conceptes bàsics de taula i camp però té dificultats amb el formalisme teòric. | Confon el model relacional amb estructures de fitxers o fulls de càlcul no relacionals. |
-| **Teoria de Claus (Superclaus i PK)** | Identifica totes les superclaus, determina les claus candidates mínimes i selecciona la clau primària més eficient. | Distingeix una clau candidata d'una superclau i identifica la clau primària d'una taula. | Reconeix que tota taula ha de tindre una clau primària però no sap identificar claus alternatives. | Incapaç d'identificar quins camps poden formar una clau primària o permet claus buides. |
-| **Restriccions d'Integritat (Entitat i FK)** | Implementa i audita regles d'integritat d'entitat, de domini i referencials amb polítiques de cascada i restricció. | Configura claus foranes i comprèn el concepte d'integritat referencial per evitar orfes. | Sap que una clau forana connecta dues taules però té dubtes sobre l'efecte de l'esborrat en cascada. | Desconeix la utilitat de les claus foranes o permet registres orfes sense control. |
-| **Tractament de Valors NULL i 3VL** | Analitza condicions complexes en lògica trivaluada (TRUE, FALSE, UNKNOWN) i utilitza adequadament `IS NULL` evitant errors d'avaluació. | Comprèn que `NULL` representa absència de valor i utilitza la sintaxi correcta `IS NULL` en lloc de `= NULL`. | Reconeix que un camp pot ser nul però s'equivoca en avaluar consultes lògiques amb valors nuls. | Creu que `NULL` és equivalent al número 0 o a una cadena buida en comparacions. |
-| **Laboratori DDL i Comprovació d'Errors** | Escriu codi DDL impecable forçant claus i restriccions i interpreta amb precisió els codis d'error de violació d'integritat. | Crea taules amb claus primàries i foranes funcionals i verifica els missatges d'error d'inserció. | Crea taules senzilles però requereix assistència per definir les restriccions d'integritat referencial. | No aconsegueix crear taules amb claus o ignora els errors de violació d'integritat. |
+| **Modelatge E/R i Entitats** | Dissenya esquemes E/R impecables identificant entitats fortes, febles amb discriminadors parcials i atributs multivalorats/compostos. | Identifica entitats i atributs clau del problema i utilitza correctament la notació de claus. | Modela entitats bàsiques però té dificultats per distingir atributs compostos o entitats febles. | Confon atributs amb entitats o és incapaç d'extreure entitats a partir d'un text de requisits. |
+| **Relacions i Cardinalitats (min, max)** | Especifica amb precisió matemàtica les cardinalitats $(min, max)$ i identifica relacions unàries reflexives amb rols clars. | Determina correctament la connectivitat $1:1$, $1:N$ i $M:N$ de les relacions binàries. | Assigna cardinalitats bàsiques però comet errors en distingir la cardinalitat mínima de la màxima. | Inverteix el sentit de les cardinalitats o no comprèn la diferència entre $1:N$ i $M:N$. |
+| **Jerarquies d'Herència (Model EER)** | Modela jerarquies superclasse/subclasse justificant amb rigor la completesa (Total/Parcial) i la disjunció (`d`/`o`). | Utilitza herència per evitar atributs nuls i comprèn el concepte de superclasse i subclasse. | Modela una herència senzilla però confon una jerarquia disjunta amb una solapada. | Desconeix el model EER i duplica atributs comuns en taules inconnexes. |
+| **Detecció de Paranys Semàntics** | Detecta i corregeix eficaçment paranys Fan Trap i Chasm Trap reestructurant el flux de relacions. | Reconeix estructures ambigües en el modelat conceptual i proposa rutes alternatives. | Identifica que hi ha una pèrdua d'informació però necessita ajuda per resoldre el Fan Trap. | No percep les ambigüitats semàntiques i dóna per vàlid un model amb pèrdua de traçabilitat. |
+| **Eines CASE i Sintaxi de Diagrama** | Representa diagrames complets amb eines CASE o sintaxi formal Mermaid amb estètica professional i sense redundàncies. | Utilitza programari de diagramació per generar esquemes E/R llegibles i ben estructurats. | Dibuixa diagrames manuals acceptables però amb omissions de notació formal. | Diagrames caòtics, il·legibles o sense respectar cap estàndard de representació. |
+

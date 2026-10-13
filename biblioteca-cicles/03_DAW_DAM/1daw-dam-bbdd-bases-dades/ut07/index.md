@@ -1,302 +1,292 @@
----
+﻿---
 layout: default
-title: "UD7: Consultes Avançades a Bases de Dades (SQL DQL) — Bases de Dades"
+title: "UD7: Programació de Bases de Dades (Procediments, Funcions, Triggers i Cursors) — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD7"
-next_url: "ut0701.html"
-next_label: "7.1 ➡️"
+badge: "1r DAW / DAM · Grau Superior · UD8"
+next_url: "../ut08/index.html"
+next_label: "UD8: Bases de Dades NoSQL âž¡ï¸"
 ---
 
-# UD7: Consultes Avançades a Bases de Dades (SQL DQL)
+# UD7: Programació de Bases de Dades (Procediments, Funcions, Triggers i Cursors)
 
 <div style="text-align: center; margin: 1.5rem 0;">
 <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
   <defs>
-    <linearGradient id="bg-grad-db7" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg-grad-db8" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="g-sel" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-prc" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-joi" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-ctl" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-grp" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-cur" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-sub" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-trg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db7)"/>
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db8)"/>
 
   <!-- Capçalera -->
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">CONSULTES AVANÇADES EN SQL (DQL - DATA QUERY LANGUAGE)</text>
-  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Filtratge WHERE, combinacions JOIN (Inner/Outer/Self), agregacions GROUP BY/HAVING i subconsultes</text>
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">PROGRAMACIÓ PROCEDURAL AL SERVIDOR DE BASES DE DADES</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Procediments emmagatzemats, funcions definides per l'usuari, cursors, control d'errors i disparadors (Triggers)</text>
 
-  <!-- Bloc 1: Projecció & Filtre -->
+  <!-- Bloc 1: Rutines Emmagatzemades -->
   <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-sel)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-prc)" stroke="#38bdf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🔍</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">SELECT &amp; Filtre</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Ordre Lògic SQL</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• SELECT, DISTINCT &amp; Àlies</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• WHERE: Operadors AND/OR/NOT</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Patrons LIKE, IN &amp; BETWEEN</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• ORDER BY, LIMIT &amp; OFFSET</text>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">⚙️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Rutines Servidor</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Procediments &amp; Funcions</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• CREATE PROCEDURE (acció)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• CREATE FUNCTION (retorn)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Paràmetres IN, OUT, INOUT</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Menor trànsit de xarxa</text>
   </g>
 
-  <!-- Bloc 2: Combinacions JOIN -->
+  <!-- Bloc 2: Estructures de Control -->
   <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-joi)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-ctl)" stroke="#818cf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🔗</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Combinacions JOIN</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Consultes Multitaula</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• INNER JOIN: Coincidències</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• LEFT / RIGHT OUTER JOIN</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• FULL OUTER &amp; CROSS JOIN</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• SELF JOIN &amp; clàusula USING</text>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🔄</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Lògica Procedural</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Flux d'Execució</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Condicionals IF / THEN / ELSE</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Bifurcacions CASE / WHEN</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Bucles WHILE, LOOP &amp; FOR</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Variables locals (DECLARE)</text>
   </g>
 
-  <!-- Bloc 3: Agrupament i Resum -->
+  <!-- Bloc 3: Cursors i Excepcions -->
   <g transform="translate(435, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-grp)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-cur)" stroke="#34d399" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📊</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">GROUP BY &amp; Resum</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Funcions Agregades</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• COUNT, SUM, AVG, MIN, MAX</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Agrupament GROUP BY</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Filtratge de grups HAVING</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Diferència WHERE vs HAVING</text>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📑</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Cursors &amp; Errors</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Processament Fila a Fila</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Cursors: DECLARE, OPEN</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• FETCH tupla a tupla</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Gestió d'errors i HANDLERS</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Excepcions i RAISE / SIGNAL</text>
   </g>
 
-  <!-- Bloc 4: Subconsultes & Conjunts -->
+  <!-- Bloc 4: Disparadors (Triggers) -->
   <g transform="translate(640, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-sub)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-trg)" stroke="#f59e0b" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">💡</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Subconsultes</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Consultes Avançades</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Subconsultes escalars &amp; llista</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Operadors IN, ANY, ALL</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Subconsultes correlacionades</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Conjunts: UNION, INTERSECT</text>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">⚡</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Disparadors</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Automatització DML</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• BEFORE / AFTER (Ins/Up/Del)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• FOR EACH ROW a nivell de fila</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Taules especials OLD i NEW</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Pistas d'auditoria automàtiques</text>
   </g>
 </svg>
 </div>
 
-El Llenguatge de Consulta de Dades (SQL DQL: SELECT), ordre d'execució lògica de consultes, combinacions multitaula (INNER, LEFT, RIGHT, FULL, SELF JOIN), funcions d'agregació estadística, agrupaments amb GROUP BY i filtratge de grups mitjançant HAVING, subconsultes escalars, correlacionades i operacions de conjunts.
+Fonaments de la programació del costat del servidor de bases de dades, sintaxi procedural en PL/pgSQL i MySQL, procediments emmagatzemats, funcions escalars i de taula, estructures de control de flux, cursors per al processament fila a fila, gestió d'excepcions i disseny de disparadors (Triggers) per a l'auditoria i compliment de regles de negoci.
 
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **7.1** | **Estructura i ordre lògic d'execució d'una consulta SQL** | [**Llegir apartat →**](./ut0701.html) |
-| **7.2** | **Combinacions multitaula: tipus de JOIN i autocombinació** | [**Llegir apartat →**](./ut0702.html) |
-| **7.3** | **Funcions d'agregació, GROUP BY i la clàusula HAVING** | [**Llegir apartat →**](#73-funcions-dagregació-group-by-i-la-clàusula-having) |
-| **7.4** | **Subconsultes: escalars, de llista i correlacionades (EXISTS)** | [**Llegir apartat →**](#74-subconsultes-escalars-de-llista-i-correlacionades-exists) |
-| **7.5** | **Operacions de conjunts: UNION, INTERSECT i EXCEPT** | [**Llegir apartat →**](#75-operacions-de-conjunts-union-intersect-i-except) |
+| **8.1** | **Fonaments de la lògica emmagatzemada i dialectes procedurals** | [**Llegir apartat →**](./ut0801.html) |
+| **8.2** | **Funcions i procediments emmagatzemats: paràmetres IN, OUT i INOUT** | [**Llegir apartat →**](./ut0802.html) |
+| **8.3** | **Estructures de control de flux: condicionals i bucles** | [**Llegir apartat →**](#83-estructures-de-control-de-flux-condicionals-i-bucles) |
+| **8.4** | **Cursors i gestió d'excepcions** | [**Llegir apartat →**](#84-cursors-i-gestió-dexcepcions) |
+| **8.5** | **Disparadors (Triggers): automatització d'esdeveniments i auditoria** | [**Llegir apartat →**](#85-disparadors-triggers-automatització-desdeveniments-i-auditoria) |
 
 ---
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 7.1 Estructura i ordre lògic d'execució d'una consulta SQL
+## 8.1 Fonaments de la lògica emmagatzemada i dialectes procedurals
 
-La sentència `SELECT` és el cor del llenguatge SQL per extreure informació de la base de dades. Tot i que s'escriu començant per la paraula `SELECT`, el motor SGBD **no l'executa en l'ordre en què està escrita**, sinó seguint un **ordre lògic d'execució estricte**:
+Mentre que l'SQL estàndard és un llenguatge **declaratiu** (li diem al SGBD *què* volem obtenir, però no pas *com* calcular-ho pas a pas), certes regles de negoci requereixen lògica seqüencial, condicional i iterativa. Els motors relacionals incorporen extensions **procedurals** que s'executen directament dins del nucli del servidor.
 
-```
-ORDRE D'ESCRIPTURA EN SQL:              ORDRE REAL D'EXECUCIÓ AL MOTOR:
-1. SELECT [DISTINCT] columnes            1. FROM (i clàusules JOIN)  -> Selecciona origen de dades
-2. FROM taula                             2. WHERE                    -> Filtra files individuals
-3. [JOIN altra_taula ON condició]         3. GROUP BY                 -> Agrupa tuples per clau
-4. WHERE condicions_fila                  4. HAVING                   -> Filtra grups agregats
-5. GROUP BY columnes_agrupament           5. SELECT                   -> Projecta columnes i àlies
-6. HAVING condicions_grup                 6. DISTINCT                 -> Elimina files duplicades
-7. ORDER BY columnes_ordenacio            7. ORDER BY                 -> Ordena el resultat final
-8. LIMIT n OFFSET m                       8. LIMIT / OFFSET           -> Paginació final
-```
-
-> [!NOTE]
-> Com que `WHERE` s'executa abans que `SELECT`, **mai es pot utilitzar un àlies creat al `SELECT` dins de la clau `WHERE`**! En canvi, sí que es pot utilitzar a `ORDER BY`, ja que aquest s'executa després de la projecció.
+### Avantatges d'executar codi al servidor de bases de dades:
+1. **Reducció dràstica del trànsit de xarxa:** En lloc d'enviar 10.000 files a l'aplicació web (Node.js o Java) perquè faça un càlcul i torne a enviar les actualitzacions, el procediment s'executa localment en memòria del servidor de dades.
+2. **Encapsulació i seguretat:** Es pot prohibir als usuaris web modificar directament les taules i concedir-los permís exclusiu per executar procediments verificats.
+3. **Mantenibilitat compartida:** La mateixa regla de negoci és utilitzada per la web, l'app mòbil i l'eina d'escriptori de l'empresa sense duplicar codi.
 
 ---
 
-### Predicats i operadors de filtratge (`WHERE`)
-- **Comparació simple:** `=`, `<>`, `!=`, `<`, `<=`, `>`, `>=`.
-- **Cerca per rangs:** `BETWEEN valor1 AND valor2` (inclusiu en ambdós extrems).
-- **Pertinença a llista:** `IN ('València', 'Castelló', 'Alacant')` o `NOT IN (...)`.
-- **Patrons de cadenes:**
-  - `LIKE 'A%'`: Comença per 'A'.
-  - `LIKE '%ing'`: Acaba en 'ing'.
-  - `LIKE '_a%'`: Té una lletra 'a' com a segon caràcter (`_` representa un únic caràcter arbitrari).
-  - `ILIKE`: Versió insensible a majúscules/minúscules (*case-insensitive*) pròpia de PostgreSQL.
-- **Valors nuls:** `IS NULL` o `IS NOT NULL` (recordeu que `camp = NULL` mai funciona!).
+### Principals dialectes procedurals del mercat:
+- **PL/pgSQL:** Llenguatge procedural natiu de **PostgreSQL**.
+- **MySQL / MariaDB Stored Programs:** Sintaxi procedural de MySQL.
+- **PL/SQL:** El llenguatge pioner d'**Oracle Database**.
+- **T-SQL (Transact-SQL):** Dialecte de **Microsoft SQL Server**.
 
 ---
 
-## 7.2 Combinacions multitaula: tipus de JOIN i autocombinació
+## 8.2 Funcions i procediments emmagatzemats: paràmetres IN, OUT i INOUT
 
-Quan les dades estan normalitzades en múltiples taules relacionades per claus primàries i foranes, s'utilitzen les operacions **`JOIN`** per recompondre la informació.
+### Diferència clau entre Procediment i Funció
+- **Procediment (`PROCEDURE`):**
+  - Es crida amb la comanda `CALL nom_procediment(arguments);`.
+  - Està pensat per executar accions que modifiquen la base de dades (insercions, actualitzacions, manteniment).
+  - No retorna cap valor mitjançant la paraula `RETURN` (però pot retornar dades mitjançant paràmetres `OUT`).
+- **Funció (`FUNCTION`):**
+  - Es crida integrada dins d'una sentència SQL: `SELECT nom_funcio(arguments);`.
+  - Ha de retornar **obligatòriament** un valor escalar (`RETURNS INTEGER`, `RETURNS NUMERIC`) o un conjunt de taula (`RETURNS TABLE(...)`).
+  - Té restriccions estrictes sobre modificacions de dades en alguns SGBDs per evitar efectes secundaris no desitjats.
 
+---
+
+### Tipus de Paràmetres:
+- **`IN` (per defecte):** Paràmetre de només lectura. El valor es passa des de la crida cap a la rutina.
+- **`OUT`:** Paràmetre de sortida. La rutina li assigna un valor que serà retornat a qui ha fet la crida.
+- **`INOUT`:** Paràmetre bidireccional. Entra amb un valor inicial i la rutina el pot modificar per retornar el resultat.
+
+#### Exemple en PostgreSQL (PL/pgSQL):
+```sql
+CREATE OR REPLACE FUNCTION fn_calcular_descompte(p_import NUMERIC, p_percentatge NUMERIC)
+RETURNS NUMERIC AS $$
+BEGIN
+    RETURN p_import * (1 - (p_percentatge / 100));
+END;
+$$ LANGUAGE plpgsql;
+
+-- Invocació:
+SELECT fn_calcular_descompte(150.00, 20); -- Retorna 120.00
 ```
-       INNER JOIN                   LEFT OUTER JOIN              FULL OUTER JOIN
-    (Només coincidència)          (Tots els de l'Esquerra)     (Tots els d'ambdós)
-         +---+---+                    +---+---+                    +---+---+
-         | A | B |                    | A | B |                    | A | B |
-         |   | X |                    | X | X |                    | X | X |
-         +---+---+                    +---+---+                    +---+---+
+
+---
+
+## 8.3 Estructures de control de flux: condicionals i bucles
+
+El codi procedural permet utilitzar la lògica habitual de programació estructurada:
+
+### 1. Condicional `IF ... ELSIF ... ELSE`
+```sql
+IF p_saldo < 0 THEN
+    v_estat := 'Morós';
+ELSIF p_saldo = 0 THEN
+    v_estat := 'Al corrent';
+ELSE
+    v_estat := 'Positiu';
+END IF;
 ```
 
-### 1. `INNER JOIN` (Combinació Interna)
-Retorna únicament les files que tenen coincidència exacta en ambdues taules segons la condició del predicat `ON`:
+---
+
+### 2. Estructures Iteratives (Bucles)
+```sql
+-- Bucle WHILE
+WHILE v_comptador <= 10 LOOP
+    v_total := v_total + v_comptador;
+    v_comptador := v_comptador + 1;
+END LOOP;
+
+-- Bucle FOR amb rang
+FOR i IN 1..10 LOOP
+    INSERT INTO TaulaLog (num_iteracio) VALUES (i);
+END LOOP;
+```
+
+---
+
+## 8.4 Cursors i gestió d'excepcions
+
+Normalment, les consultes SQL processen totes les dades alhora com un **conjunt**. Tanmateix, quan cal aplicar una lògica de negoci complexa que requereix analitzar o transformar cada fila de manera independent, s'utilitza un **cursor**.
+
+### Cicle de vida d'un cursor:
+1. **`DECLARE`:** Es defineix la consulta associada al cursor.
+2. **`OPEN`:** El motor executa la consulta i posiciona un punter abans de la primera fila.
+3. **`FETCH`:** Recupera la fila actual, assigna els seus valors a variables locals i avança el punter a la següent tupla.
+4. **`CLOSE`:** Allibera els recursos de memòria associats a la consulta.
 
 ```sql
-SELECT c.nom, cmd.id_comanda, cmd.data_comanda
-FROM Clients c
-INNER JOIN Comandes cmd ON c.id_client = cmd.id_client;
-```
-- Si un client no ha realitzat cap comanda, no apareixerà al resultat.
-
----
-
-### 2. `LEFT OUTER JOIN` (Combinació Externa per l'Esquerra)
-Retorna **totes les files de la taula de l'esquerra** (`FROM`). Si una fila no té cap registre coincident a la taula de la dreta (`JOIN`), les columnes de la taula dreta es mostren com a **`NULL`**:
-
-```sql
-SELECT c.nom, cmd.id_comanda
-FROM Clients c
-LEFT JOIN Comandes cmd ON c.id_client = cmd.id_client;
-```
-- **Tècnica clau d'auditoria:** Per trobar quins clients no han comprat mai res:
-  ```sql
-  SELECT c.nom FROM Clients c
-  LEFT JOIN Comandes cmd ON c.id_client = cmd.id_client
-  WHERE cmd.id_comanda IS NULL;
-  ```
-
----
-
-### 3. `FULL OUTER JOIN` (Combinació Externa Completa)
-Conserva totes les files d'ambdues taules. Si hi ha coincidència s'ajunten en una fila; si no hi ha coincidència, els camps de l'altre costat s'omplen amb valors `NULL`.
-
----
-
-### 4. `SELF JOIN` (Autocombinació)
-Consisteix a combinar una taula amb ella mateixa utilitzant dos àlies diferents. És l'estratègia imprescindible per resoldre relacions reflexives:
-
-```sql
--- Llistar el nom de cada empleat juntament amb el nom del seu cap directe
-SELECT e.nom AS Empleat, cap.nom AS Cap_Directe
-FROM Empleats e
-LEFT JOIN Empleats cap ON e.id_cap = cap.id_emp;
+DO $$
+DECLARE
+    rec_client RECORD;
+    cur_clients CURSOR FOR SELECT id_client, nom, email FROM Clients WHERE actiu = TRUE;
+BEGIN
+    OPEN cur_clients;
+    LOOP
+        FETCH cur_clients INTO rec_client;
+        EXIT WHEN NOT FOUND;
+        -- Processament individual de cada client
+        RAISE NOTICE 'Processant client: % amb email %', rec_client.nom, rec_client.email;
+    END LOOP;
+    CLOSE cur_clients;
+END $$;
 ```
 
 ---
 
-## 7.3 Funcions d'agregació, GROUP BY i la clàusula HAVING
-
-Les funcions d'agregació calculen un únic valor resum a partir d'un conjunt de tuples:
-- `COUNT(*)`: Compta el nombre total de files (inclosos valors nuls).
-- `COUNT(columna)`: Compta quantes files tenen un valor no nul en eixa columna.
-- `SUM(columna)`: Suma aritmètica de valors numèrics.
-- `AVG(columna)`: Mitjana aritmètica dels valors no nuls.
-- `MIN(columna)` i `MAX(columna)`: Valors mínim i màxim (admeten nombres, dates i textos).
-
----
-
-### La clàusula `GROUP BY` i la regla d'or
-Permet dividir les tuples de la taula en grups que comparteixen el mateix valor en les columnes indicades i calcular les funcions d'agregació per a cadascun dels grups:
-
-> [!IMPORTANT]
-> **Regla d'Or del GROUP BY:** Tota columna que aparega a la clàusula `SELECT` que **no estiga dins d'una funció d'agregació** (`COUNT`, `SUM`, etc.) ha d'aparèixer obligatòriament a la llista del `GROUP BY`!
-
----
-
-### Diferència fonamental: `WHERE` vs `HAVING`
-- **`WHERE`:** Filtra files individuals **abans** de formar els grups i abans d'executar les funcions agregades. Mai pot contenir funcions com `COUNT` o `AVG`.
-- **`HAVING`:** Filtra grups ja agregats **després** que s'ha executat el `GROUP BY`.
+### Gestió d'Excepcions
+Permet interceptar errors de sistema o de restriccions (per exemple, intent de dividir per zero o clau duplicada) evitant que la transacció aborte de forma descontrolada:
 
 ```sql
-SELECT d.nom_dept, COUNT(e.id_emp) AS total_empleats, AVG(e.salari) AS sou_mitja
-FROM Departaments d
-JOIN Empleats e ON d.id_dept = e.id_dept
-WHERE e.actiu = TRUE               -- Filtre de files individuals (WHERE)
-GROUP BY d.nom_dept
-HAVING COUNT(e.id_emp) >= 5        -- Filtre de grups (HAVING)
-ORDER BY sou_mitja DESC;
+BEGIN
+    INSERT INTO Clients (id_client, nom) VALUES (1, 'Duplicat');
+EXCEPTION
+    WHEN unique_violation THEN
+        RAISE WARNING 'Intent d''inserir una clau duplicada per al client 1!';
+END;
 ```
 
 ---
 
-## 7.4 Subconsultes: escalars, de llista i correlacionades (EXISTS)
+## 8.5 Disparadors (Triggers): automatització d'esdeveniments i auditoria
 
-Una **subconsulta** (*Subquery* o consulta imbricada) és una sentència `SELECT` incrustada dins d'una altra sentència SQL principal.
+Un **disparador (*Trigger*)** és un bloc de codi procedural que **s'executa automàticament com a reacció a un esdeveniment DML** (`INSERT`, `UPDATE` o `DELETE`) sobre una taula concreta.
 
-### 1. Subconsulta Escalar
-Retorna un únic valor (1 fila i 1 columna). Es pot utilitzar en qualsevol lloc on s'admeta una expressió constant:
+### Components d'un Trigger:
+1. **Moment d'execució:**
+   - **`BEFORE`:** S'executa abans que la modificació s'aplique físicament a la taula. Ideal per validar regles, calcular camps automàticament o cancel·lar l'operació llançant una excepció.
+   - **`AFTER`:** S'executa després que la modificació s'ha aplicat. Ideal per actualitzar taules d'auditoria o estadístiques en altres taules.
+2. **Nivell d'execució:**
+   - **`FOR EACH ROW`:** S'executa una vegada per a cada fila afectada.
+   - **`FOR EACH STATEMENT`:** S'executa una única vegada per a tota la sentència SQL, independentment del nombre de files afectades.
+3. **Variables especials `OLD` i `NEW`:**
 
-```sql
--- Empleats amb un salari superior a la mitjana de tota l'empresa
-SELECT nom, salari
-FROM Empleats
-WHERE salari > (SELECT AVG(salari) FROM Empleats);
-```
-
----
-
-### 2. Subconsultes de Llista (`IN`, `ALL`, `ANY`)
-Retornen una columna amb múltiples valors:
-
-```sql
--- Productes que pertanyen a categories de tecnologia
-SELECT nom, preu FROM Productes
-WHERE id_cat IN (SELECT id_cat FROM Categories WHERE sector = 'Tecnologia');
-```
+| Operació DML | Variable `OLD` disponible? | Variable `NEW` disponible? |
+| :---: | :---: | :---: |
+| **`INSERT`** | No (`NULL`) | **Sí** (la fila que s'està inserint) |
+| **`UPDATE`** | **Sí** (valors abans del canvi) | **Sí** (valors després del canvi) |
+| **`DELETE`** | **Sí** (la fila que s'està esborrant) | No (`NULL`) |
 
 ---
 
-### 3. Subconsultes Correlacionades i Operador `EXISTS`
-Una subconsulta està **correlacionada** quan fa referència a columnes de la taula de la consulta externa. S'executa una vegada per a cada fila avaluada per la consulta pare:
-
+### Exemple complet d'Auditoria amb Trigger en PostgreSQL:
 ```sql
--- Clients que han realitzat almenys una comanda el darrer mes
-SELECT c.nom, c.email
-FROM Clients c
-WHERE EXISTS (
-    SELECT 1 FROM Comandes cmd 
-    WHERE cmd.id_client = c.id_client 
-      AND cmd.data_comanda >= CURRENT_DATE - INTERVAL '30 days'
+-- 1. Taula de registre d'auditoria
+CREATE TABLE HistoricAuditoria (
+    id_log SERIAL PRIMARY KEY,
+    nom_taula VARCHAR(50),
+    operacio VARCHAR(10),
+    usuari VARCHAR(50),
+    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    dades_velles TEXT,
+    dades_noves TEXT
 );
-```
-- **Rendiment:** L'operador `EXISTS` és extremadament eficient perquè s'atura tan prompte com troba la primera fila coincident (`short-circuit evaluation`), sense necessitat de carregar totes les dades en memòria.
 
----
+-- 2. Funció associada al trigger
+CREATE OR REPLACE FUNCTION trg_auditoria_productes()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO HistoricAuditoria (nom_taula, operacio, usuari, dades_velles, dades_noves)
+    VALUES ('Productes', TG_OP, CURRENT_USER, ROW(OLD.*)::TEXT, ROW(NEW.*)::TEXT);
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
 
-## 7.5 Operacions de conjunts: UNION, INTERSECT i EXCEPT
-
-Permeten combinar els conjunts de resultats de dues o més consultes `SELECT` independents segons la teoria matemàtica de conjunts:
-
-- **`UNION`:** Unió de dos conjunts eliminant files duplicades.
-- **`UNION ALL`:** Unió de dos conjunts conservant totes les files duplicades (molt més ràpid en no requerir operació d'ordenació).
-- **`INTERSECT`:** Retorna únicament les files que apareixen a **tots dos** conjunts de resultats.
-- **`EXCEPT` (o `MINUS` en Oracle):** Retorna les files del primer conjunt que **no estan presents** al segon conjunt.
-
-```sql
--- Llista única de ciutats on tenim o bé clients o bé proveïdors físics
-SELECT ciutat FROM Clients
-UNION
-SELECT ciutat FROM Proveïdors
-ORDER BY ciutat;
+-- 3. Definició del trigger sobre la taula
+CREATE TRIGGER tr_auditoria_prod
+AFTER UPDATE OR DELETE ON Productes
+FOR EACH ROW EXECUTE FUNCTION trg_auditoria_productes();
 ```
 
 ---
@@ -305,107 +295,112 @@ ORDER BY ciutat;
 
 ### Bloc A: Fonaments, Dimensionament i Anàlisi de Rendiment
 
-#### Exercici 1: Anàlisi de l'ordre d'execució lògic de sentències SQL complexes
-Considera la següent sentència SQL executada sobre una taula `Vendes(id, venedor, zona, import)`:
+#### Exercici 1: Disseny d'un procediment de bonificació amb paràmetres INOUT
+Es demana dissenyar la lògica d'un procediment procedural `pr_aplicar_bonificacio` que rep:
+- `p_id_emp`: enter (`IN`).
+- `p_percentatge`: numèric (`IN`).
+- `p_nou_salari`: numèric (`OUT`).
 
-```sql
-SELECT zona, AVG(import) AS mitjana_venda
-FROM Vendes
-WHERE import > 50
-GROUP BY zona
-HAVING COUNT(*) > 100
-ORDER BY mitjana_venda DESC
-LIMIT 5;
-```
+1. Escriu el pseudocodi o codi procedural que:
+   - Consulta el salari actual de l'empleat.
+   - Si l'empleat té una antiguitat superior a 5 anys, suma un 2% addicional al percentatge de bonificació.
+   - Actualitza el camp `salari` de la taula `Empleats`.
+   - Retorna a `p_nou_salari` el valor final actualitzat.
+2. Traça el comportament del procediment per a un empleat amb salari actual de $2.000\text{ €}$, antiguitat de 6 anys i percentatge inicial sol·licitat del $10\%$.
 
-1. Enumera en quin ordre cronològic exacte el motor SGBD executarà cadascuna de les clàusules de la consulta (del pas 1 al pas 8).
-2. Explica per què si es canvia `HAVING COUNT(*) > 100` per `WHERE COUNT(*) > 100`, el compilador de PostgreSQL llança un error de sintaxi immediat.
-3. Raona per què a la clàusula `ORDER BY` sí que és vàlid utilitzar l'àlies `mitjana_venda`, mentre que a la clàusula `WHERE` provocaria un error de columna inexistent.
+#### Exercici 2: Matriu de disponibilitat de dades en Triggers
+Completa la següent taula indicant quins valors prenen `OLD.preu` i `NEW.preu` per a un article que tenia un preu de $100\text{ €}$:
 
-#### Exercici 2: Càlcul de cardinalitats en operacions JOIN
-Es disposa d'una taula `A` amb 500 registres i una taula `B` amb 1.200 registres.
-Se sap que:
-- 350 registres de `A` tenen coincidència amb registres de `B`.
-- 150 registres de `A` no tenen cap coincidència a `B`.
-- 400 registres de `B` no tenen cap coincidència a `A`.
-- Cada registre coincident de `A` té de mitjana 2 files associades a `B` ($350 \times 2 = 700$ parelles coincidents en total).
+| Esdeveniment Executat | `OLD.preu` | `NEW.preu` | Acció típica d'un Trigger BEFORE |
+| :--- | :---: | :---: | :--- |
+| `INSERT INTO Articles (preu) VALUES (150);` | | | Validar que el preu siga estrictament positiu |
+| `UPDATE Articles SET preu = 120 WHERE id = 1;` | | | Comprovar que el nou preu no supere el 50% de l'antic |
+| `DELETE FROM Articles WHERE id = 1;` | | | Impedir l'esborrat si l'article té comandes històriques |
 
-Calcula el nombre exacte de files que retornarà cadascuna de les següents consultes:
-1. `SELECT * FROM A INNER JOIN B ON A.id = B.id_a;`
-2. `SELECT * FROM A LEFT JOIN B ON A.id = B.id_a;`
-3. `SELECT * FROM A RIGHT JOIN B ON A.id = B.id_a;`
-4. `SELECT * FROM A FULL OUTER JOIN B ON A.id = B.id_a;`
-
-#### Exercici 3: Avaluació comparativa de rendiment: IN vs EXISTS
-Un desenvolupador ha d'obtenir els clients que tenen factures impagades. La taula `Factures` té $2.000.000$ de files.
-- **Opció A:** `SELECT * FROM Clients WHERE id_client IN (SELECT id_client FROM Factures WHERE estat = 'Impagada');`
-- **Opció B:** `SELECT * FROM Clients c WHERE EXISTS (SELECT 1 FROM Factures f WHERE f.id_client = c.id_client AND f.estat = 'Impagada');`
-
-1. Què ocorre amb l'Opció A si la subconsulta retorna accidentalment algun valor `NULL` combinat amb `NOT IN`?
-2. Explica com optimitza el motor l'Opció B mitjançant l'avaluació en curtcircuit (*Short-Circuit Evaluation*) i l'ús d'un índex B-Tree sobre `Factures(id_client)`.
+#### Exercici 3: Anàlisi d'impacte en rendiment de Triggers vs Operacions Masives
+Un procés d'importació bancària nocturna insereix $500.000$ registres d'apunts comptables:
+1. Si s'activa un trigger `AFTER INSERT FOR EACH ROW` que fa un `INSERT` addicional a una taula d'auditoria, quantes escriptures a disc en total generarà l'operació?
+2. Per què els DBAs acostumen a desactivar els triggers (`ALTER TABLE ... DISABLE TRIGGER ALL`) abans d'una càrrega massiva de dades i revaliden la coherència posteriorment?
 
 ---
 
 ### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Consultes multitaula i detecció d'elements orfes amb LEFT JOIN
-- **Objectiu:** Extreure informació comercial combinant 3 taules i detectar clients sense activitat.
+#### Repte 1: Creació d'una funció amb comprovació condicional
+- **Objectiu:** Crear una funció que classifique l'estat d'estoc d'un magatzem.
 - **Procediment de taller:**
-  1. Pobla un esquema amb `Clients`, `Comandes` i `LiniesComanda`.
-  2. Escriu la consulta que mostre per a cada comanda: el nom del client, el codi de comanda, la descripció del producte i el subtotal (`quantitat * preu_unitari`):
+  1. Crea la funció `fn_estat_estoc(p_estoc INT, p_minim INT) RETURNS VARCHAR`:
      ```sql
-     SELECT c.nom, cmd.id_comanda, p.descripcio, (lc.quantitat * lc.preu_unitari) AS subtotal
-     FROM Clients c
-     INNER JOIN Comandes cmd ON c.id_client = cmd.id_client
-     INNER JOIN LiniesComanda lc ON cmd.id_comanda = lc.id_comanda
-     INNER JOIN Productes p ON lc.codi_prod = p.codi_prod;
+     CREATE OR REPLACE FUNCTION fn_estat_estoc(p_estoc INT, p_minim INT)
+     RETURNS VARCHAR(20) AS $$
+     BEGIN
+         IF p_estoc <= 0 THEN
+             RETURN 'Esgotat';
+         ELSIF p_estoc < p_minim THEN
+             RETURN 'Crític';
+         ELSE
+             RETURN 'Normal';
+         END IF;
+     END;
+     $$ LANGUAGE plpgsql;
      ```
-  3. Escriu la consulta mitjançant `LEFT JOIN` que detecte quins productes del catàleg **no s'han venut mai** (és a dir, no apareixen a cap línia de comanda).
-
-#### Repte 2: Informes estadístics amb GROUP BY i HAVING
-- **Objectiu:** Generar un resum de facturació per categoria amb filtres agregats.
-- **Procediment de taller:**
-  1. Executa una consulta que agrupe els productes per categoria i mostre:
-     - Nom de la categoria.
-     - Nombre total de productes diferents.
-     - Preu mitjà del producte (arredonit a 2 decimals).
-     - Valor total de l'estoc al magatzem (`SUM(preu * estoc)`).
-  2. Afegeix un filtre `HAVING` perquè només es mostren les categories que tenen **més de 3 productes** i un estoc total valorat en **més de 1.000 €**.
-  3. Ordena el resultat de major a menor valoració d'estoc.
-
-#### Repte 3: Autocombinació (SELF JOIN) i Subconsultes Correlacionades
-- **Objectiu:** Resoldre problemes semàntics de jerarquies laborals i comparatives respecte a la mitjana departamental.
-- **Procediment de taller:**
-  1. En una taula `Empleats(id, nom, sou, id_dept, id_cap)`, escriu una autocombinació per mostrar el nom de l'empleat i el nom del seu superior directe. Assegura't amb un `LEFT JOIN` que el director general (que té `id_cap IS NULL`) també apareix al llistat.
-  2. Escriu una subconsulta correlacionada per mostrar aquells empleats que guanyen **més diners que el sou mitjà del seu propi departament**:
+  2. Executa una consulta `SELECT` que utilitze la funció sobre tots els registres de la taula `Productes`:
      ```sql
-     SELECT e.nom, e.salari, e.id_dept
-     FROM Empleats e
-     WHERE e.salari > (
-         SELECT AVG(e2.salari)
-         FROM Empleats e2
-         WHERE e2.id_dept = e.id_dept
-     );
+     SELECT codi_prod, nom, estoc, fn_estat_estoc(estoc, estoc_minim) AS estat
+     FROM Productes;
      ```
+
+#### Repte 2: Trigger de validació BEFORE (Lògica de negoci)
+- **Objectiu:** Evitar que s'introdueixin sous inferiors al salari mínim o increments superiors al 100%.
+- **Procediment de taller:**
+  1. Crea la funció de validació:
+     ```sql
+     CREATE OR REPLACE FUNCTION trg_validar_salari()
+     RETURNS TRIGGER AS $$
+     BEGIN
+         IF NEW.salari < 1134.00 THEN
+             RAISE EXCEPTION 'El salari (%.2f €) no pot ser inferior al Salari Mínim Interprofessional!', NEW.salari;
+         END IF;
+         IF TG_OP = 'UPDATE' AND NEW.salari > OLD.salari * 2 THEN
+             RAISE EXCEPTION 'No es permet duplicar el salari d''un empleat en una sola revisió!';
+         END IF;
+         RETURN NEW;
+     END;
+     $$ LANGUAGE plpgsql;
+     ```
+  2. Crea el trigger:
+     ```sql
+     CREATE TRIGGER tr_valida_salari_emp
+     BEFORE INSERT OR UPDATE ON Empleats
+     FOR EACH ROW EXECUTE FUNCTION trg_validar_salari();
+     ```
+  3. Intenta inserir un empleat amb salari de $800\text{ €}$ i comprova que el trigger bloqueja l'operació emetent el missatge d'error configurat.
+
+#### Repte 3: Processament per cursor explícit
+- **Objectiu:** Recórrer una taula de comandes per calcular i mostrar comissions individuals.
+- **Procediment de taller:**
+  1. Escriu un bloc procedural anònim en PL/pgSQL que òbriga un cursor sobre totes les comandes no liquidades, calcule una comissió del 3% per a cadascuna i mostre per consola (*RAISE NOTICE*) el codi de comanda i la comissió resultant.
+  2. Comprova la sortida al panell de missatges de DBeaver o pgAdmin.
 
 ---
 
 ### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 #### Llista de comprovació per a l'alumnat
-- [ ] He comprès l'ordre lògic d'execució d'una sentència SQL (`FROM` $\to$ `WHERE` $\to$ `GROUP BY` $\to$ `HAVING` $\to$ `SELECT` $\to$ `ORDER BY`).
-- [ ] He utilitzat operadors de cerca de patrons `LIKE` i `ILIKE` amb comodins `%` i `_`.
-- [ ] He combinat dades de múltiples taules utilitzant `INNER JOIN` i `LEFT JOIN`.
-- [ ] He resolt relacions reflexives mitjançant l'autocombinació `SELF JOIN`.
-- [ ] He aplicat funcions d'agregació (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`) respectant la regla d'or de `GROUP BY`.
-- [ ] He diferenciat la funció de filtratge de files de `WHERE` enfront del filtratge de grups de `HAVING`.
-- [ ] He construït subconsultes escalars, de llista i correlacionades amb `EXISTS`.
+- [ ] He explicat els avantatges d'executar procediments al servidor de bases de dades en lloc de l'aplicació client.
+- [ ] He diferenciat clarament un procediment (`CALL`) d'una funció (`SELECT ... RETURNS`).
+- [ ] He utilitzat paràmetres `IN`, `OUT` i `INOUT` en rutines emmagatzemades.
+- [ ] He utilitzat estructures de control de flux (`IF/THEN/ELSE`, bucles `WHILE` i `FOR`).
+- [ ] He implementat cursors per processar registres fila a fila amb instruccions `FETCH`.
+- [ ] He diferenciat els triggers `BEFORE` (validació/modificació) dels triggers `AFTER` (auditoria).
+- [ ] He utilitzat correctament les variables pseudo-registre `OLD` i `NEW` segons l'operació DML.
 
 #### Rúbrica d'avaluació d'aprenentatge
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Consultes Bàsiques i Ordre Lògic** | Domina l'ordre lògic d'execució del motor SQL, utilitza àlies correctes, filtres de patrons i gestiona valors nuls sense errades. | Construeix consultes SELECT amb filtres WHERE i ordenació correctes sense dificultats. | Redacta consultes senzilles però intenta utilitzar àlies de columnes dins de la clàusula WHERE. | Confon la sintaxi bàsica de SELECT o escriu clàusules en ordre incoherent. |
-| **Combinacions de Taules (JOINs)** | Selecciona amb precisió entre INNER, LEFT, FULL i SELF JOIN segons la necessitat de negoci, detectant orfes eficaçment. | Combina múltiples taules amb INNER i LEFT JOIN identificant les claus d'enllaç correctes. | Realitza INNER JOINs bàsics però té dubtes sobre quan utilitzar un LEFT JOIN per no perdre dades. | Genera productes cartesians no desitjats o utilitza condicions d'enllaç errònies. |
-| **Agregació i Grups (GROUP BY / HAVING)** | Aplica resums estadístics multivariable complint la regla d'or del GROUP BY i distingint rigorosament filtres de fila (WHERE) i grup (HAVING). | Agrupa dades i calcula agregats estadístics (COUNT, AVG, SUM) amb clàusula HAVING funcional. | Utilitza funcions agregades però comet errors en oblidar columnes al GROUP BY. | Confon HAVING amb WHERE o intenta utilitzar funcions agregades dins del WHERE. |
-| **Subconsultes i Correlacions (EXISTS)** | Construeix subconsultes escalars, de llista i correlacionades d'alt rendiment amb EXISTS justificant el pla d'execució. | Utilitza subconsultes amb operadors IN i subconsultes escalars senzilles amb èxit. | Resol consultes amb subconsultes bàsiques però té dificultats per entendre com funciona la correlació. | Incapaç d'imbricar una consulta dins d'una altra o produeix consultes que retornen errors de cardinalitat. |
-| **Operacions de Conjunts (UNION/EXCEPT)** | Combina resultats heterogenis amb operadors de conjunts justificant la compatibilitat de tipus i l'ús de UNION vs UNION ALL. | Aplica UNION per unir llistats de taules independents eliminant duplicats. | Utilitza UNION bàsic però oblida que ambdós SELECT han de tindre el mateix nombre de columnes. | Confon les operacions de conjunts amb combinacions JOIN de taules relacionades. |
+| **Rutines Servidor (Procediments i Funcions)** | Construeix funcions escalars i procediments modulars amb paràmetres IN/OUT i gestió d'errors impecable. | Implementa funcions que retornen valors i procediments funcionals amb sintaxi correcta. | Crea funcions senzilles amb suport de plantilles però confon paràmetres IN amb OUT. | Incapaç de crear una funció o confon el llenguatge procedural amb consultes SQL pures. |
+| **Lògica de Control i Variables** | Utilitza variables locals, condicionals imbricats i bucles iteratius resolent algorismes de negoci complexos. | Aplica estructures IF i bucles per controlar el flux del programa sense bloquejos infinits. | Utilitza condicionals bàsics però comet errors en la sintaxi de tancament (END IF/END LOOP). | Codi procedural desestructurat o crea bucles infinits que col·lapsen la connexió. |
+| **Ús de Cursors i Excepcions** | Domina el cicle complet de cursors (DECLARE, OPEN, FETCH, CLOSE), gestiona excepcions amb handlers i evita fugides de recursos. | Recorre conjunts de dades amb cursors assignant valors a variables amb èxit. | Obre i tanca cursors bàsics però té dificultats per controlar la condició de finalització (NOT FOUND). | Desconeix el propòsit d'un cursor o deixa cursors oberts consumint recursos del servidor. |
+| **Disparadors (Triggers) i Auditoria** | Dissenya triggers BEFORE per a validacions complexes i triggers AFTER per a sistemes complets d'auditoria amb variables OLD/NEW. | Configura triggers a nivell de fila per validar dades i registrar operacions senzilles. | Crea un trigger bàsic seguint la guia però confon l'ús de les variables OLD i NEW. | Provoca bucles infinits de triggers (un trigger que es dispara a ell mateix) o no entén quan s'activen. |
+| **Optimització i Seguretat de Rutines** | Justifica la reducció de trànsit de xarxa, avalua l'impacte d'índexs en triggers i blinda la seguretat amb permisos d'execució. | Comprèn els beneficis d'eficiència i seguretat d'encapsular codi al SGBD. | Sap que el codi s'executa al servidor però no sap mesurar l'impacte en temps de resposta. | Creu que és millor fer tota la lògica al client web sense aprofitar les capacitats del SGBD. |
+

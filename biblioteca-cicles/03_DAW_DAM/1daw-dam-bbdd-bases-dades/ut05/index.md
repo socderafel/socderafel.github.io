@@ -1,277 +1,295 @@
----
+﻿---
 layout: default
-title: "UD5: Disseny Físic i Llenguatge de Definició i Control de Dades (SQL DDL i DCL) — Bases de Dades"
+title: "UD5: Manipulació de Dades i Transaccions (SQL DML i TCL) — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD5"
-next_url: "ut0501.html"
-next_label: "5.1 ➡️"
+badge: "1r DAW / DAM · Grau Superior · UD6"
+next_url: "../ut06/index.html"
+next_label: "UD6: Consultes SQL DQL âž¡ï¸"
 ---
 
-# UD5: Disseny Físic i Llenguatge de Definició i Control de Dades (SQL DDL i DCL)
+# UD5: Manipulació de Dades i Transaccions (SQL DML i TCL)
 
 <div style="text-align: center; margin: 1.5rem 0;">
 <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
   <defs>
-    <linearGradient id="bg-grad-db5" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg-grad-db6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="g-typ" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-dml" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-ddl" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-aci" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-obj" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-tcl" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-dcl" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-iso" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db5)"/>
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db6)"/>
 
   <!-- Capçalera -->
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">DISSENY FÍSIC, DEFINICIÓ D'ESTRUCTURES (DDL) I SEGURETAT (DCL)</text>
-  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Tipus de dades SQL, restriccions d'integritat, alteració de taules, vistes, índexs B-Tree i control de privilegis</text>
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">MANIPULACIÓ DE DADES (DML) I CONTROL TRANSACCIONAL ACID (TCL)</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Operacions INSERT, UPDATE, DELETE, propietats ACID, gestió de COMMIT/ROLLBACK i nivells d'aïllament</text>
 
-  <!-- Bloc 1: Tipus de Dades -->
+  <!-- Bloc 1: Operacions DML -->
   <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-typ)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-dml)" stroke="#38bdf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🔢</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Tipus de Dades</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Dominis SQL</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Numèrics: INT, NUMERIC</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Text: VARCHAR, TEXT</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Temps: DATE, TIMESTAMP</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• JSONB, UUID &amp; Booleans</text>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">✏️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Operacions DML</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Modificació de Dades</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• INSERT INTO (individual/massiu)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• UPDATE amb clàusula WHERE</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• DELETE amb filtratge precís</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Clàusula RETURNING &amp; UPSERT</text>
   </g>
 
-  <!-- Bloc 2: Llenguatge DDL -->
+  <!-- Bloc 2: Propietats ACID -->
   <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-ddl)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-aci)" stroke="#818cf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🛠️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Llenguatge DDL</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Creació &amp; Alteració</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• CREATE TABLE &amp; DROP</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Restriccions PK, FK, UNIQUE</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Regles CHECK &amp; NOT NULL</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• ALTER TABLE &amp; TRUNCATE</text>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">💎</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Model ACID</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Fiabilitat del Motor</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Atomicitat: Tot o res</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Consistència: Estat vàlid</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Aïllament: Sense interferència</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Durabilitat: Registre WAL</text>
   </g>
 
-  <!-- Bloc 3: Vistes i Índexs -->
+  <!-- Bloc 3: Control TCL -->
   <g transform="translate(435, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-obj)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-tcl)" stroke="#34d399" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📑</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Vistes &amp; Índexs</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Estructures Físiques</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• CREATE VIEW estàndard</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Vistes Materialitzades</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Índexs B-Tree per a cerca</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Seqüències i IDENTITY</text>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🛡️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Llenguatge TCL</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Gestió Transaccional</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• BEGIN / START TRANSACTION</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• COMMIT: Confirmació al disc</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• ROLLBACK: Reversió total</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• SAVEPOINT: Punts de rescat</text>
   </g>
 
-  <!-- Bloc 4: Seguretat DCL -->
+  <!-- Bloc 4: Concurrència & Aïllament -->
   <g transform="translate(640, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-dcl)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-iso)" stroke="#f59e0b" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">🔐</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Seguretat DCL</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Usuaris &amp; Privilegis</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Gestió d'usuaris i rols</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Permisos amb GRANT</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Revocació amb REVOKE</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Seguretat per fila (RLS)</text>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">⚖️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Concurrència</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Nivells d'Aïllament</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Read Committed (per defecte)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Repeatable Read &amp; Serializable</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Dirty / Phantom Reads</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Bloquejos &amp; Deadlocks</text>
   </g>
 </svg>
 </div>
 
-El disseny físic en sistemes gestors de bases de dades relacionals (RDBMS), tipus de dades SQL i optimització d'emmagatzematge, llenguatge de definició de dades (DDL), definició i alteració de taules amb restriccions d'integritat, vistes, índexs d'accés, i control d'accés i privilegis mitjançant DCL.
+Operacions del Llenguatge de Manipulació de Dades (SQL DML: INSERT, UPDATE, DELETE), clàusules avançades com RETURNING i ON CONFLICT, concepte de transacció, compliment estricte de propietats ACID, control de transaccions mitjançant TCL (COMMIT, ROLLBACK, SAVEPOINT) i anàlisi de concurrència i nivells d'aïllament.
 
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **5.1** | **El disseny físic i tipus de dades en l'estàndard SQL** | [**Llegir apartat →**](./ut0501.html) |
-| **5.2** | **Llenguatge DDL: creació de taules i restriccions d'integritat** | [**Llegir apartat →**](./ut0502.html) |
-| **5.3** | **Modificació d'estructures: ALTER TABLE, DROP i TRUNCATE** | [**Llegir apartat →**](#53-modificació-destructures-alter-table-drop-i-truncate) |
-| **5.4** | **Objectes de base de dades: vistes, índexs i seqüències** | [**Llegir apartat →**](#54-objectes-de-base-de-dades-vistes-índexs-i-seqüències) |
-| **5.5** | **Llenguatge DCL: gestió d'usuaris, rols i privilegis** | [**Llegir apartat →**](#55-llenguatge-dcl-gestió-dusuaris-rols-i-privilegis) |
+| **6.1** | **El Llenguatge de Manipulació de Dades (SQL DML)** | [**Llegir apartat →**](./ut0601.html) |
+| **6.2** | **Conceptes de transacció i propietats ACID** | [**Llegir apartat →**](./ut0602.html) |
+| **6.3** | **Control transaccional: COMMIT, ROLLBACK i SAVEPOINT** | [**Llegir apartat →**](#63-control-transaccional-commit-rollback-i-savepoint) |
+| **6.4** | **Concurrència i fenòmens de lectura anòmala** | [**Llegir apartat →**](#64-concurrència-i-fenòmens-de-lectura-anòmala) |
+| **6.5** | **Nivells d'aïllament ANSI SQL i gestió de bloquejos** | [**Llegir apartat →**](#65-nivells-daïllament-ansi-sql-i-gestió-de-bloquejos) |
 
 ---
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 5.1 El disseny físic i tipus de dades en l'estàndard SQL
+## 6.1 El Llenguatge de Manipulació de Dades (SQL DML)
 
-El **disseny físic** adapta l'esquema lògic normalitzat a les característiques del maquinari i del motor SGBD concret (com PostgreSQL o MySQL/MariaDB). L'objectiu principal és aconseguir el màxim rendiment en temps de resposta i eficiència d'emmagatzematge.
+Mentre que el DDL defineix l'esquelet de la base de dades, el **Llenguatge de Manipulació de Dades (DML)** permet als desenvolupadors gestionar el contingut real de les taules: afegir noves files, modificar registres existents o esborrar dades.
 
-### Tipus de dades principals en SQL
-L'elecció correcta del tipus de dades de cada columna és essencial per evitar malbaratar memòria RAM i espai en disc:
-
-1. **Tipus Numèrics:**
-   - `SMALLINT`: Enter de 2 bytes (rang: $-32.768$ a $+32.767$).
-   - `INTEGER` / `INT`: Enter de 4 bytes (rang: $\approx \pm 2{,}14 \times 10^9$).
-   - `BIGINT`: Enter de 8 bytes (per a identificadors massius o comptadors de trànsit web).
-   - `NUMERIC(p, s)` / `DECIMAL(p, s)`: Numèric exacte de coma fixa amb $p$ dígits de precisió total i $s$ dígits decimals. **Obligatori per a valors monetaris i comptabilitat** per evitar errors d'arrodoniment binari.
-   - `REAL` / `DOUBLE PRECISION`: Coma flotant inexacta per a càlculs científics.
-2. **Cadenes de Caràcters:**
-   - `CHAR(n)`: Cadena de longitud fixa. Si s'emmagatzema un text més curt, s'omple amb espais en blanc a la dreta (ideal per a codis fixes com DNI de 9 caràcters o codis ISO).
-   - `VARCHAR(n)`: Cadena de longitud variable amb límit màxim de $n$ caràcters. Ocupa només la mida real del text més 1 o 2 bytes de capçalera.
-   - `TEXT`: Cadena de text de longitud arbitrària sense límit pràctic predefinit.
-3. **Tipus Temporals:**
-   - `DATE`: Data (any, mes, dia).
-   - `TIME`: Hora del dia (hores, minuts, segons, microsegons).
-   - `TIMESTAMP`: Data i hora combinades.
-   - `TIMESTAMP WITH TIME ZONE` (`TIMESTAMPTZ`): Guarda l'instant exacte convertit a UTC. L'estàndard professional per a aplicacions web globals.
-4. **Tipus Booleans i Semiestructurats:**
-   - `BOOLEAN`: Valors `TRUE`, `FALSE` o `NULL`.
-   - `JSON` / `JSONB`: Permet emmagatzemar documents JSON estructurats. En PostgreSQL, `JSONB` emmagatzema les dades en format binari descompost permetent indexació interna d'alta velocitat (*GIN*).
-   - `UUID`: Identificador únic universal de 128 bits (ideal per a claus primàries distribuïdes en microserveis).
-
----
-
-## 5.2 Llenguatge DDL: creació de taules i restriccions d'integritat
-
-El **Llenguatge de Definició de Dades (DDL)** permet crear, modificar i esborrar les estructures que allotgen la informació.
-
-### Creació de taules (`CREATE TABLE`)
-Sintaxi general amb restriccions a nivell de columna i de taula:
+### 1. Inserció de Dades (`INSERT INTO`)
+Sintaxi per afegir noves tuples a una relació:
 
 ```sql
-CREATE TABLE Empleats (
-    id_emp INT GENERATED ALWAYS AS IDENTITY,
-    nif CHAR(9) NOT NULL,
-    nom VARCHAR(60) NOT NULL,
-    email VARCHAR(120) NOT NULL,
-    data_contracte DATE DEFAULT CURRENT_DATE,
-    salari NUMERIC(8,2) NOT NULL,
-    id_dept INT,
-    
-    -- Restriccions d'integritat a nivell de taula
-    CONSTRAINT pk_empleats PRIMARY KEY (id_emp),
-    CONSTRAINT uq_empleats_nif UNIQUE (nif),
-    CONSTRAINT uq_empleats_email UNIQUE (email),
-    CONSTRAINT chk_salari_positiu CHECK (salari > 1000.00),
-    CONSTRAINT fk_empleats_dept FOREIGN KEY (id_dept)
-        REFERENCES Departaments(id_dept)
-        ON DELETE SET NULL
-        ON UPDATE CASCADE
-);
-```
+-- Inserció d'una fila especificant les columnes de destinació
+INSERT INTO Productes (codi_prod, nom, preu, estoc)
+VALUES ('PRD-101', 'Teclat Mecànic RGB', 79.99, 25);
 
-### Tipologia de restriccions d'integritat en DDL:
-- **`PRIMARY KEY`:** Garanteix que la columna (o combinació de columnes) identifica unívocament cada fila i no conté valors nuls (`UNIQUE NOT NULL`). Crea automàticament un índex B-Tree únic subjacent.
-- **`FOREIGN KEY ... REFERENCES`:** Assegura la integritat referencial amb la taula mestre.
-  - Opcions d'esborrat/actualització: `CASCADE`, `RESTRICT`, `NO ACTION`, `SET NULL`, `SET DEFAULT`.
-- **`UNIQUE`:** Assegura que tots els valors d'una columna o grup de columnes són diferents entre si (permet múltiples valors `NULL` excepte en restriccions específiqament configurades).
-- **`NOT NULL`:** Prohibeix explícitament que la columna continga valors nuls.
-- **`CHECK (condició)`:** Avalua una expressió lògica que ha de complir-se per a cada fila inserida o actualitzada.
-- **`DEFAULT expressió`:** Assigna un valor automàtic si la instrucció d'inserció omet la columna.
+-- Inserció massiva de múltiples tuples en una sola sentència atòmica
+INSERT INTO Categories (id_cat, nom_cat) VALUES
+    (1, 'Perifèrics'),
+    (2, 'Monitors'),
+    (3, 'Components');
 
----
-
-## 5.3 Modificació d'estructures: ALTER TABLE, DROP i TRUNCATE
-
-Quan les necessitats del negoci evolucionen, és necessari alterar l'esquema existent sense perdre les dades ja emmagatzemades.
-
-### Ordre `ALTER TABLE`
-Permet afegir, modificar o eliminar elements d'una taula:
-
-```sql
--- 1. Afegir una nova columna amb valor per defecte
-ALTER TABLE Empleats ADD COLUMN telefon VARCHAR(15);
-
--- 2. Eliminar una columna existent
-ALTER TABLE Empleats DROP COLUMN telefon;
-
--- 3. Canviar el tipus de dades d'una columna
-ALTER TABLE Empleats ALTER COLUMN nom TYPE VARCHAR(100);
-
--- 4. Afegir una nova restricció CHECK a una taula poblada
-ALTER TABLE Empleats ADD CONSTRAINT chk_email_arroba CHECK (email LIKE '%@%');
-
--- 5. Eliminar una restricció existent
-ALTER TABLE Empleats DROP CONSTRAINT chk_email_arroba;
+-- Inserció a partir del resultat d'una consulta SELECT
+INSERT INTO HistoricClients (id_client, nom, email)
+SELECT id_client, nom, email 
+FROM Clients 
+WHERE data_baixa < '2025-01-01';
 ```
 
 ---
 
-### Diferència fonamental: `DROP TABLE` vs `TRUNCATE TABLE` vs `DELETE`
-| Comanda | Tipus de Llenguatge | Què fa exactament | Velocitat d'Execució | Allibera Espai de Disc? | Es pot fer ROLLBACK? |
-| :--- | :---: | :--- | :---: | :---: | :---: |
-| **`DELETE FROM taula`** | DML | Esborra les files una a una registrant cada eliminació al log de transaccions | Lenta en taules grans | No immediatament (requereix VACUUM) | Sí |
-| **`TRUNCATE TABLE`** | DDL | Buida totes les files desassignant directament les pàgines de dades | Ultra-ràpida | Sí, a l'instant | Sí (en PostgreSQL) / No (MySQL) |
-| **`DROP TABLE`** | DDL | Elimina completament les dades i l'estructura de la taula del catàleg | Immediata | Sí | Sí (en transacció DDL) |
+### 2. Modificació de Dades (`UPDATE`)
+Permet canviar els valors d'una o més columnes en les files que compleixen una condició:
+
+```sql
+-- Incrementar el preu un 5% només per als productes de la categoria 1
+UPDATE Productes
+SET preu = preu * 1.05,
+    data_actualitzacio = CURRENT_TIMESTAMP
+WHERE id_cat = 1;
+```
+
+> [!CAUTION]
+> Si s'executa un `UPDATE` sense la clàusula `WHERE`, **es modificaran absolutament totes les files de la taula**! En entorns de desenvolupament professional és recomanable provar primer el filtre amb una sentència `SELECT` equivalent abans de llançar l'actualització.
 
 ---
 
-## 5.4 Objectes de base de dades: vistes, índexs i seqüències
-
-A més de les taules bàsiques, un disseny físic professional empra altres estructures d'accés:
-
-### 1. Vistes (`CREATE VIEW`)
-Una **vista** és una consulta SQL guardada al diccionari de dades que es comporta com una taula virtual:
-- No emmagatzema dades pròpies (excepte les vistes materialitzades); s'executa dinàmicament cada vegada que és consultada.
-- **Objectius:**
-  - **Seguretat:** Ocultar columnes sensibles a certs usuaris (ex. mostrar nom i departament però amagar el salari).
-  - **Simplicitat:** Simplificar consultes complexes amb múltiples `JOIN`s perquè els desenvolupadors només facen `SELECT * FROM nom_vista`.
+### 3. Eliminació de Dades (`DELETE`)
+Esborra les files que verifiquen el predicat de filtratge:
 
 ```sql
-CREATE VIEW v_empleats_departament AS
-SELECT e.id_emp, e.nom, e.email, d.nom_dept
-FROM Empleats e
-JOIN Departaments d ON e.id_dept = d.id_dept;
+DELETE FROM Productes
+WHERE estoc = 0 AND actiu = FALSE;
 ```
-
-### 2. Vistes Materialitzades (`CREATE MATERIALIZED VIEW`)
-Emmagatzema físicament a disc el resultat d'una consulta complexa:
-- Ideal per a taulers de control i informes d'anàlisi de dades (*Business Intelligence*).
-- Requereix refrescar-se periòdicament: `REFRESH MATERIALIZED VIEW v_informe_vendes;`.
+- A diferència de `TRUNCATE TABLE`, l'ordre `DELETE` avalua restriccions d'integritat referencial fila a fila, dispara triggers associats i pot ser revertida completament mitjançant transaccions.
 
 ---
 
-### 3. Índexs (`CREATE INDEX`)
-Estructures de dades auxiliars (habitualment **arbres B+Tree**) que permeten trobar files que compleixen un criteri de cerca en temps logarítmic $O(\log N)$ sense recórrer tota la taula (*Sequential Scan* $O(N)$):
+### 4. Extensions professionals DML: `RETURNING` i `UPSERT`
+En el desenvolupament d'aplicacions web modernes (Node.js, Java Spring, Python FastAPI), recuperar la clau generada automàticament o gestionar duplicats és una necessitat diària:
 
 ```sql
-CREATE INDEX idx_empleats_email ON Empleats(email);
+-- 1. Clàusula RETURNING: retorna immediatament els valors generats pel SGBD
+INSERT INTO Clients (nom, email) 
+VALUES ('Marc Valls', 'marc@example.com')
+RETURNING id_client, data_creacio;
+
+-- 2. Clàusula ON CONFLICT / UPSERT (Insert or Update):
+-- Si el correu ja existeix, actualitza el nom en lloc de donar un error
+INSERT INTO Clients (nom, email) 
+VALUES ('Marc Valls Nou', 'marc@example.com')
+ON CONFLICT (email) 
+DO UPDATE SET nom = EXCLUDED.nom;
 ```
-- **El cost dels índexs:** Cada índex ocupa espai addicional de memòria i alenteix les operacions d'escriptura (`INSERT`, `UPDATE`, `DELETE`), ja que cada canvi obliga a actualitzar l'arbre de l'índex.
 
 ---
 
-## 5.5 Llenguatge DCL: gestió d'usuaris, rols i privilegis
+## 6.2 Conceptes de transacció i propietats ACID
 
-El **Llenguatge de Control de Dades (DCL)** regula quins usuaris tenen autorització per executar operacions sobre els objectes de la base de dades.
+Una **transacció** és una seqüència lògica d'una o més operacions SQL executades com una **unitat indivisible de treball**. Un exemple clàssic és una transferència bancària entre dos comptes:
+1. Restar 200 € del compte A (`UPDATE Comptes SET saldo = saldo - 200 WHERE id = 'A'`).
+2. Sumar 200 € al compte B (`UPDATE Comptes SET saldo = saldo + 200 WHERE id = 'B'`).
 
-### Concepte d'Usuari i Rol
-- **Usuari:** Identitat amb credencials d'autenticació (nom i contrasenya) que es connecta al SGBD.
-- **Rol:** Conjunt de privilegis agrupats. Els usuaris s'associen a rols per simplificar l'administració (RBAC - *Role-Based Access Control*).
+Si el sistema s'apaga entre el pas 1 i el pas 2, els diners desapareixerien. Per evitar aquests desastres, tot SGBD relacional de grau professional garanteix les quatre **propietats ACID**:
+
+### 1. Atomicitat (*Atomicity*)
+- La transacció és una unitat indivisible: **o s'executen totes les seues operacions amb èxit o no s'aplica cap d'elles**.
+- Si qualsevol instrucció del bloc falla o el servidor es reinicia, el motor reverteix automàticament totes les modificacions realitzades fins a eixe moment tornant a l'estat inicial.
+
+### 2. Consistència (*Consistency*)
+- La transacció condueix la base de dades des d'un estat vàlid i coherent a un altre estat igualment vàlid.
+- Mai es permetrà trencar cap restricció d'integritat (`PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `NOT NULL`). Si una sentència viola una regla, tota la transacció queda avortada.
+
+### 3. Aïllament (*Isolation*)
+- Les modificacions realitzades per una transacció no són visibles per a cap altra transacció concurrent fins que la primera ha finalitzat i s'ha confirmat definitivament.
+- Dues transaccions que s'executen en paral·lel no s'interfereixen mútuament.
+
+### 4. Durabilitat (*Durability*)
+- Un cop una transacció s'ha confirmat amb èxit (`COMMIT`), els seus canvis queden gravats de forma **permanent i indestructible** a l'emmagatzematge físic, sobrevivint fins i tot a una fallada sobtada de corrent elèctric.
+- El SGBD ho aconsegueix mitjançant el mecanisme d'escriptura prèvia al registre de transaccions (**WAL - *Write-Ahead Logging***).
+
+---
+
+## 6.3 Control transaccional: COMMIT, ROLLBACK i SAVEPOINT
+
+El **Llenguatge de Control de Transaccions (TCL)** permet als desenvolupadors delimitar manualment l'abast de les transaccions:
 
 ```sql
--- 1. Creació d'un rol d'aplicació i un usuari
-CREATE ROLE rol_desenvolupador;
-CREATE USER usuari_web WITH PASSWORD 'clau_segura_2026';
+-- 1. Inici de la transacció
+BEGIN TRANSACTION; -- O simplement 'BEGIN;'
 
--- 2. Concessió de privilegis amb GRANT
-GRANT CONNECT ON DATABASE botiga TO rol_desenvolupador;
-GRANT SELECT, INSERT, UPDATE ON TABLE Empleats TO rol_desenvolupador;
+-- 2. Primer canvi
+UPDATE Comptes SET saldo = saldo - 200 WHERE id_compte = 101;
 
--- 3. Assignació del rol a l'usuari
-GRANT rol_desenvolupador TO usuari_web;
+-- 3. Punt de control intermedi
+SAVEPOINT abans_ingres;
 
--- 4. Revocació de privilegis amb REVOKE
-REVOKE UPDATE ON TABLE Empleats FROM rol_desenvolupador;
+-- 4. Segon canvi
+UPDATE Comptes SET saldo = saldo + 200 WHERE id_compte = 999; -- Compte inexistent!
+
+-- Si detectem una anomalia al pas 4, podem desfer només fins al punt de control:
+ROLLBACK TO SAVEPOINT abans_ingres;
+
+-- Finalització i confirmació definitiva dels canvis vàlids:
+COMMIT;
 ```
+
+- **`BEGIN` / `START TRANSACTION`:** Inicia el bloc transaccional i desactiva el mode d'autoconfirmació (*Autocommit*).
+- **`COMMIT`:** Valida i aplica definitivament totes les operacions al disc. La transacció finalitza amb èxit.
+- **`ROLLBACK`:** Cancela i descarta completament totes les operacions executades des del `BEGIN`, deixant les taules com si res haguera passat.
+- **`SAVEPOINT nom_punt`:** Marca una fita intermèdia dins de la transacció.
+- **`ROLLBACK TO SAVEPOINT nom_punt`:** Reverteix les sentències posteriors a eixa fita sense anul·lar les operacions prèvies.
+
+---
+
+## 6.4 Concurrència i fenòmens de lectura anòmala
+
+Quan centenars d'usuaris o serveis web interactuen alhora amb la mateixa base de dades, poden produir-se tres anomalies de lectura clàssiques si l'aïllament no és adequat:
+
+### 1. Lectura Bruta (*Dirty Read*)
+- La transacció $T_1$ modifica una fila però encara no fa `COMMIT`.
+- La transacció $T_2$ llegeix eixa mateixa fila i utilitza el valor no confirmat per prendre decisions.
+- Posteriorment, $T_1$ falla i executa un `ROLLBACK`.
+- *Conseqüència:* $T_2$ ha treballat amb dades que realment mai van existir a la base de dades!
+
+### 2. Lectura No Repetible (*Non-Repeatable Read*)
+- La transacció $T_1$ llegeix una fila (ex. el saldo d'un client: 1.000 €).
+- La transacció concurrent $T_2$ modifica eixe mateix saldo a 500 € i fa `COMMIT`.
+- $T_1$ torna a llegir la mateixa fila i descobreix que el valor ha canviat dins de la seua pròpia transacció.
+
+### 3. Lectura Fantasma (*Phantom Read*)
+- La transacció $T_1$ fa una cerca per rang (ex. `SELECT * FROM Clients WHERE edat > 65`, trobant 10 files).
+- La transacció $T_2$ insereix un nou client de 70 anys i fa `COMMIT`.
+- $T_1$ repeteix la mateixa consulta de rang i ara apareixen 11 files (la nova fila ha aparegut com un "fantasma").
+
+---
+
+## 6.5 Nivells d'aïllament ANSI SQL i gestió de bloquejos
+
+L'estàndard ANSI SQL defineix **quatre nivells d'aïllament** que equilibren la seguretat de les dades enfront del rendiment de concurrència del sistema:
+
+| Nivell d'Aïllament | Permet Lectura Bruta? | Permet Lectura No Repetible? | Permet Lectura Fantasma? | Rendiment Relatiu |
+| :--- | :---: | :---: | :---: | :---: |
+| **`READ UNCOMMITTED`** | **Sí** | **Sí** | **Sí** | Màxim (sense bloquejos) |
+| **`READ COMMITTED`** | **No** | **Sí** | **Sí** | Alt (*Per defecte en PostgreSQL*) |
+| **`REPEATABLE READ`** | **No** | **No** | **Sí** (en SQL pur; No en PG MVCC) | Mitjà |
+| **`SERIALIZABLE`** | **No** | **No** | **No** | Mínim (bloquejos estrictes) |
+
+Per establir el nivell d'aïllament desitjat en una sessió:
+```sql
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+```
+
+---
+
+### Bloquejos (*Locks*) i Interbloquejos (*Deadlocks*)
+Per garantir l'aïllament, el motor empra mecanismes de bloqueig:
+- **Bloqueig Compartit (*Shared Lock*):** Permet a múltiples transaccions llegir la mateixa fila simultàniament, però impedeix que ningú la modifique.
+- **Bloqueig Exclusiu (*Exclusive Lock*):** Adquirit per operacions `UPDATE` o `DELETE` (o mitjançant `SELECT ... FOR UPDATE`). Només una transacció pot accedir a la fila; qualsevol altra queda congelada en espera.
+- **Interbloqueig (*Deadlock*):**
+  - Es produeix quan dues transaccions s'esperen mútuament en cercle:
+    - $T_1$ té bloquejada la fila A i sol·licita la fila B.
+    - $T_2$ té bloquejada la fila B i sol·licita la fila A.
+  - El motor SGBD disposa d'un **detector de cicles de deadlock** que detecta la situació, avorta una de les dues transaccions llançant un error i permet que l'altra continue.
 
 ---
 
@@ -279,110 +297,125 @@ REVOKE UPDATE ON TABLE Empleats FROM rol_desenvolupador;
 
 ### Bloc A: Fonaments, Dimensionament i Anàlisi de Rendiment
 
-#### Exercici 1: Estimació de consum físic d'emmagatzematge de dades
-Una taula `Transaccions` conté $1.000.000$ de registres amb la següent definició de columnes:
-- `id_transacció`: `BIGINT` ($8\text{ bytes}$).
-- `data_hora`: `TIMESTAMP` ($8\text{ bytes}$).
-- `import`: `NUMERIC(10,2)` ($8\text{ bytes}$).
-- `codi_estat`: `CHAR(2)` ($2\text{ bytes}$).
-- `descripcio`: `VARCHAR(50)` (longitud mitjana de caràcters reals: $24\text{ bytes} + 1\text{ byte}$ de longitud).
-- Sobrecàrrega interna de capçalera de fila en PostgreSQL (*Tuple Header*): $24\text{ bytes}$.
+#### Exercici 1: Traçat formal d'una transacció bancària amb SAVEPOINT
+Es disposa d'una taula `Comptes(id_compte, titular, saldo)`.
+- Estat inicial:
+  - Compte 1: $1.200\text{ €}$
+  - Compte 2: $400\text{ €}$
+  - Compte 3: $800\text{ €}$
 
-1. Calcula la mida mitjana estimada d'una única fila en disc:
-   $$\text{Mida Fila} = 8 + 8 + 8 + 2 + 25 + 24 = \dots \text{ bytes}$$
-2. Calcula l'espai brut requerit per a la taula completa d'$1.000.000$ de files en megabytes:
-   $$V_{\text{taula}} = \frac{1.000.000 \times \text{Mida Fila}}{1.024 \times 1.024} = \dots \text{ MB}$$
-3. Si la taula té un índex B-Tree sobre `id_transacció` ($16\text{ bytes}$ per entrada d'índex) i un altre sobre `data_hora`, quants megabytes addicionals d'índexs cal preveure?
+Analitza el següent bloc transaccional executat per un sistema de transferències:
+```sql
+BEGIN;
+UPDATE Comptes SET saldo = saldo - 300 WHERE id_compte = 1;
+UPDATE Comptes SET saldo = saldo + 300 WHERE id_compte = 2;
+SAVEPOINT transfer_1_completa;
 
-#### Exercici 2: Disseny d'una matriu de seguretat RBAC
-Dissenya la política de permisos per a una empresa que gestiona les taules `Clients`, `Factures` i `SousEmpleats`:
-- Perfil 1: `Rol_Comptable` (accés complet de lectura i escriptura a Factures i Clients; lectura de Sous).
-- Perfil 2: `Rol_AtencioClient` (lectura de Clients i Factures; accés prohibit a Sous).
-- Perfil 3: `Rol_Auditor` (només lectura `SELECT` sobre totes les taules).
+UPDATE Comptes SET saldo = saldo - 500 WHERE id_compte = 2;
+UPDATE Comptes SET saldo = saldo + 500 WHERE id_compte = 3;
+SAVEPOINT transfer_2_completa;
 
-1. Confecciona la matriu de permisos (Taula vs Rol amb permisos `SELECT`, `INSERT`, `UPDATE`, `DELETE`).
-2. Escriu les sentències SQL `GRANT` exactes per configurar el perfil `Rol_AtencioClient`.
+UPDATE Comptes SET saldo = saldo - 1000 WHERE id_compte = 3; -- Saldo insuficient!
+ROLLBACK TO SAVEPOINT transfer_1_completa;
+COMMIT;
+```
 
-#### Exercici 3: Anàlisi de cost computacional d'índexs
-1. Per què una consulta `SELECT * FROM Usuaris WHERE email = 'test@example.com'` passa de trigar $250\text{ ms}$ a menys d'$1\text{ ms}$ en afegir un índex B-Tree sobre `email`?
-2. Si una taula rep $2.000$ insercions per segon procedents de dispositius IoT, per què no és recomanable crear índexs sobre cada una de les columnes de telemetria?
+1. Fes una taula de traçat mostrant el saldo exacte dels tres comptes després de cada instrucció.
+2. Quin és el saldo final de cadascun dels tres comptes després d'executar el `COMMIT`?
+3. S'ha transferit alguna quantitat al Compte 3? Justifica la resposta basant-te en el funcionament del `ROLLBACK TO SAVEPOINT`.
+
+#### Exercici 2: Anàlisi d'anomalies de concurrència en un sistema de venda d'entrades
+Dues transaccions $T_A$ i $T_B$ s'executen simultàniament sobre una taula `Esdeveniments(id, entrades_lliures)` on `entrades_lliures = 1`:
+- $T_A$ (Nivell `READ COMMITTED`): Consulta entrades lliures $\to$ llegeix 1.
+- $T_B$ (Nivell `READ COMMITTED`): Consulta entrades lliures $\to$ llegeix 1.
+- $T_A$: Executa `UPDATE Esdeveniments SET entrades_lliures = 0 WHERE id = 1;` i fa `COMMIT`.
+- $T_B$: Executa el mateix `UPDATE` i confirma.
+
+1. Quin problema de concurrència s'ha produït (venda duplicada de l'última entrada)?
+2. Com resol aquest problema l'ús de la sentència `SELECT ... FOR UPDATE` (bloqueig pessimista de fila) des del moment en què es fa la lectura?
+
+#### Exercici 3: Diagnòstic d'un cicle d'interbloqueig (*Deadlock*)
+Dues aplicacions web $A_1$ i $A_2$ gestionen comandes i estocs:
+- Instant $t_1$: $A_1$ inicia transacció i bloqueja el producte P1 (`UPDATE Productes SET estoc = estoc - 1 WHERE id = 'P1'`).
+- Instant $t_2$: $A_2$ inicia transacció i bloqueja el producte P2 (`UPDATE Productes SET estoc = estoc - 2 WHERE id = 'P2'`).
+- Instant $t_3$: $A_1$ intenta actualitzar P2 i queda bloquejada esperant que $A_2$ allibere el recurs.
+- Instant $t_4$: $A_2$ intenta actualitzar P1.
+
+1. Dibuixa el graf d'espera de recursos (*Wait-For Graph*) resultant.
+2. Com reaccionarà el motor SGBD automàticament davant d'aquest cicle?
+3. Quina regla de bones pràctiques en desenvolupament de programari permet evitar deadlocks per complet (pista: ordre consistent d'adquisició de recursos)?
 
 ---
 
 ### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Script DDL complet d'un sistema acadèmic
-- **Objectiu:** Crear una base de dades amb claus primàries, claus foranes amb regles d'acció i restriccions `CHECK` complexes.
+#### Repte 1: Experimentació d'aïllament amb dues sessions SQL paral·leles
+- **Objectiu:** Observar el funcionament del nivell `READ COMMITTED` i comprovar que les dades no consolidades són invisibles a altres connexions.
 - **Procediment de taller:**
-  1. Obre el client SQL i crea les taules:
+  1. Crea una taula de proves `Articles(id INT PRIMARY KEY, nom VARCHAR(50), preu NUMERIC(6,2));` i insereix `(1, 'Llibre SQL', 20.00)`.
+  2. Obre **dos terminals de consola independents** connectats a la mateixa base de dades (**Sessió A** i **Sessió B**).
+  3. A la **Sessió A**:
      ```sql
-     CREATE TABLE Cursos (
-         codi_curs VARCHAR(8) PRIMARY KEY,
-         nom_curs VARCHAR(100) NOT NULL,
-         hores INT CHECK (hores BETWEEN 10 AND 500)
-     );
-
-     CREATE TABLE Alumnes (
-         nia INT PRIMARY KEY,
-         nif CHAR(9) UNIQUE NOT NULL,
-         nom VARCHAR(80) NOT NULL,
-         data_naixement DATE NOT NULL,
-         codi_curs VARCHAR(8) NOT NULL,
-         CONSTRAINT fk_alumnes_curs FOREIGN KEY (codi_curs)
-             REFERENCES Cursos(codi_curs)
-             ON DELETE RESTRICT ON UPDATE CASCADE
-     );
+     BEGIN;
+     UPDATE Articles SET preu = 35.00 WHERE id = 1;
+     SELECT * FROM Articles WHERE id = 1; -- Mostra 35.00
      ```
-  2. Afegeix mitjançant `ALTER TABLE` una restricció per assegurar que cap alumne puga tindre una data de naixement posterior a la data actual:
+  4. A la **Sessió B** (sense fer res a la sessió A):
      ```sql
-     ALTER TABLE Alumnes ADD CONSTRAINT chk_data_valida CHECK (data_naixement < CURRENT_DATE);
+     SELECT * FROM Articles WHERE id = 1; -- Mostra 20.00!
      ```
-  3. Insereix dades vàlides i verifica que les restriccions bloquegen intents d'inserir hores negatives o dates futures.
+  5. Comprova que la sessió B continua veient el valor antic de 20.00 € (propietat d'Aïllament).
+  6. A la **Sessió A**, executa `COMMIT;`.
+  7. Torna a la **Sessió B** i repeteix el `SELECT`: comprova que ara el nou preu de 35.00 € ja és visible de forma instantània.
 
-#### Repte 2: Creació de vistes segures i vistes materialitzades
-- **Objectiu:** Crear una vista de seguretat per amagar dades sensibles i una vista materialitzada amb refresc de dades.
+#### Repte 2: Comprovació de rollback davant de violació d'integritat
+- **Objectiu:** Demostrar l'Atomicitat de les transaccions davant fallades de restricció.
 - **Procediment de taller:**
-  1. Crea la vista `v_alumnes_resum` que només mostre `nia`, `nom` i el `nom_curs` (ocultant el NIF i la data de naixement).
-  2. Crea una vista materialitzada que calcule el nombre d'alumnes matriculats per cada curs:
+  1. Afegeix una restricció `CHECK (preu > 0)` a la taula `Articles`.
+  2. Executa el següent bloc transaccional amb un error forçat a la segona ordre:
      ```sql
-     CREATE MATERIALIZED VIEW v_estadistiques_cursos AS
-     SELECT c.nom_curs, COUNT(a.nia) AS total_matriculats
-     FROM Cursos c
-     LEFT JOIN Alumnes a ON c.codi_curs = a.codi_curs
-     GROUP BY c.nom_curs;
+     BEGIN;
+     INSERT INTO Articles VALUES (2, 'Quadern', 5.00);
+     INSERT INTO Articles VALUES (3, 'Bolígraf', -1.50); -- Falla la restricció CHECK!
+     COMMIT;
      ```
-  3. Insereix un nou alumne i comprova que la vista materialitzada no canvia fins que s'executa l'ordre `REFRESH MATERIALIZED VIEW v_estadistiques_cursos;`.
+  3. Comprova que el SGBD avorta la transacció (`ERROR: check constraint "chk_preu"`).
+  4. Consulta la taula `SELECT * FROM Articles;`: verifica que l'article 2 ('Quadern') **no s'ha inserit**, complint l'atomicitat ("tot o res").
 
-#### Repte 3: Gestió d'usuaris i revocació de privilegis en consola
-- **Objectiu:** Crear un usuari d'aplicació i comprovar el bloqueig de permisos no autoritzats.
+#### Repte 3: Bloqueig exclusiu de fila amb `SELECT ... FOR UPDATE`
+- **Objectiu:** Protegir un registre contra modificacions concurrents durant un procés de reserva.
 - **Procediment de taller:**
-  1. Crea un usuari `operari_consulta` protegit amb contrasenya:
+  1. A la **Sessió A**, bloqueja una fila per a lectura/escriptura:
      ```sql
-     CREATE USER operari_consulta WITH PASSWORD 'consulta2026';
-     GRANT SELECT ON TABLE Cursos TO operari_consulta;
+     BEGIN;
+     SELECT * FROM Articles WHERE id = 1 FOR UPDATE;
      ```
-  2. Obre una segona sessió de terminal connectant-te amb aquest usuari.
-  3. Executa una consulta de lectura: `SELECT * FROM Cursos;` (comprova que funciona).
-  4. Intenta eliminar un registre: `DELETE FROM Cursos;` i comprova el missatge d'error de denegació de privilegis: `permission denied for table Cursos`.
+  2. A la **Sessió B**, intenta actualitzar eixa mateixa fila:
+     ```sql
+     UPDATE Articles SET preu = 40.00 WHERE id = 1;
+     ```
+  3. Observa com la Sessió B es queda congelada en espera activa (*Waiting for lock*).
+  4. A la **Sessió A**, executa `COMMIT;`: observa com la Sessió B es desbloqueja a l'instant i finalitza la seua actualització.
 
 ---
 
 ### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 #### Llista de comprovació per a l'alumnat
-- [ ] He seleccionat els tipus de dades adequats en SQL evitant malbaratar espai de disc.
-- [ ] He utilitzat `NUMERIC` per a valors monetaris garantint precisió decimal exacta.
-- [ ] He definit claus primàries simples i compostes mitjançant `PRIMARY KEY`.
-- [ ] He configurat claus foranes amb regles d'esborrat `CASCADE`, `RESTRICT` i `SET NULL`.
-- [ ] He afegit restriccions `UNIQUE`, `NOT NULL`, `DEFAULT` i `CHECK`.
-- [ ] He modificat estructures de taules existents amb comandes `ALTER TABLE`.
-- [ ] He creat vistes estàndard de seguretat i he assignat privilegis amb `GRANT` i `REVOKE`.
+- [ ] He utilitzat comandes DML bàsiques (`INSERT`, `UPDATE`, `DELETE`) amb clàusules de filtratge segures.
+- [ ] He aplicat la clàusula `RETURNING` per obtenir claus primàries generades en operacions `INSERT`.
+- [ ] He gestionat conflictes de clau primària utilitzant `ON CONFLICT DO UPDATE` (UPSERT).
+- [ ] He explicat les quatre propietats ACID (Atomicitat, Consistència, Aïllament i Durabilitat).
+- [ ] He controlat transaccions mitjançant comandes `BEGIN`, `COMMIT` i `ROLLBACK`.
+- [ ] He creat punts de rescat amb `SAVEPOINT` per executar reversions parcials.
+- [ ] He diferenciat els fenòmens de lectura anòmala (Dirty Read, Non-Repeatable Read, Phantom Read) i els nivells d'aïllament SQL.
 
 #### Rúbrica d'avaluació d'aprenentatge
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Tipus de Dades i Dimensionament** | Selecciona els tipus de dades SQL òptims per a cada domini, utilitzant tipus exactes i calculant l'impacte en bytes en memòria i disc. | Tria tipus de dades correctes per a textos, nombres i dates sense errors greus de dimensionament. | Utilitza tipus de dades bàsics però abusa de tipus sobredimensionats (com VARCHAR(255) per a tot). | Confon tipus de dades incompatibles o utilitza coma flotant per a dades comptables. |
-| **Sintaxi DDL i Restriccions d'Integritat** | Construeix scripts DDL complets amb restriccions CHECK avançades, valors per defecte i regles de clau forana en cascada impecables. | Crea taules amb claus primàries, foranes i restriccions NOT NULL i UNIQUE funcionals. | Crea taules senzilles però requereix assistència per definir les restriccions d'integritat. | Errors constants de sintaxi en `CREATE TABLE` o omet la definició de claus. |
-| **Alteració d'Estructures (ALTER TABLE)** | Modifica esquemes en producció amb `ALTER TABLE` (afegir/eliminar columnes i restriccions) assegurant la integritat de les dades existents. | Utilitza `ALTER TABLE` per afegir nous camps i canviar tipus de dades amb èxit. | Executa canvis bàsics amb suport de manuals però té dificultats per afegir noves claus foranes. | Incapaç de modificar una taula existent; opta per esborrar-la (`DROP`) perdent totes les dades. |
-| **Vistes i Índexs Físics** | Implementa vistes de seguretat, vistes materialitzades i avalua l'impacte d'índexs B-Tree en consultes vs escriptures. | Crea vistes senzilles per simplificar consultes i entén la funció dels índexs de cerca. | Sap crear una vista estàndard però desconeix com funciona un índex físic de disc. | No comprèn el concepte de vista virtual o confon una vista amb una taula física. |
-| **Control de Seguretat DCL (GRANT/REVOKE)** | Dissenya esquemes de seguretat basats en rols (RBAC), atorga privilegis mínims necessaris i audita accessos no autoritzats. | Crea usuaris i rols i concedeix permisos de lectura o escriptura mitjançant `GRANT`. | Assigna permisos de forma directa a usuaris però sense utilitzar rols agrupats. | Deixa tots els usuaris amb privilegis de superusuari (root/postgres) sense cap control de seguretat. |
+| **Operacions DML Avançades** | Domina sentències DML amb filtres complexos, clàusules RETURNING i operacions UPSERT (ON CONFLICT) sense riscos d'esborrat massiu. | Executa insercions, actualitzacions i eliminacions amb clàusula WHERE de manera segura. | Utilitza INSERT i UPDATE bàsics però requereix recordatoris per no ometre el WHERE en esborrats. | Executa sentències UPDATE o DELETE sense WHERE provocant la pèrdua o corrupció massiva de dades. |
+| **Model Transaccional ACID** | Justifica detalladament com el motor SGBD garanteix cadascuna de les propietats ACID mitjançant fitxers WAL, bloquejos i aïllament. | Explica el concepte d'atomicitat ("tot o res") i durabilitat en cas de caiguda del servidor. | Recorda que una transacció agrupa operacions però té dubtes sobre com es garanteix l'aïllament. | Desconeix el significat de les sigles ACID o creu que cada ordre SQL és independent per defecte. |
+| **Control Transaccional (TCL)** | Dissenya fluxos transaccionals complexos amb gestió d'errors, punts de control SAVEPOINT i reversions selectives impecables. | Utilitza `BEGIN`, `COMMIT` i `ROLLBACK` per controlar canvis i recuperar-se de fallades. | Aplica COMMIT i ROLLBACK bàsics però confon el funcionament dels punts de rescat SAVEPOINT. | No utilitza transaccions i deixa operacions a mitges davant fallades de sistema. |
+| **Concurrència i Nivells d'Aïllament** | Analitza i preveu anomalies de concurrència (Dirty Read, Non-Repeatable Read, Phantom Read) i configura el nivell d'aïllament idoni per al negoci. | Distingeix el nivell Read Committed de Serializable i sap quan una transacció veu canvis aliens. | Reconeix que diversos usuaris poden accedir alhora però desconeix els fenòmens de lectura fantasma. | Creu que totes les connexions veuen les dades no confirmades d'altres usuaris sense cap aïllament. |
+| **Gestió de Bloquejos i Deadlocks** | Implementa bloquejos pessimistes (`FOR UPDATE`), dissenya ordres consistents d'accés per evitar deadlocks i interpreta logs de concurrència. | Observa i gestiona bloquejos de files entre múltiples sessions de terminal concurrents. | Comprova que una ordre pot quedar en espera d'una altra però desconeix què és un interbloqueig (deadlock). | Provoca bloquejos infinits o no sap com desbloquejar una sessió aturada. |
+

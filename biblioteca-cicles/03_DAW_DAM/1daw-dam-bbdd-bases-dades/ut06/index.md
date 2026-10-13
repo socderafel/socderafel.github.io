@@ -1,295 +1,303 @@
----
+﻿---
 layout: default
-title: "UD6: Manipulació de Dades i Transaccions (SQL DML i TCL) — Bases de Dades"
+title: "UD6: Consultes Avançades a Bases de Dades (SQL DQL) — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD6"
-next_url: "ut0601.html"
-next_label: "6.1 ➡️"
+badge: "1r DAW / DAM · Grau Superior · UD7"
+next_url: "../ut07/index.html"
+next_label: "UD7: ProgramaciÃ³ PL/SQL âž¡ï¸"
 ---
 
-# UD6: Manipulació de Dades i Transaccions (SQL DML i TCL)
+# UD6: Consultes Avançades a Bases de Dades (SQL DQL)
 
 <div style="text-align: center; margin: 1.5rem 0;">
 <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
   <defs>
-    <linearGradient id="bg-grad-db6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg-grad-db7" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="g-dml" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-sel" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-aci" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-joi" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-tcl" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-grp" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-iso" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-sub" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db6)"/>
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-db7)"/>
 
   <!-- Capçalera -->
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">MANIPULACIÓ DE DADES (DML) I CONTROL TRANSACCIONAL ACID (TCL)</text>
-  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Operacions INSERT, UPDATE, DELETE, propietats ACID, gestió de COMMIT/ROLLBACK i nivells d'aïllament</text>
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">CONSULTES AVANÇADES EN SQL (DQL - DATA QUERY LANGUAGE)</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Filtratge WHERE, combinacions JOIN (Inner/Outer/Self), agregacions GROUP BY/HAVING i subconsultes</text>
 
-  <!-- Bloc 1: Operacions DML -->
+  <!-- Bloc 1: Projecció & Filtre -->
   <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-dml)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-sel)" stroke="#38bdf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">✏️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Operacions DML</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Modificació de Dades</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• INSERT INTO (individual/massiu)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• UPDATE amb clàusula WHERE</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• DELETE amb filtratge precís</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Clàusula RETURNING &amp; UPSERT</text>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🔍</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">SELECT &amp; Filtre</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Ordre Lògic SQL</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• SELECT, DISTINCT &amp; Àlies</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• WHERE: Operadors AND/OR/NOT</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Patrons LIKE, IN &amp; BETWEEN</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• ORDER BY, LIMIT &amp; OFFSET</text>
   </g>
 
-  <!-- Bloc 2: Propietats ACID -->
+  <!-- Bloc 2: Combinacions JOIN -->
   <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-aci)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-joi)" stroke="#818cf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">💎</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Model ACID</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Fiabilitat del Motor</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Atomicitat: Tot o res</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Consistència: Estat vàlid</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Aïllament: Sense interferència</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Durabilitat: Registre WAL</text>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🔗</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Combinacions JOIN</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Consultes Multitaula</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• INNER JOIN: Coincidències</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• LEFT / RIGHT OUTER JOIN</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• FULL OUTER &amp; CROSS JOIN</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• SELF JOIN &amp; clàusula USING</text>
   </g>
 
-  <!-- Bloc 3: Control TCL -->
+  <!-- Bloc 3: Agrupament i Resum -->
   <g transform="translate(435, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-tcl)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-grp)" stroke="#34d399" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🛡️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Llenguatge TCL</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Gestió Transaccional</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• BEGIN / START TRANSACTION</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• COMMIT: Confirmació al disc</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• ROLLBACK: Reversió total</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• SAVEPOINT: Punts de rescat</text>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📊</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">GROUP BY &amp; Resum</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Funcions Agregades</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• COUNT, SUM, AVG, MIN, MAX</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Agrupament GROUP BY</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Filtratge de grups HAVING</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Diferència WHERE vs HAVING</text>
   </g>
 
-  <!-- Bloc 4: Concurrència & Aïllament -->
+  <!-- Bloc 4: Subconsultes & Conjunts -->
   <g transform="translate(640, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-iso)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-sub)" stroke="#f59e0b" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">⚖️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Concurrència</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Nivells d'Aïllament</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Read Committed (per defecte)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Repeatable Read &amp; Serializable</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Dirty / Phantom Reads</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Bloquejos &amp; Deadlocks</text>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">💡</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Subconsultes</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Consultes Avançades</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Subconsultes escalars &amp; llista</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Operadors IN, ANY, ALL</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Subconsultes correlacionades</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Conjunts: UNION, INTERSECT</text>
   </g>
 </svg>
 </div>
 
-Operacions del Llenguatge de Manipulació de Dades (SQL DML: INSERT, UPDATE, DELETE), clàusules avançades com RETURNING i ON CONFLICT, concepte de transacció, compliment estricte de propietats ACID, control de transaccions mitjançant TCL (COMMIT, ROLLBACK, SAVEPOINT) i anàlisi de concurrència i nivells d'aïllament.
+El Llenguatge de Consulta de Dades (SQL DQL: SELECT), ordre d'execució lògica de consultes, combinacions multitaula (INNER, LEFT, RIGHT, FULL, SELF JOIN), funcions d'agregació estadística, agrupaments amb GROUP BY i filtratge de grups mitjançant HAVING, subconsultes escalars, correlacionades i operacions de conjunts.
 
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
-| **6.1** | **El Llenguatge de Manipulació de Dades (SQL DML)** | [**Llegir apartat →**](./ut0601.html) |
-| **6.2** | **Conceptes de transacció i propietats ACID** | [**Llegir apartat →**](./ut0602.html) |
-| **6.3** | **Control transaccional: COMMIT, ROLLBACK i SAVEPOINT** | [**Llegir apartat →**](#63-control-transaccional-commit-rollback-i-savepoint) |
-| **6.4** | **Concurrència i fenòmens de lectura anòmala** | [**Llegir apartat →**](#64-concurrència-i-fenòmens-de-lectura-anòmala) |
-| **6.5** | **Nivells d'aïllament ANSI SQL i gestió de bloquejos** | [**Llegir apartat →**](#65-nivells-daïllament-ansi-sql-i-gestió-de-bloquejos) |
+| **7.1** | **Estructura i ordre lògic d'execució d'una consulta SQL** | [**Llegir apartat →**](./ut0701.html) |
+| **7.2** | **Combinacions multitaula: tipus de JOIN i autocombinació** | [**Llegir apartat →**](./ut0702.html) |
+| **7.3** | **Funcions d'agregació, GROUP BY i la clàusula HAVING** | [**Llegir apartat →**](#73-funcions-dagregació-group-by-i-la-clàusula-having) |
+| **7.4** | **Subconsultes: escalars, de llista i correlacionades (EXISTS)** | [**Llegir apartat →**](#74-subconsultes-escalars-de-llista-i-correlacionades-exists) |
+| **7.5** | **Operacions de conjunts: UNION, INTERSECT i EXCEPT** | [**Llegir apartat →**](#75-operacions-de-conjunts-union-intersect-i-except) |
 
 ---
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 6.1 El Llenguatge de Manipulació de Dades (SQL DML)
+## 7.1 Estructura i ordre lògic d'execució d'una consulta SQL
 
-Mentre que el DDL defineix l'esquelet de la base de dades, el **Llenguatge de Manipulació de Dades (DML)** permet als desenvolupadors gestionar el contingut real de les taules: afegir noves files, modificar registres existents o esborrar dades.
+La sentència `SELECT` és el cor del llenguatge SQL per extreure informació de la base de dades. Tot i que s'escriu començant per la paraula `SELECT`, el motor SGBD **no l'executa en l'ordre en què està escrita**, sinó seguint un **ordre lògic d'execució estricte**:
 
-### 1. Inserció de Dades (`INSERT INTO`)
-Sintaxi per afegir noves tuples a una relació:
+```
+ORDRE D'ESCRIPTURA EN SQL:              ORDRE REAL D'EXECUCIÓ AL MOTOR:
+1. SELECT [DISTINCT] columnes            1. FROM (i clàusules JOIN)  -> Selecciona origen de dades
+2. FROM taula                             2. WHERE                    -> Filtra files individuals
+3. [JOIN altra_taula ON condició]         3. GROUP BY                 -> Agrupa tuples per clau
+4. WHERE condicions_fila                  4. HAVING                   -> Filtra grups agregats
+5. GROUP BY columnes_agrupament           5. SELECT                   -> Projecta columnes i àlies
+6. HAVING condicions_grup                 6. DISTINCT                 -> Elimina files duplicades
+7. ORDER BY columnes_ordenacio            7. ORDER BY                 -> Ordena el resultat final
+8. LIMIT n OFFSET m                       8. LIMIT / OFFSET           -> Paginació final
+```
+
+> [!NOTE]
+> Com que `WHERE` s'executa abans que `SELECT`, **mai es pot utilitzar un àlies creat al `SELECT` dins de la clau `WHERE`**! En canvi, sí que es pot utilitzar a `ORDER BY`, ja que aquest s'executa després de la projecció.
+
+---
+
+### Predicats i operadors de filtratge (`WHERE`)
+- **Comparació simple:** `=`, `<>`, `!=`, `<`, `<=`, `>`, `>=`.
+- **Cerca per rangs:** `BETWEEN valor1 AND valor2` (inclusiu en ambdós extrems).
+- **Pertinença a llista:** `IN ('València', 'Castelló', 'Alacant')` o `NOT IN (...)`.
+- **Patrons de cadenes:**
+  - `LIKE 'A%'`: Comença per 'A'.
+  - `LIKE '%ing'`: Acaba en 'ing'.
+  - `LIKE '_a%'`: Té una lletra 'a' com a segon caràcter (`_` representa un únic caràcter arbitrari).
+  - `ILIKE`: Versió insensible a majúscules/minúscules (*case-insensitive*) pròpia de PostgreSQL.
+- **Valors nuls:** `IS NULL` o `IS NOT NULL` (recordeu que `camp = NULL` mai funciona!).
+
+---
+
+## 7.2 Combinacions multitaula: tipus de JOIN i autocombinació
+
+Quan les dades estan normalitzades en múltiples taules relacionades per claus primàries i foranes, s'utilitzen les operacions **`JOIN`** per recompondre la informació.
+
+```
+       INNER JOIN                   LEFT OUTER JOIN              FULL OUTER JOIN
+    (Només coincidència)          (Tots els de l'Esquerra)     (Tots els d'ambdós)
+         +---+---+                    +---+---+                    +---+---+
+         | A | B |                    | A | B |                    | A | B |
+         |   | X |                    | X | X |                    | X | X |
+         +---+---+                    +---+---+                    +---+---+
+```
+
+### 1. `INNER JOIN` (Combinació Interna)
+Retorna únicament les files que tenen coincidència exacta en ambdues taules segons la condició del predicat `ON`:
 
 ```sql
--- Inserció d'una fila especificant les columnes de destinació
-INSERT INTO Productes (codi_prod, nom, preu, estoc)
-VALUES ('PRD-101', 'Teclat Mecànic RGB', 79.99, 25);
+SELECT c.nom, cmd.id_comanda, cmd.data_comanda
+FROM Clients c
+INNER JOIN Comandes cmd ON c.id_client = cmd.id_client;
+```
+- Si un client no ha realitzat cap comanda, no apareixerà al resultat.
 
--- Inserció massiva de múltiples tuples en una sola sentència atòmica
-INSERT INTO Categories (id_cat, nom_cat) VALUES
-    (1, 'Perifèrics'),
-    (2, 'Monitors'),
-    (3, 'Components');
+---
 
--- Inserció a partir del resultat d'una consulta SELECT
-INSERT INTO HistoricClients (id_client, nom, email)
-SELECT id_client, nom, email 
-FROM Clients 
-WHERE data_baixa < '2025-01-01';
+### 2. `LEFT OUTER JOIN` (Combinació Externa per l'Esquerra)
+Retorna **totes les files de la taula de l'esquerra** (`FROM`). Si una fila no té cap registre coincident a la taula de la dreta (`JOIN`), les columnes de la taula dreta es mostren com a **`NULL`**:
+
+```sql
+SELECT c.nom, cmd.id_comanda
+FROM Clients c
+LEFT JOIN Comandes cmd ON c.id_client = cmd.id_client;
+```
+- **Tècnica clau d'auditoria:** Per trobar quins clients no han comprat mai res:
+  ```sql
+  SELECT c.nom FROM Clients c
+  LEFT JOIN Comandes cmd ON c.id_client = cmd.id_client
+  WHERE cmd.id_comanda IS NULL;
+  ```
+
+---
+
+### 3. `FULL OUTER JOIN` (Combinació Externa Completa)
+Conserva totes les files d'ambdues taules. Si hi ha coincidència s'ajunten en una fila; si no hi ha coincidència, els camps de l'altre costat s'omplen amb valors `NULL`.
+
+---
+
+### 4. `SELF JOIN` (Autocombinació)
+Consisteix a combinar una taula amb ella mateixa utilitzant dos àlies diferents. És l'estratègia imprescindible per resoldre relacions reflexives:
+
+```sql
+-- Llistar el nom de cada empleat juntament amb el nom del seu cap directe
+SELECT e.nom AS Empleat, cap.nom AS Cap_Directe
+FROM Empleats e
+LEFT JOIN Empleats cap ON e.id_cap = cap.id_emp;
 ```
 
 ---
 
-### 2. Modificació de Dades (`UPDATE`)
-Permet canviar els valors d'una o més columnes en les files que compleixen una condició:
+## 7.3 Funcions d'agregació, GROUP BY i la clàusula HAVING
 
-```sql
--- Incrementar el preu un 5% només per als productes de la categoria 1
-UPDATE Productes
-SET preu = preu * 1.05,
-    data_actualitzacio = CURRENT_TIMESTAMP
-WHERE id_cat = 1;
-```
-
-> [!CAUTION]
-> Si s'executa un `UPDATE` sense la clàusula `WHERE`, **es modificaran absolutament totes les files de la taula**! En entorns de desenvolupament professional és recomanable provar primer el filtre amb una sentència `SELECT` equivalent abans de llançar l'actualització.
+Les funcions d'agregació calculen un únic valor resum a partir d'un conjunt de tuples:
+- `COUNT(*)`: Compta el nombre total de files (inclosos valors nuls).
+- `COUNT(columna)`: Compta quantes files tenen un valor no nul en eixa columna.
+- `SUM(columna)`: Suma aritmètica de valors numèrics.
+- `AVG(columna)`: Mitjana aritmètica dels valors no nuls.
+- `MIN(columna)` i `MAX(columna)`: Valors mínim i màxim (admeten nombres, dates i textos).
 
 ---
 
-### 3. Eliminació de Dades (`DELETE`)
-Esborra les files que verifiquen el predicat de filtratge:
+### La clàusula `GROUP BY` i la regla d'or
+Permet dividir les tuples de la taula en grups que comparteixen el mateix valor en les columnes indicades i calcular les funcions d'agregació per a cadascun dels grups:
 
-```sql
-DELETE FROM Productes
-WHERE estoc = 0 AND actiu = FALSE;
-```
-- A diferència de `TRUNCATE TABLE`, l'ordre `DELETE` avalua restriccions d'integritat referencial fila a fila, dispara triggers associats i pot ser revertida completament mitjançant transaccions.
+> [!IMPORTANT]
+> **Regla d'Or del GROUP BY:** Tota columna que aparega a la clàusula `SELECT` que **no estiga dins d'una funció d'agregació** (`COUNT`, `SUM`, etc.) ha d'aparèixer obligatòriament a la llista del `GROUP BY`!
 
 ---
 
-### 4. Extensions professionals DML: `RETURNING` i `UPSERT`
-En el desenvolupament d'aplicacions web modernes (Node.js, Java Spring, Python FastAPI), recuperar la clau generada automàticament o gestionar duplicats és una necessitat diària:
+### Diferència fonamental: `WHERE` vs `HAVING`
+- **`WHERE`:** Filtra files individuals **abans** de formar els grups i abans d'executar les funcions agregades. Mai pot contenir funcions com `COUNT` o `AVG`.
+- **`HAVING`:** Filtra grups ja agregats **després** que s'ha executat el `GROUP BY`.
 
 ```sql
--- 1. Clàusula RETURNING: retorna immediatament els valors generats pel SGBD
-INSERT INTO Clients (nom, email) 
-VALUES ('Marc Valls', 'marc@example.com')
-RETURNING id_client, data_creacio;
-
--- 2. Clàusula ON CONFLICT / UPSERT (Insert or Update):
--- Si el correu ja existeix, actualitza el nom en lloc de donar un error
-INSERT INTO Clients (nom, email) 
-VALUES ('Marc Valls Nou', 'marc@example.com')
-ON CONFLICT (email) 
-DO UPDATE SET nom = EXCLUDED.nom;
+SELECT d.nom_dept, COUNT(e.id_emp) AS total_empleats, AVG(e.salari) AS sou_mitja
+FROM Departaments d
+JOIN Empleats e ON d.id_dept = e.id_dept
+WHERE e.actiu = TRUE               -- Filtre de files individuals (WHERE)
+GROUP BY d.nom_dept
+HAVING COUNT(e.id_emp) >= 5        -- Filtre de grups (HAVING)
+ORDER BY sou_mitja DESC;
 ```
 
 ---
 
-## 6.2 Conceptes de transacció i propietats ACID
+## 7.4 Subconsultes: escalars, de llista i correlacionades (EXISTS)
 
-Una **transacció** és una seqüència lògica d'una o més operacions SQL executades com una **unitat indivisible de treball**. Un exemple clàssic és una transferència bancària entre dos comptes:
-1. Restar 200 € del compte A (`UPDATE Comptes SET saldo = saldo - 200 WHERE id = 'A'`).
-2. Sumar 200 € al compte B (`UPDATE Comptes SET saldo = saldo + 200 WHERE id = 'B'`).
+Una **subconsulta** (*Subquery* o consulta imbricada) és una sentència `SELECT` incrustada dins d'una altra sentència SQL principal.
 
-Si el sistema s'apaga entre el pas 1 i el pas 2, els diners desapareixerien. Per evitar aquests desastres, tot SGBD relacional de grau professional garanteix les quatre **propietats ACID**:
-
-### 1. Atomicitat (*Atomicity*)
-- La transacció és una unitat indivisible: **o s'executen totes les seues operacions amb èxit o no s'aplica cap d'elles**.
-- Si qualsevol instrucció del bloc falla o el servidor es reinicia, el motor reverteix automàticament totes les modificacions realitzades fins a eixe moment tornant a l'estat inicial.
-
-### 2. Consistència (*Consistency*)
-- La transacció condueix la base de dades des d'un estat vàlid i coherent a un altre estat igualment vàlid.
-- Mai es permetrà trencar cap restricció d'integritat (`PRIMARY KEY`, `FOREIGN KEY`, `CHECK`, `NOT NULL`). Si una sentència viola una regla, tota la transacció queda avortada.
-
-### 3. Aïllament (*Isolation*)
-- Les modificacions realitzades per una transacció no són visibles per a cap altra transacció concurrent fins que la primera ha finalitzat i s'ha confirmat definitivament.
-- Dues transaccions que s'executen en paral·lel no s'interfereixen mútuament.
-
-### 4. Durabilitat (*Durability*)
-- Un cop una transacció s'ha confirmat amb èxit (`COMMIT`), els seus canvis queden gravats de forma **permanent i indestructible** a l'emmagatzematge físic, sobrevivint fins i tot a una fallada sobtada de corrent elèctric.
-- El SGBD ho aconsegueix mitjançant el mecanisme d'escriptura prèvia al registre de transaccions (**WAL - *Write-Ahead Logging***).
-
----
-
-## 6.3 Control transaccional: COMMIT, ROLLBACK i SAVEPOINT
-
-El **Llenguatge de Control de Transaccions (TCL)** permet als desenvolupadors delimitar manualment l'abast de les transaccions:
+### 1. Subconsulta Escalar
+Retorna un únic valor (1 fila i 1 columna). Es pot utilitzar en qualsevol lloc on s'admeta una expressió constant:
 
 ```sql
--- 1. Inici de la transacció
-BEGIN TRANSACTION; -- O simplement 'BEGIN;'
-
--- 2. Primer canvi
-UPDATE Comptes SET saldo = saldo - 200 WHERE id_compte = 101;
-
--- 3. Punt de control intermedi
-SAVEPOINT abans_ingres;
-
--- 4. Segon canvi
-UPDATE Comptes SET saldo = saldo + 200 WHERE id_compte = 999; -- Compte inexistent!
-
--- Si detectem una anomalia al pas 4, podem desfer només fins al punt de control:
-ROLLBACK TO SAVEPOINT abans_ingres;
-
--- Finalització i confirmació definitiva dels canvis vàlids:
-COMMIT;
-```
-
-- **`BEGIN` / `START TRANSACTION`:** Inicia el bloc transaccional i desactiva el mode d'autoconfirmació (*Autocommit*).
-- **`COMMIT`:** Valida i aplica definitivament totes les operacions al disc. La transacció finalitza amb èxit.
-- **`ROLLBACK`:** Cancela i descarta completament totes les operacions executades des del `BEGIN`, deixant les taules com si res haguera passat.
-- **`SAVEPOINT nom_punt`:** Marca una fita intermèdia dins de la transacció.
-- **`ROLLBACK TO SAVEPOINT nom_punt`:** Reverteix les sentències posteriors a eixa fita sense anul·lar les operacions prèvies.
-
----
-
-## 6.4 Concurrència i fenòmens de lectura anòmala
-
-Quan centenars d'usuaris o serveis web interactuen alhora amb la mateixa base de dades, poden produir-se tres anomalies de lectura clàssiques si l'aïllament no és adequat:
-
-### 1. Lectura Bruta (*Dirty Read*)
-- La transacció $T_1$ modifica una fila però encara no fa `COMMIT`.
-- La transacció $T_2$ llegeix eixa mateixa fila i utilitza el valor no confirmat per prendre decisions.
-- Posteriorment, $T_1$ falla i executa un `ROLLBACK`.
-- *Conseqüència:* $T_2$ ha treballat amb dades que realment mai van existir a la base de dades!
-
-### 2. Lectura No Repetible (*Non-Repeatable Read*)
-- La transacció $T_1$ llegeix una fila (ex. el saldo d'un client: 1.000 €).
-- La transacció concurrent $T_2$ modifica eixe mateix saldo a 500 € i fa `COMMIT`.
-- $T_1$ torna a llegir la mateixa fila i descobreix que el valor ha canviat dins de la seua pròpia transacció.
-
-### 3. Lectura Fantasma (*Phantom Read*)
-- La transacció $T_1$ fa una cerca per rang (ex. `SELECT * FROM Clients WHERE edat > 65`, trobant 10 files).
-- La transacció $T_2$ insereix un nou client de 70 anys i fa `COMMIT`.
-- $T_1$ repeteix la mateixa consulta de rang i ara apareixen 11 files (la nova fila ha aparegut com un "fantasma").
-
----
-
-## 6.5 Nivells d'aïllament ANSI SQL i gestió de bloquejos
-
-L'estàndard ANSI SQL defineix **quatre nivells d'aïllament** que equilibren la seguretat de les dades enfront del rendiment de concurrència del sistema:
-
-| Nivell d'Aïllament | Permet Lectura Bruta? | Permet Lectura No Repetible? | Permet Lectura Fantasma? | Rendiment Relatiu |
-| :--- | :---: | :---: | :---: | :---: |
-| **`READ UNCOMMITTED`** | **Sí** | **Sí** | **Sí** | Màxim (sense bloquejos) |
-| **`READ COMMITTED`** | **No** | **Sí** | **Sí** | Alt (*Per defecte en PostgreSQL*) |
-| **`REPEATABLE READ`** | **No** | **No** | **Sí** (en SQL pur; No en PG MVCC) | Mitjà |
-| **`SERIALIZABLE`** | **No** | **No** | **No** | Mínim (bloquejos estrictes) |
-
-Per establir el nivell d'aïllament desitjat en una sessió:
-```sql
-SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+-- Empleats amb un salari superior a la mitjana de tota l'empresa
+SELECT nom, salari
+FROM Empleats
+WHERE salari > (SELECT AVG(salari) FROM Empleats);
 ```
 
 ---
 
-### Bloquejos (*Locks*) i Interbloquejos (*Deadlocks*)
-Per garantir l'aïllament, el motor empra mecanismes de bloqueig:
-- **Bloqueig Compartit (*Shared Lock*):** Permet a múltiples transaccions llegir la mateixa fila simultàniament, però impedeix que ningú la modifique.
-- **Bloqueig Exclusiu (*Exclusive Lock*):** Adquirit per operacions `UPDATE` o `DELETE` (o mitjançant `SELECT ... FOR UPDATE`). Només una transacció pot accedir a la fila; qualsevol altra queda congelada en espera.
-- **Interbloqueig (*Deadlock*):**
-  - Es produeix quan dues transaccions s'esperen mútuament en cercle:
-    - $T_1$ té bloquejada la fila A i sol·licita la fila B.
-    - $T_2$ té bloquejada la fila B i sol·licita la fila A.
-  - El motor SGBD disposa d'un **detector de cicles de deadlock** que detecta la situació, avorta una de les dues transaccions llançant un error i permet que l'altra continue.
+### 2. Subconsultes de Llista (`IN`, `ALL`, `ANY`)
+Retornen una columna amb múltiples valors:
+
+```sql
+-- Productes que pertanyen a categories de tecnologia
+SELECT nom, preu FROM Productes
+WHERE id_cat IN (SELECT id_cat FROM Categories WHERE sector = 'Tecnologia');
+```
+
+---
+
+### 3. Subconsultes Correlacionades i Operador `EXISTS`
+Una subconsulta està **correlacionada** quan fa referència a columnes de la taula de la consulta externa. S'executa una vegada per a cada fila avaluada per la consulta pare:
+
+```sql
+-- Clients que han realitzat almenys una comanda el darrer mes
+SELECT c.nom, c.email
+FROM Clients c
+WHERE EXISTS (
+    SELECT 1 FROM Comandes cmd 
+    WHERE cmd.id_client = c.id_client 
+      AND cmd.data_comanda >= CURRENT_DATE - INTERVAL '30 days'
+);
+```
+- **Rendiment:** L'operador `EXISTS` és extremadament eficient perquè s'atura tan prompte com troba la primera fila coincident (`short-circuit evaluation`), sense necessitat de carregar totes les dades en memòria.
+
+---
+
+## 7.5 Operacions de conjunts: UNION, INTERSECT i EXCEPT
+
+Permeten combinar els conjunts de resultats de dues o més consultes `SELECT` independents segons la teoria matemàtica de conjunts:
+
+- **`UNION`:** Unió de dos conjunts eliminant files duplicades.
+- **`UNION ALL`:** Unió de dos conjunts conservant totes les files duplicades (molt més ràpid en no requerir operació d'ordenació).
+- **`INTERSECT`:** Retorna únicament les files que apareixen a **tots dos** conjunts de resultats.
+- **`EXCEPT` (o `MINUS` en Oracle):** Retorna les files del primer conjunt que **no estan presents** al segon conjunt.
+
+```sql
+-- Llista única de ciutats on tenim o bé clients o bé proveïdors físics
+SELECT ciutat FROM Clients
+UNION
+SELECT ciutat FROM Proveïdors
+ORDER BY ciutat;
+```
 
 ---
 
@@ -297,124 +305,108 @@ Per garantir l'aïllament, el motor empra mecanismes de bloqueig:
 
 ### Bloc A: Fonaments, Dimensionament i Anàlisi de Rendiment
 
-#### Exercici 1: Traçat formal d'una transacció bancària amb SAVEPOINT
-Es disposa d'una taula `Comptes(id_compte, titular, saldo)`.
-- Estat inicial:
-  - Compte 1: $1.200\text{ €}$
-  - Compte 2: $400\text{ €}$
-  - Compte 3: $800\text{ €}$
+#### Exercici 1: Anàlisi de l'ordre d'execució lògic de sentències SQL complexes
+Considera la següent sentència SQL executada sobre una taula `Vendes(id, venedor, zona, import)`:
 
-Analitza el següent bloc transaccional executat per un sistema de transferències:
 ```sql
-BEGIN;
-UPDATE Comptes SET saldo = saldo - 300 WHERE id_compte = 1;
-UPDATE Comptes SET saldo = saldo + 300 WHERE id_compte = 2;
-SAVEPOINT transfer_1_completa;
-
-UPDATE Comptes SET saldo = saldo - 500 WHERE id_compte = 2;
-UPDATE Comptes SET saldo = saldo + 500 WHERE id_compte = 3;
-SAVEPOINT transfer_2_completa;
-
-UPDATE Comptes SET saldo = saldo - 1000 WHERE id_compte = 3; -- Saldo insuficient!
-ROLLBACK TO SAVEPOINT transfer_1_completa;
-COMMIT;
+SELECT zona, AVG(import) AS mitjana_venda
+FROM Vendes
+WHERE import > 50
+GROUP BY zona
+HAVING COUNT(*) > 100
+ORDER BY mitjana_venda DESC
+LIMIT 5;
 ```
 
-1. Fes una taula de traçat mostrant el saldo exacte dels tres comptes després de cada instrucció.
-2. Quin és el saldo final de cadascun dels tres comptes després d'executar el `COMMIT`?
-3. S'ha transferit alguna quantitat al Compte 3? Justifica la resposta basant-te en el funcionament del `ROLLBACK TO SAVEPOINT`.
+1. Enumera en quin ordre cronològic exacte el motor SGBD executarà cadascuna de les clàusules de la consulta (del pas 1 al pas 8).
+2. Explica per què si es canvia `HAVING COUNT(*) > 100` per `WHERE COUNT(*) > 100`, el compilador de PostgreSQL llança un error de sintaxi immediat.
+3. Raona per què a la clàusula `ORDER BY` sí que és vàlid utilitzar l'àlies `mitjana_venda`, mentre que a la clàusula `WHERE` provocaria un error de columna inexistent.
 
-#### Exercici 2: Anàlisi d'anomalies de concurrència en un sistema de venda d'entrades
-Dues transaccions $T_A$ i $T_B$ s'executen simultàniament sobre una taula `Esdeveniments(id, entrades_lliures)` on `entrades_lliures = 1`:
-- $T_A$ (Nivell `READ COMMITTED`): Consulta entrades lliures $\to$ llegeix 1.
-- $T_B$ (Nivell `READ COMMITTED`): Consulta entrades lliures $\to$ llegeix 1.
-- $T_A$: Executa `UPDATE Esdeveniments SET entrades_lliures = 0 WHERE id = 1;` i fa `COMMIT`.
-- $T_B$: Executa el mateix `UPDATE` i confirma.
+#### Exercici 2: Càlcul de cardinalitats en operacions JOIN
+Es disposa d'una taula `A` amb 500 registres i una taula `B` amb 1.200 registres.
+Se sap que:
+- 350 registres de `A` tenen coincidència amb registres de `B`.
+- 150 registres de `A` no tenen cap coincidència a `B`.
+- 400 registres de `B` no tenen cap coincidència a `A`.
+- Cada registre coincident de `A` té de mitjana 2 files associades a `B` ($350 \times 2 = 700$ parelles coincidents en total).
 
-1. Quin problema de concurrència s'ha produït (venda duplicada de l'última entrada)?
-2. Com resol aquest problema l'ús de la sentència `SELECT ... FOR UPDATE` (bloqueig pessimista de fila) des del moment en què es fa la lectura?
+Calcula el nombre exacte de files que retornarà cadascuna de les següents consultes:
+1. `SELECT * FROM A INNER JOIN B ON A.id = B.id_a;`
+2. `SELECT * FROM A LEFT JOIN B ON A.id = B.id_a;`
+3. `SELECT * FROM A RIGHT JOIN B ON A.id = B.id_a;`
+4. `SELECT * FROM A FULL OUTER JOIN B ON A.id = B.id_a;`
 
-#### Exercici 3: Diagnòstic d'un cicle d'interbloqueig (*Deadlock*)
-Dues aplicacions web $A_1$ i $A_2$ gestionen comandes i estocs:
-- Instant $t_1$: $A_1$ inicia transacció i bloqueja el producte P1 (`UPDATE Productes SET estoc = estoc - 1 WHERE id = 'P1'`).
-- Instant $t_2$: $A_2$ inicia transacció i bloqueja el producte P2 (`UPDATE Productes SET estoc = estoc - 2 WHERE id = 'P2'`).
-- Instant $t_3$: $A_1$ intenta actualitzar P2 i queda bloquejada esperant que $A_2$ allibere el recurs.
-- Instant $t_4$: $A_2$ intenta actualitzar P1.
+#### Exercici 3: Avaluació comparativa de rendiment: IN vs EXISTS
+Un desenvolupador ha d'obtenir els clients que tenen factures impagades. La taula `Factures` té $2.000.000$ de files.
+- **Opció A:** `SELECT * FROM Clients WHERE id_client IN (SELECT id_client FROM Factures WHERE estat = 'Impagada');`
+- **Opció B:** `SELECT * FROM Clients c WHERE EXISTS (SELECT 1 FROM Factures f WHERE f.id_client = c.id_client AND f.estat = 'Impagada');`
 
-1. Dibuixa el graf d'espera de recursos (*Wait-For Graph*) resultant.
-2. Com reaccionarà el motor SGBD automàticament davant d'aquest cicle?
-3. Quina regla de bones pràctiques en desenvolupament de programari permet evitar deadlocks per complet (pista: ordre consistent d'adquisició de recursos)?
+1. Què ocorre amb l'Opció A si la subconsulta retorna accidentalment algun valor `NULL` combinat amb `NOT IN`?
+2. Explica com optimitza el motor l'Opció B mitjançant l'avaluació en curtcircuit (*Short-Circuit Evaluation*) i l'ús d'un índex B-Tree sobre `Factures(id_client)`.
 
 ---
 
 ### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
 
-#### Repte 1: Experimentació d'aïllament amb dues sessions SQL paral·leles
-- **Objectiu:** Observar el funcionament del nivell `READ COMMITTED` i comprovar que les dades no consolidades són invisibles a altres connexions.
+#### Repte 1: Consultes multitaula i detecció d'elements orfes amb LEFT JOIN
+- **Objectiu:** Extreure informació comercial combinant 3 taules i detectar clients sense activitat.
 - **Procediment de taller:**
-  1. Crea una taula de proves `Articles(id INT PRIMARY KEY, nom VARCHAR(50), preu NUMERIC(6,2));` i insereix `(1, 'Llibre SQL', 20.00)`.
-  2. Obre **dos terminals de consola independents** connectats a la mateixa base de dades (**Sessió A** i **Sessió B**).
-  3. A la **Sessió A**:
+  1. Pobla un esquema amb `Clients`, `Comandes` i `LiniesComanda`.
+  2. Escriu la consulta que mostre per a cada comanda: el nom del client, el codi de comanda, la descripció del producte i el subtotal (`quantitat * preu_unitari`):
      ```sql
-     BEGIN;
-     UPDATE Articles SET preu = 35.00 WHERE id = 1;
-     SELECT * FROM Articles WHERE id = 1; -- Mostra 35.00
+     SELECT c.nom, cmd.id_comanda, p.descripcio, (lc.quantitat * lc.preu_unitari) AS subtotal
+     FROM Clients c
+     INNER JOIN Comandes cmd ON c.id_client = cmd.id_client
+     INNER JOIN LiniesComanda lc ON cmd.id_comanda = lc.id_comanda
+     INNER JOIN Productes p ON lc.codi_prod = p.codi_prod;
      ```
-  4. A la **Sessió B** (sense fer res a la sessió A):
-     ```sql
-     SELECT * FROM Articles WHERE id = 1; -- Mostra 20.00!
-     ```
-  5. Comprova que la sessió B continua veient el valor antic de 20.00 € (propietat d'Aïllament).
-  6. A la **Sessió A**, executa `COMMIT;`.
-  7. Torna a la **Sessió B** i repeteix el `SELECT`: comprova que ara el nou preu de 35.00 € ja és visible de forma instantània.
+  3. Escriu la consulta mitjançant `LEFT JOIN` que detecte quins productes del catàleg **no s'han venut mai** (és a dir, no apareixen a cap línia de comanda).
 
-#### Repte 2: Comprovació de rollback davant de violació d'integritat
-- **Objectiu:** Demostrar l'Atomicitat de les transaccions davant fallades de restricció.
+#### Repte 2: Informes estadístics amb GROUP BY i HAVING
+- **Objectiu:** Generar un resum de facturació per categoria amb filtres agregats.
 - **Procediment de taller:**
-  1. Afegeix una restricció `CHECK (preu > 0)` a la taula `Articles`.
-  2. Executa el següent bloc transaccional amb un error forçat a la segona ordre:
-     ```sql
-     BEGIN;
-     INSERT INTO Articles VALUES (2, 'Quadern', 5.00);
-     INSERT INTO Articles VALUES (3, 'Bolígraf', -1.50); -- Falla la restricció CHECK!
-     COMMIT;
-     ```
-  3. Comprova que el SGBD avorta la transacció (`ERROR: check constraint "chk_preu"`).
-  4. Consulta la taula `SELECT * FROM Articles;`: verifica que l'article 2 ('Quadern') **no s'ha inserit**, complint l'atomicitat ("tot o res").
+  1. Executa una consulta que agrupe els productes per categoria i mostre:
+     - Nom de la categoria.
+     - Nombre total de productes diferents.
+     - Preu mitjà del producte (arredonit a 2 decimals).
+     - Valor total de l'estoc al magatzem (`SUM(preu * estoc)`).
+  2. Afegeix un filtre `HAVING` perquè només es mostren les categories que tenen **més de 3 productes** i un estoc total valorat en **més de 1.000 €**.
+  3. Ordena el resultat de major a menor valoració d'estoc.
 
-#### Repte 3: Bloqueig exclusiu de fila amb `SELECT ... FOR UPDATE`
-- **Objectiu:** Protegir un registre contra modificacions concurrents durant un procés de reserva.
+#### Repte 3: Autocombinació (SELF JOIN) i Subconsultes Correlacionades
+- **Objectiu:** Resoldre problemes semàntics de jerarquies laborals i comparatives respecte a la mitjana departamental.
 - **Procediment de taller:**
-  1. A la **Sessió A**, bloqueja una fila per a lectura/escriptura:
+  1. En una taula `Empleats(id, nom, sou, id_dept, id_cap)`, escriu una autocombinació per mostrar el nom de l'empleat i el nom del seu superior directe. Assegura't amb un `LEFT JOIN` que el director general (que té `id_cap IS NULL`) també apareix al llistat.
+  2. Escriu una subconsulta correlacionada per mostrar aquells empleats que guanyen **més diners que el sou mitjà del seu propi departament**:
      ```sql
-     BEGIN;
-     SELECT * FROM Articles WHERE id = 1 FOR UPDATE;
+     SELECT e.nom, e.salari, e.id_dept
+     FROM Empleats e
+     WHERE e.salari > (
+         SELECT AVG(e2.salari)
+         FROM Empleats e2
+         WHERE e2.id_dept = e.id_dept
+     );
      ```
-  2. A la **Sessió B**, intenta actualitzar eixa mateixa fila:
-     ```sql
-     UPDATE Articles SET preu = 40.00 WHERE id = 1;
-     ```
-  3. Observa com la Sessió B es queda congelada en espera activa (*Waiting for lock*).
-  4. A la **Sessió A**, executa `COMMIT;`: observa com la Sessió B es desbloqueja a l'instant i finalitza la seua actualització.
 
 ---
 
 ### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
 
 #### Llista de comprovació per a l'alumnat
-- [ ] He utilitzat comandes DML bàsiques (`INSERT`, `UPDATE`, `DELETE`) amb clàusules de filtratge segures.
-- [ ] He aplicat la clàusula `RETURNING` per obtenir claus primàries generades en operacions `INSERT`.
-- [ ] He gestionat conflictes de clau primària utilitzant `ON CONFLICT DO UPDATE` (UPSERT).
-- [ ] He explicat les quatre propietats ACID (Atomicitat, Consistència, Aïllament i Durabilitat).
-- [ ] He controlat transaccions mitjançant comandes `BEGIN`, `COMMIT` i `ROLLBACK`.
-- [ ] He creat punts de rescat amb `SAVEPOINT` per executar reversions parcials.
-- [ ] He diferenciat els fenòmens de lectura anòmala (Dirty Read, Non-Repeatable Read, Phantom Read) i els nivells d'aïllament SQL.
+- [ ] He comprès l'ordre lògic d'execució d'una sentència SQL (`FROM` $\to$ `WHERE` $\to$ `GROUP BY` $\to$ `HAVING` $\to$ `SELECT` $\to$ `ORDER BY`).
+- [ ] He utilitzat operadors de cerca de patrons `LIKE` i `ILIKE` amb comodins `%` i `_`.
+- [ ] He combinat dades de múltiples taules utilitzant `INNER JOIN` i `LEFT JOIN`.
+- [ ] He resolt relacions reflexives mitjançant l'autocombinació `SELF JOIN`.
+- [ ] He aplicat funcions d'agregació (`COUNT`, `SUM`, `AVG`, `MIN`, `MAX`) respectant la regla d'or de `GROUP BY`.
+- [ ] He diferenciat la funció de filtratge de files de `WHERE` enfront del filtratge de grups de `HAVING`.
+- [ ] He construït subconsultes escalars, de llista i correlacionades amb `EXISTS`.
 
 #### Rúbrica d'avaluació d'aprenentatge
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Operacions DML Avançades** | Domina sentències DML amb filtres complexos, clàusules RETURNING i operacions UPSERT (ON CONFLICT) sense riscos d'esborrat massiu. | Executa insercions, actualitzacions i eliminacions amb clàusula WHERE de manera segura. | Utilitza INSERT i UPDATE bàsics però requereix recordatoris per no ometre el WHERE en esborrats. | Executa sentències UPDATE o DELETE sense WHERE provocant la pèrdua o corrupció massiva de dades. |
-| **Model Transaccional ACID** | Justifica detalladament com el motor SGBD garanteix cadascuna de les propietats ACID mitjançant fitxers WAL, bloquejos i aïllament. | Explica el concepte d'atomicitat ("tot o res") i durabilitat en cas de caiguda del servidor. | Recorda que una transacció agrupa operacions però té dubtes sobre com es garanteix l'aïllament. | Desconeix el significat de les sigles ACID o creu que cada ordre SQL és independent per defecte. |
-| **Control Transaccional (TCL)** | Dissenya fluxos transaccionals complexos amb gestió d'errors, punts de control SAVEPOINT i reversions selectives impecables. | Utilitza `BEGIN`, `COMMIT` i `ROLLBACK` per controlar canvis i recuperar-se de fallades. | Aplica COMMIT i ROLLBACK bàsics però confon el funcionament dels punts de rescat SAVEPOINT. | No utilitza transaccions i deixa operacions a mitges davant fallades de sistema. |
-| **Concurrència i Nivells d'Aïllament** | Analitza i preveu anomalies de concurrència (Dirty Read, Non-Repeatable Read, Phantom Read) i configura el nivell d'aïllament idoni per al negoci. | Distingeix el nivell Read Committed de Serializable i sap quan una transacció veu canvis aliens. | Reconeix que diversos usuaris poden accedir alhora però desconeix els fenòmens de lectura fantasma. | Creu que totes les connexions veuen les dades no confirmades d'altres usuaris sense cap aïllament. |
-| **Gestió de Bloquejos i Deadlocks** | Implementa bloquejos pessimistes (`FOR UPDATE`), dissenya ordres consistents d'accés per evitar deadlocks i interpreta logs de concurrència. | Observa i gestiona bloquejos de files entre múltiples sessions de terminal concurrents. | Comprova que una ordre pot quedar en espera d'una altra però desconeix què és un interbloqueig (deadlock). | Provoca bloquejos infinits o no sap com desbloquejar una sessió aturada. |
+| **Consultes Bàsiques i Ordre Lògic** | Domina l'ordre lògic d'execució del motor SQL, utilitza àlies correctes, filtres de patrons i gestiona valors nuls sense errades. | Construeix consultes SELECT amb filtres WHERE i ordenació correctes sense dificultats. | Redacta consultes senzilles però intenta utilitzar àlies de columnes dins de la clàusula WHERE. | Confon la sintaxi bàsica de SELECT o escriu clàusules en ordre incoherent. |
+| **Combinacions de Taules (JOINs)** | Selecciona amb precisió entre INNER, LEFT, FULL i SELF JOIN segons la necessitat de negoci, detectant orfes eficaçment. | Combina múltiples taules amb INNER i LEFT JOIN identificant les claus d'enllaç correctes. | Realitza INNER JOINs bàsics però té dubtes sobre quan utilitzar un LEFT JOIN per no perdre dades. | Genera productes cartesians no desitjats o utilitza condicions d'enllaç errònies. |
+| **Agregació i Grups (GROUP BY / HAVING)** | Aplica resums estadístics multivariable complint la regla d'or del GROUP BY i distingint rigorosament filtres de fila (WHERE) i grup (HAVING). | Agrupa dades i calcula agregats estadístics (COUNT, AVG, SUM) amb clàusula HAVING funcional. | Utilitza funcions agregades però comet errors en oblidar columnes al GROUP BY. | Confon HAVING amb WHERE o intenta utilitzar funcions agregades dins del WHERE. |
+| **Subconsultes i Correlacions (EXISTS)** | Construeix subconsultes escalars, de llista i correlacionades d'alt rendiment amb EXISTS justificant el pla d'execució. | Utilitza subconsultes amb operadors IN i subconsultes escalars senzilles amb èxit. | Resol consultes amb subconsultes bàsiques però té dificultats per entendre com funciona la correlació. | Incapaç d'imbricar una consulta dins d'una altra o produeix consultes que retornen errors de cardinalitat. |
+| **Operacions de Conjunts (UNION/EXCEPT)** | Combina resultats heterogenis amb operadors de conjunts justificant la compatibilitat de tipus i l'ús de UNION vs UNION ALL. | Aplica UNION per unir llistats de taules independents eliminant duplicats. | Utilitza UNION bàsic però oblida que ambdós SELECT han de tindre el mateix nombre de columnes. | Confon les operacions de conjunts amb combinacions JOIN de taules relacionades. |
+
