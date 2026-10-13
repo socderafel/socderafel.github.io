@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Programació, Xarxes i Sistemes Informàtics II — Programació, Xarxes i Sistemes Informàtics II | Portal Docent Pepe Cuenca"
+title: "Índex — Programació, Xarxes i Sistemes Informàtics II — Programació, Xarxes i Sistemes Informàtics II | Portal Docent d'Informàtica"
 course_root: "."
 badge: "2n Batxillerat · Secundària (ESO) i Batxillerat"
 next_url: "./ut01/index.html"

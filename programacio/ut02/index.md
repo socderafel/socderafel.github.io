@@ -474,7 +474,7 @@ Para que el código sea legible y fácil de mantener, **nunca lo escribas en una
 > Calificación: Notable
 > ```
 > Si en el primer nivel ya has comprobado `nota < 5`, en el siguiente escalón (`:`) ya sabes que la nota es como mínimo 5, por lo que basta con evaluar `nota < 6`.
-> Revisa que los nombres de clase y variables cumplan las convenciones de Java (`UpperCamelCase` y `lowerCamelCase`), comprueba la indentación en VSCode y **sube el archivo `ClasificadorNotas.java` a la tarea correspondiente en Aules**.
+> Revisa que los nombres de clase y variables cumplan las convenciones de Java (`UpperCamelCase` y `lowerCamelCase`), comprueba la indentación en VSCode y **sube el archivo `ClasificadorNotas.java` a la tarea correspondiente en plataforma de pràctiques**.
 
 ---
 

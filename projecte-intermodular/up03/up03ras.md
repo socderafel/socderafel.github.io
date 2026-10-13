@@ -4,7 +4,7 @@ title: "3.0 RA i Criteris d'Avaluació — Projecte Intermodular (2n FPB)"
 course_root: ".."
 badge: "1a Avaluació · RA4 (a,b,c,e,f) · 4 hores · 5% de la nota"
 prev_url: "../up02/up02actividades.html"
-prev_label: "⬅️ Activitat i Entrega Tasca 2 en Aules"
+prev_label: "⬅️ Quadern d'Activitats Pràctiques — Tasca 2"
 next_url: "./up0301.html"
 next_label: "3.1 Ergonomia Postural davant Pantalles (PVD) ➡️"
 ---
@@ -18,5 +18,5 @@ next_label: "3.1 Ergonomia Postural davant Pantalles (PVD) ➡️"
 | **a) Factors de Risc** | Identificació precisa dels factors de risc d'oficina (fatiga visual i postural). | [3.1 Ergonomia davant PVD](./up0301.md) | **20% (2,0 pts)** |
 | **b) Decàleg Ergonòmic** | Redacció d'un decàleg ergonòmic amb llistes numerades de 5 normes essencials. | [3.2 Redacció del Manual PRL](./up0302.md) | **30% (3,0 pts)** |
 | **c) Riscos Elèctrics** | Identificació de 3 riscos elèctrics i pautes de protecció amb vinyetes. | [3.2 Redacció del Manual PRL](./up0302.md) | **20% (2,0 pts)** |
-| **e) Rutina d'Aula** | Compliment escrupolós de la rutina de classe (10' inici, 15' guardat/neteja). | [Entrega Tasca 3 en Aules](./up03actividades.md) | **20% (2,0 pts)** |
-| **f) Qualitat i Ordre** | Ús de la plantilla corporativa, correcció ortogràfica i exportació a PDF. | [Entrega Tasca 3 en Aules](./up03actividades.md) | **10% (1,0 pt)** |
+| **e) Rutina d'Aula** | Compliment escrupolós de la rutina de classe (10' inici, 15' guardat/neteja). | [Tasca 3 del Projecte](./up03actividades.md) | **20% (2,0 pts)** |
+| **f) Qualitat i Ordre** | Ús de la plantilla corporativa, correcció ortogràfica i exportació a PDF. | [Tasca 3 del Projecte](./up03actividades.md) | **10% (1,0 pt)** |

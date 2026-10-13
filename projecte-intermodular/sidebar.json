@@ -1,4 +1,4 @@
-{
+﻿{
   "title": "🚀 Projecte Intermodular — 2n FPB",
   "home": {
     "label": "🏠 Inici Projecte Intermodular",
@@ -30,7 +30,7 @@
           "href": "up01/up0103.html"
         },
         {
-          "label": "Activitat i Entrega Tasca 1 en Aules",
+          "label": "Quadern d'Activitats Pràctiques — Tasca 1",
           "href": "up01/up01actividades.html"
         }
       ]
@@ -60,7 +60,7 @@
           "href": "up02/up0203.html"
         },
         {
-          "label": "Activitat i Entrega Tasca 2 en Aules",
+          "label": "Quadern d'Activitats Pràctiques — Tasca 2",
           "href": "up02/up02actividades.html"
         }
       ]
@@ -86,7 +86,7 @@
           "href": "up03/up0302.html"
         },
         {
-          "label": "Activitat i Entrega Tasca 3 en Aules",
+          "label": "Quadern d'Activitats Pràctiques — Tasca 3",
           "href": "up03/up03actividades.html"
         }
       ]
@@ -112,7 +112,7 @@
           "href": "up04/up0402.html"
         },
         {
-          "label": "Activitat i Entrega Tasca 4 en Aules",
+          "label": "Quadern d'Activitats Pràctiques — Tasca 4",
           "href": "up04/up04actividades.html"
         }
       ]
@@ -142,7 +142,7 @@
           "href": "up05/up0503.html"
         },
         {
-          "label": "Activitat i Entrega Tasca 5 en Aules",
+          "label": "Quadern d'Activitats Pràctiques — Tasca 5",
           "href": "up05/up05actividades.html"
         }
       ]
@@ -168,7 +168,7 @@
           "href": "up06/up0602.html"
         },
         {
-          "label": "Activitat i Entrega Tasca 6 en Aules",
+          "label": "Quadern d'Activitats Pràctiques — Tasca 6",
           "href": "up06/up06actividades.html"
         }
       ]
@@ -194,7 +194,7 @@
           "href": "up07/up0702.html"
         },
         {
-          "label": "Activitat i Entrega Tasca 7 en Aules",
+          "label": "Quadern d'Activitats Pràctiques — Tasca 7",
           "href": "up07/up07actividades.html"
         }
       ]
@@ -220,7 +220,7 @@
           "href": "up08/up0802.html"
         },
         {
-          "label": "Entrega Portfolio Final Tasca 8 en Aules",
+          "label": "Quadern del Portfoli Final — Tasca 8",
           "href": "up08/up08actividades.html"
         }
       ]
@@ -228,8 +228,8 @@
   ],
   "footer": [
     {
-      "label": "📋 Tasques Aules (Professorat)",
-      "href": "tasques-aules.html"
+      "label": "🚀 Guia del Portfoli de l'Empresa",
+      "href": "guia-projecte.html"
     },
     {
       "label": "📂 Recursos i Documents Oficials",

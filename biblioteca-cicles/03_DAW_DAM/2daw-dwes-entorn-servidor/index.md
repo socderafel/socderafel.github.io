@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Desenvolupament Web en Entorn Servidor (PHP i Laravel) — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent Pepe Cuenca"
+title: "Índex — Desenvolupament Web en Entorn Servidor (PHP i Laravel) — Desenvolupament Web en Entorn Servidor (PHP i Laravel) | Portal Docent d'Informàtica"
 course_root: "."
 badge: "2n DAW · Grau Superior · FP Grau Superior — DAW i DAM (Desenvolupament d'Aplicacions)"
 next_url: "./ut01/index.html"

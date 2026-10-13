@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Activitat i Entrega Tasca 1 en Aules — Projecte Intermodular (2n FPB)"
+title: "Quadern d'Activitats Pràctiques — Tasca 1: Creació de la Marca (Naming i Logotip) — Projecte Intermodular (2n FPB)"
 course_root: ".."
 badge: "1a Avaluació · RA1 (a-f) · 8 hores · 15% de la nota"
 prev_url: "./up0103.html"
@@ -9,33 +9,62 @@ next_url: "../up02/up02ras.html"
 next_label: "2.0 RA i Criteris d'Avaluació ➡️"
 ---
 
-# Activitat i Entrega de la Tasca 1 en Aules
+# 🎨 Quadern d'Activitats Pràctiques — Tasca 1: Creació de la Marca
 
-> **⚠️ 📦 Fitxers obligatoris a pujar a la Tasca 1 d'Aules**
-> 1. **Full en paper escanejat o fotografiat:** `Esbossos_Marca_ElTeuNom.jpg` (o `.pdf` ) mostrant els 10 noms, els 3 seleccionats i els 3 dibuixos a mà.
-> 2. **Arxiu editable de disseny:** `Logotip_Editable_ElTeuNom.odg` (o `.xcf` / `.svg` ).
-> 3. **Logotip final transparent:** `Logotip_Final_ElTeuNom.png` .
+Abans de començar a reparar cap ordinador ni atendre clients al teu taller informàtic, necessites saber qui eres! En aquesta primera tasca dissenyaràs el **nom comercial**, la **paleta de colors corporatius** i el **logotip 100% original** de la teua empresa de serveis TIC.
 
-## 📋 Codi HTML per a configurar la Tasca 1 en Aules (Professorat)
+---
 
-```html
-<div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;">
-  <h3 style="color: #1e3a8a; margin-top: 0;">🎨 FASE 1: Creació de la Marca (Naming i Logotip)</h3>
-  <p>Abans de començar a reparar cap ordinador ni atendre clients al teu taller informàtic, necessites saber qui eres! En aquesta primera tasca dissenyaràs el <strong>nom comercial</strong>, els <strong>colors corporatius</strong> i el <strong>logotip 100% original</strong> de la teua empresa.</p>
-  <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
-  <h4 style="color: #0369a1;">🎯 Què has de fer? (Pas a pas)</h4>
-  <ol style="padding-left: 20px;">
-    <li style="margin-bottom: 8px;"><strong>Pas 1.1 - Pluja d'idees (A mà):</strong> En un full en blanc, escriu <strong>10 possibles noms</strong> curts, professionals i tecnològics per a la teua empresa. Tria'n els <strong>3 millors</strong> i valida el definitiu amb el professor.</li>
-    <li style="margin-bottom: 8px;"><strong>Pas 1.2 - Esbossos del Logotip (A mà):</strong> Dibuixa en paper <strong>3 propostes diferents</strong> utilitzant elements informàtics clars (pantalles, teclats, tornavís, xarxes o inicials) i anota els teus <strong>2 o 3 colors corporatius</strong>.</li>
-    <li style="margin-bottom: 8px;"><strong>Pas 1.3 - Digitalització a l'ordinador:</strong> Obre <em>LibreOffice Draw</em> o <em>GIMP</em>, dibuixa el teu esbós definitiu aplicant figures geomètriques, el nom comercial i els teus colors, i exporta'l en format <strong>.PNG amb fons transparent</strong>.</li>
-  </ol>
-  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;">
-    <strong>📦 Quins 3 fitxers has de pujar a Aules?</strong>
-    <ol style="margin: 5px 0 0 15px; padding: 0;">
-      <li><code>Esbossos_Marca_ElTeuNom.jpg</code> (o <code>.pdf</code> amb la foto del full amb els 10 noms i els 3 dibuixos a mà)</li>
-      <li><code>Logotip_Editable_ElTeuNom.odg</code> (o <code>.xcf</code>, l'arxiu de treball)</li>
-      <li><code>Logotip_Final_ElTeuNom.png</code> (la imatge final amb fons transparent)</li>
-    </ol>
-  </div>
-</div>
+## 🗺️ Flux de Treball del Disseny de Marca
+
+```mermaid
+flowchart LR
+    A["📝 1. Pluja d'Idees<br>(10 noms a mà)"] --> B["🎨 2. Esbós en Paper<br>(3 propostes de logotip)"]
+    B --> C["💻 3. Disseny Digital<br>(LibreOffice Draw / GIMP)"]
+    C --> D["📐 4. Aplicació de Colors<br>(2-3 colors TIC i text)"]
+    D --> E["📦 5. Exportació PNG<br>(Fons 100% transparent)"]
 ```
+
+---
+
+## 🎯 Procediment Pràctic Pas a Pas
+
+### Pas 1.1: Pluja d'idees de Naming (Fase en paper)
+1. En un full en blanc, escriu **10 possibles noms curts, professionals i tecnològics** per a la teua empresa (per exemple: *ByteFix*, *NovaTech*, *ReparAcció*, *ValènciaTIC*).
+2. Tria'n els **3 millors** tenint en compte que siguen fàcils de recordar, pronunciar i escriure.
+3. Selecciona el nom definitiu i defineix el lema comercial (*slogan*) en una frase curta (ex: *"Manteniment informàtic ràpid i de confiança"*).
+
+### Pas 1.2: Esbossos del Logotip i Tria de Colors (Fase en paper)
+1. Dibuixa a mà alçada **3 propostes diferents de logotip**:
+   - Utilitza elements visuals informàtics clars: pantalles, plaques, connectors, tornavisos, ones de xarxa o combinacions geomètriques de les inicials de l'empresa.
+2. Defineix la teua **paleta de 2 o 3 colors corporatius** i anota el seu significat:
+   - Blau: Tecnologia, seguretat i serietat.
+   - Verd: Sostenibilitat, eficiència energètica i reciclatge.
+   - Taronja / Vermell: Dinamisme, rapidesa i resolució.
+
+### Pas 1.3: Digitalització Vectorial a l'Ordinador
+1. Obre **LibreOffice Draw** (o **GIMP** si prefereixes edició de mapa de bits).
+2. Construeix el teu logotip definitiu utilitzant figures geomètriques netes (cercles, rectangles, corbes, línies).
+3. Afegeix el nom comercial amb una tipografia clara i professional (evita tipografies de difícil lectura).
+4. Agrupa tots els elements (`Format -> Agrupa`) per a evitar que es moguen.
+5. Exporta el resultat en format **PNG amb fons transparent** (`Fitxer -> Exporta... -> Format PNG -> Marca l'opció Guarda la transparència`).
+
+---
+
+## 📋 Llista d'Autoavaluació de Qualitat
+
+| Criteri de Qualitat | Comprovació de l'Alumnat | Estat |
+| :--- | :--- | :---: |
+| **Originalitat** | El logotip és 100% de creació pròpia (no és una descàrrega d'Internet). | ☐ Sí |
+| **Transparència** | En col·locar el logotip sobre un fons fosc no es veu cap requadre blanc al voltant. | ☐ Sí |
+| **Llegibilitat** | El nom de l'empresa es llegeix clarament fins i tot a mida reduïda ($3\text{ cm}$). | ☐ Sí |
+| **Colorimetria** | S'utilitzen estrictament els 2 o 3 colors corporatius acordats. | ☐ Sí |
+| **Arxiu editable** | Es conserva el fitxer font (`.odg` o `.xcf`) per a poder fer canvis en el futur. | ☐ Sí |
+
+---
+
+## 📦 Documents a Incloure en el Portfoli de l'Empresa
+Guarda els següents fitxers a la carpeta `01_Marca_i_Disseny` del teu projecte:
+1. `Esbossos_Marca_ElTeuNom.pdf` (o `.jpg`): Foto clara del full amb els 10 noms, el lema i els 3 esbossos a mà.
+2. `Logotip_Editable_ElTeuNom.odg` (o `.xcf` / `.svg`): L'arxiu de treball editable.
+3. `Logotip_Final_ElTeuNom.png`: La imatge final d'alta resolució amb canal alfa (fons transparent).

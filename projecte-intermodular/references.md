@@ -3,8 +3,8 @@ layout: default
 title: "Recursos i Documents Oficials — Projecte Intermodular (2n FPB)"
 course_root: "."
 badge: "Projecte Intermodular · 2n FPB (Informàtica d'Oficina)"
-prev_url: "./tasques-aules.html"
-prev_label: "⬅️ 📋 Tasques Aules (Professorat)"
+prev_url: "./guia-projecte.html"
+prev_label: "⬅️ 🚀 Guia del Portfoli de l'Empresa"
 ---
 
 # 📂 Recursos Descarregables i Documents Oficials del Mòdul
@@ -22,6 +22,5 @@ Accés directe als dossiers oficials per a l'alumnat, presentacions d'aula i la 
 
 - [LibreOffice (Suite Ofimàtica Lliure: Writer, Calc, Impress, Draw)](https://es.libreoffice.org/)
 - [GIMP (GNU Image Manipulation Program)](https://www.gimp.org/)
-- [Plataforma Educativa Aules GVA (Formació Professional)](https://aules.edu.gva.es/fp/)
 - Decret 117/2025, de 5 d'agost, del Consell (Currículums dels Cicles Formatius de Grau Bàsic a la Comunitat Valenciana).
 - Orde 8/2025, de 22 d'abril, de la Conselleria d'Educació (Avaluació en Formació Professional).

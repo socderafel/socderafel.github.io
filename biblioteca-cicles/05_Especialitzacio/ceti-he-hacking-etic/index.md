@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Hacking Ètic i Auditoria de Seguretat — Hacking Ètic i Auditoria de Seguretat | Portal Docent Pepe Cuenca"
+title: "Índex — Hacking Ètic i Auditoria de Seguretat — Hacking Ètic i Auditoria de Seguretat | Portal Docent d'Informàtica"
 course_root: "."
 badge: "CE Ciberseguretat (CETI) · Cursos d'Especialització (IA & Big Data / Ciberseguretat)"
 next_url: "./ut01/index.html"

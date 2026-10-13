@@ -22,7 +22,7 @@ next_label: "1.0 RA i Criteris d'Avaluació ➡️"
 | **c) Esbossos** | Realització a mà alçada de 3 esbossos originals de logotip en paper. | [1.3 Guia Pràctica Pas a Pas](./up0103.md) | **20% (2,0 pts)** |
 | **d) Paleta** | Definició clara d'una paleta corporativa equilibrada de 2 o 3 colors màxim. | [1.1 Naming i Paleta TIC](./up0101.md) | **10% (1,0 pt)** |
 | **e) Disseny Digital** | Digitalització vectorial/gràfica precisa de l'esbós amb programari lliure. | [1.2 Logotip i Format .PNG](./up0102.md) | **25% (2,5 pts)** |
-| **f) Exportació** | Exportació correcta en `.PNG` amb fons transparent i arxiu editable. | [Entrega Tasca 1 en Aules](./up01actividades.md) | **15% (1,5 pts)** |
+| **f) Exportació** | Exportació correcta en `.PNG` amb fons transparent i arxiu editable. | [Tasca 1 del Projecte](./up01actividades.md) | **15% (1,5 pts)** |
 
 ---
 
@@ -89,35 +89,19 @@ Abans de tocar l'ordinador, agafa un full en blanc i un bolígraf:
 
 ---
 
-# Activitat i Entrega de la Tasca 1 en Aules
+## 📝 Quadern d'Activitats Pràctiques — Tasca 1: Creació de la Marca
 
-> **⚠️ 📦 Fitxers obligatoris a pujar a la Tasca 1 d'Aules**
-> 1. **Full en paper escanejat o fotografiat:** `Esbossos_Marca_ElTeuNom.jpg` (o `.pdf` ) mostrant els 10 noms, els 3 seleccionats i els 3 dibuixos a mà.
-> 2. **Arxiu editable de disseny:** `Logotip_Editable_ElTeuNom.odg` (o `.xcf` / `.svg` ).
-> 3. **Logotip final transparent:** `Logotip_Final_ElTeuNom.png` .
-
-## 📋 Codi HTML per a configurar la Tasca 1 en Aules (Professorat)
-
-```html
-<div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;">
-  <h3 style="color: #1e3a8a; margin-top: 0;">🎨 FASE 1: Creació de la Marca (Naming i Logotip)</h3>
-  <p>Abans de començar a reparar cap ordinador ni atendre clients al teu taller informàtic, necessites saber qui eres! En aquesta primera tasca dissenyaràs el <strong>nom comercial</strong>, els <strong>colors corporatius</strong> i el <strong>logotip 100% original</strong> de la teua empresa.</p>
-  <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
-  <h4 style="color: #0369a1;">🎯 Què has de fer? (Pas a pas)</h4>
-  <ol style="padding-left: 20px;">
-    <li style="margin-bottom: 8px;"><strong>Pas 1.1 - Pluja d'idees (A mà):</strong> En un full en blanc, escriu <strong>10 possibles noms</strong> curts, professionals i tecnològics per a la teua empresa. Tria'n els <strong>3 millors</strong> i valida el definitiu amb el professor.</li>
-    <li style="margin-bottom: 8px;"><strong>Pas 1.2 - Esbossos del Logotip (A mà):</strong> Dibuixa en paper <strong>3 propostes diferents</strong> utilitzant elements informàtics clars (pantalles, teclats, tornavís, xarxes o inicials) i anota els teus <strong>2 o 3 colors corporatius</strong>.</li>
-    <li style="margin-bottom: 8px;"><strong>Pas 1.3 - Digitalització a l'ordinador:</strong> Obre <em>LibreOffice Draw</em> o <em>GIMP</em>, dibuixa el teu esbós definitiu aplicant figures geomètriques, el nom comercial i els teus colors, i exporta'l en format <strong>.PNG amb fons transparent</strong>.</li>
-  </ol>
-  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;">
-    <strong>📦 Quins 3 fitxers has de pujar a Aules?</strong>
-    <ol style="margin: 5px 0 0 15px; padding: 0;">
-      <li><code>Esbossos_Marca_ElTeuNom.jpg</code> (o <code>.pdf</code> amb la foto del full amb els 10 noms i els 3 dibuixos a mà)</li>
-      <li><code>Logotip_Editable_ElTeuNom.odg</code> (o <code>.xcf</code>, l'arxiu de treball)</li>
-      <li><code>Logotip_Final_ElTeuNom.png</code> (la imatge final amb fons transparent)</li>
-    </ol>
-  </div>
-</div>
+```mermaid
+flowchart LR
+    A["📝 1. Pluja d'Idees<br>(10 noms a mà)"] --> B["🎨 2. Esbós en Paper<br>(3 propostes de logotip)"]
+    B --> C["💻 3. Disseny Digital<br>(LibreOffice Draw / GIMP)"]
+    C --> D["📐 4. Aplicació de Colors<br>(2-3 colors TIC i text)"]
+    D --> E["📦 5. Exportació PNG<br>(Fons 100% transparent)"]
 ```
 
----
+### 🎯 Procediment Pràctic de Taller
+1. **Fase en paper (Naming i Esbós):** Escriu 10 noms curts i tecnològics per a la teua empresa, tria'n el millor i dibuixa 3 esbossos a mà alçada integrant iconografia de xarxes o informàtica.
+2. **Fase digital (Disseny en Draw o GIMP):** Digitalitza el teu disseny usant formes geomètriques netes, els teus 2 o 3 colors corporatius i exporta el logotip final en format **.PNG amb canal alfa (fons transparent)**.
+3. **Consolidació de documents:** Desa els fitxers `Esbossos_Marca_ElTeuNom.pdf`, `Logotip_Editable_ElTeuNom.odg` i `Logotip_Final_ElTeuNom.png` a la teua carpeta de projecte `01_Marca_i_Disseny`.
+4. Consulta el [Quadern d'Activitats Pràctiques de la Tasca 1](./up01actividades.html) per a revisar la llista de comprovació i criteris de qualitat.
+

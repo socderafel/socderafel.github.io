@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Programació, IA i Robòtica II: App Inventor i Robòtica — Programació, IA i Robòtica II: App Inventor i Robòtica | Portal Docent Pepe Cuenca"
+title: "Índex — Programació, IA i Robòtica II: App Inventor i Robòtica — Programació, IA i Robòtica II: App Inventor i Robòtica | Portal Docent d'Informàtica"
 course_root: "."
 badge: "3r ESO · Secundària (ESO) i Batxillerat"
 next_url: "./ut01/index.html"

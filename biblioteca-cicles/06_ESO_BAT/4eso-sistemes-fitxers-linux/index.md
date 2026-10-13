@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Sistemes de Fitxers i Permisos en Linux — Sistemes de Fitxers i Permisos en Linux | Portal Docent Pepe Cuenca"
+title: "Índex — Sistemes de Fitxers i Permisos en Linux — Sistemes de Fitxers i Permisos en Linux | Portal Docent d'Informàtica"
 course_root: "."
 badge: "4t ESO · Secundària (ESO) i Batxillerat"
 next_url: "./ut01/index.html"

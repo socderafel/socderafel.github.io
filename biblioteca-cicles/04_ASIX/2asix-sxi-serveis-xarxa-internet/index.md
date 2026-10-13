@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Serveis de Xarxa i Internet — Serveis de Xarxa i Internet | Portal Docent Pepe Cuenca"
+title: "Índex — Serveis de Xarxa i Internet — Serveis de Xarxa i Internet | Portal Docent d'Informàtica"
 course_root: "."
 badge: "2n ASIX · Grau Superior · FP Grau Superior — ASIX (Administració de Sistemes i Xarxes)"
 next_url: "./ut01/index.html"

@@ -4,7 +4,7 @@ title: "4.0 RA i Criteris d'Avaluació — Projecte Intermodular (2n FPB)"
 course_root: ".."
 badge: "Final 1a Avaluació · RA5 (a,b,c) · 4 hores · 5% de la nota"
 prev_url: "../up03/up03actividades.html"
-prev_label: "⬅️ Activitat i Entrega Tasca 3 en Aules"
+prev_label: "⬅️ Quadern d'Activitats Pràctiques — Tasca 3"
 next_url: "./up0401.html"
 next_label: "4.1 Disseny Visual de Diapositives en LibreOffice Impress ➡️"
 ---

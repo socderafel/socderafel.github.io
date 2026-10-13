@@ -205,6 +205,7 @@ Antes de configurar los servicios en la máquina, debemos garantizar que el **Se
 ![Detalles básicos del Security Group](./07_Transferencia_Ficheros_FTP_SSH/imagenes/03_detalles_basicos_sg.png)
 *Figura 3: Configuración del nombre, descripción y VPC del nuevo grupo de seguridad.*
 
+
 4. En la sección **Inbound rules** (*Reglas de entrada*), pulsar en el botón **Add rule** (*Agregar regla*):
 
 ![Pulsar el botón Agregar regla en Reglas de entrada](./07_Transferencia_Ficheros_FTP_SSH/imagenes/04_boton_agregar_regla.png)
@@ -797,11 +798,10 @@ El acceso por contraseña convencional está expuesto a ataques de fuerza bruta.
 
 1. Abrir **PuTTY** en vuestro PC del aula.
 2. En el campo **Host Name (or IP address)** introducir la **IP pública de Windows Server** (`<IP_PUBLICA_WINDOWS>`), **Port** `22` y **Connection type** `SSH`.
-3. Pulsar en **Open**, aceptar la clave host del servidor (`Accept`) e iniciar sesión con el usuario `alumne_redes` y su contraseña (`Smx2026..@`).
-4. Ejecutar los comandos `whoami` y `hostname` para verificar que estamos dentro de la consola remota de Windows Server:
+3. Pulsar en **Open**, aceptar la advertencia inicial de clave host del servidor (*PuTTY Security Alert* pulsando `Accept`) e iniciar sesión indicando el usuario `alumne_redes` y su contraseña (`Smx2026..@`).
+4. Al entrar, ejecutar `whoami` y `hostname` para verificar que estáis conectados a la consola de comandos remota de Windows Server.
 
-![Conexión SSH básica hacia Windows Server](./07_Transferencia_Ficheros_FTP_SSH/imagenes/45_powershell_ssh_conexion_basica.png)
-*Figura 45: Inicio de sesión remota SSH en el puerto 22 hacia Windows Server y comprobación de usuario y nombre de host.*
+No obstante, el método profesional y seguro recomendado para entornos de producción es **sustituir las contraseñas por autenticación asimétrica de clave pública** y bastionar el servicio, tal y como configuramos a continuación.
 
 ---
 
@@ -809,13 +809,17 @@ El acceso por contraseña convencional está expuesto a ataques de fuerza bruta.
 
 1. En vuestro ordenador del aula, abrir **PuTTYgen** (*PuTTY Key Generator*).
 2. En la parte inferior (*Parameters*), mantener seleccionado el tipo de clave **RSA** (`2048` bits) o **EdDSA (Ed25519)**.
-3. Pulsar en el botón **Generate** y mover continuamente el cursor del ratón sobre el área vacía para generar entropía criptográfica aleatoria.
+3. Pulsar en el botón **Generate** y mover continuamente el cursor del ratón sobre el área vacía para generar entropía criptográfica aleatoria:
+
+![Parámetros de clave y botón Generate en PuTTYgen](./07_Transferencia_Ficheros_FTP_SSH/imagenes/45b_puttygen_interfaz_inicial.png)
+*Figura 45b: Selección del tipo de clave RSA (2048 bits) y ubicación del botón Generate en PuTTYgen.*
+
 4. En el campo **Key comment**, escribir: `alumne_redes@ies-mre`.
 5. Pulsar en **Save private key** (confirmar guardar sin contraseña de paso para este laboratorio) y guardarla como `clave_privada_smx.ppk` en vuestra carpeta de trabajo.
-6. En el cuadro superior que indica *Public key for pasting into OpenSSH authorized_keys file*, seleccionar y **copiar todo el texto completo de la clave pública** (`ssh-rsa AAAA...`).
+6. En el cuadro superior que indica *Public key for pasting into OpenSSH authorized_keys file*, seleccionar y **copiar todo el texto completo de la clave pública** (`ssh-rsa AAAA...`):
 
-![Generación del par de claves SSH](./07_Transferencia_Ficheros_FTP_SSH/imagenes/46_powershell_ssh_keygen.png)
-*Figura 46: Generación del par de claves asimétricas y visualización de la clave pública.*
+![Generación del par de claves SSH en PuTTYgen](./07_Transferencia_Ficheros_FTP_SSH/imagenes/46_puttygen_clave_generada.png)
+*Figura 46: Clave pública RSA generada en PuTTYgen con comentario identificativo alumne_redes@ies-mre y guardado de clave privada (.ppk).*
 
 > 📷 **Evidencia 13 (insertar en tu documento Word) — Realizar captura de pantalla** de la ventana de PuTTYgen mostrando la clave generada y el comentario `alumne_redes@ies-mre`.
 
@@ -826,52 +830,72 @@ El acceso por contraseña convencional está expuesto a ataques de fuerza bruta.
 1. En el Escritorio Remoto (RDP) de **Windows Server**:
    * Abrir el **Bloc de notas (Notepad)** como Administrador.
    * Abrir el fichero `C:\ProgramData\ssh\sshd_config` (seleccionando *All Files `(*.*)`* en el diálogo de apertura).
-   * Bajar hasta las dos últimas líneas del archivo (`Match Group administrators` y `AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys`) y **comentarlas añadiendo una almohadilla `#` delante de cada una** para que Windows utilice siempre la carpeta `.ssh` estándar de cada usuario:
+   * Bajar hasta las dos últimas líneas del archivo (`Match Group administrators` y `AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys`) y comprobar que están comentadas con una almohadilla `#` delante para que Windows utilice siempre la carpeta `.ssh` estándar de cada usuario:
      ```ini
      #Match Group administrators
      #       AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys
      ```
-   * Guardar el archivo (`File` -> `Save`).
-2. Crear la carpeta `C:\Users\alumne_redes\.ssh` (si no existe) y dentro de ella crear con **Notepad** el archivo **`authorized_keys`** (sin extensión `.txt`), pegando en una sola línea la clave pública copiada desde PuTTYgen.
-3. Reiniciar el servicio **OpenSSH SSH Server** desde la consola gráfica `services.msc`.
+2. Crear la carpeta `C:\Users\alumne_redes\.ssh` (si no existe) y dentro de ella crear/abrir con **Notepad** el archivo **`authorized_keys`** (sin extensión `.txt`), pegando en una sola línea la clave pública copiada desde PuTTYgen:
+
+![Clave pública copiada en authorized_keys mediante Notepad](./07_Transferencia_Ficheros_FTP_SSH/imagenes/46b_windows_authorized_keys_notepad.png)
+*Figura 46b: Clave pública RSA pegada en una sola línea dentro del archivo authorized_keys de alumne_redes.*
+
+3. Reiniciar el servicio **OpenSSH SSH Server** desde la consola gráfica `services.msc`:
+
+![Reinicio del servicio OpenSSH SSH Server en services.msc](./07_Transferencia_Ficheros_FTP_SSH/imagenes/46c_services_reiniciar_openssh.png)
+*Figura 46c: Reinicio del servicio OpenSSH SSH Server en Windows Server tras actualizar las claves autorizadas.*
 
 ---
 
 ### 10.4 Conexión automática mediante clave privada en PuTTY
 
-1. Abrir **PuTTY** en vuestro PC del aula:
+1. Abrir **PuTTY** en vuestro PC del aula.
+2. En el menú izquierdo, ir a **Connection** -> **Data** y en **Auto-login username** escribir `alumne_redes`:
+
+![Configuración de Auto-login username en PuTTY](./07_Transferencia_Ficheros_FTP_SSH/imagenes/46d_putty_autologin.png)
+*Figura 46d: Configuración del inicio de sesión desatendido para alumne_redes en Connection -> Data.*
+
+3. En el árbol izquierdo, desplegar **Connection** -> **SSH** -> **Auth** -> **Credentials**:
+   * En el campo **Private key file for authentication**, hacer clic en **Browse...** y seleccionar vuestro archivo `clave_privada_smx.ppk`:
+
+![Carga de la clave privada .ppk en PuTTY Credentials](./07_Transferencia_Ficheros_FTP_SSH/imagenes/46e_putty_credentials.png)
+*Figura 46e: Asociación del archivo de clave privada clave_privada_smx.ppk en Connection -> SSH -> Auth -> Credentials.*
+
+4. Volver arriba a **Session**:
    * **Host Name:** IP pública de Windows Server (`<IP_PUBLICA_WINDOWS>`). **Port:** `22`.
-2. En el árbol izquierdo, desplegar **Connection** -> **SSH** -> **Auth** -> **Credentials**.
-3. En el campo **Private key file for authentication**, hacer clic en **Browse...** y seleccionar vuestro archivo `clave_privada_smx.ppk`.
-4. En el menú izquierdo, ir a **Connection** -> **Data** y en **Auto-login username** escribir `alumne_redes`.
-5. Volver arriba a **Session**, escribir en *Saved Sessions* el nombre `Windows-Clave-SSH` y pulsar **Save**.
-6. Pulsar en **Open** y comprobar que la terminal muestra:
-   ```text
-   Using username "alumne_redes".
-   Authenticating with public key "alumne_redes@ies-mre"
-   ```
-   accediendo directamente a la consola de Windows Server **sin pedir contraseña**.
+   * En *Saved Sessions*, escribir `Windows-Clave-SSH` y hacer clic en **Save**:
+
+![Guardado del perfil de sesión en PuTTY](./07_Transferencia_Ficheros_FTP_SSH/imagenes/46f_putty_guardar_sesion.png)
+*Figura 46f: Perfil de sesión Windows-Clave-SSH guardado en PuTTY con IP pública, puerto 22 y clave asimétrica vinculada.*
+
+5. Pulsar en **Open** y comprobar que la consola accede directamente a Windows Server **sin solicitar contraseña**:
+
+![Acceso directo a la consola de Windows Server mediante clave privada](./07_Transferencia_Ficheros_FTP_SSH/imagenes/47a_putty_login_exitoso.png)
+*Figura 47a: Sesión SSH abierta en el puerto 22 conectando de forma directa y autenticada con la clave privada de alumne_redes.*
 
 ---
 
 ### 10.5 Bastionado del servidor SSH en Windows Server (Deshabilitar contraseña)
 
 1. En **Windows Server**, volver a abrir `C:\ProgramData\ssh\sshd_config` con **Notepad (como Administrador)**.
-2. Localizar o añadir las directivas de autenticación para permitir únicamente llave criptográfica y prohibir contraseñas:
+2. Añadir o asegurar al final del archivo la directiva de seguridad que prohíbe el acceso mediante contraseña convencional:
    ```ini
-   PubkeyAuthentication yes
    PasswordAuthentication no
    ```
-3. Guardar los cambios y reiniciar el servicio **OpenSSH SSH Server** en `services.msc`.
-4. Abrir una nueva ventana limpia de **PuTTY** poniendo solo la IP de Windows Server (sin cargar la clave `.ppk`) e intentar entrar como `alumne_redes`: comprobar que el servidor rechaza inmediatamente el acceso devolviendo:
+
+![Directiva PasswordAuthentication no añadida en sshd_config](./07_Transferencia_Ficheros_FTP_SSH/imagenes/47b_sshd_config_passwordauth_no.png)
+*Figura 47b: Bastionado de OpenSSH mediante la directiva PasswordAuthentication no en sshd_config.*
+
+3. Guardar los cambios (`Ctrl + S`) y reiniciar el servicio **OpenSSH SSH Server** en `services.msc`.
+4. Abrir una nueva ventana limpia de **PuTTY** poniendo solo la IP de Windows Server (sin cargar la clave `.ppk`) e intentar entrar como `alumne_redes`: comprobar que el servidor rechaza inmediatamente el acceso mostrando el error de seguridad:
    ```text
-   No supported authentication methods available (server sent: publickey)
+   No supported authentication methods available (server sent: publickey,keyboard-interactive)
    ```
 
-![Acceso directo sin contraseña mediante clave privada y rechazo tras el bastionado SSH](./07_Transferencia_Ficheros_FTP_SSH/imagenes/47_powershell_ssh_clave_publica_login.png)
-*Figura 47: Inicio de sesión automático mediante clave privada y denegación de acceso por contraseña tras el bastionado.*
+![Bloqueo de acceso por contraseña en PuTTY tras el bastionado](./07_Transferencia_Ficheros_FTP_SSH/imagenes/47c_putty_bloqueo_bastionado.png)
+*Figura 47c: Rebuig d'accés en PuTTY (No supported authentication methods available) demostrant que el servidor només accepta claus públiques criptogràfiques.*
 
-> 📷 **Evidencia 14 (insertar en tu documento Word) — Realizar captura de pantalla** de PuTTY entrando sin contraseña con la clave pública (`Authenticating with public key`) y otra captura mostrando el bloqueo `No supported authentication methods available (server sent: publickey)` al intentar conectar sin clave.
+> 📷 **Evidencia 14 (insertar en tu documento Word) — Realizar captura de pantalla** de la sesión de PuTTY entrando automáticamente sin contraseña mediante clave privada (`Figura 47a`) y otra captura del bloqueo por bastionado (`Figura 47c`) al intentar acceder sin clave.
 
 > ℹ️ **Qué debes añadir a tu documento Word al terminar el Apartado 10**
 >

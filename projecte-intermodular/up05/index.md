@@ -22,7 +22,7 @@ next_label: "5.0 RA i Criteris d'Avaluació ➡️"
 | **c) Fórmules i IVA** | Utilització correcta de fórmules de suma, multiplicació i IVA (21%). | [5.1 Base Imposable i Fórmules](./up0501.md) | **25% (2,5 pts)** |
 | **d) Inventari** | Confecció d'un inventari coherent de components, recanvis i mà d'obra. | [5.2 Inventari i Plantilla Calc](./up0502.md) | **15% (1,5 pts)** |
 | **e) Supòsits Clients** | Resolució dels supòsits pràctics de pressupost simulat per a clients. | [5.3 Casos Pràctics de Clients](./up0503.md) | **15% (1,5 pts)** |
-| **f) Exactitud** | Verificació de l'exactitud numèrica i absència d'errors de càlcul. | [Entrega Tasca 5 en Aules](./up05actividades.md) | **10% (1,0 pt)** |
+| **f) Exactitud** | Verificació de l'exactitud numèrica i absència d'errors de càlcul. | [Tasca 5 del Projecte](./up05actividades.md) | **10% (1,0 pt)** |
 
 ---
 
@@ -69,27 +69,16 @@ En el **Full 3 (`Casos_Practics_Clients`)** del teu llibre de Calc, utilitza la 
 
 ---
 
-# Activitat i Entrega de la Tasca 5 en Aules
+## 📝 Quadern d'Activitats Pràctiques — Tasca 5
 
-> **⚠️ 📦 Fitxers obligatoris a pujar a la Tasca 5 d'Aules**
-> 1. **Llibre de càlcul editable amb fórmules actives:** `Pressupostos_Calc_ElTeuNom.ods`
-> 2. **Pressupostos exportats a PDF:** `Pressupostos_Calc_ElTeuNom.pdf`
-
-## 📋 Codi HTML per a configurar la Tasca 5 en Aules (Professorat)
-
-```html
-<div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;">
-  <h3 style="color: #1e3a8a; margin-top: 0;">📊 FASE 5: Gestió Econòmica i Pressupostos Automatitzats amb Calc</h3>
-  <p>Crea un llibre en <strong>LibreOffice Calc</strong> amb 3 fulls per automatitzar els pressupostos de la teua empresa:</p>
-  <ol style="padding-left: 20px;">
-    <li><strong>Full 1 (Inventari_i_Tarifes):</strong> 6 components de maquinari i 4 tarifes de mà d'obra amb format moneda (€).</li>
-    <li><strong>Full 2 (Plantilla_Pressupost):</strong> Taula de 4 columnes amb fórmules automàtiques (<code>=A10*C10</code>), Base Imposable (<code>=SUMA(...)</code>), IVA 21% i Total.</li>
-    <li><strong>Full 3 (Casos_Practics_Clients):</strong> Resolució dels 2 pressupostos simulats de clients.</li>
-  </ol>
-  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;">
-    <strong>📦 Fitxers a pujar a Aules:</strong> <code>Pressupostos_Calc_ElTeuNom.ods</code> (amb fórmules!) i <code>Pressupostos_Calc_ElTeuNom.pdf</code>
-  </div>
-</div>
+```flowchart LR
+    Cost["💵 Cost de Peces i Mà d'Obra"] --> Marg["📈 Marge Comercial (+30%)"]
+    Marg --> BI["🧾 Base Imposable = SUMA(...)"]
+    BI --> IVA["🏛️ IVA (21%) = BI * 0,21"]
+    BI & IVA --> Total["💰 TOTAL = BI + IVA"]
 ```
 
----
+### 🎯 Resum d'Objectius de la Tasca
+Un tècnic informàtic ha de saber calcular costos, aplicar marges comercials i emetre pressupostos clars. En aquesta tasca automatitzaràs la gestió econòmica del teu taller amb **LibreOffice Calc** utilitzant fórmules de suma, multiplicació i càlcul d'IVA.
+
+Consulta el [Quadern d'Activitats Pràctiques de la Tasca 5](./up05actividades.html) per a seguir el procediment detallat pas a pas i consultar la llista de comprovació de qualitat.

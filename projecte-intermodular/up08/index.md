@@ -53,22 +53,19 @@ Atendràs un client visitant a qui rebràs amb cortesia, prendràs nota de l'ava
 
 ---
 
-# Entrega del Portfolio Final (Tasca 8) en Aules
+---
 
-> **⚠️ 📦 Fitxers finals obligatoris a pujar a la Tasca 8 d'Aules**
-> 1. **Dossier / Portfolio Complet de l'Empresa unificat en PDF:** `Portfolio_Empresa_ElTeuNom.pdf`
-> 2. **Presentació Final de la Fira Comercial (6 diapositives):** `Defensa_Final_Fira_ElTeuNom.odp` i `.pdf`
+## 📝 Quadern del Portfoli Final — Tasca 8: Fira Comercial i Defensa Pública
 
-## 📋 Codi HTML per a configurar la Tasca 8 en Aules (Professorat)
-
-```html
-<div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;">
-  <h3 style="color: #1e3a8a; margin-top: 0;">🏆 FASE 8: Fira Comercial Tecnològica i Portfolio Final</h3>
-  <p>Cloenda del projecte abans d'iniciar la <strong>Formació en Empresa</strong>! Munta el teu estand demostratiu a l'aula, presenta les 6 diapositives finals en Impress, resol una assistència tècnica en viu i lliura el Portfolio unificat.</p>
-  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;">
-    <strong>📦 Fitxers finals a pujar a Aules:</strong> <code>Portfolio_Empresa_ElTeuNom.pdf</code> i <code>Defensa_Final_Fira_ElTeuNom.odp</code> (i <code>.pdf</code>)
-  </div>
-</div>
+```mermaid
+flowchart LR
+    Estand["🎪 Muntatge de l'Estand Comercial<br>Rètol, catàlegs impresos, equip de mostra"] --> Atencio["🗣️ Simulació d'Atenció al Client<br>Explicació de serveis i resolució de dubtes"]
+    Atencio --> Portfoli["📁 Lliurament del Portfoli Consolidat<br>Tots els documents tècnics de les fases 1 a 7"]
+    Portfoli --> Jurat["🏆 Avaluació Global del Projecte<br>Presentació final de 6 diapositives en Impress"]
 ```
 
----
+### 🎯 Resum d'Objectius de la Tasca Final
+Cloenda del projecte abans d'iniciar la **Formació en Empresa**! Munta el teu estand demostratiu a l'aula, presenta les 6 diapositives finals en Impress, resol una assistència tècnica en viu i consolida el teu Portfoli d'Empresa en un únic document PDF.
+
+Consulta el [Quadern del Portfoli Final de la Tasca 8](./up08actividades.html) per a seguir el procediment detallat pas a pas i consultar la llista de comprovació de qualitat.
+

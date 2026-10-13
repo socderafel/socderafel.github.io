@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Programació en Java (1r DAW / DAM) — Programació en Java (1r DAW / DAM) | Portal Docent Pepe Cuenca"
+title: "Índex — Programació en Java (1r DAW / DAM) — Programació en Java (1r DAW / DAM) | Portal Docent d'Informàtica"
 course_root: "."
 badge: "1r DAW / DAM · Grau Superior · FP Grau Superior — DAW i DAM (Desenvolupament d'Aplicacions)"
 next_url: "./ut01/index.html"

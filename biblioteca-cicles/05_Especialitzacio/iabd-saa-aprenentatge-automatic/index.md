@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Sistemes d'Aprenentatge Automàtic (Machine Learning) — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent Pepe Cuenca"
+title: "Índex — Sistemes d'Aprenentatge Automàtic (Machine Learning) — Sistemes d'Aprenentatge Automàtic (Machine Learning) | Portal Docent d'Informàtica"
 course_root: "."
 badge: "CE IA i Big Data · Cursos d'Especialització (IA & Big Data / Ciberseguretat)"
 next_url: "./ut01/index.html"

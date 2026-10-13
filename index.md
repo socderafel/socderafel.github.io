@@ -1,4 +1,4 @@
-# 💻 Portal Docent de Pepe Cuenca
+# 💻 Portal Docent d'Informàtica
 
 Selecciona el teu mòdul per accedir directament als apunts tècnics, guies de laboratori i activitats avaluables:
 
@@ -52,6 +52,5 @@ Accés directe al repositori de temaris complets i apunts teòrics classificats 
 
 | Àmbit | Eina / Plataforma | Descripció i Accés |
 | :--- | :--- | :--- |
-| **Plataforma Oficial** | **Aules GVA (FP)** | Entrega oficial de tasques, qüestionaris i qualificacions: [Obrir Aules FP](https://aules.edu.gva.es/fp/) |
 | **Desenvolupament i Codi** | **VSCode + Git** | [Visual Studio Code](https://code.visualstudio.com/) · [Git SCM](https://git-scm.com/) · [GitHub Education](https://education.github.com/) |
 | **Ofimàtica i Disseny** | **LibreOffice + GIMP** | [LibreOffice Suite](https://es.libreoffice.org/) (*Writer, Calc, Impress, Draw*) · [GIMP](https://www.gimp.org/) |

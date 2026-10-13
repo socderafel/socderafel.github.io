@@ -20,4 +20,4 @@ next_label: "1.1 El Naming Comercial i la Paleta de Colors TIC ➡️"
 | **c) Esbossos** | Realització a mà alçada de 3 esbossos originals de logotip en paper. | [1.3 Guia Pràctica Pas a Pas](./up0103.md) | **20% (2,0 pts)** |
 | **d) Paleta** | Definició clara d'una paleta corporativa equilibrada de 2 o 3 colors màxim. | [1.1 Naming i Paleta TIC](./up0101.md) | **10% (1,0 pt)** |
 | **e) Disseny Digital** | Digitalització vectorial/gràfica precisa de l'esbós amb programari lliure. | [1.2 Logotip i Format .PNG](./up0102.md) | **25% (2,5 pts)** |
-| **f) Exportació** | Exportació correcta en `.PNG` amb fons transparent i arxiu editable. | [Entrega Tasca 1 en Aules](./up01actividades.md) | **15% (1,5 pts)** |
+| **f) Exportació** | Exportació correcta en `.PNG` amb fons transparent i arxiu editable. | [Tasca 1 del Projecte](./up01actividades.md) | **15% (1,5 pts)** |

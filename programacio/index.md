@@ -15,7 +15,7 @@ Benvinguts al repositori central d'apunts, exemples guiats, reptes i activitats 
 > - **Llenguatge i JDK:** Java (convencions *Clean Code* : classes en `PascalCase` , variables i mètodes en `camelCase` , constants en `UPPER_SNAKE_CASE` ).
 > - **Entorn de Desenvolupament (IDE):** Visual Studio Code + *Extension Pack for Java* .
 > - **Control de Versions:** Git, GitHub i GitHub Desktop.
-> - **Plataforma de Lliurament:** Aules GVA (lliurament d'activitats i proves avaluables).
+> - **Plataforma de Lliurament:** Repositori oficial de codi i memòries de laboratori.
 
 ## 📊 Estructura d'Unitats de Treball i Resultats d'Aprenentatge (UT0 a UT7)
 
@@ -202,7 +202,7 @@ Benvinguts al repositori central d'apunts, exemples guiats, reptes i activitats 
 | **1. Funcionament i Lògica** | **4 pts** | El programa resol el problema sense errors d'execució. |
 | **2. Tipus de Dades i Operadors** | **2 pts** | Ús òptim de tipus primitius i operadors lògics/aritmètics. |
 | **3. Convencions i Neteja (Clean Code)** | **2 pts** | Classes en `PascalCase`, variables en `camelCase` i bona indentació. |
-| **4. Entrada / Eixida (E/S) i Git** | **2 pts** | Missatges clars, eixida tabulada amb `printf` i entrega a Aules / GitHub. |
+| **4. Entrada / Eixida (E/S) i Git** | **2 pts** | Missatges clars, eixida tabulada amb `printf` i entrega al repositori de codi / GitHub. |
 
 > **⚠️ Nota important sobre la compilació**
 > Si el codi `.java` no compila per errors de sintaxi, la puntuació de l'apartat de funcionament serà **0**.

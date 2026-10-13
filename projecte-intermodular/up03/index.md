@@ -20,8 +20,8 @@ next_label: "3.0 RA i Criteris d'Avaluació ➡️"
 | **a) Factors de Risc** | Identificació precisa dels factors de risc d'oficina (fatiga visual i postural). | [3.1 Ergonomia davant PVD](./up0301.md) | **20% (2,0 pts)** |
 | **b) Decàleg Ergonòmic** | Redacció d'un decàleg ergonòmic amb llistes numerades de 5 normes essencials. | [3.2 Redacció del Manual PRL](./up0302.md) | **30% (3,0 pts)** |
 | **c) Riscos Elèctrics** | Identificació de 3 riscos elèctrics i pautes de protecció amb vinyetes. | [3.2 Redacció del Manual PRL](./up0302.md) | **20% (2,0 pts)** |
-| **e) Rutina d'Aula** | Compliment escrupolós de la rutina de classe (10' inici, 15' guardat/neteja). | [Entrega Tasca 3 en Aules](./up03actividades.md) | **20% (2,0 pts)** |
-| **f) Qualitat i Ordre** | Ús de la plantilla corporativa, correcció ortogràfica i exportació a PDF. | [Entrega Tasca 3 en Aules](./up03actividades.md) | **10% (1,0 pt)** |
+| **e) Rutina d'Aula** | Compliment escrupolós de la rutina de classe (10' inici, 15' guardat/neteja). | [Tasca 3 del Projecte](./up03actividades.md) | **20% (2,0 pts)** |
+| **f) Qualitat i Ordre** | Ús de la plantilla corporativa, correcció ortogràfica i exportació a PDF. | [Tasca 3 del Projecte](./up03actividades.md) | **10% (1,0 pt)** |
 
 ---
 
@@ -60,26 +60,14 @@ Busca informació sobre els riscos de treballar en oficines i tallers informàti
 
 ---
 
-# Activitat i Entrega de la Tasca 3 en Aules
+## 📝 Quadern d'Activitats Pràctiques — Tasca 3
 
-> **⚠️ 📦 Fitxer obligatori a pujar a la Tasca 3 d'Aules**
-> - **Manual Bàsic de PRL en PDF:** `Manual_PRL_Oficina_ElTeuNom.pdf`
-
-## 📋 Codi HTML per a configurar la Tasca 3 en Aules (Professorat)
-
-```html
-<div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;">
-  <h3 style="color: #1e3a8a; margin-top: 0;">🛡️ FASE 3: Manual Bàsic de Prevenció de Riscos Laborals (PRL) a l'Oficina</h3>
-  <p>Utilitzant la teua <strong>plantilla corporativa de Writer</strong>, redactaràs el Manual de Bones Pràctiques i Ergonomia de la teua empresa.</p>
-  <ol style="padding-left: 20px;">
-    <li><strong>Introducció pròpia:</strong> Explica amb les teues paraules per què és important asseure's bé i cuidar la vista davant de l'ordinador.</li>
-    <li><strong>Decàleg d'Ergonomia (Llista numerada):</strong> 5 normes fonamentals d'ergonomia davant del PC + 1 imatge il·lustrativa.</li>
-    <li><strong>Riscos Elèctrics (Llista amb vinyetes):</strong> 3 riscos elèctrics o d'ordre al taller i com prevenir-los.</li>
-  </ol>
-  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;">
-    <strong>📦 Fitxer a pujar a Aules:</strong> <code>Manual_PRL_Oficina_ElTeuNom.pdf</code>
-  </div>
-</div>
+```flowchart LR
+    A["🪑 Ergonomia PVD<br>Distància pantalla 50-70 cm<br>Ulls al marc superior<br>Colzes i genolls a 90°"] --- B["⚡ Risc Elèctric<br>Desconnexió de xarxa<br>Descàrrega condensadors<br>Presa de terra operativa"]
+    B --- C["🛡️ Protecció ESD<br>Polsera antiestàtica<br>Matalasset conductor<br>Manipulació per les vores"]
 ```
 
----
+### 🎯 Resum d'Objectius de la Tasca
+Un taller informàtic professional ha de complir estrictament les normes de seguretat laboral. En aquesta tasca redactaràs el **Manual de Prevenció de Riscos Laborals (PRL)** de la teua empresa utilitzant la plantilla corporativa dissenyada a la unitat anterior.
+
+Consulta el [Quadern d'Activitats Pràctiques de la Tasca 3](./up03actividades.html) per a seguir el procediment detallat pas a pas i consultar la llista de comprovació de qualitat.

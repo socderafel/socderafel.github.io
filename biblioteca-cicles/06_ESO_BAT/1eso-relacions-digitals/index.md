@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Taller de Relacions Digitals Responsables — Taller de Relacions Digitals Responsables | Portal Docent Pepe Cuenca"
+title: "Índex — Taller de Relacions Digitals Responsables — Taller de Relacions Digitals Responsables | Portal Docent d'Informàtica"
 course_root: "."
 badge: "1r ESO · Secundària (ESO) i Batxillerat"
 next_url: "./ut01/index.html"

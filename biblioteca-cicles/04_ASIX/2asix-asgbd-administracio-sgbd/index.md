@@ -1,6 +1,6 @@
----
+﻿---
 layout: default
-title: "Índex — Administració de Sistemes Gestors de Bases de Dades — Administració de Sistemes Gestors de Bases de Dades | Portal Docent Pepe Cuenca"
+title: "Índex — Administració de Sistemes Gestors de Bases de Dades — Administració de Sistemes Gestors de Bases de Dades | Portal Docent d'Informàtica"
 course_root: "."
 badge: "2n ASIX · Grau Superior · FP Grau Superior — ASIX (Administració de Sistemes i Xarxes)"
 next_url: "./ut01/index.html"

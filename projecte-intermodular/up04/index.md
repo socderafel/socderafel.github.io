@@ -49,28 +49,15 @@ Obre **LibreOffice Impress** i crea una presentació estructurada en aquestes **
 
 ---
 
-# Activitat i Entrega de la Tasca 4 en Aules
+## 📝 Quadern d'Activitats Pràctiques — Tasca 4
 
-> **⚠️ 📦 Fitxers obligatoris a pujar a la Tasca 4 d'Aules**
-> 1. **Presentació editable d'Impress:** `Presentacio_Marca_ElTeuNom.odp`
-> 2. **Presentació exportada en PDF:** `Presentacio_Marca_ElTeuNom.pdf`
-
-## 📋 Codi HTML per a configurar la Tasca 4 en Aules (Professorat)
-
-```html
-<div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;">
-  <h3 style="color: #1e3a8a; margin-top: 0;">🎤 FASE 4: Presentació de la teua Marca en Impress (Final 1a Avaluació)</h3>
-  <p>Crea una presentació en <strong>LibreOffice Impress</strong> de <strong>4 diapositives</strong> per a la teua defensa oral de 5 minuts:</p>
-  <ol style="padding-left: 20px;">
-    <li><strong>Diapositiva 1:</strong> Logotip en gran, nom de l'empresa i el teu nom com a CEO.</li>
-    <li><strong>Diapositiva 2:</strong> Per què has triat eixe nom i eixos colors corporatius.</li>
-    <li><strong>Diapositiva 3:</strong> Captura del teu paper de carta i model de pressupost.</li>
-    <li><strong>Diapositiva 4:</strong> Resum visual de les normes del teu Manual de PRL.</li>
-  </ol>
-  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;">
-    <strong>📦 Fitxers a pujar a Aules:</strong> <code>Presentacio_Marca_ElTeuNom.odp</code> i <code>Presentacio_Marca_ElTeuNom.pdf</code>
-  </div>
-</div>
+```flowchart TD
+    D1["Diapositiva 1: Portada<br>Logotip gran, Lema i Equip"] --> D2["Diapositiva 2: Identitat<br>Significat del Nom i Colors"]
+    D2 --> D3["Diapositiva 3: Serveis Tècnics<br>Reparacions, Manteniment i Tarifes"]
+    D3 --> D4["Diapositiva 4: Contacte<br>Ubicació, Horari i Garanties"]
 ```
 
----
+### 🎯 Resum d'Objectius de la Tasca
+Saber comunicar és tan important com saber reparar un ordinador. En aquesta tasca dissenyaràs una presentació de **4 diapositives clau amb LibreOffice Impress** i prepararàs la teua primera defensa oral de 5 minuts davant dels companys i professors.
+
+Consulta el [Quadern d'Activitats Pràctiques de la Tasca 4](./up04actividades.html) per a seguir el procediment detallat pas a pas i consultar la llista de comprovació de qualitat.

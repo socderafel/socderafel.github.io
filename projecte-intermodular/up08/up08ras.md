@@ -4,7 +4,7 @@ title: "8.0 RA i Criteris d'Avaluació Globals — Projecte Intermodular (2n FPB
 course_root: ".."
 badge: "Avaluació Final de Març · RA1 a RA5 · 10 hores · 30% de la nota"
 prev_url: "../up07/up07actividades.html"
-prev_label: "⬅️ Activitat i Entrega Tasca 7 en Aules"
+prev_label: "⬅️ Quadern d'Activitats Pràctiques — Tasca 7"
 next_url: "./up0801.html"
 next_label: "8.1 Presentació Final de 6 Diapositives en Impress ➡️"
 ---

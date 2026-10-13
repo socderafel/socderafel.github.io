@@ -15,9 +15,9 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 > - **Objectiu Pràctic:** Fundar i gestionar des de zero la teua pròpia **empresa de serveis i manteniment informàtic** abans d'iniciar la fase de **Formació en Empresa** al mes de març.
 > - **Suite Ofimàtica i Disseny:** LibreOffice ( *Writer, Calc, Impress, Draw* ) i *GIMP* .
 > - **Rutina Diària Obligatòria:**
->   - **Primers 10 minuts:** Entrar amb puntualitat, encendre l'equip i obrir Aules i LibreOffice.
+>   - **Primers 10 minuts:** Entrar amb puntualitat, encendre l'equip i obrir el material de treball i LibreOffice.
 >   - **1 hora i 25 minuts:** Treball autònom seguint els passos de cada unitat i resolució de dubtes.
->   - **Últims 15 minuts (Arreplegada):** Guardar tots els fitxers, verificar l'entrega a Aules, apagar l'equip, endreçar la taula i deixar l'aula neta.
+>   - **Últims 15 minuts (Arreplegada):** Guardar tots els fitxers, verificar el guardat dels fitxers del portfoli, apagar l'equip, endreçar la taula i deixar l'aula neta.
 
 ## 📊 Estructura d'Unitats de Programació i Resultats d'Aprenentatge (UP1 a UP8)
 
@@ -44,7 +44,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**1.1 El Naming Comercial i la Paleta de Colors TIC**](./up01/up0101.md)
 - [**1.2 Isotip, Logotip i el Format .PNG Transparent**](./up01/up0102.md)
 - [**1.3 Guia Pràctica Pas a Pas (Paper i Digitalització)**](./up01/up0103.md)
-- [**Activitat i Entrega Tasca 1 en Aules**](./up01/up01actividades.md)
+- [**Quadern d'Activitats Pràctiques — Tasca 1**](./up01/up01actividades.md)
 
 ## UP2 — Identitat Corporativa i Paper de Carta amb Writer
 
@@ -58,7 +58,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**2.1 Configuració de Pàgina (2 cm) i Estils Corporatius**](./up02/up0201.md)
 - [**2.2 Encapçalament, Peu de Pàgina i Plantilla (.ott)**](./up02/up0202.md)
 - [**2.3 Carta de Serveis i Model de Taula de Pressupost**](./up02/up0203.md)
-- [**Activitat i Entrega Tasca 2 en Aules**](./up02/up02actividades.md)
+- [**Quadern d'Activitats Pràctiques — Tasca 2**](./up02/up02actividades.md)
 
 ## UP3 — Manual Bàsic de Prevenció de Riscos Laborals (PRL)
 
@@ -71,7 +71,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**3.0 RA i Criteris d'Avaluació**](./up03/up03ras.md)
 - [**3.1 Ergonomia Postural davant Pantalles (PVD)**](./up03/up0301.md)
 - [**3.2 Riscos Elèctrics i Redacció del Manual en Writer**](./up03/up0302.md)
-- [**Activitat i Entrega Tasca 3 en Aules**](./up03/up03actividades.md)
+- [**Quadern d'Activitats Pràctiques — Tasca 3**](./up03/up03actividades.md)
 
 ## UP4 — Defensa Oral Inicial de la Marca en Impress
 
@@ -84,7 +84,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**4.0 RA i Criteris d'Avaluació**](./up04/up04ras.md)
 - [**4.1 Disseny Visual de Diapositives en LibreOffice Impress**](./up04/up0401.md)
 - [**4.2 Estructura de les 4 Diapositives i Defensa de 5 Minuts**](./up04/up0402.md)
-- [**Activitat i Entrega Tasca 4 en Aules**](./up04/up04actividades.md)
+- [**Quadern d'Activitats Pràctiques — Tasca 4**](./up04/up04actividades.md)
 
 ## UP5 — Gestió Econòmica i Pressupostos en LibreOffice Calc
 
@@ -98,7 +98,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**5.1 Costos d'un Taller: Base Imposable, IVA (21%) i Fórmules**](./up05/up0501.md)
 - [**5.2 Full d'Inventari i Plantilla de Pressupost Automatitzada**](./up05/up0502.md)
 - [**5.3 Simulació Pràctica: Resolució de 2 Casos de Clients**](./up05/up0503.md)
-- [**Activitat i Entrega Tasca 5 en Aules**](./up05/up05actividades.md)
+- [**Quadern d'Activitats Pràctiques — Tasca 5**](./up05/up05actividades.md)
 
 ## UP6 — Seguretat al Taller de Muntatge i Gestió RAEE
 
@@ -111,7 +111,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**6.0 RA i Criteris d'Avaluació**](./up06/up06ras.md)
 - [**6.1 Seguretat Física en el Muntatge i Protecció ESD**](./up06/up0601.md)
 - [**6.2 Classificació de Residus Electrònics (RAEE) i Ecoparc**](./up06/up0602.md)
-- [**Activitat i Entrega Tasca 6 en Aules**](./up06/up06actividades.md)
+- [**Quadern d'Activitats Pràctiques — Tasca 6**](./up06/up06actividades.md)
 
 ## UP7 — Catàleg de Serveis, Full d'Incidències i Atenció al Client
 
@@ -124,7 +124,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**7.0 RA i Criteris d'Avaluació**](./up07/up07ras.md)
 - [**7.1 Disseny del Catàleg Comercial amb Packs a Preu Tancat**](./up07/up0701.md)
 - [**7.2 Full de Recepció d'Incidències (RMA), Targetes i Rètol**](./up07/up0702.md)
-- [**Activitat i Entrega Tasca 7 en Aules**](./up07/up07actividades.md)
+- [**Quadern d'Activitats Pràctiques — Tasca 7**](./up07/up07actividades.md)
 
 ## UP8 — Fira Comercial Tecnològica i Defensa Final
 
@@ -137,7 +137,7 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 - [**8.0 RA i Criteris d'Avaluació Globals**](./up08/up08ras.md)
 - [**8.1 Presentació Final de 6 Diapositives en Impress**](./up08/up0801.md)
 - [**8.2 Muntatge d'Estand, Atenció Comercial i Resolució en Viu**](./up08/up0802.md)
-- [**Entrega Portfolio Final Tasca 8 en Aules**](./up08/up08actividades.md)
+- [**Quadern del Portfoli Final — Tasca 8**](./up08/up08actividades.md)
 
 ---
 

@@ -1220,23 +1220,26 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <ol>
 <li>Abrir <strong>PuTTY</strong> en vuestro PC del aula.</li>
 <li>En el campo <strong>Host Name (or IP address)</strong> introducir la <strong>IP pública de Windows Server</strong> (<code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>), <strong>Port</strong> <code>22</code> y <strong>Connection type</strong> <code>SSH</code>.</li>
-<li>Pulsar en <strong>Open</strong>, aceptar la clave host del servidor (<code>Accept</code>) e iniciar sesión con el usuario <code>alumne_redes</code> y su contraseña (<code>Smx2026..@</code>).</li>
-<li>Ejecutar los comandos <code>whoami</code> y <code>hostname</code> para verificar que estamos dentro de la consola remota de Windows Server:</li>
+<li>Pulsar en <strong>Open</strong>, aceptar la advertencia inicial de clave host del servidor (*PuTTY Security Alert* pulsando <code>Accept</code>) e iniciar sesión indicando el usuario <code>alumne_redes</code> y su contraseña (<code>Smx2026..@</code>).</li>
+<li>Al entrar, ejecutar <code>whoami</code> y <code>hostname</code> para verificar que estáis conectados a la consola de comandos remota de Windows Server.</li>
 </ol>
-<figure><img src="imagenes/45_powershell_ssh_conexion_basica.png" alt="Conexión SSH básica hacia Windows Server"><figcaption>Conexión SSH básica hacia Windows Server</figcaption></figure>
-<p>*Figura 45: Inicio de sesión remota SSH en el puerto 22 hacia Windows Server y comprobación de usuario y nombre de host.*</p>
+<p>No obstante, el método profesional y seguro recomendado para entornos de producción es <strong>sustituir las contraseñas por autenticación asimétrica de clave pública</strong> y bastionar el servicio, tal y como configuramos a continuación.</p>
 <hr>
 <h3>10.2 Generación del par de claves con PuTTYgen</h3>
 <ol>
 <li>En vuestro ordenador del aula, abrir <strong>PuTTYgen</strong> (*PuTTY Key Generator*).</li>
 <li>En la parte inferior (*Parameters*), mantener seleccionado el tipo de clave <strong>RSA</strong> (<code>2048</code> bits) o <strong>EdDSA (Ed25519)</strong>.</li>
-<li>Pulsar en el botón <strong>Generate</strong> y mover continuamente el cursor del ratón sobre el área vacía para generar entropía criptográfica aleatoria.</li>
+<li>Pulsar en el botón <strong>Generate</strong> y mover continuamente el cursor del ratón sobre el área vacía para generar entropía criptográfica aleatoria:</li>
+</ol>
+<figure><img src="imagenes/45b_puttygen_interfaz_inicial.png" alt="Parámetros de clave y botón Generate en PuTTYgen"><figcaption>Parámetros de clave y botón Generate en PuTTYgen</figcaption></figure>
+<p>*Figura 45b: Selección del tipo de clave RSA (2048 bits) y ubicación del botón Generate en PuTTYgen.*</p>
+<ol start="4">
 <li>En el campo <strong>Key comment</strong>, escribir: <code>alumne_redes@ies-mre</code>.</li>
 <li>Pulsar en <strong>Save private key</strong> (confirmar guardar sin contraseña de paso para este laboratorio) y guardarla como <code>clave_privada_smx.ppk</code> en vuestra carpeta de trabajo.</li>
-<li>En el cuadro superior que indica *Public key for pasting into OpenSSH authorized_keys file*, seleccionar y <strong>copiar todo el texto completo de la clave pública</strong> (<code>ssh-rsa AAAA...</code>).</li>
+<li>En el cuadro superior que indica *Public key for pasting into OpenSSH authorized_keys file*, seleccionar y <strong>copiar todo el texto completo de la clave pública</strong> (<code>ssh-rsa AAAA...</code>):</li>
 </ol>
-<figure><img src="imagenes/46_powershell_ssh_keygen.png" alt="Generación del par de claves SSH"><figcaption>Generación del par de claves SSH</figcaption></figure>
-<p>*Figura 46: Generación del par de claves asimétricas y visualización de la clave pública.*</p>
+<figure><img src="imagenes/46_puttygen_clave_generada.png" alt="Generación del par de claves SSH en PuTTYgen"><figcaption>Generación del par de claves SSH en PuTTYgen</figcaption></figure>
+<p>*Figura 46: Clave pública RSA generada en PuTTYgen con comentario identificativo alumne_redes@ies-mre y guardado de clave privada (.ppk).*</p>
 <blockquote><p>📷 <strong>Evidencia 13 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la ventana de PuTTYgen mostrando la clave generada y el comentario <code>alumne_redes@ies-mre</code>.</p></blockquote>
 <hr>
 <h3>10.3 Instalación de la clave pública en Windows Server y ajuste de sshd_config</h3>
@@ -1246,7 +1249,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <ul>
 <li>Abrir el <strong>Bloc de notas (Notepad)</strong> como Administrador.</li>
 <li>Abrir el fichero <code>C:\ProgramData\ssh\sshd_config</code> (seleccionando *All Files <code>(*.*)</code>* en el diálogo de apertura).</li>
-<li>Bajar hasta las dos últimas líneas del archivo (<code>Match Group administrators</code> y <code>AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys</code>) y <strong>comentarlas añadiendo una almohadilla <code>#</code> delante de cada una</strong> para que Windows utilice siempre la carpeta <code>.ssh</code> estándar de cada usuario:</li>
+<li>Bajar hasta las dos últimas líneas del archivo (<code>Match Group administrators</code> y <code>AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys</code>) y comprobar que están comentadas con una almohadilla <code>#</code> delante para que Windows utilice siempre la carpeta <code>.ssh</code> estándar de cada usuario:</li>
 </ul>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -1261,47 +1264,51 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
   <pre><code class="language-ini"><span class="tok-comment">#Match Group administrators</span>
 <span class="tok-comment">#       AuthorizedKeysFile __PROGRAMDATA__/ssh/administrators_authorized_keys</span></code></pre>
 </div>
-<ul>
-<li>Guardar el archivo (<code>File</code> -> <code>Save</code>).</li>
-</ul>
 <ol start="2">
-<li>Crear la carpeta <code>C:\Users\alumne_redes\.ssh</code> (si no existe) y dentro de ella crear con <strong>Notepad</strong> el archivo <strong><code>authorized_keys</code></strong> (sin extensión <code>.txt</code>), pegando en una sola línea la clave pública copiada desde PuTTYgen.</li>
-<li>Reiniciar el servicio <strong>OpenSSH SSH Server</strong> desde la consola gráfica <code>services.msc</code>.</li>
+<li>Crear la carpeta <code>C:\Users\alumne_redes\.ssh</code> (si no existe) y dentro de ella crear/abrir con <strong>Notepad</strong> el archivo <strong><code>authorized_keys</code></strong> (sin extensión <code>.txt</code>), pegando en una sola línea la clave pública copiada desde PuTTYgen:</li>
 </ol>
+<figure><img src="imagenes/46b_windows_authorized_keys_notepad.png" alt="Clave pública copiada en authorized_keys mediante Notepad"><figcaption>Clave pública copiada en authorized_keys mediante Notepad</figcaption></figure>
+<p>*Figura 46b: Clave pública RSA pegada en una sola línea dentro del archivo authorized_keys de alumne_redes.*</p>
+<ol start="3">
+<li>Reiniciar el servicio <strong>OpenSSH SSH Server</strong> desde la consola gráfica <code>services.msc</code>:</li>
+</ol>
+<figure><img src="imagenes/46c_services_reiniciar_openssh.png" alt="Reinicio del servicio OpenSSH SSH Server en services.msc"><figcaption>Reinicio del servicio OpenSSH SSH Server en services.msc</figcaption></figure>
+<p>*Figura 46c: Reinicio del servicio OpenSSH SSH Server en Windows Server tras actualizar las claves autorizadas.*</p>
 <hr>
 <h3>10.4 Conexión automática mediante clave privada en PuTTY</h3>
 <ol>
-<li>Abrir <strong>PuTTY</strong> en vuestro PC del aula:</li>
+<li>Abrir <strong>PuTTY</strong> en vuestro PC del aula.</li>
+<li>En el menú izquierdo, ir a <strong>Connection</strong> -> <strong>Data</strong> y en <strong>Auto-login username</strong> escribir <code>alumne_redes</code>:</li>
+</ol>
+<figure><img src="imagenes/46d_putty_autologin.png" alt="Configuración de Auto-login username en PuTTY"><figcaption>Configuración de Auto-login username en PuTTY</figcaption></figure>
+<p>*Figura 46d: Configuración del inicio de sesión desatendido para alumne_redes en Connection -> Data.*</p>
+<ol start="3">
+<li>En el árbol izquierdo, desplegar <strong>Connection</strong> -> <strong>SSH</strong> -> <strong>Auth</strong> -> <strong>Credentials</strong>:</li>
+</ol>
+<ul>
+<li>En el campo <strong>Private key file for authentication</strong>, hacer clic en <strong>Browse...</strong> y seleccionar vuestro archivo <code>clave_privada_smx.ppk</code>:</li>
+</ul>
+<figure><img src="imagenes/46e_putty_credentials.png" alt="Carga de la clave privada .ppk en PuTTY Credentials"><figcaption>Carga de la clave privada .ppk en PuTTY Credentials</figcaption></figure>
+<p>*Figura 46e: Asociación del archivo de clave privada clave_privada_smx.ppk en Connection -> SSH -> Auth -> Credentials.*</p>
+<ol start="4">
+<li>Volver arriba a <strong>Session</strong>:</li>
 </ol>
 <ul>
 <li><strong>Host Name:</strong> IP pública de Windows Server (<code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>). <strong>Port:</strong> <code>22</code>.</li>
+<li>En *Saved Sessions*, escribir <code>Windows-Clave-SSH</code> y hacer clic en <strong>Save</strong>:</li>
 </ul>
-<ol start="2">
-<li>En el árbol izquierdo, desplegar <strong>Connection</strong> -> <strong>SSH</strong> -> <strong>Auth</strong> -> <strong>Credentials</strong>.</li>
-<li>En el campo <strong>Private key file for authentication</strong>, hacer clic en <strong>Browse...</strong> y seleccionar vuestro archivo <code>clave_privada_smx.ppk</code>.</li>
-<li>En el menú izquierdo, ir a <strong>Connection</strong> -> <strong>Data</strong> y en <strong>Auto-login username</strong> escribir <code>alumne_redes</code>.</li>
-<li>Volver arriba a <strong>Session</strong>, escribir en *Saved Sessions* el nombre <code>Windows-Clave-SSH</code> y pulsar <strong>Save</strong>.</li>
-<li>Pulsar en <strong>Open</strong> y comprobar que la terminal muestra:</li>
+<figure><img src="imagenes/46f_putty_guardar_sesion.png" alt="Guardado del perfil de sesión en PuTTY"><figcaption>Guardado del perfil de sesión en PuTTY</figcaption></figure>
+<p>*Figura 46f: Perfil de sesión Windows-Clave-SSH guardado en PuTTY con IP pública, puerto 22 y clave asimétrica vinculada.*</p>
+<ol start="5">
+<li>Pulsar en <strong>Open</strong> y comprobar que la consola accede directamente a Windows Server <strong>sin solicitar contraseña</strong>:</li>
 </ol>
-<div class="terminal-box">
-  <div class="terminal-bar">
-    <div class="terminal-dots">
-      <span class="dot dot-red"></span>
-      <span class="dot dot-yellow"></span>
-      <span class="dot dot-green"></span>
-    </div>
-    <div class="terminal-title">📋 Esquema / Salida</div>
-    <div class="terminal-lang">text</div>
-  </div>
-  <pre><code class="language-text">Using username &quot;alumne_redes&quot;.
-Authenticating with public key &quot;alumne_redes@ies-mre&quot;</code></pre>
-</div>
-<p>accediendo directamente a la consola de Windows Server <strong>sin pedir contraseña</strong>.</p>
+<figure><img src="imagenes/47a_putty_login_exitoso.png" alt="Acceso directo a la consola de Windows Server mediante clave privada"><figcaption>Acceso directo a la consola de Windows Server mediante clave privada</figcaption></figure>
+<p>*Figura 47a: Sesión SSH abierta en el puerto 22 conectando de forma directa y autenticada con la clave privada de alumne_redes.*</p>
 <hr>
 <h3>10.5 Bastionado del servidor SSH en Windows Server (Deshabilitar contraseña)</h3>
 <ol>
 <li>En <strong>Windows Server</strong>, volver a abrir <code>C:\ProgramData\ssh\sshd_config</code> con <strong>Notepad (como Administrador)</strong>.</li>
-<li>Localizar o añadir las directivas de autenticación para permitir únicamente llave criptográfica y prohibir contraseñas:</li>
+<li>Añadir o asegurar al final del archivo la directiva de seguridad que prohíbe el acceso mediante contraseña convencional:</li>
 </ol>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -1313,12 +1320,13 @@ Authenticating with public key &quot;alumne_redes@ies-mre&quot;</code></pre>
     <div class="terminal-title">📄 Fichero de configuración</div>
     <div class="terminal-lang">ini</div>
   </div>
-  <pre><code class="language-ini">PubkeyAuthentication yes
-PasswordAuthentication no</code></pre>
+  <pre><code class="language-ini">PasswordAuthentication no</code></pre>
 </div>
+<figure><img src="imagenes/47b_sshd_config_passwordauth_no.png" alt="Directiva PasswordAuthentication no añadida en sshd_config"><figcaption>Directiva PasswordAuthentication no añadida en sshd_config</figcaption></figure>
+<p>*Figura 47b: Bastionado de OpenSSH mediante la directiva PasswordAuthentication no en sshd_config.*</p>
 <ol start="3">
-<li>Guardar los cambios y reiniciar el servicio <strong>OpenSSH SSH Server</strong> en <code>services.msc</code>.</li>
-<li>Abrir una nueva ventana limpia de <strong>PuTTY</strong> poniendo solo la IP de Windows Server (sin cargar la clave <code>.ppk</code>) e intentar entrar como <code>alumne_redes</code>: comprobar que el servidor rechaza inmediatamente el acceso devolviendo:</li>
+<li>Guardar los cambios (<code>Ctrl + S</code>) y reiniciar el servicio <strong>OpenSSH SSH Server</strong> en <code>services.msc</code>.</li>
+<li>Abrir una nueva ventana limpia de <strong>PuTTY</strong> poniendo solo la IP de Windows Server (sin cargar la clave <code>.ppk</code>) e intentar entrar como <code>alumne_redes</code>: comprobar que el servidor rechaza inmediatamente el acceso mostrando el error de seguridad:</li>
 </ol>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -1330,11 +1338,11 @@ PasswordAuthentication no</code></pre>
     <div class="terminal-title">📋 Esquema / Salida</div>
     <div class="terminal-lang">text</div>
   </div>
-  <pre><code class="language-text">No supported authentication methods available (server sent: publickey)</code></pre>
+  <pre><code class="language-text">No supported authentication methods available (server sent: publickey,keyboard-interactive)</code></pre>
 </div>
-<figure><img src="imagenes/47_powershell_ssh_clave_publica_login.png" alt="Acceso directo sin contraseña mediante clave privada y rechazo tras el bastionado SSH"><figcaption>Acceso directo sin contraseña mediante clave privada y rechazo tras el bastionado SSH</figcaption></figure>
-<p>*Figura 47: Inicio de sesión automático mediante clave privada y denegación de acceso por contraseña tras el bastionado.*</p>
-<blockquote><p>📷 <strong>Evidencia 14 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de PuTTY entrando sin contraseña con la clave pública (<code>Authenticating with public key</code>) y otra captura mostrando el bloqueo <code>No supported authentication methods available (server sent: publickey)</code> al intentar conectar sin clave.</p></blockquote>
+<figure><img src="imagenes/47c_putty_bloqueo_bastionado.png" alt="Bloqueo de acceso por contraseña en PuTTY tras el bastionado"><figcaption>Bloqueo de acceso por contraseña en PuTTY tras el bastionado</figcaption></figure>
+<p>*Figura 47c: Rebuig d'accés en PuTTY (No supported authentication methods available) demostrant que el servidor només accepta claus públiques criptogràfiques.*</p>
+<blockquote><p>📷 <strong>Evidencia 14 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la sesión de PuTTY entrando automáticamente sin contraseña mediante clave privada (<code>Figura 47a</code>) y otra captura del bloqueo por bastionado (<code>Figura 47c</code>) al intentar acceder sin clave.</p></blockquote>
 <div class="admonition info">
 <p class="admonition-title">Qué debes añadir a tu documento Word al terminar el Apartado 10</p>
 <p>En el <strong>Apartado 10</strong> de tu documento Word, incluye las <strong>Evidencias 13 y 14</strong>:</p>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Activitat i Entrega Tasca 2 en Aules — Projecte Intermodular (2n FPB)"
+title: "Quadern d'Activitats Pràctiques — Tasca 2: Identitat Corporativa i Papereria amb Writer"
 course_root: ".."
 badge: "1a Avaluació · RA2 (a-f) · 8 hores · 15% de la nota"
 prev_url: "./up0203.html"
@@ -9,33 +9,60 @@ next_url: "../up03/up03ras.html"
 next_label: "3.0 RA i Criteris d'Avaluació ➡️"
 ---
 
-# Activitat i Entrega de la Tasca 2 en Aules
+# 🏢 Quadern d'Activitats Pràctiques — Tasca 2: Identitat Corporativa i Papereria
 
-> **⚠️ 📦 Fitxers obligatoris a pujar a la Tasca 2 d'Aules**
-> 1. **Plantilla corporativa reutilitzable buida:** `Plantilla_PaperCarta_ElTeuNom.ott` (o `.odt` ).
-> 2. **Document amb Carta i Model de Pressupost en PDF:** `Model_Pressupost_ElTeuNom.pdf` .
+En la tasca anterior vas crear el nom i el logotip de la teua empresa. Ara és el moment de dissenyar la **papereria corporativa i la plantilla oficial** que farem servir per a emetre cartes de presentació, pressupostos i documents comercials amb **LibreOffice Writer**.
 
-## 📋 Codi HTML per a configurar la Tasca 2 en Aules (Professorat)
+---
 
-```html
-<div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 20px; font-family: sans-serif; line-height: 1.5;">
-  <h3 style="color: #1e3a8a; margin-top: 0;">🏢 FASE 2: La Documentació Oficial de la teua Empresa Informàtica</h3>
-  <p>En la tasca anterior vas crear el nom i el logotip de la teua empresa. Ara és el moment de dissenyar la <strong>papereria corporativa i la plantilla oficial</strong> que farem servir per a emetre pressupostos i documents comercials amb <strong>LibreOffice Writer</strong>.</p>
-  <hr style="border: 0; border-top: 1px solid #cbd5e1; margin: 15px 0;">
-  <h4 style="color: #0369a1;">🎯 Què has de fer? (Pas a pas)</h4>
-  <ol style="padding-left: 20px;">
-    <li style="margin-bottom: 8px;"><strong>Configuració del full:</strong> Obre LibreOffice Writer i posa els marges a <strong>2 cm</strong> (Format &gt; Estil de pàgina).</li>
-    <li style="margin-bottom: 8px;"><strong>Estils de text:</strong> Modifica l'estil <em>Títol 1</em> amb lletra clara (mida 18-20, negreta) i el color del teu logotip.</li>
-    <li style="margin-bottom: 8px;"><strong>Paper de carta:</strong> Activa l'encapçalament (logo .PNG de 2-3 cm a l'esquerra i nom d'empresa a la dreta) i el peu de pàgina (adreça, telèfon i correu). Guarda aquest full buit com a <strong>plantilla</strong> (<em>Plantilla_PaperCarta_ElTeuNom.ott</em>).</li>
-    <li style="margin-bottom: 8px;"><strong>Carta i Model de pressupost:</strong> Redacta la carta de presentació i crea una taula de <strong>4 columnes</strong> (<em>Quantitat, Descripció, Preu Unitari €, Total €</em>) amb la capçalera pintada del color corporatiu.</li>
-    <li style="margin-bottom: 8px;"><strong>Exporta a PDF:</strong> Revisa l'ortografia (F7) i exporta el document final a PDF.</li>
-  </ol>
-  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; border-radius: 4px;">
-    <strong>📦 Quins 2 fitxers has de pujar a Aules?</strong>
-    <ol style="margin: 5px 0 0 15px; padding: 0;">
-      <li><code>Plantilla_PaperCarta_ElTeuNom.ott</code> (o <code>.odt</code>)</li>
-      <li><code>Model_Pressupost_ElTeuNom.pdf</code> (arxiu final exportat)</li>
-    </ol>
-  </div>
-</div>
+## 🗺️ Flux de Treball del Taller
+
+```flowchart TD
+    subgraph PageLayout ["Anatomia de la Plantilla Corporativa (.OTT)"]
+        Top["Encapçalament: Logotip Transparent + Dades Fiscals"]
+        Body["Cos: Marges 2 cm · Estils de Paràgraf · Taula de 4 Columnes"]
+        Foot["Peu de Pàgina: Contacte · Adreça · Camp Dinàmic 'Pàgina X de Y'"]
+        Top --> Body --> Foot
+    end
 ```
+
+---
+
+## 🎯 Procediment Pràctic Pas a Pas
+
+### Pas 2.1: Configuració de Pàgina Normalitzada (2 cm)
+1. Obre **LibreOffice Writer** en un document en blanc.
+2. Vés a `Format -> Estil de pàgina -> pestanya Pàgina`.
+3. Estableix els marges a exactament **2,00 cm** a tots els costats (esquerre, dret, superior i inferior).
+
+### Pas 2.2: Encapçalament i Peu de Pàgina Dinàmics
+1. Activa l'encapçalament (`Format -> Estil de pàgina -> pestanya Capçalera -> Activa capçalera`).
+2. Insereix el teu logotip corporatiu en `.PNG` transparent a la part esquerra, ajustant la seua alçada a uns $2 - 2,5\text{ cm}$.
+3. Afegeix a la dreta el nom de l'empresa, el lema comercial i el CIF fictici en lletra menuda ($9 - 10\text{ pt}$).
+4. Activa el peu de pàgina i afegeix l'adreça física del taller, telèfon, correu electrònic i la numeració dinàmica de pàgines (`Insereix -> Camp -> Número de pàgina` seguit de ` de ` i `Insereix -> Camp -> Total de pàgines`).
+5. Guarda aquest document buit com a plantilla de Writer: `Fitxer -> Plantilles -> Guarda com a plantilla...` amb el nom `Plantilla_PaperCarta_ElTeuNom.ott`.
+
+### Pas 2.3: Redacció de la Carta Comercial i Taula de Pressupost
+1. Utilitzant la plantilla creada, redacta una carta formal de presentació adreçada a una empresa del barri oferint serveis de manteniment informàtic.
+2. Crea una taula de **4 columnes**: *Quantitat*, *Descripció del Servei / Peça*, *Preu Unitari (€)* i *Total (€)*.
+3. Aplica el teu color corporatiu a la fila de capçalera de la taula amb text en blanc i negreta.
+4. Passa el corrector ortogràfic (`F7`) i exporta el document final a PDF.
+
+---
+
+## 📋 Llista d'Autoavaluació de Qualitat
+
+| Criteri de Qualitat | Comprovació de l'Alumnat | Estat |
+| :--- | :--- | :---: |
+| **Marges normalitzats** | Els 4 marges estan fixats a exactament 2 cm. | ☐ Sí |
+| **Camp de pàgina dinàmic** | La numeració canvia automàticament si el document té més d'una pàgina. | ☐ Sí |
+| **Plantilla reutilitzable** | S'ha creat i comprovat l'arxiu `.ott`. | ☐ Sí |
+| **Taula professional** | La taula de pressupost té capçalera corporativa i dades ben alineades. | ☐ Sí |
+| **Ortografia i format** | Text 100% lliure d'errors ortogràfics i exportat a PDF. | ☐ Sí |
+
+---
+
+## 📦 Documents a Incloure en el Portfoli de l'Empresa
+Guarda els següents fitxers a la carpeta del projecte:
+1. `Plantilla_PaperCarta_ElTeuNom.ott` (arxiu de plantilla reutilitzable buida).
+2. `Model_Pressupost_ElTeuNom.pdf` (document complet amb la carta i la taula de pressupost exportat en PDF).
