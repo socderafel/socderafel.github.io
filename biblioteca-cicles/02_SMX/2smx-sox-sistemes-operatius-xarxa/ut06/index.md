@@ -1,106 +1,42 @@
 ---
 layout: default
-title: "Sistemes Operatius en Xarxa — UD6 UP6. Integración de sistemas operativos libres y propietarios - RA6"
+title: "UD6 — Integració de Sistemes Operatius Lliures i Propietaris"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UD6"
 ---
 
-# UD6 — UP6. Integración de sistemas operativos libres y propietarios - RA6
+# 📘 UD6 — Integració de Sistemes Operatius Lliures i Propietaris
 
-
-
----
-
-## 📌 6.1 Teoría (còpia) (còpia) (còpia) (còpia) (còpia)
-
-Teoría 📚
+La **Unitat Didàctica 6** conclou el temari de Sistemes Operatius en Xarxa abordant l'escenari més habitual en el món laboral real: els **entorns de xarxa heterogenis**, on conviuen servidors d'infraestructura Microsoft Windows Server amb estacions de treball o servidors de desenvolupament GNU/Linux.
 
 ---
 
-## 📌 6.2 UP6.1. Recursos en red compartidos entre distintos sistemas operativos - CE6.a)
+## 🔄 El Repte de la Interoperabilitat Heterogènia
 
-Continguts i activitats didàctiques de **UP6.1. Recursos en red compartidos entre distintos sistemas operativos - CE6.a)**.
-
----
-
-## 📌 6.3 UP6.2. Funcionalidad de servicios para compartir recursos en red - CE6.c)
-
-Continguts i activitats didàctiques de **UP6.2. Funcionalidad de servicios para compartir recursos en red - CE6.c)**.
+En una infraestructura moderna:
+1. Els usuaris, equips i credencials corporatives estan centralitzats a l'**Active Directory (Windows Server)**.
+2. Molts departaments tècnics, aules de programació o servidors web utilitzen **Ubuntu o Debian GNU/Linux**.
+3. **Objectiu tècnic:** Aconseguir que un usuari del domini (com `joan.garcia@smx.local`) puga seure davant d'un ordinador amb Ubuntu Linux, introduir la seua contrasenya corporativa i iniciar sessió amb èxit, creant automàticament la seua carpeta d'inici `/home/joan.garcia@smx.local`.
 
 ---
 
-## 📌 6.4 UP6.3. Integración de sistemas operativos libres y propietarios - CE6.b), CE6.d), CE6.e), CE6.f), CE6.g), CE6.h) y CE6.i)
+## 🛠️ La Pila Tecnològica d'Integració: `realmd` + `sssd` + Kerberos
 
-Continguts i activitats didàctiques de **UP6.3. Integración de sistemas operativos libres y propietarios - CE6.b), CE6.d), CE6.e), CE6.f), CE6.g), CE6.h) y CE6.i)**.
-
----
-
-## 📌 6.5 Actividades y tests (còpia) (còpia) (còpia) (còpia) (còpia)
-
-Actividades📝
-
----
-
-## 📌 6.6 📚NOTA EXAMEN📚 UP6.1. Recursos en red compartidos entre distintos sistemas operativos - CE6.a)
-
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP6.1. Recursos en red compartidos entre distintos sistemas operativos - CE6.a)**.
+```mermaid
+flowchart LR
+    UbuntuClient["🐧 Client Ubuntu Linux\n(Login d'usuari de domini)"] --> PAM["🔑 PAM (Pluggable Auth Modules)"]
+    PAM --> SSSD["⚙️ SSSD Daemon\n(Cache de credencials local)"]
+    SSSD -->|Port 88 TCP/UDP| Kerberos["🎫 Tiquet Kerberos v5 (DC1)"]
+    SSSD -->|Port 389/636 LDAP| AD_DS["🏛️ Active Directory LDAP (DC1)"]
+    Kerberos -->|Autenticació OK| Permes["✅ Sessió Iniciada a Linux\nCrea /home/usuari@smx.local"]
+```
 
 ---
 
-## 📌 6.7 📚NOTA EXAMEN📚 UP6.2. Funcionalidad de servicios para compartir recursos en red - CE6.c)
+## 📑 Continguts i Apartats de la Unitat
 
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP6.2. Funcionalidad de servicios para compartir recursos en red - CE6.c)**.
-
----
-
-## 📌 6.8 🧑‍🏫PRESENTACIÓN Y ENTREGA🧑‍🏫 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Conectividad de la red) - CE6.b), CE6.d), CE6.e), CE6.f), CE6.g), CE6.h) y CE6.i)
-
-Continguts i activitats didàctiques de **🧑‍🏫PRESENTACIÓN Y ENTREGA🧑‍🏫 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Conectividad de la red) - CE6.b), CE6.d), CE6.e), CE6.f), CE6.g), CE6.h) y CE6.i)**.
-
----
-
-## 📌 6.9 📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Instalación y configuración de servicios) - CE6.d)
-
-Continguts i activitats didàctiques de **📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Instalación y configuración de servicios) - CE6.d)**.
-
----
-
-## 📌 6.10 📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Acceso a sistemas de archivos en red) - CE6.e)
-
-Continguts i activitats didàctiques de **📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Acceso a sistemas de archivos en red) - CE6.e)**.
-
----
-
-## 📌 6.11 📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Acceso a impresoras en red) - CE6.f)
-
-Continguts i activitats didàctiques de **📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Acceso a impresoras en red) - CE6.f)**.
-
----
-
-## 📌 6.12 📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Rúbricas de trabajo en grupo) - CE6.g)
-
-Continguts i activitats didàctiques de **📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Rúbricas de trabajo en grupo) - CE6.g)**.
-
----
-
-## 📌 6.13 📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Seguridad y control de acceso) - CE6.h)
-
-Continguts i activitats didàctiques de **📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Seguridad y control de acceso) - CE6.h)**.
-
----
-
-## 📌 6.14 📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Comprobación del funcionamiento) - CE6.i)
-
-Continguts i activitats didàctiques de **📈NOTA📈 Actividad UP6.3. Integración de sistemas operativos libres y propietarios (Comprobación del funcionamiento) - CE6.i)**.
-
----
-
-## 📌 6.15 Examen
-
-🔔🔔 Examen UP6 -> UP6.1 y UP6.2 🔔🔔
-
-Examen Teoría (9 febrero 15:00h -> 50 minutos) -> Se evaluarán las UP6.1 y UP6.2 de manera teórica a papel.
-
-Primera Presentación Práctica (18 febrero 18:05h) -> Se expondrá la presentación UP6.3 en el aula ATECA.
-
-Segunda Presentación Práctica (4 marzo 18:05h) -> Se expondrá la presentación UP6.3 en el aula ATECA.
+| Apartat | Títol | Descripció |
+| :---: | :--- | :--- |
+| **[6.2](./ut0602.md)** | **Recursos en Xarxa entre Sistemes Heterogenis** | Protocols de compatibilitat multiplataforma (SMBv3, NFSv4, CIFS). |
+| **[6.3](./ut0603.md)** | **Serveis per a Compartir Recursos** | Servidors Samba i clients `smbclient` per a accés bidireccional. |
+| **[6.4](./ut0604.md)** | **Integració d'Ubuntu en Domini Windows Server** | Unió automatitzada mitjançant `realmd`, `sssd` i creació automàtica de home. |

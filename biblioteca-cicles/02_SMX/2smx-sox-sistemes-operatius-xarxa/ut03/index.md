@@ -1,152 +1,85 @@
 ---
 layout: default
-title: "Sistemes Operatius en Xarxa — UD3 UP3. Administración y gestión de usuarios y grupos - RA2"
+title: "UD3 — Administració i Gestió d'Usuaris, Grups i Perfils"
 course_root: ".."
 badge: "2n SMX · Grau Mitjà · UD3"
 ---
 
-# UD3 — UP3. Administración y gestión de usuarios y grupos - RA2
+# 📘 UD3 — Administració i Gestió d'Usuaris, Grups i Perfils
 
-
-
----
-
-## 📌 3.1 Teoría (còpia) (còpia)
-
-Teoría 📚
+La **Unitat Didàctica 3** aprofundeix en el cicle de vida de les identitats digitals corporatives: la creació de comptes d'usuari i màquina, l'estratègia professional de jerarquia de grups mitjançant la metodologia **AGDLP**, i la configuració de **perfils mòbils** i carpetes d'inici per garantir que l'alumnat i el professorat disposen dels seus documents en qualsevol ordinador del centre.
 
 ---
 
-## 📌 3.2 UP3.1. Configuración y gestión de cuentas de usuario - CE2.a)
+## 🛡️ La Regla d'Or de l'Assignació de Permisos: Metodologia AGDLP
 
-Continguts i activitats didàctiques de **UP3.1. Configuración y gestión de cuentas de usuario - CE2.a)**.
+Microsoft recomana formalment **no assignar mai permisos directament a comptes d'usuari individuals**. En compte d'això, s'aplica l'estratègia d'encapsulament en capes coneguda com a **AGDLP**:
 
----
+```mermaid
+flowchart LR
+    A["👤 A (Accounts)\nComptes d'Usuari\n(ex: Joan, Maria)"] -->|Membres de| G["🌐 G (Global Groups)\nGrups Globals de Rol\n(ex: GG_Professors)"]
+    G -->|Membres de| DL["🏛️ DL (Domain Local)\nGrups de Domini Local\n(ex: DL_Recursos_Lectura)"]
+    DL -->|Reben| P["🔒 P (Permissions)\nPermisos a la Carpeta NTFS\n(ex: Lectura i Execució)"]
+```
 
-## 📌 3.3 UP3.3. Configuración y gestión de cuentas de equipo - CE2.c)
+### 🔍 Significat de cada lletra en la cadena AGDLP:
+1. **A (*Accounts*):** Els comptes d'usuari del directori.
+2. **G (*Global Groups*):** Els usuaris s'agrupen segons la seua **funció laboral o acadèmica** (ex: `GG_Alumnes_SMX1`, `GG_Professors_Informatica`). Tenen àmbit Global.
+3. **DL (*Domain Local Groups*):** Es creen grups locals de domini específics per a cada **recurs i nivell d'accés** (ex: `DL_Avaluacions_Modificar`, `DL_Avaluacions_Lectura`).
+4. **P (*Permissions*):** Els permisos NTFS a la carpeta compartida del disc s'assignen **única i exclusivament al Grup de Domini Local (DL)**.
 
-Continguts i activitats didàctiques de **UP3.3. Configuración y gestión de cuentas de equipo - CE2.c)**.
-
----
-
-## 📌 3.4 UP3.4. Grupos, tipos y ámbitos - CE2.d)
-
-Continguts i activitats didàctiques de **UP3.4. Grupos, tipos y ámbitos - CE2.d)**.
-
----
-
-## 📌 3.5 UP3.5. Configuración y gestión de grupos - CE2.e)
-
-Continguts i activitats didàctiques de **UP3.5. Configuración y gestión de grupos - CE2.e)**.
+*Benefici clau:* Quan s'incorpora un professor nou al centre, només cal afegir-lo al grup global `GG_Professors`. Automàticament heretarà els centenars de carpetes i permisos assignats a aquest rol sense haver de tocar cap carpeta de disc!
 
 ---
 
-## 📌 3.6 UP3.6. Características de usuarios y grupos predeterminados y especiales - CE2.g)
+## 🚀 Creació Massiva d'Usuaris amb PowerShell des de fitxer CSV
 
-Continguts i activitats didàctiques de **UP3.6. Características de usuarios y grupos predeterminados y especiales - CE2.g)**.
+En centres educatius i grans empreses, crear usuaris un a un amb ratolí és inviable. Els tècnics utilitzen scripts d'automatització:
 
----
+### Contingut del fitxer `alumnes.csv`:
+```csv
+Nom,Cognoms,SamAccountName,OU,Contrasenya
+Carles,Perez Navarro,carles.perez,"OU=Alumnes,DC=smx,DC=local",Alumne2024!
+Laura,Gomis Marti,laura.gomis,"OU=Alumnes,DC=smx,DC=local",Alumne2024!
+```
 
-## 📌 3.7 UP3.7. Perfiles móviles de usuarios - CE2.h)
-
-Continguts i activitats didàctiques de **UP3.7. Perfiles móviles de usuarios - CE2.h)**.
-
----
-
-## 📌 3.8 Actividades y tests (còpia) (còpia)
-
-Actividades📝
-
----
-
-## 📌 3.9 📤ENTREGA📤 Actividad UP3.1. Configuración y gestión de cuentas de usuario - CE2.a)
-
-Continguts i activitats didàctiques de **📤ENTREGA📤 Actividad UP3.1. Configuración y gestión de cuentas de usuario - CE2.a)**.
-
----
-
-## 📌 3.10 📚NOTA EXAMEN📚 UP3.2. Configuración y gestión de perfiles de usuario - CE2.b)
-
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP3.2. Configuración y gestión de perfiles de usuario - CE2.b)**.
-
----
-
-## 📌 3.11 📤ENTREGA📤 Actividad UP3.3. Configuración y gestión de cuentas de equipo - CE2.c)
-
-Continguts i activitats didàctiques de **📤ENTREGA📤 Actividad UP3.3. Configuración y gestión de cuentas de equipo - CE2.c)**.
+### Script de creació automàtica:
+```powershell
+Import-Csv -Path "C:\Scripts\alumnes.csv" -Encoding UTF8 | ForEach-Object {
+    $PasswordSecure = ConvertTo-SecureString $_.Contrasenya -AsPlainText -Force
+    New-ADUser `
+        -Name "$($_.Nom) $($_.Cognoms)" `
+        -GivenName $_.Nom `
+        -Surname $_.Cognoms `
+        -SamAccountName $_.SamAccountName `
+        -UserPrincipalName "$($_.SamAccountName)@smx.local" `
+        -Path $_.OU `
+        -AccountPassword $PasswordSecure `
+        -Enabled $true `
+        -ChangePasswordAtLogon $true
+    Write-Host "Usuari $($_.SamAccountName) creat amb èxit!" -ForegroundColor Green
+}
+```
 
 ---
 
-## 📌 3.12 📚NOTA EXAMEN📚 UP3.4. Grupos, tipos y ámbitos - CE2.d)
+## 🎒 Perfils d'Usuari: Locals, Mòbils i Obligatoris
 
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP3.4. Grupos, tipos y ámbitos - CE2.d)**.
-
----
-
-## 📌 3.13 📤ENTREGA📤 Actividad UP3.5. Configuración y gestión de grupos - CE2.e)
-
-#Línea 7
-
-New-ADGroup -Name "Presencial" -GroupScope Global -Path "OU=Presencial,OU=Instituto,DC=SOR2025,DC=LOCAL"
-
-Add-ADGroupMember $group -Members "CN=Presencial,OU=Presencial,OU=Instituto,DC=SOR2025,DC=LOCAL"
-
-$grupo_presencial = Get-ADGroup "CN=Presencial,OU=Presencial,OU=Instituto,DC=SOR2025,DC=LOCAL"
-
-#Línea 27
-
-New-ADGroup -Name "Semipresencial" -GroupScope Global -Path "OU=Semipresencial,OU=Instituto,DC=SOR2025,DC=LOCAL"
-
-Add-ADGroupMember $group -Members "CN=Semipresencial,OU=Semipresencial,OU=Instituto,DC=SOR2025,DC=LOCAL"
-
-$grupo_semipresencial= Get-ADGroup "CN=Semipresencial,OU=Semipresencial,OU=Instituto,DC=SOR2025,DC=LOCAL"
+1. **Perfil Local (*Local Profile*):**
+   - El perfil complet (Escriptori, Documents, Baixades, claus de registre `NTUSER.DAT`) s'allotja únicament al disc dur local de la màquina client (`C:\Users\nom_usuari`). Si l'alumne canvia d'aula o de taula, no té cap accés als seus fitxers locals anteriors.
+2. **Perfil Mòbil (*Roaming Profile*):**
+   - La carpeta de perfil s'allotja a un recurs compartit del servidor (`\\DC1\Perfils$\%username%`).
+   - En iniciar sessió, el perfil es descarrega a la màquina client. En tancar sessió, tots els canvis es sincronitzen de tornada al servidor.
+3. **Perfil Obligatori (*Mandatory Profile*):**
+   - Un perfil mòbil de només lectura on el fitxer de registre es reanomena de `NTUSER.DAT` a **`NTUSER.MAN`**. Qualsevol canvi estètic realitzat per l'alumne s'esborra automàticament en tancar la sessió.
 
 ---
 
-## 📌 3.14 📚NOTA EXAMEN📚 UP3.6. Características de usuarios y grupos predeterminados y especiales - CE2.g)
+## 📑 Continguts i Apartats de la Unitat
 
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP3.6. Características de usuarios y grupos predeterminados y especiales - CE2.g)**.
-
----
-
-## 📌 3.15 📚NOTA EXAMEN📚 UP3.7. Perfiles móviles de usuarios - CE2.h)
-
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP3.7. Perfiles móviles de usuarios - CE2.h)**.
-
----
-
-## 📌 3.16 📚NOTA EXAMEN📚 UP3.8. Herramientas para la administración de usuarios y grupos - CE2.i)
-
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP3.8. Herramientas para la administración de usuarios y grupos - CE2.i)**.
-
----
-
-## 📌 3.17 📚NOTA EXAMEN📚 UP3.8. Herramientas para gestionar la pertenencia de usuarios y grupos - CE2.f)
-
-Continguts i activitats didàctiques de **📚NOTA EXAMEN📚 UP3.8. Herramientas para gestionar la pertenencia de usuarios y grupos - CE2.f)**.
-
----
-
-## 📌 3.18 Recursos (còpia) (còpia)
-
-Recursos 💻
-
----
-
-## 📌 3.19 Examen (còpia)
-
-🔔🔔 Examen UP3 -> UP3.2, UP3.4, UP3.6, UP3.7 y UP3.8 🔔🔔
-
-Examen Teoría (2 diciembre 2025, de 19h a 19:55h)
-
-➜ Se evaluarán las UP3.4, UP3.6 y UP3.7 de manera teórica a papel.
-
-Examen Práctico (3 diciembre 2025, de 16:00h a 17:50h)
-
-➜ Se evaluarán las UP3.2 y UP3.8, donde se crearán y configurarán UO, usuarios, equipos y grupos utilizando las máquinas virtuales Windows Server, Windows 10, Ubuntu Server y Ubuntu Desktop del alumnado.
-
----
-
-## 📌 3.20 Ejemplo para practicar con PowerShell
-
-Continguts i activitats didàctiques de **Ejemplo para practicar con PowerShell**.
+| Apartat | Títol | Descripció |
+| :---: | :--- | :--- |
+| **[3.2](./ut0302.md)** | **Gestió de Comptes d'Usuari** | Propietats de compte, UPN, caducitat, horaris d'inici de sessió permès. |
+| **[3.4](./ut0304.md)** | **Grups: Tipus i Àmbits** | Seguretat vs Distribució; Àmbits Global, Domini Local i Universal. |
+| **[3.7](./ut0307.md)** | **Perfils Mòbils i Redirecció de Carpetes** | Configuració de recursos ocults (`$`), quotes de disc i sincronització. |
+| **[3.20](./ut0320.md)** | **Automatització i Scripts amb PowerShell** | Creació massiva des de CSV, bloquejos de comptes i auditories de seguretat. |
