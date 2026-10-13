@@ -970,8 +970,18 @@
         const root = sidebar.getAttribute('data-course-root') || '.';
         const prefix = root === '.' ? './' : root + '/';
         const toHtmlHref = url => (!url ? '' : url.replace(/\.md(#|$)/, '.html$1'));
-        fetch(prefix + 'sidebar.json?v=4', { cache: 'no-store' })
-          .then(r => r.json())
+
+        let basePath = window.location.pathname;
+        if (!basePath.endsWith('/') && !basePath.endsWith('.html') && !basePath.endsWith('.md')) {
+          basePath += '/';
+        }
+        const fetchUrl = new URL(prefix + 'sidebar.json?v=5', window.location.origin + basePath).href;
+
+        fetch(fetchUrl, { cache: 'no-store' })
+          .then(r => {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+          })
           .then(data => {
             const container = document.getElementById('sidebar-nav-content');
             if (!container) return;
@@ -1009,10 +1019,19 @@
             }
             container.innerHTML = html;
           })
-          .catch(() => {
+          .catch(err => {
+            console.warn('No s\'ha pogut carregar sidebar.json:', err);
             const container = document.getElementById('sidebar-nav-content');
-            if (container) container.innerHTML = '';
+            if (container) {
+              const homeFallback = toHtmlHref(prefix + 'index.html');
+              container.innerHTML = '<div style="padding:10px 4px;font-size:0.84rem;color:var(--text-muted);">' +
+                '<p style="margin:0 0 8px 0;">ℹ️ Índex del Mòdul:</p>' +
+                '<ul><li><a href="' + homeFallback + '">🏠 Anar a la Portada del Mòdul</a></li></ul>' +
+                '</div>';
+            }
           });
+      }
+
       if (window.renderMathPortal) window.renderMathPortal();
     });
   </script>
