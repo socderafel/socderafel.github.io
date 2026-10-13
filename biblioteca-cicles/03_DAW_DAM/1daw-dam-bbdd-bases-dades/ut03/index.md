@@ -1,10 +1,12 @@
-﻿---
+---
 layout: default
 title: "UD3: Disseny Lògic: Pas al Model Relacional i Teoria de la Normalització — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD4"
+badge: "1r DAW / DAM · Grau Superior · UD3"
+prev_url: "../ut02/index.html"
+prev_label: "⬅️ UD2: Model Entitat-Relació"
 next_url: "../ut04/index.html"
-next_label: "UD4: Disseny FÃ­sic i DDL âž¡ï¸"
+next_label: "UD4: Disseny Físic i DDL ➡️"
 ---
 
 # UD3: Disseny Lògic: Pas al Model Relacional i Teoria de la Normalització
@@ -110,7 +112,7 @@ Regles estàndard de transformació del model conceptual Entitat-Relació al mod
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 4.1 Regles de transformació d'entitats i relacions binàries
+## 3.1 Regles de transformació d'entitats i relacions binàries
 
 El **pas a taules** és el procés algorítmic que tradueix les construccions gràfiques del diagrama conceptual E/R a l'esquema lògic relacional format exclusivament per taules, columnes, claus primàries (PK) i claus foranes (FK).
 
@@ -152,7 +154,7 @@ Depèn de la participació mínima de cadascuna de les entitats:
 
 ---
 
-## 4.2 Transformació d'entitats febles, atributs complexos i jerarquies
+## 3.2 Transformació d'entitats febles, atributs complexos i jerarquies
 
 ### 1. Entitats Febles per Identificació
 - L'entitat feble es transforma en una taula pròpia.
@@ -182,7 +184,7 @@ Davant d'una superclasse `Persona` amb subclasses `Alumne` i `Professor`, existe
 
 ---
 
-## 4.3 Teoria de les dependències funcionals i axiomes d'Armstrong
+## 3.3 Teoria de les dependències funcionals i axiomes d'Armstrong
 
 La **Teoria de la Normalització** té com a objectiu mesurar la qualitat d'un esquema relacional i corregir-ne els defectes mitjançant la descomposició progressiva en relacions més petites sense pèrdua d'informació.
 
@@ -218,7 +220,7 @@ Regles d'inferència matemàtica que permeten deduir totes les dependències fun
 
 ---
 
-## 4.4 Les Formes Normals: de la 1FN a la BCNF
+## 3.4 Les Formes Normals: de la 1FN a la BCNF
 
 Un esquema relacional mal dissenyat pateix de tres tipus greus d'anomalies:
 - **Anomalia d'Inserció:** No es pot registrar una dada sense registrar obligatòriament una altra dada no relacionada.
@@ -269,13 +271,13 @@ Una relació està en **3FN** si:
 - És a dir: no poden existir dependències entre atributs que no formen part de la clau primària ($X \to Y \to Z$).
 - *Resolució:* S'extreuen els atributs que depenen del camp intermedi a una nova taula independent on aquest camp intermedi serà la seua Clau Primària.
 
-### 4. Forma Normal de Boyce-Codd (BCNF / FNBC)
+### 3. Forma Normal de Boyce-Codd (BCNF / FNBC)
 Proposada el 1974 per Raymond F. Boyce i Edgar F. Codd com una versió més estricta de la 3FN per a relacions amb múltiples claus candidates superposades:
 - Una relació està en **BCNF** si per a tota dependència funcional no trivial $X \to Y$, **el determinant $X$ és obligatòriament una Superclau**.
 
 ---
 
-## 4.5 Descomposició sense pèrdua d'informació i preservació de dependències
+## 3.5 Descomposició sense pèrdua d'informació i preservació de dependències
 
 Quan una taula es descompon en taules més petites per assolir una forma normal superior, la descomposició ha de complir dues propietats teòriques fonamentals:
 

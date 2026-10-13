@@ -1,10 +1,12 @@
-﻿---
+---
 layout: default
 title: "UD5: Manipulació de Dades i Transaccions (SQL DML i TCL) — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD6"
+badge: "1r DAW / DAM · Grau Superior · UD5"
+prev_url: "../ut04/index.html"
+prev_label: "⬅️ UD4: Disseny Físic"
 next_url: "../ut06/index.html"
-next_label: "UD6: Consultes SQL DQL âž¡ï¸"
+next_label: "UD6: Consultes SQL DQL ➡️"
 ---
 
 # UD5: Manipulació de Dades i Transaccions (SQL DML i TCL)
@@ -110,7 +112,7 @@ Operacions del Llenguatge de Manipulació de Dades (SQL DML: INSERT, UPDATE, DEL
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 6.1 El Llenguatge de Manipulació de Dades (SQL DML)
+## 5.1 El Llenguatge de Manipulació de Dades (SQL DML)
 
 Mentre que el DDL defineix l'esquelet de la base de dades, el **Llenguatge de Manipulació de Dades (DML)** permet als desenvolupadors gestionar el contingut real de les taules: afegir noves files, modificar registres existents o esborrar dades.
 
@@ -183,7 +185,7 @@ DO UPDATE SET nom = EXCLUDED.nom;
 
 ---
 
-## 6.2 Conceptes de transacció i propietats ACID
+## 5.2 Conceptes de transacció i propietats ACID
 
 Una **transacció** és una seqüència lògica d'una o més operacions SQL executades com una **unitat indivisible de treball**. Un exemple clàssic és una transferència bancària entre dos comptes:
 1. Restar 200 € del compte A (`UPDATE Comptes SET saldo = saldo - 200 WHERE id = 'A'`).
@@ -209,7 +211,7 @@ Si el sistema s'apaga entre el pas 1 i el pas 2, els diners desapareixerien. Per
 
 ---
 
-## 6.3 Control transaccional: COMMIT, ROLLBACK i SAVEPOINT
+## 5.3 Control transaccional: COMMIT, ROLLBACK i SAVEPOINT
 
 El **Llenguatge de Control de Transaccions (TCL)** permet als desenvolupadors delimitar manualment l'abast de les transaccions:
 
@@ -241,7 +243,7 @@ COMMIT;
 
 ---
 
-## 6.4 Concurrència i fenòmens de lectura anòmala
+## 5.4 Concurrència i fenòmens de lectura anòmala
 
 Quan centenars d'usuaris o serveis web interactuen alhora amb la mateixa base de dades, poden produir-se tres anomalies de lectura clàssiques si l'aïllament no és adequat:
 
@@ -263,7 +265,7 @@ Quan centenars d'usuaris o serveis web interactuen alhora amb la mateixa base de
 
 ---
 
-## 6.5 Nivells d'aïllament ANSI SQL i gestió de bloquejos
+## 5.5 Nivells d'aïllament ANSI SQL i gestió de bloquejos
 
 L'estàndard ANSI SQL defineix **quatre nivells d'aïllament** que equilibren la seguretat de les dades enfront del rendiment de concurrència del sistema:
 

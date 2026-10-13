@@ -1,10 +1,12 @@
-﻿---
+---
 layout: default
 title: "UD4: Disseny Físic i Llenguatge de Definició i Control de Dades (SQL DDL i DCL) — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD5"
+badge: "1r DAW / DAM · Grau Superior · UD4"
+prev_url: "../ut03/index.html"
+prev_label: "⬅️ UD3: Disseny Lògic"
 next_url: "../ut05/index.html"
-next_label: "UD5: ManipulaciÃ³ DML i TCL âž¡ï¸"
+next_label: "UD5: Manipulació DML i TCL ➡️"
 ---
 
 # UD4: Disseny Físic i Llenguatge de Definició i Control de Dades (SQL DDL i DCL)
@@ -110,7 +112,7 @@ El disseny físic en sistemes gestors de bases de dades relacionals (RDBMS), tip
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 5.1 El disseny físic i tipus de dades en l'estàndard SQL
+## 4.1 El disseny físic i tipus de dades en l'estàndard SQL
 
 El **disseny físic** adapta l'esquema lògic normalitzat a les característiques del maquinari i del motor SGBD concret (com PostgreSQL o MySQL/MariaDB). L'objectiu principal és aconseguir el màxim rendiment en temps de resposta i eficiència d'emmagatzematge.
 
@@ -139,7 +141,7 @@ L'elecció correcta del tipus de dades de cada columna és essencial per evitar 
 
 ---
 
-## 5.2 Llenguatge DDL: creació de taules i restriccions d'integritat
+## 4.2 Llenguatge DDL: creació de taules i restriccions d'integritat
 
 El **Llenguatge de Definició de Dades (DDL)** permet crear, modificar i esborrar les estructures que allotgen la informació.
 
@@ -179,7 +181,7 @@ CREATE TABLE Empleats (
 
 ---
 
-## 5.3 Modificació d'estructures: ALTER TABLE, DROP i TRUNCATE
+## 4.3 Modificació d'estructures: ALTER TABLE, DROP i TRUNCATE
 
 Quan les necessitats del negoci evolucionen, és necessari alterar l'esquema existent sense perdre les dades ja emmagatzemades.
 
@@ -214,7 +216,7 @@ ALTER TABLE Empleats DROP CONSTRAINT chk_email_arroba;
 
 ---
 
-## 5.4 Objectes de base de dades: vistes, índexs i seqüències
+## 4.4 Objectes de base de dades: vistes, índexs i seqüències
 
 A més de les taules bàsiques, un disseny físic professional empra altres estructures d'accés:
 
@@ -249,7 +251,7 @@ CREATE INDEX idx_empleats_email ON Empleats(email);
 
 ---
 
-## 5.5 Llenguatge DCL: gestió d'usuaris, rols i privilegis
+## 4.5 Llenguatge DCL: gestió d'usuaris, rols i privilegis
 
 El **Llenguatge de Control de Dades (DCL)** regula quins usuaris tenen autorització per executar operacions sobre els objectes de la base de dades.
 

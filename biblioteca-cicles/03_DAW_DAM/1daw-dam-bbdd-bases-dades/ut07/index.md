@@ -1,10 +1,12 @@
-﻿---
+---
 layout: default
 title: "UD7: Programació de Bases de Dades (Procediments, Funcions, Triggers i Cursors) — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD8"
+badge: "1r DAW / DAM · Grau Superior · UD7"
+prev_url: "../ut06/index.html"
+prev_label: "⬅️ UD6: Consultes DQL"
 next_url: "../ut08/index.html"
-next_label: "UD8: Bases de Dades NoSQL âž¡ï¸"
+next_label: "UD8: Bases de Dades NoSQL ➡️"
 ---
 
 # UD7: Programació de Bases de Dades (Procediments, Funcions, Triggers i Cursors)
@@ -110,7 +112,7 @@ Fonaments de la programació del costat del servidor de bases de dades, sintaxi 
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 8.1 Fonaments de la lògica emmagatzemada i dialectes procedurals
+## 7.1 Fonaments de la lògica emmagatzemada i dialectes procedurals
 
 Mentre que l'SQL estàndard és un llenguatge **declaratiu** (li diem al SGBD *què* volem obtenir, però no pas *com* calcular-ho pas a pas), certes regles de negoci requereixen lògica seqüencial, condicional i iterativa. Els motors relacionals incorporen extensions **procedurals** que s'executen directament dins del nucli del servidor.
 
@@ -129,7 +131,7 @@ Mentre que l'SQL estàndard és un llenguatge **declaratiu** (li diem al SGBD *q
 
 ---
 
-## 8.2 Funcions i procediments emmagatzemats: paràmetres IN, OUT i INOUT
+## 7.2 Funcions i procediments emmagatzemats: paràmetres IN, OUT i INOUT
 
 ### Diferència clau entre Procediment i Funció
 - **Procediment (`PROCEDURE`):**
@@ -163,7 +165,7 @@ SELECT fn_calcular_descompte(150.00, 20); -- Retorna 120.00
 
 ---
 
-## 8.3 Estructures de control de flux: condicionals i bucles
+## 7.3 Estructures de control de flux: condicionals i bucles
 
 El codi procedural permet utilitzar la lògica habitual de programació estructurada:
 
@@ -196,7 +198,7 @@ END LOOP;
 
 ---
 
-## 8.4 Cursors i gestió d'excepcions
+## 7.4 Cursors i gestió d'excepcions
 
 Normalment, les consultes SQL processen totes les dades alhora com un **conjunt**. Tanmateix, quan cal aplicar una lògica de negoci complexa que requereix analitzar o transformar cada fila de manera independent, s'utilitza un **cursor**.
 
@@ -239,7 +241,7 @@ END;
 
 ---
 
-## 8.5 Disparadors (Triggers): automatització d'esdeveniments i auditoria
+## 7.5 Disparadors (Triggers): automatització d'esdeveniments i auditoria
 
 Un **disparador (*Trigger*)** és un bloc de codi procedural que **s'executa automàticament com a reacció a un esdeveniment DML** (`INSERT`, `UPDATE` o `DELETE`) sobre una taula concreta.
 

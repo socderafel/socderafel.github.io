@@ -1,8 +1,10 @@
-﻿---
+---
 layout: default
 title: "UD8: Bases de Dades No Relacionals (NoSQL) i Tendències — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD9"
+badge: "1r DAW / DAM · Grau Superior · UD8"
+prev_url: "../ut07/index.html"
+prev_label: "⬅️ UD7: Programació PL/SQL"
 ---
 
 # UD8: Bases de Dades No Relacionals (NoSQL) i Tendències
@@ -108,7 +110,7 @@ Evolució de les bases de dades no relacionals (NoSQL: Not Only SQL), escalabili
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 9.1 Motius de l'aparició de NoSQL i escalabilitat horitzontal
+## 8.1 Motius de l'aparició de NoSQL i escalabilitat horitzontal
 
 Durant dècades, els SGBD relacionals van ser l'única opció per a qualsevol sistema d'informació. Tanmateix, amb l'explosió de la web 2.0, les xarxes socials i el comerç electrònic global a principis dels anys 2000, gegants com Google, Amazon i Facebook es van enfrontar a problemes que l'arquitectura relacional clàssica no podia resoldre fàcilment: les **3 V del Big Data**:
 1. **Volum:** Petabytes de dades que no caben en un sol disc ni en un sol servidor físic.
@@ -133,7 +135,7 @@ Durant dècades, els SGBD relacionals van ser l'única opció per a qualsevol si
 
 ---
 
-## 9.2 El Teorema CAP i el model BASE enfront d'ACID
+## 8.2 El Teorema CAP i el model BASE enfront d'ACID
 
 Proposat pel científic Eric Brewer el 2000 i demostrat matemàticament el 2002 per Seth Gilbert i Nancy Lynch, el **Teorema CAP** afirma que en qualsevol sistema informàtic distribuït que comparteix dades per xarxa, **només es poden garantir simultàniament dues de les tres propietats següents**:
 
@@ -166,7 +168,7 @@ Mentre que els RDBMS s'aferren a l'estricte model **ACID**, molts sistemes NoSQL
 
 ---
 
-## 9.3 Famílies de SGBD NoSQL: documentals, clau-valor, columnars i grafs
+## 8.3 Famílies de SGBD NoSQL: documentals, clau-valor, columnars i grafs
 
 | Model NoSQL | Unitat d'Emmagatzematge | Estructura de Dades | SGBD Destacats | Cas d'Ús Recomanat |
 | :--- | :--- | :--- | :--- | :--- |
@@ -177,7 +179,7 @@ Mentre que els RDBMS s'aferren a l'estricte model **ACID**, molts sistemes NoSQL
 
 ---
 
-## 9.4 Bases de dades documentals: arquitectura i operacions a MongoDB
+## 8.4 Bases de dades documentals: arquitectura i operacions a MongoDB
 
 **MongoDB** és el SGBD NoSQL més popular del món. Emmagatzema la informació en format **BSON** (*Binary JSON*), una representació binària de documents JSON que afegeix tipus de dades avançats (com dates natives i enters de 64 bits).
 
@@ -251,7 +253,7 @@ db.comandes.aggregate([
 
 ---
 
-## 9.5 Tendències de futur: persistència políglota, NewSQL i bases de dades vectorials
+## 8.5 Tendències de futur: persistència políglota, NewSQL i bases de dades vectorials
 
 En l'actualitat, la discussió *"SQL vs NoSQL"* ha quedat superada: els sistemes empresarials moderns combinen ambdós paradigmes.
 

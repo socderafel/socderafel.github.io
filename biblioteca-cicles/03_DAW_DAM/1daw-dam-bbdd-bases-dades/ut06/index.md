@@ -1,10 +1,12 @@
-﻿---
+---
 layout: default
 title: "UD6: Consultes Avançades a Bases de Dades (SQL DQL) — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD7"
+badge: "1r DAW / DAM · Grau Superior · UD6"
+prev_url: "../ut05/index.html"
+prev_label: "⬅️ UD5: Manipulació DML"
 next_url: "../ut07/index.html"
-next_label: "UD7: ProgramaciÃ³ PL/SQL âž¡ï¸"
+next_label: "UD7: Programació PL/SQL ➡️"
 ---
 
 # UD6: Consultes Avançades a Bases de Dades (SQL DQL)
@@ -110,7 +112,7 @@ El Llenguatge de Consulta de Dades (SQL DQL: SELECT), ordre d'execució lògica 
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 7.1 Estructura i ordre lògic d'execució d'una consulta SQL
+## 6.1 Estructura i ordre lògic d'execució d'una consulta SQL
 
 La sentència `SELECT` és el cor del llenguatge SQL per extreure informació de la base de dades. Tot i que s'escriu començant per la paraula `SELECT`, el motor SGBD **no l'executa en l'ordre en què està escrita**, sinó seguint un **ordre lògic d'execució estricte**:
 
@@ -144,7 +146,7 @@ ORDRE D'ESCRIPTURA EN SQL:              ORDRE REAL D'EXECUCIÓ AL MOTOR:
 
 ---
 
-## 7.2 Combinacions multitaula: tipus de JOIN i autocombinació
+## 6.2 Combinacions multitaula: tipus de JOIN i autocombinació
 
 Quan les dades estan normalitzades en múltiples taules relacionades per claus primàries i foranes, s'utilitzen les operacions **`JOIN`** per recompondre la informació.
 
@@ -203,7 +205,7 @@ LEFT JOIN Empleats cap ON e.id_cap = cap.id_emp;
 
 ---
 
-## 7.3 Funcions d'agregació, GROUP BY i la clàusula HAVING
+## 6.3 Funcions d'agregació, GROUP BY i la clàusula HAVING
 
 Les funcions d'agregació calculen un únic valor resum a partir d'un conjunt de tuples:
 - `COUNT(*)`: Compta el nombre total de files (inclosos valors nuls).
@@ -238,7 +240,7 @@ ORDER BY sou_mitja DESC;
 
 ---
 
-## 7.4 Subconsultes: escalars, de llista i correlacionades (EXISTS)
+## 6.4 Subconsultes: escalars, de llista i correlacionades (EXISTS)
 
 Una **subconsulta** (*Subquery* o consulta imbricada) és una sentència `SELECT` incrustada dins d'una altra sentència SQL principal.
 
@@ -282,7 +284,7 @@ WHERE EXISTS (
 
 ---
 
-## 7.5 Operacions de conjunts: UNION, INTERSECT i EXCEPT
+## 6.5 Operacions de conjunts: UNION, INTERSECT i EXCEPT
 
 Permeten combinar els conjunts de resultats de dues o més consultes `SELECT` independents segons la teoria matemàtica de conjunts:
 

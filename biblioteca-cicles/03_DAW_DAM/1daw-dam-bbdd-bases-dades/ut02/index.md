@@ -1,10 +1,12 @@
-﻿---
+---
 layout: default
 title: "UD2: Disseny Conceptual. El Model Entitat-Relació (E/R) i E/R Estès — Bases de Dades"
 course_root: ".."
-badge: "1r DAW / DAM · Grau Superior · UD3"
+badge: "1r DAW / DAM · Grau Superior · UD2"
+prev_url: "../ut01/index.html"
+prev_label: "⬅️ UD1: SGBD i Model Relacional"
 next_url: "../ut03/index.html"
-next_label: "UD3: Disseny LÃ²gic i NormalitzaciÃ³ âž¡ï¸"
+next_label: "UD3: Disseny Lògic i Normalització ➡️"
 ---
 
 # UD2: Disseny Conceptual. El Model Entitat-Relació (E/R) i E/R Estès
@@ -110,7 +112,7 @@ Fases del cicle de vida del disseny de bases de dades, el model conceptual Entit
 
 # 📖 Contingut Complet de la Unitat didàctica
 
-## 3.1 Fases metodològiques del disseny de bases de dades
+## 2.1 Fases metodològiques del disseny de bases de dades
 
 El disseny professional d'una base de dades no comença mai obrint una consola SQL per escriure sentències `CREATE TABLE`. Per garantir que el sistema siga robust, escalable i sense redundàncies, es segueix un procés estructurat en **tres fases successives d'abstracció**:
 
@@ -145,7 +147,7 @@ El disseny professional d'una base de dades no comença mai obrint una consola S
 
 ---
 
-## 3.2 El Model Entitat-Relació: entitats i tipologia d'atributs
+## 2.2 El Model Entitat-Relació: entitats i tipologia d'atributs
 
 El **Model Entitat-Relació (E/R)** va ser formulat per **Peter Chen** el 1976 i s'ha convertit en l'estàndard gràfic universal per al disseny conceptual de bases de dades.
 
@@ -171,7 +173,7 @@ Propietats o característiques que descriuen una entitat:
 
 ---
 
-## 3.3 Relacions, rols i cardinalitats estructurals
+## 2.3 Relacions, rols i cardinalitats estructurals
 
 Una **relació** és una associació semàntica o correspondència lògica entre dues o més entitats:
 - **Grau de la relació:** El nombre d'entitats que participen en la relació:
@@ -199,7 +201,7 @@ La semàntica d'una relació binària es defineix mitjançant el parell de valor
 
 ---
 
-## 3.4 El Model Entitat-Relació Estès (EER): jerarquies d'herència
+## 2.4 El Model Entitat-Relació Estès (EER): jerarquies d'herència
 
 Quan el modelatge del món real requereix representar conceptes orientats a objectes (generalització i especialització), s'utilitza el **Model Entitat-Relació Estès (EER)**.
 
@@ -226,7 +228,7 @@ Tota jerarquia d'herència es caracteritza per dues dimensions independents:
 
 ---
 
-## 3.5 Paranys semàntics de connexió: Fan Trap i Chasm Trap
+## 2.5 Paranys semàntics de connexió: Fan Trap i Chasm Trap
 
 Un dels errors més greus en el disseny conceptual és crear estructures de relacions que semblen correctes visualment però que provoquen ambigüitats en navegar entre dades:
 
