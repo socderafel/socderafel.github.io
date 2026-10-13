@@ -38,13 +38,44 @@ next_label: "6.1 Exemple_inicial_Classe_ER ➡️"
 
 ---
 
-Volem crear una base de datos per a guardar informació dels alumnes d’un centre educatiu, i les assignatures de les que están matriculats els alumnes.
+## 📊 Esquema Conceptual: Diagrama Entitat-Relació (E-R)
 
-Dels alumnes ens interesa saber el seu nia, el seu dni, el seu nom, la seua adreça, la seua població, el telèfon, i la data de naixement. De les assignatures, volem guardar el codi de l’assignatura, el nom i el número d’hores setmanals. També es vol guardar en la base de datos la nota final que ha tret l’alumne en cada una de les assignatures de les que està matriculat.
+A continuació es mostra el model conceptual d'una base de dades acadèmica (Alumnes, Matrícules i Assignatures) expressat en format gràfic interactiu:
 
-Volem crear una base de datos per a guardar informació dels alumnes d’un centre educatiu, i les assignatures de les que están matriculats els alumnes.
+```mermaid
+erDiagram
+    ALUMNE ||--o{ MATRICULA : realitza
+    ASSIGNATURA ||--o{ MATRICULA : pertany
+    ALUMNE {
+        string NIA PK
+        string DNI
+        string Nom
+        string Poblacio
+        string Telefon
+        date DataNaixement
+    }
+    ASSIGNATURA {
+        string CodiAssig PK
+        string Nom
+        int HoresSetmana
+    }
+    MATRICULA {
+        string NIA_Alumne FK
+        string Codi_Assig FK
+        float NotaFinal
+    }
+```
 
-Dels alumnes ens interesa saber el seu nia, el seu dni, el seu nom, la seua adreça, la seua població, el telèfon, i la data de naixement. De les assignatures, volem guardar el codi de l’assignatura, el nom i el número d’hores setmanals. També es vol guardar en la base de datos la nota final que ha tret l’alumne en cada una de les assignatures de les que està matriculat.
+### 🔍 Transformació al Model Relacional:
+1. **Entitat ALUMNE:** Es converteix en taula `ALUMNE(NIA [PK], DNI, Nom, Poblacio, Telefon, DataNaixement)`.
+2. **Entitat ASSIGNATURA:** Es converteix en taula `ASSIGNATURA(CodiAssig [PK], Nom, HoresSetmana)`.
+3. **Relació N:M (Molts a Molts):** Un alumne pot matricular-se de moltes assignatures, i una assignatura pot tindre molts alumnes. En passar al Model Relacional, es genera una **nova taula intermèdia** `MATRICULA(NIA_Alumne [FK], Codi_Assig [FK], NotaFinal)`, on la clau primària composta està formada per totes dues claus foranes.
+
+---
+
+Volem crear una base de dades per a guardar informació dels alumnes d’un centre educatiu, i les assignatures de les quals estan matriculats els alumnes.
+
+Dels alumnes ens interessa saber el seu NIA, el seu DNI, el seu nom, la seua adreça, la seua població, el telèfon i la data de naixement. De les assignatures, volem guardar el codi de l’assignatura, el nom i el número d’hores setmanals. També es vol guardar a la base de dades la nota final que ha tret l’alumne en cada una de les assignatures matriculades.
 
 ---
 

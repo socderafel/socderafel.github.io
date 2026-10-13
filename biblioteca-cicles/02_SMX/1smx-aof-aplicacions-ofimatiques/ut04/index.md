@@ -14,6 +14,34 @@ next_label: "4.1 Manual bàsic CALC ➡️"
 > **💡 Temari Complet de la Unitat**
 > Aquesta pàgina integra tots els apartats teòrics de la unitat didàctica en una sola lectura contínua.
 
+## 🖼️ Infografia Tècnica: Conceptes de Full de Càlcul, Adreçament i Funcions
+
+![Conceptes de Full de Càlcul, Adreçament de Cel·les i Funcions Essencials](../img/full_calcul_referencies_funcions.jpg)
+
+### 🔍 Llegenda Tècnica i Fonaments d'Ofimàtica:
+
+#### 1. Anatomia del Full de Càlcul i Adreçament de Cel·les (*Panell Esquerre*)
+- **Estructura Matricial:** Organitzada en files numèriques (1, 2, 3...) i columnes identificades per lletres de l'alfabet (A, B, C... Z, AA, AB...). La intersecció entre una columna i una fila és una **cel·la** (ex: `B2`).
+- **1. Referència Relativa (`A1`):**
+  - Quan s'escriu una fórmula com `=A1+B1` i s'arrossega cap a la dreta o cap avall, les coordenades es desplacen automàticament seguint el moviment del punter (passa a `=A2+B2`, `=A3+B3`).
+- **2. Referència Absoluta (`$A$1`):**
+  - El símbol del dòlar `$` bloqueja tant la columna com la fila. Quan la fórmula es copia o s'arrossega a qualsevol altra cel·la del full, **la referència roman sempre fixa i invariable** apuntant exactament a `$A$1` (ideal per a tipus d'IVA, percentatges de descompte o cel·les constants).
+- **3. Referència Mixta (`$A1` o `A$1`):**
+  - `$A1` bloqueja exclusivament la columna A mentre que la fila és lliure de variar.
+  - `A$1` bloqueja exclusivament la fila 1 mentre que la columna és lliure de variar (imprescindible per a taules de doble entrada o matrius creuades).
+
+---
+
+#### 2. Funcions Empresarials Essencials (*Panell Dret*)
+1. **Suma d'un Rang:**
+   `=SUMA(B2:B10)` — Suma de forma automàtica tots els valors numèrics compresos entre la cel·la B2 i la cel·la B10.
+2. **Funció Lògica Condicional:**
+   `=SI(C2>=5; "Aprovat"; "Suspès")` — Avalua una condició booleana. Si es compleix retorna el primer argument ("Aprovat"), i si no es compleix retorna el segon ("Suspès").
+3. **Funció de Cerca Vertical:**
+   `=BUSCAV(valor_cercat; matriu_taula; índex_columna; FALS)` — Cerca un codi o nom a la primera columna d'una taula i extreu el valor corresponent a la columna indicada amb coincidència exacta.
+
+---
+
 ## 📑 Índex d'Apartats d'aquesta Unitat
 
 - [**4.1 Manual bàsic CALC**](./ut0401.md)
