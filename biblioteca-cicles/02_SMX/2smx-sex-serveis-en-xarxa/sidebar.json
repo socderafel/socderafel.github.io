@@ -1,303 +1,303 @@
-{
-  "title": "🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà",
-  "home": {
-    "label": "🏠 Inici Serveis en Xarxa",
-    "href": "index.html"
-  },
-  "units": [
-    {
-      "summary": "UD1 — (RA01) Unidad 1. Introducción a los servicios en red",
-      "items": [
-        {
-          "label": "📘 UD1 Completa (1 pàgina)",
-          "href": "./ut01/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "1.1 Nota examen UT01",
-          "href": "./ut01/ut0101.html"
-        },
-        {
-          "label": "1.2 Unidad 1. Introducción a los servicios en red",
-          "href": "./ut01/ut0102.html"
-        },
-        {
-          "label": "1.3 Actividad 1. Unidad 01",
-          "href": "./ut01/ut0103.html"
-        },
-        {
-          "label": "1.4 Actividad 2. Unidad 01",
-          "href": "./ut01/ut0104.html"
-        },
-        {
-          "label": "1.5 Actividad 3. Unidad 01",
-          "href": "./ut01/ut0105.html"
-        },
-        {
-          "label": "1.6 Solución Actividad 3",
-          "href": "./ut01/ut0106.html"
-        },
-        {
-          "label": "1.7 UT1.1 Virtualización",
-          "href": "./ut01/ut0107.html"
-        },
-        {
-          "label": "1.8 UT1.2  Introducción a los casos prácticos",
-          "href": "./ut01/ut0108.html"
-        },
-        {
-          "label": "1.9 Práctica: Instalación Windows y Linux. Preparación MV",
-          "href": "./ut01/ut0109.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD2 — (RA02) Unidad 2. Servicios DNS",
-      "items": [
-        {
-          "label": "📘 UD2 Completa (1 pàgina)",
-          "href": "./ut02/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "2.1 Examen UT02. Servicios DNS",
-          "href": "./ut02/ut0201.html"
-        },
-        {
-          "label": "2.2 UT02. Servicios DNS",
-          "href": "./ut02/ut0202.html"
-        },
-        {
-          "label": "2.3 Prácticas",
-          "href": "./ut02/ut0203.html"
-        },
-        {
-          "label": "2.4 UT02. Instalación y configuración DNS en Windows Server 2022",
-          "href": "./ut02/ut0204.html"
-        },
-        {
-          "label": "2.5 UT02. Instalación y configuración DNS en Ubuntu Server",
-          "href": "./ut02/ut0205.html"
-        },
-        {
-          "label": "2.6 UT02. Agregar un servidor DNS secundario (windows Server)",
-          "href": "./ut02/ut0206.html"
-        },
-        {
-          "label": "2.7 Enlaces de interés",
-          "href": "./ut02/ut0207.html"
-        },
-        {
-          "label": "2.8 ¿qué es DNS?",
-          "href": "./ut02/ut0208.html"
-        },
-        {
-          "label": "2.9 ¿Cómo funciona DNS?",
-          "href": "./ut02/ut0209.html"
-        },
-        {
-          "label": "2.10 ¿qué es DNS? English",
-          "href": "./ut02/ut0210.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD3 — (RA07) Unidad 3. Servicios DHCP",
-      "items": [
-        {
-          "label": "📘 UD3 Completa (1 pàgina)",
-          "href": "./ut03/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "3.1 Examen UT03. Servicios DHCP",
-          "href": "./ut03/ut0301.html"
-        },
-        {
-          "label": "3.2 UT03. Servicios DHCP",
-          "href": "./ut03/ut0302.html"
-        },
-        {
-          "label": "3.3 Prácticas",
-          "href": "./ut03/ut0303.html"
-        },
-        {
-          "label": "3.4 UT03. Instalación y configuración DHCP en Windows Server 2022",
-          "href": "./ut03/ut0304.html"
-        },
-        {
-          "label": "3.5 UT03. Instalación y configuración DHCP en Ubuntu Server",
-          "href": "./ut03/ut0305.html"
-        },
-        {
-          "label": "3.6 UT03. Creación de un servidor DHCP Fail Over",
-          "href": "./ut03/ut0306.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD4 — (RA05) Unidad 4. Servicio HTTP",
-      "items": [
-        {
-          "label": "📘 UD4 Completa (1 pàgina)",
-          "href": "./ut04/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "4.1 UT04 Recursos label",
-          "href": "./ut04/ut0401.html"
-        },
-        {
-          "label": "4.2 UT04. Servicios HTTP",
-          "href": "./ut04/ut0402.html"
-        },
-        {
-          "label": "4.3 UT04 Actividades label",
-          "href": "./ut04/ut0403.html"
-        },
-        {
-          "label": "4.4 UT04. Instalación y configuración HTTP en Windows Server 2022",
-          "href": "./ut04/ut0404.html"
-        },
-        {
-          "label": "4.5 UT04. Instalación y configuración Apache Ubuntu Server",
-          "href": "./ut04/ut0405.html"
-        },
-        {
-          "label": "4.6 UT04. Encriptación GPG",
-          "href": "./ut04/ut0406.html"
-        },
-        {
-          "label": "4.7 UT04 Enlaces label (copia)",
-          "href": "./ut04/ut0407.html"
-        },
-        {
-          "label": "4.8 UT04 Exámenes label (copia)",
-          "href": "./ut04/ut0408.html"
-        },
-        {
-          "label": "4.9 Examen UT04. Servicios HTTP.",
-          "href": "./ut04/ut0409.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD5 — (RA06) Unidad 05. Acceso y Control Remoto",
-      "items": [
-        {
-          "label": "📘 UD5 Completa (1 pàgina)",
-          "href": "./ut05/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "5.1 UT05 Recursos",
-          "href": "./ut05/ut0501.html"
-        },
-        {
-          "label": "5.2 Video presentación UT05",
-          "href": "./ut05/ut0502.html"
-        },
-        {
-          "label": "5.3 UT05. Acceso y Control Remoto",
-          "href": "./ut05/ut0503.html"
-        },
-        {
-          "label": "5.4 UT05 Actividades",
-          "href": "./ut05/ut0504.html"
-        },
-        {
-          "label": "5.5 UT05. Instalación y configuración Acceso y Control Remoto en Windows",
-          "href": "./ut05/ut0505.html"
-        },
-        {
-          "label": "5.6 UT05. Instalación y Configuración Acceso y Control Remoto Ubuntu Server",
-          "href": "./ut05/ut0506.html"
-        },
-        {
-          "label": "5.7 UT04 Exámenes label",
-          "href": "./ut05/ut0507.html"
-        },
-        {
-          "label": "5.8 Nota examen UP05",
-          "href": "./ut05/ut0508.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD6 — (RA03 - RA04) Entregas",
-      "items": [
-        {
-          "label": "📘 UD6 Completa (1 pàgina)",
-          "href": "./ut06/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "6.1 Recursos",
-          "href": "./ut06/ut0601.html"
-        },
-        {
-          "label": "6.2 RA03 - Teoría de soporte",
-          "href": "./ut06/ut0602.html"
-        },
-        {
-          "label": "6.3 RA04 - Teoría de soporte",
-          "href": "./ut06/ut0603.html"
-        },
-        {
-          "label": "6.4 Actividades",
-          "href": "./ut06/ut0604.html"
-        },
-        {
-          "label": "6.5 Evaluación RA03",
-          "href": "./ut06/ut0605.html"
-        },
-        {
-          "label": "6.6 Evaluación RA04",
-          "href": "./ut06/ut0606.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD7 — Preguntas de teoría SX UT01 al UT05",
-      "items": [
-        {
-          "label": "📘 UD7 Completa (1 pàgina)",
-          "href": "./ut07/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "7.1 Preguntas teoría",
-          "href": "./ut07/ut0701.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD8 — 2ª Evaluación SX",
-      "items": [
-        {
-          "label": "📘 UD8 Completa (1 pàgina)",
-          "href": "./ut08/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "8.1 Evaluación final SX",
-          "href": "./ut08/ut0801.html"
-        }
-      ]
-    },
-    {
-      "summary": "UD9 — Examen convocatoria ordinaria SX. Viernes 21 febrero de 2025 15h - 19h",
-      "items": [
-        {
-          "label": "📘 UD9 Completa (1 pàgina)",
-          "href": "./ut09/index.html",
-          "class": "unit-full-link"
-        },
-        {
-          "label": "9.1 NOTA FINAL SX",
-          "href": "./ut09/ut0901.html"
-        }
-      ]
-    }
-  ]
+﻿{
+    "title":  "🌐 Serveis en Xarxa — 2n SMX · Grau Mitjà",
+    "home":  {
+                 "label":  "🏠 Inici Serveis en Xarxa",
+                 "href":  "index.html"
+             },
+    "units":  [
+                  {
+                      "summary":  "UD1 — Introducció als Serveis en Xarxa i Model Client-Servidor",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD1 Completa (1 pÃ gina)",
+                                        "href":  "./ut01/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "1.1 Nota examen UT01",
+                                        "href":  "./ut01/ut0101.html"
+                                    },
+                                    {
+                                        "label":  "1.2 Unidad 1. IntroducciÃ³n a los servicios en red",
+                                        "href":  "./ut01/ut0102.html"
+                                    },
+                                    {
+                                        "label":  "1.3 Actividad 1. Unidad 01",
+                                        "href":  "./ut01/ut0103.html"
+                                    },
+                                    {
+                                        "label":  "1.4 Actividad 2. Unidad 01",
+                                        "href":  "./ut01/ut0104.html"
+                                    },
+                                    {
+                                        "label":  "1.5 Actividad 3. Unidad 01",
+                                        "href":  "./ut01/ut0105.html"
+                                    },
+                                    {
+                                        "label":  "1.6 SoluciÃ³n Actividad 3",
+                                        "href":  "./ut01/ut0106.html"
+                                    },
+                                    {
+                                        "label":  "1.7 UT1.1 VirtualizaciÃ³n",
+                                        "href":  "./ut01/ut0107.html"
+                                    },
+                                    {
+                                        "label":  "1.8 UT1.2  IntroducciÃ³n a los casos prÃ¡cticos",
+                                        "href":  "./ut01/ut0108.html"
+                                    },
+                                    {
+                                        "label":  "1.9 PrÃ¡ctica: InstalaciÃ³n Windows y Linux. PreparaciÃ³n MV",
+                                        "href":  "./ut01/ut0109.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD2 — Servei de Resolució de Noms de Domini (DNS)",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD2 Completa (1 pÃ gina)",
+                                        "href":  "./ut02/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "2.1 Examen UT02. Servicios DNS",
+                                        "href":  "./ut02/ut0201.html"
+                                    },
+                                    {
+                                        "label":  "2.2 UT02. Servicios DNS",
+                                        "href":  "./ut02/ut0202.html"
+                                    },
+                                    {
+                                        "label":  "2.3 PrÃ¡cticas",
+                                        "href":  "./ut02/ut0203.html"
+                                    },
+                                    {
+                                        "label":  "2.4 UT02. InstalaciÃ³n y configuraciÃ³n DNS en Windows Server 2022",
+                                        "href":  "./ut02/ut0204.html"
+                                    },
+                                    {
+                                        "label":  "2.5 UT02. InstalaciÃ³n y configuraciÃ³n DNS en Ubuntu Server",
+                                        "href":  "./ut02/ut0205.html"
+                                    },
+                                    {
+                                        "label":  "2.6 UT02. Agregar un servidor DNS secundario (windows Server)",
+                                        "href":  "./ut02/ut0206.html"
+                                    },
+                                    {
+                                        "label":  "2.7 Enlaces de interÃ©s",
+                                        "href":  "./ut02/ut0207.html"
+                                    },
+                                    {
+                                        "label":  "2.8 Â¿quÃ© es DNS?",
+                                        "href":  "./ut02/ut0208.html"
+                                    },
+                                    {
+                                        "label":  "2.9 Â¿CÃ³mo funciona DNS?",
+                                        "href":  "./ut02/ut0209.html"
+                                    },
+                                    {
+                                        "label":  "2.10 Â¿quÃ© es DNS? English",
+                                        "href":  "./ut02/ut0210.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD3 — Servei d\u0027Assignació Dinàmica d\u0027Adreces (DHCP)",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD3 Completa (1 pÃ gina)",
+                                        "href":  "./ut03/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "3.1 Examen UT03. Servicios DHCP",
+                                        "href":  "./ut03/ut0301.html"
+                                    },
+                                    {
+                                        "label":  "3.2 UT03. Servicios DHCP",
+                                        "href":  "./ut03/ut0302.html"
+                                    },
+                                    {
+                                        "label":  "3.3 PrÃ¡cticas",
+                                        "href":  "./ut03/ut0303.html"
+                                    },
+                                    {
+                                        "label":  "3.4 UT03. InstalaciÃ³n y configuraciÃ³n DHCP en Windows Server 2022",
+                                        "href":  "./ut03/ut0304.html"
+                                    },
+                                    {
+                                        "label":  "3.5 UT03. InstalaciÃ³n y configuraciÃ³n DHCP en Ubuntu Server",
+                                        "href":  "./ut03/ut0305.html"
+                                    },
+                                    {
+                                        "label":  "3.6 UT03. CreaciÃ³n de un servidor DHCP Fail Over",
+                                        "href":  "./ut03/ut0306.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD4 — Servei Web (HTTP/HTTPS) i Proxy Intermediari",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD4 Completa (1 pÃ gina)",
+                                        "href":  "./ut04/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "4.1 UT04 Recursos label",
+                                        "href":  "./ut04/ut0401.html"
+                                    },
+                                    {
+                                        "label":  "4.2 UT04. Servicios HTTP",
+                                        "href":  "./ut04/ut0402.html"
+                                    },
+                                    {
+                                        "label":  "4.3 UT04 Actividades label",
+                                        "href":  "./ut04/ut0403.html"
+                                    },
+                                    {
+                                        "label":  "4.4 UT04. InstalaciÃ³n y configuraciÃ³n HTTP en Windows Server 2022",
+                                        "href":  "./ut04/ut0404.html"
+                                    },
+                                    {
+                                        "label":  "4.5 UT04. InstalaciÃ³n y configuraciÃ³n Apache Ubuntu Server",
+                                        "href":  "./ut04/ut0405.html"
+                                    },
+                                    {
+                                        "label":  "4.6 UT04. EncriptaciÃ³n GPG",
+                                        "href":  "./ut04/ut0406.html"
+                                    },
+                                    {
+                                        "label":  "4.7 UT04 Enlaces label (copia)",
+                                        "href":  "./ut04/ut0407.html"
+                                    },
+                                    {
+                                        "label":  "4.8 UT04 ExÃ¡menes label (copia)",
+                                        "href":  "./ut04/ut0408.html"
+                                    },
+                                    {
+                                        "label":  "4.9 Examen UT04. Servicios HTTP.",
+                                        "href":  "./ut04/ut0409.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD5 — Accés i Administració Remota (SSH, RDP, VPN)",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD5 Completa (1 pÃ gina)",
+                                        "href":  "./ut05/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "5.1 UT05 Recursos",
+                                        "href":  "./ut05/ut0501.html"
+                                    },
+                                    {
+                                        "label":  "5.2 Video presentaciÃ³n UT05",
+                                        "href":  "./ut05/ut0502.html"
+                                    },
+                                    {
+                                        "label":  "5.3 UT05. Acceso y Control Remoto",
+                                        "href":  "./ut05/ut0503.html"
+                                    },
+                                    {
+                                        "label":  "5.4 UT05 Actividades",
+                                        "href":  "./ut05/ut0504.html"
+                                    },
+                                    {
+                                        "label":  "5.5 UT05. InstalaciÃ³n y configuraciÃ³n Acceso y Control Remoto en Windows",
+                                        "href":  "./ut05/ut0505.html"
+                                    },
+                                    {
+                                        "label":  "5.6 UT05. InstalaciÃ³n y ConfiguraciÃ³n Acceso y Control Remoto Ubuntu Server",
+                                        "href":  "./ut05/ut0506.html"
+                                    },
+                                    {
+                                        "label":  "5.7 UT04 ExÃ¡menes label",
+                                        "href":  "./ut05/ut0507.html"
+                                    },
+                                    {
+                                        "label":  "5.8 Nota examen UP05",
+                                        "href":  "./ut05/ut0508.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD6 — Serveis de Transferència de Fitxers (FTP, FTPS, SFTP)",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD6 Completa (1 pÃ gina)",
+                                        "href":  "./ut06/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "6.1 Recursos",
+                                        "href":  "./ut06/ut0601.html"
+                                    },
+                                    {
+                                        "label":  "6.2 RA03 - TeorÃ­a de soporte",
+                                        "href":  "./ut06/ut0602.html"
+                                    },
+                                    {
+                                        "label":  "6.3 RA04 - TeorÃ­a de soporte",
+                                        "href":  "./ut06/ut0603.html"
+                                    },
+                                    {
+                                        "label":  "6.4 Actividades",
+                                        "href":  "./ut06/ut0604.html"
+                                    },
+                                    {
+                                        "label":  "6.5 EvaluaciÃ³n RA03",
+                                        "href":  "./ut06/ut0605.html"
+                                    },
+                                    {
+                                        "label":  "6.6 EvaluaciÃ³n RA04",
+                                        "href":  "./ut06/ut0606.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD7 — Serveis de Correu Electrònic (SMTP, IMAP, POP3)",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD7 Completa (1 pÃ gina)",
+                                        "href":  "./ut07/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "7.1 Preguntas teorÃ­a",
+                                        "href":  "./ut07/ut0701.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD8 — Veu sobre IP (VoIP) i Telefonia IP",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD8 Completa (1 pÃ gina)",
+                                        "href":  "./ut08/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "8.1 EvaluaciÃ³n final SX",
+                                        "href":  "./ut08/ut0801.html"
+                                    }
+                                ]
+                  },
+                  {
+                      "summary":  "UD9 — Projecte Integrador i Auditoria de Serveis en Xarxa",
+                      "items":  [
+                                    {
+                                        "label":  "ðŸ“˜ UD9 Completa (1 pÃ gina)",
+                                        "href":  "./ut09/index.html",
+                                        "class":  "unit-full-link"
+                                    },
+                                    {
+                                        "label":  "9.1 NOTA FINAL SX",
+                                        "href":  "./ut09/ut0901.html"
+                                    }
+                                ]
+                  }
+              ]
 }
