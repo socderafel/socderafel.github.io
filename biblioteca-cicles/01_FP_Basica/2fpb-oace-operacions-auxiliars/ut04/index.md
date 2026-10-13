@@ -9,6 +9,92 @@ next_label: "4.1 ➡️"
 
 # UD4: Administració i Comandes Bàsiques en Linux (Ubuntu/LliureX)
 
+<div style="text-align: center; margin: 1.5rem 0;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+  <defs>
+    <linearGradient id="bg-grad-o4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="g-fhs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-bsh" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-prm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-apt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-o4)"/>
+
+  <!-- Capçalera -->
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">ADMINISTRACIÓ I COMANDES EN GNU/LINUX (UBUNTU / LLIUREX)</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Jerarquia de fitxers FHS, terminal Bash, permisos octals POSIX i gestió de paquets APT</text>
+
+  <!-- Bloc 1: FHS & GNOME -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-fhs)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">📁</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Arbre FHS & GUI</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Arrel Única /</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• /home: Usuaris personals</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• /etc: Configuració del sistema</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• /var: Logs & dades dinàmiques</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• GNOME: Dash, Nautilus, TopBar</text>
+  </g>
+
+  <!-- Bloc 2: Consola Bash -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-bsh)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">💻</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Terminal Bash</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Comandes Clau</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• pwd: Ruta actual</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• ls -la: Llista detalls & ocults</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• cd, mkdir -p, touch</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• cp -r, mv, rm -r</text>
+  </g>
+
+  <!-- Bloc 3: Permisos i sudo -->
+  <g transform="translate(435, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-prm)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🔒</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Permisos POSIX</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">chmod & sudo</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• r=4, w=2, x=1 (octal)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• 755: rwxr-xr-x (scripts)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• 644: rw-r--r-- (fitxers)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• sudo: Privilegis de root</text>
+  </g>
+
+  <!-- Bloc 4: Gestió de Paquets -->
+  <g transform="translate(640, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-apt)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">📦</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Gestió APT</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Paquets de Taller</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• sudo apt update (índex)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• sudo apt upgrade -y</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• sudo apt install htop vlc</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• autoremove: Neteja orfes</text>
+  </g>
+</svg>
+</div>
+
 L'entorn gràfic en Linux, la consola de terminal, comandes essencials de navegació i fitxers (pwd, ls, cd, mkdir, cp, mv, rm), gestió d'usuaris i permisos (chmod, chown, sudo) i gestió de paquets amb apt.
 
 ### 📑 Apartats de la Unitat
@@ -217,4 +303,121 @@ sudo apt autoremove -y
 Enhorabona! Ja domines les operacions fonamentals de manteniment de programari en Linux.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Càlcul i conversió de permisos POSIX (Octal, Simbòlic i Binari)
+En els sistemes UNIX/Linux, els permisos d'un fitxer o directori s'estructuren en una terna de permisos per a tres tipus d'entitats: Usuari Propietari ($U$), Grup ($G$) i Altres/Resta ($O$):
+$$\text{Pes Octal: } r = 4 \quad (2^2), \quad w = 2 \quad (2^1), \quad x = 1 \quad (2^0), \quad - = 0$$
+1. Completa la taula de correspondència calculant el valor octal de 3 dígits i la cadena binària de 9 bits corresponent:
+
+| Mode Simbòlic (`ls -l`) | Permisos Usuari ($U$) | Permisos Grup ($G$) | Permisos Altres ($O$) | Valor Octal (`chmod`) | Cadena Binària (9 bits) |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| `-rwxr-xr-x` | Lectura, escriptura, execució ($4+2+1=7$) | Lectura, execució ($4+0+1=5$) | Lectura, execució ($4+0+1=5$) | **$755$** | `111 101 101` |
+| `-rw-r--r--` | | | | | |
+| `-rwxr-x---` | | | | | |
+| `-rw-rw----` | | | | | |
+| `-rwx------` | | | | | |
+
+2. Si un script té permisos `-rw-r--r--` ($644$), quina comanda exacta has d'executar per concedir permís d'execució exclusivament a l'usuari propietari sense modificar els permisos de grup ni d'altres?
+   - Utilitzant notació simbòlica: `chmod u+x script.sh`
+   - Utilitzant notació numèrica octal: calcula el nou número de 3 dígits.
+3. Per què és una negligència greu de seguretat aplicar `chmod 777` a una carpeta amb documents confidencials en un servidor corporatiu?
+
+#### Exercici 2: Jerarquia FHS i cerca de fitxers de configuració
+1. L'estàndard de jerarquia de sistemes de fitxers (*Filesystem Hierarchy Standard* - FHS) organitza les funcions del sistema en directoris fixos. Obre la terminal i executa les següents comandes de diagnòstic:
+   ```bash
+   df -h /
+   du -sh /var/log
+   ls -lh /etc/passwd /etc/fstab
+   ```
+2. Respon a les següents preguntes tècniques:
+   - Quin percentatge d'espai del disc ocupa la partició arrel `/` segons la sortida de `df -h`?
+   - Quina mida total ocupen els fitxers de registre a `/var/log` segons `du -sh`?
+   - Qui és l'usuari i el grup propietari del fitxer `/etc/passwd` que emmagatzema la llista d'usuaris del sistema?
+3. Per què un usuari normal pot llegir el contingut de `/etc/passwd` (`cat /etc/passwd`), però en canvi no pot llegir el fitxer que guarda les contrasenyes xifrades `/etc/shadow` (`cat /etc/shadow` $\rightarrow$ *Permís denegat*)?
+
+#### Exercici 3: Auditoria d'emmagatzematge del gestor de paquets APT
+Quan s'instal·len programes amb `apt`, el sistema descarrega els fitxers empaquetats `.deb` en una carpeta temporal de memòria cau abans de descomprimir-los:
+1. Comprova quant espai ocupen els paquets descarregats a la memòria cau executant:
+   ```bash
+   sudo du -sh /var/cache/apt/archives
+   ```
+2. Si un equip de taller porta 6 mesos instal·lant eines i actualitzacions i la carpeta `/var/cache/apt/archives` ha acumulat $3{,}8\text{ GB}$ de paquets antics `.deb`:
+   - Quina comanda oficial d'APT permet purgar immediatament tots els fitxers `.deb` descarregats recuperant eixos 3,8 GB sense desinstal·lar cap programa (`sudo apt clean`)?
+   - Quina diferència hi ha entre `sudo apt clean` i `sudo apt autoclean`?
+3. Si un paquet requereix descarregar $45\text{ MB}$ d'arxiu comprimit i un cop instal·lat ocupa $180\text{ MB}$ al disc, quin és el factor d'expansió de la descompressió?
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Creació d'una estructura departamental mitjançant comandes Bash
+- **Objectiu:** Dominar la creació àgil de directoris, fitxers i còpies de seguretat sense utilitzar el ratolí ni l'entorn gràfic.
+- **Procediment de taller:**
+  1. Obre la terminal (`Ctrl + Alt + T`) i assegura't que estàs a la teua carpeta personal (`pwd`).
+  2. Crea d'un sol cop mitjançant `mkdir -p` la següent estructura jeràrquica d'una empresa de suport tècnic:
+     ```bash
+     mkdir -p Taller/{Hardware,Software/{ISOs,Drivers},Clients/Factures}
+     ```
+  3. Comprova l'estructura creada executant `tree Taller` (o `ls -R Taller`).
+  4. Dins de `Taller/Hardware`, crea tres fitxers de registre buits anomenats `estoc_ram.txt`, `estoc_ssd.txt` i `reparacions.log` utilitzant una única ordre `touch`.
+  5. Copia el fitxer `reparacions.log` com a còpia de seguretat a la carpeta `Taller/Clients` anomenant-lo `reparacions_backup.log`.
+  6. Reanomena la carpeta `Clients` perquè passe a anomenar-se `Clients_2026` utilitzant la comanda `mv`.
+
+#### Repte 2: Assignació de permisos de seguretat a un script de manteniment
+- **Objectiu:** Configurar permisos POSIX perquè un script puga executar-se correctament evitant que altres usuaris el modifiquen.
+- **Procediment de taller:**
+  1. A la teua carpeta personal, crea un xicotet script de neteja anomenat `neteja.sh`:
+     ```bash
+     echo '#!/bin/bash' > neteja.sh
+     echo 'echo "Executant neteja de temporals..."' >> neteja.sh
+     echo 'rm -rf /tmp/proves_*' >> neteja.sh
+     echo 'echo "Neteja completada amb èxit!"' >> neteja.sh
+     ```
+  2. Executa `ls -l neteja.sh`. Quins permisos té assignats per defecte? Té permís d'execució (`x`)?
+  3. Intenta executar l'script teclejant `./neteja.sh`. Per què la terminal respon *"Permís denegat"*?
+  4. Assigna permisos d'execució a l'usuari propietari i de només lectura als altres aplicant:
+     ```bash
+     chmod 755 neteja.sh
+     ```
+  5. Torna a executar `ls -l neteja.sh` (observa com el fitxer canvia de color verd) i executa `./neteja.sh`. Comprova que s'executa correctament.
+
+#### Repte 3: Monitoratge de processos en temps real i gestió de recursos amb `htop`
+- **Objectiu:** Utilitzar eines de diagnòstic de consola per detectar processos bloquejats i analitzar el consum de memòria RAM i CPU.
+- **Procediment tècnic:**
+  1. Si no està instal·lat, instal·la `htop` mitjançant `sudo apt install htop -y`.
+  2. Obre una segona pestanya o finestra de terminal i executa una tasca que consumisca recursos (com obrir el navegador Firefox o llançar un procés en segon pla).
+  3. Executa `htop` a la primera terminal.
+  4. Identifica els paràmetres de la capçalera:
+     - Consum percentual de cada nucli de CPU.
+     - Ús de memòria RAM física en megabytes (`Mem`) i de memòria d'intercanvi (`Swp`).
+     - Nombre total de tasques (*Tasks*) i temps d'encesa de l'equip (*Uptime*).
+  5. Ordena la llista de processos prement `F6` per identificar quin procés està consumint més memòria RAM (`PERCENT_MEM`).
+  6. Localitza el número d'identificador de procés (**PID**) del navegador web, prem `F9` (*Kill*), selecciona el senyal `15 (SIGTERM)` o `9 (SIGKILL)` i prem *Intro*. Comprova com el programa es tanca a l'instant.
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He explicat l'estructura de directoris única de Linux amb arrel `/` (`/home`, `/etc`, `/var`, `/bin`).
+- [ ] He interpretat el prompt de la terminal distingint l'usuari normal (`$`) del superusuari root (`#`).
+- [ ] He utilitzat amb soltesa les comandes de navegació i manipulació: `pwd`, `ls -la`, `cd`, `mkdir -p`, `cp -r`, `mv` i `rm -r`.
+- [ ] He calculat i convertit permisos POSIX en format simbòlic (`rwx`), binari i octal (`chmod 755`, `chmod 644`).
+- [ ] He utilitzat la comanda `sudo` per executar ordres administratives amb privilegis de superusuari.
+- [ ] He actualitzat repositoris (`apt update`), actualitzat el sistema (`apt upgrade`) i gestionat paquets (`install`/`remove`).
+- [ ] He monitorat processos actius i consum de memòria RAM i CPU utilitzant `htop`.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Jerarquia FHS i entorn GNOME** | Descriu el propòsit de cada directori de l'arrel (`/etc`, `/var`, `/home`) i domina tant Nautilus com la consola. | Comprèn que tot penja de l'arrel `/` i localitza fitxers personals a `/home`. | Reconeix la carpeta `/home` però busca lletres d'unitat com `C:` a Linux. | Desconeix l'estructura de directoris o intenta crear carpetes directament a l'arrel sense permisos. |
+| **Navegació i comandes Bash** | Empra comandes combinades (`mkdir -p`, `ls -la`, `cp -r`) amb comodins i rutes relatives/absolutes de forma impecable. | Utilitza les comandes bàsiques (`cd`, `mkdir`, `cp`, `rm`) amb fluïdesa i pocs errors de ruta. | Realitza operacions bàsiques però s'equivoca freqüentment amb les rutes de carpetes mare (`..`). | No sap consultar la ruta actual (`pwd`) o esborra fitxers sense comprendre l'ordre `rm`. |
+| **Permisos POSIX i càlcul octal (chmod)** | Converteix a l'acte cadenes `rwx` a octal (4-2-1), aplica `chmod` i `chown` i justifica polítiques de mínim privilegi. | Calcula valors octals típics (755, 644) i assigna permís d'execució a scripts de forma autònoma. | Reconeix les lletres $r, w, x$ però comet errors en sumar els valors numèrics octals. | Aplica sempre `chmod 777` a tot sense entendre els riscos de seguretat. |
+| **Gestió de paquets amb APT** | Domina el cicle `update`, `upgrade`, `install`, `remove` i neteja de memòria cau amb `clean`/`autoremove`. | Instal·la i desinstal·la programari per consola amb `sudo apt` sense dificultat. | Sap instal·lar programes bàsics però oblida executar `apt update` prèviament. | Intenta descarregar arxius `.exe` de Windows a Linux o no sap introduir la contrasenya a `sudo`. |
+| **Monitoratge de processos (htop)** | Analitza consum de CPU, RAM i Swap a `htop`, localitza PIDs i finalitza processos bloquejats amb senyals segures. | Utilitza `htop` per identificar el procés que més consumeix i sap tancar-lo amb `F9`. | Obre `htop` i observa el gràfic però li costa interpretar els identificadors PID. | Desconeix com veure els recursos de la màquina o tanca la consola quan un procés es bloqueja. |
+
 

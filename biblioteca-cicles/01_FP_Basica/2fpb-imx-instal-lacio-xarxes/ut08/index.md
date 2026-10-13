@@ -11,6 +11,85 @@ next_label: "8.1 ➡️"
 
 Avaries físiques i lògiques, metodologia sistemàtica de resolució per capes, seguretat bàsica amb tallafocs personal, manteniment preventiu en racks i equips, i resolució de supòsits pràctics d'incidències.
 
+<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="g-flt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-btu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-fir" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#be123c" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-mnt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Capçalera -->
+  <text x="430" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700" letter-spacing="1">MANTENIMENT I SEGURETAT: DIAGNÒSTIC BOTTOM-UP, TALLAFOCS I PREVENCIÓ</text>
+  <text x="430" y="50" text-anchor="middle" fill="#94a3b8" font-size="12">Classificació d'avaries físiques/lògiques, protocol de resolució, regles de firewall i control de rack</text>
+
+  <!-- Bloc 1: Tipus d'Avaries -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-flt)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🔍</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Tipus d'Avaries</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Origen del Problema</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Físiques: Cables, LEDs</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Pestanyes RJ45 soltes</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Lògiques: IP, màscara</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• APIPA: 169.254 (no DHCP)</text>
+  </g>
+
+  <!-- Bloc 2: Metodologia Bottom-Up -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-btu)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🪜</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Resolució per Capes</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Model Ascendent</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• 1. Físic: Tensió i LEDs</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• 2. Enllaç: MAC i switch</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• 3. Xarxa: IP i Gateway</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• 4. Aplicació: DNS i web</text>
+  </g>
+
+  <!-- Bloc 3: Tallafocs Firewall -->
+  <g transform="translate(435, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-fir)" stroke="#f43f5e" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f43f5e" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f43f5e" font-size="14" font-weight="bold">🧱</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Seguretat Firewall</text>
+    <text x="15" y="62" fill="#f43f5e" font-size="11" font-weight="600">Filtratge de Trànsit</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Perimetral vs Personal</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Regles d'entrada / eixida</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Perfils: Públic / Privat</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Ports: 80, 443, 445</text>
+  </g>
+
+  <!-- Bloc 4: Manteniment Preventiu -->
+  <g transform="translate(640, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-mnt)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🛡️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Pla Preventiu</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Tasques de Rutina</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Neteja i temperatura rack</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Etiquetatge TIA-606</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Còpies de config routers</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Revisió de preses de terra</text>
+  </g>
+</svg>
+</div>
+
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
@@ -172,4 +251,126 @@ Posar en pràctica les habilitats de diagnòstic i resolució d'avaries enfronta
 - **Resolució:** Es canvia l'adreça a `192.168.1.45`, dins del rang de la mateixa subxarxa. El ping respon correctament.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Anàlisi estadística de telemetria d'enllaç i percentatge de pèrdues (ICMP)
+En el diagnòstic d'un lloc de treball que experimenta talls intermitents en trucades de veu sobre IP (VoIP), el tècnic executa un test de connectivitat prolongat enviant 100 paquets ICMP:
+```cmd
+ping -n 100 192.168.1.1
+```
+Les estadístiques registrades a la consola són:
+- Paquets enviats: $100$
+- Paquets rebuts amb èxit: $88$
+- Paquets perduts: $12$
+- Temps d'anada i tornada: Mínim = $2\text{ ms}$, Màxim = $480\text{ ms}$, Mitjana = $65\text{ ms}$
+
+1. Calcula el percentatge de pèrdua de paquets de la línia:
+   $$\%\,\text{Pèrdua} = \frac{\text{Paquets perduts}}{\text{Paquets enviats}} \cdot 100$$
+2. Si un enllaç de veu sobre IP requereix una pèrdua inferior a l'$1\%$ i una latència mitjana inferior a $50\text{ ms}$ per mantindre una conversa comprensible sense talls, és acceptable aquesta connexió?
+3. Quina és la variació màxima de retard (*Jitter* extrem: $T_{\text{màx}} - T_{\text{mín}}$)?
+4. Quines tres causes físiques o d'entorn poden provocar aquesta pèrdua de paquets i fluctuació extrema de mil·lisegons en una xarxa local?
+
+#### Exercici 2: Càlcul de càrrega tèrmica i ventilació d'un armari Rack de servidors
+Un armari rack de 19 polzades instal·lat en una sala de comunicacions tancada allotja els següents equips funcionant les 24 hores:
+- 1 Commutador PoE de 48 ports: $P_1 = 370\text{ W}$
+- 1 Encaminador de frontera amb mòdul de fibra: $P_2 = 45\text{ W}$
+- 2 Servidors de virtualització enracables: $P_3 = 2 \cdot 280\text{ W} = 560\text{ W}$
+- 1 Sistema d'Alimentació Ininterrompuda (SAI): $P_4 = 65\text{ W}$ (autoconsum)
+
+1. Calcula la potència elèctrica total consumida pels equips ($P_{\text{total}}$ en Watts).
+2. Tota l'energia elèctrica consumida per l'electrònica es dissipa íntegrament en forma de calor. Calcula la calor dissipada per hora en quilocalories ($Q$ en $\text{kcal/h}$), sabent que:
+   $$Q = 0{,}86 \cdot P_{\text{total}}$$
+3. Per mantindre la temperatura de l'armari per sota de $25^\circ\text{C}$ amb una temperatura ambient exterior de $20^\circ\text{C}$ ($\Delta T = 5^\circ\text{C}$), el cabal d'aire necessari d'extracció dels ventiladors es calcula com:
+   $$V_{\text{aire}} = \frac{Q}{0{,}29 \cdot \Delta T}\quad (\text{en m}^3/\text{h})$$
+   Calcula el cabal d'aire mínim en $\text{m}^3/\text{h}$ que han de proporcionar els ventiladors de sostre del rack.
+
+#### Exercici 3: Diagnòstic de regles de tallafocs per matriu de trànsit
+Un tallafocs personal de Windows Defender té establertes les següents regles d'entrada (*Inbound Rules*):
+- **Regla 1:** Bloquejar protocol ICMPv4 (Echo Request) des de qualsevol origen.
+- **Regla 2:** Permetre trànsit TCP port 445 (SMB - Carpetes compartides) només des de la subxarxa local `192.168.1.0/24`.
+- **Regla 3:** Permetre trànsit TCP port 80 i 443 (HTTP/HTTPS) des de qualsevol origen.
+- **Regla per defecte:** Bloquejar qualsevol trànsit entrant no definit prèviament.
+
+Prediu el comportament de l'equip en les següents tres situacions:
+- Situació A: Un company de l'aula (`192.168.1.40`) fa `ping` a aquest equip. ¿Rebrà resposta o donarà "Temps d'espera esgotat"?
+- Situació B: El mateix company intenta accedir a una carpeta compartida de l'equip escrivint `\\IP\Public`. ¿Podrà entrar?
+- Situació C: Un ordinador connectat des d'una altra xarxa (`10.0.0.8`) intenta accedir a la mateixa carpeta compartida per SMB. ¿Podrà entrar?
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Gestió de regles de tallafocs amb PowerShell
+- **Objectiu:** Crear i verificar regles de bloqueig en el Tallafocs de Windows Defender sense utilitzar el tauler de control gràfic.
+- **Eines:** Consola PowerShell executada com a Administrador.
+- **Procediment de taller:**
+  1. Obre PowerShell i crea una nova regla per bloquejar les respostes de ping entrants:
+     ```powershell
+     New-NetFirewallRule -DisplayName "Bloqueig_Ping_Laboratori" -Direction Inbound -Protocol ICMPv4 -IcmpType 8 -Action Block
+     ```
+  2. Demana al teu company de taula que faça `ping` a la teua adreça IP. Comprova com la seua consola dóna *Temps d'espera esgotat*.
+  3. Consulta l'estat de la regla creada:
+     ```powershell
+     Get-NetFirewallRule -DisplayName "Bloqueig_Ping_Laboratori" | Select-Object DisplayName, Enabled, Direction, Action
+     ```
+  4. Desactiva o elimina la regla perquè la xarxa torne a respondre:
+     ```powershell
+     Remove-NetFirewallRule -DisplayName "Bloqueig_Ping_Laboratori"
+     ```
+  5. Verifica com el company torna a rebre resposta de ping immediatament.
+
+#### Repte 2: Resolució d'incidència d'adreçament APIPA i restabliment de TCP/IP
+- **Objectiu:** Resoldre un bloqueig de xarxa en un equip que ha obtingut una adreça de l'espai `169.254.x.x` per fallada de comunicació amb el router.
+- **Eines:** Consola CMD en mode Administrador.
+- **Passos de reparació:**
+  1. Desactiva temporalment la interfície per forçar la pèrdua de paràmetres:
+     ```cmd
+     netsh interface set interface "Ethernet" disable
+     netsh interface set interface "Ethernet" enable
+     ```
+  2. Executa la neteja de la pila TCP/IP i el restabliment de catàlegs de sockets de xarxa Winsock:
+     ```cmd
+     netsh int ip reset
+     netsh winsock reset
+     ```
+  3. Allibera i renova completament la concessió DHCP:
+     ```cmd
+     ipconfig /release
+     ipconfig /renew
+     ```
+  4. Comprova amb `ipconfig` que l'equip ha abandonat el rang APIPA `169.254` i ha rebut una adreça vàlida de l'aula (`192.168.1.x`).
+
+#### Repte 3: Elaboració d'un informe de manteniment preventiu i còpia de seguretat
+- **Objectiu:** Realitzar l'auditoria preventiva d'un encaminador o commutador de taller i exportar el seu fitxer de restauració ràpida.
+- **Eines:** Navegador web per a panell d'administració de l'equip i full de registre tècnic.
+- **Activitats a realitzar:**
+  1. Accedeix a la interfície web del router de laboratori (`http://192.168.1.1`).
+  2. Navega fins a la secció **System Tools / Manteniment** $\rightarrow$ **Backup & Restore**.
+  3. Fes clic a **Backup** i descarrega el fitxer de configuració (ex: `config_router_taller_2026.bin`).
+  4. Inspecciona l'estat físic del router de laboratori: neteja de ranures de ventilació, estat de la clavilla d'alimentació de 12V i fermesa dels cables RJ45.
+  5. Emplena el full de manteniment preventiu de taller indicant data, responsable, model de l'equip, versió de firmware i ubicació de la còpia de seguretat.
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He classificat correctament les avaries diferenciant entre causes físiques de maquinari i lògiques de configuració.
+- [ ] He seguit el protocol sistemàtic de diagnòstic ascendent *Bottom-Up* (Capa 1 a Capa 4).
+- [ ] He calculat el percentatge de pèrdues de paquets i la càrrega tèrmica dissipada en un rack.
+- [ ] He après a reconèixer les adreces APIPA `169.254.x.x` com a símptoma directe de fallada de DHCP.
+- [ ] He creat i eliminat regles del tallafocs utilitzant ordres de PowerShell.
+- [ ] He descarregat la còpia de seguretat de configuració d'un equip de xarxa per a restauració ràpida.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Diagnòstic sistemàtic Bottom-Up** | Aplica el model ascendent de forma rigorosa i metòdica, localitzant qualsevol incidència en pocs minuts. | Segueix l'ordre de comprovació físic $\rightarrow$ lògic amb bona eficiència en la resolució. | Comprova equips de forma desordenada però acaba localitzant l'origen de la fallada. | Canvia paràmetres a l'atzar sense metodologia, empitjorant l'avaria inicial. |
+| **Càlcul de pèrdua de paquets i càrrega tèrmica** | Resol els càlculs de telemetria ICMP, percentatge de pèrdues, calor dissipada i cabal de ventilació amb precisió. | Calcula pèrdues de paquets i calor en Watts de forma correcta amb xicotets dubtes en cabal d'aire. | Calcula el percentatge bàsic de pèrdua de paquets sense resoldre el balanç tèrmic. | Incapaç de calcular percentatges de pèrdua o interpretar dades de telemetria. |
+| **Identificació de patrons d'avaria (APIPA, DNS, Gateway)** | Diagnostica a l'acte símptomes d'adreces APIPA, talls de cable, errors de DNS o conflictes d'IP duplicada. | Identifica correctament els errors habituals de configuració i xarxa local. | Reconeix fallades bàsiques de cable desendollat però dubta davant d'adreces 169.254. | No sap interpretar els missatges d'error de Windows ni l'origen de la desconnexió. |
+| **Administració de seguretat i Tallafocs CLI** | Crea, modifica i elimina regles de firewall amb PowerShell, entenent direccions de trànsit, protocols i ports. | Configura regles de bloqueig i obertura de trànsit per consola amb èxit. | Gestiona el tallafocs des de l'entorn gràfic però necessita suport en PowerShell. | Desconeix la funció del tallafocs o el desactiva completament com a única solució. |
+| **Manteniment preventiu i còpies de suport** | Documenta el manteniment preventiu seguint la norma TIA-606 i realitza còpies de seguretat de configuració. | Realitza la neteja, revisió d'etiquetatge i còpia de suport del router de taller. | Executa les tasques bàsiques de manteniment físic sense realitzar la còpia de seguretat. | No manté l'ordre a l'armari rack ni realitza còpies de protecció dels equips. |
 

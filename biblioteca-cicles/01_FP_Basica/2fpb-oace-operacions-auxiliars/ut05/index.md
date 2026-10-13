@@ -9,6 +9,92 @@ next_label: "5.1 ➡️"
 
 # UD5: Manteniment Preventiu, Rendiment i Actualitzacions
 
+<div style="text-align: center; margin: 1.5rem 0;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+  <defs>
+    <linearGradient id="bg-grad-o5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="g-cln" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-trm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-mon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-upd" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-o5)"/>
+
+  <!-- Capçalera -->
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">MANTENIMENT PREVENTIU, RENDIMENT I ACTUALITZACIONS</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Optimització de disc, comanda TRIM, telemetria de recursos i gestió de pegats de seguretat</text>
+
+  <!-- Bloc 1: Neteja de Disc -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-cln)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🧹</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Neteja de Disc</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Alliberament Residus</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• cleanmgr.exe: Temporals</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Sensor d'emmagatzematge</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• %temp% & Paperera</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Purgat SoftwareDistribution</text>
+  </g>
+
+  <!-- Bloc 2: SSD TRIM vs HDD -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-trm)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">⚡</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">SSD TRIM vs HDD</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Salut d'Unitats</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• HDD: Desfragmentació mecànica</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• SSD: TRIM (MAI desfragmentar!)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Diagnòstic S.M.A.R.T.</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• CrystalDiskInfo: Estat bo/risc</text>
+  </g>
+
+  <!-- Bloc 3: Monitoratge -->
+  <g transform="translate(435, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-mon)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📊</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Monitoratge</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Telemetria & Tasques</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• taskmgr: Ctrl+Maj+Esc</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• CPU, RAM, Disc & Xarxa %</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• htop a consola Linux</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Finalització de tasques bloquejades</text>
+  </g>
+
+  <!-- Bloc 4: Inici & Windows Update -->
+  <g transform="translate(640, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-upd)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">🔄</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Inici & Pegats</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Optimització d'Arrencada</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Deshabilita apps d'impacte alt</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• services.msc: Cua Spooler</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Patch Tuesday de seguretat</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Resolució d'errors WU</text>
+  </g>
+</svg>
+</div>
+
 Alliberament d'espai en disc i fitxers temporals, manteniment d'unitats SSD (TRIM) i HDD (desfragmentació), monitorització de recursos amb Administrador de tasques i htop, gestió d'aplicacions d'inici i Windows Update.
 
 ### 📑 Apartats de la Unitat
@@ -173,4 +259,132 @@ De vegades una actualització queda encallada ("Error 0x80070002" o bucle infini
   4. Torna a buscar actualitzacions.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Càlcul de desgast de disc SSD i vida útil en TBW (*Total Bytes Written*)
+La vida útil dels xips de memòria flash NAND d'una unitat SSD es mesura en terabytes totals escrits (**TBW**). Un cop superada aquesta xifra, les cel·les perden la capacitat de retindre càrrega elèctrica:
+$$\text{Vida Útil (Dies)} = \frac{\text{TBW} \times 10^{12} \text{ bytes}}{\text{Escriptures Diàries (Bytes/dia)}} = \frac{\text{TBW} \times 1.000\text{ GB}}{\text{Consum Diari (GB/dia)}}$$
+1. En un equip de sobretaula s'instal·la un disc SSD NVMe de $1\text{ TB}$ amb una garantia del fabricant de **$600\text{ TBW}$**.
+   - Si un usuari d'oficina escriu una mitjana de $20\text{ GB per dia}$ (navegació, documents, temporals), quants dies i anys trigarà a esgotar el límit de garantia?
+   - Si l'equip s'utilitza com a servidor de bases de dades escrivint intensivament $150\text{ GB per dia}$, a quants anys es redueix la seua vida útil?
+2. Explica per què desfragmentar periòdicament un SSD com si fora un disc dur mecànic HDD consumeix inútilment gigabytes d'escriptura accelerant el desgast de les cel·les sense aportar cap millora de velocitat.
+3. Quina funció realitza la comanda **TRIM** del sistema operatiu i com s'activa automàticament a Windows (`fsutil behavior query DisableDeleteNotify` $\rightarrow$ un valor de $0$ indica que TRIM està actiu)?
+
+#### Exercici 2: Anàlisi d'impacte en temps d'arrencada i consum de memòria RAM
+En auditar un ordinador d'un departament de gestió, el tècnic comprova que triga $1\text{ minut i } 45\text{ segons}$ ($105\text{ s}$) a arrencar completament fins a mostrar l'escriptori operatiu. A la pestanya *Aplicacions d'inici* de l'Administrador de tasques es detecten els següents programes habilitats:
+
+| Aplicació a l'Inici | Impacte Registrat | Consum RAM en Repòs | Funció de l'Aplicació |
+| :--- | :---: | :---: | :--- |
+| **Microsoft OneDrive** | Alt ($12\text{ s}$) | $180\text{ MB}$ | Sincronització de núvol laboral |
+| **Spotify** | Alt ($10\text{ s}$) | $240\text{ MB}$ | Reproductor de música personal |
+| **Discord** | Alt ($9\text{ s}$) | $320\text{ MB}$ | Xat de veu |
+| **Steam Client Bootstrapper** | Alt ($14\text{ s}$) | $290\text{ MB}$ | Plataforma de videojocs |
+| **Actualitzador d'impressores** | Baix ($2\text{ s}$) | $45\text{ MB}$ | Cerca de nous drivers |
+
+1. Calcula el retard total en segons afegit a l'arrencada exclusivament per les aplicacions no laborals (Spotify, Discord i Steam).
+2. Quanta memòria RAM resident sumen en conjunt aquestes tres aplicacions d'oci executant-se en silenci?
+3. Si es deshabiliten a l'inici aquestes 3 aplicacions, quin serà el nou temps estimat d'arrencada de l'equip i quin percentatge de reducció temporal s'haurà aconseguit?
+
+#### Exercici 3: Diagnòstic de telemetria S.M.A.R.T. mitjançant PowerShell
+1. Obre PowerShell com a administrador i executa les següents consultes per obtenir dades de fiabilitat física del disc:
+   ```powershell
+   Get-PhysicalDisk | Select-Object DeviceId, FriendlyName, MediaType, HealthStatus, OperationalStatus
+   Get-StorageReliabilityCounter | Select-Object DeviceId, Temperature, ReadErrorsTotal, WriteErrorsTotal, Wear
+   ```
+2. Analitza la sortida de la comanda:
+   - Quin valor mostra la columna `MediaType` (`SSD` o `HDD`)?
+   - Quina temperatura actual en graus Celsius registra la unitat? A partir de quina temperatura ($>60\text{ °C}$) comença a degradar-se el rendiment tèrmic d'un SSD NVMe (*Thermal Throttling*)?
+   - Si la columna `Wear` (percentatge de desgast) marca un $15\%$, quin percentatge de vida útil roman disponible a la unitat?
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Protocol integral de neteja preventiva de disc en Windows
+- **Objectiu:** Executar un procediment metòdic de manteniment recuperant el màxim espai de disc possible.
+- **Procediment de taller:**
+  1. Consulta l'espai lliure inicial de la unitat `C:` (`df` o explorador) i anota'l a la fitxa tècnica.
+  2. Executa el netejador oficial avançat de Windows:
+     - Prem `Windows + R`, escriu `cleanmgr` i selecciona la unitat `C:`.
+     - Fes clic a **Neteja els fitxers del sistema** i marca totes les opcions (especialment *Neteja de Windows Update* i *Fitxers temporals*). Executa la neteja.
+  3. Purga manualment els fitxers temporals volàtils d'usuari:
+     - Prem `Windows + R`, escriu `%temp%` i prem *Intro*.
+     - Selecciona tots els arxius (`Ctrl + E`) i prem `Maj + Supr` per esborrar-los de forma permanent (omet els que el sistema indique que estan en ús per programes oberts).
+  4. Configura el **Sensor d'emmagatzematge** a *Configuració* $\rightarrow$ *Emmagatzematge*: activa la neteja automàtica setmanal i la supressió de la paperera després de 14 dies.
+  5. Anota l'espai lliure final i calcula quants gigabytes s'han recuperat amb el protocol.
+
+#### Repte 2: Resolució d'incidència d'embús a la cua d'impressió (*Print Spooler*)
+- **Objectiu:** Solucionar una de les avaries més freqüents en entorns administratius utilitzant la consola de serveis.
+- **Situació:** En enviar un document de 100 pàgines, la impressora s'encalla i cap ordinador de la xarxa pot imprimir perquè la cua de treballs ha quedat congelada en estat *"S'està suprimint..."*:
+  1. Obre la consola de símbol del sistema (`cmd.exe`) com a administrador.
+  2. Atura el servei de cua d'impressió teclejant:
+     ```cmd
+     net stop spooler
+     ```
+  3. Navega fins a la carpeta del sistema on Windows emmagatzema els treballs d'impressió pendents en format temporal:
+     ```cmd
+     del /Q /F C:\Windows\System32\spool\PRINTERS\*.*
+     ```
+  4. Torna a iniciar el servei de cua d'impressió:
+     ```cmd
+     net start spooler
+     ```
+  5. Obre la cua de la impressora (`control printers`) i comprova que apareix completament neta i llesta per rebre nous documents de treball.
+
+#### Repte 3: Script automatitzat de restabliment de Windows Update
+- **Objectiu:** Crear una eina tècnica en fitxer `.bat` per resoldre fallades d'actualitzacions bloquejades.
+- **Procediment tècnic:**
+  1. Obre el Bloc de notes i redacta el següent script de manteniment:
+     ```bat
+     @echo off
+     echo ============================================
+     echo RESTABLIMENT DE WINDOWS UPDATE - TALLER FPB
+     echo ============================================
+     echo 1. Aturant serveis d'actualitzacio...
+     net stop wuauserv
+     net stop bits
+     net stop cryptsvc
+
+     echo 2. Purgant memoria cau de descarregues...
+     rmdir /s /q C:\Windows\SoftwareDistribution\Download
+     mkdir C:\Windows\SoftwareDistribution\Download
+
+     echo 3. Reiniciant serveis...
+     net start cryptsvc
+     net start bits
+     net start wuauserv
+
+     echo ============================================
+     echo Protocol completat. Comprova actualitzacions!
+     pause
+     ```
+  2. Guarda l'arxiu a l'escriptori amb el nom `Repara_Update.bat` (triant tipus *Tots els fitxers*).
+  3. Executa l'script fent clic dret $\rightarrow$ *Executa com a administrador*.
+  4. Obre Windows Update i comprova com torna a descarregar la llista de pegats des de zero sense l'error anterior.
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He alliberat espai en disc mitjançant `cleanmgr.exe`, buidat de `%temp%` i configurat el Sensor d'emmagatzematge.
+- [ ] He explicat per què s'ha de desfragmentar un disc mecànic HDD i per què MAI s'ha de desfragmentar un disc SSD.
+- [ ] He descrit la funció de la comanda TRIM per a la recollida de residus en xips de memòria flash.
+- [ ] He interpretat els paràmetres de salut S.M.A.R.T. (temperatura, hores d'ús, sectors reassignats i TBW).
+- [ ] He utilitzat l'Administrador de tasques (`taskmgr`) i `htop` per identificar processos que saturen la CPU o la RAM.
+- [ ] He deshabilitat aplicacions d'impacte alt a l'inici per reduir el temps d'arrencada de l'equip.
+- [ ] He gestionat serveis de sistema (`services.msc`, `net stop/start spooler`) i resolt errors de Windows Update.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Alliberament d'espai en disc** | Executa neteges profundes de fitxers de sistema, temporals d'usuari i configura el Sensor d'emmagatzematge amb criteri. | Utilitza `cleanmgr` i buida la carpeta `%temp%` de forma autònoma recuperant gigabytes d'espai. | Buida la paperera de reciclatge però oblida els fitxers temporals de sistema o actualitzacions. | Desconeix com alliberar espai o intenta esborrar carpetes protegides del sistema per guanyar espai. |
+| **Manteniment SSD (TRIM) vs HDD** | Justifica el funcionament de TRIM, la desfragmentació mecànica i calcula la vida útil d'un SSD en TBW amb rigor matemàtic. | Comprèn per què no s'ha de desfragmentar un SSD i sap interpretar l'estat S.M.A.R.T. | Recorda que els SSD no es desfragmenten però no sap explicar per què ni què és TRIM. | Desfragmenta unitats SSD de forma reiterada o confon HDD amb SSD. |
+| **Telemetria de rendiment (CPU/RAM)** | Identifica a l'acte colls d'ampolla en CPU, RAM o disc a `taskmgr` i `htop`, finalitzant tasques bloquejades amb seguretat. | Utilitza l'Administrador de tasques per detectar processos amb consum alt i sap ordenar columnes. | Obre l'Administrador de tasques però li costa interpretar els percentatges de CPU i memòria. | No sap com esbrinar per què l'ordinador va lent o tanca processos del sistema crítics. |
+| **Optimització d'arrencada i serveis** | Audita aplicacions d'inici reduint temps de càrrega i resol problemes de serveis en segon pla (Spooler) per consola. | Deshabilita programes d'impacte alt a l'inici i sap reiniciar un servei encallat des de `services.msc`. | Deshabilita aplicacions però no sap diferenciar si una aplicació és necessària per al sistema. | Deshabilita l'antivirus a l'inici o és incapaç de localitzar la pestanya d'inici. |
+| **Windows Update i pegats de seguretat** | Diferencia pegats de seguretat d'actualitzacions de característiques i repara errors de descàrrega mitjançant scripts de consola. | Cerca i instal·la actualitzacions des de Windows Update i programa reinicis en hores no actives. | Actualitza el sistema des de la interfície bàsica però s'encalla quan apareix un codi d'error. | Desactiva completament les actualitzacions deixant l'equip exposat a forats de seguretat. |
+
 

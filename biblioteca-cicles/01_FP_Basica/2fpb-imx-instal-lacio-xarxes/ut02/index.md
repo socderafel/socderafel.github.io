@@ -11,6 +11,85 @@ next_label: "2.1 ➡️"
 
 Tipus de cables (UTP, FTP, STP), categories (Cat 5e, 6, 6a), connectors RJ45 i keystone, codis de colors T568A i T568B, eines de taller, crimpat de cables directes i creuats i comprovació amb tester.
 
+<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="g-utp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-cat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-col" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-tool" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Capçalera -->
+  <text x="430" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700" letter-spacing="1">CABLEJAT DE PARELL TRENAT: TIPUS, CATEGORIES I CONECTORITZAT T568B</text>
+  <text x="430" y="50" text-anchor="middle" fill="#94a3b8" font-size="12">Blindatges UTP/FTP/STP, especificacions Cat 5e/6/6a, pinout 8P8C i verificació de continuïtat</text>
+
+  <!-- Bloc 1: Tipus de Blindatge -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-utp)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🛡️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Blindatge EMI</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Construcció Física</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• UTP: Sense blindatge</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• FTP: Làmina global</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• STP: Malla + làmines</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Coberta: LSZH ignífuga</text>
+  </g>
+
+  <!-- Bloc 2: Categories -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-cat)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">📊</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Categories Dades</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Freqüència / Rendiment</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Cat 5e: 100 MHz (1 Gbps)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Cat 6: 250 MHz (1-10G)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Cat 6a: 500 MHz (10G 100m)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Màxim segment: 100 m</text>
+  </g>
+
+  <!-- Bloc 3: Codi T568B -->
+  <g transform="translate(435, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-col)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🎨</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Codi T568B (8P8C)</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Ordre de Pins 1-8</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">1.TB 2.T 3.VB 4.Bl</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">5.BlB 6.V 7.MB 8.M</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Directe: B a ambdós caps</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Creuat: T568A i T568B</text>
+  </g>
+
+  <!-- Bloc 4: Eines i Verificació -->
+  <g transform="translate(640, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-tool)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">🔧</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Eines i Diagnòstic</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Equipament de Taller</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Pelacables circular</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Crimpadora RJ45 (8P)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Impactadora Keystone IDC</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Tester de LEDs 1-8</text>
+  </g>
+</svg>
+</div>
+
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
@@ -231,4 +310,100 @@ Durant el procés de creació de cables de xarxa en el taller, és molt habitual
 > - Guarda els sobrants de plàstic i puntes de coure a la paperera de reciclatge del taller en finalitzar la sessió.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Càlcul de resistència elèctrica de bucle i atenuació en coure
+Un cable de parell trenat UTP Cat 6 utilitza conductors de coure amb calibre estàndard AWG 24, amb una secció de $S \approx 0{,}205\text{ mm}^2$ i una resistivitat elèctrica de $\rho = 0{,}0172\,\Omega\cdot\text{mm}^2/\text{m}$.
+1. Calcula la resistència d'un únic fil de coure d'una tirada de $80\text{ metres}$ aplicant la fórmula:
+   $$R = \rho \cdot \frac{L}{S}$$
+2. En una transmissió dúplex sobre un parell, el corrent va per un fil i torna per l'altre (bucle complet d'anada i tornada: $L_{\text{total}} = 2 \cdot L$). Quina és la resistència total del bucle de $80\text{ m}$?
+3. Si la resistència màxima permesa per les normes ANSI/TIA per a un canal de $100\text{ metres}$ és de $18{,}8\,\Omega$, el cable de $80\text{ metres}$ calculat es troba dins dels paràmetres normatius?
+4. Per què no és permès estendre una tirada de coure horitzontal a $140\text{ metres}$ sense utilitzar un repetidor o switch intermedi?
+
+#### Exercici 2: Diagnòstic de patrons de fallada en el comprovador de cables (Tester)
+En el taller d'FP Bàsica es verifiquen tres cables acabats de conectoritzar. Analitza la seqüència de LEDs observada al tester (Master vs Remote) i respon:
+- **Cable 1:**
+  - Master: `1 - 2 - 3 - 4 - 5 - 6 - 7 - 8`
+  - Remote: `1 - 2 - [apagat] - 4 - 5 - 6 - 7 - 8`
+  - *Diagnòstic:* Quin problema mecànic presenta el connector i com es corregeix?
+- **Cable 2:**
+  - Master: `1 - 2 - 3 - 4 - 5 - 6 - 7 - 8`
+  - Remote: `3 - 6 - 1 - 4 - 5 - 2 - 7 - 8`
+  - *Diagnòstic:* Quin tipus de cable s'ha construït (directe o creuat)? Justifica la resposta comparant els parells T568A i T568B.
+- **Cable 3:**
+  - Master: `1 - 2 - 3 - 4 - 5 - 6 - 7 - 8`
+  - Remote: `1 - 2 - (3 i 4 alhora) - (3 i 4 alhora) - 5 - 6 - 7 - 8`
+  - *Diagnòstic:* Quina errada elèctrica interna s'ha produït entre els conductors 3 i 4?
+
+#### Exercici 3: Dimensionament de material i desglossament de bobines per a una planta d'oficines
+Es requereix realitzar el cablejat horitzontal d'una nova oficina amb 16 llocs de treball dobles (dues preses RJ45 per lloc: 1 per a ordinador i 1 per a telèfon IP).
+1. Quants metres de cable i quantes preses Keystone femella es necessiten en total si la distància mitjana des del rack fins a cada lloc és de $28\text{ metres}$, i s'aplica un coeficient de sobredimensionament del $10\%$ per a corbes i baixants de canaleta?
+2. Si el cable UTP Cat 6 es ven en caixes dispensadores estàndard de $305\text{ metres}$ ($1000\text{ peus}$):
+   $$\text{Nombre de caixes} = \left\lceil \frac{\text{Metres totals}}{305} \right\rceil$$
+   Quantes caixes completes de cable cal demanar al proveïdor?
+3. Quants metres de cable sobrant romandran en l'última caixa com a romanent per a pegats i manteniment futur?
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Muntatge artesanal d'un latiguillo directe Cat6 T568B
+- **Objectiu:** Construir un cable de pegat flexible d'1 metre amb connectors RJ45 mascle complint els estàndards mecànics d'alta resistència.
+- **Eines:** Pelacables rotatori, tisores d'electricista, crimpadora RJ45 amb carraca i comprovador de continuïtat.
+- **Guia de realització:**
+  1. Pela exactament $25\text{ mm}$ de coberta sense marcar el coure.
+  2. Talla la creu plàstica separadora de Cat6 arran de la coberta.
+  3. Ordena els 8 conductors segons la norma **T568B** (TB, T, VB, Bl, BlB, V, MB, M).
+  4. Realitza un tall net i recte a $13\text{ mm}$ de la coberta.
+  5. Introdueix els conductors fins al topall frontal transparent del connector RJ45.
+  6. Comprova que la funda exterior entra $5\text{ mm}$ dins del connector i queda sota la falca plàstica de pressió.
+  7. Crimpa l'extrem amb força constant fins a l'alliberament automàtic de la carraca.
+  8. Repeteix en l'altre extrem i verifica que la seqüència `1-8` al tester és $100\%$ contínua i sincrònica.
+
+#### Repte 2: Conectorització d'una presa Keystone RJ45 femella IDC
+- **Objectiu:** Muntar una presa femella de roseta mural o panell de pegat utilitzant tecnologia de desplaçament d'aïllant IDC.
+- **Eines:** Pelacables, tisores i eina d'impacte tipus Krone (punch-down tool) regulable.
+- **Procediment de taller:**
+  1. Pela $35\text{ mm}$ de la coberta del cable UTP rígid d'instal·lació.
+  2. Introdueix el cable per la part posterior del mòdul Keystone sense destrenar els parells.
+  3. Guia cada parell de fils cap a la seua ranura IDC corresponent seguint el codi de colors **B** serigrafiat en el lateral del connector.
+  4. Mantín el trenat del cable fins a menys de $6\text{ mm}$ de la fulla metàl·lica per minimitzar el soroll creuat (*near-end crosstalk*).
+  5. Posiciona l'eina d'impacte perpendicularment a la ranura amb la ganiveta de tall cap a l'exterior del mòdul.
+  6. Fes pressió fins a escoltar el tret mecànic de l'impactador, verificant que el fil queda connectat i el sobrant tallat a ras.
+  7. Col·loca la tapa protectora antipols i encaixa el keystone en la placa mural de paret.
+
+#### Repte 3: Control de qualitat i auditoria de rendiment amb targeta de xarxa
+- **Objectiu:** Demostrar l'impacte d'un mal contacte o cablejat defectuós en la negociació de velocitat del sistema operatiu.
+- **Eines:** Ordinador de taller connectat a switch Gigabit, cable fabricat per l'alumne i consola de xarxa.
+- **Procediment de verificació:**
+  1. Connecta el cable fabricat entre l'equip d'usuari i la presa del switch.
+  2. Accedeix a les propietats de xarxa de Windows: `Configuració > Xarxa i Internet > Ethernet`.
+  3. Comprova el camp **Velocitat de l'enllaç (recepció/transmissió)**:
+     - Indica `1000/1000 (Mbps)`?
+     - Si indica `100/100 (Mbps)`, significa que els parells Gigabit (blau o marró) presenten un mal contacte i la targeta ha degradat l'enllaç a Fast Ethernet.
+  4. Executa una prova de transferència de dades d'un fitxer gran des d'un recurs compartit de l'aula i anota la velocitat mitjana obtinguda (en $\text{MB/s}$).
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He utilitzat el pelacables sense fer cap osca ni tallar l'aïllant dels conductors de coure interns.
+- [ ] He respectat rigorosament l'ordre de colors T568B abans de crimpar.
+- [ ] La funda exterior del cable queda fixada fermament per la falca de plàstic dins del connector RJ45.
+- [ ] El comprovador de cables (tester) mostra la seqüència completa del pin 1 al pin 8 sense fallades.
+- [ ] He deixat la presa Keystone neta, amb els sobrants tallats a ras i sense destrenar en excés els parells.
+- [ ] He recollit els sobrants de plàstic i coure al contenidor de reciclatge corresponent.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Identificació de cables i normes** | Reconeix sense dubte blindatges (UTP/FTP/STP), categories i la diferència entre T568A i T568B. | Identifica correctament categories i codis de colors amb xicotets dubtes en blindatges. | Reconeix la norma T568B i la categoria bàsica del cable utilitzat. | Confon les categories de cable i no sap distingir entre les normes T568A i T568B. |
+| **Destresa en el crimpat de connectors RJ45** | Pela el cable amb precisió, alinea els fils perfectament i assegura la coberta sota la falca amb acabat professional. | Crimpa amb èxit mantenint la coberta dins del connector amb xicotets desajustaments estètics. | Construeix el cable funcionalment encara que la coberta queda lleugerament fluixa o poc introduïda. | Danya els conductors, inverteix colors o deixa els fils a l'aire fora del connector. |
+| **Conectorització de mòduls Keystone (IDC)** | Empra l'eina d'impacte amb destresa, manté el trenat mínim i talla el sobrant sense danyar la carcassa. | Conectoritza el mòdul correctament respectant el codi de colors B i el tall de sobrants. | Insereix els conductors correctament però destrena excessivament el cable abans de l'impacte. | Talla conductors interns, utilitza colors erronis o trenca les ranures IDC per pressió incorrecta. |
+| **Verificació i resolució d'avaries amb tester** | Interpreta a l'instant qualsevol patró de LEDs del tester (obert, creuat, curtcircuit) i aplica la solució ràpidament. | Detecta fallades de continuïtat amb el tester i corregeix el connector afectat. | Utilitza el tester per comprovar si el cable funciona però necessita suport per interpretar patrons erronis. | No sap utilitzar el tester ni interpretar la seqüència de llums LED. |
+| **Càlcul i dimensionament de canalitzacions** | Resol els càlculs de resistència, necessitats de cable i caixes sense errades matemàtiques. | Calcula les necessitats de metres de cable i nombre de caixes de forma correcta. | Realitza càlculs bàsics amb dificultats per aplicar el coeficient de sobredimensionament. | Incapaç de calcular les necessitats de metres o caixes per a una instal·lació. |
 

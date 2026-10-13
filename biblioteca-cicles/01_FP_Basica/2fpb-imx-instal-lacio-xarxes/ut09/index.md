@@ -11,6 +11,85 @@ next_label: "9.1 ➡️"
 
 Projecte complet de final de mòdul: anàlisi de necessitats i plànol d'ubicació, pressupost de materials, desplegament de canaleta i rosetes keystone, conectoritzat al rack i switch, configuració d'equips i Wi-Fi, i proves finals de rendiment.
 
+<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="g-pln" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-mat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-ins" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-tst" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Capçalera -->
+  <text x="430" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700" letter-spacing="1">PROJECTE INTEGRADOR: INSTAL·LACIÓ I CERTIFICACIÓ DE XARXA D'OFICINA</text>
+  <text x="430" y="50" text-anchor="middle" fill="#94a3b8" font-size="12">Disseny en planta, pressupost, estesa de coure Cat 6, connexió a rack 9U i auditories de rendiment</text>
+
+  <!-- Bloc 1: Disseny i Plànol -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-pln)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">📐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Requisits i Plànol</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Distribució d'Oficina</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• 14 preses RJ45 totals</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• 4 administració (8 preses)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Direcció (PC + impressora)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• AP Wi-Fi central al sostre</text>
+  </g>
+
+  <!-- Bloc 2: Pressupost i Materials -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-mat)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">📋</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Llista de Materials</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Aprovisionament</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Rack mural de 9U (19")</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Bobina Cat 6 LSZH 305m</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Patch panel 24p + Switch</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Marge de seguretat +15%</text>
+  </g>
+
+  <!-- Bloc 3: Desplegament Físic -->
+  <g transform="translate(435, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-ins)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🏗️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Muntatge Físic</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Instal·lació Estructurada</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Canaleta PVC a biaix 45°</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Keystones T568B impactats</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Patch panel ordenat 1U</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Injectador PoE per a l'AP</text>
+  </g>
+
+  <!-- Bloc 4: Proves i Certificació -->
+  <g transform="translate(640, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-tst)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">✅</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Certificació Final</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Protocol de Proves</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Tester 1-8 en 14 preses</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Subxarxa 192.168.10.0/24</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Transferència >90 MB/s</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Memòria tècnica de lliurament</text>
+  </g>
+</svg>
+</div>
+
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
@@ -167,14 +246,111 @@ L'última fase abans de donar per finalitzada la instal·lació i lliurar-la al 
 ---
 
 ### Estructura de la Memòria Tècnica Final
-Com a projecte de final de curs, cada grup d'alumnes lliura un dossier tècnic que inclou:
+Com a documentació de lliurament professional, el dossier tècnic de la instal·lació inclou:
 1. **Portada i índex del projecte.**
 2. **Plànol a escala de l'oficina** amb el traçat de canaletes i ubicació de preses i rack.
-3. **Pressupost econòmic detallat** dels materials emprats.
+3. **Pressupost econòmic detallat** dels materials emprats i mà d'obra.
 4. **Taula de registre del panell de pegat** (on s'indica a quin despatx i taula va cada port de l'1 al 14).
 5. **Taula d'adreçament IP** i paràmetres de la xarxa Wi-Fi.
 6. **Full de resultats del test de continuïtat** firmat pels tècnics instal·ladors.
-7. **Conclusions personals** i dificultats superades durant el muntatge pràctic.
+7. **Conclusions tècniques** i protocols de manteniment preventiu recomanats.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Càlcul de pressupost econòmic complet amb IVA i mà d'obra tècnica
+A partir de la llista de materials de la unitat, l'empresa d'instal·lacions ha de generar la factura proforma per al client *Assessoria Nova SL*:
+- **Base imposable de materials:** $B_{\text{mat}} = 595{,}90\text{ €}$
+- **Mà d'obra d'instal·lació:**
+  - 2 tècnics de grau bàsic de telecomunicacions durant 2 jornades de 6 hores cadascuna ($12\text{ hores}$ per tècnic).
+  - Tarifa horària de mà d'obra tècnica: $26{,}00\text{ €/hora}$.
+- **Impost sobre el Valor Afegit (IVA):** Tipus general vigent del $21\%$.
+
+1. Calcula l'import total de mà d'obra:
+   $$\text{Total Mà d'Obra} = 2 \cdot 12\text{ hores} \cdot 26{,}00\text{ €/hora}$$
+2. Calcula la base imposable total del projecte ($\text{Base Total} = B_{\text{mat}} + \text{Total Mà d'Obra}$).
+3. Calcula la quota d'IVA del $21\%$ corresponent a la factura:
+   $$\text{Quota IVA} = \text{Base Total} \cdot 0{,}21$$
+4. Quin és el preu final de l'oferta comercial (IVA inclòs) que haurà d'abonar el client?
+
+#### Exercici 2: Balanç de transferència d'arxius i rendiment d'enllaç Gigabit
+En finalitzar la jornada, el servidor de l'oficina ha de realitzar una còpia de seguretat integral d'una base de dades SQL que ocupa una mida de fitxer de $16\text{ GB}$ cap a un dispositiu d'emmagatzematge connectat a la xarxa (NAS):
+1. Converteix la grandària del fitxer de $16\text{ GB}$ a Megabytes ($\text{MB}$), sabent que $1\text{ GB} = 1024\text{ MB}$.
+2. Si la transferència es realitza a través del cablejat Cat 6 Gigabit amb una taxa sostinguda real de $105\text{ MB/s}$, quant de temps trigarà en segons i en minuts?
+   $$T = \frac{\text{Mida (MB)}}{\text{Velocitat (MB/s)}}$$
+3. Si un treballador intenta fer la mateixa transferència des d'un ordinador portàtil connectat a la xarxa Wi-Fi a través de dues parets de formigó armat, amb una taxa sostinguda de només $18\text{ MB/s}$, quant de temps trigarà en minuts?
+4. Compara ambdós temps i justifica tècnicament per què els equips fixos de treball crítics han d'anar sempre cablejats en coure i mai per Wi-Fi.
+
+#### Exercici 3: Disseny d'esquema d'adreçament IP i paràmetres de xarxa
+Per a la subxarxa de l'oficina `192.168.10.0/24`:
+1. Completa la taula amb l'assignació tècnica estàndard:
+   - Adreça de xarxa:
+   - Màscara de subxarxa en format decimal i binari:
+   - Adreça IP del Router d'eixida (Gateway):
+   - Adreça IP del Punt d'Accés Wi-Fi (AP):
+   - Adreça IP de la impressora làser de xarxa:
+   - Adreça IP del servidor de seguretat NAS:
+   - Rang de reserva d'adreces estàtiques (de la `.1` a la `.30`):
+   - Rang del conjunt dinàmic DHCP per als ordinadors d'usuaris (de la `.31` a la `.200`):
+   - Adreça de difusió (*Broadcast*):
+2. Explica per què la impressora i el NAS han de tindre obligatòriament una adreça IP estàtica fora del rang DHCP i mai una adreça dinàmica.
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Muntatge mecànic integral de canaleta perimetral amb unió a 45°
+- **Objectiu:** Executar la instal·lació física de canalització simulant el racó d'una oficina comercial.
+- **Eines:** Caixa d'ingletes, serra d'arquet per a plàstic, llima fina de fuster, flexòmetre, nivell de bombolla i tornavís.
+- **Procediment de taller:**
+  1. Mesura dos trams de canaleta de $50\text{ cm}$ cadascun.
+  2. Introdueix la tapa i la base de la canaleta en la caixa d'ingletes i fes un tall precís a $45^\circ$ a l'extrem d'unió.
+  3. Llima suaument les rebaves de plàstic amb la llima plana per aconseguir una vora llisa.
+  4. Munta els dos trams en angle recte de $90^\circ$ sobre el tauler de proves comprovant que la cantonada encaixa a la perfecció sense escletxes.
+  5. Caragola les bases i assegura't que les tapes tanquen a pressió sense ensopegar en el vèrtex.
+
+#### Repte 2: Conectorització completa i organització de bastidor Rack
+- **Objectiu:** Integrar el panell de pegat, el commutador de 16 ports i l'organització del cablejat frontal i posterior.
+- **Materials:** Armari rack de laboratori, panell de pegat Cat 6, switch Gigabit, 6 cables UTP Cat 6, 6 latiguillos de 0,5 m i brides de velcro.
+- **Instruccions:**
+  1. Fixa el panell de pegat a la unitat $1U$ i el switch a la unitat $2U$ utilitzant femelles gàbia M6 i caragols amb volandera de plàstic.
+  2. Introdueix els 6 cables per la part posterior i conectoritza'ls als ports 1 a 6 seguint la norma **T568B**.
+  3. Agrupa els cables posteriors amb brides de velcro fixades a la barra de suport de descàrrega de tracció.
+  4. Realitza el pegat frontal (*patching*) connectant amb latiguillos curts cada port del panell al seu port de switch corresponent, passant-los per les guies laterals.
+  5. Comprova que l'acabat visual és net, ordenat i professional, sense cables tensats ni penjolls solts.
+
+#### Repte 3: Banc de proves de certificació i confecció de la memòria tècnica
+- **Objectiu:** Realitzar el protocol oficial de control de qualitat dels 6 enllaços construïts i documentar els resultats.
+- **Eines:** Tester de xarxa RJ45, ordinadors de laboratori, comandes de diagnòstic i plantilla de memòria d'instal·lació.
+- **Procediment de certificació:**
+  1. Comprova amb el tester cadascun dels 6 enllaços entre roseta i patch panel. Registra a la taula: `Port 1: PASS`, `Port 2: PASS`... etc.
+  2. Connecta dos equips d'aula a les preses 1 i 2.
+  3. Comprova la recepció d'IP automàtica per DHCP.
+  4. Envia 50 paquets `ping` entre ells verificant $0\%$ de pèrdua de paquets i temps inferior a $1\text{ ms}$.
+  5. Copia un arxiu compartit gran i mesura amb l'Administrador de tasques (pestanya *Rendiment > Ethernet*) la velocitat sostinguda en Mbps.
+  6. Emplena el document de memòria tècnica final adjuntant el plànol, pressupost i full de certificació firmat.
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He calculat el pressupost complet desglossant materials, mà d'obra i la quota d'IVA del 21%.
+- [ ] He calculat els temps de transmissió demostrant la superioritat del cablejat Gigabit enfront del Wi-Fi.
+- [ ] He dissenyat el pla d'adreçament IP separant equips estàtics de la reserva DHCP.
+- [ ] He executat talls a biaix a 45° en les canaletes amb acabat net sense rebaves.
+- [ ] He organitzat el cablejat de l'armari rack utilitzant guies i brides de velcro segons l'estàndard professional.
+- [ ] He verificat i certificat el 100% dels ports instal·lats registrant els resultats a la memòria tècnica.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Planificació, plànol i pressupost econòmic** | Dissenya el plànol a escala, dimensiona materials amb marge de reserva i calcula costos, mà d'obra i IVA amb exactitud. | Elabora el pressupost i plànol correctament amb xicotets desajustaments en càlculs d'hores. | Fa un llistat de materials bàsic però omet la mà d'obra o calcula malament l'IVA. | Incapaç de fer una llista de materials o calcular el pressupost d'una instal·lació. |
+| **Càlcul de rendiment i pla d'adreçament** | Calcula temps de còpia amb rigor matemàtic i dissenya un pla d'adreçament IP òptim diferenciant DHCP d'estàtica. | Dissenya la taula d'IPs correctament i calcula els temps bàsics de transmissió. | Assigna les IPs bàsiques amb dubtes en el rang d'exclusió DHCP. | Confon adreces de xarxa i no sap planificar l'adreçament d'una empresa. |
+| **Destresa en canalitzacions i rosetes** | Realitza talls a 45° perfectes, canaleta impecablement anivellada i conectoritzat keystone T568B sòlid i net. | Munta la canaleta i rosetes de forma funcional amb bon ajustament visual de cantonades. | La canaleta queda fixada però amb petits desajustaments als biaixos o ranures visibles. | Canaleta trencada, cantonades desencaixades o rosetes soltes. |
+| **Muntatge i organització de l'armari Rack** | Fixa patch panel i switch sòlidament, pentina el cablejat amb velcro i manté un ordre estètic i tècnic excel·lent. | Organitza el rack correctament utilitzant guies i latiguillos curts ordenats. | Munta els equips al rack però deixa cables creuats o fluixos sense bridar. | Desordre total de cables al rack o equips mal caragolats amb perill de caiguda. |
+| **Certificació i memòria tècnica final** | Realitza totes les proves de continuïtat, ping i amplada de banda, i redacta un dossier tècnic complet i professional. | Certifica els ports i lliura la memòria tècnica amb tots els apartats requerits. | Lliura la memòria amb taules incompletes o sense certificar tots els ports instal·lats. | No lliura la documentació tècnica o la instal·lació no supera les proves de continuïtat. |
 

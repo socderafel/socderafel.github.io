@@ -11,6 +11,85 @@ next_label: "6.1 ➡️"
 
 L'adreça IPv4 (estructura de 32 bits, classes, públiques vs privades), màscara de subxarxa, porta d'enllaç, servidors DNS, DHCP, ordres de diagnòstic en terminal (ping, ipconfig, tracert, nslookup) i resolució de conflictes d'IP.
 
+<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="g-ip4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-msk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-dns" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-cli" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Capçalera -->
+  <text x="430" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700" letter-spacing="1">ADREÇAMENT IPv4: ESTRUCTURA, MÀSCARES, SERVEIS DNS/DHCP I DIAGNÒSTIC CLI</text>
+  <text x="430" y="50" text-anchor="middle" fill="#94a3b8" font-size="12">Format 32 bits, classes RFC 1918, procés DORA, porta d'enllaç i protocol ICMP</text>
+
+  <!-- Bloc 1: Estructura IPv4 -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-ip4)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🔢</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Estructura IPv4</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">32 Bits (4 Octets)</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• NetID + HostID</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Classes A, B i C</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Privades: 10/8, 192.168/16</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Loopback: 127.0.0.1</text>
+  </g>
+
+  <!-- Bloc 2: Màscara i Subxarxes -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-msk)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🎭</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Màscara & Rang</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Delimitació Lògica</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• /24 = 255.255.255.0</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Xarxa: .0 (identifica)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Broadcast: .255 (tothom)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Hosts útils: 254 equips</text>
+  </g>
+
+  <!-- Bloc 3: DNS i DHCP -->
+  <g transform="translate(435, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-dns)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🌐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Serveis de Xarxa</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">DNS & Autoconfiguració</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Gateway: Sortida Internet</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• DNS: Noms a IP (8.8.8.8)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• DHCP: Procés DORA</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Estàtica vs Dinàmica</text>
+  </g>
+
+  <!-- Bloc 4: Diagnòstic CLI -->
+  <g transform="translate(640, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-cli)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">💻</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Diagnòstic CLI</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Ordres de Consola</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• ipconfig /all, /renew</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• ping: Comprovació ICMP</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• tracert: Salts fins al destí</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• nslookup: Resolució noms</text>
+  </g>
+</svg>
+</div>
+
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
@@ -256,4 +335,135 @@ Obre el símbol del sistema (CMD) i executa en ordre aquests quatre passos fonam
    - Executa `ipconfig /renew` i comprova que l'alerta desapareix i la connectivitat es restableix.
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Anàlisi d'adreçament IPv4, classe i conversió binària
+Analitza els tres escenaris d'adreçament IPv4 següents:
+- Equip A: IP `10.50.100.25` amb màscara `255.0.0.0` (/8)
+- Equip B: IP `172.16.4.120` amb màscara `255.255.0.0` (/16)
+- Equip C: IP `192.168.10.75` amb màscara `255.255.255.0` (/24)
+
+1. Determina per a cadascun dels tres equips:
+   - Classe històrica (A, B o C) i si es tracta d'un rang d'adreces privades (RFC 1918) o públiques d'Internet.
+   - Adreça de xarxa (Net ID amb bits de host a 0).
+   - Adreça de difusió (*Broadcast* amb bits de host a 1).
+   - Primera adreça útil i última adreça útil assignable a un dispositiu amfitrió.
+2. Converteix l'adreça de l'Equip C (`192.168.10.75`) a codi binari pur de 32 bits, desglossant cadascun dels quatre octets de 8 bits.
+3. Si a la mateixa xarxa que l'Equip C configurem un nou PC amb la IP `192.168.11.75` i la mateixa màscara `/24`, podran comunicar-se directament a través d'un switch sense passar per cap router? Raona la resposta.
+
+#### Exercici 2: Càlcul de capacitat d'amfitrions i dimensionament de subxarxes
+En una xarxa informàtica, el nombre de dispositius útils assignables a una subxarxa depèn exclusivament dels bits d'amfitrió ($h$) restants a la màscara:
+$$N_{\text{útils}} = 2^h - 2$$
+(on es resten 2 per reservar l'adreça de xarxa i la de difusió).
+
+1. Completa la taula calculant els valors corresponents:
+   - Màscara `/24` ($h = 32 - 24 = 8\text{ bits}$): $2^8 - 2 =$ ? hosts útils.
+   - Màscara `/25` ($h = 32 - 25 = 7\text{ bits}$): $2^7 - 2 =$ ? hosts útils.
+   - Màscara `/26` ($h = 32 - 26 = 6\text{ bits}$): $2^6 - 2 =$ ? hosts útils.
+   - Màscara `/27` ($h = 32 - 27 = 5\text{ bits}$): $2^5 - 2 =$ ? hosts útils.
+2. Una acadèmia de formació té dues aules independents: l'Aula 1 té 26 ordinadors i l'Aula 2 té 14 ordinadors. Quina màscara de subxarxa mínima (longitud de prefix) cal triar per a cadascuna d'aquestes aules per no malgastar adreces IP?
+
+#### Exercici 3: Diagnòstic d'arbre de fallades per comandes CLI
+Un usuari d'un lloc de treball demana suport tècnic perquè *"no pot navegar per Internet"*. Com a tècnic, segueixes el procediment d'inspecció en 4 passos des de la consola de comandes:
+- **Pas 1:** `ping 127.0.0.1` $\rightarrow$ Respon amb èxit (`Temps < 1ms`).
+- **Pas 2:** `ping 192.168.1.55` (la seua pròpia IP) $\rightarrow$ Respon amb èxit.
+- **Pas 3:** `ping 192.168.1.1` (la porta d'enllaç) $\rightarrow$ Respon amb èxit.
+- **Pas 4:** `ping 8.8.8.8` (DNS públic d'Internet) $\rightarrow$ Respon amb èxit.
+- **Pas 5:** `ping www.google.es` $\rightarrow$ Retorna l'error: *"La sol·licitud de ping no va poder trobar l'amfitrió www.google.es"*.
+
+1. Què demostren els resultats positius dels passos 1, 2, 3 i 4? Està bé la targeta de xarxa? I el cable de xarxa? Té sortida a l'exterior?
+2. Quin és exactament l'origen del problema que impedeix a l'usuari obrir pàgines web segons l'error del Pas 5?
+3. Quina comanda de consola pots executar per verificar la IP dels servidors DNS configurats a l'equip?
+4. Com es pot resoldre l'avaria ràpidament des de les propietats de la targeta o per comanda?
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Configuració d'adreçament estàtic per consola PowerShell
+- **Objectiu:** Configurar manualment tots els paràmetres de xarxa d'una targeta sense emprar la interfície gràfica.
+- **Eines:** Finestra de PowerShell oberta amb privilegis d'Administrador.
+- **Comandes a executar:**
+  1. Identifica l'índex o nom de la interfície de xarxa Ethernet:
+     ```powershell
+     Get-NetAdapter
+     ```
+  2. Assigna una adreça IP fixa, màscara i porta d'enllaç (substitueix `Ethernet` pel nom del teu adaptador):
+     ```powershell
+     New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress "192.168.100.50" -PrefixLength 24 -DefaultGateway "192.168.100.1"
+     ```
+  3. Configura els servidors DNS de Google:
+     ```powershell
+     Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses ("8.8.8.8","8.8.4.4")
+     ```
+  4. Verifica que la configuració s'ha aplicat correctament:
+     ```powershell
+     Get-NetIPConfiguration
+     ```
+
+#### Repte 2: Captura del cicle de negociació DHCP (DORA)
+- **Objectiu:** Observar la petició, recepció i renovació d'adreça IP dinàmica del servidor DHCP de l'aula.
+- **Eines:** Terminal CMD o PowerShell.
+- **Passos guiats:**
+  1. Allibera l'adreça IP actual enviant un missatge de renúncia al servidor DHCP:
+     ```cmd
+     ipconfig /release
+     ```
+  2. Comprova amb `ipconfig` com l'adreça IPv4 queda en blanc (`0.0.0.0`). Intenta obrir el navegador per comprovar que no hi ha connexió.
+  3. Sol·licita una nova adreça al servidor DHCP iniciant el cicle DORA:
+     ```cmd
+     ipconfig /renew
+     ```
+  4. Executa:
+     ```cmd
+     ipconfig /all
+     ```
+  5. Anota a la memòria de pràctiques:
+     - Adreça IPv4 obtinguda.
+     - Adreça IP del servidor DHCP que t'ha atès.
+     - Data i hora d'obtenció de la concessió (*Lease Obtained*).
+     - Data i hora de caducitat de la concessió (*Lease Expires*).
+
+#### Repte 3: Resolució d'un incident de xarxa (Auditoria d'encaminament i DNS)
+- **Objectiu:** Utilitzar les eines `tracert` i `nslookup` per diagnosticar la ruta cap a servidors exteriors.
+- **Eines:** Consola de comandes de Windows.
+- **Instruccions:**
+  1. Executa un traçat de ruta cap a un servidor web de la Generalitat Valenciana:
+     ```cmd
+     tracert www.gva.es
+     ```
+  2. Compta quants salts d'encaminador (routers) travessen els teus paquets abans d'arribar a la destinació. Quin és el primer salt de la llista (ha de ser la teua porta d'enllaç local)?
+  3. Consulta la resolució de dominis amb `nslookup`:
+     ```cmd
+     nslookup www.gva.es 8.8.8.8
+     ```
+  4. Repeteix la consulta preguntant a un altre servidor DNS alternatiu (ex: `1.1.1.1`).
+  5. Buida la memòria cau DNS local per eliminar registres obsolets:
+     ```cmd
+     ipconfig /flushdns
+     ```
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He diferenciat clarament entre les adreces IP públiques i les adreces privades RFC 1918.
+- [ ] He calculat correctament les adreces de xarxa, difusió i hosts útils aplicant la màscara.
+- [ ] He configurat els paràmetres de xarxa tant en la interfície gràfica com per ordres de PowerShell.
+- [ ] He executat el protocol de diagnòstic amb `ping` en l'ordre lògic dels 4 passos.
+- [ ] He comprès les quatre fases del procés de concessió DHCP (DORA).
+- [ ] He utilitzat `tracert` i `nslookup` per analitzar l'encaminament i la resolució de noms.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Fonaments d'adreçament IPv4 i màscares** | Domina l'estructura de 32 bits, conversions binàries, classes, rangs privats i càlcul d'adreces de xarxa/broadcast. | Reconeix la classe, màscara /24 i adreces de xarxa amb xicotets dubtes en binari. | Identifica la IP i màscara bàsiques sense comprendre bé l'adreça de broadcast. | Confon adreces IP amb màscares i no sap distingir entre xarxa i host. |
+| **Càlcul de capacitat de subxarxa ($2^h - 2$)** | Calcula amb facilitat el nombre de hosts útils per a qualsevol longitud de prefix i dimensiona subxarxes. | Aplica la fórmula $2^h - 2$ de forma correcta per a prefixos habituals. | Calcula el límit de 254 equips per a /24 però té dificultats per canviar de màscara. | Incapaç de calcular el nombre d'equips que caben en una xarxa. |
+| **Configuració de xarxa (GUI i PowerShell)** | Configura IP, màscara, gateway i DNS amb solvència tant per entorn gràfic com per comandes avançades. | Configura la xarxa correctament en entorn gràfic i aplica comandes de PowerShell guiades. | Configura la targeta en entorn gràfic però necessita suport per utilitzar el terminal. | No sap localitzar la configuració de xarxa de Windows ni aplicar una IP fixa. |
+| **Diagnòstic sistemàtic amb Ping i CLI** | Segueix l'arbre de fallades lògic (127.0.0.1 $\rightarrow$ IP $\rightarrow$ Gateway $\rightarrow$ DNS) identificant l'origen de l'avaria a l'instant. | Utilitza el ping per verificar connexions i interpreta la majoria de missatges d'error. | Executa la comanda ping però no sap interpretar els missatges de temps d'espera esgotat. | No sap utilitzar el ping ni interpretar el seu resultat tècnic. |
+| **Resolució de serveis (DHCP, DNS, Tracert)** | Interpreta les fases DORA, registra concessions DHCP, empra `tracert` i resol incidències DNS amb èxit. | Executa `ipconfig /renew`, `flushdns` i `nslookup` comprenent la seua funció general. | Executa les comandes bàsiques per alliberar i renovar IP seguint la guia pas a pas. | Desconeix la funció del servidor DHCP o DNS en la connexió d'equips. |
 

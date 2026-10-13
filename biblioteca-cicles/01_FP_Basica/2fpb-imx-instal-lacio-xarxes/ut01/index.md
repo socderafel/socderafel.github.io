@@ -11,6 +11,85 @@ next_label: "1.1 ➡️"
 
 Concepte de xarxa informàtica, classificació segons l'abast geogràfic, topologies físiques i lògiques, models en capes (OSI i TCP/IP) i estàndards de comunicació.
 
+<div style="margin: 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="g-x-abs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-x-top" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-x-osi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-x-iee" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Capçalera -->
+  <text x="430" y="32" text-anchor="middle" fill="#f8fafc" font-size="16" font-weight="700" letter-spacing="1">FONAMENTS DE XARXES: CLASSIFICACIÓ, TOPOLOGIES I MODEL OSI/TCP-IP</text>
+  <text x="430" y="50" text-anchor="middle" fill="#94a3b8" font-size="12">Arquitectura d'interconnexió, àmbit geogràfic, flux de dades i estàndards IEEE</text>
+
+  <!-- Bloc 1: Abast Geogràfic -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-x-abs)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🌐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Abast Geogràfic</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Tipologia de Xarxa</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• PAN: Personal (<10 m)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• LAN: Local (Aula/Edifici)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• MAN: Ciutat metropolitana</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• WAN: Global (Internet)</text>
+  </g>
+
+  <!-- Bloc 2: Topologies -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-x-top)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">⭐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Topologies Físiques</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Distribució de Nodes</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Estrella: Switch central (LAN)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Bus: Cable coaxial compartit</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Anell: Pas de testimoni (Token)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Malla: Màxima redundància</text>
+  </g>
+
+  <!-- Bloc 3: Model OSI i TCP/IP -->
+  <g transform="translate(435, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-x-osi)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📑</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Model en Capes</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">OSI (7) vs TCP/IP (4)</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Capa 4: Transport (TCP/UDP)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Capa 3: Xarxa / Internet (IP)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Capa 2: Enllaç (MAC / Switch)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Capa 1: Física (Cables i senyals)</text>
+  </g>
+
+  <!-- Bloc 4: Estàndards IEEE -->
+  <g transform="translate(650, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-x-iee)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">📡</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Estàndards IEEE</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Normes de Connexió</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• IEEE 802.3: Ethernet cablejat</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• IEEE 802.11: Wi-Fi sense fil</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Adreça MAC: 48 bits física</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Detecció col·lisions CSMA/CD</text>
+  </g>
+</svg>
+</div>
+
 ### 📑 Apartats de la Unitat
 | Apartat | Contingut Temàtic | Accés Directe |
 | :---: | :--- | :---: |
@@ -209,53 +288,147 @@ La tecnologia Wi-Fi permet la comunicació sense fils mitjançant radiofreqüèn
 ## 1.5 Pràctica de laboratori: Identificació i esquema d'una xarxa local
 
 ### Objectiu de la Pràctica
-Reconèixer els components físics reals que conformen la xarxa local de l'aula de taller d'FP Bàsica i elaborar un esquema gràfic de la seua topologia.
+Reconèixer els components físics reals que conformen la xarxa local del taller d'informàtica, traçar les canalitzacions i elaborar un esquema tècnic detallat de la seua topologia física i lògica.
 
-### Materials Necessaris
-- Aula d'informàtica amb ordinadors connectats a la xarxa d'alumnat.
-- Armari rack de telecomunicacions de l'aula (obert pel professor/a per a inspecció visual).
-- Full de registre o aplicació de diagramació (draw.io, LibreOffice Draw o paper mil·limetrat).
+### Materials i Eines Necessàries
+- Estació de treball d'alumne connectada a la xarxa de taller.
+- Armari rack de telecomunicacions de 19 polzades (obert amb les degudes mesures de seguretat elèctrica).
+- Quadern de camp tècnic o programari de diagramació vectorial (draw.io o LibreOffice Draw).
+- Consola de comandes del sistema operatiu (PowerShell o CMD).
 
 ---
 
-### Procediment Pas a Pas
+### Procediment d'inspecció tècnica
 
-#### Pas 1: Inspecció del lloc de treball de l'alumne
-1. Mira sota la taula de l'ordinador: localitza el cable de xarxa que ix de la part posterior de la torre de l'equip.
-2. Identifica el connector: Comprova que té una pestanya de plàstic transparent (connector RJ45 mascle) inserit en la targeta de xarxa (NIC).
-3. Fixa't en els LEDs de la targeta de xarxa:
-   - LED verd continu: Hi ha enllaç físic (*Link* actiu).
-   - LED taronja/verd parpellejant: Hi ha trànsit o activitat de paquets (*Activity*).
-4. Segueix el cable: Mira cap a on es dirigeix. Entra en una canaleta de plàstic de la paret o va directament a una presa de paret (roseta RJ45 femella)?
+#### Pas 1: Auditoria del lloc de treball de l'estació de treball
+1. Localitza el cable de parell trenat que ix de la part posterior del xassís de l'equip.
+2. Identifica el connector RJ45 mascle inserit a la targeta d'interfície de xarxa (NIC). Comprova l'estat de la pestanya de subjecció.
+3. Observa els testimonis lluminosos (LEDs d'estat) del port Ethernet:
+   - **LED d'enllaç (Link):** Verd fix indica connexió física operativa a 1 Gbps; taronja fix indica enllaç a 100 Mbps.
+   - **LED d'activitat (Activity):** Parpelleig ràpid indica transmissió o recepció de trames.
+4. Segueix el traçat del cable des del terra o canaleta d'escriptori fins a la presa de telecomunicacions de paret (roseta RJ45 femella).
 
-#### Pas 2: Inspecció de la canalització i l'armari Rack
-1. Observa el recorregut de les canaletes perimetrals de l'aula: condueixen tots els cables cap a una mateixa cantonada on està penjat l'armari metàl·lic (**Rack de 19 polzades**).
-2. Dins de l'armari rack, identifica:
-   - **Panell de pegat (Patch Panel):** On acaben fixats els cables rígids que vénen de les canaletes.
-   - **Latiguillos de pegat (Patch Cords):** Cables curts i flexibles que van del patch panel als ports del switch.
-   - **Commutador (Switch):** Dispositiu electrònic amb 24 o 48 ports amb llums parpellejants.
-   - **Encaminador (Router):** Dispositiu que connecta la xarxa de l'aula amb la xarxa corporativa del centre o la sortida a Internet.
+#### Pas 2: Inspecció de canalitzacions i armari Rack
+1. Segueix el recorregut de les canaletes perimetrals de l'aula fins a la seua convergència a l'armari metàl·lic de telecomunicacions (**Rack de 19"**).
+2. Dins de l'armari rack, identifica cadascun dels nivells estructurals:
+   - **Panell de pegat (Patch Panel):** Mòduls on es connecten rígidament els cables provinents de les canaletes de la paret.
+   - **Latiguillos de pegat (Patch Cords):** Cables flexibles curts que uneixen els ports del patch panel amb els ports corresponents del switch.
+   - **Commutador (Switch):** Equip electrònic central de capa 2 amb 24 o 48 ports que interconnecta tots els nodes en estrella.
+   - **Encaminador (Router de comunicacions):** Equip de capa 3 que connecta la xarxa local amb la sortida a la xarxa corporativa o proveïdor d'Internet.
 
 #### Pas 3: Elaboració de l'esquema de xarxa
-Dibuixa en el teu quadern o a l'ordinador un diagrama lògic i físic de l'aula que continga:
-- 1 Router d'aula/centre.
-- 1 Switch principal de 24 ports situat al Rack.
-- 1 Punt d'accés Wi-Fi (AP) si n'hi ha un al sostre.
-- Un mínim de 6 ordinadors de taula interconnectats al switch mitjançant connexió en estrella.
-- 1 Impressora de xarxa compartida de l'aula.
+Dibuixa en format digital un diagrama tècnic de l'aula amb la simbologia estàndard:
+- 1 Encaminador de frontera (Router).
+- 1 Commutador central (Switch de 24 ports Gigabit).
+- 1 Punt d'accés sense fils (AP Wi-Fi).
+- 6 Estacions de treball client (PCs) connectats en estrella al commutador.
+- 1 Impressora làser de xarxa compartida.
 
 ```
-       [ Router ]
-           |
-       [ Switch ] <-------- [ Punt d'Accés Wi-Fi ]
-      /    |     \\
-[ PC 01 ] [ PC 02 ] [ Impressora de Xarxa ]
+                  [ Router de Frontera ]
+                            │
+               [ Commutador Central (Switch) ]
+               ┌──────┬─────┴─────┬──────┐
+               │      │           │      │
+           [ PC 01 ] [ PC 02 ]  [ AP ] [ Impressora ]
 ```
-
-### Qüestionari d'avaluació
-1. Quina topologia física té la xarxa de la vostra aula? Raona la resposta.
-2. Què passaria amb la resta de la classe si es desconnecta el cable de xarxa del PC 03?
-3. Què passaria amb la classe si es desendolla de la llum el switch central de l'armari rack?
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Càlcul de velocitats de transmissió i temps de descàrrega
+En la instal·lació d'un parc informàtic d'aula, cal descarregar una imatge de sistema operatiu (ISO) amb una grandària de fitxer de $4{,}7\text{ GB}$.
+1. Converteix la grandària del fitxer a gigabits ($\text{Gb}$) i a megabits ($\text{Mb}$), sabent que $1\text{ Byte} = 8\text{ bits}$ i $1\text{ GB} = 1024\text{ MB}$.
+2. Calcula el temps teòric de descàrrega en segons i en minuts si la targeta de xarxa funciona sobre un enllaç Fast Ethernet ($100\text{ Mbps}$):
+   $$\text{Temps (s)} = \frac{\text{Mida (Mbits)}}{\text{Velocitat (Mbps)}}$$
+3. Repeteix el càlcul per a un enllaç Gigabit Ethernet ($1000\text{ Mbps}$).
+4. Tenint en compte que l'overhead de protocols (encapsulament TCP/IP) consumeix aproximadament un $10\%$ de l'amplada de banda real útil, quin és el temps real estimat per a cada enllaç?
+
+#### Exercici 2: Anàlisi d'encapsulament i correspondència de capes OSI i TCP/IP
+Una estació de treball de l'aula de taller envia una petició web a un servidor educatiu.
+1. Completa la taula associant cadascun dels elements a la seua capa del model OSI (1 a 7) i del model TCP/IP (1 a 4):
+   - Adreça física MAC d'origen (`B4:2E:99:A1:C2:08`)
+   - Port de servei destí (`TCP 443`)
+   - Adreça lògica IP de destí (`192.168.1.254`)
+   - Senyal elèctric de tensió codificat sobre el parell de coure
+   - Pàgina web en codi HTML/CSS
+2. Descriu breument per què es produeix un error d'accés web si el cable està desconnectat físicament (Capa 1) encara que el navegador (Capa 7) estiga funcionant correctament.
+
+#### Exercici 3: Diagnòstic de topologia i tolerància a fallades
+Una xarxa corporativa disposa de 16 llocs de treball. L'empresa dubta entre mantindre una topologia física en bus coaxial antiga o migrar a una topologia en estrella amb switch Gigabit.
+1. Què succeeix a la xarxa en bus si un treballador desconnecta accidentalment el terminador resistiu de $50\,\Omega$?
+2. Què succeeix a la xarxa en estrella si es trenca el cable que connecta l'ordinador número 5? Afecta els altres 15 equips?
+3. Què succeeix a la xarxa en estrella si la font d'alimentació del switch central s'avaria?
+4. Com es pot resoldre el punt únic de fallada d'una topologia en estrella en un entorn crític (servidors)?
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Auditoria física del lloc de treball i de l'armari de telecomunicacions
+- **Objectiu:** Identificar i auditar cadascun dels elements de la cadena física de transmissió de l'aula.
+- **Eines:** Caixa d'eines bàsica, guia de comprovació física i càmera/mòbil per a documentació gràfica.
+- **Procediment:**
+  1. Comprova la fixació de la targeta de xarxa al xassís de l'ordinador d'aula.
+  2. Inspecciona el connector RJ45: assegura't que el protector de coberta no estiga partit i que la pestanya bloquegi fermament amb un so de *clic*.
+  3. Mesura la longitud estimada del cable de pegat des de l'ordinador fins a la roseta. Compleix el límit recomanat de màxim $5\text{ metres}$ per a cables de connexió directa d'usuari?
+  4. Localitza l'etiqueta d'identificació de la roseta de paret (ex: `RACK-A-P12`) i comprova si coincideix amb l'etiqueta del panell de pegat al rack.
+
+#### Repte 2: Diagnòstic d'enllaç i connectivitat per línia d'ordres
+- **Objectiu:** Utilitzar les ordres bàsiques del sistema operatiu per a verificar la interfície de xarxa i el funcionament de la pila TCP/IP.
+- **Eines:** Terminal PowerShell o CMD en Windows.
+- **Instruccions d'execució:**
+  1. Obre el terminal de comandes i executa:
+     ```powershell
+     ipconfig /all
+     ```
+  2. Localitza l'adaptador d'àrea local Ethernet i anota:
+     - Nom de l'adaptador físic.
+     - Adreça física (MAC).
+     - Adreça IPv4 assignada.
+     - Màscara de subxarxa.
+     - Porta d'enllaç predeterminada (Gateway).
+  3. Comprova el funcionament intern de la pila TCP/IP local executant un bucle de retorn:
+     ```powershell
+     ping 127.0.0.1
+     ```
+  4. Envia quatre paquets ICMP a la porta d'enllaç de la teua xarxa (Gateway) per comprovar la comunicació amb el router:
+     ```powershell
+     ping <adreca_porta_enllac>
+     ```
+  5. Anota el temps mitjà de resposta (en mil·lisegons) i el percentatge de paquets perduts.
+
+#### Repte 3: Disseny i diagramació d'un esquema de xarxa per a una oficina comercial
+- **Objectiu:** Crear un diagrama de topologia en estrella jeràrquica professional per a una petita empresa de 12 empleats.
+- **Eines:** Software de dibuix vectorial tècnic (draw.io, LibreOffice Draw o Dia).
+- **Requisits de la comanda:**
+  1. Incloure 1 encaminador de connexió a fibra amb connexió WAN.
+  2. 1 Switch principal gestionable de 24 ports Gigabit.
+  3. 2 Punts d'accés Wi-Fi (un per a la zona d'oficines i un altre per a visites).
+  4. 12 Ordinadors de treball, 1 servidor d'arxius NAS i 2 impressores de xarxa departamentals.
+  5. Indicar amb colors o tipus de línia diferenciats les connexions de coure (UTP Cat6) i les transmissions sense fils Wi-Fi.
+  6. Exportar el resultat final en format PDF i imatge PNG per a la memòria tècnica.
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He calculat correctament els temps teòrics de transmissió diferenciant entre bits i Bytes.
+- [ ] He identificat físicament els connectors, LEDs, rosetes i components de l'armari rack.
+- [ ] He utilitzat la comanda `ipconfig` per extreure les dades de configuració de xarxa de l'equip.
+- [ ] He verificat la connectivitat local mitjançant la comanda `ping` sense pèrdua de paquets.
+- [ ] He generat un esquema net, normalitzat i comprensible de la topologia física i lògica de la xarxa.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Classificació i models (OSI / TCP-IP)** | Distingeix amb precisió totes les capes, funcions i unitats de dades (PDU), justificant la utilitat modular. | Reconeix les capes i protocols principals amb xicotets dubtes en les unitats PDU. | Identifica la diferència bàsica entre OSI i TCP/IP i les capes física i de xarxa. | Confon capes, protocols i no comprèn el model per capes. |
+| **Càlcul de transmissió i amplada de banda** | Resol tots els càlculs matemàtics sense errors, convertint unitats i justificant l'overhead. | Converteix correctament entre bits i Bytes amb càlculs correctes però omet l'overhead. | Calcula els temps bàsics amb xicotets errors en el canvi d'unitats de capacitat. | No sap convertir entre bits i Bytes ni calcular temps de transmissió. |
+| **Auditoria física de xarxa i Rack** | Identifica sense dubte tots els components de l'enllaç, estats dels LEDs i elements de l'armari rack de 19". | Reconeix la majoria dels elements físics del rack i connectors RJ45. | Identifica cables, rosetes i el switch bàsic sense reconèixer el patch panel. | Incapaç d'identificar els components físics bàsics de la xarxa local. |
+| **Diagnòstic per comandes CLI (`ipconfig`, `ping`)** | Executa les comandes amb precisió, interpreta tots els paràmetres de xarxa i avalua la latència. | Obté la configuració IP i comprova connectivitat identificant els camps bàsics. | Utilitza les comandes però té dificultats per localitzar la IP o porta d'enllaç. | No sap obrir la consola de comandes ni interpretar els resultats del ping. |
+| **Diagramació i documentació tècnica** | Elabora un esquema d'alta qualitat tècnica, amb simbologia estàndard, escalat i format professional. | Diagrama la topologia correctament amb elements identificats i bona claredat visual. | L'esquema conté els elements bàsics però presenta desordre o manca de simbologia. | Esquema incomplet, confús o que no representa una topologia funcional. |
 

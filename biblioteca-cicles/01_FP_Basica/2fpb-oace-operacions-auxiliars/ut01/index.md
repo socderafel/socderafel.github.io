@@ -9,6 +9,92 @@ next_label: "1.1 ➡️"
 
 # UD1: Introducció als Sistemes Operatius i la Virtualització
 
+<div style="text-align: center; margin: 1.5rem 0;">
+<svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+  <defs>
+    <linearGradient id="bg-grad-o1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="g-os" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-lic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-arq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="g-vrt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="260" rx="12" fill="url(#bg-grad-o1)"/>
+
+  <!-- Capçalera -->
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">SISTEMES OPERATIUS I VIRTUALITZACIÓ: FONAMENTS I GESTIÓ</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Funcions del nucli, models de llicència, arquitectures de memòria i hipervisors de taller</text>
+
+  <!-- Bloc 1: Funcions del SO -->
+  <g transform="translate(25, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-os)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">⚙️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Funcions del SO</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Gestió de Recursos</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• CPU & Multitasca de fils</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Memòria RAM & Virtual</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Fitxers: NTFS, ext4, FAT32</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Drivers E/S & GUI / CLI</text>
+  </g>
+
+  <!-- Bloc 2: Llicències i Distros -->
+  <g transform="translate(230, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-lic)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">📜</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Llicències</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Propietari vs Lliure</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Windows: Propietari tancat</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• GNU/Linux: Codi obert GPL</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Ubuntu / LliureX educativa</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• macOS: Propietari integrat</text>
+  </g>
+
+  <!-- Bloc 3: Arquitectures x86 / x64 -->
+  <g transform="translate(435, 70)">
+    <rect width="185" height="165" rx="10" fill="url(#g-arq)" stroke="#34d399" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🔢</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Arquitectures</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">32 bits vs 64 bits</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• 32b (x86): Límit màx 4 GB</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• 64b (x64): Suport >16 TB</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Retrocompatibilitat x64</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Comanda: uname -m / msinfo32</text>
+  </g>
+
+  <!-- Bloc 4: Virtualització i MVs -->
+  <g transform="translate(640, 70)">
+    <rect width="195" height="165" rx="10" fill="url(#g-vrt)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">📦</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Virtualització</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Host, Guest & VMM</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Hipervisor Tipus 2: VirtualBox</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Disc dinàmic VDI & RAM</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Instantànies (Snapshots)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Aïllament total en proves</text>
+  </g>
+</svg>
+</div>
+
 Concepte i funcions bàsiques d'un sistema operatiu, comparativa de sistemes propietaris i lliures (Windows, Linux, macOS), arquitectures de 32 i 64 bits, tecnologia de màquines virtuals i pràctica d'instal·lació de VirtualBox.
 
 ### 📑 Apartats de la Unitat
@@ -187,17 +273,17 @@ L'**hipervisor** és el programari encarregat de coordinar i repartir els recurs
 ### Procediment Pas a Pas
 
 #### Pas 1: Instal·lació de VirtualBox
-1. Descarrega l'instal·lador oficial des del lloc web `virtualbox.org` (o utilitza l'arxiu facilitat pel docent a la carpeta de recursos de l'aula).
+1. Descarrega l'instal·lador oficial des del lloc web `virtualbox.org` (o utilitza l'arxiu descarregat a la carpeta compartida de recursos).
 2. Executa l'arxiu d'instal·lació amb permisos d'administrador.
 3. Accepta les opcions per defecte fent clic a *Següent* (*Next*).
-4. Quan avise que la connexió de xarxa es pot tallar temporalment durant 2 segons (per instal·lar el pont virtual de xarxa), fes clic a *Sí* (*Yes*) i a *Instal·la*.
+4. Quan avise que la connexió de xarxa es pot tallar temporalment durant uns segons (per instal·lar el pont virtual de xarxa), fes clic a *Sí* (*Yes*) i a *Instal·la*.
 
 #### Pas 2: Creació de la Màquina Virtual buida
 1. Obre l'aplicació **Oracle VM VirtualBox**.
 2. Fes clic sobre la icona blava en forma d'engranatge anomenada **Nova (*New*)**.
 3. Omple els camps de la finestra d'assistent:
    - **Nom (*Name*):** `Ubuntu_2FPB_ElTeuNom`
-   - **Carpeta de la màquina:** Deixa la ruta per defecte o selecciona el segon disc dur de l'aula.
+   - **Carpeta de la màquina:** Deixa la ruta per defecte o selecciona el segon disc dur del taller.
    - **Tipus (*Type*):** `Linux`
    - **Versió (*Version*):** `Ubuntu (64-bit)`
 4. Fes clic a *Següent*.
@@ -220,8 +306,113 @@ L'**hipervisor** és el programari encarregat de coordinar i repartir els recurs
 2. Ves a l'apartat **Emmagatzematge (*Storage*)**.
 3. Sota el controlador IDE o SATA, fes clic sobre la icona del CD blau buit (*Buit / Empty*).
 4. A la dreta, fes clic sobre la icona de disc xicoteta i selecciona *"Tria un fitxer de disc..."* (*Choose a disk file...*).
-5. Localitza el fitxer d'imatge **ISO d'Ubuntu Desktop** que el docent ha guardat a l'ordinador.
+5. Localitza el fitxer d'imatge **ISO d'Ubuntu Desktop** disponible a la carpeta de recursos de taller.
 6. Fes clic a D'acord. La teua màquina virtual ja té "el CD ficat al lector virtual" i està a punt per arrencar!
 
 ---
+
+## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
+### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
+
+#### Exercici 1: Càlcul de límits d'adreçament de memòria en 32 bits vs 64 bits
+En una arquitectura de computadors, el bus d'adreces de $n\text{ bits}$ determina el nombre total de bytes individuals de memòria RAM que el processador pot indexar directament:
+$$\text{Capacitat Màxima} = 2^n \text{ bytes}$$
+1. Calcula la quantitat exacta de bytes adreçables per una arquitectura de 32 bits ($n = 32$):
+   $$\text{Bytes} = 2^{32} = 4.294.967.296\text{ B}$$
+2. Converteix aquesta xifra a quilobytes ($\text{KiB} = 2^{10}\text{ B}$), megabytes ($\text{MiB} = 2^{20}\text{ B}$) i gigabytes ($\text{GiB} = 2^{30}\text{ B}$) dividint successivament per $1.024$.
+3. Si un client porta al taller un ordinador equipat amb $16\text{ GB}$ de memòria RAM DDR4 i un tècnic instal·la per descuit una versió de Windows de 32 bits:
+   - Quanta memòria RAM reconeixerà com a màxim el sistema operatiu?
+   - Quants gigabytes de memòria RAM quedaran completament desaprofitats i inutilitzats?
+   - Quina pèrdua percentual de rendiment representa respecte a la capacitat pagada pel client?
+
+#### Exercici 2: Balanç de recursos per a hipervisor amfitrió (*Host*) i màquines convidades (*Guests*)
+Un ordinador de taller d'FP Bàsica té les següents especificacions físiques reals:
+- Processador: Intel Core i5 de $6\text{ nuclis físics}$ / $12\text{ fils}$.
+- Memòria RAM física: $16\text{ GB}$ ($16.384\text{ MB}$).
+- Disc d'emmagatzematge SSD: $500\text{ GB}$ (dels quals $120\text{ GB}$ estan ocupats pel sistema amfitrió i aplicacions).
+Es volen crear i executar alhora dues màquines virtuals (MV1 amb Windows 10 i MV2 amb Ubuntu Desktop):
+1. Si assignem a la MV1 $4.096\text{ MB}$ de RAM i a la MV2 $3.072\text{ MB}$ de RAM:
+   - Quanta memòria RAM consumeixen en total les dues màquines virtuals?
+   - Quanta memòria RAM li queda lliure al sistema operatiu amfitrió de l'aula per gestionar la pantalla, el navegador i el propi VirtualBox?
+   - És segur aquest repartiment segons la recomanació que el sistema amfitrió conserve com a mínim $4\text{ GB}$ de RAM?
+2. Si assignem $2\text{ vCPUs}$ a la MV1 i $2\text{ vCPUs}$ a la MV2, quants fils de processador queden disponibles per a l'amfitrió?
+3. Si creem discs virtuals de tipus VDI de mida fixa de $40\text{ GB}$ cadascun, quant espai lliure restarà al disc SSD físic?
+
+#### Exercici 3: Diagnòstic de maquinari i arquitectura del sistema via línia d'ordres
+En el taller informàtic és essencial conèixer l'arquitectura exacta d'un ordinador sense necessitat de reiniciar ni entrar a la BIOS.
+1. En un equip amb **Windows**, obre PowerShell i executa:
+   ```powershell
+   Get-CimInstance Win32_OperatingSystem | Select-Object Caption, OSArchitecture, Version
+   Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors, AddressWidth
+   ```
+   - Anota l'arquitectura del sistema operatiu (`OSArchitecture`) i l'amplada de registre de la CPU (`AddressWidth`).
+2. En un equip amb **GNU/Linux (Ubuntu/LliureX)**, obre el terminal i executa:
+   ```bash
+   uname -m
+   lscpu | grep -E "Architecture|CPU op-mode|Model name"
+   ```
+   - Explica el significat si la resposta de `uname -m` és `x86_64` o `i686`.
+   - Què significa la línia `CPU op-mode(s): 32-bit, 64-bit` pel que fa a la retrocompatibilitat del processador?
+
+---
+
+### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+
+#### Repte 1: Creació i configuració d'una màquina virtual de taller en VirtualBox
+- **Objectiu:** Posar en pràctica la instal·lació i afinament d'un entorn de virtualització complet seguint estàndards professionals.
+- **Procediment de taller:**
+  1. Obre Oracle VM VirtualBox i crea una màquina virtual anomenada `LAB01_Ubuntu_2FPB`.
+  2. Configura els paràmetres de maquinari virtual:
+     - Memòria RAM: $4.096\text{ MB}$ ($4\text{ GB}$).
+     - Processadors: $2\text{ vCPUs}$ amb límit d'execució al $100\%$.
+     - Disc dur virtual: Fitxer VDI de $30\text{ GB}$ amb assignació dinàmica.
+     - Memòria de vídeo: $128\text{ MB}$ amb acceleració 3D activada.
+  3. Afegeix la imatge ISO oficial d'Ubuntu Desktop a la unitat òptica virtual SATA.
+  4. Inicia la màquina virtual, comprova que carrega el menú d'arrencada de GRUB sense errors i apaga-la de manera controlada.
+
+#### Repte 2: Gestió d'instantànies (*Snapshots*) i reversió d'avaries
+- **Objectiu:** Utilitzar la tecnologia d'instantànies per protegir el sistema davant fallades crítiques durant el testatge de programari.
+- **Situació pràctica:**
+  1. Amb la màquina virtual apagada i en estat net acabada de crear, crea una instantània anomenada `Estat_Inicial_Net` amb la descripció *"Màquina configurada abans d'instal·lar cap programari"*.
+  2. Arrenca la màquina virtual, crea tres carpetes de prova a l'escriptori i canvia la resolució de pantalla o fons d'escriptori.
+  3. Simula una fallada crítica de taller: esborra fitxers clau o desconfigura el perfil d'usuari.
+  4. Apaga la màquina virtual i executa l'ordre **Restaura la instantània (*Restore Snapshot*)** tornant a `Estat_Inicial_Net`.
+  5. Torna a iniciar la màquina virtual i comprova que l'estat original s'ha restablert íntegrament en qüestió de segons.
+
+#### Repte 3: Comparativa de xarxa virtual: mode NAT vs. mode Adaptador Pont (*Bridged*)
+- **Objectiu:** Comprendre l'aïllament i la connectivitat de les màquines virtuals a la xarxa local del taller.
+- **Comanda tècnica:**
+  1. **Fase A (Mode NAT per defecte):**
+     - Configura l'adaptador de xarxa de la MV en mode **NAT**.
+     - Inicia la màquina i esbrina la seua adreça IP amb `ip a` (en Linux) o `ipconfig` (en Windows).
+     - Comprova que rep una IP típica com `10.0.2.15`. Té accés a Internet la MV? Pot un altre ordinador de l'aula fer *ping* a la MV?
+  2. **Fase B (Mode Adaptador Pont - *Bridged Adapter*):**
+     - Apaga la màquina i canvia l'adaptador de xarxa a **Adaptador Pont (*Bridged*)**, seleccionant la targeta Ethernet física del teu ordinador real.
+     - Arrenca la màquina i torna a consultar l'adreça IP.
+     - Quina IP rep ara la MV? Per què ara està en el mateix rang de subxarxa que els ordinadors reals de l'aula?
+  3. Redacta una breu conclusió tècnica explicant quan és convenient utilitzar el mode NAT (proves aïllades i segures) i quan el mode Pont (per oferir serveis de xarxa a altres companys).
+
+---
+
+### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+
+#### Llista de comprovació per a l'alumnat
+- [ ] He explicat les funcions fonamentals del sistema operatiu (CPU, RAM, emmagatzematge, perifèrics i interfície).
+- [ ] He diferenciat el programari propietari (Windows, macOS) del programari lliure (GNU/Linux, LliureX).
+- [ ] He calculat el límit màxim de RAM en sistemes de 32 bits ($2^{32} = 4\text{ GB}$) i justificat la necessitat dels 64 bits.
+- [ ] He distingit un hipervisor de Tipus 1 (Bare-Metal) d'un hipervisor de Tipus 2 (VirtualBox sobre SO amfitrió).
+- [ ] He creat i dimensionat correctament una màquina virtual a VirtualBox amb disc dinàmic VDI i memòria equilibrada.
+- [ ] He utilitzat les instantànies (*snapshots*) per congelar i restaurar l'estat d'un sistema virtualitzat.
+- [ ] He comparat els modes de xarxa virtual NAT i Adaptador Pont comprovant les adreces IP obtingudes.
+
+#### Rúbrica d'avaluació d'aprenentatge
+| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Conceptes i funcions del sistema operatiu** | Detalla totes les tasques de gestió de recursos (CPU, memòria virtual, sistemes de fitxers i controladors) amb vocabulari tècnic precís. | Explica clarament com el SO fa d'intermediari entre maquinari i programari. | Reconeix que el SO gestiona memòria i fitxers però confon memòria RAM amb emmagatzematge. | No comprèn la funció d'un sistema operatiu o el confon amb una aplicació ofimàtica. |
+| **Llicències i models de programari** | Contrasta el model propietari de Windows amb les llibertats de la GPL de GNU/Linux i la distribució educativa LliureX. | Identifica la diferència entre codi obert i tancat i coneix les distribucions Linux bàsiques. | Reconeix que Linux és gratuït i Windows de pagament però desconeix què és el codi font. | Creu que tot el programari gratuït és lliure o desconeix què és una distribució. |
+| **Arquitectures de memòria (32b vs 64b)** | Calcula els límits matemàtics ($2^{32} = 4\text{ GB}$), explica la retrocompatibilitat x64 i diagnostica arquitectures per terminal. | Comprèn per què 32 bits no aprofita més de 4 GB i consulta l'arquitectura de l'equip correctament. | Recorda que 64 bits és millor que 32 bits però no sap explicar per què ni calcular el límit. | Intenta instal·lar un sistema de 64 bits en una màquina antiga de 32 bits sense comprendre l'error. |
+| **Virtualització i gestió d'hipervisors** | Diferencia hipervisors Tipus 1 i 2, dimensiona recursos de RAM/CPU per a host i guests sense saturar la màquina real. | Configura màquines virtuals a VirtualBox amb memòria equilibrada i disc dinàmic de forma autònoma. | Crea la màquina virtual seguint la guia pas a pas amb alguna ajuda en la memòria o el disc. | Assigna tota la RAM de l'equip a la màquina virtual congelant el sistema amfitrió. |
+| **Pràctica de taller (Snapshots i xarxa)** | Domina la creació i reversió d'instantànies i explica la diferència de direccionament entre mode NAT i Pont (*Bridged*). | Utilitza instantànies correctament i canvia el mode de xarxa observant els canvis d'IP. | Restaura instantànies amb suport i connecta la màquina a la xarxa en mode bàsic. | No sap restaurar una instantània o és incapaç de configurar la xarxa de la màquina virtual. |
+
 
