@@ -3,6 +3,8 @@ layout: default
 title: "UD1: Desenvolupament de Programari i Cicle de Vida — Entorns de Desenvolupament"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UD1"
+next_url: "../ut02/index.html"
+next_label: "UD2: Entorns Integrats de Desenvolupament (IDE) ➡️"
 ---
 
 # UD1: Desenvolupament de Programari i Cicle de Vida

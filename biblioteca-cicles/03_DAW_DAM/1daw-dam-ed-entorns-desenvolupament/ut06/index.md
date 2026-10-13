@@ -1,11 +1,13 @@
 ---
 layout: default
-title: "UD6: Proves de Caixa Blanca i Mesura de Cobertura de Codi — Entorns de Desenvolupament"
+title: "UD6: Optimització de Codi, Refactorització, Control de Versions (Git/GitHub) i Eines CASE — Entorns de Desenvolupament"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UD6"
+prev_url: "../ut05/index.html"
+prev_label: "⬅️ UD5: Proves de Programari i JUnit 5"
 ---
 
-# UD6: Proves de Caixa Blanca i Mesura de Cobertura de Codi
+# UD6: Optimització de Codi, Refactorització, Control de Versions (Git/GitHub) i Eines CASE
 
 <div style="text-align: center; margin: 1.5rem 0;">
 <svg viewBox="0 0 860 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
@@ -14,281 +16,319 @@ badge: "1r DAW / DAM · Grau Superior · UD6"
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
-    <linearGradient id="g-wb6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-ref6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-cfg6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-doc6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#818cf8" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#818cf8" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-mccabe6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-git6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#34d399" stop-opacity="0.05"/>
     </linearGradient>
-    <linearGradient id="g-cov6" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="g-case6" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
-  <!-- Background -->
   <rect width="860" height="260" rx="12" fill="url(#bg-grad-ed6)"/>
 
   <!-- Capçalera -->
-  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">PROVES DE CAIXA BLANCA I MESURA DE COBERTURA DE CODI</text>
-  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Grafs de flux de control (CFG), camins bàsics independents, complexitat ciclomàtica de McCabe i criteris de cobertura</text>
+  <text x="430" y="36" text-anchor="middle" fill="#f8fafc" font-size="19" font-weight="bold">ENGINYERIA DE PROGRAMARI: QUALITAT, GIT, REFACTORING I EINES CASE</text>
+  <text x="430" y="56" text-anchor="middle" fill="#94a3b8" font-size="12">Deute tècnic · Code Smells &amp; Fowler · Javadoc · Control de versions distribuït Git · Enginyeria inversa</text>
 
-  <!-- Bloc 1: Caixa Blanca -->
+  <!-- Bloc 1: Refactorització -->
   <g transform="translate(25, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-wb6)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-ref6)" stroke="#38bdf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#38bdf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🔍</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Caixa Blanca</text>
-    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Proves Estructurals</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Anàlisi del codi font intern</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Camins d'execució lògica</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Condicions i bucles</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Detecció de codi inassolible</text>
+    <text x="29" y="33" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="bold">🛠️</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Refactorització</text>
+    <text x="15" y="62" fill="#38bdf8" font-size="11" font-weight="600">Neteja de Codi</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Deute tècnic i costos</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Code Smells (Long Method)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Extract Method &amp; Class</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Proves de no-regressió</text>
   </g>
 
-  <!-- Bloc 2: Graf de Flux (CFG) -->
+  <!-- Bloc 2: Documentació Javadoc -->
   <g transform="translate(230, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-cfg6)" stroke="#818cf8" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-doc6)" stroke="#818cf8" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#818cf8" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">🕸️</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Graf de Flux (CFG)</text>
-    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Nodes i Arestes</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Nodes seqüencials (N)</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Arestes de transició (E)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Nodes predicat (if, while)</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Regions del pla (R)</text>
+    <text x="29" y="33" text-anchor="middle" fill="#818cf8" font-size="14" font-weight="bold">📖</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Javadoc</text>
+    <text x="15" y="62" fill="#818cf8" font-size="11" font-weight="600">Documentació de l'API</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Etiquetes @param, @return</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Excepcions amb @throws</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Generació HTML del javadoc</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Integració amb Maven/IDE</text>
   </g>
 
-  <!-- Bloc 3: Mètrica de McCabe -->
+  <!-- Bloc 3: Control Git -->
   <g transform="translate(435, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-mccabe6)" stroke="#34d399" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-git6)" stroke="#34d399" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#34d399" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">📐</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Complexitat V(G)</text>
-    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Ciclomàtica</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• V(G) = E - N + 2</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• V(G) = Predicats + 1</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Camins bàsics independents</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Llindar límit recomanat &lt;= 10</text>
+    <text x="29" y="33" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">🌿</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Git &amp; GitHub</text>
+    <text x="15" y="62" fill="#34d399" font-size="11" font-weight="600">Control de Versions</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Els 3 estats de Git</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Branques (checkout -b)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Commits atòmics (feat, fix)</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Merge i resolució conflictes</text>
   </g>
 
-  <!-- Bloc 4: Cobertura de Codi -->
+  <!-- Bloc 4: Eines CASE -->
   <g transform="translate(640, 70)">
-    <rect width="185" height="165" rx="10" fill="url(#g-cov6)" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="185" height="165" rx="10" fill="url(#g-case6)" stroke="#f59e0b" stroke-width="1.5"/>
     <rect x="15" y="14" width="28" height="28" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
-    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">📊</text>
-    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Cobertura de Codi</text>
-    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Criteris de Mesura</text>
-    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Cobertura de sentències</text>
-    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Cobertura de branques (Branch)</text>
-    <text x="15" y="124" fill="#cbd5e1" font-size="11">• Condicions múltiples (MCC)</text>
-    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Eines de cobertura (JaCoCo)</text>
+    <text x="29" y="33" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">📐</text>
+    <text x="52" y="33" fill="#f8fafc" font-size="13" font-weight="bold">Eines CASE</text>
+    <text x="15" y="62" fill="#f59e0b" font-size="11" font-weight="600">Modelat &amp; Codi</text>
+    <text x="15" y="84" fill="#cbd5e1" font-size="11">• Enginyeria Directa (UML➔Codi)</text>
+    <text x="15" y="104" fill="#cbd5e1" font-size="11">• Enginyeria Inversa (Codi➔UML)</text>
+    <text x="15" y="124" fill="#cbd5e1" font-size="11">• PlantUML i eines de disseny</text>
+    <text x="15" y="144" fill="#cbd5e1" font-size="11">• Sincronització bidireccional</text>
   </g>
 </svg>
 </div>
 
-Mentre que les proves de caixa negra avaluen el sistema des de l'exterior sense mirar el codi, les **Proves de Caixa Blanca (*White-Box Testing*)** inspeccionen directament l'estructura lògica del codi font. Mitjançant la construcció de **Grafs de Flux de Control (CFG)**, el càlcul de la **Complexitat Ciclomàtica de McCabe** i la mesura de la **cobertura de codi**, els enginyers de programari garanteixen que cada branca, decisió i camí d'execució ha estat provat almenys una vegada.
-
 ---
 
-## 6.1 Fonaments de les Proves de Caixa Blanca
+## 6.1 Optimització de Codi, Deute Tècnic i Detecció de Code Smells
 
-Les proves estructurals es basen en la premissa que no es pot considerar provat un programa si determinades línies, branques o bucles no s'han executat mai durant la bateria de proves.
+El **deute tècnic (*Technical Debt*)** representa el cost futur implícit d'escollir una solució ràpida i deficient en lloc d'un disseny net i mantensible. Com més deute acumula un projecte, més lent i car resulta afegir noves funcionalitats o corregir errors.
 
-### Objectius de la Caixa Blanca:
-1. Garantir que **totes les instruccions independents** d'un mòdul s'executen com a mínim un cop.
-2. Exercitar totes les **decisions lògiques** en les seues dues variants: vertadera (`true`) i falsa (`false`).
-3. Executar tots els **bucles** en els seus límits operatius (zero iteracions, una iteració i màxim nombre d'iteracions).
-4. Detectar **codi inassolible (*dead code*)** i variables no inicialitzades abans del seu ús.
+### Què és un *Code Smell*?
+Un *code smell* (pudor de codi) no és un error de compilació ni un bug que impedeixi l'execució del programa; és un **símptoma en el codi font que indica un disseny deficient o una violació dels principis de bona arquitectura**:
 
----
-
-## 6.2 El Graf de Flux de Control (*Control Flow Graph - CFG*)
-
-Un CFG és una representació gràfica de tots els camins que pot seguir l'execució d'un mètode:
-- **Node ($N$):** Representa una sentència o un bloc seqüencial d'instruccions que s'executen sense cap salt condicional intern.
-- **Aresta ($E$):** Fletxa dirigida que indica la transferència del fil d'execució d'un node a un altre.
-- **Node Predicat:** Node que conté una condició lògica (`if`, `while`, `for`, `case`) i del qual ixen **dues o més arestes alternatives**.
-
-### Representació de les estructures bàsiques:
 ```
-1. Seqüència:         (A) ──▶ (B)
-2. Decisió (if):      (Condició) ──[true]──▶ (Bloc True) ──▶ (Fi If)
-                           │                                   ▲
-                           └───────────[false]─────────────────┘
-3. Bucle (while):     (Condició) ──[true]──▶ (Cos Bucle) ──┐
-                           │   ▲                           │
-                           │   └───────────────────────────┘
-                           └───────────[false]──▶ (Següent)
++-----------------------------------------------------------------------------------+
+|                        CATÀLEG DELS PRINCIPALS CODE SMELLS                        |
++----------------------+------------------------------------+-----------------------+
+| CODE SMELL           | DESCRIPCIÓ DEL PROBLEMA            | SOLUCIÓ DE REFACTORING|
++----------------------+------------------------------------+-----------------------+
+| Mètode Llarg         | Mètode de desenes de línies amb    | Extract Method        |
+| (Long Method)        | múltiples responsabilitats         |                       |
++----------------------+------------------------------------+-----------------------+
+| Codi Duplicat        | El mateix fragment de lògica       | Extract Method /      |
+| (Duplicated Code)    | repetit en diversos llocs          | Pull Up Method        |
++----------------------+------------------------------------+-----------------------+
+| Classe Massa Gran    | Classe "Déu" (God Object) que fa   | Extract Class         |
+| (Large Class)        | de tot violant el principi SRP     |                       |
++----------------------+------------------------------------+-----------------------+
+| Obsessió Primitiva   | Ús de tipus simples (String, int)  | Replace Data Value    |
+| (Primitive Obsession)| per modelar conceptes complexos    | with Object           |
++----------------------+------------------------------------+-----------------------+
+| Enveja de Funcions   | Un mètode utilitza més dades d'una | Move Method           |
+| (Feature Envy)       | altra classe que de la seua pròpia |                       |
++----------------------+------------------------------------+-----------------------+
 ```
 
 ---
 
-## 6.3 La Mètrica de Complexitat Ciclomàtica de McCabe
+## 6.2 Patrons de Refactorització de Martin Fowler
 
-Proposada per Thomas McCabe en 1976, la **Complexitat Ciclomàtica $V(G)$** mesura la quantitat de lògica condicional d'un programa i determina el nombre mínim de casos de prova necessaris per a cobrir tots els seus **camins bàsics independents**.
-
-### Fórmules de càlcul:
-Per a un graf connectat amb un sol punt d'entrada i un sol punt d'eixida ($P = 1$):
-
-1. **Fórmula d'Arestes i Nodes:**
-   $$V(G) = E - N + 2$$
-   on $E$ és el nombre d'arestes i $N$ el nombre de nodes.
-
-2. **Fórmula dels Nodes Predicat:**
-   $$V(G) = P_{\text{redicats}} + 1$$
-   on $P_{\text{redicats}}$ és el nombre de condicions booleanes simples del mètode (`if`, `while`, `for`, `case`). Si una condició conté operadors compostos (`&&` o `||`), cadascun compta com un predicat addicional.
-
-3. **Fórmula de Regions del Pla:**
-   $$V(G) = R$$
-   on $R$ és el nombre de regions tancades formades pel graf més 1 (la regió infinita exterior).
-
-### Interpretació del llindar de complexitat:
-| Valor $V(G)$ | Nivell de Complexitat | Risc de Manteniment | Testabilitat |
-| :---: | :--- | :--- | :--- |
-| **$1 - 10$** | Programa senzill i modular | Molt baix | Fàcil de provar exhaustivament |
-| **$11 - 20$** | Complexitat moderada | Mitjà | Requereix una suite de proves rigorosa |
-| **$21 - 50$** | Programa d'alta complexitat | Alt | Molt difícil de provar; **candidat a refactoritzar** |
-| **$> 50$** | Programa caòtic (*Codi Espagueti*) | Inadmissible | Pràcticament intestejable |
-
----
-
-## 6.4 El Mètode dels Camins Bàsics Independents
-
-Un **camí independent** és qualsevol recorregut pel graf des del node inicial fins al node final que incorpora almenys una aresta nova que no s'havia recorregut en cap altre camí anterior.
+La **refactorització** és el procés de reestructurar el codi intern d'un programa per fer-lo més senzill, net i mantensible **sense alterar el seu comportament observable extern**.
 
 > [!IMPORTANT]
-> El nombre exacte de camins bàsics independents coincideix matemàticament amb la **Complexitat Ciclomàtica $V(G)$**. Dissenyar un cas de prova per a cadascun d'aquests camins garanteix que cada línia i cada branca del codi s'ha executat almenys una vegada.
+> **Regla d'or de la refactorització:** Mai s'ha de refactoritzar sense una **suite de proves unitàries automatitzades** prèvia. Els tests garanteixen que cap canvi estructural introdueix regressions funcionals.
+
+### Principals Tècniques de Refactorització
+1. **Extract Method (Extracció de mètode):** Converteix un fragment de codi amb entitat pròpia dins d'un mètode llarg en un mètode privat independent amb un nom autoexplicatiu.
+2. **Inline Method:** Si un mètode és tan simple que el seu cos és tan clar com el seu nom, s'elimina la crida i es col·loca el contingut directament.
+3. **Extract Class:** Quan una classe té massa atributs i mètodes que s'agrupen de manera natural (ex: `carrer`, `ciutat`, `codiPostal`), s'extreuen en una nova classe `Adreca`.
+4. **Rename Symbol:** Canviar el nom d'una variable, mètode o classe a un terme que descrigui fidelment la seua intenció de negoci.
 
 ---
 
-## 6.5 Criteris de Cobertura de Codi (*Code Coverage*)
+## 6.3 Documentació Tècnica del Codi amb Javadoc
 
-1. **Cobertura de Sentències (*Statement Coverage*):**
-   $$\text{Cobertura Sentències (\%)} = \frac{\text{Línies executades}}{\text{Total línies de codi}} \times 100$$
-   És el criteri més dèbil. Un $100\%$ de cobertura de sentències pot deixar branques booleanes senceres sense provar.
+**Javadoc** és l'eina estàndard que genera documentació HTML de l'API a partir de comentaris estructurats en el codi font Java (`/** ... */`).
 
-2. **Cobertura de Branques o Decisions (*Branch Coverage*):**
-   $$\text{Cobertura Branques (\%)} = \frac{\text{Branques (true/false) avaluades}}{\text{Total branques possibles}} \times 100$$
-   Exigeix que cada decisió s'haja avaluat tant a `true` com a `false`. És el criteri estàndard recomanat en la indústria.
+### Sintaxi Estàndard d'Etiquetes Javadoc
+```java
+package es.ies.facturacio;
 
-3. **Cobertura de Condicions Múltiples (*Multiple Condition Coverage - MCC*):**
-   Per a decisions amb operadors lògics (Ex. `if (A && B)`), exigeix avaluar totes les combinacions de la taula de veritat ($TT, TF, FT, FF$).
+/**
+ * Representa una factura comercial generada pel sistema de vendes.
+ * Permet calcular totals amb impostos i gestionar línies de detall.
+ *
+ * @author Equip de Desenvolupament DAW/DAM
+ * @version 2.1
+ * @since 1.0
+ */
+public class Factura {
+
+    /**
+     * Calcula l'import total de la factura aplicant el tipus impositiu (IVA).
+     *
+     * @param percentatgeIVA El tipus impositiu a aplicar en tant per cent (ex: 21.0 per al 21%).
+     * @return El total final en euros calculat amb impostos inclosos.
+     * @throws IllegalArgumentException Si el tipus d'IVA és negatiu o supera el 100%.
+     */
+    public double calcularTotalAmbIVA(double percentatgeIVA) throws IllegalArgumentException {
+        if (percentatgeIVA < 0.0 || percentatgeIVA > 100.0) {
+            throw new IllegalArgumentException("El tipus d'IVA és invàlid: " + percentatgeIVA);
+        }
+        // Lògica de càlcul...
+        return 0.0;
+    }
+}
+```
+
+---
+
+## 6.4 Control de Versions Distribuït amb Git i GitHub
+
+**Git** és un sistema de control de versions distribuït (DVCS) creat per Linus Torvalds en 2005. A diferència dels sistemes centralitzats, cada desenvolupador disposa d'un clon local complet de tot l'historial del projecte.
+
+```
++-----------------------------------------------------------------------------------+
+|                           ELS 3 ESTATS D'UN FITXER EN GIT                         |
++-----------------------------------------------------------------------------------+
+|  1. Working Directory  ➔  2. Staging Area (Index)  ➔  3. Repository (.git)        |
+|  (Fitxers editats)        (Canvis preparats)          (Commits permanents)        |
+|            |                        |                           |                 |
+|            +--- git add fitxer ---->+                           |                 |
+|                                     +---- git commit -m "..." ->+                 |
++-----------------------------------------------------------------------------------+
+```
+
+### Flux de Treball amb Branques (*Feature Branching*)
+```bash
+# 1. Crear una branca de funcionalitat i situar-s'hi
+git checkout -b feature/login-jwt
+
+# 2. Treballar i registrar canvis amb Conventional Commits
+git add src/main/java/AuthService.java
+git commit -m "feat(auth): afegir generacio de tokens JWT"
+
+# 3. Canviar a la branca principal i actualitzar-la
+git checkout main
+git pull origin main
+
+# 4. Fusionar la branca preservant l'historial
+git merge --no-ff feature/login-jwt
+
+# 5. Esborrar la branca local fusionada
+git branch -d feature/login-jwt
+```
+
+### Resolució de Conflictes de Fusió
+Quan dues branques modifiquen les mateixes línies d'un arxiu de manera diferent, Git atura el merge i genera marcadors de conflicte:
+```text
+<<<<<<< HEAD (branca main actual)
+double taxa = 0.21;
+=======
+double taxa = 0.15; // branca feature
+>>>>>>> feature/nova-taxa
+```
+El desenvolupador ha d'editar manualment l'arxiu, triar la solució correcta, eliminar els marcadors, executar `git add` i completar el commit amb `git commit`.
+
+---
+
+## 6.5 Eines CASE i Enginyeria del Programari (Directa i Inversa)
+
+Les **eines CASE (*Computer-Aided Software Engineering*)** donen suport automatitzat a les diferents activitats del cicle de vida:
+- **Enginyeria Directa (*Forward Engineering*):** Generació automàtica d'esquelets de classes, interfícies i atributs en Java a partir d'un diagrama de classes UML.
+- **Enginyeria Inversa (*Reverse Engineering*):** Anàlisi estàtica de codi font Java compilat o fitxers `.java` per reconstruir automàticament diagrames UML de classes i relacions.
+- **Sincronització Bidireccional (*Round-trip Engineering*):** Capacitat de l'eina CASE de mantenir sincronitzats en temps real el model UML i el codi font davant canvis en qualsevol dels dos sentits.
 
 ---
 
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
-### Bloc A: Fonaments, Dimensionament i Anàlisi de Rendiment
+### 📋 Bloc A: Anàlisi Tècnica i Mètriques de Qualitat
 
-#### Exercici 1: Càlcul de Complexitat Ciclomàtica d'un mètode de Facturació
-Analitza el següent mètode en Java:
+#### Exercici 6.1: Càlcul de l'Índex de Mantenibilitat (MI)
+L'**Índex de Mantenibilitat (*Maintainability Index*, MI)** de Paul Oman i Jack Hagemeister és una mètrica clàssica utilitzada per analitzadors estàtics de codi (com SonarQube o Visual Studio):
 
-```java
-public double calcularTarifa(int edat, boolean esSoci, double base) {
-    double tarifa = base;
-    if (edat < 18) {                     // Predicat 1
-        tarifa = base * 0.50;
-    } else if (edat >= 65) {             // Predicat 2
-        tarifa = base * 0.70;
-    }
-    if (esSoci) {                        // Predicat 3
-        tarifa = tarifa - 5.0;
-    }
-    if (tarifa < 0) {                    // Predicat 4
-        tarifa = 0;
-    }
-    return tarifa;
-}
-```
+$$MI = 171 - 5.2 \times \ln(V) - 0.23 \times V(G) - 16.2 \times \ln(\text{LOC})$$
 
-1. Dibuixa el **Graf de Flux de Control (CFG)** identificant cadascun dels nodes i arestes.
-2. Calcula la **Complexitat Ciclomàtica $V(G)$** aplicant les dues fórmules:
-   - Fórmula $V(G) = E - N + 2$.
-   - Fórmula $V(G) = P + 1$.
-3. Quin és el nombre mínim de casos de prova necessaris per a garantir la cobertura de tots els camins bàsics independents?
+On:
+- $V$ és el Volum de Halstead del programa.
+- $V(G)$ és la Complexitat Ciclomàtica de McCabe.
+- $\text{LOC}$ és el nombre de línies de codi font efectives (*Lines of Code*).
 
-#### Exercici 2: Demostració de la debilitat de la Cobertura de Sentències
-Considera el següent fragment de codi:
+Un mètode llegat d'un mòdul de nòmines té els següents valors:
+- $V = 1.250$
+- $V(G) = 18$
+- $\text{LOC} = 120$
 
-```java
-public int dividir(int numerador, int denominador) {
-    int resultat = 0;
-    if (denominador != 0) {
-        resultat = numerador / denominador;
-    }
-    return resultat;
-}
-```
+1. Calculeu l'Índex de Mantenibilitat $MI$ utilitzant logaritmes neperians.
+2. Avalueu el resultat segons els llindars estàndard:
+   - $MI \ge 85$: Mantenibilitat alta (verd).
+   - $65 \le MI < 85$: Mantenibilitat moderada (groc).
+   - $MI < 65$: Mantenibilitat deficient, alt risc (roig).
 
-1. Si es dissenya un únic cas de prova amb `numerador = 10` i `denominador = 2`:
-   - Quantes sentències s'executen del mètode? Quin percentatge de **Cobertura de Sentències** s'assoleix?
-   - S'ha provat la branca en què `denominador == 0`?
-2. Quina és la **Cobertura de Branques** assolida amb aquest únic cas de prova? Què demostra aquest exemple respecte a la suficiència de la cobertura de sentències?
+#### Exercici 6.2: Mètriques d'Acoblament CBO i Cohesió LCOM
+En un disseny orientat a objectes s'avalua la qualitat d'una classe `GestorComandes`:
+- La classe invoca mètodes i utilitza tipus de 12 classes diferents de l'aplicació ($\text{CBO} = 12$).
+- Dels seus 10 mètodes públics, 7 mètodes no comparteixen cap atribut d'instància comú amb els altres 3 ($\text{LCOM}$ elevat).
 
-#### Exercici 3: Anàlisi d'impacte d'operadors compostos `&&` i `||`
-Considera la següent sentència condicional:
-```java
-if (saldo >= import && compteActiu && !esFestiu) {
-    processarTransferencia();
-}
-```
-1. Quants predicats independents genera aquesta condició composta a nivell de codi màquina i graf de flux?
-2. Calcula la complexitat ciclomàtica d'aquest mètode sabent que cadascun dels operadors `&&` avalua en curtcircuit (*Short-circuit evaluation*).
-3. Quants casos de prova es requereixen per a complir la Cobertura de Condicions Múltiples (MCC)?
+1. Expliqueu per què un alt acoblament ($\text{CBO}$) i una baixa cohesió augmenten el cost de manteniment i la probabilitat d'introduir regressions.
+2. Proposeu una estratègia de refactorització mitjançant **Extract Class** per dividir la classe en components amb alta cohesió i baix acoblament.
+
+#### Exercici 6.3: Càlcul de Densitat de Defectes
+Una auditoria descobreix 14 *code smells* crítics i 2 bugs en un paquet Java de $2.400$ línies de codi font:
+1. Calculeu la densitat de defectes per cada 1.000 línies de codi ($\text{KLOC}$):
+   $$\text{Densitat} = \frac{16}{2.4} \approx 6.67 \text{ defectes/KLOC}$$
+2. Si després d'una sessió de refactorització s'eliminen 12 d'aqueixos defectes, quina és la nova densitat assolida?
 
 ---
 
-### Bloc B: Reptes Pràctics de Laboratori i Taller / Comandes
+### 💻 Bloc B: Reptes Pràctics en Entorn de Desenvolupament
 
-#### Repte 1: Especificació de Camins Bàsics Independents
-- **Objectiu:** Extreure la base de camins independents del mètode `calcularTarifa` de l'Exercici 1.
-- **Procediment de taller:**
-  1. Identifica el Camí 1 (camí directe o línia de base).
-  2. Genera els camins següents modificant progressivament cadascuna de les decisions.
-  3. Per a cadascun dels camins resultants, defineix valors concrets d'entrada (`edat`, `esSoci`, `base`) i el resultat esperat que forcen la CPU a travessar eixe camí exacte.
+#### Repte 6.1: Refactorització Guiada per Proves amb l'IDE
+1. Preneu una classe `CalculadoraImpostos` que conté un mètode de 80 línies amb nombrosos blocs `if-else` imbricats i variables amb noms d'una sola lletra (`a`, `b`, `t`).
+2. Creeu primer una suite de proves completa amb JUnit 5 que valide tots els casos d'ús actuals per blindar el comportament existent.
+3. Apliqueu les eines automàtiques de refactoring de l'IDE (IntelliJ IDEA o Eclipse):
+   - **Extract Method:** Separeu el càlcul de retencions a la font i les deduccions familiars en mètodes privats autoexplicatius.
+   - **Rename Symbol:** Reanomeneu totes les variables a noms de domini expressius.
+4. Executeu novament els tests i comproveu que tots es mantenen en verd (sense regressions).
 
-#### Repte 2: Mesura de Cobertura amb l'eina JaCoCo en un IDE
-- **Objectiu:** Configurar i analitzar un informe visual de cobertura en Java.
-- **Procediment de taller:**
-  1. Obre un projecte amb un mètode condicional i la seua classe de test en IntelliJ IDEA o Eclipse.
-  2. Executa la bateria de proves amb l'opció **"Run with Coverage"**.
-  3. Inspecciona els colors de la barra lateral de l'editor de codi:
-     - **Verd:** Línia completament coberta per les proves.
-     - **Groc:** Branca parcialment coberta (només s'ha provat el `true` o el `false`).
-     - **Roig:** Línia mai executada en cap test (*dead code* o manca de prova).
-  4. Afig un nou cas de prova per convertir les línies grogues en verdes assolint el $100\%$ de cobertura de branques.
+#### Repte 6.2: Generació de la Documentació Javadoc
+1. Documenteu totes les classes, constructors i mètodes públics del paquet `es.ies.vehicles` utilitzant els comentaris Javadoc reglamentaris.
+2. Afegiu les etiquetes `@param`, `@return` i `@throws`.
+3. Genereu la documentació HTML executant en el terminal:
+```bash
+javadoc -d docs/api -sourcepath src/main/java -subpackages es.ies.vehicles
+```
+4. Obriu l'arxiu `docs/api/index.html` en un navegador web i verifiqueu que tots els enllaços, resums de mètodes i jerarquies de classes es mostren de forma professional.
 
-#### Repte 3: Refactorització d'un mètode amb $V(G) > 15$
-- **Objectiu:** Reduir la complexitat ciclomàtica d'un mètode complex dividint-lo en mètodes auxiliars més simples (*Extract Method*).
-- **Procediment de taller:**
-  1. Pren un mètode amb múltiples `if` niats i bucles que sumen $V(G) = 16$.
-  2. Extreu la lògica de validació i de càlcul d'impostos en dos mètodes privats independents.
-  3. Recalcula el $V(G)$ de cadascun dels nous mètodes i comprova que cap d'ells supera el llindar recomanat de $10$.
+#### Repte 6.3: Taller de Gestió de Branques i Conflictes en Git
+1. Inicialitzeu un dipòsit Git i creeu el fitxer `Configuracio.java` a la branca `main`:
+```java
+public class Configuracio {
+    public static final String URL_API = "https://api.produccio.es";
+}
+```
+2. Feu un commit: `git commit -am "chore: afegir url de produccio"`.
+3. Creeu dues branques: `feature/canvi-proves` i `feature/canvi-local`.
+4. A la primera branca, canvieu la URL per `"https://api.test.es"` i feu commit.
+5. A la segona branca, canvieu la mateixa línia per `"http://localhost:8080"` i feu commit.
+6. A la branca `main`, fusioneu la primera branca amb `git merge feature/canvi-proves`.
+7. Intenteu fusionar la segona branca i observeu com Git genera el conflicte. Resoleu-lo manualment deixant una lectura des de fitxer de propietats, executeu `git add` i finalitzeu el commit de merge.
 
 ---
 
-### Bloc C: Llista de Verificació i Rúbrica d'Avaluació Competencial
+### 🔍 Bloc C: Autoavaluació i Rúbrica Tècnica
 
-#### Llista de comprovació per a l'alumnat
-- [ ] He diferenciat la perspectiva de caixa blanca de la de caixa negra.
-- [ ] He dibuixat el Graf de Flux de Control (CFG) a partir d'un fragment de codi font.
-- [ ] He calculat la Complexitat Ciclomàtica $V(G)$ utilitzant les fórmules de McCabe.
-- [ ] He identificat el conjunt de camins bàsics independents del graf.
-- [ ] He dissenyat casos de prova específics per a recórrer cadascun dels camins.
-- [ ] He comprès per què la cobertura de branques és superior a la de sentències.
-- [ ] He utilitzat eines de mesura de cobertura (JaCoCo) per identificar codi no provat.
+#### Llista de Verificació d'Assoliment
+- [ ] Puc identificar els principals *code smells* (Long Method, God Class, Primitive Obsession) en un projecte Java.
+- [ ] Sé aplicar tècniques de refactorització com Extract Method i Extract Class sense modificar el comportament extern.
+- [ ] Reconec la necessitat d'una bateria prèvia de proves unitàries abans de dur a terme qualsevol refactoring.
+- [ ] Sóc capaç de documentar una API Java utilitzant Javadoc amb `@param`, `@return` i `@throws`.
+- [ ] Puc generar la documentació HTML de Javadoc mitjançant el terminal o l'IDE.
+- [ ] Domine el funcionament dels 3 estats de Git i l'ús de branques per al desenvolupament aïllat de funcionalitats.
+- [ ] Sé resoldre conflictes de fusió (*merge conflicts*) en Git manualment de forma neta i rigorosa.
 
-#### Rúbrica d'avaluació d'aprenentatge
-| Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
+#### Rúbrica d'Avaluació de la Unitat
+| Criteri d'Avaluació | 🟢 Excel·lent (9-10) | 🟡 Notable (7-8) | 🟠 Aprovat (5-6) | 🔴 No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Construcció del Graf (CFG)** | Dibuixa grafs de flux impecables identificant amb precisió nodes de sentència, predicats i arestes en bucles i decisions. | Construeix el graf de flux correctament reflectint l'estructura lògica del mètode. | Dibuixa un graf senzill però confon sentències seqüencials amb punts de decisió. | Incapaç de traslladar les estructures de control a un graf dirigit. |
-| **Càlcul de McCabe V(G)** | Aplica ambdues fórmules de McCabe amb èxit, descompon predicats compostos i avalua el risc de mantenibilitat. | Calcula la complexitat ciclomàtica correctament emprant la fórmula d'arestes i nodes o predicats. | Calcula la mètrica però oblida que els operadors lògics (&&, \|\|) generen predicats addicionals. | Aplica les fórmules de forma errònia o desconeix què mesura la complexitat ciclomàtica. |
-| **Camins Independents** | Identifica la base completa de camins bàsics independents i dissenya jocs de proves que els recorren al 100%. | Defineix els camins independents principals i assigna dades de prova representatives. | Identifica camins redundants que no aporten arestes noves a la base de proves. | No sap identificar els camins d'execució del graf. |
-| **Criteris de Cobertura de Codi** | Analitza i distingeix críticament cobertura de sentències, branques i condicions múltiples utilitzant eines mètriques. | Comprèn la importància de la cobertura de branques i utilitza informes de JaCoCo. | Reconeix la cobertura de sentències però té dificultats per entendre la cobertura de branques. | Creu que provar una línia equival a provar totes les combinacions lògiques possibles. |
+| **Refactorització de Codi (RA6)** | Identifica code smells amb solvència i aplica refactoritzacions netes protegides per proves unitàries. | Aplica refactoritzacions habituals (Extract Method) millorant la qualitat del codi. | Reconeix codi millorable però fa canvis manuals que introdueixen riscos. | Modifica codi sense criteri introduint errors o trencant funcionalitats existents. |
+| **Documentació Javadoc (RA6)** | Documenta l'API de forma exhaustiva i genera la documentació HTML amb javadoc o Maven sense avisos. | Documenta classes i mètodes públics amb comentaris Javadoc correctes. | Utilitza Javadoc de forma bàsica ometent paràmetres o excepcions. | No documenta el codi o utilitza comentaris informals no estàndard. |
+| **Control de Versions Git (RA6)** | Utilitza branques de funcionalitat, commits atòmics semàntics i resol conflictes de merge amb mestria. | Gestiona branques i fusions en Git correctament amb pocs errors menors. | Utilitza comandes bàsiques de Git però té por de les branques o conflictes. | Incapaç d'utilitzar Git o provoca pèrdues de canvis en intentar fusionar. |
+| **Eines CASE (RA6)** | Utilitza eines CASE per generar codi i diagrames en ambdós sentits (directa i inversa) amb fluïdesa. | Utilitza eines CASE per a enginyeria directa o inversa de forma guiada. | Reconeix la funció de les eines CASE però té dificultats per integrar-les a l'IDE. | Desconeix el propòsit de les eines CASE i l'enginyeria del programari. |

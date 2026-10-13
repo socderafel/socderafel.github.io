@@ -3,6 +3,10 @@ layout: default
 title: "UD3: Disseny Orientat a Objectes i Diagrames de Classes UML — Entorns de Desenvolupament"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UD3"
+prev_url: "../ut02/index.html"
+prev_label: "⬅️ UD2: Entorns Integrats (IDE)"
+next_url: "../ut04/index.html"
+next_label: "UD4: Diagrames de Comportament UML ➡️"
 ---
 
 # UD3: Disseny Orientat a Objectes i Diagrames de Classes UML

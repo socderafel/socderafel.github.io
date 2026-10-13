@@ -3,6 +3,10 @@ layout: default
 title: "UD4: Modelat de Comportament amb Diagrames UML — Entorns de Desenvolupament"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UD4"
+prev_url: "../ut03/index.html"
+prev_label: "⬅️ UD3: Diagrames de Classes UML"
+next_url: "../ut05/index.html"
+next_label: "UD5: Proves de Programari i JUnit 5 ➡️"
 ---
 
 # UD4: Modelat de Comportament amb Diagrames UML

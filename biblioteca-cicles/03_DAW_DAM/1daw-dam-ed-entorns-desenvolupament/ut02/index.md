@@ -3,6 +3,10 @@ layout: default
 title: "UD2: Entorns Integrats de Desenvolupament (IDE) i Depuració — Entorns de Desenvolupament"
 course_root: ".."
 badge: "1r DAW / DAM · Grau Superior · UD2"
+prev_url: "../ut01/index.html"
+prev_label: "⬅️ UD1: Desenvolupament de Programari"
+next_url: "../ut03/index.html"
+next_label: "UD3: Diagrames de Classes UML ➡️"
 ---
 
 # UD2: Entorns Integrats de Desenvolupament (IDE) i Depuració
