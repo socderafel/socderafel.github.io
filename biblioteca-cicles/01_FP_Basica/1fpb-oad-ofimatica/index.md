@@ -27,5 +27,22 @@ Aquest temari didàctic està organitzat en **9 Unitats Didàctiques** que prepa
 
 ### 📌 Metodologia i Treball Pràctic
 - **Pràctiques Guiades:** Cadascuna de les unitats inclou tutorials pas a pas per dominar el programari d'oficina lliure i en línia.
+- **Captures i Infografies Didàctiques:** Totes les unitats incorporen captures de pantalla reals amb procediments numerats (➊, ➋, ➌), dreceres de teclat ràpides i alertes de bones pràctiques especialment adaptades a l'alumnat d'FP Bàsica.
 - **Enfocament Professional:** Les activitats estan contextualitzades en tasques reals d'una oficina administrativa i de taller.
 - **Navegació Ràpida:** Utilitza la barra lateral esquerra per explorar apartats específics o consultar qualsevol unitat completa en una sola pàgina.
+
+---
+
+### 📸 Galeria de Guies Visuals Pas a Pas del Mòdul
+
+| Àmbit Didàctic | Guies Visuals Destacades | Imatges i Procediments Pas a Pas |
+| :--- | :--- | :--- |
+| **📁 Gestió Documental** | Creació de carpetes, fitxers i organització | `01_creacio_carpetes_fitxers.png`, `02_gestio_fitxers_reanomenar_moure.png`, `03_compressio_zip_descompressio.png` |
+| **📝 LibreOffice Writer** | Interfície, format de text, taules, imatges i PDF | `04_writer_interficie_general.png`, `05_writer_format_text_paragraf.png`, `06_writer_insercio_taules_imatges.png`, `07_writer_desar_exportar_pdf.png` |
+| **📊 LibreOffice Calc** | Graella de cel·les, fórmules, funcions i gràfics | `08_calc_interficie_graella.png`, `09_calc_formules_funcions_basiques.png`, `10_calc_creacio_grafics.png` |
+| **🎨 Edició Gràfica (GIMP)** | Caixa d'eines, disseny en capes i formats PNG/JPG | `11_gimp_interficie_eines_capes.png` |
+| **✉️ Comunicació Digital** | Redacció formal, camps A/CC/CCO i RGPD | `12_correu_electronic_redactar_rgpd.png` |
+| **☁️ Treball al Núvol** | Google Drive / OneDrive i gestió de permisos | `13_nuvol_drive_pujar_compartir.png` |
+| **🛡️ Ciberseguretat** | Detecció de Phishing, alertes i telèfon 017 INCIBE | `14_seguretat_phishing_contrasenyes.png` |
+| **🧩 Pensament Computacional**| Programació per blocs amb Scratch | `15_scratch_pensament_computacional.png` |
+

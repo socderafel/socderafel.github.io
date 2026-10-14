@@ -135,7 +135,15 @@ Benvingut/da a la **Unitat Temàtica 7** d'**Ofimàtica i Arxiu de Documents (OA
 
 ---
 
+## 📸 Guia Visual Pas a Pas d'Emmagatzematge i Col·laboració al Núvol
+
+### Pujar Fitxers i Gestió de Permisos de Compartició (Drive / OneDrive)
+![Pujar fitxers i permisos al núvol](../img/13_nuvol_drive_pujar_compartir.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

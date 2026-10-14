@@ -137,7 +137,15 @@ Benvingut/da a la **Unitat Temàtica 5** d'**Ofimàtica i Arxiu de Documents (OA
 
 ---
 
+## 📸 Guia Visual Pas a Pas de Comunicació Digital i Correu
+
+### Redacció de Correu Professional, Camps A/CC/CCO i Protecció RGPD
+![Redacció de correu electrònic professional i RGPD](../img/12_correu_electronic_redactar_rgpd.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

@@ -141,7 +141,21 @@ Benvingut/da a la **Unitat Temàtica 1** del mòdul professional d'**Ofimàtica 
 
 ---
 
+## 📸 Guies Visuals Pas a Pas del Treball amb Fitxers i Carpetes
+
+### 1. Com Crear Carpetes i Fitxers a l'Explorador
+![Com crear carpetes i fitxers a l'Explorador](../img/01_creacio_carpetes_fitxers.png)
+
+### 2. Com Reanomenar (F2), Copiar i Moure Fitxers
+![Com reanomenar, copiar i moure fitxers](../img/02_gestio_fitxers_reanomenar_moure.png)
+
+### 3. Com Comprimir i Descomprimir Fitxers en Format ZIP
+![Com comprimir i extreure arxius ZIP](../img/03_compressio_zip_descompressio.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

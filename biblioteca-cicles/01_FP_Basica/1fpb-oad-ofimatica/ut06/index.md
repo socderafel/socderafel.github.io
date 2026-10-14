@@ -137,7 +137,15 @@ Benvingut/da a la **Unitat Temàtica 6** d'**Ofimàtica i Arxiu de Documents (OA
 
 ---
 
+## 📸 Guia Visual Pas a Pas de Seguretat Digital i Ciberprotecció
+
+### Anatomia d'un Atac de Phishing, Senyals d'Alerta i Telèfon 017 INCIBE
+![Anatomia d'un atac de phishing i alertes de seguretat](../img/14_seguretat_phishing_contrasenyes.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

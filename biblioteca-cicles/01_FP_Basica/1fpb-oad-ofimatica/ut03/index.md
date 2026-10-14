@@ -140,7 +140,21 @@ Benvingut/da a la **Unitat Temàtica 3** d'**Ofimàtica i Arxiu de Documents (OA
 
 ---
 
+## 📸 Guies Visuals Pas a Pas de LibreOffice Calc
+
+### 1. Interfície de Treball, Cel·les i Barra de Fórmules
+![Interfície completa de LibreOffice Calc](../img/08_calc_interficie_graella.png)
+
+### 2. Fórmules i Funcions Fonamentals (SUMA, MITJANA, MAX, MIN)
+![Fórmules i funcions bàsiques en LibreOffice Calc](../img/09_calc_formules_funcions_basiques.png)
+
+### 3. Assistent de Creació de Gràfics de Columnes i Sectors
+![Creació de gràfics en LibreOffice Calc](../img/10_calc_creacio_grafics.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

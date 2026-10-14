@@ -142,7 +142,15 @@ Benvingut/da a la **Unitat Temàtica 8** d'**Ofimàtica i Arxiu de Documents (OA
 
 ---
 
+## 📸 Guia Visual Pas a Pas de Pensament Computacional (Scratch)
+
+### Entorn de Programació per Blocs, Paleta de Categories i Escenari
+![Programació per blocs en Scratch](../img/15_scratch_pensament_computacional.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

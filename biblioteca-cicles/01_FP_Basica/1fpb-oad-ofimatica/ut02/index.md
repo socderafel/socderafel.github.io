@@ -136,7 +136,24 @@ Benvingut/da a la **Unitat Temàtica 2** d'**Ofimàtica i Arxiu de Documents (OA
 
 ---
 
+## 📸 Guies Visuals Pas a Pas de LibreOffice Writer
+
+### 1. Interfície Completa de Treball de Writer
+![Interfície completa de LibreOffice Writer](../img/04_writer_interficie_general.png)
+
+### 2. Format de Caràcter, Paràgrafs i Alineació Justificada
+![Format de text i paràgraf a LibreOffice Writer](../img/05_writer_format_text_paragraf.png)
+
+### 3. Inserció de Taules Maquetades i Ajust d'Imatges (Wrap)
+![Inserció de taules i imatges amb ajust de text a Writer](../img/06_writer_insercio_taules_imatges.png)
+
+### 4. Desar en Format Editable (.odt) vs Exportar a PDF Final
+![Desar editable vs exportar a PDF](../img/07_writer_desar_exportar_pdf.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

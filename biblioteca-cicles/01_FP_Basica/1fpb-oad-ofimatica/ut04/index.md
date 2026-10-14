@@ -139,7 +139,15 @@ Benvingut/da a la **Unitat Temàtica 4** d'**Ofimàtica i Arxiu de Documents (OA
 
 ---
 
+## 📸 Guia Visual Pas a Pas d'Edició d'Imatges (GIMP)
+
+### Interfície de Treball, Caixa d'Eines i Panell de Capes
+![Interfície de GIMP amb eines i capes](../img/11_gimp_interficie_eines_capes.png)
+
+---
+
 ## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
