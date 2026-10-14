@@ -1362,24 +1362,33 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <h3>11.1 Transferencia gráfica por SFTP hacia Windows Server en FileZilla (Puerto 22)</h3>
 <ol>
 <li>Abrir <strong>FileZilla Client</strong>.</li>
-<li>Conectar por <strong>SFTP</strong> desde la barra de <strong>Conexión rápida</strong> (indicando la IP pública de Windows Server, usuario <code>alumne_redes</code>, contraseña <code>Smx2026..@</code> y el <strong>Puerto <code>22</code></strong>) o desde <strong>Archivo</strong> -> <strong>Gestor de sitios...</strong> -> <strong>Nuevo sitio</strong> (<code>SFTP-Windows</code>) seleccionando el protocolo <strong>SFTP - SSH File Transfer Protocol</strong> y cargando vuestro archivo de clave privada <code>.ppk</code>.</li>
-<li>En la primera conexión SSH/SFTP, FileZilla mostrará la ventana de seguridad <strong>Clave de sitio desconocida</strong> con el algoritmo (<code>ssh-ed25519</code>) y la huella criptográfica (<strong>Fingerprint <code>SHA256</code></strong>) del servidor. Pulsar en <strong>Aceptar</strong>:</li>
+<li>Dado que en el apartado anterior hemos bastionado el servidor SSH deshabilitando la autenticación por contraseña (<code>PasswordAuthentication no</code>), para conectar por SFTP debemos utilizar la clave privada generada con PuTTYgen (<code>clave_privada_smx.ppk</code>):</li>
 </ol>
-<figure><img src="imagenes/34_filezilla_sftp_clave_ssh.png" alt="Validación de la clave pública SSH del servidor en FileZilla al conectar por el puerto 22 (SFTP)"><figcaption>Validación de la clave pública SSH del servidor en FileZilla al conectar por el puerto 22 (SFTP)</figcaption></figure>
-<p>*Figura 34: Verificación de la clave host SSH (ssh-ed25519 y huella SHA256) al establecer conexión SFTP en el puerto 22.*</p>
-<ol start="4">
-<li>Comprobar que en el log superior se negocia la conexión SFTP a través de SSH (<code>Hostkey is trusted</code> y <code>Directorio &quot;/C:/Users/alumne_redes&quot; listado correctamente</code>) y que en la barra de estado inferior derecha de FileZilla aparece el <strong>icono del candado dorado cerrado</strong>:</li>
+<ul>
+<li>Ir al menú <strong>Archivo</strong> -> <strong>Gestor de sitios...</strong> (o pulsar <code>Ctrl + S</code>).</li>
+<li>Crear un <strong>Nuevo sitio</strong> (por ejemplo, <code>Windows-SFTP</code>).</li>
+<li>En <strong>Protocolo</strong>, seleccionar <strong>SFTP - SSH File Transfer Protocol</strong>.</li>
+<li>En <strong>Servidor</strong>, escribir la IP pública de Windows Server (<code>54.198.204.170</code>) y en <strong>Puerto</strong> <code>22</code>.</li>
+<li>En <strong>Modo de acceso</strong>, seleccionar <strong>Archivo de claves</strong> (*Key file*).</li>
+<li>En <strong>Usuario</strong>, indicar <code>alumne_redes</code>.</li>
+<li>En <strong>Archivo de claves</strong>, pulsar <strong>Examinar...</strong> y seleccionar vuestro archivo <code>clave_privada_smx.ppk</code>.</li>
+</ul>
+<figure><img src="imagenes/34b_filezilla_sftp_gestor_sitios_clave.png" alt="Configuración del sitio SFTP con clave privada en el Gestor de sitios de FileZilla"><figcaption>Configuración del sitio SFTP con clave privada en el Gestor de sitios de FileZilla</figcaption></figure>
+<p>*Figura 34b: Parámetros del sitio SFTP en FileZilla: protocolo SFTP (puerto 22), IP pública del servidor y autenticación mediante clave privada (.ppk).*</p>
+<ol start="3">
+<li>Pulsar en <strong>Conectar</strong>. Al ser la primera vez, aceptar la clave del servidor (*Hostkey is trusted*).</li>
+<li>Comprobar que en el log superior se autentica con la clave y lista el directorio remoto <code>C:/Users/alumne_redes</code>.</li>
+<li>Arrastrar un archivo local de prueba (por ejemplo, <code>Llista Regals.xlsx</code> o cualquier documento de texto) hacia la carpeta remota para realizar la subida cifrada.</li>
+<li>Verificar que la transferencia se completa con éxito y que en la esquina inferior derecha aparece el <strong>candado dorado cerrado</strong>:</li>
 </ol>
-<figure><img src="imagenes/35_filezilla_sftp_conectado.png" alt="FileZilla conectado mediante SFTP en el puerto 22 mostrando el candado de cifrado"><figcaption>FileZilla conectado mediante SFTP en el puerto 22 mostrando el candado de cifrado</figcaption></figure>
-<p>*Figura 35: Conexión SFTP activa en el puerto 22 hacia Windows Server con listado del directorio remoto y candado de conexión cifrada.*</p>
-<ol start="5">
-<li>Subir un archivo de prueba (<code>fichero_sftp.txt</code>) y verificar que la transferencia cifrada concluye con éxito.</li>
-</ol>
+<figure><img src="imagenes/35_filezilla_sftp_conectado.png" alt="FileZilla conectado mediante SFTP en el puerto 22 mostrando transferencia completada y el candado de cifrado"><figcaption>FileZilla conectado mediante SFTP en el puerto 22 mostrando transferencia completada y el candado de cifrado</figcaption></figure>
+<p>*Figura 35: Conexión SFTP activa en el puerto 22 hacia Windows Server con subida completada con éxito y candado de seguridad activo.*</p>
 <blockquote><p>📷 <strong>Evidencia 15 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de FileZilla conectado por el protocolo SFTP al puerto 22 de Windows Server mostrando la transferencia completada y el icono del candado inferior.</p></blockquote>
 <hr>
 <h3>11.2 Transferencia por línea de comandos mediante SCP hacia Windows Server</h3>
 <ol>
 <li>En vuestro ordenador del aula, abrir una ventana de <strong>Windows PowerShell</strong>.</li>
+<li>Dado que el servidor tiene deshabilitada la contraseña tras el bastionado, <code>scp</code> utilizará automáticamente el par de claves asimétricas alojado en vuestro perfil (<code>~/.ssh/id_rsa</code> o indicando <code>-i .\clave_privada_smx.pem</code>).</li>
 <li>Crear un archivo local de prueba y enviarlo hacia Windows Server mediante <code>scp</code>:</li>
 </ol>
 <div class="terminal-box">
@@ -1395,7 +1404,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
   <pre><code class="language-powershell"><span class="tok-cmd">Set-Content</span> <span class="tok-flag">-Path</span> .\backup_aula.txt <span class="tok-flag">-Value</span> <span class="tok-string">&quot;Copia de seguridad realizada mediante SCP - 2SMX&quot;</span>
 <span class="tok-cmd">scp</span> .\backup_aula.txt alumne_redes@<span class="tok-var">&lt;IP_PUBLICA_WINDOWS&gt;</span>:C:/Users/alumne_redes/</code></pre>
 </div>
-<ol start="3">
+<ol start="4">
 <li>Comprobar en la consola la barra de progreso al <code>100%</code> y descargar el archivo de vuelta con un nuevo nombre (<code>fichero_recuperado.txt</code>) para verificar su integridad:</li>
 </ol>
 <div class="terminal-box">
@@ -1412,7 +1421,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 Get-Content .\fichero_recuperado.txt</code></pre>
 </div>
 <figure><img src="imagenes/48_powershell_scp_transferencia.png" alt="Transferencia de subida y descarga mediante SCP en Windows PowerShell"><figcaption>Transferencia de subida y descarga mediante SCP en Windows PowerShell</figcaption></figure>
-<p>*Figura 48: Subida y descarga segura de archivos hacia Windows Server por línea de comandos mediante SCP sobre el puerto 22.*</p>
+<p>*Figura 48: Subida y descarga segura de archivos hacia Windows Server por línea de comandos mediante SCP sobre el puerto 22 autenticando por clave.*</p>
 <blockquote><p>📷 <strong>Evidencia 16 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de PowerShell ejecutando los comandos <code>scp</code> de subida y descarga mostrando la transferencia completada al <code>100%</code>.</p></blockquote>
 <hr>
 <h3>11.3 Auditoría de registros de actividad en Windows Server (Logs W3C de IIS)</h3>
@@ -1449,15 +1458,90 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <blockquote><p>📷 <strong>Evidencia 17 (insertar en tu documento Word) — Realizar captura de pantalla</strong> del fichero de log de IIS en Notepad destacando una línea con un comando de subida exitoso (<code>STOR</code> con código <code>226</code>) y la negociación FTPS (<code>AUTH TLS</code> con código <code>234</code>).</p></blockquote>
 <hr>
 <h3>11.4 Auditoría de tráfico con Wireshark: FTP en texto claro vs. FTPS y SFTP cifrados</h3>
-<p>Para comprobar empíricamente por qué nunca debe utilizarse FTP sin cifrar, capturaremos con <strong>Wireshark</strong> en el PC del aula el tráfico hacia nuestro Windows Server aplicando el filtro <code>ftp || tls || ssh</code>:</p>
+<p>Para comprobar empíricamente por qué nunca debe utilizarse FTP sin cifrar en redes públicas o corporativas, realizaremos una captura de paquetes con <strong>Wireshark</strong> desde el ordenador del aula mientras nos comunicamos con nuestro servidor Windows Server.</p>
+<h4>11.4.1 Instalación y preparación previa de Wireshark</h4>
+<ol>
+<li>Si no disponéis de Wireshark en vuestro equipo del aula, descargar el instalador oficial de Windows (64-bit) desde <a href="https://www.wireshark.org/download.html">wireshark.org</a>.</li>
+<li>Durante el asistente de instalación, es imprescindible mantener marcada la casilla de <strong>Npcap</strong> (controlador de captura de paquetes en modo promiscuo de Windows) con las opciones predeterminadas.</li>
+</ol>
+<h4>11.4.2 Selección de la interfaz e inicio de la captura</h4>
+<ol>
+<li>Abrir <strong>Wireshark</strong>.</li>
+<li>En la pantalla inicial de bienvenida (*Welcome to Wireshark*), identificar la tarjeta de red activa del equipo (la que muestra una línea con picos de actividad o tráfico):</li>
+</ol>
 <ul>
-<li><strong>En FTP plano (sin SSL):</strong> Wireshark muestra en texto claro <code>Request: USER alumne_redes</code> y <strong><code>Request: PASS Smx2026..@</code></strong>.</li>
-<li><strong>En FTPS (<code>Require SSL</code>):</strong> Tras <code>AUTH TLS</code>, todo viaja cifrado como <strong><code>TLSv1.2 Application Data</code></strong>.</li>
-<li><strong>En SFTP (Puerto <code>22</code>):</strong> Todo viaja blindado como <strong><code>SSHv2 Encrypted packet</code></strong>.</li>
+<li>En los ordenadores de sobremesa del aula suele ser <strong>Ethernet</strong>.</li>
+<li>Si estáis trabajando con un ordenador portátil, seleccionar <strong>Wi-Fi</strong>.</li>
+</ul>
+<ol start="3">
+<li>Hacer doble clic sobre la interfaz activa o seleccionarla y pulsar el botón azul con forma de <strong>aleta de tiburón</strong> (esquina superior izquierda) para comenzar a capturar tráfico en tiempo real.</li>
+<li>En la barra superior de filtro de visualización (*Apply a display filter ...*), escribir el siguiente filtro y pulsar <code>Enter</code> (la barra se pondrá en color verde claro si la sintaxis es correcta):</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">📋 Esquema / Salida</div>
+    <div class="terminal-lang">text</div>
+  </div>
+  <pre><code class="language-text">ftp || tls || ssh</code></pre>
+</div>
+<p>*(Opcional: Si queréis aislar exclusivamente el tráfico con vuestro servidor Windows en AWS, podéis usar: <code>(ftp || tls || ssh) &amp;&amp; ip.addr == &amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>)*.</p>
+<figure><img src="imagenes/44c_wireshark_filtro_interfaz.png" alt="Inicio de captura y aplicación del filtro de visualización en Wireshark"><figcaption>Inicio de captura y aplicación del filtro de visualización en Wireshark</figcaption></figure>
+<p>*Figura 44c: Selección de la interfaz activa de red (Ethernet/Wi-Fi), inicio de captura con la aleta de tiburón y aplicación del filtro ftp || tls || ssh en Wireshark.*</p>
+<h4>11.4.3 Procedimiento de generación de tráfico de prueba</h4>
+<p>Con la captura de Wireshark corriendo en segundo plano:</p>
+<ol>
+<li><strong>Generar tráfico FTP plano (en texto claro):</strong></li>
+</ol>
+<ul>
+<li>En FileZilla, conectar por FTP ordinario sin cifrado (<code>ftp://&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>, puerto <code>21</code>) con el usuario <code>alumne_redes</code> y su contraseña <code>Smx2026..@</code>.</li>
+</ul>
+<ol start="2">
+<li><strong>Generar tráfico FTPS (cifrado con TLS):</strong></li>
+</ol>
+<ul>
+<li>Conectar con FileZilla requiriendo TLS explícito (*Requiere FTP explícito sobre TLS*).</li>
+</ul>
+<ol start="3">
+<li><strong>Generar tráfico SFTP (cifrado con SSH):</strong></li>
+</ol>
+<ul>
+<li>Conectar con FileZilla por el puerto <code>22</code> (SFTP) o ejecutar un comando <code>scp</code> en PowerShell.</li>
+</ul>
+<ol start="4">
+<li>Volver a Wireshark y pulsar el botón <strong>rojo cuadrado</strong> (*Stop capturing packets*) en la barra de herramientas para detener la captura.</li>
+</ol>
+<h4>11.4.4 Inspección y análisis comparativo de paquetes (Auditoría de seguridad)</h4>
+<p>Al examinar la lista de tramas filtradas comprobaremos la diferencia fundamental entre protocolos:</p>
+<ol>
+<li><strong>FTP plano (Vulnerabilidad crítica):</strong></li>
+</ol>
+<ul>
+<li>En las tramas de color rosa asociadas al protocolo FTP, buscar la petición de autenticación:</li>
+<li><code>Request: USER alumne_redes</code></li>
+<li><code>Request: PASS Smx2026..@</code></li>
+<li>Al hacer clic sobre el paquete <code>PASS</code>, en el panel inferior de inspección de datos se comprueba que <strong>la contraseña viaja en texto completamente plano y legible</strong>, lo que permitiría a cualquier atacante en la red interceptarla (*sniffing* o ataque Man-In-The-Middle).</li>
+</ul>
+<ol start="2">
+<li><strong>FTPS sobre TLS (Cifrado de canal):</strong></li>
+</ol>
+<ul>
+<li>Se aprecia la negociación inicial en el puerto 21 (<code>AUTH TLS -&gt; 234 AUTH command ok</code>).</li>
+<li>A partir de ese instante, todos los comandos y datos viajan cifrados bajo el protocolo <strong><code>TLSv1.2</code></strong> clasificados como <strong><code>Application Data</code></strong>.</li>
+</ul>
+<ol start="3">
+<li><strong>SFTP sobre SSH (Blindaje total):</strong></li>
+</ol>
+<ul>
+<li>En el puerto <code>22</code>, toda la sesión queda encapsulada bajo <strong><code>SSHv2</code></strong> mostrando únicamente paquetes de tipo <strong><code>Encrypted packet</code></strong>. Ni las credenciales ni los nombres de los archivos transferidos son accesibles.</li>
 </ul>
 <figure><img src="imagenes/44b_wireshark_ftp_texto_claro_vs_cifrado.png" alt="Comparativa de paquetes en Wireshark entre FTP en texto claro y FTPS/SFTP cifrados"><figcaption>Comparativa de paquetes en Wireshark entre FTP en texto claro y FTPS/SFTP cifrados</figcaption></figure>
 <p>*Figura 44b: Auditoría en Wireshark contrastando la exposición de credenciales en FTP plano (Request: PASS Smx2026..@) frente al tráfico cifrado en FTPS (TLSv1.2 Application Data) y SFTP (SSHv2 Encrypted packet).*</p>
-<blockquote><p>📷 <strong>Evidencia 18 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de Wireshark mostrando los paquetes cifrados <code>TLSv1.2 Application Data</code> (FTPS) y <code>SSHv2 Encrypted packet</code> (SFTP).</p></blockquote>
+<blockquote><p>📷 <strong>Evidencia 18 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de Wireshark mostrando los paquetes capturados donde se contrasten los paquetes en texto claro de FTP frente a los paquetes cifrados <code>TLSv1.2 Application Data</code> (FTPS) y <code>SSHv2 Encrypted packet</code> (SFTP).</p></blockquote>
 <div class="admonition info">
 <p class="admonition-title">Qué debes añadir a tu documento Word al terminar el Apartado 11 (Fin del Bloque Windows Server)</p>
 <p>En el <strong>Apartado 11</strong> de tu documento Word, incluye las <strong>Evidencias 15 a 18</strong>:</p>
