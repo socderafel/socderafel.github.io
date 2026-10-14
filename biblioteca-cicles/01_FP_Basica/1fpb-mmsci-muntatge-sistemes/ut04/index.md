@@ -142,31 +142,29 @@ Benvingut/da a la **Unitat Didàctica 4** de MMSCI. En aquesta unitat coneixerem
 
 #### Exercici 1: Dimensionament de Potència per a una Font d'Alimentació ATX
 Calcula la potència mínima recomanada per a la font d'alimentació d'un equip de taller analitzant el consum màxim dels seus components:
-- Processador (Intel Core i5): TDP de \(65\text{ W}\) (amb pics de potència turbo de \(120\text{ W}\)).
-- Targeta gràfica dedicada (Nvidia RTX 4060): Consum màxim de \(115\text{ W}\).
-- Placa base i chipset: \(35\text{ W}\).
-- 2 mòduls de memòria RAM DDR5: \(5\text{ W}\) cadascun (\(10\text{ W}\) en total).
-- 1 disc SSD NVMe M.2: \(8\text{ W}\).
-- 1 disc dur mecànic HDD secundari: \(10\text{ W}\).
-- 4 ventiladors ARGB de caixa: \(4\text{ W}\) cadascun (\(16\text{ W}\) en total).
+- Processador (Intel Core i5): TDP de $65\text{ W}$ (amb pics de potència turbo de $120\text{ W}$).
+- Targeta gràfica dedicada (Nvidia RTX 4060): Consum màxim de $115\text{ W}$.
+- Placa base i chipset: $35\text{ W}$.
+- 2 mòduls de memòria RAM DDR5: $5\text{ W}$ cadascun ($10\text{ W}$ en total).
+- 1 disc SSD NVMe M.2: $8\text{ W}$.
+- 1 disc dur mecànic HDD secundari: $10\text{ W}$.
+- 4 ventiladors ARGB de caixa: $4\text{ W}$ cadascun ($16\text{ W}$ en total).
 1. Suma el consum màxim total teòric de tots els components en situació d'alta càrrega de treball.
-2. Aplica un **marge de seguretat del 25%** per evitar que la font treballe al 100% de la seua capacitat (Consum total \(\times 1,25\)). Quina potència nominal en Watts ha de tenir la font comercial que seleccionem (per exemple: 450 W, 550 W, 650 W o 750 W)?
+2. Aplica un **marge de seguretat del 25%** per evitar que la font treballe al 100% de la seua capacitat (Consum total $\times 1,25$). Quina potència nominal en Watts ha de tenir la font comercial que seleccionem (per exemple: 450 W, 550 W, 650 W o 750 W)?
 3. Si triem una font de 650 W amb segell **80 PLUS Gold** (eficiència del 90% a mitja càrrega), quants Watts consumirà realment de l'endoll de la paret quan l'equip estiga demandant 300 W reals?
 
 #### Exercici 2: Anàlisi de la Configuració Dual-Channel en Memòria RAM
 En una placa base amb 4 ranures de memòria DIMM (anomenades DIMM_A1, DIMM_A2, DIMM_B1 i DIMM_B2):
 1. Quines dues ranures específiques indica el fabricant a la documentació oficial que s'han d'ocupar primer quan només instal·lem 2 mòduls de memòria RAM per garantir el correcte funcionament del **Dual Channel**?
 2. Quina diferència d'amplada de bus existeix entre fer funcionar la memòria en **Single Channel** (1 mòdul de 16 GB) i en **Dual Channel** (2 mòduls de 8 GB)?
-3. Si cadascun dels mòduls DDR4 funciona a una velocitat efectiva de \(3.200\text{ MHz}\), quina amplada de banda màxima teòrica en GB/s s'obté en Single Channel i quina en Dual Channel? Aplica la fórmula:
-   \[
-   BW = \frac{\text{Amplada de bus (bits)}}{8} \times \text{Freqüència (MHz)} \times 10^{-3}
-   \]
+3. Si cadascun dels mòduls DDR4 funciona a una velocitat efectiva de $3.200\text{ MHz}$, quina amplada de banda màxima teòrica en GB/s s'obté en Single Channel i quina en Dual Channel? Aplica la fórmula:
+   $$BW = \frac{\text{Amplada de bus (bits)}}{8} \times \text{Freqüència (MHz)} \times 10^{-3}$$
 
 #### Exercici 3: Càlcul de Temps de Còpia i Comparativa HDD vs SSD
-Hem de transferir una imatge ISO d'instal·lació i còpia de seguretat d'un laboratori que ocupa una mida de \(60\text{ GB}\) (\(61.440\text{ MB}\)).
-1. Calcula quant de temps trigarà a copiar-se la imatge en un disc dur HDD mecànic antic amb una velocitat sostinguda d'escriptura de \(120\text{ MB/s}\). Expressa el resultat en segons i converteix-lo a minuts.
-2. Calcula quant de temps trigarà el mateix procés si s'utilitza un disc SSD SATA tradicional amb una velocitat d'escriptura de \(500\text{ MB/s}\).
-3. Calcula quant de temps trigarà en un disc SSD NVMe M.2 PCIe 4.0 amb una taxa d'escriptura de \(4.800\text{ MB/s}\).
+Hem de transferir una imatge ISO d'instal·lació i còpia de seguretat d'un laboratori que ocupa una mida de $60\text{ GB}$ ($61.440\text{ MB}$).
+1. Calcula quant de temps trigarà a copiar-se la imatge en un disc dur HDD mecànic antic amb una velocitat sostinguda d'escriptura de $120\text{ MB/s}$. Expressa el resultat en segons i converteix-lo a minuts.
+2. Calcula quant de temps trigarà el mateix procés si s'utilitza un disc SSD SATA tradicional amb una velocitat d'escriptura de $500\text{ MB/s}$.
+3. Calcula quant de temps trigarà en un disc SSD NVMe M.2 PCIe 4.0 amb una taxa d'escriptura de $4.800\text{ MB/s}$.
 4. Compara els tres resultats i redacta una conclusió tècnica sobre la millora de productivitat que suposa migrar un parc informàtic a unitats SSD NVMe.
 
 ---

@@ -145,9 +145,7 @@ Benvingut/da a la **Unitat Didàctica 7** de MMSCI. En aquest bloc aprendràs a 
 #### Exercici 1: Càlcul de Rendiment Real de Tòner segons Cobertura de Pàgina
 Els fabricants d'impressores certifiquen la durada dels seus consumibles sota la norma internacional **ISO/IEC 19752**, la qual estableix una cobertura estàndard del **5% de la superfície del paper A4** (equivalent a un document de text curt sense logotips ni imatges).
 1. Un cartutx de tòner de taller té una capacitat nominal de **3.000 pàgines al 5% de cobertura**. Quantes pàgines reals permetrà imprimir si a l'oficina es generen factures i informes amb gràfics que tenen una cobertura mitjana del **15%**? Aplica una regla de tres inversa o la fórmula:
-   \[
-   \text{Pàgines reals} = \text{Pàgines nominals} \times \frac{5\%}{\text{Cobertura real (\%)}}
-   \]
+   $$\text{Pàgines reals} = \text{Pàgines nominals} \times \frac{5\%}{\text{Cobertura real (\%)}}$$
 2. Si un centre educatiu imprimeix 2.000 exàmens al mes amb una cobertura del 10%, quants cartutxos de tòner d'aquest model necessitarà consumir al llarg d'un curs escolar de 9 mesos?
 3. Quina mesura de sostenibilitat es pot activar al controlador d'impressió (*Mode Esborrany* o *Toner Save*) per reduir la despesa de consumibles en documents de treball intern?
 

@@ -150,14 +150,14 @@ Quan un equip s'engega, el firmware de la placa base executa la rutina **POST** 
 
 #### Exercici 3: Càlcul de Càrrega i Seguretat Elèctrica del Banc de Taller
 A la bancada de treball del taller disposem d'una regleta de connexió múltiple connectada a un magnetotèrmic dedicat de **16 Amperes a una tensió de 230 Volts AC**.
-1. Quina és la potència elèctrica màxima en Watts (\( P = V \cdot I \)) que pot subministrar aquesta presa abans que salte el diferencial o l'interruptor automàtic?
+1. Quina és la potència elèctrica màxima en Watts ($P = V \cdot I$) que pot subministrar aquesta presa abans que salte el diferencial o l'interruptor automàtic?
 2. Durant una sessió de diagnòstic, volem connectar simultàniament a aquesta mateixa regleta:
    - 4 ordinadors en proves (consum màxim de 350 W cadascun).
    - 4 monitors de 24" (consum de 30 W cadascun).
    - 1 estació de soldadura d'estany de taller (consum de 80 W).
    - 1 bufador elèctric de neteja d'alta potència (consum de 600 W).
    Calcula la potència total consumida quan tots els equips estiguen engegats alhora.
-3. Representa aquesta potència un risc de sobrecàrrega per a la línia de 16 A? Justifica matemàticament la resposta calculant la intensitat de corrent total (\( I = P / V \)).
+3. Representa aquesta potència un risc de sobrecàrrega per a la línia de 16 A? Justifica matemàticament la resposta calculant la intensitat de corrent total ($I = P / V$).
 
 ---
 

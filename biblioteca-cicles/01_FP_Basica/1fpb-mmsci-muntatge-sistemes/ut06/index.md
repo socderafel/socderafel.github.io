@@ -144,21 +144,19 @@ Benvingut/da a la **Unitat Didàctica 6** de MMSCI. Els perifèrics són la fine
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 #### Exercici 1: Càlcul de Densitat de Píxels (PPI) i Taxa de Refresc en Monitors
-La densitat de píxels per polzada (\(PPI\)) determina la nitidesa d'una pantalla i es calcula mitjançant el teorema de Pitàgores entre la resolució horitzontal (\(W\)), la vertical (\(H\)) i la diagonal en polzades (\(D\)):
-\[
-PPI = \frac{\sqrt{W^2 + H^2}}{D}
-\]
-1. Calcula el PPI d'un monitor d'aula d'informàtica de **24 polzades** amb resolució Full HD (\(1920 \times 1080\)).
-2. Calcula el PPI d'un monitor de disseny gràfic de **27 polzades** amb resolució 4K UHD (\(3840 \times 2160\)).
+La densitat de píxels per polzada ($PPI$) determina la nitidesa d'una pantalla i es calcula mitjançant el teorema de Pitàgores entre la resolució horitzontal ($W$), la vertical ($H$) i la diagonal en polzades ($D$):
+$$PPI = \frac{\sqrt{W^2 + H^2}}{D}$$
+1. Calcula el PPI d'un monitor d'aula d'informàtica de **24 polzades** amb resolució Full HD ($1920 \times 1080$).
+2. Calcula el PPI d'un monitor de disseny gràfic de **27 polzades** amb resolució 4K UHD ($3840 \times 2160$).
 3. Quin dels dos monitors oferirà una imatge més nítida i textos més definits a una distància visual de 60 cm?
-4. Si un monitor funciona a **60 Hz**, quantes imatges completes per segon mostra la pantalla? Quin temps en mil·lisegons (\(t = 1/f\)) roman cada fotograma a la vista abans de ser reemplaçat? I si funciona a **144 Hz**?
+4. Si un monitor funciona a **60 Hz**, quantes imatges completes per segon mostra la pantalla? Quin temps en mil·lisegons ($t = 1/f$) roman cada fotograma a la vista abans de ser reemplaçat? I si funciona a **144 Hz**?
 
 #### Exercici 2: Estudi Comparatiu de Cost per Pàgina (CPP) d'Impressió
 Una petita oficina administrativa imprimeix una mitjana de **1.500 pàgines al mes** exclusivament en blanc i negre. El departament ha de decidir entre dues opcions de compra:
 - **Opció A (Impressora d'Injecció de Tinta):** Preu de la màquina: 90 €. Cartutx de tinta negra oficial: 25 € amb una durada estimada de 300 pàgines.
 - **Opció B (Impressora Làser Monocrom):** Preu de la màquina: 180 €. Cartutx de tòner negre: 45 € amb una durada estimada de 2.500 pàgines.
-1. Calcula el cost per pàgina (\(CPP = \text{Preu del consumible} / \text{Nombre de pàgines}\)) per a cadascuna de les dues opcions.
-2. Quin serà el cost en consumibles de cada impressora al cap d'un any de feina (\(1.500 \text{ pàgines/mes} \times 12 \text{ mesos} = 18.000 \text{ pàgines}\))?
+1. Calcula el cost per pàgina ($CPP = \text{Preu del consumible} / \text{Nombre de pàgines}$) per a cadascuna de les dues opcions.
+2. Quin serà el cost en consumibles de cada impressora al cap d'un any de feina ($1.500 \text{ pàgines/mes} \times 12 \text{ mesos} = 18.000 \text{ pàgines}$)?
 3. Suma el cost inicial de la màquina més la despesa de consumibles del primer any per a totes dues opcions. Quina de les dues resulta més econòmica globalment al final del primer any? Justifica la decisió.
 
 #### Exercici 3: Diagnòstic de Codis d'Error a l'Administrador de Dispositius

@@ -149,10 +149,10 @@ En un taller de reparació informàtica hem de liquidar la nòmina mensual de 4 
 - Cel·la `$B$1`: Tipus de retenció d'IRPF = **12%** (`0,12`)
 - Cel·la `$B$2`: Tipus de cotització a la Seguretat Social (SS) = **6,4%** (`0,064`)
 A la taula d'empleats tenim:
-- Fila 5: Tècnic 1 (Joan) té un Sou Brut de \(1.400,00\text{ €}\) a la cel·la `B5`.
-- Fila 6: Tècnic 2 (Marta) té un Sou Brut de \(1.650,00\text{ €}\) a la cel·la `B6`.
-- Fila 7: Tècnic 3 (Carles) té un Sou Brut de \(1.350,00\text{ €}\) a la cel·la `B7`.
-- Fila 8: Tècnic 4 (Sara) té un Sou Brut de \(1.500,00\text{ €}\) a la cel·la `B8`.
+- Fila 5: Tècnic 1 (Joan) té un Sou Brut de $1.400,00\text{ €}$ a la cel·la `B5`.
+- Fila 6: Tècnic 2 (Marta) té un Sou Brut de $1.650,00\text{ €}$ a la cel·la `B6`.
+- Fila 7: Tècnic 3 (Carles) té un Sou Brut de $1.350,00\text{ €}$ a la cel·la `B7`.
+- Fila 8: Tècnic 4 (Sara) té un Sou Brut de $1.500,00\text{ €}$ a la cel·la `B8`.
 1. Escriu la fórmula exacta que s'ha d'escriure a la cel·la `C5` per calcular l'import d'IRPF de Joan utilitzant una **referència absoluta** a la cel·la `$B$1` perquè es puga arrossegar cap avall a la resta d'empleats.
 2. Escriu la fórmula per a la cel·la `D5` per calcular la deducció de la Seguretat Social bloquejant la cel·la `$B$2`.
 3. Escriu la fórmula per a la cel·la `E5` que calcule el **Sou Líquid a Percebre** (Sou Brut - IRPF - Seguretat Social).

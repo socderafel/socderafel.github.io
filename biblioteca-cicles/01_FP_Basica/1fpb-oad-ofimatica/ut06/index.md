@@ -142,14 +142,12 @@ Benvingut/da a la **Unitat Temàtica 6** d'**Ofimàtica i Arxiu de Documents (OA
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 #### Exercici 1: Càlcul de Temps de Desxiframent de Contrasenyes per Força Bruta
-El nombre de combinacions possibles (\(C\)) d'una contrasenya depèn del conjunt de caràcters disponibles (\(N\)) i de la seua longitud en caràcters (\(L\)):
-\[
-C = N^L
-\]
-Un ordinador d'atac equipat amb targetes gràfiques pot provar aproximadament **10.000 milions de combinacions per segon** (\(10^{10}\text{ intents/s}\)).
-1. Calcula les combinacions possibles d'un codi PIN numèric de 4 dígits (\(N = 10\) números de l'0 al 9, \(L = 4\)). Quant de temps trigarà l'ordinador a provar totes les combinacions possibles?
-2. Calcula les combinacions d'una contrasenya de 8 caràcters formada exclusivament per lletres minúscules (\(N = 26\), \(L = 8\)). Quant de temps trigarà a desxifrar-se?
-3. Calcula les combinacions d'una frase de pas de 14 caràcters que combina majúscules, minúscules, números i símbols especials (\(N = 95\), \(L = 14\)). Demostra matemàticament per què caldrien milers d'anys per trencar-la per força bruta.
+El nombre de combinacions possibles ($C$) d'una contrasenya depèn del conjunt de caràcters disponibles ($N$) i de la seua longitud en caràcters ($L$):
+$$C = N^L$$
+Un ordinador d'atac equipat amb targetes gràfiques pot provar aproximadament **10.000 milions de combinacions per segon** ($10^{10}\text{ intents/s}$).
+1. Calcula les combinacions possibles d'un codi PIN numèric de 4 dígits ($N = 10$ números de l'0 al 9, $L = 4$). Quant de temps trigarà l'ordinador a provar totes les combinacions possibles?
+2. Calcula les combinacions d'una contrasenya de 8 caràcters formada exclusivament per lletres minúscules ($N = 26$, $L = 8$). Quant de temps trigarà a desxifrar-se?
+3. Calcula les combinacions d'una frase de pas de 14 caràcters que combina majúscules, minúscules, números i símbols especials ($N = 95$, $L = 14$). Demostra matemàticament per què caldrien milers d'anys per trencar-la per força bruta.
 
 #### Exercici 2: Descodificació d'un Atac Real de Phishing Bancari
 Un treballador d'oficina rep al seu correu el següent missatge:

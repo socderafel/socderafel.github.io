@@ -186,9 +186,9 @@ Un ordinador de laboratori presenta els següents símptomes en prémer el botó
   3. Configura el polímetre en mesura de tensió contínua (DCV 20 V).
   4. Col·loca la punta roja a la cara superior plana de la pila (+) i la punta negra a la base inferior (-).
   5. Anota la mesura obtinguda:
-     - Si \( V \ge 3,0\text{ V} \): Pila en estat òptim.
-     - Si \( 2,8\text{ V} \le V < 3,0\text{ V} \): Pila feble (avís de canvi preventiu).
-     - Si \( V < 2,8\text{ V} \): Pila esgotada (substitució immediata obligatòria).
+     - Si $V \ge 3,0\text{ V}$: Pila en estat òptim.
+     - Si $2,8\text{ V} \le V < 3,0\text{ V}$: Pila feble (avís de canvi preventiu).
+     - Si $V < 2,8\text{ V}$: Pila esgotada (substitució immediata obligatòria).
   6. Localitza el jumper `CLR_CMOS` de 2 o 3 pins.
      - Si és de 2 pins: Fes un pont curtcircuitant els dos pins durant 10 segons amb la punta metàl·lica d'un tornavís o caputxó jumper amb l'equip desendollat.
      - Si és de 3 pins: Mou el caputxó de la posició normal (1-2) a la posició de neteja (2-3) durant 10 segons, i torna'l obligatòriament a la posició 1-2.

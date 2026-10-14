@@ -153,12 +153,10 @@ L'empresa de serveis informàtics "TechVal S.L." necessita reorganitzar el disc 
 
 #### Exercici 2: Càlcul de Ràtio de Compressió i Estalvi d'Espai en Disc
 La taxa o ràtio de compressió percentual d'un arxiu es calcula amb la fórmula:
-\[
-Ràtio = \left(1 - \frac{\text{Mida de l'arxiu comprimit}}{\text{Mida de l'arxiu original}}\right) \times 100\%
-\]
+$$Ràtio = \left(1 - \frac{\text{Mida de l'arxiu comprimit}}{\text{Mida de l'arxiu original}}\right) \times 100\%$$
 Un administratiu disposa d'un lot de fitxers d'oficina i els comprimeix en un arxiu ZIP amb el programa 7-Zip:
-- Fitxer 1: Un document de base de dades en text pla de \(80\text{ MB}\) que després de comprimir ocupa \(16\text{ MB}\).
-- Fitxer 2: Una carpeta de 50 fotografies JPEG que ocupa \(150\text{ MB}\) i després de comprimir ocupa \(144\text{ MB}\).
+- Fitxer 1: Un document de base de dades en text pla de $80\text{ MB}$ que després de comprimir ocupa $16\text{ MB}$.
+- Fitxer 2: Una carpeta de 50 fotografies JPEG que ocupa $150\text{ MB}$ i després de comprimir ocupa $144\text{ MB}$.
 1. Calcula la ràtio de compressió aconseguida en cadascun dels dos casos.
 2. Explica per què el fitxer de text ha assolit una reducció de més del 75% mentre que la carpeta de fotos pràcticament no s'ha reduït gens. (Pista: el format JPEG ja incorpora compressió algorísmica interna).
 3. Si hem d'enviar per correu electrònic un informe que ocupa 45 MB i el servidor només admet fitxers adjunts de fins a 25 MB, quina utilitat de 7-Zip permet dividir l'arxiu en dos volums ZIP independents de 23 MB?

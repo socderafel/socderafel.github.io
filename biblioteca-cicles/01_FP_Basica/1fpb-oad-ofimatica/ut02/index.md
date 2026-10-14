@@ -143,12 +143,12 @@ Benvingut/da a la **Unitat Temàtica 2** d'**Ofimàtica i Arxiu de Documents (OA
 #### Exercici 1: Càlcul de Marges de Pàgina i Capacitat de Línies DIN A4
 Un full estàndard **DIN A4** mesura exactament **210 mm d'amplada per 297 mm d'alçada**.
 1. Si configurem el document amb marges d'oficina estàndard:
-   - Marge esquerre: \(30\text{ mm}\) (permetre l'enquadernat).
-   - Marge dret: \(20\text{ mm}\).
-   - Marge superior: \(25\text{ mm}\).
-   - Marge inferior: \(25\text{ mm}\).
+   - Marge esquerre: $30\text{ mm}$ (permetre l'enquadernat).
+   - Marge dret: $20\text{ mm}$.
+   - Marge superior: $25\text{ mm}$.
+   - Marge inferior: $25\text{ mm}$.
    Quina serà l'amplada útil i l'alçada útil en mil·límetres disponible per escriure text i inserir taules?
-2. Si un paràgraf utilitza una mida de lletra de 12 punts amb un interlineat de 1,5 línies i un espaiat posterior de 6 punts (aproximadament \(7\text{ mm}\) d'alçada per línia escrita): quantes línies de text cabran com a màxim en una sola pàgina abans de saltar automàticament al full següent?
+2. Si un paràgraf utilitza una mida de lletra de 12 punts amb un interlineat de 1,5 línies i un espaiat posterior de 6 punts (aproximadament $7\text{ mm}$ d'alçada per línia escrita): quantes línies de text cabran com a màxim en una sola pàgina abans de saltar automàticament al full següent?
 3. Si hem de redactar un tríptic publicitari plegat en 3 columnes, quina orientació de pàgina s'ha de seleccionar (Vertical o Horitzontal) i quina amplada tindrà cada columna si deixem un marge d'1 cm i una separació entre columnes de 0,5 cm?
 
 #### Exercici 2: Disseny Matemàtic d'una Taula de Pressupost amb Fórmules

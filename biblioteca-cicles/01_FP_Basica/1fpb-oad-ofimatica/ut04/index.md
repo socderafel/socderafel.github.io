@@ -145,19 +145,15 @@ Benvingut/da a la **Unitat Temàtica 4** d'**Ofimàtica i Arxiu de Documents (OA
 
 #### Exercici 1: Càlcul de Megapíxels i Mida de Memòria en Brut (Sense Compressió)
 Una càmera fotogràfica de taller pren una imatge amb una resolució nativa de **4.000 píxels d'amplada per 3.000 píxels d'alçada**. Cada píxel emmagatzema 3 canals de color (Roig, Verd i Blau - RGB), ocupant exactament **3 bytes per píxel** (24 bits de profunditat de color).
-1. Calcula el nombre total de píxels de la fotografia i expressa el resultat en **Megapíxels (MP)** tenint en compte que \(1\text{ MP} = 1.000.000\text{ píxels}\).
+1. Calcula el nombre total de píxels de la fotografia i expressa el resultat en **Megapíxels (MP)** tenint en compte que $1\text{ MP} = 1.000.000\text{ píxels}$.
 2. Calcula quant ocuparà aquesta imatge a la memòria RAM de l'ordinador sense cap mena de compressió en Megabytes (MB):
-   \[
-   \text{Mida (bytes)} = \text{Amplada} \times \text{Alçada} \times 3\text{ bytes}
-   \]
-   Converteix el resultat a Megabytes (\(1\text{ MB} = 1024 \times 1024\text{ bytes}\)).
-3. Si desem la imatge en format JPEG amb una qualitat del 85%, el fitxer passa a ocupar només \(2,8\text{ MB}\) al disc. Quina ha estat la ràtio de reducció d'espai aconseguida?
+   $$\text{Mida (bytes)} = \text{Amplada} \times \text{Alçada} \times 3\text{ bytes}$$
+   Converteix el resultat a Megabytes ($1\text{ MB} = 1024 \times 1024\text{ bytes}$).
+3. Si desem la imatge en format JPEG amb una qualitat del 85%, el fitxer passa a ocupar només $2,8\text{ MB}$ al disc. Quina ha estat la ràtio de reducció d'espai aconseguida?
 
 #### Exercici 2: Càlcul de Mida Màxima d'Impressió Física a 300 DPI
-Per calcular la mida màxima en centímetres que pot tenir una impressió en paper amb qualitat d'impremta (300 DPI) s'utilitza la fórmula de conversió de polzades a centímetres (\(1\text{ polzada} = 2,54\text{ cm}\)):
-\[
-\text{Mida física (cm)} = \frac{\text{Nombre de píxels}}{300\text{ DPI}} \times 2,54
-\]
+Per calcular la mida màxima en centímetres que pot tenir una impressió en paper amb qualitat d'impremta (300 DPI) s'utilitza la fórmula de conversió de polzades a centímetres ($1\text{ polzada} = 2,54\text{ cm}$):
+$$\text{Mida física (cm)} = \frac{\text{Nombre de píxels}}{300\text{ DPI}} \times 2,54$$
 Un alumne descarrega d'Internet una fotografia que té una resolució de **1200 × 900 píxels** i la vol imprimir com a cartell a mida completa **DIN A4 (21 × 29,7 cm)**:
 1. Quina és la mida màxima en centímetres (amplada i alçada) a la qual es pot imprimir aquesta imatge garantint els 300 DPI de resolució professional?
 2. Podem imprimir-la a mida DIN A4 completa sense que es veja pixelada o borrosa? Justifica la resposta comparant els centímetres obtinguts amb les mides del full A4.

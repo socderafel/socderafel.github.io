@@ -141,15 +141,13 @@ Benvingut/da a la **Unitat Temàtica 7** d'**Ofimàtica i Arxiu de Documents (OA
 
 #### Exercici 1: Dimensionament d'Emmagatzematge i Temps de Sincronització
 Una empresa de disseny i serveis d'oficina té contractat un compte d'emmagatzematge al núvol amb una quota total d'**1 Terabyte (1.000 GB)**. L'estat actual d'ocupació és el següent:
-- Carpeta de Factures i Documents PDF: \(45\text{ GB}\).
-- Còpia de seguretat de bases de dades: \(120\text{ GB}\).
-- Fotografies i vídeos corporatius de productes: \(680\text{ GB}\).
+- Carpeta de Factures i Documents PDF: $45\text{ GB}$.
+- Còpia de seguretat de bases de dades: $120\text{ GB}$.
+- Fotografies i vídeos corporatius de productes: $680\text{ GB}$.
 1. Calcula quant espai lliure restant li queda a l'empresa tant en Gigabytes com en percentatge respecte al límit d'1 TB.
 2. L'empresa necessita pujar un lot de noves imatges que ocupa **180 GB**. Hi cabrà a l'espai restant disponible? Quina acció d'estalvi o ampliació s'ha de planificar abans que el núvol es bloquege per excés de quota?
-3. Si la connexió a Internet de l'oficina té una velocitat de pujada (*Upload*) simètrica de **300 Mbps** (\(37,5\text{ MB/s}\)), quant de temps trigarà a sincronitzar-se completament aquest lot de 180 GB (\(184.320\text{ MB}\)) des del primer ordinador fins al núvol? Aplica:
-   \[
-   \text{Temps (s)} = \frac{\text{Mida (MB)}}{\text{Velocitat (MB/s)}}
-   \]
+3. Si la connexió a Internet de l'oficina té una velocitat de pujada (*Upload*) simètrica de **300 Mbps** ($37,5\text{ MB/s}$), quant de temps trigarà a sincronitzar-se completament aquest lot de 180 GB ($184.320\text{ MB}$) des del primer ordinador fins al núvol? Aplica:
+   $$\text{Temps (s)} = \frac{\text{Mida (MB)}}{\text{Velocitat (MB/s)}}$$
    Expressa el resultat en segons, minuts i hores.
 
 #### Exercici 2: Matriu de Risc en la Compartició d'Arxius de Recursos Humans

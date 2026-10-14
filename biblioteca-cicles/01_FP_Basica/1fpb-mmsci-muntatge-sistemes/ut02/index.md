@@ -120,8 +120,8 @@ Benvingut/da a la **Unitat Didàctica 2** de MMSCI. En aquest bloc temàtic apro
 | **Memòria Cau L2** | SRAM (Static RAM) | 512 KB – 2 MB per nucli | 3 – 5 ns | ~ 300 – 450 GB/s | Dedicada o compartida per parella de nuclis | Volàtil |
 | **Memòria Cau L3** | SRAM d'alta densitat | 16 – 96 MB | 10 – 15 ns | ~ 150 – 250 GB/s | Compartida per tots els nuclis de la CPU | Volàtil |
 | **Memòria Principal (RAM)** | DRAM (DDR4 / DDR5) | 8 – 64 GB | 50 – 70 ns | 25 – 60 GB/s | Mòduls DIMM a les ranures de la placa base | Volàtil |
-| **Emmagatzematge NVMe (SSD)** | Memòria Flash NAND 3D | 500 GB – 4 TB | 20 – 100 \(\mu\text{s}\) | 3,5 – 7,5 GB/s | Connectat a la ranura M.2 PCIe | **No volàtil** (permanent) |
-| **Disc Dur Mecànic (HDD)** | Plats magnètics giratoris | 1 – 16 TB | 10 – 15 \(\text{ms}\) | 120 – 220 MB/s | Badia de 3,5" connectat per cable SATA | **No volàtil** (permanent) |
+| **Emmagatzematge NVMe (SSD)** | Memòria Flash NAND 3D | 500 GB – 4 TB | 20 – 100 $\mu\text{s}$ | 3,5 – 7,5 GB/s | Connectat a la ranura M.2 PCIe | **No volàtil** (permanent) |
+| **Disc Dur Mecànic (HDD)** | Plats magnètics giratoris | 1 – 16 TB | 10 – 15 $\text{ms}$ | 120 – 220 MB/s | Badia de 3,5" connectat per cable SATA | **No volàtil** (permanent) |
 
 ---
 
@@ -145,22 +145,18 @@ Benvingut/da a la **Unitat Didàctica 2** de MMSCI. En aquest bloc temàtic apro
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 #### Exercici 1: Càlcul d'Amplada de Banda del Bus de Dades
-L'amplada de banda o velocitat màxima de transferència d'un bus de comunicació (\(BW\)) es calcula multiplicant l'amplada de bus en bytes per la seua freqüència de treball efectiva:
-\[
-BW = \frac{\text{Amplada del bus (bits)}}{8} \times \text{Freqüència efectiva (Hz)}
-\]
-1. Un ordinador antic utilitza un bus frontal de 32 bits que funciona a una freqüència de \(100\text{ MHz}\) (\(100.000.000\text{ Hz}\)). Quina és la seua amplada de banda màxima en Megabytes per segon (MB/s)?
-2. Un equip modern compta amb memòria RAM DDR4 que opera amb un bus de 64 bits a una freqüència efectiva de \(3200\text{ MHz}\). Calcula la seua amplada de banda en Megabytes per segon i converteix el resultat a Gigabytes per segon (GB/s).
+L'amplada de banda o velocitat màxima de transferència d'un bus de comunicació ($BW$) es calcula multiplicant l'amplada de bus en bytes per la seua freqüència de treball efectiva:
+$$BW = \frac{\text{Amplada del bus (bits)}}{8} \times \text{Freqüència efectiva (Hz)}$$
+1. Un ordinador antic utilitza un bus frontal de 32 bits que funciona a una freqüència de $100\text{ MHz}$ ($100.000.000\text{ Hz}$). Quina és la seua amplada de banda màxima en Megabytes per segon (MB/s)?
+2. Un equip modern compta amb memòria RAM DDR4 que opera amb un bus de 64 bits a una freqüència efectiva de $3200\text{ MHz}$. Calcula la seua amplada de banda en Megabytes per segon i converteix el resultat a Gigabytes per segon (GB/s).
 3. Si aquest equip s'amplia amb un segon mòdul de memòria per activar el mode **Dual Channel** (amplada efectiva combinada de 128 bits), quina amplada de banda total assolirà? Compara aquest valor amb la memòria en Single Channel.
 
 #### Exercici 2: Límit de Direccionament de Memòria RAM pel Bus d'Adreces
-La capacitat màxima de memòria RAM que un processador pot gestionar directament ve determinada pel nombre de línies físiques del seu bus d'adreces (\(n\)):
-\[
-\text{Adreces possibles} = 2^n \text{ posicions de memòria (bytes)}
-\]
-1. Si un microprocessador clàssic té un bus d'adreces de 16 bits, quantes posicions de memòria pot adreçar? Expressa el resultat en Kilobytes (KB), tenint en compte que \(1\text{ KB} = 1024\text{ bytes}\).
-2. Un processador amb arquitectura de 32 bits disposa d'un bus d'adreces de 32 línies físiques (\(n = 32\)). Demostra matemàticament per què un sistema operatiu de 32 bits no pot aprofitar més de \(4\text{ GB}\) de memòria RAM encara que s'instal·len mòduls físics de major capacitat.
-3. Un processador actual de 64 bits té un bus d'adreces físic de 48 línies actives (\(2^{48}\) bytes). Quina capacitat de memòria RAM màxima en Terabytes (TB) pot arribar a gestionar teòricament?
+La capacitat màxima de memòria RAM que un processador pot gestionar directament ve determinada pel nombre de línies físiques del seu bus d'adreces ($n$):
+$$\text{Adreces possibles} = 2^n \text{ posicions de memòria (bytes)}$$
+1. Si un microprocessador clàssic té un bus d'adreces de 16 bits, quantes posicions de memòria pot adreçar? Expressa el resultat en Kilobytes (KB), tenint en compte que $1\text{ KB} = 1024\text{ bytes}$.
+2. Un processador amb arquitectura de 32 bits disposa d'un bus d'adreces de 32 línies físiques ($n = 32$). Demostra matemàticament per què un sistema operatiu de 32 bits no pot aprofitar més de $4\text{ GB}$ de memòria RAM encara que s'instal·len mòduls físics de major capacitat.
+3. Un processador actual de 64 bits té un bus d'adreces físic de 48 línies actives ($2^{48}$ bytes). Quina capacitat de memòria RAM màxima en Terabytes (TB) pot arribar a gestionar teòricament?
 
 #### Exercici 3: Descomposició del Cicle d'Instrucció (Fetch, Decode, Execute)
 Analitza pas a pas què fa la CPU quan executa la instrucció senzilla en llenguatge màquina `ADD 25, R1` (Sumar el valor de la posició 25 al registre de treball R1):
@@ -233,5 +229,5 @@ Analitza pas a pas què fa la CPU quan executa la instrucció senzilla en llengu
 | :--- | :--- | :--- | :--- | :--- |
 | **Identificació de Blocs Funcionals i CPU** | Descriu amb exactitud l'arquitectura de Von Neumann, la funció de la UC, ALU, registres i les fases del cicle d'instrucció. | Identifica els blocs de la CPU i explica el cicle d'execució amb petites imprecisions en els registres. | Reconeix la CPU com a nucli de processament i diferencia la UC de l'ALU amb suport del resum. | No sap identificar els components d'una CPU ni explicar com processa les ordres bàsiques. |
 | **Jerarquia de Memòria i Busos** | Classifica tots els nivells de memòria segons latència, cost i capacitat, i explica la funció dels 3 tipus de busos. | Ordena correctament la piràmide de memòria i distingeix el bus de dades del bus d'adreces. | Distingeix entre memòria RAM volàtil i disc permanent, però dubta amb els nivells de cau L1/L2/L3. | Confon la memòria RAM amb el disc dur o no comprèn per què calen memòries cau ràpides. |
-| **Càlculs Tècnics de Rendiment** | Resol amb precisió els càlculs d'amplada de banda (\(BW\)) i límit d'adreçament (\(2^n\)) indicant les unitats adients. | Aplica les fórmules amb correcció i comet només errors menors d'arrodoniment o conversió d'unitats. | Realitza els càlculs bàsics amb ajut del model matemàtic guiat. | Incapaç d'aplicar les fórmules o no comprèn la relació entre bits d'adreça i capacitat en GB. |
+| **Càlculs Tècnics de Rendiment** | Resol amb precisió els càlculs d'amplada de banda ($BW$) i límit d'adreçament ($2^n$) indicant les unitats adients. | Aplica les fórmules amb correcció i comet només errors menors d'arrodoniment o conversió d'unitats. | Realitza els càlculs bàsics amb ajut del model matemàtic guiat. | Incapaç d'aplicar les fórmules o no comprèn la relació entre bits d'adreça i capacitat en GB. |
 | **Auditoria Pràctica de Maquinari** | Executa les eines d'auditoria (CPU-Z/CLI/Gestor de Tasques), extreu tots els paràmetres tècnics i redacta la fitxa tècnica. | Utilitza les eines de monitoratge i obté les dades fonamentals de nuclis i memòria del sistema. | Obre les eines de diagnòstic i localitza la CPU i la RAM amb indicacions del docent. | No sap utilitzar el gestor de tasques ni les eines de diagnòstic per comprovar el maquinari. |

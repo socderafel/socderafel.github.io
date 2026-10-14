@@ -150,9 +150,7 @@ Una acadèmia de formació envia una circular informativa sobre les noves dates 
 
 #### Exercici 2: Càlcul de Mida de Fitxers Adjunts i Codificació MIME/Base64
 El protocol estàndard de transmissió de correu electrònic (SMTP) va ser dissenyat originalment només per transmetre text pla de 7 bits (ASCII). Per poder adjuntar arxius binaris (imatges, PDFs, ZIPs), el programa de correu codifica el fitxer mitjançant l'algorisme **Base64**, el qual incrementa la mida real de l'arxiu en aproximadament un **33%**:
-\[
-\text{Mida en trànsit (MB)} = \text{Mida del fitxer original (MB)} \times 1,33
-\]
+$$\text{Mida en trànsit (MB)} = \text{Mida del fitxer original (MB)} \times 1,33$$
 1. Si un usuari intenta adjuntar un document PDF escanejat que pesa exactament **20 MB** en un compte de correu el límit màxim de fitxer adjunt del qual està fixat pel servidor en **25 MB**:
    - Quina mida tindrà el missatge un cop codificat en Base64?
    - Superarà el límit de 25 MB del servidor de sortida? S'enviarà el correu o serà rebutjat immediatament?

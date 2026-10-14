@@ -118,12 +118,12 @@ Pots accedir directament a cada apartat o consultar el resum complet més avall:
 
 | Magnitud / Paràmetre | Símbol i Unitat | Instrument de Mesura | Mètode de Connexió | Valor típic a l'equip microinformàtic | Protocol de Seguretat associat |
 | :--- | :---: | :--- | :--- | :--- | :--- |
-| **Tensió Elèctrica** | \( V \) (Volts) | Polímetre (Mode Voltímetre DCV) | **En paral·lel** entre els dos punts de mesura | +12 V (Groc), +5 V (Roig), +3,3 V (Taronja), 3 V (CR2032) | No creuar les puntes per evitar curtcircuits. |
-| **Intensitat de Corrent** | \( I \) (Amperes / mA) | Polímetre (Mode Amperímetre DCA) | **En sèrie** (obrint el circuit físicament) | 0,5 A (USB 2.0), 1,5 A (ventilador), 15-25 A (CPU/GPU) | Canviar la clavilla vermella a la presa de 10A si se supera el límit. |
-| **Resistència Elèctrica** | \( R \) (Ohms, \(\Omega\)) | Polímetre (Mode Ohmímetre \(\Omega\)) | **En paral·lel** amb el component aïllat | Resistències limitadores: 220 \(\Omega\) a 10 k\(\Omega\) | **Desconnectar completament l'alimentació** abans de mesurar. |
-| **Continuïtat Elèctrica** | Bip sonor | Polímetre (Mode Brunzidor/Díode) | Entre els dos extrems d'un cable o fusible | 0 \(\Omega\) = Bip continu (Connexió OK) | Assegurar que no hi ha càrrega residual en condensadors. |
-| **Potència Elèctrica** | \( P \) (Watts, W) | Càlcul (\( P = V \cdot I \)) o Vatímetre de xarxa | Endoll intermedi a la presa Schuko 230V | 150 W – 450 W (consum global torre PC oficina) | No sobrecarregar regletes múltiples de taller. |
-| **Càrrega Electroestàtica** | \( kV \) (Kilovolts) | Mesurador de camp electroestàtic | Superfície de l'operari o component | Descàrrega imperceptible a partir de 100 V (danya xips) | **Polsera antiestàtica** obligatòria connectada al xassís o terra. |
+| **Tensió Elèctrica** | $V$ (Volts) | Polímetre (Mode Voltímetre DCV) | **En paral·lel** entre els dos punts de mesura | +12 V (Groc), +5 V (Roig), +3,3 V (Taronja), 3 V (CR2032) | No creuar les puntes per evitar curtcircuits. |
+| **Intensitat de Corrent** | $I$ (Amperes / mA) | Polímetre (Mode Amperímetre DCA) | **En sèrie** (obrint el circuit físicament) | 0,5 A (USB 2.0), 1,5 A (ventilador), 15-25 A (CPU/GPU) | Canviar la clavilla vermella a la presa de 10A si se supera el límit. |
+| **Resistència Elèctrica** | $R$ (Ohms, $\Omega$) | Polímetre (Mode Ohmímetre $\Omega$) | **En paral·lel** amb el component aïllat | Resistències limitadores: 220 $\Omega$ a 10 k$\Omega$ | **Desconnectar completament l'alimentació** abans de mesurar. |
+| **Continuïtat Elèctrica** | Bip sonor | Polímetre (Mode Brunzidor/Díode) | Entre els dos extrems d'un cable o fusible | 0 $\Omega$ = Bip continu (Connexió OK) | Assegurar que no hi ha càrrega residual en condensadors. |
+| **Potència Elèctrica** | $P$ (Watts, W) | Càlcul ($P = V \cdot I$) o Vatímetre de xarxa | Endoll intermedi a la presa Schuko 230V | 150 W – 450 W (consum global torre PC oficina) | No sobrecarregar regletes múltiples de taller. |
+| **Càrrega Electroestàtica** | $kV$ (Kilovolts) | Mesurador de camp electroestàtic | Superfície de l'operari o component | Descàrrega imperceptible a partir de 100 V (danya xips) | **Polsera antiestàtica** obligatòria connectada al xassís o terra. |
 
 ---
 
@@ -132,9 +132,9 @@ Pots accedir directament a cada apartat o consultar el resum complet més avall:
 ### 1. Les Tres Magnituds Elèctriques Fonamentals
 - **Tensió (V):** Volts. Pressió que empeny els electrons pel conductor.
 - **Intensitat (I):** Amperes. Quantitat d'electrons per segon que circulen pel circuit.
-- **Resistència (R):** Ohms (\(\Omega\)). Oposició que presenten els materials al pas del corrent.
-- **Fórmula d'Ohm:** \( V = I \cdot R \).
-- **Potència elèctrica:** \( P = V \cdot I \) (Watts).
+- **Resistència (R):** Ohms ($\Omega$). Oposició que presenten els materials al pas del corrent.
+- **Fórmula d'Ohm:** $V = I \cdot R$.
+- **Potència elèctrica:** $P = V \cdot I$ (Watts).
 
 ### 2. Conversió d'Energia al PC
 - La xarxa elèctrica aporta **230 V en Corrent Altern (AC)** a una freqüència de 50 Hz.
@@ -156,29 +156,27 @@ Pots accedir directament a cada apartat o consultar el resum complet més avall:
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 
 #### Exercici 1: Càlcul de Resistència Limitadora per a Indicadors LED
-En el taller microinformàtic disposem de díodes LED de color blau i roig per indicar l'estat d'engegada del sistema (Power LED) i l'activitat de la unitat d'emmagatzematge (HDD LED). Cada LED té una caiguda de tensió nominal de \( V_{LED} = 2,0\text{ V} \) i requereix un corrent òptim de treball de \( I = 15\text{ mA} \) (\(0,015\text{ A}\)).
-1. Si connectem el LED a la línia de \(+5\text{ V}\) de la font d'alimentació ATX, quina tensió exacta ha de suportar la resistència limitadora? Aplica la fórmula \( V_R = V_{font} - V_{LED} \).
-2. Calcula el valor de la resistència limitadora \( R \) en Ohms (\(\Omega\)) aplicant la Llei d'Ohm:
-   \[
-   R = \frac{V_R}{I}
-   \]
-3. Si connectem per error el mateix circuit a la línia de \(+12\text{ V}\) mantenint la mateixa resistència calculada anteriorment, quin corrent travessarà el LED? Justifica tècnicament si el díode sobreviurà o es cremarà.
+En el taller microinformàtic disposem de díodes LED de color blau i roig per indicar l'estat d'engegada del sistema (Power LED) i l'activitat de la unitat d'emmagatzematge (HDD LED). Cada LED té una caiguda de tensió nominal de $V_{LED} = 2,0\text{ V}$ i requereix un corrent òptim de treball de $I = 15\text{ mA}$ ($0,015\text{ A}$).
+1. Si connectem el LED a la línia de $+5\text{ V}$ de la font d'alimentació ATX, quina tensió exacta ha de suportar la resistència limitadora? Aplica la fórmula $V_R = V_{font} - V_{LED}$.
+2. Calcula el valor de la resistència limitadora $R$ en Ohms ($\Omega$) aplicant la Llei d'Ohm:
+   $$R = \frac{V_R}{I}$$
+3. Si connectem per error el mateix circuit a la línia de $+12\text{ V}$ mantenint la mateixa resistència calculada anteriorment, quin corrent travessarà el LED? Justifica tècnicament si el díode sobreviurà o es cremarà.
 
 #### Exercici 2: Descodificació del Codi de Colors de Resistències de 4 Bandes
 Determina el valor òptic, la tolerància i el rang admissible (valor mínim i màxim) de les següents resistències de taller utilitzant la taula de codi de colors estàndard:
-1. **Resistència 1:** Banda 1: Roig (2), Banda 2: Roig (2), Banda 3: Marró (\(\times 10\)), Banda 4: Daurat (\(\pm 5\%\)).
-2. **Resistència 2:** Banda 1: Marró (1), Banda 2: Negre (0), Banda 3: Vermell (\(\times 100\)), Banda 4: Daurat (\(\pm 5\%\)).
-3. **Resistència 3:** Banda 1: Groc (4), Banda 2: Violeta (7), Banda 3: Vermell (\(\times 100\)), Banda 4: Plata (\(\pm 10\%\)).
-4. Si un company mesura la Resistència 1 amb el polímetre i obté una lectura de \(234\ \Omega\), indica si aquest component està en bon estat de funcionament o ha de ser rebutjat.
+1. **Resistència 1:** Banda 1: Roig (2), Banda 2: Roig (2), Banda 3: Marró ($\times 10$), Banda 4: Daurat ($\pm 5\%$).
+2. **Resistència 2:** Banda 1: Marró (1), Banda 2: Negre (0), Banda 3: Vermell ($\times 100$), Banda 4: Daurat ($\pm 5\%$).
+3. **Resistència 3:** Banda 1: Groc (4), Banda 2: Violeta (7), Banda 3: Vermell ($\times 100$), Banda 4: Plata ($\pm 10\%$).
+4. Si un company mesura la Resistència 1 amb el polímetre i obté una lectura de $234\ \Omega$, indica si aquest component està en bon estat de funcionament o ha de ser rebutjat.
 
 #### Exercici 3: Càlcul de Potència i Consum Elèctric en Línies de Tensió
-Un equip informàtic de taller té connectats els següents elements al seu rail de \(+12\text{ V}\):
-- 3 ventiladors de xassís de \(0,25\text{ A}\) cadascun.
-- 1 bomba de refrigeració líquida de \(0,80\text{ A}\).
-- 1 targeta gràfica bàsica que consumeix \(65\text{ W}\) a través de la línia de 12 V.
-1. Calcula la potència elèctrica consumida pels 3 ventiladors i la bomba aplicant \( P = V \cdot I \).
-2. Calcula la intensitat de corrent total (\( I_{total} \)) que circula pel rail de 12 V per alimentar tots aquests components.
-3. Si el rail de 12 V de la font té una capacitat màxima de sortida de \(18\text{ A}\), quin percentatge de càrrega representa aquest consum respecte al límit de la línia?
+Un equip informàtic de taller té connectats els següents elements al seu rail de $+12\text{ V}$:
+- 3 ventiladors de xassís de $0,25\text{ A}$ cadascun.
+- 1 bomba de refrigeració líquida de $0,80\text{ A}$.
+- 1 targeta gràfica bàsica que consumeix $65\text{ W}$ a través de la línia de 12 V.
+1. Calcula la potència elèctrica consumida pels 3 ventiladors i la bomba aplicant $P = V \cdot I$.
+2. Calcula la intensitat de corrent total ($I_{total}$) que circula pel rail de 12 V per alimentar tots aquests components.
+3. Si el rail de 12 V de la font té una capacitat màxima de sortida de $18\text{ A}$, quin percentatge de càrrega representa aquest consum respecte al límit de la línia?
 
 ---
 
@@ -199,7 +197,7 @@ Un equip informàtic de taller té connectats els següents elements al seu rail
 - **Material de laboratori:** Multímetre digital en mode brunzidor acústic, cable d'alimentació IEC C13 a Schuko, fusible ceràmic de font, cables de connexió de disc SATA.
 - **Passos d'execució:**
   1. Situa el selector del polímetre en la posició del símbol de **díode / brunzidor acústic (🔊)**.
-  2. Junta les dues puntes de prova entre si. Comprova que l'aparell emet un xiulet clar i marca un valor proper a \(0,0\ \Omega\).
+  2. Junta les dues puntes de prova entre si. Comprova que l'aparell emet un xiulet clar i marca un valor proper a $0,0\ \Omega$.
   3. Comprova l'estat del fusible de laboratori col·locant una punta a cada extrem metàl·lic. Si xiula, el fusible és apte; si mostra "OL" o "1" (circuit obert), el fusible està cremat.
   4. Fes el mapa de continuïtat d'un cable d'alimentació de xarxa Schuko a C13:
      - Comprova la fase (clavilla Schuko a orifici C13 dret).
@@ -215,7 +213,7 @@ Un equip informàtic de taller té connectats els següents elements al seu rail
   2. Prem el botó d'engegada frontal (*Power Button*) durant 5 segons amb l'equip desendollat per descarregar l'energia romanent dels condensadors de la font i placa base.
   3. Col·loca la polsera antiestàtica ben cenyida a la monyica de la mà no dominant, garantint contacte directe amb la pell neta.
   4. Fixa la pinça de cocodril a una part metàl·lica sense pintar del xassís de la caixa o al terminal de terra de la catifa ESD.
-  5. Mesura amb el polímetre en escala de MegaOhms (M\(\Omega\)) la resistència del cable de la polsera: confirma que marca aproximadament \(1\text{ M}\Omega\) (resistència de seguretat per protegir l'operari de contactes accidentals).
+  5. Mesura amb el polímetre en escala de MegaOhms (M$\Omega$) la resistència del cable de la polsera: confirma que marca aproximadament $1\text{ M}\Omega$ (resistència de seguretat per protegir l'operari de contactes accidentals).
   6. Registra l'estat final a la llista de verificació prèvia a la manipulació de mòduls de memòria RAM o targetes d'expansió.
 
 ---
@@ -236,6 +234,6 @@ Un equip informàtic de taller té connectats els següents elements al seu rail
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Ús del Multímetre i Mesures Elèctriques** | Selecciona l'escala idònia, connecta les puntes amb precisió i obté mesures exactes de tensió i continuïtat sense dubtes. | Configura el polímetre correctament i obté les mesures amb petites correccions de rang. | Fa servir l'aparell amb ajuda del procediment, mesura la tensió bàsica però dubta en la posició de les clavilles. | Desconeix com configurar el multímetre, utilitza l'escala incorrecta o crea curtcircuits amb les puntes. |
-| **Càlculs amb la Llei d'Ohm i Codi de Colors** | Resol tots els exercicis matemàtics (\(V, I, R, P\)) amb fórmules, unitats i descodifica les bandes de color amb toleràncies exactes. | Resol els càlculs amb petits errors d'arrodoniment i llegeix el codi de colors amb fluïdesa. | Aplica la fórmula bàsica d'Ohm amb orientació i identifica els colors principals de les resistències. | No sap aplicar la fórmula de la Llei d'Ohm ni interpretar les bandes de color dels components. |
+| **Càlculs amb la Llei d'Ohm i Codi de Colors** | Resol tots els exercicis matemàtics ($V, I, R, P$) amb fórmules, unitats i descodifica les bandes de color amb toleràncies exactes. | Resol els càlculs amb petits errors d'arrodoniment i llegeix el codi de colors amb fluïdesa. | Aplica la fórmula bàsica d'Ohm amb orientació i identifica els colors principals de les resistències. | No sap aplicar la fórmula de la Llei d'Ohm ni interpretar les bandes de color dels components. |
 | **Protocol de Seguretat i Protecció ESD** | Aplica rigorosament la polsera antiestàtica, drena condensadors i manté l'estació de treball segura en tot moment. | Utilitza la protecció antiestàtica correctament i recorda desendollar l'equip de la xarxa elèctrica. | Col·loca la polsera només quan se li recorda i desconnecta l'equip de 230 V. | Omet les normes de seguretat, manipula equips en tensió o toca components sensibles sense descarregar-se. |
 | **Ordre, Mètode i Neteja de Laboratori** | Treballa amb mètode impecable, anota dades en la memòria tècnica i deixa el banc de taller ordenat i net. | Manté un bon ordre en les eines i cables durant les proves i recull el lloc de treball. | Realitza la pràctica de manera acceptable però requereix recordatoris per endreçar les eines. | Deixa cables i eines desordenats, no completa la memòria tècnica o malmet el material de taller. |
