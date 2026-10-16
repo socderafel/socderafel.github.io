@@ -2,7 +2,7 @@
 layout: default
 title: "UP2 — Identitat Corporativa i Paper de Carta amb Writer (Unitat Completa) — Projecte Intermodular (2n FPB)"
 course_root: ".."
-badge: "1a Avaluació · RA2 (a-f) · 8 hores · 15% de la nota"
+badge: "1a Avaluació · RA2 (a-f) · 8 hores · 10,0 punts (Aules)"
 prev_url: "../up01/index.html"
 prev_label: "⬅️ 📘 UP1 Completa"
 next_url: "./up02ras.html"
@@ -15,58 +15,61 @@ next_label: "2.0 RA i Criteris d'Avaluació ➡️"
 
 **Resultat d'Aprenentatge 2 (RA2):** Confecciona la documentació administrativa, tècnica i de comunicació de l'empresa, utilitzant aplicacions ofimàtiques de processament de textos i plantilles corporatives.
 
-| Criteri d'Avaluació | Descripció i Indicador | Apartat de la Unitat | Pes en RA2 |
-| --- | --- | --- | --- |
-| **a) Marges i Pàgina** | Configuració correcta de pàgina i marges (2,00 cm) a LibreOffice Writer. | [2.1 Configuració i Estils](./up0201.md) | **15% (1,5 pts)** |
-| **b) Estils Corporatius** | Creació i aplicació d'estils de text (Títol 1) amb el color del logotip. | [2.1 Configuració i Estils](./up0201.md) | **15% (1,5 pts)** |
-| **c) Paper de Carta** | Disseny del paper de carta amb encapçalament (logo) i peu de pàgina d'empresa. | [2.2 Paper de Carta i Plantilla](./up0202.md) | **25% (2,5 pts)** |
-| **d) Plantilla Buida** | Desat i organització de la plantilla reutilitzable buida (`.ott` / `.odt`). | [2.2 Paper de Carta i Plantilla](./up0202.md) | **15% (1,5 pts)** |
-| **e) Documentació** | Redacció de carta de serveis i taula de pressupost de 4 columnes sense faltes. | [2.3 Carta i Model Pressupost](./up0203.md) | **20% (2,0 pts)** |
-| **f) Format PDF** | Exportació normalitzada a format PDF i incorporació ordenada al portfoli. | [Tasca 2 del Projecte](./up02actividades.md) | **10% (1,0 pt)** |
+| Criteri d'Avaluació Oficial | Què es valora? | Apartat de la Unitat | Puntuació / Pes |
+| :--- | :--- | :--- | :---: |
+| **Configuració de pàgina (RA2-a)** | Marges aplicats correctament a exactament 2 cm a tots els costats. | [2.1 Configuració de Pàgina](./up0201.md) | **1,5 punts (15%)** |
+| **Estils corporatius (RA2-b)** | Estil de títol personalitzat (*Títol 1*) amb tipografia triada i el color del logo. | [2.1 Estils Corporatius](./up0201.md) | **1,5 punts (15%)** |
+| **Paper de carta (RA2-c)** | Encapçalament amb logo PNG ben alineat i peu de pàgina amb dades de contacte. | [2.2 Paper de Carta](./up0202.md) | **2,5 punts (25%)** |
+| **Plantilla reutilitzable (RA2-d)** | Lliurament correcte del fitxer de plantilla buida (`.ott` / `.odt`). | [2.2 Plantilla Reutilitzable](./up0202.md) | **1,5 punts (15%)** |
+| **Taula de pressupost (RA2-e)** | Estructura de 4 columnes i almenys 5 files, disseny corporatiu i absència de faltes. | [2.3 Model de Pressupost](./up0203.md) | **2,0 punts (20%)** |
+| **Format PDF i ordre (RA2-f)** | Exportació neta en PDF i nomenclatura correcta dels fitxers. | [Tasca 2 Aules](./up02actividades.md) | **1,0 punt (10%)** |
+| **TOTAL UP2 / RA2** | **Superació de la Fase 2: Documentació Oficial** | **Tasca 2 Aules** | **10,0 punts (100%)** |
 
 ---
 
 # 2.1 Configuració de Pàgina (2 cm) i Estils Corporatius en Writer
 
-Ara crearem els documents que la teua empresa utilitzarà cada dia per a comunicar-se amb els clients mitjançant **LibreOffice Writer**.
+Ara crearem els documents que la teua empresa utilitzarà cada dia per a comunicar-se amb els clients mitjançant el processador de textos **LibreOffice Writer**.
 
-## Pas 2.1 — Configuració del Full i Estils
+## 1️⃣ Pas 1: Configuració del full i marges
+1. Obre **LibreOffice Writer** amb un document nou en blanc.
+2. Vés al menú `Format > Estil de pàgina` (o `Pàgina`).
+3. En la pestanya **Pàgina**, configura tots els marges (**Dalt, Baix, Esquerra i Dreta**) exactament a **2,00 cm**.
 
-1. Obre **LibreOffice Writer** i crea un document nou en blanc.
-2. Vés a la configuració de la pàgina ( `Format > Estil de pàgina...` > pestanya `Pàgina` ) i posa tots els **marges a 2,00 cm** ( *Dalt, Baix, Dreta i Esquerra* ).
-3. Modifica l'estil **"Títol 1"** (panell lateral d'Estils o tecla `F11` > clic dret sobre *Títol 1* > *Modifica...* ):
-  - Tria una lletra atractiva i llegible (ex: **Arial** o **Roboto** , mida **18 pt** , en **negreta** ).
-  - En la pestanya *Efectes de lletra* , posa el **color de la lletra exactament igual al color principal del teu logotip** .
+## 2️⃣ Pas 2: Personalització dels estils i colors de marca
+1. Obre el panell d'**Estils** (`F11`).
+2. Fes clic amb el botó dret sobre **Títol 1** i selecciona *Modifica...*.
+3. Tria una tipografia professional (*Arial*, *Roboto* o *Liberation Sans*), mida **18 pt o 20 pt**, en **negreta**.
+4. Posa el color de la lletra exactament igual al color principal del teu logotip.
 
 ---
 
 # 2.2 Encapçalament, Peu de Pàgina i Plantilla Reutilitzable (.ott)
 
-## Pas 2.2 — Disseny del Paper de Carta
-
-1. **Activa l'encapçalament:** Vés a `Insereix > Encapçalament i peu de pàgina > Encapçalament > Estil de pàgina per defecte` .
-2. **Dins de l'encapçalament:**
-  - Insereix la imatge del teu logotip `.PNG` ( `Insereix > Imatge...` ).
-  - Ajusta la mida perquè no ocupe massa (uns **2 o 3 cm d'alt** ) i alinea'l a l' **esquerra** .
-  - A la **dreta** , posa el nom de la teua empresa en gran i el teu eslògan.
-3. **Activa el peu de pàgina:** Vés a `Insereix > Encapçalament i peu de pàgina > Peu de pàgina` . Escriu-hi dades fictícies de la teua empresa: `Carrer de la Informàtica nº 12, 46190 Catadau (València) | Telèfon: 96 255 00 00 | Email: info@teuaempresa.com`
-4. **Guarda com a plantilla:** Amb el cos del document buit, desa aquest fitxer com a plantilla reutilitzable ( `Plantilla_PaperCarta_ElTeuNom.ott` o `.odt` ).
+## 3️⃣ Pas 3: Disseny del Paper de Carta
+1. **Encapçalament:** Activa'l (`Insereix > Encapçalament i peu de pàgina > Encapçalament`).
+   - Insereix el teu logotip en format `.PNG` (fons transparent).
+   - Ajusta la mida a uns **2 o 3 cm d'alçada** i alinea'l a l'esquerra.
+   - A la dreta, escriu el nom comercial de la teua empresa en gran i destacat.
+2. **Peu de pàgina:** Activa'l (`Insereix > Encapçalament i peu de pàgina > Peu de pàgina`).
+   - Escriu les dades fictícies de contacte en una sola línia centrada:
+   - *Exemple:* `Carrer Major, 12 | 46190 Catadau (València) | Telèfon: 96 123 45 67 | info@lateuaempresa.com`
+3. **Guarda la plantilla buida:** Desa el fitxer buit com a plantilla de Writer:
+   - `Fitxer > Plantilles > Desa com a plantilla...` amb el nom **`Plantilla_PaperCarta_ElTeuNom.ott`** (o en format `.odt`).
 
 ---
 
 # 2.3 Carta de Serveis i Model de Taula de Pressupost
 
-## Pas 2.3 — Disseny d'una Factura / Pressupost sobre la Plantilla
-
-1. Utilitzant la plantilla anterior, redacta una breu **Carta de Presentació i Condicions del Servei** adreçada als futurs clients del teu taller.
-2. A continuació, crea una **Taula** ( `Taula > Insereix una taula...` ) per a fer pressupostos.
-3. La taula ha de tindre exactament **4 columnes** :
-  - `Quantitat`
-  - `Descripció del servei / peça`
-  - `Preu Unitari (€)`
-  - `Total (€)`
-4. Pinta el **fons de la primera fila** (la capçalera de la taula) amb el color corporatiu de la teua empresa i posa el text en **blanc i negreta** .
-5. Passa el corrector ortogràfic ( `F7` ), desa el document i exporta'l a format **PDF** ( `Model_Pressupost_ElTeuNom.pdf` ).
+## 4️⃣ Pas 4: Disseny del Model de Pressupost / Full de Servei
+1. Partint del paper de carta que acabes de crear:
+2. Afig com a **Títol 1**: `PRESSUPOST D'ASSISTÈNCIA TÈCNICA`.
+3. Insereix una **Taula de 4 columnes i almenys 5 files**:
+   - Columnes: `Quantitat` | `Descripció del servei / recanvi` | `Preu Unitari (€)` | `Total (€)`
+4. Pinta el fons de la primera fila (capçalera de la taula) amb el color corporatiu de la teua empresa i posa el text en blanc i negreta.
+5. Passa el corrector ortogràfic (`F7`) per a verificar que no hi ha faltes.
+6. Guarda el document i exporta'l a format PDF amb el nom:
+   - 📑 **`Model_Pressupost_ElTeuNom.pdf`**
 
 ---
 
@@ -74,14 +77,16 @@ Ara crearem els documents que la teua empresa utilitzarà cada dia per a comunic
 
 ```flowchart TD
     subgraph PageLayout ["Anatomia de la Plantilla Corporativa (.OTT)"]
-        Top["Encapçalament: Logotip Transparent + Dades Fiscals"]
-        Body["Cos: Marges 2 cm · Estils de Paràgraf · Taula de 4 Columnes"]
-        Foot["Peu de Pàgina: Contacte · Adreça · Camp Dinàmic 'Pàgina X de Y'"]
+        Top["Encapçalament: Logotip Transparent (2-3 cm) + Nom Empresa"]
+        Body["Cos: Marges 2 cm · Estil Títol 1 Corporatiu · Taula Pressupost 4 Columnes"]
+        Foot["Peu de Pàgina: Contacte i Adreça en 1 línia centrada"]
         Top --> Body --> Foot
     end
 ```
 
-### 🎯 Resum d'Objectius de la Tasca
-En la tasca anterior vas crear el nom i el logotip de la teua empresa. Ara és el moment de dissenyar la **papereria corporativa i la plantilla oficial** que farem servir per a emetre cartes de presentació, pressupostos i documents comercials amb **LibreOffice Writer**.
+### 📦 Lliurament a Aules (Termini: 2 octubre - 9 octubre 2026)
+Has de pujar obligatòriament **2 fitxers**:
+1. `Plantilla_PaperCarta_ElTeuNom.ott` (o `.odt`).
+2. `Model_Pressupost_ElTeuNom.pdf`.
 
-Consulta el [Quadern d'Activitats Pràctiques de la Tasca 2](./up02actividades.html) per a seguir el procediment detallat pas a pas i consultar la llista de comprovació de qualitat.
+Consulta el [Quadern d'Activitats Pràctiques de la Tasca 2](./up02actividades.html) per a consultar la rúbrica oficial i consells de presentació.

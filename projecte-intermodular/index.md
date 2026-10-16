@@ -19,6 +19,10 @@ Benvinguts al portal central d'apunts, guies pas a pas, rúbriques i activitats 
 >   - **1 hora i 25 minuts:** Treball autònom seguint els passos de cada unitat i resolució de dubtes.
 >   - **Últims 15 minuts (Arreplegada):** Guardar tots els fitxers, verificar el guardat dels fitxers del portfoli, apagar l'equip, endreçar la taula i deixar l'aula neta.
 
+> 📋 **Tasques Oficials i Rúbriques d'Aules (1a Avaluació)**
+> Consulta directament els terminis, instruccions de lliurament i rúbriques oficials de la [**Tasca 1 (Logotip Digital)**](./tasques-aules.md#-tasca-1-el-logotip-digital-de-la-teua-empresa) i la [**Tasca 2 (Identitat i Paper de Carta Writer)**](./tasques-aules.md#-tasca-2-identitat-corporativa-i-paper-de-carta-amb-libreoffice-writer-ra2):
+> [👉 **Accedir a les Tasques Oficials d'Aules →**](./tasques-aules.md)
+
 ## 📊 Estructura d'Unitats de Programació i Resultats d'Aprenentatge (UP1 a UP8)
 
 | Unitat | Resultats d'Aprenentatge (RA) | Continguts Principals | Pes / Hores | Accés Directe |

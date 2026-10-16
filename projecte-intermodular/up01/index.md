@@ -2,7 +2,7 @@
 layout: default
 title: "UP1 — Creació de la Marca: Naming i Logotip Digital (Unitat Completa) — Projecte Intermodular (2n FPB)"
 course_root: ".."
-badge: "1a Avaluació · RA1 (a-f) · 8 hores · 15% de la nota"
+badge: "1a Avaluació · RA1 (a-e) · 8 hores · 10 punts (Aules)"
 prev_url: "../index.html"
 prev_label: "⬅️ Inici Projecte Intermodular"
 next_url: "./up01ras.html"
@@ -15,14 +15,14 @@ next_label: "1.0 RA i Criteris d'Avaluació ➡️"
 
 **Resultat d'Aprenentatge 1 (RA1):** Defineix la idea de negoci i la imatge corporativa d'un servei tècnic informàtic, analitzant les necessitats del sector i dissenyant la seua identitat visual.
 
-| Criteri d'Avaluació | Descripció i Indicador | Apartat de la Unitat | Pes en RA1 |
-| --- | --- | --- | --- |
-| **a) Naming** | Pluja d'idees de 10 noms comercials curts, professionals i tecnològics. | [1.1 Naming i Paleta TIC](./up0101.md) | **15% (1,5 pts)** |
-| **b) Validació** | Selecció dels 3 millors noms i aprovació/validació amb el docent. | [1.1 Naming i Paleta TIC](./up0101.md) | **15% (1,5 pts)** |
-| **c) Esbossos** | Realització a mà alçada de 3 esbossos originals de logotip en paper. | [1.3 Guia Pràctica Pas a Pas](./up0103.md) | **20% (2,0 pts)** |
-| **d) Paleta** | Definició clara d'una paleta corporativa equilibrada de 2 o 3 colors màxim. | [1.1 Naming i Paleta TIC](./up0101.md) | **10% (1,0 pt)** |
-| **e) Disseny Digital** | Digitalització vectorial/gràfica precisa de l'esbós amb programari lliure. | [1.2 Logotip i Format .PNG](./up0102.md) | **25% (2,5 pts)** |
-| **f) Exportació** | Exportació correcta en `.PNG` amb fons transparent i arxiu editable. | [Tasca 1 del Projecte](./up01actividades.md) | **15% (1,5 pts)** |
+| Criteri d'Avaluació Oficial | Descripció de l'Indicador | Apartat de la Unitat | Pes / Puntuació |
+| :--- | :--- | :--- | :---: |
+| **1. Representació i disseny del logotip** | El logotip representa clarament la idea de negoci informàtic i l'esbós inicial en paper. És visualment atractiu, net i modern. | [1.2 Isotip i Logotip](./up0102.md) \| [1.3 Pas a pas](./up0103.md) | **35% (3,5 punts)** |
+| **2. Format d'imatge i qualitat visual** | Arxiu d'imatge vàlid (JPG, PNG, WebP), nítid, sense píxels borrosos ni marques d'aigua invasives. | [1.2 Format .PNG](./up0102.md) \| [Tasca 1](./up01actividades.md) | **25% (2,5 punts)** |
+| **3. Nom del fitxer normalitzat** | Nomenclatura corporativa correcta: `Logo_NomDeLaTeuaEmpresa` (ex: `Logo_ByteFix.jpg`). | [1.3 Pas a pas](./up0103.md) \| [Tasca 1](./up01actividades.md) | **15% (1,5 punts)** |
+| **4. Dades de l'empresa (Text a Aules)** | Indicació clara al quadre de text del nom oficial de l'empresa i justificació dels colors corporatius triats. | [1.1 Naming i Paleta TIC](./up0101.md) | **15% (1,5 punts)** |
+| **5. Treball a classe i autonomia** | Realització de l'activitat a l'aula amb autonomia, aprofitament de la sessió de treball i lliurament en termini. | [Tasca 1 a Aules](./up01actividades.md) | **10% (1,0 punt)** |
+| **TOTAL UP1 / RA1** | **Superació de la Fase 1: Creació de la Marca** | **Tasca 1 Aules** | **100% (10,0 pts)** |
 
 ---
 
@@ -34,9 +34,9 @@ Abans de començar a reparar cap ordinador ni atendre clients al teu taller info
 
 El *naming* és el procés de creació del nom comercial d'una marca. En el sector de la informàtica d'oficina i el manteniment d'equips, un bon nom ha de complir quatre regles:
 
-- **Curt i directe:** Entre 1 i 2 paraules (ex: *BitCatadau* , *AlcalansTech* , *PCFix Ribera* , *MicroOfi* ).
+- **Curt i directe:** Entre 1 i 2 paraules (ex: *BitCatadau*, *AlcalansTech*, *PCFix Ribera*, *MicroOfi*).
 - **Fàcil de pronunciar i recordar:** Si un client no sap com s'escriu, no et trobarà.
-- **Relacionat amb el món tecnològic:** Paraules com *Tech, Bit, Byte, Net, PC, Sistemes, Digital, Repair, Fix, Info* .
+- **Relacionat amb el món tecnològic:** Paraules com *Tech, Bit, Byte, Net, PC, Sistemes, Digital, Repair, Fix, Info*.
 - **Professional:** Ha de transmetre confiança tècnica i serietat.
 
 ## 2. Psicologia de la Paleta de Colors Corporatius
@@ -60,48 +60,47 @@ Per evitar que el teu logotip i els teus futurs documents semblen sobrecarregats
 - **Logotip (Text tipogràfic):** El nom comercial de la teua empresa escrit amb una font moderna, neta i fàcil de llegir.
 - **Imagotip (Combinació):** La unió equilibrada del símbol (isotip) i el text (logotip).
 
-> **💡 Per què és obligatori exportar el logotip en format .PNG i no en .JPG?**
-> El format `.JPG` no suporta transparència i sempre afegeix un rectangle blanc darrere del dibuix. En canvi, el format **`.PNG` permet guardar el fons 100% transparent**, de manera que podràs col·locar el teu logotip damunt de capçaleres de color, diapositives i rètols amb un acabat professional.
+> **💡 Per què és clau tindre una versió en format .PNG transparent?**
+> El format `.JPG` no admet canal alfa i afegeix sempre un rectangle blanc al voltant de la imatge. En canvi, el format **`.PNG` transparent** permet col·locar el teu logotip sobre les capçaleres de cartes, factures i presentacions sense que quede un fons blanc tapat.
 
 ---
 
-# 1.3 Guia Pràctica Pas a Pas (Paper i Digitalització)
+# 1.3 Guia Pràctica Pas a Pas (Paper i Generació amb IA)
 
 ## ✏️ Pas 1.1 — Pluja d'idees (Naming) [En paper]
+1. Escriu en un full **10 noms curts i professionals** relacionats amb la informàtica.
+2. Tria els 3 millors i valida el definitiu a classe amb el docent.
 
-Abans de tocar l'ordinador, agafa un full en blanc i un bolígraf:
+## 🎨 Pas 1.2 — L'esbós en paper i colors
+1. Dibuixa a mà alçada **3 propostes diferents** de logotip.
+2. Defineix els teus 2 o 3 colors corporatius de referència.
 
-1. Escriu una llista numerada amb **10 possibles noms** per a la teua empresa de serveis i reparació informàtica.
-2. Verifica que siguen curts, professionals, fàcils de llegir i que sonen a tecnologia.
-3. Tria'n els **3 millors** i ensenya'ls al professor per triar i validar el nom definitiu.
+## 📸 Pas 1.3 — Foto a l'esbós
+1. Fes una foto clara al teu dibuix en paper amb el mòbil o la càmera web.
 
-## 🎨 Pas 1.2 — L'esbós del Logotip [A mà alçada]
+## 🤖 Pas 1.4 — Creació amb Intel·ligència Artificial
+1. Obre l'eina d'IA recomanada a l'aula, puja la teua foto i utilitza el prompt:
+   > *"Crea un logotip modern, net i professional per a una empresa de serveis informàtics basat en aquest dibuix. Colors [posa els teus colors]."*
 
-1. Dibuixa a mà alçada en el full **3 propostes diferents** de logotip.
-2. Utilitza elements clars: ordinadors, teclats, eines de reparació (tornavís), xarxes o les inicials del nom.
-3. Anota quins **2 o 3 colors d'empresa** utilitzaràs com a màxim (ex: blau fosc i gris).
-
-## 💻 Pas 1.3 — Digitalització a l'Ordinador
-
-1. Obre l'eina de disseny recomanada a classe ( **LibreOffice Draw** , **GIMP** o editor vectorial).
-2. Dibuixa el teu esbós favorit utilitzant figures geomètriques netes, afegeix el nom de l'empresa amb un tipus de lletra modern i aplica els teus colors corporatius.
-3. **Guarda i Exporta:** Desa primer l'arxiu editable de treball ( `.odg` o `.xcf` ) i després exporta la imatge final en format **`.PNG` amb fons transparent** .
+## 💾 Pas 1.5 — Descàrrega i Canvi de Nom
+1. Descarrega la versió escollida i anomena el fitxer:
+   📁 **`Logo_NomDeLaTeuaEmpresa`** *(ex: `Logo_TecnoCatadau.jpg`)*.
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques — Tasca 1: Creació de la Marca
+## 📝 Quadern d'Activitats Pràctiques — Tasca 1: El Logotip Digital
 
 ```mermaid
 flowchart LR
-    A["📝 1. Pluja d'Idees<br>(10 noms a mà)"] --> B["🎨 2. Esbós en Paper<br>(3 propostes de logotip)"]
-    B --> C["💻 3. Disseny Digital<br>(LibreOffice Draw / GIMP)"]
-    C --> D["📐 4. Aplicació de Colors<br>(2-3 colors TIC i text)"]
-    D --> E["📦 5. Exportació PNG<br>(Fons 100% transparent)"]
+    A["📝 1. Naming i Esbós<br>(Dibuix en paper a mà)"] --> B["📸 2. Foto a l'Esbós<br>(Mòbil o càmera web)"]
+    B --> C["🤖 3. Creació amb IA<br>(Prompt guiat amb colors)"]
+    C --> D["💾 4. Descàrrega i Nom<br>(Logo_NomDeLaTeuaEmpresa)"]
+    D --> E["📤 5. Lliurament Aules<br>(Imatge + Text explicatiu)"]
 ```
 
-### 🎯 Procediment Pràctic de Taller
-1. **Fase en paper (Naming i Esbós):** Escriu 10 noms curts i tecnològics per a la teua empresa, tria'n el millor i dibuixa 3 esbossos a mà alçada integrant iconografia de xarxes o informàtica.
-2. **Fase digital (Disseny en Draw o GIMP):** Digitalitza el teu disseny usant formes geomètriques netes, els teus 2 o 3 colors corporatius i exporta el logotip final en format **.PNG amb canal alfa (fons transparent)**.
-3. **Consolidació de documents:** Desa els fitxers `Esbossos_Marca_ElTeuNom.pdf`, `Logotip_Editable_ElTeuNom.odg` i `Logotip_Final_ElTeuNom.png` a la teua carpeta de projecte `01_Marca_i_Disseny`.
-4. Consulta el [Quadern d'Activitats Pràctiques de la Tasca 1](./up01actividades.html) per a revisar la llista de comprovació i criteris de qualitat.
-
+### 🎯 Lliurament a Aules (Termini: 24 setembre - 1 octubre 2026)
+1. **Adjunta el fitxer d'imatge** amb nom normalitzat: `Logo_NomDeLaTeuaEmpresa` (ex: `Logo_TecnoCatadau.jpg`).
+2. **Escriu al quadre de text d'Aules:**
+   - Nom oficial de la teua empresa *(ex: "ReparaTIC Esteve")*.
+   - Colors triats i per què t'agraden.
+3. Consulta el [Quadern d'Activitats Pràctiques — Tasca 1](./up01actividades.html) per a veure la rúbrica detallada dels 4 nivells de qualificació.

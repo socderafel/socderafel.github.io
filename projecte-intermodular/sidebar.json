@@ -1,4 +1,4 @@
-﻿{
+{
   "title": "🚀 Projecte Intermodular — 2n FPB",
   "home": {
     "label": "🏠 Inici Projecte Intermodular",
@@ -227,6 +227,10 @@
     }
   ],
   "footer": [
+    {
+      "label": "📋 Tasques i Rúbriques d'Aules",
+      "href": "tasques-aules.html"
+    },
     {
       "label": "🚀 Guia del Portfoli de l'Empresa",
       "href": "guia-projecte.html"
