@@ -78,14 +78,71 @@ Ara crearem els documents que la teua empresa utilitzarà cada dia per a comunic
 
 ## 📝 Quadern d'Activitats Pràctiques — Tasca 2
 
-```flowchart TD
-    subgraph PageLayout ["Anatomia de la Plantilla Corporativa (.OTT)"]
-        Top["Encapçalament: Logotip Transparent (2-3 cm) + Nom Empresa"]
-        Body["Cos: Marges 2 cm · Estil Títol 1 Corporatiu · Taula Pressupost 4 Columnes"]
-        Foot["Peu de Pàgina: Contacte i Adreça en 1 línia centrada"]
-        Top --> Body --> Foot
-    end
-```
+<div style="margin: 1.5rem 0 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 740 260" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Capçalera del Panell -->
+  <text x="24" y="28" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="1">ANATOMIA DE LA PLANTILLA CORPORATIVA (.OTT)</text>
+  <text x="716" y="28" text-anchor="end" fill="#94a3b8" font-size="11">Marges: 2,00 cm a tot el document</text>
+
+  <!-- Secció 1: Encapçalament -->
+  <g transform="translate(20, 40)">
+    <rect width="700" height="52" rx="8" fill="url(#headerGrad)" stroke="#38bdf8" stroke-width="1.2"/>
+    <rect x="12" y="10" width="32" height="32" rx="6" fill="#38bdf8" fill-opacity="0.2" stroke="#38bdf8" stroke-width="1"/>
+    <text x="28" y="31" text-anchor="middle" font-size="16">🎨</text>
+    <text x="54" y="26" fill="#f8fafc" font-size="12.5" font-weight="bold">Logotip Transparent (.PNG)</text>
+    <text x="54" y="41" fill="#94a3b8" font-size="10.5">Alçada recomanada: 2 a 3 cm (alineat a l'esquerra)</text>
+    <text x="686" y="32" text-anchor="end" fill="#38bdf8" font-size="13" font-weight="bold">NOM DE LA TEUA EMPRESA</text>
+  </g>
+
+  <!-- Fletxa descendent 1 -->
+  <path d="M 370 95 L 370 105 M 365 101 L 370 106 L 375 101" stroke="#64748b" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Secció 2: Cos del Document -->
+  <g transform="translate(20, 108)">
+    <rect width="700" height="82" rx="8" fill="url(#bodyGrad)" stroke="#818cf8" stroke-width="1.2"/>
+    <text x="16" y="25" fill="#c7d2fe" font-size="12.5" font-weight="bold">Cos del Document: PRESSUPOST D'ASSISTÈNCIA TÈCNICA</text>
+    <text x="686" y="25" text-anchor="end" fill="#a5b4fc" font-size="11">Estil Títol 1: 18-20 pt Negreta + Color Logo</text>
+    <!-- Mini taula de 4 columnes -->
+    <g transform="translate(16, 35)">
+      <rect width="668" height="19" rx="3" fill="#4338ca"/>
+      <text x="40" y="14" fill="#ffffff" font-size="10" font-weight="bold">Quantitat</text>
+      <text x="240" y="14" fill="#ffffff" font-size="10" font-weight="bold">Descripció del servei / recanvi</text>
+      <text x="510" y="14" fill="#ffffff" font-size="10" font-weight="bold">Preu Unitari (€)</text>
+      <text x="625" y="14" fill="#ffffff" font-size="10" font-weight="bold">Total (€)</text>
+      <rect y="21" width="668" height="18" rx="2" fill="#1e1b4b" fill-opacity="0.6" stroke="#4338ca" stroke-width="0.8"/>
+      <text x="40" y="34" fill="#94a3b8" font-size="9.5">1 unitat</text>
+      <text x="240" y="34" fill="#cbd5e1" font-size="9.5">Diagnòstic de maquinari i canvi de disc SSD 500GB</text>
+      <text x="510" y="34" fill="#94a3b8" font-size="9.5">45,00 €</text>
+      <text x="625" y="34" fill="#34d399" font-size="9.5" font-weight="bold">45,00 €</text>
+    </g>
+  </g>
+
+  <!-- Fletxa descendent 2 -->
+  <path d="M 370 193 L 370 203 M 365 199 L 370 204 L 375 199" stroke="#64748b" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Secció 3: Peu de Pàgina -->
+  <g transform="translate(20, 206)">
+    <rect width="700" height="42" rx="8" fill="url(#footGrad)" stroke="#34d399" stroke-width="1.2"/>
+    <text x="350" y="20" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="bold">Dades Fictícies de Contacte (Centrat en una línia)</text>
+    <text x="350" y="34" text-anchor="middle" fill="#94a3b8" font-size="10">Carrer Major, 12 · 46190 Catadau (València) | Telèfon: 96 123 45 67 | info@lateuaempresa.com</text>
+  </g>
+</svg>
+</div>
 
 ### 📦 Lliurament a Aules (Termini: 2 octubre - 9 octubre 2026)
 Has de pujar obligatòriament **2 fitxers**:

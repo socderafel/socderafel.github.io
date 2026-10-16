@@ -27,14 +27,117 @@ Tot aquest treball el realitzarem utilitzant el processador de textos **LibreOff
 
 ## 🗺️ Flux de Treball de la Fase 2
 
-```mermaid
-flowchart TD
-    A["📄 1. Configuració de Pàgina<br>(Marges 2,00 cm a tot el full)"] --> B["🎨 2. Estil Títol 1<br>(Font professional + Color corporatiu)"]
-    B --> C["📐 3. Paper de Carta<br>(Encapçalament amb Logo + Peu contacte)"]
-    C --> D["💾 4. Plantilla Reutilitzable<br>(Plantilla_PaperCarta_ElTeuNom.ott)"]
-    D --> E["📊 5. Model de Pressupost<br>(Taula de 4 columnes + Corrector F7)"]
-    E --> F["📑 6. Exportació PDF<br>(Model_Pressupost_ElTeuNom.pdf)"]
-```
+<div style="margin: 1.5rem 0 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 1080 140" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="g2-step1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g2-step2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g2-step3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g2-step4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0d9488" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g2-step5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g2-step6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pas 1 -->
+  <g transform="translate(15, 16)">
+    <rect width="148" height="108" rx="10" fill="url(#g2-step1)" stroke="#38bdf8" stroke-width="1.6"/>
+    <circle cx="26" cy="26" r="13" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="26" y="31" text-anchor="middle" font-size="13">📄</text>
+    <text x="46" y="30" fill="#38bdf8" font-size="11.5" font-weight="700">Pas 1</text>
+    <text x="12" y="60" fill="#f8fafc" font-size="12.5" font-weight="bold">Marges Pàgina</text>
+    <text x="12" y="79" fill="#94a3b8" font-size="10.5">2,00 cm a tot el full</text>
+    <text x="12" y="94" fill="#64748b" font-size="10">Format > Pàgina</text>
+  </g>
+
+  <!-- Fletxa 1 -> 2 -->
+  <path d="M 169 70 L 189 70 M 184 65 L 190 70 L 184 75" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 2 -->
+  <g transform="translate(195, 16)">
+    <rect width="148" height="108" rx="10" fill="url(#g2-step2)" stroke="#a855f7" stroke-width="1.6"/>
+    <circle cx="26" cy="26" r="13" fill="#a855f7" fill-opacity="0.2"/>
+    <text x="26" y="31" text-anchor="middle" font-size="13">🎨</text>
+    <text x="46" y="30" fill="#c084fc" font-size="11.5" font-weight="700">Pas 2</text>
+    <text x="12" y="60" fill="#f8fafc" font-size="12.5" font-weight="bold">Estil Títol 1</text>
+    <text x="12" y="79" fill="#94a3b8" font-size="10.5">Font neta (18-20pt)</text>
+    <text x="12" y="94" fill="#64748b" font-size="10">+ Color del logo</text>
+  </g>
+
+  <!-- Fletxa 2 -> 3 -->
+  <path d="M 349 70 L 369 70 M 364 65 L 370 70 L 364 75" stroke="#a855f7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 3 -->
+  <g transform="translate(375, 16)">
+    <rect width="148" height="108" rx="10" fill="url(#g2-step3)" stroke="#6366f1" stroke-width="1.6"/>
+    <circle cx="26" cy="26" r="13" fill="#6366f1" fill-opacity="0.2"/>
+    <text x="26" y="31" text-anchor="middle" font-size="13">📐</text>
+    <text x="46" y="30" fill="#818cf8" font-size="11.5" font-weight="700">Pas 3</text>
+    <text x="12" y="60" fill="#f8fafc" font-size="12.5" font-weight="bold">Paper de Carta</text>
+    <text x="12" y="79" fill="#94a3b8" font-size="10.5">Encapç. amb logo</text>
+    <text x="12" y="94" fill="#64748b" font-size="10">+ Peu amb contacte</text>
+  </g>
+
+  <!-- Fletxa 3 -> 4 -->
+  <path d="M 529 70 L 549 70 M 544 65 L 550 70 L 544 75" stroke="#6366f1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 4 -->
+  <g transform="translate(555, 16)">
+    <rect width="148" height="108" rx="10" fill="url(#g2-step4)" stroke="#14b8a6" stroke-width="1.6"/>
+    <circle cx="26" cy="26" r="13" fill="#14b8a6" fill-opacity="0.2"/>
+    <text x="26" y="31" text-anchor="middle" font-size="13">💾</text>
+    <text x="46" y="30" fill="#2dd4bf" font-size="11.5" font-weight="700">Pas 4</text>
+    <text x="12" y="60" fill="#f8fafc" font-size="12.5" font-weight="bold">Plantilla Base</text>
+    <text x="12" y="79" fill="#94a3b8" font-size="10.5">Format .OTT / .ODT</text>
+    <text x="12" y="94" fill="#64748b" font-size="10">Plantilla_Nom.ott</text>
+  </g>
+
+  <!-- Fletxa 4 -> 5 -->
+  <path d="M 709 70 L 729 70 M 724 65 L 730 70 L 724 75" stroke="#14b8a6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 5 -->
+  <g transform="translate(735, 16)">
+    <rect width="148" height="108" rx="10" fill="url(#g2-step5)" stroke="#f59e0b" stroke-width="1.6"/>
+    <circle cx="26" cy="26" r="13" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="26" y="31" text-anchor="middle" font-size="13">📊</text>
+    <text x="46" y="30" fill="#fbbf24" font-size="11.5" font-weight="700">Pas 5</text>
+    <text x="12" y="60" fill="#f8fafc" font-size="12.5" font-weight="bold">Model Pressupost</text>
+    <text x="12" y="79" fill="#94a3b8" font-size="10.5">Taula 4 columnes</text>
+    <text x="12" y="94" fill="#64748b" font-size="10">Corrector ortogràfic</text>
+  </g>
+
+  <!-- Fletxa 5 -> 6 -->
+  <path d="M 889 70 L 909 70 M 904 65 L 910 70 L 904 75" stroke="#f59e0b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 6 -->
+  <g transform="translate(915, 16)">
+    <rect width="148" height="108" rx="10" fill="url(#g2-step6)" stroke="#10b981" stroke-width="1.6"/>
+    <circle cx="26" cy="26" r="13" fill="#10b981" fill-opacity="0.2"/>
+    <text x="26" y="31" text-anchor="middle" font-size="13">📑</text>
+    <text x="46" y="30" fill="#34d399" font-size="11.5" font-weight="700">Pas 6</text>
+    <text x="12" y="60" fill="#f8fafc" font-size="12.5" font-weight="bold">Exportació PDF</text>
+    <text x="12" y="79" fill="#94a3b8" font-size="10.5">Model_Pressupost</text>
+    <text x="12" y="94" fill="#64748b" font-size="10">Lliurament Aules</text>
+  </g>
+</svg>
+</div>
 
 ---
 

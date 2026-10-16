@@ -907,6 +907,46 @@
         }
       });
 
+      // 1.5. Renderitzar diagrames Mermaid / Flowchart
+      const mermaidBlocks = document.querySelectorAll('div.language-mermaid pre code, div.language-flowchart pre code, pre.mermaid code, pre code.language-mermaid, pre code.language-flowchart');
+      if (mermaidBlocks.length > 0) {
+        mermaidBlocks.forEach(codeEl => {
+          const rawCode = codeEl.innerText.trim();
+          const container = codeEl.closest('div.highlighter-rouge') || codeEl.closest('pre');
+          const mDiv = document.createElement('div');
+          mDiv.className = 'mermaid';
+          mDiv.style.textAlign = 'center';
+          mDiv.style.margin = '1.5rem 0 2rem 0';
+          mDiv.style.overflowX = 'auto';
+          mDiv.textContent = rawCode;
+          if (container && container.parentNode) {
+            container.parentNode.replaceChild(mDiv, container);
+          }
+        });
+
+        const loadAndRunMermaid = () => {
+          if (window.mermaid) {
+            mermaid.initialize({
+              startOnLoad: false,
+              theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default',
+              securityLevel: 'loose',
+              fontFamily: 'Segoe UI, system-ui, sans-serif'
+            });
+            mermaid.run({ querySelector: '.mermaid' });
+          }
+        };
+
+        if (window.mermaid) {
+          loadAndRunMermaid();
+        } else {
+          const script = document.createElement('script');
+          script.src = 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js';
+          script.defer = true;
+          script.onload = loadAndRunMermaid;
+          document.head.appendChild(script);
+        }
+      }
+
       // 2. Transformar blocs de codi Markdown (<pre><code>) en caixes .terminal-box
       document.querySelectorAll('main pre').forEach(pre => {
         if (pre.closest('.terminal-box')) return;
@@ -917,6 +957,7 @@
           const m = container.className.match(/language-([a-zA-Z0-9_+-]+)/);
           if (m) lang = m[1].toUpperCase();
         }
+        if (lang === 'MERMAID' || lang === 'FLOWCHART' || pre.classList.contains('mermaid')) return;
         const wrapper = document.createElement('div');
         wrapper.className = 'terminal-box';
         const bar = document.createElement('div');

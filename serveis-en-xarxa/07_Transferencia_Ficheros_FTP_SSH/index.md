@@ -1067,24 +1067,37 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
    ```bash
    sudo nano /etc/vsftpd.conf
    ```
-2. Modificar o añadir al final las siguientes directivas para habilitar la escritura de usuarios locales, el enjaulado (`chroot`) en su directorio personal y el rango de puertos pasivos para el NAT de AWS:
-   ```ini
-   # Acceso de usuarios locales con permisos de escritura
-   anonymous_enable=NO
-   local_enable=YES
-   write_enable=YES
-   local_umask=022
+2. Modificar las siguientes directivas para garantizar el funcionamiento en IPv4, habilitar la escritura, el enjaulado (`chroot`) y el rango pasivo en AWS:
 
-   # Enjaulado (chroot jail) de usuarios en su directorio /home/<usuario>
-   chroot_local_user=YES
-   allow_writeable_chroot=YES
+   * **Al principio del fichero:** Comprobar que el servicio escucha en modo IPv4 independiente y comentar la directiva de IPv6:
+     ```ini
+     listen=YES
+     #listen_ipv6=YES
+     ```
+     *(Importante: En Ubuntu 24.04, si `listen_ipv6=YES` está activo, entrará en conflicto con `pasv_address` y provocará desconexiones `ECONNABORTED` al intentar transferir archivos).*
 
-   # Configuración de modo pasivo para AWS Cloud
-   pasv_enable=YES
-   pasv_min_port=40000
-   pasv_max_port=40100
-   pasv_address=<TU_IP_PUBLICA_UBUNTU>
-   ```
+   * **Al final del fichero:** Añadir el bloque de enjaulado, modo pasivo para AWS y compatibilidad de llamadas al sistema (`seccomp_sandbox`):
+     ```ini
+     # Acceso de usuarios locales con permisos de escritura
+     anonymous_enable=NO
+     local_enable=YES
+     write_enable=YES
+     local_umask=022
+
+     # Enjaulado (chroot jail) de usuarios en su directorio /home/<usuario>
+     chroot_local_user=YES
+     allow_writeable_chroot=YES
+
+     # Configuración de modo pasivo para AWS Cloud
+     pasv_enable=YES
+     pasv_min_port=40000
+     pasv_max_port=40100
+     pasv_address=<TU_IP_PUBLICA_UBUNTU>
+     seccomp_sandbox=NO
+     ```
+
+![Configuración del modo pasivo y chroot en vsftpd.conf](imagenes/50_ubuntu_vsftpd_conf.png)
+*Figura 50: Configuración del fichero /etc/vsftpd.conf en nano mostrando las directivas de enjaulado chroot_local_user, modo pasivo pasv_enable, rango de puertos 40000-40100 y la dirección IP pública en pasv_address.*
 
 > 📷 **Evidencia 20 (insertar en tu documento Word) — Realizar captura de pantalla** del fichero `/etc/vsftpd.conf` editado donde se aprecien las directivas `chroot_local_user=YES`, `pasv_enable=YES`, `pasv_address` y el rango `40000-40100`.
 
@@ -1105,6 +1118,9 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
    sudo systemctl status vsftpd
    ```
 
+![Verificación del estado activo del servicio vsftpd en Ubuntu Server](imagenes/51_ubuntu_vsftpd_status.png)
+*Figura 51: Terminal de Ubuntu Server mostrando la ejecución de systemctl status vsftpd con el estado active (running) y el proceso principal vsftpd en ejecución.*
+
 > 📷 **Evidencia 21 (insertar en tu documento Word) — Realizar captura de pantalla** de la terminal de Ubuntu mostrando el estado `active (running)` del servicio `vsftpd`.
 
 ---
@@ -1117,7 +1133,10 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
    * **Contraseña:** `Smx2026..@`
    * **Puerto:** `21`
 2. Subir un archivo llamado `prueba_ubuntu.txt` y comprobar que la transferencia en modo pasivo (`40000-40100`) se completa con éxito.
-3. Verificar que gracias a la directiva `chroot_local_user=YES`, el usuario aparece enjaulado en `/` (que corresponde físicamente a `/home/usuari_ventas`), impidiendo que pueda subir de nivel hacia `/home` o `/etc`.
+3. Verificar que gracias a la directiva `chroot_local_user=YES`, el usuario aparece enjaulado en `/` (que corresponde físicamente a su directorio personal `/home/alumne_redes`), impidiendo que pueda subir de nivel hacia `/home` o `/etc`.
+
+![Transferencia de archivos y enjaulado chroot en Ubuntu Server desde FileZilla](imagenes/52_filezilla_ubuntu_chroot_transfer.png)
+*Figura 52: Cliente FileZilla conectado a Ubuntu Server mostrando el inicio de sesión exitoso, la transferencia completada de prueba_ubuntu.txt y el enjaulado chroot del usuario en su directorio raíz /.*
 
 > 📷 **Evidencia 22 (insertar en tu documento Word) — Realizar captura de pantalla** de FileZilla conectado a Ubuntu Server mostrando la subida de `prueba_ubuntu.txt` y el enjaulado del usuario en su directorio raíz `/`.
 
@@ -1175,12 +1194,10 @@ En esta tarea aseguraremos nuestro servidor **Ubuntu Server (`Ubuntu_FTPSSH`)** 
    rsa_private_key_file=/etc/ssl/private/vsftpd.pem
    ```
 
-![Generación del certificado X.509 con OpenSSL y configuración de FTPS en /etc/vsftpd.conf](imagenes/43b_ubuntu_openssl_vsftpd_ftps.png)
-*Figura 43b: Generación del certificado autofirmado X.509 con OpenSSL y configuración de las directivas de cifrado TLS obligatorio en /etc/vsftpd.conf.*
+![Ventana del certificado desconocido en FileZilla con los datos de IES Mestre Ramon Esteve](imagenes/53_ubuntu_openssl_filezilla_ftps_cert.png)
+*Figura 53: Ventana emergente de certificado X.509 en FileZilla al conectar por FTPS a Ubuntu Server, validando el cifrado TLS 1.3 con AES-256-GCM y los datos del IES Mestre Ramon Esteve (Catadau).*
 
-5. Reiniciar `vsftpd` (`sudo systemctl restart vsftpd`) y conectar desde **FileZilla Client** hacia la IP pública de Ubuntu en el puerto `21`: comprobar que aparece la ventana **Certificado desconocido** con los datos de `IES Mestre Ramon Esteve (Catadau)` y que al aceptarlo se activa el candado de seguridad.
-
-> 📷 **Evidencia 23 (insertar en tu documento Word) — Realizar captura de pantalla** de la generación del certificado con `openssl` en Ubuntu y de la ventana del certificado en FileZilla al conectar por FTPS a Ubuntu Server.
+> 📷 **Evidencia 23 (insertar en tu documento Word) — Realizar captura de pantalla** de la ventana de verificación del certificado X.509 en FileZilla mostrando los datos de la entidad (`IES Mestre Ramon Esteve`, `Catadau`, `ftp.iesmre.local`) y la sesión TLS 1.3 con Ubuntu Server.
 
 ---
 
@@ -1214,6 +1231,9 @@ En esta tarea aseguraremos nuestro servidor **Ubuntu Server (`Ubuntu_FTPSSH`)** 
    sudo cat /var/log/auth.log | grep -E "sshd.*(Accepted|Failed)" | tail -n 20
    ```
 3. Identificar en la salida la dirección IP pública del cliente y el método de autenticación empleado (`publickey` o `password`).
+
+![Auditoría de registros en Ubuntu Server en vsftpd.log y auth.log](imagenes/54_ubuntu_auditoria_logs_vsftpd_auth.png)
+*Figura 54: Auditoría de seguridad en Ubuntu Server mostrando el registro de subida exitosa en /var/log/vsftpd.log (OK UPLOAD de prueba_ubuntu.txt) y el registro de comandos privilegiados y accesos en /var/log/auth.log.*
 
 > 📷 **Evidencia 24 (insertar en tu documento Word) — Realizar captura de pantalla** de la terminal de Ubuntu mostrando las últimas líneas del registro `/var/log/vsftpd.log` y de `/var/log/auth.log`.
 

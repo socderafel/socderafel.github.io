@@ -1582,8 +1582,28 @@ Get-Content .\fichero_recuperado.txt</code></pre>
   <pre><code class="language-bash"><span class="tok-cmd">sudo</span> <span class="tok-cmd">nano</span> /etc/vsftpd.conf</code></pre>
 </div>
 <ol start="2">
-<li>Modificar o añadir al final las siguientes directivas para habilitar la escritura de usuarios locales, el enjaulado (<code>chroot</code>) en su directorio personal y el rango de puertos pasivos para el NAT de AWS:</li>
+<li>Modificar las siguientes directivas para garantizar el funcionamiento en IPv4, habilitar la escritura, el enjaulado (<code>chroot</code>) y el rango pasivo en AWS:</li>
 </ol>
+<ul>
+<li><strong>Al principio del fichero:</strong> Comprobar que el servicio escucha en modo IPv4 independiente y comentar la directiva de IPv6:</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">📄 Fichero de configuración</div>
+    <div class="terminal-lang">ini</div>
+  </div>
+  <pre><code class="language-ini"><span class="tok-key">listen</span>=<span class="tok-val"><span class="tok-bool">YES</span></span>
+<span class="tok-comment">#listen_ipv6=YES</span></code></pre>
+</div>
+<p><em>(Importante: En Ubuntu 24.04, si <code>listen_ipv6=YES</code> está activo, entrará en conflicto con <code>pasv_address</code> y provocará desconexiones <code>ECONNABORTED</code> al intentar transferir archivos).</em></p>
+<ul>
+<li><strong>Al final del fichero:</strong> Añadir el bloque de enjaulado, modo pasivo para AWS y compatibilidad de llamadas al sistema (<code>seccomp_sandbox</code>):</li>
+</ul>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -1608,8 +1628,10 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <span class="tok-key">pasv_enable</span>=<span class="tok-val"><span class="tok-bool">YES</span></span>
 <span class="tok-key">pasv_min_port</span>=<span class="tok-val">40000</span>
 <span class="tok-key">pasv_max_port</span>=<span class="tok-val">40100</span>
-<span class="tok-key">pasv_address</span>=<span class="tok-val"><span class="tok-var">&lt;TU_IP_PUBLICA_UBUNTU&gt;</span></span></code></pre>
+<span class="tok-key">pasv_address</span>=<span class="tok-val"><span class="tok-var">&lt;TU_IP_PUBLICA_UBUNTU&gt;</span></span>
+<span class="tok-key">seccomp_sandbox</span>=<span class="tok-val"><span class="tok-bool">NO</span></span></code></pre>
 </div>
+<figure><img src="imagenes/50_ubuntu_vsftpd_conf.png" alt="Configuración del modo pasivo y chroot en vsftpd.conf"><figcaption><strong>Figura 50: </strong>Configuración del fichero /etc/vsftpd.conf en nano mostrando las directivas de enjaulado chroot_local_user, modo pasivo pasv_enable, rango de puertos 40000-40100 y la dirección IP pública en pasv_address.</figcaption></figure>
 <blockquote><p>📷 <strong>Evidencia 20 (insertar en tu documento Word) — Realizar captura de pantalla</strong> del fichero <code>/etc/vsftpd.conf</code> editado donde se aprecien las directivas <code>chroot_local_user=YES</code>, <code>pasv_enable=YES</code>, <code>pasv_address</code> y el rango <code>40000-40100</code>.</p></blockquote>
 <hr>
 <h3>12.4 Creación de usuarios locales y activación del servicio</h3>
@@ -1647,6 +1669,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
   <pre><code class="language-bash"><span class="tok-cmd">sudo</span> <span class="tok-cmd">systemctl</span> <span class="tok-cmd">restart</span> vsftpd
 <span class="tok-cmd">sudo</span> <span class="tok-cmd">systemctl</span> <span class="tok-cmd">status</span> vsftpd</code></pre>
 </div>
+<figure><img src="imagenes/51_ubuntu_vsftpd_status.png" alt="Verificación del estado activo del servicio vsftpd en Ubuntu Server"><figcaption><strong>Figura 51: </strong>Terminal de Ubuntu Server mostrando la ejecución de systemctl status vsftpd con el estado active (running) y el proceso principal vsftpd en ejecución.</figcaption></figure>
 <blockquote><p>📷 <strong>Evidencia 21 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la terminal de Ubuntu mostrando el estado <code>active (running)</code> del servicio <code>vsftpd</code>.</p></blockquote>
 <hr>
 <h3>12.5 Prueba de transferencia y verificación de enjaulado (chroot) desde FileZilla</h3>
@@ -1661,8 +1684,9 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 </ul>
 <ol start="2">
 <li>Subir un archivo llamado <code>prueba_ubuntu.txt</code> y comprobar que la transferencia en modo pasivo (<code>40000-40100</code>) se completa con éxito.</li>
-<li>Verificar que gracias a la directiva <code>chroot_local_user=YES</code>, el usuario aparece enjaulado en <code>/</code> (que corresponde físicamente a <code>/home/usuari_ventas</code>), impidiendo que pueda subir de nivel hacia <code>/home</code> o <code>/etc</code>.</li>
+<li>Verificar que gracias a la directiva <code>chroot_local_user=YES</code>, el usuario aparece enjaulado en <code>/</code> (que corresponde físicamente a su directorio personal <code>/home/alumne_redes</code>), impidiendo que pueda subir de nivel hacia <code>/home</code> o <code>/etc</code>.</li>
 </ol>
+<figure><img src="imagenes/52_filezilla_ubuntu_chroot_transfer.png" alt="Transferencia de archivos y enjaulado chroot en Ubuntu Server desde FileZilla"><figcaption><strong>Figura 52: </strong>Cliente FileZilla conectado a Ubuntu Server mostrando el inicio de sesión exitoso, la transferencia completada de prueba_ubuntu.txt y el enjaulado chroot del usuario en su directorio raíz /.</figcaption></figure>
 <blockquote><p>📷 <strong>Evidencia 22 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de FileZilla conectado a Ubuntu Server mostrando la subida de <code>prueba_ubuntu.txt</code> y el enjaulado del usuario en su directorio raíz <code>/</code>.</p></blockquote>
 <div class="admonition info">
 <p class="admonition-title">Qué debes añadir a tu documento Word al terminar el Apartado 12</p>
@@ -1752,11 +1776,8 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <span class="tok-key">rsa_cert_file</span>=<span class="tok-val">/etc/ssl/private/vsftpd.pem</span>
 <span class="tok-key">rsa_private_key_file</span>=<span class="tok-val">/etc/ssl/private/vsftpd.pem</span></code></pre>
 </div>
-<figure><img src="imagenes/43b_ubuntu_openssl_vsftpd_ftps.png" alt="Generación del certificado X.509 con OpenSSL y configuración de FTPS en /etc/vsftpd.conf"><figcaption><strong>Figura 43b: </strong>Generación del certificado autofirmado X.509 con OpenSSL y configuración de las directivas de cifrado TLS obligatorio en /etc/vsftpd.conf.</figcaption></figure>
-<ol start="5">
-<li>Reiniciar <code>vsftpd</code> (<code>sudo systemctl restart vsftpd</code>) y conectar desde <strong>FileZilla Client</strong> hacia la IP pública de Ubuntu en el puerto <code>21</code>: comprobar que aparece la ventana <strong>Certificado desconocido</strong> con los datos de <code>IES Mestre Ramon Esteve (Catadau)</code> y que al aceptarlo se activa el candado de seguridad.</li>
-</ol>
-<blockquote><p>📷 <strong>Evidencia 23 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la generación del certificado con <code>openssl</code> en Ubuntu y de la ventana del certificado en FileZilla al conectar por FTPS a Ubuntu Server.</p></blockquote>
+<figure><img src="imagenes/53_ubuntu_openssl_filezilla_ftps_cert.png" alt="Ventana del certificado desconocido en FileZilla con los datos de IES Mestre Ramon Esteve"><figcaption><strong>Figura 53: </strong>Ventana emergente de certificado X.509 en FileZilla al conectar por FTPS a Ubuntu Server, validando el cifrado TLS 1.3 con AES-256-GCM y los datos del IES Mestre Ramon Esteve (Catadau).</figcaption></figure>
+<blockquote><p>📷 <strong>Evidencia 23 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la ventana de verificación del certificado X.509 en FileZilla mostrando los datos de la entidad (<code>IES Mestre Ramon Esteve</code>, <code>Catadau</code>, <code>ftp.iesmre.local</code>) y la sesión TLS 1.3 con Ubuntu Server.</p></blockquote>
 <hr>
 <h3>13.2 Instalación de la clave pública SSH y bastionado en Ubuntu Server</h3>
 <ol>
@@ -1830,6 +1851,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <ol start="3">
 <li>Identificar en la salida la dirección IP pública del cliente y el método de autenticación empleado (<code>publickey</code> o <code>password</code>).</li>
 </ol>
+<figure><img src="imagenes/54_ubuntu_auditoria_logs_vsftpd_auth.png" alt="Auditoría de registros en Ubuntu Server en vsftpd.log y auth.log"><figcaption><strong>Figura 54: </strong>Auditoría de seguridad en Ubuntu Server mostrando el registro de subida exitosa en /var/log/vsftpd.log (OK UPLOAD de prueba_ubuntu.txt) y el registro de comandos privilegiados y accesos en /var/log/auth.log.</figcaption></figure>
 <blockquote><p>📷 <strong>Evidencia 24 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la terminal de Ubuntu mostrando las últimas líneas del registro <code>/var/log/vsftpd.log</code> y de <code>/var/log/auth.log</code>.</p></blockquote>
 <div class="admonition info">
 <p class="admonition-title">Qué debes añadir a tu documento Word al terminar el Apartado 13 (Fin del Bloque Ubuntu Server)</p>

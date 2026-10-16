@@ -93,13 +93,99 @@ Per evitar que el teu logotip i els teus futurs documents semblen sobrecarregats
 
 ## 📝 Quadern d'Activitats Pràctiques — Tasca 1: El Logotip Digital
 
-```mermaid
-flowchart LR
-    A["📝 1. Naming i Esbós<br>(Dibuix en paper a mà)"] --> B["📸 2. Foto a l'Esbós<br>(Mòbil o càmera web)"]
-    B --> C["🤖 3. Creació amb IA<br>(Prompt guiat amb colors)"]
-    C --> D["💾 4. Descàrrega i Nom<br>(Logo_NomDeLaTeuaEmpresa)"]
-    D --> E["📤 5. Lliurament Aules<br>(Imatge + Text explicatiu)"]
-```
+<div style="margin: 1.5rem 0 2rem 0; overflow-x: auto; text-align: center;">
+<svg viewBox="0 0 920 140" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; font-family: 'Segoe UI', system-ui, sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 12px; border: 1px solid #334155; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);">
+  <defs>
+    <linearGradient id="g-step1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g-step2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g-step3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g-step4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="g-step5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Pas 1 -->
+  <g transform="translate(18, 16)">
+    <rect width="154" height="108" rx="10" fill="url(#g-step1)" stroke="#38bdf8" stroke-width="1.6"/>
+    <circle cx="28" cy="28" r="14" fill="#38bdf8" fill-opacity="0.2"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">📝</text>
+    <text x="50" y="32" fill="#38bdf8" font-size="12" font-weight="700">Pas 1</text>
+    <text x="14" y="64" fill="#f8fafc" font-size="13" font-weight="bold">Naming i Esbós</text>
+    <text x="14" y="84" fill="#94a3b8" font-size="11">Dibuix en paper</text>
+    <text x="14" y="99" fill="#64748b" font-size="10.5">a mà alçada</text>
+  </g>
+
+  <!-- Fletxa 1 -> 2 -->
+  <path d="M 179 70 L 195 70 M 190 64 L 196 70 L 190 76" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 2 -->
+  <g transform="translate(200, 16)">
+    <rect width="154" height="108" rx="10" fill="url(#g-step2)" stroke="#06b6d4" stroke-width="1.6"/>
+    <circle cx="28" cy="28" r="14" fill="#06b6d4" fill-opacity="0.2"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">📸</text>
+    <text x="50" y="32" fill="#06b6d4" font-size="12" font-weight="700">Pas 2</text>
+    <text x="14" y="64" fill="#f8fafc" font-size="13" font-weight="bold">Foto a l'Esbós</text>
+    <text x="14" y="84" fill="#94a3b8" font-size="11">Amb el mòbil o</text>
+    <text x="14" y="99" fill="#64748b" font-size="10.5">càmera web</text>
+  </g>
+
+  <!-- Fletxa 2 -> 3 -->
+  <path d="M 361 70 L 377 70 M 372 64 L 378 70 L 372 76" stroke="#06b6d4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 3 -->
+  <g transform="translate(382, 16)">
+    <rect width="154" height="108" rx="10" fill="url(#g-step3)" stroke="#a855f7" stroke-width="1.6"/>
+    <circle cx="28" cy="28" r="14" fill="#a855f7" fill-opacity="0.2"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">🤖</text>
+    <text x="50" y="32" fill="#c084fc" font-size="12" font-weight="700">Pas 3</text>
+    <text x="14" y="64" fill="#f8fafc" font-size="13" font-weight="bold">Creació amb IA</text>
+    <text x="14" y="84" fill="#94a3b8" font-size="11">Prompt guiat amb</text>
+    <text x="14" y="99" fill="#64748b" font-size="10.5">colors corporatius</text>
+  </g>
+
+  <!-- Fletxa 3 -> 4 -->
+  <path d="M 543 70 L 559 70 M 554 64 L 560 70 L 554 76" stroke="#a855f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 4 -->
+  <g transform="translate(564, 16)">
+    <rect width="154" height="108" rx="10" fill="url(#g-step4)" stroke="#10b981" stroke-width="1.6"/>
+    <circle cx="28" cy="28" r="14" fill="#10b981" fill-opacity="0.2"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">💾</text>
+    <text x="50" y="32" fill="#34d399" font-size="12" font-weight="700">Pas 4</text>
+    <text x="14" y="64" fill="#f8fafc" font-size="13" font-weight="bold">Desa i Nom</text>
+    <text x="14" y="84" fill="#94a3b8" font-size="11">Logo_NomEmpresa</text>
+    <text x="14" y="99" fill="#64748b" font-size="10.5">format JPG o PNG</text>
+  </g>
+
+  <!-- Fletxa 4 -> 5 -->
+  <path d="M 725 70 L 741 70 M 736 64 L 742 70 L 736 76" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Pas 5 -->
+  <g transform="translate(746, 16)">
+    <rect width="154" height="108" rx="10" fill="url(#g-step5)" stroke="#f59e0b" stroke-width="1.6"/>
+    <circle cx="28" cy="28" r="14" fill="#f59e0b" fill-opacity="0.2"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">📤</text>
+    <text x="50" y="32" fill="#fbbf24" font-size="12" font-weight="700">Pas 5</text>
+    <text x="14" y="64" fill="#f8fafc" font-size="13" font-weight="bold">Lliura a Aules</text>
+    <text x="14" y="84" fill="#94a3b8" font-size="11">Imatge del logo</text>
+    <text x="14" y="99" fill="#64748b" font-size="10.5">+ Text explicatiu</text>
+  </g>
+</svg>
+</div>
 
 ### 🎯 Lliurament a Aules (Termini: 24 setembre - 1 octubre 2026)
 1. **Adjunta el fitxer d'imatge** amb nom normalitzat: `Logo_NomDeLaTeuaEmpresa` (ex: `Logo_TecnoCatadau.jpg`).
