@@ -1,29 +1,32 @@
 ---
 layout: default
-title: "UP2 — Identitat Corporativa i Paper de Carta amb Writer (Unitat Completa) — Projecte Intermodular (2n FPB)"
+title: "UP2 — Dossier de la Spin-Off i Documentació Corporativa amb Writer (Unitat Completa) — Projecte Intermodular (2n FPB)"
 course_root: ".."
-badge: "1a Avaluació · RA2 (a-f) · 8 hores · 10,0 punts (Aules)"
+badge: "1a Avaluació · RA3 (c, d, e) i RA5 (a, c) · 8 hores · 15% de la nota (10,0 punts a Aules)"
 prev_url: "../up01/index.html"
 prev_label: "⬅️ 📘 UP1 Completa"
 next_url: "./up02ras.html"
 next_label: "2.0 RA i Criteris d'Avaluació ➡️"
 ---
 
-# 📘 UP2 — Identitat Corporativa i Paper de Carta amb Writer — Unitat Completa
+# 📘 UP2 — Dossier de la Spin-Off i Documentació Corporativa amb Writer — Unitat Completa
 
-# 2.0 RA2 i Criteris d'Avaluació (UP2)
+# 2.0 RA i Criteris d'Avaluació (UP2)
 
-**Resultat d'Aprenentatge 2 (RA2):** Confecciona la documentació administrativa, tècnica i de comunicació de l'empresa, utilitzant aplicacions ofimàtiques de processament de textos i plantilles corporatives.
+Segons la **Programació Didàctica oficial (mòdul 3160)**, la **Unitat de Programació 2** desenvolupa els següents Resultats d'Aprenentatge i Criteris d'Avaluació oficials:
 
-| Criteri d'Avaluació Oficial | Què es valora? | Apartat de la Unitat | Puntuació / Pes |
-| :--- | :--- | :--- | :---: |
-| **Configuració de pàgina (RA2-a)** | Marges aplicats correctament a exactament 2 cm a tots els costats. | [2.1 Configuració de Pàgina](./up0201.md) | **1,5 punts (15%)** |
-| **Estils corporatius (RA2-b)** | Estil de títol personalitzat (*Títol 1*) amb tipografia triada i el color del logo. | [2.1 Estils Corporatius](./up0201.md) | **1,5 punts (15%)** |
-| **Paper de carta (RA2-c)** | Encapçalament amb logo PNG ben alineat i peu de pàgina amb dades de contacte. | [2.2 Paper de Carta](./up0202.md) | **2,5 punts (25%)** |
-| **Plantilla reutilitzable (RA2-d)** | Lliurament correcte del fitxer de plantilla buida (`.ott` / `.odt`). | [2.2 Plantilla Reutilitzable](./up0202.md) | **1,5 punts (15%)** |
-| **Taula de pressupost (RA2-e)** | Estructura de 4 columnes i almenys 5 files, disseny corporatiu i absència de faltes. | [2.3 Model de Pressupost](./up0203.md) | **2,0 punts (20%)** |
-| **Format PDF i ordre (RA2-f)** | Exportació neta en PDF i nomenclatura correcta dels fitxers. | [Tasca 2 Aules](./up02actividades.md) | **1,0 punt (10%)** |
-| **TOTAL UP2 / RA2** | **Superació de la Fase 2: Documentació Oficial** | **Tasca 2 Aules** | **10,0 punts (100%)** |
+- **RA3:** Fa una proposta d'una empresa tipus «spin off»... (organització de l'empresa, tecnologies d'oficina i elaboració del dossier corporatiu).
+- **RA5:** Transmet informació amb claredat de manera ordenada i estructurada (actitud ordenada i metòdica i ús de mitjans informàtics corporatius).
+
+| Criteri d'Avaluació Oficial a Aules | Què es valora? | Criteris Curriculars Associats | Puntuació / Pes |
+| :--- | :--- | :---: | :---: |
+| **Configuració de pàgina (RA2-a)** | Marges aplicats correctament a exactament 2,00 cm a tots els costats. | RA3 (e) · RA5 (a) | **1,5 punts (15%)** |
+| **Estils corporatius (RA2-b)** | Estil de títol personalitzat (*Títol 1*) amb tipografia triada i el color del logo. | RA3 (e) · RA5 (c) | **1,5 punts (15%)** |
+| **Paper de carta (RA2-c)** | Encapçalament amb logo PNG ben alineat i peu de pàgina amb dades de contacte. | RA3 (e) · RA5 (c) | **2,5 punts (25%)** |
+| **Plantilla reutilitzable (RA2-d)** | Lliurament correcte del fitxer de plantilla buida (`.ott` / `.odt`). | RA3 (d, e) · RA5 (c) | **1,5 punts (15%)** |
+| **Taula de pressupost (RA2-e)** | Estructura de 4 columnes i almenys 5 files, disseny corporatiu i absència de faltes. | RA3 (e) · RA5 (a) | **2,0 punts (20%)** |
+| **Format PDF i ordre (RA2-f)** | Exportació neta en PDF i nomenclatura correcta dels fitxers. | RA5 (a, c) | **1,0 punt (10%)** |
+| **TOTAL UP2** | **Superació de la Fase 2: Documentació Oficial de la Spin-Off** | **Tasca 2 Aules** | **10,0 punts (100%)** |
 
 ---
 

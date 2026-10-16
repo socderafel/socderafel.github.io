@@ -2,25 +2,28 @@
 layout: default
 title: "UP7 — Catàleg de Serveis, Full d'Incidències i Atenció al Client (Unitat Completa) — Projecte Intermodular (2n FPB)"
 course_root: ".."
-badge: "2a Avaluació · RA2 (e,f) i RA5 (d) · 6 hores · 10% de la nota"
+badge: "2a Avaluació · RA2 (a-e) i RA5 (b, c, d) · 6 hores · 10% de la nota"
 prev_url: "../up06/index.html"
 prev_label: "⬅️ 📘 UP6 Completa"
 next_url: "./up07ras.html"
 next_label: "7.0 RA i Criteris d'Avaluació ➡️"
 ---
 
-# 📘 UP7 — Catàleg de Serveis, Full d'Incidències i Atenció al Client — Unitat Completa
+# 📘 UP7 — Producte/Servei Innovador, Catàleg Comercial i Atenció al Client — Unitat Completa
 
-# 7.0 RA2 / RA5 i Criteris d'Avaluació (UP7)
+# 7.0 RA i Criteris d'Avaluació (UP7)
 
-**Resultats d'Aprenentatge 2 i 5:** Confecciona la documentació comercial i d'incidències tècniques (RA2) i dissenya els materials corporatius per a l'estand de la fira comercial (RA5).
+Segons la **Programació Didàctica oficial (mòdul 3160)**, la **Unitat de Programació 7** desenvolupa els següents Resultats d'Aprenentatge i Criteris d'Avaluació oficials:
 
-| Criteri d'Avaluació | Descripció i Indicador | Apartat de la Unitat | Pes en UP7 |
-| --- | --- | --- | --- |
-| **RA2-e (1)** | Disseny visual del Catàleg Comercial de Serveis amb packs i tarifes clares. | [7.1 Catàleg Comercial de Serveis](./up0701.md) | **35% (3,5 pts)** |
-| **RA2-e (2)** | Confecció del Full de Recepció d'Incidències Tècniques amb tots els blocs. | [7.2 Full d'Incidències i Targetes](./up0702.md) | **35% (3,5 pts)** |
-| **RA5-d** | Disseny de materials corporatius per a l'estand (targetes de visita i rètol). | [7.2 Full d'Incidències i Targetes](./up0702.md) | **20% (2,0 pts)** |
-| **RA2-f** | Correcció ortogràfica i exportació normalitzada dels 3 documents en PDF. | [Tasca 7 del Projecte](./up07actividades.md) | **10% (1,0 pt)** |
+- **RA2:** Selecciona un servei o producte d'una empresa del sector relacionant-lo amb la seua contribució als ODS i els seus destinataris a nivell global (CE 2.a-e).
+- **RA5:** Transmet informació amb claredat de manera ordenada i estructurada (CE 5.b, 5.c, 5.d: atenció comercial i termes tècnics).
+
+| Criteri d'Avaluació | Descripció i Indicador | Criteris Curriculars | Pes en UP7 |
+| :--- | :--- | :---: | :---: |
+| **a) Catàleg Comercial de Serveis** | Disseny visual del catàleg amb packs a preu tancat, públic objectiu i proposta diferenciadora. | RA2 (a, c, e) | **35% (3,5 pts)** |
+| **b) Full de Recepció d'Incidències (RMA)** | Confecció del formulari tècnic de diagnòstic, recepció d'avaries i autorització del client. | RA5 (c) | **30% (3,0 pts)** |
+| **c) Imatge Comercial de l'Estand** | Disseny de marxandatge bàsic (targetes de visita corporatives i rètol identificatiu). | RA5 (c, d) | **20% (2,0 pts)** |
+| **d) Qualitat Documental i PDF** | Absència de faltes ortogràfiques, aplicació de la plantilla corporativa i exportació neta a PDF. | RA5 (c) | **15% (1,5 pts)** |
 
 ---
 

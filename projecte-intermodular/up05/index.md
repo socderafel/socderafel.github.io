@@ -2,27 +2,29 @@
 layout: default
 title: "UP5 — Gestió Econòmica i Pressupostos en LibreOffice Calc (Unitat Completa) — Projecte Intermodular (2n FPB)"
 course_root: ".."
-badge: "2a Avaluació · RA3 (a-f) · 8 hores · 15% de la nota"
+badge: "2a Avaluació · RA1 (h) i RA4 (c) · 8 hores · 15% de la nota"
 prev_url: "../up04/index.html"
 prev_label: "⬅️ 📘 UP4 Completa"
 next_url: "./up05ras.html"
 next_label: "5.0 RA i Criteris d'Avaluació ➡️"
 ---
 
-# 📘 UP5 — Gestió Econòmica i Pressupostos en LibreOffice Calc — Unitat Completa
+# 📘 UP5 — Gestió Econòmica, Pressupostos i Cost d'EPIs en LibreOffice Calc — Unitat Completa
 
-# 5.0 RA3 i Criteris d'Avaluació (UP5)
+# 5.0 RA i Criteris d'Avaluació (UP5)
 
-**Resultat d'Aprenentatge 3 (RA3):** Realitza la gestió econòmica elemental i l'elaboració de pressupostos del servei informàtic, aplicant fulls de càlcul ofimàtics i taules estructurades.
+Segons la **Programació Didàctica oficial (mòdul 3160)**, la **Unitat de Programació 5** desenvolupa els següents Resultats d'Aprenentatge i Criteris d'Avaluació oficials:
 
-| Criteri d'Avaluació | Descripció i Indicador | Apartat de la Unitat | Pes en RA3 |
-| --- | --- | --- | --- |
-| **a) Estructura Calc** | Estructuració adequada de la taula de pressupost en 4 columnes a Calc. | [5.2 Inventari i Plantilla Calc](./up0502.md) | **20% (2,0 pts)** |
-| **b) Formats Moneda** | Aplicació de formats visuals corporatius i de cel·la numèrica/moneda (`€`). | [5.2 Inventari i Plantilla Calc](./up0502.md) | **15% (1,5 pts)** |
-| **c) Fórmules i IVA** | Utilització correcta de fórmules de suma, multiplicació i IVA (21%). | [5.1 Base Imposable i Fórmules](./up0501.md) | **25% (2,5 pts)** |
-| **d) Inventari** | Confecció d'un inventari coherent de components, recanvis i mà d'obra. | [5.2 Inventari i Plantilla Calc](./up0502.md) | **15% (1,5 pts)** |
-| **e) Supòsits Clients** | Resolució dels supòsits pràctics de pressupost simulat per a clients. | [5.3 Casos Pràctics de Clients](./up0503.md) | **15% (1,5 pts)** |
-| **f) Exactitud** | Verificació de l'exactitud numèrica i absència d'errors de càlcul. | [Tasca 5 del Projecte](./up05actividades.md) | **10% (1,0 pt)** |
+- **RA1:** Busca informació en internet sobre empreses «tipus» del sector... (CE 1.h: valoració dels recursos necessaris per a cada unitat: recanvis i mà d'obra).
+- **RA4:** Relaciona cada unitat d'una empresa tipus amb la prevenció de riscos professionals... (CE 4.c: estimació del cost dels EPIs mitjançant full de càlcul).
+
+| Criteri d'Avaluació | Descripció i Indicador | Criteris Curriculars | Pes en UP5 |
+| :--- | :--- | :---: | :---: |
+| **a) Estructura Calc** | Estructuració adequada de la taula de pressupost en 4 columnes a LibreOffice Calc. | RA1 (h) | **20% (2,0 pts)** |
+| **b) Formats Moneda i Cèl·la** | Aplicació de formats visuals corporatius i format de cel·la de moneda (`€`). | RA1 (h) | **15% (1,5 pts)** |
+| **c) Fórmules i IVA (21%)** | Utilització correcta de fórmules automàtiques de suma, producte i càlcul de l'IVA (21%). | RA1 (h) | **25% (2,5 pts)** |
+| **d) Inventari i Cost d'EPIs** | Confecció de l'inventari de recanvis i estimació del cost dels EPIs de protecció. | RA4 (c) | **20% (2,0 pts)** |
+| **e) Resolució de Supòsits** | Resolució exacta dels 2 casos pràctics de clients sense errors aritmètics. | RA1 (h) · RA4 (c) | **20% (2,0 pts)** |
 
 ---
 

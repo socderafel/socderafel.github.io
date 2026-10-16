@@ -2,24 +2,27 @@
 layout: default
 title: "UP4 — Defensa Oral Inicial de la Marca en Impress (Unitat Completa) — Projecte Intermodular (2n FPB)"
 course_root: ".."
-badge: "Final 1a Avaluació · RA5 (a,b,c) · 4 hores · 5% de la nota"
+badge: "Final 1a Avaluació · RA1 (g) i RA5 (a, b, d) · 4 hores · 5% de la nota"
 prev_url: "../up03/index.html"
 prev_label: "⬅️ 📘 UP3 Completa"
 next_url: "./up04ras.html"
 next_label: "4.0 RA i Criteris d'Avaluació ➡️"
 ---
 
-# 📘 UP4 — Defensa Oral Inicial de la Marca en Impress — Unitat Completa
+# 📘 UP4 — Defensa Oral Inicial en Impress i Termes Tècnics en Anglès — Unitat Completa
 
-# 4.0 RA5 (Defensa 1a Avaluació) i Criteris d'Avaluació (UP4)
+# 4.0 RA i Criteris d'Avaluació (UP4)
 
-**Resultat d'Aprenentatge 5 (RA5):** Comunica, presenta i promociona els serveis de la nova empresa informàtica, emprant eines de presentació multimèdia, expressió oral i organitzant la fira comercial final.
+Segons la **Programació Didàctica oficial (mòdul 3160)**, la **Unitat de Programació 4** desenvolupa els següents Resultats d'Aprenentatge i Criteris d'Avaluació oficials:
 
-| Criteri d'Avaluació | Descripció i Indicador | Apartat de la Unitat | Pes en UP4 |
-| --- | --- | --- | --- |
-| **a) Diapositives** | Disseny d'una presentació de 4 diapositives neta i visual en LibreOffice Impress. | [4.1 Disseny Visual en Impress](./up0401.md) | **40% (4,0 pts)** |
-| **b) Temps (5 min)** | Exposició oral ajustada al temps assignat (5 minuts) amb contingut estructurat. | [4.2 Les 4 Diapositives i Defensa](./up0402.md) | **35% (3,5 pts)** |
-| **c) Comunicació** | Ús d'un llenguatge clar, to de veu segur i vocabulari tècnic i comercial adequat. | [4.2 Les 4 Diapositives i Defensa](./up0402.md) | **25% (2,5 pts)** |
+- **RA1:** Presentació al gran grup de la configuració de l'empresa i productes que ofereix (CE 1.g).
+- **RA5:** Transmet informació amb claredat de manera ordenada i estructurada (CE 5.a, 5.b, 5.d: termes tècnics en anglès).
+
+| Criteri d'Avaluació | Descripció i Indicador | Criteris Curriculars | Pes en UP4 |
+| :--- | :--- | :---: | :---: |
+| **a) Diapositives en Impress** | Disseny visual net de 4 diapositives en LibreOffice Impress amb colors corporatius. | RA1 (g) · RA5 (a) | **35% (3,5 pts)** |
+| **b) Estructura i Temps (5 min)** | Exposició oral ajustada al temps assignat (5 minuts) seguint l'estructura acordada. | RA1 (g) · RA5 (b) | **35% (3,5 pts)** |
+| **c) Vocabulari Tècnic en Anglès** | Ús correcte de termes tècnics estàndards en anglès (*hardware, backup, repair, fix*). | RA5 (d) | **30% (3,0 pts)** |
 
 ---
 
