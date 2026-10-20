@@ -119,6 +119,7 @@ Fa uns $4.500\text{ milions d'anys}$, durant l'etapa de formació del planeta, l
 2. **Bombardeig cometari:** L'impacte continuat de cometes i asteroides rics en gel d'aigua procedents dels confins del Sistema Solar va aportar una fracció significativa de la massa oceànica actual.
 
 ### Balanç i Distribució de l'Aigua al Planeta:
+
 | Tipus d'Aigua | Ubicació | Percentatge respecte al Total | Característiques Principals |
 | :--- | :--- | :---: | :--- |
 | **Aigua Salada** | Oceans i mars interiors | **$97{,}2\%$** | Salinitat mitjana de $35\text{ g/L}$ (clorur de sodi $\text{NaCl}$, magnesi, sulfats). No apta per a consum directe ni reg. |
@@ -272,6 +273,7 @@ Un circuit de refrigeració líquida de taller utilitza un cabal d'aigua desioni
 - [ ] He identificat els riscos de la corrosió galvànica i de la conductivitat elèctrica en circuits de refrigeració líquida de taller.
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Balanç hídric i distribució planetària** | Analitza els percentatges d'aigua dolça i salada i calcula volums globals d'aigua accessible amb precisió matemàtica. | Coneix la distribució d'aigua salada i dolça i la seua ubicació en glaceres i aqüífers. | Reconeix que la majoria de l'aigua és salada però creu que els rius contenen més aigua que els aqüífers. | Desconeix la distribució d'aigua al planeta o creu que l'aigua dolça és majoritària. |

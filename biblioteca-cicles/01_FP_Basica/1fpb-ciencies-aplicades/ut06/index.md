@@ -153,6 +153,7 @@ Atesa la immensitat del buit espacial, el quilòmetre resulta una unitat inadequ
 El Sistema Solar està format per una estrella central, el **Sol** (que concentra el $99{,}86\%$ de tota la massa del sistema), envoltat per $8\text{ planetes principals}$, desenes de planetes nans i milions d'asteroides i cometes.
 
 ### Taula Comparativa: Planetes Interiors vs. Planetes Exteriors
+
 | Paràmetre | Planetes Interiors (Tel·lúrics / Rocosos) | Planetes Exteriors (Jovians / Gasosos) |
 | :--- | :--- | :--- |
 | **Membres** | **Mercuri, Venus, Terra i Mart** | **Júpiter, Saturn, Urà i Neptú** |
@@ -282,6 +283,7 @@ Analitza les dades de la següent taula i respon a les preguntes:
 - [ ] He distingit les aplicacions de les òrbites baixes LEO (baixa latència) i de les òrbites geoestacionàries GEO (antenes fixes).
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Cosmologia i evolució estel·lar** | Explica amb precisió el model del Big Bang, la fusió d'hidrogen en estels i l'estructura de la Via Làctia. | Comprèn el Big Bang i la diferència entre estels i galàxies amb bona expressió tècnica. | Descriu la idea general del Big Bang però confon nebuloses amb constel·lacions. | Afirma erròniament que el Sistema Solar és el centre de l'univers o confon estels amb planetes. |

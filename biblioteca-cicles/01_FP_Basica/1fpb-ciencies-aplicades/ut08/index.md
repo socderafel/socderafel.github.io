@@ -118,6 +118,7 @@ L'atmosfera és l'embolcall gasós que envolta la Terra, retingut per la força 
 - **La Gran Oxidació:** Fa uns $2.500\text{ milions d'anys}$, l'aparició dels primers bacteris fotosintètics (cianobacteris) als oceans va començar a alliberar $\text{O}_2$, transformant radicalment l'aire i permetent l'aparició de la respiració cel·lular i de la capa d'ozó.
 
 ### Composició de l'Aire Sec i Pur:
+
 | Component Gasós | Símbol Químic | Percentatge en Volum | Funció i Característica Principal |
 | :--- | :---: | :---: | :--- |
 | **Nitrogen** | $\text{N}_2$ | **$78{,}08\%$** | Gas inert que dilueix l'oxigen evitant combustions espontànies; essencial per a proteïnes. |
@@ -168,6 +169,7 @@ $$P_0 = 1\text{ atm} = 760\text{ mmHg} = 1.013{,}25\text{ hPa} \text{ (o mbar)}$
 El vent és l'aire en moviment causat per les diferències de pressió (*gradient de pressió*). L'aire **es desplaça sempre des dels anticiclons (altes pressions) cap a les borrasques (baixes pressions)**. Com més juntes estiguen les línies isòbares en el mapa, major és la diferència de pressió i major serà la velocitat del vent.
 
 ### Instruments de Mesura Meteorològica:
+
 | Variable Física | Unitat de Mesura | Instrument Clàssic | Sensor Digital / Electrònic |
 | :--- | :--- | :--- | :--- |
 | **Temperatura** | Graus Celsius ($^\circ\text{C}$) | Termòmetre de mercuri/alcohol | Sensor de resistència NTC / DHT22 |
@@ -271,6 +273,7 @@ Un servidor de base de dades consumeix una potència elèctrica mitjana continua
 - [ ] He valorat l'efecte de la temperatura i la humitat relativa en el funcionament i seguretat de sales de servidors (ASHRAE).
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Composició de l'aire i evolució geològica** | Domina els percentatges exactes de l'aire pur, la fotosíntesi en la Gran Oxidació i el paper dels gasos traça. | Coneix els gasos principals (N₂ i O₂) i el seu paper biològic amb bona expressió tècnica. | Reconeix que l'aire té oxigen i nitrogen però desconeix les proporcions aproximades. | Afirma que l'oxigen és el gas majoritari de l'atmosfera o confon gasos amb vapors. |

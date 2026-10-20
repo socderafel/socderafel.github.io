@@ -279,6 +279,7 @@ Cada dia, els ronyons humans reben aproximadament el $20\%$ de tot el cabal sang
 - [ ] He resolt casos de compatibilitat transfusional en el sistema AB0 i Rh prevenint reaccions adverses.
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Balanç energètic i nutrició (TMB)** | Calcula la TMB, despesa diària i percentatges de glúcids/lípids/proteïnes amb rigor matemàtic i criteri saludable. | Calcula la TMB i despesa total correctament amb petits errors en el repartiment de nutrients. | Aplica la fórmula bàsica de la TMB però té dificultats per aplicar el factor d'activitat física. | No sap calcular la despesa calòrica ni comprèn la diferència entre alimentació i nutrició. |

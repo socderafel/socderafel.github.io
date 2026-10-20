@@ -280,6 +280,7 @@ Resol cadascuna de les següents expressions mostrant detalladament cada pas int
 - [ ] He modelat situacions reals d'altimetria, saldos econòmics i desplaçaments utilitzant nombres enters.
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Concepte d'enter i ordenació a la recta** | Domina la representació a la recta, ordena nombres enters positius i negatius amb soltesa i empra el valor absolut amb precisió. | Ordena nombres enters correctament i calcula valors absoluts amb alguna xicoteta vacil·lació en valors molt negatius. | Reconeix la diferència entre positius i negatius però dubta en comparar dos nombres negatius (ex. $-8 > -2$). | Confon els nombres negatius amb positius i no sap situar-los a la recta respecte al zero. |

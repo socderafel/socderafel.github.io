@@ -292,6 +292,7 @@ Resol mostrant detalladament tots els passos intermedis segons la jerarquia d'op
 - [ ] He resolt problemes encadenats de càlcul de la fracció restant ($1 - \frac{a}{b}$).
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Concepte d'equivalència i simplificació** | Identifica fraccions equivalents a l'acte, aïlla incògnites en proporcions i redueix a fracció irreductible via MCD sense errades. | Comprova l'equivalència amb productes creuats i simplifica dividint entre factors comuns. | Comprova l'equivalència bàsica però li costa simplificar fraccions de xifres altes. | No comprèn el concepte de fracció equivalent o suma numeradors i denominadors per "simplificar". |

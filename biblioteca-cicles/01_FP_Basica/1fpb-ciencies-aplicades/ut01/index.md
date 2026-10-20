@@ -211,6 +211,7 @@ $$a^n = \underbrace{a \cdot a \cdot a \dots a}_{n \text{ vegades}}$$
 - **Exponent ($n$):** nombre de vegades que es multiplica la base.
 
 ### Quadre de Propietats Fonamentals:
+
 | Propietat | Regla | Exemple |
 | :--- | :---: | :---: |
 | **Producte mateixa base** | $a^n \cdot a^m = a^{n + m}$ | $4^2 \cdot 4^3 = 4^{2+3} = 4^5 = 1.024$ |
@@ -307,6 +308,7 @@ Aplica les propietats de les potències de nombres naturals per reduir cadascuna
 - [ ] He calculat consums elèctrics reals de taller convertint correctament entre Watts i kWh.
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Sistema decimal i valor posicional** | Descompon nombres grans en base 10 i potències polinòmiques amb facilitat i comprensió posicional plena. | Realitza la descomposició en ordres d'unitats correctament amb xicotets dubtes en potències de 10. | Identifica unitats, desenes i centenes bàsiques però té dificultats amb la notació polinòmica. | Confon els ordres d'unitat i no comprèn el valor posicional de les xifres. |

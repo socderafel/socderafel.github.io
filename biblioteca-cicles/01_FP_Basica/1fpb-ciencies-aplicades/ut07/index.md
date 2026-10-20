@@ -182,6 +182,7 @@ Són oscil·lacions periòdiques del nivell del mar provocades per la força d'a
 La geosfera és la part sòlida i rocosa del planeta. Com que no podem perforar més enllà de $12\text{ km}$ (pou de Kola a Rússia), la seua estructura interna s'estudia de manera indirecta analitzant la velocitat i refracció de les **ones sísmiques ($P$ i $S$)** generades pels terratrèmols.
 
 ### Capes Composicionals de la Geosfera:
+
 | Capa | Gruix / Profunditat | Estat Físic | Composició Química Principal |
 | :--- | :--- | :--- | :--- |
 | **Escorça Continental** | $30\text{ a }70\text{ km}$ | Sòlid rígid | Roques granítiques riques en silici i alumini (Si-Al) |
@@ -285,6 +286,7 @@ On prenem l'acceleració de la gravetat $g = 9{,}8\text{ m/s}^2$:
 - [ ] He associat components electrònics reals (CPU, circuits, bateries) amb els seus minerals d'origen geològic.
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Habitabilitat i condicions planetàries** | Explica amb rigor la interacció de la magnetosfera, la capa d'ozó i la hidrosfera en la protecció de la vida. | Reconeix els factors d'habitabilitat i el paper del camp magnètic amb bon llenguatge científic. | Identifica l'aigua líquida i l'oxigen però no comprèn la funció protectora del camp magnètic. | No sap justificar per què la Terra té vida i altres planetes rocosos com Venus o Mart no en tenen. |

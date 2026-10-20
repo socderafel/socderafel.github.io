@@ -121,6 +121,7 @@ En aquesta situació diem de forma equivalent que:
 - $a$ és **divisible** per $b$.
 
 ### Taula Comparativa: Múltiples vs. Divisors
+
 | Característica | Múltiples d'un Nombre ($M(a)$) | Divisors d'un Nombre ($D(a)$) |
 | :--- | :--- | :--- |
 | **Definició** | Nombres que contenen a $a$ una quantitat exacta de vegades | Nombres que estan continguts en $a$ de manera exacta |
@@ -293,6 +294,7 @@ Completa la matriu de verificació marcant amb una creu (**X**) les caselles que
 - [ ] He identificat si un problema de la vida real o de taller requereix aplicar l'MCD (tallar/repartir) o l'MCM (repetir/coincidir).
 
 #### Rúbrica d'avaluació d'aprenentatge
+
 | Criteri d'Avaluació | Excel·lent (9-10) | Notable (7-8) | Aprovat (5-6) | No Assolit (0-4) |
 | :--- | :--- | :--- | :--- | :--- |
 | **Criteris de divisibilitat ràpids** | Reconeix i justifica la divisibilitat per 2, 3, 5, 9, 10 i 11 a l'acte amb explicació teòrica impecable. | Aplica correctament la majoria de criteris amb algun dubte puntual en el criteri de l'11. | Recorda bé els criteris del 2, 5 i 10, però dubta amb el del 3 o el del 9. | Realitza la divisió manual completa perquè no coneix o no comprèn els criteris de divisibilitat. |
