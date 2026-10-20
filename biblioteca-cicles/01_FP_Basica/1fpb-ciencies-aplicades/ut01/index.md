@@ -100,7 +100,7 @@ Benvingut/da a la **Unitat Didàctica 1** del bloc de Matemàtiques de Ciències
 2. [**1.2 Els Nombres Naturals i les Operacions Bàsiques**](#12-els-nombres-naturals-i-les-operacions-bàsiques)
 3. [**1.3 Propietats de les Operacions i Jerarquia**](#13-propietats-de-les-operacions-i-jerarquia)
 4. [**1.4 Potències de Nombres Naturals i Propietats**](#14-potències-de-nombres-naturals-i-propietats)
-5. [**1.5 Butlletí d'Exercicis i Problemes d'Aplicació**](#15-butlletí-dexercicis-i-problemes-daplicació)
+5. [**1.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#15-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -223,7 +223,7 @@ $$a^n = \underbrace{a \cdot a \cdot a \dots a}_{n \text{ vegades}}$$
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 1.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

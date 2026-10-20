@@ -100,7 +100,7 @@ Benvingut/da a la **Unitat Didàctica 3** del bloc de Matemàtiques de Ciències
 2. [**3.2 Suma i Resta de Nombres Enters**](#32-suma-i-resta-de-nombres-enters)
 3. [**3.3 Multiplicació, Divisió i Jerarquia d'Operacions**](#33-multiplicació-divisió-i-jerarquia-doperacions)
 4. [**3.4 Potències de Nombres Enters i Arrels Quadrades**](#34-potències-de-nombres-enters-i-arrels-quadrades)
-5. [**3.5 Problemes Reals i Butlletí d'Exercicis Resolts**](#35-problemes-reals-i-butlletí-dexercicis-resolts)
+5. [**3.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#35-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -177,7 +177,7 @@ Els nombres enters són l'eina matemàtica fonamental per modelar fenòmens fís
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 3.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

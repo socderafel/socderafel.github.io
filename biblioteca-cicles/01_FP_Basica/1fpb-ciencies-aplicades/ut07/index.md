@@ -105,7 +105,7 @@ next_label: "UD8 L'Atmosfera Terrestre ➡️"
 2. [**7.2 Els Moviments de la Terra: Rotació, Translació i les Estacions**](#72-els-moviments-de-la-terra-rotació-translació-i-les-estacions)
 3. [**7.3 La Lluna, les Fases Lunars, els Eclipsis i les Marees**](#73-la-lluna-les-fases-lunars-els-eclipsis-i-les-marees)
 4. [**7.4 L'Estructura Interna de la Terra (La Geosfera) i Dinàmica Tectònica**](#74-lestructura-interna-de-la-terra-la-geosfera-i-dinàmica-tectònica)
-5. [**📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+5. [**7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#75-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -202,7 +202,7 @@ La **litosfera** (formada per l'escorça i la part superior rígida del mantell)
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 7.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

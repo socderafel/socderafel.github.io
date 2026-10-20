@@ -105,7 +105,7 @@ next_label: "UD5 Les Fraccions ➡️"
 2. [**4.2 Nombres Primers i Descomposició en Factors Primers**](#42-nombres-primers-i-descomposició-en-factors-primers)
 3. [**4.3 Màxim Comú Divisor (MCD) i Mínim Comú Múltiple (MCM)**](#43-màxim-comú-divisor-mcd-i-mínim-comú-múltiple-mcm)
 4. [**4.4 Problemes Reals d'MCD i MCM i Butlletí d'Exercicis**](#44-problemes-reals-dmcd-i-mcm-i-butlletí-dexercicis)
-5. [**📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+5. [**4.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#45-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -206,7 +206,7 @@ Com saber quin concepte aplicar en un problema de la vida quotidiana o del talle
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 4.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

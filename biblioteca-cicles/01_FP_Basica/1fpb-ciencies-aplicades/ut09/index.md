@@ -105,7 +105,7 @@ next_label: "Tornar a l'Inici del Curs 🏠"
 2. [**9.2 Propietats Físiques i Químiques de l'Aigua**](#92-propietats-físiques-i-químiques-de-laigua)
 3. [**9.3 El Cicle Hidrològic i les Aigües Continentals**](#93-el-cicle-hidrològic-i-les-aigües-continentals)
 4. [**9.4 Gestió Sostenible, Depuració i Refrigeració Líquida en CPD**](#94-gestió-sostenible-depuració-i-refrigeració-líquida-en-cpd)
-5. [**📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+5. [**9.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#95-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -191,7 +191,7 @@ A causa de l'elevada densitat tèrmica dels servidors moderns amb GPUs d'intel·
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 9.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

@@ -100,6 +100,7 @@ Benvingut/da a la **Unitat Didàctica 2** de Ciències Aplicades I (bloc de Biol
 2. [**2.2 La Funció de Nutrició i l'Aparell Digestiu**](#22-la-funció-de-nutrició-i-laparell-digestiu)
 3. [**2.3 Els Aparells Respiratori, Circulatori i Sistema Limfàtic**](#23-els-aparells-respiratori-circulatori-i-sistema-limfàtic)
 4. [**2.4 L'Aparell Excretor, Hàbits de Salut i Activitats**](#24-laparell-excretor-hàbits-de-salut-i-activitats)
+5. [**2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#25-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -187,7 +188,7 @@ L'**excreció** és la neteja de substàncies tòxiques cel·lulars abocades a l
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 2.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

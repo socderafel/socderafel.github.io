@@ -105,7 +105,7 @@ next_label: "UD9 La Hidrosfera Terrestre ➡️"
 2. [**8.2 Les Capes de l'Atmosfera: De la Troposfera a l'Exosfera**](#82-les-capes-de-latmosfera-de-la-troposfera-a-lexosfera)
 3. [**8.3 Fonaments de Meteorologia: Pressió, Vent i Precipitacions**](#83-fonaments-de-meteorologia-pressió-vent-i-precipitacions)
 4. [**8.4 Contaminació Atmosfèrica, Canvi Climàtic i Sensòrica Ambiental**](#84-contaminació-atmosfèrica-canvi-climàtic-i-sensòrica-ambiental)
-5. [**📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+5. [**8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#85-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -191,7 +191,7 @@ El vent és l'aire en moviment causat per les diferències de pressió (*gradien
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 8.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

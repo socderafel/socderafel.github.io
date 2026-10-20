@@ -105,8 +105,7 @@ next_label: "UD6 La Terra i l'Univers ➡️"
 2. [**5.2 Suma i Resta de Fraccions (Mínim Comú Denominador)**](#52-suma-i-resta-de-fraccions-mínim-comú-denominador)
 3. [**5.3 Multiplicació i Divisió de Fraccions**](#53-multiplicació-i-divisió-de-fraccions)
 4. [**5.4 Operacions Combinades i Jerarquia amb Fraccions**](#54-operacions-combinades-i-jerarquia-amb-fraccions)
-5. [**5.5 Problemes Reals amb Fraccions i Aplicacions de Laboratori**](#55-problemes-reals-amb-fraccions-i-aplicacions-de-laboratori)
-6. [**📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+5. [**5.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#55-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -189,7 +188,7 @@ $$E = \frac{2}{3} + \frac{5}{2} \cdot \left(\frac{3}{4} - \frac{1}{6}\right)$$
 
 ---
 
-## 📌 5.5 Problemes Reals amb Fraccions i Aplicacions de Laboratori
+## 📌 5.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
 1. **Fracció de la part restant:**
@@ -202,8 +201,6 @@ En entorns científics i tècnics, les fraccions s'utilitzen habitualment en:
    En mescles líquides com l'alcohol isopropílic (IPA) per a manteniment de plaques base, les concentracions es defineixen com a proporcions de volum ($V_{\text{solut}} / V_{\text{total}}$).
 
 ---
-
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

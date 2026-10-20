@@ -105,7 +105,7 @@ next_label: "UD7 El Planeta Terra ➡️"
 2. [**6.2 Els Astres i les Distàncies a l'Univers**](#62-els-astres-i-les-distàncies-a-lunivers)
 3. [**6.3 El Sistema Solar: El Sol i els Planetes**](#63-el-sistema-solar-el-sol-i-els-planetes)
 4. [**6.4 L'Exploració Espacial i Satèl·lits de Comunicacions**](#64-lexploració-espacial-i-satèllits-de-comunicacions)
-5. [**📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
+5. [**6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori**](#65-quadern-dactivitats-pràctiques-i-reptes-de-laboratori)
 
 ---
 
@@ -193,7 +193,7 @@ L'era espacial va començar a mitjan segle XX impulsant tecnologies que avui sos
 
 ---
 
-## 📝 Quadern d'Activitats Pràctiques i Reptes de Laboratori
+## 📌 6.5 Quadern d'Activitats Pràctiques i Reptes de Laboratori
 
 ### Bloc A: Fonaments, Dimensionament i Diagnòstic Tècnic
 

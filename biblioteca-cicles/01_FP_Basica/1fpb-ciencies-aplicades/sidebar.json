@@ -30,7 +30,7 @@
           "href": "./ut01/ut0104.html"
         },
         {
-          "label": "1.5 Butlletí d'Exercicis i Problemes",
+          "label": "1.5 Quadern de Laboratori i Reptes Pràctics",
           "href": "./ut01/ut0105.html"
         }
       ]
@@ -58,6 +58,10 @@
         {
           "label": "2.4 Aparell Excretor, Hàbits i Activitats",
           "href": "./ut02/ut0204.html"
+        },
+        {
+          "label": "2.5 Quadern de Laboratori i Reptes Pràctics",
+          "href": "./ut02/ut0205.html"
         }
       ]
     },
@@ -86,7 +90,7 @@
           "href": "./ut03/ut0304.html"
         },
         {
-          "label": "3.5 Problemes Reals i Butlletí d'Exercicis",
+          "label": "3.5 Quadern de Laboratori i Reptes Pràctics",
           "href": "./ut03/ut0305.html"
         }
       ]
@@ -114,6 +118,10 @@
         {
           "label": "4.4 Problemes Reals d'MCD i MCM",
           "href": "./ut04/ut0404.html"
+        },
+        {
+          "label": "4.5 Quadern de Laboratori i Reptes Pràctics",
+          "href": "./ut04/ut0405.html"
         }
       ]
     },
@@ -142,7 +150,7 @@
           "href": "./ut05/ut0504.html"
         },
         {
-          "label": "5.5 Problemes Reals amb Fraccions",
+          "label": "5.5 Quadern de Laboratori i Reptes Pràctics",
           "href": "./ut05/ut0505.html"
         }
       ]
@@ -170,6 +178,10 @@
         {
           "label": "6.4 L'Exploració Espacial i Activitats",
           "href": "./ut06/ut0604.html"
+        },
+        {
+          "label": "6.5 Quadern de Laboratori i Reptes Pràctics",
+          "href": "./ut06/ut0605.html"
         }
       ]
     },
@@ -196,6 +208,10 @@
         {
           "label": "7.4 La Geosfera i Activitats",
           "href": "./ut07/ut0704.html"
+        },
+        {
+          "label": "7.5 Quadern de Laboratori i Reptes Pràctics",
+          "href": "./ut07/ut0705.html"
         }
       ]
     },
@@ -222,6 +238,10 @@
         {
           "label": "8.4 Contaminació Atmosfèrica i Activitats",
           "href": "./ut08/ut0804.html"
+        },
+        {
+          "label": "8.5 Quadern de Laboratori i Reptes Pràctics",
+          "href": "./ut08/ut0805.html"
         }
       ]
     },
@@ -248,6 +268,10 @@
         {
           "label": "9.4 Gestió Sostenible de l'Aigua i Activitats",
           "href": "./ut09/ut0904.html"
+        },
+        {
+          "label": "9.5 Quadern de Laboratori i Reptes Pràctics",
+          "href": "./ut09/ut0905.html"
         }
       ]
     }
