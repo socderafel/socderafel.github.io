@@ -2,31 +2,31 @@
 A. Puerto 20 TCP
 B. Puerto 21 TCP
 C. Puerto 22 TCP
-D. Puerto 443 TCP
+D. Puerto 80 TCP
 ANSWER: B
 
-En la arquitectura del protocolo FTP, ¿qué dos conexiones independientes se establecen entre el cliente y el servidor?
+En la arquitectura del protocolo FTP, ¿qué dos conexiones independientes TCP se establecen entre el cliente y el servidor?
 A. Canal de audio y canal de video
 B. Canal de comandos local y canal de red remota
-C. Canal de control y canal de datos
+C. Canal de control (órdenes) y canal de datos (transferencia de ficheros)
 D. Canal de cifrado y canal de autenticación
 ANSWER: C
 
 ¿Cuál es la función principal del canal de control en una sesión FTP?
-A. Enviar las órdenes del usuario (como USER, PASS, LIST) y recibir las respuestas del servidor
-B. Transferir el contenido binario de los archivos descargados
-C. Cifrar la clave pública del servidor mediante certificados digitales
-D. Comprobar la latencia y hacer ping continuo entre ambos extremos
+A. Enviar las órdenes del usuario (como USER, PASS, LIST) y recibir los códigos de estado del servidor
+B. Transmitir el contenido binario de los archivos descargados
+C. Cifrar la clave privada del servidor mediante certificados digitales
+D. Comprobar la velocidad de conexión de la línea telefónica
 ANSWER: A
 
-¿Por qué el modo FTP Activo suele fallar en las conexiones a través de Internet actuales?
-A. Porque el protocolo FTP ya no soporta direcciones IPv4
+¿Por qué el modo FTP Activo suele fallar en las conexiones a través de Internet domésticas actuales?
+A. Porque el protocolo FTP ya no admite direcciones IPv4
 B. Porque los routers domésticos con NAT y los cortafuegos de los clientes bloquean las conexiones entrantes iniciadas por el servidor
-C. Porque requiere que el cliente tenga instalado obligatoriamente un certificado SSL
-D. Porque el modo activo solo permite transferir archivos de texto plano menores de 1 MB
+C. Porque exige obligatoriamente un certificado SSL instalado en el cliente
+D. Porque solo permite transferir archivos de texto plano menores de 1 MB
 ANSWER: B
 
-En el modo FTP Pasivo (PASV), ¿quién es el encargado de iniciar la conexión para el canal de datos?
+En el modo FTP Pasivo (PASV), ¿quién es el encargado de iniciar la conexión TCP para el canal de datos?
 A. Siempre el servidor hacia el cliente
 B. Siempre el cliente hacia un puerto aleatorio indicado por el servidor
 C. El router intermedio de la compañía telefónica
@@ -36,69 +36,104 @@ ANSWER: B
 Para que un servidor FTP funcione en modo pasivo dentro de un entorno en la nube como AWS Cloud, ¿qué requisito de configuración es imprescindible?
 A. Desactivar por completo el cortafuegos de Windows Server o Linux
 B. Conectarse obligatoriamente mediante un cable de red cruzado
-C. Definir un rango de puertos pasivos fijos, indicar la IP pública del servidor y abrir dicho rango en el Security Group
-D. Asignar al usuario los privilegios de Administrador del dominio
+C. Definir un rango de puertos pasivos, indicar la IP pública del servidor y abrir dicho rango en el Security Group
+D. Asignar a todos los usuarios los privilegios de Administrador del dominio
 ANSWER: C
 
 ¿Cuál es la principal vulnerabilidad del protocolo FTP tradicional respecto a la seguridad de la información?
 A. Que solo permite la conexión de un único usuario a la vez
 B. Que las credenciales y los datos viajan en texto plano sin cifrar, pudiendo ser interceptados con analizadores como Wireshark
-C. Que no admite contraseñas de más de 8 caracteres
+C. Que no admite contraseñas de más de 6 caracteres
 D. Que borra los archivos del servidor automáticamente una vez descargados
 ANSWER: B
 
 ¿En qué se diferencian principalmente los protocolos FTPS y SFTP?
-A. Son exactamente el mismo protocolo con nombres distintos
+A. Son exactamente el mismo protocolo con nombres comerciales distintos
 B. FTPS utiliza el protocolo FTP tradicional cifrado mediante TLS/SSL, mientras que SFTP es un subsistema del protocolo SSH
-C. SFTP no cifra los datos y FTPS sí los cifra
-D. FTPS opera exclusivamente por el puerto 80 y SFTP por el puerto 21
+C. SFTP viaja en texto plano y FTPS viaja cifrado
+D. FTPS opera por el puerto 80 y SFTP por el puerto 21
 ANSWER: B
 
-¿Qué puerto estándar utiliza el protocolo SFTP (SSH File Transfer Protocol) para operar de forma segura?
-A. Puerto 21 TCP
-B. Puerto 20 TCP
+¿Qué puerto estándar por defecto utiliza el protocolo SFTP (SSH File Transfer Protocol) para operar de forma segura?
+A. Puerto 20 TCP
+B. Puerto 21 TCP
 C. Puerto 22 TCP
-D. Puerto 990 TCP
+D. Puerto 443 TCP
 ANSWER: C
 
 ¿Qué software de servidor FTP viene integrado de forma nativa en los sistemas Microsoft Windows Server?
 A. vsftpd
-B. ProFTPD
+B. FileZilla Server
 C. Internet Information Services (IIS)
 D. Apache HTTP Server
 ANSWER: C
 
 En entornos Linux como Ubuntu Server, ¿cuál es uno de los demonios de servidor FTP más extendidos por su ligereza y seguridad?
 A. vsftpd
-B. FileZilla Server
-C. OpenSSH Client
+B. IIS Server
+C. OpenSSH Server
 D. PuTTYgen
 ANSWER: A
 
 ¿Cuál de las siguientes herramientas es un cliente gráfico de transferencia de ficheros multiplataforma (Windows, Linux, macOS)?
 A. Wireshark
 B. FileZilla Client
-C. Windows Defender
-D. PowerShell ISE
+C. Server Manager
+D. PuTTYgen
 ANSWER: B
 
-En la administración de un servidor de ficheros, ¿en qué consiste la técnica de enjaulado o aislamiento de usuarios (chroot)?
+En la administración de un servidor de ficheros, ¿en qué consiste la técnica de enjaulado o aislamiento de usuarios (chroot / LocalUser)?
 A. En bloquear la cuenta del usuario si introduce tres veces mal su contraseña
 B. En impedir que el usuario pueda salir de su directorio asignado y navegar hacia carpetas sensibles del sistema operativo
-C. En obligar al usuario a conectarse únicamente a través de una red VPN
-D. En limitar la velocidad de subida a un máximo de 100 KB/s
+C. En obligar al usuario a cambiar la contraseña cada 30 días
+D. En limitar la velocidad de descarga a 100 KB/s
 ANSWER: B
 
-Según las buenas prácticas de seguridad en servidores FTP, ¿qué usuario NO debería tener permitido el inicio de sesión en el servicio?
-A. Un usuario estándar creado para un departamento
-B. El usuario Administrador (Windows) o root (Linux)
-C. Los usuarios con contraseñas complejas
-D. El usuario alumne_redes
+¿Para qué se utiliza habitualmente la cuenta de usuario anónimo (anonymous) en un servidor FTP?
+A. Para tareas de mantenimiento y actualización del sistema operativo
+B. Para permitir el acceso público a documentos de libre distribución (como catálogos o manuales), típicamente con permisos de solo lectura
+C. Para obtener privilegios de administración de la máquina
+D. Para cifrar la información del disco duro
 ANSWER: B
 
-En un entorno educativo de nube como AWS Academy, ¿qué acción es fundamental realizar al terminar cada sesión de prácticas para no agotar el saldo?
-A. Formatear el disco duro de las máquinas virtuales
-B. Cambiar la contraseña del usuario Administrator
-C. Detener las instancias EC2 (Stop instance) desde la consola de AWS
-D. Eliminar la cuenta de correo de la escuela
+Si un usuario FTP intenta subir o borrar un archivo en una carpeta donde no tiene permisos de escritura NTFS o del servicio, ¿qué código de error típico devuelve el servidor?
+A. 200 Command okay
+B. 230 User logged in
+C. 550 Access is denied (o Permiso denegado)
+D. 226 Transfer complete
 ANSWER: C
+
+En la seguridad del protocolo SSH con parejas de claves asimétricas, ¿qué clave se instala en el servidor y cuál conserva el cliente?
+A. La clave privada se instala en el servidor y la clave pública la guarda el cliente
+B. La clave pública se instala en el servidor (en el archivo authorized_keys) y la clave privada se guarda de forma secreta en el cliente
+C. Ambas claves deben enviarse por correo a todos los usuarios
+D. El protocolo SSH no utiliza claves, solo contraseñas cortas
+ANSWER: B
+
+¿En qué consiste el bastionado (hardening) de un servidor OpenSSH desactivando la opción PasswordAuthentication?
+A. En impedir que nadie pueda conectarse al servidor
+B. En forzar que el acceso solo se permita mediante claves criptográficas autorizadas, bloqueando ataques de fuerza bruta por contraseña
+C. En cambiar el sistema operativo de Windows a Linux
+D. En reiniciar el servidor cada hora de manera automática
+ANSWER: B
+
+¿Qué herramienta se utiliza habitualmente en Windows para generar parejas de claves SSH y convertirlas a formato .ppk para PuTTY?
+A. Wireshark
+B. PuTTYgen
+C. FileZilla Client
+D. Internet Information Services (IIS)
+ANSWER: B
+
+¿Qué utilidad de línea de comandos integrada en sistemas modernos permite copiar ficheros de forma cifrada a través del canal SSH?
+A. telnet
+B. ping
+C. scp (Secure Copy Protocol)
+D. ftp clásico
+ANSWER: C
+
+En un laboratorio de nube como AWS Academy, ¿qué acción es fundamental realizar al terminar cada sesión de prácticas para no agotar el saldo?
+A. Formatear el disco duro de las máquinas virtuales
+B. Detener las instancias EC2 (Stop instance) desde la consola de AWS
+C. Cambiar la contraseña del correo electrónico
+D. Desinstalar el navegador web
+ANSWER: B
