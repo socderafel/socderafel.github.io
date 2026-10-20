@@ -341,7 +341,7 @@
 <li><strong>RA6-CEf)</strong> Se han auditado accesos e interconexiones cruzadas entre sistemas heterogéneos.</li>
 </ul>
 <p><strong>Sistema de evaluación y entregas en Aules (1 Cuestionario + 1 Único Documento PDF):</strong></p>
-<p>En esta unidad <strong>NO se entregan PDFs sueltos por cada apartado</strong>. Deberás crear desde el primer día un <strong>único documento en Word</strong> estructurado por apartados (del <code>Apartado 6</code> al <code>Apartado 15</code>), ir insertando en él las <strong>29 evidencias numeradas (<code>Evidencia 1</code> a <code>Evidencia 29</code>)</strong> conforme avances en las prácticas y, al finalizar la unidad, exportarlo a un <strong>único fichero PDF</strong> para subirlo a Aules:</p>
+<p>En esta unidad <strong>NO se entregan PDFs sueltos por cada apartado</strong>. Deberás crear desde el primer día un <strong>único documento en Word</strong> estructurado por apartados (del <code>Apartado 6</code> al <code>Apartado 15</code>), ir insertando en él las <strong>27 evidencias numeradas (<code>Evidencia 1</code> a <code>Evidencia 27</code>)</strong> conforme avances en las prácticas y, al finalizar la unidad, exportarlo a un <strong>único fichero PDF</strong> para subirlo a Aules:</p>
 <table>
 <thead><tr>
 <th>Actividad en Aules</th>
@@ -359,7 +359,7 @@
 <tr>
 <td><strong>2. Memoria Práctica Completa de la Unidad</strong></td>
 <td><code>RA3-CEb..h</code> / <code>RA6-CEb..f</code></td>
-<td>Documento único con todos los apartados prácticos (<strong>Bloque Windows Server</strong>, <strong>Bloque Ubuntu Server</strong> y <strong>Bloque Inter-Servidores + Proyecto Final</strong>) incluyendo las <strong>Evidencias 1 a 29</strong>.</td>
+<td>Documento único con todos los apartados prácticos (<strong>Bloque Windows Server</strong>, <strong>Bloque Ubuntu Server</strong> y <strong>Bloque Interoperabilidad + Cierre AWS</strong>) incluyendo las <strong>Evidencias 1 a 27</strong>.</td>
 <td><strong>1 único archivo PDF:</strong> <code>RA3-RA6-FTP-SSH-NombreApellidos.pdf</code></td>
 </tr>
 </tbody>
@@ -428,10 +428,10 @@
 <td><strong>Evidencias 25 y 26</strong> (Transferencia <code>curl</code> y <code>ssh</code> desde Ubuntu a Windows, y desde Windows a Ubuntu)</td>
 </tr>
 <tr>
-<td><strong>Apartado 15:</strong> Proyecto Final (<strong>TechCatadau S.L.</strong>) y control de costes</td>
-<td>Proyecto Final</td>
+<td><strong>Apartado 15:</strong> Control de costes y parada de la infraestructura en AWS</td>
+<td>Cierre AWS</td>
 <td><code>RA3-CEh</code></td>
-<td><strong>Evidencias 27 a 29</strong> (4 departamentos en FileZilla, script <code>backup_techcatadau.ps1</code> por SCP e instancias en estado <code>Stopped</code>)</td>
+<td><strong>Evidencia 27</strong> (Panel de instancias de AWS EC2 mostrando ambas máquinas en estado <code>Stopped</code>)</td>
 </tr>
 </tbody>
 </table>
@@ -1870,6 +1870,30 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <p>En esta tarea comprobaremos la interoperabilidad bidireccional conectando los dos servidores entre sí a través de la nube de Amazon Web Services.</p>
 <hr>
 <h3>14.1 Conexión FTP y SSH desde Ubuntu Server hacia Windows Server</h3>
+<div class="admonition warning">
+<p class="admonition-title">Comprobaciones previas en Windows Server antes de realizar las pruebas cruzadas</p>
+<p>Para que las conexiones entrantes desde Linux hacia Windows Server funcionen correctamente, verifica en Windows Server los siguientes puntos técnicos:</p>
+<ol>
+<li><strong>Autenticación por contraseña en OpenSSH:</strong> En el Apartado 10 habíamos bastionado el servidor OpenSSH desactivando las contraseñas (<code>PasswordAuthentication no</code>). Para que podamos iniciar sesión desde Ubuntu mediante contraseña con <code>ssh alumne_redes@&amp;lt;IP_WINDOWS&amp;gt;</code>, abre PowerShell en Windows Server como Administrador y permite temporalmente las contraseñas:</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">⚡ Consola PowerShell · Cliente Windows</div>
+    <div class="terminal-lang">powershell</div>
+  </div>
+  <pre><code class="language-powershell">(Get-Content C:\ProgramData\<span class="tok-cmd">ssh</span>\sshd_config) <span class="tok-flag">-replace</span> &#x27;PasswordAuthentication no&#x27;, &#x27;PasswordAuthentication yes&#x27; | <span class="tok-cmd">Set-Content</span> C:\ProgramData\<span class="tok-cmd">ssh</span>\sshd_config
+<span class="tok-cmd">Restart-Service</span> sshd</code></pre>
+</div>
+<ol start="2">
+<li><strong>Certificado FTPS activo en IIS:</strong> En <strong>IIS Manager</strong> -> <strong>Sitio FTP</strong> (o <code>FTP-AULA</code>) -> <strong>FTP SSL Settings</strong>, comprueba que está seleccionado <code>Certificado-FTPs-Aula</code> con la directiva <strong>Allow SSL connections</strong> (o <em>Require</em>) y pulsa <strong>Apply</strong>. Si no estuviera seleccionado, el servidor devolverá el error <code>534 Local policy on server does not allow TLS secure connections</code>.</li>
+<li><strong>IP pública en FTP Firewall Support:</strong> Si has reiniciado la máquina y la IP pública de Windows ha cambiado, actualiza la dirección en <strong>FTP Firewall Support</strong> y reinicia el servicio (<code>Restart-Service ftpsvc</code>).</li>
+</ol>
+</div>
 <ol>
 <li>Desde la sesión SSH de <strong>Ubuntu Server</strong>, transferir un fichero al servidor Windows Server mediante <code>curl</code>:</li>
 </ol>
@@ -1888,7 +1912,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 </div>
 <p><em>(Nota: incluimos <code>--ssl-reqd -k</code> dado que el servidor Windows exige cifrado explícito FTPS con certificado autofirmado).</em></p>
 <ol start="2">
-<li>Desde la misma consola de Ubuntu Server, iniciar una sesión remota SSH hacia el servidor Windows:</li>
+<li>Desde la misma consola de Ubuntu Server, iniciar una sesión remota SSH hacia el servidor Windows y comprobar que el archivo se ha recibido en el directorio FTP del usuario:</li>
 </ol>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -1902,43 +1926,29 @@ Get-Content .\fichero_recuperado.txt</code></pre>
   </div>
   <pre><code class="language-bash"><span class="tok-cmd">ssh</span> alumne_redes@<span class="tok-var">&lt;IP_PUBLICA_WINDOWS&gt;</span></code></pre>
 </div>
-<blockquote><p>📷 <strong>Evidencia 25 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la consola de Ubuntu mostrando la subida del fichero por FTP/FTPS y la apertura de sesión SSH en Windows.</p></blockquote>
+<p><em>Una vez dentro del prompt remoto de Windows Server (<code>alumne_redes@EC2AMAZ-...&gt;</code>), listar el directorio raíz FTP del usuario:</em></p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Consola de comandos</div>
+    <div class="terminal-lang">cmd</div>
+  </div>
+  <pre><code class="language-cmd">dir C:\inetpub\ftproot\LocalUser\alumne_redes
+exit</code></pre>
+</div>
+<p><em>(Nota de verificación: Al ejecutar <code>dir</code> dentro de la sesión SSH, ya estáis gestionando e inspeccionando el sistema de archivos de Windows Server directamente desde la terminal remota. Opcionalmente, si tenéis el escritorio remoto (RDP) de Windows abierto, también podéis abrir el Explorador de archivos en <code>C:\inetpub\ftproot\LocalUser\alumne_redes</code> para verlo en la interfaz gráfica).</em></p>
+<figure><img src="imagenes/55_ubuntu_curl_ftps_ssh_windows.png" alt="Transferencia FTPS con curl y conexión SSH desde Ubuntu hacia Windows Server"><figcaption><strong>Figura 55: </strong>Transferencia cruzada desde Ubuntu Server hacia Windows Server mediante curl bajo FTPS explícito (saludo_linux.txt transferido al 100%) y apertura de sesión SSH interactiva en Windows Server verificando la recepción del archivo con dir.</figcaption></figure>
+<blockquote><p>📷 <strong>Evidencia 25 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la consola de Ubuntu mostrando la subida del fichero por FTP/FTPS con <code>curl</code> y la apertura de sesión SSH en Windows validando la presencia del fichero con <code>dir</code>.</p></blockquote>
 <hr>
 <h3>14.2 Conexión FTP y SSH desde Windows Server hacia Ubuntu Server</h3>
-<ol>
-<li>Dentro de vuestro escritorio remoto de <strong>Windows Server</strong>, abrir PuTTY (o PowerShell) hacia la <strong>IP pública de Ubuntu Server</strong> en el puerto <code>22</code> con <code>alumne_redes</code>.</li>
-<li>Probar la subida o descarga de un fichero hacia Ubuntu Server mediante <code>curl</code> o <code>scp</code>.</li>
-</ol>
-<blockquote><p>📷 <strong>Evidencia 26 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la conexión realizada desde dentro de Windows Server hacia Ubuntu Server.</p></blockquote>
-<div class="admonition info">
-<p class="admonition-title">Qué debes añadir a tu documento Word al terminar el Apartado 14</p>
-<p>En el <strong>Apartado 14</strong> de tu documento Word, incluye las <strong>Evidencias 25 y 26</strong>:</p>
-<ul>
-<li><strong>Evidencia 25:</strong> Consola de Ubuntu Server subiendo <code>saludo_linux.txt</code> por FTPS con <code>curl</code> y abriendo sesión SSH hacia Windows Server.</li>
-<li><strong>Evidencia 26:</strong> Conexión SSH/SCP realizada desde dentro de Windows Server hacia Ubuntu Server.</li>
-</ul>
-</div>
-<hr>
-<h2>15 - [Proyecto Final] Infraestructura corporativa de TechCatadau S.L. en AWS y control de costes (RA3-CEh)</h2>
 <div class="admonition warning">
-<p class="admonition-title">Obligatorio seguir las normas para la presentación de trabajos escritos.</p>
-<p>Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.</p>
-</div>
-<p>En este proyecto final de la unidad pondréis en práctica de forma autónoma todos los conocimientos adquiridos para desplegar la infraestructura completa de intercambio seguro de ficheros y copias de seguridad de la empresa <strong>TechCatadau S.L.</strong> sobre vuestras dos instancias de AWS (<code>Servidor_FTPSSH</code> y <code>Ubuntu_FTPSSH</code>), finalizando con el protocolo obligatorio de parada y control de costes en la nube.</p>
-<hr>
-<h3>15.1 Despliegue departamental aislado y cifrado en TechCatadau S.L.</h3>
-<p>La dirección técnica de <strong>TechCatadau S.L.</strong> solicita configurar un entorno corporativo con <strong>4 departamentos aislados</strong> y un <strong>repositorio público institucional</strong>:</p>
-<ol>
-<li><strong>Cuentas departamentales y estructura de directorios en Windows Server (<code>Servidor_FTPSSH</code>):</strong></li>
-</ol>
-<ul>
-<li>Asegurar la existencia de las 4 cuentas locales departamentales en <code>compmgmt.msc</code> (con contraseña <code>Smx2026..@</code>):</li>
-<li><code>usuari_direccion</code> (Departamento de Dirección)</li>
-<li><code>usuari_ventas</code> (Departamento Comercial y Ventas)</li>
-<li><code>usuari_compras</code> (Departamento de Compras y Proveedores)</li>
-<li><code>usuari_soporte</code> (Departamento de Soporte Técnico IT)</li>
-<li>Crear dentro de <code>C:\inetpub\ftproot\LocalUser\</code> las carpetas aisladas correspondientes y sus documentos corporativos iniciales:</li>
-</ul>
+<p class="admonition-title">Desbloqueo obligatorio de autenticación por contraseña en Ubuntu Server (AWS EC2)</p>
+<p>En las imágenes oficiales de Ubuntu en AWS EC2 (como Ubuntu 24.04 LTS), el aprovisionamiento en la nube (<code>cloud-init</code>) desactiva por defecto el inicio de sesión mediante contraseña mediante una plantilla prioritaria en <code>/etc/ssh/sshd_config.d/60-cloudimg-settings.conf</code> con el parámetro <code>PasswordAuthentication no</code>.</p>
+<p>Por este motivo, cuando intentéis conectaros desde Windows Server mediante <code>scp</code> o <code>ssh</code> con el usuario local <code>alumne_redes</code>, el cliente de Windows recibirá inmediatamente el error:</p>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -1949,29 +1959,30 @@ Get-Content .\fichero_recuperado.txt</code></pre>
     <div class="terminal-title">📋 Esquema / Salida</div>
     <div class="terminal-lang">text</div>
   </div>
-  <pre><code class="language-text">C:\inetpub\ftproot\LocalUser\
-├── usuari_direccion\
-│   └── plan_estrategico_2026.txt
-├── usuari_ventas\
-│   └── informe_ventas_privado.txt
-├── usuari_compras\
-│   └── presupuesto_compras_privado.txt
-├── usuari_soporte\
-│   └── inventario_servidores_aws.txt
-└── Public\
-    ├── catalogo_empresa_2026.pdf
-    └── normativa_seguridad_2026.pdf</code></pre>
+  <pre><code class="language-text">alumne_redes@&lt;IP_UBUNTU&gt;: Permission denied (publickey).
+C:\Windows\System32\OpenSSH\scp.exe: Connection closed</code></pre>
 </div>
-<ul>
-<li>Configurar los <strong>permisos NTFS</strong> (<code>Modify</code> para cada usuario exclusivamente en su carpeta departamental) y las <strong>FTP Authorization Rules</strong> en IIS (Lectura/Escritura para los 4 departamentos; <strong>Solo Lectura</strong> para <code>Anonymous Users</code>).</li>
-<li>Verificar que el sitio opera exclusivamente bajo <strong>FTPS (<code>Require SSL connections</code>)</strong>.</li>
-</ul>
-<blockquote><p>📷 <strong>Evidencia 27 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de FileZilla validando el acceso aislado de <code>usuari_direccion</code> y <code>usuari_soporte</code> bajo conexión cifrada FTPS (con el candado activo).</p></blockquote>
-<hr>
-<h3>15.2 Automatización de copia de seguridad cruzada mediante script SCP</h3>
-<p>Para garantizar la continuidad de negocio ante fallos, el departamento de Soporte Técnico debe programar un script de respaldo que empaquete los documentos corporativos de <code>C:\inetpub\ftproot\LocalUser</code> en Windows Server y los envíe de forma cifrada y desatendida mediante <strong>SCP (con clave pública SSH)</strong> hacia el servidor de respaldo <strong>Ubuntu Server (<code>Ubuntu_FTPSSH</code>)</strong>:</p>
+<p><strong>Solución obligatoria en Ubuntu Server (ejecutar en su terminal):</strong></p>
+<p>Para permitir que los usuarios locales se autentiquen con su contraseña (<code>Smx2026..@</code>), sobrescribid la directiva y reiniciad el demonio SSH:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">💻 Terminal · Ubuntu Server</div>
+    <div class="terminal-lang">bash</div>
+  </div>
+  <pre><code class="language-bash"><span class="tok-cmd">echo</span> <span class="tok-string">&quot;PasswordAuthentication yes&quot;</span> | <span class="tok-cmd">sudo</span> tee /etc/<span class="tok-cmd">ssh</span>/sshd_config.d/60-cloudimg-settings.conf
+<span class="tok-cmd">sudo</span> <span class="tok-cmd">systemctl</span> <span class="tok-cmd">restart</span> <span class="tok-cmd">ssh</span></code></pre>
+</div>
+<p><em>(Comprobad que no muestra ningún error. A partir de este momento, el servidor Ubuntu aceptará contraseñas).</em></p>
+</div>
+<p><strong>Procedimiento paso a paso desde Windows Server:</strong></p>
 <ol>
-<li>En <strong>Windows Server</strong> (o desde vuestro equipo de administración), crear el script <code>C:\Scripts\backup_techcatadau.ps1</code> con el siguiente contenido:</li>
+<li>Dentro de vuestro escritorio remoto (RDP) de <strong>Windows Server</strong>, abrid una ventana de <strong>PowerShell</strong> como Administrador.</li>
+<li>Cread un archivo de texto de prueba para enviar al servidor Linux:</li>
 </ol>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -1983,97 +1994,98 @@ Get-Content .\fichero_recuperado.txt</code></pre>
     <div class="terminal-title">⚡ Consola PowerShell · Cliente Windows</div>
     <div class="terminal-lang">powershell</div>
   </div>
-  <pre><code class="language-powershell">$fecha = Get-Date <span class="tok-flag">-Format</span> <span class="tok-string">&quot;yyyyMMdd_HHmm&quot;</span>
-$origen = <span class="tok-string">&quot;C:\inetpub\ftproot\LocalUser&quot;</span>
-$archivoZip = <span class="tok-string">&quot;C:\Scripts\backup_ftproot_$fecha.zip&quot;</span>
-$servidorUbuntu = <span class="tok-string">&quot;alumne_redes@<span class="tok-var">&lt;IP_PUBLICA_UBUNTU&gt;</span>:~/backups_windows/&quot;</span>
-
-<span class="tok-comment"># 1. Comprimir toda la estructura departamental del FTP</span>
-Compress-Archive <span class="tok-flag">-Path</span> <span class="tok-string">&quot;$origen\*&quot;</span> <span class="tok-flag">-DestinationPath</span> $archivoZip <span class="tok-flag">-Force</span>
-
-<span class="tok-comment"># 2. Transferir el paquete cifrado por SCP usando clave privada SSH (sin pedir contraseña)</span>
-<span class="tok-cmd">scp</span> <span class="tok-flag">-i</span> <span class="tok-string">&quot;$env:USERPROFILE\.<span class="tok-cmd">ssh</span>\id_ed25519&quot;</span> $archivoZip $servidorUbuntu
-
-Write-Host <span class="tok-string">&quot;Copia de seguridad $archivoZip enviada con exito a Ubuntu Server.&quot;</span></code></pre>
+  <pre><code class="language-powershell"><span class="tok-string">&quot;Hola desde Windows Server hacia Linux&quot;</span> | Out-File <span class="tok-flag">-FilePath</span> test_windows.txt <span class="tok-flag">-Encoding</span> utf8</code></pre>
 </div>
-<ol start="2">
-<li>En <strong>Ubuntu Server</strong>, crear la carpeta destino <code>mkdir -p ~/backups_windows</code>, ejecutar el script desde PowerShell y comprobar con <code>ls -lh ~/backups_windows</code> en Ubuntu que el archivo <code>.zip</code> se ha recibido íntegramente al <code>100%</code>.</li>
+<ol start="3">
+<li>Transferid el archivo hacia la carpeta personal del usuario <code>alumne_redes</code> en Ubuntu Server mediante <strong>SCP</strong> (Secure Copy Protocol):</li>
 </ol>
-<blockquote><p>📷 <strong>Evidencia 28 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la ejecución del script <code>backup_techcatadau.ps1</code> transfiriendo el archivo <code>.zip</code> por SCP al <code>100%</code> y su comprobación en el directorio <code>~/backups_windows</code> de Ubuntu Server.</p></blockquote>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">⚡ Consola PowerShell · Cliente Windows</div>
+    <div class="terminal-lang">powershell</div>
+  </div>
+  <pre><code class="language-powershell"><span class="tok-cmd">scp</span> test_windows.txt alumne_redes@<span class="tok-var">&lt;IP_PUBLICA_UBUNTU&gt;</span>:~/</code></pre>
+</div>
+<p><em>(La primera vez que os conectéis os preguntará si deseáis confiar en la huella ED25519 del host: escribid <code>yes</code> y pulsad Enter. A continuación, introducid la contraseña <code>Smx2026..@</code>).</em></p>
+<ol start="4">
+<li>Abrid una sesión remota interactiva <strong>SSH</strong> desde Windows Server hacia Ubuntu Server para verificar que el archivo ha llegado y comprobar su contenido:</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">⚡ Consola PowerShell · Cliente Windows</div>
+    <div class="terminal-lang">powershell</div>
+  </div>
+  <pre><code class="language-powershell"><span class="tok-cmd">ssh</span> alumne_redes@<span class="tok-var">&lt;IP_PUBLICA_UBUNTU&gt;</span></code></pre>
+</div>
+<p><em>Una vez dentro del prompt de Ubuntu (<code>alumne_redes@ip-...:~$</code>), listad el archivo y mostradlo en pantalla:</em></p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">💻 Terminal · Ubuntu Server</div>
+    <div class="terminal-lang">bash</div>
+  </div>
+  <pre><code class="language-bash">ls <span class="tok-flag">-la</span> test_windows.txt
+<span class="tok-cmd">cat</span> test_windows.txt
+exit</code></pre>
+</div>
+<p><em>(Alternativa opcional con <code>curl</code> por FTPS desde PowerShell: <code>curl.exe --ssl-reqd -k -T test_windows.txt -u alumne_redes:Smx2026..@ ftp://&amp;lt;IP_PUBLICA_UBUNTU&amp;gt;/</code>).</em></p>
+<figure><img src="imagenes/56_windows_scp_ssh_ubuntu.png" alt="Conexión SCP y SSH interactiva desde Windows Server hacia Ubuntu Server"><figcaption><strong>Figura 56: </strong>Consola de PowerShell en Windows Server mostrando la transferencia del archivo test_windows.txt mediante scp hacia Ubuntu Server y la sesión remota SSH posterior verificando el archivo con ls -la y cat.</figcaption></figure>
+<blockquote><p>📷 <strong>Evidencia 26 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la consola de PowerShell en Windows Server mostrando el envío del archivo con <code>scp</code> hacia Ubuntu Server y la apertura de sesión interactiva <code>ssh</code> validando la presencia y contenido de <code>test_windows.txt</code>.</p></blockquote>
+<div class="admonition info">
+<p class="admonition-title">Qué debes añadir a tu documento Word al terminar el Apartado 14</p>
+<p>En el <strong>Apartado 14</strong> de tu documento Word, incluye las <strong>Evidencias 25 y 26</strong>:</p>
+<ul>
+<li><strong>Evidencia 25:</strong> Consola de Ubuntu Server subiendo <code>saludo_linux.txt</code> por FTPS con <code>curl</code> y abriendo sesión SSH hacia Windows Server verificando el archivo con <code>dir</code>.</li>
+<li><strong>Evidencia 26:</strong> Consola de PowerShell en Windows Server transfiriendo <code>test_windows.txt</code> con <code>scp</code> y abriendo sesión interactiva <code>ssh</code> en Ubuntu Server comprobando el archivo con <code>ls -la</code>.</li>
+</ul>
+</div>
 <hr>
-<h3>15.3 Lista de comprobación en vivo en el aula (Checklist de validación)</h3>
-<p>Antes de proceder al apagado definitivo del laboratorio, verificad que vuestra infraestructura supera los <strong>6 puntos de control</strong> de la auditoría técnica:</p>
-<table>
-<thead><tr>
-<th>Nº</th>
-<th>Prueba de verificación</th>
-<th>Resultado esperado</th>
-<th>Estado</th>
-</tr></thead>
-<tbody>
-<tr>
-<td><strong>1</strong></td>
-<td>Conexión FTP sin cifrar (Texto plano)</td>
-<td>Rechazada por el servidor (<code>534 Policy requires SSL</code>)</td>
-<td>☐ OK</td>
-</tr>
-<tr>
-<td><strong>2</strong></td>
-<td>Conexión FTPS (TLS 1.2) con <code>usuari_direccion</code></td>
-<td>Acceso enjaulado a su carpeta viendo solo <code>plan_estrategico_2026.txt</code> con candado TLS</td>
-<td>☐ OK</td>
-</tr>
-<tr>
-<td><strong>3</strong></td>
-<td>Conexión FTPS con usuario <code>anonymous</code></td>
-<td>Ve <code>normativa_seguridad_2026.pdf</code>, puede descargarlo pero recibe <code>550 Access is denied</code> al borrar</td>
-<td>☐ OK</td>
-</tr>
-<tr>
-<td><strong>4</strong></td>
-<td>Conexión SSH por contraseña convencional</td>
-<td>Rechazada tras el bastionado (<code>Permission denied (publickey)</code>)</td>
-<td>☐ OK</td>
-</tr>
-<tr>
-<td><strong>5</strong></td>
-<td>Conexión SSH / SFTP con clave privada</td>
-<td>Acceso directo sin contraseña en el puerto <code>22</code></td>
-<td>☐ OK</td>
-</tr>
-<tr>
-<td><strong>6</strong></td>
-<td>Ejecución de <code>backup_techcatadau.ps1</code></td>
-<td>Archivo <code>.zip</code> comprimido y recibido por SCP en <code>Ubuntu_FTPSSH</code></td>
-<td>☐ OK</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h3>15.4 Cierre del laboratorio y control de costes en AWS</h3>
+<h2>15 - Control de costes, parada de la infraestructura en AWS y entrega final (RA3-CEh)</h2>
 <div class="admonition warning">
-<p class="admonition-title">¡Obligatorio al finalizar cada sesión de trabajo!</p>
+<p class="admonition-title">Obligatorio seguir las normas para la presentación de trabajos escritos.</p>
+<p>Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.</p>
+</div>
+<p>Una vez completadas con éxito todas las pruebas técnicas en <strong>Windows Server</strong>, <strong>Ubuntu Server</strong> y las <strong>pruebas cruzadas de interoperabilidad</strong> entre ambos sistemas operativos, el paso imprescindible en cualquier despliegue profesional en la nube es aplicar las políticas de <strong>control de costes y parada controlada de los recursos</strong> para no consumir créditos innecesarios.</p>
+<hr>
+<h3>15.1 Cierre de sesiones y parada controlada de las instancias en AWS</h3>
+<div class="admonition warning">
+<p class="admonition-title">¡Obligatorio al finalizar cada sesión de trabajo y al terminar la práctica!</p>
 <p>Los laboratorios de AWS Academy disponen de un crédito limitado (\$50). Dejar las instancias encendidas consume saldo continuamente y puede provocar que os quedéis sin horas de laboratorio antes de que termine el curso.</p>
 </div>
 <ol>
-<li><strong>Desconexión de las sesiones activas:</strong> Cerrar las ventanas de Escritorio Remoto (RDP), FileZilla, Wireshark y las sesiones de PuTTY/PowerShell abiertas en vuestro ordenador.</li>
+<li><strong>Desconexión de las sesiones activas:</strong> Cerrar las ventanas de Escritorio Remoto (RDP), FileZilla, Wireshark y las sesiones de PuTTY o PowerShell abiertas en vuestro ordenador físico.</li>
 <li><strong>Detener las instancias en AWS (<code>Stop instance</code>):</strong></li>
 </ol>
 <ul>
-<li>Volver a la consola de AWS -> <strong>EC2</strong> -> <strong>Instances</strong> (<strong>Instancias</strong>).</li>
-<li>Seleccionar las casillas de vuestras dos máquinas: <strong><code>Servidor_FTPSSH</code></strong> y <strong><code>Ubuntu_FTPSSH</code></strong>.</li>
-<li>Hacer clic en <strong>Instance state</strong> -> <strong>Stop instance</strong> (<strong>Detener la instancia</strong>).</li>
-<li>Esperar hasta que en la columna de estado aparezca claramente <strong>Stopped</strong> (<strong>Detenido</strong>) en ambas instancias.</li>
+<li>Abrid la consola de AWS -> <strong>EC2</strong> -> <strong>Instances</strong> (<strong>Instancias</strong>).</li>
+<li>Seleccionad las casillas de vuestras dos máquinas: <strong><code>Servidor_FTPSSH</code></strong> y <strong><code>Ubuntu_FTPSSH</code></strong>.</li>
+<li>Haced clic en el desplegable superior <strong>Instance state</strong> -> <strong>Stop instance</strong> (<strong>Detener la instancia</strong>).</li>
+<li>Esperad unos segundos y pulsad el botón de refrescar (⟳) hasta que en la columna <strong>Instance state</strong> aparezca claramente <strong><code>Stopped</code></strong> (<strong>Detenido</strong>) en ambas máquinas.</li>
 </ul>
-<blockquote><p>📷 <strong>Evidencia 29 (insertar en tu documento Word) — Realizar captura de pantalla</strong> del panel de instancias de EC2 mostrando ambas máquinas (<code>Servidor_FTPSSH</code> y <code>Ubuntu_FTPSSH</code>) en estado <code>Stopped</code> (<strong>Detenido</strong>).</p></blockquote>
+<figure><img src="imagenes/57_aws_ec2_instances_stopped.png" alt="Panel de instancias de AWS EC2 con ambas máquinas detenidas"><figcaption><strong>Figura 57: </strong>Consola de AWS EC2 mostrando las dos instancias del laboratorio (Servidor_FTPSSH y Ubuntu_FTPSSH) en estado Stopped (Detenido) para garantizar el control de costes.</figcaption></figure>
+<blockquote><p>📷 <strong>Evidencia 27 (insertar en tu documento Word) — Realizar captura de pantalla</strong> del panel de instancias de EC2 mostrando ambas máquinas (<code>Servidor_FTPSSH</code> y <code>Ubuntu_FTPSSH</code>) seleccionadas y en estado <code>Stopped</code> (<strong>Detenido</strong>).</p></blockquote>
 <ol start="3">
-<li><strong>Cerrar el laboratorio:</strong> Volver a la pestaña de <strong>AWS Academy</strong> (Vocareum) y pulsar en el botón rojo superior <strong><code>End Lab</code></strong>.</li>
+<li><strong>Cerrar el laboratorio:</strong> Volved a la pestaña de <strong>AWS Academy</strong> (Vocareum) y pulsad en el botón rojo superior <strong><code>End Lab</code></strong>.</li>
 </ol>
 <hr>
-<h3>15.5 Entrega única de la Memoria Práctica en Aules (Checklist final de las 29 Evidencias)</h3>
+<h3>15.2 Entrega única de la Memoria Práctica en Aules (Checklist final de las 27 Evidencias)</h3>
 <div class="admonition warning">
 <p class="admonition-title">Entrega única en Aules: Memoria Práctica Completa (RA3 y RA6)</p>
-<p>Una vez completados todos los apartados en tu documento de Word, verifica que incluye las <strong>29 evidencias numeradas</strong> organizadas por apartados, expórtalo a un <strong>único archivo PDF</strong> y súbelo a la tarea de <strong>Aules</strong>:</p>
+<p>Una vez completados todos los apartados en tu documento de Word, verifica que incluye las <strong>27 evidencias numeradas</strong> organizadas por apartados, expórtalo a un <strong>único archivo PDF</strong> y súbelo a la tarea de <strong>Aules</strong>:</p>
 <p><strong>Bloque I — Windows Server (<code>Servidor_FTPSSH</code>):</strong></p>
 <ol>
 <li><strong>Evidencia 1 (Ap. 6.0):</strong> Instancia <code>Servidor_FTPSSH</code> creada y en estado <code>Running</code> en AWS EC2.</li>
@@ -2104,13 +2116,11 @@ Write-Host <span class="tok-string">&quot;Copia de seguridad $archivoZip enviada
 <li><strong>Evidencia 23 (Ap. 13.1):</strong> Generación del certificado X.509 con <code>openssl</code> en Ubuntu y conexión FTPS en FileZilla.</li>
 <li><strong>Evidencia 24 (Ap. 13.3):</strong> Auditoría de registros en <code>/var/log/vsftpd.log</code> y <code>/var/log/auth.log</code> en Ubuntu Server.</li>
 </ol>
-<p><strong>Bloque III — Pruebas Cruzadas, Proyecto Final (</strong>TechCatadau S.L.<strong>) y Cierre AWS:</strong></p>
+<p><strong>Bloque III — Pruebas Cruzadas de Interoperabilidad y Control de Costes en AWS:</strong></p>
 <ol start="25">
 <li><strong>Evidencia 25 (Ap. 14.1):</strong> Subida FTPS con <code>curl</code> y conexión SSH desde Ubuntu Server hacia Windows Server.</li>
 <li><strong>Evidencia 26 (Ap. 14.2):</strong> Conexión SSH/SCP desde Windows Server hacia Ubuntu Server.</li>
-<li><strong>Evidencia 27 (Ap. 15.1):</strong> Validación en FileZilla de los departamentos de <strong>TechCatadau S.L.</strong> (<code>usuari_direccion</code> y <code>usuari_soporte</code>) bajo FTPS.</li>
-<li><strong>Evidencia 28 (Ap. 15.2):</strong> Ejecución del script <code>backup_techcatadau.ps1</code> enviando el <code>.zip</code> por SCP y su recepción en <code>~/backups_windows</code> de Ubuntu.</li>
-<li><strong>Evidencia 29 (Ap. 15.4):</strong> Panel de instancias de AWS EC2 mostrando ambas máquinas (<code>Servidor_FTPSSH</code> y <code>Ubuntu_FTPSSH</code>) en estado <strong><code>Stopped</code></strong> (<strong>Detenido</strong>).</li>
+<li><strong>Evidencia 27 (Ap. 15.1):</strong> Panel de instancias de AWS EC2 mostrando ambas máquinas (<code>Servidor_FTPSSH</code> y <code>Ubuntu_FTPSSH</code>) en estado <strong><code>Stopped</code></strong> (<strong>Detenido</strong>).</li>
 </ol>
 <ul>
 <li><strong>Nombre del único fichero a entregar:</strong> <code>RA3-RA6-FTP-SSH-NombreApellidos.pdf</code> (ejemplo: <code>RA3-RA6-FTP-SSH-JoanPerez.pdf</code>).</li>
