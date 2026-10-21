@@ -532,21 +532,21 @@
 <p>Las órdenes que viajan por el canal de control son palabras mnemotécnicas de 3 o 4 caracteres en texto plano ASCII seguidas de parámetros y delimitadas por el terminador <code>CRLF</code> (<code>\r\n</code>):</p>
 <ul>
 <li><strong>Autenticación e inicio de sesión:</strong></li>
-<li><code>USER &amp;lt;nombre&amp;gt;</code>: Envía el identificador del usuario que desea iniciar sesión.</li>
+<li><code>USER &lt;nombre&gt;</code>: Envía el identificador del usuario que desea iniciar sesión.</li>
 <li><code>PASS &lt;contraseña&gt;</code>: Envía la contraseña de dicho usuario.</li>
 <li><code>QUIT</code>: Cierra la conexión de control y finaliza la sesión en el servidor.</li>
 <li><strong>Navegación e inspección del sistema de ficheros:</strong></li>
 <li><code>PWD</code> (<em>Print Working Directory</em>): Muestra la ruta del directorio de trabajo actual en el servidor.</li>
-<li><code>CWD &amp;lt;ruta&amp;gt;</code> (<em>Change Working Directory</em>): Cambia al directorio especificado (equivalente a <code>cd</code>).</li>
+<li><code>CWD &lt;ruta&gt;</code> (<em>Change Working Directory</em>): Cambia al directorio especificado (equivalente a <code>cd</code>).</li>
 <li><code>CDUP</code> (<em>Change to Parent Directory</em>): Sube un nivel en el árbol jerárquico de directorios (equivalente a <code>cd ..</code>).</li>
-<li><code>MKD &amp;lt;directorio&amp;gt;</code> (<em>Make Directory</em>): Crea una nueva carpeta en la ruta remota.</li>
-<li><code>RMD &amp;lt;directorio&amp;gt;</code> (<em>Remove Directory</em>): Elimina la carpeta remota indicada.</li>
+<li><code>MKD &lt;directorio&gt;</code> (<em>Make Directory</em>): Crea una nueva carpeta en la ruta remota.</li>
+<li><code>RMD &lt;directorio&gt;</code> (<em>Remove Directory</em>): Elimina la carpeta remota indicada.</li>
 <li><strong>Operaciones de transferencia y gestión de ficheros:</strong></li>
 <li><code>LIST</code>: Solicita el listado detallado de ficheros y directorios (permisos, tamaño, fecha de modificación, similar a <code>ls -la</code>). Se entrega a través del canal de datos.</li>
 <li><code>NLST</code> (<em>Name List</em>): Solicita una lista simple con únicamente los nombres de los ficheros.</li>
-<li><code>RETR &amp;lt;fichero&amp;gt;</code> (<em>Retrieve</em>): Descarga el archivo solicitado desde el servidor hacia el cliente.</li>
-<li><code>STOR &amp;lt;fichero&amp;gt;</code> (<em>Store</em>): Sube y almacena un archivo desde el cliente en el servidor.</li>
-<li><code>DELE &amp;lt;fichero&amp;gt;</code> (<em>Delete</em>): Elimina el fichero especificado del servidor.</li>
+<li><code>RETR &lt;fichero&gt;</code> (<em>Retrieve</em>): Descarga el archivo solicitado desde el servidor hacia el cliente.</li>
+<li><code>STOR &lt;fichero&gt;</code> (<em>Store</em>): Sube y almacena un archivo desde el cliente en el servidor.</li>
+<li><code>DELE &lt;fichero&gt;</code> (<em>Delete</em>): Elimina el fichero especificado del servidor.</li>
 <li><strong>Negociación del canal de datos:</strong></li>
 <li><code>PORT &lt;h1,h2,h3,h4,p1,p2&gt;</code>: Indica al servidor la dirección IP y el puerto TCP en el que el cliente espera la conexión de datos (Modo Activo).</li>
 <li><code>PASV</code>: Solicita al servidor que abra un puerto pasivo y espere la conexión del cliente (Modo Pasivo).</li>
@@ -904,7 +904,7 @@
 <ul>
 <li>En el Administrador de IIS, la característica <strong>Aislamiento de usuarios FTP</strong> (<em>FTP User Isolation</em>) se configura seleccionando la opción <strong>Directorio de nombre de usuario</strong>.</li>
 <li>El servidor exige crear una estructura de carpetas estricta bajo la raíz del sitio FTP denominada <code>LocalUser</code>:</li>
-<li><code>C:\inetpub\ftproot\LocalUser\&amp;lt;nombre_de_usuario&amp;gt;</code>: Cada usuario local autenticado es confinado automáticamente a su carpeta homónima. Desde su cliente FTP, esa carpeta aparecerá como la raíz <code>/</code>, sin permitirle ver ni acceder a las carpetas de otros compañeros ni al resto del disco duro.</li>
+<li><code>C:\inetpub\ftproot\LocalUser\&lt;nombre_de_usuario&gt;</code>: Cada usuario local autenticado es confinado automáticamente a su carpeta homónima. Desde su cliente FTP, esa carpeta aparecerá como la raíz <code>/</code>, sin permitirle ver ni acceder a las carpetas de otros compañeros ni al resto del disco duro.</li>
 <li><code>C:\inetpub\ftproot\LocalUser\Public</code>: Carpeta compartida a la que son dirigidos los usuarios anónimos o no aislados.</li>
 </ul>
 <hr>
@@ -921,7 +921,7 @@
 <li>Puede distribuirse libremente sin comprometer la seguridad.</li>
 <li>Se almacena en el servidor remoto en el fichero:</li>
 <li>En Linux: <code>~/.ssh/authorized_keys</code> del usuario correspondiente.</li>
-<li>En Windows Server: <code>C:\ProgramData\ssh\administrators_authorized_keys</code> (para miembros del grupo Administradores) o <code>C:\Users\&amp;lt;usuario&amp;gt;\.ssh\authorized_keys</code>.</li>
+<li>En Windows Server: <code>C:\ProgramData\ssh\administrators_authorized_keys</code> (para miembros del grupo Administradores) o <code>C:\Users\&lt;usuario&gt;\.ssh\authorized_keys</code>.</li>
 <li><strong>Algoritmos recomendados:</strong></li>
 <li><strong>RSA:</strong> Mínimo de 2048 o 4096 bits.</li>
 <li><strong>Ed25519:</strong> Algoritmo moderno basado en curvas elípticas (EdDSA), con claves mucho más compactas, mayor velocidad de cálculo y resistencia criptográfica superior frente a ataques.</li>
@@ -1389,7 +1389,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <li>En la barra superior de <strong>Conexión rápida</strong> introducir:</li>
 </ol>
 <ul>
-<li><strong>Servidor:</strong> <code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code> (en nuestro ejemplo, <code>52.90.151.179</code>)</li>
+<li><strong>Servidor:</strong> <code>&lt;IP_PUBLICA_WINDOWS&gt;</code> (en nuestro ejemplo, <code>52.90.151.179</code>)</li>
 <li><strong>Nombre de usuario:</strong> <code>alumne_redes</code></li>
 <li><strong>Contraseña:</strong> <code>Smx2026..@</code></li>
 <li><strong>Puerto:</strong> <code>21</code> (si se deja en blanco, FileZilla utiliza por defecto el puerto <code>21</code>)</li>
@@ -1443,7 +1443,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <li>Para ambos usuarios: desmarcar <strong>User must change password at next logon</strong>, y marcar <strong>User cannot change password</strong> y <strong>Password never expires</strong>.</li>
 </ul>
 <ol start="4">
-<li>Abrir <strong>File Explorer</strong> en <code>C:\inetpub\ftproot</code> y crear la siguiente estructura exacta de carpetas y archivos de prueba dentro de <code>LocalUser</code> (en IIS, cuando se activa el aislamiento por nombre de usuario, los usuarios locales entran en <code>LocalUser\&amp;lt;usuario&amp;gt;</code> y el usuario <code>anonymous</code> entra automáticamente en <code>LocalUser\Public</code>):</li>
+<li>Abrir <strong>File Explorer</strong> en <code>C:\inetpub\ftproot</code> y crear la siguiente estructura exacta de carpetas y archivos de prueba dentro de <code>LocalUser</code> (en IIS, cuando se activa el aislamiento por nombre de usuario, los usuarios locales entran en <code>LocalUser\&lt;usuario&gt;</code> y el usuario <code>anonymous</code> entra automáticamente en <code>LocalUser\Public</code>):</li>
 </ol>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -1504,7 +1504,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <li><strong>Prueba de usuario aislado (<code>usuari_ventas</code>):</strong></li>
 </ol>
 <ul>
-<li>En la barra de <strong>Conexión rápida</strong>, introducir Servidor <code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>, Nombre de usuario <code>usuari_ventas</code>, Contraseña <code>Smx2026..@</code> y Puerto <code>21</code> -> pulsar <strong>Conexión rápida</strong>.</li>
+<li>En la barra de <strong>Conexión rápida</strong>, introducir Servidor <code>&lt;IP_PUBLICA_WINDOWS&gt;</code>, Nombre de usuario <code>usuari_ventas</code>, Contraseña <code>Smx2026..@</code> y Puerto <code>21</code> -> pulsar <strong>Conexión rápida</strong>.</li>
 <li>Comprobar que accede directamente a su raíz privada (<code>/</code>) donde ve exclusivamente su archivo <code>informe_ventas_privado.txt</code>, sin posibilidad de subir de nivel ni ver la carpeta de <code>usuari_compras</code>:</li>
 </ul>
 <figure><img src="imagenes/33e_filezilla_usuari_ventas_aislado.png" alt="Conexión aislada de usuari_ventas en FileZilla mostrando su directorio privado"><figcaption><strong>Figura 33e: </strong>Usuario usuari_ventas enjaulado en su directorio privado viendo únicamente informe_ventas_privado.txt.</figcaption></figure>
@@ -1512,7 +1512,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <li><strong>Prueba de usuario anónimo (<code>anonymous</code> - Solo Lectura):</strong></li>
 </ol>
 <ul>
-<li>En la barra de <strong>Conexión rápida</strong>, introducir Servidor <code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>, Nombre de usuario <code>anonymous</code> (o dejar usuario y contraseña en blanco) y Puerto <code>21</code> -> pulsar <strong>Conexión rápida</strong>.</li>
+<li>En la barra de <strong>Conexión rápida</strong>, introducir Servidor <code>&lt;IP_PUBLICA_WINDOWS&gt;</code>, Nombre de usuario <code>anonymous</code> (o dejar usuario y contraseña en blanco) y Puerto <code>21</code> -> pulsar <strong>Conexión rápida</strong>.</li>
 <li>Comprobar que accede directamente a la carpeta pública (<code>LocalUser\Public</code>) y ve el archivo <code>catalogo_empresa_2026.pdf</code> (pudiendo descargarlo sin problema).</li>
 <li>Intentar <strong>borrar <code>catalogo_empresa_2026.pdf</code></strong> (o subir un archivo desde el panel izquierdo hacia el servidor).</li>
 <li>Comprobar que el servidor FTP deniega la escritura o el borrado devolviendo el código de error <strong><code>Respuesta: 550 Access is denied</code></strong>:</li>
@@ -1590,7 +1590,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <h3>9.3 Conexión segura con FileZilla y validación de certificado TLS</h3>
 <ol>
 <li>Abrir <strong>FileZilla Client</strong> en vuestro PC del aula.</li>
-<li>Conectar hacia el servidor en el puerto <strong><code>21</code></strong> (podéis hacerlo directamente desde la barra de <strong>Conexión rápida</strong> introduciendo Servidor <code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>, Usuario <code>alumne_redes</code>, Contraseña <code>Smx2026..@</code> y Puerto <code>21</code>, ya que FileZilla negocia automáticamente <strong>FTP explícito sobre TLS</strong> si el servidor lo soporta, o bien guardando el perfil en <strong>Archivo</strong> -> <strong>Gestor de sitios...</strong> con cifrado <strong>Requiere FTP explícito sobre TLS</strong>).</li>
+<li>Conectar hacia el servidor en el puerto <strong><code>21</code></strong> (podéis hacerlo directamente desde la barra de <strong>Conexión rápida</strong> introduciendo Servidor <code>&lt;IP_PUBLICA_WINDOWS&gt;</code>, Usuario <code>alumne_redes</code>, Contraseña <code>Smx2026..@</code> y Puerto <code>21</code>, ya que FileZilla negocia automáticamente <strong>FTP explícito sobre TLS</strong> si el servidor lo soporta, o bien guardando el perfil en <strong>Archivo</strong> -> <strong>Gestor de sitios...</strong> con cifrado <strong>Requiere FTP explícito sobre TLS</strong>).</li>
 <li>Pulsar en <strong>Conexión rápida</strong> (o <strong>Conectar</strong>).</li>
 <li>Al establecer la negociación segura en el puerto <code>21</code>, aparecerá la ventana emergente <strong>Certificado desconocido</strong>:</li>
 </ol>
@@ -1625,7 +1625,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <h3>10.1 Conexión SSH básica hacia Windows Server con PuTTY</h3>
 <ol>
 <li>Abrir <strong>PuTTY</strong> en vuestro PC del aula.</li>
-<li>En el campo <strong>Host Name (or IP address)</strong> introducir la <strong>IP pública de Windows Server</strong> (<code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>), <strong>Port</strong> <code>22</code> y <strong>Connection type</strong> <code>SSH</code>.</li>
+<li>En el campo <strong>Host Name (or IP address)</strong> introducir la <strong>IP pública de Windows Server</strong> (<code>&lt;IP_PUBLICA_WINDOWS&gt;</code>), <strong>Port</strong> <code>22</code> y <strong>Connection type</strong> <code>SSH</code>.</li>
 <li>Pulsar en <strong>Open</strong>, aceptar la advertencia inicial de clave host del servidor (<strong>PuTTY Security Alert</strong> pulsando <code>Accept</code>) e iniciar sesión indicando el usuario <code>alumne_redes</code> y su contraseña (<code>Smx2026..@</code>).</li>
 <li>Al entrar, ejecutar <code>whoami</code> y <code>hostname</code> para verificar que estáis conectados a la consola de comandos remota de Windows Server.</li>
 </ol>
@@ -1694,7 +1694,7 @@ Set-Service <span class="tok-flag">-Name</span> sshd <span class="tok-flag">-Sta
 <li>Volver arriba a <strong>Session</strong>:</li>
 </ol>
 <ul>
-<li><strong>Host Name:</strong> IP pública de Windows Server (<code>&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>). <strong>Port:</strong> <code>22</code>.</li>
+<li><strong>Host Name:</strong> IP pública de Windows Server (<code>&lt;IP_PUBLICA_WINDOWS&gt;</code>). <strong>Port:</strong> <code>22</code>.</li>
 <li>En <strong>Saved Sessions</strong>, escribir <code>Windows-Clave-SSH</code> y hacer clic en <strong>Save</strong>:</li>
 </ul>
 <figure><img src="imagenes/46f_putty_guardar_sesion.png" alt="Guardado del perfil de sesión en PuTTY"><figcaption><strong>Figura 46f: </strong>Perfil de sesión Windows-Clave-SSH guardado en PuTTY con IP pública, puerto 22 y clave asimétrica vinculada.</figcaption></figure>
@@ -1881,7 +1881,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
   </div>
   <pre><code class="language-text">ftp || tls || ssh</code></pre>
 </div>
-<p><em>(Opcional: Si queréis aislar exclusivamente el tráfico con vuestro servidor Windows en AWS, podéis usar: <code>(ftp || tls || ssh) &amp;&amp; ip.addr == &amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>)</em>.</p>
+<p><em>(Opcional: Si queréis aislar exclusivamente el tráfico con vuestro servidor Windows en AWS, podéis usar: <code>(ftp || tls || ssh) &amp;&amp; ip.addr == &lt;IP_PUBLICA_WINDOWS&gt;</code>)</em>.</p>
 <figure><img src="imagenes/44c_wireshark_filtro_interfaz.png" alt="Inicio de captura y aplicación del filtro de visualización en Wireshark"><figcaption><strong>Figura 44c: </strong>Selección de la interfaz activa de red (Ethernet/Wi-Fi), inicio de captura con la aleta de tiburón y aplicación del filtro ftp || tls || ssh en Wireshark.</figcaption></figure>
 <h4>11.4.3 Procedimiento de generación de tráfico de prueba</h4>
 <p>Con la captura de Wireshark corriendo en segundo plano:</p>
@@ -1889,7 +1889,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <li><strong>Generar tráfico FTP plano (en texto claro):</strong></li>
 </ol>
 <ul>
-<li>En FileZilla, conectar por FTP ordinario sin cifrado (<code>ftp://&amp;lt;IP_PUBLICA_WINDOWS&amp;gt;</code>, puerto <code>21</code>) con el usuario <code>alumne_redes</code> y su contraseña <code>Smx2026..@</code>.</li>
+<li>En FileZilla, conectar por FTP ordinario sin cifrado (<code>ftp://&lt;IP_PUBLICA_WINDOWS&gt;</code>, puerto <code>21</code>) con el usuario <code>alumne_redes</code> y su contraseña <code>Smx2026..@</code>.</li>
 </ul>
 <ol start="2">
 <li><strong>Generar tráfico FTPS (cifrado con TLS):</strong></li>
@@ -2135,7 +2135,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <li>Abrir <strong>FileZilla Client</strong> en vuestro PC del aula y conectar hacia <strong>Ubuntu Server</strong>:</li>
 </ol>
 <ul>
-<li><strong>Servidor:</strong> <code>&amp;lt;IP_PUBLICA_UBUNTU&amp;gt;</code></li>
+<li><strong>Servidor:</strong> <code>&lt;IP_PUBLICA_UBUNTU&gt;</code></li>
 <li><strong>Nombre de usuario:</strong> <code>alumne_redes</code> (y posteriormente probar con <code>usuari_ventas</code>)</li>
 <li><strong>Contraseña:</strong> <code>Smx2026..@</code></li>
 <li><strong>Puerto:</strong> <code>21</code></li>
@@ -2332,7 +2332,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 <p class="admonition-title">Comprobaciones previas en Windows Server antes de realizar las pruebas cruzadas</p>
 <p>Para que las conexiones entrantes desde Linux hacia Windows Server funcionen correctamente, verifica en Windows Server los siguientes puntos técnicos:</p>
 <ol>
-<li><strong>Autenticación por contraseña en OpenSSH:</strong> En el Apartado 10 habíamos bastionado el servidor OpenSSH desactivando las contraseñas (<code>PasswordAuthentication no</code>). Para que podamos iniciar sesión desde Ubuntu mediante contraseña con <code>ssh alumne_redes@&amp;lt;IP_WINDOWS&amp;gt;</code>, abre PowerShell en Windows Server como Administrador y permite temporalmente las contraseñas:</li>
+<li><strong>Autenticación por contraseña en OpenSSH:</strong> En el Apartado 10 habíamos bastionado el servidor OpenSSH desactivando las contraseñas (<code>PasswordAuthentication no</code>). Para que podamos iniciar sesión desde Ubuntu mediante contraseña con <code>ssh alumne_redes@&lt;IP_WINDOWS&gt;</code>, abre PowerShell en Windows Server como Administrador y permite temporalmente las contraseñas:</li>
 </ol>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -2500,7 +2500,7 @@ C:\Windows\System32\OpenSSH\scp.exe: Connection closed</code></pre>
 <span class="tok-cmd">cat</span> test_windows.txt
 exit</code></pre>
 </div>
-<p><em>(Alternativa opcional con <code>curl</code> por FTPS desde PowerShell: <code>curl.exe --ssl-reqd -k -T test_windows.txt -u alumne_redes:Smx2026..@ ftp://&amp;lt;IP_PUBLICA_UBUNTU&amp;gt;/</code>).</em></p>
+<p><em>(Alternativa opcional con <code>curl</code> por FTPS desde PowerShell: <code>curl.exe --ssl-reqd -k -T test_windows.txt -u alumne_redes:Smx2026..@ ftp://&lt;IP_PUBLICA_UBUNTU&gt;/</code>).</em></p>
 <figure><img src="imagenes/56_windows_scp_ssh_ubuntu.png" alt="Conexión SCP y SSH interactiva desde Windows Server hacia Ubuntu Server"><figcaption><strong>Figura 56: </strong>Consola de PowerShell en Windows Server mostrando la transferencia del archivo test_windows.txt mediante scp hacia Ubuntu Server y la sesión remota SSH posterior verificando el archivo con ls -la y cat.</figcaption></figure>
 <blockquote><p>📷 <strong>Evidencia 26 (insertar en tu documento Word) — Realizar captura de pantalla</strong> de la consola de PowerShell en Windows Server mostrando el envío del archivo con <code>scp</code> hacia Ubuntu Server y la apertura de sesión interactiva <code>ssh</code> validando la presencia y contenido de <code>test_windows.txt</code>.</p></blockquote>
 <div class="admonition info">
