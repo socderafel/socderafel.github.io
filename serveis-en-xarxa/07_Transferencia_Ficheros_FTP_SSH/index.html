@@ -437,16 +437,46 @@
 </table>
 </div>
 <hr>
-<h2>1 - Introducción</h2>
-<p>La transferencia de archivos en red es un servicio fundamental en cualquier infraestructura informática que permite el intercambio de ficheros entre ordenadores a través de una red local o de Internet.</p>
-<p>El protocolo estándar tradicional para esta función es <strong>FTP (File Transfer Protocol)</strong>, diseñado según la arquitectura <strong>cliente-servidor</strong>. A lo largo de esta unidad aprenderemos a desplegar y configurar servidores FTP en entornos reales en la nube pública (<strong>Amazon Web Services - AWS</strong>), administrándolos tanto en <strong>Windows Server</strong> como en <strong>Ubuntu Server</strong>, y realizando transferencias desde clientes gráficos como <strong>FileZilla</strong> y conexiones de consola seguras mediante <strong>PuTTY (SSH)</strong>.</p>
-<hr>
-<h2>2 - Conceptos y definición</h2>
-<h3>2.1 La doble conexión de FTP: Canal de control y Canal de datos</h3>
-<p>A diferencia de protocolos como HTTP o SSH, que utilizan una única conexión para todo, FTP utiliza <strong>dos conexiones TCP independientes</strong>:</p>
+<h2>1 - Introducción y evolución de los servicios de transferencia de ficheros</h2>
+<p>La transferencia de archivos a través de redes telemáticas constituye uno de los servicios cliente-servidor más antiguos y esenciales de la arquitectura TCP/IP. Antes del desarrollo de la World Wide Web y del protocolo HTTP, la necesidad primordial de los centros de cálculo universitarios y militares era compartir programas ejecutables, conjuntos de datos masivos y documentos entre ordenadores distantes y con sistemas operativos heterogéneos.</p>
+<h3>1.1 Evolución histórica: Del RFC 114 al RFC 959</h3>
+<p>El protocolo <strong>FTP (File Transfer Protocol)</strong> nació formalmente el 16 de abril de 1971 con la publicación del <strong>RFC 114</strong> por Abhay Bhushan en el MIT, operando sobre las primeras redes de conmutación de paquetes de ARPANET y la pila NCP (<em>Network Control Program</em>). Con la transición definitiva a la arquitectura de Internet basada en TCP/IP en 1980, el protocolo se rediseñó en el <strong>RFC 765</strong> y finalmente se consolidó en octubre de 1985 con la publicación del <strong>RFC 959</strong>, que continúa siendo el estándar fundacional vigente hoy en día.</p>
+<p>A lo largo de las décadas, FTP ha evolucionado mediante diversas ampliaciones (<em>RFC extensions</em>), destacando:</p>
 <ul>
-<li><strong>Canal de control (Puerto 21 TCP):</strong> Se establece en primer lugar y permanece abierto durante toda la sesión. Por él viajan únicamente las órdenes del protocolo (usuario, contraseña, comandos <code>LIST</code>, <code>RETR</code>, <code>STOR</code>, etc.) y las respuestas numéricas del servidor (códigos <code>220</code>, <code>230</code>, <code>226</code>, etc.).</li>
-<li><strong>Canal de datos (Puertos variables TCP):</strong> Se abre temporalmente cada vez que se solicita transferir un archivo o listar el contenido de un directorio. Una vez completada la transferencia de datos, esta conexión se cierra.</li>
+<li><strong>RFC 2228 (FTP Security Extensions):</strong> Introduce mecanismos de autenticación y cifrado mediante comandos como <code>AUTH TLS</code>.</li>
+<li><strong>RFC 2428 (FTP Extensions for IPv6 and NATs):</strong> Define los comandos <code>EPRT</code> (<em>Extended Port</em>) y <code>EPSV</code> (<em>Extended Passive</em>) para dar soporte al direccionamiento IPv6 y facilitar la interoperabilidad con pasarelas NAT complejas.</li>
+<li><strong>RFC 3659 (Extensions to FTP):</strong> Añade comandos modernos como <code>MLST</code> y <code>MLSD</code> para obtener listados de ficheros con metadatos estandarizados e información horaria en UTC.</li>
+</ul>
+<h3>1.2 Ubicación en la pila OSI y modelo TCP/IP</h3>
+<p>Dentro de la arquitectura de capas, FTP se sitúa en la <strong>Capa de Aplicación</strong> (Capa 7 de OSI / Capa 4 de TCP/IP). Para el transporte de la información, se apoya de forma estricta en el protocolo <strong>TCP (Transmission Control Protocol)</strong> en la Capa de Transporte. La elección de TCP (frente a protocolos no orientados a conexión como UDP) es indispensable por tres factores determinantes:</p>
+<ol>
+<li><strong>Fiabilidad absoluta:</strong> Cada paquete de datos debe ser confirmado mediante ACKs para asegurar que ni un solo byte del fichero transferido se pierda o llegue corrupto.</li>
+<li><strong>Entrega secuencial y ordenada:</strong> Garantiza que los segmentos fragmentados en la red se reensamblen en el destino en el orden exacto.</li>
+<li><strong>Control de flujo y congestión:</strong> Regula la velocidad de transmisión adaptándose a la capacidad del receptor y a las condiciones de congestión de los enlaces de red.</li>
+</ol>
+<h3>1.3 Casos de uso corporativos en la administración de sistemas</h3>
+<p>A pesar del auge de protocolos web (HTTP/HTTPS, WebDAV) y APIs REST, los servicios de transferencia de ficheros basados en FTP, FTPS y SFTP siguen siendo pilares en las infraestructuras de IT:</p>
+<ul>
+<li><strong>Despliegue y mantenimiento de portales web:</strong> Carga de contenidos HTML, scripts PHP, hojas de estilo CSS y elementos multimedia en servidores web de alojamiento (<em>hosting</em> compartido o dedicado).</li>
+<li><strong>Gestión de dispositivos de red y telecomunicaciones:</strong> Actualización masiva de firmwares e imágenes de sistemas operativos (Cisco IOS, JunOS), y volcado de configuraciones en <em>switches</em>, <em>routers</em> y cortafuegos.</li>
+<li><strong>Copias de seguridad remotas (<em>backups</em>):</strong> Automatización nocturna del envío de volcados de bases de datos (SQL) y ficheros de archivo comprimidos hacia servidores de almacenamiento remoto (<em>off-site</em>).</li>
+<li><strong>Intercambio B2B (<em>Business-to-Business</em>):</strong> Intercambio automático de albaranes, facturas electrónicas (EDI) y ficheros de transacciones bancarias entre sistemas centrales de diferentes organizaciones.</li>
+</ul>
+<hr>
+<h2>2 - Arquitectura interna y funcionamiento del protocolo FTP (RFC 959)</h2>
+<h3>2.1 La doble conexión TCP: Canal de control vs Canal de datos</h3>
+<p>La gran particularidad arquitectónica de FTP frente a casi todos los demás protocolos de red (como HTTP, SSH o SMTP) radica en que <strong>no utiliza una única conexión para todo</strong>, sino que desacopla la comunicación en <strong>dos conexiones TCP independientes con ciclos de vida y propósitos completamente distintos</strong>:</p>
+<ul>
+<li><strong>Canal de control (Puerto 21 TCP por defecto):</strong>  </li>
+<li>Es la conexión principal (<em>out-of-band signaling</em>). Se establece al inicio de la sesión entre el cliente y el puerto de escucha 21 TCP del servidor.</li>
+<li>Permanece <strong>abierta de forma continua</strong> durante toda la sesión del usuario.</li>
+<li>Por este canal circulan exclusivamente órdenes cortas en texto ASCII (como <code>USER</code>, <code>PASS</code>, <code>LIST</code>, <code>RETR</code>, <code>QUIT</code>) emitidas por el cliente y las correspondientes respuestas numéricas de estado de 3 dígitos generadas por el servidor.</li>
+<li>Por este canal <strong>nunca viaja el contenido de los archivos</strong> ni los listados de directorios.</li>
+</ul>
+<ul>
+<li><strong>Canal de datos (Puertos variables TCP / Puerto 20 en modo activo):</strong>  </li>
+<li>Es una conexión efímera que se abre <strong>bajo demanda</strong> únicamente cuando el cliente solicita una acción que implica intercambio de información volumétrica: transferir un fichero (subida con <code>STOR</code> o descarga con <code>RETR</code>) o solicitar el listado de archivos de una carpeta (<code>LIST</code> o <code>NLST</code>).</li>
+<li>Una vez finalizada la transmisión del archivo o entregado el listado, el canal de datos <strong>se cierra inmediatamente</strong>. Si el usuario desea descargar otro fichero a continuación, se negociará y abrirá una nueva conexión de datos independiente.</li>
 </ul>
 <div class="terminal-box">
   <div class="terminal-bar">
@@ -458,81 +488,509 @@
     <div class="terminal-title">📋 Esquema / Salida</div>
     <div class="terminal-lang">text</div>
   </div>
-  <pre><code class="language-text">[ Cliente FTP ]                                      [ Servidor FTP ]
-       │                                                    │
-       │─────── Canal de Control (Puerto 21 TCP) ──────────&gt;│ (Comandos y respuestas)
-       │                                                    │
-       │&lt;====== Canal de Datos (Puertos Pasivos TCP) ======&gt;│ (Archivos y listados)</code></pre>
+  <pre><code class="language-text">┌──────────────┐                                       ┌──────────────┐
+│              │ ─── Canal de Control (Puerto 21 TCP) ──&gt;│              │
+│  Cliente FTP │ &lt;── Códigos de Estado y Señalización ── │ Servidor FTP │
+│              │                                       │   (Daemon)   │
+│              │ &lt;══ Canal de Datos (Puertos Efímeros) ═&gt;│              │
+└──────────────┘     (Transferencia de Archivos/Listados)  └──────────────┘</code></pre>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">¿Por qué FTP desacopló el control de los datos?</p>
+<p>Este diseño permite al cliente enviar órdenes de interrupción (como el comando <code>ABOR</code> para abortar una descarga) a través del canal de control mientras un archivo enorme se está descargando por el canal de datos, sin tener que esperar a que termine de llegar la totalidad del flujo de bytes.</p>
 </div>
 <hr>
-<h3>2.2 Modos de transferencia: Modo Activo vs Modo Pasivo</h3>
-<p>La forma en que se establece el canal de datos determina el modo de funcionamiento:</p>
-<ul>
-<li><strong>Modo Activo (Standard / PORT):</strong>  </li>
-</ul>
-<p>El cliente se conecta al puerto 21 del servidor. Cuando se solicita transferir datos, el cliente indica un puerto al que escuchar y es el <strong>servidor quien intenta conectarse hacia el cliente</strong> (desde su puerto 20 hacia el puerto del cliente).</p>
-<p><strong>Inconveniente:</strong> En redes actuales, los cortafuegos y routers con NAT del lado del cliente bloquean esta conexión entrante desde el servidor, por lo que el modo activo casi nunca funciona a través de Internet.</p>
-<ul>
-<li><strong>Modo Pasivo (PASV):</strong>  </li>
-</ul>
-<p>El cliente envía la orden <code>PASV</code> por el canal de control. El servidor abre un puerto TCP aleatorio y le responde al cliente indicándole a qué puerto debe conectarse. Es el <strong>cliente quien inicia ambas conexiones hacia el servidor</strong>.</p>
-<p><strong>Requisito en la Nube (AWS):</strong> Para que el modo pasivo funcione a través de Internet y del NAT de Amazon Web Services, el administrador debe:</p>
-<ol>
-<li>Definir un <strong>rango fijo de puertos pasivos</strong> en la configuración del servidor.</li>
-<li>Indicar al servidor cuál es su <strong>dirección IP pública externa</strong>.</li>
-<li>Abrir ese rango de puertos en el <strong>Security Group de AWS</strong> y en el firewall del sistema operativo.</li>
-</ol>
-<hr>
-<h3>2.3 Seguridad en la transferencia: FTP vs FTPS vs SFTP</h3>
+<h3>2.2 Tipos de datos y modos de representación: ASCII vs Binario</h3>
+<p>El RFC 959 contempla distintos modos de interpretar la información transmitida a través del canal de datos, siendo crucial seleccionar el tipo adecuado para evitar la corrupción irreversible de los ficheros:</p>
 <table>
 <thead><tr>
-<th>Protocolo</th>
-<th>Mecanismo de Seguridad</th>
-<th>Puerto por Defecto</th>
-<th>Descripción</th>
+<th>Modo de Transferencia</th>
+<th>Comando FTP</th>
+<th>Comportamiento del protocolo</th>
+<th>Tipos de ficheros compatibles</th>
+<th>Riesgo de corrupción</th>
 </tr></thead>
 <tbody>
 <tr>
-<td><strong>FTP</strong></td>
-<td>Ninguno (Texto claro)</td>
-<td>TCP 21 (+ datos)</td>
-<td>Las credenciales y los datos viajan sin cifrar. Vulnerable a ataques de intercepción (<em>sniffing</em>).</td>
+<td><strong>Modo ASCII / Texto</strong></td>
+<td><code>TYPE A</code></td>
+<td>Convierte automáticamente los caracteres de salto de línea entre sistemas operativos emisores y receptores. En Windows las líneas terminan en <code>CR+LF</code> (<code>\r\n</code>, bytes <code>0x0D 0x0A</code>), mientras que en Linux/UNIX terminan únicamente en <code>LF</code> (<code>\n</code>, byte <code>0x0A</code>).</td>
+<td>Ficheros de texto plano (<code>.txt</code>, <code>.html</code>, <code>.css</code>, <code>.csv</code>, <code>.php</code>).</td>
+<td><strong>Muy alto:</strong> Si se transfiere un ejecutable, imagen o zip en modo ASCII, el servidor alterará los bytes <code>0x0D</code> y <code>0x0A</code>, destruyendo por completo la estructura del archivo.</td>
 </tr>
 <tr>
-<td><strong>FTPS</strong></td>
-<td>Cifrado SSL/TLS</td>
-<td>TCP 21 o 990</td>
-<td>Protocolo FTP tradicional encapsulado en una capa de cifrado TLS/SSL mediante certificados digitales.</td>
-</tr>
-<tr>
-<td><strong>SFTP</strong></td>
-<td>Cifrado SSH</td>
-<td>TCP 22</td>
-<td><strong>No es FTP</strong>. Es un subsistema del protocolo SSH que permite transferir ficheros y gestionar sistemas de archivos de forma completamente cifrada por el puerto 22.</td>
+<td><strong>Modo Binario / Imagen</strong></td>
+<td><code>TYPE I</code></td>
+<td>Transmite el archivo byte a byte de forma idéntica, sin interpretar ni modificar ningún carácter ni secuencia de escape.</td>
+<td>Ejecutables (<code>.exe</code>), imágenes (<code>.png</code>, <code>.jpg</code>), comprimidos (<code>.zip</code>, <code>.tar.gz</code>), bases de datos, PDFs.</td>
+<td><strong>Nulo:</strong> Conserva la integridad matemática del fichero íntegra. Es el modo por defecto en clientes modernos como FileZilla.</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h2>3 - Software de transferencia de ficheros</h2>
-<h3>3.1 Software de servidor</h3>
+<h3>2.3 Repertorio de comandos estándar de FTP (RFC 959)</h3>
+<p>Las órdenes que viajan por el canal de control son palabras mnemotécnicas de 3 o 4 caracteres en texto plano ASCII seguidas de parámetros y delimitadas por el terminador <code>CRLF</code> (<code>\r\n</code>):</p>
 <ul>
-<li><strong>Internet Information Services (IIS - Servicio FTP):</strong> Servidor FTP nativo integrado en sistemas operativos Microsoft Windows Server. Se administra mediante la consola gráfica del Administrador de IIS (<code>inetmgr</code>).</li>
-<li><strong>vsftpd (Very Secure FTP Daemon):</strong> Servidor FTP por excelencia en entornos Linux. Destaca por su alta velocidad, estabilidad y seguridad. Se configura mediante el fichero de texto <code>/etc/vsftpd.conf</code>.</li>
-</ul>
-<h3>3.2 Software de cliente</h3>
-<ul>
-<li><strong>FileZilla Client:</strong> Cliente gráfico multiplataforma de referencia que muestra en paralelo el árbol de directorios local y remoto, soportando arrastrar y soltar, reanudación de descargas y gestión de sitios.</li>
-<li><strong>PuTTY:</strong> Cliente gráfico de acceso remoto mediante SSH para sistemas Windows que permite administrar la consola de sistemas remotos.</li>
-<li><strong>Clientes de terminal (CLI):</strong> Comandos nativos de consola como <code>ftp</code>, <code>sftp</code> y <code>curl</code>.</li>
+<li><strong>Autenticación e inicio de sesión:</strong></li>
+<li><code>USER &amp;lt;nombre&amp;gt;</code>: Envía el identificador del usuario que desea iniciar sesión.</li>
+<li><code>PASS &lt;contraseña&gt;</code>: Envía la contraseña de dicho usuario.</li>
+<li><code>QUIT</code>: Cierra la conexión de control y finaliza la sesión en el servidor.</li>
+<li><strong>Navegación e inspección del sistema de ficheros:</strong></li>
+<li><code>PWD</code> (<em>Print Working Directory</em>): Muestra la ruta del directorio de trabajo actual en el servidor.</li>
+<li><code>CWD &amp;lt;ruta&amp;gt;</code> (<em>Change Working Directory</em>): Cambia al directorio especificado (equivalente a <code>cd</code>).</li>
+<li><code>CDUP</code> (<em>Change to Parent Directory</em>): Sube un nivel en el árbol jerárquico de directorios (equivalente a <code>cd ..</code>).</li>
+<li><code>MKD &amp;lt;directorio&amp;gt;</code> (<em>Make Directory</em>): Crea una nueva carpeta en la ruta remota.</li>
+<li><code>RMD &amp;lt;directorio&amp;gt;</code> (<em>Remove Directory</em>): Elimina la carpeta remota indicada.</li>
+<li><strong>Operaciones de transferencia y gestión de ficheros:</strong></li>
+<li><code>LIST</code>: Solicita el listado detallado de ficheros y directorios (permisos, tamaño, fecha de modificación, similar a <code>ls -la</code>). Se entrega a través del canal de datos.</li>
+<li><code>NLST</code> (<em>Name List</em>): Solicita una lista simple con únicamente los nombres de los ficheros.</li>
+<li><code>RETR &amp;lt;fichero&amp;gt;</code> (<em>Retrieve</em>): Descarga el archivo solicitado desde el servidor hacia el cliente.</li>
+<li><code>STOR &amp;lt;fichero&amp;gt;</code> (<em>Store</em>): Sube y almacena un archivo desde el cliente en el servidor.</li>
+<li><code>DELE &amp;lt;fichero&amp;gt;</code> (<em>Delete</em>): Elimina el fichero especificado del servidor.</li>
+<li><strong>Negociación del canal de datos:</strong></li>
+<li><code>PORT &lt;h1,h2,h3,h4,p1,p2&gt;</code>: Indica al servidor la dirección IP y el puerto TCP en el que el cliente espera la conexión de datos (Modo Activo).</li>
+<li><code>PASV</code>: Solicita al servidor que abra un puerto pasivo y espere la conexión del cliente (Modo Pasivo).</li>
+<li><code>TYPE &lt;A|I&gt;</code>: Establece el tipo de representación de los datos (<code>A</code> para ASCII, <code>I</code> para binario/imagen).</li>
 </ul>
 <hr>
-<h2>4 - Buenas prácticas y medidas de seguridad</h2>
+<h3>2.4 Taxonomía y estructura de los códigos de respuesta del servidor</h3>
+<p>Cada vez que el cliente emite una orden por el canal de control, el servidor responde obligatoriamente con un <strong>código numérico de tres dígitos</strong> acompañado de un texto descriptivo legible para humanos.</p>
+<p>La taxonomía del primer dígito categoriza de manera unívoca la respuesta:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">📋 Esquema / Salida</div>
+    <div class="terminal-lang">text</div>
+  </div>
+  <pre><code class="language-text">┌─── 1xx: Respuesta preliminar positiva (acción iniciada, espere confirmación)
+│
+├─── 2xx: Respuesta de finalización positiva / Éxito (orden completada satisfactoriamente)
+│
+├─── 3xx: Respuesta intermedia positiva (orden aceptada, requiere más información del cliente)
+│
+├─── 4xx: Fallo negativo transitorio / temporal (error temporal, puede reintentarse)
+│
+└─── 5xx: Fallo negativo permanente (error fatal de sintaxis, autenticación o permisos)</code></pre>
+</div>
+<table>
+<thead><tr>
+<th>Código</th>
+<th>Significado canónico del RFC 959</th>
+<th>Contexto habitual en el laboratorio y producción</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><code>150</code></td>
+<td><em>File status okay; about to open data connection.</em></td>
+<td>Notificación previa al inicio del flujo de datos en operaciones <code>LIST</code>, <code>RETR</code> o <code>STOR</code>.</td>
+</tr>
+<tr>
+<td><code>200</code></td>
+<td><em>Command okay.</em></td>
+<td>La orden solicitada (por ejemplo, <code>TYPE I</code> o <code>PORT</code>) se ha procesado con éxito.</td>
+</tr>
+<tr>
+<td><code>220</code></td>
+<td><em>Service ready for new user.</em></td>
+<td>Mensaje de bienvenida (<em>banner</em>) enviado por el servidor nada más abrir el canal de control en el puerto 21.</td>
+</tr>
+<tr>
+<td><code>226</code></td>
+<td><em>Closing data connection. Requested file action successful.</em></td>
+<td>La transferencia del archivo o el listado del directorio ha finalizado completamente sin errores.</td>
+</tr>
+<tr>
+<td><code>227</code></td>
+<td><em>Entering Passive Mode (h1,h2,h3,h4,p1,p2).</em></td>
+<td>Respuesta a la orden <code>PASV</code>, proporcionando la IP y puerto efímero del servidor para la conexión de datos.</td>
+</tr>
+<tr>
+<td><code>230</code></td>
+<td><em>User logged in, proceed.</em></td>
+<td>Autenticación correcta de las credenciales introducidas. El usuario entra a su directorio raíz.</td>
+</tr>
+<tr>
+<td><code>331</code></td>
+<td><em>User name okay, need password.</em></td>
+<td>Respuesta al comando <code>USER</code>; el nombre de cuenta es reconocido y el servidor aguarda el comando <code>PASS</code>.</td>
+</tr>
+<tr>
+<td><code>421</code></td>
+<td><em>Service not available, closing control connection.</em></td>
+<td>El servidor está saturado de conexiones o se ha superado el tiempo máximo de inactividad (<em>timeout</em>).</td>
+</tr>
+<tr>
+<td><code>425</code></td>
+<td><em>Can't open data connection.</em></td>
+<td>Fallo de negociación de red al intentar abrir el canal de datos (típico cuando un firewall bloquea los puertos).</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td><em>Syntax error, command unrecognized.</em></td>
+<td>La orden enviada por el cliente no existe o contiene parámetros sintácticamente inválidos.</td>
+</tr>
+<tr>
+<td><code>530</code></td>
+<td><em>Not logged in.</em></td>
+<td>Credenciales erróneas (usuario/contraseña incorrectos) o acceso anónimo denegado por directiva.</td>
+</tr>
+<tr>
+<td><code>550</code></td>
+<td><em>Requested action not taken. File unavailable or access denied.</em></td>
+<td><strong>El código de error más frecuente:</strong> El usuario intenta leer, escribir o borrar un fichero sobre el que no tiene permisos NTFS/Linux, o la ruta indicada no existe.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>2.5 Modos de transferencia en profundidad: Modo Activo (PORT) vs Modo Pasivo (PASV)</h3>
+<p>La diferencia fundamental entre ambos modos radica en <strong>quién toma la iniciativa para abrir la conexión TCP del canal de datos</strong>:</p>
+<h4>A) Modo Activo (Standard / <code>PORT</code>)</h4>
+<ol>
+<li>El cliente inicia una conexión saliente desde un puerto efímero local (ej. TCP 51500) hacia el puerto 21 TCP del servidor (Canal de Control).</li>
+<li>Cuando el cliente necesita transferir un archivo, abre un segundo puerto local a la escucha (ej. TCP 51501) y le comunica al servidor su propia IP y puerto mediante la orden <code>PORT</code>:  </li>
+</ol>
+<p><code>Puerto de datos = (p1 × 256) + p2</code></p>
+<p><em>(Ejemplo: <code>PORT 192,168,1,50,201,45</code> indica que el puerto a la escucha es <code>(201 × 256) + 45 = 51501</code>).</em></p>
+<ol start="3">
+<li><strong>El servidor inicia una conexión TCP entrante hacia el cliente:</strong> El servidor abre un socket local en su puerto 20 TCP y envía un paquete <code>SYN</code> directo hacia la IP del cliente y su puerto 51501.</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">📋 Esquema / Salida</div>
+    <div class="terminal-lang">text</div>
+  </div>
+  <pre><code class="language-text">[ Cliente FTP (192.168.1.50) ]                      [ Servidor FTP (203.0.113.10) ]
+      │                                                           │
+      │── TCP SYN: Dst Port 21 (Canal de Control) ───────────────&gt;│
+      │&lt;── 220 Service Ready (Control establecido) ───────────────│
+      │                                                           │
+      │── PORT 192,168,1,50,201,45 (Escucho en 51501) ───────────&gt;│
+      │&lt;── 200 Command okay ──────────────────────────────────────│
+      │                                                           │
+      │    [PROBLEMA CON NAT / FIREWALL DOMÉSTICO]                │
+      │&lt;── TCP SYN: Src Port 20 -&gt; Dst Port 51501 ────────────────│ (¡Conexión Entrante!)
+      │ ❌ (El router con NAT descarta el paquete SYN)             │</code></pre>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">¿Por qué el modo activo falla sistemáticamente a través de Internet?</p>
+<p>En las redes actuales, prácticamente todos los clientes domésticos o corporativos están situados detrás de un router con <strong>NAT/PAT</strong> (<em>Network Address Translation</em>) y de cortafuegos con inspección de estado (<em>Stateful Firewalls</em>).</p>
+<p>Cuando el servidor remoto intenta enviar un paquete TCP <code>SYN</code> hacia el puerto efímero del cliente, el cortafuegos del router cliente <strong>descarta el paquete inmediatamente</strong>, puesto que no existe ninguna conexión saliente previa registrada en su tabla de estados para ese puerto. Salvo que el router disponga de un módulo ALG (<em>Application Layer Gateway</em>) activo que inspeccione el tráfico no cifrado de FTP para mapear dinámicamente el puerto, la conexión de datos colapsará.</p>
+</div>
+<hr>
+<h4>B) Modo Pasivo (<code>PASV</code>)</h4>
+<p>Para solventar el bloqueo originado por los cortafuegos de los clientes, se introdujo el modo pasivo:</p>
+<ol>
+<li>El cliente establece la conexión de control hacia el puerto 21 del servidor.</li>
+<li>Al requerir datos, el cliente envía la orden <code>PASV</code>.</li>
+<li>El servidor reserva un puerto efímero libre en su propio sistema operativo (ej. TCP 50020) y le responde al cliente con el código <code>227 Entering Passive Mode (h1,h2,h3,h4,p1,p2)</code>.</li>
+<li><strong>Es el cliente quien inicia la conexión TCP saliente hacia el puerto pasivo del servidor:</strong> Como el cliente es el emisor de ambas conexiones (puerto 21 y puerto 50020), los cortafuegos locales y routers NAT permiten la salida de tráfico sin inconvenientes, admitiendo los paquetes de respuesta en estado <em>ESTABLISHED / RELATED</em>.</li>
+</ol>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">📋 Esquema / Salida</div>
+    <div class="terminal-lang">text</div>
+  </div>
+  <pre><code class="language-text">[ Cliente FTP (192.168.1.50) ]                      [ Servidor FTP (203.0.113.10) ]
+      │                                                           │
+      │── TCP SYN: Dst Port 21 (Canal de Control) ───────────────&gt;│
+      │&lt;── 220 Service Ready (Control establecido) ───────────────│
+      │                                                           │
+      │── PASV ──────────────────────────────────────────────────&gt;│
+      │&lt;── 227 Entering Passive Mode (203,0,113,10,195,100) ──────│ (Puerto: 195*256+100 = 50020)
+      │                                                           │
+      │── TCP SYN: Dst Port 50020 (Canal de Datos Iniciado) ─────&gt;│ (¡Conexión Saliente!)
+      │&lt;── TCP SYN-ACK: Conexión de datos establecida ✔️ ──────────│</code></pre>
+</div>
+<hr>
+<h3>2.6 Problemática del Modo Pasivo en entornos NAT y Cloud (AWS EC2)</h3>
+<p>Aunque el modo pasivo traslada la carga de admitir conexiones entrantes del cliente al servidor, <strong>plantea un desafío de configuración crítico cuando el servidor FTP se encuentra detrás de un NAT o en nubes públicas como Amazon Web Services (AWS)</strong>:</p>
+<ol>
+<li><strong>El problema de la IP privada interna:</strong> En AWS EC2, la interfaz de red de la máquina virtual únicamente conoce su dirección IP privada interna (ej. <code>172.31.25.100</code>), mientras que la dirección IP pública de Internet la gestiona una pasarela perimetral de Amazon (<em>Internet Gateway</em>). Si no se configura adecuadamente, el servidor responderá a la orden <code>PASV</code> con su dirección privada: <code>227 Entering Passive Mode (172,31,25,100,...)</code>. Cuando el cliente intente conectarse desde su casa a dicha IP no enrutable en Internet, la conexión expirará por <em>timeout</em>.</li>
+<li><strong>Definición obligatoria de la IP Externa:</strong> El administrador debe indicar explícitamente en el software servidor (campo <em>Firewall External IP Address</em> en Windows IIS o parámetro <code>pasv_address</code> en <code>vsftpd</code>) cuál es la dirección IP pública asignada a la instancia.</li>
+<li><strong>Acotación del rango de puertos pasivos:</strong> Por defecto, un sistema operativo puede asignar puertos efímeros en un rango de más de 16.000 puertos (49152 a 65535). Resulta inviable y peligroso abrir miles de puertos en el cortafuegos. El administrador debe <strong>delimitar un rango estricto de puertos pasivos</strong> (por ejemplo, del <code>50000</code> al <code>50100</code>).</li>
+<li><strong>Apertura perimetral en Security Groups y Firewall:</strong> Dicho rango específico de puertos TCP debe quedar expresamente autorizado en las reglas de entrada (<em>Inbound Rules</em>) del <strong>Security Group de AWS</strong> y en el firewall interno de Windows/Linux.</li>
+</ol>
+<hr>
+<h2>3 - Seguridad, criptografía y comparativa de protocolos de transferencia y acceso remoto</h2>
+<h3>3.1 Vulnerabilidades del protocolo FTP tradicional (Tráfico en texto claro y sniffing)</h3>
+<p>El protocolo FTP original fue concebido a principios de los años 80 bajo un paradigma de confianza mutua dentro de redes académicas cerradas. Como consecuencia, <strong>carece por completo de mecanismos criptográficos nativos</strong>:</p>
 <ul>
-<li><strong>Principio de mínimo privilegio:</strong> No permitir el acceso al servidor FTP al usuario Administrador / root. Crear usuarios estándar dedicados exclusivamente al servicio.</li>
-<li><strong>Enjaulado en directorio raíz (chroot):</strong> Bloquear a los usuarios dentro de su directorio asignado para impedir que naveguen hacia carpetas críticas del sistema operativo.</li>
-<li><strong>Acotación de puertos pasivos:</strong> No dejar los puertos pasivos al azar; definir un rango estricto y abrir únicamente esos puertos en los grupos de seguridad.</li>
-<li><strong>Control de costes en la nube:</strong> Detener las instancias en AWS (<code>Stop instance</code>) al terminar las clases para no consumir el saldo asignado al laboratorio.</li>
+<li><strong>Exposición total de credenciales:</strong> Las órdenes <code>USER</code> y <code>PASS</code> viajan en texto plano por el canal de control. Cualquier analizador de protocolos conectado a la red local o en puntos intermedios de enrutamiento puede interceptar las contraseñas sin esfuerzo mediante técnicas de <em>sniffing</em> con herramientas como <strong>Wireshark</strong>.</li>
+<li><strong>Intercepción y manipulación de datos:</strong> Los archivos transferidos carecen de firmas de integridad o cifrado confidencial, permitiendo a un atacante en posición de intermediario (<em>Man-in-the-Middle</em>) leer el contenido o inyectar código malicioso (<em>payloads</em>) en descargas de ejecutables.</li>
 </ul>
+<hr>
+<h3>3.2 FTPS: FTP sobre TLS/SSL (Modo Explícito vs Modo Implícito)</h3>
+<p>Para mitigar las carencias de seguridad de FTP sin romper la compatibilidad con su modelo de comandos, se estandarizó <strong>FTPS (RFC 4217)</strong>, que incorpora la capa criptográfica <strong>TLS/SSL</strong> mediante certificados digitales X.509:</p>
+<h4>A) FTPS Explícito (FTPES - Estándar recomendado)</h4>
+<ul>
+<li>El cliente se conecta inicialmente al puerto convencional <strong>21 TCP</strong> en texto claro.</li>
+<li>Inmediatamente después del banner de bienvenida, el cliente envía la orden <code>AUTH TLS</code> solicitando elevar la seguridad de la conexión.</li>
+<li>Si el servidor acepta, se realiza el <em>handshake</em> criptográfico TLS, se presenta y valida el certificado digital (mostrando su huella digital SHA-256) y a partir de ese instante todo el canal de control queda blindado bajo cifrado simétrico robusto (AES-256).</li>
+<li>Para proteger también la transferencia de ficheros y listados, el cliente emite las directivas <code>PBSZ 0</code> (<em>Protection Buffer Size</em>) y <code>PROT P</code> (<em>Data Channel Protection Level: Private</em>).</li>
+<li>Si el servidor rechaza o no soporta TLS, la conexión puede abortarse obligatoriamente por política de seguridad.</li>
+</ul>
+<h4>B) FTPS Implícito (Legacy / Obsoleto)</h4>
+<ul>
+<li>El cliente se conecta a un puerto TCP dedicado diferente (típicamente el <strong>puerto 990 TCP</strong> para control y <strong>989 TCP</strong> para datos).</li>
+<li>La capa TLS se negocia de forma inmediata y obligatoria nada más establecer la conexión física, antes de intercambiar cualquier comando FTP.</li>
+<li><strong>Estado actual:</strong> El IETF lo considera obsoleto en favor del modo explícito, debido a que consume puertos adicionales y carece de la flexibilidad de negociación de capacidades que ofrece el puerto 21.</li>
+</ul>
+<hr>
+<h3>3.3 SFTP: SSH File Transfer Protocol (El estándar seguro monocanal)</h3>
+<p>Existe una confusión conceptual muy extendida entre alumnos y técnicos noveles: <strong>SFTP NO es FTP con cifrado</strong>.</p>
+<ul>
+<li><strong>SFTP (SSH File Transfer Protocol)</strong> es un protocolo totalmente independiente diseñado desde cero por el grupo de trabajo de la IETF como un <strong>subsistema de extensión de SSH-2 (Secure Shell)</strong>.</li>
+<li><strong>Arquitectura de conexión única (Monocanal):</strong> A diferencia de la doble conexión de FTP, SFTP canaliza absolutamente todo (autenticación, navegación, listados, transferencias y control de flujo) a través de <strong>un único puerto TCP: el puerto 22</strong>.</li>
+<li><strong>Beneficios operativos determinantes:</strong></li>
+<li><strong>Cero problemas con NAT y cortafuegos:</strong> Basta con permitir el puerto 22 TCP en los grupos de seguridad y reglas de red. No requiere rangos de puertos efímeros ni configuraciones de IP pública pasiva.</li>
+<li><strong>Cifrado extremo a extremo nativo:</strong> Todo el canal viaja protegido por los algoritmos de intercambio de claves Diffie-Hellman y cifrados simétricos de alta seguridad (ChaCha20, AES-GCM).</li>
+<li><strong>Autenticación avanzada:</strong> Se integra de forma nativa con los mecanismos de autenticación de SSH, permitiendo el acceso tanto por contraseñas como mediante <strong>parejas de claves asimétricas pública/privada</strong> sin intervención de contraseñas.</li>
+</ul>
+<hr>
+<h3>3.4 SCP: Secure Copy Protocol</h3>
+<ul>
+<li>Es una utilidad de transferencia punto a punto no interactiva basada en el protocolo <code>rcp</code> (<em>Remote Copy</em>) de los sistemas BSD, operando igualmente sobre el túnel seguro de <strong>SSH (puerto 22 TCP)</strong>.</li>
+<li><strong>Diferencia con SFTP:</strong> SCP está orientado a la copia directa de archivos mediante una orden puntual de línea de comandos (ej. <code>scp archivo.txt usuario@servidor:/ruta/</code>), optimizando la velocidad de transferencia al no mantener una sesión interactiva de gestión del sistema de ficheros. SFTP, por contra, es un protocolo de sistema de archivos distribuido completo que permite reanudar descargas, pausar transferencias, consultar cuotas, listar directorios y modificar atributos de ficheros.</li>
+</ul>
+<hr>
+<h3>3.5 Cuadro comparativo exhaustivo entre protocolos</h3>
+<table>
+<thead><tr>
+<th>Criterio técnico</th>
+<th>FTP clásico (RFC 959)</th>
+<th>FTPS Explícito (FTPES)</th>
+<th>FTPS Implícito (Legacy)</th>
+<th>SFTP (SSH File Transfer)</th>
+<th>SCP (Secure Copy)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td><strong>Protocolo base</strong></td>
+<td>FTP</td>
+<td>FTP + TLS/SSL</td>
+<td>FTP + TLS/SSL</td>
+<td>SSH-2 (Subsistema)</td>
+<td>SSH-2 (Túnel RPC)</td>
+</tr>
+<tr>
+<td><strong>Cifrado de datos y credenciales</strong></td>
+<td>❌ No (Texto claro)</td>
+<td>✔️ Sí (TLS 1.2 / 1.3)</td>
+<td>✔️ Sí (TLS 1.2 / 1.3)</td>
+<td>✔️ Sí (Cifrado SSH)</td>
+<td>✔️ Sí (Cifrado SSH)</td>
+</tr>
+<tr>
+<td><strong>Puertos de red utilizados</strong></td>
+<td>TCP 21 (control) + TCP 20/dinámicos (datos)</td>
+<td>TCP 21 (control) + Puertos pasivos (datos)</td>
+<td>TCP 990 (control) + TCP 989/dinámicos</td>
+<td><strong>Únicamente TCP 22</strong></td>
+<td><strong>Únicamente TCP 22</strong></td>
+</tr>
+<tr>
+<td><strong>Número de conexiones TCP</strong></td>
+<td>2 independientes</td>
+<td>2 independientes</td>
+<td>2 independientes</td>
+<td><strong>1 única multiplexada</strong></td>
+<td><strong>1 única conexión</strong></td>
+</tr>
+<tr>
+<td><strong>Complejidad en NAT / Firewalls</strong></td>
+<td>Muy alta (bloqueo en modo activo)</td>
+<td>Alta (requiere abrir rango pasivo e IP pública)</td>
+<td>Alta (requiere abrir puertos específicos)</td>
+<td><strong>Mínima (solo requiere abrir el puerto 22)</strong></td>
+<td><strong>Mínima (solo requiere abrir el puerto 22)</strong></td>
+</tr>
+<tr>
+<td><strong>Mecanismo de autenticación</strong></td>
+<td>Usuario / Contraseña en texto plano</td>
+<td>Usuario / Contraseña + Certificado X.509</td>
+<td>Usuario / Contraseña + Certificado X.509</td>
+<td>Contraseña o <strong>Claves asimétricas (RSA/Ed25519)</strong></td>
+<td>Contraseña o <strong>Claves asimétricas (RSA/Ed25519)</strong></td>
+</tr>
+<tr>
+<td><strong>Interoperabilidad interactiva</strong></td>
+<td>Sí (cliente gráfico y consola)</td>
+<td>Sí (cliente gráfico y consola)</td>
+<td>Sí (compatibilidad reducida)</td>
+<td>Sí (FileZilla, consola interactiva <code>sftp</code>)</td>
+<td>No (comando directo de copia puntual)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3>3.6 Ecosistema de software: Servidores y Clientes (Windows y Linux)</h3>
+<h4>Software de Servidor</h4>
+<ul>
+<li><strong>Internet Information Services (IIS - Rol Servidor FTP):</strong> Servidor FTP empresarial desarrollado por Microsoft e integrado de forma nativa en las ediciones de Windows Server. Proporciona administración centralizada mediante interfaz gráfica (<code>inetmgr</code>) o PowerShell, soportando FTPS explícito, aislamiento de usuarios basado en directorios o Active Directory, y registro de logs en formato W3C.</li>
+<li><strong>vsftpd (Very Secure FTP Daemon):</strong> Servidor FTP estándar de referencia en distribuciones Linux (Ubuntu, Debian, Red Hat). Reconocido por su seguridad extrema frente a desbordamientos de búfer, bajo consumo de recursos y alto rendimiento. Su configuración reside en el fichero de texto plano <code>/etc/vsftpd.conf</code>.</li>
+<li><strong>OpenSSH Server (<code>sshd</code>):</strong> Servicio de administración y acceso remoto multiplataforma que proporciona simultáneamente servicios de consola remota, SFTP y SCP. Disponible de forma nativa tanto en distribuciones Linux (<code>/etc/ssh/sshd_config</code>) como característica opcional en Windows Server.</li>
+</ul>
+<h4>Software de Cliente</h4>
+<ul>
+<li><strong>FileZilla Client:</strong> Herramienta gráfica multiplataforma (Windows, Linux, macOS) líder en el sector. Presenta una interfaz de doble panel (árbol local a la izquierda y árbol remoto a la derecha), con soporte nativo para FTP, FTPS y SFTP, gestor de sitios protegidos y reanudación automática de transferencias interrumpidas.</li>
+<li><strong>PuTTY y PuTTYgen:</strong> Suite de utilidades de conectividad para entornos Windows. Permite el acceso a la consola SSH remota de servidores y, mediante la herramienta <strong>PuTTYgen</strong>, la generación, conversión y gestión de parejas de claves criptográficas en formato propietario <code>.ppk</code> (<em>PuTTY Private Key</em>).</li>
+<li><strong>Clientes integrados de consola (CLI):</strong> Utilidades nativas en terminales de Linux y PowerShell en Windows, como <code>ftp</code>, <code>sftp</code>, <code>scp</code>, <code>ssh</code> y <code>curl</code>.</li>
+</ul>
+<hr>
+<h2>4 - Gestión de usuarios, aislamiento, bastionado y auditoría</h2>
+<h3>4.1 Tipologías de usuarios en un servidor de ficheros (Anónimos, Locales y Virtuales)</h3>
+<p>Un aspecto clave en la administración de un servicio de transferencia de ficheros es determinar cómo se identifican los usuarios y qué alcance de permisos reciben:</p>
+<ol>
+<li><strong>Acceso anónimo (<code>anonymous</code> o <code>ftp</code>):</strong></li>
+</ol>
+<ul>
+<li><strong>Propósito:</strong> Permitir que cualquier usuario de Internet descargue recursos públicos (manuales, documentación, parches, distribuciones de software) sin necesidad de contar con una cuenta previa en el sistema.</li>
+<li><strong>Credenciales:</strong> Se utiliza convencionalmente el identificador <code>anonymous</code> y, como contraseña, cualquier cadena de texto (tradicionalmente la dirección de correo del visitante).</li>
+<li><strong>Regla de seguridad vital:</strong> Los usuarios anónimos deben configurarse con <strong>permisos estrictos de solo lectura (<code>Read-only</code>)</strong>. Otorgar permisos de escritura o borrado a usuarios anónimos constituye una negligencia crítica, ya que permitiría a actores maliciosos utilizar el almacenamiento del servidor para alojar contenido ilegal, herramientas de ataque o malware.</li>
+</ul>
+<ol start="2">
+<li><strong>Usuarios locales del sistema operativo:</strong></li>
+</ol>
+<ul>
+<li><strong>Propósito:</strong> Empleados o usuarios autorizados que disponen de una cuenta de usuario creada en la base de datos de seguridad local del sistema operativo anfitrión (la base de datos SAM en Windows Server o los ficheros <code>/etc/passwd</code> y <code>/etc/shadow</code> en Linux).</li>
+<li><strong>Riesgo:</strong> Si un atacante compromete la contraseña de un usuario local a través de FTP sin cifrar, podría llegar a reutilizar dichas credenciales para acceder a otros servicios locales del servidor (como RDP o SSH).</li>
+</ul>
+<ol start="3">
+<li><strong>Usuarios virtuales:</strong></li>
+</ol>
+<ul>
+<li><strong>Propósito:</strong> Cuentas de usuario que existen únicamente en la configuración interna del servicio FTP o en una base de datos externa (MySQL, MariaDB, ficheros Berkeley DB), sin correspondencia directa con cuentas de inicio de sesión del sistema operativo.</li>
+<li><strong>Beneficio:</strong> Todas las cuentas virtuales se mapean a un único usuario del sistema sin privilegios de ejecución (como el usuario <code>nobody</code> o <code>ftp</code>), logrando el máximo grado de aislamiento y seguridad frente a posibles brechas de acceso.</li>
+</ul>
+<hr>
+<h3>4.2 Mecanismos de enjaulado y aislamiento de usuarios (chroot y LocalUser)</h3>
+<p>Por defecto, si un servidor FTP autentica a un usuario local sin medidas de confinamiento, el usuario aterrizará en su carpeta personal pero tendrá la capacidad técnica de emitir órdenes <code>cd ..</code> y navegar libremente hacia directorios raíz del sistema (como <code>C:\Windows\System32</code> o <code>/etc</code>), pudiendo consultar ficheros confidenciales del sistema operativo.</p>
+<p>Para impedirlo se aplica el mecanismo de <strong>enjaulado</strong> (<em>chroot jail</em> / <em>User Isolation</em>):</p>
+<h4>A) Enjaulado en Linux con <code>vsftpd</code> (<code>chroot</code>)</h4>
+<ul>
+<li>La directiva <code>chroot_local_user=YES</code> instruye a <code>vsftpd</code> a realizar una llamada de sistema <code>chroot()</code>, convirtiendo el directorio asignado al usuario en su nueva raíz lógica del sistema de ficheros (<code>/</code>). Cualquier intento de subir a un nivel superior es bloqueado por el propio kernel.</li>
+<li><strong>La directiva <code>allow_writeable_chroot</code>:</strong> Por motivos de seguridad estricta, <code>vsftpd</code> implementa una defensa contra vulnerabilidades conocidas de elevación de privilegios: si el directorio raíz donde queda confinado el usuario tiene permisos de escritura en Linux, el servidor aborta la conexión con el error:  </li>
+</ul>
+<p><code>500 OOPS: vsftpd: refusing to run with writable root inside chroot()</code></p>
+<p>Para resolverlo de forma segura en entornos docentes y productivos se habilita la directiva:</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">📄 Fichero de configuración</div>
+    <div class="terminal-lang">ini</div>
+  </div>
+  <pre><code class="language-ini"><span class="tok-key">allow_writeable_chroot</span>=<span class="tok-val"><span class="tok-bool">YES</span></span></code></pre>
+</div>
+<p><em>(o alternativamente, se retiran los permisos de escritura del directorio raíz con <code>chmod a-w</code> y se crea una subcarpeta interna con permisos de escritura).</em></p>
+<h4>B) Aislamiento de usuarios en Windows Server (IIS <code>LocalUser</code>)</h4>
+<ul>
+<li>En el Administrador de IIS, la característica <strong>Aislamiento de usuarios FTP</strong> (<em>FTP User Isolation</em>) se configura seleccionando la opción <strong>Directorio de nombre de usuario</strong>.</li>
+<li>El servidor exige crear una estructura de carpetas estricta bajo la raíz del sitio FTP denominada <code>LocalUser</code>:</li>
+<li><code>C:\inetpub\ftproot\LocalUser\&amp;lt;nombre_de_usuario&amp;gt;</code>: Cada usuario local autenticado es confinado automáticamente a su carpeta homónima. Desde su cliente FTP, esa carpeta aparecerá como la raíz <code>/</code>, sin permitirle ver ni acceder a las carpetas de otros compañeros ni al resto del disco duro.</li>
+<li><code>C:\inetpub\ftproot\LocalUser\Public</code>: Carpeta compartida a la que son dirigidos los usuarios anónimos o no aislados.</li>
+</ul>
+<hr>
+<h3>4.3 Administración remota segura con SSH y bastionado (Hardening)</h3>
+<p>La administración de servidores en entornos modernos exige canales cifrados y robustos frente a accesos no autorizados. El protocolo <strong>SSH (Secure Shell)</strong> sobre el <strong>puerto 22 TCP</strong> reemplazó a protocolos vulnerables antiguos como Telnet y Rlogin.</p>
+<h4>A) Autenticación por parejas de claves asimétricas</h4>
+<p>La autenticación tradicional por usuario y contraseña es susceptible a ataques de fuerza bruta mediante diccionarios automatizados. La mejor práctica de seguridad consiste en emplear <strong>criptografía de clave pública</strong>:</p>
+<ul>
+<li><strong>Clave Privada (<em>Private Key</em>):</strong>  </li>
+<li>Permanece <strong>exclusivamente en el dispositivo cliente</strong> del administrador.</li>
+<li>Debe protegerse mediante una frase de paso (<em>passphrase</em>) que la cifra en disco.</li>
+<li><strong>Bajo ninguna circunstancia debe enviarse por la red ni entregarse a terceros</strong>.</li>
+<li><strong>Clave Pública (<em>Public Key</em>):</strong>  </li>
+<li>Puede distribuirse libremente sin comprometer la seguridad.</li>
+<li>Se almacena en el servidor remoto en el fichero:</li>
+<li>En Linux: <code>~/.ssh/authorized_keys</code> del usuario correspondiente.</li>
+<li>En Windows Server: <code>C:\ProgramData\ssh\administrators_authorized_keys</code> (para miembros del grupo Administradores) o <code>C:\Users\&amp;lt;usuario&amp;gt;\.ssh\authorized_keys</code>.</li>
+<li><strong>Algoritmos recomendados:</strong></li>
+<li><strong>RSA:</strong> Mínimo de 2048 o 4096 bits.</li>
+<li><strong>Ed25519:</strong> Algoritmo moderno basado en curvas elípticas (EdDSA), con claves mucho más compactas, mayor velocidad de cálculo y resistencia criptográfica superior frente a ataques.</li>
+</ul>
+<h4>B) Bastionado (<em>Hardening</em>) del servicio OpenSSH</h4>
+<p>Para proteger un servidor expuesto a Internet en la nube frente a intrusiones automatizadas, se aplican las siguientes directivas en su fichero de configuración (<code>/etc/ssh/sshd_config</code> o <code>C:\ProgramData\ssh\sshd_config</code>):</p>
+<ol>
+<li><strong>Desactivación de autenticación por contraseña (<code>PasswordAuthentication no</code>):</strong>  </li>
+</ol>
+<p>Fuerza que cualquier conexión deba autenticarse obligatoriamente mediante una clave asimétrica válida. Si un atacante lanza un ataque de fuerza bruta con millones de contraseñas de diccionario, el servidor rechazará la conexión instantáneamente sin procesar la petición.</p>
+<ol start="2">
+<li><strong>Desactivación del acceso directo de superusuario (<code>PermitRootLogin no</code>):</strong>  </li>
+</ol>
+<p>Impide que se intente iniciar sesión directamente como <code>root</code> o <code>Administrator</code>. Se debe ingresar con un usuario estándar y posteriormente elevar privilegios mediante <code>sudo</code>.</p>
+<ol start="3">
+<li><strong>Limitación de intentos de conexión (<code>MaxAuthTries 3</code>):</strong>  </li>
+</ol>
+<p>Cierra la sesión tras tres intentos erróneos, bloqueando escaneos masivos.</p>
+<ol start="4">
+<li><strong>Cierre de sesiones inactivas (<code>ClientAliveInterval 300</code>):</strong>  </li>
+</ol>
+<p>Envía paquetes nulos para desconectar automáticamente a usuarios que olviden cerrar su terminal tras 5 minutos de inactividad.</p>
+<hr>
+<h3>4.4 Auditoría, análisis forense y monitorización de registros (Logs y Wireshark)</h3>
+<p>La observabilidad y el registro de eventos son requisitos indispensables para garantizar la trazabilidad de accesos, detectar intrusiones y cumplir con normativas de ciberseguridad como el <strong>Esquema Nacional de Seguridad (ENS)</strong> y el <strong>RGPD</strong>:</p>
+<h4>A) Registros en formato W3C en Microsoft IIS</h4>
+<p>El servicio FTP de IIS almacena sus accesos en ficheros de texto estructurados conforme al estándar <strong>W3C Extended Log Format</strong> (ubicados por defecto en <code>C:\inetpub\logs\LogFiles\FTPSVC1\</code>):</p>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">📋 Esquema / Salida</div>
+    <div class="terminal-lang">text</div>
+  </div>
+  <pre><code class="language-text"><span class="tok-comment">#Fields: date time c-ip cs-username s-ip s-port cs-method cs-uri-stem sc-status sc-win32-status</span>
+2026-10-21 10:15:32 198.51.100.25 usuari_ventas 172.31.25.10 21 USER usuari_ventas 331 0
+2026-10-21 10:15:32 198.51.100.25 usuari_ventas 172.31.25.10 21 PASS *** 230 0
+2026-10-21 10:16:05 198.51.100.25 usuari_ventas 172.31.25.10 21 RETR /manual.pdf 226 0
+2026-10-21 10:17:12 198.51.100.25 anonymous 172.31.25.10 21 STOR /subir.exe 550 5</code></pre>
+</div>
+<ul>
+<li><code>c-ip</code>: Dirección IP pública del cliente que realiza la conexión.</li>
+<li><code>cs-username</code>: Nombre del usuario que intenta la operación.</li>
+<li><code>cs-method</code>: Comando FTP ejecutado (<code>USER</code>, <code>PASS</code>, <code>LIST</code>, <code>RETR</code>, <code>STOR</code>, <code>DELE</code>).</li>
+<li><code>cs-uri-stem</code>: Ruta y nombre del fichero afectado en el servidor.</li>
+<li><code>sc-status</code>: Código de estado numérico devuelto por el servidor (ej. <code>230</code> para éxito de login, <code>226</code> para transferencia completada, <code>550</code> para acceso denegado).</li>
+</ul>
+<h4>B) Registros en servidores Linux</h4>
+<ul>
+<li><code>/var/log/vsftpd.log</code>: Registra cada conexión entrante, inicios de sesión y operaciones de subida y descarga con indicación exacta de bytes transferidos.</li>
+<li><code>/var/log/auth.log</code> (o <code>/var/log/secure</code>): Registra todos los intentos de autenticación en el servidor (accesos aceptados por clave pública <code>Accepted publickey</code>, intentos fallidos por contraseña <code>Failed password for invalid user</code>, y elevaciones mediante <code>sudo</code>).</li>
+</ul>
+<h4>C) Inspección de paquetes de red con Wireshark</h4>
+<p>Mediante el uso de analizadores de tráfico en el aula o laboratorio, es posible visualizar la diferencia palpable entre la opacidad del tráfico cifrado y la vulnerabilidad del tráfico plano:</p>
+<ul>
+<li><strong>En FTP estándar (Puerto 21):</strong> Los paquetes TCP revelan claramente las cabeceras <code>USER</code> y <code>PASS</code> con las contraseñas legibles en texto ASCII, así como los datos transferidos.</li>
+<li><strong>En FTPS (TLS) y SFTP (SSH):</strong> Todos los paquetes TCP aparecen etiquetados como <em>Application Data</em> cifrado con <em>payloads</em> aleatorios ininteligibles, protegiendo la confidencialidad de la información frente a atacantes en el mismo segmento de red.</li>
+</ul>
+<hr>
+<h3>4.5 Buenas prácticas y control de costes en laboratorios Cloud</h3>
+<p>Al operar infraestructuras en entornos de nube pública (<strong>AWS Academy / AWS Learner Lab</strong>), el rol del administrador de sistemas incluye la gestión rigurosa de los recursos:</p>
+<ol>
+<li><strong>Principio de mínimo privilegio:</strong> Desactivar el acceso directo de cuentas con privilegios de superusuario (<code>Administrator</code> o <code>root</code>) al servicio FTP.</li>
+<li><strong>Defensa en profundidad en cortafuegos:</strong> Limitar la apertura de puertos pasivos en los grupos de seguridad estrictamente al rango acotado necesario para las transferencias del aula.</li>
+<li><strong>Control y optimización de costes en AWS:</strong> Las instancias virtuales EC2 consumen saldo del laboratorio mientras permanecen en estado <code>Running</code>. Al finalizar la sesión lectiva o el trabajo en casa, es <strong>obligatorio detener las instancias (<code>Stop instance</code>)</strong> desde la consola web de AWS. Detener la instancia congela el consumo de cómputo preservando íntegros los datos del disco SSD (EBS).</li>
+</ol>
 <hr>
 <h2>5 - Tarea RA3-CEa - Métodos y protocolos de transferencia de ficheros</h2>
 <div class="admonition exercise">
