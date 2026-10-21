@@ -21,7 +21,7 @@ Aquesta secció recull l'enunciat oficial, els passos detallats a seguir a class
 | :---: | :--- | :---: | :---: | :---: | :---: |
 | **Tasca 1** | [El Logotip Digital de la teua Empresa](#-tasca-1-el-logotip-digital-de-la-teua-empresa) | Dijous, 24/09/2026 | Dijous, 01/10/2026 | UP1 | **10,0 punts** |
 | **Tasca 2** | [Identitat Corporativa i Paper de Carta amb Writer (RA2)](#-tasca-2-identitat-corporativa-i-paper-de-carta-amb-libreoffice-writer-ra2) | Divendres, 02/10/2026 | Divendres, 09/10/2026 | UP2 | **10,0 punts** |
-| **Tasca 3** | Manual de Riscos Laborals i Ergonomia (PRL) | *Pròximament* | *Pròximament* | UP3 | **10,0 punts** |
+| **Tasca 3** | [Manual de Prevenció de Riscos Laborals i Ergonomia (PRL) (RA4 i RA5)](#-tasca-3-manual-de-prevenci%C3%B3-de-riscos-laborals-i-ergonomia-prl-ra4-i-ra5) | Dijous, 22/10/2026 | Dijous, 05/11/2026 | UP3 | **10,0 punts** |
 | **Tasca 4** | Presentació Multimèdia i Defensa Oral Inicial (Impress) | *Pròximament* | *Pròximament* | UP4 | **10,0 punts** |
 
 ---
@@ -143,3 +143,92 @@ Has de lliurar obligatòriament **2 fitxers**:
 | **Taula de pressupost (RA2-e)** | Estructura de 4 columnes, disseny corporatiu i absència de faltes. | **2,0 punts** |
 | **Format PDF i ordre (RA2-f)** | Exportació neta en PDF i nomenclatura correcta dels fitxers. | **1,0 punt** |
 | **TOTAL** | **Superació de la Fase 2 / UP2** | **10,0 punts** |
+
+---
+
+## 🦺 Tasca 3: Manual de Prevenció de Riscos Laborals i Ergonomia (PRL) (RA4 i RA5)
+
+> **🗓️ Terminis Oficials a Aules:**
+> - **S'ha obert el:** dijous, 22 d’octubre 2026, 00:00
+> - **Venciment:** dijous, 5 de novembre 2026, 23:59
+
+### 🦺 FASE 3: La Seguretat Laboral i la Salut al teu Taller Informàtic
+
+En les dues tasques anteriors vas crear la identitat de la teua empresa (**Tasca 1: Nom i Logotip**) i vas dissenyar el teu paper de carta oficial i model de pressupost (**Tasca 2: Plantilla en Writer**).
+
+Ara és el moment d'assumir la màxima responsabilitat com a tècnic informàtic: **garantir la seguretat i la salut en el lloc de treball**. Treballar moltes hores davant d'una pantalla o obrir equips electrònics comporta riscos reals (fatiga visual, lesions d'esquena per mala postura, riscos de descàrrega elèctrica i danys als components per electroestàtica).
+
+En aquesta tasca redactaràs el **Manual Bàsic de Prevenció de Riscos Laborals (PRL) i Ergonomia** de la teua pròpia empresa, utilitzant la teua plantilla corporativa oficial de **LibreOffice Writer**.
+
+---
+
+### 🎯 Què has de fer a classe? (Pas a pas)
+
+#### 1️⃣ Pas 1: Obrir la teua plantilla corporativa
+1. Obre **LibreOffice Writer**.
+2. Obre la plantilla oficial que vas crear a la Tasca 2 (`Plantilla_PaperCarta_ElTeuNom.ott` o el teu fitxer `.odt`).
+3. Comprova que es mantenen els **marges de 2 cm**, la capçalera amb el teu **logotip transparent** i el peu de pàgina amb les teues dades de contacte.
+4. Posa com a títol principal del document (aplicant el teu estil **Títol 1** en el color de la teua marca):  
+   `MANUAL BÀSIC DE PREVENCIÓ DE RISCOS LABORALS I ERGONOMIA`
+
+#### 2️⃣ Pas 2: Introducció i Bloc 1 — Ergonomia davant Pantalles (PVD)
+1. **Breu introducció (2 o 3 línies):** Explica amb les teues paraules per què a la teua empresa informàtica és primordial cuidar la postura i evitar la fatiga visual.
+2. Afig un subtítol amb estil **Títol 2**: `1. Decàleg de Salut Postural i Treball davant Pantalles`.
+3. Crea una **llista numerada (`1, 2, 3, 4, 5`)** amb les **5 normes d'ergonomia indispensables**:
+   - **Norma 1 (Monitor):** Alçada de la pantalla (vora superior a l'alçada dels ulls) i distància d'entre 50 i 70 cm.
+   - **Norma 2 (Esquena i cadira):** Esquena recta amb suport lumbar ferm, genolls en angle de 90° i peus recolzats plans a terra o sobre un reposapeus.
+   - **Norma 3 (Canells i braços):** Colzes en angle de 90° i canells rectes alineats amb el teclat i ratolí per a evitar tendinitis.
+   - **Norma 4 (Il·luminació):** Llum natural o artificial lateral per a evitar reflexos enlluernadors a la pantalla.
+   - **Norma 5 (Descans visual):** Pausa activa de 5 minuts cada hora o aplicació de la regla 20-20-20 (mirar a 6 metres durant 20 segons).
+4. **Insereix una imatge postural:** Busca a internet o a la carpeta de recursos de classe una imatge il·lustrativa de la postura correcta davant de l'ordinador, insereix-la centrada i ajusta la seua mida (uns 6-8 cm d'amplada).
+
+#### 3️⃣ Pas 3: Bloc 2 — Prevenció del Risc Elèctric al Taller
+1. Afig un subtítol amb estil **Títol 2**: `2. Normes de Seguretat Elèctrica en el Muntatge i Manteniment`.
+2. Crea una **llista amb vinyetes / punts (`•`)** amb **3 regles d'or per a no patir accidents elèctrics**:
+   - `•` **Desconnexió física obligatòria:** Desendollar completament el cable d'alimentació de la paret abans de retirar la tapa de qualsevol caixa de PC o servidor.
+   - `•` **Prohibició de manipular fonts d'alimentació:** Mai obrir l'interior d'una font d'alimentació (PSU), ja que els seus condensadors retenen càrrega d'alta tensió fins i tot desconnectats.
+   - `•` **Estat del cablejat i preses de terra:** Comprovar regularment que no hi ha cables d'alimentació pelats, regletes sobrecarregades ni preses de corrent sense connexió de terra operativa.
+
+#### 4️⃣ Pas 4: Bloc 3 — Taula d'Equips de Protecció (EPIs) i Protecció ESD
+1. Afig un subtítol amb estil **Títol 2**: `3. Equips de Protecció Individual (EPIs) i Protecció Antiestàtica`.
+2. Insereix una **Taula de 3 columnes i 4 files** (`Taula > Insereix una taula...`):
+   - Pinta la capçalera de la taula amb el teu color corporatiu i lletra blanca en negreta.
+   - Configura les següents columnes i continguts:
+
+| Equip / Element de Protecció | On s'utilitza en la nostra empresa? | Funció preventiva (Què evita?) |
+| :--- | :--- | :--- |
+| **Polsera antiestàtica (ESD)** | En la taula de muntatge i reparació de components. | Desvia l'electricitat estàtica del cos i evita cremar la placa base o les memòries RAM. |
+| **Ulleres i guants de protecció** | Durant la neteja interna amb esprai d'aire comprimit. | Eviten que partícules de pols o fragments xoquen contra els ulls o irriten la pell. |
+| **Reposapeus ergonòmic ajustable** | En el lloc d'oficina i diagnòstic de programari. | Facilita la posició a 90° de les cames i millora la circulació sanguínia en jornades llargues. |
+
+#### 5️⃣ Pas 5: Revisió ortogràfica (`F7`) i exportació a PDF
+1. Prem la tecla `F7` per a passar el **corrector ortogràfic** de LibreOffice i corregir possibles errades de tecleig.
+2. Guarda el teu document de treball en format `.odt` a la teua carpeta `03_Seguretat_i_PRL`.
+3. Exporta el document a PDF: `Fitxer > Exporta com a > Exporta com a PDF...`.
+4. Anomena el fitxer seguint la pauta oficial:
+   - 📁 **`Manual_PRL_ElTeuNom.pdf`** *(Exemple: `Manual_PRL_EnriquePolo.pdf` o `Manual_PRL_EsperanzaBuj.pdf`)*.
+
+---
+
+### 📦 Què has de lliurar ací a Aules?
+
+Per a completar el lliurament obligatori de la **Tasca 3**, has de realitzar dues accions:
+
+1. **Adjunta el fitxer PDF:**
+   - 📑 `Manual_PRL_ElTeuNom.pdf`
+2. **Escriu en el quadre de text d'Aules:**
+   - **Nom de la teua empresa:** *(Exemple: "NovaElectro")*.
+   - **Pregunta de reflexió:** *De totes les mesures que has inclòs al teu manual, quina consideres que és la més important per a aplicar tu mateix/a en les pràctiques d'aula i per què?*
+
+---
+
+### 📊 Rúbrica Oficial d'Avaluació — Tasca 3 (Pes: 10,0 punts)
+
+| Criteri d'Avaluació | Excel·lent (100%) | Notable (75%) | Suficient (50%) | Insuficient (25% - 0%) |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Plantilla corporativa i disseny**<br>*(Pes: 20% - 2,0 punts)* | Utilitza la plantilla oficial de la Tasca 2 amb marges de 2 cm, capçalera amb logotip transparent, peu de pàgina de contacte i estil Títol 1 personalitzat. | Utilitza la plantilla corporativa, amb algun xicotet desajust menor en marges, alçada del logo o colors. | No utilitza la plantilla pròpia, però ha configurat una capçalera bàsica amb logo i dades. | Document en blanc sense capçalera, sense marges ni cap rastre d'identitat corporativa. |
+| **2. Ergonomia PVD i imatge postural**<br>*(Pes: 25% - 2,5 punts)* | Introducció clara, llista numerada amb les 5 normes d'ergonomia completes i explicades, i una imatge postural ben inserida i proporcionada. | Inclou les 5 normes i la imatge, però la redacció és una mica telegràfica o la imatge està lleugerament desquadrada. | Llista només 3 o 4 normes d'ergonomia, o no ha inserit cap imatge d'hàbits posturals. | Informació incompleta (menys de 3 normes), confusa o copiada sense sentit. |
+| **3. Seguretat elèctrica al taller**<br>*(Pes: 20% - 2,0 punts)* | Llista amb vinyetes que recull almenys 3 mesures de seguretat elèctrica essencials (desconnexió de xarxa, fonts d'alimentació i cables/preses de terra). | Identifica 3 normes de seguretat elèctrica correctes, encara que les explicacions són molt curtes. | Només esmenta 1 o 2 normes elèctriques de manera superficial. | No tracta la seguretat elèctrica o conté afirmacions incorrectes o perilloses per al taller. |
+| **4. Taula d'EPIs i protecció ESD**<br>*(Pes: 20% - 2,0 punts)* | Taula ordenada de 3 columnes amb els 3 equips de protecció (polsera ESD, guants/ulleres i reposapeus) amb capçalera corporativa ressaltada. | Taula present amb els 3 elements, amb xicotets desajusts d'alineació o format de capçalera. | Informació presentada sense format de taula o només amb 1 o 2 elements de protecció. | No inclou els equips de protecció individual ni la prevenció d'electroestàtica ESD. |
+| **5. Ortografia (F7), PDF i Text a Aules**<br>*(Pes: 15% - 1,5 punts)* | Document lliurat en format `.pdf` correctament anomenat (`Manual_PRL_Nom.pdf`), text revisat sense faltes greus i resposta reflexiva completada a Aules. | Lliura en PDF ben anomenat amb bona ortografia, però no respon el text a Aules o el nom té errades menors. | Lliura en format editable (`.odt`) sense exportar a PDF o té nombroses faltes ortogràfiques sense revisar. | Fitxer il·legible, danyat o sense nom d'alumne ni identificació. |
+
