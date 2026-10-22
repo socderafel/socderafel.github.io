@@ -435,6 +435,16 @@ Al operar infraestructuras en entornos de nube pública (**AWS Academy / AWS Lea
 
 ## 6 - [Windows Server] Instalación y configuración de IIS FTP y OpenSSH en AWS (RA3-CEb,c,d)
 
+<a id="aviso-cambio-ip"></a>
+!!! tip "Regla de oro de AWS Academy: ¿Trabajas en días diferentes? Gestión del cambio de IP pública"
+    En los laboratorios de AWS Academy Learner Lab, las máquinas virtuales utilizan **direcciones IPv4 públicas dinámicas**. Esto significa que **cada vez que detengas tu instancia (`Stop instance`) al terminar la clase y la vuelvas a iniciar (`Start instance`) en un día posterior, AWS le asignará una nueva dirección IP pública**.
+
+    **¿Qué debes revisar obligatoriamente si retomas la práctica en un día diferente?**
+    1. **Conexión inicial (RDP / SSH / PuTTY):** Deberás conectarte siempre a la **nueva IP pública** que muestre la consola de AWS EC2 (la IP del día anterior dejará de responder).
+    2. **Modo Pasivo en Windows Server (IIS):** El servidor IIS envía al cliente la IP externa configurada en `FTP Firewall Support`. Si la IP ha cambiado y no la actualizas en IIS, FileZilla se conectará al puerto 21 pero **fallará al listar los archivos con un error de tiempo de espera (*timeout*)**. 👉 Puedes actualizarla rápidamente siguiendo el [Apartado 6.5: Soporte de Firewall de FTP](#actualizar-ip-windows).
+    3. **Modo Pasivo en Ubuntu Server (`vsftpd`):** El demonio `vsftpd` tiene configurada la IP en el fichero `/etc/vsftpd.conf` (`pasv_address`). Si la IP ha cambiado, FileZilla se quedará congelado en `150 Here comes the directory listing...`. 👉 Puedes actualizarla siguiendo el [Apartado 12.3: Configuración de modo pasivo en vsftpd](#actualizar-ip-ubuntu).
+    4. **Pruebas inter-servidores (Apartado 14):** Los comandos `curl`, `ssh` y `scp` deberán apuntar a las nuevas IPs actuales de cada servidor. 👉 Consulta los detalles en el [Apartado 14](#apartado-14).
+
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
 
@@ -635,7 +645,15 @@ En las imágenes oficiales de Windows Server proporcionadas por Amazon Web Servi
 
 ---
 
+<a id="actualizar-ip-windows"></a>
 ### 6.5 Configuración de Compatibilidad de Firewall de FTP y Modo Pasivo en IIS (FTP Firewall Support)
+
+!!! tip "Atajo rápido con PowerShell para actualizar la IP pública en IIS (en solo 5 segundos)"
+    Si retomas la práctica en un día posterior y tu instancia tiene una nueva IP pública, en lugar de navegar por los menús gráficos de IIS, puedes abrir **PowerShell como Administrador** en Windows Server y ejecutar estas dos líneas:
+    ```powershell
+    Set-ItemProperty "IIS:\Sites" -Name ftpServer.firewallSupport.externalIp4Address -Value "<NUEVA_IP_PUBLICA_WINDOWS>"
+    Restart-Service ftpsvc
+    ```
 
 1. Abrir **Internet Information Services (IIS) Manager** (escribir `inetmgr` en Inicio o desde **Server Manager** -> **Tools** -> **Internet Information Services (IIS) Manager**).
 2. En el panel izquierdo (**Connections**), hacer clic sobre el nombre del servidor (nodo raíz).
@@ -809,6 +827,12 @@ Una vez instalado y configurado el servidor FTP en **Windows Server (`Servidor_F
 
 ### 7.1 Conexión y transferencia hacia Windows Server con FileZilla
 
+!!! warning "¿Retomas la práctica en un día diferente o tras reiniciar Windows Server?"
+    Si la instancia `Servidor_FTPSSH` se ha detenido y reiniciado hoy, **su IP pública habrá cambiado**:
+    * **En FileZilla:** Introduce en el campo **Servidor** la **nueva IP pública de Windows** (consúltala en la consola de AWS EC2).
+    * **Problema típico si no actualizas IIS:** FileZilla conectará con éxito al puerto 21 (`230 User logged in`), pero al enviar la orden `PASV` el servidor responderá con la IP vieja. FileZilla se quedará esperando y fallará con `Error: Conexión superó el tiempo de espera` y `No se pudo recibir la lista de directorios`.
+    * 👉 **Solución:** Actualiza la IP pública en IIS siguiendo el [Apartado 6.5: Soporte de Firewall de FTP](#actualizar-ip-windows) (o ejecuta el comando rápido de PowerShell indicado allí).
+
 1. Abrir **FileZilla Client** en vuestro ordenador del aula.
 2. En la barra superior de **Conexión rápida** introducir:
    * **Servidor:** `<IP_PUBLICA_WINDOWS>` (en nuestro ejemplo, `52.90.151.179`)
@@ -856,6 +880,10 @@ En un entorno empresarial real, cada departamento o usuario debe disponer de un 
 ---
 
 ### 8.1 Creación de usuarios departamentales y estructura LocalUser en Windows Server
+
+!!! tip "¿Retomas este apartado en una sesión posterior?"
+    * **Comprobación de IP:** Conéctate con FileZilla utilizando la IP pública actual de Windows Server. Asegúrate de que la IP en IIS esté actualizada ([Apartado 6.5](#actualizar-ip-windows)).
+    * **Requisitos previos:** Verifica que tienes la estructura de carpetas `C:\inetpub\ftproot\LocalUser` creada y el usuario `usuari_ventas` dado de alta en Windows Server con los permisos NTFS correspondientes.
 
 1. Abrir **Computer Management** (`compmgmt.msc`).
 2. Desplegar **Local Users and Groups** -> carpeta **Users**.
@@ -959,6 +987,10 @@ El protocolo FTP tradicional transmite contraseñas y datos en texto claro sin c
 
 ### 9.1 Creación de un Certificado Digital Autofirmado en Windows Server
 
+!!! tip "¿Retomas este apartado en una sesión posterior?"
+    * **Comprobación de IP:** Utiliza la IP pública actual de Windows en FileZilla y confirma que el modo pasivo de IIS tiene la IP al día ([Apartado 6.5](#actualizar-ip-windows)).
+    * **Aviso de certificado al cambiar de IP:** Al cambiar la IP pública de la máquina, FileZilla detectará la conexión como un nuevo destino y volverá a mostrar la ventana de validación del certificado autofirmado `Certificado-FTPs-Aula`. Simplemente marca **Confiar siempre en este certificado** y pulsa **Aceptar**.
+
 1. Abrir **Internet Information Services (IIS) Manager** (`inetmgr`).
 2. En el panel izquierdo (**Connections**), hacer clic sobre el **nombre del servidor** (nodo raíz).
 3. En el panel central, dentro del bloque **IIS**, hacer doble clic en el icono **Server Certificates**:
@@ -1047,6 +1079,11 @@ El acceso por contraseña convencional está expuesto a ataques de fuerza bruta.
 ---
 
 ### 10.1 Conexión SSH básica hacia Windows Server con PuTTY
+
+!!! warning "¿Retomas la práctica en un día diferente para configurar SSH?"
+    * **Problema si usas la IP vieja:** Si introduces en PuTTY la IP del día anterior, la conexión se quedará congelada y devolverá `Network error: Connection timed out`.
+    * **Solución:** Consulta la **nueva IP pública** de `Servidor_FTPSSH` en la consola de AWS EC2 ([Apartado 6.0](#60-lanzamiento-de-la-instancia-ec2-de-windows-server-2022-en-aws)) e indícala en el campo **Host Name** de PuTTY con el puerto `22`.
+    * **Alerta de clave host en PuTTY:** Al cambiar la IP, PuTTY mostrará el aviso `The server's host key is not cached in the registry`. Es un comportamiento completamente normal; haz clic en **Accept** para continuar.
 
 1. Abrir **PuTTY** en vuestro PC del aula.
 2. En el campo **Host Name (or IP address)** introducir la **IP pública de Windows Server** (`<IP_PUBLICA_WINDOWS>`), **Port** `22` y **Connection type** `SSH`.
@@ -1166,7 +1203,14 @@ Para completar todo el bloque práctico sobre **Windows Server (`Servidor_FTPSSH
 
 ---
 
+<a id="filtro-wireshark"></a>
 ### 11.1 Transferencia gráfica por SFTP hacia Windows Server en FileZilla (Puerto 22)
+
+!!! warning "Comprobaciones de red si realizas este apartado en un día posterior"
+    Si la instancia de Windows Server se ha reiniciado:
+    * **FileZilla SFTP (11.1):** Actualiza el campo **Servidor** con la nueva IP pública de Windows Server.
+    * **PowerShell SCP (11.2):** En el comando `scp`, sustituye `<IP_PUBLICA_WINDOWS>` por la IP pública actual ([Consultar IP en AWS](#60-lanzamiento-de-la-instancia-ec2-de-windows-server-2022-en-aws)).
+    * **Filtro de Wireshark (11.4):** Si utilizas el filtro opcional por IP `(ftp || tls || ssh) && ip.addr == <IP_PUBLICA_WINDOWS>`, **debes poner la IP pública actual**. Si dejas la IP de una sesión anterior, Wireshark filtrará todo el tráfico y la captura aparecerá vacía.
 
 1. Abrir **FileZilla Client**.
 2. Dado que en el apartado anterior hemos bastionado el servidor SSH deshabilitando la autenticación por contraseña (`PasswordAuthentication no`), para conectar por SFTP debemos utilizar la clave privada generada con PuTTYgen (`clave_privada_smx.ppk`):
@@ -1353,6 +1397,7 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
 
 ---
 
+<a id="actualizar-ip-ubuntu"></a>
 ### 12.3 Configuración de modo pasivo, NAT y jaula chroot en /etc/vsftpd.conf
 
 1. Abrir el fichero de configuración principal del servicio:
@@ -1419,6 +1464,18 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
 
 ### 12.5 Prueba de transferencia y verificación de enjaulado (chroot) desde FileZilla
 
+!!! warning "¿Retomas la conexión a Ubuntu en un día diferente o tras reiniciar?"
+    Si la máquina virtual `Ubuntu_FTPSSH` se ha detenido y vuelto a iniciar:
+    * **En FileZilla:** Introduce en el campo **Servidor** la **nueva IP pública de Ubuntu** (visible en la consola de AWS EC2).
+    * **Problema crítico en `vsftpd` si no actualizas la IP:** Si el fichero `/etc/vsftpd.conf` conserva la IP de un día anterior en la directiva `pasv_address`, FileZilla conectará al puerto 21 pero se congelará indefinidamente en `150 Here comes the directory listing...` y fallará por *timeout*.
+    * 👉 **Solución:** Abre la terminal de Ubuntu y actualiza la directiva con:
+      ```bash
+      sudo nano /etc/vsftpd.conf
+      # Modifica la línea: pasv_address=<NUEVA_IP_PUBLICA_UBUNTU>
+      sudo systemctl restart vsftpd
+      ```
+      Consulta los detalles completos en el [Apartado 12.3: Configuración de modo pasivo en vsftpd](#actualizar-ip-ubuntu).
+
 1. Abrir **FileZilla Client** en vuestro PC del aula y conectar hacia **Ubuntu Server**:
    * **Servidor:** `<IP_PUBLICA_UBUNTU>`
    * **Nombre de usuario:** `alumne_redes` (y posteriormente probar con `usuari_ventas`)
@@ -1452,6 +1509,10 @@ En esta tarea aseguraremos nuestro servidor **Ubuntu Server (`Ubuntu_FTPSSH`)** 
 ---
 
 ### 13.1 Configuración de FTPS (TLS/SSL) en Ubuntu Server con OpenSSL y vsftpd
+
+!!! tip "¿Retomas este apartado en una sesión posterior?"
+    * **Comprobación de IP:** Conéctate por SSH y FileZilla FTPS usando la nueva IP pública de Ubuntu Server.
+    * **Verificación de vsftpd:** Asegúrate de que `pasv_address` en `/etc/vsftpd.conf` coincide con la IP pública actual de Ubuntu ([Apartado 12.3](#actualizar-ip-ubuntu)) y que el servicio está activo con `sudo systemctl status vsftpd`.
 
 1. En la consola SSH de **`Ubuntu_FTPSSH`**, generar un certificado digital autofirmado X.509 RSA de `2048 bits` válido por 365 días en `/etc/ssl/private/vsftpd.pem`:
    ```bash
@@ -1537,7 +1598,23 @@ En esta tarea aseguraremos nuestro servidor **Ubuntu Server (`Ubuntu_FTPSSH`)** 
 
 ---
 
+<a id="apartado-14"></a>
 ## 14 - [Inter-Servidores] Pruebas cruzadas bidireccionales en AWS Cloud (RA3-CEe,f)
+
+!!! warning "¡ATENCIÓN CRÍTICA: Ambas máquinas pueden tener IPs nuevas si retomas hoy la práctica!"
+    En este apartado de pruebas cruzadas es donde más errores ocurren si se realiza en un día diferente, ya que **tanto Windows Server como Ubuntu Server habrán cambiado de dirección IP pública**:
+
+    **Lista de comprobaciones obligatorias antes de empezar:**
+    1. **Abre la consola de AWS EC2** y comprueba que ambas instancias (`Servidor_FTPSSH` y `Ubuntu_FTPSSH`) están en estado `Running`. Anota la **Dirección IPv4 pública actual** de cada una.
+    2. **En Windows Server:**
+       * Verifica que la directiva **FTP Firewall Support** de IIS tiene la IP actual de Windows ([Apartado 6.5](#actualizar-ip-windows)) y reinicia el servicio (`Restart-Service ftpsvc`).
+       * Comprueba que OpenSSH tiene temporalmente habilitada la autenticación por contraseña (`PasswordAuthentication yes`) como se indica en el paso previo del [Apartado 14.1](#141-conexion-ftp-y-ssh-desde-ubuntu-server-hacia-windows-server).
+    3. **En Ubuntu Server:**
+       * Verifica que `/etc/vsftpd.conf` tiene en `pasv_address` la IP pública actual de Ubuntu ([Apartado 12.3](#actualizar-ip-ubuntu)).
+       * Recuerda haber ejecutado el desbloqueo de contraseñas de SSH (`PasswordAuthentication yes`) indicado en el [Apartado 14.2](#142-conexion-ftp-y-ssh-desde-windows-server-hacia-ubuntu-server).
+    4. **Sustitución en los comandos:**
+       * En **14.1** (desde Ubuntu hacia Windows): Sustituye `<IP_PUBLICA_WINDOWS>` por la IP pública actual de Windows Server.
+       * En **14.2** (desde Windows hacia Ubuntu): Sustituye `<IP_PUBLICA_UBUNTU>` por la IP pública actual de Ubuntu Server.
 
 !!! warning "Obligatorio seguir las normas para la presentación de trabajos escritos."
     Todas las evidencias deberán incluir capturas de pantalla completas donde se aprecie claramente el nombre del equipo, usuario y la fecha/hora.
