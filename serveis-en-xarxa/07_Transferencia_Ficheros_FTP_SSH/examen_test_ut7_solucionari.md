@@ -2,7 +2,7 @@
 
 **Mòdul:** Serveis en Xarxa (2n SMX)  
 **Institut:** IES Mestre Ramón Esteve (Catadau)  
-**Criteris d'Avaluació:** `RA3-CEa` (Serveis de transferència de fitxers) i `RA6-CEa` (Serveis d'accés remot)  
+**Criteri d'Avaluació:** `RA3-CEa` (Serveis de transferència de fitxers)  
 
 ---
 
@@ -17,18 +17,18 @@
 | **5** | **B** | `RA3-CEa` | Mode passiu (el client inicia sempre la connexió de dades) |
 | **6** | **C** | `RA3-CEa` | Requisits del mode passiu al núvol (rang de ports, IP pública i Security Group) |
 | **7** | **B** | `RA3-CEa` | Vulnerabilitat de FTP pla (text clar interceptable per Wireshark) |
-| **8** | **B** | `RA3-CEa` / `RA6-CEa` | Diferència FTPS (TLS/SSL amb certificats) vs SFTP (subservei de SSH) |
-| **9** | **C** | `RA6-CEa` | Port 22 TCP (Port estàndard de SSH i SFTP) |
+| **8** | **B** | `RA3-CEa` | Diferència FTPS (TLS/SSL amb certificats) vs SFTP (subservei de SSH) |
+| **9** | **C** | `RA3-CEa` | Port 22 TCP (Port estàndard de SSH i SFTP) |
 | **10** | **C** | `RA3-CEb` | IIS (Internet Information Services) com a servidor natiu a Windows Server |
 | **11** | **A** | `RA3-CEb` | vsftpd com a dimoni FTP estàndard i segur en Linux Ubuntu |
 | **12** | **B** | `RA3-CEe` | FileZilla Client com a eina gràfica de transferència multiplataforma |
 | **13** | **B** | `RA3-CEd` | Enjaulament (`chroot` / `LocalUser`) per a evitar escalada de directoris |
 | **14** | **B** | `RA3-CEd` | Usuari anònim (`anonymous`) per a dipòsits públics de només lectura |
 | **15** | **C** | `RA3-CEg` | Codi d'estat `550 Access is denied` per manca de permisos NTFS o d'escriptura |
-| **16** | **B** | `RA6-CEc` | Asimetria de claus SSH (pública al servidor `authorized_keys`, privada al client) |
-| **17** | **B** | `RA6-CEd` | Bastionat SSH (`PasswordAuthentication no`) per a evitar atacs de diccionari |
-| **18** | **B** | `RA6-CEc` | PuTTYgen per a la generació i conversió de claus a format `.ppk` |
-| **19** | **C** | `RA6-CEe` | `scp` com a eina de còpia segura de fitxers per línia d'ordres |
+| **16** | **B** | `RA3-CEa` | Asimetria de claus SSH (pública al servidor `authorized_keys`, privada al client) |
+| **17** | **B** | `RA3-CEa` | Bastionat SSH (`PasswordAuthentication no`) per a evitar atacs de diccionari |
+| **18** | **B** | `RA3-CEa` | PuTTYgen per a la generació i conversió de claus a format `.ppk` |
+| **19** | **C** | `RA3-CEa` | `scp` com a eina de còpia segura de fitxers per línia d'ordres |
 | **20** | **B** | `RA3-CEh` | Parada de màquines (`Stop instance`) a AWS per al control de costos |
 
 ---

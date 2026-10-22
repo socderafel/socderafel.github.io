@@ -3,7 +3,7 @@
 **Mòdul:** Serveis en Xarxa (2n SMX)  
 **Institut:** IES Mestre Ramón Esteve (Catadau)  
 **Curs acadèmic:** 2026 / 2027  
-**Avaluació:** Segona Avaluació — Criteris `RA3-CEa` i `RA6-CEa`  
+**Avaluació:** Segona Avaluació — Criteri `RA3-CEa` (Serveis de transferència de fitxers)  
 
 ---
 

@@ -4,27 +4,20 @@
 
 > 📝 **Resultados de aprendizaje y criterios de evaluacion que se evaluarán en esta unidad.**
 >
-> **Resultados de aprendizaje de la unidad didáctica:**
+> **Resultado de aprendizaje de la unidad didáctica:**
 >
 > * **RA3. Gestiona servicios de transferencia de ficheros describiendo sus características e instalando los servidores y clientes correspondientes.**
-> * **RA6. Gestiona métodos de acceso y administración remota describiendo sus características e instalando los servicios correspondientes.**
 >
-> **Criterios de evaluación de la unidad didáctica:**
+> **Criterios de evaluación de la unidad didáctica (RA3):**
 >
 > * **RA3-CEa)** Se han reconocido las características y modos de funcionamiento del servicio de transferencia de ficheros.
 > * **RA3-CEb)** Se ha instalado y configurado un servidor de transferencia de ficheros.
 > * **RA3-CEc)** Se han creado usuarios y grupos para el acceso al servicio.
 > * **RA3-CEd)** Se han configurado permisos de acceso, carpetas públicas y aislamiento de usuarios.
-> * **RA3-CEe)** Se ha verificado el funcionamiento del servicio mediante clientes gráficos (FileZilla).
-> * **RA3-CEf)** Se ha asegurado el servicio mediante el cifrado de datos y credenciales (FTPS / SSL / TLS).
+> * **RA3-CEe)** Se ha verificado el funcionamiento del servicio mediante clientes gráficos y en línea de comandos.
+> * **RA3-CEf)** Se ha asegurado el servicio mediante el cifrado de datos, autenticación y credenciales (FTPS / SSL / TLS / SFTP / SCP).
 > * **RA3-CEg)** Se han registrado y analizado los eventos y logs del servicio de transferencia de ficheros.
 > * **RA3-CEh)** Se han aplicado medidas de seguridad y buenas prácticas en la parada del laboratorio.
-> * **RA6-CEa)** Se han reconocido las características del acceso y administración remota.
-> * **RA6-CEb)** Se han instalado y configurado servicios de administración remota (SSH / RDP).
-> * **RA6-CEc)** Se han configurado métodos de autenticación mediante parejas de claves pública/privada.
-> * **RA6-CEd)** Se han asegurado y bastionado los servicios de acceso remoto.
-> * **RA6-CEe)** Se han transferido ficheros mediante canales seguros (SFTP / SCP).
-> * **RA6-CEf)** Se han auditado accesos e interconexiones cruzadas entre sistemas heterogéneos.
 >
 > **Sistema de evaluación y entregas en Aules (1 Cuestionario + 1 Único Documento PDF):**
 >
@@ -32,8 +25,8 @@
 >
 > | Actividad en Aules | Criterios evaluados | Descripción y contenido | Entrega en Aules |
 > |---|:---:|---|---|
-> | **1. Cuestionario Teórico** | `RA3-CEa` / `RA6-CEa` | Comprensión teórica de protocolos FTP, FTPS, SFTP, SSH y modos Activo/Pasivo (Apartados 1 a 5). | **Cuestionario online en Aules (Sin subir archivo)** |
-> | **2. Memoria Práctica Completa de la Unidad** | `RA3-CEb..h` / `RA6-CEb..f` | Documento único con todos los apartados prácticos (**Bloque Windows Server**, **Bloque Ubuntu Server** y **Bloque Interoperabilidad + Cierre AWS**) incluyendo las **Evidencias 1 a 27**. | **1 único archivo PDF:** `RA3-RA6-FTP-SSH-NombreApellidos.pdf` |
+> | **1. Cuestionario Teórico** | `RA3-CEa` | Comprensión teórica de protocolos de transferencia (FTP, FTPS, SFTP, SSH) y modos Activo/Pasivo (Apartados 1 a 5). | **Cuestionario online en Aules (Sin subir archivo)** |
+> | **2. Memoria Práctica Completa de la Unidad** | `RA3-CEb..h` | Documento único con todos los apartados prácticos (**Bloque Windows Server**, **Bloque Ubuntu Server** y **Bloque Interoperabilidad + Cierre AWS**) incluyendo las **Evidencias 1 a 27**. | **1 único archivo PDF:** `RA3-FTP-SSH-NombreApellidos.pdf` |
 >
 > **Guía de apartados que debe tener tu documento Word y qué evidencias incluye cada uno:**
 >
@@ -43,11 +36,11 @@
 > | **Apartado 7:** Transferencia con FileZilla hacia Windows Server | Windows Server | `RA3-CEe` | **Evidencia 8** (Conexión pasiva en FileZilla y subida de `Prova_ftp.txt`) |
 > | **Apartado 8:** Aislamiento de usuarios (`LocalUser`) y acceso anónimo | Windows Server | `RA3-CEd` | **Evidencias 9 y 10** (Carpetas en `LocalUser`, vista aislada de `usuari_ventas` y error `550` en `anonymous`) |
 > | **Apartado 9:** Seguridad y cifrado FTPS (TLS/SSL) en Windows Server | Windows Server | `RA3-CEf` | **Evidencias 11 y 12** (Certificado autofirmado en IIS, huella SHA-256 en FileZilla y candado FTPS) |
-> | **Apartado 10:** Administración remota SSH con PuTTY y PuTTYgen | Windows Server | `RA6-CEb,c,d` | **Evidencias 13 y 14** (Generación de clave en PuTTYgen, login sin contraseña y rechazo tras bastionado) |
-> | **Apartado 11:** SFTP, SCP y Auditoría de Logs IIS y Wireshark | Windows Server | `RA6-CEe` / `RA3-CEg` | **Evidencias 15 a 18** (SFTP puerto 22 en FileZilla, `scp` en PowerShell, log W3C en Notepad y captura en Wireshark) |
+> | **Apartado 10:** Administración remota SSH con PuTTY y PuTTYgen | Windows Server | `RA3-CEf` | **Evidencias 13 y 14** (Generación de clave en PuTTYgen, login sin contraseña y rechazo tras bastionado) |
+> | **Apartado 11:** SFTP, SCP y Auditoría de Logs IIS y Wireshark | Windows Server | `RA3-CEe,f,g` | **Evidencias 15 a 18** (SFTP puerto 22 en FileZilla, `scp` en PowerShell, log W3C en Notepad y captura en Wireshark) |
 > | **Apartado 12:** Instalación de `vsftpd`, modo pasivo y `chroot` en Ubuntu | Ubuntu Server | `RA3-CEb,c,d,e` | **Evidencias 19 a 22** (Instancia `Ubuntu_FTPSSH`, `/etc/vsftpd.conf`, `systemctl status vsftpd` y FileZilla enjaulado) |
-> | **Apartado 13:** Seguridad FTPS (OpenSSL), SSH y Logs en Ubuntu | Ubuntu Server | `RA3-CEf,g` / `RA6-CEf` | **Evidencias 23 y 24** (Certificado OpenSSL + FTPS en FileZilla, y logs `/var/log/vsftpd.log` y `auth.log`) |
-> | **Apartado 14:** Pruebas cruzadas Inter-Servidores en AWS | Inter-Servidores | `RA3-CEf` / `RA6-CEf` | **Evidencias 25 y 26** (Transferencia `curl` y `ssh` desde Ubuntu a Windows, y desde Windows a Ubuntu) |
+> | **Apartado 13:** Seguridad FTPS (OpenSSL), SSH y Logs en Ubuntu | Ubuntu Server | `RA3-CEf,g` | **Evidencias 23 y 24** (Certificado OpenSSL + FTPS en FileZilla, y logs `/var/log/vsftpd.log` y `auth.log`) |
+> | **Apartado 14:** Pruebas cruzadas Inter-Servidores en AWS | Inter-Servidores | `RA3-CEe,f` | **Evidencias 25 y 26** (Transferencia `curl` y `ssh` desde Ubuntu a Windows, y desde Windows a Ubuntu) |
 > | **Apartado 15:** Control de costes y parada de la infraestructura en AWS | Cierre AWS | `RA3-CEh` | **Evidencia 27** (Panel de instancias de AWS EC2 mostrando ambas máquinas en estado `Stopped`) |
 >
 
@@ -1086,7 +1079,7 @@ El protocolo FTP tradicional transmite contraseñas y datos en texto claro sin c
 
 ---
 
-## 10 - [Windows Server] Administración remota y bastionado de SSH con PuTTY y PuTTYgen (RA6-CEb,c,d)
+## 10 - [Windows Server] Administración remota y bastionado de SSH con PuTTY y PuTTYgen (RA3-CEf)
 
 > ⚠️ **Obligatorio seguir las normas para la presentación de trabajos escritos.**
 >
@@ -1210,7 +1203,7 @@ No obstante, el método profesional y seguro recomendado para entornos de produc
 
 ---
 
-## 11 - [Windows Server] Transferencia segura con SFTP/SCP y auditoría de Logs y Wireshark (RA6-CEe / RA3-CEg)
+## 11 - [Windows Server] Transferencia segura con SFTP/SCP y auditoría de Logs y Wireshark (RA3-CEe,f,g)
 
 > ⚠️ **Obligatorio seguir las normas para la presentación de trabajos escritos.**
 >
@@ -1503,7 +1496,7 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
 
 ---
 
-## 13 - [Ubuntu Server] Seguridad FTPS con OpenSSL, claves SSH y auditoría de logs en Linux (RA3-CEf,g / RA6-CEf)
+## 13 - [Ubuntu Server] Seguridad FTPS con OpenSSL, claves SSH y auditoría de logs en Linux (RA3-CEf,g)
 
 > ⚠️ **Obligatorio seguir las normas para la presentación de trabajos escritos.**
 >
@@ -1602,7 +1595,7 @@ En esta tarea aseguraremos nuestro servidor **Ubuntu Server (`Ubuntu_FTPSSH`)** 
 
 ---
 
-## 14 - [Inter-Servidores] Pruebas cruzadas bidireccionales en AWS Cloud (RA3-CEf / RA6-CEf)
+## 14 - [Inter-Servidores] Pruebas cruzadas bidireccionales en AWS Cloud (RA3-CEe,f)
 
 > ⚠️ **Obligatorio seguir las normas para la presentación de trabajos escritos.**
 >
@@ -1748,7 +1741,7 @@ Una vez completadas con éxito todas las pruebas técnicas en **Windows Server**
 
 ### 15.2 Entrega única de la Memoria Práctica en Aules (Checklist final de las 27 Evidencias)
 
-> ⚠️ **Entrega única en Aules: Memoria Práctica Completa (RA3 y RA6)**
+> ⚠️ **Entrega única en Aules: Memoria Práctica Completa (RA3)**
 >
 > Una vez completados todos los apartados en tu documento de Word, verifica que incluye las **27 evidencias numeradas** organizadas por apartados, expórtalo a un **único archivo PDF** y súbelo a la tarea de **Aules**:
 >
@@ -1785,7 +1778,7 @@ Una vez completadas con éxito todas las pruebas técnicas en **Windows Server**
 > 26. **Evidencia 26 (Ap. 14.2):** Conexión SSH/SCP desde Windows Server hacia Ubuntu Server.
 > 27. **Evidencia 27 (Ap. 15.1):** Panel de instancias de AWS EC2 mostrando ambas máquinas (`Servidor_FTPSSH` y `Ubuntu_FTPSSH`) en estado **`Stopped`** (**Detenido**).
 >
-> * **Nombre del único fichero a entregar:** `RA3-RA6-FTP-SSH-NombreApellidos.pdf` (ejemplo: `RA3-RA6-FTP-SSH-JoanPerez.pdf`).
+> * **Nombre del único fichero a entregar:** `RA3-FTP-SSH-NombreApellidos.pdf` (ejemplo: `RA3-FTP-SSH-JoanPerez.pdf`).
 > * **Entrega:** Subir el archivo en formato PDF a la tarea de entrega única de la unidad en **Aules** antes de la fecha límite.
 >
 >
