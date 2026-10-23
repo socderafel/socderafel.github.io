@@ -464,7 +464,25 @@ Al operar infraestructuras en entornos de nube pública (**AWS Academy / AWS Lea
 | **Network settings** | Asignar IP pública automáticamente (**Auto-assign public IP: Enable**) |
 | **Configure storage** | `30 GiB` gp3 (SSD de uso general) |
 
-3. Descargar desde la página de **AWS Academy** (botón **AWS Details** -> **Download PEM**) el archivo `labsuser.pem` (o `vockey.pem`), necesario para descifrar la contraseña del usuario `Administrator`.
+3. **Descarga de la clave privada (`.pem`) desde AWS Academy Learner Lab:**
+   * En la parte superior de la ventana del laboratorio de AWS Academy (la barra superior de Vocareum donde figuran los botones *Start Lab*, *End Lab* y el saldo), haz clic en el botón **AWS Details**.
+   * En el panel emergente que se despliega, busca la sección **SSH Key:**.
+   * Haz clic sobre el enlace/botón **Download PEM**.
+   * Se descargará en tu equipo el archivo **`labsuser.pem`** (correspondiente al par de claves `vockey` asignado en el laboratorio).
+   * 📁 **Guarda este archivo en una ubicación segura y conocida de tu ordenador** (por ejemplo, en la carpeta de la práctica o en `Descargas`). Esta clave privada RSA es **imprescindible** tanto para descifrar la contraseña del usuario `Administrator` de Windows Server como para autenticarte mediante SSH/SFTP más adelante.
+
+```text title="Ubicación del archivo labsuser.pem en AWS Academy"
++----------------------------------------------------------------------------------------------------+
+|  [Start Lab]   [End Lab]   [AWS] (círculo verde)   [AWS Details]   [$0.00 / $100.00]   [Readme]    |
++----------------------------------------------------------------------------------------------------+
+                                                           |
+                                      +--------------------+---------------------+
+                                      | Panel AWS Details:                       |
+                                      | AWS CLI: [Show]                          |
+                                      | SSH Key: [Download PEM]  <-- ¡PULSAR!    |
+                                      |          [Download PPK]                  |
+                                      +------------------------------------------+
+```
 
 > 📷 **Evidencia 1 (insertar en tu documento Word) — Realizar captura de pantalla** del resumen de creación de la instancia `Servidor_FTPSSH` en AWS EC2 mostrando su estado `Running`, el tipo de instancia y su dirección IPv4 pública.
 
@@ -541,13 +559,58 @@ Añadir las 5 reglas requeridas:
 
 ### 6.2 Conexión RDP a la instancia de Windows Server
 
-1. Comprobar que la instancia está en estado `Running` y con `2/2 checks passed` (**2/2 comprobaciones superadas**).
-2. Descargar el archivo `.rdp` desde el botón **Connect** -> pestaña **RDP client** -> **Download remote desktop file** (o abrir `mstsc`).
-3. Descifrar la contraseña de `Administrator` utilizando vuestro archivo de clave privada `vockey.pem` (o `labsuser.pem`) pulsando en **Get password**.
-4. Conectarse al escritorio remoto de Windows Server.
+Para administrar gráficamente Windows Server 2022 nos conectaremos a través del protocolo **RDP (Remote Desktop Protocol)** utilizando el cliente nativo de Windows (*Conexión a Escritorio remoto* / `mstsc`). Como las máquinas desplegadas en AWS EC2 se crean con una contraseña aleatoria y cifrada, debemos descifrarla primero utilizando la clave privada `.pem`.
 
-!!! warning "Solo para usuarios con nombre de equipo vinculado a un dominio o SICE"
-    Ir a **More choices** -> **Use a different account** e introducir `.\Administrator` en vez de solamente `Administrator`.
+#### Paso 1: Verificación de estado y tiempo de espera de inicialización
+1. En la consola de AWS -> **EC2** -> **Instances** (**Instancias**), comprueba que tu máquina `Servidor_FTPSSH` se encuentra en estado **`Running`** (**En ejecución**).
+2. Observa la columna **Status check**. Para conectarte con total garantía, lo óptimo es que muestre **`2/2 checks passed`** (**2/2 comprobaciones superadas**).
+3. ⏳ **Tiempo de inicialización de Windows (3 a 4 minutos):** Tras el arranque inicial de una máquina Windows Server en AWS, el servicio interno *EC2Launch* necesita entre 3 y 4 minutos para generar la contraseña local del usuario `Administrator` y cifrarla con la clave pública del laboratorio. Si pulsas en descifrar inmediatamente, la consola te mostrará una advertencia: *"Password is not available yet. Please wait at least 4 minutes after launching an instance."* Si esto ocurre, espera un par de minutos y refresca la ventana de la consola.
+
+#### Paso 2: Descifrado de la contraseña de Administrator en AWS
+1. Selecciona la instancia `Servidor_FTPSSH` marcando su casilla de verificación.
+2. En la barra superior de acciones, haz clic en el botón **Connect** (**Conectar**).
+3. Haz clic en la pestaña **RDP client** (**Cliente RDP**).
+4. Observa los datos de conexión asignados por AWS:
+   * **Public DNS / IP pública:** Dirección remota a la que nos conectaremos.
+   * **User name:** `Administrator`.
+5. En el campo **Password**, haz clic en el enlace/botón **Get password** (**Obtener contraseña**).
+6. En la pantalla emergente **Get Windows password**:
+   * Haz clic en el botón **Upload private key file** (**Cargar archivo de clave privada**).
+   * En el explorador de archivos, localiza y selecciona el archivo **`labsuser.pem`** (o `vockey.pem`) que descargaste en el apartado 6.0 desde el botón *AWS Details*.
+   * Verás cómo el cuadro de texto inferior se rellena automáticamente con el texto de tu clave RSA privada (`-----BEGIN RSA PRIVATE KEY----- ...`).
+   * Haz clic en el botón naranja inferior **Decrypt password** (**Descifrar contraseña**).
+7. La consola volverá a la pestaña de conexión y mostrará la contraseña descifrada en texto claro junto a un icono para copiar 📋.
+8. 📋 **Copia la contraseña descifrada** y guárdala temporalmente en un bloc de notas o tenla a mano en el portapapeles.
+
+#### Paso 3: Conexión mediante Escritorio Remoto (RDP)
+Dispones de dos métodos equivalentes para iniciar la sesión gráfica:
+
+* **Método A (Automático mediante archivo .rdp):**
+  1. En esa misma pestaña **RDP client**, haz clic en el botón **Download remote desktop file** (**Descargar archivo de escritorio remoto**).
+  2. Guarda el archivo `.rdp` en tu equipo y haz doble clic sobre él.
+  3. Pulsa en **Conectar** (**Connect**) cuando Windows te solicite confirmación de confianza.
+
+* **Método B (Manual mediante mstsc):**
+  1. En tu ordenador del aula, pulsa el atajo de teclado `Windows + R`.
+  2. Escribe `mstsc` y pulsa `Enter` para abrir la herramienta nativa *Conexión a Escritorio remoto*.
+  3. En la casilla **Equipo:**, escribe o pega la **Dirección IPv4 pública** de tu instancia `Servidor_FTPSSH` (la encontrarás en el panel de EC2).
+  4. Haz clic en **Conectar**.
+
+#### Paso 4: Autenticación e inicio de sesión
+1. Cuando Windows solicite las credenciales de acceso:
+   * **Usuario:** `Administrator`
+   * **Contraseña:** Pega la contraseña que acabas de descifrar en AWS.
+
+!!! warning "Atención al inicio de sesión en ordenadores con dominio del instituto (SICE / Dominio corporativo)"
+    Si realizas la práctica desde un equipo del aula que está integrado en un dominio corporativo o educativo, Windows asumirá por defecto que el usuario pertenece al dominio del centro (ej. `CENTRO\Administrator`). Esto provocará un fallo de credenciales erróneas.
+    
+    **Solución:** Pulsa en **Más opciones** (**More choices**) -> **Usar otra cuenta** (**Use a different account**) y escribe obligatoriamente:
+    `.\Administrator`
+    
+    *(El punto y la barra `.\` fuerzan a que la autenticación se valide localmente en la máquina virtual de Windows Server en AWS, ignorando el dominio local).*
+
+2. Si aparece una advertencia de seguridad indicando que no se puede comprobar la identidad del certificado SSL/TLS de la máquina remota (*"No se puede comprobar la identidad del equipo remoto..."*), marca la casilla **"No volver a preguntarme sobre conexiones a este equipo"** y pulsa en **Sí** (**Yes**).
+3. Se abrirá la sesión remota en pantalla completa. Tras unos segundos preparando el entorno, se mostrará el escritorio de Windows Server 2022 y se ejecutará automáticamente el panel central **Server Manager** (**Administrador del Servidor**).
 
 > 📷 **Evidencia 3 (insertar en tu documento Word) — Realizar captura de pantalla** del escritorio de Windows Server recién conectado mostrando el Administrador del Servidor (**Server Manager**).
 

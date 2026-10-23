@@ -1057,8 +1057,36 @@
 </tbody>
 </table>
 <ol start="3">
-<li>Descargar desde la página de <strong>AWS Academy</strong> (botón <strong>AWS Details</strong> -> <strong>Download PEM</strong>) el archivo <code>labsuser.pem</code> (o <code>vockey.pem</code>), necesario para descifrar la contraseña del usuario <code>Administrator</code>.</li>
+<li><strong>Descarga de la clave privada (<code>.pem</code>) desde AWS Academy Learner Lab:</strong></li>
 </ol>
+<ul>
+<li>En la parte superior de la ventana del laboratorio de AWS Academy (la barra superior de Vocareum donde figuran los botones <em>Start Lab</em>, <em>End Lab</em> y el saldo), haz clic en el botón <strong>AWS Details</strong>.</li>
+<li>En el panel emergente que se despliega, busca la sección <strong>SSH Key:</strong>.</li>
+<li>Haz clic sobre el enlace/botón <strong>Download PEM</strong>.</li>
+<li>Se descargará en tu equipo el archivo <strong><code>labsuser.pem</code></strong> (correspondiente al par de claves <code>vockey</code> asignado en el laboratorio).</li>
+<li>📁 <strong>Guarda este archivo en una ubicación segura y conocida de tu ordenador</strong> (por ejemplo, en la carpeta de la práctica o en <code>Descargas</code>). Esta clave privada RSA es <strong>imprescindible</strong> tanto para descifrar la contraseña del usuario <code>Administrator</code> de Windows Server como para autenticarte mediante SSH/SFTP más adelante.</li>
+</ul>
+<div class="terminal-box">
+  <div class="terminal-bar">
+    <div class="terminal-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-yellow"></span>
+      <span class="dot dot-green"></span>
+    </div>
+    <div class="terminal-title">Ubicación del archivo labsuser.pem en AWS Academy</div>
+    <div class="terminal-lang">text</div>
+  </div>
+  <pre><code class="language-text">+----------------------------------------------------------------------------------------------------+
+|  [Start Lab]   [End Lab]   [AWS] (círculo verde)   [AWS Details]   [$0.00 / $100.00]   [Readme]    |
++----------------------------------------------------------------------------------------------------+
+                                                           |
+                                      +--------------------+---------------------+
+                                      | Panel AWS Details:                       |
+                                      | AWS CLI: [Show]                          |
+                                      | SSH Key: [Download PEM]  &lt;-- ¡PULSAR!    |
+                                      |          [Download PPK]                  |
+                                      +------------------------------------------+</code></pre>
+</div>
 <blockquote><p>📷 <strong>Evidencia 1 (insertar en tu documento Word) — Realizar captura de pantalla</strong> del resumen de creación de la instancia <code>Servidor_FTPSSH</code> en AWS EC2 mostrando su estado <code>Running</code>, el tipo de instancia y su dirección IPv4 pública.</p></blockquote>
 <hr>
 <h3 id="6-1-preparacion-de-la-instancia-en-aws-y-apertura-de-puertos">6.1 Preparación de la instancia en AWS y apertura de puertos</h3>
@@ -1125,16 +1153,76 @@
 </div>
 <hr>
 <h3 id="6-2-conexion-rdp-a-la-instancia-de-windows-server">6.2 Conexión RDP a la instancia de Windows Server</h3>
+<p>Para administrar gráficamente Windows Server 2022 nos conectaremos a través del protocolo <strong>RDP (Remote Desktop Protocol)</strong> utilizando el cliente nativo de Windows (<em>Conexión a Escritorio remoto</em> / <code>mstsc</code>). Como las máquinas desplegadas en AWS EC2 se crean con una contraseña aleatoria y cifrada, debemos descifrarla primero utilizando la clave privada <code>.pem</code>.</p>
+<h4 id="paso-1-verificacion-de-estado-y-tiempo-de-espera-de-inicializacion">Paso 1: Verificación de estado y tiempo de espera de inicialización</h4>
 <ol>
-<li>Comprobar que la instancia está en estado <code>Running</code> y con <code>2/2 checks passed</code> (<strong>2/2 comprobaciones superadas</strong>).</li>
-<li>Descargar el archivo <code>.rdp</code> desde el botón <strong>Connect</strong> -> pestaña <strong>RDP client</strong> -> <strong>Download remote desktop file</strong> (o abrir <code>mstsc</code>).</li>
-<li>Descifrar la contraseña de <code>Administrator</code> utilizando vuestro archivo de clave privada <code>vockey.pem</code> (o <code>labsuser.pem</code>) pulsando en <strong>Get password</strong>.</li>
-<li>Conectarse al escritorio remoto de Windows Server.</li>
+<li>En la consola de AWS -> <strong>EC2</strong> -> <strong>Instances</strong> (<strong>Instancias</strong>), comprueba que tu máquina <code>Servidor_FTPSSH</code> se encuentra en estado <strong><code>Running</code></strong> (<strong>En ejecución</strong>).</li>
+<li>Observa la columna <strong>Status check</strong>. Para conectarte con total garantía, lo óptimo es que muestre <strong><code>2/2 checks passed</code></strong> (<strong>2/2 comprobaciones superadas</strong>).</li>
+<li>⏳ <strong>Tiempo de inicialización de Windows (3 a 4 minutos):</strong> Tras el arranque inicial de una máquina Windows Server en AWS, el servicio interno <em>EC2Launch</em> necesita entre 3 y 4 minutos para generar la contraseña local del usuario <code>Administrator</code> y cifrarla con la clave pública del laboratorio. Si pulsas en descifrar inmediatamente, la consola te mostrará una advertencia: <em>"Password is not available yet. Please wait at least 4 minutes after launching an instance."</em> Si esto ocurre, espera un par de minutos y refresca la ventana de la consola.</li>
 </ol>
+<h4 id="paso-2-descifrado-de-la-contrasena-de-administrator-en-aws">Paso 2: Descifrado de la contraseña de Administrator en AWS</h4>
+<ol>
+<li>Selecciona la instancia <code>Servidor_FTPSSH</code> marcando su casilla de verificación.</li>
+<li>En la barra superior de acciones, haz clic en el botón <strong>Connect</strong> (<strong>Conectar</strong>).</li>
+<li>Haz clic en la pestaña <strong>RDP client</strong> (<strong>Cliente RDP</strong>).</li>
+<li>Observa los datos de conexión asignados por AWS:</li>
+</ol>
+<ul>
+<li><strong>Public DNS / IP pública:</strong> Dirección remota a la que nos conectaremos.</li>
+<li><strong>User name:</strong> <code>Administrator</code>.</li>
+</ul>
+<ol start="5">
+<li>En el campo <strong>Password</strong>, haz clic en el enlace/botón <strong>Get password</strong> (<strong>Obtener contraseña</strong>).</li>
+<li>En la pantalla emergente <strong>Get Windows password</strong>:</li>
+</ol>
+<ul>
+<li>Haz clic en el botón <strong>Upload private key file</strong> (<strong>Cargar archivo de clave privada</strong>).</li>
+<li>En el explorador de archivos, localiza y selecciona el archivo <strong><code>labsuser.pem</code></strong> (o <code>vockey.pem</code>) que descargaste en el apartado 6.0 desde el botón <em>AWS Details</em>.</li>
+<li>Verás cómo el cuadro de texto inferior se rellena automáticamente con el texto de tu clave RSA privada (<code>-----BEGIN RSA PRIVATE KEY----- ...</code>).</li>
+<li>Haz clic en el botón naranja inferior <strong>Decrypt password</strong> (<strong>Descifrar contraseña</strong>).</li>
+</ul>
+<ol start="7">
+<li>La consola volverá a la pestaña de conexión y mostrará la contraseña descifrada en texto claro junto a un icono para copiar 📋.</li>
+<li>📋 <strong>Copia la contraseña descifrada</strong> y guárdala temporalmente en un bloc de notas o tenla a mano en el portapapeles.</li>
+</ol>
+<h4 id="paso-3-conexion-mediante-escritorio-remoto-rdp">Paso 3: Conexión mediante Escritorio Remoto (RDP)</h4>
+<p>Dispones de dos métodos equivalentes para iniciar la sesión gráfica:</p>
+<ul>
+<li><strong>Método A (Automático mediante archivo .rdp):</strong></li>
+</ul>
+<ol>
+<li>En esa misma pestaña <strong>RDP client</strong>, haz clic en el botón <strong>Download remote desktop file</strong> (<strong>Descargar archivo de escritorio remoto</strong>).</li>
+<li>Guarda el archivo <code>.rdp</code> en tu equipo y haz doble clic sobre él.</li>
+<li>Pulsa en <strong>Conectar</strong> (<strong>Connect</strong>) cuando Windows te solicite confirmación de confianza.</li>
+</ol>
+<ul>
+<li><strong>Método B (Manual mediante mstsc):</strong></li>
+</ul>
+<ol>
+<li>En tu ordenador del aula, pulsa el atajo de teclado <code>Windows + R</code>.</li>
+<li>Escribe <code>mstsc</code> y pulsa <code>Enter</code> para abrir la herramienta nativa <em>Conexión a Escritorio remoto</em>.</li>
+<li>En la casilla <strong>Equipo:</strong>, escribe o pega la <strong>Dirección IPv4 pública</strong> de tu instancia <code>Servidor_FTPSSH</code> (la encontrarás en el panel de EC2).</li>
+<li>Haz clic en <strong>Conectar</strong>.</li>
+</ol>
+<h4 id="paso-4-autenticacion-e-inicio-de-sesion">Paso 4: Autenticación e inicio de sesión</h4>
+<ol>
+<li>Cuando Windows solicite las credenciales de acceso:</li>
+</ol>
+<ul>
+<li><strong>Usuario:</strong> <code>Administrator</code></li>
+<li><strong>Contraseña:</strong> Pega la contraseña que acabas de descifrar en AWS.</li>
+</ul>
 <div class="admonition warning">
-<p class="admonition-title">Solo para usuarios con nombre de equipo vinculado a un dominio o SICE</p>
-<p>Ir a <strong>More choices</strong> -> <strong>Use a different account</strong> e introducir <code>.\Administrator</code> en vez de solamente <code>Administrator</code>.</p>
+<p class="admonition-title">Atención al inicio de sesión en ordenadores con dominio del instituto (SICE / Dominio corporativo)</p>
+<p>Si realizas la práctica desde un equipo del aula que está integrado en un dominio corporativo o educativo, Windows asumirá por defecto que el usuario pertenece al dominio del centro (ej. <code>CENTRO\Administrator</code>). Esto provocará un fallo de credenciales erróneas.</p>
+<p><strong>Solución:</strong> Pulsa en <strong>Más opciones</strong> (<strong>More choices</strong>) -> <strong>Usar otra cuenta</strong> (<strong>Use a different account</strong>) y escribe obligatoriamente:</p>
+<p><code>.\Administrator</code></p>
+<p><em>(El punto y la barra <code>.\</code> fuerzan a que la autenticación se valide localmente en la máquina virtual de Windows Server en AWS, ignorando el dominio local).</em></p>
 </div>
+<ol start="2">
+<li>Si aparece una advertencia de seguridad indicando que no se puede comprobar la identidad del certificado SSL/TLS de la máquina remota (<em>"No se puede comprobar la identidad del equipo remoto..."</em>), marca la casilla <strong>"No volver a preguntarme sobre conexiones a este equipo"</strong> y pulsa en <strong>Sí</strong> (<strong>Yes</strong>).</li>
+<li>Se abrirá la sesión remota en pantalla completa. Tras unos segundos preparando el entorno, se mostrará el escritorio de Windows Server 2022 y se ejecutará automáticamente el panel central <strong>Server Manager</strong> (<strong>Administrador del Servidor</strong>).</li>
+</ol>
 <blockquote><p>📷 <strong>Evidencia 3 (insertar en tu documento Word) — Realizar captura de pantalla</strong> del escritorio de Windows Server recién conectado mostrando el Administrador del Servidor (<strong>Server Manager</strong>).</p></blockquote>
 <hr>
 <h3 id="6-3-instalacion-del-rol-servidor-ftp-iis-y-servidor-openssh">6.3 Instalación del rol Servidor FTP (IIS) y Servidor OpenSSH</h3>
