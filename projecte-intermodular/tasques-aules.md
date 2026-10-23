@@ -22,7 +22,7 @@ Aquesta secció recull l'enunciat oficial, els passos detallats a seguir a class
 | **Tasca 1** | [El Logotip Digital de la teua Empresa](#-tasca-1-el-logotip-digital-de-la-teua-empresa) | Dijous, 24/09/2026 | Dijous, 01/10/2026 | UP1 | **10,0 punts** |
 | **Tasca 2** | [Identitat Corporativa i Paper de Carta amb Writer (RA2)](#-tasca-2-identitat-corporativa-i-paper-de-carta-amb-libreoffice-writer-ra2) | Divendres, 02/10/2026 | Divendres, 09/10/2026 | UP2 | **10,0 punts** |
 | **Tasca 3** | [Manual de Prevenció de Riscos Laborals i Ergonomia (PRL) (RA4 i RA5)](#-tasca-3-manual-de-prevenci%C3%B3-de-riscos-laborals-i-ergonomia-prl-ra4-i-ra5) | Dijous, 22/10/2026 | Dijous, 05/11/2026 | UP3 | **10,0 punts** |
-| **Tasca 4** | Presentació Multimèdia i Defensa Oral Inicial (Impress) | *Pròximament* | *Pròximament* | UP4 | **10,0 punts** |
+| **Tasca 4** | [Presentació Multimèdia i Defensa Oral Inicial (Impress) (RA1 i RA5)](#-tasca-4-presentació-multimèdia-i-defensa-oral-inicial-impress-ra1-i-ra5) | Divendres, 06/11/2026 | Divendres, 27/11/2026 | UP4 | **10,0 punts** |
 
 ---
 
@@ -231,4 +231,99 @@ Per a completar el lliurament obligatori de la **Tasca 3**, has de realitzar due
 | **3. Seguretat elèctrica al taller**<br>*(Pes: 20% - 2,0 punts)* | Llista amb vinyetes que recull almenys 3 mesures de seguretat elèctrica essencials (desconnexió de xarxa, fonts d'alimentació i cables/preses de terra). | Identifica 3 normes de seguretat elèctrica correctes, encara que les explicacions són molt curtes. | Només esmenta 1 o 2 normes elèctriques de manera superficial. | No tracta la seguretat elèctrica o conté afirmacions incorrectes o perilloses per al taller. |
 | **4. Taula d'EPIs i protecció ESD**<br>*(Pes: 20% - 2,0 punts)* | Taula ordenada de 3 columnes amb els 3 equips de protecció (polsera ESD, guants/ulleres i reposapeus) amb capçalera corporativa ressaltada. | Taula present amb els 3 elements, amb xicotets desajusts d'alineació o format de capçalera. | Informació presentada sense format de taula o només amb 1 o 2 elements de protecció. | No inclou els equips de protecció individual ni la prevenció d'electroestàtica ESD. |
 | **5. Ortografia (F7), PDF i Text a Aules**<br>*(Pes: 15% - 1,5 punts)* | Document lliurat en format `.pdf` correctament anomenat (`Manual_PRL_Nom.pdf`), text revisat sense faltes greus i resposta reflexiva completada a Aules. | Lliura en PDF ben anomenat amb bona ortografia, però no respon el text a Aules o el nom té errades menors. | Lliura en format editable (`.odt`) sense exportar a PDF o té nombroses faltes ortogràfiques sense revisar. | Fitxer il·legible, danyat o sense nom d'alumne ni identificació. |
+
+---
+
+## 🎤 Tasca 4: Presentació Multimèdia i Defensa Oral Inicial (Impress) (RA1 i RA5)
+
+> **🗓️ Terminis Oficials a Aules:**
+> - **S'ha obert el:** divendres, 6 de novembre 2026, 00:00
+> - **Venciment:** divendres, 27 de novembre 2026, 23:59
+
+### 🎤 FASE 4: La Posada en Escena de la teua Empresa Informàtica
+
+En un entorn laboral real, un bon tècnic informàtic no només ha de saber muntar un equip, canviar una font d'alimentació o redactar un pressupost: **ha de saber explicar el seu treball amb claredat, seguretat i professionalitat**.
+
+Amb aquesta **Tasca 4** culminem el bloc de la **1a Avaluació**:
+1. Dissenyaràs una presentació corporativa de **4 diapositives clau amb LibreOffice Impress**.
+2. Incorporaràs vocabulari tècnic informàtic estàndard en anglès (*hardware*, *backup*, *troubleshooting*).
+3. Realitzaràs una **defensa oral de 5 minuts** davant de la pissarra digital interactiva explicant el teu projecte als companys i professors.
+
+---
+
+### 🎯 Què has de fer a classe? (Pas a pas)
+
+#### 1️⃣ Pas 1: Configuració de la presentació a LibreOffice Impress
+1. Obre **LibreOffice Impress**.
+2. Tria un disseny net o plantilla en format panoràmic (**16:9**).
+3. Aplica com a fons o línies decoratives els **colors corporatius** de la teua empresa (els que vas definir a la Tasca 1).
+
+#### 2️⃣ Pas 2: Creació de les 4 diapositives clau
+Crea exactament **4 diapositives** seguint aquesta estructura de contingut:
+
+- **Diapositiva 1 — Portada Oficial:**
+  - El teu **logotip gran** amb fons transparent (`.png`).
+  - Nom comercial de la teua empresa (ex: *NovaElectro*, *Secret Cam*, *Hot Dog Computers*...).
+  - Un **lema comercial atractiu** (*eslògan*, ex: *"El teu taller de confiança a Catadau"*).
+  - El teu nom i cognoms com a *Director/a Tècnic/a* o *Fundador/a*.
+
+- **Diapositiva 2 — Identitat de Marca i Colors:**
+  - Per què vas triar aquest nom comercial? Què transmet?
+  - Mostra la paleta dels teus **2 o 3 colors corporatius** explicant el seu significat.
+  - Els valors diferencials de la teua empresa (rapidesa, preus transparents, compromís de reciclatge).
+
+- **Diapositiva 3 — Els 3 Serveis Tècnics Estrella i Pressupost:**
+  - Llista els teus **3 serveis principals** (ex: *Muntatge de PC a mida i actualització de SSD*, *Neteja de virus i optimització de sistema operatiu*, *Reparació de pantalles i connectors*).
+  - Afig una captura nítida del **Model de Pressupost** que vas crear a la Tasca 2.
+  - **Vocabulari tècnic en anglès:** Utilitza a la diapositiva termes estàndards com `Hardware`, `Storage (SSD/HDD)`, `Backup` o `Troubleshooting`.
+
+- **Diapositiva 4 — Seguretat al Taller, Contacte i Tancament:**
+  - **Seguretat i PRL:** 2 consells ràpids del teu manual (ex: ús de polsera antiestàtica ESD i postura ergonòmica).
+  - **Dades de contacte:** Adreça del taller, telèfon, correu electrònic i horari d'obertura.
+  - Frase final d'agraïment: *"Gràcies per la vostra atenció. Teniu alguna pregunta?"*.
+
+#### 3️⃣ Pas 3: Aplicació de la Regla 6x6 (Disseny Professional)
+Per a no avorrir el públic:
+- **Màxim 6 línies de text** per diapositiva.
+- **Màxim 6 paraules** per línia (resumir en punts clau o vinyetes, mai paràgrafs llargs).
+- Lletra gran i visible: Títols a **32-40 pt**, text a **20-24 pt**.
+
+#### 4️⃣ Pas 4: Assaig de la Defensa Oral (Temps: 5 minuts)
+Assaja l'exposició davant de la pantalla abans de defensar-la davant dels companys:
+- **Minut 1:** Presentació de la teua marca, logo i equip.
+- **Minuts 2-3:** Explicació de la identitat, colors i serveis tècnics principals.
+- **Minut 4:** Seguretat al taller, ús de termes en anglès i dades de contacte.
+- **Minut 5:** Conclusions i torn de preguntes del professor i companys.
+- *Consell clau:* Mira sempre a l'audiència, parla amb to clar i segur, i evita girar-te per a llegir el text de la pantalla.
+
+#### 5️⃣ Pas 5: Guardar i Exportar
+1. Guarda el fitxer editable en format `.odp`:  
+   📁 **`Presentacio_Marca_ElTeuNom.odp`**
+2. Exporta la presentació a format PDF: `Fitxer > Exporta com a > Exporta com a PDF...`:  
+   📄 **`Presentacio_Marca_ElTeuNom.pdf`**
+
+---
+
+### 📦 Què has de lliurar ací a Aules?
+
+Per a completar el lliurament obligatori de la **Tasca 4**, has de realitzar dues accions:
+
+1. **Adjunta el fitxer de la presentació:**
+   - 📑 Puja l'arxiu `.odp` o `.pdf` anomenat: `Presentacio_Marca_ElTeuNom.odp` (o `.pdf`).
+2. **Escriu en el quadre de text d'Aules:**
+   - **Nom oficial de la teua empresa:** *(Exemple: "NovaElectro")*.
+   - **Termes tècnics en anglès:** Escriu els **3 termes tècnics en anglès** que has utilitzat i la seua traducció o explicació en valencià *(Exemple: "1. Hardware = components físics de l'equip; 2. Backup = còpia de seguretat; 3. Troubleshooting = diagnòstic i resolució d'avaries")*.
+
+---
+
+### 📊 Rúbrica Oficial d'Avaluació — Tasca 4 (Pes: 10,0 punts)
+
+| Criteri d'Avaluació | Excel·lent (100%) | Notable (75%) | Suficient (50%) | Insuficient (25% - 0%) |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Disseny visual i estructura (Impress)**<br>*(Pes: 25% - 2,5 punts)* | Presentació de 4 diapositives clares, en format panoràmic 16:9, amb el logotip transparent de l'alumne/a i colors corporatius homogenis. | 4 diapositives amb bona estructura, amb algun xicotet desajust de color o logo amb fons tapat. | Falta alguna diapositiva (3 de 4) o el disseny és molt bàsic i sense personalització. | Menys de 3 diapositives, disseny desordenat o il·legible. |
+| **2. Síntesi de continguts i Regla 6x6**<br>*(Pes: 20% - 2,0 punts)* | Punts clau esquemàtics, sense blocs densos de text, amb imatges netes i captura del pressupost o PRL ben integrada. | Text sintètic, encara que alguna diapositiva té massa text o tipografia xicoteta. | Paràgrafs copiats que fan feixuga la lectura de la diapositiva. | Text excessiu, desbordat o copiat directament sense resumir. |
+| **3. Vocabulari tècnic en anglès**<br>*(Pes: 20% - 2,0 punts)* | Utilitza correctament almenys 3 termes tècnics en anglès (*hardware, backup, storage, troubleshooting...*) a les diapositives i a l'exposició. | Utilitza 2 termes en anglès correctes o amb explicació senzilla. | Només utilitza 1 terme en anglès o la pronunciació/significat és incorrecte. | No utilitza cap terme tècnic en anglès ni en fa referència. |
+| **4. Defensa oral i control del temps (5 min)**<br>*(Pes: 25% - 2,5 punts)* | Exposició fluida ajustada a 4-5 minuts, bona modulació de veu, postura segura, contacte visual i sense limitar-se a llegir. | Bona defensa oral, ajustada a temps (3-4 minuts), amb alguna indecisió o excés de lectura de pantalla. | Exposició massa curta (menys de 2 minuts) o lectura literal contínua de les diapositives. | L'alumne/a no defensa la presentació o es nega a parlar davant del grup. |
+| **5. Fitxer i Text en línia a Aules**<br>*(Pes: 10% - 1,0 punt)* | Arxiu lliurat a temps amb nom correcte (`Presentacio_Marca_Nom.odp`/`.pdf`) i text a Aules emplenat amb els termes en anglès. | Lliura el fitxer correcte però oblida emplenar el text a Aules o comet errades en la nomenclatura. | Lliura fora de termini o amb un format incorrecte. | No lliura cap arxiu a Aules. |
+
 
