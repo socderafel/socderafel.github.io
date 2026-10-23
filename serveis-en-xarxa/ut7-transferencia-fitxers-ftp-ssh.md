@@ -475,22 +475,29 @@ Al operar infraestructuras en entornos de nube pública (**AWS Academy / AWS Lea
 |---|---|
 | **Name (Nombre)** | `Servidor_FTPSSH` |
 | **Application and OS Images (AMI)** | `Microsoft Windows Server 2022 Base` (64 bits x86) |
-| **Instance type (Tipo de instancia)** | `t2.medium` o `t3.medium` (2 vCPU, 4 GiB RAM — ver aviso importante sobre capa gratuita abajo) |
+| **Instance type (Tipo de instancia)** | **`t3.small`** (Recomendado — 2 vCPU, 2 GiB RAM, **Apto para la capa gratuita**) o **`t3.medium`** (2 vCPU, 4 GiB RAM) |
 | **Key pair (login)** | `vockey` (par de claves RSA `.pem` proporcionado por AWS Academy) |
 | **Network settings** | Asignar IP pública automáticamente (**Auto-assign public IP: Enable**) |
 | **Configure storage** | `30 GiB` gp3 (SSD de uso general) |
 
-> ⚠️ **Aviso importante sobre el mensaje «No apto para la capa gratuita» y el saldo en AWS Academy**
+> 💡 **Elección del tipo de instancia en Windows Server: t3.small vs t3.medium y la Capa Gratuita**
 >
-> Al seleccionar el tipo de instancia `t2.medium` (o `t3.medium`), la consola de AWS mostrará una advertencia indicando que **no forma parte de la capa gratuita (*Free Tier*)**. ¡No os preocupéis ni cambiéis el tipo de instancia a `t2.micro`!
+> En el desplegable de **Instance type**, AWS muestra varias opciones de la familia moderna `t3` (con procesadores más rápidos y 2 vCPU):
 >
-> * **¿Por qué Windows Server requiere t2.medium o t3.medium?** Windows Server 2022 con interfaz gráfica necesita al menos 2 vCPU y 4 GiB de memoria RAM para funcionar con normalidad. Si intentáis forzar una máquina `t2.micro` (que solo dispone de 1 GiB de RAM), la instancia tardará más de 15 minutos en arrancar, el panel Server Manager colapsará por falta de memoria RAM y la sesión de Escritorio Remoto (RDP) se congelará continuamente.
-> * **¿Nos cobrarán dinero de nuestra tarjeta? ¡NO!** En los cursos de **AWS Academy Learner Lab**, no hay ninguna tarjeta de crédito introducida. La cuenta dispone de una bolsa de crédito educativo promocional (habitualmente **$50 o $100 dólares**) que cubre con creces todo el curso.
-> * **¿Cuánto saldo consume?** Una máquina `t2.medium` cuesta unos **$0,046 por hora**. Si hacéis una sesión de clase de 2 horas seguidas, apenas consumirá **$0,09** (unos 9 céntimos de dólar de los 50$ disponibles).
-> * **Buenas prácticas:** Lo único crucial es recordar poner la instancia en estado **Stop instance** (**Detener instancia**) al finalizar la clase o cuando no estéis trabajando, para que no consuma saldo mientras el ordenador esté apagado.
+> * **Opción recomendada con Capa Gratuita: `t3.small`**
+>   * Cuenta con **2 vCPU y 2 GiB de memoria RAM**.
+>   * Viene identificada explícitamente con la etiqueta **«Apto para la capa gratuita»** (*Free tier eligible*).
+>   * Cumple los requisitos oficiales de Windows Server 2022 y permite a los alumnos trabajar con total tranquilidad al ver el distintivo de capa gratuita.
+> * **Opción de máximo rendimiento: `t3.medium`**
+>   * Cuenta con **2 vCPU y 4 GiB de memoria RAM**.
+>   * Aunque no lleva la etiqueta de capa gratuita, en AWS Academy su coste es de apenas **0,06 $ / hora**, lo que se descuenta del saldo educativo promocional de 50$ (sin coste real en tarjeta). Ofrece una fluidez gráfica excelente al abrir simultáneamente Server Manager, IIS y PowerShell.
 >
-> *(En cambio, para la máquina virtual de **Ubuntu Server** del Apartado 12 sí utilizaremos `t2.micro` con la etiqueta verde de capa gratuita, ya que Linux por terminal consume menos de 200 MB de RAM).*
+> > ⚠️ **¡Evitar t3.nano y t3.micro en Windows Server!**
+> > Aunque `t3.micro` también figure como apta para la capa gratuita, solo dispone de **1 GiB de RAM**. Windows Server 2022 con interfaz gráfica colapsará por falta de memoria RAM: tardará una eternidad en arrancar, el Administrador del Servidor fallará y la sesión RDP se congelará.
 >
+
+![Opciones de tipo de instancia t3 en AWS EC2 mostrando t3.small y t3.micro como aptas para la capa gratuita](./07_Transferencia_Ficheros_FTP_SSH/imagenes/00c_selector_tipo_instancia_t3_capa_gratuita.png)
+*Figura 0b: Desplegable de tipos de instancia en AWS EC2, mostrando t3.small (2 vCPU, 2 GiB) con la etiqueta Apto para la capa gratuita.*
 
 3. **Descarga de la clave privada (`.pem`) desde AWS Academy Learner Lab:**
    * En la parte superior de la ventana del laboratorio de AWS Academy (la barra superior de Vocareum donde figuran los botones *Start Lab*, *End Lab* y el saldo), haz clic en el botón **AWS Details**.
@@ -1522,7 +1529,7 @@ Una vez completadas y verificadas todas las prácticas sobre Windows Server, pas
 |---|---|
 | **Name (Nombre)** | `Ubuntu_FTPSSH` |
 | **Application and OS Images (AMI)** | `Ubuntu Server 24.04 LTS (HVM), SSD Volume Type` (64 bits x86) |
-| **Instance type (Tipo de instancia)** | `t2.micro` o `t3.micro` (1 vCPU, 1 GiB RAM — Apto para la capa gratuita) |
+| **Instance type (Tipo de instancia)** | `t3.micro` (Recomendado — 2 vCPU, 1 GiB RAM, **Apto para la capa gratuita**) o `t2.micro` |
 | **Key pair (login)** | `vockey` (o par de claves del laboratorio) |
 | **Network settings (Security group)** | Seleccionar **Select existing security group** y elegir **`grup-servidors-ftp-ssh`** (creado en el apartado 6.1) |
 | **Configure storage** | `8 GiB` o `10 GiB` gp3 (SSD) |

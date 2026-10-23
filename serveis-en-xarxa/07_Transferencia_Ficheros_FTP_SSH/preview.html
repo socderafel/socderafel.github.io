@@ -1040,7 +1040,7 @@
 </tr>
 <tr>
 <td><strong>Instance type (Tipo de instancia)</strong></td>
-<td><code>t2.medium</code> o <code>t3.medium</code> (2 vCPU, 4 GiB RAM — ver aviso importante sobre capa gratuita abajo)</td>
+<td><strong><code>t3.small</code></strong> (Recomendado — 2 vCPU, 2 GiB RAM, <strong>Apto para la capa gratuita</strong>) o <strong><code>t3.medium</code></strong> (2 vCPU, 4 GiB RAM)</td>
 </tr>
 <tr>
 <td><strong>Key pair (login)</strong></td>
@@ -1056,17 +1056,22 @@
 </tr>
 </tbody>
 </table>
-<div class="admonition warning">
-<p class="admonition-title">Aviso importante sobre el mensaje «No apto para la capa gratuita» y el saldo en AWS Academy</p>
-<p>Al seleccionar el tipo de instancia <code>t2.medium</code> (o <code>t3.medium</code>), la consola de AWS mostrará una advertencia indicando que <strong>no forma parte de la capa gratuita (<em>Free Tier</em>)</strong>. ¡No os preocupéis ni cambiéis el tipo de instancia a <code>t2.micro</code>!</p>
+<div class="admonition tip">
+<p class="admonition-title">Elección del tipo de instancia en Windows Server: t3.small vs t3.medium y la Capa Gratuita</p>
+<p>En el desplegable de <strong>Instance type</strong>, AWS muestra varias opciones de la familia moderna <code>t3</code> (con procesadores más rápidos y 2 vCPU):</p>
 <ul>
-<li><strong>¿Por qué Windows Server requiere t2.medium o t3.medium?</strong> Windows Server 2022 con interfaz gráfica necesita al menos 2 vCPU y 4 GiB de memoria RAM para funcionar con normalidad. Si intentáis forzar una máquina <code>t2.micro</code> (que solo dispone de 1 GiB de RAM), la instancia tardará más de 15 minutos en arrancar, el panel Server Manager colapsará por falta de memoria RAM y la sesión de Escritorio Remoto (RDP) se congelará continuamente.</li>
-<li><strong>¿Nos cobrarán dinero de nuestra tarjeta? ¡NO!</strong> En los cursos de <strong>AWS Academy Learner Lab</strong>, no hay ninguna tarjeta de crédito introducida. La cuenta dispone de una bolsa de crédito educativo promocional (habitualmente <strong>$50 o $100 dólares</strong>) que cubre con creces todo el curso.</li>
-<li><strong>¿Cuánto saldo consume?</strong> Una máquina <code>t2.medium</code> cuesta unos <strong>$0,046 por hora</strong>. Si hacéis una sesión de clase de 2 horas seguidas, apenas consumirá <strong>$0,09</strong> (unos 9 céntimos de dólar de los 50$ disponibles).</li>
-<li><strong>Buenas prácticas:</strong> Lo único crucial es recordar poner la instancia en estado <strong>Stop instance</strong> (<strong>Detener instancia</strong>) al finalizar la clase o cuando no estéis trabajando, para que no consuma saldo mientras el ordenador esté apagado.</li>
+<li><strong>Opción recomendada con Capa Gratuita: <code>t3.small</code></strong></li>
+<li>Cuenta con <strong>2 vCPU y 2 GiB de memoria RAM</strong>.</li>
+<li>Viene identificada explícitamente con la etiqueta <strong>«Apto para la capa gratuita»</strong> (<em>Free tier eligible</em>).</li>
+<li>Cumple los requisitos oficiales de Windows Server 2022 y permite a los alumnos trabajar con total tranquilidad al ver el distintivo de capa gratuita.</li>
+<li><strong>Opción de máximo rendimiento: <code>t3.medium</code></strong></li>
+<li>Cuenta con <strong>2 vCPU y 4 GiB de memoria RAM</strong>.</li>
+<li>Aunque no lleva la etiqueta de capa gratuita, en AWS Academy su coste es de apenas <strong>0,06 $ / hora</strong>, lo que se descuenta del saldo educativo promocional de 50$ (sin coste real en tarjeta). Ofrece una fluidez gráfica excelente al abrir simultáneamente Server Manager, IIS y PowerShell.</li>
 </ul>
-<p><em>(En cambio, para la máquina virtual de <strong>Ubuntu Server</strong> del Apartado 12 sí utilizaremos <code>t2.micro</code> con la etiqueta verde de capa gratuita, ya que Linux por terminal consume menos de 200 MB de RAM).</em></p>
+<blockquote><p>⚠️ <strong>¡Evitar t3.nano y t3.micro en Windows Server!</strong></p></blockquote>
+<blockquote><p>Aunque <code>t3.micro</code> también figure como apta para la capa gratuita, solo dispone de <strong>1 GiB de RAM</strong>. Windows Server 2022 con interfaz gráfica colapsará por falta de memoria RAM: tardará una eternidad en arrancar, el Administrador del Servidor fallará y la sesión RDP se congelará.</p></blockquote>
 </div>
+<figure><img src="imagenes/00c_selector_tipo_instancia_t3_capa_gratuita.png" alt="Opciones de tipo de instancia t3 en AWS EC2 mostrando t3.small y t3.micro como aptas para la capa gratuita"><figcaption><strong>Figura 0b: </strong>Desplegable de tipos de instancia en AWS EC2, mostrando t3.small (2 vCPU, 2 GiB) con la etiqueta Apto para la capa gratuita.</figcaption></figure>
 <ol start="3">
 <li><strong>Descarga de la clave privada (<code>.pem</code>) desde AWS Academy Learner Lab:</strong></li>
 </ol>
@@ -2146,7 +2151,7 @@ Get-Content .\fichero_recuperado.txt</code></pre>
 </tr>
 <tr>
 <td><strong>Instance type (Tipo de instancia)</strong></td>
-<td><code>t2.micro</code> o <code>t3.micro</code> (1 vCPU, 1 GiB RAM — Apto para la capa gratuita)</td>
+<td><code>t3.micro</code> (Recomendado — 2 vCPU, 1 GiB RAM, <strong>Apto para la capa gratuita</strong>) o <code>t2.micro</code></td>
 </tr>
 <tr>
 <td><strong>Key pair (login)</strong></td>
