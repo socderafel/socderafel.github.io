@@ -1061,11 +1061,12 @@
 </ol>
 <ul>
 <li>En la parte superior de la ventana del laboratorio de AWS Academy (la barra superior de Vocareum donde figuran los botones <em>Start Lab</em>, <em>End Lab</em> y el saldo), haz clic en el botón <strong>AWS Details</strong>.</li>
-<li>En el panel emergente que se despliega, busca la sección <strong>SSH Key:</strong>.</li>
-<li>Haz clic sobre el enlace/botón <strong>Download PEM</strong>.</li>
+<li>En el panel emergente lateral derecho que se despliega (<strong>Cloud Access</strong>), busca la sección <strong>SSH key:</strong>.</li>
+<li>Haz clic sobre el botón <strong>Download PEM</strong>.</li>
 <li>Se descargará en tu equipo el archivo <strong><code>labsuser.pem</code></strong> (correspondiente al par de claves <code>vockey</code> asignado en el laboratorio).</li>
 <li>📁 <strong>Guarda este archivo en una ubicación segura y conocida de tu ordenador</strong> (por ejemplo, en la carpeta de la práctica o en <code>Descargas</code>). Esta clave privada RSA es <strong>imprescindible</strong> tanto para descifrar la contraseña del usuario <code>Administrator</code> de Windows Server como para autenticarte mediante SSH/SFTP más adelante.</li>
 </ul>
+<figure><img src="imagenes/00b_aws_details_download_pem.png" alt="Ubicación del botón AWS Details y descarga de la clave labsuser.pem en AWS Academy"><figcaption><strong>Figura 0: </strong>Panel Cloud Access abierto tras pulsar en AWS Details en la barra superior de AWS Academy, mostrando el botón Download PEM para obtener el archivo labsuser.pem.</figcaption></figure>
 <div class="terminal-box">
   <div class="terminal-bar">
     <div class="terminal-dots">
@@ -1081,9 +1082,9 @@
 +----------------------------------------------------------------------------------------------------+
                                                            |
                                       +--------------------+---------------------+
-                                      | Panel AWS Details:                       |
+                                      | Panel AWS Details (Cloud Access):        |
                                       | AWS CLI: [Show]                          |
-                                      | SSH Key: [Download PEM]  &lt;-- ¡PULSAR!    |
+                                      | SSH key: [Download PEM]  &lt;-- ¡PULSAR!    |
                                       |          [Download PPK]                  |
                                       +------------------------------------------+</code></pre>
 </div>
@@ -1164,44 +1165,56 @@
 <ol>
 <li>Selecciona la instancia <code>Servidor_FTPSSH</code> marcando su casilla de verificación.</li>
 <li>En la barra superior de acciones, haz clic en el botón <strong>Connect</strong> (<strong>Conectar</strong>).</li>
-<li>Haz clic en la pestaña <strong>RDP client</strong> (<strong>Cliente RDP</strong>).</li>
+<li>Haz clic en la pestaña <strong>RDP client</strong> (<strong>Cliente RDP</strong> o <strong>RDP (protocolo de escritorio remoto)</strong>).</li>
 <li>Observa los datos de conexión asignados por AWS:</li>
 </ol>
 <ul>
-<li><strong>Public DNS / IP pública:</strong> Dirección remota a la que nos conectaremos.</li>
-<li><strong>User name:</strong> <code>Administrator</code>.</li>
+<li><strong>DNS público / IP pública:</strong> Dirección remota a la que nos conectaremos.</li>
+<li><strong>Nombre de usuario:</strong> <code>Administrator</code>.</li>
+<li><strong>Contraseña:</strong> Enlace para obtener la clave descifrada.</li>
 </ul>
+<figure><img src="imagenes/10b_ec2_rdp_client_tab.png" alt="Pestaña RDP en Conectarse a la instancia mostrando DNS público, usuario Administrator y enlace para obtener contraseña"><figcaption><strong>Figura 9b: </strong>Pestaña RDP (protocolo de escritorio remoto) en la consola de AWS EC2 para conectar con Windows Server.</figcaption></figure>
 <ol start="5">
-<li>En el campo <strong>Password</strong>, haz clic en el enlace/botón <strong>Get password</strong> (<strong>Obtener contraseña</strong>).</li>
-<li>En la pantalla emergente <strong>Get Windows password</strong>:</li>
+<li>En el campo <strong>Contraseña</strong> (<strong>Password</strong>), haz clic en el enlace azul <strong>Obtener la contraseña de Windows</strong> (<strong>Get password</strong>).</li>
+<li>En la pantalla emergente <strong>Obtener la contraseña de Windows</strong>:</li>
 </ol>
 <ul>
-<li>Haz clic en el botón <strong>Upload private key file</strong> (<strong>Cargar archivo de clave privada</strong>).</li>
-<li>En el explorador de archivos, localiza y selecciona el archivo <strong><code>labsuser.pem</code></strong> (o <code>vockey.pem</code>) que descargaste en el apartado 6.0 desde el botón <em>AWS Details</em>.</li>
-<li>Verás cómo el cuadro de texto inferior se rellena automáticamente con el texto de tu clave RSA privada (<code>-----BEGIN RSA PRIVATE KEY----- ...</code>).</li>
-<li>Haz clic en el botón naranja inferior <strong>Decrypt password</strong> (<strong>Descifrar contraseña</strong>).</li>
+<li>Haz clic en el botón <strong>Cargar archivo de clave privada</strong> (<strong>Upload private key file</strong>).</li>
+<li>En el explorador de archivos de tu ordenador, localiza y selecciona el archivo <strong><code>labsuser.pem</code></strong> (o <code>vockey.pem</code>) que descargaste en el apartado 6.0 desde el botón <em>AWS Details</em>.</li>
+<li>Verás cómo el cuadro de texto inferior se rellena automáticamente con el texto de tu clave RSA privada (<code>-----BEGIN RSA PRIVATE KEY----- ...</code>) y se muestra la etiqueta con el nombre del archivo cargado.</li>
+<li>Haz clic en el botón naranja inferior <strong>Descifrar contraseña</strong> (<strong>Decrypt password</strong>).</li>
 </ul>
+<figure><img src="imagenes/10c_ec2_upload_pem_decrypt.png" alt="Carga del archivo labsuser.pem y botón Descifrar contraseña en AWS EC2"><figcaption><strong>Figura 9c: </strong>Carga del archivo labsuser.pem en el asistente de AWS EC2 y botón naranja Descifrar contraseña.</figcaption></figure>
 <ol start="7">
-<li>La consola volverá a la pestaña de conexión y mostrará la contraseña descifrada en texto claro junto a un icono para copiar 📋.</li>
-<li>📋 <strong>Copia la contraseña descifrada</strong> y guárdala temporalmente en un bloc de notas o tenla a mano en el portapapeles.</li>
+<li>La consola abrirá una ventana emergente mostrando los datos finales de acceso:</li>
 </ol>
+<ul>
+<li><strong>Nombre de usuario:</strong> <code>Administrator</code>.</li>
+<li><strong>Contraseña:</strong> La contraseña alfanumérica descifrada (con caracteres especiales).</li>
+</ul>
+<ol start="8">
+<li>📋 <strong>Copia la contraseña descifrada</strong> pulsando en el icono del portapapeles y pulsa en el botón naranja <strong>Aceptar</strong>. Guárdala temporalmente en un bloc de notas o mantenla en el portapapeles.</li>
+</ol>
+<figure><img src="imagenes/10d_ec2_password_decrypted.png" alt="Ventana emergente con el usuario Administrator y la contraseña descifrada lista para copiar"><figcaption><strong>Figura 9d: </strong>Ventana emergente en AWS con la contraseña de Administrator descifrada y lista para copiar con el icono del portapapeles.</figcaption></figure>
 <h4 id="paso-3-conexion-mediante-escritorio-remoto-rdp">Paso 3: Conexión mediante Escritorio Remoto (RDP)</h4>
 <p>Dispones de dos métodos equivalentes para iniciar la sesión gráfica:</p>
 <ul>
 <li><strong>Método A (Automático mediante archivo .rdp):</strong></li>
 </ul>
 <ol>
-<li>En esa misma pestaña <strong>RDP client</strong>, haz clic en el botón <strong>Download remote desktop file</strong> (<strong>Descargar archivo de escritorio remoto</strong>).</li>
+<li>En esa misma pestaña de RDP de AWS, haz clic en el botón <strong>Descargar archivo de acceso directo a RDP</strong> (<strong>Download remote desktop file</strong>).</li>
 <li>Guarda el archivo <code>.rdp</code> en tu equipo y haz doble clic sobre él.</li>
-<li>Pulsa en <strong>Conectar</strong> (<strong>Connect</strong>) cuando Windows te solicite confirmación de confianza.</li>
+<li>Al abrirlo, Windows mostrará una ventana de advertencia de seguridad (<em>Precaución: conexión remota desconocida</em>).</li>
+<li>Verifica que la opción <strong>Portapapeles</strong> está marcada (para poder pegar contraseñas y textos entre tu equipo y el servidor) y haz clic en el botón <strong>Conectar</strong>.</li>
 </ol>
+<figure><img src="imagenes/10e_rdp_seguridad_conectar.png" alt="Ventana de advertencia de seguridad de Conexión a Escritorio remoto de Windows"><figcaption><strong>Figura 9e: </strong>Advertencia de conexión remota desconocida en Windows, permitiendo el uso del Portapapeles antes de pulsar Conectar.</figcaption></figure>
 <ul>
 <li><strong>Método B (Manual mediante mstsc):</strong></li>
 </ul>
 <ol>
 <li>En tu ordenador del aula, pulsa el atajo de teclado <code>Windows + R</code>.</li>
 <li>Escribe <code>mstsc</code> y pulsa <code>Enter</code> para abrir la herramienta nativa <em>Conexión a Escritorio remoto</em>.</li>
-<li>En la casilla <strong>Equipo:</strong>, escribe o pega la <strong>Dirección IPv4 pública</strong> de tu instancia <code>Servidor_FTPSSH</code> (la encontrarás en el panel de EC2).</li>
+<li>En la casilla <strong>Equipo:</strong>, escribe o pega la <strong>Dirección IPv4 pública</strong> (o el DNS público) de tu instancia <code>Servidor_FTPSSH</code> (la encontrarás en el panel de EC2).</li>
 <li>Haz clic en <strong>Conectar</strong>.</li>
 </ol>
 <h4 id="paso-4-autenticacion-e-inicio-de-sesion">Paso 4: Autenticación e inicio de sesión</h4>
